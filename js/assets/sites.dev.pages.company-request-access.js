@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [105], {
+    [104], {
         "3lt/": function(e, t, a) {
             "use strict";
             a("mrSG"), a("uhBA");
@@ -36,20 +36,20 @@
                 e.Developer = "1", e.Publisher = "2", e.Other = "3"
             }(n || (n = {}));
             var b = a("GD6M"),
-                S = a("Ue10"),
-                E = "company-request-access-form-company-name",
+                E = a("Ue10"),
+                S = "company-request-access-form-company-name",
                 C = "company-request-access-form-company-website",
                 T = "company-request-access-form-industry",
                 _ = "company-request-access-form-company-size",
-                q = "company-request-access-form-city",
-                D = "company-request-access-form-state",
+                R = "company-request-access-form-city",
+                q = "company-request-access-form-state",
                 w = "company-request-access-form-country",
-                j = "company-request-form-contact-first-name",
-                O = "company-request-form-contact-last-name",
-                R = "company-request-form-contact-title",
-                k = "company-request-form-contact-email",
-                W = "company-request-form-product-interest",
-                G = "company-request-form-join-reason",
+                O = "company-request-form-contact-first-name",
+                j = "company-request-form-contact-last-name",
+                k = "company-request-form-contact-title",
+                D = "company-request-form-contact-email",
+                G = "company-request-form-product-interest",
+                A = "company-request-form-join-reason",
                 N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -164,243 +164,243 @@
                         }, t
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        var e = this.state.submitted ? S.F.Success : S.F.Default;
-                        return r.createElement(S.Wa, {
+                        var e = this.state.submitted ? E.F.Success : E.F.Default;
+                        return r.createElement(E.Xa, {
                             className: "company-request-access-form"
-                        }, r.createElement(S.Wa, {
+                        }, r.createElement(E.Xa, {
                             className: "company-request-access-form__form"
-                        }, r.createElement(S.Wa, {
+                        }, r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(S.Da, {
+                        }, r.createElement(E.Ea, {
                             label: Object(i.d)("Company Name", "DevRequestAccess")
-                        }, r.createElement(S.Qa, {
+                        }, r.createElement(E.Ra, {
                             value: this.state.companyName,
                             required: !0,
-                            type: S.Sa.Text,
+                            type: E.Ta.Text,
                             onChange: this.setCompanyName,
-                            "data-test-selector": E
-                        }))), r.createElement(S.Wa, {
+                            "data-test-selector": S
+                        }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(S.Da, {
+                        }, r.createElement(E.Ea, {
                             label: Object(i.d)("Company URL", "DevRequestAccess")
-                        }, r.createElement(S.Qa, {
+                        }, r.createElement(E.Ra, {
                             value: this.state.companyWebsite,
                             required: !0,
-                            type: S.Sa.Text,
+                            type: E.Ta.Text,
                             onChange: this.setCompanyWebsite,
                             "data-test-selector": C
-                        }))), r.createElement(S.Wa, {
+                        }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(S.Da, {
+                        }, r.createElement(E.Ea, {
                             label: Object(i.d)("Company Type", "DevRequestAccess")
-                        }, r.createElement(S.Wa, {
+                        }, r.createElement(E.Xa, {
                             margin: {
                                 y: 1
                             }
-                        }, r.createElement(S.kb, {
+                        }, r.createElement(E.lb, {
                             name: "companytype",
                             label: Object(i.d)("Developer", "DevRequestAccess"),
                             value: n.Developer,
                             onChange: this.setCompanyType,
                             checked: this.state.companyType === n.Developer
-                        })), r.createElement(S.Wa, {
+                        })), r.createElement(E.Xa, {
                             margin: {
                                 y: 1
                             }
-                        }, r.createElement(S.kb, {
+                        }, r.createElement(E.lb, {
                             name: "companytype",
                             label: Object(i.d)("Publisher", "DevRequestAccess"),
                             value: n.Publisher,
                             onChange: this.setCompanyType,
                             checked: this.state.companyType === n.Publisher
-                        })), r.createElement(S.Wa, {
+                        })), r.createElement(E.Xa, {
                             margin: {
                                 y: 1
                             }
-                        }, r.createElement(S.kb, {
+                        }, r.createElement(E.lb, {
                             name: "companytype",
                             label: Object(i.d)("Other", "DevRequestAccess"),
                             value: n.Other,
                             onChange: this.setCompanyType,
                             checked: this.state.companyType === n.Other
-                        })))), r.createElement(S.Wa, {
+                        })))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(S.Da, {
+                        }, r.createElement(E.Ea, {
                             label: Object(i.d)("Games", "DevRequestAccess")
                         }, r.createElement(b.b, {
                             multi: !0,
                             onGameSelect: this.onGameSelect
-                        }))), r.createElement(S.Wa, {
+                        }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(S.Da, {
+                        }, r.createElement(E.Ea, {
                             label: Object(i.d)("Industry", "DevRequestAccess")
-                        }, r.createElement(S.Qa, {
+                        }, r.createElement(E.Ra, {
                             value: this.state.industry,
                             required: !0,
-                            type: S.Sa.Text,
+                            type: E.Ta.Text,
                             onChange: this.setIndustry,
                             "data-test-selector": T
-                        }))), r.createElement(S.Wa, {
+                        }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(S.Da, {
+                        }, r.createElement(E.Ea, {
                             label: Object(i.d)("What is the current size of your company?", "DevRequestAccess")
-                        }, r.createElement(S.Qa, {
+                        }, r.createElement(E.Ra, {
                             value: this.state.companySize,
                             required: !0,
-                            type: S.Sa.Text,
+                            type: E.Ta.Text,
                             onChange: this.setCompanySize,
                             "data-test-selector": _
-                        }))), r.createElement(S.Wa, {
+                        }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(S.Da, {
+                        }, r.createElement(E.Ea, {
                             label: Object(i.d)("City", "DevRequestAccess")
-                        }, r.createElement(S.Qa, {
+                        }, r.createElement(E.Ra, {
                             value: this.state.city,
                             required: !0,
-                            type: S.Sa.Text,
+                            type: E.Ta.Text,
                             onChange: this.setCity,
-                            "data-test-selector": q
-                        }))), r.createElement(S.Wa, {
+                            "data-test-selector": R
+                        }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(S.Da, {
+                        }, r.createElement(E.Ea, {
                             label: Object(i.d)("State", "DevRequestAccess")
-                        }, r.createElement(S.Qa, {
+                        }, r.createElement(E.Ra, {
                             value: this.state.state,
                             required: !0,
-                            type: S.Sa.Text,
+                            type: E.Ta.Text,
                             onChange: this.setFormState,
-                            "data-test-selector": D
-                        }))), r.createElement(S.Wa, {
+                            "data-test-selector": q
+                        }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(S.Da, {
+                        }, r.createElement(E.Ea, {
                             label: Object(i.d)("Country", "DevRequestAccess")
-                        }, r.createElement(S.Qa, {
+                        }, r.createElement(E.Ra, {
                             value: this.state.country,
                             required: !0,
-                            type: S.Sa.Text,
+                            type: E.Ta.Text,
                             onChange: this.setCountry,
                             "data-test-selector": w
-                        }))), r.createElement(S.Wa, {
+                        }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(S.Da, {
+                        }, r.createElement(E.Ea, {
                             label: Object(i.d)("First Name", "DevRequestAccess")
-                        }, r.createElement(S.Qa, {
+                        }, r.createElement(E.Ra, {
                             value: this.state.contactFirstName,
                             required: !0,
-                            type: S.Sa.Text,
+                            type: E.Ta.Text,
                             onChange: this.setContactFirstName,
-                            "data-test-selector": j
-                        }))), r.createElement(S.Wa, {
+                            "data-test-selector": O
+                        }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(S.Da, {
+                        }, r.createElement(E.Ea, {
                             label: Object(i.d)("Last Name", "DevRequestAccess")
-                        }, r.createElement(S.Qa, {
+                        }, r.createElement(E.Ra, {
                             value: this.state.contactLastName,
                             required: !0,
-                            type: S.Sa.Text,
+                            type: E.Ta.Text,
                             onChange: this.setcontactLastName,
-                            "data-test-selector": O
-                        }))), r.createElement(S.Wa, {
+                            "data-test-selector": j
+                        }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(S.Da, {
+                        }, r.createElement(E.Ea, {
                             label: Object(i.d)("Title", "DevRequestAccess")
-                        }, r.createElement(S.Qa, {
+                        }, r.createElement(E.Ra, {
                             value: this.state.contactTitle,
                             required: !0,
-                            type: S.Sa.Text,
+                            type: E.Ta.Text,
                             onChange: this.setContactTitle,
-                            "data-test-selector": R
-                        }))), r.createElement(S.Wa, {
+                            "data-test-selector": k
+                        }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(S.Da, {
+                        }, r.createElement(E.Ea, {
                             label: Object(i.d)("Email", "DevRequestAccess"),
                             hint: Object(i.d)("Your Email Address Domain must match the domain of your company", "DevRequestAccess")
-                        }, r.createElement(S.Qa, {
+                        }, r.createElement(E.Ra, {
                             value: this.state.contactEmail,
                             required: !0,
-                            type: S.Sa.Text,
+                            type: E.Ta.Text,
                             onChange: this.setContactEmail,
-                            "data-test-selector": k
-                        }))), r.createElement(S.Wa, {
+                            "data-test-selector": D
+                        }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(S.Da, {
+                        }, r.createElement(E.Ea, {
                             label: Object(i.d)("What products are you interested in?", "DevRequestAccess")
-                        }, r.createElement(S.Qa, {
+                        }, r.createElement(E.Ra, {
                             value: this.state.productInterest,
                             required: !0,
-                            type: S.Sa.Text,
+                            type: E.Ta.Text,
                             onChange: this.setProductInterest,
-                            "data-test-selector": W
-                        }))), r.createElement(S.Wa, {
+                            "data-test-selector": G
+                        }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(S.Da, {
+                        }, r.createElement(E.Ea, {
                             label: Object(i.d)("What brought you to Twitch?", "DevRequestAccess")
-                        }, r.createElement(S.Qa, {
+                        }, r.createElement(E.Ra, {
                             value: this.state.joinReason,
                             required: !0,
-                            type: S.Sa.Text,
+                            type: E.Ta.Text,
                             onChange: this.setJoinReason,
-                            "data-test-selector": G
-                        })))), r.createElement(S.z, {
+                            "data-test-selector": A
+                        })))), r.createElement(E.z, {
                             onClick: this.onSubmit,
                             disabled: !this.state.formValid,
                             type: e
                         }, Object(i.d)("Submit", "DevRequestAccess")))
                     }, t
                 }(r.Component),
-                A = Object(c.compose)(Object(g.b)("DevRequestAccessForm", {
+                F = Object(c.compose)(Object(g.b)("DevRequestAccessForm", {
                     autoReportInteractive: !0
                 }))(N),
-                F = "request-access-form-error",
-                x = function(e) {
+                x = "request-access-form-error",
+                I = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderErrorMessage = function() {
-                            if (t.props.errorMessage) return r.createElement(S.Wa, {
-                                "data-test-selector": F,
+                            if (t.props.errorMessage) return r.createElement(E.Xa, {
+                                "data-test-selector": x,
                                 className: "dev-company-request-access__error-message",
                                 margin: {
                                     bottom: 1
                                 },
                                 padding: 1
-                            }, r.createElement(S.Wa, {
+                            }, r.createElement(E.Xa, {
                                 margin: {
                                     bottom: .5
                                 }
-                            }, r.createElement(S.W, {
-                                type: S.Nb.H4
-                            }, Object(i.d)("Error", "DevRequestAccess"))), r.createElement(S.W, {
-                                type: S.Nb.P
+                            }, r.createElement(E.W, {
+                                type: E.Ob.H4
+                            }, Object(i.d)("Error", "DevRequestAccess"))), r.createElement(E.W, {
+                                type: E.Ob.P
                             }, t.props.errorMessage))
                         }, t
                     }
@@ -412,42 +412,42 @@
                             to: "/company"
                         });
                         var e = null;
-                        return this.props.errorMessage && this.props.errorMessage.length && (e = this.renderErrorMessage()), r.createElement(S.Wa, {
+                        return this.props.errorMessage && this.props.errorMessage.length && (e = this.renderErrorMessage()), r.createElement(E.Xa, {
                             className: "dev-company-request-access",
                             fullWidth: !0
-                        }, r.createElement(S.mb, {
+                        }, r.createElement(E.nb, {
                             centered: !0
-                        }, r.createElement(S.Wa, {
+                        }, r.createElement(E.Xa, {
                             margin: {
                                 x: 2,
                                 y: 1
                             }
-                        }, r.createElement(S.Oa, {
+                        }, r.createElement(E.Pa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement("header", null, r.createElement(S.Wa, {
+                        }, r.createElement("header", null, r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(S.W, {
-                            type: S.Nb.H2
-                        }, Object(i.d)("Register your company and game with Twitch", "DevRequestAccess"))), r.createElement(S.W, {
-                            type: S.Nb.P
-                        }, Object(i.d)("The Twitch Developer Console helps you to link and manage your games and their assets on Twitch. Before providing access, we just need to capture some simple details. We will need to confirm that you are authorized for the company you specify. Communications will be sent to the email you have on file with your Twitch.tv account.", "DevRequestAccess")))), r.createElement(S.Ia, null, r.createElement(S.P, {
+                        }, r.createElement(E.W, {
+                            type: E.Ob.H2
+                        }, Object(i.d)("Register your company and game with Twitch", "DevRequestAccess"))), r.createElement(E.W, {
+                            type: E.Ob.P
+                        }, Object(i.d)("The Twitch Developer Console helps you to link and manage your games and their assets on Twitch. Before providing access, we just need to capture some simple details. We will need to confirm that you are authorized for the company you specify. Communications will be sent to the email you have on file with your Twitch.tv account.", "DevRequestAccess")))), r.createElement(E.Ja, null, r.createElement(E.P, {
                             cols: {
                                 default: 12,
                                 md: 9,
                                 lg: 6
                             }
-                        }, e, r.createElement(A, {
+                        }, e, r.createElement(F, {
                             onSubmit: this.props.onSubmit
                         }))))))
                     }, t
                 }(r.Component),
-                I = Object(c.compose)(Object(g.b)("DevCompanyRequestAccess", {
+                X = Object(c.compose)(Object(g.b)("DevCompanyRequestAccess", {
                     autoReportInteractive: !0
-                }))(x);
+                }))(I);
             var L = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -487,7 +487,7 @@
                         }, t
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(I, {
+                        return r.createElement(X, {
                             isLoggedIn: this.props.isLoggedIn,
                             onSubmit: this.handleApplicationSubmit,
                             errorMessage: this.state.error,
@@ -528,9 +528,9 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(i.Ta, {
+                        return s.createElement(i.Ua, {
                             onClick: this.onClick
-                        }, s.createElement(i.Wa, {
+                        }, s.createElement(i.Xa, {
                             padding: 1
                         }, s.createElement(i.W, null, this.props.game.name)))
                     }, t
@@ -546,7 +546,7 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(i.Gb, {
+                        return s.createElement(i.Hb, {
                             onClick: this.onClick,
                             label: this.props.game.name
                         })
@@ -599,7 +599,7 @@
                             })
                         }, a.renderSelections = function() {
                             return a.state.games.map(function(e, t) {
-                                return s.createElement(i.Wa, {
+                                return s.createElement(i.Xa, {
                                     display: i.X.InlineBlock,
                                     padding: {
                                         right: .5
@@ -645,23 +645,23 @@
                         var e = this.renderSuggestions(),
                             t = this.renderSelections(),
                             a = !this.props.multi && this.state.games.length > 0;
-                        return s.createElement(i.Wa, null, s.createElement(o.a, {
+                        return s.createElement(i.Xa, null, s.createElement(o.a, {
                             onClickOut: this.onClickOut
-                        }, s.createElement(i.Wa, {
-                            position: i.eb.Relative,
+                        }, s.createElement(i.Xa, {
+                            position: i.fb.Relative,
                             padding: {
                                 bottom: 1
                             }
-                        }, s.createElement(i.Qa, {
+                        }, s.createElement(i.Ra, {
                             "data-test-selector": g,
                             value: this.state.searchTerm,
                             onChange: this.onGameSearch,
-                            type: i.Sa.Text,
+                            type: i.Ta.Text,
                             onFocus: this.onFocus,
                             disabled: a
                         }), s.createElement(i.u, {
                             show: this.state.showSuggestions
-                        }, e)), s.createElement(i.Wa, {
+                        }, e)), s.createElement(i.Xa, {
                             padding: {
                                 bottom: .5
                             }
@@ -710,8 +710,8 @@
                 v = a("Svt6"),
                 f = a("+GjP"),
                 b = a("1mFg"),
-                S = v.a + "/kraken/search/games",
-                E = 7,
+                E = v.a + "/kraken/search/games",
+                S = 7,
                 C = function(e) {
                     function t(t) {
                         var a = e.call(this, t) || this;
@@ -723,7 +723,7 @@
                                 return n.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return n.trys.push([0, 4, , 5]), e.length ? (t = Object(f.e)(S, {
+                                            return n.trys.push([0, 4, , 5]), e.length ? (t = Object(f.e)(E, {
                                                 query: e.trim(),
                                                 type: "suggest"
                                             }), [4, Object(b.a)(t)]) : (this.setState({
@@ -734,7 +734,7 @@
                                         case 2:
                                             r = n.sent(), s = r.games, n.label = 3;
                                         case 3:
-                                            return s = s.slice(0, this.props.limit || E), this.setState({
+                                            return s = s.slice(0, this.props.limit || S), this.setState({
                                                 games: s
                                             }), [3, 5];
                                         case 4:

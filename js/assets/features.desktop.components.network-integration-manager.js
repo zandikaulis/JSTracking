@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [73], {
+    [72], {
         bpy9: function(t, n, e) {
             "use strict";
             e.r(n);
@@ -69,8 +69,8 @@
                             status: s,
                             message: d,
                             link: {
-                                children: Object(a.d)("Get Help", "NetworkIntegrationManager"),
-                                to: "https://help.twitch.tv"
+                                text: Object(a.d)("Get Help", "NetworkIntegrationManager"),
+                                linkTo: "https://help.twitch.tv"
                             },
                             closeButtonAriaLabel: Object(a.d)("Dismiss Network Connection Notification", "NetworkIntegrationManager"),
                             onCloseButtonClick: this.onDismissed

@@ -231,10 +231,10 @@
                         }, t
                     }
                     return c.__extends(t, e), t.prototype.render = function() {
-                        return u.createElement(g.Wa, {
+                        return u.createElement(g.Xa, {
                             className: "file-download-button"
                         }, u.createElement(g.z, {
-                            icon: g.ob.Download,
+                            icon: g.pb.Download,
                             type: g.F.Default,
                             onClick: this.initiateDownload
                         }, Object(d.d)("Download", "FileDownload")))
@@ -286,72 +286,72 @@
                             message: Object(d.d)("You must be logged in to view this page", "MessagesPage")
                         })) : this.state.errorLoadingMessageHistory ? u.createElement(f.a, {
                             message: Object(d.d)("Oops, something went wrong.", "MessagesPage")
-                        }) : u.createElement(g.Wa, {
+                        }) : u.createElement(g.Xa, {
                             className: "messages-page",
                             alignItems: g.f.Center,
                             display: g.X.Flex,
                             fullWidth: !0,
                             fullHeight: !0,
-                            justifyContent: g.Va.Center,
-                            position: g.eb.Absolute
-                        }, u.createElement(g.Wa, {
+                            justifyContent: g.Wa.Center,
+                            position: g.fb.Absolute
+                        }, u.createElement(g.Xa, {
                             alignItems: g.f.Center,
                             className: "messages-page__body",
                             display: g.X.Flex,
-                            flexDirection: g.Z.Column
+                            flexDirection: g.Aa.Column
                         }, !this.state.hasLoadedMessageHistory && this.renderPlaceholder(), this.state.hasLoadedMessageHistory && this.renderLoadedBody()))
                     }, t.prototype.renderPlaceholder = function() {
-                        return u.createElement(u.Fragment, null, u.createElement(g.Wa, {
-                            justifyContent: g.Va.Center
-                        }, u.createElement(g.db, {
+                        return u.createElement(u.Fragment, null, u.createElement(g.Xa, {
+                            justifyContent: g.Wa.Center
+                        }, u.createElement(g.eb, {
                             height: 130,
                             width: 180
-                        })), u.createElement(g.Wa, {
+                        })), u.createElement(g.Xa, {
                             margin: {
                                 bottom: 1,
                                 top: 4
                             }
-                        }, u.createElement(g.db, {
+                        }, u.createElement(g.eb, {
                             height: 15,
                             width: 370
-                        }), u.createElement(g.Wa, {
+                        }), u.createElement(g.Xa, {
                             margin: {
                                 y: 1
                             }
-                        }), u.createElement(g.db, {
+                        }), u.createElement(g.eb, {
                             height: 15,
                             width: 380
-                        }), u.createElement(g.Wa, {
+                        }), u.createElement(g.Xa, {
                             margin: {
                                 y: 1
                             }
-                        }), u.createElement(g.db, {
+                        }), u.createElement(g.eb, {
                             height: 15,
                             width: 65
-                        }), u.createElement(g.Wa, {
+                        }), u.createElement(g.Xa, {
                             margin: {
                                 y: 2
                             }
-                        }), u.createElement(g.db, {
+                        }), u.createElement(g.eb, {
                             height: 15,
                             width: 310
-                        }), u.createElement(g.Wa, {
+                        }), u.createElement(g.Xa, {
                             margin: {
                                 y: 2
                             }
-                        }), u.createElement(g.db, {
+                        }), u.createElement(g.eb, {
                             height: 15,
                             width: 390
-                        }), u.createElement(g.Wa, {
+                        }), u.createElement(g.Xa, {
                             margin: {
                                 y: 1
                             }
-                        }), u.createElement(g.db, {
+                        }), u.createElement(g.eb, {
                             height: 15,
                             width: 300
-                        })), u.createElement(g.Wa, {
-                            justifyContent: g.Va.Center
-                        }, u.createElement(g.db, {
+                        })), u.createElement(g.Xa, {
+                            justifyContent: g.Wa.Center
+                        }, u.createElement(g.eb, {
                             height: 25,
                             width: 100
                         })))
@@ -359,28 +359,28 @@
                         return u.createElement(u.Fragment, null, u.createElement(g.S, {
                             src: h.a,
                             alt: Object(d.d)("Envelope fading into smoke", "MessagesPage")
-                        }), u.createElement(g.Wa, {
+                        }), u.createElement(g.Xa, {
                             margin: {
                                 y: 1
                             }
                         }, u.createElement(g.W, {
-                            fontSize: g.Ba.Size5
-                        }, Object(d.d)("Messages have been deprecated due to legacy technology. This allows us to work on new ways for you to contact others on Twitch!", "MessagesPage")), u.createElement(g.Wa, {
+                            fontSize: g.Ca.Size5
+                        }, Object(d.d)("Messages have been deprecated due to legacy technology. This allows us to work on new ways for you to contact others on Twitch!", "MessagesPage")), u.createElement(g.Xa, {
                             margin: {
                                 y: .5
                             }
-                        }), this.getActionCopy(), u.createElement(g.Wa, {
+                        }), this.getActionCopy(), u.createElement(g.Xa, {
                             margin: {
                                 y: .5
                             }
                         }), u.createElement(g.W, {
-                            fontSize: g.Ba.Size5
+                            fontSize: g.Ca.Size5
                         }, Object(d.d)('Streamers: You can still contact all your subscribers by clicking "Send e-mail to my subs" from the Channel Analytics page!', "MessagesPage"))), this.getDownloadContent())
                     }, t.prototype.getActionCopy = function() {
                         return b() ? u.createElement(g.W, {
-                            fontSize: g.Ba.Size5
+                            fontSize: g.Ca.Size5
                         }, Object(d.d)("You can download old messages until November 1, 2018.", "MessagesPage")) : u.createElement(g.W, {
-                            fontSize: g.Ba.Size5
+                            fontSize: g.Ca.Size5
                         }, Object(d.d)("Check back to download your old messages.", "MessagesPage"))
                     }, t.prototype.getDownloadContent = function() {
                         return b() ? this.state.fileURL ? u.createElement(p, {

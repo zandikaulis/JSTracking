@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [152], {
+    [151], {
         "+58i": function(e, t, n) {
             "use strict";
             var a, i = n("mrSG"),
@@ -17,9 +17,9 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = this.optionElement();
-                        return this.props.disabled && this.props.disabledMessage ? o.createElement(m.Qb, {
-                            direction: m.Sb.Bottom,
-                            align: m.Rb.Left,
+                        return this.props.disabled && this.props.disabledMessage ? o.createElement(m.Rb, {
+                            direction: m.Tb.Bottom,
+                            align: m.Sb.Left,
                             width: 130,
                             display: m.X.Flex,
                             label: this.props.disabledMessage
@@ -31,14 +31,14 @@
                             a = e.value,
                             i = e.onClick,
                             r = e.disabled;
-                        return o.createElement(m.Ta, {
+                        return o.createElement(m.Ua, {
                             hover: n,
                             "data-value": a,
                             "data-display-value": t,
                             onClick: i,
                             disabled: r,
-                            type: m.Ua.Alpha
-                        }, o.createElement(m.Wa, {
+                            type: m.Va.Alpha
+                        }, o.createElement(m.Xa, {
                             refDelegate: this.props.refDelegate,
                             padding: .5
                         }, t || a))
@@ -96,28 +96,28 @@
                                     refDelegate: t.value === e.state.value ? e.setSelectedTimeRef : void 0
                                 }))
                             });
-                        return o.createElement(m.Wa, {
-                            position: m.eb.Relative,
+                        return o.createElement(m.Xa, {
+                            position: m.fb.Relative,
                             "data-a-target": "time-pick-field",
                             className: "time-picker"
                         }, o.createElement(d.a, {
                             onClickOut: this.closeDropdown
-                        }, o.createElement(m.Qa, {
-                            type: m.Sa.Text,
+                        }, o.createElement(m.Ra, {
+                            type: m.Ta.Text,
                             onFocus: this.onFocus,
                             onChange: this.onInputChange,
                             onBlur: this.onBlur,
                             onKeyDown: this.onKeyDown,
                             refDelegate: this.setInputRef,
                             value: this.state.displayValue
-                        }), o.createElement(m.Wa, {
+                        }), o.createElement(m.Xa, {
                             className: "time-picker__balloon",
-                            position: m.eb.Absolute
+                            position: m.fb.Absolute
                         }, o.createElement(m.u, {
                             noTail: !0,
                             show: this.state.isOpen,
                             "data-a-target": "time-selector-balloon"
-                        }, o.createElement(m.xb, {
+                        }, o.createElement(m.yb, {
                             className: "time-picker__dropdown"
                         }, t)))))
                     }, t.prototype.getTime = function(e) {
@@ -187,20 +187,20 @@
                         }, n
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(m.Wa, {
+                        return o.createElement(m.Xa, {
                             display: m.X.Flex,
-                            flexDirection: m.Z.Row,
+                            flexDirection: m.Aa.Row,
                             margin: {
                                 bottom: 2
                             }
-                        }, o.createElement(m.Wa, {
+                        }, o.createElement(m.Xa, {
                             padding: {
                                 right: 2
                             },
                             margin: {
                                 bottom: 1
                             }
-                        }, o.createElement(m.Da, {
+                        }, o.createElement(m.Ea, {
                             id: "event-start-date",
                             label: this.props.dateLabel,
                             error: this.state.invalidDate,
@@ -211,7 +211,7 @@
                             },
                             defaultDate: this.state.date,
                             onChange: this.onChangeDate
-                        }))), o.createElement(m.Da, {
+                        }))), o.createElement(m.Ea, {
                             id: "event-start-time",
                             label: this.props.timeLabel,
                             error: this.state.invalidTime,
@@ -309,16 +309,16 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(r.Y, {
+                        return i.createElement(r.Z, {
                             dragOver: this.state.isDraggingOver,
                             error: this.props.error
-                        }, i.createElement(r.Oa, {
-                            position: r.eb.Absolute,
+                        }, i.createElement(r.Pa, {
+                            position: r.fb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: r.ac.Above
+                            zIndex: r.bc.Above
                         }, i.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -1747,10 +1747,10 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(o.Da, {
+                        return i.createElement(o.Ea, {
                             id: "event-language",
                             label: Object(r.d)("Event Language", "EventModal")
-                        }, i.createElement(o.tb, {
+                        }, i.createElement(o.ub, {
                             name: "event-language",
                             onChange: this.onChange,
                             disabled: this.props.disabled,
@@ -2000,23 +2000,23 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = null;
-                        this.props.serviceError && (e = r.createElement(h.Wa, null, r.createElement(h.W, {
-                            fontSize: h.Ba.Size4,
+                        this.props.serviceError && (e = r.createElement(h.Xa, null, r.createElement(h.W, {
+                            fontSize: h.Ca.Size4,
                             color: h.O.Error
                         }, this.props.serviceError)));
-                        var t = this.props.parent ? r.createElement(h.Wa, {
+                        var t = this.props.parent ? r.createElement(h.Xa, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, r.createElement(h.Da, {
+                            }, r.createElement(h.Ea, {
                                 id: "series-name",
                                 label: Object(o.d)("Series Name", "EventsModal")
                             }, this.props.parent.title)) : null,
-                            n = this.props.parent ? null : r.createElement(h.Da, {
+                            n = this.props.parent ? null : r.createElement(h.Ea, {
                                 label: "",
                                 error: !!this.state.fieldErrors.language,
                                 errorMessage: E(this.state.fieldErrors.language)
-                            }, r.createElement(h.Wa, {
+                            }, r.createElement(h.Xa, {
                                 display: h.X.Flex,
                                 margin: {
                                     bottom: 2
@@ -2029,16 +2029,16 @@
                             a = this.state.fieldErrors.endTime ? r.createElement(h.W, {
                                 color: h.O.Error
                             }, E(this.state.fieldErrors.endTime)) : null;
-                        return r.createElement(h.Wa, {
+                        return r.createElement(h.Xa, {
                             className: "event-modal"
-                        }, r.createElement(h.xb, {
+                        }, r.createElement(h.yb, {
                             className: "event-modal__content",
                             padding: 4,
                             margin: {
                                 top: 5
                             },
                             background: h.r.Base
-                        }, r.createElement(h.xb, {
+                        }, r.createElement(h.yb, {
                             display: h.X.Flex,
                             padding: {
                                 bottom: 2
@@ -2046,14 +2046,14 @@
                             margin: {
                                 bottom: 2
                             },
-                            justifyContent: h.Va.Between,
+                            justifyContent: h.Wa.Between,
                             borderBottom: !0
-                        }, r.createElement(h.Wa, {
+                        }, r.createElement(h.Xa, {
                             flexGrow: 0,
                             flexShrink: 1
                         }, r.createElement(h.W, {
-                            type: h.Nb.H3
-                        }, Object(o.d)("Create an Event", "EventsModal"))), r.createElement(h.Wa, {
+                            type: h.Ob.H3
+                        }, Object(o.d)("Create an Event", "EventsModal"))), r.createElement(h.Xa, {
                             flexGrow: 0,
                             flexShrink: 0
                         }, r.createElement(h.z, {
@@ -2061,8 +2061,8 @@
                             onClick: this.onCancel
                         }, Object(o.d)("Cancel", "EventsModal")), r.createElement(h.z, {
                             onClick: this.onConfirm
-                        }, Object(o.d)("Save", "EventsModal")))), e, r.createElement(s.b, null, r.createElement(r.Fragment, null, r.createElement(h.Ia, {
-                            gutterSize: h.Ja.Large
+                        }, Object(o.d)("Save", "EventsModal")))), e, r.createElement(s.b, null, r.createElement(r.Fragment, null, r.createElement(h.Ja, {
+                            gutterSize: h.Ka.Large
                         }, r.createElement(h.P, {
                             cols: {
                                 default: 12,
@@ -2079,32 +2079,32 @@
                                 md: 6,
                                 lg: 7
                             }
-                        }, t, r.createElement(h.Wa, {
+                        }, t, r.createElement(h.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(h.Da, {
+                        }, r.createElement(h.Ea, {
                             id: "event-title",
                             label: Object(o.d)("Event Title", "EventsModal"),
                             error: !!this.state.fieldErrors.title,
                             errorMessage: E(this.state.fieldErrors.title || [])
-                        }, r.createElement(h.Qa, {
+                        }, r.createElement(h.Ra, {
                             onChange: this.onTitleChange,
                             value: this.state.edits.title,
-                            type: h.Sa.Text,
+                            type: h.Ta.Text,
                             maxLength: 140,
                             placeholder: Object(o.d)("Your title is also used in reminders and social media posts. ({limit} character limit)", {
                                 limit: 140
                             }, "EventsModal")
-                        }))), r.createElement(h.Wa, {
+                        }))), r.createElement(h.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(h.Da, {
+                        }, r.createElement(h.Ea, {
                             label: Object(o.d)("Event Description", "EventsModal"),
                             error: !!this.state.fieldErrors.description,
                             errorMessage: E(this.state.fieldErrors.description)
-                        }, r.createElement(h.Kb, {
+                        }, r.createElement(h.Lb, {
                             placeholder: Object(o.d)("Tell viewers why they should watch your event", "EventsModal"),
                             onChange: this.onDescriptionChange,
                             value: this.state.edits.description || "",
@@ -2131,11 +2131,11 @@
                             defaultDate: this.state.edits.endTime || k(),
                             allowPast: !0,
                             removeNow: !0
-                        }), n, r.createElement(h.Wa, {
+                        }), n, r.createElement(h.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(h.Da, {
+                        }, r.createElement(h.Ea, {
                             id: "event-game",
                             label: Object(o.d)("Event Category/Game", "EventsModal"),
                             error: !!this.state.fieldErrors.gameID,
@@ -2246,28 +2246,28 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(r.xb, {
+                        return i.createElement(r.yb, {
                             className: "vm-edit-cancel-modal",
                             background: r.r.Base,
                             padding: 2
-                        }, i.createElement(r.Wa, null, i.createElement(r.W, {
-                            type: r.Nb.H3
-                        }, this.props.title), i.createElement(r.Wa, {
+                        }, i.createElement(r.Xa, null, i.createElement(r.W, {
+                            type: r.Ob.H3
+                        }, this.props.title), i.createElement(r.Xa, {
                             padding: {
                                 y: 1
                             }
-                        }, this.props.body), i.createElement(r.Wa, {
+                        }, this.props.body), i.createElement(r.Xa, {
                             padding: 1,
                             display: r.X.Flex,
-                            justifyContent: r.Va.End,
+                            justifyContent: r.Wa.End,
                             alignItems: r.f.End,
                             alignContent: r.e.End
-                        }, i.createElement(r.Wa, null, i.createElement(r.z, {
+                        }, i.createElement(r.Xa, null, i.createElement(r.z, {
                             type: r.F.Default,
                             onClick: this.onConfirm,
                             "data-test-selector": o.onConfirm,
                             "data-a-target": "on-confirm"
-                        }, this.props.okText)), i.createElement(r.Wa, {
+                        }, this.props.okText)), i.createElement(r.Xa, {
                             margin: {
                                 left: 1
                             }
@@ -2297,7 +2297,7 @@
                     var n = [];
                     do {
                         n.push(d(e))
-                    } while (!Q(e, r.TokenKind.EOF));
+                    } while (!$(e, r.TokenKind.EOF));
                     return {
                         kind: o.DOCUMENT,
                         definitions: n,
@@ -2333,7 +2333,7 @@
             }
 
             function d(e) {
-                if ($(e, r.TokenKind.NAME)) switch (e.token.value) {
+                if (W(e, r.TokenKind.NAME)) switch (e.token.value) {
                     case "query":
                     case "mutation":
                     case "subscription":
@@ -2350,14 +2350,14 @@
                     case "directive":
                         return F(e)
                 } else {
-                    if ($(e, r.TokenKind.BRACE_L)) return c(e);
+                    if (W(e, r.TokenKind.BRACE_L)) return c(e);
                     if (w(e)) return F(e)
                 }
                 throw Y(e)
             }
 
             function c(e) {
-                if ($(e, r.TokenKind.NAME)) switch (e.token.value) {
+                if (W(e, r.TokenKind.NAME)) switch (e.token.value) {
                     case "query":
                     case "mutation":
                     case "subscription":
@@ -2365,11 +2365,11 @@
                     case "fragment":
                         return function(e) {
                             var t = e.token;
-                            if (X(e, "fragment"), e.options.experimentalFragmentVariables) return {
+                            if (Q(e, "fragment"), e.options.experimentalFragmentVariables) return {
                                 kind: o.FRAGMENT_DEFINITION,
                                 name: N(e),
                                 variableDefinitions: p(e),
-                                typeCondition: (X(e, "on"), L(e)),
+                                typeCondition: (Q(e, "on"), L(e)),
                                 directives: C(e, !1),
                                 selectionSet: f(e),
                                 loc: q(e, t)
@@ -2377,19 +2377,19 @@
                             return {
                                 kind: o.FRAGMENT_DEFINITION,
                                 name: N(e),
-                                typeCondition: (X(e, "on"), L(e)),
+                                typeCondition: (Q(e, "on"), L(e)),
                                 directives: C(e, !1),
                                 selectionSet: f(e),
                                 loc: q(e, t)
                             }
                         }(e)
-                } else if ($(e, r.TokenKind.BRACE_L)) return u(e);
+                } else if (W(e, r.TokenKind.BRACE_L)) return u(e);
                 throw Y(e)
             }
 
             function u(e) {
                 var t = e.token;
-                if ($(e, r.TokenKind.BRACE_L)) return {
+                if (W(e, r.TokenKind.BRACE_L)) return {
                     kind: o.OPERATION_DEFINITION,
                     operation: "query",
                     name: void 0,
@@ -2400,7 +2400,7 @@
                 };
                 var n = m(e),
                     a = void 0;
-                return $(e, r.TokenKind.NAME) && (a = l(e)), {
+                return W(e, r.TokenKind.NAME) && (a = l(e)), {
                     kind: o.OPERATION_DEFINITION,
                     operation: n,
                     name: a,
@@ -2425,7 +2425,7 @@
             }
 
             function p(e) {
-                return $(e, r.TokenKind.PAREN_L) ? Z(e, r.TokenKind.PAREN_L, v, r.TokenKind.PAREN_R) : []
+                return W(e, r.TokenKind.PAREN_L) ? Z(e, r.TokenKind.PAREN_L, v, r.TokenKind.PAREN_R) : []
             }
 
             function v(e) {
@@ -2434,7 +2434,7 @@
                     kind: o.VARIABLE_DEFINITION,
                     variable: g(e),
                     type: (H(e, r.TokenKind.COLON), O(e)),
-                    defaultValue: Q(e, r.TokenKind.EQUALS) ? y(e, !0) : void 0,
+                    defaultValue: $(e, r.TokenKind.EQUALS) ? y(e, !0) : void 0,
                     loc: q(e, t)
                 }
             }
@@ -2458,9 +2458,9 @@
             }
 
             function h(e) {
-                return $(e, r.TokenKind.SPREAD) ? function(e) {
+                return W(e, r.TokenKind.SPREAD) ? function(e) {
                     var t = e.token;
-                    if (H(e, r.TokenKind.SPREAD), $(e, r.TokenKind.NAME) && "on" !== e.token.value) return {
+                    if (H(e, r.TokenKind.SPREAD), W(e, r.TokenKind.NAME) && "on" !== e.token.value) return {
                         kind: o.FRAGMENT_SPREAD,
                         name: N(e),
                         directives: C(e, !1),
@@ -2480,14 +2480,14 @@
                         n = l(e),
                         a = void 0,
                         i = void 0;
-                    Q(e, r.TokenKind.COLON) ? (a = n, i = l(e)) : i = n;
+                    $(e, r.TokenKind.COLON) ? (a = n, i = l(e)) : i = n;
                     return {
                         kind: o.FIELD,
                         alias: a,
                         name: i,
                         arguments: k(e, !1),
                         directives: C(e, !1),
-                        selectionSet: $(e, r.TokenKind.BRACE_L) ? f(e) : void 0,
+                        selectionSet: W(e, r.TokenKind.BRACE_L) ? f(e) : void 0,
                         loc: q(e, t)
                     }
                 }(e)
@@ -2495,7 +2495,7 @@
 
             function k(e, t) {
                 var n = t ? b : E;
-                return $(e, r.TokenKind.PAREN_L) ? Z(e, r.TokenKind.PAREN_L, n, r.TokenKind.PAREN_R) : []
+                return W(e, r.TokenKind.PAREN_L) ? Z(e, r.TokenKind.PAREN_L, n, r.TokenKind.PAREN_R) : []
             }
 
             function E(e) {
@@ -2535,7 +2535,7 @@
                                 values: function(e, t, n, a) {
                                     H(e, t);
                                     var i = [];
-                                    for (; !Q(e, a);) i.push(n(e));
+                                    for (; !$(e, a);) i.push(n(e));
                                     return i
                                 }(e, r.TokenKind.BRACKET_L, a, r.TokenKind.BRACKET_R),
                                 loc: q(e, n)
@@ -2546,7 +2546,7 @@
                             var n = e.token;
                             H(e, r.TokenKind.BRACE_L);
                             var a = [];
-                            for (; !Q(e, r.TokenKind.BRACE_R);) a.push(S(e, t));
+                            for (; !$(e, r.TokenKind.BRACE_R);) a.push(S(e, t));
                             return {
                                 kind: o.OBJECT,
                                 fields: a,
@@ -2616,7 +2616,7 @@
             }
 
             function C(e, t) {
-                for (var n = []; $(e, r.TokenKind.AT);) n.push(I(e, t));
+                for (var n = []; W(e, r.TokenKind.AT);) n.push(I(e, t));
                 return n
             }
 
@@ -2633,11 +2633,11 @@
             function O(e) {
                 var t = e.token,
                     n = void 0;
-                return Q(e, r.TokenKind.BRACKET_L) ? (n = O(e), H(e, r.TokenKind.BRACKET_R), n = {
+                return $(e, r.TokenKind.BRACKET_L) ? (n = O(e), H(e, r.TokenKind.BRACKET_R), n = {
                     kind: o.LIST_TYPE,
                     type: n,
                     loc: q(e, t)
-                }) : n = L(e), Q(e, r.TokenKind.BANG) ? {
+                }) : n = L(e), $(e, r.TokenKind.BANG) ? {
                     kind: o.NON_NULL_TYPE,
                     type: n,
                     loc: q(e, t)
@@ -2659,7 +2659,7 @@
                     case "schema":
                         return function(e) {
                             var t = e.token;
-                            X(e, "schema");
+                            Q(e, "schema");
                             var n = C(e, !0),
                                 a = Z(e, r.TokenKind.BRACE_L, A, r.TokenKind.BRACE_R);
                             return {
@@ -2673,7 +2673,7 @@
                         return function(e) {
                             var t = e.token,
                                 n = j(e);
-                            X(e, "scalar");
+                            Q(e, "scalar");
                             var a = l(e),
                                 i = C(e, !0);
                             return {
@@ -2688,7 +2688,7 @@
                         return function(e) {
                             var t = e.token,
                                 n = j(e);
-                            X(e, "type");
+                            Q(e, "type");
                             var a = l(e),
                                 i = M(e),
                                 r = C(e, !0),
@@ -2707,7 +2707,7 @@
                         return function(e) {
                             var t = e.token,
                                 n = j(e);
-                            X(e, "interface");
+                            Q(e, "interface");
                             var a = l(e),
                                 i = C(e, !0),
                                 r = x(e);
@@ -2724,7 +2724,7 @@
                         return function(e) {
                             var t = e.token,
                                 n = j(e);
-                            X(e, "union");
+                            Q(e, "union");
                             var a = l(e),
                                 i = C(e, !0),
                                 r = U(e);
@@ -2741,10 +2741,10 @@
                         return function(e) {
                             var t = e.token,
                                 n = j(e);
-                            X(e, "enum");
+                            Q(e, "enum");
                             var a = l(e),
                                 i = C(e, !0),
-                                r = G(e);
+                                r = X(e);
                             return {
                                 kind: o.ENUM_TYPE_DEFINITION,
                                 description: n,
@@ -2758,7 +2758,7 @@
                         return function(e) {
                             var t = e.token,
                                 n = j(e);
-                            X(e, "input");
+                            Q(e, "input");
                             var a = l(e),
                                 i = C(e, !0),
                                 r = B(e);
@@ -2778,7 +2778,7 @@
                                 case "scalar":
                                     return function(e) {
                                         var t = e.token;
-                                        X(e, "extend"), X(e, "scalar");
+                                        Q(e, "extend"), Q(e, "scalar");
                                         var n = l(e),
                                             a = C(e, !0);
                                         if (0 === a.length) throw Y(e);
@@ -2792,7 +2792,7 @@
                                 case "type":
                                     return function(e) {
                                         var t = e.token;
-                                        X(e, "extend"), X(e, "type");
+                                        Q(e, "extend"), Q(e, "type");
                                         var n = l(e),
                                             a = M(e),
                                             i = C(e, !0),
@@ -2810,7 +2810,7 @@
                                 case "interface":
                                     return function(e) {
                                         var t = e.token;
-                                        X(e, "extend"), X(e, "interface");
+                                        Q(e, "extend"), Q(e, "interface");
                                         var n = l(e),
                                             a = C(e, !0),
                                             i = x(e);
@@ -2826,7 +2826,7 @@
                                 case "union":
                                     return function(e) {
                                         var t = e.token;
-                                        X(e, "extend"), X(e, "union");
+                                        Q(e, "extend"), Q(e, "union");
                                         var n = l(e),
                                             a = C(e, !0),
                                             i = U(e);
@@ -2842,10 +2842,10 @@
                                 case "enum":
                                     return function(e) {
                                         var t = e.token;
-                                        X(e, "extend"), X(e, "enum");
+                                        Q(e, "extend"), Q(e, "enum");
                                         var n = l(e),
                                             a = C(e, !0),
-                                            i = G(e);
+                                            i = X(e);
                                         if (0 === a.length && 0 === i.length) throw Y(e);
                                         return {
                                             kind: o.ENUM_TYPE_EXTENSION,
@@ -2858,7 +2858,7 @@
                                 case "input":
                                     return function(e) {
                                         var t = e.token;
-                                        X(e, "extend"), X(e, "input");
+                                        Q(e, "extend"), Q(e, "input");
                                         var n = l(e),
                                             a = C(e, !0),
                                             i = B(e);
@@ -2878,16 +2878,16 @@
                         return function(e) {
                             var t = e.token,
                                 n = j(e);
-                            X(e, "directive"), H(e, r.TokenKind.AT);
+                            Q(e, "directive"), H(e, r.TokenKind.AT);
                             var a = l(e),
                                 i = V(e);
-                            X(e, "on");
+                            Q(e, "on");
                             var s = function(e) {
-                                Q(e, r.TokenKind.PIPE);
+                                $(e, r.TokenKind.PIPE);
                                 var t = [];
                                 do {
                                     t.push(K(e))
-                                } while (Q(e, r.TokenKind.PIPE));
+                                } while ($(e, r.TokenKind.PIPE));
                                 return t
                             }(e);
                             return {
@@ -2904,7 +2904,7 @@
             }
 
             function w(e) {
-                return $(e, r.TokenKind.STRING) || $(e, r.TokenKind.BLOCK_STRING)
+                return W(e, r.TokenKind.STRING) || W(e, r.TokenKind.BLOCK_STRING)
             }
 
             function j(e) {
@@ -2930,13 +2930,13 @@
                     e.advance();
                     do {
                         t.push(L(e))
-                    } while ($(e, r.TokenKind.NAME))
+                    } while (W(e, r.TokenKind.NAME))
                 }
                 return t
             }
 
             function x(e) {
-                return $(e, r.TokenKind.BRACE_L) ? Z(e, r.TokenKind.BRACE_L, R, r.TokenKind.BRACE_R) : []
+                return W(e, r.TokenKind.BRACE_L) ? Z(e, r.TokenKind.BRACE_L, R, r.TokenKind.BRACE_R) : []
             }
 
             function R(e) {
@@ -2959,7 +2959,7 @@
             }
 
             function V(e) {
-                return $(e, r.TokenKind.PAREN_L) ? Z(e, r.TokenKind.PAREN_L, P, r.TokenKind.PAREN_R) : []
+                return W(e, r.TokenKind.PAREN_L) ? Z(e, r.TokenKind.PAREN_L, P, r.TokenKind.PAREN_R) : []
             }
 
             function P(e) {
@@ -2969,7 +2969,7 @@
                 H(e, r.TokenKind.COLON);
                 var i = O(e),
                     s = void 0;
-                Q(e, r.TokenKind.EQUALS) && (s = _(e));
+                $(e, r.TokenKind.EQUALS) && (s = _(e));
                 var d = C(e, !0);
                 return {
                     kind: o.INPUT_VALUE_DEFINITION,
@@ -2984,20 +2984,20 @@
 
             function U(e) {
                 var t = [];
-                if (Q(e, r.TokenKind.EQUALS)) {
-                    Q(e, r.TokenKind.PIPE);
+                if ($(e, r.TokenKind.EQUALS)) {
+                    $(e, r.TokenKind.PIPE);
                     do {
                         t.push(L(e))
-                    } while (Q(e, r.TokenKind.PIPE))
+                    } while ($(e, r.TokenKind.PIPE))
                 }
                 return t
             }
 
-            function G(e) {
-                return $(e, r.TokenKind.BRACE_L) ? Z(e, r.TokenKind.BRACE_L, W, r.TokenKind.BRACE_R) : []
+            function X(e) {
+                return W(e, r.TokenKind.BRACE_L) ? Z(e, r.TokenKind.BRACE_L, G, r.TokenKind.BRACE_R) : []
             }
 
-            function W(e) {
+            function G(e) {
                 var t = e.token,
                     n = j(e),
                     a = l(e),
@@ -3012,7 +3012,7 @@
             }
 
             function B(e) {
-                return $(e, r.TokenKind.BRACE_L) ? Z(e, r.TokenKind.BRACE_L, P, r.TokenKind.BRACE_R) : []
+                return W(e, r.TokenKind.BRACE_L) ? Z(e, r.TokenKind.BRACE_L, P, r.TokenKind.BRACE_R) : []
             }
 
             function K(e) {
@@ -3030,11 +3030,11 @@
                 this.start = e.start, this.end = t.end, this.startToken = e, this.endToken = t, this.source = n
             }
 
-            function $(e, t) {
+            function W(e, t) {
                 return e.token.kind === t
             }
 
-            function Q(e, t) {
+            function $(e, t) {
                 var n = e.token.kind === t;
                 return n && e.advance(), n
             }
@@ -3045,7 +3045,7 @@
                 throw (0, i.syntaxError)(e.source, n.start, "Expected " + t + ", found " + (0, r.getTokenDesc)(n))
             }
 
-            function X(e, t) {
+            function Q(e, t) {
                 var n = e.token;
                 if (n.kind === r.TokenKind.NAME && n.value === t) return e.advance(), n;
                 throw (0, i.syntaxError)(e.source, n.start, 'Expected "' + t + '", found ' + (0, r.getTokenDesc)(n))
@@ -3058,7 +3058,7 @@
 
             function Z(e, t, n, a) {
                 H(e, t);
-                for (var i = [n(e)]; !Q(e, a);) i.push(n(e));
+                for (var i = [n(e)]; !$(e, a);) i.push(n(e));
                 return i
             }
             z.prototype.toJSON = z.prototype.inspect = function() {
@@ -3112,11 +3112,11 @@
                         (this.dateDidChange(e.minDate, this.props.minDate) || this.dateDidChange(e.maxDate, this.props.maxDate)) && this.setDateRangeIfPresent(this.props.minDate, this.props.maxDate), this.dateDidChange(e.defaultDate, this.props.defaultDate) && this.setDate(this.props.defaultDate)
                     }, t.prototype.render = function() {
                         var e = this.props.inputProps;
-                        return o.createElement(s.Wa, {
+                        return o.createElement(s.Xa, {
                             className: "date-picker",
                             "data-a-target": "date-picker"
-                        }, o.createElement(s.Qa, a.__assign({
-                            type: s.Sa.Text,
+                        }, o.createElement(s.Ra, a.__assign({
+                            type: s.Ta.Text,
                             refDelegate: this.setInputRef
                         }, e)), o.createElement("div", {
                             className: "date-picker__container",
@@ -3233,13 +3233,13 @@
                             type: d.F.Hollow
                         }, Object(r.d)("Share", "ShareEvent"))), i.createElement(s.a, null, t, i.createElement(d.u, {
                             direction: this.props.balloonDirection
-                        }, i.createElement(d.Wa, {
+                        }, i.createElement(d.Xa, {
                             padding: 1
-                        }, i.createElement(d.Wa, {
+                        }, i.createElement(d.Xa, {
                             display: d.X.Flex,
-                            flexDirection: d.Z.Row,
-                            flexWrap: d.Aa.NoWrap,
-                            justifyContent: d.Va.Center
+                            flexDirection: d.Aa.Row,
+                            flexWrap: d.Ba.NoWrap,
+                            justifyContent: d.Wa.Center
                         }, i.createElement(o.a, {
                             type: o.b.Twitter,
                             text: this.props.title,
@@ -3443,48 +3443,48 @@
                             allowedFileTypes: this.props.allowedFileTypes,
                             onFilesSubmitted: this.props.processFiles,
                             error: !!this.props.errorMessage
-                        }, i.createElement(s.Wa, {
+                        }, i.createElement(s.Xa, {
                             className: "image-uploader",
-                            textAlign: s.Jb.Center,
+                            textAlign: s.Kb.Center,
                             display: s.X.Flex,
-                            flexDirection: s.Z.Column,
+                            flexDirection: s.Aa.Column,
                             alignItems: s.f.Center,
-                            justifyContent: s.Va.Center,
-                            position: s.eb.Relative,
+                            justifyContent: s.Wa.Center,
+                            position: s.fb.Relative,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, this.renderErrorMessage(), i.createElement(s.Wa, {
-                            position: s.eb.Relative
-                        }, i.createElement(s.Wa, {
+                        }, this.renderErrorMessage(), i.createElement(s.Xa, {
+                            position: s.fb.Relative
+                        }, i.createElement(s.Xa, {
                             className: "image-uploader__upload-svg--anim-backfill"
-                        }, i.createElement(s.nb, {
-                            asset: s.ob.Upload,
-                            type: s.pb.Alt2,
+                        }, i.createElement(s.ob, {
+                            asset: s.pb.Upload,
+                            type: s.qb.Alt2,
                             width: this.props.iconWidth || 99,
                             height: this.props.iconWidth || 76
-                        })), i.createElement(s.Wa, {
+                        })), i.createElement(s.Xa, {
                             className: "image-uploader__upload-svg--anim-fill",
-                            position: s.eb.Absolute,
+                            position: s.fb.Absolute,
                             display: this.props.isLoading ? s.X.Block : s.X.Hide,
                             attachTop: !0
-                        }, i.createElement(s.nb, {
-                            asset: s.ob.Upload,
-                            type: s.pb.Brand,
+                        }, i.createElement(s.ob, {
+                            asset: s.pb.Upload,
+                            type: s.qb.Brand,
                             width: this.props.iconWidth || 99,
                             height: this.props.iconHeight || 76
                         }))), this.props.isLoading ? this.renderLoadingState() : this.renderNormalState()))
                     }, t.prototype.renderLoadingState = function() {
-                        return i.createElement(s.Wa, {
+                        return i.createElement(s.Xa, {
                             margin: 1,
                             "data-test-selector": "image-uploader-loading"
                         }, i.createElement(s.W, {
-                            type: s.Nb.H4
+                            type: s.Ob.H4
                         }, Object(r.d)("Uploading", "ImageUploader")))
                     }, t.prototype.renderNormalState = function() {
                         var e = Object(r.d)("Browse", "ImageUploader");
-                        return i.createElement(s.Wa, null, i.createElement(s.Wa, null, i.createElement(s.W, {
-                            type: s.Nb.H4
-                        }, Object(r.d)("Drag and drop your image here", "ImageUploader"))), i.createElement(s.Wa, {
+                        return i.createElement(s.Xa, null, i.createElement(s.Xa, null, i.createElement(s.W, {
+                            type: s.Ob.H4
+                        }, Object(r.d)("Drag and drop your image here", "ImageUploader"))), i.createElement(s.Xa, {
                             margin: {
                                 bottom: 2
                             },
@@ -3495,21 +3495,21 @@
                             fullWidth: !0,
                             "data-test-selector": "image-uploader-hint"
                         }, i.createElement(s.W, {
-                            type: s.Nb.P,
-                            fontSize: s.Ba.Size7,
+                            type: s.Ob.P,
+                            fontSize: s.Ca.Size7,
                             color: s.O.Alt2
-                        }, this.props.hintMessage)), i.createElement(s.Wa, null, i.createElement(s.z, {
+                        }, this.props.hintMessage)), i.createElement(s.Xa, null, i.createElement(s.z, {
                             ariaLabel: e,
                             type: s.F.Hollow
                         }, e)))
                     }, t.prototype.renderErrorMessage = function() {
-                        if (this.props.errorMessage) return i.createElement(s.Wa, {
+                        if (this.props.errorMessage) return i.createElement(s.Xa, {
                             margin: {
                                 bottom: 1
                             },
                             "data-test-selector": "image-uploader-error"
                         }, i.createElement(s.W, {
-                            type: s.Nb.H5,
+                            type: s.Ob.H5,
                             color: s.O.Error,
                             bold: !0
                         }, this.props.errorMessage))
@@ -5786,10 +5786,10 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         if (!this.props.user) return null;
-                        if (this.props.data && this.props.data.loading) return r.createElement(F.Wa, {
+                        if (this.props.data && this.props.data.loading) return r.createElement(F.Xa, {
                             fullWidth: !0,
                             fullHeight: !0
-                        }, r.createElement(F.Ya, null));
+                        }, r.createElement(F.Za, null));
                         var e = void 0;
                         this.props.data && this.props.data.event && this.props.data.event.game && (e = {
                             __typename: "EventModel",
@@ -6014,10 +6014,10 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         if (!this.props.user) return null;
-                        if (this.props.data && this.props.data.loading) return r.createElement(F.Wa, {
+                        if (this.props.data && this.props.data.loading) return r.createElement(F.Xa, {
                             fullWidth: !0,
                             fullHeight: !0
-                        }, r.createElement(F.Ya, null));
+                        }, r.createElement(F.Za, null));
                         var e = void 0;
                         this.props.data && this.props.data.event && this.props.data.event.game && (e = {
                             __typename: "EventModel",
@@ -6073,7 +6073,7 @@
                 U = (n("IejX"), function(e) {
                     return e ? e.join(",") : ""
                 }),
-                G = function(e) {
+                X = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onCancel = function() {
@@ -6134,19 +6134,19 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = null;
-                        return this.props.serviceError && (e = r.createElement(F.Wa, null, r.createElement(F.W, {
-                            fontSize: F.Ba.Size4,
+                        return this.props.serviceError && (e = r.createElement(F.Xa, null, r.createElement(F.W, {
+                            fontSize: F.Ca.Size4,
                             color: F.O.Error
-                        }, this.props.serviceError))), r.createElement(F.Wa, {
+                        }, this.props.serviceError))), r.createElement(F.Xa, {
                             className: "event-modal"
-                        }, r.createElement(F.xb, {
+                        }, r.createElement(F.yb, {
                             className: "event-modal__content",
                             padding: 4,
                             margin: {
                                 top: 5
                             },
                             background: F.r.Base
-                        }, r.createElement(F.xb, {
+                        }, r.createElement(F.yb, {
                             display: F.X.Flex,
                             padding: {
                                 bottom: 2
@@ -6154,14 +6154,14 @@
                             margin: {
                                 bottom: 2
                             },
-                            justifyContent: F.Va.Between,
+                            justifyContent: F.Wa.Between,
                             borderBottom: !0
-                        }, r.createElement(F.Wa, {
+                        }, r.createElement(F.Xa, {
                             flexGrow: 0,
                             flexShrink: 1
                         }, r.createElement(F.W, {
-                            type: F.Nb.H3
-                        }, Object(k.d)("Create a Series", "CollectionModal"))), r.createElement(F.Wa, {
+                            type: F.Ob.H3
+                        }, Object(k.d)("Create a Series", "CollectionModal"))), r.createElement(F.Xa, {
                             flexGrow: 0,
                             flexShrink: 0
                         }, r.createElement(F.z, {
@@ -6169,8 +6169,8 @@
                             onClick: this.onCancel
                         }, Object(k.d)("Cancel", "CollectionModal")), r.createElement(F.z, {
                             onClick: this.onConfirm
-                        }, Object(k.d)("Save", "CollectionModal")))), e, r.createElement(b.b, null, r.createElement(r.Fragment, null, r.createElement(F.Ia, {
-                            gutterSize: F.Ja.Large
+                        }, Object(k.d)("Save", "CollectionModal")))), e, r.createElement(b.b, null, r.createElement(r.Fragment, null, r.createElement(F.Ja, {
+                            gutterSize: F.Ka.Large
                         }, r.createElement(F.P, {
                             cols: {
                                 default: 12,
@@ -6187,41 +6187,41 @@
                                 md: 6,
                                 lg: 7
                             }
-                        }, r.createElement(F.Wa, {
+                        }, r.createElement(F.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(F.Da, {
+                        }, r.createElement(F.Ea, {
                             id: "event-title",
                             label: Object(k.d)("Event Title", "CollectionModal"),
                             error: !!this.state.fieldErrors.title,
                             errorMessage: U(this.state.fieldErrors.title)
-                        }, r.createElement(F.Qa, {
+                        }, r.createElement(F.Ra, {
                             onChange: this.onTitleChange,
                             value: this.state.fieldValues.title,
-                            type: F.Sa.Text,
+                            type: F.Ta.Text,
                             maxLength: 140,
                             placeholder: Object(k.d)("Your title is also used in reminders and social media posts. ({limit} character limit)", {
                                 limit: 140
                             }, "CollectionModal")
-                        }))), r.createElement(F.Wa, {
+                        }))), r.createElement(F.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(F.Da, {
+                        }, r.createElement(F.Ea, {
                             label: Object(k.d)("Event Description", "CollectionModal"),
                             error: !!this.state.fieldErrors.description,
                             errorMessage: U(this.state.fieldErrors.description)
-                        }, r.createElement(F.Kb, {
+                        }, r.createElement(F.Lb, {
                             placeholder: Object(k.d)("Tell viewers why they should watch your series", "CollectionModal"),
                             onChange: this.onDescriptionChange,
                             value: this.state.fieldValues.description,
                             disabled: !1
-                        }))), r.createElement(F.Da, {
+                        }))), r.createElement(F.Ea, {
                             label: "",
                             error: !!this.state.fieldErrors.language,
                             errorMessage: U(this.state.fieldErrors.language)
-                        }, r.createElement(F.Wa, {
+                        }, r.createElement(F.Xa, {
                             display: F.X.Flex,
                             margin: {
                                 bottom: 2
@@ -6233,13 +6233,13 @@
                         })))))))))
                     }, t
                 }(r.Component),
-                W = n("4Q4g"),
+                G = n("4Q4g"),
                 B = n("pM79"),
                 K = n("fQJ0"),
                 q = n("Wwq8"),
                 z = n("JNgr"),
-                $ = n("mvg9"),
-                Q = "https://static-cdn.jtvnw.net/twitch-event-images-v2/default/town-320x180",
+                W = n("mvg9"),
+                $ = "https://static-cdn.jtvnw.net/twitch-event-images-v2/default/town-320x180",
                 H = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -6272,7 +6272,7 @@
                                                             title: e.title,
                                                             description: e.description,
                                                             defaultTimeZone: r,
-                                                            imageURL: Q,
+                                                            imageURL: $,
                                                             language: e.language,
                                                             isDeleted: !1,
                                                             owner: {
@@ -6309,7 +6309,7 @@
                                                             title: e.title,
                                                             description: e.description,
                                                             defaultTimeZone: r,
-                                                            imageURL: Q,
+                                                            imageURL: $,
                                                             language: e.language,
                                                             isDeleted: !1,
                                                             owner: {
@@ -6325,7 +6325,7 @@
                                                     var n = t.data;
                                                     if (n.createTimetableEvent.event) {
                                                         var a = e.readQuery({
-                                                            query: $,
+                                                            query: W,
                                                             variables: {
                                                                 channelLogin: o
                                                             }
@@ -6363,7 +6363,7 @@
                                                                     })
                                                                 });
                                                             e.writeQuery({
-                                                                query: $,
+                                                                query: W,
                                                                 variables: {
                                                                     channelLogin: o
                                                                 },
@@ -6400,10 +6400,10 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         if (!this.props.user) return null;
-                        if (this.props.data && this.props.data.loading) return r.createElement(F.Wa, {
+                        if (this.props.data && this.props.data.loading) return r.createElement(F.Xa, {
                             fullWidth: !0,
                             fullHeight: !0
-                        }, r.createElement(F.Ya, null));
+                        }, r.createElement(F.Za, null));
                         var e, t = void 0;
                         this.props.data && this.props.data.event && function(e) {
                             return !(!e || "EventCollection" !== e.__typename)
@@ -6423,7 +6423,7 @@
                                 __typename: "User"
                             },
                             a = "" !== this.state.error;
-                        return r.createElement(G, {
+                        return r.createElement(X, {
                             closeModal: this.props.closeModal,
                             onCommit: this.onCommit,
                             eventFieldValues: e,
@@ -6453,11 +6453,11 @@
                         }
                     }), Object(c.a)(K, {
                         name: "updateTimetableEvent"
-                    }), Object(c.a)(W, {
+                    }), Object(c.a)(G, {
                         name: "createTimetableEvent"
                     })], t)
                 }(r.Component),
-                X = n("/MKj"),
+                Q = n("/MKj"),
                 Y = n("aCAx"),
                 Z = n("CcE2"),
                 J = n("Jhye"),
@@ -6469,22 +6469,22 @@
                         return t.renderTitle = function() {
                             var e = Object(k.d)("Events", "DashboardEventsHeader"),
                                 n = r.createElement(F.W, {
-                                    type: F.Nb.H4,
+                                    type: F.Ob.H4,
                                     bold: !0
                                 }, e),
                                 a = null,
                                 i = null,
                                 o = null;
-                            return t.props.navigatedCollection && (a = r.createElement(F.Wa, {
+                            return t.props.navigatedCollection && (a = r.createElement(F.Xa, {
                                 display: F.X.Flex
-                            }, r.createElement(F.Wa, {
+                            }, r.createElement(F.Xa, {
                                 margin: {
                                     left: .5
                                 }
                             }, r.createElement(F.W, {
-                                type: F.Nb.H4,
+                                type: F.Ob.H4,
                                 bold: !0
-                            }, "/ ", t.props.navigatedCollection.title))), i = r.createElement(F.Wa, {
+                            }, "/ ", t.props.navigatedCollection.title))), i = r.createElement(F.Xa, {
                                 margin: {
                                     right: 1
                                 }
@@ -6496,19 +6496,19 @@
                             })), n = r.createElement(F.U, {
                                 to: "/" + t.props.channelName + "/dashboard/events"
                             }, r.createElement(F.W, {
-                                type: F.Nb.H4,
+                                type: F.Ob.H4,
                                 bold: !0
-                            }, e)), t.props.navigatedCollection.stats && (o = r.createElement(F.W, null, t.props.navigatedCollection.stats.followingCount, " ", Object(k.d)("Reminders Set", "DashboardEventsHeader")))), r.createElement(r.Fragment, null, r.createElement(F.Wa, {
+                            }, e)), t.props.navigatedCollection.stats && (o = r.createElement(F.W, null, t.props.navigatedCollection.stats.followingCount, " ", Object(k.d)("Reminders Set", "DashboardEventsHeader")))), r.createElement(r.Fragment, null, r.createElement(F.Xa, {
                                 display: F.X.Flex
-                            }, i, r.createElement(F.Wa, {
+                            }, i, r.createElement(F.Xa, {
                                 display: F.X.Flex,
-                                flexDirection: F.Z.Column
-                            }, r.createElement(F.Wa, {
+                                flexDirection: F.Aa.Column
+                            }, r.createElement(F.Xa, {
                                 display: F.X.Flex,
-                                flexDirection: F.Z.Row
+                                flexDirection: F.Aa.Row
                             }, n, a), o)))
                         }, t.renderButtonRow = function() {
-                            var e = t.props.navigatedCollection && r.createElement(F.Wa, {
+                            var e = t.props.navigatedCollection && r.createElement(F.Xa, {
                                 display: F.X.Flex
                             }, r.createElement(J.a, {
                                 id: t.props.navigatedCollection.id,
@@ -6516,31 +6516,31 @@
                                 eventLocation: ee.a.DashboardEvents
                             }, r.createElement(F.z, {
                                 type: F.F.Hollow,
-                                icon: F.ob.Share
-                            }, Object(k.d)("Share", "DashboardEventsHeader"))), r.createElement(F.Wa, {
+                                icon: F.pb.Share
+                            }, Object(k.d)("Share", "DashboardEventsHeader"))), r.createElement(F.Xa, {
                                 margin: {
                                     x: 1
                                 }
                             }, r.createElement(F.z, {
                                 type: F.F.Hollow,
-                                icon: F.ob.Edit,
+                                icon: F.pb.Edit,
                                 onClick: t.handleEditEvent
                             }, Object(k.d)("Edit", "DashboardEventsHeader"))), r.createElement(F.z, {
                                 "data-a-target": te,
                                 type: F.F.Hollow,
                                 onClick: t.deleteEventCollection,
-                                icon: F.ob.Trash
+                                icon: F.pb.Trash
                             }, Object(k.d)("Delete", "DashboardEventsHeader")));
-                            return r.createElement(F.Wa, {
+                            return r.createElement(F.Xa, {
                                 display: F.X.Flex,
-                                flexDirection: F.Z.Row,
+                                flexDirection: F.Aa.Row,
                                 alignItems: F.f.Center
-                            }, e, r.createElement(F.Wa, {
+                            }, e, r.createElement(F.Xa, {
                                 margin: {
                                     left: 1
                                 }
                             }, r.createElement(F.z, {
-                                icon: F.ob.Plus,
+                                icon: F.pb.Plus,
                                 onClick: t.props.openEventCreator
                             }, Object(k.d)("Add Event", "DashboardEventsHeader"))))
                         }, t.deleteEventCollection = function() {
@@ -6569,24 +6569,24 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(F.xb, {
+                        return r.createElement(F.yb, {
                             className: "dashboard-events-header",
                             alignItems: F.f.Center,
                             borderBottom: !0,
                             background: F.r.Base,
                             display: F.X.Flex,
-                            flexDirection: F.Z.Row,
-                            justifyContent: F.Va.Center,
-                            position: F.eb.Relative,
-                            zIndex: F.ac.Default,
+                            flexDirection: F.Aa.Row,
+                            justifyContent: F.Wa.Center,
+                            position: F.fb.Relative,
+                            zIndex: F.bc.Default,
                             fullWidth: !0
-                        }, r.createElement(F.Wa, {
+                        }, r.createElement(F.Xa, {
                             margin: {
                                 x: 3
                             },
                             className: "dashboard-events-header__content",
                             display: F.X.Flex,
-                            justifyContent: F.Va.Between,
+                            justifyContent: F.Wa.Between,
                             fullWidth: !0
                         }, this.renderTitle(), this.renderButtonRow()))
                     }, t
@@ -6594,7 +6594,7 @@
                 ae = Object(g.b)("DashboardEventsHeaderComponent", {
                     autoReportInteractive: !0
                 })(ne);
-            var ie = Object(X.connect)(function(e) {
+            var ie = Object(Q.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
@@ -6648,47 +6648,47 @@
                         var e = Object(k.j)(new Date(this.props.startAt), {
                             timeZoneName: "short"
                         });
-                        return r.createElement(F.Wa, null, r.createElement(F.xb, {
+                        return r.createElement(F.Xa, null, r.createElement(F.yb, {
                             className: "dashboard-events-leaf-card__row",
                             margin: {
                                 y: 1
                             },
                             display: F.X.Flex,
-                            flexWrap: F.Aa.NoWrap,
+                            flexWrap: F.Ba.NoWrap,
                             alignItems: F.f.Center,
                             background: F.r.Base,
                             elevation: 1,
                             borderRadius: F.x.Small
-                        }, r.createElement(F.Wa, {
+                        }, r.createElement(F.Xa, {
                             fullWidth: !0,
                             display: F.X.Flex,
-                            justifyContent: F.Va.Between,
-                            flexDirection: F.Z.Row
-                        }, r.createElement(F.Wa, {
+                            justifyContent: F.Wa.Between,
+                            flexDirection: F.Aa.Row
+                        }, r.createElement(F.Xa, {
                             display: F.X.Flex,
-                            flexDirection: F.Z.Row
-                        }, r.createElement(F.Wa, {
+                            flexDirection: F.Aa.Row
+                        }, r.createElement(F.Xa, {
                             className: "dashboard-events-leaf-card__image",
-                            overflow: F.Za.Hidden,
+                            overflow: F.ab.Hidden,
                             flexShrink: 0
                         }, r.createElement(F.I, {
                             size: F.J.Size16,
                             aspect: F.p.Aspect16x9,
                             src: this.props.imageURL,
                             alt: "" !== this.props.imageURL ? this.props.title : ""
-                        })), r.createElement(F.Wa, {
+                        })), r.createElement(F.Xa, {
                             margin: {
                                 left: 1
                             },
                             display: F.X.Flex,
-                            flexDirection: F.Z.Column,
-                            justifyContent: F.Va.Center
-                        }, r.createElement(F.Wa, null, this.props.parentTitle), r.createElement(F.Wa, null, r.createElement(F.U, {
+                            flexDirection: F.Aa.Column,
+                            justifyContent: F.Wa.Center
+                        }, r.createElement(F.Xa, null, this.props.parentTitle), r.createElement(F.Xa, null, r.createElement(F.U, {
                             to: "/events/" + this.props.id
                         }, r.createElement(F.W, {
                             bold: !0,
-                            type: F.Nb.H5
-                        }, this.props.title))), r.createElement(F.Wa, null, this.renderInfoBar(e)))), r.createElement(F.Wa, {
+                            type: F.Ob.H5
+                        }, this.props.title))), r.createElement(F.Xa, null, this.renderInfoBar(e)))), r.createElement(F.Xa, {
                             margin: {
                                 left: 1,
                                 right: 1
@@ -6696,7 +6696,7 @@
                             display: F.X.Flex,
                             flexShrink: 0,
                             alignItems: F.f.Center
-                        }, r.createElement(F.Wa, {
+                        }, r.createElement(F.Xa, {
                             margin: {
                                 right: 1
                             }
@@ -6709,20 +6709,20 @@
                             balloonDirection: F.v.BottomRight
                         }, r.createElement(F.z, {
                             type: F.F.Hollow,
-                            icon: F.ob.Share
-                        }, Object(k.d)("Share", "DashboardEventsLeafCard")))), r.createElement(F.Wa, {
+                            icon: F.pb.Share
+                        }, Object(k.d)("Share", "DashboardEventsLeafCard")))), r.createElement(F.Xa, {
                             margin: {
                                 right: .5
                             }
                         }, r.createElement(oe.a, null, r.createElement(F.z, {
-                            icon: F.ob.More,
+                            icon: F.pb.More,
                             type: F.F.Text
                         }), r.createElement(F.u, {
                             direction: F.v.BottomRight,
                             tailOffset: 8
-                        }, r.createElement(F.Ta, {
+                        }, r.createElement(F.Ua, {
                             onClick: this.editEventLeaf
-                        }, r.createElement(F.Wa, {
+                        }, r.createElement(F.Xa, {
                             className: "dashboard-events-leaf-card__balloon-item",
                             padding: {
                                 x: 1,
@@ -6730,17 +6730,17 @@
                             },
                             display: F.X.Flex,
                             alignItems: F.f.Center
-                        }, r.createElement(F.nb, {
-                            asset: F.ob.Edit,
-                            type: F.pb.Brand
-                        }), r.createElement(F.Wa, {
+                        }, r.createElement(F.ob, {
+                            asset: F.pb.Edit,
+                            type: F.qb.Brand
+                        }), r.createElement(F.Xa, {
                             margin: {
                                 left: 1
                             }
-                        }, Object(k.d)("Edit", "DashboardEventsLeafCard")))), r.createElement(F.Ta, {
+                        }, Object(k.d)("Edit", "DashboardEventsLeafCard")))), r.createElement(F.Ua, {
                             "data-a-target": "delete-button",
                             onClick: this.deleteEventLeaf
-                        }, r.createElement(F.Wa, {
+                        }, r.createElement(F.Xa, {
                             className: "dashboard-events-leaf-card__balloon-item",
                             padding: {
                                 x: 1,
@@ -6748,10 +6748,10 @@
                             },
                             display: F.X.Flex,
                             alignItems: F.f.Center
-                        }, r.createElement(F.nb, {
-                            asset: F.ob.Trash,
-                            type: F.pb.Brand
-                        }), r.createElement(F.Wa, {
+                        }, r.createElement(F.ob, {
+                            asset: F.pb.Trash,
+                            type: F.qb.Brand
+                        }), r.createElement(F.Xa, {
                             margin: {
                                 left: 1
                             }
@@ -6761,7 +6761,7 @@
                 le = Object(g.b)("DashboardEventsLeafCardComponent", {
                     autoReportInteractive: !0
                 })(se);
-            var de = Object(X.connect)(function(e) {
+            var de = Object(Q.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
@@ -6799,20 +6799,20 @@
                                     deleteEventLeaf: e.props.deleteEventLeaf
                                 })
                             });
-                        return r.createElement(F.Wa, {
+                        return r.createElement(F.Xa, {
                             margin: {
                                 bottom: 3
                             }
-                        }, r.createElement(F.xb, {
+                        }, r.createElement(F.yb, {
                             display: F.X.Flex,
-                            justifyContent: F.Va.Between,
+                            justifyContent: F.Wa.Between,
                             padding: {
                                 bottom: .5
                             },
                             borderBottom: !0
                         }, r.createElement(F.W, {
                             color: F.O.Alt2,
-                            type: F.Nb.H5
+                            type: F.Ob.H5
                         }, this.props.dateString)), t)
                     }, t
                 }(r.Component),
@@ -6862,8 +6862,8 @@
                             }
                             return o
                         }(this.props.eventLeaves, this.props.editEventLeaf, this.props.editSegmentEventLeaf, this.props.deleteEventLeaf);
-                        return r.createElement(F.Wa, {
-                            position: F.eb.Relative
+                        return r.createElement(F.Xa, {
+                            position: F.fb.Relative
                         }, e, r.createElement(b.a, {
                             enabled: this.props.hasNextPage,
                             loadMore: this.props.loadNextPage
@@ -6880,12 +6880,12 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         return r.createElement(r.Fragment, null, r.createElement(F.U, {
                             to: "/" + this.props.channelName + "/dashboard/events/" + this.props.collection.id
-                        }, r.createElement(F.Wa, {
+                        }, r.createElement(F.Xa, {
                             margin: {
                                 bottom: 1
                             }
                         }, r.createElement(F.W, {
-                            fontSize: F.Ba.Size5
+                            fontSize: F.Ca.Size5
                         }, this.props.collection.title))))
                     }, t
                 }(r.Component),
@@ -6902,29 +6902,29 @@
                                     collection: t
                                 })
                             }),
-                            n = this.props.hasMoreSeries && r.createElement(F.Wa, {
+                            n = this.props.hasMoreSeries && r.createElement(F.Xa, {
                                 display: F.X.Flex,
-                                justifyContent: F.Va.Center
+                                justifyContent: F.Wa.Center
                             }, r.createElement(F.z, {
                                 "data-a-target": "load-more",
                                 type: F.F.Text,
-                                icon: F.ob.GlyphArrDown,
+                                icon: F.pb.GlyphArrDown,
                                 onClick: this.props.loadNextSeriesPage
                             }, Object(k.d)("Load More", "DashboardEventsSidenav")));
-                        return r.createElement(F.Wa, null, r.createElement(F.Wa, {
+                        return r.createElement(F.Xa, null, r.createElement(F.Xa, {
                             margin: {
                                 bottom: 1
                             }
                         }, r.createElement(F.W, {
-                            transform: F.Mb.Uppercase,
+                            transform: F.Nb.Uppercase,
                             color: F.O.Alt2,
-                            type: F.Nb.H5
-                        }, Object(k.d)("Series", "DashboardEventsSidenav"))), r.createElement(F.Wa, {
+                            type: F.Ob.H5
+                        }, Object(k.d)("Series", "DashboardEventsSidenav"))), r.createElement(F.Xa, {
                             margin: {
                                 bottom: 1
                             }
                         }, r.createElement(F.z, {
-                            icon: F.ob.Plus,
+                            icon: F.pb.Plus,
                             onClick: this.props.openEventCreator
                         }, Object(k.d)("Add Series", "DashboardEventsSidenav"))), t, n)
                     }, t
@@ -6934,13 +6934,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(F.rb, null, r.createElement(F.sb, {
+                        return r.createElement(F.sb, null, r.createElement(F.tb, {
                             name: "events-toggle",
                             label: Object(k.d)("Future Events", "DashboardEventsToggle"),
                             defaultChecked: this.props.filter === f.a.Future,
                             onChange: this.props.handleToggleChange,
                             value: f.a.Future
-                        }), r.createElement(F.sb, {
+                        }), r.createElement(F.tb, {
                             name: "events-toggle",
                             label: Object(k.d)("Past Events", "DashboardEventsToggle"),
                             defaultChecked: this.props.filter === f.a.Past,
@@ -7041,13 +7041,13 @@
                                 }
                             var o = null,
                                 s = Object(k.d)("Add Event", "DashboardEventsLayout");
-                            (!this.props.eventLeaves || 0 === n.length && this.props.filter === f.a.Future) && (o = this.props.navigatedCollection ? r.createElement(F.Wa, {
+                            (!this.props.eventLeaves || 0 === n.length && this.props.filter === f.a.Future) && (o = this.props.navigatedCollection ? r.createElement(F.Xa, {
                                 display: F.X.Flex,
-                                justifyContent: F.Va.Center
-                            }, r.createElement(F.Wa, {
+                                justifyContent: F.Wa.Center
+                            }, r.createElement(F.Xa, {
                                 display: F.X.Flex,
-                                flexDirection: F.Z.Column,
-                                justifyContent: F.Va.Center,
+                                flexDirection: F.Aa.Column,
+                                justifyContent: F.Wa.Center,
                                 margin: {
                                     top: 5
                                 }
@@ -7060,32 +7060,32 @@
                                     "3x": "https://static-cdn.jtvnw.net/emoticons/v1/86/3.0"
                                 },
                                 alt: Object(k.d)("No Events in this Series", "DashboardEventsLayout")
-                            }), r.createElement(F.Wa, {
+                            }), r.createElement(F.Xa, {
                                 display: F.X.Flex,
-                                textAlign: F.Jb.Center,
-                                flexDirection: F.Z.Column,
-                                justifyContent: F.Va.Center,
+                                textAlign: F.Kb.Center,
+                                flexDirection: F.Aa.Column,
+                                justifyContent: F.Wa.Center,
                                 margin: {
                                     top: 1
                                 }
                             }, r.createElement(F.W, {
                                 color: F.O.Alt2
-                            }, Object(k.d)("Yikes! Empty Series are invisible.", "DashboardEventsLayout"), r.createElement("br", null), Object(k.d)("To make your series visible, add an event.", "DashboardEventsLayout"))), r.createElement(F.Wa, {
+                            }, Object(k.d)("Yikes! Empty Series are invisible.", "DashboardEventsLayout"), r.createElement("br", null), Object(k.d)("To make your series visible, add an event.", "DashboardEventsLayout"))), r.createElement(F.Xa, {
                                 display: F.X.Flex,
-                                justifyContent: F.Va.Center,
+                                justifyContent: F.Wa.Center,
                                 margin: {
                                     top: 2
                                 }
                             }, r.createElement(F.z, {
-                                icon: F.ob.Plus,
+                                icon: F.pb.Plus,
                                 onClick: this.openSegmentEventCreation
-                            }, s)))) : r.createElement(F.Wa, {
+                            }, s)))) : r.createElement(F.Xa, {
                                 display: F.X.Flex,
-                                justifyContent: F.Va.Center
-                            }, r.createElement(F.Wa, {
+                                justifyContent: F.Wa.Center
+                            }, r.createElement(F.Xa, {
                                 display: F.X.Flex,
-                                flexDirection: F.Z.Column,
-                                justifyContent: F.Va.Center,
+                                flexDirection: F.Aa.Column,
+                                justifyContent: F.Wa.Center,
                                 margin: {
                                     top: 5
                                 }
@@ -7098,24 +7098,24 @@
                                     "3x": "https://static-cdn.jtvnw.net/emoticons/v1/86/3.0"
                                 },
                                 alt: Object(k.d)("No Events Created", "DashboardEventsLayout")
-                            }), r.createElement(F.Wa, {
+                            }), r.createElement(F.Xa, {
                                 display: F.X.Flex,
-                                textAlign: F.Jb.Center,
-                                flexDirection: F.Z.Column,
-                                justifyContent: F.Va.Center,
+                                textAlign: F.Kb.Center,
+                                flexDirection: F.Aa.Column,
+                                justifyContent: F.Wa.Center,
                                 margin: {
                                     top: 1
                                 }
                             }, r.createElement(F.W, {
                                 color: F.O.Alt2
-                            }, Object(k.d)("Aw, you have no events.", "DashboardEventsLayout"), r.createElement("br", null), Object(k.d)("Let's make some!", "DashboardEventsLayout"))), r.createElement(F.Wa, {
+                            }, Object(k.d)("Aw, you have no events.", "DashboardEventsLayout"), r.createElement("br", null), Object(k.d)("Let's make some!", "DashboardEventsLayout"))), r.createElement(F.Xa, {
                                 display: F.X.Flex,
-                                justifyContent: F.Va.Center,
+                                justifyContent: F.Wa.Center,
                                 margin: {
                                     top: 2
                                 }
                             }, r.createElement(F.z, {
-                                icon: F.ob.Plus,
+                                icon: F.pb.Plus,
                                 onClick: this.openSingleEventCreation
                             }, s)))));
                             var l = null;
@@ -7124,7 +7124,7 @@
                                     var m;
                                     (m = u[c]) && m.node && !m.node.isDeleted && d.push(m.node)
                                 }
-                                l = r.createElement(F.Wa, {
+                                l = r.createElement(F.Xa, {
                                     display: F.X.Flex,
                                     margin: {
                                         right: 3
@@ -7141,17 +7141,17 @@
                                     openEventCreator: this.openTimetableEventCreation
                                 })))
                             }
-                            t = r.createElement(F.Wa, {
+                            t = r.createElement(F.Xa, {
                                 margin: {
                                     x: 3
                                 },
                                 display: F.X.Flex,
-                                flexDirection: F.Z.Row,
+                                flexDirection: F.Aa.Row,
                                 flexGrow: 1
-                            }, l, r.createElement(F.Wa, {
+                            }, l, r.createElement(F.Xa, {
                                 className: "dashboard-events-layout__right-col",
                                 flexGrow: 1
-                            }, r.createElement(F.Wa, {
+                            }, r.createElement(F.Xa, {
                                 margin: {
                                     bottom: 2
                                 },
@@ -7192,13 +7192,13 @@
                                     eventID: this.state.editableEventID
                                 })
                         }
-                        return r.createElement(F.Wa, {
+                        return r.createElement(F.Xa, {
                             className: "dashboard-events-layout",
                             fullHeight: !0,
                             display: F.X.Flex,
-                            justifyContent: F.Va.Center,
-                            flexDirection: F.Z.Column
-                        }, r.createElement(F.Wa, null, r.createElement(ie, {
+                            justifyContent: F.Wa.Center,
+                            flexDirection: F.Aa.Column
+                        }, r.createElement(F.Xa, null, r.createElement(ie, {
                             channelName: this.props.user && this.props.user.login || "",
                             navigatedCollection: this.props.navigatedCollection || null,
                             openEventCreator: this.props.navigatedCollection ? this.openSegmentEventCreation : this.openSingleEventCreation,
@@ -7207,18 +7207,18 @@
                         })), r.createElement(b.b, {
                             className: "dashboard-events-layout__scroll-container",
                             disableDebounce: !0
-                        }, r.createElement(F.Wa, {
+                        }, r.createElement(F.Xa, {
                             display: F.X.Flex,
-                            justifyContent: F.Va.Center
-                        }, r.createElement(F.Wa, {
+                            justifyContent: F.Wa.Center
+                        }, r.createElement(F.Xa, {
                             className: "dashboard-events-layout__main-content",
                             margin: {
                                 top: 3
                             },
                             flexGrow: 1
-                        }, r.createElement(F.Wa, {
+                        }, r.createElement(F.Xa, {
                             display: F.X.Flex,
-                            flexDirection: F.Z.Row
+                            flexDirection: F.Aa.Row
                         }, t)))), r.createElement(h, {
                             overlayClassName: "modal__backdrop",
                             className: "modal__content",
@@ -7230,9 +7230,9 @@
                             message: Object(k.d)("Error loading data.", "DashboardEventsLayout")
                         })
                     }, t.prototype.renderLoadingSpinner = function() {
-                        return r.createElement(F.Wa, {
+                        return r.createElement(F.Xa, {
                             flexGrow: 1
-                        }, r.createElement(F.Ya, {
+                        }, r.createElement(F.Za, {
                             fillContent: !0
                         }))
                     }, t
@@ -7385,7 +7385,7 @@
                                     var t = e.data.user.managedEventCollections.edges[Math.max(e.data.user.managedEventCollections.edges.length - 1, 0)],
                                         n = t && t.cursor || "";
                                     return e.data.fetchMore({
-                                        query: $,
+                                        query: W,
                                         variables: {
                                             channelLogin: e.data.variables.channelLogin,
                                             collectionsCursor: n,
@@ -7899,7 +7899,7 @@
                 m = n("8Ad5"),
                 p = n("fk61"),
                 v = (n("V/+G"), function(e) {
-                    return r.createElement(s.Wa, {
+                    return r.createElement(s.Xa, {
                         attachTop: !0,
                         attachRight: !0,
                         attachLeft: !0,
@@ -7907,30 +7907,30 @@
                         fullHeight: !0,
                         fullWidth: !0,
                         display: s.X.Flex,
-                        flexDirection: s.Z.Column,
-                        justifyContent: s.Va.Center,
+                        flexDirection: s.Aa.Column,
+                        justifyContent: s.Wa.Center,
                         alignItems: s.f.Center,
-                        position: s.eb.Absolute
-                    }, r.createElement(s.Wa, {
-                        textAlign: s.Jb.Center,
+                        position: s.fb.Absolute
+                    }, r.createElement(s.Xa, {
+                        textAlign: s.Kb.Center,
                         flexShrink: 1
-                    }, r.createElement(s.nb, {
+                    }, r.createElement(s.ob, {
                         asset: e.icon,
                         width: 46,
                         height: 48,
-                        type: s.pb.Alt2
-                    })), r.createElement(s.Wa, {
+                        type: s.qb.Alt2
+                    })), r.createElement(s.Xa, {
                         margin: {
                             top: 1
                         },
-                        textAlign: s.Jb.Center
+                        textAlign: s.Kb.Center
                     }, r.createElement(s.W, {
-                        type: s.Nb.H4,
+                        type: s.Ob.H4,
                         color: s.O.Alt2
-                    }, e.titleText)), r.createElement(s.Wa, {
-                        textAlign: s.Jb.Center
+                    }, e.titleText)), r.createElement(s.Xa, {
+                        textAlign: s.Kb.Center
                     }, r.createElement(s.W, {
-                        type: s.Nb.P,
+                        type: s.Ob.P,
                         color: s.O.Alt2
                     }, e.subText)))
                 });
@@ -8001,10 +8001,10 @@
                             onKeyDown: this.onKeyDown
                         }, r.createElement(c.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(s.Qa, {
+                        }, r.createElement(s.Ra, {
                             key: this.props.initialGameTitle + "-" + this.props.redrawKey,
-                            type: s.Sa.Text,
-                            icon: s.ob.NavGames,
+                            type: s.Ta.Text,
+                            icon: s.pb.NavGames,
                             name: "game",
                             onChange: this.onChange,
                             onFocus: this.onFocus,
@@ -8022,32 +8022,32 @@
                                 "game-selector__search-panel--closed": !this.state.isOpen
                             }),
                             t = null;
-                        return 0 === this.props.searchTerm.length || (t = this.props.gameResults ? this.props.gameResults.length > 0 ? this.renderGameResults(this.props.gameResults, this.state.highlightedGameIndex) : this.props.isSearchPending ? r.createElement(s.Ya, {
+                        return 0 === this.props.searchTerm.length || (t = this.props.gameResults ? this.props.gameResults.length > 0 ? this.renderGameResults(this.props.gameResults, this.state.highlightedGameIndex) : this.props.isSearchPending ? r.createElement(s.Za, {
                             fillContent: !0
                         }) : r.createElement(v, {
-                            icon: s.ob.SearchNoResults,
+                            icon: s.pb.SearchNoResults,
                             titleText: Object(d.d)("No results found", "EventGameSelector"),
                             subText: Object(d.d)("They're probably in another castle", "EventGameSelector")
                         }) : r.createElement(v, {
-                            icon: s.ob.DeadGlitch,
+                            icon: s.pb.DeadGlitch,
                             titleText: Object(d.d)("Search is not available at this time", "EventGameSelector"),
                             subText: Object(d.d)("Please try again later", "EventGameSelector")
                         })), r.createElement("div", {
                             className: e,
                             tabIndex: 0
-                        }, r.createElement(s.xb, {
+                        }, r.createElement(s.yb, {
                             attachTop: !0,
                             attachRight: !0,
                             attachLeft: !0,
                             attachBottom: !0,
                             background: s.r.Base,
-                            position: s.eb.Absolute,
-                            overflow: s.Za.Hidden,
+                            position: s.fb.Absolute,
+                            overflow: s.ab.Hidden,
                             display: s.X.Block
                         }, r.createElement(u.b, {
                             suppressScrollX: !0,
                             "data-a-target": "search-scroller"
-                        }, r.createElement(s.Wa, {
+                        }, r.createElement(s.Xa, {
                             margin: {
                                 top: .5,
                                 bottom: .5
@@ -8194,10 +8194,10 @@
                     }, t.prototype.render = function() {
                         return this.props.disabled ? r.createElement("div", {
                             className: "game-selector__search-container"
-                        }, r.createElement(s.Qa, {
+                        }, r.createElement(s.Ra, {
                             value: this.props.currentGameTitle,
-                            type: s.Sa.Text,
-                            icon: s.ob.NavGames,
+                            type: s.Ta.Text,
+                            icon: s.pb.NavGames,
                             disabled: !0
                         })) : r.createElement(f, {
                             redrawKey: this.state.redrawKey,
@@ -8881,18 +8881,18 @@
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(d.bc)(n.props), {
+                        }, Object(d.cc)(n.props), {
                             download: n.props.text
                         }), n.renderIcon()) : n.isLink() ? r.createElement("a", i.__assign({
                             href: n.getLinkTarget(),
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(d.bc)(n.props)), n.renderIcon()) : r.createElement("button", i.__assign({
+                        }, Object(d.cc)(n.props)), n.renderIcon()) : r.createElement("button", i.__assign({
                             onClick: n.copyPageUrl,
                             onMouseLeave: n.clearIsCopiedStatus,
                             className: e
-                        }, Object(d.bc)(n.props)), n.renderIcon())
+                        }, Object(d.cc)(n.props)), n.renderIcon())
                     }, n.onShareClickHandler = function() {
                         n.props.onShareClick && n.props.onShareClick(n.props.type)
                     }, n.clearIsCopiedStatus = function() {
@@ -8907,12 +8907,12 @@
                         })
                     }, n.renderIcon = function() {
                         var e = n.getAssetFromType();
-                        return r.createElement(d.Wa, {
+                        return r.createElement(d.Xa, {
                             className: "social-button__icon " + n.addSocialClassModifier("social-button__icon"),
                             display: d.X.Flex,
                             alignItems: d.f.Center,
-                            justifyContent: d.Va.Center
-                        }, r.createElement(d.nb, {
+                            justifyContent: d.Wa.Center
+                        }, r.createElement(d.ob, {
                             asset: e
                         }))
                     }, n.isLink = function() {
@@ -8937,18 +8937,18 @@
                     }, n.getAssetFromType = function() {
                         switch (n.props.type) {
                             case a.Twitter:
-                                return d.ob.Twitter;
+                                return d.pb.Twitter;
                             case a.Facebook:
-                                return d.ob.Facebook;
+                                return d.pb.Facebook;
                             case a.VKontakte:
-                                return d.ob.VKontakte;
+                                return d.pb.VKontakte;
                             case a.Reddit:
-                                return d.ob.Reddit;
+                                return d.pb.Reddit;
                             case a.Download:
-                                return d.ob.Download;
+                                return d.pb.Download;
                             case a.Copy:
                             default:
-                                return d.ob.Copy
+                                return d.pb.Copy
                         }
                     }, n.addSocialClassModifier = function(e) {
                         switch (n.props.type) {
@@ -8990,11 +8990,11 @@
                     }, n
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(d.Wa, {
+                    return r.createElement(d.Xa, {
                         className: "social-button"
-                    }, r.createElement(d.Qb, {
+                    }, r.createElement(d.Rb, {
                         label: this.getTooltipFromType(),
-                        direction: d.Sb.Bottom
+                        direction: d.Tb.Bottom
                     }, this.renderLink()))
                 }, t
             }(r.Component)
@@ -9447,12 +9447,12 @@
                                 "event-modal-image-uploader__preview-image": !0,
                                 "event-modal-image-uploader__preview-image--preview-mode": !1 === this.state.isDraggingOver
                             });
-                            e = o.createElement(f.xb, {
+                            e = o.createElement(f.yb, {
                                 display: f.X.Flex,
-                                justifyContent: f.Va.Center,
+                                justifyContent: f.Wa.Center,
                                 alignItems: f.f.Center,
                                 background: f.r.Alt,
-                                position: f.eb.Absolute,
+                                position: f.fb.Absolute,
                                 attachBottom: !0,
                                 attachLeft: !0,
                                 attachRight: !0,
@@ -9461,8 +9461,8 @@
                                 "data-test-selector": m.ImagePreview,
                                 className: n,
                                 src: this.state.srcString
-                            })), t = o.createElement(f.Wa, {
-                                justifyContent: f.Va.Center,
+                            })), t = o.createElement(f.Xa, {
+                                justifyContent: f.Wa.Center,
                                 display: f.X.Flex,
                                 margin: {
                                     y: 1
@@ -9472,7 +9472,7 @@
                                 "data-test-selector": m.RemoveButton,
                                 type: f.F.Hollow,
                                 onClick: this.removeImage,
-                                icon: f.ob.RemoveTag
+                                icon: f.pb.RemoveTag
                             }, Object(s.d)("Remove", "EventModalImageUploader")))
                         }
                         var i = r({
@@ -9480,24 +9480,24 @@
                                 "event-modal-image-uploader__uploader--preview-mode": null !== e && !1 === this.state.isDraggingOver
                             }),
                             d = new p("https://api.twitch.tv/v5/channels/" + this.props.user.id + "/event_cover_images", !0, a.EventCoverImage, this.onFinishUploading);
-                        return o.createElement(f.Wa, {
+                        return o.createElement(f.Xa, {
                             className: "event-modal-image-uploader",
                             margin: {
                                 bottom: 2
                             }
-                        }, o.createElement(f.Da, {
+                        }, o.createElement(f.Ea, {
                             id: "event-image",
                             label: Object(s.d)("Event Image", "EventModal"),
                             labelOptional: Object(s.d)("optional", "EventModal")
-                        }, o.createElement(f.Wa, {
+                        }, o.createElement(f.Xa, {
                             className: "event-modal-image-uploader__container"
-                        }, o.createElement(f.Wa, {
+                        }, o.createElement(f.Xa, {
                             className: "event-modal-image-uploader__uploader"
                         }, o.createElement(f.o, {
                             ratio: f.p.Aspect16x9
-                        }, o.createElement(f.Oa, {
+                        }, o.createElement(f.Pa, {
                             className: i,
-                            position: f.eb.Absolute,
+                            position: f.fb.Absolute,
                             fullWidth: !0,
                             fullHeight: !0
                         }, o.createElement("div", {

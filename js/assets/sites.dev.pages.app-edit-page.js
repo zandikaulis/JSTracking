@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [203], {
+    [201], {
         AhYx: function(e, t, r) {
             "use strict";
             r.r(t);
@@ -24,18 +24,18 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return n.createElement(h.Wa, null, n.createElement(h.Oa, {
+                        return n.createElement(h.Xa, null, n.createElement(h.Pa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, n.createElement("header", null, n.createElement(h.Oa, {
+                        }, n.createElement("header", null, n.createElement(h.Pa, {
                             margin: {
                                 bottom: 1
                             }
                         }, n.createElement(h.W, {
-                            type: h.Nb.H2
+                            type: h.Ob.H2
                         }, Object(s.d)("Manage Application: ", "DevAppEdit"), " ", this.props.app.name)), n.createElement(h.W, {
-                            type: h.Nb.P
+                            type: h.Ob.P
                         }, Object(s.d)("Register a new application that uses the Twitch API to interact with Twitch", "DevAppEdit")))), n.createElement(f.a, {
                             app: this.props.app,
                             onResetSecret: this.props.onResetSecret,
@@ -199,7 +199,7 @@
                             categories: this.state.categories,
                             errorMessage: this.state.errorMessage,
                             succeeded: this.state.succeeded
-                        }) : n.createElement(h.Ya, {
+                        }) : n.createElement(h.Za, {
                             fillContent: !0
                         })
                     }, t = a.__decorate([Object(u.b)("DevAppEditPage", {
@@ -303,25 +303,25 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return n.createElement(c.Wa, {
+                        return n.createElement(c.Xa, {
                             margin: {
                                 bottom: 1
                             },
                             className: "dev-app-secret"
-                        }, n.createElement(c.Oa, {
+                        }, n.createElement(c.Pa, {
                             margin: {
                                 bottom: 1
                             }
                         }, n.createElement(c.W, {
-                            type: c.Nb.H5
-                        }, Object(s.d)("Client Secret", "DevAppSecret"))), n.createElement(c.Oa, {
+                            type: c.Ob.H5
+                        }, Object(s.d)("Client Secret", "DevAppSecret"))), n.createElement(c.Pa, {
                             margin: {
                                 bottom: 1
                             }
                         }, n.createElement(c.W, {
-                            type: c.Nb.P,
+                            type: c.Ob.P,
                             color: c.O.Alt2
-                        }, Object(s.d)("Passed to the token exchange endpoints to obtain a token. You must keep this confidential.", "DevAppSecret"))), this.props.showSecret && n.createElement(c.Wa, {
+                        }, Object(s.d)("Passed to the token exchange endpoints to obtain a token. You must keep this confidential.", "DevAppSecret"))), this.props.showSecret && n.createElement(c.Xa, {
                             margin: {
                                 bottom: 1
                             },
@@ -364,33 +364,33 @@
                                 type: r
                             }, e)
                         }, t.renderOtherCategoryField = function() {
-                            return n.createElement(c.Wa, {
+                            return n.createElement(c.Xa, {
                                 margin: {
                                     bottom: 1
                                 }
-                            }, n.createElement(c.Da, {
+                            }, n.createElement(c.Ea, {
                                 label: Object(s.d)("Other Details", "AppForm"),
                                 hint: Object(s.d)("Developing something not in our list? Tell us about it!", "DevAppForm")
-                            }, n.createElement(c.Qa, {
+                            }, n.createElement(c.Ra, {
                                 value: t.state.categoryOther,
-                                type: c.Sa.Text,
+                                type: c.Ta.Text,
                                 onChange: t.setCategoryOther,
                                 "data-test-selector": u
                             })))
                         }, t.renderExistingAppDetails = function() {
-                            if (t.props.app) return n.createElement(c.Wa, {
+                            if (t.props.app) return n.createElement(c.Xa, {
                                 "data-test-selector": d
-                            }, n.createElement(c.Wa, {
+                            }, n.createElement(c.Xa, {
                                 margin: {
                                     bottom: 1
                                 }
-                            }, n.createElement(c.Da, {
+                            }, n.createElement(c.Ea, {
                                 label: Object(s.d)("Client ID", "AppForm"),
                                 hint: Object(s.d)("Passed to authorization endpoints to identify your application. You cannot change your application's client id.", "DevAppForm")
-                            }, n.createElement(c.Qa, {
+                            }, n.createElement(c.Ra, {
                                 value: t.state.id,
                                 readOnly: !0,
-                                type: c.Sa.Text,
+                                type: c.Ta.Text,
                                 "data-test-selector": u
                             }))))
                         }, t.isClientNameInvalidError = function() {
@@ -411,14 +411,14 @@
                             if (t.state.isNotificationDismissed) return null;
                             if (t.props.errorMessage) {
                                 var e = t.props.errorMessage;
-                                return t.isClientNameInvalidError() && (e = Object(s.d)("We could not create the application due to an error with the fields below.", "DevAppForm")), n.createElement(c.Wa, {
+                                return t.isClientNameInvalidError() && (e = Object(s.d)("We could not create the application due to an error with the fields below.", "DevAppForm")), n.createElement(c.Xa, {
                                     margin: {
                                         bottom: 1
                                     },
                                     padding: 1,
                                     "data-test-selector": h
-                                }, n.createElement(c.Ma, {
-                                    type: c.Na.Error,
+                                }, n.createElement(c.Na, {
+                                    type: c.Oa.Error,
                                     title: e || "",
                                     narrow: !0,
                                     description: Object(s.d)("Please try again", "DevAppForm"),
@@ -474,49 +474,49 @@
                         "9" === this.state.category && (t = this.renderOtherCategoryField());
                         var r = this.renderErrorMessage(),
                             a = this.renderSaveButton();
-                        return n.createElement(c.Wa, {
+                        return n.createElement(c.Xa, {
                             className: "dev-app-form"
-                        }, n.createElement(c.Ia, null, n.createElement(c.P, {
+                        }, n.createElement(c.Ja, null, n.createElement(c.P, {
                             cols: {
                                 default: 12,
                                 md: 7
                             }
-                        }, r, n.createElement("form", null, n.createElement(c.Wa, {
+                        }, r, n.createElement("form", null, n.createElement(c.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, n.createElement(c.Da, {
+                        }, n.createElement(c.Ea, {
                             label: Object(s.d)("Name", "DevAppForm"),
                             hint: Object(s.d)("Displayed to users when authorizing your application.", "DevAppForm"),
                             error: this.isClientNameInvalidError(),
                             errorMessage: this.clientNameInvalidErrorMessage()
-                        }, n.createElement(c.Qa, {
+                        }, n.createElement(c.Ra, {
                             value: this.state.name,
                             required: !0,
-                            type: c.Sa.Text,
+                            type: c.Ta.Text,
                             onChange: this.setName,
                             "data-test-selector": "app-form-name-input",
                             error: this.isClientNameInvalidError()
-                        }))), n.createElement(c.Wa, {
+                        }))), n.createElement(c.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, n.createElement(c.Da, {
+                        }, n.createElement(c.Ea, {
                             label: Object(s.d)("OAuth Redirect URL", "DevAppForm"),
                             hint: Object(s.d)("Will receive the result of all client authorizations: either an access token or a failure message. This must exactly match the redirect_uri parameter passed to the authorization endpoint. When testing locally, you can set this to http://localhost.", "DevAppForm")
-                        }, n.createElement(c.Qa, {
+                        }, n.createElement(c.Ra, {
                             value: this.state.redirectUrl,
                             required: !0,
-                            type: c.Sa.Text,
+                            type: c.Ta.Text,
                             onChange: this.setRedirectUrl,
                             "data-test-selector": "app-form-redirect-input"
-                        }))), n.createElement(c.Wa, {
+                        }))), n.createElement(c.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, n.createElement(c.Da, {
+                        }, n.createElement(c.Ea, {
                             label: Object(s.d)("Category", "DevAppForm")
-                        }, n.createElement(c.tb, {
+                        }, n.createElement(c.ub, {
                             defaultValue: this.state.category,
                             onChange: this.setCategory,
                             "data-test-selector": "app-form-category-select"

@@ -1,12 +1,12 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [84], {
+    [83], {
         "+Zk8": function(e, t, i) {
             "use strict";
             i.r(t);
             var n = i("mrSG"),
                 r = i("q1tI"),
-                a = i("oJmH"),
-                s = i("/7QA"),
+                s = i("oJmH"),
+                a = i("/7QA"),
                 o = i("yR8l"),
                 l = i("geRD"),
                 u = i("GnwI"),
@@ -46,21 +46,21 @@
                         })
                     }, t.prototype.render = function() {
                         var e;
-                        return e = this.props.isWaiting ? r.createElement(b.Wa, {
+                        return e = this.props.isWaiting ? r.createElement(b.Xa, {
                             fullHeight: !0
-                        }, r.createElement(b.Ya, {
+                        }, r.createElement(b.Za, {
                             fillContent: !0
-                        })) : this.props.hasInput ? this.props.isErrored ? this.getErrorMessage() : this.props.userResults && this.props.userResults.totalHits > 0 ? this.getUserResultContent() : this.getNoResultsMessage() : r.createElement(b.Wa, {
+                        })) : this.props.hasInput ? this.props.isErrored ? this.getErrorMessage() : this.props.userResults && this.props.userResults.totalHits > 0 ? this.getUserResultContent() : this.getNoResultsMessage() : r.createElement(b.Xa, {
                             margin: 1
                         }, r.createElement(b.W, {
                             color: b.O.Alt2
-                        }, Object(s.d)("Start typing to see a list of suggestions here.", "PrimeGiftExperiment"))), r.createElement("div", {
+                        }, Object(a.d)("Start typing to see a list of suggestions here.", "PrimeGiftExperiment"))), r.createElement("div", {
                             onKeyDown: this.props.onKeyDown
-                        }, r.createElement(b.xb, {
+                        }, r.createElement(b.yb, {
                             className: "gift-recipient-search-result-view",
                             background: b.r.Alt,
-                            position: b.eb.Relative,
-                            overflow: b.Za.Hidden,
+                            position: b.fb.Relative,
+                            overflow: b.ab.Hidden,
                             display: b.X.Block,
                             margin: {
                                 bottom: 2
@@ -68,26 +68,26 @@
                             borderLeft: !0,
                             borderBottom: !0,
                             borderRight: !0
-                        }, r.createElement(b.Oa, {
-                            overflow: b.Za.Hidden,
-                            position: b.eb.Relative
+                        }, r.createElement(b.Pa, {
+                            overflow: b.ab.Hidden,
+                            position: b.fb.Relative
                         }, r.createElement(g.b, {
                             suppressScrollX: !0
-                        }, r.createElement(b.Wa, null, e, r.createElement(g.a, {
+                        }, r.createElement(b.Xa, null, e, r.createElement(g.a, {
                             enabled: !this.props.isWaiting && this.props.hasInput,
                             loadMore: this.props.loadMore
                         }))))))
                     }, t.prototype.getErrorMessage = function() {
-                        return r.createElement(b.Wa, {
+                        return r.createElement(b.Xa, {
                             fullWidth: !0,
-                            textAlign: b.Jb.Center,
-                            justifyContent: b.Va.Center
-                        }, r.createElement(b.W, null, Object(s.d)("Something went wrong", "PrimeGiftExperiment")))
+                            textAlign: b.Kb.Center,
+                            justifyContent: b.Wa.Center
+                        }, r.createElement(b.W, null, Object(a.d)("Something went wrong", "PrimeGiftExperiment")))
                     }, t.prototype.getUserResultContent = function() {
                         var e = this;
                         return this.props.userResults ? this.props.userResults.results.map(function(t) {
                             var i = Object(f.a)(t.login || "", t.name || "");
-                            return r.createElement(b.Ta, {
+                            return r.createElement(b.Ua, {
                                 tabIndex: -1,
                                 "data-ts_selectable": !0,
                                 "data-tt_content": !0,
@@ -98,7 +98,7 @@
                                 onClick: e.onUserClick,
                                 "data-test-selector": "subscribe-button__gift_search_result",
                                 selected: !!e.state.selectedUser && e.state.selectedUser.id === t.id
-                            }, r.createElement(b.Wa, {
+                            }, r.createElement(b.Xa, {
                                 padding: .5
                             }, r.createElement(b.G, {
                                 row: !0
@@ -108,29 +108,29 @@
                                 size: b.J.Size4,
                                 aspect: b.p.Aspect1x1
                             }), r.createElement(b.H, {
-                                overflow: b.Za.Hidden
-                            }, r.createElement(b.Oa, {
+                                overflow: b.ab.Hidden
+                            }, r.createElement(b.Pa, {
                                 padding: {
                                     x: 1
                                 }
                             }, r.createElement(b.W, {
-                                type: b.Nb.H5,
+                                type: b.Ob.H5,
                                 ellipsis: !0
                             }, i))))))
-                        }) : r.createElement(b.db, null)
+                        }) : r.createElement(b.eb, null)
                     }, t.prototype.updateFormState = function() {
                         this.props.handleFormAction({
                             giftRecipient: this.state.selectedUser
                         })
                     }, t.prototype.getNoResultsMessage = function() {
-                        return r.createElement(b.Wa, {
+                        return r.createElement(b.Xa, {
                             margin: 1
                         }, r.createElement(b.W, {
                             color: b.O.Alt2
-                        }, Object(s.d)("No Results", "PrimeGiftExperiment")))
+                        }, Object(a.d)("No Results", "PrimeGiftExperiment")))
                     }, t
                 }(r.Component)),
-                y = Object(a.compose)(Object(u.b)("GiftRecipientSearchResultPanel", {
+                y = Object(s.compose)(Object(u.b)("GiftRecipientSearchResultPanel", {
                     autoReportInteractive: !0
                 }))(v),
                 S = function(e) {
@@ -141,21 +141,21 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return this.props.handleFormAction ? r.createElement(b.Wa, {
+                        return this.props.handleFormAction ? r.createElement(b.Xa, {
                             className: "subscription-gift-recipient-search",
                             display: b.X.Flex,
-                            justifyContent: b.Va.Center,
+                            justifyContent: b.Wa.Center,
                             padding: {
                                 top: 1
                             },
                             fullWidth: !0
-                        }, r.createElement(b.Oa, {
+                        }, r.createElement(b.Pa, {
                             fullWidth: !0
-                        }, r.createElement("div", null, r.createElement(b.qb, {
+                        }, r.createElement("div", null, r.createElement(b.rb, {
                             onChange: this.handleChange,
                             onKeyDown: this.props.onKeyDown,
                             id: "gift-recipient-search",
-                            placeholder: Object(s.d)("Search for a Twitch ID", "PrimeGiftExperiment"),
+                            placeholder: Object(a.d)("Search for a Twitch ID", "PrimeGiftExperiment"),
                             "data-test-selector": "gift-recipient-search-input-selector"
                         }), r.createElement(y, {
                             hasInput: this.props.hasInput,
@@ -165,7 +165,7 @@
                             loadMore: this.props.loadMore,
                             onKeyDown: this.props.onKeyDown,
                             handleFormAction: this.props.handleFormAction
-                        })))) : r.createElement(b.db, null)
+                        })))) : r.createElement(b.eb, null)
                     }, t
                 }(r.Component),
                 k = 50,
@@ -221,12 +221,12 @@
                                 hasInput: !1
                             }) : e.keyCode === c.a.Up ? i.focusNext(-1) : e.keyCode === c.a.Down && i.focusNext(1))
                         }, i.state = i.getEmptyState(), i.searchClient = new p.a({
-                            appId: s.a.algoliaApplicationID,
-                            apiKey: s.a.algoliaAPIKey,
-                            apolloClient: s.p.apollo.client,
-                            logger: s.k,
-                            config: s.a,
-                            stats: s.p.stats
+                            appId: a.a.algoliaApplicationID,
+                            apiKey: a.a.algoliaAPIKey,
+                            apolloClient: a.p.apollo.client,
+                            logger: a.k,
+                            config: a.a,
+                            stats: a.p.stats
                         }), i
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
@@ -258,7 +258,7 @@
                         }
                     }, t.prototype.doSearch = function(e) {
                         return n.__awaiter(this, void 0, void 0, function() {
-                            var t, i, r, a, s;
+                            var t, i, r, s, a;
                             return n.__generator(this, function(o) {
                                 switch (o.label) {
                                     case 0:
@@ -269,7 +269,7 @@
                                     case 1:
                                         return o.trys.push([1, 3, , 4]), t = 0, [4, this.searchClient.queryForType(m.a.Users, e, i)];
                                     case 2:
-                                        return a = o.sent(), [3, 4];
+                                        return s = o.sent(), [3, 4];
                                     case 3:
                                         return o.sent(), this.setState(n.__assign({}, this.getEmptyState(), {
                                             isErrored: !0,
@@ -277,11 +277,11 @@
                                             term: e
                                         })), [2];
                                     case 4:
-                                        return a ? this.state.queryID !== a.id ? [2] : (s = Object(h.b)({
-                                            searchResults: a,
+                                        return s ? this.state.queryID !== s.id ? [2] : (a = Object(h.b)({
+                                            searchResults: s,
                                             append: !1
                                         }), this.setState(function(i) {
-                                            return n.__assign({}, i, s, {
+                                            return n.__assign({}, i, a, {
                                                 queryID: "",
                                                 term: e,
                                                 hasInput: !0,
@@ -301,14 +301,14 @@
                             n = document.activeElement,
                             r = Array.prototype.indexOf.call(i, n);
                         if ((t = r < 0 ? e > 0 ? 0 : i.length - 1 : r + e) < 0 && (t = 0), !(t >= i.length)) {
-                            var a = i.item(t);
-                            a.focus(), a.tabIndex = 0, this.state.currentFocus && (this.state.currentFocus.tabIndex = -1), this.setState({
-                                currentFocus: a
+                            var s = i.item(t);
+                            s.focus(), s.tabIndex = 0, this.state.currentFocus && (this.state.currentFocus.tabIndex = -1), this.setState({
+                                currentFocus: s
                             })
                         }
                     }, t
                 }(r.Component),
-                N = Object(a.compose)(Object(u.b)("GiftRecipientSearch", {
+                N = Object(s.compose)(Object(u.b)("GiftRecipientSearch", {
                     autoReportInteractive: !0
                 }))(_),
                 E = i("0KHE"),
@@ -367,59 +367,59 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(b.xb, {
+                        return r.createElement(b.yb, {
                             display: b.X.Flex,
-                            flexDirection: b.Z.Column,
+                            flexDirection: b.Aa.Column,
                             background: b.r.Base
                         }, this.renderHeader(), this.renderHorizontalRule(), this.renderBody(), this.renderFooter())
                     }, t.prototype.renderHorizontalRule = function() {
-                        return r.createElement(b.xb, {
+                        return r.createElement(b.yb, {
                             fullWidth: !0,
                             flexGrow: 1,
                             borderTop: !0
                         })
                     }, t.prototype.renderHeader = function() {
-                        return r.createElement(b.Wa, {
+                        return r.createElement(b.Xa, {
                             display: b.X.Flex,
-                            flexDirection: b.Z.Row,
-                            justifyContent: b.Va.Center,
+                            flexDirection: b.Aa.Row,
+                            justifyContent: b.Wa.Center,
                             alignItems: b.f.Center,
                             padding: 2
                         }, r.createElement(b.W, {
-                            fontSize: b.Ba.Size4,
+                            fontSize: b.Ca.Size4,
                             bold: !0
-                        }, Object(s.d)("Choose a Gift Recipient", "PrimeGiftExperimentSubmission")), r.createElement(b.Wa, {
+                        }, Object(a.d)("Choose a Gift Recipient", "PrimeGiftExperimentSubmission")), r.createElement(b.Xa, {
                             display: b.X.InlineFlex,
                             margin: 1,
                             attachRight: !0
-                        }, r.createElement(b.bb, {
-                            label: Object(s.d)("Beta", "PrimeGiftExperiment")
+                        }, r.createElement(b.cb, {
+                            label: Object(a.d)("Beta", "PrimeGiftExperiment")
                         })))
                     }, t.prototype.renderBody = function() {
-                        return r.createElement(b.Wa, {
+                        return r.createElement(b.Xa, {
                             padding: {
                                 x: 2
                             }
-                        }, r.createElement(b.Wa, {
+                        }, r.createElement(b.Xa, {
                             margin: {
                                 top: 1
                             }
                         }, r.createElement(b.W, {
-                            type: b.Nb.Span
-                        }, Object(s.d)("The recipient will receive a notification and will need to claim the gift before the offer expires.", "PrimeGiftExperimentSubmission"))), r.createElement(N, {
+                            type: b.Ob.Span
+                        }, Object(a.d)("The recipient will receive a notification and will need to claim the gift before the offer expires.", "PrimeGiftExperimentSubmission"))), r.createElement(N, {
                             key: "gift-recipient-search-page",
                             onBack: this.goBack,
                             handleFormAction: this.handleFormAction
                         }), this.renderRecipients())
                     }, t.prototype.renderRecipients = function() {
-                        if (this.state.error) return r.createElement(b.Wa, {
+                        if (this.state.error) return r.createElement(b.Xa, {
                             margin: {
                                 bottom: 1
                             }
                         }, r.createElement(b.W, {
                             color: b.O.Alt2,
                             italic: !0
-                        }, Object(s.d)("Sorry, it looks like an error occured when we tried to send this gift. Help us improve this beta feature by <x:link>emailing us a bug report</x:link>", {
+                        }, Object(a.d)("Sorry, it looks like an error occured when we tried to send this gift. Help us improve this beta feature by <x:link>emailing us a bug report</x:link>", {
                             "x:link": function(e) {
                                 return r.createElement("a", {
                                     href: "https://help.twitch.tv/customer/portal/emails/new?ticket[custom_category]=Twitch%20Prime&email[subject]=&email[body]=",
@@ -429,14 +429,14 @@
                             }
                         }, "PrimeGiftExperimentSubmission")));
                         var e = this.props.getGiftRecipientList();
-                        return e ? r.createElement(b.Wa, {
+                        return e ? r.createElement(b.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(b.W, null, Object(s.d)("Sent gifts to <x:bold>{giftLogins}</x:bold>", {
+                        }, r.createElement(b.W, null, Object(a.d)("Sent gifts to <x:bold>{giftLogins}</x:bold>", {
                             "x:bold": function(e) {
                                 return r.createElement(b.W, {
-                                    type: b.Nb.Span,
+                                    type: b.Ob.Span,
                                     bold: !0
                                 }, e)
                             },
@@ -444,7 +444,7 @@
                         }, "PrimeGiftExperimentSubmission"))) : null
                     }, t.prototype.renderFooter = function() {
                         var e = 10 - this.props.getGiftRecipientList().length;
-                        return r.createElement(b.xb, {
+                        return r.createElement(b.yb, {
                             display: b.X.Flex,
                             background: b.r.Alt2,
                             attachBottom: !0,
@@ -452,17 +452,17 @@
                                 x: 2,
                                 y: 1
                             }
-                        }, r.createElement(b.Wa, {
+                        }, r.createElement(b.Xa, {
                             display: b.X.Flex,
                             flexGrow: 1,
                             flexShrink: 1,
                             alignItems: b.f.Center
-                        }, r.createElement(b.W, null, Object(s.d)("{remainingGifts,number} gifts remain", {
+                        }, r.createElement(b.W, null, Object(a.d)("{remainingGifts,number} gifts remain", {
                             remainingGifts: e
-                        }, "PrimeGiftExperimentSubmission"))), r.createElement(b.Wa, {
+                        }, "PrimeGiftExperimentSubmission"))), r.createElement(b.Xa, {
                             flexGrow: 0,
                             flexShrink: 0,
-                            verticalAlign: b.Xb.Middle
+                            verticalAlign: b.Yb.Middle
                         }, r.createElement(b.i, {
                             duration: b.k.Medium,
                             enabled: this.state.giftSuccess,
@@ -472,10 +472,10 @@
                             "data-test-selector": "prime-send-gift-button",
                             state: this.state.isSubmitInTransit ? b.E.Loading : b.E.Default,
                             onClick: this.onGiftClick
-                        }, Object(s.d)("Send as a Gift", "PrimeGiftExperimentSubmission")))))
+                        }, Object(a.d)("Send as a Gift", "PrimeGiftExperimentSubmission")))))
                     }, t
                 }(r.Component)),
-                x = Object(a.compose)(Object(o.a)(E, {
+                x = Object(s.compose)(Object(o.a)(E, {
                     name: "giveGift"
                 }), Object(u.b)("GiftForm", {
                     autoReportInteractive: !0
@@ -700,16 +700,6 @@
             };
             e.exports = i
         },
-        "8Ad5": function(e, t, i) {
-            "use strict";
-            var n;
-            i.d(t, "a", function() {
-                    return n
-                }),
-                function(e) {
-                    e[e.Backspace = 8] = "Backspace", e[e.Tab = 9] = "Tab", e[e.Enter = 13] = "Enter", e[e.Esc = 27] = "Esc", e[e.Space = 32] = "Space", e[e.Left = 37] = "Left", e[e.Up = 38] = "Up", e[e.Right = 39] = "Right", e[e.Down = 40] = "Down", e[e.Digit0 = 48] = "Digit0", e[e.Digit1 = 49] = "Digit1", e[e.Digit2 = 50] = "Digit2", e[e.Digit3 = 51] = "Digit3", e[e.Digit4 = 52] = "Digit4", e[e.Digit5 = 53] = "Digit5", e[e.Digit6 = 54] = "Digit6", e[e.Digit7 = 55] = "Digit7", e[e.Digit8 = 56] = "Digit8", e[e.Digit9 = 57] = "Digit9", e[e.Colon = 58] = "Colon", e[e.At = 64] = "At", e[e.A = 65] = "A", e[e.B = 66] = "B", e[e.C = 67] = "C", e[e.D = 68] = "D", e[e.E = 69] = "E", e[e.F = 70] = "F", e[e.G = 71] = "G", e[e.H = 72] = "H", e[e.I = 73] = "I", e[e.J = 74] = "J", e[e.K = 75] = "K", e[e.L = 76] = "L", e[e.M = 77] = "M", e[e.N = 78] = "N", e[e.O = 79] = "O", e[e.P = 80] = "P", e[e.Q = 81] = "Q", e[e.R = 82] = "R", e[e.S = 83] = "S", e[e.T = 84] = "T", e[e.U = 85] = "U", e[e.V = 86] = "V", e[e.W = 87] = "W", e[e.X = 88] = "X", e[e.Y = 89] = "Y", e[e.Z = 90] = "Z", e[e.Comma = 188] = "Comma", e[e.Period = 190] = "Period"
-                }(n || (n = {}))
-        },
         "9kXc": function(e, t, i) {
             "use strict";
             i.d(t, "b", function() {
@@ -719,8 +709,8 @@
             });
             var n = i("/7QA"),
                 r = i("yLwq"),
-                a = i("kduP"),
-                s = i("2xye"),
+                s = i("kduP"),
+                a = i("2xye"),
                 o = i("sLmD");
 
             function l(e) {
@@ -742,11 +732,11 @@
                             title: i,
                             thumbnailAltText: e.name,
                             linkTo: {
-                                pathname: Object(a.c)(e.name),
+                                pathname: Object(s.c)(e.name),
                                 state: {
-                                    content: s.PageviewContent.Game,
+                                    content: a.PageviewContent.Game,
                                     content_index: t,
-                                    medium: s.PageviewMedium.NavSearch
+                                    medium: a.PageviewMedium.NavSearch
                                 }
                             },
                             id: e.objectID,
@@ -775,9 +765,9 @@
                         linkTo: {
                             pathname: "/" + e.login,
                             state: {
-                                content: s.PageviewContent.User,
+                                content: a.PageviewContent.User,
                                 content_index: t,
-                                medium: s.PageviewMedium.NavSearch
+                                medium: a.PageviewMedium.NavSearch
                             }
                         },
                         id: e.objectID,
@@ -796,9 +786,9 @@
                         linkTo: {
                             pathname: "/" + e.login,
                             state: {
-                                content: s.PageviewContent.Live,
+                                content: a.PageviewContent.Live,
                                 content_index: t,
-                                medium: s.PageviewMedium.NavSearch
+                                medium: a.PageviewMedium.NavSearch
                             }
                         },
                         id: e.objectID,
@@ -822,9 +812,9 @@
                     linkTo: {
                         pathname: "/videos/" + e.objectID,
                         state: {
-                            content: s.PageviewContent.Video,
+                            content: a.PageviewContent.Video,
                             content_index: t,
-                            medium: s.PageviewMedium.NavSearch
+                            medium: a.PageviewMedium.NavSearch
                         }
                     },
                     login: e.broadcaster_login,
@@ -916,8 +906,8 @@
             });
             var n = i("mrSG"),
                 r = i("hnrd"),
-                a = i("/7QA"),
-                s = i("D7An"),
+                s = i("/7QA"),
+                a = i("D7An"),
                 o = i("H/lO"),
                 l = i("vR4/"),
                 u = i("BSTw"),
@@ -977,33 +967,33 @@
                 },
                 m = function() {
                     function e(e) {
-                        this.apolloClient = e.apolloClient, this.client = r(e.appId, e.apiKey), this.stats = e.stats, this.logger = e.logger.withCategory("search-client"), this.sendSearchRequestToForage = "variant" === a.p.experiments.getAssignment(s.b.NewSearchBackend), this.getCountryCode()
+                        this.apolloClient = e.apolloClient, this.client = r(e.appId, e.apiKey), this.stats = e.stats, this.logger = e.logger.withCategory("search-client"), this.sendSearchRequestToForage = "variant" === s.p.experiments.getAssignment(a.b.NewSearchBackend), this.getCountryCode()
                     }
                     return e.prototype.queryTopResults = function(e, t) {
                         return n.__awaiter(this, void 0, void 0, function() {
-                            var i, r, a, s;
+                            var i, r, s, a;
                             return n.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
                                         return r = [], (i = []).push(this.getTopResult(d.games, e)), i.push(this.getTopResult(d.videos, e)), i.push(this.getTopResult(d.users, e)), i.push(this.getTopResult(d.channels, e)), r.push(this.getTotalResult(d.games, e)), r.push(this.getTotalResult(d.videos, e)), r.push(this.getTotalResult(d.users, e)), r.push(this.getTotalResult(d.channels, e)), [4, this.query(i.concat(r))];
                                     case 1:
-                                        return (a = n.sent()) ? (s = a.results, [2, {
+                                        return (s = n.sent()) ? (a = s.results, [2, {
                                             id: t,
                                             games: {
-                                                totalHits: s[4].nbHits,
-                                                hits: s[0].hits
+                                                totalHits: a[4].nbHits,
+                                                hits: a[0].hits
                                             },
                                             videos: {
-                                                totalHits: s[5].nbHits,
-                                                hits: s[1].hits
+                                                totalHits: a[5].nbHits,
+                                                hits: a[1].hits
                                             },
                                             users: {
-                                                totalHits: s[6].nbHits,
-                                                hits: s[2].hits
+                                                totalHits: a[6].nbHits,
+                                                hits: a[2].hits
                                             },
                                             channels: {
-                                                totalHits: s[7].nbHits,
-                                                hits: s[3].hits
+                                                totalHits: a[7].nbHits,
+                                                hits: a[3].hits
                                             }
                                         }]) : [2, function(e) {
                                             return {
@@ -1030,27 +1020,27 @@
                             })
                         })
                     }, e.prototype.queryForType = function(e, t, i, r) {
-                        var a = void 0 === r ? {} : r,
-                            s = a.page,
-                            l = void 0 === s ? 0 : s,
-                            u = a.hitsPerPage,
+                        var s = void 0 === r ? {} : r,
+                            a = s.page,
+                            l = void 0 === a ? 0 : a,
+                            u = s.hitsPerPage,
                             c = void 0 === u ? 50 : u,
-                            m = a.facetFilters,
+                            m = s.facetFilters,
                             p = void 0 === m ? "" : m,
-                            h = a.numericFilters,
-                            g = a.restrictSearchableAttributes,
+                            h = s.numericFilters,
+                            g = s.restrictSearchableAttributes,
                             f = void 0 === g ? [] : g;
                         return n.__awaiter(this, void 0, void 0, function() {
-                            var r, a, s, u, m, g, b, v, y = this;
+                            var r, s, a, u, m, g, b, v, y = this;
                             return n.__generator(this, function(S) {
                                 switch (S.label) {
                                     case 0:
                                         switch (r = {
                                             id: i,
                                             currentPage: l
-                                        }, a = function(e) {
+                                        }, s = function(e) {
                                             return n.__awaiter(y, void 0, void 0, function() {
-                                                var i, a;
+                                                var i, s;
                                                 return n.__generator(this, function(n) {
                                                     switch (n.label) {
                                                         case 0:
@@ -1067,9 +1057,9 @@
                                                                 }
                                                             }, [4, this.query([i])];
                                                         case 1:
-                                                            return (a = n.sent()) ? (r.exhaustedHits = !a.results[0].nbHits || a.results[0].hits.length < c, [2, {
-                                                                totalHits: a.results[0].nbHits,
-                                                                hits: a.results[0].hits
+                                                            return (s = n.sent()) ? (r.exhaustedHits = !s.results[0].nbHits || s.results[0].hits.length < c, [2, {
+                                                                totalHits: s.results[0].nbHits,
+                                                                hits: s.results[0].hits
                                                             }]) : (r.exhaustedHits = !0, [2, {
                                                                 totalHits: 0,
                                                                 hits: []
@@ -1093,27 +1083,27 @@
                                         }
                                         return [3, 13];
                                     case 1:
-                                        return s = r, [4, a(d.games)];
+                                        return a = r, [4, s(d.games)];
                                     case 2:
-                                        return s.games = S.sent(), [3, 14];
+                                        return a.games = S.sent(), [3, 14];
                                     case 3:
-                                        return u = r, [4, a(d.users)];
+                                        return u = r, [4, s(d.users)];
                                     case 4:
                                         return u.users = S.sent(), [3, 14];
                                     case 5:
-                                        return m = r, [4, a(d.channels)];
+                                        return m = r, [4, s(d.channels)];
                                     case 6:
                                         return m.channels = S.sent(), [3, 14];
                                     case 7:
-                                        return g = r, [4, a(d.videos)];
+                                        return g = r, [4, s(d.videos)];
                                     case 8:
                                         return g.videos = S.sent(), [3, 14];
                                     case 9:
-                                        return b = r, [4, a(d.streamTags)];
+                                        return b = r, [4, s(d.streamTags)];
                                     case 10:
                                         return b.streamTags = S.sent(), [3, 14];
                                     case 11:
-                                        return v = r, [4, a(d.tags)];
+                                        return v = r, [4, s(d.tags)];
                                     case 12:
                                         return v.tags = S.sent(), [3, 14];
                                     case 13:
@@ -1125,38 +1115,38 @@
                         })
                     }, e.prototype.queryVideos = function(e, t, i) {
                         return n.__awaiter(this, void 0, void 0, function() {
-                            var r, a, s, u;
+                            var r, s, a, u;
                             return n.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        switch (r = o.a.Videos, a = [], i.length) {
+                                        switch (r = o.a.Videos, s = [], i.length) {
                                             case l.a.Short:
-                                                a.push("length<=900");
+                                                s.push("length<=900");
                                                 break;
                                             case l.a.Long:
-                                                a.push("length>900")
+                                                s.push("length>900")
                                         }
-                                        switch (s = {
+                                        switch (a = {
                                             indexName: r,
                                             query: e,
                                             params: {
                                                 page: 0,
                                                 hitsPerPage: 50,
-                                                numericFilters: a,
+                                                numericFilters: s,
                                                 facets: "*",
                                                 facetFilters: ""
                                             }
                                         }, i.type) {
                                             case l.b.PastBroadcasts:
-                                                s.params.facetFilters = "broadcast_type:archive";
+                                                a.params.facetFilters = "broadcast_type:archive";
                                                 break;
                                             case l.b.Uploads:
-                                                s.params.facetFilters = "broadcast_type:upload";
+                                                a.params.facetFilters = "broadcast_type:upload";
                                                 break;
                                             case l.b.Highlights:
-                                                s.params.facetFilters = "broadcast_type:highlight"
+                                                a.params.facetFilters = "broadcast_type:highlight"
                                         }
-                                        return [4, this.query([s])];
+                                        return [4, this.query([a])];
                                     case 1:
                                         return (u = n.sent()) ? [2, {
                                             id: t,
@@ -1217,13 +1207,13 @@
                         }
                     }, e.prototype.query = function(e) {
                         return n.__awaiter(this, void 0, void 0, function() {
-                            var t, i, r, a, s;
+                            var t, i, r, s, a;
                             return n.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        i = Date.now(), a = !1, n.label = 1;
+                                        i = Date.now(), s = !1, n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 6, , 7]), this.sendSearchRequestToForage && e.length > 7 ? (s = e[0].query, [4, this.getSearchResults(s)]) : [3, 3];
+                                        return n.trys.push([1, 6, , 7]), this.sendSearchRequestToForage && e.length > 7 ? (a = e[0].query, [4, this.getSearchResults(a)]) : [3, 3];
                                     case 2:
                                         return t = n.sent(), [3, 5];
                                     case 3:
@@ -1233,9 +1223,9 @@
                                     case 5:
                                         return [3, 7];
                                     case 6:
-                                        return n.sent(), a = !0, t = null, [3, 7];
+                                        return n.sent(), s = !0, t = null, [3, 7];
                                     case 7:
-                                        return r = Date.now(), this.countryCode && (a ? this.stats.recordSearchError(this.countryCode, r - i) : this.stats.recordSearchSuccess(this.countryCode, r - i)), [2, t]
+                                        return r = Date.now(), this.countryCode && (s ? this.stats.recordSearchError(this.countryCode, r - i) : this.stats.recordSearchSuccess(this.countryCode, r - i)), [2, t]
                                 }
                             })
                         })
@@ -1253,19 +1243,19 @@
         QVaV: function(e, t, i) {
             "use strict";
             i.d(t, "a", function() {
-                return a
-            }), i.d(t, "b", function() {
                 return s
+            }), i.d(t, "b", function() {
+                return a
             });
             var n = i("q1tI"),
                 r = /^[\x00-\x7F]*$/,
-                a = function(e, t, i) {
-                    return void 0 === i && (i = !1), t && e && !s(t) ? i ? t + " (" + e + ")" : n.createElement("span", null, t, " ", n.createElement("span", {
+                s = function(e, t, i) {
+                    return void 0 === i && (i = !1), t && e && !a(t) ? i ? t + " (" + e + ")" : n.createElement("span", null, t, " ", n.createElement("span", {
                         className: "intl-login"
                     }, "(" + e + ")")) : t || (e || "")
                 };
 
-            function s(e) {
+            function a(e) {
                 return r.test(e)
             }
         },
@@ -1398,11 +1388,11 @@
                 return "/communities/" + encodeURIComponent(e)
             }
 
-            function a(e) {
+            function s(e) {
                 return "/events/" + encodeURIComponent(e)
             }
 
-            function s(e) {
+            function a(e) {
                 return "/" + encodeURIComponent(e) + "/manager"
             }
             i.d(t, "c", function() {
@@ -1410,21 +1400,21 @@
             }), i.d(t, "a", function() {
                 return r
             }), i.d(t, "b", function() {
-                return a
-            }), i.d(t, "d", function() {
                 return s
+            }), i.d(t, "d", function() {
+                return a
             })
         },
         sLmD: function(e, t, i) {
             "use strict";
             i.d(t, "b", function() {
-                return s
+                return a
             }), i.d(t, "a", function() {
                 return o
             });
             var n = i("/7QA"),
                 r = "en-us",
-                a = {
+                s = {
                     bg: "bg-bg",
                     cs: "cs-cz",
                     da: "da-dk",
@@ -1455,7 +1445,7 @@
                     "zh-cn": "zh-cn",
                     "zh-tw": "zh-tw"
                 },
-                s = function(e) {
+                a = function(e) {
                     var t, i = o();
                     return t = function(e) {
                         return void 0 !== e.tag_id
@@ -1474,7 +1464,7 @@
                 };
 
             function o() {
-                return a[n.p.intl.getLanguageCode() || ""] || r
+                return s[n.p.intl.getLanguageCode() || ""] || r
             }
         },
         "vR4/": function(e, t, i) {
@@ -1499,7 +1489,7 @@
             }), i.d(t, "a", function() {
                 return r
             }), i.d(t, "c", function() {
-                return a
+                return s
             });
             var n = [{
                 id: "profile_image_001",
@@ -1529,7 +1519,7 @@
                 return 300 === t ? i = 300 : 96 !== t && 80 !== t || (i = 150), "https://static-cdn.jtvnw.net/user-default-pictures/" + e.urlSlug + "-profile_image-" + i + "x" + i + ".jpg"
             }
 
-            function a(e, t) {
+            function s(e, t) {
                 var i = parseInt(e, 10) % n.length;
                 return r(n[i], t)
             }

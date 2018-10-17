@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [145], {
+    [144], {
         "0vlg": function(e, t) {
             var n = {
                 kind: "Document",
@@ -1089,10 +1089,10 @@
                     }, t.prototype.render = function() {
                         return this.props.disabled ? i.createElement("div", {
                             className: "game-selector__search-container"
-                        }, i.createElement(s.Qa, {
+                        }, i.createElement(s.Ra, {
                             value: this.props.currentGameTitle,
-                            type: s.Sa.Text,
-                            icon: s.ob.NavGames,
+                            type: s.Ta.Text,
+                            icon: s.pb.NavGames,
                             disabled: !0
                         })) : i.createElement(o.a, {
                             redrawKey: this.state.redrawKey,
@@ -1247,7 +1247,7 @@
                 c = n("8Ad5"),
                 u = n("Ue10"),
                 p = function(e) {
-                    return s.createElement(u.Wa, {
+                    return s.createElement(u.Xa, {
                         attachTop: !0,
                         attachRight: !0,
                         attachLeft: !0,
@@ -1255,30 +1255,30 @@
                         fullHeight: !0,
                         fullWidth: !0,
                         display: u.X.Flex,
-                        flexDirection: u.Z.Column,
-                        justifyContent: u.Va.Center,
+                        flexDirection: u.Aa.Column,
+                        justifyContent: u.Wa.Center,
                         alignItems: u.f.Center,
-                        position: u.eb.Absolute
-                    }, s.createElement(u.Wa, {
-                        textAlign: u.Jb.Center,
+                        position: u.fb.Absolute
+                    }, s.createElement(u.Xa, {
+                        textAlign: u.Kb.Center,
                         flexShrink: 1
-                    }, s.createElement(u.nb, {
+                    }, s.createElement(u.ob, {
                         asset: e.icon,
                         width: 46,
                         height: 48,
-                        type: u.pb.Alt2
-                    })), s.createElement(u.Wa, {
+                        type: u.qb.Alt2
+                    })), s.createElement(u.Xa, {
                         margin: {
                             top: 1
                         },
-                        textAlign: u.Jb.Center
+                        textAlign: u.Kb.Center
                     }, s.createElement(u.W, {
-                        type: u.Nb.H4,
+                        type: u.Ob.H4,
                         color: u.O.Alt2
-                    }, e.titleText)), s.createElement(u.Wa, {
-                        textAlign: u.Jb.Center
+                    }, e.titleText)), s.createElement(u.Xa, {
+                        textAlign: u.Kb.Center
                     }, s.createElement(u.W, {
-                        type: u.Nb.P,
+                        type: u.Ob.P,
                         color: u.O.Alt2
                     }, e.subText)))
                 },
@@ -1288,13 +1288,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(u.Ta, i.__assign({
+                        return s.createElement(u.Ua, i.__assign({
                             onClick: this.props.onClick,
                             linkTo: this.props.linkTo,
                             hover: this.props.hover,
                             tabIndex: -1,
                             key: this.props.id
-                        }, Object(f.a)(this.props)), s.createElement(u.Wa, {
+                        }, Object(f.a)(this.props)), s.createElement(u.Xa, {
                             className: "search-game-result-card",
                             padding: {
                                 y: .5,
@@ -1303,13 +1303,13 @@
                         }, s.createElement(u.G, {
                             row: !0
                         }, s.createElement(u.H, {
-                            overflow: u.Za.Hidden
-                        }, s.createElement(u.Oa, {
+                            overflow: u.ab.Hidden
+                        }, s.createElement(u.Pa, {
                             padding: {
                                 x: 1
                             }
                         }, s.createElement(u.W, {
-                            type: u.Nb.H5,
+                            type: u.Ob.H5,
                             ellipsis: !0
                         }, this.props.title))))))
                     }, t
@@ -1385,10 +1385,10 @@
                         onKeyDown: this.onKeyDown
                     }, s.createElement(l.a, {
                         onClickOut: this.onClickOut
-                    }, s.createElement(u.Qa, {
+                    }, s.createElement(u.Ra, {
                         key: this.props.initialGameTitle + "-" + this.props.redrawKey,
-                        type: u.Sa.Text,
-                        icon: u.ob.NavGames,
+                        type: u.Ta.Text,
+                        icon: u.pb.NavGames,
                         name: "game",
                         onChange: this.onChange,
                         onFocus: this.onFocus,
@@ -1407,32 +1407,32 @@
                             "game-selector__search-panel--closed": !this.state.isOpen
                         }),
                         t = null;
-                    return 0 === this.props.searchTerm.length || (t = this.props.gameResults ? this.props.gameResults.length > 0 ? this.renderGameResults(this.props.gameResults, this.state.highlightedGameIndex) : this.props.isSearchPending ? s.createElement(u.Ya, {
+                    return 0 === this.props.searchTerm.length || (t = this.props.gameResults ? this.props.gameResults.length > 0 ? this.renderGameResults(this.props.gameResults, this.state.highlightedGameIndex) : this.props.isSearchPending ? s.createElement(u.Za, {
                         fillContent: !0
                     }) : s.createElement(p, {
-                        icon: u.ob.SearchNoResults,
+                        icon: u.pb.SearchNoResults,
                         titleText: Object(o.d)("No results found", "GameSelector"),
                         subText: Object(o.d)("They're probably in another castle", "GameSelector")
                     }) : s.createElement(p, {
-                        icon: u.ob.DeadGlitch,
+                        icon: u.pb.DeadGlitch,
                         titleText: Object(o.d)("Search is not available at this time", "GameSelector"),
                         subText: Object(o.d)("Please try again later", "GameSelector")
                     })), s.createElement("div", {
                         className: e,
                         tabIndex: 0
-                    }, s.createElement(u.xb, {
+                    }, s.createElement(u.yb, {
                         attachTop: !0,
                         attachRight: !0,
                         attachLeft: !0,
                         attachBottom: !0,
                         background: u.r.Base,
-                        position: u.eb.Absolute,
-                        overflow: u.Za.Hidden,
+                        position: u.fb.Absolute,
+                        overflow: u.ab.Hidden,
                         display: u.X.Block
                     }, s.createElement(d.b, {
                         suppressScrollX: !0,
                         "data-a-target": "search-scroller"
-                    }, s.createElement(u.Wa, {
+                    }, s.createElement(u.Xa, {
                         margin: {
                             top: .5,
                             bottom: .5
@@ -1487,19 +1487,19 @@
                 g = n("yR8l"),
                 v = n("V+GM"),
                 S = n("8Ad5"),
-                b = n("QzU5"),
-                O = n("kduP"),
-                y = n("UWbL"),
+                y = n("QzU5"),
+                b = n("kduP"),
+                O = n("UWbL"),
                 k = n("NvVO"),
                 D = n("2xye"),
                 E = n("GnwI"),
                 C = n("CLrI"),
-                x = n("eFQ3"),
-                I = function(e) {
-                    return r.createElement(x.b, {
+                I = n("eFQ3"),
+                w = function(e) {
+                    return r.createElement(I.b, {
                         vodID: e.videoID,
                         disableTheatreButton: !0,
-                        playerTypeOverride: x.a.Highlighter,
+                        playerTypeOverride: I.a.Highlighter,
                         paused: e.paused,
                         editing: e.editing,
                         nextVideoOffset: e.nextVideoOffset,
@@ -1509,11 +1509,11 @@
                         onSeeking: e.onVideoTimeChange
                     })
                 },
-                w = n("u5aL"),
+                x = n("u5aL"),
                 N = n("geRD"),
                 T = n("hyVY"),
-                V = n("TSYQ"),
-                P = n("Ue10");
+                P = n("TSYQ"),
+                V = n("Ue10");
             n("uAdw");
             ! function(e) {
                 e.Container = "Container", e.Fill = "Fill"
@@ -1523,12 +1523,12 @@
                         n = e.segment.startOffsetSeconds,
                         i = (e.segment.endOffsetSeconds - n) / t * 100,
                         s = 0 === n ? 0 : n / t * 100,
-                        o = V({
+                        o = P({
                             "mini-timeline": !0,
                             "mini-timeline__active": e.active,
                             "mini-timeline__inactive": !e.active
                         });
-                    return r.createElement(P.Wa, {
+                    return r.createElement(V.Xa, {
                         fullWidth: !0,
                         className: o,
                         "data-test-selector": a.Container
@@ -1542,50 +1542,50 @@
                     }))
                 },
                 H = (n("W0tn"), function(e) {
-                    return r.createElement(P.Wa, {
+                    return r.createElement(V.Xa, {
                         className: "numbered-thumbnail"
-                    }, r.createElement(P.o, {
-                        ratio: P.p.Aspect16x9
-                    }, r.createElement(P.xb, {
-                        background: P.r.AccentAlt2,
-                        display: P.X.Flex,
-                        alignItems: P.f.Center,
-                        justifyContent: P.Va.Center
-                    }, r.createElement(P.W, {
-                        color: P.O.OverlayAlt,
-                        fontSize: P.Ba.Size4,
-                        type: P.Nb.H4
+                    }, r.createElement(V.o, {
+                        ratio: V.p.Aspect16x9
+                    }, r.createElement(V.yb, {
+                        background: V.r.AccentAlt2,
+                        display: V.X.Flex,
+                        alignItems: V.f.Center,
+                        justifyContent: V.Wa.Center
+                    }, r.createElement(V.W, {
+                        color: V.O.OverlayAlt,
+                        fontSize: V.Ca.Size4,
+                        type: V.Ob.H4
                     }, e.displayNumber))))
                 }),
-                W = (n("HszP"), function(e) {
+                R = (n("HszP"), function(e) {
                     var t = null;
-                    return e.error ? t = r.createElement(P.xb, {
-                        color: P.O.Error,
-                        display: P.X.Flex,
-                        alignItems: P.f.Center
-                    }, r.createElement(P.nb, {
-                        asset: P.ob.NotificationError
-                    })) : e.finished && (t = r.createElement(P.xb, {
+                    return e.error ? t = r.createElement(V.yb, {
+                        color: V.O.Error,
+                        display: V.X.Flex,
+                        alignItems: V.f.Center
+                    }, r.createElement(V.ob, {
+                        asset: V.pb.NotificationError
+                    })) : e.finished && (t = r.createElement(V.yb, {
                         className: "status-thumbnail__icon--success",
-                        display: P.X.Flex,
-                        alignItems: P.f.Center
-                    }, r.createElement(P.nb, {
-                        asset: P.ob.NotificationSuccess
-                    }))), r.createElement(P.Wa, {
+                        display: V.X.Flex,
+                        alignItems: V.f.Center
+                    }, r.createElement(V.ob, {
+                        asset: V.pb.NotificationSuccess
+                    }))), r.createElement(V.Xa, {
                         className: "status-thumbnail"
-                    }, r.createElement(P.o, {
-                        ratio: P.p.Aspect16x9
-                    }, r.createElement(P.xb, {
-                        background: P.r.AccentAlt2,
-                        display: P.X.Flex,
-                        alignItems: P.f.Center,
-                        justifyContent: P.Va.Center
+                    }, r.createElement(V.o, {
+                        ratio: V.p.Aspect16x9
+                    }, r.createElement(V.yb, {
+                        background: V.r.AccentAlt2,
+                        display: V.X.Flex,
+                        alignItems: V.f.Center,
+                        justifyContent: V.Wa.Center
                     }, t)))
                 });
             ! function(e) {
                 e.Title = "queue-card-title", e.Thumbnail = "queue-card-thumbnail", e.Timeline = "queue-card-timeline", e.Timestamps = "queue-card-timestamps", e.Game = "queue-card-game", e.SourceTitle = "queue-card-source-title"
             }(_ || (_ = {}));
-            var R, M = function(e) {
+            var X, M = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getDurationLength = function() {
@@ -1594,42 +1594,42 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e;
-                        return e = this.props.finished ? r.createElement(W, {
+                        return e = this.props.finished ? r.createElement(R, {
                             finished: !0
-                        }) : this.props.error ? r.createElement(W, {
+                        }) : this.props.error ? r.createElement(R, {
                             error: !0
                         }) : r.createElement(H, {
                             displayNumber: this.props.listIndex + 1
-                        }), r.createElement(P.xb, {
+                        }), r.createElement(V.yb, {
                             padding: 1,
                             borderBottom: !0
-                        }, r.createElement(P.Wa, {
+                        }, r.createElement(V.Xa, {
                             "data-test-selector": _.Title,
                             flexGrow: 1,
                             flexShrink: 1,
-                            overflow: P.Za.Hidden,
+                            overflow: V.ab.Hidden,
                             padding: {
                                 top: .5,
                                 bottom: 1
                             }
-                        }, r.createElement(P.W, {
+                        }, r.createElement(V.W, {
                             ellipsis: !0
-                        }, this.props.title || "<" + Object(o.d)("Untitled", "HighlightQueueCard") + ">")), r.createElement(P.xb, {
-                            display: P.X.Flex
-                        }, r.createElement(P.Wa, {
+                        }, this.props.title || "<" + Object(o.d)("Untitled", "HighlightQueueCard") + ">")), r.createElement(V.yb, {
+                            display: V.X.Flex
+                        }, r.createElement(V.Xa, {
                             "data-test-selector": _.Thumbnail,
                             margin: {
                                 right: 1
                             }
-                        }, e), r.createElement(P.Wa, {
+                        }, e), r.createElement(V.Xa, {
                             flexGrow: 1,
                             flexShrink: 1,
-                            overflow: P.Za.Hidden,
-                            flexWrap: P.Aa.Wrap,
+                            overflow: V.ab.Hidden,
+                            flexWrap: V.Ba.Wrap,
                             margin: {
                                 bottom: .5
                             }
-                        }, r.createElement(P.xb, {
+                        }, r.createElement(V.yb, {
                             "data-test-selector": _.Timeline,
                             margin: {
                                 bottom: .5
@@ -1638,78 +1638,78 @@
                             active: !1,
                             segment: this.props.offsets,
                             sourceVideoDuration: this.props.sourceVideoDuration
-                        })), r.createElement(P.Wa, {
-                            display: P.X.Flex,
-                            flexWrap: P.Aa.Wrap
-                        }, r.createElement(P.Wa, {
+                        })), r.createElement(V.Xa, {
+                            display: V.X.Flex,
+                            flexWrap: V.Ba.Wrap
+                        }, r.createElement(V.Xa, {
                             "data-test-selector": _.Timestamps,
-                            display: P.X.Flex,
+                            display: V.X.Flex,
                             margin: {
                                 right: 1
                             },
-                            overflow: P.Za.Hidden
-                        }, r.createElement(P.xb, {
+                            overflow: V.ab.Hidden
+                        }, r.createElement(V.yb, {
                             padding: {
                                 right: .5
                             },
-                            color: P.O.Alt2,
-                            display: P.X.Flex
-                        }, r.createElement(P.nb, {
-                            asset: P.ob.GlyphLength,
+                            color: V.O.Alt2,
+                            display: V.X.Flex
+                        }, r.createElement(V.ob, {
+                            asset: V.pb.GlyphLength,
                             width: 16,
                             height: 16
-                        })), r.createElement(P.W, {
+                        })), r.createElement(V.W, {
                             ellipsis: !0,
-                            color: P.O.Alt2
-                        }, Object(T.b)(this.getDurationLength()) + " (" + Object(T.b)(this.props.offsets.startOffsetSeconds) + " - " + Object(T.b)(this.props.offsets.endOffsetSeconds) + ")")), this.props.game && r.createElement(P.Wa, {
+                            color: V.O.Alt2
+                        }, Object(T.b)(this.getDurationLength()) + " (" + Object(T.b)(this.props.offsets.startOffsetSeconds) + " - " + Object(T.b)(this.props.offsets.endOffsetSeconds) + ")")), this.props.game && r.createElement(V.Xa, {
                             "data-test-selector": _.Game,
-                            display: P.X.Flex,
+                            display: V.X.Flex,
                             margin: {
                                 right: 1
                             },
-                            overflow: P.Za.Hidden
-                        }, r.createElement(P.xb, {
+                            overflow: V.ab.Hidden
+                        }, r.createElement(V.yb, {
                             padding: {
                                 right: .5
                             },
-                            color: P.O.Alt2,
-                            display: P.X.Flex
-                        }, r.createElement(P.nb, {
-                            asset: P.ob.NavGames,
+                            color: V.O.Alt2,
+                            display: V.X.Flex
+                        }, r.createElement(V.ob, {
+                            asset: V.pb.NavGames,
                             width: 16,
                             height: 16
-                        })), r.createElement(P.W, {
+                        })), r.createElement(V.W, {
                             ellipsis: !0,
-                            color: P.O.Alt2
-                        }, this.props.game.name)), r.createElement(P.Wa, {
+                            color: V.O.Alt2
+                        }, this.props.game.name)), r.createElement(V.Xa, {
                             "data-test-selector": _.SourceTitle,
-                            display: P.X.Flex,
+                            display: V.X.Flex,
                             margin: {
                                 right: 1
                             },
-                            overflow: P.Za.Hidden
-                        }, r.createElement(P.xb, {
+                            overflow: V.ab.Hidden
+                        }, r.createElement(V.yb, {
                             padding: {
                                 right: .5
                             },
-                            color: P.O.Alt2,
-                            display: P.X.Flex
-                        }, r.createElement(P.nb, {
-                            asset: P.ob.NavVideos,
+                            color: V.O.Alt2,
+                            display: V.X.Flex
+                        }, r.createElement(V.ob, {
+                            asset: V.pb.NavVideos,
                             width: 16,
                             height: 16
-                        })), r.createElement(P.W, {
+                        })), r.createElement(V.W, {
                             ellipsis: !0,
-                            color: P.O.Alt2
+                            color: V.O.Alt2
                         }, this.props.sourceVideoTitle || "<" + Object(o.d)("Untitled Source", "HighlightQueueCard") + ">"))))))
                     }, t
                 }(r.Component),
-                L = n("Rw/r");
+                A = n("Rw/r");
             n("lBPO");
             ! function(e) {
                 e.TitleInput = "queue-card-title-input", e.Thumbnail = "queue-card-thumbnail", e.Timeline = "queue-card-timeline", e.GameSelector = "queue-card-game-selector", e.SourceTitle = "queue-card-source-title", e.DeleteButton = "queue-card-delete-button"
-            }(R || (R = {}));
-            var j, A = function(e) {
+            }(X || (X = {}));
+            var L, j = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.getDurationLength = function() {
@@ -1745,53 +1745,53 @@
                             currentTitle: this.props.title
                         })
                     }, t.prototype.render = function() {
-                        return r.createElement(P.xb, {
+                        return r.createElement(V.yb, {
                             className: "highlight-queue-edit-card highlight-queue-edit-card__card",
                             padding: 1,
-                            background: P.r.Alt2,
+                            background: V.r.Alt2,
                             borderBottom: !0
-                        }, r.createElement(P.Wa, {
-                            "data-test-selector": R.TitleInput,
+                        }, r.createElement(V.Xa, {
+                            "data-test-selector": X.TitleInput,
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(P.Qa, {
+                        }, r.createElement(V.Ra, {
                             autoFocus: !0,
                             value: this.state.currentTitle,
                             error: !this.state.validTitle,
-                            type: P.Sa.Text,
+                            type: V.Ta.Text,
                             placeholder: Object(o.d)("Highlight Video Title", "HighlightQueueEditCard"),
                             maxLength: 140,
                             onChange: this.onTitleChange
-                        })), r.createElement(P.Wa, {
-                            "data-test-selector": R.GameSelector,
+                        })), r.createElement(V.Xa, {
+                            "data-test-selector": X.GameSelector,
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(L.a, {
+                        }, r.createElement(A.a, {
                             currentGameTitle: this.props.game && this.props.game.name || "",
                             onChange: this.onGameChange,
                             compact: !0
-                        })), r.createElement(P.xb, {
-                            display: P.X.Flex
-                        }, r.createElement(P.Wa, {
-                            "data-test-selector": R.Thumbnail,
+                        })), r.createElement(V.yb, {
+                            display: V.X.Flex
+                        }, r.createElement(V.Xa, {
+                            "data-test-selector": X.Thumbnail,
                             margin: {
                                 right: 1
                             }
-                        }, this.props.error ? r.createElement(W, {
+                        }, this.props.error ? r.createElement(R, {
                             error: !0
                         }) : r.createElement(H, {
                             displayNumber: this.props.listIndex + 1
-                        })), r.createElement(P.Wa, {
+                        })), r.createElement(V.Xa, {
                             flexGrow: 1,
                             flexShrink: 1,
-                            overflow: P.Za.Hidden,
+                            overflow: V.ab.Hidden,
                             margin: {
                                 bottom: .5
                             }
-                        }, r.createElement(P.xb, {
-                            "data-test-selector": R.Timeline,
+                        }, r.createElement(V.yb, {
+                            "data-test-selector": X.Timeline,
                             margin: {
                                 bottom: .5
                             }
@@ -1799,55 +1799,55 @@
                             active: !0,
                             sourceVideoDuration: this.props.sourceVideoDuration,
                             segment: this.props.offsets
-                        })), r.createElement(P.Wa, {
-                            display: P.X.Flex,
-                            flexWrap: P.Aa.Wrap
-                        }, r.createElement(P.Wa, {
-                            display: P.X.Flex,
+                        })), r.createElement(V.Xa, {
+                            display: V.X.Flex,
+                            flexWrap: V.Ba.Wrap
+                        }, r.createElement(V.Xa, {
+                            display: V.X.Flex,
                             margin: {
                                 right: 1
                             },
-                            overflow: P.Za.Hidden
-                        }, r.createElement(P.xb, {
+                            overflow: V.ab.Hidden
+                        }, r.createElement(V.yb, {
                             padding: {
                                 right: .5
                             },
-                            color: P.O.Alt2,
-                            display: P.X.Flex
-                        }, r.createElement(P.nb, {
-                            asset: P.ob.GlyphLength,
+                            color: V.O.Alt2,
+                            display: V.X.Flex
+                        }, r.createElement(V.ob, {
+                            asset: V.pb.GlyphLength,
                             width: 16,
                             height: 16
-                        })), r.createElement(P.W, {
+                        })), r.createElement(V.W, {
                             ellipsis: !0,
-                            color: P.O.Alt2
-                        }, Object(T.b)(this.getDurationLength()) + " (" + Object(T.b)(this.props.offsets.startOffsetSeconds) + " - " + Object(T.b)(this.props.offsets.endOffsetSeconds) + ")")), r.createElement(P.Wa, {
-                            display: P.X.Flex,
+                            color: V.O.Alt2
+                        }, Object(T.b)(this.getDurationLength()) + " (" + Object(T.b)(this.props.offsets.startOffsetSeconds) + " - " + Object(T.b)(this.props.offsets.endOffsetSeconds) + ")")), r.createElement(V.Xa, {
+                            display: V.X.Flex,
                             margin: {
                                 right: 1
                             },
-                            overflow: P.Za.Hidden
-                        }, r.createElement(P.xb, {
-                            "data-test-selector": R.SourceTitle,
+                            overflow: V.ab.Hidden
+                        }, r.createElement(V.yb, {
+                            "data-test-selector": X.SourceTitle,
                             padding: {
                                 right: .5
                             },
-                            color: P.O.Alt2,
-                            display: P.X.Flex
-                        }, r.createElement(P.nb, {
-                            asset: P.ob.NavVideos,
+                            color: V.O.Alt2,
+                            display: V.X.Flex
+                        }, r.createElement(V.ob, {
+                            asset: V.pb.NavVideos,
                             width: 16,
                             height: 16
-                        })), r.createElement(P.W, {
+                        })), r.createElement(V.W, {
                             ellipsis: !0,
-                            color: P.O.Alt2
-                        }, this.props.sourceVideoTitle || "<" + Object(o.d)("Untitled Source", "HighlightQueueEditCard") + ">"))))), r.createElement(P.xb, {
-                            "data-test-selector": R.DeleteButton,
-                            display: P.X.Flex,
-                            justifyContent: P.Va.End
-                        }, r.createElement(P.A, {
+                            color: V.O.Alt2
+                        }, this.props.sourceVideoTitle || "<" + Object(o.d)("Untitled Source", "HighlightQueueEditCard") + ">"))))), r.createElement(V.yb, {
+                            "data-test-selector": X.DeleteButton,
+                            display: V.X.Flex,
+                            justifyContent: V.Wa.End
+                        }, r.createElement(V.A, {
                             ariaLabel: Object(o.d)("Remove highlight from queue", "HighlightQueueEditCard"),
-                            icon: P.ob.Trash,
+                            icon: V.pb.Trash,
                             blurAfterClick: !0,
                             onClick: this.onDelete
                         })))
@@ -1861,8 +1861,8 @@
             n("x4lo");
             ! function(e) {
                 e.AddButtonDropdown = "segmentqueue-addbuttondropdown", e.ErrorNotification = "segmentqueue-errornotification", e.ChangeVideoButton = "segmentqueue-changevideobutton", e.NoItems = "segmentqueue-noitems", e.SaveButton = "segmentqueue-savebutton", e.SegmentQueue = "segmentqueue-segmentqueue", e.SelectHighlightButton = "segmentqueue-selecthighlight", e.MaxQueueSizeTooltip = "segmentqueue-maxtooltip"
-            }(j || (j = {}));
-            var U = function(e) {
+            }(L || (L = {}));
+            var W = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1949,63 +1949,63 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(P.xb, {
-                            background: P.r.Base,
-                            display: P.X.Flex,
-                            flexDirection: P.Z.Column,
+                        return r.createElement(V.yb, {
+                            background: V.r.Base,
+                            display: V.X.Flex,
+                            flexDirection: V.Aa.Column,
                             fullHeight: !0
-                        }, r.createElement(P.xb, {
-                            background: P.r.Base,
+                        }, r.createElement(V.yb, {
+                            background: V.r.Base,
                             borderBottom: !0,
                             padding: 1,
-                            display: P.X.Flex,
-                            justifyContent: P.Va.Between,
-                            alignItems: P.f.Center,
+                            display: V.X.Flex,
+                            justifyContent: V.Wa.Between,
+                            alignItems: V.f.Center,
                             className: "highlighter__card-header"
-                        }, r.createElement(P.W, {
-                            fontSize: P.Ba.Size5,
+                        }, r.createElement(V.W, {
+                            fontSize: V.Ca.Size5,
                             lines: 1
-                        }, Object(o.d)("Highlight Queue", "HighlighterVideoSegmentQueue")), this.renderAddMore()), this.renderErrorMessage(), r.createElement(P.Oa, {
+                        }, Object(o.d)("Highlight Queue", "HighlighterVideoSegmentQueue")), this.renderAddMore()), this.renderErrorMessage(), r.createElement(V.Pa, {
                             flexGrow: 1,
                             flexShrink: 1,
                             className: "highlight__segment-queue"
-                        }, this.props.queue.length > 0 ? this.renderSegments() : this.renderEmptyQueue()), r.createElement(P.Wa, {
+                        }, this.props.queue.length > 0 ? this.renderSegments() : this.renderEmptyQueue()), r.createElement(V.Xa, {
                             padding: 1
-                        }, r.createElement(P.z, {
+                        }, r.createElement(V.z, {
                             blurAfterClick: !0,
                             disabled: 0 === this.props.queue.length,
                             fullWidth: !0,
                             onClick: this.createHighlights,
-                            "data-test-selectors": j.SaveButton
+                            "data-test-selectors": L.SaveButton
                         }, this.state.failedSegments ? Object(o.d)("Retry Creating Highlights", "HighlighterVideoSegmentQueue") : Object(o.d)("Create Highlights", "HighlighterVideoSegmentQueue"))))
                     }, t.prototype.componentDidUpdate = function(e) {
                         this.props.queue.length > e.queue.length && this.scrollableAreaRef ? this.scrollableAreaRef.scrollToBottom() : this.state.failedSegments && this.successfulHighlightIDs.length > 0 && this.successfulHighlightIDs.length === this.props.queue.length ? this.props.onPostSaveFinishAndNavigate(this.successfulHighlightIDs) : this.state.failedSegments && 0 === this.successfulHighlightIDs.length && 0 === this.props.queue.length && this.setState({
                             failedSegments: void 0
                         })
                     }, t.prototype.renderEmptyQueue = function() {
-                        return r.createElement(P.Wa, {
-                            "data-test-selector": j.NoItems,
-                            display: P.X.Flex,
-                            flexDirection: P.Z.Column,
-                            alignItems: P.f.Center,
-                            justifyContent: P.Va.Center,
+                        return r.createElement(V.Xa, {
+                            "data-test-selector": L.NoItems,
+                            display: V.X.Flex,
+                            flexDirection: V.Aa.Column,
+                            alignItems: V.f.Center,
+                            justifyContent: V.Wa.Center,
                             padding: 3,
                             fullWidth: !0,
                             fullHeight: !0
-                        }, r.createElement(P.Wa, {
+                        }, r.createElement(V.Xa, {
                             padding: 1
-                        }, r.createElement(P.nb, {
-                            asset: P.ob.Scissors,
-                            type: P.pb.Alt2,
+                        }, r.createElement(V.ob, {
+                            asset: V.pb.Scissors,
+                            type: V.qb.Alt2,
                             height: 25,
                             width: 25
-                        })), r.createElement(P.Wa, {
-                            textAlign: P.Jb.Center
-                        }, r.createElement(P.W, null, Object(o.d)("No highlights are queued. Click the New Highlight button above to start highlighting.", "HighlighterVideoSegmentQueue"))))
+                        })), r.createElement(V.Xa, {
+                            textAlign: V.Kb.Center
+                        }, r.createElement(V.W, null, Object(o.d)("No highlights are queued. Click the New Highlight button above to start highlighting.", "HighlighterVideoSegmentQueue"))))
                     }, t.prototype.renderSegments = function() {
                         var e = this,
                             t = this.props.queue.map(function(t, n) {
-                                return t.tempID === e.props.activeID ? r.createElement(A, {
+                                return t.tempID === e.props.activeID ? r.createElement(j, {
                                     game: t.metadata.game,
                                     key: t.tempID,
                                     listIndex: n,
@@ -2020,8 +2020,8 @@
                                     onGameChange: e.props.onGameChange,
                                     onTitleChange: e.props.onTitleChange,
                                     error: e.state.failedSegments && !!e.state.failedSegments[t.tempID]
-                                }) : r.createElement(P.Ta, {
-                                    type: P.Ua.Alpha,
+                                }) : r.createElement(V.Ua, {
+                                    type: V.Va.Alpha,
                                     blurAfterClick: !0,
                                     key: t.tempID,
                                     onClick: e.selectSegmentFromQueue,
@@ -2045,91 +2045,91 @@
                             autoHide: !1,
                             suppressScrollX: !0,
                             scrollRef: this.scrollRefHandler,
-                            "data-test-selector": j.SegmentQueue
-                        }, r.createElement(P.Wa, {
+                            "data-test-selector": L.SegmentQueue
+                        }, r.createElement(V.Xa, {
                             margin: {
                                 bottom: 5
                             }
                         }, t))
                     }, t.prototype.renderAddMore = function() {
-                        var e = r.createElement(P.Wa, {
+                        var e = r.createElement(V.Xa, {
                             className: "highlight-vod-select",
-                            position: P.eb.Relative,
-                            display: P.X.Flex,
-                            flexWrap: P.Aa.NoWrap
-                        }, r.createElement(P.z, {
+                            position: V.fb.Relative,
+                            display: V.X.Flex,
+                            flexWrap: V.Ba.NoWrap
+                        }, r.createElement(V.z, {
                             blurAfterClick: !0,
-                            "data-test-selector": j.SelectHighlightButton,
-                            type: P.F.Hollow,
-                            icon: P.ob.Plus,
+                            "data-test-selector": L.SelectHighlightButton,
+                            type: V.F.Hollow,
+                            icon: V.pb.Plus,
                             onClick: this.props.onAddNewHighlight,
                             disabled: this.props.queue.length >= 25 || !!this.state.failedSegments
-                        }, Object(o.d)("New Highlight", "HighlighterVideoSegmentQueue")), r.createElement(w.a, {
+                        }, Object(o.d)("New Highlight", "HighlighterVideoSegmentQueue")), r.createElement(x.a, {
                             onClickOut: this.closeAddDropdown,
                             className: "highlight-select-dropdown__clickout"
-                        }, r.createElement(P.z, {
-                            icon: P.ob.GlyphArrDown,
-                            type: P.F.Hollow,
+                        }, r.createElement(V.z, {
+                            icon: V.pb.GlyphArrDown,
+                            type: V.F.Hollow,
                             onClick: this.toggleAddDropdown,
-                            "data-test-selector": j.AddButtonDropdown,
+                            "data-test-selector": L.AddButtonDropdown,
                             disabled: this.props.queue.length >= 25 || !!this.state.failedSegments
-                        }), r.createElement(P.u, {
-                            direction: P.v.BottomRight,
+                        }), r.createElement(V.u, {
+                            direction: V.v.BottomRight,
                             noTail: !0,
                             show: this.state.addDropdownOpen,
                             offsetY: "0"
-                        }, r.createElement(P.Ta, {
+                        }, r.createElement(V.Ua, {
                             disabled: this.props.queue.length >= 25,
                             onClick: this.props.onChangeVideo,
-                            "data-test-selector": j.ChangeVideoButton
-                        }, r.createElement(P.Wa, {
+                            "data-test-selector": L.ChangeVideoButton
+                        }, r.createElement(V.Xa, {
                             padding: {
                                 x: 1,
                                 y: .5
                             }
-                        }, r.createElement(P.W, {
+                        }, r.createElement(V.W, {
                             noWrap: !0
                         }, Object(o.d)("New Highlight from Another Broadcast", "HighlighterVideoSegmentQueue")))))));
-                        return this.props.queue.length >= 25 ? r.createElement(P.Qb, {
-                            "data-test-selector": j.MaxQueueSizeTooltip,
+                        return this.props.queue.length >= 25 ? r.createElement(V.Rb, {
+                            "data-test-selector": L.MaxQueueSizeTooltip,
                             label: Object(o.d)("You can only create at most {max} highlights at once.", {
                                 max: 25
                             }, "VideoSegmentQueue")
                         }, e) : e
                     }, t.prototype.renderErrorMessage = function() {
-                        if (this.state.failedSegments) return r.createElement(P.xb, {
-                            "data-test-selector": j.ErrorNotification,
+                        if (this.state.failedSegments) return r.createElement(V.yb, {
+                            "data-test-selector": L.ErrorNotification,
                             borderBottom: !0
-                        }, r.createElement(P.xb, {
+                        }, r.createElement(V.yb, {
                             className: "highlight__segment-queue-error",
-                            background: P.r.Alt2,
-                            color: P.O.Error,
+                            background: V.r.Alt2,
+                            color: V.O.Error,
                             padding: 1,
                             margin: 1,
-                            display: P.X.Flex,
-                            justifyContent: P.Va.Start,
-                            alignItems: P.f.Center
-                        }, r.createElement(P.nb, {
-                            asset: P.ob.NotificationWarning
-                        }), r.createElement(P.Oa, {
+                            display: V.X.Flex,
+                            justifyContent: V.Wa.Start,
+                            alignItems: V.f.Center
+                        }, r.createElement(V.ob, {
+                            asset: V.pb.NotificationWarning
+                        }), r.createElement(V.Pa, {
                             margin: {
                                 left: 1,
                                 right: .5
                             }
-                        }, r.createElement(P.W, {
-                            color: P.O.Base,
-                            type: P.Nb.Span,
+                        }, r.createElement(V.W, {
+                            color: V.O.Base,
+                            type: V.Ob.Span,
                             bold: !0
-                        }, Object(o.d)("Error Processing", "VideoSegmentQueue"))), r.createElement(P.W, {
-                            color: P.O.Base,
-                            type: P.Nb.Span
+                        }, Object(o.d)("Error Processing", "VideoSegmentQueue"))), r.createElement(V.W, {
+                            color: V.O.Base,
+                            type: V.Ob.Span
                         }, Object(o.d)("Retry again below.", "VideoSegmentQueue"))))
                     }, t
                 }(r.Component),
-                G = Object(g.a)(B, {
+                U = Object(g.a)(B, {
                     name: "createHighlight"
-                })(U),
-                X = n("oJmH"),
+                })(W),
+                G = n("oJmH"),
                 q = n("D7An");
 
             function z(e, t, n) {
@@ -2140,7 +2140,7 @@
             ! function(e) {
                 e.PlayheadPin = "playhead-pin", e.PlayheadDraggable = "playhead-draggable", e.PlayheadIcon = "playhead-icon"
             }(Q || (Q = {}));
-            var Z = function(e) {
+            var K = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2150,20 +2150,20 @@
                         var e = {
                             left: this.props.pixelX + "px"
                         };
-                        return r.createElement(P.Pa, {
-                            zIndex: P.ac.Above,
-                            color: P.O.Link,
+                        return r.createElement(V.Qa, {
+                            zIndex: V.bc.Above,
+                            color: V.O.Link,
                             className: "playhead-pin__pin",
-                            position: P.eb.Absolute
+                            position: V.fb.Absolute
                         }, r.createElement("div", {
                             style: e,
                             "data-test-selector": Q.PlayheadPin
                         }))
                     }, t.prototype.renderIcon = function() {
-                        var e = r.createElement(P.nb, {
+                        var e = r.createElement(V.ob, {
                                 width: 14,
                                 height: 14,
-                                asset: P.ob.DragHandle,
+                                asset: V.pb.DragHandle,
                                 "data-test-selector": Q.PlayheadIcon
                             }),
                             t = {
@@ -2171,42 +2171,42 @@
                                 top: "92px",
                                 display: "inline-flex"
                             };
-                        return r.createElement(P.Pa, {
-                            color: P.O.Link,
-                            display: P.X.Flex,
+                        return r.createElement(V.Qa, {
+                            color: V.O.Link,
+                            display: V.X.Flex,
                             padding: {
                                 right: .5
                             },
                             className: "playhead-pin__draggable",
-                            borderRadius: P.x.Large,
-                            position: P.eb.Absolute,
-                            zIndex: P.ac.Above
+                            borderRadius: V.x.Large,
+                            position: V.fb.Absolute,
+                            zIndex: V.bc.Above
                         }, r.createElement("div", {
                             style: t,
                             ref: this.props.iconRef,
                             onMouseDown: this.props.onMouseDownHandler,
                             "data-test-selector": Q.PlayheadDraggable
-                        }, r.createElement(P.xb, {
-                            display: P.X.Flex,
-                            justifyContent: P.Va.Between,
-                            alignItems: P.f.Stretch,
+                        }, r.createElement(V.yb, {
+                            display: V.X.Flex,
+                            justifyContent: V.Wa.Between,
+                            alignItems: V.f.Stretch,
                             className: "playhead-pin__icon",
-                            borderRadius: P.x.Large
-                        }, e, r.createElement(P.W, {
+                            borderRadius: V.x.Large
+                        }, e, r.createElement(V.W, {
                             className: "playhead-pin__text"
                         }, Object(T.b)(this.props.currentPlayheadTime, {
                             zeroPadAll: !0
                         })))))
                     }, t
                 }(r.Component),
-                K = function(e) {
+                $ = function(e) {
                     return Math.floor(15 * e / 100)
                 },
-                $ = function(e) {
+                Y = function(e) {
                     return Math.ceil(85 * e / 100)
                 };
 
-            function Y(e, t) {
+            function Z(e, t) {
                 var n = e.endOffset;
                 return t > e.endOffset && (n = Math.min(e.maxOffset, t + (e.endOffset - e.startOffset))), {
                     startOffset: t,
@@ -2232,62 +2232,62 @@
                     return t.state = {
                         showBalloon: !1
                     }, t.renderBalloon = function() {
-                        return r.createElement(w.a, {
+                        return r.createElement(x.a, {
                             onClickOut: t.closeBalloon
-                        }, r.createElement(P.u, {
+                        }, r.createElement(V.u, {
                             show: t.state.showBalloon,
-                            size: P.w.Small,
+                            size: V.w.Small,
                             "data-test-selector": ee.PlayheadDropdownBalloon
-                        }, r.createElement(P.Wa, {
-                            display: P.X.Flex,
-                            flexDirection: P.Z.Column,
-                            alignItems: P.f.Center,
-                            justifyContent: P.Va.Between
-                        }, r.createElement(P.Ta, {
-                            type: P.Ua.Alpha,
-                            borderRadius: P.x.Medium,
+                        }, r.createElement(V.Xa, {
+                            display: V.X.Flex,
+                            flexDirection: V.Aa.Column,
+                            alignItems: V.f.Center,
+                            justifyContent: V.Wa.Between
+                        }, r.createElement(V.Ua, {
+                            type: V.Va.Alpha,
+                            borderRadius: V.x.Medium,
                             onClick: t.startSegmentUpdate,
                             "data-test-selector": ee.PlayheadDropdownStart
-                        }, r.createElement(P.Wa, {
+                        }, r.createElement(V.Xa, {
                             fullWidth: !0,
                             padding: {
                                 x: 1,
                                 y: .5
                             },
-                            display: P.X.InlineFlex,
-                            justifyContent: P.Va.Between
-                        }, r.createElement(P.W, {
-                            color: P.O.Base
-                        }, Object(o.d)("Start segment here", "HighlightPlayheadDropdown")), r.createElement(P.xb, {
+                            display: V.X.InlineFlex,
+                            justifyContent: V.Wa.Between
+                        }, r.createElement(V.W, {
+                            color: V.O.Base
+                        }, Object(o.d)("Start segment here", "HighlightPlayheadDropdown")), r.createElement(V.yb, {
                             padding: {
                                 x: .5
                             },
-                            display: P.X.InlineFlex,
-                            borderRadius: P.x.Small
-                        }, r.createElement(P.bb, {
+                            display: V.X.InlineFlex,
+                            borderRadius: V.x.Small
+                        }, r.createElement(V.cb, {
                             label: Object(o.d)("ALT + <", "HighlightPlayheadDropdown")
-                        })))), r.createElement(P.Ta, {
-                            type: P.Ua.Alpha,
-                            borderRadius: P.x.Medium,
+                        })))), r.createElement(V.Ua, {
+                            type: V.Va.Alpha,
+                            borderRadius: V.x.Medium,
                             onClick: t.endSegmentUpdate,
                             "data-test-selector": ee.PlayheadDropdownEnd
-                        }, r.createElement(P.Wa, {
+                        }, r.createElement(V.Xa, {
                             fullWidth: !0,
                             padding: {
                                 x: 1,
                                 y: .5
                             },
-                            display: P.X.InlineFlex,
-                            justifyContent: P.Va.Between
-                        }, r.createElement(P.W, {
-                            color: P.O.Base
-                        }, Object(o.d)("End segment here", "HighlightPlayheadDropdown")), r.createElement(P.xb, {
+                            display: V.X.InlineFlex,
+                            justifyContent: V.Wa.Between
+                        }, r.createElement(V.W, {
+                            color: V.O.Base
+                        }, Object(o.d)("End segment here", "HighlightPlayheadDropdown")), r.createElement(V.yb, {
                             padding: {
                                 x: .5
                             },
-                            display: P.X.InlineFlex,
-                            borderRadius: P.x.Small
-                        }, r.createElement(P.bb, {
+                            display: V.X.InlineFlex,
+                            borderRadius: V.x.Small
+                        }, r.createElement(V.cb, {
                             label: Object(o.d)("ALT + >", "HighlightPlayheadDropdown")
                         })))))))
                     }, t.updateShowBalloon = function() {
@@ -2297,7 +2297,7 @@
                             }
                         })
                     }, t.startSegmentUpdate = function() {
-                        var e = Y(t.props.activeSegment, t.props.currentPlayheadTime);
+                        var e = Z(t.props.activeSegment, t.props.currentPlayheadTime);
                         t.setState(function(e) {
                             return {
                                 showBalloon: !e.showBalloon
@@ -2326,40 +2326,40 @@
                     })
                 }, t.prototype.render = function() {
                     if (!this.props.paused) return null;
-                    var e = r.createElement(P.nb, {
+                    var e = r.createElement(V.ob, {
                             width: 10,
                             height: 10,
-                            asset: P.ob.Carat
+                            asset: V.pb.Carat
                         }),
                         t = {
                             left: this.props.pixelX + 36 + "px",
                             top: "95px"
                         };
-                    return r.createElement(P.Pa, {
-                        zIndex: P.ac.Above,
-                        alignItems: P.f.Center,
+                    return r.createElement(V.Qa, {
+                        zIndex: V.bc.Above,
+                        alignItems: V.f.Center,
                         className: "playhead-dropdown__dropdown",
-                        display: P.X.InlineFlex,
-                        borderRadius: P.x.Small,
-                        position: P.eb.Absolute
+                        display: V.X.InlineFlex,
+                        borderRadius: V.x.Small,
+                        position: V.fb.Absolute
                     }, r.createElement("div", {
                         style: t,
                         "data-test-selector": ee.PlayheadDropdownStyle
-                    }, r.createElement(P.Ta, {
+                    }, r.createElement(V.Ua, {
                         blurAfterClick: !0,
-                        type: P.Ua.Alpha,
+                        type: V.Va.Alpha,
                         selected: !1,
                         onClick: this.updateShowBalloon,
                         "data-test-selector": ee.PlayheadDropdownIcon
-                    }, r.createElement(P.xb, {
+                    }, r.createElement(V.yb, {
                         padding: {
                             x: .5
                         },
-                        alignItems: P.f.Center,
-                        justifyContent: P.Va.Center,
-                        display: P.X.InlineFlex,
+                        alignItems: V.f.Center,
+                        justifyContent: V.Wa.Center,
+                        display: V.X.InlineFlex,
                         className: "playhead-dropdown__icon",
-                        borderRadius: P.x.Small
+                        borderRadius: V.x.Small
                     }, r.createElement("div", null, e))), this.renderBalloon()))
                 }, t
             }(r.Component);
@@ -2464,21 +2464,21 @@
                     }, t.prototype.render = function() {
                         var e = this.parentRef && this.state.parentRefWidth,
                             t = this.inExperiment ? 1 : 0;
-                        return r.createElement(P.Wa, {
-                            position: P.eb.Relative,
+                        return r.createElement(V.Xa, {
+                            position: V.fb.Relative,
                             padding: {
                                 bottom: t
                             }
                         }, r.createElement("div", {
                             ref: this.assignParentRef,
                             "data-test-selector": re.PlayheadWrapper
-                        }, null !== e && this.inExperiment && r.createElement(r.Fragment, null, r.createElement(Z, {
+                        }, null !== e && this.inExperiment && r.createElement(r.Fragment, null, r.createElement(K, {
                             "data-test-selector": re.Playhead,
                             pixelX: this.calculatePlayheadLocation(),
                             currentPlayheadTime: this.calculatePlayheadTime(),
                             onMouseDownHandler: this.onMouseDown,
                             iconRef: this.assignIconRef
-                        }), r.createElement(P.Wa, null, r.createElement(ie, {
+                        }), r.createElement(V.Xa, null, r.createElement(ie, {
                             pixelX: this.calculatePlayheadLocation(),
                             currentPlayheadOffset: this.state.currentPlayerOffset,
                             currentPlayheadTime: this.calculatePlayheadTime(),
@@ -2542,19 +2542,19 @@
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(pe.a, null, r.createElement(P.A, {
-                        icon: P.ob.More,
+                    return r.createElement(pe.a, null, r.createElement(V.A, {
+                        icon: V.pb.More,
                         ariaLabel: Object(o.d)("Marker Settings", "HighlighterPinsDownload")
-                    }), r.createElement(P.u, {
-                        size: P.w.Small,
-                        direction: P.v.TopRight
-                    }, r.createElement(P.Ta, {
+                    }), r.createElement(V.u, {
+                        size: V.w.Small,
+                        direction: V.v.TopRight
+                    }, r.createElement(V.Ua, {
                         onClick: this.downloadMarkersData
-                    }, r.createElement(P.Wa, {
+                    }, r.createElement(V.Xa, {
                         padding: 1
-                    }, Object(o.d)("Download Stream Markers (.csv)", "HighlighterPinsDownload"))), r.createElement(P.Ta, {
+                    }, Object(o.d)("Download Stream Markers (.csv)", "HighlighterPinsDownload"))), r.createElement(V.Ua, {
                         onClick: this.downloadClipsData
-                    }, r.createElement(P.Wa, {
+                    }, r.createElement(V.Xa, {
                         padding: 1
                     }, Object(o.d)("Download Clips data (.csv)", "HighlighterPinsDownload")))))
                 }, t.prototype.downloadDataHelper = function(e) {
@@ -2569,9 +2569,9 @@
                 e.Clip = "Clip", e.Mark = "Mark"
             }(ve || (ve = {}));
             n("lMdv");
-            var be = 18,
-                Oe = 25,
-                ye = -23,
+            var ye = 18,
+                be = 25,
+                Oe = -23,
                 ke = 18,
                 De = -25,
                 Ee = function(e) {
@@ -2595,46 +2595,46 @@
                             }))
                         }, t.renderIcon = function(e, n, a) {
                             var i, s = (e.pins[0].pixelX + e.pins[e.pins.length - 1].pixelX) / 2,
-                                o = s - be / 2,
+                                o = s - ye / 2,
                                 l = e.pins.length > 1,
                                 d = z(t.props.activeSegment.startOffset, t.props.pinOffsetMax, a),
                                 c = z(t.props.activeSegment.endOffset, t.props.pinOffsetMax, a),
                                 u = s >= d && s < c,
-                                p = ye + "px";
+                                p = Oe + "px";
                             if (l) {
                                 p = De + "px";
                                 var f = {
-                                    width: be + "px",
-                                    height: be + "px"
+                                    width: ye + "px",
+                                    height: ye + "px"
                                 };
-                                i = r.createElement(P.Oa, {
-                                    textAlign: P.Jb.Center
+                                i = r.createElement(V.Pa, {
+                                    textAlign: V.Kb.Center
                                 }, r.createElement("div", {
                                     className: "dynamic-pins__cluster",
                                     style: f
                                 }, e.pins.length > 9 ? "9+" : e.pins.length))
-                            } else i = e.pins[0].type === ve.Clip ? r.createElement(P.nb, {
+                            } else i = e.pins[0].type === ve.Clip ? r.createElement(V.ob, {
+                                width: ye,
+                                height: ye,
+                                asset: V.pb.Clip
+                            }) : r.createElement(V.ob, {
                                 width: be,
                                 height: be,
-                                asset: P.ob.Clip
-                            }) : r.createElement(P.nb, {
-                                width: Oe,
-                                height: Oe,
-                                asset: P.ob.GlyphArrDown
+                                asset: V.pb.GlyphArrDown
                             });
                             var m = {
-                                    width: be + "px",
-                                    height: be + "px",
+                                    width: ye + "px",
+                                    height: ye + "px",
                                     left: o + "px",
                                     top: p
                                 },
                                 h = {
                                     color: u ? "#FFB300" : "#a49fad"
                                 };
-                            return r.createElement(P.Oa, {
-                                position: P.eb.Absolute,
-                                display: P.X.Flex,
-                                justifyContent: P.Va.Center
+                            return r.createElement(V.Pa, {
+                                position: V.fb.Absolute,
+                                display: V.X.Flex,
+                                justifyContent: V.Wa.Center
                             }, r.createElement("div", {
                                 style: m
                             }, t.state.hoveredClusterIndex === n && t.renderClusterData(e), r.createElement("div", {
@@ -2651,54 +2651,54 @@
                                     left: e.pixelX + "px",
                                     backgroundColor: a ? "#FFB300" : "#a49fad"
                                 };
-                            return r.createElement(P.Oa, {
+                            return r.createElement(V.Pa, {
                                 className: "dynamic-pins__pin",
                                 key: "pin-" + n,
-                                position: P.eb.Absolute
+                                position: V.fb.Absolute
                             }, r.createElement("div", {
                                 style: i
                             }))
                         }, t.renderClusterData = function(e) {
-                            return r.createElement(P.Wa, {
-                                position: P.eb.Relative
-                            }, r.createElement(P.u, {
+                            return r.createElement(V.Xa, {
+                                position: V.fb.Relative
+                            }, r.createElement(V.u, {
                                 show: !0,
-                                direction: P.v.TopCenter,
-                                size: P.w.Small,
+                                direction: V.v.TopCenter,
+                                size: V.w.Small,
                                 offsetX: "8px"
                             }, r.createElement(h.b, {
                                 className: "dynamic-pins__popup"
-                            }, r.createElement(P.Wa, {
+                            }, r.createElement(V.Xa, {
                                 padding: 1
                             }, e.pins.map(function(e, n) {
-                                return r.createElement(P.Wa, {
-                                    display: P.X.Flex,
+                                return r.createElement(V.Xa, {
+                                    display: V.X.Flex,
                                     key: "cluster-pin-" + n
-                                }, r.createElement(P.Wa, {
+                                }, r.createElement(V.Xa, {
                                     className: "dynamic-pins__inner-icon",
                                     flexGrow: 0,
                                     margin: {
                                         right: 1
                                     }
-                                }, r.createElement(P.nb, {
+                                }, r.createElement(V.ob, {
                                     width: ke,
                                     height: ke,
-                                    asset: e.type === ve.Clip ? P.ob.Clip : P.ob.GlyphArrDown
-                                })), r.createElement(P.Wa, {
+                                    asset: e.type === ve.Clip ? V.pb.Clip : V.pb.GlyphArrDown
+                                })), r.createElement(V.Xa, {
                                     flexGrow: 0,
                                     margin: {
                                         right: 1
                                     }
-                                }, r.createElement(P.U, {
+                                }, r.createElement(V.U, {
                                     onClick: function() {
                                         t.props.requestPlayerTimeChange(e.videoOffset), he(t.trackingFieldsForPin(e, 1))
                                     }
-                                }, Object(T.b)(e.videoOffset))), r.createElement(P.Wa, {
-                                    display: P.X.Flex,
-                                    flexDirection: P.Z.Column,
+                                }, Object(T.b)(e.videoOffset))), r.createElement(V.Xa, {
+                                    display: V.X.Flex,
+                                    flexDirection: V.Aa.Column,
                                     flexGrow: 1
-                                }, r.createElement(P.Wa, null, e.title), r.createElement(P.W, {
-                                    color: P.O.Alt2
+                                }, r.createElement(V.Xa, null, e.title), r.createElement(V.W, {
+                                    color: V.O.Alt2
                                 }, e.creatorDisplayName)))
                             })))))
                         }, t.recalculateClusters = function(e) {
@@ -2726,7 +2726,7 @@
                                         })
                                     }(e.pins, e.pinOffsetMax, t.parentRef.clientWidth).filter(function(e) {
                                         return !(e.pixelX < 0 || e.pixelX > n)
-                                    }), be / 2);
+                                    }), ye / 2);
                                 t.setState({
                                     clusterData: a
                                 })
@@ -2764,8 +2764,8 @@
                     }, t.prototype.render = function() {
                         var e = this,
                             t = this.parentRef && this.parentRef.clientWidth;
-                        return r.createElement(P.Wa, {
-                            position: P.eb.Relative
+                        return r.createElement(V.Xa, {
+                            position: V.fb.Relative
                         }, r.createElement("div", {
                             ref: this.assignParentRef
                         }, null !== t && r.createElement("div", null, this.state.clusterData.map(function(n, a) {
@@ -2774,9 +2774,9 @@
                     }, t
                 }(r.Component),
                 Ce = n("0vlg"),
-                xe = n("QClN");
+                Ie = n("QClN");
 
-            function Ie(e) {
+            function we(e) {
                 var t = null;
                 if (e && e.length) {
                     var n = e[e.length - 1];
@@ -2784,7 +2784,7 @@
                 }
                 return t
             }
-            var we, Ne = function(e) {
+            var xe, Ne = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2840,20 +2840,20 @@
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         var t = this.props.dataClips && this.props.dataClips.video,
                             n = e.dataClips && e.dataClips.video,
-                            a = Ie(t && t.clips && t.clips.edges),
+                            a = we(t && t.clips && t.clips.edges),
                             i = n && n.clips && n.clips.edges,
-                            r = Ie(i),
+                            r = we(i),
                             s = n && n.clips && n.clips.pageInfo && n.clips.pageInfo.hasNextPage;
                         !((i ? i.length : 0) >= 500) && s && a !== r && this.props.clipsLoadMore && this.props.clipsLoadMore(r);
                         var o = this.props.dataMarkers.video,
                             l = e.dataMarkers.video,
-                            d = Ie(o && o.bookmarks && o.bookmarks.edges),
+                            d = we(o && o.bookmarks && o.bookmarks.edges),
                             c = l && l.bookmarks && l.bookmarks.edges,
-                            u = Ie(c),
+                            u = we(c),
                             p = l && l.bookmarks && l.bookmarks.pageInfo && l.bookmarks.pageInfo.hasNextPage;
                         !((c ? c.length : 0) >= 500) && p && d !== u && this.props.markersLoadMore(u), this.reportInteractive(e), this.setSortedFilteredPins(e)
                     }, t.prototype.render = function() {
-                        return 0 === this.state.sortedFilteredPins.length ? this.renderChildrenWithoutPins() : r.createElement(P.Wa, {
+                        return 0 === this.state.sortedFilteredPins.length ? this.renderChildrenWithoutPins() : r.createElement(V.Xa, {
                             className: "highlighter-pins"
                         }, r.createElement(Ee, {
                             pins: this.state.sortedFilteredPins,
@@ -2865,7 +2865,7 @@
                             activeSegment: this.props.activeSegment
                         }, this.props.children))
                     }, t.prototype.renderChildrenWithoutPins = function() {
-                        return r.createElement(P.Wa, {
+                        return r.createElement(V.Xa, {
                             className: "highlighter-pins"
                         }, this.props.children)
                     }, t.prototype.reportInteractive = function(e) {
@@ -2903,13 +2903,13 @@
                             }
                         })
                     }
-                }), Object(g.a)(xe, {
+                }), Object(g.a)(Ie, {
                     name: "dataMarkers",
                     props: function(e) {
                         return i.__assign({}, e, {
                             markersLoadMore: function(t) {
                                 return e.dataMarkers.fetchMore({
-                                    query: xe,
+                                    query: Ie,
                                     variables: i.__assign({}, e.dataMarkers.variables, {
                                         cursor: t
                                     }),
@@ -2932,13 +2932,13 @@
                 }))(Ne);
             ! function(e) {
                 e.Self = "Self", e.Owner = "Owner", e.Editor = "Editor"
-            }(we || (we = {}));
-            var Ve, Pe = function(e) {
+            }(xe || (xe = {}));
+            var Pe, Ve = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderOption = function(e) {
                             var n = !0 === t.props.selectedCreators[e];
-                            return r.createElement(P.Wa, {
+                            return r.createElement(V.Xa, {
                                 key: e,
                                 padding: {
                                     x: 1
@@ -2946,7 +2946,7 @@
                                 margin: {
                                     bottom: 1
                                 }
-                            }, r.createElement(P.N, {
+                            }, r.createElement(V.N, {
                                 onChange: function() {
                                     t.props.updateSelectedOption(e, !n)
                                 },
@@ -2955,11 +2955,11 @@
                             }))
                         }, t.getSelectableName = function(e) {
                             switch (e) {
-                                case we.Self:
+                                case xe.Self:
                                     return Object(o.d)("Me", "PinFilters");
-                                case we.Owner:
+                                case xe.Owner:
                                     return t.props.broadcasterDisplayName;
-                                case we.Editor:
+                                case xe.Editor:
                                     return Object(o.d)("All Editors", "PinFilters");
                                 default:
                                     return e
@@ -2973,34 +2973,34 @@
                             }),
                             n = 0 === this.props.dataCount && t.length === Object.keys(e).length,
                             a = r.createElement(r.Fragment, null, r.createElement(pe.a, {
-                                display: P.X.InlineFlex
-                            }, r.createElement(P.z, {
-                                type: P.F.Hollow,
+                                display: V.X.InlineFlex
+                            }, r.createElement(V.z, {
+                                type: V.F.Hollow,
                                 "data-test-selector": "pin-filters-button",
                                 disabled: n
-                            }, r.createElement(P.Wa, {
-                                display: P.X.Flex,
-                                alignItems: P.f.Center
-                            }, r.createElement(P.W, {
-                                color: P.O.Alt2
-                            }, this.props.name), r.createElement(P.nb, {
-                                asset: P.ob.GlyphArrDown
-                            }))), r.createElement(P.u, {
+                            }, r.createElement(V.Xa, {
+                                display: V.X.Flex,
+                                alignItems: V.f.Center
+                            }, r.createElement(V.W, {
+                                color: V.O.Alt2
+                            }, this.props.name), r.createElement(V.ob, {
+                                asset: V.pb.GlyphArrDown
+                            }))), r.createElement(V.u, {
                                 show: !0,
-                                direction: P.v.TopRight,
+                                direction: V.v.TopRight,
                                 tailOffset: 10,
-                                size: P.w.Small
-                            }, r.createElement(P.Wa, null, r.createElement(P.xb, {
+                                size: V.w.Small
+                            }, r.createElement(V.Xa, null, r.createElement(V.yb, {
                                 margin: 1
-                            }, r.createElement(P.W, {
-                                color: P.O.Alt
-                            }, this.props.description)), r.createElement(P.xb, null, Object.keys(e).map(this.renderOption))))));
-                        return n && (a = r.createElement(P.Qb, {
-                            direction: P.Sb.Top,
+                            }, r.createElement(V.W, {
+                                color: V.O.Alt
+                            }, this.props.description)), r.createElement(V.yb, null, Object.keys(e).map(this.renderOption))))));
+                        return n && (a = r.createElement(V.Rb, {
+                            direction: V.Tb.Top,
                             label: this.props.disabledMessage
-                        }, a)), r.createElement(P.Wa, {
-                            position: P.eb.Relative,
-                            display: P.X.InlineFlex,
+                        }, a)), r.createElement(V.Xa, {
+                            position: V.fb.Relative,
+                            display: V.X.InlineFlex,
                             margin: {
                                 left: 1
                             }
@@ -3020,7 +3020,7 @@
                                 i = t.userID,
                                 r = a && a.editors && a.editors.edges,
                                 s = [];
-                            return e[we.Self] && i && s.push(i), e[we.Owner] && s.push(n), e[we.Editor] && r && r.forEach(function(e) {
+                            return e[xe.Self] && i && s.push(i), e[xe.Owner] && s.push(n), e[xe.Editor] && r && r.forEach(function(e) {
                                 e.node && e.node.id && s.push(e.node.id)
                             }), s
                         }, t
@@ -3030,7 +3030,7 @@
                     }, t.prototype.componentDidUpdate = function(e) {
                         this.props.channelID !== e.channelID && this.setUserIDs()
                     }, t.prototype.render = function() {
-                        return r.createElement(P.Wa, {
+                        return r.createElement(V.Xa, {
                             className: "highlighter-pins"
                         }, r.createElement(Te, {
                             channelID: this.props.channelID,
@@ -3063,18 +3063,18 @@
                         }
                     }
                 })(Fe),
-                We = n("mZc/");
+                Re = n("mZc/");
             n("L7ac");
             ! function(e) {
                 e[e.PrecisionTooltip = 0] = "PrecisionTooltip", e[e.StartSelection = 1] = "StartSelection", e[e.EndSelection = 2] = "EndSelection", e[e.UseVideoTimeButton = 3] = "UseVideoTimeButton", e[e.SelectHighlightButton = 4] = "SelectHighlightButton"
-            }(Ve || (Ve = {}));
-            var Re = function(e) {
+            }(Pe || (Pe = {}));
+            var Xe = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.inExperiment = o.p.experiments.getAssignment(q.b.VODColorsOfTheWind) === se.b.Variant1, n.onUpdateStartToCurrentVideoTime = function() {
                             n.setState(function(e, t) {
                                 if (null !== t.currentVideoOffset) {
-                                    var n = Y(t.segment, t.currentVideoOffset);
+                                    var n = Z(t.segment, t.currentVideoOffset);
                                     return i.__assign({}, e, {
                                         startOffset: Object(T.b)(n.startOffset),
                                         endOffset: Object(T.b)(n.endOffset)
@@ -3146,21 +3146,21 @@
                         this.setState(p)
                     }, t.prototype.render = function() {
                         var e = Object(T.a)(this.state.endOffset) - Object(T.a)(this.state.startOffset);
-                        return (isNaN(e) || e < 0) && (e = 0), r.createElement(P.Wa, {
-                            display: P.X.Flex,
-                            justifyContent: P.Va.Start,
-                            flexDirection: P.Z.Column,
+                        return (isNaN(e) || e < 0) && (e = 0), r.createElement(V.Xa, {
+                            display: V.X.Flex,
+                            justifyContent: V.Wa.Start,
+                            flexDirection: V.Aa.Column,
                             breakpointMedium: {
-                                flexDirection: P.Z.Row
+                                flexDirection: V.Aa.Row
                             }
                         }, this.inExperiment ? this.renderStartInput() : this.renderLegacyStartInput(), this.inExperiment ? this.renderEndInput() : this.renderLegacyEndInput())
                     }, t.prototype.renderLegacyStartInput = function() {
                         var e = this.state.startOffset,
                             t = !this.validClockValue(e) || Object(T.a)(e) >= this.props.segment.endOffset;
-                        return r.createElement(P.Wa, {
-                            display: P.X.Flex,
-                            alignItems: P.f.Center,
-                            justifyContent: P.Va.Start,
+                        return r.createElement(V.Xa, {
+                            display: V.X.Flex,
+                            alignItems: V.f.Center,
+                            justifyContent: V.Wa.Start,
                             margin: {
                                 bottom: 1,
                                 right: 0
@@ -3171,52 +3171,52 @@
                                     right: 2
                                 }
                             },
-                            "data-test-selector": Ve.StartSelection
-                        }, r.createElement(P.Oa, {
-                            display: P.X.InlineFlex,
-                            alignItems: P.f.Center,
+                            "data-test-selector": Pe.StartSelection
+                        }, r.createElement(V.Pa, {
+                            display: V.X.InlineFlex,
+                            alignItems: V.f.Center,
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement("label", null, r.createElement(P.Wa, {
-                            display: P.X.InlineFlex,
-                            alignItems: P.f.Center,
-                            "data-test-selector": Ve.PrecisionTooltip
-                        }, r.createElement(We.a, {
-                            direction: P.v.BottomLeft
-                        }, Object(o.d)("Your highlight may be a few seconds longer than the exact timestamps specified.", "HighlighterOffsetSelector"))), r.createElement(P.Wa, {
-                            display: P.X.InlineFlex,
+                        }, r.createElement("label", null, r.createElement(V.Xa, {
+                            display: V.X.InlineFlex,
+                            alignItems: V.f.Center,
+                            "data-test-selector": Pe.PrecisionTooltip
+                        }, r.createElement(Re.a, {
+                            direction: V.v.BottomLeft
+                        }, Object(o.d)("Your highlight may be a few seconds longer than the exact timestamps specified.", "HighlighterOffsetSelector"))), r.createElement(V.Xa, {
+                            display: V.X.InlineFlex,
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(P.W, {
-                            type: P.Nb.Strong,
+                        }, r.createElement(V.W, {
+                            type: V.Ob.Strong,
                             noWrap: !0
-                        }, Object(o.d)("Start", "HighlighterOffsetSelector"))), r.createElement(P.Wa, {
+                        }, Object(o.d)("Start", "HighlighterOffsetSelector"))), r.createElement(V.Xa, {
                             className: "offset-selector__offset-input",
-                            display: P.X.InlineFlex
-                        }, r.createElement(P.Qa, {
+                            display: V.X.InlineFlex
+                        }, r.createElement(V.Ra, {
                             error: t,
                             onBlur: this.onInputBlur,
                             onChange: this.onStartChange,
                             onKeyDown: this.onKeyDown,
                             required: !0,
-                            type: P.Sa.Text,
+                            type: V.Ta.Text,
                             value: this.state.startOffset
-                        })))), r.createElement(P.Wa, {
-                            display: P.X.InlineFlex
-                        }, r.createElement(P.z, {
-                            type: P.F.Hollow,
+                        })))), r.createElement(V.Xa, {
+                            display: V.X.InlineFlex
+                        }, r.createElement(V.z, {
+                            type: V.F.Hollow,
                             onClick: this.onUpdateStartToCurrentVideoTime,
-                            "data-test-selector": Ve.UseVideoTimeButton
+                            "data-test-selector": Pe.UseVideoTimeButton
                         }, Object(o.d)("Video Time", "HighlighterOffsetSelectorStart"))))
                     }, t.prototype.renderStartInput = function() {
                         var e = this.state.startOffset,
                             t = !this.validClockValue(e) || Object(T.a)(e) >= this.props.segment.endOffset;
-                        return r.createElement(P.Wa, {
-                            display: P.X.Flex,
-                            alignItems: P.f.Center,
-                            justifyContent: P.Va.Start,
+                        return r.createElement(V.Xa, {
+                            display: V.X.Flex,
+                            alignItems: V.f.Center,
+                            justifyContent: V.Wa.Start,
                             margin: {
                                 bottom: 1,
                                 right: 0
@@ -3227,116 +3227,116 @@
                                     right: 2
                                 }
                             },
-                            "data-test-selector": Ve.StartSelection
-                        }, r.createElement(P.Oa, {
-                            display: P.X.InlineFlex,
-                            alignItems: P.f.Center,
-                            textAlign: P.Jb.Right
-                        }, r.createElement("label", null, r.createElement(P.Wa, {
+                            "data-test-selector": Pe.StartSelection
+                        }, r.createElement(V.Pa, {
+                            display: V.X.InlineFlex,
+                            alignItems: V.f.Center,
+                            textAlign: V.Kb.Right
+                        }, r.createElement("label", null, r.createElement(V.Xa, {
                             className: "offset-selector__input-label",
-                            display: P.X.InlineFlex,
+                            display: V.X.InlineFlex,
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(P.W, null, Object(o.d)("Start{break}Time", {
+                        }, r.createElement(V.W, null, Object(o.d)("Start{break}Time", {
                             break: r.createElement("br", null)
-                        }, "HighlighterOffsetSelector"))), r.createElement(P.Wa, {
+                        }, "HighlighterOffsetSelector"))), r.createElement(V.Xa, {
                             className: "offset-selector__offset-input",
-                            display: P.X.InlineFlex
-                        }, r.createElement(P.Qa, {
+                            display: V.X.InlineFlex
+                        }, r.createElement(V.Ra, {
                             error: t,
                             onBlur: this.onInputBlur,
                             onChange: this.onStartChange,
                             onKeyDown: this.onKeyDown,
                             required: !0,
-                            type: P.Sa.Text,
+                            type: V.Ta.Text,
                             value: this.state.startOffset
-                        })))), r.createElement(P.Qb, {
+                        })))), r.createElement(V.Rb, {
                             label: this.getTooltipLabel()
-                        }, r.createElement(P.z, {
-                            type: P.F.Hollow,
+                        }, r.createElement(V.z, {
+                            type: V.F.Hollow,
                             onClick: this.onUpdateStartToCurrentVideoTime,
-                            icon: P.ob.Timer,
-                            "data-test-selector": Ve.UseVideoTimeButton
+                            icon: V.pb.Timer,
+                            "data-test-selector": Pe.UseVideoTimeButton
                         })))
                     }, t.prototype.renderLegacyEndInput = function() {
                         var e = this.state.endOffset,
                             t = !this.validClockValue(e) || Object(T.a)(e) <= this.props.segment.startOffset;
-                        return r.createElement(P.Wa, {
-                            display: P.X.Flex,
-                            alignItems: P.f.Center,
-                            justifyContent: P.Va.End,
-                            "data-test-selector": Ve.EndSelection
-                        }, r.createElement(P.Oa, {
-                            display: P.X.InlineFlex,
-                            alignItems: P.f.Center,
+                        return r.createElement(V.Xa, {
+                            display: V.X.Flex,
+                            alignItems: V.f.Center,
+                            justifyContent: V.Wa.End,
+                            "data-test-selector": Pe.EndSelection
+                        }, r.createElement(V.Pa, {
+                            display: V.X.InlineFlex,
+                            alignItems: V.f.Center,
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement("label", null, r.createElement(P.Wa, {
-                            display: P.X.InlineFlex,
+                        }, r.createElement("label", null, r.createElement(V.Xa, {
+                            display: V.X.InlineFlex,
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(P.W, {
-                            type: P.Nb.Strong,
+                        }, r.createElement(V.W, {
+                            type: V.Ob.Strong,
                             noWrap: !0
-                        }, Object(o.d)("End", "HighlighterOffsetSelector"))), r.createElement(P.Wa, {
-                            display: P.X.InlineFlex,
+                        }, Object(o.d)("End", "HighlighterOffsetSelector"))), r.createElement(V.Xa, {
+                            display: V.X.InlineFlex,
                             className: "offset-selector__offset-input"
-                        }, r.createElement(P.Qa, {
+                        }, r.createElement(V.Ra, {
                             error: t,
                             onBlur: this.onInputBlur,
                             onChange: this.onEndChange,
                             onKeyDown: this.onKeyDown,
                             required: !0,
-                            type: P.Sa.Text,
+                            type: V.Ta.Text,
                             value: e
-                        })))), r.createElement(P.Wa, {
-                            display: P.X.InlineFlex
-                        }, r.createElement(P.z, {
-                            type: P.F.Hollow,
+                        })))), r.createElement(V.Xa, {
+                            display: V.X.InlineFlex
+                        }, r.createElement(V.z, {
+                            type: V.F.Hollow,
                             onClick: this.onUpdateEndToCurrentVideoTime,
-                            "data-test-selector": Ve.UseVideoTimeButton
+                            "data-test-selector": Pe.UseVideoTimeButton
                         }, Object(o.d)("Video Time", "HighlighterOffsetSelectorEnd"))))
                     }, t.prototype.renderEndInput = function() {
                         var e = this.state.endOffset,
                             t = !this.validClockValue(e) || Object(T.a)(e) <= this.props.segment.startOffset;
-                        return r.createElement(P.Wa, {
-                            display: P.X.Flex,
-                            alignItems: P.f.Center,
-                            justifyContent: P.Va.End,
-                            "data-test-selector": Ve.EndSelection
-                        }, r.createElement(P.Oa, {
-                            display: P.X.InlineFlex,
-                            alignItems: P.f.Center,
-                            textAlign: P.Jb.Right
-                        }, r.createElement("label", null, r.createElement(P.Wa, {
+                        return r.createElement(V.Xa, {
+                            display: V.X.Flex,
+                            alignItems: V.f.Center,
+                            justifyContent: V.Wa.End,
+                            "data-test-selector": Pe.EndSelection
+                        }, r.createElement(V.Pa, {
+                            display: V.X.InlineFlex,
+                            alignItems: V.f.Center,
+                            textAlign: V.Kb.Right
+                        }, r.createElement("label", null, r.createElement(V.Xa, {
                             className: "offset-selector__input-label",
-                            display: P.X.InlineFlex,
+                            display: V.X.InlineFlex,
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(P.W, null, Object(o.d)("End{break}Time", {
+                        }, r.createElement(V.W, null, Object(o.d)("End{break}Time", {
                             break: r.createElement("br", null)
-                        }, "HighlighterOffsetSelector"))), r.createElement(P.Wa, {
-                            display: P.X.InlineFlex,
+                        }, "HighlighterOffsetSelector"))), r.createElement(V.Xa, {
+                            display: V.X.InlineFlex,
                             className: "offset-selector__offset-input"
-                        }, r.createElement(P.Qa, {
+                        }, r.createElement(V.Ra, {
                             error: t,
                             onBlur: this.onInputBlur,
                             onChange: this.onEndChange,
                             onKeyDown: this.onKeyDown,
                             required: !0,
-                            type: P.Sa.Text,
+                            type: V.Ta.Text,
                             value: e
-                        })))), r.createElement(P.Qb, {
+                        })))), r.createElement(V.Rb, {
                             label: this.getTooltipLabel()
-                        }, r.createElement(P.z, {
-                            type: P.F.Hollow,
+                        }, r.createElement(V.z, {
+                            type: V.F.Hollow,
                             onClick: this.onUpdateEndToCurrentVideoTime,
-                            icon: P.ob.Timer,
-                            "data-test-selector": Ve.UseVideoTimeButton
+                            icon: V.pb.Timer,
+                            "data-test-selector": Pe.UseVideoTimeButton
                         })))
                     }, t.prototype.validClockValue = function(e) {
                         var t = Object(T.a)(e);
@@ -3367,11 +3367,11 @@
                     }, t
                 }(r.Component),
                 Me = n("lZCe"),
-                Le = n("ig/l"),
-                je = (n("Vt/k"), 25),
-                Ae = 150,
+                Ae = n("ig/l"),
+                Le = (n("Vt/k"), 25),
+                je = 150,
                 Be = 200,
-                Ue = function(e) {
+                We = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3382,12 +3382,12 @@
                             t.timelineRef = e
                         }, t.onWindowResize = function() {
                             var e = Date.now();
-                            t.finalizeTimer && clearTimeout(t.finalizeTimer), t.finalizeTimer = setTimeout(t.finalizeWidth, Ae), e - t.resizeDebounce > Be && (t.resizeDebounce = e, t.finalizeWidth())
+                            t.finalizeTimer && clearTimeout(t.finalizeTimer), t.finalizeTimer = setTimeout(t.finalizeWidth, je), e - t.resizeDebounce > Be && (t.resizeDebounce = e, t.finalizeWidth())
                         }, t.finalizeWidth = function() {
                             var e = t.timelineRef && t.timelineRef.clientWidth || 0;
                             if (e !== t.state.clientWidth && 0 !== e) {
-                                var n = e / je,
-                                    a = t.getNearestScaledMultipleOf5(e, je, t.getDuration(), t.getDuration() / n * 4) / t.getDuration() * e / 4;
+                                var n = e / Le,
+                                    a = t.getNearestScaledMultipleOf5(e, Le, t.getDuration(), t.getDuration() / n * 4) / t.getDuration() * e / 4;
                                 t.setState({
                                     clientWidth: e,
                                     realTickSpacing: a,
@@ -3400,16 +3400,16 @@
                                 if (o % 4 == 0) {
                                     var l = Math.round(o / i * a),
                                         d = t.getNearestScaledMultipleOf5(e, n, a, l);
-                                    s.push(r.createElement(P.Wa, {
+                                    s.push(r.createElement(V.Xa, {
                                         key: o,
                                         className: "timeline-ruler__big-tick",
-                                        position: P.eb.Relative
+                                        position: V.fb.Relative
                                     }, r.createElement("div", {
                                         className: "timeline-ruler__tick"
-                                    }), r.createElement(P.xb, {
+                                    }), r.createElement(V.yb, {
                                         className: "timeline-ruler__timestamp",
-                                        color: P.O.Alt2,
-                                        position: P.eb.Absolute
+                                        color: V.O.Alt2,
+                                        position: V.fb.Absolute
                                     }, Object(T.b)(d, {
                                         zeroPadAll: !0
                                     }))))
@@ -3431,16 +3431,16 @@
                     }, t.prototype.componentWillUnmount = function() {
                         window.removeEventListener("resize", this.onWindowResize)
                     }, t.prototype.render = function() {
-                        return r.createElement(P.Wa, {
+                        return r.createElement(V.Xa, {
                             className: "timeline-ruler",
-                            display: P.X.Flex
-                        }, r.createElement(P.Wa, {
+                            display: V.X.Flex
+                        }, r.createElement(V.Xa, {
                             className: "timeline-ruler__tick-container",
                             refDelegate: this.timelineRefCallback,
-                            display: P.X.Flex,
+                            display: V.X.Flex,
                             flexGrow: 4,
-                            position: P.eb.Relative,
-                            justifyContent: P.Va.Between
+                            position: V.fb.Relative,
+                            justifyContent: V.Wa.Between
                         }, this.state.ticks), r.createElement("div", {
                             className: "timeline-ruler__ruler-spacer",
                             style: {
@@ -3449,7 +3449,7 @@
                         }))
                     }, t
                 }(r.Component),
-                Ge = function(e) {
+                Ue = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onDrag = function(e) {
@@ -3466,16 +3466,16 @@
                                         return null
                                     }
                                 }, e[se.b.Variant1] = function() {
-                                    return r.createElement(Ue, {
+                                    return r.createElement(We, {
                                         startOffset: 0,
                                         endOffset: t.props.duration
                                     })
                                 }, e),
                                 name: q.b.VODColorsOfTheWind
                             };
-                        return r.createElement(r.Fragment, null, r.createElement(Le.a, {
-                            color: Le.c.Orange,
-                            handleSize: Le.b.Small,
+                        return r.createElement(r.Fragment, null, r.createElement(Ae.a, {
+                            color: Ae.c.Orange,
+                            handleSize: Ae.b.Small,
                             startOffset: n.startOffset,
                             endOffset: n.endOffset,
                             maxOffset: n.maxOffset,
@@ -3487,21 +3487,21 @@
                             onRightDragStart: this.props.onEndOffsetFocus,
                             onRightDragEnd: this.props.onDragEnd,
                             showTransition: this.props.showTransition
-                        }, r.createElement(P.xb, {
-                            alignItems: P.f.Center,
-                            display: P.X.Flex,
+                        }, r.createElement(V.yb, {
+                            alignItems: V.f.Center,
+                            display: V.X.Flex,
                             fullWidth: !0,
-                            justifyContent: P.Va.Center,
+                            justifyContent: V.Wa.Center,
                             padding: {
                                 y: 3
                             },
-                            textAlign: P.Jb.Center
+                            textAlign: V.Kb.Center
                         })), r.createElement(Me.a, i.__assign({}, a)))
                     }, t
                 }(r.Component),
-                Xe = Object(X.compose)(Object(E.b)("VideoSegmentEditor", {
+                Ge = Object(G.compose)(Object(E.b)("VideoSegmentEditor", {
                     autoReportInteractive: !0
-                }))(Ge),
+                }))(Ue),
                 qe = (n("f0Oh"), 250),
                 ze = function(e) {
                     function t(t) {
@@ -3559,8 +3559,8 @@
                             })
                         };
                         var r = t.userID === t.channelID,
-                            s = ((n = {})[we.Self] = !0, n);
-                        return r ? s[we.Editor] = !0 : s[we.Owner] = !0, a.state = {
+                            s = ((n = {})[xe.Self] = !0, n);
+                        return r ? s[xe.Editor] = !0 : s[xe.Owner] = !0, a.state = {
                             isTransitioning: !1,
                             selectedMarkerCreators: i.__assign({}, s),
                             selectedClipCreators: i.__assign({}, s),
@@ -3581,7 +3581,7 @@
                             user_id: parseInt(this.props.userID, 10),
                             vod_id: this.props.videoID,
                             vod_type: this.props.videoType
-                        }), r.createElement(P.Wa, {
+                        }), r.createElement(V.Xa, {
                             fullWidth: !0
                         }, r.createElement(ue, {
                             currentVideoOffset: this.props.currentVideoOffset,
@@ -3603,10 +3603,10 @@
                             requestPlayerTimeChange: this.props.requestPlayerTimeChange,
                             updateDownloadData: this.updateDownloadData,
                             activeSegment: t
-                        }, r.createElement(P.xb, {
+                        }, r.createElement(V.yb, {
                             className: "video-timeline__background",
                             border: !0
-                        }, r.createElement(Xe, {
+                        }, r.createElement(Ge, {
                             onStartOffsetFocus: this.onLeftSliderDrag,
                             onEndOffsetFocus: this.onRightSliderDrag,
                             onOffsetChange: this.onOffsetChange,
@@ -3614,34 +3614,34 @@
                             showTransition: this.state.isTransitioning,
                             duration: this.props.videoLengthSeconds,
                             onDragEnd: this.onSliderDragEnd
-                        })))), r.createElement(P.Wa, {
-                            alignItems: P.f.Center,
-                            display: P.X.Flex,
-                            justifyContent: P.Va.Between,
+                        })))), r.createElement(V.Xa, {
+                            alignItems: V.f.Center,
+                            display: V.X.Flex,
+                            justifyContent: V.Wa.Between,
                             padding: {
                                 y: 2
                             }
-                        }, r.createElement(Re, {
+                        }, r.createElement(Xe, {
                             onUpdate: this.onManualInputChange,
                             segment: this.formatTimelineSegment(this.props.activeSegment),
                             currentVideoOffset: this.props.currentVideoOffset
                         }), this.renderPinFilters()))
                     }, t.prototype.renderPinFilters = function() {
-                        return r.createElement(P.Wa, {
-                            display: P.X.Flex
-                        }, r.createElement(P.Wa, {
+                        return r.createElement(V.Xa, {
+                            display: V.X.Flex
+                        }, r.createElement(V.Xa, {
                             margin: {
                                 top: .5
                             }
-                        }, r.createElement(P.W, null, Object(o.d)("Display", "VideoTimeline"))), r.createElement(P.Wa, {
-                            display: P.X.Flex,
-                            justifyContent: P.Va.End,
-                            flexDirection: P.Z.Column,
+                        }, r.createElement(V.W, null, Object(o.d)("Display", "VideoTimeline"))), r.createElement(V.Xa, {
+                            display: V.X.Flex,
+                            justifyContent: V.Wa.End,
+                            flexDirection: V.Aa.Column,
                             breakpointMedium: {
-                                flexDirection: P.Z.Row,
-                                justifyContent: P.Va.Start
+                                flexDirection: V.Aa.Row,
+                                justifyContent: V.Wa.Start
                             }
-                        }, r.createElement(Pe, {
+                        }, r.createElement(Ve, {
                             name: Object(o.d)("Markers", "VideoTimeline"),
                             description: Object(o.d)("Added by", "VideoTimeline"),
                             broadcasterDisplayName: this.props.channelDisplayName,
@@ -3649,8 +3649,8 @@
                             updateSelectedOption: this.updateSelectedMarkerFilters,
                             dataCount: this.state.markersDownloadData.length,
                             disabledMessage: Object(o.d)("No Stream Markers available", "VideoTimeline")
-                        }), r.createElement(P.Wa, {
-                            display: P.X.Flex,
+                        }), r.createElement(V.Xa, {
+                            display: V.X.Flex,
                             margin: {
                                 top: 1
                             },
@@ -3659,7 +3659,7 @@
                                     top: 0
                                 }
                             }
-                        }, r.createElement(Pe, {
+                        }, r.createElement(Ve, {
                             name: Object(o.d)("Clips", "VideoTimeline"),
                             description: Object(o.d)("Clipped by", "VideoTimeline"),
                             broadcasterDisplayName: this.props.channelDisplayName,
@@ -3667,7 +3667,7 @@
                             updateSelectedOption: this.updateSelectedClipsFilters,
                             dataCount: this.state.clipsDownloadData.length,
                             disabledMessage: Object(o.d)("No Clip Markers available", "VideoTimeline")
-                        }), r.createElement(P.Wa, {
+                        }), r.createElement(V.Xa, {
                             margin: {
                                 left: .5
                             }
@@ -3687,11 +3687,11 @@
                         }
                     }, t
                 }(r.Component),
-                Qe = Object(X.compose)(Object(E.b)("VideoTimeline", {
+                Qe = Object(G.compose)(Object(E.b)("VideoTimeline", {
                     autoReportInteractive: !0
                 }))(ze);
 
-            function Ze(e) {
+            function Ke(e) {
                 return {
                     channel: e.channelLogin,
                     channel_id: e.channelID,
@@ -3701,10 +3701,10 @@
                 }
             }
 
-            function Ke(e) {
+            function $e(e) {
                 var t = function(e) {
                     var t = Math.round((e.endTime.getTime() - e.startTime.getTime()) / 1e3);
-                    return i.__assign({}, Ze(e), {
+                    return i.__assign({}, Ke(e), {
                         curation_duration: t,
                         generated_video_count: e.generatedVideoIDs.length,
                         generated_video_ids: e.generatedVideoIDs.join(",")
@@ -3713,18 +3713,18 @@
                 o.o.track(D.SpadeEventType.HighlighterCurationFinish, t)
             }
 
-            function $e() {
+            function Ye() {
                 return "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx".replace(/[xy]/g, function(e) {
                     var t = 16 * Math.random() | 0;
                     return ("x" === e ? t : 3 & t | 8).toString(16)
                 })
             }
-            var Ye, Je = n("8QND"),
+            var Ze, Je = n("8QND"),
                 et = (n("uQjj"), 0),
                 tt = -1;
             ! function(e) {
                 e[e.SourceVideoTitle = 0] = "SourceVideoTitle", e[e.SourceVideoDate = 1] = "SourceVideoDate", e[e.SourceVideoViews = 2] = "SourceVideoViews", e[e.SourceVideoGame = 3] = "SourceVideoGame"
-            }(Ye || (Ye = {}));
+            }(Ze || (Ze = {}));
             var nt, at = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -3744,7 +3744,7 @@
                                     a = n.get(C.a.Start),
                                     i = n.get(C.a.End),
                                     r = n.get(C.b.VideoStartTime);
-                                return (t = {})[C.a.TrackingID] = n.get(C.a.TrackingID), t[C.a.GameName] = n.get(C.a.GameName), t[C.a.GameID] = n.get(C.a.GameID), t[C.a.Title] = n.get(C.a.Title), t[C.a.Start] = null !== a ? Number(a) : null, t[C.a.End] = null !== i ? Number(i) : null, t[C.b.VideoStartTime] = r ? Object(y.a)(r) : null, t
+                                return (t = {})[C.a.TrackingID] = n.get(C.a.TrackingID), t[C.a.GameName] = n.get(C.a.GameName), t[C.a.GameID] = n.get(C.a.GameID), t[C.a.Title] = n.get(C.a.Title), t[C.a.Start] = null !== a ? Number(a) : null, t[C.a.End] = null !== i ? Number(i) : null, t[C.b.VideoStartTime] = r ? Object(O.a)(r) : null, t
                             }(window.location.search), n.hasConsumedParams = !1, n.onChangeVODClick = function() {
                                 n.props.showSelectVODModal()
                             }, n.onAddNewHighlight = function() {
@@ -3752,15 +3752,15 @@
                                     var t = n.props.data.video;
                                     if (!t) return e;
                                     var a = n.getSegmentByID(n.state.activeID),
-                                        r = K(t.lengthSeconds),
-                                        s = $(t.lengthSeconds);
+                                        r = $(t.lengthSeconds),
+                                        s = Y(t.lengthSeconds);
                                     a && Math.ceil(a.endOffsetSeconds) !== t.lengthSeconds && (r = Math.ceil(a.endOffsetSeconds), s = t.lengthSeconds);
                                     var o = {};
                                     a && a.metadata.game && (o = {
                                         game: a.metadata.game
                                     });
                                     var l = {
-                                            tempID: $e(),
+                                            tempID: Ye(),
                                             startOffsetSeconds: r,
                                             endOffsetSeconds: s,
                                             sourceVideoDetails: {
@@ -3808,7 +3808,7 @@
                                 if (t.video) {
                                     var a = n.curationStartTime || new Date,
                                         i = t.video.owner;
-                                    Ke({
+                                    $e({
                                         channelLogin: i ? i.login : null,
                                         channelID: i ? i.id : null,
                                         generatedVideoIDs: e,
@@ -3953,8 +3953,8 @@
                             }, !t.data.loading && !t.data.error && t.data.video) {
                             var a = n.videoSegmentFromSource(t.data.video);
                             n.state.currentSegmentOffsets = {
-                                startOffset: K(t.data.video.lengthSeconds),
-                                endOffset: $(t.data.video.lengthSeconds)
+                                startOffset: $(t.data.video.lengthSeconds),
+                                endOffset: Y(t.data.video.lengthSeconds)
                             }, n.state.videoSegmentQueue = [a];
                             var r = n.paramOverrides[C.b.VideoStartTime] || n.paramOverrides[C.a.Start] || 0;
                             n.state.requestedPlayerOffset = r < t.data.video.lengthSeconds ? r : 0, n.state.activeID = a.tempID
@@ -3979,8 +3979,8 @@
                                 if (!e.data.video) return n;
                                 var a = i.__assign({}, n, {
                                         currentSegmentOffsets: {
-                                            startOffset: K(e.data.video.lengthSeconds),
-                                            endOffset: $(e.data.video.lengthSeconds)
+                                            startOffset: $(e.data.video.lengthSeconds),
+                                            endOffset: Y(e.data.video.lengthSeconds)
                                         }
                                     }),
                                     r = t.props.data.video && e.data.video.id !== t.props.data.video.id,
@@ -4007,7 +4007,7 @@
                             this.curationStartTime = new Date;
                             var t = e.video.owner;
                             ! function(e) {
-                                o.o.track(D.SpadeEventType.HighlighterCurationStart, Ze(e))
+                                o.o.track(D.SpadeEventType.HighlighterCurationStart, Ke(e))
                             }({
                                 channelID: t ? t.id : null,
                                 channelLogin: t ? t.login : null,
@@ -4021,12 +4021,12 @@
                         if (this.props.data.loading && !this.props.data.video) return null;
                         var e = this.props.match.params.channelName;
                         if (e && (e = e.toLowerCase()), this.props.data.video && "" === this.props.data.video.id) return r.createElement(p.a, {
-                            to: Object(O.d)(e)
+                            to: Object(b.d)(e)
                         });
                         if (!this.props.data.video || this.props.data.error || !this.props.data.video.owner) return r.createElement(l.a, {
                             message: Object(o.d)("Error loading video data. Please try again later.", "HighlighterPageComponent")
                         });
-                        if (this.props.data.video.broadcastType !== b.a.Archive) return r.createElement(l.a, {
+                        if (this.props.data.video.broadcastType !== y.a.Archive) return r.createElement(l.a, {
                             message: Object(o.d)("You can only highlight past broadcasts.", "HighlighterPageComponent")
                         });
                         if (this.props.data.video.owner && this.props.data.video.owner.login !== e) return r.createElement(l.a, {
@@ -4038,41 +4038,41 @@
                             });
                         return r.createElement(m.a, {
                             content: n
-                        }, r.createElement(h.b, null, r.createElement(P.mb, {
+                        }, r.createElement(h.b, null, r.createElement(V.nb, {
                             centered: !0
-                        }, r.createElement(P.xb, {
-                            alignItems: P.f.Stretch,
-                            background: P.r.Alt,
+                        }, r.createElement(V.yb, {
+                            alignItems: V.f.Stretch,
+                            background: V.r.Alt,
                             className: "highlighter-page",
-                            display: P.X.Flex,
-                            flexDirection: P.Z.Column,
+                            display: V.X.Flex,
+                            flexDirection: V.Aa.Column,
                             fullHeight: !0,
                             fullWidth: !0,
                             padding: {
                                 x: 3,
                                 top: 4
                             }
-                        }, r.createElement(P.Ia, {
-                            gutterSize: P.Ja.Medium
-                        }, r.createElement(P.P, {
+                        }, r.createElement(V.Ja, {
+                            gutterSize: V.Ka.Medium
+                        }, r.createElement(V.P, {
                             cols: {
                                 default: 12,
                                 sm: 5,
                                 md: 4
                             }
-                        }, r.createElement(P.Wa, {
+                        }, r.createElement(V.Xa, {
                             className: "highlighter-page__queue",
-                            display: P.X.Flex,
+                            display: V.X.Flex,
                             fullHeight: !0,
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(P.xb, {
+                        }, r.createElement(V.yb, {
                             fullHeight: !0,
                             fullWidth: !0,
                             elevation: 1,
-                            background: P.r.Base
-                        }, r.createElement(G, {
+                            background: V.r.Base
+                        }, r.createElement(U, {
                             activeID: this.state.activeID,
                             queue: this.state.videoSegmentQueue,
                             onChangeActiveSegment: this.onChangeActiveSegment,
@@ -4086,40 +4086,40 @@
                         }), r.createElement(u.a, {
                             when: 0 !== this.state.videoSegmentQueue.length && this.state.userMadeChanges,
                             message: this.shouldAllowNavigation
-                        })))), r.createElement(P.P, {
+                        })))), r.createElement(V.P, {
                             cols: {
                                 default: 12,
                                 sm: 7,
                                 md: 8
                             }
-                        }, r.createElement(P.Wa, {
+                        }, r.createElement(V.Xa, {
                             fullHeight: !0,
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(P.xb, {
+                        }, r.createElement(V.yb, {
                             elevation: 1,
-                            background: P.r.Base,
+                            background: V.r.Base,
                             fullHeight: !0
-                        }, r.createElement(P.Wa, {
+                        }, r.createElement(V.Xa, {
                             padding: 1,
-                            display: P.X.Flex,
+                            display: V.X.Flex,
                             className: "highlighter__card-header",
-                            alignItems: P.f.Center
-                        }, r.createElement(P.W, {
-                            fontSize: P.Ba.Size5
-                        }, Object(o.d)("Source Video", "HighlighterPageComponent"))), r.createElement(P.o, {
-                            ratio: P.p.Aspect16x9
-                        }, r.createElement(I, {
+                            alignItems: V.f.Center
+                        }, r.createElement(V.W, {
+                            fontSize: V.Ca.Size5
+                        }, Object(o.d)("Source Video", "HighlighterPageComponent"))), r.createElement(V.o, {
+                            ratio: V.p.Aspect16x9
+                        }, r.createElement(w, {
                             videoID: this.props.data.video.id,
                             paused: this.state.shouldPlayerPause,
                             onVideoTimeChange: this.onPlayerTimeChange,
                             nextVideoOffset: this.state.requestedPlayerOffset,
                             onPauseToggled: this.onPlayerPauseToggle,
                             editing: t
-                        })), r.createElement(P.Wa, {
+                        })), r.createElement(V.Xa, {
                             padding: 1
-                        }, this.renderSourceVideoInfo(this.props.data.video)))))), r.createElement(P.Wa, {
+                        }, this.renderSourceVideoInfo(this.props.data.video)))))), r.createElement(V.Xa, {
                             margin: {
                                 y: 4
                             }
@@ -4140,60 +4140,60 @@
                             paused: this.state.shouldPlayerPause
                         }))))))
                     }, t.prototype.renderSourceVideoInfo = function(e) {
-                        return r.createElement(P.Wa, {
-                            display: P.X.Flex,
-                            justifyContent: P.Va.Between
-                        }, r.createElement(P.Wa, null, r.createElement(P.W, {
-                            "data-test-selector": Ye.SourceVideoTitle,
-                            fontSize: P.Ba.Size5,
+                        return r.createElement(V.Xa, {
+                            display: V.X.Flex,
+                            justifyContent: V.Wa.Between
+                        }, r.createElement(V.Xa, null, r.createElement(V.W, {
+                            "data-test-selector": Ze.SourceVideoTitle,
+                            fontSize: V.Ca.Size5,
                             italic: !e.title,
                             lines: 2,
                             ellipsis: !0
-                        }, e.title || Object(o.d)("Untitled Broadcast", "HighlighterSourceVideoInfo")), r.createElement(P.Wa, {
-                            display: P.X.Flex
-                        }, e.publishedAt && r.createElement(P.Wa, {
+                        }, e.title || Object(o.d)("Untitled Broadcast", "HighlighterSourceVideoInfo")), r.createElement(V.Xa, {
+                            display: V.X.Flex
+                        }, e.publishedAt && r.createElement(V.Xa, {
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(P.W, {
-                            "data-test-selector": Ye.SourceVideoDate,
-                            type: P.Nb.Span
-                        }, Object(o.c)(new Date(e.publishedAt), "medium"))), e.game && r.createElement(P.Wa, {
-                            display: P.X.Flex,
+                        }, r.createElement(V.W, {
+                            "data-test-selector": Ze.SourceVideoDate,
+                            type: V.Ob.Span
+                        }, Object(o.c)(new Date(e.publishedAt), "medium"))), e.game && r.createElement(V.Xa, {
+                            display: V.X.Flex,
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(P.xb, {
+                        }, r.createElement(V.yb, {
                             padding: {
                                 right: .5
                             },
-                            color: P.O.Alt2,
-                            display: P.X.Flex
-                        }, r.createElement(P.nb, {
-                            asset: P.ob.NavGames,
+                            color: V.O.Alt2,
+                            display: V.X.Flex
+                        }, r.createElement(V.ob, {
+                            asset: V.pb.NavGames,
                             width: 16,
                             height: 16
-                        })), r.createElement(P.W, {
-                            color: P.O.Alt2,
-                            "data-test-selector": Ye.SourceVideoGame
-                        }, e.game.name)), null !== e.viewCount && r.createElement(P.Wa, {
-                            display: P.X.Flex,
+                        })), r.createElement(V.W, {
+                            color: V.O.Alt2,
+                            "data-test-selector": Ze.SourceVideoGame
+                        }, e.game.name)), null !== e.viewCount && r.createElement(V.Xa, {
+                            display: V.X.Flex,
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(P.xb, {
+                        }, r.createElement(V.yb, {
                             padding: {
                                 right: .5
                             },
-                            color: P.O.Alt2,
-                            display: P.X.Flex
-                        }, r.createElement(P.nb, {
-                            asset: P.ob.GlyphViews,
+                            color: V.O.Alt2,
+                            display: V.X.Flex
+                        }, r.createElement(V.ob, {
+                            asset: V.pb.GlyphViews,
                             width: 16,
                             height: 16
-                        })), r.createElement(P.W, {
-                            color: P.O.Alt2,
-                            "data-test-selector": Ye.SourceVideoViews
+                        })), r.createElement(V.W, {
+                            color: V.O.Alt2,
+                            "data-test-selector": Ze.SourceVideoViews
                         }, Object(o.f)(e.viewCount))))))
                     }, t.prototype.getSegmentByID = function(e) {
                         return this.state.videoSegmentQueue.find(function(t) {
@@ -4212,14 +4212,14 @@
                         }
                     }, t.prototype.videoSegmentFromSource = function(e) {
                         return {
-                            tempID: $e(),
+                            tempID: Ye(),
                             sourceVideoDetails: {
                                 id: e.id,
                                 lengthSeconds: e.lengthSeconds,
                                 title: e.title
                             },
-                            startOffsetSeconds: K(e.lengthSeconds),
-                            endOffsetSeconds: $(e.lengthSeconds),
+                            startOffsetSeconds: $(e.lengthSeconds),
+                            endOffsetSeconds: Y(e.lengthSeconds),
                             metadata: this.formatSourceVideoFields(e)
                         }
                     }, t.prototype.discardChangesMessage = function() {
@@ -4321,40 +4321,40 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = !!(this.props.data.user && this.props.data.user.searchVideos && this.props.data.user.searchVideos.pageInfo && this.props.data.user.searchVideos.pageInfo.hasNextPage);
-                        return r.createElement(P.i, {
-                            type: P.n.FadeIn,
-                            delay: P.j.Medium,
-                            duration: P.k.Medium,
+                        return r.createElement(V.i, {
+                            type: V.n.FadeIn,
+                            delay: V.j.Medium,
+                            duration: V.k.Medium,
                             enabled: !0
-                        }, r.createElement(P.xb, {
-                            background: P.r.Base,
+                        }, r.createElement(V.yb, {
+                            background: V.r.Base,
                             className: "highlighter-vod-selector",
-                            display: P.X.Flex,
-                            flexDirection: P.Z.Column,
+                            display: V.X.Flex,
+                            flexDirection: V.Aa.Column,
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(P.Wa, {
+                        }, r.createElement(V.Xa, {
                             padding: {
                                 x: 3,
                                 y: 2
                             }
-                        }, r.createElement(P.W, {
-                            fontSize: P.Ba.Size4
-                        }, Object(o.d)("Select a Past Broadcast", "HighlighterVODSelectModal")), r.createElement(P.Wa, {
+                        }, r.createElement(V.W, {
+                            fontSize: V.Ca.Size4
+                        }, Object(o.d)("Select a Past Broadcast", "HighlighterVODSelectModal")), r.createElement(V.Xa, {
                             padding: {
                                 y: 1
                             }
-                        }, r.createElement(P.Da, {
+                        }, r.createElement(V.Ea, {
                             label: Object(o.d)("Search your videos", "HighlighterVODSelectModal")
-                        }, r.createElement(P.qb, {
+                        }, r.createElement(V.rb, {
                             onChange: this.onSearchInputChangeHandler,
                             placeholder: Object(o.d)("Filter by video title", "HighlighterVODSelectModal")
                         })))), r.createElement(h.b, {
                             suppressScrollX: !0
-                        }, r.createElement(P.Wa, {
-                            display: P.X.Flex,
-                            flexDirection: P.Z.Column
+                        }, r.createElement(V.Xa, {
+                            display: V.X.Flex,
+                            flexDirection: V.Aa.Column
                         }, this.renderVideos(), r.createElement(h.a, {
                             enabled: e,
                             loadMore: this.onLoadMoreHandler
@@ -4363,13 +4363,13 @@
                         })))
                     }, t.prototype.renderVideos = function() {
                         var e = this;
-                        if (this.state.searchChangeTimeoutID || this.props.data.loading) return r.createElement(P.Ya, {
+                        if (this.state.searchChangeTimeoutID || this.props.data.loading) return r.createElement(V.Za, {
                             fillContent: !0,
                             delay: 500
                         });
-                        if (this.props.data.error || !this.props.data.user || !this.props.data.user.searchVideos) return r.createElement(P.Wa, {
-                            alignSelf: P.g.Center,
-                            justifyContent: P.Va.Center
+                        if (this.props.data.error || !this.props.data.user || !this.props.data.user.searchVideos) return r.createElement(V.Xa, {
+                            alignSelf: V.g.Center,
+                            justifyContent: V.Wa.Center
                         }, Object(o.d)("There was an error searching your videos. Please try again.", "HighlighterVODSelectModal"));
                         var t = this.props.data.user.searchVideos.edges && this.props.data.user.searchVideos.edges.map(function(e) {
                             return e && e.node
@@ -4378,21 +4378,21 @@
                         });
                         return t && 0 !== t.length ? t.map(function(t, n) {
                             var a = !(!t || t.id !== e.props.currentVideoID);
-                            return r.createElement(P.Ta, {
+                            return r.createElement(V.Ua, {
                                 key: n,
                                 onClick: e.onVideoClick.bind(e, t),
                                 "data-test-selector": ot.VideoCard,
                                 disabled: a
-                            }, r.createElement(P.xb, {
-                                alignItems: P.f.Center,
-                                display: P.X.Flex,
-                                flexDirection: P.Z.Row,
+                            }, r.createElement(V.yb, {
+                                alignItems: V.f.Center,
+                                display: V.X.Flex,
+                                flexDirection: V.Aa.Row,
                                 flexGrow: 1,
                                 padding: {
                                     x: 3,
                                     y: .5
                                 }
-                            }, r.createElement(P.Wa, {
+                            }, r.createElement(V.Xa, {
                                 flexGrow: 1,
                                 flexShrink: 1,
                                 padding: {
@@ -4403,9 +4403,9 @@
                                 video: t,
                                 selected: a
                             }))))
-                        }) : r.createElement(P.Wa, {
-                            alignSelf: P.g.Center,
-                            justifyContent: P.Va.Center
+                        }) : r.createElement(V.Xa, {
+                            alignSelf: V.g.Center,
+                            justifyContent: V.Wa.Center
                         }, Object(o.d)("No results found.", "HighlighterVODSelectModal"))
                     }, t
                 }(r.Component),
@@ -4720,40 +4720,40 @@
                         });
                     return l.createElement("div", {
                         ref: this.handleContainerRef
-                    }, l.createElement(u.Oa, {
+                    }, l.createElement(u.Pa, {
                         flexGrow: 0,
                         flexShrink: 0
                     }, l.createElement("div", {
                         className: t,
                         "data-test-selector": a.SelectedSection,
                         style: e
-                    }, l.createElement(u.Wa, {
+                    }, l.createElement(u.Xa, {
                         className: "draggable-slider__container",
-                        position: u.eb.Relative,
+                        position: u.fb.Relative,
                         display: u.X.Flex,
-                        justifyContent: u.Va.Center
-                    }, l.createElement(u.Wa, {
-                        position: u.eb.Absolute,
+                        justifyContent: u.Wa.Center
+                    }, l.createElement(u.Xa, {
+                        position: u.fb.Absolute,
                         attachTop: !0,
                         fullWidth: !0
-                    }, l.createElement(u.Wa, {
-                        position: u.eb.Relative,
+                    }, l.createElement(u.Xa, {
+                        position: u.fb.Relative,
                         attachTop: !0,
                         fullWidth: !0,
                         display: u.X.Flex,
-                        justifyContent: u.Va.Center
-                    }, l.createElement(u.Wa, {
-                        position: u.eb.Absolute,
+                        justifyContent: u.Wa.Center
+                    }, l.createElement(u.Xa, {
+                        position: u.fb.Absolute,
                         attachBottom: !0,
                         margin: {
                             bottom: 1
                         },
-                        zIndex: u.ac.Above
-                    }, this.props.popover))), l.createElement(u.xb, {
+                        zIndex: u.bc.Above
+                    }, this.props.popover))), l.createElement(u.yb, {
                         className: n,
                         fullWidth: !0,
                         display: u.X.Flex,
-                        justifyContent: u.Va.Between
+                        justifyContent: u.Wa.Between
                     }, l.createElement(c.a, {
                         "data-test-selector": a.LeftHandle,
                         color: this.props.color,
@@ -4783,10 +4783,10 @@
                         "draggable-slider__overlay--blue": this.props.color === r.a.Blue,
                         "draggable-slider__overlay--orange": this.props.color === r.a.Orange
                     });
-                    return l.createElement(u.Wa, {
+                    return l.createElement(u.Xa, {
                         className: t,
                         display: u.X.InlineBlock,
-                        overflow: u.Za.Hidden,
+                        overflow: u.ab.Hidden,
                         "data-test-selector": a.Overlay,
                         fullWidth: !0
                     }, e)
@@ -4844,27 +4844,27 @@
                         return i.createElement("div", {
                             onMouseEnter: this.handleMouseEnter,
                             onMouseLeave: this.handleMouseLeave
-                        }, i.createElement(r.xb, {
+                        }, i.createElement(r.yb, {
                             display: r.X.Flex,
                             margin: {
                                 x: 1
                             },
-                            position: r.eb.Relative
-                        }, i.createElement(r.xb, {
+                            position: r.fb.Relative
+                        }, i.createElement(r.yb, {
                             className: "hoverable-icon",
                             display: r.X.InlineFlex,
                             color: r.O.Alt2,
                             alignItems: r.f.Center,
-                            justifyContent: r.Va.Center
-                        }, i.createElement(r.nb, {
-                            asset: r.ob.NotificationInfo,
+                            justifyContent: r.Wa.Center
+                        }, i.createElement(r.ob, {
+                            asset: r.pb.NotificationInfo,
                             width: 16,
                             height: 16
                         })), i.createElement(r.u, {
                             show: this.state.isHovered,
                             direction: n,
                             size: a
-                        }, i.createElement(r.Wa, {
+                        }, i.createElement(r.Xa, {
                             padding: {
                                 x: 1,
                                 y: 1
@@ -4909,7 +4909,7 @@
                     "draggable-slider-handle--blue": e.color === l.a.Blue,
                     "draggable-slider-handle--orange": e.color === l.a.Orange
                 });
-                return o.createElement(d.Oa, {
+                return o.createElement(d.Pa, {
                     flexGrow: 0,
                     flexShrink: 0,
                     className: t,
@@ -4919,8 +4919,8 @@
                     "data-test-selector": i.Handle,
                     onMouseDown: e.onMouseDown,
                     ref: e.onRef
-                }, o.createElement(d.nb, {
-                    asset: d.ob.DragHandle,
+                }, o.createElement(d.ob, {
+                    asset: d.pb.DragHandle,
                     width: e.size
                 })))
             }
@@ -5560,41 +5560,41 @@
             var l = function(e) {
                     var t, n = Object(s.b)(e.video.lengthSeconds);
                     return t = e.video.publishedAt ? i.createElement(o.W, {
-                        fontSize: o.Ba.Size7
+                        fontSize: o.Ca.Size7
                     }, Object(r.c)(new Date(e.video.publishedAt), "medium"), i.createElement("span", null, " · "), n) : i.createElement(o.W, {
-                        fontSize: o.Ba.Size7
-                    }, n), i.createElement(o.Wa, {
+                        fontSize: o.Ca.Size7
+                    }, n), i.createElement(o.Xa, {
                         alignItems: o.f.Stretch,
                         display: o.X.Flex,
-                        flexDirection: o.Z.Row,
+                        flexDirection: o.Aa.Row,
                         flexGrow: 1,
                         padding: .5
-                    }, i.createElement(o.Wa, {
+                    }, i.createElement(o.Xa, {
                         flexGrow: 0,
                         flexShrink: 0,
-                        position: o.eb.Relative
+                        position: o.fb.Relative
                     }, i.createElement(o.I, {
                         alt: e.video.title,
                         aspect: o.p.Aspect16x9,
                         size: o.J.Size8,
                         src: e.video.previewThumbnailURL
-                    }), d(e.selected)), i.createElement(o.Wa, {
+                    }), d(e.selected)), i.createElement(o.Xa, {
                         alignItems: o.f.Start,
                         display: o.X.Flex,
-                        flexDirection: o.Z.Column,
+                        flexDirection: o.Aa.Column,
                         flexGrow: 1,
                         flexShrink: 1,
-                        justifyContent: o.Va.Center,
+                        justifyContent: o.Wa.Center,
                         padding: {
                             x: 1
                         },
-                        overflow: o.Za.Hidden
-                    }, i.createElement(o.Wa, {
+                        overflow: o.ab.Hidden
+                    }, i.createElement(o.Xa, {
                         fullWidth: !0,
-                        overflow: o.Za.Hidden
+                        overflow: o.ab.Hidden
                     }, i.createElement(o.W, {
-                        type: o.Nb.H3,
-                        fontSize: o.Ba.Size6,
+                        type: o.Ob.H3,
+                        fontSize: o.Ca.Size6,
                         title: e.video.title,
                         ellipsis: !0
                     }, e.video.title)), i.createElement("div", {
@@ -5602,20 +5602,20 @@
                     }, t)))
                 },
                 d = function(e) {
-                    return e ? i.createElement(o.xb, {
+                    return e ? i.createElement(o.yb, {
                         background: o.r.Overlay,
                         attachTop: !0,
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
-                        position: o.eb.Absolute,
+                        position: o.fb.Absolute,
                         alignItems: o.f.Center,
                         "data-test-selector": a.Overlay,
                         display: o.X.Flex,
-                        flexDirection: o.Z.Column,
-                        justifyContent: o.Va.Center
-                    }, i.createElement(o.nb, {
-                        asset: o.ob.Check
+                        flexDirection: o.Aa.Column,
+                        justifyContent: o.Wa.Center
+                    }, i.createElement(o.ob, {
+                        asset: o.pb.Check
                     })) : null
                 }
         },

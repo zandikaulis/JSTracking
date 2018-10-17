@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [116], {
+    [115], {
         EJeP: function(e, n, r) {
             "use strict";
             r.r(n);
@@ -365,7 +365,7 @@
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return t.__extends(n, e), n.prototype.render = function() {
-                    return o.createElement(c.Wa, {
+                    return o.createElement(c.Xa, {
                         fullWidth: !0,
                         padding: {
                             x: 3,
@@ -375,7 +375,7 @@
                         loadMore: this.props.loadMore,
                         enabled: this.props.hasNextPage && !this.props.loading,
                         pixelThreshold: 100
-                    }), this.props.loading && o.createElement(c.Ya, {
+                    }), this.props.loading && o.createElement(c.Za, {
                         fillContent: !0
                     }))
                 }, n.prototype.getFollowCards = function() {
@@ -388,7 +388,7 @@
                     if (this.props.loading && !this.props.followEdge) return o.createElement(d.a, null);
                     var e = !0,
                         n = this.props.followEdge && this.props.followEdge.map(function(n) {
-                            return n && n.node && n.node.id ? (e = !1, o.createElement(c.Wa, {
+                            return n && n.node && n.node.id ? (e = !1, o.createElement(c.Xa, {
                                 key: n.node.id,
                                 margin: {
                                     bottom: 2
@@ -402,25 +402,25 @@
                                 }
                             }))) : null
                         });
-                    return n && n.length && !e ? o.createElement(c.Wa, {
+                    return n && n.length && !e ? o.createElement(c.Xa, {
                         display: c.X.Flex,
                         flexGrow: 1,
                         fullHeight: !0
-                    }, o.createElement(c.Tb, {
+                    }, o.createElement(c.Ub, {
                         placeholderItems: 10,
                         center: !0,
-                        gutterSize: c.Vb.Small,
-                        childWidth: c.Ub.Large
-                    }, n)) : o.createElement(c.Wa, {
+                        gutterSize: c.Wb.Small,
+                        childWidth: c.Vb.Large
+                    }, n)) : o.createElement(c.Xa, {
                         "data-test-selector": "no-follow-users",
                         margin: {
                             top: 5
                         },
                         display: c.X.Flex,
-                        flexDirection: c.Z.Row,
-                        justifyContent: c.Va.Center
+                        flexDirection: c.Aa.Row,
+                        justifyContent: c.Wa.Center
                     }, o.createElement(c.W, {
-                        type: c.Nb.H4,
+                        type: c.Ob.H4,
                         color: c.O.Alt2,
                         italic: !0
                     }, Object(a.d)("No Users Found", "ChannelFollowListing")))

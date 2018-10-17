@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [133], {
+    [132], {
         "/ZC1": function(e, t, a) {
             "use strict";
             a.d(t, "a", function() {
@@ -30,16 +30,16 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return n.createElement(i.Y, {
+                        return n.createElement(i.Z, {
                             dragOver: this.state.isDraggingOver,
                             error: this.props.error
-                        }, n.createElement(i.Oa, {
-                            position: i.eb.Absolute,
+                        }, n.createElement(i.Pa, {
+                            position: i.fb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: i.ac.Above
+                            zIndex: i.bc.Above
                         }, n.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -80,7 +80,7 @@
                         "default-avatar__selected": e.selected,
                         "default-avatar": !0
                     };
-                    return c.createElement(h.Wa, {
+                    return c.createElement(h.Xa, {
                         padding: {
                             bottom: 1
                         }
@@ -91,13 +91,13 @@
                         "aria-label": Object(d.d)("Click to select Default Avatar Number {index, number}", {
                             index: e.index
                         }, "Default Avatar")
-                    }, c.createElement(h.xb, {
+                    }, c.createElement(h.yb, {
                         fullHeight: !0,
                         fullWidth: !0,
-                        position: h.eb.Relative,
+                        position: h.fb.Relative,
                         className: u(t),
                         borderRadius: h.x.Small,
-                        overflow: h.Za.Hidden
+                        overflow: h.ab.Hidden
                     }, c.createElement("img", {
                         alt: Object(d.d)("Default Avatar Number {index, number}", {
                             index: e.index
@@ -249,30 +249,30 @@
                                 "profile-edit__image-preview": !0,
                                 "profile-edit__image-preview-tall": this.state.currentImageHasTallAspectRatio
                             };
-                            a = c.createElement(h.xb, {
+                            a = c.createElement(h.yb, {
                                 className: u(n),
-                                position: h.eb.Relative,
+                                position: h.fb.Relative,
                                 background: h.r.Base
-                            }, c.createElement(h.Pa, {
+                            }, c.createElement(h.Qa, {
                                 borderRadius: h.x.Small,
-                                overflow: h.Za.Hidden
+                                overflow: h.ab.Hidden
                             }, c.createElement("img", {
                                 "data-test-selector": r.PreviewImage,
                                 src: "" + this.state.imagePreviewURL
                             })))
                         }
                         var i = null;
-                        "" === this.state.imagePreviewURL && (i = c.createElement(h.Wa, {
+                        "" === this.state.imagePreviewURL && (i = c.createElement(h.Xa, {
                             className: "profile-edit__upload-info"
-                        }, c.createElement(h.Wa, null, c.createElement(h.nb, {
-                            asset: h.ob.Plus,
-                            type: h.pb.Alt2,
+                        }, c.createElement(h.Xa, null, c.createElement(h.ob, {
+                            asset: h.pb.Plus,
+                            type: h.qb.Alt2,
                             height: 20,
                             width: 20
                         })), c.createElement(h.W, {
-                            type: h.Nb.H3,
+                            type: h.Ob.H3,
                             color: h.O.Alt2,
-                            fontSize: h.Ba.Size4
+                            fontSize: h.Ca.Size4
                         }, Object(d.d)("Upload a Photo", "Profile Edit"))));
                         var s = null;
                         this.props.showCloser && (s = c.createElement(p.a, null));
@@ -281,28 +281,28 @@
                             var l = Object(y.c)(this.state.statusMessage),
                                 g = l.message,
                                 b = l.type;
-                            o = c.createElement(h.bb, {
+                            o = c.createElement(h.cb, {
                                 label: g,
                                 type: b
                             })
                         }
                         var I = this.props.login;
-                        return this.props.displayName && (I = this.props.displayName), c.createElement(h.Wa, {
+                        return this.props.displayName && (I = this.props.displayName), c.createElement(h.Xa, {
                             className: "profile-edit",
-                            position: h.eb.Relative,
+                            position: h.fb.Relative,
                             fullHeight: !0
-                        }, c.createElement(h.xb, {
+                        }, c.createElement(h.yb, {
                             className: "profile-edit__background-container",
                             background: h.r.Base,
                             fullWidth: !0
-                        }, c.createElement(h.Wa, {
+                        }, c.createElement(h.Xa, {
                             padding: 2,
                             display: h.X.InlineBlock,
-                            position: h.eb.Relative,
-                            textAlign: h.Jb.Center,
+                            position: h.fb.Relative,
+                            textAlign: h.Kb.Center,
                             fullWidth: !0
-                        }, c.createElement(h.xb, {
-                            textAlign: h.Jb.Left,
+                        }, c.createElement(h.yb, {
+                            textAlign: h.Kb.Left,
                             borderBottom: !0,
                             padding: {
                                 bottom: 1
@@ -311,34 +311,34 @@
                                 bottom: 2
                             }
                         }, c.createElement(h.W, {
-                            type: h.Nb.H3,
+                            type: h.Ob.H3,
                             color: h.O.Alt2,
-                            fontSize: h.Ba.Size4
+                            fontSize: h.Ca.Size4
                         }, Object(d.d)("Edit Profile Picture for {userName}", {
                             userName: I
-                        }, "Profile Edit"), " ")), c.createElement(h.Wa, {
+                        }, "Profile Edit"), " ")), c.createElement(h.Xa, {
                             className: "profile-edit__upload-container",
                             display: h.X.InlineBlock,
-                            position: h.eb.Relative,
-                            textAlign: h.Jb.Center,
+                            position: h.fb.Relative,
+                            textAlign: h.Kb.Center,
                             margin: {
                                 bottom: 1
                             }
-                        }, c.createElement(h.Wa, {
+                        }, c.createElement(h.Xa, {
                             className: "profile-edit__upload",
                             display: h.X.InlineBlock,
-                            position: h.eb.Relative,
-                            textAlign: h.Jb.Center
+                            position: h.fb.Relative,
+                            textAlign: h.Kb.Center
                         }, c.createElement(m.a, {
                             allowedFileTypes: O,
                             onFilesSubmitted: this.onImageInputChange
-                        }, i), a)), c.createElement(h.xb, {
+                        }, i), a)), c.createElement(h.yb, {
                             "data-test-selector": r.StatusMessage,
-                            fontSize: h.Ba.Size4,
-                            position: h.eb.Relative,
-                            textAlign: h.Jb.Center,
+                            fontSize: h.Ca.Size4,
+                            position: h.fb.Relative,
+                            textAlign: h.Kb.Center,
                             className: "profile-edit__status-message"
-                        }, o), c.createElement(h.xb, {
+                        }, o), c.createElement(h.yb, {
                             borderBottom: !0,
                             padding: {
                                 bottom: .5
@@ -346,22 +346,22 @@
                             margin: {
                                 bottom: 2
                             }
-                        }, c.createElement(h.Wa, {
-                            textAlign: h.Jb.Left,
+                        }, c.createElement(h.Xa, {
+                            textAlign: h.Kb.Left,
                             margin: {
                                 bottom: 1
                             }
                         }, c.createElement(h.W, {
-                            type: h.Nb.H3,
+                            type: h.Ob.H3,
                             color: h.O.Alt2,
-                            fontSize: h.Ba.Size5
-                        }, Object(d.d)("Or select one of these", "Profile Edit"))), c.createElement(h.Tb, {
-                            childWidth: h.Ub.ExtraSmall,
-                            gutterSize: h.Vb.ExtraSmall,
+                            fontSize: h.Ca.Size5
+                        }, Object(d.d)("Or select one of these", "Profile Edit"))), c.createElement(h.Ub, {
+                            childWidth: h.Vb.ExtraSmall,
+                            gutterSize: h.Wb.ExtraSmall,
                             placeholderItems: 3
-                        }, t)), c.createElement(h.Wa, {
+                        }, t)), c.createElement(h.Xa, {
                             display: h.X.Flex,
-                            justifyContent: h.Va.Center
+                            justifyContent: h.Wa.Center
                         }, c.createElement(h.z, {
                             "data-test-selector": r.UpdateButton,
                             onClick: this.onUpdateButtonClick,
@@ -629,17 +629,17 @@
                     return s.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return o.createElement(d.Wa, {
+                        return o.createElement(d.Xa, {
                             className: "edit-profile-overlay",
                             display: d.X.Flex,
-                            justifyContent: d.Va.Center,
+                            justifyContent: d.Wa.Center,
                             alignContent: d.e.Center,
                             fullHeight: !0,
                             fullWidth: !0
                         }, o.createElement(d.A, {
                             overlay: !0,
                             ariaLabel: Object(l.d)("Edit Profile", "ChannelHeader"),
-                            icon: d.ob.Edit,
+                            icon: d.pb.Edit,
                             onClick: this.openModal
                         }))
                     }, t = s.__decorate([Object(c.b)("EditProfileOverlay")], t)
@@ -726,47 +726,47 @@
                     case n.Success:
                         return {
                             message: Object(i.d)("Success!", "Profile Edit"),
-                            type: s.cb.Success
+                            type: s.db.Success
                         };
                     case n.UnexpectedError:
                         return {
                             message: Object(i.d)("Unexpected error, please try again.", "Profile Edit"),
-                            type: s.cb.Alert
+                            type: s.db.Alert
                         };
                     case n.BadSizeError:
                         return {
                             message: Object(i.d)("Image might exceed 10MB.", "Profile Edit"),
-                            type: s.cb.Alert
+                            type: s.db.Alert
                         };
                     case n.NonImageError:
                         return {
                             message: Object(i.d)("You must upload an image.", "Profile Edit"),
-                            type: s.cb.Alert
+                            type: s.db.Alert
                         };
                     case n.WrongFormatError:
                         return {
                             message: Object(i.d)("You must select a valid image type.", "Profile Edit"),
-                            type: s.cb.Alert
+                            type: s.db.Alert
                         };
                     case n.TimeoutError:
                         return {
                             message: Object(i.d)("Upload timed-out. Please try again.", "Profile Edit"),
-                            type: s.cb.Alert
+                            type: s.db.Alert
                         };
                     case n.Uploading:
                         return {
                             message: Object(i.d)("Uploading....", "Profile Edit"),
-                            type: s.cb.Brand
+                            type: s.db.Brand
                         };
                     case n.ImageNotSelected:
                         return {
                             message: Object(i.d)("Select a image first.", "Profile Edit"),
-                            type: s.cb.Alert
+                            type: s.db.Alert
                         };
                     default:
                         return {
                             message: Object(i.d)("Please try again.", "Profile Edit"),
-                            type: s.cb.Alert
+                            type: s.db.Alert
                         }
                 }
             }! function(e) {

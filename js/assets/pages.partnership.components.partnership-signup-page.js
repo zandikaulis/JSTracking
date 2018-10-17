@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [165], {
+    [163], {
         "0ly3": function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
@@ -19,12 +19,12 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        var e = a.createElement(i.tb, {
+                        var e = a.createElement(i.ub, {
                             onChange: this.onChange,
                             disabled: this.props.disabled,
                             defaultValue: this.props.defaultLanguage
                         }, Object(o.b)().map(this.renderLanguageOption));
-                        return this.props.label && (e = a.createElement(i.Da, {
+                        return this.props.label && (e = a.createElement(i.Ea, {
                             label: this.props.label
                         }, e)), e
                     }, t
@@ -1025,45 +1025,45 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.header;
-                        return o.createElement(h.Wa, {
+                        return o.createElement(h.Xa, {
                             alignItems: h.f.Center,
                             display: h.X.Flex,
-                            flexDirection: h.Z.Column,
+                            flexDirection: h.Aa.Column,
                             fullWidth: !0,
-                            justifyContent: h.Va.Start
-                        }, o.createElement(h.Wa, {
+                            justifyContent: h.Wa.Start
+                        }, o.createElement(h.Xa, {
                             alignItems: h.f.Center,
                             className: "partner-signup-exit-layout-outer-container",
                             display: h.X.Flex,
-                            flexDirection: h.Z.Column,
-                            justifyContent: h.Va.Start
-                        }, o.createElement(h.Wa, {
+                            flexDirection: h.Aa.Column,
+                            justifyContent: h.Wa.Start
+                        }, o.createElement(h.Xa, {
                             className: "partner-signup-exit-layout-inner-container"
-                        }, e && o.createElement(h.Wa, {
+                        }, e && o.createElement(h.Xa, {
                             "data-test-selector": n.Header,
                             fullWidth: !0,
                             margin: {
                                 bottom: 3
                             }
-                        }, e), o.createElement(h.Wa, {
+                        }, e), o.createElement(h.Xa, {
                             margin: {
                                 bottom: 3
                             }
                         }, o.createElement(h.S, {
                             alt: this.props.alt,
                             src: this.props.src
-                        })), o.createElement(h.Wa, {
-                            textAlign: h.Jb.Center
-                        }, o.createElement(h.Wa, {
+                        })), o.createElement(h.Xa, {
+                            textAlign: h.Kb.Center
+                        }, o.createElement(h.Xa, {
                             margin: {
                                 bottom: 2
                             }
                         }, o.createElement(h.W, {
                             bold: !0,
-                            fontSize: h.Ba.Size3,
-                            type: h.Nb.H3
+                            fontSize: h.Ca.Size3,
+                            type: h.Ob.H3
                         }, this.props.title)), o.createElement(h.W, {
-                            fontSize: h.Ba.Size5,
+                            fontSize: h.Ca.Size5,
                             color: h.O.Alt2
                         }, this.props.description), this.props.children))))
                     }, t
@@ -1117,7 +1117,7 @@
                                 "x:strong": function(e) {
                                     return o.createElement(h.W, {
                                         bold: !0,
-                                        type: h.Nb.Span
+                                        type: h.Ob.Span
                                     }, e)
                                 }
                             }, "SubmittedPage"),
@@ -1136,12 +1136,12 @@
                                 isNotificationDismissed: !0
                             })
                         }, t.getHeader = function() {
-                            return t.state.isNotificationDismissed ? null : o.createElement(h.Ma, {
+                            return t.state.isNotificationDismissed ? null : o.createElement(h.Na, {
                                 closeButtonAriaLabel: Object(c.d)("Dismiss", "PartnerSignupApplicationSubmitted"),
                                 closeButtonOnClick: t.handleNotificationCloseButtonClick,
                                 description: "",
                                 title: t.applicationSubmittedText,
-                                type: h.Na.Success
+                                type: h.Oa.Success
                             })
                         }, t
                     }
@@ -1168,7 +1168,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(o.Fragment, null, o.createElement(h.Wa, {
+                        return o.createElement(o.Fragment, null, o.createElement(h.Xa, {
                             fullWidth: !0,
                             margin: {
                                 bottom: 2
@@ -1191,45 +1191,45 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.value;
-                        return o.createElement(h.Wa, {
+                        return o.createElement(h.Xa, {
                             alignItems: h.f.Center,
                             display: h.X.Flex,
-                            flexDirection: h.Z.Row,
+                            flexDirection: h.Aa.Row,
                             fullWidth: !0,
-                            justifyContent: h.Va.Between
+                            justifyContent: h.Wa.Between
                         }, o.createElement(h.W, {
                             "data-test-selector": g.Criteria,
                             bold: !0
-                        }, this.props.criteria), o.createElement(h.Wa, {
+                        }, this.props.criteria), o.createElement(h.Xa, {
                             alignItems: h.f.Center,
                             display: h.X.Flex,
-                            flexDirection: h.Z.Row
-                        }, e && o.createElement(h.Wa, {
+                            flexDirection: h.Aa.Row
+                        }, e && o.createElement(h.Xa, {
                             margin: {
                                 right: 1
                             }
                         }, "string" == typeof e ? o.createElement(h.W, {
                             color: h.O.Alt2,
                             "data-test-selector": g.Value
-                        }, e) : e), o.createElement(h.nb, a.__assign({}, this.svgProps))))
+                        }, e) : e), o.createElement(h.ob, a.__assign({}, this.svgProps))))
                     }, Object.defineProperty(t.prototype, "svgProps", {
                         get: function() {
                             switch (this.props.type) {
                                 default:
                                     case y.Complete:
                                     return {
-                                    asset: h.ob.Check,
-                                    type: h.pb.Success
+                                    asset: h.pb.Check,
+                                    type: h.qb.Success
                                 };
                                 case y.Error:
                                         return {
-                                        asset: h.ob.NotificationError,
-                                        type: h.pb.Alert
+                                        asset: h.pb.NotificationError,
+                                        type: h.qb.Alert
                                     };
                                 case y.Incomplete:
                                         return {
-                                        asset: h.ob.Check,
-                                        type: h.pb.Alt2
+                                        asset: h.pb.Check,
+                                        type: h.qb.Alt2
                                     }
                             }
                         },
@@ -1245,7 +1245,7 @@
                         var e = this.props,
                             t = e.borderTop,
                             r = e.margin;
-                        return o.createElement(h.xb, {
+                        return o.createElement(h.yb, {
                             background: this.props.background || h.r.Base,
                             borderRadius: this.props.borderRadius || h.x.Medium,
                             borderBottom: !0,
@@ -1267,15 +1267,15 @@
                         return o.createElement(h.U, {
                             targetBlank: !0,
                             to: this.props.to
-                        }, o.createElement(h.Wa, {
+                        }, o.createElement(h.Xa, {
                             alignItems: h.f.Center,
                             display: h.X.InlineFlex
-                        }, o.createElement(h.Wa, {
+                        }, o.createElement(h.Xa, {
                             margin: {
                                 right: 1
                             }
-                        }, o.createElement(h.W, null, this.props.message)), o.createElement(h.nb, {
-                            asset: h.ob.Popout
+                        }, o.createElement(h.W, null, this.props.message)), o.createElement(h.ob, {
+                            asset: h.pb.Popout
                         })))
                     }, t
                 }(o.Component);
@@ -1301,13 +1301,13 @@
                             bottomRight: h.x.Medium
                         },
                         borderTop: !1
-                    }, o.createElement(h.Wa, {
+                    }, o.createElement(h.Xa, {
                         margin: {
                             bottom: 2
                         }
                     }, o.createElement(h.W, {
                         "data-test-selector": M.Instruction
-                    }, this.props.instruction)), o.createElement(h.Wa, {
+                    }, this.props.instruction)), o.createElement(h.Xa, {
                         margin: {
                             bottom: 2
                         }
@@ -1320,21 +1320,21 @@
             ! function(e) {
                 e[e.CanApplyToPartner = 0] = "CanApplyToPartner", e[e.CompletePathToAffiliate = 1] = "CompletePathToAffiliate", e[e.Error = 2] = "Error", e[e.StartStreaming = 3] = "StartStreaming", e[e.Loading = 4] = "Loading"
             }(L || (L = {}));
-            var G, B = 4,
-                R = 0,
+            var G, R = 4,
+                B = 0,
                 x = 5,
-                W = function(e) {
+                U = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             countdown: x,
-                            retryCount: R,
+                            retryCount: B,
                             view: L.Loading
                         }, t.handleCloseButtonOnClick = function() {
-                            t.retryQuery(R)
+                            t.retryQuery(B)
                         }, t.handleCountdownTimer = function() {
                             var e = t.state.countdown;
-                            t.state.retryCount >= B ? t.stopCountdownTimer() : e <= 0 ? t.retryQuery() : t.setState(function(e) {
+                            t.state.retryCount >= R ? t.stopCountdownTimer() : e <= 0 ? t.retryQuery() : t.setState(function(e) {
                                 return {
                                     countdown: e.countdown - 1
                                 }
@@ -1359,11 +1359,11 @@
                             t = this.props.channelLogin;
                         switch (this.state.view) {
                             case L.Loading:
-                                return o.createElement(F, null, o.createElement(h.Ya, {
+                                return o.createElement(F, null, o.createElement(h.Za, {
                                     fillContent: !0
                                 }));
                             case L.Error:
-                                var r = this.state.retryCount >= B ? Object(c.d)("There was an error retrieving your achievement data. Please try again later.", "PartnerSignupVerifyAchievements") : Object(c.d)("There was an error retrieving your achievement data. Retrying in ... {number} second(s)", {
+                                var r = this.state.retryCount >= R ? Object(c.d)("There was an error retrieving your achievement data. Please try again later.", "PartnerSignupVerifyAchievements") : Object(c.d)("There was an error retrieving your achievement data. Retrying in ... {number} second(s)", {
                                     number: Math.max(this.state.countdown, 0)
                                 }, "PartnerSignupVerifyAchievements");
                                 return o.createElement(o.Fragment, null, o.createElement(F, {
@@ -1382,12 +1382,12 @@
                                         bottomRight: h.x.Medium
                                     },
                                     borderTop: !1
-                                }, o.createElement(h.Ma, {
+                                }, o.createElement(h.Na, {
                                     closeButtonAriaLabel: Object(c.d)("Dismiss", "PartnerSignupVerifyAchievements"),
                                     closeButtonOnClick: this.handleCloseButtonOnClick,
                                     description: r,
                                     title: Object(c.d)("Error", "PartnerSignupVerifyAchievements"),
-                                    type: h.Na.Error
+                                    type: h.Oa.Error
                                 })));
                             default:
                             case L.StartStreaming:
@@ -1404,7 +1404,7 @@
                                         "x:strong": function(e) {
                                             return o.createElement(h.W, {
                                                 bold: !0,
-                                                type: h.Nb.Span
+                                                type: h.Ob.Span
                                             }, e)
                                         }
                                     }, "PartnerSignupVerifyAchievements"),
@@ -1476,7 +1476,7 @@
                         })
                     }, t
                 }(o.Component),
-                U = function(e) {
+                V = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1485,13 +1485,13 @@
                             criteria: Object(c.d)("Have a Verified Email", "PartnerSignupVerifyEmail"),
                             value: this.props.email,
                             type: this.props.isEmailVerified ? y.Complete : y.Incomplete
-                        }) : o.createElement(o.Fragment, null, o.createElement(h.Wa, {
+                        }) : o.createElement(o.Fragment, null, o.createElement(h.Xa, {
                             margin: {
                                 bottom: 1
                             }
                         }, o.createElement(h.W, {
                             bold: !0
-                        }, Object(c.d)("Please verify your email", "PartnerSignupVerifyEmail"))), o.createElement(h.Wa, {
+                        }, Object(c.d)("Please verify your email", "PartnerSignupVerifyEmail"))), o.createElement(h.Xa, {
                             margin: {
                                 bottom: 2
                             }
@@ -1504,7 +1504,7 @@
             ! function(e) {
                 e.Twitter = "twitter", e.YouTube = "youtube"
             }(G || (G = {}));
-            var V, H, Y = function(e) {
+            var W, H, X = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1537,7 +1537,7 @@
                             "data-test-selector": G.Twitter,
                             value: n,
                             type: y.Complete
-                        })), !i && o.createElement(o.Fragment, null, o.createElement(h.Wa, {
+                        })), !i && o.createElement(o.Fragment, null, o.createElement(h.Xa, {
                             margin: {
                                 bottom: 2
                             }
@@ -1550,7 +1550,7 @@
                     }, t
                 }(o.Component),
                 K = function() {
-                    return o.createElement(h.xb, {
+                    return o.createElement(h.yb, {
                         background: h.r.Base,
                         padding: 2,
                         margin: {
@@ -1558,7 +1558,7 @@
                         },
                         border: !0,
                         borderRadius: h.x.Medium
-                    }, o.createElement(h.Wb, null, o.createElement("h3", null, Object(c.d)("Partnership Guidelines", "PartnershipSignupGuidelines")), o.createElement("ul", null, o.createElement("li", null, Object(c.d)("Complete the <x:path-to-partner>Path to Partner Achievement</x:path-to-partner> or demonstrate large, engaged viewership/following on other services. Streamers who complete the Path to Partner achievements in your Achievements Dashboard will unlock a button to apply for Partnership, and receive priority for their application to be reviewed. Please note that these Achievements list the minimum criteria we look for in potential Partners, and completing them does not guarantee Partnership.", {
+                    }, o.createElement(h.Xb, null, o.createElement("h3", null, Object(c.d)("Partnership Guidelines", "PartnershipSignupGuidelines")), o.createElement("ul", null, o.createElement("li", null, Object(c.d)("Complete the <x:path-to-partner>Path to Partner Achievement</x:path-to-partner> or demonstrate large, engaged viewership/following on other services. Streamers who complete the Path to Partner achievements in your Achievements Dashboard will unlock a button to apply for Partnership, and receive priority for their application to be reviewed. Please note that these Achievements list the minimum criteria we look for in potential Partners, and completing them does not guarantee Partnership.", {
                         "x:path-to-partner": function(e) {
                             return o.createElement(h.U, {
                                 targetBlank: !0,
@@ -1616,55 +1616,55 @@
             r("v/DO");
             ! function(e) {
                 e.LeftColumn = "left-column", e.RightColumn = "right-column"
-            }(V || (V = {})),
+            }(W || (W = {})),
             function(e) {
                 e.Description = "partnership-signup-main-layout-description", e.LeftColumn = "partnership-signup-main-layout-left-column", e.RightColumn = "partnership-signup-main-layout-right-column"
             }(H || (H = {}));
-            var q, Z, J = function(e) {
+            var Y, q, Z = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.description,
-                            t = this.props.flexDirection || h.Z.Row,
-                            r = t === h.Z.Row;
-                        return o.createElement(h.Wa, {
+                            t = this.props.flexDirection || h.Aa.Row,
+                            r = t === h.Aa.Row;
+                        return o.createElement(h.Xa, {
                             alignItems: h.f.Center,
                             display: h.X.Flex,
-                            flexDirection: h.Z.Column,
+                            flexDirection: h.Aa.Column,
                             fullWidth: !0,
                             padding: 4,
-                            justifyContent: h.Va.Start
-                        }, o.createElement(h.Wa, {
+                            justifyContent: h.Wa.Start
+                        }, o.createElement(h.Xa, {
                             className: "partner-signup-main-layout"
-                        }, o.createElement(h.Wa, null, o.createElement(h.Wa, {
+                        }, o.createElement(h.Xa, null, o.createElement(h.Xa, {
                             margin: {
                                 bottom: 2
                             }
                         }, o.createElement(h.W, {
                             bold: !0,
-                            type: h.Nb.H1
-                        }, Object(c.d)("Partner Application", "PartnershipSignupApplicationTitle"))), e && o.createElement(h.Wa, {
+                            type: h.Ob.H1
+                        }, Object(c.d)("Partner Application", "PartnershipSignupApplicationTitle"))), e && o.createElement(h.Xa, {
                             "data-test-selector": H.Description,
                             margin: {
                                 bottom: 2
                             }
                         }, o.createElement(h.W, {
-                            type: h.Nb.P,
-                            fontSize: h.Ba.Size5
-                        }, e))), o.createElement(h.Wa, {
+                            type: h.Ob.P,
+                            fontSize: h.Ca.Size5
+                        }, e))), o.createElement(h.Xa, {
                             display: h.X.Flex,
                             flexDirection: t
-                        }, o.createElement(h.Wa, {
-                            className: r ? V.LeftColumn : "",
+                        }, o.createElement(h.Xa, {
+                            className: r ? W.LeftColumn : "",
                             "data-test-selector": H.LeftColumn,
                             flexOrder: r ? 1 : 2,
                             fullWidth: !r,
                             margin: r ? {
                                 right: 2
                             } : void 0
-                        }, this.props.children), o.createElement(h.Wa, {
-                            className: r ? V.RightColumn : "",
+                        }, this.props.children), o.createElement(h.Xa, {
+                            className: r ? W.RightColumn : "",
                             "data-test-selector": H.RightColumn,
                             flexOrder: r ? 2 : 1,
                             fullWidth: !r
@@ -1674,11 +1674,11 @@
                 z = r("nJta");
             ! function(e) {
                 e.RadioNo = "radio-no", e.RadioYes = "radio-yes"
-            }(q || (q = {})),
+            }(Y || (Y = {})),
             function(e) {
                 e.No = "No", e.Yes = "Yes"
-            }(Z || (Z = {}));
-            var Q, X = function(e) {
+            }(q || (q = {}));
+            var J, Q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleRadioChange = function(e) {
@@ -1692,26 +1692,26 @@
                                     topRight: h.x.Medium
                                 } : void 0,
                                 margin: e ? 0 : void 0
-                            }, o.createElement(h.Wa, {
+                            }, o.createElement(h.Xa, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, o.createElement(h.W, null, Object(c.d)("Do you already have an established audience on YouTube or Twitter?", "PartnerSignupVerifySocialMediaConnection"))), o.createElement(h.Wa, {
+                            }, o.createElement(h.W, null, Object(c.d)("Do you already have an established audience on YouTube or Twitter?", "PartnerSignupVerifySocialMediaConnection"))), o.createElement(h.Xa, {
                                 margin: {
                                     bottom: 1
                                 }
-                            }, o.createElement(h.kb, {
+                            }, o.createElement(h.lb, {
                                 checked: e,
-                                "data-test-selector": q.RadioYes,
+                                "data-test-selector": Y.RadioYes,
                                 label: Object(c.d)("Yes", "PartnerSignupVerifySocialMedia"),
                                 onChange: t.handleRadioChange,
-                                value: Z.Yes
-                            })), o.createElement(h.kb, {
+                                value: q.Yes
+                            })), o.createElement(h.lb, {
                                 checked: !e,
-                                "data-test-selector": q.RadioNo,
+                                "data-test-selector": Y.RadioNo,
                                 label: Object(c.d)("No", "PartnerSignupVerifySocialMedia"),
                                 onChange: t.handleRadioChange,
-                                value: Z.No
+                                value: q.No
                             }))
                         }, t
                     }
@@ -1722,13 +1722,13 @@
                                 a = n.twitter,
                                 o = n.youtube;
                             this.setState({
-                                radioValue: a || o ? Z.Yes : Z.No
+                                radioValue: a || o ? q.Yes : q.No
                             })
                         }
                     }, t.prototype.render = function() {
                         var e = this.props.data,
                             t = e.currentUser;
-                        if (e.loading || !this.state || !this.state.radioValue) return o.createElement(h.Ya, {
+                        if (e.loading || !this.state || !this.state.radioValue) return o.createElement(h.Za, {
                             fillContent: !0
                         });
                         if (this.props.data.error || !t || !t.accountConnections || !t.email || !t.id || !t.login) return null;
@@ -1737,33 +1737,33 @@
                             a = n.twitter,
                             i = n.youtube,
                             u = t.isEmailVerified,
-                            s = this.state.radioValue === Z.Yes,
+                            s = this.state.radioValue === q.Yes,
                             l = a && a.username,
                             d = i && i.channelURL;
-                        return o.createElement(J, {
+                        return o.createElement(Z, {
                             description: Object(c.d)("We just need to check a few things before you're able to apply for partnership.", "PartnershipSignupForm")
-                        }, o.createElement(U, {
+                        }, o.createElement(V, {
                             email: t.email,
                             isEmailVerified: u
-                        }), u && o.createElement(o.Fragment, null, this.renderSocialMediaQuestion(s), s && o.createElement(Y, {
+                        }), u && o.createElement(o.Fragment, null, this.renderSocialMediaQuestion(s), s && o.createElement(X, {
                             onChecklistComplete: r,
                             twitterUserName: l,
                             youTubeChannelURL: d
-                        }), !s && o.createElement(W, {
+                        }), !s && o.createElement(U, {
                             channelLogin: t.login,
                             onChecklistComplete: r,
                             userID: t.id
                         })))
                     }, t
                 }(o.Component),
-                $ = Object(i.compose)(Object(s.a)(z))(X),
+                $ = Object(i.compose)(Object(s.a)(z))(Q),
                 ee = r("/MKj"),
                 te = r("fvjX"),
                 re = r("1/iK"),
                 ne = r("y5D0");
             ! function(e) {
                 e.Login = "partnership-login-link", e.Signup = "partnership-signup-link"
-            }(Q || (Q = {}));
+            }(J || (J = {}));
             var ae = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -1771,26 +1771,26 @@
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.showModalOnLoginTab()
                 }, t.prototype.render = function() {
-                    return o.createElement(J, {
+                    return o.createElement(Z, {
                         description: Object(c.d)("The Twitch Partnership Program is for those who are committed to streaming. Twitch Partners are creators who stream a variety of content, from games, music, talk shows, art, to just about anything else you can imagine. If you love sharing what you do with a live audience and have built up a sizeable, engaged community on Twitch or other services, we want to hear from you!", "PartnershipSignupLogin"),
-                        flexDirection: h.Z.Column
-                    }, o.createElement(h.Wb, null, o.createElement("hr", null)), o.createElement(h.Wa, {
+                        flexDirection: h.Aa.Column
+                    }, o.createElement(h.Xb, null, o.createElement("hr", null)), o.createElement(h.Xa, {
                         alignItems: h.f.Center,
                         display: h.X.Flex,
                         fullWidth: !0,
-                        justifyContent: h.Va.Between
-                    }, o.createElement(h.Wa, {
+                        justifyContent: h.Wa.Between
+                    }, o.createElement(h.Xa, {
                         fullWidth: !0,
                         margin: {
                             right: 2
                         }
                     }, o.createElement(h.z, {
-                        "data-test-selector": Q.Login,
+                        "data-test-selector": J.Login,
                         fullWidth: !0,
                         onClick: this.props.showModalOnLoginTab,
                         type: h.F.Default
                     }, Object(c.d)("Log in", "PartnershipSignupLogin"))), o.createElement(h.z, {
-                        "data-test-selector": Q.Signup,
+                        "data-test-selector": J.Signup,
                         fullWidth: !0,
                         onClick: this.props.showModalOnSignupTab,
                         type: h.F.Hollow
@@ -1889,46 +1889,46 @@
                         var e = this.props.currentUser,
                             t = e.email,
                             r = e.login;
-                        return e.roles && r && t ? o.createElement(J, null, this.state.formErrorType && o.createElement(h.Wa, {
+                        return e.roles && r && t ? o.createElement(Z, null, this.state.formErrorType && o.createElement(h.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, o.createElement(h.Ma, {
+                        }, o.createElement(h.Na, {
                             closeButtonAriaLabel: Object(c.d)("Dismiss", "PartnershipSignupForm"),
                             closeButtonOnClick: this.handleInFeatureCloseClick,
                             description: this.formErrorMessage,
                             title: Object(c.d)("Error", "PartnershipSignupForm"),
-                            type: h.Na.Error
-                        })), o.createElement(h.Wa, {
+                            type: h.Oa.Error
+                        })), o.createElement(h.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, o.createElement(h.Da, {
+                        }, o.createElement(h.Ea, {
                             label: Object(c.d)("Twitch Username", "PartnershipSignupForm")
-                        }, o.createElement(h.Qa, {
+                        }, o.createElement(h.Ra, {
                             "data-test-selector": oe.ChannelLogin,
                             disabled: !0,
-                            type: h.Sa.Text,
+                            type: h.Ta.Text,
                             value: r
-                        }))), o.createElement(h.Wa, {
+                        }))), o.createElement(h.Xa, {
                             margin: {
                                 y: 2
                             }
-                        }, o.createElement(h.Da, {
+                        }, o.createElement(h.Ea, {
                             label: Object(c.d)("Email", "PartnershipSignupForm")
-                        }, o.createElement(h.Qa, {
+                        }, o.createElement(h.Ra, {
                             "data-test-selector": oe.Email,
                             disabled: !0,
-                            type: h.Sa.Email,
+                            type: h.Ta.Email,
                             value: t
-                        }))), o.createElement(h.Wa, {
+                        }))), o.createElement(h.Xa, {
                             margin: {
                                 y: 2
                             }
-                        }, o.createElement(h.Da, {
+                        }, o.createElement(h.Ea, {
                             id: ue.Category,
                             label: Object(c.d)("Category", "PartnershipSignupForm")
-                        }, o.createElement(h.tb, {
+                        }, o.createElement(h.ub, {
                             "data-test-selector": oe.Category,
                             id: ue.Category,
                             onChange: this.registerHandleFieldChange(se.Category)
@@ -1936,14 +1936,14 @@
                             value: ie.Gaming
                         }, Object(c.d)("Gaming", "PartnershipSignupForm")), o.createElement("option", {
                             value: ie.Creative
-                        }, Object(c.d)("Creative", "PartnershipSignupForm"))))), o.createElement(h.Wa, {
+                        }, Object(c.d)("Creative", "PartnershipSignupForm"))))), o.createElement(h.Xa, {
                             margin: {
                                 y: 2
                             }
-                        }, o.createElement(h.Da, {
+                        }, o.createElement(h.Ea, {
                             id: ue.Country,
                             label: Object(c.d)("Applicant Country", "PartnershipSignupForm")
-                        }, o.createElement(h.tb, {
+                        }, o.createElement(h.ub, {
                             "data-test-selector": oe.Country,
                             id: ue.Country,
                             value: this.state.fields.country,
@@ -1953,11 +1953,11 @@
                                 value: e,
                                 key: "countryCode-" + e
                             }, Object(me.b)(e))
-                        })))), o.createElement(h.Wa, {
+                        })))), o.createElement(h.Xa, {
                             margin: {
                                 y: 2
                             }
-                        }, o.createElement(h.Da, {
+                        }, o.createElement(h.Ea, {
                             id: ue.Language,
                             label: Object(c.d)("Applicant Language", "PartnershipSignupForm")
                         }, o.createElement(de.a, {
@@ -1965,31 +1965,31 @@
                             defaultLanguage: this.state.fields.language,
                             disabled: !1,
                             "data-test-selector": oe.Language
-                        }))), o.createElement(h.Wa, {
+                        }))), o.createElement(h.Xa, {
                             margin: {
                                 y: 2
                             }
-                        }, o.createElement(h.Da, {
+                        }, o.createElement(h.Ea, {
                             id: ue.FullName,
                             "data-test-selector": oe.FullName,
                             label: Object(c.d)("Full Name", "PartnershipSignupForm"),
                             hint: Object(c.d)("First and Last Name", "PartnershipSignupForm")
-                        }, o.createElement(h.Qa, {
+                        }, o.createElement(h.Ra, {
                             id: ue.FullName,
                             name: se.FullName,
-                            type: h.Sa.Text,
+                            type: h.Ta.Text,
                             value: this.state.fields.fullName,
                             onChange: this.registerHandleFieldChange(se.FullName)
-                        }))), o.createElement(h.Wa, {
+                        }))), o.createElement(h.Xa, {
                             margin: {
                                 y: 2
                             }
-                        }, o.createElement(h.Da, {
+                        }, o.createElement(h.Ea, {
                             id: ue.Description,
                             "data-test-selector": oe.Description,
                             label: Object(c.d)("Details", "PartnershipSignupForm"),
                             hint: Object(c.d)("Tell us about your stream", "PartnershipSignupForm")
-                        }, o.createElement(h.Kb, {
+                        }, o.createElement(h.Lb, {
                             id: ue.Description,
                             onChange: this.registerHandleFieldChange(se.Description)
                         }))), o.createElement(h.z, {
@@ -2031,11 +2031,11 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return this.props.data.loading ? o.createElement(h.Ya, {
+                        return this.props.data.loading ? o.createElement(h.Za, {
                             fillContent: !0
                         }) : this.props.data.error ? o.createElement(u.a, {
                             message: Object(c.d)("Something went wrong", "PartnershipSignup")
-                        }) : o.createElement(h.Wa, {
+                        }) : o.createElement(h.Xa, {
                             fullHeight: !0,
                             fullWidth: !0,
                             padding: 2

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [129], {
+    [128], {
         "0T/G": function(e, t) {},
         "86FS": function(e, t, n) {
             "use strict";
@@ -14,8 +14,8 @@
                 u = n("yWUM"),
                 p = n("vRsq"),
                 m = n("2xye"),
-                g = n("3W+h"),
-                h = n("GnwI"),
+                g = n("GnwI"),
+                h = n("4HIT"),
                 v = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -107,7 +107,7 @@
                             trackingContext: this.props.tracking,
                             tagListProps: !0 !== this.props.hideTags && this.props.video.contentTags ? {
                                 tags: this.props.video.contentTags,
-                                linkPath: g.a.PopularTag
+                                linkPath: h.a.PopularTag
                             } : void 0
                         })
                     }, t.prototype.generateSearchString = function() {
@@ -136,7 +136,7 @@
                         }
                     }, t
                 }(a.Component),
-                f = Object(h.b)("VideoPreviewCard", {
+                f = Object(g.b)("VideoPreviewCard", {
                     autoReportInteractive: !0
                 })(v);
             n.d(t, "a", function() {
@@ -221,15 +221,15 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(u.Wa, {
+                        return r.createElement(u.Xa, {
                             alignItems: u.f.End,
                             display: u.X.Flex,
-                            flexDirection: u.Z.Row,
+                            flexDirection: u.Aa.Row,
                             fullWidth: !0,
-                            justifyContent: u.Va.Between
-                        }, r.createElement(u.Wa, {
+                            justifyContent: u.Wa.Between
+                        }, r.createElement(u.Xa, {
                             display: u.X.Flex,
-                            flexDirection: u.Z.Row
+                            flexDirection: u.Aa.Row
                         }, this.renderLanguageSelector(), r.createElement(s.a, {
                             buttonLabel: this.getBroadcastTypeLabel(this.props.broadcastType),
                             "data-test-selector": i.Button,
@@ -237,61 +237,61 @@
                             hideDropdownOnInsideClick: !0
                         }, this.renderInteractables())), r.createElement("div", null, this.renderSortSelector()))
                     }, t.prototype.renderInteractables = function() {
-                        return r.createElement(r.Fragment, null, r.createElement(u.Ta, {
+                        return r.createElement(r.Fragment, null, r.createElement(u.Ua, {
                             "data-a-target": "video-type-filter-all",
                             "data-filter-type": "all",
                             "data-test-selector": i.FilterItemAll,
                             onClick: this.typeChangeHandler,
                             selected: !1
-                        }, r.createElement(u.Wa, {
+                        }, r.createElement(u.Xa, {
                             display: u.X.Flex,
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, this.getBroadcastTypeLabel(), this.renderCheckmark())), r.createElement(u.Ta, {
+                        }, this.getBroadcastTypeLabel(), this.renderCheckmark())), r.createElement(u.Ua, {
                             "data-a-target": "video-type-filter-past-premieres",
                             "data-filter-type": l.a.PastPremiere,
                             "data-test-selector": i.FilterItemPastPremiere,
                             onClick: this.typeChangeHandler,
                             selected: !1
-                        }, r.createElement(u.Wa, {
+                        }, r.createElement(u.Xa, {
                             display: u.X.Flex,
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, this.getBroadcastTypeLabel(l.a.PastPremiere), this.renderCheckmark(l.a.PastPremiere))), r.createElement(u.Ta, {
+                        }, this.getBroadcastTypeLabel(l.a.PastPremiere), this.renderCheckmark(l.a.PastPremiere))), r.createElement(u.Ua, {
                             "data-a-target": "video-type-filter-past-broadcasts",
                             "data-filter-type": l.a.Archive,
                             "data-test-selector": i.FilterItemArchive,
                             onClick: this.typeChangeHandler,
                             selected: !1
-                        }, r.createElement(u.Wa, {
+                        }, r.createElement(u.Xa, {
                             display: u.X.Flex,
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, this.getBroadcastTypeLabel(l.a.Archive), this.renderCheckmark(l.a.Archive))), r.createElement(u.Ta, {
+                        }, this.getBroadcastTypeLabel(l.a.Archive), this.renderCheckmark(l.a.Archive))), r.createElement(u.Ua, {
                             "data-a-target": "video-type-filter-highlights",
                             "data-filter-type": l.a.Highlight,
                             "data-test-selector": i.FilterItemHighlight,
                             onClick: this.typeChangeHandler,
                             selected: !1
-                        }, r.createElement(u.Wa, {
+                        }, r.createElement(u.Xa, {
                             display: u.X.Flex,
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, this.getBroadcastTypeLabel(l.a.Highlight), this.renderCheckmark(l.a.Highlight))), r.createElement(u.Ta, {
+                        }, this.getBroadcastTypeLabel(l.a.Highlight), this.renderCheckmark(l.a.Highlight))), r.createElement(u.Ua, {
                             "data-a-target": "video-type-filter-uploads",
                             "data-filter-type": l.a.Upload,
                             "data-test-selector": i.FilterItemUpload,
                             onClick: this.typeChangeHandler,
                             selected: !1
-                        }, r.createElement(u.Wa, {
+                        }, r.createElement(u.Xa, {
                             display: u.X.Flex,
                             padding: {
                                 y: .5,
@@ -299,19 +299,19 @@
                             }
                         }, this.getBroadcastTypeLabel(l.a.Upload), this.renderCheckmark(l.a.Upload))))
                     }, t.prototype.renderCheckmark = function(e) {
-                        return this.props.broadcastType === e ? r.createElement(u.Wa, {
+                        return this.props.broadcastType === e ? r.createElement(u.Xa, {
                             attachRight: !0,
-                            position: u.eb.Absolute,
+                            position: u.fb.Absolute,
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(u.nb, {
-                            asset: u.ob.Check,
+                        }, r.createElement(u.ob, {
+                            asset: u.pb.Check,
                             height: 18,
                             width: 18
                         })) : null
                     }, t.prototype.renderLanguageSelector = function() {
-                        return this.props.hideLanguageSelector ? null : r.createElement(u.Wa, {
+                        return this.props.hideLanguageSelector ? null : r.createElement(u.Xa, {
                             margin: {
                                 right: 0
                             }
@@ -319,12 +319,12 @@
                     }, t.prototype.renderSortSelector = function() {
                         if (this.props.hideSortSelector) return null;
                         var e = this.props.selectedSort && Object(c.b)(this.props.selectedSort) || c.a.Newest,
-                            t = r.createElement(u.tb, {
+                            t = r.createElement(u.ub, {
                                 "data-a-target": "video-sort-select",
                                 "data-test-selector": i.SortSelector,
                                 name: "sort",
                                 onChange: this.sortChangeHandler,
-                                size: u.Ra.Large,
+                                size: u.Sa.Large,
                                 value: e
                             }, r.createElement("option", {
                                 "data-a-target": "video-sort-newest",
@@ -335,7 +335,7 @@
                                 "data-test-selector": i.SortPopular,
                                 value: c.a.Popular
                             }, Object(o.d)("Popular", "VideoFilter")));
-                        return r.createElement(u.Wa, {
+                        return r.createElement(u.Xa, {
                             padding: {
                                 y: .5
                             }
@@ -452,7 +452,7 @@
                 y = n("GnwI"),
                 b = n("EJax"),
                 w = n("XKWF"),
-                S = n("9DYP"),
+                S = n("rShu"),
                 N = n("HStj"),
                 _ = n("Ue10"),
                 C = n("tBbK"),
@@ -465,7 +465,7 @@
                         }, n.onVideoFilterChange = function(e) {
                             Object(g.u)("/directory/game/" + n.props.match.params.encodedCommunityName + "/videos", n.props, e)
                         }, n.state = {
-                            directoryType: Object(S.a)(t.match.path)
+                            directoryType: S.a.Games
                         }, n
                     }
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -500,10 +500,10 @@
                                 directoryType: this.state.directoryType,
                                 directoryName: t
                             }),
-                            u = o.createElement(_.Wa, {
+                            u = o.createElement(_.Xa, {
                                 className: "directory-game-videos-page__filters",
                                 display: _.X.Flex,
-                                flexDirection: _.Z.Row,
+                                flexDirection: _.Aa.Row,
                                 fullWidth: !0,
                                 padding: {
                                     top: 1,
@@ -515,7 +515,7 @@
                                 selectedSort: n,
                                 broadcastType: i
                             }));
-                        return o.createElement(o.Fragment, null, u, o.createElement(_.Wa, {
+                        return o.createElement(o.Fragment, null, u, o.createElement(_.Xa, {
                             padding: {
                                 top: 2,
                                 bottom: 3,
@@ -816,7 +816,7 @@
                     else {
                         e.viewAllButtonProps && (n = a.createElement(o.a, i.__assign({}, e.viewAllButtonProps)));
                         var s = e.videos.map(function(t, n) {
-                            return a.createElement(c.Wa, {
+                            return a.createElement(c.Xa, {
                                 "data-a-target": "video-tower-card-" + n,
                                 key: "video-" + n,
                                 margin: {
@@ -838,9 +838,9 @@
                         });
                         t = a.createElement(a.Fragment, null, s)
                     }
-                    return a.createElement(c.Tb, {
-                        gutterSize: c.Vb.Small,
-                        childWidth: e.videoCardSize || c.Ub.Large,
+                    return a.createElement(c.Ub, {
+                        gutterSize: c.Wb.Small,
+                        childWidth: e.videoCardSize || c.Vb.Large,
                         placeholderItems: 20
                     }, t, n)
                 },
@@ -1255,9 +1255,9 @@
                         }, t.renderDropdownContent = function() {
                             return l.createElement(l.Fragment, null, l.createElement("div", {
                                 className: "language-select-menu__balloon"
-                            }, l.createElement(m.b, null, l.createElement(f.Wa, {
+                            }, l.createElement(m.b, null, l.createElement(f.Xa, {
                                 padding: .5
-                            }, Object(g.b)().map(t.renderLanguageOption)))), l.createElement(f.xb, {
+                            }, Object(g.b)().map(t.renderLanguageOption)))), l.createElement(f.yb, {
                                 background: f.r.Alt,
                                 borderTop: !0,
                                 className: "language-select-menu__footer"
@@ -1268,7 +1268,7 @@
                                 "data-test-selector": i.ClearAllButton
                             }, Object(u.d)("Clear all", "LanguageSelectMenu"))))
                         }, t.renderLanguageOption = function(e) {
-                            return l.createElement(f.Wa, {
+                            return l.createElement(f.Xa, {
                                 padding: {
                                     x: 1,
                                     y: .5
@@ -1284,14 +1284,14 @@
                         }, t.renderButtonContent = function() {
                             var e = t.props.languagePreferences.length,
                                 n = Object(u.d)("Language", "LanguageSelectMenu");
-                            return l.createElement(f.Wa, {
+                            return l.createElement(f.Xa, {
                                 display: f.X.Flex
-                            }, n, l.createElement(f.Wa, {
+                            }, n, l.createElement(f.Xa, {
                                 margin: {
                                     left: .5
                                 }
-                            }, 0 !== e && l.createElement(f.bb, {
-                                type: f.cb.Brand,
+                            }, 0 !== e && l.createElement(f.cb, {
+                                type: f.db.Brand,
                                 label: e.toString()
                             })))
                         }, t.trackLanguageChange = function(e, n) {
@@ -1308,7 +1308,7 @@
                     return d.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return l.createElement(f.Wa, {
+                        return l.createElement(f.Xa, {
                             className: "language-select-menu"
                         }, l.createElement(p.a, {
                             "data-a-target": "language-filter-dropdown",

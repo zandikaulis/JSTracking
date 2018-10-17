@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [201], {
+    [199], {
         "/ZC1": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -30,16 +30,16 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(s.Y, {
+                        return r.createElement(s.Z, {
                             dragOver: this.state.isDraggingOver,
                             error: this.props.error
-                        }, r.createElement(s.Oa, {
-                            position: s.eb.Absolute,
+                        }, r.createElement(s.Pa, {
+                            position: s.fb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: s.ac.Above
+                            zIndex: s.bc.Above
                         }, r.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -78,15 +78,15 @@
             }), n.d(t, "F", function() {
                 return m
             }), n.d(t, "r", function() {
-                return _
-            }), n.d(t, "s", function() {
                 return h
+            }), n.d(t, "s", function() {
+                return _
             }), n.d(t, "o", function() {
                 return g
             }), n.d(t, "t", function() {
-                return T
-            }), n.d(t, "v", function() {
                 return f
+            }), n.d(t, "v", function() {
+                return T
             }), n.d(t, "l", function() {
                 return I
             }), n.d(t, "d", function() {
@@ -110,13 +110,13 @@
             }), n.d(t, "I", function() {
                 return L
             }), n.d(t, "q", function() {
-                return U
-            }), n.d(t, "w", function() {
                 return P
+            }), n.d(t, "w", function() {
+                return U
             }), n.d(t, "f", function() {
-                return M
-            }), n.d(t, "g", function() {
                 return y
+            }), n.d(t, "g", function() {
+                return M
             }), n.d(t, "x", function() {
                 return F
             }), n.d(t, "k", function() {
@@ -124,9 +124,9 @@
             }), n.d(t, "p", function() {
                 return k
             }), n.d(t, "u", function() {
-                return G
-            }), n.d(t, "z", function() {
                 return w
+            }), n.d(t, "z", function() {
+                return G
             }), n.d(t, "y", function() {
                 return V
             });
@@ -170,11 +170,11 @@
                 return r.PubsubTopic.VideoPlaybackById + "." + e
             }
 
-            function _(e) {
+            function h(e) {
                 return r.PubsubTopic.PayoutOnboardingEvents + "." + e
             }
 
-            function h(e) {
+            function _(e) {
                 return r.PubsubTopic.Presence + "." + e
             }
 
@@ -182,11 +182,11 @@
                 return r.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
             }
 
-            function T(e) {
+            function f(e) {
                 return r.PubsubTopic.Raid + "." + e
             }
 
-            function f(e) {
+            function T(e) {
                 return r.PubsubTopic.StreamChange + "." + e
             }
 
@@ -234,19 +234,19 @@
                 return r.PubsubTopic.Whispers + "." + e
             }
 
-            function U(e) {
+            function P(e) {
                 return r.PubsubTopic.OnsiteNotifications + "." + e
             }
 
-            function P(e) {
+            function U(e) {
                 return r.PubsubTopic.StreamChatRoom + "." + e
             }
 
-            function M(e) {
+            function y(e) {
                 return r.PubsubTopic.ChannelEventUpdates + "." + e
             }
 
-            function y(e) {
+            function M(e) {
                 return r.PubsubTopic.ChannelSquadUpdates + "." + e
             }
 
@@ -262,11 +262,11 @@
                 return r.PubsubTopic.MysteryGift + "." + e
             }
 
-            function G(e) {
+            function w(e) {
                 return r.PubsubTopic.SquadUpdates + "." + e
             }
 
-            function w(e) {
+            function G(e) {
                 return a.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -390,16 +390,6 @@
                 }(a || (a = {}));
             var r = [a.JPEG, a.PNG]
         },
-        "8Ad5": function(e, t, n) {
-            "use strict";
-            var a;
-            n.d(t, "a", function() {
-                    return a
-                }),
-                function(e) {
-                    e[e.Backspace = 8] = "Backspace", e[e.Tab = 9] = "Tab", e[e.Enter = 13] = "Enter", e[e.Esc = 27] = "Esc", e[e.Space = 32] = "Space", e[e.Left = 37] = "Left", e[e.Up = 38] = "Up", e[e.Right = 39] = "Right", e[e.Down = 40] = "Down", e[e.Digit0 = 48] = "Digit0", e[e.Digit1 = 49] = "Digit1", e[e.Digit2 = 50] = "Digit2", e[e.Digit3 = 51] = "Digit3", e[e.Digit4 = 52] = "Digit4", e[e.Digit5 = 53] = "Digit5", e[e.Digit6 = 54] = "Digit6", e[e.Digit7 = 55] = "Digit7", e[e.Digit8 = 56] = "Digit8", e[e.Digit9 = 57] = "Digit9", e[e.Colon = 58] = "Colon", e[e.At = 64] = "At", e[e.A = 65] = "A", e[e.B = 66] = "B", e[e.C = 67] = "C", e[e.D = 68] = "D", e[e.E = 69] = "E", e[e.F = 70] = "F", e[e.G = 71] = "G", e[e.H = 72] = "H", e[e.I = 73] = "I", e[e.J = 74] = "J", e[e.K = 75] = "K", e[e.L = 76] = "L", e[e.M = 77] = "M", e[e.N = 78] = "N", e[e.O = 79] = "O", e[e.P = 80] = "P", e[e.Q = 81] = "Q", e[e.R = 82] = "R", e[e.S = 83] = "S", e[e.T = 84] = "T", e[e.U = 85] = "U", e[e.V = 86] = "V", e[e.W = 87] = "W", e[e.X = 88] = "X", e[e.Y = 89] = "Y", e[e.Z = 90] = "Z", e[e.Comma = 188] = "Comma", e[e.Period = 190] = "Period"
-                }(a || (a = {}))
-        },
         BSTw: function(e, t) {
             var n = {
                 kind: "Document",
@@ -455,7 +445,7 @@
         By5U: function(e, t) {},
         DMoW: function(e, t, n) {
             "use strict";
-            var a, r, s, i, o, c, u, l, p, d, E, m, _, h, g, T, f, I, D, N, O, S, R, A, C, b, v, L, U, P, M, y, F, j, k, G, w, V, B, H, W, x, Y, K, z, X, q, Z, Q, J, $, ee, te, ne, ae, re, se, ie, oe, ce, ue, le, pe, de, Ee, me, _e, he, ge, Te, fe, Ie, De, Ne, Oe, Se, Re, Ae, Ce, be, ve, Le, Ue, Pe, Me, ye, Fe, je, ke, Ge, we, Ve, Be, He, We, xe, Ye, Ke, ze, Xe, qe, Ze, Qe, Je, $e, et, tt, nt, at, rt, st, it, ot;
+            var a, r, s, i, o, c, u, l, p, d, E, m, h, _, g, f, T, I, D, N, O, S, R, A, C, b, v, L, P, U, y, M, F, j, k, w, G, V, B, H, x, W, Y, X, z, K, q, Z, J, Q, $, ee, te, ne, ae, re, se, ie, oe, ce, ue, le, pe, de, Ee, me, he, _e, ge, fe, Te, Ie, De, Ne, Oe, Se, Re, Ae, Ce, be, ve, Le, Pe, Ue, ye, Me, Fe, je, ke, we, Ge, Ve, Be, He, xe, We, Ye, Xe, ze, Ke, qe, Ze, Je, Qe, $e, et, tt, nt, at, rt;
             n.d(t, "c", function() {
                     return r
                 }), n.d(t, "E", function() {
@@ -463,9 +453,9 @@
                 }), n.d(t, "x", function() {
                     return c
                 }), n.d(t, "g", function() {
-                    return _
+                    return h
                 }), n.d(t, "e", function() {
-                    return f
+                    return T
                 }), n.d(t, "f", function() {
                     return I
                 }), n.d(t, "j", function() {
@@ -483,9 +473,9 @@
                 }), n.d(t, "p", function() {
                     return j
                 }), n.d(t, "o", function() {
-                    return G
-                }), n.d(t, "I", function() {
                     return w
+                }), n.d(t, "I", function() {
+                    return G
                 }), n.d(t, "K", function() {
                     return V
                 }), n.d(t, "z", function() {
@@ -495,17 +485,17 @@
                 }), n.d(t, "q", function() {
                     return Y
                 }), n.d(t, "m", function() {
-                    return K
+                    return X
                 }), n.d(t, "J", function() {
                     return z
                 }), n.d(t, "a", function() {
-                    return X
+                    return K
                 }), n.d(t, "t", function() {
                     return q
                 }), n.d(t, "v", function() {
                     return Z
                 }), n.d(t, "B", function() {
-                    return J
+                    return Q
                 }), n.d(t, "C", function() {
                     return $
                 }), n.d(t, "A", function() {
@@ -521,23 +511,23 @@
                 }), n.d(t, "O", function() {
                     return be
                 }), n.d(t, "y", function() {
-                    return ye
+                    return Me
                 }), n.d(t, "s", function() {
-                    return Ge
+                    return ke
                 }), n.d(t, "i", function() {
-                    return Ve
+                    return Ge
                 }), n.d(t, "h", function() {
-                    return Be
+                    return Ve
                 }), n.d(t, "u", function() {
-                    return He
+                    return Be
                 }), n.d(t, "H", function() {
                     return xe
                 }), n.d(t, "w", function() {
-                    return Qe
+                    return Ke
                 }), n.d(t, "d", function() {
-                    return st
+                    return nt
                 }), n.d(t, "r", function() {
-                    return it
+                    return at
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -577,19 +567,19 @@
                 }(m || (m = {})),
                 function(e) {
                     e.ARCHIVE = "ARCHIVE", e.HIGHLIGHT = "HIGHLIGHT", e.PAST_PREMIERE = "PAST_PREMIERE", e.PREMIERE_UPLOAD = "PREMIERE_UPLOAD", e.UPLOAD = "UPLOAD"
-                }(_ || (_ = {})),
+                }(h || (h = {})),
                 function(e) {
                     e.GET_BITS = "GET_BITS", e.GET_TURBO = "GET_TURBO", e.SUBSCRIBE = "SUBSCRIBE", e.VISIT_URL = "VISIT_URL"
-                }(h || (h = {})),
+                }(_ || (_ = {})),
                 function(e) {
                     e.ALLTIME = "ALLTIME", e.MONTH = "MONTH", e.WEEK = "WEEK"
                 }(g || (g = {})),
                 function(e) {
                     e.AD = "AD", e.BUNDLE = "BUNDLE"
-                }(T || (T = {})),
+                }(f || (f = {})),
                 function(e) {
                     e.GAME_TRAILER = "GAME_TRAILER", e.MISC_TRAILER = "MISC_TRAILER", e.PAY_TO_STREAM = "PAY_TO_STREAM"
-                }(f || (f = {})),
+                }(T || (T = {})),
                 function(e) {
                     e.AVAILABLE = "AVAILABLE", e.CANCELLED = "CANCELLED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE"
                 }(I || (I = {})),
@@ -625,16 +615,16 @@
                 }(L || (L = {})),
                 function(e) {
                     e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
-                }(U || (U = {})),
-                function(e) {
-                    e.FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.SUB_ONLY_MODE_ENFORCEMENT_FAILED = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT"
                 }(P || (P = {})),
                 function(e) {
+                    e.FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.SUB_ONLY_MODE_ENFORCEMENT_FAILED = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT"
+                }(U || (U = {})),
+                function(e) {
                     e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
-                }(M || (M = {})),
+                }(y || (y = {})),
                 function(e) {
                     e.AVAILABLE = "AVAILABLE", e.DISMISSED = "DISMISSED", e.ELIGIBLE = "ELIGIBLE", e.REDEEMED = "REDEEMED"
-                }(y || (y = {})),
+                }(M || (M = {})),
                 function(e) {
                     e.DURATION_INVALID = "DURATION_INVALID", e.FORBIDDEN = "FORBIDDEN", e.TARGET_ALREADY_BANNED = "TARGET_ALREADY_BANNED", e.TARGET_IS_ADMIN = "TARGET_IS_ADMIN", e.TARGET_IS_ANONYMOUS = "TARGET_IS_ANONYMOUS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_GLOBAL_MOD = "TARGET_IS_GLOBAL_MOD", e.TARGET_IS_MOD = "TARGET_IS_MOD", e.TARGET_IS_SELF = "TARGET_IS_SELF", e.TARGET_IS_STAFF = "TARGET_IS_STAFF", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
                 }(F || (F = {})),
@@ -646,10 +636,10 @@
                 }(k || (k = {})),
                 function(e) {
                     e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
-                }(G || (G = {})),
+                }(w || (w = {})),
                 function(e) {
                     e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
-                }(w || (w = {})),
+                }(G || (G = {})),
                 function(e) {
                     e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
                 }(V || (V = {})),
@@ -661,22 +651,22 @@
                 }(H || (H = {})),
                 function(e) {
                     e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
-                }(W || (W = {})),
+                }(x || (x = {})),
                 function(e) {
                     e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
-                }(x || (x = {})),
+                }(W || (W = {})),
                 function(e) {
                     e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
                 }(Y || (Y = {})),
                 function(e) {
                     e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
-                }(K || (K = {})),
+                }(X || (X = {})),
                 function(e) {
                     e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
                 }(z || (z = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
-                }(X || (X = {})),
+                }(K || (K = {})),
                 function(e) {
                     e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
                 }(q || (q = {})),
@@ -685,10 +675,10 @@
                 }(Z || (Z = {})),
                 function(e) {
                     e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
-                }(Q || (Q = {})),
+                }(J || (J = {})),
                 function(e) {
                     e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
-                }(J || (J = {})),
+                }(Q || (Q = {})),
                 function(e) {
                     e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
                 }($ || ($ = {})),
@@ -739,19 +729,19 @@
                 }(me || (me = {})),
                 function(e) {
                     e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
-                }(_e || (_e = {})),
+                }(he || (he = {})),
                 function(e) {
                     e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
-                }(he || (he = {})),
+                }(_e || (_e = {})),
                 function(e) {
                     e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
                 }(ge || (ge = {})),
                 function(e) {
                     e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
-                }(Te || (Te = {})),
+                }(fe || (fe = {})),
                 function(e) {
                     e.GIFT_NOT_CLAIMABLE = "GIFT_NOT_CLAIMABLE", e.NON_EXISTENT_GIFT = "NON_EXISTENT_GIFT", e.UNKNOWN_ERROR = "UNKNOWN_ERROR", e.USER_DOES_NOT_OWN_GIFT = "USER_DOES_NOT_OWN_GIFT"
-                }(fe || (fe = {})),
+                }(Te || (Te = {})),
                 function(e) {
                     e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
                 }(Ie || (Ie = {})),
@@ -787,97 +777,88 @@
                 }(Le || (Le = {})),
                 function(e) {
                     e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
-                }(Ue || (Ue = {})),
-                function(e) {
-                    e.ASC = "ASC", e.DESC = "DESC"
                 }(Pe || (Pe = {})),
                 function(e) {
+                    e.ASC = "ASC", e.DESC = "DESC"
+                }(Ue || (Ue = {})),
+                function(e) {
                     e.TIME = "TIME", e.VIEWS = "VIEWS"
-                }(Me || (Me = {})),
+                }(ye || (ye = {})),
                 function(e) {
                     e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
-                }(ye || (ye = {})),
+                }(Me || (Me = {})),
                 function(e) {
                     e.BITS_KEY_CODE = "BITS_KEY_CODE"
                 }(Fe || (Fe = {})),
                 function(e) {
-                    e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.REQUESTING_USER_NOT_PERMITTED = "REQUESTING_USER_NOT_PERMITTED", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG"
+                    e.ACCOUNT_TOO_YOUNG = "ACCOUNT_TOO_YOUNG", e.COMMUNITY_NAME_EXISTS = "COMMUNITY_NAME_EXISTS", e.COMMUNITY_NAME_INVALID = "COMMUNITY_NAME_INVALID", e.COMMUNITY_NAME_RESERVED = "COMMUNITY_NAME_RESERVED", e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.INVALID_LANGUAGE = "INVALID_LANGUAGE", e.OWN_TO_MANY_COMMUNITIES = "OWN_TO_MANY_COMMUNITIES", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG", e.TWO_FACTOR_NOT_ENABLED = "TWO_FACTOR_NOT_ENABLED", e.UNVERIFIED_EMAIL = "UNVERIFIED_EMAIL"
                 }(je || (je = {})),
                 function(e) {
-                    e.ACCOUNT_TOO_YOUNG = "ACCOUNT_TOO_YOUNG", e.COMMUNITY_NAME_EXISTS = "COMMUNITY_NAME_EXISTS", e.COMMUNITY_NAME_INVALID = "COMMUNITY_NAME_INVALID", e.COMMUNITY_NAME_RESERVED = "COMMUNITY_NAME_RESERVED", e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.INVALID_LANGUAGE = "INVALID_LANGUAGE", e.OWN_TO_MANY_COMMUNITIES = "OWN_TO_MANY_COMMUNITIES", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG", e.TWO_FACTOR_NOT_ENABLED = "TWO_FACTOR_NOT_ENABLED", e.UNVERIFIED_EMAIL = "UNVERIFIED_EMAIL"
-                }(ke || (ke = {})),
-                function(e) {
                     e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
-                }(Ge || (Ge = {})),
+                }(ke || (ke = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
                 }(we || (we = {})),
                 function(e) {
                     e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
-                }(Ve || (Ve = {})),
+                }(Ge || (Ge = {})),
                 function(e) {
                     e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
-                }(Be || (Be = {})),
+                }(Ve || (Ve = {})),
                 function(e) {
                     e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
-                }(He || (He = {})),
+                }(Be || (Be = {})),
                 function(e) {
                     e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
-                }(We || (We = {})),
+                }(He || (He = {})),
                 function(e) {
                     e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(xe || (xe = {})),
                 function(e) {
                     e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
-                }(Ye || (Ye = {})),
-                function(e) {
-                    e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
-                }(Ke || (Ke = {})),
-                function(e) {
-                    e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
-                }(ze || (ze = {})),
+                }(We || (We = {})),
                 function(e) {
                     e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
-                }(Xe || (Xe = {})),
+                }(Ye || (Ye = {})),
                 function(e) {
                     e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
-                }(qe || (qe = {})),
+                }(Xe || (Xe = {})),
                 function(e) {
                     e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
-                }(Ze || (Ze = {})),
+                }(ze || (ze = {})),
                 function(e) {
                     e.ALL = "ALL", e.LIVE = "LIVE"
-                }(Qe || (Qe = {})),
+                }(Ke || (Ke = {})),
                 function(e) {
                     e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
-                }(Je || (Je = {})),
+                }(qe || (qe = {})),
                 function(e) {
                     e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
-                }($e || ($e = {})),
+                }(Ze || (Ze = {})),
                 function(e) {
                     e.SUBSCRIPTION = "SUBSCRIPTION"
-                }(et || (et = {})),
+                }(Je || (Je = {})),
                 function(e) {
                     e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
-                }(tt || (tt = {})),
+                }(Qe || (Qe = {})),
                 function(e) {
                     e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
-                }(nt || (nt = {})),
+                }($e || ($e = {})),
                 function(e) {
                     e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
-                }(at || (at = {})),
+                }(et || (et = {})),
                 function(e) {
                     e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
-                }(rt || (rt = {})),
+                }(tt || (tt = {})),
                 function(e) {
                     e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
-                }(st || (st = {})),
+                }(nt || (nt = {})),
                 function(e) {
                     e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
-                }(it || (it = {})),
+                }(at || (at = {})),
                 function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(ot || (ot = {}))
+                }(rt || (rt = {}))
         },
         GD6M: function(e, t, n) {
             "use strict";
@@ -895,9 +876,9 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(c.Ta, {
+                        return r.createElement(c.Ua, {
                             onClick: this.onClick
-                        }, r.createElement(c.Wa, {
+                        }, r.createElement(c.Xa, {
                             padding: 1
                         }, r.createElement(c.W, null, this.props.game.name)))
                     }, t
@@ -913,7 +894,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(c.Gb, {
+                        return r.createElement(c.Hb, {
                             onClick: this.onClick,
                             label: this.props.game.name
                         })
@@ -966,7 +947,7 @@
                             })
                         }, n.renderSelections = function() {
                             return n.state.games.map(function(e, t) {
-                                return r.createElement(c.Wa, {
+                                return r.createElement(c.Xa, {
                                     display: c.X.InlineBlock,
                                     padding: {
                                         right: .5
@@ -1012,33 +993,33 @@
                         var e = this.renderSuggestions(),
                             t = this.renderSelections(),
                             n = !this.props.multi && this.state.games.length > 0;
-                        return r.createElement(c.Wa, null, r.createElement(i.a, {
+                        return r.createElement(c.Xa, null, r.createElement(i.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(c.Wa, {
-                            position: c.eb.Relative,
+                        }, r.createElement(c.Xa, {
+                            position: c.fb.Relative,
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(c.Qa, {
+                        }, r.createElement(c.Ra, {
                             "data-test-selector": E,
                             value: this.state.searchTerm,
                             onChange: this.onGameSearch,
-                            type: c.Sa.Text,
+                            type: c.Ta.Text,
                             onFocus: this.onFocus,
                             disabled: n
                         }), r.createElement(c.u, {
                             show: this.state.showSuggestions
-                        }, e)), r.createElement(c.Wa, {
+                        }, e)), r.createElement(c.Xa, {
                             padding: {
                                 bottom: .5
                             }
                         }, t)))
                     }, t
                 }(r.Component),
-                _ = Object(s.compose)(Object(o.b)("DevGameSearch", {
+                h = Object(s.compose)(Object(o.b)("DevGameSearch", {
                     autoReportInteractive: !0
                 }))(m),
-                h = function(e) {
+                _ = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1065,7 +1046,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(_, {
+                        return r.createElement(h, {
                             onGameSelect: this.onGameSelect,
                             gameSuggestions: this.state.games,
                             onInputChange: this.findGames,
@@ -1075,8 +1056,8 @@
                     }, t
                 }(r.Component),
                 g = n("Svt6"),
-                T = n("+GjP"),
-                f = n("1mFg"),
+                f = n("+GjP"),
+                T = n("1mFg"),
                 I = g.a + "/kraken/search/games",
                 D = 7,
                 N = function(e) {
@@ -1090,10 +1071,10 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 4, , 5]), e.length ? (t = Object(T.e)(I, {
+                                            return a.trys.push([0, 4, , 5]), e.length ? (t = Object(f.e)(I, {
                                                 query: e.trim(),
                                                 type: "suggest"
-                                            }), [4, Object(f.a)(t)]) : (this.setState({
+                                            }), [4, Object(T.a)(t)]) : (this.setState({
                                                 games: []
                                             }), [2]);
                                         case 1:
@@ -1120,7 +1101,7 @@
                         }, n.state.games = t.defaultGames || [], n
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(_, {
+                        return r.createElement(h, {
                             onGameSelect: this.onGameSelect,
                             gameSuggestions: this.state.games,
                             onInputChange: this.findGames,
@@ -1129,7 +1110,7 @@
                     }, t
                 }(r.Component);
             n.d(t, "a", function() {
-                return h
+                return _
             }), n.d(t, "b", function() {
                 return N
             })
@@ -1193,11 +1174,11 @@
                         (this.dateDidChange(e.minDate, this.props.minDate) || this.dateDidChange(e.maxDate, this.props.maxDate)) && this.setDateRangeIfPresent(this.props.minDate, this.props.maxDate), this.dateDidChange(e.defaultDate, this.props.defaultDate) && this.setDate(this.props.defaultDate)
                     }, t.prototype.render = function() {
                         var e = this.props.inputProps;
-                        return i.createElement(o.Wa, {
+                        return i.createElement(o.Xa, {
                             className: "date-picker",
                             "data-a-target": "date-picker"
-                        }, i.createElement(o.Qa, a.__assign({
-                            type: o.Sa.Text,
+                        }, i.createElement(o.Ra, a.__assign({
+                            type: o.Ta.Text,
                             refDelegate: this.setInputRef
                         }, e)), i.createElement("div", {
                             className: "date-picker__container",
@@ -1378,11 +1359,11 @@
                 d = n("N3I0"),
                 E = n("GIun"),
                 m = n("8/mp"),
-                _ = n("GnwI"),
-                h = n("N0BP"),
+                h = n("GnwI"),
+                _ = n("N0BP"),
                 g = n("yLwq"),
-                T = n("Ue10"),
-                f = function(e) {
+                f = n("Ue10"),
+                T = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onSelect = function(e) {
@@ -1391,31 +1372,31 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.user.avatar || Object(g.c)(this.props.user.id, 64);
-                        return r.createElement(T.Wa, a.__assign({
+                        return r.createElement(f.Xa, a.__assign({
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, Object(h.a)(this.props)), r.createElement(T.Ta, {
+                        }, Object(_.a)(this.props)), r.createElement(f.Ua, {
                             onClick: this.onSelect
-                        }, r.createElement(T.G, {
+                        }, r.createElement(f.G, {
                             row: !0
-                        }, r.createElement(T.I, {
+                        }, r.createElement(f.I, {
                             alt: this.props.user.name,
                             src: e,
-                            size: T.J.Size4,
-                            aspect: T.p.Aspect1x1
-                        }), r.createElement(T.Wa, {
+                            size: f.J.Size4,
+                            aspect: f.p.Aspect1x1
+                        }), r.createElement(f.Xa, {
                             flexGrow: 1,
-                            display: T.X.Flex,
-                            position: T.eb.Relative
-                        }, r.createElement(T.Oa, {
+                            display: f.X.Flex,
+                            position: f.fb.Relative
+                        }, r.createElement(f.Pa, {
                             padding: {
                                 x: 1
                             },
                             flexGrow: 1
-                        }, r.createElement(T.W, {
-                            type: T.Nb.Span,
+                        }, r.createElement(f.W, {
+                            type: f.Ob.Span,
                             ellipsis: !0
                         }, this.props.user.name))))))
                     }, t
@@ -1425,12 +1406,12 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.userSearch = null, t.renderSearchContent = function() {
                             var e = null;
-                            return t.props.waiting ? e = r.createElement(T.Ya, {
+                            return t.props.waiting ? e = r.createElement(f.Za, {
                                 fillContent: !0
                             }) : t.props.userResults && (e = t.props.userResults.map(function(e) {
                                 return r.createElement(E.a, {
                                     key: e.id
-                                }, r.createElement(f, {
+                                }, r.createElement(T, {
                                     user: e,
                                     onSelect: t.onSelect
                                 }))
@@ -1445,28 +1426,28 @@
                         this.userSearch && e.open !== this.props.open && this.userSearch.toggle(e.open)
                     }, t.prototype.render = function() {
                         var e = this.renderSearchContent();
-                        return r.createElement(T.Wa, null, r.createElement(d.a, {
+                        return r.createElement(f.Xa, null, r.createElement(d.a, {
                             onChange: this.props.onInputChange,
                             onFocusInput: this.props.onFocusInput,
                             ref: this.setUserSearchRef,
                             placeholder: Object(i.d)("Search Users", "DevUserSearch"),
                             balloonProps: {
                                 show: this.props.open,
-                                direction: T.v.Bottom,
-                                size: T.w.Large
+                                direction: f.v.Bottom,
+                                size: f.w.Large
                             },
                             onClose: this.props.onSearchClose
-                        }, r.createElement(T.Wa, {
+                        }, r.createElement(f.Xa, {
                             className: "user-search__user-search"
                         }, r.createElement(m.b, {
                             contentClassName: "user-search__user-search-content",
                             suppressScrollX: !0
-                        }, r.createElement(T.Wa, {
+                        }, r.createElement(f.Xa, {
                             fullWidth: !0
                         }, e)))))
                     }, t
                 }(r.Component),
-                D = Object(p.compose)(Object(_.b)("DevUserSearchDropdown", {
+                D = Object(p.compose)(Object(h.b)("DevUserSearchDropdown", {
                     autoReportInteractive: !0
                 }))(I),
                 N = 100,
@@ -1644,35 +1625,35 @@
                 i = n("/7QA"),
                 o = n("Ue10"),
                 c = function() {
-                    return r.createElement(o.Wa, {
+                    return r.createElement(o.Xa, {
                         display: o.X.Flex,
-                        flexDirection: o.Z.Column,
-                        justifyContent: o.Va.Center,
+                        flexDirection: o.Aa.Column,
+                        justifyContent: o.Wa.Center,
                         alignItems: o.f.Center,
                         flexGrow: 1,
                         fullHeight: !0,
                         padding: {
                             y: 1
                         },
-                        zIndex: o.ac.Above
-                    }, r.createElement(o.xb, {
+                        zIndex: o.bc.Above
+                    }, r.createElement(o.yb, {
                         color: o.O.Alt2,
-                        textAlign: o.Jb.Center,
+                        textAlign: o.Kb.Center,
                         flexShrink: 1
-                    }, r.createElement(o.nb, {
-                        asset: o.ob.DeadGlitch,
+                    }, r.createElement(o.ob, {
+                        asset: o.pb.DeadGlitch,
                         width: 46,
                         height: 48
-                    })), r.createElement(o.Oa, {
+                    })), r.createElement(o.Pa, {
                         margin: {
                             top: 1
                         },
-                        textAlign: o.Jb.Center
+                        textAlign: o.Kb.Center
                     }, r.createElement(o.W, {
-                        type: o.Nb.H4,
+                        type: o.Ob.H4,
                         "data-test-selector": "search-error-message"
                     }, Object(i.d)("Search is not available at this time", "DropdownSearchError"))), r.createElement(o.W, {
-                        type: o.Nb.P
+                        type: o.Ob.P
                     }, Object(i.d)("Please try again later", "DropdownSearchError")))
                 },
                 u = n("8Ad5"),
@@ -1716,7 +1697,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = void 0 === this.props.showDropdown || this.props.showDropdown,
                             t = this.props.isErrored ? r.createElement(c, null) : r.Children.only(this.props.children),
-                            n = r.createElement(o.qb, {
+                            n = r.createElement(o.rb, {
                                 onChange: this.handleChange,
                                 onKeyDown: this.onKeyDown,
                                 onBlur: this.handleBlur,
@@ -1731,13 +1712,13 @@
                             });
                         return this.props.inline ? r.createElement(s.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(o.xb, {
+                        }, r.createElement(o.yb, {
                             background: this.state.isInputFocused || this.state.isOpen ? o.r.Base : void 0,
                             borderRadius: o.x.Large,
                             padding: .5,
-                            position: o.eb.Relative,
+                            position: o.fb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, n, e && r.createElement(o.xb, {
+                        }, n, e && r.createElement(o.yb, {
                             attachLeft: !0,
                             background: o.r.Base,
                             borderRadius: o.x.Large,
@@ -1746,8 +1727,8 @@
                             padding: {
                                 y: 1
                             },
-                            position: o.eb.Absolute,
-                            zIndex: o.ac.Above,
+                            position: o.fb.Absolute,
+                            zIndex: o.bc.Above,
                             elevation: 3
                         }, r.createElement("div", {
                             tabIndex: 0,
@@ -1802,48 +1783,48 @@
                             allowedFileTypes: this.props.allowedFileTypes,
                             onFilesSubmitted: this.props.processFiles,
                             error: !!this.props.errorMessage
-                        }, r.createElement(o.Wa, {
+                        }, r.createElement(o.Xa, {
                             className: "image-uploader",
-                            textAlign: o.Jb.Center,
+                            textAlign: o.Kb.Center,
                             display: o.X.Flex,
-                            flexDirection: o.Z.Column,
+                            flexDirection: o.Aa.Column,
                             alignItems: o.f.Center,
-                            justifyContent: o.Va.Center,
-                            position: o.eb.Relative,
+                            justifyContent: o.Wa.Center,
+                            position: o.fb.Relative,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, this.renderErrorMessage(), r.createElement(o.Wa, {
-                            position: o.eb.Relative
-                        }, r.createElement(o.Wa, {
+                        }, this.renderErrorMessage(), r.createElement(o.Xa, {
+                            position: o.fb.Relative
+                        }, r.createElement(o.Xa, {
                             className: "image-uploader__upload-svg--anim-backfill"
-                        }, r.createElement(o.nb, {
-                            asset: o.ob.Upload,
-                            type: o.pb.Alt2,
+                        }, r.createElement(o.ob, {
+                            asset: o.pb.Upload,
+                            type: o.qb.Alt2,
                             width: this.props.iconWidth || 99,
                             height: this.props.iconWidth || 76
-                        })), r.createElement(o.Wa, {
+                        })), r.createElement(o.Xa, {
                             className: "image-uploader__upload-svg--anim-fill",
-                            position: o.eb.Absolute,
+                            position: o.fb.Absolute,
                             display: this.props.isLoading ? o.X.Block : o.X.Hide,
                             attachTop: !0
-                        }, r.createElement(o.nb, {
-                            asset: o.ob.Upload,
-                            type: o.pb.Brand,
+                        }, r.createElement(o.ob, {
+                            asset: o.pb.Upload,
+                            type: o.qb.Brand,
                             width: this.props.iconWidth || 99,
                             height: this.props.iconHeight || 76
                         }))), this.props.isLoading ? this.renderLoadingState() : this.renderNormalState()))
                     }, t.prototype.renderLoadingState = function() {
-                        return r.createElement(o.Wa, {
+                        return r.createElement(o.Xa, {
                             margin: 1,
                             "data-test-selector": "image-uploader-loading"
                         }, r.createElement(o.W, {
-                            type: o.Nb.H4
+                            type: o.Ob.H4
                         }, Object(s.d)("Uploading", "ImageUploader")))
                     }, t.prototype.renderNormalState = function() {
                         var e = Object(s.d)("Browse", "ImageUploader");
-                        return r.createElement(o.Wa, null, r.createElement(o.Wa, null, r.createElement(o.W, {
-                            type: o.Nb.H4
-                        }, Object(s.d)("Drag and drop your image here", "ImageUploader"))), r.createElement(o.Wa, {
+                        return r.createElement(o.Xa, null, r.createElement(o.Xa, null, r.createElement(o.W, {
+                            type: o.Ob.H4
+                        }, Object(s.d)("Drag and drop your image here", "ImageUploader"))), r.createElement(o.Xa, {
                             margin: {
                                 bottom: 2
                             },
@@ -1854,21 +1835,21 @@
                             fullWidth: !0,
                             "data-test-selector": "image-uploader-hint"
                         }, r.createElement(o.W, {
-                            type: o.Nb.P,
-                            fontSize: o.Ba.Size7,
+                            type: o.Ob.P,
+                            fontSize: o.Ca.Size7,
                             color: o.O.Alt2
-                        }, this.props.hintMessage)), r.createElement(o.Wa, null, r.createElement(o.z, {
+                        }, this.props.hintMessage)), r.createElement(o.Xa, null, r.createElement(o.z, {
                             ariaLabel: e,
                             type: o.F.Hollow
                         }, e)))
                     }, t.prototype.renderErrorMessage = function() {
-                        if (this.props.errorMessage) return r.createElement(o.Wa, {
+                        if (this.props.errorMessage) return r.createElement(o.Xa, {
                             margin: {
                                 bottom: 1
                             },
                             "data-test-selector": "image-uploader-error"
                         }, r.createElement(o.W, {
-                            type: o.Nb.H5,
+                            type: o.Ob.H5,
                             color: o.O.Error,
                             bold: !0
                         }, this.props.errorMessage))
@@ -2073,10 +2054,10 @@
                             d = s.facetFilters,
                             E = void 0 === d ? "" : d,
                             m = s.numericFilters,
-                            _ = s.restrictSearchableAttributes,
-                            h = void 0 === _ ? [] : _;
+                            h = s.restrictSearchableAttributes,
+                            _ = void 0 === h ? [] : h;
                         return a.__awaiter(this, void 0, void 0, function() {
-                            var r, s, i, u, d, _, g, T, f = this;
+                            var r, s, i, u, d, h, g, f, T = this;
                             return a.__generator(this, function(I) {
                                 switch (I.label) {
                                     case 0:
@@ -2084,7 +2065,7 @@
                                             id: n,
                                             currentPage: c
                                         }, s = function(e) {
-                                            return a.__awaiter(f, void 0, void 0, function() {
+                                            return a.__awaiter(T, void 0, void 0, function() {
                                                 var n, s;
                                                 return a.__generator(this, function(a) {
                                                     switch (a.label) {
@@ -2098,7 +2079,7 @@
                                                                     numericFilters: m || e.singleTypeNumericFilters,
                                                                     facets: "*",
                                                                     facetFilters: E,
-                                                                    restrictSearchableAttributes: h
+                                                                    restrictSearchableAttributes: _
                                                                 }
                                                             }, [4, this.query([n])];
                                                         case 1:
@@ -2140,17 +2121,17 @@
                                     case 6:
                                         return d.channels = I.sent(), [3, 14];
                                     case 7:
-                                        return _ = r, [4, s(p.videos)];
+                                        return h = r, [4, s(p.videos)];
                                     case 8:
-                                        return _.videos = I.sent(), [3, 14];
+                                        return h.videos = I.sent(), [3, 14];
                                     case 9:
                                         return g = r, [4, s(p.streamTags)];
                                     case 10:
                                         return g.streamTags = I.sent(), [3, 14];
                                     case 11:
-                                        return T = r, [4, s(p.tags)];
+                                        return f = r, [4, s(p.tags)];
                                     case 12:
-                                        return T.tags = I.sent(), [3, 14];
+                                        return f.tags = I.sent(), [3, 14];
                                     case 13:
                                         return [2, null];
                                     case 14:
@@ -2310,15 +2291,15 @@
                 d = n("Svt6"),
                 E = n("NvVO"),
                 m = n("2xye"),
-                _ = n("GnwI"),
-                h = n("1mFg");
+                h = n("GnwI"),
+                _ = n("1mFg");
 
             function g(e) {
                 return !e.legacy && e.curseCompanyId ? e.curseCompanyId.toString() : e.id
             }
-            var T = n("fy8Z");
+            var f = n("fy8Z");
 
-            function f(e, t) {
+            function T(e, t) {
                 return {
                     id: e.id ? e.id : void 0,
                     account_id: t,
@@ -2365,9 +2346,9 @@
                 var t = Object(O.b)(R(e.campaign.startDate), "MM/DD/YYYY, hh:mm a"),
                     n = Object(O.b)(R(e.campaign.endDate), "MM/DD/YYYY, hh:mm a"),
                     a = "/console/drops/" + e.campaign.id;
-                return r.createElement(N.Fb, null, r.createElement(N.Cb, null, r.createElement(N.U, {
+                return r.createElement(N.Gb, null, r.createElement(N.Db, null, r.createElement(N.U, {
                     linkTo: a
-                }, e.campaign.name)), r.createElement(N.Cb, null, e.campaign.id), r.createElement(N.Cb, null, t), r.createElement(N.Cb, null, n), r.createElement(N.Cb, null, e.campaign.enabled.toString()))
+                }, e.campaign.name)), r.createElement(N.Db, null, e.campaign.id), r.createElement(N.Db, null, t), r.createElement(N.Db, null, n), r.createElement(N.Db, null, e.campaign.enabled.toString()))
             };
             ! function(e) {
                 e[e.Enabled = 0] = "Enabled", e[e.EndDate = 1] = "EndDate", e[e.Id = 2] = "Id", e[e.Name = 3] = "Name", e[e.StartDate = 4] = "StartDate"
@@ -2376,11 +2357,11 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            sortingName: N.ub.Default,
-                            sortingId: N.ub.Default,
-                            sortingStartDate: N.ub.Default,
-                            sortingEndDate: N.ub.Default,
-                            sortingEnabled: N.ub.Default
+                            sortingName: N.vb.Default,
+                            sortingId: N.vb.Default,
+                            sortingStartDate: N.vb.Default,
+                            sortingEndDate: N.vb.Default,
+                            sortingEnabled: N.vb.Default
                         }, t.renderCampaignItems = function() {
                             return t.props.campaigns.map(function(e) {
                                 return r.createElement(b, {
@@ -2421,48 +2402,48 @@
                                 t.props.onSort(C.Enabled, t.state.sortingEnabled)
                             })
                         }, t.toggleSorting = function(e) {
-                            return e === N.ub.Default || e === N.ub.Ascending ? N.ub.Descending : N.ub.Ascending
+                            return e === N.vb.Default || e === N.vb.Ascending ? N.vb.Descending : N.vb.Ascending
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.renderCampaignItems();
-                        return r.createElement(N.Wa, {
+                        return r.createElement(N.Xa, {
                             className: "drops-campaigns"
-                        }, r.createElement(N.Wa, {
+                        }, r.createElement(N.Xa, {
                             display: N.X.Flex,
-                            justifyContent: N.Va.End,
+                            justifyContent: N.Wa.End,
                             margin: {
                                 bottom: 1
                             }
                         }, r.createElement(N.z, {
                             onClick: Object(c.c)(c.a.CreateDropsProcessStart),
                             linkTo: "/console/drops/create",
-                            icon: N.ob.Plus
-                        }, Object(o.d)("Create Drops Campaign", "DevDropsCampaigns"))), r.createElement(N.Ab, null, r.createElement(N.Db, null, r.createElement(N.Eb, {
+                            icon: N.pb.Plus
+                        }, Object(o.d)("Create Drops Campaign", "DevDropsCampaigns"))), r.createElement(N.Bb, null, r.createElement(N.Eb, null, r.createElement(N.Fb, {
                             label: Object(o.d)("Campaign Name", "DevDropsCampaigns"),
                             sorting: this.state.sortingName,
                             onClick: this.sortName
-                        }), r.createElement(N.Eb, {
+                        }), r.createElement(N.Fb, {
                             label: Object(o.d)("Campaign ID", "DevDropsCampaigns")
-                        }), r.createElement(N.Eb, {
+                        }), r.createElement(N.Fb, {
                             label: Object(o.d)("Start Date (UTC)", "DevDropsCampaigns"),
                             sorting: this.state.sortingStartDate,
                             onClick: this.sortStartDate
-                        }), r.createElement(N.Eb, {
+                        }), r.createElement(N.Fb, {
                             label: Object(o.d)("End Date (UTC)", "DevDropsCampaigns"),
                             sorting: this.state.sortingEndDate,
                             onClick: this.sortEndDate
-                        }), r.createElement(N.Eb, {
+                        }), r.createElement(N.Fb, {
                             label: Object(o.d)("Enabled", "DevDropsCampaigns"),
                             sorting: this.state.sortingEnabled,
                             onClick: this.sortEnabled
-                        })), r.createElement(N.Bb, null, e)))
+                        })), r.createElement(N.Cb, null, e)))
                     }, t
                 }(r.Component),
-                L = Object(l.compose)(Object(_.b)("DevDropsCampaignsComponent", {
+                L = Object(l.compose)(Object(h.b)("DevDropsCampaignsComponent", {
                     autoReportInteractive: !0
                 }))(v),
-                U = function(e) {
+                P = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2473,9 +2454,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return [4, Object(D.a)(T.a.GetCampaignsByCompany)];
+                                            return [4, Object(D.a)(f.a.GetCampaignsByCompany)];
                                         case 1:
-                                            return (e = a.sent()) ? (t = g(this.props.company), n = d.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(h.a)(n, {
+                                            return (e = a.sent()) ? (t = g(this.props.company), n = d.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(_.a)(n, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": e
                                                 }
@@ -2507,7 +2488,7 @@
                         }, t.onSort = function(e, n) {
                             switch (e) {
                                 case C.Name:
-                                    n === N.ub.Ascending ? t.setState(function(e) {
+                                    n === N.vb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.name.localeCompare(t.name)
@@ -2522,7 +2503,7 @@
                                     });
                                     break;
                                 case C.Id:
-                                    n === N.ub.Ascending ? t.setState(function(e) {
+                                    n === N.vb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.id.localeCompare(t.id)
@@ -2537,7 +2518,7 @@
                                     });
                                     break;
                                 case C.StartDate:
-                                    n === N.ub.Ascending ? t.setState(function(e) {
+                                    n === N.vb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.startDate.getTime() - t.startDate.getTime()
@@ -2552,7 +2533,7 @@
                                     });
                                     break;
                                 case C.EndDate:
-                                    n === N.ub.Ascending ? t.setState(function(e) {
+                                    n === N.vb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.endDate.getTime() - t.endDate.getTime()
@@ -2567,7 +2548,7 @@
                                     });
                                     break;
                                 case C.Enabled:
-                                    n === N.ub.Ascending ? t.setState(function(e) {
+                                    n === N.vb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return Number(e.enabled) - Number(t.enabled)
@@ -2592,19 +2573,19 @@
                         this.getCampaigns()
                     }, t
                 }(r.Component),
-                P = Object(l.compose)(Object(_.b)("DevDropsCampaignsPage", {
+                U = Object(l.compose)(Object(h.b)("DevDropsCampaignsPage", {
                     autoReportInteractive: !0,
                     destination: E.a.DevSiteDropsCampaigns
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsCampaigns
-                }), Object(u.a)())(U),
-                M = n("9C/b"),
-                y = n("DMoW"),
+                }), Object(u.a)())(P),
+                y = n("9C/b"),
+                M = n("DMoW"),
                 F = n("PZVp"),
                 j = n("/aPz"),
                 k = n("2/NB"),
-                G = n("Lxz1"),
-                w = 1e4,
+                w = n("Lxz1"),
+                G = 1e4,
                 V = function() {
                     return function(e, t) {
                         var n = this;
@@ -2622,15 +2603,15 @@
                                                     method: "PUT"
                                                 })];
                                             case 2:
-                                                return (c = a.sent()).status > 300 && r(new Error(Object(G.e)(c.status))), this.unsubscribe = o.l.subscribe({
+                                                return (c = a.sent()).status > 300 && r(new Error(Object(w.e)(c.status))), this.unsubscribe = o.l.subscribe({
                                                     topic: Object(j.A)(i),
                                                     success: function() {
                                                         l.timeoutID = setTimeout(function() {
-                                                            l.unsubscribe(), r(new Error(Object(G.d)()))
-                                                        }, w)
+                                                            l.unsubscribe(), r(new Error(Object(w.d)()))
+                                                        }, G)
                                                     },
                                                     failure: function() {
-                                                        clearTimeout(l.timeoutID), r(new Error(Object(G.d)()))
+                                                        clearTimeout(l.timeoutID), r(new Error(Object(w.d)()))
                                                     },
                                                     onMessage: function(e) {
                                                         if (e.upload_id === i) {
@@ -2640,23 +2621,23 @@
                                                                     break;
                                                                 case F.a.WIDTH_VALIDATION_FAILED:
                                                                 case F.a.HEIGHT_VALIDATION_FAILED:
-                                                                    r(new Error(Object(G.c)()));
+                                                                    r(new Error(Object(w.c)()));
                                                                     break;
                                                                 case F.a.FILE_SIZE_VALIDATION_FAILED:
-                                                                    r(new Error(Object(G.a)()));
+                                                                    r(new Error(Object(w.a)()));
                                                                     break;
                                                                 case F.a.IS_IMAGE_VALIDATION_FAILED:
-                                                                    r(new Error(Object(G.b)(k.b)));
+                                                                    r(new Error(Object(w.b)(k.b)));
                                                                     break;
                                                                 default:
-                                                                    r(new Error(Object(G.d)()))
+                                                                    r(new Error(Object(w.d)()))
                                                             }
                                                             l.unsubscribe && l.unsubscribe()
                                                         }
                                                     }
                                                 }), [3, 4];
                                             case 3:
-                                                return u = a.sent(), o.k.error(u, "unable to upload image"), r(new Error(Object(G.d)())), [3, 4];
+                                                return u = a.sent(), o.k.error(u, "unable to upload image"), r(new Error(Object(w.d)())), [3, 4];
                                             case 4:
                                                 return [2]
                                         }
@@ -2674,7 +2655,7 @@
                     return a.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
-                                return e = [], [4, Object(h.a)(B)];
+                                return e = [], [4, Object(_.a)(B)];
                             case 1:
                                 return 200 !== (t = a.sent()).status ? [3, 3] : [4, t.json()];
                             case 2:
@@ -2696,22 +2677,22 @@
                     })
                 })
             }
-            var W = n("cr+I");
+            var x = n("cr+I");
 
-            function x(e) {
+            function W(e) {
                 return a.__awaiter(this, void 0, Promise, function() {
                     var t, n, r, s, i, o, c, u, l, p;
                     return a.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
-                                return t = e.activeOnly, n = e.companyId, r = e.prevCursor, s = e.nextCursor, i = e.limit, [4, Object(D.a)(T.a.GetItemsByCompany)];
+                                return t = e.activeOnly, n = e.companyId, r = e.prevCursor, s = e.nextCursor, i = e.limit, [4, Object(D.a)(f.a.GetItemsByCompany)];
                             case 1:
-                                return (o = a.sent()) ? (c = d.a + "/kraken/accounts/" + n + "/items", (u = W.stringify({
+                                return (o = a.sent()) ? (c = d.a + "/kraken/accounts/" + n + "/items", (u = x.stringify({
                                     active_only: t,
                                     after: s,
                                     before: r,
                                     limit: i
-                                })) && (c += "?" + u), [4, Object(h.a)(c, {
+                                })) && (c += "?" + u), [4, Object(_.a)(c, {
                                     headers: {
                                         "X-Twitch-VHSCF": o
                                     }
@@ -2744,29 +2725,29 @@
                 })
             }
             var Y = n("/MKj"),
-                K = n("aCAx"),
+                X = n("aCAx"),
                 z = n("HEnu"),
-                X = n("cZKs"),
+                K = n("cZKs"),
                 q = n("NLLf"),
                 Z = (n("TofP"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(N.xb, {
+                        return r.createElement(N.yb, {
                             className: "image-uploader-modal",
                             background: N.r.Base
-                        }, r.createElement(q.a, a.__assign({}, this.props)), r.createElement(X.a, {
+                        }, r.createElement(q.a, a.__assign({}, this.props)), r.createElement(K.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t
                 }(r.Component));
-            var Q = Object(Y.connect)(null, function(e) {
+            var J = Object(Y.connect)(null, function(e) {
                     return Object(l.bindActionCreators)({
-                        onClose: K.c
+                        onClose: X.c
                     }, e)
                 })(Z),
-                J = n("u5aL");
+                Q = n("u5aL");
             n("ev0B");
             var $, ee = function(e) {
                     function t(t) {
@@ -2795,22 +2776,22 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this,
                             n = t.timeOptions.map(function(t) {
-                                return r.createElement(N.Ta, {
+                                return r.createElement(N.Ua, {
                                     hover: e.state.selectedTime === t,
                                     key: t,
                                     "data-time": t,
                                     onClick: e.onClickTime
-                                }, r.createElement(N.Wa, {
+                                }, r.createElement(N.Xa, {
                                     padding: .5
                                 }, t))
                             });
-                        return r.createElement(N.Wa, {
-                            position: N.eb.Relative,
+                        return r.createElement(N.Xa, {
+                            position: N.fb.Relative,
                             className: "time-picker"
-                        }, r.createElement(J.a, {
+                        }, r.createElement(Q.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(N.Qa, {
-                            type: N.Sa.Text,
+                        }, r.createElement(N.Ra, {
+                            type: N.Ta.Text,
                             onFocus: this.onFocus,
                             readOnly: !0,
                             refDelegate: this.setInputRef,
@@ -2819,9 +2800,9 @@
                             noTail: !0,
                             show: this.state.isOpen,
                             "data-a-target": "time-selector-balloon"
-                        }, r.createElement(N.xb, {
+                        }, r.createElement(N.yb, {
                             color: N.O.Link,
-                            fontSize: N.Ba.Size5,
+                            fontSize: N.Ca.Size5,
                             className: "time-picker__dropdown"
                         }, n))))
                     }, t.prototype.notifyChange = function(e) {
@@ -2848,13 +2829,13 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(N.Ta, {
+                        return r.createElement(N.Ua, {
                             onClick: this.onClick
-                        }, r.createElement(N.Wa, {
+                        }, r.createElement(N.Xa, {
                             display: N.X.Flex,
                             alignItems: N.f.Center,
                             fullHeight: !0
-                        }, r.createElement(N.Wa, {
+                        }, r.createElement(N.Xa, {
                             margin: {
                                 right: 2
                             }
@@ -2862,7 +2843,7 @@
                             size: 40,
                             alt: this.props.name,
                             src: this.props.avatarURL
-                        })), r.createElement(N.Wa, null, r.createElement(N.W, null, this.props.name))))
+                        })), r.createElement(N.Xa, null, r.createElement(N.W, null, this.props.name))))
                     }, t
                 }(r.Component),
                 re = n("Ji7V");
@@ -2885,12 +2866,12 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        if (this.props.data && this.props.data.loading && !this.props.data.users && !this.props.data.error) return r.createElement(N.Ya, null);
-                        if (this.props.data && this.props.data.error) return r.createElement(N.Wa, {
+                        if (this.props.data && this.props.data.loading && !this.props.data.users && !this.props.data.error) return r.createElement(N.Za, null);
+                        if (this.props.data && this.props.data.error) return r.createElement(N.Xa, {
                             "data-test-selector": $.Error
                         });
                         var e = this.renderChannels();
-                        return r.createElement(N.Wa, null, e)
+                        return r.createElement(N.Xa, null, e)
                     }, t
                 }(r.Component),
                 oe = Object(ne.a)(re, {
@@ -2942,7 +2923,7 @@
                                 size: 80
                             }) : null
                         }, n.renderErrorMessage = function() {
-                            if (n.props.errorMessage) return r.createElement(N.xb, {
+                            if (n.props.errorMessage) return r.createElement(N.yb, {
                                 className: "dev-drops-campaign-form__error",
                                 color: N.O.Overlay,
                                 "data-test-selector": se.Error,
@@ -3035,7 +3016,7 @@
                                 },
                                 allowedFileTypes: [k.a.JPEG]
                             };
-                            n.props.showModal(Q, t)
+                            n.props.showModal(J, t)
                         }, n.setFile = function(e) {
                             return n.setState({
                                 image: e
@@ -3123,9 +3104,9 @@
                     var n = N.E.Default;
                     this.state.isSubmitting ? n = N.E.Loading : this.props.updateSuccess && (n = N.E.Success);
                     var a = this.renderDropsLinkImage();
-                    return r.createElement(N.Wa, {
+                    return r.createElement(N.Xa, {
                         className: "dev-drops-campaign-form"
-                    }, this.renderErrorMessage(), r.createElement(N.Wa, {
+                    }, this.renderErrorMessage(), r.createElement(N.Xa, {
                         padding: {
                             top: 2
                         }
@@ -3133,36 +3114,36 @@
                         checked: this.state.enabled,
                         label: Object(o.d)("Enabled", "DevDropsCampaignForm"),
                         onChange: this.setEnabled
-                    })), r.createElement(N.Wa, {
+                    })), r.createElement(N.Xa, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(N.Da, {
+                    }, r.createElement(N.Ea, {
                         label: Object(o.d)("Campaign Name", "DevDropsCampaignForm")
-                    }, r.createElement(N.Qa, {
-                        type: N.Sa.Text,
+                    }, r.createElement(N.Ra, {
+                        type: N.Ta.Text,
                         value: this.state.itemName,
                         onChange: this.setItemName,
                         "data-test-selector": se.NameField
-                    }))), this.state.campaignId && r.createElement(N.Wa, {
+                    }))), this.state.campaignId && r.createElement(N.Xa, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(N.Da, {
+                    }, r.createElement(N.Ea, {
                         label: Object(o.d)("Campaign ID", "DevDropsCampaignForm")
-                    }, r.createElement(N.Qa, {
-                        type: N.Sa.Text,
+                    }, r.createElement(N.Ra, {
+                        type: N.Ta.Text,
                         value: this.state.campaignId
-                    }))), r.createElement(N.Wa, {
+                    }))), r.createElement(N.Xa, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(N.Ia, null, r.createElement(N.P, {
+                    }, r.createElement(N.Ja, null, r.createElement(N.P, {
                         cols: {
                             default: 12,
                             md: 6
                         }
-                    }, r.createElement(N.Da, {
+                    }, r.createElement(N.Ea, {
                         label: Object(o.d)("Start Date/Time (UTC)", "DevDropsCampaignForm")
                     }, r.createElement(z.a, {
                         onChange: this.onStartDate,
@@ -3175,7 +3156,7 @@
                             default: 12,
                             md: 6
                         }
-                    }, r.createElement(N.Da, {
+                    }, r.createElement(N.Ea, {
                         label: Object(o.d)("End Date/Time (UTC)", "DevDropsCampaignForm")
                     }, r.createElement(z.a, {
                         onChange: this.onEndDate,
@@ -3183,11 +3164,11 @@
                     }), r.createElement(ee, {
                         onChange: this.onEndTime,
                         defaultDate: this.state.endTime
-                    }))))), r.createElement(N.Wa, {
+                    }))))), r.createElement(N.Xa, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(N.Da, {
+                    }, r.createElement(N.Ea, {
                         label: Object(o.d)("Games", "DevDropsCampaignForm")
                     }, r.createElement(ue.a, {
                         onGameSelect: this.onGameSelect,
@@ -3203,39 +3184,39 @@
                                 to: "/console/games"
                             }, e)
                         }
-                    }, "DevDropsCampaignForm")))), r.createElement(N.Wa, {
+                    }, "DevDropsCampaignForm")))), r.createElement(N.Xa, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(N.Da, {
+                    }, r.createElement(N.Ea, {
                         label: Object(o.d)("Drops Connection URL", "DevDropsCampaignForm"),
                         hint: Object(o.d)("The URL users go to connect their account.", "DevDropsCampaignForm")
-                    }, r.createElement(N.Qa, {
+                    }, r.createElement(N.Ra, {
                         "data-test-selector": se.ConnectionURL,
-                        type: N.Sa.Text,
+                        type: N.Ta.Text,
                         value: this.state.connectionURL,
                         onChange: this.setConnectURL
-                    }))), r.createElement(N.Wa, {
+                    }))), r.createElement(N.Xa, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(N.Da, {
+                    }, r.createElement(N.Ea, {
                         label: Object(o.d)("Whitelisted Channels", "DevDropsCampaignForm"),
                         hint: t
                     }, r.createElement(le.a, {
                         onUserSelect: this.onUserSelect,
                         includeCurrentUser: !0
-                    }))), r.createElement(N.Wa, {
+                    }))), r.createElement(N.Xa, {
                         padding: {
                             top: 1
                         }
                     }, r.createElement(oe, {
                         channels: this.state.channels,
                         onChannelClick: this.onChannelClick
-                    })), r.createElement(N.Wa, null, r.createElement(N.Da, {
+                    })), r.createElement(N.Xa, null, r.createElement(N.Ea, {
                         label: Object(o.d)("Campaign Image", "DevDropsCampaignForm"),
                         hint: Object(o.d)("This is the image for Drops Campaign Notifications. Required image size is 120x120. Please note that it may take up to 15 minutes for image changes to take effect.", "DevDropsCampaignForm")
-                    }, a, r.createElement(N.Wa, {
+                    }, a, r.createElement(N.Xa, {
                         padding: {
                             top: 1
                         },
@@ -3244,72 +3225,72 @@
                     }, r.createElement(N.z, {
                         "data-test-selector": se.FileButton,
                         onClick: this.onUploadButtonClick
-                    }, Object(o.d)("Upload Image", "DevDropsCampaignForm")), this.state.image && r.createElement(N.Wa, {
+                    }, Object(o.d)("Upload Image", "DevDropsCampaignForm")), this.state.image && r.createElement(N.Xa, {
                         margin: {
                             x: 1
                         }
                     }, r.createElement(N.W, {
                         color: N.O.Alt
-                    }, this.state.image.name))))), r.createElement(N.Wa, {
+                    }, this.state.image.name))))), r.createElement(N.Xa, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(N.Wa, {
+                    }, r.createElement(N.Xa, {
                         padding: {
                             top: 1
                         }
                     }, r.createElement(N.W, {
-                        type: N.Nb.H3
-                    }, Object(o.d)("Items", "DevDropsCampaignForm"))), r.createElement("fieldset", null, r.createElement(N.Oa, {
+                        type: N.Ob.H3
+                    }, Object(o.d)("Items", "DevDropsCampaignForm"))), r.createElement("fieldset", null, r.createElement(N.Pa, {
                         padding: {
                             y: 1
                         }
                     }, r.createElement("legend", null, r.createElement(N.W, null, Object(o.d)("Select up to {MAX_DROPS_ITEMS_PER_CAMPAIGN} of your currently active items", {
                         MAX_DROPS_ITEMS_PER_CAMPAIGN: te.b
-                    }, "DevDropsCampaignForm")))), r.createElement(N.Tb, {
-                        childWidth: N.Ub.ExtraSmall,
-                        gutterSize: N.Vb.Small,
+                    }, "DevDropsCampaignForm")))), r.createElement(N.Ub, {
+                        childWidth: N.Vb.ExtraSmall,
+                        gutterSize: N.Wb.Small,
                         placeholderItems: 20
                     }, this.props.availableItems.map(function(t, n) {
                         var a = t.translations[t.defaultLanguage],
                             s = e.state.itemIds.has(t.id);
-                        return r.createElement(N.Wa, {
+                        return r.createElement(N.Xa, {
                             key: n,
-                            position: N.eb.Relative,
+                            position: N.fb.Relative,
                             className: "drops-item-selector-container",
                             margin: {
                                 bottom: 2
                             }
                         }, r.createElement(N.o, {
                             ratio: N.p.Aspect1x1
-                        }, r.createElement(N.Ka, {
+                        }, r.createElement(N.La, {
                             alt: a,
                             checked: s,
                             label: a,
                             name: "item-selector-checkbox",
                             onChange: e.onItemChange,
                             src: te.a + "/items/" + e.props.companyId + "/" + t.id + "-120x120.jpg",
-                            type: N.La.Checkbox,
+                            type: N.Ma.Checkbox,
                             value: t.id
-                        })), s && r.createElement(N.xb, {
+                        })), s && r.createElement(N.yb, {
                             display: N.X.InlineFlex,
                             alignItems: N.f.Center,
-                            justifyContent: N.Va.Center,
+                            justifyContent: N.Wa.Center,
                             background: N.r.Accent,
-                            position: N.eb.Absolute,
+                            position: N.fb.Absolute,
                             color: N.O.Overlay,
                             attachTop: !0
-                        }, r.createElement(N.nb, {
-                            asset: N.ob.Check
+                        }, r.createElement(N.ob, {
+                            asset: N.pb.Check
                         })), r.createElement(N.W, {
                             bold: s,
                             ellipsis: !0
                         }, a))
-                    })))), r.createElement(N.Wa, {
+                    })))), r.createElement(N.Xa, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(N.Wa, {
+                    }, r.createElement(N.Xa, {
                         display: N.X.InlineBlock,
                         padding: {
                             right: 1
@@ -3329,7 +3310,7 @@
             }(r.Component);
             var de = Object(Y.connect)(null, function(e) {
                     return Object(l.bindActionCreators)({
-                        showModal: K.d
+                        showModal: X.d
                     }, e)
                 })(pe),
                 Ee = n("QKmf");
@@ -3368,7 +3349,7 @@
                     }
                 })
             }
-            var _e, he = function(e) {
+            var he, _e = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3404,7 +3385,7 @@
                                         case 0:
                                             e = g(this.props.company), n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 3, , 4]), [4, x({
+                                            return n.trys.push([1, 3, , 4]), [4, W({
                                                 activeOnly: !0,
                                                 companyId: e,
                                                 limit: 100
@@ -3428,9 +3409,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 12, , 13]), t = g(this.props.company), n = f(e, t), [4, Object(D.a)(T.a.PostCampaign)];
+                                            return a.trys.push([0, 12, , 13]), t = g(this.props.company), n = T(e, t), [4, Object(D.a)(f.a.PostCampaign)];
                                         case 1:
-                                            return (r = a.sent()) ? (s = d.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(h.a)(s, {
+                                            return (r = a.sent()) ? (s = d.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(_.a)(s, {
                                                 method: "POST",
                                                 body: JSON.stringify(n),
                                                 headers: {
@@ -3496,11 +3477,11 @@
                                     return a.__generator(this, function(a) {
                                         switch (a.label) {
                                             case 0:
-                                                return [4, Object(D.a)(T.a.PostCampaignImageUrl)];
+                                                return [4, Object(D.a)(f.a.PostCampaignImageUrl)];
                                             case 1:
                                                 if (t = a.sent()) return n = {
                                                     campaignID: e,
-                                                    imageType: y.r.LINK_NOTIFICATION,
+                                                    imageType: M.r.LINK_NOTIFICATION,
                                                     serviceID: g(this.props.company),
                                                     token: t
                                                 }, [2, this.props.createUploadURLMutation(n)];
@@ -3525,20 +3506,20 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return this.state.gamesLoaded ? r.createElement(N.Wa, {
+                        return this.state.gamesLoaded ? r.createElement(N.Xa, {
                             padding: {
                                 top: 1
                             }
-                        }, r.createElement(N.Wa, {
+                        }, r.createElement(N.Xa, {
                             display: N.X.Flex,
-                            justifyContent: N.Va.Between
+                            justifyContent: N.Wa.Between
                         }, r.createElement(N.W, {
-                            type: N.Nb.H2
+                            type: N.Ob.H2
                         }, Object(o.d)("Drops Campaign", "DevDropsCreateCampaign")), r.createElement(N.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
                             type: N.F.Hollow
-                        }, Object(o.d)("Need Help?", "DevDropsCreateCampaign"))), r.createElement(N.Ia, null, r.createElement(N.P, {
+                        }, Object(o.d)("Need Help?", "DevDropsCreateCampaign"))), r.createElement(N.Ja, null, r.createElement(N.P, {
                             cols: {
                                 default: 12,
                                 md: 5
@@ -3550,15 +3531,15 @@
                             onCancel: this.onCancel,
                             onSubmit: this.onSubmit,
                             errorMessage: this.state.errorMessage
-                        })))) : r.createElement(N.Ya, null)
+                        })))) : r.createElement(N.Za, null)
                     }, t
                 }(r.Component),
-                ge = Object(l.compose)(Object(_.b)("DevDropsCreateCampaignPage", {
+                ge = Object(l.compose)(Object(h.b)("DevDropsCreateCampaignPage", {
                     destination: E.a.DevSiteDropsCreateCampaign
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsCreateCampaign
-                }), me(), Object(u.a)(), M.a)(he),
-                Te = function(e) {
+                }), me(), Object(u.a)(), y.a)(_e),
+                fe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3582,22 +3563,22 @@
             n("WM9t");
             ! function(e) {
                 e.DefaultLocaleSelect = "dev-drops-item-form-language-field", e.Error = "dev-drops-item-form-error", e.FileButton = "dev-drops-item-form-file-button", e.SubmitButton = "dev-drops-item-form-submit-button"
-            }(_e || (_e = {}));
-            var fe = function(e) {
+            }(he || (he = {}));
+            var Te = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderDropsItemImage = function() {
-                        return n.props.item ? r.createElement(Te, {
+                        return n.props.item ? r.createElement(fe, {
                             id: n.props.item.ItemID,
                             companyId: n.props.companyId,
                             name: n.props.item.Translations[n.props.item.DefaultLanguage],
                             size: 120
                         }) : null
                     }, n.renderErrorMessage = function() {
-                        if (n.props.errorMessage) return r.createElement(N.xb, {
+                        if (n.props.errorMessage) return r.createElement(N.yb, {
                             className: "dev-drops-item-form__error",
                             color: N.O.Overlay,
-                            "data-test-selector": _e.Error,
+                            "data-test-selector": he.Error,
                             margin: {
                                 top: 1
                             },
@@ -3644,7 +3625,7 @@
                             },
                             allowedFileTypes: [k.a.JPEG]
                         };
-                        n.props.showModal(Q, t)
+                        n.props.showModal(J, t)
                     }, n.setFile = function(e) {
                         return n.setState({
                             image: e
@@ -3703,9 +3684,9 @@
                         t = N.E.Default;
                     this.state.isSubmitting ? t = N.E.Loading : this.props.updateSuccess && (t = N.E.Success);
                     var n = this.renderDropsItemImage();
-                    return r.createElement(N.Wa, {
+                    return r.createElement(N.Xa, {
                         className: "dev-drops-item-form"
-                    }, this.renderErrorMessage(), r.createElement(N.Wa, {
+                    }, this.renderErrorMessage(), r.createElement(N.Xa, {
                         padding: {
                             top: 2
                         }
@@ -3713,76 +3694,76 @@
                         checked: this.state.active,
                         label: Object(o.d)("Enabled", "DevDropsItemForm"),
                         onChange: this.setActive
-                    })), r.createElement(N.Wa, {
+                    })), r.createElement(N.Xa, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(N.Da, {
+                    }, r.createElement(N.Ea, {
                         label: Object(o.d)("Item Image", "DevDropsItemForm"),
                         hint: Object(o.d)("Required image size is 120x120. Please note that it may take up to 15 minutes for image changes to take effect.", "DevDropsItemForm")
-                    }, n, r.createElement(N.Wa, {
+                    }, n, r.createElement(N.Xa, {
                         padding: {
                             top: 1
                         },
                         display: N.X.Flex,
                         alignItems: N.f.Center
                     }, r.createElement(N.z, {
-                        "data-test-selector": _e.FileButton,
+                        "data-test-selector": he.FileButton,
                         onClick: this.onUploadButtonClick
-                    }, Object(o.d)("Upload Image", "DevDropsItemForm")), this.state.image && r.createElement(N.Wa, {
+                    }, Object(o.d)("Upload Image", "DevDropsItemForm")), this.state.image && r.createElement(N.Xa, {
                         padding: {
                             x: 1
                         }
                     }, r.createElement(N.W, {
                         color: N.O.Alt
-                    }, this.state.image.name))))), this.state.itemId && r.createElement(N.Wa, {
+                    }, this.state.image.name))))), this.state.itemId && r.createElement(N.Xa, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(N.Da, {
+                    }, r.createElement(N.Ea, {
                         label: Object(o.d)("Item ID", "DevDropsItemForm")
-                    }, r.createElement(N.Qa, {
-                        type: N.Sa.Text,
+                    }, r.createElement(N.Ra, {
+                        type: N.Ta.Text,
                         value: this.state.itemId
-                    }))), r.createElement(N.Wa, {
+                    }))), r.createElement(N.Xa, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(N.Da, {
+                    }, r.createElement(N.Ea, {
                         label: Object(o.d)("Localized Item Names", "DevDropsItemForm"),
                         hint: Object(o.d)("The name of the item a viewer will see for the reward.", "DevDropsItemForm")
                     }, Object.keys(this.state.translations).map(function(t) {
                         var n = o.a.locales.find(function(e) {
                             return e.locale === t
                         });
-                        if (n) return r.createElement(N.xb, {
+                        if (n) return r.createElement(N.yb, {
                             key: t,
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(N.Ia, null, r.createElement(N.P, {
+                        }, r.createElement(N.Ja, null, r.createElement(N.P, {
                             cols: 4
-                        }, r.createElement(N.Oa, {
+                        }, r.createElement(N.Pa, {
                             padding: .5
                         }, r.createElement(N.W, {
                             bold: !0
                         }, n.name))), r.createElement(N.P, {
                             cols: 8
-                        }, r.createElement(N.Wa, {
+                        }, r.createElement(N.Xa, {
                             display: N.X.Flex,
                             padding: {
                                 left: 2
                             },
                             alignItems: N.f.Center,
-                            justifyContent: N.Va.Between
+                            justifyContent: N.Wa.Between
                         }, r.createElement(N.W, null, e.state.translations[t]), r.createElement(N.z, {
                             "data-locale": t,
                             onClick: e.removeLocalizedName,
                             type: N.F.Hollow
                         }, Object(o.d)("Remove", "DevDropsItemForm"))))))
-                    }), r.createElement(N.Ia, null, r.createElement(N.P, {
+                    }), r.createElement(N.Ja, null, r.createElement(N.P, {
                         cols: 4
-                    }, r.createElement(N.tb, {
+                    }, r.createElement(N.ub, {
                         refDelegate: this.setLocaleSelectorRef
                     }, o.a.locales.filter(function(t) {
                         return !e.state.translations[t.locale]
@@ -3793,43 +3774,43 @@
                         }, e.name)
                     }))), r.createElement(N.P, {
                         cols: 8
-                    }, r.createElement(N.Wa, {
+                    }, r.createElement(N.Xa, {
                         display: N.X.Flex,
                         padding: {
                             left: 1
                         }
-                    }, r.createElement(N.Wa, {
+                    }, r.createElement(N.Xa, {
                         flexGrow: 1,
                         padding: {
                             right: 2
                         }
-                    }, r.createElement(N.Qa, {
+                    }, r.createElement(N.Ra, {
                         refDelegate: this.setLocalizedNameInputRef,
-                        type: N.Sa.Text,
+                        type: N.Ta.Text,
                         placeholder: Object(o.d)("Localized Item Name", "DevDropsItemForm")
                     })), r.createElement(N.z, {
                         onClick: this.addLocalizedName
-                    }, Object(o.d)("Add", "DevDropsItemForm"))))))), r.createElement(N.Wa, {
+                    }, Object(o.d)("Add", "DevDropsItemForm"))))))), r.createElement(N.Xa, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(N.Da, {
+                    }, r.createElement(N.Ea, {
                         label: Object(o.d)("Default Locale for Item Name", "DevDropsItemForm"),
                         hint: Object(o.d)("The locale to use when no value is provided in the viewer's locale.", "DevDropsItemForm")
-                    }, r.createElement(N.tb, {
+                    }, r.createElement(N.ub, {
                         value: this.state.defaultLocale,
                         onChange: this.setDefaultLocale,
-                        "data-test-selector": _e.DefaultLocaleSelect
+                        "data-test-selector": he.DefaultLocaleSelect
                     }, o.a.locales.map(function(e) {
                         return r.createElement("option", {
                             key: e.locale,
                             value: e.locale
                         }, e.name)
-                    })))), r.createElement(N.Wa, {
+                    })))), r.createElement(N.Xa, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(N.Wa, {
+                    }, r.createElement(N.Xa, {
                         display: N.X.InlineBlock,
                         padding: {
                             right: 1
@@ -3838,7 +3819,7 @@
                         type: N.F.Hollow,
                         onClick: this.onClickCancel
                     }, Object(o.d)("Cancel", "DevDropsItemForm"))), r.createElement(N.z, {
-                        "data-test-selector": _e.SubmitButton,
+                        "data-test-selector": he.SubmitButton,
                         disabled: !this.state.valid,
                         onClick: this.onSubmit,
                         state: t
@@ -3847,9 +3828,9 @@
             }(r.Component);
             var Ie, De, Ne = Object(Y.connect)(null, function(e) {
                     return Object(l.bindActionCreators)({
-                        showModal: K.d
+                        showModal: X.d
                     }, e)
-                })(fe),
+                })(Te),
                 Oe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -3861,9 +3842,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 13, , 14]), t = g(this.props.company), [4, Object(D.a)(T.a.CreateItem)];
+                                            return a.trys.push([0, 13, , 14]), t = g(this.props.company), [4, Object(D.a)(f.a.CreateItem)];
                                         case 1:
-                                            return (n = a.sent()) ? (r = I(e, t, n), s = d.a + "/kraken/accounts/" + t + "/items", [4, Object(h.a)(s, {
+                                            return (n = a.sent()) ? (r = I(e, t, n), s = d.a + "/kraken/accounts/" + t + "/items", [4, Object(_.a)(s, {
                                                 method: "POST",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -3933,10 +3914,10 @@
                                     return a.__generator(this, function(a) {
                                         switch (a.label) {
                                             case 0:
-                                                return [4, Object(D.a)(T.a.PostItemImageUrl)];
+                                                return [4, Object(D.a)(f.a.PostItemImageUrl)];
                                             case 1:
                                                 if (t = a.sent()) return n = {
-                                                    imageType: y.r.ITEM,
+                                                    imageType: M.r.ITEM,
                                                     itemID: e,
                                                     serviceID: g(this.props.company),
                                                     token: t
@@ -3951,20 +3932,20 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(N.Wa, {
+                        return r.createElement(N.Xa, {
                             padding: {
                                 top: 1
                             }
-                        }, r.createElement(N.Wa, {
+                        }, r.createElement(N.Xa, {
                             display: N.X.Flex,
-                            justifyContent: N.Va.Between
+                            justifyContent: N.Wa.Between
                         }, r.createElement(N.W, {
-                            type: N.Nb.H2
+                            type: N.Ob.H2
                         }, Object(o.d)("Drops Item", "DevDropsCreateItem")), r.createElement(N.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
                             type: N.F.Hollow
-                        }, Object(o.d)("Need Help?", "DevDropsCreateItem"))), r.createElement(N.Ia, null, r.createElement(N.P, {
+                        }, Object(o.d)("Need Help?", "DevDropsCreateItem"))), r.createElement(N.Ja, null, r.createElement(N.P, {
                             cols: {
                                 default: 12,
                                 md: 5
@@ -3977,12 +3958,12 @@
                         }))))
                     }, t
                 }(r.Component),
-                Se = Object(l.compose)(Object(_.b)("DevDropsCreateItemPage", {
+                Se = Object(l.compose)(Object(h.b)("DevDropsCreateItemPage", {
                     autoReportInteractive: !0,
                     destination: E.a.DevSiteDropsCreateItem
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsCreateItem
-                }), me(), Object(u.a)(), M.a)(Oe),
+                }), me(), Object(u.a)(), y.a)(Oe),
                 Re = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -4022,7 +4003,7 @@
                                         case 0:
                                             e = g(this.props.company), n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 3, , 4]), [4, x({
+                                            return n.trys.push([1, 3, , 4]), [4, W({
                                                 activeOnly: !0,
                                                 companyId: e,
                                                 limit: 100
@@ -4044,9 +4025,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 6, , 7]), e = d.a + "/kraken/campaigns/" + this.props.match.params.campaignId, [4, Object(D.a)(T.a.GetCampaignById)];
+                                            return a.trys.push([0, 6, , 7]), e = d.a + "/kraken/campaigns/" + this.props.match.params.campaignId, [4, Object(D.a)(f.a.GetCampaignById)];
                                         case 1:
-                                            return (t = a.sent()) ? [4, Object(h.a)(e, {
+                                            return (t = a.sent()) ? [4, Object(_.a)(e, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": t
                                                 }
@@ -4074,9 +4055,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 10, , 11]), t = g(this.props.company), n = f(e, String(t)), [4, Object(D.a)(T.a.PutCampaign)];
+                                            return a.trys.push([0, 10, , 11]), t = g(this.props.company), n = T(e, String(t)), [4, Object(D.a)(f.a.PutCampaign)];
                                         case 1:
-                                            return (r = a.sent()) ? (s = d.a + "/kraken/accounts/" + t + "/campaigns/" + e.id, [4, Object(h.a)(s, {
+                                            return (r = a.sent()) ? (s = d.a + "/kraken/accounts/" + t + "/campaigns/" + e.id, [4, Object(_.a)(s, {
                                                 method: "PUT",
                                                 body: JSON.stringify(n),
                                                 headers: {
@@ -4125,11 +4106,11 @@
                                     switch (a.label) {
                                         case 0:
                                             if (!this.state.campaign) throw new Error("Failed to upload");
-                                            return [4, Object(D.a)(T.a.PostCampaignImageUrl)];
+                                            return [4, Object(D.a)(f.a.PostCampaignImageUrl)];
                                         case 1:
                                             if (e = a.sent()) return t = g(this.props.company), n = {
                                                 campaignID: this.state.campaign.id,
-                                                imageType: y.r.LINK_NOTIFICATION,
+                                                imageType: M.r.LINK_NOTIFICATION,
                                                 serviceID: t,
                                                 token: e
                                             }, [2, this.props.createUploadURLMutation(n)];
@@ -4176,22 +4157,22 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return this.state.gamesLoaded && this.state.campaign ? r.createElement(N.Wa, {
+                        return this.state.gamesLoaded && this.state.campaign ? r.createElement(N.Xa, {
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(N.Wa, {
+                        }, r.createElement(N.Xa, {
                             display: N.X.Flex,
-                            justifyContent: N.Va.Between
+                            justifyContent: N.Wa.Between
                         }, r.createElement(N.W, {
-                            type: N.Nb.H2
+                            type: N.Ob.H2
                         }, Object(o.d)("Drops Campaign: {title}", {
                             title: this.state.campaign.item_name
                         }, "DevDropsEditCampaign")), r.createElement(N.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
                             type: N.F.Hollow
-                        }, Object(o.d)("Need Help?", "DevDropsEditCampaign"))), r.createElement(N.Ia, null, r.createElement(N.P, {
+                        }, Object(o.d)("Need Help?", "DevDropsEditCampaign"))), r.createElement(N.Ja, null, r.createElement(N.P, {
                             cols: {
                                 default: 12,
                                 md: 5
@@ -4206,14 +4187,14 @@
                             onFormChange: this.onFormChange,
                             onSubmit: this.onSubmit,
                             updateSuccess: this.state.updateSuccess
-                        })))) : r.createElement(N.Ya, null)
+                        })))) : r.createElement(N.Za, null)
                     }, t
                 }(r.Component),
-                Ae = Object(l.compose)(Object(_.b)("DevDropsEditCampaignPage", {
+                Ae = Object(l.compose)(Object(h.b)("DevDropsEditCampaignPage", {
                     destination: E.a.DevSiteDropsEditCampaign
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsEditCampaign
-                }), me(), Object(u.a)(), M.a)(Re);
+                }), me(), Object(u.a)(), y.a)(Re);
             ! function(e) {
                 e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
             }(Ie || (Ie = {})),
@@ -4231,9 +4212,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 6, , 7]), e = g(this.props.company), t = d.a + "/kraken/accounts/" + e + "/items/" + this.props.match.params.itemId, [4, Object(D.a)(T.a.GetItemByID)];
+                                            return a.trys.push([0, 6, , 7]), e = g(this.props.company), t = d.a + "/kraken/accounts/" + e + "/items/" + this.props.match.params.itemId, [4, Object(D.a)(f.a.GetItemByID)];
                                         case 1:
-                                            return (n = a.sent()) ? [4, Object(h.a)(t, {
+                                            return (n = a.sent()) ? [4, Object(_.a)(t, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": n
                                                 }
@@ -4263,9 +4244,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 10, , 11]), t = g(this.props.company), [4, Object(D.a)(T.a.UpdateItem)];
+                                            return a.trys.push([0, 10, , 11]), t = g(this.props.company), [4, Object(D.a)(f.a.UpdateItem)];
                                         case 1:
-                                            return (n = a.sent()) ? (r = I(e, String(t), n), s = d.a + "/kraken/accounts/" + t + "/items/" + e.item_id, [4, Object(h.a)(s, {
+                                            return (n = a.sent()) ? (r = I(e, String(t), n), s = d.a + "/kraken/accounts/" + t + "/items/" + e.item_id, [4, Object(_.a)(s, {
                                                 method: "PUT",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -4316,7 +4297,7 @@
                                     switch (a.label) {
                                         case 0:
                                             if (!this.state.item) throw new Error("Failed to upload");
-                                            return [4, Object(D.a)(T.a.PostItemImageUrl)];
+                                            return [4, Object(D.a)(f.a.PostItemImageUrl)];
                                         case 1:
                                             if (e = a.sent()) return t = g(this.props.company), n = {
                                                 imageType: Ie.ITEM,
@@ -4367,22 +4348,22 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return this.state.item ? r.createElement(N.Wa, {
+                        return this.state.item ? r.createElement(N.Xa, {
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(N.Wa, {
+                        }, r.createElement(N.Xa, {
                             display: N.X.Flex,
-                            justifyContent: N.Va.Between
+                            justifyContent: N.Wa.Between
                         }, r.createElement(N.W, {
-                            type: N.Nb.H2
+                            type: N.Ob.H2
                         }, Object(o.d)("Drops Item: {name}", {
                             name: this.state.item.Translations[this.state.item.DefaultLanguage]
                         }, "DevDropsEditItem")), r.createElement(N.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
                             type: N.F.Hollow
-                        }, Object(o.d)("Need Help?", "DevDropsEditItem"))), r.createElement(N.Ia, null, r.createElement(N.P, {
+                        }, Object(o.d)("Need Help?", "DevDropsEditItem"))), r.createElement(N.Ja, null, r.createElement(N.P, {
                             cols: {
                                 default: 12,
                                 md: 5
@@ -4395,26 +4376,26 @@
                             onFormChange: this.onFormChange,
                             errorMessage: this.state.errorMessage,
                             updateSuccess: this.state.updateSuccess
-                        })))) : r.createElement(N.Ya, null)
+                        })))) : r.createElement(N.Za, null)
                     }, t
                 }(r.Component),
-                ve = Object(l.compose)(Object(_.b)("DevDropsEditItemPage", {
+                ve = Object(l.compose)(Object(h.b)("DevDropsEditItemPage", {
                     destination: E.a.DevSiteDropsEditItem
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsEditItems
-                }), me(), Object(u.a)(), M.a)(be),
+                }), me(), Object(u.a)(), y.a)(be),
                 Le = function(e) {
                     var t = Object(O.b)(R(e.item.createdAt), "MM/DD/YYYY, hh:mm a"),
                         n = Object(O.b)(R(e.item.updatedAt), "MM/DD/YYYY, hh:mm a"),
                         a = "/console/drops/items/" + e.item.id;
-                    return r.createElement(N.Fb, null, r.createElement(N.Cb, null, r.createElement(N.U, {
+                    return r.createElement(N.Gb, null, r.createElement(N.Db, null, r.createElement(N.U, {
                         linkTo: a
-                    }, e.item.translations[e.item.defaultLanguage])), r.createElement(N.Cb, null, e.item.id), r.createElement(N.Cb, null, t), r.createElement(N.Cb, null, n), r.createElement(N.Cb, null, e.item.active.toString()))
+                    }, e.item.translations[e.item.defaultLanguage])), r.createElement(N.Db, null, e.item.id), r.createElement(N.Db, null, t), r.createElement(N.Db, null, n), r.createElement(N.Db, null, e.item.active.toString()))
                 };
             ! function(e) {
                 e[e.Enabled = 0] = "Enabled", e[e.CreationDate = 1] = "CreationDate", e[e.UpdatedDate = 2] = "UpdatedDate", e[e.Name = 3] = "Name"
             }(Ce || (Ce = {}));
-            var Ue, Pe = function(e) {
+            var Pe, Ue = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.handleClickNext = function() {
@@ -4476,23 +4457,23 @@
                                 n.props.onSort(Ce.UpdatedDate, n.state.sortingUpdatedDate)
                             })
                         }, n.toggleSorting = function(e) {
-                            return e === N.ub.Default || e === N.ub.Ascending ? N.ub.Descending : N.ub.Ascending
+                            return e === N.vb.Default || e === N.vb.Ascending ? N.vb.Descending : N.vb.Ascending
                         }, n.state = {
-                            sortingName: N.ub.Default,
-                            sortingEnabled: N.ub.Default,
-                            sortingCreationDate: N.ub.Default,
-                            sortingUpdatedDate: N.ub.Default
+                            sortingName: N.vb.Default,
+                            sortingEnabled: N.vb.Default,
+                            sortingCreationDate: N.vb.Default,
+                            sortingUpdatedDate: N.vb.Default
                         }, n
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.renderCampaignItems();
-                        return r.createElement(N.Wa, null, r.createElement(N.Wa, {
+                        return r.createElement(N.Xa, null, r.createElement(N.Xa, {
                             display: N.X.Flex,
-                            justifyContent: N.Va.Between,
+                            justifyContent: N.Wa.Between,
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(N.ab, {
+                        }, r.createElement(N.bb, {
                             currentPage: this.props.currentPage,
                             totalPages: this.props.maxPages,
                             onClickIndex: this.handleClickIndex,
@@ -4503,29 +4484,29 @@
                         }), r.createElement(N.z, {
                             onClick: Object(c.c)(c.a.CreateDropsItemProcessStart),
                             linkTo: "/console/drops/items/create",
-                            icon: N.ob.Plus
-                        }, Object(o.d)("Create Drops Item", "DevDropsItems"))), r.createElement(N.Ab, null, r.createElement(N.Db, null, r.createElement(N.Eb, {
+                            icon: N.pb.Plus
+                        }, Object(o.d)("Create Drops Item", "DevDropsItems"))), r.createElement(N.Bb, null, r.createElement(N.Eb, null, r.createElement(N.Fb, {
                             label: Object(o.d)("Item Name", "DevDropsItems"),
                             sorting: this.state.sortingName,
                             onClick: this.sortName
-                        }), r.createElement(N.Eb, {
+                        }), r.createElement(N.Fb, {
                             label: Object(o.d)("Item ID", "DevDropsItems")
-                        }), r.createElement(N.Eb, {
+                        }), r.createElement(N.Fb, {
                             label: Object(o.d)("Creation Date (UTC)", "DevDropsItems"),
                             sorting: this.state.sortingCreationDate,
                             onClick: this.sortCreationDate
-                        }), r.createElement(N.Eb, {
+                        }), r.createElement(N.Fb, {
                             label: Object(o.d)("Last Updated Date (UTC)", "DevDropsItems"),
                             sorting: this.state.sortingUpdatedDate,
                             onClick: this.sortUpdatedDate
-                        }), r.createElement(N.Eb, {
+                        }), r.createElement(N.Fb, {
                             label: Object(o.d)("Enabled", "DevDropsItems"),
                             sorting: this.state.sortingEnabled,
                             onClick: this.sortEnabled
-                        })), r.createElement(N.Bb, null, e)))
+                        })), r.createElement(N.Cb, null, e)))
                     }, t
                 }(r.Component),
-                Me = function(e) {
+                ye = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4543,7 +4524,7 @@
                                             }), [2];
                                             t = g(this.props.company), a.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, x({
+                                            return a.trys.push([1, 3, , 4]), [4, W({
                                                 companyId: t,
                                                 prevCursor: n,
                                                 nextCursor: r
@@ -4569,28 +4550,28 @@
                             var a = t.state.pageCursors[t.state.currentPage].items;
                             switch (e) {
                                 case Ce.Name:
-                                    a = n === N.ub.Ascending ? a.sort(function(e, t) {
+                                    a = n === N.vb.Ascending ? a.sort(function(e, t) {
                                         return e.translations[e.defaultLanguage].localeCompare(t.translations[t.defaultLanguage])
                                     }) : a.sort(function(e, t) {
                                         return t.translations[t.defaultLanguage].localeCompare(e.translations[e.defaultLanguage])
                                     });
                                     break;
                                 case Ce.Enabled:
-                                    a = n === N.ub.Ascending ? a.sort(function(e, t) {
+                                    a = n === N.vb.Ascending ? a.sort(function(e, t) {
                                         return Number(e.active) - Number(t.active)
                                     }) : a.sort(function(e, t) {
                                         return Number(t.active) - Number(e.active)
                                     });
                                     break;
                                 case Ce.CreationDate:
-                                    a = n === N.ub.Ascending ? a.sort(function(e, t) {
+                                    a = n === N.vb.Ascending ? a.sort(function(e, t) {
                                         return e.createdAt.getTime() - t.createdAt.getTime()
                                     }) : a.sort(function(e, t) {
                                         return t.createdAt.getTime() - e.createdAt.getTime()
                                     });
                                     break;
                                 case Ce.UpdatedDate:
-                                    a = n === N.ub.Ascending ? a.sort(function(e, t) {
+                                    a = n === N.vb.Ascending ? a.sort(function(e, t) {
                                         return e.updatedAt.getTime() - t.updatedAt.getTime()
                                     }) : a.sort(function(e, t) {
                                         return t.updatedAt.getTime() - e.updatedAt.getTime()
@@ -4604,7 +4585,7 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.pageCursors[this.state.currentPage];
-                        return e ? r.createElement(Pe, {
+                        return e ? r.createElement(Ue, {
                             items: e.items,
                             onSort: this.onSort,
                             onClickPagination: this.getItems,
@@ -4626,13 +4607,13 @@
                         })
                     }, t
                 }(r.Component),
-                ye = Object(l.compose)(Object(_.b)("DevDropsItemsPage", {
+                Me = Object(l.compose)(Object(h.b)("DevDropsItemsPage", {
                     destination: E.a.DevSiteDropsItems
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsItems
-                }), Object(u.a)())(Me),
+                }), Object(u.a)())(ye),
                 Fe = n("mLw1");
-            (Ue || (Ue = {})).SubmitButton = "dev-drops-settings-submit";
+            (Pe || (Pe = {})).SubmitButton = "dev-drops-settings-submit";
             var je = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -4680,7 +4661,7 @@
                         }, t.renderSubmitButton = function() {
                             var e = N.E.Default;
                             return t.state.isSubmitting ? e = N.E.Loading : t.state.submitSuccess && (e = N.E.Success), r.createElement(N.z, {
-                                "data-test-selector": Ue.SubmitButton,
+                                "data-test-selector": Pe.SubmitButton,
                                 disabled: t.state.submitSuccess,
                                 onClick: t.saveChanges,
                                 state: e
@@ -4702,53 +4683,53 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this.renderSubmitButton();
-                        return r.createElement(N.Wa, {
+                        return r.createElement(N.Xa, {
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(N.Oa, {
+                        }, r.createElement(N.Pa, {
                             display: N.X.Flex,
-                            justifyContent: N.Va.Between,
+                            justifyContent: N.Wa.Between,
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement("header", null, r.createElement(N.Wa, null, r.createElement(N.W, {
-                            type: N.Nb.H2
+                        }, r.createElement("header", null, r.createElement(N.Xa, null, r.createElement(N.W, {
+                            type: N.Ob.H2
                         }, Object(o.d)("VHS Configuration for Drops", "DevDropsSettings"))), r.createElement(N.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
                             type: N.F.Hollow
-                        }, Object(o.d)("Need Help?", "DevDropsSettings")))), r.createElement(N.Ia, null, r.createElement(N.P, {
+                        }, Object(o.d)("Need Help?", "DevDropsSettings")))), r.createElement(N.Ja, null, r.createElement(N.P, {
                             cols: {
                                 default: 12,
                                 md: 8,
                                 lg: 5
                             }
-                        }, r.createElement(N.Wa, {
+                        }, r.createElement(N.Xa, {
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(N.Wa, {
+                        }, r.createElement(N.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(N.Da, {
+                        }, r.createElement(N.Ea, {
                             label: Object(o.d)("Client ID", "DevDropsSettings")
-                        }, r.createElement(N.Qa, {
-                            type: N.Sa.Text,
+                        }, r.createElement(N.Ra, {
+                            type: N.Ta.Text,
                             value: this.state.clientId,
                             onChange: this.setClientId
-                        }))), r.createElement(N.Wa, {
+                        }))), r.createElement(N.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(N.Da, {
+                        }, r.createElement(N.Ea, {
                             label: Object(o.d)("Endpoint", "DevDropsSettings")
-                        }, r.createElement(N.Qa, {
-                            type: N.Sa.Text,
+                        }, r.createElement(N.Ra, {
+                            type: N.Ta.Text,
                             value: this.state.endpoint,
                             onChange: this.setEndpoint
-                        }))), r.createElement(N.Wa, {
+                        }))), r.createElement(N.Xa, {
                             margin: {
                                 bottom: 1
                             }
@@ -4759,8 +4740,8 @@
                         }))), e)))
                     }, t
                 }(r.Component),
-                ke = Object(l.compose)(Object(_.b)("DevDropsSettingsComponent"))(je),
-                Ge = function(e) {
+                ke = Object(l.compose)(Object(h.b)("DevDropsSettingsComponent"))(je),
+                we = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4776,7 +4757,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return [4, Object(D.a)(T.a.PutService)];
+                                            return [4, Object(D.a)(f.a.PutService)];
                                         case 1:
                                             if (!(t = a.sent())) return [3, 5];
                                             a.label = 2;
@@ -4787,7 +4768,7 @@
                                                 endpoint: e.endpoint,
                                                 readable_name: this.props.company.companyName,
                                                 sign_request: !1
-                                            }, [4, Object(h.a)(r, {
+                                            }, [4, Object(_.a)(r, {
                                                 body: JSON.stringify(s),
                                                 method: "PUT",
                                                 headers: {
@@ -4812,12 +4793,12 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return [4, Object(D.a)(T.a.GetService)];
+                                            return [4, Object(D.a)(f.a.GetService)];
                                         case 1:
                                             if (!(e = a.sent())) return [3, 7];
                                             a.label = 2;
                                         case 2:
-                                            return a.trys.push([2, 6, , 7]), t = g(this.props.company), n = d.a + "/kraken/service/" + t, [4, Object(h.a)(n, {
+                                            return a.trys.push([2, 6, , 7]), t = g(this.props.company), n = d.a + "/kraken/service/" + t, [4, Object(_.a)(n, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": e
                                                 }
@@ -4855,28 +4836,28 @@
                         })
                     }, t
                 }(r.Component),
-                we = Object(l.compose)(Object(_.b)("DevDropsSettingsPage", {
+                Ge = Object(l.compose)(Object(h.b)("DevDropsSettingsPage", {
                     autoReportInteractive: !0,
                     destination: E.a.DevSiteDropsSettings
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsSettings
-                }), Object(u.a)())(Ge),
+                }), Object(u.a)())(we),
                 Ve = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = "/console/drops/items";
-                        return r.createElement(N.Wa, null, r.createElement(N.Wa, {
+                        return r.createElement(N.Xa, null, r.createElement(N.Xa, {
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(N.zb, null, r.createElement(s.a, {
+                        }, r.createElement(N.Ab, null, r.createElement(s.a, {
                             path: "/console/drops",
                             exact: !0
                         }, function(e) {
                             var t = e.match;
-                            return r.createElement(N.yb, {
+                            return r.createElement(N.zb, {
                                 linkTo: "/console/drops",
                                 active: Boolean(t)
                             }, Object(o.d)("Campaign Manager", "DevDropsDashboardRoot"))
@@ -4885,7 +4866,7 @@
                             exact: !0
                         }, function(t) {
                             var n = t.match;
-                            return r.createElement(N.yb, {
+                            return r.createElement(N.zb, {
                                 linkTo: e,
                                 active: Boolean(n)
                             }, Object(o.d)("Item Manager", "DevDropsDashboardRoot"))
@@ -4894,7 +4875,7 @@
                             exact: !0
                         }, function(e) {
                             var t = e.match;
-                            return r.createElement(N.yb, {
+                            return r.createElement(N.zb, {
                                 onClick: Object(c.c)(c.a.ConfigureDropsSettings),
                                 linkTo: "/console/drops/settings",
                                 active: Boolean(t)
@@ -4902,15 +4883,15 @@
                         }))), r.createElement(i.a, null, r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops",
-                            component: P
+                            component: U
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: e,
-                            component: ye
+                            component: Me
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops/settings",
-                            component: we
+                            component: Ge
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops/items/create",
@@ -5675,7 +5656,7 @@
                             }
                             return this.props.loaded && !this.props.company ? r.createElement(i.a, {
                                 to: "/request-access"
-                            }) : r.createElement(u.Ya, null)
+                            }) : r.createElement(u.Za, null)
                         }, n.displayName = Object(o.a)(n.name, e), n
                     }(r.Component);
                     return Object(s.connect)(function(e) {

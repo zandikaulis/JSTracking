@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [115], {
+    [114], {
         DXJk: function(e, n) {
             var t = {
                 kind: "Document",
@@ -224,13 +224,13 @@
                             type: s.F.Hollow
                         }, Object(l.d)("Share", "ShareEvent"))), a.createElement(o.a, null, n, a.createElement(s.u, {
                             direction: this.props.balloonDirection
-                        }, a.createElement(s.Wa, {
+                        }, a.createElement(s.Xa, {
                             padding: 1
-                        }, a.createElement(s.Wa, {
+                        }, a.createElement(s.Xa, {
                             display: s.X.Flex,
-                            flexDirection: s.Z.Row,
-                            flexWrap: s.Aa.NoWrap,
-                            justifyContent: s.Va.Center
+                            flexDirection: s.Aa.Row,
+                            flexWrap: s.Ba.NoWrap,
+                            justifyContent: s.Wa.Center
                         }, a.createElement(r.a, {
                             type: r.b.Twitter,
                             text: this.props.title,
@@ -300,19 +300,19 @@
                     }
                     return i.__extends(n, e), n.prototype.render = function() {
                         return u.createElement(v.a, null, u.createElement(k.z, {
-                            icon: k.ob.More,
+                            icon: k.pb.More,
                             type: k.F.Hollow
                         }), u.createElement(k.u, {
                             direction: this.props.balloonDirection,
                             tailOffset: this.props.tailOffset
-                        }, u.createElement(k.Wa, {
+                        }, u.createElement(k.Xa, {
                             padding: {
                                 y: 1
                             }
-                        }, u.createElement(k.Ta, {
+                        }, u.createElement(k.Ua, {
                             disabled: !this.props.targetUser,
                             onClick: this.handleReportClick
-                        }, u.createElement(k.Wa, {
+                        }, u.createElement(k.Xa, {
                             padding: {
                                 x: 1,
                                 y: .5
@@ -889,8 +889,8 @@
                             n = Object(c.d)("Reminder Set", "FollowEvent");
                         if (this.props.small) {
                             var t = e,
-                                i = p.ob.Heart;
-                            return this.props.areNotificationsEnabled && (t = n, i = p.ob.FollowCheck), s.createElement(p.Qb, {
+                                i = p.pb.Heart;
+                            return this.props.areNotificationsEnabled && (t = n, i = p.pb.FollowCheck), s.createElement(p.Rb, {
                                 label: t,
                                 direction: this.props.tooltipDirection
                             }, s.createElement(p.A, {
@@ -903,7 +903,7 @@
                         return s.createElement(p.z, {
                             type: this.props.areNotificationsEnabled ? p.F.Success : p.F.Default,
                             onClick: this.handleButton,
-                            icon: this.props.areNotificationsEnabled ? p.ob.FollowCheck : p.ob.Heart,
+                            icon: this.props.areNotificationsEnabled ? p.pb.FollowCheck : p.pb.Heart,
                             ariaLabel: this.props.areNotificationsEnabled ? n : e
                         }, this.props.areNotificationsEnabled ? n : e)
                     }, n.prototype.createOptimisticResponse = function(e) {
@@ -990,13 +990,13 @@
                         o = Object(v.b)(e.event.id),
                         d = !(!e.event.self || !e.event.self.isFollowing),
                         s = e.upwardBalloons ? b.v.Top : b.v.Bottom,
-                        c = e.upwardBalloons ? b.Sb.Top : b.Sb.Bottom,
+                        c = e.upwardBalloons ? b.Tb.Top : b.Tb.Bottom,
                         u = e.event.game && e.event.game.displayName || "-",
                         m = e.channel && (e.channel.displayName || e.channel.login) || "-",
                         E = null,
                         N = null,
                         y = null;
-                    return e.channel && e.channel.id && e.channel.login && (a && (E = l.createElement(b.Wa, {
+                    return e.channel && e.channel.id && e.channel.login && (a && (E = l.createElement(b.Xa, {
                         margin: {
                             right: 1
                         }
@@ -1008,7 +1008,7 @@
                         channelID: e.channel.id,
                         eventLocation: h.a.ChannelEvents,
                         tooltipDirection: c
-                    }))), N = l.createElement(b.Wa, {
+                    }))), N = l.createElement(b.Xa, {
                         margin: {
                             right: 1
                         }
@@ -1026,7 +1026,7 @@
                         },
                         eventID: e.event.id,
                         balloonDirection: s
-                    })), l.createElement(b.xb, {
+                    })), l.createElement(b.yb, {
                         margin: {
                             y: 1
                         },
@@ -1034,7 +1034,7 @@
                         elevation: 1
                     }, l.createElement(b.G, {
                         row: !0
-                    }, l.createElement(b.Oa, {
+                    }, l.createElement(b.Pa, {
                         flexShrink: 0
                     }, l.createElement(b.U, {
                         to: o
@@ -1045,18 +1045,18 @@
                         alt: e.event.title
                     }, l.createElement(p.a, {
                         date: n
-                    })))), l.createElement(b.H, null, l.createElement(b.Wa, {
+                    })))), l.createElement(b.H, null, l.createElement(b.Xa, {
                         margin: {
                             x: 2
                         }
-                    }, l.createElement(b.Oa, {
+                    }, l.createElement(b.Pa, {
                         margin: {
                             bottom: 1
                         }
                     }, l.createElement(b.U, {
                         to: o
                     }, l.createElement(b.W, {
-                        type: b.Nb.H4
+                        type: b.Ob.H4
                     }, e.event.title))), l.createElement(b.W, {
                         color: b.O.Alt2
                     }, function(e, n) {
@@ -1089,12 +1089,12 @@
                     }, Object(r.d)("{channelName} streaming {gameName}", {
                         channelName: m,
                         gameName: u
-                    }, "EventListCard")), l.createElement(b.Wa, {
+                    }, "EventListCard")), l.createElement(b.Xa, {
                         display: b.X.Flex,
                         margin: {
                             top: 2
                         }
-                    }, E, N, l.createElement(b.Wa, {
+                    }, E, N, l.createElement(b.Xa, {
                         margin: {
                             right: 1
                         }
@@ -1176,30 +1176,30 @@
                     }) : n = Object(r.d)("Nothing here yet", "ChannelEventsSchedule"), a = e.data.user.eventLeaves.pageInfo.hasNextPage;
                     else if (e.data.error) n = Object(r.d)("Error loading events", "ChannelEventsSchedule");
                     else if (e.data.loading && (!e.data.user || !e.data.user.eventLeaves)) return l.createElement(N.a, null);
-                    return null !== n && (t = l.createElement(b.Wa, {
+                    return null !== n && (t = l.createElement(b.Xa, {
                         margin: {
                             top: 5
                         },
                         display: b.X.Flex,
-                        flexDirection: b.Z.Row,
-                        justifyContent: b.Va.Center
+                        flexDirection: b.Aa.Row,
+                        justifyContent: b.Wa.Center
                     }, l.createElement(b.W, {
-                        type: b.Nb.H4,
+                        type: b.Ob.H4,
                         color: b.O.Alt2,
                         italic: !0
-                    }, n))), l.createElement(b.Wa, null, i, t, e.data.loading && l.createElement(b.Ya, {
+                    }, n))), l.createElement(b.Xa, null, i, t, e.data.loading && l.createElement(b.Za, {
                         fillContent: !0
                     }), l.createElement(o.a, {
                         loadMore: e.loadMore,
                         enabled: a
                     }))
                 });
-            var O = Object(s.connect)(function(e) {
+            var C = Object(s.connect)(function(e) {
                     return {
                         isLoggedIn: Object(c.f)(e)
                     }
                 })(w),
-                C = function(e) {
+                O = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.handleToggleChange = function(e) {
@@ -1212,31 +1212,31 @@
                         var e = this.props.channelLogin,
                             n = a.parse(this.props.searchQuery),
                             t = Object(y.b)(n.filter);
-                        return l.createElement(b.Wa, {
+                        return l.createElement(b.Xa, {
                             display: b.X.Flex,
                             flexGrow: 1,
                             fullHeight: !0
-                        }, l.createElement(b.Oa, {
+                        }, l.createElement(b.Pa, {
                             fullWidth: !0
-                        }, l.createElement(o.b, null, l.createElement(b.Wa, {
+                        }, l.createElement(o.b, null, l.createElement(b.Xa, {
                             fullWidth: !0,
                             padding: {
                                 y: 2,
                                 x: 3
                             }
-                        }, l.createElement(b.rb, null, l.createElement(b.sb, {
+                        }, l.createElement(b.sb, null, l.createElement(b.tb, {
                             name: "events-toggle",
                             label: Object(r.d)("Future Events", "ChannelEventsPage"),
                             defaultChecked: t === y.a.Future,
                             onChange: this.handleToggleChange,
                             value: y.a.Future
-                        }), l.createElement(b.sb, {
+                        }), l.createElement(b.tb, {
                             name: "events-toggle",
                             label: Object(r.d)("Past Events", "ChannelEventsPage"),
                             defaultChecked: t === y.a.Past,
                             onChange: this.handleToggleChange,
                             value: y.a.Past
-                        })), l.createElement(O, {
+                        })), l.createElement(C, {
                             filter: t,
                             channelLogin: e
                         })))))
@@ -1244,9 +1244,9 @@
                 }(l.Component),
                 D = Object(d.b)("ChannelEventsContent", {
                     autoReportInteractive: !0
-                })(C);
+                })(O);
             t.d(n, "ChannelEventsContentComponent", function() {
-                return C
+                return O
             }), t.d(n, "ChannelEventsContent", function() {
                 return D
             })
@@ -1263,34 +1263,34 @@
                         t = Object(a.c)(e.date, {
                             day: "numeric"
                         });
-                    return i.createElement(l.xb, {
+                    return i.createElement(l.yb, {
                         background: l.r.Base,
                         elevation: 2,
                         display: l.X.Flex,
-                        flexDirection: l.Z.Column,
+                        flexDirection: l.Aa.Column,
                         className: "event-calendar-date",
                         margin: {
                             top: .5,
                             left: .5
                         },
-                        position: l.eb.Absolute,
+                        position: l.fb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
-                        flexWrap: l.Aa.NoWrap
-                    }, i.createElement(l.xb, {
+                        flexWrap: l.Ba.NoWrap
+                    }, i.createElement(l.yb, {
                         className: "event-calendar-date__month",
                         display: l.X.Flex,
-                        justifyContent: l.Va.Center,
+                        justifyContent: l.Wa.Center,
                         background: l.r.AccentAlt2
                     }, i.createElement(l.W, {
-                        fontSize: l.Ba.Size6,
-                        transform: l.Mb.Uppercase,
+                        fontSize: l.Ca.Size6,
+                        transform: l.Nb.Uppercase,
                         color: l.O.Overlay
-                    }, n)), i.createElement(l.Wa, {
+                    }, n)), i.createElement(l.Xa, {
                         display: l.X.Flex,
-                        justifyContent: l.Va.Center
+                        justifyContent: l.Wa.Center
                     }, i.createElement(l.W, {
-                        fontSize: l.Ba.Size3,
+                        fontSize: l.Ca.Size3,
                         color: l.O.Base
                     }, t)))
                 });

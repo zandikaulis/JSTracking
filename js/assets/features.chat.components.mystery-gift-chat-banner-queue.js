@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [178], {
+    [176], {
         "/2Fp": function(e, t) {
             var n = {
                 kind: "Document",
@@ -171,7 +171,7 @@
                                 displayName: r.createElement(v.W, {
                                     bold: !0,
                                     color: v.O.Link,
-                                    type: v.Nb.Span
+                                    type: v.Ob.Span
                                 }, Object(m.a)(n, e)),
                                 mysteryGiftCount: t.props.mysteryGiftCount,
                                 tier: i
@@ -190,14 +190,14 @@
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.props.mysteryGiftCount !== e.mysteryGiftCount && (this.bannerDuration = 1e3 * f(this.props.mysteryGiftCount), this.start = Date.now())
                     }, t.prototype.render = function() {
-                        return r.createElement(r.Fragment, null, r.createElement(v.Wa, {
+                        return r.createElement(r.Fragment, null, r.createElement(v.Xa, {
                             alignItems: v.f.Center,
                             display: v.X.Flex,
                             padding: {
                                 x: 2,
                                 y: 1
                             }
-                        }, r.createElement(v.Wa, {
+                        }, r.createElement(v.Xa, {
                             padding: {
                                 right: 1
                             }
@@ -224,7 +224,7 @@
                     }
                 }), Object(g.b)("MysteryGiftChatBanner"))(w),
                 T = function(e) {
-                    return 0 === e.purchases.length ? null : r.createElement(v.xb, {
+                    return 0 === e.purchases.length ? null : r.createElement(v.yb, {
                         background: v.r.Base,
                         fullWidth: !0
                     }, e.purchases.slice(0, 2).map(function(t) {

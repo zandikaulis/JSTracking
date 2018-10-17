@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [146], {
+    [145], {
         "+/wI": function(e, n, t) {
             "use strict";
             var i = t("mrSG"),
@@ -18,9 +18,9 @@
                         t = e.extensionClientID,
                         o = e.extensionVersion,
                         s = e.login;
-                    return a.createElement(p.Wa, null, a.createElement(p.W, {
-                        type: p.Nb.H5
-                    }, Object(d.d)("Extension Installed Successfully!", "ExtensionInstalledModal")), a.createElement(p.xb, {
+                    return a.createElement(p.Xa, null, a.createElement(p.W, {
+                        type: p.Ob.H5
+                    }, Object(d.d)("Extension Installed Successfully!", "ExtensionInstalledModal")), a.createElement(p.yb, {
                         borderTop: !0,
                         borderBottom: !0,
                         padding: {
@@ -29,14 +29,14 @@
                         margin: {
                             y: 1
                         }
-                    }, a.createElement(p.W, null, Object(d.d)("Your extension will not display on your page until it is activated on the Extensions page.", "ExtensionInstalledModal")), a.createElement(p.Wa, {
+                    }, a.createElement(p.W, null, Object(d.d)("Your extension will not display on your page until it is activated on the Extensions page.", "ExtensionInstalledModal")), a.createElement(p.Xa, {
                         margin: {
                             y: 1
                         }
-                    }, a.createElement(p.W, null, Object(d.d)("Your extension may require additional configuration before it can be activated.", "ExtensionInstalledModal"))), a.createElement(p.W, null, Object(d.d)("Would you like to configure this extension now?", "ExtensionInstalledModal"))), a.createElement(p.Wa, {
+                    }, a.createElement(p.W, null, Object(d.d)("Your extension may require additional configuration before it can be activated.", "ExtensionInstalledModal"))), a.createElement(p.W, null, Object(d.d)("Would you like to configure this extension now?", "ExtensionInstalledModal"))), a.createElement(p.Xa, {
                         display: p.X.Flex,
-                        justifyContent: p.Va.Center
-                    }, a.createElement(p.Wa, {
+                        justifyContent: p.Wa.Center
+                    }, a.createElement(p.Xa, {
                         padding: {
                             right: 1
                         }
@@ -316,20 +316,20 @@
                 v = t("OzNJ"),
                 g = t("Ue10"),
                 h = function(e) {
-                    return e.type === v.b.Bits ? s.createElement(g.bb, {
+                    return e.type === v.b.Bits ? s.createElement(g.cb, {
                         label: Object(r.d)("BITS", "MonetizationPill")
-                    }) : e.type === v.b.InExtensionPurchases ? s.createElement(g.bb, {
+                    }) : e.type === v.b.InExtensionPurchases ? s.createElement(g.cb, {
                         label: Object(r.d)("PURCHASES", "MonetizationPill")
                     }) : null
                 };
             h.displayName = "MonetizationPill";
-            var x, E = t("22qk"),
+            var E, x = t("22qk"),
                 f = t("5IFo"),
                 k = t("Ar2k");
             t("EJuf");
             ! function(e) {
                 e.InstallButton = "extension-card-install-button", e.TestStatusDisclosure = "extension-card-test-status-disclosure"
-            }(x || (x = {}));
+            }(E || (E = {}));
             var b = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
@@ -347,37 +347,37 @@
                                 m = o.contentIndex,
                                 p = o.medium,
                                 v = l;
-                            return i !== d.v.RELEASED && l.length > 100 && (v = l.substring(0, 100) + "..."), s.createElement(g.xb, {
+                            return i !== d.v.RELEASED && l.length > 100 && (v = l.substring(0, 100) + "..."), s.createElement(g.yb, {
                                 className: "extension-card__thumbnail__details-preview",
                                 background: g.r.Alt2,
-                                position: g.eb.Absolute,
+                                position: g.fb.Absolute,
                                 attachRight: !0,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 attachBottom: !0
-                            }, s.createElement(g.Wa, {
+                            }, s.createElement(g.Xa, {
                                 display: g.X.Flex,
-                                flexDirection: g.Z.Column,
-                                justifyContent: g.Va.Between,
+                                flexDirection: g.Aa.Column,
+                                justifyContent: g.Wa.Between,
                                 alignItems: g.f.Center,
                                 padding: {
                                     x: 3,
                                     y: 2
                                 },
                                 fullHeight: !0
-                            }, s.createElement(g.Wa, {
+                            }, s.createElement(g.Xa, {
                                 className: "extension-card__thumbnail__summary",
-                                overflow: g.Za.Hidden
+                                overflow: g.ab.Hidden
                             }, s.createElement(g.W, {
-                                type: g.Nb.P
-                            }, v), i !== d.v.RELEASED && s.createElement(g.Wa, {
+                                type: g.Ob.P
+                            }, v), i !== d.v.RELEASED && s.createElement(g.Xa, {
                                 padding: {
                                     top: .5
                                 }
                             }, s.createElement(g.W, {
-                                "data-test-selector": x.TestStatusDisclosure,
-                                type: g.Nb.P
-                            }, Object(r.d)("This is a Test Extension; it has not been evaluated by Twitch in accordance with its policies.", "ExtensionCard"), s.createElement(g.Oa, {
+                                "data-test-selector": E.TestStatusDisclosure,
+                                type: g.Ob.P
+                            }, Object(r.d)("This is a Test Extension; it has not been evaluated by Twitch in accordance with its policies.", "ExtensionCard"), s.createElement(g.Pa, {
                                 padding: {
                                     left: .5
                                 }
@@ -385,20 +385,20 @@
                                 target: "_blank",
                                 rel: "noopener",
                                 href: "https://help.twitch.tv/customer/portal/articles/2861187-how-to-use-extensions"
-                            }, Object(r.d)("Learn More.", "ExtensionCardTestDisclosure")))))), s.createElement(g.Wa, {
+                            }, Object(r.d)("Learn More.", "ExtensionCardTestDisclosure")))))), s.createElement(g.Xa, {
                                 display: g.X.Flex,
-                                flexWrap: g.Aa.NoWrap
-                            }, s.createElement(g.Wa, null, s.createElement(g.z, {
+                                flexWrap: g.Ba.NoWrap
+                            }, s.createElement(g.Xa, null, s.createElement(g.z, {
                                 type: g.F.Hollow,
                                 linkTo: {
-                                    pathname: Object(E.d)(t, a),
+                                    pathname: Object(x.d)(t, a),
                                     state: {
                                         medium: p,
                                         content: c || u.PageviewContent.ExtensionCard,
                                         content_index: m
                                     }
                                 }
-                            }, Object(r.d)("Details", "ExtensionCard"))), s.createElement(g.Wa, {
+                            }, Object(r.d)("Details", "ExtensionCard"))), s.createElement(g.Xa, {
                                 padding: {
                                     left: 1
                                 }
@@ -409,24 +409,24 @@
                                 i = t.hasInstallPermission;
                             if (t.isInstalled) return s.createElement(g.z, {
                                 disabled: !0
-                            }, s.createElement(g.Wa, {
+                            }, s.createElement(g.Xa, {
                                 display: g.X.Flex,
                                 alignItems: g.f.Center
-                            }, s.createElement(g.nb, {
-                                asset: g.ob.Check
-                            }), s.createElement(g.Wa, {
+                            }, s.createElement(g.ob, {
+                                asset: g.pb.Check
+                            }), s.createElement(g.Xa, {
                                 padding: {
                                     left: .5
                                 }
                             }, Object(r.d)("Installed", "ExtensionCard"))));
                             var a = Object(r.d)("Install", "ExtensionCard");
-                            return !i || n.isMissingCheeringRequirement() ? s.createElement(g.Wa, {
+                            return !i || n.isMissingCheeringRequirement() ? s.createElement(g.Xa, {
                                 refDelegate: n.setRef
                             }, s.createElement(g.z, {
                                 disabled: !0,
-                                "data-test-selector": x.InstallButton
+                                "data-test-selector": E.InstallButton
                             }, a)) : s.createElement(g.z, {
-                                "data-test-selector": x.InstallButton,
+                                "data-test-selector": E.InstallButton,
                                 state: e ? g.E.Loading : g.E.Default,
                                 onClick: n.installExtension
                             }, a)
@@ -435,7 +435,7 @@
                                 t = e.supportedAnchors,
                                 i = e.supportedPlatforms,
                                 a = t.map(function(e) {
-                                    return s.createElement(g.Wa, {
+                                    return s.createElement(g.Xa, {
                                         key: e,
                                         display: g.X.InlineBlock,
                                         padding: {
@@ -445,7 +445,7 @@
                                         anchorType: e
                                     }))
                                 });
-                            return i.includes(o.ExtensionPlatform.Mobile) && a.push(s.createElement(g.Wa, {
+                            return i.includes(o.ExtensionPlatform.Mobile) && a.push(s.createElement(g.Xa, {
                                 key: "mobile",
                                 display: g.X.InlineBlock,
                                 padding: {
@@ -499,8 +499,8 @@
                                 n.props.tooltipLayer.show({
                                     from: n.installButtonRef,
                                     label: e,
-                                    align: g.Rb.Center,
-                                    direction: g.Sb.Top
+                                    align: g.Sb.Center,
+                                    direction: g.Tb.Top
                                 })
                             }
                         }, n.onMouseLeave = function() {
@@ -526,21 +526,21 @@
                             c = n.isInstalled,
                             u = n.monetizationType,
                             m = l && e === l;
-                        return s.createElement(g.Wa, {
+                        return s.createElement(g.Xa, {
                             className: a("extension-card", i)
-                        }, s.createElement(g.G, null, s.createElement(g.xb, {
+                        }, s.createElement(g.G, null, s.createElement(g.yb, {
                             className: "extension-card__thumbnail",
                             border: !0,
                             background: g.r.AccentAlt2,
-                            position: g.eb.Relative,
-                            overflow: g.Za.Hidden
+                            position: g.fb.Relative,
+                            overflow: g.ab.Hidden
                         }, s.createElement(g.o, {
                             ratio: g.p.Aspect3x2
-                        }, s.createElement(g.xb, {
+                        }, s.createElement(g.yb, {
                             display: g.X.Flex,
                             alignItems: g.f.Center,
-                            justifyContent: g.Va.Center,
-                            position: g.eb.Absolute,
+                            justifyContent: g.Wa.Center,
+                            position: g.fb.Absolute,
                             attachRight: !0,
                             attachTop: !0,
                             attachLeft: !0,
@@ -550,39 +550,39 @@
                             src: e,
                             alt: o,
                             onError: this.onCardImageError
-                        }) : s.createElement(g.Oa, {
+                        }) : s.createElement(g.Pa, {
                             fullHeight: !0,
                             fullWidth: !0
                         }, s.createElement(g.S, {
                             src: e,
                             alt: o,
                             onError: this.onCardImageError
-                        }))), this.renderHoverElement()), c && s.createElement(g.xb, {
+                        }))), this.renderHoverElement()), c && s.createElement(g.yb, {
                             display: g.X.InlineFlex,
                             alignItems: g.f.Center,
-                            justifyContent: g.Va.Center,
+                            justifyContent: g.Wa.Center,
                             background: g.r.Accent,
-                            position: g.eb.Absolute,
+                            position: g.fb.Absolute,
                             color: g.O.Overlay,
                             attachRight: !0,
                             attachTop: !0
-                        }, s.createElement(g.nb, {
-                            asset: g.ob.Check
-                        }))), s.createElement(g.Wa, {
+                        }, s.createElement(g.ob, {
+                            asset: g.pb.Check
+                        }))), s.createElement(g.Xa, {
                             padding: {
                                 top: 1
                             }
                         }, s.createElement(g.W, {
-                            type: g.Nb.H6
+                            type: g.Ob.H6
                         }, o), s.createElement(g.W, {
-                            type: g.Nb.Span,
+                            type: g.Ob.Span,
                             color: g.O.Alt2,
-                            fontSize: g.Ba.Size7
-                        }, t), s.createElement(g.Wa, {
+                            fontSize: g.Ca.Size7
+                        }, t), s.createElement(g.Xa, {
                             padding: {
                                 top: .5
                             }
-                        }, this.renderAnchorTypePills(), null !== u && s.createElement(g.Wa, {
+                        }, this.renderAnchorTypePills(), null !== u && s.createElement(g.Xa, {
                             key: "monetization-pill",
                             display: g.X.InlineBlock,
                             padding: {
@@ -603,7 +603,7 @@
                 }(s.Component),
                 y = Object(k.c)()(b);
             t.d(n, !1, function() {
-                return x
+                return E
             }), t.d(n, !1, function() {
                 return b
             }), t.d(n, "a", function() {
@@ -619,9 +619,9 @@
                 s = t("/Qsj"),
                 r = t("Ue10"),
                 l = function(e) {
-                    return e.anchorType ? a.createElement(r.bb, {
+                    return e.anchorType ? a.createElement(r.cb, {
                         label: Object(o.a)(e.anchorType, !0)
-                    }) : e.mobile ? a.createElement(r.bb, {
+                    }) : e.mobile ? a.createElement(r.cb, {
                         label: Object(s.a)(i.ExtensionPlatform.Mobile, !0)
                     }) : null
                 };
@@ -653,26 +653,26 @@
                         var e = this.props,
                             n = e.title,
                             t = e.showBackLink;
-                        return a.createElement(c.xb, {
+                        return a.createElement(c.yb, {
                             background: c.r.Alt2,
                             display: c.X.Flex,
                             alignItems: c.f.Stretch
-                        }, t && a.createElement(c.xb, {
+                        }, t && a.createElement(c.yb, {
                             border: !0,
                             display: c.X.Flex,
                             flexGrow: 0
                         }, a.createElement(c.A, {
                             ariaLabel: Object(s.d)("Navigate to previous page", "ExtensionPageHeader"),
                             size: c.B.Large,
-                            icon: c.ob.AngleLeft,
+                            icon: c.pb.AngleLeft,
                             onClick: this.goBack
-                        })), a.createElement(c.xb, {
+                        })), a.createElement(c.yb, {
                             border: !0,
                             display: c.X.Flex,
                             flexGrow: 1,
                             padding: 2
                         }, a.createElement(c.W, {
-                            type: c.Nb.H4
+                            type: c.Ob.H4
                         }, n)))
                     }, n
                 }(a.Component),
@@ -709,8 +709,8 @@
                         }))
                     }, n
                 }(o.Component),
-                x = t("Ue10"),
-                E = t("2xye"),
+                E = t("Ue10"),
+                x = t("2xye"),
                 f = t("22qk");
 
             function k(e) {
@@ -718,40 +718,40 @@
                     t = e.selectedTab,
                     a = e.showWhitelistedTab,
                     s = {
-                        medium: E.PageviewMedium.ExtensionDashboardTopNav,
-                        content: E.PageviewContent.ExtensionNavTabLink
+                        medium: x.PageviewMedium.ExtensionDashboardTopNav,
+                        content: x.PageviewContent.ExtensionNavTabLink
                     };
-                return o.createElement(x.Wa, {
-                    display: x.X.InlineBlock,
+                return o.createElement(E.Xa, {
+                    display: E.X.InlineBlock,
                     padding: {
                         bottom: 2
                     }
-                }, o.createElement(x.zb, null, o.createElement(x.yb, {
+                }, o.createElement(E.Ab, null, o.createElement(E.zb, {
                     linkTo: {
                         pathname: Object(f.c)(n),
                         state: s
                     },
                     active: t === i.Discovery
-                }, o.createElement(x.W, {
-                    type: x.Nb.H4
-                }, Object(l.d)("Discovery", "DiscoveryNavBar"))), o.createElement(x.yb, {
+                }, o.createElement(E.W, {
+                    type: E.Ob.H4
+                }, Object(l.d)("Discovery", "DiscoveryNavBar"))), o.createElement(E.zb, {
                     linkTo: {
                         pathname: Object(f.e)(n),
                         state: s
                     },
                     active: t === i.MyExtensions
-                }, o.createElement(x.W, {
+                }, o.createElement(E.W, {
                     "data-a-target": "my-extensions-tab",
-                    type: x.Nb.H4
-                }, Object(l.d)("My Extensions", "DiscoveryNavBar"))), a && o.createElement(x.yb, {
+                    type: E.Ob.H4
+                }, Object(l.d)("My Extensions", "DiscoveryNavBar"))), a && o.createElement(E.zb, {
                     linkTo: {
                         pathname: Object(f.h)(n),
                         state: s
                     },
                     active: t === i.Whitelisted
-                }, o.createElement(x.W, {
+                }, o.createElement(E.W, {
                     "data-a-target": "invite-only-tab",
-                    type: x.Nb.H4
+                    type: E.Ob.H4
                 }, Object(l.d)("Invite Only", "DiscoveryNavBar")))))
             }! function(e) {
                 e[e.Discovery = 0] = "Discovery", e[e.MyExtensions = 1] = "MyExtensions", e[e.Whitelisted = 2] = "Whitelisted"
@@ -761,8 +761,8 @@
                 C = t("aCAx"),
                 N = t("MM5q"),
                 S = t("+/wI"),
-                I = t("8/mp"),
-                O = t("V+GM"),
+                O = t("8/mp"),
+                I = t("V+GM"),
                 D = t("geRD"),
                 F = t("NvVO"),
                 P = t("MXoD"),
@@ -770,13 +770,13 @@
                 A = (t("QSti"), function(e) {
                     var n = [];
                     if (e.loading)
-                        for (var t = 0; t < 8; t++) n.push(o.createElement(x.Wa, {
+                        for (var t = 0; t < 8; t++) n.push(o.createElement(E.Xa, {
                             key: t,
                             padding: {
                                 left: 1,
                                 bottom: 1
                             }
-                        }, o.createElement(x.db, {
+                        }, o.createElement(E.eb, {
                             key: t,
                             height: 275,
                             width: 400
@@ -788,50 +788,50 @@
                                 i = e.clickThroughURL;
                             t.hostname.includes("twitch.tv") && (i = t.pathname);
                             var a = Object(P.a)({
-                                content: E.PageviewContent.ExtensionDetails,
+                                content: x.PageviewContent.ExtensionDetails,
                                 content_index: n,
-                                medium: E.PageviewMedium.ExtensionManagerCarousel
+                                medium: x.PageviewMedium.ExtensionManagerCarousel
                             }, i);
-                            return o.createElement(x.Wa, {
+                            return o.createElement(E.Xa, {
                                 className: "extension-featured-carousel-item",
                                 padding: {
                                     left: 1,
                                     bottom: 1
                                 },
                                 key: e.id
-                            }, o.createElement(x.Ta, {
+                            }, o.createElement(E.Ua, {
                                 linkTo: a
-                            }, o.createElement(x.G, null, o.createElement(x.I, {
+                            }, o.createElement(E.G, null, o.createElement(E.I, {
                                 src: e.imageURL,
                                 alt: e.title,
-                                aspect: x.p.Aspect3x2
-                            }), e.title && o.createElement(x.xb, {
-                                alignItems: x.f.Center,
-                                background: x.r.Overlay,
+                                aspect: E.p.Aspect3x2
+                            }), e.title && o.createElement(E.yb, {
+                                alignItems: E.f.Center,
+                                background: E.r.Overlay,
                                 className: "extension-featured-carousel-item__title-bar",
-                                display: x.X.Flex,
+                                display: E.X.Flex,
                                 padding: {
                                     left: 2
                                 },
-                                position: x.eb.Absolute,
+                                position: E.fb.Absolute,
                                 attachBottom: !0,
                                 fullWidth: !0
-                            }, o.createElement(x.W, {
-                                type: x.Nb.H3,
-                                color: x.O.OverlayAlt
+                            }, o.createElement(E.W, {
+                                type: E.Ob.H3,
+                                color: E.O.OverlayAlt
                             }, e.title)))))
                         })
                     }
-                    return o.createElement(x.Wa, {
-                        overflow: x.Za.Hidden,
+                    return o.createElement(E.Xa, {
+                        overflow: E.ab.Hidden,
                         fullWidth: !0
-                    }, o.createElement(x.xb, {
+                    }, o.createElement(E.yb, {
                         border: !0,
-                        overflow: x.Za.Hidden
-                    }, o.createElement(x.Wa, {
+                        overflow: E.ab.Hidden
+                    }, o.createElement(E.Xa, {
                         padding: 1
-                    }, o.createElement(x.W, {
-                        type: x.Nb.H4,
+                    }, o.createElement(E.W, {
+                        type: E.Ob.H4,
                         noWrap: !0
                     }, Object(l.d)("Featured", "ExtensionFeaturedCarousel"))), o.createElement(w.a, {
                         insetStyle: !0,
@@ -839,50 +839,50 @@
                     })))
                 });
             A.displayName = "ExtensionFeaturedCarousel";
-            var W = t("G1aL"),
-                M = t("OzNJ"),
-                j = t("vYrU"),
-                L = t("GnwI"),
-                T = t("d9uE"),
-                _ = function(e) {
-                    for (var n = e.count, t = [], i = 0; i < n; i++) t.push(o.createElement(x.Wa, {
+            var M = t("G1aL"),
+                j = t("OzNJ"),
+                L = t("vYrU"),
+                T = t("GnwI"),
+                _ = t("d9uE"),
+                R = function(e) {
+                    for (var n = e.count, t = [], i = 0; i < n; i++) t.push(o.createElement(E.Xa, {
                         key: i,
                         padding: {
                             right: 2
                         }
-                    }, o.createElement(T.a, null)));
-                    return o.createElement(x.Wa, {
+                    }, o.createElement(_.a, null)));
+                    return o.createElement(E.Xa, {
                         padding: {
                             bottom: .5
                         }
-                    }, o.createElement(x.Wa, {
+                    }, o.createElement(E.Xa, {
                         padding: {
                             bottom: 1
                         }
-                    }, o.createElement(x.db, {
+                    }, o.createElement(E.eb, {
                         width: 120,
                         height: 24
-                    })), o.createElement(x.Wa, {
-                        display: x.X.Flex,
+                    })), o.createElement(E.Xa, {
+                        display: E.X.Flex,
                         padding: {
                             bottom: 2
                         }
                     }, t))
                 };
-            _.displayName = "ExtensionCategoryCarouselPlaceholder";
-            var R = t("0QYl"),
-                U = function(e) {
+            R.displayName = "ExtensionCategoryCarouselPlaceholder";
+            var U = t("0QYl"),
+                X = function(e) {
                     var n = e.categoryID,
                         t = e.categoryName,
                         i = e.extensions,
                         a = e.installExtension,
                         s = i.map(function(e, t) {
-                            return o.createElement(x.Wa, {
+                            return o.createElement(E.Xa, {
                                 margin: {
                                     right: 2
                                 },
                                 key: e.extensionID
-                            }, o.createElement(R.a, {
+                            }, o.createElement(U.a, {
                                 authorName: e.authorName,
                                 categoryID: n,
                                 cheeringEnabled: e.cheeringEnabled,
@@ -901,32 +901,32 @@
                                 supportedAnchors: e.supportedAnchors,
                                 supportedPlatforms: e.supportedPlatforms,
                                 trackingContext: {
-                                    content: E.PageviewContent.ExtensionCategoryPreview,
+                                    content: x.PageviewContent.ExtensionCategoryPreview,
                                     contentIndex: t,
-                                    medium: E.PageviewMedium.ExtensionDiscovery
+                                    medium: x.PageviewMedium.ExtensionDiscovery
                                 }
                             }))
                         }),
                         r = {
                             pathname: Object(f.a)(n),
                             state: {
-                                medium: E.PageviewMedium.ExtensionDiscovery,
-                                content: E.PageviewContent.ExtensionCategoryPreview
+                                medium: x.PageviewMedium.ExtensionDiscovery,
+                                content: x.PageviewContent.ExtensionCategoryPreview
                             }
                         };
-                    return o.createElement(x.Wa, null, o.createElement(x.Wa, {
-                        display: x.X.Flex,
-                        justifyContent: x.Va.Between,
-                        alignItems: x.f.Baseline
-                    }, o.createElement(x.U, {
+                    return o.createElement(E.Xa, null, o.createElement(E.Xa, {
+                        display: E.X.Flex,
+                        justifyContent: E.Wa.Between,
+                        alignItems: E.f.Baseline
+                    }, o.createElement(E.U, {
                         to: r
-                    }, o.createElement(x.W, {
-                        type: x.Nb.H4
-                    }, t)), o.createElement(x.xb, {
-                        fontSize: x.Ba.Size5
-                    }, o.createElement(x.U, {
+                    }, o.createElement(E.W, {
+                        type: E.Ob.H4
+                    }, t)), o.createElement(E.yb, {
+                        fontSize: E.Ca.Size5
+                    }, o.createElement(E.U, {
                         to: r
-                    }, Object(l.d)("View more", "ExtensionCategoryCarousel")))), o.createElement(x.Oa, {
+                    }, Object(l.d)("View more", "ExtensionCategoryCarousel")))), o.createElement(E.Pa, {
                         margin: {
                             top: 1,
                             bottom: 2
@@ -936,16 +936,16 @@
                         insetStyle: !0
                     })))
                 };
-            U.displayName = "ExtensionCategoryCarousel";
-            var B = t("UEdd"),
-                V = t("H6uz"),
-                z = 5,
-                q = {
+            X.displayName = "ExtensionCategoryCarousel";
+            var W = t("UEdd"),
+                B = t("H6uz"),
+                V = 5,
+                z = {
                     carouselID: "default",
-                    first: z,
+                    first: V,
                     skipCurrentUser: !1
                 },
-                X = function(e) {
+                q = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.installExtension = function(e) {
@@ -962,7 +962,7 @@
                                                 extensionID: e
                                             }))];
                                         case 2:
-                                            return c = a.sent().data, l && c.installExtension && c.installExtension.installedExtension && (d = c.installExtension.installedExtension, Object(D.e)(V, q, function(e) {
+                                            return c = a.sent().data, l && c.installExtension && c.installExtension.installedExtension && (d = c.installExtension.installedExtension, Object(D.e)(B, z, function(e) {
                                                 return e.currentUser && e.currentUser.installedExtensions && e.currentUser.installedExtensions.push(d), e
                                             }), s({
                                                 extensionClientID: d.extension.clientID,
@@ -985,10 +985,10 @@
                                             return e = this.props.extensionDiscoveryPageData, n = e.error, t = e.extensionCategories, e.loading || n || !t ? [3, 2] : (i = {
                                                 carouselID: "default",
                                                 afterCursor: t.edges[t.edges.length - 1].cursor,
-                                                first: z,
+                                                first: V,
                                                 skipCurrentUser: !0
                                             }, [4, this.props.extensionDiscoveryPageData.fetchMore({
-                                                query: V,
+                                                query: B,
                                                 variables: i,
                                                 updateQuery: function(e, n) {
                                                     var t = n.fetchMoreResult;
@@ -1031,9 +1031,9 @@
                             i = n.extensionCategories,
                             a = n.loading,
                             s = [],
-                            r = Object(j.a)(n.currentUser);
+                            r = Object(L.a)(n.currentUser);
                         if (a)
-                            for (var c = 0; c < 5; c++) s.push(o.createElement(_, {
+                            for (var c = 0; c < 5; c++) s.push(o.createElement(R, {
                                 key: c,
                                 count: 8
                             }));
@@ -1047,7 +1047,7 @@
                                     cheeringEnabled: r,
                                     splashImageURL: t.iconURLs.discoverySplash,
                                     iconURL: t.iconURLs.square100,
-                                    monetizationType: Object(M.e)(t),
+                                    monetizationType: Object(j.e)(t),
                                     extensionClientID: t.clientID,
                                     extensionID: t.id,
                                     extensionName: t.name,
@@ -1056,10 +1056,10 @@
                                     hasInstallPermission: null !== t.self && t.self.canInstall,
                                     isInstalled: e.isExtensionInstalled(t.id),
                                     summary: t.summary,
-                                    supportedAnchors: Object(M.f)(t.views),
-                                    supportedPlatforms: Object(M.g)(t.views)
+                                    supportedAnchors: Object(j.f)(t.views),
+                                    supportedPlatforms: Object(j.g)(t.views)
                                 })
-                            }), o.createElement(U, {
+                            }), o.createElement(X, {
                                 key: t.id,
                                 categoryID: t.id,
                                 categoryName: t.name,
@@ -1067,26 +1067,26 @@
                                 installExtension: e.installExtension
                             })) : null
                         }));
-                        return o.createElement(x.Wa, null, o.createElement(x.Wa, {
+                        return o.createElement(E.Xa, null, o.createElement(E.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, o.createElement(W.a, {
+                        }, o.createElement(M.a, {
                             trackingContext: {
-                                medium: E.PageviewMedium.ExtensionDiscovery
+                                medium: x.PageviewMedium.ExtensionDiscovery
                             }
                         })), o.createElement(A, {
                             entries: this.getFeaturedCarouselEntries(),
                             loading: a
-                        }), o.createElement(x.Wa, {
+                        }), o.createElement(E.Xa, {
                             margin: {
                                 y: 2
                             }
-                        }, s), o.createElement(I.a, {
+                        }, s), o.createElement(O.a, {
                             pixelThreshold: 400,
                             loadMore: this.loadMore,
                             enabled: this.canLoadMore()
-                        }), t && o.createElement(x.W, null, Object(l.d)("We're having trouble fetching extensions.", "ExtensionDiscoveryPagePresentation")))
+                        }), t && o.createElement(E.W, null, Object(l.d)("We're having trouble fetching extensions.", "ExtensionDiscoveryPagePresentation")))
                     }, n.prototype.canLoadMore = function() {
                         var e = this.props.extensionDiscoveryPageData,
                             n = e.error,
@@ -1115,18 +1115,18 @@
                         })
                     }, n
                 }(o.Component),
-                H = Object(y.compose)(Object(L.b)("ExtensionDiscoveryPage", {
+                H = Object(y.compose)(Object(T.b)("ExtensionDiscoveryPage", {
                     destination: F.a.ExtensionsDiscovery
-                }), Object(O.a)({
-                    location: E.PageviewLocation.ExtensionsDiscovery
-                }), Object(u.a)(V, {
+                }), Object(I.a)({
+                    location: x.PageviewLocation.ExtensionsDiscovery
+                }), Object(u.a)(B, {
                     name: "extensionDiscoveryPageData",
                     options: {
-                        variables: q
+                        variables: z
                     }
-                }), Object(u.a)(B, {
+                }), Object(u.a)(W, {
                     name: "installExtension"
-                }))(X);
+                }))(q);
             var Y = Object(b.connect)(null, function(e) {
                     return Object(y.bindActionCreators)({
                         showExtensionErrorModal: function() {
@@ -1138,16 +1138,16 @@
                         }
                     }, e)
                 })(H),
-                G = t("cZKs"),
-                Q = t("xPN0"),
+                Q = t("cZKs"),
+                G = t("xPN0"),
                 J = function(e) {
                     var n = e.activations,
                         t = e.onConfirm;
-                    return o.createElement(x.Wa, null, o.createElement(x.W, {
-                        type: x.Nb.H5
+                    return o.createElement(E.Xa, null, o.createElement(E.W, {
+                        type: E.Ob.H5
                     }, Object(l.d)("{count, plural, one {Extension is now Active!} other {Extensions are now Active!}}", {
                         count: n.length
-                    }, "ExtensionActivatedModal")), o.createElement(x.xb, {
+                    }, "ExtensionActivatedModal")), o.createElement(E.yb, {
                         borderTop: !0,
                         borderBottom: !0,
                         padding: {
@@ -1159,45 +1159,45 @@
                     }, n.map(function(e) {
                         var n = e.extensionName,
                             t = e.slot;
-                        return o.createElement(x.W, {
+                        return o.createElement(E.W, {
                             key: t
                         }, Object(l.d)("The extension {extensionName} is now active on slot {anchorSlot}", {
-                            extensionName: o.createElement(x.W, {
+                            extensionName: o.createElement(E.W, {
                                 bold: !0,
-                                type: x.Nb.Span
+                                type: E.Ob.Span
                             }, n),
-                            anchorSlot: o.createElement(x.W, {
+                            anchorSlot: o.createElement(E.W, {
                                 bold: !0,
-                                type: x.Nb.Span,
-                                transform: x.Mb.Uppercase
+                                type: E.Ob.Span,
+                                transform: E.Nb.Uppercase
                             }, t)
                         }, "ExtensionActivatedModal"))
-                    })), o.createElement(x.Wa, {
-                        display: x.X.Flex,
-                        justifyContent: x.Va.Center
-                    }, o.createElement(x.z, {
+                    })), o.createElement(E.Xa, {
+                        display: E.X.Flex,
+                        justifyContent: E.Wa.Center
+                    }, o.createElement(E.z, {
                         onClick: t
                     }, Object(l.d)("Done", "ExtensionActivatedModal"))))
                 };
             J.displayName = "ExtensionActivatedModalPresentation";
-            var Z = function(e) {
+            var $ = function(e) {
                 function n() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(n, e), n.prototype.render = function() {
-                    return o.createElement(Q.a, null, o.createElement(J, {
+                    return o.createElement(G.a, null, o.createElement(J, {
                         activations: this.props.activations,
                         onConfirm: this.props.closeModal
-                    }), o.createElement(G.a, {
+                    }), o.createElement(Q.a, {
                         closeOnBackdropClick: !0
                     }))
                 }, n
             }(o.Component);
-            var $, K = Object(b.connect)(null, function(e) {
+            var K, Z = Object(b.connect)(null, function(e) {
                     return Object(y.bindActionCreators)({
                         closeModal: C.c
                     }, e)
-                })(Z),
+                })($),
                 ee = t("TSYQ"),
                 ne = function(e) {
                     var n, t = e.x,
@@ -1216,24 +1216,24 @@
                             height: s + "px"
                         },
                         p = ee("extension-component-preview", ((n = {})["extension-component-preview--active"] = r, n["extension-component-preview--overlapped"] = l, n));
-                    return o.createElement(x.Pa, {
-                        position: x.eb.Absolute,
-                        textAlign: x.Jb.Center
+                    return o.createElement(E.Qa, {
+                        position: E.fb.Absolute,
+                        textAlign: E.Kb.Center
                     }, o.createElement("div", {
                         key: d,
                         tabIndex: u,
                         "data-slot": d,
                         className: p,
                         style: m
-                    }, o.createElement(x.xb, {
+                    }, o.createElement(E.yb, {
                         fullHeight: !0,
-                        display: x.X.Flex,
-                        flexDirection: x.Z.Column,
-                        justifyContent: x.Va.Center
-                    }, o.createElement(x.W, {
-                        color: x.O.Overlay,
-                        type: x.Nb.Span,
-                        fontSize: x.Ba.Size5
+                        display: E.X.Flex,
+                        flexDirection: E.Aa.Column,
+                        justifyContent: E.Wa.Center
+                    }, o.createElement(E.W, {
+                        color: E.O.Overlay,
+                        type: E.Ob.Span,
+                        fontSize: E.Ca.Size5
                     }, c))))
                 },
                 te = 1e-7;
@@ -1260,9 +1260,9 @@
                 me = ae(0, se - le, oe, le),
                 pe = "player-controls-top",
                 ve = "player-controls-bottom",
-                ge = (($ = {})[pe] = ue, $[ve] = me, $),
+                ge = ((K = {})[pe] = ue, K[ve] = me, K),
                 he = 10,
-                xe = {
+                Ee = {
                     w: {
                         x: 0,
                         y: -1
@@ -1312,18 +1312,18 @@
                         y: 0
                     }
                 },
-                Ee = t("1hWM");
+                xe = t("1hWM");
 
             function fe(e, n, t) {
-                var i = Object(Ee.getComponentSizeFromView)(oe, se, {
+                var i = Object(xe.getComponentSizeFromView)(oe, se, {
                         aspectHeight: 100 * t.aspectHeight,
                         aspectWidth: 100 * t.aspectWidth,
                         zoom: t.hasZoom,
-                        zoomPixels: t.zoomPixels || Ee.DefaultZoomPixelWidth
+                        zoomPixels: t.zoomPixels || xe.DefaultZoomPixelWidth
                     }),
                     a = i.width,
                     o = i.height,
-                    s = Object(Ee.getComponentPositionFromView)(oe, se, {
+                    s = Object(xe.getComponentPositionFromView)(oe, se, {
                         x: Math.floor(100 * e),
                         y: Math.floor(100 * n)
                     });
@@ -1352,31 +1352,31 @@
                     function n(n) {
                         var t = e.call(this, n) || this;
                         t.renderOverlapError = function() {
-                            var e = t.state.hasOverlappingComponents ? x.n.SlideInTop : x.n.SlideOutTop;
-                            return t.state.hasOverlappingComponents || t.state.isAnimating ? o.createElement(x.i, {
+                            var e = t.state.hasOverlappingComponents ? E.n.SlideInTop : E.n.SlideOutTop;
+                            return t.state.hasOverlappingComponents || t.state.isAnimating ? o.createElement(E.i, {
                                 enabled: !0,
                                 onAnimationEnd: t.handleAnimationEnd,
                                 type: e
-                            }, o.createElement(x.xb, {
-                                position: x.eb.Absolute,
+                            }, o.createElement(E.yb, {
+                                position: E.fb.Absolute,
                                 attachTop: !0,
                                 fullWidth: !0,
-                                display: x.X.Flex,
-                                justifyContent: x.Va.Center
-                            }, o.createElement(x.Pa, {
-                                display: x.X.Flex,
+                                display: E.X.Flex,
+                                justifyContent: E.Wa.Center
+                            }, o.createElement(E.Qa, {
+                                display: E.X.Flex,
                                 padding: 1,
                                 elevation: 5
                             }, o.createElement("div", {
                                 className: "extension-component-error"
-                            }, o.createElement(x.nb, {
-                                asset: x.ob.NotificationError
-                            }), o.createElement(x.Pa, {
+                            }, o.createElement(E.ob, {
+                                asset: E.pb.NotificationError
+                            }), o.createElement(E.Qa, {
                                 margin: {
                                     left: 1
                                 }
-                            }, o.createElement(x.W, {
-                                fontSize: x.Ba.Size4
+                            }, o.createElement(E.W, {
+                                fontSize: E.Ca.Size4
                             }, Object(l.d)("Component Extensions cannot overlap", "ExtensionComponentActivateModal"))))))) : null
                         }, t.renderPositionPreview = function() {
                             var e, n, i = t.state.slotList.map(function(e, n) {
@@ -1400,8 +1400,8 @@
                                 }),
                                 a = ee("extension-component-player-controls", ((e = {})["extension-component-player-controls--overlapped"] = t.state.collisionMap[pe], e)),
                                 s = ee("extension-component-player-controls", ((n = {})["extension-component-player-controls--overlapped"] = t.state.collisionMap[ve], n));
-                            return o.createElement(x.xb, null, o.createElement(x.Pa, {
-                                position: x.eb.Relative
+                            return o.createElement(E.yb, null, o.createElement(E.Qa, {
+                                position: E.fb.Relative
                             }, o.createElement("div", {
                                 ref: t.updatePositionContainerRef,
                                 className: "extension-component-player",
@@ -1538,14 +1538,14 @@
                                 var d = 0,
                                     u = 0,
                                     m = e.key.toLowerCase(),
-                                    p = xe[m];
+                                    p = Ee[m];
                                 p && (d = p.x * a, u = p.y * o);
                                 var v = e.shiftKey ? he : 1,
                                     g = s - i.left + (window.scrollX || 0),
                                     h = r - i.top + (window.scrollY || 0),
-                                    x = d * v + g / oe,
-                                    E = u * v + h / se,
-                                    f = t.updateCoordinates(n, Math.floor(1e4 * x) / 100, Math.floor(1e4 * E) / 100);
+                                    E = d * v + g / oe,
+                                    x = u * v + h / se,
+                                    f = t.updateCoordinates(n, Math.floor(1e4 * E) / 100, Math.floor(1e4 * x) / 100);
                                 t.updateCollisionMap(f)
                             }
                         }, t.handleFocus = function() {
@@ -1619,48 +1619,48 @@
                             onMouseUp: this.handleMouseUp,
                             onKeyDown: this.handleKeyDown,
                             onFocus: this.handleFocus
-                        }, o.createElement(x.Wa, null, o.createElement(x.W, {
-                            type: x.Nb.H5
-                        }, Object(l.d)("Set Component Location", "ExtensionComponentActivateModal")), o.createElement(x.xb, {
+                        }, o.createElement(E.Xa, null, o.createElement(E.W, {
+                            type: E.Ob.H5
+                        }, Object(l.d)("Set Component Location", "ExtensionComponentActivateModal")), o.createElement(E.yb, {
                             borderTop: !0,
                             padding: {
                                 y: 1
                             }
-                        }, o.createElement(x.W, null, Object(l.d)("Drag and drop the selected component to set a default anchor point within the video player", "ExtensionComponentActivateModal"))), o.createElement(x.xb, {
-                            background: x.r.Alt,
+                        }, o.createElement(E.W, null, Object(l.d)("Drag and drop the selected component to set a default anchor point within the video player", "ExtensionComponentActivateModal"))), o.createElement(E.yb, {
+                            background: E.r.Alt,
                             padding: {
                                 bottom: 1
                             }
-                        }, this.renderPositionPreview()), o.createElement(x.xb, {
-                            display: x.X.Flex,
-                            justifyContent: x.Va.Center,
+                        }, this.renderPositionPreview()), o.createElement(E.yb, {
+                            display: E.X.Flex,
+                            justifyContent: E.Wa.Center,
                             borderTop: !0,
                             padding: {
                                 top: 1
                             }
-                        }, o.createElement(x.Wa, {
-                            display: x.X.Flex,
-                            flexDirection: x.Z.Row
+                        }, o.createElement(E.Xa, {
+                            display: E.X.Flex,
+                            flexDirection: E.Aa.Row
                         }, o.createElement("div", {
                             className: "extension-component-controls-indicator"
-                        }), o.createElement(x.Wa, {
+                        }), o.createElement(E.Xa, {
                             padding: {
                                 left: .5
                             }
-                        }, Object(l.d)("Components placed in this region are likely to be obscured by the video player controls", "ExtensionComponentActivateModal")))), o.createElement(x.xb, {
-                            display: x.X.Flex,
-                            justifyContent: x.Va.Center,
+                        }, Object(l.d)("Components placed in this region are likely to be obscured by the video player controls", "ExtensionComponentActivateModal")))), o.createElement(E.yb, {
+                            display: E.X.Flex,
+                            justifyContent: E.Wa.Center,
                             padding: {
                                 top: 1
                             }
-                        }, o.createElement(x.Wa, {
+                        }, o.createElement(E.Xa, {
                             padding: {
                                 right: 1
                             }
-                        }, o.createElement(x.z, {
-                            type: x.F.Hollow,
+                        }, o.createElement(E.z, {
+                            type: E.F.Hollow,
                             onClick: this.props.onClose
-                        }, Object(l.d)("Cancel", "ExtensionComponentActivateModal"))), o.createElement(x.z, {
+                        }, Object(l.d)("Cancel", "ExtensionComponentActivateModal"))), o.createElement(E.z, {
                             disabled: this.state.hasOverlappingComponents,
                             onClick: this.activateComponentsWithCurrentSettings
                         }, Object(l.d)("Save", "ExtensionComponentActivateModal")))))
@@ -1688,7 +1688,7 @@
                         }, n
                     }
                     return a.__extends(n, e), n.prototype.render = function() {
-                        return o.createElement(Q.a, {
+                        return o.createElement(G.a, {
                             className: "extension-manager-modal-container--expand"
                         }, o.createElement(be, {
                             activatedComponentData: this.props.activatedComponentData,
@@ -1699,7 +1699,7 @@
                             onConfirm: this.onConfirm,
                             onClose: this.onClose,
                             onIsDraggingChanged: this.onIsDraggingChanged
-                        }), o.createElement(G.a, {
+                        }), o.createElement(Q.a, {
                             closeOnBackdropClick: !this.state.isDragging,
                             onClose: this.onClose
                         }))
@@ -1712,8 +1712,8 @@
                 })(ye),
                 Ne = t("kRBY"),
                 Se = t("oJmH"),
-                Ie = t("mLw1"),
-                Oe = t("qCDY"),
+                Oe = t("mLw1"),
+                Ie = t("qCDY"),
                 De = t("1IJ0"),
                 Fe = t("YyE3"),
                 Pe = t("5IFo"),
@@ -1760,35 +1760,35 @@
                             if (!this.state.installation) return this.renderRedirect(c);
                             var u = this.state.installation,
                                 m = u.extension;
-                            d = o.createElement(x.Wa, {
+                            d = o.createElement(E.Xa, {
                                 fullWidth: !0
-                            }, o.createElement(x.Wa, {
+                            }, o.createElement(E.Xa, {
                                 padding: {
                                     bottom: 1
                                 }
-                            }, o.createElement(x.G, {
+                            }, o.createElement(E.G, {
                                 row: !0,
                                 border: !1
-                            }, o.createElement(x.I, {
+                            }, o.createElement(E.I, {
                                 alt: m.name,
                                 src: this.state.hasCardImageError ? l.a.defaultAvatarURL : m.iconUrl,
-                                aspect: x.p.Aspect1x1,
-                                size: x.J.Size6,
+                                aspect: E.p.Aspect1x1,
+                                size: E.J.Size6,
                                 onError: this.onCardImageError
-                            }), o.createElement(x.H, null, o.createElement(x.Wa, {
+                            }), o.createElement(E.H, null, o.createElement(E.Xa, {
                                 padding: 1
-                            }, o.createElement(x.W, {
-                                type: x.Nb.H4
-                            }, m.name), o.createElement(x.W, {
-                                type: x.Nb.Span,
-                                color: x.O.Alt2
+                            }, o.createElement(E.W, {
+                                type: E.Ob.H4
+                            }, m.name), o.createElement(E.W, {
+                                type: E.Ob.Span,
+                                color: E.O.Alt2
                             }, Object(l.d)("Created by {extensionAuthor}", {
                                 extensionAuthor: m.authorName
-                            }, "ExtensionConfigurePresentation")))))), o.createElement(x.Wa, null, o.createElement(Oe.a, {
+                            }, "ExtensionConfigurePresentation")))))), o.createElement(E.Xa, null, o.createElement(Ie.a, {
                                 channelID: r,
                                 channelLogin: t,
                                 className: "",
-                                extensionMode: Ee.ExtensionMode.Config,
+                                extensionMode: xe.ExtensionMode.Config,
                                 installation: u,
                                 languageCode: i,
                                 locale: a,
@@ -1802,9 +1802,9 @@
                             showBackLink: !1,
                             title: Object(l.d)("Configure", "ExtensionConfigurePresentation")
                         });
-                        return o.createElement(I.b, null, o.createElement(x.Wa, {
+                        return o.createElement(O.b, null, o.createElement(E.Xa, {
                             padding: 2
-                        }, p, o.createElement(x.xb, {
+                        }, p, o.createElement(E.yb, {
                             borderRight: !0,
                             borderLeft: !0,
                             borderBottom: !0,
@@ -1817,29 +1817,29 @@
                             return n.props.extensionID === t.clientId + "-" + t.version
                         })
                     }, n.prototype.renderPlaceholders = function() {
-                        return o.createElement(x.Wa, {
+                        return o.createElement(E.Xa, {
                             fullWidth: !0
-                        }, o.createElement(x.Wa, {
-                            display: x.X.Flex,
-                            alignItems: x.f.Center,
+                        }, o.createElement(E.Xa, {
+                            display: E.X.Flex,
+                            alignItems: E.f.Center,
                             padding: {
                                 y: 1
                             }
-                        }, o.createElement(x.Wa, null, o.createElement(x.db, {
+                        }, o.createElement(E.Xa, null, o.createElement(E.eb, {
                             width: 60,
                             height: 60
-                        })), o.createElement(x.Wa, {
+                        })), o.createElement(E.Xa, {
                             padding: {
                                 left: 1
                             }
-                        }, o.createElement(x.db, {
+                        }, o.createElement(E.eb, {
                             lineCount: 2,
                             width: 200
                         }))))
                     }, n.prototype.isLoading = function() {
                         return !this.props.extensionsForChannel || !this.props.extensionsForChannel.installedExtensions
                     }, n.prototype.renderRedirect = function(e) {
-                        return o.createElement(Ie.a, {
+                        return o.createElement(Oe.a, {
                             to: Object(f.e)(e)
                         })
                     }, n
@@ -1857,7 +1857,7 @@
                         return !e.channelID
                     }
                 }))(we),
-                We = (t("nH1N"), function(e) {
+                Me = (t("nH1N"), function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1869,8 +1869,8 @@
                             a = e.languageCode,
                             s = e.locale,
                             r = e.onClose;
-                        return o.createElement(x.xb, {
-                            background: x.r.Base,
+                        return o.createElement(E.yb, {
+                            background: E.r.Base,
                             className: "extension-configure-modal"
                         }, o.createElement(Ae, {
                             channelLogin: t,
@@ -1878,57 +1878,57 @@
                             extensionID: i,
                             languageCode: a,
                             locale: s
-                        }), o.createElement(G.a, {
+                        }), o.createElement(Q.a, {
                             closeOnBackdropClick: !0,
                             onClose: r
                         }))
                     }, n
                 }(o.Component));
-            var Me = Object(b.connect)(function(e) {
+            var je = Object(b.connect)(function(e) {
                     var n = Object(Ne.e)(e);
                     return {
                         channelID: n && n.id,
                         languageCode: Object(Ne.b)(e),
                         locale: Object(Ne.d)(e)
                     }
-                })(We),
-                je = t("Z5H4"),
-                Le = t("cr+I"),
-                Te = t("DMoW");
+                })(Me),
+                Le = t("Z5H4"),
+                Te = t("cr+I"),
+                _e = t("DMoW");
 
-            function _e(e) {
+            function Re(e) {
                 return e.slice().sort(function(e, n) {
                     var t = e.extension,
                         i = n.extension;
                     return t.name.toLowerCase() > i.name.toLowerCase() ? 1 : t.name.toLowerCase() < i.name.toLowerCase() ? -1 : t.version < i.version ? 1 : t.version > i.version ? -1 : 0
                 })
             }
-            var Re, Ue = t("1Cad"),
-                Be = t("AN85"),
-                Ve = t("eJ65"),
-                ze = t("EZh/");
+            var Ue, Xe = t("1Cad"),
+                We = t("AN85"),
+                Be = t("eJ65"),
+                Ve = t("EZh/");
             ! function(e) {
                 e.Component1 = "extension-component-1", e.Component2 = "extension-component-2", e.Overlay1 = "extension-overlay-1", e.Panel1 = "extension-panel-1", e.Panel2 = "extension-panel-2", e.Panel3 = "extension-panel-3"
-            }(Re || (Re = {}));
-            var qe = function(e) {
+            }(Ue || (Ue = {}));
+            var ze = function(e) {
                     var n;
                     switch (e) {
-                        case Re.Component1:
+                        case Ue.Component1:
                             n = Object(l.d)("Component 1", "LocalizeExtensionSlot");
                             break;
-                        case Re.Component2:
+                        case Ue.Component2:
                             n = Object(l.d)("Component 2", "LocalizeExtensionSlot");
                             break;
-                        case Re.Overlay1:
+                        case Ue.Overlay1:
                             n = Object(l.d)("Overlay 1", "LocalizeExtensionSlot");
                             break;
-                        case Re.Panel1:
+                        case Ue.Panel1:
                             n = Object(l.d)("Panel 1", "LocalizeExtensionSlot");
                             break;
-                        case Re.Panel2:
+                        case Ue.Panel2:
                             n = Object(l.d)("Panel 2", "LocalizeExtensionSlot");
                             break;
-                        case Re.Panel3:
+                        case Ue.Panel3:
                             n = Object(l.d)("Panel 3", "LocalizeExtensionSlot");
                             break;
                         default:
@@ -1936,7 +1936,7 @@
                     }
                     return n
                 },
-                Xe = function(e) {
+                qe = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.renderAnchorOptions = function() {
@@ -1956,8 +1956,8 @@
                                 var l = n.renderPanelAnchorOptions(i.panels);
                                 l.length && a.push(l)
                             }
-                            return t.state === Te.a.ACTIVE && a.push(n.renderDeactivate()), a.reduce(function(e, n, t) {
-                                var i = o.createElement(x.xb, {
+                            return t.state === _e.a.ACTIVE && a.push(n.renderDeactivate()), a.reduce(function(e, n, t) {
+                                var i = o.createElement(E.yb, {
                                     key: t,
                                     borderTop: !0,
                                     margin: {
@@ -1970,23 +1970,23 @@
                                 return 0 === e.length ? [n] : e.concat([i, n])
                             }, [])
                         }, n.renderActivePresence = function(e) {
-                            return o.createElement(x.Wa, {
-                                display: x.X.Flex,
-                                flexWrap: x.Aa.NoWrap,
-                                alignItems: x.f.Center
-                            }, o.createElement(x.fb, {
-                                status: x.gb.Online
-                            }), o.createElement(x.Wa, {
+                            return o.createElement(E.Xa, {
+                                display: E.X.Flex,
+                                flexWrap: E.Ba.NoWrap,
+                                alignItems: E.f.Center
+                            }, o.createElement(E.gb, {
+                                status: E.hb.Online
+                            }), o.createElement(E.Xa, {
                                 padding: {
                                     left: 1
                                 }
-                            }, qe(e)))
+                            }, ze(e)))
                         }, n.renderDeactivate = function() {
-                            return o.createElement(x.Ta, {
+                            return o.createElement(E.Ua, {
                                 key: "deactivate",
                                 blurAfterClick: !0,
                                 onClick: n.deactivateExtension
-                            }, o.createElement(x.Wa, {
+                            }, o.createElement(E.Xa, {
                                 padding: {
                                     x: 1,
                                     y: .5
@@ -1994,24 +1994,24 @@
                             }, Object(l.d)("Deactivate", "ActivateExtensionDropdownV2")))
                         }, n.renderComponentAnchorOptions = function(e) {
                             return e.reduce(function(e, t) {
-                                var i = n.renderSetAnchorLocationInteractable(t, Te.t.COMPONENT);
+                                var i = n.renderSetAnchorLocationInteractable(t, _e.t.COMPONENT);
                                 return i && e.push(i), e
                             }, [])
                         }, n.renderOverlayAnchorOptions = function(e) {
                             return e.reduce(function(e, t) {
-                                var i = n.renderSetAnchorLocationInteractable(t, Te.t.VIDEO_OVERLAY);
+                                var i = n.renderSetAnchorLocationInteractable(t, _e.t.VIDEO_OVERLAY);
                                 return i && e.push(i), e
                             }, [])
                         }, n.renderPanelAnchorOptions = function(e) {
                             var t = e.reduce(function(e, t) {
-                                var i = n.renderSetAnchorLocationInteractable(t, Te.t.PANEL);
+                                var i = n.renderSetAnchorLocationInteractable(t, _e.t.PANEL);
                                 return i && e.push(i), e
                             }, []);
-                            return e.length < ze.a && t.push(o.createElement(x.Ta, {
+                            return e.length < Ve.a && t.push(o.createElement(E.Ua, {
                                 key: "new-panel",
                                 blurAfterClick: !0,
                                 onClick: n.createPanelAndActivate
-                            }, o.createElement(x.Wa, {
+                            }, o.createElement(E.Xa, {
                                 padding: {
                                     x: 1,
                                     y: .5
@@ -2019,35 +2019,35 @@
                             }, Object(l.d)("Add as a new panel", "ActivateExtensionDropdownV2")))), t
                         }, n.renderSetAnchorLocationInteractable = function(e, t) {
                             var i = n.props.activationConfig;
-                            return i.state === Te.a.ACTIVE && i.slot === e ? i.anchor !== Te.t.COMPONENT ? null : o.createElement(x.Ta, {
+                            return i.state === _e.a.ACTIVE && i.slot === e ? i.anchor !== _e.t.COMPONENT ? null : o.createElement(E.Ua, {
                                 key: e,
                                 blurAfterClick: !0,
                                 onClick: n.activateExtension,
                                 "data-slot": e,
                                 "data-anchor": t
-                            }, o.createElement(x.Wa, {
+                            }, o.createElement(E.Xa, {
                                 padding: {
                                     x: 1,
                                     y: .5
                                 }
                             }, Object(l.d)("Reposition {slot}", {
-                                slot: qe(e)
-                            }, "ActivateExtensionDropdownV2"))) : o.createElement(x.Ta, {
+                                slot: ze(e)
+                            }, "ActivateExtensionDropdownV2"))) : o.createElement(E.Ua, {
                                 key: e,
                                 blurAfterClick: !0,
                                 onClick: n.activateExtension,
                                 "data-slot": e,
                                 "data-anchor": t
-                            }, o.createElement(x.Wa, {
+                            }, o.createElement(E.Xa, {
                                 padding: {
                                     x: 1,
                                     y: .5
                                 }
                             }, Object(l.d)("Set as {slot}", {
-                                slot: qe(e)
+                                slot: ze(e)
                             }, "ActivateExtensionDropdownV2")))
                         }, n.createPanelAndActivate = function() {
-                            n.props.activateExtension("", Te.t.PANEL, !0)
+                            n.props.activateExtension("", _e.t.PANEL, !0)
                         }, n.activateExtension = function(e) {
                             var t = e.currentTarget.dataset,
                                 i = t.slot,
@@ -2063,29 +2063,29 @@
                             t = e.canActivate,
                             i = e.requiredActions;
                         return i && i.some(function(e) {
-                            return e.type === Te.u.REQUIRES_CONFIGURATION
-                        }) ? o.createElement(x.Wa, {
-                            display: x.X.Flex,
-                            alignItems: x.f.Center
-                        }, o.createElement(x.W, {
-                            color: x.O.Alt2
-                        }, Object(l.d)("Needs Configuration", "ActivateExtensionDropdownV2"))) : t ? o.createElement(Ve.a, {
+                            return e.type === _e.u.REQUIRES_CONFIGURATION
+                        }) ? o.createElement(E.Xa, {
+                            display: E.X.Flex,
+                            alignItems: E.f.Center
+                        }, o.createElement(E.W, {
+                            color: E.O.Alt2
+                        }, Object(l.d)("Needs Configuration", "ActivateExtensionDropdownV2"))) : t ? o.createElement(Be.a, {
                             openByDefault: this.props.openByDefault
-                        }, o.createElement(x.z, {
+                        }, o.createElement(E.z, {
                             dropdown: !0,
-                            type: x.F.Text
-                        }, n.state === Te.a.ACTIVE ? this.renderActivePresence(n.slot) : Object(l.d)("Activate", "ActivateExtensionDropdownV2")), o.createElement(x.u, {
-                            size: x.w.Medium,
+                            type: E.F.Text
+                        }, n.state === _e.a.ACTIVE ? this.renderActivePresence(n.slot) : Object(l.d)("Activate", "ActivateExtensionDropdownV2")), o.createElement(E.u, {
+                            size: E.w.Medium,
                             offsetY: "-0.1rem",
                             noTail: !0
-                        }, o.createElement(x.xb, {
-                            color: x.O.Link,
+                        }, o.createElement(E.yb, {
+                            color: E.O.Link,
                             padding: 1
-                        }, this.renderAnchorOptions()))) : o.createElement(x.Wa, {
-                            display: x.X.Flex,
-                            alignItems: x.f.Center
-                        }, o.createElement(x.W, {
-                            color: x.O.Alt2
+                        }, this.renderAnchorOptions()))) : o.createElement(E.Xa, {
+                            display: E.X.Flex,
+                            alignItems: E.f.Center
+                        }, o.createElement(E.W, {
+                            color: E.O.Alt2
                         }, Object(l.d)("Activation Disabled", "ActivateExtensionDropdownV2")))
                     }, n
                 }(o.Component),
@@ -2103,23 +2103,23 @@
                                 t = e.supportedAnchors,
                                 i = e.supportPlatforms,
                                 a = t.map(function(e) {
-                                    return o.createElement(x.Wa, {
+                                    return o.createElement(E.Xa, {
                                         key: e,
-                                        display: x.X.InlineBlock,
+                                        display: E.X.InlineBlock,
                                         padding: {
                                             right: .5
                                         }
-                                    }, o.createElement(Ue.a, {
+                                    }, o.createElement(Xe.a, {
                                         anchorType: e
                                     }))
                                 });
-                            return i.includes(Ee.ExtensionPlatform.Mobile) && a.push(o.createElement(x.Wa, {
+                            return i.includes(xe.ExtensionPlatform.Mobile) && a.push(o.createElement(E.Xa, {
                                 key: "mobile",
-                                display: x.X.InlineBlock,
+                                display: E.X.InlineBlock,
                                 padding: {
                                     right: .5
                                 }
-                            }, o.createElement(Ue.a, {
+                            }, o.createElement(Xe.a, {
                                 mobile: !0
                             }))), a
                         }, n.activateExtension = function(e, t, i) {
@@ -2142,165 +2142,165 @@
                             s = e.extensionState,
                             r = e.extensionVersion,
                             c = e.trackingContext;
-                        return o.createElement(x.xb, {
-                            background: x.r.Base,
+                        return o.createElement(E.yb, {
+                            background: E.r.Base,
                             border: !0
-                        }, o.createElement(x.xb, {
+                        }, o.createElement(E.yb, {
                             padding: 1,
                             borderBottom: !0
-                        }, o.createElement(x.G, {
+                        }, o.createElement(E.G, {
                             row: !0,
                             border: !1
-                        }, o.createElement(x.I, {
+                        }, o.createElement(E.I, {
                             alt: i,
                             src: this.state.extensionIcon,
-                            aspect: x.p.Aspect1x1,
-                            size: x.J.Size6,
+                            aspect: E.p.Aspect1x1,
+                            size: E.J.Size6,
                             onError: this.onCardImageError
-                        }), o.createElement(x.H, null, o.createElement(x.Wa, {
+                        }), o.createElement(E.H, null, o.createElement(E.Xa, {
                             padding: 1
-                        }, o.createElement(x.U, {
+                        }, o.createElement(E.U, {
                             to: {
                                 pathname: Object(f.d)(t, r),
                                 state: {
                                     medium: c.medium,
-                                    content: E.PageviewContent.InstalledExtensionCard
+                                    content: x.PageviewContent.InstalledExtensionCard
                                 }
                             }
-                        }, o.createElement(x.W, {
-                            type: x.Nb.H5
-                        }, i)), this.renderExtensionTagPills(), s !== Te.v.RELEASED && o.createElement(Be.a, {
+                        }, o.createElement(E.W, {
+                            type: E.Ob.H5
+                        }, i)), this.renderExtensionTagPills(), s !== _e.v.RELEASED && o.createElement(We.a, {
                             state: s
-                        }))))), o.createElement(x.Wa, {
-                            display: x.X.Flex,
-                            justifyContent: x.Va.Between,
+                        }))))), o.createElement(E.Xa, {
+                            display: E.X.Flex,
+                            justifyContent: E.Wa.Between,
                             padding: 1
-                        }, o.createElement(Xe, {
+                        }, o.createElement(qe, {
                             activationConfig: this.props.activationConfig,
                             availableSlots: this.props.availableSlots,
                             canActivate: this.props.canActivate,
                             requiredActions: this.props.requiredActions,
                             activateExtension: this.activateExtension,
                             deactivateExtension: this.deactivateExtension
-                        }), o.createElement(x.Wa, null, o.createElement(x.A, {
+                        }), o.createElement(E.Xa, null, o.createElement(E.A, {
                             ariaLabel: Object(l.d)("Configure", "InstalledExtensionCardComponent"),
-                            icon: x.ob.Gear,
+                            icon: E.pb.Gear,
                             linkTo: a.__assign({}, Object(f.b)(n, t, r), {
                                 state: {
                                     medium: c.medium,
-                                    content: E.PageviewContent.InstalledExtensionCard
+                                    content: x.PageviewContent.InstalledExtensionCard
                                 }
                             })
-                        }), o.createElement(x.A, {
+                        }), o.createElement(E.A, {
                             ariaLabel: Object(l.d)("Uninstall", "InstalledExtensionCardComponent"),
-                            icon: x.ob.Trash,
+                            icon: E.pb.Trash,
                             onClick: this.uninstallExtension
                         }))))
                     }, n
                 }(o.Component),
                 Ye = function() {
-                    return o.createElement(x.xb, {
+                    return o.createElement(E.yb, {
                         margin: {
                             bottom: 1
                         },
-                        background: x.r.Base,
+                        background: E.r.Base,
                         border: !0
-                    }, o.createElement(x.xb, {
-                        display: x.X.Flex,
+                    }, o.createElement(E.yb, {
+                        display: E.X.Flex,
                         padding: 1,
                         borderBottom: !0
-                    }, o.createElement(x.Wa, {
+                    }, o.createElement(E.Xa, {
                         margin: {
                             right: 1
                         }
-                    }, o.createElement(x.db, {
+                    }, o.createElement(E.eb, {
                         height: 60,
                         width: 60
-                    })), o.createElement(x.Wa, {
-                        display: x.X.Flex,
-                        flexDirection: x.Z.Column,
-                        justifyContent: x.Va.Center
-                    }, o.createElement(x.Wa, {
+                    })), o.createElement(E.Xa, {
+                        display: E.X.Flex,
+                        flexDirection: E.Aa.Column,
+                        justifyContent: E.Wa.Center
+                    }, o.createElement(E.Xa, {
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(x.db, {
+                    }, o.createElement(E.eb, {
                         height: 20,
                         width: 225
-                    })), o.createElement(x.Wa, {
-                        display: x.X.Flex,
-                        flexDirection: x.Z.Row
-                    }, o.createElement(x.Wa, {
+                    })), o.createElement(E.Xa, {
+                        display: E.X.Flex,
+                        flexDirection: E.Aa.Row
+                    }, o.createElement(E.Xa, {
                         margin: {
                             right: .5
                         }
-                    }, o.createElement(x.db, {
+                    }, o.createElement(E.eb, {
                         width: 80,
                         height: 15
-                    })), o.createElement(x.Wa, {
+                    })), o.createElement(E.Xa, {
                         margin: {
                             right: .5
                         }
-                    }, o.createElement(x.db, {
+                    }, o.createElement(E.eb, {
                         width: 80,
                         height: 15
-                    })), o.createElement(x.Wa, null, o.createElement(x.db, {
+                    })), o.createElement(E.Xa, null, o.createElement(E.eb, {
                         width: 80,
                         height: 15
-                    }))))), o.createElement(x.xb, {
-                        display: x.X.Flex,
+                    }))))), o.createElement(E.yb, {
+                        display: E.X.Flex,
                         padding: 1,
-                        justifyContent: x.Va.Between
-                    }, o.createElement(x.Wa, {
+                        justifyContent: E.Wa.Between
+                    }, o.createElement(E.Xa, {
                         padding: .5
-                    }, o.createElement(x.db, {
+                    }, o.createElement(E.eb, {
                         height: 20,
                         width: 125
-                    })), o.createElement(x.Wa, {
-                        display: x.X.Flex,
+                    })), o.createElement(E.Xa, {
+                        display: E.X.Flex,
                         padding: .5
-                    }, o.createElement(x.Wa, {
+                    }, o.createElement(E.Xa, {
                         margin: {
                             right: .5
                         }
-                    }, o.createElement(x.db, {
+                    }, o.createElement(E.eb, {
                         height: 20,
                         width: 20
-                    })), o.createElement(x.Wa, null, o.createElement(x.db, {
+                    })), o.createElement(E.Xa, null, o.createElement(E.eb, {
                         height: 20,
                         width: 20
                     })))))
                 };
             Ye.displayName = "InstalledExtensionPlaceHolder";
-            var Ge = t("QA0N"),
-                Qe = function(e) {
-                    return o.createElement(o.Fragment, null, o.createElement(x.W, {
-                        type: x.Nb.P
+            var Qe = t("QA0N"),
+                Ge = function(e) {
+                    return o.createElement(o.Fragment, null, o.createElement(E.W, {
+                        type: E.Ob.P
                     }, Object(l.d)("To find an extension that fits your channel, please visit the {extensionsDiscoveryPageLink}.", {
-                        extensionsDiscoveryPageLink: o.createElement(x.U, {
+                        extensionsDiscoveryPageLink: o.createElement(E.U, {
                             to: {
                                 pathname: Object(f.c)(e.channelLogin),
                                 state: {
-                                    medium: Ge.e.ExtensionManagement
+                                    medium: Qe.e.ExtensionManagement
                                 }
                             }
                         }, Object(l.d)("Extensions Discovery Page", "NoInstalledExtensionsMessage"))
-                    }, "NoInstalledExtensionsMessage")), o.createElement(x.Wa, {
+                    }, "NoInstalledExtensionsMessage")), o.createElement(E.Xa, {
                         padding: {
                             top: 1
                         }
-                    }, o.createElement(x.W, {
-                        type: x.Nb.P
+                    }, o.createElement(E.W, {
+                        type: E.Ob.P
                     }, Object(l.d)("If you're unsure what to do with an extension, learn more about extensions in {extensionsCreatorCampLink}!", {
-                        extensionsCreatorCampLink: o.createElement(x.U, {
+                        extensionsCreatorCampLink: o.createElement(E.U, {
                             to: "https://www.twitch.tv/creatorcamp/en/level-up/extensions"
                         }, Object(l.d)("Creator Camp", "NoInstalledExtensionsMessage"))
                     }, "NoInstalledExtensionsMessage"))))
                 },
                 Je = t("uys4"),
-                Ze = t("TkUT"),
-                $e = t("RVVg"),
-                Ke = t("l45E");
+                $e = t("TkUT"),
+                Ke = t("RVVg"),
+                Ze = t("l45E");
             t("/WSp");
             var en, nn = "ExtensionPanel";
             ! function(e) {
@@ -2322,8 +2322,8 @@
                                 s = e.requiredActions,
                                 r = e.self,
                                 l = n.props.extensionManagementPageData,
-                                c = Object(M.f)(i.views);
-                            return o.createElement(x.Wa, {
+                                c = Object(j.f)(i.views);
+                            return o.createElement(E.Xa, {
                                 key: a,
                                 margin: {
                                     bottom: 1
@@ -2337,14 +2337,14 @@
                                 extensionVersion: i.version,
                                 installationID: a,
                                 trackingContext: {
-                                    medium: E.PageviewMedium.ExtensionManagement
+                                    medium: x.PageviewMedium.ExtensionManagement
                                 },
-                                supportedAnchors: Object(M.f)(i.views),
-                                supportPlatforms: Object(M.g)(i.views),
+                                supportedAnchors: Object(j.f)(i.views),
+                                supportPlatforms: Object(j.g)(i.views),
                                 activationConfig: t,
                                 availableSlots: function(e, n) {
                                     var t = {};
-                                    if (n.includes(Te.t.COMPONENT) && (t.components = ["extension-component-1", "extension-component-2"]), n.includes(Te.t.VIDEO_OVERLAY) && (t.overlays = ["extension-overlay-1"]), n.includes(Te.t.PANEL) && e.currentUser) {
+                                    if (n.includes(_e.t.COMPONENT) && (t.components = ["extension-component-1", "extension-component-2"]), n.includes(_e.t.VIDEO_OVERLAY) && (t.overlays = ["extension-overlay-1"]), n.includes(_e.t.PANEL) && e.currentUser) {
                                         var i = e.currentUser.panels.reduce(function(e, n) {
                                             return n && n.__typename === nn && e.push(n.slotID), e
                                         }, []);
@@ -2377,7 +2377,7 @@
                                         case 3:
                                             return (d = a.sent()) ? (c.slot = d && d.slotID, [3, 5]) : [2, r()];
                                         case 4:
-                                            if (i === Te.t.COMPONENT) return [2, this.activateComponentExtensions(e, t)];
+                                            if (i === _e.t.COMPONENT) return [2, this.activateComponentExtensions(e, t)];
                                             a.label = 5;
                                         case 5:
                                             return this.applyActivation(function(e) {
@@ -2391,7 +2391,7 @@
                                                             installationID: i
                                                         };
                                                     switch (t) {
-                                                        case Te.t.COMPONENT:
+                                                        case _e.t.COMPONENT:
                                                             if (!a) return;
                                                             s.component = {
                                                                 slot: o,
@@ -2399,12 +2399,12 @@
                                                                 y: a.y
                                                             };
                                                             break;
-                                                        case Te.t.PANEL:
+                                                        case _e.t.PANEL:
                                                             s.panel = {
                                                                 slot: o
                                                             };
                                                             break;
-                                                        case Te.t.VIDEO_OVERLAY:
+                                                        case _e.t.VIDEO_OVERLAY:
                                                             s.videoOverlay = {
                                                                 slot: o
                                                             }
@@ -2429,13 +2429,13 @@
                                 var i = o.installedExtensions.find(function(n) {
                                     var t = n.id,
                                         i = n.activationConfig;
-                                    return t !== e.id && i.state === Te.a.ACTIVE && i.anchor === e.anchor && i.slot === e.slot
+                                    return t !== e.id && i.state === _e.a.ACTIVE && i.anchor === e.anchor && i.slot === e.slot
                                 });
                                 i ? a({
                                     activationSlot: e.slot,
-                                    destructionType: M.a.Replace,
+                                    destructionType: j.a.Replace,
                                     existingExtensionName: i.extension.name,
-                                    existingMonetizationType: Object(M.e)(i.extension),
+                                    existingMonetizationType: Object(j.e)(i.extension),
                                     onConfirm: n
                                 }) : n()
                             })
@@ -2486,7 +2486,7 @@
                                             if (n = this.props, t = n.applyExtensionActivations, i = n.extensionManagementPageData, o = n.showExtensionErrorModal, !(s = i.currentUser) || !s.id) return [2];
                                             a.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 4, , 5]), [4, this.confirmExtensionDestruction(e, M.a.Deactivate)];
+                                            return a.trys.push([1, 4, , 5]), [4, this.confirmExtensionDestruction(e, j.a.Deactivate)];
                                         case 2:
                                             return a.sent(), [4, t(Object(D.a)({
                                                 channelID: s.id,
@@ -2512,13 +2512,13 @@
                                             if (n = this.props, t = n.extensionManagementPageData, i = n.showExtensionErrorModal, o = n.uninstallExtension, !(s = t.currentUser) || !s.id) return [2];
                                             a.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 4, , 5]), [4, this.confirmExtensionDestruction(e, M.a.Uninstall)];
+                                            return a.trys.push([1, 4, , 5]), [4, this.confirmExtensionDestruction(e, j.a.Uninstall)];
                                         case 2:
                                             return a.sent(), [4, o(Object(D.a)({
                                                 extensionInstallationID: e
                                             }))];
                                         case 3:
-                                            return (r = a.sent().data).uninstallExtension && r.uninstallExtension.id && Object(D.e)(Ke, {}, function(e) {
+                                            return (r = a.sent().data).uninstallExtension && r.uninstallExtension.id && Object(D.e)(Ze, {}, function(e) {
                                                 return e.currentUser && e.currentUser.installedExtensions && (e.currentUser.installedExtensions = e.currentUser.installedExtensions.filter(function(e) {
                                                     var n = e.id;
                                                     return r.uninstallExtension && r.uninstallExtension.id !== n
@@ -2551,59 +2551,59 @@
                             t = e.match,
                             i = n.currentUser,
                             a = n.loading,
-                            s = o.createElement(x.Wa, {
+                            s = o.createElement(E.Xa, {
                                 "data-test-selector": en.NoInstalledExtensionsMessage,
                                 padding: {
                                     bottom: 1
                                 }
-                            }, o.createElement(Qe, {
+                            }, o.createElement(Ge, {
                                 channelLogin: t.params.channelLogin
                             })),
                             r = s,
-                            c = o.createElement(x.Wa, {
+                            c = o.createElement(E.Xa, {
                                 "data-test-selector": en.NoActivatedExtensionsMessage,
                                 padding: {
                                     bottom: 1
                                 }
-                            }, o.createElement(x.W, {
-                                type: x.Nb.P
+                            }, o.createElement(E.W, {
+                                type: E.Ob.P
                             }, Object(l.d)("Activate an extension from your installed extensions list for it to show up on your channel page!", "ExtensionManagementPagePresentation")));
                         if (a) c = r = o.createElement(o.Fragment, null, o.createElement(Ye, null), o.createElement(Ye, null));
                         else {
-                            var d = i && i.installedExtensions ? _e(i.installedExtensions) : [];
+                            var d = i && i.installedExtensions ? Re(i.installedExtensions) : [];
                             if (d.length) {
                                 var u = d.filter(function(e) {
-                                    return e.activationConfig.state !== Te.a.ACTIVE
+                                    return e.activationConfig.state !== _e.a.ACTIVE
                                 });
                                 r = u.length ? o.createElement(o.Fragment, null, u.map(this.renderListCard)) : s;
                                 var m = d.filter(function(e) {
-                                    return e.activationConfig.state === Te.a.ACTIVE
+                                    return e.activationConfig.state === _e.a.ACTIVE
                                 });
                                 (m = function(e) {
                                     return e.slice().sort(function(e, n) {
-                                        return e.activationConfig.anchor === Te.t.COMPONENT && n.activationConfig.anchor !== Te.t.COMPONENT ? -1 : n.activationConfig.anchor === Te.t.COMPONENT && e.activationConfig.anchor !== Te.t.COMPONENT ? 1 : e.activationConfig.anchor === Te.t.VIDEO_OVERLAY && n.activationConfig.anchor !== Te.t.VIDEO_OVERLAY ? -1 : n.activationConfig.anchor === Te.t.VIDEO_OVERLAY && e.activationConfig.anchor !== Te.t.VIDEO_OVERLAY ? 1 : e.activationConfig.anchor === Te.t.PANEL && n.activationConfig.anchor !== Te.t.PANEL ? -1 : n.activationConfig.anchor === Te.t.PANEL && e.activationConfig.anchor !== Te.t.PANEL ? 1 : e.extension.name.toLowerCase() > n.extension.name.toLowerCase() ? 1 : e.extension.name.toLowerCase() < n.extension.name.toLowerCase() ? -1 : e.extension.version < n.extension.version ? 1 : e.extension.version > n.extension.version ? -1 : 0
+                                        return e.activationConfig.anchor === _e.t.COMPONENT && n.activationConfig.anchor !== _e.t.COMPONENT ? -1 : n.activationConfig.anchor === _e.t.COMPONENT && e.activationConfig.anchor !== _e.t.COMPONENT ? 1 : e.activationConfig.anchor === _e.t.VIDEO_OVERLAY && n.activationConfig.anchor !== _e.t.VIDEO_OVERLAY ? -1 : n.activationConfig.anchor === _e.t.VIDEO_OVERLAY && e.activationConfig.anchor !== _e.t.VIDEO_OVERLAY ? 1 : e.activationConfig.anchor === _e.t.PANEL && n.activationConfig.anchor !== _e.t.PANEL ? -1 : n.activationConfig.anchor === _e.t.PANEL && e.activationConfig.anchor !== _e.t.PANEL ? 1 : e.extension.name.toLowerCase() > n.extension.name.toLowerCase() ? 1 : e.extension.name.toLowerCase() < n.extension.name.toLowerCase() ? -1 : e.extension.version < n.extension.version ? 1 : e.extension.version > n.extension.version ? -1 : 0
                                     })
                                 }(m)).length && (c = o.createElement(o.Fragment, null, m.map(this.renderListCard)))
                             }
                         }
-                        return o.createElement(x.Wa, {
+                        return o.createElement(E.Xa, {
                             padding: {
                                 bottom: 5
                             }
-                        }, o.createElement(x.Wa, {
+                        }, o.createElement(E.Xa, {
                             padding: {
                                 bottom: 5
                             }
-                        }, o.createElement(x.Wa, {
-                            display: x.X.Flex,
-                            alignItems: x.f.Start,
+                        }, o.createElement(E.Xa, {
+                            display: E.X.Flex,
+                            alignItems: E.f.Start,
                             padding: {
                                 bottom: 5
                             }
-                        }, o.createElement(x.xb, {
+                        }, o.createElement(E.yb, {
                             className: "extensions-list",
                             "data-test-selector": en.InstalledExtensionList,
-                            display: x.X.InlineBlock,
+                            display: E.X.InlineBlock,
                             margin: {
                                 bottom: 5
                             },
@@ -2611,25 +2611,25 @@
                                 x: 1
                             },
                             border: !0
-                        }, o.createElement(x.Wa, {
+                        }, o.createElement(E.Xa, {
                             padding: {
                                 y: 1
                             },
-                            display: x.X.Flex,
-                            alignItems: x.f.Center,
-                            justifyContent: x.Va.Between
-                        }, o.createElement(x.W, {
-                            type: x.Nb.H5
-                        }, Object(l.d)("Installed", "ExtensionManagementPagePresentation")), this.anyInstallationUsesPermissions() && o.createElement(x.z, {
-                            type: x.F.Text,
+                            display: E.X.Flex,
+                            alignItems: E.f.Center,
+                            justifyContent: E.Wa.Between
+                        }, o.createElement(E.W, {
+                            type: E.Ob.H5
+                        }, Object(l.d)("Installed", "ExtensionManagementPagePresentation")), this.anyInstallationUsesPermissions() && o.createElement(E.z, {
+                            type: E.F.Text,
                             linkTo: Object(f.f)(this.props.match.params.channelLogin, {
-                                medium: E.PageviewMedium.ExtensionManagement
+                                medium: x.PageviewMedium.ExtensionManagement
                             }),
                             "data-test-selector": en.ManagePermissionsButton
-                        }, Object(l.d)("Manage Permissions", "ExtensionManagementPagePresentation"))), r), o.createElement(x.xb, {
+                        }, Object(l.d)("Manage Permissions", "ExtensionManagementPagePresentation"))), r), o.createElement(E.yb, {
                             className: "extensions-list",
                             "data-test-selector": en.ActiveExtensionList,
-                            display: x.X.InlineBlock,
+                            display: E.X.InlineBlock,
                             margin: {
                                 bottom: 5,
                                 left: 2
@@ -2638,12 +2638,12 @@
                                 x: 1
                             },
                             border: !0
-                        }, o.createElement(x.Wa, {
+                        }, o.createElement(E.Xa, {
                             padding: {
                                 y: 1
                             }
-                        }, o.createElement(x.W, {
-                            type: x.Nb.H5
+                        }, o.createElement(E.W, {
+                            type: E.Ob.H5
                         }, Object(l.d)("Activated", "ExtensionManagementPagePresentation"))), c))))
                     }, n.prototype.anyInstallationUsesPermissions = function() {
                         var e = this.props.extensionManagementPageData.currentUser;
@@ -2655,7 +2655,7 @@
                             t = n.closeModal,
                             i = n.match,
                             a = n.showExtensionConfigureModal,
-                            o = Le.parse(e.search),
+                            o = Te.parse(e.search),
                             s = !!o.configure,
                             r = o.extensionID;
                         s && r ? a({
@@ -2676,7 +2676,7 @@
                                     case 0:
                                         return (e = this.props.extensionManagementPageData.currentUser) && e.id ? [4, this.props.createPanel(Object(D.a)({
                                             channelID: e.id,
-                                            type: Te.y.EXTENSION
+                                            type: _e.y.EXTENSION
                                         }))] : [2, Promise.reject("No user id.")];
                                     case 1:
                                         return n = i.sent(), (t = n.data.createPanel) && t.panel.__typename === nn ? [2, t.panel] : [2]
@@ -2698,7 +2698,7 @@
                                     },
                                     r = i.installedExtensions.filter(function(e) {
                                         var n = e.activationConfig;
-                                        return n.state === Te.a.ACTIVE && n.anchor === Te.t.COMPONENT
+                                        return n.state === _e.a.ACTIVE && n.anchor === _e.t.COMPONENT
                                     }).map(function(e) {
                                         var n = e.id,
                                             t = e.activationConfig,
@@ -2750,14 +2750,14 @@
                                 return n.id === e
                             });
                             if (!s) return i();
-                            var r = Object(M.e)(s.extension);
-                            n === M.a.Uninstall ? a({
-                                destructionType: M.a.Uninstall,
+                            var r = Object(j.e)(s.extension);
+                            n === j.a.Uninstall ? a({
+                                destructionType: j.a.Uninstall,
                                 extensionName: s.extension.name,
                                 monetizationType: r,
                                 onConfirm: t
-                            }) : null !== r && n === M.a.Deactivate ? a({
-                                destructionType: M.a.Deactivate,
+                            }) : null !== r && n === j.a.Deactivate ? a({
+                                destructionType: j.a.Deactivate,
                                 extensionName: s.extension.name,
                                 monetizationType: r,
                                 onConfirm: t
@@ -2765,17 +2765,17 @@
                         })
                     }, n
                 }(o.Component),
-                an = Object(Se.compose)(Object(L.b)("ExtensionManagementPage", {
+                an = Object(Se.compose)(Object(T.b)("ExtensionManagementPage", {
                     destination: F.a.ChannelDashboardExtensionsManagement
-                }), Object(O.a)({
-                    location: E.PageviewLocation.DashboardExtensionsManagement
-                }), Object(u.a)(Ke, {
-                    name: "extensionManagementPageData"
+                }), Object(I.a)({
+                    location: x.PageviewLocation.DashboardExtensionsManagement
                 }), Object(u.a)(Ze, {
+                    name: "extensionManagementPageData"
+                }), Object(u.a)($e, {
                     name: "createPanel"
                 }), Object(u.a)(Je, {
                     name: "applyExtensionActivations"
-                }), Object(u.a)($e, {
+                }), Object(u.a)(Ke, {
                     name: "uninstallExtension"
                 }))(tn);
             var on, sn = Object(b.connect)(null, function(e) {
@@ -2787,15 +2787,15 @@
                         },
                         showExtensionActivatedModal: function(e) {
                             var n = a.__rest(e, []);
-                            return Object(C.d)(K, n)
+                            return Object(C.d)(Z, n)
                         },
                         showExtensionConfigureModal: function(e) {
                             var n = a.__rest(e, []);
-                            return Object(C.d)(Me, n)
+                            return Object(C.d)(je, n)
                         },
                         showExtensionDestructionWarningModal: function(e) {
                             var n = a.__rest(e, []);
-                            return Object(C.d)(je.a, n)
+                            return Object(C.d)(Le.a, n)
                         },
                         showExtensionErrorModal: function() {
                             return Object(C.d)(N.a, {})
@@ -2849,100 +2849,100 @@
                             t = e.extensionName,
                             i = e.extensionVersion,
                             a = e.installationID;
-                        return o.createElement(x.xb, {
+                        return o.createElement(E.yb, {
                             borderTop: !this.props.isFirstChild,
                             padding: {
                                 y: 2
                             }
-                        }, o.createElement(x.Wa, {
-                            display: x.X.Flex,
-                            alignItems: x.f.Center,
+                        }, o.createElement(E.Xa, {
+                            display: E.X.Flex,
+                            alignItems: E.f.Center,
                             margin: {
                                 bottom: 2
                             }
-                        }, o.createElement(x.Wa, {
+                        }, o.createElement(E.Xa, {
                             margin: {
                                 right: 1
                             }
-                        }, o.createElement(x.I, {
+                        }, o.createElement(E.I, {
                             alt: t,
                             src: this.state.extensionIcon,
-                            aspect: x.p.Aspect1x1,
-                            size: x.J.Size6,
+                            aspect: E.p.Aspect1x1,
+                            size: E.J.Size6,
                             onError: this.onCardImageError
-                        })), o.createElement(x.Wa, null, o.createElement(x.U, {
+                        })), o.createElement(E.Xa, null, o.createElement(E.U, {
                             to: {
                                 pathname: Object(f.d)(n, i),
                                 state: {
-                                    medium: E.PageviewMedium.ExtensionPermissions,
-                                    content: E.PageviewContent.ExtensionPermissionsCard
+                                    medium: x.PageviewMedium.ExtensionPermissions,
+                                    content: x.PageviewContent.ExtensionPermissionsCard
                                 }
                             }
-                        }, o.createElement(x.W, {
-                            type: x.Nb.H5
-                        }, t)), o.createElement(x.W, null, Object(l.d)("Created by {authorName}", {
+                        }, o.createElement(E.W, {
+                            type: E.Ob.H5
+                        }, t)), o.createElement(E.W, null, Object(l.d)("Created by {authorName}", {
                             authorName: this.props.extensionAuthor
-                        }, "PermissionCard")))), o.createElement(x.Wa, null, this.props.hasChatSupport && o.createElement(x.Wa, {
-                            display: x.X.Flex
-                        }, o.createElement(x.Wa, {
+                        }, "PermissionCard")))), o.createElement(E.Xa, null, this.props.hasChatSupport && o.createElement(E.Xa, {
+                            display: E.X.Flex
+                        }, o.createElement(E.Xa, {
                             margin: {
                                 right: 1
                             }
-                        }, o.createElement(x.Pb, {
+                        }, o.createElement(E.Qb, {
                             checked: this.props.permittedFeatures.canSendChat,
                             "data-installation-id": this.props.installationID,
                             "data-test-selector": on.ChatToggle,
                             error: this.state.canSendChatError,
                             name: a,
                             onChange: this.handleCanSendChat
-                        })), o.createElement(x.W, null, Object(l.d)("This extension can send message to my chat.", "PermissionCard")))))
+                        })), o.createElement(E.W, null, Object(l.d)("This extension can send message to my chat.", "PermissionCard")))))
                     }, n
                 }(o.Component),
                 dn = function(e) {
                     var n = e.border;
-                    return o.createElement(x.xb, {
+                    return o.createElement(E.yb, {
                         borderTop: n,
                         padding: {
                             y: 2
                         }
-                    }, o.createElement(x.Wa, {
-                        display: x.X.Flex
-                    }, o.createElement(x.Wa, {
-                        display: x.X.Flex
-                    }, o.createElement(x.db, {
+                    }, o.createElement(E.Xa, {
+                        display: E.X.Flex
+                    }, o.createElement(E.Xa, {
+                        display: E.X.Flex
+                    }, o.createElement(E.eb, {
                         height: 60,
                         width: 60
-                    })), o.createElement(x.Wa, {
-                        display: x.X.Flex,
-                        justifyContent: x.Va.Center,
-                        flexDirection: x.Z.Column,
+                    })), o.createElement(E.Xa, {
+                        display: E.X.Flex,
+                        justifyContent: E.Wa.Center,
+                        flexDirection: E.Aa.Column,
                         margin: {
                             left: 1
                         }
-                    }, o.createElement(x.Wa, null, o.createElement(x.db, {
+                    }, o.createElement(E.Xa, null, o.createElement(E.eb, {
                         height: 20,
                         width: 150
-                    })), o.createElement(x.Wa, {
+                    })), o.createElement(E.Xa, {
                         margin: {
                             top: .5
                         }
-                    }, o.createElement(x.db, {
+                    }, o.createElement(E.eb, {
                         height: 15,
                         width: 200
-                    })))), o.createElement(x.Wa, {
-                        display: x.X.Flex,
-                        alignItems: x.f.Center,
+                    })))), o.createElement(E.Xa, {
+                        display: E.X.Flex,
+                        alignItems: E.f.Center,
                         padding: {
                             top: 2
                         }
-                    }, o.createElement(x.Wa, null, o.createElement(x.db, {
+                    }, o.createElement(E.Xa, null, o.createElement(E.eb, {
                         height: 20,
                         width: 45
-                    })), o.createElement(x.Wa, {
+                    })), o.createElement(E.Xa, {
                         margin: {
                             left: 1
                         }
-                    }, o.createElement(x.db, {
+                    }, o.createElement(E.eb, {
                         height: 15,
                         width: 225
                     }))))
@@ -2965,7 +2965,7 @@
                                 key: e,
                                 border: 0 !== e
                             })
-                        }) : i && i.installedExtensions && i.installedExtensions.length ? (a = _e(i.installedExtensions).filter(function(e) {
+                        }) : i && i.installedExtensions && i.installedExtensions.length ? (a = Re(i.installedExtensions).filter(function(e) {
                             return e.extension.hasChatSupport
                         }).map(function(n, t) {
                             var i = n.id,
@@ -2984,11 +2984,11 @@
                                 permittedFeatures: s,
                                 setFeatureFlags: e.props.setFeatureFlags
                             })
-                        })).length || (a = o.createElement(x.W, {
+                        })).length || (a = o.createElement(E.W, {
                             "data-test-selector": ln.NoneRequirePermissions
-                        }, Object(l.d)("None of your installed extensions require permissions.", "ExtensionPermissionsPageComponent"))) : a = o.createElement(Qe, {
+                        }, Object(l.d)("None of your installed extensions require permissions.", "ExtensionPermissionsPageComponent"))) : a = o.createElement(Ge, {
                             channelLogin: this.props.match.params.channelLogin
-                        }), o.createElement(x.xb, {
+                        }), o.createElement(E.yb, {
                             borderRight: !0,
                             borderBottom: !0,
                             borderLeft: !0
@@ -2996,7 +2996,7 @@
                             channelLogin: this.props.match.params.channelLogin,
                             showBackLink: !0,
                             title: Object(l.d)("Extension Permissions", "ExtensionPermissionsPageComponent")
-                        }), o.createElement(x.Wa, {
+                        }), o.createElement(E.Xa, {
                             padding: {
                                 right: 2,
                                 left: 2
@@ -3010,7 +3010,7 @@
                     name: "setFeatureFlags"
                 }))(vn),
                 hn = t("a1OF"),
-                xn = (t("FIFN"), function(e) {
+                En = (t("FIFN"), function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -3026,8 +3026,8 @@
                             d = e.onButtonLinkClick,
                             u = e.subtitleText,
                             m = null;
-                        i && (m = o.createElement(x.Wa, {
-                            alignSelf: x.g.Center,
+                        i && (m = o.createElement(E.Xa, {
+                            alignSelf: E.g.Center,
                             margin: {
                                 right: 1
                             }
@@ -3036,54 +3036,54 @@
                             width: "21"
                         })));
                         var p = this.props.headerText;
-                        return a && (p = o.createElement(x.U, {
+                        return a && (p = o.createElement(E.U, {
                             to: a
-                        }, s)), o.createElement(x.xb, {
-                            background: x.r.Base,
+                        }, s)), o.createElement(E.yb, {
+                            background: E.r.Base,
                             border: !0,
                             className: "dashboard-announcement-banner-container",
-                            display: x.X.Flex,
+                            display: E.X.Flex,
                             margin: {
                                 bottom: 2
                             },
                             padding: 2
-                        }, m, o.createElement(x.Wa, null, o.createElement(x.Oa, {
+                        }, m, o.createElement(E.Xa, null, o.createElement(E.Pa, {
                             margin: {
                                 bottom: 0
                             }
-                        }, o.createElement(x.W, {
+                        }, o.createElement(E.W, {
                             bold: !0,
-                            fontSize: x.Ba.Size4,
-                            type: x.Nb.H2
-                        }, p)), o.createElement(x.W, {
-                            color: x.O.Alt2,
-                            fontSize: x.Ba.Size5
-                        }, u)), o.createElement(x.Wa, {
-                            alignSelf: x.g.Center,
+                            fontSize: E.Ca.Size4,
+                            type: E.Ob.H2
+                        }, p)), o.createElement(E.W, {
+                            color: E.O.Alt2,
+                            fontSize: E.Ca.Size5
+                        }, u)), o.createElement(E.Xa, {
+                            alignSelf: E.g.Center,
                             margin: {
                                 left: "auto",
                                 right: 1
                             }
-                        }, !r && o.createElement(x.z, {
+                        }, !r && o.createElement(E.z, {
                             onClick: d,
                             linkTo: n
-                        }, t)), o.createElement(x.Wa, {
-                            alignSelf: x.g.Center
-                        }, o.createElement(x.A, {
+                        }, t)), o.createElement(E.Xa, {
+                            alignSelf: E.g.Center
+                        }, o.createElement(E.A, {
                             ariaLabel: Object(l.d)("Close", "AnnouncementBanner"),
-                            icon: x.ob.Close,
+                            icon: E.pb.Close,
                             onClick: c,
                             "data-test-selector": "dismiss-button"
                         })))
                     }, n
                 }(o.PureComponent)),
-                En = "extensions_mve_banner_enabled",
+                xn = "extensions_mve_banner_enabled",
                 fn = "extensions_mve_banner_dismissed",
                 kn = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
-                            enabled: l.b.get(En, !1),
+                            enabled: l.b.get(xn, !1),
                             dismissed: l.m.get(fn, !1)
                         }, n.handleAnnouncementDismissed = function() {
                             n.setState({
@@ -3100,12 +3100,12 @@
                             i = this.state,
                             a = i.enabled,
                             s = i.dismissed;
-                        return !a || s ? null : o.createElement(xn, {
+                        return !a || s ? null : o.createElement(En, {
                             buttonLink: {
                                 pathname: Object(f.c)(n),
                                 state: {
-                                    content: E.PageviewContent.AnnouncementBanner,
-                                    medium: E.PageviewMedium.DashboardLive
+                                    content: x.PageviewContent.AnnouncementBanner,
+                                    medium: x.PageviewMedium.DashboardLive
                                 }
                             },
                             buttonText: Object(l.d)("Go to Extension Manager", "MultipleVideoExtensionsBanner"),
@@ -3113,7 +3113,7 @@
                             headerText: Object(l.d)("Introducing multiple video extensions.", "MultipleVideoExtensionsBanner"),
                             hideButton: t,
                             onAnnouncementDismissed: this.handleAnnouncementDismissed,
-                            subtitleText: o.createElement(o.Fragment, null, Object(l.d)("You can now activate up to 3 extensions over your video player at a time.", "MultipleVideoExtensionsBanner"), " ", o.createElement(x.U, {
+                            subtitleText: o.createElement(o.Fragment, null, Object(l.d)("You can now activate up to 3 extensions over your video player at a time.", "MultipleVideoExtensionsBanner"), " ", o.createElement(E.U, {
                                 targetBlank: !0,
                                 to: "https://blog.twitch.tv/cant-decide-which-extension-to-use-now-you-don-t-have-to-99c6d0b4f5c6"
                             }, Object(l.d)("Learn more.", "MultipleVideoExtensionsBanner")))
@@ -3205,32 +3205,32 @@
                             t = e.extensionCategory,
                             i = [];
                         if (e.loading && !t)
-                            for (var a = 0; a < 4; a++) i.push(o.createElement(x.Wa, {
+                            for (var a = 0; a < 4; a++) i.push(o.createElement(E.Xa, {
                                 key: a,
                                 padding: 1
-                            }, o.createElement(T.a, null)));
+                            }, o.createElement(_.a, null)));
                         else t && t.extensions && (i = t.extensions.edges.map(this.renderCard, this));
-                        return o.createElement(x.Wa, {
+                        return o.createElement(E.Xa, {
                             padding: {
                                 bottom: 1
                             }
                         }, o.createElement(bn.a, {
                             loadMoreEnabled: this.canLoadMoreExtensions(),
                             loadMore: this.loadMoreExtensions
-                        }, i), n && o.createElement(x.W, {
+                        }, i), n && o.createElement(E.W, {
                             "data-test-selector": pn.ErrorMessage
                         }, Object(l.d)("We're having trouble fetching extensions.", "WhitelistedExtensionsPageComponent")))
                     }, n.prototype.renderCard = function(e) {
                         var n = this.props.whitelistedExtensionsPageData,
                             t = e.node;
-                        return o.createElement(x.Oa, {
+                        return o.createElement(E.Pa, {
                             margin: {
                                 y: 1
                             },
                             key: t.id
-                        }, o.createElement(R.a, {
+                        }, o.createElement(U.a, {
                             authorName: t.authorName,
-                            cheeringEnabled: Object(j.a)(n.currentUser),
+                            cheeringEnabled: Object(L.a)(n.currentUser),
                             extensionClientID: t.clientID,
                             extensionID: t.id,
                             extensionName: t.name,
@@ -3238,16 +3238,16 @@
                             hasInstallPermission: null !== t.self && t.self.canInstall,
                             splashImageURL: t.iconURLs.discoverySplash,
                             iconURL: t.iconURLs.square100,
-                            monetizationType: Object(M.e)(t),
+                            monetizationType: Object(j.e)(t),
                             isInstalled: this.isExtensionInstalled(t.id),
                             installExtension: this.installExtension,
                             extensionState: t.state,
                             trackingContext: {
-                                medium: E.PageviewMedium.ExtensionsWhitelisted
+                                medium: x.PageviewMedium.ExtensionsWhitelisted
                             },
                             summary: t.summary,
-                            supportedAnchors: Object(M.f)(t.views),
-                            supportedPlatforms: Object(M.g)(t.views)
+                            supportedAnchors: Object(j.f)(t.views),
+                            supportedPlatforms: Object(j.g)(t.views)
                         }))
                     }, n.prototype.isExtensionInstalled = function(e) {
                         var n = this.props.whitelistedExtensionsPageData.currentUser;
@@ -3261,10 +3261,10 @@
                         n.loading || t.reportInteractive()
                     }, n
                 }(o.Component),
-                Sn = Object(y.compose)(Object(L.b)("WhitelistedExtensionsPage", {
+                Sn = Object(y.compose)(Object(T.b)("WhitelistedExtensionsPage", {
                     destination: F.a.ExtensionsCategory
-                }), Object(O.a)({
-                    location: E.PageviewLocation.ExtensionsCategory
+                }), Object(I.a)({
+                    location: x.PageviewLocation.ExtensionsCategory
                 }), Object(u.a)(Cn, {
                     name: "whitelistedExtensionsPageData",
                     options: function() {
@@ -3277,7 +3277,7 @@
                 }), Object(u.a)(yn, {
                     name: "installExtension"
                 }))(Nn);
-            var In = Object(b.connect)(null, function(e) {
+            var On = Object(b.connect)(null, function(e) {
                     return Object(y.bindActionCreators)({
                         showExtensionInstalledModal: function(e) {
                             var n = a.__rest(e, []);
@@ -3288,9 +3288,9 @@
                         }
                     }, e)
                 })(Sn),
-                On = t("F4WJ"),
+                In = t("F4WJ"),
                 Dn = c.a.wrap(function() {
-                    return t.e(138).then(t.bind(null, "t1ne"))
+                    return t.e(137).then(t.bind(null, "t1ne"))
                 }, "ExtensionConfigurePage"),
                 Fn = function(e) {
                     function n() {
@@ -3315,7 +3315,7 @@
                                 channelLogin: t.params.channelLogin,
                                 selectedTab: i.Whitelisted,
                                 showWhitelistedTab: n.isWhitelistedForExtensions()
-                            }), o.createElement(In, null))
+                            }), o.createElement(On, null))
                         }, n.isWhitelistedForExtensions = function() {
                             var e = n.props.extensionDashboardRootData;
                             return !!(e.extensionCategory && e.extensionCategory.extensions && e.extensionCategory.extensions.totalCount > 0)
@@ -3326,7 +3326,7 @@
                         return o.createElement(d.b, {
                             suppressScrollX: !0,
                             "data-a-target": "extensions-dashboard-root-scroller"
-                        }, o.createElement(x.Wa, {
+                        }, o.createElement(E.Xa, {
                             padding: {
                                 x: 4,
                                 top: 2
@@ -3357,7 +3357,7 @@
                         })), o.createElement(h, null)))
                     }, n
                 }(o.Component),
-                Pn = Object(u.a)(On, {
+                Pn = Object(u.a)(In, {
                     name: "extensionDashboardRootData"
                 })(Fn);
             t.d(n, "ExtensionDashboardRoot", function() {
@@ -3457,9 +3457,9 @@
                     var n = e.children,
                         t = e.loadMore,
                         s = e.loadMoreEnabled;
-                    return i.createElement(o.Tb, {
-                        childWidth: o.Ub.Large,
-                        gutterSize: o.Vb.Small,
+                    return i.createElement(o.Ub, {
+                        childWidth: o.Vb.Large,
+                        gutterSize: o.Wb.Small,
                         placeholderItems: 20
                     }, n, i.createElement(a.a, {
                         pixelThreshold: 200,
@@ -3510,8 +3510,8 @@
                         default:
                             n = ""
                     }
-                    return i.createElement(s.bb, {
-                        type: s.cb.Brand,
+                    return i.createElement(s.cb, {
+                        type: s.db.Brand,
                         label: n
                     })
                 };
@@ -3647,17 +3647,17 @@
                         }, n
                     }
                     return i.__extends(n, e), n.prototype.render = function() {
-                        return a.createElement(c.xb, {
+                        return a.createElement(c.yb, {
                             border: !0,
                             background: c.r.Base,
                             padding: 1
-                        }, a.createElement(c.Ia, null, a.createElement(c.P, {
+                        }, a.createElement(c.Ja, null, a.createElement(c.P, {
                             cols: 8
                         }), a.createElement(c.P, {
                             cols: 4
                         }, a.createElement("form", {
                             onSubmit: this.onSubmit
-                        }, a.createElement(c.qb, {
+                        }, a.createElement(c.rb, {
                             placeholder: Object(s.d)("Search all extensions", "ExtensionSearchBar"),
                             value: this.state.searchTerm,
                             onChange: this.onSearchInputChange
@@ -4405,7 +4405,7 @@
                 r = t("/7QA"),
                 l = t("Ue10"),
                 c = function() {
-                    return a.createElement(l.Wa, null, a.createElement(l.W, null, Object(r.d)("There was an error. Please try again later.", "ExtensionErrorModal")))
+                    return a.createElement(l.Xa, null, a.createElement(l.W, null, Object(r.d)("There was an error. Please try again later.", "ExtensionErrorModal")))
                 };
             c.displayName = "ExtensionErrorModalPresentation";
             var d = function(e) {
@@ -5540,7 +5540,7 @@
             ! function(e) {
                 e.Previous = "previous", e.Next = "next"
             }(a || (a = {}));
-            var m = ((i = {})[a.Previous] = d.ob.AngleLeft, i[a.Next] = d.ob.AngleRight, i),
+            var m = ((i = {})[a.Previous] = d.pb.AngleLeft, i[a.Next] = d.pb.AngleRight, i),
                 p = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
@@ -5618,9 +5618,9 @@
                                 }, {
                                     "media-carousel__button--inset": !0 === n.props.insetStyle
                                 });
-                            return r.createElement(d.Wa, {
+                            return r.createElement(d.Xa, {
                                 className: u,
-                                position: d.eb.Relative,
+                                position: d.fb.Relative,
                                 display: d.X.Flex,
                                 alignItems: d.f.Stretch
                             }, r.createElement(d.A, {
@@ -5643,15 +5643,15 @@
                     }, n.prototype.componentWillUnmount = function() {
                         window.removeEventListener("resize", this.onResize)
                     }, n.prototype.render = function() {
-                        return r.createElement(d.Oa, o.__assign({}, this.props, {
-                            position: d.eb.Relative
+                        return r.createElement(d.Pa, o.__assign({}, this.props, {
+                            position: d.fb.Relative
                         }), r.createElement("div", {
                             className: "media-carousel",
                             ref: this.refHandler,
                             "data-test-selector": "carousel-container"
-                        }, r.createElement(d.Wa, {
+                        }, r.createElement(d.Xa, {
                             className: "media-carousel__child-container",
-                            overflow: d.Za.Hidden,
+                            overflow: d.ab.Hidden,
                             fullWidth: !0,
                             "data-test-selector": "child-container"
                         }, r.createElement("div", {
@@ -5660,30 +5660,30 @@
                                 marginLeft: this.transformString()
                             },
                             "data-test-selector": "carousel-body"
-                        }, r.createElement(d.Oa, {
+                        }, r.createElement(d.Pa, {
                             className: "media-carousel__content",
                             display: d.X.Flex,
-                            flexWrap: d.Aa.NoWrap,
-                            flexDirection: d.Z.Row,
+                            flexWrap: d.Ba.NoWrap,
+                            flexDirection: d.Aa.Row,
                             alignItems: d.f.Center,
                             "data-js-selector": "carousel-content"
                         }, r.createElement("div", {
                             style: {
                                 width: "max-content"
                             }
-                        }, this.props.items)))), r.createElement(d.Wa, {
+                        }, this.props.items)))), r.createElement(d.Xa, {
                             className: "media-carousel__nav",
                             display: d.X.Flex,
                             alignItems: d.f.Center,
-                            position: d.eb.Absolute,
+                            position: d.fb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullHeight: !0
-                        }, this.renderNavButton(a.Previous, !this.state.childrenRendered || this.isBackButtonDisabled(), this.moveCarouselBackward)), r.createElement(d.Wa, {
+                        }, this.renderNavButton(a.Previous, !this.state.childrenRendered || this.isBackButtonDisabled(), this.moveCarouselBackward)), r.createElement(d.Xa, {
                             className: "media-carousel__nav",
                             display: d.X.Flex,
                             alignItems: d.f.Center,
-                            position: d.eb.Absolute,
+                            position: d.fb.Absolute,
                             attachTop: !0,
                             attachRight: !0,
                             fullHeight: !0
@@ -5714,9 +5714,9 @@
                         r = i === d.b.Bits,
                         l = Object(u.d)("Are you sure you want to deactivate?", "ExtensionDeactivationWarning"),
                         c = l;
-                    return s ? c = Object(u.d)("This extension enables in-extension purchases. If you deactivate this extension, your viewers may not be able to enjoy items they purchased through the extension on your channel unless you reactivate it. Are you sure you want to deactivate?", "ExtensionDeactivationWarning") : r && (c = Object(u.d)("This extension is Bits-enabled. If you deactivate this extension, your viewers may not be able to enjoy items and experiences they've exchanged for Bits through the extension on your channel unless you reactivate it. Are you sure you want to deactivate?", "ExtensionDeactivationWarning")), a.createElement(m.Wa, null, a.createElement(m.W, {
-                        type: m.Nb.H5
-                    }, l), a.createElement(m.xb, {
+                    return s ? c = Object(u.d)("This extension enables in-extension purchases. If you deactivate this extension, your viewers may not be able to enjoy items they purchased through the extension on your channel unless you reactivate it. Are you sure you want to deactivate?", "ExtensionDeactivationWarning") : r && (c = Object(u.d)("This extension is Bits-enabled. If you deactivate this extension, your viewers may not be able to enjoy items and experiences they've exchanged for Bits through the extension on your channel unless you reactivate it. Are you sure you want to deactivate?", "ExtensionDeactivationWarning")), a.createElement(m.Xa, null, a.createElement(m.W, {
+                        type: m.Ob.H5
+                    }, l), a.createElement(m.yb, {
                         borderTop: !0,
                         borderBottom: !0,
                         padding: {
@@ -5728,18 +5728,18 @@
                     }, a.createElement(m.W, null, Object(u.d)("You are deactivating {extensionName} ", {
                         extensionName: a.createElement(m.W, {
                             bold: !0,
-                            type: m.Nb.P
+                            type: m.Ob.P
                         }, t)
-                    }, "ExtensionDeactivationWarning")), a.createElement(m.Wa, {
+                    }, "ExtensionDeactivationWarning")), a.createElement(m.Xa, {
                         padding: {
                             top: 1
                         }
                     }, a.createElement(m.W, {
-                        type: m.Nb.P
-                    }, c))), a.createElement(m.Wa, {
+                        type: m.Ob.P
+                    }, c))), a.createElement(m.Xa, {
                         display: m.X.Flex,
-                        justifyContent: m.Va.Center
-                    }, a.createElement(m.Wa, {
+                        justifyContent: m.Wa.Center
+                    }, a.createElement(m.Xa, {
                         padding: {
                             right: 1
                         }
@@ -5759,9 +5759,9 @@
                         r = i === d.b.InExtensionPurchases,
                         l = i === d.b.Bits,
                         c = Object(u.d)("Are you sure you want to deactivate?", "ExtensionReplacementWarning");
-                    return r ? c = Object(u.d)("This extension enables in-extension purchases. If you replace this extension, your viewers may not be able to enjoy items they purchased through the extension on your channel unless you reactivate it. Are you sure you want to proceed?", "ExtensionReplacementWarning") : l && (c = Object(u.d)("This extension is Bits-enabled. If you replace this extension, your viewers may not be able to enjoy items and experiences they’ve exchanged for Bits through the extension on your channel unless you reactivate it. Are you sure you want to proceed?", "ExtensionReplacementWarning")), a.createElement(m.Wa, null, a.createElement(m.W, {
-                        type: m.Nb.H5
-                    }, Object(u.d)("You are replacing an active extension", "ExtensionReplacementWarning")), a.createElement(m.xb, {
+                    return r ? c = Object(u.d)("This extension enables in-extension purchases. If you replace this extension, your viewers may not be able to enjoy items they purchased through the extension on your channel unless you reactivate it. Are you sure you want to proceed?", "ExtensionReplacementWarning") : l && (c = Object(u.d)("This extension is Bits-enabled. If you replace this extension, your viewers may not be able to enjoy items and experiences they’ve exchanged for Bits through the extension on your channel unless you reactivate it. Are you sure you want to proceed?", "ExtensionReplacementWarning")), a.createElement(m.Xa, null, a.createElement(m.W, {
+                        type: m.Ob.H5
+                    }, Object(u.d)("You are replacing an active extension", "ExtensionReplacementWarning")), a.createElement(m.yb, {
                         borderTop: !0,
                         borderBottom: !0,
                         padding: {
@@ -5770,26 +5770,26 @@
                         margin: {
                             y: 1
                         }
-                    }, a.createElement(m.W, null, Object(u.d)("Performing this action will cause the following extension to be deactivated", "ExtensionReplacementWarning")), a.createElement(m.Wa, {
+                    }, a.createElement(m.W, null, Object(u.d)("Performing this action will cause the following extension to be deactivated", "ExtensionReplacementWarning")), a.createElement(m.Xa, {
                         margin: {
                             y: 1
                         }
                     }, a.createElement(m.W, null, Object(u.d)("{extensionName} on {anchorSlot}", {
                         extensionName: a.createElement(m.W, {
                             bold: !0,
-                            type: m.Nb.Span
+                            type: m.Ob.Span
                         }, n),
                         anchorSlot: a.createElement(m.W, {
                             bold: !0,
-                            type: m.Nb.Span,
-                            transform: m.Mb.Uppercase
+                            type: m.Ob.Span,
+                            transform: m.Nb.Uppercase
                         }, t)
                     }, "ExtensionReplacementWarning"))), a.createElement(m.W, {
-                        type: m.Nb.P
-                    }, c)), a.createElement(m.Wa, {
+                        type: m.Ob.P
+                    }, c)), a.createElement(m.Xa, {
                         display: m.X.Flex,
-                        justifyContent: m.Va.Center
-                    }, a.createElement(m.Wa, {
+                        justifyContent: m.Wa.Center
+                    }, a.createElement(m.Xa, {
                         padding: {
                             right: 1
                         }
@@ -5810,9 +5810,9 @@
                         r = i === d.b.Bits,
                         l = Object(u.d)("Are you sure you want to uninstall?", "ExtensionUninstallationWarning"),
                         c = l;
-                    return s ? c = Object(u.d)("This extension enables in-extension purchases. If you uninstall this extension, your viewers may not be able to enjoy items they purchased through the extension on your channel unless you reinstall and activate it. Are you sure you want to uninstall?", "ExtensionUninstallationWarning") : r && (c = Object(u.d)("This extension is Bits-enabled. If you uninstall this extension, your viewers may not be able to enjoy items and experiences they've exchanged for Bits through the extension on your channel unless you reinstall and activate it. Are you sure you want to uninstall?", "ExtensionUninstallationWarning")), a.createElement(m.Wa, null, a.createElement(m.W, {
-                        type: m.Nb.H5
-                    }, l), a.createElement(m.xb, {
+                    return s ? c = Object(u.d)("This extension enables in-extension purchases. If you uninstall this extension, your viewers may not be able to enjoy items they purchased through the extension on your channel unless you reinstall and activate it. Are you sure you want to uninstall?", "ExtensionUninstallationWarning") : r && (c = Object(u.d)("This extension is Bits-enabled. If you uninstall this extension, your viewers may not be able to enjoy items and experiences they've exchanged for Bits through the extension on your channel unless you reinstall and activate it. Are you sure you want to uninstall?", "ExtensionUninstallationWarning")), a.createElement(m.Xa, null, a.createElement(m.W, {
+                        type: m.Ob.H5
+                    }, l), a.createElement(m.yb, {
                         borderTop: !0,
                         borderBottom: !0,
                         padding: {
@@ -5824,18 +5824,18 @@
                     }, a.createElement(m.W, null, Object(u.d)("You are uninstalling {extensionName} ", {
                         extensionName: a.createElement(m.W, {
                             bold: !0,
-                            type: m.Nb.P
+                            type: m.Ob.P
                         }, t)
-                    }, "ExtensionUninstallationWarning")), a.createElement(m.Wa, {
+                    }, "ExtensionUninstallationWarning")), a.createElement(m.Xa, {
                         padding: {
                             top: 1
                         }
                     }, a.createElement(m.W, {
-                        type: m.Nb.P
-                    }, c))), a.createElement(m.Wa, {
+                        type: m.Ob.P
+                    }, c))), a.createElement(m.Xa, {
                         display: m.X.Flex,
-                        justifyContent: m.Va.Center
-                    }, a.createElement(m.Wa, {
+                        justifyContent: m.Wa.Center
+                    }, a.createElement(m.Xa, {
                         padding: {
                             right: 1
                         }
@@ -5875,7 +5875,7 @@
                     }
                 };
             h.displayName = "ExtensionDestructionWarningModalComponent";
-            var x = function(e) {
+            var E = function(e) {
                 function n() {
                     var n = null !== e && e.apply(this, arguments) || this;
                     return n.onConfirm = function() {
@@ -5918,15 +5918,15 @@
                     }))
                 }, n
             }(a.Component);
-            var E = Object(o.connect)(null, function(e) {
+            var x = Object(o.connect)(null, function(e) {
                 return Object(s.bindActionCreators)({
                     closeModal: l.c
                 }, e)
-            })(x);
+            })(E);
             t.d(n, !1, function() {
-                return x
-            }), t.d(n, "a", function() {
                 return E
+            }), t.d(n, "a", function() {
+                return x
             })
         },
         d9uE: function(e, n, t) {
@@ -5934,31 +5934,31 @@
             var i = t("q1tI"),
                 a = t("Ue10"),
                 o = function() {
-                    return i.createElement(a.Wa, {
+                    return i.createElement(a.Xa, {
                         display: a.X.Flex,
-                        flexDirection: a.Z.Column
-                    }, i.createElement(a.db, {
+                        flexDirection: a.Aa.Column
+                    }, i.createElement(a.eb, {
                         width: 300,
                         height: 200
-                    }), i.createElement(a.Wa, {
+                    }), i.createElement(a.Xa, {
                         padding: {
                             top: 1
                         }
-                    }, i.createElement(a.db, {
+                    }, i.createElement(a.eb, {
                         width: 250,
                         height: 15
-                    })), i.createElement(a.Wa, {
+                    })), i.createElement(a.Xa, {
                         padding: {
                             top: .5
                         }
-                    }, i.createElement(a.db, {
+                    }, i.createElement(a.eb, {
                         width: 140,
                         height: 15
-                    })), i.createElement(a.Wa, {
+                    })), i.createElement(a.Xa, {
                         padding: {
                             top: .5
                         }
-                    }, i.createElement(a.db, {
+                    }, i.createElement(a.eb, {
                         width: 60,
                         height: 15
                     })))
@@ -6857,7 +6857,7 @@
             var i = t("q1tI"),
                 a = t("Ue10"),
                 o = (t("JxAY"), function(e) {
-                    return i.createElement(a.xb, {
+                    return i.createElement(a.yb, {
                         className: e.className || "extension-manager-modal-container",
                         background: a.r.Base,
                         padding: 2

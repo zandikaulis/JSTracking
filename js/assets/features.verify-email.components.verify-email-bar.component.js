@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [75], {
+    [74], {
         Kcdb: function(e, t, i) {},
         b6Yk: function(e, t, i) {
             "use strict";
@@ -358,27 +358,27 @@
                         return a.createElement(g.i, {
                             type: g.n.SlideInTop,
                             duration: g.k.ExtraLong
-                        }, a.createElement(g.Wa, {
+                        }, a.createElement(g.Xa, {
                             fullWidth: !0,
-                            position: g.eb.Relative
-                        }, a.createElement(g.xb, {
+                            position: g.fb.Relative
+                        }, a.createElement(g.yb, {
                             className: "verify-email-bar",
                             display: g.X.Flex,
                             alignItems: g.f.Center,
-                            justifyContent: g.Va.Center,
+                            justifyContent: g.Wa.Center,
                             elevation: 1
-                        }, a.createElement(g.Oa, {
+                        }, a.createElement(g.Pa, {
                             fullHeight: !0,
                             fullWidth: !0,
                             padding: 1
                         }, a.createElement("button", {
                             onClick: this.onClickToVerify,
                             "data-test-selector": w
-                        }, a.createElement(g.Wa, {
+                        }, a.createElement(g.Xa, {
                             display: g.X.Flex,
                             alignItems: g.f.Center,
-                            justifyContent: g.Va.Center
-                        }, a.createElement(g.Wa, {
+                            justifyContent: g.Wa.Center
+                        }, a.createElement(g.Xa, {
                             className: "verify-email-bar__copy",
                             display: g.X.Flex,
                             alignItems: g.f.Center,
@@ -388,19 +388,19 @@
                             padding: {
                                 right: .5
                             }
-                        }, a.createElement(g.nb, {
-                            asset: g.ob.NotificationWarning,
-                            type: g.pb.Inherit
-                        })), a.createElement(g.Wa, {
+                        }, a.createElement(g.ob, {
+                            asset: g.pb.NotificationWarning,
+                            type: g.qb.Inherit
+                        })), a.createElement(g.Xa, {
                             className: "verify-email-bar__copy"
                         }, a.createElement(g.W, {
-                            fontSize: g.Ba.Size5,
+                            fontSize: g.Ca.Size5,
                             color: g.O.Inherit
                         }, Object(l.d)("Keep your account secure and verify {email}.", {
                             email: this.props.data.currentUser.email
-                        }, "VerifyEmail")))))), a.createElement(g.xb, {
+                        }, "VerifyEmail")))))), a.createElement(g.yb, {
                             className: "verify-email-bar__dismiss",
-                            position: g.eb.Absolute,
+                            position: g.fb.Absolute,
                             attachRight: !0,
                             margin: {
                                 right: 2
@@ -417,14 +417,14 @@
                             hoverUnderlineNone: !0
                         }, Object(l.d)("Not Now", "VerifyEmail"))))))
                     }, t.prototype.renderEmailSent = function() {
-                        return a.createElement(g.xb, {
+                        return a.createElement(g.yb, {
                             className: "verify-email-bar verify-email-bar--success",
                             display: g.X.Flex,
-                            justifyContent: g.Va.Center,
+                            justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
                             elevation: 1,
                             padding: 1
-                        }, a.createElement(g.xb, {
+                        }, a.createElement(g.yb, {
                             display: g.X.Flex,
                             alignItems: g.f.Center,
                             margin: {
@@ -434,24 +434,24 @@
                                 right: .5
                             },
                             color: g.O.Overlay
-                        }, a.createElement(g.nb, {
-                            asset: g.ob.NavMessages,
-                            type: g.pb.Inherit
+                        }, a.createElement(g.ob, {
+                            asset: g.pb.NavMessages,
+                            type: g.qb.Inherit
                         })), a.createElement(g.W, {
-                            fontSize: g.Ba.Size5,
+                            fontSize: g.Ca.Size5,
                             color: g.O.Overlay
                         }, Object(l.d)("Check your inbox at {email} for your verification email.", {
                             email: this.props.data.currentUser.email
                         }, "VerifyEmail")))
                     }, t.prototype.renderErrorSending = function() {
-                        return a.createElement(g.xb, {
+                        return a.createElement(g.yb, {
                             className: "verify-email-bar verify-email-bar--error",
                             display: g.X.Flex,
-                            justifyContent: g.Va.Center,
+                            justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
                             elevation: 1,
                             padding: 1
-                        }, a.createElement(g.xb, {
+                        }, a.createElement(g.yb, {
                             display: g.X.Flex,
                             alignItems: g.f.Center,
                             margin: {
@@ -461,16 +461,16 @@
                                 right: .5
                             },
                             color: g.O.Overlay
-                        }, a.createElement(g.nb, {
-                            asset: g.ob.DeadGlitch,
-                            type: g.pb.Inherit
+                        }, a.createElement(g.ob, {
+                            asset: g.pb.DeadGlitch,
+                            type: g.qb.Inherit
                         })), a.createElement(g.W, {
-                            fontSize: g.Ba.Size5,
+                            fontSize: g.Ca.Size5,
                             color: g.O.Overlay
                         }, Object(l.d)("Oops...we were unable to send an email to {email}. Please try again later or update your email.", {
                             email: this.props.data.currentUser.email
-                        }, "VerifyEmail")), a.createElement(g.xb, {
-                            position: g.eb.Absolute,
+                        }, "VerifyEmail")), a.createElement(g.yb, {
+                            position: g.fb.Absolute,
                             attachRight: !0,
                             margin: {
                                 right: 2
@@ -486,7 +486,7 @@
                         if (T.has(this.props.location.pathname)) {
                             var e = this.props.data.currentUser && this.props.data.currentUser.hasPrime,
                                 t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode;
-                            return Object(h.o)(e, t)
+                            return Object(h.p)(e, t)
                         }
                         return !1
                     }, t.prototype.shouldRespectDismissal = function() {

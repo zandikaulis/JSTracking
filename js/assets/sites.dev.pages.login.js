@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [106], {
+    [105], {
         "3lt/": function(e, t, n) {
             "use strict";
             n("mrSG"), n("uhBA");
@@ -29,78 +29,73 @@
                 u = n("mf+E"),
                 g = n("/7QA"),
                 m = n("kYGc"),
-                f = n("ctvI"),
-                h = n("Ue10"),
-                v = (n("YCie"), function(e) {
+                f = n("Ue10"),
+                h = (n("YCie"), n("p/6J")),
+                v = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.login = function(e) {
-                            e.preventDefault();
-                            var t = Object(f.a)({
-                                initialTab: m.a.Login,
-                                forceVerify: g.a.authSettings.forceVerify
-                            });
-                            window.location.assign(t)
+                            e.preventDefault(), Object(h.a)(m.a.Login)
                         }, t
                     }
                     return p.__extends(t, e), t.prototype.render = function() {
                         return this.props.isLoggedIn ? d.createElement(u.a, {
                             to: "/"
-                        }) : d.createElement(h.Wa, {
+                        }) : d.createElement(f.Xa, {
                             fullHeight: !0,
                             fullWidth: !0,
-                            display: h.X.Flex,
-                            flexDirection: h.Z.Column,
-                            position: h.eb.Absolute,
+                            display: f.X.Flex,
+                            flexDirection: f.Aa.Column,
+                            position: f.fb.Absolute,
                             attachTop: !0,
                             attachBottom: !0,
                             breakpointSmall: {
-                                flexDirection: h.Z.Row
+                                flexDirection: f.Aa.Row
                             },
                             className: "dev-login-page"
-                        }, d.createElement(h.xb, {
+                        }, d.createElement(f.yb, {
                             flexGrow: 1,
                             flexShrink: 1,
-                            display: h.X.Flex,
-                            background: h.r.Accent,
-                            justifyContent: h.Va.Center,
-                            alignItems: h.f.Center,
+                            display: f.X.Flex,
+                            background: f.r.Accent,
+                            justifyContent: f.Wa.Center,
+                            alignItems: f.f.Center,
                             className: "dev-login-page__logo-panel"
-                        }, d.createElement(h.U, {
+                        }, d.createElement(f.U, {
                             to: "/"
-                        }, d.createElement(h.xb, {
-                            color: h.O.Overlay
-                        }, d.createElement(h.nb, {
-                            asset: h.ob.LogoTwitchDevelopers,
-                            type: h.pb.Inherit,
+                        }, d.createElement(f.yb, {
+                            color: f.O.Overlay
+                        }, d.createElement(f.ob, {
+                            asset: f.pb.LogoTwitchDevelopers,
+                            type: f.qb.Inherit,
                             width: 220,
                             height: 142
-                        })))), d.createElement(h.Wa, {
-                            display: h.X.Flex,
+                        })))), d.createElement(f.Xa, {
+                            display: f.X.Flex,
                             flexGrow: 1,
                             flexShrink: 1,
                             className: "dev-login-page__login-panel",
-                            justifyContent: h.Va.Center,
-                            alignItems: h.f.Center
-                        }, d.createElement(h.Wa, {
+                            justifyContent: f.Wa.Center,
+                            alignItems: f.f.Center
+                        }, d.createElement(f.Xa, {
                             padding: {
                                 x: 4
                             }
-                        }, d.createElement(h.Wa, {
+                        }, d.createElement(f.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, d.createElement(h.W, {
-                            type: h.Nb.P,
-                            fontSize: h.Ba.Size3
-                        }, Object(g.d)("Welcome to the Twitch Developer Console, where code enhances live streaming experiences", "DevLogin"))), d.createElement(h.z, {
+                        }, d.createElement(f.W, {
+                            type: f.Ob.P,
+                            fontSize: f.Ca.Size3
+                        }, Object(g.d)("Welcome to the Twitch Developer Console, where code enhances live streaming experiences", "DevLogin"))), d.createElement(f.z, {
                             onClick: this.login,
-                            size: h.D.Large,
-                            icon: h.ob.LogoGlitch,
+                            size: f.D.Large,
+                            icon: f.pb.LogoGlitch,
                             "data-a-target": "glass-login-button"
                         }, Object(g.d)("Login with Twitch", "DevLogin")))))
                     }, t
-                }(d.Component));
+                }(d.Component);
             var _ = Object(o.compose)(Object(i.connect)(function(e) {
                 return {
                     isLoggedIn: Object(c.f)(e)

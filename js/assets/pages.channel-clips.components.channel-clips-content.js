@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [121], {
+    [120], {
         "0INk": function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
@@ -137,7 +137,7 @@
                         !n.loading && !n.error && i && i.clips && (r = i.clips.edges.map(function(e) {
                             return e.node
                         }));
-                        var o = a.createElement(g.Ya, {
+                        var o = a.createElement(g.Za, {
                             fillContent: !0
                         });
                         return o = n.error ? a.createElement(c.a, {
@@ -153,7 +153,7 @@
                             enabled: this.canLoadMore()
                         })) : a.createElement(c.a, {
                             message: Object(s.d)("User does not exist", "ChannelClipsContent")
-                        }), a.createElement(g.Wa, {
+                        }), a.createElement(g.Xa, {
                             fullHeight: !0
                         }, o)
                     }, t
@@ -196,7 +196,7 @@
                         })
                     }
                 }))(b),
-                k = function(e) {
+                C = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -208,11 +208,11 @@
                         })
                     }, t
                 }(a.PureComponent),
-                C = Object(r.a)(k);
+                k = Object(r.a)(C);
             n.d(t, "ChannelClipsContentComponent", function() {
-                return k
-            }), n.d(t, "ChannelClipsContent", function() {
                 return C
+            }), n.d(t, "ChannelClipsContent", function() {
+                return k
             })
         },
         "80G/": function(e, t, n) {},
@@ -235,8 +235,8 @@
                 v = n("2xye"),
                 b = n("4rCz"),
                 f = n("GnwI"),
-                k = n("bdIb"),
-                C = n("Ue10");
+                C = n("bdIb"),
+                k = n("Ue10");
             ! function(e) {
                 e.AllClipsUpsell = "all-clips-upsell", e.CreateAClipUpsell = "create-clip-upsell"
             }(i || (i = {}));
@@ -251,14 +251,14 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this;
-                        return 0 === this.props.clips.length ? r.createElement("div", null, this.renderEmpty()) : r.createElement(C.Wa, {
+                        return 0 === this.props.clips.length ? r.createElement("div", null, this.renderEmpty()) : r.createElement(k.Xa, {
                             fullWidth: !0
-                        }, r.createElement(C.Tb, {
-                            gutterSize: C.Vb.Small,
-                            childWidth: C.Ub.Large,
+                        }, r.createElement(k.Ub, {
+                            gutterSize: k.Wb.Small,
+                            childWidth: k.Vb.Large,
                             placeholderItems: 20
                         }, this.props.clips.map(function(t, n) {
-                            return r.createElement(C.Wa, {
+                            return r.createElement(k.Xa, {
                                 "data-a-target": "clips-card-" + n,
                                 margin: {
                                     bottom: 2
@@ -301,7 +301,7 @@
                             trackImageLatency: 0 === t
                         })
                     }, t.prototype.renderClipCardForPage = function(e, t) {
-                        return r.createElement(k.a, {
+                        return r.createElement(C.a, {
                             context: this.props.context,
                             key: "video-" + t,
                             tracking: {
@@ -312,11 +312,11 @@
                             clip: e
                         })
                     }, t.prototype.renderEmpty = function() {
-                        var e = this.props.timeRange === c.b.All ? r.createElement(C.Wa, {
+                        var e = this.props.timeRange === c.b.All ? r.createElement(k.Xa, {
                             "data-test-selector": i.CreateAClipUpsell
-                        }, r.createElement(C.W, {
-                            fontSize: C.Ba.Size4
-                        }, Object(b.d)("No Clips Found", "ClipsCards")), r.createElement(C.Wa, {
+                        }, r.createElement(k.W, {
+                            fontSize: k.Ca.Size4
+                        }, Object(b.d)("No Clips Found", "ClipsCards")), r.createElement(k.Xa, {
                             margin: 3
                         }, Object(b.d)("<x:link>Learn how</x:link> to make and share clips of this channel", {
                             "x:link": function(e) {
@@ -325,25 +325,25 @@
                                     target: "_blank"
                                 }, e)
                             }
-                        }, "ClipsCards"))) : r.createElement(C.Wa, {
+                        }, "ClipsCards"))) : r.createElement(k.Xa, {
                             "data-test-selector": i.AllClipsUpsell
-                        }, r.createElement(C.W, {
-                            fontSize: C.Ba.Size4
-                        }, Object(b.d)("No clips were created in this time period.", "ClipsCards"), r.createElement("br", null), Object(b.d)("Check out all popular clips from this channel instead.", "ClipsCards")), r.createElement(C.Wa, {
+                        }, r.createElement(k.W, {
+                            fontSize: k.Ca.Size4
+                        }, Object(b.d)("No clips were created in this time period.", "ClipsCards"), r.createElement("br", null), Object(b.d)("Check out all popular clips from this channel instead.", "ClipsCards")), r.createElement(k.Xa, {
                             margin: 3
-                        }, r.createElement(C.z, {
-                            type: C.F.Hollow,
+                        }, r.createElement(k.z, {
+                            type: k.F.Hollow,
                             onClick: this.props.onShowAllClipsClick
                         }, Object(b.d)("See all popular clips", "ClipCards"))));
-                        return r.createElement(C.Wa, {
+                        return r.createElement(k.Xa, {
                             fullWidth: !0
-                        }, r.createElement(C.Ia, null, r.createElement(C.P, {
+                        }, r.createElement(k.Ja, null, r.createElement(k.P, {
                             cols: 3
-                        }), r.createElement(C.P, {
+                        }), r.createElement(k.P, {
                             cols: 6
-                        }, r.createElement(C.Wa, {
-                            textAlign: C.Jb.Center
-                        }, e)), r.createElement(C.P, {
+                        }, r.createElement(k.Xa, {
+                            textAlign: k.Kb.Center
+                        }, e)), r.createElement(k.P, {
                             cols: 3
                         })))
                     }, t
@@ -386,9 +386,9 @@
                             for (var n = [], i = 0; i < 20; i++) n.push(r.createElement(I.a, {
                                 key: i
                             }));
-                            e = r.createElement(C.Tb, {
-                                gutterSize: C.Vb.Small,
-                                childWidth: C.Ub.Large,
+                            e = r.createElement(k.Ub, {
+                                gutterSize: k.Wb.Small,
+                                childWidth: k.Vb.Large,
                                 placeholderItems: 20
                             }, n)
                         } else e = r.createElement(x, {
@@ -403,10 +403,10 @@
                             var o = null;
                             t && Object(p.b)() && (o = r.createElement(L.a, {
                                 channelLogin: t
-                            })), a = r.createElement(C.Wa, {
+                            })), a = r.createElement(k.Xa, {
                                 "data-test-selector": E.Filters,
-                                display: C.X.Flex,
-                                flexDirection: C.Z.Row,
+                                display: k.X.Flex,
+                                flexDirection: k.Aa.Row,
                                 fullWidth: !0,
                                 margin: {
                                     bottom: 2
@@ -415,7 +415,7 @@
                                 hideLanguageFilter: !!t
                             }))
                         }
-                        return r.createElement(C.Wa, {
+                        return r.createElement(k.Xa, {
                             fullWidth: !0
                         }, a, r.createElement("div", null, e))
                     }, t
@@ -451,54 +451,54 @@
                             src: this.props.gameChange.thumbnailUrl,
                             alt: this.props.gameChange.label
                         };
-                        return a.createElement(l.Wa, {
+                        return a.createElement(l.Xa, {
                             className: "preview-card-game-balloon-row",
                             display: l.X.Flex,
-                            flexWrap: l.Aa.NoWrap
-                        }, a.createElement(l.Ta, {
+                            flexWrap: l.Ba.NoWrap
+                        }, a.createElement(l.Ua, {
                             linkTo: this.props.gameChange.linkTo,
                             onClick: this.onBalloonItemClick
-                        }, a.createElement(l.Wa, {
+                        }, a.createElement(l.Xa, {
                             display: l.X.Flex,
-                            flexDirection: l.Z.Row,
+                            flexDirection: l.Aa.Row,
                             padding: .5
-                        }, a.createElement(l.xb, {
+                        }, a.createElement(l.yb, {
                             className: "preview-card-game-balloon-row__image-wrapper",
                             flexGrow: 0,
                             flexShrink: 0,
                             borderRadius: l.x.Small,
-                            overflow: l.Za.Hidden,
-                            position: l.eb.Relative
+                            overflow: l.ab.Hidden,
+                            position: l.fb.Relative
                         }, a.createElement(l.o, {
                             align: l.d.Center,
                             ratio: l.p.BoxArt
-                        }, a.createElement(l.S, i.__assign({}, e))), a.createElement(l.xb, {
+                        }, a.createElement(l.S, i.__assign({}, e))), a.createElement(l.yb, {
                             className: "preview-card-game-balloon-row__image-play-overlay",
                             alignItems: l.f.Center,
                             background: l.r.Overlay,
                             color: l.O.Overlay,
                             display: l.X.Flex,
-                            justifyContent: l.Va.Center,
-                            position: l.eb.Absolute,
+                            justifyContent: l.Wa.Center,
+                            position: l.fb.Absolute,
                             attachTop: !0,
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0
-                        }, a.createElement(l.nb, {
-                            asset: l.ob.Play,
-                            type: l.pb.Inherit
-                        }))), a.createElement(l.Wa, {
+                        }, a.createElement(l.ob, {
+                            asset: l.pb.Play,
+                            type: l.qb.Inherit
+                        }))), a.createElement(l.Xa, {
                             display: l.X.Flex,
-                            flexDirection: l.Z.Column,
+                            flexDirection: l.Aa.Column,
                             flexGrow: 1,
                             flexShrink: 1,
                             padding: {
                                 left: 1,
                                 top: 1
                             }
-                        }, a.createElement(l.Wa, {
+                        }, a.createElement(l.Xa, {
                             className: "preview-card-game-balloon-row__info-label"
-                        }, a.createElement(l.W, null, this.props.gameChange.label)), a.createElement(l.Wa, {
+                        }, a.createElement(l.W, null, this.props.gameChange.label)), a.createElement(l.Xa, {
                             className: "preview-card-game-balloon-row__info-duration"
                         }, a.createElement(l.W, null, Object(o.b)(this.props.gameChange.duration)))))))
                     }, t
@@ -521,10 +521,10 @@
                             Object(c.a)(e)
                         }
                     }, t.prototype.render = function() {
-                        return a.createElement(l.Wa, {
+                        return a.createElement(l.Xa, {
                             className: "preview-card-game-balloon",
                             display: l.X.InlineBlock,
-                            position: l.eb.Relative,
+                            position: l.fb.Relative,
                             margin: {
                                 top: .5
                             }
@@ -534,41 +534,41 @@
                             onToggle: this.onBalloonToggle
                         }, a.createElement(l.z, {
                             type: l.F.Hollow,
-                            icon: l.ob.ViewerList
-                        }, a.createElement(l.Wa, {
+                            icon: l.pb.ViewerList
+                        }, a.createElement(l.Xa, {
                             display: l.X.Flex,
-                            flexDirection: l.Z.Row
-                        }, a.createElement(l.W, null, Object(r.d)("Chapters", "PreviewCardGameBalloon")), a.createElement(l.Wa, {
+                            flexDirection: l.Aa.Row
+                        }, a.createElement(l.W, null, Object(r.d)("Chapters", "PreviewCardGameBalloon")), a.createElement(l.Xa, {
                             margin: {
                                 left: 1
                             }
-                        }, a.createElement(l.bb, {
+                        }, a.createElement(l.cb, {
                             label: this.props.videoGameChanges.length.toString()
                         })))), a.createElement(l.u, {
                             direction: l.v.TopLeft,
                             size: l.w.Medium
-                        }, a.createElement(l.Wa, {
-                            overflow: l.Za.Hidden,
+                        }, a.createElement(l.Xa, {
+                            overflow: l.ab.Hidden,
                             display: l.X.Flex,
-                            flexDirection: l.Z.Column,
-                            flexWrap: l.Aa.NoWrap
-                        }, a.createElement(l.Wa, {
+                            flexDirection: l.Aa.Column,
+                            flexWrap: l.Ba.NoWrap
+                        }, a.createElement(l.Xa, {
                             padding: .5,
                             flexShrink: 0,
                             flexGrow: 0
                         }, a.createElement(l.W, {
                             color: l.O.Alt2
-                        }, Object(r.d)("Chapter Select", "PreviewCardGameBalloon"))), a.createElement(l.Wa, {
+                        }, Object(r.d)("Chapter Select", "PreviewCardGameBalloon"))), a.createElement(l.Xa, {
                             className: "preview-card-game-balloon__content",
                             display: l.X.Flex,
-                            flexDirection: l.Z.Column,
+                            flexDirection: l.Aa.Column,
                             flexGrow: 1,
                             flexShrink: 1,
-                            flexWrap: l.Aa.NoWrap
-                        }, a.createElement(p.b, null, a.createElement(l.Wa, {
+                            flexWrap: l.Ba.NoWrap
+                        }, a.createElement(p.b, null, a.createElement(l.Xa, {
                             display: l.X.Flex,
-                            flexDirection: l.Z.Column,
-                            flexWrap: l.Aa.NoWrap,
+                            flexDirection: l.Aa.Column,
+                            flexWrap: l.Ba.NoWrap,
                             fullHeight: !0
                         }, this.renderAdditionalGameList(this.props.videoGameChanges))))))))
                     }, t.prototype.renderAdditionalGameList = function(e) {
@@ -587,11 +587,11 @@
                 m = n("kduP"),
                 h = n("2xye"),
                 g = function(e) {
-                    return a.createElement(l.Wa, null, a.createElement(l.W, {
+                    return a.createElement(l.Xa, null, a.createElement(l.W, {
                         color: l.O.Alt,
                         ellipsis: !0
                     }, e.videoGameChanges.map(function(t, n, i) {
-                        return a.createElement(l.Oa, {
+                        return a.createElement(l.Pa, {
                             key: n
                         }, a.createElement(l.U, {
                             to: {
@@ -610,10 +610,10 @@
                 },
                 b = n("N0BP"),
                 f = (n("XA5B"), function(e) {
-                    var t = a.createElement(l.xb, {
+                    var t = a.createElement(l.yb, {
                         className: "preview-card-iconic-image__wrapper",
                         borderRadius: l.x.Small,
-                        overflow: l.Za.Hidden
+                        overflow: l.ab.Hidden
                     }, a.createElement(l.o, {
                         ratio: e.aspect || l.p.BoxArt,
                         align: l.d.Center
@@ -624,29 +624,29 @@
                     }), t)), t
                 });
             f.displayName = "PreviewCardIconicImage";
-            var k, C = n("TSYQ"),
+            var C, k = n("TSYQ"),
                 y = (n("cRsL"), function(e) {
-                    var t = C("preview-card-top-bar", {
+                    var t = k("preview-card-top-bar", {
                         "preview-card-top-bar--gray": !e.selected,
                         "preview-card-top-bar--green": e.selected
                     });
-                    return a.createElement(l.Wa, {
+                    return a.createElement(l.Xa, {
                         display: l.X.Flex,
                         padding: {
                             x: 1,
                             y: .5
                         },
-                        justifyContent: l.Va.Between,
+                        justifyContent: l.Wa.Between,
                         alignItems: l.f.Center,
                         className: t
-                    }, a.createElement(l.Wa, {
+                    }, a.createElement(l.Xa, {
                         display: l.X.InlineFlex
                     }, a.createElement(l.W, {
                         "data-test-selector": "top-bar-title-selector",
                         color: l.O.Overlay,
                         bold: !0,
-                        transform: l.Mb.Uppercase
-                    }, e.title)), e.subTitle && a.createElement(l.Wa, {
+                        transform: l.Nb.Uppercase
+                    }, e.title)), e.subTitle && a.createElement(l.Xa, {
                         display: l.X.InlineFlex
                     }, a.createElement(l.W, {
                         "data-test-selector": "top-bar-sub-title-selector",
@@ -656,31 +656,31 @@
                 w = (n("m493"), function(e) {
                     var t = .5,
                         n = null;
-                    "number" == typeof e.progressBarPercent && e.progressBarPercent > 0 && (n = a.createElement(l.Wa, {
-                        position: l.eb.Absolute,
+                    "number" == typeof e.progressBarPercent && e.progressBarPercent > 0 && (n = a.createElement(l.Xa, {
+                        position: l.fb.Absolute,
                         attachBottom: !0,
                         fullWidth: !0
-                    }, a.createElement(l.hb, {
+                    }, a.createElement(l.ib, {
                         borderRadius: l.x.None,
-                        size: l.jb.Small,
+                        size: l.kb.Small,
                         value: e.progressBarPercent,
                         mask: !0
                     })), t = 1);
                     var r = 1,
                         o = null;
-                    return e.topBar && (o = a.createElement(l.Wa, {
-                        position: l.eb.Absolute,
+                    return e.topBar && (o = a.createElement(l.Xa, {
+                        position: l.fb.Absolute,
                         attachTop: !0,
                         fullWidth: !0
-                    }, a.createElement(y, i.__assign({}, e.topBar))), r = 3), a.createElement(l.Wa, {
-                        position: l.eb.Absolute,
+                    }, a.createElement(y, i.__assign({}, e.topBar))), r = 3), a.createElement(l.Xa, {
+                        position: l.fb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
                         className: "preview-card-overlay"
-                    }, o, n, a.createElement(l.Wa, {
-                        position: l.eb.Absolute,
+                    }, o, n, a.createElement(l.Xa, {
+                        position: l.fb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         margin: e.topBar ? {
@@ -688,8 +688,8 @@
                             y: r
                         } : 1,
                         "data-test-selector": "top-left-selector"
-                    }, e.topLeft), a.createElement(l.Wa, {
-                        position: l.eb.Absolute,
+                    }, e.topLeft), a.createElement(l.Xa, {
+                        position: l.fb.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         margin: e.topBar ? {
@@ -697,8 +697,8 @@
                             y: r
                         } : 1,
                         "data-test-selector": "top-right-selector"
-                    }, e.topRight), a.createElement(l.Wa, {
-                        position: l.eb.Absolute,
+                    }, e.topRight), a.createElement(l.Xa, {
+                        position: l.fb.Absolute,
                         attachBottom: !0,
                         attachLeft: !0,
                         margin: {
@@ -706,8 +706,8 @@
                             y: t
                         },
                         "data-test-selector": "bottom-left-selector"
-                    }, e.bottomLeft), a.createElement(l.Wa, {
-                        position: l.eb.Absolute,
+                    }, e.bottomLeft), a.createElement(l.Xa, {
+                        position: l.fb.Absolute,
                         attachBottom: !0,
                         attachRight: !0,
                         margin: {
@@ -718,26 +718,26 @@
                     }, e.bottomRight))
                 }),
                 E = (n("kF1+"), function(e) {
-                    var t = e.icon && a.createElement(l.Wa, {
+                    var t = e.icon && a.createElement(l.Xa, {
                         display: l.X.Flex,
                         margin: {
                             right: .5
                         }
-                    }, a.createElement(l.nb, {
+                    }, a.createElement(l.ob, {
                         asset: e.icon,
                         width: 10,
                         height: 10
                     }));
-                    return e.withBackground ? a.createElement(l.xb, {
+                    return e.withBackground ? a.createElement(l.yb, {
                         alignItems: l.f.Center,
                         background: l.r.Overlay,
                         borderRadius: l.x.Small,
                         className: "preview-card-stat",
                         color: l.O.Overlay,
                         display: l.X.Flex,
-                        fontSize: l.Ba.Size6,
-                        justifyContent: l.Va.Center
-                    }, t, a.createElement(l.W, null, e.value)) : a.createElement(l.xb, {
+                        fontSize: l.Ca.Size6,
+                        justifyContent: l.Wa.Center
+                    }, t, a.createElement(l.W, null, e.value)) : a.createElement(l.yb, {
                         className: "preview-card-stat",
                         color: l.O.Overlay,
                         display: l.X.Flex,
@@ -787,15 +787,15 @@
                             onBlur: this.handleBlur
                         }), a.createElement("div", i.__assign({}, e, {
                             onClick: this.props.onClick
-                        }), a.createElement(l.xb, {
+                        }), a.createElement(l.yb, {
                             background: l.r.Alt2,
-                            overflow: l.Za.Hidden
+                            overflow: l.ab.Hidden
                         }, a.createElement(l.o, {
                             ratio: this.props.aspectRatio
                         }, this.renderImage())))
                     }, t.prototype.renderImage = function() {
                         var e, t = !(!this.props.animatedImageProps || !this.state.isHovered || this.state.didAnimatedPreviewFailToLoad),
-                            n = C("preview-card-thumbnail__image", ((e = {})["preview-card-thumbnail__image--animated"] = this.state.isHovered && this.state.didAnimatedPreviewLoad, e));
+                            n = k("preview-card-thumbnail__image", ((e = {})["preview-card-thumbnail__image--animated"] = this.state.isHovered && this.state.didAnimatedPreviewLoad, e));
                         return t && void 0 !== this.props.animatedImageProps ? a.createElement("div", {
                             className: n
                         }, a.createElement(l.S, i.__assign({}, this.props.animatedImageProps, {
@@ -815,7 +815,7 @@
                 L = (n("80G/"), function(e) {
                     var t = null;
                     return e.subtitles && e.subtitles.length > 0 && (t = e.subtitles.map(function(e, t) {
-                        return a.createElement(l.Wa, {
+                        return a.createElement(l.Xa, {
                             key: t,
                             "data-test-selector": "preview-card-titles__subtitle"
                         }, a.createElement(l.W, {
@@ -833,12 +833,12 @@
                         type: l.V.Inherit,
                         "data-test-selector": "preview-card-titles__primary-link"
                     }), a.createElement(l.W, {
-                        type: l.Nb.H3,
-                        fontSize: l.Ba.Size5,
+                        type: l.Ob.H3,
+                        fontSize: l.Ca.Size5,
                         lines: 1,
                         bold: !0,
                         ellipsis: !0
-                    }, e.title)), a.createElement(l.Wa, {
+                    }, e.title)), a.createElement(l.Xa, {
                         className: "preview-card-titles__subtitle-wrapper"
                     }, t))
                 }),
@@ -846,12 +846,12 @@
                 T = n("ZbA5"),
                 _ = n("QVaV"),
                 O = n("hyVY"),
-                A = n("MXoD"),
-                P = n("0LAi");
+                P = n("MXoD"),
+                A = n("0LAi");
             ! function(e) {
                 e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
-            }(k || (k = {}));
-            var M, W, R = function(e) {
+            }(C || (C = {}));
+            var M, R, B = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -860,62 +860,62 @@
                     var e = Object(r.d)("Get It Now", "VideoPreviewCardRestriction"),
                         t = this.props.restriction.canViewRestricted,
                         n = t ? Object(r.d)("unlocked", "VideoPreviewCardRestriction") : Object(r.d)("locked", "VideoPreviewCardRestriction"),
-                        i = t ? l.ob.Unlock : l.ob.Lock;
-                    return a.createElement(l.Wa, null, !t && a.createElement(l.xb, {
+                        i = t ? l.pb.Unlock : l.pb.Lock;
+                    return a.createElement(l.Xa, null, !t && a.createElement(l.yb, {
                         background: l.r.Overlay,
                         className: "video-preview-card-restriction",
                         color: l.O.Overlay,
                         display: l.X.Flex,
-                        position: l.eb.Absolute,
+                        position: l.fb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
-                        zIndex: l.ac.Default,
+                        zIndex: l.bc.Default,
                         padding: {
                             x: 5
                         },
-                        textAlign: l.Jb.Center,
+                        textAlign: l.Kb.Center,
                         fullWidth: !0,
                         fullHeight: !0,
                         alignItems: l.f.Center,
                         alignContent: l.e.Center,
-                        flexDirection: l.Z.Column,
-                        flexWrap: l.Aa.Wrap,
-                        justifyContent: l.Va.Center,
-                        "data-test-selector": k.LockSelector
-                    }, a.createElement(l.Oa, {
+                        flexDirection: l.Aa.Column,
+                        flexWrap: l.Ba.Wrap,
+                        justifyContent: l.Wa.Center,
+                        "data-test-selector": C.LockSelector
+                    }, a.createElement(l.Pa, {
                         margin: {
                             bottom: 1
                         }
                     }, a.createElement(l.W, {
                         color: l.O.Overlay,
-                        fontSize: l.Ba.Size5,
-                        "data-test-selector": k.UpsellSelector
+                        fontSize: l.Ca.Size5,
+                        "data-test-selector": C.UpsellSelector
                     }, Object(r.d)("View with {title}", {
                         title: this.props.restriction.title
-                    }, "VideoPreviewCardRestriction"))), a.createElement(l.Wa, null, a.createElement(l.z, {
+                    }, "VideoPreviewCardRestriction"))), a.createElement(l.Xa, null, a.createElement(l.z, {
                         type: l.F.Hollow,
                         ariaLabel: e,
                         targetBlank: !0,
                         disabled: "" === this.props.restriction.upsellLinkTo,
                         linkTo: this.props.restriction.upsellLinkTo,
                         overlay: !0
-                    }, e))), a.createElement(l.xb, {
+                    }, e))), a.createElement(l.yb, {
                         display: l.X.InlineFlex,
-                        position: l.eb.Absolute,
+                        position: l.fb.Absolute,
                         attachTop: this.props.attachTop,
                         attachBottom: !this.props.attachTop,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: l.ac.Default,
-                        fontSize: l.Ba.Size6,
+                        zIndex: l.bc.Default,
+                        fontSize: l.Ca.Size6,
                         background: l.r.Overlay,
                         borderRadius: l.x.Medium,
                         color: l.O.Overlay
-                    }, a.createElement(l.Qb, {
-                        direction: this.props.attachTop ? l.Sb.Bottom : l.Sb.Top,
-                        align: l.Rb.Right,
+                    }, a.createElement(l.Rb, {
+                        direction: this.props.attachTop ? l.Tb.Bottom : l.Tb.Top,
+                        align: l.Sb.Right,
                         label: n
-                    }, a.createElement(l.nb, {
+                    }, a.createElement(l.ob, {
                         asset: i,
                         height: 20,
                         width: 20
@@ -924,19 +924,19 @@
             }(a.PureComponent);
             n("5NSO");
 
-            function B(e) {
+            function j(e) {
                 return void 0 !== e.watchedProgressPercent
             }
 
-            function V(e) {
+            function F(e) {
                 return void 0 !== e.clipCreatedByChannelLogin
             }! function(e) {
                 e.Avatar = "preview-card-avatar", e.BoxArt = "preview-card-box-art"
             }(M || (M = {})),
             function(e) {
                 e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
-            }(W || (W = {}));
-            var j = function(e) {
+            }(R || (R = {}));
+            var X = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getTrackingContext = function(e) {
@@ -950,32 +950,32 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         return a.createElement("div", i.__assign({
                             className: "preview-card"
-                        }, Object(b.a)(this.props)), a.createElement(l.xb, {
-                            position: l.eb.Relative,
+                        }, Object(b.a)(this.props)), a.createElement(l.yb, {
+                            position: l.fb.Relative,
                             borderRadius: l.x.Medium,
-                            overflow: l.Za.Hidden
+                            overflow: l.ab.Hidden
                         }, this.renderVODRestrictionOverlay(), a.createElement(l.U, {
-                            to: Object(A.a)(this.getTrackingContext(h.PageviewContent.VideoThumbnail), this.props.linkTo),
+                            to: Object(P.a)(this.getTrackingContext(h.PageviewContent.VideoThumbnail), this.props.linkTo),
                             onClick: this.props.onThumbnailClick || this.props.onClick,
                             "data-a-target": "preview-card-image-link"
                         }, this.props.thumbnailImageProps && a.createElement(I, {
                             staticImageProps: this.props.thumbnailImageProps,
-                            animatedImageProps: B(this.props) && this.props.animatedImageProps || void 0,
+                            animatedImageProps: j(this.props) && this.props.animatedImageProps || void 0,
                             trackImageLatency: this.props.trackImageLatency
-                        }), this.renderOverlay())), a.createElement(l.Wa, {
+                        }), this.renderOverlay())), a.createElement(l.Xa, {
                             display: l.X.Flex,
-                            flexWrap: l.Aa.NoWrap,
+                            flexWrap: l.Ba.NoWrap,
                             margin: {
                                 top: 1
                             }
-                        }, a.createElement(l.Wa, {
+                        }, a.createElement(l.Xa, {
                             flexGrow: 0,
                             flexShrink: 0
-                        }, this.renderIconicImage()), a.createElement(l.Wa, {
+                        }, this.renderIconicImage()), a.createElement(l.Xa, {
                             className: "preview-card__titles-wrapper",
                             flexGrow: 1,
                             flexShrink: 1
-                        }, this.renderTitles(), this.renderTags()), this.props.contextualCardActionProps && a.createElement(l.Wa, {
+                        }, this.renderTitles(), this.renderTags()), this.props.contextualCardActionProps && a.createElement(l.Xa, {
                             flexGrow: 0,
                             flexShrink: 0
                         }, a.createElement(this.props.contextualCardActionProps.component, i.__assign({}, this.props.contextualCardActionProps.props)))))
@@ -994,10 +994,10 @@
                                 }, "VideoPreviewCard")
                             }),
                             bottomRight: void 0
-                        }) : B(this.props) ? a.createElement(w, {
+                        }) : j(this.props) ? a.createElement(w, {
                             topLeft: void 0 !== this.props.durationInSeconds && a.createElement(E, {
                                 value: Object(O.b)(this.props.durationInSeconds),
-                                icon: l.ob.Play,
+                                icon: l.pb.Play,
                                 withBackground: !0
                             }),
                             topRight: this.props.listPosition && a.createElement(E, {
@@ -1012,10 +1012,10 @@
                             }),
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
-                        }) : V(this.props) ? a.createElement(w, {
+                        }) : F(this.props) ? a.createElement(w, {
                             topLeft: a.createElement(E, {
                                 value: Object(O.b)(this.props.durationInSeconds),
-                                icon: l.ob.Clip,
+                                icon: l.pb.Clip,
                                 withBackground: !0
                             }),
                             topRight: void 0,
@@ -1027,33 +1027,33 @@
                             })
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
-                        return B(this.props) && this.props.listPosition ? Object(r.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
+                        return j(this.props) && this.props.listPosition ? Object(r.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
                             position: this.props.listPosition.position,
                             totalVideos: this.props.listPosition.totalVideos
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.getViewCountLabel = function() {
-                        return B(this.props) || V(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
+                        return j(this.props) || F(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
                             viewerCount: this.props.viewCount
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.renderIconicImage = function() {
-                        return this.props.context === W.SingleChannelList && this.props.gameBoxArtImageProps && this.props.gameBoxArtImageProps.src && this.props.gameTitleLinkTo ? a.createElement(l.Wa, {
+                        return this.props.context === R.SingleChannelList && this.props.gameBoxArtImageProps && this.props.gameBoxArtImageProps.src && this.props.gameTitleLinkTo ? a.createElement(l.Xa, {
                             margin: {
                                 right: 1
                             }
                         }, a.createElement(f, {
                             imageProps: this.props.gameBoxArtImageProps,
-                            linkTo: Object(A.a)(this.getTrackingContext(h.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(h.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             aspect: l.p.BoxArt,
                             "data-test-selector": M.BoxArt,
                             "data-a-target": "preview-card-boxart-link"
-                        })) : (this.props.context === W.SingleGameList || this.props.context === W.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? a.createElement(l.Wa, {
+                        })) : (this.props.context === R.SingleGameList || this.props.context === R.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? a.createElement(l.Xa, {
                             margin: {
                                 right: 1
                             }
                         }, a.createElement(f, {
                             imageProps: this.props.channelImageProps,
-                            linkTo: Object(A.a)(this.getTrackingContext(h.PageviewContent.UserThumbnail), this.props.channelLinkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(h.PageviewContent.UserThumbnail), this.props.channelLinkTo),
                             onClick: this.props.onChannelImageClick || this.props.onChannelLoginClick,
                             aspect: l.p.Aspect1x1,
                             "data-test-selector": M.Avatar
@@ -1063,43 +1063,43 @@
                             t = [];
                         return this.shouldShowGameBalloon(this.props) || t.push({
                             text: Object(_.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
-                            linkTo: Object(A.a)(this.getTrackingContext(h.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(h.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
                             onClick: this.props.onChannelLoginClick,
                             automationSelector: "preview-card-channel-link"
-                        }), V(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
+                        }), F(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
                             text: Object(r.d)("Clipped by {userName}", {
                                 userName: this.props.clipCreatedByChannelLogin || ""
                             }, "VideoPreviewCard"),
                             linkTo: this.props.clipCreatedByChannelLoginLinkTo,
                             onClick: this.props.onClipCreatedByChannelLoginClick,
                             automationSelector: "preview-card-clip-curator-link"
-                        }) : B(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== W.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
+                        }) : j(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== R.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
                             text: this.props.gameTitle,
-                            linkTo: Object(A.a)(this.getTrackingContext(h.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(h.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             automationSelector: "preview-card-game-link"
                         }), a.createElement(a.Fragment, null, a.createElement(L, {
                             title: this.props.title,
                             onClick: this.props.onVideoTitleClick || this.props.onClick,
-                            linkTo: Object(A.a)(this.getTrackingContext(h.PageviewContent.VideoTitle), this.props.linkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(h.PageviewContent.VideoTitle), this.props.linkTo),
                             subtitles: t,
                             "data-a-target": "preview-card-title-link"
                         }), e)
                     }, t.prototype.renderTags = function() {
-                        return this.props.tagListProps && 0 !== this.props.tagListProps.tags.length ? a.createElement(l.Wa, {
+                        return this.props.tagListProps && 0 !== this.props.tagListProps.tags.length ? a.createElement(l.Xa, {
                             margin: {
                                 top: .5
                             }
-                        }, a.createElement(P.a, i.__assign({}, this.props.tagListProps, {
+                        }, a.createElement(A.a, i.__assign({}, this.props.tagListProps, {
                             tagNumberLimit: 3
                         }))) : null
                     }, t.prototype.renderVODRestrictionOverlay = function() {
-                        return B(this.props) && this.props.restriction && this.props.restriction.productName && this.props.restriction.title ? a.createElement(R, {
+                        return j(this.props) && this.props.restriction && this.props.restriction.productName && this.props.restriction.title ? a.createElement(B, {
                             restriction: this.props.restriction,
                             attachTop: !0
                         }) : null
                     }, t.prototype.shouldShowGameBalloon = function(e) {
-                        return !!B(e) && (!!(e.videoGameChanges && e.videoGameChanges.length > 0) && e.multipleVideoGameMarkersType === N.a.Balloon)
+                        return !!j(e) && (!!(e.videoGameChanges && e.videoGameChanges.length > 0) && e.multipleVideoGameMarkersType === N.a.Balloon)
                     }, t.prototype.renderPreviewCardGameInfo = function(e, t, n, i) {
                         switch (e) {
                             case N.a.Balloon:
@@ -1121,17 +1121,17 @@
                         }
                     }, t
                 }(a.Component),
-                F = Object(x.b)("PreviewCard", {
+                V = Object(x.b)("PreviewCard", {
                     autoReportInteractive: !0
-                })(j);
+                })(X);
             n.d(t, !1, function() {
                 return M
             }), n.d(t, "b", function() {
-                return W
+                return R
             }), n.d(t, !1, function() {
-                return j
+                return X
             }), n.d(t, "a", function() {
-                return F
+                return V
             })
         },
         MdYN: function(e, t, n) {
@@ -1151,8 +1151,8 @@
                 v = n("8Ad5"),
                 b = n("u5aL"),
                 f = n("uX80"),
-                k = n("wbMx"),
-                C = n("Jxh/"),
+                C = n("wbMx"),
+                k = n("Jxh/"),
                 y = n("kduP"),
                 w = n("f00E"),
                 E = n("vhpE"),
@@ -1171,12 +1171,12 @@
                         var n = e.call(this, t) || this;
                         return n.clipsMaintenance = Object(L.a)(), n.renderMenuItem = function(e) {
                             var t = n.menuData.get(e);
-                            return e && t ? c.createElement(N.Ta, {
+                            return e && t ? c.createElement(N.Ua, {
                                 key: t.display,
                                 onClick: t.destinationHandler,
                                 "data-a-target": "clip-moderation-button-" + t.display,
                                 disabled: n.clipsMaintenance && _.includes(e)
-                            }, c.createElement(N.Wa, {
+                            }, c.createElement(N.Xa, {
                                 padding: {
                                     x: 1,
                                     y: .5
@@ -1227,16 +1227,16 @@
                             o = a || r || n,
                             l = r || n,
                             s = [i.Report];
-                        return o && s.push(i.Delete), l && (s.push(i.DeleteAll), t.curator && t.broadcaster && (s.push(i.Ban), s.push(i.Timeout))), c.createElement(N.Wa, {
+                        return o && s.push(i.Delete), l && (s.push(i.DeleteAll), t.curator && t.broadcaster && (s.push(i.Ban), s.push(i.Timeout))), c.createElement(N.Xa, {
                             className: "moderation-menu"
                         }, c.createElement(x.a, null, c.createElement(N.z, {
                             type: N.F.Hollow,
-                            icon: N.ob.More,
+                            icon: N.pb.More,
                             ariaLabel: Object(I.d)("More Options", "ModerationMenu"),
                             "data-a-target": "moderation-menu-button"
                         }), c.createElement(N.u, {
                             direction: N.v.TopRight
-                        }, c.createElement(N.Wa, {
+                        }, c.createElement(N.Xa, {
                             padding: {
                                 y: .5
                             }
@@ -1248,8 +1248,8 @@
                         })
                     }, t = l.__decorate([Object(S.a)(T), Object(m.b)("ModerationMenu")], t)
                 }(c.Component),
-                A = n("MLDe"),
-                P = (n("n/Dx"), 2e3),
+                P = n("MLDe"),
+                A = (n("n/Dx"), 2e3),
                 M = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -1259,7 +1259,7 @@
                         }, t.timeoutID = null, t.copyClipURL = function() {
                             var e;
                             try {
-                                e = Object(C.a)(t.props.clip.url)
+                                e = Object(k.a)(t.props.clip.url)
                             } catch (e) {
                                 return void p.k.warn("Failed to copy", e)
                             }
@@ -1269,7 +1269,7 @@
                                 t.setState({
                                     isShowingBalloon: !1
                                 })
-                            }, P), Object(A.c)(t.props.clip.id, t.props.clip.game && t.props.clip.game.name, t.props.clip.broadcaster && t.props.clip.broadcaster.id, t.props.clip.broadcaster && t.props.clip.broadcaster.login, t.props.pageType)(k.b.CopyInput))
+                            }, A), Object(P.c)(t.props.clip.id, t.props.clip.game && t.props.clip.game.name, t.props.clip.broadcaster && t.props.clip.broadcaster.id, t.props.clip.broadcaster && t.props.clip.broadcaster.login, t.props.pageType)(C.b.CopyInput))
                         }, t.dismissBalloon = function() {
                             t.setState({
                                 isShowingBalloon: !1
@@ -1291,10 +1291,10 @@
                                 onClick: this.props.closeModal,
                                 "data-a-target": "clip-modal-game-link"
                             }, this.props.clip.game.name)
-                        }, "ClipsViewModalContent") : t, c.createElement(N.xb, {
+                        }, "ClipsViewModalContent") : t, c.createElement(N.yb, {
                             className: "clips-view-modal-content",
                             background: N.r.Base
-                        }, c.createElement(N.Wa, {
+                        }, c.createElement(N.Xa, {
                             padding: {
                                 bottom: 2
                             }
@@ -1305,15 +1305,15 @@
                             width: "100%",
                             height: "100%",
                             allowFullScreen: !0
-                        }))), c.createElement(N.Wa, {
+                        }))), c.createElement(N.Xa, {
                             padding: {
                                 x: 2,
                                 bottom: 2
                             }
-                        }, c.createElement(N.Wa, {
+                        }, c.createElement(N.Xa, {
                             display: N.X.Flex,
-                            flexWrap: N.Aa.NoWrap
-                        }, c.createElement(N.Wa, {
+                            flexWrap: N.Ba.NoWrap
+                        }, c.createElement(N.Xa, {
                             flexGrow: 1,
                             margin: {
                                 right: 1
@@ -1323,15 +1323,15 @@
                         }, c.createElement(f.a, {
                             text: this.props.clip.url,
                             icon: !0,
-                            iconAsset: N.ob.Link,
+                            iconAsset: N.pb.Link,
                             onSelection: this.copyClipURL,
                             "data-a-target": "clip-share-input"
                         }, c.createElement(N.u, {
                             show: this.state.isShowingBalloon,
                             direction: N.v.TopRight
-                        }, c.createElement(N.Ta, {
+                        }, c.createElement(N.Ua, {
                             onClick: this.dismissBalloon
-                        }, c.createElement(N.Wa, {
+                        }, c.createElement(N.Xa, {
                             padding: 1
                         }, c.createElement(N.W, {
                             bold: !0
@@ -1341,36 +1341,36 @@
                         }), c.createElement(O, {
                             clip: this.props.clip,
                             updateModalViewState: this.props.updateModalViewState
-                        }))), c.createElement(N.Wa, {
+                        }))), c.createElement(N.Xa, {
                             padding: {
                                 x: 2,
                                 bottom: 2
                             },
                             display: N.X.Flex,
-                            flexWrap: N.Aa.NoWrap,
-                            justifyContent: N.Va.Between,
+                            flexWrap: N.Ba.NoWrap,
+                            justifyContent: N.Wa.Between,
                             fullWidth: !0,
-                            overflow: N.Za.Hidden
-                        }, c.createElement(N.Wa, {
+                            overflow: N.ab.Hidden
+                        }, c.createElement(N.Xa, {
                             flexGrow: 1,
                             ellipsis: !0
-                        }, c.createElement(N.Oa, {
+                        }, c.createElement(N.Pa, {
                             ellipsis: !0
-                        }, c.createElement(N.xb, {
+                        }, c.createElement(N.yb, {
                             display: N.X.Flex,
-                            fontSize: N.Ba.Size5
-                        }, c.createElement(N.Wa, {
+                            fontSize: N.Ca.Size5
+                        }, c.createElement(N.Xa, {
                             ellipsis: !0
-                        }, this.props.clip.title), c.createElement(N.Wa, {
+                        }, this.props.clip.title), c.createElement(N.Xa, {
                             flexShrink: 0
                         }, c.createElement(N.W, {
-                            type: N.Nb.Span,
+                            type: N.Ob.Span,
                             color: N.O.Alt2
                         }, " • ", Object(p.d)("{created, date, medium}", {
                             created: new Date(this.props.clip.createdAt)
-                        }, "ClipsViewModalContent"))))), c.createElement(N.Oa, {
+                        }, "ClipsViewModalContent"))))), c.createElement(N.Pa, {
                             ellipsis: !0
-                        }, c.createElement(N.xb, {
+                        }, c.createElement(N.yb, {
                             color: N.O.Alt2
                         }, e, e && !!this.props.clip.curator && c.createElement("span", null, " • "), this.props.clip.curator && Object(p.d)("Clipped by {curator}", {
                             curator: c.createElement(N.U, {
@@ -1378,35 +1378,35 @@
                                 onClick: this.props.closeModal,
                                 "data-a-target": "clip-modal-curator-link"
                             }, this.props.clip.curator.login)
-                        }, "ClipsViewModalContent")))), c.createElement(N.xb, {
+                        }, "ClipsViewModalContent")))), c.createElement(N.yb, {
                             display: N.X.Flex,
                             padding: {
                                 bottom: 2,
                                 left: 2
                             },
-                            fontSize: N.Ba.Size5,
+                            fontSize: N.Ca.Size5,
                             color: N.O.Alt2,
                             flexShrink: 0
-                        }, c.createElement(N.Wa, {
+                        }, c.createElement(N.Xa, {
                             margin: {
                                 right: .5
                             },
                             alignItems: N.f.Center,
                             display: N.X.Flex
-                        }, c.createElement(N.nb, {
-                            asset: N.ob.GlyphViews
+                        }, c.createElement(N.ob, {
+                            asset: N.pb.GlyphViews
                         })), Object(p.d)("{viewCount, number} views", {
                             viewCount: this.props.clip.viewCount
                         }, "ClipsViewModalContent"))))
                     }, t = l.__decorate([Object(m.b)("ClipsViewModalContent")], t)
                 }(c.Component),
-                W = n("S1Za");
-            var R = Object(a.connect)(null, function(e) {
+                R = n("S1Za");
+            var B = Object(a.connect)(null, function(e) {
                     return Object(r.bindActionCreators)({
-                        reportPlayerInstanceStarted: W.b
+                        reportPlayerInstanceStarted: R.b
                     }, e)
                 })(M),
-                B = (n("9a8W"), function(e) {
+                j = (n("9a8W"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onKeyDown = function(e) {
@@ -1423,33 +1423,33 @@
                     }, t.prototype.render = function() {
                         var e = null,
                             t = null;
-                        this.props.clipIndex > 0 && (e = c.createElement(N.Wa, {
-                            position: N.eb.Absolute,
+                        this.props.clipIndex > 0 && (e = c.createElement(N.Xa, {
+                            position: N.fb.Absolute,
                             display: N.X.Flex,
                             alignItems: N.f.Stretch,
                             className: "clip-carousel-button clip-carousel-button--left"
                         }, c.createElement(N.A, {
                             ariaLabel: Object(p.d)("Previous clip", "ClipsViewModalNavigation"),
                             type: N.C.Primary,
-                            icon: N.ob.AngleLeft,
+                            icon: N.pb.AngleLeft,
                             onClick: this.updateClipBackward,
                             "data-test-selector": "clips-view-modal-navigation-back"
                         })));
                         var n = this.props.getClips();
-                        return this.props.loadMoreClips && n.length - this.props.clipIndex < 4 && this.props.loadMoreClips(), this.props.clipIndex < n.length - 1 && (t = c.createElement(N.Wa, {
-                            position: N.eb.Absolute,
+                        return this.props.loadMoreClips && n.length - this.props.clipIndex < 4 && this.props.loadMoreClips(), this.props.clipIndex < n.length - 1 && (t = c.createElement(N.Xa, {
+                            position: N.fb.Absolute,
                             display: N.X.Flex,
                             alignItems: N.f.Stretch,
                             className: "clip-carousel-button clip-carousel-button--right"
                         }, c.createElement(N.A, {
                             ariaLabel: Object(p.d)("Next clip", "ClipsViewModalNavigation"),
                             type: N.C.Primary,
-                            icon: N.ob.AngleRight,
+                            icon: N.pb.AngleRight,
                             onClick: this.updateClipForward,
                             "data-test-selector": "clips-view-modal-navigation-forward"
-                        }))), c.createElement(N.Wa, {
+                        }))), c.createElement(N.Xa, {
                             className: "clips-view-modal-navigation"
-                        }, e, c.createElement(R, {
+                        }, e, c.createElement(B, {
                             clip: this.props.clip,
                             updateModalViewState: this.props.updateModalViewState,
                             pageType: this.props.pageType,
@@ -1471,14 +1471,14 @@
                         })
                     }, t
                 }(c.Component)),
-                V = Object(m.b)("ClipsViewModalNavigation")(B);
-            var j = Object(a.connect)(null, function(e) {
+                F = Object(m.b)("ClipsViewModalNavigation")(j);
+            var X = Object(a.connect)(null, function(e) {
                     return Object(r.bindActionCreators)({
                         showModal: o.d,
                         closeModal: o.c
                     }, e)
-                })(V),
-                F = (n("ygyh"), function(e) {
+                })(F),
+                V = (n("ygyh"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1535,7 +1535,7 @@
                                     break
                                 }
                             default:
-                                t = c.createElement(j, {
+                                t = c.createElement(X, {
                                     getClips: this.props.getClips,
                                     clip: this.props.clip,
                                     clipIndex: this.props.clipIndex,
@@ -1544,7 +1544,7 @@
                                     pageType: this.props.pageType
                                 }), n["clips-modal-view--wide"] = !0
                         }
-                        return c.createElement(N.Wa, {
+                        return c.createElement(N.Xa, {
                             className: s(n)
                         }, t, c.createElement(d.a, {
                             closeOnBackdropClick: !0,
@@ -1552,7 +1552,7 @@
                         }))
                     }, t
                 }(c.Component)),
-                D = Object(m.b)("ClipsViewModal")(F);
+                D = Object(m.b)("ClipsViewModal")(V);
             var G = Object(a.connect)(null, function(e) {
                 return Object(r.bindActionCreators)({
                     showModal: o.d
@@ -2126,14 +2126,14 @@
                 e.HostingDot = "stream-type-indicator__hosting-dot"
             }(o || (o = {}));
             var m = ((i = {})[d.a.Live] = "stream-type-indicator--live", i[d.a.Premiere] = "stream-type-indicator--premiere", i[d.a.Rerun] = "stream-type-indicator--rerun", i[d.a.WatchParty] = "stream-type-indicator--rerun", i),
-                h = ((a = {})[d.a.Premiere] = u.ob.VideoPremiere, a[d.a.Rerun] = u.ob.VideoRerun, a[d.a.WatchParty] = u.ob.VideoRerun, a),
-                g = ((r = {})[d.a.Premiere] = u.pb.Live, r[d.a.Rerun] = u.pb.Inherit, r[d.a.WatchParty] = u.pb.Inherit, r),
+                h = ((a = {})[d.a.Premiere] = u.pb.VideoPremiere, a[d.a.Rerun] = u.pb.VideoRerun, a[d.a.WatchParty] = u.pb.VideoRerun, a),
+                g = ((r = {})[d.a.Premiere] = u.qb.Live, r[d.a.Rerun] = u.qb.Inherit, r[d.a.WatchParty] = u.qb.Inherit, r),
                 v = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(u.xb, {
+                        return c.createElement(u.yb, {
                             className: this.getClassNames(),
                             color: u.O.Overlay,
                             background: u.r.Overlay,
@@ -2142,14 +2142,14 @@
                             },
                             borderRadius: u.x.Small,
                             display: u.X.Flex
-                        }, c.createElement(u.Wa, {
+                        }, c.createElement(u.Xa, {
                             display: u.X.Flex,
                             alignItems: u.f.Center,
                             margin: {
                                 right: .5
                             }
                         }, this.getIcon()), c.createElement(u.W, {
-                            type: u.Nb.Span
+                            type: u.Ob.Span
                         }, this.getLabel()))
                     }, t.prototype.getClassNames = function() {
                         var e = {
@@ -2157,18 +2157,18 @@
                         };
                         return e[m[this.props.type]] = !0, s(e)
                     }, t.prototype.getIcon = function() {
-                        return this.props.hosting ? c.createElement(u.xb, {
+                        return this.props.hosting ? c.createElement(u.yb, {
                             borderRadius: u.x.Rounded,
                             className: "stream-type-indicator__hosting-dot",
                             "data-test-selector": o.HostingDot
-                        }) : this.props.type === d.a.Live ? c.createElement(u.Wa, {
+                        }) : this.props.type === d.a.Live ? c.createElement(u.Xa, {
                             className: "stream-type-indicator__live-wrapper",
                             display: u.X.Flex,
                             alignItems: u.f.Center
                         }, c.createElement(u.K, {
                             status: u.M.Live,
                             size: u.L.Small
-                        })) : c.createElement(u.nb, {
+                        })) : c.createElement(u.ob, {
                             asset: h[this.props.type],
                             type: g[this.props.type],
                             width: 14,
@@ -2392,11 +2392,11 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return a.createElement(l.Wa, i.__assign({
-                            position: l.eb.Relative,
+                        return a.createElement(l.Xa, i.__assign({
+                            position: l.fb.Relative,
                             className: "selectable-input-wrapper"
-                        }, Object(l.bc)(this.props)), a.createElement(l.Qa, {
-                            type: l.Sa.Text,
+                        }, Object(l.cc)(this.props)), a.createElement(l.Ra, {
+                            type: l.Ta.Text,
                             value: this.props.text,
                             readOnly: !0,
                             onFocus: this.selectOnFocus,

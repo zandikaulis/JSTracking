@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [190], {
+    [188], {
         "5zXJ": function(e, t, n) {
             "use strict";
             n.d(t, "v", function() {
@@ -23,9 +23,9 @@
             }), n.d(t, "r", function() {
                 return f
             }), n.d(t, "l", function() {
-                return g
-            }), n.d(t, "m", function() {
                 return h
+            }), n.d(t, "m", function() {
+                return g
             }), n.d(t, "j", function() {
                 return k
             }), n.d(t, "g", function() {
@@ -33,17 +33,17 @@
             }), n.d(t, "e", function() {
                 return b
             }), n.d(t, "i", function() {
-                return S
-            }), n.d(t, "h", function() {
                 return y
+            }), n.d(t, "h", function() {
+                return S
             }), n.d(t, "f", function() {
                 return E
             }), n.d(t, "k", function() {
-                return _
-            }), n.d(t, "u", function() {
-                return C
-            }), n.d(t, "s", function() {
                 return O
+            }), n.d(t, "u", function() {
+                return _
+            }), n.d(t, "s", function() {
+                return C
             }), n.d(t, "d", function() {
                 return N
             });
@@ -62,28 +62,18 @@
                 p = 25e4,
                 m = 500,
                 f = 1e3,
-                g = "cheer",
-                h = o.a.Purple,
+                h = "cheer",
+                g = o.a.Purple,
                 k = "UNKNOWN",
                 v = "FIRST_PARTY",
                 b = "CUSTOM",
-                S = "SPONSORED",
-                y = "THIRD_PARTY",
+                y = "SPONSORED",
+                S = "THIRD_PARTY",
                 E = "DISPLAY_ONLY",
-                _ = ((i = {})[o.a.Gray] = "#979797", i[o.a.Purple] = "#9c3ee8", i[o.a.Green] = "#1db2a5", i[o.a.Blue] = "#0099fe", i[o.a.Red] = "#f43021", i[o.a.Yellow] = "#f3a71a", i),
-                C = "bits_sponsored_cheermotes",
-                O = "bits_sponsored_cheermotes_announcement",
+                O = ((i = {})[o.a.Gray] = "#979797", i[o.a.Purple] = "#9c3ee8", i[o.a.Green] = "#1db2a5", i[o.a.Blue] = "#0099fe", i[o.a.Red] = "#f43021", i[o.a.Yellow] = "#f3a71a", i),
+                _ = "bits_sponsored_cheermotes",
+                C = "bits_sponsored_cheermotes_announcement",
                 N = "bits_charity_event"
-        },
-        "8Ad5": function(e, t, n) {
-            "use strict";
-            var i;
-            n.d(t, "a", function() {
-                    return i
-                }),
-                function(e) {
-                    e[e.Backspace = 8] = "Backspace", e[e.Tab = 9] = "Tab", e[e.Enter = 13] = "Enter", e[e.Esc = 27] = "Esc", e[e.Space = 32] = "Space", e[e.Left = 37] = "Left", e[e.Up = 38] = "Up", e[e.Right = 39] = "Right", e[e.Down = 40] = "Down", e[e.Digit0 = 48] = "Digit0", e[e.Digit1 = 49] = "Digit1", e[e.Digit2 = 50] = "Digit2", e[e.Digit3 = 51] = "Digit3", e[e.Digit4 = 52] = "Digit4", e[e.Digit5 = 53] = "Digit5", e[e.Digit6 = 54] = "Digit6", e[e.Digit7 = 55] = "Digit7", e[e.Digit8 = 56] = "Digit8", e[e.Digit9 = 57] = "Digit9", e[e.Colon = 58] = "Colon", e[e.At = 64] = "At", e[e.A = 65] = "A", e[e.B = 66] = "B", e[e.C = 67] = "C", e[e.D = 68] = "D", e[e.E = 69] = "E", e[e.F = 70] = "F", e[e.G = 71] = "G", e[e.H = 72] = "H", e[e.I = 73] = "I", e[e.J = 74] = "J", e[e.K = 75] = "K", e[e.L = 76] = "L", e[e.M = 77] = "M", e[e.N = 78] = "N", e[e.O = 79] = "O", e[e.P = 80] = "P", e[e.Q = 81] = "Q", e[e.R = 82] = "R", e[e.S = 83] = "S", e[e.T = 84] = "T", e[e.U = 85] = "U", e[e.V = 86] = "V", e[e.W = 87] = "W", e[e.X = 88] = "X", e[e.Y = 89] = "Y", e[e.Z = 90] = "Z", e[e.Comma = 188] = "Comma", e[e.Period = 190] = "Period"
-                }(i || (i = {}))
         },
         "E2x/": function(e, t, n) {},
         JhNq: function(e, t) {
@@ -455,36 +445,36 @@
                 p = n("V+GM"),
                 m = n("wUQP"),
                 f = n("NvVO"),
-                g = n("2xye"),
-                h = n("5zXJ"),
+                h = n("2xye"),
+                g = n("5zXJ"),
                 k = n("GnwI"),
                 v = n("5ELF"),
                 b = n("yR8l"),
-                S = n("8Ad5"),
-                y = n("geRD"),
+                y = n("8Ad5"),
+                S = n("geRD"),
                 E = n("Ue10"),
-                _ = function() {
-                    return c.createElement(E.Wa, {
+                O = function() {
+                    return c.createElement(E.Xa, {
                         fullWidth: !0,
                         display: E.X.Flex,
                         margin: {
                             top: 1
                         }
                     }, c.createElement(E.W, {
-                        fontSize: E.Ba.Size7,
+                        fontSize: E.Ca.Size7,
                         color: E.O.Alt2
-                    }, Object(u.d)("Fetching key status...", "RedeemPage")), c.createElement(E.Wa, {
+                    }, Object(u.d)("Fetching key status...", "RedeemPage")), c.createElement(E.Xa, {
                         margin: {
                             left: 2
                         }
-                    }, c.createElement(E.Ya, null)))
+                    }, c.createElement(E.Za, null)))
                 },
-                C = n("KXOz");
+                _ = n("KXOz");
             n("lAq8");
             ! function(e) {
                 e.CannotClaimMessage = "claimed", e.ExpiredMessage = "expired_message"
             }(i || (i = {}));
-            var O = function(e) {
+            var C = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -492,48 +482,48 @@
                         var e = this.props.data;
                         e.loading || (e.error || !e.loading && !e.error && null !== e.key && e.key.self && !e.key.self.canClaim ? this.props.onInvalidCode() : e && !e.loading && !e.error && null !== e.key && e.key.self && e.key.self.canClaim && this.props.onValidCode(e.key.description))
                     }, t.prototype.render = function() {
-                        if (this.props.data.loading) return c.createElement(_, null);
-                        if (!this.props.data.loading && (this.props.data.error || null === this.props.data.key)) return c.createElement(E.Wa, {
+                        if (this.props.data.loading) return c.createElement(O, null);
+                        if (!this.props.data.loading && (this.props.data.error || null === this.props.data.key)) return c.createElement(E.Xa, {
                             fullWidth: !0,
                             margin: {
                                 top: 1
                             }
                         }, c.createElement(E.W, {
-                            fontSize: E.Ba.Size7,
+                            fontSize: E.Ca.Size7,
                             color: E.O.Error
                         }, Object(u.d)("Could not find the key", "RedeemPage")));
                         if (!this.props.data.loading && null !== this.props.data.key) {
                             var e = this.props.data.key,
                                 t = !1,
                                 n = "";
-                            return null !== e.self && (t = e.self.canClaim, n = e.self.statusCode ? e.self.statusCode : ""), c.createElement(c.Fragment, null, !t && "claimed" === n && c.createElement(E.Wa, {
+                            return null !== e.self && (t = e.self.canClaim, n = e.self.statusCode ? e.self.statusCode : ""), c.createElement(c.Fragment, null, !t && "claimed" === n && c.createElement(E.Xa, {
                                 fullWidth: !0,
                                 margin: {
                                     top: 1
                                 }
                             }, c.createElement(E.W, {
                                 "data-test-selector": i.CannotClaimMessage,
-                                fontSize: E.Ba.Size7,
+                                fontSize: E.Ca.Size7,
                                 color: E.O.Error
-                            }, Object(u.d)("Oh no! Bummer, this code has already been redeemed.", "RedeemPage"))), !t && "invalidated" === n && c.createElement(E.Wa, {
+                            }, Object(u.d)("Oh no! Bummer, this code has already been redeemed.", "RedeemPage"))), !t && "invalidated" === n && c.createElement(E.Xa, {
                                 fullWidth: !0,
                                 margin: {
                                     top: 1
                                 }
                             }, c.createElement(E.W, {
                                 "data-test-selector": i.ExpiredMessage,
-                                fontSize: E.Ba.Size7,
+                                fontSize: E.Ca.Size7,
                                 color: E.O.Error
-                            }, Object(u.d)("Oh no! This code is expired.", "RedeemPage"))), t && c.createElement(E.Wa, {
+                            }, Object(u.d)("Oh no! This code is expired.", "RedeemPage"))), t && c.createElement(E.Xa, {
                                 fullWidth: !0
-                            }, c.createElement(E.Wa, {
+                            }, c.createElement(E.Xa, {
                                 className: "code-redemption-validation__success",
                                 attachLeft: !0,
                                 margin: {
                                     top: 1
                                 }
                             }, c.createElement(E.W, {
-                                fontSize: E.Ba.Size7,
+                                fontSize: E.Ca.Size7,
                                 color: E.O.Alt2
                             }, Object(u.d)("This is a valid code for {keyType}. Select Redeem to add to your account.", {
                                 keyType: e.description
@@ -541,7 +531,7 @@
                         }
                     }, t
                 }(c.Component),
-                N = Object(d.compose)(Object(b.a)(C, {
+                N = Object(d.compose)(Object(b.a)(_, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -551,19 +541,19 @@
                             }
                         }
                     }
-                }))(O);
+                }))(C);
             var w, R = Object(o.connect)(function(e) {
                     return {
                         user: Object(a.e)(e)
                     }
                 })(N),
-                D = n("fvjX"),
-                P = n("1/iK"),
+                P = n("fvjX"),
+                j = n("1/iK"),
                 T = n("y5D0");
             ! function(e) {
                 e.LoginPrompt = "login_prompt_message", e.SuccessNotification = "success_notification_message", e.ErrorNotification = "error_notification_message"
             }(w || (w = {}));
-            var j = function(e) {
+            var V = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.closeWindow = function() {
@@ -584,18 +574,18 @@
                         i = Object(u.d)("Bummer, this code is invalid ({description}). Please try again.", {
                             description: this.props.description ? this.props.description : "No description provided"
                         }, "RedeemPage");
-                    return c.createElement(E.xb, {
+                    return c.createElement(E.yb, {
                         elevation: 3,
                         margin: {
                             top: 1
                         },
                         color: E.O.Base
-                    }, !this.props.user && c.createElement(E.Ma, {
+                    }, !this.props.user && c.createElement(E.Na, {
                         closeButtonAriaLabel: t,
                         closeButtonOnClick: this.closeWindow,
                         title: e,
                         description: Object(u.d)("You must log in to an existing account or create a new account to redeem your code.", "RedeemPage"),
-                        type: E.Na.Info,
+                        type: E.Oa.Info,
                         actions: [{
                             children: e,
                             onClick: this.onLoginClick
@@ -604,12 +594,12 @@
                             onClick: this.onSignUpClick
                         }],
                         "data-test-selector": w.LoginPrompt
-                    }), this.props.user && this.props.success && c.createElement(E.Ma, {
+                    }), this.props.user && this.props.success && c.createElement(E.Na, {
                         closeButtonAriaLabel: t,
                         closeButtonOnClick: this.closeWindow,
                         description: n,
                         title: Object(u.d)("Success", "RedeemPage"),
-                        type: E.Na.Success,
+                        type: E.Oa.Success,
                         actions: [{
                             children: Object(u.d)("Back to Twitch", "RedeemPage"),
                             linkTo: {
@@ -617,40 +607,40 @@
                             }
                         }, {}],
                         "data-test-selector": w.SuccessNotification
-                    }), this.props.user && !this.props.success && c.createElement(E.Ma, {
+                    }), this.props.user && !this.props.success && c.createElement(E.Na, {
                         closeButtonAriaLabel: t,
                         closeButtonOnClick: this.closeWindow,
                         description: i,
                         title: Object(u.d)("Oh no!", "RedeemPage"),
-                        type: E.Na.Info,
+                        type: E.Oa.Info,
                         "data-test-selector": w.ErrorNotification
                     }))
                 }, t
             }(c.Component);
-            var V, W = Object(o.connect)(function(e) {
+            var D, x = Object(o.connect)(function(e) {
                     return {
                         user: Object(a.e)(e)
                     }
                 }, function(e) {
-                    return Object(D.bindActionCreators)({
+                    return Object(P.bindActionCreators)({
                         login: function() {
-                            return Object(T.e)(P.a.CodeRedemptionPage)
+                            return Object(T.e)(j.a.CodeRedemptionPage)
                         },
                         signup: function() {
-                            return Object(T.g)(P.a.CodeRedemptionPage)
+                            return Object(T.g)(j.a.CodeRedemptionPage)
                         }
                     }, e)
-                })(j),
+                })(V),
                 L = n("JhNq");
             ! function(e) {
                 e.InputTitle = "input-title"
-            }(V || (V = {}));
-            var x, A = 15,
+            }(D || (D = {}));
+            var F, A = 15,
                 I = 1e3;
             ! function(e) {
                 e.Default = "default", e.FakeLoading = "fake_loading", e.Validation = "validation", e.Success = "success", e.Error = "error", e.Login = "login"
-            }(x || (x = {}));
-            var F = function(e) {
+            }(F || (F = {}));
+            var W = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.timeout = null, n.onChange = function(e) {
@@ -658,13 +648,13 @@
                             n.setState({
                                 inputValue: t
                             }), t.length === A ? (n.setState({
-                                workflowStep: x.FakeLoading
+                                workflowStep: F.FakeLoading
                             }), n.timeout = setTimeout(function() {
-                                n.state.workflowStep === x.FakeLoading && n.setState({
-                                    workflowStep: x.Validation
+                                n.state.workflowStep === F.FakeLoading && n.setState({
+                                    workflowStep: F.Validation
                                 })
                             }, I)) : (n.timeout && clearTimeout(n.timeout), n.setState({
-                                workflowStep: x.Default,
+                                workflowStep: F.Default,
                                 isCodeValid: !1,
                                 codeErrorState: !1
                             }))
@@ -690,17 +680,17 @@
                                             }, this.setState({
                                                 inputValue: "",
                                                 isCodeValid: !1
-                                            }), t = Object(y.a)(e), n.label = 1;
+                                            }), t = Object(S.a)(e), n.label = 1;
                                         case 1:
                                             return n.trys.push([1, 3, , 4]), [4, this.props.redeemKey(t)];
                                         case 2:
                                             return n.sent(), this.setState({
-                                                workflowStep: x.Success,
+                                                workflowStep: F.Success,
                                                 codeErrorState: !1
                                             }), [3, 4];
                                         case 3:
                                             return n.sent(), this.setState({
-                                                workflowStep: x.Error,
+                                                workflowStep: F.Error,
                                                 codeErrorState: !1
                                             }), [3, 4];
                                         case 4:
@@ -715,7 +705,7 @@
                                     switch (n.label) {
                                         case 0:
                                             switch (t = e.charCode || e.keyCode, t) {
-                                                case S.a.Enter:
+                                                case y.a.Enter:
                                                     return [3, 1]
                                             }
                                             return [3, 4];
@@ -731,7 +721,7 @@
                             })
                         }, n.closeNotification = function() {
                             n.setState({
-                                workflowStep: x.Default
+                                workflowStep: F.Default
                             })
                         }, n.sanitizeValue = function(e) {
                             return e.replace(/([^a-zA-Z0-9])+/gi, "").substring(0, A)
@@ -739,8 +729,8 @@
                             return (n.sanitizeValue(e).match(/.{1,5}/g) || []).join("-").toUpperCase()
                         };
                         var i = n.props.code ? n.sanitizeValue(n.props.code) : "",
-                            o = x.Login;
-                        return n.props.user && (o = x.Default, i.length === A && (o = x.Validation)), n.state = {
+                            o = F.Login;
+                        return n.props.user && (o = F.Default, i.length === A && (o = F.Validation)), n.state = {
                             workflowStep: o,
                             inputValue: i,
                             isCodeValid: !1,
@@ -750,17 +740,17 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this;
-                        return c.createElement(c.Fragment, null, c.createElement(E.Wa, {
+                        return c.createElement(c.Fragment, null, c.createElement(E.Xa, {
                             padding: {
                                 bottom: 4
                             },
-                            textAlign: E.Jb.Left
+                            textAlign: E.Kb.Left
                         }, c.createElement(E.W, {
                             bold: !0,
-                            fontSize: E.Ba.Size1,
-                            lineHeight: E.Xa.Heading,
+                            fontSize: E.Ca.Size1,
+                            lineHeight: E.Ya.Heading,
                             color: E.O.Base
-                        }, Object(u.d)("Redeem your Twitch code", "RedeemPage")), this.props.user && this.state.isCodeValid && c.createElement(E.Wa, {
+                        }, Object(u.d)("Redeem your Twitch code", "RedeemPage")), this.props.user && this.state.isCodeValid && c.createElement(E.Xa, {
                             padding: {
                                 top: 1
                             }
@@ -771,37 +761,37 @@
                             "x:bold": function() {
                                 return c.createElement(E.W, {
                                     bold: !0,
-                                    type: E.Nb.Span
+                                    type: E.Ob.Span
                                 }, e.props.user.displayName)
                             }
-                        }, "RedeemPage")))), c.createElement(E.Wa, {
+                        }, "RedeemPage")))), c.createElement(E.Xa, {
                             className: "code-redemption-body__input",
                             fullWidth: !0
-                        }, c.createElement(E.Wa, {
+                        }, c.createElement(E.Xa, {
                             padding: {
                                 bottom: 1
                             }
                         }, c.createElement(E.W, {
-                            "data-test-selector": V.InputTitle,
+                            "data-test-selector": D.InputTitle,
                             bold: !0,
                             color: this.state.codeErrorState ? E.O.Error : E.O.Alt
-                        }, Object(u.d)("Enter code", "RedeemPage"))), c.createElement(E.Ia, null, c.createElement(E.P, {
+                        }, Object(u.d)("Enter code", "RedeemPage"))), c.createElement(E.Ja, null, c.createElement(E.P, {
                             cols: {
                                 default: 12,
                                 sm: 9
                             }
-                        }, c.createElement(E.Wa, {
+                        }, c.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
                             },
-                            textAlign: E.Jb.Left
-                        }, c.createElement(E.Qa, {
+                            textAlign: E.Kb.Left
+                        }, c.createElement(E.Ra, {
                             placeholder: "00000-00000-00000",
                             autoFocus: !0,
                             disabled: !this.props.user,
                             onKeyDown: this.onKeyDown,
                             onChange: this.onChange,
-                            type: E.Sa.Text,
+                            type: E.Ta.Text,
                             maxLength: A + 2,
                             error: this.state.codeErrorState,
                             value: this.getDisplayValue(this.state.inputValue)
@@ -814,17 +804,17 @@
                             disabled: !this.props.user || !this.state.inputValue || !this.state.isCodeValid,
                             onClick: this.onInputSubmit,
                             fullWidth: !0
-                        }, Object(u.d)("Redeem", "RedeemPage"))))), !this.props.user && this.state.workflowStep === x.Login && c.createElement(W, {
+                        }, Object(u.d)("Redeem", "RedeemPage"))))), !this.props.user && this.state.workflowStep === F.Login && c.createElement(x, {
                             closeNotification: this.closeNotification
-                        }), this.props.user && this.state.workflowStep === x.FakeLoading && c.createElement(_, null), this.props.user && this.state.workflowStep === x.Validation && c.createElement(R, {
+                        }), this.props.user && this.state.workflowStep === F.FakeLoading && c.createElement(O, null), this.props.user && this.state.workflowStep === F.Validation && c.createElement(R, {
                             code: this.state.inputValue,
                             onValidCode: this.onValidCode,
                             onInvalidCode: this.onInvalidCode
-                        }), this.props.user && this.state.workflowStep === x.Success && c.createElement(W, {
+                        }), this.props.user && this.state.workflowStep === F.Success && c.createElement(x, {
                             success: !0,
                             description: this.state.description,
                             closeNotification: this.closeNotification
-                        }), this.props.user && this.state.workflowStep === x.Error && c.createElement(W, {
+                        }), this.props.user && this.state.workflowStep === F.Error && c.createElement(x, {
                             success: !1,
                             description: this.state.description,
                             closeNotification: this.closeNotification
@@ -833,15 +823,15 @@
                         this.timeout && clearTimeout(this.timeout)
                     }, t
                 }(c.Component),
-                B = Object(d.compose)(Object(b.a)(L, {
+                z = Object(d.compose)(Object(b.a)(L, {
                     name: "redeemKey"
-                }))(F);
-            var z = Object(o.connect)(function(e) {
+                }))(W);
+            var X = Object(o.connect)(function(e) {
                     return {
                         user: Object(a.e)(e)
                     }
-                })(B),
-                M = (n("E2x/"), function(e) {
+                })(z),
+                B = (n("E2x/"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -858,14 +848,14 @@
                         var t = s.parse(this.props.location.search);
                         return c.createElement(c.Fragment, null, c.createElement(v.a, {
                             darkModeEnabled: !0
-                        }), c.createElement(E.xb, {
+                        }), c.createElement(E.yb, {
                             background: E.r.Alt,
                             className: "code-redemption-page",
                             fullWidth: !0,
                             fullHeight: !0,
                             alignContent: E.e.Center,
-                            overflow: E.Za.Auto
-                        }, c.createElement(E.Ia, {
+                            overflow: E.ab.Auto
+                        }, c.createElement(E.Ja, {
                             fullHeight: !0
                         }, c.createElement(E.P, {
                             cols: {
@@ -877,7 +867,7 @@
                                 xs: E.Q.First
                             }
                         }, c.createElement("img", {
-                            src: h.c + "/code-redemption/CodeRedemption-Image.jpg",
+                            src: g.c + "/code-redemption/CodeRedemption-Image.jpg",
                             alt: ""
                         })), c.createElement(E.P, {
                             cols: {
@@ -888,11 +878,11 @@
                                 default: E.Q.First,
                                 xs: E.Q.Last
                             }
-                        }, c.createElement(E.Wa, {
+                        }, c.createElement(E.Xa, {
                             padding: {
                                 top: 3
                             }
-                        }, c.createElement(E.Wa, {
+                        }, c.createElement(E.Xa, {
                             className: "code-redemption-page__body",
                             fullWidth: !0,
                             padding: {
@@ -900,7 +890,7 @@
                                 right: 1,
                                 bottom: 1
                             }
-                        }, c.createElement(z, {
+                        }, c.createElement(X, {
                             code: t.code
                         })))))))
                     }, t
@@ -909,15 +899,15 @@
                     destination: f.a.CodeRedemptionPage,
                     autoReportInteractive: !0
                 }), Object(p.a)({
-                    location: g.PageviewLocation.CodeRedemptionPage
-                }))(M);
-            var U = Object(o.connect)(function(e) {
+                    location: h.PageviewLocation.CodeRedemptionPage
+                }))(B);
+            var K = Object(o.connect)(function(e) {
                 return {
                     user: Object(a.e)(e)
                 }
             })(G);
             n.d(t, "RedeemPageComponent", function() {
-                return U
+                return K
             })
         },
         lAq8: function(e, t, n) {},

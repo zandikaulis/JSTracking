@@ -22,7 +22,7 @@
                     }, e.prototype.componentWillUnmount = function() {
                         this.heartbeatUnsubscriber && this.heartbeatUnsubscriber()
                     }, e.prototype.render = function() {
-                        return a.createElement(o.Wa, null, this.renderLastHeartbeatTime())
+                        return a.createElement(o.Xa, null, this.renderLastHeartbeatTime())
                     }, e.prototype.renderLastHeartbeatTime = function() {
                         return this.state.lastHeartbeat ? Object(s.d)("Last Heartbeat: {startTime, time, medium}.", {
                             startTime: new Date(this.state.lastHeartbeat)
@@ -73,10 +73,10 @@
                         }, e
                     }
                     return n.__extends(e, t), e.prototype.render = function() {
-                        return a.createElement(o.Wa, {
+                        return a.createElement(o.Xa, {
                             padding: 3
-                        }, a.createElement(o.Wa, null, a.createElement(o.W, {
-                            fontSize: o.Ba.Size2
+                        }, a.createElement(o.Xa, null, a.createElement(o.W, {
+                            fontSize: o.Ca.Size2
                         }, Object(s.d)("Mods", "DesklightModsRootPage")), a.createElement(o.z, {
                             onClick: this.startHeartbeat
                         }, a.createElement(o.W, null, Object(s.d)("Start Heartbeat", "DesklightModsRootPage"))), a.createElement(o.z, {

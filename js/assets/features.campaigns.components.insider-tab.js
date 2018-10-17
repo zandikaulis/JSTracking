@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [124], {
+    [123], {
         "/2zc": function(e, t, a) {},
         "/5u6": function(e, t, a) {
             "use strict";
@@ -473,18 +473,18 @@
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
                         var e = this;
-                        if (!this.props.data || this.props.data.loading) return o.createElement(p.Ya, null);
+                        if (!this.props.data || this.props.data.loading) return o.createElement(p.Za, null);
                         if (this.props.data && this.props.data.error) return null;
                         if (this.props.data.user.subscriptionProducts.length < 1) return null;
                         var t = this.props.data.user.subscriptionProducts[0],
                             a = Object(u.b)(t, !0).map(function(t) {
-                                return o.createElement(p.Oa, {
+                                return o.createElement(p.Pa, {
                                     className: "insider-pass-emote-and-badge-rewards__item",
                                     "data-test-selector": "insider-pass-emote-reward",
                                     key: t.name
-                                }, o.createElement("li", null, o.createElement(p.Wa, {
+                                }, o.createElement("li", null, o.createElement(p.Xa, {
                                     display: p.X.Flex,
-                                    flexDirection: p.Z.Column,
+                                    flexDirection: p.Aa.Column,
                                     alignItems: p.f.Center,
                                     padding: {
                                         bottom: e.props.insiderPurchaseState === m.a.PrePurchase ? 4 : 2
@@ -493,8 +493,8 @@
                                     imageURL: t.imageURL,
                                     size: c.c.Default,
                                     noBorder: !0
-                                }), e.props.insiderPurchaseState === m.a.PostPurchase && o.createElement(p.Wa, {
-                                    textAlign: p.Jb.Center,
+                                }), e.props.insiderPurchaseState === m.a.PostPurchase && o.createElement(p.Xa, {
+                                    textAlign: p.Kb.Center,
                                     padding: {
                                         top: .5,
                                         bottom: 1
@@ -510,20 +510,20 @@
                                 return Object(u.a)(e, !1)
                             }),
                             i = this.props.data.user.tournament.rewards.insider.badges.concat(n).map(function(t) {
-                                return o.createElement(p.Oa, {
+                                return o.createElement(p.Pa, {
                                     className: "insider-pass-emote-and-badge-rewards__item",
                                     "data-test-selector": "insider-pass-badge-reward",
                                     key: t.name
-                                }, o.createElement("li", null, o.createElement(p.Wa, {
+                                }, o.createElement("li", null, o.createElement(p.Xa, {
                                     display: p.X.Flex,
-                                    flexDirection: p.Z.Column,
+                                    flexDirection: p.Aa.Column,
                                     alignItems: p.f.Center
                                 }, o.createElement(c.a, {
                                     imageURL: t.imageURL,
                                     size: c.c.Default,
                                     noBorder: !0
-                                }), e.props.insiderPurchaseState === m.a.PostPurchase && o.createElement(p.Wa, {
-                                    textAlign: p.Jb.Center,
+                                }), e.props.insiderPurchaseState === m.a.PostPurchase && o.createElement(p.Xa, {
+                                    textAlign: p.Kb.Center,
                                     padding: {
                                         top: .5,
                                         bottom: 1
@@ -532,41 +532,41 @@
                                     bold: !0
                                 }, t.name)))))
                             });
-                        return o.createElement(p.Wa, {
+                        return o.createElement(p.Xa, {
                             className: "insider-pass-emote-and-badge-rewards",
                             display: p.X.Flex,
-                            flexDirection: p.Z.Column
-                        }, o.createElement(p.Wa, {
+                            flexDirection: p.Aa.Column
+                        }, o.createElement(p.Xa, {
                             padding: {
                                 bottom: 4
                             }
-                        }, o.createElement(p.Wa, {
-                            textAlign: p.Jb.Center,
+                        }, o.createElement(p.Xa, {
+                            textAlign: p.Kb.Center,
                             padding: {
                                 bottom: 2
                             }
                         }, o.createElement(p.W, {
-                            fontSize: p.Ba.Size3,
+                            fontSize: p.Ca.Size3,
                             color: p.O.Link,
                             bold: !0
-                        }, Object(l.d)("Global Overwatch League Twitch Emotes", "CampaignsInsiderPassEmoteAndBadgeRewards"))), o.createElement(p.Oa, {
-                            textAlign: p.Jb.Center,
+                        }, Object(l.d)("Global Overwatch League Twitch Emotes", "CampaignsInsiderPassEmoteAndBadgeRewards"))), o.createElement(p.Pa, {
+                            textAlign: p.Kb.Center,
                             display: p.X.Flex,
-                            flexWrap: p.Aa.Wrap,
-                            flexDirection: p.Z.Row,
-                            justifyContent: p.Va.Center,
+                            flexWrap: p.Ba.Wrap,
+                            flexDirection: p.Aa.Row,
+                            justifyContent: p.Wa.Center,
                             alignItems: p.f.Baseline
-                        }, o.createElement("ul", null, a))), o.createElement(p.Wa, null, o.createElement(p.Wa, {
-                            textAlign: p.Jb.Center
+                        }, o.createElement("ul", null, a))), o.createElement(p.Xa, null, o.createElement(p.Xa, {
+                            textAlign: p.Kb.Center
                         }, o.createElement(p.W, {
-                            fontSize: p.Ba.Size3,
+                            fontSize: p.Ca.Size3,
                             color: p.O.Link,
                             bold: !0
-                        }, Object(l.d)("Global Overwatch League Twitch Badges", "CampaignsInsiderPassEmoteAndBadgeRewards"))), o.createElement(p.Oa, {
+                        }, Object(l.d)("Global Overwatch League Twitch Badges", "CampaignsInsiderPassEmoteAndBadgeRewards"))), o.createElement(p.Pa, {
                             display: p.X.Flex,
-                            flexDirection: p.Z.Row,
-                            flexWrap: p.Aa.Wrap,
-                            justifyContent: p.Va.Center,
+                            flexDirection: p.Aa.Row,
+                            flexWrap: p.Ba.Wrap,
+                            justifyContent: p.Wa.Center,
                             padding: {
                                 y: 2
                             }
@@ -582,10 +582,10 @@
                     })], t)
                 }(o.PureComponent)),
                 b = function() {
-                    return o.createElement(p.xb, {
+                    return o.createElement(p.yb, {
                         borderTop: !0,
                         className: "insider-pass-footer",
-                        textAlign: p.Jb.Center,
+                        textAlign: p.Kb.Center,
                         padding: {
                             top: 5
                         }
@@ -616,60 +616,60 @@
                         });
                         var a = this.props.type === n.Major ? "auto" : void 0,
                             i = this.props.type === n.Major ? "auto" : void 0,
-                            r = this.props.type === n.Major ? p.Z.Column : p.Z.Row;
-                        return o.createElement(p.Wa, {
+                            r = this.props.type === n.Major ? p.Aa.Column : p.Aa.Row;
+                        return o.createElement(p.Xa, {
                             className: "insider-pass-marketing-item",
                             display: p.X.Flex,
-                            flexDirection: p.Z.Column,
+                            flexDirection: p.Aa.Column,
                             breakpointExtraSmall: {
                                 flexDirection: r
                             }
-                        }, o.createElement(p.Wa, {
+                        }, o.createElement(p.Xa, {
                             "data-test-selector": "insider-marketing-item-image",
                             margin: a
                         }, o.createElement("img", {
                             className: e,
                             src: this.props.imageURL
-                        })), o.createElement(p.Wa, s.__assign({
+                        })), o.createElement(p.Xa, s.__assign({
                             "data-test-selector": "insider-marketing-item-content",
                             className: this.props.type === n.Major ? e : void 0,
                             display: p.X.Flex,
-                            flexDirection: p.Z.Column,
+                            flexDirection: p.Aa.Column,
                             margin: i
-                        }, t), o.createElement(p.Wa, {
+                        }, t), o.createElement(p.Xa, {
                             padding: {
                                 top: 1
                             }
                         }, o.createElement(p.W, {
-                            fontSize: p.Ba.Size4,
+                            fontSize: p.Ca.Size4,
                             bold: !0
-                        }, this.props.title)), o.createElement(p.Wa, {
+                        }, this.props.title)), o.createElement(p.Xa, {
                             padding: {
                                 top: 1
                             }
                         }, o.createElement(p.W, {
                             "data-test-selector": "insider-marketing-item-content-text",
-                            fontSize: this.props.type === n.Major ? p.Ba.Size5 : p.Ba.Size6
+                            fontSize: this.props.type === n.Major ? p.Ca.Size5 : p.Ca.Size6
                         }, this.props.body))))
                     }, t
                 }(o.PureComponent),
-                x = function(e) {
+                C = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(p.Wa, {
+                        return o.createElement(p.Xa, {
                             className: "insider-pass-post-purchase-marketing-callouts"
-                        }, o.createElement(p.Wa, {
-                            textAlign: p.Jb.Center,
+                        }, o.createElement(p.Xa, {
+                            textAlign: p.Kb.Center,
                             padding: {
                                 bottom: 2
                             }
                         }, o.createElement(p.W, {
-                            fontSize: p.Ba.Size3,
+                            fontSize: p.Ca.Size3,
                             color: p.O.Link,
                             bold: !0
-                        }, Object(l.d)("How to Use Your All-Access Experience", "CampaignsInsiderPassPostPurchaseMarketingCallouts"))), o.createElement(p.Wa, {
+                        }, Object(l.d)("How to Use Your All-Access Experience", "CampaignsInsiderPassPostPurchaseMarketingCallouts"))), o.createElement(p.Xa, {
                             padding: {
                                 y: 0
                             },
@@ -678,14 +678,14 @@
                                     y: 2
                                 }
                             }
-                        }, o.createElement(p.Ia, {
-                            gutterSize: p.Ja.Large
+                        }, o.createElement(p.Ja, {
+                            gutterSize: p.Ka.Large
                         }, o.createElement(p.P, {
                             cols: {
                                 default: 12,
                                 lg: 6
                             }
-                        }, o.createElement(p.Wa, {
+                        }, o.createElement(p.Xa, {
                             padding: {
                                 bottom: 2
                             },
@@ -702,7 +702,7 @@
                                 default: 12,
                                 lg: 6
                             }
-                        }, o.createElement(p.Wa, {
+                        }, o.createElement(p.Xa, {
                             padding: {
                                 bottom: 2
                             },
@@ -714,7 +714,7 @@
                             title: Object(l.d)("Submit a question for today's post-match Q&A", "CampaignsInsiderPassPostPurchaseMarketingCallouts"),
                             body: Object(l.d)('Click on the "Rooms" icon in the upper right corner of chat. Select "ama-for-[interviewee]" from the drop-down menu. Questions are limited to one per day, per Passholder.', "CampaignsInsiderPassPostPurchaseMarketingCallouts"),
                             imageURL: k.c + "/owl-2017/marketing/insider-post-purchase-q-and-a.png"
-                        }))))), o.createElement(p.Wa, {
+                        }))))), o.createElement(p.Xa, {
                             padding: {
                                 y: 0
                             },
@@ -723,14 +723,14 @@
                                     y: 2
                                 }
                             }
-                        }, o.createElement(p.Ia, {
-                            gutterSize: p.Ja.Large
+                        }, o.createElement(p.Ja, {
+                            gutterSize: p.Ka.Large
                         }, o.createElement(p.P, {
                             cols: {
                                 default: 12,
                                 lg: 6
                             }
-                        }, o.createElement(p.Wa, {
+                        }, o.createElement(p.Xa, {
                             padding: {
                                 bottom: 2
                             },
@@ -747,7 +747,7 @@
                                 default: 12,
                                 lg: 6
                             }
-                        }, o.createElement(p.Wa, {
+                        }, o.createElement(p.Xa, {
                             padding: {
                                 bottom: 2
                             },
@@ -759,7 +759,7 @@
                             title: Object(l.d)("Watch match analysis videos", "CampaignsInsiderPassPostPurchaseMarketingCallouts"),
                             body: Object(l.d)('Click on the "Videos" link in the menu just above the stream. On the Videos page, find a preview video in a carousel at the top of the page - Behind the Screens is coming soon!', "CampaignsInsiderPassPostPurchaseMarketingCallouts"),
                             imageURL: k.c + "/owl-2017/marketing/insider-post-purchase-vods.png"
-                        }))))), o.createElement(p.Wa, {
+                        }))))), o.createElement(p.Xa, {
                             padding: {
                                 y: 0
                             },
@@ -768,14 +768,14 @@
                                     y: 2
                                 }
                             }
-                        }, o.createElement(p.Ia, {
-                            gutterSize: p.Ja.Large
+                        }, o.createElement(p.Ja, {
+                            gutterSize: p.Ka.Large
                         }, o.createElement(p.P, {
                             cols: {
                                 default: 12,
                                 lg: 6
                             }
-                        }, o.createElement(p.Wa, {
+                        }, o.createElement(p.Xa, {
                             padding: {
                                 bottom: 2
                             },
@@ -792,7 +792,7 @@
                                 default: 12,
                                 lg: 6
                             }
-                        }, o.createElement(p.Wa, {
+                        }, o.createElement(p.Xa, {
                             padding: {
                                 bottom: 2
                             },
@@ -807,14 +807,14 @@
                         }))))))
                     }, t
                 }(o.PureComponent),
-                C = function(e) {
+                x = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(p.Wa, {
+                        return o.createElement(p.Xa, {
                             className: "insider-pass-post-purchase"
-                        }, o.createElement(p.xb, {
+                        }, o.createElement(p.yb, {
                             borderBottom: !0,
                             margin: {
                                 top: 2
@@ -823,13 +823,13 @@
                             channelID: this.props.channelID,
                             insiderPurchaseState: m.a.PostPurchase,
                             blizzardRewardsAvailable: this.props.blizzardRewardsAvailable
-                        })), o.createElement(p.xb, {
+                        })), o.createElement(p.yb, {
                             borderBottom: !0,
                             padding: {
                                 top: 4,
                                 bottom: 3
                             }
-                        }, o.createElement(x, null)), o.createElement(p.Wa, {
+                        }, o.createElement(C, null)), o.createElement(p.Xa, {
                             padding: {
                                 top: 4,
                                 bottom: 3
@@ -853,34 +853,34 @@
                     return s.__extends(t, e), t.prototype.render = function() {
                         var e = Object(S.d)("Get the All-Access Pass", "CampaignsTabs"),
                             t = v(w, this.props.className);
-                        return o.createElement(p.xb, {
+                        return o.createElement(p.yb, {
                             "data-test-selector": y.Root,
                             border: !0,
                             borderRadius: p.x.Large,
                             className: t,
-                            overflow: p.Za.Hidden
-                        }, o.createElement(p.xb, {
+                            overflow: p.ab.Hidden
+                        }, o.createElement(p.yb, {
                             color: p.O.Overlay,
                             background: p.r.Accent,
-                            textAlign: p.Jb.Center,
+                            textAlign: p.Kb.Center,
                             padding: .5
                         }, o.createElement(p.W, {
-                            fontSize: p.Ba.Size4
-                        }, Object(S.d)("All-Access Pass", "CampaignsTabs"))), o.createElement(p.xb, {
+                            fontSize: p.Ca.Size4
+                        }, Object(S.d)("All-Access Pass", "CampaignsTabs"))), o.createElement(p.yb, {
                             display: p.X.Flex,
-                            flexDirection: p.Z.Column,
-                            justifyContent: p.Va.Center,
+                            flexDirection: p.Aa.Column,
+                            justifyContent: p.Wa.Center,
                             alignItems: p.f.Center,
                             breakpointMedium: {
-                                flexDirection: p.Z.Row
+                                flexDirection: p.Aa.Row
                             },
                             borderBottom: this.props.bitsPromoIsActive,
                             padding: 1
-                        }, o.createElement(p.xb, {
+                        }, o.createElement(p.yb, {
                             fullHeight: !0,
                             display: p.X.Flex,
                             alignItems: p.f.Center,
-                            justifyContent: p.Va.Center,
+                            justifyContent: p.Wa.Center,
                             margin: {
                                 x: 3,
                                 bottom: 3,
@@ -890,41 +890,41 @@
                             className: w + "__logo",
                             src: k.c + "/owl-2017/all-access-logo.svg",
                             alt: Object(S.d)("Overwatch League All-Access Pass on Twitch", "CampaignsTabs")
-                        })), o.createElement(p.Wa, {
+                        })), o.createElement(p.Xa, {
                             className: w + "__body-text",
                             margin: 1,
-                            justifyContent: p.Va.Center
-                        }, o.createElement(p.Oa, {
+                            justifyContent: p.Wa.Center
+                        }, o.createElement(p.Pa, {
                             margin: {
                                 bottom: .5
                             }
                         }, o.createElement(p.W, {
                             bold: !0,
                             color: p.O.Base,
-                            fontSize: p.Ba.Size4
+                            fontSize: p.Ca.Size4
                         }, Object(S.d)("Your VIP pass to the best of the Overwatch League.", "CampaignsTabs"))), o.createElement(p.W, {
                             color: p.O.Base,
-                            fontSize: p.Ba.Size6
+                            fontSize: p.Ca.Size6
                         }, Object(S.d)("The season may be over, but the battle goes on. Enjoy the off-season with the All-Access Pass for 2018 – only {price}.", {
                             price: this.props.passPrice
-                        }, "CampaignsTabs")), o.createElement(p.Wa, {
+                        }, "CampaignsTabs")), o.createElement(p.Xa, {
                             margin: {
                                 top: 2,
                                 bottom: 1
                             },
-                            textAlign: p.Jb.Left
+                            textAlign: p.Kb.Left
                         }, o.createElement(p.z, {
                             targetBlank: !0,
                             ariaLabel: e + " " + this.props.passPrice,
                             linkTo: this.props.purchaseUrl,
                             purchase: this.props.passPrice
-                        }, e)))), this.props.bitsPromoIsActive && o.createElement(p.xb, {
+                        }, e)))), this.props.bitsPromoIsActive && o.createElement(p.yb, {
                             "data-test-selector": y.BitsPromotion,
                             display: p.X.Flex,
-                            justifyContent: p.Va.Center,
+                            justifyContent: p.Wa.Center,
                             alignItems: p.f.Center,
                             padding: 2
-                        }, o.createElement(p.Wa, {
+                        }, o.createElement(p.Xa, {
                             className: w + "__bits-image-wrapper",
                             margin: {
                                 right: 1
@@ -933,9 +933,9 @@
                             className: w + "__bits-image",
                             src: k.a + "/cheer/light/static/100/3.png",
                             alt: ""
-                        })), o.createElement(p.Wa, null, o.createElement(p.W, {
+                        })), o.createElement(p.Xa, null, o.createElement(p.W, {
                             bold: !0,
-                            fontSize: p.Ba.Size5
+                            fontSize: p.Ca.Size5
                         }, Object(S.d)("Buy now and get 500 Bits as a bonus reward on purchase, only with Twitch Prime.", "CampaignsTabs")), o.createElement(p.W, {
                             color: p.O.Alt2
                         }, Object(S.d)("Offer available for a limited time. Terms and conditions apply.", "CampaignsTabs")))))
@@ -946,30 +946,30 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(p.Wa, {
+                        return o.createElement(p.Xa, {
                             display: p.X.Flex,
-                            flexDirection: p.Z.Column,
+                            flexDirection: p.Aa.Column,
                             padding: {
                                 top: 2,
                                 bottom: 4
                             }
-                        }, o.createElement(p.Wa, {
-                            textAlign: p.Jb.Center,
+                        }, o.createElement(p.Xa, {
+                            textAlign: p.Kb.Center,
                             padding: {
                                 bottom: 2
                             }
                         }, o.createElement(p.W, {
-                            fontSize: p.Ba.Size3,
+                            fontSize: p.Ca.Size3,
                             color: p.O.Link,
                             bold: !0
-                        }, Object(l.d)("The Overwatch League All-Access Experience", "CampaignsInsiderPassTab"))), o.createElement(p.Wa, {
+                        }, Object(l.d)("The Overwatch League All-Access Experience", "CampaignsInsiderPassTab"))), o.createElement(p.Xa, {
                             display: p.X.Flex,
-                            flexDirection: p.Z.Column,
+                            flexDirection: p.Aa.Column,
                             breakpointSmall: {
-                                flexDirection: p.Z.Row
+                                flexDirection: p.Aa.Row
                             },
-                            justifyContent: p.Va.Center
-                        }, o.createElement(p.Wa, {
+                            justifyContent: p.Wa.Center
+                        }, o.createElement(p.Xa, {
                             margin: {
                                 x: 2
                             },
@@ -984,7 +984,7 @@
                             title: Object(l.d)("Exclusive Command Center livestream", "CampaignsInsiderPassTab"),
                             body: Object(l.d)("This game-changing stream shows you alternate camera angles, live stats, player POVs, and team facecams all on one multiviewer overlay. Try it for free until Stage 4.", "CampaignsInsiderPassTab"),
                             imageURL: k.c + "/owl-2017/marketing/insider-stream.jpg"
-                        })), o.createElement(p.Wa, {
+                        })), o.createElement(p.Xa, {
                             margin: {
                                 x: 2
                             },
@@ -999,7 +999,7 @@
                             title: Object(l.d)("Your questions, answered!", "CampaignsInsiderPassTab"),
                             body: Object(l.d)("After Overwatch League match day broadcasts, enjoy an interactive player Q&A session by submitting your questions in Passholder-only chat. Selected questions will be answered by players live on the Command Center stream.", "CampaignsInsiderPassTab"),
                             imageURL: k.c + "/owl-2017/marketing/insider-questions.jpg"
-                        })), o.createElement(p.Wa, {
+                        })), o.createElement(p.Xa, {
                             margin: {
                                 x: 2
                             }
@@ -1011,19 +1011,19 @@
                         }))))
                     }, t
                 }(o.PureComponent),
-                W = function(e) {
+                A = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(p.Ia, {
-                            gutterSize: p.Ja.Large
+                        return o.createElement(p.Ja, {
+                            gutterSize: p.Ka.Large
                         }, o.createElement(p.P, {
                             cols: {
                                 default: 12,
                                 lg: 6
                             }
-                        }, o.createElement(p.Wa, {
+                        }, o.createElement(p.Xa, {
                             padding: {
                                 bottom: 2
                             },
@@ -1040,7 +1040,7 @@
                                 default: 12,
                                 lg: 6
                             }
-                        }, o.createElement(p.Wa, {
+                        }, o.createElement(p.Xa, {
                             padding: {
                                 bottom: 2
                             },
@@ -1091,8 +1091,8 @@
                         return o.createElement("div", {
                             onMouseEnter: this.handleMouseEnter,
                             onMouseLeave: this.handleMouseLeave
-                        }, o.createElement(p.Wa, {
-                            position: p.eb.Relative,
+                        }, o.createElement(p.Xa, {
+                            position: p.fb.Relative,
                             className: "callout-video"
                         }, o.createElement("video", {
                             className: "callout-video__video",
@@ -1111,30 +1111,30 @@
                             type: this.state.hovering ? p.n.FadeIn : p.n.FadeOut,
                             duration: p.k.Medium,
                             enabled: this.state.shouldFade
-                        }, o.createElement(p.Wa, {
-                            position: p.eb.Absolute,
+                        }, o.createElement(p.Xa, {
+                            position: p.fb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
                             display: p.X.Flex,
                             alignItems: p.f.Center,
-                            justifyContent: p.Va.Center
+                            justifyContent: p.Wa.Center
                         }, o.createElement("button", {
                             className: "callout-video__controls playpause-button",
                             onClick: this.onPlayPause
-                        }, !this.state.playing && o.createElement(p.Wa, {
+                        }, !this.state.playing && o.createElement(p.Xa, {
                             className: "playpause-button__playicon"
-                        }, " ", o.createElement(p.nb, {
-                            asset: p.ob.MiniPlayerPlay,
+                        }, " ", o.createElement(p.ob, {
+                            asset: p.pb.MiniPlayerPlay,
                             width: 35,
                             height: 35
-                        }), " "), this.state.playing && o.createElement(p.nb, {
-                            asset: p.ob.MiniPlayerPause,
+                        }), " "), this.state.playing && o.createElement(p.ob, {
+                            asset: p.pb.MiniPlayerPause,
                             width: 35,
                             height: 35
-                        }))), o.createElement(p.Wa, {
-                            position: p.eb.Absolute,
+                        }))), o.createElement(p.Xa, {
+                            position: p.fb.Absolute,
                             attachBottom: !0,
                             attachRight: !0,
                             padding: {
@@ -1144,8 +1144,8 @@
                         }, o.createElement("button", {
                             className: "callout-video__controls",
                             onClick: this.onMuteMax
-                        }, o.createElement(p.nb, {
-                            asset: this.state.muted ? p.ob.VolumeMuted : p.ob.VolumeMax
+                        }, o.createElement(p.ob, {
+                            asset: this.state.muted ? p.pb.VolumeMuted : p.pb.VolumeMax
                         }))))))
                     }, t
                 }(o.PureComponent));
@@ -1158,7 +1158,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(p.Ia, null, o.createElement(p.P, {
+                        return o.createElement(p.Ja, null, o.createElement(p.P, {
                             cols: {
                                 default: 10,
                                 xl: 6
@@ -1167,9 +1167,9 @@
                                 default: 1,
                                 xl: 0
                             }
-                        }, o.createElement(p.Wa, {
+                        }, o.createElement(p.Xa, {
                             "data-test-selector": P.MarketingSpecialCalloutInfo,
-                            justifyContent: p.Va.Center,
+                            justifyContent: p.Wa.Center,
                             alignItems: p.f.Center,
                             padding: {
                                 top: 3,
@@ -1177,28 +1177,28 @@
                                 left: 2,
                                 right: 2
                             }
-                        }, this.props.isJustAdded && o.createElement(p.xb, {
+                        }, this.props.isJustAdded && o.createElement(p.yb, {
                             display: p.X.Flex,
                             alignItems: p.f.Center,
-                            position: p.eb.Relative,
+                            position: p.fb.Relative,
                             className: "marketing-special-callout__just-added-banner",
                             padding: {
                                 left: 1
                             }
                         }, o.createElement(p.W, {
                             bold: !0,
-                            fontSize: p.Ba.Size5
-                        }, Object(l.d)("JUST ADDED!", "DJLucioCallout"))), o.createElement(p.Wa, {
+                            fontSize: p.Ca.Size5
+                        }, Object(l.d)("JUST ADDED!", "DJLucioCallout"))), o.createElement(p.Xa, {
                             padding: {
                                 top: this.props.isJustAdded ? 1 : 4
                             }
-                        }, this.props.title), this.props.description && o.createElement(p.Wa, {
+                        }, this.props.title), this.props.description && o.createElement(p.Xa, {
                             padding: {
                                 top: 2
                             },
                             "data-test-selector": P.MarketingSpecialCalloutDesc
                         }, o.createElement(p.W, {
-                            fontSize: p.Ba.Size5
+                            fontSize: p.Ca.Size5
                         }, this.props.description)))), o.createElement(p.P, {
                             cols: {
                                 default: 10,
@@ -1208,7 +1208,7 @@
                                 default: 1,
                                 xl: 0
                             }
-                        }, o.createElement(p.Wa, {
+                        }, o.createElement(p.Xa, {
                             padding: {
                                 top: 3,
                                 bottom: 3,
@@ -1218,9 +1218,9 @@
                         }, this.props.videoURL && o.createElement(O, {
                             posterURL: this.props.posterURL,
                             videoURL: this.props.videoURL
-                        }), !this.props.videoURL && o.createElement(p.Wa, {
+                        }), !this.props.videoURL && o.createElement(p.Xa, {
                             className: "marketing-special-callout__image",
-                            position: p.eb.Relative,
+                            position: p.fb.Relative,
                             display: p.X.Flex
                         }, o.createElement(p.S, {
                             src: this.props.posterURL,
@@ -1230,27 +1230,27 @@
                 }(o.PureComponent),
                 j = a("NAv5"),
                 F = a("HGFl"),
-                A = "esport_insider_allstars_launch",
-                R = "2018-08-24T16:00:00Z";
-            var L, z = a("W8Fi");
+                R = "esport_insider_allstars_launch",
+                L = "2018-08-24T16:00:00Z";
+            var X, z = a("W8Fi");
             a("T9jf");
-            (L || (L = {})).PrimePromoBanner = "insider-pass-pre-purchase-prime-promo-banner";
-            var M = function(e) {
+            (X || (X = {})).PrimePromoBanner = "insider-pass-pre-purchase-prime-promo-banner";
+            var D = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
                         var e = Object(z.g)(this.props.subscriptionProducts) ? Object(z.c)(this.props.subscriptionProducts[0]) : this.props.subscriptionProducts[0].price,
                             t = function(e, t) {
-                                var a = S.b.get(A, R),
+                                var a = S.b.get(R, L),
                                     n = Object(F.c)(a),
                                     i = Object(j.isEqual)(e, n) || Object(j.isAfter)(e, n),
                                     r = t && t.roles && t.roles.isStaff || !1;
                                 return i || r
                             }(new Date(Date.now()), this.props.user);
-                        return o.createElement(p.Wa, {
+                        return o.createElement(p.Xa, {
                             className: "insider-pass-pre-purchase"
-                        }, o.createElement(p.Pa, {
+                        }, o.createElement(p.Qa, {
                             margin: {
                                 bottom: 3,
                                 top: 2
@@ -1258,7 +1258,7 @@
                         }, o.createElement(_, {
                             passPrice: e,
                             purchaseUrl: this.props.subscriptionProducts[0].url
-                        })), o.createElement(p.xb, {
+                        })), o.createElement(p.yb, {
                             borderBottom: !0,
                             padding: {
                                 bottom: 2
@@ -1266,122 +1266,122 @@
                             margin: {
                                 y: 2
                             }
-                        }, o.createElement(p.Wa, {
-                            textAlign: p.Jb.Center
+                        }, o.createElement(p.Xa, {
+                            textAlign: p.Kb.Center
                         }, o.createElement(p.W, {
                             bold: !0,
-                            fontSize: p.Ba.Size2,
+                            fontSize: p.Ca.Size2,
                             color: p.O.Link,
-                            lineHeight: p.Xa.Heading
-                        }, Object(S.d)("What you get with the All-Access Pass:", "CampaignsTabs"))), o.createElement(p.Ia, null, o.createElement(p.P, {
+                            lineHeight: p.Ya.Heading
+                        }, Object(S.d)("What you get with the All-Access Pass:", "CampaignsTabs"))), o.createElement(p.Ja, null, o.createElement(p.P, {
                             cols: {
                                 default: 6,
                                 md: 3
                             }
-                        }, o.createElement(p.Wa, {
+                        }, o.createElement(p.Xa, {
                             className: "insider-pass-pre-purchase__feature-box"
                         }, o.createElement(p.S, {
                             src: k.c + "/owl-2017/marketing/insider-feature-boxes/1-IGC.png",
                             alt: Object(S.d)("15 Skins and additional In-Game Items", "CampaignsTabs")
-                        }), o.createElement(p.Wa, {
+                        }), o.createElement(p.Xa, {
                             padding: {
                                 y: 1
                             }
                         }, Object(S.d)("<x:header>15</x:header> <x:subheader>Skins</x:subheader> <x:body>And additional In-Game Items</x:body>", {
-                            "x:header": D,
-                            "x:subheader": T,
-                            "x:body": B
+                            "x:header": M,
+                            "x:subheader": W,
+                            "x:body": T
                         }, "CampaignsTabs")))), o.createElement(p.P, {
                             cols: {
                                 default: 6,
                                 md: 3
                             }
-                        }, o.createElement(p.Wa, {
+                        }, o.createElement(p.Xa, {
                             className: "insider-pass-pre-purchase__feature-box"
                         }, o.createElement(p.S, {
                             src: k.c + "/owl-2017/marketing/insider-feature-boxes/2-Emotes.png",
                             alt: Object(S.d)("Twitch emotes & chat badges", "CampaignsTabs")
-                        }), o.createElement(p.Wa, {
+                        }), o.createElement(p.Xa, {
                             padding: {
                                 y: 1
                             }
                         }, Object(S.d)("<x:header>25</x:header> <x:subheader>Emotes</x:subheader> <x:body>Twitch emotes & chat badges</x:body>", {
-                            "x:header": D,
-                            "x:subheader": T,
-                            "x:body": B
+                            "x:header": M,
+                            "x:subheader": W,
+                            "x:body": T
                         }, "CampaignsTabs")))), o.createElement(p.P, {
                             cols: {
                                 default: 6,
                                 md: 3
                             }
-                        }, o.createElement(p.Wa, {
+                        }, o.createElement(p.Xa, {
                             className: "insider-pass-pre-purchase__feature-box"
                         }, o.createElement(p.S, {
                             src: k.c + "/owl-2017/marketing/insider-feature-boxes/3-chat-slice.png",
                             alt: Object(S.d)("An exclusive chat room for passholders", "CampaignsTabs")
-                        }), o.createElement(p.Wa, {
+                        }), o.createElement(p.Xa, {
                             padding: {
                                 y: 1
                             }
                         }, Object(S.d)("<x:header>1</x:header> <x:subheader>Chatroom</x:subheader> <x:body>An exclusive chat room for pass holders</x:body>", {
-                            "x:header": D,
-                            "x:subheader": T,
-                            "x:body": B
+                            "x:header": M,
+                            "x:subheader": W,
+                            "x:body": T
                         }, "CampaignsTabs")))), o.createElement(p.P, {
                             cols: {
                                 default: 6,
                                 md: 3
                             }
-                        }, o.createElement(p.Wa, {
+                        }, o.createElement(p.Xa, {
                             className: "insider-pass-pre-purchase__feature-box"
                         }, o.createElement(p.S, {
                             src: k.c + "/owl-2017/marketing/insider-feature-boxes/4-QandA.png",
                             alt: Object(S.d)("Exclusive Player Q&A, Inside the League, Behind the Screens and more!", "CampaignsTabs")
-                        }), o.createElement(p.Wa, {
+                        }), o.createElement(p.Xa, {
                             padding: {
                                 y: 1
                             }
                         }, Object(S.d)("<x:header>Tons</x:header> <x:subheader>Of videos</x:subheader> <x:body>Exclusive Player Q&A, Inside the League, Behind the Screens and more!</x:body>", {
-                            "x:header": D,
-                            "x:subheader": T,
-                            "x:body": B
-                        }, "CampaignsTabs")))))), t && o.createElement(p.xb, {
+                            "x:header": M,
+                            "x:subheader": W,
+                            "x:body": T
+                        }, "CampaignsTabs")))))), t && o.createElement(p.yb, {
                             borderBottom: !0
                         }, o.createElement(I, {
                             posterURL: k.c + "/owl-2017/insider-test/owl-igc-allstars-pack.png",
                             title: Object(S.d)("<x:header>PLAY LIKE AN ALL STAR</x:header>", {
-                                "x:header": U
+                                "x:header": B
                             }, "CampaignsTabs"),
                             description: Object(S.d)("All-Star Weekend hero skins for Mercy, Brigitte, Moira, Reinhardt, D.Va, and Tracer", "CampaignsTabs"),
                             contentAlt: Object(S.d)("Play like an all star", "CampaignsTabs"),
                             isJustAdded: !0
-                        })), o.createElement(p.xb, {
+                        })), o.createElement(p.yb, {
                             borderBottom: !0
                         }, o.createElement(I, {
                             posterURL: k.c + "/owl-2017/insider-test/lucio-emote-static.png",
                             videoURL: k.c + "/owl-2017/insider-test/djlucio-emote-video.mp4",
                             title: Object(S.d)("<x:header>PUMP UP THE VOLUME</x:header> <x:body>with the new Lucio DJ emote</x:body>", {
-                                "x:header": U,
-                                "x:body": q
+                                "x:header": B,
+                                "x:body": U
                             }, "DJLucioCallout"),
                             contentAlt: Object(S.d)("Pump up the volume", "CampaignsTabs"),
                             isJustAdded: !t
-                        })), o.createElement(p.xb, {
+                        })), o.createElement(p.yb, {
                             borderBottom: !0
                         }, o.createElement(f.b, {
                             channelID: this.props.channelID,
                             insiderPurchaseState: m.a.PrePurchase
-                        })), o.createElement(p.xb, {
+                        })), o.createElement(p.yb, {
                             padding: {
                                 bottom: 2
                             },
                             borderBottom: !0
-                        }, o.createElement(N, null)), o.createElement(p.Wa, {
+                        }, o.createElement(N, null)), o.createElement(p.Xa, {
                             className: "insider-pass-pre-purchase__marketing",
                             padding: {
                                 y: 3
                             }
-                        }, o.createElement(p.xb, {
+                        }, o.createElement(p.yb, {
                             borderBottom: !0,
                             padding: {
                                 y: 2
@@ -1389,59 +1389,59 @@
                         }, o.createElement(h, {
                             channelID: this.props.channelID,
                             insiderPurchaseState: m.a.PrePurchase
-                        })), o.createElement(p.Wa, {
+                        })), o.createElement(p.Xa, {
                             padding: {
                                 top: 2
                             }
-                        }, o.createElement(W, null))), o.createElement(b, null))
+                        }, o.createElement(A, null))), o.createElement(b, null))
                     }, t
                 }(o.PureComponent),
-                D = function(e) {
+                M = function(e) {
                     return o.createElement(p.W, {
                         className: "insider-pass-pre-purchase__feature-box-header",
                         bold: !0,
                         color: p.O.Link,
-                        fontSize: p.Ba.Size1
+                        fontSize: p.Ca.Size1
                     }, e)
                 },
-                T = function(e) {
+                W = function(e) {
                     return o.createElement(p.W, {
                         className: "insider-pass-pre-purchase__feature-box-subheader",
                         bold: !0,
                         color: p.O.Link,
-                        fontSize: p.Ba.Size3,
-                        transform: p.Mb.Uppercase
+                        fontSize: p.Ca.Size3,
+                        transform: p.Nb.Uppercase
                     }, e)
                 },
-                B = function(e) {
+                T = function(e) {
                     return o.createElement(p.W, null, e)
+                },
+                B = function(e) {
+                    return o.createElement(p.W, {
+                        fontSize: p.Ca.Size1,
+                        bold: !0,
+                        color: p.O.Link,
+                        lineHeight: p.Ya.Heading
+                    }, e)
                 },
                 U = function(e) {
                     return o.createElement(p.W, {
-                        fontSize: p.Ba.Size1,
+                        fontSize: p.Ca.Size3,
                         bold: !0,
-                        color: p.O.Link,
-                        lineHeight: p.Xa.Heading
+                        lineHeight: p.Ya.Heading
                     }, e)
                 },
-                q = function(e) {
-                    return o.createElement(p.W, {
-                        fontSize: p.Ba.Size3,
-                        bold: !0,
-                        lineHeight: p.Xa.Heading
-                    }, e)
-                },
-                V = (a("etgA"), function(e) {
+                q = (a("etgA"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(p.Wa, {
+                        return o.createElement(p.Xa, {
                             className: "esports-insider-pass-tab"
-                        }, this.props.hasInsiderPass && o.createElement(C, {
+                        }, this.props.hasInsiderPass && o.createElement(x, {
                             channelID: this.props.channelID,
                             blizzardRewardsAvailable: this.props.blizzardRewardsAvailable
-                        }), !this.props.hasInsiderPass && this.props.subscriptionProducts && o.createElement(M, {
+                        }), !this.props.hasInsiderPass && this.props.subscriptionProducts && o.createElement(D, {
                             channelID: this.props.channelID,
                             subscriptionProducts: this.props.subscriptionProducts,
                             userID: this.props.user && this.props.user.id,
@@ -1450,13 +1450,13 @@
                         }))
                     }, t
                 }(o.PureComponent));
-            var X = Object(i.connect)(function(e) {
+            var V = Object(i.connect)(function(e) {
                 return {
                     user: Object(r.e)(e)
                 }
-            })(V);
+            })(q);
             a.d(t, "PublicProps", function() {}), a.d(t, "CampaignsInsiderPassTab", function() {
-                return X
+                return V
             })
         },
         HGFl: function(e, t, a) {
@@ -1602,13 +1602,13 @@
                         }, {
                             "esports-square__svg": !0
                         });
-                    return o.createElement(d.xb, {
+                    return o.createElement(d.yb, {
                         "data-test-selector": a,
                         className: c,
-                        textAlign: d.Jb.Center,
-                        position: d.eb.Relative,
+                        textAlign: d.Kb.Center,
+                        position: d.fb.Relative,
                         borderRadius: d.x.Large,
-                        overflow: d.Za.Hidden,
+                        overflow: d.ab.Hidden,
                         background: d.r.Base,
                         display: d.X.InlineBlock
                     }, o.createElement("img", {
@@ -1723,20 +1723,20 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.inGame ? Object(l.d)("Redeem All In-Game Rewards", "CampaignsRewardsTab") : Object(l.d)("Redeem All", "CampaignsRewardsTab");
-                        return s.createElement(c.Wa, {
+                        return s.createElement(c.Xa, {
                             className: "esports-claim-all-rewards-button",
                             display: c.X.InlineFlex,
                             margin: {
                                 right: 1
                             },
-                            verticalAlign: c.Xb.Bottom
+                            verticalAlign: c.Yb.Bottom
                         }, s.createElement(c.z, {
                             "data-test-selector": "esports-claim-all-button",
                             onClick: this.claimAllRewards,
                             disabled: !this.props.enabled
-                        }, this.state.error && s.createElement(c.nb, {
+                        }, this.state.error && s.createElement(c.ob, {
                             "data-test-selector": "esports-claim-all-button-error",
-                            asset: c.ob.DeadGlitch
+                            asset: c.pb.DeadGlitch
                         }), !this.state.error && e))
                     }, t
                 }(s.Component),
@@ -1794,10 +1794,10 @@
                         v = r("esports-hexagon__svg--fill", {
                             "esports-hexagon__svg--fill-coming-soon": this.props.comingSoon
                         });
-                    return s.createElement(d.Wa, {
+                    return s.createElement(d.Xa, {
                         className: "esports-hexagon",
                         display: d.X.Flex,
-                        flexDirection: d.Z.Column
+                        flexDirection: d.Aa.Column
                     }, s.createElement("svg", {
                         className: f,
                         viewBox: "5 0 90 131"
@@ -1886,23 +1886,23 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(m.Wa, {
+                        return r.createElement(m.Xa, {
                             className: "insider-pass-full-skin-reward",
                             padding: {
                                 x: 1
                             },
                             display: m.X.Flex,
-                            flexDirection: m.Z.Column
+                            flexDirection: m.Aa.Column
                         }, r.createElement("img", {
                             className: "insider-pass-full-skin-reward__image",
                             src: this.props.imageURL
-                        }), r.createElement(m.Wa, {
-                            textAlign: m.Jb.Center
+                        }), r.createElement(m.Xa, {
+                            textAlign: m.Kb.Center
                         }, r.createElement(m.W, {
-                            fontSize: m.Ba.Size4,
+                            fontSize: m.Ca.Size4,
                             bold: !0
-                        }, this.props.name)), r.createElement(m.Wa, {
-                            textAlign: m.Jb.Center
+                        }, this.props.name)), r.createElement(m.Xa, {
+                            textAlign: m.Kb.Center
                         }, r.createElement(m.W, {
                             color: m.O.Alt2
                         }, this.props.subText)))
@@ -1923,7 +1923,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        if (!this.props.data || this.props.data.loading) return r.createElement(m.Ya, null);
+                        if (!this.props.data || this.props.data.loading) return r.createElement(m.Za, null);
                         if (this.props.data && this.props.data.error) return null;
                         var e = this.props.insiderPurchaseState === p.a.PostPurchase,
                             t = i("insider-pass-rewards__item", {
@@ -1956,7 +1956,7 @@
                             o && n && (h = h.filter(function(e) {
                                 return e.id !== f
                             })), l = h.map(function(e) {
-                                return r.createElement(m.Wa, {
+                                return r.createElement(m.Xa, {
                                     className: t,
                                     padding: {
                                         x: 3
@@ -1965,15 +1965,15 @@
                                 }, r.createElement(d.a, {
                                     imageURL: e.imageURL,
                                     size: d.b.Large
-                                }), r.createElement(m.Wa, {
+                                }), r.createElement(m.Xa, {
                                     display: m.X.Flex,
-                                    flexDirection: m.Z.Column,
+                                    flexDirection: m.Aa.Column,
                                     alignItems: m.f.Center,
                                     padding: {
                                         top: 1
                                     }
                                 }, r.createElement(m.W, {
-                                    fontSize: m.Ba.Size4,
+                                    fontSize: m.Ca.Size4,
                                     noWrap: !0,
                                     bold: !0
                                 }, e.name), r.createElement(m.W, {
@@ -1983,55 +1983,55 @@
                             })
                         }
                         var v = this.props.data.user.tournament.rewards.insider.inGameContent.map(function(a) {
-                                return r.createElement(m.Wa, {
+                                return r.createElement(m.Xa, {
                                     className: t,
                                     "data-test-selector": "in-game-content-selector",
                                     padding: {
                                         x: 1
                                     },
                                     key: a.name,
-                                    textAlign: m.Jb.Center
+                                    textAlign: m.Kb.Center
                                 }, r.createElement(c.a, {
                                     imageURL: a.imageURL,
                                     size: e ? c.c.Large : c.c.Medium,
                                     borderType: e ? c.b.Brand : c.b.Default
-                                }), r.createElement(m.Wa, {
+                                }), r.createElement(m.Xa, {
                                     display: m.X.Flex,
-                                    flexDirection: m.Z.Column,
+                                    flexDirection: m.Aa.Column,
                                     alignItems: m.f.Center,
                                     padding: {
                                         top: 1
                                     }
                                 }, r.createElement(m.W, {
-                                    fontSize: m.Ba.Size5,
+                                    fontSize: m.Ca.Size5,
                                     noWrap: !0,
                                     bold: !0
                                 }, a.name)))
                             }),
                             y = e && this.props.blizzardRewardsAvailable,
                             E = this.props.data.user.tournament.rewards.insider,
-                            x = E.heroSkins.concat(E.inGameContent).some(function(e) {
+                            C = E.heroSkins.concat(E.inGameContent).some(function(e) {
                                 return e.canBeFulfilled
                             });
-                        return r.createElement(m.Wa, {
+                        return r.createElement(m.Xa, {
                             className: "insider-pass-rewards",
                             display: m.X.Flex,
-                            flexDirection: m.Z.Column,
+                            flexDirection: m.Aa.Column,
                             padding: {
                                 y: 3
                             },
-                            textAlign: m.Jb.Center
+                            textAlign: m.Kb.Center
                         }, r.createElement(m.W, {
-                            fontSize: m.Ba.Size3,
+                            fontSize: m.Ca.Size3,
                             color: m.O.Link,
                             bold: !0
-                        }, Object(s.d)("Overwatch Content with the All-Access Pass", "CampaignsInsiderRewards")), y && !x && r.createElement(m.W, {
-                            fontSize: m.Ba.Size4
-                        }, Object(s.d)("All in-game rewards have been claimed to your Blizzard account", "CampaignsInsiderRewards")), y && x && r.createElement(m.Wa, {
+                        }, Object(s.d)("Overwatch Content with the All-Access Pass", "CampaignsInsiderRewards")), y && !C && r.createElement(m.W, {
+                            fontSize: m.Ca.Size4
+                        }, Object(s.d)("All in-game rewards have been claimed to your Blizzard account", "CampaignsInsiderRewards")), y && C && r.createElement(m.Xa, {
                             display: m.X.Flex,
-                            flexDirection: m.Z.Row,
-                            flexWrap: m.Aa.Wrap,
-                            justifyContent: m.Va.Center,
+                            flexDirection: m.Aa.Row,
+                            flexWrap: m.Ba.Wrap,
+                            justifyContent: m.Wa.Center,
                             padding: {
                                 y: 1
                             }
@@ -2040,8 +2040,8 @@
                             enabled: !0,
                             inGame: !0
                         })), !y && r.createElement(m.W, {
-                            fontSize: m.Ba.Size4
-                        }, Object(s.d)("A Blizzard account link is required to redeem in-game rewards", "CampaignsInsiderRewards")), this.props.insiderPurchaseState === p.a.PostPurchase && o && n && r.createElement(m.Ia, null, r.createElement(m.P, {
+                            fontSize: m.Ca.Size4
+                        }, Object(s.d)("A Blizzard account link is required to redeem in-game rewards", "CampaignsInsiderRewards")), this.props.insiderPurchaseState === p.a.PostPurchase && o && n && r.createElement(m.Ja, null, r.createElement(m.P, {
                             cols: {
                                 default: 12,
                                 xl: 6
@@ -2051,121 +2051,121 @@
                                 default: 12,
                                 xl: 6
                             }
-                        }, this.renderLucio(o))), a && this.renderPlayersPack(), r.createElement(m.Wa, {
+                        }, this.renderLucio(o))), a && this.renderPlayersPack(), r.createElement(m.Xa, {
                             display: m.X.Flex,
-                            flexDirection: e ? m.Z.Column : m.Z.Row,
-                            flexWrap: m.Aa.Wrap,
-                            justifyContent: m.Va.Center,
+                            flexDirection: e ? m.Aa.Column : m.Aa.Row,
+                            flexWrap: m.Ba.Wrap,
+                            justifyContent: m.Wa.Center,
                             alignItems: m.f.Stretch,
                             padding: {
                                 y: 2
                             }
-                        }, r.createElement(m.Wa, {
+                        }, r.createElement(m.Xa, {
                             display: m.X.Flex,
-                            flexWrap: m.Aa.Wrap,
-                            justifyContent: m.Va.Center,
+                            flexWrap: m.Ba.Wrap,
+                            justifyContent: m.Wa.Center,
                             alignItems: m.f.Center
-                        }, l), r.createElement(m.Wa, {
+                        }, l), r.createElement(m.Xa, {
                             display: m.X.Flex,
-                            flexWrap: m.Aa.Wrap,
-                            justifyContent: m.Va.Center,
+                            flexWrap: m.Ba.Wrap,
+                            justifyContent: m.Wa.Center,
                             alignItems: m.f.Center,
                             padding: 2
                         }, v)))
                     }, t.prototype.renderPlayersPack = function() {
-                        return r.createElement(m.Wa, {
+                        return r.createElement(m.Xa, {
                             display: m.X.Flex,
-                            justifyContent: m.Va.Center,
+                            justifyContent: m.Wa.Center,
                             padding: {
                                 left: 1,
                                 right: 1
                             }
-                        }, r.createElement(m.xb, {
+                        }, r.createElement(m.yb, {
                             className: "insider-pass-rewards__players-pack",
-                            textAlign: m.Jb.Center,
+                            textAlign: m.Kb.Center,
                             fullWidth: !0
                         }, r.createElement(m.S, {
                             className: "insider-pass-rewards__players-pack__image",
                             src: l.c + "/owl-2017/insider-test/owl-igc-playerspack.png",
                             alt: Object(s.d)("The Players Pack Skins", "CampaignsInsiderRewards")
-                        }), r.createElement(m.Wa, {
+                        }), r.createElement(m.Xa, {
                             display: m.X.Flex,
-                            flexDirection: m.Z.Column,
+                            flexDirection: m.Aa.Column,
                             alignItems: m.f.Center,
                             padding: {
                                 top: 1,
                                 bottom: 1
                             }
                         }, r.createElement(m.W, {
-                            fontSize: m.Ba.Size4,
+                            fontSize: m.Ca.Size4,
                             noWrap: !0,
                             bold: !0
                         }, Object(s.d)("The Players Pack", "CampaignsInsiderRewards")), r.createElement(m.W, {
-                            fontSize: m.Ba.Size5,
+                            fontSize: m.Ca.Size5,
                             bold: !0
                         }, Object(s.d)("D.Va, Ana, Zarya, Genji, Sombra, Lucio, Widowmaker, Orisa, Winston, Reinhardt, Zenyatta, Junkrat", "CampaignsInsiderRewards")), this.renderFormattedOwlSkinsText())))
                     }, t.prototype.renderAllstarsPack = function() {
-                        return r.createElement(m.Wa, {
+                        return r.createElement(m.Xa, {
                             display: m.X.Flex,
-                            justifyContent: m.Va.Center,
+                            justifyContent: m.Wa.Center,
                             padding: {
                                 left: 1,
                                 right: 1,
                                 bottom: 2,
                                 top: 2
                             }
-                        }, r.createElement(m.xb, {
+                        }, r.createElement(m.yb, {
                             className: "insider-pass-rewards__new-item",
-                            textAlign: m.Jb.Center,
+                            textAlign: m.Kb.Center,
                             fullWidth: !0
                         }, r.createElement(m.S, {
                             className: "insider-pass-rewards__new-item__image",
                             src: l.c + "/owl-2017/insider-test/owl-igc-allstars-pack.png",
                             alt: Object(s.d)("The All Stars Pack Skins", "CampaignsInsiderRewards")
-                        }), r.createElement(m.Wa, {
+                        }), r.createElement(m.Xa, {
                             display: m.X.Flex,
-                            flexDirection: m.Z.Column,
+                            flexDirection: m.Aa.Column,
                             alignItems: m.f.Center,
                             padding: {
                                 top: 1,
                                 bottom: 1
                             }
                         }, r.createElement(m.W, {
-                            fontSize: m.Ba.Size4,
+                            fontSize: m.Ca.Size4,
                             noWrap: !0,
                             bold: !0
                         }, Object(s.d)("The All-Stars Pack", "CampaignsInsiderRewards")), r.createElement(m.W, {
-                            fontSize: m.Ba.Size5,
+                            fontSize: m.Ca.Size5,
                             bold: !0
                         }, Object(s.d)("Mercy, Brigitte, Moira, Reinhardt, D.Va, Tracer", "CampaignsInsiderRewards")), this.renderFormattedOwlSkinsText())))
                     }, t.prototype.renderLucio = function(e) {
-                        return r.createElement(m.Wa, {
+                        return r.createElement(m.Xa, {
                             display: m.X.Flex,
-                            justifyContent: m.Va.Center,
+                            justifyContent: m.Wa.Center,
                             padding: {
                                 left: 1,
                                 right: 1,
                                 bottom: 2,
                                 top: 2
                             }
-                        }, r.createElement(m.xb, {
+                        }, r.createElement(m.yb, {
                             className: "insider-pass-rewards__new-item",
-                            textAlign: m.Jb.Center,
+                            textAlign: m.Kb.Center,
                             fullWidth: !0
                         }, r.createElement(m.S, {
                             className: "insider-pass-rewards__new-item__image",
                             src: l.c + "/owl-2017/insider-test/lucio-emote-static-alt.png",
                             alt: e.name
-                        }), r.createElement(m.Wa, {
+                        }), r.createElement(m.Xa, {
                             display: m.X.Flex,
-                            flexDirection: m.Z.Column,
+                            flexDirection: m.Aa.Column,
                             alignItems: m.f.Center,
                             padding: {
                                 top: 1,
                                 bottom: 1
                             }
                         }, r.createElement(m.W, {
-                            fontSize: m.Ba.Size4,
+                            fontSize: m.Ca.Size4,
                             noWrap: !0,
                             bold: !0
                         }, e.name), r.createElement(m.W, {

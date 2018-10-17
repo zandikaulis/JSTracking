@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [92], {
+    [91], {
         to0h: function(e, t, n) {
             "use strict";
             n.r(t);
@@ -13,18 +13,18 @@
                 p = n("76Lv"),
                 u = n("5ELF"),
                 d = n("Ue10"),
-                h = c.a.wrap(function() {
-                    return n.e(166).then(n.bind(null, "FD0w"))
+                f = c.a.wrap(function() {
+                    return Promise.all([n.e(0), n.e(164)]).then(n.bind(null, "FD0w"))
                 }, "BitsLandingPage"),
                 m = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(d.Wa, {
+                        return s.createElement(d.Xa, {
                             className: "bits-root " + Object(p.b)(this.props.theme),
-                            position: d.eb.Absolute,
-                            overflow: d.Za.Hidden,
+                            position: d.fb.Absolute,
+                            overflow: d.ab.Hidden,
                             attachRight: !0,
                             attachTop: !0,
                             attachBottom: !0,
@@ -34,14 +34,14 @@
                             }
                         }, s.createElement(u.a, {
                             darkModeEnabled: !0
-                        }), s.createElement(d.Wa, {
+                        }), s.createElement(d.Xa, {
                             display: d.X.Flex,
-                            flexWrap: d.Aa.NoWrap,
+                            flexWrap: d.Ba.NoWrap,
                             fullHeight: !0,
-                            position: d.eb.Relative
-                        }, s.createElement(d.Oa, {
+                            position: d.fb.Relative
+                        }, s.createElement(d.Pa, {
                             display: d.X.Flex,
-                            position: d.eb.Relative,
+                            position: d.fb.Relative,
                             flexGrow: 1,
                             fullHeight: !0,
                             fullWidth: !0
@@ -49,18 +49,18 @@
                             className: "bits-root__main"
                         }, s.createElement(l.a, {
                             path: "/bits",
-                            component: h
+                            component: f
                         })))))
                     }, t
                 }(s.Component);
-            var f = Object(a.connect)(function(e) {
+            var h = Object(a.connect)(function(e) {
                     return {
                         firstPageLoaded: !!e.session.firstPageLoaded,
                         isLoggedIn: Object(i.f)(e),
                         theme: e.ui.theme
                     }
                 })(m),
-                b = Object(o.a)(f);
+                b = Object(o.a)(h);
             n.d(t, "BitsRoot", function() {
                 return b
             })

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [138], {
+    [137], {
         Pz3T: function(e, n) {
             var t = {
                 kind: "Document",
@@ -175,9 +175,9 @@
                             if (l !== d) return this.renderRedirect(m);
                             var g = this.state.installation,
                                 h = g.extension;
-                            p = s.createElement(v.Wa, {
+                            p = s.createElement(v.Xa, {
                                 fullWidth: !0
-                            }, s.createElement(v.Wa, {
+                            }, s.createElement(v.Xa, {
                                 padding: {
                                     bottom: 1
                                 }
@@ -190,16 +190,16 @@
                                 aspect: v.p.Aspect1x1,
                                 size: v.J.Size6,
                                 onError: this.onCardImageError
-                            }), s.createElement(v.H, null, s.createElement(v.Wa, {
+                            }), s.createElement(v.H, null, s.createElement(v.Xa, {
                                 padding: 1
                             }, s.createElement(v.W, {
-                                type: v.Nb.H4
+                                type: v.Ob.H4
                             }, h.name), s.createElement(v.W, {
-                                type: v.Nb.Span,
+                                type: v.Ob.Span,
                                 color: v.O.Alt2
                             }, Object(c.d)("Created by {extensionAuthor}", {
                                 extensionAuthor: h.authorName
-                            }, "ExtensionConfigureComponent")))))), s.createElement(v.Wa, null, s.createElement(f.a, {
+                            }, "ExtensionConfigureComponent")))))), s.createElement(v.Xa, null, s.createElement(f.a, {
                                 className: "extension-configure-extension-frame",
                                 installation: g,
                                 extensionMode: r.ExtensionMode.Config,
@@ -217,9 +217,9 @@
                             showBackLink: !0,
                             title: Object(c.d)("Configure", "ExtensionConfigureComponent")
                         });
-                        return s.createElement(u.b, null, s.createElement(v.Wa, {
+                        return s.createElement(u.b, null, s.createElement(v.Xa, {
                             padding: 2
-                        }, x, s.createElement(v.xb, {
+                        }, x, s.createElement(v.yb, {
                             borderRight: !0,
                             borderLeft: !0,
                             borderBottom: !0,
@@ -238,22 +238,22 @@
                             to: Object(x.c)(e)
                         })
                     }, n.prototype.renderPlaceholders = function() {
-                        return s.createElement(v.Wa, {
+                        return s.createElement(v.Xa, {
                             fullWidth: !0
-                        }, s.createElement(v.Wa, {
+                        }, s.createElement(v.Xa, {
                             display: v.X.Flex,
                             alignItems: v.f.Center,
                             padding: {
                                 y: 1
                             }
-                        }, s.createElement(v.Wa, null, s.createElement(v.db, {
+                        }, s.createElement(v.Xa, null, s.createElement(v.eb, {
                             width: 60,
                             height: 60
-                        })), s.createElement(v.Wa, {
+                        })), s.createElement(v.Xa, {
                             padding: {
                                 left: 1
                             }
-                        }, s.createElement(v.db, {
+                        }, s.createElement(v.eb, {
                             lineCount: 2,
                             width: 200
                         }))))

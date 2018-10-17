@@ -19,7 +19,7 @@
                 g = n("EOHf"),
                 S = n("Ue10"),
                 h = (n("cvcW"), i.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(127)]).then(n.bind(null, "nRp3"))
+                    return Promise.all([n.e(0), n.e(126)]).then(n.bind(null, "nRp3"))
                 }, "SquadStream")),
                 q = function(e) {
                     function t() {
@@ -33,7 +33,7 @@
                         return Object(b.a)(this.props.match.params.channelLogin) ? c.createElement(c.Fragment, null, c.createElement(f.b, {
                             className: "squad-stream-page__root",
                             suppressScrollX: !0
-                        }), c.createElement(S.xb, {
+                        }), c.createElement(S.yb, {
                             fullWidth: !0,
                             fullHeight: !0,
                             className: "squad-stream-page",
@@ -50,14 +50,14 @@
                 }), Object(s.a)({
                     location: d.PageviewLocation.SquadStreamPage
                 }))(q);
-            var w = Object(a.connect)(null, function(e) {
+            var y = Object(a.connect)(null, function(e) {
                 return Object(o.bindActionCreators)({
                     disableSquadMode: r.B,
                     enableSquadMode: r.E
                 }, e)
             })(v);
             n.d(t, "SquadStreamPage", function() {
-                return w
+                return y
             })
         },
         cvcW: function(e, t, n) {},

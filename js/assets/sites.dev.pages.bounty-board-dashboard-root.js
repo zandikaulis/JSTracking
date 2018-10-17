@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [102], {
+    [101], {
         "5g1g": function(e, n, t) {
             "use strict";
             var a = t("mrSG"),
@@ -56,13 +56,13 @@
                 p = t("Ints"),
                 v = t("Ue10"),
                 f = (t("QSSE"), l.a.wrap(function() {
-                    return t.e(106).then(t.bind(null, "Pi1p"))
+                    return t.e(105).then(t.bind(null, "Pi1p"))
                 }, "DevLoginPage")),
                 g = l.a.wrap(function() {
-                    return t.e(208).then(t.bind(null, "epaB"))
+                    return t.e(206).then(t.bind(null, "epaB"))
                 }, "DevBountyBoardCampaignManagerPage"),
                 y = l.a.wrap(function() {
-                    return t.e(207).then(t.bind(null, "aztO"))
+                    return t.e(205).then(t.bind(null, "aztO"))
                 }, "DevBountyBoardAnalyticsPage"),
                 h = function(e) {
                     function n() {
@@ -76,9 +76,9 @@
                     return o.__extends(n, e), n.prototype.render = function() {
                         return this.props.isLoggedIn ? i.createElement(b.a, {
                             name: "bounty_board_brand_portal_enabled"
-                        }, i.createElement(p.a, null, i.createElement(v.Wa, {
+                        }, i.createElement(p.a, null, i.createElement(v.Xa, {
                             className: "dev-dashboard"
-                        }, i.createElement(v.xb, {
+                        }, i.createElement(v.yb, {
                             padding: {
                                 top: 1
                             },
@@ -87,23 +87,23 @@
                             },
                             borderBottom: !0,
                             background: v.r.Base
-                        }, i.createElement("header", null, i.createElement(v.Wa, {
+                        }, i.createElement("header", null, i.createElement(v.Xa, {
                             className: "dev-dashboard__container",
                             margin: {
                                 x: "auto"
                             }
-                        }, i.createElement(v.Wa, {
+                        }, i.createElement(v.Xa, {
                             padding: {
                                 y: 1
                             }
                         }, i.createElement(v.z, {
                             "data-test-selector": "dev-bounty-board-dashboard-dashboard-button-selector",
-                            icon: v.ob.GlyphArrLeft,
+                            icon: v.pb.GlyphArrLeft,
                             type: v.F.Text,
                             linkTo: "/console"
                         }, Object(u.d)("Dashboard", "DevBountyBoardDashboardRoot"))), i.createElement(v.W, {
-                            type: v.Nb.H3
-                        }, Object(u.d)("Bounty Board Dashboard", "DevBountyBoardDashboardRoot")), i.createElement(v.xb, {
+                            type: v.Ob.H3
+                        }, Object(u.d)("Bounty Board Dashboard", "DevBountyBoardDashboardRoot")), i.createElement(v.yb, {
                             borderTop: !0,
                             margin: {
                                 top: 1
@@ -112,11 +112,11 @@
                                 top: 1
                             },
                             display: v.X.Flex
-                        }, i.createElement(v.yb, {
+                        }, i.createElement(v.zb, {
                             "data-test-selector": "dev-bounty-board-dashboard-campaign-tab-selector",
                             linkTo: "/console/bounty-board",
                             active: this.isActive("", !0)
-                        }, Object(u.d)("Campaign Manager", "DevBountyBoardDashboardRoot")))))), i.createElement(v.Wa, {
+                        }, Object(u.d)("Campaign Manager", "DevBountyBoardDashboardRoot")))))), i.createElement(v.Xa, {
                             "data-test-selector": "dev-bounty-board-dashboard-route-container-selector",
                             className: "dev-dashboard__container",
                             margin: {

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [202], {
+    [200], {
         "/ZC1": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -30,16 +30,16 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(o.Y, {
+                        return a.createElement(o.Z, {
                             dragOver: this.state.isDraggingOver,
                             error: this.props.error
-                        }, a.createElement(o.Oa, {
-                            position: o.eb.Absolute,
+                        }, a.createElement(o.Pa, {
+                            position: o.fb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: o.ac.Above
+                            zIndex: o.bc.Above
                         }, a.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -80,9 +80,9 @@
             }), n.d(t, "r", function() {
                 return b
             }), n.d(t, "s", function() {
-                return h
-            }), n.d(t, "o", function() {
                 return f
+            }), n.d(t, "o", function() {
+                return h
             }), n.d(t, "t", function() {
                 return v
             }), n.d(t, "v", function() {
@@ -96,9 +96,9 @@
             }), n.d(t, "B", function() {
                 return y
             }), n.d(t, "b", function() {
-                return T
-            }), n.d(t, "a", function() {
                 return C
+            }), n.d(t, "a", function() {
+                return T
             }), n.d(t, "E", function() {
                 return I
             }), n.d(t, "m", function() {
@@ -112,23 +112,23 @@
             }), n.d(t, "q", function() {
                 return R
             }), n.d(t, "w", function() {
-                return x
-            }), n.d(t, "f", function() {
                 return M
-            }), n.d(t, "g", function() {
+            }), n.d(t, "f", function() {
                 return U
+            }), n.d(t, "g", function() {
+                return x
             }), n.d(t, "x", function() {
                 return k
             }), n.d(t, "k", function() {
                 return G
             }), n.d(t, "p", function() {
-                return B
-            }), n.d(t, "u", function() {
                 return L
+            }), n.d(t, "u", function() {
+                return B
             }), n.d(t, "z", function() {
                 return j
             }), n.d(t, "y", function() {
-                return N
+                return F
             });
             var r = n("/7QA"),
                 a = n("0Log"),
@@ -174,11 +174,11 @@
                 return a.PubsubTopic.PayoutOnboardingEvents + "." + e
             }
 
-            function h(e) {
+            function f(e) {
                 return a.PubsubTopic.Presence + "." + e
             }
 
-            function f(e, t) {
+            function h(e, t) {
                 return a.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
             }
 
@@ -206,11 +206,11 @@
                 return a.PubsubTopic.UserBitsUpdates + "." + e
             }
 
-            function T() {
+            function C() {
                 return a.PubsubTopic.BitsCampaignEvents + ".updates"
             }
 
-            function C(e) {
+            function T(e) {
                 return a.PubsubTopic.ChannelBitsPinEvents + "." + e
             }
 
@@ -238,15 +238,15 @@
                 return a.PubsubTopic.OnsiteNotifications + "." + e
             }
 
-            function x(e) {
+            function M(e) {
                 return a.PubsubTopic.StreamChatRoom + "." + e
             }
 
-            function M(e) {
+            function U(e) {
                 return a.PubsubTopic.ChannelEventUpdates + "." + e
             }
 
-            function U(e) {
+            function x(e) {
                 return a.PubsubTopic.ChannelSquadUpdates + "." + e
             }
 
@@ -258,11 +258,11 @@
                 return a.PubsubTopic.CheerbombEventsTopic + "." + e
             }
 
-            function B(e) {
+            function L(e) {
                 return a.PubsubTopic.MysteryGift + "." + e
             }
 
-            function L(e) {
+            function B(e) {
                 return a.PubsubTopic.SquadUpdates + "." + e
             }
 
@@ -279,7 +279,7 @@
                 })
             }
 
-            function N(e) {
+            function F(e) {
                 return r.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -354,8 +354,8 @@
                 m = n("GnwI"),
                 g = n("1mFg"),
                 b = n("coZW"),
-                h = n("dEJ+"),
-                f = n("/7QA"),
+                f = n("dEJ+"),
+                h = n("/7QA"),
                 v = n("cZKs"),
                 E = n("GD6M"),
                 _ = n("Ue10");
@@ -381,7 +381,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        var e = Object(f.d)("If your game does not appear please go <x:link>here</x:link> to add your game", {
+                        var e = Object(h.d)("If your game does not appear please go <x:link>here</x:link> to add your game", {
                             "x:link": function(e) {
                                 return o.createElement("a", {
                                     key: e,
@@ -389,21 +389,21 @@
                                 }, e)
                             }
                         }, "DevAddGameModal");
-                        return o.createElement(_.Wa, {
+                        return o.createElement(_.Xa, {
                             className: "dev-add-game-modal",
-                            position: _.eb.Relative,
+                            position: _.fb.Relative,
                             fullHeight: !0
-                        }, o.createElement(_.xb, {
+                        }, o.createElement(_.yb, {
                             background: _.r.Base,
                             fullWidth: !0
-                        }, o.createElement(_.Wa, {
+                        }, o.createElement(_.Xa, {
                             padding: 2,
                             display: _.X.InlineBlock,
-                            position: _.eb.Relative,
-                            textAlign: _.Jb.Center,
+                            position: _.fb.Relative,
+                            textAlign: _.Kb.Center,
                             fullWidth: !0
-                        }, o.createElement(_.xb, {
-                            textAlign: _.Jb.Left,
+                        }, o.createElement(_.yb, {
+                            textAlign: _.Kb.Left,
                             borderBottom: !0,
                             padding: {
                                 bottom: 1
@@ -412,57 +412,57 @@
                                 bottom: 2
                             }
                         }, o.createElement(_.W, {
-                            type: _.Nb.H3,
+                            type: _.Ob.H3,
                             color: _.O.Alt2,
-                            fontSize: _.Ba.Size4
-                        }, Object(f.d)("Add Game", "DevAddGameModal"), " ")), o.createElement(_.Wa, {
+                            fontSize: _.Ca.Size4
+                        }, Object(h.d)("Add Game", "DevAddGameModal"), " ")), o.createElement(_.Xa, {
                             display: _.X.InlineBlock,
-                            position: _.eb.Relative,
-                            textAlign: _.Jb.Left
-                        }, o.createElement(_.W, null, Object(f.d)("Games", "DevAddGameModal")), o.createElement(_.W, {
+                            position: _.fb.Relative,
+                            textAlign: _.Kb.Left
+                        }, o.createElement(_.W, null, Object(h.d)("Games", "DevAddGameModal")), o.createElement(_.W, {
                             color: _.O.Alt2,
-                            fontSize: _.Ba.Size7
-                        }, e)), o.createElement(_.xb, {
+                            fontSize: _.Ca.Size7
+                        }, e)), o.createElement(_.yb, {
                             margin: {
                                 bottom: 1
                             }
                         }, o.createElement(E.b, {
                             limit: 10,
                             onGameSelect: this.onGameSelect
-                        })), null !== this.props.errorMessage && o.createElement(_.bb, a.__assign({}, function(e) {
+                        })), null !== this.props.errorMessage && o.createElement(_.cb, a.__assign({}, function(e) {
                             switch (e) {
                                 case r.Success:
                                     return {
-                                        label: Object(f.d)("Success! Your game request will be approved within 48 hours.", "DevAddGameModal"),
-                                        type: _.cb.Success
+                                        label: Object(h.d)("Success! Your game request will be approved within 48 hours.", "DevAddGameModal"),
+                                        type: _.db.Success
                                     };
                                 case r.PermissionsError:
                                     return {
-                                        label: Object(f.d)("You lack permissions.", "DevAddGameModal"),
-                                        type: _.cb.Alert
+                                        label: Object(h.d)("You lack permissions.", "DevAddGameModal"),
+                                        type: _.db.Alert
                                     };
                                 case r.UnexpectedError:
                                     return {
-                                        label: Object(f.d)("Unexpected error, please try again.", "DevAddGameModal"),
-                                        type: _.cb.Alert
+                                        label: Object(h.d)("Unexpected error, please try again.", "DevAddGameModal"),
+                                        type: _.db.Alert
                                     };
                                 default:
                                     return {
-                                        label: Object(f.d)("Please try again.", "DevAddGameModal"),
-                                        type: _.cb.Alert
+                                        label: Object(h.d)("Please try again.", "DevAddGameModal"),
+                                        type: _.db.Alert
                                     }
                             }
-                        }(this.props.errorMessage))), o.createElement(_.xb, {
-                            textAlign: _.Jb.Center
+                        }(this.props.errorMessage))), o.createElement(_.yb, {
+                            textAlign: _.Kb.Center
                         }, o.createElement(_.z, {
                             onClick: this.onSubmitClick
-                        }, Object(f.d)("Submit", "DevAddGameModal"))))), o.createElement(v.a, null))
+                        }, Object(h.d)("Submit", "DevAddGameModal"))))), o.createElement(v.a, null))
                     }, t
                 }(o.Component),
                 A = Object(s.compose)(Object(m.b)("DevAddGameModal", {
                     autoReportInteractive: !0
                 }))(S);
-            var y, T = function(e) {
+            var y, C = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -502,11 +502,11 @@
                         })
                     }, t
                 }(o.Component),
-                C = Object(i.connect)(function(e) {
+                T = Object(i.connect)(function(e) {
                     return {
-                        company: Object(h.c)(e)
+                        company: Object(f.c)(e)
                     }
-                })(T),
+                })(C),
                 I = n("uLRL"),
                 O = n("PZVp"),
                 P = n("/aPz"),
@@ -515,13 +515,13 @@
             ! function(e) {
                 e[e.Success = 0] = "Success", e[e.UnexpectedError = 1] = "UnexpectedError", e[e.BadSizeError = 2] = "BadSizeError", e[e.NonImageError = 3] = "NonImageError", e[e.WrongFormatError = 4] = "WrongFormatError", e[e.TimeoutError = 5] = "TimeoutError", e[e.Uploading = 6] = "Uploading", e[e.ImageNotSelected = 7] = "ImageNotSelected"
             }(y || (y = {}));
-            var R, x = n("/ZC1");
+            var R, M = n("/ZC1");
             n("iYk3");
             ! function(e) {
                 e.Submit = "SUBMIT_SELECTOR", e.Status = "STATUS_MESSAGE", e.Instructions = "INSTRUCTIONS_MESSAGE", e.PreviewImage = "PreviewImage", e.UploadInfo = "UploadInfo"
             }(R || (R = {}));
-            var M = ["image/jpeg", "image/jpg"],
-                U = function(e) {
+            var U = ["image/jpeg", "image/jpg"],
+                x = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.submitForm = function() {
@@ -533,24 +533,24 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        var e = Object(f.d)("Submit", "DevEditBoxArtModal"),
-                            t = Object(f.d)("The image must be a 600px by 800px, JPEG format, without developer, platform, or rating logos.", "DevEditBoxArtModal");
-                        return o.createElement(_.Wa, {
+                        var e = Object(h.d)("Submit", "DevEditBoxArtModal"),
+                            t = Object(h.d)("The image must be a 600px by 800px, JPEG format, without developer, platform, or rating logos.", "DevEditBoxArtModal");
+                        return o.createElement(_.Xa, {
                             className: "dev-edit-box-art-modal",
-                            position: _.eb.Relative,
+                            position: _.fb.Relative,
                             fullHeight: !0
-                        }, o.createElement(_.xb, {
+                        }, o.createElement(_.yb, {
                             className: "dev-edit-box-art-modal__background-container",
                             background: _.r.Base,
                             fullWidth: !0
-                        }, o.createElement(_.Wa, {
+                        }, o.createElement(_.Xa, {
                             padding: 2,
                             display: _.X.InlineBlock,
-                            position: _.eb.Relative,
-                            textAlign: _.Jb.Center,
+                            position: _.fb.Relative,
+                            textAlign: _.Kb.Center,
                             fullWidth: !0
-                        }, o.createElement(_.xb, {
-                            textAlign: _.Jb.Left,
+                        }, o.createElement(_.yb, {
+                            textAlign: _.Kb.Left,
                             borderBottom: !0,
                             padding: {
                                 bottom: 1
@@ -559,85 +559,85 @@
                                 bottom: 2
                             }
                         }, o.createElement(_.W, {
-                            type: _.Nb.H3,
+                            type: _.Ob.H3,
                             color: _.O.Alt2,
-                            fontSize: _.Ba.Size4
-                        }, Object(f.d)("Edit Boxart for {gameName}", {
+                            fontSize: _.Ca.Size4
+                        }, Object(h.d)("Edit Boxart for {gameName}", {
                             gameName: this.props.gameName
-                        }, "DevEditBoxArtModal"), " ")), o.createElement(_.Wa, {
+                        }, "DevEditBoxArtModal"), " ")), o.createElement(_.Xa, {
                             className: "dev-edit-box-art-modal__upload-container",
                             display: _.X.InlineBlock,
-                            position: _.eb.Relative,
-                            textAlign: _.Jb.Center,
+                            position: _.fb.Relative,
+                            textAlign: _.Kb.Center,
                             margin: {
                                 bottom: 1
                             }
-                        }, o.createElement(_.Wa, {
+                        }, o.createElement(_.Xa, {
                             className: "dev-edit-box-art-modal__upload",
                             display: _.X.InlineBlock,
-                            position: _.eb.Relative,
-                            textAlign: _.Jb.Center
-                        }, o.createElement(x.a, {
-                            allowedFileTypes: M,
+                            position: _.fb.Relative,
+                            textAlign: _.Kb.Center
+                        }, o.createElement(M.a, {
+                            allowedFileTypes: U,
                             onFilesSubmitted: this.props.onImageInputChange
-                        }, "" === this.props.imagePreviewURL && G()), "" !== this.props.imagePreviewURL && k(this.props.imagePreviewURL))), o.createElement(_.xb, {
+                        }, "" === this.props.imagePreviewURL && G()), "" !== this.props.imagePreviewURL && k(this.props.imagePreviewURL))), o.createElement(_.yb, {
                             "data-test-selector": R.Instructions,
-                            fontSize: _.Ba.Size6,
-                            position: _.eb.Relative,
-                            textAlign: _.Jb.Center,
+                            fontSize: _.Ca.Size6,
+                            position: _.fb.Relative,
+                            textAlign: _.Kb.Center,
                             className: "profile-edit__status-message"
-                        }, t), o.createElement(_.xb, {
+                        }, t), o.createElement(_.yb, {
                             "data-test-selector": R.Status,
-                            fontSize: _.Ba.Size4,
-                            position: _.eb.Relative,
-                            textAlign: _.Jb.Center,
+                            fontSize: _.Ca.Size4,
+                            position: _.fb.Relative,
+                            textAlign: _.Kb.Center,
                             className: "profile-edit__status-message"
-                        }, null !== this.props.statusMessage && o.createElement(_.bb, a.__assign({}, function(e) {
+                        }, null !== this.props.statusMessage && o.createElement(_.cb, a.__assign({}, function(e) {
                             switch (e) {
                                 case y.Success:
                                     return {
-                                        label: Object(f.d)("Success! It will take time for boxart to update across site.", "DevEditBoxArt"),
-                                        type: _.cb.Success
+                                        label: Object(h.d)("Success! It will take time for boxart to update across site.", "DevEditBoxArt"),
+                                        type: _.db.Success
                                     };
                                 case y.UnexpectedError:
                                     return {
-                                        label: Object(f.d)("Unexpected error, please try again.", "DevEditBoxArt"),
-                                        type: _.cb.Alert
+                                        label: Object(h.d)("Unexpected error, please try again.", "DevEditBoxArt"),
+                                        type: _.db.Alert
                                     };
                                 case y.BadSizeError:
                                     return {
-                                        label: Object(f.d)("Image must be 600px by 800px.", "DevEditBoxArt"),
-                                        type: _.cb.Alert
+                                        label: Object(h.d)("Image must be 600px by 800px.", "DevEditBoxArt"),
+                                        type: _.db.Alert
                                     };
                                 case y.NonImageError:
                                     return {
-                                        label: Object(f.d)("You must upload an image.", "DevEditBoxArt"),
-                                        type: _.cb.Alert
+                                        label: Object(h.d)("You must upload an image.", "DevEditBoxArt"),
+                                        type: _.db.Alert
                                     };
                                 case y.WrongFormatError:
                                     return {
-                                        label: Object(f.d)("You must select a valid image type.", "DevEditBoxArt"),
-                                        type: _.cb.Alert
+                                        label: Object(h.d)("You must select a valid image type.", "DevEditBoxArt"),
+                                        type: _.db.Alert
                                     };
                                 case y.TimeoutError:
                                     return {
-                                        label: Object(f.d)("Upload timed-out. Please try again.", "DevEditBoxArt"),
-                                        type: _.cb.Alert
+                                        label: Object(h.d)("Upload timed-out. Please try again.", "DevEditBoxArt"),
+                                        type: _.db.Alert
                                     };
                                 case y.Uploading:
                                     return {
-                                        label: Object(f.d)("Uploading...", "DevEditBoxArt"),
-                                        type: _.cb.Brand
+                                        label: Object(h.d)("Uploading...", "DevEditBoxArt"),
+                                        type: _.db.Brand
                                     };
                                 case y.ImageNotSelected:
                                     return {
-                                        label: Object(f.d)("Select a image first.", "DevEditBoxArt"),
-                                        type: _.cb.Alert
+                                        label: Object(h.d)("Select a image first.", "DevEditBoxArt"),
+                                        type: _.db.Alert
                                     };
                                 default:
                                     return {
-                                        label: Object(f.d)("Please try again.", "DevEditBoxArt"),
-                                        type: _.cb.Alert
+                                        label: Object(h.d)("Please try again.", "DevEditBoxArt"),
+                                        type: _.db.Alert
                                     }
                             }
                         }(this.props.statusMessage)))), o.createElement(_.z, {
@@ -647,7 +647,7 @@
                     }, t
                 }(o.Component),
                 k = function(e) {
-                    return o.createElement(_.Wa, {
+                    return o.createElement(_.Xa, {
                         "data-test-selector": R.PreviewImage,
                         className: "dev-edit-box-art-modal__image-preview"
                     }, o.createElement("img", {
@@ -655,21 +655,21 @@
                     }))
                 },
                 G = function() {
-                    return o.createElement(_.Wa, {
+                    return o.createElement(_.Xa, {
                         "data-test-selector": R.UploadInfo,
                         className: "dev-edit-box-art-modal__upload-info"
-                    }, o.createElement(_.Wa, null, o.createElement(_.nb, {
-                        asset: _.ob.Plus,
-                        type: _.pb.Alt2,
+                    }, o.createElement(_.Xa, null, o.createElement(_.ob, {
+                        asset: _.pb.Plus,
+                        type: _.qb.Alt2,
                         height: 20,
                         width: 20
                     })), o.createElement(_.W, {
-                        type: _.Nb.H3,
+                        type: _.Ob.H3,
                         color: _.O.Alt2,
-                        fontSize: _.Ba.Size4
-                    }, Object(f.d)("Upload Boxart", "DevEditBoxArtModal")))
+                        fontSize: _.Ca.Size4
+                    }, Object(h.d)("Upload Boxart", "DevEditBoxArtModal")))
                 };
-            var B, L = function(e) {
+            var L, B = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -678,7 +678,7 @@
                             statusMessage: null,
                             imageUploaded: !1,
                             currentImage: null
-                        }, t.logger = f.k.withCategory("DevEditBoxArtModal"), t.onImageInputChange = function(e) {
+                        }, t.logger = h.k.withCategory("DevEditBoxArtModal"), t.onImageInputChange = function(e) {
                             var n;
                             if (null === e || e.length < 1) t.setState({
                                 statusMessage: y.ImageNotSelected
@@ -721,7 +721,7 @@
                                                     return a.__generator(this, function(r) {
                                                         switch (r.label) {
                                                             case 0:
-                                                                return [4, fetch(f.a.apiBaseURL + "/v5/piper/boxart/upload/" + e + "?client_id=" + f.a.authSettings.clientID + "&api_version=" + f.a.defaultAPIVersion + "&format=" + n, {
+                                                                return [4, fetch(h.a.apiBaseURL + "/v5/piper/boxart/upload/" + e + "?client_id=" + h.a.authSettings.clientID + "&api_version=" + h.a.defaultAPIVersion + "&format=" + n, {
                                                                     method: "GET",
                                                                     headers: {
                                                                         Authorization: "OAuth " + t
@@ -740,7 +740,7 @@
                                                 statusMessage: y.UnexpectedError
                                             }), [2];
                                         case 4:
-                                            return this.unsubscribe = f.l.subscribe({
+                                            return this.unsubscribe = h.l.subscribe({
                                                 topic: Object(P.A)(n),
                                                 success: function() {
                                                     try {
@@ -819,7 +819,7 @@
                     return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
                         void 0 !== this.unsubscribe && this.unsubscribe(), this.timeoutHandle && clearTimeout(this.timeoutHandle)
                     }, t.prototype.render = function() {
-                        return o.createElement(U, {
+                        return o.createElement(x, {
                             imagePreviewURL: this.state.imagePreviewURL,
                             statusMessage: this.state.statusMessage,
                             submitForm: this.onSubmit,
@@ -832,30 +832,30 @@
                     return {
                         authToken: Object(D.a)(e)
                     }
-                })(L),
-                N = (n("Owpq"), {
+                })(B),
+                F = (n("Owpq"), {
                     QuarterlyInsightsButton: "QUARTERLY_INSIGHTS_BUTTON",
                     LatestReportButton: "LATEST_REPORT_BUTTON",
                     BoxArtButton: "BOX_ART_BUTTON"
                 }),
-                F = function(e) {
+                N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             imageLoadError: !1
                         }, t.renderDownloadCSVButton = function() {
-                            return t.props.report ? o.createElement(_.Wa, {
+                            return t.props.report ? o.createElement(_.Xa, {
                                 padding: {
                                     left: 1,
                                     right: 1,
                                     bottom: 1
                                 }
                             }, o.createElement(_.z, {
-                                "data-test-selector": N.LatestReportButton,
+                                "data-test-selector": F.LatestReportButton,
                                 onClick: Object(b.c)(b.a.GameCSVExport, t.props.game.id.toString()),
                                 linkTo: t.props.report,
                                 fullWidth: !0
-                            }, Object(f.d)("Export Daily CSV", "DevGameCard"))) : null
+                            }, Object(h.d)("Export Daily CSV", "DevGameCard"))) : null
                         }, t.onImageLoadError = function(e) {
                             e.preventDefault(), t.setState({
                                 imageLoadError: !0
@@ -867,10 +867,10 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        var e = Object(f.d)("{gameName} Box Art", {
+                        var e = Object(h.d)("{gameName} Box Art", {
                             gameName: this.props.game.name
                         }, "DevGameCard");
-                        return o.createElement(_.Wa, {
+                        return o.createElement(_.Xa, {
                             padding: {
                                 top: 1,
                                 bottom: 1
@@ -881,55 +881,55 @@
                             alt: e,
                             aspect: _.p.Aspect3x4,
                             onError: this.onImageLoadError
-                        }), o.createElement(_.H, null, o.createElement(_.Wa, {
+                        }), o.createElement(_.H, null, o.createElement(_.Xa, {
                             padding: {
                                 top: 1
                             },
-                            textAlign: _.Jb.Center
+                            textAlign: _.Kb.Center
                         }, o.createElement(_.W, {
-                            type: _.Nb.H3,
-                            fontSize: _.Ba.Size4
-                        }, this.props.game.name))), o.createElement(_.xb, {
+                            type: _.Ob.H3,
+                            fontSize: _.Ca.Size4
+                        }, this.props.game.name))), o.createElement(_.yb, {
                             background: _.r.Overlay,
                             className: "dev-game-card__boxart-edit",
                             margin: 1,
-                            position: _.eb.Absolute,
+                            position: _.fb.Absolute,
                             attachTop: !0,
                             attachRight: !0
                         }, o.createElement(_.A, {
-                            "data-test-selector": N.BoxArtButton,
+                            "data-test-selector": F.BoxArtButton,
                             overlay: !0,
-                            icon: _.ob.Edit,
+                            icon: _.pb.Edit,
                             onClick: this.onEditBoxArtClick
-                        }))), o.createElement(_.Wa, {
+                        }))), o.createElement(_.Xa, {
                             padding: {
                                 top: 1
                             },
-                            justifyContent: _.Va.Center
-                        }, this.renderDownloadCSVButton(), o.createElement(_.Wa, {
+                            justifyContent: _.Wa.Center
+                        }, this.renderDownloadCSVButton(), o.createElement(_.Xa, {
                             padding: {
                                 left: 1,
                                 right: 1,
                                 bottom: 1
                             }
                         }, o.createElement(_.z, {
-                            "data-test-selector": N.QuarterlyInsightsButton,
+                            "data-test-selector": F.QuarterlyInsightsButton,
                             onClick: Object(b.c)(b.a.ViewQuarterlyInsights, this.props.game.id.toString()),
                             linkTo: "/insights/games/" + this.props.game.id,
                             fullWidth: !0
-                        }, Object(f.d)("View Quarterly Insights", "DevGameCard")))))
+                        }, Object(h.d)("View Quarterly Insights", "DevGameCard")))))
                     }, t.prototype.imageSrc = function() {
                         return this.state.imageLoadError ? "https://static-cdn.jtvnw.net/ttv-boxart/404_boxart.jpg" : "https://twitch-gds-boxart-aws.s3-us-west-2.amazonaws.com/" + encodeURI(this.props.game.name) + ".jpg"
                     }, t
                 }(o.Component),
-                W = Object(s.compose)(Object(m.b)("DevGameCard"))(F);
-            (B || (B = {})).AddGame = "ADD_GAME";
-            var V = function(e) {
+                V = Object(s.compose)(Object(m.b)("DevGameCard"))(N);
+            (L || (L = {})).AddGame = "ADD_GAME";
+            var W = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderGameCards = function() {
                             return t.props.games.map(function(e) {
-                                return o.createElement(W, {
+                                return o.createElement(V, {
                                     key: e.id,
                                     game: e,
                                     report: t.props.reportsByGame[e.id],
@@ -945,22 +945,22 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(_.Wa, {
+                        return o.createElement(_.Xa, {
                             className: "dev-games"
-                        }, o.createElement(_.mb, {
+                        }, o.createElement(_.nb, {
                             centered: !0
-                        }, o.createElement(_.Oa, {
+                        }, o.createElement(_.Pa, {
                             margin: {
                                 bottom: 2
                             },
                             display: _.X.Flex,
-                            justifyContent: _.Va.Between
-                        }, o.createElement("header", null, o.createElement(_.Wa, {
+                            justifyContent: _.Wa.Between
+                        }, o.createElement("header", null, o.createElement(_.Xa, {
                             display: _.X.Flex
-                        }, o.createElement(_.Wa, null, o.createElement(_.W, {
-                            type: _.Nb.P,
-                            fontSize: _.Ba.Size5
-                        }, Object(f.d)("<x:bold>Developer Analytics:</x:bold> CSV data includes select viewer and broadcast data by day for each game across Twitch. The <x:link>Twitch API</x:link> also provides you access to this data.", {
+                        }, o.createElement(_.Xa, null, o.createElement(_.W, {
+                            type: _.Ob.P,
+                            fontSize: _.Ca.Size5
+                        }, Object(h.d)("<x:bold>Developer Analytics:</x:bold> CSV data includes select viewer and broadcast data by day for each game across Twitch. The <x:link>Twitch API</x:link> also provides you access to this data.", {
                             "x:bold": function(e) {
                                 return o.createElement("strong", {
                                     key: "devSiteDeveloperAnalytics"
@@ -974,9 +974,9 @@
                                 }, e)
                             }
                         }, "DevApps")), o.createElement(_.W, {
-                            type: _.Nb.P,
-                            fontSize: _.Ba.Size5
-                        }, Object(f.d)("If the Export CSV Data button does not appear, the game does not meet the minutes-watched threshold for report generation. <x:link>Learn more</x:link>.", {
+                            type: _.Ob.P,
+                            fontSize: _.Ca.Size5
+                        }, Object(h.d)("If the Export CSV Data button does not appear, the game does not meet the minutes-watched threshold for report generation. <x:link>Learn more</x:link>.", {
                             "x:link": function(e) {
                                 return o.createElement("a", {
                                     key: "devSiteLearnMore",
@@ -984,25 +984,25 @@
                                     target: "_blank"
                                 }, e)
                             }
-                        }, "DevApps"))), o.createElement(_.Wa, {
+                        }, "DevApps"))), o.createElement(_.Xa, {
                             margin: {
                                 left: 1
                             }
                         }, o.createElement(_.z, {
-                            "data-test-selector": B.AddGame,
-                            icon: _.ob.Plus,
+                            "data-test-selector": L.AddGame,
+                            icon: _.pb.Plus,
                             onClick: this.onAddGameClick
-                        }, Object(f.d)("Add game", "DevApps")))))), o.createElement(_.Wa, null, o.createElement(_.Tb, {
-                            gutterSize: _.Vb.Large,
-                            childWidth: _.Ub.Medium,
+                        }, Object(h.d)("Add game", "DevApps")))))), o.createElement(_.Xa, null, o.createElement(_.Ub, {
+                            gutterSize: _.Wb.Large,
+                            childWidth: _.Vb.Medium,
                             placeholderItems: 5
                         }, this.renderGameCards()))))
                     }, t
                 }(o.Component),
                 z = Object(m.b)("DevGamesComponent", {
                     autoReportInteractive: !0
-                })(V);
-            var q = function(e) {
+                })(W);
+            var X = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1112,7 +1112,7 @@
                         })
                     }, t
                 }(o.Component),
-                H = Object(s.compose)(Object(I.a)(), Object(m.b)("DevGamesPage", {
+                q = Object(s.compose)(Object(I.a)(), Object(m.b)("DevGamesPage", {
                     autoReportInteractive: !0,
                     destination: l.a.DevSiteGames
                 }), Object(u.a)({
@@ -1125,12 +1125,12 @@
                         },
                         showAddGameModal: function(e) {
                             var t = a.__rest(e, []);
-                            return Object(d.d)(C, t)
+                            return Object(d.d)(T, t)
                         }
                     }, e)
-                }))(q);
+                }))(X);
             n.d(t, "DevGamesPage", function() {
-                return H
+                return q
             })
         },
         By5U: function(e, t) {},
@@ -1150,9 +1150,9 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(u.Ta, {
+                        return a.createElement(u.Ua, {
                             onClick: this.onClick
-                        }, a.createElement(u.Wa, {
+                        }, a.createElement(u.Xa, {
                             padding: 1
                         }, a.createElement(u.W, null, this.props.game.name)))
                     }, t
@@ -1168,7 +1168,7 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(u.Gb, {
+                        return a.createElement(u.Hb, {
                             onClick: this.onClick,
                             label: this.props.game.name
                         })
@@ -1221,7 +1221,7 @@
                             })
                         }, n.renderSelections = function() {
                             return n.state.games.map(function(e, t) {
-                                return a.createElement(u.Wa, {
+                                return a.createElement(u.Xa, {
                                     display: u.X.InlineBlock,
                                     padding: {
                                         right: .5
@@ -1267,23 +1267,23 @@
                         var e = this.renderSuggestions(),
                             t = this.renderSelections(),
                             n = !this.props.multi && this.state.games.length > 0;
-                        return a.createElement(u.Wa, null, a.createElement(i.a, {
+                        return a.createElement(u.Xa, null, a.createElement(i.a, {
                             onClickOut: this.onClickOut
-                        }, a.createElement(u.Wa, {
-                            position: u.eb.Relative,
+                        }, a.createElement(u.Xa, {
+                            position: u.fb.Relative,
                             padding: {
                                 bottom: 1
                             }
-                        }, a.createElement(u.Qa, {
+                        }, a.createElement(u.Ra, {
                             "data-test-selector": m,
                             value: this.state.searchTerm,
                             onChange: this.onGameSearch,
-                            type: u.Sa.Text,
+                            type: u.Ta.Text,
                             onFocus: this.onFocus,
                             disabled: n
                         }), a.createElement(u.u, {
                             show: this.state.showSuggestions
-                        }, e)), a.createElement(u.Wa, {
+                        }, e)), a.createElement(u.Xa, {
                             padding: {
                                 bottom: .5
                             }
@@ -1293,7 +1293,7 @@
                 b = Object(o.compose)(Object(s.b)("DevGameSearch", {
                     autoReportInteractive: !0
                 }))(g),
-                h = function(e) {
+                f = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1329,10 +1329,10 @@
                         })
                     }, t
                 }(a.Component),
-                f = n("Svt6"),
+                h = n("Svt6"),
                 v = n("+GjP"),
                 E = n("1mFg"),
-                _ = f.a + "/kraken/search/games",
+                _ = h.a + "/kraken/search/games",
                 S = 7,
                 A = function(e) {
                     function t(t) {
@@ -1384,7 +1384,7 @@
                     }, t
                 }(a.Component);
             n.d(t, "a", function() {
-                return h
+                return f
             }), n.d(t, "b", function() {
                 return A
             })
@@ -1674,7 +1674,7 @@
                             }
                             return this.props.loaded && !this.props.company ? a.createElement(i.a, {
                                 to: "/request-access"
-                            }) : a.createElement(c.Ya, null)
+                            }) : a.createElement(c.Za, null)
                         }, n.displayName = Object(s.a)(n.name, e), n
                     }(a.Component);
                     return Object(o.connect)(function(e) {

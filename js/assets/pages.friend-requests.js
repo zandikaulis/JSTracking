@@ -42,17 +42,17 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(n, e), n.prototype.render = function() {
-                        return this.props.isLoggedIn ? i.createElement(R.Wa, {
+                        return this.props.isLoggedIn ? i.createElement(R.Xa, {
                             padding: {
                                 x: 3,
                                 y: 2
                             }
                         }, i.createElement(h.a, {
                             activeTab: h.b.Requests
-                        }), this.renderContent(), i.createElement(R.Wa, {
+                        }), this.renderContent(), i.createElement(R.Xa, {
                             display: R.X.Flex,
-                            justifyContent: R.Va.Center
-                        }, this.props.loading && i.createElement(R.Ya, null))) : (this.props.login(), i.createElement(F.a, {
+                            justifyContent: R.Wa.Center
+                        }, this.props.loading && i.createElement(R.Za, null))) : (this.props.login(), i.createElement(F.a, {
                             message: Object(o.d)("You must be logged in to view this page", "FriendRequestsPage")
                         }))
                     }, n.prototype.renderContent = function() {
@@ -62,18 +62,18 @@
                         });
                         if (0 === this.props.friendRequestsUserData.filter(function(e) {
                                 return e && e.node && e.node.id
-                            }).length) return i.createElement(R.Wa, {
-                            textAlign: R.Jb.Center,
+                            }).length) return i.createElement(R.Xa, {
+                            textAlign: R.Kb.Center,
                             padding: {
                                 y: 5
                             }
                         }, i.createElement(R.W, {
                             color: R.O.Alt2,
-                            fontSize: R.Ba.Size4,
+                            fontSize: R.Ca.Size4,
                             italic: !0
                         }, Object(o.d)("You have no friend requests!", "FriendRequestsPage")));
                         var e = this.props.friendRequestsUserData.map(function(e) {
-                            return e && e.node && e.node.id ? i.createElement(R.Wa, {
+                            return e && e.node && e.node.id ? i.createElement(R.Xa, {
                                 key: e.node.id,
                                 margin: {
                                     bottom: 2
@@ -86,10 +86,10 @@
                                 }
                             })) : null
                         });
-                        return i.createElement(R.Tb, {
+                        return i.createElement(R.Ub, {
                             center: !0,
-                            childWidth: R.Ub.Large,
-                            gutterSize: R.Vb.Small,
+                            childWidth: R.Vb.Large,
+                            gutterSize: R.Wb.Small,
                             placeholderItems: 10
                         }, e, i.createElement(b.a, {
                             enabled: this.props.canLoadMore,
@@ -139,7 +139,7 @@
                         }, n
                     }
                     return r.__extends(n, e), n.prototype.componentDidMount = function() {
-                        o.p.setPageTitle(Object(o.d)("Friend Requests", "FriendsPage")), N(this.props) && this.props.latencyTracking.reportInteractive()
+                        o.p.setPageTitle(Object(o.d)("Friend Requests", "FriendsPage")), w(this.props) && this.props.latencyTracking.reportInteractive()
                     }, n.prototype.componentWillReceiveProps = function(e) {
                         this.props.data && 1 === this.props.data.networkStatus && e.data && 1 !== e.data.networkStatus && (this.props.latencyTracking.reportInteractive(), e.data.currentUser && e.data.currentUser.incomingFriendRequests && this.props.clearUnreadFriendRequests())
                     }, n.prototype.render = function() {
@@ -158,10 +158,10 @@
                     }, n
                 }(i.Component);
 
-            function N(e) {
+            function w(e) {
                 return !e.isLoggedIn
             }
-            var w = Object(s.compose)(Object(a.connect)(function(e) {
+            var N = Object(s.compose)(Object(a.connect)(function(e) {
                 return {
                     isLoggedIn: Object(p.f)(e)
                 }
@@ -172,7 +172,7 @@
                     }
                 }, e)
             }), Object(d.a)(y, {
-                skip: N,
+                skip: w,
                 options: function() {
                     return {
                         notifyOnNetworkStatusChange: !0,
@@ -189,7 +189,7 @@
                 location: k.PageviewLocation.FriendRequests
             }))(S);
             t.d(n, "FriendRequestsPage", function() {
-                return w
+                return N
             })
         },
         ff13: function(e, n, t) {
@@ -201,20 +201,20 @@
                 e[e.Friends = 0] = "Friends", e[e.Requests = 1] = "Requests"
             }(r || (r = {}));
             var o = function(e) {
-                return i.createElement(s.Wa, {
+                return i.createElement(s.Xa, {
                     margin: {
                         bottom: 2
                     }
                 }, i.createElement(s.W, {
-                    type: s.Nb.H2
-                }, Object(a.d)("Friends", "FriendsHeader")), i.createElement(s.Wa, {
+                    type: s.Ob.H2
+                }, Object(a.d)("Friends", "FriendsHeader")), i.createElement(s.Xa, {
                     margin: {
                         top: 1
                     }
-                }, i.createElement(s.zb, null, i.createElement(s.yb, {
+                }, i.createElement(s.Ab, null, i.createElement(s.zb, {
                     active: e.activeTab === r.Friends,
                     linkTo: "/friends"
-                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(s.yb, {
+                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(s.zb, {
                     active: e.activeTab === r.Requests,
                     linkTo: "/friends/requests"
                 }, Object(a.d)("Friend Requests", "FriendsHeader")))))

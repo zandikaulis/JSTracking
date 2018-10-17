@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [80], {
+    [79], {
         "/ZC1": function(e, t, r) {
             "use strict";
             r.d(t, "a", function() {
@@ -30,16 +30,16 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(o.Y, {
+                        return a.createElement(o.Z, {
                             dragOver: this.state.isDraggingOver,
                             error: this.props.error
-                        }, a.createElement(o.Oa, {
-                            position: o.eb.Absolute,
+                        }, a.createElement(o.Pa, {
+                            position: o.fb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: o.ac.Above
+                            zIndex: o.bc.Above
                         }, a.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -124,11 +124,11 @@
                     var r = [];
                     do {
                         r.push(u(e))
-                    } while (!X(e, o.TokenKind.EOF));
+                    } while (!Y(e, o.TokenKind.EOF));
                     return {
                         kind: i.DOCUMENT,
                         definitions: r,
-                        loc: H(e, t)
+                        loc: V(e, t)
                     }
                 }((0, o.createLexer)(r, t || {}))
             }, t.parseValue = function(e, t) {
@@ -155,12 +155,12 @@
                 return {
                     kind: i.NAME,
                     value: t.value,
-                    loc: H(e, t)
+                    loc: V(e, t)
                 }
             }
 
             function u(e) {
-                if (Y(e, o.TokenKind.NAME)) switch (e.token.value) {
+                if (z(e, o.TokenKind.NAME)) switch (e.token.value) {
                     case "query":
                     case "mutation":
                     case "subscription":
@@ -177,14 +177,14 @@
                     case "directive":
                         return I(e)
                 } else {
-                    if (Y(e, o.TokenKind.BRACE_L)) return l(e);
+                    if (z(e, o.TokenKind.BRACE_L)) return l(e);
                     if (A(e)) return I(e)
                 }
-                throw Q(e)
+                throw q(e)
             }
 
             function l(e) {
-                if (Y(e, o.TokenKind.NAME)) switch (e.token.value) {
+                if (z(e, o.TokenKind.NAME)) switch (e.token.value) {
                     case "query":
                     case "mutation":
                     case "subscription":
@@ -199,7 +199,7 @@
                                 typeCondition: (Z(e, "on"), w(e)),
                                 directives: C(e, !1),
                                 selectionSet: p(e),
-                                loc: H(e, t)
+                                loc: V(e, t)
                             };
                             return {
                                 kind: i.FRAGMENT_DEFINITION,
@@ -207,34 +207,34 @@
                                 typeCondition: (Z(e, "on"), w(e)),
                                 directives: C(e, !1),
                                 selectionSet: p(e),
-                                loc: H(e, t)
+                                loc: V(e, t)
                             }
                         }(e)
-                } else if (Y(e, o.TokenKind.BRACE_L)) return d(e);
-                throw Q(e)
+                } else if (z(e, o.TokenKind.BRACE_L)) return d(e);
+                throw q(e)
             }
 
             function d(e) {
                 var t = e.token;
-                if (Y(e, o.TokenKind.BRACE_L)) return {
+                if (z(e, o.TokenKind.BRACE_L)) return {
                     kind: i.OPERATION_DEFINITION,
                     operation: "query",
                     name: void 0,
                     variableDefinitions: [],
                     directives: [],
                     selectionSet: p(e),
-                    loc: H(e, t)
+                    loc: V(e, t)
                 };
                 var r = m(e),
                     n = void 0;
-                return Y(e, o.TokenKind.NAME) && (n = c(e)), {
+                return z(e, o.TokenKind.NAME) && (n = c(e)), {
                     kind: i.OPERATION_DEFINITION,
                     operation: r,
                     name: n,
                     variableDefinitions: h(e),
                     directives: C(e, !1),
                     selectionSet: p(e),
-                    loc: H(e, t)
+                    loc: V(e, t)
                 }
             }
 
@@ -248,11 +248,11 @@
                     case "subscription":
                         return "subscription"
                 }
-                throw Q(e, t)
+                throw q(e, t)
             }
 
             function h(e) {
-                return Y(e, o.TokenKind.PAREN_L) ? q(e, o.TokenKind.PAREN_L, f, o.TokenKind.PAREN_R) : []
+                return z(e, o.TokenKind.PAREN_L) ? Q(e, o.TokenKind.PAREN_L, f, o.TokenKind.PAREN_R) : []
             }
 
             function f(e) {
@@ -261,8 +261,8 @@
                     kind: i.VARIABLE_DEFINITION,
                     variable: b(e),
                     type: (J(e, o.TokenKind.COLON), N(e)),
-                    defaultValue: X(e, o.TokenKind.EQUALS) ? T(e, !0) : void 0,
-                    loc: H(e, t)
+                    defaultValue: Y(e, o.TokenKind.EQUALS) ? T(e, !0) : void 0,
+                    loc: V(e, t)
                 }
             }
 
@@ -271,7 +271,7 @@
                 return J(e, o.TokenKind.DOLLAR), {
                     kind: i.VARIABLE,
                     name: c(e),
-                    loc: H(e, t)
+                    loc: V(e, t)
                 }
             }
 
@@ -279,19 +279,19 @@
                 var t = e.token;
                 return {
                     kind: i.SELECTION_SET,
-                    selections: q(e, o.TokenKind.BRACE_L, g, o.TokenKind.BRACE_R),
-                    loc: H(e, t)
+                    selections: Q(e, o.TokenKind.BRACE_L, g, o.TokenKind.BRACE_R),
+                    loc: V(e, t)
                 }
             }
 
             function g(e) {
-                return Y(e, o.TokenKind.SPREAD) ? function(e) {
+                return z(e, o.TokenKind.SPREAD) ? function(e) {
                     var t = e.token;
-                    if (J(e, o.TokenKind.SPREAD), Y(e, o.TokenKind.NAME) && "on" !== e.token.value) return {
+                    if (J(e, o.TokenKind.SPREAD), z(e, o.TokenKind.NAME) && "on" !== e.token.value) return {
                         kind: i.FRAGMENT_SPREAD,
                         name: E(e),
                         directives: C(e, !1),
-                        loc: H(e, t)
+                        loc: V(e, t)
                     };
                     var r = void 0;
                     "on" === e.token.value && (e.advance(), r = w(e));
@@ -300,29 +300,29 @@
                         typeCondition: r,
                         directives: C(e, !1),
                         selectionSet: p(e),
-                        loc: H(e, t)
+                        loc: V(e, t)
                     }
                 }(e) : function(e) {
                     var t = e.token,
                         r = c(e),
                         n = void 0,
                         a = void 0;
-                    X(e, o.TokenKind.COLON) ? (n = r, a = c(e)) : a = r;
+                    Y(e, o.TokenKind.COLON) ? (n = r, a = c(e)) : a = r;
                     return {
                         kind: i.FIELD,
                         alias: n,
                         name: a,
                         arguments: v(e, !1),
                         directives: C(e, !1),
-                        selectionSet: Y(e, o.TokenKind.BRACE_L) ? p(e) : void 0,
-                        loc: H(e, t)
+                        selectionSet: z(e, o.TokenKind.BRACE_L) ? p(e) : void 0,
+                        loc: V(e, t)
                     }
                 }(e)
             }
 
             function v(e, t) {
                 var r = t ? O : y;
-                return Y(e, o.TokenKind.PAREN_L) ? q(e, o.TokenKind.PAREN_L, r, o.TokenKind.PAREN_R) : []
+                return z(e, o.TokenKind.PAREN_L) ? Q(e, o.TokenKind.PAREN_L, r, o.TokenKind.PAREN_R) : []
             }
 
             function y(e) {
@@ -331,7 +331,7 @@
                     kind: i.ARGUMENT,
                     name: c(e),
                     value: (J(e, o.TokenKind.COLON), T(e, !1)),
-                    loc: H(e, t)
+                    loc: V(e, t)
                 }
             }
 
@@ -341,12 +341,12 @@
                     kind: i.ARGUMENT,
                     name: c(e),
                     value: (J(e, o.TokenKind.COLON), j(e)),
-                    loc: H(e, t)
+                    loc: V(e, t)
                 }
             }
 
             function E(e) {
-                if ("on" === e.token.value) throw Q(e);
+                if ("on" === e.token.value) throw q(e);
                 return c(e)
             }
 
@@ -362,10 +362,10 @@
                                 values: function(e, t, r, n) {
                                     J(e, t);
                                     var a = [];
-                                    for (; !X(e, n);) a.push(r(e));
+                                    for (; !Y(e, n);) a.push(r(e));
                                     return a
                                 }(e, o.TokenKind.BRACKET_L, n, o.TokenKind.BRACKET_R),
-                                loc: H(e, r)
+                                loc: V(e, r)
                             }
                         }(e, t);
                     case o.TokenKind.BRACE_L:
@@ -373,24 +373,24 @@
                             var r = e.token;
                             J(e, o.TokenKind.BRACE_L);
                             var n = [];
-                            for (; !X(e, o.TokenKind.BRACE_R);) n.push(k(e, t));
+                            for (; !Y(e, o.TokenKind.BRACE_R);) n.push(k(e, t));
                             return {
                                 kind: i.OBJECT,
                                 fields: n,
-                                loc: H(e, r)
+                                loc: V(e, r)
                             }
                         }(e, t);
                     case o.TokenKind.INT:
                         return e.advance(), {
                             kind: i.INT,
                             value: r.value,
-                            loc: H(e, r)
+                            loc: V(e, r)
                         };
                     case o.TokenKind.FLOAT:
                         return e.advance(), {
                             kind: i.FLOAT,
                             value: r.value,
-                            loc: H(e, r)
+                            loc: V(e, r)
                         };
                     case o.TokenKind.STRING:
                     case o.TokenKind.BLOCK_STRING:
@@ -399,19 +399,19 @@
                         return "true" === r.value || "false" === r.value ? (e.advance(), {
                             kind: i.BOOLEAN,
                             value: "true" === r.value,
-                            loc: H(e, r)
+                            loc: V(e, r)
                         }) : "null" === r.value ? (e.advance(), {
                             kind: i.NULL,
-                            loc: H(e, r)
+                            loc: V(e, r)
                         }) : (e.advance(), {
                             kind: i.ENUM,
                             value: r.value,
-                            loc: H(e, r)
+                            loc: V(e, r)
                         });
                     case o.TokenKind.DOLLAR:
                         if (!t) return b(e)
                 }
-                throw Q(e)
+                throw q(e)
             }
 
             function D(e) {
@@ -420,7 +420,7 @@
                     kind: i.STRING,
                     value: t.value,
                     block: t.kind === o.TokenKind.BLOCK_STRING,
-                    loc: H(e, t)
+                    loc: V(e, t)
                 }
             }
 
@@ -438,12 +438,12 @@
                     kind: i.OBJECT_FIELD,
                     name: c(e),
                     value: (J(e, o.TokenKind.COLON), T(e, t)),
-                    loc: H(e, r)
+                    loc: V(e, r)
                 }
             }
 
             function C(e, t) {
-                for (var r = []; Y(e, o.TokenKind.AT);) r.push(S(e, t));
+                for (var r = []; z(e, o.TokenKind.AT);) r.push(S(e, t));
                 return r
             }
 
@@ -453,21 +453,21 @@
                     kind: i.DIRECTIVE,
                     name: c(e),
                     arguments: v(e, t),
-                    loc: H(e, r)
+                    loc: V(e, r)
                 }
             }
 
             function N(e) {
                 var t = e.token,
                     r = void 0;
-                return X(e, o.TokenKind.BRACKET_L) ? (r = N(e), J(e, o.TokenKind.BRACKET_R), r = {
+                return Y(e, o.TokenKind.BRACKET_L) ? (r = N(e), J(e, o.TokenKind.BRACKET_R), r = {
                     kind: i.LIST_TYPE,
                     type: r,
-                    loc: H(e, t)
-                }) : r = w(e), X(e, o.TokenKind.BANG) ? {
+                    loc: V(e, t)
+                }) : r = w(e), Y(e, o.TokenKind.BANG) ? {
                     kind: i.NON_NULL_TYPE,
                     type: r,
-                    loc: H(e, t)
+                    loc: V(e, t)
                 } : r
             }
 
@@ -476,7 +476,7 @@
                 return {
                     kind: i.NAMED_TYPE,
                     name: c(e),
-                    loc: H(e, t)
+                    loc: V(e, t)
                 }
             }
 
@@ -488,18 +488,18 @@
                             var t = e.token;
                             Z(e, "schema");
                             var r = C(e, !0),
-                                n = q(e, o.TokenKind.BRACE_L, R, o.TokenKind.BRACE_R);
+                                n = Q(e, o.TokenKind.BRACE_L, L, o.TokenKind.BRACE_R);
                             return {
                                 kind: i.SCHEMA_DEFINITION,
                                 directives: r,
                                 operationTypes: n,
-                                loc: H(e, t)
+                                loc: V(e, t)
                             }
                         }(e);
                     case "scalar":
                         return function(e) {
                             var t = e.token,
-                                r = L(e);
+                                r = R(e);
                             Z(e, "scalar");
                             var n = c(e),
                                 a = C(e, !0);
@@ -508,13 +508,13 @@
                                 description: r,
                                 name: n,
                                 directives: a,
-                                loc: H(e, t)
+                                loc: V(e, t)
                             }
                         }(e);
                     case "type":
                         return function(e) {
                             var t = e.token,
-                                r = L(e);
+                                r = R(e);
                             Z(e, "type");
                             var n = c(e),
                                 a = M(e),
@@ -527,13 +527,13 @@
                                 interfaces: a,
                                 directives: o,
                                 fields: s,
-                                loc: H(e, t)
+                                loc: V(e, t)
                             }
                         }(e);
                     case "interface":
                         return function(e) {
                             var t = e.token,
-                                r = L(e);
+                                r = R(e);
                             Z(e, "interface");
                             var n = c(e),
                                 a = C(e, !0),
@@ -544,13 +544,13 @@
                                 name: n,
                                 directives: a,
                                 fields: o,
-                                loc: H(e, t)
+                                loc: V(e, t)
                             }
                         }(e);
                     case "union":
                         return function(e) {
                             var t = e.token,
-                                r = L(e);
+                                r = R(e);
                             Z(e, "union");
                             var n = c(e),
                                 a = C(e, !0),
@@ -561,41 +561,41 @@
                                 name: n,
                                 directives: a,
                                 types: o,
-                                loc: H(e, t)
+                                loc: V(e, t)
                             }
                         }(e);
                     case "enum":
                         return function(e) {
                             var t = e.token,
-                                r = L(e);
+                                r = R(e);
                             Z(e, "enum");
                             var n = c(e),
                                 a = C(e, !0),
-                                o = W(e);
+                                o = G(e);
                             return {
                                 kind: i.ENUM_TYPE_DEFINITION,
                                 description: r,
                                 name: n,
                                 directives: a,
                                 values: o,
-                                loc: H(e, t)
+                                loc: V(e, t)
                             }
                         }(e);
                     case "input":
                         return function(e) {
                             var t = e.token,
-                                r = L(e);
+                                r = R(e);
                             Z(e, "input");
                             var n = c(e),
                                 a = C(e, !0),
-                                o = K(e);
+                                o = X(e);
                             return {
                                 kind: i.INPUT_OBJECT_TYPE_DEFINITION,
                                 description: r,
                                 name: n,
                                 directives: a,
                                 fields: o,
-                                loc: H(e, t)
+                                loc: V(e, t)
                             }
                         }(e);
                     case "extend":
@@ -608,12 +608,12 @@
                                         Z(e, "extend"), Z(e, "scalar");
                                         var r = c(e),
                                             n = C(e, !0);
-                                        if (0 === n.length) throw Q(e);
+                                        if (0 === n.length) throw q(e);
                                         return {
                                             kind: i.SCALAR_TYPE_EXTENSION,
                                             name: r,
                                             directives: n,
-                                            loc: H(e, t)
+                                            loc: V(e, t)
                                         }
                                     }(e);
                                 case "type":
@@ -624,14 +624,14 @@
                                             n = M(e),
                                             a = C(e, !0),
                                             o = P(e);
-                                        if (0 === n.length && 0 === a.length && 0 === o.length) throw Q(e);
+                                        if (0 === n.length && 0 === a.length && 0 === o.length) throw q(e);
                                         return {
                                             kind: i.OBJECT_TYPE_EXTENSION,
                                             name: r,
                                             interfaces: n,
                                             directives: a,
                                             fields: o,
-                                            loc: H(e, t)
+                                            loc: V(e, t)
                                         }
                                     }(e);
                                 case "interface":
@@ -641,13 +641,13 @@
                                         var r = c(e),
                                             n = C(e, !0),
                                             a = P(e);
-                                        if (0 === n.length && 0 === a.length) throw Q(e);
+                                        if (0 === n.length && 0 === a.length) throw q(e);
                                         return {
                                             kind: i.INTERFACE_TYPE_EXTENSION,
                                             name: r,
                                             directives: n,
                                             fields: a,
-                                            loc: H(e, t)
+                                            loc: V(e, t)
                                         }
                                     }(e);
                                 case "union":
@@ -657,13 +657,13 @@
                                         var r = c(e),
                                             n = C(e, !0),
                                             a = U(e);
-                                        if (0 === n.length && 0 === a.length) throw Q(e);
+                                        if (0 === n.length && 0 === a.length) throw q(e);
                                         return {
                                             kind: i.UNION_TYPE_EXTENSION,
                                             name: r,
                                             directives: n,
                                             types: a,
-                                            loc: H(e, t)
+                                            loc: V(e, t)
                                         }
                                     }(e);
                                 case "enum":
@@ -672,14 +672,14 @@
                                         Z(e, "extend"), Z(e, "enum");
                                         var r = c(e),
                                             n = C(e, !0),
-                                            a = W(e);
-                                        if (0 === n.length && 0 === a.length) throw Q(e);
+                                            a = G(e);
+                                        if (0 === n.length && 0 === a.length) throw q(e);
                                         return {
                                             kind: i.ENUM_TYPE_EXTENSION,
                                             name: r,
                                             directives: n,
                                             values: a,
-                                            loc: H(e, t)
+                                            loc: V(e, t)
                                         }
                                     }(e);
                                 case "input":
@@ -688,33 +688,33 @@
                                         Z(e, "extend"), Z(e, "input");
                                         var r = c(e),
                                             n = C(e, !0),
-                                            a = K(e);
-                                        if (0 === n.length && 0 === a.length) throw Q(e);
+                                            a = X(e);
+                                        if (0 === n.length && 0 === a.length) throw q(e);
                                         return {
                                             kind: i.INPUT_OBJECT_TYPE_EXTENSION,
                                             name: r,
                                             directives: n,
                                             fields: a,
-                                            loc: H(e, t)
+                                            loc: V(e, t)
                                         }
                                     }(e)
                             }
-                            throw Q(e, t)
+                            throw q(e, t)
                         }(e);
                     case "directive":
                         return function(e) {
                             var t = e.token,
-                                r = L(e);
+                                r = R(e);
                             Z(e, "directive"), J(e, o.TokenKind.AT);
                             var n = c(e),
-                                a = x(e);
+                                a = B(e);
                             Z(e, "on");
                             var s = function(e) {
-                                X(e, o.TokenKind.PIPE);
+                                Y(e, o.TokenKind.PIPE);
                                 var t = [];
                                 do {
-                                    t.push(V(e))
-                                } while (X(e, o.TokenKind.PIPE));
+                                    t.push(W(e))
+                                } while (Y(e, o.TokenKind.PIPE));
                                 return t
                             }(e);
                             return {
@@ -723,22 +723,22 @@
                                 name: n,
                                 arguments: a,
                                 locations: s,
-                                loc: H(e, t)
+                                loc: V(e, t)
                             }
                         }(e)
                 }
-                throw Q(e, t)
+                throw q(e, t)
             }
 
             function A(e) {
-                return Y(e, o.TokenKind.STRING) || Y(e, o.TokenKind.BLOCK_STRING)
-            }
-
-            function L(e) {
-                if (A(e)) return D(e)
+                return z(e, o.TokenKind.STRING) || z(e, o.TokenKind.BLOCK_STRING)
             }
 
             function R(e) {
+                if (A(e)) return D(e)
+            }
+
+            function L(e) {
                 var t = e.token,
                     r = m(e);
                 J(e, o.TokenKind.COLON);
@@ -747,7 +747,7 @@
                     kind: i.OPERATION_TYPE_DEFINITION,
                     operation: r,
                     type: n,
-                    loc: H(e, t)
+                    loc: V(e, t)
                 }
             }
 
@@ -757,20 +757,20 @@
                     e.advance();
                     do {
                         t.push(w(e))
-                    } while (Y(e, o.TokenKind.NAME))
+                    } while (z(e, o.TokenKind.NAME))
                 }
                 return t
             }
 
             function P(e) {
-                return Y(e, o.TokenKind.BRACE_L) ? q(e, o.TokenKind.BRACE_L, F, o.TokenKind.BRACE_R) : []
+                return z(e, o.TokenKind.BRACE_L) ? Q(e, o.TokenKind.BRACE_L, F, o.TokenKind.BRACE_R) : []
             }
 
             function F(e) {
                 var t = e.token,
-                    r = L(e),
+                    r = R(e),
                     n = c(e),
-                    a = x(e);
+                    a = B(e);
                 J(e, o.TokenKind.COLON);
                 var s = N(e),
                     u = C(e, !0);
@@ -781,22 +781,22 @@
                     arguments: a,
                     type: s,
                     directives: u,
-                    loc: H(e, t)
+                    loc: V(e, t)
                 }
             }
 
-            function x(e) {
-                return Y(e, o.TokenKind.PAREN_L) ? q(e, o.TokenKind.PAREN_L, B, o.TokenKind.PAREN_R) : []
+            function B(e) {
+                return z(e, o.TokenKind.PAREN_L) ? Q(e, o.TokenKind.PAREN_L, x, o.TokenKind.PAREN_R) : []
             }
 
-            function B(e) {
+            function x(e) {
                 var t = e.token,
-                    r = L(e),
+                    r = R(e),
                     n = c(e);
                 J(e, o.TokenKind.COLON);
                 var a = N(e),
                     s = void 0;
-                X(e, o.TokenKind.EQUALS) && (s = j(e));
+                Y(e, o.TokenKind.EQUALS) && (s = j(e));
                 var u = C(e, !0);
                 return {
                     kind: i.INPUT_VALUE_DEFINITION,
@@ -805,28 +805,28 @@
                     type: a,
                     defaultValue: s,
                     directives: u,
-                    loc: H(e, t)
+                    loc: V(e, t)
                 }
             }
 
             function U(e) {
                 var t = [];
-                if (X(e, o.TokenKind.EQUALS)) {
-                    X(e, o.TokenKind.PIPE);
+                if (Y(e, o.TokenKind.EQUALS)) {
+                    Y(e, o.TokenKind.PIPE);
                     do {
                         t.push(w(e))
-                    } while (X(e, o.TokenKind.PIPE))
+                    } while (Y(e, o.TokenKind.PIPE))
                 }
                 return t
             }
 
-            function W(e) {
-                return Y(e, o.TokenKind.BRACE_L) ? q(e, o.TokenKind.BRACE_L, G, o.TokenKind.BRACE_R) : []
+            function G(e) {
+                return z(e, o.TokenKind.BRACE_L) ? Q(e, o.TokenKind.BRACE_L, K, o.TokenKind.BRACE_R) : []
             }
 
-            function G(e) {
+            function K(e) {
                 var t = e.token,
-                    r = L(e),
+                    r = R(e),
                     n = c(e),
                     a = C(e, !0);
                 return {
@@ -834,34 +834,34 @@
                     description: r,
                     name: n,
                     directives: a,
-                    loc: H(e, t)
+                    loc: V(e, t)
                 }
             }
 
-            function K(e) {
-                return Y(e, o.TokenKind.BRACE_L) ? q(e, o.TokenKind.BRACE_L, B, o.TokenKind.BRACE_R) : []
+            function X(e) {
+                return z(e, o.TokenKind.BRACE_L) ? Q(e, o.TokenKind.BRACE_L, x, o.TokenKind.BRACE_R) : []
             }
 
-            function V(e) {
+            function W(e) {
                 var t = e.token,
                     r = c(e);
                 if (s.DirectiveLocation.hasOwnProperty(r.value)) return r;
-                throw Q(e, t)
+                throw q(e, t)
             }
 
-            function H(e, t) {
-                if (!e.options.noLocation) return new z(t, e.lastToken, e.source)
+            function V(e, t) {
+                if (!e.options.noLocation) return new H(t, e.lastToken, e.source)
             }
 
-            function z(e, t, r) {
+            function H(e, t, r) {
                 this.start = e.start, this.end = t.end, this.startToken = e, this.endToken = t, this.source = r
             }
 
-            function Y(e, t) {
+            function z(e, t) {
                 return e.token.kind === t
             }
 
-            function X(e, t) {
+            function Y(e, t) {
                 var r = e.token.kind === t;
                 return r && e.advance(), r
             }
@@ -878,17 +878,17 @@
                 throw (0, a.syntaxError)(e.source, r.start, 'Expected "' + t + '", found ' + (0, o.getTokenDesc)(r))
             }
 
-            function Q(e, t) {
+            function q(e, t) {
                 var r = t || e.token;
                 return (0, a.syntaxError)(e.source, r.start, "Unexpected " + (0, o.getTokenDesc)(r))
             }
 
-            function q(e, t, r, n) {
+            function Q(e, t, r, n) {
                 J(e, t);
-                for (var a = [r(e)]; !X(e, n);) a.push(r(e));
+                for (var a = [r(e)]; !Y(e, n);) a.push(r(e));
                 return a
             }
-            z.prototype.toJSON = z.prototype.inspect = function() {
+            H.prototype.toJSON = H.prototype.inspect = function() {
                 return {
                     start: this.start,
                     end: this.end
@@ -1514,7 +1514,7 @@
             var n = r("q1tI"),
                 a = r("Ue10"),
                 o = function(e) {
-                    return n.createElement(a.Wa, {
+                    return n.createElement(a.Xa, {
                         margin: {
                             top: 2,
                             bottom: 1,
@@ -1523,9 +1523,9 @@
                     }, n.createElement(a.W, {
                         bold: !0,
                         color: a.O.Alt,
-                        fontSize: a.Ba.Size7,
-                        transform: a.Mb.Uppercase,
-                        type: a.Nb.H4
+                        fontSize: a.Ca.Size7,
+                        transform: a.Nb.Uppercase,
+                        type: a.Ob.H4
                     }, e.children))
                 };
             r.d(t, "a", function() {
@@ -1631,9 +1631,9 @@
                                     disabled: t.state.buttonDisabled,
                                     onClick: t.handleSubmit
                                 }, t.props.buttonText),
-                                r = h.createElement(j.Qb, {
+                                r = h.createElement(j.Rb, {
                                     label: t.props.errorString,
-                                    direction: j.Sb.Right,
+                                    direction: j.Tb.Right,
                                     show: !0
                                 }, e);
                             return t.props.errorString.length && !t.state.changedSinceSubmit ? r : e
@@ -1663,23 +1663,23 @@
                         }, t
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return h.createElement(j.Wa, {
+                        return h.createElement(j.Xa, {
                             alignSelf: j.g.Start,
                             display: j.X.Flex,
-                            flexDirection: j.Z.Column
-                        }, h.createElement(j.Wa, {
+                            flexDirection: j.Aa.Column
+                        }, h.createElement(j.Xa, {
                             display: j.X.Flex,
-                            flexDirection: j.Z.Row,
+                            flexDirection: j.Aa.Row,
                             margin: {
                                 bottom: 1
                             }
-                        }, h.createElement(j.Qa, {
-                            type: j.Sa.Text,
+                        }, h.createElement(j.Ra, {
+                            type: j.Ta.Text,
                             placeholder: this.props.placeholder,
                             value: this.state.inputValue,
                             onChange: this.handleChangeInput,
                             maxLength: 25
-                        }), h.createElement(j.Wa, null, this.renderButton())), h.createElement(j.Wa, null, this.renderDescriptor()))
+                        }), h.createElement(j.Xa, null, this.renderButton())), h.createElement(j.Xa, null, this.renderDescriptor()))
                     }, t
                 }(h.Component),
                 k = r("8/mp");
@@ -1699,49 +1699,49 @@
                             var e = t.props.buttonConfiguration === a.AllButtons,
                                 r = e || t.props.buttonConfiguration === a.MoveUpAndRemoveOnly,
                                 o = e || t.props.buttonConfiguration === a.MoveDownAndRemoveOnly;
-                            return h.createElement(j.Wa, null, r && h.createElement(j.Qb, {
+                            return h.createElement(j.Xa, null, r && h.createElement(j.Rb, {
                                 label: Object(g.d)("Move Up", "TeamsDashboard"),
-                                direction: j.Sb.Left
+                                direction: j.Tb.Left
                             }, h.createElement(j.z, {
                                 type: j.F.Text,
                                 blurAfterClick: !0,
-                                icon: j.ob.ArrowUp,
+                                icon: j.pb.ArrowUp,
                                 onClick: t.handleOnMoveClick(n.Up),
                                 disabled: t.props.isDisabled
-                            })), o && h.createElement(j.Qb, {
+                            })), o && h.createElement(j.Rb, {
                                 label: Object(g.d)("Move Down", "TeamsDashboard"),
-                                direction: j.Sb.Left
+                                direction: j.Tb.Left
                             }, h.createElement(j.z, {
                                 type: j.F.Text,
                                 blurAfterClick: !0,
-                                icon: j.ob.ArrowDown,
+                                icon: j.pb.ArrowDown,
                                 onClick: t.handleOnMoveClick(n.Down),
                                 disabled: t.props.isDisabled
-                            })), r && h.createElement(j.Qb, {
+                            })), r && h.createElement(j.Rb, {
                                 label: Object(g.d)("Move To Top", "TeamsDashboard"),
-                                direction: j.Sb.Left
+                                direction: j.Tb.Left
                             }, h.createElement(j.z, {
                                 type: j.F.Text,
                                 blurAfterClick: !0,
-                                icon: j.ob.ToTop,
+                                icon: j.pb.ToTop,
                                 onClick: t.handleOnMoveClick(n.ToTop),
                                 disabled: t.props.isDisabled
-                            })), o && h.createElement(j.Qb, {
+                            })), o && h.createElement(j.Rb, {
                                 label: Object(g.d)("Move To Bottom", "TeamsDashboard"),
-                                direction: j.Sb.Left
+                                direction: j.Tb.Left
                             }, h.createElement(j.z, {
                                 type: j.F.Text,
                                 blurAfterClick: !0,
-                                icon: j.ob.ToBottom,
+                                icon: j.pb.ToBottom,
                                 onClick: t.handleOnMoveClick(n.ToBottom),
                                 disabled: t.props.isDisabled
-                            })), h.createElement(j.Qb, {
+                            })), h.createElement(j.Rb, {
                                 label: Object(g.d)("Remove", "TeamsDashboard"),
-                                direction: j.Sb.Left
+                                direction: j.Tb.Left
                             }, h.createElement(j.z, {
                                 type: j.F.Text,
                                 blurAfterClick: !0,
-                                icon: j.ob.Trash,
+                                icon: j.pb.Trash,
                                 onClick: t.handleDeleteClick,
                                 disabled: t.props.isDisabled
                             })))
@@ -1769,28 +1769,28 @@
                             "data-test-selector": this.props.listItemsSelector,
                             onMouseEnter: this.handleMouseEnter,
                             onMouseLeave: this.handleMouseLeave
-                        }, h.createElement(j.xb, {
+                        }, h.createElement(j.yb, {
                             background: this.state.isHovered ? j.r.Base : void 0,
                             display: j.X.Flex,
-                            flexDirection: j.Z.Row,
+                            flexDirection: j.Aa.Row,
                             fullWidth: !0,
-                            justifyContent: j.Va.Between,
+                            justifyContent: j.Wa.Between,
                             padding: 1
-                        }, h.createElement(j.Wa, {
+                        }, h.createElement(j.Xa, {
                             display: j.X.Flex,
-                            flexDirection: j.Z.Row,
+                            flexDirection: j.Aa.Row,
                             alignItems: j.f.Center
                         }, h.createElement(j.q, {
                             src: this.props.member.avatarSrc,
                             alt: e,
                             size: 30
-                        }), h.createElement(j.Wa, {
+                        }), h.createElement(j.Xa, {
                             margin: {
                                 left: 1
                             }
-                        }, h.createElement(j.W, null, this.props.member.displayName))), h.createElement(j.Wa, {
+                        }, h.createElement(j.W, null, this.props.member.displayName))), h.createElement(j.Xa, {
                             display: j.X.Flex,
-                            flexDirection: j.Z.Row,
+                            flexDirection: j.Aa.Row,
                             alignItems: j.f.Center
                         }, this.state.isHovered && this.renderButtons())))
                     }, t
@@ -1818,20 +1818,20 @@
                         }
                         e.onMoveClick(t, a)
                     };
-                    return h.createElement(j.Wa, {
+                    return h.createElement(j.Xa, {
                         fullWidth: !0,
                         margin: {
                             top: 2,
                             bottom: 2
                         }
                     }, e.header && h.createElement(j.W, {
-                        type: j.Nb.H3
+                        type: j.Ob.H3
                     }, e.header), e.members.length ? function(r) {
                         var n = e.onMoveClick ? t : void 0;
-                        return h.createElement(k.b, null, h.createElement(j.Wa, {
+                        return h.createElement(k.b, null, h.createElement(j.Xa, {
                             className: "members-list",
                             display: j.X.Flex,
-                            flexDirection: j.Z.Column
+                            flexDirection: j.Aa.Column
                         }, r.map(function(t, o) {
                             return h.createElement(N, {
                                 key: t.id,
@@ -1851,12 +1851,12 @@
                     }(e.members) : h.createElement(j.W, null, e.emptyStateText))
                 },
                 I = function(e) {
-                    return h.createElement(k.b, null, h.createElement(j.Wa, {
+                    return h.createElement(k.b, null, h.createElement(j.Xa, {
                         display: j.X.Flex,
-                        flexDirection: j.Z.Column,
+                        flexDirection: j.Aa.Column,
                         alignItems: j.f.Start,
                         padding: 2
-                    }, h.createElement(j.Wa, {
+                    }, h.createElement(j.Xa, {
                         display: j.X.Flex,
                         padding: {
                             bottom: 2
@@ -1864,7 +1864,7 @@
                         fullWidth: !0
                     }, h.createElement(j.W, {
                         "data-test-selector": e.titleSelector,
-                        type: j.Nb.H1
+                        type: j.Ob.H1
                     }, e.title)), e.children))
                 };
             ! function(e) {
@@ -1873,12 +1873,12 @@
             function(e) {
                 e.ChannelNotFoundByLogin = "CHANNEL_NOT_FOUND_BY_LOGIN", e.ChannelPendingInvitation = "CHANNEL_PENDING_INVITATION", e.ChannelAlreadyMember = "CHANNEL_ALREADY_MEMBER", e.ChannelAlreadyFeatured = "CHANNEL_ALREADY_FEATURED"
             }(S || (S = {}));
-            var A, L = function(e) {
+            var A, R = function(e) {
                     for (var t in S)
                         if (e.includes(S[t])) return S[t];
                     return ""
                 },
-                R = function(e) {
+                L = function(e) {
                     switch (e) {
                         case S.ChannelNotFoundByLogin:
                             return Object(g.d)("Channel not found", "TeamsDashboard");
@@ -1903,7 +1903,7 @@
                         avatarSrc: e.logo
                     }
                 },
-                x = function(e, t) {
+                B = function(e, t) {
                     return e.map(function(e, r) {
                         return {
                             id: e.id,
@@ -1913,7 +1913,7 @@
                         }
                     })
                 },
-                B = function(e) {
+                x = function(e) {
                     return e.filter(function(e) {
                         return e.checked
                     }).map(function(e) {
@@ -1923,7 +1923,7 @@
                 U = function() {
                     return Object(g.d)("Twitch username", "TeamsDashboard")
                 },
-                W = function(e) {
+                G = function(e) {
                     switch (e) {
                         case C.Revenue:
                             return Object(g.d)("Revenue", "TeamsDashboard");
@@ -1939,46 +1939,46 @@
                             return ""
                     }
                 },
-                G = r("b6Yk"),
-                K = function(e, t) {
+                K = r("b6Yk"),
+                X = function(e, t) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         var r, n, a, o;
                         return l.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return r = "/v5/teams/" + e + "/dashboard/featured_channels", [4, G.a.post(r, {
+                                    return r = "/v5/teams/" + e + "/dashboard/featured_channels", [4, K.a.post(r, {
                                         body: {
                                             channel_login: t
                                         }
                                     })];
                                 case 1:
-                                    return (n = i.sent()).body && 200 === n.status ? [2, F(n.body.featured_channel.channel)] : (a = n.error.message) && "" !== (o = L(a)) ? [2, Promise.reject(o)] : [2, Promise.reject(JSON.stringify(n.error))]
+                                    return (n = i.sent()).body && 200 === n.status ? [2, F(n.body.featured_channel.channel)] : (a = n.error.message) && "" !== (o = R(a)) ? [2, Promise.reject(o)] : [2, Promise.reject(JSON.stringify(n.error))]
                             }
                         })
                     })
                 },
+                W = function(e, t) {
+                    return z("/v5/teams/" + e + "/dashboard/channels/" + t + "/membership")
+                },
                 V = function(e, t) {
-                    return Y("/v5/teams/" + e + "/dashboard/channels/" + t + "/membership")
+                    return z("/v5/teams/" + e + "/dashboard/featured_channels/" + t)
                 },
                 H = function(e, t) {
-                    return Y("/v5/teams/" + e + "/dashboard/featured_channels/" + t)
+                    return z("/v5/teams/" + e + "/dashboard/channels/" + t + "/invitation")
                 },
-                z = function(e, t) {
-                    return Y("/v5/teams/" + e + "/dashboard/channels/" + t + "/invitation")
-                },
-                Y = function(e) {
+                z = function(e) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         return l.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, G.a.delete(e)];
+                                    return [4, K.a.delete(e)];
                                 case 1:
                                     return [2, 204 === t.sent().status]
                             }
                         })
                     })
                 },
-                X = function(e, t, r) {
+                Y = function(e, t, r) {
                     return Z("/v5/teams/" + e + "/dashboard/channels/" + t + "/membership", r)
                 },
                 J = function(e, t, r) {
@@ -1989,7 +1989,7 @@
                         return l.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, G.a.put(e, {
+                                    return [4, K.a.put(e, {
                                         body: {
                                             display_position: t
                                         }
@@ -2000,7 +2000,7 @@
                         })
                     })
                 },
-                Q = function(e) {
+                q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2017,14 +2017,14 @@
                                                 tooltipError: ""
                                             }), n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 3, , 4]), [4, K(this.props.teamName, e)];
+                                            return n.trys.push([1, 3, , 4]), [4, X(this.props.teamName, e)];
                                         case 2:
                                             return t = n.sent(), this.setState({
                                                 featuredChannels: this.state.featuredChannels.concat(t)
                                             }), [3, 4];
                                         case 3:
                                             return r = n.sent(), this.setState({
-                                                tooltipError: R(r)
+                                                tooltipError: L(r)
                                             }), [3, 4];
                                         case 4:
                                             return [2]
@@ -2038,7 +2038,7 @@
                                         case 0:
                                             return this.setState({
                                                 isDisabled: !0
-                                            }), [4, H(this.props.teamName, e)];
+                                            }), [4, V(this.props.teamName, e)];
                                         case 1:
                                             return t.sent() && this.setState({
                                                 featuredChannels: this.state.featuredChannels.filter(function(t) {
@@ -2084,7 +2084,7 @@
                                                 return l.__generator(this, function(a) {
                                                     switch (a.label) {
                                                         case 0:
-                                                            return t = "/v5/teams/" + e + "/dashboard/featured_channels", [4, G.a.get(t)];
+                                                            return t = "/v5/teams/" + e + "/dashboard/featured_channels", [4, K.a.get(t)];
                                                         case 1:
                                                             return !(r = a.sent()).body || 200 !== r.status || r.error || r.requestError ? [2, []] : (n = r.body.featured_channels.map(function(e) {
                                                                 return e.channel
@@ -2100,7 +2100,7 @@
                         })
                     }, t.prototype.render = function() {
                         return h.createElement(I, {
-                            title: W(C.FeaturedChannels),
+                            title: G(C.FeaturedChannels),
                             titleSelector: "featured-channels-page-title"
                         }, h.createElement(_, {
                             descriptor: Object(g.d)("Pick channels to feature. Featured channels do not need to be a member of the team.\nIf none of the featured channels are live, your team will feature a live member based on member ordering.", "TeamsDashboard"),
@@ -2121,7 +2121,7 @@
                         destination: T.a.TeamsDashboardFeaturedChannels
                     })], t)
                 }(h.Component),
-                q = r("6XEL");
+                Q = r("6XEL");
             ! function(e) {
                 e.StatsRevealed = "stats_revealed", e.RevenueRevealed = "revenue_revealed"
             }(A || (A = {}));
@@ -2131,7 +2131,7 @@
                         return l.__generator(this, function(o) {
                             switch (o.label) {
                                 case 0:
-                                    return r = "/v5/teams/" + e + "/dashboard/members" + (t ? "?" + t + "=true" : ""), [4, Object(q.c)({
+                                    return r = "/v5/teams/" + e + "/dashboard/members" + (t ? "?" + t + "=true" : ""), [4, Object(Q.c)({
                                         path: r
                                     })];
                                 case 1:
@@ -2146,13 +2146,13 @@
                         return l.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return r = "/v5/teams/" + e + "/dashboard/invitations", [4, G.a.post(r, {
+                                    return r = "/v5/teams/" + e + "/dashboard/invitations", [4, K.a.post(r, {
                                         body: {
                                             channel_login: t
                                         }
                                     })];
                                 case 1:
-                                    return (n = i.sent()).body && 200 === n.status ? [2, F(n.body.invitation.channel)] : (a = n.error.message) && "" !== (o = L(a)) ? [2, Promise.reject(o)] : [2, Promise.reject(JSON.stringify(n.error))]
+                                    return (n = i.sent()).body && 200 === n.status ? [2, F(n.body.invitation.channel)] : (a = n.error.message) && "" !== (o = R(a)) ? [2, Promise.reject(o)] : [2, Promise.reject(JSON.stringify(n.error))]
                             }
                         })
                     })
@@ -2182,7 +2182,7 @@
                                             }), [3, 4];
                                         case 3:
                                             return n = a.sent(), this.setState({
-                                                invitationError: R(n)
+                                                invitationError: L(n)
                                             }), [3, 4];
                                         case 4:
                                             return [2]
@@ -2197,7 +2197,7 @@
                                         case 0:
                                             return this.setState({
                                                 isDisabled: !0
-                                            }), [4, X(this.props.teamName, e, r)];
+                                            }), [4, Y(this.props.teamName, e, r)];
                                         case 1:
                                             return a.sent() && (t = this.state.members.findIndex(function(t) {
                                                 return t.id === e
@@ -2216,7 +2216,7 @@
                                         case 0:
                                             return this.setState({
                                                 isDisabled: !0
-                                            }), [4, z(this.props.teamName, e)];
+                                            }), [4, H(this.props.teamName, e)];
                                         case 1:
                                             return t.sent() && this.setState({
                                                 invitations: this.state.invitations.filter(function(t) {
@@ -2234,7 +2234,7 @@
                                         case 0:
                                             return this.setState({
                                                 isDisabled: !0
-                                            }), [4, V(this.props.teamName, e)];
+                                            }), [4, W(this.props.teamName, e)];
                                         case 1:
                                             return t.sent() && this.setState({
                                                 members: this.state.members.filter(function(t) {
@@ -2259,7 +2259,7 @@
                                                 return l.__generator(this, function(a) {
                                                     switch (a.label) {
                                                         case 0:
-                                                            return t = "/v5/teams/" + e + "/dashboard/invitations", [4, Object(q.c)({
+                                                            return t = "/v5/teams/" + e + "/dashboard/invitations", [4, Object(Q.c)({
                                                                 path: t
                                                             })];
                                                         case 1:
@@ -2280,7 +2280,7 @@
                         })
                     }, t.prototype.render = function() {
                         return h.createElement(I, {
-                            title: W(C.Members),
+                            title: G(C.Members),
                             titleSelector: "members-page-title"
                         }, h.createElement(_, {
                             descriptor: Object(g.d)("Live team members will always be at the top. Order is respected for live members and offline members.\nOrder also determines which member will be featured in the video player.", "TeamsDashboard"),
@@ -2358,9 +2358,9 @@
                     return l.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return h.createElement(j.Wa, {
+                        return h.createElement(j.Xa, {
                             className: "month-select-menu"
-                        }, h.createElement(j.tb, {
+                        }, h.createElement(j.ub, {
                             disabled: this.props.isDisabled,
                             onChange: this.handleChange
                         }, this.getDropdownOptions(this.validatedCurrentDate, this.props.earliestDate)))
@@ -2487,7 +2487,7 @@
                         this.myChart.data = pe(e.datasets, e.timestampLabels), this.myChart.update()
                     }, t.prototype.render = function() {
                         var e = this;
-                        return h.createElement(j.Oa, {
+                        return h.createElement(j.Pa, {
                             flexGrow: 0,
                             flexShrink: 1,
                             fullWidth: !0
@@ -2596,33 +2596,33 @@
             var ye, Oe, Ee = function(e) {
                     var t, r;
                     return e.isLoading ? (t = h.createElement(j.W, {
-                        type: j.Nb.H5
-                    }, h.createElement(j.db, {
+                        type: j.Ob.H5
+                    }, h.createElement(j.eb, {
                         width: 90
-                    })), r = h.createElement(j.Wa, null, h.createElement(j.db, {
+                    })), r = h.createElement(j.Xa, null, h.createElement(j.eb, {
                         width: 140,
                         height: 40
                     }))) : (t = h.createElement(j.W, {
                         color: j.O.Alt2,
-                        type: j.Nb.H5,
+                        type: j.Ob.H5,
                         "data-test-selector": $.Title
-                    }, e.title), r = h.createElement(j.Wa, {
+                    }, e.title), r = h.createElement(j.Xa, {
                         alignItems: j.f.Start,
                         display: j.X.Flex,
-                        flexDirection: j.Z.Row
-                    }, h.createElement(j.Wa, {
+                        flexDirection: j.Aa.Row
+                    }, h.createElement(j.Xa, {
                         margin: {
                             top: .5
                         }
                     }, h.createElement(j.W, {
                         "data-test-selector": $.Symbol,
-                        type: j.Nb.H4
+                        type: j.Ob.H4
                     }, "$")), h.createElement(j.W, {
                         "data-test-selector": $.Dollars,
-                        type: j.Nb.H1
-                    }, Object(g.f)(Math.floor(e.cents / 100))))), h.createElement(j.Wa, {
+                        type: j.Ob.H1
+                    }, Object(g.f)(Math.floor(e.cents / 100))))), h.createElement(j.Xa, {
                         display: j.X.Flex,
-                        flexDirection: j.Z.Column,
+                        flexDirection: j.Aa.Column,
                         flexGrow: 1,
                         margin: 1
                     }, t, r)
@@ -2639,13 +2639,13 @@
                                 title: t.title + " *"
                             })
                         });
-                    return h.createElement(j.xb, {
+                    return h.createElement(j.yb, {
                         borderMarked: !0,
                         border: !0,
                         fullWidth: !0,
                         background: j.r.Base,
                         display: j.X.Flex,
-                        justifyContent: j.Va.Between,
+                        justifyContent: j.Wa.Between,
                         alignItems: j.f.Center,
                         padding: 1
                     }, h.createElement(Ee, {
@@ -2686,7 +2686,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderMenu = function() {
-                            if (t.props.isLoading) return h.createElement(j.db, {
+                            if (t.props.isLoading) return h.createElement(j.eb, {
                                 width: 180,
                                 height: 30
                             });
@@ -2710,7 +2710,7 @@
                                 noTail: !0
                             }, h.createElement(k.b, {
                                 className: "team-members-select-menu__scroller"
-                            }, h.createElement(j.Wa, null, h.createElement(j.xb, {
+                            }, h.createElement(j.Xa, null, h.createElement(j.yb, {
                                 borderBottom: !0,
                                 padding: 1
                             }, h.createElement(j.N, {
@@ -2724,7 +2724,7 @@
                                     onChange: t.props.toggleMemberChecked.bind(t, r),
                                     disabled: e >= M && !r.checked
                                 };
-                                return h.createElement(j.Wa, {
+                                return h.createElement(j.Xa, {
                                     key: r.id,
                                     margin: 1
                                 }, h.createElement(j.N, l.__assign({}, n)))
@@ -2734,7 +2734,7 @@
                         }, t
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return h.createElement(j.Wa, {
+                        return h.createElement(j.Xa, {
                             className: "team-members-select-menu"
                         }, this.renderMenu())
                     }, t = l.__decorate([Object(D.b)("TeamMembersSelectMenu", {
@@ -2758,15 +2758,15 @@
                     return Object(g.d)("Export Data", "TeamsDashboard")
                 },
                 Ie = function(e) {
-                    return Ae(e) + " " + Le(e)
+                    return Ae(e) + " " + Re(e)
                 },
                 Ae = function(e) {
-                    return e.getUTCFullYear() + "-" + Re(e.getUTCMonth() + 1) + "-" + Re(e.getUTCDate())
-                },
-                Le = function(e) {
-                    return Re(e.getUTCHours()) + ":" + Re(e.getUTCMinutes()) + ":" + Re(e.getUTCSeconds())
+                    return e.getUTCFullYear() + "-" + Le(e.getUTCMonth() + 1) + "-" + Le(e.getUTCDate())
                 },
                 Re = function(e) {
+                    return Le(e.getUTCHours()) + ":" + Le(e.getUTCMinutes()) + ":" + Le(e.getUTCSeconds())
+                },
+                Le = function(e) {
                     return Object(g.f)(e, {
                         minimumIntegerDigits: 2,
                         maximumFractionDigits: 0
@@ -2778,7 +2778,7 @@
                         return l.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return a = "/v5/teams/" + e + "/revenues?channel_ids=" + t + "&start_date=" + r + "&end_date=" + n + "&fraction=day", [4, Object(q.c)({
+                                    return a = "/v5/teams/" + e + "/revenues?channel_ids=" + t + "&start_date=" + r + "&end_date=" + n + "&fraction=day", [4, Object(Q.c)({
                                         path: a
                                     })];
                                 case 1:
@@ -2794,14 +2794,14 @@
                             if (le.includes(u))
                                 for (var l = 0, d = r[i][u]; l < d.length; l++) {
                                     var m = d[l],
-                                        h = xe(m.timestamp);
+                                        h = Be(m.timestamp);
                                     n[h] && (n[h][u] += m.cents)
                                 }
                         }
                     return n
                 },
                 Fe = function(e, t) {
-                    for (var r = {}, n = new Date(xe(e)); n < new Date(t); n.setUTCDate(n.getUTCDate() + 1)) r[n.toISOString()] = {
+                    for (var r = {}, n = new Date(Be(e)); n < new Date(t); n.setUTCDate(n.getUTCDate() + 1)) r[n.toISOString()] = {
                         gift_subscriptions: 0,
                         twitch_subscriptions: 0,
                         prime_subscriptions: 0,
@@ -2811,11 +2811,11 @@
                     };
                     return r
                 },
-                xe = function(e) {
+                Be = function(e) {
                     var t = new Date(e);
                     return new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate())).toISOString()
                 },
-                Be = function() {
+                xe = function() {
                     var e = Object(g.d)("Date", "TeamsDashboard") + "," + Ne(),
                         t = "," + Object(g.d)("Total", "TeamsDashboard") + "\n";
                     return le.reduce(function(e, t) {
@@ -2827,19 +2827,19 @@
                         n = le.reduce(function(e, r) {
                             return e + Math.round(t[r])
                         }, 0),
-                        a = "," + We(n) + "\n";
+                        a = "," + Ge(n) + "\n";
                     return le.reduce(function(e, r) {
-                        return e + "," + We(t[r])
+                        return e + "," + Ge(t[r])
                     }, r) + a
                 },
-                We = function(e) {
+                Ge = function(e) {
                     return Object(g.f)(e / 100, {
                         useGrouping: !1,
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 2
                     })
                 },
-                Ge = function(e) {
+                Ke = function(e) {
                     function t(t) {
                         var r = e.call(this, t) || this;
                         return r.toggleMemberChecked = function(e) {
@@ -2853,23 +2853,23 @@
                             })
                         }, r.toggleGroupChecked = function() {
                             var e = !r.state.groupChecked,
-                                t = x(r.state.members, e);
+                                t = B(r.state.members, e);
                             r.setState({
                                 groupChecked: e,
                                 members: t
                             })
                         }, r.renderChartLoadingSpinner = function() {
-                            return h.createElement(j.xb, {
+                            return h.createElement(j.yb, {
                                 attachTop: !0,
                                 attachLeft: !0,
                                 background: j.r.Base,
                                 fullHeight: !0,
                                 fullWidth: !0,
-                                position: j.eb.Absolute
-                            }, h.createElement(j.Ya, {
+                                position: j.fb.Absolute
+                            }, h.createElement(j.Za, {
                                 delay: 100,
                                 fillContent: !0,
-                                size: j.vb.Large
+                                size: j.wb.Large
                             }))
                         }, r.handleTimeRangeChange = function(e, t) {
                             return l.__awaiter(r, void 0, void 0, function() {
@@ -2879,7 +2879,7 @@
                                         case 0:
                                             return this.setState({
                                                 isLoadingRevenues: !0
-                                            }), [4, Me(this.props.teamName, B(this.state.members), e.toISOString(), t.toISOString())];
+                                            }), [4, Me(this.props.teamName, x(this.state.members), e.toISOString(), t.toISOString())];
                                         case 1:
                                             return r = n.sent(), this.setState({
                                                 startTime: e,
@@ -2898,7 +2898,7 @@
                                         case 0:
                                             return this.setState({
                                                 isLoadingRevenues: !0
-                                            }), [4, Me(this.props.teamName, B(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                            }), [4, Me(this.props.teamName, x(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                         case 1:
                                             return e = t.sent(), this.setState({
                                                 revenues: e,
@@ -2908,8 +2908,8 @@
                                 })
                             })
                         }, r.handleCSVClick = function() {
-                            var e = Ce(r.state.revenues, Ue, Be());
-                            Se(e, W(C.Revenue) + " - " + ne(r.state.startTime) + ".csv")
+                            var e = Ce(r.state.revenues, Ue, xe());
+                            Se(e, G(C.Revenue) + " - " + ne(r.state.startTime) + ".csv")
                         }, r.state = {
                             isLoadingMembers: !0,
                             members: [],
@@ -2930,14 +2930,14 @@
                                     case 1:
                                         return e = r.sent(), this.setState({
                                             isLoadingMembers: !1,
-                                            members: x(e, !0)
+                                            members: B(e, !0)
                                         }, function() {
                                             return l.__awaiter(t, void 0, void 0, function() {
                                                 var e;
                                                 return l.__generator(this, function(t) {
                                                     switch (t.label) {
                                                         case 0:
-                                                            return [4, Me(this.props.teamName, B(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                                            return [4, Me(this.props.teamName, x(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                                         case 1:
                                                             return e = t.sent(), this.setState({
                                                                 isLoadingRevenues: !1,
@@ -2953,20 +2953,20 @@
                     }, t.prototype.render = function() {
                         var e = this.state.isLoadingMembers || this.state.isLoadingRevenues;
                         return h.createElement(I, {
-                            title: W(C.Revenue),
+                            title: G(C.Revenue),
                             titleSelector: "revenue-page-title"
-                        }, h.createElement(j.xb, {
+                        }, h.createElement(j.yb, {
                             border: !0,
                             fullWidth: !0
-                        }, h.createElement(j.Wa, {
+                        }, h.createElement(j.Xa, {
                             display: j.X.Flex,
-                            flexDirection: j.Z.Row,
-                            justifyContent: j.Va.Between,
+                            flexDirection: j.Aa.Row,
+                            justifyContent: j.Wa.Between,
                             margin: 2
-                        }, h.createElement(j.Wa, {
+                        }, h.createElement(j.Xa, {
                             display: j.X.Flex,
-                            flexDirection: j.Z.Row
-                        }, h.createElement(j.Wa, {
+                            flexDirection: j.Aa.Row
+                        }, h.createElement(j.Xa, {
                             margin: {
                                 right: 1
                             }
@@ -2983,30 +2983,30 @@
                             earliestDate: this.props.earliestDataDate,
                             currentDate: this.props.currentDate,
                             onMonthSelection: this.handleTimeRangeChange
-                        })), h.createElement(j.Wa, null, h.createElement(j.z, {
+                        })), h.createElement(j.Xa, null, h.createElement(j.z, {
                             disabled: e,
                             "data-test-selector": "revenue-csv-button",
-                            icon: j.ob.Download,
+                            icon: j.pb.Download,
                             onClick: this.handleCSVClick,
                             type: j.F.Hollow
-                        }, we()))), h.createElement(j.Wa, {
+                        }, we()))), h.createElement(j.Xa, {
                             margin: 2
                         }, h.createElement(De, {
                             isLoading: e,
                             data: this.state.revenues
-                        }), h.createElement(j.Wa, {
+                        }), h.createElement(j.Xa, {
                             margin: {
                                 top: .5
                             }
                         }, h.createElement(j.W, {
                             color: j.O.Alt2
-                        }, Object(g.d)("* All revenue values are estimated (in $USD)", "TeamsDashboard")))), h.createElement(j.xb, {
+                        }, Object(g.d)("* All revenue values are estimated (in $USD)", "TeamsDashboard")))), h.createElement(j.yb, {
                             background: j.r.Base,
                             borderTop: !0,
                             padding: 2
-                        }, h.createElement(j.Wa, {
+                        }, h.createElement(j.Xa, {
                             className: "chart-container",
-                            position: j.eb.Relative
+                            position: j.fb.Relative
                         }, h.createElement(ve, {
                             data: this.state.revenues
                         }), e ? this.renderChartLoadingSpinner() : null))))
@@ -3015,35 +3015,35 @@
                         destination: T.a.TeamsDashboardRevenue
                     })], t)
                 }(h.Component),
-                Ke = r("idPT"),
-                Ve = r("O3/n"),
-                He = r("Pp1Y"),
-                ze = function(e) {
+                Xe = r("idPT"),
+                We = r("O3/n"),
+                Ve = r("Pp1Y"),
+                He = function(e) {
                     var t = e.teamName;
-                    return h.createElement(Ke.a, null, h.createElement(j.Wa, {
+                    return h.createElement(Xe.a, null, h.createElement(j.Xa, {
                         margin: 1
-                    }, h.createElement(Ve.a, null, Object(g.d)("Team Dashboard", "TeamsDashboard")), h.createElement("ul", null, h.createElement(Ye, {
+                    }, h.createElement(We.a, null, Object(g.d)("Team Dashboard", "TeamsDashboard")), h.createElement("ul", null, h.createElement(ze, {
                         to: "/teams/" + t + "/dashboard/" + C.Revenue,
                         testSelector: "side-nav-revenue"
-                    }, W(C.Revenue)), h.createElement(Ye, {
+                    }, G(C.Revenue)), h.createElement(ze, {
                         to: "/teams/" + t + "/dashboard/" + C.Stats,
                         testSelector: "side-nav-stats"
-                    }, W(C.Stats)), h.createElement(Ye, {
+                    }, G(C.Stats)), h.createElement(ze, {
                         to: "/teams/" + t + "/dashboard/" + C.Members
-                    }, W(C.Members)), h.createElement(Ye, {
+                    }, G(C.Members)), h.createElement(ze, {
                         to: "/teams/" + t + "/dashboard/" + C.FeaturedChannels
-                    }, W(C.FeaturedChannels)), h.createElement(Ye, {
+                    }, G(C.FeaturedChannels)), h.createElement(ze, {
                         to: "/teams/" + t + "/dashboard/" + C.Settings
-                    }, W(C.Settings)))))
+                    }, G(C.Settings)))))
                 },
-                Ye = function(e) {
-                    return h.createElement("li", null, h.createElement(He.a, {
+                ze = function(e) {
+                    return h.createElement("li", null, h.createElement(Ve.a, {
                         "data-test-selector": e.testSelector,
                         exact: !0,
                         linkTo: e.to
                     }, e.children))
                 },
-                Xe = r("f00E");
+                Ye = r("f00E");
             ! function(e) {
                 e.Background = "background", e.Banner = "banner", e.Logo = "logo"
             }(ye || (ye = {})),
@@ -3056,9 +3056,9 @@
                         return l.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
-                                    return a.trys.push([0, 3, , 4]), [4, Qe(e, t)];
+                                    return a.trys.push([0, 3, , 4]), [4, qe(e, t)];
                                 case 1:
-                                    return r = a.sent(), [4, qe(r.url, t)];
+                                    return r = a.sent(), [4, Qe(r.url, t)];
                                 case 2:
                                     if (!a.sent()) throw new Error("failed to upload");
                                     return [2, l.__assign({}, t, {
@@ -3072,7 +3072,7 @@
                         })
                     })
                 },
-                Qe = function(e, t) {
+                qe = function(e, t) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         var r, n, a;
                         return l.__generator(this, function(o) {
@@ -3082,7 +3082,7 @@
                                         category: t.category,
                                         file_type: t.fileType,
                                         size: t.size
-                                    }, [4, G.a.post(r, {
+                                    }, [4, K.a.post(r, {
                                         body: n
                                     })];
                                 case 1:
@@ -3091,7 +3091,7 @@
                         })
                     })
                 },
-                qe = function(e, t) {
+                Qe = function(e, t) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         var r, n;
                         return l.__generator(this, function(a) {
@@ -3136,7 +3136,7 @@
                     return l.__extends(t, e), t.prototype.render = function() {
                         var e = Boolean(this.props.imageSrc),
                             t = this.state.isHoveringOver || this.props.isUploading;
-                        return h.createElement(j.Pa, {
+                        return h.createElement(j.Qa, {
                             background: j.r.Alt2,
                             "data-test-selector": Je.HoverWrapper,
                             fullHeight: !0,
@@ -3148,16 +3148,16 @@
                             allowedFileTypes: this.props.allowedFileTypes,
                             error: this.props.hasErrored,
                             onFilesSubmitted: this.handleFilesSubmitted
-                        }, h.createElement(j.xb, {
+                        }, h.createElement(j.yb, {
                             alignItems: j.f.Center,
                             background: j.r.Alt2,
                             display: j.X.Flex,
-                            flexDirection: j.Z.Column,
+                            flexDirection: j.Aa.Column,
                             fullHeight: !0,
                             fullWidth: !0,
-                            justifyContent: j.Va.Center,
-                            overflow: j.Za.Hidden,
-                            textAlign: j.Jb.Center
+                            justifyContent: j.Wa.Center,
+                            overflow: j.ab.Hidden,
+                            textAlign: j.Kb.Center
                         }, h.createElement(j.i, {
                             duration: j.k.Long,
                             enabled: e,
@@ -3165,7 +3165,7 @@
                         }, e ? this.renderImage() : null), h.createElement(j.i, {
                             enabled: t,
                             type: j.n.FadeIn
-                        }, h.createElement(j.xb, {
+                        }, h.createElement(j.yb, {
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0,
@@ -3174,7 +3174,7 @@
                             color: t ? j.O.Overlay : j.O.Alt2,
                             "data-test-selector": Je.PlaceholderContainer,
                             display: !e || t ? j.X.Block : j.X.Hide,
-                            position: j.eb.Absolute
+                            position: j.fb.Absolute
                         }, this.props.isUploading ? this.renderLoadingSpinner() : this.renderPlaceholder()))))))
                     }, t.prototype.renderImage = function() {
                         return h.createElement(j.S, {
@@ -3183,26 +3183,26 @@
                             src: this.props.imageSrc
                         })
                     }, t.prototype.renderLoadingSpinner = function() {
-                        return h.createElement(j.Ya, {
+                        return h.createElement(j.Za, {
                             fillContent: !0,
                             inheritColor: !0
                         })
                     }, t.prototype.renderPlaceholder = function() {
-                        return h.createElement(j.xb, {
+                        return h.createElement(j.yb, {
                             alignItems: j.f.Center,
                             "data-test-selector": Je.Placeholder,
                             display: j.X.Flex,
-                            flexDirection: j.Z.Column,
+                            flexDirection: j.Aa.Column,
                             fullHeight: !0,
                             fullWidth: !0,
-                            justifyContent: j.Va.Center
-                        }, h.createElement(j.nb, {
-                            asset: j.ob.Upload,
+                            justifyContent: j.Wa.Center
+                        }, h.createElement(j.ob, {
+                            asset: j.pb.Upload,
                             height: 36,
                             width: 36,
-                            type: j.pb.Inherit
+                            type: j.qb.Inherit
                         }), h.createElement(j.W, {
-                            fontSize: j.Ba.Size6
+                            fontSize: j.Ca.Size6
                         }, Object(g.d)("Choose a file", "TeamDashboard")))
                     }, t
                 }(h.Component),
@@ -3284,7 +3284,7 @@
                                         display_name: e.displayName,
                                         description_markdown: e.description,
                                         logo_id: e.logoID
-                                    }, [4, G.a.put(t, {
+                                    }, [4, K.a.put(t, {
                                         body: r
                                     })];
                                 case 1:
@@ -3394,43 +3394,43 @@
                         didError: !1,
                         didSave: !1,
                         team: t.team
-                    }, r.inputID = Object(Xe.b)(), r.textAreaID = Object(Xe.b)(), r
+                    }, r.inputID = Object(Ye.b)(), r.textAreaID = Object(Ye.b)(), r
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
                     var e = this.state.team;
                     return h.createElement(I, {
-                        title: W(C.Settings),
+                        title: G(C.Settings),
                         titleSelector: et.PageTitle
-                    }, h.createElement(j.Wa, {
+                    }, h.createElement(j.Xa, {
                         className: "settings-page"
-                    }, h.createElement(j.Wa, {
+                    }, h.createElement(j.Xa, {
                         fullWidth: !0
-                    }, h.createElement(j.Da, {
+                    }, h.createElement(j.Ea, {
                         "data-test-selector": et.FormGroupDisplayName,
                         error: !e.displayName,
                         id: this.inputID,
                         label: Object(g.d)("Display Name", "TeamsDashboard")
-                    }, h.createElement(j.Qa, {
+                    }, h.createElement(j.Ra, {
                         disabled: this.state.isSaving,
                         error: !e.displayName,
                         id: this.inputID,
                         maxLength: 65,
                         onChange: this.handleDisplayNameChange,
                         required: !0,
-                        type: j.Sa.Text,
+                        type: j.Ta.Text,
                         value: e.displayName
-                    }))), h.createElement(j.Wa, {
+                    }))), h.createElement(j.Xa, {
                         margin: {
                             top: 2
                         },
                         fullWidth: !0
-                    }, h.createElement(j.Da, {
+                    }, h.createElement(j.Ea, {
                         "data-test-selector": et.FormGroupDescription,
                         id: this.textAreaID,
                         label: Object(g.d)("Description", "TeamsDashboard"),
                         labelOptional: this.formatOptionalLabel(),
                         hint: Object(g.d)("Supports Markdown", "TeamsDashboard")
-                    }, h.createElement(j.Kb, {
+                    }, h.createElement(j.Lb, {
                         disabled: this.state.isSaving,
                         id: this.textAreaID,
                         maxLength: 1e4,
@@ -3438,16 +3438,16 @@
                         onChange: this.handleDescriptionChange,
                         rows: 5,
                         value: e.description || ""
-                    }))), h.createElement(j.Wa, {
+                    }))), h.createElement(j.Xa, {
                         margin: {
                             top: 2
                         }
-                    }, h.createElement(j.Da, {
+                    }, h.createElement(j.Ea, {
                         "data-test-selector": et.FormGroupLogo,
                         label: this.formatLogoLabel(),
                         labelOptional: this.formatOptionalLabel(),
                         hint: Object(g.d)("Square JPG or PNG at least 600x600px. Max 500 KB.", "TeamsDashboard")
-                    }, h.createElement(j.Wa, {
+                    }, h.createElement(j.Xa, {
                         className: "logo"
                     }, h.createElement(at, {
                         imageAlt: this.formatLogoLabel(),
@@ -3455,16 +3455,16 @@
                         imageSrc: e.logoURL,
                         onUpload: this.handleLogoUpload,
                         teamName: e.name
-                    })))), h.createElement(j.Wa, {
+                    })))), h.createElement(j.Xa, {
                         margin: {
                             top: 2
                         }
-                    }, h.createElement(j.Da, {
+                    }, h.createElement(j.Ea, {
                         "data-test-selector": et.FormGroupBanner,
                         label: this.formatBannerLabel(),
                         labelOptional: this.formatOptionalLabel(),
                         hint: Object(g.d)("JPG or PNG at least 640x125px. Max 500 KB.", "TeamsDashboard")
-                    }, h.createElement(j.Wa, {
+                    }, h.createElement(j.Xa, {
                         fullWidth: !0,
                         className: "banner"
                     }, h.createElement(at, {
@@ -3473,16 +3473,16 @@
                         imageSrc: e.bannerURL,
                         onUpload: this.handleBannerUpload,
                         teamName: e.name
-                    })))), h.createElement(j.Wa, {
+                    })))), h.createElement(j.Xa, {
                         margin: {
                             top: 2
                         }
-                    }, h.createElement(j.Da, {
+                    }, h.createElement(j.Ea, {
                         "data-test-selector": et.FormGroupBackground,
                         label: this.formatBackgroundLabel(),
                         labelOptional: this.formatOptionalLabel(),
                         hint: Object(g.d)("JPG or PNG. Max 500 KB.", "TeamsDashboard")
-                    }, h.createElement(j.Wa, {
+                    }, h.createElement(j.Xa, {
                         fullWidth: !0,
                         className: "background"
                     }, h.createElement(at, {
@@ -3491,7 +3491,7 @@
                         imageSrc: e.backgroundImageURL,
                         onUpload: this.handleBackgroundUpload,
                         teamName: e.name
-                    })))), h.createElement(j.Wa, {
+                    })))), h.createElement(j.Xa, {
                         margin: {
                             top: 2
                         }
@@ -3504,7 +3504,7 @@
                         onClick: this.handleClick,
                         state: e,
                         type: t
-                    }, h.createElement(j.Wa, {
+                    }, h.createElement(j.Xa, {
                         display: j.X.Inline,
                         margin: {
                             x: 4
@@ -3558,9 +3558,9 @@
                     }
                 },
                 gt = function(e) {
-                    return h.createElement(j.Wa, {
+                    return h.createElement(j.Xa, {
                         className: "metric-select-menu"
-                    }, h.createElement(j.tb, {
+                    }, h.createElement(j.ub, {
                         disabled: e.isDisabled,
                         value: e.metric,
                         onChange: function(t) {
@@ -3605,7 +3605,7 @@
                         case ut.AverageViewers:
                             t = Object(g.d)("Average = {number}", {
                                 number: h.createElement(j.W, {
-                                    type: j.Nb.Strong
+                                    type: j.Ob.Strong
                                 }, a(o))
                             }, "TeamsDashboardMetricSummary");
                             break;
@@ -3617,7 +3617,7 @@
                         case ut.StreamDuration:
                             t = Object(g.d)("Total = {numberOrDuration}", {
                                 numberOrDuration: h.createElement(j.W, {
-                                    type: j.Nb.Strong
+                                    type: j.Ob.Strong
                                 }, a(o))
                             }, "TeamsDashboardMetricSummary");
                             break;
@@ -3626,7 +3626,7 @@
                     }
                     return h.createElement(j.W, {
                         color: j.O.Alt2,
-                        fontSize: j.Ba.Size4
+                        fontSize: j.Ca.Size4
                     }, t)
                 };
 
@@ -3647,10 +3647,10 @@
                         this.myChart && this.props.chartData.chartType === e.chartData.chartType ? this.updateChartData(e.chartData) : this.rebuildChart(e)
                     }, t.prototype.render = function() {
                         var e = this;
-                        return h.createElement(j.Wa, {
+                        return h.createElement(j.Xa, {
                             fullHeight: !0,
                             fullWidth: !0
-                        }, h.createElement(j.Oa, {
+                        }, h.createElement(j.Pa, {
                             flexGrow: 0,
                             flexShrink: 1,
                             fullWidth: !0
@@ -3841,7 +3841,7 @@
                 }(h.PureComponent),
                 kt = function(e) {
                     var t = e.columnName;
-                    return h.createElement(j.Ia, null, h.createElement(j.P, {
+                    return h.createElement(j.Ja, null, h.createElement(j.P, {
                         cols: {
                             default: 3
                         }
@@ -3855,31 +3855,31 @@
                         cols: {
                             default: 2
                         }
-                    }, h.createElement(j.Wa, {
-                        textAlign: j.Jb.Right
+                    }, h.createElement(j.Xa, {
+                        textAlign: j.Kb.Right
                     }, h.createElement(j.W, {
                         bold: !0
                     }, Object(g.d)("Views", "TeamsDashboard")))), h.createElement(j.P, {
                         cols: {
                             default: 2
                         }
-                    }, h.createElement(j.Wa, {
-                        textAlign: j.Jb.Right
+                    }, h.createElement(j.Xa, {
+                        textAlign: j.Kb.Right
                     }, h.createElement(j.W, {
                         bold: !0
                     }, Object(g.d)("Percent", "TeamsDashboard")))))
                 },
                 Ct = function(e) {
                     var t = e.rowContent;
-                    return h.createElement(j.Ia, null, h.createElement(j.P, {
+                    return h.createElement(j.Ja, null, h.createElement(j.P, {
                         cols: {
                             default: 3
                         }
-                    }, h.createElement(j.Wa, {
+                    }, h.createElement(j.Xa, {
                         fullHeight: !0,
                         display: j.X.Flex,
                         alignItems: j.f.Center
-                    }, h.createElement(j.hb, {
+                    }, h.createElement(j.ib, {
                         value: t.percent,
                         mask: !0
                     }))), h.createElement(j.P, {
@@ -3892,14 +3892,14 @@
                         cols: {
                             default: 2
                         }
-                    }, h.createElement(j.Wa, {
-                        textAlign: j.Jb.Right
+                    }, h.createElement(j.Xa, {
+                        textAlign: j.Kb.Right
                     }, h.createElement(j.W, null, Object(g.f)(t.views)))), h.createElement(j.P, {
                         cols: {
                             default: 2
                         }
-                    }, h.createElement(j.Wa, {
-                        textAlign: j.Jb.Right
+                    }, h.createElement(j.Xa, {
+                        textAlign: j.Kb.Right
                     }, h.createElement(j.W, null, Object(g.f)(t.percent), "%"))))
                 },
                 St = function(e, t, r, n) {
@@ -3938,86 +3938,86 @@
                             }
                         })
                     });
-                    return h.createElement(j.Wa, null, h.createElement(kt, {
+                    return h.createElement(j.Xa, null, h.createElement(kt, {
                         columnName: t
                     }), n)
                 },
-                Lt = function(e) {
+                Rt = function(e) {
                     var t, r, n = e.rowData.reduce(function(e, t) {
                             return e + t.views
                         }, 0),
                         a = e.rowData.sort(function(e, t) {
                             return t.views - e.views || e.name.localeCompare(t.name)
                         });
-                    return t = e.isLoading ? h.createElement(j.db, {
+                    return t = e.isLoading ? h.createElement(j.eb, {
                         width: 180
-                    }) : Nt(e.tableName, a.length), r = e.isLoading ? h.createElement(j.Wa, null, h.createElement(j.W, null, h.createElement(j.db, null)), h.createElement(j.W, null, h.createElement(j.db, null))) : St(a, n, e.columnName, e.isGeo), h.createElement(j.Wa, {
+                    }) : Nt(e.tableName, a.length), r = e.isLoading ? h.createElement(j.Xa, null, h.createElement(j.W, null, h.createElement(j.eb, null)), h.createElement(j.W, null, h.createElement(j.eb, null))) : St(a, n, e.columnName, e.isGeo), h.createElement(j.Xa, {
                         display: j.X.Flex,
-                        flexDirection: j.Z.Column,
+                        flexDirection: j.Aa.Column,
                         padding: 2,
                         className: "table",
-                        flexWrap: j.Aa.NoWrap,
+                        flexWrap: j.Ba.NoWrap,
                         fullWidth: !0
-                    }, h.createElement(j.Wa, {
+                    }, h.createElement(j.Xa, {
                         margin: {
                             bottom: 1
                         }
                     }, h.createElement(j.W, {
-                        type: j.Nb.H4
+                        type: j.Ob.H4
                     }, t)), r)
                 },
-                Rt = function(e) {
+                Lt = function(e) {
                     var t = Object(g.d)("Referrer", "TeamsDashboard"),
                         r = Object(g.d)("Views by Referrer", "TeamsDashboard"),
                         n = "";
-                    return e.internalReferral && e.internalReferral.length && (r = Object(g.d)("Views from Outside Twitch", "TeamsDashboard"), n = h.createElement(j.xb, {
+                    return e.internalReferral && e.internalReferral.length && (r = Object(g.d)("Views from Outside Twitch", "TeamsDashboard"), n = h.createElement(j.yb, {
                         display: j.X.Flex,
                         flexGrow: 1,
                         borderBottom: !0,
                         borderLeft: !0
-                    }, h.createElement(Lt, {
+                    }, h.createElement(Rt, {
                         isLoading: e.isLoading,
                         tableName: Object(g.d)("Views from Twitch", "TeamsDashboard"),
                         columnName: t,
                         rowData: e.internalReferral
-                    }))), h.createElement(j.xb, {
+                    }))), h.createElement(j.yb, {
                         className: "all-tables-wrapper",
                         display: j.X.Flex,
-                        flexDirection: j.Z.Row,
+                        flexDirection: j.Aa.Row,
                         borderTop: !0
-                    }, h.createElement(j.Wa, {
+                    }, h.createElement(j.Xa, {
                         display: j.X.Flex,
                         flexGrow: 1,
-                        flexDirection: j.Z.Column,
-                        flexWrap: j.Aa.NoWrap
-                    }, h.createElement(j.xb, {
+                        flexDirection: j.Aa.Column,
+                        flexWrap: j.Ba.NoWrap
+                    }, h.createElement(j.yb, {
                         display: j.X.Flex,
                         flexGrow: 1,
                         borderBottom: !0
-                    }, h.createElement(Lt, {
+                    }, h.createElement(Rt, {
                         isLoading: e.isLoading,
                         tableName: Object(g.d)("Views by Location", "TeamsDashboard"),
                         columnName: Object(g.d)("Location", "TeamsDashboard"),
                         rowData: e.geographical,
                         isGeo: !0
-                    })), h.createElement(j.xb, {
+                    })), h.createElement(j.yb, {
                         display: j.X.Flex,
                         flexGrow: 1
-                    }, h.createElement(Lt, {
+                    }, h.createElement(Rt, {
                         isLoading: e.isLoading,
                         tableName: Object(g.d)("Views by Platform", "TeamsDashboard"),
                         columnName: Object(g.d)("Platform", "TeamsDashboard"),
                         rowData: e.platform
-                    }))), h.createElement(j.Wa, {
+                    }))), h.createElement(j.Xa, {
                         display: j.X.Flex,
                         flexGrow: 1,
-                        flexDirection: j.Z.Column,
-                        flexWrap: j.Aa.NoWrap
-                    }, n, h.createElement(j.xb, {
+                        flexDirection: j.Aa.Column,
+                        flexWrap: j.Ba.NoWrap
+                    }, n, h.createElement(j.yb, {
                         display: j.X.Flex,
                         flexGrow: 1,
                         borderLeft: !0
-                    }, h.createElement(Lt, {
+                    }, h.createElement(Rt, {
                         isLoading: e.isLoading,
                         tableName: r,
                         columnName: t,
@@ -4032,22 +4032,22 @@
                     internalReferral: [],
                     externalReferral: []
                 },
-                xt = function(e, t, r, n) {
+                Bt = function(e, t, r, n) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         var a, o, i, s;
                         return l.__generator(this, function(c) {
                             switch (c.label) {
                                 case 0:
-                                    return a = Ft, t.length < 1 ? [2, a] : (o = t.join(","), i = "/v5/teams/" + e + "/stats/video_play_demographics?channel_ids=" + o + "&start_time=" + r + "&end_time=" + n, [4, Object(q.c)({
+                                    return a = Ft, t.length < 1 ? [2, a] : (o = t.join(","), i = "/v5/teams/" + e + "/stats/video_play_demographics?channel_ids=" + o + "&start_time=" + r + "&end_time=" + n, [4, Object(Q.c)({
                                         path: i
                                     })]);
                                 case 1:
-                                    return [2, (s = c.sent()).body ? Bt(s.body) : a]
+                                    return [2, (s = c.sent()).body ? xt(s.body) : a]
                             }
                         })
                     })
                 },
-                Bt = function(e) {
+                xt = function(e) {
                     for (var t = e.video_play_demographics, r = {
                             geographical: [],
                             platform: [],
@@ -4084,7 +4084,7 @@
                     return r
                 },
                 Ut = r("NAv5"),
-                Wt = function(e, t, r, n, a) {
+                Gt = function(e, t, r, n, a) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         var o, i, s, c, u, d, m, h, f, b;
                         return l.__generator(this, function(l) {
@@ -4109,52 +4109,37 @@
                                     }
                                     return [3, 15];
                                 case 1:
-                                    return s = Zt, [4, Ht(o)];
+                                    return s = Zt, [4, Vt(o)];
                                 case 2:
                                     return i = s.apply(void 0, [l.sent(), n, a, nr]), [3, 16];
                                 case 3:
-                                    return c = Jt, [4, Kt(o)];
+                                    return c = Jt, [4, Xt(o)];
                                 case 4:
                                     return i = c.apply(void 0, [l.sent(), n, a, tr]), [3, 16];
                                 case 5:
-                                    return u = Jt, [4, Gt(o)];
+                                    return u = Jt, [4, Kt(o)];
                                 case 6:
-                                    return i = u.apply(void 0, [l.sent(), n, a, Qt]), [3, 16];
+                                    return i = u.apply(void 0, [l.sent(), n, a, qt]), [3, 16];
                                 case 7:
-                                    return d = Jt, [4, Kt(o)];
+                                    return d = Jt, [4, Xt(o)];
                                 case 8:
                                     return i = d.apply(void 0, [l.sent(), n, a, rr]), [3, 16];
                                 case 9:
-                                    return [4, Gt(o)];
+                                    return [4, Kt(o)];
                                 case 10:
-                                    return m = l.sent(), h = Xt(m), i = Jt(h, n, a, qt), [3, 16];
+                                    return m = l.sent(), h = Yt(m), i = Jt(h, n, a, Qt), [3, 16];
                                 case 11:
-                                    return f = Jt, [4, Vt(o)];
+                                    return f = Jt, [4, Wt(o)];
                                 case 12:
                                     return i = f.apply(void 0, [l.sent(), n, a, er]), [3, 16];
                                 case 13:
-                                    return b = Jt, [4, zt(o)];
+                                    return b = Jt, [4, Ht(o)];
                                 case 14:
                                     return i = b.apply(void 0, [l.sent(), n, a, ar]), [3, 16];
                                 case 15:
                                     throw new Error("fetch type is not in StatsMetric enum");
                                 case 16:
-                                    return [2, Yt(i)]
-                            }
-                        })
-                    })
-                },
-                Gt = function(e) {
-                    return l.__awaiter(void 0, void 0, Promise, function() {
-                        var t;
-                        return l.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, Object(q.c)({
-                                        path: e
-                                    })];
-                                case 1:
-                                    return [2, (t = r.sent()).body ? t.body.concurrent_viewers : {}]
+                                    return [2, zt(i)]
                             }
                         })
                     })
@@ -4165,11 +4150,41 @@
                         return l.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, Object(q.c)({
+                                    return [4, Object(Q.c)({
+                                        path: e
+                                    })];
+                                case 1:
+                                    return [2, (t = r.sent()).body ? t.body.concurrent_viewers : {}]
+                            }
+                        })
+                    })
+                },
+                Xt = function(e) {
+                    return l.__awaiter(void 0, void 0, Promise, function() {
+                        var t;
+                        return l.__generator(this, function(r) {
+                            switch (r.label) {
+                                case 0:
+                                    return [4, Object(Q.c)({
                                         path: e
                                     })];
                                 case 1:
                                     return [2, (t = r.sent()).body ? t.body.chat_activities : {}]
+                            }
+                        })
+                    })
+                },
+                Wt = function(e) {
+                    return l.__awaiter(void 0, void 0, Promise, function() {
+                        var t;
+                        return l.__generator(this, function(r) {
+                            switch (r.label) {
+                                case 0:
+                                    return [4, Object(Q.c)({
+                                        path: e
+                                    })];
+                                case 1:
+                                    return [2, (t = r.sent()).body ? t.body.follows : {}]
                             }
                         })
                     })
@@ -4180,11 +4195,11 @@
                         return l.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, Object(q.c)({
+                                    return [4, Object(Q.c)({
                                         path: e
                                     })];
                                 case 1:
-                                    return [2, (t = r.sent()).body ? t.body.follows : {}]
+                                    return [2, (t = r.sent()).body ? t.body.commercials : {}]
                             }
                         })
                     })
@@ -4195,22 +4210,7 @@
                         return l.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, Object(q.c)({
-                                        path: e
-                                    })];
-                                case 1:
-                                    return [2, (t = r.sent()).body ? t.body.commercials : {}]
-                            }
-                        })
-                    })
-                },
-                zt = function(e) {
-                    return l.__awaiter(void 0, void 0, Promise, function() {
-                        var t;
-                        return l.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, Object(q.c)({
+                                    return [4, Object(Q.c)({
                                         path: e
                                     })];
                                 case 1:
@@ -4219,7 +4219,7 @@
                         })
                     })
                 },
-                Yt = function(e) {
+                zt = function(e) {
                     for (var t = {}, r = 0, n = Object.keys(e); r < n.length; r++)
                         for (var a = 0, o = e[n[r]]; a < o.length; a++) {
                             var i = o[a],
@@ -4233,7 +4233,7 @@
                         }
                     return t
                 },
-                Xt = function(e) {
+                Yt = function(e) {
                     for (var t = {}, r = 0, n = Object.keys(e); r < n.length; r++) {
                         var a = n[r],
                             o = e[a];
@@ -4260,7 +4260,7 @@
                     }
                     return a
                 },
-                Qt = function(e, t, r) {
+                qt = function(e, t, r) {
                     return $t(e, t, r).map(function(e) {
                         var t = e.count / 48;
                         return {
@@ -4270,7 +4270,7 @@
                         }
                     })
                 },
-                qt = function(e, t, r) {
+                Qt = function(e, t, r) {
                     return $t(e, t, r).map(function(e) {
                         return {
                             timestamp: e.timestamp,
@@ -4387,7 +4387,7 @@
                         return l.__generator(this, function(l) {
                             switch (l.label) {
                                 case 0:
-                                    for (a = {}, o = [], i = 0, s = cr; i < s.length; i++) m = s[i], o.push(Wt(m, e, t, r, n));
+                                    for (a = {}, o = [], i = 0, s = cr; i < s.length; i++) m = s[i], o.push(Gt(m, e, t, r, n));
                                     return [4, Promise.all(o)];
                                 case 1:
                                     for (c = l.sent(), u = 0, d = cr; u < d.length; u++) {
@@ -4427,7 +4427,7 @@
                             }))
                         }, r.toggleGroupChecked = function() {
                             var e = !r.state.groupChecked,
-                                t = x(r.state.members, e);
+                                t = B(r.state.members, e);
                             r.setState({
                                 groupChecked: e,
                                 members: t
@@ -4450,20 +4450,20 @@
                                 return l.__generator(this, function(u) {
                                     switch (u.label) {
                                         case 0:
-                                            return r = B(this.state.members), a = e.toISOString(), o = t.toISOString(), i = {
+                                            return r = x(this.state.members), a = e.toISOString(), o = t.toISOString(), i = {
                                                 isLoadingDemographics: !1,
                                                 demographics: Ft,
                                                 isLoadingStats: !1,
                                                 data: {}
                                             }, n !== ut.AverageViewers ? [3, 2] : (this.setState({
                                                 isLoadingDemographics: !0
-                                            }), s = i, [4, xt(this.props.teamName, r, a, o)]);
+                                            }), s = i, [4, Bt(this.props.teamName, r, a, o)]);
                                         case 1:
                                             s.demographics = u.sent(), u.label = 2;
                                         case 2:
                                             return this.setState({
                                                 isLoadingStats: !0
-                                            }), c = i, [4, Wt(n, this.props.teamName, r, a, o)];
+                                            }), c = i, [4, Gt(n, this.props.teamName, r, a, o)];
                                         case 3:
                                             return c.data = u.sent(), [2, i]
                                     }
@@ -4475,9 +4475,9 @@
                                 return l.__generator(this, function(r) {
                                     switch (r.label) {
                                         case 0:
-                                            return [4, ur(this.props.teamName, B(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                            return [4, ur(this.props.teamName, x(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                         case 1:
-                                            return e = r.sent(), 0 === Object.keys(e).length ? [2] : (t = Ce(e, dr, lr()), Se(t, W(C.Stats) + " - " + ne(this.state.startTime) + ".csv"), [2])
+                                            return e = r.sent(), 0 === Object.keys(e).length ? [2] : (t = Ce(e, dr, lr()), Se(t, G(C.Stats) + " - " + ne(this.state.startTime) + ".csv"), [2])
                                     }
                                 })
                             })
@@ -4511,20 +4511,20 @@
                                 })
                             })
                         }, r.renderChartLoadingSpinner = function() {
-                            return h.createElement(j.xb, {
+                            return h.createElement(j.yb, {
                                 attachTop: !0,
                                 attachLeft: !0,
                                 background: j.r.Alt,
                                 fullHeight: !0,
                                 fullWidth: !0,
-                                position: j.eb.Absolute
-                            }, h.createElement(j.Ya, {
+                                position: j.fb.Absolute
+                            }, h.createElement(j.Za, {
                                 delay: 100,
                                 fillContent: !0,
-                                size: j.vb.Large
+                                size: j.wb.Large
                             }))
                         }, r.renderViewershipTables = function() {
-                            return h.createElement(Rt, l.__assign({
+                            return h.createElement(Lt, l.__assign({
                                 isLoading: r.state.isLoadingDemographics
                             }, r.state.demographics))
                         }, r.state = {
@@ -4550,7 +4550,7 @@
                                     case 1:
                                         return e = r.sent(), this.setState({
                                             isLoadingMembers: !1,
-                                            members: x(e, !0)
+                                            members: B(e, !0)
                                         }, function() {
                                             return l.__awaiter(t, void 0, void 0, function() {
                                                 var e;
@@ -4570,20 +4570,20 @@
                     }, t.prototype.render = function() {
                         var e = this.state.isLoadingMembers || this.state.isLoadingStats || this.state.isLoadingDemographics;
                         return h.createElement(I, {
-                            title: W(C.Stats),
+                            title: G(C.Stats),
                             titleSelector: "stats-page-title"
-                        }, h.createElement(j.xb, {
+                        }, h.createElement(j.yb, {
                             border: !0,
                             fullWidth: !0
-                        }, h.createElement(j.Wa, {
+                        }, h.createElement(j.Xa, {
                             display: j.X.Flex,
-                            flexDirection: j.Z.Row,
-                            justifyContent: j.Va.Between,
+                            flexDirection: j.Aa.Row,
+                            justifyContent: j.Wa.Between,
                             margin: 2
-                        }, h.createElement(j.Wa, {
+                        }, h.createElement(j.Xa, {
                             display: j.X.Flex,
-                            flexDirection: j.Z.Row
-                        }, h.createElement(j.Wa, {
+                            flexDirection: j.Aa.Row
+                        }, h.createElement(j.Xa, {
                             margin: {
                                 right: 1
                             }
@@ -4595,7 +4595,7 @@
                             onMemberSelectClose: this.handleMemberSelectionChange,
                             toggleMemberChecked: this.toggleMemberChecked,
                             toggleGroupChecked: this.toggleGroupChecked
-                        })), h.createElement(j.Wa, {
+                        })), h.createElement(j.Xa, {
                             margin: {
                                 right: 1
                             }
@@ -4608,21 +4608,21 @@
                             isDisabled: e,
                             metric: this.state.metric,
                             onChange: this.onMetricChange
-                        })), h.createElement(j.Wa, null, h.createElement(j.z, {
+                        })), h.createElement(j.Xa, null, h.createElement(j.z, {
                             disabled: e,
                             "data-test-selector": "stats-csv-button",
-                            icon: j.ob.Download,
+                            icon: j.pb.Download,
                             onClick: this.handleCSVClick,
                             type: j.F.Hollow
-                        }, we()))), h.createElement(j.Wa, {
+                        }, we()))), h.createElement(j.Xa, {
                             margin: 2,
-                            position: j.eb.Relative
-                        }, h.createElement(j.Wa, {
+                            position: j.fb.Relative
+                        }, h.createElement(j.Xa, {
                             className: "metric-summary-container"
                         }, h.createElement(yt, {
                             data: this.state.data,
                             metric: this.state.metric
-                        })), h.createElement(j.Wa, {
+                        })), h.createElement(j.Xa, {
                             className: "chart-container",
                             margin: {
                                 top: 2
@@ -4648,7 +4648,7 @@
                                 to: "/teams/" + r.props.match.params.teamName + "/dashboard/" + C.Revenue
                             })
                         }, r.renderRevenuePage = function() {
-                            return h.createElement(Ge, {
+                            return h.createElement(Ke, {
                                 teamName: r.props.match.params.teamName,
                                 earliestDataDate: r.earliestDataDate,
                                 currentDate: r.currentDate
@@ -4664,7 +4664,7 @@
                                 teamName: r.props.match.params.teamName
                             })
                         }, r.renderFeaturedChannelsPage = function() {
-                            return h.createElement(Q, {
+                            return h.createElement(q, {
                                 teamName: r.props.match.params.teamName
                             })
                         }, r.renderSettingsPage = function() {
@@ -4703,21 +4703,21 @@
                         var e;
                         return this.state.isError ? e = h.createElement(v.a, {
                             message: Object(g.d)("An error occurred on this page", "TeamDashboardRoot")
-                        }) : this.props.isLoggedIn ? e = this.props.data.loading ? h.createElement(j.Ya, {
+                        }) : this.props.isLoggedIn ? e = this.props.data.loading ? h.createElement(j.Za, {
                             fillContent: !0
-                        }) : null === this.props.data.team ? h.createElement(y.a, null) : h.createElement(j.Wa, {
+                        }) : null === this.props.data.team ? h.createElement(y.a, null) : h.createElement(j.Xa, {
                             display: j.X.Flex,
-                            flexWrap: j.Aa.NoWrap,
+                            flexWrap: j.Ba.NoWrap,
                             fullHeight: !0,
-                            overflow: j.Za.Hidden,
-                            position: j.eb.Relative
-                        }, h.createElement(ze, {
+                            overflow: j.ab.Hidden,
+                            position: j.fb.Relative
+                        }, h.createElement(He, {
                             teamName: this.props.match.params.teamName
-                        }), h.createElement(j.Oa, {
+                        }), h.createElement(j.Pa, {
                             flexGrow: 1,
                             fullHeight: !0,
                             fullWidth: !0,
-                            position: j.eb.Relative
+                            position: j.fb.Relative
                         }, h.createElement("main", null, h.createElement(b.a, null, h.createElement(p.a, {
                             exact: !0,
                             path: "/teams/:teamName/dashboard",
@@ -4744,12 +4744,12 @@
                             render: this.renderSettingsPage
                         }), h.createElement(p.a, {
                             component: y.a
-                        }))))) : (this.props.onAnonymousVisit(), e = h.createElement(j.Ya, {
+                        }))))) : (this.props.onAnonymousVisit(), e = h.createElement(j.Za, {
                             fillContent: !0
-                        })), h.createElement(j.Wa, {
+                        })), h.createElement(j.Xa, {
                             display: j.X.Flex,
-                            flexDirection: j.Z.Column,
-                            flexWrap: j.Aa.NoWrap,
+                            flexDirection: j.Aa.Column,
+                            flexWrap: j.Ba.NoWrap,
                             fullHeight: !0
                         }, h.createElement(E.a, null), e)
                     }, t
@@ -4786,10 +4786,10 @@
                 o = r("uNOt"),
                 i = r("Ue10"),
                 s = (r("obKW"), function(e) {
-                    return a.createElement(i.Pa, {
+                    return a.createElement(i.Qa, {
                         borderRadius: i.x.Medium,
                         display: i.X.Block,
-                        fontSize: i.Ba.Size5,
+                        fontSize: i.Ca.Size5,
                         padding: {
                             x: 1,
                             y: .5
@@ -4799,7 +4799,7 @@
                         className: "dashboard-side-nav__link",
                         exact: e.exact,
                         to: e.linkTo
-                    }, Object(i.bc)(e)), e.children))
+                    }, Object(i.cc)(e)), e.children))
                 });
             r.d(t, "a", function() {
                 return s
@@ -5418,13 +5418,13 @@
                 a = r("8/mp"),
                 o = r("Ue10"),
                 i = (r("8dXP"), function(e) {
-                    return n.createElement(o.Pa, {
+                    return n.createElement(o.Qa, {
                         background: o.r.Alt,
                         borderRight: !0,
                         flexShrink: 0,
                         flexGrow: 0,
                         fullHeight: !0,
-                        position: o.eb.Relative
+                        position: o.fb.Relative
                     }, n.createElement("nav", {
                         className: "dashboard-side-nav"
                     }, n.createElement(a.b, {
@@ -5971,9 +5971,9 @@
                             45 === c && (c = S.call(s, ++u));
                             if (48 === c) {
                                 if ((c = S.call(s, ++u)) >= 48 && c <= 57) throw (0, n.syntaxError)(e, u, "Invalid number, unexpected digit after 0: " + I(c) + ".")
-                            } else u = L(e, u, c), c = S.call(s, u);
-                            46 === c && (l = !0, c = S.call(s, ++u), u = L(e, u, c), c = S.call(s, u));
-                            69 !== c && 101 !== c || (l = !0, 43 !== (c = S.call(s, ++u)) && 45 !== c || (c = S.call(s, ++u)), u = L(e, u, c));
+                            } else u = R(e, u, c), c = S.call(s, u);
+                            46 === c && (l = !0, c = S.call(s, ++u), u = R(e, u, c), c = S.call(s, u));
+                            69 !== c && 101 !== c || (l = !0, 43 !== (c = S.call(s, ++u)) && 45 !== c || (c = S.call(s, ++u)), u = R(e, u, c));
                             return new w(l ? j : D, t, u, a, o, i, N.call(s, t, u))
                         }(r, s, P, A, M, t);
                     case 34:
@@ -6025,7 +6025,7 @@
                                             l += "\t";
                                             break;
                                         case 117:
-                                            var d = R(S.call(i, s + 1), S.call(i, s + 2), S.call(i, s + 3), S.call(i, s + 4));
+                                            var d = L(S.call(i, s + 1), S.call(i, s + 2), S.call(i, s + 3), S.call(i, s + 4));
                                             if (d < 0) throw (0, n.syntaxError)(e, s, "Invalid character escape sequence: \\u" + i.slice(s + 1, s + 5) + ".");
                                             l += String.fromCharCode(d), s += 4;
                                             break;
@@ -6044,7 +6044,7 @@
                 }(P))
             }
 
-            function L(e, t, r) {
+            function R(e, t, r) {
                 var a = e.body,
                     o = t,
                     i = r;
@@ -6057,7 +6057,7 @@
                 throw (0, n.syntaxError)(e, o, "Invalid number, expected digit but got: " + I(i) + ".")
             }
 
-            function R(e, t, r, n) {
+            function L(e, t, r, n) {
                 return M(e) << 12 | M(t) << 8 | M(r) << 4 | M(n)
             }
 

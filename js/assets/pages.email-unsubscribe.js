@@ -17,8 +17,8 @@
                 p = i("sL2n"),
                 E = i("Ue10"),
                 f = "verify-success",
-                h = "verify-error",
-                v = function(e) {
+                y = "verify-error",
+                h = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -26,43 +26,43 @@
                             isLoading: !1,
                             isSuccess: !1
                         }, t.renderStatus = function() {
-                            return t.state.isError ? s.createElement(E.Wa, {
+                            return t.state.isError ? s.createElement(E.Xa, {
                                 margin: {
                                     top: 1
                                 },
-                                "data-test-selector": h
+                                "data-test-selector": y
                             }, s.createElement(E.W, {
-                                type: E.Nb.H5,
+                                type: E.Ob.H5,
                                 color: E.O.Error
-                            }, Object(c.d)("There was an error when unsubscribing.", "EmailUnsubscribe"))) : t.state.isSuccess ? s.createElement(E.Wa, {
+                            }, Object(c.d)("There was an error when unsubscribing.", "EmailUnsubscribe"))) : t.state.isSuccess ? s.createElement(E.Xa, {
                                 margin: {
                                     top: 1
                                 },
                                 "data-test-selector": f
                             }, s.createElement(E.W, {
-                                type: E.Nb.H5,
+                                type: E.Ob.H5,
                                 color: E.O.Alt2
-                            }, Object(c.d)("You have successfully unsubscribed.", "EmailUnsubscribe"))) : t.state.isLoading ? s.createElement(E.Wa, {
+                            }, Object(c.d)("You have successfully unsubscribed.", "EmailUnsubscribe"))) : t.state.isLoading ? s.createElement(E.Xa, {
                                 margin: {
                                     top: 1
                                 }
                             }, s.createElement(E.W, {
-                                type: E.Nb.H5,
+                                type: E.Ob.H5,
                                 bold: !0
-                            }, Object(c.d)("Unsubscribing...", "EmailUnsubscribe"))) : s.createElement(E.xb, {
+                            }, Object(c.d)("Unsubscribing...", "EmailUnsubscribe"))) : s.createElement(E.yb, {
                                 display: E.X.Flex,
-                                flexDirection: E.Z.Column,
+                                flexDirection: E.Aa.Column,
                                 margin: {
                                     top: 1
                                 }
-                            }, s.createElement(E.Wa, {
+                            }, s.createElement(E.Xa, {
                                 margin: {
                                     bottom: 1
                                 }
                             }, s.createElement(E.W, {
-                                type: E.Nb.H5,
+                                type: E.Ob.H5,
                                 color: E.O.Alt2
-                            }, Object(c.d)("You will unsubscribe from future emails of this type from Twitch.", "EmailUnsubscribe"))), s.createElement(E.Wa, {
+                            }, Object(c.d)("You will unsubscribe from future emails of this type from Twitch.", "EmailUnsubscribe"))), s.createElement(E.Xa, {
                                 flexGrow: 0
                             }, s.createElement(E.z, {
                                 type: E.F.Default,
@@ -105,29 +105,29 @@
                     return n.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return s.createElement(E.xb, {
+                        return s.createElement(E.yb, {
                             padding: {
                                 x: 3,
                                 top: 3,
                                 bottom: 1
                             },
                             display: E.X.Flex,
-                            flexDirection: E.Z.Column
+                            flexDirection: E.Aa.Column
                         }, s.createElement(E.W, {
                             className: "title",
-                            type: E.Nb.H2
+                            type: E.Ob.H2
                         }, Object(c.d)("Email Unsubscribe", "EmailUnsubscribe")), this.renderStatus())
                     }, t
                 }(s.Component),
-                y = Object(r.compose)(Object(o.a)(p, {
+                v = Object(r.compose)(Object(o.a)(p, {
                     name: "unsubscribeEmail"
                 }), Object(d.b)("EmailUnsubscribePage", {
                     destination: m.a.EmailUnsubscribe
                 }), Object(l.a)({
                     location: b.PageviewLocation.EmailUnsubscribe
-                }))(v);
+                }))(h);
             i.d(t, "EmailUnsubscribePage", function() {
-                return y
+                return v
             })
         },
         sL2n: function(e, t) {

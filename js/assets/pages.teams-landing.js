@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [79], {
+    [78], {
         "0EKw": function(e, n, t) {
             "use strict";
             var i = t("q1tI"),
@@ -17,7 +17,7 @@
                             }
                         },
                         tooltip: Object(a.d)("Game", "GameLink"),
-                        svgAsset: s.ob.NavGames,
+                        svgAsset: s.pb.NavGames,
                         title: e.name,
                         "data-a-target": "stream-game-link"
                     })
@@ -28,19 +28,10 @@
         },
         "3Bft": function(e, n, t) {
             "use strict";
-            var i, a;
             t.d(n, "a", function() {
-                    return i
-                }), t.d(n, "b", function() {
-                    return r
-                }),
-                function(e) {
-                    e.Week = "WEEK", e.Month = "MONTH", e.Year = "YEAR", e.OneTime = "ONE_TIME"
-                }(i || (i = {})),
-                function(e) {
-                    e.PercentOff = "percent_off", e.FixedValueOff = "fixed_value_off"
-                }(a || (a = {}));
-            var r = {
+                return i
+            });
+            var i = {
                 Prime: "prime",
                 Tier1: "1000",
                 Tier2: "2000",
@@ -58,10 +49,10 @@
                 l = function(e) {
                     return a.createElement(o.a, i.__assign({
                         linkTo: "/team/" + e.name,
-                        svgAsset: s.ob.Team,
+                        svgAsset: s.pb.Team,
                         title: e.displayName,
                         tooltip: Object(r.d)("Team", "TeamLink")
-                    }, Object(s.bc)(e)))
+                    }, Object(s.cc)(e)))
                 };
             t.d(n, "a", function() {
                 return l
@@ -503,9 +494,9 @@
                         }, n
                     }
                     return i.__extends(n, e), n.prototype.render = function() {
-                        return a.createElement(r.Qa, {
+                        return a.createElement(r.Ra, {
                             readOnly: !0,
-                            type: r.Sa.Text,
+                            type: r.Ta.Text,
                             value: this.props.value,
                             onClick: this.handleClickHandler
                         })
@@ -551,8 +542,8 @@
                 g = t("/7QA"),
                 b = t("2+sX"),
                 k = t("u5aL"),
-                f = t("eJ65"),
-                h = t("yR8l"),
+                h = t("eJ65"),
+                f = t("yR8l"),
                 y = t("x7UT"),
                 S = t("3Bft"),
                 N = t("tIid"),
@@ -567,7 +558,7 @@
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(i || (i = {}));
             var L = l.a.wrap(function() {
-                    return Promise.all([t.e(0), t.e(180)]).then(t.bind(null, "f+qK"))
+                    return Promise.all([t.e(0), t.e(178)]).then(t.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
                 B = function(e) {
                     function n() {
@@ -577,7 +568,7 @@
                         }, n.modalLevel = "top_page", n.renderBalloonContentForBalloonLayer = function() {
                             return r.createElement(k.a, {
                                 onClickOut: n.handleBalloonClickOut
-                            }, r.createElement(I.Wa, {
+                            }, r.createElement(I.Xa, {
                                 "data-a-target": "sub-balloon",
                                 refDelegate: n.setBalloonContentRefDelegate
                             }, n.balloonWrapperContent))
@@ -644,7 +635,7 @@
                             t = Object(N.a)(this.props.data.user.id, this.props.sessionUser),
                             a = 1 === this.props.data.user.subscriptionProducts.length,
                             o = null;
-                        this.props.data.user.self && this.props.data.user.self.subscriptionBenefit && (o = this.props.data.user.self.subscriptionBenefit.purchasedWithPrime ? S.b.Prime : this.props.data.user.self.subscriptionBenefit.tier, this.modalLevel = ""), this.props.data.user.subscriptionProducts.some(this.isSubscriptionProductInvalid) && (a = !0);
+                        this.props.data.user.self && this.props.data.user.self.subscriptionBenefit && (o = this.props.data.user.self.subscriptionBenefit.purchasedWithPrime ? S.a.Prime : this.props.data.user.self.subscriptionBenefit.tier, this.modalLevel = ""), this.props.data.user.subscriptionProducts.some(this.isSubscriptionProductInvalid) && (a = !0);
                         var s, l = n ? Object(g.d)("All-Access Pass", "SubscribeButton") : Object(g.d)("Get the All-Access Pass", "SubscribeButton"),
                             d = this.props.data.user.self && Object(F.h)(this.props.data.user.subscriptionProducts, this.props.data.user.self.subscriptionBenefit);
                         if (n) {
@@ -654,7 +645,7 @@
                                 }, "SubscribeButton") : u, a && !t) return r.createElement(I.z, {
                                 disabled: !0,
                                 ariaLabel: s,
-                                icon: I.ob.Star
+                                icon: I.pb.Star
                             }, s);
                             t && (s = l)
                         } else s = t ? l : this.props.hostChannelID ? Object(g.d)("Subscribe to {username}", {
@@ -682,14 +673,14 @@
                             isStaff: !!(this.props.sessionUser && this.props.sessionUser.roles && this.props.sessionUser.roles.isStaff),
                             isSubscribed: n,
                             productId: this.props.data.user.subscriptionProducts[0].id,
-                            subbedTier: o || S.b.Prime,
+                            subbedTier: o || S.a.Prime,
                             userHasPrime: !1
-                        })), this.props.renderBalloonInBalloonLayer ? r.createElement(I.Wa, {
+                        })), this.props.renderBalloonInBalloonLayer ? r.createElement(I.Xa, {
                             "data-test-selector": i.BalloonLayerButton,
                             refDelegate: this.setContainerRefDelegate
-                        }, m) : r.createElement(I.Wa, {
+                        }, m) : r.createElement(I.Xa, {
                             className: d ? "subscribe-button--promo" : ""
-                        }, r.createElement(f.a, {
+                        }, r.createElement(h.a, {
                             "data-test-selector": i.DefaultButton,
                             onToggle: this.handleMenuToggle
                         }, m, r.createElement(I.u, {
@@ -702,7 +693,7 @@
                         return e && void 0 !== this.props.subscribedButtonType ? this.props.subscribedButtonType : e ? I.F.Success : this.props.unsubscribedButtonType || I.F.Default
                     }, n.prototype.getButtonIcon = function(e, n) {
                         var t = void 0;
-                        return e ? t = n === S.b.Prime ? I.ob.Crown : I.ob.Star : this.props.forceIcon && (t = I.ob.StarHollow), t
+                        return e ? t = n === S.a.Prime ? I.pb.Crown : I.pb.Star : this.props.forceIcon && (t = I.pb.StarHollow), t
                     }, n.prototype.hasSubscriptionProducts = function(e) {
                         return e.data.user.subscriptionProducts && e.data.user.subscriptionProducts.length > 0
                     }, n.prototype.isUserDataReady = function(e) {
@@ -725,7 +716,7 @@
                         }
                     }, n
                 }(r.Component),
-                M = Object(v.compose)(Object(h.a)(T, {
+                D = Object(v.compose)(Object(f.a)(T, {
                     options: function(e) {
                         return {
                             variables: {
@@ -747,7 +738,7 @@
                         return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
                     }
                 }]), Object(b.e)())(B),
-                D = function(e) {
+                M = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.reportInteractive = function() {
@@ -755,7 +746,7 @@
                         }, n
                     }
                     return a.__extends(n, e), n.prototype.render = function() {
-                        return r.createElement(M, {
+                        return r.createElement(D, {
                             authToken: this.props.authToken,
                             balloonDirection: this.props.balloonDirection,
                             channelLogin: this.props.channelLogin,
@@ -788,15 +779,15 @@
                         return Object(c.d)(l.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([t.e(0), t.e(192)]).then(t.bind(null, "KJv/"))
+                                return Promise.all([t.e(0), t.e(190)]).then(t.bind(null, "KJv/"))
                             },
                             componentProps: n
                         })
                     }
                 }, e)
-            })(D);
+            })(M);
             t.d(n, !1, function() {
-                return D
+                return M
             }), t.d(n, "a", function() {
                 return O
             }), t.d(n, !1, function() {
@@ -804,7 +795,7 @@
             }), t.d(n, !1, function() {
                 return B
             }), t.d(n, !1, function() {
-                return M
+                return D
             })
         },
         RuiO: function(e, n) {
@@ -1612,7 +1603,7 @@
 
             function s(e, n) {
                 var t;
-                return n ? t = e.giftPromotion : e.self && (t = e.self.promotion), t ? t.discountValue : 0
+                return n ? t = e.giftPromotion : e.self && (t = e.self.promotion), t ? parseInt(t.discountValue, 10) : 0
             }
 
             function l(e) {
@@ -1693,20 +1684,20 @@
                     return i.createElement(s.a, null, i.createElement(u.z, {
                         type: u.F.Hollow,
                         "data-a-target": "share-button",
-                        icon: u.ob.Share
+                        icon: u.pb.Share
                     }, Object(a.d)("Share", "ChannelShareButton")), i.createElement(u.u, {
                         direction: u.v.TopRight,
                         size: u.w.Small,
                         "data-a-target": "share-balloon"
-                    }, i.createElement(u.Wa, {
+                    }, i.createElement(u.Xa, {
                         padding: 1
-                    }, i.createElement(u.Wa, {
+                    }, i.createElement(u.Xa, {
                         padding: {
                             top: 1,
                             bottom: 1
                         },
                         display: u.X.Flex,
-                        justifyContent: u.Va.Between
+                        justifyContent: u.Wa.Between
                     }, i.createElement(o.a, {
                         type: o.b.Twitter,
                         text: e.title,
@@ -1724,13 +1715,13 @@
                     }), i.createElement(o.a, {
                         type: o.b.Copy,
                         "data-a-target": "copy-link-share-button"
-                    })), i.createElement(u.Wa, null, i.createElement(u.Wa, {
+                    })), i.createElement(u.Xa, null, i.createElement(u.Xa, {
                         padding: {
                             top: 1
                         }
                     }, i.createElement(u.W, null, Object(a.d)("Embed Channel", "ChannelShareButton")), i.createElement(r.a, {
                         value: c
-                    })), i.createElement(u.Wa, {
+                    })), i.createElement(u.Xa, {
                         padding: {
                             top: 1
                         }
@@ -1776,7 +1767,7 @@
 
             function d(e) {
                 return i.__awaiter(this, void 0, void 0, function() {
-                    var n, t, l, d, u, c, m, p, v, g, b, k, f;
+                    var n, t, l, d, u, c, m, p, v, g, b, k, h;
                     return i.__generator(this, function(i) {
                         switch (i.label) {
                             case 0:
@@ -1800,7 +1791,7 @@
                                     channelID: e.channelID
                                 }), m = null, d && t && ((p = d && d.data && d.data.video) ? m = Object(o.a)(p.broadcastType) : a.k.error(new Error("GraphQL empty response"), "Query for video info in SubEvent reporting returned no data.", {
                                     currentVideoID: n
-                                })), v = c && c.self, g = v ? !!v.subscriptionBenefit : null, b = v && v.subscriptionBenefit && v.subscriptionBenefit.purchasedWithPrime || !1, k = v ? v.canPrimeSubscribe : null, f = {
+                                })), v = c && c.self, g = v ? !!v.subscriptionBenefit : null, b = v && v.subscriptionBenefit && v.subscriptionBenefit.purchasedWithPrime || !1, k = v ? v.canPrimeSubscribe : null, h = {
                                     action: e.action,
                                     can_subscribe: k,
                                     channel: e.channelLogin,
@@ -1823,7 +1814,7 @@
                                     vod_type: m,
                                     viewport_height: window.innerHeight,
                                     viewport_width: window.innerWidth
-                                }, a.o.track(r.SpadeEventType.Subscription, f), [2]
+                                }, a.o.track(r.SpadeEventType.Subscription, h), [2]
                         }
                     })
                 })
@@ -1835,11 +1826,11 @@
                 a = t("kduP"),
                 r = t("Ue10"),
                 o = function(e) {
-                    return i.createElement(r.Oa, {
+                    return i.createElement(r.Pa, {
                         margin: {
                             right: 1
                         },
-                        overflow: r.Za.Hidden,
+                        overflow: r.ab.Hidden,
                         flexShrink: 0
                     }, i.createElement(r.U, {
                         to: {
@@ -1879,10 +1870,10 @@
                 g = t("yR8l"),
                 b = t("8/mp"),
                 k = t("Ue10"),
-                f = function(e) {
+                h = function(e) {
                     var n = e.member,
                         t = null;
-                    n.live && (t = i.createElement(k.Wa, {
+                    n.live && (t = i.createElement(k.Xa, {
                         margin: {
                             right: .5
                         }
@@ -1890,11 +1881,11 @@
                         status: k.M.Live
                     })));
                     var a = null;
-                    n.live && (a = i.createElement(k.Wa, null, i.createElement(k.W, {
+                    n.live && (a = i.createElement(k.Xa, null, i.createElement(k.W, {
                         color: k.O.Alt2
                     }, Object(c.f)(n.viewersCount))));
-                    return i.createElement(k.Ta, {
-                        type: k.Ua.Alpha,
+                    return i.createElement(k.Ua, {
+                        type: k.Va.Alpha,
                         onClick: function() {
                             e.onClick({
                                 userID: n.userID,
@@ -1903,7 +1894,7 @@
                             })
                         },
                         selected: e.isSelected
-                    }, i.createElement(k.xb, {
+                    }, i.createElement(k.yb, {
                         display: k.X.Flex,
                         alignItems: k.f.Center,
                         padding: {
@@ -1914,21 +1905,21 @@
                         alt: n.displayName,
                         size: 30,
                         src: n.profileImageURL
-                    }), i.createElement(k.Wa, {
+                    }), i.createElement(k.Xa, {
                         flexGrow: 1,
                         flexShrink: 1,
-                        overflow: k.Za.Hidden,
+                        overflow: k.ab.Hidden,
                         margin: {
                             left: 1
                         }
                     }, i.createElement(k.W, {
                         ellipsis: !0,
-                        fontSize: k.Ba.Size5
-                    }, n.displayName)), i.createElement(k.Wa, {
+                        fontSize: k.Ca.Size5
+                    }, n.displayName)), i.createElement(k.Xa, {
                         display: k.X.Flex
                     }, t, a)))
                 },
-                h = function() {
+                f = function() {
                     function e(e) {
                         this.data = e
                     }
@@ -2025,7 +2016,7 @@
                     }
                 },
                 C = function(e) {
-                    var n = new h(e),
+                    var n = new f(e),
                         t = N(n.getLiveMemberEdges());
                     if (n.hasNextLiveMembersPage() && t) return {
                         liveMembersCursor: t,
@@ -2093,22 +2084,22 @@
                         if (this.props.data.loading) return null;
                         var n = this.props.data.members.map(function(n) {
                                 var t = e.state.activeUserID === n.userID;
-                                return i.createElement(f, {
+                                return i.createElement(h, {
                                     member: n,
                                     onClick: e.handleMemberItemClick,
                                     isSelected: t,
                                     key: n.userID
                                 })
                             }),
-                            t = i.createElement(k.xb, {
+                            t = i.createElement(k.yb, {
                                 className: "member-list__scrollable-container",
                                 display: k.X.Flex,
-                                flexDirection: k.Z.Column,
+                                flexDirection: k.Aa.Column,
                                 background: k.r.Base,
                                 elevation: 1
                             }, i.createElement(v.b, {
                                 scrollRef: this.saveScrollRef
-                            }, i.createElement(k.Wa, null, n, i.createElement("div", {
+                            }, i.createElement(k.Xa, null, n, i.createElement("div", {
                                 style: {
                                     height: "2em "
                                 }
@@ -2116,40 +2107,40 @@
                                 loadMore: this.props.loadMore,
                                 enabled: this.props.data.infiniteScrollEnabled,
                                 contentLength: this.props.data.numLoaded
-                            }))), i.createElement(k.Wa, {
+                            }))), i.createElement(k.Xa, {
                                 className: "member-list__back-to-top-placeholder",
-                                position: k.eb.Relative
+                                position: k.fb.Relative
                             }, this.backToTop()));
-                        return 0 === this.props.data.total && (t = i.createElement(k.xb, {
+                        return 0 === this.props.data.total && (t = i.createElement(k.yb, {
                             className: "member-list__scrollable-container",
                             display: k.X.Flex,
-                            flexDirection: k.Z.Column,
+                            flexDirection: k.Aa.Column,
                             background: k.r.Base,
                             elevation: 1,
-                            justifyContent: k.Va.Center,
+                            justifyContent: k.Wa.Center,
                             alignItems: k.f.Center
                         }, i.createElement(k.S, {
                             src: "https://static-cdn.jtvnw.net/emoticons/v1/112291/2.0",
                             alt: Object(c.d)("No team members", "TeamLandingPage_MemberList")
                         }), i.createElement(k.W, {
                             color: k.O.Alt2,
-                            fontSize: k.Ba.Size6
-                        }, Object(c.d)("No team members to display", "TeamLandingPage_MemberList")))), i.createElement(k.Wa, {
+                            fontSize: k.Ca.Size6
+                        }, Object(c.d)("No team members to display", "TeamLandingPage_MemberList")))), i.createElement(k.Xa, {
                             display: k.X.Flex,
-                            flexDirection: k.Z.Column
-                        }, i.createElement(k.Wa, {
+                            flexDirection: k.Aa.Column
+                        }, i.createElement(k.Xa, {
                             display: k.X.Flex,
                             flexShrink: 0,
                             alignItems: k.f.Center,
                             margin: {
                                 bottom: 1
                             }
-                        }, i.createElement(k.Wa, {
+                        }, i.createElement(k.Xa, {
                             flexGrow: 1,
                             flexShrink: 1
                         }, i.createElement(k.W, {
                             bold: !0,
-                            fontSize: k.Ba.Size4
+                            fontSize: k.Ca.Size4
                         }, Object(c.d)("Team Members", "TeamLandingPage_MemberList"))), i.createElement(k.W, {
                             color: k.O.Alt2
                         }, Object(c.f)(this.props.data.total))), t)
@@ -2157,11 +2148,11 @@
                         return this.state.showBackToTop ? i.createElement(k.i, {
                             type: k.n.FadeIn,
                             enabled: !0
-                        }, i.createElement(k.Oa, {
+                        }, i.createElement(k.Pa, {
                             display: k.X.Flex,
-                            justifyContent: k.Va.Center,
+                            justifyContent: k.Wa.Center,
                             alignItems: k.f.Center,
-                            position: k.eb.Absolute,
+                            position: k.fb.Absolute,
                             padding: .5,
                             attachBottom: !0,
                             fullWidth: !0
@@ -2182,7 +2173,7 @@
                         }
                     },
                     props: function(e) {
-                        var n = new h(e.data);
+                        var n = new f(e.data);
                         return {
                             data: {
                                 members: n.getAllMembers(),
@@ -2203,8 +2194,8 @@
                                             if (!e.team && !n.team) return {
                                                 team: null
                                             };
-                                            var t = new h(e),
-                                                i = new h(n),
+                                            var t = new f(e),
+                                                i = new f(n),
                                                 a = y(t.getLiveMemberEdges(), i.getLiveMemberEdges()),
                                                 r = _(t.getLiveMemberPageInfo(), i.getLiveMemberPageInfo()),
                                                 o = y(t.getMemberEdges(), i.getMemberEdges()),
@@ -2240,41 +2231,41 @@
                 B = Object(a.compose)(Object(l.b)("TeamsDescription", {
                     autoReportInteractive: !0
                 }))(function(e) {
-                    return e.description ? i.createElement(k.Wa, {
+                    return e.description ? i.createElement(k.Xa, {
                         margin: {
                             top: 2
                         }
                     }, i.createElement(k.W, {
                         bold: !0,
-                        fontSize: k.Ba.Size4
-                    }, e.displayName), i.createElement(k.xb, {
+                        fontSize: k.Ca.Size4
+                    }, e.displayName), i.createElement(k.yb, {
                         color: k.O.Alt2,
                         margin: {
                             top: 1
                         }
-                    }, i.createElement(k.Wb, null, i.createElement(L, {
+                    }, i.createElement(k.Xb, null, i.createElement(L, {
                         source: e.description
                     })))) : null
                 }),
-                M = t("eJ65"),
-                D = t("eDVu"),
+                D = t("eJ65"),
+                M = t("eDVu"),
                 O = t("0Log"),
                 P = t("/aPz"),
-                x = t("DMoW"),
-                U = t("ZLqn"),
+                U = t("DMoW"),
+                x = t("ZLqn"),
                 j = t("eAAt"),
                 A = t("0EKw"),
-                W = t("5goO"),
-                R = t("QjI3"),
-                V = t("eFQ3"),
+                R = t("5goO"),
+                V = t("QjI3"),
+                X = t("eFQ3"),
                 G = t("6J1Z"),
-                q = function(e) {
+                W = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.getGame = function() {
                             var e = n.props.data.user;
                             return e && e.directories ? e.directories.nodes.find(function(e) {
-                                return !(!e || e.directoryType !== x.q.GAME)
+                                return !(!e || e.directoryType !== U.q.GAME)
                             }) : null
                         }, n.getTitle = function() {
                             var e = n.props.data.user;
@@ -2295,17 +2286,17 @@
                             }) : null
                         }, n.renderTeam = function() {
                             var e = n.props.data.user;
-                            return e && e.primaryTeam ? i.createElement(W.a, {
+                            return e && e.primaryTeam ? i.createElement(R.a, {
                                 name: e.primaryTeam.name,
                                 displayName: e.primaryTeam.displayName
                             }) : null
                         }, n.renderUserIcon = function() {
                             var e = n.props.data.user;
-                            return e ? i.createElement(k.Wa, {
+                            return e ? i.createElement(k.Xa, {
                                 margin: {
                                     right: 1
                                 },
-                                overflow: k.Za.Hidden,
+                                overflow: k.ab.Hidden,
                                 flexShrink: 0
                             }, i.createElement(k.I, {
                                 src: e.profileImageURL || "",
@@ -2318,33 +2309,33 @@
                     return d.__extends(n, e), n.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, n.prototype.render = function() {
-                        return i.createElement(k.xb, {
+                        return i.createElement(k.yb, {
                             className: "teams-player",
                             background: k.r.Base,
                             elevation: 1,
                             fullWidth: !0
                         }, this.renderTopBar(), i.createElement(k.o, {
                             ratio: k.p.Aspect16x9
-                        }, i.createElement(V.b, {
+                        }, i.createElement(X.b, {
                             channelLogin: this.props.channelLogin,
                             vodID: "",
                             disableTheatreButton: !0,
-                            playerTypeOverride: V.a.Site
+                            playerTypeOverride: X.a.Site
                         })), this.renderBottomBar())
                     }, n.prototype.renderTopBar = function() {
                         var e = this.props.data.user;
                         if (!e || !e.id) return null;
                         var n = Object(c.f)(e.stream && e.stream.viewersCount ? e.stream.viewersCount : 0);
-                        return i.createElement(k.xb, {
+                        return i.createElement(k.yb, {
                             display: k.X.Flex,
-                            flexWrap: k.Aa.Wrap,
-                            justifyContent: k.Va.Between,
+                            flexWrap: k.Ba.Wrap,
+                            justifyContent: k.Wa.Between,
                             padding: 1
                         }, i.createElement(k.G, {
                             row: !0
                         }, this.renderUserIcon(), i.createElement(k.H, {
-                            overflow: k.Za.Hidden
-                        }, e.displayName && i.createElement(k.Wa, {
+                            overflow: k.ab.Hidden
+                        }, e.displayName && i.createElement(k.Xa, {
                             margin: {
                                 bottom: .5
                             },
@@ -2352,109 +2343,109 @@
                         }, i.createElement(k.U, {
                             to: "/" + this.props.channelLogin
                         }, i.createElement(k.W, {
-                            type: k.Nb.Span,
-                            fontSize: k.Ba.Size4,
+                            type: k.Ob.Span,
+                            fontSize: k.Ca.Size4,
                             title: e.displayName
-                        }, e.displayName))), i.createElement(k.xb, {
+                        }, e.displayName))), i.createElement(k.yb, {
                             display: k.X.Flex,
-                            flexWrap: k.Aa.Wrap,
+                            flexWrap: k.Ba.Wrap,
                             color: k.O.Alt2
-                        }, e.stream && e.stream.id && i.createElement(k.xb, {
+                        }, e.stream && e.stream.id && i.createElement(k.yb, {
                             color: k.O.Live,
                             display: k.X.InlineFlex,
                             margin: {
                                 right: 1
                             }
-                        }, i.createElement(k.wb, {
+                        }, i.createElement(k.xb, {
                             value: n,
                             label: Object(c.d)("Watching Now", "TeamPlayer"),
-                            icon: k.ob.GlyphLive,
+                            icon: k.pb.GlyphLive,
                             "data-a-target": "channel-viewers-count"
-                        })), i.createElement(k.Wa, {
+                        })), i.createElement(k.Xa, {
                             margin: {
                                 right: 1
                             },
                             display: k.X.Flex
-                        }, i.createElement(k.wb, {
+                        }, i.createElement(k.xb, {
                             value: Object(c.d)("{followerCount, number}", {
                                 followerCount: e.followers && e.followers.totalCount ? e.followers.totalCount : 0
                             }, "TeamPlayer"),
                             label: Object(c.d)("Followers", "TeamPlayer"),
-                            icon: k.ob.GlyphFollowers
-                        })), i.createElement(k.Wa, {
+                            icon: k.pb.GlyphFollowers
+                        })), i.createElement(k.Xa, {
                             display: k.X.Flex
-                        }, i.createElement(k.wb, {
+                        }, i.createElement(k.xb, {
                             value: Object(c.d)("{channelCount, number}", {
                                 channelCount: e.profileViewCount || 0
                             }, "TeamPlayer"),
                             label: Object(c.d)("Total Views", "TeamPlayer"),
-                            icon: k.ob.GlyphViews
-                        }))))), i.createElement(k.Wa, {
+                            icon: k.pb.GlyphViews
+                        }))))), i.createElement(k.Xa, {
                             display: k.X.Flex,
                             alignItems: k.f.Center
-                        }, e.description && i.createElement(M.a, null, i.createElement(k.z, {
+                        }, e.description && i.createElement(D.a, null, i.createElement(k.z, {
                             type: k.F.Hollow
                         }, Object(c.d)("Info", "Team Player")), i.createElement(k.u, {
                             size: k.w.Medium,
                             direction: k.v.BottomRight
-                        }, i.createElement(k.Wa, {
-                            zIndex: k.ac.Above,
+                        }, i.createElement(k.Xa, {
+                            zIndex: k.bc.Above,
                             padding: 1
                         }, i.createElement(k.W, {
-                            type: k.Nb.Span,
-                            fontSize: k.Ba.Size6,
+                            type: k.Ob.Span,
+                            fontSize: k.Ca.Size6,
                             color: k.O.Alt2
-                        }, e.description)))), i.createElement(k.Wa, {
+                        }, e.description)))), i.createElement(k.Xa, {
                             padding: {
                                 left: 1
                             }
-                        }, i.createElement(R.a, {
+                        }, i.createElement(V.a, {
                             channelLogin: this.props.channelLogin
                         }))))
                     }, n.prototype.renderBottomBar = function() {
                         var e = this.getTitle();
-                        return i.createElement(k.xb, {
+                        return i.createElement(k.yb, {
                             alignItems: k.f.Center,
                             display: k.X.Flex,
-                            flexWrap: k.Aa.NoWrap,
-                            justifyContent: k.Va.Between,
+                            flexWrap: k.Ba.NoWrap,
+                            justifyContent: k.Wa.Between,
                             padding: 1
-                        }, i.createElement(k.Wa, {
-                            overflow: k.Za.Hidden
+                        }, i.createElement(k.Xa, {
+                            overflow: k.ab.Hidden
                         }, i.createElement(k.G, {
                             row: !0
                         }, this.renderGameBoxArt(), i.createElement(k.H, {
-                            overflow: k.Za.Hidden
-                        }, i.createElement(k.Wa, {
+                            overflow: k.ab.Hidden
+                        }, i.createElement(k.Xa, {
                             margin: {
                                 bottom: .5
                             },
                             ellipsis: !0
                         }, i.createElement(k.W, {
-                            type: k.Nb.Span,
-                            fontSize: k.Ba.Size4,
+                            type: k.Ob.Span,
+                            fontSize: k.Ca.Size4,
                             title: e
-                        }, e)), i.createElement(k.Wa, {
+                        }, e)), i.createElement(k.Xa, {
                             display: k.X.Flex,
-                            flexWrap: k.Aa.Wrap
-                        }, this.renderGame(), this.renderTeam())))), i.createElement(k.Wa, {
+                            flexWrap: k.Ba.Wrap
+                        }, this.renderGame(), this.renderTeam())))), i.createElement(k.Xa, {
                             className: "teams-player__action-container",
                             display: k.X.Flex,
                             alignItems: k.f.Center,
-                            justifyContent: k.Va.End
-                        }, i.createElement(k.Wa, {
+                            justifyContent: k.Wa.End
+                        }, i.createElement(k.Xa, {
                             display: k.X.Flex,
                             margin: {
                                 x: 1
                             }
-                        }, this.props.data.user && i.createElement(U.a, {
+                        }, this.props.data.user && i.createElement(x.a, {
                             login: this.props.channelLogin,
                             displayName: this.props.data.user.displayName || "",
                             title: e || ""
                         }))))
                     }, n
                 }(i.Component),
-                z = Object(a.compose)(Object(l.b)("TeamsPlayer"), Object(g.a)(G, {
+                q = Object(a.compose)(Object(l.b)("TeamsPlayer"), Object(g.a)(G, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2462,7 +2453,7 @@
                             }
                         }
                     }
-                }), Object(D.a)(function(e) {
+                }), Object(M.a)(function(e) {
                     return {
                         query: G,
                         topic: e.data.user && e.data.user.id ? Object(P.e)(e.data.user.id) : "",
@@ -2475,8 +2466,8 @@
                             return n.user && n.user.broadcastSettings && n.user.broadcastSettings.id && (n.user.broadcastSettings.title = e.status || e.old_status), n
                         }
                     }
-                }))(q),
-                X = t("ST9J");
+                }))(W),
+                z = t("ST9J");
             t("GTf2");
             ! function(e) {
                 e.LogoImage = "teamspagebody-logo", e.BannerImage = "teamspagebody-banner", e.BackgroundImage = "teamspagebody-background"
@@ -2505,31 +2496,31 @@
                             className: "teams-page-body__outer-container teams-page-body__team-asset",
                             style: this.getBackgroundStyle(),
                             "data-test-selector": S.BackgroundImage
-                        }, i.createElement(v.b, null, i.createElement(k.Wa, {
+                        }, i.createElement(v.b, null, i.createElement(k.Xa, {
                             display: k.X.Flex,
-                            justifyContent: k.Va.Center,
+                            justifyContent: k.Wa.Center,
                             padding: {
                                 top: 3,
                                 left: 3,
                                 right: 3
                             }
-                        }, i.createElement(k.xb, {
+                        }, i.createElement(k.yb, {
                             className: "teams-page-body__inner-container",
                             background: k.r.Alt2,
                             display: k.X.Flex,
                             padding: 2,
                             fullHeight: !0
-                        }, i.createElement(k.Wa, {
+                        }, i.createElement(k.Xa, {
                             className: "teams-page-body__column--left",
                             display: k.X.Flex,
-                            flexDirection: k.Z.Column,
+                            flexDirection: k.Aa.Column,
                             margin: {
                                 right: 2
                             }
                         }, this.renderLogo(), i.createElement(T, {
                             teamName: this.props.teamName,
                             onMemberItemClick: this.changeSelectedMember
-                        })), i.createElement(k.Wa, {
+                        })), i.createElement(k.Xa, {
                             className: "teams-page-body__column--right"
                         }, this.renderBanner(), this.renderPlayer(), this.renderTeamDescription())))))
                     }, n.prototype.getBackgroundStyle = function() {
@@ -2568,7 +2559,7 @@
                         })
                     }, n.prototype.renderPlayer = function() {
                         var e = this.getPlayerLogin();
-                        return e ? i.createElement(z, {
+                        return e ? i.createElement(q, {
                             channelLogin: e
                         }) : null
                     }, n.prototype.getPlayerLogin = function() {
@@ -2587,7 +2578,7 @@
                         }(e) : ""
                     }, n
                 }(i.Component),
-                Q = Object(a.compose)(u.a, Object(l.b)("TeamsPageBody"), Object(g.a)(X, {
+                Q = Object(a.compose)(u.a, Object(l.b)("TeamsPageBody"), Object(g.a)(z, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2598,18 +2589,18 @@
                 }))(H),
                 $ = t("Gw3k"),
                 K = function(e) {
-                    return i.createElement(k.Wa, {
+                    return i.createElement(k.Xa, {
                         display: k.X.Flex,
-                        flexDirection: k.Z.Column,
-                        flexWrap: k.Aa.NoWrap,
+                        flexDirection: k.Aa.Column,
+                        flexWrap: k.Ba.NoWrap,
                         fullHeight: !0
-                    }, i.createElement($.a, null), i.createElement(k.Wa, {
+                    }, i.createElement($.a, null), i.createElement(k.Xa, {
                         flexGrow: 1,
                         display: k.X.Flex,
                         fullHeight: !0
                     }, e.children))
                 },
-                Z = Object(a.compose)(Object(l.b)("TeamsLandingPage", {
+                J = Object(a.compose)(Object(l.b)("TeamsLandingPage", {
                     destination: o.a.TeamsLandingPage,
                     autoReportInteractive: !0
                 }), Object(r.a)({
@@ -2620,7 +2611,7 @@
                     }))
                 });
             t.d(n, "TeamsLandingPage", function() {
-                return Z
+                return J
             })
         },
         jeZI: function(e, n, t) {},
@@ -2720,18 +2711,18 @@
                             target: "_blank",
                             className: e,
                             onClick: t.onShareClickHandler
-                        }, Object(d.bc)(t.props), {
+                        }, Object(d.cc)(t.props), {
                             download: t.props.text
                         }), t.renderIcon()) : t.isLink() ? r.createElement("a", a.__assign({
                             href: t.getLinkTarget(),
                             target: "_blank",
                             className: e,
                             onClick: t.onShareClickHandler
-                        }, Object(d.bc)(t.props)), t.renderIcon()) : r.createElement("button", a.__assign({
+                        }, Object(d.cc)(t.props)), t.renderIcon()) : r.createElement("button", a.__assign({
                             onClick: t.copyPageUrl,
                             onMouseLeave: t.clearIsCopiedStatus,
                             className: e
-                        }, Object(d.bc)(t.props)), t.renderIcon())
+                        }, Object(d.cc)(t.props)), t.renderIcon())
                     }, t.onShareClickHandler = function() {
                         t.props.onShareClick && t.props.onShareClick(t.props.type)
                     }, t.clearIsCopiedStatus = function() {
@@ -2746,12 +2737,12 @@
                         })
                     }, t.renderIcon = function() {
                         var e = t.getAssetFromType();
-                        return r.createElement(d.Wa, {
+                        return r.createElement(d.Xa, {
                             className: "social-button__icon " + t.addSocialClassModifier("social-button__icon"),
                             display: d.X.Flex,
                             alignItems: d.f.Center,
-                            justifyContent: d.Va.Center
-                        }, r.createElement(d.nb, {
+                            justifyContent: d.Wa.Center
+                        }, r.createElement(d.ob, {
                             asset: e
                         }))
                     }, t.isLink = function() {
@@ -2776,18 +2767,18 @@
                     }, t.getAssetFromType = function() {
                         switch (t.props.type) {
                             case i.Twitter:
-                                return d.ob.Twitter;
+                                return d.pb.Twitter;
                             case i.Facebook:
-                                return d.ob.Facebook;
+                                return d.pb.Facebook;
                             case i.VKontakte:
-                                return d.ob.VKontakte;
+                                return d.pb.VKontakte;
                             case i.Reddit:
-                                return d.ob.Reddit;
+                                return d.pb.Reddit;
                             case i.Download:
-                                return d.ob.Download;
+                                return d.pb.Download;
                             case i.Copy:
                             default:
-                                return d.ob.Copy
+                                return d.pb.Copy
                         }
                     }, t.addSocialClassModifier = function(e) {
                         switch (t.props.type) {
@@ -2829,11 +2820,11 @@
                     }, t
                 }
                 return a.__extends(n, e), n.prototype.render = function() {
-                    return r.createElement(d.Wa, {
+                    return r.createElement(d.Xa, {
                         className: "social-button"
-                    }, r.createElement(d.Qb, {
+                    }, r.createElement(d.Rb, {
                         label: this.getTooltipFromType(),
-                        direction: d.Sb.Bottom
+                        direction: d.Tb.Bottom
                     }, this.renderLink()))
                 }, n
             }(r.Component)
@@ -3716,32 +3707,32 @@
                 a = t("q1tI"),
                 r = t("Ue10"),
                 o = function(e) {
-                    return a.createElement(r.Wa, {
+                    return a.createElement(r.Xa, {
                         margin: {
                             right: 1
                         },
                         display: r.X.Flex,
                         alignItems: r.f.Center
-                    }, a.createElement(r.Qb, {
-                        align: r.Rb.Left,
+                    }, a.createElement(r.Rb, {
+                        align: r.Sb.Left,
                         label: e.tooltip,
-                        direction: r.Sb.Bottom
-                    }, a.createElement(r.Wa, {
+                        direction: r.Tb.Bottom
+                    }, a.createElement(r.Xa, {
                         margin: {
                             right: .5
                         }
-                    }, a.createElement(r.xb, {
+                    }, a.createElement(r.yb, {
                         display: r.X.Flex,
                         alignItems: r.f.Center,
                         color: r.O.Alt2
-                    }, a.createElement(r.nb, {
+                    }, a.createElement(r.ob, {
                         asset: e.svgAsset
                     }))), a.createElement(r.W, {
-                        fontSize: r.Ba.Size5,
+                        fontSize: r.Ca.Size5,
                         ellipsis: !0
                     }, a.createElement(r.U, i.__assign({
                         to: e.linkTo
-                    }, Object(r.bc)(e), {
+                    }, Object(r.cc)(e), {
                         targetBlank: !0
                     }), e.title))))
                 };

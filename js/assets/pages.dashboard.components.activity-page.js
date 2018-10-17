@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [161], {
+    [160], {
         "9USO": function(e, t, a) {},
         FWE5: function(e, t) {
             var a = {
@@ -110,7 +110,7 @@
                 v = {
                     "data-test-selector": "dashboard-activity-filter-select"
                 },
-                f = function(e) {
+                b = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleTypeChange = function(e) {
@@ -119,14 +119,14 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.filterAction || n.All;
-                        return i.createElement(g.xb, {
+                        return i.createElement(g.yb, {
                             padding: 2,
                             borderBottom: !0
-                        }, i.createElement(g.Wa, {
+                        }, i.createElement(g.Xa, {
                             className: "activity-page__select",
                             flexGrow: 0,
                             flexShrink: 0
-                        }, i.createElement(g.tb, r.__assign({
+                        }, i.createElement(g.ub, r.__assign({
                             name: "activity_type",
                             onChange: this.handleTypeChange,
                             value: e,
@@ -142,7 +142,7 @@
                         }, Object(l.d)("Stream Title", "DashboardActivity")))))
                     }, t
                 }(i.PureComponent),
-                b = {
+                f = {
                     "data-test-selector": "dashboard-activity-no-data"
                 },
                 y = {
@@ -167,7 +167,7 @@
                             if (e.props.filterAction === n.All || t.action === e.props.filterAction) {
                                 switch (t.actor && (c = t.actor.logo, s = t.actor.display_name, d = i.createElement(g.W, {
                                     bold: !0,
-                                    type: g.Nb.Span
+                                    type: g.Ob.Span
                                 }, i.createElement(g.U, {
                                     to: "/" + t.actor.name
                                 }, s))), t.action) {
@@ -206,7 +206,7 @@
                                     default:
                                         r = ""
                                 }
-                                return i.createElement(g.xb, {
+                                return i.createElement(g.yb, {
                                     key: "audit" + a,
                                     alignItems: g.f.Center,
                                     display: g.X.Flex,
@@ -215,7 +215,7 @@
                                     padding: {
                                         y: 1
                                     }
-                                }, i.createElement(g.Wa, {
+                                }, i.createElement(g.Xa, {
                                     flexGrow: 0,
                                     flexShrink: 0,
                                     margin: {
@@ -225,48 +225,48 @@
                                     src: c,
                                     alt: s,
                                     size: 40,
-                                    presenceStatus: g.gb.Online,
+                                    presenceStatus: g.hb.Online,
                                     borderRadius: g.x.Small
-                                })), i.createElement(g.Wa, {
+                                })), i.createElement(g.Xa, {
                                     flexGrow: 1,
                                     flexShrink: 1
-                                }, i.createElement(g.Wa, null, i.createElement(g.W, {
+                                }, i.createElement(g.Xa, null, i.createElement(g.W, {
                                     color: g.O.Alt,
-                                    fontSize: g.Ba.Size5
-                                }, r))), i.createElement(g.Wa, {
+                                    fontSize: g.Ca.Size5
+                                }, r))), i.createElement(g.Xa, {
                                     flexGrow: 0,
                                     flexShrink: 0
                                 }, i.createElement(g.W, {
                                     color: g.O.Alt2,
-                                    fontSize: g.Ba.Size6
+                                    fontSize: g.Ca.Size6
                                 }, o)))
                             }
                         });
-                        return i.createElement(g.Wa, r.__assign({
+                        return i.createElement(g.Xa, r.__assign({
                             className: "activity-page__list",
                             flexGrow: 0,
                             flexShrink: 0
                         }, y), t)
                     }, t.prototype.renderNotEnoughDataPlaceholder = function() {
-                        return i.createElement(g.xb, r.__assign({
+                        return i.createElement(g.yb, r.__assign({
                             className: "activity-page__no-data",
                             display: g.X.Flex,
                             flexGrow: 1,
-                            flexDirection: g.Z.Column,
+                            flexDirection: g.Aa.Column,
                             alignItems: g.f.Center,
                             alignContent: g.e.Center,
-                            justifyContent: g.Va.Center,
+                            justifyContent: g.Wa.Center,
                             padding: {
                                 left: 2,
                                 right: 2
                             }
-                        }, b), i.createElement(g.q, {
+                        }, f), i.createElement(g.q, {
                             src: _,
                             alt: A,
                             size: 50
                         }), i.createElement(g.W, {
                             color: g.O.Alt2,
-                            fontSize: g.Ba.Size5
+                            fontSize: g.Ca.Size5
                         }, Object(l.d)("Not enough data for us to display", "DashboardActivity")))
                     }, t
                 }(i.PureComponent),
@@ -277,7 +277,7 @@
             ! function(e) {
                 e[e.Error = 0] = "Error", e[e.Loading = 1] = "Loading", e[e.Success = 2] = "Success"
             }(S || (S = {}));
-            var x = function(e) {
+            var N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -347,12 +347,12 @@
                         })
                     }, t.prototype.render = function() {
                         var e = this.state.requestState;
-                        if (this.props.data.loading || e === S.Loading || e === S.Error) return i.createElement(w.a, null, i.createElement(g.Wa, {
+                        if (this.props.data.loading || e === S.Loading || e === S.Error) return i.createElement(w.a, null, i.createElement(g.Xa, {
                             margin: {
                                 top: 3,
                                 bottom: 1
                             }
-                        }, i.createElement(g.db, {
+                        }, i.createElement(g.eb, {
                             height: 448,
                             width: 1040
                         })));
@@ -360,21 +360,21 @@
                             a = t.filterAction,
                             n = t.list,
                             r = e === S.Success && n.audits.length > 0;
-                        return i.createElement(w.a, null, i.createElement(g.xb, {
+                        return i.createElement(w.a, null, i.createElement(g.yb, {
                             className: "activity-page",
                             background: g.r.Base,
                             elevation: 1,
-                            overflow: g.Za.Hidden
-                        }, i.createElement(f, {
+                            overflow: g.ab.Hidden
+                        }, i.createElement(b, {
                             filterAction: a,
                             onActionChange: this.handleActionChange,
                             enabled: r
-                        }), i.createElement(g.Wa, {
+                        }), i.createElement(g.Xa, {
                             className: "activity-page__scrollable",
-                            overflow: g.Za.Hidden
+                            overflow: g.ab.Hidden
                         }, i.createElement(c.b, {
                             suppressScrollX: !0
-                        }, i.createElement(g.Wa, {
+                        }, i.createElement(g.Xa, {
                             padding: {
                                 x: 2
                             }
@@ -422,7 +422,7 @@
                         })
                     }, t
                 }(i.PureComponent),
-                N = Object(o.compose)(Object(d.a)(C, {
+                D = Object(o.compose)(Object(d.a)(C, {
                     options: function(e) {
                         return {
                             variables: {
@@ -434,9 +434,9 @@
                     destination: m.a.ChannelDashboardActivity
                 }), Object(u.a)({
                     location: h.PageviewLocation.DashboardActivity
-                }))(x);
+                }))(N);
             a.d(t, "ActivityPage", function() {
-                return N
+                return D
             }), a.d(t, "PublicProps", function() {})
         }
     }

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [104], {
+    [103], {
         "V+GM": function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
@@ -24,12 +24,12 @@
                                         r = o.content,
                                         s = o.medium,
                                         p = o.content_index,
-                                        m = o.email_id;
+                                        d = o.email_id;
                                     c.p.tracking.trackPageview(i.__assign({
                                         content: r,
                                         medium: s,
                                         content_index: p,
-                                        email_id: m,
+                                        email_id: d,
                                         location: e.location
                                     }, t))
                                 }
@@ -81,38 +81,38 @@
                 c = n("fvjX"),
                 s = n("/7QA"),
                 p = n("V+GM"),
-                m = n("NvVO"),
-                d = n("2xye"),
+                d = n("NvVO"),
+                m = n("2xye"),
                 u = n("GnwI"),
                 l = n("Ue10"),
                 g = Object(c.compose)(Object(u.b)("DevCompanyAccessPending", {
                     autoReportInteractive: !0,
-                    destination: m.a.DevSiteApplicationSubmitted
+                    destination: d.a.DevSiteApplicationSubmitted
                 }), Object(p.a)({
-                    location: d.PageviewLocation.DevSiteCompanyApplicationSubmitted
+                    location: m.PageviewLocation.DevSiteCompanyApplicationSubmitted
                 }))(function(e) {
-                    return e.isLoggedIn ? o.createElement(l.Wa, {
+                    return e.isLoggedIn ? o.createElement(l.Xa, {
                         className: "dev-company-access-pending",
                         fullWidth: !0,
                         margin: {
                             top: 3
                         }
-                    }, o.createElement(l.mb, {
+                    }, o.createElement(l.nb, {
                         centered: !0
-                    }, o.createElement(l.Wa, {
-                        textAlign: l.Jb.Center,
+                    }, o.createElement(l.Xa, {
+                        textAlign: l.Kb.Center,
                         margin: {
                             bottom: 2
                         }
                     }, o.createElement(l.W, {
-                        type: l.Nb.H2
-                    }, Object(s.d)("Your request is in progress!", "DevCompanyRequestPending"))), o.createElement(l.Wa, {
-                        textAlign: l.Jb.Center,
+                        type: l.Ob.H2
+                    }, Object(s.d)("Your request is in progress!", "DevCompanyRequestPending"))), o.createElement(l.Xa, {
+                        textAlign: l.Kb.Center,
                         margin: {
                             bottom: 2
                         }
-                    }, o.createElement(l.W, null, Object(s.d)("Please expect your access in 2-3 business days while we confirm your authorization to manage the game titles of the company you specified. We will send you a confirmation email using the address you provided. Be sure to check your spam filter if you haven't received a response in that timeframe.", "DevCompanyRequestPending"))), o.createElement(l.Wa, {
-                        textAlign: l.Jb.Center
+                    }, o.createElement(l.W, null, Object(s.d)("Please expect your access in 2-3 business days while we confirm your authorization to manage the game titles of the company you specified. We will send you a confirmation email using the address you provided. Be sure to check your spam filter if you haven't received a response in that timeframe.", "DevCompanyRequestPending"))), o.createElement(l.Xa, {
+                        textAlign: l.Kb.Center
                     }, o.createElement(l.U, {
                         to: "/console"
                     }, Object(s.d)("Click here to return to your dashboard!", "DevCompanyRequestPending"))))) : o.createElement(r.a, {

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [126], {
+    [125], {
         "/guG": function(e, n, a) {
             "use strict";
             a.d(n, "b", function() {
@@ -152,7 +152,7 @@
                         if (!e || 0 === e.length) return null;
                         var n = [];
                         return e.forEach(function(e) {
-                            e.id && e.profileImageURL && n.push(i.createElement(h.Wa, {
+                            e.id && e.profileImageURL && n.push(i.createElement(h.Xa, {
                                 key: e.id,
                                 margin: {
                                     right: 1
@@ -167,32 +167,32 @@
                             delay: h.j.Medium,
                             duration: h.k.Medium,
                             enabled: !0
-                        }, i.createElement(h.xb, {
+                        }, i.createElement(h.yb, {
                             display: h.X.Flex,
                             background: h.r.AccentAlt2,
                             alignItems: h.f.Center,
                             padding: 1
-                        }, i.createElement(h.xb, {
+                        }, i.createElement(h.yb, {
                             display: h.X.Flex,
                             color: h.O.Overlay
-                        }, n), i.createElement(h.Wa, null, i.createElement(h.W, {
+                        }, n), i.createElement(h.Xa, null, i.createElement(h.W, {
                             noWrap: !0,
-                            type: h.Nb.Span,
+                            type: h.Ob.Span,
                             color: h.O.Overlay,
-                            fontSize: h.Ba.Size5
+                            fontSize: h.Ca.Size5
                         }, Object(d.d)("{squadLeader} is Squad Streaming", {
                             squadLeader: i.createElement(h.W, {
                                 bold: !0,
                                 noWrap: !0,
-                                type: h.Nb.Span,
+                                type: h.Ob.Span,
                                 color: h.O.Overlay,
-                                fontSize: h.Ba.Size5
+                                fontSize: h.Ca.Size5
                             }, this.props.channelDisplayName || this.props.channelLogin)
-                        }, "SquadStreamBanner"))), i.createElement(h.Wa, {
+                        }, "SquadStreamBanner"))), i.createElement(h.Xa, {
                             display: h.X.Flex,
                             alignItems: h.f.Start,
                             flexGrow: 1
-                        }), i.createElement(h.Wa, {
+                        }), i.createElement(h.Xa, {
                             margin: {
                                 left: 1
                             }

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [136], {
+    [135], {
         Rpd6: function(t, e, n) {
             "use strict";
             n.r(e);
@@ -73,22 +73,22 @@
                                 selected: this.state.selectedValue === d.AppSettingsIntegrationCloseOption.Close
                             }];
                         return i.createElement(c.a, {
-                            orientation: u.Ea.Horizontal,
+                            orientation: u.Fa.Horizontal,
                             label: Object(r.d)("When I Close the App", "DesktopSettingCloseOption"),
                             error: this.state.error
-                        }, i.createElement(u.Wa, {
+                        }, i.createElement(u.Xa, {
                             display: u.X.Flex,
-                            flexDirection: u.Z.Row
+                            flexDirection: u.Aa.Row
                         }, n.map(function(n) {
                             var s = "desktop-close-option:" + n.label;
-                            return i.createElement(u.Wa, {
+                            return i.createElement(u.Xa, {
                                 key: s,
                                 margin: {
                                     right: 2
                                 },
                                 display: u.X.Flex,
-                                flexDirection: u.Z.Row
-                            }, i.createElement(u.kb, {
+                                flexDirection: u.Aa.Row
+                            }, i.createElement(u.lb, {
                                 checked: n.selected,
                                 value: n.value,
                                 label: n.label,

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [182], {
+    [180], {
         "0Ex5": function(e, n) {
             var t = {
                 kind: "Document",
@@ -439,27 +439,27 @@
                             n = this.getAvailableToken();
                         if (this.renderedTokenID = n ? n.id : null, !n) return null;
                         var t = u.map(function(n) {
-                            return a.createElement(o.Wa, {
+                            return a.createElement(o.Xa, {
                                 key: n.id,
                                 flexShrink: 0,
                                 margin: {
                                     right: .5
                                 }
-                            }, a.createElement(o.Qb, {
+                            }, a.createElement(o.Rb, {
                                 label: n.alt
-                            }, a.createElement(o.Ta, {
-                                type: o.Ua.Alpha,
+                            }, a.createElement(o.Ua, {
+                                type: o.Va.Alpha,
                                 onClick: e.onEmoteClick,
                                 "data-emote-string": n.alt,
                                 "data-test-selector": "emote-button"
-                            }, a.createElement(o.Wa, {
+                            }, a.createElement(o.Xa, {
                                 padding: .5
                             }, a.createElement("img", {
                                 className: "new-chatter-ritual__emote",
                                 src: Object(s.d)(n.id, 3)
                             })))))
                         });
-                        return a.createElement(o.xb, {
+                        return a.createElement(o.yb, {
                             background: o.r.Base,
                             border: !0,
                             className: "new-chatter-ritual",
@@ -471,21 +471,21 @@
                                 left: .5,
                                 y: .5
                             }
-                        }, a.createElement(o.Wa, {
+                        }, a.createElement(o.Xa, {
                             alignItems: o.f.Center,
                             display: o.X.Flex,
-                            flexWrap: o.Aa.NoWrap
-                        }, a.createElement(o.Wa, {
+                            flexWrap: o.Ba.NoWrap
+                        }, a.createElement(o.Xa, {
                             flexShrink: 1,
                             margin: {
                                 right: .5
                             }
-                        }, this.props.bannerMessage), t, a.createElement(o.xb, {
+                        }, this.props.bannerMessage), t, a.createElement(o.yb, {
                             borderLeft: !0,
                             flexShrink: 0
                         }, a.createElement(o.A, {
                             ariaLabel: "close",
-                            icon: o.ob.Close,
+                            icon: o.pb.Close,
                             onClick: this.onCloseButtonClick,
                             size: o.B.Large,
                             "data-test-selector": "dismiss-button"

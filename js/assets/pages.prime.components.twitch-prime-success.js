@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [169], {
+    [167], {
         "+U0Y": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -118,21 +118,21 @@
                 s = n("Ue10"),
                 c = function(e) {
                     var t = e.tags;
-                    return void 0 !== e.tagNumberLimit && e.tagNumberLimit > 0 && (t = t.slice(0, e.tagNumberLimit)), a.createElement(s.Wa, {
+                    return void 0 !== e.tagNumberLimit && e.tagNumberLimit > 0 && (t = t.slice(0, e.tagNumberLimit)), a.createElement(s.Xa, {
                         display: s.X.InlineBlock,
                         fullWidth: !0
                     }, t.map(function(t) {
                         var n = r.__assign({}, e.linkTo) || {};
                         e.linkPath && (n.pathname = e.linkPath), n.pathname && (n.pathname = n.pathname.replace(":tagID", t.id));
-                        return a.createElement(s.xb, {
+                        return a.createElement(s.yb, {
                             key: t.id,
-                            fontSize: s.Ba.Size7,
+                            fontSize: s.Ca.Size7,
                             display: s.X.InlineBlock,
                             margin: {
                                 right: .5,
                                 bottom: .5
                             }
-                        }, a.createElement(s.Gb, {
+                        }, a.createElement(s.Hb, {
                             label: t.localizedName,
                             type: e.style,
                             linkTo: Object(i.a)({
@@ -176,6 +176,22 @@
                                 value: "Time"
                             }
                         }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "countryCode"
+                            }
+                        },
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
                     }],
                     directives: [],
                     selectionSet: {
@@ -197,6 +213,19 @@
                                     name: {
                                         kind: "Name",
                                         value: "dateOverride"
+                                    }
+                                }
+                            }, {
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "countryCode"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "countryCode"
                                     }
                                 }
                             }],
@@ -238,11 +267,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 138
+                    end: 185
                 }
             };
             n.loc.source = {
-                body: "query Prime_PrimeOffers_ClaimedPrimeOffer($dateOverride: Time) {\nprimeOffers(dateOverride: $dateOverride) {\nid\nself {\nhasEntitlement\n}\n}\n}",
+                body: "query Prime_PrimeOffers_ClaimedPrimeOffer($dateOverride: Time $countryCode: String) {\nprimeOffers(dateOverride: $dateOverride countryCode: $countryCode) {\nid\nself {\nhasEntitlement\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -451,7 +480,7 @@
                     return r
                 }),
                 function(e) {
-                    e.Channels = "channels", e.ChannelsPlaystation = "channels-playstation", e.ChannelsXbox = "channels-xbox", e.Communities = "communities", e.CreativeCommunities = "creative-communities", e.Games = "games"
+                    e.Channels = "channels", e.Games = "games"
                 }(r || (r = {}))
         },
         A65o: function(e, t, n) {
@@ -520,8 +549,8 @@
                 f = n("uzin"),
                 v = n("/MKj"),
                 k = n("OhOW"),
-                b = n("oB8h"),
-                y = n("rShu"),
+                y = n("oB8h"),
+                b = n("rShu"),
                 w = n("hX9f"),
                 C = n("Ue10"),
                 T = n("bk9Q"),
@@ -536,7 +565,7 @@
                     }, t.prototype.render = function() {
                         var e = this.props.data;
                         if (e.error) return null;
-                        if (e.loading) return a.createElement(C.Wa, null, a.createElement(C.Ya, {
+                        if (e.loading) return a.createElement(C.Xa, null, a.createElement(C.Za, {
                             fillContent: !0
                         }));
                         var t = e.directory,
@@ -547,13 +576,13 @@
                                 var n = P(e);
                                 if (n) return a.createElement(w.b, {
                                     directoryName: "fortnite",
-                                    directoryType: y.a.Games,
+                                    directoryType: b.a.Games,
                                     streamIndex: t,
                                     streamNode: n,
                                     key: n.id
                                 })
                             });
-                        return a.createElement(C.Wa, {
+                        return a.createElement(C.Xa, {
                             className: "twitch-prime-streamers__tower",
                             flexShrink: 0,
                             "data-target": "twitch-prime-streamers",
@@ -564,32 +593,32 @@
                             margin: {
                                 x: "auto"
                             }
-                        }, a.createElement(C.Wa, {
+                        }, a.createElement(C.Xa, {
                             margin: {
                                 y: 1
                             },
                             className: "twitch-prime-streamers__count"
                         }, a.createElement(C.W, {
-                            type: C.Nb.H3,
+                            type: C.Ob.H3,
                             color: C.O.Link,
                             bold: !0
                         }, Object(s.d)("Check out Fortnite on Twitch.tv", "TwitchPrimeStreamers")), a.createElement(C.W, {
-                            type: C.Nb.H4,
+                            type: C.Ob.H4,
                             color: C.O.Link
                         }, Object(s.d)("{viewers, number} viewers right now", {
                             viewers: e.directory && e.directory.viewersCount || 0
-                        }, "TwitchPrimeStreamers"))), a.createElement(C.Tb, {
-                            gutterSize: C.Vb.Small,
-                            childWidth: C.Ub.Large,
+                        }, "TwitchPrimeStreamers"))), a.createElement(C.Ub, {
+                            gutterSize: C.Wb.Small,
+                            childWidth: C.Vb.Large,
                             children: n,
                             "data-test-selector": "twitch-prime-streamers-tower",
                             center: !0
-                        }), a.createElement(C.Wa, {
+                        }), a.createElement(C.Xa, {
                             margin: {
                                 y: 1
                             },
                             className: "twitch-prime-streamers__game-page",
-                            textAlign: C.Jb.Center
+                            textAlign: C.Kb.Center
                         }, a.createElement(C.U, {
                             to: "/directory/game/Fortnite",
                             hoverUnderlineNone: !0,
@@ -613,7 +642,7 @@
                             profileImageURL: ""
                         } : null,
                         game: null,
-                        type: b.a.Live
+                        type: y.a.Live
                     }), t
                 },
                 E = Object(i.compose)(Object(m.b)("TwitchPrimeStreamers"), Object(c.a)(T, {
@@ -634,8 +663,8 @@
                     }
                 }, null)(E),
                 S = n("nNY8"),
-                x = n("2BM9"),
-                N = (n("QINq"), function(e) {
+                N = n("2BM9"),
+                x = (n("QINq"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getFortniteOffer = function() {
@@ -654,44 +683,44 @@
                         !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this.props.data;
-                        if (e && e.loading) return a.createElement(C.Ya, {
+                        if (e && e.loading) return a.createElement(C.Za, {
                             fillContent: !0
                         });
                         var t = this.getFortniteOffer();
                         return e && e.error || !t || !t.self || !t.self.hasEntitlement ? a.createElement(o.a, {
                             to: "/prime/fortnite"
-                        }) : a.createElement(C.Wa, {
+                        }) : a.createElement(C.Xa, {
                             className: "twitch-prime-success",
                             "data-test-selector": "twitch-prime-success-page"
-                        }, a.createElement(C.Wa, {
-                            textAlign: C.Jb.Center,
+                        }, a.createElement(C.Xa, {
+                            textAlign: C.Kb.Center,
                             className: "twitch-prime-success__header"
                         }, a.createElement(f.a, {
                             renderOfferImage: !0
-                        }, a.createElement(C.Wa, null, a.createElement(C.Wa, {
+                        }, a.createElement(C.Xa, null, a.createElement(C.Xa, {
                             margin: {
                                 y: 2
                             }
                         }, a.createElement(C.W, {
-                            type: C.Nb.H1,
+                            type: C.Ob.H1,
                             color: C.O.Overlay,
-                            transform: C.Mb.Uppercase,
+                            transform: C.Nb.Uppercase,
                             bold: !0
-                        }, Object(s.d)("Loot acquired!", "FortniteSuccess"))), a.createElement(C.Wa, {
+                        }, Object(s.d)("Loot acquired!", "FortniteSuccess"))), a.createElement(C.Xa, {
                             margin: {
                                 y: 2
                             }
                         }, a.createElement(C.W, {
-                            type: C.Nb.H3,
+                            type: C.Ob.H3,
                             color: C.O.Overlay,
-                            transform: C.Mb.Uppercase,
+                            transform: C.Nb.Uppercase,
                             bold: !0
-                        }, Object(s.d)("Load up Fortnite and your rewards will be waiting for you!", "FortniteSuccess")))), a.createElement(C.Wa, {
+                        }, Object(s.d)("Load up Fortnite and your rewards will be waiting for you!", "FortniteSuccess")))), a.createElement(C.Xa, {
                             padding: {
                                 y: 2
                             }
                         }, a.createElement(C.W, {
-                            type: C.Nb.H3,
+                            type: C.Ob.H3,
                             color: C.O.Overlay,
                             bold: !0
                         }, Object(s.d)("Problems? <x:link>Click here ›</x:link>", {
@@ -710,11 +739,12 @@
                         }))
                     }, t
                 }(a.Component)),
-                O = Object(i.compose)(Object(c.a)(x, {
+                O = Object(i.compose)(Object(c.a)(N, {
                     options: function() {
                         return {
                             variables: {
-                                dateOverride: Object(h.f)()
+                                dateOverride: Object(h.i)(h.f.DateOverride),
+                                countryCode: Object(h.i)(h.f.CountryCode)
                             }
                         }
                     }
@@ -722,11 +752,11 @@
                     destination: d.a.TwitchPrimeSuccessPage
                 }), Object(l.a)({
                     location: u.PageviewLocation.TwitchPrimeSuccessPage
-                }))(N);
+                }))(x);
             n.d(t, "TEST_SELECTOR", function() {
                 return "twitch-prime-success-page"
             }), n.d(t, "TwitchPrimeSuccessPageComponent", function() {
-                return N
+                return x
             }), n.d(t, "TwitchPrimeSuccessPage", function() {
                 return O
             })
@@ -751,54 +781,54 @@
                             src: this.props.gameChange.thumbnailUrl,
                             alt: this.props.gameChange.label
                         };
-                        return a.createElement(s.Wa, {
+                        return a.createElement(s.Xa, {
                             className: "preview-card-game-balloon-row",
                             display: s.X.Flex,
-                            flexWrap: s.Aa.NoWrap
-                        }, a.createElement(s.Ta, {
+                            flexWrap: s.Ba.NoWrap
+                        }, a.createElement(s.Ua, {
                             linkTo: this.props.gameChange.linkTo,
                             onClick: this.onBalloonItemClick
-                        }, a.createElement(s.Wa, {
+                        }, a.createElement(s.Xa, {
                             display: s.X.Flex,
-                            flexDirection: s.Z.Row,
+                            flexDirection: s.Aa.Row,
                             padding: .5
-                        }, a.createElement(s.xb, {
+                        }, a.createElement(s.yb, {
                             className: "preview-card-game-balloon-row__image-wrapper",
                             flexGrow: 0,
                             flexShrink: 0,
                             borderRadius: s.x.Small,
-                            overflow: s.Za.Hidden,
-                            position: s.eb.Relative
+                            overflow: s.ab.Hidden,
+                            position: s.fb.Relative
                         }, a.createElement(s.o, {
                             align: s.d.Center,
                             ratio: s.p.BoxArt
-                        }, a.createElement(s.S, r.__assign({}, e))), a.createElement(s.xb, {
+                        }, a.createElement(s.S, r.__assign({}, e))), a.createElement(s.yb, {
                             className: "preview-card-game-balloon-row__image-play-overlay",
                             alignItems: s.f.Center,
                             background: s.r.Overlay,
                             color: s.O.Overlay,
                             display: s.X.Flex,
-                            justifyContent: s.Va.Center,
-                            position: s.eb.Absolute,
+                            justifyContent: s.Wa.Center,
+                            position: s.fb.Absolute,
                             attachTop: !0,
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0
-                        }, a.createElement(s.nb, {
-                            asset: s.ob.Play,
-                            type: s.pb.Inherit
-                        }))), a.createElement(s.Wa, {
+                        }, a.createElement(s.ob, {
+                            asset: s.pb.Play,
+                            type: s.qb.Inherit
+                        }))), a.createElement(s.Xa, {
                             display: s.X.Flex,
-                            flexDirection: s.Z.Column,
+                            flexDirection: s.Aa.Column,
                             flexGrow: 1,
                             flexShrink: 1,
                             padding: {
                                 left: 1,
                                 top: 1
                             }
-                        }, a.createElement(s.Wa, {
+                        }, a.createElement(s.Xa, {
                             className: "preview-card-game-balloon-row__info-label"
-                        }, a.createElement(s.W, null, this.props.gameChange.label)), a.createElement(s.Wa, {
+                        }, a.createElement(s.W, null, this.props.gameChange.label)), a.createElement(s.Xa, {
                             className: "preview-card-game-balloon-row__info-duration"
                         }, a.createElement(s.W, null, Object(o.b)(this.props.gameChange.duration)))))))
                     }, t
@@ -821,10 +851,10 @@
                             Object(l.a)(e)
                         }
                     }, t.prototype.render = function() {
-                        return a.createElement(s.Wa, {
+                        return a.createElement(s.Xa, {
                             className: "preview-card-game-balloon",
                             display: s.X.InlineBlock,
-                            position: s.eb.Relative,
+                            position: s.fb.Relative,
                             margin: {
                                 top: .5
                             }
@@ -834,41 +864,41 @@
                             onToggle: this.onBalloonToggle
                         }, a.createElement(s.z, {
                             type: s.F.Hollow,
-                            icon: s.ob.ViewerList
-                        }, a.createElement(s.Wa, {
+                            icon: s.pb.ViewerList
+                        }, a.createElement(s.Xa, {
                             display: s.X.Flex,
-                            flexDirection: s.Z.Row
-                        }, a.createElement(s.W, null, Object(i.d)("Chapters", "PreviewCardGameBalloon")), a.createElement(s.Wa, {
+                            flexDirection: s.Aa.Row
+                        }, a.createElement(s.W, null, Object(i.d)("Chapters", "PreviewCardGameBalloon")), a.createElement(s.Xa, {
                             margin: {
                                 left: 1
                             }
-                        }, a.createElement(s.bb, {
+                        }, a.createElement(s.cb, {
                             label: this.props.videoGameChanges.length.toString()
                         })))), a.createElement(s.u, {
                             direction: s.v.TopLeft,
                             size: s.w.Medium
-                        }, a.createElement(s.Wa, {
-                            overflow: s.Za.Hidden,
+                        }, a.createElement(s.Xa, {
+                            overflow: s.ab.Hidden,
                             display: s.X.Flex,
-                            flexDirection: s.Z.Column,
-                            flexWrap: s.Aa.NoWrap
-                        }, a.createElement(s.Wa, {
+                            flexDirection: s.Aa.Column,
+                            flexWrap: s.Ba.NoWrap
+                        }, a.createElement(s.Xa, {
                             padding: .5,
                             flexShrink: 0,
                             flexGrow: 0
                         }, a.createElement(s.W, {
                             color: s.O.Alt2
-                        }, Object(i.d)("Chapter Select", "PreviewCardGameBalloon"))), a.createElement(s.Wa, {
+                        }, Object(i.d)("Chapter Select", "PreviewCardGameBalloon"))), a.createElement(s.Xa, {
                             className: "preview-card-game-balloon__content",
                             display: s.X.Flex,
-                            flexDirection: s.Z.Column,
+                            flexDirection: s.Aa.Column,
                             flexGrow: 1,
                             flexShrink: 1,
-                            flexWrap: s.Aa.NoWrap
-                        }, a.createElement(d.b, null, a.createElement(s.Wa, {
+                            flexWrap: s.Ba.NoWrap
+                        }, a.createElement(d.b, null, a.createElement(s.Xa, {
                             display: s.X.Flex,
-                            flexDirection: s.Z.Column,
-                            flexWrap: s.Aa.NoWrap,
+                            flexDirection: s.Aa.Column,
+                            flexWrap: s.Ba.NoWrap,
                             fullHeight: !0
                         }, this.renderAdditionalGameList(this.props.videoGameChanges))))))))
                     }, t.prototype.renderAdditionalGameList = function(e) {
@@ -887,11 +917,11 @@
                 p = n("kduP"),
                 g = n("2xye"),
                 h = function(e) {
-                    return a.createElement(s.Wa, null, a.createElement(s.W, {
+                    return a.createElement(s.Xa, null, a.createElement(s.W, {
                         color: s.O.Alt,
                         ellipsis: !0
                     }, e.videoGameChanges.map(function(t, n, r) {
-                        return a.createElement(s.Oa, {
+                        return a.createElement(s.Pa, {
                             key: n
                         }, a.createElement(s.U, {
                             to: {
@@ -910,10 +940,10 @@
                 },
                 v = n("N0BP"),
                 k = (n("XA5B"), function(e) {
-                    var t = a.createElement(s.xb, {
+                    var t = a.createElement(s.yb, {
                         className: "preview-card-iconic-image__wrapper",
                         borderRadius: s.x.Small,
-                        overflow: s.Za.Hidden
+                        overflow: s.ab.Hidden
                     }, a.createElement(s.o, {
                         ratio: e.aspect || s.p.BoxArt,
                         align: s.d.Center
@@ -924,29 +954,29 @@
                     }), t)), t
                 });
             k.displayName = "PreviewCardIconicImage";
-            var b, y = n("TSYQ"),
+            var y, b = n("TSYQ"),
                 w = (n("cRsL"), function(e) {
-                    var t = y("preview-card-top-bar", {
+                    var t = b("preview-card-top-bar", {
                         "preview-card-top-bar--gray": !e.selected,
                         "preview-card-top-bar--green": e.selected
                     });
-                    return a.createElement(s.Wa, {
+                    return a.createElement(s.Xa, {
                         display: s.X.Flex,
                         padding: {
                             x: 1,
                             y: .5
                         },
-                        justifyContent: s.Va.Between,
+                        justifyContent: s.Wa.Between,
                         alignItems: s.f.Center,
                         className: t
-                    }, a.createElement(s.Wa, {
+                    }, a.createElement(s.Xa, {
                         display: s.X.InlineFlex
                     }, a.createElement(s.W, {
                         "data-test-selector": "top-bar-title-selector",
                         color: s.O.Overlay,
                         bold: !0,
-                        transform: s.Mb.Uppercase
-                    }, e.title)), e.subTitle && a.createElement(s.Wa, {
+                        transform: s.Nb.Uppercase
+                    }, e.title)), e.subTitle && a.createElement(s.Xa, {
                         display: s.X.InlineFlex
                     }, a.createElement(s.W, {
                         "data-test-selector": "top-bar-sub-title-selector",
@@ -956,31 +986,31 @@
                 C = (n("m493"), function(e) {
                     var t = .5,
                         n = null;
-                    "number" == typeof e.progressBarPercent && e.progressBarPercent > 0 && (n = a.createElement(s.Wa, {
-                        position: s.eb.Absolute,
+                    "number" == typeof e.progressBarPercent && e.progressBarPercent > 0 && (n = a.createElement(s.Xa, {
+                        position: s.fb.Absolute,
                         attachBottom: !0,
                         fullWidth: !0
-                    }, a.createElement(s.hb, {
+                    }, a.createElement(s.ib, {
                         borderRadius: s.x.None,
-                        size: s.jb.Small,
+                        size: s.kb.Small,
                         value: e.progressBarPercent,
                         mask: !0
                     })), t = 1);
                     var i = 1,
                         o = null;
-                    return e.topBar && (o = a.createElement(s.Wa, {
-                        position: s.eb.Absolute,
+                    return e.topBar && (o = a.createElement(s.Xa, {
+                        position: s.fb.Absolute,
                         attachTop: !0,
                         fullWidth: !0
-                    }, a.createElement(w, r.__assign({}, e.topBar))), i = 3), a.createElement(s.Wa, {
-                        position: s.eb.Absolute,
+                    }, a.createElement(w, r.__assign({}, e.topBar))), i = 3), a.createElement(s.Xa, {
+                        position: s.fb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
                         className: "preview-card-overlay"
-                    }, o, n, a.createElement(s.Wa, {
-                        position: s.eb.Absolute,
+                    }, o, n, a.createElement(s.Xa, {
+                        position: s.fb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         margin: e.topBar ? {
@@ -988,8 +1018,8 @@
                             y: i
                         } : 1,
                         "data-test-selector": "top-left-selector"
-                    }, e.topLeft), a.createElement(s.Wa, {
-                        position: s.eb.Absolute,
+                    }, e.topLeft), a.createElement(s.Xa, {
+                        position: s.fb.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         margin: e.topBar ? {
@@ -997,8 +1027,8 @@
                             y: i
                         } : 1,
                         "data-test-selector": "top-right-selector"
-                    }, e.topRight), a.createElement(s.Wa, {
-                        position: s.eb.Absolute,
+                    }, e.topRight), a.createElement(s.Xa, {
+                        position: s.fb.Absolute,
                         attachBottom: !0,
                         attachLeft: !0,
                         margin: {
@@ -1006,8 +1036,8 @@
                             y: t
                         },
                         "data-test-selector": "bottom-left-selector"
-                    }, e.bottomLeft), a.createElement(s.Wa, {
-                        position: s.eb.Absolute,
+                    }, e.bottomLeft), a.createElement(s.Xa, {
+                        position: s.fb.Absolute,
                         attachBottom: !0,
                         attachRight: !0,
                         margin: {
@@ -1018,26 +1048,26 @@
                     }, e.bottomRight))
                 }),
                 T = (n("kF1+"), function(e) {
-                    var t = e.icon && a.createElement(s.Wa, {
+                    var t = e.icon && a.createElement(s.Xa, {
                         display: s.X.Flex,
                         margin: {
                             right: .5
                         }
-                    }, a.createElement(s.nb, {
+                    }, a.createElement(s.ob, {
                         asset: e.icon,
                         width: 10,
                         height: 10
                     }));
-                    return e.withBackground ? a.createElement(s.xb, {
+                    return e.withBackground ? a.createElement(s.yb, {
                         alignItems: s.f.Center,
                         background: s.r.Overlay,
                         borderRadius: s.x.Small,
                         className: "preview-card-stat",
                         color: s.O.Overlay,
                         display: s.X.Flex,
-                        fontSize: s.Ba.Size6,
-                        justifyContent: s.Va.Center
-                    }, t, a.createElement(s.W, null, e.value)) : a.createElement(s.xb, {
+                        fontSize: s.Ca.Size6,
+                        justifyContent: s.Wa.Center
+                    }, t, a.createElement(s.W, null, e.value)) : a.createElement(s.yb, {
                         className: "preview-card-stat",
                         color: s.O.Overlay,
                         display: s.X.Flex,
@@ -1087,15 +1117,15 @@
                             onBlur: this.handleBlur
                         }), a.createElement("div", r.__assign({}, e, {
                             onClick: this.props.onClick
-                        }), a.createElement(s.xb, {
+                        }), a.createElement(s.yb, {
                             background: s.r.Alt2,
-                            overflow: s.Za.Hidden
+                            overflow: s.ab.Hidden
                         }, a.createElement(s.o, {
                             ratio: this.props.aspectRatio
                         }, this.renderImage())))
                     }, t.prototype.renderImage = function() {
                         var e, t = !(!this.props.animatedImageProps || !this.state.isHovered || this.state.didAnimatedPreviewFailToLoad),
-                            n = y("preview-card-thumbnail__image", ((e = {})["preview-card-thumbnail__image--animated"] = this.state.isHovered && this.state.didAnimatedPreviewLoad, e));
+                            n = b("preview-card-thumbnail__image", ((e = {})["preview-card-thumbnail__image--animated"] = this.state.isHovered && this.state.didAnimatedPreviewLoad, e));
                         return t && void 0 !== this.props.animatedImageProps ? a.createElement("div", {
                             className: n
                         }, a.createElement(s.S, r.__assign({}, this.props.animatedImageProps, {
@@ -1115,7 +1145,7 @@
                 I = (n("80G/"), function(e) {
                     var t = null;
                     return e.subtitles && e.subtitles.length > 0 && (t = e.subtitles.map(function(e, t) {
-                        return a.createElement(s.Wa, {
+                        return a.createElement(s.Xa, {
                             key: t,
                             "data-test-selector": "preview-card-titles__subtitle"
                         }, a.createElement(s.W, {
@@ -1133,25 +1163,25 @@
                         type: s.V.Inherit,
                         "data-test-selector": "preview-card-titles__primary-link"
                     }), a.createElement(s.W, {
-                        type: s.Nb.H3,
-                        fontSize: s.Ba.Size5,
+                        type: s.Ob.H3,
+                        fontSize: s.Ca.Size5,
                         lines: 1,
                         bold: !0,
                         ellipsis: !0
-                    }, e.title)), a.createElement(s.Wa, {
+                    }, e.title)), a.createElement(s.Xa, {
                         className: "preview-card-titles__subtitle-wrapper"
                     }, t))
                 }),
                 S = n("H1ft"),
-                x = n("ZbA5"),
-                N = n("QVaV"),
+                N = n("ZbA5"),
+                x = n("QVaV"),
                 O = n("hyVY"),
                 A = n("MXoD"),
                 L = n("0LAi");
             ! function(e) {
                 e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
-            }(b || (b = {}));
-            var F, D, G = function(e) {
+            }(y || (y = {}));
+            var F, D, j = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1160,62 +1190,62 @@
                     var e = Object(i.d)("Get It Now", "VideoPreviewCardRestriction"),
                         t = this.props.restriction.canViewRestricted,
                         n = t ? Object(i.d)("unlocked", "VideoPreviewCardRestriction") : Object(i.d)("locked", "VideoPreviewCardRestriction"),
-                        r = t ? s.ob.Unlock : s.ob.Lock;
-                    return a.createElement(s.Wa, null, !t && a.createElement(s.xb, {
+                        r = t ? s.pb.Unlock : s.pb.Lock;
+                    return a.createElement(s.Xa, null, !t && a.createElement(s.yb, {
                         background: s.r.Overlay,
                         className: "video-preview-card-restriction",
                         color: s.O.Overlay,
                         display: s.X.Flex,
-                        position: s.eb.Absolute,
+                        position: s.fb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
-                        zIndex: s.ac.Default,
+                        zIndex: s.bc.Default,
                         padding: {
                             x: 5
                         },
-                        textAlign: s.Jb.Center,
+                        textAlign: s.Kb.Center,
                         fullWidth: !0,
                         fullHeight: !0,
                         alignItems: s.f.Center,
                         alignContent: s.e.Center,
-                        flexDirection: s.Z.Column,
-                        flexWrap: s.Aa.Wrap,
-                        justifyContent: s.Va.Center,
-                        "data-test-selector": b.LockSelector
-                    }, a.createElement(s.Oa, {
+                        flexDirection: s.Aa.Column,
+                        flexWrap: s.Ba.Wrap,
+                        justifyContent: s.Wa.Center,
+                        "data-test-selector": y.LockSelector
+                    }, a.createElement(s.Pa, {
                         margin: {
                             bottom: 1
                         }
                     }, a.createElement(s.W, {
                         color: s.O.Overlay,
-                        fontSize: s.Ba.Size5,
-                        "data-test-selector": b.UpsellSelector
+                        fontSize: s.Ca.Size5,
+                        "data-test-selector": y.UpsellSelector
                     }, Object(i.d)("View with {title}", {
                         title: this.props.restriction.title
-                    }, "VideoPreviewCardRestriction"))), a.createElement(s.Wa, null, a.createElement(s.z, {
+                    }, "VideoPreviewCardRestriction"))), a.createElement(s.Xa, null, a.createElement(s.z, {
                         type: s.F.Hollow,
                         ariaLabel: e,
                         targetBlank: !0,
                         disabled: "" === this.props.restriction.upsellLinkTo,
                         linkTo: this.props.restriction.upsellLinkTo,
                         overlay: !0
-                    }, e))), a.createElement(s.xb, {
+                    }, e))), a.createElement(s.yb, {
                         display: s.X.InlineFlex,
-                        position: s.eb.Absolute,
+                        position: s.fb.Absolute,
                         attachTop: this.props.attachTop,
                         attachBottom: !this.props.attachTop,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: s.ac.Default,
-                        fontSize: s.Ba.Size6,
+                        zIndex: s.bc.Default,
+                        fontSize: s.Ca.Size6,
                         background: s.r.Overlay,
                         borderRadius: s.x.Medium,
                         color: s.O.Overlay
-                    }, a.createElement(s.Qb, {
-                        direction: this.props.attachTop ? s.Sb.Bottom : s.Sb.Top,
-                        align: s.Rb.Right,
+                    }, a.createElement(s.Rb, {
+                        direction: this.props.attachTop ? s.Tb.Bottom : s.Tb.Top,
+                        align: s.Sb.Right,
                         label: n
-                    }, a.createElement(s.nb, {
+                    }, a.createElement(s.ob, {
                         asset: r,
                         height: 20,
                         width: 20
@@ -1224,11 +1254,11 @@
             }(a.PureComponent);
             n("5NSO");
 
-            function j(e) {
+            function G(e) {
                 return void 0 !== e.watchedProgressPercent
             }
 
-            function W(e) {
+            function M(e) {
                 return void 0 !== e.clipCreatedByChannelLogin
             }! function(e) {
                 e.Avatar = "preview-card-avatar", e.BoxArt = "preview-card-box-art"
@@ -1236,7 +1266,7 @@
             function(e) {
                 e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
             }(D || (D = {}));
-            var M = function(e) {
+            var B = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getTrackingContext = function(e) {
@@ -1250,32 +1280,32 @@
                     return r.__extends(t, e), t.prototype.render = function() {
                         return a.createElement("div", r.__assign({
                             className: "preview-card"
-                        }, Object(v.a)(this.props)), a.createElement(s.xb, {
-                            position: s.eb.Relative,
+                        }, Object(v.a)(this.props)), a.createElement(s.yb, {
+                            position: s.fb.Relative,
                             borderRadius: s.x.Medium,
-                            overflow: s.Za.Hidden
+                            overflow: s.ab.Hidden
                         }, this.renderVODRestrictionOverlay(), a.createElement(s.U, {
                             to: Object(A.a)(this.getTrackingContext(g.PageviewContent.VideoThumbnail), this.props.linkTo),
                             onClick: this.props.onThumbnailClick || this.props.onClick,
                             "data-a-target": "preview-card-image-link"
                         }, this.props.thumbnailImageProps && a.createElement(E, {
                             staticImageProps: this.props.thumbnailImageProps,
-                            animatedImageProps: j(this.props) && this.props.animatedImageProps || void 0,
+                            animatedImageProps: G(this.props) && this.props.animatedImageProps || void 0,
                             trackImageLatency: this.props.trackImageLatency
-                        }), this.renderOverlay())), a.createElement(s.Wa, {
+                        }), this.renderOverlay())), a.createElement(s.Xa, {
                             display: s.X.Flex,
-                            flexWrap: s.Aa.NoWrap,
+                            flexWrap: s.Ba.NoWrap,
                             margin: {
                                 top: 1
                             }
-                        }, a.createElement(s.Wa, {
+                        }, a.createElement(s.Xa, {
                             flexGrow: 0,
                             flexShrink: 0
-                        }, this.renderIconicImage()), a.createElement(s.Wa, {
+                        }, this.renderIconicImage()), a.createElement(s.Xa, {
                             className: "preview-card__titles-wrapper",
                             flexGrow: 1,
                             flexShrink: 1
-                        }, this.renderTitles(), this.renderTags()), this.props.contextualCardActionProps && a.createElement(s.Wa, {
+                        }, this.renderTitles(), this.renderTags()), this.props.contextualCardActionProps && a.createElement(s.Xa, {
                             flexGrow: 0,
                             flexShrink: 0
                         }, a.createElement(this.props.contextualCardActionProps.component, r.__assign({}, this.props.contextualCardActionProps.props)))))
@@ -1283,7 +1313,7 @@
                         return function(e) {
                             return void 0 !== e.streamType
                         }(this.props) ? a.createElement(C, {
-                            topLeft: a.createElement(x.a, {
+                            topLeft: a.createElement(N.a, {
                                 type: this.props.streamType,
                                 hosting: !!this.props.hostedByChannelLogin
                             }),
@@ -1294,10 +1324,10 @@
                                 }, "VideoPreviewCard")
                             }),
                             bottomRight: void 0
-                        }) : j(this.props) ? a.createElement(C, {
+                        }) : G(this.props) ? a.createElement(C, {
                             topLeft: void 0 !== this.props.durationInSeconds && a.createElement(T, {
                                 value: Object(O.b)(this.props.durationInSeconds),
-                                icon: s.ob.Play,
+                                icon: s.pb.Play,
                                 withBackground: !0
                             }),
                             topRight: this.props.listPosition && a.createElement(T, {
@@ -1312,10 +1342,10 @@
                             }),
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
-                        }) : W(this.props) ? a.createElement(C, {
+                        }) : M(this.props) ? a.createElement(C, {
                             topLeft: a.createElement(T, {
                                 value: Object(O.b)(this.props.durationInSeconds),
-                                icon: s.ob.Clip,
+                                icon: s.pb.Clip,
                                 withBackground: !0
                             }),
                             topRight: void 0,
@@ -1327,16 +1357,16 @@
                             })
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
-                        return j(this.props) && this.props.listPosition ? Object(i.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
+                        return G(this.props) && this.props.listPosition ? Object(i.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
                             position: this.props.listPosition.position,
                             totalVideos: this.props.listPosition.totalVideos
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.getViewCountLabel = function() {
-                        return j(this.props) || W(this.props) ? Object(i.d)("{viewerCount, plural, one {# view} other {# views}}", {
+                        return G(this.props) || M(this.props) ? Object(i.d)("{viewerCount, plural, one {# view} other {# views}}", {
                             viewerCount: this.props.viewCount
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.renderIconicImage = function() {
-                        return this.props.context === D.SingleChannelList && this.props.gameBoxArtImageProps && this.props.gameBoxArtImageProps.src && this.props.gameTitleLinkTo ? a.createElement(s.Wa, {
+                        return this.props.context === D.SingleChannelList && this.props.gameBoxArtImageProps && this.props.gameBoxArtImageProps.src && this.props.gameTitleLinkTo ? a.createElement(s.Xa, {
                             margin: {
                                 right: 1
                             }
@@ -1347,7 +1377,7 @@
                             aspect: s.p.BoxArt,
                             "data-test-selector": F.BoxArt,
                             "data-a-target": "preview-card-boxart-link"
-                        })) : (this.props.context === D.SingleGameList || this.props.context === D.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? a.createElement(s.Wa, {
+                        })) : (this.props.context === D.SingleGameList || this.props.context === D.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? a.createElement(s.Xa, {
                             margin: {
                                 right: 1
                             }
@@ -1362,18 +1392,18 @@
                         var e = null,
                             t = [];
                         return this.shouldShowGameBalloon(this.props) || t.push({
-                            text: Object(N.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
+                            text: Object(x.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
                             linkTo: Object(A.a)(this.getTrackingContext(g.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
                             onClick: this.props.onChannelLoginClick,
                             automationSelector: "preview-card-channel-link"
-                        }), W(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
+                        }), M(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
                             text: Object(i.d)("Clipped by {userName}", {
                                 userName: this.props.clipCreatedByChannelLogin || ""
                             }, "VideoPreviewCard"),
                             linkTo: this.props.clipCreatedByChannelLoginLinkTo,
                             onClick: this.props.onClipCreatedByChannelLoginClick,
                             automationSelector: "preview-card-clip-curator-link"
-                        }) : j(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== D.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
+                        }) : G(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== D.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
                             text: this.props.gameTitle,
                             linkTo: Object(A.a)(this.getTrackingContext(g.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
@@ -1386,7 +1416,7 @@
                             "data-a-target": "preview-card-title-link"
                         }), e)
                     }, t.prototype.renderTags = function() {
-                        return this.props.tagListProps && 0 !== this.props.tagListProps.tags.length ? a.createElement(s.Wa, {
+                        return this.props.tagListProps && 0 !== this.props.tagListProps.tags.length ? a.createElement(s.Xa, {
                             margin: {
                                 top: .5
                             }
@@ -1394,12 +1424,12 @@
                             tagNumberLimit: 3
                         }))) : null
                     }, t.prototype.renderVODRestrictionOverlay = function() {
-                        return j(this.props) && this.props.restriction && this.props.restriction.productName && this.props.restriction.title ? a.createElement(G, {
+                        return G(this.props) && this.props.restriction && this.props.restriction.productName && this.props.restriction.title ? a.createElement(j, {
                             restriction: this.props.restriction,
                             attachTop: !0
                         }) : null
                     }, t.prototype.shouldShowGameBalloon = function(e) {
-                        return !!j(e) && (!!(e.videoGameChanges && e.videoGameChanges.length > 0) && e.multipleVideoGameMarkersType === S.a.Balloon)
+                        return !!G(e) && (!!(e.videoGameChanges && e.videoGameChanges.length > 0) && e.multipleVideoGameMarkersType === S.a.Balloon)
                     }, t.prototype.renderPreviewCardGameInfo = function(e, t, n, r) {
                         switch (e) {
                             case S.a.Balloon:
@@ -1421,17 +1451,17 @@
                         }
                     }, t
                 }(a.Component),
-                B = Object(_.b)("PreviewCard", {
+                R = Object(_.b)("PreviewCard", {
                     autoReportInteractive: !0
-                })(M);
+                })(B);
             n.d(t, !1, function() {
                 return F
             }), n.d(t, "b", function() {
                 return D
             }), n.d(t, !1, function() {
-                return M
-            }), n.d(t, "a", function() {
                 return B
+            }), n.d(t, "a", function() {
+                return R
             })
         },
         H1ft: function(e, t, n) {
@@ -1743,7 +1773,7 @@
 
             function k(e, t, n) {
                 return function(k) {
-                    var b = function(i) {
+                    var y = function(i) {
                         function o() {
                             var e = null !== i && i.apply(this, arguments) || this;
                             return e.itemTrackingID = Object(g.e)(), e.trackImpression = function() {
@@ -1850,7 +1880,7 @@
                         return {
                             tagFilters: r
                         }
-                    }))(b)
+                    }))(y)
                 }
             }
         },
@@ -2037,14 +2067,14 @@
                 e.HostingDot = "stream-type-indicator__hosting-dot"
             }(o || (o = {}));
             var p = ((r = {})[u.a.Live] = "stream-type-indicator--live", r[u.a.Premiere] = "stream-type-indicator--premiere", r[u.a.Rerun] = "stream-type-indicator--rerun", r[u.a.WatchParty] = "stream-type-indicator--rerun", r),
-                g = ((a = {})[u.a.Premiere] = m.ob.VideoPremiere, a[u.a.Rerun] = m.ob.VideoRerun, a[u.a.WatchParty] = m.ob.VideoRerun, a),
-                h = ((i = {})[u.a.Premiere] = m.pb.Live, i[u.a.Rerun] = m.pb.Inherit, i[u.a.WatchParty] = m.pb.Inherit, i),
+                g = ((a = {})[u.a.Premiere] = m.pb.VideoPremiere, a[u.a.Rerun] = m.pb.VideoRerun, a[u.a.WatchParty] = m.pb.VideoRerun, a),
+                h = ((i = {})[u.a.Premiere] = m.qb.Live, i[u.a.Rerun] = m.qb.Inherit, i[u.a.WatchParty] = m.qb.Inherit, i),
                 f = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(m.xb, {
+                        return l.createElement(m.yb, {
                             className: this.getClassNames(),
                             color: m.O.Overlay,
                             background: m.r.Overlay,
@@ -2053,14 +2083,14 @@
                             },
                             borderRadius: m.x.Small,
                             display: m.X.Flex
-                        }, l.createElement(m.Wa, {
+                        }, l.createElement(m.Xa, {
                             display: m.X.Flex,
                             alignItems: m.f.Center,
                             margin: {
                                 right: .5
                             }
                         }, this.getIcon()), l.createElement(m.W, {
-                            type: m.Nb.Span
+                            type: m.Ob.Span
                         }, this.getLabel()))
                     }, t.prototype.getClassNames = function() {
                         var e = {
@@ -2068,18 +2098,18 @@
                         };
                         return e[p[this.props.type]] = !0, c(e)
                     }, t.prototype.getIcon = function() {
-                        return this.props.hosting ? l.createElement(m.xb, {
+                        return this.props.hosting ? l.createElement(m.yb, {
                             borderRadius: m.x.Rounded,
                             className: "stream-type-indicator__hosting-dot",
                             "data-test-selector": o.HostingDot
-                        }) : this.props.type === u.a.Live ? l.createElement(m.Wa, {
+                        }) : this.props.type === u.a.Live ? l.createElement(m.Xa, {
                             className: "stream-type-indicator__live-wrapper",
                             display: m.X.Flex,
                             alignItems: m.f.Center
                         }, l.createElement(m.K, {
                             status: m.M.Live,
                             size: m.L.Small
-                        })) : l.createElement(m.nb, {
+                        })) : l.createElement(m.ob, {
                             asset: g[this.props.type],
                             type: h[this.props.type],
                             width: 14,
@@ -2813,7 +2843,7 @@
                             t = this.props.streamIndex;
                         if (!e.broadcaster) return null;
                         var n = {
-                            context: this.props.directoryType === u.a.Games ? c.b.SingleGameList : c.b.MixedGameAndChannelList,
+                            context: c.b.SingleGameList,
                             title: e.title || this.untitledBroadcastString,
                             linkTo: this.getLinkTo("/" + e.broadcaster.login, t),
                             thumbnailImageProps: {
@@ -2844,9 +2874,9 @@
                             style: {
                                 order: t
                             }
-                        }, a.createElement(g.Wa, {
+                        }, a.createElement(g.Xa, {
                             className: "stream-thumbnail__card",
-                            position: g.eb.Relative,
+                            position: g.fb.Relative,
                             margin: {
                                 bottom: 2
                             },
@@ -2921,16 +2951,16 @@
                         return a.createElement("div", {
                             id: "faq",
                             ref: "faq"
-                        }, a.createElement(s.xb, {
+                        }, a.createElement(s.yb, {
                             className: "twitch-prime-faq",
                             padding: {
                                 x: 1,
                                 y: 5
                             }
-                        }, a.createElement(s.mb, {
+                        }, a.createElement(s.nb, {
                             centered: !0
-                        }, a.createElement(s.Ia, {
-                            justifyContent: s.Va.Center
+                        }, a.createElement(s.Ja, {
+                            justifyContent: s.Wa.Center
                         }, a.createElement(s.P, {
                             cols: {
                                 default: 12,
@@ -2939,14 +2969,14 @@
                                 lg: 7,
                                 xl: 6
                             }
-                        }, a.createElement(s.Wa, {
+                        }, a.createElement(s.Xa, {
                             margin: {
                                 bottom: 2
                             },
-                            textAlign: s.Jb.Center,
+                            textAlign: s.Kb.Center,
                             fullWidth: !0
                         }, a.createElement(s.W, {
-                            type: s.Nb.H2,
+                            type: s.Ob.H2,
                             bold: !0
                         }, Object(o.d)("FAQ/Help", "PrimeFAQComponent"))), this.renderQuestion(Object(o.d)("Do I need a Twitch Prime membership to get Fortnite content?", "PrimeFAQComponent"), "membership"), this.renderAnswer(Object(o.d)("Yes.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("What exactly will I get in the Twitch Prime Pack #2?", "PrimeFAQComponent"), "loot"), this.renderAnswer(Object(o.d)("This pack includes 4 distinct items, all of which are exclusively available to Twitch Prime members:", "PrimeFAQComponent")), this.renderAnswer(Object(o.d)("Battle Royale Trailblazer Outfit: On the forefront of victory.", "PrimeFAQComponent"), Object(o.d)("Battle Royale True North Back Bling: Find your way.", "PrimeFAQComponent"), Object(o.d)("Battle Royale Tenderizer Pickaxe: Leave a good first impression.", "PrimeFAQComponent"), Object(o.d)("Battle Royale Freestylin’ Emote: Tear up the dance floor.", "PrimeFAQComponent")), this.renderAnswer(Object(o.d)("Note: All items are cosmetic only and provide no competitive advantage. All items for Twitch Prime Pack #2 are for Battle Royale only.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("How do I get my Twitch Prime content for Fortnite?", "PrimeFAQComponent"), "content"), this.renderAnswer(Object(o.d)("If you already have an active Twitch Prime membership (either paid or free trial), log in above to begin the claim process for this content.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("I already linked my Twitch and Epic account when I claimed the first Twitch Prime Pack. Do I need to claim again to get the current Twitch Prime content?", "PrimeFAQComponent"), "linkedaccount"), this.renderAnswer(Object(o.d)("YES. You must claim each Twitch Prime Pack individually. If you already linked your Twitch and Epic accounts for the previous Twitch Prime loot in Fortnite, log in above to begin the claim process for this content.", "PrimeFAQComponent")), this.renderQuestion(Object(o.d)("How do I become a Twitch Prime member?", "PrimeFAQComponent"), "signup"), this.renderAnswerWithLink(Object(o.d)("Twitch Prime is included with Amazon Prime in the US, Mexico, Canada, Italy, France, Germany, Belgium, Austria, Spain, Japan, Singapore, Netherlands, and the United Kingdom. Twitch Prime is included with Prime Video in over 200 other countries and territories. If you are already an Amazon Prime member, you get Twitch Prime at no additional cost by connecting your Amazon account to your Twitch account at <x:link>http://www.twitchprime.com</x:link>.", {
                             "x:link": function(e) {
@@ -2966,7 +2996,7 @@
                                     to: "https://www.epicgames.com/fortnite/en-US/buy-now/battle-royale"
                                 }, e)
                             }
-                        }, "PrimeFAQComponent")), a.createElement(s.Wa, {
+                        }, "PrimeFAQComponent")), a.createElement(s.Xa, {
                             margin: {
                                 y: 2
                             }
@@ -2978,31 +3008,31 @@
                         return a.createElement("div", {
                             id: t,
                             ref: t
-                        }, a.createElement(s.Wa, {
+                        }, a.createElement(s.Xa, {
                             margin: {
                                 top: 2
                             }
                         }, a.createElement(s.W, {
-                            type: s.Nb.H4,
+                            type: s.Ob.H4,
                             bold: !0
                         }, e)))
                     }, t.prototype.renderAnswer = function() {
                         for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
-                        return 1 === e.length ? a.createElement(s.Wa, {
+                        return 1 === e.length ? a.createElement(s.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, a.createElement(s.W, null, e[0])) : a.createElement(s.Wa, {
+                        }, a.createElement(s.W, null, e[0])) : a.createElement(s.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, a.createElement(s.Wb, null, a.createElement("ul", null, e.map(function(e) {
+                        }, a.createElement(s.Xb, null, a.createElement("ul", null, e.map(function(e) {
                             return a.createElement("li", {
                                 key: e
                             }, a.createElement(s.W, null, e))
                         }))))
                     }, t.prototype.renderAnswerWithLink = function(e) {
-                        return a.createElement(s.Wa, {
+                        return a.createElement(s.Xa, {
                             margin: {
                                 bottom: 1
                             }
@@ -3026,48 +3056,48 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.partnerSocialLink && this.props.partnerSocialText;
-                        return a.createElement(s.Wa, {
+                        return a.createElement(s.Xa, {
                             className: "prime-footer",
-                            position: s.eb.Relative
-                        }, a.createElement(s.xb, {
-                            position: s.eb.Absolute,
-                            justifyContent: s.Va.Center,
+                            position: s.fb.Relative
+                        }, a.createElement(s.yb, {
+                            position: s.fb.Absolute,
+                            justifyContent: s.Wa.Center,
                             alignItems: s.f.Center,
                             className: "twitter-container"
-                        }, a.createElement(s.nb, {
-                            asset: s.ob.Twitter,
+                        }, a.createElement(s.ob, {
+                            asset: s.pb.Twitter,
                             width: 40,
                             height: 40,
-                            type: s.pb.Prime
-                        })), a.createElement(s.xb, {
+                            type: s.qb.Prime
+                        })), a.createElement(s.yb, {
                             display: s.X.Flex,
-                            justifyContent: s.Va.Center,
+                            justifyContent: s.Wa.Center,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
                             className: "social-twitch-prime",
                             padding: 4
-                        }, a.createElement(s.Wa, {
+                        }, a.createElement(s.Xa, {
                             className: "prime-footer__twitter-links",
                             display: s.X.Flex,
-                            justifyContent: e ? s.Va.Between : s.Va.Center
+                            justifyContent: e ? s.Wa.Between : s.Wa.Center
                         }, a.createElement(s.U, {
                             to: "https://twitter.com/TwitchPrime",
                             targetBlank: !0
                         }, a.createElement(s.W, {
                             bold: !0,
-                            fontSize: s.Ba.Size5,
+                            fontSize: s.Ca.Size5,
                             "data-a-target": "prime-footer-twitter-link"
                         }, Object(i.d)("Follow us @TwitchPrime", "PrimeSubsite"))), e && a.createElement(s.U, {
                             to: this.props.partnerSocialLink,
                             targetBlank: !0
                         }, a.createElement(s.W, {
                             bold: !0,
-                            fontSize: s.Ba.Size5
-                        }, this.props.partnerSocialText)))), a.createElement(s.xb, {
+                            fontSize: s.Ca.Size5
+                        }, this.props.partnerSocialText)))), a.createElement(s.yb, {
                             display: s.X.Flex,
-                            justifyContent: s.Va.Center,
+                            justifyContent: s.Wa.Center,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
@@ -3076,19 +3106,19 @@
                                 top: 2
                             },
                             className: "prime-footer-links"
-                        }, a.createElement(s.xb, {
+                        }, a.createElement(s.yb, {
                             padding: 2
                         }, a.createElement(s.U, {
                             to: "https://www.twitch.tv/p/terms-of-sale#twitchprime",
                             targetBlank: !0,
                             "data-a-target": "prime-footer-terms-link"
-                        }, Object(i.d)("Terms", "PrimeSubsiteFooter"))), a.createElement(s.xb, {
+                        }, Object(i.d)("Terms", "PrimeSubsiteFooter"))), a.createElement(s.yb, {
                             padding: 2
                         }, a.createElement(s.U, {
                             to: "https://www.amazon.com/twitchprivacy",
                             targetBlank: !0,
                             "data-a-target": "prime-footer-privacy-link"
-                        }, Object(i.d)("Privacy Policy", "PrimeSubsiteFooter"))), a.createElement(s.xb, {
+                        }, Object(i.d)("Privacy Policy", "PrimeSubsiteFooter"))), a.createElement(s.yb, {
                             padding: 2
                         }, a.createElement(s.U, {
                             to: "https://help.twitch.tv/customer/en/portal/articles/2572060-twitch-prime-guide",
@@ -3276,33 +3306,33 @@
                 i = n("/7QA"),
                 o = n("Ue10"),
                 s = (n("1mcJ"), function(e) {
-                    return a.createElement(o.Wa, r.__assign({
+                    return a.createElement(o.Xa, r.__assign({
                         className: "drops-badge",
-                        position: o.eb.Absolute,
+                        position: o.fb.Absolute,
                         attachTop: !0,
                         attachRight: !0
-                    }, Object(o.bc)(e)), a.createElement(o.Qb, {
-                        direction: o.Sb.Top,
-                        align: o.Rb.Right,
+                    }, Object(o.cc)(e)), a.createElement(o.Rb, {
+                        direction: o.Tb.Top,
+                        align: o.Sb.Right,
                         label: Object(i.d)("Offers in-game Drops", "DropsBadge")
-                    }, a.createElement(o.xb, {
+                    }, a.createElement(o.yb, {
                         className: "drops-badge__drops-icon",
-                        position: o.eb.Relative,
+                        position: o.fb.Relative,
                         padding: {
                             top: .5,
                             right: .5,
                             bottom: 3,
                             left: 3
                         },
-                        overflow: o.Za.Hidden,
+                        overflow: o.ab.Hidden,
                         color: o.O.Overlay,
-                        zIndex: o.ac.Default
+                        zIndex: o.bc.Default
                     }, a.createElement(o.U, {
                         type: o.V.Inherit,
                         hoverColorInherit: !0,
                         to: "https://help.twitch.tv/customer/en/portal/articles/2754380-how-to-earn-drops"
-                    }, a.createElement(o.nb, {
-                        asset: o.ob.Drops
+                    }, a.createElement(o.ob, {
+                        asset: o.pb.Drops
                     })))))
                 }),
                 c = n("0LAi"),
@@ -3317,28 +3347,28 @@
             }
             var u = function(e) {
                 var t;
-                return e.placeholder ? a.createElement(a.Fragment, null, a.createElement(o.Wa, {
+                return e.placeholder ? a.createElement(a.Fragment, null, a.createElement(o.Xa, {
                     margin: {
                         bottom: .5
                     }
                 }, a.createElement(o.o, {
                     ratio: o.p.Aspect3x4
-                }, a.createElement(o.db, null))), a.createElement(o.W, null, a.createElement(o.db, {
+                }, a.createElement(o.eb, null))), a.createElement(o.W, null, a.createElement(o.eb, {
                     width: 150
                 })), a.createElement(o.W, {
-                    fontSize: o.Ba.Size7
-                }, a.createElement(o.db, {
+                    fontSize: o.Ca.Size7
+                }, a.createElement(o.eb, {
                     width: 100
-                }))) : (t = a.createElement(a.Fragment, null, a.createElement(o.Wa, {
+                }))) : (t = a.createElement(a.Fragment, null, a.createElement(o.Xa, {
                     className: "tw-box-art-card__image " + (e.unavailable && !e.disabled ? "tw-box-art-card__image--unavailable" : ""),
                     "data-test-selector": "tw-card-image",
                     "data-a-target": "tw-card-image"
                 }, a.createElement(o.I, r.__assign({
                     aspect: o.p.BoxArt,
                     borderRadius: o.x.Medium
-                }, d(e)))), a.createElement(o.H, null, a.createElement(o.Wa, {
+                }, d(e)))), a.createElement(o.H, null, a.createElement(o.Xa, {
                     display: o.X.Flex
-                }, a.createElement(o.Wa, {
+                }, a.createElement(o.Xa, {
                     "data-test-selector": "tw-card-title",
                     "data-a-target": "tw-card-title",
                     flexGrow: 1,
@@ -3349,11 +3379,11 @@
                     ellipsis: !0
                 }, a.createElement(o.W, {
                     className: "tw-box-art-card__title",
-                    type: o.Nb.H3,
-                    fontSize: o.Ba.Size5,
-                    lineHeight: o.Xa.Body,
+                    type: o.Ob.H3,
+                    fontSize: o.Ca.Size5,
+                    lineHeight: o.Ya.Body,
                     ellipsis: !0
-                }, e.title)), e.contextualCardActionProps && a.createElement(o.Wa, {
+                }, e.title)), e.contextualCardActionProps && a.createElement(o.Xa, {
                     margin: {
                         top: .5
                     },
@@ -3376,9 +3406,9 @@
                     tabIndex: e.tabIndex
                 }, t)), a.createElement("div", r.__assign({
                     className: "tw-box-art-card"
-                }, Object(o.bc)(e)), a.createElement(o.G, {
+                }, Object(o.cc)(e)), a.createElement(o.G, {
                     key: e.title
-                }, t), e.tagListProps && 0 !== e.tagListProps.tags.length && a.createElement(o.Wa, {
+                }, t), e.tagListProps && 0 !== e.tagListProps.tags.length && a.createElement(o.Xa, {
                     margin: {
                         top: .5
                     }
@@ -3399,7 +3429,7 @@
                     return r
                 }),
                 function(e) {
-                    e.Games = "GAMES", e.Communities = "COMMUNITIES", e.Creative = "CREATIVE"
+                    e.Games = "GAMES", e.Communities = "COMMUNITIES"
                 }(r || (r = {}))
         },
         uzin: function(e, t, n) {
@@ -3414,10 +3444,10 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderOfferImage = function() {
-                            return i.createElement(c.Wa, {
-                                textAlign: c.Jb.Center,
+                            return i.createElement(c.Xa, {
+                                textAlign: c.Kb.Center,
                                 breakpointMedium: {
-                                    textAlign: c.Jb.Right
+                                    textAlign: c.Kb.Right
                                 },
                                 className: "twitch-prime-fortnite__offer-image twitch-prime-fortnite__offer-image--desktop"
                             }, i.createElement(c.S, {
@@ -3435,21 +3465,21 @@
                                 "twitch-prime-fortnite__header__logo": !0,
                                 "twitch-prime-fortnite__header__logo--centered": this.props.alwaysCentered
                             });
-                        return i.createElement(c.Wa, {
+                        return i.createElement(c.Xa, {
                             className: "twitch-prime-fortnite__header__container",
                             padding: {
                                 x: 1,
                                 top: 1
                             }
-                        }, i.createElement(c.Wa, {
+                        }, i.createElement(c.Xa, {
                             className: e
-                        }, i.createElement(c.Wa, {
+                        }, i.createElement(c.Xa, {
                             className: "twitch-prime-fortnite__header",
                             display: c.X.Flex,
                             alignItems: c.f.End,
-                            justifyContent: c.Va.Center,
-                            flexWrap: c.Aa.Wrap,
-                            textAlign: c.Jb.Left,
+                            justifyContent: c.Wa.Center,
+                            flexWrap: c.Ba.Wrap,
+                            textAlign: c.Kb.Left,
                             "data-test-selector": "twitch-prime-fortnite-header",
                             margin: {
                                 y: 0,
@@ -3458,10 +3488,10 @@
                             padding: {
                                 x: 1
                             }
-                        }, i.createElement(c.Wa, {
-                            textAlign: c.Jb.Center,
+                        }, i.createElement(c.Xa, {
+                            textAlign: c.Kb.Center,
                             breakpointMedium: {
-                                textAlign: c.Jb.Left
+                                textAlign: c.Kb.Left
                             },
                             breakpointLarge: {
                                 margin: {
@@ -3473,7 +3503,7 @@
                             },
                             alignSelf: c.g.Center,
                             className: "twitch-prime-fortnite__header__section"
-                        }, i.createElement(c.Wa, {
+                        }, i.createElement(c.Xa, {
                             className: t,
                             margin: {
                                 y: 2
@@ -3826,12 +3856,12 @@
                 d.o.track(m.SpadeEventType.ItemClick, n)
             }
 
-            function b(e, t) {
+            function y(e, t) {
                 var n = v(e, t);
                 d.o.track(m.SpadeEventType.ItemDisplay, n)
             }
 
-            function y(e) {
+            function b(e) {
                 var t = {
                     endpoint: e.endpoint,
                     request_id: e.requestID,
@@ -3860,9 +3890,9 @@
             }), n.d(t, "g", function() {
                 return k
             }), n.d(t, "h", function() {
-                return b
-            }), n.d(t, "i", function() {
                 return y
+            }), n.d(t, "i", function() {
+                return b
             }), n.d(t, !1, function() {
                 return w.a
             }), n.d(t, "j", function() {
