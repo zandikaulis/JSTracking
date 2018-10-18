@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [155], {
+    [156], {
         "+AC8": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -1237,10 +1237,10 @@
                             onClick: this.navigateToEdit
                         }, a.createElement(k.W, {
                             bold: !0,
-                            type: k.Ob.H4,
+                            type: k.Pb.H4,
                             color: k.O.Alt
-                        }, t.title), a.createElement(k.Rb, {
-                            direction: k.Tb.Bottom,
+                        }, t.title), a.createElement(k.Sb, {
+                            direction: k.Ub.Bottom,
                             label: Object(l.d)("Last Updated", "CollectionManagerCard")
                         }, a.createElement(k.W, {
                             color: k.O.Alt2
@@ -1427,7 +1427,7 @@
                                 fullHeight: !0,
                                 justifyContent: a.Wa.Center,
                                 padding: 2
-                            }, o.createElement(a.xb, {
+                            }, o.createElement(a.yb, {
                                 icon: this.props.icon,
                                 label: this.props.label,
                                 value: this.props.value
@@ -1945,7 +1945,7 @@
                             delay: h.j.Short,
                             type: h.n.BounceIn,
                             enabled: !0
-                        }, r.createElement(h.yb, {
+                        }, r.createElement(h.zb, {
                             border: !0,
                             margin: {
                                 bottom: 1
@@ -1961,7 +1961,7 @@
                             delay: h.j.Medium,
                             duration: h.k.Medium,
                             enabled: !0
-                        }, r.createElement(h.yb, {
+                        }, r.createElement(h.zb, {
                             background: h.r.Base,
                             padding: {
                                 x: 3,
@@ -2091,7 +2091,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(r.yb, {
+                        return o.createElement(r.zb, {
                             background: r.r.Base,
                             elevation: 1,
                             display: r.X.Flex,
@@ -2149,7 +2149,7 @@
                             attachLeft: !0,
                             attachRight: !0,
                             attachBottom: !0
-                        }, l.createElement(f.yb, {
+                        }, l.createElement(f.zb, {
                             alignItems: f.f.Center,
                             attachRight: !0,
                             className: "collection-preview-image__wrapper",
@@ -2160,7 +2160,7 @@
                             fullHeight: !0,
                             justifyContent: f.Wa.Center,
                             position: f.fb.Absolute,
-                            textAlign: f.Kb.Center
+                            textAlign: f.Lb.Center
                         }, l.createElement(f.ob, {
                             asset: f.pb.Collections,
                             height: 20,
@@ -2892,7 +2892,7 @@
                             __typename: "CollectionItemEdge"
                         },
                         l = r.slice();
-                    return e.type === E.l.SERIES ? l.push(a) : l.unshift(a), o.__assign({}, Object(v.a)({
+                    return e.type === E.m.SERIES ? l.push(a) : l.unshift(a), o.__assign({}, Object(v.a)({
                         collectionID: e.id,
                         itemID: t.id,
                         itemType: n
@@ -3052,7 +3052,7 @@
                             delay: N.j.Medium,
                             duration: N.k.Medium,
                             enabled: !0
-                        }, r.createElement(N.yb, {
+                        }, r.createElement(N.zb, {
                             background: N.r.Base,
                             className: "collection-editor-item-selector",
                             display: N.X.Flex,
@@ -3084,7 +3084,7 @@
                         }, this.renderVideoSelectors(), r.createElement(f.a, {
                             enabled: e,
                             loadMore: this.onLoadMoreHandler
-                        }))), r.createElement(N.yb, {
+                        }))), r.createElement(N.zb, {
                             display: N.X.Flex,
                             justifyContent: N.Wa.Center,
                             padding: {
@@ -3119,7 +3119,7 @@
                         }, Object(a.d)("No results found.", "CollectionItemSelectorModal")) : t.map(function(n, i) {
                             var o = e.videoIsInCollection(e.props.data.collection, n),
                                 a = o ? N.r.Alt2 : N.r.Base;
-                            return r.createElement(N.yb, {
+                            return r.createElement(N.zb, {
                                 alignItems: N.f.Center,
                                 display: N.X.Flex,
                                 flexDirection: N.Aa.Row,
@@ -3195,7 +3195,7 @@
                 }), Object(h.a)(C, {
                     name: "removeCollectionItem"
                 }))(F);
-            var L, P = Object(s.connect)(function(e) {
+            var P, L = Object(s.connect)(function(e) {
                     return {
                         currentUser: Object(u.e)(e)
                     }
@@ -3214,8 +3214,8 @@
                 B = n("GnwI"),
                 W = n("tMx0"),
                 q = n("HYil"),
-                G = n("9C/b"),
-                z = n("lZCe"),
+                z = n("9C/b"),
+                G = n("lZCe"),
                 Q = n("hyVY"),
                 $ = n("D7An"),
                 Y = n("MxAq"),
@@ -3225,7 +3225,7 @@
                 ee = String.fromCharCode(160);
             ! function(e) {
                 e.EditDescriptionButton = "EditDescriptionButton", e.CancelButton = "CancelButton", e.SaveButton = "SaveButton", e.DescriptionInput = "DescriptionInput", e.DescriptionText = "DescriptionText"
-            }(L || (L = {}));
+            }(P || (P = {}));
             var te, ne = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -3238,7 +3238,7 @@
                                 alignItems: N.f.Center
                             }, t.props.defaultDescription && r.createElement(N.Xa, {
                                 className: "collection-description-editor__description-text",
-                                "data-test-selector": L.DescriptionText,
+                                "data-test-selector": P.DescriptionText,
                                 display: N.X.InlineFlex,
                                 margin: {
                                     right: .5
@@ -3249,7 +3249,7 @@
                             }, t.props.defaultDescription)), r.createElement(N.Xa, {
                                 display: N.X.InlineFlex
                             }, r.createElement(N.z, {
-                                "data-test-selector": L.EditDescriptionButton,
+                                "data-test-selector": P.EditDescriptionButton,
                                 type: N.F.Hollow,
                                 onClick: t.onShowDescriptionInput
                             }, t.props.defaultDescription ? Object(a.d)("Edit", "CollectionEditorInfoCard") : Object(a.d)("Add description", "CollectionEditorInfoCard"))))
@@ -3261,7 +3261,7 @@
                                     right: .5
                                 }
                             }, r.createElement(N.Ra, {
-                                "data-test-selector": L.DescriptionInput,
+                                "data-test-selector": P.DescriptionInput,
                                 defaultValue: t.props.defaultDescription,
                                 disabled: t.props.disabled,
                                 maxLength: Z,
@@ -3275,13 +3275,13 @@
                                     right: .5
                                 }
                             }, r.createElement(N.z, {
-                                "data-test-selector": L.SaveButton,
+                                "data-test-selector": P.SaveButton,
                                 disabled: !t.canSaveDescription(),
                                 onClick: t.onSubmit
                             }, Object(a.d)("Save", "CollectionDescriptionEditor"))), r.createElement(N.Xa, {
                                 display: N.X.InlineFlex
                             }, r.createElement(N.z, {
-                                "data-test-selector": L.CancelButton,
+                                "data-test-selector": P.CancelButton,
                                 onClick: t.onCancel,
                                 type: N.F.Hollow
                             }, Object(a.d)("Cancel", "CollectionDescriptionEditor"))))
@@ -3331,7 +3331,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onSeriesCollectionClick = function(e) {
-                            var n = e.target.checked ? E.l.SERIES : E.l.DEFAULT;
+                            var n = e.target.checked ? E.m.SERIES : E.m.DEFAULT;
                             t.props.onChange(n)
                         }, t
                     }
@@ -3349,7 +3349,7 @@
                         }, r.createElement(N.Xa, {
                             display: N.X.InlineFlex
                         }, r.createElement(N.N, {
-                            checked: this.props.collectionType === E.l.SERIES,
+                            checked: this.props.collectionType === E.m.SERIES,
                             onChange: this.onSeriesCollectionClick,
                             label: Object(a.d)("This collection is a series", "CollectionEditorInfoCard")
                         })), r.createElement(N.Xa, {
@@ -3456,7 +3456,7 @@
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
                         var e = this;
-                        return r.createElement(N.yb, {
+                        return r.createElement(N.zb, {
                             background: N.r.Alt,
                             display: N.X.Flex,
                             flexDirection: N.Aa.Row,
@@ -3471,7 +3471,7 @@
                             }
                         }, r.createElement(N.W, {
                             color: N.O.Alt,
-                            type: N.Ob.H6,
+                            type: N.Pb.H6,
                             bold: !0
                         }, Object(a.d)("Collection Thumbnail", "CollectionEditorInfoCard"))), r.createElement(Y.a, {
                             "data-test-selector": te.Thumbnail,
@@ -3508,7 +3508,7 @@
                             onSubmit: this.onSaveDescriptionClick,
                             errorMessage: this.state.saveDescriptionError,
                             defaultDescription: this.props.collection.description
-                        })), r.createElement(z.a, {
+                        })), r.createElement(G.a, {
                             name: $.b.VODTopShelf,
                             assignments: {
                                 fallback: function() {
@@ -3532,7 +3532,7 @@
                             display: N.X.Flex,
                             flexDirection: N.Aa.Row
                         }, r.createElement(N.W, {
-                            type: N.Ob.Span,
+                            type: N.Pb.Span,
                             color: N.O.Alt2
                         }, Object(a.d)("{totalViewCount, plural, one {# view} other {# views}}", {
                             totalViewCount: this.props.collection.viewCount || 0
@@ -3541,20 +3541,20 @@
                                 x: 1
                             }
                         }, r.createElement(N.W, {
-                            type: N.Ob.Span,
+                            type: N.Pb.Span,
                             color: N.O.Alt2
                         }, "·")), r.createElement(N.W, {
-                            type: N.Ob.Span,
+                            type: N.Pb.Span,
                             color: N.O.Alt2
                         }, Object(Q.b)(this.props.collection.lengthSeconds)), r.createElement(N.Xa, {
                             padding: {
                                 x: 1
                             }
                         }, r.createElement(N.W, {
-                            type: N.Ob.Span,
+                            type: N.Pb.Span,
                             color: N.O.Alt2
                         }, "·")), r.createElement(N.W, {
-                            type: N.Ob.Span,
+                            type: N.Pb.Span,
                             color: N.O.Alt2
                         }, Object(a.d)("Last updated {updatedAt}", {
                             updatedAt: Object(a.c)(new Date(this.props.collection.updatedAt), "long")
@@ -3563,10 +3563,10 @@
                                 x: 1
                             }
                         }, r.createElement(N.W, {
-                            type: N.Ob.Span,
+                            type: N.Pb.Span,
                             color: N.O.Alt2
                         }, "·")), r.createElement(N.W, {
-                            type: N.Ob.Span,
+                            type: N.Pb.Span,
                             color: N.O.Alt2
                         }, Object(a.d)("{videoCount} of {videoTotal} videos added to collection", {
                             videoCount: this.props.collection.items.totalCount,
@@ -3581,9 +3581,9 @@
                                 type: N.F.Text,
                                 disabled: e
                             }, Object(a.d)("Add videos", "CollectionEditorInfoCard"));
-                        return e && (t = r.createElement(N.Rb, {
+                        return e && (t = r.createElement(N.Sb, {
                             label: Object(a.d)("This collection has the maximum number of items. Please remove an item to add more.", "CollectionEditorInfoCard"),
-                            direction: N.Tb.Bottom
+                            direction: N.Ub.Bottom
                         }, t)), r.createElement(N.Xa, {
                             display: N.X.Flex,
                             flexDirection: N.Aa.Row
@@ -3611,7 +3611,7 @@
                 }(r.Component),
                 ce = Object(p.compose)(Object(p.graphql)(ae, {
                     name: "updateCollection"
-                }))(Object(G.a)(le));
+                }))(Object(z.a)(le));
             var se, de = Object(s.connect)(null, function(e) {
                     return {
                         onDeleteOptionClick: function(t, n) {
@@ -3621,7 +3621,7 @@
                             }))
                         },
                         onAddVideosClick: function(t, n) {
-                            e(Object(d.d)(P, {
+                            e(Object(d.d)(L, {
                                 collection: t,
                                 onComplete: n
                             }))
@@ -3629,7 +3629,7 @@
                     }
                 })(ce),
                 ue = function() {
-                    return r.createElement(N.yb, {
+                    return r.createElement(N.zb, {
                         background: N.r.Alt,
                         display: N.X.Flex,
                         flexDirection: N.Aa.Row,
@@ -3702,7 +3702,7 @@
                             saveError: !1,
                             deleteError: !1
                         }, t.subHeader = function(e) {
-                            return r.createElement(N.yb, {
+                            return r.createElement(N.zb, {
                                 display: N.X.Flex,
                                 flexDirection: N.Aa.Row,
                                 margin: {
@@ -3713,9 +3713,9 @@
                                 padding: {
                                     right: 1
                                 }
-                            }, r.createElement(N.Rb, {
-                                direction: N.Tb.Bottom,
-                                align: N.Sb.Center,
+                            }, r.createElement(N.Sb, {
+                                direction: N.Ub.Bottom,
+                                align: N.Tb.Center,
                                 label: Object(a.d)("Published At", "CollectionItemCard")
                             }, r.createElement(N.W, null, Object(a.c)(new Date(e.publishedAt), "long")))), r.createElement(N.Xa, {
                                 padding: {
@@ -3723,7 +3723,7 @@
                                 },
                                 display: N.X.Flex,
                                 alignItems: N.f.Center
-                            }, r.createElement(N.xb, {
+                            }, r.createElement(N.yb, {
                                 "data-test-selector": se.ItemLength,
                                 label: Object(a.d)("Length", "CollectionItemCard"),
                                 value: Object(Q.b)(e.lengthSeconds),
@@ -3734,7 +3734,7 @@
                                 },
                                 display: N.X.Flex,
                                 alignItems: N.f.Center
-                            }, r.createElement(N.xb, {
+                            }, r.createElement(N.yb, {
                                 label: Object(a.d)("Video Type", "CollectionItemCard"),
                                 value: Object(pe.a)(e.broadcastType),
                                 icon: N.pb.NavVideos
@@ -3750,7 +3750,7 @@
                             margin: {
                                 y: 1
                             }
-                        }, r.createElement(ve.a, null, r.createElement(N.yb, {
+                        }, r.createElement(ve.a, null, r.createElement(N.zb, {
                             background: N.r.Alt,
                             display: N.X.Flex,
                             className: "collection-item__drag-handle"
@@ -3780,11 +3780,11 @@
                             padding: {
                                 x: 2
                             }
-                        }, r.createElement(N.Rb, {
+                        }, r.createElement(N.Sb, {
                             label: Object(a.d)("Watch this video", "CollectionItemCard"),
-                            direction: N.Tb.Right
+                            direction: N.Ub.Right
                         }, r.createElement(N.W, {
-                            type: N.Ob.H5,
+                            type: N.Pb.H5,
                             color: N.O.Alt
                         }, r.createElement(N.U, {
                             "data-test-selector": se.VideoLink,
@@ -3882,7 +3882,7 @@
                                 asset: N.pb.Trash
                             })) : e.scope !== i.Public && (n = r.createElement(N.ob, {
                                 asset: N.pb.Lock
-                            }), t = Object(a.d)("Private", "CollectionItemCard")), r.createElement(N.yb, {
+                            }), t = Object(a.d)("Private", "CollectionItemCard")), r.createElement(N.zb, {
                                 attachTop: !0,
                                 attachLeft: !0,
                                 fullWidth: !0,
@@ -4016,7 +4016,7 @@
                         }, r.createElement(N.Xa, {
                             flexGrow: 1
                         }, r.createElement(N.W, {
-                            type: N.Ob.H3
+                            type: N.Pb.H3
                         }, Object(a.d)("Edit Collection", "CollectionEditorPagePresentation")))), r.createElement(N.Xa, {
                             padding: {
                                 y: .5
@@ -4040,7 +4040,7 @@
                             height: 20,
                             width: 20
                         }), r.createElement(N.W, {
-                            align: N.Yb.Middle,
+                            align: N.Zb.Middle,
                             bold: !0
                         }, Object(a.d)("All collections", "CollectionEditorPagePresentation"))))), e, t, r.createElement(f.a, {
                             enabled: n,
@@ -4067,11 +4067,11 @@
                                 top: 5
                             }
                         }, r.createElement(N.W, {
-                            type: N.Ob.H4
+                            type: N.Pb.H4
                         }, Object(a.d)("Put all your best videos in one spot.", "CollectionEditorPagePresentation")), r.createElement(N.W, {
-                            type: N.Ob.H4
+                            type: N.Pb.H4
                         }, Object(a.d)("Videos organized into collections help your viewers easily find related content.", "CollectionEditorPagePresentation")), r.createElement(N.W, {
-                            type: N.Ob.H4
+                            type: N.Pb.H4
                         }, Object(a.d)("Your most recently updated Collection will be featured at the top of channel’s video page.", "CollectionEditorPagePresentation")), r.createElement(N.Xa, {
                             padding: 2
                         }, r.createElement(N.z, {
@@ -4144,7 +4144,7 @@
             var _e = Object(s.connect)(null, function(e) {
                     return {
                         onAddVideosClick: function(t, n) {
-                            e(Object(d.d)(P, {
+                            e(Object(d.d)(L, {
                                 collection: t,
                                 onComplete: n
                             }))
@@ -6312,13 +6312,13 @@
                         return o.createElement("div", {
                             onMouseEnter: this.handleMouseEnter,
                             onMouseLeave: this.handleMouseLeave
-                        }, o.createElement(r.yb, {
+                        }, o.createElement(r.zb, {
                             display: r.X.Flex,
                             margin: {
                                 x: 1
                             },
                             position: r.fb.Relative
-                        }, o.createElement(r.yb, {
+                        }, o.createElement(r.zb, {
                             className: "hoverable-icon",
                             display: r.X.InlineFlex,
                             color: r.O.Alt2,
@@ -6706,7 +6706,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(r.yb, {
+                        return o.createElement(r.zb, {
                             margin: {
                                 bottom: 1
                             },
@@ -6749,7 +6749,7 @@
                             flexWrap: r.Ba.NoWrap,
                             flexDirection: r.Aa.Row,
                             alignItems: r.f.Center
-                        }, o.createElement(r.yb, {
+                        }, o.createElement(r.zb, {
                             fullHeight: !0,
                             fullWidth: !0
                         }, o.createElement(r.Xa, {
@@ -6962,18 +6962,18 @@
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(s.cc)(n.props), {
+                        }, Object(s.dc)(n.props), {
                             download: n.props.text
                         }), n.renderIcon()) : n.isLink() ? r.createElement("a", o.__assign({
                             href: n.getLinkTarget(),
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(s.cc)(n.props)), n.renderIcon()) : r.createElement("button", o.__assign({
+                        }, Object(s.dc)(n.props)), n.renderIcon()) : r.createElement("button", o.__assign({
                             onClick: n.copyPageUrl,
                             onMouseLeave: n.clearIsCopiedStatus,
                             className: e
-                        }, Object(s.cc)(n.props)), n.renderIcon())
+                        }, Object(s.dc)(n.props)), n.renderIcon())
                     }, n.onShareClickHandler = function() {
                         n.props.onShareClick && n.props.onShareClick(n.props.type)
                     }, n.clearIsCopiedStatus = function() {
@@ -7073,9 +7073,9 @@
                 return o.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(s.Xa, {
                         className: "social-button"
-                    }, r.createElement(s.Rb, {
+                    }, r.createElement(s.Sb, {
                         label: this.getTooltipFromType(),
-                        direction: s.Tb.Bottom
+                        direction: s.Ub.Bottom
                     }, this.renderLink()))
                 }, t
             }(r.Component)
@@ -7129,7 +7129,7 @@
                         fullWidth: !0,
                         overflow: l.ab.Hidden
                     }, o.createElement(l.W, {
-                        type: l.Ob.H3,
+                        type: l.Pb.H3,
                         fontSize: l.Ca.Size6,
                         title: e.video.title,
                         ellipsis: !0
@@ -7138,7 +7138,7 @@
                     }, t)))
                 },
                 s = function(e) {
-                    return e ? o.createElement(l.yb, {
+                    return e ? o.createElement(l.zb, {
                         background: l.r.Overlay,
                         attachTop: !0,
                         attachLeft: !0,

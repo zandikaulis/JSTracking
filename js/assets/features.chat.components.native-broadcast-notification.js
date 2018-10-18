@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [175], {
+    [176], {
         KSjr: function(e, t, a) {
             "use strict";
             a.r(t);
@@ -155,7 +155,7 @@
                         if (!e) return null;
                         if (this.hasDismissedForEvent(e.startDate)) return null;
                         var t = this.getChannelLinks(e);
-                        return t.length ? o.createElement(r.yb, {
+                        return t.length ? o.createElement(r.zb, {
                             attachLeft: !0,
                             attachRight: !0,
                             attachTop: !0,
@@ -168,7 +168,7 @@
                                 bottom: 1
                             }
                         }, o.createElement(r.W, {
-                            type: r.Ob.H4
+                            type: r.Pb.H4
                         }, e.title)), o.createElement(r.Xa, {
                             margin: {
                                 bottom: 1

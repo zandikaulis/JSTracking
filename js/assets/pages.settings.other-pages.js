@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [136], {
+    [137], {
         "+HZ4": function(e, t, n) {},
         "+TUL": function(e, t, n) {},
         "+oVX": function(e, t, n) {
@@ -35,7 +35,7 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(y.yb, {
+                        return o.createElement(y.zb, {
                             className: "advanced-notification-settings-toggle",
                             display: y.X.Flex,
                             justifyContent: y.Wa.Between,
@@ -77,7 +77,7 @@
                         }, o.createElement(y.U, {
                             to: "/" + this.props.login
                         }, this.props.text)), o.createElement(y.W, {
-                            type: y.Ob.Span,
+                            type: y.Pb.Span,
                             color: y.O.Alt2
                         }, this.props.description))), o.createElement(y.Xa, {
                             display: y.X.Flex,
@@ -87,7 +87,7 @@
                             margin: {
                                 right: 1
                             }
-                        }, o.createElement(y.Qb, {
+                        }, o.createElement(y.Rb, {
                             checked: this.props.isEnabled,
                             onChange: this.changeHandler,
                             "data-test-selector": i.Toggle,
@@ -161,7 +161,7 @@
                             t = e.currentUser,
                             n = e.loading,
                             i = e.error;
-                        if (n && !t) return o.createElement(y.yb, {
+                        if (n && !t) return o.createElement(y.zb, {
                             padding: {
                                 y: 1
                             },
@@ -175,7 +175,7 @@
                         var r = Object(c.d)("{followCount, plural, one {You follow # channel} other {You follow # channels}}", {
                                 followCount: t.follows.totalCount
                             }, "AdvancedNotificationSettings"),
-                            a = o.createElement(y.yb, {
+                            a = o.createElement(y.zb, {
                                 background: y.r.Alt2,
                                 borderBottom: !0
                             }, o.createElement(y.Ua, {
@@ -215,7 +215,7 @@
                                 type: y.qb.Alt2
                             }))))),
                             s = !(n || i || !t.follows.pageInfo || !t.follows.pageInfo.hasNextPage);
-                        return t.follows.totalCount > 0 ? this.state.collapsed ? o.createElement(y.yb, null, a) : o.createElement(y.yb, null, a, o.createElement(y.yb, {
+                        return t.follows.totalCount > 0 ? this.state.collapsed ? o.createElement(y.zb, null, a) : o.createElement(y.zb, null, a, o.createElement(y.zb, {
                             borderBottom: !0,
                             padding: 2
                         }, o.createElement(y.Xa, {
@@ -232,7 +232,7 @@
                         }, o.createElement(y.W, {
                             fontSize: y.Ca.Size4,
                             color: y.O.Alt
-                        }, r)), o.createElement(y.yb, {
+                        }, r)), o.createElement(y.zb, {
                             className: "advanced-notification-settings__toggle-container",
                             borderTop: !0,
                             borderLeft: !0,
@@ -323,8 +323,8 @@
                     name: "setAdvancedNotificationSetting"
                 }), Object(h.b)("AdvancedNotificationSettings"))(_),
                 j = n("oJmH"),
-                F = n("gOYK"),
-                x = n("Ahlu");
+                x = n("gOYK"),
+                F = n("Ahlu");
             n("+TUL");
             ! function(e) {
                 e.Container = "browser-push-notifications-settings__container", e.Toggle = "browser-push-notifications-settings__toggle"
@@ -346,12 +346,12 @@
                                         case 0:
                                             return this.setState({
                                                 deciding: !0
-                                            }), [4, F.a.hasPushSubscription()];
+                                            }), [4, x.a.hasPushSubscription()];
                                         case 1:
                                             if (!t.sent()) return [3, 6];
                                             t.label = 2;
                                         case 2:
-                                            return t.trys.push([2, 4, , 5]), [4, F.a.userUnsubscribe(x.a.Settings)];
+                                            return t.trys.push([2, 4, , 5]), [4, x.a.userUnsubscribe(F.a.Settings)];
                                         case 3:
                                             return t.sent(), [3, 5];
                                         case 4:
@@ -359,7 +359,7 @@
                                         case 5:
                                             return [3, 8];
                                         case 6:
-                                            return [4, F.a.userSubscribe(x.a.Settings)];
+                                            return [4, x.a.userSubscribe(F.a.Settings)];
                                         case 7:
                                             if (t.sent(), Object(g.a)()) return this.setState({
                                                 hide: !0
@@ -382,7 +382,7 @@
                             return r.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return t.trys.push([0, 3, , 4]), [4, F.a.initialize()];
+                                        return t.trys.push([0, 3, , 4]), [4, x.a.initialize()];
                                     case 1:
                                         return t.sent(), [4, this.updateSubscriptionState()];
                                     case 2:
@@ -404,7 +404,7 @@
                     }, t.prototype.render = function() {
                         if (this.state.hide || this.state.loading) return null;
                         var e = this.state.hasSubscription ? Object(c.d)("Turn Off", "BrowserPushNotificationsSettings") : Object(c.d)("Turn On", "BrowserPushNotificationsSettings");
-                        return o.createElement(y.yb, {
+                        return o.createElement(y.zb, {
                             borderTop: !0,
                             padding: {
                                 right: 2,
@@ -415,7 +415,7 @@
                             },
                             "data-test-selector": N.Container,
                             "data-a-target": "browser-push-notifications-settings"
-                        }, o.createElement(y.yb, {
+                        }, o.createElement(y.zb, {
                             className: "browser-push-notification-settings",
                             padding: {
                                 left: 5,
@@ -458,7 +458,7 @@
                             return r.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return [4, F.a.hasPushSubscription()];
+                                        return [4, x.a.hasPushSubscription()];
                                     case 1:
                                         return e = t.sent(), this.setState({
                                             hasSubscription: e
@@ -481,7 +481,7 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(y.yb, {
+                        return o.createElement(y.zb, {
                             className: "platform-notification-settings-toggle",
                             display: y.X.Flex,
                             flexWrap: y.Ba.NoWrap,
@@ -530,7 +530,7 @@
                             margin: {
                                 right: 1
                             }
-                        }, o.createElement(y.Qb, {
+                        }, o.createElement(y.Rb, {
                             checked: this.props.isEnabled,
                             disabled: this.props.disabled,
                             onChange: this.changeHandler,
@@ -561,8 +561,8 @@
                 }(o.Component),
                 R = n("7PeK"),
                 B = n("fWal"),
-                q = n("pxuV"),
-                z = (n("yqqX"), n("t7x/")),
+                z = n("pxuV"),
+                q = (n("yqqX"), n("t7x/")),
                 X = "ALL",
                 M = "smart";
             ! function(e) {
@@ -598,7 +598,7 @@
                                                         return e.platformName === M && (e.isEnabled = "on" === t, e.settingState = t), e
                                                     })), e
                                                 }), e
-                                            }, Object(S.e)(z, {}, s), [2]
+                                            }, Object(S.e)(q, {}, s), [2]
                                     }
                                 })
                             })
@@ -641,13 +641,13 @@
                         configurable: !0
                     }), t
                 }(o.Component),
-                H = Object(s.compose)(Object(h.b)("SmartNotificationSettings"), Object(k.a)(z, {
+                H = Object(s.compose)(Object(h.b)("SmartNotificationSettings"), Object(k.a)(q, {
                     options: function() {
                         return {
                             fetchPolicy: "cache-and-network"
                         }
                     }
-                }), Object(k.a)(q, {
+                }), Object(k.a)(z, {
                     name: "setNotificationSetting"
                 }))(W),
                 Q = n("F1Gg"),
@@ -758,14 +758,14 @@
                         if (this.props.data.error) return o.createElement(v.a, {
                             message: Object(c.d)("Error loading data.", "PlatformNotificationSettings")
                         });
-                        if (!this.props.data.currentUser) return o.createElement(y.yb, {
+                        if (!this.props.data.currentUser) return o.createElement(y.zb, {
                             margin: {
                                 top: 1
                             }
                         }, o.createElement(v.a, {
                             message: Object(c.d)("You must be logged in to update your settings.", "PlatformNotificationSettings")
                         }));
-                        var e = o.createElement(y.yb, {
+                        var e = o.createElement(y.zb, {
                             background: y.r.Alt2,
                             borderBottom: !0,
                             "data-test-selector": V.Header
@@ -804,7 +804,7 @@
                             asset: y.pb.AngleRight,
                             type: y.qb.Alt2
                         })))));
-                        return this.state.collapsed ? o.createElement(y.yb, null, e) : o.createElement(y.yb, null, e, o.createElement(y.yb, {
+                        return this.state.collapsed ? o.createElement(y.zb, null, e) : o.createElement(y.zb, null, e, o.createElement(y.zb, {
                             padding: 2,
                             borderBottom: !0
                         }, o.createElement(y.Xa, {
@@ -815,7 +815,7 @@
                             "data-test-selector": V.Description,
                             fontSize: y.Ca.Size5,
                             color: y.O.Alt2
-                        }, this.props.description)), o.createElement(y.yb, {
+                        }, this.props.description)), o.createElement(y.zb, {
                             display: y.X.Flex,
                             margin: {
                                 y: .5
@@ -849,7 +849,7 @@
                             margin: {
                                 right: 1
                             }
-                        }, o.createElement(y.Qb, {
+                        }, o.createElement(y.Rb, {
                             "data-test-selector": V.ToggleAll,
                             checked: this.getGlobalStateForPlatform(),
                             onChange: this.toggleAll
@@ -983,7 +983,7 @@
                             }, "SettingsNotificationsPage"),
                             explanation: Object(c.d)("Enable smart notifications", "SettingsNotificationsPage"),
                             key: "smart"
-                        }), o.createElement(y.yb, {
+                        }), o.createElement(y.zb, {
                             className: "notification-settings__body",
                             borderRight: !0,
                             borderLeft: !0,
@@ -1491,7 +1491,7 @@
                                 "emote-set-button": !0,
                                 "emote-set-button-unselected": !this.props.selected
                             });
-                        return r.createElement(d.yb, {
+                        return r.createElement(d.zb, {
                             className: t,
                             "data-a-target": this.props.selected ? "emote-set-button" : "emote-set-button-unselected",
                             display: d.X.InlineFlex,
@@ -1535,7 +1535,7 @@
                         padding: {
                             top: 1
                         },
-                        textAlign: d.Kb.Center,
+                        textAlign: d.Lb.Center,
                         display: d.X.Flex,
                         alignItems: d.f.Stretch,
                         justifyContent: d.Wa.Center,
@@ -1749,7 +1749,7 @@
             var i = n("q1tI"),
                 r = n("Ue10"),
                 a = function(e) {
-                    return i.createElement(r.yb, {
+                    return i.createElement(r.zb, {
                         className: "settings-page-header",
                         borderTop: !0,
                         borderRight: !0,
@@ -3737,8 +3737,8 @@
                     name: "updateUserSubscriptionSettings"
                 }))(_),
                 j = n("b6Yk"),
-                F = "/v5/whispers/settings",
-                x = function(e) {
+                x = "/v5/whispers/settings",
+                F = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3755,7 +3755,7 @@
                                                 updating: !0
                                             }), n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 3, , 4]), [4, j.a.post(F, {
+                                            return n.trys.push([1, 3, , 4]), [4, j.a.post(x, {
                                                 body: {
                                                     restrict_whispers: e
                                                 }
@@ -3786,7 +3786,7 @@
                             return i.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return t.trys.push([0, 2, , 3]), [4, j.a.get(F)];
+                                        return t.trys.push([0, 2, , 3]), [4, j.a.get(x)];
                                     case 1:
                                         return e = t.sent(), this.setState({
                                             enabled: e.body && e.body.restrict_whispers || !1,
@@ -3939,7 +3939,7 @@
                 }))(A),
                 R = n("kRBY"),
                 B = n("cr+I"),
-                q = function(e) {
+                z = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4031,12 +4031,12 @@
                         configurable: !0
                     }), t
                 }(r.Component);
-            var z = Object(d.connect)(function(e) {
+            var q = Object(d.connect)(function(e) {
                     var t = Object(R.e)(e);
                     return {
                         sessionUserID: t && t.id
                     }
-                })(q),
+                })(z),
                 X = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -4355,7 +4355,7 @@
                             description: Object(o.d)("Keep your account safe and sound", "SettingsSecurityPage")
                         }), r.createElement(k.a, null, r.createElement(D, null), r.createElement(te, null)), r.createElement(S.a, {
                             title: Object(o.d)("Privacy", "SettingsSecurityPage")
-                        }), r.createElement(k.a, null, r.createElement(x, null), r.createElement(U, null), r.createElement(Y, null), r.createElement(I, null), r.createElement(G, null), r.createElement(z, null), r.createElement(v, null)))
+                        }), r.createElement(k.a, null, r.createElement(F, null), r.createElement(U, null), r.createElement(Y, null), r.createElement(I, null), r.createElement(G, null), r.createElement(q, null), r.createElement(v, null)))
                     }, t
                 }(r.Component),
                 ie = Object(a.compose)(Object(b.b)("SettingsSecurityPage", {
@@ -4630,7 +4630,7 @@
                 }
             }
             var j = n("fWal"),
-                F = function(e) {
+                x = function(e) {
                     var t = e.saving || e.errorLoading;
                     return r.createElement(j.a, {
                         id: "settings-channel-page-block-hyperlinks",
@@ -4643,7 +4643,7 @@
                         showPlaceholder: e.loading
                     })
                 },
-                x = n("e2/s"),
+                F = n("e2/s"),
                 D = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -4678,7 +4678,7 @@
                                                         })
                                                     })
                                                 } : t
-                                            }, Object(O.e)(x, {}, t), this.logger.debug("Updated chat setting", {
+                                            }, Object(O.e)(F, {}, t), this.logger.debug("Updated chat setting", {
                                                 hideLinks: e
                                             }), this.setState({
                                                 saving: !1,
@@ -4714,7 +4714,7 @@
                         var e = this.props.data.currentUser,
                             t = e && e.chatSettings,
                             n = !!this.props.data.error || !this.props.data.loading && !t;
-                        return r.createElement(F, {
+                        return r.createElement(x, {
                             loading: this.props.data.loading,
                             saving: this.state.saving,
                             checked: this.state.checked,
@@ -4724,7 +4724,7 @@
                         })
                     }, t
                 }(r.Component),
-                T = Object(E.compose)(Object(p.b)("BlockHyperlinksToggle"), Object(w.a)(x, {
+                T = Object(E.compose)(Object(p.b)("BlockHyperlinksToggle"), Object(w.a)(F, {
                     options: {
                         fetchPolicy: "network-only"
                     }
@@ -4894,7 +4894,7 @@
                             orientation: k.Fa.Horizontal,
                             label: Object(s.d)("Chat Rules", "ChatRulesTextArea"),
                             error: this.props.errorLoading || this.props.errorSaving
-                        }, r.createElement(k.Lb, {
+                        }, r.createElement(k.Mb, {
                             disabled: t,
                             value: this.props.rules,
                             onChange: this.props.onChange,
@@ -4907,8 +4907,8 @@
                         return "- " + [Object(s.d)("Be excellent to each other.", "ChatRulesTextArea"), Object(s.d)("Have fun!", "ChatRulesTextArea")].join("\n- ")
                     }, t
                 }(r.Component),
-                q = n("THrO"),
-                z = function(e) {
+                z = n("THrO"),
+                q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4944,7 +4944,7 @@
                                                         })
                                                     })
                                                 } : t
-                                            }, Object(O.e)(q, {}, t), this.logger.debug("Updated chat setting", {
+                                            }, Object(O.e)(z, {}, t), this.logger.debug("Updated chat setting", {
                                                 rules: e
                                             }), this.setState(function(e) {
                                                 return {
@@ -4996,11 +4996,11 @@
                         return t && t.chatSettings && t.chatSettings.rules.join("\n") || ""
                     }, t
                 }(r.Component),
-                X = Object(E.compose)(Object(p.b)("ChatRulesTextArea"), Object(w.a)(q, {
+                X = Object(E.compose)(Object(p.b)("ChatRulesTextArea"), Object(w.a)(z, {
                     options: {
                         fetchPolicy: "network-only"
                     }
-                }), U())(z),
+                }), U())(q),
                 M = function(e) {
                     var t = e.saving || e.errorLoading;
                     return r.createElement(j.a, {
@@ -5810,7 +5810,7 @@
                         return a.createElement(c.b, {
                             className: "banned-chatters__list",
                             autoHide: !0
-                        }, a.createElement(p.yb, {
+                        }, a.createElement(p.zb, {
                             background: p.r.Base,
                             elevation: 1,
                             padding: {
@@ -5823,22 +5823,22 @@
                             "x:bold": function(e) {
                                 return a.createElement(p.W, {
                                     bold: !0,
-                                    type: p.Ob.Span
+                                    type: p.Pb.Span
                                 }, e)
                             }
-                        }, "BannedChatters")), a.createElement(p.Bb, null, a.createElement(p.Eb, null, a.createElement(p.Fb, {
+                        }, "BannedChatters")), a.createElement(p.Cb, null, a.createElement(p.Fb, null, a.createElement(p.Gb, {
                             label: Object(s.d)("Username", "BannedChatters")
-                        }), a.createElement(p.Fb, {
+                        }), a.createElement(p.Gb, {
                             label: Object(s.d)("Added By", "BannedChatters")
-                        }), a.createElement(p.Fb, {
+                        }), a.createElement(p.Gb, {
                             label: Object(s.d)("Time Banned", "BannedChatters")
-                        }), a.createElement(p.Fb, {
-                            textAlign: p.Kb.Center,
+                        }), a.createElement(p.Gb, {
+                            textAlign: p.Lb.Center,
                             label: Object(s.d)("Actions", "BannedChatters")
-                        })), a.createElement(p.Cb, null, n.map(function(t) {
-                            return a.createElement(p.Gb, {
+                        })), a.createElement(p.Db, null, n.map(function(t) {
+                            return a.createElement(p.Hb, {
                                 key: t.bannedUser.id
-                            }, a.createElement(p.Db, null, a.createElement(p.Pa, {
+                            }, a.createElement(p.Eb, null, a.createElement(p.Pa, {
                                 padding: {
                                     right: 4,
                                     bottom: .5
@@ -5847,13 +5847,13 @@
                                 ellipsis: !0,
                                 bold: !0,
                                 "data-test-selector": i.BannedUserName
-                            }, t.bannedUser && t.bannedUser.login))), a.createElement(p.Db, null, a.createElement(p.W, {
+                            }, t.bannedUser && t.bannedUser.login))), a.createElement(p.Eb, null, a.createElement(p.W, {
                                 "data-test-selector": i.BannedByUserName
-                            }, t.modUser && t.modUser.displayName || Object(s.d)("an unknown user", "BannedChatters"))), a.createElement(p.Db, null, a.createElement(p.W, {
+                            }, t.modUser && t.modUser.displayName || Object(s.d)("an unknown user", "BannedChatters"))), a.createElement(p.Eb, null, a.createElement(p.W, {
                                 "data-test-selector": i.BannedDate
-                            }, Object(s.c)(new Date(t.bannedAt)))), a.createElement(p.Db, {
-                                textAlign: p.Kb.Center
-                            }, a.createElement(p.Rb, {
+                            }, Object(s.c)(new Date(t.bannedAt)))), a.createElement(p.Eb, {
+                                textAlign: p.Lb.Center
+                            }, a.createElement(p.Sb, {
                                 label: Object(s.d)("Unban", "BannedChatters")
                             }, a.createElement(p.A, {
                                 "data-chatter-login": t.bannedUser ? t.bannedUser.login : "",
@@ -6222,7 +6222,7 @@
                                     type: h.n.SlideInTop,
                                     duration: h.k.Long,
                                     enabled: !!n
-                                }, r.createElement(h.yb, {
+                                }, r.createElement(h.zb, {
                                     "data-test-target": y,
                                     className: "prime-banner-upsell prime-banner-upsell--" + a.toLowerCase(),
                                     padding: {
@@ -6251,11 +6251,11 @@
                                         md: 4,
                                         lg: 4
                                     }
-                                }, r.createElement(h.yb, {
+                                }, r.createElement(h.zb, {
                                     display: h.X.Flex,
                                     justifyContent: h.Wa.Center,
                                     alignItems: h.f.Center,
-                                    textAlign: h.Kb.Center,
+                                    textAlign: h.Lb.Center,
                                     padding: 2,
                                     fullHeight: !0
                                 }, r.createElement(h.Xa, {
@@ -6263,7 +6263,7 @@
                                     className: "prime-upsell__msg-container",
                                     "data-a-target": "prime-upsellcontainer"
                                 }, r.createElement(h.W, {
-                                    type: h.Ob.P,
+                                    type: h.Pb.P,
                                     fontSize: h.Ca.Size4,
                                     bold: !0,
                                     "data-test-selector": b
@@ -6272,7 +6272,7 @@
                                         bottom: .5
                                     }
                                 }, r.createElement(h.W, {
-                                    type: h.Ob.P,
+                                    type: h.Pb.P,
                                     fontSize: h.Ca.Size5,
                                     bold: !0
                                 }, Object(o.d)("Powered by", "PrimeUpsell"))), r.createElement(d, null)))), r.createElement(h.P, {
@@ -6291,12 +6291,12 @@
                                     alt: Object(o.d)("Promotional Banner for Twitch Prime", "TwitchPrimeBanner"),
                                     "data-test-selector": k
                                 });
-                            return r.createElement(h.yb, {
+                            return r.createElement(h.zb, {
                                 className: "prime-upsell__logo-container",
                                 display: h.X.Flex,
                                 justifyContent: h.Wa.Center,
                                 alignItems: h.f.Center,
-                                textAlign: h.Kb.Center,
+                                textAlign: h.Lb.Center,
                                 fullHeight: !0
                             }, n || r.createElement(h.ob, {
                                 type: h.qb.Inherit,
@@ -6313,7 +6313,7 @@
                                 i = !Object(m.n)(e) && t.getTextFromOverride(O) || "",
                                 a = t.getTextFromOverride(_) || "default";
                             return i && n && r.createElement(h.W, {
-                                type: h.Ob.P,
+                                type: h.Pb.P,
                                 fontSize: h.Ca.Size4,
                                 "data-test-selector": v
                             }, r.createElement(h.U, {
@@ -6897,7 +6897,7 @@
                             t = this.state.requestState === f.Success ? "feedback-item__metadata-success" : "",
                             n = this.state.imageLoaded ? "feedback-item__display-none" : "",
                             i = this.state.imageLoaded ? "" : "feedback-item__display-none";
-                        return r.createElement(h.yb, {
+                        return r.createElement(h.zb, {
                             background: h.r.Base,
                             display: h.X.Flex,
                             key: e.id,
@@ -6974,12 +6974,12 @@
                                 bottom: 1
                             }
                         }, r.createElement(h.W, {
-                            type: h.Ob.H4,
+                            type: h.Pb.H4,
                             bold: !0
                         }, this.props.title)), r.createElement(h.W, {
-                            type: h.Ob.H5,
+                            type: h.Pb.H5,
                             color: h.O.Alt2
-                        }, this.props.subtitle), r.createElement(h.yb, {
+                        }, this.props.subtitle), r.createElement(h.zb, {
                             margin: {
                                 y: 1
                             },
@@ -7179,14 +7179,14 @@
                         var e = Object(s.d)("<x:strong>Heads up!</x:strong> Some colors may be <x:strong>hard to read</x:strong> in light or dark themes. Check it here before chatting.", {
                                 "x:strong": function(e) {
                                     return r.createElement(h.W, {
-                                        type: h.Ob.Span,
+                                        type: h.Pb.Span,
                                         bold: !0
                                     }, e)
                                 }
                             }, "ChatColorPicker"),
                             t = r.createElement(h.Xa, {
                                 display: h.X.Inline,
-                                verticalAlign: h.Yb.TextTop,
+                                verticalAlign: h.Zb.TextTop,
                                 margin: {
                                     right: .5
                                 }
@@ -7196,7 +7196,7 @@
                         return r.createElement(h.Xa, {
                             "data-test-selector": w.ContrastWarning
                         }, t, r.createElement(h.W, {
-                            type: h.Ob.Span,
+                            type: h.Pb.Span,
                             color: h.O.Alt2
                         }, e))
                     }, t.prototype.renderSaveButton = function() {
@@ -7227,14 +7227,14 @@
                             }
                         }, r.createElement(h.W, {
                             color: h.O.Alt2
-                        }, e), r.createElement(h.yb, {
+                        }, e), r.createElement(h.zb, {
                             borderRadius: h.x.Medium,
                             overflow: h.ab.Hidden
                         }, r.createElement("div", {
                             style: a
                         }), r.createElement(h.Xa, {
                             className: Object(m.b)(i)
-                        }, r.createElement(h.yb, {
+                        }, r.createElement(h.zb, {
                             background: h.r.Base,
                             padding: {
                                 y: 2
@@ -7639,7 +7639,7 @@
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
-                    return c.createElement(u.yb, {
+                    return c.createElement(u.zb, {
                         background: u.r.Base,
                         padding: {
                             x: 3,
@@ -9174,7 +9174,7 @@
                                 top: .5
                             },
                             flexShrink: 0
-                        }, a.createElement(C.yb, {
+                        }, a.createElement(C.zb, {
                             borderRadius: C.x.Medium,
                             overflow: C.ab.Hidden
                         }, this.props.image)), a.createElement(C.Xa, {
@@ -9212,7 +9212,7 @@
                             padding: {
                                 top: 2
                             }
-                        }, this.props.body), this.props.footer && a.createElement(C.yb, {
+                        }, this.props.body), this.props.footer && a.createElement(C.zb, {
                             className: "connection-component__footer",
                             "data-test-selector": "connection-footer-test-selector",
                             color: C.O.Alt2,
@@ -9351,8 +9351,8 @@
                         configurable: !0
                     }), t
                 }(a.Component),
-                F = n("IPK1"),
-                x = Object(g.compose)(Object(h.a)(U), Object(h.a)(F, {
+                x = n("IPK1"),
+                F = Object(g.compose)(Object(h.a)(U), Object(h.a)(x, {
                     name: "unlinkAmazonConnection"
                 }))(j),
                 D = n("cr+I"),
@@ -9426,7 +9426,7 @@
                             display: C.X.Flex
                         }, a.createElement(C.Xa, {
                             className: "blizzard-connection__region-select"
-                        }, a.createElement(C.ub, {
+                        }, a.createElement(C.vb, {
                             value: this.state.region,
                             onChange: this.handleRegionSelect
                         }, a.createElement("option", {
@@ -9576,10 +9576,10 @@
                         configurable: !0
                     }), t
                 }(a.Component)),
-                q = Object(u.b)("ExtensionConnection", {
+                z = Object(u.b)("ExtensionConnection", {
                     autoReportInteractive: !0
                 })(B),
-                z = function(e) {
+                q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -9630,7 +9630,7 @@
                         for (var e = [], t = 0, n = Object.keys(this.state.linkedExtensionsByID); t < n.length; t++) {
                             var i = n[t],
                                 o = this.state.linkedExtensionsByID[i];
-                            e.push(a.createElement(q, r.__assign({
+                            e.push(a.createElement(z, r.__assign({
                                 key: o.id,
                                 onClickDisconnect: this.onClickDisconnect
                             }, o)))
@@ -9692,7 +9692,7 @@
                         })
                     }, t
                 }(a.Component),
-                X = Object(u.b)("ExtensionsConnectionList")(z);
+                X = Object(u.b)("ExtensionsConnectionList")(q);
             var M, G = Object(k.connect)(function(e) {
                     return {
                         sessionUser: Object(R.e)(e)
@@ -9992,7 +9992,7 @@
                         }
                     }, a.createElement(C.Xa, null, Object(s.d)("1. Log into your League of Legends account. Go to the verification section of your settings, and copy the following into the field: {code}", {
                         code: a.createElement(C.W, {
-                            type: C.Ob.Span,
+                            type: C.Pb.Span,
                             bold: !0
                         }, "ttv-" + this.props.userID)
                     }, "LeagueOfLegendsConnection")), a.createElement(C.Xa, null, Object(s.d)("2. Enter your summoner name below, select your region, and press the connect button to link your accounts! Note, you may need to wait up to 30 seconds for your changes to take effect.", "LeagueOfLegendsConnection"))), a.createElement(C.Xa, {
@@ -10009,7 +10009,7 @@
                         onChange: this.handleSummonerNameChange
                     })), a.createElement(C.Xa, {
                         flexGrow: 1
-                    }, a.createElement(C.ub, {
+                    }, a.createElement(C.vb, {
                         value: this.state.region,
                         onChange: this.handleRegionSelect
                     }, e.map(function(e) {
@@ -10718,7 +10718,7 @@
                         return a.createElement(a.Fragment, null, a.createElement(m.a, {
                             title: Object(s.d)("Recommended Connections", "SettingsConnectionsPage"),
                             description: Object(s.d)("Manage your connected accounts and services", "SettingsConnectionsPage")
-                        }), a.createElement(p.a, null, a.createElement(x, null), a.createElement(I, null), a.createElement(pe, null), a.createElement(we, null), a.createElement(H, null), a.createElement(he, null), a.createElement(Y, null), a.createElement(ye, null), a.createElement(be, null), a.createElement(oe, null), a.createElement(le, null)), a.createElement(m.a, {
+                        }), a.createElement(p.a, null, a.createElement(F, null), a.createElement(I, null), a.createElement(pe, null), a.createElement(we, null), a.createElement(H, null), a.createElement(he, null), a.createElement(Y, null), a.createElement(ye, null), a.createElement(be, null), a.createElement(oe, null), a.createElement(le, null)), a.createElement(m.a, {
                             title: Object(s.d)("Extensions Connections", "SettingsConnectionsPage"),
                             description: Object(s.d)("You have shared your Twitch username with these extensions", "SettingsConnectionsPage")
                         }), a.createElement(p.a, null, a.createElement(G, null)), a.createElement(m.a, {

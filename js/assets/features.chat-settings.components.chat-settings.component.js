@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [177], {
+    [178], {
         "+PZR": function(e, t, n) {
             "use strict";
             var r = function(e, t) {
@@ -39,7 +39,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(u.yb, {
+                        return o.createElement(u.zb, {
                             className: "reporting-modal__container",
                             background: u.r.Base,
                             padding: {
@@ -512,10 +512,10 @@
                             }),
                             n = Object(o.d)("Name Color", "ChatSettings"),
                             r = a.createElement(u.W, {
-                                transform: u.Nb.Uppercase,
+                                transform: u.Ob.Uppercase,
                                 color: u.O.Alt2
                             }, n);
-                        this.props.borderTop && (r = a.createElement(u.yb, {
+                        this.props.borderTop && (r = a.createElement(u.zb, {
                             margin: {
                                 top: 2
                             },
@@ -525,7 +525,7 @@
                             }
                         }, r));
                         var i = this.props.hasExtraColors ? "https://www.twitch.tv/settings/prime" : "https://twitch.tv/products/turbo?ref=more_colors_direct";
-                        return a.createElement("div", null, a.createElement(u.yb, {
+                        return a.createElement("div", null, a.createElement(u.zb, {
                             margin: {
                                 bottom: 1
                             },
@@ -612,7 +612,7 @@
                                     "data-test-selector": "channel_badge_" + t.setID,
                                     "data-a-target": "channel_badge_" + t.setID,
                                     tabIndex: 0
-                                }, a.createElement(u.Rb, {
+                                }, a.createElement(u.Sb, {
                                     label: t.title
                                 }, a.createElement("img", {
                                     alt: t.title,
@@ -630,7 +630,7 @@
                                 "data-test-selector": "channel_badge_none",
                                 "data-a-target": "channel_badge_none",
                                 tabIndex: 0
-                            }, a.createElement(u.Rb, {
+                            }, a.createElement(u.Sb, {
                                 label: Object(o.d)("Same as Global", "ChatSettings")
                             }, a.createElement("div", {
                                 className: "edit-appearance__badge-chooser__none"
@@ -661,7 +661,7 @@
                                     "data-test-selector": "global_badge_" + t.setID,
                                     "data-a-target": "global_badge_" + t.setID,
                                     tabIndex: 0
-                                }, a.createElement(u.Rb, {
+                                }, a.createElement(u.Sb, {
                                     label: t.title
                                 }, a.createElement("img", {
                                     alt: t.title,
@@ -679,19 +679,19 @@
                                 "data-test-selector": "global_badge_none",
                                 "data-a-target": "global_badge_none",
                                 tabIndex: 0
-                            }, a.createElement(u.Rb, {
+                            }, a.createElement(u.Sb, {
                                 label: Object(o.d)("None", "ChatSettings")
                             }, a.createElement("div", {
                                 className: "edit-appearance__badge-chooser__none"
                             }, a.createElement(u.ob, {
                                 asset: u.pb.Ban
-                            }))))), a.createElement("div", null, a.createElement(u.yb, {
+                            }))))), a.createElement("div", null, a.createElement(u.zb, {
                                 background: u.r.Base,
                                 color: u.O.Base,
                                 display: u.X.InlineFlex,
                                 flexDirection: u.Aa.Column,
                                 fullWidth: !0
-                            }, a.createElement(u.yb, {
+                            }, a.createElement(u.zb, {
                                 margin: {
                                     top: 2
                                 },
@@ -699,13 +699,13 @@
                                     top: 2
                                 },
                                 borderTop: !0
-                            }, a.createElement(u.Rb, {
-                                align: u.Sb.Left,
+                            }, a.createElement(u.Sb, {
+                                align: u.Tb.Left,
                                 label: Object(o.d)("Your global badge is shown when chatting and whispering.", "ChatSettings"),
                                 width: 175
                             }, a.createElement(u.W, {
                                 color: u.O.Alt2,
-                                transform: u.Nb.Uppercase
+                                transform: u.Ob.Uppercase
                             }, Object(o.d)("Global Badge [?]", "ChatSettings")))), a.createElement(u.Pa, {
                                 margin: {
                                     y: 1
@@ -717,13 +717,13 @@
                                 "data-a-target": "global-badge-selector"
                             }, a.createElement("div", {
                                 role: "radiogroup"
-                            }, b))), a.createElement(u.yb, {
+                            }, b))), a.createElement(u.zb, {
                                 background: u.r.Base,
                                 color: u.O.Base,
                                 display: u.X.InlineFlex,
                                 flexDirection: u.Aa.Column,
                                 fullWidth: !0
-                            }, a.createElement(u.yb, {
+                            }, a.createElement(u.zb, {
                                 margin: {
                                     top: 2
                                 },
@@ -731,13 +731,13 @@
                                     top: 2
                                 },
                                 borderTop: !0
-                            }, a.createElement(u.Rb, {
-                                align: u.Sb.Left,
+                            }, a.createElement(u.Sb, {
+                                align: u.Tb.Left,
                                 label: Object(o.d)("Change the badge shown when chatting in this channel.", "ChatSettings"),
                                 width: 175
                             }, a.createElement(u.W, {
                                 color: u.O.Alt2,
-                                transform: u.Nb.Uppercase
+                                transform: u.Ob.Uppercase
                             }, Object(o.d)("Channel Badge [?]", "ChatSettings")))), a.createElement(u.Pa, {
                                 margin: {
                                     y: 1
@@ -829,8 +829,8 @@
                 f = n("fvjX"),
                 v = n("1/iK"),
                 k = n("y5D0"),
-                y = n("jZLd"),
-                C = n("+pBb"),
+                C = n("jZLd"),
+                y = n("+pBb"),
                 _ = n("eJ65"),
                 S = n("aCAx"),
                 R = n("/HY+"),
@@ -914,7 +914,7 @@
                         }, Object(o.d)("Ban", "RecentRaid")), a.createElement(u.Xa, {
                             key: "recent-raids-layout-" + this.props.raiderUserID,
                             className: "recent-raids-item__hover-content",
-                            zIndex: u.bc.Above,
+                            zIndex: u.cc.Above,
                             "data-a-target": "recent-raids-item-hover"
                         }, this.props.slideInContent, e)
                     }, t = r.__decorate([Object(s.a)(M, {
@@ -1072,13 +1072,13 @@
                         if (void 0 !== this.state.raidChannels)
                             for (var r in 0 === this.state.raidChannels.length && e.push(a.createElement(u.W, {
                                     key: "recent-raids-no-raids",
-                                    type: u.Ob.P
+                                    type: u.Pb.P
                                 }, Object(o.d)("You have no recent raids", "RecentRaids"))), this.state.raidChannels)
                                 if (r.hasOwnProperty) {
                                     var i = this.state.raidChannels[r];
                                     this.state.raidChannels.hasOwnProperty(r) && void 0 === n[i.userID] && (t.push(a.createElement(U, {
                                         key: "recent-raids-item-" + i.userID,
-                                        slideInContent: [a.createElement(u.yb, {
+                                        slideInContent: [a.createElement(u.zb, {
                                             key: "recent-raids-item-report-area-" + i.userID,
                                             color: u.O.Alt2,
                                             display: u.X.InlineFlex
@@ -1091,8 +1091,8 @@
                                             "data-raid-id": i.raidID,
                                             "data-target-user-login": i.name,
                                             "data-target-user-id": i.userID
-                                        }, Object(o.d)("Report", "RecentRaid")), a.createElement(u.Rb, {
-                                            align: u.Sb.Right,
+                                        }, Object(o.d)("Report", "RecentRaid")), a.createElement(u.Sb, {
+                                            align: u.Tb.Right,
                                             width: 150,
                                             label: Object(o.d)("Banning a user prevents them from future chatting or raiding", "RecentRaid")
                                         }))],
@@ -1115,7 +1115,7 @@
                             }
                         }, a.createElement(u.W, {
                             color: u.O.Link,
-                            type: u.Ob.Span
+                            type: u.Pb.Span
                         }, a.createElement(u.U, {
                             to: {
                                 pathname: "/broadcast/dashboard/settings/raids"
@@ -1135,9 +1135,9 @@
                             "data-test-selector": "recent-raids-button"
                         }, Object(o.d)("See Recent Raids", "ChatSettings")), this.props.tooltipText && a.createElement(u.Xa, {
                             position: u.fb.Relative
-                        }, a.createElement(u.Rb, {
-                            align: u.Sb.Right,
-                            direction: u.Tb.Top,
+                        }, a.createElement(u.Sb, {
+                            align: u.Tb.Right,
+                            direction: u.Ub.Top,
                             display: u.X.InlineFlex,
                             label: this.props.tooltipText,
                             width: 175,
@@ -1153,7 +1153,7 @@
                         }, a.createElement(u.W, {
                             color: u.O.Overlay,
                             fontSize: u.Ca.Size8,
-                            type: u.Ob.Span
+                            type: u.Pb.Span
                         }, "i"))))), a.createElement(u.Xa, null, s))
                     }, t
                 }(a.Component);
@@ -1167,8 +1167,8 @@
                         }
                     }, e)
                 })(N),
-                W = n("W/3w"),
-                z = n("r2Xj"),
+                z = n("W/3w"),
+                W = n("r2Xj"),
                 B = n("WytW"),
                 F = n("F6GT"),
                 L = n("x0gr"),
@@ -1187,7 +1187,7 @@
                         }, n.getSelectedFollowerDuration = function() {
                             if (n.props.followerModeEnabled) return n.props.followerModeDuration;
                             var e = n.props.lastUsedFollowerDurations[n.props.channelLogin];
-                            return "number" == typeof e ? e : W.a
+                            return "number" == typeof e ? e : z.a
                         }, n.onFollowerModeToggle = function() {
                             if (n.props.followerModeEnabled) n.props.onChatCommand(Object(B.c)()), n.props.onRoomStateUpdate({
                                 followersOnly: !1
@@ -1203,7 +1203,7 @@
                                 channelLogin: n.props.channelLogin,
                                 isHostMode: n.props.isHostMode,
                                 newValue: !n.props.followerModeEnabled,
-                                settingName: z.a.FollowerMode
+                                settingName: W.a.FollowerMode
                             })
                         }, n.onSlowModeToggle = function() {
                             n.props.slowModeEnabled ? (n.props.onChatCommand(Object(B.d)()), n.props.onRoomStateUpdate({
@@ -1214,7 +1214,7 @@
                                 channelLogin: n.props.channelLogin,
                                 isHostMode: n.props.isHostMode,
                                 newValue: !n.props.slowModeEnabled,
-                                settingName: z.a.SlowMode
+                                settingName: W.a.SlowMode
                             })
                         }, n.onFollowerDurationChange = function(e) {
                             Object(F.c)(n.props.channelLogin, e), n.props.onFollowerModeDurationPreferenceChange(n.props.channelLogin, e), n.props.followerModeEnabled && (n.props.onChatCommand(Object(B.e)(e)), n.props.onRoomStateUpdate({
@@ -1230,21 +1230,21 @@
                                 channelLogin: n.props.channelLogin,
                                 isHostMode: n.props.isHostMode,
                                 newValue: !n.props.showModerationIcons,
-                                settingName: z.a.ShowModIcons
+                                settingName: W.a.ShowModIcons
                             })
                         }, n.onShowModerationActionsToggle = function() {
                             Object(F.b)("showModerationActions", !n.props.showModerationActions), n.props.showModerationActions ? n.props.onShowModerationActionsDisable() : n.props.onShowModerationActionsEnable(), Object(L.a)({
                                 channelLogin: n.props.channelLogin,
                                 isHostMode: n.props.isHostMode,
                                 newValue: !n.props.showModerationActions,
-                                settingName: z.a.ShowModActions
+                                settingName: W.a.ShowModActions
                             })
                         }, n.onShowAutoModActionsToggle = function() {
                             Object(F.b)("showAutoModActions", !n.props.showAutoModActions), n.props.showAutoModActions ? n.props.onShowAutoModActionsDisable() : n.props.onShowAutoModActionsEnable(), Object(L.a)({
                                 channelLogin: n.props.channelLogin,
                                 isHostMode: n.props.isHostMode,
                                 newValue: !n.props.showAutoModActions,
-                                settingName: z.a.ShowAutoModActions
+                                settingName: W.a.ShowAutoModActions
                             })
                         }, n.handleToggleAutoModLink = n.handleToggleAutoModLink.bind(n), n.handleToggleAutoModLink = n.handleToggleAutoModLink.bind(n), n
                     }
@@ -1252,7 +1252,7 @@
                         var e = this;
                         if (!this.props.isCurrentUserModerator) return null;
                         var t = this.getSelectedFollowerDuration(),
-                            n = W.b.map(function(n) {
+                            n = z.b.map(function(n) {
                                 return a.createElement(u.Ua, {
                                     "data-duration": n,
                                     key: n,
@@ -1260,9 +1260,9 @@
                                     selected: n === t
                                 }, a.createElement(u.Xa, {
                                     padding: .5
-                                }, Object(W.c)(n)))
+                                }, Object(z.c)(n)))
                             });
-                        return a.createElement(u.yb, {
+                        return a.createElement(u.zb, {
                             key: "mod-tools",
                             borderTop: !0,
                             "data-test-selector": "mod-tools",
@@ -1278,7 +1278,7 @@
                             }
                         }, a.createElement(u.W, {
                             color: u.O.Alt2,
-                            transform: u.Nb.Uppercase
+                            transform: u.Ob.Uppercase
                         }, Object(o.d)("Mod Tools", "ChatSettings"))), a.createElement(u.Xa, {
                             margin: {
                                 bottom: 1
@@ -1290,7 +1290,7 @@
                             id: "chat-settings-mod-icons",
                             label: Object(o.d)("Mod Icons", "ChatSettings"),
                             onChange: this.onModIconsToggle
-                        })), a.createElement(u.yb, {
+                        })), a.createElement(u.zb, {
                             margin: {
                                 bottom: 1
                             },
@@ -1316,7 +1316,7 @@
                         }, a.createElement(u.W, {
                             color: u.O.Alt2,
                             fontSize: u.Ca.Size7,
-                            type: u.Ob.Span
+                            type: u.Pb.Span
                         }, Object(o.d)("Must have followed for", "ChatSettings"))), a.createElement(u.Xa, {
                             className: "chat-settings__mod-tools-follower-button",
                             flexShrink: 0
@@ -1328,13 +1328,13 @@
                             "data-a-target": "follower-mode-dropdown",
                             "data-test-selector": "follower-mode-duration-menu",
                             dropdown: !0
-                        }, Object(W.d)(t)), a.createElement(u.u, {
+                        }, Object(z.d)(t)), a.createElement(u.u, {
                             direction: u.v.TopRight
                         }, a.createElement(u.Xa, {
                             padding: .5
                         }, a.createElement(u.W, {
                             color: u.O.Alt2
-                        }, Object(o.d)("Followers can chat if they have followed for at least", "ChatSettings"))), a.createElement(u.yb, {
+                        }, Object(o.d)("Followers can chat if they have followed for at least", "ChatSettings"))), a.createElement(u.zb, {
                             color: u.O.Link
                         }, n)))))), a.createElement(u.Xa, {
                             margin: {
@@ -1413,7 +1413,7 @@
                         }, a.createElement(u.W, {
                             color: u.O.Overlay,
                             fontSize: u.Ca.Size8,
-                            type: u.Ob.Span
+                            type: u.Pb.Span
                         }, "i"), a.createElement(u.Xa, {
                             position: u.fb.Relative
                         }, a.createElement(u.u, {
@@ -1423,7 +1423,7 @@
                             offsetY: "1.5rem"
                         }, a.createElement(u.Xa, {
                             margin: 1
-                        }, Object(o.d)("Mods can now update AutoMod levels as well as Blocked and Permitted Terms.", "ChatSettings"))))))) : a.createElement(u.yb, {
+                        }, Object(o.d)("Mods can now update AutoMod levels as well as Blocked and Permitted Terms.", "ChatSettings"))))))) : a.createElement(u.zb, {
                             margin: {
                                 top: 1,
                                 bottom: 1
@@ -1460,43 +1460,43 @@
                 }, function(e) {
                     return Object(f.bindActionCreators)({
                         onChatHide: function() {
-                            return C.L()
+                            return y.L()
                         },
                         onChatUnhide: function() {
-                            return C.O()
+                            return y.O()
                         },
                         onFollowerModeDurationPreferenceChange: function(e, t) {
-                            return C.y(e, t)
+                            return y.y(e, t)
                         },
                         onModIconsDisable: function() {
-                            return C.B()
+                            return y.B()
                         },
                         onModIconsEnable: function() {
-                            return C.G()
+                            return y.G()
                         },
                         onRoomStateUpdate: function(e) {
-                            return C.S(e)
+                            return y.S(e)
                         },
                         onShowAutoModActionsEnable: function() {
-                            return C.H()
+                            return y.H()
                         },
                         onShowAutoModActionsDisable: function() {
-                            return C.C()
+                            return y.C()
                         },
                         onShowModerationActionsEnable: function() {
-                            return C.I()
+                            return y.I()
                         },
                         onShowModerationActionsDisable: function() {
-                            return C.D()
+                            return y.D()
                         },
                         onTimestampsDisable: function() {
-                            return C.E()
+                            return y.E()
                         },
                         onTimestampsEnable: function() {
-                            return C.J()
+                            return y.J()
                         },
                         onThemeChanged: function(e) {
-                            return Object(y.b)(e, void 0, !1)
+                            return Object(C.b)(e, void 0, !1)
                         },
                         login: function() {
                             return Object(k.e)(v.a.Chat)
@@ -1511,7 +1511,7 @@
             function Q(e) {
                 var t = a.createElement(u.W, {
                         bold: !0,
-                        type: u.Ob.Span
+                        type: u.Pb.Span
                     }, a.createElement("span", {
                         style: {
                             color: e.chatColor
@@ -1528,7 +1528,7 @@
                     onClick: e.onClickEdit,
                     "data-a-target": q,
                     "data-test-selector": q
-                }, Object(o.d)("Edit Appearance", "ChatSettings")))), a.createElement(u.yb, {
+                }, Object(o.d)("Edit Appearance", "ChatSettings")))), a.createElement(u.zb, {
                     background: u.r.Base,
                     color: u.O.Base,
                     display: u.X.InlineFlex,
@@ -1536,7 +1536,7 @@
                     fullWidth: !0
                 }, a.createElement(u.W, {
                     color: u.O.Alt2,
-                    transform: u.Nb.Uppercase
+                    transform: u.Ob.Uppercase
                 }, Object(o.d)("Name Display", "ChatSettings")), a.createElement(u.Xa, {
                     margin: {
                         top: 2
@@ -1666,7 +1666,7 @@
                             "data-test-selector": re
                         }, a.createElement(u.W, {
                             color: u.O.Link,
-                            type: u.Ob.Span
+                            type: u.Pb.Span
                         }, a.createElement(u.ob, {
                             asset: u.pb.ChatSettingsBack,
                             height: 10,
@@ -1689,7 +1689,7 @@
                             "data-test-selector": re
                         }, a.createElement(u.W, {
                             color: u.O.Link,
-                            type: u.Ob.Span
+                            type: u.Pb.Span
                         }, a.createElement(u.ob, {
                             asset: u.pb.ChatSettingsBack,
                             height: 10,
@@ -1701,7 +1701,7 @@
                         }, a.createElement(u.W, {
                             key: "recent-raids-title",
                             color: u.O.Alt2,
-                            transform: u.Nb.Uppercase
+                            transform: u.Ob.Uppercase
                         }, Object(o.d)("Recent Raids", "ChatSettings"))))), a.createElement(A, {
                             key: "recent-raids",
                             targetChannelID: this.props.channelID,
@@ -1728,7 +1728,7 @@
                             style: {
                                 maxHeight: this.state.containerHeight
                             }
-                        }, a.createElement("div", null, a.createElement(u.yb, {
+                        }, a.createElement("div", null, a.createElement(u.zb, {
                             key: "chat-settings",
                             className: "chat-settings__content",
                             background: u.r.Base,
@@ -1762,7 +1762,7 @@
                             }, Object(o.d)("Hide Chat", "ChatSettings"));
                         return a.createElement(u.Xa, {
                             key: "chat-options"
-                        }, a.createElement(u.yb, {
+                        }, a.createElement(u.zb, {
                             borderTop: !0,
                             margin: {
                                 top: 2
@@ -1772,7 +1772,7 @@
                             }
                         }, a.createElement(u.W, {
                             color: u.O.Alt2,
-                            transform: u.Nb.Uppercase
+                            transform: u.Ob.Uppercase
                         }, Object(o.d)("Chat Options", "ChatSettings"))), a.createElement(u.Xa, {
                             margin: {
                                 bottom: 1
@@ -2271,7 +2271,7 @@
                         }, o.createElement(u.Ea, {
                             id: "reporting-modal__select",
                             label: Object(i.d)("Select Reason (required)", "ReportUserModal")
-                        }, o.createElement(u.ub, {
+                        }, o.createElement(u.vb, {
                             id: "reporting-modal__select",
                             "data-test-selector": "reporting-modal.select",
                             disabled: this.props.data.loading || !!this.props.data.error,
@@ -2360,13 +2360,13 @@
                         },
                         "data-a-target": "reporting-channel-name"
                     }, o.createElement(u.W, {
-                        type: u.Ob.H4
-                    }, this.props.title), o.createElement(u.yb, {
+                        type: u.Pb.H4
+                    }, this.props.title), o.createElement(u.zb, {
                         color: u.O.Alt2,
                         margin: {
                             top: 1
                         }
-                    }, this.headerMessage)), o.createElement("form", null, o.createElement(u.yb, {
+                    }, this.headerMessage)), o.createElement("form", null, o.createElement(u.zb, {
                         borderTop: !0,
                         borderBottom: !0,
                         margin: {
@@ -2381,10 +2381,10 @@
                     }), o.createElement(u.Ea, {
                         id: "reporting__text-area",
                         label: Object(i.d)("Description (required)", "ReportUser")
-                    }, o.createElement(u.Lb, {
+                    }, o.createElement(u.Mb, {
                         defaultValue: this.props.defaultDescription,
                         onChange: this.handleTextAreaChange
-                    }))), o.createElement(u.yb, {
+                    }))), o.createElement(u.zb, {
                         display: u.X.Flex,
                         justifyContent: u.Wa.Center
                     }, o.createElement(u.z, {
@@ -2419,7 +2419,7 @@
                         "reporting__error-container": this.props.submitStatus !== g.Success,
                         "reporting__success-container": this.props.submitStatus === g.Success
                     });
-                    return o.createElement(u.yb, {
+                    return o.createElement(u.zb, {
                         className: t,
                         fullWidth: this.props.submitStatus !== g.Success,
                         "data-test-selector": "reporting.error",
@@ -2657,8 +2657,8 @@
                 f = n("QVaV"),
                 v = n("Ue10"),
                 k = (n("MPK0"), "report-wizard-block"),
-                y = "report-wizard-unblock",
-                C = function(e) {
+                C = "report-wizard-unblock",
+                y = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2695,13 +2695,13 @@
                                 }
                             }, o.createElement(v.W, {
                                 className: "block-user__success",
-                                type: v.Ob.Span
+                                type: v.Pb.Span
                             }, Object(l.d)("{user} blocked", {
                                 user: t.props.targetUser.displayName
                             }, "ReportWizardBlockActions"))), o.createElement(v.U, {
                                 hoverUnderlineNone: !0,
                                 onClick: t.handleUnblock,
-                                "data-test-selector": y
+                                "data-test-selector": C
                             }, o.createElement(v.Xa, {
                                 margin: {
                                     left: .5
@@ -2724,7 +2724,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.userBlocked ? this.renderUnblock() : this.renderBlock(),
                             t = Object(f.a)(this.props.targetUser.login, this.props.targetUser.displayName, !0);
-                        return o.createElement(v.yb, {
+                        return o.createElement(v.zb, {
                             borderTop: !0,
                             padding: {
                                 y: 1
@@ -2734,12 +2734,12 @@
                             }
                         }, o.createElement(v.Xa, null, Object(l.d)("Would you like to block {user}?", {
                             user: t
-                        }, "ReportWizardBlockActions")), o.createElement(v.yb, {
+                        }, "ReportWizardBlockActions")), o.createElement(v.zb, {
                             color: v.O.Alt2,
                             margin: {
                                 y: 1
                             }
-                        }, o.createElement(v.Xb, {
+                        }, o.createElement(v.Yb, {
                             baseFontSize: v.Ca.Size6
                         }, o.createElement("p", null, Object(l.d)("Blocking {user} will:", {
                             user: t
@@ -3423,7 +3423,7 @@
                                     }, o.createElement(v.Ea, {
                                         label: t.getTitle(),
                                         labelOptional: t.required ? "" : Object(l.d)("Optional", "ReportModalWizardCard")
-                                    }, o.createElement(v.Lb, {
+                                    }, o.createElement(v.Mb, {
                                         onChange: e.onChange,
                                         rows: t.rows || 3,
                                         name: t.value,
@@ -3583,7 +3583,7 @@
                         value: "video general report reason"
                     }
                 },
-                W = {
+                z = {
                     content: {
                         getTitle: x.reportMessage,
                         getLabel: U.contentGeneral,
@@ -3599,7 +3599,7 @@
                         value: "message general report reason"
                     }
                 },
-                z = a.__assign({}, W.content, {
+                W = a.__assign({}, z.content, {
                     getDescription: function() {
                         return Object(l.d)("Please note that we may review additional messages in this conversation to determine the context of your report.", "ReportModalWizard")
                     }
@@ -3765,19 +3765,19 @@
                 Y = j,
                 J = {
                     video: A.identifyUser,
-                    whisper: z,
-                    chat: W.content,
+                    whisper: W,
+                    chat: z.content,
                     profile: B.content,
                     room: F,
                     "somewhere else": V.identifyLocation,
                     streamer: A.content,
                     "someone else in video": A.content,
-                    "someone in chat": W.content,
+                    "someone in chat": z.content,
                     general_video: A.general,
-                    general_messaging: W.general,
+                    general_messaging: z.general,
                     general_profile: B.general,
                     "channel owner": B.content,
-                    "community member": W.content,
+                    "community member": z.content,
                     "on twitch": B.content,
                     "another site": V.externalSite,
                     "twitch event": D.twitchEvent,
@@ -3807,14 +3807,14 @@
                 ee = {
                     CHANNEL_FEED_POST_REPORT: B.content,
                     COMMUNITY_REPORT: B.content,
-                    CHAT_REPORT: W.content,
+                    CHAT_REPORT: z.content,
                     CLIP_REPORT: A.content,
                     EVENT_REPORT: B.content,
                     EXTENSION_REPORT: B.content,
                     LIVE_UP_REPORT: B.content,
                     ROOM_REPORT: F,
-                    WHISPER_REPORT: z,
-                    VOD_COMMENT_REPORT: W.content
+                    WHISPER_REPORT: W,
+                    VOD_COMMENT_REPORT: z.content
                 },
                 te = "report-wizard-back",
                 ne = "report-wizard-close",
@@ -4020,13 +4020,13 @@
                     return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
                         this.state.modalCloseTracked || this.props.trackClose(I.Close, this.state.currentCard.value)
                     }, t.prototype.render = function() {
-                        var e = this.state.currentCard.type === S.Info && this.state.currentCard.blockPrompt ? o.createElement(C, {
+                        var e = this.state.currentCard.type === S.Info && this.state.currentCard.blockPrompt ? o.createElement(y, {
                                 targetUser: this.props.targetUser,
                                 onBlock: this.props.onBlock,
                                 onUnblock: this.props.onUnblock,
                                 userBlocked: this.props.userBlocked
                             }) : null,
-                            t = this.state.error ? o.createElement(v.yb, {
+                            t = this.state.error ? o.createElement(v.zb, {
                                 fullWidth: !0,
                                 margin: {
                                     bottom: 1
@@ -4035,7 +4035,7 @@
                                 className: "reporting__error-container"
                             }, this.state.error) : null,
                             n = this.state.prevCards.length || this.state.currentCard.type === S.Info ? null : this.renderPrimer();
-                        return o.createElement(v.yb, {
+                        return o.createElement(v.zb, {
                             className: "reporting-wizard",
                             display: v.X.Flex,
                             margin: {

@@ -210,25 +210,25 @@
                         var e = Object(s.d)("You'll get characters, vehicles, skins, and boosts for games like {hearthstone} and {smite}, plus surprises like a rotating selection of indie games.", {
                             hearthstone: o.createElement(u.W, {
                                 italic: !0,
-                                type: u.Ob.Span
+                                type: u.Pb.Span
                             }, Object(s.d)("Hearthstone", "PrimeEmpty")),
                             smite: o.createElement(u.W, {
                                 italic: !0,
-                                type: u.Ob.Span
+                                type: u.Pb.Span
                             }, Object(s.d)("Smite", "PrimeEmpty"))
                         }, "PrimeEmpty");
                         return o.createElement(u.Xa, {
                             className: "prime-empty",
                             margin: 2
                         }, o.createElement(u.Xa, {
-                            textAlign: u.Kb.Center,
+                            textAlign: u.Lb.Center,
                             margin: 2
                         }, o.createElement("img", {
                             className: "prime-empty__image",
                             src: "https://m.media-amazon.com/images/G/01/sm/landing/Trunk_w_Star_transparent._V530838660_.png",
                             alt: Object(s.d)("Prime Treasure Chest", "PrimeEmpty")
                         })), o.createElement(u.W, {
-                            type: u.Ob.P,
+                            type: u.Pb.P,
                             bold: !0
                         }, Object(s.d)("Free in-game loot every month, plus surprises", "PrimeEmpty")), o.createElement("div", null, e))
                     }, t
@@ -358,14 +358,14 @@
                                 index: n.props.index
                             })
                         }, n.renderVerticalDescriptionBlock = function() {
-                            return o.createElement(u.yb, {
+                            return o.createElement(u.zb, {
                                 className: "prime-claim-description__body",
                                 background: u.r.Alt2,
                                 border: !0,
                                 position: u.fb.Relative
                             }, n.renderDescription())
                         }, n.renderHorizontalDescriptionBlock = function() {
-                            return o.createElement(u.yb, {
+                            return o.createElement(u.zb, {
                                 className: "prime-claim-description__body",
                                 background: u.r.Base,
                                 border: !0,
@@ -622,7 +622,7 @@
                 }(o.Component),
                 A = Object(a.compose)(Object(c.a)(W), Object(d.b)("PrimeInstructions"))(G),
                 M = n("z8lI"),
-                V = (n("25vm"), function(e) {
+                z = (n("25vm"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.setRef = function(e) {
@@ -664,8 +664,8 @@
                         }))
                     }, t
                 }(o.Component)),
-                H = Object(N.compose)(Object(d.b)("CopyButton"))(V),
-                q = function(e) {
+                V = Object(N.compose)(Object(d.b)("CopyButton"))(z),
+                H = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onChange = function(e) {
@@ -695,17 +695,17 @@
                             value: this.state.value,
                             disabled: this.props.disabled,
                             readOnly: this.props.readOnly
-                        })), o.createElement(u.Xa, null, o.createElement(H, {
+                        })), o.createElement(u.Xa, null, o.createElement(V, {
                             clipboardText: this.state.value
                         }))) : null
                     }, t
                 }(o.Component),
-                z = Object(N.compose)(Object(d.b)("CopyableItem"))(q),
+                q = Object(N.compose)(Object(d.b)("CopyableItem"))(H),
                 Q = (n("Sb+K"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.getClaimInstructions = function() {
-                            return o.createElement(u.Xb, null, o.createElement(m, {
+                            return o.createElement(u.Yb, null, o.createElement(m, {
                                 source: n.props.claimInstructions || "",
                                 escapeHtml: !0,
                                 renderers: {
@@ -719,7 +719,7 @@
                                 }
                             }))
                         }, n.renderVerticalLayout = function() {
-                            return o.createElement(u.yb, {
+                            return o.createElement(u.zb, {
                                 className: "prime-claim-instructions prime-claim-instructions--vertical",
                                 "data-a-target": "prime-claim-instructions--vertical",
                                 background: u.r.Alt2,
@@ -728,7 +728,7 @@
                                 fontSize: u.Ca.Size6
                             }, n.getClaimInstructions())
                         }, n.renderHorizontalLayout = function() {
-                            return o.createElement(u.yb, {
+                            return o.createElement(u.zb, {
                                 fullWidth: !0,
                                 className: "prime-claim-instructions prime-claim-instructions--horizontal",
                                 margin: {
@@ -737,10 +737,10 @@
                             }, o.createElement(u.Xa, {
                                 fullWidth: !0,
                                 justifyContent: u.Wa.Center,
-                                textAlign: u.Kb.Center
+                                textAlign: u.Lb.Center
                             }, o.createElement(u.U, {
                                 onClick: n.toggleShowDescription
-                            }, n.getDescriptionButtonText())), n.state.showDescription && o.createElement(u.yb, {
+                            }, n.getDescriptionButtonText())), n.state.showDescription && o.createElement(u.zb, {
                                 className: "prime-claim-instructions__body",
                                 "data-a-target": "prime-claim-instructions--horizontal",
                                 border: !0,
@@ -771,17 +771,17 @@
                         return Object(k.l)(e) ? this.renderVerticalLayout() : this.renderHorizontalLayout()
                     }, t
                 }(o.Component)),
-                K = Object(d.b)("PrimeClaimInstructions", {
+                Y = Object(d.b)("PrimeClaimInstructions", {
                     autoReportInteractive: !0
                 })(Q),
-                Y = n("UFVY"),
+                K = n("UFVY"),
                 $ = (n("PCo6"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderGiftRedeemedButton = function(e) {
                             if (!t.props.data || t.props.data.loading || t.props.data.error) return o.createElement(u.eb, null);
                             var n = t.props.data.currentUser && t.props.data.currentUser.primeGift;
-                            return o.createElement(u.yb, {
+                            return o.createElement(u.zb, {
                                 fullWidth: !0,
                                 display: u.X.Flex,
                                 justifyContent: u.Wa.Center,
@@ -793,8 +793,8 @@
                                 alignItems: u.f.Center,
                                 borderRadius: u.x.Medium
                             }, o.createElement(u.W, {
-                                type: u.Ob.Span,
-                                align: u.Yb.Middle,
+                                type: u.Pb.Span,
+                                align: u.Zb.Middle,
                                 color: u.O.Overlay
                             }, o.createElement(u.Xa, {
                                 display: u.X.InlineFlex,
@@ -818,7 +818,7 @@
                                 height: 20
                             })), n ? Object(s.d)("Gift Claimed", "PrimeRedeem") : Object(s.d)("Claimed", "PrimeRedeem"))))
                         }, t.getPrimeClaimInstructions = function() {
-                            return o.createElement(K, {
+                            return o.createElement(Y, {
                                 claimInstructions: t.props.claimInstructions || "",
                                 orientation: t.props.orientation
                             })
@@ -834,7 +834,7 @@
                         var t = Object(k.l)(e);
                         if (this.props.code && this.props.deliveryMethod === k.e.CLAIM_CODE) return o.createElement(u.Xa, {
                             "data-a-target": "prime-redeem-code-container"
-                        }, o.createElement(z, {
+                        }, o.createElement(q, {
                             initialText: this.props.code,
                             readOnly: !0,
                             textCenter: !0
@@ -853,7 +853,7 @@
                             offerID: this.props.offerID,
                             offer: this.props.offer,
                             toggleCrownMenu: this.props.toggleCrownMenu
-                        }))) : this.renderGiftRedeemedButton(n) : o.createElement(u.yb, {
+                        }))) : this.renderGiftRedeemedButton(n) : o.createElement(u.zb, {
                             display: u.X.Flex,
                             justifyContent: u.Wa.Center,
                             margin: {
@@ -865,8 +865,8 @@
                             className: "prime-redeem__confirmation",
                             borderRadius: u.x.Medium
                         }, o.createElement(u.W, {
-                            type: t ? u.Ob.H4 : u.Ob.H6,
-                            align: u.Yb.Middle,
+                            type: t ? u.Pb.H4 : u.Pb.H6,
+                            align: u.Zb.Middle,
                             color: u.O.Overlay
                         }, o.createElement(u.Xa, {
                             display: u.X.InlineFlex,
@@ -896,9 +896,9 @@
                         })), Object(s.d)("Added To Your Twitch Account", "PrimeRedeem"))))
                     }, t
                 }(o.Component)),
-                J = Object(a.compose)(Object(d.b)("PrimeRedeem", {
+                Z = Object(a.compose)(Object(d.b)("PrimeRedeem", {
                     autoReportInteractive: !0
-                }), Object(c.a)(Y, {
+                }), Object(c.a)(K, {
                     skip: function(e) {
                         return !Object(k.k)(e.offerID)
                     },
@@ -910,7 +910,7 @@
                         }
                     }
                 }))($),
-                Z = n("SStD"),
+                J = n("SStD"),
                 ee = n("QK1T"),
                 te = n("9k8c"),
                 ne = n("PsVi"),
@@ -930,13 +930,13 @@
                                 i = r && r.game && r.game.name || "",
                                 a = r && r.categories && r.categories[0] || "",
                                 s = r && r.publisher || "";
-                            return o.createElement(u.yb, {
+                            return o.createElement(u.zb, {
                                 "data-a-target": "prime-offer",
                                 className: "prime-offer prime-offer--vertical",
                                 alignItems: u.f.Center,
                                 display: u.X.Block,
                                 borderBottom: !n,
-                                textAlign: u.Kb.Left,
+                                textAlign: u.Lb.Left,
                                 position: u.fb.Relative,
                                 padding: {
                                     x: 2,
@@ -946,7 +946,7 @@
                                 padding: {
                                     y: .5
                                 }
-                            }, t.renderTitle(e), o.createElement(u.W, null, t.renderGiftText())), t.renderOfferImageOrVideo(e.imageURL), o.createElement(u.yb, {
+                            }, t.renderTitle(e), o.createElement(u.W, null, t.renderGiftText())), t.renderOfferImageOrVideo(e.imageURL), o.createElement(u.zb, {
                                 margin: {
                                     bottom: 2
                                 }
@@ -956,11 +956,11 @@
                                     top: .5
                                 }
                             }, o.createElement(u.W, {
-                                type: u.Ob.P
+                                type: u.Pb.P
                             }, i, " ", a)), o.createElement(u.Xa, {
                                 className: "prime-offer__publisher"
                             }, o.createElement(u.W, {
-                                type: u.Ob.P,
+                                type: u.Pb.P,
                                 color: u.O.Alt2,
                                 fontSize: u.Ca.Size7
                             }, s))), t.renderRedeemUpsellOrClaimSection(e))
@@ -969,33 +969,33 @@
                                 r = n && n.game && n.game.name || "",
                                 i = n && n.categories && n.categories[0] || "",
                                 a = n && n.publisher || "";
-                            return o.createElement(u.yb, {
+                            return o.createElement(u.zb, {
                                 "data-a-target": "prime-offer",
                                 className: "prime-offer prime-offer--horizontal",
                                 alignItems: u.f.Center,
                                 display: u.X.InlineBlock,
-                                textAlign: u.Kb.Left,
+                                textAlign: u.Lb.Left,
                                 position: u.fb.Relative,
                                 padding: {
                                     right: 1,
                                     y: .5
                                 },
                                 fullWidth: !0
-                            }, o.createElement(u.yb, {
+                            }, o.createElement(u.zb, {
                                 className: "prime-offer__content",
                                 margin: {
                                     bottom: 2
                                 }
-                            }, o.createElement(u.yb, {
+                            }, o.createElement(u.zb, {
                                 className: "prime-offer__content__text",
                                 background: u.r.Base
                             }, o.createElement(u.Xa, {
                                 className: "prime-offer__publisher"
                             }, o.createElement(u.W, {
-                                type: u.Ob.P,
+                                type: u.Pb.P,
                                 color: u.O.OverlayAlt,
                                 fontSize: u.Ca.Size7,
-                                transform: u.Nb.Uppercase
+                                transform: u.Ob.Uppercase
                             }, a)), o.createElement(u.Xa, {
                                 className: "prime-offer__title",
                                 alignItems: u.f.Start,
@@ -1005,7 +1005,7 @@
                             }, t.renderTitle(e)), o.createElement(u.Xa, {
                                 className: "prime-offer__description"
                             }, o.createElement(u.W, {
-                                type: u.Ob.P,
+                                type: u.Pb.P,
                                 color: u.O.Alt2
                             }, r, " ", i, " ", t.renderGiftText()))), t.renderOfferImageOrVideo(e.imageURL)), t.renderRedeemUpsellOrClaimSection(e))
                         }, t.renderOfferImageOrVideo = function(e) {
@@ -1050,7 +1050,7 @@
                             }
                             if (!r && (t.isCurrentOfferClaimed(e) || t.state.claimed)) {
                                 var s = t.state.claimData || i.claimData;
-                                return o.createElement(J, {
+                                return o.createElement(Z, {
                                     claimInstructions: e.claimInstructions,
                                     isPrime: Object(k.n)(t.props.data),
                                     offerID: e.id,
@@ -1172,7 +1172,7 @@
                         return this.props.giftData && this.props.giftData.currentUser && this.props.giftData.currentUser.primeGift && this.props.giftData.currentUser.primeGift.from && this.props.giftData.currentUser.primeGift.from.login ? Object(s.d)("from <x:bold>{gifterLogin}</x:bold>", {
                             "x:bold": function(e) {
                                 return o.createElement(u.W, {
-                                    type: u.Ob.Span,
+                                    type: u.Pb.Span,
                                     bold: !0
                                 }, e)
                             },
@@ -1198,7 +1198,7 @@
                     }
                 }), Object(c.a)(W, {
                     name: "data"
-                }), Object(c.a)(Z, {
+                }), Object(c.a)(J, {
                     name: "claimPrimeOffer"
                 }), Object(c.a)(te, {
                     name: "claimGift"
@@ -1214,7 +1214,7 @@
                     }, t.prototype.render = function() {
                         var e = this.props.orientation || k.c.Default,
                             t = Object(k.l)(e);
-                        return o.createElement(u.yb, {
+                        return o.createElement(u.zb, {
                             className: "prime-offer-placeholder",
                             alignItems: u.f.Center,
                             borderBottom: t,
@@ -1265,7 +1265,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(u.yb, {
+                        return o.createElement(u.zb, {
                             "data-test-target": "prime-offers-upsell",
                             "data-a-target": "prime-offers-upsell",
                             className: "prime-offers-upsell",
@@ -1276,21 +1276,21 @@
                             },
                             borderBottom: !0
                         }, o.createElement(u.W, {
-                            type: u.Ob.H4
+                            type: u.Pb.H4
                         }, Object(s.d)("Claim With Twitch Prime", "PrimeUpsell")), o.createElement(u.Xa, {
                             className: "prime-upsell__logo-container",
                             fullWidth: !0,
                             margin: {
                                 y: 2
                             },
-                            textAlign: u.Kb.Center
+                            textAlign: u.Lb.Center
                         }, o.createElement(u.ob, {
                             asset: u.pb.LogoTwitchPrime,
                             width: 330,
                             height: 150,
                             type: u.qb.Brand
                         })), o.createElement(u.W, {
-                            type: u.Ob.P
+                            type: u.Pb.P
                         }, Object(s.d)("Support your favorite streamer, plus get monthly games and in-game loot, and loads more with Twitch Prime.", "PrimeUpsell")), o.createElement(X, null))
                     }, t
                 }(o.Component)),
@@ -1311,9 +1311,9 @@
                         }, t.renderDesktopOffers = function() {
                             return o.createElement(u.Xa, {
                                 className: "prime-offer-list__content--desktop"
-                            }, t.renderSectionTitle(), o.createElement(u.Ub, {
-                                childWidth: u.Vb.Large,
-                                gutterSize: u.Wb.Small,
+                            }, t.renderSectionTitle(), o.createElement(u.Vb, {
+                                childWidth: u.Wb.Large,
+                                gutterSize: u.Xb.Small,
                                 center: !0,
                                 placeholderItems: 20
                             }, t.renderOfferExperience(b.a.Wide)))
@@ -1332,7 +1332,7 @@
                                 },
                                 className: "prime-offers__title"
                             }, o.createElement(u.W, {
-                                type: u.Ob.H3,
+                                type: u.Pb.H3,
                                 color: u.O.Base,
                                 bold: !0
                             }, t.props.sectionTitle)) : null
@@ -1869,7 +1869,7 @@
                                 display: D.X.Flex,
                                 className: "twitch-prime-top-nav-user twitch-prime-top-nav-user--signed-in",
                                 fullHeight: !0,
-                                zIndex: D.bc.Above
+                                zIndex: D.cc.Above
                             }, i.createElement(D.Ua, {
                                 onClick: this.toggleDropdown,
                                 "data-test-selector": "user-menu-toggle",
@@ -1902,9 +1902,9 @@
                                 flexShrink: 1,
                                 flexDirection: D.Aa.Column,
                                 ellipsis: !0
-                            }, i.createElement(D.yb, {
+                            }, i.createElement(D.zb, {
                                 className: "twitch-prime-top-nav-user__username"
-                            }, this.props.data.currentUser.displayName)), i.createElement(D.yb, {
+                            }, this.props.data.currentUser.displayName)), i.createElement(D.zb, {
                                 display: D.X.Flex,
                                 flexShrink: 0,
                                 className: "twitch-prime-top-nav-user__expand"
@@ -1912,7 +1912,7 @@
                                 asset: D.pb.GlyphArrDown
                             }))))), this.renderDropdown()))
                         }
-                        return i.createElement(D.yb, {
+                        return i.createElement(D.zb, {
                             display: D.X.Flex,
                             fullHeight: !0,
                             padding: {
@@ -1938,7 +1938,7 @@
                             t = i.createElement(D.Ua, {
                                 onClick: this.onLogoutClick,
                                 type: D.Va.Alpha
-                            }, i.createElement(D.yb, {
+                            }, i.createElement(D.zb, {
                                 color: D.O.Alt,
                                 display: D.X.Flex,
                                 alignItems: D.f.Center,
@@ -1957,10 +1957,10 @@
                                 height: 18,
                                 width: 18
                             })), i.createElement(D.W, null, Object(m.d)("Log Out", "PrimeUser"))));
-                        return i.createElement(D.yb, {
+                        return i.createElement(D.zb, {
                             className: e,
                             background: D.r.Base,
-                            zIndex: D.bc.Below,
+                            zIndex: D.cc.Below,
                             fullWidth: !0,
                             overflow: D.ab.Hidden,
                             position: D.fb.Absolute,
@@ -1989,7 +1989,7 @@
                         }, i.createElement(D.Xa, null, i.createElement(D.eb, {
                             width: 30,
                             height: 30
-                        })), i.createElement(D.yb, {
+                        })), i.createElement(D.zb, {
                             display: D.X.Flex,
                             flexShrink: 0,
                             className: "twitch-prime-top-nav-user__expand"
@@ -2099,16 +2099,16 @@
                     autoReportInteractive: !0
                 })(T),
                 L = c.a.wrap(function() {
-                    return n.e(168).then(n.bind(null, "eAh4"))
+                    return n.e(169).then(n.bind(null, "eAh4"))
                 }, "TwitchPrimeOffersPage"),
                 U = c.a.wrap(function() {
-                    return n.e(167).then(n.bind(null, "EU9V"))
+                    return n.e(168).then(n.bind(null, "EU9V"))
                 }, "TwitchPrimeSuccessPage"),
                 F = c.a.wrap(function() {
-                    return n.e(166).then(n.bind(null, "crDv"))
+                    return n.e(167).then(n.bind(null, "crDv"))
                 }, "TwitchPrimeLinkingPage"),
                 j = c.a.wrap(function() {
-                    return n.e(165).then(n.bind(null, "CinY"))
+                    return n.e(166).then(n.bind(null, "CinY"))
                 }, "TwitchPrimeFortnitePage"),
                 B = function(e) {
                     function t() {
@@ -2347,7 +2347,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(v.Xa, null, s.createElement(v.yb, {
+                        return s.createElement(v.Xa, null, s.createElement(v.zb, {
                             className: "prime-offer-header",
                             borderBottom: !0,
                             background: v.r.Alt2,
@@ -2357,11 +2357,11 @@
                             }
                         }, s.createElement(v.W, {
                             bold: !0,
-                            type: v.Ob.H6
+                            type: v.Pb.H6
                         }, Object(c.d)("Free with Prime", "PrimeOfferHeader"))), this.getNumOfUnseenOffersDisplay())
                     }, t.prototype.getNumOfUnseenOffersDisplay = function() {
                         var e = this.props.numOfUnseenOffers;
-                        if (e) return s.createElement(v.yb, {
+                        if (e) return s.createElement(v.zb, {
                             className: "prime-offer__new-offer-header",
                             borderBottom: !0,
                             background: v.r.Alt2,
@@ -2377,11 +2377,11 @@
                             flexGrow: 1
                         }, s.createElement(v.W, {
                             bold: !0,
-                            type: v.Ob.H6
+                            type: v.Pb.H6
                         }, Object(c.d)("New Prime Loot", "PrimeOfferHeader"))), s.createElement(v.Xa, {
                             className: "prime-offer__new-offer-header-count",
-                            textAlign: v.Kb.Center
-                        }, s.createElement(v.yb, {
+                            textAlign: v.Lb.Center
+                        }, s.createElement(v.zb, {
                             className: "prime-offer__new-offer-header-count__text",
                             background: v.r.Base,
                             color: v.O.Base,
@@ -2542,8 +2542,8 @@
                             t = this.props.userData && this.props.userData.currentUser && this.props.userData.currentUser.hasPrime;
                         if (!e && !t) return null;
                         var n = {
-                            align: v.Sb.Center,
-                            direction: v.Tb.Bottom,
+                            align: v.Tb.Center,
+                            direction: v.Ub.Bottom,
                             label: ""
                         };
                         return this.state.numOfUnseenOffers > 0 ? n.label = Object(c.d)("New Prime Loot", "PrimeOffers") : n.label = Object(c.d)("Prime Loot", "PrimeOffers"), s.createElement(v.Xa, {
@@ -2694,13 +2694,13 @@
                         }), s.createElement(g.a, {
                             onHover: O.g,
                             onClick: O.f
-                        }, s.createElement(v.yb, {
+                        }, s.createElement(v.zb, {
                             color: v.O.Base,
                             className: "blue-bar",
                             "data-a-target": "blue-bar",
                             position: v.fb.Relative,
                             fullWidth: !0,
-                            zIndex: v.bc.Above
+                            zIndex: v.cc.Above
                         }, s.createElement(v.Xa, {
                             className: "blue-bar__bar",
                             display: v.X.Flex,
@@ -2729,7 +2729,7 @@
                             asset: v.pb.Crown
                         })), s.createElement(v.W, {
                             bold: !0,
-                            type: v.Ob.Span,
+                            type: v.Pb.Span,
                             noWrap: !0,
                             fontSize: v.Ca.Size6
                         }, s.createElement(v.Pa, {
@@ -2744,14 +2744,14 @@
                             rel: "noopener noreferrer"
                         }, a))), s.createElement(v.W, {
                             className: "blue-bar__headline",
-                            type: v.Ob.Span,
+                            type: v.Pb.Span,
                             fontSize: v.Ca.Size6
                         }, l)), s.createElement(v.Xa, {
                             display: v.X.InlineFlex,
                             flexShrink: 0
                         }, s.createElement(v.W, {
                             bold: !0,
-                            type: v.Ob.Span,
+                            type: v.Pb.Span,
                             noWrap: !0,
                             fontSize: v.Ca.Size6,
                             color: v.O.Base
@@ -4674,7 +4674,7 @@
                         onClick: this.handleInsideBalloonClick
                     }, l)));
                     var c = a;
-                    return this.props.tooltipProps && (c = o.createElement(s.Rb, i.__assign({}, this.props.tooltipProps), a)), o.createElement(s.Xa, {
+                    return this.props.tooltipProps && (c = o.createElement(s.Sb, i.__assign({}, this.props.tooltipProps), a)), o.createElement(s.Xa, {
                         "data-toggle-balloon-id": this.toggleBalloonId,
                         display: this.props.display,
                         position: s.fb.Relative
@@ -5061,7 +5061,7 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = Object(a.g)(this.props.errorType);
-                        return i.createElement(s.yb, {
+                        return i.createElement(s.zb, {
                             background: s.r.Alt2,
                             display: s.X.Flex,
                             justifyContent: s.Wa.Center,
@@ -5071,19 +5071,19 @@
                             margin: {
                                 bottom: 1
                             },
-                            textAlign: s.Kb.Center,
+                            textAlign: s.Lb.Center,
                             "data-test-selector": this.props.testTarget,
                             "data-a-target": this.props.testTarget
                         }, i.createElement(s.W, {
-                            type: s.Ob.H4,
-                            align: s.Yb.Middle
-                        }, i.createElement(s.yb, {
+                            type: s.Pb.H4,
+                            align: s.Zb.Middle
+                        }, i.createElement(s.zb, {
                             padding: 1,
                             display: s.X.InlineFlex,
                             flexGrow: 1,
                             flexWrap: s.Ba.NoWrap,
                             alignItems: s.f.Center,
-                            textAlign: s.Kb.Left,
+                            textAlign: s.Lb.Left,
                             fontSize: this.props.fontSize ? this.props.fontSize : s.Ca.Size5,
                             "data-a-target": "prime-error-glitch"
                         }, i.createElement(s.Xa, {
@@ -5100,7 +5100,7 @@
                             width: 20,
                             height: 20
                         })), i.createElement(s.W, {
-                            type: s.Ob.P
+                            type: s.Pb.P
                         }, e))))
                     }, t
                 }(i.Component),

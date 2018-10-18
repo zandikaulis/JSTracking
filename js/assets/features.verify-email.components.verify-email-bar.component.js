@@ -361,7 +361,7 @@
                         }, a.createElement(g.Xa, {
                             fullWidth: !0,
                             position: g.fb.Relative
-                        }, a.createElement(g.yb, {
+                        }, a.createElement(g.zb, {
                             className: "verify-email-bar",
                             display: g.X.Flex,
                             alignItems: g.f.Center,
@@ -398,7 +398,7 @@
                             color: g.O.Inherit
                         }, Object(l.d)("Keep your account secure and verify {email}.", {
                             email: this.props.data.currentUser.email
-                        }, "VerifyEmail")))))), a.createElement(g.yb, {
+                        }, "VerifyEmail")))))), a.createElement(g.zb, {
                             className: "verify-email-bar__dismiss",
                             position: g.fb.Absolute,
                             attachRight: !0,
@@ -417,14 +417,14 @@
                             hoverUnderlineNone: !0
                         }, Object(l.d)("Not Now", "VerifyEmail"))))))
                     }, t.prototype.renderEmailSent = function() {
-                        return a.createElement(g.yb, {
+                        return a.createElement(g.zb, {
                             className: "verify-email-bar verify-email-bar--success",
                             display: g.X.Flex,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
                             elevation: 1,
                             padding: 1
-                        }, a.createElement(g.yb, {
+                        }, a.createElement(g.zb, {
                             display: g.X.Flex,
                             alignItems: g.f.Center,
                             margin: {
@@ -444,14 +444,14 @@
                             email: this.props.data.currentUser.email
                         }, "VerifyEmail")))
                     }, t.prototype.renderErrorSending = function() {
-                        return a.createElement(g.yb, {
+                        return a.createElement(g.zb, {
                             className: "verify-email-bar verify-email-bar--error",
                             display: g.X.Flex,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
                             elevation: 1,
                             padding: 1
-                        }, a.createElement(g.yb, {
+                        }, a.createElement(g.zb, {
                             display: g.X.Flex,
                             alignItems: g.f.Center,
                             margin: {
@@ -469,7 +469,7 @@
                             color: g.O.Overlay
                         }, Object(l.d)("Oops...we were unable to send an email to {email}. Please try again later or update your email.", {
                             email: this.props.data.currentUser.email
-                        }, "VerifyEmail")), a.createElement(g.yb, {
+                        }, "VerifyEmail")), a.createElement(g.zb, {
                             position: g.fb.Absolute,
                             attachRight: !0,
                             margin: {

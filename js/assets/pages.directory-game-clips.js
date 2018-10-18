@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [130], {
+    [131], {
         "+PZR": function(e, t, n) {
             "use strict";
             var r = function(e, t) {
@@ -39,7 +39,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(u.yb, {
+                        return a.createElement(u.zb, {
                             className: "reporting-modal__container",
                             background: u.r.Base,
                             padding: {
@@ -1511,9 +1511,9 @@
                         var e = this;
                         return 0 === this.props.clips.length ? a.createElement("div", null, this.renderEmpty()) : a.createElement(y.Xa, {
                             fullWidth: !0
-                        }, a.createElement(y.Ub, {
-                            gutterSize: y.Wb.Small,
-                            childWidth: y.Vb.Large,
+                        }, a.createElement(y.Vb, {
+                            gutterSize: y.Xb.Small,
+                            childWidth: y.Wb.Large,
                             placeholderItems: 20
                         }, this.props.clips.map(function(t, n) {
                             return a.createElement(y.Xa, {
@@ -1600,7 +1600,7 @@
                         }), a.createElement(y.P, {
                             cols: 6
                         }, a.createElement(y.Xa, {
-                            textAlign: y.Kb.Center
+                            textAlign: y.Lb.Center
                         }, e)), a.createElement(y.P, {
                             cols: 3
                         })))
@@ -1644,9 +1644,9 @@
                             for (var n = [], r = 0; r < 20; r++) n.push(a.createElement(w.a, {
                                 key: r
                             }));
-                            e = a.createElement(y.Ub, {
-                                gutterSize: y.Wb.Small,
-                                childWidth: y.Vb.Large,
+                            e = a.createElement(y.Vb, {
+                                gutterSize: y.Xb.Small,
+                                childWidth: y.Wb.Large,
                                 placeholderItems: 20
                             }, n)
                         } else e = a.createElement(_, {
@@ -2257,7 +2257,7 @@
                                 onClick: this.props.closeModal,
                                 "data-a-target": "clip-modal-game-link"
                             }, this.props.clip.game.name)
-                        }, "ClipsViewModalContent") : t, c.createElement(R.yb, {
+                        }, "ClipsViewModalContent") : t, c.createElement(R.zb, {
                             className: "clips-view-modal-content",
                             background: R.r.Base
                         }, c.createElement(R.Xa, {
@@ -2322,7 +2322,7 @@
                             ellipsis: !0
                         }, c.createElement(R.Pa, {
                             ellipsis: !0
-                        }, c.createElement(R.yb, {
+                        }, c.createElement(R.zb, {
                             display: R.X.Flex,
                             fontSize: R.Ca.Size5
                         }, c.createElement(R.Xa, {
@@ -2330,13 +2330,13 @@
                         }, this.props.clip.title), c.createElement(R.Xa, {
                             flexShrink: 0
                         }, c.createElement(R.W, {
-                            type: R.Ob.Span,
+                            type: R.Pb.Span,
                             color: R.O.Alt2
                         }, " • ", Object(d.d)("{created, date, medium}", {
                             created: new Date(this.props.clip.createdAt)
                         }, "ClipsViewModalContent"))))), c.createElement(R.Pa, {
                             ellipsis: !0
-                        }, c.createElement(R.yb, {
+                        }, c.createElement(R.zb, {
                             color: R.O.Alt2
                         }, e, e && !!this.props.clip.curator && c.createElement("span", null, " • "), this.props.clip.curator && Object(d.d)("Clipped by {curator}", {
                             curator: c.createElement(R.U, {
@@ -2344,7 +2344,7 @@
                                 onClick: this.props.closeModal,
                                 "data-a-target": "clip-modal-curator-link"
                             }, this.props.clip.curator.login)
-                        }, "ClipsViewModalContent")))), c.createElement(R.yb, {
+                        }, "ClipsViewModalContent")))), c.createElement(R.zb, {
                             display: R.X.Flex,
                             padding: {
                                 bottom: 2,
@@ -2444,7 +2444,7 @@
                         closeModal: o.c
                     }, e)
                 })(A),
-                B = (n("ygyh"), function(e) {
+                z = (n("ygyh"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2518,12 +2518,12 @@
                         }))
                     }, t
                 }(c.Component)),
-                z = Object(m.b)("ClipsViewModal")(B);
+                B = Object(m.b)("ClipsViewModal")(z);
             var V = Object(i.connect)(null, function(e) {
                 return Object(a.bindActionCreators)({
                     showModal: o.d
                 }, e)
-            })(z);
+            })(B);
             n.d(t, "a", function() {
                 return V
             }), n.d(t, !1, function() {})
@@ -2664,7 +2664,7 @@
                         }, a.createElement(u.Ea, {
                             id: "reporting-modal__select",
                             label: Object(o.d)("Select Reason (required)", "ReportUserModal")
-                        }, a.createElement(u.ub, {
+                        }, a.createElement(u.vb, {
                             id: "reporting-modal__select",
                             "data-test-selector": "reporting-modal.select",
                             disabled: this.props.data.loading || !!this.props.data.error,
@@ -2753,13 +2753,13 @@
                         },
                         "data-a-target": "reporting-channel-name"
                     }, a.createElement(u.W, {
-                        type: u.Ob.H4
-                    }, this.props.title), a.createElement(u.yb, {
+                        type: u.Pb.H4
+                    }, this.props.title), a.createElement(u.zb, {
                         color: u.O.Alt2,
                         margin: {
                             top: 1
                         }
-                    }, this.headerMessage)), a.createElement("form", null, a.createElement(u.yb, {
+                    }, this.headerMessage)), a.createElement("form", null, a.createElement(u.zb, {
                         borderTop: !0,
                         borderBottom: !0,
                         margin: {
@@ -2774,10 +2774,10 @@
                     }), a.createElement(u.Ea, {
                         id: "reporting__text-area",
                         label: Object(o.d)("Description (required)", "ReportUser")
-                    }, a.createElement(u.Lb, {
+                    }, a.createElement(u.Mb, {
                         defaultValue: this.props.defaultDescription,
                         onChange: this.handleTextAreaChange
-                    }))), a.createElement(u.yb, {
+                    }))), a.createElement(u.zb, {
                         display: u.X.Flex,
                         justifyContent: u.Wa.Center
                     }, a.createElement(u.z, {
@@ -2812,7 +2812,7 @@
                         "reporting__error-container": this.props.submitStatus !== g.Success,
                         "reporting__success-container": this.props.submitStatus === g.Success
                     });
-                    return a.createElement(u.yb, {
+                    return a.createElement(u.zb, {
                         className: t,
                         fullWidth: this.props.submitStatus !== g.Success,
                         "data-test-selector": "reporting.error",
@@ -3450,7 +3450,7 @@
                                 }
                             }, a.createElement(f.W, {
                                 className: "block-user__success",
-                                type: f.Ob.Span
+                                type: f.Pb.Span
                             }, Object(l.d)("{user} blocked", {
                                 user: t.props.targetUser.displayName
                             }, "ReportWizardBlockActions"))), a.createElement(f.U, {
@@ -3479,7 +3479,7 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.userBlocked ? this.renderUnblock() : this.renderBlock(),
                             t = Object(v.a)(this.props.targetUser.login, this.props.targetUser.displayName, !0);
-                        return a.createElement(f.yb, {
+                        return a.createElement(f.zb, {
                             borderTop: !0,
                             padding: {
                                 y: 1
@@ -3489,12 +3489,12 @@
                             }
                         }, a.createElement(f.Xa, null, Object(l.d)("Would you like to block {user}?", {
                             user: t
-                        }, "ReportWizardBlockActions")), a.createElement(f.yb, {
+                        }, "ReportWizardBlockActions")), a.createElement(f.zb, {
                             color: f.O.Alt2,
                             margin: {
                                 y: 1
                             }
-                        }, a.createElement(f.Xb, {
+                        }, a.createElement(f.Yb, {
                             baseFontSize: f.Ca.Size6
                         }, a.createElement("p", null, Object(l.d)("Blocking {user} will:", {
                             user: t
@@ -4178,7 +4178,7 @@
                                     }, a.createElement(f.Ea, {
                                         label: t.getTitle(),
                                         labelOptional: t.required ? "" : Object(l.d)("Optional", "ReportModalWizardCard")
-                                    }, a.createElement(f.Lb, {
+                                    }, a.createElement(f.Mb, {
                                         onChange: e.onChange,
                                         rows: t.rows || 3,
                                         name: t.value,
@@ -4375,7 +4375,7 @@
                         value: "profile general report reason"
                     }
                 },
-                B = {
+                z = {
                     getTitle: function(e) {
                         return Object(l.d)("Report {username}'s Room", {
                             username: e
@@ -4386,18 +4386,18 @@
                     value: "room report user",
                     type: T.MultipleChoice
                 },
-                z = {
+                B = {
                     getTitle: x.tellUsMore,
                     items: [O.input_description],
                     type: T.Confirm,
                     value: "tell us more"
                 },
                 V = {
-                    banEvasion: i.__assign({}, z, {
+                    banEvasion: i.__assign({}, B, {
                         items: [O.input_usernames, O.input_description],
                         value: "ban evasion tell us more"
                     }),
-                    socialMedia: i.__assign({}, z, {
+                    socialMedia: i.__assign({}, B, {
                         items: [O.input_link, O.input_connection, O.input_description],
                         nextCard: I.socialMedia,
                         value: "social media tell us more"
@@ -4516,14 +4516,14 @@
                     value: "impersonation type"
                 },
                 $ = U,
-                K = z,
+                K = B,
                 Y = D,
                 Z = {
                     video: F.identifyUser,
                     whisper: A,
                     chat: L.content,
                     profile: W.content,
-                    room: B,
+                    room: z,
                     "somewhere else": X.identifyLocation,
                     streamer: F.content,
                     "someone else in video": F.content,
@@ -4567,7 +4567,7 @@
                     EVENT_REPORT: W.content,
                     EXTENSION_REPORT: W.content,
                     LIVE_UP_REPORT: W.content,
-                    ROOM_REPORT: B,
+                    ROOM_REPORT: z,
                     WHISPER_REPORT: A,
                     VOD_COMMENT_REPORT: L.content
                 },
@@ -4781,7 +4781,7 @@
                                 onUnblock: this.props.onUnblock,
                                 userBlocked: this.props.userBlocked
                             }) : null,
-                            t = this.state.error ? a.createElement(f.yb, {
+                            t = this.state.error ? a.createElement(f.zb, {
                                 fullWidth: !0,
                                 margin: {
                                     bottom: 1
@@ -4790,7 +4790,7 @@
                                 className: "reporting__error-container"
                             }, this.state.error) : null,
                             n = this.state.prevCards.length || this.state.currentCard.type === T.Info ? null : this.renderPrimer();
-                        return a.createElement(f.yb, {
+                        return a.createElement(f.zb, {
                             className: "reporting-wizard",
                             display: f.X.Flex,
                             margin: {
@@ -5307,7 +5307,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderSuccess = function() {
-                            return t.props.successContent ? i.createElement(s.yb, {
+                            return t.props.successContent ? i.createElement(s.zb, {
                                 "data-test-selector": l.SUCCESS_BODY,
                                 padding: {
                                     x: 2,
@@ -5320,10 +5320,10 @@
                                 background: s.r.Alt,
                                 fullWidth: !0
                             }, i.createElement(s.W, {
-                                type: s.Ob.Strong
+                                type: s.Pb.Strong
                             }, t.props.successContent)) : null
                         }, t.renderError = function() {
-                            return t.props.errorContent ? i.createElement(s.yb, {
+                            return t.props.errorContent ? i.createElement(s.zb, {
                                 "data-test-selector": l.ERROR_BODY,
                                 padding: {
                                     x: 1,
@@ -5336,7 +5336,7 @@
                                 background: s.r.Alt,
                                 fullWidth: !0
                             }, i.createElement(s.W, {
-                                type: s.Ob.Strong,
+                                type: s.Pb.Strong,
                                 color: s.O.Error
                             }, t.props.errorContent)) : null
                         }, t.onSubmit = function() {
@@ -5346,7 +5346,7 @@
                     return r.__extends(t, e), t.prototype.render = function() {
                         return this.props.successContent ? i.createElement(o.a, {
                             onClickOut: this.props.onClose
-                        }, i.createElement(s.yb, {
+                        }, i.createElement(s.zb, {
                             padding: 2,
                             background: s.r.Base,
                             className: "clip-modal"
@@ -5362,11 +5362,11 @@
                             onClick: this.props.onClose
                         }, Object(a.d)("Close", "ClipsModal")))))) : i.createElement(o.a, {
                             onClickOut: this.props.onClose
-                        }, i.createElement(s.yb, {
+                        }, i.createElement(s.zb, {
                             padding: 2,
                             background: s.r.Base,
                             className: "clip-modal"
-                        }, i.createElement(s.yb, {
+                        }, i.createElement(s.zb, {
                             "data-test-selector": l.TITLE,
                             borderBottom: !0,
                             margin: {
@@ -5375,7 +5375,7 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, this.props.title), i.createElement(s.yb, {
+                        }, this.props.title), i.createElement(s.zb, {
                             "data-test-selector": l.MAIN_BODY,
                             borderBottom: !0,
                             margin: {
@@ -5421,10 +5421,10 @@
                             hasSucceeded: !1
                         }, t.renderTitle = function() {
                             return t.props.isTemporary ? i.createElement(s.W, {
-                                type: s.Ob.H5,
+                                type: s.Pb.H5,
                                 ellipsis: !0
                             }, Object(a.d)("Timeout this Clip Creator for 24 hours from Your Channel", "ClipsModalBanUser")) : i.createElement(s.W, {
-                                type: s.Ob.H5,
+                                type: s.Pb.H5,
                                 ellipsis: !0
                             }, Object(a.d)("Ban this Clip Creator from Your Channel", "ClipsModalBanUser"))
                         }, t.renderBodyText = function() {
@@ -5541,14 +5541,14 @@
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = [i.createElement(s.W, {
                             key: "title",
-                            type: s.Ob.H4
+                            type: s.Pb.H4
                         }, Object(a.d)("Delete This Clip", "ClipsModalDelete")), i.createElement(s.Xa, {
                             key: "message",
                             margin: {
                                 top: 1
                             }
                         }, i.createElement(s.W, {
-                            type: s.Ob.P,
+                            type: s.Pb.P,
                             color: s.O.Alt2
                         }, Object(a.d)("This clip will be permanently deleted.", "ClipsModalDelete")))];
                         if (!this.props.data.clip) return null;
@@ -5556,7 +5556,7 @@
                         this.props.data.clip.curator && (t = i.createElement("span", null, " • ", Object(a.d)("Clipped by {curator}", {
                             curator: this.props.data.clip.curator.login
                         }, "ClipsModalDelete")));
-                        var n = i.createElement(s.yb, {
+                        var n = i.createElement(s.zb, {
                             display: s.X.Flex,
                             flexWrap: s.Ba.NoWrap
                         }, i.createElement(s.Xa, {
@@ -5569,7 +5569,7 @@
                         }, i.createElement("img", {
                             src: this.props.data.clip.thumbnailURL
                         }))), i.createElement(s.Xa, null, i.createElement(s.W, {
-                            type: s.Ob.H5
+                            type: s.Pb.H5
                         }, this.props.data.clip.title), i.createElement(s.W, {
                             color: s.O.Alt2
                         }, Object(a.d)("{created, date, medium}", {
@@ -5669,13 +5669,13 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = i.createElement(s.W, {
-                            type: s.Ob.P
+                            type: s.Pb.P
                         }, Object(a.d)("This clip and all other clips created from the same video will be permanently deleted.", "ClipsModalDeleteAll"));
                         return i.createElement(c, {
                             onSubmit: this.deleteAll,
                             onClose: this.props.onClose,
                             title: i.createElement(s.W, {
-                                type: s.Ob.H4
+                                type: s.Pb.H4
                             }, Object(a.d)("Delete All Clips from Related Video", "ClipsModalDeleteAll")),
                             body: e,
                             buttonContent: Object(a.d)("Delete", "ClipsModalDeleteAll"),
@@ -5791,10 +5791,10 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = i.createElement(s.W, {
-                                type: s.Ob.H4
+                                type: s.Pb.H4
                             }, Object(a.d)("Delete these clips?", "ClipsModalBatchDelete")),
                             t = i.createElement(s.W, {
-                                type: s.Ob.P
+                                type: s.Pb.P
                             }, Object(a.d)("These clips will be permanently deleted. Are you sure?", "ClipsModalBatchDelete"));
                         return i.createElement(c, {
                             onSubmit: this.onDeleteClick,
@@ -6252,7 +6252,7 @@
                                 className: "language-select-menu__balloon"
                             }, c.createElement(m.b, null, c.createElement(v.Xa, {
                                 padding: .5
-                            }, Object(h.b)().map(t.renderLanguageOption)))), c.createElement(v.yb, {
+                            }, Object(h.b)().map(t.renderLanguageOption)))), c.createElement(v.zb, {
                                 background: v.r.Alt,
                                 borderTop: !0,
                                 className: "language-select-menu__footer"
@@ -6349,7 +6349,7 @@
                         return i.createElement(s.Xa, r.__assign({
                             position: s.fb.Relative,
                             className: "selectable-input-wrapper"
-                        }, Object(s.cc)(this.props)), i.createElement(s.Ra, {
+                        }, Object(s.dc)(this.props)), i.createElement(s.Ra, {
                             type: s.Ta.Text,
                             value: this.props.text,
                             readOnly: !0,
@@ -6733,18 +6733,18 @@
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(c.cc)(n.props), {
+                        }, Object(c.dc)(n.props), {
                             download: n.props.text
                         }), n.renderIcon()) : n.isLink() ? a.createElement("a", i.__assign({
                             href: n.getLinkTarget(),
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(c.cc)(n.props)), n.renderIcon()) : a.createElement("button", i.__assign({
+                        }, Object(c.dc)(n.props)), n.renderIcon()) : a.createElement("button", i.__assign({
                             onClick: n.copyPageUrl,
                             onMouseLeave: n.clearIsCopiedStatus,
                             className: e
-                        }, Object(c.cc)(n.props)), n.renderIcon())
+                        }, Object(c.dc)(n.props)), n.renderIcon())
                     }, n.onShareClickHandler = function() {
                         n.props.onShareClick && n.props.onShareClick(n.props.type)
                     }, n.clearIsCopiedStatus = function() {
@@ -6844,9 +6844,9 @@
                 return i.__extends(t, e), t.prototype.render = function() {
                     return a.createElement(c.Xa, {
                         className: "social-button"
-                    }, a.createElement(c.Rb, {
+                    }, a.createElement(c.Sb, {
                         label: this.getTooltipFromType(),
-                        direction: c.Tb.Bottom
+                        direction: c.Ub.Bottom
                     }, this.renderLink()))
                 }, t
             }(a.Component)

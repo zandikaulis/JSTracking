@@ -499,7 +499,7 @@
                         }, Object(s.d)("China (CN)", "CampaignsBlizzardAccountLink")), o.createElement(h.Ua, {
                             onClick: this.blizzardLink,
                             "data-region": "sea"
-                        }, Object(s.d)("South East Asia (SEA)", "CampaignsBlizzardAccountLink"))))), this.props.data && this.props.data.currentUser && this.props.data.currentUser.blizzardAccount && o.createElement(h.Rb, {
+                        }, Object(s.d)("South East Asia (SEA)", "CampaignsBlizzardAccountLink"))))), this.props.data && this.props.data.currentUser && this.props.data.currentUser.blizzardAccount && o.createElement(h.Sb, {
                             label: this.props.data.currentUser.blizzardAccount.battleTag
                         }, o.createElement(l.a, null, o.createElement(h.z, {
                             type: h.F.Hollow,
@@ -745,7 +745,7 @@
             ! function(e) {
                 e.UnlockedNodes = "unlocked-nodes", e.UnlockedText = "unlocked-text"
             }(k || (k = {}));
-            var N = function(e) {
+            var A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderMilestoneNode = function(e) {
@@ -780,13 +780,13 @@
                         }).reduce(function(e, t) {
                             return e > t ? e : t
                         }, 0);
-                        return i.createElement(m.yb, {
+                        return i.createElement(m.zb, {
                             className: "campaigns-progress-section",
                             border: !0,
                             display: m.X.Block,
                             background: m.r.Base,
                             borderRadius: m.x.Large
-                        }, i.createElement(m.yb, {
+                        }, i.createElement(m.zb, {
                             className: "campaigns-progress-section__header",
                             borderBottom: !0,
                             padding: 2
@@ -796,9 +796,9 @@
                             display: m.X.InlineBlock
                         }, i.createElement(m.W, {
                             bold: !0,
-                            type: m.Ob.H6,
+                            type: m.Pb.H6,
                             color: m.O.Link,
-                            transform: m.Nb.Uppercase
+                            transform: m.Ob.Uppercase
                         }, this.props.title)), this.props.subtitle && i.createElement(m.Pa, {
                             margin: {
                                 left: 1
@@ -807,8 +807,8 @@
                         }, i.createElement(m.W, {
                             className: "campaigns-progress-section__subtitle",
                             bold: !0,
-                            type: m.Ob.H6,
-                            transform: m.Nb.Uppercase
+                            type: m.Pb.H6,
+                            transform: m.Ob.Uppercase
                         }, this.renderStageDescription(this.props.subtitle)))), i.createElement(m.Xa, {
                             display: m.X.Flex,
                             justifyContent: m.Wa.Between,
@@ -826,7 +826,7 @@
                             width: 30,
                             asset: m.pb.Bits
                         })), i.createElement(m.W, {
-                            type: m.Ob.H1,
+                            type: m.Pb.H1,
                             bold: !0
                         }, Object(o.f)(this.props.progress))), this.props.showRewardsButton && i.createElement(m.Xa, null, this.renderRewardsButton())), i.createElement(m.Xa, {
                             className: "campaigns-progress-section__description"
@@ -891,13 +891,13 @@
                         }[e.toLowerCase()] || e
                     }, t
                 }(i.Component),
-                A = N;
+                N = A;
             r.d(t, !1, function() {
                 return k
             }), r.d(t, !1, function() {
-                return N
-            }), r.d(t, "a", function() {
                 return A
+            }), r.d(t, "a", function() {
+                return N
             })
         },
         G30c: function(e, t, r) {
@@ -924,7 +924,7 @@
                         }) : !t || e.error ? a.createElement(m.Xa, {
                             fullHeight: !0,
                             fullWidth: !0,
-                            textAlign: m.Kb.Center,
+                            textAlign: m.Lb.Center,
                             padding: {
                                 top: 4
                             }
@@ -933,7 +933,7 @@
                             fill: !0,
                             width: 50,
                             height: 50
-                        })) : a.createElement(m.yb, {
+                        })) : a.createElement(m.zb, {
                             display: m.X.Flex,
                             flexDirection: m.Aa.Column,
                             fullHeight: !0,
@@ -951,7 +951,7 @@
                                 bottom: 2
                             }
                         }, a.createElement(m.W, {
-                            type: m.Ob.H3
+                            type: m.Pb.H3
                         }, Object(o.d)("Team Leaderboards", "CampaignsProgressTab"))), a.createElement(d.a, {
                             leaderboardRows: t.items.edges,
                             pageSize: 10,
@@ -1014,7 +1014,7 @@
                                     lg: 3,
                                     xl: 2
                                 }
-                            }, i.createElement(m.yb, {
+                            }, i.createElement(m.zb, {
                                 className: "campaigns-reward-row__border",
                                 "data-test-selector": n.Reward,
                                 borderLeft: !0,
@@ -1028,7 +1028,7 @@
                                 imageAlt: t.rewards[0] && t.rewards[0].name,
                                 rarity: t.rewards[0] && t.rewards[0].rarity,
                                 imageClassName: "campaigns-reward-row__reward-image"
-                            }), void 0 !== e.props.userProgress && e.props.userProgress < t.threshold && i.createElement(m.yb, {
+                            }), void 0 !== e.props.userProgress && e.props.userProgress < t.threshold && i.createElement(m.zb, {
                                 className: "campaigns-reward-row__locked-overlay",
                                 fullHeight: !0,
                                 fullWidth: !0,
@@ -1383,7 +1383,7 @@
                     var t, r = !!this.props.milestone && this.props.milestone.objectiveTag === h.a.Global;
                     return t = e ? this.renderCheerbombTriggerBodyContent() : r ? this.renderGlobalObjectiveBodyContent() : this.renderIndividualObjectiveBodyContent(), s.createElement(f.Xa, {
                         className: "milestone-progress-balloon",
-                        textAlign: f.Kb.Left
+                        textAlign: f.Lb.Left
                     }, s.createElement(f.Xa, {
                         className: "milestone-progress-balloon__reward-showcase"
                     }, s.createElement(p.a, {
@@ -1392,7 +1392,7 @@
                         rarity: this.props.reward.rarity
                     })), s.createElement(f.Xa, {
                         margin: 1
-                    }, s.createElement(f.yb, {
+                    }, s.createElement(f.zb, {
                         display: f.X.Flex,
                         justifyContent: f.Wa.Between,
                         borderBottom: !0,
@@ -1412,7 +1412,7 @@
                         asset: f.pb.Bits
                     }), s.createElement(f.W, {
                         fontSize: f.Ca.Size5,
-                        type: f.Ob.Span
+                        type: f.Pb.Span
                     }, Object(l.f)(this.props.milestone.threshold))))), s.createElement(f.Xa, {
                         margin: {
                             top: 1
@@ -1421,14 +1421,14 @@
                 }, t.prototype.renderNotAvailableBallon = function() {
                     return s.createElement(f.Xa, {
                         className: "milestone-progress-balloon",
-                        textAlign: f.Kb.Left
+                        textAlign: f.Lb.Left
                     }, s.createElement(f.Xa, {
                         className: "milestone-progress-balloon__reward-showcase"
                     }, s.createElement(p.a, {
                         imageURL: this.props.milestoneFormatter.getUnannouncedMilestoneImage()
                     })), s.createElement(f.Xa, {
                         margin: 1
-                    }, s.createElement(f.yb, {
+                    }, s.createElement(f.zb, {
                         "data-test-selector": n.NotAvailableText,
                         display: f.X.Flex,
                         justifyContent: f.Wa.Between,
@@ -1452,14 +1452,14 @@
                         }
                     }, s.createElement(f.W, {
                         fontSize: f.Ca.Size5,
-                        type: f.Ob.Span
+                        type: f.Pb.Span
                     }, Object(l.d)("This reward has not yet been announced.", "MilestoneProgressBalloon")))))
                 }, t.prototype.renderStatusSVG = function() {
                     var e, t = f.pb.Lock,
                         r = n.StatusIconLocked;
                     return (this.props.milestone && this.isRewardUnlocked() || this.props.trigger && this.props.triggerRewardRedeemed) && (e = f.qb.Success, t = f.pb.Unlock, r = n.StatusIconUnlocked), this.isRewardUnavailable() && (e = f.qb.Alert, t = f.pb.Ban, r = n.StatusIconUnavailable), s.createElement(f.Xa, {
                         "data-test-selector": r,
-                        textAlign: f.Kb.Right,
+                        textAlign: f.Lb.Right,
                         className: "milestone-progress-balloon__status-svg"
                     }, s.createElement(f.ob, {
                         type: e,
@@ -2095,7 +2095,7 @@
                         }) : this.props.data && this.props.data.error ? o.createElement(u.Xa, {
                             fullHeight: !0,
                             fullWidth: !0,
-                            textAlign: u.Kb.Center,
+                            textAlign: u.Lb.Center,
                             padding: {
                                 top: 4
                             }
@@ -2104,7 +2104,7 @@
                             fill: !0,
                             width: 50,
                             height: 50
-                        })) : o.createElement(u.yb, {
+                        })) : o.createElement(u.zb, {
                             display: u.X.Flex,
                             flexDirection: u.Aa.Column,
                             fullHeight: !0,
@@ -2122,7 +2122,7 @@
                                 bottom: 2
                             }
                         }, o.createElement(u.W, {
-                            type: u.Ob.H3
+                            type: u.Pb.H3
                         }, Object(l.d)("Individual Leaderboards", "CampaignsProgressTab"))), o.createElement(p.a, {
                             leaderboardRows: this.props.data.user.tournament.globalLeaderboard.items.edges,
                             pageSize: 10,
@@ -2268,7 +2268,7 @@
                     return n.__extends(t, e), t.prototype.render = function() {
                         var e = new Date(Date.now()),
                             t = !1;
-                        return this.props.newDisplayInfo && this.props.newDisplayInfo.startDate ? t = this.props.newDisplayInfo && this.props.newDisplayInfo.endDate ? this.props.newDisplayInfo.startDate <= e && this.props.newDisplayInfo.endDate >= e : this.props.newDisplayInfo.startDate <= e : this.props.newDisplayInfo && this.props.newDisplayInfo.endDate && (t = this.props.newDisplayInfo.endDate >= e), this.props.newDisplayInfo && void 0 !== this.props.newDisplayInfo.shouldShow && (t = this.props.newDisplayInfo.shouldShow), a.createElement(o.zb, {
+                        return this.props.newDisplayInfo && this.props.newDisplayInfo.startDate ? t = this.props.newDisplayInfo && this.props.newDisplayInfo.endDate ? this.props.newDisplayInfo.startDate <= e && this.props.newDisplayInfo.endDate >= e : this.props.newDisplayInfo.startDate <= e : this.props.newDisplayInfo && this.props.newDisplayInfo.endDate && (t = this.props.newDisplayInfo.endDate >= e), this.props.newDisplayInfo && void 0 !== this.props.newDisplayInfo.shouldShow && (t = this.props.newDisplayInfo.shouldShow), a.createElement(o.Ab, {
                             active: this.props.isSelected,
                             onClick: this.props.onClick,
                             "data-tab-target": this.props.id
@@ -2287,7 +2287,7 @@
                             breakpointExtraExtraLarge: {
                                 fontSize: o.Ca.Size3
                             },
-                            type: o.Ob.H3
+                            type: o.Pb.H3
                         }, this.props.title), t && a.createElement(s, null)))
                     }, t
                 }(a.PureComponent);
@@ -2312,13 +2312,13 @@
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
                         var e = "campaign-reward-group";
-                        return a.createElement(s.yb, {
+                        return a.createElement(s.zb, {
                             className: e,
                             overflow: s.ab.Hidden,
                             border: !0,
                             borderRadius: s.x.Large,
                             background: s.r.Base
-                        }, a.createElement(s.yb, {
+                        }, a.createElement(s.zb, {
                             className: e + "__header",
                             display: s.X.Flex,
                             flexWrap: s.Ba.Wrap,
@@ -2327,7 +2327,7 @@
                             breakpointLarge: {
                                 flexWrap: s.Ba.NoWrap
                             }
-                        }, a.createElement(s.yb, {
+                        }, a.createElement(s.zb, {
                             className: e + "__header-main",
                             display: s.X.Flex,
                             flexWrap: s.Ba.Wrap,
@@ -2340,7 +2340,7 @@
                         }, a.createElement(s.Xa, {
                             display: s.X.Flex,
                             alignItems: s.f.Stretch
-                        }, a.createElement(s.yb, {
+                        }, a.createElement(s.zb, {
                             padding: {
                                 x: 2,
                                 y: 3
@@ -2351,15 +2351,15 @@
                             justifyContent: s.Wa.Start
                         }, a.createElement(s.W, {
                             color: s.O.Overlay,
-                            transform: s.Nb.Uppercase,
+                            transform: s.Ob.Uppercase,
                             "data-test-selector": "esports-reward-group-title",
                             fontSize: s.Ca.Size5,
-                            type: s.Ob.Strong
+                            type: s.Pb.Strong
                         }, this.props.title)), a.createElement(s.Xa, {
                             className: e + "__header-rewards",
                             display: s.X.Flex,
                             alignItems: s.f.Stretch
-                        }, !!this.props.rewardsEntitled && !!this.props.totalRewards && this.props.totalRewards > 0 && a.createElement(s.yb, {
+                        }, !!this.props.rewardsEntitled && !!this.props.totalRewards && this.props.totalRewards > 0 && a.createElement(s.zb, {
                             "data-test-selector": "esports-reward-group-entitled-rewards-numbers",
                             display: s.X.Flex,
                             padding: {
@@ -2369,7 +2369,7 @@
                             alignItems: s.f.Center,
                             background: s.r.Accent
                         }, a.createElement(s.W, {
-                            type: s.Ob.Strong,
+                            type: s.Pb.Strong,
                             fontSize: s.Ca.Size2
                         }, Object(i.f)(this.props.rewardsEntitled))), a.createElement(s.Xa, {
                             className: e + "__header-rewards-sep",
@@ -2383,7 +2383,7 @@
                             className: e + "__header-rewards-total",
                             alignItems: s.f.Center
                         }, a.createElement(s.W, {
-                            type: s.Ob.Strong,
+                            type: s.Pb.Strong,
                             fontSize: s.Ca.Size2
                         }, Object(i.f)(this.props.totalRewards))))), this.props.showCheer && a.createElement(s.Xa, {
                             margin: {
@@ -2477,7 +2477,7 @@
                             margin: {
                                 right: 1
                             },
-                            verticalAlign: d.Yb.Bottom
+                            verticalAlign: d.Zb.Bottom
                         }, o.createElement(d.z, {
                             "data-test-selector": "esports-claim-all-button",
                             onClick: this.claimAllRewards,
@@ -2550,11 +2550,11 @@
                         }, this.props.secondaryName && i.createElement(m.W, {
                             "data-test-selector": "esports-leaderboard-row-secondary-name",
                             color: m.O.Link,
-                            transform: m.Nb.Uppercase,
+                            transform: m.Ob.Uppercase,
                             lineHeight: m.Ya.Heading
                         }, this.props.secondaryName), i.createElement(m.W, {
                             "data-test-selector": "esports-leaderboard-row-display-name",
-                            type: m.Ob.H5,
+                            type: m.Pb.H5,
                             bold: !0,
                             lineHeight: m.Ya.Heading
                         }, this.props.displayName)), i.createElement(m.Xa, {
@@ -2578,7 +2578,7 @@
                         }, i.createElement(m.W, {
                             "data-test-selector": "esports-leaderboard-row-score",
                             lineHeight: m.Ya.Body,
-                            type: m.Ob.H4
+                            type: m.Pb.H4
                         }, Object(o.f)(this.props.score))))))
                     }, t
                 }(i.Component)),
@@ -2613,13 +2613,13 @@
                         }, i.createElement(m.W, {
                             "data-test-selector": "esports-leaderboard-row-rank",
                             color: m.O.Link,
-                            transform: m.Nb.Uppercase,
+                            transform: m.Ob.Uppercase,
                             lineHeight: m.Ya.Heading
                         }, Object(o.d)("Rank: {rank}", {
                             rank: Object(o.f)(this.props.rank)
                         }, "CampaignsLeaderboardSelfRow")), i.createElement(m.W, {
                             "data-test-selector": "esports-leaderboard-row-display-name",
-                            type: m.Ob.H5,
+                            type: m.Pb.H5,
                             bold: !0,
                             lineHeight: m.Ya.Heading
                         }, this.props.displayName)), i.createElement(m.Xa, {
@@ -2646,7 +2646,7 @@
                         }, i.createElement(m.W, {
                             "data-test-selector": "esports-leaderboard-row-score",
                             lineHeight: m.Ya.Body,
-                            type: m.Ob.H4
+                            type: m.Pb.H4
                         }, Object(o.f)(this.props.score))))))
                     }, t
                 }(i.PureComponent)),
@@ -2739,7 +2739,7 @@
                         }, i.createElement("button", {
                             onClick: this.pagePipClick,
                             "data-page-number": b
-                        }, i.createElement(m.yb, {
+                        }, i.createElement(m.zb, {
                             border: !0,
                             padding: .5,
                             display: m.X.Block,
@@ -2750,52 +2750,52 @@
                     var y = null;
                     if (this.props.isTeam) {
                         var k = null;
-                        this.props.domain === h.c ? k = i.createElement(i.Fragment, null, i.createElement(m.zb, {
+                        this.props.domain === h.c ? k = i.createElement(i.Fragment, null, i.createElement(m.Ab, {
                             active: this.state.activeTab === n.NA,
                             onClick: this.tabClick,
                             "data-tab-id": n.NA
                         }, i.createElement(m.W, {
-                            type: m.Ob.H4
-                        }, Object(o.d)("NA", "CampaignsProgressTab"))), i.createElement(m.zb, {
+                            type: m.Pb.H4
+                        }, Object(o.d)("NA", "CampaignsProgressTab"))), i.createElement(m.Ab, {
                             active: this.state.activeTab === n.EU,
                             onClick: this.tabClick,
                             "data-tab-id": n.EU
                         }, i.createElement(m.W, {
-                            type: m.Ob.H4
-                        }, Object(o.d)("EU", "CampaignsProgressTab"))), i.createElement(m.zb, {
+                            type: m.Pb.H4
+                        }, Object(o.d)("EU", "CampaignsProgressTab"))), i.createElement(m.Ab, {
                             active: this.state.activeTab === n.KR,
                             onClick: this.tabClick,
                             "data-tab-id": n.KR
                         }, i.createElement(m.W, {
-                            type: m.Ob.H4
-                        }, Object(o.d)("KR", "CampaignsProgressTab"))), i.createElement(m.zb, {
+                            type: m.Pb.H4
+                        }, Object(o.d)("KR", "CampaignsProgressTab"))), i.createElement(m.Ab, {
                             active: this.state.activeTab === n.CN,
                             onClick: this.tabClick,
                             "data-tab-id": n.CN
                         }, i.createElement(m.W, {
-                            type: m.Ob.H4
-                        }, Object(o.d)("CN", "CampaignsProgressTab")))) : this.props.domain === h.f && (k = i.createElement(i.Fragment, null, i.createElement(m.zb, {
+                            type: m.Pb.H4
+                        }, Object(o.d)("CN", "CampaignsProgressTab")))) : this.props.domain === h.f && (k = i.createElement(i.Fragment, null, i.createElement(m.Ab, {
                             active: this.state.activeTab === n.Atlantic,
                             onClick: this.tabClick,
                             "data-tab-id": n.Atlantic
                         }, i.createElement(m.W, {
-                            type: m.Ob.H4
-                        }, Object(o.d)("Atlantic", "CampaignsProgressTab"))), i.createElement(m.zb, {
+                            type: m.Pb.H4
+                        }, Object(o.d)("Atlantic", "CampaignsProgressTab"))), i.createElement(m.Ab, {
                             active: this.state.activeTab === n.Pacific,
                             onClick: this.tabClick,
                             "data-tab-id": n.Pacific
                         }, i.createElement(m.W, {
-                            type: m.Ob.H4
+                            type: m.Pb.H4
                         }, Object(o.d)("Pacific", "CampaignsProgressTab"))))), y = i.createElement(m.Xa, {
                             padding: {
                                 bottom: 2
                             }
-                        }, i.createElement(m.Ab, null, i.createElement(m.zb, {
+                        }, i.createElement(m.Bb, null, i.createElement(m.Ab, {
                             active: this.state.activeTab === n.AllTeams,
                             onClick: this.tabClick,
                             "data-tab-id": n.AllTeams
                         }, i.createElement(m.W, {
-                            type: m.Ob.H4
+                            type: m.Pb.H4
                         }, Object(o.d)("All Teams", "CampaignsProgressTab"))), k))
                     }
                     var E = null;
@@ -3156,7 +3156,7 @@
                             onClick: h.a
                         }, Object(o.d)("Cheer now", "HGCMarketingBanner"))), t.renderLearnMore()))
                     }, t.renderLoggedOut = function() {
-                        return i.createElement(b.yb, {
+                        return i.createElement(b.zb, {
                             color: b.O.Overlay
                         }, i.createElement(b.Xa, {
                             margin: {
@@ -3167,10 +3167,10 @@
                         }, Object(o.d)("Cheer for your favorite teams and unlock tons of exclusive in-game loot!", "HGCMarketingBanner"))), i.createElement("ol", {
                             className: "hgc-marketing-banner__list"
                         }, i.createElement("li", null, i.createElement(b.W, {
-                            type: b.Ob.Span,
+                            type: b.Pb.Span,
                             color: b.O.Overlay
                         }, " ", Object(o.d)("Sign up or Log in to your Twitch account to participate", "HGCMarketingBanner"))), i.createElement("li", null, i.createElement(b.W, {
-                            type: b.Ob.Span,
+                            type: b.Pb.Span,
                             color: b.O.Overlay
                         }, " ", Object(o.d)("Connect your Blizzard account to Twitch", "HGCMarketingBanner")))), i.createElement(b.Xa, {
                             className: "hgc-marketing-banner__anon",
@@ -3199,7 +3199,7 @@
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return this.state.dismissedBanner ? null : i.createElement(b.yb, {
+                    return this.state.dismissedBanner ? null : i.createElement(b.zb, {
                         className: "hgc-marketing-banner",
                         borderRadius: b.x.Medium,
                         margin: {
@@ -3255,7 +3255,7 @@
                             y: 1
                         }
                     }, i.createElement(b.W, {
-                        type: b.Ob.H4,
+                        type: b.Pb.H4,
                         color: b.O.Overlay
                     }, Object(o.d)("HGC Cheer is back!", "HGCMarketingBanner"))), i.createElement(b.Xa, {
                         margin: {
@@ -3290,8 +3290,8 @@
                 })(v),
                 C = r("G30c"),
                 w = r("WaLP"),
-                N = r("TSYQ"),
-                A = r("zF2X");
+                A = r("TSYQ"),
+                N = r("zF2X");
             r("RkuX");
             ! function(e) {
                 e.Available = "available", e.Locked = "locked", e.Unavailable = "unavailable"
@@ -3299,16 +3299,16 @@
             function(e) {
                 e.pillAvailable = "milestone-pill-available", e.pillLocked = "milestone-pill-locked", e.pillUnavailable = "milestone-pill-unavailable", e.image = "milestone-pill-image", e.overlay = "milestone-pill-overlay", e.svgWrapper = "milestone-pill-svg-wrapper"
             }(k || (k = {}));
-            var I, _ = function(e) {
+            var I, z = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.status !== y.Available,
-                            t = N("milestone-pill__overlay", {
+                            t = A("milestone-pill__overlay", {
                                 "milestone-pill__overlay--show": e
                             }),
-                            r = N("milestone-pill__svg", {
+                            r = A("milestone-pill__svg", {
                                 "milestone-pill__svg--show": e
                             }),
                             n = b.pb.Lock;
@@ -3323,14 +3323,14 @@
                             justifyContent: b.Wa.Center,
                             alignItems: b.f.Center,
                             fullWidth: !0
-                        }, i.createElement(A.a, {
+                        }, i.createElement(N.a, {
                             balloon: this.props.milestoneBalloon
                         }, i.createElement(b.S, {
                             "data-test-selector": k.image,
                             className: "milestone-pill__img",
                             src: this.props.imageURL,
                             alt: ""
-                        }), i.createElement(b.yb, {
+                        }), i.createElement(b.zb, {
                             "data-test-selector": k.overlay,
                             className: t,
                             position: b.fb.Absolute,
@@ -3346,13 +3346,13 @@
                         }))))
                     }, t
                 }(i.Component),
-                S = r("OTph"),
-                R = r("vt2+");
+                _ = r("OTph"),
+                S = r("vt2+");
             r("Shl3");
             ! function(e) {
                 e.trackName = "milestone-pills-track-name", e.rewardProgress = "milestone-pills-reward-progress"
             }(I || (I = {}));
-            var T, z = function(e) {
+            var R, T = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3361,7 +3361,7 @@
                         display: b.X.InlineBlock,
                         flexGrow: 1,
                         className: "milestone-pills"
-                    }, i.createElement(b.yb, {
+                    }, i.createElement(b.zb, {
                         className: "milestone-pills__header",
                         display: b.X.Flex,
                         justifyContent: b.Wa.Start,
@@ -3373,7 +3373,7 @@
                         className: "milestone-pills__header-image",
                         src: this.props.trackImageURL,
                         alt: this.props.trackName
-                    }), i.createElement(b.yb, {
+                    }), i.createElement(b.zb, {
                         fullHeight: !0,
                         display: b.X.Flex,
                         alignItems: b.f.Center,
@@ -3384,7 +3384,7 @@
                         "data-test-selector": I.trackName,
                         color: b.O.Alt,
                         fontSize: b.Ca.Size5
-                    }, this.props.trackName)), i.createElement(b.yb, {
+                    }, this.props.trackName)), i.createElement(b.zb, {
                         fullHeight: !0,
                         display: b.X.Flex,
                         alignItems: b.f.Center,
@@ -3412,10 +3412,10 @@
                     }, "CampaignMilestonePills"))
                 }, t.prototype.renderMilestones = function() {
                     var e = this;
-                    return Object(R.b)(this.props.milestones).map(function(t) {
+                    return Object(S.b)(this.props.milestones).map(function(t) {
                         var r = t.rewards && t.rewards.length && t.rewards[0] || null;
                         if (!r) return null;
-                        var n = i.createElement(S.a, {
+                        var n = i.createElement(_.a, {
                                 milestone: t,
                                 reward: r,
                                 userProgress: e.props.userProgress,
@@ -3424,7 +3424,7 @@
                                 objectiveActive: e.props.objectiveActive
                             }),
                             a = y.Locked;
-                        return e.props.userProgress >= t.threshold && (a = y.Available), i.createElement(_, {
+                        return e.props.userProgress >= t.threshold && (a = y.Available), i.createElement(z, {
                             key: t.id,
                             imageURL: r.imageURL,
                             status: a,
@@ -3434,8 +3434,8 @@
                 }, t
             }(i.Component);
             r("oLk2");
-            (T || (T = {})).ExpandControl = "cheermote-progress-expand-control";
-            var O, L = function(e) {
+            (R || (R = {})).ExpandControl = "cheermote-progress-expand-control";
+            var L, F = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3455,13 +3455,13 @@
                             var r = 6;
                             "number" == typeof this.props.minimizedPillGroups && (r = this.props.minimizedPillGroups), t = t.slice(0, r)
                         }
-                        return i.createElement(b.yb, {
+                        return i.createElement(b.zb, {
                             className: "cheermote-progress",
                             background: b.r.Base,
                             border: !0,
                             borderRadius: b.x.Large,
                             overflow: b.ab.Hidden
-                        }, i.createElement(b.yb, {
+                        }, i.createElement(b.zb, {
                             display: b.X.Flex,
                             alignItems: b.f.Center,
                             padding: 2,
@@ -3470,9 +3470,9 @@
                             className: "cheermote-progress__header-text"
                         }, " ", i.createElement(b.W, {
                             bold: !0,
-                            type: b.Ob.H6,
+                            type: b.Pb.H6,
                             color: b.O.Link,
-                            transform: b.Nb.Uppercase
+                            transform: b.Ob.Uppercase
                         }, Object(o.d)("Team Rewards", "CheermoteProgress")), i.createElement(b.W, null, Object(o.d)("Use team Cheermotes and unlock team-themed loot such as in-game banners and Twitch emotes.", "CheermoteProgress"))), i.createElement(b.Xa, {
                             margin: {
                                 left: "auto"
@@ -3499,7 +3499,7 @@
                                 display: b.X.Flex,
                                 justifyContent: b.Wa.Center,
                                 padding: 1
-                            }, i.createElement(z, {
+                            }, i.createElement(T, {
                                 trackName: t.cheergroup && t.cheergroup.name || "",
                                 trackImageURL: t.cheergroup && t.cheergroup.imageUrl || "",
                                 milestones: t.milestones,
@@ -3509,19 +3509,19 @@
                                 objectiveActive: e.props.objectiveActive
                             })))
                         }))), i.createElement(b.Ua, {
-                            "data-test-selector": T.ExpandControl,
+                            "data-test-selector": R.ExpandControl,
                             type: b.Va.Alpha,
                             blurAfterClick: !0,
                             onClick: this.toggleExpanded
-                        }, i.createElement(b.yb, {
+                        }, i.createElement(b.zb, {
                             display: b.X.Flex,
                             justifyContent: b.Wa.Center,
                             alignItems: b.f.Center,
                             padding: 1,
                             color: b.O.Link,
                             borderTop: !0,
-                            textAlign: b.Kb.Center,
-                            verticalAlign: b.Yb.Middle
+                            textAlign: b.Lb.Center,
+                            verticalAlign: b.Zb.Middle
                         }, i.createElement(b.Xa, {
                             margin: {
                                 right: .5
@@ -3538,8 +3538,8 @@
                         e && e.click()
                     }, t
                 }(i.Component),
-                F = r("VJHF"),
-                x = r("rC/K"),
+                x = r("VJHF"),
+                O = r("rC/K"),
                 j = {
                     formatParticipationThresholdMessage: function(e) {
                         return Object(o.d)("Cheer at least {participationThreshold, number} Bits to help reach this Stage's community goal.", {
@@ -3569,16 +3569,16 @@
                 };
             ! function(e) {
                 e.CommunityRewards = "community-rewards", e.IndividualRewards = "individual-rewards"
-            }(O || (O = {}));
-            var D, X = function(e) {
+            }(L || (L = {}));
+            var D, P = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderCommunityRewards = function() {
                             var e = t.props.objectives.find(function(e) {
-                                return e.tag === x.a.Global && e.isActive
+                                return e.tag === O.a.Global && e.isActive
                             });
                             if (!e) return null;
-                            var r = Object(R.b)(e.milestones),
+                            var r = Object(S.b)(e.milestones),
                                 n = r.length > 0 && r.filter(function(t) {
                                     return e.progress >= t.threshold
                                 }).length === r.length,
@@ -3591,7 +3591,7 @@
                             return n && (s = Object(o.d)("This Stage’s HGC Community Rewards have been unlocked. Cheer {threshold} Bits or more and unlock them for yourself!", {
                                 threshold: a
                             }, "HGCProgressTab")), i.createElement(b.Xa, {
-                                "data-test-selector": O.CommunityRewards
+                                "data-test-selector": L.CommunityRewards
                             }, i.createElement(l.a, {
                                 milestones: r,
                                 progress: e.progress,
@@ -3609,12 +3609,12 @@
                             }))
                         }, t.renderIndividualRewards = function() {
                             var e = t.props.objectives.find(function(e) {
-                                return e.tag === x.a.Individual && !e.cheergroup
+                                return e.tag === O.a.Individual && !e.cheergroup
                             });
                             if (!e) return null;
-                            var r = Object(R.b)(e.milestones);
+                            var r = Object(S.b)(e.milestones);
                             return i.createElement(b.Xa, {
-                                "data-test-selector": O.IndividualRewards
+                                "data-test-selector": L.IndividualRewards
                             }, i.createElement(l.a, {
                                 milestones: r,
                                 progress: e.progress,
@@ -3670,7 +3670,7 @@
                             padding: {
                                 bottom: 2
                             }
-                        }, i.createElement(L, {
+                        }, i.createElement(F, {
                             objectives: this.props.objectives.filter(function(e) {
                                 return !!e.cheergroup
                             }),
@@ -3695,7 +3695,7 @@
                             }
                         }, i.createElement(C.a, {
                             channelID: this.props.channelID,
-                            domain: F.c
+                            domain: x.c
                         }))), i.createElement(b.P, {
                             cols: {
                                 xl: 6,
@@ -3706,8 +3706,8 @@
                         }))))
                     }, t
                 }(i.Component),
-                U = r("ImQ+"),
-                P = r("t95G"),
+                X = r("ImQ+"),
+                U = r("t95G"),
                 B = r("gzKk"),
                 H = (r("EU+x"), function(e) {
                     function t() {
@@ -3731,7 +3731,7 @@
                             }
                         }, r > 0 && this.renderRewardSquare(n, r, this.renderCheerbombTriggerBalloon(!1), "cheerbomb-rewards__reward-count__unredeemed"), t > 0 && this.renderRewardSquare(n, t, this.renderCheerbombTriggerBalloon(!0), "cheerbomb-rewards__reward-count__redeemed"))
                     }, t.prototype.renderCheerbombTriggerBalloon = function(e) {
-                        return i.createElement(S.a, {
+                        return i.createElement(_.a, {
                             trigger: this.props.cheerbombTrigger,
                             triggerRewardRedeemed: e,
                             reward: this.props.cheerbombTrigger.rewards[0],
@@ -3740,9 +3740,9 @@
                             objectiveActive: this.props.objectiveActive
                         })
                     }, t.prototype.renderRewardSquare = function(e, t, r, n) {
-                        var a = N("cheerbomb-rewards__reward-count", n),
+                        var a = A("cheerbomb-rewards__reward-count", n),
                             o = this.props.cheerbombTrigger.rewards[0];
-                        return i.createElement(b.yb, {
+                        return i.createElement(b.zb, {
                             display: b.X.Flex,
                             alignItems: b.f.Stretch,
                             breakpointLarge: {
@@ -3753,7 +3753,7 @@
                         }, i.createElement(b.Pa, {
                             display: b.X.Flex,
                             alignItems: b.f.Stretch
-                        }, i.createElement(A.a, {
+                        }, i.createElement(N.a, {
                             balloon: r
                         }, i.createElement(b.Xa, {
                             position: b.fb.Relative,
@@ -3768,18 +3768,18 @@
                             className: "cheerbomb-rewards__reward-image",
                             src: o.imageURL,
                             alt: o.name
-                        })), e && this.renderLockedOverlay(), !e && i.createElement(b.yb, {
+                        })), e && this.renderLockedOverlay(), !e && i.createElement(b.zb, {
                             className: a,
                             position: b.fb.Absolute,
                             borderRadius: b.x.Rounded,
                             color: b.O.Overlay,
-                            textAlign: b.Kb.Center,
+                            textAlign: b.Lb.Center,
                             "data-test-selector": "esports-cheerbomb-rewards-square-count"
                         }, i.createElement(b.W, {
                             className: "cheerbomb-rewards__reward-count__text"
                         }, t))))))
                     }, t.prototype.renderLockedOverlay = function() {
-                        return i.createElement(b.yb, {
+                        return i.createElement(b.zb, {
                             className: "cheerbomb-rewards__locked-overlay",
                             fullHeight: !0,
                             fullWidth: !0,
@@ -3807,7 +3807,7 @@
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = this,
-                        t = this.getObjectivesForTag(x.a.Global);
+                        t = this.getObjectivesForTag(O.a.Global);
                     t.sort(function(e, t) {
                         return e.description < t.description ? -1 : e.description > t.description ? 1 : 0
                     });
@@ -3830,10 +3830,10 @@
                         a = t.map(function(e) {
                             return e.isActive
                         }).indexOf(!0),
-                        s = this.getObjectivesForTag(x.a.Individual).filter(function(e) {
+                        s = this.getObjectivesForTag(O.a.Individual).filter(function(e) {
                             return !e.cheergroup
                         })[0],
-                        l = this.getObjectivesForTag(x.a.Individual).filter(function(e) {
+                        l = this.getObjectivesForTag(O.a.Individual).filter(function(e) {
                             return !!e.cheergroup
                         }),
                         c = l.reduce(function(e, t) {
@@ -3880,7 +3880,7 @@
                         return i.createElement(b.Xa, {
                             padding: 1,
                             key: t.id
-                        }, i.createElement(P.a, {
+                        }, i.createElement(U.a, {
                             title: e.renderStageDescription(t.description.toLowerCase()),
                             milestones: t.milestones,
                             globalProgress: t.progress,
@@ -3893,7 +3893,7 @@
                         }))
                     }), 1 === t.length && i.createElement(i.Fragment, null, i.createElement(b.Xa, {
                         padding: 1
-                    }, i.createElement(P.a, {
+                    }, i.createElement(U.a, {
                         title: this.renderStageDescription("stage 2"),
                         milestones: t[0].milestones,
                         globalProgress: t[0].progress,
@@ -3905,7 +3905,7 @@
                         objectiveActive: t[0].isActive
                     })), i.createElement(b.Xa, {
                         padding: 1
-                    }, i.createElement(P.a, {
+                    }, i.createElement(U.a, {
                         title: this.renderStageDescription("stage 3"),
                         milestones: t[0].milestones,
                         globalProgress: t[0].progress,
@@ -3919,7 +3919,7 @@
                         margin: {
                             bottom: 2
                         }
-                    }, i.createElement(U.a, {
+                    }, i.createElement(X.a, {
                         progress: s ? s.progress : 0,
                         milestones: s.milestones,
                         blizzardAccount: this.props.blizzardAccount,
@@ -3955,7 +3955,7 @@
                             key: t
                         }, i.createElement(b.P, {
                             cols: 12
-                        }, i.createElement(b.yb, {
+                        }, i.createElement(b.zb, {
                             borderBottom: !0,
                             padding: {
                                 bottom: .5
@@ -3983,7 +3983,7 @@
                             padding: {
                                 y: 1
                             }
-                        }, i.createElement(z, {
+                        }, i.createElement(T, {
                             trackName: e.cheergroup && e.cheergroup.name || "",
                             trackImageURL: e.cheergroup && e.cheergroup.imageUrl || "",
                             milestones: e.milestones,
@@ -4014,7 +4014,7 @@
                     return i.createElement(b.W, {
                         bold: !0,
                         fontSize: b.Ca.Size4,
-                        transform: b.Nb.Uppercase,
+                        transform: b.Ob.Uppercase,
                         color: b.O.Link
                     }, t)
                 }, t.prototype.getObjectivesForTag = function(e) {
@@ -4060,7 +4060,7 @@
                             a = this.props.blizzardAccount && this.props.blizzardAccount.region !== J.a.China,
                             l = this.canRewardsBeFulfilled(r) && a,
                             c = null;
-                        return this.state.tabToShow === Y.a.Progress ? c = i.createElement(X, {
+                        return this.state.tabToShow === Y.a.Progress ? c = i.createElement(P, {
                             channelID: this.props.channelID,
                             channelLogin: this.props.channelLogin,
                             blizzardAccount: this.props.blizzardAccount,
@@ -4085,7 +4085,7 @@
                                 y: 3
                             },
                             position: b.fb.Relative
-                        }, i.createElement(b.yb, {
+                        }, i.createElement(b.zb, {
                             borderBottom: !0
                         }, i.createElement(b.Xa, {
                             display: b.X.Flex,
@@ -4237,15 +4237,15 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderInfo = function() {
-                            return t.props.title ? s.createElement(m.yb, {
+                            return t.props.title ? s.createElement(m.zb, {
                                 "data-test-selector": a.info,
                                 className: "milestone-square__info",
                                 position: m.fb.Relative,
-                                textAlign: m.Kb.Center
+                                textAlign: m.Lb.Center
                             }, s.createElement(m.Xa, {
                                 padding: .5
                             }, s.createElement(m.W, {
-                                type: m.Ob.H5,
+                                type: m.Pb.H5,
                                 bold: !0
                             }, t.props.title)), t.props.subtitle && s.createElement(m.Xa, null, s.createElement(m.W, {
                                 color: m.O.Alt
@@ -4281,12 +4281,12 @@
                             position: m.fb.Relative
                         }, s.createElement(c.a, {
                             balloon: this.props.milestoneBalloon
-                        }, s.createElement(m.yb, {
+                        }, s.createElement(m.zb, {
                             "data-test-selector": l,
                             className: t,
                             background: m.r.Base,
                             position: m.fb.Relative,
-                            textAlign: m.Kb.Center,
+                            textAlign: m.Lb.Center,
                             border: !0,
                             borderRadius: m.x.Large,
                             display: m.X.Flex,
@@ -4298,7 +4298,7 @@
                             imageURL: this.props.imageURL,
                             imageAlt: this.props.title,
                             rarity: this.props.rarity
-                        }), e && s.createElement(m.yb, {
+                        }), e && s.createElement(m.zb, {
                             "data-test-selector": a.overlay,
                             className: r,
                             display: m.X.Flex,
@@ -4435,7 +4435,7 @@
                                 height: "13rem",
                                 width: 13 * (this.props.placeholderMilestones || 1) + "rem"
                             }
-                        }, i.createElement(c.yb, {
+                        }, i.createElement(c.zb, {
                             display: c.X.Flex,
                             justifyContent: c.Wa.Center,
                             alignItems: c.f.Center,

@@ -59,12 +59,12 @@
                     return t.e(105).then(t.bind(null, "Pi1p"))
                 }, "DevLoginPage")),
                 g = l.a.wrap(function() {
-                    return t.e(206).then(t.bind(null, "epaB"))
+                    return t.e(207).then(t.bind(null, "epaB"))
                 }, "DevBountyBoardCampaignManagerPage"),
-                y = l.a.wrap(function() {
-                    return t.e(205).then(t.bind(null, "aztO"))
+                h = l.a.wrap(function() {
+                    return t.e(206).then(t.bind(null, "aztO"))
                 }, "DevBountyBoardAnalyticsPage"),
-                h = function(e) {
+                y = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.isActive = function(e, t) {
@@ -78,7 +78,7 @@
                             name: "bounty_board_brand_portal_enabled"
                         }, i.createElement(p.a, null, i.createElement(v.Xa, {
                             className: "dev-dashboard"
-                        }, i.createElement(v.yb, {
+                        }, i.createElement(v.zb, {
                             padding: {
                                 top: 1
                             },
@@ -102,8 +102,8 @@
                             type: v.F.Text,
                             linkTo: "/console"
                         }, Object(u.d)("Dashboard", "DevBountyBoardDashboardRoot"))), i.createElement(v.W, {
-                            type: v.Ob.H3
-                        }, Object(u.d)("Bounty Board Dashboard", "DevBountyBoardDashboardRoot")), i.createElement(v.yb, {
+                            type: v.Pb.H3
+                        }, Object(u.d)("Bounty Board Dashboard", "DevBountyBoardDashboardRoot")), i.createElement(v.zb, {
                             borderTop: !0,
                             margin: {
                                 top: 1
@@ -112,7 +112,7 @@
                                 top: 1
                             },
                             display: v.X.Flex
-                        }, i.createElement(v.zb, {
+                        }, i.createElement(v.Ab, {
                             "data-test-selector": "dev-bounty-board-dashboard-campaign-tab-selector",
                             linkTo: "/console/bounty-board",
                             active: this.isActive("", !0)
@@ -130,13 +130,13 @@
                         }), i.createElement(c.a, {
                             exact: !0,
                             path: "/console/bounty-board/analytics",
-                            component: y
+                            component: h
                         })))))) : i.createElement(f, null)
                     }, n
                 }(i.Component),
                 S = Object(d.compose)(Object(m.b)("DevBountyBoardDashboardRootPresentation", {
                     autoReportInteractive: !0
-                }))(h);
+                }))(y);
             var D = Object(a.connect)(function(e) {
                 return {
                     isLoggedIn: Object(r.f)(e),

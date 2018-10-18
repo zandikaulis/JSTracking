@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [180], {
+    [181], {
         "0Ex5": function(e, n) {
             var t = {
                 kind: "Document",
@@ -96,8 +96,8 @@
                     g = t("WkKR"),
                     N = t("LFgC"),
                     y = t("uP5h"),
-                    R = t("QhAx"),
-                    S = t("VyuC"),
+                    S = t("QhAx"),
+                    R = t("VyuC"),
                     D = t("TjZe"),
                     E = t("s/24"),
                     _ = 3e5,
@@ -164,7 +164,7 @@
                                 })
                             }, n.expireRitualToken = function(e) {
                                 delete n.expirationTimeouts[e];
-                                Object(k.e)(R, {
+                                Object(k.e)(S, {
                                     id: n.props.channelID
                                 }, function(n) {
                                     return n.channel && n.channel.self && n.channel.self.ritualTokens && (n.channel.self.ritualTokens = n.channel.self.ritualTokens.filter(function(n) {
@@ -321,7 +321,7 @@
                         isLoggedIn: Object(f.f)(e),
                         isSubsOnlyModeEnabled: e.chat.subsOnlyMode
                     }
-                }, null), Object(u.a)(R, {
+                }, null), Object(u.a)(S, {
                     options: function(e) {
                         return {
                             variables: {
@@ -332,7 +332,7 @@
                     skip: O
                 }), Object(c.a)(function(n) {
                     return {
-                        query: R,
+                        query: S,
                         variables: {
                             id: n.channelID
                         },
@@ -347,11 +347,11 @@
                     }
                 }), Object(d.a)([{
                     topic: function(e) {
-                        return Object(p.F)(e.channelID)
+                        return Object(p.G)(e.channelID)
                     },
                     mapMessageTypesToProps: (i = {}, i[m.PubsubMessageType.ChannelStreamUp] = "streamUp", i[m.PubsubMessageType.ChannelStreamDown] = "streamDown", i),
                     skip: O
-                }]), Object(u.a)(S, {
+                }]), Object(u.a)(R, {
                     name: "dismissToken"
                 }), Object(u.a)(D, {
                     name: "redeemToken"
@@ -445,7 +445,7 @@
                                 margin: {
                                     right: .5
                                 }
-                            }, a.createElement(o.Rb, {
+                            }, a.createElement(o.Sb, {
                                 label: n.alt
                             }, a.createElement(o.Ua, {
                                 type: o.Va.Alpha,
@@ -459,7 +459,7 @@
                                 src: Object(s.d)(n.id, 3)
                             })))))
                         });
-                        return a.createElement(o.yb, {
+                        return a.createElement(o.zb, {
                             background: o.r.Base,
                             border: !0,
                             className: "new-chatter-ritual",
@@ -480,7 +480,7 @@
                             margin: {
                                 right: .5
                             }
-                        }, this.props.bannerMessage), t, a.createElement(o.yb, {
+                        }, this.props.bannerMessage), t, a.createElement(o.zb, {
                             borderLeft: !0,
                             flexShrink: 0
                         }, a.createElement(o.A, {

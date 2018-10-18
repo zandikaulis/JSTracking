@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [154], {
+    [155], {
         "/+vS": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -279,11 +279,11 @@
                                 top: 5
                             }
                         }, r.createElement(k.W, {
-                            type: k.Ob.H4
+                            type: k.Pb.H4
                         }, Object(a.d)("Put all your best videos in one spot.", "CollectionManager")), r.createElement(k.W, {
-                            type: k.Ob.H4
+                            type: k.Pb.H4
                         }, Object(a.d)("Videos organized into collections help your viewers easily find related content.", "CollectionManager")), r.createElement(k.W, {
-                            type: k.Ob.H4
+                            type: k.Pb.H4
                         }, Object(a.d)("Your most recently updated Collection will be featured at the top of channel’s video page.", "CollectionManager")))
                     }, t.prototype.contentUnavaibleError = function() {
                         return r.createElement(k.Xa, {
@@ -791,10 +791,10 @@
                             onClick: this.navigateToEdit
                         }, a.createElement(C.W, {
                             bold: !0,
-                            type: C.Ob.H4,
+                            type: C.Pb.H4,
                             color: C.O.Alt
-                        }, t.title), a.createElement(C.Rb, {
-                            direction: C.Tb.Bottom,
+                        }, t.title), a.createElement(C.Sb, {
+                            direction: C.Ub.Bottom,
                             label: Object(l.d)("Last Updated", "CollectionManagerCard")
                         }, a.createElement(C.W, {
                             color: C.O.Alt2
@@ -911,7 +911,7 @@
                                 fullHeight: !0,
                                 justifyContent: a.Wa.Center,
                                 padding: 2
-                            }, o.createElement(a.xb, {
+                            }, o.createElement(a.yb, {
                                 icon: this.props.icon,
                                 label: this.props.label,
                                 value: this.props.value
@@ -1080,7 +1080,7 @@
                             delay: h.j.Short,
                             type: h.n.BounceIn,
                             enabled: !0
-                        }, r.createElement(h.yb, {
+                        }, r.createElement(h.zb, {
                             border: !0,
                             margin: {
                                 bottom: 1
@@ -1096,7 +1096,7 @@
                             delay: h.j.Medium,
                             duration: h.k.Medium,
                             enabled: !0
-                        }, r.createElement(h.yb, {
+                        }, r.createElement(h.zb, {
                             background: h.r.Base,
                             padding: {
                                 x: 3,
@@ -1226,7 +1226,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(r.yb, {
+                        return o.createElement(r.zb, {
                             background: r.r.Base,
                             elevation: 1,
                             display: r.X.Flex,
@@ -1284,7 +1284,7 @@
                             attachLeft: !0,
                             attachRight: !0,
                             attachBottom: !0
-                        }, l.createElement(f.yb, {
+                        }, l.createElement(f.zb, {
                             alignItems: f.f.Center,
                             attachRight: !0,
                             className: "collection-preview-image__wrapper",
@@ -1295,7 +1295,7 @@
                             fullHeight: !0,
                             justifyContent: f.Wa.Center,
                             position: f.fb.Absolute,
-                            textAlign: f.Kb.Center
+                            textAlign: f.Lb.Center
                         }, l.createElement(f.ob, {
                             asset: f.pb.Collections,
                             height: 20,

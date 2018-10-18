@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [172], {
+    [173], {
         IWck: function(e, n, t) {
             "use strict";
             var i, a;
@@ -265,7 +265,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(n, e), n.prototype.render = function() {
-                        return a.createElement(f.yb, {
+                        return a.createElement(f.zb, {
                             background: f.r.Base,
                             color: f.O.Alt
                         }, a.createElement(f.Xa, {
@@ -280,18 +280,18 @@
                             }
                         }, a.createElement(f.W, {
                             bold: !0,
-                            type: f.Ob.H5
+                            type: f.Pb.H5
                         }, Object(o.d)("Introducing: New Chatter Announcements!", "RitualsOnboardingSticky"))), a.createElement(f.Xa, {
                             margin: {
                                 bottom: .5
                             }
                         }, a.createElement(f.W, {
-                            type: f.Ob.Span
+                            type: f.Pb.Span
                         }, Object(o.d)("New chatter announcements are now active in your channel, making it easier to welcome new people.", "RitualsOnboardingSticky")), a.createElement(f.W, null, a.createElement(f.U, {
                             onClick: this.props.onClick,
                             to: "/" + this.props.channelLogin + "/dashboard/settings",
                             "data-test-selector": "rituals-sticky-link"
-                        }, Object(o.d)("Manage in Dashboard", "RitualsOnboardingSticky"))))), a.createElement(f.yb, {
+                        }, Object(o.d)("Manage in Dashboard", "RitualsOnboardingSticky"))))), a.createElement(f.zb, {
                             alignItems: f.f.Center,
                             background: f.r.Alt2,
                             borderBottom: !0,
@@ -312,8 +312,8 @@
                             }
                         }, a.createElement(f.W, {
                             fontSize: f.Ca.Size8,
-                            type: f.Ob.Span
-                        }, Object(o.d)("You see this because you own this channel", "RitualsOnboardingSticky")))), a.createElement(f.yb, {
+                            type: f.Pb.Span
+                        }, Object(o.d)("You see this because you own this channel", "RitualsOnboardingSticky")))), a.createElement(f.zb, {
                             attachRight: !0,
                             attachTop: !0,
                             padding: {

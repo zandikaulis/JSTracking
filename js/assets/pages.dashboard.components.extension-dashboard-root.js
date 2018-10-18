@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [145], {
+    [146], {
         "+/wI": function(e, n, t) {
             "use strict";
             var i = t("mrSG"),
@@ -19,8 +19,8 @@
                         o = e.extensionVersion,
                         s = e.login;
                     return a.createElement(p.Xa, null, a.createElement(p.W, {
-                        type: p.Ob.H5
-                    }, Object(d.d)("Extension Installed Successfully!", "ExtensionInstalledModal")), a.createElement(p.yb, {
+                        type: p.Pb.H5
+                    }, Object(d.d)("Extension Installed Successfully!", "ExtensionInstalledModal")), a.createElement(p.zb, {
                         borderTop: !0,
                         borderBottom: !0,
                         padding: {
@@ -347,7 +347,7 @@
                                 m = o.contentIndex,
                                 p = o.medium,
                                 v = l;
-                            return i !== d.v.RELEASED && l.length > 100 && (v = l.substring(0, 100) + "..."), s.createElement(g.yb, {
+                            return i !== d.w.RELEASED && l.length > 100 && (v = l.substring(0, 100) + "..."), s.createElement(g.zb, {
                                 className: "extension-card__thumbnail__details-preview",
                                 background: g.r.Alt2,
                                 position: g.fb.Absolute,
@@ -369,14 +369,14 @@
                                 className: "extension-card__thumbnail__summary",
                                 overflow: g.ab.Hidden
                             }, s.createElement(g.W, {
-                                type: g.Ob.P
-                            }, v), i !== d.v.RELEASED && s.createElement(g.Xa, {
+                                type: g.Pb.P
+                            }, v), i !== d.w.RELEASED && s.createElement(g.Xa, {
                                 padding: {
                                     top: .5
                                 }
                             }, s.createElement(g.W, {
                                 "data-test-selector": E.TestStatusDisclosure,
-                                type: g.Ob.P
+                                type: g.Pb.P
                             }, Object(r.d)("This is a Test Extension; it has not been evaluated by Twitch in accordance with its policies.", "ExtensionCard"), s.createElement(g.Pa, {
                                 padding: {
                                     left: .5
@@ -499,8 +499,8 @@
                                 n.props.tooltipLayer.show({
                                     from: n.installButtonRef,
                                     label: e,
-                                    align: g.Sb.Center,
-                                    direction: g.Tb.Top
+                                    align: g.Tb.Center,
+                                    direction: g.Ub.Top
                                 })
                             }
                         }, n.onMouseLeave = function() {
@@ -528,7 +528,7 @@
                             m = l && e === l;
                         return s.createElement(g.Xa, {
                             className: a("extension-card", i)
-                        }, s.createElement(g.G, null, s.createElement(g.yb, {
+                        }, s.createElement(g.G, null, s.createElement(g.zb, {
                             className: "extension-card__thumbnail",
                             border: !0,
                             background: g.r.AccentAlt2,
@@ -536,7 +536,7 @@
                             overflow: g.ab.Hidden
                         }, s.createElement(g.o, {
                             ratio: g.p.Aspect3x2
-                        }, s.createElement(g.yb, {
+                        }, s.createElement(g.zb, {
                             display: g.X.Flex,
                             alignItems: g.f.Center,
                             justifyContent: g.Wa.Center,
@@ -557,7 +557,7 @@
                             src: e,
                             alt: o,
                             onError: this.onCardImageError
-                        }))), this.renderHoverElement()), c && s.createElement(g.yb, {
+                        }))), this.renderHoverElement()), c && s.createElement(g.zb, {
                             display: g.X.InlineFlex,
                             alignItems: g.f.Center,
                             justifyContent: g.Wa.Center,
@@ -573,9 +573,9 @@
                                 top: 1
                             }
                         }, s.createElement(g.W, {
-                            type: g.Ob.H6
+                            type: g.Pb.H6
                         }, o), s.createElement(g.W, {
-                            type: g.Ob.Span,
+                            type: g.Pb.Span,
                             color: g.O.Alt2,
                             fontSize: g.Ca.Size7
                         }, t), s.createElement(g.Xa, {
@@ -590,7 +590,7 @@
                             }
                         }, s.createElement(h, {
                             type: u
-                        })), r !== d.v.RELEASED && s.createElement(p.a, {
+                        })), r !== d.w.RELEASED && s.createElement(p.a, {
                             state: r
                         })))))
                     }, n.prototype.isMissingCheeringRequirement = function() {
@@ -598,7 +598,7 @@
                             n = e.cheeringEnabled,
                             t = e.extensionState,
                             i = e.monetizationType;
-                        return t === d.v.RELEASED && i === v.b.Bits && !n
+                        return t === d.w.RELEASED && i === v.b.Bits && !n
                     }, n
                 }(s.Component),
                 y = Object(k.c)()(b);
@@ -653,11 +653,11 @@
                         var e = this.props,
                             n = e.title,
                             t = e.showBackLink;
-                        return a.createElement(c.yb, {
+                        return a.createElement(c.zb, {
                             background: c.r.Alt2,
                             display: c.X.Flex,
                             alignItems: c.f.Stretch
-                        }, t && a.createElement(c.yb, {
+                        }, t && a.createElement(c.zb, {
                             border: !0,
                             display: c.X.Flex,
                             flexGrow: 0
@@ -666,13 +666,13 @@
                             size: c.B.Large,
                             icon: c.pb.AngleLeft,
                             onClick: this.goBack
-                        })), a.createElement(c.yb, {
+                        })), a.createElement(c.zb, {
                             border: !0,
                             display: c.X.Flex,
                             flexGrow: 1,
                             padding: 2
                         }, a.createElement(c.W, {
-                            type: c.Ob.H4
+                            type: c.Pb.H4
                         }, n)))
                     }, n
                 }(a.Component),
@@ -726,15 +726,15 @@
                     padding: {
                         bottom: 2
                     }
-                }, o.createElement(E.Ab, null, o.createElement(E.zb, {
+                }, o.createElement(E.Bb, null, o.createElement(E.Ab, {
                     linkTo: {
                         pathname: Object(f.c)(n),
                         state: s
                     },
                     active: t === i.Discovery
                 }, o.createElement(E.W, {
-                    type: E.Ob.H4
-                }, Object(l.d)("Discovery", "DiscoveryNavBar"))), o.createElement(E.zb, {
+                    type: E.Pb.H4
+                }, Object(l.d)("Discovery", "DiscoveryNavBar"))), o.createElement(E.Ab, {
                     linkTo: {
                         pathname: Object(f.e)(n),
                         state: s
@@ -742,8 +742,8 @@
                     active: t === i.MyExtensions
                 }, o.createElement(E.W, {
                     "data-a-target": "my-extensions-tab",
-                    type: E.Ob.H4
-                }, Object(l.d)("My Extensions", "DiscoveryNavBar"))), a && o.createElement(E.zb, {
+                    type: E.Pb.H4
+                }, Object(l.d)("My Extensions", "DiscoveryNavBar"))), a && o.createElement(E.Ab, {
                     linkTo: {
                         pathname: Object(f.h)(n),
                         state: s
@@ -751,7 +751,7 @@
                     active: t === i.Whitelisted
                 }, o.createElement(E.W, {
                     "data-a-target": "invite-only-tab",
-                    type: E.Ob.H4
+                    type: E.Pb.H4
                 }, Object(l.d)("Invite Only", "DiscoveryNavBar")))))
             }! function(e) {
                 e[e.Discovery = 0] = "Discovery", e[e.MyExtensions = 1] = "MyExtensions", e[e.Whitelisted = 2] = "Whitelisted"
@@ -761,11 +761,11 @@
                 C = t("aCAx"),
                 N = t("MM5q"),
                 S = t("+/wI"),
-                O = t("8/mp"),
-                I = t("V+GM"),
-                D = t("geRD"),
-                F = t("NvVO"),
-                P = t("MXoD"),
+                I = t("8/mp"),
+                P = t("V+GM"),
+                O = t("geRD"),
+                D = t("NvVO"),
+                F = t("MXoD"),
                 w = t("VQbD"),
                 A = (t("QSti"), function(e) {
                     var n = [];
@@ -787,7 +787,7 @@
                             var t = new URL(e.clickThroughURL),
                                 i = e.clickThroughURL;
                             t.hostname.includes("twitch.tv") && (i = t.pathname);
-                            var a = Object(P.a)({
+                            var a = Object(F.a)({
                                 content: x.PageviewContent.ExtensionDetails,
                                 content_index: n,
                                 medium: x.PageviewMedium.ExtensionManagerCarousel
@@ -805,7 +805,7 @@
                                 src: e.imageURL,
                                 alt: e.title,
                                 aspect: E.p.Aspect3x2
-                            }), e.title && o.createElement(E.yb, {
+                            }), e.title && o.createElement(E.zb, {
                                 alignItems: E.f.Center,
                                 background: E.r.Overlay,
                                 className: "extension-featured-carousel-item__title-bar",
@@ -817,7 +817,7 @@
                                 attachBottom: !0,
                                 fullWidth: !0
                             }, o.createElement(E.W, {
-                                type: E.Ob.H3,
+                                type: E.Pb.H3,
                                 color: E.O.OverlayAlt
                             }, e.title)))))
                         })
@@ -825,13 +825,13 @@
                     return o.createElement(E.Xa, {
                         overflow: E.ab.Hidden,
                         fullWidth: !0
-                    }, o.createElement(E.yb, {
+                    }, o.createElement(E.zb, {
                         border: !0,
                         overflow: E.ab.Hidden
                     }, o.createElement(E.Xa, {
                         padding: 1
                     }, o.createElement(E.W, {
-                        type: E.Ob.H4,
+                        type: E.Pb.H4,
                         noWrap: !0
                     }, Object(l.d)("Featured", "ExtensionFeaturedCarousel"))), o.createElement(w.a, {
                         insetStyle: !0,
@@ -921,8 +921,8 @@
                     }, o.createElement(E.U, {
                         to: r
                     }, o.createElement(E.W, {
-                        type: E.Ob.H4
-                    }, t)), o.createElement(E.yb, {
+                        type: E.Pb.H4
+                    }, t)), o.createElement(E.zb, {
                         fontSize: E.Ca.Size5
                     }, o.createElement(E.U, {
                         to: r
@@ -939,10 +939,10 @@
             X.displayName = "ExtensionCategoryCarousel";
             var W = t("UEdd"),
                 B = t("H6uz"),
-                V = 5,
-                z = {
+                z = 5,
+                V = {
                     carouselID: "default",
-                    first: V,
+                    first: z,
                     skipCurrentUser: !1
                 },
                 q = function(e) {
@@ -957,12 +957,12 @@
                                             if (n = this.props, t = n.extensionDiscoveryPageData, i = n.installExtension, o = n.showExtensionErrorModal, s = n.showExtensionInstalledModal, r = t.currentUser, l = t.extensionCategories, !r || !r.id || !r.login) return [2];
                                             a.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, i(Object(D.a)({
+                                            return a.trys.push([1, 3, , 4]), [4, i(Object(O.a)({
                                                 channelID: r.id,
                                                 extensionID: e
                                             }))];
                                         case 2:
-                                            return c = a.sent().data, l && c.installExtension && c.installExtension.installedExtension && (d = c.installExtension.installedExtension, Object(D.e)(B, z, function(e) {
+                                            return c = a.sent().data, l && c.installExtension && c.installExtension.installedExtension && (d = c.installExtension.installedExtension, Object(O.e)(B, V, function(e) {
                                                 return e.currentUser && e.currentUser.installedExtensions && e.currentUser.installedExtensions.push(d), e
                                             }), s({
                                                 extensionClientID: d.extension.clientID,
@@ -985,7 +985,7 @@
                                             return e = this.props.extensionDiscoveryPageData, n = e.error, t = e.extensionCategories, e.loading || n || !t ? [3, 2] : (i = {
                                                 carouselID: "default",
                                                 afterCursor: t.edges[t.edges.length - 1].cursor,
-                                                first: V,
+                                                first: z,
                                                 skipCurrentUser: !0
                                             }, [4, this.props.extensionDiscoveryPageData.fetchMore({
                                                 query: B,
@@ -1082,7 +1082,7 @@
                             margin: {
                                 y: 2
                             }
-                        }, s), o.createElement(O.a, {
+                        }, s), o.createElement(I.a, {
                             pixelThreshold: 400,
                             loadMore: this.loadMore,
                             enabled: this.canLoadMore()
@@ -1116,13 +1116,13 @@
                     }, n
                 }(o.Component),
                 H = Object(y.compose)(Object(T.b)("ExtensionDiscoveryPage", {
-                    destination: F.a.ExtensionsDiscovery
-                }), Object(I.a)({
+                    destination: D.a.ExtensionsDiscovery
+                }), Object(P.a)({
                     location: x.PageviewLocation.ExtensionsDiscovery
                 }), Object(u.a)(B, {
                     name: "extensionDiscoveryPageData",
                     options: {
-                        variables: z
+                        variables: V
                     }
                 }), Object(u.a)(W, {
                     name: "installExtension"
@@ -1144,10 +1144,10 @@
                     var n = e.activations,
                         t = e.onConfirm;
                     return o.createElement(E.Xa, null, o.createElement(E.W, {
-                        type: E.Ob.H5
+                        type: E.Pb.H5
                     }, Object(l.d)("{count, plural, one {Extension is now Active!} other {Extensions are now Active!}}", {
                         count: n.length
-                    }, "ExtensionActivatedModal")), o.createElement(E.yb, {
+                    }, "ExtensionActivatedModal")), o.createElement(E.zb, {
                         borderTop: !0,
                         borderBottom: !0,
                         padding: {
@@ -1164,12 +1164,12 @@
                         }, Object(l.d)("The extension {extensionName} is now active on slot {anchorSlot}", {
                             extensionName: o.createElement(E.W, {
                                 bold: !0,
-                                type: E.Ob.Span
+                                type: E.Pb.Span
                             }, n),
                             anchorSlot: o.createElement(E.W, {
                                 bold: !0,
-                                type: E.Ob.Span,
-                                transform: E.Nb.Uppercase
+                                type: E.Pb.Span,
+                                transform: E.Ob.Uppercase
                             }, t)
                         }, "ExtensionActivatedModal"))
                     })), o.createElement(E.Xa, {
@@ -1193,7 +1193,7 @@
                     }))
                 }, n
             }(o.Component);
-            var K, Z = Object(b.connect)(null, function(e) {
+            var Z, K = Object(b.connect)(null, function(e) {
                     return Object(y.bindActionCreators)({
                         closeModal: C.c
                     }, e)
@@ -1218,21 +1218,21 @@
                         p = ee("extension-component-preview", ((n = {})["extension-component-preview--active"] = r, n["extension-component-preview--overlapped"] = l, n));
                     return o.createElement(E.Qa, {
                         position: E.fb.Absolute,
-                        textAlign: E.Kb.Center
+                        textAlign: E.Lb.Center
                     }, o.createElement("div", {
                         key: d,
                         tabIndex: u,
                         "data-slot": d,
                         className: p,
                         style: m
-                    }, o.createElement(E.yb, {
+                    }, o.createElement(E.zb, {
                         fullHeight: !0,
                         display: E.X.Flex,
                         flexDirection: E.Aa.Column,
                         justifyContent: E.Wa.Center
                     }, o.createElement(E.W, {
                         color: E.O.Overlay,
-                        type: E.Ob.Span,
+                        type: E.Pb.Span,
                         fontSize: E.Ca.Size5
                     }, c))))
                 },
@@ -1260,7 +1260,7 @@
                 me = ae(0, se - le, oe, le),
                 pe = "player-controls-top",
                 ve = "player-controls-bottom",
-                ge = ((K = {})[pe] = ue, K[ve] = me, K),
+                ge = ((Z = {})[pe] = ue, Z[ve] = me, Z),
                 he = 10,
                 Ee = {
                     w: {
@@ -1357,7 +1357,7 @@
                                 enabled: !0,
                                 onAnimationEnd: t.handleAnimationEnd,
                                 type: e
-                            }, o.createElement(E.yb, {
+                            }, o.createElement(E.zb, {
                                 position: E.fb.Absolute,
                                 attachTop: !0,
                                 fullWidth: !0,
@@ -1400,7 +1400,7 @@
                                 }),
                                 a = ee("extension-component-player-controls", ((e = {})["extension-component-player-controls--overlapped"] = t.state.collisionMap[pe], e)),
                                 s = ee("extension-component-player-controls", ((n = {})["extension-component-player-controls--overlapped"] = t.state.collisionMap[ve], n));
-                            return o.createElement(E.yb, null, o.createElement(E.Qa, {
+                            return o.createElement(E.zb, null, o.createElement(E.Qa, {
                                 position: E.fb.Relative
                             }, o.createElement("div", {
                                 ref: t.updatePositionContainerRef,
@@ -1620,18 +1620,18 @@
                             onKeyDown: this.handleKeyDown,
                             onFocus: this.handleFocus
                         }, o.createElement(E.Xa, null, o.createElement(E.W, {
-                            type: E.Ob.H5
-                        }, Object(l.d)("Set Component Location", "ExtensionComponentActivateModal")), o.createElement(E.yb, {
+                            type: E.Pb.H5
+                        }, Object(l.d)("Set Component Location", "ExtensionComponentActivateModal")), o.createElement(E.zb, {
                             borderTop: !0,
                             padding: {
                                 y: 1
                             }
-                        }, o.createElement(E.W, null, Object(l.d)("Drag and drop the selected component to set a default anchor point within the video player", "ExtensionComponentActivateModal"))), o.createElement(E.yb, {
+                        }, o.createElement(E.W, null, Object(l.d)("Drag and drop the selected component to set a default anchor point within the video player", "ExtensionComponentActivateModal"))), o.createElement(E.zb, {
                             background: E.r.Alt,
                             padding: {
                                 bottom: 1
                             }
-                        }, this.renderPositionPreview()), o.createElement(E.yb, {
+                        }, this.renderPositionPreview()), o.createElement(E.zb, {
                             display: E.X.Flex,
                             justifyContent: E.Wa.Center,
                             borderTop: !0,
@@ -1647,7 +1647,7 @@
                             padding: {
                                 left: .5
                             }
-                        }, Object(l.d)("Components placed in this region are likely to be obscured by the video player controls", "ExtensionComponentActivateModal")))), o.createElement(E.yb, {
+                        }, Object(l.d)("Components placed in this region are likely to be obscured by the video player controls", "ExtensionComponentActivateModal")))), o.createElement(E.zb, {
                             display: E.X.Flex,
                             justifyContent: E.Wa.Center,
                             padding: {
@@ -1712,11 +1712,11 @@
                 })(ye),
                 Ne = t("kRBY"),
                 Se = t("oJmH"),
-                Oe = t("mLw1"),
-                Ie = t("qCDY"),
-                De = t("1IJ0"),
-                Fe = t("YyE3"),
-                Pe = t("5IFo"),
+                Ie = t("mLw1"),
+                Pe = t("qCDY"),
+                Oe = t("1IJ0"),
+                De = t("YyE3"),
+                Fe = t("5IFo"),
                 we = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
@@ -1737,7 +1737,7 @@
                             o = i[1];
                         t && !t.loading && t.installedExtensions && this.setState({
                             installation: this.findExtensionFromInstallations(t.installedExtensions)
-                        }), Object(Pe.d)({
+                        }), Object(Fe.d)({
                             extensionClientID: a,
                             extensionVersion: o
                         })
@@ -1778,13 +1778,13 @@
                             }), o.createElement(E.H, null, o.createElement(E.Xa, {
                                 padding: 1
                             }, o.createElement(E.W, {
-                                type: E.Ob.H4
+                                type: E.Pb.H4
                             }, m.name), o.createElement(E.W, {
-                                type: E.Ob.Span,
+                                type: E.Pb.Span,
                                 color: E.O.Alt2
                             }, Object(l.d)("Created by {extensionAuthor}", {
                                 extensionAuthor: m.authorName
-                            }, "ExtensionConfigurePresentation")))))), o.createElement(E.Xa, null, o.createElement(Ie.a, {
+                            }, "ExtensionConfigurePresentation")))))), o.createElement(E.Xa, null, o.createElement(Pe.a, {
                                 channelID: r,
                                 channelLogin: t,
                                 className: "",
@@ -1797,14 +1797,14 @@
                                 isPopout: !1
                             })))
                         }
-                        var p = o.createElement(De.a, {
+                        var p = o.createElement(Oe.a, {
                             channelLogin: t,
                             showBackLink: !1,
                             title: Object(l.d)("Configure", "ExtensionConfigurePresentation")
                         });
-                        return o.createElement(O.b, null, o.createElement(E.Xa, {
+                        return o.createElement(I.b, null, o.createElement(E.Xa, {
                             padding: 2
-                        }, p, o.createElement(E.yb, {
+                        }, p, o.createElement(E.zb, {
                             borderRight: !0,
                             borderLeft: !0,
                             borderBottom: !0,
@@ -1839,12 +1839,12 @@
                     }, n.prototype.isLoading = function() {
                         return !this.props.extensionsForChannel || !this.props.extensionsForChannel.installedExtensions
                     }, n.prototype.renderRedirect = function(e) {
-                        return o.createElement(Oe.a, {
+                        return o.createElement(Ie.a, {
                             to: Object(f.e)(e)
                         })
                     }, n
                 }(o.Component),
-                Ae = Object(Se.compose)(Object(Fe.a)({
+                Ae = Object(Se.compose)(Object(De.a)({
                     name: "extensionsForChannel",
                     options: function(e) {
                         return {
@@ -1869,7 +1869,7 @@
                             a = e.languageCode,
                             s = e.locale,
                             r = e.onClose;
-                        return o.createElement(E.yb, {
+                        return o.createElement(E.zb, {
                             background: E.r.Base,
                             className: "extension-configure-modal"
                         }, o.createElement(Ae, {
@@ -1906,11 +1906,11 @@
             var Ue, Xe = t("1Cad"),
                 We = t("AN85"),
                 Be = t("eJ65"),
-                Ve = t("EZh/");
+                ze = t("EZh/");
             ! function(e) {
                 e.Component1 = "extension-component-1", e.Component2 = "extension-component-2", e.Overlay1 = "extension-overlay-1", e.Panel1 = "extension-panel-1", e.Panel2 = "extension-panel-2", e.Panel3 = "extension-panel-3"
             }(Ue || (Ue = {}));
-            var ze = function(e) {
+            var Ve = function(e) {
                     var n;
                     switch (e) {
                         case Ue.Component1:
@@ -1957,7 +1957,7 @@
                                 l.length && a.push(l)
                             }
                             return t.state === _e.a.ACTIVE && a.push(n.renderDeactivate()), a.reduce(function(e, n, t) {
-                                var i = o.createElement(E.yb, {
+                                var i = o.createElement(E.zb, {
                                     key: t,
                                     borderTop: !0,
                                     margin: {
@@ -1980,7 +1980,7 @@
                                 padding: {
                                     left: 1
                                 }
-                            }, ze(e)))
+                            }, Ve(e)))
                         }, n.renderDeactivate = function() {
                             return o.createElement(E.Ua, {
                                 key: "deactivate",
@@ -1994,20 +1994,20 @@
                             }, Object(l.d)("Deactivate", "ActivateExtensionDropdownV2")))
                         }, n.renderComponentAnchorOptions = function(e) {
                             return e.reduce(function(e, t) {
-                                var i = n.renderSetAnchorLocationInteractable(t, _e.t.COMPONENT);
+                                var i = n.renderSetAnchorLocationInteractable(t, _e.u.COMPONENT);
                                 return i && e.push(i), e
                             }, [])
                         }, n.renderOverlayAnchorOptions = function(e) {
                             return e.reduce(function(e, t) {
-                                var i = n.renderSetAnchorLocationInteractable(t, _e.t.VIDEO_OVERLAY);
+                                var i = n.renderSetAnchorLocationInteractable(t, _e.u.VIDEO_OVERLAY);
                                 return i && e.push(i), e
                             }, [])
                         }, n.renderPanelAnchorOptions = function(e) {
                             var t = e.reduce(function(e, t) {
-                                var i = n.renderSetAnchorLocationInteractable(t, _e.t.PANEL);
+                                var i = n.renderSetAnchorLocationInteractable(t, _e.u.PANEL);
                                 return i && e.push(i), e
                             }, []);
-                            return e.length < Ve.a && t.push(o.createElement(E.Ua, {
+                            return e.length < ze.a && t.push(o.createElement(E.Ua, {
                                 key: "new-panel",
                                 blurAfterClick: !0,
                                 onClick: n.createPanelAndActivate
@@ -2019,7 +2019,7 @@
                             }, Object(l.d)("Add as a new panel", "ActivateExtensionDropdownV2")))), t
                         }, n.renderSetAnchorLocationInteractable = function(e, t) {
                             var i = n.props.activationConfig;
-                            return i.state === _e.a.ACTIVE && i.slot === e ? i.anchor !== _e.t.COMPONENT ? null : o.createElement(E.Ua, {
+                            return i.state === _e.a.ACTIVE && i.slot === e ? i.anchor !== _e.u.COMPONENT ? null : o.createElement(E.Ua, {
                                 key: e,
                                 blurAfterClick: !0,
                                 onClick: n.activateExtension,
@@ -2031,7 +2031,7 @@
                                     y: .5
                                 }
                             }, Object(l.d)("Reposition {slot}", {
-                                slot: ze(e)
+                                slot: Ve(e)
                             }, "ActivateExtensionDropdownV2"))) : o.createElement(E.Ua, {
                                 key: e,
                                 blurAfterClick: !0,
@@ -2044,10 +2044,10 @@
                                     y: .5
                                 }
                             }, Object(l.d)("Set as {slot}", {
-                                slot: ze(e)
+                                slot: Ve(e)
                             }, "ActivateExtensionDropdownV2")))
                         }, n.createPanelAndActivate = function() {
-                            n.props.activateExtension("", _e.t.PANEL, !0)
+                            n.props.activateExtension("", _e.u.PANEL, !0)
                         }, n.activateExtension = function(e) {
                             var t = e.currentTarget.dataset,
                                 i = t.slot,
@@ -2063,7 +2063,7 @@
                             t = e.canActivate,
                             i = e.requiredActions;
                         return i && i.some(function(e) {
-                            return e.type === _e.u.REQUIRES_CONFIGURATION
+                            return e.type === _e.v.REQUIRES_CONFIGURATION
                         }) ? o.createElement(E.Xa, {
                             display: E.X.Flex,
                             alignItems: E.f.Center
@@ -2078,7 +2078,7 @@
                             size: E.w.Medium,
                             offsetY: "-0.1rem",
                             noTail: !0
-                        }, o.createElement(E.yb, {
+                        }, o.createElement(E.zb, {
                             color: E.O.Link,
                             padding: 1
                         }, this.renderAnchorOptions()))) : o.createElement(E.Xa, {
@@ -2142,10 +2142,10 @@
                             s = e.extensionState,
                             r = e.extensionVersion,
                             c = e.trackingContext;
-                        return o.createElement(E.yb, {
+                        return o.createElement(E.zb, {
                             background: E.r.Base,
                             border: !0
-                        }, o.createElement(E.yb, {
+                        }, o.createElement(E.zb, {
                             padding: 1,
                             borderBottom: !0
                         }, o.createElement(E.G, {
@@ -2168,8 +2168,8 @@
                                 }
                             }
                         }, o.createElement(E.W, {
-                            type: E.Ob.H5
-                        }, i)), this.renderExtensionTagPills(), s !== _e.v.RELEASED && o.createElement(We.a, {
+                            type: E.Pb.H5
+                        }, i)), this.renderExtensionTagPills(), s !== _e.w.RELEASED && o.createElement(We.a, {
                             state: s
                         }))))), o.createElement(E.Xa, {
                             display: E.X.Flex,
@@ -2199,13 +2199,13 @@
                     }, n
                 }(o.Component),
                 Ye = function() {
-                    return o.createElement(E.yb, {
+                    return o.createElement(E.zb, {
                         margin: {
                             bottom: 1
                         },
                         background: E.r.Base,
                         border: !0
-                    }, o.createElement(E.yb, {
+                    }, o.createElement(E.zb, {
                         display: E.X.Flex,
                         padding: 1,
                         borderBottom: !0
@@ -2247,7 +2247,7 @@
                     })), o.createElement(E.Xa, null, o.createElement(E.eb, {
                         width: 80,
                         height: 15
-                    }))))), o.createElement(E.yb, {
+                    }))))), o.createElement(E.zb, {
                         display: E.X.Flex,
                         padding: 1,
                         justifyContent: E.Wa.Between
@@ -2275,7 +2275,7 @@
             var Qe = t("QA0N"),
                 Ge = function(e) {
                     return o.createElement(o.Fragment, null, o.createElement(E.W, {
-                        type: E.Ob.P
+                        type: E.Pb.P
                     }, Object(l.d)("To find an extension that fits your channel, please visit the {extensionsDiscoveryPageLink}.", {
                         extensionsDiscoveryPageLink: o.createElement(E.U, {
                             to: {
@@ -2290,7 +2290,7 @@
                             top: 1
                         }
                     }, o.createElement(E.W, {
-                        type: E.Ob.P
+                        type: E.Pb.P
                     }, Object(l.d)("If you're unsure what to do with an extension, learn more about extensions in {extensionsCreatorCampLink}!", {
                         extensionsCreatorCampLink: o.createElement(E.U, {
                             to: "https://www.twitch.tv/creatorcamp/en/level-up/extensions"
@@ -2299,8 +2299,8 @@
                 },
                 Je = t("uys4"),
                 $e = t("TkUT"),
-                Ke = t("RVVg"),
-                Ze = t("l45E");
+                Ze = t("RVVg"),
+                Ke = t("l45E");
             t("/WSp");
             var en, nn = "ExtensionPanel";
             ! function(e) {
@@ -2344,7 +2344,7 @@
                                 activationConfig: t,
                                 availableSlots: function(e, n) {
                                     var t = {};
-                                    if (n.includes(_e.t.COMPONENT) && (t.components = ["extension-component-1", "extension-component-2"]), n.includes(_e.t.VIDEO_OVERLAY) && (t.overlays = ["extension-overlay-1"]), n.includes(_e.t.PANEL) && e.currentUser) {
+                                    if (n.includes(_e.u.COMPONENT) && (t.components = ["extension-component-1", "extension-component-2"]), n.includes(_e.u.VIDEO_OVERLAY) && (t.overlays = ["extension-overlay-1"]), n.includes(_e.u.PANEL) && e.currentUser) {
                                         var i = e.currentUser.panels.reduce(function(e, n) {
                                             return n && n.__typename === nn && e.push(n.slotID), e
                                         }, []);
@@ -2377,7 +2377,7 @@
                                         case 3:
                                             return (d = a.sent()) ? (c.slot = d && d.slotID, [3, 5]) : [2, r()];
                                         case 4:
-                                            if (i === _e.t.COMPONENT) return [2, this.activateComponentExtensions(e, t)];
+                                            if (i === _e.u.COMPONENT) return [2, this.activateComponentExtensions(e, t)];
                                             a.label = 5;
                                         case 5:
                                             return this.applyActivation(function(e) {
@@ -2391,7 +2391,7 @@
                                                             installationID: i
                                                         };
                                                     switch (t) {
-                                                        case _e.t.COMPONENT:
+                                                        case _e.u.COMPONENT:
                                                             if (!a) return;
                                                             s.component = {
                                                                 slot: o,
@@ -2399,12 +2399,12 @@
                                                                 y: a.y
                                                             };
                                                             break;
-                                                        case _e.t.PANEL:
+                                                        case _e.u.PANEL:
                                                             s.panel = {
                                                                 slot: o
                                                             };
                                                             break;
-                                                        case _e.t.VIDEO_OVERLAY:
+                                                        case _e.u.VIDEO_OVERLAY:
                                                             s.videoOverlay = {
                                                                 slot: o
                                                             }
@@ -2448,7 +2448,7 @@
                                             if (n = this.props, t = n.extensionManagementPageData, i = n.showExtensionActivatedModal, o = n.showExtensionErrorModal, !t.currentUser || !t.currentUser.id) return [2];
                                             a.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, this.props.applyExtensionActivations(Object(D.a)({
+                                            return a.trys.push([1, 3, , 4]), [4, this.props.applyExtensionActivations(Object(O.a)({
                                                 activations: e,
                                                 channelID: t.currentUser.id
                                             }))];
@@ -2488,7 +2488,7 @@
                                         case 1:
                                             return a.trys.push([1, 4, , 5]), [4, this.confirmExtensionDestruction(e, j.a.Deactivate)];
                                         case 2:
-                                            return a.sent(), [4, t(Object(D.a)({
+                                            return a.sent(), [4, t(Object(O.a)({
                                                 channelID: s.id,
                                                 activations: [{
                                                     installationID: e
@@ -2514,11 +2514,11 @@
                                         case 1:
                                             return a.trys.push([1, 4, , 5]), [4, this.confirmExtensionDestruction(e, j.a.Uninstall)];
                                         case 2:
-                                            return a.sent(), [4, o(Object(D.a)({
+                                            return a.sent(), [4, o(Object(O.a)({
                                                 extensionInstallationID: e
                                             }))];
                                         case 3:
-                                            return (r = a.sent().data).uninstallExtension && r.uninstallExtension.id && Object(D.e)(Ze, {}, function(e) {
+                                            return (r = a.sent().data).uninstallExtension && r.uninstallExtension.id && Object(O.e)(Ke, {}, function(e) {
                                                 return e.currentUser && e.currentUser.installedExtensions && (e.currentUser.installedExtensions = e.currentUser.installedExtensions.filter(function(e) {
                                                     var n = e.id;
                                                     return r.uninstallExtension && r.uninstallExtension.id !== n
@@ -2566,7 +2566,7 @@
                                     bottom: 1
                                 }
                             }, o.createElement(E.W, {
-                                type: E.Ob.P
+                                type: E.Pb.P
                             }, Object(l.d)("Activate an extension from your installed extensions list for it to show up on your channel page!", "ExtensionManagementPagePresentation")));
                         if (a) c = r = o.createElement(o.Fragment, null, o.createElement(Ye, null), o.createElement(Ye, null));
                         else {
@@ -2581,7 +2581,7 @@
                                 });
                                 (m = function(e) {
                                     return e.slice().sort(function(e, n) {
-                                        return e.activationConfig.anchor === _e.t.COMPONENT && n.activationConfig.anchor !== _e.t.COMPONENT ? -1 : n.activationConfig.anchor === _e.t.COMPONENT && e.activationConfig.anchor !== _e.t.COMPONENT ? 1 : e.activationConfig.anchor === _e.t.VIDEO_OVERLAY && n.activationConfig.anchor !== _e.t.VIDEO_OVERLAY ? -1 : n.activationConfig.anchor === _e.t.VIDEO_OVERLAY && e.activationConfig.anchor !== _e.t.VIDEO_OVERLAY ? 1 : e.activationConfig.anchor === _e.t.PANEL && n.activationConfig.anchor !== _e.t.PANEL ? -1 : n.activationConfig.anchor === _e.t.PANEL && e.activationConfig.anchor !== _e.t.PANEL ? 1 : e.extension.name.toLowerCase() > n.extension.name.toLowerCase() ? 1 : e.extension.name.toLowerCase() < n.extension.name.toLowerCase() ? -1 : e.extension.version < n.extension.version ? 1 : e.extension.version > n.extension.version ? -1 : 0
+                                        return e.activationConfig.anchor === _e.u.COMPONENT && n.activationConfig.anchor !== _e.u.COMPONENT ? -1 : n.activationConfig.anchor === _e.u.COMPONENT && e.activationConfig.anchor !== _e.u.COMPONENT ? 1 : e.activationConfig.anchor === _e.u.VIDEO_OVERLAY && n.activationConfig.anchor !== _e.u.VIDEO_OVERLAY ? -1 : n.activationConfig.anchor === _e.u.VIDEO_OVERLAY && e.activationConfig.anchor !== _e.u.VIDEO_OVERLAY ? 1 : e.activationConfig.anchor === _e.u.PANEL && n.activationConfig.anchor !== _e.u.PANEL ? -1 : n.activationConfig.anchor === _e.u.PANEL && e.activationConfig.anchor !== _e.u.PANEL ? 1 : e.extension.name.toLowerCase() > n.extension.name.toLowerCase() ? 1 : e.extension.name.toLowerCase() < n.extension.name.toLowerCase() ? -1 : e.extension.version < n.extension.version ? 1 : e.extension.version > n.extension.version ? -1 : 0
                                     })
                                 }(m)).length && (c = o.createElement(o.Fragment, null, m.map(this.renderListCard)))
                             }
@@ -2600,7 +2600,7 @@
                             padding: {
                                 bottom: 5
                             }
-                        }, o.createElement(E.yb, {
+                        }, o.createElement(E.zb, {
                             className: "extensions-list",
                             "data-test-selector": en.InstalledExtensionList,
                             display: E.X.InlineBlock,
@@ -2619,14 +2619,14 @@
                             alignItems: E.f.Center,
                             justifyContent: E.Wa.Between
                         }, o.createElement(E.W, {
-                            type: E.Ob.H5
+                            type: E.Pb.H5
                         }, Object(l.d)("Installed", "ExtensionManagementPagePresentation")), this.anyInstallationUsesPermissions() && o.createElement(E.z, {
                             type: E.F.Text,
                             linkTo: Object(f.f)(this.props.match.params.channelLogin, {
                                 medium: x.PageviewMedium.ExtensionManagement
                             }),
                             "data-test-selector": en.ManagePermissionsButton
-                        }, Object(l.d)("Manage Permissions", "ExtensionManagementPagePresentation"))), r), o.createElement(E.yb, {
+                        }, Object(l.d)("Manage Permissions", "ExtensionManagementPagePresentation"))), r), o.createElement(E.zb, {
                             className: "extensions-list",
                             "data-test-selector": en.ActiveExtensionList,
                             display: E.X.InlineBlock,
@@ -2643,7 +2643,7 @@
                                 y: 1
                             }
                         }, o.createElement(E.W, {
-                            type: E.Ob.H5
+                            type: E.Pb.H5
                         }, Object(l.d)("Activated", "ExtensionManagementPagePresentation"))), c))))
                     }, n.prototype.anyInstallationUsesPermissions = function() {
                         var e = this.props.extensionManagementPageData.currentUser;
@@ -2674,9 +2674,9 @@
                             return a.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
-                                        return (e = this.props.extensionManagementPageData.currentUser) && e.id ? [4, this.props.createPanel(Object(D.a)({
+                                        return (e = this.props.extensionManagementPageData.currentUser) && e.id ? [4, this.props.createPanel(Object(O.a)({
                                             channelID: e.id,
-                                            type: _e.y.EXTENSION
+                                            type: _e.z.EXTENSION
                                         }))] : [2, Promise.reject("No user id.")];
                                     case 1:
                                         return n = i.sent(), (t = n.data.createPanel) && t.panel.__typename === nn ? [2, t.panel] : [2]
@@ -2698,7 +2698,7 @@
                                     },
                                     r = i.installedExtensions.filter(function(e) {
                                         var n = e.activationConfig;
-                                        return n.state === _e.a.ACTIVE && n.anchor === _e.t.COMPONENT
+                                        return n.state === _e.a.ACTIVE && n.anchor === _e.u.COMPONENT
                                     }).map(function(e) {
                                         var n = e.id,
                                             t = e.activationConfig,
@@ -2715,9 +2715,9 @@
                                     l = o.extension,
                                     c = l.name,
                                     d = l.views;
-                                d.component && (Object(Pe.b)(s), this.props.showComponentActivationModal({
+                                d.component && (Object(Fe.b)(s), this.props.showComponentActivationModal({
                                     onClose: function() {
-                                        Object(Pe.a)(s)
+                                        Object(Fe.a)(s)
                                     },
                                     onConfirm: function(e) {
                                         return a.__awaiter(t, void 0, void 0, function() {
@@ -2726,7 +2726,7 @@
                                                     case 0:
                                                         return [4, this.applyActivation(e)];
                                                     case 1:
-                                                        return n.sent(), Object(Pe.c)(s), [2]
+                                                        return n.sent(), Object(Fe.c)(s), [2]
                                                 }
                                             })
                                         })
@@ -2766,16 +2766,16 @@
                     }, n
                 }(o.Component),
                 an = Object(Se.compose)(Object(T.b)("ExtensionManagementPage", {
-                    destination: F.a.ChannelDashboardExtensionsManagement
-                }), Object(I.a)({
+                    destination: D.a.ChannelDashboardExtensionsManagement
+                }), Object(P.a)({
                     location: x.PageviewLocation.DashboardExtensionsManagement
-                }), Object(u.a)(Ze, {
+                }), Object(u.a)(Ke, {
                     name: "extensionManagementPageData"
                 }), Object(u.a)($e, {
                     name: "createPanel"
                 }), Object(u.a)(Je, {
                     name: "applyExtensionActivations"
-                }), Object(u.a)(Ke, {
+                }), Object(u.a)(Ze, {
                     name: "uninstallExtension"
                 }))(tn);
             var on, sn = Object(b.connect)(null, function(e) {
@@ -2787,7 +2787,7 @@
                         },
                         showExtensionActivatedModal: function(e) {
                             var n = a.__rest(e, []);
-                            return Object(C.d)(Z, n)
+                            return Object(C.d)(K, n)
                         },
                         showExtensionConfigureModal: function(e) {
                             var n = a.__rest(e, []);
@@ -2820,7 +2820,7 @@
                                         case 0:
                                             n = e.currentTarget, t = n.name, i = n.checked, a.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, this.props.setFeatureFlags(Object(D.a)({
+                                            return a.trys.push([1, 3, , 4]), [4, this.props.setFeatureFlags(Object(O.a)({
                                                 id: t,
                                                 canSendChat: i
                                             }))];
@@ -2849,7 +2849,7 @@
                             t = e.extensionName,
                             i = e.extensionVersion,
                             a = e.installationID;
-                        return o.createElement(E.yb, {
+                        return o.createElement(E.zb, {
                             borderTop: !this.props.isFirstChild,
                             padding: {
                                 y: 2
@@ -2879,7 +2879,7 @@
                                 }
                             }
                         }, o.createElement(E.W, {
-                            type: E.Ob.H5
+                            type: E.Pb.H5
                         }, t)), o.createElement(E.W, null, Object(l.d)("Created by {authorName}", {
                             authorName: this.props.extensionAuthor
                         }, "PermissionCard")))), o.createElement(E.Xa, null, this.props.hasChatSupport && o.createElement(E.Xa, {
@@ -2888,7 +2888,7 @@
                             margin: {
                                 right: 1
                             }
-                        }, o.createElement(E.Qb, {
+                        }, o.createElement(E.Rb, {
                             checked: this.props.permittedFeatures.canSendChat,
                             "data-installation-id": this.props.installationID,
                             "data-test-selector": on.ChatToggle,
@@ -2900,7 +2900,7 @@
                 }(o.Component),
                 dn = function(e) {
                     var n = e.border;
-                    return o.createElement(E.yb, {
+                    return o.createElement(E.zb, {
                         borderTop: n,
                         padding: {
                             y: 2
@@ -2988,11 +2988,11 @@
                             "data-test-selector": ln.NoneRequirePermissions
                         }, Object(l.d)("None of your installed extensions require permissions.", "ExtensionPermissionsPageComponent"))) : a = o.createElement(Ge, {
                             channelLogin: this.props.match.params.channelLogin
-                        }), o.createElement(E.yb, {
+                        }), o.createElement(E.zb, {
                             borderRight: !0,
                             borderBottom: !0,
                             borderLeft: !0
-                        }, o.createElement(De.a, {
+                        }, o.createElement(Oe.a, {
                             channelLogin: this.props.match.params.channelLogin,
                             showBackLink: !0,
                             title: Object(l.d)("Extension Permissions", "ExtensionPermissionsPageComponent")
@@ -3038,7 +3038,7 @@
                         var p = this.props.headerText;
                         return a && (p = o.createElement(E.U, {
                             to: a
-                        }, s)), o.createElement(E.yb, {
+                        }, s)), o.createElement(E.zb, {
                             background: E.r.Base,
                             border: !0,
                             className: "dashboard-announcement-banner-container",
@@ -3054,7 +3054,7 @@
                         }, o.createElement(E.W, {
                             bold: !0,
                             fontSize: E.Ca.Size4,
-                            type: E.Ob.H2
+                            type: E.Pb.H2
                         }, p)), o.createElement(E.W, {
                             color: E.O.Alt2,
                             fontSize: E.Ca.Size5
@@ -3150,7 +3150,7 @@
                                                     return e.extensionCategory && e.extensionCategory.extensions && t.extensionCategory && t.extensionCategory.extensions ? a.__assign({}, e, {
                                                         extensionCategory: a.__assign({}, t.extensionCategory, {
                                                             extensions: a.__assign({}, t.extensionCategory.extensions, {
-                                                                edges: Object(D.c)(e.extensionCategory.extensions.edges, t.extensionCategory.extensions.edges)
+                                                                edges: Object(O.c)(e.extensionCategory.extensions.edges, t.extensionCategory.extensions.edges)
                                                             })
                                                         })
                                                     }) : e
@@ -3172,12 +3172,12 @@
                                             if (n = this.props, t = n.whitelistedExtensionsPageData, i = n.installExtension, o = n.showExtensionErrorModal, s = n.showExtensionInstalledModal, !(r = t.currentUser) || !r.id || !r.login) return [2];
                                             a.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, i(Object(D.a)({
+                                            return a.trys.push([1, 3, , 4]), [4, i(Object(O.a)({
                                                 channelID: r.id,
                                                 extensionID: e
                                             }))];
                                         case 2:
-                                            return (l = a.sent().data).installExtension && l.installExtension.installedExtension && (c = l.installExtension.installedExtension, Object(D.e)(Cn, {
+                                            return (l = a.sent().data).installExtension && l.installExtension.installedExtension && (c = l.installExtension.installedExtension, Object(O.e)(Cn, {
                                                 skipCurrentUser: !1
                                             }, function(e) {
                                                 return e.currentUser && e.currentUser.installedExtensions && e.currentUser.installedExtensions.push(c), e
@@ -3262,8 +3262,8 @@
                     }, n
                 }(o.Component),
                 Sn = Object(y.compose)(Object(T.b)("WhitelistedExtensionsPage", {
-                    destination: F.a.ExtensionsCategory
-                }), Object(I.a)({
+                    destination: D.a.ExtensionsCategory
+                }), Object(P.a)({
                     location: x.PageviewLocation.ExtensionsCategory
                 }), Object(u.a)(Cn, {
                     name: "whitelistedExtensionsPageData",
@@ -3277,7 +3277,7 @@
                 }), Object(u.a)(yn, {
                     name: "installExtension"
                 }))(Nn);
-            var On = Object(b.connect)(null, function(e) {
+            var In = Object(b.connect)(null, function(e) {
                     return Object(y.bindActionCreators)({
                         showExtensionInstalledModal: function(e) {
                             var n = a.__rest(e, []);
@@ -3288,11 +3288,11 @@
                         }
                     }, e)
                 })(Sn),
-                In = t("F4WJ"),
-                Dn = c.a.wrap(function() {
-                    return t.e(137).then(t.bind(null, "t1ne"))
+                Pn = t("F4WJ"),
+                On = c.a.wrap(function() {
+                    return t.e(138).then(t.bind(null, "t1ne"))
                 }, "ExtensionConfigurePage"),
-                Fn = function(e) {
+                Dn = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.renderExtensionManagementPage = function(e) {
@@ -3315,7 +3315,7 @@
                                 channelLogin: t.params.channelLogin,
                                 selectedTab: i.Whitelisted,
                                 showWhitelistedTab: n.isWhitelistedForExtensions()
-                            }), o.createElement(On, null))
+                            }), o.createElement(In, null))
                         }, n.isWhitelistedForExtensions = function() {
                             var e = n.props.extensionDashboardRootData;
                             return !!(e.extensionCategory && e.extensionCategory.extensions && e.extensionCategory.extensions.totalCount > 0)
@@ -3337,7 +3337,7 @@
                         }), o.createElement(r.a, null, "control" === e && o.createElement(s.a, {
                             exact: !0,
                             path: "/:channelLogin/dashboard/extensions/:extensionID/configure",
-                            component: Dn
+                            component: On
                         }), o.createElement(s.a, {
                             exact: !0,
                             path: "/:channelLogin/dashboard/extensions/manage",
@@ -3357,11 +3357,11 @@
                         })), o.createElement(h, null)))
                     }, n
                 }(o.Component),
-                Pn = Object(u.a)(In, {
+                Fn = Object(u.a)(Pn, {
                     name: "extensionDashboardRootData"
-                })(Fn);
+                })(Dn);
             t.d(n, "ExtensionDashboardRoot", function() {
-                return Pn
+                return Fn
             })
         },
         "5IFo": function(e, n, t) {
@@ -3457,9 +3457,9 @@
                     var n = e.children,
                         t = e.loadMore,
                         s = e.loadMoreEnabled;
-                    return i.createElement(o.Ub, {
-                        childWidth: o.Vb.Large,
-                        gutterSize: o.Wb.Small,
+                    return i.createElement(o.Vb, {
+                        childWidth: o.Wb.Large,
+                        gutterSize: o.Xb.Small,
                         placeholderItems: 20
                     }, n, i.createElement(a.a, {
                         pixelThreshold: 200,
@@ -3480,31 +3480,31 @@
                 r = function(e) {
                     var n;
                     switch (e.state) {
-                        case o.v.IN_TEST:
+                        case o.w.IN_TEST:
                             n = Object(a.d)("TESTING", "ExtensionStatusPill");
                             break;
-                        case o.v.READY_FOR_REVIEW:
+                        case o.w.READY_FOR_REVIEW:
                             n = Object(a.d)("READY FOR REVIEW", "ExtensionStatusPill");
                             break;
-                        case o.v.IN_REVIEW:
+                        case o.w.IN_REVIEW:
                             n = Object(a.d)("IN REVIEW", "ExtensionStatusPill");
                             break;
-                        case o.v.REJECTED:
+                        case o.w.REJECTED:
                             n = Object(a.d)("REJECTED", "ExtensionStatusPill");
                             break;
-                        case o.v.APPROVED:
+                        case o.w.APPROVED:
                             n = Object(a.d)("APPROVED", "ExtensionStatusPill");
                             break;
-                        case o.v.DEPRECATED:
+                        case o.w.DEPRECATED:
                             n = Object(a.d)("DEPRECATED", "ExtensionStatusPill");
                             break;
-                        case o.v.PENDING_ACTION:
+                        case o.w.PENDING_ACTION:
                             n = Object(a.d)("PENDING DEVELOPER ACTION", "ExtensionStatusPill");
                             break;
-                        case o.v.UPLOADING:
+                        case o.w.UPLOADING:
                             n = Object(a.d)("UPLOAD IN PROGRESS", "ExtensionStatusPill");
                             break;
-                        case o.v.ASSETS_UPLOADED:
+                        case o.w.ASSETS_UPLOADED:
                             n = Object(a.d)("ASSETS UPLOADED", "ExtensionStatusPill");
                             break;
                         default:
@@ -3647,7 +3647,7 @@
                         }, n
                     }
                     return i.__extends(n, e), n.prototype.render = function() {
-                        return a.createElement(c.yb, {
+                        return a.createElement(c.zb, {
                             border: !0,
                             background: c.r.Base,
                             padding: 1
@@ -4451,7 +4451,7 @@
 
             function l(e) {
                 var n = [];
-                return e.component && e.component.viewerURL && n.push(s.t.COMPONENT), e.panel && e.panel.viewerURL && n.push(s.t.PANEL), e.videoOverlay && e.videoOverlay.viewerURL && n.push(s.t.VIDEO_OVERLAY), n
+                return e.component && e.component.viewerURL && n.push(s.u.COMPONENT), e.panel && e.panel.viewerURL && n.push(s.u.PANEL), e.videoOverlay && e.videoOverlay.viewerURL && n.push(s.u.VIDEO_OVERLAY), n
             }
 
             function c(e) {
@@ -5715,8 +5715,8 @@
                         l = Object(u.d)("Are you sure you want to deactivate?", "ExtensionDeactivationWarning"),
                         c = l;
                     return s ? c = Object(u.d)("This extension enables in-extension purchases. If you deactivate this extension, your viewers may not be able to enjoy items they purchased through the extension on your channel unless you reactivate it. Are you sure you want to deactivate?", "ExtensionDeactivationWarning") : r && (c = Object(u.d)("This extension is Bits-enabled. If you deactivate this extension, your viewers may not be able to enjoy items and experiences they've exchanged for Bits through the extension on your channel unless you reactivate it. Are you sure you want to deactivate?", "ExtensionDeactivationWarning")), a.createElement(m.Xa, null, a.createElement(m.W, {
-                        type: m.Ob.H5
-                    }, l), a.createElement(m.yb, {
+                        type: m.Pb.H5
+                    }, l), a.createElement(m.zb, {
                         borderTop: !0,
                         borderBottom: !0,
                         padding: {
@@ -5728,14 +5728,14 @@
                     }, a.createElement(m.W, null, Object(u.d)("You are deactivating {extensionName} ", {
                         extensionName: a.createElement(m.W, {
                             bold: !0,
-                            type: m.Ob.P
+                            type: m.Pb.P
                         }, t)
                     }, "ExtensionDeactivationWarning")), a.createElement(m.Xa, {
                         padding: {
                             top: 1
                         }
                     }, a.createElement(m.W, {
-                        type: m.Ob.P
+                        type: m.Pb.P
                     }, c))), a.createElement(m.Xa, {
                         display: m.X.Flex,
                         justifyContent: m.Wa.Center
@@ -5760,8 +5760,8 @@
                         l = i === d.b.Bits,
                         c = Object(u.d)("Are you sure you want to deactivate?", "ExtensionReplacementWarning");
                     return r ? c = Object(u.d)("This extension enables in-extension purchases. If you replace this extension, your viewers may not be able to enjoy items they purchased through the extension on your channel unless you reactivate it. Are you sure you want to proceed?", "ExtensionReplacementWarning") : l && (c = Object(u.d)("This extension is Bits-enabled. If you replace this extension, your viewers may not be able to enjoy items and experiences they’ve exchanged for Bits through the extension on your channel unless you reactivate it. Are you sure you want to proceed?", "ExtensionReplacementWarning")), a.createElement(m.Xa, null, a.createElement(m.W, {
-                        type: m.Ob.H5
-                    }, Object(u.d)("You are replacing an active extension", "ExtensionReplacementWarning")), a.createElement(m.yb, {
+                        type: m.Pb.H5
+                    }, Object(u.d)("You are replacing an active extension", "ExtensionReplacementWarning")), a.createElement(m.zb, {
                         borderTop: !0,
                         borderBottom: !0,
                         padding: {
@@ -5777,15 +5777,15 @@
                     }, a.createElement(m.W, null, Object(u.d)("{extensionName} on {anchorSlot}", {
                         extensionName: a.createElement(m.W, {
                             bold: !0,
-                            type: m.Ob.Span
+                            type: m.Pb.Span
                         }, n),
                         anchorSlot: a.createElement(m.W, {
                             bold: !0,
-                            type: m.Ob.Span,
-                            transform: m.Nb.Uppercase
+                            type: m.Pb.Span,
+                            transform: m.Ob.Uppercase
                         }, t)
                     }, "ExtensionReplacementWarning"))), a.createElement(m.W, {
-                        type: m.Ob.P
+                        type: m.Pb.P
                     }, c)), a.createElement(m.Xa, {
                         display: m.X.Flex,
                         justifyContent: m.Wa.Center
@@ -5811,8 +5811,8 @@
                         l = Object(u.d)("Are you sure you want to uninstall?", "ExtensionUninstallationWarning"),
                         c = l;
                     return s ? c = Object(u.d)("This extension enables in-extension purchases. If you uninstall this extension, your viewers may not be able to enjoy items they purchased through the extension on your channel unless you reinstall and activate it. Are you sure you want to uninstall?", "ExtensionUninstallationWarning") : r && (c = Object(u.d)("This extension is Bits-enabled. If you uninstall this extension, your viewers may not be able to enjoy items and experiences they've exchanged for Bits through the extension on your channel unless you reinstall and activate it. Are you sure you want to uninstall?", "ExtensionUninstallationWarning")), a.createElement(m.Xa, null, a.createElement(m.W, {
-                        type: m.Ob.H5
-                    }, l), a.createElement(m.yb, {
+                        type: m.Pb.H5
+                    }, l), a.createElement(m.zb, {
                         borderTop: !0,
                         borderBottom: !0,
                         padding: {
@@ -5824,14 +5824,14 @@
                     }, a.createElement(m.W, null, Object(u.d)("You are uninstalling {extensionName} ", {
                         extensionName: a.createElement(m.W, {
                             bold: !0,
-                            type: m.Ob.P
+                            type: m.Pb.P
                         }, t)
                     }, "ExtensionUninstallationWarning")), a.createElement(m.Xa, {
                         padding: {
                             top: 1
                         }
                     }, a.createElement(m.W, {
-                        type: m.Ob.P
+                        type: m.Pb.P
                     }, c))), a.createElement(m.Xa, {
                         display: m.X.Flex,
                         justifyContent: m.Wa.Center
@@ -6495,13 +6495,13 @@
                 o = function(e, n) {
                     var t;
                     switch (e) {
-                        case a.t.COMPONENT:
+                        case a.u.COMPONENT:
                             t = n ? Object(i.d)("COMPONENT", "ExtensionAnchorType") : Object(i.d)("Component", "ExtensionAnchorType");
                             break;
-                        case a.t.PANEL:
+                        case a.u.PANEL:
                             t = n ? Object(i.d)("PANEL", "ExtensionAnchorType") : Object(i.d)("Panel", "ExtensionAnchorType");
                             break;
-                        case a.t.VIDEO_OVERLAY:
+                        case a.u.VIDEO_OVERLAY:
                             t = n ? Object(i.d)("OVERLAY", "ExtensionAnchorType") : Object(i.d)("Overlay", "ExtensionAnchorType");
                             break;
                         default:
@@ -6857,7 +6857,7 @@
             var i = t("q1tI"),
                 a = t("Ue10"),
                 o = (t("JxAY"), function(e) {
-                    return i.createElement(a.yb, {
+                    return i.createElement(a.zb, {
                         className: e.className || "extension-manager-modal-container",
                         background: a.r.Base,
                         padding: 2

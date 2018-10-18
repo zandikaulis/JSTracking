@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [203], {
+    [204], {
         "V+GM": function(e, t, n) {
             "use strict";
             var r = n("mrSG"),
@@ -102,9 +102,9 @@
                     }, t.prototype.render = function() {
                         var e = h(new Date(this.props.app.created_at), "MM/DD/YYYY, hh:mm a"),
                             t = h(new Date(this.props.app.updated_at), "MM/DD/YYYY, hh:mm a");
-                        return a.createElement(_.Gb, {
+                        return a.createElement(_.Hb, {
                             key: this.props.app.id
-                        }, a.createElement(_.Db, null, this.props.app.name), a.createElement(_.Db, null, this.props.app.redirect_uri), a.createElement(_.Db, null, e), a.createElement(_.Db, null, t), a.createElement(_.Db, null, a.createElement(_.Xa, {
+                        }, a.createElement(_.Eb, null, this.props.app.name), a.createElement(_.Eb, null, this.props.app.redirect_uri), a.createElement(_.Eb, null, e), a.createElement(_.Eb, null, t), a.createElement(_.Eb, null, a.createElement(_.Xa, {
                             display: _.X.Flex,
                             justifyContent: _.Wa.Center
                         }, a.createElement(_.Xa, {
@@ -140,19 +140,19 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this.renderAppRows();
-                        return a.createElement(_.Bb, {
+                        return a.createElement(_.Cb, {
                             alternateRows: !0
-                        }, a.createElement(_.Eb, null, a.createElement(_.Fb, {
+                        }, a.createElement(_.Fb, null, a.createElement(_.Gb, {
                             label: Object(o.d)("Name", "DevAppsList")
-                        }), a.createElement(_.Fb, {
+                        }), a.createElement(_.Gb, {
                             label: Object(o.d)("URL", "DevAppsList")
-                        }), a.createElement(_.Fb, {
+                        }), a.createElement(_.Gb, {
                             label: Object(o.d)("Date Created", "DevAppsList")
-                        }), a.createElement(_.Fb, {
+                        }), a.createElement(_.Gb, {
                             label: Object(o.d)("Last Updated", "DevAppsList")
-                        }), a.createElement(_.Fb, {
+                        }), a.createElement(_.Gb, {
                             label: ""
-                        })), a.createElement(_.Cb, null, e))
+                        })), a.createElement(_.Db, null, e))
                     }, t = r.__decorate([Object(l.b)("DevAppsList", {
                         autoReportInteractive: !0
                     })], t)
@@ -177,9 +177,9 @@
                                 bottom: .5
                             }
                         }, a.createElement(_.W, {
-                            type: _.Ob.H3
+                            type: _.Pb.H3
                         }, Object(o.d)("Developer Applications", "DevApps"))), a.createElement(_.W, {
-                            type: _.Ob.P
+                            type: _.Pb.P
                         }, Object(o.d)("You have registered these apps to use the Twitch API", "DevApps"))), a.createElement(_.Xa, {
                             margin: {
                                 bottom: 1
@@ -196,10 +196,10 @@
                         })))
                     }, t
                 }(a.Component),
-                y = Object(l.b)("DevAppsComponent", {
+                E = Object(l.b)("DevAppsComponent", {
                     autoReportInteractive: !0
                 })(D),
-                g = function(e) {
+                y = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -268,7 +268,7 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return a.createElement(y, {
+                        return a.createElement(E, {
                             apps: this.state.apps,
                             onDelete: this.onDelete
                         })
@@ -279,7 +279,7 @@
                     })], t)
                 }(a.Component);
             n.d(t, "DevAppsPage", function() {
-                return g
+                return y
             })
         }
     }

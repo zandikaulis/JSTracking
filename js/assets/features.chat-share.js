@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [171], {
+    [172], {
         "1VMv": function(e, t) {
             var n = {
                 kind: "Document",
@@ -372,7 +372,7 @@
                             attachLeft: !0,
                             attachRight: !0,
                             position: f.fb.Absolute
-                        }, r.createElement(f.yb, {
+                        }, r.createElement(f.zb, {
                             className: "share-input__container",
                             position: f.fb.Relative,
                             border: !0,
@@ -390,7 +390,7 @@
                             "data-a-target": "resub-notification-close-form-btn",
                             "data-test-selector": "share-input__close-form-btn"
                         })), r.createElement(f.Xa, {
-                            textAlign: f.Kb.Center,
+                            textAlign: f.Lb.Center,
                             padding: {
                                 top: 1,
                                 bottom: 2
@@ -717,8 +717,8 @@
                     }
                 })(I),
                 R = n("kRBY"),
-                w = n("oJmH"),
-                D = (n("tRzL"), function(e) {
+                L = n("oJmH"),
+                w = (n("tRzL"), function(e) {
                     var t = s("rare-emote__face", {
                             "rare-emote__face--animate": !!e.animate
                         }),
@@ -729,14 +729,14 @@
                         overflow: f.ab.Hidden,
                         className: "rare-emote"
                     }, r.createElement(f.Pa, {
-                        zIndex: f.bc.Above,
+                        zIndex: f.cc.Above,
                         position: f.fb.Relative
                     }, r.createElement("img", {
                         className: t,
                         src: "https://static-cdn.jtvnw.net/emoticons/v1/" + e.emoteID + "/2.0"
                     })), r.createElement(f.Xa, {
                         position: f.fb.Relative,
-                        zIndex: f.bc.Default,
+                        zIndex: f.cc.Default,
                         className: n
                     }, r.createElement(f.ob, {
                         width: 28,
@@ -744,7 +744,7 @@
                         asset: f.pb.Neck
                     })))
                 }),
-                L = 3;
+                D = 3;
             var P = n("cpJf"),
                 F = n("EnXQ"),
                 O = function(e) {
@@ -789,7 +789,7 @@
                                                             case 0:
                                                                 s = "https://api.twitch.tv/api/channels/" + e + "/use_chat_notification_token", r = 1, i.label = 1;
                                                             case 1:
-                                                                if (!(r <= L)) return [3, 9];
+                                                                if (!(r <= D)) return [3, 9];
                                                                 i.label = 2;
                                                             case 2:
                                                                 return i.trys.push([2, 7, , 8]), [4, fetch(s, {
@@ -814,7 +814,7 @@
                                                             case 6:
                                                                 return [3, 8];
                                                             case 7:
-                                                                if (l = i.sent(), r === L) throw l;
+                                                                if (l = i.sent(), r === D) throw l;
                                                                 return [3, 8];
                                                             case 8:
                                                                 return ++r, [3, 1];
@@ -871,7 +871,7 @@
                             hide: !this.state.showMessageInput,
                             onShare: this.shareResub,
                             onClose: this.toggleContentShown
-                        }, r.createElement(D, {
+                        }, r.createElement(w, {
                             emoteID: this.randomEmoteId,
                             animate: this.state.showMessageInput
                         }), r.createElement(f.W, null, Object(c.d)("Hooray! Let {channelName} know it's your {monthsSubbed, number} month anniversary.", {
@@ -883,7 +883,7 @@
                         return P.c[e]
                     }, t
                 }(r.Component),
-                j = Object(w.compose)(Object(u.a)(F, {
+                j = Object(L.compose)(Object(u.a)(F, {
                     options: function(e) {
                         return {
                             variables: {
@@ -896,7 +896,7 @@
                     }
                 }), Object(l.a)([{
                     topic: function(e) {
-                        return Object(m.E)(e.currentUserId ? e.currentUserId : "")
+                        return Object(m.F)(e.currentUserId ? e.currentUserId : "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"

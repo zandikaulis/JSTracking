@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [58], {
+    [59], {
         "2W9R": function(e, n, t) {
             "use strict";
             t.r(n);
@@ -67,7 +67,7 @@
                             message: Object(d.d)("Failed to load friends", "FriendRequestsPage")
                         });
                         if (0 === this.state.filteredUsers.length) return i.createElement(y.Xa, {
-                            textAlign: y.Kb.Center,
+                            textAlign: y.Lb.Center,
                             padding: {
                                 y: 5
                             }
@@ -91,10 +91,10 @@
                                 }
                             })) : null
                         });
-                        return i.createElement(y.Ub, {
+                        return i.createElement(y.Vb, {
                             center: !0,
-                            childWidth: y.Vb.Large,
-                            gutterSize: y.Wb.Small,
+                            childWidth: y.Wb.Large,
+                            gutterSize: y.Xb.Small,
                             placeholderItems: 10
                         }, e)
                     }, n.prototype.detectUserDataChange = function(e, n) {
@@ -143,7 +143,7 @@
             function P(e) {
                 return !e.isLoggedIn
             }
-            var O = Object(a.compose)(Object(o.connect)(function(e) {
+            var E = Object(a.compose)(Object(o.connect)(function(e) {
                 return {
                     isLoggedIn: Object(g.f)(e)
                 }
@@ -164,7 +164,7 @@
                 location: v.PageviewLocation.Friends
             }))(w);
             t.d(n, "FriendsPage", function() {
-                return O
+                return E
             })
         },
         "3lt/": function(e, n, t) {
@@ -305,15 +305,15 @@
                         bottom: 2
                     }
                 }, i.createElement(o.W, {
-                    type: o.Ob.H2
+                    type: o.Pb.H2
                 }, Object(a.d)("Friends", "FriendsHeader")), i.createElement(o.Xa, {
                     margin: {
                         top: 1
                     }
-                }, i.createElement(o.Ab, null, i.createElement(o.zb, {
+                }, i.createElement(o.Bb, null, i.createElement(o.Ab, {
                     active: e.activeTab === r.Friends,
                     linkTo: "/friends"
-                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(o.zb, {
+                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(o.Ab, {
                     active: e.activeTab === r.Requests,
                     linkTo: "/friends/requests"
                 }, Object(a.d)("Friend Requests", "FriendsHeader")))))

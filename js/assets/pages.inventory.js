@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [57], {
+    [58], {
         "9fCB": function(e, t) {
             var n = {
                 kind: "Document",
@@ -513,7 +513,7 @@
                                 }
                             }, s.createElement(k.o, {
                                 ratio: k.p.Aspect1x1
-                            }, s.createElement(k.yb, {
+                            }, s.createElement(k.zb, {
                                 fullHeight: !0,
                                 fullWidth: !0,
                                 display: k.X.Flex,
@@ -527,7 +527,7 @@
                                 title: e.title,
                                 alt: e.title
                             })))), s.createElement(k.W, {
-                                type: k.Ob.Strong
+                                type: k.Pb.Strong
                             }, e.title))
                         }, t
                     }
@@ -552,16 +552,16 @@
                                 right: 1
                             }
                         }, s.createElement(k.W, {
-                            type: k.Ob.H3
+                            type: k.Pb.H3
                         }, Object(d.d)("Badges from Crates", "BadgesList"))), s.createElement(k.W, {
-                            type: k.Ob.H3,
+                            type: k.Pb.H3,
                             color: k.O.Alt2
                         }, Object(d.f)(e.length))), s.createElement(k.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, s.createElement(k.W, null, Object(d.d)('You can find your chat badge in Chat Settings under "Edit Appearance".', "BadgesList"))), s.createElement(k.Ub, {
-                            childWidth: k.Vb.Small,
+                        }, s.createElement(k.W, null, Object(d.d)('You can find your chat badge in Chat Settings under "Edit Appearance".', "BadgesList"))), s.createElement(k.Vb, {
+                            childWidth: k.Wb.Small,
                             placeholderItems: 8
                         }, t))
                     }, t
@@ -571,7 +571,7 @@
                 }))(h),
                 y = n("SDEh"),
                 E = n("edgk");
-            var O, N = function(e) {
+            var N, S = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderCrate = function(e) {
@@ -582,7 +582,7 @@
                                 "data-open-url": e.openURL
                             }, s.createElement(k.o, {
                                 ratio: k.p.Aspect1x1
-                            }, s.createElement(k.yb, {
+                            }, s.createElement(k.zb, {
                                 fullHeight: !0,
                                 fullWidth: !0,
                                 display: k.X.Flex,
@@ -628,24 +628,24 @@
                                 right: 1
                             }
                         }, s.createElement(k.W, {
-                            type: k.Ob.H3
+                            type: k.Pb.H3
                         }, Object(d.d)("Twitch Crates", "CratesList"))), s.createElement(k.W, {
-                            type: k.Ob.H3,
+                            type: k.Pb.H3,
                             color: k.O.Alt2
-                        }, Object(d.f)(e.length))), s.createElement(k.Ub, {
-                            childWidth: k.Vb.Small,
+                        }, Object(d.f)(e.length))), s.createElement(k.Vb, {
+                            childWidth: k.Wb.Small,
                             placeholderItems: 8
                         }, t))
                     }, t
                 }(s.Component),
-                S = Object(i.compose)(Object(v.b)("CratesList", {
+                O = Object(i.compose)(Object(v.b)("CratesList", {
                     autoReportInteractive: !0
-                }))(N),
+                }))(S),
                 C = n("CgqK");
             n("HWNB");
             ! function(e) {
                 e.Drop = "drops-list__drop", e.DropName = "drops-list__drop-name", e.Wrapper = "drops-list__wrapper"
-            }(O || (O = {}));
+            }(N || (N = {}));
             var F = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -666,8 +666,8 @@
                                 margin: {
                                     bottom: 2
                                 },
-                                "data-test-selector": O.Drop
-                            }, s.createElement(k.yb, {
+                                "data-test-selector": N.Drop
+                            }, s.createElement(k.zb, {
                                 display: k.X.Flex,
                                 alignItems: k.f.Center,
                                 justifyContent: k.Wa.Center,
@@ -679,7 +679,7 @@
                                 alt: Object(d.d)("Drop image for {gameName}", {
                                     gameName: a
                                 }, "DropsListPresentation")
-                            }), s.createElement(k.yb, {
+                            }), s.createElement(k.zb, {
                                 position: k.fb.Absolute,
                                 attachBottom: !0,
                                 attachRight: !0,
@@ -693,8 +693,8 @@
                                     gameName: a
                                 }, "DropsListPresentation")
                             }, e.count))), s.createElement(k.W, {
-                                type: k.Ob.Strong,
-                                "data-test-selector": O.DropName
+                                type: k.Pb.Strong,
+                                "data-test-selector": N.DropName
                             }, a))
                         }, t
                     }
@@ -727,7 +727,7 @@
                                 return e.renderDrop(n[t])
                             });
                         return s.createElement(k.Xa, {
-                            "data-test-selector": O.Wrapper,
+                            "data-test-selector": N.Wrapper,
                             margin: {
                                 y: 1
                             }
@@ -738,16 +738,16 @@
                                 right: 1
                             }
                         }, s.createElement(k.W, {
-                            type: k.Ob.H3
+                            type: k.Pb.H3
                         }, Object(d.d)("Drops", "DropsList"))), s.createElement(k.W, {
-                            type: k.Ob.H3,
+                            type: k.Pb.H3,
                             color: k.O.Alt2
                         }, Object(d.f)(t.length))), s.createElement(k.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, s.createElement(k.W, null, this.getDropsDescription(t))), s.createElement(k.Ub, {
-                            childWidth: k.Vb.Small,
+                        }, s.createElement(k.W, null, this.getDropsDescription(t))), s.createElement(k.Vb, {
+                            childWidth: k.Wb.Small,
                             noGrow: !0
                         }, a))
                     }, t.prototype.postRender = function() {
@@ -778,7 +778,7 @@
                                 }
                             }, s.createElement(k.o, {
                                 ratio: k.p.Aspect1x1
-                            }, s.createElement(k.yb, {
+                            }, s.createElement(k.zb, {
                                 fullHeight: !0,
                                 fullWidth: !0,
                                 display: k.X.Flex,
@@ -792,7 +792,7 @@
                                 title: t.displayName,
                                 alt: t.displayName
                             })))), s.createElement(k.W, {
-                                type: k.Ob.Strong
+                                type: k.Pb.Strong
                             }, t.displayName))
                         }, t
                     }
@@ -829,16 +829,16 @@
                                 right: 1
                             }
                         }, s.createElement(k.W, {
-                            type: k.Ob.H3
+                            type: k.Pb.H3
                         }, Object(d.d)("Emotes from Crates", "EmoticonsList"))), s.createElement(k.W, {
-                            type: k.Ob.H3,
+                            type: k.Pb.H3,
                             color: k.O.Alt2
                         }, Object(d.f)(t.length))), s.createElement(k.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, s.createElement(k.W, null, Object(d.d)("You can find your new emote in the emote selector for Chat, Pulse, Feeds, and Whispers.", "EmoticonsList"))), s.createElement(k.Ub, {
-                            childWidth: k.Vb.Small,
+                        }, s.createElement(k.W, null, Object(d.d)("You can find your new emote in the emote selector for Chat, Pulse, Feeds, and Whispers.", "EmoticonsList"))), s.createElement(k.Vb, {
+                            childWidth: k.Wb.Small,
                             placeholderItems: 8
                         }, t))
                     }, t
@@ -847,16 +847,16 @@
                     autoReportInteractive: !0
                 }))(w),
                 R = n("eJ65"),
-                U = n("KtNF"),
-                W = n("4h+t"),
-                I = function(e) {
+                W = n("KtNF"),
+                I = n("4h+t"),
+                U = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.bitsConfig = Object(W.a)(), t
+                        return t.bitsConfig = Object(I.a)(), t
                     }
                     return c.__extends(t, e), t.prototype.render = function() {
                         var e = Object(d.d)("Inventory", "InventoryTitleBar");
-                        if (this.props.loading) return s.createElement(k.yb, {
+                        if (this.props.loading) return s.createElement(k.zb, {
                             className: "title-bar",
                             display: k.X.Flex,
                             borderBottom: !0,
@@ -866,7 +866,7 @@
                         }, s.createElement(k.Xa, {
                             flexGrow: 1
                         }, s.createElement(k.W, {
-                            type: k.Ob.H2
+                            type: k.Pb.H2
                         }, e)), s.createElement(k.Xa, {
                             display: k.X.Flex,
                             margin: {
@@ -890,14 +890,14 @@
                                 }, e.displayText)
                             }),
                             n = Object(d.d)("You have {bitsComponent}", {
-                                bitsComponent: s.createElement(U.a, {
+                                bitsComponent: s.createElement(W.a, {
                                     count: this.props.bitsBalance,
                                     bitsConfig: this.bitsConfig,
                                     withImage: !0,
                                     withText: !0
                                 })
                             }, "InventoryTitleBar");
-                        return s.createElement(k.yb, {
+                        return s.createElement(k.zb, {
                             className: "title-bar",
                             display: k.X.Flex,
                             borderBottom: !0,
@@ -907,7 +907,7 @@
                         }, s.createElement(k.Xa, {
                             flexGrow: 1
                         }, s.createElement(k.W, {
-                            type: k.Ob.H2
+                            type: k.Pb.H2
                         }, e)), s.createElement(k.Xa, {
                             display: k.X.Flex,
                             margin: {
@@ -925,7 +925,7 @@
                 }(s.Component),
                 X = Object(i.compose)(Object(v.b)("TitleBar", {
                     autoReportInteractive: !0
-                }))(I),
+                }))(U),
                 _ = n("wdoW"),
                 x = function(e) {
                     function t() {
@@ -953,7 +953,7 @@
                             bitsBalance: n,
                             loading: e,
                             amazonMarketplaces: t
-                        }), s.createElement(S, {
+                        }), s.createElement(O, {
                             refetchData: this.refetchData,
                             crates: i,
                             loading: e
@@ -966,13 +966,13 @@
                         }), s.createElement(D, null))
                     }, t = c.__decorate([Object(u.a)(_)], t)
                 }(s.Component),
-                B = Object(i.compose)(Object(v.b)("InventoryPage", {
+                P = Object(i.compose)(Object(v.b)("InventoryPage", {
                     autoReportInteractive: !0,
                     destination: f.a.Inventory
                 }), Object(p.a)({
                     location: g.PageviewLocation.Inventory
                 }))(x);
-            var A = Object(a.connect)(function(e) {
+            var B = Object(a.connect)(function(e) {
                 return {
                     isLoggedIn: Object(l.f)(e)
                 }
@@ -982,9 +982,9 @@
                         return Object(o.e)(r.a.InventoryPage)
                     }
                 }, e)
-            })(B);
+            })(P);
             n.d(t, "InventoryPage", function() {
-                return A
+                return B
             })
         },
         cpJf: function(e, t, n) {

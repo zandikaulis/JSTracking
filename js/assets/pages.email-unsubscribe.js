@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [65], {
+    [66], {
         AtgE: function(e, t, i) {
             "use strict";
             i.r(t);
@@ -17,8 +17,8 @@
                 p = i("sL2n"),
                 E = i("Ue10"),
                 f = "verify-success",
-                y = "verify-error",
-                h = function(e) {
+                h = "verify-error",
+                v = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -30,9 +30,9 @@
                                 margin: {
                                     top: 1
                                 },
-                                "data-test-selector": y
+                                "data-test-selector": h
                             }, s.createElement(E.W, {
-                                type: E.Ob.H5,
+                                type: E.Pb.H5,
                                 color: E.O.Error
                             }, Object(c.d)("There was an error when unsubscribing.", "EmailUnsubscribe"))) : t.state.isSuccess ? s.createElement(E.Xa, {
                                 margin: {
@@ -40,16 +40,16 @@
                                 },
                                 "data-test-selector": f
                             }, s.createElement(E.W, {
-                                type: E.Ob.H5,
+                                type: E.Pb.H5,
                                 color: E.O.Alt2
                             }, Object(c.d)("You have successfully unsubscribed.", "EmailUnsubscribe"))) : t.state.isLoading ? s.createElement(E.Xa, {
                                 margin: {
                                     top: 1
                                 }
                             }, s.createElement(E.W, {
-                                type: E.Ob.H5,
+                                type: E.Pb.H5,
                                 bold: !0
-                            }, Object(c.d)("Unsubscribing...", "EmailUnsubscribe"))) : s.createElement(E.yb, {
+                            }, Object(c.d)("Unsubscribing...", "EmailUnsubscribe"))) : s.createElement(E.zb, {
                                 display: E.X.Flex,
                                 flexDirection: E.Aa.Column,
                                 margin: {
@@ -60,7 +60,7 @@
                                     bottom: 1
                                 }
                             }, s.createElement(E.W, {
-                                type: E.Ob.H5,
+                                type: E.Pb.H5,
                                 color: E.O.Alt2
                             }, Object(c.d)("You will unsubscribe from future emails of this type from Twitch.", "EmailUnsubscribe"))), s.createElement(E.Xa, {
                                 flexGrow: 0
@@ -105,7 +105,7 @@
                     return n.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return s.createElement(E.yb, {
+                        return s.createElement(E.zb, {
                             padding: {
                                 x: 3,
                                 top: 3,
@@ -115,19 +115,19 @@
                             flexDirection: E.Aa.Column
                         }, s.createElement(E.W, {
                             className: "title",
-                            type: E.Ob.H2
+                            type: E.Pb.H2
                         }, Object(c.d)("Email Unsubscribe", "EmailUnsubscribe")), this.renderStatus())
                     }, t
                 }(s.Component),
-                v = Object(r.compose)(Object(o.a)(p, {
+                y = Object(r.compose)(Object(o.a)(p, {
                     name: "unsubscribeEmail"
                 }), Object(d.b)("EmailUnsubscribePage", {
                     destination: m.a.EmailUnsubscribe
                 }), Object(l.a)({
                     location: b.PageviewLocation.EmailUnsubscribe
-                }))(h);
+                }))(v);
             i.d(t, "EmailUnsubscribePage", function() {
-                return v
+                return y
             })
         },
         sL2n: function(e, t) {

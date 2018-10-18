@@ -297,7 +297,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(u.yb, {
+                        return a.createElement(u.zb, {
                             className: "reporting-modal__container",
                             background: u.r.Base,
                             padding: {
@@ -1617,7 +1617,7 @@
                         return r ? ((e = r.displayName || r.login) || (e = s), t = r.login, n = r.profileImageURL) : (e = s, t = s, n = null), E.createElement("div", {
                             onClick: this.handleThreadClick,
                             role: "listitem"
-                        }, E.createElement(B.yb, {
+                        }, E.createElement(B.zb, {
                             className: "whispers-list-item",
                             borderBottom: !0,
                             padding: 1,
@@ -1655,7 +1655,7 @@
                             margin: {
                                 right: 1
                             },
-                            textAlign: B.Kb.Right
+                            textAlign: B.Lb.Right
                         }, E.createElement(B.W, {
                             bold: !0
                         }, o > 0 && !this.props.muted ? o : null), this.props.muted && E.createElement(B.Xa, {
@@ -1746,7 +1746,7 @@
                             return E.createElement("div", {
                                 key: "searchResult:" + e.objectID,
                                 onClick: n.handleUserSearchResultClick(e, t)
-                            }, E.createElement(B.yb, {
+                            }, E.createElement(B.zb, {
                                 className: "whispers-list-item",
                                 borderBottom: !0,
                                 padding: 1,
@@ -1882,7 +1882,7 @@
                                 "data-a-target": "whisper-unreads"
                             }, t))
                         }
-                        return E.createElement(B.yb, {
+                        return E.createElement(B.zb, {
                             className: "whispers-threads-box__open-close",
                             position: B.fb.Relative,
                             background: B.r.Alt2,
@@ -1899,7 +1899,7 @@
                         var e, t = this;
                         if (!this.state.open) return null;
                         var n = null;
-                        "" !== this.state.searchText && (n = E.createElement(B.yb, {
+                        "" !== this.state.searchText && (n = E.createElement(B.zb, {
                             key: "otherPeopleDivider",
                             borderBottom: !0,
                             padding: {
@@ -1964,7 +1964,7 @@
                             pixelThreshold: 200
                         })))
                     }, t.prototype.renderHeader = function() {
-                        return this.state.open ? E.createElement(B.yb, {
+                        return this.state.open ? E.createElement(B.zb, {
                             className: "whispers-threads-box__header",
                             "data-a-target": "whispers-threads-box__header",
                             alignItems: B.f.Center,
@@ -1986,7 +1986,7 @@
                         }, E.createElement("div", {
                             id: "whispers-box-header"
                         }, E.createElement(B.W, {
-                            type: B.Ob.Span,
+                            type: B.Pb.Span,
                             bold: !0
                         }, Object(i.d)("Whispers", "WhisperThreadsBox")))), E.createElement(R.a, {
                             ref: this.saveSettingsMenuRef
@@ -2007,7 +2007,7 @@
                             "data-a-target": "whisper-close-button"
                         })) : null
                     }, t.prototype.renderFooter = function() {
-                        return this.state.open ? E.createElement(B.yb, {
+                        return this.state.open ? E.createElement(B.zb, {
                             display: B.X.Flex,
                             flexGrow: 0,
                             flexShrink: 0,
@@ -2223,7 +2223,7 @@
                                 y: .5,
                                 x: 1
                             }
-                        }, t)), E.createElement(B.yb, {
+                        }, t)), E.createElement(B.zb, {
                             borderBottom: !0,
                             margin: {
                                 y: 1,
@@ -2316,7 +2316,7 @@
                                     attachRight: !0,
                                     attachLeft: !0,
                                     attachTop: !0
-                                }, E.createElement(B.yb, {
+                                }, E.createElement(B.zb, {
                                     background: B.r.Alt2,
                                     padding: .5,
                                     elevation: 2
@@ -2324,7 +2324,7 @@
                                     display: B.X.InlineBlock,
                                     margin: .5
                                 }, E.createElement(B.W, {
-                                    type: B.Ob.Span,
+                                    type: B.Pb.Span,
                                     fontSize: B.Ca.Size6,
                                     color: B.O.Alt2
                                 }, Object(i.d)("It looks like this conversation triggered our spam detector. If it is spam, please report it!", "ThreadHeader"))), E.createElement(B.Xa, {
@@ -2349,7 +2349,7 @@
                                     attachRight: !0,
                                     attachLeft: !0,
                                     attachTop: !0
-                                }, E.createElement(B.yb, {
+                                }, E.createElement(B.zb, {
                                     background: B.r.Alt2,
                                     padding: .5,
                                     elevation: 2
@@ -2357,7 +2357,7 @@
                                     display: B.X.InlineBlock,
                                     margin: .5
                                 }, E.createElement(B.W, {
-                                    type: B.Ob.Span,
+                                    type: B.Pb.Span,
                                     fontSize: B.Ca.Size6,
                                     color: B.O.Alt2
                                 }, Object(i.d)("Thank you for helping us fight spam. We've blocked {user} from sending you further whispers. You can undo this from the Whisper Settings Menu.", {
@@ -2537,7 +2537,7 @@
                             onBlock: this.props.onBlock,
                             onUnblock: this.props.onUnblock,
                             showReportUserModal: this.props.showReportUserModal,
-                            hasTemporaryWhisperAccess: !!this.interlocutor.self && this.interlocutor.self.whisperPermissions.receive === ae.O.TEMPORARY
+                            hasTemporaryWhisperAccess: !!this.interlocutor.self && this.interlocutor.self.whisperPermissions.receive === ae.P.TEMPORARY
                         }))));
                         var k = this.interlocutor.displayBadges.map(function(e) {
                             return E.createElement(B.Pa, {
@@ -2595,10 +2595,10 @@
                             ellipsis: !0
                         }, k, E.createElement(B.W, {
                             className: r,
-                            type: B.Ob.Span,
+                            type: B.Pb.Span,
                             bold: !0,
                             ellipsis: !0
-                        }, this.interlocutor.displayName ? this.interlocutor.displayName : Pe.displayName), l), E.createElement(B.yb, {
+                        }, this.interlocutor.displayName ? this.interlocutor.displayName : Pe.displayName), l), E.createElement(B.zb, {
                             className: "thread-header__activity",
                             color: this.props.isHighlighted ? B.O.Overlay : B.O.Base,
                             padding: {
@@ -2713,7 +2713,7 @@
                         var e = this.props.message;
                         switch (e.type) {
                             case Me.Timestamp:
-                                return E.createElement(B.yb, {
+                                return E.createElement(B.zb, {
                                     className: "thread-message__timestamp",
                                     color: B.O.Alt2,
                                     fontSize: B.Ca.Size7
@@ -2744,13 +2744,13 @@
                                         padding: {
                                             y: 1
                                         },
-                                        textAlign: B.Kb.Center
+                                        textAlign: B.Lb.Center
                                     }, E.createElement("span", {
                                         title: l
                                     }, "" + r))
                                 }(e));
                             case Me.Warning:
-                                return E.createElement(B.yb, {
+                                return E.createElement(B.zb, {
                                     className: "thread-message__warning",
                                     color: B.O.Alt2
                                 }, E.createElement(B.Xa, {
@@ -2760,7 +2760,7 @@
                                     }
                                 }, Object(i.d)("Please don't share passwords or personal information.", "whispers")));
                             case Me.InactiveUserNotice:
-                                return E.createElement(B.yb, {
+                                return E.createElement(B.zb, {
                                     className: "thread-message__inactive-user",
                                     color: B.O.Alt2
                                 }, E.createElement(B.Xa, {
@@ -2796,7 +2796,7 @@
                                                 left: 1
                                             }
                                         }, E.createElement(B.W, {
-                                            type: B.Ob.Span,
+                                            type: B.Pb.Span,
                                             className: "thread-message__message--edited",
                                             title: o,
                                             color: B.O.Alt2
@@ -2804,7 +2804,7 @@
                                     }
                                     var s = e.from && e.from.chatColor || "",
                                         l = e.from && e.from.displayName || E.createElement(B.W, {
-                                            type: B.Ob.Span,
+                                            type: B.Pb.Span,
                                             italic: !0
                                         }, Object(i.d)("Unknown", "ThreadMessage")),
                                         d = t ? s : "";
@@ -2826,12 +2826,12 @@
                                     }, n))
                                 }(e));
                             case Me.NewMessages:
-                                return E.createElement(B.yb, {
+                                return E.createElement(B.zb, {
                                     className: "thread-message__new-messages",
                                     color: B.O.OverlayAlt,
                                     fontSize: B.Ca.Size7
                                 }, E.createElement(B.Xa, {
-                                    textAlign: B.Kb.Center,
+                                    textAlign: B.Lb.Center,
                                     padding: {
                                         y: .5
                                     }
@@ -2846,7 +2846,7 @@
                                             x: 1
                                         }
                                     }, E.createElement(B.W, {
-                                        type: B.Ob.Span,
+                                        type: B.Pb.Span,
                                         color: B.O.Alt2
                                     }, e.content))
                                 }(e));
@@ -3169,13 +3169,13 @@
                         var t, n = this.props.activityData.loading ? void 0 : this.props.activityData.user,
                             r = n && n.availability,
                             i = n && n.activity;
-                        return t = !this.state.strangerWarningDismissed && this.interlocutor && this.interlocutor.id && this.interlocutor.self && this.interlocutor.self.whisperPermissions.receive === ae.O.NOT_PERMITTED ? E.createElement(ce, {
+                        return t = !this.state.strangerWarningDismissed && this.interlocutor && this.interlocutor.id && this.interlocutor.self && this.interlocutor.self.whisperPermissions.receive === ae.P.NOT_PERMITTED ? E.createElement(ce, {
                             onStrangerWarningConfirmation: this.onStrangerWarningConfirmation,
                             targetDisplayName: this.interlocutor.displayName,
                             targetUserID: this.interlocutor.id
                         }) : this.renderMessageArea(), E.createElement(I.a, {
                             onClickOut: this.onClickOut
-                        }, E.createElement(B.yb, {
+                        }, E.createElement(B.zb, {
                             className: e,
                             display: B.X.Flex,
                             flexShrink: 0,
@@ -3351,7 +3351,7 @@
                     }
                 }), Object(ne.a)([{
                     topic: function(e) {
-                        return Object(O.I)(e.currentUserID)
+                        return Object(O.J)(e.currentUserID)
                     },
                     mapMessageTypesToProps: (Ze = {}, Ze[D.PubsubMessageType.WhisperReceived] = "whisperReceived", Ze[D.PubsubMessageType.WhisperSent] = "whisperSent", Ze),
                     skipMessage: function(e, t) {
@@ -3671,7 +3671,7 @@
                             types: [D.PubsubMessageType.WhisperDeleted, D.PubsubMessageType.WhisperEdited, D.PubsubMessageType.WhisperSent, D.PubsubMessageType.WhisperAllThreadsUpdate, D.PubsubMessageType.WhisperReceived, D.PubsubMessageType.WhisperThreadUpdate],
                             variables: a.__assign({}, e.data.variables),
                             skip: !e.data.currentUser || void 0 === e.data.currentUser.id,
-                            topic: Object(O.I)(e.data.currentUser && e.data.currentUser.id || ""),
+                            topic: Object(O.J)(e.data.currentUser && e.data.currentUser.id || ""),
                             mutator: function(t, n) {
                                 if (!n.currentUser || !n.currentUser.whisperThreads) return n;
                                 if (Ke(t) || Ye(t)) {
@@ -4173,7 +4173,7 @@
                 o = n("/7QA"),
                 s = n("GnwI"),
                 l = n("Ue10"),
-                d = (n("GOKC"), i.createElement(l.yb, {
+                d = (n("GOKC"), i.createElement(l.zb, {
                     alignItems: l.f.Center,
                     background: l.r.Overlay,
                     borderRadius: l.x.Small,
@@ -4183,7 +4183,7 @@
                     display: l.X.InlineFlex,
                     justifyContent: l.Wa.Center,
                     position: l.fb.Absolute,
-                    zIndex: l.bc.Above
+                    zIndex: l.cc.Above
                 }, i.createElement(l.ob, {
                     asset: l.pb.Lock,
                     height: 10,
@@ -4218,9 +4218,9 @@
                     }
                     return i.createElement("div", {
                         className: "emote-button"
-                    }, i.createElement(l.Rb, {
+                    }, i.createElement(l.Sb, {
                         label: r || Object(o.d)("Emote", "EmoteButton"),
-                        direction: l.Tb.Bottom
+                        direction: l.Ub.Bottom
                     }, i.createElement(l.Pa, {
                         display: l.X.Flex,
                         alignItems: l.f.Center,
@@ -4684,7 +4684,7 @@
                             linkTo: this.state.hasPopupExperiment ? void 0 : this.props.url,
                             onClick: this.handleClick,
                             purchase: this.props.tierPrice
-                        }, Object(u.cc)(this.props), {
+                        }, Object(u.dc)(this.props), {
                             targetBlank: void 0 === this.props.targetBlank || this.props.targetBlank
                         }), t)
                     }, t
@@ -6895,7 +6895,7 @@
                         }, a.createElement(u.Ea, {
                             id: "reporting-modal__select",
                             label: Object(o.d)("Select Reason (required)", "ReportUserModal")
-                        }, a.createElement(u.ub, {
+                        }, a.createElement(u.vb, {
                             id: "reporting-modal__select",
                             "data-test-selector": "reporting-modal.select",
                             disabled: this.props.data.loading || !!this.props.data.error,
@@ -6984,13 +6984,13 @@
                         },
                         "data-a-target": "reporting-channel-name"
                     }, a.createElement(u.W, {
-                        type: u.Ob.H4
-                    }, this.props.title), a.createElement(u.yb, {
+                        type: u.Pb.H4
+                    }, this.props.title), a.createElement(u.zb, {
                         color: u.O.Alt2,
                         margin: {
                             top: 1
                         }
-                    }, this.headerMessage)), a.createElement("form", null, a.createElement(u.yb, {
+                    }, this.headerMessage)), a.createElement("form", null, a.createElement(u.zb, {
                         borderTop: !0,
                         borderBottom: !0,
                         margin: {
@@ -7005,10 +7005,10 @@
                     }), a.createElement(u.Ea, {
                         id: "reporting__text-area",
                         label: Object(o.d)("Description (required)", "ReportUser")
-                    }, a.createElement(u.Lb, {
+                    }, a.createElement(u.Mb, {
                         defaultValue: this.props.defaultDescription,
                         onChange: this.handleTextAreaChange
-                    }))), a.createElement(u.yb, {
+                    }))), a.createElement(u.zb, {
                         display: u.X.Flex,
                         justifyContent: u.Wa.Center
                     }, a.createElement(u.z, {
@@ -7043,7 +7043,7 @@
                         "reporting__error-container": this.props.submitStatus !== g.Success,
                         "reporting__success-container": this.props.submitStatus === g.Success
                     });
-                    return a.createElement(u.yb, {
+                    return a.createElement(u.zb, {
                         className: t,
                         fullWidth: this.props.submitStatus !== g.Success,
                         "data-test-selector": "reporting.error",
@@ -7639,7 +7639,7 @@
                                         self: {
                                             __typename: "UserSelfConnection",
                                             whisperPermissions: {
-                                                receive: l.O.NOT_PERMITTED,
+                                                receive: l.P.NOT_PERMITTED,
                                                 __typename: "WhisperPermissions"
                                             }
                                         }
@@ -7649,7 +7649,7 @@
                                         self: {
                                             __typename: "UserSelfConnection",
                                             whisperPermissions: {
-                                                receive: l.O.PERMITTED,
+                                                receive: l.P.PERMITTED,
                                                 __typename: "WhisperPermissions"
                                             }
                                         }
@@ -8690,12 +8690,12 @@
                         }, t.renderCardContent = function(e, t) {
                             var n, i;
                             return t ? (n = r.createElement(y.W, {
-                                type: y.Ob.Span,
+                                type: y.Pb.Span,
                                 fontSize: y.Ca.Size5,
                                 "data-test-selector": E.TITLE,
                                 title: t.title
                             }, t.title), i = r.createElement(y.W, {
-                                type: y.Ob.Span,
+                                type: y.Pb.Span,
                                 fontSize: y.Ca.Size6,
                                 color: y.O.Alt2,
                                 "data-test-selector": E.DESCRIPTION
@@ -8705,12 +8705,12 @@
                                 width: 180
                             }), i = r.createElement(y.eb, {
                                 width: 120
-                            })), r.createElement(y.yb, {
+                            })), r.createElement(y.zb, {
                                 background: y.r.Base,
                                 display: y.X.Flex,
                                 flexWrap: y.Ba.NoWrap,
                                 padding: .5
-                            }, r.createElement(y.yb, {
+                            }, r.createElement(y.zb, {
                                 className: "chat-card__preview-img",
                                 background: y.r.Alt2,
                                 display: y.X.Flex,
@@ -8755,7 +8755,7 @@
                                 description: this.props.data.description
                             }))
                         } else e = this.renderCardContent();
-                        return r.createElement(y.yb, {
+                        return r.createElement(y.zb, {
                             elevation: 1,
                             margin: {
                                 top: .5
@@ -9189,7 +9189,7 @@
                                 }
                             }, a.createElement(k.W, {
                                 className: "block-user__success",
-                                type: k.Ob.Span
+                                type: k.Pb.Span
                             }, Object(l.d)("{user} blocked", {
                                 user: t.props.targetUser.displayName
                             }, "ReportWizardBlockActions"))), a.createElement(k.U, {
@@ -9218,7 +9218,7 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.userBlocked ? this.renderUnblock() : this.renderBlock(),
                             t = Object(v.a)(this.props.targetUser.login, this.props.targetUser.displayName, !0);
-                        return a.createElement(k.yb, {
+                        return a.createElement(k.zb, {
                             borderTop: !0,
                             padding: {
                                 y: 1
@@ -9228,12 +9228,12 @@
                             }
                         }, a.createElement(k.Xa, null, Object(l.d)("Would you like to block {user}?", {
                             user: t
-                        }, "ReportWizardBlockActions")), a.createElement(k.yb, {
+                        }, "ReportWizardBlockActions")), a.createElement(k.zb, {
                             color: k.O.Alt2,
                             margin: {
                                 y: 1
                             }
-                        }, a.createElement(k.Xb, {
+                        }, a.createElement(k.Yb, {
                             baseFontSize: k.Ca.Size6
                         }, a.createElement("p", null, Object(l.d)("Blocking {user} will:", {
                             user: t
@@ -9917,7 +9917,7 @@
                                     }, a.createElement(k.Ea, {
                                         label: t.getTitle(),
                                         labelOptional: t.required ? "" : Object(l.d)("Optional", "ReportModalWizardCard")
-                                    }, a.createElement(k.Lb, {
+                                    }, a.createElement(k.Mb, {
                                         onChange: e.onChange,
                                         rows: t.rows || 3,
                                         name: t.value,
@@ -10520,7 +10520,7 @@
                                 onUnblock: this.props.onUnblock,
                                 userBlocked: this.props.userBlocked
                             }) : null,
-                            t = this.state.error ? a.createElement(k.yb, {
+                            t = this.state.error ? a.createElement(k.zb, {
                                 fullWidth: !0,
                                 margin: {
                                     bottom: 1
@@ -10529,7 +10529,7 @@
                                 className: "reporting__error-container"
                             }, this.state.error) : null,
                             n = this.state.prevCards.length || this.state.currentCard.type === E.Info ? null : this.renderPrimer();
-                        return a.createElement(k.yb, {
+                        return a.createElement(k.zb, {
                             className: "reporting-wizard",
                             display: k.X.Flex,
                             margin: {
@@ -10916,7 +10916,7 @@
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(u.yb, {
+                    return l.createElement(u.zb, {
                         background: u.r.Base,
                         padding: {
                             x: 3,
@@ -11256,9 +11256,9 @@
                             return n.state.imageLoaded ? null : a.createElement(s.Pa, {
                                 display: s.X.InlineBlock
                             }, a.createElement(s.W, {
-                                type: s.Ob.Span,
+                                type: s.Pb.Span,
                                 className: "chat-image__placeholder",
-                                align: s.Yb.Top
+                                align: s.Zb.Top
                             }, a.createElement(s.eb, {
                                 height: 28,
                                 width: 28
@@ -11270,8 +11270,8 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e;
-                        return e = this.state.isHovering && this.state.imageLoaded ? a.createElement(s.Rb, {
-                            direction: this.props.tooltipDirection || s.Tb.Top,
+                        return e = this.state.isHovering && this.state.imageLoaded ? a.createElement(s.Sb, {
+                            direction: this.props.tooltipDirection || s.Ub.Top,
                             label: this.props.alt,
                             display: s.X.Inline,
                             offsetY: "0.9rem",
@@ -11279,7 +11279,7 @@
                         }, this.renderPlaceholder(), this.renderImage(), this.props.cheerText) : a.createElement("span", {
                             "data-a-target": "emote-name"
                         }, this.renderPlaceholder(), this.renderImage(), this.props.cheerText), this.props.cheerText ? a.createElement(s.W, {
-                            type: s.Ob.Span,
+                            type: s.Pb.Span,
                             noWrap: !0
                         }, e) : e
                     }, t
@@ -11423,23 +11423,23 @@
                         }, Object(s.d)("Block", "BlockModal"))
                     }, n.prototype.renderMessage = function(e, t) {
                         var n = Object(c.a)(e, t, !0);
-                        return i.createElement(i.Fragment, null, i.createElement(p.yb, {
+                        return i.createElement(i.Fragment, null, i.createElement(p.zb, {
                             borderBottom: !0,
                             padding: {
                                 bottom: 2
                             },
-                            textAlign: p.Kb.Center
+                            textAlign: p.Lb.Center
                         }, i.createElement(p.W, {
                             bold: !0,
-                            type: p.Ob.H4
+                            type: p.Pb.H4
                         }, Object(s.d)("Block {displayName}?", {
                             displayName: n
-                        }, "BlockModal"))), i.createElement(p.yb, {
+                        }, "BlockModal"))), i.createElement(p.zb, {
                             color: p.O.Alt2,
                             padding: {
                                 top: 2
                             }
-                        }, i.createElement(p.Xb, {
+                        }, i.createElement(p.Yb, {
                             baseFontSize: p.Ca.Size6
                         }, i.createElement("p", null, Object(s.d)("Blocking {displayName} will:", {
                             displayName: n
@@ -11638,7 +11638,7 @@
                             tabIndex: 0
                         }, a.createElement("span", null, Object(x.d)("All", "EmotePicker"))))
                     }
-                    return a.createElement(l.yb, {
+                    return a.createElement(l.zb, {
                         background: l.r.Base,
                         borderTop: !0,
                         className: "emote-picker__tabs-container"
@@ -11787,7 +11787,7 @@
                         }, this.renderTabContent(), a.createElement(l.Xa, {
                             className: "emote-picker__controls-container",
                             position: l.fb.Relative
-                        }, a.createElement(l.yb, {
+                        }, a.createElement(l.zb, {
                             padding: 1,
                             borderTop: !0
                         }, a.createElement(l.Ra, {
@@ -11973,7 +11973,7 @@
                             show: !0
                         }, a.createElement(l.Xa, {
                             className: "emote-picker"
-                        }, a.createElement(l.yb, {
+                        }, a.createElement(l.zb, {
                             padding: {
                                 x: 1,
                                 top: 1
@@ -12326,7 +12326,7 @@
                             return Object(b.d)(m.a, {
                                 component: "CheckoutModal",
                                 loader: function() {
-                                    return Promise.all([n.e(0), n.e(190)]).then(n.bind(null, "KJv/"))
+                                    return Promise.all([n.e(0), n.e(191)]).then(n.bind(null, "KJv/"))
                                 },
                                 componentProps: t
                             })
@@ -12659,7 +12659,7 @@
                             },
                             "data-test-selector": "autocomplete-balloon-no-matches"
                         }, o.createElement(p.W, {
-                            type: p.Ob.Span,
+                            type: p.Pb.Span,
                             color: p.O.Alt2
                         }, this.messages.noMatches)) : this.renderMatches(), o.createElement(p.Xa, {
                             position: p.fb.Relative
@@ -12855,7 +12855,7 @@
                             containerElement: this.props.containerElement
                         }), this.props.componentType === r.Input ? o.createElement(p.Ra, i.__assign({}, e, {
                             type: e.type || p.Ta.Text
-                        })) : o.createElement(p.Lb, i.__assign({}, e)), this.props.children)
+                        })) : o.createElement(p.Mb, i.__assign({}, e)), this.props.children)
                     }, t.prototype.getValue = function() {
                         return this.state.value
                     }, t.prototype.setValue = function(e) {
@@ -12912,7 +12912,7 @@
                                 className: "emote-autocomplete-provider__image",
                                 srcSet: e.srcSet
                             })), o.createElement(p.W, {
-                                type: p.Ob.Span,
+                                type: p.Pb.Span,
                                 key: "emote-text-" + e.id,
                                 ellipsis: !0
                             }, e.token)]

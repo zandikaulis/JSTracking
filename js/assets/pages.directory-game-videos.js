@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [128], {
+    [129], {
         "0T/G": function(e, t) {},
         "86FS": function(e, t, n) {
             "use strict";
@@ -12,8 +12,8 @@
                 l = n("GFmA"),
                 c = n("0INk"),
                 u = n("yWUM"),
-                p = n("vRsq"),
-                m = n("2xye"),
+                m = n("vRsq"),
+                p = n("2xye"),
                 g = n("GnwI"),
                 h = n("4HIT"),
                 v = function(e) {
@@ -31,7 +31,7 @@
                                         pathname: "/videos/" + t.props.video.id,
                                         search: s.stringify(n),
                                         state: {
-                                            content: m.PageviewContent.PreviewCardGameBalloonGame,
+                                            content: p.PageviewContent.PreviewCardGameBalloonGame,
                                             medium: t.props.tracking.medium
                                         }
                                     }
@@ -61,7 +61,7 @@
                             onClick: this.onClickHandler,
                             title: this.props.video.title,
                             linkTo: {
-                                pathname: Object(p.i)(void 0, this.props.video.id),
+                                pathname: Object(m.i)(void 0, this.props.video.id),
                                 state: this.getLinkState(),
                                 search: this.generateSearchString()
                             },
@@ -185,7 +185,7 @@
             ! function(e) {
                 e.Button = "filter-dropdown-button", e.FilterItemAll = "filter-item-all", e.FilterItemPastPremiere = "filter-item-past-premiere", e.FilterItemArchive = "filter-item-archive", e.FilterItemHighlight = "filter-item-highlight", e.FilterItemUpload = "filter-item-upload", e.SortNewest = "sort-option-newest", e.SortPopular = "sort-option-popular", e.SortSelector = "sort-selector"
             }(i || (i = {}));
-            var p = function(e) {
+            var m = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getBroadcastTypeLabel = function(e) {
@@ -319,7 +319,7 @@
                     }, t.prototype.renderSortSelector = function() {
                         if (this.props.hideSortSelector) return null;
                         var e = this.props.selectedSort && Object(c.b)(this.props.selectedSort) || c.a.Newest,
-                            t = r.createElement(u.ub, {
+                            t = r.createElement(u.vb, {
                                 "data-a-target": "video-sort-select",
                                 "data-test-selector": i.SortSelector,
                                 name: "sort",
@@ -342,14 +342,60 @@
                         }, t)
                     }, t
                 }(r.Component),
-                m = n("daWW");
+                p = n("daWW");
             n.d(t, "a", function() {
-                return p
+                return m
             }), n.d(t, "b", function() {
-                return m.a
+                return p.a
             }), n.d(t, !1, function() {
                 return c.a
             })
+        },
+        HrG3: function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return s
+            });
+            var i = n("q1tI"),
+                a = n("/7QA"),
+                r = n("Ue10"),
+                o = (n("RFKy"), "view-all-button-selector");
+
+            function s(e) {
+                var t = i.createElement(r.Xa, {
+                    padding: 1,
+                    fullHeight: !0,
+                    flexDirection: r.Aa.Column,
+                    justifyContent: r.Wa.Center,
+                    display: r.X.Flex
+                }, i.createElement(r.W, {
+                    color: r.O.Link,
+                    fontSize: r.Ca.Size4,
+                    noWrap: !0
+                }, Object(a.d)("View All", "Following--ViewAllButton")), i.createElement(r.W, {
+                    color: r.O.Alt2,
+                    fontSize: r.Ca.Size4,
+                    noWrap: !0
+                }, e.subHeader));
+                return e.linkTo && (t = i.createElement(r.U, {
+                    to: e.linkTo,
+                    className: "following__view-all__link",
+                    hoverUnderlineNone: !0
+                }, t)), i.createElement("div", {
+                    className: "following__view-all",
+                    onClick: e.onClickViewAll,
+                    "data-test-selector": o
+                }, i.createElement(r.Xa, {
+                    margin: {
+                        bottom: 5
+                    }
+                }, i.createElement(r.o, {
+                    ratio: e.aspectRatio
+                }, i.createElement(r.zb, {
+                    background: r.r.Alt2,
+                    fullHeight: !0
+                }, t))))
+            }
         },
         L5dg: function(e, t, n) {
             "use strict";
@@ -372,6 +418,7 @@
                 return i.a
             })
         },
+        RFKy: function(e, t, n) {},
         RXle: function(e, t, n) {
             "use strict";
             var i = n("86FS");
@@ -442,8 +489,8 @@
                 l = n("GFmA"),
                 c = n("8/mp"),
                 u = n("yR8l"),
-                p = n("V+GM"),
-                m = n("geRD"),
+                m = n("V+GM"),
+                p = n("geRD"),
                 g = n("vRsq"),
                 h = n("NvVO"),
                 v = n("2xye"),
@@ -453,9 +500,9 @@
                 b = n("EJax"),
                 w = n("XKWF"),
                 S = n("rShu"),
-                N = n("HStj"),
+                C = n("HStj"),
                 _ = n("Ue10"),
-                C = n("tBbK"),
+                N = n("tBbK"),
                 P = (n("TB8s"), w.a.Popular),
                 T = function(e) {
                     function t(t) {
@@ -496,7 +543,7 @@
                         }));
                         var r = o.createElement(k.a, {
                                 buttonSize: _.D.Large,
-                                contentType: N.a.Videos,
+                                contentType: C.a.Videos,
                                 directoryType: this.state.directoryType,
                                 directoryName: t
                             }),
@@ -534,7 +581,7 @@
                         })))
                     }, t.prototype.enablePagination = function() {
                         return this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.game && this.props.data.game.videos && !!this.props.data.game.videos.pageInfo.hasNextPage
-                    }, t = r.__decorate([Object(u.a)(C, {
+                    }, t = r.__decorate([Object(u.a)(N, {
                         options: function(e) {
                             return {
                                 fetchPolicy: "network-only",
@@ -551,7 +598,7 @@
                             return r.__assign({}, e, {
                                 loadMore: function() {
                                     return e.data.fetchMore({
-                                        query: C,
+                                        query: N,
                                         variables: r.__assign({}, e.data.variables, {
                                             followedCursor: e.data.game && e.data.game.videos.edges.length > 0 ? e.data.game.videos.edges[e.data.game.videos.edges.length - 1].cursor : void 0
                                         }),
@@ -560,7 +607,7 @@
                                             return {
                                                 game: r.__assign({}, n.game, {
                                                     videos: r.__assign({}, n.game.videos, {
-                                                        edges: Object(m.c)(e.game.videos.edges, n.game.videos.edges)
+                                                        edges: Object(p.c)(e.game.videos.edges, n.game.videos.edges)
                                                     })
                                                 })
                                             }
@@ -571,7 +618,7 @@
                         }
                     }), Object(y.b)("DirectoryGameVideosPage", {
                         destination: h.a.DirectoryGameVideos
-                    }), Object(p.a)({
+                    }), Object(m.a)({
                         location: v.PageviewLocation.Directory,
                         properties: function(e) {
                             return {
@@ -838,19 +885,19 @@
                         });
                         t = a.createElement(a.Fragment, null, s)
                     }
-                    return a.createElement(c.Ub, {
-                        gutterSize: c.Wb.Small,
-                        childWidth: e.videoCardSize || c.Vb.Large,
+                    return a.createElement(c.Vb, {
+                        gutterSize: c.Xb.Small,
+                        childWidth: e.videoCardSize || c.Wb.Large,
                         placeholderItems: 20
                     }, t, n)
                 },
-                p = Object(s.b)("VideoTower", {
+                m = Object(s.b)("VideoTower", {
                     autoReportInteractive: !0
                 })(u);
             n.d(t, !1, function() {
                 return u
             }), n.d(t, "a", function() {
-                return p
+                return m
             })
         },
         he03: function(e, t, n) {
@@ -1235,8 +1282,8 @@
                 l = n("q1tI"),
                 c = n("wIs1"),
                 u = n("/7QA"),
-                p = n("vSJR"),
-                m = n("8/mp"),
+                m = n("vSJR"),
+                p = n("8/mp"),
                 g = n("HSqT"),
                 h = n("2xye"),
                 v = n("GnwI"),
@@ -1255,9 +1302,9 @@
                         }, t.renderDropdownContent = function() {
                             return l.createElement(l.Fragment, null, l.createElement("div", {
                                 className: "language-select-menu__balloon"
-                            }, l.createElement(m.b, null, l.createElement(f.Xa, {
+                            }, l.createElement(p.b, null, l.createElement(f.Xa, {
                                 padding: .5
-                            }, Object(g.b)().map(t.renderLanguageOption)))), l.createElement(f.yb, {
+                            }, Object(g.b)().map(t.renderLanguageOption)))), l.createElement(f.zb, {
                                 background: f.r.Alt,
                                 borderTop: !0,
                                 className: "language-select-menu__footer"
@@ -1310,7 +1357,7 @@
                     }, t.prototype.render = function() {
                         return l.createElement(f.Xa, {
                             className: "language-select-menu"
-                        }, l.createElement(p.a, {
+                        }, l.createElement(m.a, {
                             "data-a-target": "language-filter-dropdown",
                             buttonLabel: this.renderButtonContent()
                         }, this.renderDropdownContent()))

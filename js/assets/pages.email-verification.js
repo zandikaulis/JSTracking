@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [64], {
+    [65], {
         VkGE: function(e, t, r) {
             "use strict";
             r.r(t);
@@ -30,7 +30,7 @@
                             padding: 3
                         }, n.createElement(d.W, {
                             className: "title",
-                            type: d.Ob.H2
+                            type: d.Pb.H2
                         }, Object(o.d)("Email Verification", "EmailVerification")), this.renderVerificationStatus())
                     }, t.prototype.renderVerificationStatus = function() {
                         if (this.state.isLoading) return n.createElement(d.Xa, {
@@ -39,7 +39,7 @@
                             },
                             "data-test-selector": "verify-loading"
                         }, n.createElement(d.W, {
-                            type: d.Ob.Strong
+                            type: d.Pb.Strong
                         }, Object(o.d)("Verifying Email...", "EmailVerification")));
                         if (this.state.isEmailVerified) return n.createElement(d.Xa, {
                             margin: {
@@ -57,7 +57,7 @@
                             "data-test-selector": "verify-error"
                         }, n.createElement(d.W, {
                             color: d.O.Error,
-                            type: d.Ob.Strong
+                            type: d.Pb.Strong
                         }, e))
                     }, t.prototype.maybeGetLocalizedErrorMessage = function(e) {
                         return e ? "Not Found" === e ? Object(o.d)("Not Found", "EmailVerification") : e : Object(o.d)("Unknown Error", "EmailVerification")

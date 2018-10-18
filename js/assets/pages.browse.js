@@ -740,11 +740,11 @@
                     return e === O.a.Popular || e === O.a.PopularEncodedLanguage || e === O.a.PopularTag
                 },
                 P = n("G1iw"),
-                A = h.a.wrap(function() {
+                L = h.a.wrap(function() {
                     return Promise.resolve().then(n.bind(null, "SKDF"))
                 }, "BrowseGamesPage"),
-                L = h.a.wrap(function() {
-                    return n.e(127).then(n.bind(null, "JTXL"))
+                A = h.a.wrap(function() {
+                    return n.e(128).then(n.bind(null, "JTXL"))
                 }, "DirectoryPopularPage"),
                 R = function(e) {
                     function t() {
@@ -818,38 +818,21 @@
                                 x: 3
                             }
                         }, this.renderSideNavInfoSection(), u.createElement(g.a, null, u.createElement(p.a, {
-                            path: O.a.Communities,
-                            render: this.redirectToMainBrowse
-                        }), u.createElement(p.a, {
                             path: O.a.CreativeCommunities,
                             render: this.redirectToTagCreative
                         }), u.createElement(p.a, {
-                            path: O.a.PopularPlaystation,
-                            render: this.redirectToMainBrowse
-                        }), u.createElement(p.a, {
-                            path: O.a.PopularXbox,
-                            render: this.redirectToMainBrowse
-                        }), u.createElement(p.a, {
                             path: O.a.PopularTag,
-                            component: L
+                            component: A
                         }), u.createElement(p.a, {
                             path: O.a.Popular,
-                            component: L
-                        }), u.createElement(p.a, {
-                            path: O.a.PopularEncodedLanguage,
-                            component: this.redirectToMainBrowse
+                            component: A
                         }), u.createElement(p.a, {
                             path: O.a.DirectoryTag,
-                            component: A
+                            component: L
                         }), u.createElement(p.a, {
                             path: O.a.DirectoryCategory,
-                            component: A
+                            component: L
                         }))))
-                    }, t.prototype.redirectToMainBrowse = function() {
-                        return u.createElement(m.a, {
-                            path: "/",
-                            to: O.a.Games
-                        })
                     }, t.prototype.redirectToTagCreative = function() {
                         return u.createElement(m.a, {
                             path: "/",
@@ -1172,7 +1155,7 @@
                         return {
                             variables: {
                                 gameName: e.gameName,
-                                tagType: m.M.TOP,
+                                tagType: m.N.TOP,
                                 limit: 50
                             }
                         }
@@ -1690,10 +1673,10 @@
                         padding: {
                             y: 1
                         },
-                        zIndex: s.bc.Above
-                    }, r.createElement(s.yb, {
+                        zIndex: s.cc.Above
+                    }, r.createElement(s.zb, {
                         color: s.O.Alt2,
-                        textAlign: s.Kb.Center,
+                        textAlign: s.Lb.Center,
                         flexShrink: 1
                     }, r.createElement(s.ob, {
                         asset: s.pb.DeadGlitch,
@@ -1703,12 +1686,12 @@
                         margin: {
                             top: 1
                         },
-                        textAlign: s.Kb.Center
+                        textAlign: s.Lb.Center
                     }, r.createElement(s.W, {
-                        type: s.Ob.H4,
+                        type: s.Pb.H4,
                         "data-test-selector": "search-error-message"
                     }, Object(o.d)("Search is not available at this time", "DropdownSearchError"))), r.createElement(s.W, {
-                        type: s.Ob.P
+                        type: s.Pb.P
                     }, Object(o.d)("Please try again later", "DropdownSearchError")))
                 },
                 l = n("8Ad5"),
@@ -1767,13 +1750,13 @@
                             });
                         return this.props.inline ? r.createElement(i.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(s.yb, {
+                        }, r.createElement(s.zb, {
                             background: this.state.isInputFocused || this.state.isOpen ? s.r.Base : void 0,
                             borderRadius: s.x.Large,
                             padding: .5,
                             position: s.fb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, n, e && r.createElement(s.yb, {
+                        }, n, e && r.createElement(s.zb, {
                             attachLeft: !0,
                             background: s.r.Base,
                             borderRadius: s.x.Large,
@@ -1783,7 +1766,7 @@
                                 y: 1
                             },
                             position: s.fb.Absolute,
-                            zIndex: s.bc.Above,
+                            zIndex: s.cc.Above,
                             elevation: 3
                         }, r.createElement("div", {
                             tabIndex: 0,
@@ -2030,10 +2013,10 @@
                 x = n("rShu"),
                 F = n("x/sq"),
                 P = n("yI6f"),
-                A = n("T2RZ"),
-                L = n("Ue10"),
+                L = n("T2RZ"),
+                A = n("Ue10"),
                 R = n("0egc"),
-                j = Object(A.a)(l.PageviewMedium.Browse, P.b.Game, P.c.BrowseCategories)(N.a),
+                j = Object(L.a)(l.PageviewMedium.Browse, P.b.Game, P.c.BrowseCategories)(N.a),
                 B = "directory-first-item",
                 G = "directory-container";
 
@@ -2095,7 +2078,7 @@
                             onClickRemoveLastTag: this.removeLastTag,
                             tagFilters: this.props.tagFilters
                         });
-                        if (this.props.data.loading) return r.createElement(L.Za, {
+                        if (this.props.data.loading) return r.createElement(A.Za, {
                             fillContent: !0
                         });
                         if (!this.props.data.directoriesWithTags) return r.createElement(v.a, {
@@ -2127,12 +2110,12 @@
                                         style: {
                                             order: a
                                         }
-                                    }, r.createElement(L.Xa, {
+                                    }, r.createElement(A.Xa, {
                                         margin: {
                                             bottom: 2
                                         },
                                         "data-target": "directory-page__card-container",
-                                        position: L.fb.Relative
+                                        position: A.fb.Relative
                                     }, r.createElement(j, {
                                         linkTo: {
                                             pathname: Object(b.c)(i.name),
@@ -2165,13 +2148,13 @@
                                 }
                                 return null
                             });
-                        return r.createElement(L.Xa, null, r.createElement(I.b, {
+                        return r.createElement(A.Xa, null, r.createElement(I.b, {
                             addPaddingWhenPlayerIsPersisting: !0
                         }), r.createElement("div", {
                             "data-target": G
-                        }, r.createElement(L.Ub, {
-                            gutterSize: L.Wb.Small,
-                            childWidth: L.Vb.Small,
+                        }, r.createElement(A.Vb, {
+                            gutterSize: A.Xb.Small,
+                            childWidth: A.Wb.Small,
                             placeholderItems: 20
                         }, r.createElement(C.a, {
                             key: -1,
@@ -2862,7 +2845,7 @@
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     return i.createElement(s.Xa, null, i.createElement(s.W, {
-                        type: s.Ob.H3
+                        type: s.Pb.H3
                     }, this.getErrorMessage()), i.createElement(s.W, {
                         color: s.O.Alt2,
                         fontSize: s.Ca.Size5
@@ -2964,7 +2947,7 @@
                                 margin: {
                                     left: 1
                                 },
-                                textAlign: T.Kb.Left
+                                textAlign: T.Lb.Left
                             }, i.createElement(T.W, {
                                 color: T.O.Alt2,
                                 fontSize: T.Ca.Size6
@@ -3006,7 +2989,7 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.trackImpression()
                     }, t.prototype.render = function() {
-                        return i.createElement(T.yb, {
+                        return i.createElement(T.zb, {
                             background: T.r.AccentAlt2,
                             display: T.X.Flex,
                             flexDirection: T.Aa.Column,
@@ -3016,7 +2999,7 @@
                             },
                             margin: 1
                         }, this.renderImage(), i.createElement(T.Xa, {
-                            textAlign: T.Kb.Center
+                            textAlign: T.Lb.Center
                         }, this.renderText(), i.createElement(T.z, {
                             onClick: this.signup,
                             size: T.D.Large
@@ -3050,7 +3033,7 @@
                         }, i.createElement(T.Xa, {
                             className: "upsell-center__avatar",
                             position: T.fb.Absolute,
-                            zIndex: T.bc.Above
+                            zIndex: T.cc.Above
                         }, i.createElement(T.q, {
                             src: this.props.data.user.profileImageURL,
                             alt: Object(c.d)("{displayName}'s Profile Image", {
@@ -3234,11 +3217,11 @@
                         position: o.fb.Absolute,
                         attachTop: !0,
                         attachRight: !0
-                    }, Object(o.cc)(e)), r.createElement(o.Rb, {
-                        direction: o.Tb.Top,
-                        align: o.Sb.Right,
+                    }, Object(o.dc)(e)), r.createElement(o.Sb, {
+                        direction: o.Ub.Top,
+                        align: o.Tb.Right,
                         label: Object(i.d)("Offers in-game Drops", "DropsBadge")
-                    }, r.createElement(o.yb, {
+                    }, r.createElement(o.zb, {
                         className: "drops-badge__drops-icon",
                         position: o.fb.Relative,
                         padding: {
@@ -3249,7 +3232,7 @@
                         },
                         overflow: o.ab.Hidden,
                         color: o.O.Overlay,
-                        zIndex: o.bc.Default
+                        zIndex: o.cc.Default
                     }, r.createElement(o.U, {
                         type: o.V.Inherit,
                         hoverColorInherit: !0,
@@ -3302,7 +3285,7 @@
                     ellipsis: !0
                 }, r.createElement(o.W, {
                     className: "tw-box-art-card__title",
-                    type: o.Ob.H3,
+                    type: o.Pb.H3,
                     fontSize: o.Ca.Size5,
                     lineHeight: o.Ya.Body,
                     ellipsis: !0
@@ -3329,7 +3312,7 @@
                     tabIndex: e.tabIndex
                 }, t)), r.createElement("div", a.__assign({
                     className: "tw-box-art-card"
-                }, Object(o.cc)(e)), r.createElement(o.G, {
+                }, Object(o.dc)(e)), r.createElement(o.G, {
                     key: e.title
                 }, t), e.tagListProps && 0 !== e.tagListProps.tags.length && r.createElement(o.Xa, {
                     margin: {
@@ -3593,7 +3576,7 @@
 
             function s(e) {
                 return a.createElement(o.W, {
-                    type: o.Ob.Strong
+                    type: o.Pb.Strong
                 }, e)
             }
 
@@ -3725,7 +3708,7 @@
                         onClick: this.handleInsideDropdownClick
                     }, e)), i.createElement(o.a, {
                         onClickOut: this.handleOnClickOut
-                    }, i.createElement(c.yb, r.__assign({
+                    }, i.createElement(c.zb, r.__assign({
                         background: this.state.isOpen ? c.r.Base : void 0,
                         borderRadius: c.x.Large,
                         className: "inline-dropdown",
@@ -3740,7 +3723,7 @@
                         onClick: this.handleButtonClick,
                         size: c.D.Large,
                         type: c.F.Hollow
-                    }, this.props.buttonLabel)), i.createElement(c.yb, {
+                    }, this.props.buttonLabel)), i.createElement(c.zb, {
                         attachLeft: !0,
                         background: c.r.Base,
                         borderRadius: c.x.Large,
@@ -3752,7 +3735,7 @@
                             y: 1
                         },
                         position: c.fb.Absolute,
-                        zIndex: c.bc.Above
+                        zIndex: c.cc.Above
                     }, e)))
                 }, t.prototype.toggleDropdown = function(e) {
                     void 0 === e && (e = !this.state.isOpen), this.setState({

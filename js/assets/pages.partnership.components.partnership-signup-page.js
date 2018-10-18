@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [163], {
+    [164], {
         "0ly3": function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
@@ -19,7 +19,7 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        var e = a.createElement(i.ub, {
+                        var e = a.createElement(i.vb, {
                             onChange: this.onChange,
                             disabled: this.props.disabled,
                             defaultValue: this.props.defaultLanguage
@@ -1053,7 +1053,7 @@
                             alt: this.props.alt,
                             src: this.props.src
                         })), o.createElement(h.Xa, {
-                            textAlign: h.Kb.Center
+                            textAlign: h.Lb.Center
                         }, o.createElement(h.Xa, {
                             margin: {
                                 bottom: 2
@@ -1061,7 +1061,7 @@
                         }, o.createElement(h.W, {
                             bold: !0,
                             fontSize: h.Ca.Size3,
-                            type: h.Ob.H3
+                            type: h.Pb.H3
                         }, this.props.title)), o.createElement(h.W, {
                             fontSize: h.Ca.Size5,
                             color: h.O.Alt2
@@ -1117,7 +1117,7 @@
                                 "x:strong": function(e) {
                                     return o.createElement(h.W, {
                                         bold: !0,
-                                        type: h.Ob.Span
+                                        type: h.Pb.Span
                                     }, e)
                                 }
                             }, "SubmittedPage"),
@@ -1245,7 +1245,7 @@
                         var e = this.props,
                             t = e.borderTop,
                             r = e.margin;
-                        return o.createElement(h.yb, {
+                        return o.createElement(h.zb, {
                             background: this.props.background || h.r.Base,
                             borderRadius: this.props.borderRadius || h.x.Medium,
                             borderBottom: !0,
@@ -1318,9 +1318,9 @@
                 }, t
             }(o.Component);
             ! function(e) {
-                e[e.CanApplyToPartner = 0] = "CanApplyToPartner", e[e.CompletePathToAffiliate = 1] = "CompletePathToAffiliate", e[e.Error = 2] = "Error", e[e.StartStreaming = 3] = "StartStreaming", e[e.Loading = 4] = "Loading"
+                e[e.CanApplyToPartner = 0] = "CanApplyToPartner", e[e.CompletePathToAffiliate = 1] = "CompletePathToAffiliate", e[e.CompletePathToPartner = 2] = "CompletePathToPartner", e[e.Error = 3] = "Error", e[e.StartStreaming = 4] = "StartStreaming", e[e.Loading = 5] = "Loading"
             }(L || (L = {}));
-            var G, R = 4,
+            var R, G = 4,
                 B = 0,
                 x = 5,
                 U = function(e) {
@@ -1334,7 +1334,7 @@
                             t.retryQuery(B)
                         }, t.handleCountdownTimer = function() {
                             var e = t.state.countdown;
-                            t.state.retryCount >= R ? t.stopCountdownTimer() : e <= 0 ? t.retryQuery() : t.setState(function(e) {
+                            t.state.retryCount >= G ? t.stopCountdownTimer() : e <= 0 ? t.retryQuery() : t.setState(function(e) {
                                 return {
                                     countdown: e.countdown - 1
                                 }
@@ -1355,15 +1355,16 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.setView()
                     }, t.prototype.render = function() {
-                        var e = Object(c.d)("Complete Path to Affiliate Achievement", "PartnerSignupVerifyAchievements"),
-                            t = this.props.channelLogin;
+                        var e = Object(c.d)("Complete Path to Partner Achievement", "PartnerSignupVerifyAchievements"),
+                            t = Object(c.d)("Go to your Achievements Page", "PartnerSignupVerifyAchievements"),
+                            r = this.props.channelLogin;
                         switch (this.state.view) {
                             case L.Loading:
                                 return o.createElement(F, null, o.createElement(h.Za, {
                                     fillContent: !0
                                 }));
                             case L.Error:
-                                var r = this.state.retryCount >= R ? Object(c.d)("There was an error retrieving your achievement data. Please try again later.", "PartnerSignupVerifyAchievements") : Object(c.d)("There was an error retrieving your achievement data. Retrying in ... {number} second(s)", {
+                                var n = this.state.retryCount >= G ? Object(c.d)("There was an error retrieving your achievement data. Please try again later.", "PartnerSignupVerifyAchievements") : Object(c.d)("There was an error retrieving your achievement data. Retrying in ... {number} second(s)", {
                                     number: Math.max(this.state.countdown, 0)
                                 }, "PartnerSignupVerifyAchievements");
                                 return o.createElement(o.Fragment, null, o.createElement(F, {
@@ -1385,7 +1386,7 @@
                                 }, o.createElement(h.Na, {
                                     closeButtonAriaLabel: Object(c.d)("Dismiss", "PartnerSignupVerifyAchievements"),
                                     closeButtonOnClick: this.handleCloseButtonOnClick,
-                                    description: r,
+                                    description: n,
                                     title: Object(c.d)("Error", "PartnerSignupVerifyAchievements"),
                                     type: h.Oa.Error
                                 })));
@@ -1395,21 +1396,35 @@
                                     criteria: Object(c.d)("Start Streaming", "PartnerSignupVerifyAchievements"),
                                     instruction: Object(c.d)("Please stream at least once before applying.", "PartnerSignupVerifyAchievements"),
                                     message: Object(c.d)("Find out more about the most common tools for broadcasting", "PartnerSignupVerifyAchievements"),
-                                    to: "/" + t + "/dashboard/broadcast"
+                                    to: "/" + r + "/dashboard/broadcast"
                                 });
                             case L.CompletePathToAffiliate:
                                 return o.createElement(D, {
-                                    criteria: e,
+                                    criteria: Object(c.d)("Complete Path to Affiliate Achievement", "PartnerSignupVerifyAchievements"),
                                     instruction: Object(c.d)("Please complete the <x:strong>Path to Affiliate</x:strong> Achievement before applying.", {
                                         "x:strong": function(e) {
                                             return o.createElement(h.W, {
                                                 bold: !0,
-                                                type: h.Ob.Span
+                                                type: h.Pb.Span
                                             }, e)
                                         }
                                     }, "PartnerSignupVerifyAchievements"),
-                                    message: Object(c.d)("Go to your Achievements Page", "PartnerSignupVerifyAchievements"),
-                                    to: "/" + t + "/dashboard/achievements"
+                                    message: t,
+                                    to: "/" + r + "/dashboard/achievements"
+                                });
+                            case L.CompletePathToPartner:
+                                return o.createElement(D, {
+                                    criteria: e,
+                                    instruction: Object(c.d)("Please complete the <x:strong>Path to Partner</x:strong> Achievement before applying.", {
+                                        "x:strong": function(e) {
+                                            return o.createElement(h.W, {
+                                                bold: !0,
+                                                type: h.Pb.Span
+                                            }, e)
+                                        }
+                                    }, "PartnerSignupVerifyAchievements"),
+                                    message: t,
+                                    to: "/" + r + "/dashboard/achievements"
                                 });
                             case L.CanApplyToPartner:
                                 return o.createElement(o.Fragment, null, o.createElement(F, null, o.createElement(N, {
@@ -1419,57 +1434,59 @@
                                     onChecklistComplete: this.props.onChecklistComplete
                                 }))
                         }
-                    }, t.prototype.getQuests = function() {
+                    }, t.prototype.getViewFromQuests = function() {
                         return a.__awaiter(this, void 0, Promise, function() {
                             var e, t, r;
                             return a.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return n.trys.push([0, 2, , 3]), [4, Object(k.a)(this.props.userID)];
+                                        e = !1, t = !1, r = !1, n.label = 1;
                                     case 1:
-                                        return e = n.sent(), t = !1, r = !1, e.forEach(function(e) {
-                                            var n = e.is_complete,
-                                                a = e.key,
-                                                o = e.progress;
-                                            switch (a) {
+                                        return n.trys.push([1, 3, , 4]), [4, Object(k.a)(this.props.userID)];
+                                    case 2:
+                                        return n.sent().forEach(function(n) {
+                                            var a = n.is_complete,
+                                                o = n.key,
+                                                i = n.progress;
+                                            switch (o) {
                                                 case w.b.IT_BEGINS:
-                                                    for (var i = 0, c = o; i < c.length; i++) {
-                                                        var u = c[i];
-                                                        if (u.metric === w.a.HAS_FIRST_STREAM) {
-                                                            r = Boolean(u.progress);
+                                                    for (var c = 0, u = i; c < u.length; c++) {
+                                                        var s = u[c];
+                                                        if (s.metric === w.a.HAS_FIRST_STREAM) {
+                                                            r = Boolean(s.progress);
                                                             break
                                                         }
                                                     }
                                                     break;
                                                 case w.b.PATH_TO_AFFILIATE:
-                                                    t = n
+                                                    t = a;
+                                                    break;
+                                                case w.b.PATH_TO_PARTNER:
+                                                    e = a
                                             }
-                                        }), [2, {
-                                            hasCompletedPathToAffiliate: t,
-                                            hasStreamed: r
-                                        }];
-                                    case 2:
-                                        return n.sent(), [2, null];
+                                        }), [3, 4];
                                     case 3:
-                                        return [2]
+                                        return n.sent(), [2, L.Error];
+                                    case 4:
+                                        return e ? [2, L.CanApplyToPartner] : t ? [2, L.CompletePathToPartner] : r ? [2, L.CompletePathToAffiliate] : [2, L.StartStreaming]
                                 }
                             })
                         })
                     }, t.prototype.setView = function() {
                         return a.__awaiter(this, void 0, void 0, function() {
-                            var e, t, r, n, o = this;
-                            return a.__generator(this, function(a) {
-                                switch (a.label) {
+                            var e, t = this;
+                            return a.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return [4, this.getQuests()];
+                                        return [4, this.getViewFromQuests()];
                                     case 1:
-                                        return (e = a.sent()) ? (t = e.hasCompletedPathToAffiliate, r = e.hasStreamed, n = void 0, n = r ? t ? L.CanApplyToPartner : L.CompletePathToAffiliate : L.StartStreaming, this.setState({
-                                            view: n
-                                        })) : this.setState({
+                                        return (e = r.sent()) === L.Error ? this.setState({
                                             countdown: x,
-                                            view: L.Error
+                                            view: e
                                         }, function() {
-                                            o.countdownIntervalID = setInterval(o.handleCountdownTimer, 1e3)
+                                            t.countdownIntervalID = setInterval(t.handleCountdownTimer, 1e3)
+                                        }) : this.setState({
+                                            view: e
                                         }), [2]
                                 }
                             })
@@ -1503,7 +1520,7 @@
                 }(o.Component);
             ! function(e) {
                 e.Twitter = "twitter", e.YouTube = "youtube"
-            }(G || (G = {}));
+            }(R || (R = {}));
             var W, H, X = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -1529,12 +1546,12 @@
                             }
                         }, i && o.createElement(o.Fragment, null, a && o.createElement(N, {
                             criteria: Object(c.d)("YouTube", "PartnerSignupVerifySocialMediaConnection"),
-                            "data-test-selector": G.YouTube,
+                            "data-test-selector": R.YouTube,
                             value: a,
                             type: y.Complete
                         }), n && o.createElement(N, {
                             criteria: Object(c.d)("Twitter", "PartnerSignupVerifySocialMediaConnection"),
-                            "data-test-selector": G.Twitter,
+                            "data-test-selector": R.Twitter,
                             value: n,
                             type: y.Complete
                         })), !i && o.createElement(o.Fragment, null, o.createElement(h.Xa, {
@@ -1549,8 +1566,8 @@
                         }))
                     }, t
                 }(o.Component),
-                K = function() {
-                    return o.createElement(h.yb, {
+                Y = function() {
+                    return o.createElement(h.zb, {
                         background: h.r.Base,
                         padding: 2,
                         margin: {
@@ -1558,7 +1575,7 @@
                         },
                         border: !0,
                         borderRadius: h.x.Medium
-                    }, o.createElement(h.Xb, null, o.createElement("h3", null, Object(c.d)("Partnership Guidelines", "PartnershipSignupGuidelines")), o.createElement("ul", null, o.createElement("li", null, Object(c.d)("Complete the <x:path-to-partner>Path to Partner Achievement</x:path-to-partner> or demonstrate large, engaged viewership/following on other services. Streamers who complete the Path to Partner achievements in your Achievements Dashboard will unlock a button to apply for Partnership, and receive priority for their application to be reviewed. Please note that these Achievements list the minimum criteria we look for in potential Partners, and completing them does not guarantee Partnership.", {
+                    }, o.createElement(h.Yb, null, o.createElement("h3", null, Object(c.d)("Partnership Guidelines", "PartnershipSignupGuidelines")), o.createElement("ul", null, o.createElement("li", null, Object(c.d)("Complete the <x:path-to-partner>Path to Partner Achievement</x:path-to-partner> or demonstrate large, engaged viewership/following on other services. Streamers who complete the Path to Partner achievements in your Achievements Dashboard will unlock a button to apply for Partnership, and receive priority for their application to be reviewed. Please note that these Achievements list the minimum criteria we look for in potential Partners, and completing them does not guarantee Partnership.", {
                         "x:path-to-partner": function(e) {
                             return o.createElement(h.U, {
                                 targetBlank: !0,
@@ -1620,7 +1637,7 @@
             function(e) {
                 e.Description = "partnership-signup-main-layout-description", e.LeftColumn = "partnership-signup-main-layout-left-column", e.RightColumn = "partnership-signup-main-layout-right-column"
             }(H || (H = {}));
-            var Y, q, Z = function(e) {
+            var K, q, Z = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1643,14 +1660,14 @@
                             }
                         }, o.createElement(h.W, {
                             bold: !0,
-                            type: h.Ob.H1
+                            type: h.Pb.H1
                         }, Object(c.d)("Partner Application", "PartnershipSignupApplicationTitle"))), e && o.createElement(h.Xa, {
                             "data-test-selector": H.Description,
                             margin: {
                                 bottom: 2
                             }
                         }, o.createElement(h.W, {
-                            type: h.Ob.P,
+                            type: h.Pb.P,
                             fontSize: h.Ca.Size5
                         }, e))), o.createElement(h.Xa, {
                             display: h.X.Flex,
@@ -1668,13 +1685,13 @@
                             "data-test-selector": H.RightColumn,
                             flexOrder: r ? 2 : 1,
                             fullWidth: !r
-                        }, o.createElement(K, null)))))
+                        }, o.createElement(Y, null)))))
                     }, t
                 }(o.Component),
                 z = r("nJta");
             ! function(e) {
                 e.RadioNo = "radio-no", e.RadioYes = "radio-yes"
-            }(Y || (Y = {})),
+            }(K || (K = {})),
             function(e) {
                 e.No = "No", e.Yes = "Yes"
             }(q || (q = {}));
@@ -1702,13 +1719,13 @@
                                 }
                             }, o.createElement(h.lb, {
                                 checked: e,
-                                "data-test-selector": Y.RadioYes,
+                                "data-test-selector": K.RadioYes,
                                 label: Object(c.d)("Yes", "PartnerSignupVerifySocialMedia"),
                                 onChange: t.handleRadioChange,
                                 value: q.Yes
                             })), o.createElement(h.lb, {
                                 checked: !e,
-                                "data-test-selector": Y.RadioNo,
+                                "data-test-selector": K.RadioNo,
                                 label: Object(c.d)("No", "PartnerSignupVerifySocialMedia"),
                                 onChange: t.handleRadioChange,
                                 value: q.No
@@ -1774,7 +1791,7 @@
                     return o.createElement(Z, {
                         description: Object(c.d)("The Twitch Partnership Program is for those who are committed to streaming. Twitch Partners are creators who stream a variety of content, from games, music, talk shows, art, to just about anything else you can imagine. If you love sharing what you do with a live audience and have built up a sizeable, engaged community on Twitch or other services, we want to hear from you!", "PartnershipSignupLogin"),
                         flexDirection: h.Aa.Column
-                    }, o.createElement(h.Xb, null, o.createElement("hr", null)), o.createElement(h.Xa, {
+                    }, o.createElement(h.Yb, null, o.createElement("hr", null)), o.createElement(h.Xa, {
                         alignItems: h.f.Center,
                         display: h.X.Flex,
                         fullWidth: !0,
@@ -1928,7 +1945,7 @@
                         }, o.createElement(h.Ea, {
                             id: ue.Category,
                             label: Object(c.d)("Category", "PartnershipSignupForm")
-                        }, o.createElement(h.ub, {
+                        }, o.createElement(h.vb, {
                             "data-test-selector": oe.Category,
                             id: ue.Category,
                             onChange: this.registerHandleFieldChange(se.Category)
@@ -1943,7 +1960,7 @@
                         }, o.createElement(h.Ea, {
                             id: ue.Country,
                             label: Object(c.d)("Applicant Country", "PartnershipSignupForm")
-                        }, o.createElement(h.ub, {
+                        }, o.createElement(h.vb, {
                             "data-test-selector": oe.Country,
                             id: ue.Country,
                             value: this.state.fields.country,
@@ -1989,7 +2006,7 @@
                             "data-test-selector": oe.Description,
                             label: Object(c.d)("Details", "PartnershipSignupForm"),
                             hint: Object(c.d)("Tell us about your stream", "PartnershipSignupForm")
-                        }, o.createElement(h.Lb, {
+                        }, o.createElement(h.Mb, {
                             id: ue.Description,
                             onChange: this.registerHandleFieldChange(se.Description)
                         }))), o.createElement(h.z, {

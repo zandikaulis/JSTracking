@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [153], {
+    [154], {
         "2bi+": function(e, t, n) {
             "use strict";
             n("DLhE");
@@ -366,7 +366,7 @@
                         return o.createElement(d.Xa, {
                             className: this.props.classNames,
                             position: d.fb.Relative
-                        }, o.createElement(d.Lb, {
+                        }, o.createElement(d.Mb, {
                             error: this.state.showCoolDownState,
                             maxLength: 512,
                             noResize: !0,
@@ -1161,7 +1161,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(s.yb, {
+                        return o.createElement(s.zb, {
                             className: "twp-modal",
                             background: s.r.Base,
                             color: s.O.Alt,
@@ -1231,8 +1231,8 @@
                             asset: s.pb.Conversations,
                             type: s.qb.Inherit
                         })), o.createElement(s.W, {
-                            align: s.Yb.Middle,
-                            type: s.Ob.Span
+                            align: s.Zb.Middle,
+                            type: s.Pb.Span
                         }, e))) : this.props.context === a.a ? o.createElement(s.A, {
                             ariaLabel: e,
                             type: s.C.Hollow,
@@ -1240,7 +1240,7 @@
                             onClick: this.onReplyClickHandler,
                             "data-test-selector": "moderation-reply-button",
                             "data-a-selector": "qa-vod-chat-reply-button"
-                        }) : o.createElement(s.yb, {
+                        }) : o.createElement(s.zb, {
                             color: s.O.Link,
                             display: s.X.Inline,
                             margin: {
@@ -1250,7 +1250,7 @@
                             onClick: this.onReplyClickHandler,
                             "data-test-selector": "reply-reply-button"
                         }, o.createElement(s.W, {
-                            type: s.Ob.Span
+                            type: s.Pb.Span
                         }, e)))
                     }, t
                 }(o.Component))
@@ -3488,7 +3488,7 @@
                         margin: {
                             y: 2
                         }
-                    }, u.createElement("ul", null, u.createElement("li", null, u.createElement("span", null, Object(p.d)("All messages from this viewer will be deleted from your channel and videos", "chomments.moderation.deletePreviousMessages"))), u.createElement("li", null, u.createElement("span", null, Object(p.d)("This viewer will not be able to chat on your channel, videos, or Pulse posts", "chomments.moderation.disallowFutureMessages"))))), u.createElement(O.yb, {
+                    }, u.createElement("ul", null, u.createElement("li", null, u.createElement("span", null, Object(p.d)("All messages from this viewer will be deleted from your channel and videos", "chomments.moderation.deletePreviousMessages"))), u.createElement("li", null, u.createElement("span", null, Object(p.d)("This viewer will not be able to chat on your channel, videos, or Pulse posts", "chomments.moderation.disallowFutureMessages"))))), u.createElement(O.zb, {
                         background: O.r.Alt2,
                         display: O.X.Flex,
                         flexWrap: O.Ba.NoWrap,
@@ -3506,7 +3506,7 @@
                             width: "4rem",
                             height: "4rem"
                         }
-                    })), u.createElement("div", null, u.createElement(O.yb, {
+                    })), u.createElement("div", null, u.createElement(O.zb, {
                         margin: {
                             top: .5
                         },
@@ -3720,14 +3720,14 @@
                         alt: e.author.displayName,
                         src: e.author.logo.toString(),
                         size: 40
-                    })), u.createElement(O.yb, {
+                    })), u.createElement(O.zb, {
                         fontSize: O.Ca.Size5,
                         color: O.O.Alt,
                         className: d.f + "-message"
                     }, u.createElement(d.h, {
                         allowActionTextColors: !1,
                         message: e.comment.message
-                    }), u.createElement(O.yb, {
+                    }), u.createElement(O.zb, {
                         margin: {
                             top: .5
                         },
@@ -3752,7 +3752,7 @@
                                 title: Object(p.d)("Delete this message?", "DashboardModerationReactionBar"),
                                 onConfirmClick: t.props.onDeleteConfirmClick,
                                 onDenyClick: t.props.onCloseDeleteModal,
-                                children: u.createElement(O.yb, {
+                                children: u.createElement(O.zb, {
                                     background: O.r.Alt2,
                                     padding: 2,
                                     margin: {
@@ -3963,7 +3963,7 @@
                             };
                         e.comment.state === d.c ? t.onUnpublishClick = this.onUnpublishClickHandler : t.onPublishClick = this.onPublishClickHandler;
                         var n = null;
-                        return e.comment.moreReplies && (n = u.createElement(O.yb, {
+                        return e.comment.moreReplies && (n = u.createElement(O.zb, {
                             fontSize: O.Ca.Size6,
                             padding: {
                                 left: 5,
@@ -3971,7 +3971,7 @@
                             }
                         }, u.createElement(d.k, {
                             onClick: this.onLoadMoreRepliesClickHandler
-                        }))), u.createElement(O.yb, r.__assign({
+                        }))), u.createElement(O.zb, r.__assign({
                             border: !0,
                             className: d.g + " qa-mod-comment",
                             fontSize: O.Ca.Size5
@@ -4020,7 +4020,7 @@
                             context: e
                         }), u.createElement(O.W, {
                             color: O.O.Base,
-                            type: O.Ob.H5
+                            type: O.Pb.H5
                         }, e.video.title))), u.createElement(O.P, {
                             cols: {
                                 default: 12,
@@ -4066,8 +4066,8 @@
                     });
                     return u.createElement("div", null, u.createElement("ul", null, t))
                 })),
-                W = n("u5aL"),
-                z = n("BZOq"),
+                z = n("u5aL"),
+                W = n("BZOq"),
                 q = n("z3cX"),
                 G = (n("6yEf"), function(e) {
                     function t() {
@@ -4131,7 +4131,7 @@
                                 y: .5,
                                 x: 1
                             }
-                        }, Object(p.d)("No results found.", "chomments.moderation.noResults")))] : Object(z.a)(this.props.searchHits).map(function(t, n) {
+                        }, Object(p.d)("No results found.", "chomments.moderation.noResults")))] : Object(W.a)(this.props.searchHits).map(function(t, n) {
                             var r = {
                                 id: t.id,
                                 lengthSeconds: t.length,
@@ -4149,7 +4149,7 @@
                             }))
                         }), u.createElement(O.Xa, {
                             position: O.fb.Relative
-                        }, u.createElement(W.a, {
+                        }, u.createElement(z.a, {
                             onClickOut: this.closeResults
                         }, u.createElement(G, {
                             disabled: this.props.disabled,
@@ -4256,12 +4256,12 @@
                             n = e.data;
                         if ("" !== e.errorMessage || !this.props.data.loading && ! function(e) {
                                 return !e.data.loading && (e.data.user.id === e.data.currentUser.id || e.data.user.self.isModerator || e.data.currentUser.roles.isStaff || e.data.currentUser.roles.isGlobalMod || e.data.currentUser.roles.isSiteAdmin)
-                            }(this.props)) return u.createElement(O.yb, {
+                            }(this.props)) return u.createElement(O.zb, {
                             className: d.f + "__permissions",
                             color: O.O.Alt2,
-                            textAlign: O.Kb.Center
+                            textAlign: O.Lb.Center
                         }, u.createElement(O.W, {
-                            type: O.Ob.H3,
+                            type: O.Pb.H3,
                             italic: !0,
                             "data-test-selector": "unauthorized-test-selector"
                         }, this.props.errorMessage || Object(p.d)("You do not have permission to access this dashboard.", "ModerationPageComponent")));
@@ -4277,13 +4277,13 @@
                         var i = null;
                         if (this.props.comments.length < 1 && !n.loading && !n.error && this.props.hasFetchedComments) {
                             var a = Object(p.d)("You currently have no messages. Add a message to one of your videos to encourage conversation in your community.", "ModerationDashboard");
-                            "" !== this.props.videoFilter && (a = Object(p.d)("You currently have no messages on this video. Add a message to this video to encourage conversation in your community.", "ModerationDashboard")), i = u.createElement(O.yb, {
+                            "" !== this.props.videoFilter && (a = Object(p.d)("You currently have no messages on this video. Add a message to this video to encourage conversation in your community.", "ModerationDashboard")), i = u.createElement(O.zb, {
                                 className: d.f + "__empty",
                                 color: O.O.Alt2,
-                                textAlign: O.Kb.Center,
+                                textAlign: O.Lb.Center,
                                 key: "modDashboardNoComments"
                             }, u.createElement(O.W, {
-                                type: O.Ob.H3,
+                                type: O.Pb.H3,
                                 italic: !0,
                                 "data-test-selector": "no-comments-test-selector"
                             }, a))
@@ -4316,7 +4316,7 @@
                         }, u.createElement(O.Xa, {
                             padding: 2,
                             fullWidth: !0
-                        }, u.createElement(O.yb, {
+                        }, u.createElement(O.zb, {
                             className: d.f + "__filters",
                             fullWidth: !0,
                             padding: 2,
@@ -5128,13 +5128,13 @@
                     }, t.prototype.render = function() {
                         var e = null;
                         return this.props.message === Object(u.a)().chatReplayFilterError && (e = i.createElement(m.W, {
-                            type: m.Ob.Span
+                            type: m.Pb.Span
                         }, " ", i.createElement(m.W, {
-                            type: m.Ob.Span,
-                            decoration: m.Mb.Underline
+                            type: m.Pb.Span,
+                            decoration: m.Nb.Underline
                         }, i.createElement("a", {
                             onClick: this.props.onMessageClick
-                        }, Object(s.d)("Click here to show all messages.", "CommentError"))))), i.createElement(m.yb, {
+                        }, Object(s.d)("Click here to show all messages.", "CommentError"))))), i.createElement(m.zb, {
                             alignItems: m.f.Center,
                             background: m.r.Base,
                             className: "anim-swoop",
@@ -5148,9 +5148,9 @@
                                 x: 2
                             },
                             position: m.fb.Absolute,
-                            zIndex: m.bc.Above
+                            zIndex: m.cc.Above
                         }, i.createElement(m.W, {
-                            type: m.Ob.Span
+                            type: m.Pb.Span
                         }, this.props.message, e), i.createElement(m.Xa, {
                             alignSelf: m.g.Start
                         }, i.createElement(m.A, {
@@ -5196,7 +5196,7 @@
                             }
                         }, i.createElement(m.Xa, null, Object(h.d)("Show me only messages posted during the live broadcast", "VideoChatSettings")), i.createElement(m.Xa, {
                             flexShrink: 0
-                        }, i.createElement(m.Qb, {
+                        }, i.createElement(m.Rb, {
                             checked: this.props.isReplayFilterOn,
                             "data-test-selector": "reply-mode",
                             onChange: this.onReplayModeChange
@@ -5233,7 +5233,7 @@
                             }
                         }, i.createElement(m.Xa, null, Object(h.d)("Hide timestamps", "VideoChatSettings")), i.createElement(m.Xa, {
                             flexShrink: 0
-                        }, i.createElement(m.Qb, {
+                        }, i.createElement(m.Rb, {
                             "data-test-selector": "timestamp-mode",
                             checked: this.props.hideTimestamps,
                             onChange: this.onTimestampModeChange
@@ -5397,9 +5397,9 @@
                         margin: {
                             right: .5
                         }
-                    }, i.createElement(m.Rb, {
-                        align: m.Sb.Left,
-                        direction: m.Tb.Top,
+                    }, i.createElement(m.Sb, {
+                        align: m.Tb.Left,
+                        direction: m.Ub.Top,
                         label: Object(h.d)("Jump to video", "TimeStamp")
                     }, i.createElement(m.Ua, {
                         onClick: n,
@@ -5428,8 +5428,8 @@
                     }
                     return n
                 },
-                W = n("Addw"),
-                z = "ban-user",
+                z = n("Addw"),
+                W = "ban-user",
                 q = "delete-comment-button",
                 G = "reply-button",
                 Q = "relative-time-title",
@@ -5452,7 +5452,7 @@
                                 padding: {
                                     y: 1
                                 }
-                            }, i.createElement(m.yb, {
+                            }, i.createElement(m.zb, {
                                 display: m.X.Flex,
                                 margin: {
                                     x: 1
@@ -5461,7 +5461,7 @@
                                     bottom: .5
                                 }
                             }, i.createElement(m.W, {
-                                type: m.Ob.Span
+                                type: m.Pb.Span
                             }, Object(h.d)("Are you sure you want to perform this action?", "chomments.moderation.confirmAction"))), i.createElement(m.Xa, {
                                 display: m.X.Flex,
                                 justifyContent: m.Wa.Center,
@@ -5481,12 +5481,12 @@
                                 "data-test-selector": H.c
                             }, Object(h.d)("No", "MessageOptionsMenu"))));
                             var e = [];
-                            t.props.isExpandedLayout || e.push(i.createElement(m.yb, {
+                            t.props.isExpandedLayout || e.push(i.createElement(m.zb, {
                                 key: t.props.context.comment.id,
                                 color: m.O.Alt2,
                                 display: m.X.Flex,
                                 "data-test-selector": Q
-                            }, i.createElement(m.yb, {
+                            }, i.createElement(m.zb, {
                                 margin: {
                                     x: 1
                                 },
@@ -5496,8 +5496,8 @@
                                 fullWidth: !0,
                                 borderBottom: !0
                             }, i.createElement(m.W, {
-                                type: m.Ob.Span
-                            }, Object(h.d)("Posted ", "MessageOptionsMenu"), Object(h.i)(t.props.context.comment.createdAt)))), i.createElement(m.yb, {
+                                type: m.Pb.Span
+                            }, Object(h.d)("Posted ", "MessageOptionsMenu"), Object(h.i)(t.props.context.comment.createdAt)))), i.createElement(m.zb, {
                                 key: t.props.context.comment.id + "2",
                                 display: m.X.Flex,
                                 color: m.O.Link
@@ -5520,7 +5520,7 @@
                                 type: m.Va.Alert,
                                 onClick: t.onDeleteButtonClickHandler,
                                 "data-test-selector": q
-                            }, i.createElement(m.yb, {
+                            }, i.createElement(m.zb, {
                                 margin: {
                                     x: 1
                                 },
@@ -5534,7 +5534,7 @@
                             }, i.createElement(m.Ua, {
                                 type: m.Va.Alert,
                                 onClick: t.onBanUserClickHandler,
-                                "data-test-selector": z
+                                "data-test-selector": W
                             }, i.createElement(m.Xa, {
                                 padding: {
                                     y: .5,
@@ -5560,7 +5560,7 @@
                                 alignItems: m.f.Center,
                                 justifyContent: m.Wa.Start
                             }, Object(h.d)("Copied to clipboard", "MessageOptionsMenu"))));
-                            var o = i.createElement(m.yb, {
+                            var o = i.createElement(m.zb, {
                                 display: m.X.Flex,
                                 fullWidth: !0,
                                 key: t.props.context.comment.id + "-share",
@@ -5583,7 +5583,7 @@
                                 r = P(n, {
                                     tt_medium: "video_chat",
                                     tt_content: "message_share_link",
-                                    t: Object(W.a)(e.contentOffset),
+                                    t: Object(z.a)(e.contentOffset),
                                     comment: e.id
                                 });
                             return Object(V.a)(r.toString()), t.setState({
@@ -5770,7 +5770,7 @@
                             }, i.createElement(m.W, {
                                 color: m.O.Alt2,
                                 fontSize: m.Ca.Size7,
-                                type: m.Ob.Span
+                                type: m.Pb.Span
                             }, " • " + Object(h.i)(e.comment.createdAt))))
                         }, t.makeReply = function(e) {
                             var n = null;
@@ -5837,7 +5837,7 @@
                         }, i.createElement(m.W, {
                             color: m.O.Alt2,
                             fontSize: m.Ca.Size7,
-                            type: m.Ob.Span
+                            type: m.Pb.Span
                         }, " • " + Object(h.i)(this.props.parentMessage.comment.createdAt))))), i.createElement(m.Xa, null, n, i.createElement(m.Xa, {
                             margin: {
                                 y: .5,
@@ -5913,7 +5913,7 @@
                             "data-test-selector": "message-timestamp",
                             display: m.X.Flex,
                             flexShrink: 0,
-                            textAlign: m.Kb.Right
+                            textAlign: m.Lb.Right
                         }, i.createElement(x, {
                             offset: this.props.timeStampOffset,
                             onClick: this.onTimestampClickHandler
@@ -5994,7 +5994,7 @@
                             attachBottom: !0
                         }, i.createElement("button", {
                             onClick: this.syncButtonClick
-                        }, Object(s.d)("Resume auto scroll", "MessageScrollArea")))), i.createElement(m.yb, {
+                        }, Object(s.d)("Resume auto scroll", "MessageScrollArea")))), i.createElement(m.zb, {
                             fullHeight: !0,
                             overflow: m.ab.Hidden,
                             position: m.fb.Relative
@@ -6211,7 +6211,7 @@
                                 videoOwnerLogin: d.owner.login
                             })
                         }
-                        return i.createElement(m.yb, {
+                        return i.createElement(m.zb, {
                             className: o("video-chat", "qa-vod-chat"),
                             display: m.X.Flex,
                             background: m.r.Alt2,
@@ -6230,7 +6230,7 @@
                             flexShrink: 0,
                             justifyContent: m.Wa.Center
                         }, i.createElement(m.W, {
-                            type: m.Ob.Span
+                            type: m.Pb.Span
                         }, Object(s.d)("Chat on Videos", "VideoChatPresentation"))), g, i.createElement(ce, {
                             startSynced: h,
                             isScrollingSynced: this.props.isScrollingSynced,
@@ -6334,7 +6334,7 @@
                 y = n("F6GT"),
                 S = n("x0gr"),
                 _ = c.a.wrap(function() {
-                    return n.e(177).then(n.bind(null, "8MX0"))
+                    return n.e(178).then(n.bind(null, "8MX0"))
                 }, "ChatSettingsComponent"),
                 E = function(e) {
                     function t() {
@@ -6643,8 +6643,8 @@
                         onClick: this.onBadgeClickHandler,
                         target: "_blank",
                         "data-a-target": "chat-badge"
-                    }, c)), this.state.isHovering ? o.createElement(a.Rb, {
-                        align: a.Sb.Left,
+                    }, c)), this.state.isHovering ? o.createElement(a.Sb, {
+                        align: a.Tb.Left,
                         "data-a-target": "chat-badge",
                         display: a.X.Inline,
                         key: n,
@@ -6964,7 +6964,7 @@
                         fullWidth: !0,
                         overflow: s.ab.Hidden
                     }, o.createElement(s.W, {
-                        type: s.Ob.H3,
+                        type: s.Pb.H3,
                         fontSize: s.Ca.Size6,
                         title: e.video.title,
                         ellipsis: !0
@@ -6973,7 +6973,7 @@
                     }, t)))
                 },
                 l = function(e) {
-                    return e ? o.createElement(s.yb, {
+                    return e ? o.createElement(s.zb, {
                         background: s.r.Overlay,
                         attachTop: !0,
                         attachLeft: !0,

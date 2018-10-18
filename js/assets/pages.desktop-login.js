@@ -364,7 +364,7 @@
                         }))
                     }, t
                 }(a.Component),
-                _ = (r("pKR5"), function(e) {
+                P = (r("pKR5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onEnter = function() {
@@ -396,10 +396,10 @@
                         w.unbind("enter")
                     }, t.prototype.render = function() {
                         return a.createElement(F.Xa, null, a.createElement(F.W, {
-                            type: F.Ob.Span,
+                            type: F.Pb.Span,
                             bold: !0
                         }, Object(s.d)("We need to make sure you're not a robot!", "CaptchaForm")), " ", a.createElement(F.W, {
-                            type: F.Ob.Span
+                            type: F.Pb.Span
                         }, Object(s.d)("Please complete the reCAPTCHA below.", "CaptchaForm")), a.createElement(F.Xa, {
                             margin: 2,
                             display: F.X.Flex,
@@ -419,8 +419,8 @@
                         }, Object(s.d)("Continue", "CaptchaForm")))
                     }, t
                 }(a.PureComponent)),
-                P = r("CojT"),
-                x = r.n(P),
+                _ = r("CojT"),
+                x = r.n(_),
                 D = (r("sC5l"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -450,7 +450,7 @@
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(F.yb, {
+                        }, a.createElement(F.zb, {
                             borderBottom: !0,
                             flexGrow: 1,
                             margin: {
@@ -458,13 +458,13 @@
                             }
                         }), a.createElement(F.W, {
                             color: F.O.Alt2
-                        }, Object(s.d)("or", "FacebookConnectFooter")), a.createElement(F.yb, {
+                        }, Object(s.d)("or", "FacebookConnectFooter")), a.createElement(F.zb, {
                             borderBottom: !0,
                             flexGrow: 1,
                             margin: {
                                 left: .5
                             }
-                        })), a.createElement(F.yb, {
+                        })), a.createElement(F.zb, {
                             color: F.O.Overlay,
                             fontSize: F.Ca.Size6,
                             "data-a-target": "facebook-button-div"
@@ -497,7 +497,7 @@
                 A = r("fvjX"),
                 B = r("ZIMp"),
                 N = (r("QRgD"), function(e) {
-                    return a.createElement(F.yb, {
+                    return a.createElement(F.zb, {
                         className: "facebook-info-card",
                         display: F.X.Flex,
                         flexDirection: F.Aa.Row,
@@ -521,12 +521,12 @@
                             right: 1
                         }
                     }, a.createElement(F.W, {
-                        type: F.Ob.Strong,
+                        type: F.Pb.Strong,
                         color: F.O.Base,
                         fontSize: F.Ca.Size6,
                         ellipsis: !0
                     }, e.facebookName), a.createElement(F.W, {
-                        type: F.Ob.Span,
+                        type: F.Pb.Span,
                         color: F.O.Alt2,
                         fontSize: F.Ca.Size7,
                         ellipsis: !0
@@ -584,7 +584,7 @@
                             },
                             display: F.X.Flex,
                             alignItems: F.f.Center
-                        }, a.createElement(F.yb, {
+                        }, a.createElement(F.zb, {
                             flexGrow: 1
                         }, a.createElement(F.Ha, {
                             id: Object(R.b)(this.props.label),
@@ -625,7 +625,7 @@
                 }(a.Component)),
                 W = function(e) {
                     return e.options.shouldShowLoading ? a.createElement(F.Za, {
-                        size: F.wb.Small
+                        size: F.xb.Small
                     }) : e.options.shouldShowNone ? null : e.options.shouldShowError ? a.createElement(F.ob, {
                         asset: F.pb.NotificationError,
                         type: F.qb.Alert,
@@ -684,7 +684,7 @@
                             onFocus: this.onPasswordInputFocus,
                             value: Object(R.b)(this.props.password),
                             error: this.props.error
-                        }, Object(F.cc)(this.props))), a.createElement(F.yb, {
+                        }, Object(F.dc)(this.props))), a.createElement(F.zb, {
                             color: F.O.OverlayAlt,
                             padding: {
                                 right: 1
@@ -743,7 +743,7 @@
                             error: this.props.error,
                             refDelegate: this.props.refDelegate,
                             autoFocus: !0
-                        }, Object(F.cc)(this.props))))
+                        }, Object(F.dc)(this.props))))
                     }, t.prototype.renderValidIndicator = function() {
                         var e = {
                             shouldShowNone: void 0 === this.props.error,
@@ -814,7 +814,7 @@
                         onBlur: this.onUsernameBlur,
                         autoFocus: this.props.autoFocus,
                         refDelegate: this.props.refDelegate
-                    }, Object(F.cc)(this.props))))
+                    }, Object(F.dc)(this.props))))
                 }, t.prototype.renderValidIndicator = function() {
                     var e = {
                         shouldShowLoading: this.state.isTyping,
@@ -941,7 +941,7 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(F.yb, {
+                        return a.createElement(F.zb, {
                             className: "facebook-connect-form",
                             background: F.r.Base,
                             flexDirection: F.Aa.Column,
@@ -1007,7 +1007,7 @@
                     }, t.prototype.renderFooterLink = function() {
                         return a.createElement(F.Xa, {
                             "data-test-selector": "facebook-signup-form__footer",
-                            textAlign: F.Kb.Center,
+                            textAlign: F.Lb.Center,
                             margin: {
                                 top: 2
                             }
@@ -1044,7 +1044,7 @@
                             "password-indicator--weak": this.props.indicatorStrength === le.Weak,
                             "password-indicator--strong": this.props.indicatorStrength === le.Strong
                         };
-                        return a.createElement(F.yb, {
+                        return a.createElement(F.zb, {
                             className: O(e),
                             display: F.X.Flex,
                             alignItems: F.f.Center
@@ -1219,7 +1219,7 @@
                             value: Object(R.b)(this.props.value),
                             error: this.props.error,
                             refDelegate: this.getInputRef
-                        }, Object(F.cc)(this.props))), a.createElement(F.yb, {
+                        }, Object(F.dc)(this.props))), a.createElement(F.zb, {
                             position: F.fb.Absolute,
                             display: F.X.Flex,
                             alignItems: F.f.Center,
@@ -1292,7 +1292,7 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(F.yb, {
+                        return a.createElement(F.zb, {
                             className: "facebook-signup-form",
                             background: F.r.Base,
                             flexDirection: F.Aa.Column,
@@ -1362,7 +1362,7 @@
                     }, t.prototype.renderFooterLink = function() {
                         return a.createElement(F.Xa, {
                             "data-test-selector": "facebook-signup-form__footer",
-                            textAlign: F.Kb.Center,
+                            textAlign: F.Lb.Center,
                             margin: {
                                 top: 2
                             }
@@ -1412,7 +1412,7 @@
                         return a.createElement("form", {
                             noValidate: !0,
                             onSubmit: this.onSubmit
-                        }, a.createElement(F.yb, {
+                        }, a.createElement(F.zb, {
                             background: F.r.Base,
                             fullWidth: !0,
                             flexDirection: F.Aa.Column,
@@ -1467,7 +1467,7 @@
                 Me = (r("4PHc"), function(e) {
                     if (!e.message) return null;
                     var t = void 0 === e.subMessage ? Object(s.d)("Please try again.", "ServerMessage") : e.subMessage;
-                    return a.createElement(F.yb, {
+                    return a.createElement(F.zb, {
                         className: O({
                             "server-message-success": e.isSuccessMessage,
                             "server-message-alert": !e.isSuccessMessage
@@ -1505,7 +1505,7 @@
                         }
                     }, a.createElement(F.W, {
                         fontSize: F.Ca.Size6,
-                        type: F.Ob.Strong
+                        type: F.Pb.Strong
                     }, e.message), a.createElement(F.Xa, null, a.createElement(F.W, {
                         fontSize: F.Ca.Size6,
                         color: F.O.Alt2
@@ -1627,7 +1627,7 @@
                 }, t.prototype.renderMonthSelect = function() {
                     return a.createElement(F.Xa, {
                         fullWidth: !0
-                    }, a.createElement(F.ub, {
+                    }, a.createElement(F.vb, {
                         value: Object(R.a)(this.props.date && this.props.date.month),
                         onChange: this.handleMonthChange,
                         error: !this.props.isTyping && this.props.dateValidation && this.props.dateValidation.monthInvalid,
@@ -1664,12 +1664,12 @@
                     }, Object(s.d)("December", "BirthdayPicker"))))
                 }, t
             }(a.Component);
-            var _e = Object(C.connect)(function(e) {
+            var Pe = Object(C.connect)(function(e) {
                     return {
                         locale: Object(T.d)(e)
                     }
                 })(Ie),
-                Pe = {
+                _e = {
                     1: 31,
                     2: 28,
                     3: 31,
@@ -1727,7 +1727,7 @@
                         errorMessage: Object(s.d)("Please enter a valid date.", "BirthdayFormGroup"),
                         validationComponent: this.renderValidIndicator(),
                         hint: !1
-                    }, a.createElement(_e, {
+                    }, a.createElement(Pe, {
                         date: this.props.date,
                         onChanged: this.onBirthdayPickerDateChanged,
                         onFocusChanged: this.onBirthdayPickerFocusChanged,
@@ -1849,7 +1849,7 @@
                                             monthInvalid: !1,
                                             yearInvalid: !1
                                         },
-                                        o = Pe[e.toString()];
+                                        o = _e[e.toString()];
                                     2 === e && function(e) {
                                         return e % 4 == 0 && e % 100 != 0 || e % 400 == 0
                                     }(r) && (o = 29);
@@ -1911,7 +1911,7 @@
                         return a.createElement("form", {
                             noValidate: !0,
                             onSubmit: this.onSubmit
-                        }, a.createElement(F.yb, {
+                        }, a.createElement(F.zb, {
                             background: F.r.Base,
                             fullWidth: !0,
                             flexDirection: F.Aa.Column,
@@ -1987,7 +1987,7 @@
                             margin: {
                                 bottom: 2
                             },
-                            textAlign: F.Kb.Center
+                            textAlign: F.Lb.Center
                         }, a.createElement(F.W, {
                             fontSize: F.Ca.Size7,
                             color: F.O.Alt2
@@ -2086,10 +2086,10 @@
                         }, 1e3))
                     }, t.prototype.render = function() {
                         return a.createElement(F.Xa, null, a.createElement(F.W, {
-                            type: F.Ob.Span,
+                            type: F.Pb.Span,
                             bold: !0
                         }, Object(s.d)("Enter the code sent to you by text message or found in the Authy app.", "TwoFactorForm")), " ", a.createElement(F.W, {
-                            type: F.Ob.Span
+                            type: F.Pb.Span
                         }, Object(s.d)("If you've lost your phone, please contact <x:ts>Twitch Support</x:ts>.", {
                             "x:ts": function(e) {
                                 return a.createElement("a", {
@@ -3386,7 +3386,7 @@
                     }, t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportCustomEvent(this.props.loadedLatencyEvent)
                     }, t.prototype.render = function() {
-                        return a.createElement(F.yb, {
+                        return a.createElement(F.zb, {
                             padding: {
                                 x: 2,
                                 y: 3
@@ -3413,13 +3413,13 @@
                             margin: {
                                 top: 2
                             }
-                        }, a.createElement(F.Ab, null, a.createElement(F.zb, {
+                        }, a.createElement(F.Bb, null, a.createElement(F.Ab, {
                             active: this.isLoginFlow(),
                             onClick: this.onLoginTabClicked,
                             "data-a-target": "passport-login-tab"
                         }, a.createElement(F.W, {
                             fontSize: F.Ca.Size5
-                        }, Object(s.d)("Log In", "AuthForm"))), a.createElement(F.zb, {
+                        }, Object(s.d)("Log In", "AuthForm"))), a.createElement(F.Ab, {
                             active: !this.isLoginFlow(),
                             onClick: this.onSignupTabClicked,
                             "data-a-target": "passport-signup-tab"
@@ -3492,7 +3492,7 @@
                                     margin: {
                                         top: 2
                                     }
-                                }, a.createElement(_, {
+                                }, a.createElement(P, {
                                     onCaptchaChanged: this.onCaptchaChanged,
                                     disableContinueButton: this.state.captchaState.type !== H.Passed,
                                     onContinueClicked: this.onAuthSubmit,
@@ -4393,7 +4393,7 @@
                 y = r("Ue10"),
                 S = function(e) {
                     var t = e.customButtonText || Object(s.d)("Try again", "DesktopLoginErrorForm");
-                    return o.createElement(y.yb, {
+                    return o.createElement(y.zb, {
                         background: y.r.Base,
                         fullWidth: !0,
                         flexDirection: y.Aa.Column,
@@ -4465,7 +4465,7 @@
                             errorMessage: this.state.errorMessage,
                             onTryAgain: this.props.onBack,
                             customButtonText: Object(s.d)("Go to log in instead", "DesktopLoginErrorForm")
-                        }) : o.createElement(y.yb, {
+                        }) : o.createElement(y.zb, {
                             background: y.r.Base,
                             color: y.O.Base,
                             fullWidth: !0,
@@ -4496,7 +4496,7 @@
                             t = this.props.data && this.props.data.user && this.props.data.user.profileImageURL,
                             r = e ? o.createElement(y.W, {
                                 fontSize: y.Ca.Size7,
-                                type: y.Ob.Strong
+                                type: y.Pb.Strong
                             }, this.getFormattedDisplayNameHtml()) : o.createElement(y.eb, {
                                 height: 10,
                                 width: 100
@@ -4511,7 +4511,7 @@
                                 height: 40,
                                 width: 40
                             });
-                        return o.createElement(y.yb, {
+                        return o.createElement(y.zb, {
                             margin: 2,
                             padding: .5,
                             border: !0,
@@ -4539,7 +4539,7 @@
                         var e = this.getFormattedDisplayNameString();
                         return e ? o.createElement(y.W, {
                             fontSize: y.Ca.Size4,
-                            type: y.Ob.Strong
+                            type: y.Pb.Strong
                         }, Object(s.d)("Log in as {username} ", {
                             username: e
                         }, "DesktopFastLoginForm")) : o.createElement(y.eb, {
@@ -4630,7 +4630,7 @@
                             fullHeight: !0
                         }, o.createElement(y.P, {
                             cols: 6
-                        }, o.createElement(y.yb, {
+                        }, o.createElement(y.zb, {
                             background: y.r.Base,
                             color: y.O.Base,
                             fullHeight: !0,
@@ -4651,7 +4651,7 @@
                             flexDirection: y.Aa.Column,
                             justifyContent: y.Wa.Center,
                             alignItems: y.f.Center
-                        }, o.createElement(y.yb, {
+                        }, o.createElement(y.zb, {
                             className: "desktop-login-page__container",
                             background: y.r.Base,
                             borderRadius: y.x.Medium,
@@ -4661,7 +4661,7 @@
                             justifyContent: y.Wa.Center
                         }, this.renderContents())))))), o.createElement(y.P, {
                             cols: 6
-                        }, o.createElement(y.yb, {
+                        }, o.createElement(y.zb, {
                             background: y.r.Accent,
                             color: y.O.Overlay,
                             fullHeight: !0
@@ -4727,7 +4727,7 @@
 
             function i(e) {
                 return n.createElement(s.W, {
-                    type: s.Ob.Strong
+                    type: s.Pb.Strong
                 }, e)
             }
 

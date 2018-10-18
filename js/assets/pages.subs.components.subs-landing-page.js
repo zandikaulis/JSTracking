@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [170], {
+    [171], {
         "+Mtq": function(e, t, n) {},
         "3GEC": function(e, t, n) {
             "use strict";
@@ -17,8 +17,6 @@
                     var t;
                     return r.__generator(this, function(n) {
                         return t = {
-                            login: e.login,
-                            user_id: Number(e.userId),
                             channel: e.channel,
                             channel_id: e.channelId,
                             clickthrough_location: e.clickthroughLocation
@@ -1236,7 +1234,7 @@
                             to: "/subs/" + this.props.followedChannel.login,
                             onClick: this.handleClick
                         }, s.createElement(S.Xa, {
-                            textAlign: S.Kb.Center,
+                            textAlign: S.Lb.Center,
                             padding: {
                                 bottom: 1
                             }
@@ -1296,12 +1294,9 @@
                             })), n.length > 0 ? n : s.createElement(S.W, {
                                 key: "followed-channels_empty"
                             }, t.messages.emptyFollows)
-                        }, t.onFollowClick = function(e, n) {
-                            var r = t.props.data.currentUser;
+                        }, t.onFollowClick = function(e, t) {
                             Object(C.a)({
-                                login: r ? r.login : "",
-                                userId: r ? r.id : "",
-                                channel: n,
+                                channel: t,
                                 channelId: e,
                                 clickthroughLocation: "followed"
                             })
@@ -1335,12 +1330,12 @@
                             bold: !0,
                             className: "subs-landing-followed-channels__title",
                             color: S.O.Link,
-                            type: S.Ob.H3
-                        }, this.messages.title)), s.createElement(S.Ub, {
+                            type: S.Pb.H3
+                        }, this.messages.title)), s.createElement(S.Vb, {
                             center: !0,
-                            gutterSize: S.Wb.Small
+                            gutterSize: S.Xb.Small
                         }, this.renderFollowedChannels()), this.getShowMore()) : s.createElement(S.Xa, {
-                            textAlign: S.Kb.Center,
+                            textAlign: S.Lb.Center,
                             margin: {
                                 top: 3
                             }
@@ -1395,9 +1390,9 @@
                 })(N),
                 x = n("8Ad5"),
                 R = n("f00E"),
-                O = n("H/lO"),
-                P = n("NZDK"),
-                F = n("9kXc"),
+                P = n("H/lO"),
+                F = n("NZDK"),
+                O = n("9kXc"),
                 L = n("u5aL"),
                 H = n("QVaV"),
                 U = (n("d2d0"), function(e) {
@@ -1415,13 +1410,13 @@
                         var e;
                         return e = this.props.isWaiting ? s.createElement(S.Za, {
                             fillContent: !0
-                        }) : this.props.isErrored ? this.getErrorMessage() : this.props.streamerResults && this.props.streamerResults.totalHits > 0 ? this.getStreamerResultContent() : this.getNoResultsMessage(), s.createElement(S.yb, {
+                        }) : this.props.isErrored ? this.getErrorMessage() : this.props.streamerResults && this.props.streamerResults.totalHits > 0 ? this.getStreamerResultContent() : this.getNoResultsMessage(), s.createElement(S.zb, {
                             elevation: 4
                         }, s.createElement("div", {
                             className: "streamer-search-panel " + (this.props.isOpen ? "" : "streamer-search-panel--closed"),
                             tabIndex: 0,
                             onKeyDown: this.props.onKeyDown
-                        }, s.createElement(S.yb, {
+                        }, s.createElement(S.zb, {
                             className: "streamer-search-panel__results",
                             background: S.r.Base,
                             position: S.fb.Relative,
@@ -1474,7 +1469,7 @@
                                     x: 1
                                 }
                             }, s.createElement(S.W, {
-                                type: S.Ob.H5,
+                                type: S.Pb.H5,
                                 ellipsis: !0
                             }, n))))))
                         });
@@ -1502,7 +1497,7 @@
                             fullWidth: !0
                         }, s.createElement(S.Pa, {
                             fullWidth: !0,
-                            zIndex: S.bc.Above,
+                            zIndex: S.cc.Above,
                             position: S.fb.Relative
                         }, s.createElement("div", {
                             className: this.props.isOpen ? "streamer-search__container streamer-search__container--open" : "streamer-search__container"
@@ -1557,8 +1552,6 @@
                                 isOpen: !1
                             });
                             var t = Object.assign({
-                                login: n.props.user ? n.props.user.login : null,
-                                userId: n.props.user ? String(n.props.user.id) : null,
                                 channel: e.channel,
                                 channelId: e.channelId,
                                 clickthroughLocation: "search"
@@ -1573,7 +1566,7 @@
                                             if (this.state.queryID || !0 === this.state.exhaustedHits) return [2];
                                             e = this.state.currentPage + 1, s.label = 1;
                                         case 1:
-                                            return s.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(O.a.Users, this.state.term, "", {
+                                            return s.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(P.a.Users, this.state.term, "", {
                                                 page: e,
                                                 facetFilters: "has_subscription_products:true"
                                             })];
@@ -1585,7 +1578,7 @@
                                                 isOpen: !0
                                             })), [2];
                                         case 4:
-                                            return t ? (r = Object(F.b)({
+                                            return t ? (r = Object(O.b)({
                                                 searchResults: t,
                                                 append: e > 0,
                                                 currentUserResults: this.state.currentUserResults
@@ -1603,7 +1596,7 @@
                                     }
                                 })
                             })
-                        }, n.state = n.getEmptyState(), n.searchClient = new P.a({
+                        }, n.state = n.getEmptyState(), n.searchClient = new F.a({
                             appId: o.a.algoliaApplicationID,
                             apiKey: o.a.algoliaAPIKey,
                             apolloClient: o.p.apollo.client,
@@ -1663,7 +1656,7 @@
                                             focusSelectable: !r && !!this.state.currentFocus
                                         }), c.label = 1;
                                     case 1:
-                                        return c.trys.push([1, 3, , 4]), t = 0, [4, this.searchClient.queryForType(O.a.Users, e, n, {
+                                        return c.trys.push([1, 3, , 4]), t = 0, [4, this.searchClient.queryForType(P.a.Users, e, n, {
                                             facetFilters: "has_subscription_products:true"
                                         })];
                                     case 2:
@@ -1675,7 +1668,7 @@
                                             term: e
                                         })), [2];
                                     case 4:
-                                        return s ? this.state.queryID !== s.id ? [2] : (l = Object(F.b)({
+                                        return s ? this.state.queryID !== s.id ? [2] : (l = Object(O.b)({
                                             searchResults: s,
                                             append: !1
                                         }), this.setState(function(n) {
@@ -1701,7 +1694,7 @@
                         user: Object(y.e)(e)
                     }
                 })(q),
-                W = (n("nfEO"), function(e) {
+                z = (n("nfEO"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.messages = {
@@ -1733,7 +1726,7 @@
                             justifyContent: S.Wa.Center
                         }, s.createElement(S.Xa, {
                             className: "subs-landing-page-contents",
-                            textAlign: S.Kb.Center,
+                            textAlign: S.Lb.Center,
                             display: S.X.Flex,
                             justifyContent: S.Wa.Center,
                             alignItems: S.f.Center,
@@ -1748,7 +1741,7 @@
                                 top: 4
                             }
                         }, s.createElement(S.W, {
-                            type: S.Ob.H2,
+                            type: S.Pb.H2,
                             color: S.O.Link,
                             bold: !0
                         }, this.messages.title)), s.createElement(S.Pa, {
@@ -1757,7 +1750,7 @@
                             },
                             className: "subs-landing-page-contents__paragraph"
                         }, s.createElement(S.W, {
-                            type: S.Ob.P,
+                            type: S.Pb.P,
                             fontSize: S.Ca.Size5
                         }, this.messages.info)), s.createElement(S.Pa, {
                             margin: {
@@ -1765,7 +1758,7 @@
                             },
                             className: "subs-landing-page-contents__heading"
                         }, s.createElement(S.W, {
-                            type: S.Ob.H3,
+                            type: S.Pb.H3,
                             color: S.O.Link,
                             bold: !0,
                             fontSize: S.Ca.Size4
@@ -1775,7 +1768,7 @@
                             },
                             className: "subs-landing-page-contents__paragraph"
                         }, s.createElement(S.W, {
-                            type: S.Ob.P,
+                            type: S.Pb.P,
                             fontSize: S.Ca.Size5
                         }, this.messages.searchInfo)), s.createElement(j, null), s.createElement(E, null), s.createElement(S.Xa, {
                             className: "subs-landing-page-contents__section",
@@ -1797,7 +1790,7 @@
                             },
                             className: "subs-landing-page-contents__heading"
                         }, s.createElement(S.W, {
-                            type: S.Ob.H3,
+                            type: S.Pb.H3,
                             color: S.O.Link,
                             bold: !0,
                             fontSize: S.Ca.Size4
@@ -1807,7 +1800,7 @@
                             },
                             className: "subs-landing-page-contents__paragraph"
                         }, s.createElement(S.W, {
-                            type: S.Ob.P,
+                            type: S.Pb.P,
                             fontSize: S.Ca.Size5
                         }, this.messages.perksInfo))), s.createElement(S.Xa, {
                             margin: {
@@ -1846,7 +1839,7 @@
                             },
                             className: "subs-landing-page-contents__heading"
                         }, s.createElement(S.W, {
-                            type: S.Ob.H3,
+                            type: S.Pb.H3,
                             color: S.O.Link,
                             bold: !0,
                             fontSize: S.Ca.Size4
@@ -1856,7 +1849,7 @@
                             },
                             className: "subs-landing-page-contents__paragraph"
                         }, s.createElement(S.W, {
-                            type: S.Ob.P,
+                            type: S.Pb.P,
                             fontSize: S.Ca.Size5
                         }, this.messages.emotesInfo)))))))))
                     }, t = i.__decorate([Object(g.b)("SubsLandingPage", {
@@ -1865,9 +1858,9 @@
                         location: m.PageviewLocation.SubsLandingPage
                     })], t)
                 }(s.Component)),
-                z = Object(r.connect)()(W);
+                W = Object(r.connect)()(z);
             n.d(t, "SubsLandingPage", function() {
-                return z
+                return W
             })
         },
         iDlv: function(e, t, n) {

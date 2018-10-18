@@ -415,7 +415,7 @@
                     }, t.prototype.renderSortSelector = function() {
                         if (this.props.hideSortSelector) return null;
                         var e = this.props.selectedSort && Object(c.b)(this.props.selectedSort) || c.a.Newest,
-                            t = r.createElement(p.ub, {
+                            t = r.createElement(p.vb, {
                                 "data-a-target": "video-sort-select",
                                 "data-test-selector": n.SortSelector,
                                 name: "sort",
@@ -478,7 +478,7 @@
                             display: s.X.Flex,
                             flexDirection: s.Aa.Row,
                             padding: .5
-                        }, a.createElement(s.yb, {
+                        }, a.createElement(s.zb, {
                             className: "preview-card-game-balloon-row__image-wrapper",
                             flexGrow: 0,
                             flexShrink: 0,
@@ -488,7 +488,7 @@
                         }, a.createElement(s.o, {
                             align: s.d.Center,
                             ratio: s.p.BoxArt
-                        }, a.createElement(s.S, n.__assign({}, e))), a.createElement(s.yb, {
+                        }, a.createElement(s.S, n.__assign({}, e))), a.createElement(s.zb, {
                             className: "preview-card-game-balloon-row__image-play-overlay",
                             alignItems: s.f.Center,
                             background: s.r.Overlay,
@@ -626,7 +626,7 @@
                 },
                 k = i("N0BP"),
                 f = (i("XA5B"), function(e) {
-                    var t = a.createElement(s.yb, {
+                    var t = a.createElement(s.zb, {
                         className: "preview-card-iconic-image__wrapper",
                         borderRadius: s.x.Small,
                         overflow: s.ab.Hidden
@@ -661,7 +661,7 @@
                         "data-test-selector": "top-bar-title-selector",
                         color: s.O.Overlay,
                         bold: !0,
-                        transform: s.Nb.Uppercase
+                        transform: s.Ob.Uppercase
                     }, e.title)), e.subTitle && a.createElement(s.Xa, {
                         display: s.X.InlineFlex
                     }, a.createElement(s.W, {
@@ -744,7 +744,7 @@
                         width: 10,
                         height: 10
                     }));
-                    return e.withBackground ? a.createElement(s.yb, {
+                    return e.withBackground ? a.createElement(s.zb, {
                         alignItems: s.f.Center,
                         background: s.r.Overlay,
                         borderRadius: s.x.Small,
@@ -753,7 +753,7 @@
                         display: s.X.Flex,
                         fontSize: s.Ca.Size6,
                         justifyContent: s.Wa.Center
-                    }, t, a.createElement(s.W, null, e.value)) : a.createElement(s.yb, {
+                    }, t, a.createElement(s.W, null, e.value)) : a.createElement(s.zb, {
                         className: "preview-card-stat",
                         color: s.O.Overlay,
                         display: s.X.Flex,
@@ -803,7 +803,7 @@
                             onBlur: this.handleBlur
                         }), a.createElement("div", n.__assign({}, e, {
                             onClick: this.props.onClick
-                        }), a.createElement(s.yb, {
+                        }), a.createElement(s.zb, {
                             background: s.r.Alt2,
                             overflow: s.ab.Hidden
                         }, a.createElement(s.o, {
@@ -827,8 +827,8 @@
                         })))
                     }, t
                 }(a.Component)),
-                T = Object(E.b)("PreviewCardThumbnail")(P),
-                I = (i("80G/"), function(e) {
+                I = Object(E.b)("PreviewCardThumbnail")(P),
+                T = (i("80G/"), function(e) {
                     var t = null;
                     return e.subtitles && e.subtitles.length > 0 && (t = e.subtitles.map(function(e, t) {
                         return a.createElement(s.Xa, {
@@ -849,7 +849,7 @@
                         type: s.V.Inherit,
                         "data-test-selector": "preview-card-titles__primary-link"
                     }), a.createElement(s.W, {
-                        type: s.Ob.H3,
+                        type: s.Pb.H3,
                         fontSize: s.Ca.Size5,
                         lines: 1,
                         bold: !0,
@@ -859,8 +859,8 @@
                     }, t))
                 }),
                 x = i("H1ft"),
-                N = i("ZbA5"),
-                L = i("QVaV"),
+                L = i("ZbA5"),
+                N = i("QVaV"),
                 _ = i("hyVY"),
                 V = i("MXoD"),
                 F = i("0LAi");
@@ -877,7 +877,7 @@
                         t = this.props.restriction.canViewRestricted,
                         i = t ? Object(r.d)("unlocked", "VideoPreviewCardRestriction") : Object(r.d)("locked", "VideoPreviewCardRestriction"),
                         n = t ? s.pb.Unlock : s.pb.Lock;
-                    return a.createElement(s.Xa, null, !t && a.createElement(s.yb, {
+                    return a.createElement(s.Xa, null, !t && a.createElement(s.zb, {
                         background: s.r.Overlay,
                         className: "video-preview-card-restriction",
                         color: s.O.Overlay,
@@ -885,11 +885,11 @@
                         position: s.fb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
-                        zIndex: s.bc.Default,
+                        zIndex: s.cc.Default,
                         padding: {
                             x: 5
                         },
-                        textAlign: s.Kb.Center,
+                        textAlign: s.Lb.Center,
                         fullWidth: !0,
                         fullHeight: !0,
                         alignItems: s.f.Center,
@@ -915,21 +915,21 @@
                         disabled: "" === this.props.restriction.upsellLinkTo,
                         linkTo: this.props.restriction.upsellLinkTo,
                         overlay: !0
-                    }, e))), a.createElement(s.yb, {
+                    }, e))), a.createElement(s.zb, {
                         display: s.X.InlineFlex,
                         position: s.fb.Absolute,
                         attachTop: this.props.attachTop,
                         attachBottom: !this.props.attachTop,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: s.bc.Default,
+                        zIndex: s.cc.Default,
                         fontSize: s.Ca.Size6,
                         background: s.r.Overlay,
                         borderRadius: s.x.Medium,
                         color: s.O.Overlay
-                    }, a.createElement(s.Rb, {
-                        direction: this.props.attachTop ? s.Tb.Bottom : s.Tb.Top,
-                        align: s.Sb.Right,
+                    }, a.createElement(s.Sb, {
+                        direction: this.props.attachTop ? s.Ub.Bottom : s.Ub.Top,
+                        align: s.Tb.Right,
                         label: i
                     }, a.createElement(s.ob, {
                         asset: n,
@@ -966,7 +966,7 @@
                     return n.__extends(t, e), t.prototype.render = function() {
                         return a.createElement("div", n.__assign({
                             className: "preview-card"
-                        }, Object(k.a)(this.props)), a.createElement(s.yb, {
+                        }, Object(k.a)(this.props)), a.createElement(s.zb, {
                             position: s.fb.Relative,
                             borderRadius: s.x.Medium,
                             overflow: s.ab.Hidden
@@ -974,7 +974,7 @@
                             to: Object(V.a)(this.getTrackingContext(h.PageviewContent.VideoThumbnail), this.props.linkTo),
                             onClick: this.props.onThumbnailClick || this.props.onClick,
                             "data-a-target": "preview-card-image-link"
-                        }, this.props.thumbnailImageProps && a.createElement(T, {
+                        }, this.props.thumbnailImageProps && a.createElement(I, {
                             staticImageProps: this.props.thumbnailImageProps,
                             animatedImageProps: G(this.props) && this.props.animatedImageProps || void 0,
                             trackImageLatency: this.props.trackImageLatency
@@ -999,7 +999,7 @@
                         return function(e) {
                             return void 0 !== e.streamType
                         }(this.props) ? a.createElement(C, {
-                            topLeft: a.createElement(N.a, {
+                            topLeft: a.createElement(L.a, {
                                 type: this.props.streamType,
                                 hosting: !!this.props.hostedByChannelLogin
                             }),
@@ -1078,7 +1078,7 @@
                         var e = null,
                             t = [];
                         return this.shouldShowGameBalloon(this.props) || t.push({
-                            text: Object(L.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
+                            text: Object(N.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
                             linkTo: Object(V.a)(this.getTrackingContext(h.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
                             onClick: this.props.onChannelLoginClick,
                             automationSelector: "preview-card-channel-link"
@@ -1094,7 +1094,7 @@
                             linkTo: Object(V.a)(this.getTrackingContext(h.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             automationSelector: "preview-card-game-link"
-                        }), a.createElement(a.Fragment, null, a.createElement(I, {
+                        }), a.createElement(a.Fragment, null, a.createElement(T, {
                             title: this.props.title,
                             onClick: this.props.onVideoTitleClick || this.props.onClick,
                             linkTo: Object(V.a)(this.getTrackingContext(h.PageviewContent.VideoTitle), this.props.linkTo),
@@ -1190,7 +1190,7 @@
                     }
                 }, n.createElement(r.o, {
                     ratio: e.aspectRatio
-                }, n.createElement(r.yb, {
+                }, n.createElement(r.zb, {
                     background: r.r.Alt2,
                     fullHeight: !0
                 }, t))))
@@ -1263,15 +1263,15 @@
                         var e = null;
                         if (!this.props.data.loading && this.props.data.user && this.props.data.user.videos && (e = this.props.data.user.videos.edges.map(function(e) {
                                 return e.node
-                            })), e && 0 === e.length) return r.createElement(f.yb, {
+                            })), e && 0 === e.length) return r.createElement(f.zb, {
                             color: f.O.Alt2,
-                            textAlign: f.Kb.Center,
+                            textAlign: f.Lb.Center,
                             key: "no-videos",
                             padding: {
                                 y: 5
                             }
                         }, r.createElement(f.W, {
-                            type: f.Ob.H4,
+                            type: f.Pb.H4,
                             italic: !0,
                             "data-test-selector": n.NoVideos
                         }, Object(s.d)("No videos found.", "ChannelVideosPage")));
@@ -1351,7 +1351,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(m.yb, {
+                        return d.createElement(m.zb, {
                             className: this.getClassNames(),
                             color: m.O.Overlay,
                             background: m.r.Overlay,
@@ -1367,7 +1367,7 @@
                                 right: .5
                             }
                         }, this.getIcon()), d.createElement(m.W, {
-                            type: m.Ob.Span
+                            type: m.Pb.Span
                         }, this.getLabel()))
                     }, t.prototype.getClassNames = function() {
                         var e = {
@@ -1375,7 +1375,7 @@
                         };
                         return e[u[this.props.type]] = !0, l(e)
                     }, t.prototype.getIcon = function() {
-                        return this.props.hosting ? d.createElement(m.yb, {
+                        return this.props.hosting ? d.createElement(m.zb, {
                             borderRadius: m.x.Rounded,
                             className: "stream-type-indicator__hosting-dot",
                             "data-test-selector": o.HostingDot
@@ -1733,9 +1733,9 @@
                         });
                         t = a.createElement(a.Fragment, null, s)
                     }
-                    return a.createElement(c.Ub, {
-                        gutterSize: c.Wb.Small,
-                        childWidth: e.videoCardSize || c.Vb.Large,
+                    return a.createElement(c.Vb, {
+                        gutterSize: c.Xb.Small,
+                        childWidth: e.videoCardSize || c.Wb.Large,
                         placeholderItems: 20
                     }, t, i)
                 },

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [125], {
+    [126], {
         "/guG": function(e, n, a) {
             "use strict";
             a.d(n, "b", function() {
@@ -94,12 +94,12 @@
                     status: function(e) {
                         switch (e) {
                             case t.SquadStatus.Pending:
-                                return i.G.PENDING;
+                                return i.H.PENDING;
                             case t.SquadStatus.Live:
-                                return i.G.LIVE;
+                                return i.H.LIVE;
                             case t.SquadStatus.Ended:
                             default:
-                                return i.G.ENDED
+                                return i.H.ENDED
                         }
                     }(e.squad.status),
                     members: n
@@ -151,7 +151,7 @@
                         var e = this.props.data && this.props.data.user && this.props.data.user.squadStream && this.props.data.user.squadStream.members || [];
                         if (!e || 0 === e.length) return null;
                         var n = [];
-                        return e.forEach(function(e) {
+                        e.forEach(function(e) {
                             e.id && e.profileImageURL && n.push(i.createElement(h.Xa, {
                                 key: e.id,
                                 margin: {
@@ -162,32 +162,38 @@
                                 alt: Object(d.d)("avatar", "SquadStreamBanner"),
                                 src: e.profileImageURL
                             })))
-                        }), i.createElement(h.i, {
+                        });
+                        var a = this.props.channelDisplayName || this.props.channelLogin;
+                        return i.createElement(h.i, {
                             type: h.n.SlideInBottom,
                             delay: h.j.Medium,
                             duration: h.k.Medium,
                             enabled: !0
-                        }, i.createElement(h.yb, {
+                        }, i.createElement(h.zb, {
                             display: h.X.Flex,
-                            background: h.r.AccentAlt2,
+                            background: h.r.Base,
                             alignItems: h.f.Center,
-                            padding: 1
-                        }, i.createElement(h.yb, {
+                            padding: 1,
+                            margin: {
+                                bottom: 1
+                            },
+                            borderRadius: h.x.Large,
+                            elevation: 2
+                        }, i.createElement(h.zb, {
                             display: h.X.Flex,
                             color: h.O.Overlay
                         }, n), i.createElement(h.Xa, null, i.createElement(h.W, {
                             noWrap: !0,
-                            type: h.Ob.Span,
-                            color: h.O.Overlay,
+                            type: h.Pb.Span,
+                            color: h.O.Alt2,
                             fontSize: h.Ca.Size5
                         }, Object(d.d)("{squadLeader} is Squad Streaming", {
                             squadLeader: i.createElement(h.W, {
                                 bold: !0,
                                 noWrap: !0,
-                                type: h.Ob.Span,
-                                color: h.O.Overlay,
-                                fontSize: h.Ca.Size5
-                            }, this.props.channelDisplayName || this.props.channelLogin)
+                                type: h.Pb.Span,
+                                color: h.O.Base
+                            }, a)
                         }, "SquadStreamBanner"))), i.createElement(h.Xa, {
                             display: h.X.Flex,
                             alignItems: h.f.Start,
@@ -197,15 +203,13 @@
                                 left: 1
                             }
                         }, i.createElement(h.z, {
-                            type: h.F.Hollow,
-                            overlay: !0,
                             onClick: this.goToSquadPage
-                        }, Object(d.d)("Watch Squad", "SquadStreamBanner")))))
+                        }, Object(d.d)("Watch In Squad Mode", "SquadStreamBanner")))))
                     }, n.prototype.shouldRender = function(e) {
-                        return !!Object(v.a)(e.channelLogin) && (!e.data.loading && !e.data.error && (e.data.user && e.data.user.squadStream && e.data.user.squadStream.status === m.G.LIVE || !1))
+                        return !!Object(v.a)(e.channelLogin) && (!e.data.loading && !e.data.error && (e.data.user && e.data.user.squadStream && e.data.user.squadStream.status === m.H.LIVE || !1))
                     }, n
                 }(i.Component),
-                y = Object(r.compose)(Object(s.a)(k, {
+                _ = Object(r.compose)(Object(s.a)(k, {
                     options: function(e) {
                         return {
                             variables: {
@@ -232,7 +236,7 @@
             a.d(n, "SquadStreamBannerComponent", function() {
                 return q
             }), a.d(n, "SquadStreamBanner", function() {
-                return y
+                return _
             })
         },
         aKsW: function(e, n, a) {

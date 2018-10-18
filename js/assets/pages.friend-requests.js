@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [59], {
+    [60], {
         "3lt/": function(e, n, t) {
             "use strict";
             t("mrSG"), t("uhBA");
@@ -63,7 +63,7 @@
                         if (0 === this.props.friendRequestsUserData.filter(function(e) {
                                 return e && e.node && e.node.id
                             }).length) return i.createElement(R.Xa, {
-                            textAlign: R.Kb.Center,
+                            textAlign: R.Lb.Center,
                             padding: {
                                 y: 5
                             }
@@ -86,10 +86,10 @@
                                 }
                             })) : null
                         });
-                        return i.createElement(R.Ub, {
+                        return i.createElement(R.Vb, {
                             center: !0,
-                            childWidth: R.Vb.Large,
-                            gutterSize: R.Wb.Small,
+                            childWidth: R.Wb.Large,
+                            gutterSize: R.Xb.Small,
                             placeholderItems: 10
                         }, e, i.createElement(b.a, {
                             enabled: this.props.canLoadMore,
@@ -206,15 +206,15 @@
                         bottom: 2
                     }
                 }, i.createElement(s.W, {
-                    type: s.Ob.H2
+                    type: s.Pb.H2
                 }, Object(a.d)("Friends", "FriendsHeader")), i.createElement(s.Xa, {
                     margin: {
                         top: 1
                     }
-                }, i.createElement(s.Ab, null, i.createElement(s.zb, {
+                }, i.createElement(s.Bb, null, i.createElement(s.Ab, {
                     active: e.activeTab === r.Friends,
                     linkTo: "/friends"
-                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(s.zb, {
+                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(s.Ab, {
                     active: e.activeTab === r.Requests,
                     linkTo: "/friends/requests"
                 }, Object(a.d)("Friend Requests", "FriendsHeader")))))

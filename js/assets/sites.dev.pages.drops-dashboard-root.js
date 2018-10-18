@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [199], {
+    [200], {
         "/ZC1": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -39,7 +39,7 @@
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: s.bc.Above
+                            zIndex: s.cc.Above
                         }, r.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -67,22 +67,22 @@
                 return c
             }), n.d(t, "j", function() {
                 return u
-            }), n.d(t, "G", function() {
-                return l
             }), n.d(t, "H", function() {
+                return l
+            }), n.d(t, "I", function() {
                 return p
             }), n.d(t, "n", function() {
                 return d
             }), n.d(t, "A", function() {
                 return E
-            }), n.d(t, "F", function() {
+            }), n.d(t, "G", function() {
                 return m
             }), n.d(t, "r", function() {
                 return h
             }), n.d(t, "s", function() {
-                return _
-            }), n.d(t, "o", function() {
                 return g
+            }), n.d(t, "o", function() {
+                return _
             }), n.d(t, "t", function() {
                 return f
             }), n.d(t, "v", function() {
@@ -101,34 +101,36 @@
                 return R
             }), n.d(t, "E", function() {
                 return A
-            }), n.d(t, "m", function() {
+            }), n.d(t, "F", function() {
                 return C
-            }), n.d(t, "C", function() {
+            }), n.d(t, "m", function() {
                 return b
-            }), n.d(t, "D", function() {
+            }), n.d(t, "C", function() {
                 return v
-            }), n.d(t, "I", function() {
+            }), n.d(t, "D", function() {
                 return L
-            }), n.d(t, "q", function() {
+            }), n.d(t, "J", function() {
                 return P
-            }), n.d(t, "w", function() {
+            }), n.d(t, "q", function() {
                 return U
-            }), n.d(t, "f", function() {
+            }), n.d(t, "w", function() {
                 return y
+            }), n.d(t, "f", function() {
+                return F
             }), n.d(t, "g", function() {
                 return M
             }), n.d(t, "x", function() {
-                return F
+                return w
             }), n.d(t, "k", function() {
                 return j
             }), n.d(t, "p", function() {
                 return k
             }), n.d(t, "u", function() {
-                return w
-            }), n.d(t, "z", function() {
                 return G
-            }), n.d(t, "y", function() {
+            }), n.d(t, "z", function() {
                 return V
+            }), n.d(t, "y", function() {
+                return B
             });
             var a = n("/7QA"),
                 r = n("0Log"),
@@ -174,11 +176,11 @@
                 return r.PubsubTopic.PayoutOnboardingEvents + "." + e
             }
 
-            function _(e) {
+            function g(e) {
                 return r.PubsubTopic.Presence + "." + e
             }
 
-            function g(e, t) {
+            function _(e, t) {
                 return r.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
             }
 
@@ -215,34 +217,38 @@
             }
 
             function A(e) {
-                return r.PubsubTopic.UserSubscribeEvents + "." + e
+                return r.PubsubTopic.UserPropertiesUpdates + "." + e
             }
 
             function C(e) {
-                return r.PubsubTopic.CampaignGlobalEvents + "." + e
+                return r.PubsubTopic.UserSubscribeEvents + "." + e
             }
 
             function b(e) {
-                return r.PubsubTopic.CampaignUserEvents + "." + e
+                return r.PubsubTopic.CampaignGlobalEvents + "." + e
             }
 
             function v(e) {
-                return r.PubsubTopic.UserCommerceEvents + "." + e
+                return r.PubsubTopic.CampaignUserEvents + "." + e
             }
 
             function L(e) {
-                return r.PubsubTopic.Whispers + "." + e
+                return r.PubsubTopic.UserCommerceEvents + "." + e
             }
 
             function P(e) {
-                return r.PubsubTopic.OnsiteNotifications + "." + e
+                return r.PubsubTopic.Whispers + "." + e
             }
 
             function U(e) {
-                return r.PubsubTopic.StreamChatRoom + "." + e
+                return r.PubsubTopic.OnsiteNotifications + "." + e
             }
 
             function y(e) {
+                return r.PubsubTopic.StreamChatRoom + "." + e
+            }
+
+            function F(e) {
                 return r.PubsubTopic.ChannelEventUpdates + "." + e
             }
 
@@ -250,7 +256,7 @@
                 return r.PubsubTopic.ChannelSquadUpdates + "." + e
             }
 
-            function F(e) {
+            function w(e) {
                 return r.PubsubTopic.SubscribersCSV + "." + e
             }
 
@@ -262,11 +268,11 @@
                 return r.PubsubTopic.MysteryGift + "." + e
             }
 
-            function w(e) {
+            function G(e) {
                 return r.PubsubTopic.SquadUpdates + "." + e
             }
 
-            function G(e) {
+            function V(e) {
                 return a.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -279,7 +285,7 @@
                 })
             }
 
-            function V(e) {
+            function B(e) {
                 return a.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -445,12 +451,12 @@
         By5U: function(e, t) {},
         DMoW: function(e, t, n) {
             "use strict";
-            var a, r, s, i, o, c, u, l, p, d, E, m, h, _, g, f, T, I, D, N, O, S, R, A, C, b, v, L, P, U, y, M, F, j, k, w, G, V, B, H, x, W, Y, X, z, K, q, Z, J, Q, $, ee, te, ne, ae, re, se, ie, oe, ce, ue, le, pe, de, Ee, me, he, _e, ge, fe, Te, Ie, De, Ne, Oe, Se, Re, Ae, Ce, be, ve, Le, Pe, Ue, ye, Me, Fe, je, ke, we, Ge, Ve, Be, He, xe, We, Ye, Xe, ze, Ke, qe, Ze, Je, Qe, $e, et, tt, nt, at, rt;
+            var a, r, s, i, o, c, u, l, p, d, E, m, h, g, _, f, T, I, D, N, O, S, R, A, C, b, v, L, P, U, y, F, M, w, j, k, G, V, B, H, x, W, X, Y, z, K, q, Z, J, Q, $, ee, te, ne, ae, re, se, ie, oe, ce, ue, le, pe, de, Ee, me, he, ge, _e, fe, Te, Ie, De, Ne, Oe, Se, Re, Ae, Ce, be, ve, Le, Pe, Ue, ye, Fe, Me, we, je, ke, Ge, Ve, Be, He, xe, We, Xe, Ye, ze, Ke, qe, Ze, Je, Qe, $e, et, tt, nt, at, rt, st;
             n.d(t, "c", function() {
                     return r
-                }), n.d(t, "E", function() {
+                }), n.d(t, "F", function() {
                     return o
-                }), n.d(t, "x", function() {
+                }), n.d(t, "y", function() {
                     return c
                 }), n.d(t, "g", function() {
                     return h
@@ -458,76 +464,78 @@
                     return T
                 }), n.d(t, "f", function() {
                     return I
-                }), n.d(t, "j", function() {
+                }), n.d(t, "k", function() {
                     return O
-                }), n.d(t, "N", function() {
+                }), n.d(t, "O", function() {
                     return S
-                }), n.d(t, "G", function() {
+                }), n.d(t, "H", function() {
                     return R
-                }), n.d(t, "n", function() {
-                    return A
-                }), n.d(t, "F", function() {
-                    return v
-                }), n.d(t, "b", function() {
-                    return F
-                }), n.d(t, "p", function() {
-                    return j
                 }), n.d(t, "o", function() {
+                    return A
+                }), n.d(t, "i", function() {
+                    return v
+                }), n.d(t, "G", function() {
+                    return L
+                }), n.d(t, "b", function() {
                     return w
-                }), n.d(t, "I", function() {
-                    return G
-                }), n.d(t, "K", function() {
-                    return V
-                }), n.d(t, "z", function() {
-                    return B
-                }), n.d(t, "L", function() {
-                    return H
                 }), n.d(t, "q", function() {
-                    return Y
-                }), n.d(t, "m", function() {
-                    return X
+                    return j
+                }), n.d(t, "p", function() {
+                    return G
                 }), n.d(t, "J", function() {
+                    return V
+                }), n.d(t, "L", function() {
+                    return B
+                }), n.d(t, "A", function() {
+                    return H
+                }), n.d(t, "M", function() {
+                    return x
+                }), n.d(t, "r", function() {
+                    return Y
+                }), n.d(t, "n", function() {
                     return z
-                }), n.d(t, "a", function() {
+                }), n.d(t, "K", function() {
                     return K
-                }), n.d(t, "t", function() {
+                }), n.d(t, "a", function() {
                     return q
-                }), n.d(t, "v", function() {
+                }), n.d(t, "u", function() {
                     return Z
-                }), n.d(t, "B", function() {
-                    return Q
+                }), n.d(t, "w", function() {
+                    return J
                 }), n.d(t, "C", function() {
                     return $
-                }), n.d(t, "A", function() {
-                    return te
                 }), n.d(t, "D", function() {
+                    return ee
+                }), n.d(t, "B", function() {
                     return ne
-                }), n.d(t, "M", function() {
-                    return me
-                }), n.d(t, "l", function() {
-                    return Oe
-                }), n.d(t, "k", function() {
+                }), n.d(t, "E", function() {
+                    return ae
+                }), n.d(t, "N", function() {
+                    return he
+                }), n.d(t, "m", function() {
                     return Se
-                }), n.d(t, "O", function() {
-                    return be
-                }), n.d(t, "y", function() {
+                }), n.d(t, "l", function() {
+                    return Re
+                }), n.d(t, "P", function() {
+                    return ve
+                }), n.d(t, "z", function() {
                     return Me
-                }), n.d(t, "s", function() {
+                }), n.d(t, "t", function() {
                     return ke
-                }), n.d(t, "i", function() {
-                    return Ge
-                }), n.d(t, "h", function() {
+                }), n.d(t, "j", function() {
                     return Ve
-                }), n.d(t, "u", function() {
+                }), n.d(t, "h", function() {
                     return Be
-                }), n.d(t, "H", function() {
-                    return xe
-                }), n.d(t, "w", function() {
-                    return Ke
+                }), n.d(t, "v", function() {
+                    return He
+                }), n.d(t, "I", function() {
+                    return We
+                }), n.d(t, "x", function() {
+                    return qe
                 }), n.d(t, "d", function() {
-                    return nt
-                }), n.d(t, "r", function() {
                     return at
+                }), n.d(t, "s", function() {
+                    return rt
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -570,10 +578,10 @@
                 }(h || (h = {})),
                 function(e) {
                     e.GET_BITS = "GET_BITS", e.GET_TURBO = "GET_TURBO", e.SUBSCRIBE = "SUBSCRIBE", e.VISIT_URL = "VISIT_URL"
-                }(_ || (_ = {})),
+                }(g || (g = {})),
                 function(e) {
                     e.ALLTIME = "ALLTIME", e.MONTH = "MONTH", e.WEEK = "WEEK"
-                }(g || (g = {})),
+                }(_ || (_ = {})),
                 function(e) {
                     e.AD = "AD", e.BUNDLE = "BUNDLE"
                 }(f || (f = {})),
@@ -608,26 +616,29 @@
                     e.CUSTOM = "CUSTOM", e.DISPLAY_ONLY = "DISPLAY_ONLY", e.FIRST_PARTY = "FIRST_PARTY", e.RENDER_ONLY = "RENDER_ONLY", e.SPONSORED = "SPONSORED", e.THIRD_PARTY = "THIRD_PARTY", e.UNKNOWN = "UNKNOWN"
                 }(b || (b = {})),
                 function(e) {
-                    e.AMOUNT_BELOW_MIN_BITS = "AMOUNT_BELOW_MIN_BITS", e.AUTO_MOD_MESSAGE = "AUTO_MOD_MESSAGE", e.AUTO_MOD_PENDING = "AUTO_MOD_PENDING", e.CHANNEL_BLOCKED_TERMS = "CHANNEL_BLOCKED_TERMS", e.CHANNEL_INELIGIBLE = "CHANNEL_INELIGIBLE", e.EMOTE_AMOUNT_BELOW_MIN_BITS = "EMOTE_AMOUNT_BELOW_MIN_BITS", e.INSUFFICIENT_BALANCE = "INSUFFICIENT_BALANCE", e.INVALID_BITS_AMOUNT = "INVALID_BITS_AMOUNT", e.INVALID_BITS_MESSAGE = "INVALID_BITS_MESSAGE", e.INVALID_EVENT_ID = "INVALID_EVENT_ID", e.MESSAGE_LENGTH_EXCEEDED = "MESSAGE_LENGTH_EXCEEDED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.TOO_LARGE_BITS_EMOTE = "TOO_LARGE_BITS_EMOTE", e.TOO_LARGE_CHEER = "TOO_LARGE_CHEER", e.UNKNOWN = "UNKNOWN", e.USER_BANNED = "USER_BANNED", e.USER_INELIGIBLE = "USER_INELIGIBLE", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_MESSAGE = "ZALGO_MESSAGE"
+                    e.BANNED = "BANNED", e.FOLLOWERS_ONLY = "FOLLOWERS_ONLY", e.SLOW_MODE = "SLOW_MODE", e.SUBSCRIBERS_ONLY = "SUBSCRIBERS_ONLY", e.VERIFIED_ONLY = "VERIFIED_ONLY"
                 }(v || (v = {})),
                 function(e) {
-                    e.NEW_CHATTER = "NEW_CHATTER"
+                    e.AMOUNT_BELOW_MIN_BITS = "AMOUNT_BELOW_MIN_BITS", e.AUTO_MOD_MESSAGE = "AUTO_MOD_MESSAGE", e.AUTO_MOD_PENDING = "AUTO_MOD_PENDING", e.CHANNEL_BLOCKED_TERMS = "CHANNEL_BLOCKED_TERMS", e.CHANNEL_INELIGIBLE = "CHANNEL_INELIGIBLE", e.EMOTE_AMOUNT_BELOW_MIN_BITS = "EMOTE_AMOUNT_BELOW_MIN_BITS", e.INSUFFICIENT_BALANCE = "INSUFFICIENT_BALANCE", e.INVALID_BITS_AMOUNT = "INVALID_BITS_AMOUNT", e.INVALID_BITS_MESSAGE = "INVALID_BITS_MESSAGE", e.INVALID_EVENT_ID = "INVALID_EVENT_ID", e.MESSAGE_LENGTH_EXCEEDED = "MESSAGE_LENGTH_EXCEEDED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.TOO_LARGE_BITS_EMOTE = "TOO_LARGE_BITS_EMOTE", e.TOO_LARGE_CHEER = "TOO_LARGE_CHEER", e.UNKNOWN = "UNKNOWN", e.USER_BANNED = "USER_BANNED", e.USER_INELIGIBLE = "USER_INELIGIBLE", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_MESSAGE = "ZALGO_MESSAGE"
                 }(L || (L = {})),
                 function(e) {
-                    e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
+                    e.NEW_CHATTER = "NEW_CHATTER"
                 }(P || (P = {})),
                 function(e) {
-                    e.FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.SUB_ONLY_MODE_ENFORCEMENT_FAILED = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT"
+                    e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
                 }(U || (U = {})),
                 function(e) {
-                    e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
+                    e.FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.SUB_ONLY_MODE_ENFORCEMENT_FAILED = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT"
                 }(y || (y = {})),
+                function(e) {
+                    e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
+                }(F || (F = {})),
                 function(e) {
                     e.AVAILABLE = "AVAILABLE", e.DISMISSED = "DISMISSED", e.ELIGIBLE = "ELIGIBLE", e.REDEEMED = "REDEEMED"
                 }(M || (M = {})),
                 function(e) {
                     e.DURATION_INVALID = "DURATION_INVALID", e.FORBIDDEN = "FORBIDDEN", e.TARGET_ALREADY_BANNED = "TARGET_ALREADY_BANNED", e.TARGET_IS_ADMIN = "TARGET_IS_ADMIN", e.TARGET_IS_ANONYMOUS = "TARGET_IS_ANONYMOUS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_GLOBAL_MOD = "TARGET_IS_GLOBAL_MOD", e.TARGET_IS_MOD = "TARGET_IS_MOD", e.TARGET_IS_SELF = "TARGET_IS_SELF", e.TARGET_IS_STAFF = "TARGET_IS_STAFF", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
-                }(F || (F = {})),
+                }(w || (w = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.SUCCESS = "SUCCESS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_MODERATOR = "TARGET_IS_MODERATOR"
                 }(j || (j = {})),
@@ -636,229 +647,229 @@
                 }(k || (k = {})),
                 function(e) {
                     e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
-                }(w || (w = {})),
-                function(e) {
-                    e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
                 }(G || (G = {})),
                 function(e) {
-                    e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
+                    e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
                 }(V || (V = {})),
                 function(e) {
-                    e.GOOGLE_IAB = "GOOGLE_IAB", e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
+                    e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
                 }(B || (B = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
+                    e.GOOGLE_IAB = "GOOGLE_IAB", e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
                 }(H || (H = {})),
                 function(e) {
-                    e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
+                    e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
                 }(x || (x = {})),
                 function(e) {
-                    e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
+                    e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
                 }(W || (W = {})),
+                function(e) {
+                    e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
+                }(X || (X = {})),
                 function(e) {
                     e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
                 }(Y || (Y = {})),
                 function(e) {
                     e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
-                }(X || (X = {})),
-                function(e) {
-                    e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
                 }(z || (z = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
+                    e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
                 }(K || (K = {})),
                 function(e) {
-                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
+                    e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
                 }(q || (q = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
+                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
                 }(Z || (Z = {})),
                 function(e) {
-                    e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
+                    e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
                 }(J || (J = {})),
                 function(e) {
-                    e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
+                    e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
                 }(Q || (Q = {})),
                 function(e) {
-                    e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
+                    e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
                 }($ || ($ = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
+                    e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
                 }(ee || (ee = {})),
                 function(e) {
-                    e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
+                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }(te || (te = {})),
                 function(e) {
-                    e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
+                    e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
                 }(ne || (ne = {})),
                 function(e) {
-                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                    e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
                 }(ae || (ae = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
+                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(re || (re = {})),
                 function(e) {
-                    e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }(se || (se = {})),
                 function(e) {
-                    e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
+                    e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(ie || (ie = {})),
                 function(e) {
-                    e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
+                    e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
                 }(oe || (oe = {})),
                 function(e) {
-                    e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
+                    e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
                 }(ce || (ce = {})),
                 function(e) {
-                    e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
+                    e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
                 }(ue || (ue = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
+                    e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
                 }(le || (le = {})),
                 function(e) {
-                    e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
+                    e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
                 }(pe || (pe = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
+                    e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
                 }(de || (de = {})),
                 function(e) {
-                    e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
+                    e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
                 }(Ee || (Ee = {})),
                 function(e) {
-                    e.CONTENT = "CONTENT", e.TOP = "TOP"
+                    e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
                 }(me || (me = {})),
                 function(e) {
-                    e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
+                    e.CONTENT = "CONTENT", e.TOP = "TOP"
                 }(he || (he = {})),
+                function(e) {
+                    e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
+                }(ge || (ge = {})),
                 function(e) {
                     e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(_e || (_e = {})),
                 function(e) {
                     e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
-                }(ge || (ge = {})),
-                function(e) {
-                    e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
                 }(fe || (fe = {})),
                 function(e) {
-                    e.GIFT_NOT_CLAIMABLE = "GIFT_NOT_CLAIMABLE", e.NON_EXISTENT_GIFT = "NON_EXISTENT_GIFT", e.UNKNOWN_ERROR = "UNKNOWN_ERROR", e.USER_DOES_NOT_OWN_GIFT = "USER_DOES_NOT_OWN_GIFT"
+                    e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
                 }(Te || (Te = {})),
                 function(e) {
-                    e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
+                    e.GIFT_NOT_CLAIMABLE = "GIFT_NOT_CLAIMABLE", e.NON_EXISTENT_GIFT = "NON_EXISTENT_GIFT", e.UNKNOWN_ERROR = "UNKNOWN_ERROR", e.USER_DOES_NOT_OWN_GIFT = "USER_DOES_NOT_OWN_GIFT"
                 }(Ie || (Ie = {})),
                 function(e) {
-                    e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
+                    e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
                 }(De || (De = {})),
                 function(e) {
-                    e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
+                    e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
                 }(Ne || (Ne = {})),
                 function(e) {
-                    e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
+                    e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
                 }(Oe || (Oe = {})),
                 function(e) {
-                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
+                    e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
                 }(Se || (Se = {})),
                 function(e) {
-                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
+                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
                 }(Re || (Re = {})),
                 function(e) {
-                    e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
+                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
                 }(Ae || (Ae = {})),
                 function(e) {
-                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
+                    e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
                 }(Ce || (Ce = {})),
                 function(e) {
-                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
+                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
                 }(be || (be = {})),
                 function(e) {
-                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
+                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
                 }(ve || (ve = {})),
                 function(e) {
-                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
+                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
                 }(Le || (Le = {})),
                 function(e) {
-                    e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
+                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
                 }(Pe || (Pe = {})),
                 function(e) {
-                    e.ASC = "ASC", e.DESC = "DESC"
+                    e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
                 }(Ue || (Ue = {})),
                 function(e) {
-                    e.TIME = "TIME", e.VIEWS = "VIEWS"
+                    e.ASC = "ASC", e.DESC = "DESC"
                 }(ye || (ye = {})),
+                function(e) {
+                    e.TIME = "TIME", e.VIEWS = "VIEWS"
+                }(Fe || (Fe = {})),
                 function(e) {
                     e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
                 }(Me || (Me = {})),
                 function(e) {
-                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
-                }(Fe || (Fe = {})),
+                    e.ALREADY_CLAIMED = "ALREADY_CLAIMED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN = "UNKNOWN"
+                }(we || (we = {})),
                 function(e) {
-                    e.ACCOUNT_TOO_YOUNG = "ACCOUNT_TOO_YOUNG", e.COMMUNITY_NAME_EXISTS = "COMMUNITY_NAME_EXISTS", e.COMMUNITY_NAME_INVALID = "COMMUNITY_NAME_INVALID", e.COMMUNITY_NAME_RESERVED = "COMMUNITY_NAME_RESERVED", e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.INVALID_LANGUAGE = "INVALID_LANGUAGE", e.OWN_TO_MANY_COMMUNITIES = "OWN_TO_MANY_COMMUNITIES", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG", e.TWO_FACTOR_NOT_ENABLED = "TWO_FACTOR_NOT_ENABLED", e.UNVERIFIED_EMAIL = "UNVERIFIED_EMAIL"
+                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
                 }(je || (je = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
                 }(ke || (ke = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
-                }(we || (we = {})),
-                function(e) {
-                    e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Ge || (Ge = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Ve || (Ve = {})),
                 function(e) {
-                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Be || (Be = {})),
                 function(e) {
-                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
                 }(He || (He = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(xe || (xe = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(We || (We = {})),
+                function(e) {
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                }(Xe || (Xe = {})),
                 function(e) {
                     e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }(Ye || (Ye = {})),
                 function(e) {
                     e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
-                }(Xe || (Xe = {})),
-                function(e) {
-                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(ze || (ze = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(Ke || (Ke = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(qe || (qe = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }(Ze || (Ze = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(Je || (Je = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }($e || ($e = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(et || (et = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(tt || (tt = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
                 }(nt || (nt = {})),
                 function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
                 }(at || (at = {})),
                 function(e) {
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                }(rt || (rt = {})),
+                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(rt || (rt = {}))
+                }(st || (st = {}))
         },
         GD6M: function(e, t, n) {
             "use strict";
@@ -894,7 +905,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(c.Hb, {
+                        return r.createElement(c.Ib, {
                             onClick: this.onClick,
                             label: this.props.game.name
                         })
@@ -1019,7 +1030,7 @@
                 h = Object(s.compose)(Object(o.b)("DevGameSearch", {
                     autoReportInteractive: !0
                 }))(m),
-                _ = function(e) {
+                g = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1055,10 +1066,10 @@
                         })
                     }, t
                 }(r.Component),
-                g = n("Svt6"),
+                _ = n("Svt6"),
                 f = n("+GjP"),
                 T = n("1mFg"),
-                I = g.a + "/kraken/search/games",
+                I = _.a + "/kraken/search/games",
                 D = 7,
                 N = function(e) {
                     function t(t) {
@@ -1110,7 +1121,7 @@
                     }, t
                 }(r.Component);
             n.d(t, "a", function() {
-                return _
+                return g
             }), n.d(t, "b", function() {
                 return N
             })
@@ -1360,8 +1371,8 @@
                 E = n("GIun"),
                 m = n("8/mp"),
                 h = n("GnwI"),
-                _ = n("N0BP"),
-                g = n("yLwq"),
+                g = n("N0BP"),
+                _ = n("yLwq"),
                 f = n("Ue10"),
                 T = function(e) {
                     function t() {
@@ -1371,13 +1382,13 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.user.avatar || Object(g.c)(this.props.user.id, 64);
+                        var e = this.props.user.avatar || Object(_.c)(this.props.user.id, 64);
                         return r.createElement(f.Xa, a.__assign({
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, Object(_.a)(this.props)), r.createElement(f.Ua, {
+                        }, Object(g.a)(this.props)), r.createElement(f.Ua, {
                             onClick: this.onSelect
                         }, r.createElement(f.G, {
                             row: !0
@@ -1396,7 +1407,7 @@
                             },
                             flexGrow: 1
                         }, r.createElement(f.W, {
-                            type: f.Ob.Span,
+                            type: f.Pb.Span,
                             ellipsis: !0
                         }, this.props.user.name))))))
                     }, t
@@ -1635,10 +1646,10 @@
                         padding: {
                             y: 1
                         },
-                        zIndex: o.bc.Above
-                    }, r.createElement(o.yb, {
+                        zIndex: o.cc.Above
+                    }, r.createElement(o.zb, {
                         color: o.O.Alt2,
-                        textAlign: o.Kb.Center,
+                        textAlign: o.Lb.Center,
                         flexShrink: 1
                     }, r.createElement(o.ob, {
                         asset: o.pb.DeadGlitch,
@@ -1648,12 +1659,12 @@
                         margin: {
                             top: 1
                         },
-                        textAlign: o.Kb.Center
+                        textAlign: o.Lb.Center
                     }, r.createElement(o.W, {
-                        type: o.Ob.H4,
+                        type: o.Pb.H4,
                         "data-test-selector": "search-error-message"
                     }, Object(i.d)("Search is not available at this time", "DropdownSearchError"))), r.createElement(o.W, {
-                        type: o.Ob.P
+                        type: o.Pb.P
                     }, Object(i.d)("Please try again later", "DropdownSearchError")))
                 },
                 u = n("8Ad5"),
@@ -1712,13 +1723,13 @@
                             });
                         return this.props.inline ? r.createElement(s.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(o.yb, {
+                        }, r.createElement(o.zb, {
                             background: this.state.isInputFocused || this.state.isOpen ? o.r.Base : void 0,
                             borderRadius: o.x.Large,
                             padding: .5,
                             position: o.fb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, n, e && r.createElement(o.yb, {
+                        }, n, e && r.createElement(o.zb, {
                             attachLeft: !0,
                             background: o.r.Base,
                             borderRadius: o.x.Large,
@@ -1728,7 +1739,7 @@
                                 y: 1
                             },
                             position: o.fb.Absolute,
-                            zIndex: o.bc.Above,
+                            zIndex: o.cc.Above,
                             elevation: 3
                         }, r.createElement("div", {
                             tabIndex: 0,
@@ -1785,7 +1796,7 @@
                             error: !!this.props.errorMessage
                         }, r.createElement(o.Xa, {
                             className: "image-uploader",
-                            textAlign: o.Kb.Center,
+                            textAlign: o.Lb.Center,
                             display: o.X.Flex,
                             flexDirection: o.Aa.Column,
                             alignItems: o.f.Center,
@@ -1818,12 +1829,12 @@
                             margin: 1,
                             "data-test-selector": "image-uploader-loading"
                         }, r.createElement(o.W, {
-                            type: o.Ob.H4
+                            type: o.Pb.H4
                         }, Object(s.d)("Uploading", "ImageUploader")))
                     }, t.prototype.renderNormalState = function() {
                         var e = Object(s.d)("Browse", "ImageUploader");
                         return r.createElement(o.Xa, null, r.createElement(o.Xa, null, r.createElement(o.W, {
-                            type: o.Ob.H4
+                            type: o.Pb.H4
                         }, Object(s.d)("Drag and drop your image here", "ImageUploader"))), r.createElement(o.Xa, {
                             margin: {
                                 bottom: 2
@@ -1835,7 +1846,7 @@
                             fullWidth: !0,
                             "data-test-selector": "image-uploader-hint"
                         }, r.createElement(o.W, {
-                            type: o.Ob.P,
+                            type: o.Pb.P,
                             fontSize: o.Ca.Size7,
                             color: o.O.Alt2
                         }, this.props.hintMessage)), r.createElement(o.Xa, null, r.createElement(o.z, {
@@ -1849,7 +1860,7 @@
                             },
                             "data-test-selector": "image-uploader-error"
                         }, r.createElement(o.W, {
-                            type: o.Ob.H5,
+                            type: o.Pb.H5,
                             color: o.O.Error,
                             bold: !0
                         }, this.props.errorMessage))
@@ -2055,9 +2066,9 @@
                             E = void 0 === d ? "" : d,
                             m = s.numericFilters,
                             h = s.restrictSearchableAttributes,
-                            _ = void 0 === h ? [] : h;
+                            g = void 0 === h ? [] : h;
                         return a.__awaiter(this, void 0, void 0, function() {
-                            var r, s, i, u, d, h, g, f, T = this;
+                            var r, s, i, u, d, h, _, f, T = this;
                             return a.__generator(this, function(I) {
                                 switch (I.label) {
                                     case 0:
@@ -2079,7 +2090,7 @@
                                                                     numericFilters: m || e.singleTypeNumericFilters,
                                                                     facets: "*",
                                                                     facetFilters: E,
-                                                                    restrictSearchableAttributes: _
+                                                                    restrictSearchableAttributes: g
                                                                 }
                                                             }, [4, this.query([n])];
                                                         case 1:
@@ -2125,9 +2136,9 @@
                                     case 8:
                                         return h.videos = I.sent(), [3, 14];
                                     case 9:
-                                        return g = r, [4, s(p.streamTags)];
+                                        return _ = r, [4, s(p.streamTags)];
                                     case 10:
-                                        return g.streamTags = I.sent(), [3, 14];
+                                        return _.streamTags = I.sent(), [3, 14];
                                     case 11:
                                         return f = r, [4, s(p.tags)];
                                     case 12:
@@ -2292,9 +2303,9 @@
                 E = n("NvVO"),
                 m = n("2xye"),
                 h = n("GnwI"),
-                _ = n("1mFg");
+                g = n("1mFg");
 
-            function g(e) {
+            function _(e) {
                 return !e.legacy && e.curseCompanyId ? e.curseCompanyId.toString() : e.id
             }
             var f = n("fy8Z");
@@ -2346,9 +2357,9 @@
                 var t = Object(O.b)(R(e.campaign.startDate), "MM/DD/YYYY, hh:mm a"),
                     n = Object(O.b)(R(e.campaign.endDate), "MM/DD/YYYY, hh:mm a"),
                     a = "/console/drops/" + e.campaign.id;
-                return r.createElement(N.Gb, null, r.createElement(N.Db, null, r.createElement(N.U, {
+                return r.createElement(N.Hb, null, r.createElement(N.Eb, null, r.createElement(N.U, {
                     linkTo: a
-                }, e.campaign.name)), r.createElement(N.Db, null, e.campaign.id), r.createElement(N.Db, null, t), r.createElement(N.Db, null, n), r.createElement(N.Db, null, e.campaign.enabled.toString()))
+                }, e.campaign.name)), r.createElement(N.Eb, null, e.campaign.id), r.createElement(N.Eb, null, t), r.createElement(N.Eb, null, n), r.createElement(N.Eb, null, e.campaign.enabled.toString()))
             };
             ! function(e) {
                 e[e.Enabled = 0] = "Enabled", e[e.EndDate = 1] = "EndDate", e[e.Id = 2] = "Id", e[e.Name = 3] = "Name", e[e.StartDate = 4] = "StartDate"
@@ -2357,11 +2368,11 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            sortingName: N.vb.Default,
-                            sortingId: N.vb.Default,
-                            sortingStartDate: N.vb.Default,
-                            sortingEndDate: N.vb.Default,
-                            sortingEnabled: N.vb.Default
+                            sortingName: N.wb.Default,
+                            sortingId: N.wb.Default,
+                            sortingStartDate: N.wb.Default,
+                            sortingEndDate: N.wb.Default,
+                            sortingEnabled: N.wb.Default
                         }, t.renderCampaignItems = function() {
                             return t.props.campaigns.map(function(e) {
                                 return r.createElement(b, {
@@ -2402,7 +2413,7 @@
                                 t.props.onSort(C.Enabled, t.state.sortingEnabled)
                             })
                         }, t.toggleSorting = function(e) {
-                            return e === N.vb.Default || e === N.vb.Ascending ? N.vb.Descending : N.vb.Ascending
+                            return e === N.wb.Default || e === N.wb.Ascending ? N.wb.Descending : N.wb.Ascending
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
@@ -2419,25 +2430,25 @@
                             onClick: Object(c.c)(c.a.CreateDropsProcessStart),
                             linkTo: "/console/drops/create",
                             icon: N.pb.Plus
-                        }, Object(o.d)("Create Drops Campaign", "DevDropsCampaigns"))), r.createElement(N.Bb, null, r.createElement(N.Eb, null, r.createElement(N.Fb, {
+                        }, Object(o.d)("Create Drops Campaign", "DevDropsCampaigns"))), r.createElement(N.Cb, null, r.createElement(N.Fb, null, r.createElement(N.Gb, {
                             label: Object(o.d)("Campaign Name", "DevDropsCampaigns"),
                             sorting: this.state.sortingName,
                             onClick: this.sortName
-                        }), r.createElement(N.Fb, {
+                        }), r.createElement(N.Gb, {
                             label: Object(o.d)("Campaign ID", "DevDropsCampaigns")
-                        }), r.createElement(N.Fb, {
+                        }), r.createElement(N.Gb, {
                             label: Object(o.d)("Start Date (UTC)", "DevDropsCampaigns"),
                             sorting: this.state.sortingStartDate,
                             onClick: this.sortStartDate
-                        }), r.createElement(N.Fb, {
+                        }), r.createElement(N.Gb, {
                             label: Object(o.d)("End Date (UTC)", "DevDropsCampaigns"),
                             sorting: this.state.sortingEndDate,
                             onClick: this.sortEndDate
-                        }), r.createElement(N.Fb, {
+                        }), r.createElement(N.Gb, {
                             label: Object(o.d)("Enabled", "DevDropsCampaigns"),
                             sorting: this.state.sortingEnabled,
                             onClick: this.sortEnabled
-                        })), r.createElement(N.Cb, null, e)))
+                        })), r.createElement(N.Db, null, e)))
                     }, t
                 }(r.Component),
                 L = Object(l.compose)(Object(h.b)("DevDropsCampaignsComponent", {
@@ -2456,7 +2467,7 @@
                                         case 0:
                                             return [4, Object(D.a)(f.a.GetCampaignsByCompany)];
                                         case 1:
-                                            return (e = a.sent()) ? (t = g(this.props.company), n = d.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(_.a)(n, {
+                                            return (e = a.sent()) ? (t = _(this.props.company), n = d.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(g.a)(n, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": e
                                                 }
@@ -2488,7 +2499,7 @@
                         }, t.onSort = function(e, n) {
                             switch (e) {
                                 case C.Name:
-                                    n === N.vb.Ascending ? t.setState(function(e) {
+                                    n === N.wb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.name.localeCompare(t.name)
@@ -2503,7 +2514,7 @@
                                     });
                                     break;
                                 case C.Id:
-                                    n === N.vb.Ascending ? t.setState(function(e) {
+                                    n === N.wb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.id.localeCompare(t.id)
@@ -2518,7 +2529,7 @@
                                     });
                                     break;
                                 case C.StartDate:
-                                    n === N.vb.Ascending ? t.setState(function(e) {
+                                    n === N.wb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.startDate.getTime() - t.startDate.getTime()
@@ -2533,7 +2544,7 @@
                                     });
                                     break;
                                 case C.EndDate:
-                                    n === N.vb.Ascending ? t.setState(function(e) {
+                                    n === N.wb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.endDate.getTime() - t.endDate.getTime()
@@ -2548,7 +2559,7 @@
                                     });
                                     break;
                                 case C.Enabled:
-                                    n === N.vb.Ascending ? t.setState(function(e) {
+                                    n === N.wb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return Number(e.enabled) - Number(t.enabled)
@@ -2580,11 +2591,11 @@
                     location: m.PageviewLocation.DevSiteDropsCampaigns
                 }), Object(u.a)())(P),
                 y = n("9C/b"),
-                M = n("DMoW"),
-                F = n("PZVp"),
-                j = n("/aPz"),
-                k = n("2/NB"),
-                w = n("Lxz1"),
+                F = n("DMoW"),
+                M = n("PZVp"),
+                w = n("/aPz"),
+                j = n("2/NB"),
+                k = n("Lxz1"),
                 G = 1e4,
                 V = function() {
                     return function(e, t) {
@@ -2603,41 +2614,41 @@
                                                     method: "PUT"
                                                 })];
                                             case 2:
-                                                return (c = a.sent()).status > 300 && r(new Error(Object(w.e)(c.status))), this.unsubscribe = o.l.subscribe({
-                                                    topic: Object(j.A)(i),
+                                                return (c = a.sent()).status > 300 && r(new Error(Object(k.e)(c.status))), this.unsubscribe = o.l.subscribe({
+                                                    topic: Object(w.A)(i),
                                                     success: function() {
                                                         l.timeoutID = setTimeout(function() {
-                                                            l.unsubscribe(), r(new Error(Object(w.d)()))
+                                                            l.unsubscribe(), r(new Error(Object(k.d)()))
                                                         }, G)
                                                     },
                                                     failure: function() {
-                                                        clearTimeout(l.timeoutID), r(new Error(Object(w.d)()))
+                                                        clearTimeout(l.timeoutID), r(new Error(Object(k.d)()))
                                                     },
                                                     onMessage: function(e) {
                                                         if (e.upload_id === i) {
                                                             switch (clearTimeout(l.timeoutID), e.status) {
-                                                                case F.a.POSTPROCESS_COMPLETE:
+                                                                case M.a.POSTPROCESS_COMPLETE:
                                                                     l.onFinishUploading && l.onFinishUploading(), t();
                                                                     break;
-                                                                case F.a.WIDTH_VALIDATION_FAILED:
-                                                                case F.a.HEIGHT_VALIDATION_FAILED:
-                                                                    r(new Error(Object(w.c)()));
+                                                                case M.a.WIDTH_VALIDATION_FAILED:
+                                                                case M.a.HEIGHT_VALIDATION_FAILED:
+                                                                    r(new Error(Object(k.c)()));
                                                                     break;
-                                                                case F.a.FILE_SIZE_VALIDATION_FAILED:
-                                                                    r(new Error(Object(w.a)()));
+                                                                case M.a.FILE_SIZE_VALIDATION_FAILED:
+                                                                    r(new Error(Object(k.a)()));
                                                                     break;
-                                                                case F.a.IS_IMAGE_VALIDATION_FAILED:
-                                                                    r(new Error(Object(w.b)(k.b)));
+                                                                case M.a.IS_IMAGE_VALIDATION_FAILED:
+                                                                    r(new Error(Object(k.b)(j.b)));
                                                                     break;
                                                                 default:
-                                                                    r(new Error(Object(w.d)()))
+                                                                    r(new Error(Object(k.d)()))
                                                             }
                                                             l.unsubscribe && l.unsubscribe()
                                                         }
                                                     }
                                                 }), [3, 4];
                                             case 3:
-                                                return u = a.sent(), o.k.error(u, "unable to upload image"), r(new Error(Object(w.d)())), [3, 4];
+                                                return u = a.sent(), o.k.error(u, "unable to upload image"), r(new Error(Object(k.d)())), [3, 4];
                                             case 4:
                                                 return [2]
                                         }
@@ -2655,7 +2666,7 @@
                     return a.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
-                                return e = [], [4, Object(_.a)(B)];
+                                return e = [], [4, Object(g.a)(B)];
                             case 1:
                                 return 200 !== (t = a.sent()).status ? [3, 3] : [4, t.json()];
                             case 2:
@@ -2692,7 +2703,7 @@
                                     after: s,
                                     before: r,
                                     limit: i
-                                })) && (c += "?" + u), [4, Object(_.a)(c, {
+                                })) && (c += "?" + u), [4, Object(g.a)(c, {
                                     headers: {
                                         "X-Twitch-VHSCF": o
                                     }
@@ -2724,8 +2735,8 @@
                     })
                 })
             }
-            var Y = n("/MKj"),
-                X = n("aCAx"),
+            var X = n("/MKj"),
+                Y = n("aCAx"),
                 z = n("HEnu"),
                 K = n("cZKs"),
                 q = n("NLLf"),
@@ -2734,7 +2745,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(N.yb, {
+                        return r.createElement(N.zb, {
                             className: "image-uploader-modal",
                             background: N.r.Base
                         }, r.createElement(q.a, a.__assign({}, this.props)), r.createElement(K.a, {
@@ -2742,9 +2753,9 @@
                         }))
                     }, t
                 }(r.Component));
-            var J = Object(Y.connect)(null, function(e) {
+            var J = Object(X.connect)(null, function(e) {
                     return Object(l.bindActionCreators)({
-                        onClose: X.c
+                        onClose: Y.c
                     }, e)
                 })(Z),
                 Q = n("u5aL");
@@ -2800,7 +2811,7 @@
                             noTail: !0,
                             show: this.state.isOpen,
                             "data-a-target": "time-selector-balloon"
-                        }, r.createElement(N.yb, {
+                        }, r.createElement(N.zb, {
                             color: N.O.Link,
                             fontSize: N.Ca.Size5,
                             className: "time-picker__dropdown"
@@ -2923,7 +2934,7 @@
                                 size: 80
                             }) : null
                         }, n.renderErrorMessage = function() {
-                            if (n.props.errorMessage) return r.createElement(N.yb, {
+                            if (n.props.errorMessage) return r.createElement(N.zb, {
                                 className: "dev-drops-campaign-form__error",
                                 color: N.O.Overlay,
                                 "data-test-selector": se.Error,
@@ -3014,7 +3025,7 @@
                                 provider: {
                                     uploadFile: n.setFile
                                 },
-                                allowedFileTypes: [k.a.JPEG]
+                                allowedFileTypes: [j.a.JPEG]
                             };
                             n.props.showModal(J, t)
                         }, n.setFile = function(e) {
@@ -3064,9 +3075,9 @@
                             o = new Date(t.campaign.end_date / 1e6);
                         n.state = {
                             campaignId: t.campaign.id,
-                            startDate: i,
+                            startDate: R(i),
                             startTime: R(i),
-                            endDate: o,
+                            endDate: R(o),
                             endTime: R(o),
                             games: s,
                             isSubmitting: !1,
@@ -3240,16 +3251,16 @@
                             top: 1
                         }
                     }, r.createElement(N.W, {
-                        type: N.Ob.H3
+                        type: N.Pb.H3
                     }, Object(o.d)("Items", "DevDropsCampaignForm"))), r.createElement("fieldset", null, r.createElement(N.Pa, {
                         padding: {
                             y: 1
                         }
                     }, r.createElement("legend", null, r.createElement(N.W, null, Object(o.d)("Select up to {MAX_DROPS_ITEMS_PER_CAMPAIGN} of your currently active items", {
                         MAX_DROPS_ITEMS_PER_CAMPAIGN: te.b
-                    }, "DevDropsCampaignForm")))), r.createElement(N.Ub, {
-                        childWidth: N.Vb.ExtraSmall,
-                        gutterSize: N.Wb.Small,
+                    }, "DevDropsCampaignForm")))), r.createElement(N.Vb, {
+                        childWidth: N.Wb.ExtraSmall,
+                        gutterSize: N.Xb.Small,
                         placeholderItems: 20
                     }, this.props.availableItems.map(function(t, n) {
                         var a = t.translations[t.defaultLanguage],
@@ -3272,7 +3283,7 @@
                             src: te.a + "/items/" + e.props.companyId + "/" + t.id + "-120x120.jpg",
                             type: N.Ma.Checkbox,
                             value: t.id
-                        })), s && r.createElement(N.yb, {
+                        })), s && r.createElement(N.zb, {
                             display: N.X.InlineFlex,
                             alignItems: N.f.Center,
                             justifyContent: N.Wa.Center,
@@ -3305,12 +3316,13 @@
                         state: n
                     }, Object(o.d)("Submit", "DevDropsCampaignForm"))))
                 }, t.prototype.timeWithoutSeconds = function(e, t) {
-                    return new Date(e.getFullYear(), e.getMonth(), e.getDate(), t.getHours(), t.getMinutes())
+                    var n = 0;
+                    return t.getHours() + t.getTimezoneOffset() / 60 > 24 && (n = -1), new Date(e.getFullYear(), e.getMonth(), e.getDate() + n, t.getHours(), t.getMinutes())
                 }, t
             }(r.Component);
-            var de = Object(Y.connect)(null, function(e) {
+            var de = Object(X.connect)(null, function(e) {
                     return Object(l.bindActionCreators)({
-                        showModal: X.d
+                        showModal: Y.d
                     }, e)
                 })(pe),
                 Ee = n("QKmf");
@@ -3349,7 +3361,7 @@
                     }
                 })
             }
-            var he, _e = function(e) {
+            var he, ge = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3383,7 +3395,7 @@
                                 return a.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            e = g(this.props.company), n.label = 1;
+                                            e = _(this.props.company), n.label = 1;
                                         case 1:
                                             return n.trys.push([1, 3, , 4]), [4, W({
                                                 activeOnly: !0,
@@ -3409,9 +3421,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 12, , 13]), t = g(this.props.company), n = T(e, t), [4, Object(D.a)(f.a.PostCampaign)];
+                                            return a.trys.push([0, 12, , 13]), t = _(this.props.company), n = T(e, t), [4, Object(D.a)(f.a.PostCampaign)];
                                         case 1:
-                                            return (r = a.sent()) ? (s = d.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(_.a)(s, {
+                                            return (r = a.sent()) ? (s = d.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(g.a)(s, {
                                                 method: "POST",
                                                 body: JSON.stringify(n),
                                                 headers: {
@@ -3481,8 +3493,8 @@
                                             case 1:
                                                 if (t = a.sent()) return n = {
                                                     campaignID: e,
-                                                    imageType: M.r.LINK_NOTIFICATION,
-                                                    serviceID: g(this.props.company),
+                                                    imageType: F.s.LINK_NOTIFICATION,
+                                                    serviceID: _(this.props.company),
                                                     token: t
                                                 }, [2, this.props.createUploadURLMutation(n)];
                                                 throw new Error("Failed to upload")
@@ -3514,7 +3526,7 @@
                             display: N.X.Flex,
                             justifyContent: N.Wa.Between
                         }, r.createElement(N.W, {
-                            type: N.Ob.H2
+                            type: N.Pb.H2
                         }, Object(o.d)("Drops Campaign", "DevDropsCreateCampaign")), r.createElement(N.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
@@ -3534,11 +3546,11 @@
                         })))) : r.createElement(N.Za, null)
                     }, t
                 }(r.Component),
-                ge = Object(l.compose)(Object(h.b)("DevDropsCreateCampaignPage", {
+                _e = Object(l.compose)(Object(h.b)("DevDropsCreateCampaignPage", {
                     destination: E.a.DevSiteDropsCreateCampaign
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsCreateCampaign
-                }), me(), Object(u.a)(), y.a)(_e),
+                }), me(), Object(u.a)(), y.a)(ge),
                 fe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -3575,7 +3587,7 @@
                             size: 120
                         }) : null
                     }, n.renderErrorMessage = function() {
-                        if (n.props.errorMessage) return r.createElement(N.yb, {
+                        if (n.props.errorMessage) return r.createElement(N.zb, {
                             className: "dev-drops-item-form__error",
                             color: N.O.Overlay,
                             "data-test-selector": he.Error,
@@ -3623,7 +3635,7 @@
                             provider: {
                                 uploadFile: n.setFile
                             },
-                            allowedFileTypes: [k.a.JPEG]
+                            allowedFileTypes: [j.a.JPEG]
                         };
                         n.props.showModal(J, t)
                     }, n.setFile = function(e) {
@@ -3736,7 +3748,7 @@
                         var n = o.a.locales.find(function(e) {
                             return e.locale === t
                         });
-                        if (n) return r.createElement(N.yb, {
+                        if (n) return r.createElement(N.zb, {
                             key: t,
                             padding: {
                                 bottom: 1
@@ -3763,7 +3775,7 @@
                         }, Object(o.d)("Remove", "DevDropsItemForm"))))))
                     }), r.createElement(N.Ja, null, r.createElement(N.P, {
                         cols: 4
-                    }, r.createElement(N.ub, {
+                    }, r.createElement(N.vb, {
                         refDelegate: this.setLocaleSelectorRef
                     }, o.a.locales.filter(function(t) {
                         return !e.state.translations[t.locale]
@@ -3797,7 +3809,7 @@
                     }, r.createElement(N.Ea, {
                         label: Object(o.d)("Default Locale for Item Name", "DevDropsItemForm"),
                         hint: Object(o.d)("The locale to use when no value is provided in the viewer's locale.", "DevDropsItemForm")
-                    }, r.createElement(N.ub, {
+                    }, r.createElement(N.vb, {
                         value: this.state.defaultLocale,
                         onChange: this.setDefaultLocale,
                         "data-test-selector": he.DefaultLocaleSelect
@@ -3826,9 +3838,9 @@
                     }, Object(o.d)("Submit", "DevDropsItemForm"))))
                 }, t
             }(r.Component);
-            var Ie, De, Ne = Object(Y.connect)(null, function(e) {
+            var Ie, De, Ne = Object(X.connect)(null, function(e) {
                     return Object(l.bindActionCreators)({
-                        showModal: X.d
+                        showModal: Y.d
                     }, e)
                 })(Te),
                 Oe = function(e) {
@@ -3842,9 +3854,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 13, , 14]), t = g(this.props.company), [4, Object(D.a)(f.a.CreateItem)];
+                                            return a.trys.push([0, 13, , 14]), t = _(this.props.company), [4, Object(D.a)(f.a.CreateItem)];
                                         case 1:
-                                            return (n = a.sent()) ? (r = I(e, t, n), s = d.a + "/kraken/accounts/" + t + "/items", [4, Object(_.a)(s, {
+                                            return (n = a.sent()) ? (r = I(e, t, n), s = d.a + "/kraken/accounts/" + t + "/items", [4, Object(g.a)(s, {
                                                 method: "POST",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -3917,9 +3929,9 @@
                                                 return [4, Object(D.a)(f.a.PostItemImageUrl)];
                                             case 1:
                                                 if (t = a.sent()) return n = {
-                                                    imageType: M.r.ITEM,
+                                                    imageType: F.s.ITEM,
                                                     itemID: e,
-                                                    serviceID: g(this.props.company),
+                                                    serviceID: _(this.props.company),
                                                     token: t
                                                 }, [2, this.props.createUploadURLMutation(n)];
                                                 throw new Error("Failed to upload")
@@ -3940,7 +3952,7 @@
                             display: N.X.Flex,
                             justifyContent: N.Wa.Between
                         }, r.createElement(N.W, {
-                            type: N.Ob.H2
+                            type: N.Pb.H2
                         }, Object(o.d)("Drops Item", "DevDropsCreateItem")), r.createElement(N.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
@@ -3951,7 +3963,7 @@
                                 md: 5
                             }
                         }, r.createElement(Ne, {
-                            companyId: g(this.props.company),
+                            companyId: _(this.props.company),
                             onCancel: this.onCancel,
                             onSubmit: this.onSubmit,
                             errorMessage: this.state.errorMessage
@@ -4001,7 +4013,7 @@
                                 return a.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            e = g(this.props.company), n.label = 1;
+                                            e = _(this.props.company), n.label = 1;
                                         case 1:
                                             return n.trys.push([1, 3, , 4]), [4, W({
                                                 activeOnly: !0,
@@ -4027,7 +4039,7 @@
                                         case 0:
                                             return a.trys.push([0, 6, , 7]), e = d.a + "/kraken/campaigns/" + this.props.match.params.campaignId, [4, Object(D.a)(f.a.GetCampaignById)];
                                         case 1:
-                                            return (t = a.sent()) ? [4, Object(_.a)(e, {
+                                            return (t = a.sent()) ? [4, Object(g.a)(e, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": t
                                                 }
@@ -4055,9 +4067,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 10, , 11]), t = g(this.props.company), n = T(e, String(t)), [4, Object(D.a)(f.a.PutCampaign)];
+                                            return a.trys.push([0, 10, , 11]), t = _(this.props.company), n = T(e, String(t)), [4, Object(D.a)(f.a.PutCampaign)];
                                         case 1:
-                                            return (r = a.sent()) ? (s = d.a + "/kraken/accounts/" + t + "/campaigns/" + e.id, [4, Object(_.a)(s, {
+                                            return (r = a.sent()) ? (s = d.a + "/kraken/accounts/" + t + "/campaigns/" + e.id, [4, Object(g.a)(s, {
                                                 method: "PUT",
                                                 body: JSON.stringify(n),
                                                 headers: {
@@ -4108,9 +4120,9 @@
                                             if (!this.state.campaign) throw new Error("Failed to upload");
                                             return [4, Object(D.a)(f.a.PostCampaignImageUrl)];
                                         case 1:
-                                            if (e = a.sent()) return t = g(this.props.company), n = {
+                                            if (e = a.sent()) return t = _(this.props.company), n = {
                                                 campaignID: this.state.campaign.id,
-                                                imageType: M.r.LINK_NOTIFICATION,
+                                                imageType: F.s.LINK_NOTIFICATION,
                                                 serviceID: t,
                                                 token: e
                                             }, [2, this.props.createUploadURLMutation(n)];
@@ -4165,7 +4177,7 @@
                             display: N.X.Flex,
                             justifyContent: N.Wa.Between
                         }, r.createElement(N.W, {
-                            type: N.Ob.H2
+                            type: N.Pb.H2
                         }, Object(o.d)("Drops Campaign: {title}", {
                             title: this.state.campaign.item_name
                         }, "DevDropsEditCampaign")), r.createElement(N.z, {
@@ -4212,9 +4224,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 6, , 7]), e = g(this.props.company), t = d.a + "/kraken/accounts/" + e + "/items/" + this.props.match.params.itemId, [4, Object(D.a)(f.a.GetItemByID)];
+                                            return a.trys.push([0, 6, , 7]), e = _(this.props.company), t = d.a + "/kraken/accounts/" + e + "/items/" + this.props.match.params.itemId, [4, Object(D.a)(f.a.GetItemByID)];
                                         case 1:
-                                            return (n = a.sent()) ? [4, Object(_.a)(t, {
+                                            return (n = a.sent()) ? [4, Object(g.a)(t, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": n
                                                 }
@@ -4244,9 +4256,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 10, , 11]), t = g(this.props.company), [4, Object(D.a)(f.a.UpdateItem)];
+                                            return a.trys.push([0, 10, , 11]), t = _(this.props.company), [4, Object(D.a)(f.a.UpdateItem)];
                                         case 1:
-                                            return (n = a.sent()) ? (r = I(e, String(t), n), s = d.a + "/kraken/accounts/" + t + "/items/" + e.item_id, [4, Object(_.a)(s, {
+                                            return (n = a.sent()) ? (r = I(e, String(t), n), s = d.a + "/kraken/accounts/" + t + "/items/" + e.item_id, [4, Object(g.a)(s, {
                                                 method: "PUT",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -4299,7 +4311,7 @@
                                             if (!this.state.item) throw new Error("Failed to upload");
                                             return [4, Object(D.a)(f.a.PostItemImageUrl)];
                                         case 1:
-                                            if (e = a.sent()) return t = g(this.props.company), n = {
+                                            if (e = a.sent()) return t = _(this.props.company), n = {
                                                 imageType: Ie.ITEM,
                                                 itemID: this.state.item.ItemID,
                                                 serviceID: t,
@@ -4356,7 +4368,7 @@
                             display: N.X.Flex,
                             justifyContent: N.Wa.Between
                         }, r.createElement(N.W, {
-                            type: N.Ob.H2
+                            type: N.Pb.H2
                         }, Object(o.d)("Drops Item: {name}", {
                             name: this.state.item.Translations[this.state.item.DefaultLanguage]
                         }, "DevDropsEditItem")), r.createElement(N.z, {
@@ -4370,7 +4382,7 @@
                             }
                         }, r.createElement(Ne, {
                             onSubmit: this.onSubmit,
-                            companyId: g(this.props.company),
+                            companyId: _(this.props.company),
                             item: this.state.item,
                             onCancel: this.onCancel,
                             onFormChange: this.onFormChange,
@@ -4388,9 +4400,9 @@
                     var t = Object(O.b)(R(e.item.createdAt), "MM/DD/YYYY, hh:mm a"),
                         n = Object(O.b)(R(e.item.updatedAt), "MM/DD/YYYY, hh:mm a"),
                         a = "/console/drops/items/" + e.item.id;
-                    return r.createElement(N.Gb, null, r.createElement(N.Db, null, r.createElement(N.U, {
+                    return r.createElement(N.Hb, null, r.createElement(N.Eb, null, r.createElement(N.U, {
                         linkTo: a
-                    }, e.item.translations[e.item.defaultLanguage])), r.createElement(N.Db, null, e.item.id), r.createElement(N.Db, null, t), r.createElement(N.Db, null, n), r.createElement(N.Db, null, e.item.active.toString()))
+                    }, e.item.translations[e.item.defaultLanguage])), r.createElement(N.Eb, null, e.item.id), r.createElement(N.Eb, null, t), r.createElement(N.Eb, null, n), r.createElement(N.Eb, null, e.item.active.toString()))
                 };
             ! function(e) {
                 e[e.Enabled = 0] = "Enabled", e[e.CreationDate = 1] = "CreationDate", e[e.UpdatedDate = 2] = "UpdatedDate", e[e.Name = 3] = "Name"
@@ -4457,12 +4469,12 @@
                                 n.props.onSort(Ce.UpdatedDate, n.state.sortingUpdatedDate)
                             })
                         }, n.toggleSorting = function(e) {
-                            return e === N.vb.Default || e === N.vb.Ascending ? N.vb.Descending : N.vb.Ascending
+                            return e === N.wb.Default || e === N.wb.Ascending ? N.wb.Descending : N.wb.Ascending
                         }, n.state = {
-                            sortingName: N.vb.Default,
-                            sortingEnabled: N.vb.Default,
-                            sortingCreationDate: N.vb.Default,
-                            sortingUpdatedDate: N.vb.Default
+                            sortingName: N.wb.Default,
+                            sortingEnabled: N.wb.Default,
+                            sortingCreationDate: N.wb.Default,
+                            sortingUpdatedDate: N.wb.Default
                         }, n
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
@@ -4485,25 +4497,25 @@
                             onClick: Object(c.c)(c.a.CreateDropsItemProcessStart),
                             linkTo: "/console/drops/items/create",
                             icon: N.pb.Plus
-                        }, Object(o.d)("Create Drops Item", "DevDropsItems"))), r.createElement(N.Bb, null, r.createElement(N.Eb, null, r.createElement(N.Fb, {
+                        }, Object(o.d)("Create Drops Item", "DevDropsItems"))), r.createElement(N.Cb, null, r.createElement(N.Fb, null, r.createElement(N.Gb, {
                             label: Object(o.d)("Item Name", "DevDropsItems"),
                             sorting: this.state.sortingName,
                             onClick: this.sortName
-                        }), r.createElement(N.Fb, {
+                        }), r.createElement(N.Gb, {
                             label: Object(o.d)("Item ID", "DevDropsItems")
-                        }), r.createElement(N.Fb, {
+                        }), r.createElement(N.Gb, {
                             label: Object(o.d)("Creation Date (UTC)", "DevDropsItems"),
                             sorting: this.state.sortingCreationDate,
                             onClick: this.sortCreationDate
-                        }), r.createElement(N.Fb, {
+                        }), r.createElement(N.Gb, {
                             label: Object(o.d)("Last Updated Date (UTC)", "DevDropsItems"),
                             sorting: this.state.sortingUpdatedDate,
                             onClick: this.sortUpdatedDate
-                        }), r.createElement(N.Fb, {
+                        }), r.createElement(N.Gb, {
                             label: Object(o.d)("Enabled", "DevDropsItems"),
                             sorting: this.state.sortingEnabled,
                             onClick: this.sortEnabled
-                        })), r.createElement(N.Cb, null, e)))
+                        })), r.createElement(N.Db, null, e)))
                     }, t
                 }(r.Component),
                 ye = function(e) {
@@ -4522,7 +4534,7 @@
                                             if (this.state.pageCursors[e]) return this.setState({
                                                 currentPage: e
                                             }), [2];
-                                            t = g(this.props.company), a.label = 1;
+                                            t = _(this.props.company), a.label = 1;
                                         case 1:
                                             return a.trys.push([1, 3, , 4]), [4, W({
                                                 companyId: t,
@@ -4550,28 +4562,28 @@
                             var a = t.state.pageCursors[t.state.currentPage].items;
                             switch (e) {
                                 case Ce.Name:
-                                    a = n === N.vb.Ascending ? a.sort(function(e, t) {
+                                    a = n === N.wb.Ascending ? a.sort(function(e, t) {
                                         return e.translations[e.defaultLanguage].localeCompare(t.translations[t.defaultLanguage])
                                     }) : a.sort(function(e, t) {
                                         return t.translations[t.defaultLanguage].localeCompare(e.translations[e.defaultLanguage])
                                     });
                                     break;
                                 case Ce.Enabled:
-                                    a = n === N.vb.Ascending ? a.sort(function(e, t) {
+                                    a = n === N.wb.Ascending ? a.sort(function(e, t) {
                                         return Number(e.active) - Number(t.active)
                                     }) : a.sort(function(e, t) {
                                         return Number(t.active) - Number(e.active)
                                     });
                                     break;
                                 case Ce.CreationDate:
-                                    a = n === N.vb.Ascending ? a.sort(function(e, t) {
+                                    a = n === N.wb.Ascending ? a.sort(function(e, t) {
                                         return e.createdAt.getTime() - t.createdAt.getTime()
                                     }) : a.sort(function(e, t) {
                                         return t.createdAt.getTime() - e.createdAt.getTime()
                                     });
                                     break;
                                 case Ce.UpdatedDate:
-                                    a = n === N.vb.Ascending ? a.sort(function(e, t) {
+                                    a = n === N.wb.Ascending ? a.sort(function(e, t) {
                                         return e.updatedAt.getTime() - t.updatedAt.getTime()
                                     }) : a.sort(function(e, t) {
                                         return t.updatedAt.getTime() - e.updatedAt.getTime()
@@ -4607,14 +4619,14 @@
                         })
                     }, t
                 }(r.Component),
-                Me = Object(l.compose)(Object(h.b)("DevDropsItemsPage", {
+                Fe = Object(l.compose)(Object(h.b)("DevDropsItemsPage", {
                     destination: E.a.DevSiteDropsItems
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsItems
                 }), Object(u.a)())(ye),
-                Fe = n("mLw1");
+                Me = n("mLw1");
             (Pe || (Pe = {})).SubmitButton = "dev-drops-settings-submit";
-            var je = function(e) {
+            var we = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4694,7 +4706,7 @@
                                 bottom: 2
                             }
                         }, r.createElement("header", null, r.createElement(N.Xa, null, r.createElement(N.W, {
-                            type: N.Ob.H2
+                            type: N.Pb.H2
                         }, Object(o.d)("VHS Configuration for Drops", "DevDropsSettings"))), r.createElement(N.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
@@ -4740,8 +4752,8 @@
                         }))), e)))
                     }, t
                 }(r.Component),
-                ke = Object(l.compose)(Object(h.b)("DevDropsSettingsComponent"))(je),
-                we = function(e) {
+                je = Object(l.compose)(Object(h.b)("DevDropsSettingsComponent"))(we),
+                ke = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4762,13 +4774,13 @@
                                             if (!(t = a.sent())) return [3, 5];
                                             a.label = 2;
                                         case 2:
-                                            return a.trys.push([2, 4, , 5]), n = g(this.props.company), r = d.a + "/kraken/service/" + n, s = {
+                                            return a.trys.push([2, 4, , 5]), n = _(this.props.company), r = d.a + "/kraken/service/" + n, s = {
                                                 client_id: e.clientId,
                                                 enabled: e.sendReport,
                                                 endpoint: e.endpoint,
                                                 readable_name: this.props.company.companyName,
                                                 sign_request: !1
-                                            }, [4, Object(_.a)(r, {
+                                            }, [4, Object(g.a)(r, {
                                                 body: JSON.stringify(s),
                                                 method: "PUT",
                                                 headers: {
@@ -4798,7 +4810,7 @@
                                             if (!(e = a.sent())) return [3, 7];
                                             a.label = 2;
                                         case 2:
-                                            return a.trys.push([2, 6, , 7]), t = g(this.props.company), n = d.a + "/kraken/service/" + t, [4, Object(_.a)(n, {
+                                            return a.trys.push([2, 6, , 7]), t = _(this.props.company), n = d.a + "/kraken/service/" + t, [4, Object(g.a)(n, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": e
                                                 }
@@ -4827,11 +4839,11 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.loadSettings()
                     }, t.prototype.render = function() {
-                        return this.props.company ? r.createElement(ke, {
+                        return this.props.company ? r.createElement(je, {
                             onUpdate: this.onUpdate,
                             currentSettings: this.state.settings,
                             submitSuccess: this.state.submitSuccess
-                        }) : r.createElement(Fe.a, {
+                        }) : r.createElement(Me.a, {
                             to: "/request-access"
                         })
                     }, t
@@ -4841,7 +4853,7 @@
                     destination: E.a.DevSiteDropsSettings
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsSettings
-                }), Object(u.a)())(we),
+                }), Object(u.a)())(ke),
                 Ve = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -4852,12 +4864,12 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(N.Ab, null, r.createElement(s.a, {
+                        }, r.createElement(N.Bb, null, r.createElement(s.a, {
                             path: "/console/drops",
                             exact: !0
                         }, function(e) {
                             var t = e.match;
-                            return r.createElement(N.zb, {
+                            return r.createElement(N.Ab, {
                                 linkTo: "/console/drops",
                                 active: Boolean(t)
                             }, Object(o.d)("Campaign Manager", "DevDropsDashboardRoot"))
@@ -4866,7 +4878,7 @@
                             exact: !0
                         }, function(t) {
                             var n = t.match;
-                            return r.createElement(N.zb, {
+                            return r.createElement(N.Ab, {
                                 linkTo: e,
                                 active: Boolean(n)
                             }, Object(o.d)("Item Manager", "DevDropsDashboardRoot"))
@@ -4875,7 +4887,7 @@
                             exact: !0
                         }, function(e) {
                             var t = e.match;
-                            return r.createElement(N.zb, {
+                            return r.createElement(N.Ab, {
                                 onClick: Object(c.c)(c.a.ConfigureDropsSettings),
                                 linkTo: "/console/drops/settings",
                                 active: Boolean(t)
@@ -4887,7 +4899,7 @@
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: e,
-                            component: Me
+                            component: Fe
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops/settings",
@@ -4903,7 +4915,7 @@
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops/create",
-                            component: ge
+                            component: _e
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops/:campaignId",
@@ -5388,6 +5400,7 @@
                     UserBitsUpdates: "user-bits-updates-v1",
                     UserCommerceEvents: "user-commerce-events",
                     UserCrateEvents: "user-crate-events-v1",
+                    UserPropertiesUpdates: "user-properties-update",
                     UserSubscribeEvents: "user-subscribe-events-v1",
                     VideoPlayback: "video-playback",
                     VideoPlaybackById: "video-playback-by-id",

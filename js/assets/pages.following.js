@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [61], {
+    [62], {
         "+U0Y": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -1748,7 +1748,7 @@
                     }, t.prototype.renderSortSelector = function() {
                         if (this.props.hideSortSelector) return null;
                         var e = this.props.selectedSort && Object(c.b)(this.props.selectedSort) || c.a.Newest,
-                            t = r.createElement(u.ub, {
+                            t = r.createElement(u.vb, {
                                 "data-a-target": "video-sort-select",
                                 "data-test-selector": i.SortSelector,
                                 name: "sort",
@@ -1811,7 +1811,7 @@
                             display: l.X.Flex,
                             flexDirection: l.Aa.Row,
                             padding: .5
-                        }, a.createElement(l.yb, {
+                        }, a.createElement(l.zb, {
                             className: "preview-card-game-balloon-row__image-wrapper",
                             flexGrow: 0,
                             flexShrink: 0,
@@ -1821,7 +1821,7 @@
                         }, a.createElement(l.o, {
                             align: l.d.Center,
                             ratio: l.p.BoxArt
-                        }, a.createElement(l.S, i.__assign({}, e))), a.createElement(l.yb, {
+                        }, a.createElement(l.S, i.__assign({}, e))), a.createElement(l.zb, {
                             className: "preview-card-game-balloon-row__image-play-overlay",
                             alignItems: l.f.Center,
                             background: l.r.Overlay,
@@ -1959,7 +1959,7 @@
                 },
                 f = n("N0BP"),
                 k = (n("XA5B"), function(e) {
-                    var t = a.createElement(l.yb, {
+                    var t = a.createElement(l.zb, {
                         className: "preview-card-iconic-image__wrapper",
                         borderRadius: l.x.Small,
                         overflow: l.ab.Hidden
@@ -1994,7 +1994,7 @@
                         "data-test-selector": "top-bar-title-selector",
                         color: l.O.Overlay,
                         bold: !0,
-                        transform: l.Nb.Uppercase
+                        transform: l.Ob.Uppercase
                     }, e.title)), e.subTitle && a.createElement(l.Xa, {
                         display: l.X.InlineFlex
                     }, a.createElement(l.W, {
@@ -2077,7 +2077,7 @@
                         width: 10,
                         height: 10
                     }));
-                    return e.withBackground ? a.createElement(l.yb, {
+                    return e.withBackground ? a.createElement(l.zb, {
                         alignItems: l.f.Center,
                         background: l.r.Overlay,
                         borderRadius: l.x.Small,
@@ -2086,7 +2086,7 @@
                         display: l.X.Flex,
                         fontSize: l.Ca.Size6,
                         justifyContent: l.Wa.Center
-                    }, t, a.createElement(l.W, null, e.value)) : a.createElement(l.yb, {
+                    }, t, a.createElement(l.W, null, e.value)) : a.createElement(l.zb, {
                         className: "preview-card-stat",
                         color: l.O.Overlay,
                         display: l.X.Flex,
@@ -2136,7 +2136,7 @@
                             onBlur: this.handleBlur
                         }), a.createElement("div", i.__assign({}, e, {
                             onClick: this.props.onClick
-                        }), a.createElement(l.yb, {
+                        }), a.createElement(l.zb, {
                             background: l.r.Alt2,
                             overflow: l.ab.Hidden
                         }, a.createElement(l.o, {
@@ -2182,7 +2182,7 @@
                         type: l.V.Inherit,
                         "data-test-selector": "preview-card-titles__primary-link"
                     }), a.createElement(l.W, {
-                        type: l.Ob.H3,
+                        type: l.Pb.H3,
                         fontSize: l.Ca.Size5,
                         lines: 1,
                         bold: !0,
@@ -2195,12 +2195,12 @@
                 T = n("ZbA5"),
                 x = n("QVaV"),
                 I = n("hyVY"),
-                O = n("MXoD"),
-                A = n("0LAi");
+                P = n("MXoD"),
+                O = n("0LAi");
             ! function(e) {
                 e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
             }(b || (b = {}));
-            var P, D, G = function(e) {
+            var A, D, G = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2210,7 +2210,7 @@
                         t = this.props.restriction.canViewRestricted,
                         n = t ? Object(r.d)("unlocked", "VideoPreviewCardRestriction") : Object(r.d)("locked", "VideoPreviewCardRestriction"),
                         i = t ? l.pb.Unlock : l.pb.Lock;
-                    return a.createElement(l.Xa, null, !t && a.createElement(l.yb, {
+                    return a.createElement(l.Xa, null, !t && a.createElement(l.zb, {
                         background: l.r.Overlay,
                         className: "video-preview-card-restriction",
                         color: l.O.Overlay,
@@ -2218,11 +2218,11 @@
                         position: l.fb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
-                        zIndex: l.bc.Default,
+                        zIndex: l.cc.Default,
                         padding: {
                             x: 5
                         },
-                        textAlign: l.Kb.Center,
+                        textAlign: l.Lb.Center,
                         fullWidth: !0,
                         fullHeight: !0,
                         alignItems: l.f.Center,
@@ -2248,21 +2248,21 @@
                         disabled: "" === this.props.restriction.upsellLinkTo,
                         linkTo: this.props.restriction.upsellLinkTo,
                         overlay: !0
-                    }, e))), a.createElement(l.yb, {
+                    }, e))), a.createElement(l.zb, {
                         display: l.X.InlineFlex,
                         position: l.fb.Absolute,
                         attachTop: this.props.attachTop,
                         attachBottom: !this.props.attachTop,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: l.bc.Default,
+                        zIndex: l.cc.Default,
                         fontSize: l.Ca.Size6,
                         background: l.r.Overlay,
                         borderRadius: l.x.Medium,
                         color: l.O.Overlay
-                    }, a.createElement(l.Rb, {
-                        direction: this.props.attachTop ? l.Tb.Bottom : l.Tb.Top,
-                        align: l.Sb.Right,
+                    }, a.createElement(l.Sb, {
+                        direction: this.props.attachTop ? l.Ub.Bottom : l.Ub.Top,
+                        align: l.Tb.Right,
                         label: n
                     }, a.createElement(l.ob, {
                         asset: i,
@@ -2277,15 +2277,15 @@
                 return void 0 !== e.watchedProgressPercent
             }
 
-            function V(e) {
+            function j(e) {
                 return void 0 !== e.clipCreatedByChannelLogin
             }! function(e) {
                 e.Avatar = "preview-card-avatar", e.BoxArt = "preview-card-box-art"
-            }(P || (P = {})),
+            }(A || (A = {})),
             function(e) {
                 e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
             }(D || (D = {}));
-            var j = function(e) {
+            var R = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getTrackingContext = function(e) {
@@ -2299,12 +2299,12 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         return a.createElement("div", i.__assign({
                             className: "preview-card"
-                        }, Object(f.a)(this.props)), a.createElement(l.yb, {
+                        }, Object(f.a)(this.props)), a.createElement(l.zb, {
                             position: l.fb.Relative,
                             borderRadius: l.x.Medium,
                             overflow: l.ab.Hidden
                         }, this.renderVODRestrictionOverlay(), a.createElement(l.U, {
-                            to: Object(O.a)(this.getTrackingContext(g.PageviewContent.VideoThumbnail), this.props.linkTo),
+                            to: Object(P.a)(this.getTrackingContext(g.PageviewContent.VideoThumbnail), this.props.linkTo),
                             onClick: this.props.onThumbnailClick || this.props.onClick,
                             "data-a-target": "preview-card-image-link"
                         }, this.props.thumbnailImageProps && a.createElement(_, {
@@ -2361,7 +2361,7 @@
                             }),
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
-                        }) : V(this.props) ? a.createElement(C, {
+                        }) : j(this.props) ? a.createElement(C, {
                             topLeft: a.createElement(S, {
                                 value: Object(I.b)(this.props.durationInSeconds),
                                 icon: l.pb.Clip,
@@ -2381,7 +2381,7 @@
                             totalVideos: this.props.listPosition.totalVideos
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.getViewCountLabel = function() {
-                        return U(this.props) || V(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
+                        return U(this.props) || j(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
                             viewerCount: this.props.viewCount
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.renderIconicImage = function() {
@@ -2391,10 +2391,10 @@
                             }
                         }, a.createElement(k, {
                             imageProps: this.props.gameBoxArtImageProps,
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(g.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             aspect: l.p.BoxArt,
-                            "data-test-selector": P.BoxArt,
+                            "data-test-selector": A.BoxArt,
                             "data-a-target": "preview-card-boxart-link"
                         })) : (this.props.context === D.SingleGameList || this.props.context === D.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? a.createElement(l.Xa, {
                             margin: {
@@ -2402,20 +2402,20 @@
                             }
                         }, a.createElement(k, {
                             imageProps: this.props.channelImageProps,
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.UserThumbnail), this.props.channelLinkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(g.PageviewContent.UserThumbnail), this.props.channelLinkTo),
                             onClick: this.props.onChannelImageClick || this.props.onChannelLoginClick,
                             aspect: l.p.Aspect1x1,
-                            "data-test-selector": P.Avatar
+                            "data-test-selector": A.Avatar
                         })) : void 0
                     }, t.prototype.renderTitles = function() {
                         var e = null,
                             t = [];
                         return this.shouldShowGameBalloon(this.props) || t.push({
                             text: Object(x.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(g.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
                             onClick: this.props.onChannelLoginClick,
                             automationSelector: "preview-card-channel-link"
-                        }), V(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
+                        }), j(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
                             text: Object(r.d)("Clipped by {userName}", {
                                 userName: this.props.clipCreatedByChannelLogin || ""
                             }, "VideoPreviewCard"),
@@ -2424,13 +2424,13 @@
                             automationSelector: "preview-card-clip-curator-link"
                         }) : U(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== D.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
                             text: this.props.gameTitle,
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(g.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             automationSelector: "preview-card-game-link"
                         }), a.createElement(a.Fragment, null, a.createElement(F, {
                             title: this.props.title,
                             onClick: this.props.onVideoTitleClick || this.props.onClick,
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.VideoTitle), this.props.linkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(g.PageviewContent.VideoTitle), this.props.linkTo),
                             subtitles: t,
                             "data-a-target": "preview-card-title-link"
                         }), e)
@@ -2439,7 +2439,7 @@
                             margin: {
                                 top: .5
                             }
-                        }, a.createElement(A.a, i.__assign({}, this.props.tagListProps, {
+                        }, a.createElement(O.a, i.__assign({}, this.props.tagListProps, {
                             tagNumberLimit: 3
                         }))) : null
                     }, t.prototype.renderVODRestrictionOverlay = function() {
@@ -2470,17 +2470,17 @@
                         }
                     }, t
                 }(a.Component),
-                R = Object(N.b)("PreviewCard", {
+                V = Object(N.b)("PreviewCard", {
                     autoReportInteractive: !0
-                })(j);
+                })(R);
             n.d(t, !1, function() {
-                return P
+                return A
             }), n.d(t, "b", function() {
                 return D
             }), n.d(t, !1, function() {
-                return j
-            }), n.d(t, "a", function() {
                 return R
+            }), n.d(t, "a", function() {
+                return V
             })
         },
         H1ft: function(e, t, n) {
@@ -2663,7 +2663,7 @@
                     }
                 }, i.createElement(r.o, {
                     ratio: e.aspectRatio
-                }, i.createElement(r.yb, {
+                }, i.createElement(r.zb, {
                     background: r.r.Alt2,
                     fullHeight: !0
                 }, t))))
@@ -2999,25 +2999,6 @@
                                 value: "Cursor"
                             }
                         }
-                    }, {
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "isTagsExperiment"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "Boolean"
-                                }
-                            }
-                        }
                     }],
                     directives: [],
                     selectionSet: {
@@ -3291,27 +3272,7 @@
                                                                         value: "tags"
                                                                     },
                                                                     arguments: [],
-                                                                    directives: [{
-                                                                        kind: "Directive",
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "include"
-                                                                        },
-                                                                        arguments: [{
-                                                                            kind: "Argument",
-                                                                            name: {
-                                                                                kind: "Name",
-                                                                                value: "if"
-                                                                            },
-                                                                            value: {
-                                                                                kind: "Variable",
-                                                                                name: {
-                                                                                    kind: "Name",
-                                                                                    value: "isTagsExperiment"
-                                                                                }
-                                                                            }
-                                                                        }]
-                                                                    }],
+                                                                    directives: [],
                                                                     selectionSet: {
                                                                         kind: "SelectionSet",
                                                                         selections: [{
@@ -3366,11 +3327,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 544
+                    end: 484
                 }
             };
             i.loc.source = {
-                body: '#import "twilight/features/tags/models/broadcast-tag-fragment.gql"\nquery FollowingLive_CurrentUser($limit: Int $cursor: Cursor $isTagsExperiment: Boolean!) {\ncurrentUser {\nid\nfollows {\ntotalCount\n}\nfollowedLiveUsers(first: $limit after: $cursor) {\nedges {\nnode {\nid\nlogin\ndisplayName\nprofileImageURL(width: 50)\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 56)\n}\nviewersCount\ntitle\ntype\npreviewImageURL(width: 320 height: 180)\ntags @include(if: $isTagsExperiment) {\n...broadcastTagFragment\n}\n}\n}\ncursor\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}',
+                body: '#import "twilight/features/tags/models/broadcast-tag-fragment.gql"\nquery FollowingLive_CurrentUser($limit: Int $cursor: Cursor) {\ncurrentUser {\nid\nfollows {\ntotalCount\n}\nfollowedLiveUsers(first: $limit after: $cursor) {\nedges {\nnode {\nid\nlogin\ndisplayName\nprofileImageURL(width: 50)\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 56)\n}\nviewersCount\ntitle\ntype\npreviewImageURL(width: 320 height: 180)\ntags {\n...broadcastTagFragment\n}\n}\n}\ncursor\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -3421,22 +3382,22 @@
                     }, t.prototype.render = function() {
                         if (!this.userDataLoaded()) return null;
                         var e = this.props.activeCategory,
-                            t = [d.createElement(y.zb, {
+                            t = [d.createElement(y.Ab, {
                                 key: "following-overview-tab",
                                 active: void 0 === e,
                                 linkTo: "/directory/following",
                                 "data-a-target": "following-overview-tab"
-                            }, Object(m.d)("Overview", "FollowingHeaderTabs")), d.createElement(y.zb, {
+                            }, Object(m.d)("Overview", "FollowingHeaderTabs")), d.createElement(y.Ab, {
                                 key: "following-channels-tab",
                                 active: e === w.SpadeFollowingCategory.Live,
                                 "data-a-target": "following-channels-tab",
                                 linkTo: "/directory/following/live"
-                            }, Object(m.d)("Channels", "FollowingHeaderTabs")), d.createElement(y.zb, {
+                            }, Object(m.d)("Channels", "FollowingHeaderTabs")), d.createElement(y.Ab, {
                                 key: "following-hosts-tab",
                                 active: e === w.SpadeFollowingCategory.Hosts,
                                 "data-a-target": "following-hosts-tab",
                                 linkTo: "/directory/following/hosts"
-                            }, Object(m.d)("Hosts", "FollowingHeaderTabs")), d.createElement(y.zb, {
+                            }, Object(m.d)("Hosts", "FollowingHeaderTabs")), d.createElement(y.Ab, {
                                 key: "following-games-tab",
                                 active: e === w.SpadeFollowingCategory.Games,
                                 "data-a-target": "following-games-tab",
@@ -3447,7 +3408,7 @@
                             margin: {
                                 bottom: 2
                             }
-                        }, d.createElement(y.Ab, null, t))
+                        }, d.createElement(y.Bb, null, t))
                     }, t = s.__decorate([Object(g.b)("FollowingHeaderTabs"), Object(h.a)(C)], t)
                 }(d.Component),
                 N = n("aCAx"),
@@ -3493,7 +3454,7 @@
                         }, n
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return !this.props.data || this.props.data.loading ? null : (this.shuffledGameCards || this.getAndStoreShuffledGameCards(), d.createElement(y.yb, {
+                        return !this.props.data || this.props.data.loading ? null : (this.shuffledGameCards || this.getAndStoreShuffledGameCards(), d.createElement(y.zb, {
                             className: "following-games-modal",
                             background: y.r.Base,
                             padding: 2,
@@ -3511,7 +3472,7 @@
                             margin: {
                                 bottom: 1
                             },
-                            textAlign: y.Kb.Center,
+                            textAlign: y.Lb.Center,
                             display: y.X.Flex,
                             flexDirection: y.Aa.Column,
                             alignContent: y.e.Center
@@ -3536,9 +3497,9 @@
                             suppressScrollX: !0
                         }, d.createElement(y.Xa, {
                             padding: 1
-                        }, d.createElement(y.Ub, {
-                            childWidth: y.Vb.Small,
-                            gutterSize: y.Wb.Small,
+                        }, d.createElement(y.Vb, {
+                            childWidth: y.Wb.Small,
+                            gutterSize: y.Xb.Small,
                             placeholderItems: 99
                         }, this.shuffledGameCards)))), d.createElement(y.Xa, {
                             display: y.X.Flex,
@@ -3562,13 +3523,13 @@
                     })], t)
                 }(d.Component)),
                 I = n("kduP"),
-                O = n("PfQt"),
-                A = n("5myU"),
-                P = n("oJov"),
+                P = n("PfQt"),
+                O = n("5myU"),
+                A = n("oJov"),
                 D = n("AZIu"),
                 G = n("4HIT"),
                 U = n("x/sq"),
-                V = function(e) {
+                j = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -3578,7 +3539,7 @@
                                 bottom: 2
                             }
                         }, d.createElement(y.W, {
-                            type: y.Ob.H4,
+                            type: y.Pb.H4,
                             color: y.O.Base,
                             bold: !0,
                             "data-a-target": "live-games-header"
@@ -3593,7 +3554,7 @@
                                 var n = e.name.toLowerCase(),
                                     i = t.name.toLowerCase();
                                 return n < i ? -1 : n > i ? 1 : 0
-                            })) || 0 === n.length) return d.createElement(y.yb, {
+                            })) || 0 === n.length) return d.createElement(y.zb, {
                             fullWidth: !0,
                             background: y.r.Alt2,
                             display: y.X.Flex,
@@ -3623,12 +3584,12 @@
                             "data-a-target": "find-out-more-button"
                         }, Object(m.d)("Find Out More!", "LiveGames"))));
                         if (this.props.showSample && this.props.directoryWidth && this.props.directoryWidth > 0) {
-                            var i = Object(A.a)(this.props.directoryWidth, 180, 1);
+                            var i = Object(O.a)(this.props.directoryWidth, 180, 1);
                             i < n.length && (n = n.slice(0, i - 1), t = d.createElement(y.Xa, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, d.createElement(O.a, {
+                            }, d.createElement(P.a, {
                                 subHeader: "Live Games",
                                 linkTo: "/directory/following/games",
                                 aspectRatio: y.p.Aspect3x4
@@ -3645,7 +3606,7 @@
                                 margin: {
                                     bottom: 2
                                 }
-                            }, d.createElement(P.a, {
+                            }, d.createElement(A.a, {
                                 linkTo: {
                                     pathname: Object(I.c)(e.name),
                                     state: {
@@ -3666,14 +3627,14 @@
                                 })
                             }))
                         });
-                        return d.createElement("div", null, e, d.createElement(y.Ub, {
-                            gutterSize: y.Wb.Small,
-                            childWidth: y.Vb.Small,
+                        return d.createElement("div", null, e, d.createElement(y.Vb, {
+                            gutterSize: y.Xb.Small,
+                            childWidth: y.Wb.Small,
                             placeholderItems: 30
                         }, a, t))
                     }, t
                 }(d.Component);
-            var j = Object(i.connect)(null, function(e, t) {
+            var R = Object(i.connect)(null, function(e, t) {
                     return Object.assign(Object(a.bindActionCreators)({
                         showFollowGamesModal: function() {
                             return Object(N.d)(x, {
@@ -3681,10 +3642,9 @@
                             })
                         }
                     }, e), t)
-                })(V),
-                R = n("fVj5"),
-                X = n("XHSL"),
-                B = function(e) {
+                })(j),
+                V = n("XHSL"),
+                X = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -3707,7 +3667,7 @@
                         });
                         else {
                             var t = this.props.data.currentUser;
-                            e = d.createElement(j, {
+                            e = d.createElement(R, {
                                 games: t && t.followedGames && t.followedGames.nodes ? t.followedGames.nodes : [],
                                 onFollowChange: this.props.data.refetch
                             })
@@ -3721,13 +3681,12 @@
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t
                 }(d.Component),
-                H = Object(a.compose)(Object(h.a)(X, {
+                B = Object(a.compose)(Object(h.a)(V, {
                     options: {
                         fetchPolicy: "cache-and-network",
                         variables: {
-                            isTagsExperiment: Object(R.a)(),
                             limit: 100,
-                            type: k.w.LIVE
+                            type: k.x.LIVE
                         }
                     }
                 }), Object(g.b)("FollowingGamesPage", {
@@ -3747,27 +3706,27 @@
                             }).length
                         }
                     }
-                }))(B),
-                W = n("oJmH"),
-                M = n("sqxy"),
-                z = n("QVaV");
+                }))(X),
+                H = n("oJmH"),
+                W = n("sqxy"),
+                M = n("QVaV");
             n("7I5b");
 
-            function q() {
+            function z() {
                 return d.createElement(y.Xa, {
                     className: "following__empty",
                     margin: {
                         x: "auto"
                     }
                 }, d.createElement(y.Xa, {
-                    textAlign: y.Kb.Center,
+                    textAlign: y.Lb.Center,
                     margin: {
                         bottom: 2
                     }
                 }, d.createElement(y.W, {
                     color: y.O.Alt2,
                     fontSize: y.Ca.Size4,
-                    type: y.Ob.H4
+                    type: y.Pb.H4
                 }, Object(m.d)("Never miss the Channels you love.", "EmptyChannelList"))), d.createElement(y.Xa, {
                     display: y.X.Flex,
                     justifyContent: y.Wa.Between
@@ -3784,13 +3743,13 @@
                     src: "//s.jtvnw.net/jtv_user_pictures/hosted_images/guide_1.png"
                 }))), d.createElement(y.W, {
                     fontSize: y.Ca.Size5
-                }, Object(m.d)("Like the channel you're watching? Follow it.", "EmptyChannelList")), d.createElement(y.yb, {
+                }, Object(m.d)("Like the channel you're watching? Follow it.", "EmptyChannelList")), d.createElement(y.zb, {
                     className: "following__empty-information-num",
                     position: y.fb.Absolute,
                     attachLeft: !0,
                     attachTop: !0,
                     background: y.r.Alt,
-                    textAlign: y.Kb.Center
+                    textAlign: y.Lb.Center
                 }, Object(m.f)(1))), d.createElement(y.Xa, {
                     className: "following__empty-information",
                     position: y.fb.Relative
@@ -3804,13 +3763,13 @@
                     src: "//s.jtvnw.net/jtv_user_pictures/hosted_images/guide_2.png"
                 }))), d.createElement(y.W, {
                     fontSize: y.Ca.Size5
-                }, Object(m.d)("We'll let you know when the channel goes live again.", "EmptyChannelList")), d.createElement(y.yb, {
+                }, Object(m.d)("We'll let you know when the channel goes live again.", "EmptyChannelList")), d.createElement(y.zb, {
                     className: "following__empty-information-num",
                     position: y.fb.Absolute,
                     attachLeft: !0,
                     attachTop: !0,
                     background: y.r.Alt,
-                    textAlign: y.Kb.Center
+                    textAlign: y.Lb.Center
                 }, Object(m.f)(2))), d.createElement(y.Xa, {
                     className: "following__empty-information",
                     position: y.fb.Relative
@@ -3824,31 +3783,31 @@
                     src: "//s.jtvnw.net/jtv_user_pictures/hosted_images/guide_3.png"
                 }))), d.createElement(y.W, {
                     fontSize: y.Ca.Size5
-                }, Object(m.d)("Come back and watch your favorite channels.", "EmptyChannelList")), d.createElement(y.yb, {
+                }, Object(m.d)("Come back and watch your favorite channels.", "EmptyChannelList")), d.createElement(y.zb, {
                     className: "following__empty-information-num",
                     position: y.fb.Absolute,
                     attachLeft: !0,
                     attachTop: !0,
                     background: y.r.Alt,
-                    textAlign: y.Kb.Center
+                    textAlign: y.Lb.Center
                 }, Object(m.f)(3)))))
             }
-            var Q = n("HrG3");
+            var q = n("HrG3");
 
-            function $(e) {
+            function Q(e) {
                 var t = Object(m.d)("Live hosts", "LiveHosts"),
                     n = d.createElement(y.Xa, {
                         margin: {
                             bottom: 2
                         }
                     }, d.createElement(y.W, {
-                        type: y.Ob.H4,
+                        type: y.Pb.H4,
                         color: y.O.Base,
                         bold: !0,
                         "data-a-target": "live-hosts-header"
                     }, t));
                 if (!e.hosts || 0 === e.hosts.length) return e.followsCount > 0 ? d.createElement("div", null, n, d.createElement(y.Xa, {
-                    textAlign: y.Kb.Center,
+                    textAlign: y.Lb.Center,
                     padding: {
                         y: 5
                     }
@@ -3857,17 +3816,17 @@
                     fontSize: y.Ca.Size4,
                     "data-a-target": "no-hosts-live-text",
                     italic: !0
-                }, Object(m.d)("No Hosts Live", "LiveHosts")))) : d.createElement("div", null, n, !e.showSample && d.createElement(q, null));
+                }, Object(m.d)("No Hosts Live", "LiveHosts")))) : d.createElement("div", null, n, !e.showSample && d.createElement(z, null));
                 var i, a = [];
                 if (e.hosts.forEach(function(e) {
                         e && e.hosting && e.hosting.stream && e.hosting.id && a.push(e)
-                    }), e.maxCount) e.maxCount < a.length && (a = a.slice(0, e.maxCount - 1), i = d.createElement(Q.a, {
+                    }), e.maxCount) e.maxCount < a.length && (a = a.slice(0, e.maxCount - 1), i = d.createElement(q.a, {
                     subHeader: "Live Hosts",
                     onClickViewAll: e.onClickViewAll
                 }));
                 else if (e.showSample && e.directoryWidth && e.directoryWidth > 0) {
-                    var r = Object(A.a)(e.directoryWidth, 240, 2);
-                    r < a.length && (a = a.slice(0, r - 1), i = d.createElement(Q.a, {
+                    var r = Object(O.a)(e.directoryWidth, 240, 2);
+                    r < a.length && (a = a.slice(0, r - 1), i = d.createElement(q.a, {
                         subHeader: t,
                         linkTo: {
                             pathname: "/directory/following/hosts",
@@ -3880,8 +3839,8 @@
                 }
                 var o = a.map(function(e, t) {
                     if (e.hosting && e.hosting.stream && e.hosting.id) {
-                        var n = Object(z.a)(e.hosting.login, e.hosting.displayName, !0),
-                            i = Object(z.a)(e.login, e.displayName, !0),
+                        var n = Object(M.a)(e.hosting.login, e.hosting.displayName, !0),
+                            i = Object(M.a)(e.login, e.displayName, !0),
                             a = Object(m.d)("{hostDisplayName} hosting {hostedDisplayName}", {
                                 hostDisplayName: i,
                                 hostedDisplayName: n
@@ -3896,7 +3855,7 @@
                             margin: {
                                 bottom: 2
                             }
-                        }, d.createElement(M.a, {
+                        }, d.createElement(W.a, {
                             imageSrc: e.hosting.stream.previewImageURL || m.a.defaultStreamPreviewURL,
                             imageAlt: a,
                             viewerCount: e.hosting.stream && e.hosting.stream.viewersCount || 0,
@@ -3938,19 +3897,19 @@
                         }))
                     }
                 });
-                return d.createElement("div", null, n, d.createElement(y.Ub, {
-                    gutterSize: y.Wb.Small,
-                    childWidth: y.Vb.Large,
+                return d.createElement("div", null, n, d.createElement(y.Vb, {
+                    gutterSize: y.Xb.Small,
+                    childWidth: y.Wb.Large,
                     placeholderItems: 20
                 }, o, i))
             }
-            var J = n("rJ4n"),
-                K = 50,
+            var $ = n("rJ4n"),
+                J = 50,
                 Y = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            maxCount: K
+                            maxCount: J
                         }, t.onClickViewAll = function() {
                             return s.__awaiter(t, void 0, void 0, function() {
                                 return s.__generator(this, function(e) {
@@ -3988,7 +3947,7 @@
                         else {
                             var t = this.props.data.currentUser ? this.props.data.currentUser.followedHosts.nodes : [],
                                 n = this.props.data.currentUser ? this.props.data.currentUser.follows.totalCount : 0;
-                            e = d.createElement($, {
+                            e = d.createElement(Q, {
                                 hosts: t,
                                 followsCount: n,
                                 maxCount: this.state.maxCount,
@@ -4004,12 +3963,11 @@
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t
                 }(d.Component),
-                Z = Object(W.compose)(Object(h.a)(J, {
+                Z = Object(H.compose)(Object(h.a)($, {
                     options: function() {
                         return {
                             fetchPolicy: "cache-and-network",
                             variables: {
-                                isTagsExperiment: Object(R.a)(),
                                 limit: 51
                             }
                         }
@@ -4029,23 +3987,23 @@
                         }
                     }
                 }))(Y),
-                ee = n("MJbm"),
-                te = n("RXle");
+                K = n("MJbm"),
+                ee = n("RXle");
 
-            function ne(e) {
+            function te(e) {
                 var t = Object(m.d)("Live channels", "LiveChannels"),
                     n = d.createElement(y.Xa, {
                         margin: {
                             bottom: 2
                         }
                     }, d.createElement(y.W, {
-                        type: y.Ob.H4,
+                        type: y.Pb.H4,
                         color: y.O.Base,
                         bold: !0,
                         "data-a-target": "live-channels-header"
                     }, t));
                 if (null !== e.users && 0 === e.users.length) return e.followsCount > 0 ? d.createElement("div", null, n, d.createElement(y.Xa, {
-                    textAlign: y.Kb.Center,
+                    textAlign: y.Lb.Center,
                     padding: {
                         y: 5
                     }
@@ -4054,15 +4012,15 @@
                     fontSize: y.Ca.Size4,
                     "data-a-target": "no-channels-live-text",
                     italic: !0
-                }, Object(m.d)("No Channels Live", "LiveChannels")))) : d.createElement("div", null, n, d.createElement(q, null));
+                }, Object(m.d)("No Channels Live", "LiveChannels")))) : d.createElement("div", null, n, d.createElement(z, null));
                 var i, a = e.users || [];
-                if (e.maxDisplayCount && e.maxDisplayCount < a.length) a = a.slice(0, e.maxDisplayCount - 1), i = d.createElement(O.a, {
+                if (e.maxDisplayCount && e.maxDisplayCount < a.length) a = a.slice(0, e.maxDisplayCount - 1), i = d.createElement(P.a, {
                     subHeader: "Live Channels",
                     onClickViewAll: e.onClickViewAll
                 });
                 else if (e.showSample && e.directoryWidth && e.directoryWidth > 0) {
-                    var r = Object(A.a)(e.directoryWidth, 240, 2);
-                    r < a.length && (a = a.slice(0, r - 1), i = d.createElement(O.a, {
+                    var r = Object(O.a)(e.directoryWidth, 240, 2);
+                    r < a.length && (a = a.slice(0, r - 1), i = d.createElement(P.a, {
                         subHeader: t,
                         linkTo: "/directory/following/live"
                     }))
@@ -4084,7 +4042,7 @@
                         margin: {
                             bottom: 2
                         }
-                    }, d.createElement(M.a, {
+                    }, d.createElement(W.a, {
                         imageSrc: e.stream && e.stream.previewImageURL || m.a.defaultStreamPreviewURL,
                         imageAlt: e.stream && e.stream.title || "",
                         viewerCount: e.stream && e.stream.viewersCount || 0,
@@ -4113,19 +4071,19 @@
                     }))
                 });
                 if (0 === a.length)
-                    for (var l = 0; l < 5; l++) o.push(d.createElement(te.VideoPreviewCardPlaceholder, {
+                    for (var l = 0; l < 5; l++) o.push(d.createElement(ee.VideoPreviewCardPlaceholder, {
                         key: "live-channels-placeholder-" + l
                     }));
-                return d.createElement("div", null, n, d.createElement(y.Ub, {
-                    gutterSize: y.Wb.Small,
-                    childWidth: y.Vb.Large,
+                return d.createElement("div", null, n, d.createElement(y.Vb, {
+                    gutterSize: y.Xb.Small,
+                    childWidth: y.Wb.Large,
                     placeholderItems: 20
                 }, o, i))
             }
-            var ie = n("GFmA"),
-                ae = n("EJax"),
-                re = n("1ka0"),
-                oe = function(e) {
+            var ne = n("GFmA"),
+                ie = n("EJax"),
+                ae = n("1ka0"),
+                re = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -4138,7 +4096,7 @@
                                     bottom: 2
                                 }
                             }, d.createElement(y.W, {
-                                type: y.Ob.H4,
+                                type: y.Pb.H4,
                                 color: y.O.Base,
                                 bold: !0
                             }, Object(m.d)("Based on your viewing history", "SuggestedVideos"))),
@@ -4146,17 +4104,17 @@
                         if (this.props.data.currentUser.recommendations.videos && (t = this.props.data.currentUser.recommendations.videos.edges.map(function(e) {
                                 return e.node
                             })), this.props.directoryWidth > 0) {
-                            var n = Object(A.a)(this.props.directoryWidth, 240, 2);
+                            var n = Object(O.a)(this.props.directoryWidth, 240, 2);
                             t = t.slice(0, n)
                         }
-                        return d.createElement("div", null, e, d.createElement(ae.b, {
-                            listContext: ie.b.MixedGameAndChannelList,
+                        return d.createElement("div", null, e, d.createElement(ie.b, {
+                            listContext: ne.b.MixedGameAndChannelList,
                             trackingMedium: w.PageviewMedium.Following,
                             trackingContent: w.PageviewContent.SuggestedVideos,
-                            videoCardSize: y.Vb.Large,
+                            videoCardSize: y.Wb.Large,
                             videos: t
                         }))
-                    }, t = s.__decorate([Object(h.a)(re, {
+                    }, t = s.__decorate([Object(h.a)(ae, {
                         options: {
                             fetchPolicy: "network-only",
                             variables: {
@@ -4165,31 +4123,31 @@
                         }
                     }), Object(g.b)("SuggestedVideos")], t)
                 }(d.Component),
-                le = n("lZCe"),
-                se = n("ZS2+"),
-                de = n("D7An"),
-                ce = se.a.wrap(function() {
-                    return n.e(133).then(n.bind(null, "YBPT"))
+                oe = n("lZCe"),
+                le = n("ZS2+"),
+                se = n("D7An"),
+                de = le.a.wrap(function() {
+                    return n.e(134).then(n.bind(null, "YBPT"))
                 }, "LatestVideosFromFollowedCarousel"),
-                ue = function(e) {
+                ce = function(e) {
                     var t = {
                         assignments: {
                             fallback: function() {
                                 return null
                             },
                             enabled: function() {
-                                return d.createElement(ce, s.__assign({}, e))
+                                return d.createElement(de, s.__assign({}, e))
                             }
                         },
                         loader: function() {
                             return d.createElement(y.Za, null)
                         },
-                        name: de.b.FollowingIndexLatestVideosV2
+                        name: se.b.FollowingIndexLatestVideosV2
                     };
-                    return d.createElement(le.a, s.__assign({}, t))
+                    return d.createElement(oe.a, s.__assign({}, t))
                 },
-                me = n("45mq"),
-                pe = function(e) {
+                ue = n("45mq"),
+                me = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4210,38 +4168,38 @@
                             message: Object(m.d)("Error loading data.", "FollowingPage")
                         }) : d.createElement(y.Xa, {
                             padding: 3
-                        }, d.createElement(S, null), d.createElement(ne, {
+                        }, d.createElement(S, null), d.createElement(te, {
                             key: "live-channels",
                             showSample: !0,
                             directoryWidth: this.state.directoryWidth,
                             users: this.props.data.loading ? null : e && e.followedLiveUsers.nodes || [],
                             followsCount: e ? e.follows.totalCount : 0
-                        }), d.createElement(ue, {
+                        }), d.createElement(ce, {
                             tracking: {
                                 content: w.PageviewContent.Following,
                                 location: w.PageviewLocation.Directory,
                                 medium: w.PageviewMedium.Following
                             }
-                        }), this.props.firstPageLoaded && e && e.followedHosts.nodes.length > 0 && d.createElement($, {
+                        }), this.props.firstPageLoaded && e && e.followedHosts.nodes.length > 0 && d.createElement(Q, {
                             key: "live-hosts",
                             showSample: !0,
                             directoryWidth: this.state.directoryWidth,
                             hosts: e ? e.followedHosts.nodes : [],
                             followsCount: e ? e.follows.totalCount : 0
-                        }), this.props.firstPageLoaded && e && d.createElement(j, {
+                        }), this.props.firstPageLoaded && e && d.createElement(R, {
                             key: "live-games",
                             showSample: !0,
                             directoryWidth: this.state.directoryWidth,
                             games: e ? e.followedGames.nodes : [],
                             onFollowChange: this.props.data.refetch
-                        }), this.props.firstPageLoaded && d.createElement(oe, {
+                        }), this.props.firstPageLoaded && d.createElement(re, {
                             directoryWidth: this.state.directoryWidth
-                        }), d.createElement(ee.a, {
+                        }), d.createElement(K.a, {
                             onResize: this.onResize
                         }))
                     }, t.prototype.onRender = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                    }, t = s.__decorate([Object(h.a)(me, {
+                    }, t = s.__decorate([Object(h.a)(ue, {
                         options: {
                             fetchPolicy: "cache-and-network",
                             variables: {
@@ -4260,13 +4218,13 @@
                         }
                     })], t)
                 }(d.Component);
-            var ge = Object(i.connect)(function(e) {
+            var pe = Object(i.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
-                })(pe),
-                ve = n("Uc21");
-            var he = function(e) {
+                })(me),
+                ge = n("Uc21");
+            var ve = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -4294,7 +4252,7 @@
                                 return e.node
                             }));
                             var a = this.props.data.currentUser ? this.props.data.currentUser.follows.totalCount : 0;
-                            e = d.createElement(ne, {
+                            e = d.createElement(te, {
                                 users: i,
                                 followsCount: a
                             }), t = !(!n || !n.followedLiveUsers.pageInfo.hasNextPage)
@@ -4310,13 +4268,12 @@
                         }))
                     }, t.prototype.onRender = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                    }, t = s.__decorate([Object(h.a)(ve, {
+                    }, t = s.__decorate([Object(h.a)(ge, {
                         options: function() {
                             return {
                                 fetchPolicy: "cache-and-network",
                                 variables: {
-                                    limit: 50,
-                                    isTagsExperiment: Object(R.a)()
+                                    limit: 50
                                 }
                             }
                         },
@@ -4327,11 +4284,10 @@
                                         var t = e.data.currentUser.followedLiveUsers.edges,
                                             n = {
                                                 limit: 30,
-                                                cursor: t[t.length - 1].cursor,
-                                                isTagsExperiment: Object(R.a)()
+                                                cursor: t[t.length - 1].cursor
                                             };
                                         return e.data.fetchMore({
-                                            query: ve,
+                                            query: ge,
                                             variables: n,
                                             updateQuery: function(e, t) {
                                                 var n = t.fetchMoreResult;
@@ -4371,7 +4327,7 @@
                         }
                     })], t)
                 }(d.Component),
-                fe = function(e) {
+                he = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -4380,25 +4336,25 @@
                             addPaddingWhenPlayerIsPersisting: !0
                         }), d.createElement(u.a, null, d.createElement(c.a, {
                             path: "/directory/following/live",
-                            component: he
+                            component: ve
                         }), d.createElement(c.a, {
                             path: "/directory/following/hosts",
                             component: Z
                         }), d.createElement(c.a, {
                             path: "/directory/following/games",
-                            component: H
+                            component: B
                         }), d.createElement(c.a, {
                             path: "/",
-                            component: ge
+                            component: pe
                         }))) : (this.props.login(), d.createElement(p.a, {
                             message: Object(m.d)("You must be logged in to view this page", "FollowingRoot")
                         }))
                     }, t
                 }(d.Component),
-                ke = Object(g.b)("FollowingPageRoot", {
+                fe = Object(g.b)("FollowingPageRoot", {
                     autoReportInteractive: !0
-                })(fe);
-            var be = Object(i.connect)(function(e) {
+                })(he);
+            var ke = Object(i.connect)(function(e) {
                 return {
                     isLoggedIn: Object(l.f)(e)
                 }
@@ -4408,9 +4364,9 @@
                         return Object(o.e)(r.a.FollowingPage)
                     }
                 }, e)
-            })(ke);
+            })(fe);
             n.d(t, "FollowingRootPage", function() {
-                return be
+                return ke
             })
         },
         X7a7: function(e, t, n) {
@@ -4495,25 +4451,6 @@
                             name: {
                                 kind: "Name",
                                 value: "FollowedGamesType"
-                            }
-                        }
-                    }, {
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "isTagsExperiment"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "Boolean"
-                                }
                             }
                         }
                     }],
@@ -4653,27 +4590,7 @@
                                                             value: "CONTENT"
                                                         }
                                                     }],
-                                                    directives: [{
-                                                        kind: "Directive",
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "include"
-                                                        },
-                                                        arguments: [{
-                                                            kind: "Argument",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "if"
-                                                            },
-                                                            value: {
-                                                                kind: "Variable",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "isTagsExperiment"
-                                                                }
-                                                            }
-                                                        }]
-                                                    }],
+                                                    directives: [],
                                                     selectionSet: {
                                                         kind: "SelectionSet",
                                                         selections: [{
@@ -4696,11 +4613,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 362
+                    end: 302
                 }
             };
             i.loc.source = {
-                body: '#import "twilight/features/tags/models/tag-fragment.gql"\nquery FollowingGames_CurrentUser($limit: Int $type: FollowedGamesType $isTagsExperiment: Boolean!) {\ncurrentUser {\nid\nfollowedGames(first: $limit type: $type) {\nnodes {\nid\nname\nboxArtURL(width: 285 height: 380)\nviewersCount\ntags(tagType: CONTENT) @include(if: $isTagsExperiment) {\n...tagFragment\n}\n}\n}\n}\n}',
+                body: '#import "twilight/features/tags/models/tag-fragment.gql"\nquery FollowingGames_CurrentUser($limit: Int $type: FollowedGamesType) {\ncurrentUser {\nid\nfollowedGames(first: $limit type: $type) {\nnodes {\nid\nname\nboxArtURL(width: 285 height: 380)\nviewersCount\ntags(tagType: CONTENT) {\n...tagFragment\n}\n}\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -4736,7 +4653,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(m.yb, {
+                        return d.createElement(m.zb, {
                             className: this.getClassNames(),
                             color: m.O.Overlay,
                             background: m.r.Overlay,
@@ -4752,7 +4669,7 @@
                                 right: .5
                             }
                         }, this.getIcon()), d.createElement(m.W, {
-                            type: m.Ob.Span
+                            type: m.Pb.Span
                         }, this.getLabel()))
                     }, t.prototype.getClassNames = function() {
                         var e = {
@@ -4760,7 +4677,7 @@
                         };
                         return e[p[this.props.type]] = !0, s(e)
                     }, t.prototype.getIcon = function() {
-                        return this.props.hosting ? d.createElement(m.yb, {
+                        return this.props.hosting ? d.createElement(m.zb, {
                             borderRadius: m.x.Rounded,
                             className: "stream-type-indicator__hosting-dot",
                             "data-test-selector": o.HostingDot
@@ -5220,9 +5137,9 @@
                         });
                         t = a.createElement(a.Fragment, null, l)
                     }
-                    return a.createElement(c.Ub, {
-                        gutterSize: c.Wb.Small,
-                        childWidth: e.videoCardSize || c.Vb.Large,
+                    return a.createElement(c.Vb, {
+                        gutterSize: c.Xb.Small,
+                        childWidth: e.videoCardSize || c.Wb.Large,
                         placeholderItems: 20
                     }, t, n)
                 },
@@ -5789,11 +5706,11 @@
                         position: o.fb.Absolute,
                         attachTop: !0,
                         attachRight: !0
-                    }, Object(o.cc)(e)), a.createElement(o.Rb, {
-                        direction: o.Tb.Top,
-                        align: o.Sb.Right,
+                    }, Object(o.dc)(e)), a.createElement(o.Sb, {
+                        direction: o.Ub.Top,
+                        align: o.Tb.Right,
                         label: Object(r.d)("Offers in-game Drops", "DropsBadge")
-                    }, a.createElement(o.yb, {
+                    }, a.createElement(o.zb, {
                         className: "drops-badge__drops-icon",
                         position: o.fb.Relative,
                         padding: {
@@ -5804,7 +5721,7 @@
                         },
                         overflow: o.ab.Hidden,
                         color: o.O.Overlay,
-                        zIndex: o.bc.Default
+                        zIndex: o.cc.Default
                     }, a.createElement(o.U, {
                         type: o.V.Inherit,
                         hoverColorInherit: !0,
@@ -5857,7 +5774,7 @@
                     ellipsis: !0
                 }, a.createElement(o.W, {
                     className: "tw-box-art-card__title",
-                    type: o.Ob.H3,
+                    type: o.Pb.H3,
                     fontSize: o.Ca.Size5,
                     lineHeight: o.Ya.Body,
                     ellipsis: !0
@@ -5884,7 +5801,7 @@
                     tabIndex: e.tabIndex
                 }, t)), a.createElement("div", i.__assign({
                     className: "tw-box-art-card"
-                }, Object(o.cc)(e)), a.createElement(o.G, {
+                }, Object(o.dc)(e)), a.createElement(o.G, {
                     key: e.title
                 }, t), e.tagListProps && 0 !== e.tagListProps.tags.length && a.createElement(o.Xa, {
                     margin: {
@@ -5992,25 +5909,6 @@
                             name: {
                                 kind: "Name",
                                 value: "Int"
-                            }
-                        }
-                    }, {
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "isTagsExperiment"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "Boolean"
-                                }
                             }
                         }
                     }],
@@ -6297,27 +6195,7 @@
                                                                         value: "tags"
                                                                     },
                                                                     arguments: [],
-                                                                    directives: [{
-                                                                        kind: "Directive",
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "include"
-                                                                        },
-                                                                        arguments: [{
-                                                                            kind: "Argument",
-                                                                            name: {
-                                                                                kind: "Name",
-                                                                                value: "if"
-                                                                            },
-                                                                            value: {
-                                                                                kind: "Variable",
-                                                                                name: {
-                                                                                    kind: "Name",
-                                                                                    value: "isTagsExperiment"
-                                                                                }
-                                                                            }
-                                                                        }]
-                                                                    }],
+                                                                    directives: [],
                                                                     selectionSet: {
                                                                         kind: "SelectionSet",
                                                                         selections: [{
@@ -6344,11 +6222,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 502
+                    end: 442
                 }
             };
             i.loc.source = {
-                body: '#import "twilight/features/tags/models/broadcast-tag-fragment.gql"\nquery FollowingHosts_CurrentUser($limit: Int $isTagsExperiment: Boolean!) {\ncurrentUser {\nid\nfollows {\ntotalCount\n}\nfollowedHosts(first: $limit) {\nnodes {\nid\nlogin\ndisplayName\nhosting {\nid\nlogin\ndisplayName\nprofileImageURL(width: 50)\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 56)\n}\nviewersCount\ntitle\ntype\npreviewImageURL(width: 320 height: 180)\ntags @include(if: $isTagsExperiment) {\n...broadcastTagFragment\n}\n}\n}\n}\n}\n}\n}',
+                body: '#import "twilight/features/tags/models/broadcast-tag-fragment.gql"\nquery FollowingHosts_CurrentUser($limit: Int) {\ncurrentUser {\nid\nfollows {\ntotalCount\n}\nfollowedHosts(first: $limit) {\nnodes {\nid\nlogin\ndisplayName\nhosting {\nid\nlogin\ndisplayName\nprofileImageURL(width: 50)\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 56)\n}\nviewersCount\ntitle\ntype\npreviewImageURL(width: 320 height: 180)\ntags {\n...broadcastTagFragment\n}\n}\n}\n}\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -6396,7 +6274,7 @@
                                 className: "language-select-menu__balloon"
                             }, d.createElement(p.b, null, d.createElement(f.Xa, {
                                 padding: .5
-                            }, Object(g.b)().map(t.renderLanguageOption)))), d.createElement(f.yb, {
+                            }, Object(g.b)().map(t.renderLanguageOption)))), d.createElement(f.zb, {
                                 background: f.r.Alt,
                                 borderTop: !0,
                                 className: "language-select-menu__footer"
@@ -6484,7 +6362,7 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         return a.createElement("div", i.__assign({
                             className: "live-channel-card"
-                        }, Object(l.cc)(this.props)), a.createElement(r.a, {
+                        }, Object(l.dc)(this.props)), a.createElement(r.a, {
                             context: r.b.MixedGameAndChannelList,
                             title: this.props.title,
                             linkTo: this.props.linkTo,
@@ -6566,7 +6444,7 @@
                         onClick: this.handleInsideDropdownClick
                     }, e)), r.createElement(o.a, {
                         onClickOut: this.handleOnClickOut
-                    }, r.createElement(s.yb, a.__assign({
+                    }, r.createElement(s.zb, a.__assign({
                         background: this.state.isOpen ? s.r.Base : void 0,
                         borderRadius: s.x.Large,
                         className: "inline-dropdown",
@@ -6581,7 +6459,7 @@
                         onClick: this.handleButtonClick,
                         size: s.D.Large,
                         type: s.F.Hollow
-                    }, this.props.buttonLabel)), r.createElement(s.yb, {
+                    }, this.props.buttonLabel)), r.createElement(s.zb, {
                         attachLeft: !0,
                         background: s.r.Base,
                         borderRadius: s.x.Large,
@@ -6593,7 +6471,7 @@
                             y: 1
                         },
                         position: s.fb.Absolute,
-                        zIndex: s.bc.Above
+                        zIndex: s.cc.Above
                     }, e)))
                 }, t.prototype.toggleDropdown = function(e) {
                     void 0 === e && (e = !this.state.isOpen), this.setState({
@@ -6893,7 +6771,7 @@
                         onMouseEnter: this.onMouseEnter,
                         onMouseLeave: this.onMouseLeave,
                         onClick: this.onClick
-                    }, Object(d.cc)(this.props)), a.createElement(d.G, {
+                    }, Object(d.dc)(this.props)), a.createElement(d.G, {
                         key: this.props.title
                     }, a.createElement(d.Xa, {
                         position: d.fb.Relative
@@ -6925,7 +6803,7 @@
                         width: 50,
                         height: 50,
                         asset: d.pb.Heart
-                    })), e ? a.createElement(d.yb, {
+                    })), e ? a.createElement(d.zb, {
                         className: "follow-game-card__overlay " + (t ? "follow-game-card__overlay--followed" : ""),
                         background: d.r.Overlay,
                         color: d.O.Overlay,
@@ -6934,7 +6812,7 @@
                         alignItems: d.f.Center,
                         justifyContent: d.Wa.Center,
                         position: d.fb.Absolute,
-                        zIndex: d.bc.Above,
+                        zIndex: d.cc.Above,
                         attachBottom: !0,
                         attachTop: !0,
                         attachLeft: !0,

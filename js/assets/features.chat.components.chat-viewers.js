@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [181], {
+    [182], {
         A39y: function(e, t, r) {
             "use strict";
             r.r(t);
@@ -41,7 +41,7 @@
                                     "data-username": t,
                                     onClick: e.usernameClickHandler
                                 }, a.createElement(f.W, {
-                                    transform: f.Nb.Capitalize
+                                    transform: f.Ob.Capitalize
                                 }, t)))
                             }),
                             s = "chat-viewers-list-header-" + i;
@@ -139,7 +139,7 @@
                                 display: f.X.Flex,
                                 alignItems: f.f.Center,
                                 justifyContent: f.Wa.Center,
-                                zIndex: f.bc.Above,
+                                zIndex: f.cc.Above,
                                 position: f.fb.Absolute,
                                 attachTop: !0,
                                 attachBottom: !0,
@@ -151,7 +151,7 @@
                             fullWidth: !0,
                             fullHeight: !0,
                             flexShrink: 0,
-                            zIndex: f.bc.Default
+                            zIndex: f.cc.Default
                         }, a.createElement("section", {
                             "aria-labelledby": "chat-viewers__header"
                         }, a.createElement(f.Xa, {

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [198], {
+    [199], {
         DrWK: function(e, t, n) {
             "use strict";
             n.r(t);
@@ -48,14 +48,14 @@
                     }, r.createElement(v.Xa, {
                         display: v.X.Flex,
                         flexDirection: v.Aa.Column
-                    }, r.createElement(v.yb, {
+                    }, r.createElement(v.zb, {
                         margin: {
                             bottom: 1
                         },
                         display: v.X.Flex,
                         flexDirection: v.Aa.Row,
                         alignItems: v.f.Center
-                    }, r.createElement(v.yb, {
+                    }, r.createElement(v.zb, {
                         padding: {
                             right: 1
                         }
@@ -64,20 +64,20 @@
                         width: 50,
                         height: 50
                     })), r.createElement(v.W, {
-                        type: v.Ob.H3
-                    }, Object(d.d)("Earn revenue as an extension developer!", "DevExtensionsEnableMonetization"))), r.createElement(v.yb, {
+                        type: v.Pb.H3
+                    }, Object(d.d)("Earn revenue as an extension developer!", "DevExtensionsEnableMonetization"))), r.createElement(v.zb, {
                         margin: {
                             bottom: 2
                         }
                     }, r.createElement(v.W, {
                         fontSize: v.Ca.Size4
-                    }, Object(d.d)('Hello! Thanks for your interest in extension monetization. To earn revenue for your account or business, you will need to complete a one-time onboarding. If this is a non-monetized extension, return to the previous extensions details screen and indicate "no".', "DevExtensionsEnableMonetization"))), r.createElement(v.yb, {
+                    }, Object(d.d)('Hello! Thanks for your interest in extension monetization. To earn revenue for your account or business, you will need to complete a one-time onboarding. If this is a non-monetized extension, return to the previous extensions details screen and indicate "no".', "DevExtensionsEnableMonetization"))), r.createElement(v.zb, {
                         margin: {
                             bottom: 2
                         }
                     }, r.createElement(v.W, {
                         fontSize: v.Ca.Size4
-                    }, Object(d.d)("In most cases, the interview process takes five minutes. Once completed, you will be eligible to receive revenue for any extensions you create.", "DevExtensionsEnableMonetization"))), r.createElement(v.yb, {
+                    }, Object(d.d)("In most cases, the interview process takes five minutes. Once completed, you will be eligible to receive revenue for any extensions you create.", "DevExtensionsEnableMonetization"))), r.createElement(v.zb, {
                         margin: {
                             bottom: 1
                         }
@@ -85,7 +85,7 @@
                         linkTo: "https://twitch.tv/" + this.props.user.login + "/dashboard/settings/revenue",
                         onClick: Object(g.c)(g.a.ExtensionsEnableMonetizationContinue),
                         "data-test-selector": o.ContinueButton
-                    }, Object(d.d)("Continue to Onboarding", "DevExtensionsEnableMonetization"))), r.createElement(v.yb, {
+                    }, Object(d.d)("Continue to Onboarding", "DevExtensionsEnableMonetization"))), r.createElement(v.zb, {
                         margin: {
                             bottom: 3
                         }
@@ -102,7 +102,7 @@
                             lg: 4,
                             xl: 4
                         }
-                    }, r.createElement(v.yb, {
+                    }, r.createElement(v.zb, {
                         background: v.r.Alt2
                     }, r.createElement(v.Xa, {
                         padding: {
@@ -121,7 +121,7 @@
                         }
                     }, "DevExtensionsEnableMonetization"))), r.createElement(v.Xa, {
                         display: v.X.Block,
-                        textAlign: v.Kb.Center,
+                        textAlign: v.Lb.Center,
                         padding: {
                             left: 2,
                             right: 2,

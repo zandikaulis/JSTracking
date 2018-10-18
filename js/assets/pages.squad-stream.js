@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [36], {
+    [37], {
         "QE/F": function(e, t, n) {
             "use strict";
             n.r(t);
@@ -19,7 +19,7 @@
                 g = n("EOHf"),
                 S = n("Ue10"),
                 h = (n("cvcW"), i.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(126)]).then(n.bind(null, "nRp3"))
+                    return Promise.all([n.e(0), n.e(127)]).then(n.bind(null, "nRp3"))
                 }, "SquadStream")),
                 q = function(e) {
                     function t() {
@@ -33,7 +33,7 @@
                         return Object(b.a)(this.props.match.params.channelLogin) ? c.createElement(c.Fragment, null, c.createElement(f.b, {
                             className: "squad-stream-page__root",
                             suppressScrollX: !0
-                        }), c.createElement(S.yb, {
+                        }), c.createElement(S.zb, {
                             fullWidth: !0,
                             fullHeight: !0,
                             className: "squad-stream-page",
@@ -50,14 +50,14 @@
                 }), Object(s.a)({
                     location: d.PageviewLocation.SquadStreamPage
                 }))(q);
-            var y = Object(a.connect)(null, function(e) {
+            var w = Object(a.connect)(null, function(e) {
                 return Object(o.bindActionCreators)({
                     disableSquadMode: r.B,
                     enableSquadMode: r.E
                 }, e)
             })(v);
             n.d(t, "SquadStreamPage", function() {
-                return y
+                return w
             })
         },
         cvcW: function(e, t, n) {},

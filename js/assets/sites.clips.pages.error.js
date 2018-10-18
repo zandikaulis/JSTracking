@@ -114,11 +114,11 @@
             }), n.d(t, "e", function() {
                 return O
             }), n.d(t, "i", function() {
-                return y
-            }), n.d(t, "h", function() {
                 return C
-            }), n.d(t, "f", function() {
+            }), n.d(t, "h", function() {
                 return x
+            }), n.d(t, "f", function() {
+                return y
             }), n.d(t, "k", function() {
                 return E
             }), n.d(t, "u", function() {
@@ -148,9 +148,9 @@
                 v = "UNKNOWN",
                 b = "FIRST_PARTY",
                 O = "CUSTOM",
-                y = "SPONSORED",
-                C = "THIRD_PARTY",
-                x = "DISPLAY_ONLY",
+                C = "SPONSORED",
+                x = "THIRD_PARTY",
+                y = "DISPLAY_ONLY",
                 E = ((r = {})[i.a.Gray] = "#979797", r[i.a.Purple] = "#9c3ee8", r[i.a.Green] = "#1db2a5", r[i.a.Blue] = "#0099fe", r[i.a.Red] = "#f43021", r[i.a.Yellow] = "#f3a71a", r),
                 k = "bits_sponsored_cheermotes",
                 w = "bits_sponsored_cheermotes_announcement",
@@ -633,7 +633,7 @@
                                 }
                         }
                     }(this.props.match.params.error);
-                    return i.createElement(p.yb, {
+                    return i.createElement(p.zb, {
                         className: "clips-error-page",
                         background: p.r.Base,
                         margin: {
@@ -641,7 +641,7 @@
                         },
                         elevation: 3,
                         color: p.O.Base,
-                        textAlign: p.Kb.Center
+                        textAlign: p.Lb.Center
                     }, i.createElement(p.o, {
                         ratio: p.p.Aspect16x9
                     }, i.createElement(p.Xa, {
@@ -704,11 +704,11 @@
                     if (0 === b.length && (O = p), b += t, p !== v.length - 1 && !h(v[p + 1])) return e;
                     var f = d && Object(o.c)(b, O, d);
                     if (f) return e.concat(f);
-                    var y = n && Object(r.d)(b, n);
-                    if (y) return e.concat(y);
-                    var C = m && Object(a.a)(b, m);
+                    var C = n && Object(r.d)(b, n);
                     if (C) return e.concat(C);
-                    var x = g && function(e, t) {
+                    var x = m && Object(a.a)(b, m);
+                    if (x) return e.concat(x);
+                    var y = g && function(e, t) {
                         var n = e.match(u);
                         if (!n) return l(e, t.sessionUser) ? [{
                             type: i.a.CurrentUserHighlight,
@@ -728,7 +728,7 @@
                             }
                         }), d.length && r.push(Object(s.a)(d)), r
                     }(b, g);
-                    return x ? e.concat([x]) : e.concat(Object(s.a)(b))
+                    return y ? e.concat([y]) : e.concat(Object(s.a)(b))
                 }, []))
             }
 

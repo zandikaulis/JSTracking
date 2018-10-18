@@ -119,7 +119,7 @@
                 i = n("Ue10"),
                 a = (n("KwO+"), function(e) {
                     var t = null;
-                    e.footer && (t = o.createElement(i.yb, {
+                    e.footer && (t = o.createElement(i.zb, {
                         padding: 2,
                         background: i.r.Alt2
                     }, e.footer));
@@ -132,7 +132,7 @@
                         bottomLeft: i.x.Medium,
                         bottomRight: i.x.Medium
                     }, n);
-                    return o.createElement(o.Fragment, null, e.header, o.createElement(i.yb, {
+                    return o.createElement(o.Fragment, null, e.header, o.createElement(i.zb, {
                         background: i.r.Base,
                         margin: {
                             bottom: 4
@@ -160,7 +160,7 @@
                         fontSize: o.Ca.Size6,
                         color: e.error ? o.O.Error : o.O.Base,
                         bold: !0
-                    }, e.title))), r.createElement(o.yb, {
+                    }, e.title))), r.createElement(o.zb, {
                         padding: 2,
                         className: "settings-row",
                         fullWidth: !0
@@ -403,7 +403,7 @@
                         bottom: 2
                     }
                 }, r.createElement(o.W, {
-                    type: o.Ob.H3,
+                    type: o.Pb.H3,
                     fontSize: o.Ca.Size4,
                     color: o.O.Alt,
                     bold: !0
@@ -681,7 +681,7 @@
                             value: this.props.user.login || ""
                         })), i.createElement(w.a, {
                             label: r
-                        }, i.createElement(j.Lb, {
+                        }, i.createElement(j.Mb, {
                             onChange: this.handleReasonChange
                         })))
                     }, t
@@ -705,7 +705,7 @@
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.deleted && this.props.isLoggedIn ? window.location.replace("/user/delete-account") : this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.deleted ? i.createElement(i.Fragment, null, i.createElement(j.yb, {
+                        return this.deleted ? i.createElement(i.Fragment, null, i.createElement(j.zb, {
                             borderBottom: !0
                         }, i.createElement(j.W, {
                             fontSize: j.Ca.Size1
@@ -742,7 +742,7 @@
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.disabled && this.props.isLoggedIn ? window.location.replace("/user/disable-account") : this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.disabled ? i.createElement(i.Fragment, null, i.createElement(j.yb, {
+                        return this.disabled ? i.createElement(i.Fragment, null, i.createElement(j.zb, {
                             borderBottom: !0
                         }, i.createElement(j.W, {
                             fontSize: j.Ca.Size1
@@ -761,17 +761,17 @@
                         configurable: !0
                     }), t
                 }(i.Component),
-                N = Object(f.compose)(Object(k.b)("DisableAccountPage", {
+                M = Object(f.compose)(Object(k.b)("DisableAccountPage", {
                     destination: g.a.DisableAccount
                 }), Object(b.a)({
                     location: v.PageviewLocation.DisableAccount
                 }))(L);
-            var M = Object(d.connect)(function(e) {
+            var N = Object(d.connect)(function(e) {
                     return {
                         isLoggedIn: Object(p.f)(e)
                     }
-                })(N),
-                q = function(e) {
+                })(M),
+                z = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -787,7 +787,7 @@
                             flexWrap: j.Ba.NoWrap
                         }, i.createElement(c.a, null, i.createElement(a.a, {
                             path: "/user/disable-account",
-                            component: M
+                            component: N
                         }), i.createElement(a.a, {
                             path: "/user/delete-account",
                             component: R
@@ -804,16 +804,16 @@
                         })))
                     }, t
                 }(i.Component),
-                B = n("wUQP"),
-                W = n("GxR5"),
-                X = (n("y6xW"), function(e) {
+                q = n("wUQP"),
+                B = n("GxR5"),
+                W = (n("y6xW"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                        Object(B.b)("native_account_recovery") || window.location.replace(Object(W.e)())
+                        Object(q.b)("native_account_recovery") || window.location.replace(Object(B.e)())
                     }, t.prototype.render = function() {
-                        return i.createElement(j.yb, {
+                        return i.createElement(j.zb, {
                             className: "account-recovery__header",
                             alignItems: j.f.Center,
                             color: j.O.Overlay,
@@ -829,16 +829,16 @@
                         }))
                     }, t
                 }(i.Component)),
-                z = Object(f.compose)(Object(k.b)("AccountRecoveryPage", {
+                X = Object(f.compose)(Object(k.b)("AccountRecoveryPage", {
                     destination: g.a.RecoverAccount,
                     autoReportInteractive: !0
                 }), Object(b.a)({
                     location: v.PageviewLocation.RecoverAccount
-                }))(X);
+                }))(W);
             n.d(t, "UserRoot", function() {
-                return q
-            }), n.d(t, "AccountRecoveryPage", function() {
                 return z
+            }), n.d(t, "AccountRecoveryPage", function() {
+                return X
             })
         },
         y6xW: function(e, t, n) {}
