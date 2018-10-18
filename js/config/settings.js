@@ -92,6 +92,7 @@ window.__twilightSettings = {
     "passport_hosts": ["https://api.twitch.tv", "https://passport.twitch.tv", "https://passport-staging.internal.twitch.tv", "https://passport-dev1.internal.twitch.tv", "https://passport-dev2.internal.twitch.tv", "https://passport-dev3.internal.twitch.tv", "https://id.twitch.tv", "https://id-dev.twitch.tv"],
     "payments_recurly_countries": ["US", "FI", "ES", "IE", "SK", "RO", "CA"],
     "payments_spm_enabled_countries": ["US", "CA", "AT", "BE", "BG", "CH", "CZ", "DE", "DK", "EE", "ES", "FI", "FR", "GB", "HR", "HU", "IE", "IT", "LT", "LU", "LV", "MT", "NL", "PL", "PT", "RO", "SE", "SI", "SK"],
+    "paypal_eu_subs": false,
     "persisted_queries_enabled": true,
     "player_routes_exact": ["activate", "bits", "bits-checkout", "directory", "following", "popout", "prime", "store", "subs"],
     "player_routes_startswith": ["bits-checkout/", "checkout/", "collections/", "communities/", "directory/", "event/", "prime/", "products/", "settings/", "store/", "subs/"],
