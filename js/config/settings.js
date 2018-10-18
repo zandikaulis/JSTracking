@@ -639,16 +639,16 @@ window.__twilightSettings = {
         },
         "423a8012-5ee8-4514-99cc-ca3c8babb97c": {
             "name": "TWILIGHT_VOD_KIRK",
-            "v": 4818,
+            "v": 4897,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 34,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 33,
                 "value": "top"
             }, {
-                "weight": 0,
+                "weight": 33,
                 "value": "bottom"
             }]
         },
@@ -1487,13 +1487,13 @@ window.__twilightSettings = {
         },
         "dfbed154-e2f1-41e7-962c-10309e62583a": {
             "name": "TWILIGHT_VOD_PIKE",
-            "v": 4817,
+            "v": 4896,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "variant"
             }]
         },
