@@ -1723,7 +1723,8 @@
                     EMBEDDED_BUILD_ID: void 0,
                     MANIFEST_URL: "https://static.twitchcdn.net/config/manifest.json?v=1",
                     NODE_ENV: "production",
-                    PLAYER_BASE_URL: "https://player.twitch.tv"
+                    PLAYER_BASE_URL: "https://player.twitch.tv",
+                    TEMPO_ADDR: void 0
                 }).RESET_APP_DATA_TIMER && parseInt(Object({
                     API_BASE_URL: void 0,
                     CDN_URL: "https://static.twitchcdn.net/",
@@ -1734,7 +1735,8 @@
                     EMBEDDED_BUILD_ID: void 0,
                     MANIFEST_URL: "https://static.twitchcdn.net/config/manifest.json?v=1",
                     NODE_ENV: "production",
-                    PLAYER_BASE_URL: "https://player.twitch.tv"
+                    PLAYER_BASE_URL: "https://player.twitch.tv",
+                    TEMPO_ADDR: void 0
                 }).RESET_APP_DATA_TIMER, 10) || 12e4;
 
             function u(e, t, o) {
@@ -15672,7 +15674,8 @@
                         EMBEDDED_BUILD_ID: void 0,
                         MANIFEST_URL: "https://static.twitchcdn.net/config/manifest.json?v=1",
                         NODE_ENV: "production",
-                        PLAYER_BASE_URL: "https://player.twitch.tv"
+                        PLAYER_BASE_URL: "https://player.twitch.tv",
+                        TEMPO_ADDR: void 0
                     }).DEBUG), e
                 }(t = e.exports = n("lv48")).log = function() {
                     return "object" == typeof console && console.log && Function.prototype.apply.call(console.log, console, arguments)

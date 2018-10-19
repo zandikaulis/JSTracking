@@ -317,7 +317,7 @@
                 h = n("geRD"),
                 m = n("/aPz"),
                 p = n("2xye"),
-                g = n("KtNF"),
+                g = n("VeT4"),
                 f = n("Ue10"),
                 k = (n("VDBt"), function(e) {
                     function t() {
@@ -706,16 +706,16 @@
                         mapMessageTypesToProps: (a = {}, a[d.PubsubMessageType.ChatNotification] = "userCommerceUpdateEvent", a)
                     }])], t)
                 }(r.Component),
-                I = Object(u.a)(S, {
+                T = Object(u.a)(S, {
                     name: "dismissPurchaseToken"
                 })(Object(u.a)(y, {
                     name: "sharePurchaseTokenInChat"
                 })(E));
-            var T = Object(o.connect)(function(e) {
+            var I = Object(o.connect)(function(e) {
                     return {
                         currentUserID: e.session.user && "" + e.session.user.id || ""
                     }
-                })(I),
+                })(T),
                 R = n("kRBY"),
                 L = n("oJmH"),
                 w = (n("tRzL"), function(e) {
@@ -963,7 +963,7 @@
                         dismissSpace: this.dismissResubSpace
                     })), r.createElement(f.Xa, {
                         className: n
-                    }, r.createElement(T, {
+                    }, r.createElement(I, {
                         channelDisplayName: this.props.channelDisplayName,
                         channelLogin: this.props.channelLogin,
                         bitsConfig: this.props.bitsConfig,

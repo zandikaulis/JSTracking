@@ -4766,7 +4766,6 @@
                                     targetBlank: !0
                                 }, Object(s.d)("Go to Settings", "ChatModeHeader"));
                                 break;
-                            case h.i.BANNED:
                             default:
                                 return null
                         }
@@ -5275,7 +5274,7 @@
                     }, n.chatRestrictedReason = function() {
                         var e;
                         if (!n.props.data || !n.props.data.channel) return null;
-                        var t = ((e = {})[h.i.SUBSCRIBERS_ONLY] = n.props.subsOnlyMode, e[h.i.VERIFIED_ONLY] = !(!n.props.data.channel.chatSettings || !n.props.data.channel.chatSettings.requireVerifiedAccount), e[h.i.FOLLOWERS_ONLY] = !1, e[h.i.SLOW_MODE] = !1, e[h.i.BANNED] = !1, e);
+                        var t = ((e = {})[h.i.SUBSCRIBERS_ONLY] = n.props.subsOnlyMode, e[h.i.VERIFIED_ONLY] = !(!n.props.data.channel.chatSettings || !n.props.data.channel.chatSettings.requireVerifiedAccount), e[h.i.FOLLOWERS_ONLY] = !1, e[h.i.SLOW_MODE] = !1, e);
                         if (n.verifiedOnlyRestrictionsEnabled() || (t[h.i.VERIFIED_ONLY] = !1), n.props.data.channel.self && n.props.data.channel.self.chatRestrictedReasons)
                             for (var a = 0, i = n.props.data.channel.self.chatRestrictedReasons; a < i.length; a++) {
                                 var r = i[a];
@@ -11072,7 +11071,7 @@
                                 id: Object(X.a)("connected")
                             })
                         }, n.onDisconnectedEvent = function(e) {
-                            return n.addMessage(function(e) {
+                            n.props.latencyTracking.reportInteractive(), n.addMessage(function(e) {
                                 return {
                                     type: H.b.Disconnected,
                                     id: Object(X.a)("disconnected"),
@@ -14245,7 +14244,7 @@
                 S = n("tIid"),
                 E = n("ht6z"),
                 _ = n("/aPz"),
-                O = n("D7An"),
+                O = n("KriR"),
                 w = n("W8Fi"),
                 D = n("br9A"),
                 N = n("Ue10"),
@@ -14408,20 +14407,21 @@
                     }, t.prototype.isUserDataReady = function(e) {
                         return e.data && e.data.user && !e.data.loading && !e.data.error
                     }, t.prototype.checkAndDisplaySubscriptionCheckout = function() {
-                        if ("yes" === g.p.experiments.getAssignment(O.b.InstreamCheckout)) {
-                            var e = g.n.get(d.b, "");
-                            if (e) {
-                                var t = this.props.data.user;
-                                if (t && t.subscriptionProducts) t.subscriptionProducts.filter(function(e) {
-                                    return e
-                                }).map(function(e) {
-                                    return e.name
-                                }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
-                                    mysteryGiftCount: Number(g.n.get(d.a, "")),
-                                    productName: e,
-                                    recipientLogin: g.n.get(d.c, "")
-                                }) : this.props.showLoginModal() : Object(d.d)()
-                            }
+                        var e = g.n.get(d.b, "");
+                        if (e) {
+                            var t = this.props.data.user;
+                            if (t && t.subscriptionProducts) t.subscriptionProducts.filter(function(e) {
+                                return e
+                            }).map(function(e) {
+                                return e.name
+                            }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
+                                mysteryGiftCount: Number(g.n.get(d.a, "")),
+                                productName: e,
+                                recipientLogin: g.n.get(d.c, ""),
+                                trackingContext: {
+                                    source: O.c.ChannelSubscribeButton
+                                }
+                            }) : this.props.showLoginModal() : Object(d.d)()
                         }
                     }, t
                 }(r.Component),
@@ -23562,7 +23562,7 @@
                 f = n("eJ65"),
                 v = n("edgk"),
                 b = n("2xye"),
-                y = n("4Wd7"),
+                y = n("3CMh"),
                 k = n("0Log"),
                 C = n("geRD"),
                 S = n("/aPz"),
@@ -23818,7 +23818,7 @@
                 G = n("0HeA"),
                 q = n("yR8l"),
                 Q = n("eDVu"),
-                Y = n("KtNF"),
+                Y = n("VeT4"),
                 K = (n("NAeX"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -34092,7 +34092,7 @@
                         r: "11.5"
                     })))))
                 },
-                S = n("4Wd7"),
+                S = n("3CMh"),
                 E = n("6MRn"),
                 _ = n("4h+t"),
                 O = (n("ky+Y"), function(e) {
@@ -36765,8 +36765,7 @@
                 y = n("0Log"),
                 k = n("/aPz"),
                 C = n("/0dD"),
-                S = n("KtNF"),
-                E = (n("wtKP"), function(e) {
+                S = (n("wtKP"), function(e) {
                     var t = void 0 !== e.progress,
                         n = s.createElement("img", {
                             className: "cheer-badge__image",
@@ -36786,6 +36785,7 @@
                         "data-test-selector": "cheer-progress"
                     }))
                 }),
+                E = n("VeT4"),
                 _ = n("5zXJ"),
                 O = function(e) {
                     var t;
@@ -36798,16 +36798,16 @@
                         margin: {
                             right: .5
                         }
-                    }, s.createElement(E, {
+                    }, s.createElement(S, {
                         badge: e.selfBitsBadge.current
-                    })), e.selfBitsBadge.next && s.createElement(E, {
+                    })), e.selfBitsBadge.next && s.createElement(S, {
                         badge: e.selfBitsBadge.next,
                         progress: e.selfBitsBadge.progress
                     }), e.selfBitsBadge.nextBits && Object(g.d)("Next badge unlocks in {bitsToNextBadge} Bits!", {
                         bitsToNextBadge: e.selfBitsBadge.nextBits - e.selfBitsBadge.totalBits
                     }, "Bits--BalanceFooter")));
                     var n = Object(g.d)("{bitsGem} Log in to see your Bits balance", {
-                        bitsGem: s.createElement(S.a, {
+                        bitsGem: s.createElement(E.a, {
                             count: 100,
                             withImage: !0,
                             bitsConfig: e.bitsConfig,
@@ -36815,7 +36815,7 @@
                         })
                     }, "Bits--BalanceFooter");
                     return void 0 !== e.balance && null !== e.balance && (n = Object(g.d)("You have {currentBits}", {
-                        currentBits: s.createElement(S.a, {
+                        currentBits: s.createElement(E.a, {
                             count: e.balance,
                             withImage: !0,
                             withText: !0,
@@ -36956,7 +36956,7 @@
                         "data-test-selector": "help-link"
                     }, Object(g.d)("How do I cheer?", "Bits--CheermoteIntro"))))
                 },
-                L = n("4Wd7"),
+                L = n("3CMh"),
                 A = function(e) {
                     var t = e.headline || e.prefix + (e.tier || "");
                     if (e.tournament && e.tier <= 0) {

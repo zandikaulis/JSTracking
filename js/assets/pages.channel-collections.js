@@ -2220,6 +2220,82 @@
                 return l
             })
         },
+        KriR: function(e, t, n) {
+            "use strict";
+            n.d(t, "g", function() {
+                return o
+            }), n.d(t, "d", function() {
+                return u
+            }), n.d(t, "f", function() {
+                return a
+            }), n.d(t, "e", function() {
+                return s
+            }), n.d(t, "b", function() {
+                return l
+            }), n.d(t, "a", function() {
+                return c
+            }), n.d(t, "c", function() {
+                return d
+            });
+            var i = n("/7QA"),
+                r = n("2xye");
+
+            function o(e) {
+                var t = {
+                    channel: e.channelLogin,
+                    channel_id: e.channelId,
+                    payment_type: e.paymentType,
+                    payment_flow: e.paymentFlow,
+                    quantity: e.quantity,
+                    action: e.action,
+                    action_detail: e.actionDetail,
+                    product_id: e.productId,
+                    ticket_price: e.ticketPrice,
+                    currency: e.currency,
+                    saved_payment: e.savedPayment,
+                    checkout_source: e.trackingContext.source
+                };
+                e.trackingContext.detail && (t.checkout_source_detail = e.trackingContext.detail), i.o.track(r.SpadeEventType.PaymentFormInteraction, t)
+            }
+            var a, s, l, c, d, u = function() {
+                function e(e) {
+                    this.store = {
+                        savedPaymentAvailable: null,
+                        savedPaymentDisplayed: null
+                    }, this.counter = 0, this.config = {
+                        allowDuplicateEvents: !(!e || !e.allowDuplicateEvents)
+                    }
+                }
+                return e.prototype.get = function(e) {
+                    return this.store[e]
+                }, e.prototype.set = function(e) {
+                    this.store = Object.assign(this.store, e)
+                }, e.prototype.reportEvent = function() {
+                    (0 === this.counter || this.config.allowDuplicateEvents) && (this.counter++, function(e) {
+                        var t = {
+                            saved_payment_available: e.savedPaymentAvailable,
+                            saved_payment_displayed: e.savedPaymentDisplayed
+                        };
+                        i.o.track(r.SpadeEventType.PaymentFormDisplay, t)
+                    }(this.store))
+                }, e
+            }();
+            ! function(e) {
+                e.Failed = "failed", e.Pending = "pending", e.Success = "success"
+            }(a || (a = {})),
+            function(e) {
+                e.MysteryGifting = "mystery_gifting", e.Gifting = "gifting", e.Personal = "personal"
+            }(s || (s = {})),
+            function(e) {
+                e.RecurlyCreditCard = "recurly_credit_card", e.RecurlyPaypal = "recurly_paypal", e.RecurlyPayWithAmazon = "recurly_pay_with_amazon", e.ZuoraCreditCard = "zuora_credit_card", e.Xsolla = "xsolla"
+            }(l || (l = {})),
+            function(e) {
+                e.VendorLoginClick = "vendor_login_click", e.CompletePurchaseClick = "complete_purchase_click", e.PaypalTokenError = "paypal_token_error", e.RadioButtonClick = "radio_button_click", e.TokenError = "token_error", e.PriceChangeAlert = "price_change_alert", e.UnsupportedCountryAlert = "unsupported_country_alert"
+            }(c || (c = {})),
+            function(e) {
+                e.ChannelSubscribeButton = "channel_subscribe_button_click", e.Direct = "direct_url_link", e.EmotePicker = "emote_picker_click", e.Extension = "extension_click", e.TurboSubscribeButton = "turbo_subscribe_button_click", e.ViewerCard = "viewer_card_click"
+            }(d || (d = {}))
+        },
         Lmqf: function(e, t, n) {
             e.exports = n.p + "assets/upsell-center-dark-6c092df86238db84cff1.png"
         },
@@ -2411,7 +2487,7 @@
                 S = n("tIid"),
                 w = n("ht6z"),
                 _ = n("/aPz"),
-                E = n("D7An"),
+                E = n("KriR"),
                 I = n("W8Fi"),
                 N = n("br9A"),
                 x = n("Ue10"),
@@ -2574,20 +2650,21 @@
                     }, t.prototype.isUserDataReady = function(e) {
                         return e.data && e.data.user && !e.data.loading && !e.data.error
                     }, t.prototype.checkAndDisplaySubscriptionCheckout = function() {
-                        if ("yes" === f.p.experiments.getAssignment(E.b.InstreamCheckout)) {
-                            var e = f.n.get(c.b, "");
-                            if (e) {
-                                var t = this.props.data.user;
-                                if (t && t.subscriptionProducts) t.subscriptionProducts.filter(function(e) {
-                                    return e
-                                }).map(function(e) {
-                                    return e.name
-                                }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
-                                    mysteryGiftCount: Number(f.n.get(c.a, "")),
-                                    productName: e,
-                                    recipientLogin: f.n.get(c.c, "")
-                                }) : this.props.showLoginModal() : Object(c.d)()
-                            }
+                        var e = f.n.get(c.b, "");
+                        if (e) {
+                            var t = this.props.data.user;
+                            if (t && t.subscriptionProducts) t.subscriptionProducts.filter(function(e) {
+                                return e
+                            }).map(function(e) {
+                                return e.name
+                            }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
+                                mysteryGiftCount: Number(f.n.get(c.a, "")),
+                                productName: e,
+                                recipientLogin: f.n.get(c.c, ""),
+                                trackingContext: {
+                                    source: E.c.ChannelSubscribeButton
+                                }
+                            }) : this.props.showLoginModal() : Object(c.d)()
                         }
                     }, t
                 }(o.Component),
@@ -6137,7 +6214,8 @@
                             n = e.pubsub.messages.viewCount,
                             i = t.pubsub.messages.viewCount;
                         e.channelLogin !== t.channelLogin ? (this.clearResetOfflineTimer(), this.setState({
-                            live: this.isLiveGraphQL(e)
+                            live: this.isLiveGraphQL(e),
+                            showLiveNotificationsButton: void 0
                         })) : n && n !== i ? (this.clearResetOfflineTimer(), this.resetOfflineTimer = setTimeout(this.onResetOffline, 6e4), this.setState({
                             live: !0
                         })) : this.isLiveGraphQL(e) !== this.isLiveGraphQL(t) && (this.clearResetOfflineTimer(), this.setState({

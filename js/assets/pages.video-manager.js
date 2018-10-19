@@ -1048,7 +1048,7 @@
                             menu: {
                                 show: !0,
                                 canEdit: !0,
-                                canDownload: !1,
+                                canDownload: !0,
                                 canHighlight: !1,
                                 canAddToVodcast: !0,
                                 canAddToCollection: !0

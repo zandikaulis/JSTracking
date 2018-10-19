@@ -4569,7 +4569,7 @@
             }
 
             function i(e) {
-                return "/" + e.channelName + "/dashboard/achievements/" + e.id
+                return "/" + e.channelLogin + "/dashboard/achievements/" + e.id
             }
             n.d(r, "channelAchievements", function() {
                 return a
@@ -5324,58 +5324,48 @@
                 i = n("oJmH"),
                 o = n("/7QA"),
                 s = n("UUve"),
-                c = n("D7An"),
-                l = n("GnwI"),
-                d = n("br9A"),
-                u = n("Ue10"),
-                m = "subscribe-button__subscribe-tier-button",
-                p = function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        if (n.state = {
-                                hasPopupExperiment: !1
-                            }, n.handleClick = function() {
-                                n.openCheckout(), n.props.handleSubAction({
-                                    action: d.a.ClickCheckout,
-                                    checkoutButtonTier: n.props.tierPrice
-                                })
-                            }, n.openCheckout = function() {
-                                n.state.hasPopupExperiment && o.n.set(s.b, n.props.productName)
-                            }, !1 === n.props.targetBlank) return n;
-                        var r = o.p.experiments.getAssignment(c.b.InstreamCheckout);
-                        return n.state = {
-                            hasPopupExperiment: "yes" === r
-                        }, n
+                c = n("GnwI"),
+                l = n("br9A"),
+                d = n("Ue10"),
+                u = "subscribe-button__subscribe-tier-button",
+                m = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.handleClick = function() {
+                            t.openCheckout(), t.props.handleSubAction({
+                                action: l.a.ClickCheckout,
+                                checkoutButtonTier: t.props.tierPrice
+                            })
+                        }, t.openCheckout = function() {
+                            o.n.set(s.b, t.props.productName)
+                        }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         if (this.props.isSubbedToTier) {
                             var e = Object(o.d)("Subscribed", "SubTierButton");
-                            return a.createElement(u.z, {
+                            return a.createElement(d.z, {
                                 ariaLabel: e,
-                                "data-test-selector": m,
+                                "data-test-selector": u,
                                 disabled: !0,
-                                icon: u.pb.Star
+                                icon: d.pb.Star
                             }, e)
                         }
                         var t = this.props.isEsportChannel ? Object(o.d)("Get the All-Access Pass", "SubTierButton") : Object(o.d)("Subscribe Now", "SubTierButton");
-                        return a.createElement(u.z, r.__assign({
+                        return a.createElement(d.z, r.__assign({
                             ariaLabel: t + " " + this.props.tierPrice,
-                            "data-test-selector": m,
-                            linkTo: this.state.hasPopupExperiment ? void 0 : this.props.url,
+                            "data-test-selector": u,
                             onClick: this.handleClick,
                             purchase: this.props.tierPrice
-                        }, Object(u.dc)(this.props), {
-                            targetBlank: void 0 === this.props.targetBlank || this.props.targetBlank
-                        }), t)
+                        }, Object(d.dc)(this.props)), t)
                     }, t
                 }(a.Component),
-                h = Object(i.compose)(Object(l.b)("SubTierButton", {
+                p = Object(i.compose)(Object(c.b)("SubTierButton", {
                     autoReportInteractive: !0
-                }))(p);
+                }))(m);
             n.d(t, !1, function() {
-                return m
+                return u
             }), n.d(t, "a", function() {
-                return h
+                return p
             })
         },
         Epr8: function(e, t, n) {},
@@ -7024,6 +7014,82 @@
             e.exports = n
         },
         JzSO: function(e, t, n) {},
+        KriR: function(e, t, n) {
+            "use strict";
+            n.d(t, "g", function() {
+                return i
+            }), n.d(t, "d", function() {
+                return u
+            }), n.d(t, "f", function() {
+                return o
+            }), n.d(t, "e", function() {
+                return s
+            }), n.d(t, "b", function() {
+                return c
+            }), n.d(t, "a", function() {
+                return l
+            }), n.d(t, "c", function() {
+                return d
+            });
+            var r = n("/7QA"),
+                a = n("2xye");
+
+            function i(e) {
+                var t = {
+                    channel: e.channelLogin,
+                    channel_id: e.channelId,
+                    payment_type: e.paymentType,
+                    payment_flow: e.paymentFlow,
+                    quantity: e.quantity,
+                    action: e.action,
+                    action_detail: e.actionDetail,
+                    product_id: e.productId,
+                    ticket_price: e.ticketPrice,
+                    currency: e.currency,
+                    saved_payment: e.savedPayment,
+                    checkout_source: e.trackingContext.source
+                };
+                e.trackingContext.detail && (t.checkout_source_detail = e.trackingContext.detail), r.o.track(a.SpadeEventType.PaymentFormInteraction, t)
+            }
+            var o, s, c, l, d, u = function() {
+                function e(e) {
+                    this.store = {
+                        savedPaymentAvailable: null,
+                        savedPaymentDisplayed: null
+                    }, this.counter = 0, this.config = {
+                        allowDuplicateEvents: !(!e || !e.allowDuplicateEvents)
+                    }
+                }
+                return e.prototype.get = function(e) {
+                    return this.store[e]
+                }, e.prototype.set = function(e) {
+                    this.store = Object.assign(this.store, e)
+                }, e.prototype.reportEvent = function() {
+                    (0 === this.counter || this.config.allowDuplicateEvents) && (this.counter++, function(e) {
+                        var t = {
+                            saved_payment_available: e.savedPaymentAvailable,
+                            saved_payment_displayed: e.savedPaymentDisplayed
+                        };
+                        r.o.track(a.SpadeEventType.PaymentFormDisplay, t)
+                    }(this.store))
+                }, e
+            }();
+            ! function(e) {
+                e.Failed = "failed", e.Pending = "pending", e.Success = "success"
+            }(o || (o = {})),
+            function(e) {
+                e.MysteryGifting = "mystery_gifting", e.Gifting = "gifting", e.Personal = "personal"
+            }(s || (s = {})),
+            function(e) {
+                e.RecurlyCreditCard = "recurly_credit_card", e.RecurlyPaypal = "recurly_paypal", e.RecurlyPayWithAmazon = "recurly_pay_with_amazon", e.ZuoraCreditCard = "zuora_credit_card", e.Xsolla = "xsolla"
+            }(c || (c = {})),
+            function(e) {
+                e.VendorLoginClick = "vendor_login_click", e.CompletePurchaseClick = "complete_purchase_click", e.PaypalTokenError = "paypal_token_error", e.RadioButtonClick = "radio_button_click", e.TokenError = "token_error", e.PriceChangeAlert = "price_change_alert", e.UnsupportedCountryAlert = "unsupported_country_alert"
+            }(l || (l = {})),
+            function(e) {
+                e.ChannelSubscribeButton = "channel_subscribe_button_click", e.Direct = "direct_url_link", e.EmotePicker = "emote_picker_click", e.Extension = "extension_click", e.TurboSubscribeButton = "turbo_subscribe_button_click", e.ViewerCard = "viewer_card_click"
+            }(d || (d = {}))
+        },
         LLjY: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -15551,31 +15617,32 @@
                 y = n("D7An"),
                 S = n("kRBY"),
                 _ = n("+pBb"),
-                E = n("GzyO"),
-                C = n("OpME"),
-                O = n("cpJf"),
-                T = n("W8Fi"),
-                D = n("0WFu"),
-                N = n("GnwI"),
-                w = n("br9A"),
-                j = n("TSYQ"),
-                I = n("8/mp"),
-                M = n("8Ad5");
+                E = n("KriR"),
+                C = n("GzyO"),
+                O = n("OpME"),
+                T = n("cpJf"),
+                D = n("W8Fi"),
+                N = n("0WFu"),
+                w = n("GnwI"),
+                j = n("br9A"),
+                I = n("TSYQ"),
+                M = n("8/mp"),
+                R = n("8Ad5");
 
-            function R(e) {
-                return e.charCode === M.a.Enter || e.charCode === M.a.Space
+            function A(e) {
+                return e.charCode === R.a.Enter || e.charCode === R.a.Space
             }
-            var A = n("2xye"),
-                x = n("7SjK"),
-                F = n("4rCz"),
-                U = (n("/Kya"), function(e) {
+            var x = n("2xye"),
+                F = n("7SjK"),
+                U = n("4rCz"),
+                P = (n("/Kya"), function(e) {
                     var t = {
                             "emote-picker__tab": !0
                         },
                         n = null,
                         r = null;
                     if (e.channelTabVisible) {
-                        var o = j(a.__assign({}, t, {
+                        var o = I(a.__assign({}, t, {
                             "emote-picker__tab--active": e.channelTabEnabled && e.channelTabSelected,
                             "emote-picker__tab--disabled": !e.channelTabEnabled
                         }));
@@ -15591,10 +15658,10 @@
                             onKeyPress: e.channelTabEnabled ? e.selectChannelTabKeypress : void 0,
                             "data-a-target": "emote-channel-tab",
                             tabIndex: 0
-                        }, i.createElement("span", null, Object(F.d)("Channel", "EmotePicker"))))
+                        }, i.createElement("span", null, Object(U.d)("Channel", "EmotePicker"))))
                     }
                     if (e.allTabVisible) {
-                        var s = j(a.__assign({}, t, {
+                        var s = I(a.__assign({}, t, {
                             "emote-picker__tab--active": !(e.channelTabSelected && e.channelTabEnabled)
                         }));
                         r = i.createElement(c.Pa, {
@@ -15609,7 +15676,7 @@
                             onKeyPress: e.selectAllTabKeypress,
                             "data-a-target": "emote-all-tab",
                             tabIndex: 0
-                        }, i.createElement("span", null, Object(F.d)("All", "EmotePicker"))))
+                        }, i.createElement("span", null, Object(U.d)("All", "EmotePicker"))))
                     }
                     return i.createElement(c.zb, {
                         background: c.r.Base,
@@ -15617,8 +15684,8 @@
                         className: "emote-picker__tabs-container"
                     }, n, r)
                 }),
-                P = n("DnOo"),
-                L = function(e) {
+                L = n("DnOo"),
+                W = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -15644,7 +15711,7 @@
                             },
                             a = {};
                         if (this.props.plan.tier) {
-                            var o = Object(D.a)(this.props.plan.tier);
+                            var o = Object(N.a)(this.props.plan.tier);
                             null === o && (o = 1), a.purchase = Object(s.d)("Tier { tierNum }", {
                                 tierNum: o
                             }, "assembleSubscribeTexts")
@@ -15657,13 +15724,13 @@
                             margin: {
                                 bottom: 1
                             }
-                        }, i.createElement(x.a, {
+                        }, i.createElement(F.a, {
                             emotes: r.emotes,
                             locked: !0
                         }), i.createElement(c.Xa, {
                             margin: 1,
                             alignItems: c.f.Center
-                        }, e), i.createElement(P.a, {
+                        }, e), i.createElement(L.a, {
                             isSubbedToTier: !1,
                             tierPrice: a.purchase || "",
                             handleSubAction: this.props.handleSubAction,
@@ -15673,13 +15740,13 @@
                         }))
                     }, t
                 }(i.Component),
-                W = (n("JGCS"), function(e) {
+                B = (n("JGCS"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.channelTabSelectionKeypress = function(e) {
-                            R(e) && n.selectChannelTab(e)
+                            A(e) && n.selectChannelTab(e)
                         }, n.allTabSelectionKeypress = function(e) {
-                            R(e) && n.selectAllTab(e)
+                            A(e) && n.selectAllTab(e)
                         }, n.onClickEmote = function(e) {
                             if (n.props.onClickEmote) {
                                 n.props.onClickEmote(e.displayName || e.token, e.id);
@@ -15691,10 +15758,10 @@
                                     emoticon_set_id: e.setID,
                                     generated_by: n.props.emotePickerSource
                                 };
-                                s.o.track(A.SpadeEventType.EmotePickerClickthrough, t)
+                                s.o.track(x.SpadeEventType.EmotePickerClickthrough, t)
                             }
                         }, n.closeOnEsc = function(e) {
-                            e.keyCode === M.a.Esc && n.props.toggleVisibility()
+                            e.keyCode === R.a.Esc && n.props.toggleVisibility()
                         }, n.handleFilterChange = function(e) {
                             var t = e.target.value,
                                 r = t.toLowerCase(),
@@ -15730,7 +15797,7 @@
                                 generated_by: e.emotePickerSource,
                                 chatroom_id: e.roomID
                             };
-                            s.o.track(A.SpadeEventType.ViewedEmotePicker, t)
+                            s.o.track(x.SpadeEventType.ViewedEmotePicker, t)
                         }
                         if (!e.gqlError)
                             if (this.state.filter.length > 0) {
@@ -15756,7 +15823,7 @@
                             noTail: !0,
                             show: !0
                         }, i.createElement(c.Xa, {
-                            className: j("emote-picker")
+                            className: I("emote-picker")
                         }, this.renderTabContent(), i.createElement(c.Xa, {
                             className: "emote-picker__controls-container",
                             position: c.fb.Relative
@@ -15770,7 +15837,7 @@
                             placeholder: Object(s.d)("Search for Emotes", "EmotePicker"),
                             type: c.Ta.Text,
                             value: this.state.inputValue
-                        })), i.createElement(U, {
+                        })), i.createElement(P, {
                             allTabVisible: this.props.allEmoteSets.length > 0,
                             channelTabEnabled: this.state.channelTabEnabled,
                             channelTabSelected: this.state.channelTabSelected,
@@ -15808,7 +15875,7 @@
                                     key: "ownedChannelEmoteSets",
                                     padding: 1,
                                     position: c.fb.Relative
-                                }, i.createElement(x.a, {
+                                }, i.createElement(F.a, {
                                     emotes: n,
                                     onClickEmote: this.onClickEmote,
                                     locked: !1
@@ -15820,7 +15887,7 @@
                                     key: "planUpsell:" + t.level,
                                     padding: 1,
                                     position: c.fb.Relative
-                                }, i.createElement(L, {
+                                }, i.createElement(W, {
                                     plan: t,
                                     isEsportChannel: e.props.isEsportChannel,
                                     subscribeTexts: e.props.subscribeTexts,
@@ -15839,13 +15906,13 @@
                                     bottom: 2
                                 },
                                 className: "emote-picker__content-block"
-                            }, i.createElement(x.a, {
+                            }, i.createElement(F.a, {
                                 emotes: n,
                                 onClickEmote: e.onClickEmote,
                                 locked: !1
                             }))
                         });
-                        return t.length > 0 ? i.createElement(I.b, {
+                        return t.length > 0 ? i.createElement(M.b, {
                             className: "emote-picker__tab-content"
                         }, i.createElement(c.Xa, {
                             padding: 1
@@ -15879,11 +15946,11 @@
                             }
                         }
                         return n
-                    }, t = a.__decorate([Object(N.b)("EmotePickerMenu", {
+                    }, t = a.__decorate([Object(w.b)("EmotePickerMenu", {
                         autoReportInteractive: !0
                     })], t)
                 }(i.Component)),
-                B = function(e) {
+                z = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onClickEmote = function(e) {
@@ -15897,7 +15964,7 @@
                                     emoticon_set_id: e.setID,
                                     generated_by: n.props.emotePickerSource
                                 };
-                                s.o.track(A.SpadeEventType.EmotePickerClickthrough, t)
+                                s.o.track(x.SpadeEventType.EmotePickerClickthrough, t)
                             }
                         }, n.handleFilterChange = function(e) {
                             var t = e.target.value,
@@ -15916,9 +15983,9 @@
                                     t.setID = e.id, n.push(t)
                                 })
                             });
-                            var r = Object(E.d)(),
+                            var r = Object(C.d)(),
                                 a = 0 === Object.keys(r).length ? void 0 : r;
-                            return Object(C.f)(n, t, a)
+                            return Object(O.f)(n, t, a)
                         }, n.state = {
                             filter: "",
                             filteredEmotes: [],
@@ -15933,7 +16000,7 @@
                                 generated_by: this.props.emotePickerSource,
                                 chatroom_id: this.props.roomID
                             };
-                            s.o.track(A.SpadeEventType.ViewedEmotePicker, e)
+                            s.o.track(x.SpadeEventType.ViewedEmotePicker, e)
                         }
                     }, t.prototype.render = function() {
                         return i.createElement(o.a, {
@@ -15969,7 +16036,7 @@
                             fullHeight: !0,
                             fullWidth: !0,
                             justifyContent: c.Wa.Center
-                        }, i.createElement(c.Za, null)) : "" !== this.state.filter ? this.renderSearchContent() : i.createElement(I.b, {
+                        }, i.createElement(c.Za, null)) : "" !== this.state.filter ? this.renderSearchContent() : i.createElement(M.b, {
                             className: "emote-picker__tab-content"
                         }, i.createElement(c.Xa, {
                             padding: {
@@ -15991,7 +16058,7 @@
                         }, i.createElement(c.W, {
                             bold: !0,
                             color: c.O.Alt
-                        }, Object(s.d)("Frequently Used Emotes", "EmotePickerCard"))), i.createElement(x.a, {
+                        }, Object(s.d)("Frequently Used Emotes", "EmotePickerCard"))), i.createElement(F.a, {
                             emotes: this.props.frequentlyUsedEmotes,
                             onClickEmote: this.onClickEmote,
                             locked: !1
@@ -16014,7 +16081,7 @@
                         }, i.createElement(c.W, {
                             bold: !0,
                             color: c.O.Alt
-                        }, Object(s.d)("ThisChannel Placeholder", "EmotePickerCard"))), i.createElement(x.a, {
+                        }, Object(s.d)("ThisChannel Placeholder", "EmotePickerCard"))), i.createElement(F.a, {
                             emotes: e,
                             onClickEmote: this.onClickEmote,
                             locked: !1
@@ -16048,7 +16115,7 @@
                         }, i.createElement(c.W, {
                             bold: !0,
                             color: c.O.Alt
-                        }, Object(s.d)("Placeholder for Residual Emotes", "EmotePickerCard"))), i.createElement(x.a, {
+                        }, Object(s.d)("Placeholder for Residual Emotes", "EmotePickerCard"))), i.createElement(F.a, {
                             emotes: n,
                             onClickEmote: this.onClickEmote,
                             locked: !1
@@ -16066,7 +16133,7 @@
                         }, i.createElement(c.W, {
                             bold: !0,
                             color: c.O.Alt
-                        }, Object(s.d)("Global Twitch Emotes", "EmotePickerCard"))), i.createElement(x.a, {
+                        }, Object(s.d)("Global Twitch Emotes", "EmotePickerCard"))), i.createElement(F.a, {
                             emotes: t,
                             onClickEmote: this.onClickEmote,
                             locked: !1
@@ -16077,7 +16144,7 @@
                             inputValue: this.state.inputValue
                         }, "EmotePickerCard")) : i.createElement(c.W, null, Object(s.d)('No Search Results for "{inputValue}"', {
                             inputValue: this.state.inputValue
-                        }, "EmotePickerCard")), i.createElement(I.b, {
+                        }, "EmotePickerCard")), i.createElement(M.b, {
                             className: "emote-picker__tab-content"
                         }, i.createElement(c.Xa, {
                             padding: 1
@@ -16088,20 +16155,20 @@
                                 bottom: 2
                             },
                             className: "emote-picker__content-block"
-                        }, e, i.createElement(x.a, {
+                        }, e, i.createElement(F.a, {
                             emotes: this.state.filteredEmotes,
                             onClickEmote: this.onClickEmote,
                             locked: !1
                         }))))
                     }, t
                 }(i.Component),
-                z = n("DB+C"),
-                V = function(e) {
+                V = n("DB+C"),
+                G = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.handleSubEvent = function(e) {
-                            e.action === w.a.ClickCheckout && n.checkAndDisplaySubscriptionCheckout(), Object(w.b)(a.__assign({}, e, {
-                                action: w.a.ClickCheckout,
+                            e.action === j.a.ClickCheckout && n.checkAndDisplaySubscriptionCheckout(), Object(j.b)(a.__assign({}, e, {
+                                action: j.a.ClickCheckout,
                                 channelID: n.props.channelData && n.props.channelData.user && n.props.channelData.user.id || "",
                                 channelLogin: n.props.channelData && n.props.channelData.user && n.props.channelData.user.displayName || "",
                                 isMenuOpen: null,
@@ -16127,7 +16194,7 @@
                         return r = n.applyDataPropsToState(t, r), n.state = a.__assign({}, r), n
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                        Object(E.b)(), this.checkDataLoaded(this.props) && (this.props.onLoad && this.props.onLoad(this.checkForContent(this.props)), this.props.latencyTracking.reportInteractive())
+                        Object(C.b)(), this.checkDataLoaded(this.props) && (this.props.onLoad && this.props.onLoad(this.checkForContent(this.props)), this.props.latencyTracking.reportInteractive())
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         if (e.emoteSetsData && e.emoteSetsData.error || e.channelData && e.channelData.error) this.setState({
                             gqlError: !0
@@ -16139,14 +16206,14 @@
                             }))
                         }
                         e.visible && !this.props.visible ? (this.props.openEmotePicker(), this.setState({
-                            frequentlyUsedEmotes: Object(E.c)()
+                            frequentlyUsedEmotes: Object(C.c)()
                         })) : this.props.visible && !e.visible && this.props.closeEmotePicker()
                     }, t.prototype.componentWillUnmount = function() {
                         this.props.closeEmotePicker()
                     }, t.prototype.render = function() {
                         if (!this.props.visible) return null;
                         var e = this.props.channelData && this.props.channelData.user && this.props.channelData.user.campaignProperties && this.props.channelData.user.campaignProperties.domains && this.props.channelData.user.campaignProperties.domains.length > 0 || !1,
-                            t = i.createElement(W, {
+                            t = i.createElement(B, {
                                 allEmoteSets: this.state.allEmoteSets,
                                 availableUpsells: this.state.availableUpsells,
                                 channelTabVisible: this.state.channelTabVisible,
@@ -16165,7 +16232,7 @@
                                 subscribeTexts: this.state.subscribeTexts,
                                 toggleVisibility: this.props.toggleVisibility
                             }),
-                            n = i.createElement(B, {
+                            n = i.createElement(z, {
                                 allEmoteSets: this.state.allEmoteSets,
                                 channelID: this.props.channelOwnerID,
                                 channelSubscriptionProducts: this.state.channelSubscriptionProducts,
@@ -16210,16 +16277,16 @@
                                 var o = i[r];
                                 o && o.id && n.ownedSetIDs.add(parseInt(o.id, 10))
                             }
-                            n.allEmoteSets = Object(C.a)(e.emoteSetsData.emoteSets)
+                            n.allEmoteSets = Object(O.a)(e.emoteSetsData.emoteSets)
                         }
                         if (e.channelData && e.channelData.user) {
                             var c = void 0;
                             e.channelData.user.self && e.channelData.user.self.subscriptionBenefit && (c = e.channelData.user.self.subscriptionBenefit.platform), n.availableUpsells = function(e, t, n) {
                                 var r = [];
-                                return !n || n !== O.b.IOS && n !== O.b.Android ? (t.forEach(function(n, i) {
+                                return !n || n !== T.b.IOS && n !== T.b.Android ? (t.forEach(function(n, i) {
                                     var o = n.price;
-                                    0 === i && Object(T.g)(t) && (o = Object(T.c)(t[0])), n.emotes && n.emotes.length && n.emoteSetID && !e.has(parseInt(n.emoteSetID, 10)) && r.push(a.__assign({}, n, {
-                                        emotes: Object(C.e)(n.emotes, n.emoteSetID),
+                                    0 === i && Object(D.g)(t) && (o = Object(D.c)(t[0])), n.emotes && n.emotes.length && n.emoteSetID && !e.has(parseInt(n.emoteSetID, 10)) && r.push(a.__assign({}, n, {
+                                        emotes: Object(O.e)(n.emotes, n.emoteSetID),
                                         level: i,
                                         price: o
                                     }))
@@ -16235,13 +16302,13 @@
                                     }) : t
                                 }).map(function(e) {
                                     return a.__assign({}, e, {
-                                        emotes: Object(C.e)(e.emotes, e.emoteSetID)
+                                        emotes: Object(O.e)(e.emotes, e.emoteSetID)
                                     })
                                 })
                             }(n.ownedSetIDs, e.channelData.user.subscriptionProducts), n.subscribeTexts = function(e) {
                                 for (var t = [], n = 0; n < e.length; n++) {
                                     var r = e[n],
-                                        a = Object(D.a)(r.tier);
+                                        a = Object(N.a)(r.tier);
                                     null === a && (a = 1), 0 === n && r.emotes && r.emotes.length > 1 ? t[n] = Object(s.d)("Unlock {numEmotes, number} Sub Emotes", {
                                         numEmotes: r.emotes.length
                                     }, "assembleSubscribeTexts") : 0 === n ? t[n] = Object(s.d)("Unlock 1 Sub Emote", "assembleSubscribeTexts") : r.emotes && r.emotes.length > 1 ? t[n] = Object(s.d)("{numEmotes, number} Extra Tier {tier} Sub Emotes", {
@@ -16258,7 +16325,7 @@
                                         emotes: []
                                     }], r = 0, a = t; r < a.length; r++) {
                                     var i = a[r];
-                                    i.emotes && i.emoteSetID && e.has(parseInt(i.emoteSetID, 10)) && (n[0].emotes = n[0].emotes.concat(Object(C.e)(i.emotes, i.emoteSetID)))
+                                    i.emotes && i.emoteSetID && e.has(parseInt(i.emoteSetID, 10)) && (n[0].emotes = n[0].emotes.concat(Object(O.e)(i.emotes, i.emoteSetID)))
                                 }
                                 return n[0].emotes.length ? n : []
                             }(n.ownedSetIDs, e.channelData.user.subscriptionProducts)
@@ -16267,22 +16334,23 @@
                     }, t.prototype.subscriptionProductHasEmotes = function(e) {
                         return void 0 !== e.emoteSetID && !!e.emotes && e.emotes.length > 0
                     }, t.prototype.checkAndDisplaySubscriptionCheckout = function() {
-                        if ("yes" === s.p.experiments.getAssignment(y.b.InstreamCheckout)) {
-                            var e = s.n.get(v.b, ""),
-                                t = s.n.get(v.c, ""),
-                                n = s.n.get(v.a, ""),
-                                r = Number(n);
-                            e && (this.props.channelData && this.props.channelData.user && this.props.channelData.user.subscriptionProducts.map(function(e) {
-                                return e.name
-                            }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
-                                recipientLogin: t,
-                                productName: e,
-                                mysteryGiftCount: r
-                            }) : this.props.showLoginModal() : Object(v.d)())
-                        }
+                        var e = s.n.get(v.b, ""),
+                            t = s.n.get(v.c, ""),
+                            n = s.n.get(v.a, ""),
+                            r = Number(n);
+                        e && (this.props.channelData && this.props.channelData.user && this.props.channelData.user.subscriptionProducts.map(function(e) {
+                            return e.name
+                        }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
+                            recipientLogin: t,
+                            productName: e,
+                            mysteryGiftCount: r,
+                            trackingContext: {
+                                source: E.c.EmotePicker
+                            }
+                        }) : this.props.showLoginModal() : Object(v.d)())
                     }, t
                 }(i.Component);
-            var G = Object(d.compose)(Object(r.connect)(function(e) {
+            var X = Object(d.compose)(Object(r.connect)(function(e) {
                     return {
                         currentUserID: e.session.user && e.session.user.id,
                         emotePickerSessionID: e.chat && e.chat.emotePickerSessionID || null,
@@ -16305,7 +16373,7 @@
                             })
                         }
                     }, e)
-                }), Object(h.a)(z, {
+                }), Object(h.a)(V, {
                     name: "channelData",
                     skip: function(e) {
                         return !e.channelOwnerID
@@ -16327,8 +16395,8 @@
                     skip: function(e) {
                         return !e.currentUserID
                     }
-                }]), Object(N.b)("EmotePicker"), Object(g.a)())(V),
-                X = function(e) {
+                }]), Object(w.b)("EmotePicker"), Object(g.a)())(G),
+                H = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -16367,7 +16435,7 @@
                             onClick: this.toggleEmotePicker
                         }));
                         var t = null;
-                        this.hasInteractedOrPageload && (t = i.createElement(G, {
+                        this.hasInteractedOrPageload && (t = i.createElement(X, {
                             channelOwnerID: this.props.channelOwnerID,
                             emotePickerSource: this.props.emotePickerSource,
                             onClickEmote: this.onClickEmote,
@@ -16403,24 +16471,24 @@
                         configurable: !0
                     }), t
                 }(i.Component),
-                H = Object(N.b)("EmotePicker")(X);
-            var q = Object(r.connect)(function(e) {
+                q = Object(w.b)("EmotePicker")(H);
+            var Q = Object(r.connect)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
-            })(H);
+            })(q);
             n.d(t, "a", function() {
-                return q
+                return Q
             }), n.d(t, "c", function() {
-                return G
+                return X
             }), n.d(t, !1, function() {
-                return O.a
+                return T.a
             }), n.d(t, !1, function() {
-                return O.d
+                return T.d
             }), n.d(t, !1, function() {
-                return O.c
+                return T.c
             }), n.d(t, !1, function() {
-                return O.b
+                return T.b
             }), n.d(t, "b", function() {
                 return l
             })
@@ -17446,9 +17514,13 @@
                     function e(e) {
                         Object.assign(this, e), this.progressRatio = e.progress / e.progressCap, this.isComplete = Boolean(this.completedAt)
                     }
-                    return e.prototype.wasRecentlyCompleted = function(e) {
-                        return void 0 === e && (e = new Date), !!this.completedAt && Object(a.isAfter)(this.completedAt, Object(a.subDays)(e, 14))
-                    }, e
+                    return Object.defineProperty(e.prototype, "wasRecentlyCompleted", {
+                        get: function() {
+                            return Boolean(this.completedAt && Object(a.isAfter)(this.completedAt, Object(a.subDays)(new Date, 14)))
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), e
                 }(),
                 o = n("6XEL"),
                 s = function() {
@@ -17470,7 +17542,7 @@
                     }, e.prototype.buildExclusiveGroups = function() {
                         var e = this;
                         this.all.forEach(function(t) {
-                            if (t.wasRecentlyCompleted()) {
+                            if (t.wasRecentlyCompleted) {
                                 var n = e.topRecentlyCompletedMap.get(t.key);
                                 n ? n.level < t.level ? (e.topRecentlyCompletedMap.set(t.key, t), e.pastCompleted.push(n)) : e.pastCompleted.push(t) : e.topRecentlyCompletedMap.set(t.key, t)
                             } else t.isComplete ? e.pastCompleted.push(t) : e.notCompleted.push(t)

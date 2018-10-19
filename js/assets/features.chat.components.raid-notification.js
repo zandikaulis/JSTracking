@@ -10,7 +10,7 @@
             }
 
             function a(e) {
-                return "/" + e.channelName + "/dashboard/achievements/" + e.id
+                return "/" + e.channelLogin + "/dashboard/achievements/" + e.id
             }
             n.d(r, "channelAchievements", function() {
                 return i

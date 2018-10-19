@@ -67,7 +67,7 @@
             }
 
             function o(e) {
-                return "/" + e.channelName + "/dashboard/achievements/" + e.id
+                return "/" + e.channelLogin + "/dashboard/achievements/" + e.id
             }
             r.d(n, "channelAchievements", function() {
                 return a
@@ -2552,17 +2552,17 @@
                                 },
                                 gift_subscriptions: {
                                     categoryLabel: de("gift_subscriptions"),
-                                    color: j.R.Purple11,
+                                    color: j.R.Purple6,
                                     data: []
                                 },
                                 bits: {
                                     categoryLabel: de("bits"),
-                                    color: "#3dc7ae",
+                                    color: "#3dc6ae",
                                     data: []
                                 },
                                 ads: {
                                     categoryLabel: de("ads"),
-                                    color: j.R.Orange,
+                                    color: j.R.Purple11,
                                     data: []
                                 },
                                 timestampLabels: [],

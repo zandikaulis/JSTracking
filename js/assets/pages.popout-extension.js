@@ -624,6 +624,7 @@
             };
             e.exports = n
         },
+        "0iXB": function(e, t, n) {},
         "1+HG": function(e, t) {
             var n = {
                 kind: "Document",
@@ -810,7 +811,7 @@
                 return t ? e + "-" + t : e
             }
         },
-        "4Wd7": function(e, t, n) {
+        "3CMh": function(e, t, n) {
             "use strict";
             var r, o = n("TSYQ"),
                 i = n("q1tI"),
@@ -819,7 +820,7 @@
                 l = n("4h+t"),
                 c = n("x1M1"),
                 u = n("Ue10");
-            n("RRSb");
+            n("0iXB");
             ! function(e) {
                 e[e.Large = 4] = "Large", e[e.Medium = 3] = "Medium", e[e.Small = 2] = "Small", e[e.ExtraSmall = 1.5] = "ExtraSmall", e[e.ExtremelySmall = 1] = "ExtremelySmall"
             }(r || (r = {}));
@@ -1078,6 +1079,7 @@
                 e.Open = "open", e.Close = "close", e.Save = "save"
             }(r || (r = {}))
         },
+        "5cw2": function(e, t, n) {},
         "5zC2": function(e, t, n) {
             "use strict";
             n("k8pZ");
@@ -1684,7 +1686,7 @@
                     e.CUSTOM = "CUSTOM", e.DISPLAY_ONLY = "DISPLAY_ONLY", e.FIRST_PARTY = "FIRST_PARTY", e.RENDER_ONLY = "RENDER_ONLY", e.SPONSORED = "SPONSORED", e.THIRD_PARTY = "THIRD_PARTY", e.UNKNOWN = "UNKNOWN"
                 }(A || (A = {})),
                 function(e) {
-                    e.BANNED = "BANNED", e.FOLLOWERS_ONLY = "FOLLOWERS_ONLY", e.SLOW_MODE = "SLOW_MODE", e.SUBSCRIBERS_ONLY = "SUBSCRIBERS_ONLY", e.VERIFIED_ONLY = "VERIFIED_ONLY"
+                    e.FOLLOWERS_ONLY = "FOLLOWERS_ONLY", e.SLOW_MODE = "SLOW_MODE", e.SUBSCRIBERS_ONLY = "SUBSCRIBERS_ONLY", e.VERIFIED_ONLY = "VERIFIED_ONLY"
                 }(N || (N = {})),
                 function(e) {
                     e.AMOUNT_BELOW_MIN_BITS = "AMOUNT_BELOW_MIN_BITS", e.AUTO_MOD_MESSAGE = "AUTO_MOD_MESSAGE", e.AUTO_MOD_PENDING = "AUTO_MOD_PENDING", e.CHANNEL_BLOCKED_TERMS = "CHANNEL_BLOCKED_TERMS", e.CHANNEL_INELIGIBLE = "CHANNEL_INELIGIBLE", e.EMOTE_AMOUNT_BELOW_MIN_BITS = "EMOTE_AMOUNT_BELOW_MIN_BITS", e.INSUFFICIENT_BALANCE = "INSUFFICIENT_BALANCE", e.INVALID_BITS_AMOUNT = "INVALID_BITS_AMOUNT", e.INVALID_BITS_MESSAGE = "INVALID_BITS_MESSAGE", e.INVALID_EVENT_ID = "INVALID_EVENT_ID", e.MESSAGE_LENGTH_EXCEEDED = "MESSAGE_LENGTH_EXCEEDED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.TOO_LARGE_BITS_EMOTE = "TOO_LARGE_BITS_EMOTE", e.TOO_LARGE_CHEER = "TOO_LARGE_CHEER", e.UNKNOWN = "UNKNOWN", e.USER_BANNED = "USER_BANNED", e.USER_INELIGIBLE = "USER_INELIGIBLE", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_MESSAGE = "ZALGO_MESSAGE"
@@ -1705,7 +1707,7 @@
                     e.AVAILABLE = "AVAILABLE", e.DISMISSED = "DISMISSED", e.ELIGIBLE = "ELIGIBLE", e.REDEEMED = "REDEEMED"
                 }(x || (x = {})),
                 function(e) {
-                    e.DURATION_INVALID = "DURATION_INVALID", e.FORBIDDEN = "FORBIDDEN", e.TARGET_ALREADY_BANNED = "TARGET_ALREADY_BANNED", e.TARGET_IS_ADMIN = "TARGET_IS_ADMIN", e.TARGET_IS_ANONYMOUS = "TARGET_IS_ANONYMOUS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_GLOBAL_MOD = "TARGET_IS_GLOBAL_MOD", e.TARGET_IS_MOD = "TARGET_IS_MOD", e.TARGET_IS_SELF = "TARGET_IS_SELF", e.TARGET_IS_STAFF = "TARGET_IS_STAFF", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
+                    e.DURATION_INVALID = "DURATION_INVALID", e.FORBIDDEN = "FORBIDDEN", e.TARGET_ALREADY_BANNED = "TARGET_ALREADY_BANNED", e.TARGET_IS_ADMIN = "TARGET_IS_ADMIN", e.TARGET_IS_ANONYMOUS = "TARGET_IS_ANONYMOUS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_GLOBAL_MOD = "TARGET_IS_GLOBAL_MOD", e.TARGET_IS_MOD = "TARGET_IS_MOD", e.TARGET_IS_SELF = "TARGET_IS_SELF", e.TARGET_IS_STAFF = "TARGET_IS_STAFF", e.TARGET_IS_VIP = "TARGET_IS_VIP", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
                 }(U || (U = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.SUCCESS = "SUCCESS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_MODERATOR = "TARGET_IS_MODERATOR"
@@ -2067,47 +2069,6 @@
                 return l
             })
         },
-        KtNF: function(e, t, n) {
-            "use strict";
-            var r = n("q1tI"),
-                o = n("/7QA"),
-                i = n("/0dD"),
-                a = n("5zXJ"),
-                s = n("XmgI"),
-                l = n("4h+t"),
-                c = n("x1M1");
-            n("oijJ");
-
-            function u(e) {
-                var t, n = Object(o.d)("{bitsAmount} Bits", {
-                    bitsAmount: e.count.toString()
-                }, "Bits--BitsCount");
-                if (e.withImage) {
-                    var u = e.bitsConfig && e.bitsConfig.indexedActions[a.l];
-                    u || (u = Object(l.b)());
-                    var d = u.orderedTiers.find(function(t) {
-                        return t.bits <= e.count
-                    });
-                    if (d) {
-                        var p = Object(s.c)(d, void 0, e.animated);
-                        return void 0 !== e.themeOverride && (e.themeOverride === i.a.Light ? p.dark = p.light : p.light = p.dark), t = r.createElement(c.a, {
-                            className: "bits-count--img",
-                            sources: p
-                        }), r.createElement("strong", {
-                            className: "bits-count",
-                            "data-a-target": "bits-count"
-                        }, r.createElement("span", null, t, " ", e.withText ? n : ""))
-                    }
-                }
-                return r.createElement("strong", {
-                    className: "bits-count",
-                    "data-a-target": "bits-count"
-                }, r.createElement("span", null, n))
-            }
-            n.d(t, "a", function() {
-                return u
-            })
-        },
         MPK0: function(e, t, n) {},
         NAeX: function(e, t, n) {},
         Oy4H: function(e, t, n) {},
@@ -2426,7 +2387,6 @@
                 }, t
             }(i.Component)
         },
-        RRSb: function(e, t, n) {},
         RcPG: function(e, t, n) {
             "use strict";
             var r;
@@ -2471,7 +2431,7 @@
                 f = n("eJ65"),
                 g = n("edgk"),
                 T = n("2xye"),
-                _ = n("4Wd7"),
+                _ = n("3CMh"),
                 R = n("0Log"),
                 b = n("geRD"),
                 v = n("/aPz"),
@@ -2727,7 +2687,7 @@
                 X = n("0HeA"),
                 Y = n("yR8l"),
                 q = n("eDVu"),
-                K = n("KtNF"),
+                K = n("VeT4"),
                 Q = (n("NAeX"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -3862,6 +3822,47 @@
             })
         },
         VSaV: function(e, t) {},
+        VeT4: function(e, t, n) {
+            "use strict";
+            var r = n("q1tI"),
+                o = n("/7QA"),
+                i = n("/0dD"),
+                a = n("5zXJ"),
+                s = n("XmgI"),
+                l = n("4h+t"),
+                c = n("x1M1");
+            n("5cw2");
+
+            function u(e) {
+                var t, n = Object(o.d)("{bitsAmount} Bits", {
+                    bitsAmount: e.count.toString()
+                }, "Bits--BitsCount");
+                if (e.withImage) {
+                    var u = e.bitsConfig && e.bitsConfig.indexedActions[a.l];
+                    u || (u = Object(l.b)());
+                    var d = u.orderedTiers.find(function(t) {
+                        return t.bits <= e.count
+                    });
+                    if (d) {
+                        var p = Object(s.c)(d, void 0, e.animated);
+                        return void 0 !== e.themeOverride && (e.themeOverride === i.a.Light ? p.dark = p.light : p.light = p.dark), t = r.createElement(c.a, {
+                            className: "bits-count--img",
+                            sources: p
+                        }), r.createElement("strong", {
+                            className: "bits-count",
+                            "data-a-target": "bits-count"
+                        }, r.createElement("span", null, t, " ", e.withText ? n : ""))
+                    }
+                }
+                return r.createElement("strong", {
+                    className: "bits-count",
+                    "data-a-target": "bits-count"
+                }, r.createElement("span", null, n))
+            }
+            n.d(t, "a", function() {
+                return u
+            })
+        },
         WQCf: function(e, t, n) {
             "use strict";
             n.d(t, "d", function() {
@@ -7066,7 +7067,6 @@
                 e.Delete = "delete", e.DeleteAll = "deleteAll", e.ReportUser = "report"
             }(a || (a = {}))
         },
-        oijJ: function(e, t, n) {},
         qCDY: function(e, t, n) {
             "use strict";
             var r = n("mrSG"),

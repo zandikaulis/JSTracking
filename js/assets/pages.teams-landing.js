@@ -526,6 +526,82 @@
                 return i
             })
         },
+        KriR: function(e, n, t) {
+            "use strict";
+            t.d(n, "g", function() {
+                return r
+            }), t.d(n, "d", function() {
+                return u
+            }), t.d(n, "f", function() {
+                return o
+            }), t.d(n, "e", function() {
+                return s
+            }), t.d(n, "b", function() {
+                return l
+            }), t.d(n, "a", function() {
+                return d
+            }), t.d(n, "c", function() {
+                return c
+            });
+            var i = t("/7QA"),
+                a = t("2xye");
+
+            function r(e) {
+                var n = {
+                    channel: e.channelLogin,
+                    channel_id: e.channelId,
+                    payment_type: e.paymentType,
+                    payment_flow: e.paymentFlow,
+                    quantity: e.quantity,
+                    action: e.action,
+                    action_detail: e.actionDetail,
+                    product_id: e.productId,
+                    ticket_price: e.ticketPrice,
+                    currency: e.currency,
+                    saved_payment: e.savedPayment,
+                    checkout_source: e.trackingContext.source
+                };
+                e.trackingContext.detail && (n.checkout_source_detail = e.trackingContext.detail), i.o.track(a.SpadeEventType.PaymentFormInteraction, n)
+            }
+            var o, s, l, d, c, u = function() {
+                function e(e) {
+                    this.store = {
+                        savedPaymentAvailable: null,
+                        savedPaymentDisplayed: null
+                    }, this.counter = 0, this.config = {
+                        allowDuplicateEvents: !(!e || !e.allowDuplicateEvents)
+                    }
+                }
+                return e.prototype.get = function(e) {
+                    return this.store[e]
+                }, e.prototype.set = function(e) {
+                    this.store = Object.assign(this.store, e)
+                }, e.prototype.reportEvent = function() {
+                    (0 === this.counter || this.config.allowDuplicateEvents) && (this.counter++, function(e) {
+                        var n = {
+                            saved_payment_available: e.savedPaymentAvailable,
+                            saved_payment_displayed: e.savedPaymentDisplayed
+                        };
+                        i.o.track(a.SpadeEventType.PaymentFormDisplay, n)
+                    }(this.store))
+                }, e
+            }();
+            ! function(e) {
+                e.Failed = "failed", e.Pending = "pending", e.Success = "success"
+            }(o || (o = {})),
+            function(e) {
+                e.MysteryGifting = "mystery_gifting", e.Gifting = "gifting", e.Personal = "personal"
+            }(s || (s = {})),
+            function(e) {
+                e.RecurlyCreditCard = "recurly_credit_card", e.RecurlyPaypal = "recurly_paypal", e.RecurlyPayWithAmazon = "recurly_pay_with_amazon", e.ZuoraCreditCard = "zuora_credit_card", e.Xsolla = "xsolla"
+            }(l || (l = {})),
+            function(e) {
+                e.VendorLoginClick = "vendor_login_click", e.CompletePurchaseClick = "complete_purchase_click", e.PaypalTokenError = "paypal_token_error", e.RadioButtonClick = "radio_button_click", e.TokenError = "token_error", e.PriceChangeAlert = "price_change_alert", e.UnsupportedCountryAlert = "unsupported_country_alert"
+            }(d || (d = {})),
+            function(e) {
+                e.ChannelSubscribeButton = "channel_subscribe_button_click", e.Direct = "direct_url_link", e.EmotePicker = "emote_picker_click", e.Extension = "extension_click", e.TurboSubscribeButton = "turbo_subscribe_button_click", e.ViewerCard = "viewer_card_click"
+            }(c || (c = {}))
+        },
         QjI3: function(e, n, t) {
             "use strict";
             var i, a = t("mrSG"),
@@ -534,8 +610,8 @@
                 s = t("fvjX"),
                 l = t("ZS2+"),
                 d = t("UUve"),
-                u = t("1/iK"),
-                c = t("aCAx"),
+                c = t("1/iK"),
+                u = t("aCAx"),
                 m = t("kRBY"),
                 p = t("GnwI"),
                 v = t("oJmH"),
@@ -546,10 +622,10 @@
                 h = t("yR8l"),
                 y = t("x7UT"),
                 S = t("3Bft"),
-                N = t("tIid"),
-                _ = t("ht6z"),
+                _ = t("tIid"),
+                N = t("ht6z"),
                 C = t("/aPz"),
-                w = t("D7An"),
+                w = t("KriR"),
                 F = t("W8Fi"),
                 E = t("br9A"),
                 I = t("Ue10"),
@@ -591,7 +667,7 @@
                             var t = n.props.data,
                                 i = t.user,
                                 a = !!(i && i.self && i.self.subscriptionBenefit),
-                                r = t.requestInfo && Object(_.a)(t.requestInfo.countryCode);
+                                r = t.requestInfo && Object(N.a)(t.requestInfo.countryCode);
                             Object(E.b)({
                                 action: e.action || "",
                                 channelLogin: n.props.channelLogin || "",
@@ -641,23 +717,23 @@
                             return e
                         });
                         if (0 === o.length) return null;
-                        if (this.props.hideEsportsSubscription && Object(N.a)(n.id || "", this.props.sessionUser)) return null;
-                        var s = e.requestInfo && Object(_.a)(e.requestInfo.countryCode),
+                        if (this.props.hideEsportsSubscription && Object(_.a)(n.id || "", this.props.sessionUser)) return null;
+                        var s = e.requestInfo && Object(N.a)(e.requestInfo.countryCode),
                             l = !(!t || !t.subscriptionBenefit),
-                            d = Object(N.a)(n.id || "", this.props.sessionUser),
-                            u = 1 === o.length;
+                            d = Object(_.a)(n.id || "", this.props.sessionUser),
+                            c = 1 === o.length;
                         o.some(function(e) {
                             return !e.emoteSetID
-                        }) && (u = !0);
-                        var c = null;
-                        t && t.subscriptionBenefit && (c = t.subscriptionBenefit.purchasedWithPrime ? S.a.Prime : t.subscriptionBenefit.tier, this.modalLevel = "");
+                        }) && (c = !0);
+                        var u = null;
+                        t && t.subscriptionBenefit && (u = t.subscriptionBenefit.purchasedWithPrime ? S.a.Prime : t.subscriptionBenefit.tier, this.modalLevel = "");
                         var m, p = l ? Object(g.d)("All-Access Pass", "SubscribeButton") : Object(g.d)("Get the All-Access Pass", "SubscribeButton"),
                             v = t && Object(F.h)(o, t.subscriptionBenefit);
                         if (l) {
                             var k = "";
-                            if (k = u ? Object(g.d)("Subscribed", "SubscribeButton") : v ? Object(g.d)("Continue Sub for $1", "SubscribeButton") : Object(g.d)("Gift A Sub", "SubscribeButton"), m = this.props.hostChannelID ? Object(g.d)("Subscribed to {username}", {
+                            if (k = c ? Object(g.d)("Subscribed", "SubscribeButton") : v ? Object(g.d)("Continue Sub for $1", "SubscribeButton") : Object(g.d)("Gift A Sub", "SubscribeButton"), m = this.props.hostChannelID ? Object(g.d)("Subscribed to {username}", {
                                     username: n.displayName || ""
-                                }, "SubscribeButton") : k, u && !d) return r.createElement(I.z, {
+                                }, "SubscribeButton") : k, c && !d) return r.createElement(I.z, {
                                 disabled: !0,
                                 ariaLabel: m,
                                 icon: I.pb.Star
@@ -672,7 +748,7 @@
                                 "data-test-selector": i.SubButton,
                                 dropdown: !this.props.hideDropdownArrow,
                                 fullWidth: !0,
-                                icon: this.getButtonIcon(l, c),
+                                icon: this.getButtonIcon(l, u),
                                 onClick: this.props.renderBalloonInBalloonLayer ? this.handleButtonClick : void 0,
                                 type: this.getButtonType(l)
                             }, m),
@@ -684,11 +760,11 @@
                             handleSubMenuAction: this.handleSubMenuAction,
                             inPrimeRegion: s,
                             isEsportChannel: d,
-                            isNonStandardSub: u,
+                            isNonStandardSub: c,
                             isStaff: !(!this.props.sessionUser || !this.props.sessionUser.roles) && this.props.sessionUser.roles.isStaff,
                             isSubscribed: l,
                             productId: h ? h.id : "",
-                            subbedTier: c || S.a.Prime,
+                            subbedTier: u || S.a.Prime,
                             userHasPrime: !1
                         })), this.props.renderBalloonInBalloonLayer ? r.createElement(I.Xa, {
                             "data-test-selector": i.BalloonLayerButton,
@@ -712,24 +788,25 @@
                     }, n.prototype.isUserDataReady = function(e) {
                         return e.data && e.data.user && !e.data.loading && !e.data.error
                     }, n.prototype.checkAndDisplaySubscriptionCheckout = function() {
-                        if ("yes" === g.p.experiments.getAssignment(w.b.InstreamCheckout)) {
-                            var e = g.n.get(d.b, "");
-                            if (e) {
-                                var n = this.props.data.user;
-                                if (n && n.subscriptionProducts) n.subscriptionProducts.filter(function(e) {
-                                    return e
-                                }).map(function(e) {
-                                    return e.name
-                                }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
-                                    mysteryGiftCount: Number(g.n.get(d.a, "")),
-                                    productName: e,
-                                    recipientLogin: g.n.get(d.c, "")
-                                }) : this.props.showLoginModal() : Object(d.d)()
-                            }
+                        var e = g.n.get(d.b, "");
+                        if (e) {
+                            var n = this.props.data.user;
+                            if (n && n.subscriptionProducts) n.subscriptionProducts.filter(function(e) {
+                                return e
+                            }).map(function(e) {
+                                return e.name
+                            }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
+                                mysteryGiftCount: Number(g.n.get(d.a, "")),
+                                productName: e,
+                                recipientLogin: g.n.get(d.c, ""),
+                                trackingContext: {
+                                    source: w.c.ChannelSubscribeButton
+                                }
+                            }) : this.props.showLoginModal() : Object(d.d)()
                         }
                     }, n
                 }(r.Component),
-                M = Object(v.compose)(Object(h.a)(T, {
+                D = Object(v.compose)(Object(h.a)(T, {
                     options: function(e) {
                         return {
                             variables: {
@@ -751,7 +828,7 @@
                         return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
                     }
                 }]), Object(k.e)())(B),
-                D = function(e) {
+                M = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.reportInteractive = function() {
@@ -759,7 +836,7 @@
                         }, n
                     }
                     return a.__extends(n, e), n.prototype.render = function() {
-                        return r.createElement(M, {
+                        return r.createElement(D, {
                             authToken: this.props.authToken,
                             balloonDirection: this.props.balloonDirection,
                             channelLogin: this.props.channelLogin,
@@ -779,17 +856,17 @@
                         })
                     }, n = a.__decorate([Object(p.b)("SubscribeButton")], n)
                 }(r.Component);
-            var O = Object(o.connect)(function(e) {
+            var P = Object(o.connect)(function(e) {
                 return {
                     authToken: Object(m.a)(e),
                     sessionUser: Object(m.e)(e)
                 }
             }, function(e) {
                 return Object(s.bindActionCreators)({
-                    showLoginModal: Object(d.e)(u.a.ChannelSubscriptionButton),
+                    showLoginModal: Object(d.e)(c.a.ChannelSubscriptionButton),
                     showSubscriptionCheckoutModal: function(e) {
                         var n = a.__rest(e, []);
-                        return Object(c.d)(l.a, {
+                        return Object(u.d)(l.a, {
                             component: "CheckoutModal",
                             loader: function() {
                                 return Promise.all([t.e(0), t.e(191)]).then(t.bind(null, "KJv/"))
@@ -798,17 +875,17 @@
                         })
                     }
                 }, e)
-            })(D);
+            })(M);
             t.d(n, !1, function() {
-                return D
+                return M
             }), t.d(n, "a", function() {
-                return O
+                return P
             }), t.d(n, !1, function() {
                 return i
             }), t.d(n, !1, function() {
                 return B
             }), t.d(n, !1, function() {
-                return M
+                return D
             })
         },
         RuiO: function(e, n) {
@@ -1565,7 +1642,7 @@
             }), t.d(n, "d", function() {
                 return d
             }), t.d(n, "e", function() {
-                return u
+                return c
             });
             var i = t("/7QA"),
                 a = t("y5D0"),
@@ -1580,7 +1657,7 @@
                 })
             }
 
-            function u(e) {
+            function c(e) {
                 return function() {
                     return Object(a.e)(e, {
                         onClose: d
@@ -1629,7 +1706,7 @@
                 }) || null
             }
 
-            function u(e, n) {
+            function c(e, n) {
                 return !!e && !!n && r(e) && !n.paidUpgrade && !!n.gift && n.gift.isGift
             }
             t.d(n, "g", function() {
@@ -1647,7 +1724,7 @@
             }), t.d(n, "b", function() {
                 return d
             }), t.d(n, "h", function() {
-                return u
+                return c
             })
         },
         X7Ac: function(e, n, t) {
@@ -1668,8 +1745,8 @@
                 s = t("eJ65"),
                 l = t("EdhP"),
                 d = t("+GjP"),
-                u = t("Ue10"),
-                c = function(e) {
+                c = t("Ue10"),
+                u = function(e) {
                     var n = Object(d.e)("https://www.twitch.tv/" + e.login, {
                             tt_medium: "live_embed",
                             tt_content: "text_link"
@@ -1677,7 +1754,7 @@
                         t = Object(a.d)("Watch live video from {displayName} on www.twitch.tv", {
                             displayName: e.displayName || e.login
                         }, "ChannelShareButton"),
-                        c = Object(l.b)({
+                        u = Object(l.b)({
                             channel: e.login
                         }, {
                             textLink: {
@@ -1694,23 +1771,23 @@
                             allowFullscreen: !1,
                             allowScrolling: !1
                         });
-                    return i.createElement(s.a, null, i.createElement(u.z, {
-                        type: u.F.Hollow,
+                    return i.createElement(s.a, null, i.createElement(c.z, {
+                        type: c.F.Hollow,
                         "data-a-target": "share-button",
-                        icon: u.pb.Share
-                    }, Object(a.d)("Share", "ChannelShareButton")), i.createElement(u.u, {
-                        direction: u.v.TopRight,
-                        size: u.w.Small,
+                        icon: c.pb.Share
+                    }, Object(a.d)("Share", "ChannelShareButton")), i.createElement(c.u, {
+                        direction: c.v.TopRight,
+                        size: c.w.Small,
                         "data-a-target": "share-balloon"
-                    }, i.createElement(u.Xa, {
+                    }, i.createElement(c.Xa, {
                         padding: 1
-                    }, i.createElement(u.Xa, {
+                    }, i.createElement(c.Xa, {
                         padding: {
                             top: 1,
                             bottom: 1
                         },
-                        display: u.X.Flex,
-                        justifyContent: u.Wa.Between
+                        display: c.X.Flex,
+                        justifyContent: c.Wa.Between
                     }, i.createElement(o.a, {
                         type: o.b.Twitter,
                         text: e.title,
@@ -1728,22 +1805,22 @@
                     }), i.createElement(o.a, {
                         type: o.b.Copy,
                         "data-a-target": "copy-link-share-button"
-                    })), i.createElement(u.Xa, null, i.createElement(u.Xa, {
+                    })), i.createElement(c.Xa, null, i.createElement(c.Xa, {
                         padding: {
                             top: 1
                         }
-                    }, i.createElement(u.W, null, Object(a.d)("Embed Channel", "ChannelShareButton")), i.createElement(r.a, {
-                        value: c
-                    })), i.createElement(u.Xa, {
+                    }, i.createElement(c.W, null, Object(a.d)("Embed Channel", "ChannelShareButton")), i.createElement(r.a, {
+                        value: u
+                    })), i.createElement(c.Xa, {
                         padding: {
                             top: 1
                         }
-                    }, i.createElement(u.W, null, Object(a.d)("Embed Chat", "ChannelShareButton")), i.createElement(r.a, {
+                    }, i.createElement(c.W, null, Object(a.d)("Embed Chat", "ChannelShareButton")), i.createElement(r.a, {
                         value: p
                     }))))))
                 };
             t.d(n, "a", function() {
-                return c
+                return u
             })
         },
         a7aT: function(e, n, t) {},
@@ -1780,7 +1857,7 @@
 
             function d(e) {
                 return i.__awaiter(this, void 0, void 0, function() {
-                    var n, t, l, d, u, c, m, p, v, g, k, b, f;
+                    var n, t, l, d, c, u, m, p, v, g, k, b, f;
                     return i.__generator(this, function(i) {
                         switch (i.label) {
                             case 0:
@@ -1796,15 +1873,15 @@
                             case 2:
                                 return d = i.sent(), [3, 4];
                             case 3:
-                                return u = i.sent(), a.k.error(u, "Failed to make query for channel info in FollowEvent reporting.", {
+                                return c = i.sent(), a.k.error(c, "Failed to make query for channel info in FollowEvent reporting.", {
                                     channelID: e.channelID
                                 }), [3, 4];
                             case 4:
-                                return c = d && d.data && d.data.user || null, d && !c && a.k.error(new Error("GraphQL empty response"), "Query for channel info in SubEvent reporting returned no data.", {
+                                return u = d && d.data && d.data.user || null, d && !u && a.k.error(new Error("GraphQL empty response"), "Query for channel info in SubEvent reporting returned no data.", {
                                     channelID: e.channelID
                                 }), m = null, d && t && ((p = d && d.data && d.data.video) ? m = Object(o.a)(p.broadcastType) : a.k.error(new Error("GraphQL empty response"), "Query for video info in SubEvent reporting returned no data.", {
                                     currentVideoID: n
-                                })), v = c && c.self, g = v ? !!v.subscriptionBenefit : null, k = v && v.subscriptionBenefit && v.subscriptionBenefit.purchasedWithPrime || !1, b = v ? v.canPrimeSubscribe : null, f = {
+                                })), v = u && u.self, g = v ? !!v.subscriptionBenefit : null, k = v && v.subscriptionBenefit && v.subscriptionBenefit.purchasedWithPrime || !1, b = v ? v.canPrimeSubscribe : null, f = {
                                     action: e.action,
                                     can_subscribe: b,
                                     channel: e.channelLogin,
@@ -1822,7 +1899,7 @@
                                     modal: e.modal,
                                     modal_level: e.modalLevel || "",
                                     show_prime_content: e.showPrimeContent,
-                                    show_resub: c ? b && k : null,
+                                    show_resub: u ? b && k : null,
                                     vod_id: n,
                                     vod_type: m,
                                     viewport_height: window.innerHeight,
@@ -1875,8 +1952,8 @@
                 s = t("2xye"),
                 l = t("GnwI"),
                 d = t("mrSG"),
-                u = t("9C/b"),
-                c = t("/7QA"),
+                c = t("9C/b"),
+                u = t("/7QA"),
                 m = t("ZDlU"),
                 p = t("LA8z"),
                 v = t("4VQm"),
@@ -1896,7 +1973,7 @@
                     var a = null;
                     n.live && (a = i.createElement(b.Xa, null, i.createElement(b.W, {
                         color: b.O.Alt2
-                    }, Object(c.f)(n.viewersCount))));
+                    }, Object(u.f)(n.viewersCount))));
                     return i.createElement(b.Ua, {
                         type: b.Va.Alpha,
                         onClick: function() {
@@ -1974,14 +2051,14 @@
                                     l = r.login,
                                     d = r.stream;
                                 if (o && s && l && d) {
-                                    var u = d.viewersCount || 0,
-                                        c = r.profileImageURL || "";
+                                    var c = d.viewersCount || 0,
+                                        u = r.profileImageURL || "";
                                     e.has(o) || (e.add(o), n.push({
                                         userID: o,
                                         displayName: s,
                                         live: !0,
-                                        viewersCount: u,
-                                        profileImageURL: c,
+                                        viewersCount: c,
+                                        profileImageURL: u,
                                         login: l
                                     }))
                                 }
@@ -2015,14 +2092,14 @@
             function y(e, n) {
                 return e.concat(n)
             }
-            var S, N = function(e) {
+            var S, _ = function(e) {
                     for (var n = e.length - 1; n >= 0; n--) {
                         var t = e[n] && e[n].cursor;
                         if (t) return t
                     }
                     return null
                 },
-                _ = function(e, n) {
+                N = function(e, n) {
                     return n || e || {
                         __typename: "PageInfo",
                         hasNextPage: !1
@@ -2030,14 +2107,14 @@
                 },
                 C = function(e) {
                     var n = new h(e),
-                        t = N(n.getLiveMemberEdges());
+                        t = _(n.getLiveMemberEdges());
                     if (n.hasNextLiveMembersPage() && t) return {
                         liveMembersCursor: t,
                         withLiveMembers: !0,
                         membersCursor: null,
                         withMembers: !1
                     };
-                    var i = N(n.getMemberEdges());
+                    var i = _(n.getMemberEdges());
                     return n.hasNextMembersPage() && i ? {
                         liveMembersCursor: null,
                         withLiveMembers: !1,
@@ -2134,11 +2211,11 @@
                             alignItems: b.f.Center
                         }, i.createElement(b.S, {
                             src: "https://static-cdn.jtvnw.net/emoticons/v1/112291/2.0",
-                            alt: Object(c.d)("No team members", "TeamLandingPage_MemberList")
+                            alt: Object(u.d)("No team members", "TeamLandingPage_MemberList")
                         }), i.createElement(b.W, {
                             color: b.O.Alt2,
                             fontSize: b.Ca.Size6
-                        }, Object(c.d)("No team members to display", "TeamLandingPage_MemberList")))), i.createElement(b.Xa, {
+                        }, Object(u.d)("No team members to display", "TeamLandingPage_MemberList")))), i.createElement(b.Xa, {
                             display: b.X.Flex,
                             flexDirection: b.Aa.Column
                         }, i.createElement(b.Xa, {
@@ -2154,9 +2231,9 @@
                         }, i.createElement(b.W, {
                             bold: !0,
                             fontSize: b.Ca.Size4
-                        }, Object(c.d)("Team Members", "TeamLandingPage_MemberList"))), i.createElement(b.W, {
+                        }, Object(u.d)("Team Members", "TeamLandingPage_MemberList"))), i.createElement(b.W, {
                             color: b.O.Alt2
-                        }, Object(c.f)(this.props.data.total))), t)
+                        }, Object(u.f)(this.props.data.total))), t)
                     }, n.prototype.backToTop = function() {
                         return this.state.showBackToTop ? i.createElement(b.i, {
                             type: b.n.FadeIn,
@@ -2172,7 +2249,7 @@
                         }, i.createElement("div", {
                             className: "member-list__back-to-top",
                             onClick: this.scrollToTop
-                        }, Object(c.d)("Back to Top", "TeamLandingPage_MemberList")))) : null
+                        }, Object(u.d)("Back to Top", "TeamLandingPage_MemberList")))) : null
                     }, n
                 }(i.Component),
                 T = Object(a.compose)(Object(l.b)("MemberList"), Object(g.a)(w, {
@@ -2210,9 +2287,9 @@
                                             var t = new h(e),
                                                 i = new h(n),
                                                 a = y(t.getLiveMemberEdges(), i.getLiveMemberEdges()),
-                                                r = _(t.getLiveMemberPageInfo(), i.getLiveMemberPageInfo()),
+                                                r = N(t.getLiveMemberPageInfo(), i.getLiveMemberPageInfo()),
                                                 o = y(t.getMemberEdges(), i.getMemberEdges()),
-                                                s = _(t.getMemberPageInfo(), i.getMemberPageInfo());
+                                                s = N(t.getMemberPageInfo(), i.getMemberPageInfo());
                                             return {
                                                 team: {
                                                     __typename: "Team",
@@ -2260,10 +2337,10 @@
                         source: e.description
                     })))) : null
                 }),
-                M = t("eJ65"),
-                D = t("eDVu"),
-                O = t("0Log"),
-                P = t("/aPz"),
+                D = t("eJ65"),
+                M = t("eDVu"),
+                P = t("0Log"),
+                O = t("/aPz"),
                 U = t("DMoW"),
                 x = t("ZLqn"),
                 j = t("eAAt"),
@@ -2338,7 +2415,7 @@
                     }, n.prototype.renderTopBar = function() {
                         var e = this.props.data.user;
                         if (!e || !e.id) return null;
-                        var n = Object(c.f)(e.stream && e.stream.viewersCount ? e.stream.viewersCount : 0);
+                        var n = Object(u.f)(e.stream && e.stream.viewersCount ? e.stream.viewersCount : 0);
                         return i.createElement(b.zb, {
                             display: b.X.Flex,
                             flexWrap: b.Ba.Wrap,
@@ -2371,7 +2448,7 @@
                             }
                         }, i.createElement(b.yb, {
                             value: n,
-                            label: Object(c.d)("Watching Now", "TeamPlayer"),
+                            label: Object(u.d)("Watching Now", "TeamPlayer"),
                             icon: b.pb.GlyphLive,
                             "data-a-target": "channel-viewers-count"
                         })), i.createElement(b.Xa, {
@@ -2380,25 +2457,25 @@
                             },
                             display: b.X.Flex
                         }, i.createElement(b.yb, {
-                            value: Object(c.d)("{followerCount, number}", {
+                            value: Object(u.d)("{followerCount, number}", {
                                 followerCount: e.followers && e.followers.totalCount ? e.followers.totalCount : 0
                             }, "TeamPlayer"),
-                            label: Object(c.d)("Followers", "TeamPlayer"),
+                            label: Object(u.d)("Followers", "TeamPlayer"),
                             icon: b.pb.GlyphFollowers
                         })), i.createElement(b.Xa, {
                             display: b.X.Flex
                         }, i.createElement(b.yb, {
-                            value: Object(c.d)("{channelCount, number}", {
+                            value: Object(u.d)("{channelCount, number}", {
                                 channelCount: e.profileViewCount || 0
                             }, "TeamPlayer"),
-                            label: Object(c.d)("Total Views", "TeamPlayer"),
+                            label: Object(u.d)("Total Views", "TeamPlayer"),
                             icon: b.pb.GlyphViews
                         }))))), i.createElement(b.Xa, {
                             display: b.X.Flex,
                             alignItems: b.f.Center
-                        }, e.description && i.createElement(M.a, null, i.createElement(b.z, {
+                        }, e.description && i.createElement(D.a, null, i.createElement(b.z, {
                             type: b.F.Hollow
-                        }, Object(c.d)("Info", "Team Player")), i.createElement(b.u, {
+                        }, Object(u.d)("Info", "Team Player")), i.createElement(b.u, {
                             size: b.w.Medium,
                             direction: b.v.BottomRight
                         }, i.createElement(b.Xa, {
@@ -2466,15 +2543,15 @@
                             }
                         }
                     }
-                }), Object(D.a)(function(e) {
+                }), Object(M.a)(function(e) {
                     return {
                         query: G,
-                        topic: e.data.user && e.data.user.id ? Object(P.e)(e.data.user.id) : "",
+                        topic: e.data.user && e.data.user.id ? Object(O.e)(e.data.user.id) : "",
                         skip: !(!e.data.loading && !e.data.error && e.data.user),
                         variables: {
                             login: e.channelLogin
                         },
-                        type: O.PubsubMessageType.BroadcastSettingsUpdate,
+                        type: P.PubsubMessageType.BroadcastSettingsUpdate,
                         mutator: function(e, n) {
                             return n.user && n.user.broadcastSettings && n.user.broadcastSettings.id && (n.user.broadcastSettings.title = e.status || e.old_status), n
                         }
@@ -2501,7 +2578,7 @@
                     }, n.prototype.render = function() {
                         if (!this.props.data.loading) {
                             if (this.props.data.error) return i.createElement(m.a, {
-                                message: Object(c.d)("An error occurred on this page", "TeamsPageBody")
+                                message: Object(u.d)("An error occurred on this page", "TeamsPageBody")
                             });
                             if (!this.props.data.team || !this.props.data.team.id) return i.createElement(p.a, null)
                         }
@@ -2591,7 +2668,7 @@
                         }(e) : ""
                     }, n
                 }(i.Component),
-                Q = Object(a.compose)(u.a, Object(l.b)("TeamsPageBody"), Object(g.a)(q, {
+                Q = Object(a.compose)(c.a, Object(l.b)("TeamsPageBody"), Object(g.a)(q, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2635,9 +2712,9 @@
             }), t.d(n, "c", function() {
                 return d
             }), t.d(n, "b", function() {
-                return u
-            }), t.d(n, "d", function() {
                 return c
+            }), t.d(n, "d", function() {
+                return u
             });
             var i = t("+GjP"),
                 a = "https://www.facebook.com/sharer/sharer.php",
@@ -2658,14 +2735,14 @@
                 })
             }
 
-            function u(e, n) {
+            function c(e, n) {
                 return Object(i.e)(o, {
                     url: e,
                     title: n
                 })
             }
 
-            function c(e) {
+            function u(e) {
                 return Object(i.e)(s, {
                     url: e
                 })
@@ -2702,7 +2779,7 @@
             t.d(n, "b", function() {
                 return i
             }), t.d(n, "a", function() {
-                return u
+                return c
             });
             var i, a = t("mrSG"),
                 r = t("q1tI"),
@@ -2714,7 +2791,7 @@
             ! function(e) {
                 e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput", e[e.Download = 6] = "Download"
             }(i || (i = {}));
-            var u = function(e) {
+            var c = function(e) {
                 function n(n) {
                     var t = e.call(this, n) || this;
                     return t.renderLink = function() {

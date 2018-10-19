@@ -134,10 +134,10 @@
                 })
             }
 
-            function l(e, t, r) {
+            function p(e, t, r) {
                 var n = r.logger;
                 return o.__awaiter(this, void 0, Promise, function() {
-                    var r, a, s, c, l, p;
+                    var r, a, s, c, p, l;
                     return o.__generator(this, function(o) {
                         switch (o.label) {
                             case 0:
@@ -179,26 +179,26 @@
                                     }
                                 }];
                             case 9:
-                                l = void 0, o.label = 10;
+                                p = void 0, o.label = 10;
                             case 10:
                                 return o.trys.push([10, 12, , 13]), [4, r.json()];
                             case 11:
-                                return l = o.sent(), [3, 13];
+                                return p = o.sent(), [3, 13];
                             case 12:
-                                return p = o.sent(), n.warn("Unable to parse response JSON", {
-                                    err: p
+                                return l = o.sent(), n.warn("Unable to parse response JSON", {
+                                    err: l
                                 }), [2, {
                                     success: !1
                                 }];
                             case 13:
                                 return n.debug("Received error response", {
-                                    response: l
+                                    response: p
                                 }), [2, {
                                     success: !1,
-                                    errorCode: l.error_code,
-                                    errorDescription: l.error_description,
-                                    captchaProof: l.captcha_proof,
-                                    smsProof: l.sms_proof
+                                    errorCode: p.error_code,
+                                    errorDescription: p.error_description,
+                                    captchaProof: p.captcha_proof,
+                                    smsProof: p.sms_proof
                                 }]
                         }
                     })
@@ -206,11 +206,11 @@
             }! function(e) {
                 e[e.DeviceCookieThrottleReached = 3009] = "DeviceCookieThrottleReached", e[e.FailedToDecodeJSON = 1002] = "FailedToDecodeJSON", e[e.FailedToVerifyAuthyToken = 3012] = "FailedToVerifyAuthyToken", e[e.IncorrectCaptcha = 1e3] = "IncorrectCaptcha", e[e.InvalidAuthyToken = 3013] = "InvalidAuthyToken", e[e.InvalidPassword = 2005] = "InvalidPassword", e[e.InvalidUsername = 2004] = "InvalidUsername", e[e.MissingAuthyToken = 3011] = "MissingAuthyToken", e[e.MultipleAccountsLinkedToEmail = 3004] = "MultipleAccountsLinkedToEmail", e[e.NoAccountLinkedToEmail = 3005] = "NoAccountLinkedToEmail", e[e.PasswordMissing = 3003] = "PasswordMissing", e[e.SuspendedUser = 3008] = "SuspendedUser", e[e.UnexpectedError = 3e3] = "UnexpectedError", e[e.UserCredentialsIncorrect = 3001] = "UserCredentialsIncorrect", e[e.UserDoesNotExist = 1014] = "UserDoesNotExist", e[e.UserHasBeenDeleted = 3007] = "UserHasBeenDeleted", e[e.UserNeedsPasswordReset = 3006] = "UserNeedsPasswordReset", e[e.UsernameMissing = 3002] = "UsernameMissing"
             }(n || (n = {}));
-            var p, d = "https://passport.twitch.tv/login",
+            var l, d = "https://passport.twitch.tv/login",
                 h = "https://passport.internal.us-west-2.twitch.tv/login";
             ! function(e) {
                 e[e.BlacklistedEmailDomain = 2002] = "BlacklistedEmailDomain", e[e.BlacklistedIP = 2001] = "BlacklistedIP", e[e.EmailThrottled = 2013] = "EmailThrottled", e[e.FailedToDecodeJSON = 1002] = "FailedToDecodeJSON", e[e.IPThrottled = 2014] = "IPThrottled", e[e.IncorrectCaptcha = 1e3] = "IncorrectCaptcha", e[e.InvalidBirthday = 2003] = "InvalidBirthday", e[e.InvalidPassword = 2005] = "InvalidPassword", e[e.InvalidUsername = 2004] = "InvalidUsername", e[e.MissingFields = 2006] = "MissingFields", e[e.MultiAccountDisabled = 2015] = "MultiAccountDisabled", e[e.PasswordMissing = 3003] = "PasswordMissing", e[e.TooManyUsersWithEmail = 2007] = "TooManyUsersWithEmail", e[e.UnexpectedIssue = 2e3] = "UnexpectedIssue", e[e.UserNameMissing = 3002] = "UserNameMissing", e[e.UserUnder13 = 2011] = "UserUnder13", e[e.UsernameExists = 2008] = "UsernameExists"
-            }(p || (p = {}));
+            }(l || (l = {}));
             var g, m = "https://passport.twitch.tv/register";
             ! function(e) {
                 e[e.FailedToDecodeJSON = 1002] = "FailedToDecodeJSON", e[e.FailedToVerifyAuthyToken = 3012] = "FailedToVerifyAuthyToken", e[e.InvalidAuthyToken = 3013] = "InvalidAuthyToken", e[e.MissingAuthyToken = 3011] = "MissingAuthyToken", e[e.NoConnectedTwitchUser = 5004] = "NoConnectedTwitchUser", e[e.SuspendedUser = 3008] = "SuspendedUser", e[e.UnableToVerifyIdentity = 5003] = "UnableToVerifyIdentity", e[e.UnexpectedError = 3e3] = "UnexpectedError"
@@ -219,11 +219,11 @@
             ! function(e) {
                 e[e.BlacklistedIP = 2001] = "BlacklistedIP", e[e.EmailThrottled = 2013] = "EmailThrottled", e[e.FacebookAccountAlreadyLinked = 5006] = "FacebookAccountAlreadyLinked", e[e.FailedToDecodeJSON = 1002] = "FailedToDecodeJSON", e[e.IPThrottled = 2014] = "IPThrottled", e[e.InvalidPassword = 2005] = "InvalidPassword", e[e.InvalidUsername = 2004] = "InvalidUsername", e[e.TooManyUsers = 2017] = "TooManyUsers", e[e.UnableToVerifyIdentity = 5003] = "UnableToVerifyIdentity", e[e.UnexpectedFacebookIssue = 5001] = "UnexpectedFacebookIssue", e[e.UnexpectedSignupIssue = 2e3] = "UnexpectedSignupIssue", e[e.UsernameExists = 2008] = "UsernameExists"
             }(f || (f = {}));
-            var v, k = "https://passport.twitch.tv/facebook/register";
+            var v, S = "https://passport.twitch.tv/facebook/register";
             ! function(e) {
                 e[e.DeviceCookieThrottleReached = 3009] = "DeviceCookieThrottleReached", e[e.FacebookAccountAlreadyLinked = 5006] = "FacebookAccountAlreadyLinked", e[e.FailedToDecodeJSON = 1002] = "FailedToDecodeJSON", e[e.FailedToVerifyAuthyToken = 3012] = "FailedToVerifyAuthyToken", e[e.IncorrectCaptcha = 1e3] = "IncorrectCaptcha", e[e.InvalidAuthyToken = 3013] = "InvalidAuthyToken", e[e.InvalidPassword = 2005] = "InvalidPassword", e[e.InvalidUsername = 2004] = "InvalidUsername", e[e.MissingAuthyToken = 3011] = "MissingAuthyToken", e[e.MultipleAccountsLinkedToEmail = 3004] = "MultipleAccountsLinkedToEmail", e[e.NoAccountLinkedToEmail = 3005] = "NoAccountLinkedToEmail", e[e.PasswordMissing = 3003] = "PasswordMissing", e[e.SuspendedUser = 3008] = "SuspendedUser", e[e.UnableToConnect = 5005] = "UnableToConnect", e[e.UnexpectedError = 3e3] = "UnexpectedError", e[e.UnexpectedFacebookIssue = 5001] = "UnexpectedFacebookIssue", e[e.UserCredentialsIncorrect = 3001] = "UserCredentialsIncorrect", e[e.UserDoesNotExist = 1014] = "UserDoesNotExist", e[e.UserHasBeenDeleted = 3007] = "UserHasBeenDeleted", e[e.UserNeedsPasswordReset = 3006] = "UserNeedsPasswordReset", e[e.UsernameMissing = 3002] = "UsernameMissing"
             }(v || (v = {}));
-            var S = "https://passport.twitch.tv/facebook/connect";
+            var k = "https://passport.twitch.tv/facebook/connect";
             var y = r("ZqP/"),
                 F = r("Ue10"),
                 E = function(e) {
@@ -421,7 +421,7 @@
                 }(a.PureComponent)),
                 _ = r("CojT"),
                 x = r.n(_),
-                D = (r("sC5l"), function(e) {
+                A = (r("sC5l"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onFacebookLoginClicked = function() {
@@ -489,12 +489,12 @@
                         })))
                     }, t
                 }(a.PureComponent));
-            var V, U = Object(C.connect)(function(e) {
+            var D, V = Object(C.connect)(function(e) {
                     return {
                         facebookLocale: Object(T.d)(e).replace("-", "_")
                     }
-                })(D),
-                A = r("fvjX"),
+                })(A),
+                U = r("fvjX"),
                 R = r("ZIMp"),
                 B = (r("QRgD"), function(e) {
                     return a.createElement(F.zb, {
@@ -756,7 +756,7 @@
                 }(a.Component);
             ! function(e) {
                 e.Valid = "Valid", e.Invalid = "Invalid"
-            }(V || (V = {}));
+            }(D || (D = {}));
             var G, J = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -819,15 +819,15 @@
                     var e = {
                         shouldShowLoading: this.state.isTyping,
                         shouldShowNone: !this.props.validationState,
-                        shouldShowError: this.props.validationState === V.Invalid,
-                        shouldShowValid: this.props.validationState === V.Valid
+                        shouldShowError: this.props.validationState === D.Invalid,
+                        shouldShowValid: this.props.validationState === D.Valid
                     };
                     return a.createElement(W, {
                         options: e
                     })
                 }, Object.defineProperty(t.prototype, "isInvalid", {
                     get: function() {
-                        return this.props.validationState === V.Invalid
+                        return this.props.validationState === D.Invalid
                     },
                     enumerable: !0,
                     configurable: !0
@@ -892,7 +892,7 @@
             }
 
             function ie(e, t) {
-                return !t.passwordError && !t.usernameError && (!!e.username && (!!e.password && (e.usernameValidationState !== V.Invalid && (!!ee(e.username) && !e.isPasswordInvalid))))
+                return !t.passwordError && !t.usernameError && (!!e.username && (!!e.password && (e.usernameValidationState !== D.Invalid && (!!ee(e.username) && !e.isPasswordInvalid))))
             }
             var ce = r("2Ygb");
 
@@ -916,7 +916,7 @@
                     }(a.Component)
                 }
             }
-            var le, pe = r("GnwI"),
+            var pe, le = r("GnwI"),
                 de = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -929,7 +929,7 @@
                         }, t.login = function() {
                             t.canLogin && t.props.onConnectRequested()
                         }, t.goToFacebookSignupForm = function() {
-                            t.props.onFacebookFormTypeChanged(R.a.FacebookSignup)
+                            t.props.onFacebookFormTypeChanged(R.AuthFormStep.FacebookSignup)
                         }, t.onUsernameInputChanged = function(e) {
                             t.props.onFacebookConnectFormValuesChanged({
                                 username: e
@@ -1025,13 +1025,13 @@
                         configurable: !0
                     }), t
                 }(a.Component),
-                he = Object(A.compose)(Object(pe.b)("FacebookConnectForm", {
+                he = Object(U.compose)(Object(le.b)("FacebookConnectForm", {
                     autoReportInteractive: !0
                 }), ue())(de);
             r("JT9d");
             ! function(e) {
                 e.Invalid = "invalid", e.Empty = "empty", e.Weak = "weak", e.Strong = "strong"
-            }(le || (le = {}));
+            }(pe || (pe = {}));
             var ge = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -1039,10 +1039,10 @@
                     return o.__extends(t, e), t.prototype.render = function() {
                         var e = {
                             "password-indicator": !0,
-                            "password-indicator--invalid": this.props.indicatorStrength === le.Invalid,
-                            "password-indicator--empty": this.props.indicatorStrength === le.Empty,
-                            "password-indicator--weak": this.props.indicatorStrength === le.Weak,
-                            "password-indicator--strong": this.props.indicatorStrength === le.Strong
+                            "password-indicator--invalid": this.props.indicatorStrength === pe.Invalid,
+                            "password-indicator--empty": this.props.indicatorStrength === pe.Empty,
+                            "password-indicator--weak": this.props.indicatorStrength === pe.Weak,
+                            "password-indicator--strong": this.props.indicatorStrength === pe.Strong
                         };
                         return a.createElement(F.zb, {
                             className: O(e),
@@ -1059,25 +1059,25 @@
                     }, t.prototype.renderIcon = function() {
                         var e;
                         switch (this.props.indicatorStrength) {
-                            case le.Invalid:
+                            case pe.Invalid:
                                 e = a.createElement(F.ob, {
                                     asset: F.pb.NotificationError,
                                     type: F.qb.Alert
                                 });
                                 break;
-                            case le.Weak:
+                            case pe.Weak:
                                 e = a.createElement(F.ob, {
                                     asset: F.pb.NotificationWarning,
                                     type: F.qb.Inherit
                                 });
                                 break;
-                            case le.Strong:
+                            case pe.Strong:
                                 e = a.createElement(F.ob, {
                                     asset: F.pb.NotificationSuccess,
                                     type: F.qb.Success
                                 });
                                 break;
-                            case le.Empty:
+                            case pe.Empty:
                                 e = this.props.error ? a.createElement(F.ob, {
                                     asset: F.pb.NotificationError,
                                     type: F.qb.Alert
@@ -1095,10 +1095,10 @@
                     }, t.prototype.renderDescription = function() {
                         var e;
                         switch (this.props.indicatorStrength) {
-                            case le.Weak:
+                            case pe.Weak:
                                 e = Object(s.d)("Weak", "PasswordIndicator");
                                 break;
-                            case le.Strong:
+                            case pe.Strong:
                                 e = Object(s.d)("Strong", "PasswordIndicator");
                                 break;
                             default:
@@ -1123,52 +1123,52 @@
                 return e.length >= fe && e.length <= be
             }
 
-            function ke(e) {
+            function Se(e) {
                 return e.length < fe ? Object(s.d)("Passwords must be at least 8 characters long.", "PasswordValidator") : e.length > be ? Object(s.d)("Passwords must be shorter than 72 characters.", "PasswordValidator") : void 0
             }
-            var Se = (me.config({
+            var ke = (me.config({
                     maxLength: be,
                     minLength: fe,
                     minPhraseLength: 20,
                     allowPassphrases: !0
                 }), function(e) {
                     if (!e || !e.length) return {
-                        strength: le.Empty,
+                        strength: pe.Empty,
                         score: 0
                     };
                     if (!ve(e)) return {
-                        strength: le.Invalid,
+                        strength: pe.Invalid,
                         score: 0
                     };
                     var t = me.test(e);
                     if (t.isPassphrase) return {
-                        strength: le.Strong,
+                        strength: pe.Strong,
                         score: 100
                     };
                     switch (t.optionalTestsPassed) {
                         case 1:
                             return {
-                                strength: le.Weak,
+                                strength: pe.Weak,
                                 score: 25
                             };
                         case 2:
                             return {
-                                strength: le.Weak,
+                                strength: pe.Weak,
                                 score: 50
                             };
                         case 3:
                             return {
-                                strength: le.Strong,
+                                strength: pe.Strong,
                                 score: 75
                             };
                         case 4:
                             return {
-                                strength: le.Strong,
+                                strength: pe.Strong,
                                 score: 100
                             };
                         default:
                             return {
-                                strength: le.Invalid,
+                                strength: pe.Invalid,
                                 score: 0
                             }
                     }
@@ -1196,7 +1196,7 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        var e = Se(this.props.value),
+                        var e = ke(this.props.value),
                             t = this.props.isCapsLockOn && this.state.isFocused;
                         return a.createElement(q, {
                             error: !!this.props.error,
@@ -1245,7 +1245,7 @@
                             error: !!this.props.error
                         })
                     }, t.prototype.shouldDisplayPasswordHint = function(e) {
-                        return this.state.isFocused && e.strength !== le.Strong
+                        return this.state.isFocused && e.strength !== pe.Strong
                     }, t
                 }(a.Component)),
                 Fe = function(e) {
@@ -1260,7 +1260,7 @@
                         }, t.signup = function() {
                             t.canSignup && t.props.onSignupRequested()
                         }, t.goToFacebookConnectForm = function() {
-                            t.props.onFacebookFormTypeChanged(R.a.FacebookConnect)
+                            t.props.onFacebookFormTypeChanged(R.AuthFormStep.FacebookConnect)
                         }, t.onUsernameInputChanged = function(e) {
                             t.props.onFacebookSignupFormValuesChanged({
                                 username: e
@@ -1273,7 +1273,7 @@
                                         case 0:
                                             return [4, ne(e = this.props.values.username)];
                                         case 1:
-                                            return t = o.sent(), r = oe(e, t), n = r ? V.Invalid : V.Valid, this.props.onFacebookSignupFormValuesChanged({
+                                            return t = o.sent(), r = oe(e, t), n = r ? D.Invalid : D.Valid, this.props.onFacebookSignupFormValuesChanged({
                                                 usernameValidationState: n,
                                                 usernameErrorMessage: r
                                             }), [2]
@@ -1283,7 +1283,7 @@
                         }, t.onPasswordInputChanged = function(e) {
                             var r = e.currentTarget.value,
                                 n = !ve(r),
-                                o = ke(r);
+                                o = Se(r);
                             t.props.onFacebookSignupFormValuesChanged({
                                 password: r,
                                 isPasswordInvalid: n,
@@ -1331,7 +1331,7 @@
                             onValidationRequested: this.onUsernameValidationRequested,
                             value: this.props.values.username,
                             errorMessage: this.props.values.usernameErrorMessage,
-                            validationState: this.props.serverErrors.usernameError ? V.Invalid : this.props.values.usernameValidationState,
+                            validationState: this.props.serverErrors.usernameError ? D.Invalid : this.props.values.usernameValidationState,
                             autoFocus: !0,
                             refDelegate: this.props.refDelegate
                         }))
@@ -1380,7 +1380,7 @@
                         configurable: !0
                     }), t
                 }(a.Component),
-                Ee = Object(A.compose)(Object(pe.b)("FacebookSignupForm", {
+                Ee = Object(U.compose)(Object(le.b)("FacebookSignupForm", {
                     autoReportInteractive: !0
                 }), ue())(Fe);
 
@@ -1461,7 +1461,7 @@
                         configurable: !0
                     }), t
                 }(a.Component),
-                Oe = Object(A.compose)(Object(pe.b)("LoginForm", {
+                Oe = Object(U.compose)(Object(le.b)("LoginForm", {
                     autoReportInteractive: !0
                 }), ue())(Te),
                 Me = (r("4PHc"), function(e) {
@@ -1685,10 +1685,10 @@
                 },
                 xe = 864e5;
 
-            function De(e) {
+            function Ae(e) {
                 return !!e && (e.monthInvalid || e.dayInvalid || e.yearInvalid)
             }
-            var Ve, Ue = function(e) {
+            var De, Ve = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1723,7 +1723,7 @@
                 return o.__extends(t, e), t.prototype.render = function() {
                     return a.createElement(q, {
                         label: Object(s.d)("Date of Birth", "BirthdayFormGroup"),
-                        error: De(this.props.dateValidation) || this.props.serverError,
+                        error: Ae(this.props.dateValidation) || this.props.serverError,
                         errorMessage: Object(s.d)("Please enter a valid date.", "BirthdayFormGroup"),
                         validationComponent: this.renderValidIndicator(),
                         hint: !1
@@ -1737,7 +1737,7 @@
                 }, t.prototype.componentWillUnmount = function() {
                     this.inputTimer && clearTimeout(this.inputTimer)
                 }, t.prototype.renderValidIndicator = function() {
-                    var e = De(this.props.dateValidation),
+                    var e = Ae(this.props.dateValidation),
                         t = {
                             showShowLoading: this.state.isTyping,
                             shouldShowNone: void 0 === this.props.dateValidation,
@@ -1751,8 +1751,8 @@
             }(a.Component);
             ! function(e) {
                 e[e.Valid = 1] = "Valid", e[e.Invalid = 2] = "Invalid"
-            }(Ve || (Ve = {}));
-            var Ae = function(e) {
+            }(De || (De = {}));
+            var Ue = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1801,15 +1801,15 @@
                         var e = {
                             shouldShowLoading: this.state.isTyping,
                             shouldShowNone: !this.props.validationState,
-                            shouldShowError: this.props.validationState === Ve.Invalid,
-                            shouldShowValid: this.props.validationState === Ve.Valid
+                            shouldShowError: this.props.validationState === De.Invalid,
+                            shouldShowValid: this.props.validationState === De.Valid
                         };
                         return a.createElement(W, {
                             options: e
                         })
                     }, Object.defineProperty(t.prototype, "isInvalid", {
                         get: function() {
-                            return this.props.validationState === Ve.Invalid
+                            return this.props.validationState === De.Invalid
                         },
                         enumerable: !0,
                         configurable: !0
@@ -1824,7 +1824,7 @@
             }
 
             function Ne(e, t) {
-                return !(t.passwordError || t.usernameError || t.birthdayError || t.emailError) && (!!e.username && (!!e.password && (!!e.email && (!!e.birthdayDate && (!!e.birthdayDate.day && (!!e.birthdayDate.month && (!!e.birthdayDate.year && (e.usernameValidationState !== V.Invalid && (!!ee(e.username) && (!e.isPasswordInvalid && (e.emailValidationState === Ve.Valid && !(!e.birthdayValidation || De(e.birthdayValidation)))))))))))))
+                return !(t.passwordError || t.usernameError || t.birthdayError || t.emailError) && (!!e.username && (!!e.password && (!!e.email && (!!e.birthdayDate && (!!e.birthdayDate.day && (!!e.birthdayDate.month && (!!e.birthdayDate.year && (e.usernameValidationState !== D.Invalid && (!!ee(e.username) && (!e.isPasswordInvalid && (e.emailValidationState === De.Valid && !(!e.birthdayValidation || Ae(e.birthdayValidation)))))))))))))
             }
             var qe, Xe = function(e) {
                     function t() {
@@ -1870,7 +1870,7 @@
                                         case 0:
                                             return [4, ne(e = this.props.values.username)];
                                         case 1:
-                                            return t = o.sent(), r = oe(e, t), n = r ? V.Invalid : V.Valid, this.props.onSignupFormValuesChanged({
+                                            return t = o.sent(), r = oe(e, t), n = r ? D.Invalid : D.Valid, this.props.onSignupFormValuesChanged({
                                                 usernameValidationState: n,
                                                 usernameErrorMessage: r
                                             }), [2]
@@ -1879,7 +1879,7 @@
                             })
                         }, t.onPasswordInputChanged = function(e) {
                             var r = e.currentTarget.value,
-                                n = ke(r),
+                                n = Se(r),
                                 o = !!n;
                             t.props.onSignupFormValuesChanged({
                                 password: r,
@@ -1892,7 +1892,7 @@
                             })
                         }, t.onEmailValidationRequested = function() {
                             var e = Be(t.props.values.email),
-                                r = e ? Ve.Invalid : Ve.Valid;
+                                r = e ? De.Invalid : De.Valid;
                             t.props.onSignupFormValuesChanged({
                                 emailErrorMessage: e,
                                 emailValidationState: r
@@ -1928,7 +1928,7 @@
                             onValidationRequested: this.onUsernameValidationRequested,
                             value: this.props.values.username,
                             errorMessage: this.props.values.usernameErrorMessage,
-                            validationState: this.props.serverErrors.usernameError ? V.Invalid : this.props.values.usernameValidationState,
+                            validationState: this.props.serverErrors.usernameError ? D.Invalid : this.props.values.usernameValidationState,
                             autoFocus: !0,
                             refDelegate: this.props.refDelegate,
                             "data-a-target": "signup-username-input"
@@ -1952,7 +1952,7 @@
                             margin: {
                                 top: 2
                             }
-                        }, a.createElement(Ue, {
+                        }, a.createElement(Ve, {
                             date: this.props.values.birthdayDate,
                             onBirthdayDateChange: this.onBirthdayDateChanged,
                             onValidationRequested: this.onBirthdayDateValidationChange,
@@ -1964,11 +1964,11 @@
                             margin: {
                                 top: 2
                             }
-                        }, a.createElement(Ae, {
+                        }, a.createElement(Ue, {
                             onEmailChanged: this.onEmailInputChanged,
                             onValidationRequested: this.onEmailValidationRequested,
                             value: this.props.values.email,
-                            validationState: this.props.serverErrors.emailError ? Ve.Invalid : this.props.values.emailValidationState,
+                            validationState: this.props.serverErrors.emailError ? De.Invalid : this.props.values.emailValidationState,
                             errorMessage: this.props.values.emailErrorMessage
                         }))
                     }, t.prototype.renderCaptcha = function() {
@@ -2037,7 +2037,7 @@
                         })
                     }, t
                 }(a.Component),
-                We = Object(A.compose)(Object(pe.b)("SignupForm", {
+                We = Object(U.compose)(Object(le.b)("SignupForm", {
                     autoReportInteractive: !0
                 }), ue())(Xe);
             ! function(e) {
@@ -2183,7 +2183,7 @@
                                 facebookConnectFormServerErrors: {
                                     usernameError: !0
                                 },
-                                currentStep: R.a.FacebookConnect
+                                currentStep: R.AuthFormStep.FacebookConnect
                             };
                         case v.PasswordMissing:
                             return {
@@ -2193,7 +2193,7 @@
                                 facebookConnectFormServerErrors: {
                                     passwordError: !0
                                 },
-                                currentStep: R.a.FacebookConnect
+                                currentStep: R.AuthFormStep.FacebookConnect
                             };
                         case v.MultipleAccountsLinkedToEmail:
                             return {
@@ -2202,7 +2202,7 @@
                                     subMessage: Object(Ge.e)()
                                 },
                                 facebookConnectFormServerErrors: {},
-                                currentStep: R.a.FacebookConnect
+                                currentStep: R.AuthFormStep.FacebookConnect
                             };
                         case v.NoAccountLinkedToEmail:
                             return {
@@ -2211,19 +2211,19 @@
                                     subMessage: Object(Ge.e)()
                                 },
                                 facebookConnectFormServerErrors: {},
-                                currentStep: R.a.FacebookConnect
+                                currentStep: R.AuthFormStep.FacebookConnect
                             };
                         case v.IncorrectCaptcha:
-                            return e === R.a.FacebookConnectCaptcha ? {
+                            return e === R.AuthFormStep.FacebookConnectCaptcha ? {
                                 serverMessage: {
                                     message: Object(s.d)("That reCAPTCHA did not work.", "FacebookConnectError")
                                 },
                                 facebookConnectFormServerErrors: {},
-                                currentStep: R.a.FacebookConnectCaptcha
+                                currentStep: R.AuthFormStep.FacebookConnectCaptcha
                             } : {
                                 serverMessage: {},
                                 facebookConnectFormServerErrors: {},
-                                currentStep: R.a.FacebookConnectCaptcha
+                                currentStep: R.AuthFormStep.FacebookConnectCaptcha
                             };
                         case v.InvalidUsername:
                             return {
@@ -2234,7 +2234,7 @@
                                 facebookConnectFormServerErrors: {
                                     usernameError: !0
                                 },
-                                currentStep: R.a.FacebookConnect
+                                currentStep: R.AuthFormStep.FacebookConnect
                             };
                         case v.InvalidPassword:
                             return {
@@ -2245,7 +2245,7 @@
                                 facebookConnectFormServerErrors: {
                                     passwordError: !0
                                 },
-                                currentStep: R.a.FacebookConnect
+                                currentStep: R.AuthFormStep.FacebookConnect
                             };
                         case v.UserDoesNotExist:
                             return {
@@ -2256,7 +2256,7 @@
                                 facebookConnectFormServerErrors: {
                                     usernameError: !0
                                 },
-                                currentStep: R.a.FacebookConnect
+                                currentStep: R.AuthFormStep.FacebookConnect
                             };
                         case v.UserCredentialsIncorrect:
                             return {
@@ -2267,7 +2267,7 @@
                                     usernameError: !0,
                                     passwordError: !0
                                 },
-                                currentStep: R.a.FacebookConnect
+                                currentStep: R.AuthFormStep.FacebookConnect
                             };
                         case v.UserNeedsPasswordReset:
                             return {
@@ -2276,7 +2276,7 @@
                                     subMessage: Object(Ge.h)()
                                 },
                                 facebookConnectFormServerErrors: {},
-                                currentStep: R.a.FacebookConnect
+                                currentStep: R.AuthFormStep.FacebookConnect
                             };
                         case v.UserHasBeenDeleted:
                             return {
@@ -2285,7 +2285,7 @@
                                     subMessage: Object(Ge.b)()
                                 },
                                 facebookConnectFormServerErrors: {},
-                                currentStep: R.a.FacebookConnect
+                                currentStep: R.AuthFormStep.FacebookConnect
                             };
                         case v.SuspendedUser:
                             return {
@@ -2294,7 +2294,7 @@
                                     subMessage: Object(Ge.i)()
                                 },
                                 facebookConnectFormServerErrors: {},
-                                currentStep: R.a.FacebookConnect
+                                currentStep: R.AuthFormStep.FacebookConnect
                             };
                         case v.FacebookAccountAlreadyLinked:
                             return {
@@ -2303,7 +2303,7 @@
                                     subMessage: Object(Ge.f)(r)
                                 },
                                 facebookConnectFormServerErrors: {},
-                                currentStep: R.a.FacebookConnect
+                                currentStep: R.AuthFormStep.FacebookConnect
                             };
                         case v.DeviceCookieThrottleReached:
                             return {
@@ -2312,13 +2312,13 @@
                                     subMessage: Object(s.d)("Please try again later.", "FacebookConnectError")
                                 },
                                 facebookConnectFormServerErrors: {},
-                                currentStep: R.a.FacebookConnect
+                                currentStep: R.AuthFormStep.FacebookConnect
                             };
                         case v.MissingAuthyToken:
                             return {
                                 serverMessage: {},
                                 facebookConnectFormServerErrors: {},
-                                currentStep: R.a.FacebookConnectTwoFactor
+                                currentStep: R.AuthFormStep.FacebookConnectTwoFactor
                             };
                         case v.InvalidAuthyToken:
                             return {
@@ -2326,7 +2326,7 @@
                                     message: Object(s.d)("That code was incorrect.", "FacebookConnectError")
                                 },
                                 facebookConnectFormServerErrors: {},
-                                currentStep: R.a.FacebookConnectTwoFactor
+                                currentStep: R.AuthFormStep.FacebookConnectTwoFactor
                             };
                         case v.FailedToVerifyAuthyToken:
                             return {
@@ -2334,7 +2334,7 @@
                                     message: Object(s.d)("We were unable to verify your Authy code.", "FacebookConnectError")
                                 },
                                 facebookConnectFormServerErrors: {},
-                                currentStep: R.a.FacebookConnectTwoFactor
+                                currentStep: R.AuthFormStep.FacebookConnectTwoFactor
                             };
                         case v.UnexpectedFacebookIssue:
                         case v.UnableToConnect:
@@ -2343,7 +2343,7 @@
                                     message: Object(s.d)("Something went wrong while connecting your Facebook account.", "FacebookConnectError")
                                 },
                                 facebookConnectFormServerErrors: {},
-                                currentStep: R.a.FacebookConnect
+                                currentStep: R.AuthFormStep.FacebookConnect
                             };
                         case v.FailedToDecodeJSON:
                         case v.UnexpectedError:
@@ -2353,7 +2353,7 @@
                                     message: Object(s.d)("Something went wrong.", "FacebookConnectError")
                                 },
                                 facebookConnectFormServerErrors: {},
-                                currentStep: R.a.FacebookConnect
+                                currentStep: R.AuthFormStep.FacebookConnect
                             }
                     }
                 }(e, t, r, a), {
@@ -2373,7 +2373,7 @@
                                     subMessage: Object(Ge.g)(e),
                                     isSuccessMessage: !0
                                 },
-                                currentStep: R.a.FacebookConnect
+                                currentStep: R.AuthFormStep.FacebookConnect
                             };
                         case g.SuspendedUser:
                             return {
@@ -2381,33 +2381,33 @@
                                     message: Object(s.d)("This account has been suspended.", "FacebookLoginError"),
                                     subMessage: Object(Ge.i)()
                                 },
-                                currentStep: R.a.FacebookLogin
+                                currentStep: R.AuthFormStep.FacebookLogin
                             };
                         case g.MissingAuthyToken:
                             return {
                                 serverMessage: {},
-                                currentStep: R.a.FacebookLoginTwoFactor
+                                currentStep: R.AuthFormStep.FacebookLoginTwoFactor
                             };
                         case g.InvalidAuthyToken:
                             return {
                                 serverMessage: {
                                     message: Object(s.d)("That code was incorrect.", "FacebookLoginError")
                                 },
-                                currentStep: R.a.FacebookLoginTwoFactor
+                                currentStep: R.AuthFormStep.FacebookLoginTwoFactor
                             };
                         case g.FailedToVerifyAuthyToken:
                             return {
                                 serverMessage: {
                                     message: Object(s.d)("We were unable to verify your Authy code.", "FacebookLoginError")
                                 },
-                                currentStep: R.a.FacebookLoginTwoFactor
+                                currentStep: R.AuthFormStep.FacebookLoginTwoFactor
                             };
                         case g.UnableToVerifyIdentity:
                             return {
                                 serverMessage: {
                                     message: Object(s.d)("We were unable to verify your Facebook identity.", "FacebookLoginError")
                                 },
-                                currentStep: R.a.FacebookLogin
+                                currentStep: R.AuthFormStep.FacebookLogin
                             };
                         case g.FailedToDecodeJSON:
                         case g.UnexpectedError:
@@ -2416,7 +2416,7 @@
                                 serverMessage: {
                                     message: Object(s.d)("Something went wrong.", "FacebookLoginError")
                                 },
-                                currentStep: R.a.FacebookLogin
+                                currentStep: R.AuthFormStep.FacebookLogin
                             }
                     }
                 }(e, t), {
@@ -2549,7 +2549,7 @@
                                 loginFormServerErrors: {
                                     usernameError: !0
                                 },
-                                currentStep: R.a.StartLogin
+                                currentStep: R.AuthFormStep.StartLogin
                             };
                         case n.PasswordMissing:
                             return {
@@ -2559,7 +2559,7 @@
                                 loginFormServerErrors: {
                                     passwordError: !0
                                 },
-                                currentStep: R.a.StartLogin
+                                currentStep: R.AuthFormStep.StartLogin
                             };
                         case n.MultipleAccountsLinkedToEmail:
                             return {
@@ -2568,7 +2568,7 @@
                                     subMessage: Object(Ge.e)()
                                 },
                                 loginFormServerErrors: {},
-                                currentStep: R.a.StartLogin
+                                currentStep: R.AuthFormStep.StartLogin
                             };
                         case n.NoAccountLinkedToEmail:
                             return {
@@ -2577,19 +2577,19 @@
                                     subMessage: Object(Ge.e)()
                                 },
                                 loginFormServerErrors: {},
-                                currentStep: R.a.StartLogin
+                                currentStep: R.AuthFormStep.StartLogin
                             };
                         case n.IncorrectCaptcha:
-                            return e === R.a.LoginCaptcha ? {
+                            return e === R.AuthFormStep.LoginCaptcha ? {
                                 serverMessage: {
                                     message: Object(s.d)("That reCAPTCHA did not work.", "LoginError")
                                 },
                                 loginFormServerErrors: {},
-                                currentStep: R.a.LoginCaptcha
+                                currentStep: R.AuthFormStep.LoginCaptcha
                             } : {
                                 serverMessage: {},
                                 loginFormServerErrors: {},
-                                currentStep: R.a.LoginCaptcha
+                                currentStep: R.AuthFormStep.LoginCaptcha
                             };
                         case n.InvalidUsername:
                             return {
@@ -2600,7 +2600,7 @@
                                 loginFormServerErrors: {
                                     usernameError: !0
                                 },
-                                currentStep: R.a.StartLogin
+                                currentStep: R.AuthFormStep.StartLogin
                             };
                         case n.InvalidPassword:
                             return {
@@ -2611,7 +2611,7 @@
                                 loginFormServerErrors: {
                                     passwordError: !0
                                 },
-                                currentStep: R.a.StartLogin
+                                currentStep: R.AuthFormStep.StartLogin
                             };
                         case n.UserDoesNotExist:
                             return {
@@ -2622,7 +2622,7 @@
                                 loginFormServerErrors: {
                                     usernameError: !0
                                 },
-                                currentStep: R.a.StartLogin
+                                currentStep: R.AuthFormStep.StartLogin
                             };
                         case n.UserCredentialsIncorrect:
                             return {
@@ -2634,7 +2634,7 @@
                                     usernameError: !0,
                                     passwordError: !0
                                 },
-                                currentStep: R.a.StartLogin
+                                currentStep: R.AuthFormStep.StartLogin
                             };
                         case n.UserNeedsPasswordReset:
                             return {
@@ -2643,7 +2643,7 @@
                                     subMessage: Object(Ge.h)()
                                 },
                                 loginFormServerErrors: {},
-                                currentStep: R.a.StartLogin
+                                currentStep: R.AuthFormStep.StartLogin
                             };
                         case n.UserHasBeenDeleted:
                             return {
@@ -2652,7 +2652,7 @@
                                     subMessage: Object(Ge.b)()
                                 },
                                 loginFormServerErrors: {},
-                                currentStep: R.a.StartLogin
+                                currentStep: R.AuthFormStep.StartLogin
                             };
                         case n.SuspendedUser:
                             return {
@@ -2661,7 +2661,7 @@
                                     subMessage: Object(Ge.i)()
                                 },
                                 loginFormServerErrors: {},
-                                currentStep: R.a.StartLogin
+                                currentStep: R.AuthFormStep.StartLogin
                             };
                         case n.DeviceCookieThrottleReached:
                             return {
@@ -2670,13 +2670,13 @@
                                     subMessage: Object(s.d)("Please try again later.", "LoginError")
                                 },
                                 loginFormServerErrors: {},
-                                currentStep: R.a.StartLogin
+                                currentStep: R.AuthFormStep.StartLogin
                             };
                         case n.MissingAuthyToken:
                             return {
                                 serverMessage: {},
                                 loginFormServerErrors: {},
-                                currentStep: R.a.LoginTwoFactor
+                                currentStep: R.AuthFormStep.LoginTwoFactor
                             };
                         case n.InvalidAuthyToken:
                             return {
@@ -2684,7 +2684,7 @@
                                     message: Object(s.d)("That code was incorrect.", "LoginError")
                                 },
                                 loginFormServerErrors: {},
-                                currentStep: R.a.LoginTwoFactor
+                                currentStep: R.AuthFormStep.LoginTwoFactor
                             };
                         case n.FailedToVerifyAuthyToken:
                             return {
@@ -2692,7 +2692,7 @@
                                     message: Object(s.d)("We were unable to verify your Authy code.", "LoginError")
                                 },
                                 loginFormServerErrors: {},
-                                currentStep: R.a.LoginTwoFactor
+                                currentStep: R.AuthFormStep.LoginTwoFactor
                             };
                         case n.FailedToDecodeJSON:
                         case n.UnexpectedError:
@@ -2702,7 +2702,7 @@
                                     message: Object(s.d)("Something went wrong.", "LoginError")
                                 },
                                 loginFormServerErrors: {},
-                                currentStep: R.a.StartLogin
+                                currentStep: R.AuthFormStep.StartLogin
                             }
                     }
                 }(e, t, a, i), {
@@ -2719,7 +2719,7 @@
             function at(e, t) {
                 return o.__assign({}, function(e, t) {
                     switch (t) {
-                        case p.UserNameMissing:
+                        case l.UserNameMissing:
                             return {
                                 serverMessage: {
                                     message: Object(s.d)("The username field is required.", "SignupError")
@@ -2728,7 +2728,7 @@
                                     usernameError: !0
                                 }
                             };
-                        case p.PasswordMissing:
+                        case l.PasswordMissing:
                             return {
                                 serverMessage: {
                                     message: Object(s.d)("The password field is required.", "SignupError")
@@ -2737,21 +2737,21 @@
                                     passwordError: !0
                                 }
                             };
-                        case p.IncorrectCaptcha:
+                        case l.IncorrectCaptcha:
                             return {
                                 serverMessage: {
                                     message: Object(s.d)("That reCAPTCHA did not work.", "SignupError")
                                 },
                                 signupFormServerErrors: {}
                             };
-                        case p.BlacklistedIP:
+                        case l.BlacklistedIP:
                             return {
                                 serverMessage: {
                                     message: Object(s.d)("We've noticed suspicious activity from this IP address.", "SignupError")
                                 },
                                 signupFormServerErrors: {}
                             };
-                        case p.BlacklistedEmailDomain:
+                        case l.BlacklistedEmailDomain:
                             return {
                                 serverMessage: {
                                     message: Object(s.d)('Emails using the domain "{domain}" are not allowed.', {
@@ -2767,7 +2767,7 @@
                                     emailError: !0
                                 }
                             };
-                        case p.InvalidBirthday:
+                        case l.InvalidBirthday:
                             return {
                                 serverMessage: {
                                     message: Object(s.d)("That birthday doesn’t seem right.", "SignupError")
@@ -2776,7 +2776,7 @@
                                     birthdayError: !0
                                 }
                             };
-                        case p.InvalidUsername:
+                        case l.InvalidUsername:
                             return {
                                 serverMessage: {
                                     message: Object(s.d)("This username submission is invalid.", "SignupError")
@@ -2785,7 +2785,7 @@
                                     usernameError: !0
                                 }
                             };
-                        case p.InvalidPassword:
+                        case l.InvalidPassword:
                             return {
                                 serverMessage: {
                                     message: Object(s.d)("Passwords must be between 8 and 71 characters.", "SignupError")
@@ -2794,7 +2794,7 @@
                                     passwordError: !0
                                 }
                             };
-                        case p.MissingFields:
+                        case l.MissingFields:
                             return {
                                 serverMessage: {
                                     message: Object(s.d)("Some fields were missing.", "SignupError"),
@@ -2802,7 +2802,7 @@
                                 },
                                 signupFormServerErrors: {}
                             };
-                        case p.UsernameExists:
+                        case l.UsernameExists:
                             return {
                                 serverMessage: {
                                     message: Object(s.d)("This username is unavailable.", "SignupError")
@@ -2811,7 +2811,7 @@
                                     usernameError: !0
                                 }
                             };
-                        case p.UserUnder13:
+                        case l.UserUnder13:
                             return tt.set(ot, "true"), {
                                 serverMessage: {
                                     message: Object(s.d)("Sorry, you must be at least 13 years old to create an account.", "SignupError"),
@@ -2823,7 +2823,7 @@
                                 },
                                 signupFormServerErrors: {}
                             };
-                        case p.EmailThrottled:
+                        case l.EmailThrottled:
                             return {
                                 serverMessage: {
                                     message: Object(s.d)("This email has been used to create too many accounts in the last 24 hours.", "SignupError"),
@@ -2833,7 +2833,7 @@
                                     emailError: !0
                                 }
                             };
-                        case p.IPThrottled:
+                        case l.IPThrottled:
                             return {
                                 serverMessage: {
                                     message: Object(s.d)("You are creating accounts too quickly.", "SignupError"),
@@ -2841,7 +2841,7 @@
                                 },
                                 signupFormServerErrors: {}
                             };
-                        case p.TooManyUsersWithEmail:
+                        case l.TooManyUsersWithEmail:
                             return {
                                 serverMessage: {
                                     message: Object(s.d)("This email is associated with too many accounts.", "SignupError"),
@@ -2851,7 +2851,7 @@
                                     emailError: !0
                                 }
                             };
-                        case p.MultiAccountDisabled:
+                        case l.MultiAccountDisabled:
                             return {
                                 serverMessage: {
                                     message: Object(s.d)("Unable to create account.", "SignupError"),
@@ -2861,8 +2861,8 @@
                                     emailError: !0
                                 }
                             };
-                        case p.FailedToDecodeJSON:
-                        case p.UnexpectedIssue:
+                        case l.FailedToDecodeJSON:
+                        case l.UnexpectedIssue:
                         default:
                             return {
                                 serverMessage: {
@@ -3135,7 +3135,7 @@
                                                 } : e.captchaValue && (r.captcha = {
                                                     value: e.captchaValue,
                                                     key: s.p.config.captchaKey
-                                                }), e.authyToken && (r.authy_token = e.authyToken), l(Object(i.d)() ? h : d, r, {
+                                                }), e.authyToken && (r.authy_token = e.authyToken), p(Object(i.d)() ? h : d, r, {
                                                     logger: t
                                                 })
                                             }(function(e, t, r) {
@@ -3178,7 +3178,7 @@
                                                         },
                                                         client_id: s.p.config.authSettings.clientID
                                                     };
-                                                return e.authyToken && (r.authy_token = e.authyToken), l(b, r, {
+                                                return e.authyToken && (r.authy_token = e.authyToken), p(b, r, {
                                                     logger: t
                                                 })
                                             }(t)]) : [3, 5];
@@ -3214,7 +3214,7 @@
                                                         },
                                                         client_id: s.p.config.authSettings.clientID
                                                     };
-                                                return l(k, r, {
+                                                return p(S, r, {
                                                     logger: t
                                                 })
                                             }(function(e, t) {
@@ -3262,7 +3262,7 @@
                                                     value: e.captchaValue
                                                 } : e.captchaProof && (r.captcha = {
                                                     proof: e.captchaProof
-                                                }), l(S, r, {
+                                                }), p(k, r, {
                                                     logger: t
                                                 })
                                             }(function(e, t, r, n) {
@@ -3308,7 +3308,7 @@
                                                             value: e.captchaValue
                                                         }
                                                     };
-                                                return l(m, r, {
+                                                return p(m, r, {
                                                     logger: t
                                                 })
                                             }(function(e) {
@@ -3506,7 +3506,7 @@
                             margin: {
                                 top: 2
                             }
-                        }, a.createElement(U, {
+                        }, a.createElement(V, {
                             onFacebookConnected: this.onFacebookConnected,
                             screen: Object(M.e)(this.state.currentStep),
                             disableConnectButton: this.state.isSubmitInTransit
@@ -3515,7 +3515,7 @@
                         return !(!Ne(e, t) || !Object(i.i)() && !this.state.signupFormValues.captchaValue)
                     }, t
                 }(a.Component),
-                lt = Object(pe.b)("AuthForm", {
+                pt = Object(le.b)("AuthForm", {
                     autoReportInteractive: !0
                 })(ut);
             r.d(t, "AUTH_FORM_BACK_SELECTOR", function() {
@@ -3523,7 +3523,7 @@
             }), r.d(t, "AuthFormPresentation", function() {
                 return ut
             }), r.d(t, "AuthForm", function() {
-                return lt
+                return pt
             })
         },
         "7M8a": function(e, t, r) {
@@ -3531,7 +3531,7 @@
             r.d(t, "a", function() {
                 return o
             }), r.d(t, "b", function() {
-                return l
+                return p
             });
             var n, o, a = r("/7QA"),
                 s = r("kRBY"),
@@ -3565,7 +3565,7 @@
             }(o || (o = {}));
             var u = ((n = {})[o.CreatingAccounts] = ["en", "de"], n[o.SmartNotifications] = c, n);
 
-            function l(e) {
+            function p(e) {
                 var t = Object(s.b)(a.p.store.getState()) || "en",
                     r = "en",
                     n = u[e];
@@ -3629,9 +3629,9 @@
                         i = r(2),
                         c = n(i),
                         u = r(1),
-                        l = n(u),
-                        p = r(4),
-                        d = n(p),
+                        p = n(u),
+                        l = r(4),
+                        d = n(l),
                         h = function(e) {
                             function t() {
                                 var e, r, n;
@@ -3674,17 +3674,17 @@
                                             i = t.responseType,
                                             c = t.redirectUri,
                                             u = t.disableMobileRedirect,
-                                            l = t.authType,
-                                            p = t.state;
+                                            p = t.authType,
+                                            l = t.state;
                                         if ("function" != typeof a || (a(e), !e.defaultPrevented)) {
                                             var h = {
                                                 client_id: o,
                                                 redirect_uri: c,
-                                                state: p,
+                                                state: l,
                                                 return_scopes: s,
                                                 scope: r,
                                                 response_type: i,
-                                                auth_type: l
+                                                auth_type: p
                                             };
                                             n.props.isMobile && !u ? window.location.href = "//www.facebook.com/dialog/oauth" + (0, d.default)(h) : window.FB.login(n.checkLoginState, {
                                                 scope: r,
@@ -3786,26 +3786,26 @@
                             }]), t
                         }(c.default.Component);
                     h.propTypes = {
-                        isDisabled: l.default.bool,
-                        callback: l.default.func.isRequired,
-                        appId: l.default.string.isRequired,
-                        xfbml: l.default.bool,
-                        cookie: l.default.bool,
-                        authType: l.default.bool,
-                        scope: l.default.string,
-                        state: l.default.string,
-                        responseType: l.default.string,
-                        returnScopes: l.default.bool,
-                        redirectUri: l.default.string,
-                        autoLoad: l.default.bool,
-                        disableMobileRedirect: l.default.bool,
-                        isMobile: l.default.bool,
-                        fields: l.default.string,
-                        version: l.default.string,
-                        language: l.default.string,
-                        onClick: l.default.func,
-                        onFailure: l.default.func,
-                        render: l.default.func.isRequired
+                        isDisabled: p.default.bool,
+                        callback: p.default.func.isRequired,
+                        appId: p.default.string.isRequired,
+                        xfbml: p.default.bool,
+                        cookie: p.default.bool,
+                        authType: p.default.bool,
+                        scope: p.default.string,
+                        state: p.default.string,
+                        responseType: p.default.string,
+                        returnScopes: p.default.bool,
+                        redirectUri: p.default.string,
+                        autoLoad: p.default.bool,
+                        disableMobileRedirect: p.default.bool,
+                        isMobile: p.default.bool,
+                        fields: p.default.string,
+                        version: p.default.string,
+                        language: p.default.string,
+                        onClick: p.default.func,
+                        onFailure: p.default.func,
+                        render: p.default.func.isRequired
                     }, h.defaultProps = {
                         redirectUri: "undefined" != typeof window ? window.location.href : "/",
                         scope: "public_profile,email",
@@ -3859,10 +3859,10 @@
                             var u;
                             if (void 0 === t) u = new Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");
                             else {
-                                var l = [r, o, a, s, i, c],
-                                    p = 0;
+                                var p = [r, o, a, s, i, c],
+                                    l = 0;
                                 (u = new Error(t.replace(/%s/g, function() {
-                                    return l[p++]
+                                    return p[l++]
                                 }))).name = "Invariant Violation"
                             }
                             throw u.framesToPop = 1, u
@@ -3939,8 +3939,8 @@
                         i = n(s),
                         c = r(1),
                         u = n(c),
-                        l = r(10),
-                        p = n(l),
+                        p = r(10),
+                        l = n(p),
                         d = r(3),
                         h = n(d),
                         g = function(e) {
@@ -3969,7 +3969,7 @@
                                     var e = this.constructor.defaultProps.cssClass;
                                     return this.props.cssClass === e && i.default.createElement("style", {
                                         dangerouslySetInnerHTML: {
-                                            __html: p.default
+                                            __html: l.default
                                         }
                                     })
                                 }
@@ -3994,11 +3994,11 @@
                                         s = t.textButton,
                                         c = t.typeButton,
                                         u = t.buttonStyle,
-                                        l = e.onClick,
-                                        p = e.isDisabled,
+                                        p = e.onClick,
+                                        l = e.isDisabled,
                                         d = "string" == typeof a,
                                         h = {};
-                                    return p && function(e) {
+                                    return l && function(e) {
                                         return ["button", "input", "select", "textarea", "optgroup", "option", "fieldset"].indexOf((e + "").toLowerCase()) >= 0
                                     }(this.props.tag) && (h.disabled = !0), i.default.createElement("span", {
                                         style: this.containerStyle(e)
@@ -4009,7 +4009,7 @@
                                         type: c,
                                         className: r + " " + n,
                                         style: u,
-                                        onClick: l
+                                        onClick: p
                                     }, h), a && d && i.default.createElement("i", {
                                         className: "fa " + a
                                     }), a && !d && a, s), this.style())
@@ -4270,9 +4270,9 @@
             }), r.d(t, "l", function() {
                 return u
             }), r.d(t, "e", function() {
-                return l
-            }), r.d(t, "d", function() {
                 return p
+            }), r.d(t, "d", function() {
+                return l
             }), r.d(t, "h", function() {
                 return d
             }), r.d(t, "b", function() {
@@ -4312,7 +4312,7 @@
                 }, e)
             }
 
-            function l() {
+            function p() {
                 return Object(o.d)("<x:link>Forgot your username</x:link>?", {
                     "x:link": function(e) {
                         return c(e, a.b)
@@ -4320,7 +4320,7 @@
                 }, "ServerMessage")
             }
 
-            function p() {
+            function l() {
                 return Object(o.d)("<x:link>Forgot your password</x:link>?", {
                     "x:link": function(e) {
                         return c(e, Object(a.e)())

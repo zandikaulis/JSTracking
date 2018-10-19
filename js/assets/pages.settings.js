@@ -953,7 +953,7 @@
                             text: Object(f.d)("Who you are in fewer than 300 characters", "ProfileAccountInfo")
                         })))
                     }, t.prototype.renderDisplayNameDescription = function() {
-                        return this.userHasCJKLanguageSet() ? Object(f.d)("Customize your display name! Setting a display name with Chinese, Japanese, or Korean characters is a permanent change — requests to undo it will not be honored! Display names that do not adhere to Twitch Rules of Conduct may result in an indefinite suspension of your account.", "ProfleAccountInfo") : Object(f.d)("Customize capitalization for your username", "ProfileAccountInfo")
+                        return this.userHasCJKLanguageSet() ? Object(f.d)("Customize your display name! Setting a display name with Chinese, Japanese, or Korean characters will prevent you from changing it again for 60 days — requests to undo it will not be honored! Display names that do not adhere to Twitch Rules of Conduct may result in an indefinite suspension of your account.", "ProfleAccountInfo") : Object(f.d)("Customize capitalization for your username", "ProfileAccountInfo")
                     }, t.prototype.renderBioError = function() {
                         return Object(f.d)("Your description is too long", "ProfileAccountInfo")
                     }, t.prototype.renderDisplayNameError = function() {

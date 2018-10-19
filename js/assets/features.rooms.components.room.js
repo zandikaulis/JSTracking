@@ -330,7 +330,7 @@
             }
 
             function a(e) {
-                return "/" + e.channelName + "/dashboard/achievements/" + e.id
+                return "/" + e.channelLogin + "/dashboard/achievements/" + e.id
             }
             t.d(i, "channelAchievements", function() {
                 return o

@@ -159,7 +159,7 @@
                 y = n("DnOo"),
                 S = n("W8Fi"),
                 E = n("3GEC"),
-                C = (n("VYov"), function(e) {
+                _ = (n("VYov"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.productName = Object(a.d)("All-Access Pass", "SubsPlanEsports"), t.onSubClick = function(e) {
@@ -329,7 +329,6 @@
                                 handleSubAction: e.onSubClick,
                                 productName: p.name,
                                 url: p.url + "/ticket",
-                                targetBlank: !1,
                                 isEsportChannel: !0
                             })))
                         })
@@ -351,7 +350,7 @@
                         }))
                     }, t = s.__decorate([Object(b.b)("SubsPlanEsports")], t)
                 }(o.Component)),
-                _ = function(e) {
+                C = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -364,7 +363,7 @@
                                 top: 2
                             },
                             justifyContent: h.Wa.Center
-                        }, o.createElement(C, {
+                        }, o.createElement(_, {
                             subbedPlatform: this.props.subbedPlatform,
                             subscriptionProducts: this.props.subscriptionProducts,
                             subTier: this.props.subTier,
@@ -373,8 +372,8 @@
                         })))
                     }, t
                 }(o.Component),
-                P = n("4iu0"),
-                T = n("L+W6"),
+                T = n("4iu0"),
+                P = n("L+W6"),
                 N = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -534,7 +533,7 @@
                         Object(S.g)([e]) && (t = Object(S.c)(e));
                         var n = "IOS" === this.props.subbedPlatform || "ANDROID" === this.props.subbedPlatform ? o.createElement(h.W, {
                             type: h.Pb.H5
-                        }, Object(a.d)("Tier 1 Subscription", "SubsBroadcasterPlanTabs")) : o.createElement(T.a, {
+                        }, Object(a.d)("Tier 1 Subscription", "SubsBroadcasterPlanTabs")) : o.createElement(P.a, {
                             subscriptionProduct: e
                         });
                         return o.createElement(h.Xa, {
@@ -554,8 +553,7 @@
                             tierPrice: t,
                             handleSubAction: this.onSubClick,
                             productName: e.name,
-                            url: e.url + "/ticket",
-                            targetBlank: !1
+                            url: e.url + "/ticket"
                         })))
                     }, t.prototype.isSubbedToTier = function() {
                         var e = 0;
@@ -697,8 +695,7 @@
                                 tierPrice: "6.99",
                                 handleSubAction: this.onSubClick,
                                 productName: t.name,
-                                url: "/ticket",
-                                targetBlank: !1
+                                url: "/ticket"
                             })))]
                         }
                         return this.props.subscriptionProducts.map(function(t, n) {
@@ -731,7 +728,7 @@
                                 flexGrow: 1,
                                 alignItems: h.f.Center,
                                 justifyContent: h.Wa.Center
-                            }, o.createElement(h.W, null, e.messages.includes), e.bonusEmotesMessage(n)), e.bonusEmotes(n), o.createElement(T.a, {
+                            }, o.createElement(h.W, null, e.messages.includes), e.bonusEmotesMessage(n)), e.bonusEmotes(n), o.createElement(P.a, {
                                 subscriptionProduct: t
                             }), o.createElement(h.Xa, {
                                 margin: 1
@@ -740,8 +737,7 @@
                                 tierPrice: i,
                                 handleSubAction: e.onSubClick,
                                 productName: t.name,
-                                url: t.url + "/ticket",
-                                targetBlank: !1
+                                url: t.url + "/ticket"
                             })))
                         })
                     }, t.prototype.isSubbedToTier = function(e) {
@@ -816,7 +812,7 @@
                     return s.__extends(t, e), t.prototype.render = function() {
                         return o.createElement(h.Xa, null, o.createElement(g, {
                             channelName: this.props.channelDisplayName
-                        }), o.createElement(P.a, {
+                        }), o.createElement(T.a, {
                             subscriptionProducts: this.props.subscriptionProducts
                         }), o.createElement(h.Xa, {
                             padding: {
@@ -888,7 +884,7 @@
                             subscriptionProducts: t.subscriptionProducts,
                             subTier: a
                         });
-                        return r && (u = o.createElement(_, {
+                        return r && (u = o.createElement(C, {
                             subbedPlatform: s,
                             channelDisplayName: t.displayName || "",
                             channelId: t.id,
@@ -1557,58 +1553,48 @@
                 s = n("oJmH"),
                 o = n("/7QA"),
                 a = n("UUve"),
-                c = n("D7An"),
-                l = n("GnwI"),
-                u = n("br9A"),
-                d = n("Ue10"),
-                p = "subscribe-button__subscribe-tier-button",
-                m = function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        if (n.state = {
-                                hasPopupExperiment: !1
-                            }, n.handleClick = function() {
-                                n.openCheckout(), n.props.handleSubAction({
-                                    action: u.a.ClickCheckout,
-                                    checkoutButtonTier: n.props.tierPrice
-                                })
-                            }, n.openCheckout = function() {
-                                n.state.hasPopupExperiment && o.n.set(a.b, n.props.productName)
-                            }, !1 === n.props.targetBlank) return n;
-                        var i = o.p.experiments.getAssignment(c.b.InstreamCheckout);
-                        return n.state = {
-                            hasPopupExperiment: "yes" === i
-                        }, n
+                c = n("GnwI"),
+                l = n("br9A"),
+                u = n("Ue10"),
+                d = "subscribe-button__subscribe-tier-button",
+                p = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.handleClick = function() {
+                            t.openCheckout(), t.props.handleSubAction({
+                                action: l.a.ClickCheckout,
+                                checkoutButtonTier: t.props.tierPrice
+                            })
+                        }, t.openCheckout = function() {
+                            o.n.set(a.b, t.props.productName)
+                        }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         if (this.props.isSubbedToTier) {
                             var e = Object(o.d)("Subscribed", "SubTierButton");
-                            return r.createElement(d.z, {
+                            return r.createElement(u.z, {
                                 ariaLabel: e,
-                                "data-test-selector": p,
+                                "data-test-selector": d,
                                 disabled: !0,
-                                icon: d.pb.Star
+                                icon: u.pb.Star
                             }, e)
                         }
                         var t = this.props.isEsportChannel ? Object(o.d)("Get the All-Access Pass", "SubTierButton") : Object(o.d)("Subscribe Now", "SubTierButton");
-                        return r.createElement(d.z, i.__assign({
+                        return r.createElement(u.z, i.__assign({
                             ariaLabel: t + " " + this.props.tierPrice,
-                            "data-test-selector": p,
-                            linkTo: this.state.hasPopupExperiment ? void 0 : this.props.url,
+                            "data-test-selector": d,
                             onClick: this.handleClick,
                             purchase: this.props.tierPrice
-                        }, Object(d.dc)(this.props), {
-                            targetBlank: void 0 === this.props.targetBlank || this.props.targetBlank
-                        }), t)
+                        }, Object(u.dc)(this.props)), t)
                     }, t
                 }(r.Component),
-                b = Object(s.compose)(Object(l.b)("SubTierButton", {
+                m = Object(s.compose)(Object(c.b)("SubTierButton", {
                     autoReportInteractive: !0
-                }))(m);
+                }))(p);
             n.d(t, !1, function() {
-                return p
+                return d
             }), n.d(t, "a", function() {
-                return b
+                return m
             })
         },
         GOKC: function(e, t, n) {},
