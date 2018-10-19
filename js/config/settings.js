@@ -68,6 +68,7 @@ window.__twilightSettings = {
     "extensions_mve_banner_enabled": true,
     "extensions_popout_enabled": "on",
     "first_page_loaded_timeout": 30000,
+    "freeway_extension_ids": ["4ced1fygnrzerfs95cofbwiltq88uh", "fr22g90tzrvi91eevh5ipehxbko7gd"],
     "gdpr_consent_enabled": true,
     "gdpr_disabled_eea_consent": false,
     "gdpr_evidon_timeout_ms": 30000,
