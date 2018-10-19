@@ -23,6 +23,7 @@ window.__twilightSettings = {
     "cc_v2_flag": "staff",
     "cc_v2_trial_test_enabled": false,
     "channel_feed_enabled": false,
+    "chat_input_box_followers_only_restriction_enabled": "off",
     "chat_input_box_restrictions_enabled": true,
     "chat_input_box_verified_only_restriction_enabled": "off",
     "chatrooms_enabled": true,
