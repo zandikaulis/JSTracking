@@ -1466,6 +1466,24 @@ window.__twilightSettings = {
                 "value": "hidden"
             }]
         },
+        "d725bd26-74e8-41a2-879b-4c08646aa454": {
+            "name": "contextual_auth_modals",
+            "v": 4911,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "balloon"
+            }, {
+                "weight": 0,
+                "value": "split"
+            }, {
+                "weight": 0,
+                "value": "two_step"
+            }]
+        },
         "db2180db-bc89-4f97-8bef-208b1782e18f": {
             "name": "TWILIGHT_LEADERBOARDS",
             "v": 3165,
