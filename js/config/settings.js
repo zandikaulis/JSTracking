@@ -1346,6 +1346,18 @@ window.__twilightSettings = {
                 "value": "variant3"
             }]
         },
+        "b6bf0083-d675-485b-8d9b-4dccfb6e605b": {
+            "name": "vod_charizard",
+            "v": 4921,
+            "t": 3,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "ba473bec-1ad3-4b55-9b3e-fdc002ba695c": {
             "name": "twilight_prime_sub_credit_api_wexit",
             "v": 3644,
