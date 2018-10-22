@@ -85,6 +85,7 @@ window.__twilightSettings = {
     "mobile_subs_feature_flag": "on",
     "multi_account_setting_feature_flag": "on",
     "native_account_recovery": "staff",
+    "native_account_report": "staff",
     "native_broadcast_blacklist": [],
     "net_neutrality_visible": false,
     "new_live_announcements": true,
