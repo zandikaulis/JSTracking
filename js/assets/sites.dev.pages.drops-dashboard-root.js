@@ -2332,7 +2332,7 @@
                 g = n("1mFg");
 
             function _(e) {
-                return e.curseCompanyId && -1 !== e.curseCompanyId ? e.curseCompanyId.toString() : e.id
+                return !e.legacy && e.curseCompanyId && -1 !== e.curseCompanyId ? e.curseCompanyId.toString() : e.id
             }
             var f = n("fy8Z");
 
