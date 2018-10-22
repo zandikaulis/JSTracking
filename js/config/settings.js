@@ -1,6 +1,7 @@
 window.__twilightSettings = {
     "environment": "production",
     "amazon_ads_url": "https://s.amazon-adsystem.com/iui3?d=3p-hbg&ex-src=twitch.tv&ex-hargs=v%3D1.0%3Bc%3D8858214122683%3Bp%3De75425fb-5407-7bd5-fd20-f462e98a8777",
+    "announce_collaboration_widget": "off",
     "benchmark_component_threshold": 0.1,
     "benchmark_networking_threshold": 0.15,
     "bits_automod_cheering_enabled": "on",
