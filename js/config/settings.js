@@ -170,6 +170,18 @@ window.__twilightSettings = {
                 "value": "no"
             }]
         },
+        "0186f46f-a8d8-40b9-963a-168302603fe8": {
+            "name": "new_user_survey",
+            "v": 4924,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "active"
+            }]
+        },
         "03f25f55-ded6-417a-b241-d656571c4a1f": {
             "name": "twilight_watch_symmetra",
             "v": 4191,
