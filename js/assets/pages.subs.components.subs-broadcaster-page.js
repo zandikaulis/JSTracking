@@ -159,7 +159,7 @@
                 y = n("DnOo"),
                 S = n("W8Fi"),
                 E = n("3GEC"),
-                _ = (n("VYov"), function(e) {
+                C = (n("VYov"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.productName = Object(a.d)("All-Access Pass", "SubsPlanEsports"), t.onSubClick = function(e) {
@@ -350,7 +350,7 @@
                         }))
                     }, t = s.__decorate([Object(b.b)("SubsPlanEsports")], t)
                 }(o.Component)),
-                C = function(e) {
+                _ = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -363,7 +363,7 @@
                                 top: 2
                             },
                             justifyContent: h.Wa.Center
-                        }, o.createElement(_, {
+                        }, o.createElement(C, {
                             subbedPlatform: this.props.subbedPlatform,
                             subscriptionProducts: this.props.subscriptionProducts,
                             subTier: this.props.subTier,
@@ -552,6 +552,7 @@
                             isSubbedToTier: this.isSubbedToTier(),
                             tierPrice: t,
                             handleSubAction: this.onSubClick,
+                            isMobileCheckout: !0,
                             productName: e.name,
                             url: e.url + "/ticket"
                         })))
@@ -736,6 +737,7 @@
                                 isSubbedToTier: e.isSubbedToTier(n),
                                 tierPrice: i,
                                 handleSubAction: e.onSubClick,
+                                isMobileCheckout: !0,
                                 productName: t.name,
                                 url: t.url + "/ticket"
                             })))
@@ -884,7 +886,7 @@
                             subscriptionProducts: t.subscriptionProducts,
                             subTier: a
                         });
-                        return r && (u = o.createElement(C, {
+                        return r && (u = o.createElement(_, {
                             subbedPlatform: s,
                             channelDisplayName: t.displayName || "",
                             channelId: t.id,
@@ -1566,7 +1568,7 @@
                                 checkoutButtonTier: t.props.tierPrice
                             })
                         }, t.openCheckout = function() {
-                            o.n.set(a.b, t.props.productName)
+                            t.props.isMobileCheckout || o.n.set(a.b, t.props.productName)
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
@@ -1583,6 +1585,7 @@
                         return r.createElement(u.z, i.__assign({
                             ariaLabel: t + " " + this.props.tierPrice,
                             "data-test-selector": d,
+                            linkTo: this.props.isMobileCheckout ? this.props.url : void 0,
                             onClick: this.handleClick,
                             purchase: this.props.tierPrice
                         }, Object(u.dc)(this.props)), t)

@@ -9423,7 +9423,7 @@
                                 checkoutButtonTier: t.props.tierPrice
                             })
                         }, t.openCheckout = function() {
-                            o.n.set(s.b, t.props.productName)
+                            t.props.isMobileCheckout || o.n.set(s.b, t.props.productName)
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
@@ -9440,6 +9440,7 @@
                         return r.createElement(d.z, i.__assign({
                             ariaLabel: t + " " + this.props.tierPrice,
                             "data-test-selector": u,
+                            linkTo: this.props.isMobileCheckout ? this.props.url : void 0,
                             onClick: this.handleClick,
                             purchase: this.props.tierPrice
                         }, Object(d.dc)(this.props)), t)
