@@ -1524,6 +1524,18 @@ window.__twilightSettings = {
                 "value": "two_step"
             }]
         },
+        "d92998ee-3ac6-4196-842f-0f30fd4de83e": {
+            "name": "directory_ttl",
+            "v": 4937,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "experiment"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }]
+        },
         "db2180db-bc89-4f97-8bef-208b1782e18f": {
             "name": "TWILIGHT_LEADERBOARDS",
             "v": 3165,
