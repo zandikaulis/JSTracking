@@ -11998,669 +11998,671 @@
             var r, i = n("mrSG"),
                 o = n("/MKj"),
                 a = n("fvjX"),
-                s = n("aCAx"),
-                l = n("kRBY"),
-                c = n("q1tI"),
-                u = n("coZW"),
-                d = n("/7QA"),
-                h = n("cZKs"),
-                p = n("4rCz"),
-                f = n("Ue10"),
-                m = function(e) {
-                    return c.createElement(f.Xa, {
+                s = n("V+GM"),
+                l = n("aCAx"),
+                c = n("2xye"),
+                u = n("kRBY"),
+                d = n("q1tI"),
+                h = n("coZW"),
+                p = n("/7QA"),
+                f = n("cZKs"),
+                m = n("4rCz"),
+                g = n("Ue10"),
+                b = function(e) {
+                    return d.createElement(g.Xa, {
                         padding: {
                             top: 1,
                             left: 1
                         }
-                    }, c.createElement(f.z, {
+                    }, d.createElement(g.z, {
                         onClick: e.onClick,
-                        type: f.F.Default,
+                        type: g.F.Default,
                         targetBlank: !0
-                    }, c.createElement(f.Xa, {
+                    }, d.createElement(g.Xa, {
                         padding: {
                             left: 2,
                             right: 2
                         }
-                    }, c.createElement(f.W, {
+                    }, d.createElement(g.W, {
                         bold: !0,
-                        fontSize: f.Ca.Size5,
-                        color: f.O.Overlay
-                    }, Object(p.d)("Continue to Next Step", "DevNextStepBtn")))))
+                        fontSize: g.Ca.Size5,
+                        color: g.O.Overlay
+                    }, Object(m.d)("Continue to Next Step", "DevNextStepBtn")))))
                 },
-                g = function(e) {
+                v = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        for (var e = [], t = 1; t <= 7; t++) e.push(c.createElement(f.Xa, {
+                        for (var e = [], t = 1; t <= 7; t++) e.push(d.createElement(g.Xa, {
                             padding: .5
-                        }, c.createElement("div", {
+                        }, d.createElement("div", {
                             className: this.props.pageNum >= t ? "dev-circle-fill" : "dev-circle"
                         })));
-                        return c.createElement(f.Xa, {
+                        return d.createElement(g.Xa, {
                             padding: 2,
-                            display: f.X.Flex,
-                            position: f.fb.Absolute,
+                            display: g.X.Flex,
+                            position: g.fb.Absolute,
                             attachBottom: !0
                         }, e)
                     }, t
-                }(c.Component),
-                b = (n("Qk1C"), {
+                }(d.Component),
+                y = (n("Qk1C"), {
                     "data-test-selector": "dev-sandbox-on-boarding-preview-left-arrow"
                 }),
-                v = {
+                w = {
                     "data-test-selector": "dev-sandbox-on-boarding-preview-right-arrow"
                 },
-                y = function() {
-                    return Object(d.d)("Channel Selection", "DevSandboxOnBoardingChannelSelection")
+                k = function() {
+                    return Object(p.d)("Channel Selection", "DevSandboxOnBoardingChannelSelection")
                 },
-                w = function(e) {
+                x = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(f.zb, {
+                        return d.createElement(g.zb, {
                             className: "dev-sandbox-onboarding-channel-selection__container dev-sandbox-onboarding-channel-selection__gradient-border",
-                            background: f.r.Base,
-                            position: f.fb.Relative,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            background: g.r.Base,
+                            position: g.fb.Relative,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-channel-selection",
                             fullHeight: !0,
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             padding: 1
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            fontSize: f.Ca.Size3,
-                            color: f.O.Link
-                        }, y())), c.createElement(f.Xa, {
+                            fontSize: g.Ca.Size3,
+                            color: g.O.Link
+                        }, k())), d.createElement(g.Xa, {
                             padding: 1,
-                            position: f.fb.Relative,
-                            display: f.X.Flex,
+                            position: g.fb.Relative,
+                            display: g.X.Flex,
                             fullWidth: !0,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center
-                        }, c.createElement(f.Xa, {
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center
+                        }, d.createElement(g.Xa, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
-                        }, c.createElement(f.A, i.__assign({
-                            icon: f.pb.AngleLeft,
+                        }, d.createElement(g.A, i.__assign({
+                            icon: g.pb.AngleLeft,
                             onClick: this.props.onPre
-                        }, b))), c.createElement(f.Xa, {
+                        }, y))), d.createElement(g.Xa, {
                             padding: {
                                 left: 2,
                                 right: 2
                             }
-                        }, c.createElement(f.W, {
-                            fontSize: f.Ca.Size5,
-                            color: f.O.Link
-                        }, Object(d.d)("You can change the Twitch.tv channel shown here in the simulated stream. Note: if you toggle the hide browser, the stream will not be visible for panel extensions.", "DevSandboxOnBoardingChannelSelection"))), c.createElement(f.Xa, {
+                        }, d.createElement(g.W, {
+                            fontSize: g.Ca.Size5,
+                            color: g.O.Link
+                        }, Object(p.d)("You can change the Twitch.tv channel shown here in the simulated stream. Note: if you toggle the hide browser, the stream will not be visible for panel extensions.", "DevSandboxOnBoardingChannelSelection"))), d.createElement(g.Xa, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
-                        }, c.createElement(f.A, i.__assign({
-                            icon: f.pb.AngleRight,
+                        }, d.createElement(g.A, i.__assign({
+                            icon: g.pb.AngleRight,
                             onClick: this.props.onNext
-                        }, v)))), c.createElement(f.Xa, {
-                            display: f.X.Flex
-                        }, c.createElement(m, {
+                        }, w)))), d.createElement(g.Xa, {
+                            display: g.X.Flex
+                        }, d.createElement(b, {
                             onClick: this.props.onNext
-                        })), c.createElement(g, {
+                        })), d.createElement(v, {
                             pageNum: 4
-                        })), c.createElement(h.a, {
+                        })), d.createElement(f.a, {
                             onClose: this.props.onClose
                         }))
                     }, t
-                }(c.Component),
-                k = function(e) {
-                    return c.createElement(f.Xa, {
+                }(d.Component),
+                E = function(e) {
+                    return d.createElement(g.Xa, {
                         padding: {
                             top: 1
                         }
-                    }, c.createElement(f.z, {
+                    }, d.createElement(g.z, {
                         linkTo: e.linkTo,
-                        onClick: Object(u.c)(e.trackLabel),
-                        type: f.F.Hollow,
+                        onClick: Object(h.c)(e.trackLabel),
+                        type: g.F.Hollow,
                         targetBlank: !0
-                    }, c.createElement(f.Xa, {
+                    }, d.createElement(g.Xa, {
                         padding: {
                             left: 2,
                             right: 2
                         }
-                    }, c.createElement(f.W, {
+                    }, d.createElement(g.W, {
                         bold: !0,
-                        fontSize: f.Ca.Size5,
-                        color: f.O.Link
+                        fontSize: g.Ca.Size5,
+                        color: g.O.Link
                     }, e.message))))
                 },
-                x = (n("9xII"), {
+                _ = (n("9xII"), {
                     "data-test-selector": "dev-sandbox-on-boarding-choose-sample-left-arrow"
                 }),
-                E = {
+                C = {
                     "data-test-selector": "dev-sandbox-on-boarding-choose-sample-right-arrow"
                 },
-                _ = function() {
-                    return Object(d.d)("Choose Sample Extension", "DevSandboxOnBoardingChooseSample")
+                S = function() {
+                    return Object(p.d)("Choose Sample Extension", "DevSandboxOnBoardingChooseSample")
                 },
-                C = function(e) {
+                A = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(f.zb, {
+                        return d.createElement(g.zb, {
                             className: "dev-sandbox-onboarding-choose-sample__container dev-sandbox-onboarding-choose-sample__gradient-border",
-                            background: f.r.Base,
-                            position: f.fb.Relative,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            background: g.r.Base,
+                            position: g.fb.Relative,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-choose-sample",
                             fullHeight: !0,
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             padding: 1
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            fontSize: f.Ca.Size3,
-                            color: f.O.Link
-                        }, _())), c.createElement(f.Xa, {
+                            fontSize: g.Ca.Size3,
+                            color: g.O.Link
+                        }, S())), d.createElement(g.Xa, {
                             padding: 1,
-                            position: f.fb.Relative,
-                            display: f.X.Flex
-                        }, c.createElement(f.Xa, {
+                            position: g.fb.Relative,
+                            display: g.X.Flex
+                        }, d.createElement(g.Xa, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
-                        }, c.createElement(f.A, i.__assign({}, x, {
-                            icon: f.pb.AngleLeft,
+                        }, d.createElement(g.A, i.__assign({}, _, {
+                            icon: g.pb.AngleLeft,
                             onClick: this.props.onPre
-                        }))), c.createElement(f.Xa, null, c.createElement(f.W, {
-                            fontSize: f.Ca.Size5,
-                            color: f.O.Link
-                        }, Object(d.d)('By default, we have loaded a "Hello, World!" sample extension. In the future, we\'ll have more samples that you can select from using the dropdown here.', "DevSandboxOnBoardingChooseSample"))), c.createElement(f.Xa, {
+                        }))), d.createElement(g.Xa, null, d.createElement(g.W, {
+                            fontSize: g.Ca.Size5,
+                            color: g.O.Link
+                        }, Object(p.d)('By default, we have loaded a "Hello, World!" sample extension. In the future, we\'ll have more samples that you can select from using the dropdown here.', "DevSandboxOnBoardingChooseSample"))), d.createElement(g.Xa, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
-                        }, c.createElement(f.A, i.__assign({}, E, {
-                            icon: f.pb.AngleRight,
+                        }, d.createElement(g.A, i.__assign({}, C, {
+                            icon: g.pb.AngleRight,
                             onClick: this.props.onNext
-                        })))), c.createElement(f.Xa, {
-                            display: f.X.Flex
-                        }, c.createElement(k, {
+                        })))), d.createElement(g.Xa, {
+                            display: g.X.Flex
+                        }, d.createElement(E, {
                             linkTo: "https://github.com/twitchdev/extensions-hello-world",
-                            message: Object(d.d)("View Sample on Github", "DevSandboxOnBoardingChooseSample"),
-                            trackLabel: u.a.SandboxGuideChooseSampleDocs
-                        }), c.createElement(m, {
+                            message: Object(p.d)("View Sample on Github", "DevSandboxOnBoardingChooseSample"),
+                            trackLabel: h.a.SandboxGuideChooseSampleDocs
+                        }), d.createElement(b, {
                             onClick: this.props.onNext
-                        })), c.createElement(g, {
+                        })), d.createElement(v, {
                             pageNum: 1
-                        })), c.createElement(h.a, {
+                        })), d.createElement(f.a, {
                             onClose: this.props.onClose
                         }))
                     }, t
-                }(c.Component),
-                S = (n("Aqt7"), {
+                }(d.Component),
+                T = (n("Aqt7"), {
                     "data-test-selector": "dev-sandbox-on-boarding-choose-type-left-arrow"
                 }),
-                A = {
+                F = {
                     "data-test-selector": "dev-sandbox-on-boarding-choose-type-right-arrow"
                 },
-                T = function() {
-                    return Object(d.d)("Select Anchor Display", "DevSandboxOnBoardingChooseType")
+                L = function() {
+                    return Object(p.d)("Select Anchor Display", "DevSandboxOnBoardingChooseType")
                 },
-                F = function(e) {
+                R = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(f.zb, {
+                        return d.createElement(g.zb, {
                             className: "dev-sandbox-onboarding-choose-type__container dev-sandbox-onboarding-choose-type__gradient-border",
-                            background: f.r.Base,
-                            position: f.fb.Relative,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            background: g.r.Base,
+                            position: g.fb.Relative,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-choose-type",
                             fullHeight: !0,
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             padding: 1
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            fontSize: f.Ca.Size3,
-                            color: f.O.Link
-                        }, T())), c.createElement(f.Xa, {
+                            fontSize: g.Ca.Size3,
+                            color: g.O.Link
+                        }, L())), d.createElement(g.Xa, {
                             padding: 1,
-                            position: f.fb.Relative,
-                            display: f.X.Flex
-                        }, c.createElement(f.Xa, {
+                            position: g.fb.Relative,
+                            display: g.X.Flex
+                        }, d.createElement(g.Xa, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
-                        }, c.createElement(f.A, i.__assign({}, S, {
-                            icon: f.pb.AngleLeft,
+                        }, d.createElement(g.A, i.__assign({}, T, {
+                            icon: g.pb.AngleLeft,
                             onClick: this.props.onPre
-                        }))), c.createElement(f.Xa, null, c.createElement(f.W, {
-                            fontSize: f.Ca.Size5,
-                            color: f.O.Link
-                        }, Object(d.d)("Use this dropdown to switch which extension is rendered, for extensions that have more than one view type as reflected in the *sample code within the code editor.", "DevSandboxOnBoardingChooseType"))), c.createElement(f.Xa, {
+                        }))), d.createElement(g.Xa, null, d.createElement(g.W, {
+                            fontSize: g.Ca.Size5,
+                            color: g.O.Link
+                        }, Object(p.d)("Use this dropdown to switch which extension is rendered, for extensions that have more than one view type as reflected in the *sample code within the code editor.", "DevSandboxOnBoardingChooseType"))), d.createElement(g.Xa, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
-                        }, c.createElement(f.A, i.__assign({}, A, {
-                            icon: f.pb.AngleRight,
+                        }, d.createElement(g.A, i.__assign({}, F, {
+                            icon: g.pb.AngleRight,
                             onClick: this.props.onNext
-                        })))), c.createElement(f.Xa, {
-                            display: f.X.Flex
-                        }, c.createElement(k, {
+                        })))), d.createElement(g.Xa, {
+                            display: g.X.Flex
+                        }, d.createElement(E, {
                             linkTo: "https://dev.twitch.tv/docs/extensions/required-technical-background",
-                            message: Object(d.d)("More about Extension Types", "DevSandboxOnBoardingChooseType"),
-                            trackLabel: u.a.SandboxGuideChooseTypeDocs
-                        }), c.createElement(m, {
+                            message: Object(p.d)("More about Extension Types", "DevSandboxOnBoardingChooseType"),
+                            trackLabel: h.a.SandboxGuideChooseTypeDocs
+                        }), d.createElement(b, {
                             onClick: this.props.onNext
-                        })), c.createElement(g, {
+                        })), d.createElement(v, {
                             pageNum: 5
-                        })), c.createElement(h.a, {
+                        })), d.createElement(f.a, {
                             onClose: this.props.onClose
                         }))
                     }, t
-                }(c.Component),
-                L = (n("WH3u"), {
+                }(d.Component),
+                B = (n("WH3u"), {
                     "data-test-selector": "dev-sandbox-on-boarding-code-left-arrow"
                 }),
-                R = {
+                O = {
                     "data-test-selector": "dev-sandbox-on-boarding-code-right-arrow"
                 },
-                B = function() {
-                    return Object(d.d)("Edit Extension Files", "DevSandboxOnBoardingCodeSection")
+                D = function() {
+                    return Object(p.d)("Edit Extension Files", "DevSandboxOnBoardingCodeSection")
                 },
-                O = function(e) {
+                M = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(f.zb, {
+                        return d.createElement(g.zb, {
                             className: "dev-sandbox-onboarding-code-section__container dev-sandbox-onboarding-code-section__gradient-border",
-                            background: f.r.Base,
-                            position: f.fb.Relative,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            background: g.r.Base,
+                            position: g.fb.Relative,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-code-section",
                             fullHeight: !0,
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             padding: 1
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            fontSize: f.Ca.Size3,
-                            color: f.O.Link
-                        }, B())), c.createElement(f.Xa, {
+                            fontSize: g.Ca.Size3,
+                            color: g.O.Link
+                        }, D())), d.createElement(g.Xa, {
                             padding: 1,
-                            position: f.fb.Relative,
-                            display: f.X.Flex,
-                            alignItems: f.f.Center
-                        }, c.createElement(f.Xa, {
+                            position: g.fb.Relative,
+                            display: g.X.Flex,
+                            alignItems: g.f.Center
+                        }, d.createElement(g.Xa, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
-                        }, c.createElement(f.A, i.__assign({
-                            icon: f.pb.AngleLeft,
+                        }, d.createElement(g.A, i.__assign({
+                            icon: g.pb.AngleLeft,
                             onClick: this.props.onPre
-                        }, L))), c.createElement(f.Xa, null, c.createElement(f.Xa, null, c.createElement(f.W, {
-                            fontSize: f.Ca.Size5,
-                            color: f.O.Link
-                        }, Object(d.d)("Edit the sample extension code in this section. To see a preview on the channel, click the Run button. Note: after the first run, changes will be reflected live as you code.", "DevSandboxOnBoardingCodeSection"))), c.createElement(f.Xa, {
+                        }, B))), d.createElement(g.Xa, null, d.createElement(g.Xa, null, d.createElement(g.W, {
+                            fontSize: g.Ca.Size5,
+                            color: g.O.Link
+                        }, Object(p.d)("Edit the sample extension code in this section. To see a preview on the channel, click the Run button. Note: after the first run, changes will be reflected live as you code.", "DevSandboxOnBoardingCodeSection"))), d.createElement(g.Xa, {
                             padding: {
                                 top: 2
                             }
-                        }, c.createElement(f.W, {
-                            fontSize: f.Ca.Size5,
-                            color: f.O.Link
-                        }, Object(d.d)("To switch between the files that support the extension, use the dropdown. Changes you make will be saved in your browser cache. If you need to start over, click the undo button next to the dropdown.", "DevSandboxOnBoardingCodeSection"))), c.createElement(f.Xa, {
+                        }, d.createElement(g.W, {
+                            fontSize: g.Ca.Size5,
+                            color: g.O.Link
+                        }, Object(p.d)("To switch between the files that support the extension, use the dropdown. Changes you make will be saved in your browser cache. If you need to start over, click the undo button next to the dropdown.", "DevSandboxOnBoardingCodeSection"))), d.createElement(g.Xa, {
                             padding: {
                                 top: 2
                             }
-                        }, c.createElement(f.W, {
-                            fontSize: f.Ca.Size5,
-                            color: f.O.Link
-                        }, Object(d.d)("You can download the code and save your progress onto your desktop. The .zip file contains the files that you’ve worked with. The readme file can help you take the next steps in continuing local development.", "DevSandboxOnBoardingCodeSection")))), c.createElement(f.Xa, {
+                        }, d.createElement(g.W, {
+                            fontSize: g.Ca.Size5,
+                            color: g.O.Link
+                        }, Object(p.d)("You can download the code and save your progress onto your desktop. The .zip file contains the files that you’ve worked with. The readme file can help you take the next steps in continuing local development.", "DevSandboxOnBoardingCodeSection")))), d.createElement(g.Xa, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
-                        }, c.createElement(f.A, i.__assign({
-                            icon: f.pb.AngleRight,
+                        }, d.createElement(g.A, i.__assign({
+                            icon: g.pb.AngleRight,
                             onClick: this.props.onNext
-                        }, R)))), c.createElement(f.Xa, {
-                            display: f.X.Flex
-                        }, c.createElement(k, {
+                        }, O)))), d.createElement(g.Xa, {
+                            display: g.X.Flex
+                        }, d.createElement(E, {
                             linkTo: "https://dev.twitch.tv/docs/extensions/required-technical-background/#architecture-overview",
-                            message: Object(d.d)("Extension Architecture Overview", "DevSandboxOnBoardingCodeSection"),
-                            trackLabel: u.a.SandboxGuideCodeSectionDocs
-                        }), c.createElement(m, {
+                            message: Object(p.d)("Extension Architecture Overview", "DevSandboxOnBoardingCodeSection"),
+                            trackLabel: h.a.SandboxGuideCodeSectionDocs
+                        }), d.createElement(b, {
                             onClick: this.props.onNext
-                        })), c.createElement(g, {
+                        })), d.createElement(v, {
                             pageNum: 2
-                        })), c.createElement(h.a, {
+                        })), d.createElement(f.a, {
                             onClose: this.props.onClose
                         }))
                     }, t
-                }(c.Component),
-                D = (n("+IyJ"), {
+                }(d.Component),
+                j = (n("+IyJ"), {
                     "data-test-selector": "dev-sandbox-on-boarding-download-left-arrow"
                 }),
-                M = {
+                I = {
                     "data-test-selector": "dev-sandbox-on-boarding-download-right-arrow"
                 },
-                j = function() {
-                    return Object(d.d)("Download and Develop Locally", "DevSandboxOnBoardingDownload")
+                N = function() {
+                    return Object(p.d)("Download and Develop Locally", "DevSandboxOnBoardingDownload")
                 },
-                I = function(e) {
+                P = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(f.zb, {
+                        return d.createElement(g.zb, {
                             className: "dev-sandbox-onboarding-download__container dev-sandbox-onboarding-download__gradient-border",
-                            background: f.r.Base,
-                            position: f.fb.Relative,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            background: g.r.Base,
+                            position: g.fb.Relative,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-download",
                             fullHeight: !0,
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             padding: 1
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            fontSize: f.Ca.Size3,
-                            color: f.O.Link
-                        }, j())), c.createElement(f.Xa, {
+                            fontSize: g.Ca.Size3,
+                            color: g.O.Link
+                        }, N())), d.createElement(g.Xa, {
                             padding: 1,
-                            position: f.fb.Relative,
-                            display: f.X.Flex
-                        }, c.createElement(f.Xa, {
+                            position: g.fb.Relative,
+                            display: g.X.Flex
+                        }, d.createElement(g.Xa, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
-                        }, c.createElement(f.A, i.__assign({}, D, {
-                            icon: f.pb.AngleLeft,
+                        }, d.createElement(g.A, i.__assign({}, j, {
+                            icon: g.pb.AngleLeft,
                             onClick: this.props.onPre
-                        }))), c.createElement(f.Xa, null, c.createElement(f.W, {
-                            fontSize: f.Ca.Size5,
-                            color: f.O.Link
-                        }, Object(d.d)("Once you are done exploring the sample code in the sandbox, download your code and follow the instructions to continue development in the Developer Rig.", "DevSandboxOnBoardingDownload"))), c.createElement(f.Xa, {
+                        }))), d.createElement(g.Xa, null, d.createElement(g.W, {
+                            fontSize: g.Ca.Size5,
+                            color: g.O.Link
+                        }, Object(p.d)("Once you are done exploring the sample code in the sandbox, download your code and follow the instructions to continue development in the Developer Rig.", "DevSandboxOnBoardingDownload"))), d.createElement(g.Xa, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
-                        }, c.createElement(f.A, i.__assign({}, M, {
-                            icon: f.pb.AngleRight,
+                        }, d.createElement(g.A, i.__assign({}, I, {
+                            icon: g.pb.AngleRight,
                             onClick: this.props.onNext
-                        })))), c.createElement(f.Xa, {
-                            display: f.X.Flex
-                        }, c.createElement(k, {
+                        })))), d.createElement(g.Xa, {
+                            display: g.X.Flex
+                        }, d.createElement(E, {
                             linkTo: "https://github.com/twitchdev/developer-rig",
-                            message: Object(d.d)("View Developer Rig on Github", "DevSandboxOnBoardingDone"),
-                            trackLabel: u.a.SandboxGuideAllDoneDocs
-                        }), c.createElement(f.Xa, {
+                            message: Object(p.d)("View Developer Rig on Github", "DevSandboxOnBoardingDone"),
+                            trackLabel: h.a.SandboxGuideAllDoneDocs
+                        }), d.createElement(g.Xa, {
                             padding: {
                                 top: 1,
                                 left: 1
                             }
-                        }, c.createElement(f.z, {
+                        }, d.createElement(g.z, {
                             onClick: this.props.onClose,
-                            type: f.F.Default,
+                            type: g.F.Default,
                             targetBlank: !0
-                        }, c.createElement(f.Xa, {
+                        }, d.createElement(g.Xa, {
                             padding: {
                                 left: 2,
                                 right: 2
                             }
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            fontSize: f.Ca.Size5,
-                            color: f.O.Overlay
-                        }, Object(d.d)("Close Guide", "DevSandboxOnBoardingDone")))))), c.createElement(g, {
+                            fontSize: g.Ca.Size5,
+                            color: g.O.Overlay
+                        }, Object(p.d)("Close Guide", "DevSandboxOnBoardingDone")))))), d.createElement(v, {
                             pageNum: 7
-                        })), c.createElement(h.a, {
+                        })), d.createElement(f.a, {
                             onClose: this.props.onClose
                         }))
                     }, t
-                }(c.Component),
-                N = (n("UsIo"), function(e) {
+                }(d.Component),
+                $ = (n("UsIo"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(f.zb, {
+                        return d.createElement(g.zb, {
                             className: "dev-sandbox-onboarding-intro__container dev-sandbox-onboarding-intro__gradient-border",
-                            background: f.r.Base,
-                            position: f.fb.Relative,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            background: g.r.Base,
+                            position: g.fb.Relative,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-intro",
                             fullHeight: !0,
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             padding: 1
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
                             className: "dev-sandbox-onboarding-intro__heading",
-                            color: f.O.Link
-                        }, Object(d.d)("Welcome!", "DevSandboxOnBoardingIntro"))), c.createElement(f.Xa, {
+                            color: g.O.Link
+                        }, Object(p.d)("Welcome!", "DevSandboxOnBoardingIntro"))), d.createElement(g.Xa, {
                             padding: {
                                 left: 3,
                                 right: 3,
                                 top: 1,
                                 bottom: 3
                             }
-                        }, c.createElement(f.W, {
-                            fontSize: f.Ca.Size5,
-                            color: f.O.Link
-                        }, Object(d.d)("Welcome to the Twitch Developers Extension sandbox. Here, you can try writing the front-end code of an Extension, see what your Extension will look like on a real channel, and download your code to finish building in the Developer Rig. Give it a try!", "DevSandboxOnBoardingIntro"))), c.createElement(f.Xa, {
+                        }, d.createElement(g.W, {
+                            fontSize: g.Ca.Size5,
+                            color: g.O.Link
+                        }, Object(p.d)("Welcome to the Twitch Developers Extension sandbox. Here, you can try writing the front-end code of an Extension, see what your Extension will look like on a real channel, and download your code to finish building in the Developer Rig. Give it a try!", "DevSandboxOnBoardingIntro"))), d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-intro__btn-group"
-                        }, c.createElement(f.z, {
+                        }, d.createElement(g.z, {
                             onClick: this.props.onNext
-                        }, c.createElement(f.Xa, {
+                        }, d.createElement(g.Xa, {
                             padding: {
                                 left: 2,
                                 right: 2,
                                 top: 1,
                                 bottom: 1
                             }
-                        }, c.createElement(f.W, {
-                            fontSize: f.Ca.Size5
-                        }, Object(d.d)("Get Started", "DevSandboxOnBoardingIntro")))))), c.createElement(h.a, {
+                        }, d.createElement(g.W, {
+                            fontSize: g.Ca.Size5
+                        }, Object(p.d)("Get Started", "DevSandboxOnBoardingIntro")))))), d.createElement(f.a, {
                             onClose: this.props.onClose
                         }))
                     }, t
-                }(c.Component)),
-                P = (n("6SwC"), {
+                }(d.Component)),
+                z = (n("6SwC"), {
                     "data-test-selector": "dev-sandbox-on-boarding-manual-run-left-arrow"
                 }),
-                $ = {
+                W = {
                     "data-test-selector": "dev-sandbox-on-boarding-manual-run-right-arrow"
                 },
-                z = function() {
-                    return Object(d.d)("Manually Run Extension", "DevSandboxOnBoardingManualRun")
+                H = function() {
+                    return Object(p.d)("Manually Run Extension", "DevSandboxOnBoardingManualRun")
                 },
-                W = function(e) {
+                U = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(f.zb, {
+                        return d.createElement(g.zb, {
                             className: "dev-sandbox-onboarding-manual-run__container dev-sandbox-onboarding-manual-run__gradient-border",
-                            background: f.r.Base,
-                            position: f.fb.Relative,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            background: g.r.Base,
+                            position: g.fb.Relative,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-manual-run",
                             fullHeight: !0,
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             padding: 1
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            fontSize: f.Ca.Size3,
-                            color: f.O.Link
-                        }, z())), c.createElement(f.Xa, {
+                            fontSize: g.Ca.Size3,
+                            color: g.O.Link
+                        }, H())), d.createElement(g.Xa, {
                             padding: 1,
-                            position: f.fb.Relative,
-                            display: f.X.Flex
-                        }, c.createElement(f.Xa, {
+                            position: g.fb.Relative,
+                            display: g.X.Flex
+                        }, d.createElement(g.Xa, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
-                        }, c.createElement(f.A, i.__assign({}, P, {
-                            icon: f.pb.AngleLeft,
+                        }, d.createElement(g.A, i.__assign({}, z, {
+                            icon: g.pb.AngleLeft,
                             onClick: this.props.onPre
-                        }))), c.createElement(f.Xa, null, c.createElement(f.W, {
-                            fontSize: f.Ca.Size5,
-                            color: f.O.Link
-                        }, Object(d.d)("We'll automatically re-run code after you make changes and stop typing for a few seconds.", "DevSandboxOnBoardingChooseType")), c.createElement(f.Pa, {
+                        }))), d.createElement(g.Xa, null, d.createElement(g.W, {
+                            fontSize: g.Ca.Size5,
+                            color: g.O.Link
+                        }, Object(p.d)("We'll automatically re-run code after you make changes and stop typing for a few seconds.", "DevSandboxOnBoardingChooseType")), d.createElement(g.Pa, {
                             padding: {
                                 top: 1
                             }
-                        }, c.createElement(f.W, {
-                            fontSize: f.Ca.Size5,
-                            color: f.O.Link
-                        }, Object(d.d)("If there is an issue with the refresh or you are making a change that requires a re-run (i.e call an API), then you may need to manually run the extension. Click the {run} button to do so.", {
-                            run: c.createElement(f.ob, {
-                                asset: f.pb.MiniPlayerPlay,
+                        }, d.createElement(g.W, {
+                            fontSize: g.Ca.Size5,
+                            color: g.O.Link
+                        }, Object(p.d)("If there is an issue with the refresh or you are making a change that requires a re-run (i.e call an API), then you may need to manually run the extension. Click the {run} button to do so.", {
+                            run: d.createElement(g.ob, {
+                                asset: g.pb.MiniPlayerPlay,
                                 height: 14,
                                 width: 14
                             })
-                        }, "DevSandboxOnBoardingCodeSection")))), c.createElement(f.Xa, {
+                        }, "DevSandboxOnBoardingCodeSection")))), d.createElement(g.Xa, {
                             padding: {
                                 left: 1,
                                 right: 2
                             }
-                        }, c.createElement(f.A, i.__assign({}, $, {
-                            icon: f.pb.AngleRight,
+                        }, d.createElement(g.A, i.__assign({}, W, {
+                            icon: g.pb.AngleRight,
                             onClick: this.props.onNext
-                        })))), c.createElement(f.Xa, {
-                            display: f.X.Flex
-                        }, c.createElement(m, {
+                        })))), d.createElement(g.Xa, {
+                            display: g.X.Flex
+                        }, d.createElement(b, {
                             onClick: this.props.onNext
-                        })), c.createElement(g, {
+                        })), d.createElement(v, {
                             pageNum: 3
-                        })), c.createElement(h.a, {
+                        })), d.createElement(f.a, {
                             onClose: this.props.onClose
                         }))
                     }, t
-                }(c.Component),
-                H = (n("wmWY"), {
+                }(d.Component),
+                q = (n("wmWY"), {
                     "data-test-selector": "dev-sandbox-on-boarding-switch-window-left-arrow"
                 }),
-                U = {
+                V = {
                     "data-test-selector": "dev-sandbox-on-boarding-switch-window-right-arrow"
                 },
-                q = function(e) {
+                G = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(f.zb, {
+                        return d.createElement(g.zb, {
                             className: "dev-sandbox-onboarding-switch-window__container dev-sandbox-onboarding-intro__gradient-border",
-                            background: f.r.Base,
-                            position: f.fb.Relative,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            background: g.r.Base,
+                            position: g.fb.Relative,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-switch-window",
                             fullHeight: !0,
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             padding: 1
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            fontSize: f.Ca.Size3,
-                            color: f.O.Link
-                        }, Object(d.d)("Focus your work", "DevSandboxOnBoardingSwitchWindow"))), c.createElement(f.Xa, {
+                            fontSize: g.Ca.Size3,
+                            color: g.O.Link
+                        }, Object(p.d)("Focus your work", "DevSandboxOnBoardingSwitchWindow"))), d.createElement(g.Xa, {
                             padding: 1,
-                            position: f.fb.Relative,
-                            display: f.X.Flex,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center
-                        }, c.createElement(f.Xa, null, c.createElement(f.A, i.__assign({
-                            icon: f.pb.AngleLeft,
+                            position: g.fb.Relative,
+                            display: g.X.Flex,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center
+                        }, d.createElement(g.Xa, null, d.createElement(g.A, i.__assign({
+                            icon: g.pb.AngleLeft,
                             onClick: this.props.onPre
-                        }, H))), c.createElement(f.Xa, null, c.createElement(f.W, {
-                            fontSize: f.Ca.Size5,
-                            color: f.O.Link
-                        }, Object(d.d)("If you want to just focus on code or just preview the design, you can use this toggle to change the view of the sandbox.", "DevSandboxOnBoardingSwitchWindow"))), c.createElement(f.Xa, null, c.createElement(f.A, i.__assign({
-                            icon: f.pb.AngleRight,
+                        }, q))), d.createElement(g.Xa, null, d.createElement(g.W, {
+                            fontSize: g.Ca.Size5,
+                            color: g.O.Link
+                        }, Object(p.d)("If you want to just focus on code or just preview the design, you can use this toggle to change the view of the sandbox.", "DevSandboxOnBoardingSwitchWindow"))), d.createElement(g.Xa, null, d.createElement(g.A, i.__assign({
+                            icon: g.pb.AngleRight,
                             onClick: this.props.onNext
-                        }, U)))), c.createElement(f.Xa, {
-                            display: f.X.Flex
-                        }, c.createElement(m, {
+                        }, V)))), d.createElement(g.Xa, {
+                            display: g.X.Flex
+                        }, d.createElement(b, {
                             onClick: this.props.onNext
-                        })), c.createElement(g, {
+                        })), d.createElement(v, {
                             pageNum: 6
-                        })), c.createElement(h.a, {
+                        })), d.createElement(f.a, {
                             onClose: this.props.onClose
                         }))
                     }, t
-                }(c.Component),
-                V = (n("FROI"), function(e) {
+                }(d.Component),
+                X = (n("FROI"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.navigateToOnBoardingModal = function(e) {
@@ -12670,137 +12672,137 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(f.zb, {
+                        return d.createElement(g.zb, {
                             className: "dev-sandbox-onboarding-welcome-back__container dev-sandbox-onboarding-welcome-back__gradient-border",
-                            background: f.r.Base,
-                            position: f.fb.Relative,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            background: g.r.Base,
+                            position: g.fb.Relative,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-welcome-back",
                             fullHeight: !0,
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             padding: 1
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            fontSize: f.Ca.Size2,
-                            color: f.O.Link
-                        }, Object(d.d)("Welcome Back!", "DevSandboxOnBoardingWelcomeBack"))), c.createElement(f.Xa, {
+                            fontSize: g.Ca.Size2,
+                            color: g.O.Link
+                        }, Object(p.d)("Welcome Back!", "DevSandboxOnBoardingWelcomeBack"))), d.createElement(g.Xa, {
                             padding: 1
-                        }, c.createElement(f.W, {
-                            fontSize: f.Ca.Size5,
-                            color: f.O.Link
-                        }, Object(d.d)("Please review the link below for the part you are most interested in.", "DevSandboxOnBoardingWelcomeBack"))), c.createElement(f.Xa, {
+                        }, d.createElement(g.W, {
+                            fontSize: g.Ca.Size5,
+                            color: g.O.Link
+                        }, Object(p.d)("Please review the link below for the part you are most interested in.", "DevSandboxOnBoardingWelcomeBack"))), d.createElement(g.Xa, {
                             padding: 1
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            fontSize: f.Ca.Size3,
-                            color: f.O.Link
-                        }, Object(d.d)("What would you like to learn about?", "DevSandboxOnBoardingWelcomeBack"))), c.createElement(f.Xa, {
+                            fontSize: g.Ca.Size3,
+                            color: g.O.Link
+                        }, Object(p.d)("What would you like to learn about?", "DevSandboxOnBoardingWelcomeBack"))), d.createElement(g.Xa, {
                             padding: 1,
                             className: "dev-sandbox-onboarding-welcome-back__link-group"
-                        }, c.createElement(f.Xa, {
+                        }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-welcome-back__link",
                             padding: {
                                 top: .5
                             }
-                        }, c.createElement(f.U, {
-                            type: f.V.Inherit,
+                        }, d.createElement(g.U, {
+                            type: g.V.Inherit,
                             onClick: this.navigateToOnBoardingModal(r.chooseSample)
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            fontSize: f.Ca.Size5
-                        }, _()))), c.createElement(f.Xa, {
+                            fontSize: g.Ca.Size5
+                        }, S()))), d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-welcome-back__link",
                             padding: {
                                 top: .5
                             }
-                        }, c.createElement(f.U, {
-                            type: f.V.Inherit,
+                        }, d.createElement(g.U, {
+                            type: g.V.Inherit,
                             onClick: this.navigateToOnBoardingModal(r.codeSection)
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            fontSize: f.Ca.Size5
-                        }, B()))), c.createElement(f.Xa, {
+                            fontSize: g.Ca.Size5
+                        }, D()))), d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-welcome-back__link",
                             padding: {
                                 top: .5
                             }
-                        }, c.createElement(f.U, {
-                            type: f.V.Inherit,
+                        }, d.createElement(g.U, {
+                            type: g.V.Inherit,
                             onClick: this.navigateToOnBoardingModal(r.manualRun)
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            fontSize: f.Ca.Size5
-                        }, z()))), c.createElement(f.Xa, {
+                            fontSize: g.Ca.Size5
+                        }, H()))), d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-welcome-back__link",
                             padding: {
                                 top: .5
                             }
-                        }, c.createElement(f.U, {
-                            type: f.V.Inherit,
+                        }, d.createElement(g.U, {
+                            type: g.V.Inherit,
                             onClick: this.navigateToOnBoardingModal(r.channelSelection)
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            fontSize: f.Ca.Size5
-                        }, y()))), c.createElement(f.Xa, {
+                            fontSize: g.Ca.Size5
+                        }, k()))), d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-welcome-back__link",
                             padding: {
                                 top: .5
                             }
-                        }, c.createElement(f.U, {
-                            type: f.V.Inherit,
+                        }, d.createElement(g.U, {
+                            type: g.V.Inherit,
                             onClick: this.navigateToOnBoardingModal(r.chooseType)
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            fontSize: f.Ca.Size5
-                        }, T()))), c.createElement(f.Xa, {
+                            fontSize: g.Ca.Size5
+                        }, L()))), d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-welcome-back__link",
                             padding: {
                                 top: .5
                             }
-                        }, c.createElement(f.U, {
-                            type: f.V.Inherit,
+                        }, d.createElement(g.U, {
+                            type: g.V.Inherit,
                             onClick: this.navigateToOnBoardingModal(r.switchWindow)
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            fontSize: f.Ca.Size5
-                        }, Object(d.d)("Change Sandbox View", "DevSandboxOnBoardingWelcomeBack")))), c.createElement(f.Xa, {
+                            fontSize: g.Ca.Size5
+                        }, Object(p.d)("Change Sandbox View", "DevSandboxOnBoardingWelcomeBack")))), d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-welcome-back__link",
                             padding: {
                                 top: .5
                             }
-                        }, c.createElement(f.U, {
-                            type: f.V.Inherit,
+                        }, d.createElement(g.U, {
+                            type: g.V.Inherit,
                             onClick: this.navigateToOnBoardingModal(r.codeDownload)
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            fontSize: f.Ca.Size5
-                        }, j())))), c.createElement(k, {
+                            fontSize: g.Ca.Size5
+                        }, N())))), d.createElement(E, {
                             linkTo: "https://dev.twitch.tv/docs",
-                            message: Object(d.d)("Docs", "DevSandboxOnBoardingWelcomeBack"),
-                            trackLabel: u.a.SandboxGuideWelcomeBackDocs
-                        })), c.createElement(h.a, {
+                            message: Object(p.d)("Docs", "DevSandboxOnBoardingWelcomeBack"),
+                            trackLabel: h.a.SandboxGuideWelcomeBackDocs
+                        })), d.createElement(f.a, {
                             onClose: this.props.onClose
                         }))
                     }, t
-                }(c.Component));
+                }(d.Component));
             n("pxaK");
 
-            function G(e, t) {
+            function K(e, t) {
                 return function() {
-                    Object(u.d)(e), t()
+                    Object(h.d)(e), t()
                 }
             }! function(e) {
                 e[e.welcome = 0] = "welcome", e[e.chooseSample = 1] = "chooseSample", e[e.codeSection = 2] = "codeSection", e[e.manualRun = 3] = "manualRun", e[e.channelSelection = 4] = "channelSelection", e[e.chooseType = 5] = "chooseType", e[e.switchWindow = 6] = "switchWindow", e[e.codeDownload = 7] = "codeDownload", e[e.welcomeBack = 8] = "welcomeBack"
             }(r || (r = {}));
-            var X = function(e) {
+            var Y = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -12809,94 +12811,94 @@
                             switch (t.state.currentStep) {
                                 case r.chooseType:
                                     var e = {
-                                        onPre: G(u.a.SandboxGuideChooseTypePre, t.onPre),
-                                        onNext: G(u.a.SandboxGuideChooseTypeNext, t.onNext),
-                                        onClose: G(u.a.SandboxGuideChooseTypeClose, t.props.onClose)
+                                        onPre: K(h.a.SandboxGuideChooseTypePre, t.onPre),
+                                        onNext: K(h.a.SandboxGuideChooseTypeNext, t.onNext),
+                                        onClose: K(h.a.SandboxGuideChooseTypeClose, t.props.onClose)
                                     };
-                                    return c.createElement(F, i.__assign({}, e));
+                                    return d.createElement(R, i.__assign({}, e));
                                 case r.codeSection:
                                     var n = {
-                                        onPre: G(u.a.SandboxGuideCodeSectionPre, t.onPre),
-                                        onNext: G(u.a.SandboxGuideCodeSectionNext, t.onNext),
-                                        onClose: G(u.a.SandboxGuideCodeSectionClose, t.props.onClose)
+                                        onPre: K(h.a.SandboxGuideCodeSectionPre, t.onPre),
+                                        onNext: K(h.a.SandboxGuideCodeSectionNext, t.onNext),
+                                        onClose: K(h.a.SandboxGuideCodeSectionClose, t.props.onClose)
                                     };
-                                    return c.createElement(O, i.__assign({}, n));
+                                    return d.createElement(M, i.__assign({}, n));
                                 case r.chooseSample:
                                     var o = {
-                                        onPre: G(u.a.SandboxGuideChooseSamplePre, t.onPre),
-                                        onNext: G(u.a.SandboxGuideChooseSampleNext, t.onNext),
-                                        onClose: G(u.a.SandboxGuideChooseSampleClose, t.props.onClose)
+                                        onPre: K(h.a.SandboxGuideChooseSamplePre, t.onPre),
+                                        onNext: K(h.a.SandboxGuideChooseSampleNext, t.onNext),
+                                        onClose: K(h.a.SandboxGuideChooseSampleClose, t.props.onClose)
                                     };
-                                    return c.createElement(C, i.__assign({}, o));
+                                    return d.createElement(A, i.__assign({}, o));
                                 case r.switchWindow:
                                     var a = {
-                                        onPre: G(u.a.SandboxGuideSwitchWindowPre, t.onPre),
-                                        onNext: G(u.a.SandboxGuideSwitchWindowNext, t.onNext),
-                                        onClose: G(u.a.SandboxGuideSwitchWindowClose, t.props.onClose)
+                                        onPre: K(h.a.SandboxGuideSwitchWindowPre, t.onPre),
+                                        onNext: K(h.a.SandboxGuideSwitchWindowNext, t.onNext),
+                                        onClose: K(h.a.SandboxGuideSwitchWindowClose, t.props.onClose)
                                     };
-                                    return c.createElement(q, i.__assign({}, a));
+                                    return d.createElement(G, i.__assign({}, a));
                                 case r.codeDownload:
                                     var s = {
-                                        onPre: G(u.a.SandboxGuideCodeDownloadPre, t.onPre),
-                                        onNext: G(u.a.SandboxGuideCodeDownloadNext, t.onNext),
-                                        onClose: G(u.a.SandboxGuideCodeDownloadClose, t.props.onClose)
+                                        onPre: K(h.a.SandboxGuideCodeDownloadPre, t.onPre),
+                                        onNext: K(h.a.SandboxGuideCodeDownloadNext, t.onNext),
+                                        onClose: K(h.a.SandboxGuideCodeDownloadClose, t.props.onClose)
                                     };
-                                    return c.createElement(I, i.__assign({}, s));
+                                    return d.createElement(P, i.__assign({}, s));
                                 case r.manualRun:
                                     var l = {
-                                        onPre: G(u.a.SandboxGuideManualRunPre, t.onPre),
-                                        onNext: G(u.a.SandboxGuideManualRunNext, t.onNext),
-                                        onClose: G(u.a.SandboxGuideManualRunClose, t.props.onClose)
+                                        onPre: K(h.a.SandboxGuideManualRunPre, t.onPre),
+                                        onNext: K(h.a.SandboxGuideManualRunNext, t.onNext),
+                                        onClose: K(h.a.SandboxGuideManualRunClose, t.props.onClose)
                                     };
-                                    return c.createElement(W, i.__assign({}, l));
+                                    return d.createElement(U, i.__assign({}, l));
                                 case r.channelSelection:
-                                    var d = {
-                                        onPre: G(u.a.SandboxGuideChannelSelectionPre, t.onPre),
-                                        onNext: G(u.a.SandboxGuideChannelSelectionNext, t.onNext),
-                                        onClose: G(u.a.SandboxGuideChannelSelectionClose, t.props.onClose)
+                                    var c = {
+                                        onPre: K(h.a.SandboxGuideChannelSelectionPre, t.onPre),
+                                        onNext: K(h.a.SandboxGuideChannelSelectionNext, t.onNext),
+                                        onClose: K(h.a.SandboxGuideChannelSelectionClose, t.props.onClose)
                                     };
-                                    return c.createElement(w, i.__assign({}, d));
+                                    return d.createElement(x, i.__assign({}, c));
                                 case r.welcomeBack:
-                                    var h = {
+                                    var u = {
                                         onNewStepSelected: function(e) {
-                                            var n = u.a.Unknown;
+                                            var n = h.a.Unknown;
                                             switch (e) {
                                                 case r.chooseType:
-                                                    n = u.a.SandboxGuideWelcomeBackChooseType;
+                                                    n = h.a.SandboxGuideWelcomeBackChooseType;
                                                     break;
                                                 case r.codeSection:
-                                                    n = u.a.SandboxGuideWelcomeBackCodeSection;
+                                                    n = h.a.SandboxGuideWelcomeBackCodeSection;
                                                     break;
                                                 case r.channelSelection:
-                                                    n = u.a.SandboxGuideWelcomeBackChannelSelection;
+                                                    n = h.a.SandboxGuideWelcomeBackChannelSelection;
                                                     break;
                                                 case r.switchWindow:
-                                                    n = u.a.SandboxGuideWelcomeBackSwitchWindow;
+                                                    n = h.a.SandboxGuideWelcomeBackSwitchWindow;
                                                     break;
                                                 case r.chooseSample:
-                                                    n = u.a.SandboxGuideWelcomeBackChooseSample;
+                                                    n = h.a.SandboxGuideWelcomeBackChooseSample;
                                                     break;
                                                 case r.manualRun:
-                                                    n = u.a.SandboxGuideWelcomeBackManualRun;
+                                                    n = h.a.SandboxGuideWelcomeBackManualRun;
                                                     break;
                                                 case r.codeDownload:
-                                                    n = u.a.SandboxGuideWelcomeBackDownloadCode;
+                                                    n = h.a.SandboxGuideWelcomeBackDownloadCode;
                                                     break;
                                                 default:
-                                                    n = u.a.Unknown
+                                                    n = h.a.Unknown
                                             }
-                                            Object(u.d)(n), t.onStepSelected(e)
+                                            Object(h.d)(n), t.onStepSelected(e)
                                         },
-                                        onClose: G(u.a.SandboxGuideWelcomeBackClose, t.props.onClose)
+                                        onClose: K(h.a.SandboxGuideWelcomeBackClose, t.props.onClose)
                                     };
-                                    return c.createElement(V, i.__assign({}, h));
+                                    return d.createElement(X, i.__assign({}, u));
                                 case r.welcome:
                                 default:
                                     var p = {
-                                        onNext: G(u.a.SandboxGuideWelcomeNext, t.onNext),
-                                        onClose: G(u.a.SandboxGuideWelcomeClose, t.props.onClose)
+                                        onNext: K(h.a.SandboxGuideWelcomeNext, t.onNext),
+                                        onClose: K(h.a.SandboxGuideWelcomeClose, t.props.onClose)
                                     };
-                                    return c.createElement(N, i.__assign({}, p))
+                                    return d.createElement($, i.__assign({}, p))
                             }
                         }, t.onNext = function() {
                             var e = t.state.currentStep + 1;
@@ -12915,77 +12917,77 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(f.Xa, {
+                        return d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-modal"
                         }, this.renderBasedOnStep())
                     }, t
-                }(c.Component),
-                K = n("TSYQ"),
-                Y = n("JEAp"),
-                J = n("fDnD"),
-                Z = n("kYGc"),
-                Q = n("+GjP"),
-                ee = (n("q+52"), function(e) {
-                    return c.createElement(f.Ua, {
+                }(d.Component),
+                J = n("TSYQ"),
+                Z = n("JEAp"),
+                Q = n("fDnD"),
+                ee = n("kYGc"),
+                te = n("+GjP"),
+                ne = (n("q+52"), function(e) {
+                    return d.createElement(g.Ua, {
                         onClick: e.onClick
-                    }, c.createElement(f.Xa, {
+                    }, d.createElement(g.Xa, {
                         fullWidth: !0,
-                        position: f.fb.Relative,
+                        position: g.fb.Relative,
                         className: "mobile-warning-bar"
-                    }, c.createElement(f.zb, {
+                    }, d.createElement(g.zb, {
                         className: "mobile-warning-bar__content",
-                        display: f.X.Flex,
-                        alignItems: f.f.Center,
-                        justifyContent: f.Wa.Start,
+                        display: g.X.Flex,
+                        alignItems: g.f.Center,
+                        justifyContent: g.Wa.Start,
                         elevation: 1,
                         padding: {
                             left: 3
                         }
-                    }, c.createElement(f.W, {
+                    }, d.createElement(g.W, {
                         bold: !0
                     }, e.message))))
                 }),
-                te = n("p/6J"),
-                ne = (n("gCqA"), {
+                re = n("p/6J"),
+                ie = (n("gCqA"), {
                     "data-test-selector": "dev-channel-header-mock-placeholder"
                 }),
-                re = function(e) {
+                oe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderHeaderPlaceHolder = function(e) {
-                            return c.createElement(f.Xa, i.__assign({
+                            return d.createElement(g.Xa, i.__assign({
                                 margin: {
                                     top: 1,
                                     left: 1
                                 },
-                                alignItems: f.f.Center,
+                                alignItems: g.f.Center,
                                 className: "dev-channel-header-mock__placeholder",
                                 key: e
-                            }, ne))
+                            }, ie))
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         for (var e = [], t = 0; t < 4; t++) e.push(this.renderHeaderPlaceHolder(t));
-                        return c.createElement(f.zb, {
-                            display: f.X.Flex,
-                            position: f.fb.Relative,
+                        return d.createElement(g.zb, {
+                            display: g.X.Flex,
+                            position: g.fb.Relative,
                             attachTop: !0,
                             className: "dev-channel-header-mock",
                             fullWidth: !0,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center,
                             margin: {
                                 bottom: 1
                             }
-                        }, c.createElement(f.Xa, {
+                        }, d.createElement(g.Xa, {
                             margin: {
                                 top: 1,
                                 left: 1,
                                 right: 1
                             },
-                            alignItems: f.f.Center,
+                            alignItems: g.f.Center,
                             className: "dev-channel-header-mock__logo-mock"
-                        }), e, c.createElement(f.Xa, {
+                        }), e, d.createElement(g.Xa, {
                             margin: {
                                 top: .5,
                                 left: 1,
@@ -12993,45 +12995,45 @@
                             },
                             className: "dev-channel-header-mock__btn-mock",
                             attachRight: !0,
-                            position: f.fb.Absolute,
-                            display: f.X.Flex
+                            position: g.fb.Absolute,
+                            display: g.X.Flex
                         }))
                     }, t
-                }(c.Component),
-                ie = (n("Eiz6"), {
+                }(d.Component),
+                ae = (n("Eiz6"), {
                     "data-test-selector": "dev-sandbox-navbar-mock-small-logo"
                 }),
-                oe = {
+                se = {
                     "data-test-selector": "dev-sandbox-navbar-mock-large-logo"
                 },
-                ae = function(e) {
+                le = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderNavPlaceholder = function(e) {
-                            return c.createElement(f.Xa, {
+                            return d.createElement(g.Xa, {
                                 margin: {
                                     left: .5,
                                     right: 1
                                 },
-                                alignItems: f.f.Center,
+                                alignItems: g.f.Center,
                                 className: "dev-channel-nav-mock__placeholder",
                                 key: e
                             })
                         }, t.renderBtnPlaceholder = function(e) {
-                            return c.createElement(f.Xa, {
+                            return d.createElement(g.Xa, {
                                 margin: {
                                     left: 1,
                                     right: 1
                                 },
-                                alignItems: f.f.Center,
+                                alignItems: g.f.Center,
                                 className: "dev-channel-nav-mock__btn-mock",
                                 key: e
                             })
                         }, t.renderTwitchLogo = function() {
-                            return t.props.windowType === ze.both ? c.createElement(f.h, i.__assign({}, ie, {
+                            return t.props.windowType === He.both ? d.createElement(g.h, i.__assign({}, ae, {
                                 width: 40,
                                 height: 30
-                            })) : c.createElement(f.h, i.__assign({}, oe, {
+                            })) : d.createElement(g.h, i.__assign({}, se, {
                                 width: 50,
                                 height: 30
                             }))
@@ -13041,84 +13043,84 @@
                         for (var e = [], t = 0; t < 4; t++) e.push(this.renderNavPlaceholder(t));
                         var n = [];
                         for (t = 0; t < 2; t++) n.push(this.renderBtnPlaceholder(t));
-                        return c.createElement(f.Xa, {
+                        return d.createElement(g.Xa, {
                             className: "dev-channel-nav-mock__menu dev-channel-nav-mock",
-                            alignItems: f.f.Center,
-                            position: f.fb.Relative
-                        }, c.createElement(f.Xa, {
-                            display: f.X.Flex
-                        }, c.createElement(f.Xa, {
+                            alignItems: g.f.Center,
+                            position: g.fb.Relative
+                        }, d.createElement(g.Xa, {
+                            display: g.X.Flex
+                        }, d.createElement(g.Xa, {
                             margin: 1,
-                            display: f.X.Flex,
-                            alignItems: f.f.Center,
+                            display: g.X.Flex,
+                            alignItems: g.f.Center,
                             className: "dev-channel-nav-mock__logo"
-                        }, this.renderTwitchLogo()), c.createElement(f.Xa, {
+                        }, this.renderTwitchLogo()), d.createElement(g.Xa, {
                             className: "dev-channel-nav-mock__nav-items-container",
-                            display: f.X.Flex,
-                            alignItems: f.f.Center
-                        }, e, c.createElement(f.Xa, {
+                            display: g.X.Flex,
+                            alignItems: g.f.Center
+                        }, e, d.createElement(g.Xa, {
                             margin: {
                                 left: 1,
                                 right: 1
                             },
-                            alignItems: f.f.Center,
+                            alignItems: g.f.Center,
                             className: "dev-channel-nav-mock__search-mock"
-                        })), c.createElement(f.Xa, {
-                            display: f.X.Flex,
-                            position: f.fb.Absolute,
+                        })), d.createElement(g.Xa, {
+                            display: g.X.Flex,
+                            position: g.fb.Absolute,
                             attachRight: !0,
-                            alignItems: f.f.Center,
-                            justifyContent: f.Wa.End,
+                            alignItems: g.f.Center,
+                            justifyContent: g.Wa.End,
                             className: "dev-channel-nav-mock__nav-btn-container"
                         }, n)))
                     }, t
-                }(c.Component),
-                se = (n("Bk+p"), function(e) {
+                }(d.Component),
+                ce = (n("Bk+p"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e, t = K("dev-channel-panel-mock__placeholder-box", ((e = {})["dev-channel-panel-mock__placeholder-box-both"] = this.props.sandboxMode === ze.both, e["dev-channel-panel-mock__placeholder-box-channel-only"] = this.props.sandboxMode === ze.channelOnly, e));
-                        return c.createElement(f.zb, {
-                            flexDirection: f.Aa.Column,
-                            display: f.X.Flex,
-                            position: f.fb.Relative,
+                        var e, t = J("dev-channel-panel-mock__placeholder-box", ((e = {})["dev-channel-panel-mock__placeholder-box-both"] = this.props.sandboxMode === He.both, e["dev-channel-panel-mock__placeholder-box-channel-only"] = this.props.sandboxMode === He.channelOnly, e));
+                        return d.createElement(g.zb, {
+                            flexDirection: g.Aa.Column,
+                            display: g.X.Flex,
+                            position: g.fb.Relative,
                             className: "dev-channel-panel-mock",
                             fullWidth: !0,
-                            alignItems: f.f.Start,
-                            justifyContent: f.Wa.Start,
+                            alignItems: g.f.Start,
+                            justifyContent: g.Wa.Start,
                             padding: {
                                 left: 2,
                                 top: 2
                             }
-                        }, c.createElement(f.Xa, {
+                        }, d.createElement(g.Xa, {
                             margin: {
                                 top: 1
                             },
                             className: "dev-channel-panel-mock__placeholder-short"
-                        }), c.createElement(f.Xa, {
+                        }), d.createElement(g.Xa, {
                             margin: {
                                 top: 1
                             },
                             className: "dev-channel-panel-mock__placeholder-long"
-                        }), c.createElement(f.zb, {
+                        }), d.createElement(g.zb, {
                             margin: {
                                 top: 1
                             },
                             className: t,
-                            background: f.r.Base
+                            background: g.r.Base
                         }))
                     }, t
-                }(c.Component)),
-                le = (n("W0wA"), function(e) {
+                }(d.Component)),
+                ue = (n("W0wA"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderLogoMockGroup = function(e) {
-                            return c.createElement(f.Xa, {
+                            return d.createElement(g.Xa, {
                                 margin: {
                                     top: 1
                                 },
-                                alignItems: f.f.Center,
+                                alignItems: g.f.Center,
                                 className: "dev-channel-side-nav-mock__logo-mock",
                                 key: e
                             })
@@ -13126,291 +13128,296 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         for (var e = [], t = 0; t < 3; t++) e.push(this.renderLogoMockGroup(t));
-                        return c.createElement(f.zb, {
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
+                        return d.createElement(g.zb, {
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
                             className: "dev-channel-side-nav-mock",
                             fullHeight: !0,
-                            alignItems: f.f.Center
+                            alignItems: g.f.Center
                         }, e)
                     }, t
-                }(c.Component)),
-                ce = (n("ubde"), function(e) {
+                }(d.Component)),
+                de = (n("ubde"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(f.zb, {
-                            background: f.r.Base,
-                            position: f.fb.Relative,
+                        return d.createElement(g.zb, {
+                            background: g.r.Base,
+                            position: g.fb.Relative,
                             className: "channel-placeholder__menu-bar",
                             margin: {
                                 left: 2,
                                 right: 2
                             }
-                        }, c.createElement(f.zb, {
-                            display: f.X.Flex,
-                            position: f.fb.Relative,
+                        }, d.createElement(g.zb, {
+                            display: g.X.Flex,
+                            position: g.fb.Relative,
                             className: "dev-channel-video-bar-mock",
-                            alignItems: f.f.Center,
+                            alignItems: g.f.Center,
                             padding: {
                                 bottom: 2
                             }
-                        }, c.createElement(f.Xa, {
+                        }, d.createElement(g.Xa, {
                             margin: {
                                 top: 1,
                                 left: 1,
                                 right: 1
                             },
-                            alignItems: f.f.Center,
+                            alignItems: g.f.Center,
                             className: "dev-channel-video-bar-mock__logo-mock"
-                        }), c.createElement(f.Xa, null, c.createElement(f.Xa, {
+                        }), d.createElement(g.Xa, null, d.createElement(g.Xa, {
                             margin: {
                                 top: 1,
                                 left: 1
                             },
-                            alignItems: f.f.Center,
+                            alignItems: g.f.Center,
                             className: "dev-channel-video-bar-mock__placeholder-long"
-                        }), c.createElement(f.Xa, {
+                        }), d.createElement(g.Xa, {
                             margin: {
                                 top: 1,
                                 left: 1
                             },
-                            alignItems: f.f.Center,
+                            alignItems: g.f.Center,
                             className: "dev-channel-video-bar-mock__placeholder-short"
-                        })), c.createElement(f.Xa, {
+                        })), d.createElement(g.Xa, {
                             margin: {
                                 top: 1,
                                 right: 1
                             },
                             className: "dev-channel-video-bar-mock__btn-mock",
                             attachRight: !0,
-                            position: f.fb.Absolute,
-                            display: f.X.Flex
+                            position: g.fb.Absolute,
+                            display: g.X.Flex
                         })))
                     }, t
-                }(c.Component)),
-                ue = n("8Ad5"),
-                de = n("Tqc9"),
-                he = n("bket"),
-                pe = (n("aDrR"), function(e) {
+                }(d.Component)),
+                he = n("8Ad5"),
+                pe = n("Tqc9"),
+                fe = n("bket"),
+                me = (n("aDrR"), function(e) {
                     function t() {
-                        return null !== e && e.apply(this, arguments) || this
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.onOpenDownloadModalClose = function() {
+                            Object(h.d)(h.a.SandboxDownloadModalClose), t.props.onClose()
+                        }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(f.zb, {
+                        return d.createElement(g.zb, {
                             className: "dev-sandbox-download-modal__container dev-sandbox-share-modal__gradient-border",
-                            background: f.r.Base,
-                            position: f.fb.Relative,
-                            justifyContent: f.Wa.Start,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center,
-                            display: f.X.Flex
-                        }, c.createElement(f.Xa, {
+                            background: g.r.Base,
+                            position: g.fb.Relative,
+                            justifyContent: g.Wa.Start,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center,
+                            display: g.X.Flex
+                        }, d.createElement(g.Xa, {
                             className: "dev-sandbox-download-modal",
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
-                            justifyContent: f.Wa.Start,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center,
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
+                            justifyContent: g.Wa.Start,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center,
                             padding: {
                                 left: 4,
                                 right: 4
                             }
-                        }, c.createElement(f.Xa, {
+                        }, d.createElement(g.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, c.createElement(f.W, {
-                            color: f.O.Link,
-                            fontSize: f.Ca.Size3
-                        }, Object(d.d)("Your code is now downloading.", "DevSandboxShareModal"))), c.createElement(f.Xa, {
+                        }, d.createElement(g.W, {
+                            color: g.O.Link,
+                            fontSize: g.Ca.Size3
+                        }, Object(p.d)("Your code is now downloading.", "DevSandboxShareModal"))), d.createElement(g.Xa, {
                             padding: {
                                 top: 1,
                                 bottom: 2,
                                 left: 4,
                                 right: 4
                             }
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            color: f.O.Link,
-                            fontSize: f.Ca.Size2
-                        }, Object(d.d)("Continue building extensions with the Developer Rig.", "DevSandboxShareModal"))), c.createElement(f.Xa, {
+                            color: g.O.Link,
+                            fontSize: g.Ca.Size2
+                        }, Object(p.d)("Continue building extensions with the Developer Rig.", "DevSandboxShareModal"))), d.createElement(g.Xa, {
                             padding: {
                                 bottom: 2
                             }
-                        }, c.createElement(f.W, {
-                            color: f.O.Link,
-                            fontSize: f.Ca.Size4
-                        }, Object(d.d)("Follow the instructions in the readme to run the rig and build from your first project.", "DevSandboxShareModal"))), c.createElement(f.Xa, {
-                            display: f.X.Flex
-                        }, c.createElement(f.Xa, {
+                        }, d.createElement(g.W, {
+                            color: g.O.Link,
+                            fontSize: g.Ca.Size4
+                        }, Object(p.d)("Follow the instructions in the readme to run the rig and build from your first project.", "DevSandboxShareModal"))), d.createElement(g.Xa, {
+                            display: g.X.Flex
+                        }, d.createElement(g.Xa, {
                             margin: {
                                 right: 1
                             }
-                        }, c.createElement(f.z, {
-                            type: f.F.Hollow,
-                            size: f.D.Small,
-                            onClick: Object(u.e)(u.a.SandboxDownloadModalClose, this.props.onClose)
-                        }, c.createElement(f.W, null, Object(d.d)("Go back to Sandbox", "DevSandboxDownloadModal")))), c.createElement(f.Xa, {
+                        }, d.createElement(g.z, {
+                            type: g.F.Hollow,
+                            size: g.D.Small,
+                            onClick: this.onOpenDownloadModalClose
+                        }, d.createElement(g.W, null, Object(p.d)("Go back to Sandbox", "DevSandboxDownloadModal")))), d.createElement(g.Xa, {
                             margin: {
                                 left: 1
                             }
-                        }, c.createElement(f.z, {
+                        }, d.createElement(g.z, {
                             linkTo: "https://github.com/twitchdev/developer-rig",
-                            size: f.D.Small,
-                            onClick: Object(u.c)(u.a.SandboxDownloadModalGoToRig),
+                            size: g.D.Small,
+                            onClick: Object(h.c)(h.a.SandboxDownloadModalGoToRig),
                             targetBlank: !0
-                        }, c.createElement(f.W, null, Object(d.d)("Download Rig", "DevSandboxDownloadModal")))))), c.createElement(h.a, null))
+                        }, d.createElement(g.W, null, Object(p.d)("Download Rig", "DevSandboxDownloadModal")))))), d.createElement(f.a, {
+                            onClose: this.onOpenDownloadModalClose
+                        }))
                     }, t
-                }(c.Component));
-            var fe, me = Object(o.connect)(null, function(e) {
+                }(d.Component));
+            var ge, be = Object(o.connect)(null, function(e) {
                     return Object(a.bindActionCreators)({
-                        onClose: s.c
+                        onClose: l.c
                     }, e)
-                })(pe),
-                ge = n("Jxh/"),
-                be = (n("X6aA"), function(e) {
+                })(me),
+                ve = n("Jxh/"),
+                ye = (n("X6aA"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.copyLinkToClipBoard = function() {
-                            Object(ge.a)("https://dev.twitch.tv/extensions/sandbox")
+                            Object(ve.a)("https://dev.twitch.tv/extensions/sandbox")
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(f.zb, {
+                        return d.createElement(g.zb, {
                             className: "dev-sandbox-share-modal__container dev-sandbox-share-modal__gradient-border",
-                            background: f.r.Base,
-                            position: f.fb.Relative,
-                            justifyContent: f.Wa.Start,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            background: g.r.Base,
+                            position: g.fb.Relative,
+                            justifyContent: g.Wa.Start,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             className: "dev-sandbox-share-modal",
                             fullHeight: !0,
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
-                            justifyContent: f.Wa.Start,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.zb, {
-                            color: f.O.Link
-                        }, c.createElement(f.ob, {
-                            asset: f.pb.LogoTwitch,
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
+                            justifyContent: g.Wa.Start,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.zb, {
+                            color: g.O.Link
+                        }, d.createElement(g.ob, {
+                            asset: g.pb.LogoTwitch,
                             height: 200,
                             width: 200
-                        })), c.createElement(f.Xa, {
+                        })), d.createElement(g.Xa, {
                             className: "dev-sandbox-share-modal__share-with-friend"
-                        }, c.createElement(f.W, {
-                            color: f.O.Link,
-                            fontSize: f.Ca.Size3
-                        }, Object(d.d)("Share the sandbox with a friend", "DevSandboxShareModal"))), c.createElement(f.zb, {
+                        }, d.createElement(g.W, {
+                            color: g.O.Link,
+                            fontSize: g.Ca.Size3
+                        }, Object(p.d)("Share the sandbox with a friend", "DevSandboxShareModal"))), d.createElement(g.zb, {
                             className: "dev-sandbox-share-modal__copy-link-box",
-                            background: f.r.Alt2,
+                            background: g.r.Alt2,
                             margin: {
                                 top: 2
                             },
-                            display: f.X.Flex,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            display: g.X.Flex,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             padding: {
                                 right: 5,
                                 left: 1,
                                 top: .5,
                                 bottom: .5
                             }
-                        }, c.createElement(f.W, null, Object(d.d)("https://dev.twitch.tv/extensions/sandbox", "DevSandboxShareModal"))), c.createElement(f.Xa, {
+                        }, d.createElement(g.W, null, Object(p.d)("https://dev.twitch.tv/extensions/sandbox", "DevSandboxShareModal"))), d.createElement(g.Xa, {
                             padding: {
                                 right: 1,
                                 bottom: .5
                             }
-                        }, c.createElement(f.U, {
+                        }, d.createElement(g.U, {
                             onClick: this.copyLinkToClipBoard
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            color: f.O.Link,
-                            fontSize: f.Ca.Size5
-                        }, Object(d.d)("Copy Link", "DevSandboxShareModal"))))), c.createElement(f.Xa, {
+                            color: g.O.Link,
+                            fontSize: g.Ca.Size5
+                        }, Object(p.d)("Copy Link", "DevSandboxShareModal"))))), d.createElement(g.Xa, {
                             margin: {
                                 top: 2
                             }
-                        }, c.createElement(f.U, {
+                        }, d.createElement(g.U, {
                             linkTo: "https://www.twitch.tv/p/extensions/"
-                        }, Object(d.d)("Click here to know more about Twitch Extensions.", "DevSandboxShareModal")))), c.createElement(h.a, null))
+                        }, Object(p.d)("Click here to know more about Twitch Extensions.", "DevSandboxShareModal")))), d.createElement(f.a, null))
                     }, t
-                }(c.Component)),
-                ve = (n("wVrj"), {
+                }(d.Component)),
+                we = (n("wVrj"), {
                     "data-test-selector": "dev-extension-sample-btn"
                 }),
-                ye = {
+                ke = {
                     "data-test-selector": "dev-extension-sample-btn-dropdown"
                 },
-                we = function() {
-                    return Object(d.d)("Sample Extension: Hello World", "DevExtensionTypeButton")
+                xe = function() {
+                    return Object(p.d)("Sample Extension: Hello World", "DevExtensionTypeButton")
                 },
-                ke = function() {
-                    return Object(d.d)("Sample Extension: Hello Glitch", "DevExtensionTypeButton")
+                Ee = function() {
+                    return Object(p.d)("Sample Extension: Hello Glitch", "DevExtensionTypeButton")
                 };
             ! function(e) {
                 e[e.helloWorld = 0] = "helloWorld", e[e.helloGlitch = 1] = "helloGlitch"
-            }(fe || (fe = {}));
-            var xe, Ee = function(e) {
+            }(ge || (ge = {}));
+            var _e, Ce = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             ifShown: !1
                         }, t.showDropDown = function() {
-                            return c.createElement(f.zb, i.__assign({
+                            return d.createElement(g.zb, i.__assign({
                                 className: "dev-extension-sample-code-btn__dropdown",
-                                background: f.r.Alt2,
-                                display: f.X.Flex,
-                                position: f.fb.Absolute,
-                                alignItems: f.f.Center,
-                                flexDirection: f.Aa.Column,
-                                justifyContent: f.Wa.Center
-                            }, ye), c.createElement(f.Xa, {
+                                background: g.r.Alt2,
+                                display: g.X.Flex,
+                                position: g.fb.Absolute,
+                                alignItems: g.f.Center,
+                                flexDirection: g.Aa.Column,
+                                justifyContent: g.Wa.Center
+                            }, ke), d.createElement(g.Xa, {
                                 fullHeight: !0,
                                 fullWidth: !0
-                            }, c.createElement(f.Pa, null, c.createElement(f.Ua, {
-                                onClick: t.selectSample(fe.helloWorld)
-                            }, c.createElement(f.Xa, {
-                                position: f.fb.Relative,
-                                display: f.X.Flex,
-                                justifyContent: f.Wa.Start,
-                                alignItems: f.f.Center,
+                            }, d.createElement(g.Pa, null, d.createElement(g.Ua, {
+                                onClick: t.selectSample(ge.helloWorld)
+                            }, d.createElement(g.Xa, {
+                                position: g.fb.Relative,
+                                display: g.X.Flex,
+                                justifyContent: g.Wa.Start,
+                                alignItems: g.f.Center,
                                 padding: 2
-                            }, c.createElement(f.Xa, {
+                            }, d.createElement(g.Xa, {
                                 padding: {
                                     left: 1
                                 },
-                                display: f.X.Flex,
-                                textAlign: f.Lb.Center,
-                                alignItems: f.f.Center,
+                                display: g.X.Flex,
+                                textAlign: g.Lb.Center,
+                                alignItems: g.f.Center,
                                 className: "dev-editor-extension-type-btn__text"
-                            }, c.createElement(f.W, {
-                                fontSize: f.Ca.Size4
-                            }, we()))))), c.createElement(f.Pa, null, c.createElement(f.Ua, {
-                                onClick: t.selectSample(fe.helloGlitch)
-                            }, c.createElement(f.Xa, {
-                                position: f.fb.Relative,
-                                display: f.X.Flex,
-                                justifyContent: f.Wa.Start,
-                                alignItems: f.f.Center,
+                            }, d.createElement(g.W, {
+                                fontSize: g.Ca.Size4
+                            }, xe()))))), d.createElement(g.Pa, null, d.createElement(g.Ua, {
+                                onClick: t.selectSample(ge.helloGlitch)
+                            }, d.createElement(g.Xa, {
+                                position: g.fb.Relative,
+                                display: g.X.Flex,
+                                justifyContent: g.Wa.Start,
+                                alignItems: g.f.Center,
                                 padding: 2
-                            }, c.createElement(f.Xa, {
+                            }, d.createElement(g.Xa, {
                                 padding: {
                                     left: 1
                                 },
-                                display: f.X.Flex,
-                                textAlign: f.Lb.Center,
-                                alignItems: f.f.Center
-                            }, c.createElement(f.W, {
-                                fontSize: f.Ca.Size4
-                            }, ke())))))))
+                                display: g.X.Flex,
+                                textAlign: g.Lb.Center,
+                                alignItems: g.f.Center
+                            }, d.createElement(g.W, {
+                                fontSize: g.Ca.Size4
+                            }, Ee())))))))
                         }, t.getSelectedSampleName = function() {
-                            return t.props.selectedSample === fe.helloWorld ? we() : t.props.selectedSample === fe.helloGlitch ? ke() : void 0
+                            return t.props.selectedSample === ge.helloWorld ? xe() : t.props.selectedSample === ge.helloGlitch ? Ee() : void 0
                         }, t.selectSample = function(e) {
                             return function() {
                                 t.props.onSampleCodeChange(e), t.setState({
@@ -13418,7 +13425,7 @@
                                 })
                             }
                         }, t.onClickButton = function() {
-                            Object(u.d)(u.a.SandboxSampleSelection), t.setState(function(e) {
+                            Object(h.d)(h.a.SandboxSampleSelection), t.setState(function(e) {
                                 return {
                                     ifShown: !e.ifShown
                                 }
@@ -13426,190 +13433,192 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(f.Xa, {
-                            display: f.X.Flex,
+                        return d.createElement(g.Xa, {
+                            display: g.X.Flex,
                             fullWidth: !0,
                             fullHeight: !0
-                        }, c.createElement(f.z, i.__assign({
+                        }, d.createElement(g.z, i.__assign({
                             dropdown: !0,
                             onClick: this.onClickButton,
                             fullWidth: !0,
-                            type: f.F.Hollow
-                        }, ve), c.createElement(f.Pa, {
+                            type: g.F.Hollow
+                        }, we), d.createElement(g.Pa, {
                             padding: {
                                 left: 2
                             }
-                        }, c.createElement(f.W, {
-                            fontSize: f.Ca.Size4,
-                            color: f.O.Link
+                        }, d.createElement(g.W, {
+                            fontSize: g.Ca.Size4,
+                            color: g.O.Link
                         }, this.getSelectedSampleName()))), this.state.ifShown && this.showDropDown())
                     }, t
-                }(c.Component),
-                _e = (n("igTG"), {
+                }(d.Component),
+                Se = (n("igTG"), {
                     "data-test-selector": "dev-sandbox-nav-code-button"
                 }),
-                Ce = {
+                Ae = {
                     "data-test-selector": "dev-sandbox-nav-channel-button"
                 },
-                Se = {
+                Te = {
                     "data-test-selector": "dev-sandbox-nav-both-button"
                 },
-                Ae = function(e) {
+                Fe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {}, t.openDownloadModal = function() {
+                        return t.state = {}, t.onOpenShareModal = function() {
+                            Object(h.d)(h.a.SandboxShare), t.props.showShareModal()
+                        }, t.openDownloadModal = function() {
                             t.props.onDownload(), t.props.showDownloadModal()
                         }, t.onOpenOnBoardingModal = function() {
-                            Object(u.d)(u.a.SandboxViewGuide), t.props.showOnBoardingModal(r.welcomeBack)
+                            Object(h.d)(h.a.SandboxViewGuide), t.props.showOnBoardingModal(r.welcomeBack)
                         }, t.windowModeSelectionButtonClick = function(e) {
                             return function(n) {
                                 t.props.onDisplayWindowChange(e)
                             }
                         }, t.renderDropDown = function() {
-                            var e, n = K("sandbox-top-nav-bar__selection-content", ((e = {})["dev-onboarding-on-going"] = t.props.onBoardingStep === r.chooseSample, e));
-                            return c.createElement(f.Xa, {
-                                display: f.X.Flex,
+                            var e, n = J("sandbox-top-nav-bar__selection-content", ((e = {})["dev-onboarding-on-going"] = t.props.onBoardingStep === r.chooseSample, e));
+                            return d.createElement(g.Xa, {
+                                display: g.X.Flex,
                                 flexGrow: 1,
                                 flexShrink: 1
-                            }, c.createElement(f.zb, {
-                                background: f.r.Alt2,
-                                display: f.X.Flex,
+                            }, d.createElement(g.zb, {
+                                background: g.r.Alt2,
+                                display: g.X.Flex,
                                 fullWidth: !0,
                                 className: n
-                            }, c.createElement(Ee, {
+                            }, d.createElement(Ce, {
                                 onBoardingStep: t.props.onBoardingStep,
                                 onSampleCodeChange: t.props.onSampleCodeChange,
                                 selectedSample: t.props.selectedSample
                             })))
                         }, t.renderModeSwitchButton = function(e) {
-                            var n = Object(d.d)("Code", "DevSandboxTopNavBar"),
-                                r = _e;
-                            return e === ze.both ? (n = Object(d.d)("Both", "DevSandboxTopNavBar"), r = Se) : e === ze.channelOnly && (n = Object(d.d)("Channel", "DevSandboxTopNavBar"), r = Ce), c.createElement(f.tb, i.__assign({
+                            var n = Object(p.d)("Code", "DevSandboxTopNavBar"),
+                                r = Se;
+                            return e === He.both ? (n = Object(p.d)("Both", "DevSandboxTopNavBar"), r = Te) : e === He.channelOnly && (n = Object(p.d)("Channel", "DevSandboxTopNavBar"), r = Ae), d.createElement(g.tb, i.__assign({
                                 name: "sandbox-top-nav-bar__segment-btn",
                                 label: n,
-                                type: f.ub.Radio,
+                                type: g.ub.Radio,
                                 onChange: t.windowModeSelectionButtonClick(e),
                                 checked: t.props.sandboxMode === e
                             }, r))
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e, t, n = K("sandbox-top-nav-bar__window", ((e = {})["dev-onboarding-on-going"] = this.props.onBoardingStep === r.switchWindow, e)),
-                            i = K("sandbox-top-nav-bar__start-building-btn", ((t = {})["dev-onboarding-on-going"] = this.props.onBoardingStep === r.codeDownload, t));
-                        return c.createElement(f.zb, {
-                            display: f.X.InlineFlex,
+                        var e, t, n = J("sandbox-top-nav-bar__window", ((e = {})["dev-onboarding-on-going"] = this.props.onBoardingStep === r.switchWindow, e)),
+                            i = J("sandbox-top-nav-bar__start-building-btn", ((t = {})["dev-onboarding-on-going"] = this.props.onBoardingStep === r.codeDownload, t));
+                        return d.createElement(g.zb, {
+                            display: g.X.InlineFlex,
                             className: "sandbox-top-nav-bar",
-                            background: f.r.Alt2,
+                            background: g.r.Alt2,
                             fullWidth: !0
-                        }, this.renderDropDown(), c.createElement(f.zb, {
-                            background: f.r.Alt2,
+                        }, this.renderDropDown(), d.createElement(g.zb, {
+                            background: g.r.Alt2,
                             className: n,
-                            display: f.X.Flex,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center
-                        }, c.createElement(f.sb, null, this.renderModeSwitchButton(ze.editorOnly), this.renderModeSwitchButton(ze.both), this.renderModeSwitchButton(ze.channelOnly))), c.createElement(f.Xa, {
+                            display: g.X.Flex,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center
+                        }, d.createElement(g.sb, null, this.renderModeSwitchButton(He.editorOnly), this.renderModeSwitchButton(He.both), this.renderModeSwitchButton(He.channelOnly))), d.createElement(g.Xa, {
                             className: "sandbox-top-nav-bar__btn-group",
-                            display: f.X.Flex,
-                            justifyContent: f.Wa.End,
-                            alignItems: f.f.Center,
+                            display: g.X.Flex,
+                            justifyContent: g.Wa.End,
+                            alignItems: g.f.Center,
                             fullHeight: !0
-                        }, c.createElement(f.Xa, {
-                            display: f.X.Flex,
+                        }, d.createElement(g.Xa, {
+                            display: g.X.Flex,
                             margin: {
                                 right: 2
                             }
-                        }, c.createElement(f.z, {
-                            type: f.F.Hollow,
-                            onClick: Object(u.e)(u.a.SandboxShare, this.props.showShareModal)
-                        }, c.createElement(f.Xa, {
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            display: f.X.Flex
-                        }, c.createElement(f.Xa, {
+                        }, d.createElement(g.z, {
+                            type: g.F.Hollow,
+                            onClick: this.onOpenShareModal
+                        }, d.createElement(g.Xa, {
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            display: g.X.Flex
+                        }, d.createElement(g.Xa, {
                             padding: {
                                 right: 1,
                                 top: .5
                             }
-                        }, c.createElement(f.ob, {
-                            asset: f.pb.Share,
+                        }, d.createElement(g.ob, {
+                            asset: g.pb.Share,
                             height: 15,
                             width: 15
-                        })), c.createElement(f.W, null, Object(d.d)("Share", "DevSandboxTopNavBar"))))), c.createElement(f.z, {
-                            type: f.F.Hollow,
+                        })), d.createElement(g.W, null, Object(p.d)("Share", "DevSandboxTopNavBar"))))), d.createElement(g.z, {
+                            type: g.F.Hollow,
                             onClick: this.onOpenOnBoardingModal
-                        }, c.createElement(f.Xa, {
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            display: f.X.Flex
-                        }, c.createElement(f.Xa, {
+                        }, d.createElement(g.Xa, {
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            display: g.X.Flex
+                        }, d.createElement(g.Xa, {
                             padding: {
                                 right: 1,
                                 top: .5
                             }
-                        }, c.createElement(f.ob, {
-                            asset: f.pb.Document,
+                        }, d.createElement(g.ob, {
+                            asset: g.pb.Document,
                             height: 15,
                             width: 15
-                        })), c.createElement(f.W, null, Object(d.d)("View Guide", "DevSandboxTopNavBar")))), c.createElement(f.Xa, {
+                        })), d.createElement(g.W, null, Object(p.d)("View Guide", "DevSandboxTopNavBar")))), d.createElement(g.Xa, {
                             className: i,
-                            display: f.X.Flex,
+                            display: g.X.Flex,
                             margin: {
                                 left: 2,
                                 right: 2
                             }
-                        }, c.createElement(f.z, {
-                            type: f.F.Default,
+                        }, d.createElement(g.z, {
+                            type: g.F.Default,
                             onClick: this.openDownloadModal
-                        }, c.createElement(f.Xa, {
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            display: f.X.Flex
-                        }, c.createElement(f.Xa, {
+                        }, d.createElement(g.Xa, {
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            display: g.X.Flex
+                        }, d.createElement(g.Xa, {
                             padding: {
                                 right: 1,
                                 top: .5
                             }
-                        }, c.createElement(f.ob, {
-                            asset: f.pb.Wrench,
+                        }, d.createElement(g.ob, {
+                            asset: g.pb.Wrench,
                             height: 15,
                             width: 15
-                        })), c.createElement(f.W, null, Object(d.d)("Download Code", "DevSandboxTopNavBar")))))))
+                        })), d.createElement(g.W, null, Object(p.d)("Download Code", "DevSandboxTopNavBar")))))))
                     }, t
-                }(c.Component);
+                }(d.Component);
             ! function(e) {
                 e[e.panel = 0] = "panel", e[e.videoOverlay = 1] = "videoOverlay"
-            }(xe || (xe = {}));
-            var Te = Object(o.connect)(null, function(e) {
+            }(_e || (_e = {}));
+            var Le = Object(o.connect)(null, function(e) {
                     return Object(a.bindActionCreators)({
                         showShareModal: function() {
-                            return Object(s.d)(be, {})
+                            return Object(l.d)(ye, {})
                         },
                         showDownloadModal: function() {
-                            return Object(s.d)(me, {})
+                            return Object(l.d)(be, {})
                         },
-                        onClose: s.c
+                        onClose: l.c
                     }, e)
-                })(Ae),
-                Fe = (n("GGHV"), function() {
-                    return Object(d.d)("Panel", "DevIPAddressBarMock")
+                })(Fe),
+                Re = (n("GGHV"), function() {
+                    return Object(p.d)("Panel", "DevIPAddressBarMock")
                 }),
-                Le = function() {
-                    return Object(d.d)("Component", "DevIPAddressBarMock")
+                Be = function() {
+                    return Object(p.d)("Component", "DevIPAddressBarMock")
                 },
-                Re = function(e) {
+                Oe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             channelName: t.props.shownChannel,
                             showDropDown: !1
                         }, t.onKeyDown = function(e) {
-                            e.keyCode !== ue.a.Enter && e.key !== de.b || t.onConfirmChangeChannelBtnClick()
+                            e.keyCode !== he.a.Enter && e.key !== pe.b || t.onConfirmChangeChannelBtnClick()
                         }, t.renderExtensionTypeSelectionDropDown = function() {
-                            var e, n = K(((e = {})["dev-onboarding-on-going"] = t.props.onBoardingStep === r.chooseType, e));
-                            return c.createElement(f.Xa, {
-                                position: f.fb.Relative,
+                            var e, n = J(((e = {})["dev-onboarding-on-going"] = t.props.onBoardingStep === r.chooseType, e));
+                            return d.createElement(g.Xa, {
+                                position: g.fb.Relative,
                                 className: n
-                            }, c.createElement(he.a, {
+                            }, d.createElement(fe.a, {
                                 control: t.openExtensionTypeSelectionBar
                             }, t.renderTypeDropDown))
                         }, t.onSelectedChannelChange = function(e) {
@@ -13620,68 +13629,68 @@
                         }, t.onConfirmChangeChannelBtnClick = function() {
                             t.props.onChannelChange(t.state.channelName)
                         }, t.renderExtensionOnlyModeSticker = function() {
-                            var e = t.props.ifHideChannelMock && t.props.extensionTypeSelected === xe.panel,
-                                n = e ? void 0 : f.r.Alt2,
-                                r = e ? f.fb.Relative : f.fb.Absolute;
-                            return c.createElement(f.zb, {
-                                display: f.X.Flex,
+                            var e = t.props.ifHideChannelMock && t.props.extensionTypeSelected === _e.panel,
+                                n = e ? void 0 : g.r.Alt2,
+                                r = e ? g.fb.Relative : g.fb.Absolute;
+                            return d.createElement(g.zb, {
+                                display: g.X.Flex,
                                 position: r,
                                 attachRight: !0,
                                 margin: {
                                     right: 2
                                 }
-                            }, c.createElement(f.zb, {
+                            }, d.createElement(g.zb, {
                                 background: n,
-                                display: f.X.Flex
-                            }, c.createElement(f.Xa, {
+                                display: g.X.Flex
+                            }, d.createElement(g.Xa, {
                                 padding: 1
-                            }, c.createElement(f.W, {
-                                color: f.O.Link
-                            }, Object(d.d)("Hide Browser", "DevSandbox"))), c.createElement(f.Xa, {
+                            }, d.createElement(g.W, {
+                                color: g.O.Link
+                            }, Object(p.d)("Hide Browser", "DevSandbox"))), d.createElement(g.Xa, {
                                 padding: {
                                     top: 1,
                                     right: 1,
                                     bottom: 1
                                 }
-                            }, c.createElement(f.Rb, {
+                            }, d.createElement(g.Rb, {
                                 onChange: t.props.onHideChannelMockClick,
                                 checked: t.props.ifHideChannelMock
                             }))))
                         }, t.openExtensionTypeSelectionBar = function(e) {
                             var n = e.toggle;
-                            return c.createElement(f.Xa, {
+                            return d.createElement(g.Xa, {
                                 className: "dev-ip-address-bar__selection"
-                            }, c.createElement(f.zb, {
+                            }, d.createElement(g.zb, {
                                 className: "dev-ip-address-bar__selection-content",
-                                background: f.r.Base,
-                                display: f.X.Flex,
-                                alignItems: f.f.Center,
-                                textAlign: f.Lb.Left,
-                                justifyContent: f.Wa.Start,
+                                background: g.r.Base,
+                                display: g.X.Flex,
+                                alignItems: g.f.Center,
+                                textAlign: g.Lb.Left,
+                                justifyContent: g.Wa.Start,
                                 fullHeight: !0
-                            }, c.createElement(f.Ua, {
+                            }, d.createElement(g.Ua, {
                                 onClick: n,
                                 blurAfterClick: !0
-                            }, c.createElement(f.Xa, {
-                                display: f.X.Flex,
-                                position: f.fb.Relative,
+                            }, d.createElement(g.Xa, {
+                                display: g.X.Flex,
+                                position: g.fb.Relative,
                                 fullWidth: !0,
                                 className: "dev-ip-address-bar__selection-text-wrapper",
-                                justifyContent: f.Wa.Start,
-                                alignItems: f.f.Center,
-                                textAlign: f.Lb.Left
-                            }, c.createElement(f.Xa, {
+                                justifyContent: g.Wa.Start,
+                                alignItems: g.f.Center,
+                                textAlign: g.Lb.Left
+                            }, d.createElement(g.Xa, {
                                 padding: {
                                     left: 2,
                                     right: .5
                                 },
                                 className: "dev-ip-address-bar__selection-text",
-                                justifyContent: f.Wa.Start,
-                                alignItems: f.f.Center,
-                                textAlign: f.Lb.Left
-                            }, c.createElement(f.W, {
-                                fontSize: f.Ca.Size4
-                            }, t.extensionType())), c.createElement(f.Xa, {
+                                justifyContent: g.Wa.Start,
+                                alignItems: g.f.Center,
+                                textAlign: g.Lb.Left
+                            }, d.createElement(g.W, {
+                                fontSize: g.Ca.Size4
+                            }, t.extensionType())), d.createElement(g.Xa, {
                                 padding: {
                                     top: .5,
                                     right: 1,
@@ -13691,191 +13700,191 @@
                                     left: 1
                                 },
                                 className: "dev-ip-address-bar__selection-arrow",
-                                position: f.fb.Absolute,
+                                position: g.fb.Absolute,
                                 attachRight: !0
-                            }, c.createElement(f.ob, {
-                                asset: f.pb.AngleDown,
+                            }, d.createElement(g.ob, {
+                                asset: g.pb.AngleDown,
                                 height: 15,
                                 width: 15
                             }))))))
                         }, t.extensionType = function() {
-                            return t.props.extensionTypeSelected === xe.panel ? Fe() : Le()
+                            return t.props.extensionTypeSelected === _e.panel ? Re() : Be()
                         }, t.onTypeChange = function(e, n) {
                             return function() {
                                 t.props.onExtensionTypeChange(n), e()
                             }
                         }, t.renderTypeDropDown = function(e) {
                             var n = e.close;
-                            return c.createElement(f.zb, {
+                            return d.createElement(g.zb, {
                                 className: "dev-ip-address-bar__dropdown",
-                                background: f.r.Base,
-                                display: f.X.Flex,
-                                alignItems: f.f.Center,
-                                flexDirection: f.Aa.Column,
-                                zIndex: f.cc.Above,
-                                position: f.fb.Absolute
-                            }, c.createElement(f.zb, {
-                                position: f.fb.Relative,
+                                background: g.r.Base,
+                                display: g.X.Flex,
+                                alignItems: g.f.Center,
+                                flexDirection: g.Aa.Column,
+                                zIndex: g.cc.Above,
+                                position: g.fb.Absolute
+                            }, d.createElement(g.zb, {
+                                position: g.fb.Relative,
                                 className: "dev-ip-address-bar__dropdown-content",
                                 fullWidth: !0,
-                                background: f.r.Base,
-                                zIndex: f.cc.Above,
+                                background: g.r.Base,
+                                zIndex: g.cc.Above,
                                 attachTop: !0,
-                                flexDirection: f.Aa.Row,
-                                flexWrap: f.Ba.Wrap,
+                                flexDirection: g.Aa.Row,
+                                flexWrap: g.Ba.Wrap,
                                 padding: {
                                     top: .5,
                                     bottom: .5
                                 }
-                            }, c.createElement(f.Xa, null, c.createElement("div", {
-                                onClick: t.onTypeChange(n, xe.panel)
-                            }, c.createElement(f.Xa, {
+                            }, d.createElement(g.Xa, null, d.createElement("div", {
+                                onClick: t.onTypeChange(n, _e.panel)
+                            }, d.createElement(g.Xa, {
                                 padding: {
                                     left: 2
                                 },
                                 className: "dev-ip-address-bar__option",
-                                textAlign: f.Lb.Left
-                            }, c.createElement(f.W, {
-                                fontSize: f.Ca.Size4
-                            }, Fe()))), c.createElement("div", {
-                                onClick: t.onTypeChange(n, xe.videoOverlay)
-                            }, c.createElement(f.Xa, {
+                                textAlign: g.Lb.Left
+                            }, d.createElement(g.W, {
+                                fontSize: g.Ca.Size4
+                            }, Re()))), d.createElement("div", {
+                                onClick: t.onTypeChange(n, _e.videoOverlay)
+                            }, d.createElement(g.Xa, {
                                 padding: {
                                     left: 2
                                 },
                                 className: "dev-ip-address-bar__option",
-                                textAlign: f.Lb.Left
-                            }, c.createElement(f.W, {
-                                fontSize: f.Ca.Size4
-                            }, Le()))))))
+                                textAlign: g.Lb.Left
+                            }, d.createElement(g.W, {
+                                fontSize: g.Ca.Size4
+                            }, Be()))))))
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e;
-                        if (this.props.ifHideChannelMock && this.props.extensionTypeSelected !== xe.videoOverlay) return c.createElement(f.Xa, {
-                            display: f.X.Flex,
-                            position: f.fb.Relative,
+                        if (this.props.ifHideChannelMock && this.props.extensionTypeSelected !== _e.videoOverlay) return d.createElement(g.Xa, {
+                            display: g.X.Flex,
+                            position: g.fb.Relative,
                             fullWidth: !0,
-                            alignItems: f.f.Center,
+                            alignItems: g.f.Center,
                             margin: {
                                 left: 3
                             }
-                        }, c.createElement(f.Xa, {
-                            display: f.X.Flex
-                        }, this.renderExtensionTypeSelectionDropDown(), c.createElement(f.Pa, {
+                        }, d.createElement(g.Xa, {
+                            display: g.X.Flex
+                        }, this.renderExtensionTypeSelectionDropDown(), d.createElement(g.Pa, {
                             margin: {
                                 left: 2
                             }
                         }, this.renderExtensionOnlyModeSticker())));
-                        var t = K("dev-ip-address-bar__address-text-bar", ((e = {})["dev-onboarding-on-going"] = this.props.onBoardingStep === r.channelSelection, e));
-                        return c.createElement(f.zb, {
-                            display: f.X.Flex,
-                            position: f.fb.Relative,
+                        var t = J("dev-ip-address-bar__address-text-bar", ((e = {})["dev-onboarding-on-going"] = this.props.onBoardingStep === r.channelSelection, e));
+                        return d.createElement(g.zb, {
+                            display: g.X.Flex,
+                            position: g.fb.Relative,
                             className: "dev-ip-address-bar",
                             fullWidth: !0,
-                            alignItems: f.f.Center,
-                            background: f.r.Alt2
-                        }, c.createElement("div", {
+                            alignItems: g.f.Center,
+                            background: g.r.Alt2
+                        }, d.createElement("div", {
                             className: "dev-ip-address-bar__cancel-btn dev-ip-address-bar__btn"
-                        }), c.createElement("div", {
+                        }), d.createElement("div", {
                             className: "dev-ip-address-bar__minimize-btn dev-ip-address-bar__btn"
-                        }), c.createElement("div", {
+                        }), d.createElement("div", {
                             className: "dev-ip-address-bar__maximize-btn dev-ip-address-bar__btn"
-                        }), c.createElement(f.zb, {
+                        }), d.createElement(g.zb, {
                             className: t,
-                            display: f.X.Flex,
+                            display: g.X.Flex,
                             margin: 1
-                        }, c.createElement(f.zb, {
-                            background: f.r.Base,
-                            display: f.X.Flex,
-                            alignItems: f.f.Center
-                        }, c.createElement(f.Xa, {
+                        }, d.createElement(g.zb, {
+                            background: g.r.Base,
+                            display: g.X.Flex,
+                            alignItems: g.f.Center
+                        }, d.createElement(g.Xa, {
                             padding: {
                                 left: 1,
                                 right: 1
                             }
-                        }, c.createElement(f.W, {
-                            color: f.O.Link
-                        }, Object(d.d)("twitch.tv/", "DevIPAddressBarMock")))), c.createElement(f.Xa, {
-                            display: f.X.Flex,
-                            position: f.fb.Relative,
+                        }, d.createElement(g.W, {
+                            color: g.O.Link
+                        }, Object(p.d)("twitch.tv/", "DevIPAddressBarMock")))), d.createElement(g.Xa, {
+                            display: g.X.Flex,
+                            position: g.fb.Relative,
                             className: "dev-ip-address-bar__input"
-                        }, c.createElement(f.Xa, {
+                        }, d.createElement(g.Xa, {
                             fullWidth: !0
-                        }, c.createElement(f.Ra, {
-                            type: f.Ta.Text,
+                        }, d.createElement(g.Ra, {
+                            type: g.Ta.Text,
                             onChange: this.onSelectedChannelChange,
                             value: this.state.channelName,
                             onKeyDown: this.onKeyDown
-                        })), c.createElement(f.Xa, {
-                            position: f.fb.Absolute,
+                        })), d.createElement(g.Xa, {
+                            position: g.fb.Absolute,
                             attachRight: !0
-                        }, c.createElement(f.A, {
-                            icon: f.pb.ArrowRight,
+                        }, d.createElement(g.A, {
+                            icon: g.pb.ArrowRight,
                             onClick: this.onConfirmChangeChannelBtnClick
                         })))), this.renderExtensionTypeSelectionDropDown(), this.renderExtensionOnlyModeSticker())
                     }, t
-                }(c.Component),
-                Be = function(e) {
+                }(d.Component),
+                De = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(f.Xa, {
+                        return d.createElement(g.Xa, {
                             className: "tw-theme--dark panel-extension-preview-container",
-                            display: f.X.Flex,
+                            display: g.X.Flex,
                             padding: {
                                 top: 1
                             },
                             fullWidth: !0,
-                            position: f.fb.Absolute
-                        }, c.createElement(f.Xa, {
+                            position: g.fb.Absolute
+                        }, d.createElement(g.Xa, {
                             className: "panel-extension-preview-container__iframe",
-                            display: f.X.Flex,
-                            justifyContent: f.Wa.Center,
+                            display: g.X.Flex,
+                            justifyContent: g.Wa.Center,
                             fullWidth: !0
-                        }, c.createElement("div", {
+                        }, d.createElement("div", {
                             id: "panel-extension-preview"
                         })))
                     }, t
-                }(c.Component),
-                Oe = (n("xhxU"), {
+                }(d.Component),
+                Me = (n("xhxU"), {
                     "data-test-selector": "dev-placeholder-ip-address-bar"
                 }),
-                De = function(e) {
+                je = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t.renderPanelPlaceholderGroup = function() {
-                            for (var e = [], n = 0; n < 3; n++) e.push(c.createElement(f.P, {
+                            for (var e = [], n = 0; n < 3; n++) e.push(d.createElement(g.P, {
                                 key: "placeholder_" + n,
                                 cols: 4
-                            }, c.createElement(se, {
+                            }, d.createElement(ce, {
                                 sandboxMode: t.props.windowType
                             })));
-                            return c.createElement(f.zb, {
-                                background: f.r.Alt2,
+                            return d.createElement(g.zb, {
+                                background: g.r.Alt2,
                                 fullWidth: !0,
-                                position: f.fb.Relative
-                            }, c.createElement(f.Ja, {
-                                justifyContent: f.Wa.Start,
-                                alignItems: f.f.Start
+                                position: g.fb.Relative
+                            }, d.createElement(g.Ja, {
+                                justifyContent: g.Wa.Start,
+                                alignItems: g.f.Start
                             }, e))
                         }, t.renderVideoPlayer = function() {
-                            return t.props.windowType !== ze.editorOnly ? t.props.ifHideChannel ? t.props.windowType === ze.both ? c.createElement("iframe", {
+                            return t.props.windowType !== He.editorOnly ? t.props.ifHideChannel ? t.props.windowType === He.both ? d.createElement("iframe", {
                                 src: "https://player.twitch.tv/?channel=" + t.props.channel + "&muted=true",
                                 height: "500",
                                 width: "100%",
                                 frameBorder: "0",
                                 scrolling: "no",
                                 allowFullScreen: !0
-                            }) : c.createElement("iframe", {
+                            }) : d.createElement("iframe", {
                                 src: "https://player.twitch.tv/?channel=" + t.props.channel + "&muted=true",
                                 height: "700",
                                 width: "100%",
                                 frameBorder: "0",
                                 scrolling: "no",
                                 allowFullScreen: !0
-                            }) : c.createElement("iframe", {
+                            }) : d.createElement("iframe", {
                                 src: "https://player.twitch.tv/?channel=" + t.props.channel + "&muted=true",
                                 height: "100%",
                                 width: "100%",
@@ -13884,7 +13893,7 @@
                                 allowFullScreen: !0
                             }) : null
                         }, t.renderChatBar = function() {
-                            return t.props.windowType === ze.both ? c.createElement("iframe", {
+                            return t.props.windowType === He.both ? d.createElement("iframe", {
                                 className: "channel-placeholder__chat",
                                 src: "https://www.twitch.tv/embed/" + t.props.channel + "/chat",
                                 height: "1150",
@@ -13892,7 +13901,7 @@
                                 frameBorder: "0",
                                 scrolling: "no",
                                 allowFullScreen: !0
-                            }) : t.props.windowType === ze.channelOnly ? c.createElement("iframe", {
+                            }) : t.props.windowType === He.channelOnly ? d.createElement("iframe", {
                                 className: "channel-placeholder__chat",
                                 src: "https://www.twitch.tv/embed/" + t.props.channel + "/chat",
                                 height: "1500",
@@ -13902,49 +13911,49 @@
                                 allowFullScreen: !0
                             }) : void 0
                         }, t.renderChannelPanel = function() {
-                            var e = f.ac.Hidden;
-                            t.props.extensionType !== xe.panel && (e = f.ac.Visible);
-                            var n = c.createElement(f.zb, {
-                                background: f.r.Alt2,
+                            var e = g.ac.Hidden;
+                            t.props.extensionType !== _e.panel && (e = g.ac.Visible);
+                            var n = d.createElement(g.zb, {
+                                background: g.r.Alt2,
                                 className: "channel-placeholder__panel-group",
-                                display: f.X.Flex,
+                                display: g.X.Flex,
                                 visibility: e,
                                 fullWidth: !0,
-                                position: f.fb.Relative
+                                position: g.fb.Relative
                             }, t.renderPanelPlaceholderGroup());
-                            return c.createElement(f.zb, {
-                                display: f.X.Flex,
-                                background: f.r.Alt2,
-                                position: f.fb.Relative,
-                                justifyContent: f.Wa.Center,
-                                alignItems: f.f.Start,
-                                textAlign: f.Lb.Center,
+                            return d.createElement(g.zb, {
+                                display: g.X.Flex,
+                                background: g.r.Alt2,
+                                position: g.fb.Relative,
+                                justifyContent: g.Wa.Center,
+                                alignItems: g.f.Start,
+                                textAlign: g.Lb.Center,
                                 fullHeight: !0,
                                 fullWidth: !0
-                            }, n, c.createElement(Be, null))
+                            }, n, d.createElement(De, null))
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return this.props.ifHideChannel ? c.createElement(f.zb, {
+                        return this.props.ifHideChannel ? d.createElement(g.zb, {
                             className: "channel-placeholder",
-                            justifyContent: f.Wa.Center,
-                            display: f.X.Flex,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center,
+                            justifyContent: g.Wa.Center,
+                            display: g.X.Flex,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center,
                             padding: {
                                 left: 3,
                                 right: 3,
                                 bottom: 2
                             }
-                        }, c.createElement(f.zb, {
+                        }, d.createElement(g.zb, {
                             margin: {
                                 top: 1
                             },
                             fullWidth: !0,
                             className: "channel-placeholder__box-shadow"
-                        }, c.createElement(f.Xa, i.__assign({
+                        }, d.createElement(g.Xa, i.__assign({
                             className: "channel-placeholder__channel-nav"
-                        }, Oe), c.createElement(Re, {
+                        }, Me), d.createElement(Oe, {
                             onBoardingStep: this.props.onBoardingStep,
                             onChannelChange: this.props.onChannelChange,
                             shownChannel: this.props.channel,
@@ -13952,38 +13961,38 @@
                             extensionTypeSelected: this.props.extensionType,
                             ifHideChannelMock: this.props.ifHideChannelMock,
                             onHideChannelMockClick: this.props.onHideChannelMockClick
-                        })), c.createElement(f.Xa, {
-                            display: f.X.Flex,
-                            position: f.fb.Relative,
+                        })), d.createElement(g.Xa, {
+                            display: g.X.Flex,
+                            position: g.fb.Relative,
                             className: "channel-placeholder__frame",
                             fullWidth: !0
-                        }, c.createElement(f.Xa, {
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
+                        }, d.createElement(g.Xa, {
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
                             className: "channel-placeholder__video",
                             fullWidth: !0
-                        }, this.renderVideoPlayer()), c.createElement("div", {
+                        }, this.renderVideoPlayer()), d.createElement("div", {
                             id: "overlay-extension-preview"
-                        })))) : c.createElement(f.zb, {
+                        })))) : d.createElement(g.zb, {
                             className: "channel-placeholder",
-                            justifyContent: f.Wa.Center,
-                            display: f.X.Flex,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center,
+                            justifyContent: g.Wa.Center,
+                            display: g.X.Flex,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center,
                             padding: {
                                 left: 3,
                                 right: 3,
                                 bottom: 2
                             }
-                        }, c.createElement(f.zb, {
+                        }, d.createElement(g.zb, {
                             margin: {
                                 top: 1
                             },
                             fullWidth: !0,
                             className: "channel-placeholder__box-shadow"
-                        }, c.createElement(f.Xa, i.__assign({
+                        }, d.createElement(g.Xa, i.__assign({
                             className: "channel-placeholder__channel-nav"
-                        }, Oe), c.createElement(Re, {
+                        }, Me), d.createElement(Oe, {
                             onBoardingStep: this.props.onBoardingStep,
                             onChannelChange: this.props.onChannelChange,
                             shownChannel: this.props.channel,
@@ -13991,34 +14000,34 @@
                             extensionTypeSelected: this.props.extensionType,
                             ifHideChannelMock: this.props.ifHideChannelMock,
                             onHideChannelMockClick: this.props.onHideChannelMockClick
-                        }), c.createElement(ae, {
+                        }), d.createElement(le, {
                             windowType: this.props.windowType
-                        })), c.createElement(f.Xa, {
-                            display: f.X.Flex,
-                            position: f.fb.Relative,
+                        })), d.createElement(g.Xa, {
+                            display: g.X.Flex,
+                            position: g.fb.Relative,
                             fullWidth: !0,
                             fullHeight: !0,
                             className: "channel-placeholder__channel-window"
-                        }, c.createElement(f.Xa, {
-                            display: f.X.Flex,
+                        }, d.createElement(g.Xa, {
+                            display: g.X.Flex,
                             className: "channel-placeholder__side-bar",
-                            alignItems: f.f.Center,
-                            position: f.fb.Relative,
-                            justifyContent: f.Wa.Center
-                        }, c.createElement(le, null)), c.createElement(f.Xa, {
-                            display: f.X.Flex,
-                            position: f.fb.Relative,
+                            alignItems: g.f.Center,
+                            position: g.fb.Relative,
+                            justifyContent: g.Wa.Center
+                        }, d.createElement(ue, null)), d.createElement(g.Xa, {
+                            display: g.X.Flex,
+                            position: g.fb.Relative,
                             className: "channel-placeholder__frame",
                             fullWidth: !0
-                        }, c.createElement(f.Xa, {
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
+                        }, d.createElement(g.Xa, {
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
                             className: "channel-placeholder__video",
                             fullWidth: !0
-                        }, c.createElement(re, null), c.createElement(f.zb, {
-                            background: f.r.Alt2,
-                            display: f.X.Flex,
-                            position: f.fb.Relative,
+                        }, d.createElement(oe, null), d.createElement(g.zb, {
+                            background: g.r.Alt2,
+                            display: g.X.Flex,
+                            position: g.fb.Relative,
                             className: "channel-placeholder__video-player",
                             fullHeight: !0,
                             padding: {
@@ -14026,19 +14035,19 @@
                                 left: 2,
                                 right: 2
                             }
-                        }, this.renderVideoPlayer(), c.createElement("div", {
+                        }, this.renderVideoPlayer(), d.createElement("div", {
                             id: "overlay-extension-preview"
-                        })), c.createElement(f.zb, {
-                            background: f.r.Alt2,
-                            position: f.fb.Relative,
-                            alignItems: f.f.Start
-                        }, c.createElement(ce, null)), this.renderChannelPanel())), this.renderChatBar())))
+                        })), d.createElement(g.zb, {
+                            background: g.r.Alt2,
+                            position: g.fb.Relative,
+                            alignItems: g.f.Start
+                        }, d.createElement(de, null)), this.renderChannelPanel())), this.renderChatBar())))
                     }, t
-                }(c.Component),
-                Me = n("17x9"),
-                je = n("lc5D"),
-                Ie = n.n(je),
-                Ne = (n("FG3S"), n("vp08"), n("uzal"), n("gYtI"), n("qKFb"), n("FQWF"), function(e) {
+                }(d.Component),
+                Ie = n("17x9"),
+                Ne = n("lc5D"),
+                Pe = n.n(Ne),
+                $e = (n("FG3S"), n("vp08"), n("uzal"), n("gYtI"), n("qKFb"), n("FQWF"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onConfirmReset = function() {
@@ -14046,121 +14055,121 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(f.zb, {
+                        return d.createElement(g.zb, {
                             className: "dev-sandbox-undo-modal__container dev-sandbox-undo-modal__gradient-border",
-                            background: f.r.Base,
-                            position: f.fb.Relative,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, {
+                            background: g.r.Base,
+                            position: g.fb.Relative,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, {
                             className: "dev-sandbox-undo-modal",
                             fullHeight: !0,
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
-                            justifyContent: f.Wa.Center,
-                            alignItems: f.f.Center,
-                            textAlign: f.Lb.Center
-                        }, c.createElement(f.Xa, null, c.createElement(f.ob, {
-                            asset: f.pb.VideoRerun,
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
+                            textAlign: g.Lb.Center
+                        }, d.createElement(g.Xa, null, d.createElement(g.ob, {
+                            asset: g.pb.VideoRerun,
                             height: 80,
                             width: 80
-                        })), c.createElement(f.Xa, {
+                        })), d.createElement(g.Xa, {
                             padding: 1
-                        }, c.createElement(f.W, {
+                        }, d.createElement(g.W, {
                             bold: !0,
-                            fontSize: f.Ca.Size4,
-                            color: f.O.Link
-                        }, Object(d.d)("Are you sure you want to undo?", "DevSandboxUndoModal"))), c.createElement(f.Xa, {
+                            fontSize: g.Ca.Size4,
+                            color: g.O.Link
+                        }, Object(p.d)("Are you sure you want to undo?", "DevSandboxUndoModal"))), d.createElement(g.Xa, {
                             className: "dev-sandbox-undo-modal__btn-group"
-                        }, c.createElement(f.Xa, {
+                        }, d.createElement(g.Xa, {
                             fullWidth: !0,
                             padding: {
                                 top: 1,
                                 bottom: .5
                             }
-                        }, c.createElement(f.z, {
+                        }, d.createElement(g.z, {
                             fullWidth: !0,
                             onClick: this.onConfirmReset
-                        }, Object(d.d)("I am sure", "DevSandboxUndoModal"))), c.createElement(f.Xa, {
+                        }, Object(p.d)("I am sure", "DevSandboxUndoModal"))), d.createElement(g.Xa, {
                             fullWidth: !0
-                        }, c.createElement(f.z, {
+                        }, d.createElement(g.z, {
                             fullWidth: !0,
                             onClick: this.props.onClose,
-                            type: f.F.Hollow
-                        }, Object(d.d)("Cancel", "DevSandboxUndoModal"))))), c.createElement(h.a, null))
+                            type: g.F.Hollow
+                        }, Object(p.d)("Cancel", "DevSandboxUndoModal"))))), d.createElement(f.a, null))
                     }, t
-                }(c.Component));
-            var Pe = Object(o.connect)(null, function(e) {
+                }(d.Component));
+            var ze = Object(o.connect)(null, function(e) {
                     return Object(a.bindActionCreators)({
-                        onClose: s.c
+                        onClose: l.c
                     }, e)
-                })(Ne),
-                $e = (n("AS9s"), function(e) {
+                })($e),
+                We = (n("AS9s"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t.renderRunButton = function() {
-                            var e = K("dev-editor-tabs__run-btn", {
+                            var e = J("dev-editor-tabs__run-btn", {
                                 "dev-onboarding-on-going": t.props.onBoardingStep === r.manualRun
                             });
-                            return c.createElement(f.Xa, {
+                            return d.createElement(g.Xa, {
                                 margin: {
                                     bottom: 1,
                                     top: 1
                                 },
                                 className: e
-                            }, c.createElement("button", {
+                            }, d.createElement("button", {
                                 onClick: t.props.onRun
-                            }, c.createElement(f.zb, {
-                                color: f.O.Overlay,
+                            }, d.createElement(g.zb, {
+                                color: g.O.Overlay,
                                 padding: {
                                     right: .5
                                 }
-                            }, c.createElement(f.ob, {
-                                asset: f.pb.MiniPlayerPlay,
+                            }, d.createElement(g.ob, {
+                                asset: g.pb.MiniPlayerPlay,
                                 height: 20,
                                 width: 20
                             }))))
                         }, t.renderResetButton = function() {
-                            return c.createElement(f.Xa, {
+                            return d.createElement(g.Xa, {
                                 margin: {
                                     left: 2,
                                     right: 1,
                                     top: 1,
                                     bottom: 1
                                 }
-                            }, c.createElement("button", {
+                            }, d.createElement("button", {
                                 className: "dev-editor-tabs__reset-btn",
                                 onClick: t.showUndoModal
-                            }, c.createElement(f.zb, {
-                                color: f.O.Overlay,
+                            }, d.createElement(g.zb, {
+                                color: g.O.Overlay,
                                 padding: {
                                     right: .5
                                 }
-                            }, c.createElement(f.ob, {
-                                asset: f.pb.VideoRerun,
+                            }, d.createElement(g.ob, {
+                                asset: g.pb.VideoRerun,
                                 height: 20,
                                 width: 20
                             }))))
                         }, t.renderDownloadCodeButton = function() {
-                            return c.createElement(f.zb, {
+                            return d.createElement(g.zb, {
                                 margin: {
                                     right: 2
                                 },
-                                position: f.fb.Absolute,
+                                position: g.fb.Absolute,
                                 attachRight: !0,
-                                display: f.X.Flex,
-                                background: f.r.Overlay
-                            }, c.createElement(f.z, {
+                                display: g.X.Flex,
+                                background: g.r.Overlay
+                            }, d.createElement(g.z, {
                                 onClick: t.openDownloadModal,
-                                type: f.F.Hollow
-                            }, c.createElement(f.Xa, {
-                                display: f.X.Flex,
-                                justifyContent: f.Wa.Center,
-                                alignItems: f.f.Center
-                            }, c.createElement(f.W, {
-                                color: f.O.Overlay
-                            }, Object(d.d)("Download Code", "DevEditorTabs")))))
+                                type: g.F.Hollow
+                            }, d.createElement(g.Xa, {
+                                display: g.X.Flex,
+                                justifyContent: g.Wa.Center,
+                                alignItems: g.f.Center
+                            }, d.createElement(g.W, {
+                                color: g.O.Overlay
+                            }, Object(p.d)("Download Code", "DevEditorTabs")))))
                         }, t.openDownloadModal = function() {
                             t.props.showDownloadModal(), t.props.onDownload()
                         }, t.showUndoModal = function() {
@@ -14173,71 +14182,71 @@
                             }
                         }, t.renderDropDown = function(e) {
                             var n = e.close;
-                            return c.createElement(f.zb, {
+                            return d.createElement(g.zb, {
                                 className: "dev-editor-tabs__dropdown",
-                                background: f.r.Base,
-                                position: f.fb.Absolute,
-                                display: f.X.Flex,
-                                alignItems: f.f.Center,
-                                flexDirection: f.Aa.Column,
-                                zIndex: f.cc.Above,
+                                background: g.r.Base,
+                                position: g.fb.Absolute,
+                                display: g.X.Flex,
+                                alignItems: g.f.Center,
+                                flexDirection: g.Aa.Column,
+                                zIndex: g.cc.Above,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 attachRight: !0
-                            }, c.createElement(f.zb, {
-                                position: f.fb.Relative,
+                            }, d.createElement(g.zb, {
+                                position: g.fb.Relative,
                                 className: "dev-editor-tabs__dropdown-content",
                                 fullWidth: !0,
-                                background: f.r.Base,
-                                zIndex: f.cc.Above,
+                                background: g.r.Base,
+                                zIndex: g.cc.Above,
                                 attachTop: !0,
-                                flexDirection: f.Aa.Row,
-                                flexWrap: f.Ba.Wrap
-                            }, c.createElement(f.Xa, null, t.tab("js", n), t.tab("component", n), t.tab("panel", n), t.tab("css", n, !0))))
+                                flexDirection: g.Aa.Row,
+                                flexWrap: g.Ba.Wrap
+                            }, d.createElement(g.Xa, null, t.tab("js", n), t.tab("component", n), t.tab("panel", n), t.tab("css", n, !0))))
                         }, t.openSelectionBar = function(e) {
                             var n = e.toggle;
-                            return c.createElement(f.Xa, {
+                            return d.createElement(g.Xa, {
                                 className: "dev-editor-tabs__selection"
-                            }, c.createElement(f.zb, {
+                            }, d.createElement(g.zb, {
                                 className: "dev-editor-tabs__selection-content",
-                                background: f.r.Base,
-                                display: f.X.Flex,
-                                alignItems: f.f.Center,
-                                textAlign: f.Lb.Left,
-                                justifyContent: f.Wa.Start
-                            }, c.createElement(f.Ua, {
+                                background: g.r.Base,
+                                display: g.X.Flex,
+                                alignItems: g.f.Center,
+                                textAlign: g.Lb.Left,
+                                justifyContent: g.Wa.Start
+                            }, d.createElement(g.Ua, {
                                 onClick: n,
                                 blurAfterClick: !0,
-                                type: f.Va.Inverted
-                            }, c.createElement(f.Xa, {
-                                display: f.X.Flex,
-                                position: f.fb.Relative,
+                                type: g.Va.Inverted
+                            }, d.createElement(g.Xa, {
+                                display: g.X.Flex,
+                                position: g.fb.Relative,
                                 fullWidth: !0,
                                 className: "dev-editor-tabs__selection-text-wrapper",
-                                justifyContent: f.Wa.Start,
-                                alignItems: f.f.Center,
-                                textAlign: f.Lb.Left
-                            }, c.createElement(f.Xa, {
+                                justifyContent: g.Wa.Start,
+                                alignItems: g.f.Center,
+                                textAlign: g.Lb.Left
+                            }, d.createElement(g.Xa, {
                                 padding: {
                                     left: 2,
                                     right: .5
                                 },
                                 className: "dev-editor-tabs__selection-text",
-                                justifyContent: f.Wa.Start,
-                                alignItems: f.f.Center,
-                                textAlign: f.Lb.Left
-                            }, c.createElement(f.W, {
-                                fontSize: f.Ca.Size4
-                            }, t.filenameForType(t.props.activeTab))), c.createElement(f.Xa, {
+                                justifyContent: g.Wa.Start,
+                                alignItems: g.f.Center,
+                                textAlign: g.Lb.Left
+                            }, d.createElement(g.W, {
+                                fontSize: g.Ca.Size4
+                            }, t.filenameForType(t.props.activeTab))), d.createElement(g.Xa, {
                                 padding: {
                                     top: .5,
                                     right: 1
                                 },
                                 className: "dev-editor-tabs__selection-arrow",
-                                position: f.fb.Absolute,
+                                position: g.fb.Absolute,
                                 attachRight: !0
-                            }, c.createElement(f.ob, {
-                                asset: f.pb.AngleDown,
+                            }, d.createElement(g.ob, {
+                                asset: g.pb.AngleDown,
                                 height: 15,
                                 width: 15
                             }))))))
@@ -14246,69 +14255,69 @@
                                 top: .5,
                                 left: 2
                             };
-                            return r && (i.bottom = .5), c.createElement("div", {
+                            return r && (i.bottom = .5), d.createElement("div", {
                                 onClick: t.onTabChange(n, e)
-                            }, c.createElement(f.Xa, {
+                            }, d.createElement(g.Xa, {
                                 padding: i,
                                 className: "dev-editor-tabs__option"
-                            }, c.createElement(f.W, {
-                                fontSize: f.Ca.Size4
+                            }, d.createElement(g.W, {
+                                fontSize: g.Ca.Size4
                             }, t.filenameForType(e))))
                         }, t.filenameForType = function(e) {
                             switch (e) {
                                 case "js":
-                                    return Object(d.d)("viewer.js", "DevEditorTabs");
+                                    return Object(p.d)("viewer.js", "DevEditorTabs");
                                 case "css":
-                                    return Object(d.d)("viewer.css", "DevEditorTabs");
+                                    return Object(p.d)("viewer.css", "DevEditorTabs");
                                 case "panel":
-                                    return Object(d.d)("panel.html", "DevEditorTabs");
+                                    return Object(p.d)("panel.html", "DevEditorTabs");
                                 case "component":
-                                    return Object(d.d)("video_component.html", "DevEditorTabs");
+                                    return Object(p.d)("video_component.html", "DevEditorTabs");
                                 default:
                                     return ""
                             }
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = K("dev-editor-tabs", {
+                        var e = J("dev-editor-tabs", {
                             "dev-onboarding-on-going": this.props.onBoardingStep === r.codeSection
                         });
-                        return c.createElement(f.Xa, {
+                        return d.createElement(g.Xa, {
                             className: e,
-                            display: f.X.Flex,
-                            justifyContent: f.Wa.Start,
-                            alignItems: f.f.Center,
+                            display: g.X.Flex,
+                            justifyContent: g.Wa.Start,
+                            alignItems: g.f.Center,
                             padding: {
                                 left: 1,
                                 top: 1,
                                 bottom: 1
                             },
-                            position: f.fb.Relative
-                        }, c.createElement(f.Xa, {
-                            flexWrap: f.Ba.NoWrap,
-                            alignItems: f.f.Stretch,
-                            position: f.fb.Relative,
-                            zIndex: f.cc.Above,
+                            position: g.fb.Relative
+                        }, d.createElement(g.Xa, {
+                            flexWrap: g.Ba.NoWrap,
+                            alignItems: g.f.Stretch,
+                            position: g.fb.Relative,
+                            zIndex: g.cc.Above,
                             padding: {
                                 left: 1
                             }
-                        }, c.createElement(he.a, {
+                        }, d.createElement(fe.a, {
                             control: this.openSelectionBar
                         }, this.renderDropDown)), this.renderResetButton(), this.renderRunButton(), this.renderDownloadCodeButton())
                     }, t
-                }(c.Component));
-            var ze, We = Object(o.connect)(null, function(e) {
+                }(d.Component));
+            var He, Ue = Object(o.connect)(null, function(e) {
                     return Object(a.bindActionCreators)({
                         showUndoModal: function(e) {
                             var t = i.__rest(e, []);
-                            return Object(s.d)(Pe, t)
+                            return Object(l.d)(ze, t)
                         },
                         showDownloadModal: function() {
-                            return Object(s.d)(me, {})
+                            return Object(l.d)(be, {})
                         }
                     }, e)
-                })($e),
-                He = function(e) {
+                })(We),
+                qe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -14320,22 +14329,22 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(f.Xa, {
-                            display: f.X.Flex,
+                        return d.createElement(g.Xa, {
+                            display: g.X.Flex,
                             fullWidth: !0
-                        }, c.createElement(f.zb, {
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
+                        }, d.createElement(g.zb, {
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
                             fullWidth: !0,
-                            background: f.r.Base
-                        }, c.createElement(We, {
+                            background: g.r.Base
+                        }, d.createElement(Ue, {
                             onBoardingStep: this.props.step,
                             onTabClick: this.setTab,
                             activeTab: this.state.activeEditor,
                             onRun: this.props.onRunClick,
                             onReset: this.props.onReset,
                             onDownload: this.props.onDownload
-                        }), c.createElement(Ue, {
+                        }), d.createElement(Ve, {
                             active: "js" === this.state.activeEditor,
                             className: "editor__panel--js",
                             mode: "javascript",
@@ -14343,7 +14352,7 @@
                             value: this.props.js,
                             onChange: this.props.onJSChange,
                             "data-test-selector": "dev-sandbox-active-tab-js"
-                        }), c.createElement(Ue, {
+                        }), d.createElement(Ve, {
                             active: "panel" === this.state.activeEditor,
                             className: "editor__panel--panel",
                             mode: "html",
@@ -14351,7 +14360,7 @@
                             value: this.props.panel,
                             onChange: this.props.onPanelChange,
                             "data-test-selector": "dev-sandbox-active-tab-panel-html"
-                        }), c.createElement(Ue, {
+                        }), d.createElement(Ve, {
                             active: "component" === this.state.activeEditor,
                             className: "editor__panel--overlay",
                             mode: "html",
@@ -14359,7 +14368,7 @@
                             value: this.props.overlay,
                             onChange: this.props.onOverlayChange,
                             "data-test-selector": "dev-sandbox-active-tab-overlay-html"
-                        }), c.createElement(Ue, {
+                        }), d.createElement(Ve, {
                             active: "css" === this.state.activeEditor,
                             className: "editor__panel--css",
                             mode: "css",
@@ -14369,15 +14378,15 @@
                             "data-test-selector": "dev-sandbox-active-tab-css"
                         })))
                     }, t.contextTypes = {
-                        extensionType: Me.string
+                        extensionType: Ie.string
                     }, t
-                }(c.Component),
-                Ue = function(e) {
-                    return c.createElement(f.Xa, {
-                        display: e.active ? f.X.Flex : f.X.Hide,
+                }(d.Component),
+                Ve = function(e) {
+                    return d.createElement(g.Xa, {
+                        display: e.active ? g.X.Flex : g.X.Hide,
                         className: e.className,
                         "data-test-selector": e["data-test-selector"]
-                    }, c.createElement(Ie.a, {
+                    }, d.createElement(Pe.a, {
                         theme: "tomorrow_night",
                         mode: e.mode,
                         name: e.editorName,
@@ -14387,52 +14396,52 @@
                         onChange: e.onChange
                     }))
                 },
-                qe = '<!DOCTYPE html>\n<html>\n    <head>\n        <title>Viewer Page</title>\n    </head>\n    <body>\n        <div id="app" class="full-height"></div>\n        <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"><\/script>\n        <script\n  src="https://code.jquery.com/jquery-3.3.1.min.js"\n  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="\n  crossorigin="anonymous"><\/script>\n        <h2>Hello, Glitch!</h2>\n        <p>Try changing the color via Glitch!</p>\n        <div>\n            <input type="button" id="cycle"  value="Change Color" />\n        </div>\n        <div id="color-container">\n            <div id="color"></div>\n        </div>\n        <div id="list"></div>\n    </body>\n</html>\n',
-                Ve = "var token = \"\";\nvar tuid = \"\";\n\nvar twitch = window.Twitch.ext;\n\nfunction setAuth(token) {\n  Object.keys(requests).forEach((req) => {\n      twitch.rig.log('Setting auth headers');\n      requests[req].headers = { 'Authorization': 'Bearer ' + token }\n  });\n}\n\ntwitch.onContext(function(context) {\n  twitch.rig.log(context);\n});\n\ntwitch.onAuthorized(function(auth) {\n  // save our credentials\n  token = auth.token;\n  tuid = auth.userId;\n\n  // enable the button\n  $('#cycle').removeAttr('disabled');\n\n  setAuth(token);\n});",
-                Ge = "var twitch = window.Twitch.ext;\n\nfunction updateBlock(hex) {\n    $('#color').css('background-color', hex);\n}\n\n$(function() {\n    $('#cycle').prop('disabled', false);\n\n   $('#cycle').click(function() {\n      // == Begin Glitch Code\n      // == This server side call is powered by Glitch. To see the code, visit:\n      // == https://glitch.com/edit/#!/extension-backend\n      fetch(\"https://extension-backend.glitch.me/randomcolor\")\n        .then(res => res.text())\n        .then(text => updateBlock(text))\n      // == End Glitch Code\n    });\n});\n",
-                Xe = "body {\n    background-color: white;\n    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n}\n\n#color {\n    border-radius: 50px;\n    transition: background-color 0.5s ease;\n    margin-top: 30px;\n    width: 100px;\n    height: 100px;\n    background-color: #6441A4;\n    float: left;\n    position: relative;\n    left: -50%;\n}\n\n#color-container {\n    float: left;\n    position: relative;\n    left: 50%;\n}\n",
-                Ke = '# Sandbox: Hello Glitch Sample\n\nThis sample code was downloaded from the Extensions Developer Sandbox(https://dev.twitch.tv/extensions/sandbox). You can use this sample code as the basis for testing an extension, or for personal use. This code differs from the Hello World extension in that calls on viewer.js may be served by Glitch instead. See the code on this file for specific information.\n\n## Continuing sandbox development in the rig\n\nThis readme details how to use the [Developer Rig](https://github.com/twitchdev/developer-rig) to continue development on your extension. You can read about how to get started with the project [here](https://github.com/twitchdev/developer-rig#twitch-extensions-developer-rig).\n\nPrerequisites:\n- You have retrieved this sample code from the sandbox by selecting to download it within the UI.\n- Developer Rig is installed locally and is running on your machine. Within the rig folder, run `yarn start`. The rig will be hosted on https://localhost.rig.twitch.tv:3000.\n\nThese steps will assume downloaded code is at `/Users/twitch/Downloads/sandbox-extension-hello-glitch` and that the rig is located at `/Users/twitch/developer-rig`. Your paths will differ per your username and folder structures.\n\n1. In the rig running on your machine, create a new extension project.\n\n- Extension Project Name: "Sandbox" (or whatever you like).\n— Choose Extension: Create Local Extension\n— Extension Types: Video Component, Panel\n- Project Folder: /Users/twitch/Downloads/sandbox-extension-hello-glitch\n- Add Code to Project: None (Just Create Project Folder)\n\n2. Click the + button to add a new Panel view.\n\n- Extension Type: Panel\n- Viewer Type: Logged-Out Viewer\n\n> Note: you can perform this same step for other extension views, such as components.\n\n3. Navigate to Project Overview tab. Set Front-end Files Location to `.`. Click Host with Rig.\n\n4. Navigate to Extension Views tab. You should see your extension!\n\n## Differences between sandbox and rig\n\nYou may notice that the HTML and Javascript downloaded differs from what was being edited. A few things were added to help the extension runs in the rig:\n\n- A script html element referencing `viewer.js` to load your javascript.\n- A link html element referencing `style.css` to load styles.\n- A script element `<script src="https://localhost.rig.twitch.tv:3000/twitch-ext.js"><\/script>`. This is required for local extensions.\n- Two html files named `panel.html` and `video_component.html`. These are the naming conventions for these views for local extensions.\n- Javascript code was updated to contain `twitch.onAuthorized` if it wasn\'t included. This function is required by extensions to load properly.\n\n## Get extensions support from Twitch Developers and the community\n\nWe’re here to help! Start a thread in the [forums](https://discuss.dev.twitch.tv) or send us a [tweet](https://twitter.com/twitchdev).\n',
-                Ye = '<h1 id="sandboxhelloglitchsample">Sandbox: Hello Glitch Sample</h1>\n\n<p>This sample code was downloaded from the Extensions Developer Sandbox(https://dev.twitch.tv/extensions/sandbox). You can use this sample code as the basis for testing an extension, or for personal use. This code differs from the Hello World extension in that calls on viewer.js may be served by Glitch instead. See the code on this file for specific information.</p>\n\n<h2 id="continuingsandboxdevelopmentintherig">Continuing sandbox development in the rig</h2>\n\n<p>This readme details how to use the <a href="https://github.com/twitchdev/developer-rig">Developer Rig</a> to continue development on your extension. You can read about how to get started with the project <a href="https://github.com/twitchdev/developer-rig#twitch-extensions-developer-rig">here</a>.</p>\n\n<p>Prerequisites:</p>\n\n<ul>\n<li>You have retrieved this sample code from the sandbox by selecting to download it within the UI.</li>\n\n<li>Developer Rig is installed locally and is running on your machine. Within the rig folder, run <code>yarn start</code>. The rig will be hosted on https://localhost.rig.twitch.tv:3000.</li>\n</ul>\n\n<p>These steps will assume downloaded code is at <code>/Users/twitch/Downloads/sandbox-extension-hello-glitch</code> and that the rig is located at <code>/Users/twitch/developer-rig</code>. Your paths will differ per your username and folder structures.</p>\n\n<ol>\n<li>In the rig running on your machine, create a new extension project.</li>\n</ol>\n\n<ul>\n<li>Extension Project Name: "Sandbox" (or whatever you like).\n— Choose Extension: Create Local Extension\n— Extension Types: Video Component, Panel</li>\n\n<li>Project Folder: /Users/twitch/Downloads/sandbox-extension-hello-glitch</li>\n\n<li>Add Code to Project: None (Just Create Project Folder)</li>\n</ul>\n\n<ol>\n<li>Click the + button to add a new Panel view.</li>\n</ol>\n\n<ul>\n<li>Extension Type: Panel</li>\n\n<li>Viewer Type: Logged-Out Viewer</li>\n</ul>\n\n<blockquote>\n  <p>Note: you can perform this same step for other extension views, such as components.</p>\n</blockquote>\n\n<ol>\n<li><p>Navigate to Project Overview tab. Set Front-end Files Location to <code>.</code>. Click Host with Rig.</p></li>\n\n<li><p>Navigate to Extension Views tab. You should see your extension!</p></li>\n</ol>\n\n<h2 id="differencesbetweensandboxandrig">Differences between sandbox and rig</h2>\n\n<p>You may notice that the HTML and Javascript downloaded differs from what was being edited. A few things were added to help the extension runs in the rig:</p>\n\n<ul>\n<li>A script html element referencing <code>viewer.js</code> to load your javascript.</li>\n\n<li>A link html element referencing <code>style.css</code> to load styles.</li>\n\n<li>A script element <code>&lt;script src="https://localhost.rig.twitch.tv:3000/twitch-ext.js"&gt;&lt;/script&gt;</code>. This is required for local extensions.</li>\n\n<li>Two html files named <code>panel.html</code> and <code>video_component.html</code>. These are the naming conventions for these views for local extensions.</li>\n\n<li>Javascript code was updated to contain <code>twitch.onAuthorized</code> if it wasn\'t included. This function is required by extensions to load properly.</li>\n</ul>\n\n<h2 id="getextensionssupportfromtwitchdevelopersandthecommunity">Get extensions support from Twitch Developers and the community</h2>\n\n<p>We’re here to help! Start a thread in the <a href="https://discuss.dev.twitch.tv">forums</a> or send us a <a href="https://twitter.com/twitchdev">tweet</a>.</p>',
-                Je = '<!DOCTYPE html>\n<html>\n    <head>\n        <title>Viewer Page</title>\n    </head>\n    <body>\n        <div id="app" class="full-height"></div>\n        <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"><\/script>\n        <script\n  src="https://code.jquery.com/jquery-3.3.1.min.js"\n  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="\n  crossorigin="anonymous"><\/script>\n        <h2>Hello, World!</h2>\n        <p>Would you care to cycle a color?</p>\n        <div>\n            <input type="button" id="cycle"  value="Yes, I would" />\n        </div>\n        <div id="color-container">\n            <div id="color"></div>\n        </div>\n        <div id="list"></div>\n    </body>\n</html>\n',
-                Ze = "var token = \"\";\nvar tuid = \"\";\n\nvar twitch = window.Twitch.ext;\n\nfunction setAuth(token) {\n  Object.keys(requests).forEach((req) => {\n      twitch.rig.log('Setting auth headers');\n      requests[req].headers = { 'Authorization': 'Bearer ' + token }\n  });\n}\n\ntwitch.onContext(function(context) {\n  twitch.rig.log(context);\n});\n\ntwitch.onAuthorized(function(auth) {\n  // save our credentials\n  token = auth.token;\n  tuid = auth.userId;\n\n  // enable the button\n  $('#cycle').removeAttr('disabled');\n\n  setAuth(token);\n});",
-                Qe = "var twitch = window.Twitch.ext;\n\nfunction updateBlock(hex) {\n    $('#color').css('background-color', hex);\n}\n\nfunction getRandomColor() {\n  return '#'+Math.floor(Math.random()*16777215).toString(16);\n}\n\n$(function() {\n    $('#cycle').prop('disabled', false);\n\n    $('#cycle').click(function() {\n      updateBlock(getRandomColor());\n    });\n});\n",
-                et = "body {\n    background-color: white;\n    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n}\n\n#color {\n    border-radius: 50px;\n    transition: background-color 0.5s ease;\n    margin-top: 30px;\n    width: 100px;\n    height: 100px;\n    background-color: #6441A4;\n    float: left;\n    position: relative;\n    left: -50%;\n}\n\n#color-container {\n    float: left;\n    position: relative;\n    left: 50%;\n}\n",
-                tt = '# Sandbox: Hello World Sample\n\nThis sample code was downloaded from the Extensions Developer Sandbox(https://dev.twitch.tv/extensions/sandbox). You can use this sample code as the basis for testing an extension, or for personal use.\n\n## Continuing sandbox development in the rig\n\nThis readme details how to use the [Developer Rig](https://github.com/twitchdev/developer-rig) to continue development on your extension. You can read about how to get started with the project [here](https://github.com/twitchdev/developer-rig#twitch-extensions-developer-rig).\n\nPrerequisites:\n- You have retrieved this sample code from the sandbox by selecting to download it within the UI.\n- Developer Rig is installed locally and is running on your machine. Within the rig folder, run `yarn start`. The rig will be hosted on https://localhost.rig.twitch.tv:3000.\n\nThese steps will assume downloaded code is at `/Users/twitch/Downloads/sandbox-extension-hello-world` and that the rig is located at `/Users/twitch/developer-rig`. Your paths will differ per your username and folder structures.\n\n1. In the rig running on your machine, create a new extension project.\n\n- Extension Project Name: "Sandbox" (or whatever you like).\n— Choose Extension: Create Local Extension\n— Extension Types: Video Component, Panel\n- Project Folder: /Users/twitch/Downloads/sandbox-extension-hello-world\n- Add Code to Project: None (Just Create Project Folder)\n\n2. Click the + button to add a new Panel view.\n\n- Extension Type: Panel\n- Viewer Type: Logged-Out Viewer\n\n> Note: you can perform this same step for other extension views, such as components.\n\n3. Navigate to Project Overview tab. Set Front-end Files Location to `.`. Click Host with Rig.\n\n4. Navigate to Extension Views tab. You should see your extension!\n\n## Differences between sandbox and rig\n\nYou may notice that the HTML and Javascript downloaded differs from what was being edited. A few things were added to help the extension runs in the rig:\n\n- A script html element referencing `viewer.js` to load your javascript.\n- A link html element referencing `style.css` to load styles.\n- A script element `<script src="https://localhost.rig.twitch.tv:3000/twitch-ext.js"><\/script>`. This is required for local extensions.\n- Two html files named `panel.html` and `video_component.html`. These are the naming conventions for these views for local extensions.\n- Javascript code was updated to contain `twitch.onAuthorized` if it wasn\'t included. This function is required by extensions to load properly.\n\n## Get extensions support from Twitch Developers and the community\n\nWe’re here to help! Start a thread in the [forums](https://discuss.dev.twitch.tv) or send us a [tweet](https://twitter.com/twitchdev).\n',
-                nt = '<h1 id="sandboxhelloworldsample">Sandbox: Hello World Sample</h1>\n\n<p>This sample code was downloaded from the Extensions Developer Sandbox(https://dev.twitch.tv/extensions/sandbox). You can use this sample code as the basis for testing an extension, or for personal use.</p>\n\n<h2 id="continuingsandboxdevelopmentintherig">Continuing sandbox development in the rig</h2>\n\n<p>This readme details how to use the <a href="https://github.com/twitchdev/developer-rig">Developer Rig</a> to continue development on your extension. You can read about how to get started with the project <a href="https://github.com/twitchdev/developer-rig#twitch-extensions-developer-rig">here</a>.</p>\n\n<p>Prerequisites:</p>\n\n<ul>\n<li>You have retrieved this sample code from the sandbox by selecting to download it within the UI.</li>\n\n<li>Developer Rig is installed locally and is running on your machine. Within the rig folder, run <code>yarn start</code>. The rig will be hosted on https://localhost.rig.twitch.tv:3000.</li>\n</ul>\n\n<p>These steps will assume downloaded code is at <code>/Users/twitch/Downloads/sandbox-extension-hello-world</code> and that the rig is located at <code>/Users/twitch/developer-rig</code>. Your paths will differ per your username and folder structures.</p>\n\n<ol>\n<li>In the rig running on your machine, create a new extension project.</li>\n</ol>\n\n<ul>\n<li>Extension Project Name: "Sandbox" (or whatever you like).\n— Choose Extension: Create Local Extension\n— Extension Types: Video Component, Panel</li>\n\n<li>Project Folder: /Users/twitch/Downloads/sandbox-extension-hello-world</li>\n\n<li>Add Code to Project: None (Just Create Project Folder)</li>\n</ul>\n\n<ol>\n<li>Click the + button to add a new Panel view.</li>\n</ol>\n\n<ul>\n<li>Extension Type: Panel</li>\n\n<li>Viewer Type: Logged-Out Viewer</li>\n</ul>\n\n<blockquote>\n  <p>Note: you can perform this same step for other extension views, such as components.</p>\n</blockquote>\n\n<ol>\n<li><p>Navigate to Project Overview tab. Set Front-end Files Location to <code>.</code>. Click Host with Rig.</p></li>\n\n<li><p>Navigate to Extension Views tab. You should see your extension!</p></li>\n</ol>\n\n<h2 id="differencesbetweensandboxandrig">Differences between sandbox and rig</h2>\n\n<p>You may notice that the HTML and Javascript downloaded differs from what was being edited. A few things were added to help the extension runs in the rig:</p>\n\n<ul>\n<li>A script html element referencing <code>viewer.js</code> to load your javascript.</li>\n\n<li>A link html element referencing <code>style.css</code> to load styles.</li>\n\n<li>A script element <code>&lt;script src="https://localhost.rig.twitch.tv:3000/twitch-ext.js"&gt;&lt;/script&gt;</code>. This is required for local extensions.</li>\n\n<li>Two html files named <code>panel.html</code> and <code>video_component.html</code>. These are the naming conventions for these views for local extensions.</li>\n\n<li>Javascript code was updated to contain <code>twitch.onAuthorized</code> if it wasn\'t included. This function is required by extensions to load properly.</li>\n</ul>\n\n<h2 id="getextensionssupportfromtwitchdevelopersandthecommunity">Get extensions support from Twitch Developers and the community</h2>\n\n<p>We’re here to help! Start a thread in the <a href="https://discuss.dev.twitch.tv">forums</a> or send us a <a href="https://twitter.com/twitchdev">tweet</a>.</p>';
+                Ge = '<!DOCTYPE html>\n<html>\n    <head>\n        <title>Viewer Page</title>\n    </head>\n    <body>\n        <div id="app" class="full-height"></div>\n        <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"><\/script>\n        <script\n  src="https://code.jquery.com/jquery-3.3.1.min.js"\n  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="\n  crossorigin="anonymous"><\/script>\n        <h2>Hello, Glitch!</h2>\n        <p>Try changing the color via Glitch!</p>\n        <div>\n            <input type="button" id="cycle"  value="Change Color" />\n        </div>\n        <div id="color-container">\n            <div id="color"></div>\n        </div>\n        <div id="list"></div>\n    </body>\n</html>\n',
+                Xe = "var token = \"\";\nvar tuid = \"\";\n\nvar twitch = window.Twitch.ext;\n\nfunction setAuth(token) {\n  Object.keys(requests).forEach((req) => {\n      twitch.rig.log('Setting auth headers');\n      requests[req].headers = { 'Authorization': 'Bearer ' + token }\n  });\n}\n\ntwitch.onContext(function(context) {\n  twitch.rig.log(context);\n});\n\ntwitch.onAuthorized(function(auth) {\n  // save our credentials\n  token = auth.token;\n  tuid = auth.userId;\n\n  // enable the button\n  $('#cycle').removeAttr('disabled');\n\n  setAuth(token);\n});",
+                Ke = "var twitch = window.Twitch.ext;\n\nfunction updateBlock(hex) {\n    $('#color').css('background-color', hex);\n}\n\n$(function() {\n    $('#cycle').prop('disabled', false);\n\n   $('#cycle').click(function() {\n      // == Begin Glitch Code\n      // == This server side call is powered by Glitch. To see the code, visit:\n      // == https://glitch.com/edit/#!/extension-backend\n      fetch(\"https://extension-backend.glitch.me/randomcolor\")\n        .then(res => res.text())\n        .then(text => updateBlock(text))\n      // == End Glitch Code\n    });\n});\n",
+                Ye = "body {\n    background-color: white;\n    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n}\n\n#color {\n    border-radius: 50px;\n    transition: background-color 0.5s ease;\n    margin-top: 30px;\n    width: 100px;\n    height: 100px;\n    background-color: #6441A4;\n    float: left;\n    position: relative;\n    left: -50%;\n}\n\n#color-container {\n    float: left;\n    position: relative;\n    left: 50%;\n}\n",
+                Je = '# Sandbox: Hello Glitch Sample\n\nThis sample code was downloaded from the Extensions Developer Sandbox(https://dev.twitch.tv/extensions/sandbox). You can use this sample code as the basis for testing an extension, or for personal use. This code differs from the Hello World extension in that calls on viewer.js may be served by Glitch instead. See the code on this file for specific information.\n\n## Continuing sandbox development in the rig\n\nThis readme details how to use the [Developer Rig](https://github.com/twitchdev/developer-rig) to continue development on your extension. You can read about how to get started with the project [here](https://github.com/twitchdev/developer-rig#twitch-extensions-developer-rig).\n\nPrerequisites:\n- You have retrieved this sample code from the sandbox by selecting to download it within the UI.\n- Developer Rig is installed locally and is running on your machine. Within the rig folder, run `yarn start`. The rig will be hosted on https://localhost.rig.twitch.tv:3000.\n\nThese steps will assume downloaded code is at `/Users/twitch/Downloads/sandbox-extension-hello-glitch` and that the rig is located at `/Users/twitch/developer-rig`. Your paths will differ per your username and folder structures.\n\n1. In the rig running on your machine, create a new extension project.\n\n- Extension Project Name: "Sandbox" (or whatever you like).\n— Choose Extension: Create Local Extension\n— Extension Types: Video Component, Panel\n- Project Folder: /Users/twitch/Downloads/sandbox-extension-hello-glitch\n- Add Code to Project: None (Just Create Project Folder)\n\n2. Click the + button to add a new Panel view.\n\n- Extension Type: Panel\n- Viewer Type: Logged-Out Viewer\n\n> Note: you can perform this same step for other extension views, such as components.\n\n3. Navigate to Project Overview tab. Set Front-end Files Location to `.`. Click Host with Rig.\n\n4. Navigate to Extension Views tab. You should see your extension!\n\n## Differences between sandbox and rig\n\nYou may notice that the HTML and Javascript downloaded differs from what was being edited. A few things were added to help the extension runs in the rig:\n\n- A script html element referencing `viewer.js` to load your javascript.\n- A link html element referencing `style.css` to load styles.\n- A script element `<script src="https://localhost.rig.twitch.tv:3000/twitch-ext.js"><\/script>`. This is required for local extensions.\n- Two html files named `panel.html` and `video_component.html`. These are the naming conventions for these views for local extensions.\n- Javascript code was updated to contain `twitch.onAuthorized` if it wasn\'t included. This function is required by extensions to load properly.\n\n## Get extensions support from Twitch Developers and the community\n\nWe’re here to help! Start a thread in the [forums](https://discuss.dev.twitch.tv) or send us a [tweet](https://twitter.com/twitchdev).\n',
+                Ze = '<h1 id="sandboxhelloglitchsample">Sandbox: Hello Glitch Sample</h1>\n\n<p>This sample code was downloaded from the Extensions Developer Sandbox(https://dev.twitch.tv/extensions/sandbox). You can use this sample code as the basis for testing an extension, or for personal use. This code differs from the Hello World extension in that calls on viewer.js may be served by Glitch instead. See the code on this file for specific information.</p>\n\n<h2 id="continuingsandboxdevelopmentintherig">Continuing sandbox development in the rig</h2>\n\n<p>This readme details how to use the <a href="https://github.com/twitchdev/developer-rig">Developer Rig</a> to continue development on your extension. You can read about how to get started with the project <a href="https://github.com/twitchdev/developer-rig#twitch-extensions-developer-rig">here</a>.</p>\n\n<p>Prerequisites:</p>\n\n<ul>\n<li>You have retrieved this sample code from the sandbox by selecting to download it within the UI.</li>\n\n<li>Developer Rig is installed locally and is running on your machine. Within the rig folder, run <code>yarn start</code>. The rig will be hosted on https://localhost.rig.twitch.tv:3000.</li>\n</ul>\n\n<p>These steps will assume downloaded code is at <code>/Users/twitch/Downloads/sandbox-extension-hello-glitch</code> and that the rig is located at <code>/Users/twitch/developer-rig</code>. Your paths will differ per your username and folder structures.</p>\n\n<ol>\n<li>In the rig running on your machine, create a new extension project.</li>\n</ol>\n\n<ul>\n<li>Extension Project Name: "Sandbox" (or whatever you like).\n— Choose Extension: Create Local Extension\n— Extension Types: Video Component, Panel</li>\n\n<li>Project Folder: /Users/twitch/Downloads/sandbox-extension-hello-glitch</li>\n\n<li>Add Code to Project: None (Just Create Project Folder)</li>\n</ul>\n\n<ol>\n<li>Click the + button to add a new Panel view.</li>\n</ol>\n\n<ul>\n<li>Extension Type: Panel</li>\n\n<li>Viewer Type: Logged-Out Viewer</li>\n</ul>\n\n<blockquote>\n  <p>Note: you can perform this same step for other extension views, such as components.</p>\n</blockquote>\n\n<ol>\n<li><p>Navigate to Project Overview tab. Set Front-end Files Location to <code>.</code>. Click Host with Rig.</p></li>\n\n<li><p>Navigate to Extension Views tab. You should see your extension!</p></li>\n</ol>\n\n<h2 id="differencesbetweensandboxandrig">Differences between sandbox and rig</h2>\n\n<p>You may notice that the HTML and Javascript downloaded differs from what was being edited. A few things were added to help the extension runs in the rig:</p>\n\n<ul>\n<li>A script html element referencing <code>viewer.js</code> to load your javascript.</li>\n\n<li>A link html element referencing <code>style.css</code> to load styles.</li>\n\n<li>A script element <code>&lt;script src="https://localhost.rig.twitch.tv:3000/twitch-ext.js"&gt;&lt;/script&gt;</code>. This is required for local extensions.</li>\n\n<li>Two html files named <code>panel.html</code> and <code>video_component.html</code>. These are the naming conventions for these views for local extensions.</li>\n\n<li>Javascript code was updated to contain <code>twitch.onAuthorized</code> if it wasn\'t included. This function is required by extensions to load properly.</li>\n</ul>\n\n<h2 id="getextensionssupportfromtwitchdevelopersandthecommunity">Get extensions support from Twitch Developers and the community</h2>\n\n<p>We’re here to help! Start a thread in the <a href="https://discuss.dev.twitch.tv">forums</a> or send us a <a href="https://twitter.com/twitchdev">tweet</a>.</p>',
+                Qe = '<!DOCTYPE html>\n<html>\n    <head>\n        <title>Viewer Page</title>\n    </head>\n    <body>\n        <div id="app" class="full-height"></div>\n        <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"><\/script>\n        <script\n  src="https://code.jquery.com/jquery-3.3.1.min.js"\n  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="\n  crossorigin="anonymous"><\/script>\n        <h2>Hello, World!</h2>\n        <p>Would you care to cycle a color?</p>\n        <div>\n            <input type="button" id="cycle"  value="Yes, I would" />\n        </div>\n        <div id="color-container">\n            <div id="color"></div>\n        </div>\n        <div id="list"></div>\n    </body>\n</html>\n',
+                et = "var token = \"\";\nvar tuid = \"\";\n\nvar twitch = window.Twitch.ext;\n\nfunction setAuth(token) {\n  Object.keys(requests).forEach((req) => {\n      twitch.rig.log('Setting auth headers');\n      requests[req].headers = { 'Authorization': 'Bearer ' + token }\n  });\n}\n\ntwitch.onContext(function(context) {\n  twitch.rig.log(context);\n});\n\ntwitch.onAuthorized(function(auth) {\n  // save our credentials\n  token = auth.token;\n  tuid = auth.userId;\n\n  // enable the button\n  $('#cycle').removeAttr('disabled');\n\n  setAuth(token);\n});",
+                tt = "var twitch = window.Twitch.ext;\n\nfunction updateBlock(hex) {\n    $('#color').css('background-color', hex);\n}\n\nfunction getRandomColor() {\n  return '#'+Math.floor(Math.random()*16777215).toString(16);\n}\n\n$(function() {\n    $('#cycle').prop('disabled', false);\n\n    $('#cycle').click(function() {\n      updateBlock(getRandomColor());\n    });\n});\n",
+                nt = "body {\n    background-color: white;\n    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n}\n\n#color {\n    border-radius: 50px;\n    transition: background-color 0.5s ease;\n    margin-top: 30px;\n    width: 100px;\n    height: 100px;\n    background-color: #6441A4;\n    float: left;\n    position: relative;\n    left: -50%;\n}\n\n#color-container {\n    float: left;\n    position: relative;\n    left: 50%;\n}\n",
+                rt = '# Sandbox: Hello World Sample\n\nThis sample code was downloaded from the Extensions Developer Sandbox(https://dev.twitch.tv/extensions/sandbox). You can use this sample code as the basis for testing an extension, or for personal use.\n\n## Continuing sandbox development in the rig\n\nThis readme details how to use the [Developer Rig](https://github.com/twitchdev/developer-rig) to continue development on your extension. You can read about how to get started with the project [here](https://github.com/twitchdev/developer-rig#twitch-extensions-developer-rig).\n\nPrerequisites:\n- You have retrieved this sample code from the sandbox by selecting to download it within the UI.\n- Developer Rig is installed locally and is running on your machine. Within the rig folder, run `yarn start`. The rig will be hosted on https://localhost.rig.twitch.tv:3000.\n\nThese steps will assume downloaded code is at `/Users/twitch/Downloads/sandbox-extension-hello-world` and that the rig is located at `/Users/twitch/developer-rig`. Your paths will differ per your username and folder structures.\n\n1. In the rig running on your machine, create a new extension project.\n\n- Extension Project Name: "Sandbox" (or whatever you like).\n— Choose Extension: Create Local Extension\n— Extension Types: Video Component, Panel\n- Project Folder: /Users/twitch/Downloads/sandbox-extension-hello-world\n- Add Code to Project: None (Just Create Project Folder)\n\n2. Click the + button to add a new Panel view.\n\n- Extension Type: Panel\n- Viewer Type: Logged-Out Viewer\n\n> Note: you can perform this same step for other extension views, such as components.\n\n3. Navigate to Project Overview tab. Set Front-end Files Location to `.`. Click Host with Rig.\n\n4. Navigate to Extension Views tab. You should see your extension!\n\n## Differences between sandbox and rig\n\nYou may notice that the HTML and Javascript downloaded differs from what was being edited. A few things were added to help the extension runs in the rig:\n\n- A script html element referencing `viewer.js` to load your javascript.\n- A link html element referencing `style.css` to load styles.\n- A script element `<script src="https://localhost.rig.twitch.tv:3000/twitch-ext.js"><\/script>`. This is required for local extensions.\n- Two html files named `panel.html` and `video_component.html`. These are the naming conventions for these views for local extensions.\n- Javascript code was updated to contain `twitch.onAuthorized` if it wasn\'t included. This function is required by extensions to load properly.\n\n## Get extensions support from Twitch Developers and the community\n\nWe’re here to help! Start a thread in the [forums](https://discuss.dev.twitch.tv) or send us a [tweet](https://twitter.com/twitchdev).\n',
+                it = '<h1 id="sandboxhelloworldsample">Sandbox: Hello World Sample</h1>\n\n<p>This sample code was downloaded from the Extensions Developer Sandbox(https://dev.twitch.tv/extensions/sandbox). You can use this sample code as the basis for testing an extension, or for personal use.</p>\n\n<h2 id="continuingsandboxdevelopmentintherig">Continuing sandbox development in the rig</h2>\n\n<p>This readme details how to use the <a href="https://github.com/twitchdev/developer-rig">Developer Rig</a> to continue development on your extension. You can read about how to get started with the project <a href="https://github.com/twitchdev/developer-rig#twitch-extensions-developer-rig">here</a>.</p>\n\n<p>Prerequisites:</p>\n\n<ul>\n<li>You have retrieved this sample code from the sandbox by selecting to download it within the UI.</li>\n\n<li>Developer Rig is installed locally and is running on your machine. Within the rig folder, run <code>yarn start</code>. The rig will be hosted on https://localhost.rig.twitch.tv:3000.</li>\n</ul>\n\n<p>These steps will assume downloaded code is at <code>/Users/twitch/Downloads/sandbox-extension-hello-world</code> and that the rig is located at <code>/Users/twitch/developer-rig</code>. Your paths will differ per your username and folder structures.</p>\n\n<ol>\n<li>In the rig running on your machine, create a new extension project.</li>\n</ol>\n\n<ul>\n<li>Extension Project Name: "Sandbox" (or whatever you like).\n— Choose Extension: Create Local Extension\n— Extension Types: Video Component, Panel</li>\n\n<li>Project Folder: /Users/twitch/Downloads/sandbox-extension-hello-world</li>\n\n<li>Add Code to Project: None (Just Create Project Folder)</li>\n</ul>\n\n<ol>\n<li>Click the + button to add a new Panel view.</li>\n</ol>\n\n<ul>\n<li>Extension Type: Panel</li>\n\n<li>Viewer Type: Logged-Out Viewer</li>\n</ul>\n\n<blockquote>\n  <p>Note: you can perform this same step for other extension views, such as components.</p>\n</blockquote>\n\n<ol>\n<li><p>Navigate to Project Overview tab. Set Front-end Files Location to <code>.</code>. Click Host with Rig.</p></li>\n\n<li><p>Navigate to Extension Views tab. You should see your extension!</p></li>\n</ol>\n\n<h2 id="differencesbetweensandboxandrig">Differences between sandbox and rig</h2>\n\n<p>You may notice that the HTML and Javascript downloaded differs from what was being edited. A few things were added to help the extension runs in the rig:</p>\n\n<ul>\n<li>A script html element referencing <code>viewer.js</code> to load your javascript.</li>\n\n<li>A link html element referencing <code>style.css</code> to load styles.</li>\n\n<li>A script element <code>&lt;script src="https://localhost.rig.twitch.tv:3000/twitch-ext.js"&gt;&lt;/script&gt;</code>. This is required for local extensions.</li>\n\n<li>Two html files named <code>panel.html</code> and <code>video_component.html</code>. These are the naming conventions for these views for local extensions.</li>\n\n<li>Javascript code was updated to contain <code>twitch.onAuthorized</code> if it wasn\'t included. This function is required by extensions to load properly.</li>\n</ul>\n\n<h2 id="getextensionssupportfromtwitchdevelopersandthecommunity">Get extensions support from Twitch Developers and the community</h2>\n\n<p>We’re here to help! Start a thread in the <a href="https://discuss.dev.twitch.tv">forums</a> or send us a <a href="https://twitter.com/twitchdev">tweet</a>.</p>';
             n("oQ3n");
             ! function(e) {
                 e[e.editorOnly = 0] = "editorOnly", e[e.channelOnly = 1] = "channelOnly", e[e.both = 2] = "both"
-            }(ze || (ze = {}));
-            var rt = function(e) {
+            }(He || (He = {}));
+            var ot = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        sandboxMode: ze.both,
-                        extensionType: xe.videoOverlay,
+                        sandboxMode: He.both,
+                        extensionType: _e.videoOverlay,
                         channelName: "monstercat",
-                        js: d.m.get("dev_extension_sandbox_js", Qe),
-                        panel: d.m.get("dev_extension_sandbox_panel_html", Je),
-                        overlay: d.m.get("dev_extension_sandbox_overlay_html", Je),
-                        css: d.m.get("dev_extension_sandbox_css", et),
+                        js: p.m.get("dev_extension_sandbox_js", tt),
+                        panel: p.m.get("dev_extension_sandbox_panel_html", Qe),
+                        overlay: p.m.get("dev_extension_sandbox_overlay_html", Qe),
+                        css: p.m.get("dev_extension_sandbox_css", nt),
                         ifHideChannelMock: !1,
                         onBoardingStep: r.welcome,
                         onBoardingModalShown: !0,
-                        selectedSample: fe.helloWorld
+                        selectedSample: ge.helloWorld
                     }, t.onExtensionTypeChange = function(e) {
-                        var n = u.a.Unknown;
-                        e === xe.panel ? n = u.a.SandboxExtensionTypeChangedPanel : e === xe.videoOverlay && (n = u.a.SandboxExtensionTypeChangedOverlay), Object(u.d)(n), t.setState({
+                        var n = h.a.Unknown;
+                        e === _e.panel ? n = h.a.SandboxExtensionTypeChangedPanel : e === _e.videoOverlay && (n = h.a.SandboxExtensionTypeChangedOverlay), Object(h.d)(n), t.setState({
                             extensionType: e
                         })
                     }, t.bannerMailToAction = function() {
                         location.href = "mailto:you@example.com?subject=Come%20back%20to%20the%20Sandbox!&body=Hello%20future%20me!%20I'm%20sending%20this%20message%20to%20remind%20you%20to%20come%20back%20to%20the%20Twitch%20Developer%20Sandbox.%20Here's%20the%20link%3A%20dev.twitch.tv%2Fextensions%2Fsandbox"
                     }, t.shouldRedirectToLogin = function() {
-                        return !t.props.isLoggedIn && Object(Q.a)(t.props.location.search, "login")
+                        return !t.props.isLoggedIn && Object(te.a)(t.props.location.search, "login")
                     }, t.updateExtension = function(e, n) {
                         var r = t.state.js !== e.js,
                             i = t.state.panel !== e.panel,
                             o = t.state.overlay !== e.overlay,
                             a = t.state.css !== e.css;
-                        t.state.selectedSample === fe.helloWorld ? (r && d.m.set("dev_extension_sandbox_js", t.state.js), i && d.m.set("dev_extension_sandbox_panel_html", t.state.panel), o && d.m.set("dev_extension_sandbox_overlay_html", t.state.overlay), a && d.m.set("dev_extension_sandbox_css", t.state.css)) : t.state.selectedSample === fe.helloGlitch && (r && d.m.set("dev_extension_sandbox_glitch_js", t.state.js), i && d.m.set("dev_extension_sandbox_glitch_panel_html", t.state.panel), o && d.m.set("dev_extension_sandbox_glitch_overlay_html", t.state.overlay), a && d.m.set("dev_extension_sandbox_glitch_css", t.state.css)), (r || a || i && t.state.extensionType === xe.panel || o && t.state.extensionType === xe.videoOverlay || n) && t.renderExtensionPreview()
+                        t.state.selectedSample === ge.helloWorld ? (r && p.m.set("dev_extension_sandbox_js", t.state.js), i && p.m.set("dev_extension_sandbox_panel_html", t.state.panel), o && p.m.set("dev_extension_sandbox_overlay_html", t.state.overlay), a && p.m.set("dev_extension_sandbox_css", t.state.css)) : t.state.selectedSample === ge.helloGlitch && (r && p.m.set("dev_extension_sandbox_glitch_js", t.state.js), i && p.m.set("dev_extension_sandbox_glitch_panel_html", t.state.panel), o && p.m.set("dev_extension_sandbox_glitch_overlay_html", t.state.overlay), a && p.m.set("dev_extension_sandbox_glitch_css", t.state.css)), (r || a || i && t.state.extensionType === _e.panel || o && t.state.extensionType === _e.videoOverlay || n) && t.renderExtensionPreview()
                     }, t.openOnBoardingModal = function(e) {
                         t.props.showOnBoardingModal({
                             onNewStepSelected: t.changeStepInOnBoardingModal,
@@ -14451,16 +14460,16 @@
                             onBoardingStep: e
                         })
                     }, t.onRunClick = function() {
-                        Object(u.d)(u.a.SandboxRun), t.updateExtension(t.state, !0)
+                        Object(h.d)(h.a.SandboxRun), t.updateExtension(t.state, !0)
                     }, t.onDisplayWindowChange = function(e) {
-                        var n = u.a.Unknown;
-                        e === ze.editorOnly ? n = u.a.SandboxViewCode : e === ze.channelOnly ? n = u.a.SandboxViewChannel : e === ze.both && (n = u.a.SandboxViewBoth), Object(u.d)(n), t.setState({
+                        var n = h.a.Unknown;
+                        e === He.editorOnly ? n = h.a.SandboxViewCode : e === He.channelOnly ? n = h.a.SandboxViewChannel : e === He.both && (n = h.a.SandboxViewBoth), Object(h.d)(n), t.setState({
                             sandboxMode: e
                         })
                     }, t.renderSandboxWindow = function() {
-                        return t.state.sandboxMode === ze.both ? t.renderBothWindow() : t.state.sandboxMode === ze.channelOnly ? t.renderChannelOnlyWindow() : t.renderEditorOnlyWindow()
+                        return t.state.sandboxMode === He.both ? t.renderBothWindow() : t.state.sandboxMode === He.channelOnly ? t.renderChannelOnlyWindow() : t.renderEditorOnlyWindow()
                     }, t.renderDevEditor = function() {
-                        return c.createElement(He, {
+                        return d.createElement(qe, {
                             extensionType: t.state.extensionType,
                             onRunClick: t.onRunClick,
                             js: t.state.js,
@@ -14476,47 +14485,47 @@
                             step: t.state.onBoardingStep
                         })
                     }, t.renderBothWindow = function() {
-                        return c.createElement(f.Xa, {
-                            display: f.X.Flex
-                        }, c.createElement(f.Xa, {
+                        return d.createElement(g.Xa, {
+                            display: g.X.Flex
+                        }, d.createElement(g.Xa, {
                             className: "dev-sandbox__editor"
-                        }, c.createElement(f.Ja, null, c.createElement(f.Xa, {
+                        }, d.createElement(g.Ja, null, d.createElement(g.Xa, {
                             className: "dev-sandbox__editor-text-area"
-                        }, t.renderDevEditor()), c.createElement(f.zb, {
-                            display: f.X.Flex,
+                        }, t.renderDevEditor()), d.createElement(g.zb, {
+                            display: g.X.Flex,
                             className: "dev-sandbox__editor-separator",
-                            background: f.r.Accent,
-                            zIndex: f.cc.Above
-                        }))), c.createElement(f.Xa, {
+                            background: g.r.Accent,
+                            zIndex: g.cc.Above
+                        }))), d.createElement(g.Xa, {
                             className: "dev-sandbox__channel",
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
-                            textAlign: f.Lb.Center,
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
+                            textAlign: g.Lb.Center,
                             fullHeight: !0
                         }, t.renderChannelMock()))
                     }, t.renderChannelOnlyWindow = function() {
                         var e = {
                             "dev-sandbox__channel-fullscreen-container": !t.state.ifHideChannelMock
                         };
-                        return c.createElement(f.Xa, {
-                            display: f.X.Flex,
-                            className: K(e),
-                            justifyContent: f.Wa.Center,
-                            textAlign: f.Lb.Center,
-                            alignItems: f.f.Start
-                        }, c.createElement(f.Xa, {
+                        return d.createElement(g.Xa, {
+                            display: g.X.Flex,
+                            className: J(e),
+                            justifyContent: g.Wa.Center,
+                            textAlign: g.Lb.Center,
+                            alignItems: g.f.Start
+                        }, d.createElement(g.Xa, {
                             className: "dev-sandbox__channel-fullscreen",
-                            display: f.X.Flex,
-                            flexDirection: f.Aa.Column,
-                            textAlign: f.Lb.Center,
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
+                            textAlign: g.Lb.Center,
                             fullHeight: !0
                         }, t.renderChannelMock()))
                     }, t.renderEditorOnlyWindow = function() {
-                        return c.createElement(f.Xa, {
-                            display: f.X.Flex
-                        }, c.createElement(f.Xa, {
+                        return d.createElement(g.Xa, {
+                            display: g.X.Flex
+                        }, d.createElement(g.Xa, {
                             fullWidth: !0
-                        }, c.createElement(f.Ja, null, c.createElement(f.Xa, {
+                        }, d.createElement(g.Ja, null, d.createElement(g.Xa, {
                             className: "dev-sandbox__editor-fullscreen",
                             fullWidth: !0
                         }, t.renderDevEditor()))))
@@ -14543,25 +14552,25 @@
                     }, t.renderExtensionPreview = function() {
                         var e;
                         switch (t.cleanPanel(), t.state.extensionType) {
-                            case xe.panel:
+                            case _e.panel:
                                 e = t.createPanelExtension();
                                 break;
-                            case xe.videoOverlay:
+                            case _e.videoOverlay:
                                 e = t.createOverlayExtension();
                                 break;
                             default:
                                 return
                         }
                         var n = t.state.panel;
-                        t.state.extensionType === xe.videoOverlay && (n = t.state.overlay);
+                        t.state.extensionType === _e.videoOverlay && (n = t.state.overlay);
                         var r = "";
                         t.state.js.length && (r = "<script>" + t.state.js + "<\/script>");
                         var i, o = "";
                         switch (t.state.css.length && (o = "<style>" + t.state.css + "</style>"), n = t.addJSAndCSSToHTML(n, r, o), e.setAttribute("srcDoc", "" + n), t.state.extensionType) {
-                            case xe.panel:
+                            case _e.panel:
                                 i = document.getElementById("panel-extension-preview");
                                 break;
-                            case xe.videoOverlay:
+                            case _e.videoOverlay:
                                 i = document.getElementById("overlay-extension-preview");
                                 break;
                             default:
@@ -14578,7 +14587,7 @@
                         return e.setAttribute("id", "panel-ext"), e.setAttribute("height", "500px"), e.setAttribute("width", "320px"), e.setAttribute("sandbox", "allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"), e
                     }, t.createOverlayExtension = function() {
                         var e = document.createElement("iframe");
-                        return e.setAttribute("id", "overlay-ext"), e.setAttribute("height", "300px"), e.setAttribute("width", "300px"), e.setAttribute("sandbox", "allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"), t.state.sandboxMode === ze.both ? e.setAttribute("style", "position:absolute;width: 50%;height: 60%;top: 20%;right:10%;max-width:320px") : e.setAttribute("style", "position:absolute;width: 30%;height: 60%;top: 20%;right:10%;max-width:320px"), e
+                        return e.setAttribute("id", "overlay-ext"), e.setAttribute("height", "300px"), e.setAttribute("width", "300px"), e.setAttribute("sandbox", "allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"), t.state.sandboxMode === He.both ? e.setAttribute("style", "position:absolute;width: 50%;height: 60%;top: 20%;right:10%;max-width:320px") : e.setAttribute("style", "position:absolute;width: 30%;height: 60%;top: 20%;right:10%;max-width:320px"), e
                     }, t.exportHTML = function(e) {
                         var n = t.addJSAndCSSToHTML(e, '<script src="viewer.js"><\/script>', '<link rel="stylesheet" href="viewer.css" type="text/css">'),
                             r = n.indexOf('<script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"><\/script>');
@@ -14588,24 +14597,24 @@
                         }
                         return n
                     }, t.downloadCode = function() {
-                        Object(u.d)(u.a.SandboxDownload);
-                        var e = new J,
-                            n = t.state.js; - 1 === n.indexOf("twitch.onAuthorized") && (n = t.state.js.replace("var twitch = window.Twitch.ext;", t.state.selectedSample === fe.helloWorld ? Ze : Ve)), e.file("panel.html", t.exportHTML(t.state.panel)), e.file("video_component.html", t.exportHTML(t.state.overlay)), e.file("viewer.js", n), e.file("viewer.css", t.state.css), e.file("README.md", t.state.selectedSample === fe.helloWorld ? tt : Ke), e.file("README.html", t.state.selectedSample === fe.helloWorld ? nt : Ye), e.generateAsync({
+                        Object(h.d)(h.a.SandboxDownload);
+                        var e = new Q,
+                            n = t.state.js; - 1 === n.indexOf("twitch.onAuthorized") && (n = t.state.js.replace("var twitch = window.Twitch.ext;", t.state.selectedSample === ge.helloWorld ? et : Xe)), e.file("panel.html", t.exportHTML(t.state.panel)), e.file("video_component.html", t.exportHTML(t.state.overlay)), e.file("viewer.js", n), e.file("viewer.css", t.state.css), e.file("README.md", t.state.selectedSample === ge.helloWorld ? rt : Je), e.file("README.html", t.state.selectedSample === ge.helloWorld ? it : Ze), e.generateAsync({
                             type: "blob"
                         }).then(function(e) {
-                            Object(Y.saveAs)(e, t.state.selectedSample === fe.helloWorld ? "sandbox-extension-hello-world.zip" : "sandbox-extension-hello-glitch.zip")
+                            Object(Z.saveAs)(e, t.state.selectedSample === ge.helloWorld ? "sandbox-extension-hello-world.zip" : "sandbox-extension-hello-glitch.zip")
                         })
                     }, t.resetCode = function() {
-                        Object(u.d)(u.a.SandboxReset), t.state.selectedSample === fe.helloWorld ? t.setState({
-                            js: Qe,
-                            panel: Je,
-                            overlay: Je,
-                            css: et
-                        }) : t.state.selectedSample === fe.helloGlitch && t.setState({
-                            js: Ge,
-                            panel: qe,
-                            overlay: qe,
-                            css: Xe
+                        Object(h.d)(h.a.SandboxReset), t.state.selectedSample === ge.helloWorld ? t.setState({
+                            js: tt,
+                            panel: Qe,
+                            overlay: Qe,
+                            css: nt
+                        }) : t.state.selectedSample === ge.helloGlitch && t.setState({
+                            js: Ke,
+                            panel: Ge,
+                            overlay: Ge,
+                            css: Ye
                         })
                     }, t.onChannelChange = function(e) {
                         t.setState({
@@ -14614,13 +14623,13 @@
                     }, t.onHideChannelMockClick = function() {
                         t.setState(function(e) {
                             var t = !e.ifHideChannelMock,
-                                n = t ? u.a.SandboxHideChannel : u.a.SandboxShowChannel;
-                            return Object(u.d)(n), {
+                                n = t ? h.a.SandboxHideChannel : h.a.SandboxShowChannel;
+                            return Object(h.d)(n), {
                                 ifHideChannelMock: t
                             }
                         })
                     }, t.devChannelPlaceholder = function(e) {
-                        return c.createElement(De, {
+                        return d.createElement(je, {
                             onBoardingStep: t.state.onBoardingStep,
                             onChannelChange: t.onChannelChange,
                             channel: t.state.channelName,
@@ -14632,47 +14641,47 @@
                             onHideChannelMockClick: t.onHideChannelMockClick
                         })
                     }, t.onSampleCodeChange = function(e) {
-                        e === fe.helloWorld ? t.setState({
-                            js: d.m.get("dev_extension_sandbox_js", Qe),
-                            panel: d.m.get("dev_extension_sandbox_panel_html", Je),
-                            overlay: d.m.get("dev_extension_sandbox_overlay_html", Je),
-                            css: d.m.get("dev_extension_sandbox_css", et),
+                        e === ge.helloWorld ? t.setState({
+                            js: p.m.get("dev_extension_sandbox_js", tt),
+                            panel: p.m.get("dev_extension_sandbox_panel_html", Qe),
+                            overlay: p.m.get("dev_extension_sandbox_overlay_html", Qe),
+                            css: p.m.get("dev_extension_sandbox_css", nt),
                             selectedSample: e
-                        }) : e === fe.helloGlitch && t.setState({
-                            js: d.m.get("dev_extension_sandbox_glitch_js", Ge),
-                            panel: d.m.get("dev_extension_sandbox_glitch_panel_html", qe),
-                            overlay: d.m.get("dev_extension_sandbox_glitch_overlay_html", qe),
-                            css: d.m.get("dev_extension_sandbox_glitch_css", Xe),
+                        }) : e === ge.helloGlitch && t.setState({
+                            js: p.m.get("dev_extension_sandbox_glitch_js", Ke),
+                            panel: p.m.get("dev_extension_sandbox_glitch_panel_html", Ge),
+                            overlay: p.m.get("dev_extension_sandbox_glitch_overlay_html", Ge),
+                            css: p.m.get("dev_extension_sandbox_glitch_css", Ye),
                             selectedSample: e
                         })
                     }, t.renderChannelMock = function() {
                         if (t.state.ifHideChannelMock) {
-                            if (t.state.extensionType === xe.panel) {
+                            if (t.state.extensionType === _e.panel) {
                                 var e = {
                                     "dev-sandbox__channel": !0,
                                     "dev-sandbox__panel-extension-only-display": !0,
-                                    "dev-sandbox__panel-show-channel": t.state.sandboxMode !== ze.channelOnly
+                                    "dev-sandbox__panel-show-channel": t.state.sandboxMode !== He.channelOnly
                                 };
-                                return c.createElement(f.zb, {
+                                return d.createElement(g.zb, {
                                     padding: {
                                         top: 2,
                                         bottom: 5
                                     },
-                                    justifyContent: f.Wa.Center,
-                                    className: K(e),
-                                    display: f.X.Flex,
+                                    justifyContent: g.Wa.Center,
+                                    className: J(e),
+                                    display: g.X.Flex,
                                     fullWidth: !0
-                                }, c.createElement(f.Xa, {
+                                }, d.createElement(g.Xa, {
                                     padding: {
                                         left: 3
                                     }
-                                }, c.createElement(f.Pa, {
-                                    display: f.X.Flex
-                                }, c.createElement("div", {
+                                }, d.createElement(g.Pa, {
+                                    display: g.X.Flex
+                                }, d.createElement("div", {
                                     id: "panel-extension-preview"
-                                }))), c.createElement(f.Xa, {
-                                    alignItems: f.f.Start
-                                }, c.createElement(Re, {
+                                }))), d.createElement(g.Xa, {
+                                    alignItems: g.f.Start
+                                }, d.createElement(Oe, {
                                     onBoardingStep: t.state.onBoardingStep,
                                     onChannelChange: t.onChannelChange,
                                     shownChannel: t.state.channelName,
@@ -14693,18 +14702,18 @@
                 }, t.prototype.componentDidMount = function() {
                     this.shouldRedirectToLogin() || (this.openOnBoardingModal(r.welcome), this.updateExtension(this.state, !0))
                 }, t.prototype.render = function() {
-                    return this.shouldRedirectToLogin() ? (Object(te.a)(Z.a.Login), null) : c.createElement(f.Xa, {
-                        display: f.X.Flex,
-                        flexDirection: f.Aa.Column
-                    }, c.createElement(ee, {
+                    return this.shouldRedirectToLogin() ? (Object(re.a)(ee.a.Login), null) : d.createElement(g.Xa, {
+                        display: g.X.Flex,
+                        flexDirection: g.Aa.Column
+                    }, d.createElement(ne, {
                         onClick: this.bannerMailToAction,
-                        message: Object(d.d)("We recommend checking this out on desktop. Tap here to send yourself an e-mail reminder.", "DevSandBox")
-                    }), c.createElement(f.Xa, {
-                        display: f.X.Flex,
-                        flexDirection: f.Aa.Column,
+                        message: Object(p.d)("We recommend checking this out on desktop. Tap here to send yourself an e-mail reminder.", "DevSandBox")
+                    }), d.createElement(g.Xa, {
+                        display: g.X.Flex,
+                        flexDirection: g.Aa.Column,
                         className: "dev-sandbox",
-                        position: f.fb.Relative
-                    }, c.createElement(Te, {
+                        position: g.fb.Relative
+                    }, d.createElement(Le, {
                         onBoardingStep: this.state.onBoardingStep,
                         showOnBoardingModal: this.openOnBoardingModal,
                         onDownload: this.downloadCode,
@@ -14721,22 +14730,24 @@
                 }, t.prototype.clearUpdateExtensionTimer = function() {
                     clearTimeout(this.updateExtensionTimer), this.updateExtensionTimer = 0
                 }, t
-            }(c.Component);
-            var it = Object(o.connect)(function(e) {
+            }(d.Component);
+            var at = Object(a.compose)(Object(s.a)({
+                location: c.PageviewLocation.DevSiteSandbox
+            }), Object(o.connect)(function(e) {
                 return {
-                    isLoggedIn: Object(l.f)(e)
+                    isLoggedIn: Object(u.f)(e)
                 }
             }, function(e) {
                 return Object(a.bindActionCreators)({
                     showOnBoardingModal: function(e) {
                         var t = i.__rest(e, []);
-                        return Object(s.d)(X, t)
+                        return Object(l.d)(Y, t)
                     },
-                    onClose: s.c
+                    onClose: l.c
                 }, e)
-            })(rt);
+            }))(ot);
             n.d(t, "DevSandBoxContainer", function() {
-                return it
+                return at
             })
         },
         GGHV: function(e, t, n) {},
@@ -16386,6 +16397,77 @@
             }, e.exports = i
         },
         UsIo: function(e, t, n) {},
+        "V+GM": function(e, t, n) {
+            "use strict";
+            var r = n("mrSG"),
+                i = n("cr+I"),
+                o = n("q1tI"),
+                a = n("wIs1"),
+                s = n("/7QA");
+
+            function l(e) {
+                return function(t) {
+                    var n = function(n) {
+                        function a(t) {
+                            var i = n.call(this, t) || this;
+                            return i.tracked = !1, i.referenceTracking = {}, i.trackPageview = function() {
+                                if (!(i.tracked || e.skip && e.skip(i.props))) {
+                                    i.tracked = !0;
+                                    var t = {};
+                                    "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = r.__assign({}, e.properties));
+                                    var n = r.__assign({}, i.props);
+                                    n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index, t.email_id = n.location.state.email_id);
+                                    var o = i.referenceTracking,
+                                        a = o.content,
+                                        l = o.medium,
+                                        c = o.content_index,
+                                        u = o.email_id;
+                                    s.p.tracking.trackPageview(r.__assign({
+                                        content: a,
+                                        medium: l,
+                                        content_index: c,
+                                        email_id: u,
+                                        location: e.location
+                                    }, t))
+                                }
+                            }, s.k.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.k.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                        }
+                        return r.__extends(a, n), a.prototype.componentDidMount = function() {
+                            var e = this;
+                            this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
+                                "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
+                            })
+                        }, a.prototype.componentDidUpdate = function() {
+                            this.trackPageview()
+                        }, a.prototype.render = function() {
+                            return o.createElement(t, r.__assign({}, this.props))
+                        }, a.prototype.stripTTParams = function(e) {
+                            var t = "" !== e.search ? i.parse(e.search) : {},
+                                n = {
+                                    content: t.tt_content,
+                                    content_index: t.tt_content_index,
+                                    medium: t.tt_medium,
+                                    email_id: t.tt_email_id
+                                };
+                            if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, delete t.tt_email_id, n.medium || n.content || n.email_id) {
+                                var r = "",
+                                    o = i.stringify(t);
+                                o.length > 0 && (r = "?" + o), this.props.history.replace({
+                                    pathname: e.pathname,
+                                    hash: e.hash,
+                                    search: r
+                                })
+                            }
+                            return n
+                        }, a
+                    }(o.Component);
+                    return Object(a.a)(n)
+                }
+            }
+            n.d(t, "a", function() {
+                return l
+            })
+        },
         V4Ck: function(e, t) {
             e.exports = function(e) {
                 return "object" == typeof e ? null !== e : "function" == typeof e
