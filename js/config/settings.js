@@ -23,6 +23,7 @@ window.__twilightSettings = {
     "bounty_board_live_dashboard_widget": "on",
     "cc_v2_flag": "off",
     "cc_v2_trial_test_enabled": false,
+    "cc_v2_whitelist": ["180833069-staff", "265978906-staff"],
     "channel_feed_enabled": false,
     "chat_input_box_followers_only_restriction_enabled": "off",
     "chat_input_box_restrictions_enabled": true,
