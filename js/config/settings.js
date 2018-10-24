@@ -23,7 +23,7 @@ window.__twilightSettings = {
     "bounty_board_live_dashboard_widget": "on",
     "cc_v2_flag": "off",
     "cc_v2_trial_test_enabled": false,
-    "cc_v2_whitelist": ["180833069-staff", "265978906-staff"],
+    "cc_v2_whitelist": ["cpt_meticulous-staff", "testnioh123-staff"],
     "channel_feed_enabled": false,
     "chat_input_box_followers_only_restriction_enabled": "off",
     "chat_input_box_restrictions_enabled": true,
@@ -870,6 +870,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 50,
                 "value": "last"
+            }]
+        },
+        "55956429-68c6-4e00-a005-2cacf2fb6bd2": {
+            "name": "watch_onboarding_localized_game_query",
+            "v": 4936,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
             }]
         },
         "59cbe6c8-2355-403e-aa3a-ab22310adebe": {
