@@ -703,6 +703,200 @@ var MediaPlayer =
 
 /***/ }),
 
+/***/ "./node_modules/cookie_js/cookie.js":
+/*!******************************************!*\
+  !*** ./node_modules/cookie_js/cookie.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_RESULT__;// Copyright (c) 2015 Florian Hartmann, https://github.com/florian https://github.com/florian/cookie.js
+
+!function (document, undefined) {
+
+	var cookie = function () {
+		return cookie.get.apply(cookie, arguments);
+	};
+
+	var utils = cookie.utils =  {
+
+		// Is the given value an array? Use ES5 Array.isArray if it's available.
+		isArray: Array.isArray || function (value) {
+			return Object.prototype.toString.call(value) === '[object Array]';
+		},
+
+		// Is the given value a plain object / an object whose constructor is `Object`?
+		isPlainObject: function (value) {
+			return !!value && Object.prototype.toString.call(value) === '[object Object]';
+		},
+
+		// Convert an array-like object to an array – for example `arguments`.
+		toArray: function (value) {
+			return Array.prototype.slice.call(value);
+		},
+
+		// Get the keys of an object. Use ES5 Object.keys if it's available.
+		getKeys: Object.keys || function (obj) {
+			var keys = [],
+				 key = '';
+			for (key in obj) {
+				if (obj.hasOwnProperty(key)) keys.push(key);
+			}
+			return keys;
+		},
+
+		// Unlike JavaScript's built-in escape functions, this method
+		// only escapes characters that are not allowed in cookies.
+		encode: function (value) {
+			return String(value).replace(/[,;"\\=\s%]/g, function (character) {
+				return encodeURIComponent(character);
+			});
+		},
+
+		decode: function (value) {
+			return decodeURIComponent(value);
+		},
+
+		// Return fallback if the value is not defined, otherwise return value.
+		retrieve: function (value, fallback) {
+			return value == null ? fallback : value;
+		}
+
+	};
+
+	cookie.defaults = {};
+
+	cookie.expiresMultiplier = 60 * 60 * 24;
+
+	cookie.set = function (key, value, options) {
+		if (utils.isPlainObject(key)) {
+			// `key` contains an object with keys and values for cookies, `value` contains the options object.
+
+			for (var k in key) {
+				if (key.hasOwnProperty(k)) this.set(k, key[k], value);
+			}
+		} else {
+			options = utils.isPlainObject(options) ? options : { expires: options };
+
+			// Empty string for session cookies.
+			var expires = options.expires !== undefined ? options.expires : (this.defaults.expires || ''),
+			    expiresType = typeof(expires);
+
+			if (expiresType === 'string' && expires !== '') expires = new Date(expires);
+			else if (expiresType === 'number') expires = new Date(+new Date + 1000 * this.expiresMultiplier * expires); // This is needed because IE does not support the `max-age` cookie attribute.
+
+			if (expires !== '' && 'toGMTString' in expires) expires = ';expires=' + expires.toGMTString();
+
+			var path = options.path || this.defaults.path;
+			path = path ? ';path=' + path : '';
+
+			var domain = options.domain || this.defaults.domain;
+			domain = domain ? ';domain=' + domain : '';
+
+			var secure = options.secure || this.defaults.secure ? ';secure' : '';
+			if (options.secure === false) secure = '';
+
+			document.cookie = utils.encode(key) + '=' + utils.encode(value) + expires + path + domain + secure;
+		}
+
+		return this; // Return the `cookie` object to make chaining possible.
+	};
+
+	cookie.setDefault = function (key, value, options) {
+		if (utils.isPlainObject(key)) {
+			for (var k in key) {
+				if (this.get(k) === undefined) this.set(k, key[k], value);
+			}
+			return cookie;
+		} else {
+			if (this.get(key) === undefined) return this.set.apply(this, arguments);
+		}
+	},
+
+	cookie.remove = function (keys) {
+		keys = utils.isArray(keys) ? keys : utils.toArray(arguments);
+
+		for (var i = 0, l = keys.length; i < l; i++) {
+			this.set(keys[i], '', -1);
+		}
+
+		return this; // Return the `cookie` object to make chaining possible.
+	};
+
+	cookie.removeSpecific = function (keys, options) {
+		if (!options) return this.remove(keys);
+
+		keys = utils.isArray(keys) ? keys : [keys];
+		options.expires = -1;
+
+		for (var i = 0, l = keys.length; i < l; i++) {
+			this.set(keys[i], '', options);
+		}
+
+		return this; // Return the `cookie` object to make chaining possible.
+	};
+
+	cookie.empty = function () {
+		return this.remove(utils.getKeys(this.all()));
+	};
+
+	cookie.get = function (keys, fallback) {
+		var cookies = this.all();
+
+		if (utils.isArray(keys)) {
+			var result = {};
+
+			for (var i = 0, l = keys.length; i < l; i++) {
+				var value = keys[i];
+				result[value] = utils.retrieve(cookies[value], fallback);
+			}
+
+			return result;
+
+		} else return utils.retrieve(cookies[keys], fallback);
+	};
+
+	cookie.all = function () {
+		if (document.cookie === '') return {};
+
+		var cookies = document.cookie.split('; '),
+		    result = {};
+
+		for (var i = 0, l = cookies.length; i < l; i++) {
+			var item = cookies[i].split('=');
+			var key = utils.decode(item.shift());
+			var value = utils.decode(item.join('='));
+			result[key] = value;
+		}
+
+		return result;
+	};
+
+	cookie.enabled = function () {
+		if (navigator.cookieEnabled) return true;
+
+		var ret = cookie.set('_', '_').get('_') === '_';
+		cookie.remove('_');
+		return ret;
+	};
+
+	// If an AMD loader is present use AMD.
+	// If a CommonJS loader is present use CommonJS.
+	// Otherwise assign the `cookie` object to the global scope.
+
+	if (true) {
+		!(__WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return {cookie: cookie};
+		}).call(exports, __webpack_require__, exports, module),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+
+// If used e.g. with Browserify and CommonJS, document is not declared.
+}(typeof document === 'undefined' ? null : document);
+
+
+/***/ }),
+
 /***/ "./node_modules/events/events.js":
 /*!***************************************!*\
   !*** ./node_modules/events/events.js ***!
@@ -1313,6 +1507,7 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 var browser = __webpack_require__(/*! bowser */ "./node_modules/bowser/src/bowser.js")._detect(navigator.userAgent);
+var getDeviceId = __webpack_require__(/*! ./device-id */ "./platforms/web/js/device-id.js");
 
 var FULL_SEMVER_REGEX = /^(\d+)\.(\d+)\.(\d+)[+|-]?(.*)?$/;
 var MAJOR_MINOR_VERSION_REGEX = /^(\d+)\.(\d+)[+|-]?(.*)?$/;
@@ -1329,6 +1524,12 @@ browser.patch = parsedVersion.patch || 0;
 browser.osName = browser.osname || '';
 browser.osVersion = browser.osversion || '';
 browser.chromecast = navigator.userAgent.toLowerCase().indexOf('crkey') > -1;
+browser.chrome = browser.chrome || false;
+browser.firefox = browser.firefox || false;
+browser.safari = browser.safari || false;
+browser.msie = browser.msie || false;
+browser.msedge = browser.msedge || false;
+browser.deviceId = getDeviceId();
 
 function parseSemver(str) {
     var arr =
@@ -1345,6 +1546,58 @@ function parseSemver(str) {
 }
 
 module.exports = browser;
+
+
+/***/ }),
+
+/***/ "./platforms/web/js/device-id.js":
+/*!***************************************!*\
+  !*** ./platforms/web/js/device-id.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var cookie = __webpack_require__(/*! cookie_js */ "./node_modules/cookie_js/cookie.js").cookie;
+var parseUri = __webpack_require__(/*! ./parseuri */ "./platforms/web/js/parseuri.js");
+
+var COOKIE_DEVICE_ID_KEY = 'unique_id';
+
+// Generates a random character string from [a-zA-Z0-9]
+// http://stackoverflow.com/q/1349404
+function generateID(length = 32) {
+    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+    var text = '';
+    for (var i = 0; i < length; i++) {
+        var index = Math.floor(Math.random() * possible.length);
+        text += possible.charAt(index);
+    }
+
+    return text;
+}
+
+// Returns the device id from cookies.
+// If none exists, then we generate and store one.
+function getDeviceId() {
+    var uniqueId = cookie.get(COOKIE_DEVICE_ID_KEY);
+
+    if (uniqueId) {
+        return uniqueId;
+    }
+
+    uniqueId = generateID();
+
+    cookie.set(COOKIE_DEVICE_ID_KEY, uniqueId, {
+        expires: 10*365, // 10 years
+        domain: '.' + parseUri(location.href).host.split('.').slice(-2).join('.'), // ex. '.twitch.tv'
+        path: '/',
+        secure: false,
+    });
+
+    return uniqueId;
+}
+
+module.exports = getDeviceId;
 
 
 /***/ }),
@@ -2781,7 +3034,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.6.28-456bf60b";
+    return "2.6.28-90cf9cf9";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -4477,6 +4730,67 @@ module.exports = {
      */
     SET_VISIBLE: 'WorkerSetVisible'
 };
+
+
+/***/ }),
+
+/***/ "./platforms/web/js/parseuri.js":
+/*!**************************************!*\
+  !*** ./platforms/web/js/parseuri.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// no gist/repo exists for this
+// parseUri 1.2.2
+// (c) Steven Levithan <stevenlevithan.com>
+// MIT License
+
+function parseUri(str) {
+    var o = {
+        strictMode: false,
+        key: [
+            'source',
+            'protocol',
+            'authority',
+            'userInfo',
+            'user',
+            'password',
+            'host',
+            'port',
+            'relative',
+            'path',
+            'directory',
+            'file',
+            'query',
+            'anchor',
+        ],
+        q: {
+            name: 'queryKey',
+            parser: /(?:^|&)([^&=]*)=?([^&]*)/g,
+        },
+        /* eslint-disable max-len, no-useless-escape */
+        parser: {
+            strict: /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/,
+            loose: /^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/,
+        },
+        /* eslint-enable max-len, no-useless-escape */
+    };
+    var m = o.parser[o.strictMode ? 'strict' : 'loose'].exec(str);
+    var uri = {};
+    var i = 14;
+
+    while (i--) uri[o.key[i]] = m[i] || '';
+
+    uri[o.q.name] = {};
+    uri[o.key[12]].replace(o.q.parser, function($0, $1, $2) {
+        if ($1) uri[o.q.name][$1] = $2;
+    });
+
+    return uri;
+}
+
+module.exports = parseUri;
 
 
 /***/ }),
