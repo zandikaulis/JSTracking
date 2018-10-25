@@ -2515,7 +2515,9 @@ module.exports = {
     HLS_MASTER_PLAYLIST_REQUEST: 'master_manifest_request',
     HLS_MASTER_PLAYLIST_READY: 'master_manifest_ready',
     HLS_MEDIA_PLAYLIST_REQUEST: 'variant_request',
-    HLS_MEDIA_PLAYLIST_READY: 'variant_ready'
+    HLS_MEDIA_PLAYLIST_READY: 'variant_ready',
+    MIN_BUFFER_READY: 'min_buffer_ready',
+    VIDEO_ELEMENT_PLAY: 'video_element_play',
 }
 
 
@@ -2624,6 +2626,7 @@ var MediaPlayer = exports.MediaPlayer = function MediaPlayer(config, worker) {
         onidle: this._onSinkIdle.bind(this),
         onstop: this._onSinkStop.bind(this),
         onerror: this._onSinkError.bind(this),
+        onplay: this._onSinkPlay.bind(this),
     });
 
     // This represents cached state from the worker. State objects
@@ -2778,7 +2781,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.6.28-dc7aa818";
+    return "2.6.28-456bf60b";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3047,7 +3050,10 @@ MediaPlayer.prototype._attachHandlers = function () {
     em.on(ClientMessage.ENQUEUE, sink.enqueue.bind(sink));
     em.on(ClientMessage.END_OF_STREAM, sink.endOfStream.bind(sink));
     em.on(ClientMessage.SET_TIMESTAMP_OFFSET, sink.setTimestampOffset.bind(sink));
-    em.on(ClientMessage.PLAY, this._startPlayback.bind(this));
+    em.on(ClientMessage.PLAY, function () {
+        this._startPlayback();
+        this._emitter.emit(PlayerEvent.PROFILE, ProfileEvent.MIN_BUFFER_READY);
+    }.bind(this));
     em.on(ClientMessage.PAUSE, sink.pause.bind(sink));
     em.on(ClientMessage.REMOVE, sink.remove.bind(sink));
     em.on(ClientMessage.RESET, sink.reset.bind(sink));
@@ -3234,6 +3240,10 @@ MediaPlayer.prototype._onSinkStop = function () {
 
 MediaPlayer.prototype._onSinkError = function (mediaError) {
     this._postMessage(WorkerMessage.SINK_ERROR, mediaError);
+};
+
+MediaPlayer.prototype._onSinkPlay = function () {
+    this._emitter.emit(PlayerEvent.PROFILE, ProfileEvent.VIDEO_ELEMENT_PLAY);
 };
 
 MediaPlayer.prototype._onTwitchInfo = function (properties) {
@@ -3995,6 +4005,7 @@ function PlaybackMonitor(video, config) {
     this._onerror = config.onerror;
     this._onbufferupdate = config.onbufferupdate;
     this._ontimeupdate = config.ontimeupdate;
+    this._onplay = config.onplay;
 
     this._video = video;
     this._intervalId = 0;
@@ -4039,6 +4050,7 @@ PlaybackMonitor.prototype.play = function () {
     this._paused = false;
     var started = Promise.resolve(this._video.play());
     started.catch(this._checkStopped.bind(this));
+    this._onplay();
     return started;
 };
 
