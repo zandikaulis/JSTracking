@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [199], {
+    [201], {
         DrWK: function(e, t, n) {
             "use strict";
             n.r(t);
@@ -34,7 +34,7 @@
                         t = a.parse(this.props.location.search),
                         n = t.extensionId,
                         i = t.projectId;
-                    return n && i && (e = "https://dev.twitch.tv/projects/" + n + "/files/" + i + "/edit"), r.createElement(v.nb, {
+                    return n && i && (e = "https://dev.twitch.tv/projects/" + n + "/files/" + i + "/edit"), r.createElement(v.pb, {
                         centered: !0
                     }, r.createElement(v.Ja, null, r.createElement(v.P, {
                         cols: {
@@ -48,36 +48,36 @@
                     }, r.createElement(v.Xa, {
                         display: v.X.Flex,
                         flexDirection: v.Aa.Column
-                    }, r.createElement(v.zb, {
+                    }, r.createElement(v.Bb, {
                         margin: {
                             bottom: 1
                         },
                         display: v.X.Flex,
                         flexDirection: v.Aa.Row,
                         alignItems: v.f.Center
-                    }, r.createElement(v.zb, {
+                    }, r.createElement(v.Bb, {
                         padding: {
                             right: 1
                         }
-                    }, r.createElement(v.ob, {
-                        asset: v.pb.LogoGlitch,
+                    }, r.createElement(v.qb, {
+                        asset: v.rb.LogoGlitch,
                         width: 50,
                         height: 50
                     })), r.createElement(v.W, {
-                        type: v.Pb.H3
-                    }, Object(d.d)("Earn revenue as an extension developer!", "DevExtensionsEnableMonetization"))), r.createElement(v.zb, {
+                        type: v.Rb.H3
+                    }, Object(d.d)("Earn revenue as an extension developer!", "DevExtensionsEnableMonetization"))), r.createElement(v.Bb, {
                         margin: {
                             bottom: 2
                         }
                     }, r.createElement(v.W, {
                         fontSize: v.Ca.Size4
-                    }, Object(d.d)('Hello! Thanks for your interest in extension monetization. To earn revenue for your account or business, you will need to complete a one-time onboarding. If this is a non-monetized extension, return to the previous extensions details screen and indicate "no".', "DevExtensionsEnableMonetization"))), r.createElement(v.zb, {
+                    }, Object(d.d)('Hello! Thanks for your interest in extension monetization. To earn revenue for your account or business, you will need to complete a one-time onboarding. If this is a non-monetized extension, return to the previous extensions details screen and indicate "no".', "DevExtensionsEnableMonetization"))), r.createElement(v.Bb, {
                         margin: {
                             bottom: 2
                         }
                     }, r.createElement(v.W, {
                         fontSize: v.Ca.Size4
-                    }, Object(d.d)("In most cases, the interview process takes five minutes. Once completed, you will be eligible to receive revenue for any extensions you create.", "DevExtensionsEnableMonetization"))), r.createElement(v.zb, {
+                    }, Object(d.d)("In most cases, the interview process takes five minutes. Once completed, you will be eligible to receive revenue for any extensions you create.", "DevExtensionsEnableMonetization"))), r.createElement(v.Bb, {
                         margin: {
                             bottom: 1
                         }
@@ -85,7 +85,7 @@
                         linkTo: "https://twitch.tv/" + this.props.user.login + "/dashboard/settings/revenue",
                         onClick: Object(g.c)(g.a.ExtensionsEnableMonetizationContinue),
                         "data-test-selector": o.ContinueButton
-                    }, Object(d.d)("Continue to Onboarding", "DevExtensionsEnableMonetization"))), r.createElement(v.zb, {
+                    }, Object(d.d)("Continue to Onboarding", "DevExtensionsEnableMonetization"))), r.createElement(v.Bb, {
                         margin: {
                             bottom: 3
                         }
@@ -102,7 +102,7 @@
                             lg: 4,
                             xl: 4
                         }
-                    }, r.createElement(v.zb, {
+                    }, r.createElement(v.Bb, {
                         background: v.r.Alt2
                     }, r.createElement(v.Xa, {
                         padding: {
@@ -121,7 +121,7 @@
                         }
                     }, "DevExtensionsEnableMonetization"))), r.createElement(v.Xa, {
                         display: v.X.Block,
-                        textAlign: v.Lb.Center,
+                        textAlign: v.Nb.Center,
                         padding: {
                             left: 2,
                             right: 2,

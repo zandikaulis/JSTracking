@@ -1,127 +1,127 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [74], {
-        Kcdb: function(e, t, i) {},
-        b6Yk: function(e, t, i) {
+    [75], {
+        Kcdb: function(e, t, r) {},
+        b6Yk: function(e, t, r) {
             "use strict";
-            i.d(t, "a", function() {
+            r.d(t, "a", function() {
                 return s
             });
-            var r = i("mrSG"),
-                n = i("/7QA"),
-                a = i("kRBY"),
+            var i = r("mrSG"),
+                n = r("/7QA"),
+                a = r("kRBY"),
                 s = function() {
                     function e() {}
-                    return e.get = function(e, t, i) {
-                        return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(n) {
+                    return e.get = function(e, t, r) {
+                        return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, this.request(e, r.__assign({}, t, {
+                                        return [4, this.request(e, i.__assign({}, t, {
                                             method: "GET"
-                                        }), i)];
+                                        }), r)];
                                     case 1:
                                         return [2, n.sent()]
                                 }
                             })
                         })
-                    }, e.getOrThrow = function(e, t, i) {
-                        return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(n) {
+                    }, e.getOrThrow = function(e, t, r) {
+                        return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        return [4, this.requestOrThrow(e, i.__assign({}, t, {
                                             method: "GET"
-                                        }), i)];
+                                        }), r)];
                                     case 1:
                                         return [2, n.sent()]
                                 }
                             })
                         })
-                    }, e.put = function(e, t, i) {
-                        return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(n) {
+                    }, e.put = function(e, t, r) {
+                        return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, this.request(e, r.__assign({}, t, {
+                                        return [4, this.request(e, i.__assign({}, t, {
                                             method: "PUT"
-                                        }), i)];
+                                        }), r)];
                                     case 1:
                                         return [2, n.sent()]
                                 }
                             })
                         })
-                    }, e.putOrThrow = function(e, t, i) {
-                        return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(n) {
+                    }, e.putOrThrow = function(e, t, r) {
+                        return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        return [4, this.requestOrThrow(e, i.__assign({}, t, {
                                             method: "PUT"
-                                        }), i)];
+                                        }), r)];
                                     case 1:
                                         return [2, n.sent()]
                                 }
                             })
                         })
-                    }, e.post = function(e, t, i) {
-                        return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(n) {
+                    }, e.post = function(e, t, r) {
+                        return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, this.request(e, r.__assign({}, t, {
+                                        return [4, this.request(e, i.__assign({}, t, {
                                             method: "POST"
-                                        }), i)];
+                                        }), r)];
                                     case 1:
                                         return [2, n.sent()]
                                 }
                             })
                         })
-                    }, e.postOrThrow = function(e, t, i) {
-                        return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(n) {
+                    }, e.postOrThrow = function(e, t, r) {
+                        return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        return [4, this.requestOrThrow(e, i.__assign({}, t, {
                                             method: "POST"
-                                        }), i)];
+                                        }), r)];
                                     case 1:
                                         return [2, n.sent()]
                                 }
                             })
                         })
-                    }, e.delete = function(e, t, i) {
-                        return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(n) {
+                    }, e.delete = function(e, t, r) {
+                        return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, this.request(e, r.__assign({}, t, {
+                                        return [4, this.request(e, i.__assign({}, t, {
                                             method: "DELETE"
-                                        }), i)];
+                                        }), r)];
                                     case 1:
                                         return [2, n.sent()]
                                 }
                             })
                         })
-                    }, e.deleteOrThrow = function(e, t, i) {
-                        return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(n) {
+                    }, e.deleteOrThrow = function(e, t, r) {
+                        return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        return [4, this.requestOrThrow(e, i.__assign({}, t, {
                                             method: "DELETE"
-                                        }), i)];
+                                        }), r)];
                                     case 1:
                                         return [2, n.sent()]
                                 }
                             })
                         })
-                    }, e.request = function(e, t, i) {
-                        return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, Promise, function() {
+                    }, e.request = function(e, t, r) {
+                        return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, Promise, function() {
                             var n, a, s, o;
-                            return r.__generator(this, function(c) {
+                            return i.__generator(this, function(c) {
                                 switch (c.label) {
                                     case 0:
-                                        return t = this.constructOptions(t, i), n = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, n), s = r.__assign({}, t, {
+                                        return t = this.constructOptions(t, r), n = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, n), s = i.__assign({}, t, {
                                             body: a
                                         }), [4, this._fetch(e, s)];
                                     case 1:
@@ -131,17 +131,17 @@
                                 }
                             })
                         })
-                    }, e.requestOrThrow = function(e, t, i) {
-                        return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, Promise, function() {
+                    }, e.requestOrThrow = function(e, t, r) {
+                        return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, Promise, function() {
                             var n;
-                            return r.__generator(this, function(a) {
+                            return i.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return a.trys.push([0, 2, , 3]), [4, this.request(e, t, i)];
+                                        return a.trys.push([0, 2, , 3]), [4, this.request(e, t, r)];
                                     case 1:
                                         if ((n = a.sent()).requestError) throw n.requestError;
                                         if (n.error) throw new Error("Error while sending legacy-api request: " + n.error.status + " - " + n.error.message);
-                                        return [2, r.__assign({}, n, {
+                                        return [2, i.__assign({}, n, {
                                             body: n.body
                                         })];
                                     case 2:
@@ -154,84 +154,84 @@
                     }, e.getAPIURL = function(e) {
                         return new URL(e, n.p.config.apiBaseURL)
                     }, e.constructLegacyAPIResponse = function(e) {
-                        return r.__awaiter(this, void 0, Promise, function() {
-                            var t, i, n, a;
-                            return r.__generator(this, function(r) {
-                                switch (r.label) {
+                        return i.__awaiter(this, void 0, Promise, function() {
+                            var t, r, n, a;
+                            return i.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
                                         t = {
                                             status: e.status
-                                        }, r.label = 1;
+                                        }, i.label = 1;
                                     case 1:
-                                        return r.trys.push([1, 3, , 4]), [4, e.json()];
+                                        return i.trys.push([1, 3, , 4]), [4, e.json()];
                                     case 2:
-                                        return i = r.sent(), e.ok ? t.body = i : t.error = i, [3, 4];
+                                        return r = i.sent(), e.ok ? t.body = r : t.error = r, [3, 4];
                                     case 3:
-                                        return n = r.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = n), [3, 4];
+                                        return n = i.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = n), [3, 4];
                                     case 4:
                                         return [2, t]
                                 }
                             })
                         })
                     }, e._fetch = function(e, t) {
-                        return void 0 === t && (t = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(i) {
-                                switch (i.label) {
+                        return void 0 === t && (t = {}), i.__awaiter(this, void 0, Promise, function() {
+                            return i.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
                                         return [4, fetch(this.getAPIURL(e).toString(), t)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, r.sent()]
                                 }
                             })
                         })
                     }, e.constructOptions = function(e, t) {
                         return e = Object.assign({}, e, {
-                            headers: r.__assign({}, this.getDefaultHeaders(e, t), e.headers)
+                            headers: i.__assign({}, this.getDefaultHeaders(e, t), e.headers)
                         })
                     }, e.serialize = function(e, t) {
                         return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : "string" == typeof e ? e : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
                             contentType: t
                         }), null) : null
                     }, e.getDefaultHeaders = function(e, t) {
-                        var i = n.p.store.getState(),
-                            r = {
+                        var r = n.p.store.getState(),
+                            i = {
                                 Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                                 "Accept-Language": "en-us",
                                 "Client-ID": n.p.config.legacyClientID,
                                 "X-Requested-With": "XMLHttpRequest"
                             };
-                        e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
-                        var s = Object(a.e)(i);
-                        return s && (r.Authorization = "OAuth " + s.authToken, s.legacyCSRFToken && (r["Twitch-Api-Token"] = s.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
-                            r[e] && delete r[e]
-                        }), r
+                        e.body && FormData.prototype.isPrototypeOf(e.body) || (i["Content-Type"] = "application/json; charset=UTF-8");
+                        var s = Object(a.e)(r);
+                        return s && (i.Authorization = "OAuth " + s.authToken, s.legacyCSRFToken && (i["Twitch-Api-Token"] = s.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                            i[e] && delete i[e]
+                        }), i
                     }, e.logger = n.p.logger.withCategory("legacy-api"), e
                 }()
         },
-        lEVP: function(e, t, i) {
+        lEVP: function(e, t, r) {
             "use strict";
-            i.r(t);
-            var r, n = i("mrSG"),
-                a = i("q1tI"),
-                s = i("/MKj"),
-                o = i("9C/b"),
-                c = i("fvjX"),
-                l = i("/7QA"),
-                u = i("yR8l"),
-                d = i("KxT4"),
-                m = i("GnwI"),
-                h = i("O4UZ"),
-                f = i("b6Yk"),
+            r.r(t);
+            var i, n = r("mrSG"),
+                a = r("q1tI"),
+                s = r("/MKj"),
+                o = r("9C/b"),
+                c = r("fvjX"),
+                l = r("/7QA"),
+                u = r("yR8l"),
+                d = r("KxT4"),
+                m = r("GnwI"),
+                h = r("O4UZ"),
+                f = r("b6Yk"),
                 p = l.p.logger.withCategory("verify-email"),
                 y = function(e, t) {
                     return n.__awaiter(void 0, void 0, void 0, function() {
-                        var i, r;
+                        var r, i;
                         return n.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    i = "/kraken/users/" + e, n.label = 1;
+                                    r = "/kraken/users/" + e, n.label = 1;
                                 case 1:
-                                    return n.trys.push([1, 3, , 4]), [4, f.a.putOrThrow(i, {
+                                    return n.trys.push([1, 3, , 4]), [4, f.a.putOrThrow(r, {
                                         body: {
                                             email: t
                                         }
@@ -239,28 +239,28 @@
                                 case 2:
                                     return n.sent(), [2, !0];
                                 case 3:
-                                    return r = n.sent(), p.error(r, "Verify Email Service"), [2, !1];
+                                    return i = n.sent(), p.error(i, "Verify Email Service"), [2, !1];
                                 case 4:
                                     return [2]
                             }
                         })
                     })
                 },
-                v = i("2xye");
+                v = r("2xye");
             ! function(e) {
                 e.Click = "click", e.Dismiss = "dismiss", e.Impress = "impress"
-            }(r || (r = {}));
-            var g = i("Ue10"),
-                _ = (i("Kcdb"), i("ongj"));
-            i.d(t, "DISMISSAL_DATA_STORAGE_KEY", function() {
+            }(i || (i = {}));
+            var g = r("Ue10"),
+                _ = (r("Kcdb"), r("ongj"));
+            r.d(t, "DISMISSAL_DATA_STORAGE_KEY", function() {
                 return S
-            }), i.d(t, "DISMISS_BTN_SELECTOR", function() {
+            }), r.d(t, "DISMISS_BTN_SELECTOR", function() {
                 return D
-            }), i.d(t, "VERIFY_BTN_SELECTOR", function() {
+            }), r.d(t, "VERIFY_BTN_SELECTOR", function() {
                 return w
-            }), i.d(t, "VerifyEmailBarPresentation", function() {
+            }), r.d(t, "VerifyEmailBarPresentation", function() {
                 return C
-            }), i.d(t, "VerifyEmailBar", function() {
+            }), r.d(t, "VerifyEmailBar", function() {
                 return O
             });
             var E, S = "verifyemailbar_dismissal",
@@ -274,20 +274,20 @@
             }(E || (E = {}));
             var C = function(e) {
                     function t(t) {
-                        var i = e.call(this, t) || this;
-                        return i.state = {
+                        var r = e.call(this, t) || this;
+                        return r.state = {
                             isError: !1,
                             verifyEmailBarState: E.INITIAL
-                        }, i.resetAfterDismissalTimeoutID = null, i.afterVerifyDismissTimeoutID = null, i.dismissalData = null, i.impressionEventFired = !1, i.dismissBarClickHandler = function(e) {
+                        }, r.resetAfterDismissalTimeoutID = null, r.afterVerifyDismissTimeoutID = null, r.dismissalData = null, r.impressionEventFired = !1, r.dismissBarClickHandler = function(e) {
                             e && e.stopPropagation();
-                            var t = i.dismissalData ? i.dismissalData.dismissalCount : 0;
-                            i.dismissalData = {
+                            var t = r.dismissalData ? r.dismissalData.dismissalCount : 0;
+                            r.dismissalData = {
                                 dismissalCount: t + 1,
                                 dismissalDateTimeMs: Date.now()
-                            }, l.m.set(S, i.dismissalData), i.setState({
+                            }, l.m.set(S, r.dismissalData), r.setState({
                                 verifyEmailBarState: E.DISMISSED
-                            }), i.resetAfterDismissalTimeoutID = setTimeout(function() {
-                                return n.__awaiter(i, void 0, void 0, function() {
+                            }), r.resetAfterDismissalTimeoutID = setTimeout(function() {
+                                return n.__awaiter(r, void 0, void 0, function() {
                                     return n.__generator(this, function(e) {
                                         switch (e.label) {
                                             case 0:
@@ -300,11 +300,11 @@
                                     })
                                 })
                             }, 1.01 * I), l.p.tracking.track(v.SpadeEventType.VerifyEmailBar, {
-                                action: r.Dismiss
+                                action: i.Dismiss
                             })
-                        }, i.onClickToVerify = function(e) {
-                            return n.__awaiter(i, void 0, void 0, function() {
-                                var t, i = this;
+                        }, r.onClickToVerify = function(e) {
+                            return n.__awaiter(r, void 0, void 0, function() {
+                                var t, r = this;
                                 return n.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
@@ -315,16 +315,16 @@
                                             }) : this.setState({
                                                 verifyEmailBarState: E.ERROR_SENDING
                                             }), this.afterVerifyDismissTimeoutID = setTimeout(function() {
-                                                i.setState({
+                                                r.setState({
                                                     verifyEmailBarState: E.DISMISSED
-                                                }), i.afterVerifyDismissTimeoutID = null
+                                                }), r.afterVerifyDismissTimeoutID = null
                                             }, b), l.p.tracking.track(v.SpadeEventType.VerifyEmailBar, {
-                                                action: r.Click
+                                                action: i.Click
                                             }), [2]
                                     }
                                 })
                             })
-                        }, i.dismissalData = l.m.getOptional(S), i
+                        }, r.dismissalData = l.m.getOptional(S), r
                     }
                     return n.__extends(t, e), t.prototype.componentWillUnmount = function() {
                         null !== this.resetAfterDismissalTimeoutID && clearTimeout(this.resetAfterDismissalTimeoutID), null !== this.afterVerifyDismissTimeoutID && clearTimeout(this.afterVerifyDismissTimeoutID)
@@ -343,7 +343,7 @@
                         switch (this.state.verifyEmailBarState) {
                             case E.CLICK_TO_VERIFY:
                                 return this.impressionEventFired || (l.p.tracking.track(v.SpadeEventType.VerifyEmailBar, {
-                                    action: r.Impress
+                                    action: i.Impress
                                 }), this.impressionEventFired = !0), this.renderClickToVerify();
                             case E.EMAIL_SENT:
                                 return this.renderEmailSent();
@@ -360,8 +360,8 @@
                             duration: g.k.ExtraLong
                         }, a.createElement(g.Xa, {
                             fullWidth: !0,
-                            position: g.fb.Relative
-                        }, a.createElement(g.zb, {
+                            position: g.hb.Relative
+                        }, a.createElement(g.Bb, {
                             className: "verify-email-bar",
                             display: g.X.Flex,
                             alignItems: g.f.Center,
@@ -388,9 +388,9 @@
                             padding: {
                                 right: .5
                             }
-                        }, a.createElement(g.ob, {
-                            asset: g.pb.NotificationWarning,
-                            type: g.qb.Inherit
+                        }, a.createElement(g.qb, {
+                            asset: g.rb.NotificationWarning,
+                            type: g.sb.Inherit
                         })), a.createElement(g.Xa, {
                             className: "verify-email-bar__copy"
                         }, a.createElement(g.W, {
@@ -398,9 +398,9 @@
                             color: g.O.Inherit
                         }, Object(l.d)("Keep your account secure and verify {email}.", {
                             email: this.props.data.currentUser.email
-                        }, "VerifyEmail")))))), a.createElement(g.zb, {
+                        }, "VerifyEmail")))))), a.createElement(g.Bb, {
                             className: "verify-email-bar__dismiss",
-                            position: g.fb.Absolute,
+                            position: g.hb.Absolute,
                             attachRight: !0,
                             margin: {
                                 right: 2
@@ -417,14 +417,14 @@
                             hoverUnderlineNone: !0
                         }, Object(l.d)("Not Now", "VerifyEmail"))))))
                     }, t.prototype.renderEmailSent = function() {
-                        return a.createElement(g.zb, {
+                        return a.createElement(g.Bb, {
                             className: "verify-email-bar verify-email-bar--success",
                             display: g.X.Flex,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
                             elevation: 1,
                             padding: 1
-                        }, a.createElement(g.zb, {
+                        }, a.createElement(g.Bb, {
                             display: g.X.Flex,
                             alignItems: g.f.Center,
                             margin: {
@@ -434,9 +434,9 @@
                                 right: .5
                             },
                             color: g.O.Overlay
-                        }, a.createElement(g.ob, {
-                            asset: g.pb.NavMessages,
-                            type: g.qb.Inherit
+                        }, a.createElement(g.qb, {
+                            asset: g.rb.NavMessages,
+                            type: g.sb.Inherit
                         })), a.createElement(g.W, {
                             fontSize: g.Ca.Size5,
                             color: g.O.Overlay
@@ -444,14 +444,14 @@
                             email: this.props.data.currentUser.email
                         }, "VerifyEmail")))
                     }, t.prototype.renderErrorSending = function() {
-                        return a.createElement(g.zb, {
+                        return a.createElement(g.Bb, {
                             className: "verify-email-bar verify-email-bar--error",
                             display: g.X.Flex,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
                             elevation: 1,
                             padding: 1
-                        }, a.createElement(g.zb, {
+                        }, a.createElement(g.Bb, {
                             display: g.X.Flex,
                             alignItems: g.f.Center,
                             margin: {
@@ -461,16 +461,16 @@
                                 right: .5
                             },
                             color: g.O.Overlay
-                        }, a.createElement(g.ob, {
-                            asset: g.pb.DeadGlitch,
-                            type: g.qb.Inherit
+                        }, a.createElement(g.qb, {
+                            asset: g.rb.DeadGlitch,
+                            type: g.sb.Inherit
                         })), a.createElement(g.W, {
                             fontSize: g.Ca.Size5,
                             color: g.O.Overlay
                         }, Object(l.d)("Oops...we were unable to send an email to {email}. Please try again later or update your email.", {
                             email: this.props.data.currentUser.email
-                        }, "VerifyEmail")), a.createElement(g.zb, {
-                            position: g.fb.Absolute,
+                        }, "VerifyEmail")), a.createElement(g.Bb, {
+                            position: g.hb.Absolute,
                             attachRight: !0,
                             margin: {
                                 right: 2
@@ -503,7 +503,7 @@
                 }), o.a)(C)
         },
         ongj: function(e, t) {
-            var i = {
+            var r = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -596,7 +596,7 @@
                     end: 123
                 }
             };
-            i.loc.source = {
+            r.loc.source = {
                 body: "query VerifyEmail_CurrentUser {\ncurrentUser {\nid\nhasPrime\ndisplayName\nemail\nisEmailVerified\n}\nrequestInfo {\ncountryCode\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
@@ -604,7 +604,7 @@
                     column: 1
                 }
             };
-            e.exports = i
+            e.exports = r
         }
     }
 ]);

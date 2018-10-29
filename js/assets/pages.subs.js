@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [89], {
+    [90], {
         "/8Zs": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -21,33 +21,33 @@
                 u = n("ZS2+"),
                 f = n("/8Zs"),
                 p = n("GnwI"),
-                m = n("5ELF"),
-                d = n("Ue10"),
-                b = (n("4S9A"), u.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(171)]).then(n.bind(null, "dNH5"))
+                h = n("5ELF"),
+                m = n("Ue10"),
+                d = (n("4S9A"), u.a.wrap(function() {
+                    return Promise.all([n.e(0), n.e(173)]).then(n.bind(null, "dNH5"))
                 }, "SubsLandingPage")),
-                h = u.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(170)]).then(n.bind(null, "15ff"))
+                b = u.a.wrap(function() {
+                    return Promise.all([n.e(0), n.e(172)]).then(n.bind(null, "15ff"))
                 }, "SubsBroadcasterPage"),
                 w = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(d.Xa, {
+                        return l.createElement(m.Xa, {
                             className: "twilight-root",
-                            position: d.fb.Absolute,
-                            overflow: d.ab.Hidden,
+                            position: m.hb.Absolute,
+                            overflow: m.cb.Hidden,
                             attachRight: !0,
                             attachBottom: !0,
                             attachLeft: !0
-                        }, l.createElement(m.a, null), l.createElement(d.Xa, {
-                            display: d.X.Flex,
-                            flexWrap: d.Ba.NoWrap,
+                        }, l.createElement(h.a, null), l.createElement(m.Xa, {
+                            display: m.X.Flex,
+                            flexWrap: m.Ba.NoWrap,
                             fullHeight: !0,
-                            position: d.fb.Relative
-                        }, l.createElement(d.Pa, {
-                            position: d.fb.Relative,
+                            position: m.hb.Relative
+                        }, l.createElement(m.Pa, {
+                            position: m.hb.Relative,
                             flexGrow: 1,
                             fullHeight: !0,
                             fullWidth: !0
@@ -55,10 +55,10 @@
                             className: f.a
                         }, l.createElement(c.a, null, l.createElement(s.a, {
                             path: "/subs/:channelName",
-                            component: h
+                            component: b
                         }), l.createElement(s.a, {
                             path: "/subs",
-                            component: b
+                            component: d
                         }))))))
                     }, t = i.__decorate([Object(p.b)("SubsRoot", {
                         autoReportInteractive: !0

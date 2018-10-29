@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [101], {
+    [102], {
         "5g1g": function(e, n, t) {
             "use strict";
             var a = t("mrSG"),
@@ -56,13 +56,13 @@
                 p = t("Ints"),
                 v = t("Ue10"),
                 f = (t("QSSE"), l.a.wrap(function() {
-                    return t.e(105).then(t.bind(null, "Pi1p"))
+                    return t.e(106).then(t.bind(null, "Pi1p"))
                 }, "DevLoginPage")),
                 g = l.a.wrap(function() {
-                    return t.e(207).then(t.bind(null, "epaB"))
+                    return t.e(209).then(t.bind(null, "epaB"))
                 }, "DevBountyBoardCampaignManagerPage"),
                 h = l.a.wrap(function() {
-                    return t.e(206).then(t.bind(null, "aztO"))
+                    return t.e(208).then(t.bind(null, "aztO"))
                 }, "DevBountyBoardAnalyticsPage"),
                 y = function(e) {
                     function n() {
@@ -78,7 +78,7 @@
                             name: "bounty_board_brand_portal_enabled"
                         }, i.createElement(p.a, null, i.createElement(v.Xa, {
                             className: "dev-dashboard"
-                        }, i.createElement(v.zb, {
+                        }, i.createElement(v.Bb, {
                             padding: {
                                 top: 1
                             },
@@ -98,12 +98,12 @@
                             }
                         }, i.createElement(v.z, {
                             "data-test-selector": "dev-bounty-board-dashboard-dashboard-button-selector",
-                            icon: v.pb.GlyphArrLeft,
+                            icon: v.rb.GlyphArrLeft,
                             type: v.F.Text,
                             linkTo: "/console"
                         }, Object(u.d)("Dashboard", "DevBountyBoardDashboardRoot"))), i.createElement(v.W, {
-                            type: v.Pb.H3
-                        }, Object(u.d)("Bounty Board Dashboard", "DevBountyBoardDashboardRoot")), i.createElement(v.zb, {
+                            type: v.Rb.H3
+                        }, Object(u.d)("Bounty Board Dashboard", "DevBountyBoardDashboardRoot")), i.createElement(v.Bb, {
                             borderTop: !0,
                             margin: {
                                 top: 1
@@ -112,7 +112,7 @@
                                 top: 1
                             },
                             display: v.X.Flex
-                        }, i.createElement(v.Ab, {
+                        }, i.createElement(v.Cb, {
                             "data-test-selector": "dev-bounty-board-dashboard-campaign-tab-selector",
                             linkTo: "/console/bounty-board",
                             active: this.isActive("", !0)
@@ -134,17 +134,17 @@
                         })))))) : i.createElement(f, null)
                     }, n
                 }(i.Component),
-                S = Object(d.compose)(Object(m.b)("DevBountyBoardDashboardRootPresentation", {
+                B = Object(d.compose)(Object(m.b)("DevBountyBoardDashboardRootPresentation", {
                     autoReportInteractive: !0
                 }))(y);
-            var D = Object(a.connect)(function(e) {
+            var S = Object(a.connect)(function(e) {
                 return {
                     isLoggedIn: Object(r.f)(e),
                     user: Object(r.e)(e)
                 }
-            })(S);
+            })(B);
             t.d(n, "DevBountyBoardDashboardRoot", function() {
-                return D
+                return S
             })
         },
         QSSE: function(e, n, t) {},

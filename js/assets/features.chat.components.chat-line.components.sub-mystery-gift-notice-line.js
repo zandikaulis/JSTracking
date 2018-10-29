@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [180], {
+    [182], {
         ZNYK: function(t, n, e) {
             "use strict";
             e.r(n);
@@ -53,7 +53,7 @@
                         }, "SubMysteryGiftNoticeLine")
                     }(e, n.channel, n.massGiftCount, n.senderCount, Object(a.a)(n.plan) || 1), i.createElement(f.W, {
                         color: f.O.Alt2,
-                        type: f.Pb.Span
+                        type: f.Rb.Span
                     }, c)
                 };
             c.displayName = "SubMysteryGiftNoticeLine", e.d(n, "SubMysteryGiftNoticeLine", function() {

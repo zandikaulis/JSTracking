@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [161], {
+    [163], {
         "9USO": function(e, t, a) {},
         FWE5: function(e, t) {
             var a = {
@@ -106,8 +106,8 @@
             ! function(e) {
                 e.All = "all", e.AdBreaks = "commercial", e.GameCategory = "game_change", e.StreamTitle = "status_change", e.AddEditor = "add_editor", e.RemoveEditor = "remove_editor"
             }(n || (n = {}));
-            var v = a("Ue10"),
-                g = {
+            var g = a("Ue10"),
+                v = {
                     "data-test-selector": "dashboard-activity-filter-select"
                 },
                 b = function(e) {
@@ -119,19 +119,19 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.filterAction || n.All;
-                        return i.createElement(v.zb, {
+                        return i.createElement(g.Bb, {
                             padding: 2,
                             borderBottom: !0
-                        }, i.createElement(v.Xa, {
+                        }, i.createElement(g.Xa, {
                             className: "activity-page__select",
                             flexGrow: 0,
                             flexShrink: 0
-                        }, i.createElement(v.vb, r.__assign({
+                        }, i.createElement(g.xb, r.__assign({
                             name: "activity_type",
                             onChange: this.handleTypeChange,
                             value: e,
                             disabled: !this.props.enabled
-                        }, g), i.createElement("option", {
+                        }, v), i.createElement("option", {
                             value: n.All
                         }, Object(l.d)("View All", "DashboardActivity")), i.createElement("option", {
                             value: n.AdBreaks
@@ -161,14 +161,14 @@
                             var r, o = Object(l.i)(new Date(t.created_at)),
                                 c = "https://static-cdn.jtvnw.net/user-default-pictures/27103734-3cda-44d6-a384-f2ab71e4bb85-profile_image-300x300.jpg",
                                 s = "unknown user",
-                                d = i.createElement(v.W, {
+                                d = i.createElement(g.W, {
                                     bold: !0
                                 }, s);
                             if (e.props.filterAction === n.All || t.action === e.props.filterAction) {
-                                switch (t.actor && (c = t.actor.logo, s = t.actor.display_name, d = i.createElement(v.W, {
+                                switch (t.actor && (c = t.actor.logo, s = t.actor.display_name, d = i.createElement(g.W, {
                                     bold: !0,
-                                    type: v.Pb.Span
-                                }, i.createElement(v.U, {
+                                    type: g.Rb.Span
+                                }, i.createElement(g.U, {
                                     to: "/" + t.actor.name
                                 }, s))), t.action) {
                                     case n.AdBreaks:
@@ -206,67 +206,67 @@
                                     default:
                                         r = ""
                                 }
-                                return i.createElement(v.zb, {
+                                return i.createElement(g.Bb, {
                                     key: "audit" + a,
-                                    alignItems: v.f.Center,
-                                    display: v.X.Flex,
-                                    background: v.r.Base,
+                                    alignItems: g.f.Center,
+                                    display: g.X.Flex,
+                                    background: g.r.Base,
                                     borderBottom: !0,
                                     padding: {
                                         y: 1
                                     }
-                                }, i.createElement(v.Xa, {
+                                }, i.createElement(g.Xa, {
                                     flexGrow: 0,
                                     flexShrink: 0,
                                     margin: {
                                         right: 1
                                     }
-                                }, i.createElement(v.q, {
+                                }, i.createElement(g.q, {
                                     src: c,
                                     alt: s,
                                     size: 40,
-                                    presenceStatus: v.hb.Online,
-                                    borderRadius: v.x.Small
-                                })), i.createElement(v.Xa, {
+                                    presenceStatus: g.jb.Online,
+                                    borderRadius: g.x.Small
+                                })), i.createElement(g.Xa, {
                                     flexGrow: 1,
                                     flexShrink: 1
-                                }, i.createElement(v.Xa, null, i.createElement(v.W, {
-                                    color: v.O.Alt,
-                                    fontSize: v.Ca.Size5
-                                }, r))), i.createElement(v.Xa, {
+                                }, i.createElement(g.Xa, null, i.createElement(g.W, {
+                                    color: g.O.Alt,
+                                    fontSize: g.Ca.Size5
+                                }, r))), i.createElement(g.Xa, {
                                     flexGrow: 0,
                                     flexShrink: 0
-                                }, i.createElement(v.W, {
-                                    color: v.O.Alt2,
-                                    fontSize: v.Ca.Size6
+                                }, i.createElement(g.W, {
+                                    color: g.O.Alt2,
+                                    fontSize: g.Ca.Size6
                                 }, o)))
                             }
                         });
-                        return i.createElement(v.Xa, r.__assign({
+                        return i.createElement(g.Xa, r.__assign({
                             className: "activity-page__list",
                             flexGrow: 0,
                             flexShrink: 0
                         }, y), t)
                     }, t.prototype.renderNotEnoughDataPlaceholder = function() {
-                        return i.createElement(v.zb, r.__assign({
+                        return i.createElement(g.Bb, r.__assign({
                             className: "activity-page__no-data",
-                            display: v.X.Flex,
+                            display: g.X.Flex,
                             flexGrow: 1,
-                            flexDirection: v.Aa.Column,
-                            alignItems: v.f.Center,
-                            alignContent: v.e.Center,
-                            justifyContent: v.Wa.Center,
+                            flexDirection: g.Aa.Column,
+                            alignItems: g.f.Center,
+                            alignContent: g.e.Center,
+                            justifyContent: g.Wa.Center,
                             padding: {
                                 left: 2,
                                 right: 2
                             }
-                        }, f), i.createElement(v.q, {
+                        }, f), i.createElement(g.q, {
                             src: _,
                             alt: A,
                             size: 50
-                        }), i.createElement(v.W, {
-                            color: v.O.Alt2,
-                            fontSize: v.Ca.Size5
+                        }), i.createElement(g.W, {
+                            color: g.O.Alt2,
+                            fontSize: g.Ca.Size5
                         }, Object(l.d)("Not enough data for us to display", "DashboardActivity")))
                     }, t
                 }(i.PureComponent),
@@ -324,7 +324,7 @@
                             return r.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
-                                        return this.props.data.loading ? [3, 2] : [4, this.loadAudits()];
+                                        return l.p.setPageTitle(Object(l.d)("Activity", "ActivityPage")), this.props.data.loading ? [3, 2] : [4, this.loadAudits()];
                                     case 1:
                                         e.sent(), this.props.latencyTracking.reportInteractive(), e.label = 2;
                                     case 2:
@@ -347,12 +347,12 @@
                         })
                     }, t.prototype.render = function() {
                         var e = this.state.requestState;
-                        if (this.props.data.loading || e === S.Loading || e === S.Error) return i.createElement(w.a, null, i.createElement(v.Xa, {
+                        if (this.props.data.loading || e === S.Loading || e === S.Error) return i.createElement(w.a, null, i.createElement(g.Xa, {
                             margin: {
                                 top: 3,
                                 bottom: 1
                             }
-                        }, i.createElement(v.eb, {
+                        }, i.createElement(g.gb, {
                             height: 448,
                             width: 1040
                         })));
@@ -360,21 +360,21 @@
                             a = t.filterAction,
                             n = t.list,
                             r = e === S.Success && n.audits.length > 0;
-                        return i.createElement(w.a, null, i.createElement(v.zb, {
+                        return i.createElement(w.a, null, i.createElement(g.Bb, {
                             className: "activity-page",
-                            background: v.r.Base,
+                            background: g.r.Base,
                             elevation: 1,
-                            overflow: v.ab.Hidden
+                            overflow: g.cb.Hidden
                         }, i.createElement(b, {
                             filterAction: a,
                             onActionChange: this.handleActionChange,
                             enabled: r
-                        }), i.createElement(v.Xa, {
+                        }), i.createElement(g.Xa, {
                             className: "activity-page__scrollable",
-                            overflow: v.ab.Hidden
+                            overflow: g.cb.Hidden
                         }, i.createElement(c.b, {
                             suppressScrollX: !0
-                        }, i.createElement(v.Xa, {
+                        }, i.createElement(g.Xa, {
                             padding: {
                                 x: 2
                             }

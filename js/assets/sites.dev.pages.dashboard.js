@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [106], {
+    [107], {
         "5g1g": function(e, t, n) {
             "use strict";
             var a = n("mrSG"),
@@ -39,25 +39,25 @@
                 h = n("Ints"),
                 f = n("Ue10"),
                 D = p.a.wrap(function() {
-                    return n.e(205).then(n.bind(null, "RkBb"))
+                    return n.e(207).then(n.bind(null, "RkBb"))
                 }, "DevOverviewPage"),
                 g = p.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(204)]).then(n.bind(null, "dE6c"))
+                    return Promise.all([n.e(0), n.e(206)]).then(n.bind(null, "dE6c"))
                 }, "DevAppsPage"),
                 E = p.a.wrap(function() {
-                    return n.e(203).then(n.bind(null, "OfRZ"))
+                    return n.e(205).then(n.bind(null, "OfRZ"))
                 }, "DevAppCreatePage"),
                 k = p.a.wrap(function() {
-                    return n.e(202).then(n.bind(null, "AhYx"))
+                    return n.e(204).then(n.bind(null, "AhYx"))
                 }, "DevAppEditPage"),
                 O = p.a.wrap(function() {
-                    return n.e(201).then(n.bind(null, "635G"))
+                    return n.e(203).then(n.bind(null, "635G"))
                 }, "DevGamesPage"),
                 j = p.a.wrap(function() {
-                    return Promise.all([n.e(31), n.e(0), n.e(200)]).then(n.bind(null, "QH5d"))
+                    return Promise.all([n.e(31), n.e(0), n.e(202)]).then(n.bind(null, "QH5d"))
                 }, "DevDropsDashboardRoot"),
                 y = p.a.wrap(function() {
-                    return n.e(199).then(n.bind(null, "DrWK"))
+                    return n.e(201).then(n.bind(null, "DrWK"))
                 }, "DevExtensionsEnableMonetizationPage"),
                 w = function(e) {
                     function t() {
@@ -77,11 +77,11 @@
                                 bottom: 2
                             },
                             className: "dev-dashboard"
-                        }, i.createElement(f.nb, {
+                        }, i.createElement(f.pb, {
                             centered: !0
                         }, i.createElement("header", {
                             className: "dev-dashboard__header"
-                        }, i.createElement(f.zb, {
+                        }, i.createElement(f.Bb, {
                             padding: {
                                 bottom: 2
                             },
@@ -90,33 +90,33 @@
                             },
                             borderBottom: !0
                         }, i.createElement(f.W, {
-                            type: f.Pb.H2
+                            type: f.Rb.H2
                         }, Object(u.d)("Dashboard", "DevDashboard"))), i.createElement(f.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, i.createElement(f.Bb, null, i.createElement(f.Ab, {
+                        }, i.createElement(f.Db, null, i.createElement(f.Cb, {
                             linkTo: "https://dev.twitch.tv/dashboard",
                             active: this.isActive("", !0)
-                        }, Object(u.d)("Overview", "DevDashboard")), i.createElement(f.Ab, {
+                        }, Object(u.d)("Overview", "DevDashboard")), i.createElement(f.Cb, {
                             onClick: Object(v.c)(v.a.ViewExtensions),
                             linkTo: "https://dev.twitch.tv/dashboard/extensions",
                             active: this.isActive("extensions")
-                        }, Object(u.d)("Extensions", "DevDashboard")), i.createElement(f.Ab, {
+                        }, Object(u.d)("Extensions", "DevDashboard")), i.createElement(f.Cb, {
                             onClick: Object(v.c)(v.a.ViewApps),
                             linkTo: "/console/apps",
                             active: this.isActive("apps")
-                        }, Object(u.d)("Apps", "DevDashboard")), i.createElement(f.Ab, {
+                        }, Object(u.d)("Apps", "DevDashboard")), i.createElement(f.Cb, {
                             onClick: Object(v.c)(v.a.ViewGames),
                             linkTo: "/console/games",
                             active: this.isActive("games")
-                        }, Object(u.d)("Games", "DevDashboard")), i.createElement(f.Ab, {
+                        }, Object(u.d)("Games", "DevDashboard")), i.createElement(f.Cb, {
                             onClick: Object(v.c)(v.a.ViewDrops),
                             linkTo: "/console/drops",
                             active: this.isActive("drops")
                         }, Object(u.d)("Drops", "DevDashboard")), i.createElement(b.a, {
                             name: "bounty_board_brand_portal_enabled"
-                        }, i.createElement(h.a, null, i.createElement(f.Ab, {
+                        }, i.createElement(h.a, null, i.createElement(f.Cb, {
                             linkTo: "/console/bounty-board",
                             active: this.isActive("bounty-board")
                         }, Object(u.d)("Bounty Board", "DevDashboard"))))))), i.createElement(f.Xa, {
@@ -154,14 +154,14 @@
                     }, t = o.__decorate([Object(m.b)("DevDashboard")], t)
                 }(i.Component),
                 S = Object(c.a)(w);
-            var A = Object(a.connect)(function(e) {
+            var x = Object(a.connect)(function(e) {
                 return {
                     isLoggedIn: Object(r.f)(e),
                     user: Object(r.e)(e)
                 }
             })(S);
             n.d(t, "DevDashboardRoot", function() {
-                return A
+                return x
             })
         },
         Ints: function(e, t, n) {

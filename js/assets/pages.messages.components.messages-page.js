@@ -4,12 +4,12 @@
         b6Yk: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return i
+                return a
             });
             var r = n("mrSG"),
                 s = n("/7QA"),
                 o = n("kRBY"),
-                i = function() {
+                a = function() {
                     function e() {}
                     return e.get = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
@@ -117,15 +117,15 @@
                         })
                     }, e.request = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            var s, o, i, a;
+                            var s, o, a, i;
                             return r.__generator(this, function(c) {
                                 switch (c.label) {
                                     case 0:
-                                        return t = this.constructOptions(t, n), s = t.headers ? t.headers["Content-Type"] : void 0, o = this.serialize(t.body, s), i = r.__assign({}, t, {
+                                        return t = this.constructOptions(t, n), s = t.headers ? t.headers["Content-Type"] : void 0, o = this.serialize(t.body, s), a = r.__assign({}, t, {
                                             body: o
-                                        }), [4, this._fetch(e, i)];
+                                        }), [4, this._fetch(e, a)];
                                     case 1:
-                                        return a = c.sent(), [4, this.constructLegacyAPIResponse(a)];
+                                        return i = c.sent(), [4, this.constructLegacyAPIResponse(i)];
                                     case 2:
                                         return [2, c.sent()]
                                 }
@@ -201,8 +201,8 @@
                                 "X-Requested-With": "XMLHttpRequest"
                             };
                         e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
-                        var i = Object(o.e)(n);
-                        return i && (r.Authorization = "OAuth " + i.authToken, i.legacyCSRFToken && (r["Twitch-Api-Token"] = i.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                        var a = Object(o.e)(n);
+                        return a && (r.Authorization = "OAuth " + a.authToken, a.legacyCSRFToken && (r["Twitch-Api-Token"] = a.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                             r[e] && delete r[e]
                         }), r
                     }, e.logger = s.p.logger.withCategory("legacy-api"), e
@@ -214,13 +214,13 @@
             var r = n("/MKj"),
                 s = n("fvjX"),
                 o = n("1/iK"),
-                i = n("y5D0"),
-                a = n("kRBY"),
+                a = n("y5D0"),
+                i = n("kRBY"),
                 c = n("mrSG"),
                 u = n("q1tI"),
-                d = n("/7QA"),
-                l = n("wU95"),
-                h = n.n(l),
+                l = n("/7QA"),
+                d = n("wU95"),
+                h = n.n(d),
                 g = n("Ue10"),
                 p = function(e) {
                     function t() {
@@ -234,35 +234,31 @@
                         return u.createElement(g.Xa, {
                             className: "file-download-button"
                         }, u.createElement(g.z, {
-                            icon: g.pb.Download,
+                            icon: g.rb.Download,
                             type: g.F.Default,
                             onClick: this.initiateDownload
-                        }, Object(d.d)("Download", "FileDownload")))
+                        }, Object(l.d)("Download", "FileDownload")))
                     }, t
                 }(u.Component),
                 f = n("ZDlU"),
-                m = n("NvVO"),
-                y = n("b6Yk"),
+                m = n("LA8z"),
+                y = n("NvVO"),
+                w = n("b6Yk"),
                 _ = n("GnwI"),
-                w = "deprecated_messages_download_enabled";
-
-            function b() {
-                return d.b.get(w, !1)
-            }
-            n("5G0D");
-            var v = function(e) {
+                b = n("H4kz"),
+                v = (n("5G0D"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             errorLoadingMessageHistory: !1,
-                            hasLoadedMessageHistory: !b()
+                            hasLoadedMessageHistory: !Object(b.a)()
                         }, t.fetchMessageHistory = function() {
                             return c.__awaiter(t, void 0, void 0, function() {
                                 var e;
                                 return c.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
-                                            return this.props.sessionUser ? [4, y.a.get("/kraken/chat/legacy_inbox")] : [2, null];
+                                            return this.props.sessionUser ? [4, w.a.get("/kraken/chat/legacy_inbox")] : [2, null];
                                         case 1:
                                             return 200 === (e = t.sent()).status ? this.setState({
                                                 errorLoadingMessageHistory: !1,
@@ -278,14 +274,14 @@
                         }, t
                     }
                     return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.sessionUser && b() ? this.fetchMessageHistory() : this.props.latencyTracking.reportInteractive()
+                        this.props.sessionUser && Object(b.a)() ? this.fetchMessageHistory() : this.props.latencyTracking.reportInteractive()
                     }, t.prototype.componentDidUpdate = function(e, t) {
                         this.state.hasLoadedMessageHistory && !t.hasLoadedMessageHistory && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return void 0 === this.props.sessionUser ? (this.props.login(), u.createElement(f.a, {
-                            message: Object(d.d)("You must be logged in to view this page", "MessagesPage")
+                        return Object(b.a)() ? void 0 === this.props.sessionUser ? (this.props.login(), u.createElement(f.a, {
+                            message: Object(l.d)("You must be logged in to view this page", "MessagesPage")
                         })) : this.state.errorLoadingMessageHistory ? u.createElement(f.a, {
-                            message: Object(d.d)("Oops, something went wrong.", "MessagesPage")
+                            message: Object(l.d)("Oops, something went wrong.", "MessagesPage")
                         }) : u.createElement(g.Xa, {
                             className: "messages-page",
                             alignItems: g.f.Center,
@@ -293,17 +289,17 @@
                             fullWidth: !0,
                             fullHeight: !0,
                             justifyContent: g.Wa.Center,
-                            position: g.fb.Absolute
+                            position: g.hb.Absolute
                         }, u.createElement(g.Xa, {
                             alignItems: g.f.Center,
                             className: "messages-page__body",
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column
-                        }, !this.state.hasLoadedMessageHistory && this.renderPlaceholder(), this.state.hasLoadedMessageHistory && this.renderLoadedBody()))
+                        }, !this.state.hasLoadedMessageHistory && this.renderPlaceholder(), this.state.hasLoadedMessageHistory && this.renderLoadedBody())) : u.createElement(m.a, null)
                     }, t.prototype.renderPlaceholder = function() {
                         return u.createElement(u.Fragment, null, u.createElement(g.Xa, {
                             justifyContent: g.Wa.Center
-                        }, u.createElement(g.eb, {
+                        }, u.createElement(g.gb, {
                             height: 130,
                             width: 180
                         })), u.createElement(g.Xa, {
@@ -311,61 +307,61 @@
                                 bottom: 1,
                                 top: 4
                             }
-                        }, u.createElement(g.eb, {
+                        }, u.createElement(g.gb, {
                             height: 15,
                             width: 370
                         }), u.createElement(g.Xa, {
                             margin: {
                                 y: 1
                             }
-                        }), u.createElement(g.eb, {
+                        }), u.createElement(g.gb, {
                             height: 15,
                             width: 380
                         }), u.createElement(g.Xa, {
                             margin: {
                                 y: 1
                             }
-                        }), u.createElement(g.eb, {
+                        }), u.createElement(g.gb, {
                             height: 15,
                             width: 65
                         }), u.createElement(g.Xa, {
                             margin: {
                                 y: 2
                             }
-                        }), u.createElement(g.eb, {
+                        }), u.createElement(g.gb, {
                             height: 15,
                             width: 310
                         }), u.createElement(g.Xa, {
                             margin: {
                                 y: 2
                             }
-                        }), u.createElement(g.eb, {
+                        }), u.createElement(g.gb, {
                             height: 15,
                             width: 390
                         }), u.createElement(g.Xa, {
                             margin: {
                                 y: 1
                             }
-                        }), u.createElement(g.eb, {
+                        }), u.createElement(g.gb, {
                             height: 15,
                             width: 300
                         })), u.createElement(g.Xa, {
                             justifyContent: g.Wa.Center
-                        }, u.createElement(g.eb, {
+                        }, u.createElement(g.gb, {
                             height: 25,
                             width: 100
                         })))
                     }, t.prototype.renderLoadedBody = function() {
                         return u.createElement(u.Fragment, null, u.createElement(g.S, {
                             src: h.a,
-                            alt: Object(d.d)("Envelope fading into smoke", "MessagesPage")
+                            alt: Object(l.d)("Envelope fading into smoke", "MessagesPage")
                         }), u.createElement(g.Xa, {
                             margin: {
                                 y: 1
                             }
                         }, u.createElement(g.W, {
                             fontSize: g.Ca.Size5
-                        }, Object(d.d)("Messages have been deprecated due to legacy technology. This allows us to work on new ways for you to contact others on Twitch!", "MessagesPage")), u.createElement(g.Xa, {
+                        }, Object(l.d)("Messages have been deprecated due to legacy technology. This allows us to work on new ways for you to contact others on Twitch!", "MessagesPage")), u.createElement(g.Xa, {
                             margin: {
                                 y: .5
                             }
@@ -375,32 +371,32 @@
                             }
                         }), u.createElement(g.W, {
                             fontSize: g.Ca.Size5
-                        }, Object(d.d)('Streamers: You can still contact all your subscribers by clicking "Send e-mail to my subs" from the Channel Analytics page!', "MessagesPage"))), this.getDownloadContent())
+                        }, Object(l.d)('Streamers: You can still contact all your subscribers by clicking "Send e-mail to my subs" from the Channel Analytics page!', "MessagesPage"))), this.getDownloadContent())
                     }, t.prototype.getActionCopy = function() {
-                        return b() ? u.createElement(g.W, {
+                        return Object(b.a)() ? u.createElement(g.W, {
                             fontSize: g.Ca.Size5
-                        }, Object(d.d)("You can download old messages until November 1, 2018.", "MessagesPage")) : u.createElement(g.W, {
+                        }, Object(l.d)("You can download old messages until November 1, 2018.", "MessagesPage")) : u.createElement(g.W, {
                             fontSize: g.Ca.Size5
-                        }, Object(d.d)("Check back to download your old messages.", "MessagesPage"))
+                        }, Object(l.d)("Check back to download your old messages.", "MessagesPage"))
                     }, t.prototype.getDownloadContent = function() {
-                        return b() ? this.state.fileURL ? u.createElement(p, {
+                        return Object(b.a)() ? this.state.fileURL ? u.createElement(p, {
                             fileURL: this.state.fileURL
                         }) : u.createElement(g.W, {
                             bold: !0
-                        }, Object(d.d)("You have no messages to download.", "MessagesPage")) : null
+                        }, Object(l.d)("You have no messages to download.", "MessagesPage")) : null
                     }, t
-                }(u.Component),
+                }(u.Component)),
                 E = Object(s.compose)(Object(_.b)("MessagesPage", {
-                    destination: m.a.MessagesPage
+                    destination: y.a.MessagesPage
                 }))(v);
             var O = Object(r.connect)(function(e) {
                 return {
-                    sessionUser: Object(a.e)(e)
+                    sessionUser: Object(i.e)(e)
                 }
             }, function(e) {
                 return Object(s.bindActionCreators)({
                     login: function() {
-                        return Object(i.e)(o.a.MessagesPage)
+                        return Object(a.e)(o.a.MessagesPage)
                     }
                 }, e)
             })(E);

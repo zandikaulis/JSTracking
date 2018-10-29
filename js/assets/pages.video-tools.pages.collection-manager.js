@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [155], {
+    [157], {
         "/+vS": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -104,18 +104,18 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(v.a, null, r.createElement(k.Xa, null, r.createElement(k.eb, {
+                        return r.createElement(v.a, null, r.createElement(k.Xa, null, r.createElement(k.gb, {
                             height: 75,
                             width: 133
                         })), r.createElement(b.a, {
                             onClick: this.noOp
-                        }, r.createElement(k.W, null, r.createElement(k.eb, {
+                        }, r.createElement(k.W, null, r.createElement(k.gb, {
                             width: 600,
                             lineCount: 1
-                        }), r.createElement(k.eb, {
+                        }), r.createElement(k.gb, {
                             width: 200,
                             lineCount: 1
-                        }))), r.createElement(C.a, null, r.createElement(k.W, null, r.createElement(k.eb, {
+                        }))), r.createElement(C.a, null, r.createElement(k.W, null, r.createElement(k.gb, {
                             width: 40,
                             lineCount: 1
                         }))), r.createElement(k.Xa, {
@@ -127,7 +127,7 @@
                             alignItems: k.f.Center,
                             justifyContent: k.Wa.Center,
                             padding: 1
-                        }, r.createElement(k.W, null, r.createElement(k.eb, {
+                        }, r.createElement(k.W, null, r.createElement(k.gb, {
                             width: 20,
                             lineCount: 1
                         })))))
@@ -279,11 +279,11 @@
                                 top: 5
                             }
                         }, r.createElement(k.W, {
-                            type: k.Pb.H4
+                            type: k.Rb.H4
                         }, Object(a.d)("Put all your best videos in one spot.", "CollectionManager")), r.createElement(k.W, {
-                            type: k.Pb.H4
+                            type: k.Rb.H4
                         }, Object(a.d)("Videos organized into collections help your viewers easily find related content.", "CollectionManager")), r.createElement(k.W, {
-                            type: k.Pb.H4
+                            type: k.Rb.H4
                         }, Object(a.d)("Your most recently updated Collection will be featured at the top of channel’s video page.", "CollectionManager")))
                     }, t.prototype.contentUnavaibleError = function() {
                         return r.createElement(k.Xa, {
@@ -791,10 +791,10 @@
                             onClick: this.navigateToEdit
                         }, a.createElement(C.W, {
                             bold: !0,
-                            type: C.Pb.H4,
+                            type: C.Rb.H4,
                             color: C.O.Alt
-                        }, t.title), a.createElement(C.Sb, {
-                            direction: C.Ub.Bottom,
+                        }, t.title), a.createElement(C.Ub, {
+                            direction: C.Wb.Bottom,
                             label: Object(l.d)("Last Updated", "CollectionManagerCard")
                         }, a.createElement(C.W, {
                             color: C.O.Alt2
@@ -802,11 +802,11 @@
                     }, t.prototype.renderCardMenu = function() {
                         if (this.props.hideOptionsMenu || !this.props.collection.owner) return null;
                         var e = [{
-                            asset: C.pb.Edit,
+                            asset: C.rb.Edit,
                             linkTo: this.collectionEditLocationDescriptor(),
                             title: Object(l.d)("Edit", "CollectionManagerCard")
                         }, {
-                            asset: C.pb.Trash,
+                            asset: C.rb.Trash,
                             onClick: this.onDeleteOptionClickHandler,
                             title: Object(l.d)("Delete", "CollectionManagerCard")
                         }];
@@ -816,11 +816,11 @@
                     }, t.prototype.collectionStats = function(e) {
                         return [{
                             value: Object(c.b)(e.lengthSeconds),
-                            icon: C.pb.GlyphLength,
+                            icon: C.rb.GlyphLength,
                             label: Object(l.d)("Collection length", "CollectionManagerCard")
                         }, {
                             value: "" + e.viewCount,
-                            icon: C.pb.GlyphViews,
+                            icon: C.rb.GlyphViews,
                             label: Object(l.d)("Views", "CollectionManagerCard")
                         }].map(function(e, t) {
                             return a.createElement(h.a, r.__assign({
@@ -911,7 +911,7 @@
                                 fullHeight: !0,
                                 justifyContent: a.Wa.Center,
                                 padding: 2
-                            }, o.createElement(a.yb, {
+                            }, o.createElement(a.Ab, {
                                 icon: this.props.icon,
                                 label: this.props.label,
                                 value: this.props.value
@@ -1080,7 +1080,7 @@
                             delay: h.j.Short,
                             type: h.n.BounceIn,
                             enabled: !0
-                        }, r.createElement(h.zb, {
+                        }, r.createElement(h.Bb, {
                             border: !0,
                             margin: {
                                 bottom: 1
@@ -1096,7 +1096,7 @@
                             delay: h.j.Medium,
                             duration: h.k.Medium,
                             enabled: !0
-                        }, r.createElement(h.zb, {
+                        }, r.createElement(h.Bb, {
                             background: h.r.Base,
                             padding: {
                                 x: 3,
@@ -1226,7 +1226,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(r.zb, {
+                        return o.createElement(r.Bb, {
                             background: r.r.Base,
                             elevation: 1,
                             display: r.X.Flex,
@@ -1279,12 +1279,12 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e, t, n, i = null;
                         "number" == typeof this.props.videoCount && (i = l.createElement(f.Xa, {
-                            position: f.fb.Absolute,
+                            position: f.hb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             attachRight: !0,
                             attachBottom: !0
-                        }, l.createElement(f.zb, {
+                        }, l.createElement(f.Bb, {
                             alignItems: f.f.Center,
                             attachRight: !0,
                             className: "collection-preview-image__wrapper",
@@ -1294,10 +1294,10 @@
                             fontSize: f.Ca.Size5,
                             fullHeight: !0,
                             justifyContent: f.Wa.Center,
-                            position: f.fb.Absolute,
-                            textAlign: f.Lb.Center
-                        }, l.createElement(f.ob, {
-                            asset: f.pb.Collections,
+                            position: f.hb.Absolute,
+                            textAlign: f.Nb.Center
+                        }, l.createElement(f.qb, {
+                            asset: f.rb.Collections,
                             height: 20,
                             width: 20
                         }), l.createElement(f.W, {
@@ -1307,7 +1307,7 @@
                         }, "CollectionCard")))));
                         var a = r.Full;
                         return this.props.fallbackSize && (a = this.props.fallbackSize), !this.props.src || this.state.imageLoadError ? (t = h[a], (e = {})[a + "w"] = t, n = e) : (t = this.props.src, n = this.props.srcSet), l.createElement(f.Xa, {
-                            position: f.fb.Relative
+                            position: f.hb.Relative
                         }, l.createElement(f.S, {
                             alt: this.props.alt,
                             onError: this.onErrorHandler,
@@ -1327,7 +1327,7 @@
                 r = n("u5aL"),
                 a = n("Ue10"),
                 l = function(e) {
-                    var t = e.asset ? o.createElement(a.ob, {
+                    var t = e.asset ? o.createElement(a.qb, {
                         asset: e.asset
                     }) : null;
                     return o.createElement(a.Ua, {
@@ -1372,7 +1372,7 @@
                         flexGrow: 0,
                         flexShrink: 0,
                         display: a.X.Flex,
-                        position: a.fb.Relative
+                        position: a.hb.Relative
                     }, o.createElement(a.Pa, {
                         fullHeight: !0
                     }, o.createElement(r.a, {
@@ -1383,7 +1383,7 @@
                         alignItems: a.f.Stretch
                     }, o.createElement(a.z, {
                         disabled: 0 === this.props.options.length,
-                        icon: a.pb.More,
+                        icon: a.rb.More,
                         onClick: this.menuButtonClickHandler,
                         type: a.F.Text
                     })), e)))

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [200], {
+    [202], {
         "/ZC1": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -34,12 +34,12 @@
                             dragOver: this.state.isDraggingOver,
                             error: this.props.error
                         }, r.createElement(s.Pa, {
-                            position: s.fb.Absolute,
+                            position: s.hb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: s.cc.Above
+                            zIndex: s.ec.Above
                         }, r.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -80,9 +80,9 @@
             }), n.d(t, "r", function() {
                 return h
             }), n.d(t, "s", function() {
-                return g
-            }), n.d(t, "o", function() {
                 return _
+            }), n.d(t, "o", function() {
+                return g
             }), n.d(t, "t", function() {
                 return f
             }), n.d(t, "v", function() {
@@ -96,9 +96,9 @@
             }), n.d(t, "B", function() {
                 return O
             }), n.d(t, "b", function() {
-                return S
-            }), n.d(t, "a", function() {
                 return R
+            }), n.d(t, "a", function() {
+                return S
             }), n.d(t, "E", function() {
                 return A
             }), n.d(t, "F", function() {
@@ -110,11 +110,11 @@
             }), n.d(t, "D", function() {
                 return L
             }), n.d(t, "J", function() {
-                return P
-            }), n.d(t, "q", function() {
                 return U
-            }), n.d(t, "w", function() {
+            }), n.d(t, "q", function() {
                 return y
+            }), n.d(t, "w", function() {
+                return P
             }), n.d(t, "f", function() {
                 return F
             }), n.d(t, "g", function() {
@@ -122,9 +122,9 @@
             }), n.d(t, "x", function() {
                 return j
             }), n.d(t, "k", function() {
-                return w
-            }), n.d(t, "p", function() {
                 return k
+            }), n.d(t, "p", function() {
+                return w
             }), n.d(t, "u", function() {
                 return G
             }), n.d(t, "z", function() {
@@ -176,11 +176,11 @@
                 return r.PubsubTopic.PayoutOnboardingEvents + "." + e
             }
 
-            function g(e) {
+            function _(e) {
                 return r.PubsubTopic.Presence + "." + e
             }
 
-            function _(e, t) {
+            function g(e, t) {
                 return r.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
             }
 
@@ -208,11 +208,11 @@
                 return r.PubsubTopic.UserBitsUpdates + "." + e
             }
 
-            function S() {
+            function R() {
                 return r.PubsubTopic.BitsCampaignEvents + ".updates"
             }
 
-            function R(e) {
+            function S(e) {
                 return r.PubsubTopic.ChannelBitsPinEvents + "." + e
             }
 
@@ -236,15 +236,15 @@
                 return r.PubsubTopic.UserCommerceEvents + "." + e
             }
 
-            function P(e) {
+            function U(e) {
                 return r.PubsubTopic.Whispers + "." + e
             }
 
-            function U(e) {
+            function y(e) {
                 return r.PubsubTopic.OnsiteNotifications + "." + e
             }
 
-            function y(e) {
+            function P(e) {
                 return r.PubsubTopic.StreamChatRoom + "." + e
             }
 
@@ -260,11 +260,11 @@
                 return r.PubsubTopic.SubscribersCSV + "." + e
             }
 
-            function w(e) {
+            function k(e) {
                 return r.PubsubTopic.CheerbombEventsTopic + "." + e
             }
 
-            function k(e) {
+            function w(e) {
                 return r.PubsubTopic.MysteryGift + "." + e
             }
 
@@ -451,12 +451,12 @@
         By5U: function(e, t) {},
         DMoW: function(e, t, n) {
             "use strict";
-            var a, r, s, i, o, c, u, l, p, d, E, m, h, g, _, f, T, I, D, N, O, S, R, A, b, C, v, L, P, U, y, F, M, j, w, k, G, V, B, H, x, W, X, Y, z, K, q, Z, J, Q, $, ee, te, ne, ae, re, se, ie, oe, ce, ue, le, pe, de, Ee, me, he, ge, _e, fe, Te, Ie, De, Ne, Oe, Se, Re, Ae, be, Ce, ve, Le, Pe, Ue, ye, Fe, Me, je, we, ke, Ge, Ve, Be, He, xe, We, Xe, Ye, ze, Ke, qe, Ze, Je, Qe, $e, et, tt, nt, at, rt, st;
+            var a, r, s, i, o, c, u, l, p, d, E, m, h, _, g, f, T, I, D, N, O, R, S, A, b, C, v, L, U, y, P, F, M, j, k, w, G, V, B, H, x, W, Y, X, K, z, q, Z, J, Q, $, ee, te, ne, ae, re, se, ie, oe, ce, ue, le, pe, de, Ee, me, he, _e, ge, fe, Te, Ie, De, Ne, Oe, Re, Se, Ae, be, Ce, ve, Le, Ue, ye, Pe, Fe, Me, je, ke, we, Ge, Ve, Be, He, xe, We, Ye, Xe, Ke, ze, qe, Ze, Je, Qe, $e, et, tt, nt, at, rt, st, it, ot, ct;
             n.d(t, "c", function() {
                     return r
-                }), n.d(t, "F", function() {
+                }), n.d(t, "G", function() {
                     return o
-                }), n.d(t, "y", function() {
+                }), n.d(t, "x", function() {
                     return c
                 }), n.d(t, "g", function() {
                     return h
@@ -466,76 +466,80 @@
                     return I
                 }), n.d(t, "k", function() {
                     return O
-                }), n.d(t, "O", function() {
-                    return S
-                }), n.d(t, "H", function() {
+                }), n.d(t, "Q", function() {
                     return R
+                }), n.d(t, "I", function() {
+                    return S
                 }), n.d(t, "o", function() {
                     return A
                 }), n.d(t, "i", function() {
                     return v
-                }), n.d(t, "G", function() {
+                }), n.d(t, "H", function() {
                     return L
                 }), n.d(t, "b", function() {
                     return j
                 }), n.d(t, "q", function() {
-                    return w
+                    return k
                 }), n.d(t, "p", function() {
                     return G
-                }), n.d(t, "J", function() {
+                }), n.d(t, "K", function() {
                     return V
-                }), n.d(t, "L", function() {
-                    return B
-                }), n.d(t, "A", function() {
-                    return H
                 }), n.d(t, "M", function() {
+                    return B
+                }), n.d(t, "B", function() {
+                    return H
+                }), n.d(t, "N", function() {
                     return x
-                }), n.d(t, "r", function() {
+                }), n.d(t, "A", function() {
+                    return W
+                }), n.d(t, "z", function() {
                     return Y
                 }), n.d(t, "n", function() {
-                    return z
-                }), n.d(t, "K", function() {
+                    return X
+                }), n.d(t, "L", function() {
                     return K
                 }), n.d(t, "a", function() {
+                    return z
+                }), n.d(t, "t", function() {
                     return q
-                }), n.d(t, "u", function() {
+                }), n.d(t, "v", function() {
                     return Z
-                }), n.d(t, "w", function() {
-                    return J
-                }), n.d(t, "C", function() {
-                    return $
                 }), n.d(t, "D", function() {
-                    return ee
-                }), n.d(t, "B", function() {
-                    return ne
+                    return Q
                 }), n.d(t, "E", function() {
-                    return ae
-                }), n.d(t, "N", function() {
-                    return he
+                    return $
+                }), n.d(t, "C", function() {
+                    return te
+                }), n.d(t, "F", function() {
+                    return ne
+                }), n.d(t, "P", function() {
+                    return se
+                }), n.d(t, "O", function() {
+                    return me
                 }), n.d(t, "m", function() {
-                    return Se
+                    return Oe
                 }), n.d(t, "l", function() {
                     return Re
-                }), n.d(t, "P", function() {
-                    return ve
-                }), n.d(t, "z", function() {
+                }), n.d(t, "R", function() {
+                    return Ce
+                }), n.d(t, "y", function() {
                     return Me
-                }), n.d(t, "t", function() {
-                    return ke
+                }), n.d(t, "s", function() {
+                    return we
                 }), n.d(t, "j", function() {
                     return Ve
                 }), n.d(t, "h", function() {
                     return Be
-                }), n.d(t, "v", function() {
+                }), n.d(t, "u", function() {
                     return He
-                }), n.d(t, "I", function() {
+                }), n.d(t, "J", function() {
                     return We
-                }), n.d(t, "x", function() {
-                    return qe
+                }), n.d(t, "w", function() {
+                    return Qe
                 }), n.d(t, "d", function() {
-                    return at
-                }), n.d(t, "s", function() {
-                    return rt
+                    return it
+                }), n.d(t, "r", function() {
+                    return ot
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -578,10 +582,10 @@
                 }(h || (h = {})),
                 function(e) {
                     e.GET_BITS = "GET_BITS", e.GET_TURBO = "GET_TURBO", e.SUBSCRIBE = "SUBSCRIBE", e.VISIT_URL = "VISIT_URL"
-                }(g || (g = {})),
+                }(_ || (_ = {})),
                 function(e) {
                     e.ALLTIME = "ALLTIME", e.MONTH = "MONTH", e.WEEK = "WEEK"
-                }(_ || (_ = {})),
+                }(g || (g = {})),
                 function(e) {
                     e.AD = "AD", e.BUNDLE = "BUNDLE"
                 }(f || (f = {})),
@@ -602,10 +606,10 @@
                 }(O || (O = {})),
                 function(e) {
                     e.PRIVATE = "PRIVATE", e.PUBLIC = "PUBLIC"
-                }(S || (S = {})),
+                }(R || (R = {})),
                 function(e) {
                     e.ENDED = "ENDED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.UNKNOWN = "UNKNOWN"
-                }(R || (R = {})),
+                }(S || (S = {})),
                 function(e) {
                     e.ARCHIVES_DISABLED = "ARCHIVES_DISABLED", e.BROADCASTER_NOT_LIVE = "BROADCASTER_NOT_LIVE", e.BROADCAST_FORMAT_INVALID_PREMIERE = "BROADCAST_FORMAT_INVALID_PREMIERE", e.BROADCAST_FORMAT_INVALID_RERUN = "BROADCAST_FORMAT_INVALID_RERUN", e.INTERNAL_SERVER_ERROR = "INTERNAL_SERVER_ERROR", e.MAX_DESCRIPTION_LENGTH_EXCEEDED = "MAX_DESCRIPTION_LENGTH_EXCEEDED", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED", e.VOD_NOT_READY = "VOD_NOT_READY"
                 }(A || (A = {})),
@@ -623,13 +627,13 @@
                 }(L || (L = {})),
                 function(e) {
                     e.NEW_CHATTER = "NEW_CHATTER"
-                }(P || (P = {})),
-                function(e) {
-                    e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
                 }(U || (U = {})),
                 function(e) {
-                    e.FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.SUB_ONLY_MODE_ENFORCEMENT_FAILED = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT"
+                    e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
                 }(y || (y = {})),
+                function(e) {
+                    e.FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.SUB_ONLY_MODE_ENFORCEMENT_FAILED = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT"
+                }(P || (P = {})),
                 function(e) {
                     e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
                 }(F || (F = {})),
@@ -641,10 +645,10 @@
                 }(j || (j = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.SUCCESS = "SUCCESS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_MODERATOR = "TARGET_IS_MODERATOR"
-                }(w || (w = {})),
+                }(k || (k = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.TARGET_NOT_BANNED = "TARGET_NOT_BANNED", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
-                }(k || (k = {})),
+                }(w || (w = {})),
                 function(e) {
                     e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
                 }(G || (G = {})),
@@ -665,133 +669,133 @@
                 }(W || (W = {})),
                 function(e) {
                     e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
-                }(X || (X = {})),
-                function(e) {
-                    e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
                 }(Y || (Y = {})),
                 function(e) {
                     e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
-                }(z || (z = {})),
+                }(X || (X = {})),
                 function(e) {
                     e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
                 }(K || (K = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
-                }(q || (q = {})),
+                }(z || (z = {})),
                 function(e) {
                     e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
-                }(Z || (Z = {})),
+                }(q || (q = {})),
                 function(e) {
                     e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
-                }(J || (J = {})),
+                }(Z || (Z = {})),
                 function(e) {
                     e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
-                }(Q || (Q = {})),
+                }(J || (J = {})),
                 function(e) {
                     e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
-                }($ || ($ = {})),
+                }(Q || (Q = {})),
                 function(e) {
                     e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
-                }(ee || (ee = {})),
+                }($ || ($ = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
-                }(te || (te = {})),
+                }(ee || (ee = {})),
                 function(e) {
                     e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
-                }(ne || (ne = {})),
+                }(te || (te = {})),
                 function(e) {
                     e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
-                }(ae || (ae = {})),
-                function(e) {
-                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
-                }(re || (re = {})),
+                }(ne || (ne = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
-                }(se || (se = {})),
+                }(ae || (ae = {})),
                 function(e) {
                     e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
-                }(ie || (ie = {})),
+                }(re || (re = {})),
+                function(e) {
+                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                }(se || (se = {})),
                 function(e) {
                     e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
-                }(oe || (oe = {})),
+                }(ie || (ie = {})),
                 function(e) {
                     e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
-                }(ce || (ce = {})),
+                }(oe || (oe = {})),
                 function(e) {
                     e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
-                }(ue || (ue = {})),
+                }(ce || (ce = {})),
                 function(e) {
                     e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
-                }(le || (le = {})),
+                }(ue || (ue = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
-                }(pe || (pe = {})),
+                }(le || (le = {})),
                 function(e) {
                     e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
-                }(de || (de = {})),
+                }(pe || (pe = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
-                }(Ee || (Ee = {})),
+                }(de || (de = {})),
                 function(e) {
                     e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
-                }(me || (me = {})),
+                }(Ee || (Ee = {})),
                 function(e) {
                     e.CONTENT = "CONTENT", e.TOP = "TOP"
-                }(he || (he = {})),
+                }(me || (me = {})),
                 function(e) {
                     e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
-                }(ge || (ge = {})),
+                }(he || (he = {})),
                 function(e) {
                     e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(_e || (_e = {})),
                 function(e) {
                     e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
-                }(fe || (fe = {})),
+                }(ge || (ge = {})),
                 function(e) {
                     e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
-                }(Te || (Te = {})),
+                }(fe || (fe = {})),
                 function(e) {
                     e.GIFT_NOT_CLAIMABLE = "GIFT_NOT_CLAIMABLE", e.NON_EXISTENT_GIFT = "NON_EXISTENT_GIFT", e.UNKNOWN_ERROR = "UNKNOWN_ERROR", e.USER_DOES_NOT_OWN_GIFT = "USER_DOES_NOT_OWN_GIFT"
-                }(Ie || (Ie = {})),
+                }(Te || (Te = {})),
                 function(e) {
                     e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
-                }(De || (De = {})),
+                }(Ie || (Ie = {})),
                 function(e) {
                     e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
-                }(Ne || (Ne = {})),
+                }(De || (De = {})),
                 function(e) {
                     e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
-                }(Oe || (Oe = {})),
+                }(Ne || (Ne = {})),
                 function(e) {
                     e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
-                }(Se || (Se = {})),
+                }(Oe || (Oe = {})),
                 function(e) {
                     e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
                 }(Re || (Re = {})),
                 function(e) {
                     e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
-                }(Ae || (Ae = {})),
+                }(Se || (Se = {})),
                 function(e) {
                     e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
-                }(be || (be = {})),
+                }(Ae || (Ae = {})),
                 function(e) {
                     e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
-                }(Ce || (Ce = {})),
+                }(be || (be = {})),
                 function(e) {
                     e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
-                }(ve || (ve = {})),
+                }(Ce || (Ce = {})),
                 function(e) {
                     e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
-                }(Le || (Le = {})),
+                }(ve || (ve = {})),
                 function(e) {
                     e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
-                }(Pe || (Pe = {})),
+                }(Le || (Le = {})),
                 function(e) {
                     e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
                 }(Ue || (Ue = {})),
                 function(e) {
-                    e.ASC = "ASC", e.DESC = "DESC"
+                    e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
                 }(ye || (ye = {})),
+                function(e) {
+                    e.ASC = "ASC", e.DESC = "DESC"
+                }(Pe || (Pe = {})),
                 function(e) {
                     e.TIME = "TIME", e.VIEWS = "VIEWS"
                 }(Fe || (Fe = {})),
@@ -803,10 +807,10 @@
                 }(je || (je = {})),
                 function(e) {
                     e.BITS_KEY_CODE = "BITS_KEY_CODE"
-                }(we || (we = {})),
+                }(ke || (ke = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
-                }(ke || (ke = {})),
+                }(we || (we = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
                 }(Ge || (Ge = {})),
@@ -826,50 +830,59 @@
                     e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(We || (We = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
-                }(Xe || (Xe = {})),
-                function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
+                    e.SQUAD_NOT_FOUND = "SQUAD_NOT_FOUND", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(Ye || (Ye = {})),
                 function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
-                }(ze || (ze = {})),
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                }(Xe || (Xe = {})),
                 function(e) {
-                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(Ke || (Ke = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                }(ze || (ze = {})),
+                function(e) {
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }(qe || (qe = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(Ze || (Ze = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(Je || (Je = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }($e || ($e = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(et || (et = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(tt || (tt = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(nt || (nt = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(at || (at = {})),
                 function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(rt || (rt = {})),
                 function(e) {
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                }(st || (st = {})),
+                function(e) {
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                }(it || (it = {})),
+                function(e) {
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                }(ot || (ot = {})),
+                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(st || (st = {}))
+                }(ct || (ct = {}))
         },
         GD6M: function(e, t, n) {
             "use strict";
@@ -905,7 +918,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(c.Ib, {
+                        return r.createElement(c.Kb, {
                             onClick: this.onClick,
                             label: this.props.game.name
                         })
@@ -1007,7 +1020,7 @@
                         return r.createElement(c.Xa, null, r.createElement(i.a, {
                             onClickOut: this.onClickOut
                         }, r.createElement(c.Xa, {
-                            position: c.fb.Relative,
+                            position: c.hb.Relative,
                             padding: {
                                 bottom: 1
                             }
@@ -1030,7 +1043,7 @@
                 h = Object(s.compose)(Object(o.b)("DevGameSearch", {
                     autoReportInteractive: !0
                 }))(m),
-                g = function(e) {
+                _ = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1066,10 +1079,10 @@
                         })
                     }, t
                 }(r.Component),
-                _ = n("Svt6"),
+                g = n("Svt6"),
                 f = n("+GjP"),
                 T = n("1mFg"),
-                I = _.a + "/kraken/search/games",
+                I = g.a + "/kraken/search/games",
                 D = 7,
                 N = function(e) {
                     function t(t) {
@@ -1121,7 +1134,7 @@
                     }, t
                 }(r.Component);
             n.d(t, "a", function() {
-                return g
+                return _
             }), n.d(t, "b", function() {
                 return N
             })
@@ -1255,18 +1268,10 @@
                     return e.getTime() + 6e4 * e.getTimezoneOffset()
                 }(e))
             }
-
-            function s(e) {
-                return new Date(function(e) {
-                    return e.getTime() - 6e4 * e.getTimezoneOffset()
-                }(e))
-            }
-            n.d(t, "b", function() {
+            n.d(t, "a", function() {
                 return a
-            }), n.d(t, "c", function() {
+            }), n.d(t, "b", function() {
                 return r
-            }), n.d(t, "a", function() {
-                return s
             })
         },
         Ji7V: function(e, t) {
@@ -1397,8 +1402,8 @@
                 E = n("GIun"),
                 m = n("8/mp"),
                 h = n("GnwI"),
-                g = n("N0BP"),
-                _ = n("yLwq"),
+                _ = n("N0BP"),
+                g = n("yLwq"),
                 f = n("Ue10"),
                 T = function(e) {
                     function t() {
@@ -1408,13 +1413,13 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.user.avatar || Object(_.c)(this.props.user.id, 64);
+                        var e = this.props.user.avatar || Object(g.c)(this.props.user.id, 64);
                         return r.createElement(f.Xa, a.__assign({
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, Object(g.a)(this.props)), r.createElement(f.Ua, {
+                        }, Object(_.a)(this.props)), r.createElement(f.Ua, {
                             onClick: this.onSelect
                         }, r.createElement(f.G, {
                             row: !0
@@ -1426,14 +1431,14 @@
                         }), r.createElement(f.Xa, {
                             flexGrow: 1,
                             display: f.X.Flex,
-                            position: f.fb.Relative
+                            position: f.hb.Relative
                         }, r.createElement(f.Pa, {
                             padding: {
                                 x: 1
                             },
                             flexGrow: 1
                         }, r.createElement(f.W, {
-                            type: f.Pb.Span,
+                            type: f.Rb.Span,
                             ellipsis: !0
                         }, this.props.user.name))))))
                     }, t
@@ -1586,7 +1591,7 @@
                         })
                     }, t
                 }(r.Component);
-            var S = Object(s.connect)(function(e) {
+            var R = Object(s.connect)(function(e) {
                 return {
                     user: Object(c.e)(e)
                 }
@@ -1596,7 +1601,7 @@
             }), n.d(t, !1, function() {
                 return O
             }), n.d(t, "a", function() {
-                return S
+                return R
             })
         },
         Lxz1: function(e, t, n) {
@@ -1672,25 +1677,25 @@
                         padding: {
                             y: 1
                         },
-                        zIndex: o.cc.Above
-                    }, r.createElement(o.zb, {
+                        zIndex: o.ec.Above
+                    }, r.createElement(o.Bb, {
                         color: o.O.Alt2,
-                        textAlign: o.Lb.Center,
+                        textAlign: o.Nb.Center,
                         flexShrink: 1
-                    }, r.createElement(o.ob, {
-                        asset: o.pb.DeadGlitch,
+                    }, r.createElement(o.qb, {
+                        asset: o.rb.DeadGlitch,
                         width: 46,
                         height: 48
                     })), r.createElement(o.Pa, {
                         margin: {
                             top: 1
                         },
-                        textAlign: o.Lb.Center
+                        textAlign: o.Nb.Center
                     }, r.createElement(o.W, {
-                        type: o.Pb.H4,
+                        type: o.Rb.H4,
                         "data-test-selector": "search-error-message"
                     }, Object(i.d)("Search is not available at this time", "DropdownSearchError"))), r.createElement(o.W, {
-                        type: o.Pb.P
+                        type: o.Rb.P
                     }, Object(i.d)("Please try again later", "DropdownSearchError")))
                 },
                 u = n("8Ad5"),
@@ -1734,7 +1739,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = void 0 === this.props.showDropdown || this.props.showDropdown,
                             t = this.props.isErrored ? r.createElement(c, null) : r.Children.only(this.props.children),
-                            n = r.createElement(o.rb, {
+                            n = r.createElement(o.tb, {
                                 onChange: this.handleChange,
                                 onKeyDown: this.onKeyDown,
                                 onBlur: this.handleBlur,
@@ -1749,13 +1754,13 @@
                             });
                         return this.props.inline ? r.createElement(s.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(o.zb, {
+                        }, r.createElement(o.Bb, {
                             background: this.state.isInputFocused || this.state.isOpen ? o.r.Base : void 0,
                             borderRadius: o.x.Large,
                             padding: .5,
-                            position: o.fb.Relative,
+                            position: o.hb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, n, e && r.createElement(o.zb, {
+                        }, n, e && r.createElement(o.Bb, {
                             attachLeft: !0,
                             background: o.r.Base,
                             borderRadius: o.x.Large,
@@ -1764,8 +1769,8 @@
                             padding: {
                                 y: 1
                             },
-                            position: o.fb.Absolute,
-                            zIndex: o.cc.Above,
+                            position: o.hb.Absolute,
+                            zIndex: o.ec.Above,
                             elevation: 3
                         }, r.createElement("div", {
                             tabIndex: 0,
@@ -1822,31 +1827,31 @@
                             error: !!this.props.errorMessage
                         }, r.createElement(o.Xa, {
                             className: "image-uploader",
-                            textAlign: o.Lb.Center,
+                            textAlign: o.Nb.Center,
                             display: o.X.Flex,
                             flexDirection: o.Aa.Column,
                             alignItems: o.f.Center,
                             justifyContent: o.Wa.Center,
-                            position: o.fb.Relative,
+                            position: o.hb.Relative,
                             fullHeight: !0,
                             fullWidth: !0
                         }, this.renderErrorMessage(), r.createElement(o.Xa, {
-                            position: o.fb.Relative
+                            position: o.hb.Relative
                         }, r.createElement(o.Xa, {
                             className: "image-uploader__upload-svg--anim-backfill"
-                        }, r.createElement(o.ob, {
-                            asset: o.pb.Upload,
-                            type: o.qb.Alt2,
+                        }, r.createElement(o.qb, {
+                            asset: o.rb.Upload,
+                            type: o.sb.Alt2,
                             width: this.props.iconWidth || 99,
                             height: this.props.iconWidth || 76
                         })), r.createElement(o.Xa, {
                             className: "image-uploader__upload-svg--anim-fill",
-                            position: o.fb.Absolute,
+                            position: o.hb.Absolute,
                             display: this.props.isLoading ? o.X.Block : o.X.Hide,
                             attachTop: !0
-                        }, r.createElement(o.ob, {
-                            asset: o.pb.Upload,
-                            type: o.qb.Brand,
+                        }, r.createElement(o.qb, {
+                            asset: o.rb.Upload,
+                            type: o.sb.Brand,
                             width: this.props.iconWidth || 99,
                             height: this.props.iconHeight || 76
                         }))), this.props.isLoading ? this.renderLoadingState() : this.renderNormalState()))
@@ -1855,12 +1860,12 @@
                             margin: 1,
                             "data-test-selector": "image-uploader-loading"
                         }, r.createElement(o.W, {
-                            type: o.Pb.H4
+                            type: o.Rb.H4
                         }, Object(s.d)("Uploading", "ImageUploader")))
                     }, t.prototype.renderNormalState = function() {
                         var e = Object(s.d)("Browse", "ImageUploader");
                         return r.createElement(o.Xa, null, r.createElement(o.Xa, null, r.createElement(o.W, {
-                            type: o.Pb.H4
+                            type: o.Rb.H4
                         }, Object(s.d)("Drag and drop your image here", "ImageUploader"))), r.createElement(o.Xa, {
                             margin: {
                                 bottom: 2
@@ -1872,7 +1877,7 @@
                             fullWidth: !0,
                             "data-test-selector": "image-uploader-hint"
                         }, r.createElement(o.W, {
-                            type: o.Pb.P,
+                            type: o.Rb.P,
                             fontSize: o.Ca.Size7,
                             color: o.O.Alt2
                         }, this.props.hintMessage)), r.createElement(o.Xa, null, r.createElement(o.z, {
@@ -1886,7 +1891,7 @@
                             },
                             "data-test-selector": "image-uploader-error"
                         }, r.createElement(o.W, {
-                            type: o.Pb.H5,
+                            type: o.Rb.H5,
                             color: o.O.Error,
                             bold: !0
                         }, this.props.errorMessage))
@@ -2092,9 +2097,9 @@
                             E = void 0 === d ? "" : d,
                             m = s.numericFilters,
                             h = s.restrictSearchableAttributes,
-                            g = void 0 === h ? [] : h;
+                            _ = void 0 === h ? [] : h;
                         return a.__awaiter(this, void 0, void 0, function() {
-                            var r, s, i, u, d, h, _, f, T = this;
+                            var r, s, i, u, d, h, g, f, T = this;
                             return a.__generator(this, function(I) {
                                 switch (I.label) {
                                     case 0:
@@ -2116,7 +2121,7 @@
                                                                     numericFilters: m || e.singleTypeNumericFilters,
                                                                     facets: "*",
                                                                     facetFilters: E,
-                                                                    restrictSearchableAttributes: g
+                                                                    restrictSearchableAttributes: _
                                                                 }
                                                             }, [4, this.query([n])];
                                                         case 1:
@@ -2162,9 +2167,9 @@
                                     case 8:
                                         return h.videos = I.sent(), [3, 14];
                                     case 9:
-                                        return _ = r, [4, s(p.streamTags)];
+                                        return g = r, [4, s(p.streamTags)];
                                     case 10:
-                                        return _.streamTags = I.sent(), [3, 14];
+                                        return g.streamTags = I.sent(), [3, 14];
                                     case 11:
                                         return f = r, [4, s(p.tags)];
                                     case 12:
@@ -2329,9 +2334,9 @@
                 E = n("NvVO"),
                 m = n("2xye"),
                 h = n("GnwI"),
-                g = n("1mFg");
+                _ = n("1mFg");
 
-            function _(e) {
+            function g(e) {
                 return !e.legacy && e.curseCompanyId && -1 !== e.curseCompanyId ? e.curseCompanyId.toString() : e.id
             }
             var f = n("fy8Z");
@@ -2362,15 +2367,15 @@
             }
             var D, N = n("0xbx"),
                 O = n("Ue10"),
-                S = n("HGFl"),
-                R = n("JQ82"),
+                R = n("HGFl"),
+                S = n("JQ82"),
                 A = function(e) {
-                    var t = Object(S.b)(Object(R.c)(e.campaign.startDate), "MM/DD/YYYY, hh:mm a"),
-                        n = Object(S.b)(Object(R.c)(e.campaign.endDate), "MM/DD/YYYY, hh:mm a"),
+                    var t = Object(R.b)(Object(S.b)(e.campaign.startDate), "MM/DD/YYYY, hh:mm a"),
+                        n = Object(R.b)(Object(S.b)(e.campaign.endDate), "MM/DD/YYYY, hh:mm a"),
                         a = "/console/drops/" + e.campaign.id;
-                    return r.createElement(O.Hb, null, r.createElement(O.Eb, null, r.createElement(O.U, {
+                    return r.createElement(O.Jb, null, r.createElement(O.Gb, null, r.createElement(O.U, {
                         linkTo: a
-                    }, e.campaign.name)), r.createElement(O.Eb, null, e.campaign.id), r.createElement(O.Eb, null, t), r.createElement(O.Eb, null, n), r.createElement(O.Eb, null, e.campaign.enabled.toString()))
+                    }, e.campaign.name)), r.createElement(O.Gb, null, e.campaign.id), r.createElement(O.Gb, null, t), r.createElement(O.Gb, null, n), r.createElement(O.Gb, null, e.campaign.enabled.toString()))
                 };
             ! function(e) {
                 e[e.Enabled = 0] = "Enabled", e[e.EndDate = 1] = "EndDate", e[e.Id = 2] = "Id", e[e.Name = 3] = "Name", e[e.StartDate = 4] = "StartDate"
@@ -2379,11 +2384,11 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            sortingName: O.wb.Default,
-                            sortingId: O.wb.Default,
-                            sortingStartDate: O.wb.Default,
-                            sortingEndDate: O.wb.Default,
-                            sortingEnabled: O.wb.Default
+                            sortingName: O.yb.Default,
+                            sortingId: O.yb.Default,
+                            sortingStartDate: O.yb.Default,
+                            sortingEndDate: O.yb.Default,
+                            sortingEnabled: O.yb.Default
                         }, t.renderCampaignItems = function() {
                             return t.props.campaigns.map(function(e) {
                                 return r.createElement(A, {
@@ -2424,7 +2429,7 @@
                                 t.props.onSort(D.Enabled, t.state.sortingEnabled)
                             })
                         }, t.toggleSorting = function(e) {
-                            return e === O.wb.Default || e === O.wb.Ascending ? O.wb.Descending : O.wb.Ascending
+                            return e === O.yb.Default || e === O.yb.Ascending ? O.yb.Descending : O.yb.Ascending
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
@@ -2440,26 +2445,26 @@
                         }, r.createElement(O.z, {
                             onClick: Object(c.c)(c.a.CreateDropsProcessStart),
                             linkTo: "/console/drops/create",
-                            icon: O.pb.Plus
-                        }, Object(o.d)("Create Drops Campaign", "DevDropsCampaigns"))), r.createElement(O.Cb, null, r.createElement(O.Fb, null, r.createElement(O.Gb, {
+                            icon: O.rb.Plus
+                        }, Object(o.d)("Create Drops Campaign", "DevDropsCampaigns"))), r.createElement(O.Eb, null, r.createElement(O.Hb, null, r.createElement(O.Ib, {
                             label: Object(o.d)("Campaign Name", "DevDropsCampaigns"),
                             sorting: this.state.sortingName,
                             onClick: this.sortName
-                        }), r.createElement(O.Gb, {
+                        }), r.createElement(O.Ib, {
                             label: Object(o.d)("Campaign ID", "DevDropsCampaigns")
-                        }), r.createElement(O.Gb, {
+                        }), r.createElement(O.Ib, {
                             label: Object(o.d)("Start Date (UTC)", "DevDropsCampaigns"),
                             sorting: this.state.sortingStartDate,
                             onClick: this.sortStartDate
-                        }), r.createElement(O.Gb, {
+                        }), r.createElement(O.Ib, {
                             label: Object(o.d)("End Date (UTC)", "DevDropsCampaigns"),
                             sorting: this.state.sortingEndDate,
                             onClick: this.sortEndDate
-                        }), r.createElement(O.Gb, {
+                        }), r.createElement(O.Ib, {
                             label: Object(o.d)("Enabled", "DevDropsCampaigns"),
                             sorting: this.state.sortingEnabled,
                             onClick: this.sortEnabled
-                        })), r.createElement(O.Db, null, e)))
+                        })), r.createElement(O.Fb, null, e)))
                     }, t
                 }(r.Component),
                 C = Object(l.compose)(Object(h.b)("DevDropsCampaignsComponent", {
@@ -2478,7 +2483,7 @@
                                         case 0:
                                             return [4, Object(N.a)(f.a.GetCampaignsByCompany)];
                                         case 1:
-                                            return (e = a.sent()) ? (t = _(this.props.company), n = d.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(g.a)(n, {
+                                            return (e = a.sent()) ? (t = g(this.props.company), n = d.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(_.a)(n, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": e
                                                 }
@@ -2510,7 +2515,7 @@
                         }, t.onSort = function(e, n) {
                             switch (e) {
                                 case D.Name:
-                                    n === O.wb.Ascending ? t.setState(function(e) {
+                                    n === O.yb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.name.localeCompare(t.name)
@@ -2525,7 +2530,7 @@
                                     });
                                     break;
                                 case D.Id:
-                                    n === O.wb.Ascending ? t.setState(function(e) {
+                                    n === O.yb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.id.localeCompare(t.id)
@@ -2540,7 +2545,7 @@
                                     });
                                     break;
                                 case D.StartDate:
-                                    n === O.wb.Ascending ? t.setState(function(e) {
+                                    n === O.yb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.startDate.getTime() - t.startDate.getTime()
@@ -2555,7 +2560,7 @@
                                     });
                                     break;
                                 case D.EndDate:
-                                    n === O.wb.Ascending ? t.setState(function(e) {
+                                    n === O.yb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.endDate.getTime() - t.endDate.getTime()
@@ -2570,7 +2575,7 @@
                                     });
                                     break;
                                 case D.Enabled:
-                                    n === O.wb.Ascending ? t.setState(function(e) {
+                                    n === O.yb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return Number(e.enabled) - Number(t.enabled)
@@ -2601,14 +2606,14 @@
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsCampaigns
                 }), Object(u.a)())(v),
-                P = n("9C/b"),
-                U = n("DMoW"),
-                y = n("PZVp"),
+                U = n("9C/b"),
+                y = n("DMoW"),
+                P = n("PZVp"),
                 F = n("/aPz"),
                 M = n("2/NB"),
                 j = n("Lxz1"),
-                w = 1e4,
-                k = function() {
+                k = 1e4,
+                w = function() {
                     return function(e, t) {
                         var n = this;
                         this.getUploadURL = e, this.onFinishUploading = t, this.uploadFile = function(e) {
@@ -2630,7 +2635,7 @@
                                                     success: function() {
                                                         l.timeoutID = setTimeout(function() {
                                                             l.unsubscribe(), r(new Error(Object(j.d)()))
-                                                        }, w)
+                                                        }, k)
                                                     },
                                                     failure: function() {
                                                         clearTimeout(l.timeoutID), r(new Error(Object(j.d)()))
@@ -2638,17 +2643,17 @@
                                                     onMessage: function(e) {
                                                         if (e.upload_id === i) {
                                                             switch (clearTimeout(l.timeoutID), e.status) {
-                                                                case y.a.POSTPROCESS_COMPLETE:
+                                                                case P.a.POSTPROCESS_COMPLETE:
                                                                     l.onFinishUploading && l.onFinishUploading(), t();
                                                                     break;
-                                                                case y.a.WIDTH_VALIDATION_FAILED:
-                                                                case y.a.HEIGHT_VALIDATION_FAILED:
+                                                                case P.a.WIDTH_VALIDATION_FAILED:
+                                                                case P.a.HEIGHT_VALIDATION_FAILED:
                                                                     r(new Error(Object(j.c)()));
                                                                     break;
-                                                                case y.a.FILE_SIZE_VALIDATION_FAILED:
+                                                                case P.a.FILE_SIZE_VALIDATION_FAILED:
                                                                     r(new Error(Object(j.a)()));
                                                                     break;
-                                                                case y.a.IS_IMAGE_VALIDATION_FAILED:
+                                                                case P.a.IS_IMAGE_VALIDATION_FAILED:
                                                                     r(new Error(Object(j.b)(M.b)));
                                                                     break;
                                                                 default:
@@ -2677,7 +2682,7 @@
                     return a.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
-                                return e = [], [4, Object(g.a)(G)];
+                                return e = [], [4, Object(_.a)(G)];
                             case 1:
                                 return 200 !== (t = a.sent()).status ? [3, 3] : [4, t.json()];
                             case 2:
@@ -2714,7 +2719,7 @@
                                     after: s,
                                     before: r,
                                     limit: i
-                                })) && (c += "?" + u), [4, Object(g.a)(c, {
+                                })) && (c += "?" + u), [4, Object(_.a)(c, {
                                     headers: {
                                         "X-Twitch-VHSCF": o
                                     }
@@ -2748,18 +2753,18 @@
             }
             var x = n("/MKj"),
                 W = n("aCAx"),
-                X = n("HEnu"),
-                Y = n("cZKs"),
-                z = n("NLLf"),
-                K = (n("TofP"), function(e) {
+                Y = n("HEnu"),
+                X = n("cZKs"),
+                K = n("NLLf"),
+                z = (n("TofP"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(O.zb, {
+                        return r.createElement(O.Bb, {
                             className: "image-uploader-modal",
                             background: O.r.Base
-                        }, r.createElement(z.a, a.__assign({}, this.props)), r.createElement(Y.a, {
+                        }, r.createElement(K.a, a.__assign({}, this.props)), r.createElement(X.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t
@@ -2768,7 +2773,7 @@
                     return Object(l.bindActionCreators)({
                         onClose: W.c
                     }, e)
-                })(K),
+                })(z),
                 Z = n("u5aL");
             n("ev0B");
             var J, Q = function(e) {
@@ -2808,7 +2813,7 @@
                                 }, t))
                             });
                         return r.createElement(O.Xa, {
-                            position: O.fb.Relative,
+                            position: O.hb.Relative,
                             className: "time-picker"
                         }, r.createElement(Z.a, {
                             onClickOut: this.onClickOut
@@ -2822,15 +2827,15 @@
                             noTail: !0,
                             show: this.state.isOpen,
                             "data-a-target": "time-selector-balloon"
-                        }, r.createElement(O.zb, {
+                        }, r.createElement(O.Bb, {
                             color: O.O.Link,
                             fontSize: O.Ca.Size5,
                             className: "time-picker__dropdown"
                         }, n))))
                     }, t.prototype.notifyChange = function(e) {
-                        this.props.onChange && this.props.onChange(Object(S.d)(e, this.props.defaultDate))
+                        this.props.onChange && this.props.onChange(Object(R.d)(e, this.props.defaultDate))
                     }, t.prototype.timeToString = function(e) {
-                        return Object(S.b)(e, S.a.timeString)
+                        return Object(R.b)(e, R.a.timeString)
                     }, t.timeOptions = function() {
                         for (var e = [], t = ["00", "30"], n = 0, a = ["am", "pm"]; n < a.length; n++)
                             for (var r = a[n], s = 0; s < 12; ++s)
@@ -2945,7 +2950,7 @@
                                 size: 80
                             }) : null
                         }, n.renderErrorMessage = function() {
-                            if (n.props.errorMessage) return r.createElement(O.zb, {
+                            if (n.props.errorMessage) return r.createElement(O.Bb, {
                                 className: "dev-drops-campaign-form__error",
                                 color: O.O.Overlay,
                                 "data-test-selector": ae.Error,
@@ -3058,7 +3063,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return e.preventDefault(), t = this.timeWithoutSeconds(this.state.startDate, Object(R.a)(this.state.startTime)), n = this.timeWithoutSeconds(this.state.endDate, Object(R.a)(this.state.endTime)), r = {
+                                            return e.preventDefault(), t = this.campaignDate(this.state.startDate, this.state.startTime), n = this.campaignDate(this.state.endDate, this.state.endTime), r = {
                                                 connectionURL: this.state.connectionURL,
                                                 enabled: this.state.enabled,
                                                 endTime: n,
@@ -3086,10 +3091,10 @@
                             o = new Date(t.campaign.end_date / 1e6);
                         n.state = {
                             campaignId: t.campaign.id,
-                            startDate: Object(R.c)(i),
-                            startTime: Object(R.c)(i),
-                            endDate: Object(R.c)(o),
-                            endTime: Object(R.c)(o),
+                            startDate: Object(S.b)(i),
+                            startTime: Object(S.b)(i),
+                            endDate: Object(S.b)(o),
+                            endTime: Object(S.b)(o),
                             games: s,
                             isSubmitting: !1,
                             itemIds: new Set(t.campaign.item_ids),
@@ -3105,14 +3110,14 @@
                         channels: [],
                         connectionURL: "",
                         enabled: !1,
-                        endDate: new Date,
-                        endTime: Object(R.b)(),
+                        endDate: Object(S.a)(),
+                        endTime: Object(S.a)(),
                         games: [],
                         isSubmitting: !1,
                         itemIds: new Set,
                         itemName: "",
-                        startDate: new Date,
-                        startTime: Object(R.b)(),
+                        startDate: Object(S.a)(),
+                        startTime: Object(S.a)(),
                         valid: !1
                     };
                     return n
@@ -3167,7 +3172,7 @@
                         }
                     }, r.createElement(O.Ea, {
                         label: Object(o.d)("Start Date/Time (UTC)", "DevDropsCampaignForm")
-                    }, r.createElement(X.a, {
+                    }, r.createElement(Y.a, {
                         onChange: this.onStartDate,
                         defaultDate: this.state.startDate
                     }), r.createElement(Q, {
@@ -3180,7 +3185,7 @@
                         }
                     }, r.createElement(O.Ea, {
                         label: Object(o.d)("End Date/Time (UTC)", "DevDropsCampaignForm")
-                    }, r.createElement(X.a, {
+                    }, r.createElement(Y.a, {
                         onChange: this.onEndDate,
                         defaultDate: this.state.endDate
                     }), r.createElement(Q, {
@@ -3262,23 +3267,23 @@
                             top: 1
                         }
                     }, r.createElement(O.W, {
-                        type: O.Pb.H3
+                        type: O.Rb.H3
                     }, Object(o.d)("Items", "DevDropsCampaignForm"))), r.createElement("fieldset", null, r.createElement(O.Pa, {
                         padding: {
                             y: 1
                         }
                     }, r.createElement("legend", null, r.createElement(O.W, null, Object(o.d)("Select up to {MAX_DROPS_ITEMS_PER_CAMPAIGN} of your currently active items", {
                         MAX_DROPS_ITEMS_PER_CAMPAIGN: $.b
-                    }, "DevDropsCampaignForm")))), r.createElement(O.Vb, {
-                        childWidth: O.Wb.ExtraSmall,
-                        gutterSize: O.Xb.Small,
+                    }, "DevDropsCampaignForm")))), r.createElement(O.Xb, {
+                        childWidth: O.Yb.ExtraSmall,
+                        gutterSize: O.Zb.Small,
                         placeholderItems: 20
                     }, this.props.availableItems.map(function(t, n) {
                         var a = t.translations[t.defaultLanguage],
                             s = e.state.itemIds.has(t.id);
                         return r.createElement(O.Xa, {
                             key: n,
-                            position: O.fb.Relative,
+                            position: O.hb.Relative,
                             className: "drops-item-selector-container",
                             margin: {
                                 bottom: 2
@@ -3294,16 +3299,16 @@
                             src: $.a + "/items/" + e.props.companyId + "/" + t.id + "-120x120.jpg",
                             type: O.Ma.Checkbox,
                             value: t.id
-                        })), s && r.createElement(O.zb, {
+                        })), s && r.createElement(O.Bb, {
                             display: O.X.InlineFlex,
                             alignItems: O.f.Center,
                             justifyContent: O.Wa.Center,
                             background: O.r.Accent,
-                            position: O.fb.Absolute,
+                            position: O.hb.Absolute,
                             color: O.O.Overlay,
                             attachTop: !0
-                        }, r.createElement(O.ob, {
-                            asset: O.pb.Check
+                        }, r.createElement(O.qb, {
+                            asset: O.rb.Check
                         })), r.createElement(O.W, {
                             bold: s,
                             ellipsis: !0
@@ -3326,9 +3331,8 @@
                         onClick: this.onSubmit,
                         state: n
                     }, Object(o.d)("Submit", "DevDropsCampaignForm"))))
-                }, t.prototype.timeWithoutSeconds = function(e, t) {
-                    var n = 0;
-                    return t.getHours() + t.getTimezoneOffset() / 60 > 24 && (n = -1), new Date(e.getFullYear(), e.getMonth(), e.getDate() + n, t.getHours(), t.getMinutes())
+                }, t.prototype.campaignDate = function(e, t) {
+                    return new Date(Date.UTC(e.getFullYear(), e.getMonth(), e.getDate(), t.getHours(), t.getMinutes()))
                 }, t
             }(r.Component);
             var le = Object(x.connect)(null, function(e) {
@@ -3406,7 +3410,7 @@
                                 return a.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            e = _(this.props.company), n.label = 1;
+                                            e = g(this.props.company), n.label = 1;
                                         case 1:
                                             return n.trys.push([1, 3, , 4]), [4, H({
                                                 activeOnly: !0,
@@ -3432,9 +3436,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 12, , 13]), t = _(this.props.company), n = T(e, t), [4, Object(N.a)(f.a.PostCampaign)];
+                                            return a.trys.push([0, 12, , 13]), t = g(this.props.company), n = T(e, t), [4, Object(N.a)(f.a.PostCampaign)];
                                         case 1:
-                                            return (r = a.sent()) ? (s = d.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(g.a)(s, {
+                                            return (r = a.sent()) ? (s = d.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(_.a)(s, {
                                                 method: "POST",
                                                 body: JSON.stringify(n),
                                                 headers: {
@@ -3480,7 +3484,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            t = new k(this.generateUploadURL(n), this.onFinishUpload), a.label = 1;
+                                            t = new w(this.generateUploadURL(n), this.onFinishUpload), a.label = 1;
                                         case 1:
                                             return a.trys.push([1, 3, , 4]), [4, t.uploadFile(e)];
                                         case 2:
@@ -3504,8 +3508,8 @@
                                             case 1:
                                                 if (t = a.sent()) return n = {
                                                     campaignID: e,
-                                                    imageType: U.s.LINK_NOTIFICATION,
-                                                    serviceID: _(this.props.company),
+                                                    imageType: y.r.LINK_NOTIFICATION,
+                                                    serviceID: g(this.props.company),
                                                     token: t
                                                 }, [2, this.props.createUploadURLMutation(n)];
                                                 throw new Error("Failed to upload")
@@ -3537,7 +3541,7 @@
                             display: O.X.Flex,
                             justifyContent: O.Wa.Between
                         }, r.createElement(O.W, {
-                            type: O.Pb.H2
+                            type: O.Rb.H2
                         }, Object(o.d)("Drops Campaign", "DevDropsCreateCampaign")), r.createElement(O.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
@@ -3561,8 +3565,8 @@
                     destination: E.a.DevSiteDropsCreateCampaign
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsCreateCampaign
-                }), de(), Object(u.a)(), P.a)(me),
-                ge = function(e) {
+                }), de(), Object(u.a)(), U.a)(me),
+                _e = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3587,18 +3591,18 @@
             ! function(e) {
                 e.DefaultLocaleSelect = "dev-drops-item-form-language-field", e.Error = "dev-drops-item-form-error", e.FileButton = "dev-drops-item-form-file-button", e.SubmitButton = "dev-drops-item-form-submit-button"
             }(Ee || (Ee = {}));
-            var _e = function(e) {
+            var ge = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderDropsItemImage = function() {
-                        return n.props.item ? r.createElement(ge, {
+                        return n.props.item ? r.createElement(_e, {
                             id: n.props.item.ItemID,
                             companyId: n.props.companyId,
                             name: n.props.item.Translations[n.props.item.DefaultLanguage],
                             size: 120
                         }) : null
                     }, n.renderErrorMessage = function() {
-                        if (n.props.errorMessage) return r.createElement(O.zb, {
+                        if (n.props.errorMessage) return r.createElement(O.Bb, {
                             className: "dev-drops-item-form__error",
                             color: O.O.Overlay,
                             "data-test-selector": Ee.Error,
@@ -3759,7 +3763,7 @@
                         var n = o.a.locales.find(function(e) {
                             return e.locale === t
                         });
-                        if (n) return r.createElement(O.zb, {
+                        if (n) return r.createElement(O.Bb, {
                             key: t,
                             padding: {
                                 bottom: 1
@@ -3786,7 +3790,7 @@
                         }, Object(o.d)("Remove", "DevDropsItemForm"))))))
                     }), r.createElement(O.Ja, null, r.createElement(O.P, {
                         cols: 4
-                    }, r.createElement(O.vb, {
+                    }, r.createElement(O.xb, {
                         refDelegate: this.setLocaleSelectorRef
                     }, o.a.locales.filter(function(t) {
                         return !e.state.translations[t.locale]
@@ -3820,7 +3824,7 @@
                     }, r.createElement(O.Ea, {
                         label: Object(o.d)("Default Locale for Item Name", "DevDropsItemForm"),
                         hint: Object(o.d)("The locale to use when no value is provided in the viewer's locale.", "DevDropsItemForm")
-                    }, r.createElement(O.vb, {
+                    }, r.createElement(O.xb, {
                         value: this.state.defaultLocale,
                         onChange: this.setDefaultLocale,
                         "data-test-selector": Ee.DefaultLocaleSelect
@@ -3853,7 +3857,7 @@
                     return Object(l.bindActionCreators)({
                         showModal: W.d
                     }, e)
-                })(_e),
+                })(ge),
                 De = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -3865,9 +3869,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 13, , 14]), t = _(this.props.company), [4, Object(N.a)(f.a.CreateItem)];
+                                            return a.trys.push([0, 13, , 14]), t = g(this.props.company), [4, Object(N.a)(f.a.CreateItem)];
                                         case 1:
-                                            return (n = a.sent()) ? (r = I(e, t, n), s = d.a + "/kraken/accounts/" + t + "/items", [4, Object(g.a)(s, {
+                                            return (n = a.sent()) ? (r = I(e, t, n), s = d.a + "/kraken/accounts/" + t + "/items", [4, Object(_.a)(s, {
                                                 method: "POST",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -3917,7 +3921,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            t = new k(this.generateUploadURL(n), this.onFinishUpload), a.label = 1;
+                                            t = new w(this.generateUploadURL(n), this.onFinishUpload), a.label = 1;
                                         case 1:
                                             return a.trys.push([1, 3, , 4]), [4, t.uploadFile(e)];
                                         case 2:
@@ -3940,9 +3944,9 @@
                                                 return [4, Object(N.a)(f.a.PostItemImageUrl)];
                                             case 1:
                                                 if (t = a.sent()) return n = {
-                                                    imageType: U.s.ITEM,
+                                                    imageType: y.r.ITEM,
                                                     itemID: e,
-                                                    serviceID: _(this.props.company),
+                                                    serviceID: g(this.props.company),
                                                     token: t
                                                 }, [2, this.props.createUploadURLMutation(n)];
                                                 throw new Error("Failed to upload")
@@ -3963,7 +3967,7 @@
                             display: O.X.Flex,
                             justifyContent: O.Wa.Between
                         }, r.createElement(O.W, {
-                            type: O.Pb.H2
+                            type: O.Rb.H2
                         }, Object(o.d)("Drops Item", "DevDropsCreateItem")), r.createElement(O.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
@@ -3974,7 +3978,7 @@
                                 md: 5
                             }
                         }, r.createElement(Ie, {
-                            companyId: _(this.props.company),
+                            companyId: g(this.props.company),
                             onCancel: this.onCancel,
                             onSubmit: this.onSubmit,
                             errorMessage: this.state.errorMessage
@@ -3986,7 +3990,7 @@
                     destination: E.a.DevSiteDropsCreateItem
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsCreateItem
-                }), de(), Object(u.a)(), P.a)(De),
+                }), de(), Object(u.a)(), U.a)(De),
                 Oe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -4024,7 +4028,7 @@
                                 return a.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            e = _(this.props.company), n.label = 1;
+                                            e = g(this.props.company), n.label = 1;
                                         case 1:
                                             return n.trys.push([1, 3, , 4]), [4, H({
                                                 activeOnly: !0,
@@ -4050,7 +4054,7 @@
                                         case 0:
                                             return a.trys.push([0, 6, , 7]), e = d.a + "/kraken/campaigns/" + this.props.match.params.campaignId, [4, Object(N.a)(f.a.GetCampaignById)];
                                         case 1:
-                                            return (t = a.sent()) ? [4, Object(g.a)(e, {
+                                            return (t = a.sent()) ? [4, Object(_.a)(e, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": t
                                                 }
@@ -4078,9 +4082,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 10, , 11]), t = _(this.props.company), n = T(e, String(t)), [4, Object(N.a)(f.a.PutCampaign)];
+                                            return a.trys.push([0, 10, , 11]), t = g(this.props.company), n = T(e, String(t)), [4, Object(N.a)(f.a.PutCampaign)];
                                         case 1:
-                                            return (r = a.sent()) ? (s = d.a + "/kraken/accounts/" + t + "/campaigns/" + e.id, [4, Object(g.a)(s, {
+                                            return (r = a.sent()) ? (s = d.a + "/kraken/accounts/" + t + "/campaigns/" + e.id, [4, Object(_.a)(s, {
                                                 method: "PUT",
                                                 body: JSON.stringify(n),
                                                 headers: {
@@ -4131,9 +4135,9 @@
                                             if (!this.state.campaign) throw new Error("Failed to upload");
                                             return [4, Object(N.a)(f.a.PostCampaignImageUrl)];
                                         case 1:
-                                            if (e = a.sent()) return t = _(this.props.company), n = {
+                                            if (e = a.sent()) return t = g(this.props.company), n = {
                                                 campaignID: this.state.campaign.id,
-                                                imageType: U.s.LINK_NOTIFICATION,
+                                                imageType: y.r.LINK_NOTIFICATION,
                                                 serviceID: t,
                                                 token: e
                                             }, [2, this.props.createUploadURLMutation(n)];
@@ -4151,7 +4155,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            t = new k(this.getUploadURL, this.onFinishUpload), a.label = 1;
+                                            t = new w(this.getUploadURL, this.onFinishUpload), a.label = 1;
                                         case 1:
                                             return a.trys.push([1, 3, , 4]), [4, t.uploadFile(e)];
                                         case 2:
@@ -4188,7 +4192,7 @@
                             display: O.X.Flex,
                             justifyContent: O.Wa.Between
                         }, r.createElement(O.W, {
-                            type: O.Pb.H2
+                            type: O.Rb.H2
                         }, Object(o.d)("Drops Campaign: {title}", {
                             title: this.state.campaign.item_name
                         }, "DevDropsEditCampaign")), r.createElement(O.z, {
@@ -4213,18 +4217,18 @@
                         })))) : r.createElement(O.Za, null)
                     }, t
                 }(r.Component),
-                Se = Object(l.compose)(Object(h.b)("DevDropsEditCampaignPage", {
+                Re = Object(l.compose)(Object(h.b)("DevDropsEditCampaignPage", {
                     destination: E.a.DevSiteDropsEditCampaign
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsEditCampaign
-                }), de(), Object(u.a)(), P.a)(Oe);
+                }), de(), Object(u.a)(), U.a)(Oe);
             ! function(e) {
                 e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
             }(fe || (fe = {})),
             function(e) {
                 e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
             }(Te || (Te = {}));
-            var Re, Ae = function(e) {
+            var Se, Ae = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4235,9 +4239,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 6, , 7]), e = _(this.props.company), t = d.a + "/kraken/accounts/" + e + "/items/" + this.props.match.params.itemId, [4, Object(N.a)(f.a.GetItemByID)];
+                                            return a.trys.push([0, 6, , 7]), e = g(this.props.company), t = d.a + "/kraken/accounts/" + e + "/items/" + this.props.match.params.itemId, [4, Object(N.a)(f.a.GetItemByID)];
                                         case 1:
-                                            return (n = a.sent()) ? [4, Object(g.a)(t, {
+                                            return (n = a.sent()) ? [4, Object(_.a)(t, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": n
                                                 }
@@ -4267,9 +4271,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 10, , 11]), t = _(this.props.company), [4, Object(N.a)(f.a.UpdateItem)];
+                                            return a.trys.push([0, 10, , 11]), t = g(this.props.company), [4, Object(N.a)(f.a.UpdateItem)];
                                         case 1:
-                                            return (n = a.sent()) ? (r = I(e, String(t), n), s = d.a + "/kraken/accounts/" + t + "/items/" + e.item_id, [4, Object(g.a)(s, {
+                                            return (n = a.sent()) ? (r = I(e, String(t), n), s = d.a + "/kraken/accounts/" + t + "/items/" + e.item_id, [4, Object(_.a)(s, {
                                                 method: "PUT",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -4322,7 +4326,7 @@
                                             if (!this.state.item) throw new Error("Failed to upload");
                                             return [4, Object(N.a)(f.a.PostItemImageUrl)];
                                         case 1:
-                                            if (e = a.sent()) return t = _(this.props.company), n = {
+                                            if (e = a.sent()) return t = g(this.props.company), n = {
                                                 imageType: fe.ITEM,
                                                 itemID: this.state.item.ItemID,
                                                 serviceID: t,
@@ -4342,7 +4346,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            t = new k(this.getUploadURL, this.onFinishUpload), a.label = 1;
+                                            t = new w(this.getUploadURL, this.onFinishUpload), a.label = 1;
                                         case 1:
                                             return a.trys.push([1, 3, , 4]), [4, t.uploadFile(e)];
                                         case 2:
@@ -4379,7 +4383,7 @@
                             display: O.X.Flex,
                             justifyContent: O.Wa.Between
                         }, r.createElement(O.W, {
-                            type: O.Pb.H2
+                            type: O.Rb.H2
                         }, Object(o.d)("Drops Item: {name}", {
                             name: this.state.item.Translations[this.state.item.DefaultLanguage]
                         }, "DevDropsEditItem")), r.createElement(O.z, {
@@ -4393,7 +4397,7 @@
                             }
                         }, r.createElement(Ie, {
                             onSubmit: this.onSubmit,
-                            companyId: _(this.props.company),
+                            companyId: g(this.props.company),
                             item: this.state.item,
                             onCancel: this.onCancel,
                             onFormChange: this.onFormChange,
@@ -4406,18 +4410,18 @@
                     destination: E.a.DevSiteDropsEditItem
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsEditItems
-                }), de(), Object(u.a)(), P.a)(Ae),
+                }), de(), Object(u.a)(), U.a)(Ae),
                 Ce = function(e) {
-                    var t = Object(S.b)(Object(R.c)(e.item.createdAt), "MM/DD/YYYY, hh:mm a"),
-                        n = Object(S.b)(Object(R.c)(e.item.updatedAt), "MM/DD/YYYY, hh:mm a"),
+                    var t = Object(R.b)(Object(S.b)(e.item.createdAt), "MM/DD/YYYY, hh:mm a"),
+                        n = Object(R.b)(Object(S.b)(e.item.updatedAt), "MM/DD/YYYY, hh:mm a"),
                         a = "/console/drops/items/" + e.item.id;
-                    return r.createElement(O.Hb, null, r.createElement(O.Eb, null, r.createElement(O.U, {
+                    return r.createElement(O.Jb, null, r.createElement(O.Gb, null, r.createElement(O.U, {
                         linkTo: a
-                    }, e.item.translations[e.item.defaultLanguage])), r.createElement(O.Eb, null, e.item.id), r.createElement(O.Eb, null, t), r.createElement(O.Eb, null, n), r.createElement(O.Eb, null, e.item.active.toString()))
+                    }, e.item.translations[e.item.defaultLanguage])), r.createElement(O.Gb, null, e.item.id), r.createElement(O.Gb, null, t), r.createElement(O.Gb, null, n), r.createElement(O.Gb, null, e.item.active.toString()))
                 };
             ! function(e) {
                 e[e.Enabled = 0] = "Enabled", e[e.CreationDate = 1] = "CreationDate", e[e.UpdatedDate = 2] = "UpdatedDate", e[e.Name = 3] = "Name"
-            }(Re || (Re = {}));
+            }(Se || (Se = {}));
             var ve, Le = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -4453,7 +4457,7 @@
                                     sortingName: n.toggleSorting(e.sortingName)
                                 }
                             }, function() {
-                                n.props.onSort(Re.Name, n.state.sortingName)
+                                n.props.onSort(Se.Name, n.state.sortingName)
                             })
                         }, n.sortEnabled = function() {
                             n.setState(function(e) {
@@ -4461,7 +4465,7 @@
                                     sortingEnabled: n.toggleSorting(e.sortingEnabled)
                                 }
                             }, function() {
-                                n.props.onSort(Re.Enabled, n.state.sortingEnabled)
+                                n.props.onSort(Se.Enabled, n.state.sortingEnabled)
                             })
                         }, n.sortCreationDate = function() {
                             n.setState(function(e) {
@@ -4469,7 +4473,7 @@
                                     sortingCreationDate: n.toggleSorting(e.sortingCreationDate)
                                 }
                             }, function() {
-                                n.props.onSort(Re.CreationDate, n.state.sortingCreationDate)
+                                n.props.onSort(Se.CreationDate, n.state.sortingCreationDate)
                             })
                         }, n.sortUpdatedDate = function() {
                             n.setState(function(e) {
@@ -4477,15 +4481,15 @@
                                     sortingUpdatedDate: n.toggleSorting(e.sortingUpdatedDate)
                                 }
                             }, function() {
-                                n.props.onSort(Re.UpdatedDate, n.state.sortingUpdatedDate)
+                                n.props.onSort(Se.UpdatedDate, n.state.sortingUpdatedDate)
                             })
                         }, n.toggleSorting = function(e) {
-                            return e === O.wb.Default || e === O.wb.Ascending ? O.wb.Descending : O.wb.Ascending
+                            return e === O.yb.Default || e === O.yb.Ascending ? O.yb.Descending : O.yb.Ascending
                         }, n.state = {
-                            sortingName: O.wb.Default,
-                            sortingEnabled: O.wb.Default,
-                            sortingCreationDate: O.wb.Default,
-                            sortingUpdatedDate: O.wb.Default
+                            sortingName: O.yb.Default,
+                            sortingEnabled: O.yb.Default,
+                            sortingCreationDate: O.yb.Default,
+                            sortingUpdatedDate: O.yb.Default
                         }, n
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
@@ -4496,7 +4500,7 @@
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(O.bb, {
+                        }, r.createElement(O.db, {
                             currentPage: this.props.currentPage,
                             totalPages: this.props.maxPages,
                             onClickIndex: this.handleClickIndex,
@@ -4507,29 +4511,29 @@
                         }), r.createElement(O.z, {
                             onClick: Object(c.c)(c.a.CreateDropsItemProcessStart),
                             linkTo: "/console/drops/items/create",
-                            icon: O.pb.Plus
-                        }, Object(o.d)("Create Drops Item", "DevDropsItems"))), r.createElement(O.Cb, null, r.createElement(O.Fb, null, r.createElement(O.Gb, {
+                            icon: O.rb.Plus
+                        }, Object(o.d)("Create Drops Item", "DevDropsItems"))), r.createElement(O.Eb, null, r.createElement(O.Hb, null, r.createElement(O.Ib, {
                             label: Object(o.d)("Item Name", "DevDropsItems"),
                             sorting: this.state.sortingName,
                             onClick: this.sortName
-                        }), r.createElement(O.Gb, {
+                        }), r.createElement(O.Ib, {
                             label: Object(o.d)("Item ID", "DevDropsItems")
-                        }), r.createElement(O.Gb, {
+                        }), r.createElement(O.Ib, {
                             label: Object(o.d)("Creation Date (UTC)", "DevDropsItems"),
                             sorting: this.state.sortingCreationDate,
                             onClick: this.sortCreationDate
-                        }), r.createElement(O.Gb, {
+                        }), r.createElement(O.Ib, {
                             label: Object(o.d)("Last Updated Date (UTC)", "DevDropsItems"),
                             sorting: this.state.sortingUpdatedDate,
                             onClick: this.sortUpdatedDate
-                        }), r.createElement(O.Gb, {
+                        }), r.createElement(O.Ib, {
                             label: Object(o.d)("Enabled", "DevDropsItems"),
                             sorting: this.state.sortingEnabled,
                             onClick: this.sortEnabled
-                        })), r.createElement(O.Db, null, e)))
+                        })), r.createElement(O.Fb, null, e)))
                     }, t
                 }(r.Component),
-                Pe = function(e) {
+                Ue = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4545,7 +4549,7 @@
                                             if (this.state.pageCursors[e]) return this.setState({
                                                 currentPage: e
                                             }), [2];
-                                            t = _(this.props.company), a.label = 1;
+                                            t = g(this.props.company), a.label = 1;
                                         case 1:
                                             return a.trys.push([1, 3, , 4]), [4, H({
                                                 companyId: t,
@@ -4572,29 +4576,29 @@
                         }, t.onSort = function(e, n) {
                             var a = t.state.pageCursors[t.state.currentPage].items;
                             switch (e) {
-                                case Re.Name:
-                                    a = n === O.wb.Ascending ? a.sort(function(e, t) {
+                                case Se.Name:
+                                    a = n === O.yb.Ascending ? a.sort(function(e, t) {
                                         return e.translations[e.defaultLanguage].localeCompare(t.translations[t.defaultLanguage])
                                     }) : a.sort(function(e, t) {
                                         return t.translations[t.defaultLanguage].localeCompare(e.translations[e.defaultLanguage])
                                     });
                                     break;
-                                case Re.Enabled:
-                                    a = n === O.wb.Ascending ? a.sort(function(e, t) {
+                                case Se.Enabled:
+                                    a = n === O.yb.Ascending ? a.sort(function(e, t) {
                                         return Number(e.active) - Number(t.active)
                                     }) : a.sort(function(e, t) {
                                         return Number(t.active) - Number(e.active)
                                     });
                                     break;
-                                case Re.CreationDate:
-                                    a = n === O.wb.Ascending ? a.sort(function(e, t) {
+                                case Se.CreationDate:
+                                    a = n === O.yb.Ascending ? a.sort(function(e, t) {
                                         return e.createdAt.getTime() - t.createdAt.getTime()
                                     }) : a.sort(function(e, t) {
                                         return t.createdAt.getTime() - e.createdAt.getTime()
                                     });
                                     break;
-                                case Re.UpdatedDate:
-                                    a = n === O.wb.Ascending ? a.sort(function(e, t) {
+                                case Se.UpdatedDate:
+                                    a = n === O.yb.Ascending ? a.sort(function(e, t) {
                                         return e.updatedAt.getTime() - t.updatedAt.getTime()
                                     }) : a.sort(function(e, t) {
                                         return t.updatedAt.getTime() - e.updatedAt.getTime()
@@ -4630,12 +4634,12 @@
                         })
                     }, t
                 }(r.Component),
-                Ue = Object(l.compose)(Object(h.b)("DevDropsItemsPage", {
+                ye = Object(l.compose)(Object(h.b)("DevDropsItemsPage", {
                     destination: E.a.DevSiteDropsItems
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsItems
-                }), Object(u.a)())(Pe),
-                ye = n("mLw1");
+                }), Object(u.a)())(Ue),
+                Pe = n("mLw1");
             (ve || (ve = {})).SubmitButton = "dev-drops-settings-submit";
             var Fe = function(e) {
                     function t() {
@@ -4717,7 +4721,7 @@
                                 bottom: 2
                             }
                         }, r.createElement("header", null, r.createElement(O.Xa, null, r.createElement(O.W, {
-                            type: O.Pb.H2
+                            type: O.Rb.H2
                         }, Object(o.d)("VHS Configuration for Drops", "DevDropsSettings"))), r.createElement(O.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
@@ -4785,13 +4789,13 @@
                                             if (!(t = a.sent())) return [3, 5];
                                             a.label = 2;
                                         case 2:
-                                            return a.trys.push([2, 4, , 5]), n = _(this.props.company), r = d.a + "/kraken/service/" + n, s = {
+                                            return a.trys.push([2, 4, , 5]), n = g(this.props.company), r = d.a + "/kraken/service/" + n, s = {
                                                 client_id: e.clientId,
                                                 enabled: e.sendReport,
                                                 endpoint: e.endpoint,
                                                 readable_name: this.props.company.companyName,
                                                 sign_request: !1
-                                            }, [4, Object(g.a)(r, {
+                                            }, [4, Object(_.a)(r, {
                                                 body: JSON.stringify(s),
                                                 method: "PUT",
                                                 headers: {
@@ -4821,7 +4825,7 @@
                                             if (!(e = a.sent())) return [3, 7];
                                             a.label = 2;
                                         case 2:
-                                            return a.trys.push([2, 6, , 7]), t = _(this.props.company), n = d.a + "/kraken/service/" + t, [4, Object(g.a)(n, {
+                                            return a.trys.push([2, 6, , 7]), t = g(this.props.company), n = d.a + "/kraken/service/" + t, [4, Object(_.a)(n, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": e
                                                 }
@@ -4854,18 +4858,18 @@
                             onUpdate: this.onUpdate,
                             currentSettings: this.state.settings,
                             submitSuccess: this.state.submitSuccess
-                        }) : r.createElement(ye.a, {
+                        }) : r.createElement(Pe.a, {
                             to: "/request-access"
                         })
                     }, t
                 }(r.Component),
-                we = Object(l.compose)(Object(h.b)("DevDropsSettingsPage", {
+                ke = Object(l.compose)(Object(h.b)("DevDropsSettingsPage", {
                     autoReportInteractive: !0,
                     destination: E.a.DevSiteDropsSettings
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsSettings
                 }), Object(u.a)())(je),
-                ke = function(e) {
+                we = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -4875,12 +4879,12 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(O.Bb, null, r.createElement(s.a, {
+                        }, r.createElement(O.Db, null, r.createElement(s.a, {
                             path: "/console/drops",
                             exact: !0
                         }, function(e) {
                             var t = e.match;
-                            return r.createElement(O.Ab, {
+                            return r.createElement(O.Cb, {
                                 linkTo: "/console/drops",
                                 active: Boolean(t)
                             }, Object(o.d)("Campaign Manager", "DevDropsDashboardRoot"))
@@ -4889,7 +4893,7 @@
                             exact: !0
                         }, function(t) {
                             var n = t.match;
-                            return r.createElement(O.Ab, {
+                            return r.createElement(O.Cb, {
                                 linkTo: e,
                                 active: Boolean(n)
                             }, Object(o.d)("Item Manager", "DevDropsDashboardRoot"))
@@ -4898,7 +4902,7 @@
                             exact: !0
                         }, function(e) {
                             var t = e.match;
-                            return r.createElement(O.Ab, {
+                            return r.createElement(O.Cb, {
                                 onClick: Object(c.c)(c.a.ConfigureDropsSettings),
                                 linkTo: "/console/drops/settings",
                                 active: Boolean(t)
@@ -4910,11 +4914,11 @@
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: e,
-                            component: Ue
+                            component: ye
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops/settings",
-                            component: we
+                            component: ke
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops/items/create",
@@ -4930,11 +4934,11 @@
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops/:campaignId",
-                            component: Se
+                            component: Re
                         })))
                     }, t
                 }(r.Component),
-                Ge = Object(u.a)()(ke);
+                Ge = Object(u.a)()(we);
             n.d(t, "DevDropsDashboardRoot", function() {
                 return Ge
             })

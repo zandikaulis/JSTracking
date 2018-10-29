@@ -344,7 +344,7 @@
             ! function(e) {
                 e.Previous = "previous", e.Next = "next"
             }(a || (a = {}));
-            var m = ((r = {})[a.Previous] = u.pb.AngleLeft, r[a.Next] = u.pb.AngleRight, r),
+            var m = ((r = {})[a.Previous] = u.rb.AngleLeft, r[a.Next] = u.rb.AngleRight, r),
                 h = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -424,7 +424,7 @@
                                 });
                             return l.createElement(u.Xa, {
                                 className: d,
-                                position: u.fb.Relative,
+                                position: u.hb.Relative,
                                 display: u.X.Flex,
                                 alignItems: u.f.Stretch
                             }, l.createElement(u.A, {
@@ -448,14 +448,14 @@
                         window.removeEventListener("resize", this.onResize)
                     }, t.prototype.render = function() {
                         return l.createElement(u.Pa, i.__assign({}, this.props, {
-                            position: u.fb.Relative
+                            position: u.hb.Relative
                         }), l.createElement("div", {
                             className: "media-carousel",
                             ref: this.refHandler,
                             "data-test-selector": "carousel-container"
                         }, l.createElement(u.Xa, {
                             className: "media-carousel__child-container",
-                            overflow: u.ab.Hidden,
+                            overflow: u.cb.Hidden,
                             fullWidth: !0,
                             "data-test-selector": "child-container"
                         }, l.createElement("div", {
@@ -479,7 +479,7 @@
                             className: "media-carousel__nav",
                             display: u.X.Flex,
                             alignItems: u.f.Center,
-                            position: u.fb.Absolute,
+                            position: u.hb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullHeight: !0
@@ -487,7 +487,7 @@
                             className: "media-carousel__nav",
                             display: u.X.Flex,
                             alignItems: u.f.Center,
-                            position: u.fb.Absolute,
+                            position: u.hb.Absolute,
                             attachTop: !0,
                             attachRight: !0,
                             fullHeight: !0
@@ -883,10 +883,10 @@
                             margin: {
                                 right: 1
                             }
-                        }, a.createElement(c.eb, {
+                        }, a.createElement(c.gb, {
                             height: 90,
                             width: 90
-                        })), a.createElement(c.Xa, null, a.createElement(c.eb, {
+                        })), a.createElement(c.Xa, null, a.createElement(c.gb, {
                             width: 300,
                             lineCount: 3
                         }))));
@@ -900,10 +900,10 @@
                             margin: {
                                 right: 1
                             }
-                        }, a.createElement(c.eb, {
+                        }, a.createElement(c.gb, {
                             height: 90,
                             width: 90
-                        })), a.createElement(c.Xa, null, a.createElement(c.eb, {
+                        })), a.createElement(c.Xa, null, a.createElement(c.gb, {
                             width: 300,
                             lineCount: 3
                         }))));
@@ -968,7 +968,7 @@
                     }, Object(v.e)("Log a fatal-level message with error", "DevOnly")), " ", a.createElement(c.z, {
                         onClick: C
                     }, Object(v.e)("Log message with unserializable argument", "DevOnly")), " ", a.createElement(c.z, {
-                        onClick: P
+                        onClick: x
                     }, Object(v.e)("Throw an error", "DevOnly"))), a.createElement("h2", {
                         style: {
                             margin: "2rem 0"
@@ -1040,7 +1040,7 @@
                             top: 2
                         }
                     }, a.createElement(c.W, {
-                        type: c.Pb.H2
+                        type: c.Rb.H2
                     }, Object(v.e)("Infinite Scroll Test", "DevOnly")), a.createElement(b, null))))
                 });
 
@@ -1077,11 +1077,11 @@
                 }
             }
 
-            function P() {
+            function x() {
                 throw new Error("Throwing an uncaught error.")
             }
-            var x = n("VQbD"),
-                N = (n("NrqC"), function(e) {
+            var N = n("VQbD"),
+                R = (n("NrqC"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1090,7 +1090,7 @@
                             className: "testing-carousel",
                             padding: 3
                         }, a.createElement(c.W, {
-                            type: c.Pb.H2
+                            type: c.Rb.H2
                         }, "Media Carousel - Standard"), a.createElement(c.Xa, {
                             "data-a-target": "carousel-standard"
                         }, a.createElement(c.Pa, {
@@ -1098,10 +1098,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(x.a, {
+                        }, a.createElement(N.a, {
                             items: this.renderStandardItems()
                         }))), a.createElement(c.W, {
-                            type: c.Pb.H2
+                            type: c.Rb.H2
                         }, "Media Carousel - Tiny"), a.createElement(c.Xa, {
                             "data-a-target": "carousel-standard-tiny"
                         }, a.createElement(c.Pa, {
@@ -1109,10 +1109,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(x.a, {
+                        }, a.createElement(N.a, {
                             items: this.renderStandardTinyItems()
                         }))), a.createElement(c.W, {
-                            type: c.Pb.H2
+                            type: c.Rb.H2
                         }, "Media Carousel - HUGE"), a.createElement(c.Xa, {
                             "data-a-target": "carousel-standard-huge"
                         }, a.createElement(c.Pa, {
@@ -1120,10 +1120,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(x.a, {
+                        }, a.createElement(N.a, {
                             items: this.renderStandardHugeItems()
                         }))), a.createElement(c.W, {
-                            type: c.Pb.H2
+                            type: c.Rb.H2
                         }, "Media Carousel - Single"), a.createElement(c.Xa, {
                             "data-a-target": "carousel-single"
                         }, a.createElement(c.Pa, {
@@ -1131,10 +1131,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(x.a, {
+                        }, a.createElement(N.a, {
                             items: this.renderSingleItem()
                         }))), a.createElement(c.W, {
-                            type: c.Pb.H2
+                            type: c.Rb.H2
                         }, "Media Carousel - Single and HUGE"), a.createElement(c.Xa, {
                             "data-a-target": "carousel-single-huge"
                         }, a.createElement(c.Pa, {
@@ -1142,10 +1142,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(x.a, {
+                        }, a.createElement(N.a, {
                             items: this.renderSingleHugeItem()
                         }))), a.createElement(c.W, {
-                            type: c.Pb.H2
+                            type: c.Rb.H2
                         }, "Media Carousel - Various Widths"), a.createElement(c.Xa, {
                             "data-a-target": "carousel-various-widths"
                         }, a.createElement(c.Pa, {
@@ -1153,7 +1153,7 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(x.a, {
+                        }, a.createElement(N.a, {
                             items: this.renderVariousWidthItems()
                         })))))
                     }, t.prototype.renderStandardItems = function() {
@@ -1171,7 +1171,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Pb.H1,
+                                type: c.Rb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1190,7 +1190,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Pb.H1,
+                                type: c.Rb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1209,7 +1209,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Pb.H1,
+                                type: c.Rb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1228,7 +1228,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Pb.H1,
+                                type: c.Rb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1247,7 +1247,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Pb.H1,
+                                type: c.Rb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1266,17 +1266,17 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Pb.H1,
+                                type: c.Rb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
                     }, t
                 }(a.Component)),
-                T = n("/MKj"),
-                j = n("fvjX"),
-                R = n("KxT4"),
+                P = n("/MKj"),
+                T = n("fvjX"),
+                j = n("KxT4"),
                 U = n("IX50"),
-                A = (n("+6bW"), R.c.Google),
+                A = (n("+6bW"), j.c.Google),
                 L = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -1297,7 +1297,7 @@
                         })
                     }, t.prototype.render = function() {
                         var e = window.location.search.includes("gdpr_override"),
-                            t = Object(R.f)();
+                            t = Object(j.f)();
                         return a.createElement(c.Xa, {
                             padding: 2
                         }, a.createElement(c.W, {
@@ -1311,10 +1311,10 @@
                         }, t ? "Enabled" : "Disabled"), a.createElement(c.W, null, "Query String: ?gdpr_override / ?eea"), a.createElement(c.W, null, "Dynamic Settings: gdpr_consent_enabled"), a.createElement(c.Ea, {
                             label: "Grant test consent",
                             orientation: c.Fa.Horizontal
-                        }, a.createElement(c.Rb, {
+                        }, a.createElement(c.Tb, {
                             onChange: this.onToggleTwitchAdsConsent,
                             checked: this.props.twitchAdsConsent
-                        }))), a.createElement(c.zb, {
+                        }))), a.createElement(c.Bb, {
                             padding: {
                                 y: 1
                             },
@@ -1325,7 +1325,7 @@
                         }, this.state.gdprStates.map(function(e, t) {
                             var n = e.status,
                                 r = e.blockConsentRequiredContent ? "gdpr-status-text" : "gdpr-status-text--safe";
-                            return a.createElement(c.zb, {
+                            return a.createElement(c.Bb, {
                                 border: !0,
                                 margin: {
                                     right: 1
@@ -1354,26 +1354,26 @@
                         }, "Reset Test")))
                     }, t
                 }(a.Component),
-                I = Object(j.compose)(Object(E.b)("GDPRTestPage", {
+                I = Object(T.compose)(Object(E.b)("GDPRTestPage", {
                     autoReportInteractive: !0,
                     destination: y.a.Unknown
-                }), Object(T.connect)(function(e) {
+                }), Object(P.connect)(function(e) {
                     return {
                         twitchAdsConsent: !!e.gdpr.vendorPreferences[A]
                     }
                 }, function(e) {
-                    return Object(j.bindActionCreators)({
+                    return Object(T.bindActionCreators)({
                         saveVendorPreferences: U.c,
                         resetConsent: U.b
                     }, e)
-                }), Object(R.j)(A))(L),
+                }), Object(j.j)(A))(L),
                 W = n("yR8l"),
                 q = n("cViM"),
-                F = function(e) {
+                B = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderPropState = function(e, t) {
-                            return a.createElement(c.zb, {
+                            return a.createElement(c.Bb, {
                                 border: !0,
                                 margin: 1,
                                 padding: 1,
@@ -1420,24 +1420,24 @@
                         }))
                     }, t
                 }(a.Component),
-                B = Object(W.a)(q)(F),
+                F = Object(W.a)(q)(B),
                 X = n("+6oQ"),
-                z = function(e) {
+                H = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return this.props.data.currentUser ? a.createElement(B, null) : null
+                        return this.props.data.currentUser ? a.createElement(F, null) : null
                     }, t
                 }(a.Component),
-                H = Object(W.a)(X)(z),
+                z = Object(W.a)(X)(H),
                 G = n("+5a/"),
                 M = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(H, null)
+                        return a.createElement(z, null)
                     }, t
                 }(a.Component),
                 Q = Object(W.a)(G)(M),
@@ -1540,7 +1540,7 @@
                         component: te
                     }), a.createElement(i.a, {
                         path: "/_dev/testing/carousel",
-                        component: N
+                        component: R
                     }), a.createElement(i.a, {
                         path: "/_dev/context",
                         component: g
