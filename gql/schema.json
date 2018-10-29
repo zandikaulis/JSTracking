@@ -73445,7 +73445,7 @@
     }
   }, 
   "extensions": {
-    "durationMilliseconds": 51, 
+    "durationMilliseconds": 48, 
     "operationName": "IntrospectionQuery"
   }
 }
