@@ -335,7 +335,7 @@ window.__twilightSettings = {
         },
         "164332c9-759a-46f5-92de-63d43ff2fd35": {
             "name": "twilight_web_side_nav_upsell_center_channels",
-            "v": 4456,
+            "v": 4951,
             "t": 1,
             "groups": [{
                 "weight": 20,
@@ -1656,10 +1656,16 @@ window.__twilightSettings = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 4942,
+            "v": 4952,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 2,
+                "value": "2.6.292"
+            }, {
+                "weight": 2,
+                "value": "2.6.29+ctrl"
+            }, {
+                "weight": 96,
                 "value": "2.6.29"
             }]
         },
