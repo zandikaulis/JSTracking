@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [96], {
+    [95], {
         "+QRC": function(e, t, n) {
             "use strict";
             var r = n("E9nw"),
@@ -2631,42 +2631,42 @@
                             var t = this;
                             switch (e) {
                                 case s.PLAYER_AMAZON_LIVE:
-                                    return n.e(199).then(function() {
+                                    return n.e(197).then(function() {
                                         var e = n("iSLP");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_CLIPS_VIEWING:
-                                    return n.e(198).then(function() {
+                                    return n.e(196).then(function() {
                                         var e = n("5Kqy");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_CLIPS_EMBED:
-                                    return n.e(197).then(function() {
+                                    return n.e(195).then(function() {
                                         var e = n("aRgI");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_CLIPS_EDITING:
-                                    return n.e(196).then(function() {
+                                    return n.e(194).then(function() {
                                         var e = n("3K1P");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_CLIPS_WATCH:
-                                    return n.e(195).then(function() {
+                                    return n.e(193).then(function() {
                                         var e = n("8/R1");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_HIGHLIGHTER:
-                                    return n.e(194).then(function() {
+                                    return n.e(192).then(function() {
                                         var e = n("SVNA");
                                         t.setState({
                                             playerTypeComponent: e.default

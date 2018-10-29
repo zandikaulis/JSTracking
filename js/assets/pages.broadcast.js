@@ -672,7 +672,7 @@
                             padding: {
                                 x: 4
                             },
-                            position: i.hb.Relative
+                            position: i.fb.Relative
                         }, this.props.children))
                     }, t
                 }(o.Component));
@@ -831,7 +831,7 @@
             var _ = function(e) {
                     var t = e.link,
                         n = e.title;
-                    return a.createElement(S.Bb, {
+                    return a.createElement(S.zb, {
                         background: S.r.Base,
                         elevation: 1,
                         padding: 2,
@@ -858,7 +858,7 @@
                         targetBlank: !0,
                         to: t
                     }, t)), a.createElement(S.W, {
-                        type: S.Rb.P,
+                        type: S.Pb.P,
                         color: S.O.Alt2
                     }, e.longDescription), a.createElement(S.Xa, {
                         display: S.X.Flex,
@@ -890,9 +890,7 @@
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                        i.p.setPageTitle(Object(i.d)("Broadcast", "BroadcastPage"))
-                    }, t.prototype.render = function() {
+                    return o.__extends(t, e), t.prototype.render = function() {
                         return a.createElement(S.Xa, {
                             display: S.X.Flex,
                             flexDirection: S.Aa.Column,
@@ -900,20 +898,20 @@
                             fullHeight: !0
                         }, a.createElement(S.Xa, {
                             className: "broadcast-container",
-                            position: S.hb.Relative,
+                            position: S.fb.Relative,
                             flexGrow: 1,
                             fullHeight: !0,
-                            overflow: S.cb.Hidden
+                            overflow: S.ab.Hidden
                         }, a.createElement(E.a, null, a.createElement(S.W, {
                             bold: !0,
-                            type: S.Rb.H4
+                            type: S.Pb.H4
                         }, Object(i.d)("Broadcast While You Play", "BroadcastRootPage")), a.createElement(S.Xa, {
                             margin: {
                                 y: 1
                             }
                         }, a.createElement(S.W, {
                             color: S.O.Alt2,
-                            type: S.Rb.P
+                            type: S.Pb.P
                         }, Object(i.d)("Here are the most common tools for broadcasting.", "BroadcastRootPage")), a.createElement(S.W, {
                             color: S.O.Alt2
                         }, Object(i.d)("For more info, visit the <x:link>Support Center</x:link>.", {
@@ -937,10 +935,10 @@
                             }
                         }, a.createElement(S.W, {
                             bold: !0,
-                            type: S.Rb.H4
-                        }, Object(i.d)("Broadcasting Applications", "BroadcastRootPage"))), a.createElement(S.Xb, {
-                            childWidth: S.Yb.Large,
-                            gutterSize: S.Zb.Small,
+                            type: S.Pb.H4
+                        }, Object(i.d)("Broadcasting Applications", "BroadcastRootPage"))), a.createElement(S.Vb, {
+                            childWidth: S.Wb.Large,
+                            gutterSize: S.Xb.Small,
                             noGrow: !0,
                             placeholderItems: 8
                         }, a.createElement(S.Xa, {
@@ -979,10 +977,10 @@
                             }
                         }, a.createElement(S.W, {
                             bold: !0,
-                            type: S.Rb.H4
-                        }, Object(i.d)("Broadcasting Tools", "BroadcastRootPage"))), a.createElement(S.Xb, {
-                            childWidth: S.Yb.Large,
-                            gutterSize: S.Zb.Small,
+                            type: S.Pb.H4
+                        }, Object(i.d)("Broadcasting Tools", "BroadcastRootPage"))), a.createElement(S.Vb, {
+                            childWidth: S.Wb.Large,
+                            gutterSize: S.Xb.Small,
                             noGrow: !0,
                             placeholderItems: 3
                         }, a.createElement(S.Xa, {
@@ -1409,18 +1407,18 @@
                             e[t.props.statType] = !e[t.props.statType], i.m.set("streamStatsConfiguration", e)
                         }, t.renderStat = function() {
                             var e = Object(i.d)("Offline", "LiveDashboard");
-                            return t.state.hidden ? o.createElement(l.Ub, {
+                            return t.state.hidden ? o.createElement(l.Sb, {
                                 label: t.props.statDescription || e,
-                                direction: l.Wb.Right
-                            }, Object(i.d)("Hover to view", "LiveDashboard")) : o.createElement(l.Ub, {
+                                direction: l.Ub.Right
+                            }, Object(i.d)("Hover to view", "LiveDashboard")) : o.createElement(l.Sb, {
                                 label: Object(i.d)("Click to hide", "LiveDashboard"),
-                                direction: l.Wb.Right
+                                direction: l.Ub.Right
                             }, t.props.statDescription || e)
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.color;
-                        return o.createElement(l.Bb, {
+                        return o.createElement(l.zb, {
                             margin: {
                                 left: 1
                             },
@@ -1508,35 +1506,35 @@
                                     return e + t.count
                                 }, 0)),
                                 c = Object(i.f)(r.current);
-                            return r.next ? o.createElement(l.Bb, {
+                            return r.next ? o.createElement(l.zb, {
                                 color: l.O.Alt2,
                                 display: l.X.Flex,
                                 alignItems: l.f.Center,
                                 margin: {
                                     bottom: .5
                                 }
-                            }, o.createElement(l.Ub, {
+                            }, o.createElement(l.Sb, {
                                 label: Object(i.d)("Subscribers shows number of active subs.\n Sub points unlock additional emote slots.", "LiveDashboard"),
-                                direction: l.Wb.Right
-                            }, o.createElement(l.qb, {
-                                asset: l.rb.Star
+                                direction: l.Ub.Right
+                            }, o.createElement(l.ob, {
+                                asset: l.pb.Star
                             })), o.createElement(p, {
                                 statDescription: s + " " + e + " (" + c + " / " + Object(i.f)(r.next) + " " + t + ")",
                                 statType: w.SUBSCRIPTIONS,
                                 showStat: n.state.statsConfig && n.state.statsConfig[w.SUBSCRIPTIONS],
                                 color: l.O.Base
-                            })) : o.createElement(l.Bb, {
+                            })) : o.createElement(l.zb, {
                                 color: l.O.Alt2,
                                 display: l.X.Flex,
                                 alignItems: l.f.Center,
                                 margin: {
                                     bottom: .5
                                 }
-                            }, o.createElement(l.Ub, {
+                            }, o.createElement(l.Sb, {
                                 label: Object(i.d)("Congrats on reaching the max number of emote slots", "LiveDashboard"),
-                                direction: l.Wb.Right
-                            }, o.createElement(l.qb, {
-                                asset: l.rb.Star
+                                direction: l.Ub.Right
+                            }, o.createElement(l.ob, {
+                                asset: l.pb.Star
                             })), o.createElement(p, {
                                 statDescription: s + " " + e + " (" + c + " " + t + ")",
                                 statType: w.SUBSCRIPTIONS,
@@ -1584,76 +1582,76 @@
                             title: Object(i.d)("Stats", "LiveDashboard")
                         }, o.createElement(l.Xa, {
                             padding: 2
-                        }, o.createElement(l.Bb, {
+                        }, o.createElement(l.zb, {
                             color: l.O.Alt2,
                             display: l.X.Flex,
                             alignItems: l.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, o.createElement(l.Ub, {
+                        }, o.createElement(l.Sb, {
                             label: Object(i.d)("The number of people currently watching your channel", "LiveDashboard"),
-                            direction: l.Wb.Right
-                        }, o.createElement(l.qb, {
-                            asset: l.rb.GlyphLive
-                        })), this.renderViewersCount()), o.createElement(l.Bb, {
+                            direction: l.Ub.Right
+                        }, o.createElement(l.ob, {
+                            asset: l.pb.GlyphLive
+                        })), this.renderViewersCount()), o.createElement(l.zb, {
                             color: l.O.Alt2,
                             display: l.X.Flex,
                             alignItems: l.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, o.createElement(l.Ub, {
+                        }, o.createElement(l.Sb, {
                             label: Object(i.d)("How long you have been broadcasting for this session", "LiveDashboard"),
-                            direction: l.Wb.Right
-                        }, o.createElement(l.qb, {
-                            asset: l.rb.Timeout
-                        })), this.renderStreamTime()), o.createElement(l.Bb, {
+                            direction: l.Ub.Right
+                        }, o.createElement(l.ob, {
+                            asset: l.pb.Timeout
+                        })), this.renderStreamTime()), o.createElement(l.zb, {
                             color: l.O.Alt2,
                             display: l.X.Flex,
                             alignItems: l.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, o.createElement(l.Ub, {
+                        }, o.createElement(l.Sb, {
                             label: Object(i.d)("The number of clips that have been created", "LiveDashboard"),
-                            direction: l.Wb.Right
-                        }, o.createElement(l.Bb, {
+                            direction: l.Ub.Right
+                        }, o.createElement(l.zb, {
                             className: "stats-widget-clips-icon",
                             display: l.X.InlineFlex
-                        }, o.createElement(l.qb, {
-                            asset: l.rb.Clip,
+                        }, o.createElement(l.ob, {
+                            asset: l.pb.Clip,
                             height: 20,
                             width: 20
-                        }))), this.renderNumberOfClips()), o.createElement(l.Bb, {
+                        }))), this.renderNumberOfClips()), o.createElement(l.zb, {
                             color: l.O.Alt2,
                             display: l.X.Flex,
                             alignItems: l.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, o.createElement(l.Ub, {
+                        }, o.createElement(l.Sb, {
                             label: Object(i.d)("The number of people who have viewed the channel", "LiveDashboard"),
-                            direction: l.Wb.Right
-                        }, o.createElement(l.qb, {
-                            asset: l.rb.GlyphViews
+                            direction: l.Ub.Right
+                        }, o.createElement(l.ob, {
+                            asset: l.pb.GlyphViews
                         })), o.createElement(p, {
                             statDescription: n + " " + Object(i.d)("Views", "LiveDashboard"),
                             statType: w.TOTAL_VIEWS,
                             showStat: !this.state.statsConfig || this.state.statsConfig[w.TOTAL_VIEWS],
                             color: l.O.Base
-                        })), o.createElement(l.Bb, {
+                        })), o.createElement(l.zb, {
                             color: l.O.Alt2,
                             display: l.X.Flex,
                             alignItems: l.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, o.createElement(l.Ub, {
+                        }, o.createElement(l.Sb, {
                             label: Object(i.d)("The number of people currently following your channel", "LiveDashboard"),
-                            direction: l.Wb.Right
-                        }, o.createElement(l.qb, {
-                            asset: l.rb.Heart
+                            direction: l.Ub.Right
+                        }, o.createElement(l.ob, {
+                            asset: l.pb.Heart
                         })), o.createElement(p, {
                             statDescription: r + " " + Object(i.d)("Followers", "LiveDashboard"),
                             statType: w.FOLLOWERS,
@@ -1667,11 +1665,11 @@
                 }), Object(s.a)(C, {
                     options: function(e) {
                         return {
-                            fetchPolicy: "network-only",
-                            pollInterval: 3e4,
                             variables: {
-                                login: e.channelLogin
-                            }
+                                login: e.channelLogin,
+                                policy: "network-only"
+                            },
+                            pollInterval: 3e4
                         }
                     }
                 }), Object(u.b)("Stats"))(_)
@@ -1804,11 +1802,11 @@
                         this.containerRef.removeEventListener("mousedown", this.handleMouseDown)
                     }, t.prototype.render = function() {
                         return p.createElement(f.Xa, {
-                            position: f.hb.Relative,
+                            position: f.fb.Relative,
                             refDelegate: this.setContainerRef
                         }, p.createElement(v.a, null, p.createElement(f.A, l.__assign({
                             ariaLabel: Object(m.d)("Options", "CogWheelComponent"),
-                            icon: f.rb.Gear
+                            icon: f.pb.Gear
                         }, Object(b.a)(this.props))), p.createElement(f.u, {
                             offsetY: "0",
                             offsetX: "1rem",
@@ -1822,7 +1820,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return p.createElement(f.Bb, {
+                        return p.createElement(f.zb, {
                             className: "drag-and-drop-card-title",
                             color: f.O.Base,
                             fontSize: f.Ca.Size5,
@@ -1946,7 +1944,7 @@
                     }, p.createElement(g, {
                         cloneStyleRef: u && u.cardRef,
                         show: c === h.c.Top
-                    }), p.createElement(f.Bb, {
+                    }), p.createElement(f.zb, {
                         background: f.r.Base,
                         border: !0,
                         breakpointLarge: {
@@ -1963,7 +1961,7 @@
                             bottom: 1
                         },
                         refDelegate: this.registerRef(i.Card)
-                    }, p.createElement(f.Bb, {
+                    }, p.createElement(f.zb, {
                         alignContent: f.e.Center,
                         alignItems: f.f.Center,
                         borderBottom: !0,
@@ -1973,7 +1971,7 @@
                         padding: {
                             x: 1
                         },
-                        position: f.hb.Relative,
+                        position: f.fb.Relative,
                         refDelegate: this.registerRef(i.Header)
                     }, p.createElement(f.Xa, {
                         display: f.X.Flex,
@@ -1987,7 +1985,7 @@
                         refDelegate: this.registerRef(i.Carat)
                     }, p.createElement(f.A, {
                         ariaLabel: Object(m.d)("Collapse/Expand", "DragAndDropCard"),
-                        icon: f.rb.GlyphArrDown,
+                        icon: f.pb.GlyphArrDown,
                         onClick: this.handleCaratClick
                     }))), p.createElement(y, {
                         title: this.props.title
@@ -2001,12 +1999,12 @@
                             top: .5,
                             left: 1
                         }
-                    }, p.createElement(f.qb, {
-                        asset: f.rb.DragHandle
+                    }, p.createElement(f.ob, {
+                        asset: f.pb.DragHandle
                     })))), p.createElement(f.Xa, {
                         className: "drag-and-drop-card-content" + (r ? " " + o.ContentCollapsed : ""),
                         "data-test-selector": a.Content,
-                        position: f.hb.Relative
+                        position: f.fb.Relative
                     }, r && this.props.unmountOnCollapse ? null : this.props.children)), p.createElement(g, {
                         cloneStyleRef: u && u.cardRef,
                         show: c === h.c.Bottom
@@ -2080,7 +2078,7 @@
                         var e = this.props,
                             t = e.grabbedCard,
                             n = e.targetCard;
-                        return p.createElement(f.Bb, {
+                        return p.createElement(f.zb, {
                             alignContent: f.e.Stretch,
                             alignItems: f.f.Stretch,
                             breakpointLarge: {

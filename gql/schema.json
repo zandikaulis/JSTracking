@@ -4527,7 +4527,7 @@
           "possibleTypes": null
         }, 
         {
-          "description": "An enumberable that identifies the checkout provider the customer is using.", 
+          "description": "An enumerable that identifies the checkout provider the customer is using.", 
           "enumValues": [
             {
               "deprecationReason": null, 
@@ -4562,6 +4562,115 @@
           "possibleTypes": null
         }, 
         {
+          "description": "Contains the Bits product's preview price and tax info for a Bits purchase, and error if a preview cannot be created.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The error is present if purchase info failed to be retrieved.", 
+              "isDeprecated": false, 
+              "name": "error", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "BitsProductPurchaseInfoError", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Gets the preview price and tax info for the Bits purchase.", 
+              "isDeprecated": false, 
+              "name": "previewPriceInfo", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "PriceInfo", 
+                "ofType": null
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "BitsProductPurchaseInfo", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "Error information shown when priceInfo could not be retrieved for Bits Product.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The descriptive error code.", 
+              "isDeprecated": false, 
+              "name": "code", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "ENUM", 
+                  "name": "BitsProductPurchaseInfoErrorCode", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "BitsProductPurchaseInfoError", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "Possible errors when retrieving bits product purchase info.", 
+          "enumValues": [
+            {
+              "deprecationReason": null, 
+              "description": "An unexpected internal server error occurred.", 
+              "isDeprecated": false, 
+              "name": "INTERNAL_SERVER_ERROR"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "The user is unauthorized to view purchase info.", 
+              "isDeprecated": false, 
+              "name": "USER_UNAUTHORIZED"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "The Pricing ID is not found (404).", 
+              "isDeprecated": false, 
+              "name": "PRICING_ID_NOT_FOUND"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Cannot determine User Residence. Either billing address and IP doesn't match or\nuser doesn't have country of resident declared (409).", 
+              "isDeprecated": false, 
+              "name": "UNKNOWN_USER_RESIDENCE"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "The billing info could not be found for the user and provider (410).", 
+              "isDeprecated": false, 
+              "name": "BILLING_INFO_NOT_FOUND"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "User is not eligible to purchase bits in this region (422).", 
+              "isDeprecated": false, 
+              "name": "PURCHASE_INELIGIBLE"
+            }
+          ], 
+          "fields": null, 
+          "inputFields": null, 
+          "interfaces": null, 
+          "kind": "ENUM", 
+          "name": "BitsProductPurchaseInfoErrorCode", 
+          "possibleTypes": null
+        }, 
+        {
           "description": "The relation of a Bits product to a user.", 
           "enumValues": null, 
           "fields": [
@@ -4592,6 +4701,37 @@
                 "ofType": {
                   "kind": "OBJECT", 
                   "name": "BitsProductEligibility", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [
+                {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "quantity", 
+                  "type": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "SCALAR", 
+                      "name": "Int", 
+                      "ofType": null
+                    }
+                  }
+                }
+              ], 
+              "deprecationReason": null, 
+              "description": "Gets the preview price and tax info for the Bits purchase, or error if that failed.", 
+              "isDeprecated": false, 
+              "name": "purchaseInfo", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "OBJECT", 
+                  "name": "BitsProductPurchaseInfo", 
                   "ofType": null
                 }
               }
@@ -7341,6 +7481,18 @@
               "description": null, 
               "isDeprecated": true, 
               "name": "broadcasterLanguage", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "String", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The stream key for this channel if it is a multi-view chanlet. The requesting user must \"own\" this chanlet to be authorized to see this.", 
+              "isDeprecated": false, 
+              "name": "chanletStreamKey", 
               "type": {
                 "kind": "SCALAR", 
                 "name": "String", 

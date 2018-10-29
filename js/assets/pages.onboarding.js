@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [78], {
+    [77], {
         "2mE7": function(e, t, n) {},
         "3H/7": function(e, t) {
             var n = {
@@ -30,6 +30,25 @@
                                 }
                             }
                         }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "type"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "DirectoryType"
+                                }
+                            }
+                        }
                     }],
                     directives: [],
                     selectionSet: {
@@ -38,7 +57,7 @@
                             kind: "Field",
                             name: {
                                 kind: "Name",
-                                value: "game"
+                                value: "directory"
                             },
                             arguments: [{
                                 kind: "Argument",
@@ -51,6 +70,19 @@
                                     name: {
                                         kind: "Name",
                                         value: "name"
+                                    }
+                                }
+                            }, {
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "type"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "type"
                                     }
                                 }
                             }],
@@ -116,11 +148,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 133
+                    end: 172
                 }
             };
             n.loc.source = {
-                body: "query CommunityCard_CommunityDetails($name: String!) {\ngame(name: $name) {\nid\nname\navatarURL(width: 285 height: 380)\nviewersCount\n}\n}",
+                body: "query CommunityCard_CommunityDetails($name: String! $type: DirectoryType!) {\ndirectory(name: $name type: $type) {\nid\nname\navatarURL(width: 285 height: 380)\nviewersCount\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -259,19 +291,19 @@
                 l = n("yR8l"),
                 s = n("V+GM"),
                 d = n("f00E"),
-                c = n("D7An"),
-                m = n("NvVO"),
-                u = n("2xye"),
-                p = n("kRBY"),
-                g = n("GnwI"),
-                f = n("H/lO"),
-                h = n("NZDK"),
-                v = n("9kXc"),
-                k = n("roU9"),
-                y = n("jkql"),
-                b = n("oJmH"),
-                S = n("8/mp"),
-                w = n("Uive"),
+                c = n("NvVO"),
+                m = n("2xye"),
+                u = n("kRBY"),
+                p = n("GnwI"),
+                g = n("H/lO"),
+                f = n("NZDK"),
+                h = n("9kXc"),
+                v = n("roU9"),
+                k = n("jkql"),
+                y = n("oJmH"),
+                b = n("8/mp"),
+                w = n("D7An"),
+                S = n("Uive"),
                 C = n("cTNz"),
                 _ = n("0OKo"),
                 N = n("kduP"),
@@ -293,7 +325,7 @@
                             }
                         }, i.createElement(D.o, {
                             ratio: D.p.BoxArt
-                        }, i.createElement(D.gb, null)))) : this.props.followGameCardOptions ? i.createElement(D.Xa, {
+                        }, i.createElement(D.eb, null)))) : this.props.followGameCardOptions ? i.createElement(D.Xa, {
                             key: this.props.followGameCardOptions.category + "-game-" + this.props.game.id
                         }, i.createElement(E.a, {
                             "data-a-target": "follow-game-card-" + this.props.game.id,
@@ -332,13 +364,13 @@
                         this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = null;
-                        if (this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.game) e = {
-                            id: this.props.data.game.id,
-                            name: this.props.data.game.name,
-                            boxArtURL: this.props.data.game.avatarURL,
-                            viewersCount: this.props.data.game.viewersCount
+                        if (this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.directory) e = {
+                            id: this.props.data.directory.id,
+                            name: this.props.data.directory.name,
+                            boxArtURL: this.props.data.directory.avatarURL,
+                            viewersCount: this.props.data.directory.viewersCount
                         };
-                        else if (null === this.props.data.game) return null;
+                        else if (null === this.props.data.directory) return null;
                         return i.createElement(G, {
                             game: e,
                             isCommunity: this.props.directoryType === O.a.Communities,
@@ -348,7 +380,8 @@
                         options: function(e) {
                             return {
                                 variables: {
-                                    name: e.name
+                                    name: e.name,
+                                    type: "GAME"
                                 }
                             }
                         }
@@ -356,7 +389,7 @@
                 }(i.Component),
                 I = "community-card-row__ad",
                 U = 6,
-                A = function(e) {
+                T = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -371,8 +404,8 @@
                                     x: 1,
                                     top: 2
                                 }
-                            }, i.createElement(D.Xb, {
-                                gutterSize: D.Zb.Small,
+                            }, i.createElement(D.Vb, {
+                                gutterSize: D.Xb.Small,
                                 childWidth: t.props.cardSize,
                                 placeholderItems: t.props.placeholderItems ? t.props.placeholderItems : a,
                                 noWrap: e
@@ -388,7 +421,7 @@
                                         bottom: t.state.adDisplayed ? 2 : 0,
                                         left: t.state.adDisplayed ? 1 : 0
                                     }
-                                }, i.createElement(w.a, {
+                                }, i.createElement(S.a, {
                                     adSize: C.c.anonFront.rect,
                                     adUnit: C.d.frontpage,
                                     slotID: C.b.anonFront.rect,
@@ -442,17 +475,17 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.props.isScrollable ? i.createElement(S.b, null, this.renderCards(!0)) : this.renderCards(!1)
+                        return this.props.isScrollable ? i.createElement(b.b, null, this.renderCards(!0)) : this.renderCards(!1)
                     }, t
                 }(i.Component),
-                T = Object(g.b)("CommunityCardRow")(A),
+                A = Object(p.b)("CommunityCardRow")(T),
                 R = n("TDc0"),
                 L = n("AO3T"),
                 j = n("R+eK"),
                 X = (n("JJ+Z"), "onboarding_game"),
                 W = 100,
                 P = 500,
-                M = function(e) {
+                z = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.doneInitialRedirectCheck = !1, n.onFollow = function(e) {
@@ -473,7 +506,7 @@
                                     })
                                 }
                                 return t
-                            }), Object(L.c)(u.SpadeEventType.GameFollow, e)
+                            }), Object(L.c)(m.SpadeEventType.GameFollow, e)
                         }, n.onUnfollow = function(e) {
                             n.props.data.updateQuery(function(t) {
                                 return t.currentUser && t.currentUser.followedGames && t.currentUser.followedGames.nodes ? a.__assign({}, t, {
@@ -485,7 +518,7 @@
                                         })
                                     })
                                 }) : t
-                            }), Object(L.c)(u.SpadeEventType.GameUnfollow, e)
+                            }), Object(L.c)(m.SpadeEventType.GameUnfollow, e)
                         }, n.moveNextToChannelSurfing = function() {
                             r.p.history.push("/hi/surf" + location.search)
                         }, n.redirectToFrontPage = function() {
@@ -497,7 +530,7 @@
                         }, n.userFollowedGamesDataLoaded = function(e) {
                             return e.data && !e.data.loading && !e.data.error && e.data.currentUser
                         };
-                        var i = r.p.experiments.getAssignment(c.b.WebOnboarding);
+                        var i = r.p.experiments.getAssignment(w.b.WebOnboarding);
                         return n.state = {
                             inOnboardingExperiment: Object(R.a)(i)
                         }, n
@@ -509,7 +542,7 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.userFollowedGamesDataLoaded(this.props) && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.userFollowedGamesDataLoaded(this.props) && this.state.inOnboardingExperiment ? i.createElement(D.Bb, {
+                        return this.userFollowedGamesDataLoaded(this.props) && this.state.inOnboardingExperiment ? i.createElement(D.zb, {
                             className: "community-selection-page",
                             "data-a-target": "community-selection-page",
                             "data-test-selector": "onboarding-community-selection",
@@ -517,7 +550,7 @@
                             display: D.X.Flex,
                             flexDirection: D.Aa.Column,
                             fullHeight: !0
-                        }, i.createElement(D.Bb, {
+                        }, i.createElement(D.zb, {
                             background: D.r.Alt,
                             display: D.X.Flex,
                             alignItems: D.f.Center,
@@ -541,18 +574,18 @@
                             },
                             flexShrink: 1,
                             attachLeft: !0
-                        }, i.createElement(D.tb, {
+                        }, i.createElement(D.rb, {
                             id: "onboarding-community-selection__search",
                             "data-a-target": "onboarding-community-selection__search",
                             onChange: this.onGameInputChange,
                             placeholder: Object(r.d)("Search Games", "CommunitySelectionPage"),
                             spellCheck: !1
-                        })), this.renderTitleText(), this.renderCTA()), i.createElement(D.kb, {
-                            size: D.mb.Small,
+                        })), this.renderTitleText(), this.renderCTA()), i.createElement(D.ib, {
+                            size: D.kb.Small,
                             value: this.calculateProgress()
-                        }), i.createElement(S.b, null, i.createElement(D.Bb, {
+                        }), i.createElement(b.b, null, i.createElement(D.zb, {
                             background: D.r.Alt2,
-                            overflow: D.cb.Hidden,
+                            overflow: D.ab.Hidden,
                             padding: {
                                 left: 1,
                                 y: 2
@@ -626,23 +659,23 @@
                                 onFollow: this.onFollow,
                                 onUnfollow: this.onUnfollow
                             };
-                            return i.createElement(T, {
+                            return i.createElement(A, {
                                 games: this.props.gameData,
                                 directoryType: O.a.Games,
-                                cardSize: D.Yb.Small,
+                                cardSize: D.Wb.Small,
                                 followGameCardOptions: e,
                                 placeholderItems: 99
                             })
                         }
                     }, t
                 }(i.Component),
-                z = Object(b.compose)(Object(l.a)(j, {
+                M = Object(y.compose)(Object(l.a)(j, {
                     options: {
                         variables: {
                             limit: 10
                         }
                     }
-                }), Object(g.b)("CommunitySelectionPageComponent"))(M),
+                }), Object(p.b)("CommunitySelectionPageComponent"))(z),
                 q = "285x380";
             var V = function(e) {
                     function t(t) {
@@ -676,11 +709,11 @@
                                         case 0:
                                             t = Object(d.a)(), a.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(f.a.Games, e, t, {
+                                            return a.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(g.a.Games, e, t, {
                                                 hitsPerPage: W
                                             })];
                                         case 2:
-                                            return (n = a.sent()) && (i = Object(v.b)({
+                                            return (n = a.sent()) && (i = Object(h.b)({
                                                 searchResults: n
                                             }), this.setState({
                                                 searchGameResults: i.currentGameResults ? i.currentGameResults.results : []
@@ -698,10 +731,10 @@
                             return {
                                 id: n || e.toString(),
                                 name: e,
-                                boxArtURL: k.a + "/" + encodeURIComponent(e) + "-" + q + ".jpg",
+                                boxArtURL: v.a + "/" + encodeURIComponent(e) + "-" + q + ".jpg",
                                 viewersCount: t
                             }
-                        }, n.searchClient = new h.a({
+                        }, n.searchClient = new f.a({
                             appId: r.a.algoliaApplicationID,
                             apiKey: r.a.algoliaAPIKey,
                             apolloClient: r.p.apollo.client,
@@ -714,36 +747,31 @@
                         if (!this.props.isLoggedIn) return this.props.latencyTracking.reportInteractive(), void window.location.assign("/" + location.search);
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return i.createElement(z, {
+                        return i.createElement(M, {
                             gameData: this.getData(),
                             onSearchChange: this.onSearchChange
                         })
-                    }, t = a.__decorate([Object(l.a)(y, {
-                        options: function(e) {
-                            var t = "enabled" === r.p.experiments.getAssignment(c.b.LocalizeOnboardingGamesQuery);
-                            return {
-                                variables: {
-                                    limit: W,
-                                    locale: t ? e.locale : void 0
-                                }
+                    }, t = a.__decorate([Object(l.a)(k, {
+                        options: {
+                            variables: {
+                                limit: W
                             }
                         },
                         skip: function(e) {
                             return !e.isLoggedIn
                         }
                     }), Object(s.a)({
-                        location: u.PageviewLocation.OnboardingCommunitySelection
-                    }), Object(g.b)("CommunitySelectionPage", {
-                        destination: m.a.OnboardingIndex
+                        location: m.PageviewLocation.OnboardingCommunitySelection
+                    }), Object(p.b)("CommunitySelectionPage", {
+                        destination: c.a.OnboardingIndex
                     })], t)
                 }(i.Component),
-                B = Object(o.connect)(function(e) {
+                H = Object(o.connect)(function(e) {
                     return {
-                        isLoggedIn: Object(p.f)(e),
-                        locale: Object(p.d)(e)
+                        isLoggedIn: Object(u.f)(e)
                     }
                 })(V),
-                H = n("wIs1"),
+                B = n("wIs1"),
                 Q = n("jKe7"),
                 $ = n("2INN"),
                 K = n("ZS2+"),
@@ -757,7 +785,7 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         return this.props.isLoggedIn ? i.createElement(D.Pa, {
-                            position: D.hb.Relative,
+                            position: D.fb.Relative,
                             attachTop: !0,
                             fullWidth: !0
                         }, i.createElement("nav", {
@@ -775,8 +803,8 @@
                             flexShrink: 0
                         }, i.createElement("span", {
                             className: "top-nav__home-link"
-                        }, i.createElement(D.qb, {
-                            asset: D.rb.LogoGlitch,
+                        }, i.createElement(D.ob, {
+                            asset: D.pb.LogoGlitch,
                             width: 30,
                             height: 30
                         }))), i.createElement(D.Xa, {
@@ -795,15 +823,15 @@
                         }, i.createElement(J.a, {
                             isOnboarding: !0
                         }))))) : (r.k.warn("OnboardingTopNavComponent is only meant to be used for logged in users."), null)
-                    }, t = a.__decorate([Object(g.b)("OnboardingTopNav")], t)
+                    }, t = a.__decorate([Object(p.b)("OnboardingTopNav")], t)
                 }(i.Component));
             var ee = Object(o.connect)(function(e) {
                     return {
-                        isLoggedIn: Object(p.f)(e)
+                        isLoggedIn: Object(u.f)(e)
                     }
                 })(Y),
                 te = K.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(165)]).then(n.bind(null, "6tis"))
+                    return Promise.all([n.e(0), n.e(163)]).then(n.bind(null, "6tis"))
                 }, "ChannelSurfingPage"),
                 ne = K.a.wrap(function() {
                     return Promise.resolve().then(n.bind(null, "8n14"))
@@ -824,12 +852,12 @@
                         }, i.createElement(ee, null), i.createElement(D.Xa, {
                             display: D.X.Flex,
                             flexWrap: D.Ba.NoWrap,
-                            position: D.hb.Relative,
+                            position: D.fb.Relative,
                             fullHeight: !0,
                             fullWidth: !0
                         }, i.createElement(D.Pa, {
-                            overflow: D.cb.Hidden,
-                            position: D.hb.Relative,
+                            overflow: D.ab.Hidden,
+                            position: D.fb.Relative,
                             display: D.X.Flex,
                             flexDirection: D.Aa.Column,
                             flexGrow: 1,
@@ -844,17 +872,17 @@
                             path: "/hi",
                             component: ne
                         }))))))
-                    }, t = a.__decorate([Object(g.b)("OnboardingRoot", {
+                    }, t = a.__decorate([Object(p.b)("OnboardingRoot", {
                         autoReportInteractive: !0
                     })], t)
                 }(i.Component);
-            var ie = Object(H.a)(Object(o.connect)(function(e) {
+            var ie = Object(B.a)(Object(o.connect)(function(e) {
                 return {
-                    isLoggedIn: Object(p.f)(e)
+                    isLoggedIn: Object(u.f)(e)
                 }
             })(ae));
             n.d(t, "CommunitySelectionPage", function() {
-                return B
+                return H
             }), n.d(t, "OnboardingRoot", function() {
                 return ie
             })
@@ -1263,7 +1291,7 @@
             ! function(e) {
                 e.DarkModeToggle = "minimal-user__dark-mode-toggle", e.DropdownDown = "minimal-user__dropdown-down", e.UserMenu = "minimal-user__user-menu-toggle", e.Logout = "minimal-user__logout", e.Login = "minimal-user__login"
             }(a || (a = {}));
-            var S = function(e) {
+            var w = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onCardClick = function() {
@@ -1290,7 +1318,7 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (this.props.data.loading || !this.props.data.currentUser || this.props.data.error) return u.createElement(y.gb, null);
+                        if (this.props.data.loading || !this.props.data.currentUser || this.props.data.error) return u.createElement(y.eb, null);
                         if (this.props.isOnboarding) return u.createElement(y.Xa, {
                             display: y.X.Flex,
                             className: "minimal-top-nav__user",
@@ -1320,7 +1348,7 @@
                         }, this.props.data.currentUser.displayName))));
                         if (this.props.isLoggedIn) {
                             var e = null;
-                            this.props.darkModeEnabled && (e = u.createElement(y.Bb, {
+                            this.props.darkModeEnabled && (e = u.createElement(y.zb, {
                                 borderBottom: !0,
                                 margin: {
                                     y: 1
@@ -1380,16 +1408,16 @@
                                 className: "minimal-top-nav__username",
                                 "data-a-target": "user-display-name",
                                 ellipsis: !0
-                            }, this.props.data.currentUser.displayName)), u.createElement(y.Bb, {
+                            }, this.props.data.currentUser.displayName)), u.createElement(y.zb, {
                                 display: y.X.Flex,
                                 flexShrink: 0,
                                 className: "minimal-top-nav__expand"
-                            }, u.createElement(y.qb, {
-                                asset: y.rb.GlyphArrDown
-                            }))))), u.createElement(y.Bb, {
+                            }, u.createElement(y.ob, {
+                                asset: y.pb.GlyphArrDown
+                            }))))), u.createElement(y.zb, {
                                 fullWidth: !0,
-                                overflow: y.cb.Hidden,
-                                position: y.hb.Absolute,
+                                overflow: y.ab.Hidden,
+                                position: y.fb.Absolute,
                                 padding: {
                                     y: 1
                                 },
@@ -1399,7 +1427,7 @@
                             }, e, u.createElement(y.Ua, {
                                 onClick: this.onLogoutClick,
                                 "data-test-selector": a.Logout
-                            }, u.createElement(y.Bb, {
+                            }, u.createElement(y.zb, {
                                 color: y.O.Alt,
                                 display: y.X.Flex,
                                 alignItems: y.f.Center,
@@ -1413,8 +1441,8 @@
                                 margin: {
                                     right: 1
                                 }
-                            }, u.createElement(y.qb, {
-                                asset: y.rb.NavLogout,
+                            }, u.createElement(y.ob, {
+                                asset: y.pb.NavLogout,
                                 height: 20,
                                 width: 20
                             })), u.createElement(y.W, null, Object(p.d)("Log Out", "MinimalUser"))))))
@@ -1435,7 +1463,7 @@
                         !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                     }, t
                 }(u.Component),
-                w = Object(o.compose)(Object(k.b)("MinimalUser"), Object(f.a)(b))(S);
+                S = Object(o.compose)(Object(k.b)("MinimalUser"), Object(f.a)(b))(w);
             var C = Object(i.connect)(function(e) {
                 return {
                     isLoggedIn: Object(d.f)(e),
@@ -1449,7 +1477,7 @@
                     },
                     changeTheme: s.b
                 }, e)
-            })(w);
+            })(S);
             n.d(t, "a", function() {
                 return C
             })
@@ -1713,22 +1741,6 @@
                                 value: "Int"
                             }
                         }
-                    }, {
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "locale"
-                            }
-                        },
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "String"
-                            }
-                        }
                     }],
                     directives: [],
                     selectionSet: {
@@ -1750,19 +1762,6 @@
                                     name: {
                                         kind: "Name",
                                         value: "limit"
-                                    }
-                                }
-                            }, {
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "locale"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "locale"
                                     }
                                 }
                             }],
@@ -1852,11 +1851,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 176
+                    end: 144
                 }
             };
             n.loc.source = {
-                body: "query CommunitySelectionPage($limit: Int $locale: String) {\ngames(first: $limit locale: $locale) {\nedges {\nnode {\nid\nname\nboxArtURL(width: 285 height: 380)\nviewersCount\n}\n}\n}\n}",
+                body: "query CommunitySelectionPage($limit: Int) {\ngames(first: $limit) {\nedges {\nnode {\nid\nname\nboxArtURL(width: 285 height: 380)\nviewersCount\n}\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -1958,7 +1957,7 @@
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     return i.createElement(d.Pa, {
-                        position: d.hb.Relative,
+                        position: d.fb.Relative,
                         margin: {
                             bottom: 1
                         }
@@ -1968,10 +1967,10 @@
                         onMouseEnter: this.onMouseEnter,
                         onMouseLeave: this.onMouseLeave,
                         onClick: this.onClick
-                    }, Object(d.fc)(this.props)), i.createElement(d.G, {
+                    }, Object(d.dc)(this.props)), i.createElement(d.G, {
                         key: this.props.title
                     }, i.createElement(d.Xa, {
-                        position: d.hb.Relative
+                        position: d.fb.Relative
                     }, this.renderOverlay(), i.createElement(d.I, {
                         aspect: d.p.Aspect3x4,
                         alt: this.props.imageAlt,
@@ -1992,15 +1991,15 @@
                     var e, t = this.isFollowing();
                     return this.state.inProgress ? e = i.createElement(d.Za, {
                         delay: 0
-                    }) : this.state.hovered ? e = i.createElement(d.qb, {
+                    }) : this.state.hovered ? e = i.createElement(d.ob, {
                         width: 50,
                         height: 50,
-                        asset: t ? d.rb.Unheart : d.rb.Heart
-                    }) : t && (e = i.createElement(d.qb, {
+                        asset: t ? d.pb.Unheart : d.pb.Heart
+                    }) : t && (e = i.createElement(d.ob, {
                         width: 50,
                         height: 50,
-                        asset: d.rb.Heart
-                    })), e ? i.createElement(d.Bb, {
+                        asset: d.pb.Heart
+                    })), e ? i.createElement(d.zb, {
                         className: "follow-game-card__overlay " + (t ? "follow-game-card__overlay--followed" : ""),
                         background: d.r.Overlay,
                         color: d.O.Overlay,
@@ -2008,8 +2007,8 @@
                         display: d.X.Flex,
                         alignItems: d.f.Center,
                         justifyContent: d.Wa.Center,
-                        position: d.hb.Absolute,
-                        zIndex: d.ec.Above,
+                        position: d.fb.Absolute,
+                        zIndex: d.cc.Above,
                         attachBottom: !0,
                         attachTop: !0,
                         attachLeft: !0,

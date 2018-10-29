@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [175], {
+    [173], {
         IWck: function(e, n, t) {
             "use strict";
             var i, a;
@@ -259,74 +259,74 @@
                 k = t("wo8Z"),
                 p = t("bDCY"),
                 h = t("WkKR"),
-                g = t("Ue10"),
-                f = function(e) {
+                f = t("Ue10"),
+                g = function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(n, e), n.prototype.render = function() {
-                        return a.createElement(g.Bb, {
-                            background: g.r.Base,
-                            color: g.O.Alt
-                        }, a.createElement(g.Xa, {
+                        return a.createElement(f.zb, {
+                            background: f.r.Base,
+                            color: f.O.Alt
+                        }, a.createElement(f.Xa, {
                             padding: {
                                 bottom: .5,
                                 top: 1,
                                 x: 1
                             }
-                        }, a.createElement(g.Xa, {
+                        }, a.createElement(f.Xa, {
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(g.W, {
+                        }, a.createElement(f.W, {
                             bold: !0,
-                            type: g.Rb.H5
-                        }, Object(o.d)("Introducing: New Chatter Announcements!", "RitualsOnboardingSticky"))), a.createElement(g.Xa, {
+                            type: f.Pb.H5
+                        }, Object(o.d)("Introducing: New Chatter Announcements!", "RitualsOnboardingSticky"))), a.createElement(f.Xa, {
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(g.W, {
-                            type: g.Rb.Span
-                        }, Object(o.d)("New chatter announcements are now active in your channel, making it easier to welcome new people.", "RitualsOnboardingSticky")), a.createElement(g.W, null, a.createElement(g.U, {
+                        }, a.createElement(f.W, {
+                            type: f.Pb.Span
+                        }, Object(o.d)("New chatter announcements are now active in your channel, making it easier to welcome new people.", "RitualsOnboardingSticky")), a.createElement(f.W, null, a.createElement(f.U, {
                             onClick: this.props.onClick,
                             to: "/" + this.props.channelLogin + "/dashboard/settings",
                             "data-test-selector": "rituals-sticky-link"
-                        }, Object(o.d)("Manage in Dashboard", "RitualsOnboardingSticky"))))), a.createElement(g.Bb, {
-                            alignItems: g.f.Center,
-                            background: g.r.Alt2,
+                        }, Object(o.d)("Manage in Dashboard", "RitualsOnboardingSticky"))))), a.createElement(f.zb, {
+                            alignItems: f.f.Center,
+                            background: f.r.Alt2,
                             borderBottom: !0,
-                            color: g.O.Alt2,
-                            display: g.X.Flex,
+                            color: f.O.Alt2,
+                            display: f.X.Flex,
                             padding: {
                                 x: 1,
                                 y: .5
                             }
-                        }, a.createElement(g.qb, {
-                            asset: g.rb.Lock,
+                        }, a.createElement(f.ob, {
+                            asset: f.pb.Lock,
                             height: 12,
                             width: 12
-                        }), a.createElement(g.Xa, {
-                            display: g.X.Inline,
+                        }), a.createElement(f.Xa, {
+                            display: f.X.Inline,
                             margin: {
                                 left: .5
                             }
-                        }, a.createElement(g.W, {
-                            fontSize: g.Ca.Size8,
-                            type: g.Rb.Span
-                        }, Object(o.d)("You see this because you own this channel", "RitualsOnboardingSticky")))), a.createElement(g.Bb, {
+                        }, a.createElement(f.W, {
+                            fontSize: f.Ca.Size8,
+                            type: f.Pb.Span
+                        }, Object(o.d)("You see this because you own this channel", "RitualsOnboardingSticky")))), a.createElement(f.zb, {
                             attachRight: !0,
                             attachTop: !0,
                             padding: {
                                 x: .5,
                                 top: 1
                             },
-                            position: g.hb.Absolute
-                        }, a.createElement(g.A, {
+                            position: f.fb.Absolute
+                        }, a.createElement(f.A, {
                             ariaLabel: Object(o.d)("Close", "RitualsOnboardingSticky"),
-                            icon: g.rb.Close,
+                            icon: f.pb.Close,
                             onClick: this.props.onDismiss,
-                            size: g.B.Small,
-                            type: g.C.Secondary,
+                            size: f.B.Small,
+                            type: f.C.Secondary,
                             "data-test-selector": "rituals-sticky-dismiss-button"
                         })))
                     }, n
@@ -352,7 +352,7 @@
                         }, t.state.isDismissed = o.m.get(v, !1), t
                     }
                     return i.__extends(n, e), n.prototype.render = function() {
-                        return !this.props.data || this.props.data.loading || this.props.data.error ? null : this.props.data.channel.settings.isRitualsEnabled ? this.state.isDismissed ? null : a.createElement(f, {
+                        return !this.props.data || this.props.data.loading || this.props.data.error ? null : this.props.data.channel.settings.isRitualsEnabled ? this.state.isDismissed ? null : a.createElement(g, {
                             channelLogin: this.props.channelLogin,
                             onClick: this.onClick,
                             onDismiss: this.onDismiss

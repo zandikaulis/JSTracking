@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [173], {
+    [171], {
         "+Mtq": function(e, t, n) {},
         "3GEC": function(e, t, n) {
             "use strict";
@@ -269,7 +269,7 @@
                         this.unregister && this.unregister()
                     }, t.prototype.render = function() {
                         return l.createElement(u.Xa, {
-                            position: u.hb.Relative,
+                            position: u.fb.Relative,
                             fullWidth: !0
                         }, l.createElement("div", {
                             className: "sticky-container",
@@ -1234,7 +1234,7 @@
                             to: "/subs/" + this.props.followedChannel.login,
                             onClick: this.handleClick
                         }, s.createElement(S.Xa, {
-                            textAlign: S.Nb.Center,
+                            textAlign: S.Lb.Center,
                             padding: {
                                 bottom: 1
                             }
@@ -1274,7 +1274,7 @@
                             e.preventDefault(), t.props.login()
                         }, t.renderFollowedChannels = function() {
                             var e = t.props.data;
-                            if (e.loading || e.error) return s.createElement(S.gb, {
+                            if (e.loading || e.error) return s.createElement(S.eb, {
                                 key: "followed-channels-placeholder-1",
                                 height: 96
                             });
@@ -1330,12 +1330,12 @@
                             bold: !0,
                             className: "subs-landing-followed-channels__title",
                             color: S.O.Link,
-                            type: S.Rb.H3
-                        }, this.messages.title)), s.createElement(S.Xb, {
+                            type: S.Pb.H3
+                        }, this.messages.title)), s.createElement(S.Vb, {
                             center: !0,
-                            gutterSize: S.Zb.Small
+                            gutterSize: S.Xb.Small
                         }, this.renderFollowedChannels()), this.getShowMore()) : s.createElement(S.Xa, {
-                            textAlign: S.Nb.Center,
+                            textAlign: S.Lb.Center,
                             margin: {
                                 top: 3
                             }
@@ -1410,25 +1410,25 @@
                         var e;
                         return e = this.props.isWaiting ? s.createElement(S.Za, {
                             fillContent: !0
-                        }) : this.props.isErrored ? this.getErrorMessage() : this.props.streamerResults && this.props.streamerResults.totalHits > 0 ? this.getStreamerResultContent() : this.getNoResultsMessage(), s.createElement(S.Bb, {
+                        }) : this.props.isErrored ? this.getErrorMessage() : this.props.streamerResults && this.props.streamerResults.totalHits > 0 ? this.getStreamerResultContent() : this.getNoResultsMessage(), s.createElement(S.zb, {
                             elevation: 4
                         }, s.createElement("div", {
                             className: "streamer-search-panel " + (this.props.isOpen ? "" : "streamer-search-panel--closed"),
                             tabIndex: 0,
                             onKeyDown: this.props.onKeyDown
-                        }, s.createElement(S.Bb, {
+                        }, s.createElement(S.zb, {
                             className: "streamer-search-panel__results",
                             background: S.r.Base,
-                            position: S.hb.Relative,
-                            overflow: S.cb.Hidden,
+                            position: S.fb.Relative,
+                            overflow: S.ab.Hidden,
                             display: S.X.Block,
                             attachLeft: !0,
                             attachRight: !0,
                             attachBottom: !0,
                             fullHeight: !0
                         }, s.createElement(S.Pa, {
-                            overflow: S.cb.Hidden,
-                            position: S.hb.Relative,
+                            overflow: S.ab.Hidden,
+                            position: S.fb.Relative,
                             fullHeight: !0
                         }, s.createElement(d.b, {
                             suppressScrollX: !0
@@ -1463,13 +1463,13 @@
                                 size: S.J.Size4,
                                 aspect: S.p.Aspect1x1
                             }), s.createElement(S.H, {
-                                overflow: S.cb.Hidden
+                                overflow: S.ab.Hidden
                             }, s.createElement(S.Pa, {
                                 padding: {
                                     x: 1
                                 }
                             }, s.createElement(S.W, {
-                                type: S.Rb.H5,
+                                type: S.Pb.H5,
                                 ellipsis: !0
                             }, n))))))
                         });
@@ -1497,13 +1497,13 @@
                             fullWidth: !0
                         }, s.createElement(S.Pa, {
                             fullWidth: !0,
-                            zIndex: S.ec.Above,
-                            position: S.hb.Relative
+                            zIndex: S.cc.Above,
+                            position: S.fb.Relative
                         }, s.createElement("div", {
                             className: this.props.isOpen ? "streamer-search__container streamer-search__container--open" : "streamer-search__container"
                         }, s.createElement(L.a, {
                             onClickOut: this.props.onClickOut
-                        }, s.createElement(S.tb, {
+                        }, s.createElement(S.rb, {
                             onChange: this.handleChange,
                             onFocus: this.props.onFocus,
                             onKeyDown: this.props.onKeyDown,
@@ -1694,7 +1694,7 @@
                         user: Object(y.e)(e)
                     }
                 })(q),
-                W = (n("nfEO"), function(e) {
+                z = (n("nfEO"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.messages = {
@@ -1726,7 +1726,7 @@
                             justifyContent: S.Wa.Center
                         }, s.createElement(S.Xa, {
                             className: "subs-landing-page-contents",
-                            textAlign: S.Nb.Center,
+                            textAlign: S.Lb.Center,
                             display: S.X.Flex,
                             justifyContent: S.Wa.Center,
                             alignItems: S.f.Center,
@@ -1741,7 +1741,7 @@
                                 top: 4
                             }
                         }, s.createElement(S.W, {
-                            type: S.Rb.H2,
+                            type: S.Pb.H2,
                             color: S.O.Link,
                             bold: !0
                         }, this.messages.title)), s.createElement(S.Pa, {
@@ -1750,7 +1750,7 @@
                             },
                             className: "subs-landing-page-contents__paragraph"
                         }, s.createElement(S.W, {
-                            type: S.Rb.P,
+                            type: S.Pb.P,
                             fontSize: S.Ca.Size5
                         }, this.messages.info)), s.createElement(S.Pa, {
                             margin: {
@@ -1758,7 +1758,7 @@
                             },
                             className: "subs-landing-page-contents__heading"
                         }, s.createElement(S.W, {
-                            type: S.Rb.H3,
+                            type: S.Pb.H3,
                             color: S.O.Link,
                             bold: !0,
                             fontSize: S.Ca.Size4
@@ -1768,7 +1768,7 @@
                             },
                             className: "subs-landing-page-contents__paragraph"
                         }, s.createElement(S.W, {
-                            type: S.Rb.P,
+                            type: S.Pb.P,
                             fontSize: S.Ca.Size5
                         }, this.messages.searchInfo)), s.createElement(j, null), s.createElement(E, null), s.createElement(S.Xa, {
                             className: "subs-landing-page-contents__section",
@@ -1790,7 +1790,7 @@
                             },
                             className: "subs-landing-page-contents__heading"
                         }, s.createElement(S.W, {
-                            type: S.Rb.H3,
+                            type: S.Pb.H3,
                             color: S.O.Link,
                             bold: !0,
                             fontSize: S.Ca.Size4
@@ -1800,7 +1800,7 @@
                             },
                             className: "subs-landing-page-contents__paragraph"
                         }, s.createElement(S.W, {
-                            type: S.Rb.P,
+                            type: S.Pb.P,
                             fontSize: S.Ca.Size5
                         }, this.messages.perksInfo))), s.createElement(S.Xa, {
                             margin: {
@@ -1839,7 +1839,7 @@
                             },
                             className: "subs-landing-page-contents__heading"
                         }, s.createElement(S.W, {
-                            type: S.Rb.H3,
+                            type: S.Pb.H3,
                             color: S.O.Link,
                             bold: !0,
                             fontSize: S.Ca.Size4
@@ -1849,7 +1849,7 @@
                             },
                             className: "subs-landing-page-contents__paragraph"
                         }, s.createElement(S.W, {
-                            type: S.Rb.P,
+                            type: S.Pb.P,
                             fontSize: S.Ca.Size5
                         }, this.messages.emotesInfo)))))))))
                     }, t = i.__decorate([Object(g.b)("SubsLandingPage", {
@@ -1858,9 +1858,9 @@
                         location: m.PageviewLocation.SubsLandingPage
                     })], t)
                 }(s.Component)),
-                z = Object(r.connect)()(W);
+                W = Object(r.connect)()(z);
             n.d(t, "SubsLandingPage", function() {
-                return z
+                return W
             })
         },
         iDlv: function(e, t, n) {
@@ -2139,7 +2139,7 @@
             n.d(t, "b", function() {
                 return o
             }), n.d(t, "a", function() {
-                return l
+                return a
             });
             var r = n("/7QA"),
                 i = "en-us",
@@ -2174,27 +2174,25 @@
                     "zh-cn": "zh-cn",
                     "zh-tw": "zh-tw"
                 },
-                o = function(e, t) {
-                    var n, r = l();
-                    return n = t ? {
-                        id: a(e) ? e.tag_id : e.objectID,
-                        tagName: e.tag_name,
-                        isAutomated: e.automated || !1,
-                        localizedDescription: a(e) ? "" : e.description_localizations && e.description_localizations[r] || "",
-                        localizedName: ""
-                    } : {
-                        id: a(e) ? e.tag_id : e.objectID,
+                o = function(e) {
+                    var t, n = a();
+                    return t = function(e) {
+                        return void 0 !== e.tag_id
+                    }(e) ? {
+                        id: e.tag_id,
                         isLanguageTag: e.tag_name.includes("auto___lang"),
                         localizedName: "",
                         tagName: e.tag_name
-                    }, e.localizations && e.localizations[r] ? n.localizedName = e.localizations[r] : e.localizations && e.localizations[i] ? n.localizedName = e.localizations[i] : n.localizedName = n.tagName, n
+                    } : {
+                        id: e.objectID,
+                        tagName: e.tag_name,
+                        isAutomated: e.automated || !1,
+                        localizedDescription: e.description_localizations && e.description_localizations[n] || "",
+                        localizedName: ""
+                    }, e.localizations && e.localizations[n] ? t.localizedName = e.localizations[n] : e.localizations && e.localizations[i] ? t.localizedName = e.localizations[i] : t.localizedName = t.tagName, t
                 };
 
-            function a(e) {
-                return void 0 !== e.tag_id
-            }
-
-            function l() {
+            function a() {
                 return s[r.p.intl.getLanguageCode() || ""] || i
             }
         },

@@ -66,7 +66,7 @@
                             fullWidth: !0,
                             fullHeight: !0,
                             justifyContent: b.Wa.Center,
-                            position: b.hb.Absolute
+                            position: b.fb.Absolute
                         }, u.createElement(b.Xa, {
                             alignItems: b.f.Center,
                             className: "messages-disclosure-page__body",
@@ -76,7 +76,7 @@
                     }, t.prototype.renderPlaceholder = function() {
                         return u.createElement(b.Xa, {
                             justifyContent: b.Wa.Center
-                        }, u.createElement(b.gb, {
+                        }, u.createElement(b.eb, {
                             height: 130,
                             width: 180
                         }))

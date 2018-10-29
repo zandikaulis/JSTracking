@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [105], {
+    [104], {
         "3lt/": function(e, t, a) {
             "use strict";
             a("mrSG"), a("uhBA");
@@ -203,7 +203,7 @@
                             margin: {
                                 y: 1
                             }
-                        }, r.createElement(E.nb, {
+                        }, r.createElement(E.lb, {
                             name: "companytype",
                             label: Object(i.d)("Developer", "DevRequestAccess"),
                             value: n.Developer,
@@ -213,7 +213,7 @@
                             margin: {
                                 y: 1
                             }
-                        }, r.createElement(E.nb, {
+                        }, r.createElement(E.lb, {
                             name: "companytype",
                             label: Object(i.d)("Publisher", "DevRequestAccess"),
                             value: n.Publisher,
@@ -223,7 +223,7 @@
                             margin: {
                                 y: 1
                             }
-                        }, r.createElement(E.nb, {
+                        }, r.createElement(E.lb, {
                             name: "companytype",
                             label: Object(i.d)("Other", "DevRequestAccess"),
                             value: n.Other,
@@ -378,16 +378,16 @@
                         }, Object(i.d)("Submit", "DevRequestAccess")))
                     }, t
                 }(r.Component),
-                F = Object(c.compose)(Object(g.b)("DevRequestAccessForm", {
+                P = Object(c.compose)(Object(g.b)("DevRequestAccessForm", {
                     autoReportInteractive: !0
                 }))(N),
-                x = "request-access-form-error",
-                I = function(e) {
+                F = "request-access-form-error",
+                x = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderErrorMessage = function() {
                             if (t.props.errorMessage) return r.createElement(E.Xa, {
-                                "data-test-selector": x,
+                                "data-test-selector": F,
                                 className: "dev-company-request-access__error-message",
                                 margin: {
                                     bottom: 1
@@ -398,9 +398,9 @@
                                     bottom: .5
                                 }
                             }, r.createElement(E.W, {
-                                type: E.Rb.H4
+                                type: E.Pb.H4
                             }, Object(i.d)("Error", "DevRequestAccess"))), r.createElement(E.W, {
-                                type: E.Rb.P
+                                type: E.Pb.P
                             }, t.props.errorMessage))
                         }, t
                     }
@@ -415,7 +415,7 @@
                         return this.props.errorMessage && this.props.errorMessage.length && (e = this.renderErrorMessage()), r.createElement(E.Xa, {
                             className: "dev-company-request-access",
                             fullWidth: !0
-                        }, r.createElement(E.pb, {
+                        }, r.createElement(E.nb, {
                             centered: !0
                         }, r.createElement(E.Xa, {
                             margin: {
@@ -431,24 +431,24 @@
                                 bottom: 1
                             }
                         }, r.createElement(E.W, {
-                            type: E.Rb.H2
+                            type: E.Pb.H2
                         }, Object(i.d)("Register your company and game with Twitch", "DevRequestAccess"))), r.createElement(E.W, {
-                            type: E.Rb.P
+                            type: E.Pb.P
                         }, Object(i.d)("The Twitch Developer Console helps you to link and manage your games and their assets on Twitch. Before providing access, we just need to capture some simple details. We will need to confirm that you are authorized for the company you specify. Communications will be sent to the email you have on file with your Twitch.tv account.", "DevRequestAccess")))), r.createElement(E.Ja, null, r.createElement(E.P, {
                             cols: {
                                 default: 12,
                                 md: 9,
                                 lg: 6
                             }
-                        }, e, r.createElement(F, {
+                        }, e, r.createElement(P, {
                             onSubmit: this.props.onSubmit
                         }))))))
                     }, t
                 }(r.Component),
-                X = Object(c.compose)(Object(g.b)("DevCompanyRequestAccess", {
+                I = Object(c.compose)(Object(g.b)("DevCompanyRequestAccess", {
                     autoReportInteractive: !0
-                }))(I);
-            var L = function(e) {
+                }))(x);
+            var X = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -487,7 +487,7 @@
                         }, t
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(X, {
+                        return r.createElement(I, {
                             isLoggedIn: this.props.isLoggedIn,
                             onSubmit: this.handleApplicationSubmit,
                             errorMessage: this.state.error,
@@ -495,7 +495,7 @@
                         })
                     }, t
                 }(r.Component),
-                P = Object(c.compose)(Object(o.connect)(function(e) {
+                L = Object(c.compose)(Object(o.connect)(function(e) {
                     return {
                         isLoggedIn: Object(p.f)(e),
                         company: Object(h.c)(e)
@@ -505,11 +505,11 @@
                     destination: l.a.DevSiteRequestAccess
                 }), Object(m.a)({
                     location: v.PageviewLocation.DevSiteRequestCompanyAccess
-                }))(L);
+                }))(X);
             a.d(t, "DevCompanyRequestAccessContainer", function() {
-                return L
+                return X
             }), a.d(t, "DevCompanyRequestAccessPage", function() {
-                return P
+                return L
             })
         },
         GD6M: function(e, t, a) {
@@ -546,7 +546,7 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(i.Kb, {
+                        return s.createElement(i.Ib, {
                             onClick: this.onClick,
                             label: this.props.game.name
                         })
@@ -648,7 +648,7 @@
                         return s.createElement(i.Xa, null, s.createElement(o.a, {
                             onClickOut: this.onClickOut
                         }, s.createElement(i.Xa, {
-                            position: i.hb.Relative,
+                            position: i.fb.Relative,
                             padding: {
                                 bottom: 1
                             }

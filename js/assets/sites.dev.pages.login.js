@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [106], {
+    [105], {
         "3lt/": function(e, t, n) {
             "use strict";
             n("mrSG"), n("uhBA");
@@ -46,14 +46,14 @@
                             fullWidth: !0,
                             display: f.X.Flex,
                             flexDirection: f.Aa.Column,
-                            position: f.hb.Absolute,
+                            position: f.fb.Absolute,
                             attachTop: !0,
                             attachBottom: !0,
                             breakpointSmall: {
                                 flexDirection: f.Aa.Row
                             },
                             className: "dev-login-page"
-                        }, d.createElement(f.Bb, {
+                        }, d.createElement(f.zb, {
                             flexGrow: 1,
                             flexShrink: 1,
                             display: f.X.Flex,
@@ -63,11 +63,11 @@
                             className: "dev-login-page__logo-panel"
                         }, d.createElement(f.U, {
                             to: "/"
-                        }, d.createElement(f.Bb, {
+                        }, d.createElement(f.zb, {
                             color: f.O.Overlay
-                        }, d.createElement(f.qb, {
-                            asset: f.rb.LogoTwitchDevelopers,
-                            type: f.sb.Inherit,
+                        }, d.createElement(f.ob, {
+                            asset: f.pb.LogoTwitchDevelopers,
+                            type: f.qb.Inherit,
                             width: 220,
                             height: 142
                         })))), d.createElement(f.Xa, {
@@ -86,12 +86,12 @@
                                 bottom: 2
                             }
                         }, d.createElement(f.W, {
-                            type: f.Rb.P,
+                            type: f.Pb.P,
                             fontSize: f.Ca.Size3
                         }, Object(g.d)("Welcome to the Twitch Developer Console, where code enhances live streaming experiences", "DevLogin"))), d.createElement(f.z, {
                             onClick: this.login,
                             size: f.D.Large,
-                            icon: f.rb.LogoGlitch,
+                            icon: f.pb.LogoGlitch,
                             "data-a-target": "glass-login-button"
                         }, Object(g.d)("Login with Twitch", "DevLogin")))))
                     }, t

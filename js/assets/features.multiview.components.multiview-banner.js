@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [126], {
+    [125], {
         "5k+0": function(e, t, n) {
             "use strict";
             n.r(t);
@@ -11,7 +11,7 @@
             ! function(e) {
                 e.TRIAL_BANNER = "multiview_banner_trial_banner", e.ENTER_TRIAL_BUTTON = "multiview_banner_enter_trial_button"
             }(r || (r = {}));
-            var s = function(e) {
+            var c = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.trialOverrideEnabled = o.b.get(u, !1), t
@@ -26,7 +26,7 @@
                             delay: l.j.Medium,
                             duration: l.k.Medium,
                             enabled: !0
-                        }, a.createElement(l.Bb, {
+                        }, a.createElement(l.zb, {
                             "data-test-selector": r.TRIAL_BANNER,
                             display: l.X.Flex,
                             background: l.r.Base,
@@ -39,9 +39,9 @@
                                 topLeft: l.x.Large,
                                 topRight: l.x.Large
                             }
-                        }, a.createElement(l.qb, {
-                            asset: l.rb.MultiscreenEqualThree,
-                            type: l.sb.Inherit
+                        }, a.createElement(l.ob, {
+                            asset: l.pb.MultiscreenEqualThree,
+                            type: l.qb.Inherit
                         }), a.createElement(l.Xa, {
                             margin: {
                                 x: 1
@@ -52,10 +52,10 @@
                             }
                         }, a.createElement(l.W, {
                             fontSize: l.Ca.Size5,
-                            type: l.Rb.Strong
+                            type: l.Pb.Strong
                         }, Object(o.e)("Twitch Multiview", "MultiviewBanner"))), a.createElement(l.W, {
                             fontSize: l.Ca.Size5,
-                            type: l.Rb.Span
+                            type: l.Pb.Span
                         }, Object(o.e)("Choose your own streams including player POVs", "MultiviewBanner"))), a.createElement(l.Xa, {
                             margin: {
                                 left: "auto"
@@ -67,15 +67,15 @@
                         }, Object(o.e)("Try Multiview For Free", "MultiviewBanner"))))) : null
                     }, t
                 }(a.Component),
-                c = s;
+                d = c;
             n.d(t, "TRIAL_ENABLED_OVERRIDE_SETTING", function() {
                 return u
             }), n.d(t, "TestSelectors", function() {
                 return r
             }), n.d(t, "MultiviewBannerPresentation", function() {
-                return s
-            }), n.d(t, "MultiviewBanner", function() {
                 return c
+            }), n.d(t, "MultiviewBanner", function() {
+                return d
             })
         }
     }

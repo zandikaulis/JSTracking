@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [79], {
+    [78], {
         "0EKw": function(e, n, t) {
             "use strict";
             var i = t("q1tI"),
@@ -17,7 +17,7 @@
                             }
                         },
                         tooltip: Object(a.d)("Game", "GameLink"),
-                        svgAsset: s.rb.NavGames,
+                        svgAsset: s.pb.NavGames,
                         title: e.name,
                         "data-a-target": "stream-game-link"
                     })
@@ -49,10 +49,10 @@
                 l = function(e) {
                     return a.createElement(o.a, i.__assign({
                         linkTo: "/team/" + e.name,
-                        svgAsset: s.rb.Team,
+                        svgAsset: s.pb.Team,
                         title: e.displayName,
                         tooltip: Object(r.d)("Team", "TeamLink")
-                    }, Object(s.fc)(e)))
+                    }, Object(s.dc)(e)))
                 };
             t.d(n, "a", function() {
                 return l
@@ -282,59 +282,41 @@
                                             },
                                             arguments: [],
                                             directives: []
-                                        }, {
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "directories"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
                                             kind: "Field",
                                             name: {
                                                 kind: "Name",
-                                                value: "game"
+                                                value: "nodes"
                                             },
                                             arguments: [],
                                             directives: [],
                                             selectionSet: {
                                                 kind: "SelectionSet",
                                                 selections: [{
-                                                    kind: "Field",
+                                                    kind: "FragmentSpread",
                                                     name: {
                                                         kind: "Name",
-                                                        value: "id"
+                                                        value: "teamsPlayerGame"
                                                     },
-                                                    arguments: [],
                                                     directives: []
                                                 }, {
-                                                    kind: "Field",
+                                                    kind: "FragmentSpread",
                                                     name: {
                                                         kind: "Name",
-                                                        value: "name"
+                                                        value: "teamsPlayerDirectory"
                                                     },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "boxArtURL"
-                                                    },
-                                                    arguments: [{
-                                                        kind: "Argument",
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "width"
-                                                        },
-                                                        value: {
-                                                            kind: "IntValue",
-                                                            value: "40"
-                                                        }
-                                                    }, {
-                                                        kind: "Argument",
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "height"
-                                                        },
-                                                        value: {
-                                                            kind: "IntValue",
-                                                            value: "55"
-                                                        }
-                                                    }],
                                                     directives: []
                                                 }]
                                             }
@@ -344,14 +326,118 @@
                             }
                         }]
                     }
+                }, {
+                    kind: "FragmentDefinition",
+                    name: {
+                        kind: "Name",
+                        value: "teamsPlayerGame"
+                    },
+                    typeCondition: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Game"
+                        }
+                    },
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "name"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "boxArtURL"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "width"
+                                },
+                                value: {
+                                    kind: "IntValue",
+                                    value: "40"
+                                }
+                            }, {
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "height"
+                                },
+                                value: {
+                                    kind: "IntValue",
+                                    value: "55"
+                                }
+                            }],
+                            directives: []
+                        }]
+                    }
+                }, {
+                    kind: "FragmentDefinition",
+                    name: {
+                        kind: "Name",
+                        value: "teamsPlayerDirectory"
+                    },
+                    typeCondition: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Directory"
+                        }
+                    },
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "id"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "directoryType"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "displayName"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "name"
+                            },
+                            arguments: [],
+                            directives: []
+                        }]
+                    }
                 }],
                 loc: {
                     start: 0,
-                    end: 327
+                    end: 502
                 }
             };
             t.loc.source = {
-                body: "query ChannelPage_ChannelInfoBar_User($login: String!) {\nuser(login: $login) {\nid\nlogin\ndescription\ndisplayName\nprofileImageURL(width: 70)\nbroadcastSettings {\nid\ntitle\n}\nfollowers {\ntotalCount\n}\nprimaryTeam {\nid\ndisplayName\nname\n}\nprofileViewCount\nstream {\nid\nviewersCount\ngame {\nid\nname\nboxArtURL(width: 40 height: 55)\n}\n}\n}\n}",
+                body: "query ChannelPage_ChannelInfoBar_User($login: String!) {\nuser(login: $login) {\nid\nlogin\ndescription\ndisplayName\nprofileImageURL(width: 70)\nbroadcastSettings {\nid\ntitle\n}\nfollowers {\ntotalCount\n}\nprimaryTeam {\nid\ndisplayName\nname\n}\nprofileViewCount\nstream {\nid\nviewersCount\n}\ndirectories {\nnodes {\n...teamsPlayerGame\n...teamsPlayerDirectory\n}\n}\n}\n}\nfragment teamsPlayerGame on Game {\nname\nboxArtURL(width: 40 height: 55)\n}\nfragment teamsPlayerDirectory on Directory {\nid\ndirectoryType\ndisplayName\nname\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -530,8 +616,8 @@
                 p = t("GnwI"),
                 v = t("oJmH"),
                 g = t("/7QA"),
-                b = t("2+sX"),
-                k = t("u5aL"),
+                k = t("2+sX"),
+                b = t("u5aL"),
                 f = t("eJ65"),
                 h = t("yR8l"),
                 y = t("x7UT"),
@@ -547,16 +633,16 @@
             ! function(e) {
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(i || (i = {}));
-            var B = l.a.wrap(function() {
-                    return Promise.all([t.e(0), t.e(181)]).then(t.bind(null, "f+qK"))
+            var L = l.a.wrap(function() {
+                    return Promise.all([t.e(0), t.e(179)]).then(t.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
-                L = function(e) {
+                B = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
                             inPrimeRegion: !1
                         }, n.modalLevel = "top_page", n.renderBalloonContentForBalloonLayer = function() {
-                            return r.createElement(k.a, {
+                            return r.createElement(b.a, {
                                 onClickOut: n.handleBalloonClickOut
                             }, r.createElement(I.Xa, {
                                 "data-a-target": "sub-balloon",
@@ -644,19 +730,19 @@
                         var m, p = l ? Object(g.d)("All-Access Pass", "SubscribeButton") : Object(g.d)("Get the All-Access Pass", "SubscribeButton"),
                             v = t && Object(F.h)(o, t.subscriptionBenefit);
                         if (l) {
-                            var b = "";
-                            if (b = c ? Object(g.d)("Subscribed", "SubscribeButton") : v ? Object(g.d)("Continue Sub for $1", "SubscribeButton") : Object(g.d)("Gift A Sub", "SubscribeButton"), m = this.props.hostChannelID ? Object(g.d)("Subscribed to {username}", {
+                            var k = "";
+                            if (k = c ? Object(g.d)("Subscribed", "SubscribeButton") : v ? Object(g.d)("Continue Sub for $1", "SubscribeButton") : Object(g.d)("Gift A Sub", "SubscribeButton"), m = this.props.hostChannelID ? Object(g.d)("Subscribed to {username}", {
                                     username: n.displayName || ""
-                                }, "SubscribeButton") : b, c && !d) return r.createElement(I.z, {
+                                }, "SubscribeButton") : k, c && !d) return r.createElement(I.z, {
                                 disabled: !0,
                                 ariaLabel: m,
-                                icon: I.rb.Star
+                                icon: I.pb.Star
                             }, m);
                             d && (m = p)
                         } else m = d ? p : this.props.hostChannelID ? Object(g.d)("Subscribe to {username}", {
                             username: n.displayName || ""
                         }, "SubscribeButton") : Object(g.d)("Subscribe", "SubscribeButton");
-                        var k = r.createElement(I.z, {
+                        var b = r.createElement(I.z, {
                                 ariaLabel: m,
                                 "data-a-target": l ? "subscribed-button" : "subscribe-button",
                                 "data-test-selector": i.SubButton,
@@ -667,7 +753,7 @@
                                 type: this.getButtonType(l)
                             }, m),
                             h = o[0];
-                        return this.setBalloonWrapperContent(r.createElement(B, {
+                        return this.setBalloonWrapperContent(r.createElement(L, {
                             authToken: this.props.authToken,
                             channelLogin: this.props.channelLogin || "",
                             "data-test-selector": i.SubscribeBalloon,
@@ -683,12 +769,12 @@
                         })), this.props.renderBalloonInBalloonLayer ? r.createElement(I.Xa, {
                             "data-test-selector": i.BalloonLayerButton,
                             refDelegate: this.setContainerRefDelegate
-                        }, k) : r.createElement(I.Xa, {
+                        }, b) : r.createElement(I.Xa, {
                             className: v ? "subscribe-button--promo" : ""
                         }, r.createElement(f.a, {
                             "data-test-selector": i.DefaultButton,
                             onToggle: this.handleMenuToggle
-                        }, k, r.createElement(I.u, {
+                        }, b, r.createElement(I.u, {
                             "data-a-target": "sub-balloon",
                             direction: this.getBalloonDirection(),
                             size: I.w.Large
@@ -698,7 +784,7 @@
                         return e && void 0 !== this.props.subscribedButtonType ? this.props.subscribedButtonType : e ? I.F.Success : this.props.unsubscribedButtonType || I.F.Default
                     }, n.prototype.getButtonIcon = function(e, n) {
                         var t = void 0;
-                        return e ? t = n === S.a.Prime ? I.rb.Crown : I.rb.Star : this.props.forceIcon && (t = I.rb.StarHollow), t
+                        return e ? t = n === S.a.Prime ? I.pb.Crown : I.pb.Star : this.props.forceIcon && (t = I.pb.StarHollow), t
                     }, n.prototype.isUserDataReady = function(e) {
                         return e.data && e.data.user && !e.data.loading && !e.data.error
                     }, n.prototype.checkAndDisplaySubscriptionCheckout = function() {
@@ -720,7 +806,7 @@
                         }
                     }, n
                 }(r.Component),
-                M = Object(v.compose)(Object(h.a)(T, {
+                D = Object(v.compose)(Object(h.a)(T, {
                     options: function(e) {
                         return {
                             variables: {
@@ -741,8 +827,8 @@
                     skip: function(e) {
                         return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
                     }
-                }]), Object(b.e)())(L),
-                D = function(e) {
+                }]), Object(k.e)())(B),
+                M = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.reportInteractive = function() {
@@ -750,7 +836,7 @@
                         }, n
                     }
                     return a.__extends(n, e), n.prototype.render = function() {
-                        return r.createElement(M, {
+                        return r.createElement(D, {
                             authToken: this.props.authToken,
                             balloonDirection: this.props.balloonDirection,
                             channelLogin: this.props.channelLogin,
@@ -770,7 +856,7 @@
                         })
                     }, n = a.__decorate([Object(p.b)("SubscribeButton")], n)
                 }(r.Component);
-            var O = Object(o.connect)(function(e) {
+            var P = Object(o.connect)(function(e) {
                 return {
                     authToken: Object(m.a)(e),
                     sessionUser: Object(m.e)(e)
@@ -783,23 +869,23 @@
                         return Object(u.d)(l.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([t.e(0), t.e(193)]).then(t.bind(null, "KJv/"))
+                                return Promise.all([t.e(0), t.e(191)]).then(t.bind(null, "KJv/"))
                             },
                             componentProps: n
                         })
                     }
                 }, e)
-            })(D);
+            })(M);
             t.d(n, !1, function() {
-                return D
+                return M
             }), t.d(n, "a", function() {
-                return O
+                return P
             }), t.d(n, !1, function() {
                 return i
             }), t.d(n, !1, function() {
-                return L
+                return B
             }), t.d(n, !1, function() {
-                return M
+                return D
             })
         },
         RuiO: function(e, n) {
@@ -1688,7 +1774,7 @@
                     return i.createElement(s.a, null, i.createElement(c.z, {
                         type: c.F.Hollow,
                         "data-a-target": "share-button",
-                        icon: c.rb.Share
+                        icon: c.pb.Share
                     }, Object(a.d)("Share", "ChannelShareButton")), i.createElement(c.u, {
                         direction: c.v.TopRight,
                         size: c.w.Small,
@@ -1771,7 +1857,7 @@
 
             function d(e) {
                 return i.__awaiter(this, void 0, void 0, function() {
-                    var n, t, l, d, c, u, m, p, v, g, b, k, f;
+                    var n, t, l, d, c, u, m, p, v, g, k, b, f;
                     return i.__generator(this, function(i) {
                         switch (i.label) {
                             case 0:
@@ -1795,9 +1881,9 @@
                                     channelID: e.channelID
                                 }), m = null, d && t && ((p = d && d.data && d.data.video) ? m = Object(o.a)(p.broadcastType) : a.k.error(new Error("GraphQL empty response"), "Query for video info in SubEvent reporting returned no data.", {
                                     currentVideoID: n
-                                })), v = u && u.self, g = v ? !!v.subscriptionBenefit : null, b = v && v.subscriptionBenefit && v.subscriptionBenefit.purchasedWithPrime || !1, k = v ? v.canPrimeSubscribe : null, f = {
+                                })), v = u && u.self, g = v ? !!v.subscriptionBenefit : null, k = v && v.subscriptionBenefit && v.subscriptionBenefit.purchasedWithPrime || !1, b = v ? v.canPrimeSubscribe : null, f = {
                                     action: e.action,
-                                    can_subscribe: k,
+                                    can_subscribe: b,
                                     channel: e.channelLogin,
                                     channel_id: e.channelID,
                                     checkout_button_tier: e.checkoutButtonTier,
@@ -1813,7 +1899,7 @@
                                     modal: e.modal,
                                     modal_level: e.modalLevel || "",
                                     show_prime_content: e.showPrimeContent,
-                                    show_resub: u ? k && b : null,
+                                    show_resub: u ? b && k : null,
                                     vod_id: n,
                                     vod_type: m,
                                     viewport_height: window.innerHeight,
@@ -1834,7 +1920,7 @@
                         margin: {
                             right: 1
                         },
-                        overflow: r.cb.Hidden,
+                        overflow: r.ab.Hidden,
                         flexShrink: 0
                     }, i.createElement(r.U, {
                         to: {
@@ -1872,24 +1958,24 @@
                 p = t("LA8z"),
                 v = t("4VQm"),
                 g = t("yR8l"),
-                b = t("8/mp"),
-                k = t("Ue10"),
+                k = t("8/mp"),
+                b = t("Ue10"),
                 f = function(e) {
                     var n = e.member,
                         t = null;
-                    n.live && (t = i.createElement(k.Xa, {
+                    n.live && (t = i.createElement(b.Xa, {
                         margin: {
                             right: .5
                         }
-                    }, i.createElement(k.K, {
-                        status: k.M.Live
+                    }, i.createElement(b.K, {
+                        status: b.M.Live
                     })));
                     var a = null;
-                    n.live && (a = i.createElement(k.Xa, null, i.createElement(k.W, {
-                        color: k.O.Alt2
+                    n.live && (a = i.createElement(b.Xa, null, i.createElement(b.W, {
+                        color: b.O.Alt2
                     }, Object(u.f)(n.viewersCount))));
-                    return i.createElement(k.Ua, {
-                        type: k.Va.Alpha,
+                    return i.createElement(b.Ua, {
+                        type: b.Va.Alpha,
                         onClick: function() {
                             e.onClick({
                                 userID: n.userID,
@@ -1898,29 +1984,29 @@
                             })
                         },
                         selected: e.isSelected
-                    }, i.createElement(k.Bb, {
-                        display: k.X.Flex,
-                        alignItems: k.f.Center,
+                    }, i.createElement(b.zb, {
+                        display: b.X.Flex,
+                        alignItems: b.f.Center,
                         padding: {
                             y: 1,
                             x: 1
                         }
-                    }, i.createElement(k.q, {
+                    }, i.createElement(b.q, {
                         alt: n.displayName,
                         size: 30,
                         src: n.profileImageURL
-                    }), i.createElement(k.Xa, {
+                    }), i.createElement(b.Xa, {
                         flexGrow: 1,
                         flexShrink: 1,
-                        overflow: k.cb.Hidden,
+                        overflow: b.ab.Hidden,
                         margin: {
                             left: 1
                         }
-                    }, i.createElement(k.W, {
+                    }, i.createElement(b.W, {
                         ellipsis: !0,
-                        fontSize: k.Ca.Size5
-                    }, n.displayName)), i.createElement(k.Xa, {
-                        display: k.X.Flex
+                        fontSize: b.Ca.Size5
+                    }, n.displayName)), i.createElement(b.Xa, {
+                        display: b.X.Flex
                     }, t, a)))
                 },
                 h = function() {
@@ -2095,68 +2181,68 @@
                                     key: n.userID
                                 })
                             }),
-                            t = i.createElement(k.Bb, {
+                            t = i.createElement(b.zb, {
                                 className: "member-list__scrollable-container",
-                                display: k.X.Flex,
-                                flexDirection: k.Aa.Column,
-                                background: k.r.Base,
+                                display: b.X.Flex,
+                                flexDirection: b.Aa.Column,
+                                background: b.r.Base,
                                 elevation: 1
                             }, i.createElement(v.b, {
                                 scrollRef: this.saveScrollRef
-                            }, i.createElement(k.Xa, null, n, i.createElement("div", {
+                            }, i.createElement(b.Xa, null, n, i.createElement("div", {
                                 style: {
                                     height: "2em "
                                 }
-                            }), i.createElement(b.a, {
+                            }), i.createElement(k.a, {
                                 loadMore: this.props.loadMore,
                                 enabled: this.props.data.infiniteScrollEnabled,
                                 contentLength: this.props.data.numLoaded
-                            }))), i.createElement(k.Xa, {
+                            }))), i.createElement(b.Xa, {
                                 className: "member-list__back-to-top-placeholder",
-                                position: k.hb.Relative
+                                position: b.fb.Relative
                             }, this.backToTop()));
-                        return 0 === this.props.data.total && (t = i.createElement(k.Bb, {
+                        return 0 === this.props.data.total && (t = i.createElement(b.zb, {
                             className: "member-list__scrollable-container",
-                            display: k.X.Flex,
-                            flexDirection: k.Aa.Column,
-                            background: k.r.Base,
+                            display: b.X.Flex,
+                            flexDirection: b.Aa.Column,
+                            background: b.r.Base,
                             elevation: 1,
-                            justifyContent: k.Wa.Center,
-                            alignItems: k.f.Center
-                        }, i.createElement(k.S, {
+                            justifyContent: b.Wa.Center,
+                            alignItems: b.f.Center
+                        }, i.createElement(b.S, {
                             src: "https://static-cdn.jtvnw.net/emoticons/v1/112291/2.0",
                             alt: Object(u.d)("No team members", "TeamLandingPage_MemberList")
-                        }), i.createElement(k.W, {
-                            color: k.O.Alt2,
-                            fontSize: k.Ca.Size6
-                        }, Object(u.d)("No team members to display", "TeamLandingPage_MemberList")))), i.createElement(k.Xa, {
-                            display: k.X.Flex,
-                            flexDirection: k.Aa.Column
-                        }, i.createElement(k.Xa, {
-                            display: k.X.Flex,
+                        }), i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            fontSize: b.Ca.Size6
+                        }, Object(u.d)("No team members to display", "TeamLandingPage_MemberList")))), i.createElement(b.Xa, {
+                            display: b.X.Flex,
+                            flexDirection: b.Aa.Column
+                        }, i.createElement(b.Xa, {
+                            display: b.X.Flex,
                             flexShrink: 0,
-                            alignItems: k.f.Center,
+                            alignItems: b.f.Center,
                             margin: {
                                 bottom: 1
                             }
-                        }, i.createElement(k.Xa, {
+                        }, i.createElement(b.Xa, {
                             flexGrow: 1,
                             flexShrink: 1
-                        }, i.createElement(k.W, {
+                        }, i.createElement(b.W, {
                             bold: !0,
-                            fontSize: k.Ca.Size4
-                        }, Object(u.d)("Team Members", "TeamLandingPage_MemberList"))), i.createElement(k.W, {
-                            color: k.O.Alt2
+                            fontSize: b.Ca.Size4
+                        }, Object(u.d)("Team Members", "TeamLandingPage_MemberList"))), i.createElement(b.W, {
+                            color: b.O.Alt2
                         }, Object(u.f)(this.props.data.total))), t)
                     }, n.prototype.backToTop = function() {
-                        return this.state.showBackToTop ? i.createElement(k.i, {
-                            type: k.n.FadeIn,
+                        return this.state.showBackToTop ? i.createElement(b.i, {
+                            type: b.n.FadeIn,
                             enabled: !0
-                        }, i.createElement(k.Pa, {
-                            display: k.X.Flex,
-                            justifyContent: k.Wa.Center,
-                            alignItems: k.f.Center,
-                            position: k.hb.Absolute,
+                        }, i.createElement(b.Pa, {
+                            display: b.X.Flex,
+                            justifyContent: b.Wa.Center,
+                            alignItems: b.f.Center,
+                            position: b.fb.Absolute,
                             padding: .5,
                             attachBottom: !0,
                             fullWidth: !0
@@ -2231,221 +2317,225 @@
                         }
                     }
                 }))(I),
-                B = t("6x+I"),
-                L = Object(a.compose)(Object(l.b)("TeamsDescription", {
+                L = t("6x+I"),
+                B = Object(a.compose)(Object(l.b)("TeamsDescription", {
                     autoReportInteractive: !0
                 }))(function(e) {
-                    return e.description ? i.createElement(k.Xa, {
+                    return e.description ? i.createElement(b.Xa, {
                         margin: {
                             top: 2
                         }
-                    }, i.createElement(k.W, {
+                    }, i.createElement(b.W, {
                         bold: !0,
-                        fontSize: k.Ca.Size4
-                    }, e.displayName), i.createElement(k.Bb, {
-                        color: k.O.Alt2,
+                        fontSize: b.Ca.Size4
+                    }, e.displayName), i.createElement(b.zb, {
+                        color: b.O.Alt2,
                         margin: {
                             top: 1
                         }
-                    }, i.createElement(k.ac, null, i.createElement(B, {
+                    }, i.createElement(b.Yb, null, i.createElement(L, {
                         source: e.description
                     })))) : null
                 }),
-                M = t("eJ65"),
-                D = t("eDVu"),
-                O = t("0Log"),
-                P = t("/aPz"),
-                U = t("ZLqn"),
-                x = t("eAAt"),
-                j = t("0EKw"),
-                A = t("5goO"),
-                R = t("QjI3"),
-                V = t("eFQ3"),
-                X = t("6J1Z"),
-                G = function(e) {
+                D = t("eJ65"),
+                M = t("eDVu"),
+                P = t("0Log"),
+                O = t("/aPz"),
+                U = t("DMoW"),
+                x = t("ZLqn"),
+                j = t("eAAt"),
+                A = t("0EKw"),
+                R = t("5goO"),
+                V = t("QjI3"),
+                X = t("eFQ3"),
+                G = t("6J1Z"),
+                W = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.getGame = function() {
-                            return n.props.data.user && n.props.data.user.stream && n.props.data.user.stream.game
+                            var e = n.props.data.user;
+                            return e && e.directories ? e.directories.nodes.find(function(e) {
+                                return !(!e || e.directoryType !== U.r.GAME)
+                            }) : null
                         }, n.getTitle = function() {
                             var e = n.props.data.user;
                             if (e && e.broadcastSettings && e.broadcastSettings.title) return e.broadcastSettings.title
                         }, n.renderGame = function() {
                             var e = n.getGame();
-                            return e && e.name ? i.createElement(j.a, {
+                            return e && e.name ? i.createElement(A.a, {
                                 name: e.name
                             }) : null
                         }, n.renderGameBoxArt = function() {
                             var e = n.getGame(),
                                 t = e && e.name ? e.name : "",
                                 a = e && e.boxArtURL ? e.boxArtURL : "";
-                            return e && t && a ? i.createElement(x.a, {
+                            return e && t && a ? i.createElement(j.a, {
                                 name: t,
                                 boxArtURL: a,
-                                size: k.J.Size4
+                                size: b.J.Size4
                             }) : null
                         }, n.renderTeam = function() {
                             var e = n.props.data.user;
-                            return e && e.primaryTeam ? i.createElement(A.a, {
+                            return e && e.primaryTeam ? i.createElement(R.a, {
                                 name: e.primaryTeam.name,
                                 displayName: e.primaryTeam.displayName
                             }) : null
                         }, n.renderUserIcon = function() {
                             var e = n.props.data.user;
-                            return e ? i.createElement(k.Xa, {
+                            return e ? i.createElement(b.Xa, {
                                 margin: {
                                     right: 1
                                 },
-                                overflow: k.cb.Hidden,
+                                overflow: b.ab.Hidden,
                                 flexShrink: 0
-                            }, i.createElement(k.I, {
+                            }, i.createElement(b.I, {
                                 src: e.profileImageURL || "",
                                 alt: name,
-                                aspect: k.p.Aspect1x1,
-                                size: k.J.Size4
+                                aspect: b.p.Aspect1x1,
+                                size: b.J.Size4
                             })) : null
                         }, n
                     }
                     return d.__extends(n, e), n.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, n.prototype.render = function() {
-                        return i.createElement(k.Bb, {
+                        return i.createElement(b.zb, {
                             className: "teams-player",
-                            background: k.r.Base,
+                            background: b.r.Base,
                             elevation: 1,
                             fullWidth: !0
-                        }, this.renderTopBar(), i.createElement(k.o, {
-                            ratio: k.p.Aspect16x9
-                        }, i.createElement(V.b, {
+                        }, this.renderTopBar(), i.createElement(b.o, {
+                            ratio: b.p.Aspect16x9
+                        }, i.createElement(X.b, {
                             channelLogin: this.props.channelLogin,
                             vodID: "",
                             disableTheatreButton: !0,
-                            playerTypeOverride: V.a.Site
+                            playerTypeOverride: X.a.Site
                         })), this.renderBottomBar())
                     }, n.prototype.renderTopBar = function() {
                         var e = this.props.data.user;
                         if (!e || !e.id) return null;
                         var n = Object(u.f)(e.stream && e.stream.viewersCount ? e.stream.viewersCount : 0);
-                        return i.createElement(k.Bb, {
-                            display: k.X.Flex,
-                            flexWrap: k.Ba.Wrap,
-                            justifyContent: k.Wa.Between,
+                        return i.createElement(b.zb, {
+                            display: b.X.Flex,
+                            flexWrap: b.Ba.Wrap,
+                            justifyContent: b.Wa.Between,
                             padding: 1
-                        }, i.createElement(k.G, {
+                        }, i.createElement(b.G, {
                             row: !0
-                        }, this.renderUserIcon(), i.createElement(k.H, {
-                            overflow: k.cb.Hidden
-                        }, e.displayName && i.createElement(k.Xa, {
+                        }, this.renderUserIcon(), i.createElement(b.H, {
+                            overflow: b.ab.Hidden
+                        }, e.displayName && i.createElement(b.Xa, {
                             margin: {
                                 bottom: .5
                             },
                             ellipsis: !0
-                        }, i.createElement(k.U, {
+                        }, i.createElement(b.U, {
                             to: "/" + this.props.channelLogin
-                        }, i.createElement(k.W, {
-                            type: k.Rb.Span,
-                            fontSize: k.Ca.Size4,
+                        }, i.createElement(b.W, {
+                            type: b.Pb.Span,
+                            fontSize: b.Ca.Size4,
                             title: e.displayName
-                        }, e.displayName))), i.createElement(k.Bb, {
-                            display: k.X.Flex,
-                            flexWrap: k.Ba.Wrap,
-                            color: k.O.Alt2
-                        }, e.stream && e.stream.id && i.createElement(k.Bb, {
-                            color: k.O.Live,
-                            display: k.X.InlineFlex,
+                        }, e.displayName))), i.createElement(b.zb, {
+                            display: b.X.Flex,
+                            flexWrap: b.Ba.Wrap,
+                            color: b.O.Alt2
+                        }, e.stream && e.stream.id && i.createElement(b.zb, {
+                            color: b.O.Live,
+                            display: b.X.InlineFlex,
                             margin: {
                                 right: 1
                             }
-                        }, i.createElement(k.Ab, {
+                        }, i.createElement(b.yb, {
                             value: n,
                             label: Object(u.d)("Watching Now", "TeamPlayer"),
-                            icon: k.rb.GlyphLive,
+                            icon: b.pb.GlyphLive,
                             "data-a-target": "channel-viewers-count"
-                        })), i.createElement(k.Xa, {
+                        })), i.createElement(b.Xa, {
                             margin: {
                                 right: 1
                             },
-                            display: k.X.Flex
-                        }, i.createElement(k.Ab, {
+                            display: b.X.Flex
+                        }, i.createElement(b.yb, {
                             value: Object(u.d)("{followerCount, number}", {
                                 followerCount: e.followers && e.followers.totalCount ? e.followers.totalCount : 0
                             }, "TeamPlayer"),
                             label: Object(u.d)("Followers", "TeamPlayer"),
-                            icon: k.rb.GlyphFollowers
-                        })), i.createElement(k.Xa, {
-                            display: k.X.Flex
-                        }, i.createElement(k.Ab, {
+                            icon: b.pb.GlyphFollowers
+                        })), i.createElement(b.Xa, {
+                            display: b.X.Flex
+                        }, i.createElement(b.yb, {
                             value: Object(u.d)("{channelCount, number}", {
                                 channelCount: e.profileViewCount || 0
                             }, "TeamPlayer"),
                             label: Object(u.d)("Total Views", "TeamPlayer"),
-                            icon: k.rb.GlyphViews
-                        }))))), i.createElement(k.Xa, {
-                            display: k.X.Flex,
-                            alignItems: k.f.Center
-                        }, e.description && i.createElement(M.a, null, i.createElement(k.z, {
-                            type: k.F.Hollow
-                        }, Object(u.d)("Info", "Team Player")), i.createElement(k.u, {
-                            size: k.w.Medium,
-                            direction: k.v.BottomRight
-                        }, i.createElement(k.Xa, {
-                            zIndex: k.ec.Above,
+                            icon: b.pb.GlyphViews
+                        }))))), i.createElement(b.Xa, {
+                            display: b.X.Flex,
+                            alignItems: b.f.Center
+                        }, e.description && i.createElement(D.a, null, i.createElement(b.z, {
+                            type: b.F.Hollow
+                        }, Object(u.d)("Info", "Team Player")), i.createElement(b.u, {
+                            size: b.w.Medium,
+                            direction: b.v.BottomRight
+                        }, i.createElement(b.Xa, {
+                            zIndex: b.cc.Above,
                             padding: 1
-                        }, i.createElement(k.W, {
-                            type: k.Rb.Span,
-                            fontSize: k.Ca.Size6,
-                            color: k.O.Alt2
-                        }, e.description)))), i.createElement(k.Xa, {
+                        }, i.createElement(b.W, {
+                            type: b.Pb.Span,
+                            fontSize: b.Ca.Size6,
+                            color: b.O.Alt2
+                        }, e.description)))), i.createElement(b.Xa, {
                             padding: {
                                 left: 1
                             }
-                        }, i.createElement(R.a, {
+                        }, i.createElement(V.a, {
                             channelLogin: this.props.channelLogin
                         }))))
                     }, n.prototype.renderBottomBar = function() {
                         var e = this.getTitle();
-                        return i.createElement(k.Bb, {
-                            alignItems: k.f.Center,
-                            display: k.X.Flex,
-                            flexWrap: k.Ba.NoWrap,
-                            justifyContent: k.Wa.Between,
+                        return i.createElement(b.zb, {
+                            alignItems: b.f.Center,
+                            display: b.X.Flex,
+                            flexWrap: b.Ba.NoWrap,
+                            justifyContent: b.Wa.Between,
                             padding: 1
-                        }, i.createElement(k.Xa, {
-                            overflow: k.cb.Hidden
-                        }, i.createElement(k.G, {
+                        }, i.createElement(b.Xa, {
+                            overflow: b.ab.Hidden
+                        }, i.createElement(b.G, {
                             row: !0
-                        }, this.renderGameBoxArt(), i.createElement(k.H, {
-                            overflow: k.cb.Hidden
-                        }, i.createElement(k.Xa, {
+                        }, this.renderGameBoxArt(), i.createElement(b.H, {
+                            overflow: b.ab.Hidden
+                        }, i.createElement(b.Xa, {
                             margin: {
                                 bottom: .5
                             },
                             ellipsis: !0
-                        }, i.createElement(k.W, {
-                            type: k.Rb.Span,
-                            fontSize: k.Ca.Size4,
+                        }, i.createElement(b.W, {
+                            type: b.Pb.Span,
+                            fontSize: b.Ca.Size4,
                             title: e
-                        }, e)), i.createElement(k.Xa, {
-                            display: k.X.Flex,
-                            flexWrap: k.Ba.Wrap
-                        }, this.renderGame(), this.renderTeam())))), i.createElement(k.Xa, {
+                        }, e)), i.createElement(b.Xa, {
+                            display: b.X.Flex,
+                            flexWrap: b.Ba.Wrap
+                        }, this.renderGame(), this.renderTeam())))), i.createElement(b.Xa, {
                             className: "teams-player__action-container",
-                            display: k.X.Flex,
-                            alignItems: k.f.Center,
-                            justifyContent: k.Wa.End
-                        }, i.createElement(k.Xa, {
-                            display: k.X.Flex,
+                            display: b.X.Flex,
+                            alignItems: b.f.Center,
+                            justifyContent: b.Wa.End
+                        }, i.createElement(b.Xa, {
+                            display: b.X.Flex,
                             margin: {
                                 x: 1
                             }
-                        }, this.props.data.user && i.createElement(U.a, {
+                        }, this.props.data.user && i.createElement(x.a, {
                             login: this.props.channelLogin,
                             displayName: this.props.data.user.displayName || "",
                             title: e || ""
                         }))))
                     }, n
                 }(i.Component),
-                W = Object(a.compose)(Object(l.b)("TeamsPlayer"), Object(g.a)(X, {
+                z = Object(a.compose)(Object(l.b)("TeamsPlayer"), Object(g.a)(G, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2453,26 +2543,26 @@
                             }
                         }
                     }
-                }), Object(D.a)(function(e) {
+                }), Object(M.a)(function(e) {
                     return {
-                        query: X,
-                        topic: e.data.user && e.data.user.id ? Object(P.e)(e.data.user.id) : "",
+                        query: G,
+                        topic: e.data.user && e.data.user.id ? Object(O.e)(e.data.user.id) : "",
                         skip: !(!e.data.loading && !e.data.error && e.data.user),
                         variables: {
                             login: e.channelLogin
                         },
-                        type: O.PubsubMessageType.BroadcastSettingsUpdate,
+                        type: P.PubsubMessageType.BroadcastSettingsUpdate,
                         mutator: function(e, n) {
                             return n.user && n.user.broadcastSettings && n.user.broadcastSettings.id && (n.user.broadcastSettings.title = e.status || e.old_status), n
                         }
                     }
-                }))(G),
+                }))(W),
                 q = t("ST9J");
             t("GTf2");
             ! function(e) {
                 e.LogoImage = "teamspagebody-logo", e.BannerImage = "teamspagebody-banner", e.BackgroundImage = "teamspagebody-background"
             }(S || (S = {}));
-            var z = function(e) {
+            var H = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {}, n.changeSelectedMember = function(e) {
@@ -2496,31 +2586,31 @@
                             className: "teams-page-body__outer-container teams-page-body__team-asset",
                             style: this.getBackgroundStyle(),
                             "data-test-selector": S.BackgroundImage
-                        }, i.createElement(v.b, null, i.createElement(k.Xa, {
-                            display: k.X.Flex,
-                            justifyContent: k.Wa.Center,
+                        }, i.createElement(v.b, null, i.createElement(b.Xa, {
+                            display: b.X.Flex,
+                            justifyContent: b.Wa.Center,
                             padding: {
                                 top: 3,
                                 left: 3,
                                 right: 3
                             }
-                        }, i.createElement(k.Bb, {
+                        }, i.createElement(b.zb, {
                             className: "teams-page-body__inner-container",
-                            background: k.r.Alt2,
-                            display: k.X.Flex,
+                            background: b.r.Alt2,
+                            display: b.X.Flex,
                             padding: 2,
                             fullHeight: !0
-                        }, i.createElement(k.Xa, {
+                        }, i.createElement(b.Xa, {
                             className: "teams-page-body__column--left",
-                            display: k.X.Flex,
-                            flexDirection: k.Aa.Column,
+                            display: b.X.Flex,
+                            flexDirection: b.Aa.Column,
                             margin: {
                                 right: 2
                             }
                         }, this.renderLogo(), i.createElement(T, {
                             teamName: this.props.teamName,
                             onMemberItemClick: this.changeSelectedMember
-                        })), i.createElement(k.Xa, {
+                        })), i.createElement(b.Xa, {
                             className: "teams-page-body__column--right"
                         }, this.renderBanner(), this.renderPlayer(), this.renderTeamDescription())))))
                     }, n.prototype.getBackgroundStyle = function() {
@@ -2553,13 +2643,13 @@
                     }, n.prototype.renderTeamDescription = function() {
                         var e = this.props.data.team && this.props.data.team.displayName || "",
                             n = this.props.data.team && this.props.data.team.description || "";
-                        return i.createElement(L, {
+                        return i.createElement(B, {
                             displayName: e,
                             description: n
                         })
                     }, n.prototype.renderPlayer = function() {
                         var e = this.getPlayerLogin();
-                        return e ? i.createElement(W, {
+                        return e ? i.createElement(z, {
                             channelLogin: e
                         }) : null
                     }, n.prototype.getPlayerLogin = function() {
@@ -2578,7 +2668,7 @@
                         }(e) : ""
                     }, n
                 }(i.Component),
-                H = Object(a.compose)(c.a, Object(l.b)("TeamsPageBody"), Object(g.a)(q, {
+                Q = Object(a.compose)(c.a, Object(l.b)("TeamsPageBody"), Object(g.a)(q, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2586,32 +2676,32 @@
                             }
                         }
                     }
-                }))(z),
-                Q = t("Gw3k"),
-                $ = function(e) {
-                    return i.createElement(k.Xa, {
-                        display: k.X.Flex,
-                        flexDirection: k.Aa.Column,
-                        flexWrap: k.Ba.NoWrap,
+                }))(H),
+                $ = t("Gw3k"),
+                K = function(e) {
+                    return i.createElement(b.Xa, {
+                        display: b.X.Flex,
+                        flexDirection: b.Aa.Column,
+                        flexWrap: b.Ba.NoWrap,
                         fullHeight: !0
-                    }, i.createElement(Q.a, null), i.createElement(k.Xa, {
+                    }, i.createElement($.a, null), i.createElement(b.Xa, {
                         flexGrow: 1,
-                        display: k.X.Flex,
+                        display: b.X.Flex,
                         fullHeight: !0
                     }, e.children))
                 },
-                K = Object(a.compose)(Object(l.b)("TeamsLandingPage", {
+                J = Object(a.compose)(Object(l.b)("TeamsLandingPage", {
                     destination: o.a.TeamsLandingPage,
                     autoReportInteractive: !0
                 }), Object(r.a)({
                     location: s.PageviewLocation.TeamsLandingPage
                 }))(function(e) {
-                    return i.createElement($, null, i.createElement(H, {
+                    return i.createElement(K, null, i.createElement(Q, {
                         teamName: e.match.params.teamName
                     }))
                 });
             t.d(n, "TeamsLandingPage", function() {
-                return K
+                return J
             })
         },
         jeZI: function(e, n, t) {},
@@ -2711,18 +2801,18 @@
                             target: "_blank",
                             className: e,
                             onClick: t.onShareClickHandler
-                        }, Object(d.fc)(t.props), {
+                        }, Object(d.dc)(t.props), {
                             download: t.props.text
                         }), t.renderIcon()) : t.isLink() ? r.createElement("a", a.__assign({
                             href: t.getLinkTarget(),
                             target: "_blank",
                             className: e,
                             onClick: t.onShareClickHandler
-                        }, Object(d.fc)(t.props)), t.renderIcon()) : r.createElement("button", a.__assign({
+                        }, Object(d.dc)(t.props)), t.renderIcon()) : r.createElement("button", a.__assign({
                             onClick: t.copyPageUrl,
                             onMouseLeave: t.clearIsCopiedStatus,
                             className: e
-                        }, Object(d.fc)(t.props)), t.renderIcon())
+                        }, Object(d.dc)(t.props)), t.renderIcon())
                     }, t.onShareClickHandler = function() {
                         t.props.onShareClick && t.props.onShareClick(t.props.type)
                     }, t.clearIsCopiedStatus = function() {
@@ -2742,7 +2832,7 @@
                             display: d.X.Flex,
                             alignItems: d.f.Center,
                             justifyContent: d.Wa.Center
-                        }, r.createElement(d.qb, {
+                        }, r.createElement(d.ob, {
                             asset: e
                         }))
                     }, t.isLink = function() {
@@ -2767,18 +2857,18 @@
                     }, t.getAssetFromType = function() {
                         switch (t.props.type) {
                             case i.Twitter:
-                                return d.rb.Twitter;
+                                return d.pb.Twitter;
                             case i.Facebook:
-                                return d.rb.Facebook;
+                                return d.pb.Facebook;
                             case i.VKontakte:
-                                return d.rb.VKontakte;
+                                return d.pb.VKontakte;
                             case i.Reddit:
-                                return d.rb.Reddit;
+                                return d.pb.Reddit;
                             case i.Download:
-                                return d.rb.Download;
+                                return d.pb.Download;
                             case i.Copy:
                             default:
-                                return d.rb.Copy
+                                return d.pb.Copy
                         }
                     }, t.addSocialClassModifier = function(e) {
                         switch (t.props.type) {
@@ -2822,9 +2912,9 @@
                 return a.__extends(n, e), n.prototype.render = function() {
                     return r.createElement(d.Xa, {
                         className: "social-button"
-                    }, r.createElement(d.Ub, {
+                    }, r.createElement(d.Sb, {
                         label: this.getTooltipFromType(),
-                        direction: d.Wb.Bottom
+                        direction: d.Ub.Bottom
                     }, this.renderLink()))
                 }, n
             }(r.Component)
@@ -3737,26 +3827,26 @@
                         },
                         display: r.X.Flex,
                         alignItems: r.f.Center
-                    }, a.createElement(r.Ub, {
-                        align: r.Vb.Left,
+                    }, a.createElement(r.Sb, {
+                        align: r.Tb.Left,
                         label: e.tooltip,
-                        direction: r.Wb.Bottom
+                        direction: r.Ub.Bottom
                     }, a.createElement(r.Xa, {
                         margin: {
                             right: .5
                         }
-                    }, a.createElement(r.Bb, {
+                    }, a.createElement(r.zb, {
                         display: r.X.Flex,
                         alignItems: r.f.Center,
                         color: r.O.Alt2
-                    }, a.createElement(r.qb, {
+                    }, a.createElement(r.ob, {
                         asset: e.svgAsset
                     }))), a.createElement(r.W, {
                         fontSize: r.Ca.Size5,
                         ellipsis: !0
                     }, a.createElement(r.U, i.__assign({
                         to: e.linkTo
-                    }, Object(r.fc)(e), {
+                    }, Object(r.dc)(e), {
                         targetBlank: !0
                     }), e.title))))
                 };

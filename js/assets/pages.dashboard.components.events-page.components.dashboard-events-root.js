@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [154], {
+    [152], {
         "+58i": function(e, t, n) {
             "use strict";
             var a, i = n("mrSG"),
@@ -17,9 +17,9 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = this.optionElement();
-                        return this.props.disabled && this.props.disabledMessage ? o.createElement(m.Ub, {
-                            direction: m.Wb.Bottom,
-                            align: m.Vb.Left,
+                        return this.props.disabled && this.props.disabledMessage ? o.createElement(m.Sb, {
+                            direction: m.Ub.Bottom,
+                            align: m.Tb.Left,
                             width: 130,
                             display: m.X.Flex,
                             label: this.props.disabledMessage
@@ -97,7 +97,7 @@
                                 }))
                             });
                         return o.createElement(m.Xa, {
-                            position: m.hb.Relative,
+                            position: m.fb.Relative,
                             "data-a-target": "time-pick-field",
                             className: "time-picker"
                         }, o.createElement(d.a, {
@@ -112,12 +112,12 @@
                             value: this.state.displayValue
                         }), o.createElement(m.Xa, {
                             className: "time-picker__balloon",
-                            position: m.hb.Absolute
+                            position: m.fb.Absolute
                         }, o.createElement(m.u, {
                             noTail: !0,
                             show: this.state.isOpen,
                             "data-a-target": "time-selector-balloon"
-                        }, o.createElement(m.Bb, {
+                        }, o.createElement(m.zb, {
                             className: "time-picker__dropdown"
                         }, t)))))
                     }, t.prototype.getTime = function(e) {
@@ -313,12 +313,12 @@
                             dragOver: this.state.isDraggingOver,
                             error: this.props.error
                         }, i.createElement(r.Pa, {
-                            position: r.hb.Absolute,
+                            position: r.fb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: r.ec.Above
+                            zIndex: r.cc.Above
                         }, i.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -1750,7 +1750,7 @@
                         return i.createElement(o.Ea, {
                             id: "event-language",
                             label: Object(r.d)("Event Language", "EventModal")
-                        }, i.createElement(o.xb, {
+                        }, i.createElement(o.vb, {
                             name: "event-language",
                             onChange: this.onChange,
                             disabled: this.props.disabled,
@@ -2031,14 +2031,14 @@
                             }, E(this.state.fieldErrors.endTime)) : null;
                         return r.createElement(h.Xa, {
                             className: "event-modal"
-                        }, r.createElement(h.Bb, {
+                        }, r.createElement(h.zb, {
                             className: "event-modal__content",
                             padding: 4,
                             margin: {
                                 top: 5
                             },
                             background: h.r.Base
-                        }, r.createElement(h.Bb, {
+                        }, r.createElement(h.zb, {
                             display: h.X.Flex,
                             padding: {
                                 bottom: 2
@@ -2052,7 +2052,7 @@
                             flexGrow: 0,
                             flexShrink: 1
                         }, r.createElement(h.W, {
-                            type: h.Rb.H3
+                            type: h.Pb.H3
                         }, Object(o.d)("Create an Event", "EventsModal"))), r.createElement(h.Xa, {
                             flexGrow: 0,
                             flexShrink: 0
@@ -2104,7 +2104,7 @@
                             label: Object(o.d)("Event Description", "EventsModal"),
                             error: !!this.state.fieldErrors.description,
                             errorMessage: E(this.state.fieldErrors.description)
-                        }, r.createElement(h.Ob, {
+                        }, r.createElement(h.Mb, {
                             placeholder: Object(o.d)("Tell viewers why they should watch your event", "EventsModal"),
                             onChange: this.onDescriptionChange,
                             value: this.state.edits.description || "",
@@ -2246,12 +2246,12 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(r.Bb, {
+                        return i.createElement(r.zb, {
                             className: "vm-edit-cancel-modal",
                             background: r.r.Base,
                             padding: 2
                         }, i.createElement(r.Xa, null, i.createElement(r.W, {
-                            type: r.Rb.H3
+                            type: r.Pb.H3
                         }, this.props.title), i.createElement(r.Xa, {
                             padding: {
                                 y: 1
@@ -2301,7 +2301,7 @@
                     return {
                         kind: o.DOCUMENT,
                         definitions: n,
-                        loc: q(e, t)
+                        loc: z(e, t)
                     }
                 }((0, r.createLexer)(n, t || {}))
             }, t.parseValue = function(e, t) {
@@ -2328,7 +2328,7 @@
                 return {
                     kind: o.NAME,
                     value: t.value,
-                    loc: q(e, t)
+                    loc: z(e, t)
                 }
             }
 
@@ -2372,7 +2372,7 @@
                                 typeCondition: (Q(e, "on"), L(e)),
                                 directives: C(e, !1),
                                 selectionSet: f(e),
-                                loc: q(e, t)
+                                loc: z(e, t)
                             };
                             return {
                                 kind: o.FRAGMENT_DEFINITION,
@@ -2380,7 +2380,7 @@
                                 typeCondition: (Q(e, "on"), L(e)),
                                 directives: C(e, !1),
                                 selectionSet: f(e),
-                                loc: q(e, t)
+                                loc: z(e, t)
                             }
                         }(e)
                 } else if (W(e, r.TokenKind.BRACE_L)) return u(e);
@@ -2396,7 +2396,7 @@
                     variableDefinitions: [],
                     directives: [],
                     selectionSet: f(e),
-                    loc: q(e, t)
+                    loc: z(e, t)
                 };
                 var n = m(e),
                     a = void 0;
@@ -2407,7 +2407,7 @@
                     variableDefinitions: p(e),
                     directives: C(e, !1),
                     selectionSet: f(e),
-                    loc: q(e, t)
+                    loc: z(e, t)
                 }
             }
 
@@ -2435,7 +2435,7 @@
                     variable: g(e),
                     type: (H(e, r.TokenKind.COLON), O(e)),
                     defaultValue: $(e, r.TokenKind.EQUALS) ? y(e, !0) : void 0,
-                    loc: q(e, t)
+                    loc: z(e, t)
                 }
             }
 
@@ -2444,7 +2444,7 @@
                 return H(e, r.TokenKind.DOLLAR), {
                     kind: o.VARIABLE,
                     name: l(e),
-                    loc: q(e, t)
+                    loc: z(e, t)
                 }
             }
 
@@ -2453,7 +2453,7 @@
                 return {
                     kind: o.SELECTION_SET,
                     selections: Z(e, r.TokenKind.BRACE_L, h, r.TokenKind.BRACE_R),
-                    loc: q(e, t)
+                    loc: z(e, t)
                 }
             }
 
@@ -2464,7 +2464,7 @@
                         kind: o.FRAGMENT_SPREAD,
                         name: N(e),
                         directives: C(e, !1),
-                        loc: q(e, t)
+                        loc: z(e, t)
                     };
                     var n = void 0;
                     "on" === e.token.value && (e.advance(), n = L(e));
@@ -2473,7 +2473,7 @@
                         typeCondition: n,
                         directives: C(e, !1),
                         selectionSet: f(e),
-                        loc: q(e, t)
+                        loc: z(e, t)
                     }
                 }(e) : function(e) {
                     var t = e.token,
@@ -2488,7 +2488,7 @@
                         arguments: k(e, !1),
                         directives: C(e, !1),
                         selectionSet: W(e, r.TokenKind.BRACE_L) ? f(e) : void 0,
-                        loc: q(e, t)
+                        loc: z(e, t)
                     }
                 }(e)
             }
@@ -2504,7 +2504,7 @@
                     kind: o.ARGUMENT,
                     name: l(e),
                     value: (H(e, r.TokenKind.COLON), y(e, !1)),
-                    loc: q(e, t)
+                    loc: z(e, t)
                 }
             }
 
@@ -2514,7 +2514,7 @@
                     kind: o.ARGUMENT,
                     name: l(e),
                     value: (H(e, r.TokenKind.COLON), _(e)),
-                    loc: q(e, t)
+                    loc: z(e, t)
                 }
             }
 
@@ -2538,7 +2538,7 @@
                                     for (; !$(e, a);) i.push(n(e));
                                     return i
                                 }(e, r.TokenKind.BRACKET_L, a, r.TokenKind.BRACKET_R),
-                                loc: q(e, n)
+                                loc: z(e, n)
                             }
                         }(e, t);
                     case r.TokenKind.BRACE_L:
@@ -2550,20 +2550,20 @@
                             return {
                                 kind: o.OBJECT,
                                 fields: a,
-                                loc: q(e, n)
+                                loc: z(e, n)
                             }
                         }(e, t);
                     case r.TokenKind.INT:
                         return e.advance(), {
                             kind: o.INT,
                             value: n.value,
-                            loc: q(e, n)
+                            loc: z(e, n)
                         };
                     case r.TokenKind.FLOAT:
                         return e.advance(), {
                             kind: o.FLOAT,
                             value: n.value,
-                            loc: q(e, n)
+                            loc: z(e, n)
                         };
                     case r.TokenKind.STRING:
                     case r.TokenKind.BLOCK_STRING:
@@ -2572,14 +2572,14 @@
                         return "true" === n.value || "false" === n.value ? (e.advance(), {
                             kind: o.BOOLEAN,
                             value: "true" === n.value,
-                            loc: q(e, n)
+                            loc: z(e, n)
                         }) : "null" === n.value ? (e.advance(), {
                             kind: o.NULL,
-                            loc: q(e, n)
+                            loc: z(e, n)
                         }) : (e.advance(), {
                             kind: o.ENUM,
                             value: n.value,
-                            loc: q(e, n)
+                            loc: z(e, n)
                         });
                     case r.TokenKind.DOLLAR:
                         if (!t) return g(e)
@@ -2593,7 +2593,7 @@
                     kind: o.STRING,
                     value: t.value,
                     block: t.kind === r.TokenKind.BLOCK_STRING,
-                    loc: q(e, t)
+                    loc: z(e, t)
                 }
             }
 
@@ -2611,7 +2611,7 @@
                     kind: o.OBJECT_FIELD,
                     name: l(e),
                     value: (H(e, r.TokenKind.COLON), y(e, t)),
-                    loc: q(e, n)
+                    loc: z(e, n)
                 }
             }
 
@@ -2626,7 +2626,7 @@
                     kind: o.DIRECTIVE,
                     name: l(e),
                     arguments: k(e, t),
-                    loc: q(e, n)
+                    loc: z(e, n)
                 }
             }
 
@@ -2636,11 +2636,11 @@
                 return $(e, r.TokenKind.BRACKET_L) ? (n = O(e), H(e, r.TokenKind.BRACKET_R), n = {
                     kind: o.LIST_TYPE,
                     type: n,
-                    loc: q(e, t)
+                    loc: z(e, t)
                 }) : n = L(e), $(e, r.TokenKind.BANG) ? {
                     kind: o.NON_NULL_TYPE,
                     type: n,
-                    loc: q(e, t)
+                    loc: z(e, t)
                 } : n
             }
 
@@ -2649,7 +2649,7 @@
                 return {
                     kind: o.NAMED_TYPE,
                     name: l(e),
-                    loc: q(e, t)
+                    loc: z(e, t)
                 }
             }
 
@@ -2666,7 +2666,7 @@
                                 kind: o.SCHEMA_DEFINITION,
                                 directives: n,
                                 operationTypes: a,
-                                loc: q(e, t)
+                                loc: z(e, t)
                             }
                         }(e);
                     case "scalar":
@@ -2681,7 +2681,7 @@
                                 description: n,
                                 name: a,
                                 directives: i,
-                                loc: q(e, t)
+                                loc: z(e, t)
                             }
                         }(e);
                     case "type":
@@ -2700,7 +2700,7 @@
                                 interfaces: i,
                                 directives: r,
                                 fields: s,
-                                loc: q(e, t)
+                                loc: z(e, t)
                             }
                         }(e);
                     case "interface":
@@ -2717,7 +2717,7 @@
                                 name: a,
                                 directives: i,
                                 fields: r,
-                                loc: q(e, t)
+                                loc: z(e, t)
                             }
                         }(e);
                     case "union":
@@ -2734,7 +2734,7 @@
                                 name: a,
                                 directives: i,
                                 types: r,
-                                loc: q(e, t)
+                                loc: z(e, t)
                             }
                         }(e);
                     case "enum":
@@ -2751,7 +2751,7 @@
                                 name: a,
                                 directives: i,
                                 values: r,
-                                loc: q(e, t)
+                                loc: z(e, t)
                             }
                         }(e);
                     case "input":
@@ -2768,7 +2768,7 @@
                                 name: a,
                                 directives: i,
                                 fields: r,
-                                loc: q(e, t)
+                                loc: z(e, t)
                             }
                         }(e);
                     case "extend":
@@ -2786,7 +2786,7 @@
                                             kind: o.SCALAR_TYPE_EXTENSION,
                                             name: n,
                                             directives: a,
-                                            loc: q(e, t)
+                                            loc: z(e, t)
                                         }
                                     }(e);
                                 case "type":
@@ -2804,7 +2804,7 @@
                                             interfaces: a,
                                             directives: i,
                                             fields: r,
-                                            loc: q(e, t)
+                                            loc: z(e, t)
                                         }
                                     }(e);
                                 case "interface":
@@ -2820,7 +2820,7 @@
                                             name: n,
                                             directives: a,
                                             fields: i,
-                                            loc: q(e, t)
+                                            loc: z(e, t)
                                         }
                                     }(e);
                                 case "union":
@@ -2836,7 +2836,7 @@
                                             name: n,
                                             directives: a,
                                             types: i,
-                                            loc: q(e, t)
+                                            loc: z(e, t)
                                         }
                                     }(e);
                                 case "enum":
@@ -2852,7 +2852,7 @@
                                             name: n,
                                             directives: a,
                                             values: i,
-                                            loc: q(e, t)
+                                            loc: z(e, t)
                                         }
                                     }(e);
                                 case "input":
@@ -2868,7 +2868,7 @@
                                             name: n,
                                             directives: a,
                                             fields: i,
-                                            loc: q(e, t)
+                                            loc: z(e, t)
                                         }
                                     }(e)
                             }
@@ -2880,7 +2880,7 @@
                                 n = j(e);
                             Q(e, "directive"), H(e, r.TokenKind.AT);
                             var a = l(e),
-                                i = V(e);
+                                i = P(e);
                             Q(e, "on");
                             var s = function(e) {
                                 $(e, r.TokenKind.PIPE);
@@ -2896,7 +2896,7 @@
                                 name: a,
                                 arguments: i,
                                 locations: s,
-                                loc: q(e, t)
+                                loc: z(e, t)
                             }
                         }(e)
                 }
@@ -2920,7 +2920,7 @@
                     kind: o.OPERATION_TYPE_DEFINITION,
                     operation: n,
                     type: a,
-                    loc: q(e, t)
+                    loc: z(e, t)
                 }
             }
 
@@ -2943,7 +2943,7 @@
                 var t = e.token,
                     n = j(e),
                     a = l(e),
-                    i = V(e);
+                    i = P(e);
                 H(e, r.TokenKind.COLON);
                 var s = O(e),
                     d = C(e, !0);
@@ -2954,15 +2954,15 @@
                     arguments: i,
                     type: s,
                     directives: d,
-                    loc: q(e, t)
+                    loc: z(e, t)
                 }
             }
 
-            function V(e) {
-                return W(e, r.TokenKind.PAREN_L) ? Z(e, r.TokenKind.PAREN_L, P, r.TokenKind.PAREN_R) : []
+            function P(e) {
+                return W(e, r.TokenKind.PAREN_L) ? Z(e, r.TokenKind.PAREN_L, V, r.TokenKind.PAREN_R) : []
             }
 
-            function P(e) {
+            function V(e) {
                 var t = e.token,
                     n = j(e),
                     a = l(e);
@@ -2978,7 +2978,7 @@
                     type: i,
                     defaultValue: s,
                     directives: d,
-                    loc: q(e, t)
+                    loc: z(e, t)
                 }
             }
 
@@ -3007,12 +3007,12 @@
                     description: n,
                     name: a,
                     directives: i,
-                    loc: q(e, t)
+                    loc: z(e, t)
                 }
             }
 
             function B(e) {
-                return W(e, r.TokenKind.BRACE_L) ? Z(e, r.TokenKind.BRACE_L, P, r.TokenKind.BRACE_R) : []
+                return W(e, r.TokenKind.BRACE_L) ? Z(e, r.TokenKind.BRACE_L, V, r.TokenKind.BRACE_R) : []
             }
 
             function K(e) {
@@ -3022,11 +3022,11 @@
                 throw Y(e, t)
             }
 
-            function q(e, t) {
-                if (!e.options.noLocation) return new z(t, e.lastToken, e.source)
+            function z(e, t) {
+                if (!e.options.noLocation) return new q(t, e.lastToken, e.source)
             }
 
-            function z(e, t, n) {
+            function q(e, t, n) {
                 this.start = e.start, this.end = t.end, this.startToken = e, this.endToken = t, this.source = n
             }
 
@@ -3061,7 +3061,7 @@
                 for (var i = [n(e)]; !$(e, a);) i.push(n(e));
                 return i
             }
-            z.prototype.toJSON = z.prototype.inspect = function() {
+            q.prototype.toJSON = q.prototype.inspect = function() {
                 return {
                     start: this.start,
                     end: this.end
@@ -3445,31 +3445,31 @@
                             error: !!this.props.errorMessage
                         }, i.createElement(s.Xa, {
                             className: "image-uploader",
-                            textAlign: s.Nb.Center,
+                            textAlign: s.Lb.Center,
                             display: s.X.Flex,
                             flexDirection: s.Aa.Column,
                             alignItems: s.f.Center,
                             justifyContent: s.Wa.Center,
-                            position: s.hb.Relative,
+                            position: s.fb.Relative,
                             fullHeight: !0,
                             fullWidth: !0
                         }, this.renderErrorMessage(), i.createElement(s.Xa, {
-                            position: s.hb.Relative
+                            position: s.fb.Relative
                         }, i.createElement(s.Xa, {
                             className: "image-uploader__upload-svg--anim-backfill"
-                        }, i.createElement(s.qb, {
-                            asset: s.rb.Upload,
-                            type: s.sb.Alt2,
+                        }, i.createElement(s.ob, {
+                            asset: s.pb.Upload,
+                            type: s.qb.Alt2,
                             width: this.props.iconWidth || 99,
                             height: this.props.iconWidth || 76
                         })), i.createElement(s.Xa, {
                             className: "image-uploader__upload-svg--anim-fill",
-                            position: s.hb.Absolute,
+                            position: s.fb.Absolute,
                             display: this.props.isLoading ? s.X.Block : s.X.Hide,
                             attachTop: !0
-                        }, i.createElement(s.qb, {
-                            asset: s.rb.Upload,
-                            type: s.sb.Brand,
+                        }, i.createElement(s.ob, {
+                            asset: s.pb.Upload,
+                            type: s.qb.Brand,
                             width: this.props.iconWidth || 99,
                             height: this.props.iconHeight || 76
                         }))), this.props.isLoading ? this.renderLoadingState() : this.renderNormalState()))
@@ -3478,12 +3478,12 @@
                             margin: 1,
                             "data-test-selector": "image-uploader-loading"
                         }, i.createElement(s.W, {
-                            type: s.Rb.H4
+                            type: s.Pb.H4
                         }, Object(r.d)("Uploading", "ImageUploader")))
                     }, t.prototype.renderNormalState = function() {
                         var e = Object(r.d)("Browse", "ImageUploader");
                         return i.createElement(s.Xa, null, i.createElement(s.Xa, null, i.createElement(s.W, {
-                            type: s.Rb.H4
+                            type: s.Pb.H4
                         }, Object(r.d)("Drag and drop your image here", "ImageUploader"))), i.createElement(s.Xa, {
                             margin: {
                                 bottom: 2
@@ -3495,7 +3495,7 @@
                             fullWidth: !0,
                             "data-test-selector": "image-uploader-hint"
                         }, i.createElement(s.W, {
-                            type: s.Rb.P,
+                            type: s.Pb.P,
                             fontSize: s.Ca.Size7,
                             color: s.O.Alt2
                         }, this.props.hintMessage)), i.createElement(s.Xa, null, i.createElement(s.z, {
@@ -3509,7 +3509,7 @@
                             },
                             "data-test-selector": "image-uploader-error"
                         }, i.createElement(s.W, {
-                            type: s.Rb.H5,
+                            type: s.Pb.H5,
                             color: s.O.Error,
                             bold: !0
                         }, this.props.errorMessage))
@@ -5523,17 +5523,17 @@
                 r = n("q1tI"),
                 o = n("4p7I"),
                 s = n("jKe7"),
-                l = n("/7QA"),
-                d = n("cr+I"),
-                c = n("fvjX"),
-                u = n("yR8l"),
-                m = n("V+GM"),
-                p = n("geRD"),
-                v = n("NvVO"),
-                g = n("2xye"),
-                f = n("GnwI"),
-                h = n("ePeS"),
-                k = n("9rZX"),
+                l = n("cr+I"),
+                d = n("fvjX"),
+                c = n("yR8l"),
+                u = n("V+GM"),
+                m = n("geRD"),
+                p = n("NvVO"),
+                v = n("2xye"),
+                g = n("GnwI"),
+                f = n("ePeS"),
+                h = n("9rZX"),
+                k = n("/7QA"),
                 E = n("ZDlU"),
                 b = n("8/mp"),
                 N = n("AmIn"),
@@ -5556,7 +5556,7 @@
                     description: e.description || null,
                     cover_image_id: e.coverImageID || null
                 };
-                return l.p.tracking.track(g.SpadeEventType.EventManager, t)
+                return k.p.tracking.track(v.SpadeEventType.EventManager, t)
             }
 
             function S(e, t, n, a, i, r) {
@@ -5601,17 +5601,17 @@
                             error: ""
                         }, t.onCommit = function(e) {
                             return i.__awaiter(t, void 0, void 0, function() {
-                                var t, n, r, o, s, d = this;
-                                return i.__generator(this, function(c) {
-                                    switch (c.label) {
+                                var t, n, r, o, s, l = this;
+                                return i.__generator(this, function(d) {
+                                    switch (d.label) {
                                         case 0:
-                                            if (t = Object(l.d)("An unexpected error occured creating your event", "SegmentEventModal"), !(this.props.user && this.props.user.id && this.props.user.login && e)) return this.setState({
+                                            if (t = Object(k.d)("An unexpected error occured creating your event", "SegmentEventModal"), !(this.props.user && this.props.user.id && this.props.user.login && e)) return this.setState({
                                                 error: t
                                             }), [2];
                                             if (n = this.props.user.login, r = a.CreateEventDone, o = !0, !this.props.eventID) return [3, 5];
-                                            c.label = 1;
+                                            d.label = 1;
                                         case 1:
-                                            return c.trys.push([1, 3, , 4]), r = a.EditEventDone, s = this.props.eventID, [4, this.props.updateEvent(i.__assign({}, Object(p.a)({
+                                            return d.trys.push([1, 3, , 4]), r = a.EditEventDone, s = this.props.eventID, [4, this.props.updateEvent(i.__assign({}, Object(m.a)({
                                                 coverImageID: e.imageID,
                                                 description: e.description,
                                                 endAt: e.endTime,
@@ -5660,15 +5660,15 @@
                                                 }
                                             }))];
                                         case 2:
-                                            return c.sent(), this.props.closeModal(), [3, 4];
+                                            return d.sent(), this.props.closeModal(), [3, 4];
                                         case 3:
-                                            return c.sent(), this.setState({
+                                            return d.sent(), this.setState({
                                                 error: t
                                             }), o = !1, [3, 4];
                                         case 4:
                                             return [3, 8];
                                         case 5:
-                                            return c.trys.push([5, 7, , 8]), [4, this.props.createEvent(i.__assign({}, Object(p.a)({
+                                            return d.trys.push([5, 7, , 8]), [4, this.props.createEvent(i.__assign({}, Object(m.a)({
                                                 channelID: e.ownerID,
                                                 coverImageID: e.imageID,
                                                 description: e.description || "",
@@ -5717,14 +5717,14 @@
                                                             var s = t.readQuery({
                                                                 query: O,
                                                                 variables: {
-                                                                    eventName: e.parent && e.parent.id || d.props.parent && d.props.parent.id || "",
+                                                                    eventName: e.parent && e.parent.id || l.props.parent && l.props.parent.id || "",
                                                                     isFuture: o
                                                                 }
                                                             });
                                                             s && t.writeQuery({
                                                                 query: O,
                                                                 variables: {
-                                                                    eventName: e.parent && e.parent.id || d.props.parent && d.props.parent.id || "",
+                                                                    eventName: e.parent && e.parent.id || l.props.parent && l.props.parent.id || "",
                                                                     channelLogin: n,
                                                                     isFuture: o
                                                                 },
@@ -5742,23 +5742,23 @@
                                                             })
                                                         } catch (e) {}
                                                         try {
-                                                            var l = t.readQuery({
+                                                            var d = t.readQuery({
                                                                 query: I,
                                                                 variables: {
                                                                     channelLogin: n,
                                                                     isFuture: o
                                                                 }
                                                             });
-                                                            l && t.writeQuery({
+                                                            d && t.writeQuery({
                                                                 query: I,
                                                                 variables: {
                                                                     channelLogin: n,
                                                                     isFuture: o
                                                                 },
-                                                                data: i.__assign({}, l, {
-                                                                    user: i.__assign({}, l.user, {
-                                                                        managedEventLeaves: i.__assign({}, l.user && l.user.managedEventLeaves || {}, {
-                                                                            edges: (l.user && l.user.managedEventLeaves && l.user.managedEventLeaves.edges || []).concat([{
+                                                                data: i.__assign({}, d, {
+                                                                    user: i.__assign({}, d.user, {
+                                                                        managedEventLeaves: i.__assign({}, d.user && d.user.managedEventLeaves || {}, {
+                                                                            edges: (d.user && d.user.managedEventLeaves && d.user.managedEventLeaves.edges || []).concat([{
                                                                                 cursor: "",
                                                                                 node: r.createSegmentEvent.event,
                                                                                 __typename: "EventLeafEdge"
@@ -5772,9 +5772,9 @@
                                                 }
                                             }))];
                                         case 6:
-                                            return c.sent(), this.props.closeModal(), [3, 8];
+                                            return d.sent(), this.props.closeModal(), [3, 8];
                                         case 7:
-                                            return c.sent(), this.setState({
+                                            return d.sent(), this.setState({
                                                 error: t
                                             }), o = !1, [3, 8];
                                         case 8:
@@ -5825,7 +5825,7 @@
                             owner: t,
                             parent: this.props.data && this.props.data.event && this.props.data.event.parent || this.props.parent || void 0
                         })
-                    }, t = i.__decorate([Object(u.a)(D, {
+                    }, t = i.__decorate([Object(c.a)(D, {
                         skip: function(e) {
                             return !e.eventID
                         },
@@ -5836,9 +5836,9 @@
                                 }
                             }
                         }
-                    }), Object(u.a)(_, {
+                    }), Object(c.a)(_, {
                         name: "updateEvent"
-                    }), Object(u.a)(y, {
+                    }), Object(c.a)(y, {
                         name: "createEvent"
                     })], t)
                 }(r.Component),
@@ -5853,16 +5853,16 @@
                         }, t.onCommit = function(e) {
                             return i.__awaiter(t, void 0, void 0, function() {
                                 var t, n, r, o, s;
-                                return i.__generator(this, function(d) {
-                                    switch (d.label) {
+                                return i.__generator(this, function(l) {
+                                    switch (l.label) {
                                         case 0:
-                                            if (t = Object(l.d)("An unexpected error occured creating your event", "SingleEventModal"), !(this.props.user && this.props.user.id && this.props.user.login && e)) return this.setState({
+                                            if (t = Object(k.d)("An unexpected error occured creating your event", "SingleEventModal"), !(this.props.user && this.props.user.id && this.props.user.login && e)) return this.setState({
                                                 error: t
                                             }), [2];
                                             if (n = this.props.user.login, r = a.CreateEventDone, o = !0, !this.props.eventID) return [3, 5];
-                                            d.label = 1;
+                                            l.label = 1;
                                         case 1:
-                                            return d.trys.push([1, 3, , 4]), r = a.EditEventDone, s = this.props.eventID, [4, this.props.updateEvent(i.__assign({}, Object(p.a)({
+                                            return l.trys.push([1, 3, , 4]), r = a.EditEventDone, s = this.props.eventID, [4, this.props.updateEvent(i.__assign({}, Object(m.a)({
                                                 id: this.props.eventID,
                                                 channelID: e.ownerID,
                                                 coverImageID: e.imageID,
@@ -5915,15 +5915,15 @@
                                                 }
                                             }))];
                                         case 2:
-                                            return d.sent(), this.props.closeModal(), [3, 4];
+                                            return l.sent(), this.props.closeModal(), [3, 4];
                                         case 3:
-                                            return d.sent(), this.setState({
+                                            return l.sent(), this.setState({
                                                 error: t
                                             }), o = !1, [3, 4];
                                         case 4:
                                             return [3, 8];
                                         case 5:
-                                            return d.trys.push([5, 7, , 8]), [4, this.props.createEvent(i.__assign({}, Object(p.a)({
+                                            return l.trys.push([5, 7, , 8]), [4, this.props.createEvent(i.__assign({}, Object(m.a)({
                                                 channelID: e.ownerID,
                                                 coverImageID: e.imageID,
                                                 defaultTimeZone: e.timeZoneID,
@@ -6000,9 +6000,9 @@
                                                 }
                                             }))];
                                         case 6:
-                                            return d.sent(), this.props.closeModal(), [3, 8];
+                                            return l.sent(), this.props.closeModal(), [3, 8];
                                         case 7:
-                                            return d.sent(), this.setState({
+                                            return l.sent(), this.setState({
                                                 error: t
                                             }), o = !1, [3, 8];
                                         case 8:
@@ -6051,7 +6051,7 @@
                             serviceError: n ? this.state.error : null,
                             owner: t
                         })
-                    }, t = i.__decorate([Object(u.a)(D, {
+                    }, t = i.__decorate([Object(c.a)(D, {
                         skip: function(e) {
                             return !e.eventID
                         },
@@ -6062,14 +6062,14 @@
                                 }
                             }
                         }
-                    }), Object(u.a)(M, {
+                    }), Object(c.a)(M, {
                         name: "updateEvent"
-                    }), Object(u.a)(A, {
+                    }), Object(c.a)(A, {
                         name: "createEvent"
                     })], t)
                 }(r.Component),
-                V = n("xeRp"),
-                P = n("9rlX"),
+                P = n("xeRp"),
+                V = n("9rlX"),
                 U = (n("IejX"), function(e) {
                     return e ? e.join(",") : ""
                 }),
@@ -6139,14 +6139,14 @@
                             color: F.O.Error
                         }, this.props.serviceError))), r.createElement(F.Xa, {
                             className: "event-modal"
-                        }, r.createElement(F.Bb, {
+                        }, r.createElement(F.zb, {
                             className: "event-modal__content",
                             padding: 4,
                             margin: {
                                 top: 5
                             },
                             background: F.r.Base
-                        }, r.createElement(F.Bb, {
+                        }, r.createElement(F.zb, {
                             display: F.X.Flex,
                             padding: {
                                 bottom: 2
@@ -6160,16 +6160,16 @@
                             flexGrow: 0,
                             flexShrink: 1
                         }, r.createElement(F.W, {
-                            type: F.Rb.H3
-                        }, Object(l.d)("Create a Series", "CollectionModal"))), r.createElement(F.Xa, {
+                            type: F.Pb.H3
+                        }, Object(k.d)("Create a Series", "CollectionModal"))), r.createElement(F.Xa, {
                             flexGrow: 0,
                             flexShrink: 0
                         }, r.createElement(F.z, {
                             type: F.F.Text,
                             onClick: this.onCancel
-                        }, Object(l.d)("Cancel", "CollectionModal")), r.createElement(F.z, {
+                        }, Object(k.d)("Cancel", "CollectionModal")), r.createElement(F.z, {
                             onClick: this.onConfirm
-                        }, Object(l.d)("Save", "CollectionModal")))), e, r.createElement(b.b, null, r.createElement(r.Fragment, null, r.createElement(F.Ja, {
+                        }, Object(k.d)("Save", "CollectionModal")))), e, r.createElement(b.b, null, r.createElement(r.Fragment, null, r.createElement(F.Ja, {
                             gutterSize: F.Ka.Large
                         }, r.createElement(F.P, {
                             cols: {
@@ -6177,7 +6177,7 @@
                                 md: 6,
                                 lg: 5
                             }
-                        }, r.createElement(V.a, {
+                        }, r.createElement(P.a, {
                             user: this.props.owner,
                             onFinishUploading: this.onFinishUploading,
                             initialImageData: this.props.imageUrl ? new URL(this.props.imageUrl) : void 0
@@ -6193,7 +6193,7 @@
                             }
                         }, r.createElement(F.Ea, {
                             id: "event-title",
-                            label: Object(l.d)("Event Title", "CollectionModal"),
+                            label: Object(k.d)("Event Title", "CollectionModal"),
                             error: !!this.state.fieldErrors.title,
                             errorMessage: U(this.state.fieldErrors.title)
                         }, r.createElement(F.Ra, {
@@ -6201,7 +6201,7 @@
                             value: this.state.fieldValues.title,
                             type: F.Ta.Text,
                             maxLength: 140,
-                            placeholder: Object(l.d)("Your title is also used in reminders and social media posts. ({limit} character limit)", {
+                            placeholder: Object(k.d)("Your title is also used in reminders and social media posts. ({limit} character limit)", {
                                 limit: 140
                             }, "CollectionModal")
                         }))), r.createElement(F.Xa, {
@@ -6209,11 +6209,11 @@
                                 bottom: 2
                             }
                         }, r.createElement(F.Ea, {
-                            label: Object(l.d)("Event Description", "CollectionModal"),
+                            label: Object(k.d)("Event Description", "CollectionModal"),
                             error: !!this.state.fieldErrors.description,
                             errorMessage: U(this.state.fieldErrors.description)
-                        }, r.createElement(F.Ob, {
-                            placeholder: Object(l.d)("Tell viewers why they should watch your series", "CollectionModal"),
+                        }, r.createElement(F.Mb, {
+                            placeholder: Object(k.d)("Tell viewers why they should watch your series", "CollectionModal"),
                             onChange: this.onDescriptionChange,
                             value: this.state.fieldValues.description,
                             disabled: !1
@@ -6226,7 +6226,7 @@
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(P.a, {
+                        }, r.createElement(V.a, {
                             onChange: this.onLanguageChange,
                             disabled: !1,
                             defaultLanguage: this.state.fieldValues.language
@@ -6236,8 +6236,8 @@
                 G = n("4Q4g"),
                 B = n("pM79"),
                 K = n("fQJ0"),
-                q = n("Wwq8"),
-                z = n("JNgr"),
+                z = n("Wwq8"),
+                q = n("JNgr"),
                 W = n("mvg9"),
                 $ = "https://static-cdn.jtvnw.net/twitch-event-images-v2/default/town-320x180",
                 H = function(e) {
@@ -6247,17 +6247,17 @@
                             error: ""
                         }, t.onCommit = function(e) {
                             return i.__awaiter(t, void 0, void 0, function() {
-                                var t, n, r, o, s, d, c, u, m;
-                                return i.__generator(this, function(v) {
-                                    switch (v.label) {
+                                var t, n, r, o, s, l, d, c, u;
+                                return i.__generator(this, function(p) {
+                                    switch (p.label) {
                                         case 0:
-                                            if (t = Object(l.d)("An unexpected error occurred creating your event", "TimetableEventModal"), !(this.props.user && this.props.user.id && this.props.user.login && e)) return this.setState({
+                                            if (t = Object(k.d)("An unexpected error occurred creating your event", "TimetableEventModal"), !(this.props.user && this.props.user.id && this.props.user.login && e)) return this.setState({
                                                 error: t
                                             }), [2];
-                                            if (n = e.imageID ? e.imageID : null, r = Object(q.a)(), o = this.props.user.login, s = this.props.user.id, d = a.CreateEventDone, c = !0, !this.props.eventID) return [3, 5];
-                                            v.label = 1;
+                                            if (n = e.imageID ? e.imageID : null, r = Object(z.a)(), o = this.props.user.login, s = this.props.user.id, l = a.CreateEventDone, d = !0, !this.props.eventID) return [3, 5];
+                                            p.label = 1;
                                         case 1:
-                                            return v.trys.push([1, 3, , 4]), d = a.EditEventDone, m = this.props.eventID, [4, this.props.updateTimetableEvent(i.__assign({}, Object(p.a)({
+                                            return p.trys.push([1, 3, , 4]), l = a.EditEventDone, u = this.props.eventID, [4, this.props.updateTimetableEvent(i.__assign({}, Object(m.a)({
                                                 id: this.props.eventID,
                                                 coverImageID: n,
                                                 defaultTimeZone: r,
@@ -6268,7 +6268,7 @@
                                                 optimisticResponse: {
                                                     updateTimetableEvent: {
                                                         event: {
-                                                            id: m,
+                                                            id: u,
                                                             title: e.title,
                                                             description: e.description,
                                                             defaultTimeZone: r,
@@ -6286,15 +6286,15 @@
                                                 }
                                             }))];
                                         case 2:
-                                            return v.sent(), this.props.closeModal(), [3, 4];
+                                            return p.sent(), this.props.closeModal(), [3, 4];
                                         case 3:
-                                            return v.sent(), this.setState({
+                                            return p.sent(), this.setState({
                                                 error: t
-                                            }), c = !1, [3, 4];
+                                            }), d = !1, [3, 4];
                                         case 4:
                                             return [3, 8];
                                         case 5:
-                                            return v.trys.push([5, 7, , 8]), [4, this.props.createTimetableEvent(i.__assign({}, Object(p.a)({
+                                            return p.trys.push([5, 7, , 8]), [4, this.props.createTimetableEvent(i.__assign({}, Object(m.a)({
                                                 coverImageID: n,
                                                 defaultTimeZone: r,
                                                 description: e.description,
@@ -6374,19 +6374,19 @@
                                                 }
                                             }))];
                                         case 6:
-                                            return u = v.sent(), this.props.closeModal(), this.props.onCreate && u.data && u.data.createTimetableEvent && u.data.createTimetableEvent.event ? (m = u.data.createTimetableEvent.event.id, C(d, !0, {
+                                            return c = p.sent(), this.props.closeModal(), this.props.onCreate && c.data && c.data.createTimetableEvent && c.data.createTimetableEvent.event ? (u = c.data.createTimetableEvent.event.id, C(l, !0, {
                                                 eventID: this.props.eventID,
                                                 title: e.title,
                                                 timeZoneID: r,
                                                 description: e.description,
                                                 coverImageID: n
-                                            }), this.props.onCreate(m), [2]) : [3, 8];
+                                            }), this.props.onCreate(u), [2]) : [3, 8];
                                         case 7:
-                                            return v.sent(), this.setState({
+                                            return p.sent(), this.setState({
                                                 error: t
-                                            }), c = !1, [3, 8];
+                                            }), d = !1, [3, 8];
                                         case 8:
-                                            return C(d, c, {
+                                            return C(l, d, {
                                                 eventID: this.props.eventID,
                                                 title: e.title,
                                                 timeZoneID: r,
@@ -6414,7 +6414,7 @@
                         }, t = this.props.data.event.imageURL) : e = {
                             title: "",
                             description: "",
-                            language: Object(z.a)()
+                            language: Object(q.a)()
                         };
                         var n = {
                                 id: this.props.user.id || "",
@@ -6434,13 +6434,13 @@
                         })
                     }, t.prototype.getFieldErrors = function(e) {
                         var t = function(e) {
-                                return Object(l.d)("The {fieldName} field is required", {
+                                return Object(k.d)("The {fieldName} field is required", {
                                     fieldName: e
                                 }, "TimetableEventModal")
                             },
                             n = {};
                         return e.title || (n.title = [t("Title")]), e.language || (n.language = [t("Language")]), e.description || (n.description = [t("Description")]), n.hasErrors = !!n.title || !!n.language || !!n.description, n
-                    }, t = i.__decorate([Object(u.a)(B, {
+                    }, t = i.__decorate([Object(c.a)(B, {
                         skip: function(e) {
                             return !e.eventID
                         },
@@ -6451,9 +6451,9 @@
                                 }
                             }
                         }
-                    }), Object(u.a)(K, {
+                    }), Object(c.a)(K, {
                         name: "updateTimetableEvent"
-                    }), Object(u.a)(G, {
+                    }), Object(c.a)(G, {
                         name: "createTimetableEvent"
                     })], t)
                 }(r.Component),
@@ -6467,9 +6467,9 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderTitle = function() {
-                            var e = Object(l.d)("Events", "DashboardEventsHeader"),
+                            var e = Object(k.d)("Events", "DashboardEventsHeader"),
                                 n = r.createElement(F.W, {
-                                    type: F.Rb.H4,
+                                    type: F.Pb.H4,
                                     bold: !0
                                 }, e),
                                 a = null,
@@ -6482,7 +6482,7 @@
                                     left: .5
                                 }
                             }, r.createElement(F.W, {
-                                type: F.Rb.H4,
+                                type: F.Pb.H4,
                                 bold: !0
                             }, "/ ", t.props.navigatedCollection.title))), i = r.createElement(F.Xa, {
                                 margin: {
@@ -6496,9 +6496,9 @@
                             })), n = r.createElement(F.U, {
                                 to: "/" + t.props.channelName + "/dashboard/events"
                             }, r.createElement(F.W, {
-                                type: F.Rb.H4,
+                                type: F.Pb.H4,
                                 bold: !0
-                            }, e)), t.props.navigatedCollection.stats && (o = r.createElement(F.W, null, t.props.navigatedCollection.stats.followingCount, " ", Object(l.d)("Reminders Set", "DashboardEventsHeader")))), r.createElement(r.Fragment, null, r.createElement(F.Xa, {
+                            }, e)), t.props.navigatedCollection.stats && (o = r.createElement(F.W, null, t.props.navigatedCollection.stats.followingCount, " ", Object(k.d)("Reminders Set", "DashboardEventsHeader")))), r.createElement(r.Fragment, null, r.createElement(F.Xa, {
                                 display: F.X.Flex
                             }, i, r.createElement(F.Xa, {
                                 display: F.X.Flex,
@@ -6516,21 +6516,21 @@
                                 eventLocation: ee.a.DashboardEvents
                             }, r.createElement(F.z, {
                                 type: F.F.Hollow,
-                                icon: F.rb.Share
-                            }, Object(l.d)("Share", "DashboardEventsHeader"))), r.createElement(F.Xa, {
+                                icon: F.pb.Share
+                            }, Object(k.d)("Share", "DashboardEventsHeader"))), r.createElement(F.Xa, {
                                 margin: {
                                     x: 1
                                 }
                             }, r.createElement(F.z, {
                                 type: F.F.Hollow,
-                                icon: F.rb.Edit,
+                                icon: F.pb.Edit,
                                 onClick: t.handleEditEvent
-                            }, Object(l.d)("Edit", "DashboardEventsHeader"))), r.createElement(F.z, {
+                            }, Object(k.d)("Edit", "DashboardEventsHeader"))), r.createElement(F.z, {
                                 "data-a-target": te,
                                 type: F.F.Hollow,
                                 onClick: t.deleteEventCollection,
-                                icon: F.rb.Trash
-                            }, Object(l.d)("Delete", "DashboardEventsHeader")));
+                                icon: F.pb.Trash
+                            }, Object(k.d)("Delete", "DashboardEventsHeader")));
                             return r.createElement(F.Xa, {
                                 display: F.X.Flex,
                                 flexDirection: F.Aa.Row,
@@ -6540,19 +6540,19 @@
                                     left: 1
                                 }
                             }, r.createElement(F.z, {
-                                icon: F.rb.Plus,
+                                icon: F.pb.Plus,
                                 onClick: t.props.openEventCreator
-                            }, Object(l.d)("Add Event", "DashboardEventsHeader"))))
+                            }, Object(k.d)("Add Event", "DashboardEventsHeader"))))
                         }, t.deleteEventCollection = function() {
                             t.props.navigatedCollection && t.props.showDeleteModal({
                                 onConfirm: t.handleDeleteModalConfirm,
                                 onCancel: t.handleDeleteModalCancel,
-                                title: Object(l.d)("Delete Series", "DashboardEventsHeader"),
-                                body: Object(l.d)("Are you sure you want to delete your series {seriesTitle} and all events within it?", {
+                                title: Object(k.d)("Delete Series", "DashboardEventsHeader"),
+                                body: Object(k.d)("Are you sure you want to delete your series {seriesTitle} and all events within it?", {
                                     seriesTitle: t.props.navigatedCollection.title
                                 }, "DashboardEventsHeader"),
-                                okText: Object(l.d)("Yes", "DashboardEventsHeader"),
-                                cancelText: Object(l.d)("Cancel", "DashboardEventsHeader"),
+                                okText: Object(k.d)("Yes", "DashboardEventsHeader"),
+                                cancelText: Object(k.d)("Cancel", "DashboardEventsHeader"),
                                 closeModal: t.handleDeleteModalClose
                             })
                         }, t.handleDeleteModalClose = function() {
@@ -6569,7 +6569,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(F.Bb, {
+                        return r.createElement(F.zb, {
                             className: "dashboard-events-header",
                             alignItems: F.f.Center,
                             borderBottom: !0,
@@ -6577,8 +6577,8 @@
                             display: F.X.Flex,
                             flexDirection: F.Aa.Row,
                             justifyContent: F.Wa.Center,
-                            position: F.hb.Relative,
-                            zIndex: F.ec.Default,
+                            position: F.fb.Relative,
+                            zIndex: F.cc.Default,
                             fullWidth: !0
                         }, r.createElement(F.Xa, {
                             margin: {
@@ -6591,7 +6591,7 @@
                         }, this.renderTitle(), this.renderButtonRow()))
                     }, t
                 }(r.Component),
-                ae = Object(f.b)("DashboardEventsHeaderComponent", {
+                ae = Object(g.b)("DashboardEventsHeaderComponent", {
                     autoReportInteractive: !0
                 })(ne);
             var ie = Object(Q.connect)(function(e) {
@@ -6599,7 +6599,7 @@
                         firstPageLoaded: e.session.firstPageLoaded
                     }
                 }, function(e) {
-                    return Object(c.bindActionCreators)({
+                    return Object(d.bindActionCreators)({
                         showDeleteModal: function(e) {
                             var t = i.__rest(e, []);
                             return Object(Y.d)(Z.a, t)
@@ -6618,17 +6618,17 @@
                             t.props.editEventLeaf && t.props.editEventLeaf(t.props.id)
                         }, t.renderInfoBar = function(e) {
                             var n = e;
-                            return t.props.channelDisplayName && (n += " • " + t.props.channelDisplayName), t.props.gameDisplayName && (n += " • " + t.props.gameDisplayName), n + " • " + t.props.followingCount + " " + Object(l.d)("Reminders", "DashboardEventsLeafCard")
+                            return t.props.channelDisplayName && (n += " • " + t.props.channelDisplayName), t.props.gameDisplayName && (n += " • " + t.props.gameDisplayName), n + " • " + t.props.followingCount + " " + Object(k.d)("Reminders", "DashboardEventsLeafCard")
                         }, t.deleteEventLeaf = function() {
                             t.props.showDeleteModal({
                                 onConfirm: t.handleDeleteModalConfirm,
                                 onCancel: t.handleDeleteModalCancel,
-                                title: Object(l.d)("Delete Event", "DashboardEventsLeafCard"),
-                                body: Object(l.d)("Are you sure you want to delete your event {eventTitle}?", {
+                                title: Object(k.d)("Delete Event", "DashboardEventsLeafCard"),
+                                body: Object(k.d)("Are you sure you want to delete your event {eventTitle}?", {
                                     eventTitle: t.props.title
                                 }, "DashboardEventsLeafCard"),
-                                okText: Object(l.d)("Yes", "DashboardEventsLeafCard"),
-                                cancelText: Object(l.d)("Cancel", "DashboardEventsLeafCard"),
+                                okText: Object(k.d)("Yes", "DashboardEventsLeafCard"),
+                                cancelText: Object(k.d)("Cancel", "DashboardEventsLeafCard"),
                                 closeModal: t.handleDeleteModalClose
                             })
                         }, t.handleDeleteModalClose = function() {
@@ -6645,10 +6645,10 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = Object(l.j)(new Date(this.props.startAt), {
+                        var e = Object(k.j)(new Date(this.props.startAt), {
                             timeZoneName: "short"
                         });
-                        return r.createElement(F.Xa, null, r.createElement(F.Bb, {
+                        return r.createElement(F.Xa, null, r.createElement(F.zb, {
                             className: "dashboard-events-leaf-card__row",
                             margin: {
                                 y: 1
@@ -6669,7 +6669,7 @@
                             flexDirection: F.Aa.Row
                         }, r.createElement(F.Xa, {
                             className: "dashboard-events-leaf-card__image",
-                            overflow: F.cb.Hidden,
+                            overflow: F.ab.Hidden,
                             flexShrink: 0
                         }, r.createElement(F.I, {
                             size: F.J.Size16,
@@ -6687,7 +6687,7 @@
                             to: "/events/" + this.props.id
                         }, r.createElement(F.W, {
                             bold: !0,
-                            type: F.Rb.H5
+                            type: F.Pb.H5
                         }, this.props.title))), r.createElement(F.Xa, null, this.renderInfoBar(e)))), r.createElement(F.Xa, {
                             margin: {
                                 left: 1,
@@ -6709,13 +6709,13 @@
                             balloonDirection: F.v.BottomRight
                         }, r.createElement(F.z, {
                             type: F.F.Hollow,
-                            icon: F.rb.Share
-                        }, Object(l.d)("Share", "DashboardEventsLeafCard")))), r.createElement(F.Xa, {
+                            icon: F.pb.Share
+                        }, Object(k.d)("Share", "DashboardEventsLeafCard")))), r.createElement(F.Xa, {
                             margin: {
                                 right: .5
                             }
                         }, r.createElement(oe.a, null, r.createElement(F.z, {
-                            icon: F.rb.More,
+                            icon: F.pb.More,
                             type: F.F.Text
                         }), r.createElement(F.u, {
                             direction: F.v.BottomRight,
@@ -6730,14 +6730,14 @@
                             },
                             display: F.X.Flex,
                             alignItems: F.f.Center
-                        }, r.createElement(F.qb, {
-                            asset: F.rb.Edit,
-                            type: F.sb.Brand
+                        }, r.createElement(F.ob, {
+                            asset: F.pb.Edit,
+                            type: F.qb.Brand
                         }), r.createElement(F.Xa, {
                             margin: {
                                 left: 1
                             }
-                        }, Object(l.d)("Edit", "DashboardEventsLeafCard")))), r.createElement(F.Ua, {
+                        }, Object(k.d)("Edit", "DashboardEventsLeafCard")))), r.createElement(F.Ua, {
                             "data-a-target": "delete-button",
                             onClick: this.deleteEventLeaf
                         }, r.createElement(F.Xa, {
@@ -6748,17 +6748,17 @@
                             },
                             display: F.X.Flex,
                             alignItems: F.f.Center
-                        }, r.createElement(F.qb, {
-                            asset: F.rb.Trash,
-                            type: F.sb.Brand
+                        }, r.createElement(F.ob, {
+                            asset: F.pb.Trash,
+                            type: F.qb.Brand
                         }), r.createElement(F.Xa, {
                             margin: {
                                 left: 1
                             }
-                        }, Object(l.d)("Delete", "DashboardEventsLeafCard")))))))))))
+                        }, Object(k.d)("Delete", "DashboardEventsLeafCard")))))))))))
                     }, t
                 }(r.Component)),
-                le = Object(f.b)("DashboardEventsLeafCardComponent", {
+                le = Object(g.b)("DashboardEventsLeafCardComponent", {
                     autoReportInteractive: !0
                 })(se);
             var de = Object(Q.connect)(function(e) {
@@ -6766,7 +6766,7 @@
                         firstPageLoaded: e.session.firstPageLoaded
                     }
                 }, function(e) {
-                    return Object(c.bindActionCreators)({
+                    return Object(d.bindActionCreators)({
                         showDeleteModal: function(e) {
                             var t = i.__rest(e, []);
                             return Object(Y.d)(Z.a, t)
@@ -6803,7 +6803,7 @@
                             margin: {
                                 bottom: 3
                             }
-                        }, r.createElement(F.Bb, {
+                        }, r.createElement(F.zb, {
                             display: F.X.Flex,
                             justifyContent: F.Wa.Between,
                             padding: {
@@ -6812,11 +6812,11 @@
                             borderBottom: !0
                         }, r.createElement(F.W, {
                             color: F.O.Alt2,
-                            type: F.Rb.H5
+                            type: F.Pb.H5
                         }, this.props.dateString)), t)
                     }, t
                 }(r.Component),
-                ue = Object(f.b)("DashboardEventsLeafGroup", {
+                ue = Object(g.b)("DashboardEventsLeafGroup", {
                     autoReportInteractive: !0
                 })(ce);
             var me, pe = function(e) {
@@ -6834,25 +6834,25 @@
                                 o = [],
                                 s = [];
                             if (!e || 0 === e.length) return o;
-                            for (var d = 0, c = e[d]; !c;) {
-                                if (++d >= e.length) return o;
-                                c = e[d]
+                            for (var l = 0, d = e[l]; !d;) {
+                                if (++l >= e.length) return o;
+                                d = e[l]
                             }
-                            for (var u = new Date(c.startAt), m = Object(l.c)(u, i); d < e.length; d++) {
-                                var p = e[d];
-                                if (p) {
-                                    var v = new Date(p.startAt),
-                                        g = Object(l.c)(v, i);
-                                    g === m ? s.push(p) : (o.push(r.createElement(ue, {
-                                        key: m,
-                                        dateString: m,
+                            for (var c = new Date(d.startAt), u = Object(k.c)(c, i); l < e.length; l++) {
+                                var m = e[l];
+                                if (m) {
+                                    var p = new Date(m.startAt),
+                                        v = Object(k.c)(p, i);
+                                    v === u ? s.push(m) : (o.push(r.createElement(ue, {
+                                        key: u,
+                                        dateString: u,
                                         eventLeaves: s,
                                         editEventLeaf: t,
                                         editSegmentEventLeaf: n,
                                         deleteEventLeaf: a
-                                    })), m = g, s = [p]), d === e.length - 1 && o.push(r.createElement(ue, {
-                                        key: m,
-                                        dateString: m,
+                                    })), u = v, s = [m]), l === e.length - 1 && o.push(r.createElement(ue, {
+                                        key: u,
+                                        dateString: u,
                                         eventLeaves: s,
                                         editEventLeaf: t,
                                         editSegmentEventLeaf: n,
@@ -6863,14 +6863,14 @@
                             return o
                         }(this.props.eventLeaves, this.props.editEventLeaf, this.props.editSegmentEventLeaf, this.props.deleteEventLeaf);
                         return r.createElement(F.Xa, {
-                            position: F.hb.Relative
+                            position: F.fb.Relative
                         }, e, r.createElement(b.a, {
                             enabled: this.props.hasNextPage,
                             loadMore: this.props.loadNextPage
                         }))
                     }, t
                 }(r.Component),
-                ve = Object(re.compose)(Object(f.b)("DashboardEventsList", {
+                ve = Object(re.compose)(Object(g.b)("DashboardEventsList", {
                     autoReportInteractive: !0
                 }))(pe),
                 ge = function(e) {
@@ -6908,25 +6908,25 @@
                             }, r.createElement(F.z, {
                                 "data-a-target": "load-more",
                                 type: F.F.Text,
-                                icon: F.rb.GlyphArrDown,
+                                icon: F.pb.GlyphArrDown,
                                 onClick: this.props.loadNextSeriesPage
-                            }, Object(l.d)("Load More", "DashboardEventsSidenav")));
+                            }, Object(k.d)("Load More", "DashboardEventsSidenav")));
                         return r.createElement(F.Xa, null, r.createElement(F.Xa, {
                             margin: {
                                 bottom: 1
                             }
                         }, r.createElement(F.W, {
-                            transform: F.Qb.Uppercase,
+                            transform: F.Ob.Uppercase,
                             color: F.O.Alt2,
-                            type: F.Rb.H5
-                        }, Object(l.d)("Series", "DashboardEventsSidenav"))), r.createElement(F.Xa, {
+                            type: F.Pb.H5
+                        }, Object(k.d)("Series", "DashboardEventsSidenav"))), r.createElement(F.Xa, {
                             margin: {
                                 bottom: 1
                             }
                         }, r.createElement(F.z, {
-                            icon: F.rb.Plus,
+                            icon: F.pb.Plus,
                             onClick: this.props.openEventCreator
-                        }, Object(l.d)("Add Series", "DashboardEventsSidenav"))), t, n)
+                        }, Object(k.d)("Add Series", "DashboardEventsSidenav"))), t, n)
                     }, t
                 }(r.Component),
                 he = function(e) {
@@ -6934,22 +6934,22 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(F.ub, null, r.createElement(F.vb, {
+                        return r.createElement(F.sb, null, r.createElement(F.tb, {
                             name: "events-toggle",
-                            label: Object(l.d)("Future Events", "DashboardEventsToggle"),
-                            defaultChecked: this.props.filter === h.a.Future,
+                            label: Object(k.d)("Future Events", "DashboardEventsToggle"),
+                            defaultChecked: this.props.filter === f.a.Future,
                             onChange: this.props.handleToggleChange,
-                            value: h.a.Future
-                        }), r.createElement(F.vb, {
+                            value: f.a.Future
+                        }), r.createElement(F.tb, {
                             name: "events-toggle",
-                            label: Object(l.d)("Past Events", "DashboardEventsToggle"),
-                            defaultChecked: this.props.filter === h.a.Past,
+                            label: Object(k.d)("Past Events", "DashboardEventsToggle"),
+                            defaultChecked: this.props.filter === f.a.Past,
                             onChange: this.props.handleToggleChange,
-                            value: h.a.Past
+                            value: f.a.Past
                         }))
                     }, t
                 }(r.Component),
-                ke = Object(re.compose)(Object(f.b)("DashboardEventsToggle", {
+                ke = Object(re.compose)(Object(g.b)("DashboardEventsToggle", {
                     autoReportInteractive: !0
                 }))(he);
             n("ind5");
@@ -7024,8 +7024,8 @@
                                 channelID: t.props.user && t.props.user.id
                             })
                         }, t.onTimetableCreated = function(e) {
-                            l.p.history.push(i.__assign({}, l.p.history.location, {
-                                pathname: l.p.history.location.pathname + "/" + e
+                            k.p.history.push(i.__assign({}, k.p.history.location, {
+                                pathname: k.p.history.location.pathname + "/" + e
                             }))
                         }, t
                     }
@@ -7037,11 +7037,11 @@
                             var n = [];
                             if (this.props.eventLeaves && this.props.eventLeaves.edges)
                                 for (var a = 0, i = this.props.eventLeaves.edges; a < i.length; a++) {
-                                    (p = i[a]) && p.node && !p.node.isDeleted && n.push(p.node)
+                                    (m = i[a]) && m.node && !m.node.isDeleted && n.push(m.node)
                                 }
                             var o = null,
-                                s = Object(l.d)("Add Event", "DashboardEventsLayout");
-                            (!this.props.eventLeaves || 0 === n.length && this.props.filter === h.a.Future) && (o = this.props.navigatedCollection ? r.createElement(F.Xa, {
+                                s = Object(k.d)("Add Event", "DashboardEventsLayout");
+                            (!this.props.eventLeaves || 0 === n.length && this.props.filter === f.a.Future) && (o = this.props.navigatedCollection ? r.createElement(F.Xa, {
                                 display: F.X.Flex,
                                 justifyContent: F.Wa.Center
                             }, r.createElement(F.Xa, {
@@ -7059,10 +7059,10 @@
                                     "2x": "https://static-cdn.jtvnw.net/emoticons/v1/86/2.0",
                                     "3x": "https://static-cdn.jtvnw.net/emoticons/v1/86/3.0"
                                 },
-                                alt: Object(l.d)("No Events in this Series", "DashboardEventsLayout")
+                                alt: Object(k.d)("No Events in this Series", "DashboardEventsLayout")
                             }), r.createElement(F.Xa, {
                                 display: F.X.Flex,
-                                textAlign: F.Nb.Center,
+                                textAlign: F.Lb.Center,
                                 flexDirection: F.Aa.Column,
                                 justifyContent: F.Wa.Center,
                                 margin: {
@@ -7070,14 +7070,14 @@
                                 }
                             }, r.createElement(F.W, {
                                 color: F.O.Alt2
-                            }, Object(l.d)("Yikes! Empty Series are invisible.", "DashboardEventsLayout"), r.createElement("br", null), Object(l.d)("To make your series visible, add an event.", "DashboardEventsLayout"))), r.createElement(F.Xa, {
+                            }, Object(k.d)("Yikes! Empty Series are invisible.", "DashboardEventsLayout"), r.createElement("br", null), Object(k.d)("To make your series visible, add an event.", "DashboardEventsLayout"))), r.createElement(F.Xa, {
                                 display: F.X.Flex,
                                 justifyContent: F.Wa.Center,
                                 margin: {
                                     top: 2
                                 }
                             }, r.createElement(F.z, {
-                                icon: F.rb.Plus,
+                                icon: F.pb.Plus,
                                 onClick: this.openSegmentEventCreation
                             }, s)))) : r.createElement(F.Xa, {
                                 display: F.X.Flex,
@@ -7097,10 +7097,10 @@
                                     "2x": "https://static-cdn.jtvnw.net/emoticons/v1/86/2.0",
                                     "3x": "https://static-cdn.jtvnw.net/emoticons/v1/86/3.0"
                                 },
-                                alt: Object(l.d)("No Events Created", "DashboardEventsLayout")
+                                alt: Object(k.d)("No Events Created", "DashboardEventsLayout")
                             }), r.createElement(F.Xa, {
                                 display: F.X.Flex,
-                                textAlign: F.Nb.Center,
+                                textAlign: F.Lb.Center,
                                 flexDirection: F.Aa.Column,
                                 justifyContent: F.Wa.Center,
                                 margin: {
@@ -7108,23 +7108,23 @@
                                 }
                             }, r.createElement(F.W, {
                                 color: F.O.Alt2
-                            }, Object(l.d)("Aw, you have no events.", "DashboardEventsLayout"), r.createElement("br", null), Object(l.d)("Let's make some!", "DashboardEventsLayout"))), r.createElement(F.Xa, {
+                            }, Object(k.d)("Aw, you have no events.", "DashboardEventsLayout"), r.createElement("br", null), Object(k.d)("Let's make some!", "DashboardEventsLayout"))), r.createElement(F.Xa, {
                                 display: F.X.Flex,
                                 justifyContent: F.Wa.Center,
                                 margin: {
                                     top: 2
                                 }
                             }, r.createElement(F.z, {
-                                icon: F.rb.Plus,
+                                icon: F.pb.Plus,
                                 onClick: this.openSingleEventCreation
                             }, s)))));
-                            var d = null;
+                            var l = null;
                             if (this.props.eventCollections && this.props.eventCollections.edges && this.props.loadNextCollectionsPage) {
-                                for (var c = [], u = 0, m = this.props.eventCollections.edges; u < m.length; u++) {
-                                    var p;
-                                    (p = m[u]) && p.node && !p.node.isDeleted && c.push(p.node)
+                                for (var d = [], c = 0, u = this.props.eventCollections.edges; c < u.length; c++) {
+                                    var m;
+                                    (m = u[c]) && m.node && !m.node.isDeleted && d.push(m.node)
                                 }
-                                d = r.createElement(F.Xa, {
+                                l = r.createElement(F.Xa, {
                                     display: F.X.Flex,
                                     margin: {
                                         right: 3
@@ -7135,7 +7135,7 @@
                                     bottomPixelThreshold: 200
                                 }, r.createElement(fe, {
                                     channelName: this.props.user && this.props.user.login || "",
-                                    eventCollections: c,
+                                    eventCollections: d,
                                     hasMoreSeries: this.props.hasNextCollectionsPage || !1,
                                     loadNextSeriesPage: this.props.loadNextCollectionsPage,
                                     openEventCreator: this.openTimetableEventCreation
@@ -7148,7 +7148,7 @@
                                 display: F.X.Flex,
                                 flexDirection: F.Aa.Row,
                                 flexGrow: 1
-                            }, d, r.createElement(F.Xa, {
+                            }, l, r.createElement(F.Xa, {
                                 className: "dashboard-events-layout__right-col",
                                 flexGrow: 1
                             }, r.createElement(F.Xa, {
@@ -7219,7 +7219,7 @@
                         }, r.createElement(F.Xa, {
                             display: F.X.Flex,
                             flexDirection: F.Aa.Row
-                        }, t)))), r.createElement(k, {
+                        }, t)))), r.createElement(h, {
                             overlayClassName: "modal__backdrop",
                             className: "modal__content",
                             isOpen: this.state.isModalOpen,
@@ -7227,7 +7227,7 @@
                         }, e))
                     }, t.prototype.renderPageError = function() {
                         return r.createElement(E.a, {
-                            message: Object(l.d)("Error loading data.", "DashboardEventsLayout")
+                            message: Object(k.d)("Error loading data.", "DashboardEventsLayout")
                         })
                     }, t.prototype.renderLoadingSpinner = function() {
                         return r.createElement(F.Xa, {
@@ -7237,7 +7237,7 @@
                         }))
                     }, t
                 }(r.Component),
-                be = Object(f.b)("DashboardEventsLayout", {
+                be = Object(g.b)("DashboardEventsLayout", {
                     autoReportInteractive: !0
                 })(Ee);
 
@@ -7286,13 +7286,13 @@
                                 channel: i
                             })
                         }, t.handleToggleChange = function(e) {
-                            var n = Object(h.b)(e.currentTarget.value),
-                                a = d.parse(t.props.location.search);
-                            n !== h.a.Future ? a.filter = n : delete a.filter, t.props.history.replace(i.__assign({}, t.props.location, {
-                                search: d.stringify(a)
+                            var n = Object(f.b)(e.currentTarget.value),
+                                a = l.parse(t.props.location.search);
+                            n !== f.a.Future ? a.filter = n : delete a.filter, t.props.history.replace(i.__assign({}, t.props.location, {
+                                search: l.stringify(a)
                             }))
                         }, t.getFilterValue = function() {
-                            return Object(h.b)(d.parse(t.props.location.search).filter)
+                            return Object(f.b)(l.parse(t.props.location.search).filter)
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -7324,22 +7324,22 @@
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t
                 }(r.Component),
-                Fe = Object(c.compose)(Object(f.b)("DashboardEventsAllPage", {
-                    destination: v.a.DashboardEventsAll
-                }), Object(m.a)({
-                    location: g.PageviewLocation.DashboardEventsAll
-                }), Object(u.a)(Oe, {
+                Fe = Object(d.compose)(Object(g.b)("DashboardEventsAllPage", {
+                    destination: p.a.DashboardEventsAll
+                }), Object(u.a)({
+                    location: v.PageviewLocation.DashboardEventsAll
+                }), Object(c.a)(Oe, {
                     options: function(e) {
-                        var t = Object(h.b)(d.parse(e.location.search).filter);
+                        var t = Object(f.b)(l.parse(e.location.search).filter);
                         return {
                             variables: {
                                 channelLogin: e.match.params.channelName,
                                 limit: 10,
-                                after: t === h.a.Future ? (new Date).toISOString() : null,
-                                before: t === h.a.Past ? (new Date).toISOString() : null,
-                                sort: t === h.a.Past ? "DESC" : null,
+                                after: t === f.a.Future ? (new Date).toISOString() : null,
+                                before: t === f.a.Past ? (new Date).toISOString() : null,
+                                sort: t === f.a.Past ? "DESC" : null,
                                 collectionsLimit: 20,
-                                isFuture: t === h.a.Future
+                                isFuture: t === f.a.Future
                             }
                         }
                     },
@@ -7407,11 +7407,11 @@
                             }
                         })
                     }
-                }), Object(u.a)(Ie, {
+                }), Object(c.a)(Ie, {
                     props: function(e) {
                         return {
                             deleteEventLeaf: function(t) {
-                                return e.mutate(i.__assign({}, Object(p.a)({
+                                return e.mutate(i.__assign({}, Object(m.a)({
                                     eventID: t
                                 }), {
                                     optimisticResponse: {
@@ -7482,13 +7482,13 @@
                                 channel: i
                             })
                         }, t.handleToggleChange = function(e) {
-                            var n = Object(h.b)(e.currentTarget.value),
-                                a = d.parse(t.props.location.search);
-                            n !== h.a.Future ? a.filter = n : delete a.filter, t.props.history.replace(i.__assign({}, t.props.location, {
-                                search: d.stringify(a)
+                            var n = Object(f.b)(e.currentTarget.value),
+                                a = l.parse(t.props.location.search);
+                            n !== f.a.Future ? a.filter = n : delete a.filter, t.props.history.replace(i.__assign({}, t.props.location, {
+                                search: l.stringify(a)
                             }))
                         }, t.getFilterValue = function() {
-                            return Object(h.b)(d.parse(t.props.location.search).filter)
+                            return Object(f.b)(l.parse(t.props.location.search).filter)
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -7518,17 +7518,17 @@
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t
                 }(r.Component),
-                Me = Object(c.compose)(Object(u.a)(O, {
+                Me = Object(d.compose)(Object(c.a)(O, {
                     options: function(e) {
-                        var t = Object(h.b)(d.parse(e.location.search).filter);
+                        var t = Object(f.b)(l.parse(e.location.search).filter);
                         return {
                             variables: {
                                 eventName: e.match.params.eventID,
                                 limit: 10,
-                                after: t === h.a.Future ? (new Date).toISOString() : null,
-                                before: t === h.a.Past ? (new Date).toISOString() : null,
-                                isFuture: t === h.a.Future,
-                                sort: t === h.a.Past ? "DESC" : null
+                                after: t === f.a.Future ? (new Date).toISOString() : null,
+                                before: t === f.a.Past ? (new Date).toISOString() : null,
+                                isFuture: t === f.a.Future,
+                                sort: t === f.a.Past ? "DESC" : null
                             }
                         }
                     },
@@ -7573,11 +7573,11 @@
                             }
                         })
                     }
-                }), Object(u.a)(Ie, {
+                }), Object(c.a)(Ie, {
                     props: function(e) {
                         return {
                             deleteEventLeaf: function(t) {
-                                return e.mutate(i.__assign({}, Object(p.a)({
+                                return e.mutate(i.__assign({}, Object(m.a)({
                                     eventID: t
                                 }), {
                                     optimisticResponse: {
@@ -7604,11 +7604,11 @@
                             }
                         }
                     }
-                }), Object(u.a)(je, {
+                }), Object(c.a)(je, {
                     props: function(e) {
                         return {
                             deleteEventCollection: function(t, n) {
-                                return e.mutate(i.__assign({}, Object(p.a)({
+                                return e.mutate(i.__assign({}, Object(m.a)({
                                     eventID: t
                                 }), {
                                     optimisticResponse: {
@@ -7675,18 +7675,16 @@
                             }
                         }
                     }
-                }), Object(f.b)("DashboardEventsCollectionPage", {
-                    destination: v.a.DashboardEventsCollection
-                }), Object(m.a)({
-                    location: g.PageviewLocation.DashboardEventsCollection
+                }), Object(g.b)("DashboardEventsCollectionPage", {
+                    destination: p.a.DashboardEventsCollection
+                }), Object(u.a)({
+                    location: v.PageviewLocation.DashboardEventsCollection
                 }))(Ae),
                 xe = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        l.p.setPageTitle(Object(l.d)("Events", "DashboardEventsRoot"))
-                    }, t.prototype.render = function() {
+                    return i.__extends(t, e), t.prototype.render = function() {
                         return r.createElement(s.a, null, r.createElement(o.a, {
                             exact: !0,
                             path: "/:channelName/dashboard/events/:eventID",
@@ -7912,27 +7910,27 @@
                         flexDirection: s.Aa.Column,
                         justifyContent: s.Wa.Center,
                         alignItems: s.f.Center,
-                        position: s.hb.Absolute
+                        position: s.fb.Absolute
                     }, r.createElement(s.Xa, {
-                        textAlign: s.Nb.Center,
+                        textAlign: s.Lb.Center,
                         flexShrink: 1
-                    }, r.createElement(s.qb, {
+                    }, r.createElement(s.ob, {
                         asset: e.icon,
                         width: 46,
                         height: 48,
-                        type: s.sb.Alt2
+                        type: s.qb.Alt2
                     })), r.createElement(s.Xa, {
                         margin: {
                             top: 1
                         },
-                        textAlign: s.Nb.Center
+                        textAlign: s.Lb.Center
                     }, r.createElement(s.W, {
-                        type: s.Rb.H4,
+                        type: s.Pb.H4,
                         color: s.O.Alt2
                     }, e.titleText)), r.createElement(s.Xa, {
-                        textAlign: s.Nb.Center
+                        textAlign: s.Lb.Center
                     }, r.createElement(s.W, {
-                        type: s.Rb.P,
+                        type: s.Pb.P,
                         color: s.O.Alt2
                     }, e.subText)))
                 });
@@ -8006,7 +8004,7 @@
                         }, r.createElement(s.Ra, {
                             key: this.props.initialGameTitle + "-" + this.props.redrawKey,
                             type: s.Ta.Text,
-                            icon: s.rb.NavGames,
+                            icon: s.pb.NavGames,
                             name: "game",
                             onChange: this.onChange,
                             onFocus: this.onFocus,
@@ -8027,24 +8025,24 @@
                         return 0 === this.props.searchTerm.length || (t = this.props.gameResults ? this.props.gameResults.length > 0 ? this.renderGameResults(this.props.gameResults, this.state.highlightedGameIndex) : this.props.isSearchPending ? r.createElement(s.Za, {
                             fillContent: !0
                         }) : r.createElement(v, {
-                            icon: s.rb.SearchNoResults,
+                            icon: s.pb.SearchNoResults,
                             titleText: Object(d.d)("No results found", "EventGameSelector"),
                             subText: Object(d.d)("They're probably in another castle", "EventGameSelector")
                         }) : r.createElement(v, {
-                            icon: s.rb.DeadGlitch,
+                            icon: s.pb.DeadGlitch,
                             titleText: Object(d.d)("Search is not available at this time", "EventGameSelector"),
                             subText: Object(d.d)("Please try again later", "EventGameSelector")
                         })), r.createElement("div", {
                             className: e,
                             tabIndex: 0
-                        }, r.createElement(s.Bb, {
+                        }, r.createElement(s.zb, {
                             attachTop: !0,
                             attachRight: !0,
                             attachLeft: !0,
                             attachBottom: !0,
                             background: s.r.Base,
-                            position: s.hb.Absolute,
-                            overflow: s.cb.Hidden,
+                            position: s.fb.Absolute,
+                            overflow: s.ab.Hidden,
                             display: s.X.Block
                         }, r.createElement(u.b, {
                             suppressScrollX: !0,
@@ -8199,7 +8197,7 @@
                         }, r.createElement(s.Ra, {
                             value: this.props.currentGameTitle,
                             type: s.Ta.Text,
-                            icon: s.rb.NavGames,
+                            icon: s.pb.NavGames,
                             disabled: !0
                         })) : r.createElement(f, {
                             redrawKey: this.state.redrawKey,
@@ -8883,18 +8881,18 @@
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(d.fc)(n.props), {
+                        }, Object(d.dc)(n.props), {
                             download: n.props.text
                         }), n.renderIcon()) : n.isLink() ? r.createElement("a", i.__assign({
                             href: n.getLinkTarget(),
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(d.fc)(n.props)), n.renderIcon()) : r.createElement("button", i.__assign({
+                        }, Object(d.dc)(n.props)), n.renderIcon()) : r.createElement("button", i.__assign({
                             onClick: n.copyPageUrl,
                             onMouseLeave: n.clearIsCopiedStatus,
                             className: e
-                        }, Object(d.fc)(n.props)), n.renderIcon())
+                        }, Object(d.dc)(n.props)), n.renderIcon())
                     }, n.onShareClickHandler = function() {
                         n.props.onShareClick && n.props.onShareClick(n.props.type)
                     }, n.clearIsCopiedStatus = function() {
@@ -8914,7 +8912,7 @@
                             display: d.X.Flex,
                             alignItems: d.f.Center,
                             justifyContent: d.Wa.Center
-                        }, r.createElement(d.qb, {
+                        }, r.createElement(d.ob, {
                             asset: e
                         }))
                     }, n.isLink = function() {
@@ -8939,18 +8937,18 @@
                     }, n.getAssetFromType = function() {
                         switch (n.props.type) {
                             case a.Twitter:
-                                return d.rb.Twitter;
+                                return d.pb.Twitter;
                             case a.Facebook:
-                                return d.rb.Facebook;
+                                return d.pb.Facebook;
                             case a.VKontakte:
-                                return d.rb.VKontakte;
+                                return d.pb.VKontakte;
                             case a.Reddit:
-                                return d.rb.Reddit;
+                                return d.pb.Reddit;
                             case a.Download:
-                                return d.rb.Download;
+                                return d.pb.Download;
                             case a.Copy:
                             default:
-                                return d.rb.Copy
+                                return d.pb.Copy
                         }
                     }, n.addSocialClassModifier = function(e) {
                         switch (n.props.type) {
@@ -8994,9 +8992,9 @@
                 return i.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(d.Xa, {
                         className: "social-button"
-                    }, r.createElement(d.Ub, {
+                    }, r.createElement(d.Sb, {
                         label: this.getTooltipFromType(),
-                        direction: d.Wb.Bottom
+                        direction: d.Ub.Bottom
                     }, this.renderLink()))
                 }, t
             }(r.Component)
@@ -9449,12 +9447,12 @@
                                 "event-modal-image-uploader__preview-image": !0,
                                 "event-modal-image-uploader__preview-image--preview-mode": !1 === this.state.isDraggingOver
                             });
-                            e = o.createElement(f.Bb, {
+                            e = o.createElement(f.zb, {
                                 display: f.X.Flex,
                                 justifyContent: f.Wa.Center,
                                 alignItems: f.f.Center,
                                 background: f.r.Alt,
-                                position: f.hb.Absolute,
+                                position: f.fb.Absolute,
                                 attachBottom: !0,
                                 attachLeft: !0,
                                 attachRight: !0,
@@ -9474,7 +9472,7 @@
                                 "data-test-selector": m.RemoveButton,
                                 type: f.F.Hollow,
                                 onClick: this.removeImage,
-                                icon: f.rb.RemoveTag
+                                icon: f.pb.RemoveTag
                             }, Object(s.d)("Remove", "EventModalImageUploader")))
                         }
                         var i = r({
@@ -9499,7 +9497,7 @@
                             ratio: f.p.Aspect16x9
                         }, o.createElement(f.Pa, {
                             className: i,
-                            position: f.hb.Absolute,
+                            position: f.fb.Absolute,
                             fullWidth: !0,
                             fullHeight: !0
                         }, o.createElement("div", {
@@ -9593,7 +9591,7 @@
                 g = "recording",
                 f = "unprocessed",
                 h = [v, g],
-                k = [m, u, p, f, c],
+                k = [m, u, p, f],
                 E = "FORMAT_NOT_SUPPORTED",
                 b = "BAD_ASSET",
                 N = "INTERNAL_ERROR",

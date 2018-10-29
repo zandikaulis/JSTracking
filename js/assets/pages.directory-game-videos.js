@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [130], {
+    [129], {
         "0T/G": function(e, t) {},
         "86FS": function(e, t, n) {
             "use strict";
@@ -301,12 +301,12 @@
                     }, t.prototype.renderCheckmark = function(e) {
                         return this.props.broadcastType === e ? r.createElement(u.Xa, {
                             attachRight: !0,
-                            position: u.hb.Absolute,
+                            position: u.fb.Absolute,
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(u.qb, {
-                            asset: u.rb.Check,
+                        }, r.createElement(u.ob, {
+                            asset: u.pb.Check,
                             height: 18,
                             width: 18
                         })) : null
@@ -319,7 +319,7 @@
                     }, t.prototype.renderSortSelector = function() {
                         if (this.props.hideSortSelector) return null;
                         var e = this.props.selectedSort && Object(c.b)(this.props.selectedSort) || c.a.Newest,
-                            t = r.createElement(u.xb, {
+                            t = r.createElement(u.vb, {
                                 "data-a-target": "video-sort-select",
                                 "data-test-selector": i.SortSelector,
                                 name: "sort",
@@ -391,7 +391,7 @@
                     }
                 }, i.createElement(r.o, {
                     ratio: e.aspectRatio
-                }, i.createElement(r.Bb, {
+                }, i.createElement(r.zb, {
                     background: r.r.Alt2,
                     fullHeight: !0
                 }, t))))
@@ -885,9 +885,9 @@
                         });
                         t = a.createElement(a.Fragment, null, s)
                     }
-                    return a.createElement(c.Xb, {
-                        gutterSize: c.Zb.Small,
-                        childWidth: e.videoCardSize || c.Yb.Large,
+                    return a.createElement(c.Vb, {
+                        gutterSize: c.Xb.Small,
+                        childWidth: e.videoCardSize || c.Wb.Large,
                         placeholderItems: 20
                     }, t, n)
                 },
@@ -1304,7 +1304,7 @@
                                 className: "language-select-menu__balloon"
                             }, l.createElement(p.b, null, l.createElement(f.Xa, {
                                 padding: .5
-                            }, Object(g.b)().map(t.renderLanguageOption)))), l.createElement(f.Bb, {
+                            }, Object(g.b)().map(t.renderLanguageOption)))), l.createElement(f.zb, {
                                 background: f.r.Alt,
                                 borderTop: !0,
                                 className: "language-select-menu__footer"
@@ -1337,8 +1337,8 @@
                                 margin: {
                                     left: .5
                                 }
-                            }, 0 !== e && l.createElement(f.eb, {
-                                type: f.fb.Brand,
+                            }, 0 !== e && l.createElement(f.cb, {
+                                type: f.db.Brand,
                                 label: e.toString()
                             })))
                         }, t.trackLanguageChange = function(e, n) {

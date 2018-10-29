@@ -1,150 +1,6 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [144], {
-        "4HoE": function(e, n) {
-            var t = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "mutation",
-                    name: {
-                        kind: "Name",
-                        value: "ModUser"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "ModUserInput"
-                                }
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "modUser"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "input"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "channel"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "target"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "login"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "error"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "code"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 119
-                }
-            };
-            t.loc.source = {
-                body: "mutation ModUser($input: ModUserInput!){\nmodUser(input: $input) {\nchannel {\nid\n}\ntarget {\nid\nlogin\n}\nerror {\ncode\n}\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = t
-        },
-        "91YW": function(e, n) {
+    [142], {
+        "3nJb": function(e, n) {
             var t = {
                 kind: "Document",
                 definitions: [{
@@ -152,7 +8,7 @@
                     operation: "query",
                     name: {
                         kind: "Name",
-                        value: "UserRolesCacheQuery"
+                        value: "UserRolesQuery"
                     },
                     variableDefinitions: [{
                         kind: "VariableDefinition",
@@ -401,7 +257,7 @@
                                                                 },
                                                                 value: {
                                                                     kind: "IntValue",
-                                                                    value: "50"
+                                                                    value: "28"
                                                                 }
                                                             }],
                                                             directives: []
@@ -538,7 +394,7 @@
                                                                 },
                                                                 value: {
                                                                     kind: "IntValue",
-                                                                    value: "50"
+                                                                    value: "28"
                                                                 }
                                                             }],
                                                             directives: []
@@ -675,7 +531,7 @@
                                                                 },
                                                                 value: {
                                                                     kind: "IntValue",
-                                                                    value: "50"
+                                                                    value: "28"
                                                                 }
                                                             }],
                                                             directives: []
@@ -692,590 +548,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 628
+                    end: 623
                 }
             };
             t.loc.source = {
-                body: "query UserRolesCacheQuery ($channelLogin: String! $includeEditors: Boolean! $includeMods: Boolean! $includeVIPs: Boolean! $modsCursor: Cursor $vipsCursor: Cursor) {\nuser(login: $channelLogin) {\nid\neditors @include(if: $includeEditors) {\nedges {\ncursor\ngrantedAt\nnode {\nid\ndisplayName\nlogin\nprofileImageURL(width: 50)\n}\n}\n}\nmods(first: 100 after: $modsCursor) @include(if: $includeMods) {\nedges {\ncursor\ngrantedAt\nnode {\nid\ndisplayName\nlogin\nprofileImageURL(width: 50)\n}\n}\n}\nvips(first: 100 after: $vipsCursor) @include(if: $includeVIPs) {\nedges {\ncursor\ngrantedAt\nnode {\nid\ndisplayName\nlogin\nprofileImageURL(width: 50)\n}\n}\n}\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = t
-        },
-        AKV8: function(e, n, t) {
-            "use strict";
-            t.d(n, "a", function() {
-                return i
-            }), t.d(n, "b", function() {
-                return o
-            });
-            var i, r = t("mrSG"),
-                a = t("yR8l"),
-                s = t("4HoE");
-
-            function o(e) {
-                var n = this;
-                return Object(a.a)(s, {
-                    props: function(t) {
-                        return {
-                            modUserMutation: function(i) {
-                                return r.__awaiter(n, void 0, void 0, function() {
-                                    var n;
-                                    return r.__generator(this, function(r) {
-                                        if (n = e(t.ownProps).channelID, t.mutate) return [2, t.mutate({
-                                            variables: {
-                                                input: {
-                                                    channelID: n,
-                                                    targetLogin: i
-                                                }
-                                            }
-                                        }).then(function(e) {
-                                            return e.data
-                                        })];
-                                        throw new Error("modUser mutation is not ready")
-                                    })
-                                })
-                            }
-                        }
-                    }
-                })
-            }! function(e) {
-                e.ChannelNotFound = "CHANNEL_NOT_FOUND", e.Forbidden = "FORBIDDEN", e.UserAlreadyModded = "TARGET_ALREADY_MOD", e.UserBanned = "TARGET_IS_CHAT_BANNED", e.UserNotFound = "TARGET_NOT_FOUND"
-            }(i || (i = {}))
-        },
-        "CpU+": function(e, n, t) {
-            "use strict";
-            t.d(n, "a", function() {
-                return s
-            });
-            var i = t("mrSG"),
-                r = t("yR8l"),
-                a = t("JiJH");
-
-            function s() {
-                var e = this;
-                return Object(r.a)(a, {
-                    props: function(n) {
-                        return {
-                            unVIPUserMutation: function(t) {
-                                return i.__awaiter(e, void 0, void 0, function() {
-                                    return i.__generator(this, function(e) {
-                                        switch (e.label) {
-                                            case 0:
-                                                return n.mutate ? [4, n.mutate({
-                                                    variables: {
-                                                        input: {
-                                                            channelID: n.ownProps.channelID,
-                                                            revokeeLogin: t
-                                                        }
-                                                    }
-                                                })] : [2];
-                                            case 1:
-                                                return [2, e.sent().data]
-                                        }
-                                    })
-                                })
-                            }
-                        }
-                    }
-                })
-            }
-        },
-        FAYk: function(e, n) {
-            var t = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "mutation",
-                    name: {
-                        kind: "Name",
-                        value: "UnmodUser"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "UnmodUserInput"
-                                }
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "unmodUser"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "input"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "channel"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "target"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "error"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "code"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 119
-                }
-            };
-            t.loc.source = {
-                body: "mutation UnmodUser($input: UnmodUserInput!){\nunmodUser(input: $input) {\nchannel {\nid\n}\ntarget {\nid\n}\nerror {\ncode\n}\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = t
-        },
-        JiJH: function(e, n) {
-            var t = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "mutation",
-                    name: {
-                        kind: "Name",
-                        value: "UnVIPUser"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "RevokeVIPInput"
-                                }
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "revokeVIP"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "input"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "channel"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "revokee"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "login"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "error"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "code"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 126
-                }
-            };
-            t.loc.source = {
-                body: "mutation UnVIPUser($input: RevokeVIPInput!){\nrevokeVIP(input: $input) {\nchannel {\nid\n}\nrevokee {\nid\nlogin\n}\nerror {\ncode\n}\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = t
-        },
-        "LQi+": function(e, n) {
-            var t = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "query",
-                    name: {
-                        kind: "Name",
-                        value: "RolesPageQuery"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "channelLogin"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "String"
-                                }
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "user"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "login"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "channelLogin"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "id"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 82
-                }
-            };
-            t.loc.source = {
-                body: "query RolesPageQuery($channelLogin: String!) {\nuser(login: $channelLogin) {\nid\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = t
-        },
-        OBYv: function(e, n) {
-            var t = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "mutation",
-                    name: {
-                        kind: "Name",
-                        value: "AddEditorUser"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "AddEditorInput"
-                                }
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "addEditor"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "input"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "channel"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "targetUser"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "error"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "code"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 127
-                }
-            };
-            t.loc.source = {
-                body: "mutation AddEditorUser($input: AddEditorInput!){\naddEditor(input: $input) {\nchannel {\nid\n}\ntargetUser {\nid\n}\nerror {\ncode\n}\n}\n}",
+                body: "query UserRolesQuery ($channelLogin: String! $includeEditors: Boolean! $includeMods: Boolean! $includeVIPs: Boolean! $modsCursor: Cursor $vipsCursor: Cursor) {\nuser(login: $channelLogin) {\nid\neditors @include(if: $includeEditors) {\nedges {\ncursor\ngrantedAt\nnode {\nid\ndisplayName\nlogin\nprofileImageURL(width: 28)\n}\n}\n}\nmods(first: 100 after: $modsCursor) @include(if: $includeMods) {\nedges {\ncursor\ngrantedAt\nnode {\nid\ndisplayName\nlogin\nprofileImageURL(width: 28)\n}\n}\n}\nvips(first: 100 after: $vipsCursor) @include(if: $includeVIPs) {\nedges {\ncursor\ngrantedAt\nnode {\nid\ndisplayName\nlogin\nprofileImageURL(width: 28)\n}\n}\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -1285,44 +562,6 @@
             e.exports = t
         },
         eqbG: function(e, n, t) {},
-        fKMw: function(e, n, t) {
-            "use strict";
-            t.d(n, "a", function() {
-                return s
-            });
-            var i = t("mrSG"),
-                r = t("yR8l"),
-                a = t("sMoq");
-
-            function s() {
-                var e = this;
-                return Object(r.a)(a, {
-                    props: function(n) {
-                        return {
-                            vipUserMutation: function(t) {
-                                return i.__awaiter(e, void 0, void 0, function() {
-                                    return i.__generator(this, function(e) {
-                                        switch (e.label) {
-                                            case 0:
-                                                return n.mutate ? [4, n.mutate({
-                                                    variables: {
-                                                        input: {
-                                                            channelID: n.ownProps.channelID,
-                                                            granteeLogin: t
-                                                        }
-                                                    }
-                                                })] : [2];
-                                            case 1:
-                                                return [2, e.sent().data]
-                                        }
-                                    })
-                                })
-                            }
-                        }
-                    }
-                })
-            }
-        },
         gD7V: function(e, n) {
             var t = {
                 kind: "Document",
@@ -1410,33 +649,32 @@
         qcBk: function(e, n, t) {
             "use strict";
             t.r(n);
-            var i, r, a = t("mrSG"),
-                s = t("q1tI"),
-                o = t("fvjX"),
-                l = t("yR8l"),
-                d = t("V+GM"),
-                c = t("NvVO"),
-                u = t("2xye"),
-                m = t("GnwI"),
-                p = t("1rIY");
+            var i, a, r = t("mrSG"),
+                l = t("q1tI"),
+                s = t("fvjX"),
+                o = t("V+GM"),
+                d = t("NvVO"),
+                c = t("2xye"),
+                u = t("GnwI"),
+                m = t("1rIY");
             ! function(e) {
                 e[e.ADD_USER = 0] = "ADD_USER", e[e.DEFAULT = 1] = "DEFAULT", e[e.LOADING = 2] = "LOADING", e[e.NO_USERS = 3] = "NO_USERS"
-            }(r || (r = {}));
-            var h = (i = Object(p.a)("RolesPageViewContext", {
+            }(a || (a = {}));
+            var p = (i = Object(m.a)("RolesPageViewContext", {
                     setView: function() {
                         return null
                     },
-                    view: r.LOADING
+                    view: a.LOADING
                 })).InnerProvider,
-                v = i.withContext,
+                h = i.withContext,
                 f = function(e) {
                     return e
                 };
 
-            function k(e) {
-                return v(f)(e)
+            function v(e) {
+                return h(f)(e)
             }
-            var g, E, C, b = function(e) {
+            var g, k, C, b = function(e) {
                     function n(n) {
                         var t = e.call(this, n) || this;
                         return t.setView = function(e) {
@@ -1445,84 +683,64 @@
                             })
                         }, t.state = {
                             setView: t.setView,
-                            view: r.LOADING
+                            view: a.LOADING
                         }, t
                     }
-                    return a.__extends(n, e), n.prototype.render = function() {
-                        return s.createElement(h, {
+                    return r.__extends(n, e), n.prototype.render = function() {
+                        return l.createElement(p, {
                             value: this.state
                         }, this.props.children)
                     }, n
-                }(s.Component),
+                }(l.Component),
+                E = t("NAv5"),
                 y = t("/7QA"),
-                S = t("IFXb"),
-                N = t("5NYc"),
-                I = t("vYsf"),
-                D = t("NAv5"),
-                _ = t("ZDlU"),
+                S = t("ZDlU"),
+                N = t("yR8l"),
                 O = t("Ue10"),
-                U = t("91YW");
+                D = t("3nJb");
             ! function(e) {
                 e[e.ALL_ROLES = 0] = "ALL_ROLES", e[e.EDITOR = 1] = "EDITOR", e[e.MODERATOR = 2] = "MODERATOR", e[e.VIP = 3] = "VIP"
-            }(E || (E = {})),
+            }(k || (k = {})),
             function(e) {
                 e.IS_EDITOR = "isEditor", e.IS_MOD = "isMod", e.IS_VIP = "isVIP"
             }(C || (C = {}));
-            var A = (g = Object(p.a)("UserRolesCacheContext", {
-                    modifyUserInCache: function() {
-                        return null
-                    },
-                    filterType: E.ALL_ROLES,
+            var I = (g = Object(m.a)("UserRolesContext", {
+                    filterType: k.ALL_ROLES,
                     setFilterType: function() {
                         return null
                     },
-                    totalVIPs: 0,
                     userCache: {}
                 })).InnerProvider,
-                M = g.withContext,
-                T = function(e) {
+                R = g.withContext,
+                _ = function(e) {
                     return e
                 };
 
-            function F(e) {
-                return M(T)(e)
+            function U(e) {
+                return R(_)(e)
             }
-            var R, L = function(e) {
+            var F, A = function(e) {
                     function n(n) {
                         var t = e.call(this, n) || this;
-                        return t.modifyUserInCache = function(e, n) {
-                            var i = e.id;
-                            i && t.setState(function(n) {
-                                var t, r = n.totalVIPs,
-                                    s = n.userCache,
-                                    o = s[i] || {};
-                                return {
-                                    userCache: a.__assign({}, s, (t = {}, t[i] = a.__assign({}, o, e), t)),
-                                    totalVIPs: r + (o.isVIP !== e.isVIP && (e.isVIP ? 1 : -1) || 0)
-                                }
-                            }, function() {
-                                n && n()
-                            })
-                        }, t.setUserCache = function(e, n, t) {
-                            for (var i, r = 0, a = n; r < a.length; r++) {
-                                var s = a[r],
-                                    o = s.node;
-                                if (o) {
-                                    var l = o.id;
-                                    if (l) {
-                                        i = s.cursor;
-                                        var d = s.grantedAt,
-                                            c = e[l] || {
-                                                displayName: o.displayName,
-                                                channelLogin: o.login,
-                                                id: o.id,
+                        return t.setUserCache = function(e, n, t) {
+                            for (var i, a = 0, r = n; a < r.length; a++) {
+                                var l = r[a],
+                                    s = l.node;
+                                if (s) {
+                                    var o = s.id;
+                                    if (o) {
+                                        i = l.cursor;
+                                        var d = l.grantedAt,
+                                            c = e[o] || {
+                                                displayName: s.displayName,
+                                                channelLogin: s.login,
                                                 lastModified: d,
-                                                profileImageURL: o.profileImageURL,
+                                                profileImageURL: s.profileImageURL,
                                                 isEditor: !1,
                                                 isMod: !1,
                                                 isVIP: !1
                                             };
-                                        c[t] = !0, c.isMod && c.isVIP && (c.isVIP = !1), c.lastModified = Object(D.max)(c.lastModified, new Date(d)), e[l] = c
+                                        c[t] = !0, c.lastModified = Object(E.max)(c.lastModified, new Date(d)), e[o] = c
                                     }
                                 }
                             }
@@ -1531,16 +749,15 @@
                                 userCache: e
                             }
                         }, t.fetchMore = function(e, n) {
-                            return a.__awaiter(t, void 0, void 0, function() {
+                            return r.__awaiter(t, void 0, void 0, function() {
                                 var t;
-                                return a.__generator(this, function(i) {
+                                return r.__generator(this, function(i) {
                                     switch (i.label) {
                                         case 0:
                                             return [4, this.props.data.fetchMore({
-                                                fetchPolicy: "network-only",
-                                                query: U,
+                                                query: D,
                                                 variables: {
-                                                    channelID: this.props.channelID,
+                                                    channelLogin: this.props.channelLogin,
                                                     includeEditors: !1,
                                                     includeMods: !!e,
                                                     includeVIPs: !!n,
@@ -1551,11 +768,11 @@
                                                     if (!n.fetchMoreResult.user) return e;
                                                     var t = n.fetchMoreResult.user,
                                                         i = t.mods,
-                                                        r = t.vips;
+                                                        a = t.vips;
                                                     return {
-                                                        user: a.__assign({}, n.fetchMoreResult.user, {
+                                                        user: r.__assign({}, n.fetchMoreResult.user, {
                                                             mods: i || null,
-                                                            vips: r || null
+                                                            vips: a || null
                                                         })
                                                     }
                                                 }
@@ -1577,62 +794,60 @@
                                 }
                             })
                         }, t.state = {
-                            modifyUserInCache: t.modifyUserInCache,
-                            filterType: E.ALL_ROLES,
+                            filterType: k.ALL_ROLES,
                             setFilterType: t.setFilterType,
-                            totalVIPs: 0,
                             userCache: {}
                         }, t
                     }
-                    return a.__extends(n, e), n.prototype.componentDidMount = function() {
+                    return r.__extends(n, e), n.prototype.componentDidMount = function() {
                         this.updateUserCache()
                     }, n.prototype.componentDidUpdate = function(e) {
-                        e.channelID !== this.props.channelID && this.setState({
+                        e.channelLogin !== this.props.channelLogin && this.setState({
                             userCache: {}
                         }), e.data.loading && this.updateUserCache()
                     }, n.prototype.render = function() {
-                        return this.props.data.error ? s.createElement(_.a, {
+                        return this.props.data.error ? l.createElement(S.a, {
                             message: Object(y.d)("Whoops, something went wrong.", "UserRolesContext")
-                        }) : this.props.view !== r.LOADING && this.props.channelID ? s.createElement(A, {
-                            value: this.state
-                        }, this.props.children) : s.createElement(O.Za, {
+                        }) : this.props.view === a.LOADING ? l.createElement(O.Za, {
                             fillContent: !0
-                        })
+                        }) : l.createElement(I, {
+                            value: this.state
+                        }, this.props.children)
                     }, n.prototype.updateUserCache = function(e) {
                         var n = this;
                         void 0 === e && (e = this.props.data);
-                        var t, i, s = e.error,
-                            o = e.loading,
-                            l = e.user;
-                        s || o || !l || this.props.view !== r.LOADING || this.setState(function(e) {
-                            var r = a.__assign({}, e);
-                            if (r.userCache || (r.userCache = {}), l.editors && l.editors.edges) {
-                                var s = n.setUserCache(r.userCache, l.editors.edges, C.IS_EDITOR).userCache;
-                                r.userCache = a.__assign({}, r.userCache, s)
+                        var t, i, l = e.error,
+                            s = e.loading,
+                            o = e.user;
+                        l || s || !o || this.props.view !== a.LOADING || this.setState(function(e) {
+                            var a = r.__assign({}, e);
+                            if (a.userCache || (a.userCache = {}), o.editors && o.editors.edges) {
+                                var l = n.setUserCache(a.userCache, o.editors.edges, C.IS_EDITOR).userCache;
+                                a.userCache = r.__assign({}, a.userCache, l)
                             }
-                            if (l.mods && l.mods.edges) {
-                                var o = n.setUserCache(r.userCache, l.mods.edges, C.IS_MOD),
-                                    d = o.cursor;
-                                s = o.userCache;
-                                t = d, r.userCache = a.__assign({}, r.userCache, s)
+                            if (o.mods && o.mods.edges) {
+                                var s = n.setUserCache(a.userCache, o.mods.edges, C.IS_MOD),
+                                    d = s.cursor;
+                                l = s.userCache;
+                                t = d, a.userCache = r.__assign({}, a.userCache, l)
                             }
-                            if (l.vips && l.vips.edges) {
-                                var c = n.setUserCache(r.userCache, l.vips.edges, C.IS_VIP);
-                                d = c.cursor, s = c.userCache;
-                                i = d, r.userCache = a.__assign({}, r.userCache, s), r.totalVIPs = e.totalVIPs + l.vips.edges.length
+                            if (o.vips && o.vips.edges) {
+                                var c = n.setUserCache(a.userCache, o.vips.edges, C.IS_VIP);
+                                d = c.cursor, l = c.userCache;
+                                i = d, a.userCache = r.__assign({}, a.userCache, l)
                             }
-                            var u = l.id;
-                            return u && r.userCache && r.userCache[u] && delete r.userCache[u], r
+                            var u = o.id;
+                            return u && a.userCache && a.userCache[u] && delete a.userCache[u], a
                         }, function() {
-                            return a.__awaiter(n, void 0, void 0, function() {
-                                return a.__generator(this, function(e) {
+                            return r.__awaiter(n, void 0, void 0, function() {
+                                return r.__generator(this, function(e) {
                                     switch (e.label) {
                                         case 0:
                                             return t || i ? [4, this.fetchMore(t, i)] : [3, 2];
                                         case 1:
                                             return e.sent(), [3, 3];
                                         case 2:
-                                            this.props.latencyTracking.reportInteractive(), this.props.setView(0 === Object.keys(this.state.userCache).length ? r.NO_USERS : r.DEFAULT), e.label = 3;
+                                            this.props.latencyTracking.reportInteractive(), this.props.setView(0 === Object.keys(this.state.userCache).length ? a.NO_USERS : a.DEFAULT), e.label = 3;
                                         case 3:
                                             return [2]
                                     }
@@ -1640,442 +855,56 @@
                             })
                         })
                     }, n
-                }(s.Component),
-                P = Object(o.compose)(k, Object(m.b)("WithUserRolesCacheProvider"), Object(l.a)(U, {
+                }(l.Component),
+                w = Object(s.compose)(v, Object(u.b)("WithUserRolesContext"), Object(N.a)(D, {
                     options: function(e) {
                         return {
-                            fetchPolicy: "network-only",
                             variables: {
-                                channelID: e.channelID,
+                                channelLogin: e.channelLogin,
                                 includeEditors: !0,
                                 includeMods: !0,
                                 includeVIPs: !0
                             }
                         }
                     }
-                }))(L),
-                w = (R = Object(p.a)("ChannelVIPContext", {
-                    maxVIPUserLimit: 0,
-                    isAtMaxVIPUserLimit: !1,
-                    isVIPUnlocked: !1
-                })).InnerProvider,
-                V = R.withContext,
-                x = function(e) {
-                    return e
-                };
-
-            function B(e) {
-                return V(x)(e)
-            }
-            var j, X, G = F(function(e) {
-                    function n(n) {
-                        var t = e.call(this, n) || this;
-                        return t.state = {
-                            maxVIPUserLimit: 0,
-                            isVIPUnlocked: !1
-                        }, t
-                    }
-                    return a.__extends(n, e), n.prototype.componentDidMount = function() {
-                        this.fetchVIPQuestData()
-                    }, n.prototype.componentDidUpdate = function(e) {
-                        e.channelID || this.fetchVIPQuestData()
-                    }, n.prototype.render = function() {
-                        var e = this.state.maxVIPUserLimit;
-                        return s.createElement(w, {
-                            value: a.__assign({}, this.state, {
-                                isAtMaxVIPUserLimit: !(this.props.totalVIPs !== e || !e)
-                            })
-                        }, this.props.children)
-                    }, n.prototype.fetchVIPQuestData = function() {
-                        return a.__awaiter(this, void 0, void 0, function() {
-                            var e, n, t, i, r;
-                            return a.__generator(this, function(a) {
-                                switch (a.label) {
-                                    case 0:
-                                        if (!(e = this.props.channelID)) return [2];
-                                        a.label = 1;
-                                    case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, Object(I.a)(e)];
-                                    case 2:
-                                        for (n = a.sent(), t = 0, i = n; t < i.length; t++)
-                                            if ((r = i[t]).key === N.b.VIP_BADGE) return this.setState({
-                                                maxVIPUserLimit: r.reward && r.reward.limit || 0,
-                                                isVIPUnlocked: r.is_complete
-                                            }), [2];
-                                        return [3, 4];
-                                    case 3:
-                                        return a.sent(), [3, 4];
-                                    case 4:
-                                        return [2]
-                                }
-                            })
-                        })
-                    }, n
-                }(s.Component)),
-                W = t("GIFg"),
-                q = t("kYmV"),
-                H = t("cuu2"),
-                $ = "https://help.twitch.tv/customer/en/portal/articles/659115-twitch-chat-badges-guide",
-                z = "https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/1",
-                Q = "https://static-cdn.jtvnw.net/badges/v1/b817aba4-fad8-49e2-b88a-7cc744dfa6ec/1",
-                Y = function(e) {
+                }))(A),
+                x = t("IFXb"),
+                L = t("GIFg"),
+                T = t("kYmV"),
+                V = t("cuu2"),
+                B = "https://help.twitch.tv/customer/en/portal/articles/659115-twitch-chat-badges-guide",
+                M = "https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/1",
+                P = "https://static-cdn.jtvnw.net/badges/v1/b817aba4-fad8-49e2-b88a-7cc744dfa6ec/1",
+                X = function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(n, e), n.prototype.render = function() {
-                        return s.createElement(W.a, null, s.createElement(H.a, {
-                            learnMoreUrl: $,
-                            page: q.b.Roles
+                    return r.__extends(n, e), n.prototype.render = function() {
+                        return l.createElement(L.a, null, l.createElement(V.a, {
+                            learnMoreUrl: B,
+                            page: T.b.Roles
                         }))
                     }, n
-                }(s.Component);
-            ! function(e) {
-                e[e.ALL_MUTATIONS_FAILED = 0] = "ALL_MUTATIONS_FAILED", e[e.ALL_MUTATIONS_SUCCEEDED = 1] = "ALL_MUTATIONS_SUCCEEDED", e[e.MAX_VIPS_REACHED = 2] = "MAX_VIPS_REACHED", e[e.SOME_MUTATIONS_FAILED = 3] = "SOME_MUTATIONS_FAILED"
-            }(X || (X = {}));
-            var K = (j = Object(p.a)("RolesPageMessageContext", {
-                    clearMessage: function() {
-                        return null
-                    },
-                    message: null,
-                    setMessage: function() {
-                        return null
-                    }
-                })).InnerProvider,
-                J = j.withContext,
-                Z = function(e) {
-                    return e
-                };
-
-            function ee(e) {
-                return J(Z)(e)
-            }
-            var ne, te, ie = function(e) {
-                    function n(n) {
-                        var t = e.call(this, n) || this;
-                        return t.clearMessage = function() {
-                            t.setState({
-                                message: null
-                            })
-                        }, t.setMessage = function(e) {
-                            t.setState({
-                                message: e
-                            })
-                        }, t.state = {
-                            clearMessage: t.clearMessage,
-                            message: null,
-                            setMessage: t.setMessage
-                        }, t
-                    }
-                    return a.__extends(n, e), n.prototype.render = function() {
-                        return s.createElement(K, {
-                            value: this.state
-                        }, this.props.children)
-                    }, n
-                }(s.Component),
-                re = t("/MKj"),
-                ae = t("aCAx");
-            ! function(e) {
-                e.FATAL = "FATAL"
-            }(te || (te = {}));
-            var se = (ne = Object(p.a)("MutateUserRolesContext", {
-                    mutateUser: function() {
-                        return Promise.resolve({
-                            editorError: null,
-                            modError: null,
-                            vipError: null
-                        })
-                    }
-                })).InnerProvider,
-                oe = ne.withContext,
-                le = function(e) {
-                    return e
-                };
-
-            function de(e) {
-                return oe(le)(e)
-            }
-            var ce = function(e) {
-                    function n(n) {
-                        var t = e.call(this, n) || this;
-                        return t.mutateUser = function(e) {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                var n, t, i, r, s, o, l, d, c, u, m, p, h, v;
-                                return a.__generator(this, function(a) {
-                                    switch (a.label) {
-                                        case 0:
-                                            return n = e.channelLogin, (t = e.id) && n ? (i = this.props.userCache, r = i[t] || {
-                                                isEditor: !1,
-                                                isMod: !1,
-                                                isVIP: !1
-                                            }, s = e.isEditor, o = e.isMod, l = e.isVIP, d = !!s !== r.isEditor, c = !!o !== r.isMod, u = this.props.isVIPUnlocked && !!l !== r.isVIP, [4, Promise.all([d ? this.mutateEditor(n, !!s) : this.genericPromise(), c ? this.mutateMod(n, !!o) : this.genericPromise(), u ? this.mutateVIP(n, !!l) : this.genericPromise()])]) : [2, te.FATAL];
-                                        case 1:
-                                            return m = a.sent(), p = m[0], h = m[1], v = m[2], [2, {
-                                                editorError: p,
-                                                modError: h,
-                                                vipError: v
-                                            }]
-                                    }
-                                })
-                            })
-                        }, t.genericPromise = function() {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                return a.__generator(this, function(e) {
-                                    return [2, Promise.resolve(null)]
-                                })
-                            })
-                        }, t.mutateEditor = function(e, n) {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                var t, i;
-                                return a.__generator(this, function(r) {
-                                    switch (r.label) {
-                                        case 0:
-                                            return r.trys.push([0, 4, , 5]), n ? [4, this.props.addEditorUserMutation(e)] : [3, 2];
-                                        case 1:
-                                            return (t = r.sent()) && t.addEditor ? [2, t.addEditor.error ? t.addEditor.error.code : null] : [2, te.FATAL];
-                                        case 2:
-                                            return [4, this.props.removeEditorUserMutation(e)];
-                                        case 3:
-                                            return (i = r.sent()) && i.removeEditor ? [2, i.removeEditor.error ? i.removeEditor.error.code : null] : [2, te.FATAL];
-                                        case 4:
-                                            return r.sent(), [2, te.FATAL];
-                                        case 5:
-                                            return [2]
-                                    }
-                                })
-                            })
-                        }, t.mutateMod = function(e, n) {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                var t, i;
-                                return a.__generator(this, function(r) {
-                                    switch (r.label) {
-                                        case 0:
-                                            return r.trys.push([0, 4, , 5]), n ? [4, this.props.modUserMutation(e)] : [3, 2];
-                                        case 1:
-                                            return (t = r.sent()) && t.modUser ? [2, t.modUser.error ? t.modUser.error.code : null] : [2, te.FATAL];
-                                        case 2:
-                                            return [4, this.props.unmodUserMutation(e)];
-                                        case 3:
-                                            return (i = r.sent()) && i.unmodUser ? [2, i.unmodUser.error ? i.unmodUser.error.code : null] : [2, te.FATAL];
-                                        case 4:
-                                            return r.sent(), [2, te.FATAL];
-                                        case 5:
-                                            return [2]
-                                    }
-                                })
-                            })
-                        }, t.mutateVIP = function(e, n) {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                var t, i;
-                                return a.__generator(this, function(r) {
-                                    switch (r.label) {
-                                        case 0:
-                                            return r.trys.push([0, 4, , 5]), n ? [4, this.props.vipUserMutation(e)] : [3, 2];
-                                        case 1:
-                                            return (t = r.sent()) && t.grantVIP ? [2, t.grantVIP.error ? t.grantVIP.error.code : null] : [2, te.FATAL];
-                                        case 2:
-                                            return [4, this.props.unVIPUserMutation(e)];
-                                        case 3:
-                                            return (i = r.sent()) && i.revokeVIP ? [2, i.revokeVIP.error ? i.revokeVIP.error.code : null] : [2, te.FATAL];
-                                        case 4:
-                                            return r.sent(), [2, te.FATAL];
-                                        case 5:
-                                            return [2]
-                                    }
-                                })
-                            })
-                        }, t.state = {
-                            mutateUser: t.mutateUser
-                        }, t
-                    }
-                    return a.__extends(n, e), n.prototype.render = function() {
-                        return s.createElement(se, {
-                            value: this.state
-                        }, this.props.children)
-                    }, n
-                }(s.Component),
-                ue = t("AKV8"),
-                me = t("yzwe"),
-                pe = t("CpU+"),
-                he = t("fKMw"),
-                ve = t("OBYv");
-            var fe = t("r6Pb");
-
-            function ke(e) {
-                return {
-                    channelID: e.channelID || ""
-                }
-            }
-            var ge = Object(o.compose)(B, F, function() {
-                    var e = this;
-                    return Object(l.a)(ve, {
-                        props: function(n) {
-                            return {
-                                addEditorUserMutation: function(t) {
-                                    return a.__awaiter(e, void 0, void 0, function() {
-                                        return a.__generator(this, function(e) {
-                                            switch (e.label) {
-                                                case 0:
-                                                    return n.mutate ? [4, n.mutate({
-                                                        variables: {
-                                                            input: {
-                                                                channelID: n.ownProps.channelID,
-                                                                targetUserLogin: t
-                                                            }
-                                                        }
-                                                    })] : [2];
-                                                case 1:
-                                                    return [2, e.sent().data]
-                                            }
-                                        })
-                                    })
-                                }
-                            }
-                        }
-                    })
-                }(), function() {
-                    var e = this;
-                    return Object(l.a)(fe, {
-                        props: function(n) {
-                            return {
-                                removeEditorUserMutation: function(t) {
-                                    return a.__awaiter(e, void 0, void 0, function() {
-                                        return a.__generator(this, function(e) {
-                                            switch (e.label) {
-                                                case 0:
-                                                    return n.mutate ? [4, n.mutate({
-                                                        variables: {
-                                                            input: {
-                                                                channelID: n.ownProps.channelID,
-                                                                targetUserLogin: t
-                                                            }
-                                                        }
-                                                    })] : [2];
-                                                case 1:
-                                                    return [2, e.sent().data]
-                                            }
-                                        })
-                                    })
-                                }
-                            }
-                        }
-                    })
-                }(), Object(ue.b)(ke), Object(me.b)(ke), Object(pe.a)(), Object(he.a)())(ce),
-                Ee = function(e) {
-                    function n() {
-                        var n = null !== e && e.apply(this, arguments) || this;
-                        return n.state = {
-                            isRetryButtonDisabled: !1
-                        }, n.handleModalDismiss = function() {
-                            n.props.clearMessage(), n.props.closeModal()
-                        }, n.handleRetryClick = function() {
-                            n.setState({
-                                isRetryButtonDisabled: !0
-                            }, n.handleRetry)
-                        }, n.handleRetry = function() {
-                            return a.__awaiter(n, void 0, void 0, function() {
-                                var e, n, t, i, r, s, o, l = this;
-                                return a.__generator(this, function(d) {
-                                    switch (d.label) {
-                                        case 0:
-                                            return e = this.props.message, n = e.user, [4, this.props.mutateUser(n)];
-                                        case 1:
-                                            return (t = d.sent()) === te.FATAL ? (this.setState({
-                                                isRetryButtonDisabled: !1
-                                            }), [2]) : (i = t.editorError, r = t.modError, s = t.vipError, i || r || s ? (o = a.__assign({
-                                                channelLogin: n.channelLogin,
-                                                displayName: n.displayName,
-                                                lastModified: n.lastModified,
-                                                id: n.id,
-                                                profileImageURL: n.profileImageURL
-                                            }, i ? {} : {
-                                                isEditor: n.isEditor
-                                            }, r ? {} : {
-                                                isMod: n.isMod
-                                            }, s ? {} : {
-                                                isVIP: n.isVIP
-                                            }), this.props.modifyUserInCache(o, function() {
-                                                l.props.setMessage({
-                                                    user: n,
-                                                    error: t,
-                                                    type: X.SOME_MUTATIONS_FAILED
-                                                }), l.props.closeModal()
-                                            }), [2]) : (this.props.modifyUserInCache(n, function() {
-                                                l.props.setMessage({
-                                                    user: n,
-                                                    type: X.ALL_MUTATIONS_SUCCEEDED
-                                                }), l.props.closeModal()
-                                            }), [2]))
-                                    }
-                                })
-                            })
-                        }, n
-                    }
-                    return a.__extends(n, e), n.prototype.render = function() {
-                        return s.createElement(O.ab, {
-                            elevation: 3,
-                            onCloseButtonClick: this.handleModalDismiss,
-                            primaryButtonProps: {
-                                children: Object(y.d)("Retry", "RolesPageMessageModal"),
-                                disabled: this.state.isRetryButtonDisabled,
-                                onClick: this.handleRetryClick
-                            },
-                            secondaryButtonProps: {
-                                children: Object(y.d)("Cancel", "RolesPageMessageModal"),
-                                onClick: this.handleModalDismiss,
-                                type: O.F.Hollow
-                            },
-                            size: O.bb.Small,
-                            title: Object(y.d)("Something went wrong", "RolesPageMessageModal")
-                        }, s.createElement(O.Xa, {
-                            padding: 1
-                        }, s.createElement(O.W, null, Object(y.d)("There was an error modifying roles for {user}.", {
-                            user: this.props.message.user.displayName
-                        }, "RolesPageMessageModal"))))
-                    }, n
-                }(s.Component),
-                Ce = function(e) {
+                }(l.Component),
+                j = t("9C/b"),
+                W = (t("vsHg"), function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(n, e), n.prototype.componentDidMount = function() {
-                        this.tryToShowModal()
-                    }, n.prototype.componentDidUpdate = function(e) {
-                        e.message || this.tryToShowModal()
-                    }, n.prototype.render = function() {
-                        return null
-                    }, n.prototype.tryToShowModal = function() {
-                        var e = this.props.message;
-                        e && (e.type === X.ALL_MUTATIONS_FAILED && this.props.showModal(this.props))
-                    }, n
-                }(s.Component);
-            var be, ye = Object(o.compose)(Object(re.connect)(null, function(e) {
-                    return Object(o.bindActionCreators)({
-                        closeModal: ae.c,
-                        showModal: function(e) {
-                            return Object(ae.d)(Ee, e)
-                        }
-                    }, e)
-                }), de, ee, F)(Ce),
-                Se = t("9C/b"),
-                Ne = (t("vsHg"), function(e) {
-                    function n() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return a.__extends(n, e), n.prototype.render = function() {
-                        return s.createElement(O.Xa, {
+                    return r.__extends(n, e), n.prototype.render = function() {
+                        return l.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex,
-                            fullHeight: !0,
                             fullWidth: !0,
                             justifyContent: O.Wa.Center,
-                            position: O.hb.Absolute,
-                            zIndex: O.ec.Above
-                        }, s.createElement(O.i, {
+                            position: O.fb.Absolute,
+                            zIndex: O.cc.Above
+                        }, l.createElement(O.i, {
                             type: O.n.SlideInBottom,
                             duration: O.k.Medium,
                             enabled: !0,
                             timing: O.m.EaseInOut
-                        }, s.createElement(O.Bb, {
+                        }, l.createElement(O.zb, {
                             background: O.r.Base,
                             borderBottom: !0,
                             borderRadius: O.x.Medium,
@@ -2084,118 +913,76 @@
                             elevation: 3,
                             flexDirection: O.Aa.Column,
                             padding: 2
-                        }, s.createElement(O.Xa, {
+                        }, l.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex,
                             justifyContent: O.Wa.Start,
                             margin: {
                                 bottom: 1
                             }
-                        }, s.createElement(O.Xa, {
+                        }, l.createElement(O.Xa, {
                             margin: {
                                 right: .5
                             }
-                        }, s.createElement(O.q, {
+                        }, l.createElement(O.q, {
                             alt: Object(y.d)("VoHiYo", "CenteredBanner"),
                             src: "https://static-cdn.jtvnw.net/emoticons/v1/81274/2.0",
                             size: 30
-                        })), s.createElement(O.W, {
+                        })), l.createElement(O.W, {
                             bold: !0,
-                            type: O.Rb.H5
-                        }, this.props.title)), s.createElement(O.Xa, {
+                            type: O.Pb.H5
+                        }, this.props.title)), l.createElement(O.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, s.createElement(O.W, {
+                        }, l.createElement(O.W, {
                             fontSize: O.Ca.Size5
                         }, this.props.body)), this.props.children)))
                     }, n
-                }(s.Component));
+                }(l.Component));
             ! function(e) {
                 e.ADD_A_ROLE = "no-users-banner-add-a-role", e.LEARN_MORE = "no-users-banner-learn-more"
-            }(be || (be = {}));
-            var Ie = function(e) {
+            }(F || (F = {}));
+            var z = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.handleAddARoleClick = function() {
-                            n.props.setView(r.DEFAULT)
+                            n.props.setView(a.DEFAULT)
                         }, n
                     }
-                    return a.__extends(n, e), n.prototype.render = function() {
-                        return s.createElement(Ne, {
+                    return r.__extends(n, e), n.prototype.render = function() {
+                        return l.createElement(W, {
                             body: Object(y.d)("Manage the permissions users have for your community. Start by adding your first role.", "NoUsersBanner"),
                             title: Object(y.d)("Welcome to Roles", "NoUsersBanner")
-                        }, s.createElement(O.Xa, {
+                        }, l.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex,
                             justifyContent: O.Wa.Start
-                        }, s.createElement(O.Xa, {
+                        }, l.createElement(O.Xa, {
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(O.z, {
-                            "data-test-selector": be.ADD_A_ROLE,
+                        }, l.createElement(O.z, {
+                            "data-test-selector": F.ADD_A_ROLE,
                             onClick: this.handleAddARoleClick
-                        }, Object(y.d)("Add a Role", "NoUsersBanner"))), s.createElement(O.z, {
-                            "data-test-selector": be.LEARN_MORE,
-                            linkTo: $,
+                        }, Object(y.d)("Add a Role", "NoUsersBanner"))), l.createElement(O.z, {
+                            "data-test-selector": F.LEARN_MORE,
+                            linkTo: B,
                             type: O.F.Text
                         }, Object(y.d)("Learn More", "NoUsersBanner"))))
                     }, n
-                }(s.Component),
-                De = Object(o.compose)(k, Se.a)(Ie),
-                _e = function(e) {
-                    var n;
-                    if (e.selected) switch (e.sortDirection) {
-                        case Pe.ASCENDING:
-                            n = s.createElement(O.qb, {
-                                asset: O.rb.GlyphArrUp,
-                                width: 10
-                            });
-                            break;
-                        case Pe.DESCENDING:
-                            n = s.createElement(O.qb, {
-                                asset: O.rb.GlyphArrDown,
-                                width: 10
-                            });
-                            break;
-                        default:
-                            n = s.createElement(O.qb, {
-                                asset: O.rb.GlyphArrUpDown,
-                                width: 10
-                            })
-                    } else n = s.createElement(O.qb, {
-                        asset: O.rb.GlyphArrUpDown,
-                        width: 10
-                    });
-                    return s.createElement(O.z, {
-                        type: O.F.Text,
-                        onClick: e.onClick
-                    }, s.createElement(O.Bb, {
-                        display: O.X.Flex,
-                        alignContent: O.e.Center
-                    }, s.createElement(O.W, {
-                        type: O.Rb.Span,
-                        bold: !0,
-                        color: e.selected ? O.O.Alt : O.O.Link
-                    }, e.children), s.createElement(O.Xa, {
-                        display: O.X.Flex,
-                        alignItems: O.f.Center,
-                        margin: {
-                            left: .5
-                        }
-                    }, n)))
-                },
-                Oe = t("u5aL"),
-                Ue = function(e) {
+                }(l.Component),
+                q = Object(s.compose)(v, j.a)(z),
+                G = t("u5aL"),
+                $ = function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(n, e), n.prototype.render = function() {
+                    return r.__extends(n, e), n.prototype.render = function() {
                         var e = this.props,
                             n = e.src,
                             t = e.title;
-                        return s.createElement(O.Bb, {
+                        return l.createElement(O.zb, {
                             alignItems: O.f.Center,
                             background: O.r.Alt,
                             borderRadius: O.x.Medium,
@@ -2204,27 +991,27 @@
                             margin: {
                                 x: 1
                             }
-                        }, n && s.createElement(O.Xa, {
+                        }, n && l.createElement(O.Xa, {
                             margin: {
                                 right: .5
                             }
-                        }, s.createElement(O.S, {
+                        }, l.createElement(O.S, {
                             alt: t,
                             src: n
-                        })), s.createElement(O.Xa, {
+                        })), l.createElement(O.Xa, {
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(O.W, {
+                        }, l.createElement(O.W, {
                             bold: !0
-                        }, t)), s.createElement(O.A, {
-                            icon: O.rb.NotificationError,
+                        }, t)), l.createElement(O.A, {
+                            icon: O.pb.NotificationError,
                             onClick: this.props.onRolePillDismissed,
                             size: O.B.Small
                         }))
                     }, n
-                }(s.Component),
-                Ae = (t("eqbG"), function(e) {
+                }(l.Component),
+                Q = (t("eqbG"), function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.handleCheckBoxChange = function(e) {
@@ -2232,113 +1019,115 @@
                             n.props.onCheckBoxChange(((t = {})[n.props.value] = e.currentTarget.checked, t))
                         }, n
                     }
-                    return a.__extends(n, e), n.prototype.render = function() {
+                    return r.__extends(n, e), n.prototype.render = function() {
                         var e = this.props,
                             n = e.disabled,
                             t = e.label,
                             i = e.src;
-                        return s.createElement(O.Xa, {
+                        return l.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex,
                             justifyContent: O.Wa.Between,
                             margin: this.props.margin
-                        }, s.createElement(O.N, {
+                        }, l.createElement(O.N, {
                             checked: this.props.checked,
                             disabled: n,
                             label: t,
                             onChange: this.handleCheckBoxChange,
                             value: this.props.value
-                        }), i && s.createElement(O.S, {
+                        }), i && l.createElement(O.S, {
                             alt: t,
                             className: n ? "disabled-role-selector-icon" : "",
                             src: i
                         }))
                     }, n
-                }(s.Component));
+                }(l.Component));
 
-            function Me() {
+            function H() {
                 return Object(y.d)("Editor", "FilterUsersComponent")
             }
 
-            function Te() {
+            function Y() {
                 return Object(y.d)("Moderator", "FilterUsersComponent")
             }
 
-            function Fe() {
+            function K() {
                 return Object(y.d)("VIP", "FilterUsersComponent")
             }
-            var Re, Le, Pe, we = B(function(e) {
+            var J = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.handleLearnAboutRolesClick = function() {}, n
                     }
-                    return a.__extends(n, e), n.prototype.render = function() {
+                    return r.__extends(n, e), n.prototype.render = function() {
                         var e = this.props,
                             n = e.isEditor,
                             t = e.isMod,
                             i = e.isVIP,
-                            r = e.onCheckBoxChange;
-                        return s.createElement(O.Xa, {
-                            position: O.hb.Relative
-                        }, s.createElement(O.u, {
+                            a = e.onCheckBoxChange,
+                            r = Y(),
+                            s = K();
+                        return l.createElement(O.Xa, {
+                            position: O.fb.Relative
+                        }, l.createElement(O.u, {
                             offsetY: "-0.5px",
                             noTail: !0,
                             show: this.props.show
-                        }, s.createElement(O.Bb, {
+                        }, l.createElement(O.zb, {
                             border: !0,
                             borderRadius: O.x.Small,
                             elevation: 2
-                        }, s.createElement(Ae, {
+                        }, l.createElement(Q, {
                             checked: t,
                             disabled: i,
-                            label: Te(),
-                            onCheckBoxChange: r,
+                            label: r,
+                            onCheckBoxChange: a,
                             margin: {
                                 x: 1,
                                 y: 2
                             },
-                            src: z,
+                            src: M,
                             value: C.IS_MOD
-                        }), this.props.isVIPUnlocked && s.createElement(Ae, {
+                        }), l.createElement(Q, {
                             checked: i,
-                            disabled: t || this.props.isAtMaxVIPUserLimit && !i,
-                            label: Fe(),
-                            onCheckBoxChange: r,
+                            disabled: t,
+                            label: s,
+                            onCheckBoxChange: a,
                             margin: {
                                 x: 1,
                                 bottom: 2
                             },
-                            src: Q,
+                            src: P,
                             value: C.IS_VIP
-                        }), s.createElement(Ae, {
+                        }), l.createElement(Q, {
                             checked: n,
                             disabled: !1,
-                            label: Me(),
-                            onCheckBoxChange: r,
+                            label: H(),
+                            onCheckBoxChange: a,
                             margin: {
                                 x: 1,
                                 bottom: 2
                             },
                             value: C.IS_EDITOR
-                        }), s.createElement(O.Ua, {
+                        }), l.createElement(O.Ua, {
                             onClick: this.handleLearnAboutRolesClick
-                        }, s.createElement(O.Bb, {
+                        }, l.createElement(O.zb, {
                             alignItems: O.f.Center,
                             borderTop: !0,
                             display: O.X.Flex,
                             padding: 1
-                        }, s.createElement(O.Xa, {
+                        }, l.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex,
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(O.qb, {
-                            asset: O.rb.NotificationInfo
-                        })), s.createElement(O.W, null, Object(y.e)("Learn about Roles", "RoleSelector")))))))
+                        }, l.createElement(O.ob, {
+                            asset: O.pb.NotificationInfo
+                        })), l.createElement(O.W, null, Object(y.e)("Learn about Roles", "RoleSelector")))))))
                     }, n
-                }(s.Component)),
-                Ve = B(function(e) {
+                }(l.Component),
+                Z = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
@@ -2358,259 +1147,75 @@
                             })
                         }, n
                     }
-                    return a.__extends(n, e), n.prototype.render = function() {
+                    return r.__extends(n, e), n.prototype.render = function() {
                         var e = this.props,
                             n = e.onRolePillDismissed,
                             t = e.user,
                             i = this.state.isBalloonOpen,
-                            r = Me(),
-                            a = Te(),
-                            o = Fe(),
-                            l = t.isEditor,
+                            a = H(),
+                            r = Y(),
+                            s = K(),
+                            o = t.isEditor,
                             d = t.isMod,
                             c = t.isVIP;
-                        return s.createElement(O.Xa, {
+                        return l.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex
-                        }, s.createElement(Oe.a, {
+                        }, l.createElement(G.a, {
                             onClickOut: this.handleClickOut
-                        }, !i && s.createElement(O.A, {
+                        }, !i && l.createElement(O.A, {
                             onClick: this.handleAddRoleClick,
-                            icon: O.rb.Plus,
+                            icon: O.pb.Plus,
                             size: O.B.Small
-                        }), i && s.createElement(s.Fragment, null, s.createElement(O.z, {
-                            icon: O.rb.Plus,
+                        }), i && l.createElement(l.Fragment, null, l.createElement(O.z, {
+                            icon: O.pb.Plus,
                             onClick: this.handleAddRoleClick,
                             size: O.D.Small,
                             type: i ? O.F.Hollow : O.F.Text
-                        }, s.createElement(O.W, null, Object(y.d)("Add Role", "RoleSelector"))), s.createElement(we, {
-                            isEditor: l,
+                        }, l.createElement(O.W, null, Object(y.d)("Add Role", "RoleSelector"))), l.createElement(J, {
+                            isEditor: o,
                             isMod: d,
                             isVIP: c,
                             onCheckBoxChange: this.props.onCheckBoxChange,
                             show: i
-                        }))), l && s.createElement(Ue, {
+                        }))), o && l.createElement($, {
                             onRolePillDismissed: n.bind(null, C.IS_EDITOR),
-                            title: r
-                        }), d && s.createElement(Ue, {
-                            onRolePillDismissed: n.bind(null, C.IS_MOD),
-                            src: z,
                             title: a
-                        }), this.props.isVIPUnlocked && c && s.createElement(Ue, {
+                        }), d && l.createElement($, {
+                            onRolePillDismissed: n.bind(null, C.IS_MOD),
+                            src: M,
+                            title: r
+                        }), c && l.createElement($, {
                             onRolePillDismissed: n.bind(null, C.IS_VIP),
-                            src: Q,
-                            title: o
+                            src: P,
+                            title: s
                         }))
                     }, n
-                }(s.Component)),
-                xe = function(e) {
+                }(l.Component),
+                ee = function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(n, e), n.prototype.render = function() {
-                        return s.createElement(O.Bb, {
+                    return r.__extends(n, e), n.prototype.render = function() {
+                        return l.createElement(O.zb, {
                             alignItems: O.f.Center,
                             background: O.r.Base,
                             borderBottom: !0,
                             borderRadius: O.x.Large,
                             display: O.X.Flex,
-                            elevation: 1,
                             fullWidth: !0,
-                            margin: this.props.margin,
                             padding: 1
                         }, this.props.children)
                     }, n
-                }(s.Component),
-                Be = function(e) {
-                    function n() {
-                        var n = null !== e && e.apply(this, arguments) || this;
-                        return n.handleCheckBoxChange = function() {}, n.handleClickOut = function() {}, n.handleRolePillDismissed = function() {}, n
-                    }
-                    return a.__extends(n, e), n.prototype.render = function() {
-                        var e = this.props,
-                            n = e.user,
-                            t = e.user,
-                            i = t.channelLogin,
-                            r = t.displayName;
-                        return s.createElement(xe, {
-                            margin: {
-                                top: .5
-                            }
-                        }, s.createElement(O.P, {
-                            cols: Re.FIRST_COLUMN
-                        }, s.createElement(O.Xa, {
-                            display: O.X.Flex,
-                            alignItems: O.f.Center
-                        }, s.createElement(O.U, {
-                            to: "/" + i,
-                            targetBlank: !0
-                        }, s.createElement(O.q, {
-                            src: n.profileImageURL,
-                            alt: i,
-                            size: 30
-                        })), s.createElement(O.U, {
-                            to: "/" + i,
-                            targetBlank: !0
-                        }, s.createElement(O.Xa, {
-                            margin: {
-                                left: 1
-                            },
-                            display: O.X.Flex,
-                            alignItems: O.f.Center
-                        }, s.createElement(O.W, {
-                            bold: !0,
-                            color: O.O.Base,
-                            type: O.Rb.P,
-                            ellipsis: !0
-                        }, i), i.toLowerCase() !== r.toLowerCase() && s.createElement(O.Xa, {
-                            margin: {
-                                left: 1
-                            }
-                        }, s.createElement(O.W, {
-                            bold: !0,
-                            color: O.O.Base,
-                            ellipsis: !0,
-                            type: O.Rb.P
-                        }, r)))))), s.createElement(O.P, {
-                            cols: Re.SECOND_COLUMN
-                        }, s.createElement(O.Xa, {
-                            display: O.X.Flex,
-                            margin: {
-                                right: 5
-                            },
-                            flexGrow: 1,
-                            alignItems: O.f.Center
-                        }, s.createElement(Ve, {
-                            user: n,
-                            onCheckBoxChange: this.handleCheckBoxChange,
-                            onDropDownClickOut: this.handleClickOut,
-                            onRolePillDismissed: this.handleRolePillDismissed
-                        }))), s.createElement(O.P, {
-                            cols: Re.THIRD_COLUMN
-                        }, s.createElement(O.Xa, {
-                            display: O.X.Flex,
-                            alignItems: O.f.Center,
-                            flexDirection: O.Aa.RowReverse
-                        }, s.createElement(O.P, {
-                            cols: 6
-                        }, s.createElement(O.W, null, Object(y.c)(n.lastModified))))))
-                    }, n
-                }(s.Component),
-                je = function(e) {
-                    function n() {
-                        var n = null !== e && e.apply(this, arguments) || this;
-                        return n.sortByUsername = function() {
-                            return Object.keys(n.props.userCache).sort(function(e, t) {
-                                return n.props.sortDirection === Pe.ASCENDING && n.props.userCache[e].channelLogin > n.props.userCache[t].channelLogin ? 1 : n.props.sortDirection === Pe.DESCENDING && n.props.userCache[e].channelLogin < n.props.userCache[t].channelLogin ? 1 : 0
-                            })
-                        }, n.sortByLastModified = function() {
-                            return Object.keys(n.props.userCache).sort(function(e, t) {
-                                return n.props.sortDirection === Pe.ASCENDING && n.props.userCache[e].lastModified < n.props.userCache[t].lastModified ? 1 : n.props.sortDirection === Pe.DESCENDING && n.props.userCache[e].lastModified > n.props.userCache[t].lastModified ? 1 : 0
-                            })
-                        }, n
-                    }
-                    return a.__extends(n, e), n.prototype.render = function() {
-                        var e = this,
-                            n = [];
-                        return this.props.sortBy === Le.USERNAME && (n = this.sortByUsername()), this.props.sortBy === Le.LAST_MODIFIED && (n = this.sortByLastModified()), this.props.filterType === E.ALL_ROLES ? s.createElement(s.Fragment, null, n.map(function(n) {
-                            return s.createElement(Be, {
-                                "data-test-selector": "roles-table-row-" + n,
-                                key: "roles-table-row-" + n,
-                                user: e.props.userCache[n]
-                            })
-                        })) : s.createElement(s.Fragment, null, n.reduce(function(n, t) {
-                            var i = e.props.userCache[t];
-                            return i && (e.props.filterType === E.EDITOR && i[C.IS_EDITOR] || e.props.filterType === E.MODERATOR && i[C.IS_MOD] || e.props.filterType === E.VIP && i[C.IS_VIP]) && n.push(s.createElement(Be, {
-                                "data-test-selector": "roles-table-row-" + t,
-                                key: "roles-table-row-" + t,
-                                user: i
-                            })), n
-                        }, []))
-                    }, n
-                }(s.Component);
-            ! function(e) {
-                e[e.FIRST_COLUMN = 3] = "FIRST_COLUMN", e[e.SECOND_COLUMN = 5] = "SECOND_COLUMN", e[e.THIRD_COLUMN = 4] = "THIRD_COLUMN"
-            }(Re || (Re = {})),
-            function(e) {
-                e.USERNAME = "username", e.LAST_MODIFIED = "last-modified"
-            }(Le || (Le = {})),
-            function(e) {
-                e.ASCENDING = "ascending", e.DESCENDING = "descending"
-            }(Pe || (Pe = {}));
-            var Xe, Ge = function(e) {
-                    function n() {
-                        var n = null !== e && e.apply(this, arguments) || this;
-                        return n.state = {
-                            sortBy: Le.USERNAME,
-                            sortDirection: Pe.ASCENDING
-                        }, n.handleUsernameHeaderClick = function() {
-                            n.changeSort(Le.USERNAME)
-                        }, n.handleLastModifiedHeaderClick = function() {
-                            n.changeSort(Le.LAST_MODIFIED)
-                        }, n.changeSort = function(e) {
-                            var t;
-                            t = n.state.sortDirection && n.state.sortBy === e && n.state.sortDirection !== Pe.DESCENDING ? Pe.DESCENDING : Pe.ASCENDING, n.setState({
-                                sortBy: e,
-                                sortDirection: t
-                            })
-                        }, n
-                    }
-                    return a.__extends(n, e), n.prototype.render = function() {
-                        var e = this.state.sortBy,
-                            n = this.state.sortDirection;
-                        return s.createElement(O.Xa, {
-                            fullWidth: !0,
-                            fullHeight: !0,
-                            margin: {
-                                top: 2
-                            }
-                        }, s.createElement(O.Xa, {
-                            display: O.X.Flex,
-                            alignItems: O.f.Center,
-                            padding: {
-                                x: 1,
-                                bottom: 1
-                            }
-                        }, s.createElement(O.P, {
-                            cols: Re.FIRST_COLUMN
-                        }, s.createElement(_e, {
-                            selected: e === Le.USERNAME,
-                            sortDirection: n,
-                            onClick: this.handleUsernameHeaderClick
-                        }, Object(y.d)("Username", "RolesPageTable"))), s.createElement(O.P, {
-                            cols: Re.SECOND_COLUMN
-                        }, s.createElement(O.W, {
-                            type: O.Rb.Span,
-                            bold: !0,
-                            color: O.O.Link
-                        }, " ", Object(y.d)("Roles", "RolesPageTable"), " ")), s.createElement(O.P, {
-                            cols: Re.THIRD_COLUMN
-                        }, s.createElement(O.Xa, {
-                            display: O.X.Flex,
-                            flexDirection: O.Aa.RowReverse
-                        }, s.createElement(O.P, {
-                            cols: 6
-                        }, s.createElement(_e, {
-                            selected: e === Le.LAST_MODIFIED,
-                            sortDirection: n,
-                            onClick: this.handleLastModifiedHeaderClick
-                        }, Object(y.d)("Last Modified", "RolesPageTable")))))), s.createElement(je, {
-                            filterType: this.props.filterType,
-                            userCache: this.props.userCache,
-                            sortBy: e,
-                            sortDirection: n
-                        }))
-                    }, n
-                }(s.Component),
-                We = Object(o.compose)(F)(Ge),
-                qe = t("f00E"),
-                He = t("H/lO"),
-                $e = t("NZDK"),
-                ze = t("8/mp"),
-                Qe = t("8Ad5"),
-                Ye = (t("sZ5a"), "data-component-type"),
-                Ke = "roles-page-search-user-option",
-                Je = function(e) {
+                }(l.Component),
+                ne = t("f00E"),
+                te = t("H/lO"),
+                ie = t("NZDK"),
+                ae = t("8/mp"),
+                re = t("8Ad5"),
+                le = (t("sZ5a"), "data-component-type"),
+                se = "roles-page-search-user-option",
+                oe = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
@@ -2618,7 +1223,7 @@
                             hovered: !1
                         }, n.handleKeyDown = function(e) {
                             var t = e.keyCode;
-                            t !== Qe.a.Space && t !== Qe.a.Enter || n.handleClick()
+                            t !== re.a.Space && t !== re.a.Enter || n.handleClick()
                         }, n.handleClick = function() {
                             n.props.onClick(n.props.user)
                         }, n.handleBlur = function(e) {
@@ -2641,9 +1246,9 @@
                             })
                         }, n
                     }
-                    return a.__extends(n, e), n.prototype.render = function() {
+                    return r.__extends(n, e), n.prototype.render = function() {
                         var e, n, t = this.props.user;
-                        return s.createElement("div", a.__assign({
+                        return l.createElement("div", r.__assign({
                             className: "roles-page-search-user-option",
                             onBlur: this.handleBlur,
                             onFocus: this.handleFocus,
@@ -2651,13 +1256,13 @@
                             onMouseOut: this.handleMouseOut,
                             onKeyDown: this.handleKeyDown,
                             tabIndex: 0
-                        }, ((e = {})[Ye] = [Ke], e)), s.createElement(O.Ua, a.__assign({
+                        }, ((e = {})[le] = [se], e)), l.createElement(O.Ua, r.__assign({
                             hover: this.state.hovered,
                             onClick: this.handleClick,
                             selected: this.state.focused,
                             tabIndex: -1,
                             type: O.Va.Base
-                        }, ((n = {})[Ye] = [Ke], n)), s.createElement(O.Xa, {
+                        }, ((n = {})[le] = [se], n)), l.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex,
                             justifyContent: O.Wa.Start,
@@ -2665,41 +1270,41 @@
                                 x: 1,
                                 y: .5
                             }
-                        }, s.createElement(O.Xa, {
+                        }, l.createElement(O.Xa, {
                             margin: {
                                 right: .5
                             }
-                        }, s.createElement(O.q, {
+                        }, l.createElement(O.q, {
                             alt: Object(y.d)("Avatar", "SearchUsersOption"),
                             src: t.profile_image,
                             size: 30
                         })), t.name)))
                     }, n
-                }(s.Component),
-                Ze = function(e) {
+                }(l.Component),
+                de = function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(n, e), n.prototype.render = function() {
+                    return r.__extends(n, e), n.prototype.render = function() {
                         var e = this,
                             n = this.props.users;
-                        return s.createElement(O.u, {
+                        return l.createElement(O.u, {
                             noTail: !0,
                             offsetY: "-0.5px",
                             show: !!n && this.props.show
-                        }, s.createElement(ze.b, null, s.createElement(O.Xa, {
+                        }, l.createElement(ae.b, null, l.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex,
                             flexDirection: O.Aa.Column,
                             justifyContent: O.Wa.Center
                         }, n && n.length > 0 ? n.map(function(n, t) {
-                            return s.createElement(Je, {
+                            return l.createElement(oe, {
                                 key: t,
                                 onBlur: e.props.onOptionBlur,
                                 onClick: e.props.onOptionClick,
                                 user: n
                             })
-                        }) : s.createElement(O.Xa, {
+                        }) : l.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex,
                             flexDirection: O.Aa.Column,
@@ -2708,21 +1313,20 @@
                                 x: 1,
                                 y: 5
                             }
-                        }, s.createElement(O.qb, {
-                            asset: O.rb.SearchNoResults
-                        }), s.createElement(O.W, null, Object(y.d)("No users found", "SearchUsersDropdown"))))))
+                        }, l.createElement(O.ob, {
+                            asset: O.pb.SearchNoResults
+                        }), l.createElement(O.W, null, Object(y.d)("No users found", "SearchUsersDropdown"))))))
                     }, n
-                }(s.Component),
-                en = t("gD7V"),
-                nn = 250,
-                tn = function(e) {
+                }(l.Component),
+                ce = t("gD7V"),
+                ue = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
-                            canEditInputField: !0,
-                            searchedUsers: null,
-                            showDropDown: !1
-                        }, n.searchClient = new $e.a({
+                            defaultSelectedUserName: "",
+                            showDropdown: !1,
+                            searchedUsers: null
+                        }, n.searchClient = new ie.a({
                             appId: y.a.algoliaApplicationID,
                             apiKey: y.a.algoliaAPIKey,
                             apolloClient: y.p.apollo.client,
@@ -2732,129 +1336,101 @@
                         }), n.filterUsersResults = function(e) {
                             var t = n.props.data.user,
                                 i = t && t.id,
-                                r = n.props.userCache;
+                                a = n.props.userCache;
                             return e.hits.filter(function(e) {
                                 var n = e.objectID;
-                                return n && n !== i && !r[n]
+                                return n && n !== i && !a[n]
                             })
-                        }, n.handleInputChange = function(e) {
+                        }, n.handleChange = function(e) {
                             var t = e.currentTarget.value;
-                            return a.__awaiter(n, void 0, void 0, function() {
-                                return a.__generator(this, function(e) {
-                                    return this.algoliaDebounceTimeout && clearTimeout(this.algoliaDebounceTimeout), this.algoliaDebounceTimeout = setTimeout(this.queryAlgolia.bind(this, t), nn), [2]
-                                })
-                            })
-                        }, n.queryAlgolia = function(e) {
-                            return a.__awaiter(n, void 0, void 0, function() {
-                                var n;
-                                return a.__generator(this, function(t) {
-                                    switch (t.label) {
+                            return r.__awaiter(n, void 0, void 0, function() {
+                                var e;
+                                return r.__generator(this, function(n) {
+                                    switch (n.label) {
                                         case 0:
-                                            return e ? [4, this.searchClient.queryForType(He.a.Users, e, Object(qe.a)(), {
+                                            return t ? [4, this.searchClient.queryForType(te.a.Users, t, Object(ne.a)(), {
                                                 hitsPerPage: 10
                                             })] : [3, 2];
                                         case 1:
-                                            return (n = t.sent()) && n.users && this.setState({
-                                                searchedUsers: this.filterUsersResults(n.users)
-                                            }, this.deselectUser), [3, 3];
+                                            return (e = n.sent()) && e.users && this.setState({
+                                                searchedUsers: this.filterUsersResults(e.users)
+                                            }), [3, 3];
                                         case 2:
                                             this.setState({
                                                 searchedUsers: null
-                                            }, this.deselectUser), t.label = 3;
+                                            }), n.label = 3;
                                         case 3:
                                             return [2]
                                     }
                                 })
                             })
-                        }, n.handleInputFocus = function() {
+                        }, n.handleBlur = function(e) {
                             n.setState({
-                                showDropDown: !0
+                                showDropdown: e && e.getAttribute(le) === se
                             })
                         }, n.handleInputBlur = function(e) {
                             e.persist(), n.handleBlur(e.relatedTarget)
                         }, n.handleOptionBlur = function(e) {
                             n.handleBlur(e)
-                        }, n.handleOptionClick = function(e) {
+                        }, n.handleFocus = function() {
                             n.setState({
-                                canEditInputField: !1,
-                                showDropDown: !1
-                            }, function() {
-                                n.props.onUserSelected(e)
-                            })
-                        }, n.handleBlur = function(e) {
-                            n.setState({
-                                showDropDown: e && e.getAttribute(Ye) === Ke
+                                showDropdown: !0
                             })
                         }, n.handleClickOut = function() {
                             n.setState({
-                                canEditInputField: !1,
-                                showDropDown: !1
+                                showDropdown: !1
                             })
-                        }, n.enableInputField = function() {
+                        }, n.handleUserDeselected = function() {
                             n.setState({
-                                canEditInputField: !0
-                            })
-                        }, n.deselectUser = function() {
-                            n.props.selectedUser && n.props.onUserDeselected()
+                                defaultSelectedUserName: n.props.selectedUser.displayName
+                            }, n.props.onUserDeselected)
                         }, n
                     }
-                    return a.__extends(n, e), n.prototype.render = function() {
+                    return r.__extends(n, e), n.prototype.render = function() {
                         if (this.props.data.loading) return null;
                         var e = this.props.selectedUser,
-                            n = e && e.channelLogin || "",
-                            t = e && e.displayName || "",
-                            i = this.state.canEditInputField,
-                            r = s.createElement(O.Xa, {
+                            n = l.createElement(O.Xa, {
                                 margin: {
                                     right: e ? 1 : .5
                                 }
-                            }, s.createElement(O.q, {
+                            }, l.createElement(O.q, {
                                 alt: Object(y.d)("Avatar", "SearchUsers"),
                                 size: 30,
                                 src: e && e.profileImageURL
                             }));
-                        return s.createElement(O.Xa, null, !i && e && s.createElement(O.Ua, {
-                            onClick: this.enableInputField,
+                        return l.createElement(O.Xa, null, e && l.createElement(O.Ua, {
+                            onClick: this.handleUserDeselected,
                             type: O.Va.Overlay
-                        }, s.createElement(O.Xa, {
+                        }, l.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex
-                        }, r, s.createElement(O.W, {
+                        }, n, l.createElement(O.W, {
                             bold: !0,
-                            type: O.Rb.P,
-                            ellipsis: !0
-                        }, n), n.toLowerCase() !== t.toLowerCase() && s.createElement(O.Xa, {
-                            margin: {
-                                left: 1
-                            }
-                        }, s.createElement(O.W, {
-                            bold: !0,
-                            type: O.Rb.P,
-                            ellipsis: !0
-                        }, t)))), (i || !e) && s.createElement(Oe.a, {
+                            type: O.Pb.P
+                        }, e.displayName))), !e && l.createElement(G.a, {
                             onClickOut: this.handleClickOut
-                        }, s.createElement(O.Xa, {
+                        }, l.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex
-                        }, r, s.createElement(O.Xa, {
-                            position: O.hb.Relative
-                        }, s.createElement(O.Ra, {
+                        }, n, l.createElement(O.Xa, {
+                            position: O.fb.Relative
+                        }, l.createElement(O.Ra, {
                             autoFocus: !0,
-                            defaultValue: t,
+                            defaultValue: this.state.defaultSelectedUserName,
                             onBlur: this.handleInputBlur,
-                            onChange: this.handleInputChange,
-                            onFocus: this.handleInputFocus,
+                            onChange: this.handleChange,
+                            onFocus: this.handleFocus,
                             placeholder: Object(y.d)("Search", "SearchUsers"),
                             type: O.Ta.Text
-                        }), s.createElement(Ze, {
-                            onOptionClick: this.handleOptionClick,
+                        }), l.createElement(de, {
+                            onOptionClick: this.props.onUserSelected,
                             onOptionBlur: this.handleOptionBlur,
-                            show: this.state.showDropDown,
+                            show: this.state.showDropdown,
                             users: this.state.searchedUsers
                         })))))
                     }, n
-                }(s.Component),
-                rn = Object(o.compose)(F, Se.a, Object(l.a)(en, {
+                }(l.Component),
+                me = Object(s.compose)(U, j.a, Object(N.a)(ce, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2862,11 +1438,8 @@
                             }
                         }
                     }
-                }))(tn);
-            ! function(e) {
-                e.CANCEL_BUTTON = "roles-page-add-user-cancel-button", e.SAVE_BUTTON = "roles-page-add-user-save-button"
-            }(Xe || (Xe = {}));
-            var an, sn = function(e) {
+                }))(ue),
+                pe = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
@@ -2875,14 +1448,14 @@
                             n.setState(function(n) {
                                 var t = n.selectedUser;
                                 return t ? {
-                                    selectedUser: a.__assign({}, t, e)
+                                    selectedUser: r.__assign({}, t, e)
                                 } : null
                             })
                         }, n.handleRolePillDismissed = function(e) {
                             n.setState(function(n) {
                                 var t, i = n.selectedUser;
                                 return i ? {
-                                    selectedUser: a.__assign({}, i, (t = {}, t[e] = !1, t))
+                                    selectedUser: r.__assign({}, i, (t = {}, t[e] = !1, t))
                                 } : null
                             })
                         }, n.handleUserSelected = function(e) {
@@ -2890,7 +1463,6 @@
                                 selectedUser: {
                                     displayName: e.name,
                                     channelLogin: e.login,
-                                    id: e.objectID,
                                     profileImageURL: e.profile_image || "",
                                     lastModified: new Date,
                                     isEditor: !1,
@@ -2902,176 +1474,48 @@
                             n.setState({
                                 selectedUser: null
                             })
-                        }, n.handleCancelClick = function() {
-                            n.props.setView(r.DEFAULT)
-                        }, n.handleSaveClick = function() {
-                            return a.__awaiter(n, void 0, void 0, function() {
-                                var e, n, t, i, s, o, l = this;
-                                return a.__generator(this, function(d) {
-                                    switch (d.label) {
-                                        case 0:
-                                            return e = this.state.selectedUser, [4, this.props.mutateUser(e)];
-                                        case 1:
-                                            return n = d.sent(), this.props.setView(r.DEFAULT), n === te.FATAL ? (this.props.setMessage({
-                                                user: e,
-                                                error: n,
-                                                type: X.ALL_MUTATIONS_FAILED
-                                            }), [2]) : (t = n.editorError, i = n.modError, s = n.vipError, t || i || s ? (o = a.__assign({
-                                                channelLogin: e.channelLogin,
-                                                displayName: e.displayName,
-                                                lastModified: e.lastModified,
-                                                id: e.id,
-                                                profileImageURL: e.profileImageURL
-                                            }, t ? {} : {
-                                                isEditor: e.isEditor
-                                            }, i ? {} : {
-                                                isMod: e.isMod
-                                            }, s ? {} : {
-                                                isVIP: e.isVIP
-                                            }), this.props.modifyUserInCache(o, function() {
-                                                l.props.setMessage({
-                                                    user: e,
-                                                    error: n,
-                                                    type: X.SOME_MUTATIONS_FAILED
-                                                })
-                                            }), [2]) : (this.props.modifyUserInCache(e, function() {
-                                                l.props.setMessage({
-                                                    user: e,
-                                                    type: X.ALL_MUTATIONS_SUCCEEDED
-                                                })
-                                            }), [2]))
-                                    }
-                                })
-                            })
                         }, n
                     }
-                    return a.__extends(n, e), n.prototype.render = function() {
+                    return r.__extends(n, e), n.prototype.render = function() {
                         var e = this.state.selectedUser;
-                        return s.createElement(O.Xa, {
-                            fullWidth: !0,
-                            position: O.hb.Relative,
-                            zIndex: O.ec.Above
-                        }, s.createElement(O.i, {
+                        return l.createElement(O.Ja, null, l.createElement(O.Xa, {
+                            fullWidth: !0
+                        }, l.createElement(O.i, {
                             duration: O.k.Medium,
                             enabled: !0,
                             type: O.n.SlideInBottom
-                        }, s.createElement(xe, null, s.createElement(O.P, {
-                            cols: Re.FIRST_COLUMN
-                        }, s.createElement(rn, {
+                        }, l.createElement(ee, null, l.createElement(O.P, {
+                            cols: 3
+                        }, l.createElement(me, {
                             onUserDeselected: this.handleUserDeselected,
                             onUserSelected: this.handleUserSelected,
                             selectedUser: e
-                        })), s.createElement(O.P, {
-                            cols: Re.SECOND_COLUMN
-                        }, e && s.createElement(Ve, {
+                        })), l.createElement(O.P, {
+                            cols: 7
+                        }, e && l.createElement(Z, {
                             onCheckBoxChange: this.handleCheckBoxChange,
                             onRolePillDismissed: this.handleRolePillDismissed,
                             user: e
-                        })), s.createElement(O.P, {
-                            cols: Re.THIRD_COLUMN
-                        }, s.createElement(O.Xa, {
+                        })), l.createElement(O.P, {
+                            cols: 2
+                        }, l.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex,
                             justifyContent: O.Wa.End
-                        }, s.createElement(O.Xa, {
+                        }, l.createElement(O.Xa, {
                             margin: {
-                                right: 1
+                                right: .5
                             }
-                        }, s.createElement(O.z, {
-                            "data-test-selector": Xe.CANCEL_BUTTON,
-                            onClick: this.handleCancelClick,
+                        }, l.createElement(O.z, {
+                            onClick: this.props.onCancel,
                             type: O.F.Hollow
-                        }, Object(y.d)("Cancel", "AddUserComponent"))), s.createElement(O.z, {
-                            "data-test-selector": Xe.SAVE_BUTTON,
-                            disabled: !e || !e.isEditor && !e.isMod && !e.isVIP,
-                            onClick: this.handleSaveClick,
+                        }, Object(y.d)("Cancel", "AddUserComponent"))), l.createElement(O.z, {
+                            onClick: this.props.onSave,
                             type: O.F.Success
-                        }, Object(y.d)("Save", "AddUserComponent")))))))
+                        }, Object(y.d)("Save", "AddUserComponent"))))))))
                     }, n
-                }(s.Component),
-                on = Object(o.compose)(F, de, ee, k)(sn);
-            ! function(e) {
-                e.ALL_MUTATIONS_SUCCEEDED = "all-mutations-succeeded", e.SOME_MUTATIONS_FAILED = "some-mutations-failed"
-            }(an || (an = {}));
-            var ln = function(e) {
-                    function n() {
-                        var n = null !== e && e.apply(this, arguments) || this;
-                        return n.state = {
-                            wasVIPWarningMessageDismissed: !1
-                        }, n.handleDismissVIPWarningMessage = function() {
-                            n.props.clearMessage(), n.setState({
-                                wasVIPWarningMessageDismissed: !0
-                            })
-                        }, n
-                    }
-                    return a.__extends(n, e), n.prototype.componentDidMount = function() {
-                        this.tryToShowOrHideVIPWarningMessage()
-                    }, n.prototype.componentDidUpdate = function() {
-                        this.tryToShowOrHideVIPWarningMessage()
-                    }, n.prototype.render = function() {
-                        var e = this.props.message;
-                        return e ? s.createElement(O.Xa, {
-                            fullWidth: !0,
-                            margin: {
-                                bottom: 2
-                            }
-                        }, this.getContent(e)) : null
-                    }, n.prototype.getContent = function(e) {
-                        var n = this.props.clearMessage,
-                            t = Object(y.d)("Close", "RolesPageTopBar");
-                        switch (e.type) {
-                            case X.ALL_MUTATIONS_SUCCEEDED:
-                                return s.createElement(O.Na, {
-                                    closeButtonAriaLabel: t,
-                                    closeButtonOnClick: n,
-                                    "data-test-selector": an.ALL_MUTATIONS_SUCCEEDED,
-                                    description: Object(y.d)("Specified roles added for {user}.", {
-                                        user: e.user.displayName
-                                    }, "RolesPageTopBar"),
-                                    title: Object(y.d)("Success!", "RolesPageTopBar"),
-                                    type: O.Oa.Success
-                                });
-                            case X.SOME_MUTATIONS_FAILED:
-                                return s.createElement(O.Na, {
-                                    closeButtonAriaLabel: t,
-                                    closeButtonOnClick: n,
-                                    "data-test-selector": an.SOME_MUTATIONS_FAILED,
-                                    description: Object(y.d)("Unfortunately, some of the specified roles were unable to be added for {user}.", {
-                                        user: e.user.displayName
-                                    }, "RolesPageTopBar"),
-                                    title: Object(y.d)("Warning!", "RolesPageTopBar"),
-                                    type: O.Oa.Warning
-                                });
-                            case X.MAX_VIPS_REACHED:
-                                return s.createElement(O.Na, {
-                                    closeButtonAriaLabel: t,
-                                    closeButtonOnClick: this.handleDismissVIPWarningMessage,
-                                    description: Object(y.d)("You have reached the maximum amount of VIP roles. <x:link>Read more about Roles.</x:link>", {
-                                        "x:link": function(e) {
-                                            return s.createElement(O.U, {
-                                                linkTo: "TODO"
-                                            }, e)
-                                        }
-                                    }, "RolesPageTopBar"),
-                                    title: Object(y.d)("You can't add any more VIPs.", "RolesPageTopBar"),
-                                    type: O.Oa.Warning
-                                });
-                            default:
-                                return null
-                        }
-                    }, n.prototype.tryToShowOrHideVIPWarningMessage = function() {
-                        var e = this.props,
-                            n = e.isAtMaxVIPUserLimit,
-                            t = e.message;
-                        !n || t || this.state.wasVIPWarningMessageDismissed ? t && t.type === X.MAX_VIPS_REACHED && !n && (this.props.clearMessage(), this.setState({
-                            wasVIPWarningMessageDismissed: !1
-                        })) : this.props.setMessage({
-                            type: X.MAX_VIPS_REACHED
-                        })
-                    }, n
-                }(s.Component),
-                dn = Object(o.compose)(B, ee)(ln),
-                cn = function(e) {
+                }(l.Component),
+                he = U(function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
@@ -3094,504 +1538,136 @@
                             })
                         }, n
                     }
-                    return a.__extends(n, e), n.prototype.render = function() {
+                    return r.__extends(n, e), n.prototype.render = function() {
                         var e = this.props.filterType;
-                        return s.createElement(O.Xa, {
+                        return l.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex
-                        }, s.createElement(O.Xa, {
+                        }, l.createElement(O.Xa, {
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(O.W, null, Object(y.d)("Display", "FilterUsersComponent"))), s.createElement(O.Xa, null, s.createElement(Oe.a, {
+                        }, l.createElement(O.W, null, Object(y.d)("Display", "FilterUsersComponent"))), l.createElement(O.Xa, null, l.createElement(G.a, {
                             onClickOut: this.handleClickOut
-                        }, s.createElement(O.z, {
+                        }, l.createElement(O.z, {
                             onClick: this.handleButtonClick,
                             type: O.F.Text
-                        }, s.createElement(O.Xa, {
+                        }, l.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex
-                        }, s.createElement(O.Xa, {
+                        }, l.createElement(O.Xa, {
                             margin: {
                                 right: .5
                             }
-                        }, s.createElement(O.W, {
+                        }, l.createElement(O.W, {
                             bold: !0
-                        }, this.getFilterText(e))), s.createElement(O.qb, {
-                            asset: O.rb.Carat,
+                        }, this.getFilterText(e))), l.createElement(O.ob, {
+                            asset: O.pb.Carat,
                             height: 16,
                             width: 16
-                        }))), s.createElement(O.Xa, {
-                            position: O.hb.Relative
-                        }, s.createElement(O.Y, {
+                        }))), l.createElement(O.Xa, {
+                            position: O.fb.Relative
+                        }, l.createElement(O.Y, {
                             items: [{
-                                disabled: e === E.ALL_ROLES,
-                                onClick: this.handleOptionClick.bind(this, E.ALL_ROLES),
-                                title: this.getFilterText(E.ALL_ROLES)
+                                disabled: e === k.ALL_ROLES,
+                                onClick: this.handleOptionClick.bind(this, k.ALL_ROLES),
+                                title: this.getFilterText(k.ALL_ROLES)
                             }, {
-                                disabled: e === E.MODERATOR,
+                                disabled: e === k.MODERATOR,
                                 figure: {
-                                    alt: this.getFilterText(E.MODERATOR),
-                                    src: z
+                                    alt: this.getFilterText(k.MODERATOR),
+                                    src: M
                                 },
                                 figureRight: !0,
-                                onClick: this.handleOptionClick.bind(this, E.MODERATOR),
-                                title: this.getFilterText(E.MODERATOR)
-                            }].concat(this.props.isVIPUnlocked ? [{
-                                disabled: e === E.VIP,
+                                onClick: this.handleOptionClick.bind(this, k.MODERATOR),
+                                title: this.getFilterText(k.MODERATOR)
+                            }, {
+                                disabled: e === k.VIP,
                                 figure: {
-                                    alt: this.getFilterText(E.VIP),
-                                    src: Q
+                                    alt: this.getFilterText(k.VIP),
+                                    src: P
                                 },
                                 figureRight: !0,
-                                onClick: this.handleOptionClick.bind(this, E.VIP),
-                                title: this.getFilterText(E.VIP)
-                            }] : []).concat([{
-                                disabled: e === E.EDITOR,
-                                onClick: this.handleOptionClick.bind(this, E.EDITOR),
-                                title: this.getFilterText(E.EDITOR)
-                            }]),
+                                onClick: this.handleOptionClick.bind(this, k.VIP),
+                                title: this.getFilterText(k.VIP)
+                            }, {
+                                disabled: e === k.EDITOR,
+                                onClick: this.handleOptionClick.bind(this, k.EDITOR),
+                                title: this.getFilterText(k.EDITOR)
+                            }],
                             show: this.state.showDropDownMenu
                         })))))
                     }, n.prototype.getFilterText = function(e) {
                         switch (e) {
                             default:
-                                case E.ALL_ROLES:
+                                case k.ALL_ROLES:
                                 return Object(y.d)("All Roles", "FilterUsersComponent");
-                            case E.EDITOR:
-                                    return Me();
-                            case E.MODERATOR:
-                                    return Te();
-                            case E.VIP:
-                                    return Fe()
+                            case k.EDITOR:
+                                    return H();
+                            case k.MODERATOR:
+                                    return Y();
+                            case k.VIP:
+                                    return K()
                         }
                     }, n
-                }(s.Component),
-                un = Object(o.compose)(B, F)(cn),
-                mn = function(e) {
+                }(l.Component)),
+                fe = v(function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
-                        return n.handleButtonClick = function() {
-                            n.props.setView(r.ADD_USER), n.props.clearMessage()
+                        return n.handleAddUserCancel = function() {
+                            n.props.setView(a.DEFAULT)
+                        }, n.handleAddUserSave = function() {}, n.handleButtonClick = function() {
+                            n.props.setView(a.ADD_USER)
                         }, n
                     }
-                    return a.__extends(n, e), n.prototype.render = function() {
-                        var e = this.props.view === r.ADD_USER;
-                        return s.createElement(s.Fragment, null, s.createElement(O.Bb, {
+                    return r.__extends(n, e), n.prototype.render = function() {
+                        var e = this.props.view === a.ADD_USER;
+                        return l.createElement(l.Fragment, null, l.createElement(O.Xa, {
                             alignItems: O.f.Center,
-                            borderBottom: !0,
                             display: O.X.Flex,
                             fullWidth: !0,
-                            justifyContent: O.Wa.Between,
-                            margin: {
-                                bottom: 2
-                            },
-                            padding: {
-                                bottom: 1
-                            }
-                        }, s.createElement(un, null), s.createElement(O.z, {
+                            justifyContent: O.Wa.Between
+                        }, l.createElement(he, null), l.createElement(O.z, {
                             disabled: e,
                             onClick: this.handleButtonClick
-                        }, Object(y.d)("Add New", "TopBar"))), s.createElement(dn, null), e && s.createElement(on, null))
-                    }, n
-                }(s.Component),
-                pn = Object(o.compose)(ee, k)(mn),
-                hn = k(function(e) {
-                    function n() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return a.__extends(n, e), n.prototype.componentDidMount = function() {
-                        y.p.setPageTitle(Object(y.d)("Roles", "RolesPage"))
-                    }, n.prototype.render = function() {
-                        var e = this.props.channelID;
-                        return s.createElement(P, {
-                            channelID: e
-                        }, s.createElement(G, {
-                            channelID: e
-                        }, s.createElement(ie, null, s.createElement(ge, {
-                            channelID: e
-                        }, this.props.view === r.NO_USERS ? s.createElement(De, null) : s.createElement(S.a, null, s.createElement(pn, null), s.createElement(We, null), s.createElement(ye, null)), s.createElement(Y, null)))))
-                    }, n
-                }(s.Component)),
-                vn = t("LQi+"),
-                fn = function(e) {
-                    function n() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return a.__extends(n, e), n.prototype.componentDidMount = function() {
-                        this.reportInteractive()
-                    }, n.prototype.componentDidUpdate = function(e) {
-                        e.data.loading && this.reportInteractive()
-                    }, n.prototype.render = function() {
-                        return s.createElement(b, null, s.createElement(hn, {
-                            channelID: this.props.data.user && this.props.data.user.id
+                        }, Object(y.d)("Add New", "TopBar"))), l.createElement(O.Yb, {
+                            baseFontSize: O.Ca.Size8
+                        }, l.createElement("hr", null)), e && l.createElement(pe, {
+                            onCancel: this.handleAddUserCancel,
+                            onSave: this.handleAddUserSave
                         }))
-                    }, n.prototype.reportInteractive = function() {
-                        this.props.data.loading || this.props.latencyTracking.reportInteractive(1)
                     }, n
-                }(s.Component),
-                kn = Object(o.compose)(Object(m.b)("RolesPage", {
-                    destination: c.a.RolesPage
-                }), Object(d.a)({
-                    location: u.PageviewLocation.DashboardSettingsRolesPage
-                }), Object(l.a)(vn, {
-                    options: function(e) {
-                        return {
-                            variables: {
-                                channelLogin: e.match.params.channelLogin
-                            }
-                        }
+                }(l.Component)),
+                ve = v(function(e) {
+                    function n() {
+                        return null !== e && e.apply(this, arguments) || this
                     }
-                }))(fn);
+                    return r.__extends(n, e), n.prototype.render = function() {
+                        return l.createElement(l.Fragment, null, this.props.view === a.NO_USERS ? l.createElement(q, null) : l.createElement(x.a, null, l.createElement(fe, null)), l.createElement(X, null))
+                    }, n
+                }(l.Component)),
+                ge = function(e) {
+                    function n() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return r.__extends(n, e), n.prototype.componentDidMount = function() {
+                        this.props.latencyTracking.reportInteractive(1)
+                    }, n.prototype.render = function() {
+                        return l.createElement(b, null, l.createElement(w, {
+                            channelLogin: this.props.match.params.channelLogin
+                        }, l.createElement(ve, null)))
+                    }, n
+                }(l.Component),
+                ke = Object(s.compose)(Object(u.b)("RolesPage", {
+                    destination: d.a.RolesPage
+                }), Object(o.a)({
+                    location: c.PageviewLocation.DashboardSettingsRolesPage
+                }))(ge);
             t.d(n, "RolesPage", function() {
-                return kn
+                return ke
             })
         },
-        r6Pb: function(e, n) {
-            var t = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "mutation",
-                    name: {
-                        kind: "Name",
-                        value: "RemoveEditorUser"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "RemoveEditorInput"
-                                }
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "removeEditor"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "input"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "channel"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "targetUser"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "error"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "code"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 136
-                }
-            };
-            t.loc.source = {
-                body: "mutation RemoveEditorUser($input: RemoveEditorInput!){\nremoveEditor(input: $input) {\nchannel {\nid\n}\ntargetUser {\nid\n}\nerror {\ncode\n}\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = t
-        },
-        sMoq: function(e, n) {
-            var t = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "mutation",
-                    name: {
-                        kind: "Name",
-                        value: "VIPUser"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "GrantVIPInput"
-                                }
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "grantVIP"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "input"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "channel"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "grantee"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "login"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "error"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "code"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 122
-                }
-            };
-            t.loc.source = {
-                body: "mutation VIPUser($input: GrantVIPInput!){\ngrantVIP(input: $input) {\nchannel {\nid\n}\ngrantee {\nid\nlogin\n}\nerror {\ncode\n}\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = t
-        },
         sZ5a: function(e, n, t) {},
-        vYsf: function(e, n, t) {
-            "use strict";
-            t.d(n, "a", function() {
-                return a
-            });
-            var i = t("mrSG"),
-                r = t("b6Yk");
-
-            function a(e) {
-                return i.__awaiter(this, void 0, Promise, function() {
-                    var n, t;
-                    return i.__generator(this, function(i) {
-                        switch (i.label) {
-                            case 0:
-                                return [4, r.a.get("/v5/channels/" + e + "/quests")];
-                            case 1:
-                                if (n = i.sent(), t = n.body, 200 !== n.status || !t) throw new Error("failed to fetch quests");
-                                return [2, t.quests]
-                        }
-                    })
-                })
-            }
-        },
-        vsHg: function(e, n, t) {},
-        yzwe: function(e, n, t) {
-            "use strict";
-            t.d(n, "a", function() {
-                return i
-            }), t.d(n, "b", function() {
-                return o
-            });
-            var i, r = t("mrSG"),
-                a = t("yR8l"),
-                s = t("FAYk");
-
-            function o(e) {
-                var n = this;
-                return Object(a.a)(s, {
-                    props: function(t) {
-                        return {
-                            unmodUserMutation: function(i) {
-                                return r.__awaiter(n, void 0, void 0, function() {
-                                    var n;
-                                    return r.__generator(this, function(r) {
-                                        if (n = e(t.ownProps).channelID, t.mutate) return [2, t.mutate({
-                                            variables: {
-                                                input: {
-                                                    channelID: n,
-                                                    targetLogin: i
-                                                }
-                                            }
-                                        }).then(function(e) {
-                                            return e.data
-                                        })];
-                                        throw new Error("unmodUser mutation is not ready")
-                                    })
-                                })
-                            }
-                        }
-                    }
-                })
-            }! function(e) {
-                e.ChannelNotFound = "CHANNEL_NOT_FOUND", e.Forbidden = "FORBIDDEN", e.UserNotFound = "TARGET_NOT_FOUND", e.UserNotMod = "TARGET_NOT_MOD"
-            }(i || (i = {}))
-        }
+        vsHg: function(e, n, t) {}
     }
 ]);

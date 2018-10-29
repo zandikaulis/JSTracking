@@ -119,7 +119,7 @@
                 r = function() {
                     return i.createElement(a.G, null, i.createElement(a.o, {
                         ratio: a.p.Aspect16x9
-                    }, i.createElement(a.gb, null)), i.createElement(a.H, null, i.createElement(a.Xa, {
+                    }, i.createElement(a.eb, null)), i.createElement(a.H, null, i.createElement(a.Xa, {
                         display: a.X.Flex,
                         margin: {
                             bottom: 1
@@ -130,7 +130,7 @@
                             top: 1,
                             right: 1
                         }
-                    }, i.createElement(a.gb, {
+                    }, i.createElement(a.eb, {
                         width: 40,
                         height: 56
                     })), i.createElement(a.Xa, {
@@ -138,11 +138,11 @@
                         margin: {
                             top: 1
                         }
-                    }, i.createElement(a.W, null, i.createElement(a.gb, {
+                    }, i.createElement(a.W, null, i.createElement(a.eb, {
                         width: 150
                     })), i.createElement(a.W, {
                         fontSize: a.Ca.Size7
-                    }, i.createElement(a.gb, {
+                    }, i.createElement(a.eb, {
                         width: 100
                     }))))))
                 }
@@ -1730,12 +1730,12 @@
                     }, t.prototype.renderCheckmark = function(e) {
                         return this.props.broadcastType === e ? r.createElement(u.Xa, {
                             attachRight: !0,
-                            position: u.hb.Absolute,
+                            position: u.fb.Absolute,
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(u.qb, {
-                            asset: u.rb.Check,
+                        }, r.createElement(u.ob, {
+                            asset: u.pb.Check,
                             height: 18,
                             width: 18
                         })) : null
@@ -1748,7 +1748,7 @@
                     }, t.prototype.renderSortSelector = function() {
                         if (this.props.hideSortSelector) return null;
                         var e = this.props.selectedSort && Object(c.b)(this.props.selectedSort) || c.a.Newest,
-                            t = r.createElement(u.xb, {
+                            t = r.createElement(u.vb, {
                                 "data-a-target": "video-sort-select",
                                 "data-test-selector": i.SortSelector,
                                 name: "sort",
@@ -1811,31 +1811,31 @@
                             display: l.X.Flex,
                             flexDirection: l.Aa.Row,
                             padding: .5
-                        }, a.createElement(l.Bb, {
+                        }, a.createElement(l.zb, {
                             className: "preview-card-game-balloon-row__image-wrapper",
                             flexGrow: 0,
                             flexShrink: 0,
                             borderRadius: l.x.Small,
-                            overflow: l.cb.Hidden,
-                            position: l.hb.Relative
+                            overflow: l.ab.Hidden,
+                            position: l.fb.Relative
                         }, a.createElement(l.o, {
                             align: l.d.Center,
                             ratio: l.p.BoxArt
-                        }, a.createElement(l.S, i.__assign({}, e))), a.createElement(l.Bb, {
+                        }, a.createElement(l.S, i.__assign({}, e))), a.createElement(l.zb, {
                             className: "preview-card-game-balloon-row__image-play-overlay",
                             alignItems: l.f.Center,
                             background: l.r.Overlay,
                             color: l.O.Overlay,
                             display: l.X.Flex,
                             justifyContent: l.Wa.Center,
-                            position: l.hb.Absolute,
+                            position: l.fb.Absolute,
                             attachTop: !0,
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0
-                        }, a.createElement(l.qb, {
-                            asset: l.rb.Play,
-                            type: l.sb.Inherit
+                        }, a.createElement(l.ob, {
+                            asset: l.pb.Play,
+                            type: l.qb.Inherit
                         }))), a.createElement(l.Xa, {
                             display: l.X.Flex,
                             flexDirection: l.Aa.Column,
@@ -1873,7 +1873,7 @@
                         return a.createElement(l.Xa, {
                             className: "preview-card-game-balloon",
                             display: l.X.InlineBlock,
-                            position: l.hb.Relative,
+                            position: l.fb.Relative,
                             margin: {
                                 top: .5
                             }
@@ -1883,7 +1883,7 @@
                             onToggle: this.onBalloonToggle
                         }, a.createElement(l.z, {
                             type: l.F.Hollow,
-                            icon: l.rb.ViewerList
+                            icon: l.pb.ViewerList
                         }, a.createElement(l.Xa, {
                             display: l.X.Flex,
                             flexDirection: l.Aa.Row
@@ -1891,13 +1891,13 @@
                             margin: {
                                 left: 1
                             }
-                        }, a.createElement(l.eb, {
+                        }, a.createElement(l.cb, {
                             label: this.props.videoGameChanges.length.toString()
                         })))), a.createElement(l.u, {
                             direction: l.v.TopLeft,
                             size: l.w.Medium
                         }, a.createElement(l.Xa, {
-                            overflow: l.cb.Hidden,
+                            overflow: l.ab.Hidden,
                             display: l.X.Flex,
                             flexDirection: l.Aa.Column,
                             flexWrap: l.Ba.NoWrap
@@ -1959,10 +1959,10 @@
                 },
                 f = n("N0BP"),
                 k = (n("XA5B"), function(e) {
-                    var t = a.createElement(l.Bb, {
+                    var t = a.createElement(l.zb, {
                         className: "preview-card-iconic-image__wrapper",
                         borderRadius: l.x.Small,
-                        overflow: l.cb.Hidden
+                        overflow: l.ab.Hidden
                     }, a.createElement(l.o, {
                         ratio: e.aspect || l.p.BoxArt,
                         align: l.d.Center
@@ -1994,7 +1994,7 @@
                         "data-test-selector": "top-bar-title-selector",
                         color: l.O.Overlay,
                         bold: !0,
-                        transform: l.Qb.Uppercase
+                        transform: l.Ob.Uppercase
                     }, e.title)), e.subTitle && a.createElement(l.Xa, {
                         display: l.X.InlineFlex
                     }, a.createElement(l.W, {
@@ -2006,30 +2006,30 @@
                     var t = .5,
                         n = null;
                     "number" == typeof e.progressBarPercent && e.progressBarPercent > 0 && (n = a.createElement(l.Xa, {
-                        position: l.hb.Absolute,
+                        position: l.fb.Absolute,
                         attachBottom: !0,
                         fullWidth: !0
-                    }, a.createElement(l.kb, {
+                    }, a.createElement(l.ib, {
                         borderRadius: l.x.None,
-                        size: l.mb.Small,
+                        size: l.kb.Small,
                         value: e.progressBarPercent,
                         mask: !0
                     })), t = 1);
                     var r = 1,
                         o = null;
                     return e.topBar && (o = a.createElement(l.Xa, {
-                        position: l.hb.Absolute,
+                        position: l.fb.Absolute,
                         attachTop: !0,
                         fullWidth: !0
                     }, a.createElement(y, i.__assign({}, e.topBar))), r = 3), a.createElement(l.Xa, {
-                        position: l.hb.Absolute,
+                        position: l.fb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
                         className: "preview-card-overlay"
                     }, o, n, a.createElement(l.Xa, {
-                        position: l.hb.Absolute,
+                        position: l.fb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         margin: e.topBar ? {
@@ -2038,7 +2038,7 @@
                         } : 1,
                         "data-test-selector": "top-left-selector"
                     }, e.topLeft), a.createElement(l.Xa, {
-                        position: l.hb.Absolute,
+                        position: l.fb.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         margin: e.topBar ? {
@@ -2047,7 +2047,7 @@
                         } : 1,
                         "data-test-selector": "top-right-selector"
                     }, e.topRight), a.createElement(l.Xa, {
-                        position: l.hb.Absolute,
+                        position: l.fb.Absolute,
                         attachBottom: !0,
                         attachLeft: !0,
                         margin: {
@@ -2056,7 +2056,7 @@
                         },
                         "data-test-selector": "bottom-left-selector"
                     }, e.bottomLeft), a.createElement(l.Xa, {
-                        position: l.hb.Absolute,
+                        position: l.fb.Absolute,
                         attachBottom: !0,
                         attachRight: !0,
                         margin: {
@@ -2072,12 +2072,12 @@
                         margin: {
                             right: .5
                         }
-                    }, a.createElement(l.qb, {
+                    }, a.createElement(l.ob, {
                         asset: e.icon,
                         width: 10,
                         height: 10
                     }));
-                    return e.withBackground ? a.createElement(l.Bb, {
+                    return e.withBackground ? a.createElement(l.zb, {
                         alignItems: l.f.Center,
                         background: l.r.Overlay,
                         borderRadius: l.x.Small,
@@ -2086,7 +2086,7 @@
                         display: l.X.Flex,
                         fontSize: l.Ca.Size6,
                         justifyContent: l.Wa.Center
-                    }, t, a.createElement(l.W, null, e.value)) : a.createElement(l.Bb, {
+                    }, t, a.createElement(l.W, null, e.value)) : a.createElement(l.zb, {
                         className: "preview-card-stat",
                         color: l.O.Overlay,
                         display: l.X.Flex,
@@ -2136,9 +2136,9 @@
                             onBlur: this.handleBlur
                         }), a.createElement("div", i.__assign({}, e, {
                             onClick: this.props.onClick
-                        }), a.createElement(l.Bb, {
+                        }), a.createElement(l.zb, {
                             background: l.r.Alt2,
-                            overflow: l.cb.Hidden
+                            overflow: l.ab.Hidden
                         }, a.createElement(l.o, {
                             ratio: this.props.aspectRatio
                         }, this.renderImage())))
@@ -2182,7 +2182,7 @@
                         type: l.V.Inherit,
                         "data-test-selector": "preview-card-titles__primary-link"
                     }), a.createElement(l.W, {
-                        type: l.Rb.H3,
+                        type: l.Pb.H3,
                         fontSize: l.Ca.Size5,
                         lines: 1,
                         bold: !0,
@@ -2193,10 +2193,10 @@
                 }),
                 L = n("H1ft"),
                 T = n("ZbA5"),
-                I = n("QVaV"),
-                x = n("hyVY"),
-                O = n("MXoD"),
-                P = n("0LAi");
+                x = n("QVaV"),
+                I = n("hyVY"),
+                P = n("MXoD"),
+                O = n("0LAi");
             ! function(e) {
                 e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
             }(b || (b = {}));
@@ -2209,20 +2209,20 @@
                     var e = Object(r.d)("Get It Now", "VideoPreviewCardRestriction"),
                         t = this.props.restriction.canViewRestricted,
                         n = t ? Object(r.d)("unlocked", "VideoPreviewCardRestriction") : Object(r.d)("locked", "VideoPreviewCardRestriction"),
-                        i = t ? l.rb.Unlock : l.rb.Lock;
-                    return a.createElement(l.Xa, null, !t && a.createElement(l.Bb, {
+                        i = t ? l.pb.Unlock : l.pb.Lock;
+                    return a.createElement(l.Xa, null, !t && a.createElement(l.zb, {
                         background: l.r.Overlay,
                         className: "video-preview-card-restriction",
                         color: l.O.Overlay,
                         display: l.X.Flex,
-                        position: l.hb.Absolute,
+                        position: l.fb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
-                        zIndex: l.ec.Default,
+                        zIndex: l.cc.Default,
                         padding: {
                             x: 5
                         },
-                        textAlign: l.Nb.Center,
+                        textAlign: l.Lb.Center,
                         fullWidth: !0,
                         fullHeight: !0,
                         alignItems: l.f.Center,
@@ -2248,23 +2248,23 @@
                         disabled: "" === this.props.restriction.upsellLinkTo,
                         linkTo: this.props.restriction.upsellLinkTo,
                         overlay: !0
-                    }, e))), a.createElement(l.Bb, {
+                    }, e))), a.createElement(l.zb, {
                         display: l.X.InlineFlex,
-                        position: l.hb.Absolute,
+                        position: l.fb.Absolute,
                         attachTop: this.props.attachTop,
                         attachBottom: !this.props.attachTop,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: l.ec.Default,
+                        zIndex: l.cc.Default,
                         fontSize: l.Ca.Size6,
                         background: l.r.Overlay,
                         borderRadius: l.x.Medium,
                         color: l.O.Overlay
-                    }, a.createElement(l.Ub, {
-                        direction: this.props.attachTop ? l.Wb.Bottom : l.Wb.Top,
-                        align: l.Vb.Right,
+                    }, a.createElement(l.Sb, {
+                        direction: this.props.attachTop ? l.Ub.Bottom : l.Ub.Top,
+                        align: l.Tb.Right,
                         label: n
-                    }, a.createElement(l.qb, {
+                    }, a.createElement(l.ob, {
                         asset: i,
                         height: 20,
                         width: 20
@@ -2277,7 +2277,7 @@
                 return void 0 !== e.watchedProgressPercent
             }
 
-            function R(e) {
+            function j(e) {
                 return void 0 !== e.clipCreatedByChannelLogin
             }! function(e) {
                 e.Avatar = "preview-card-avatar", e.BoxArt = "preview-card-box-art"
@@ -2285,7 +2285,7 @@
             function(e) {
                 e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
             }(D || (D = {}));
-            var j = function(e) {
+            var R = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getTrackingContext = function(e) {
@@ -2299,12 +2299,12 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         return a.createElement("div", i.__assign({
                             className: "preview-card"
-                        }, Object(f.a)(this.props)), a.createElement(l.Bb, {
-                            position: l.hb.Relative,
+                        }, Object(f.a)(this.props)), a.createElement(l.zb, {
+                            position: l.fb.Relative,
                             borderRadius: l.x.Medium,
-                            overflow: l.cb.Hidden
+                            overflow: l.ab.Hidden
                         }, this.renderVODRestrictionOverlay(), a.createElement(l.U, {
-                            to: Object(O.a)(this.getTrackingContext(g.PageviewContent.VideoThumbnail), this.props.linkTo),
+                            to: Object(P.a)(this.getTrackingContext(g.PageviewContent.VideoThumbnail), this.props.linkTo),
                             onClick: this.props.onThumbnailClick || this.props.onClick,
                             "data-a-target": "preview-card-image-link"
                         }, this.props.thumbnailImageProps && a.createElement(_, {
@@ -2345,8 +2345,8 @@
                             bottomRight: void 0
                         }) : U(this.props) ? a.createElement(C, {
                             topLeft: void 0 !== this.props.durationInSeconds && a.createElement(S, {
-                                value: Object(x.b)(this.props.durationInSeconds),
-                                icon: l.rb.Play,
+                                value: Object(I.b)(this.props.durationInSeconds),
+                                icon: l.pb.Play,
                                 withBackground: !0
                             }),
                             topRight: this.props.listPosition && a.createElement(S, {
@@ -2361,10 +2361,10 @@
                             }),
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
-                        }) : R(this.props) ? a.createElement(C, {
+                        }) : j(this.props) ? a.createElement(C, {
                             topLeft: a.createElement(S, {
-                                value: Object(x.b)(this.props.durationInSeconds),
-                                icon: l.rb.Clip,
+                                value: Object(I.b)(this.props.durationInSeconds),
+                                icon: l.pb.Clip,
                                 withBackground: !0
                             }),
                             topRight: void 0,
@@ -2381,7 +2381,7 @@
                             totalVideos: this.props.listPosition.totalVideos
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.getViewCountLabel = function() {
-                        return U(this.props) || R(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
+                        return U(this.props) || j(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
                             viewerCount: this.props.viewCount
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.renderIconicImage = function() {
@@ -2391,7 +2391,7 @@
                             }
                         }, a.createElement(k, {
                             imageProps: this.props.gameBoxArtImageProps,
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(g.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             aspect: l.p.BoxArt,
                             "data-test-selector": A.BoxArt,
@@ -2402,7 +2402,7 @@
                             }
                         }, a.createElement(k, {
                             imageProps: this.props.channelImageProps,
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.UserThumbnail), this.props.channelLinkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(g.PageviewContent.UserThumbnail), this.props.channelLinkTo),
                             onClick: this.props.onChannelImageClick || this.props.onChannelLoginClick,
                             aspect: l.p.Aspect1x1,
                             "data-test-selector": A.Avatar
@@ -2411,11 +2411,11 @@
                         var e = null,
                             t = [];
                         return this.shouldShowGameBalloon(this.props) || t.push({
-                            text: Object(I.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
+                            text: Object(x.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
+                            linkTo: Object(P.a)(this.getTrackingContext(g.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
                             onClick: this.props.onChannelLoginClick,
                             automationSelector: "preview-card-channel-link"
-                        }), R(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
+                        }), j(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
                             text: Object(r.d)("Clipped by {userName}", {
                                 userName: this.props.clipCreatedByChannelLogin || ""
                             }, "VideoPreviewCard"),
@@ -2424,13 +2424,13 @@
                             automationSelector: "preview-card-clip-curator-link"
                         }) : U(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== D.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
                             text: this.props.gameTitle,
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(g.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             automationSelector: "preview-card-game-link"
                         }), a.createElement(a.Fragment, null, a.createElement(F, {
                             title: this.props.title,
                             onClick: this.props.onVideoTitleClick || this.props.onClick,
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.VideoTitle), this.props.linkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(g.PageviewContent.VideoTitle), this.props.linkTo),
                             subtitles: t,
                             "data-a-target": "preview-card-title-link"
                         }), e)
@@ -2439,7 +2439,7 @@
                             margin: {
                                 top: .5
                             }
-                        }, a.createElement(P.a, i.__assign({}, this.props.tagListProps, {
+                        }, a.createElement(O.a, i.__assign({}, this.props.tagListProps, {
                             tagNumberLimit: 3
                         }))) : null
                     }, t.prototype.renderVODRestrictionOverlay = function() {
@@ -2472,13 +2472,13 @@
                 }(a.Component),
                 V = Object(N.b)("PreviewCard", {
                     autoReportInteractive: !0
-                })(j);
+                })(R);
             n.d(t, !1, function() {
                 return A
             }), n.d(t, "b", function() {
                 return D
             }), n.d(t, !1, function() {
-                return j
+                return R
             }), n.d(t, "a", function() {
                 return V
             })
@@ -2663,280 +2663,11 @@
                     }
                 }, i.createElement(r.o, {
                     ratio: e.aspectRatio
-                }, i.createElement(r.Bb, {
+                }, i.createElement(r.zb, {
                     background: r.r.Alt2,
                     fullHeight: !0
                 }, t))))
             }
-        },
-        ILhQ: function(e, t, n) {
-            var i = {
-                kind: "Document",
-                definitions: [{
-                    kind: "FragmentDefinition",
-                    name: {
-                        kind: "Name",
-                        value: "liveHostFragment"
-                    },
-                    typeCondition: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "User"
-                        }
-                    },
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "id"
-                            },
-                            arguments: [],
-                            directives: []
-                        }, {
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "login"
-                            },
-                            arguments: [],
-                            directives: []
-                        }, {
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "displayName"
-                            },
-                            arguments: [],
-                            directives: []
-                        }, {
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "hosting"
-                            },
-                            arguments: [],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "id"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "login"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "displayName"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "profileImageURL"
-                                    },
-                                    arguments: [{
-                                        kind: "Argument",
-                                        name: {
-                                            kind: "Name",
-                                            value: "width"
-                                        },
-                                        value: {
-                                            kind: "IntValue",
-                                            value: "50"
-                                        }
-                                    }],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "stream"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "game"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "id"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "name"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "boxArtURL"
-                                                    },
-                                                    arguments: [{
-                                                        kind: "Argument",
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "width"
-                                                        },
-                                                        value: {
-                                                            kind: "IntValue",
-                                                            value: "40"
-                                                        }
-                                                    }, {
-                                                        kind: "Argument",
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "height"
-                                                        },
-                                                        value: {
-                                                            kind: "IntValue",
-                                                            value: "56"
-                                                        }
-                                                    }],
-                                                    directives: []
-                                                }]
-                                            }
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "viewersCount"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "title"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "type"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "previewImageURL"
-                                            },
-                                            arguments: [{
-                                                kind: "Argument",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "width"
-                                                },
-                                                value: {
-                                                    kind: "IntValue",
-                                                    value: "320"
-                                                }
-                                            }, {
-                                                kind: "Argument",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "height"
-                                                },
-                                                value: {
-                                                    kind: "IntValue",
-                                                    value: "180"
-                                                }
-                                            }],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "tags"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "FragmentSpread",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "tagFragment"
-                                                    },
-                                                    directives: []
-                                                }]
-                                            }
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 326
-                }
-            };
-            i.loc.source = {
-                body: '#import "twilight/features/tags/models/tag-fragment.gql"\nfragment liveHostFragment on User {\nid\nlogin\ndisplayName\nhosting {\nid\nlogin\ndisplayName\nprofileImageURL(width: 50)\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 56)\n}\nviewersCount\ntitle\ntype\npreviewImageURL(width: 320 height: 180)\ntags {\n...tagFragment\n}\n}\n}\n}',
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            var a = {};
-            i.definitions = i.definitions.concat(function(e) {
-                return e.filter(function(e) {
-                    if ("FragmentDefinition" !== e.kind) return !0;
-                    var t = e.name.value;
-                    return !a[t] && (a[t] = !0, !0)
-                })
-            }(n("iiOx").definitions)), e.exports = i
         },
         Igt5: function(e, t, n) {
             "use strict";
@@ -2948,14 +2679,12 @@
                 return r
             }), n.d(t, "d", function() {
                 return o
-            }), n.d(t, "g", function() {
+            }), n.d(t, "f", function() {
                 return l
             }), n.d(t, "e", function() {
                 return s
-            }), n.d(t, "f", function() {
+            }), n.d(t, "g", function() {
                 return d
-            }), n.d(t, "h", function() {
-                return c
             });
             var i = "directory.LANGUAGE_TAGS_UPDATED",
                 a = "directory.TAG_FILTER_ADDED",
@@ -2965,7 +2694,7 @@
             function l(e) {
                 return {
                     type: i,
-                    languageTagFilters: e
+                    languageTags: e
                 }
             }
 
@@ -2978,14 +2707,6 @@
             }
 
             function d(e, t) {
-                return {
-                    type: r,
-                    categoryName: t,
-                    tagFilters: e
-                }
-            }
-
-            function c(e, t) {
                 return {
                     type: o,
                     categoryName: t,
@@ -3377,12 +3098,194 @@
                                                     selectionSet: {
                                                         kind: "SelectionSet",
                                                         selections: [{
-                                                            kind: "FragmentSpread",
+                                                            kind: "Field",
                                                             name: {
                                                                 kind: "Name",
-                                                                value: "liveChannelFragment"
+                                                                value: "id"
                                                             },
+                                                            arguments: [],
                                                             directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "login"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "displayName"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "profileImageURL"
+                                                            },
+                                                            arguments: [{
+                                                                kind: "Argument",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "width"
+                                                                },
+                                                                value: {
+                                                                    kind: "IntValue",
+                                                                    value: "50"
+                                                                }
+                                                            }],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "stream"
+                                                            },
+                                                            arguments: [],
+                                                            directives: [],
+                                                            selectionSet: {
+                                                                kind: "SelectionSet",
+                                                                selections: [{
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "id"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "game"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: [],
+                                                                    selectionSet: {
+                                                                        kind: "SelectionSet",
+                                                                        selections: [{
+                                                                            kind: "Field",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "id"
+                                                                            },
+                                                                            arguments: [],
+                                                                            directives: []
+                                                                        }, {
+                                                                            kind: "Field",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "name"
+                                                                            },
+                                                                            arguments: [],
+                                                                            directives: []
+                                                                        }, {
+                                                                            kind: "Field",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "boxArtURL"
+                                                                            },
+                                                                            arguments: [{
+                                                                                kind: "Argument",
+                                                                                name: {
+                                                                                    kind: "Name",
+                                                                                    value: "width"
+                                                                                },
+                                                                                value: {
+                                                                                    kind: "IntValue",
+                                                                                    value: "40"
+                                                                                }
+                                                                            }, {
+                                                                                kind: "Argument",
+                                                                                name: {
+                                                                                    kind: "Name",
+                                                                                    value: "height"
+                                                                                },
+                                                                                value: {
+                                                                                    kind: "IntValue",
+                                                                                    value: "56"
+                                                                                }
+                                                                            }],
+                                                                            directives: []
+                                                                        }]
+                                                                    }
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "viewersCount"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "title"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "type"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "previewImageURL"
+                                                                    },
+                                                                    arguments: [{
+                                                                        kind: "Argument",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "width"
+                                                                        },
+                                                                        value: {
+                                                                            kind: "IntValue",
+                                                                            value: "320"
+                                                                        }
+                                                                    }, {
+                                                                        kind: "Argument",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "height"
+                                                                        },
+                                                                        value: {
+                                                                            kind: "IntValue",
+                                                                            value: "180"
+                                                                        }
+                                                                    }],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "tags"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: [],
+                                                                    selectionSet: {
+                                                                        kind: "SelectionSet",
+                                                                        selections: [{
+                                                                            kind: "FragmentSpread",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "broadcastTagFragment"
+                                                                            },
+                                                                            directives: []
+                                                                        }]
+                                                                    }
+                                                                }]
+                                                            }
                                                         }]
                                                     }
                                                 }, {
@@ -3424,11 +3327,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 321
+                    end: 484
                 }
             };
             i.loc.source = {
-                body: '#import "twilight/features/following/components/live-channels/live-channel-fragment.gql"\nquery FollowingLive_CurrentUser($limit: Int $cursor: Cursor) {\ncurrentUser {\nid\nfollows {\ntotalCount\n}\nfollowedLiveUsers(first: $limit after: $cursor) {\nedges {\nnode {\n...liveChannelFragment\n}\ncursor\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}',
+                body: '#import "twilight/features/tags/models/broadcast-tag-fragment.gql"\nquery FollowingLive_CurrentUser($limit: Int $cursor: Cursor) {\ncurrentUser {\nid\nfollows {\ntotalCount\n}\nfollowedLiveUsers(first: $limit after: $cursor) {\nedges {\nnode {\nid\nlogin\ndisplayName\nprofileImageURL(width: 50)\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 56)\n}\nviewersCount\ntitle\ntype\npreviewImageURL(width: 320 height: 180)\ntags {\n...broadcastTagFragment\n}\n}\n}\ncursor\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -3442,7 +3345,7 @@
                     var t = e.name.value;
                     return !a[t] && (a[t] = !0, !0)
                 })
-            }(n("Z/HV").definitions)), e.exports = i
+            }(n("Iqxx").definitions)), e.exports = i
         },
         Uyt6: function(e, t, n) {
             "use strict";
@@ -3479,22 +3382,22 @@
                     }, t.prototype.render = function() {
                         if (!this.userDataLoaded()) return null;
                         var e = this.props.activeCategory,
-                            t = [d.createElement(y.Cb, {
+                            t = [d.createElement(y.Ab, {
                                 key: "following-overview-tab",
                                 active: void 0 === e,
                                 linkTo: "/directory/following",
                                 "data-a-target": "following-overview-tab"
-                            }, Object(m.d)("Overview", "FollowingHeaderTabs")), d.createElement(y.Cb, {
+                            }, Object(m.d)("Overview", "FollowingHeaderTabs")), d.createElement(y.Ab, {
                                 key: "following-channels-tab",
                                 active: e === w.SpadeFollowingCategory.Live,
                                 "data-a-target": "following-channels-tab",
                                 linkTo: "/directory/following/live"
-                            }, Object(m.d)("Channels", "FollowingHeaderTabs")), d.createElement(y.Cb, {
+                            }, Object(m.d)("Channels", "FollowingHeaderTabs")), d.createElement(y.Ab, {
                                 key: "following-hosts-tab",
                                 active: e === w.SpadeFollowingCategory.Hosts,
                                 "data-a-target": "following-hosts-tab",
                                 linkTo: "/directory/following/hosts"
-                            }, Object(m.d)("Hosts", "FollowingHeaderTabs")), d.createElement(y.Cb, {
+                            }, Object(m.d)("Hosts", "FollowingHeaderTabs")), d.createElement(y.Ab, {
                                 key: "following-games-tab",
                                 active: e === w.SpadeFollowingCategory.Games,
                                 "data-a-target": "following-games-tab",
@@ -3505,7 +3408,7 @@
                             margin: {
                                 bottom: 2
                             }
-                        }, d.createElement(y.Db, null, t))
+                        }, d.createElement(y.Bb, null, t))
                     }, t = s.__decorate([Object(g.b)("FollowingHeaderTabs"), Object(h.a)(C)], t)
                 }(d.Component),
                 N = n("aCAx"),
@@ -3514,7 +3417,7 @@
                 F = n("qyxT"),
                 L = n("yziQ"),
                 T = n("xugo"),
-                I = (n("nrVK"), function(e) {
+                x = (n("nrVK"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -3551,11 +3454,11 @@
                         }, n
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return !this.props.data || this.props.data.loading ? null : (this.shuffledGameCards || this.getAndStoreShuffledGameCards(), d.createElement(y.Bb, {
+                        return !this.props.data || this.props.data.loading ? null : (this.shuffledGameCards || this.getAndStoreShuffledGameCards(), d.createElement(y.zb, {
                             className: "following-games-modal",
                             background: y.r.Base,
                             padding: 2,
-                            overflow: y.cb.Hidden,
+                            overflow: y.ab.Hidden,
                             "data-a-target": "follow-games-modal",
                             display: y.X.Flex,
                             flexDirection: y.Aa.Column,
@@ -3569,7 +3472,7 @@
                             margin: {
                                 bottom: 1
                             },
-                            textAlign: y.Nb.Center,
+                            textAlign: y.Lb.Center,
                             display: y.X.Flex,
                             flexDirection: y.Aa.Column,
                             alignContent: y.e.Center
@@ -3594,9 +3497,9 @@
                             suppressScrollX: !0
                         }, d.createElement(y.Xa, {
                             padding: 1
-                        }, d.createElement(y.Xb, {
-                            childWidth: y.Yb.Small,
-                            gutterSize: y.Zb.Small,
+                        }, d.createElement(y.Vb, {
+                            childWidth: y.Wb.Small,
+                            gutterSize: y.Xb.Small,
                             placeholderItems: 99
                         }, this.shuffledGameCards)))), d.createElement(y.Xa, {
                             display: y.X.Flex,
@@ -3619,14 +3522,14 @@
                         }
                     })], t)
                 }(d.Component)),
-                x = n("kduP"),
-                O = n("PfQt"),
-                P = n("5myU"),
+                I = n("kduP"),
+                P = n("PfQt"),
+                O = n("5myU"),
                 A = n("oJov"),
                 D = n("AZIu"),
                 G = n("4HIT"),
                 U = n("x/sq"),
-                R = function(e) {
+                j = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -3636,7 +3539,7 @@
                                 bottom: 2
                             }
                         }, d.createElement(y.W, {
-                            type: y.Rb.H4,
+                            type: y.Pb.H4,
                             color: y.O.Base,
                             bold: !0,
                             "data-a-target": "live-games-header"
@@ -3651,7 +3554,7 @@
                                 var n = e.name.toLowerCase(),
                                     i = t.name.toLowerCase();
                                 return n < i ? -1 : n > i ? 1 : 0
-                            })) || 0 === n.length) return d.createElement(y.Bb, {
+                            })) || 0 === n.length) return d.createElement(y.zb, {
                             fullWidth: !0,
                             background: y.r.Alt2,
                             display: y.X.Flex,
@@ -3681,12 +3584,12 @@
                             "data-a-target": "find-out-more-button"
                         }, Object(m.d)("Find Out More!", "LiveGames"))));
                         if (this.props.showSample && this.props.directoryWidth && this.props.directoryWidth > 0) {
-                            var i = Object(P.a)(this.props.directoryWidth, 180, 1);
+                            var i = Object(O.a)(this.props.directoryWidth, 180, 1);
                             i < n.length && (n = n.slice(0, i - 1), t = d.createElement(y.Xa, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, d.createElement(O.a, {
+                            }, d.createElement(P.a, {
                                 subHeader: "Live Games",
                                 linkTo: "/directory/following/games",
                                 aspectRatio: y.p.Aspect3x4
@@ -3705,7 +3608,7 @@
                                 }
                             }, d.createElement(A.a, {
                                 linkTo: {
-                                    pathname: Object(x.c)(e.name),
+                                    pathname: Object(I.c)(e.name),
                                     state: {
                                         content: "twitch_following",
                                         medium: "live_game",
@@ -3724,24 +3627,24 @@
                                 })
                             }))
                         });
-                        return d.createElement("div", null, e, d.createElement(y.Xb, {
-                            gutterSize: y.Zb.Small,
-                            childWidth: y.Yb.Small,
+                        return d.createElement("div", null, e, d.createElement(y.Vb, {
+                            gutterSize: y.Xb.Small,
+                            childWidth: y.Wb.Small,
                             placeholderItems: 30
                         }, a, t))
                     }, t
                 }(d.Component);
-            var j = Object(i.connect)(null, function(e, t) {
+            var R = Object(i.connect)(null, function(e, t) {
                     return Object.assign(Object(a.bindActionCreators)({
                         showFollowGamesModal: function() {
-                            return Object(N.d)(I, {
+                            return Object(N.d)(x, {
                                 onFollowChange: t.onFollowChange
                             })
                         }
                     }, e), t)
-                })(R),
+                })(j),
                 V = n("XHSL"),
-                B = function(e) {
+                X = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -3753,7 +3656,7 @@
                         var e;
                         if (this.props.data.loading) e = d.createElement(y.Xa, {
                             display: y.X.Flex,
-                            position: y.hb.Absolute,
+                            position: y.fb.Absolute,
                             fullHeight: !0,
                             fullWidth: !0
                         }, d.createElement(y.Za, {
@@ -3764,7 +3667,7 @@
                         });
                         else {
                             var t = this.props.data.currentUser;
-                            e = d.createElement(j, {
+                            e = d.createElement(R, {
                                 games: t && t.followedGames && t.followedGames.nodes ? t.followedGames.nodes : [],
                                 onFollowChange: this.props.data.refetch
                             })
@@ -3778,12 +3681,12 @@
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t
                 }(d.Component),
-                X = Object(a.compose)(Object(h.a)(V, {
+                B = Object(a.compose)(Object(h.a)(V, {
                     options: {
                         fetchPolicy: "cache-and-network",
                         variables: {
                             limit: 100,
-                            type: k.w.LIVE
+                            type: k.x.LIVE
                         }
                     }
                 }), Object(g.b)("FollowingGamesPage", {
@@ -3803,33 +3706,33 @@
                             }).length
                         }
                     }
-                }))(B),
+                }))(X),
                 H = n("oJmH"),
                 W = n("sqxy"),
                 M = n("QVaV");
             n("7I5b");
 
-            function q() {
+            function z() {
                 return d.createElement(y.Xa, {
                     className: "following__empty",
                     margin: {
                         x: "auto"
                     }
                 }, d.createElement(y.Xa, {
-                    textAlign: y.Nb.Center,
+                    textAlign: y.Lb.Center,
                     margin: {
                         bottom: 2
                     }
                 }, d.createElement(y.W, {
                     color: y.O.Alt2,
                     fontSize: y.Ca.Size4,
-                    type: y.Rb.H4
+                    type: y.Pb.H4
                 }, Object(m.d)("Never miss the Channels you love.", "EmptyChannelList"))), d.createElement(y.Xa, {
                     display: y.X.Flex,
                     justifyContent: y.Wa.Between
                 }, d.createElement(y.Xa, {
                     className: "following__empty-information",
-                    position: y.hb.Relative
+                    position: y.fb.Relative
                 }, d.createElement(y.Xa, {
                     margin: {
                         bottom: 1
@@ -3840,16 +3743,16 @@
                     src: "//s.jtvnw.net/jtv_user_pictures/hosted_images/guide_1.png"
                 }))), d.createElement(y.W, {
                     fontSize: y.Ca.Size5
-                }, Object(m.d)("Like the channel you're watching? Follow it.", "EmptyChannelList")), d.createElement(y.Bb, {
+                }, Object(m.d)("Like the channel you're watching? Follow it.", "EmptyChannelList")), d.createElement(y.zb, {
                     className: "following__empty-information-num",
-                    position: y.hb.Absolute,
+                    position: y.fb.Absolute,
                     attachLeft: !0,
                     attachTop: !0,
                     background: y.r.Alt,
-                    textAlign: y.Nb.Center
+                    textAlign: y.Lb.Center
                 }, Object(m.f)(1))), d.createElement(y.Xa, {
                     className: "following__empty-information",
-                    position: y.hb.Relative
+                    position: y.fb.Relative
                 }, d.createElement(y.Xa, {
                     margin: {
                         bottom: 1
@@ -3860,16 +3763,16 @@
                     src: "//s.jtvnw.net/jtv_user_pictures/hosted_images/guide_2.png"
                 }))), d.createElement(y.W, {
                     fontSize: y.Ca.Size5
-                }, Object(m.d)("We'll let you know when the channel goes live again.", "EmptyChannelList")), d.createElement(y.Bb, {
+                }, Object(m.d)("We'll let you know when the channel goes live again.", "EmptyChannelList")), d.createElement(y.zb, {
                     className: "following__empty-information-num",
-                    position: y.hb.Absolute,
+                    position: y.fb.Absolute,
                     attachLeft: !0,
                     attachTop: !0,
                     background: y.r.Alt,
-                    textAlign: y.Nb.Center
+                    textAlign: y.Lb.Center
                 }, Object(m.f)(2))), d.createElement(y.Xa, {
                     className: "following__empty-information",
-                    position: y.hb.Relative
+                    position: y.fb.Relative
                 }, d.createElement(y.Xa, {
                     margin: {
                         bottom: 1
@@ -3880,16 +3783,16 @@
                     src: "//s.jtvnw.net/jtv_user_pictures/hosted_images/guide_3.png"
                 }))), d.createElement(y.W, {
                     fontSize: y.Ca.Size5
-                }, Object(m.d)("Come back and watch your favorite channels.", "EmptyChannelList")), d.createElement(y.Bb, {
+                }, Object(m.d)("Come back and watch your favorite channels.", "EmptyChannelList")), d.createElement(y.zb, {
                     className: "following__empty-information-num",
-                    position: y.hb.Absolute,
+                    position: y.fb.Absolute,
                     attachLeft: !0,
                     attachTop: !0,
                     background: y.r.Alt,
-                    textAlign: y.Nb.Center
+                    textAlign: y.Lb.Center
                 }, Object(m.f)(3)))))
             }
-            var z = n("HrG3");
+            var q = n("HrG3");
 
             function Q(e) {
                 var t = Object(m.d)("Live hosts", "LiveHosts"),
@@ -3898,13 +3801,13 @@
                             bottom: 2
                         }
                     }, d.createElement(y.W, {
-                        type: y.Rb.H4,
+                        type: y.Pb.H4,
                         color: y.O.Base,
                         bold: !0,
                         "data-a-target": "live-hosts-header"
                     }, t));
                 if (!e.hosts || 0 === e.hosts.length) return e.followsCount > 0 ? d.createElement("div", null, n, d.createElement(y.Xa, {
-                    textAlign: y.Nb.Center,
+                    textAlign: y.Lb.Center,
                     padding: {
                         y: 5
                     }
@@ -3913,17 +3816,17 @@
                     fontSize: y.Ca.Size4,
                     "data-a-target": "no-hosts-live-text",
                     italic: !0
-                }, Object(m.d)("No Hosts Live", "LiveHosts")))) : d.createElement("div", null, n, !e.showSample && d.createElement(q, null));
+                }, Object(m.d)("No Hosts Live", "LiveHosts")))) : d.createElement("div", null, n, !e.showSample && d.createElement(z, null));
                 var i, a = [];
                 if (e.hosts.forEach(function(e) {
                         e && e.hosting && e.hosting.stream && e.hosting.id && a.push(e)
-                    }), e.maxCount) e.maxCount < a.length && (a = a.slice(0, e.maxCount - 1), i = d.createElement(z.a, {
+                    }), e.maxCount) e.maxCount < a.length && (a = a.slice(0, e.maxCount - 1), i = d.createElement(q.a, {
                     subHeader: "Live Hosts",
                     onClickViewAll: e.onClickViewAll
                 }));
                 else if (e.showSample && e.directoryWidth && e.directoryWidth > 0) {
-                    var r = Object(P.a)(e.directoryWidth, 240, 2);
-                    r < a.length && (a = a.slice(0, r - 1), i = d.createElement(z.a, {
+                    var r = Object(O.a)(e.directoryWidth, 240, 2);
+                    r < a.length && (a = a.slice(0, r - 1), i = d.createElement(q.a, {
                         subHeader: t,
                         linkTo: {
                             pathname: "/directory/following/hosts",
@@ -3935,14 +3838,14 @@
                     }))
                 }
                 var o = a.map(function(e, t) {
-                    if (e.id && e.hosting && e.hosting.stream && e.hosting.id) {
+                    if (e.hosting && e.hosting.stream && e.hosting.id) {
                         var n = Object(M.a)(e.hosting.login, e.hosting.displayName, !0),
                             i = Object(M.a)(e.login, e.displayName, !0),
                             a = Object(m.d)("{hostDisplayName} hosting {hostedDisplayName}", {
                                 hostDisplayName: i,
                                 hostedDisplayName: n
                             }, "LiveHosts"),
-                            r = e.hosting.stream && e.hosting.stream.game ? Object(x.c)(e.hosting.stream.game.name) : "",
+                            r = e.hosting.stream && e.hosting.stream.game ? Object(I.c)(e.hosting.stream.game.name) : "",
                             o = Object(U.a)({
                                 tags: e.hosting.stream.tags,
                                 section: D.a.LiveChannels
@@ -3986,27 +3889,27 @@
                                 }
                             },
                             "data-a-target": "live-host-card-" + t,
-                            streamType: e.hosting.stream.type || void 0,
+                            streamType: e.hosting.stream.type,
                             hosting: !0,
-                            hostedByChannelLogin: e.login || "",
+                            hostedByChannelLogin: e.login,
                             channelImageSrc: e.hosting.profileImageURL || "",
                             tagListProps: o
                         }))
                     }
                 });
-                return d.createElement("div", null, n, d.createElement(y.Xb, {
-                    gutterSize: y.Zb.Small,
-                    childWidth: y.Yb.Large,
+                return d.createElement("div", null, n, d.createElement(y.Vb, {
+                    gutterSize: y.Xb.Small,
+                    childWidth: y.Wb.Large,
                     placeholderItems: 20
                 }, o, i))
             }
             var $ = n("rJ4n"),
-                Y = 50,
-                Z = function(e) {
+                J = 50,
+                Y = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            maxCount: Y
+                            maxCount: J
                         }, t.onClickViewAll = function() {
                             return s.__awaiter(t, void 0, void 0, function() {
                                 return s.__generator(this, function(e) {
@@ -4032,7 +3935,7 @@
                         var e;
                         if (this.props.data.loading) e = d.createElement(y.Xa, {
                             display: y.X.Flex,
-                            position: y.hb.Absolute,
+                            position: y.fb.Absolute,
                             fullHeight: !0,
                             fullWidth: !0
                         }, d.createElement(y.Za, {
@@ -4042,14 +3945,11 @@
                             message: Object(m.d)("Error loading data.", "FollowingHostsPage")
                         });
                         else {
-                            var t = this.props.data.currentUser,
-                                n = t && t.followedHosts && t.followedHosts.nodes ? t.followedHosts.nodes.filter(function(e) {
-                                    return null !== e
-                                }) : [],
-                                i = t && t.follows && t.follows.totalCount || 0;
+                            var t = this.props.data.currentUser ? this.props.data.currentUser.followedHosts.nodes : [],
+                                n = this.props.data.currentUser ? this.props.data.currentUser.follows.totalCount : 0;
                             e = d.createElement(Q, {
-                                hosts: n,
-                                followsCount: i,
+                                hosts: t,
+                                followsCount: n,
                                 maxCount: this.state.maxCount,
                                 onClickViewAll: this.onClickViewAll
                             })
@@ -4063,7 +3963,7 @@
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t
                 }(d.Component),
-                J = Object(H.compose)(Object(h.a)($, {
+                Z = Object(H.compose)(Object(h.a)($, {
                     options: function() {
                         return {
                             fetchPolicy: "cache-and-network",
@@ -4083,10 +3983,10 @@
                         return {
                             content_type: w.PageviewDirectoryContentType.Hosts,
                             tab: w.PageviewFollowingTab.Hosts,
-                            num_host_channels: e.data.currentUser && e.data.currentUser.followedHosts && e.data.currentUser.followedHosts.nodes && e.data.currentUser.followedHosts.nodes.length || 0
+                            num_host_channels: e.data.currentUser && e.data.currentUser.followedHosts.nodes.length || 0
                         }
                     }
-                }))(Z),
+                }))(Y),
                 K = n("MJbm"),
                 ee = n("RXle");
 
@@ -4097,13 +3997,13 @@
                             bottom: 2
                         }
                     }, d.createElement(y.W, {
-                        type: y.Rb.H4,
+                        type: y.Pb.H4,
                         color: y.O.Base,
                         bold: !0,
                         "data-a-target": "live-channels-header"
                     }, t));
                 if (null !== e.users && 0 === e.users.length) return e.followsCount > 0 ? d.createElement("div", null, n, d.createElement(y.Xa, {
-                    textAlign: y.Nb.Center,
+                    textAlign: y.Lb.Center,
                     padding: {
                         y: 5
                     }
@@ -4112,15 +4012,15 @@
                     fontSize: y.Ca.Size4,
                     "data-a-target": "no-channels-live-text",
                     italic: !0
-                }, Object(m.d)("No Channels Live", "LiveChannels")))) : d.createElement("div", null, n, d.createElement(q, null));
+                }, Object(m.d)("No Channels Live", "LiveChannels")))) : d.createElement("div", null, n, d.createElement(z, null));
                 var i, a = e.users || [];
-                if (e.maxDisplayCount && e.maxDisplayCount < a.length) a = a.slice(0, e.maxDisplayCount - 1), i = d.createElement(O.a, {
+                if (e.maxDisplayCount && e.maxDisplayCount < a.length) a = a.slice(0, e.maxDisplayCount - 1), i = d.createElement(P.a, {
                     subHeader: "Live Channels",
                     onClickViewAll: e.onClickViewAll
                 });
                 else if (e.showSample && e.directoryWidth && e.directoryWidth > 0) {
-                    var r = Object(P.a)(e.directoryWidth, 240, 2);
-                    r < a.length && (a = a.slice(0, r - 1), i = d.createElement(O.a, {
+                    var r = Object(O.a)(e.directoryWidth, 240, 2);
+                    r < a.length && (a = a.slice(0, r - 1), i = d.createElement(P.a, {
                         subHeader: t,
                         linkTo: "/directory/following/live"
                     }))
@@ -4132,7 +4032,7 @@
                             content: w.PageviewContent.Live,
                             content_index: t
                         },
-                        i = e.stream && e.stream.game ? Object(x.c)(e.stream.game.name) : "",
+                        i = e.stream && e.stream.game ? Object(I.c)(e.stream.game.name) : "",
                         a = Object(U.a)({
                             tags: e.stream.tags,
                             section: D.a.LiveChannels
@@ -4174,9 +4074,9 @@
                     for (var l = 0; l < 5; l++) o.push(d.createElement(ee.VideoPreviewCardPlaceholder, {
                         key: "live-channels-placeholder-" + l
                     }));
-                return d.createElement("div", null, n, d.createElement(y.Xb, {
-                    gutterSize: y.Zb.Small,
-                    childWidth: y.Yb.Large,
+                return d.createElement("div", null, n, d.createElement(y.Vb, {
+                    gutterSize: y.Xb.Small,
+                    childWidth: y.Wb.Large,
                     placeholderItems: 20
                 }, o, i))
             }
@@ -4196,7 +4096,7 @@
                                     bottom: 2
                                 }
                             }, d.createElement(y.W, {
-                                type: y.Rb.H4,
+                                type: y.Pb.H4,
                                 color: y.O.Base,
                                 bold: !0
                             }, Object(m.d)("Based on your viewing history", "SuggestedVideos"))),
@@ -4204,14 +4104,14 @@
                         if (this.props.data.currentUser.recommendations.videos && (t = this.props.data.currentUser.recommendations.videos.edges.map(function(e) {
                                 return e.node
                             })), this.props.directoryWidth > 0) {
-                            var n = Object(P.a)(this.props.directoryWidth, 240, 2);
+                            var n = Object(O.a)(this.props.directoryWidth, 240, 2);
                             t = t.slice(0, n)
                         }
                         return d.createElement("div", null, e, d.createElement(ie.b, {
                             listContext: ne.b.MixedGameAndChannelList,
                             trackingMedium: w.PageviewMedium.Following,
                             trackingContent: w.PageviewContent.SuggestedVideos,
-                            videoCardSize: y.Yb.Large,
+                            videoCardSize: y.Wb.Large,
                             videos: t
                         }))
                     }, t = s.__decorate([Object(h.a)(ae, {
@@ -4227,7 +4127,7 @@
                 le = n("ZS2+"),
                 se = n("D7An"),
                 de = le.a.wrap(function() {
-                    return n.e(135).then(n.bind(null, "YBPT"))
+                    return n.e(134).then(n.bind(null, "YBPT"))
                 }, "LatestVideosFromFollowedCarousel"),
                 ce = function(e) {
                     var t = {
@@ -4264,41 +4164,33 @@
                         this.onRender()
                     }, t.prototype.render = function() {
                         var e = this.props.data && this.props.data.currentUser;
-                        if (this.props.data.error || !this.props.data.loading && !e) return d.createElement(p.a, {
+                        return this.props.data.error || !this.props.data.loading && !e ? d.createElement(p.a, {
                             message: Object(m.d)("Error loading data.", "FollowingPage")
-                        });
-                        var t = e && e.follows && e.follows.totalCount || 0,
-                            n = e && e.followedHosts && e.followedHosts.nodes && e.followedHosts.nodes.filter(function(e) {
-                                return null !== e
-                            }),
-                            i = e && e.followedLiveUsers && e.followedLiveUsers.nodes && e.followedLiveUsers.nodes.filter(function(e) {
-                                return null !== e
-                            });
-                        return d.createElement(y.Xa, {
+                        }) : d.createElement(y.Xa, {
                             padding: 3
                         }, d.createElement(S, null), d.createElement(te, {
                             key: "live-channels",
                             showSample: !0,
                             directoryWidth: this.state.directoryWidth,
-                            users: this.props.data.loading ? null : i,
-                            followsCount: t
+                            users: this.props.data.loading ? null : e && e.followedLiveUsers.nodes || [],
+                            followsCount: e ? e.follows.totalCount : 0
                         }), d.createElement(ce, {
                             tracking: {
                                 content: w.PageviewContent.Following,
                                 location: w.PageviewLocation.Directory,
                                 medium: w.PageviewMedium.Following
                             }
-                        }), this.props.firstPageLoaded && e && e.followedHosts && e.followedHosts.nodes && e.followedHosts.nodes.length > 0 && d.createElement(Q, {
+                        }), this.props.firstPageLoaded && e && e.followedHosts.nodes.length > 0 && d.createElement(Q, {
                             key: "live-hosts",
                             showSample: !0,
                             directoryWidth: this.state.directoryWidth,
-                            hosts: n || [],
-                            followsCount: t
-                        }), this.props.firstPageLoaded && e && d.createElement(j, {
+                            hosts: e ? e.followedHosts.nodes : [],
+                            followsCount: e ? e.follows.totalCount : 0
+                        }), this.props.firstPageLoaded && e && d.createElement(R, {
                             key: "live-games",
                             showSample: !0,
                             directoryWidth: this.state.directoryWidth,
-                            games: e && e.followedGames && e.followedGames.nodes || [],
+                            games: e ? e.followedGames.nodes : [],
                             onFollowChange: this.props.data.refetch
                         }), this.props.firstPageLoaded && d.createElement(re, {
                             directoryWidth: this.state.directoryWidth
@@ -4344,7 +4236,7 @@
                         var e, t = !1;
                         if (this.props.data.loading && !this.props.data.currentUser) e = d.createElement(y.Xa, {
                             display: y.X.Flex,
-                            position: y.hb.Absolute,
+                            position: y.fb.Absolute,
                             fullHeight: !0,
                             fullWidth: !0
                         }, d.createElement(y.Za, {
@@ -4356,16 +4248,14 @@
                         else {
                             var n = this.props.data.currentUser,
                                 i = [];
-                            n && n.followedLiveUsers && n.followedLiveUsers.edges && (i = n.followedLiveUsers.edges.filter(function(e) {
-                                return e && null !== e.node
-                            }).map(function(e) {
-                                return e && e.node
+                            n && n.followedLiveUsers.edges && (i = n.followedLiveUsers.edges.map(function(e) {
+                                return e.node
                             }));
-                            var a = n && n.follows && n.follows.totalCount || 0;
+                            var a = this.props.data.currentUser ? this.props.data.currentUser.follows.totalCount : 0;
                             e = d.createElement(te, {
                                 users: i,
                                 followsCount: a
-                            }), t = !this.props.data.loading && !this.props.data.error && !!(n && n.followedLiveUsers && n.followedLiveUsers.pageInfo.hasNextPage)
+                            }), t = !(!n || !n.followedLiveUsers.pageInfo.hasNextPage)
                         }
                         return d.createElement(y.Xa, {
                             padding: 3
@@ -4391,38 +4281,30 @@
                             return s.__assign({}, e, {
                                 loadMore: function() {
                                     if (e.data.currentUser) {
-                                        var t = e.data.currentUser.followedLiveUsers && e.data.currentUser.followedLiveUsers.edges,
-                                            n = t && t[t.length - 1],
-                                            i = {
+                                        var t = e.data.currentUser.followedLiveUsers.edges,
+                                            n = {
                                                 limit: 30,
-                                                cursor: n && n.cursor || ""
+                                                cursor: t[t.length - 1].cursor
                                             };
                                         return e.data.fetchMore({
                                             query: ge,
-                                            variables: i,
+                                            variables: n,
                                             updateQuery: function(e, t) {
                                                 var n = t.fetchMoreResult;
-                                                if (!(n.currentUser && n.currentUser.followedLiveUsers && e.currentUser && e.currentUser.followedLiveUsers)) return n;
-                                                var i = e.currentUser.followedLiveUsers.edges.filter(function(e) {
-                                                        return e && e.node
-                                                    }),
-                                                    a = n.currentUser.followedLiveUsers.edges.filter(function(e) {
-                                                        return e && e.node
-                                                    });
-                                                return {
+                                                return n.currentUser && e.currentUser ? {
                                                     currentUser: s.__assign({}, n.currentUser, {
                                                         followedLiveUsers: s.__assign({}, n.currentUser.followedLiveUsers, {
                                                             edges: function(e, t) {
                                                                 var n = new Set(e.map(function(e) {
-                                                                    return e && e.node && e.node.id
+                                                                    return e.node.id
                                                                 }));
                                                                 return e.concat(t.filter(function(e) {
-                                                                    return !n.has(e && e.node && e.node.id)
+                                                                    return !n.has(e.node.id)
                                                                 }))
-                                                            }(i, a)
+                                                            }(e.currentUser.followedLiveUsers.edges, n.currentUser.followedLiveUsers.edges)
                                                         })
                                                     })
-                                                }
+                                                } : n
                                             }
                                         })
                                     }
@@ -4440,7 +4322,7 @@
                             return {
                                 content_type: w.PageviewDirectoryContentType.Channels,
                                 tab: w.PageviewFollowingTab.Channels,
-                                num_live_channels: e.data.currentUser && e.data.currentUser.followedLiveUsers && e.data.currentUser.followedLiveUsers.edges.length || 0
+                                num_live_channels: e.data.currentUser && e.data.currentUser.followedLiveUsers.edges.length || 0
                             }
                         }
                     })], t)
@@ -4457,10 +4339,10 @@
                             component: ve
                         }), d.createElement(c.a, {
                             path: "/directory/following/hosts",
-                            component: J
+                            component: Z
                         }), d.createElement(c.a, {
                             path: "/directory/following/games",
-                            component: X
+                            component: B
                         }), d.createElement(c.a, {
                             path: "/",
                             component: pe
@@ -4507,7 +4389,7 @@
                     return i.__awaiter(n, void 0, void 0, function() {
                         var n, s;
                         return i.__generator(this, function(i) {
-                            return n = new Set(d()), t ? n.add(e) : n.delete(e), s = Array.from(n), a.m.set(o, s), l(Object(r.g)(s)), [2]
+                            return n = new Set(d()), t ? n.add(e) : n.delete(e), s = Array.from(n), a.m.set(o, s), l(Object(r.f)(s)), [2]
                         })
                     })
                 }
@@ -4518,7 +4400,7 @@
                 return function(n) {
                     return i.__awaiter(t, void 0, void 0, function() {
                         return i.__generator(this, function(t) {
-                            return a.m.set(o, e), n(Object(r.g)(e)), [2]
+                            return a.m.set(o, e), n(Object(r.f)(e)), [2]
                         })
                     })
                 }
@@ -4751,239 +4633,6 @@
                 })
             }(n("iiOx").definitions)), e.exports = i
         },
-        "Z/HV": function(e, t, n) {
-            var i = {
-                kind: "Document",
-                definitions: [{
-                    kind: "FragmentDefinition",
-                    name: {
-                        kind: "Name",
-                        value: "liveChannelFragment"
-                    },
-                    typeCondition: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "User"
-                        }
-                    },
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "id"
-                            },
-                            arguments: [],
-                            directives: []
-                        }, {
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "login"
-                            },
-                            arguments: [],
-                            directives: []
-                        }, {
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "displayName"
-                            },
-                            arguments: [],
-                            directives: []
-                        }, {
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "profileImageURL"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "width"
-                                },
-                                value: {
-                                    kind: "IntValue",
-                                    value: "50"
-                                }
-                            }],
-                            directives: []
-                        }, {
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "stream"
-                            },
-                            arguments: [],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "id"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "game"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "name"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "boxArtURL"
-                                            },
-                                            arguments: [{
-                                                kind: "Argument",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "width"
-                                                },
-                                                value: {
-                                                    kind: "IntValue",
-                                                    value: "40"
-                                                }
-                                            }, {
-                                                kind: "Argument",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "height"
-                                                },
-                                                value: {
-                                                    kind: "IntValue",
-                                                    value: "56"
-                                                }
-                                            }],
-                                            directives: []
-                                        }]
-                                    }
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "viewersCount"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "title"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "type"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "previewImageURL"
-                                    },
-                                    arguments: [{
-                                        kind: "Argument",
-                                        name: {
-                                            kind: "Name",
-                                            value: "width"
-                                        },
-                                        value: {
-                                            kind: "IntValue",
-                                            value: "320"
-                                        }
-                                    }, {
-                                        kind: "Argument",
-                                        name: {
-                                            kind: "Name",
-                                            value: "height"
-                                        },
-                                        value: {
-                                            kind: "IntValue",
-                                            value: "180"
-                                        }
-                                    }],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "tags"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "FragmentSpread",
-                                            name: {
-                                                kind: "Name",
-                                                value: "tagFragment"
-                                            },
-                                            directives: []
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 296
-                }
-            };
-            i.loc.source = {
-                body: '#import "twilight/features/tags/models/tag-fragment.gql"\nfragment liveChannelFragment on User {\nid\nlogin\ndisplayName\nprofileImageURL(width: 50)\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 56)\n}\nviewersCount\ntitle\ntype\npreviewImageURL(width: 320 height: 180)\ntags {\n...tagFragment\n}\n}\n}',
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            var a = {};
-            i.definitions = i.definitions.concat(function(e) {
-                return e.filter(function(e) {
-                    if ("FragmentDefinition" !== e.kind) return !0;
-                    var t = e.name.value;
-                    return !a[t] && (a[t] = !0, !0)
-                })
-            }(n("iiOx").definitions)), e.exports = i
-        },
         ZbA5: function(e, t, n) {
             "use strict";
             var i, a, r, o, l = n("mrSG"),
@@ -4997,14 +4646,14 @@
                 e.HostingDot = "stream-type-indicator__hosting-dot"
             }(o || (o = {}));
             var p = ((i = {})[u.a.Live] = "stream-type-indicator--live", i[u.a.Premiere] = "stream-type-indicator--premiere", i[u.a.Rerun] = "stream-type-indicator--rerun", i[u.a.WatchParty] = "stream-type-indicator--rerun", i),
-                g = ((a = {})[u.a.Premiere] = m.rb.VideoPremiere, a[u.a.Rerun] = m.rb.VideoRerun, a[u.a.WatchParty] = m.rb.VideoRerun, a),
-                v = ((r = {})[u.a.Premiere] = m.sb.Live, r[u.a.Rerun] = m.sb.Inherit, r[u.a.WatchParty] = m.sb.Inherit, r),
+                g = ((a = {})[u.a.Premiere] = m.pb.VideoPremiere, a[u.a.Rerun] = m.pb.VideoRerun, a[u.a.WatchParty] = m.pb.VideoRerun, a),
+                v = ((r = {})[u.a.Premiere] = m.qb.Live, r[u.a.Rerun] = m.qb.Inherit, r[u.a.WatchParty] = m.qb.Inherit, r),
                 h = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(m.Bb, {
+                        return d.createElement(m.zb, {
                             className: this.getClassNames(),
                             color: m.O.Overlay,
                             background: m.r.Overlay,
@@ -5020,7 +4669,7 @@
                                 right: .5
                             }
                         }, this.getIcon()), d.createElement(m.W, {
-                            type: m.Rb.Span
+                            type: m.Pb.Span
                         }, this.getLabel()))
                     }, t.prototype.getClassNames = function() {
                         var e = {
@@ -5028,7 +4677,7 @@
                         };
                         return e[p[this.props.type]] = !0, s(e)
                     }, t.prototype.getIcon = function() {
-                        return this.props.hosting ? d.createElement(m.Bb, {
+                        return this.props.hosting ? d.createElement(m.zb, {
                             borderRadius: m.x.Rounded,
                             className: "stream-type-indicator__hosting-dot",
                             "data-test-selector": o.HostingDot
@@ -5039,7 +4688,7 @@
                         }, d.createElement(m.K, {
                             status: m.M.Live,
                             size: m.L.Small
-                        })) : d.createElement(m.qb, {
+                        })) : d.createElement(m.ob, {
                             asset: g[this.props.type],
                             type: v[this.props.type],
                             width: 14,
@@ -5488,9 +5137,9 @@
                         });
                         t = a.createElement(a.Fragment, null, l)
                     }
-                    return a.createElement(c.Xb, {
-                        gutterSize: c.Zb.Small,
-                        childWidth: e.videoCardSize || c.Yb.Large,
+                    return a.createElement(c.Vb, {
+                        gutterSize: c.Xb.Small,
+                        childWidth: e.videoCardSize || c.Wb.Large,
                         placeholderItems: 20
                     }, t, n)
                 },
@@ -6054,31 +5703,31 @@
                 l = (n("1mcJ"), function(e) {
                     return a.createElement(o.Xa, i.__assign({
                         className: "drops-badge",
-                        position: o.hb.Absolute,
+                        position: o.fb.Absolute,
                         attachTop: !0,
                         attachRight: !0
-                    }, Object(o.fc)(e)), a.createElement(o.Ub, {
-                        direction: o.Wb.Top,
-                        align: o.Vb.Right,
+                    }, Object(o.dc)(e)), a.createElement(o.Sb, {
+                        direction: o.Ub.Top,
+                        align: o.Tb.Right,
                         label: Object(r.d)("Offers in-game Drops", "DropsBadge")
-                    }, a.createElement(o.Bb, {
+                    }, a.createElement(o.zb, {
                         className: "drops-badge__drops-icon",
-                        position: o.hb.Relative,
+                        position: o.fb.Relative,
                         padding: {
                             top: .5,
                             right: .5,
                             bottom: 3,
                             left: 3
                         },
-                        overflow: o.cb.Hidden,
+                        overflow: o.ab.Hidden,
                         color: o.O.Overlay,
-                        zIndex: o.ec.Default
+                        zIndex: o.cc.Default
                     }, a.createElement(o.U, {
                         type: o.V.Inherit,
                         hoverColorInherit: !0,
                         to: "https://help.twitch.tv/customer/en/portal/articles/2754380-how-to-earn-drops"
-                    }, a.createElement(o.qb, {
-                        asset: o.rb.Drops
+                    }, a.createElement(o.ob, {
+                        asset: o.pb.Drops
                     })))))
                 }),
                 s = n("0LAi"),
@@ -6099,11 +5748,11 @@
                     }
                 }, a.createElement(o.o, {
                     ratio: o.p.Aspect3x4
-                }, a.createElement(o.gb, null))), a.createElement(o.W, null, a.createElement(o.gb, {
+                }, a.createElement(o.eb, null))), a.createElement(o.W, null, a.createElement(o.eb, {
                     width: 150
                 })), a.createElement(o.W, {
                     fontSize: o.Ca.Size7
-                }, a.createElement(o.gb, {
+                }, a.createElement(o.eb, {
                     width: 100
                 }))) : (t = a.createElement(a.Fragment, null, a.createElement(o.Xa, {
                     className: "tw-box-art-card__image " + (e.unavailable && !e.disabled ? "tw-box-art-card__image--unavailable" : ""),
@@ -6125,7 +5774,7 @@
                     ellipsis: !0
                 }, a.createElement(o.W, {
                     className: "tw-box-art-card__title",
-                    type: o.Rb.H3,
+                    type: o.Pb.H3,
                     fontSize: o.Ca.Size5,
                     lineHeight: o.Ya.Body,
                     ellipsis: !0
@@ -6152,7 +5801,7 @@
                     tabIndex: e.tabIndex
                 }, t)), a.createElement("div", i.__assign({
                     className: "tw-box-art-card"
-                }, Object(o.fc)(e)), a.createElement(o.G, {
+                }, Object(o.dc)(e)), a.createElement(o.G, {
                     key: e.title
                 }, t), e.tagListProps && 0 !== e.tagListProps.tags.length && a.createElement(o.Xa, {
                     margin: {
@@ -6174,41 +5823,34 @@
                 r = n("q1tI"),
                 o = n("fvjX"),
                 l = n("yR8l"),
-                s = n("GnwI"),
-                d = n("Ue10"),
-                c = (n("BIFG"), n("BEfv"));
+                s = n("Ue10"),
+                d = (n("BIFG"), n("BEfv"));
             ! function(e) {
                 e.Bounce = "animated-tag--bounce", e.NoBounce = "animated-tag--no-bounce"
             }(i || (i = {}));
-            var u = function(e) {
+            var c = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.reportInteractive()
-                    }, t.prototype.componentDidUpdate = function() {
-                        this.reportInteractive()
-                    }, t.prototype.render = function() {
+                    return a.__extends(t, e), t.prototype.render = function() {
                         var e = null;
                         if (this.props.getTagFromGQL) {
                             if (!this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.contentTag) return null;
                             var t = this.props.data.contentTag;
-                            e = r.createElement(d.Ia, {
+                            e = r.createElement(s.Ia, {
                                 label: t.localizedName,
                                 onClick: this.props.onClickForGQLTag && this.props.onClickForGQLTag.bind(this, t),
                                 selected: !0,
-                                size: d.Sa.Large
+                                size: s.Sa.Large
                             })
-                        } else this.props.formTagProps && (e = r.createElement(d.Ia, a.__assign({}, this.props.formTagProps)));
+                        } else this.props.formTagProps && (e = r.createElement(s.Ia, a.__assign({}, this.props.formTagProps)));
                         return r.createElement("div", {
                             className: i.NoBounce,
                             "data-tag-filter": this.props.tagID
                         }, e)
-                    }, t.prototype.reportInteractive = function() {
-                        this.props.getTagFromGQL && this.props.data && (!this.props.data.loading || this.props.data.error) ? this.props.latencyTracking.reportInteractive() : this.props.getTagFromGQL || this.props.latencyTracking.reportInteractive()
                     }, t
                 }(r.Component),
-                m = Object(o.compose)(Object(l.a)(c, {
+                u = Object(o.compose)(Object(l.a)(d, {
                     options: function(e) {
                         return {
                             variables: {
@@ -6219,13 +5861,13 @@
                     skip: function(e) {
                         return !e.getTagFromGQL
                     }
-                }), Object(s.b)("AnimatedTag"))(u);
+                }))(c);
             n.d(t, "b", function() {
                 return i
             }), n.d(t, !1, function() {
-                return u
+                return c
             }), n.d(t, "a", function() {
-                return m
+                return u
             })
         },
         qyxT: function(e, t, n) {
@@ -6345,12 +5987,230 @@
                                             selectionSet: {
                                                 kind: "SelectionSet",
                                                 selections: [{
-                                                    kind: "FragmentSpread",
+                                                    kind: "Field",
                                                     name: {
                                                         kind: "Name",
-                                                        value: "liveHostFragment"
+                                                        value: "id"
                                                     },
+                                                    arguments: [],
                                                     directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "login"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "displayName"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "hosting"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "id"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "login"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "displayName"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "profileImageURL"
+                                                            },
+                                                            arguments: [{
+                                                                kind: "Argument",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "width"
+                                                                },
+                                                                value: {
+                                                                    kind: "IntValue",
+                                                                    value: "50"
+                                                                }
+                                                            }],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "stream"
+                                                            },
+                                                            arguments: [],
+                                                            directives: [],
+                                                            selectionSet: {
+                                                                kind: "SelectionSet",
+                                                                selections: [{
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "id"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "game"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: [],
+                                                                    selectionSet: {
+                                                                        kind: "SelectionSet",
+                                                                        selections: [{
+                                                                            kind: "Field",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "id"
+                                                                            },
+                                                                            arguments: [],
+                                                                            directives: []
+                                                                        }, {
+                                                                            kind: "Field",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "name"
+                                                                            },
+                                                                            arguments: [],
+                                                                            directives: []
+                                                                        }, {
+                                                                            kind: "Field",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "boxArtURL"
+                                                                            },
+                                                                            arguments: [{
+                                                                                kind: "Argument",
+                                                                                name: {
+                                                                                    kind: "Name",
+                                                                                    value: "width"
+                                                                                },
+                                                                                value: {
+                                                                                    kind: "IntValue",
+                                                                                    value: "40"
+                                                                                }
+                                                                            }, {
+                                                                                kind: "Argument",
+                                                                                name: {
+                                                                                    kind: "Name",
+                                                                                    value: "height"
+                                                                                },
+                                                                                value: {
+                                                                                    kind: "IntValue",
+                                                                                    value: "56"
+                                                                                }
+                                                                            }],
+                                                                            directives: []
+                                                                        }]
+                                                                    }
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "viewersCount"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "title"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "type"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "previewImageURL"
+                                                                    },
+                                                                    arguments: [{
+                                                                        kind: "Argument",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "width"
+                                                                        },
+                                                                        value: {
+                                                                            kind: "IntValue",
+                                                                            value: "320"
+                                                                        }
+                                                                    }, {
+                                                                        kind: "Argument",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "height"
+                                                                        },
+                                                                        value: {
+                                                                            kind: "IntValue",
+                                                                            value: "180"
+                                                                        }
+                                                                    }],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "tags"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: [],
+                                                                    selectionSet: {
+                                                                        kind: "SelectionSet",
+                                                                        selections: [{
+                                                                            kind: "FragmentSpread",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "broadcastTagFragment"
+                                                                            },
+                                                                            directives: []
+                                                                        }]
+                                                                    }
+                                                                }]
+                                                            }
+                                                        }]
+                                                    }
                                                 }]
                                             }
                                         }]
@@ -6362,11 +6222,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 237
+                    end: 442
                 }
             };
             i.loc.source = {
-                body: '#import "twilight/features/following/components/live-hosts/live-host-fragment.gql"\nquery FollowingHosts_CurrentUser($limit: Int) {\ncurrentUser {\nid\nfollows {\ntotalCount\n}\nfollowedHosts(first: $limit) {\nnodes {\n...liveHostFragment\n}\n}\n}\n}',
+                body: '#import "twilight/features/tags/models/broadcast-tag-fragment.gql"\nquery FollowingHosts_CurrentUser($limit: Int) {\ncurrentUser {\nid\nfollows {\ntotalCount\n}\nfollowedHosts(first: $limit) {\nnodes {\nid\nlogin\ndisplayName\nhosting {\nid\nlogin\ndisplayName\nprofileImageURL(width: 50)\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 56)\n}\nviewersCount\ntitle\ntype\npreviewImageURL(width: 320 height: 180)\ntags {\n...broadcastTagFragment\n}\n}\n}\n}\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -6380,7 +6240,7 @@
                     var t = e.name.value;
                     return !a[t] && (a[t] = !0, !0)
                 })
-            }(n("ILhQ").definitions)), e.exports = i
+            }(n("Iqxx").definitions)), e.exports = i
         },
         sLlB: function(e, t, n) {
             "use strict";
@@ -6414,7 +6274,7 @@
                                 className: "language-select-menu__balloon"
                             }, d.createElement(p.b, null, d.createElement(f.Xa, {
                                 padding: .5
-                            }, Object(g.b)().map(t.renderLanguageOption)))), d.createElement(f.Bb, {
+                            }, Object(g.b)().map(t.renderLanguageOption)))), d.createElement(f.zb, {
                                 background: f.r.Alt,
                                 borderTop: !0,
                                 className: "language-select-menu__footer"
@@ -6447,8 +6307,8 @@
                                 margin: {
                                     left: .5
                                 }
-                            }, 0 !== e && d.createElement(f.eb, {
-                                type: f.fb.Brand,
+                            }, 0 !== e && d.createElement(f.cb, {
+                                type: f.db.Brand,
                                 label: e.toString()
                             })))
                         }, t.trackLanguageChange = function(e, n) {
@@ -6502,7 +6362,7 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         return a.createElement("div", i.__assign({
                             className: "live-channel-card"
-                        }, Object(l.fc)(this.props)), a.createElement(r.a, {
+                        }, Object(l.dc)(this.props)), a.createElement(r.a, {
                             context: r.b.MixedGameAndChannelList,
                             title: this.props.title,
                             linkTo: this.props.linkTo,
@@ -6584,13 +6444,13 @@
                         onClick: this.handleInsideDropdownClick
                     }, e)), r.createElement(o.a, {
                         onClickOut: this.handleOnClickOut
-                    }, r.createElement(s.Bb, a.__assign({
+                    }, r.createElement(s.zb, a.__assign({
                         background: this.state.isOpen ? s.r.Base : void 0,
                         borderRadius: s.x.Large,
                         className: "inline-dropdown",
                         elevation: this.state.isOpen ? 3 : void 0,
                         padding: .5,
-                        position: s.hb.Relative
+                        position: s.fb.Relative
                     }, Object(l.a)(this.props)), r.createElement("div", {
                         className: "inline-dropdown__button-wrapper"
                     }, r.createElement(s.z, {
@@ -6599,7 +6459,7 @@
                         onClick: this.handleButtonClick,
                         size: s.D.Large,
                         type: s.F.Hollow
-                    }, this.props.buttonLabel)), r.createElement(s.Bb, {
+                    }, this.props.buttonLabel)), r.createElement(s.zb, {
                         attachLeft: !0,
                         background: s.r.Base,
                         borderRadius: s.x.Large,
@@ -6610,8 +6470,8 @@
                         padding: {
                             y: 1
                         },
-                        position: s.hb.Absolute,
-                        zIndex: s.ec.Above
+                        position: s.fb.Absolute,
+                        zIndex: s.cc.Above
                     }, e)))
                 }, t.prototype.toggleDropdown = function(e) {
                     void 0 === e && (e = !this.state.isOpen), this.setState({
@@ -6644,23 +6504,18 @@
                     return {
                         tags: t,
                         callback: function(e) {
-                            u && u(), e.isLanguageTag && i.p.store.dispatch(Object(l.c)(e.id, !0));
-                            var t = c.every(function(t) {
+                            if (u && u(), e.isLanguageTag && i.p.store.dispatch(Object(l.c)(e.id, !0)), c.every(function(t) {
                                     return t.id !== e.id
-                                }),
-                                d = Object(l.a)().every(function(t) {
-                                    return t !== e.id
-                                });
-                            if (t && d) {
+                                })) {
                                 s && s(e);
-                                var m = {
+                                var t = {
                                     section: n,
                                     tagPosition: c.length,
                                     searchEvent: !1,
                                     tagId: e.id,
                                     dismiss: !1
                                 };
-                                Object(o.b)(m)
+                                Object(o.b)(t)
                             } else ! function(e) {
                                 var t = document.querySelector('[data-tag-filter="' + e + '"]');
                                 if (t) {
@@ -6906,7 +6761,7 @@
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     return a.createElement(d.Pa, {
-                        position: d.hb.Relative,
+                        position: d.fb.Relative,
                         margin: {
                             bottom: 1
                         }
@@ -6916,10 +6771,10 @@
                         onMouseEnter: this.onMouseEnter,
                         onMouseLeave: this.onMouseLeave,
                         onClick: this.onClick
-                    }, Object(d.fc)(this.props)), a.createElement(d.G, {
+                    }, Object(d.dc)(this.props)), a.createElement(d.G, {
                         key: this.props.title
                     }, a.createElement(d.Xa, {
-                        position: d.hb.Relative
+                        position: d.fb.Relative
                     }, this.renderOverlay(), a.createElement(d.I, {
                         aspect: d.p.Aspect3x4,
                         alt: this.props.imageAlt,
@@ -6940,15 +6795,15 @@
                     var e, t = this.isFollowing();
                     return this.state.inProgress ? e = a.createElement(d.Za, {
                         delay: 0
-                    }) : this.state.hovered ? e = a.createElement(d.qb, {
+                    }) : this.state.hovered ? e = a.createElement(d.ob, {
                         width: 50,
                         height: 50,
-                        asset: t ? d.rb.Unheart : d.rb.Heart
-                    }) : t && (e = a.createElement(d.qb, {
+                        asset: t ? d.pb.Unheart : d.pb.Heart
+                    }) : t && (e = a.createElement(d.ob, {
                         width: 50,
                         height: 50,
-                        asset: d.rb.Heart
-                    })), e ? a.createElement(d.Bb, {
+                        asset: d.pb.Heart
+                    })), e ? a.createElement(d.zb, {
                         className: "follow-game-card__overlay " + (t ? "follow-game-card__overlay--followed" : ""),
                         background: d.r.Overlay,
                         color: d.O.Overlay,
@@ -6956,8 +6811,8 @@
                         display: d.X.Flex,
                         alignItems: d.f.Center,
                         justifyContent: d.Wa.Center,
-                        position: d.hb.Absolute,
-                        zIndex: d.ec.Above,
+                        position: d.fb.Absolute,
+                        zIndex: d.cc.Above,
                         attachBottom: !0,
                         attachTop: !0,
                         attachLeft: !0,

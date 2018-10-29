@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [114], {
+    [113], {
         "0ly3": function(e, t, a) {
             "use strict";
             var n = a("mrSG"),
@@ -19,7 +19,7 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        var e = i.createElement(s.xb, {
+                        var e = i.createElement(s.vb, {
                             onChange: this.onChange,
                             disabled: this.props.disabled,
                             defaultValue: this.props.defaultLanguage
@@ -317,44 +317,43 @@
         },
         C29h: function(e, t, a) {
             "use strict";
-            var n, i = a("mrSG"),
-                r = a("q1tI"),
-                s = a("9C/b"),
-                o = a("fvjX"),
-                l = a("/7QA"),
-                c = a("N3I0"),
+            var n = a("mrSG"),
+                i = a("q1tI"),
+                r = a("9C/b"),
+                s = a("fvjX"),
+                o = a("/7QA"),
+                l = a("N3I0"),
                 d = a("8/mp"),
-                u = a("f00E"),
-                g = a("H/lO"),
-                m = a("NZDK"),
-                p = a("yR8l"),
-                h = a("DMoW"),
-                f = a("GIun"),
-                v = a("Ue10"),
-                b = function(e) {
+                c = a("f00E"),
+                u = a("H/lO"),
+                g = a("NZDK"),
+                m = a("yR8l"),
+                p = a("DMoW"),
+                h = a("GIun"),
+                f = a("Ue10"),
+                v = function(e) {
                     var t, a = e.onClick,
                         n = e.tag;
                     a && (t = function() {
                         return a(n)
                     });
-                    var i = "localizedDescription" in e.tag ? e.tag.localizedDescription : void 0;
-                    return r.createElement(f.a, null, r.createElement(v.Ua, {
+                    var r = "localizedDescription" in e.tag ? e.tag.localizedDescription : void 0;
+                    return i.createElement(h.a, null, i.createElement(f.Ua, {
                         onClick: t
-                    }, r.createElement(v.Xa, {
+                    }, i.createElement(f.Xa, {
                         padding: {
                             y: .5,
                             x: 1
                         }
-                    }, r.createElement(v.W, {
-                        title: i
+                    }, i.createElement(f.W, {
+                        title: r
                     }, n.localizedName))))
-                },
-                T = a("y5I9"),
-                k = a("Ryvb");
+                };
+            var b, k = a("Ryvb");
             ! function(e) {
                 e.SuggestedTags = "suggested-tags"
-            }(n || (n = {}));
-            var y, S, E = function(e) {
+            }(b || (b = {}));
+            var T, S, y = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -366,14 +365,14 @@
                         }, t.renderTags = function() {
                             if (!t.props.data.game || !t.props.data.game.tags || !t.state.filteredTopTags) return null;
                             var e;
-                            return e = t.state.filteredTopTags.map(t.renderSuggestedTag), r.createElement(v.Xa, {
+                            return e = t.state.filteredTopTags.map(t.renderSuggestedTag), i.createElement(f.Xa, {
                                 padding: {
                                     bottom: 1
                                 }
                             }, e)
                         }, t.renderSuggestedTag = function(e) {
-                            return r.createElement(b, {
-                                "data-test-selector": n.SuggestedTags,
+                            return i.createElement(v, {
+                                "data-test-selector": b.SuggestedTags,
                                 key: e.id,
                                 onClick: function() {
                                     return t.props.onAddTag(e)
@@ -382,10 +381,20 @@
                             })
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                    return n.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                         var t = this.props.data.game,
                             a = e.data.game;
-                        if (Object(T.a)(this.props.selectedTagIDs, e.selectedTagIDs) || Object(T.b)(t && t.tags, a && a.tags)) {
+                        if (function(e, t) {
+                                return e.length !== t.length || e.some(function(e, a) {
+                                    return t[a] !== e
+                                })
+                            }(this.props.selectedTagIDs, e.selectedTagIDs) || function(e, t) {
+                                var a = e || [],
+                                    n = t || [];
+                                return a.length !== n.length || a.some(function(e, t) {
+                                    return e.id !== n[t].id
+                                })
+                            }(t && t.tags, a && a.tags)) {
                             var n = a && a.tags && a.tags.filter(function(e) {
                                 return !e.isAutomated
                             }).filter(function(t) {
@@ -396,36 +405,36 @@
                             })
                         }
                     }, t.prototype.render = function() {
-                        return this.props.data.loading || this.props.data.error ? null : this.props.data.game && this.props.data.game.tags && 0 !== this.props.data.game.tags.length && this.state.filteredTopTags && 0 !== this.state.filteredTopTags.length ? r.createElement(v.Xa, null, r.createElement(v.Xa, {
+                        return this.props.data.loading || this.props.data.error ? null : this.props.data.game && this.props.data.game.tags && 0 !== this.props.data.game.tags.length && this.state.filteredTopTags && 0 !== this.state.filteredTopTags.length ? i.createElement(f.Xa, null, i.createElement(f.Xa, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, r.createElement(v.W, {
+                        }, i.createElement(f.W, {
                             bold: !0
-                        }, Object(l.d)("Suggestions", "TagSuggestions"))), this.renderTags(), r.createElement(v.Xa, {
+                        }, Object(o.d)("Suggestions", "TagSuggestions"))), this.renderTags(), i.createElement(f.Xa, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, r.createElement(v.W, {
+                        }, i.createElement(f.W, {
                             bold: !0
-                        }, Object(l.d)("All Tags", "AllTagsTitle")))) : null
+                        }, Object(o.d)("All Tags", "AllTagsTitle")))) : null
                     }, t
-                }(r.Component),
-                C = Object(p.a)(k, {
+                }(i.Component),
+                N = Object(m.a)(k, {
                     options: function(e) {
                         return {
                             variables: {
                                 gameName: e.gameName,
-                                tagType: h.O.TOP,
+                                tagType: p.N.TOP,
                                 limit: 50
                             }
                         }
                     }
-                })(E),
-                N = a("79jw"),
-                _ = function(e) {
+                })(y),
+                C = a("79jw"),
+                E = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderTags = function() {
@@ -435,13 +444,13 @@
                                 return e.localizedName.localeCompare(t.localizedName)
                             }).map(t.renderTag) : null
                         }, t.renderTag = function(e) {
-                            return r.createElement(f.a, {
+                            return i.createElement(h.a, {
                                 key: e.id
-                            }, r.createElement(v.Ua, {
+                            }, i.createElement(f.Ua, {
                                 onClick: function() {
                                     return t.props.onAddTag(e)
                                 }
-                            }, r.createElement(v.Xa, {
+                            }, i.createElement(f.Xa, {
                                 padding: {
                                     y: .5,
                                     x: 1
@@ -449,18 +458,18 @@
                             }, e.localizedName || e.tagName)))
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        return this.props.data.error ? null : this.props.data.loading ? r.createElement(v.Xa, {
-                            display: v.X.Flex,
-                            justifyContent: v.Wa.Center,
+                    return n.__extends(t, e), t.prototype.render = function() {
+                        return this.props.data.error ? null : this.props.data.loading ? i.createElement(f.Xa, {
+                            display: f.X.Flex,
+                            justifyContent: f.Wa.Center,
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, r.createElement(v.Za, null)) : r.createElement(v.Xa, null, this.renderTags())
+                        }, i.createElement(f.Za, null)) : i.createElement(f.Xa, null, this.renderTags())
                     }, t
-                }(r.Component),
-                O = Object(o.compose)(Object(p.a)(N, {
+                }(i.Component),
+                _ = Object(s.compose)(Object(m.a)(C, {
                     options: function(e) {
                         return {
                             variables: {
@@ -470,36 +479,36 @@
                             }
                         }
                     }
-                }))(_),
-                w = a("sLmD"),
-                F = a("AZIu"),
-                A = a("4HIT");
+                }))(E),
+                F = a("sLmD"),
+                w = a("AZIu"),
+                O = a("4HIT");
             a("97MP");
             ! function(e) {
                 e[e.TagAll = 0] = "TagAll", e[e.TagAllMinusAutomation = 1] = "TagAllMinusAutomation", e[e.TagCategory = 2] = "TagCategory", e[e.StreamTag = 3] = "StreamTag"
-            }(y || (y = {})),
+            }(T || (T = {})),
             function(e) {
                 e.SearchContent = "tag-search-search-content", e.SearchDropdown = "search-dropdown-selector"
             }(S || (S = {}));
-            var I = function(e) {
+            var A = function(e) {
                     function t(t) {
                         var a = e.call(this, t) || this;
                         return a.state = {
                             isOpen: !1,
                             searching: !1,
                             searchTerm: ""
-                        }, a.languageCode = Object(w.a)(), a.renderSearchContent = function() {
+                        }, a.languageCode = Object(F.a)(), a.renderSearchContent = function() {
                             var e = null;
-                            return e = a.props.type === y.StreamTag ? a.renderStreamTagResults() : a.renderTagResults(), r.createElement(d.b, {
+                            return e = a.props.type === T.StreamTag ? a.renderStreamTagResults() : a.renderTagResults(), i.createElement(d.b, {
                                 className: "tag-search__scrollable-area",
                                 suppressScrollX: !0
-                            }, r.createElement(v.Xa, {
+                            }, i.createElement(f.Xa, {
                                 "data-test-selector": S.SearchContent
                             }, a.renderSuggestedTags(), e))
                         }, a.renderTagSearchResult = function(e) {
-                            var t = Object(w.b)(e, a.props.type === y.TagAllMinusAutomation),
+                            var t = Object(F.b)(e),
                                 n = "tag_scope" in e ? e.tag_scope : void 0;
-                            return r.createElement(b, {
+                            return i.createElement(v, {
                                 key: t.id,
                                 onClick: function() {
                                     return a.onTagResultSelected(t, n)
@@ -507,20 +516,24 @@
                                 tag: t
                             })
                         }, a.renderStreamTagResults = function() {
-                            return a.props.type === y.StreamTag && a.state.isOpen ? "" === a.state.searchTerm ? r.createElement(O, {
+                            return a.props.type === T.StreamTag && a.state.isOpen ? "" === a.state.searchTerm ? i.createElement(_, {
                                 categoryName: a.props.categoryName,
                                 onAddTag: a.onTagResultSelected,
                                 tagsLimit: 100
                             }) : !a.state.searchResults && a.state.searching ? a.renderLoading() : a.state.searchResults && a.state.searchResults.streamTags && a.state.searchResults.streamTags.hits.length ? a.state.searchResults.streamTags.hits.map(a.renderTagSearchResult) : a.renderNoResults() : null
                         }, a.renderTagResults = function() {
-                            return a.state.isOpen ? a.props.type === y.TagAll && "" === a.state.searchTerm ? r.createElement(O, {
+                            return a.state.isOpen ? a.props.type === T.TagAll && "" === a.state.searchTerm ? i.createElement(_, {
                                 onAddTag: a.onTagResultSelected,
                                 tagsLimit: 100
                             }) : !a.state.searchResults && a.state.searching ? a.renderLoading() : a.state.searchResults && a.state.searchResults.tags && a.state.searchResults.tags.hits.length ? a.state.searchResults.tags.hits.map(a.renderTagSearchResult) : a.renderNoResults() : null
                         }, a.setTagSearchRef = function(e) {
                             a.tagSearch = e
                         }, a.onTagResultSelected = function(e, t) {
-                            if (a.toggleTagSearch(!1), a.clearSearchTerm(), a.props.type === y.TagCategory && "SCOPE_ALL" === t ? l.p.history.push(A.a.Popular) : a.props.type === y.TagAll && "SCOPE_CATEGORY" === t && l.p.history.push(A.a.Games), a.props.onTagClick && (a.props.onTagClick(e), a.props.section && a.props.numSelectedTags)) {
+                            if (a.toggleTagSearch(!1), a.clearSearchTerm(), a.props.type === T.TagCategory && "SCOPE_ALL" === t ? o.p.history.push(O.a.Popular, {
+                                    persistTags: !0
+                                }) : a.props.type === T.TagAll && "SCOPE_CATEGORY" === t && o.p.history.push(O.a.Games, {
+                                    persistTags: !0
+                                }), a.props.onTagClick && (a.props.onTagClick(e), a.props.section && a.props.numSelectedTags)) {
                                 var n = {
                                     section: a.props.section,
                                     tagPosition: a.props.numSelectedTags,
@@ -528,14 +541,14 @@
                                     tagId: e.id,
                                     dismiss: !1
                                 };
-                                Object(F.b)(n)
+                                Object(w.b)(n)
                             }
                         }, a.onInputChange = function(e) {
                             a.props.onInputChange && a.props.onInputChange(e), clearTimeout(a.inputTimeout), a.toggleTagSearch(!0), a.setState({
                                 searchTerm: e,
                                 searching: !0
                             }, function() {
-                                (a.props.type !== y.TagAll && a.props.type !== y.StreamTag || a.props.type === y.TagAll && "" !== a.state.searchTerm || a.props.type === y.StreamTag && "" !== a.state.searchTerm) && (a.inputTimeout = setTimeout(function() {
+                                (a.props.type !== T.TagAll && a.props.type !== T.StreamTag || a.props.type === T.TagAll && "" !== a.state.searchTerm || a.props.type === T.StreamTag && "" !== a.state.searchTerm) && (a.inputTimeout = setTimeout(function() {
                                     a.search(a.state.searchTerm)
                                 }, 200))
                             })
@@ -552,17 +565,17 @@
                                 searchTerm: "",
                                 searching: !1
                             })
-                        }, a.searchClient = new m.a({
-                            appId: l.a.algoliaApplicationID,
-                            apiKey: l.a.algoliaAPIKey,
-                            apolloClient: l.p.apollo.client,
-                            logger: l.k,
-                            config: l.a,
-                            stats: l.p.stats
+                        }, a.searchClient = new g.a({
+                            appId: o.a.algoliaApplicationID,
+                            apiKey: o.a.algoliaAPIKey,
+                            apolloClient: o.p.apollo.client,
+                            logger: o.k,
+                            config: o.a,
+                            stats: o.p.stats
                         }), a
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(c.a, {
+                    return n.__extends(t, e), t.prototype.render = function() {
+                        return i.createElement(l.a, {
                             autoFocus: this.props.autoFocus,
                             "data-test-selector": S.SearchDropdown,
                             inline: this.props.inline,
@@ -570,66 +583,66 @@
                             onChange: this.onInputChange,
                             onFocusInput: this.onFocusInput,
                             onClose: this.onSearchClose,
-                            placeholder: Object(l.d)("Search Tags", "TagSearch"),
+                            placeholder: Object(o.d)("Search Tags", "TagSearch"),
                             ref: this.setTagSearchRef
                         }, this.renderSearchContent())
                     }, t.prototype.renderLoading = function() {
-                        return r.createElement(v.Xa, {
-                            display: v.X.Flex,
-                            justifyContent: v.Wa.Center,
+                        return i.createElement(f.Xa, {
+                            display: f.X.Flex,
+                            justifyContent: f.Wa.Center,
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, r.createElement(v.Za, {
+                        }, i.createElement(f.Za, {
                             delay: 0
                         }))
                     }, t.prototype.renderNoResults = function() {
-                        return this.state.searching ? null : r.createElement(v.Xa, {
+                        return this.state.searching ? null : i.createElement(f.Xa, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, Object(l.d)("No results found", "TagSearch"))
+                        }, Object(o.d)("No results found", "TagSearch"))
                     }, t.prototype.renderSuggestedTags = function() {
-                        if (this.props.type !== y.TagAllMinusAutomation || "" !== this.state.searchTerm) return null;
+                        if (this.props.type !== T.TagAllMinusAutomation || "" !== this.state.searchTerm) return null;
                         var e = this.props.selectedTags && this.props.selectedTags.map(function(e) {
                             return e.id
                         }) || [];
-                        return r.createElement(v.Xa, null, r.createElement(C, {
+                        return i.createElement(f.Xa, null, i.createElement(N, {
                             gameName: this.props.categoryName,
                             onAddTag: this.onTagResultSelected,
                             selectedTagIDs: e
                         }))
                     }, t.prototype.search = function(e) {
-                        return i.__awaiter(this, void 0, void 0, function() {
-                            var t, a, n;
-                            return i.__generator(this, function(i) {
-                                switch (i.label) {
+                        return n.__awaiter(this, void 0, void 0, function() {
+                            var t, a, i;
+                            return n.__generator(this, function(n) {
+                                switch (n.label) {
                                     case 0:
                                         return e = e || "", t = {
                                             hitsPerPage: 100,
                                             restrictSearchableAttributes: ["localizations." + this.languageCode, "tag_name"]
-                                        }, a = g.a.Tags, this.props.type === y.TagAllMinusAutomation ? (t.facetFilters = '["automated:false", "tag_scope:SCOPE_ALL"]', this.props.showAllDashboardTags && (t.hitsPerPage = 300)) : this.props.type === y.TagAll ? this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:SCOPE_ALL" : t.facetFilters = '[["tag_scope:SCOPE_ALL", "tag_scope:SCOPE_CATEGORY"]]' : this.props.type === y.TagCategory ? "" === e || this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:SCOPE_CATEGORY" : t.facetFilters = '[["tag_scope:SCOPE_ALL", "tag_scope:SCOPE_CATEGORY"]]' : this.props.type === y.StreamTag && (a = g.a.StreamTags, t.facetFilters = "category_id:" + this.props.categoryID), [4, this.searchClient.queryForType(a, e, u.a(), t)];
+                                        }, a = u.a.Tags, this.props.type === T.TagAllMinusAutomation ? (t.facetFilters = '["automated:false", "tag_scope:SCOPE_ALL"]', this.props.showAllDashboardTags && (t.hitsPerPage = 300)) : this.props.type === T.TagAll ? this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:SCOPE_ALL" : t.facetFilters = '[["tag_scope:SCOPE_ALL", "tag_scope:SCOPE_CATEGORY"]]' : this.props.type === T.TagCategory ? "" === e || this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:SCOPE_CATEGORY" : t.facetFilters = '[["tag_scope:SCOPE_ALL", "tag_scope:SCOPE_CATEGORY"]]' : this.props.type === T.StreamTag && (a = u.a.StreamTags, t.facetFilters = "category_id:" + this.props.categoryID), [4, this.searchClient.queryForType(a, e, c.a(), t)];
                                     case 1:
-                                        return n = i.sent(), this.setState({
-                                            searchResults: n,
+                                        return i = n.sent(), this.setState({
+                                            searchResults: i,
                                             searching: !1
                                         }), [2]
                                 }
                             })
                         })
                     }, t
-                }(r.Component),
-                L = Object(o.compose)(s.a)(I);
+                }(i.Component),
+                I = Object(s.compose)(r.a)(A);
             a.d(t, "b", function() {
-                return y
+                return T
             }), a.d(t, !1, function() {
                 return S
             }), a.d(t, !1, function() {
-                return I
+                return A
             }), a.d(t, "a", function() {
-                return L
+                return I
             })
         },
         FsIG: function(e, t, a) {
@@ -1009,29 +1022,29 @@
                         padding: {
                             y: 1
                         },
-                        zIndex: o.ec.Above
-                    }, i.createElement(o.Bb, {
+                        zIndex: o.cc.Above
+                    }, i.createElement(o.zb, {
                         color: o.O.Alt2,
-                        textAlign: o.Nb.Center,
+                        textAlign: o.Lb.Center,
                         flexShrink: 1
-                    }, i.createElement(o.qb, {
-                        asset: o.rb.DeadGlitch,
+                    }, i.createElement(o.ob, {
+                        asset: o.pb.DeadGlitch,
                         width: 46,
                         height: 48
                     })), i.createElement(o.Pa, {
                         margin: {
                             top: 1
                         },
-                        textAlign: o.Nb.Center
+                        textAlign: o.Lb.Center
                     }, i.createElement(o.W, {
-                        type: o.Rb.H4,
+                        type: o.Pb.H4,
                         "data-test-selector": "search-error-message"
                     }, Object(s.d)("Search is not available at this time", "DropdownSearchError"))), i.createElement(o.W, {
-                        type: o.Rb.P
+                        type: o.Pb.P
                     }, Object(s.d)("Please try again later", "DropdownSearchError")))
                 },
-                c = a("8Ad5"),
-                d = function(e) {
+                d = a("8Ad5"),
+                c = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1052,9 +1065,9 @@
                             var a = function() {
                                 e.preventDefault(), e.stopPropagation()
                             };
-                            e.keyCode === c.a.Esc ? t.setState({
+                            e.keyCode === d.a.Esc ? t.setState({
                                 isOpen: !1
-                            }) : e.keyCode === c.a.Up ? (a(), t.focusNext(-1)) : e.keyCode === c.a.Down && (a(), t.focusNext(1))
+                            }) : e.keyCode === d.a.Up ? (a(), t.focusNext(-1)) : e.keyCode === d.a.Down && (a(), t.focusNext(1))
                         }, t.onClickOut = function() {
                             t.state.isOpen && t.setState({
                                 isOpen: !1
@@ -1071,7 +1084,7 @@
                     return n.__extends(t, e), t.prototype.render = function() {
                         var e = void 0 === this.props.showDropdown || this.props.showDropdown,
                             t = this.props.isErrored ? i.createElement(l, null) : i.Children.only(this.props.children),
-                            a = i.createElement(o.tb, {
+                            a = i.createElement(o.rb, {
                                 onChange: this.handleChange,
                                 onKeyDown: this.onKeyDown,
                                 onBlur: this.handleBlur,
@@ -1086,13 +1099,13 @@
                             });
                         return this.props.inline ? i.createElement(r.a, {
                             onClickOut: this.onClickOut
-                        }, i.createElement(o.Bb, {
+                        }, i.createElement(o.zb, {
                             background: this.state.isInputFocused || this.state.isOpen ? o.r.Base : void 0,
                             borderRadius: o.x.Large,
                             padding: .5,
-                            position: o.hb.Relative,
+                            position: o.fb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, a, e && i.createElement(o.Bb, {
+                        }, a, e && i.createElement(o.zb, {
                             attachLeft: !0,
                             background: o.r.Base,
                             borderRadius: o.x.Large,
@@ -1101,8 +1114,8 @@
                             padding: {
                                 y: 1
                             },
-                            position: o.hb.Absolute,
-                            zIndex: o.ec.Above,
+                            position: o.fb.Absolute,
+                            zIndex: o.cc.Above,
                             elevation: 3
                         }, i.createElement("div", {
                             tabIndex: 0,
@@ -1138,7 +1151,7 @@
                     }, t
                 }(i.Component);
             a.d(t, "a", function() {
-                return d
+                return c
             })
         },
         Ryvb: function(e, t, a) {
@@ -1634,6 +1647,106 @@
                                     kind: "Field",
                                     name: {
                                         kind: "Name",
+                                        value: "directories"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "nodes"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "id"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "displayName"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "directoryType"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "name"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "broadcastersCount"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "viewersCount"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "avatarURL"
+                                                    },
+                                                    arguments: [{
+                                                        kind: "Argument",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "width"
+                                                        },
+                                                        value: {
+                                                            kind: "IntValue",
+                                                            value: "40"
+                                                        }
+                                                    }, {
+                                                        kind: "Argument",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "height"
+                                                        },
+                                                        value: {
+                                                            kind: "IntValue",
+                                                            value: "55"
+                                                        }
+                                                    }],
+                                                    directives: []
+                                                }]
+                                            }
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
                                         value: "chatSettings"
                                     },
                                     arguments: [],
@@ -1677,11 +1790,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 443
+                    end: 566
                 }
             };
             n.loc.source = {
-                body: '#import "twilight/features/tags/models/broadcast-tag-fragment.gql"\nquery EditBroadcastModal($login: String!) {\nuser(login: $login) {\nid\nlastBroadcast {\nid\ntitle\ngame {\nid\nname\nboxArtURL(width: 40 height: 55)\n}\n}\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 55)\n}\ntags {\n...broadcastTagFragment\n}\ntitle\n}\nbroadcastSettings {\nid\nlanguage\ngame {\nid\nname\n}\ntitle\n}\nchatSettings {\nisBroadcasterLanguageModeEnabled\n}\n}\ncurrentUser {\nid\n}\n}',
+                body: '#import "twilight/features/tags/models/broadcast-tag-fragment.gql"\nquery EditBroadcastModal($login: String!) {\nuser(login: $login) {\nid\nlastBroadcast {\nid\ntitle\ngame {\nid\nname\nboxArtURL(width: 40 height: 55)\n}\n}\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 55)\n}\ntags {\n...broadcastTagFragment\n}\ntitle\n}\nbroadcastSettings {\nid\nlanguage\ngame {\nid\nname\n}\ntitle\n}\ndirectories {\nnodes {\nid\ndisplayName\ndirectoryType\nname\nbroadcastersCount\nviewersCount\navatarURL(width: 40 height: 55)\n}\n}\nchatSettings {\nisBroadcasterLanguageModeEnabled\n}\n}\ncurrentUser {\nid\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -2008,8 +2121,8 @@
                 s = a("/MKj"),
                 o = a("fvjX"),
                 l = a("/7QA"),
-                c = a("cZKs"),
-                d = a("aCAx"),
+                d = a("cZKs"),
+                c = a("aCAx"),
                 u = a("kOut"),
                 g = a("Ue10");
             a("w4St");
@@ -2024,7 +2137,7 @@
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(g.Bb, {
+                    return r.createElement(g.zb, {
                         className: "edit-broadcast__container",
                         background: g.r.Base,
                         padding: {
@@ -2037,8 +2150,8 @@
                             bottom: 1
                         }
                     }, r.createElement(g.W, {
-                        type: g.Rb.H4
-                    }, Object(l.d)("Broadcast Options", "EditBroadcastModal"))), r.createElement(g.Bb, {
+                        type: g.Pb.H4
+                    }, Object(l.d)("Broadcast Options", "EditBroadcastModal"))), r.createElement(g.zb, {
                         borderTop: !0,
                         margin: {
                             top: 2
@@ -2057,12 +2170,12 @@
                         }, Object(l.d)("Cancel", "EditBroadcastModal"))),
                         onSubmit: this.handleOnSubmit,
                         channelLogin: this.props.channelLogin
-                    })), r.createElement(c.a, null))
+                    })), r.createElement(d.a, null))
                 }, t
             }(r.Component);
             var p = Object(s.connect)(null, function(e) {
                 return Object(o.bindActionCreators)({
-                    closeModal: d.c
+                    closeModal: c.c
                 }, e)
             })(m);
             a.d(t, "TestSelectors", function() {
@@ -2078,8 +2191,8 @@
             "use strict";
             var n, i, r, s, o = a("mrSG"),
                 l = a("cr+I"),
-                c = a("q1tI"),
-                d = a("oJmH"),
+                d = a("q1tI"),
+                c = a("oJmH"),
                 u = a("/7QA"),
                 g = a("0ly3"),
                 m = a("yR8l"),
@@ -2088,11 +2201,11 @@
                 f = a("b6Yk"),
                 v = a("f00E"),
                 b = a("N3I0"),
-                T = a("GIun"),
-                k = a("8/mp"),
-                y = a("N0BP"),
-                S = a("Ue10"),
-                E = function(e) {
+                k = a("GIun"),
+                T = a("8/mp"),
+                S = a("N0BP"),
+                y = a("Ue10"),
+                N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClick = function() {
@@ -2100,32 +2213,32 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(S.Ua, o.__assign({
+                        return d.createElement(y.Ua, o.__assign({
                             onClick: this.onClick,
                             tabIndex: -1
-                        }, Object(y.a)(this.props)), c.createElement(S.Xa, {
+                        }, Object(S.a)(this.props)), d.createElement(y.Xa, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, c.createElement(S.G, {
+                        }, d.createElement(y.G, {
                             row: !0
-                        }, c.createElement(S.I, {
+                        }, d.createElement(y.I, {
                             alt: this.props.game.name,
                             src: "https://static-cdn.jtvnw.net/ttv-boxart/" + this.props.game.name + "-40x55.jpg",
-                            size: S.J.Size3,
-                            aspect: S.p.BoxArt
-                        }), c.createElement(S.H, {
-                            overflow: S.cb.Hidden
-                        }, c.createElement(S.Pa, {
+                            size: y.J.Size3,
+                            aspect: y.p.BoxArt
+                        }), d.createElement(y.H, {
+                            overflow: y.ab.Hidden
+                        }, d.createElement(y.Pa, {
                             padding: {
                                 x: 1
                             }
-                        }, c.createElement(S.W, {
-                            type: S.Rb.P
+                        }, d.createElement(y.W, {
+                            type: y.Pb.P
                         }, this.props.game.name))))))
                     }, t
-                }(c.Component),
+                }(d.Component),
                 C = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2141,35 +2254,35 @@
                         var e = this,
                             t = Object(u.d)("Category", "GameSearch"),
                             a = Object(u.d)("Search for a category", "GameSearch");
-                        return c.createElement(S.Ea, {
+                        return d.createElement(y.Ea, {
                             error: this.props.error,
                             errorMessage: this.props.errorMessage,
                             label: t
-                        }, c.createElement(b.a, {
+                        }, d.createElement(b.a, {
                             onChange: this.props.onGameInputChange,
                             ref: this.setGameSearchRef,
                             placeholder: a,
                             balloonProps: {
                                 show: this.props.isGameSearchOpen,
-                                direction: S.v.Bottom
+                                direction: y.v.Bottom
                             }
-                        }, c.createElement(k.b, {
+                        }, d.createElement(T.b, {
                             className: "edit-broadcast__game-search",
                             suppressScrollX: !0
-                        }, c.createElement("div", null, this.props.gameResults && this.props.gameResults.hits.map(function(t) {
-                            return c.createElement(T.a, {
+                        }, d.createElement("div", null, this.props.gameResults && this.props.gameResults.hits.map(function(t) {
+                            return d.createElement(k.a, {
                                 key: t.objectID
-                            }, c.createElement(E, {
+                            }, d.createElement(N, {
                                 game: t,
                                 onClick: e.props.onGameResultSelected,
                                 key: t.objectID
                             }))
                         })))))
                     }, t
-                }(c.Component),
-                N = a("H/lO"),
+                }(d.Component),
+                E = a("H/lO"),
                 _ = a("NZDK"),
-                O = 100,
+                F = 100,
                 w = function(e) {
                     function t(t) {
                         var a = e.call(this, t) || this;
@@ -2188,7 +2301,7 @@
                                         isWaiting: !0
                                     }), this.inputTimer = setTimeout(function() {
                                         return t.doGameSearch(e)
-                                    }, O), [2]) : (this.setState({
+                                    }, F), [2]) : (this.setState({
                                         isGameSearchOpen: !1,
                                         gameTerm: ""
                                     }), this.props.onGameCleared(), [2])
@@ -2208,7 +2321,7 @@
                         }), a
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(C, o.__assign({}, this.props, {
+                        return d.createElement(C, o.__assign({}, this.props, {
                             onGameInputChange: this.onGameInputChange,
                             isGameSearchOpen: this.state.isGameSearchOpen,
                             gameResults: this.state.gameResults,
@@ -2227,7 +2340,7 @@
                                     case 1:
                                         i.sent(), a = null, i.label = 2;
                                     case 2:
-                                        return i.trys.push([2, 4, , 5]), [4, this.searchClient.queryForType(N.a.Games, e, t)];
+                                        return i.trys.push([2, 4, , 5]), [4, this.searchClient.queryForType(E.a.Games, e, t)];
                                     case 3:
                                         return a = i.sent(), [3, 5];
                                     case 4:
@@ -2243,8 +2356,8 @@
                             })
                         })
                     }, t
-                }(c.Component),
-                F = a("2Dck");
+                }(d.Component),
+                O = a("2Dck");
             ! function(e) {
                 e.Title = "title", e.GoLiveNotification = "goLiveNotification", e.GameCategory = "gameCategory", e.Language = "language", e.Tags = "tags"
             }(n || (n = {})),
@@ -2264,7 +2377,7 @@
                 R = a("X6el");
             a("iUE2");
 
-            function x(e) {
+            function G(e) {
                 switch (e) {
                     default: return e;
                     case i.Empty:
@@ -2279,7 +2392,7 @@
                             return Object(u.d)("Title too long.", "EditBroadcastComponent")
                 }
             }
-            var G = 2500,
+            var x = 2500,
                 B = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2324,11 +2437,11 @@
                                                     r = i.broadcastSettings,
                                                     s = i.lastBroadcast,
                                                     l = i.stream,
-                                                    c = l && l.tags || [];
+                                                    d = l && l.tags || [];
                                                 return r && (n.fields.language.value = r.language), n.fields.title.value = l && l.title || s && s.title || "", n.selectedGame = l && l.id && l.game && l.game.name || s && s.game && s.game.name || "", n.fields.goLiveNotification = {
                                                     isEnabled: e,
                                                     value: t
-                                                }, n.selectedTags = c.map(function(e) {
+                                                }, n.selectedTags = d.map(function(e) {
                                                     return {
                                                         id: e.id,
                                                         tagName: e.tagName,
@@ -2360,7 +2473,7 @@
                         }, t.setField = function(e, a) {
                             t.setState(function(r) {
                                 var s = o.__assign({}, r);
-                                return s.fields[e].value = t.normalizeString(a).slice(0, F.c).join(""), s.fields[e].errorType = function(e, t) {
+                                return s.fields[e].value = t.normalizeString(a).slice(0, O.c).join(""), s.fields[e].errorType = function(e, t) {
                                     switch (t) {
                                         case n.Title:
                                             if (e.match(/^$/) && t === n.Title) return i.Empty;
@@ -2373,7 +2486,7 @@
                                 }(a, e), s.buttonDisabled = !t.areAllFieldsValid(s.fields), s
                             })
                         }, t.getRemainingCharacters = function(e) {
-                            return (F.c - (e && t.normalizeString(e).length || 0)).toString()
+                            return (O.c - (e && t.normalizeString(e).length || 0)).toString()
                         }, t.areAllFieldsValid = function(e) {
                             return Object.keys(e).reduce(function(t, a) {
                                 return t && "tags" !== a ? !e[a].errorType : t
@@ -2438,7 +2551,7 @@
                                                     requestState: s.Ready,
                                                     buttonDisabled: !1
                                                 })
-                                            }, G), l.label = 3;
+                                            }, x), l.label = 3;
                                         case 3:
                                             return [2]
                                     }
@@ -2479,36 +2592,36 @@
                     }, t.prototype.render = function() {
                         var e = this.props.cancelComponent,
                             t = this.state.requestState;
-                        return this.props.data.error ? null : c.createElement(S.Xa, {
+                        return this.props.data.error ? null : d.createElement(y.Xa, {
                             fullHeight: !0,
-                            display: S.X.Flex,
-                            flexDirection: S.Aa.Column,
-                            alignItems: S.f.Center,
-                            justifyContent: S.Wa.Center
-                        }, c.createElement(S.Xa, {
+                            display: y.X.Flex,
+                            flexDirection: y.Aa.Column,
+                            alignItems: y.f.Center,
+                            justifyContent: y.Wa.Center
+                        }, d.createElement(y.Xa, {
                             fullWidth: !0
-                        }, this.getContent(), c.createElement(S.Xa, {
+                        }, this.getContent(), d.createElement(y.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, c.createElement(S.U, {
+                        }, d.createElement(y.U, {
                             targetBlank: !0,
-                            to: F.b
-                        }, Object(u.d)("Your content must follow our guidelines", "EditBroadcastComponent"))), c.createElement(S.Xa, {
-                            alignItems: S.f.Start,
-                            display: S.X.Flex,
-                            flexDirection: S.Aa.Row,
+                            to: O.b
+                        }, Object(u.d)("Your content must follow our guidelines", "EditBroadcastComponent"))), d.createElement(y.Xa, {
+                            alignItems: y.f.Start,
+                            display: y.X.Flex,
+                            flexDirection: y.Aa.Row,
                             fullWidth: !0,
-                            justifyContent: S.Wa.Start,
+                            justifyContent: y.Wa.Start,
                             margin: {
                                 top: 1
                             }
-                        }, c.createElement(S.z, {
+                        }, d.createElement(y.z, {
                             disabled: !this.state.loaded || this.state.buttonDisabled || t === s.Fetching || t === s.Errored,
                             fullWidth: !e,
-                            icon: t === s.Complete ? S.rb.Check : void 0,
+                            icon: t === s.Complete ? y.pb.Check : void 0,
                             onClick: this.handleSubmit,
-                            state: t === s.Complete ? S.E.Success : S.E.Default
+                            state: t === s.Complete ? y.E.Success : y.E.Default
                         }, this.getButtonText()), e || null)))
                     }, t.prototype.getButtonText = function() {
                         switch (this.state.requestState) {
@@ -2530,37 +2643,37 @@
                                 a = t.title,
                                 i = t.goLiveNotification,
                                 s = t.gameCategory,
-                                o = x(a.errorType),
-                                l = x(i.errorType),
-                                d = x(s.errorType);
-                            e = c.createElement(c.Fragment, null, c.createElement(S.Xa, {
+                                o = G(a.errorType),
+                                l = G(i.errorType),
+                                c = G(s.errorType);
+                            e = d.createElement(d.Fragment, null, d.createElement(y.Xa, {
                                 "data-test-selector": r.PrimaryContent,
                                 margin: {
                                     bottom: 2
                                 }
-                            }, c.createElement(S.Ea, {
+                            }, d.createElement(y.Ea, {
                                 "data-test-selector": r.TitleLabel,
                                 error: !!o,
                                 errorMessage: o,
                                 label: Object(u.d)("Title", "EditBroadcastComponent"),
                                 labelOptional: this.getRemainingCharacters(a.value)
-                            }, c.createElement(S.Ob, {
+                            }, d.createElement(y.Mb, {
                                 "data-test-selector": r.TitleInput,
                                 onChange: this.handleChangeByType(n.Title),
                                 noResize: !0,
                                 placeholder: Object(u.d)("Enter a title", "EditBroadcastComponent"),
                                 rows: 3,
                                 value: this.state.fields.title.value
-                            }))), this.state.fields.goLiveNotification.isEnabled && c.createElement(S.Xa, {
+                            }))), this.state.fields.goLiveNotification.isEnabled && d.createElement(y.Xa, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, c.createElement(S.Ea, {
+                            }, d.createElement(y.Ea, {
                                 error: !!l,
                                 errorMessage: l,
                                 label: Object(u.d)("Go Live Notification", "EditBroadcastComponent"),
                                 labelOptional: this.getRemainingCharacters(i.value)
-                            }, c.createElement(S.Ob, {
+                            }, d.createElement(y.Mb, {
                                 "data-test-selector": r.GoLiveNotification,
                                 noResize: !0,
                                 onChange: this.handleChangeByType(n.GoLiveNotification),
@@ -2569,51 +2682,51 @@
                                 }, "EditBroadcastComponent"),
                                 rows: 3,
                                 value: this.state.fields.goLiveNotification.value
-                            }))), c.createElement(S.Xa, {
+                            }))), d.createElement(y.Xa, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, c.createElement(w, {
-                                error: !!d,
-                                errorMessage: d,
+                            }, d.createElement(w, {
+                                error: !!c,
+                                errorMessage: c,
                                 onGameResultSelected: this.handleGameResultSelected,
                                 onGameCleared: this.handleGameCleared,
                                 selectedGame: this.state.selectedGame
-                            })), this.renderTagSelect(), c.createElement(S.Xa, {
+                            })), this.renderTagSelect(), d.createElement(y.Xa, {
                                 margin: {
                                     bottom: 1
                                 }
-                            }, c.createElement(g.a, {
+                            }, d.createElement(g.a, {
                                 label: Object(u.d)("Language", "EditBroadcastComponent"),
                                 onChange: this.handleLanguageChange,
                                 defaultLanguage: this.state.fields.language.value || "en",
                                 disabled: !1
-                            }), c.createElement(S.Xa, {
+                            }), d.createElement(y.Xa, {
                                 margin: {
                                     top: .5
                                 }
-                            }, c.createElement(S.N, {
+                            }, d.createElement(y.N, {
                                 label: Object(u.d)("Restrict Chat Language", "EditBroadcastComponent"),
                                 onChange: this.handleBroadcastLanguageModeEnabledChange,
                                 checked: this.state.broadcasterLanguageModeEnabled,
                                 "data-test-selector": r.BroadcastLanguageMode
                             }))))
-                        } else e = c.createElement(S.Xa, {
+                        } else e = d.createElement(y.Xa, {
                             fullWidth: !0,
                             padding: {
                                 y: 2
                             }
-                        }, c.createElement(S.Za, {
+                        }, d.createElement(y.Za, {
                             fillContent: !0
                         }));
                         return e
                     }, t.prototype.renderTagSelect = function() {
-                        var e = x(this.state.fields.tags.errorType);
-                        return c.createElement(S.Xa, {
+                        var e = G(this.state.fields.tags.errorType);
+                        return d.createElement(y.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, c.createElement(I.a, {
+                        }, d.createElement(I.a, {
                             error: !!e,
                             errorMessage: e,
                             gameName: this.state.selectedGame,
@@ -2641,7 +2754,7 @@
                                             body: l.stringify(t, {
                                                 arrayFormat: "bracket"
                                             }),
-                                            headers: F.a
+                                            headers: O.a
                                         })];
                                     case 1:
                                         if (r = o.sent().error) {
@@ -2684,7 +2797,7 @@
                         })
                     }, t.prototype.updateChannelBroadcasterLanguageEnabled = function(e) {
                         return o.__awaiter(this, void 0, void 0, function() {
-                            var t, a, n, i, r, s, l, c, d;
+                            var t, a, n, i, r, s, l, d, c;
                             return o.__generator(this, function(o) {
                                 switch (o.label) {
                                     case 0:
@@ -2701,11 +2814,11 @@
                                             }
                                         }, [4, i(Object(p.b)(s, l))]) : [2];
                                     case 1:
-                                        return c = o.sent(), d = function(e) {
-                                            return n.chatSettings && c.data.updateChatSettings && c.data.updateChatSettings.chatSettings && (n.chatSettings.isBroadcasterLanguageModeEnabled = c.data.updateChatSettings.chatSettings.isBroadcasterLanguageModeEnabled), e
+                                        return d = o.sent(), c = function(e) {
+                                            return n.chatSettings && d.data.updateChatSettings && d.data.updateChatSettings.chatSettings && (n.chatSettings.isBroadcasterLanguageModeEnabled = d.data.updateChatSettings.chatSettings.isBroadcasterLanguageModeEnabled), e
                                         }, Object(p.e)(R, {
                                             login: a
-                                        }, d), [2]
+                                        }, c), [2]
                                 }
                             })
                         })
@@ -2743,8 +2856,8 @@
                             })
                         })
                     }, t
-                }(c.Component),
-                j = Object(d.compose)(Object(A.b)("EditBroadcast"), Object(m.a)(R, {
+                }(d.Component),
+                j = Object(c.compose)(Object(A.b)("EditBroadcast"), Object(m.a)(R, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -2771,20 +2884,20 @@
                 s = a("/7QA"),
                 o = a("FsIG"),
                 l = a("C29h"),
-                c = a("Ue10");
+                d = a("Ue10");
             a("sEux");
             ! function(e) {
                 e.NoTagsSelected = "no-tags-selected", e.SelectedTag = "selected-tag"
             }(n || (n = {}));
-            var d = function(e) {
+            var c = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderErrorMessage = function() {
-                            if (t.props.error && t.props.errorMessage) return r.createElement(c.Xa, {
+                            if (t.props.error && t.props.errorMessage) return r.createElement(d.Xa, {
                                 margin: {
                                     top: .5
                                 }
-                            }, r.createElement(c.Da, {
+                            }, r.createElement(d.Da, {
                                 errorMessage: t.props.errorMessage
                             }))
                         }, t.renderTagSearch = function() {
@@ -2806,29 +2919,29 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = Object(s.d)("Tags", "TagSelectorSearch");
-                        return r.createElement(c.Xa, null, r.createElement(c.Xa, {
-                            display: c.X.Flex,
-                            justifyContent: c.Wa.Between
-                        }, r.createElement(c.Ha, {
+                        return r.createElement(d.Xa, null, r.createElement(d.Xa, {
+                            display: d.X.Flex,
+                            justifyContent: d.Wa.Between
+                        }, r.createElement(d.Ha, {
                             id: Object(o.b)(e),
                             label: e
-                        }), this.renderHelpButton()), r.createElement(c.Xa, {
-                            alignContent: c.e.Center
-                        }, r.createElement(c.Xa, {
-                            position: c.hb.Relative,
+                        }), this.renderHelpButton()), r.createElement(d.Xa, {
+                            alignContent: d.e.Center
+                        }, r.createElement(d.Xa, {
+                            position: d.fb.Relative,
                             margin: {
                                 y: .5
                             }
                         }, this.renderTagSearch()), this.renderErrorMessage(), this.renderSelectedTags()))
                     }, t.prototype.renderSelectedTags = function() {
                         var e = this;
-                        return 0 !== this.props.selectedTags.length || this.props.readOnly ? 0 === this.props.selectedTags.length ? r.createElement(c.Xa, {
+                        return 0 !== this.props.selectedTags.length || this.props.readOnly ? 0 === this.props.selectedTags.length ? r.createElement(d.Xa, {
                             "data-test-selector": n.NoTagsSelected
-                        }, r.createElement(c.Ra, {
-                            type: c.Ta.Text,
+                        }, r.createElement(d.Ra, {
+                            type: d.Ta.Text,
                             placeholder: Object(s.d)("No tags were selected", "TagSelectorSearch"),
                             disabled: !0
-                        })) : r.createElement(c.Xa, {
+                        })) : r.createElement(d.Xa, {
                             margin: {
                                 top: .5
                             },
@@ -2838,16 +2951,16 @@
                             },
                             className: "selected-tags"
                         }, this.props.selectedTags.map(function(t, a) {
-                            return r.createElement(c.Xa, {
-                                display: c.X.InlineBlock,
+                            return r.createElement(d.Xa, {
+                                display: d.X.InlineBlock,
                                 margin: {
                                     right: .5,
                                     bottom: .5
                                 },
                                 key: t.id + "_" + a
-                            }, r.createElement(c.Kb, {
+                            }, r.createElement(d.Ib, {
                                 "data-test-selector": n.SelectedTag,
-                                action: t.isAutomated ? void 0 : c.Lb.Remove,
+                                action: t.isAutomated ? void 0 : d.Jb.Remove,
                                 label: t.localizedName || t.tagName,
                                 key: t.id,
                                 onClick: t.isAutomated ? void 0 : e.props.onRemoveTag,
@@ -2855,47 +2968,25 @@
                             }))
                         })) : null
                     }, t.prototype.renderHelpButton = function() {
-                        return this.props.showHelpButton ? r.createElement(c.Xa, null, Object(s.d)("<x:link>Learn More</x:link>", {
+                        return this.props.showHelpButton ? r.createElement(d.Xa, null, Object(s.d)("<x:link>Learn More</x:link>", {
                             "x:link": function(e) {
-                                return r.createElement(c.U, {
+                                return r.createElement(d.U, {
                                     to: "https://link.twitch.tv/learntags"
                                 }, e)
                             }
                         }, "TagSuggestions")) : null
                     }, t
                 }(r.Component),
-                u = d;
+                u = c;
             a.d(t, !1, function() {
                 return n
             }), a.d(t, !1, function() {
-                return d
+                return c
             }), a.d(t, "a", function() {
                 return u
             })
         },
         sEux: function(e, t, a) {},
-        w4St: function(e, t, a) {},
-        y5I9: function(e, t, a) {
-            "use strict";
-
-            function n(e, t) {
-                return e.length !== t.length || e.some(function(e, a) {
-                    return t[a] !== e
-                })
-            }
-
-            function i(e, t) {
-                var a = e || [],
-                    n = t || [];
-                return a.length !== n.length || a.some(function(e, t) {
-                    return e.id !== n[t].id
-                })
-            }
-            a.d(t, "a", function() {
-                return n
-            }), a.d(t, "b", function() {
-                return i
-            })
-        }
+        w4St: function(e, t, a) {}
     }
 ]);

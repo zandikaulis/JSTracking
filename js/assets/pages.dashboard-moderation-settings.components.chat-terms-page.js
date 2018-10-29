@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [151], {
+    [149], {
         "4l1H": function(e, t) {
             var n = {
                 kind: "Document",
@@ -357,7 +357,7 @@
                                 left: "auto"
                             },
                             fullHeight: !0
-                        }, d.createElement(m.eb, {
+                        }, d.createElement(m.cb, {
                             label: Object(l.d)("private", "ChatTermsControl")
                         }));
                         else if (e.expiresAt) {
@@ -377,7 +377,7 @@
                         }
                         var s = null;
                         t === this.state.justSavedIndex && (s = d.createElement(m.Pa, {
-                            position: m.hb.Absolute,
+                            position: m.fb.Absolute,
                             margin: {
                                 left: 5
                             }
@@ -390,7 +390,7 @@
                             enabled: !0,
                             onAnimationEnd: this.clearLabels
                         }, d.createElement(m.Xa, {
-                            position: m.hb.Absolute,
+                            position: m.fb.Absolute,
                             attachRight: !0
                         }, Object(l.d)("Saved", "ChatTermsControl"))))));
                         var o = Object(l.d)("Edit", "ChatTermsControl"),
@@ -425,22 +425,22 @@
                             fullHeight: !0
                         }, n)), d.createElement(m.P, {
                             cols: 1
-                        }, d.createElement(m.Ub, {
+                        }, d.createElement(m.Sb, {
                             label: o
                         }, d.createElement(m.A, {
                             "data-a-target": "edit-term",
                             "data-test-selector": a.EditTermButton,
-                            icon: m.rb.Edit,
+                            icon: m.pb.Edit,
                             ariaLabel: o,
                             onClick: this.handleEdit
                         }))), d.createElement(m.P, {
                             cols: 1
-                        }, d.createElement(m.Ub, {
+                        }, d.createElement(m.Sb, {
                             label: c
                         }, d.createElement(m.A, {
                             "data-a-target": "delete-term",
                             "data-test-selector": a.DelTermButton,
-                            icon: m.rb.Trash,
+                            icon: m.pb.Trash,
                             ariaLabel: c,
                             onClick: this.handleDelete
                         })), s))))
@@ -454,7 +454,7 @@
                         }, d.createElement(m.Xa, {
                             key: "line-item-" + t,
                             className: "chat-term-row",
-                            position: m.hb.Relative
+                            position: m.fb.Relative
                         }, d.createElement(m.Xa, {
                             key: t,
                             "data-index": t,
@@ -474,20 +474,20 @@
                             onKeyDown: this.handleEditKeyDown
                         })), d.createElement(m.Xa, {
                             flexShrink: 0
-                        }, d.createElement(m.Ub, {
+                        }, d.createElement(m.Sb, {
                             label: n
                         }, d.createElement(m.A, {
                             "data-a-target": "save-term-edit",
                             "data-test-selector": a.EditConfirmButton,
-                            icon: m.rb.Check,
+                            icon: m.pb.Check,
                             ariaLabel: n,
                             onClick: this.confirmEdit
-                        })), d.createElement(m.Ub, {
+                        })), d.createElement(m.Sb, {
                             label: i
                         }, d.createElement(m.A, {
                             "data-a-target": "cancel-term-edit",
                             "data-test-selector": a.EditCancelButton,
-                            icon: m.rb.Close,
+                            icon: m.pb.Close,
                             ariaLabel: i,
                             onClick: this.cancelEdit
                         })))), r))
@@ -509,7 +509,7 @@
                             show: !0
                         }, d.createElement(m.Xa, {
                             margin: 1
-                        }, d.createElement(m.Bb, {
+                        }, d.createElement(m.zb, {
                             borderBottom: !0,
                             margin: {
                                 bottom: .5
@@ -681,7 +681,7 @@
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return !this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.user ? d.createElement(m.Xa, null) : d.createElement(m.Bb, {
+                        return !this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.user ? d.createElement(m.Xa, null) : d.createElement(m.zb, {
                             padding: {
                                 top: 2
                             }
@@ -689,12 +689,12 @@
                             cols: 2
                         }, d.createElement(m.W, {
                             color: m.O.Alt2,
-                            type: m.Rb.Strong
+                            type: m.Pb.Strong
                         }, Object(l.d)("Blocked and Permitted Terms", "AutoModTermsTitle"))), d.createElement(m.P, {
                             cols: 5
                         }, d.createElement(m.W, {
                             color: m.O.Alt2,
-                            type: m.Rb.Strong
+                            type: m.Pb.Strong
                         }, Object(l.d)("Blocked Terms or Phrases", "AutoModBlockedTermsTitle")), d.createElement(m.W, {
                             color: m.O.Alt2
                         }, Object(l.d)("Messages containing these terms or phrases will be blocked from chat. Terms are automatically added when a mod denies a caught message.", "AutoModBlockedTermsDescription")), d.createElement(g, {
@@ -705,7 +705,7 @@
                             terms: this.props.data.user.blockedTerms
                         }), d.createElement(m.W, {
                             color: m.O.Alt2,
-                            type: m.Rb.Strong
+                            type: m.Pb.Strong
                         }, Object(l.d)("Permitted Terms or Phrases", "AutoModPermittedTermsTitle")), d.createElement(m.W, {
                             color: m.O.Alt2
                         }, Object(l.d)("Messages containing these terms, and no other blocked terms, will not be caught by AutoMod. Terms are automatically added when a mod allows a message.", "AutoModPermittedTermsDescription")), d.createElement(g, {

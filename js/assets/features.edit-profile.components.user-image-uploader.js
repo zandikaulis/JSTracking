@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [133], {
+    [132], {
         "/ZC1": function(e, t, a) {
             "use strict";
             a.d(t, "a", function() {
@@ -34,12 +34,12 @@
                             dragOver: this.state.isDraggingOver,
                             error: this.props.error
                         }, r.createElement(i.Pa, {
-                            position: i.hb.Absolute,
+                            position: i.fb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: i.ec.Above
+                            zIndex: i.cc.Above
                         }, r.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -186,11 +186,11 @@
                         var a = null;
                         if (this.state.loading) a = l.createElement(E.Xa, {
                             className: "user-image-uploader__upload-svg--anim-fill",
-                            position: E.hb.Relative,
+                            position: E.fb.Relative,
                             "data-test-selector": "loading-status"
-                        }, l.createElement(E.qb, {
-                            asset: E.rb.Upload,
-                            type: E.sb.Brand,
+                        }, l.createElement(E.ob, {
+                            asset: E.pb.Upload,
+                            type: E.qb.Brand,
                             width: 99,
                             height: 76
                         }));
@@ -198,19 +198,19 @@
                             var n = Object(c.d)("Recommended image size: 1200x380 and less than 10MB.", "UserImageUploader");
                             this.props.imageType === f.a.ChannelOfflineImage && (n = Object(c.d)("Recommended image size: 1920x1080 and less than 10MB.", "UserImageUploader")), a = l.createElement(E.Xa, null, l.createElement(E.Xa, {
                                 className: "user-image-uploader__upload-info"
-                            }, l.createElement(E.Xa, null, l.createElement(E.qb, {
-                                asset: E.rb.Plus,
-                                type: E.sb.Alt2,
+                            }, l.createElement(E.Xa, null, l.createElement(E.ob, {
+                                asset: E.pb.Plus,
+                                type: E.qb.Alt2,
                                 height: 20,
                                 width: 20
                             })), l.createElement(E.W, {
-                                type: E.Rb.H3,
+                                type: E.Pb.H3,
                                 color: E.O.Alt2,
                                 fontSize: E.Ca.Size4
                             }, Object(c.d)("Upload a Photo", "User Image Uploader"))), l.createElement(E.Xa, {
                                 className: "user-image-uploader__upload-recommendation",
-                                position: E.hb.Absolute,
-                                textAlign: E.Nb.Left,
+                                position: E.fb.Absolute,
+                                textAlign: E.Lb.Left,
                                 attachLeft: !0,
                                 attachBottom: !0,
                                 margin: {
@@ -218,10 +218,10 @@
                                     bottom: 1
                                 }
                             }, l.createElement(E.W, {
-                                type: E.Rb.H6,
+                                type: E.Pb.H6,
                                 color: E.O.Alt2,
                                 fontSize: E.Ca.Size8,
-                                align: E.bc.TextBottom
+                                align: E.Zb.TextBottom
                             }, n)))
                         }
                         var r = null;
@@ -229,54 +229,54 @@
                         var i = null;
                         if (null !== this.state.statusMessage) {
                             var o = Object(v.c)(this.state.statusMessage);
-                            i = l.createElement(E.eb, {
+                            i = l.createElement(E.cb, {
                                 label: o.message,
                                 type: o.type
                             })
                         }
                         return l.createElement(E.Xa, {
                             className: "user-image-uploader",
-                            position: E.hb.Relative,
+                            position: E.fb.Relative,
                             fullHeight: !0
-                        }, l.createElement(E.Bb, {
+                        }, l.createElement(E.zb, {
                             className: "user-image-uploader__background-container",
                             background: E.r.Base,
                             fullWidth: !0
                         }, l.createElement(E.Xa, {
                             padding: 2,
                             display: E.X.InlineBlock,
-                            position: E.hb.Relative,
-                            textAlign: E.Nb.Center,
+                            position: E.fb.Relative,
+                            textAlign: E.Lb.Center,
                             fullWidth: !0
-                        }, l.createElement(E.Bb, {
+                        }, l.createElement(E.zb, {
                             borderBottom: !0,
                             margin: {
                                 bottom: 2
                             }
                         }, l.createElement(E.W, {
-                            type: E.Rb.H3,
+                            type: E.Pb.H3,
                             fontSize: E.Ca.Size4
                         }, t)), l.createElement(E.Xa, {
                             className: "user-image-uploader__upload-container",
                             display: E.X.InlineBlock,
-                            position: E.hb.Relative,
-                            textAlign: E.Nb.Center,
+                            position: E.fb.Relative,
+                            textAlign: E.Lb.Center,
                             margin: {
                                 bottom: 1
                             }
                         }, l.createElement(E.Xa, {
                             className: "user-image-uploader__upload",
                             display: E.X.InlineBlock,
-                            position: E.hb.Relative,
-                            textAlign: E.Nb.Center
+                            position: E.fb.Relative,
+                            textAlign: E.Lb.Center
                         }, l.createElement(d.a, {
                             allowedFileTypes: y,
                             onFilesSubmitted: this.onImageInputChange
-                        }, a))), l.createElement(E.Bb, {
+                        }, a))), l.createElement(E.zb, {
                             "data-test-selector": "status-message",
                             fontSize: E.Ca.Size4,
-                            position: E.hb.Relative,
-                            textAlign: E.Nb.Center,
+                            position: E.fb.Relative,
+                            textAlign: E.Lb.Center,
                             className: "user-image-uploader__status-message"
                         }, i))), r)
                     }, t
@@ -515,47 +515,47 @@
                     case r.Success:
                         return {
                             message: Object(i.d)("Success!", "Profile Edit"),
-                            type: o.fb.Success
+                            type: o.db.Success
                         };
                     case r.UnexpectedError:
                         return {
                             message: Object(i.d)("Unexpected error, please try again.", "Profile Edit"),
-                            type: o.fb.Alert
+                            type: o.db.Alert
                         };
                     case r.BadSizeError:
                         return {
                             message: Object(i.d)("Image might exceed 10MB.", "Profile Edit"),
-                            type: o.fb.Alert
+                            type: o.db.Alert
                         };
                     case r.NonImageError:
                         return {
                             message: Object(i.d)("You must upload an image.", "Profile Edit"),
-                            type: o.fb.Alert
+                            type: o.db.Alert
                         };
                     case r.WrongFormatError:
                         return {
                             message: Object(i.d)("You must select a valid image type.", "Profile Edit"),
-                            type: o.fb.Alert
+                            type: o.db.Alert
                         };
                     case r.TimeoutError:
                         return {
                             message: Object(i.d)("Upload timed-out. Please try again.", "Profile Edit"),
-                            type: o.fb.Alert
+                            type: o.db.Alert
                         };
                     case r.Uploading:
                         return {
                             message: Object(i.d)("Uploading....", "Profile Edit"),
-                            type: o.fb.Brand
+                            type: o.db.Brand
                         };
                     case r.ImageNotSelected:
                         return {
                             message: Object(i.d)("Select a image first.", "Profile Edit"),
-                            type: o.fb.Alert
+                            type: o.db.Alert
                         };
                     default:
                         return {
                             message: Object(i.d)("Please try again.", "Profile Edit"),
-                            type: o.fb.Alert
+                            type: o.db.Alert
                         }
                 }
             }! function(e) {

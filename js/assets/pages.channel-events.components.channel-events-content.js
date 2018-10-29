@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [115], {
+    [114], {
         DXJk: function(e, n) {
             var t = {
                 kind: "Document",
@@ -300,7 +300,7 @@
                     }
                     return i.__extends(n, e), n.prototype.render = function() {
                         return u.createElement(v.a, null, u.createElement(k.z, {
-                            icon: k.rb.More,
+                            icon: k.pb.More,
                             type: k.F.Hollow
                         }), u.createElement(k.u, {
                             direction: this.props.balloonDirection,
@@ -338,6 +338,506 @@
             t.d(n, "a", function() {
                 return g
             })
+        },
+        QTKY: function(e, n) {
+            var t = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "EventsPage_EventScheduleQuery"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "channelLogin"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "String"
+                                }
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "limit"
+                            }
+                        },
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "Int"
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "cursor"
+                            }
+                        },
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "Cursor"
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "before"
+                            }
+                        },
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "Time"
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "after"
+                            }
+                        },
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "Time"
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "following"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "Boolean"
+                                }
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "sortOrder"
+                            }
+                        },
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "SortOrder"
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "user"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "channelLogin"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "eventLeaves"
+                                    },
+                                    arguments: [{
+                                        kind: "Argument",
+                                        name: {
+                                            kind: "Name",
+                                            value: "first"
+                                        },
+                                        value: {
+                                            kind: "Variable",
+                                            name: {
+                                                kind: "Name",
+                                                value: "limit"
+                                            }
+                                        }
+                                    }, {
+                                        kind: "Argument",
+                                        name: {
+                                            kind: "Name",
+                                            value: "after"
+                                        },
+                                        value: {
+                                            kind: "Variable",
+                                            name: {
+                                                kind: "Name",
+                                                value: "cursor"
+                                            }
+                                        }
+                                    }, {
+                                        kind: "Argument",
+                                        name: {
+                                            kind: "Name",
+                                            value: "criteria"
+                                        },
+                                        value: {
+                                            kind: "ObjectValue",
+                                            fields: [{
+                                                kind: "ObjectField",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "endsBefore"
+                                                },
+                                                value: {
+                                                    kind: "Variable",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "before"
+                                                    }
+                                                }
+                                            }, {
+                                                kind: "ObjectField",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "endsAfter"
+                                                },
+                                                value: {
+                                                    kind: "Variable",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "after"
+                                                    }
+                                                }
+                                            }, {
+                                                kind: "ObjectField",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "sortOrder"
+                                                },
+                                                value: {
+                                                    kind: "Variable",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "sortOrder"
+                                                    }
+                                                }
+                                            }]
+                                        }
+                                    }],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "pageInfo"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "hasNextPage"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }]
+                                            }
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "edges"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "cursor"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "node"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "id"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "self"
+                                                            },
+                                                            arguments: [],
+                                                            directives: [{
+                                                                kind: "Directive",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "include"
+                                                                },
+                                                                arguments: [{
+                                                                    kind: "Argument",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "if"
+                                                                    },
+                                                                    value: {
+                                                                        kind: "Variable",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "following"
+                                                                        }
+                                                                    }
+                                                                }]
+                                                            }],
+                                                            selectionSet: {
+                                                                kind: "SelectionSet",
+                                                                selections: [{
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "isFollowing"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }]
+                                                            }
+                                                        }, {
+                                                            kind: "InlineFragment",
+                                                            typeCondition: {
+                                                                kind: "NamedType",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "EventLeaf"
+                                                                }
+                                                            },
+                                                            directives: [],
+                                                            selectionSet: {
+                                                                kind: "SelectionSet",
+                                                                selections: [{
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "title"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "startAt"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "endAt"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "game"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: [],
+                                                                    selectionSet: {
+                                                                        kind: "SelectionSet",
+                                                                        selections: [{
+                                                                            kind: "Field",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "id"
+                                                                            },
+                                                                            arguments: [],
+                                                                            directives: []
+                                                                        }, {
+                                                                            kind: "Field",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "displayName"
+                                                                            },
+                                                                            arguments: [],
+                                                                            directives: []
+                                                                        }]
+                                                                    }
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "channel"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: [],
+                                                                    selectionSet: {
+                                                                        kind: "SelectionSet",
+                                                                        selections: [{
+                                                                            kind: "Field",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "id"
+                                                                            },
+                                                                            arguments: [],
+                                                                            directives: []
+                                                                        }, {
+                                                                            kind: "Field",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "login"
+                                                                            },
+                                                                            arguments: [],
+                                                                            directives: []
+                                                                        }, {
+                                                                            kind: "Field",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "displayName"
+                                                                            },
+                                                                            arguments: [],
+                                                                            directives: []
+                                                                        }]
+                                                                    }
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "imageURL"
+                                                                    },
+                                                                    arguments: [{
+                                                                        kind: "Argument",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "width"
+                                                                        },
+                                                                        value: {
+                                                                            kind: "IntValue",
+                                                                            value: "320"
+                                                                        }
+                                                                    }, {
+                                                                        kind: "Argument",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "height"
+                                                                        },
+                                                                        value: {
+                                                                            kind: "IntValue",
+                                                                            value: "180"
+                                                                        }
+                                                                    }],
+                                                                    directives: []
+                                                                }]
+                                                            }
+                                                        }]
+                                                    }
+                                                }]
+                                            }
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 541
+                }
+            };
+            t.loc.source = {
+                body: "query EventsPage_EventScheduleQuery($channelLogin: String! $limit: Int $cursor: Cursor $before: Time $after: Time $following: Boolean! $sortOrder: SortOrder) {\nuser(login: $channelLogin) {\nid\neventLeaves(first: $limit after: $cursor criteria: {endsBefore: $before endsAfter: $after sortOrder: $sortOrder}) {\npageInfo {\nhasNextPage\n}\nedges {\ncursor\nnode {\nid\nself @include(if: $following) {\nisFollowing\n}\n...on EventLeaf {\ntitle\nstartAt\nendAt\ngame {\nid\ndisplayName\n}\nchannel {\nid\nlogin\ndisplayName\n}\nimageURL(width:320 height:180)\n}\n}\n}\n}\n}\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = t
         },
         ePeS: function(e, n, t) {
             "use strict";
@@ -389,8 +889,8 @@
                             n = Object(c.d)("Reminder Set", "FollowEvent");
                         if (this.props.small) {
                             var t = e,
-                                i = p.rb.Heart;
-                            return this.props.areNotificationsEnabled && (t = n, i = p.rb.FollowCheck), s.createElement(p.Ub, {
+                                i = p.pb.Heart;
+                            return this.props.areNotificationsEnabled && (t = n, i = p.pb.FollowCheck), s.createElement(p.Sb, {
                                 label: t,
                                 direction: this.props.tooltipDirection
                             }, s.createElement(p.A, {
@@ -403,80 +903,42 @@
                         return s.createElement(p.z, {
                             type: this.props.areNotificationsEnabled ? p.F.Success : p.F.Default,
                             onClick: this.handleButton,
-                            icon: this.props.areNotificationsEnabled ? p.rb.FollowCheck : p.rb.Heart,
+                            icon: this.props.areNotificationsEnabled ? p.pb.FollowCheck : p.pb.Heart,
                             ariaLabel: this.props.areNotificationsEnabled ? n : e
                         }, this.props.areNotificationsEnabled ? n : e)
+                    }, n.prototype.createOptimisticResponse = function(e) {
+                        var n = {
+                            __typename: e ? "FollowEventPayload" : "UnfollowEventPayload",
+                            event: {
+                                id: this.props.eventID,
+                                self: {
+                                    __typename: "EventSelfConnection",
+                                    isFollowing: e
+                                },
+                                __typename: this.props.eventTypename
+                            }
+                        };
+                        return e ? {
+                            __typename: "Mutation",
+                            followEvent: n
+                        } : {
+                            __typename: "Mutation",
+                            unfollowEvent: n
+                        }
                     }, n.prototype.toggleFollowing = function() {
                         if (!this.props.isLoggedIn) return this.props.login();
-                        this.props.areNotificationsEnabled ? this.triggerUnfollowMutation() : this.triggerFollowMutation(), Object(v.d)({
+                        var e = d.__assign({}, Object(m.a)({
+                            eventID: this.props.eventID
+                        }), {
+                            optimisticResponse: this.createOptimisticResponse(!this.props.areNotificationsEnabled)
+                        });
+                        this.props.areNotificationsEnabled ? this.props.unfollowEvent(e) : this.props.followEvent(e), Object(v.d)({
                             action: this.props.areNotificationsEnabled ? v.b.EmailReminderOff : v.b.EmailReminderOn,
                             channelLogin: this.props.channelLogin || "undefined",
                             channelID: this.props.channelID || "undefined",
                             eventID: this.props.eventID,
                             location: this.props.eventLocation
                         })
-                    }, n.prototype.triggerFollowMutation = function() {
-                        var e, n = {
-                            eventID: this.props.eventID
-                        };
-                        e = "EventCollection" === this.props.eventTypename ? {
-                            followEvent: {
-                                __typename: "FollowEventPayload",
-                                event: {
-                                    __typename: "EventCollection",
-                                    id: this.props.eventID,
-                                    self: {
-                                        __typename: "EventSelfConnection",
-                                        isFollowing: !0
-                                    }
-                                }
-                            }
-                        } : {
-                            followEvent: {
-                                __typename: "FollowEventPayload",
-                                event: {
-                                    __typename: "EventLeaf",
-                                    id: this.props.eventID,
-                                    self: {
-                                        __typename: "EventSelfConnection",
-                                        isFollowing: !0
-                                    }
-                                }
-                            }
-                        };
-                        var t = Object(m.b)(n, e);
-                        this.props.followEvent(t)
-                    }, n.prototype.triggerUnfollowMutation = function() {
-                        var e, n = {
-                            eventID: this.props.eventID
-                        };
-                        e = "EventCollection" === this.props.eventTypename ? {
-                            unfollowEvent: {
-                                __typename: "UnfollowEventPayload",
-                                event: {
-                                    __typename: "EventCollection",
-                                    id: this.props.eventID,
-                                    self: {
-                                        __typename: "EventSelfConnection",
-                                        isFollowing: !1
-                                    }
-                                }
-                            }
-                        } : {
-                            unfollowEvent: {
-                                __typename: "UnfollowEventPayload",
-                                event: {
-                                    __typename: "EventLeaf",
-                                    id: this.props.eventID,
-                                    self: {
-                                        __typename: "EventSelfConnection",
-                                        isFollowing: !1
-                                    }
-                                }
-                            }
-                        };
-                        var t = Object(m.b)(n, e);
-                        this.props.unfollowEvent(t)
                     }, n
                 }(s.PureComponent),
                 h = Object(a.compose)(Object(u.a)(k, {
@@ -508,93 +970,95 @@
                 r = t("/7QA"),
                 o = t("8/mp"),
                 d = t("GnwI"),
-                s = t("fvjX"),
-                c = t("yR8l"),
-                u = t("kduP"),
-                m = t("rO6o"),
-                v = t("irYM"),
-                p = t("LfZz"),
-                k = t("Jhye");
-            var f = t("ug+5"),
-                g = t("Ue10"),
-                h = Object(d.b)("EventListCard", {
+                s = t("/MKj"),
+                c = t("kRBY"),
+                u = t("fvjX"),
+                m = t("yR8l"),
+                v = t("kduP"),
+                p = t("rO6o"),
+                k = t("irYM"),
+                f = t("LfZz"),
+                g = t("Jhye");
+            var h = t("ug+5"),
+                b = t("Ue10"),
+                E = Object(d.b)("EventListCard", {
                     autoReportInteractive: !0
                 })(function(e) {
                     var n = new Date(e.event.startAt),
                         t = new Date(e.event.endAt),
                         a = n > new Date,
-                        o = Object(u.b)(e.event.id),
+                        o = Object(v.b)(e.event.id),
                         d = !(!e.event.self || !e.event.self.isFollowing),
-                        s = e.upwardBalloons ? g.v.Top : g.v.Bottom,
-                        c = e.upwardBalloons ? g.Wb.Top : g.Wb.Bottom,
-                        h = e.event.game && e.event.game.displayName || "-",
-                        b = e.channel && (e.channel.displayName || e.channel.login) || "-",
+                        s = e.upwardBalloons ? b.v.Top : b.v.Bottom,
+                        c = e.upwardBalloons ? b.Ub.Top : b.Ub.Bottom,
+                        u = e.event.game && e.event.game.displayName || "-",
+                        m = e.channel && (e.channel.displayName || e.channel.login) || "-",
                         E = null,
-                        y = null,
-                        N = null;
-                    return e.channel && e.channel.id && e.channel.login && (a && (E = l.createElement(g.Xa, {
+                        N = null,
+                        y = null;
+                    return e.channel && e.channel.id && e.channel.login && (a && (E = l.createElement(b.Xa, {
                         margin: {
                             right: 1
                         }
-                    }, l.createElement(v.a, {
+                    }, l.createElement(k.a, {
                         eventID: e.event.id,
                         eventTypename: e.event.__typename,
                         areNotificationsEnabled: d,
                         channelLogin: e.channel.login,
                         channelID: e.channel.id,
-                        eventLocation: f.a.ChannelEvents,
+                        eventLocation: h.a.ChannelEvents,
                         tooltipDirection: c
-                    }))), y = l.createElement(g.Xa, {
+                    }))), N = l.createElement(b.Xa, {
                         margin: {
                             right: 1
                         }
-                    }, l.createElement(k.a, {
+                    }, l.createElement(g.a, {
                         id: e.event.id,
                         title: e.event.title,
                         channelLogin: e.channel.login,
                         channelID: e.channel.id,
-                        eventLocation: f.a.ChannelEvents,
+                        eventLocation: h.a.ChannelEvents,
                         balloonDirection: s
-                    })), N = l.createElement(p.a, {
+                    })), y = l.createElement(f.a, {
                         targetUser: {
                             id: e.channel.id,
-                            displayName: b
+                            displayName: m
                         },
                         eventID: e.event.id,
                         balloonDirection: s
-                    })), l.createElement(g.Bb, {
+                    })), l.createElement(b.zb, {
                         margin: {
                             y: 1
                         },
-                        background: g.r.Base,
+                        background: b.r.Base,
                         elevation: 1
-                    }, l.createElement(g.G, {
+                    }, l.createElement(b.G, {
                         row: !0
-                    }, l.createElement(g.Pa, {
+                    }, l.createElement(b.Pa, {
                         flexShrink: 0
-                    }, l.createElement(g.U, {
+                    }, l.createElement(b.U, {
                         to: o
-                    }, l.createElement(g.I, {
-                        size: g.J.Size32,
-                        aspect: g.p.Aspect16x9,
+                    }, l.createElement(b.I, {
+                        size: b.J.Size32,
+                        aspect: b.p.Aspect16x9,
                         src: e.event.imageURL,
                         alt: e.event.title
-                    }, l.createElement(m.a, {
+                    }, l.createElement(p.a, {
                         date: n
-                    })))), l.createElement(g.H, null, l.createElement(g.Xa, {
+                    })))), l.createElement(b.H, null, l.createElement(b.Xa, {
                         margin: {
                             x: 2
                         }
-                    }, l.createElement(g.Pa, {
+                    }, l.createElement(b.Pa, {
                         margin: {
                             bottom: 1
                         }
-                    }, l.createElement(g.U, {
+                    }, l.createElement(b.U, {
                         to: o
-                    }, l.createElement(g.W, {
-                        type: g.Rb.H4
-                    }, e.event.title))), l.createElement(g.W, {
-                        color: g.O.Alt2
+                    }, l.createElement(b.W, {
+                        type: b.Pb.H4
+                    }, e.event.title))), l.createElement(b.W, {
+                        color: b.O.Alt2
                     }, function(e, n) {
                         var t = new Date,
                             a = {
@@ -620,37 +1084,38 @@
                             startTime: o,
                             endTime: d
                         }, "EventListCard")
-                    }(n, t)), l.createElement(g.W, {
-                        color: g.O.Alt2
+                    }(n, t)), l.createElement(b.W, {
+                        color: b.O.Alt2
                     }, Object(r.d)("{channelName} streaming {gameName}", {
-                        channelName: b,
-                        gameName: h
-                    }, "EventListCard")), l.createElement(g.Xa, {
-                        display: g.X.Flex,
+                        channelName: m,
+                        gameName: u
+                    }, "EventListCard")), l.createElement(b.Xa, {
+                        display: b.X.Flex,
                         margin: {
                             top: 2
                         }
-                    }, E, y, l.createElement(g.Xa, {
+                    }, E, N, l.createElement(b.Xa, {
                         margin: {
                             right: 1
                         }
-                    }, l.createElement(g.z, {
-                        type: g.F.Hollow,
+                    }, l.createElement(b.z, {
+                        type: b.F.Hollow,
                         linkTo: o
-                    }, Object(r.d)("View Details", "EventListCard"))), N)))))
+                    }, Object(r.d)("View Details", "EventListCard"))), y)))))
                 }),
-                b = t("4hz/"),
-                E = t("ePeS"),
-                y = t("xMut"),
-                N = {
+                N = t("4hz/"),
+                y = t("ePeS"),
+                S = t("QTKY"),
+                F = {
                     options: function(e) {
                         return {
                             variables: {
                                 channelLogin: e.channelLogin,
                                 limit: 20,
-                                before: e.filter === E.a.Future ? null : (new Date).toISOString(),
-                                after: e.filter !== E.a.Future ? null : (new Date).toISOString(),
-                                sortOrder: e.filter === E.a.Future ? "ASC" : "DESC"
+                                before: e.filter === y.a.Future ? null : (new Date).toISOString(),
+                                after: e.filter !== y.a.Future ? null : (new Date).toISOString(),
+                                sortOrder: e.filter === y.a.Future ? "ASC" : "DESC",
+                                following: e.isLoggedIn && e.filter === y.a.Future
                             }
                         }
                     },
@@ -661,7 +1126,7 @@
                                     var n = e.data.user.eventLeaves.edges[Math.max(e.data.user.eventLeaves.edges.length - 1, 0)],
                                         t = n && n.cursor || "";
                                     return e.data.fetchMore({
-                                        query: y,
+                                        query: S,
                                         variables: i.__assign({}, e.data.variables, {
                                             cursor: t
                                         }),
@@ -682,7 +1147,7 @@
                         })
                     }
                 },
-                S = Object(s.compose)(Object(c.a)(y, N), Object(d.b)("ChannelEventsSchedule", {
+                w = Object(u.compose)(Object(m.a)(S, F), Object(d.b)("ChannelEventsSchedule", {
                     autoReportInteractive: !0
                 }))(function(e) {
                     var n = null,
@@ -699,7 +1164,7 @@
                             displayName: e.node.channel.displayName
                         }), e.node.__typename) {
                             case "EventLeaf":
-                                return l.createElement(h, {
+                                return l.createElement(E, {
                                     key: e.node.id,
                                     event: e.node,
                                     channel: a,
@@ -710,75 +1175,80 @@
                         }
                     }) : n = Object(r.d)("Nothing here yet", "ChannelEventsSchedule"), a = e.data.user.eventLeaves.pageInfo.hasNextPage;
                     else if (e.data.error) n = Object(r.d)("Error loading events", "ChannelEventsSchedule");
-                    else if (e.data.loading && (!e.data.user || !e.data.user.eventLeaves)) return l.createElement(b.a, null);
-                    return null !== n && (t = l.createElement(g.Xa, {
+                    else if (e.data.loading && (!e.data.user || !e.data.user.eventLeaves)) return l.createElement(N.a, null);
+                    return null !== n && (t = l.createElement(b.Xa, {
                         margin: {
                             top: 5
                         },
-                        display: g.X.Flex,
-                        flexDirection: g.Aa.Row,
-                        justifyContent: g.Wa.Center
-                    }, l.createElement(g.W, {
-                        type: g.Rb.H4,
-                        color: g.O.Alt2,
+                        display: b.X.Flex,
+                        flexDirection: b.Aa.Row,
+                        justifyContent: b.Wa.Center
+                    }, l.createElement(b.W, {
+                        type: b.Pb.H4,
+                        color: b.O.Alt2,
                         italic: !0
-                    }, n))), l.createElement(g.Xa, null, i, t, e.data.loading && l.createElement(g.Za, {
+                    }, n))), l.createElement(b.Xa, null, i, t, e.data.loading && l.createElement(b.Za, {
                         fillContent: !0
                     }), l.createElement(o.a, {
                         loadMore: e.loadMore,
                         enabled: a
                     }))
-                }),
-                F = function(e) {
+                });
+            var C = Object(s.connect)(function(e) {
+                    return {
+                        isLoggedIn: Object(c.f)(e)
+                    }
+                })(w),
+                O = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.handleToggleChange = function(e) {
-                            var t = Object(E.b)(e.currentTarget.value),
+                            var t = Object(y.b)(e.currentTarget.value),
                                 i = a.parse(n.props.searchQuery);
-                            t !== E.a.Future ? i.filter = t : delete i.filter, n.props.onEventToggle(a.stringify(i))
+                            t !== y.a.Future ? i.filter = t : delete i.filter, n.props.onEventToggle(a.stringify(i))
                         }, n
                     }
                     return i.__extends(n, e), n.prototype.render = function() {
                         var e = this.props.channelLogin,
                             n = a.parse(this.props.searchQuery),
-                            t = Object(E.b)(n.filter);
-                        return l.createElement(g.Xa, {
-                            display: g.X.Flex,
+                            t = Object(y.b)(n.filter);
+                        return l.createElement(b.Xa, {
+                            display: b.X.Flex,
                             flexGrow: 1,
                             fullHeight: !0
-                        }, l.createElement(g.Pa, {
+                        }, l.createElement(b.Pa, {
                             fullWidth: !0
-                        }, l.createElement(o.b, null, l.createElement(g.Xa, {
+                        }, l.createElement(o.b, null, l.createElement(b.Xa, {
                             fullWidth: !0,
                             padding: {
                                 y: 2,
                                 x: 3
                             }
-                        }, l.createElement(g.ub, null, l.createElement(g.vb, {
+                        }, l.createElement(b.sb, null, l.createElement(b.tb, {
                             name: "events-toggle",
                             label: Object(r.d)("Future Events", "ChannelEventsPage"),
-                            defaultChecked: t === E.a.Future,
+                            defaultChecked: t === y.a.Future,
                             onChange: this.handleToggleChange,
-                            value: E.a.Future
-                        }), l.createElement(g.vb, {
+                            value: y.a.Future
+                        }), l.createElement(b.tb, {
                             name: "events-toggle",
                             label: Object(r.d)("Past Events", "ChannelEventsPage"),
-                            defaultChecked: t === E.a.Past,
+                            defaultChecked: t === y.a.Past,
                             onChange: this.handleToggleChange,
-                            value: E.a.Past
-                        })), l.createElement(S, {
+                            value: y.a.Past
+                        })), l.createElement(C, {
                             filter: t,
                             channelLogin: e
                         })))))
                     }, n
                 }(l.Component),
-                w = Object(d.b)("ChannelEventsContent", {
+                D = Object(d.b)("ChannelEventsContent", {
                     autoReportInteractive: !0
-                })(F);
+                })(O);
             t.d(n, "ChannelEventsContentComponent", function() {
-                return F
+                return O
             }), t.d(n, "ChannelEventsContent", function() {
-                return w
+                return D
             })
         },
         rO6o: function(e, n, t) {
@@ -793,7 +1263,7 @@
                         t = Object(a.c)(e.date, {
                             day: "numeric"
                         });
-                    return i.createElement(l.Bb, {
+                    return i.createElement(l.zb, {
                         background: l.r.Base,
                         elevation: 2,
                         display: l.X.Flex,
@@ -803,18 +1273,18 @@
                             top: .5,
                             left: .5
                         },
-                        position: l.hb.Absolute,
+                        position: l.fb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         flexWrap: l.Ba.NoWrap
-                    }, i.createElement(l.Bb, {
+                    }, i.createElement(l.zb, {
                         className: "event-calendar-date__month",
                         display: l.X.Flex,
                         justifyContent: l.Wa.Center,
                         background: l.r.AccentAlt2
                     }, i.createElement(l.W, {
                         fontSize: l.Ca.Size6,
-                        transform: l.Qb.Uppercase,
+                        transform: l.Ob.Uppercase,
                         color: l.O.Overlay
                     }, n)), i.createElement(l.Xa, {
                         display: l.X.Flex,
@@ -1033,453 +1503,6 @@
             };
             t.loc.source = {
                 body: "mutation Events_UnfollowEvent($input: UnfollowEventInput!) {\nunfollowEvent(input: $input) {\nevent {\n...on EventCollection {\nid\nself {\nisFollowing\n}\n}\n...on EventLeaf {\nid\nself {\nisFollowing\n}\n}\n}\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = t
-        },
-        xMut: function(e, n) {
-            var t = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "query",
-                    name: {
-                        kind: "Name",
-                        value: "EventsPage_EventScheduleQuery"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "channelLogin"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "String"
-                                }
-                            }
-                        }
-                    }, {
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "limit"
-                            }
-                        },
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "Int"
-                            }
-                        }
-                    }, {
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "cursor"
-                            }
-                        },
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "Cursor"
-                            }
-                        }
-                    }, {
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "before"
-                            }
-                        },
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "Time"
-                            }
-                        }
-                    }, {
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "after"
-                            }
-                        },
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "Time"
-                            }
-                        }
-                    }, {
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "sortOrder"
-                            }
-                        },
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "SortOrder"
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "user"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "login"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "channelLogin"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "id"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "eventLeaves"
-                                    },
-                                    arguments: [{
-                                        kind: "Argument",
-                                        name: {
-                                            kind: "Name",
-                                            value: "first"
-                                        },
-                                        value: {
-                                            kind: "Variable",
-                                            name: {
-                                                kind: "Name",
-                                                value: "limit"
-                                            }
-                                        }
-                                    }, {
-                                        kind: "Argument",
-                                        name: {
-                                            kind: "Name",
-                                            value: "after"
-                                        },
-                                        value: {
-                                            kind: "Variable",
-                                            name: {
-                                                kind: "Name",
-                                                value: "cursor"
-                                            }
-                                        }
-                                    }, {
-                                        kind: "Argument",
-                                        name: {
-                                            kind: "Name",
-                                            value: "criteria"
-                                        },
-                                        value: {
-                                            kind: "ObjectValue",
-                                            fields: [{
-                                                kind: "ObjectField",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "endsBefore"
-                                                },
-                                                value: {
-                                                    kind: "Variable",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "before"
-                                                    }
-                                                }
-                                            }, {
-                                                kind: "ObjectField",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "endsAfter"
-                                                },
-                                                value: {
-                                                    kind: "Variable",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "after"
-                                                    }
-                                                }
-                                            }, {
-                                                kind: "ObjectField",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "sortOrder"
-                                                },
-                                                value: {
-                                                    kind: "Variable",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "sortOrder"
-                                                    }
-                                                }
-                                            }]
-                                        }
-                                    }],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "pageInfo"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "hasNextPage"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }]
-                                            }
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "edges"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "cursor"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "node"
-                                                    },
-                                                    arguments: [],
-                                                    directives: [],
-                                                    selectionSet: {
-                                                        kind: "SelectionSet",
-                                                        selections: [{
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "id"
-                                                            },
-                                                            arguments: [],
-                                                            directives: []
-                                                        }, {
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "self"
-                                                            },
-                                                            arguments: [],
-                                                            directives: [],
-                                                            selectionSet: {
-                                                                kind: "SelectionSet",
-                                                                selections: [{
-                                                                    kind: "Field",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "isFollowing"
-                                                                    },
-                                                                    arguments: [],
-                                                                    directives: []
-                                                                }]
-                                                            }
-                                                        }, {
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "title"
-                                                            },
-                                                            arguments: [],
-                                                            directives: []
-                                                        }, {
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "startAt"
-                                                            },
-                                                            arguments: [],
-                                                            directives: []
-                                                        }, {
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "endAt"
-                                                            },
-                                                            arguments: [],
-                                                            directives: []
-                                                        }, {
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "game"
-                                                            },
-                                                            arguments: [],
-                                                            directives: [],
-                                                            selectionSet: {
-                                                                kind: "SelectionSet",
-                                                                selections: [{
-                                                                    kind: "Field",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "id"
-                                                                    },
-                                                                    arguments: [],
-                                                                    directives: []
-                                                                }, {
-                                                                    kind: "Field",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "displayName"
-                                                                    },
-                                                                    arguments: [],
-                                                                    directives: []
-                                                                }]
-                                                            }
-                                                        }, {
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "channel"
-                                                            },
-                                                            arguments: [],
-                                                            directives: [],
-                                                            selectionSet: {
-                                                                kind: "SelectionSet",
-                                                                selections: [{
-                                                                    kind: "Field",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "id"
-                                                                    },
-                                                                    arguments: [],
-                                                                    directives: []
-                                                                }, {
-                                                                    kind: "Field",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "login"
-                                                                    },
-                                                                    arguments: [],
-                                                                    directives: []
-                                                                }, {
-                                                                    kind: "Field",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "displayName"
-                                                                    },
-                                                                    arguments: [],
-                                                                    directives: []
-                                                                }]
-                                                            }
-                                                        }, {
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "imageURL"
-                                                            },
-                                                            arguments: [{
-                                                                kind: "Argument",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "width"
-                                                                },
-                                                                value: {
-                                                                    kind: "IntValue",
-                                                                    value: "320"
-                                                                }
-                                                            }, {
-                                                                kind: "Argument",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "height"
-                                                                },
-                                                                value: {
-                                                                    kind: "IntValue",
-                                                                    value: "180"
-                                                                }
-                                                            }],
-                                                            directives: []
-                                                        }]
-                                                    }
-                                                }]
-                                            }
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 475
-                }
-            };
-            t.loc.source = {
-                body: "query EventsPage_EventScheduleQuery($channelLogin: String! $limit: Int $cursor: Cursor $before: Time $after: Time $sortOrder: SortOrder) {\nuser(login: $channelLogin) {\nid\neventLeaves(first: $limit after: $cursor criteria: {endsBefore: $before endsAfter: $after sortOrder: $sortOrder}) {\npageInfo {\nhasNextPage\n}\nedges {\ncursor\nnode {\nid\nself {\nisFollowing\n}\ntitle\nstartAt\nendAt\ngame {\nid\ndisplayName\n}\nchannel {\nid\nlogin\ndisplayName\n}\nimageURL(width:320 height:180)\n}\n}\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,

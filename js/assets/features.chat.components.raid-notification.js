@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [176], {
+    [174], {
         "6TSi": function(e, t) {},
         "6XEL": function(e, t, n) {
             "use strict";
@@ -92,8 +92,8 @@
                         size: 36,
                         src: t.profileImageURL,
                         alt: t.displayName
-                    }), i.createElement(m.qb, {
-                        asset: m.rb.AngleRight,
+                    }), i.createElement(m.ob, {
+                        asset: m.pb.AngleRight,
                         height: 10
                     }), i.createElement(m.q, {
                         size: 36,
@@ -103,17 +103,17 @@
                 },
                 v = function(e) {
                     var t = e.seconds;
-                    return i.createElement(m.Bb, {
+                    return i.createElement(m.zb, {
                         display: m.X.Flex,
                         alignItems: m.f.Center,
                         justifyContent: m.Wa.Center,
                         color: m.O.Overlay
                     }, i.createElement(m.Za, {
-                        size: m.zb.Large,
+                        size: m.xb.Large,
                         delay: 0,
                         inheritColor: !0
                     }), i.createElement(m.Xa, {
-                        position: m.hb.Absolute
+                        position: m.fb.Absolute
                     }, t))
                 },
                 _ = n("2xye"),
@@ -186,7 +186,7 @@
                             type: m.F.Hollow,
                             size: m.D.Small,
                             onClick: this.props.onCancelRaid
-                        }, D), i.createElement(m.Bb, {
+                        }, D), i.createElement(m.zb, {
                             padding: {
                                 x: 1
                             },
@@ -212,12 +212,12 @@
                         "x:strong": function(e) {
                             return i.createElement(m.W, {
                                 key: "raid-count",
-                                type: m.Rb.Strong
+                                type: m.Pb.Strong
                             }, e)
                         },
                         "x:span": function(e) {
                             return i.createElement(m.W, {
-                                type: m.Rb.Span
+                                type: m.Pb.Span
                             }, e)
                         },
                         raiderCount: e.raid.viewerCount,
@@ -235,12 +235,12 @@
                         "x:strong": function(e) {
                             return i.createElement(m.W, {
                                 key: "raid-count",
-                                type: m.Rb.Strong
+                                type: m.Pb.Strong
                             }, e)
                         },
                         "x:span": function(e) {
                             return i.createElement(m.W, {
-                                type: m.Rb.Span
+                                type: m.Pb.Span
                             }, e)
                         },
                         raiderCount: e.raid.viewerCount,
@@ -257,8 +257,8 @@
                     })
                 },
                 T = n("ll/k"),
-                O = n("nIRf"),
-                P = function(e) {
+                P = n("nIRf"),
+                O = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -275,7 +275,7 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.countdownTimer = new O.a({
+                        this.countdownTimer = new P.a({
                             onInterval: this.handleIntervalUpdate,
                             intervalMillis: 1e3
                         }), this.countdownTimer.start()
@@ -320,7 +320,7 @@
                             }
                         }, j(this.props))), i.createElement(m.Xa, {
                             alignSelf: m.g.Center
-                        }, this.renderActionable())), this.props.raid.isGoing && i.createElement(P, {
+                        }, this.renderActionable())), this.props.raid.isGoing && i.createElement(O, {
                             from: this.props.raid.jitterSeconds,
                             onSecondsUpdate: this.handleSecondsUpdate,
                             onCountdownEnd: this.handleCountdownEnd
@@ -341,10 +341,10 @@
                             return i.createElement(m.W, null, e)
                         },
                         sourceDisplayName: i.createElement(m.W, {
-                            type: m.Rb.Strong
+                            type: m.Pb.Strong
                         }, e.sourceChannel.displayName),
                         targetDisplayName: i.createElement(m.W, {
-                            type: m.Rb.Strong
+                            type: m.Pb.Strong
                         }, e.targetChannel.displayName),
                         viewerCount: e.raid.viewerCount
                     }, "RaidViewerMessage")
@@ -355,7 +355,7 @@
                         size: m.D.Small,
                         type: m.F.Hollow,
                         onClick: t
-                    }, i.createElement(m.Bb, {
+                    }, i.createElement(m.zb, {
                         padding: {
                             x: 1
                         },
@@ -440,11 +440,11 @@
                                 raid: e,
                                 sourceChannel: n,
                                 targetChannel: a
-                            })), i.createElement(m.Bb, r.__assign({
+                            })), i.createElement(m.zb, r.__assign({
                                 background: m.r.AccentAlt2,
                                 color: m.O.Overlay,
-                                position: m.hb.Absolute,
-                                zIndex: m.ec.Above,
+                                position: m.fb.Absolute,
+                                zIndex: m.cc.Above,
                                 fullWidth: !0
                             }, J), i.createElement(m.Xa, {
                                 padding: {

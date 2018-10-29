@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [207], {
+    [205], {
         "0xbx": function(t, e, n) {
             "use strict";
             n.d(e, "a", function() {
@@ -62,7 +62,7 @@
                         return null !== t && t.apply(this, arguments) || this
                     }
                     return a.__extends(e, t), e.prototype.render = function() {
-                        return r.createElement(v.Bb, {
+                        return r.createElement(v.zb, {
                             className: "tenant-panel",
                             display: v.X.Flex,
                             flexDirection: v.Aa.Column,
@@ -70,7 +70,7 @@
                         }, r.createElement(v.Xa, {
                             className: "tenant-panel__info",
                             display: v.X.Block,
-                            textAlign: v.Nb.Center,
+                            textAlign: v.Lb.Center,
                             margin: {
                                 y: 1
                             },
@@ -82,15 +82,15 @@
                                 bottom: 2
                             }
                         }, r.createElement(v.W, {
-                            type: v.Rb.H2,
+                            type: v.Pb.H2,
                             className: "tenant-panel__count",
                             color: v.O.Alt2
                         }, this.props.tenant.count)), r.createElement(v.W, {
-                            type: v.Rb.H3,
-                            transform: v.Qb.Uppercase,
+                            type: v.Pb.H3,
+                            transform: v.Ob.Uppercase,
                             className: "tenant-panel__name",
                             color: v.O.Alt2
-                        }, this.props.tenant.name)), r.createElement(v.Bb, {
+                        }, this.props.tenant.name)), r.createElement(v.zb, {
                             className: "tenant-panel__action",
                             display: v.X.Flex,
                             padding: {
@@ -103,7 +103,7 @@
                             onClick: Object(g.c)(this.trackLabel()),
                             linkTo: this.props.tenant.entryUrl
                         }, r.createElement(v.W, {
-                            transform: v.Qb.Uppercase
+                            transform: v.Ob.Uppercase
                         }, this.buttonText()))))
                     }, e.prototype.trackLabel = function() {
                         var t = this.props.tenant.name.toLowerCase();
@@ -287,7 +287,7 @@
                         })
                     }, e
                 }(r.Component),
-                j = Object(o.compose)(Object(l.b)("DevOverviewPage", {
+                O = Object(o.compose)(Object(l.b)("DevOverviewPage", {
                     destination: p.a.DevSiteOverview
                 }), Object(i.a)({
                     location: u.PageviewLocation.DevSiteOverview
@@ -299,7 +299,7 @@
             n.d(e, "DevOverviewPageContainer", function() {
                 return C
             }), n.d(e, "DevOverviewPage", function() {
-                return j
+                return O
             })
         },
         "V+GM": function(t, e, n) {

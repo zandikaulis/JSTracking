@@ -67,7 +67,7 @@
                             message: Object(d.d)("Failed to load friends", "FriendRequestsPage")
                         });
                         if (0 === this.state.filteredUsers.length) return i.createElement(y.Xa, {
-                            textAlign: y.Nb.Center,
+                            textAlign: y.Lb.Center,
                             padding: {
                                 y: 5
                             }
@@ -91,10 +91,10 @@
                                 }
                             })) : null
                         });
-                        return i.createElement(y.Xb, {
+                        return i.createElement(y.Vb, {
                             center: !0,
-                            childWidth: y.Yb.Large,
-                            gutterSize: y.Zb.Small,
+                            childWidth: y.Wb.Large,
+                            gutterSize: y.Xb.Small,
                             placeholderItems: 10
                         }, e)
                     }, n.prototype.detectUserDataChange = function(e, n) {
@@ -143,7 +143,7 @@
             function P(e) {
                 return !e.isLoggedIn
             }
-            var D = Object(a.compose)(Object(o.connect)(function(e) {
+            var E = Object(a.compose)(Object(o.connect)(function(e) {
                 return {
                     isLoggedIn: Object(g.f)(e)
                 }
@@ -164,7 +164,7 @@
                 location: v.PageviewLocation.Friends
             }))(w);
             t.d(n, "FriendsPage", function() {
-                return D
+                return E
             })
         },
         "3lt/": function(e, n, t) {
@@ -305,15 +305,15 @@
                         bottom: 2
                     }
                 }, i.createElement(o.W, {
-                    type: o.Rb.H2
+                    type: o.Pb.H2
                 }, Object(a.d)("Friends", "FriendsHeader")), i.createElement(o.Xa, {
                     margin: {
                         top: 1
                     }
-                }, i.createElement(o.Db, null, i.createElement(o.Cb, {
+                }, i.createElement(o.Bb, null, i.createElement(o.Ab, {
                     active: e.activeTab === r.Friends,
                     linkTo: "/friends"
-                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(o.Cb, {
+                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(o.Ab, {
                     active: e.activeTab === r.Requests,
                     linkTo: "/friends/requests"
                 }, Object(a.d)("Friend Requests", "FriendsHeader")))))

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [191], {
+    [189], {
         "5zXJ": function(e, t, n) {
             "use strict";
             n.d(t, "v", function() {
@@ -522,7 +522,7 @@
                         i = Object(u.d)("Bummer, this code is invalid ({description}). Please try again.", {
                             description: this.props.description ? this.props.description : "No description provided"
                         }, "RedeemPage");
-                    return c.createElement(E.Bb, {
+                    return c.createElement(E.zb, {
                         elevation: 3,
                         margin: {
                             top: 1
@@ -707,7 +707,7 @@
                             padding: {
                                 bottom: 4
                             },
-                            textAlign: E.Nb.Left
+                            textAlign: E.Lb.Left
                         }, c.createElement(E.W, {
                             bold: !0,
                             fontSize: E.Ca.Size1,
@@ -724,7 +724,7 @@
                             "x:bold": function() {
                                 return c.createElement(E.W, {
                                     bold: !0,
-                                    type: E.Rb.Span
+                                    type: E.Pb.Span
                                 }, e.props.user.displayName)
                             }
                         }, "RedeemPage")))), c.createElement(E.Xa, {
@@ -747,7 +747,7 @@
                             margin: {
                                 bottom: 1
                             },
-                            textAlign: E.Nb.Left
+                            textAlign: E.Lb.Left
                         }, c.createElement(E.Ra, {
                             autoFocus: !0,
                             placeholder: "00000-00000-00000",
@@ -790,12 +790,12 @@
                 z = Object(d.compose)(Object(v.a)(L, {
                     name: "redeemKey"
                 }))(W);
-            var B = Object(o.connect)(function(e) {
+            var X = Object(o.connect)(function(e) {
                     return {
                         user: Object(a.e)(e)
                     }
                 })(z),
-                X = (n("E2x/"), function(e) {
+                B = (n("E2x/"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -812,13 +812,13 @@
                         var t = s.parse(this.props.location.search);
                         return c.createElement(c.Fragment, null, c.createElement(b.a, {
                             darkModeEnabled: !0
-                        }), c.createElement(E.Bb, {
+                        }), c.createElement(E.zb, {
                             background: E.r.Alt,
                             className: "code-redemption-page",
                             fullWidth: !0,
                             fullHeight: !0,
                             alignContent: E.e.Center,
-                            overflow: E.cb.Auto
+                            overflow: E.ab.Auto
                         }, c.createElement(E.Ja, {
                             fullHeight: !0
                         }, c.createElement(E.P, {
@@ -854,7 +854,7 @@
                                 right: 1,
                                 bottom: 1
                             }
-                        }, c.createElement(B, {
+                        }, c.createElement(X, {
                             code: t.code
                         })))))))
                     }, t
@@ -864,7 +864,7 @@
                     autoReportInteractive: !0
                 }), Object(p.a)({
                     location: h.PageviewLocation.CodeRedemptionPage
-                }))(X);
+                }))(B);
             var M = Object(o.connect)(function(e) {
                 return {
                     user: Object(a.e)(e)

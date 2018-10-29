@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [131], {
+    [130], {
         "2rRr": function(e, t, n) {
             "use strict";
             var i, a = n("/MKj"),
@@ -44,12 +44,12 @@
                             }, c.createElement(f.Xa, null, c.createElement(f.Pa, {
                                 fullWidth: !0,
                                 fullHeight: !0,
-                                position: f.hb.Absolute
+                                position: f.fb.Absolute
                             }, c.createElement("img", {
                                 src: r
                             })), c.createElement(f.Xa, {
                                 className: "embed-card__overlay",
-                                position: f.hb.Absolute,
+                                position: f.fb.Absolute,
                                 attachLeft: !0,
                                 attachTop: !0,
                                 fullWidth: !0,
@@ -58,17 +58,17 @@
                                 className: "embed-card__play",
                                 display: f.X.Flex,
                                 justifyContent: f.Wa.Center,
-                                position: f.hb.Absolute,
+                                position: f.fb.Absolute,
                                 attachLeft: !0,
                                 attachTop: !0,
                                 fullWidth: !0,
                                 fullHeight: !0
-                            }, c.createElement(f.qb, {
-                                asset: f.rb.Play,
+                            }, c.createElement(f.ob, {
+                                asset: f.pb.Play,
                                 width: 50,
                                 height: 50
                             })), c.createElement(f.Xa, {
-                                position: f.hb.Absolute,
+                                position: f.fb.Absolute,
                                 padding: 1,
                                 attachBottom: !0,
                                 attachLeft: !0
@@ -80,25 +80,25 @@
                             }, c.createElement(f.K, {
                                 status: f.M.Live
                             })), void 0 !== l && c.createElement("span", null, t.getFormattedViewCount(l, o)))), c.createElement(f.Xa, {
-                                position: f.hb.Absolute,
+                                position: f.fb.Absolute,
                                 padding: 1,
                                 attachBottom: !0,
                                 attachRight: !0
-                            }, s && c.createElement(f.Xa, null, c.createElement(f.W, null, s)))), c.createElement(f.Bb, {
-                                position: f.hb.Absolute,
+                            }, s && c.createElement(f.Xa, null, c.createElement(f.W, null, s)))), c.createElement(f.zb, {
+                                position: f.fb.Absolute,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 margin: 1,
                                 fontSize: f.Ca.Size5
-                            }, o === v.Stream && c.createElement(f.eb, {
+                            }, o === v.Stream && c.createElement(f.cb, {
                                 label: Object(d.d)("Live", "EmbedOverlayPill"),
-                                type: f.fb.Live
-                            }), o === v.Video && c.createElement(f.eb, {
+                                type: f.db.Live
+                            }), o === v.Video && c.createElement(f.cb, {
                                 label: Object(d.d)("Video", "EmbedOverlayPill"),
-                                type: f.fb.Overlay
-                            }), o === v.Clip && c.createElement(f.eb, {
+                                type: f.db.Overlay
+                            }), o === v.Clip && c.createElement(f.cb, {
                                 label: Object(d.d)("Clip", "EmbedOverlayPill"),
-                                type: f.fb.Overlay
+                                type: f.db.Overlay
                             })))))
                         }, t.handleClick = function(e) {
                             e.preventDefault(), t.setState({
@@ -1132,11 +1132,11 @@
                         }))), r.createElement(C.P, {
                             cols: 8
                         }, r.createElement(C.W, {
-                            type: C.Rb.P,
+                            type: C.Pb.P,
                             fontSize: C.Ca.Size4,
                             title: l
                         }, l), r.createElement(C.W, {
-                            type: C.Rb.P,
+                            type: C.Pb.P,
                             color: C.O.Alt2,
                             title: s
                         }, s), r.createElement(C.Xa, {
@@ -1151,7 +1151,7 @@
                         }, r.createElement(y.a, {
                             onClickBuyNow: this.onBuyInGameContentNow,
                             options: c
-                        })), r.createElement(C.ac, null, r.createElement(k, {
+                        })), r.createElement(C.Yb, null, r.createElement(k, {
                             source: a || t
                         }))))))
                     }, t
@@ -1165,7 +1165,7 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this.props.alt ? C.r.Alt : C.r.Base;
-                        return r.createElement(C.Bb, {
+                        return r.createElement(C.zb, {
                             background: e,
                             border: !0,
                             padding: {
@@ -1176,7 +1176,7 @@
                     }, t
                 }(r.Component),
                 D = Object(g.b)("GameDetailsSection")(S),
-                R = function(e) {
+                O = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1188,12 +1188,12 @@
                                 bottom: 1
                             }
                         }, r.createElement(C.W, {
-                            type: C.Rb.H3
+                            type: C.Pb.H3
                         }, this.props.title))
                     }, t
                 }(r.Component),
-                O = Object(g.b)("GameDetailsTitle")(R),
-                F = function(e) {
+                F = Object(g.b)("GameDetailsTitle")(O),
+                w = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1216,21 +1216,21 @@
                         });
                         return r.createElement(D, {
                             alt: !0
-                        }, r.createElement(O, {
+                        }, r.createElement(F, {
                             title: Object(l.d)("Game Add-Ons", "FeaturedContentRow")
                         }), r.createElement(C.Ja, {
                             gutterSize: C.Ka.Large
                         }, n))
                     }, t
                 }(r.Component),
-                w = Object(g.b)("FeaturedContentRow")(F),
+                R = Object(g.b)("FeaturedContentRow")(w),
                 P = n("geRD"),
                 x = n("GkoH"),
-                _ = (n("rQvP"), function(e) {
+                L = (n("rQvP"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderSeparator = function() {
-                            return r.createElement(C.Bb, {
+                            return r.createElement(C.zb, {
                                 borderRight: !0,
                                 padding: {
                                     left: .5
@@ -1272,7 +1272,7 @@
                             t = e ? e.product : void 0;
                         if (!e || !t) return r.createElement(D, {
                             alt: !0
-                        }, r.createElement(C.Bb, {
+                        }, r.createElement(C.zb, {
                             className: "game-details-box",
                             padding: {
                                 top: 2,
@@ -1288,16 +1288,16 @@
                             display: C.X.Flex,
                             flexDirection: C.Aa.Row,
                             alignItems: C.f.Center
-                        }, r.createElement(C.Xa, null, r.createElement(C.gb, {
+                        }, r.createElement(C.Xa, null, r.createElement(C.eb, {
                             width: 175,
                             height: 36
-                        })), this.renderSeparator(), r.createElement(C.Xa, null, r.createElement(C.gb, {
+                        })), this.renderSeparator(), r.createElement(C.Xa, null, r.createElement(C.eb, {
                             width: 22,
                             height: 30
-                        })), r.createElement(C.Xa, null, r.createElement(C.gb, {
+                        })), r.createElement(C.Xa, null, r.createElement(C.eb, {
                             width: 50,
                             height: 15
-                        }))), r.createElement(C.Xa, null, r.createElement(C.gb, {
+                        }))), r.createElement(C.Xa, null, r.createElement(C.eb, {
                             width: 290,
                             height: 20
                         }))));
@@ -1325,7 +1325,7 @@
                                 channel: r.createElement(C.W, {
                                     key: "game-details-bold",
                                     bold: !0,
-                                    type: C.Rb.Span
+                                    type: C.Pb.Span
                                 }, this.props.referrer.displayName),
                                 "x:link": this.renderSharedRevenueLink
                             }, "GameDetailsBox");
@@ -1350,7 +1350,7 @@
                             }
                         })), r.createElement(D, {
                             alt: !0
-                        }, r.createElement(C.Bb, {
+                        }, r.createElement(C.zb, {
                             className: "game-details-box",
                             padding: {
                                 top: 2,
@@ -1374,10 +1374,10 @@
                         }), this.renderSeparator(), d, o, u), s))
                     }, t
                 }(r.Component)),
-                I = Object(g.b)("GameDetailBox")(_),
-                L = Object(d.a)(x, {
+                _ = Object(g.b)("GameDetailBox")(L),
+                I = Object(d.a)(x, {
                     name: "claimPrimeOffer"
-                })(I),
+                })(_),
                 G = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -1406,31 +1406,31 @@
                                 }, r.createElement(C.Xa, null, e.language)), r.createElement(C.P, {
                                     key: t + "audio",
                                     cols: 3
-                                }, r.createElement(C.Bb, {
-                                    textAlign: C.Nb.Center
-                                }, e.hasAudio && r.createElement(C.qb, {
-                                    asset: C.rb.Check,
-                                    type: C.sb.Success
+                                }, r.createElement(C.zb, {
+                                    textAlign: C.Lb.Center
+                                }, e.hasAudio && r.createElement(C.ob, {
+                                    asset: C.pb.Check,
+                                    type: C.qb.Success
                                 }))), r.createElement(C.P, {
                                     key: t + "int",
                                     cols: 3
-                                }, r.createElement(C.Bb, {
-                                    textAlign: C.Nb.Center
-                                }, e.hasInterface && r.createElement(C.qb, {
-                                    asset: C.rb.Check,
-                                    type: C.sb.Success
+                                }, r.createElement(C.zb, {
+                                    textAlign: C.Lb.Center
+                                }, e.hasInterface && r.createElement(C.ob, {
+                                    asset: C.pb.Check,
+                                    type: C.qb.Success
                                 }))), r.createElement(C.P, {
                                     key: t + "subs",
                                     cols: 3
-                                }, r.createElement(C.Bb, {
-                                    textAlign: C.Nb.Center
-                                }, e.hasSubtitles && r.createElement(C.qb, {
-                                    asset: C.rb.Check,
-                                    type: C.sb.Success
+                                }, r.createElement(C.zb, {
+                                    textAlign: C.Lb.Center
+                                }, e.hasSubtitles && r.createElement(C.ob, {
+                                    asset: C.pb.Check,
+                                    type: C.qb.Success
                                 }))), r.createElement(C.P, {
                                     key: t + "hr",
                                     cols: 12
-                                }, r.createElement(C.Bb, {
+                                }, r.createElement(C.zb, {
                                     margin: {
                                         top: .5,
                                         bottom: .5
@@ -1453,22 +1453,22 @@
                             margin: {
                                 top: 4
                             }
-                        }, r.createElement(O, {
+                        }, r.createElement(F, {
                             title: Object(l.d)("Description", "DirectoryGameDetailsPage")
-                        }), r.createElement(C.ac, null, r.createElement(k, {
+                        }), r.createElement(C.Yb, null, r.createElement(k, {
                             source: t.description
                         }))), r.createElement(C.Xa, {
                             margin: {
                                 top: 4
                             }
-                        }, r.createElement(O, {
+                        }, r.createElement(F, {
                             title: Object(l.d)("Features", "DirectoryGameDetailsPage")
-                        }), r.createElement(C.ac, null, r.createElement("ul", null, s))), r.createElement(C.Bb, {
+                        }), r.createElement(C.Yb, null, r.createElement("ul", null, s))), r.createElement(C.zb, {
                             margin: {
                                 top: 4
                             },
                             fontSize: C.Ca.Size6
-                        }, r.createElement(O, {
+                        }, r.createElement(F, {
                             title: Object(l.d)("Information", "DirectoryGameDetailsPage")
                         }), this.renderRow(Object(l.d)("Title: ", "DirectoryGameDetailsPage"), t.title), this.renderRow(Object(l.d)("Developer: ", "DirectoryGameDetailsPage"), e.developer), this.renderRow(Object(l.d)("Publisher: ", "DirectoryGameDetailsPage"), e.publisher), this.renderRowLink(Object(l.d)("More Info: ", "DirectoryGameDetailsPage"), Object(l.d)("Website", "DirectoryGameDetailsPage"), e.websiteURL), e.eulaURL && this.renderRowLink(Object(l.d)("License Agreement: ", "DirectoryGameDetailsPage"), Object(l.d)("Check out the EULA", "DirectoryGameDetailsPage"), e.eulaURL), this.renderRowLink(Object(l.d)("Need Help? ", "DirectoryGameDetailsPage"), Object(l.d)("Contact Support", "DirectoryGameDetailsPage"), e.supportURL))), r.createElement(C.P, {
                             cols: {
@@ -1480,14 +1480,14 @@
                             margin: {
                                 top: 4
                             }
-                        }, r.createElement(O, {
+                        }, r.createElement(F, {
                             title: Object(l.d)("Hardware Requirements", "DirectoryGameDetailsPage")
                         }), r.createElement(C.Xa, {
                             padding: {
                                 bottom: 1
                             }
                         }, r.createElement(C.W, {
-                            type: C.Rb.H4,
+                            type: C.Pb.H4,
                             bold: !0
                         }, Object(l.d)("Minimum", "DirectoryGameDetailsPage"))), d, r.createElement(C.Xa, {
                             padding: {
@@ -1495,36 +1495,36 @@
                                 bottom: 1
                             }
                         }, r.createElement(C.W, {
-                            type: C.Rb.H4,
+                            type: C.Pb.H4,
                             bold: !0
                         }, Object(l.d)("Recommended", "DirectoryGameDetailsPage"))), u), r.createElement(C.Xa, {
                             margin: {
                                 top: 4
                             }
-                        }, r.createElement(O, {
+                        }, r.createElement(F, {
                             title: Object(l.d)("Language Support", "DirectoryGameDetailsPage")
                         }), r.createElement(C.Ja, null, r.createElement(C.P, {
                             cols: 3
-                        }, r.createElement(C.Bb, {
+                        }, r.createElement(C.zb, {
                             color: C.O.Alt2
                         }, Object(l.d)("Language", "DirectoryGameDetailsPage"))), r.createElement(C.P, {
                             cols: 3
-                        }, r.createElement(C.Bb, {
+                        }, r.createElement(C.zb, {
                             color: C.O.Alt2,
-                            textAlign: C.Nb.Center
+                            textAlign: C.Lb.Center
                         }, Object(l.d)("Audio", "DirectoryGameDetailsPage"))), r.createElement(C.P, {
                             cols: 3
-                        }, r.createElement(C.Bb, {
+                        }, r.createElement(C.zb, {
                             color: C.O.Alt2,
-                            textAlign: C.Nb.Center
+                            textAlign: C.Lb.Center
                         }, Object(l.d)("Interface", "DirectoryGameDetailsPage"))), r.createElement(C.P, {
                             cols: 3
-                        }, r.createElement(C.Bb, {
+                        }, r.createElement(C.zb, {
                             color: C.O.Alt2,
-                            textAlign: C.Nb.Center
+                            textAlign: C.Lb.Center
                         }, Object(l.d)("Subtitles", "DirectoryGameDetailsPage"))), r.createElement(C.P, {
                             cols: 12
-                        }, r.createElement(C.Bb, {
+                        }, r.createElement(C.zb, {
                             borderBottom: !0,
                             margin: {
                                 top: .5,
@@ -1538,7 +1538,7 @@
                             display: C.X.Flex,
                             flexDirection: C.Aa.Row,
                             flexWrap: C.Ba.NoWrap
-                        }, r.createElement(C.Bb, {
+                        }, r.createElement(C.zb, {
                             color: C.O.Alt2,
                             padding: {
                                 right: 1
@@ -1557,9 +1557,9 @@
                         }, t)) : null
                     }, t
                 }(r.Component),
-                B = Object(g.b)("GameInfoSection")(G),
-                j = n("/MKj"),
-                A = n("fvjX"),
+                j = Object(g.b)("GameInfoSection")(G),
+                A = n("/MKj"),
+                B = n("fvjX"),
                 U = n("aCAx"),
                 X = n("cZKs"),
                 q = function(e) {
@@ -1567,7 +1567,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(C.Bb, {
+                        return r.createElement(C.zb, {
                             padding: {
                                 x: 2,
                                 y: 3
@@ -1581,14 +1581,14 @@
                         }))
                     }, t
                 }(r.Component);
-            var T = Object(A.compose)(Object(j.connect)(null, function(e) {
-                    return Object(A.bindActionCreators)({
+            var T = Object(B.compose)(Object(A.connect)(null, function(e) {
+                    return Object(B.bindActionCreators)({
                         closeModal: U.c
                     }, e)
                 }))(q),
                 V = n("2rRr"),
-                W = n("eFQ3"),
-                M = Object(g.b)("VideoEmbed", {
+                z = n("eFQ3"),
+                W = Object(g.b)("VideoEmbed", {
                     autoReportInteractive: !0
                 })(function(e) {
                     var t = e.video,
@@ -1608,9 +1608,9 @@
                         type: V.b.Video,
                         thumbnailURL: l,
                         viewCount: s
-                    }, r.createElement(W.b, i.__assign({}, c)))
+                    }, r.createElement(z.b, i.__assign({}, c)))
                 }),
-                z = n("VQbD"),
+                M = n("VQbD"),
                 H = (n("vu7R"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -1621,7 +1621,7 @@
                                     padding: {
                                         right: 2
                                     }
-                                }, r.createElement(C.gb, {
+                                }, r.createElement(C.eb, {
                                     width: 460,
                                     height: 260
                                 }))
@@ -1633,7 +1633,7 @@
                                             right: 2
                                         },
                                         key: e.id
-                                    }, r.createElement(M, {
+                                    }, r.createElement(W, {
                                         video: e
                                     })) : null
                                 }),
@@ -1666,22 +1666,22 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return r.createElement(D, null, r.createElement(O, {
+                        return r.createElement(D, null, r.createElement(F, {
                             title: Object(l.d)("Videos and Screenshots", "DirectoryGameDetailsPage")
                         }), r.createElement(C.Pa, {
                             margin: {
                                 bottom: 3,
                                 top: 1
                             }
-                        }, r.createElement(z.a, {
+                        }, r.createElement(M.a, {
                             items: this.renderItems()
                         })))
                     }, t = i.__decorate([Object(g.b)("GameMedia")], t)
                 }(r.Component));
-            var Q = Object(j.connect)(function() {
+            var Q = Object(A.connect)(function() {
                     return {}
                 }, function(e) {
-                    return Object(A.bindActionCreators)({
+                    return Object(B.bindActionCreators)({
                         showImageViewerModal: function(e) {
                             var t = i.__rest(e, []);
                             return Object(U.d)(T, t)
@@ -1724,15 +1724,15 @@
                             var p = Object(l.d)("{numCrates} Twitch Crates", {
                                 numCrates: a.length
                             }, "InGameContentCrateReward");
-                            e = r.createElement(C.Bb, {
+                            e = r.createElement(C.zb, {
                                 className: "in-game-content__crates",
                                 attachBottom: !0,
                                 padding: {
                                     left: 1,
                                     right: 1
                                 },
-                                position: C.hb.Absolute,
-                                textAlign: C.Nb.Right
+                                position: C.fb.Absolute,
+                                textAlign: C.Lb.Right
                             }, p)
                         }
                         var f = o ? r.createElement(C.o, {
@@ -1744,33 +1744,33 @@
                             margin: {
                                 bottom: 3
                             }
-                        }, r.createElement(C.Bb, {
+                        }, r.createElement(C.zb, {
                             className: "in-game-content",
                             border: !0,
                             fullHeight: !0,
-                            position: C.hb.Relative
-                        }, f, r.createElement(C.Bb, {
+                            position: C.fb.Relative
+                        }, f, r.createElement(C.zb, {
                             background: C.r.Base,
                             padding: 1
                         }, r.createElement(C.Xa, {
                             className: "in-game-content__info-header"
                         }, r.createElement(C.W, {
-                            type: C.Rb.P,
+                            type: C.Pb.P,
                             fontSize: C.Ca.Size5,
                             bold: !0,
                             title: c
                         }, c), r.createElement(C.W, {
-                            type: C.Rb.P,
+                            type: C.Pb.P,
                             color: C.O.Alt2,
                             title: d
                         }, d)), r.createElement(C.Xa, {
                             className: "in-game-content__price",
-                            position: C.hb.Relative
+                            position: C.fb.Relative
                         }, r.createElement("p", {
                             title: s
                         }, s), e), r.createElement(C.Xa, {
                             className: "in-game-content__buy-button",
-                            position: C.hb.Absolute,
+                            position: C.fb.Absolute,
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0,
@@ -1806,11 +1806,11 @@
                         });
                         return r.createElement(D, {
                             alt: !0
-                        }, r.createElement(O, {
+                        }, r.createElement(F, {
                             title: Object(l.d)("In-Game Content", "FeaturedContentRow")
-                        }), r.createElement(C.Xb, {
-                            childWidth: C.Yb.Medium,
-                            gutterSize: C.Zb.Small,
+                        }), r.createElement(C.Vb, {
+                            childWidth: C.Wb.Medium,
+                            gutterSize: C.Xb.Small,
                             noGrow: !0
                         }, n))
                     }, t
@@ -1883,7 +1883,7 @@
                             directoryType: h.a.Games,
                             directoryName: decodeURIComponent(this.props.match.params.encodedCommunityName)
                         }));
-                        return r.createElement(C.Xa, null, g, r.createElement(L, {
+                        return r.createElement(C.Xa, null, g, r.createElement(I, {
                             game: n,
                             referrer: u,
                             countryCode: m,
@@ -1893,7 +1893,7 @@
                             screenshotURLs: i,
                             thumbnailURLs: a,
                             videos: o
-                        }), r.createElement(w, {
+                        }), r.createElement(R, {
                             contentList: p,
                             countryCode: m,
                             game: n,
@@ -1907,7 +1907,7 @@
                             hasPrime: d,
                             refetchData: this.refetchData,
                             referrer: u
-                        }), r.createElement(B, {
+                        }), r.createElement(j, {
                             game: n
                         }))
                     }, t
@@ -1981,7 +1981,7 @@
             ! function(e) {
                 e.Previous = "previous", e.Next = "next"
             }(a || (a = {}));
-            var m = ((i = {})[a.Previous] = d.rb.AngleLeft, i[a.Next] = d.rb.AngleRight, i),
+            var m = ((i = {})[a.Previous] = d.pb.AngleLeft, i[a.Next] = d.pb.AngleRight, i),
                 p = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2061,7 +2061,7 @@
                                 });
                             return l.createElement(d.Xa, {
                                 className: u,
-                                position: d.hb.Relative,
+                                position: d.fb.Relative,
                                 display: d.X.Flex,
                                 alignItems: d.f.Stretch
                             }, l.createElement(d.A, {
@@ -2085,14 +2085,14 @@
                         window.removeEventListener("resize", this.onResize)
                     }, t.prototype.render = function() {
                         return l.createElement(d.Pa, r.__assign({}, this.props, {
-                            position: d.hb.Relative
+                            position: d.fb.Relative
                         }), l.createElement("div", {
                             className: "media-carousel",
                             ref: this.refHandler,
                             "data-test-selector": "carousel-container"
                         }, l.createElement(d.Xa, {
                             className: "media-carousel__child-container",
-                            overflow: d.cb.Hidden,
+                            overflow: d.ab.Hidden,
                             fullWidth: !0,
                             "data-test-selector": "child-container"
                         }, l.createElement("div", {
@@ -2116,7 +2116,7 @@
                             className: "media-carousel__nav",
                             display: d.X.Flex,
                             alignItems: d.f.Center,
-                            position: d.hb.Absolute,
+                            position: d.fb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullHeight: !0
@@ -2124,7 +2124,7 @@
                             className: "media-carousel__nav",
                             display: d.X.Flex,
                             alignItems: d.f.Center,
-                            position: d.hb.Absolute,
+                            position: d.fb.Absolute,
                             attachTop: !0,
                             attachRight: !0,
                             fullHeight: !0
@@ -2739,7 +2739,7 @@
                                 alignItems: s.f.Center
                             }, a.createElement(s.z, {
                                 fullWidth: !0,
-                                icon: n && n.length > 0 ? s.rb.Crate : void 0,
+                                icon: n && n.length > 0 ? s.pb.Crate : void 0,
                                 purchase: e,
                                 onClick: t.props.onClickBuyNow,
                                 "data-target": d,
@@ -2747,9 +2747,9 @@
                             }, Object(o.d)("Buy Now", "FuelBuyButton")), l)
                         }, t.renderPrimeTreatment = function(e, n) {
                             var i = [],
-                                r = a.createElement(s.qb, {
-                                    asset: s.rb.Crown,
-                                    type: s.sb.Prime,
+                                r = a.createElement(s.ob, {
+                                    asset: s.pb.Crown,
+                                    type: s.qb.Prime,
                                     width: 16,
                                     height: 16,
                                     key: "fuel-crown"
@@ -2765,7 +2765,7 @@
                                 },
                                 key: "fuel-free-label"
                             }, a.createElement(s.W, {
-                                type: s.Rb.Strong
+                                type: s.Pb.Strong
                             }, Object(o.d)("Free", "FuelBuyButton"))), a.createElement("div", {
                                 className: "fuel-buy-button__prime-trial-button",
                                 key: "fuel-trial"
