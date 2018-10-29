@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [96], {
+    [97], {
         "0FG4": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -633,7 +633,7 @@
                                 }
                         }
                     }(this.props.match.params.error);
-                    return i.createElement(p.zb, {
+                    return i.createElement(p.Bb, {
                         className: "clips-error-page",
                         background: p.r.Base,
                         margin: {
@@ -641,7 +641,7 @@
                         },
                         elevation: 3,
                         color: p.O.Base,
-                        textAlign: p.Lb.Center
+                        textAlign: p.Nb.Center
                     }, i.createElement(p.o, {
                         ratio: p.p.Aspect16x9
                     }, i.createElement(p.Xa, {

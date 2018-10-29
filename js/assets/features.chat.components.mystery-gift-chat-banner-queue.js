@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [177], {
+    [179], {
         "/2Fp": function(e, t) {
             var n = {
                 kind: "Document",
@@ -171,7 +171,7 @@
                                 displayName: r.createElement(v.W, {
                                     bold: !0,
                                     color: v.O.Link,
-                                    type: v.Pb.Span
+                                    type: v.Rb.Span
                                 }, Object(m.a)(n, e)),
                                 mysteryGiftCount: t.props.mysteryGiftCount,
                                 tier: i
@@ -224,7 +224,7 @@
                     }
                 }), Object(g.b)("MysteryGiftChatBanner"))(w),
                 T = function(e) {
-                    return 0 === e.purchases.length ? null : r.createElement(v.zb, {
+                    return 0 === e.purchases.length ? null : r.createElement(v.Bb, {
                         background: v.r.Base,
                         fullWidth: !0
                     }, e.purchases.slice(0, 2).map(function(t) {

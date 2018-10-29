@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [100], {
+    [101], {
         "+lD8": function(e, t, n) {
             "use strict";
             var a = n("q1tI"),
@@ -267,38 +267,44 @@
                 r = n("q1tI"),
                 i = n("MXoD"),
                 o = n("2xye"),
-                s = n("Ue10"),
-                l = function(e) {
+                s = n("GnwI"),
+                l = n("Ue10"),
+                c = function(e) {
                     var t = e.tags;
-                    return void 0 !== e.tagNumberLimit && e.tagNumberLimit > 0 && (t = t.slice(0, e.tagNumberLimit)), r.createElement(s.Xa, {
-                        display: s.X.InlineBlock,
+                    return void 0 !== e.tagNumberLimit && e.tagNumberLimit > 0 && (t = t.slice(0, e.tagNumberLimit)), r.createElement(l.Xa, {
+                        display: l.X.InlineBlock,
                         fullWidth: !0
                     }, t.map(function(t) {
-                        var n = a.__assign({}, e.linkTo) || {};
+                        var n = a.__assign({}, e.linkTo);
                         e.linkPath && (n.pathname = e.linkPath), n.pathname && (n.pathname = n.pathname.replace(":tagID", t.id));
-                        return r.createElement(s.zb, {
+                        return r.createElement(l.Bb, {
                             key: t.id,
-                            fontSize: s.Ca.Size7,
-                            display: s.X.InlineBlock,
+                            fontSize: l.Ca.Size7,
+                            display: l.X.InlineBlock,
                             margin: {
                                 right: .5,
                                 bottom: .5
                             }
-                        }, r.createElement(s.Ib, {
+                        }, r.createElement(l.Kb, {
                             label: t.localizedName,
                             type: e.style,
-                            linkTo: Object(i.a)({
+                            linkTo: e.linkTo || e.linkPath ? Object(i.a)({
                                 content: o.PageviewContent.Tag
-                            }, n),
+                            }, n) : void 0,
                             onClick: function() {
                                 e.callback && e.callback(t)
                             },
                             "data-a-target": t.localizedName
                         }))
                     }))
-                };
-            n.d(t, "a", function() {
-                return l
+                },
+                u = Object(s.b)("TagList", {
+                    autoReportInteractive: !0
+                })(c);
+            n.d(t, !1, function() {
+                return c
+            }), n.d(t, "a", function() {
+                return u
             })
         },
         "0SKf": function(e, t, n) {
@@ -339,6 +345,43 @@
             ! function(e) {
                 e.BountiesExpanded = "expandedBountyCount", e.BountiesAccepted = "claimedBountyCount", e.BountiesCompleted = "completedBountyCount", e.BountiesTotal = "viewedBountyCount"
             }(c || (c = {}))
+        },
+        "17YR": function(e, t, n) {
+            "use strict";
+
+            function a(e) {
+                return e.map(function(e) {
+                    return e.join(",")
+                }).join("\n")
+            }
+
+            function r(e) {
+                for (var t = [], n = e[0].length, a = function(n) {
+                        t.push(e.map(function(e) {
+                            return e[n]
+                        }))
+                    }, r = 0; r < n; r++) a(r);
+                return t
+            }
+
+            function i(e, t) {
+                if ("function" == typeof window.navigator.msSaveBlob) {
+                    var n = new Blob([t], {
+                        type: "text/csv;charset=utf-8;"
+                    });
+                    return window.navigator.msSaveBlob(n, e)
+                }
+                var a = document.createElement("a"),
+                    r = encodeURIComponent(t);
+                void 0 === a.download ? a.href = "data:attachment/csv;charset=utf-8," + r : (a.href = "data:text/csv;charset=utf-8," + r, a.download = e), a.target = "_blank", a.setAttribute("style", "visibility: hidden"), document.body.appendChild(a), a.click(), document.body.removeChild(a)
+            }
+            n.d(t, "b", function() {
+                return a
+            }), n.d(t, "c", function() {
+                return r
+            }), n.d(t, "a", function() {
+                return i
+            })
         },
         "25n4": function(e, t, n) {
             "use strict";
@@ -503,35 +546,35 @@
                     N = b || v || Function("return this")(),
                     T = "object" == typeof t && t && !t.nodeType && t,
                     _ = T && "object" == typeof n && n && !n.nodeType && n,
-                    S = _ && _.exports === T,
-                    O = S && b.process,
-                    C = function() {
+                    O = _ && _.exports === T,
+                    R = O && b.process,
+                    S = function() {
                         try {
-                            return O && O.binding && O.binding("util")
+                            return R && R.binding && R.binding("util")
                         } catch (e) {}
                     }(),
-                    I = C && C.isTypedArray;
+                    C = S && S.isTypedArray;
 
                 function D(e, t) {
                     return "__proto__" == t ? void 0 : e[t]
                 }
                 var A = Array.prototype,
-                    R = Function.prototype,
+                    I = Function.prototype,
                     k = Object.prototype,
                     B = N["__core-js_shared__"],
-                    P = R.toString,
-                    w = k.hasOwnProperty,
+                    w = I.toString,
+                    P = k.hasOwnProperty,
                     L = function() {
                         var e = /[^.]+$/.exec(B && B.keys && B.keys.IE_PROTO || "");
                         return e ? "Symbol(src)_1." + e : ""
                     }(),
                     F = k.toString,
-                    M = P.call(Object),
-                    x = RegExp("^" + P.call(w).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
-                    j = S ? N.Buffer : void 0,
-                    U = N.Symbol,
+                    M = w.call(Object),
+                    x = RegExp("^" + w.call(P).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
+                    U = O ? N.Buffer : void 0,
+                    j = N.Symbol,
                     G = N.Uint8Array,
-                    V = j ? j.allocUnsafe : void 0,
+                    V = U ? U.allocUnsafe : void 0,
                     W = function(e, t) {
                         return function(n) {
                             return e(t(n))
@@ -539,15 +582,15 @@
                     }(Object.getPrototypeOf, Object),
                     H = Object.create,
                     X = k.propertyIsEnumerable,
-                    z = A.splice,
-                    Y = U ? U.toStringTag : void 0,
+                    Y = A.splice,
+                    z = j ? j.toStringTag : void 0,
                     q = function() {
                         try {
                             var e = ye(Object, "defineProperty");
                             return e({}, "", {}), e
                         } catch (e) {}
                     }(),
-                    K = j ? j.isBuffer : void 0,
+                    K = U ? U.isBuffer : void 0,
                     Q = Math.max,
                     J = Date.now,
                     Z = ye(N, "Map"),
@@ -596,9 +639,9 @@
                 }
 
                 function ie(e, t) {
-                    var n = Se(e),
+                    var n = Oe(e),
                         a = !n && _e(e),
-                        r = !n && !a && Ce(e),
+                        r = !n && !a && Se(e),
                         i = !n && !a && !r && ke(e),
                         o = n || a || r || i,
                         s = o ? function(e, t) {
@@ -606,7 +649,7 @@
                             return a
                         }(e.length, String) : [],
                         l = s.length;
-                    for (var c in e) !t && !w.call(e, c) || o && ("length" == c || r && ("offset" == c || "parent" == c) || i && ("buffer" == c || "byteLength" == c || "byteOffset" == c) || be(c, l)) || s.push(c);
+                    for (var c in e) !t && !P.call(e, c) || o && ("length" == c || r && ("offset" == c || "parent" == c) || i && ("buffer" == c || "byteLength" == c || "byteOffset" == c) || be(c, l)) || s.push(c);
                     return s
                 }
 
@@ -616,7 +659,7 @@
 
                 function se(e, t, n) {
                     var a = e[t];
-                    w.call(e, t) && Te(a, n) && (void 0 !== n || t in e) || ce(e, t, n)
+                    P.call(e, t) && Te(a, n) && (void 0 !== n || t in e) || ce(e, t, n)
                 }
 
                 function le(e, t) {
@@ -644,10 +687,10 @@
                         var n = t[e];
                         return n === r ? void 0 : n
                     }
-                    return w.call(t, e) ? t[e] : void 0
+                    return P.call(t, e) ? t[e] : void 0
                 }, te.prototype.has = function(e) {
                     var t = this.__data__;
-                    return $ ? void 0 !== t[e] : w.call(t, e)
+                    return $ ? void 0 !== t[e] : P.call(t, e)
                 }, te.prototype.set = function(e, t) {
                     var n = this.__data__;
                     return this.size += this.has(e) ? 0 : 1, n[e] = $ && void 0 === t ? r : t, this
@@ -656,7 +699,7 @@
                 }, ne.prototype.delete = function(e) {
                     var t = this.__data__,
                         n = le(t, e);
-                    return !(n < 0 || (n == t.length - 1 ? t.pop() : z.call(t, n, 1), --this.size, 0))
+                    return !(n < 0 || (n == t.length - 1 ? t.pop() : Y.call(t, n, 1), --this.size, 0))
                 }, ne.prototype.get = function(e) {
                     var t = this.__data__,
                         n = le(t, e);
@@ -714,15 +757,15 @@
                 }();
 
                 function de(e) {
-                    return null == e ? void 0 === e ? h : m : Y && Y in Object(e) ? function(e) {
-                        var t = w.call(e, Y),
-                            n = e[Y];
+                    return null == e ? void 0 === e ? h : m : z && z in Object(e) ? function(e) {
+                        var t = P.call(e, z),
+                            n = e[z];
                         try {
-                            e[Y] = void 0;
+                            e[z] = void 0;
                             var a = !0
                         } catch (e) {}
                         var r = F.call(e);
-                        a && (t ? e[Y] = n : delete e[Y]);
+                        a && (t ? e[z] = n : delete e[z]);
                         return r
                     }(e) : function(e) {
                         return F.call(e)
@@ -730,16 +773,16 @@
                 }
 
                 function me(e) {
-                    return Re(e) && de(e) == l
+                    return Ie(e) && de(e) == l
                 }
 
                 function pe(e) {
                     return !(!Ae(e) || function(e) {
                         return !!L && L in e
-                    }(e)) && (Ie(e) ? x : g).test(function(e) {
+                    }(e)) && (Ce(e) ? x : g).test(function(e) {
                         if (null != e) {
                             try {
-                                return P.call(e)
+                                return w.call(e)
                             } catch (e) {}
                             try {
                                 return e + ""
@@ -758,7 +801,7 @@
                     }(e);
                     var t = ve(e),
                         n = [];
-                    for (var a in e)("constructor" != a || !t && w.call(e, a)) && n.push(a);
+                    for (var a in e)("constructor" != a || !t && P.call(e, a)) && n.push(a);
                     return n
                 }
 
@@ -773,11 +816,11 @@
                                 var u = i ? i(s, l, n + "", e, t, o) : void 0,
                                     d = void 0 === u;
                                 if (d) {
-                                    var m = Se(l),
-                                        f = !m && Ce(l),
+                                    var m = Oe(l),
+                                        f = !m && Se(l),
                                         h = !m && !f && ke(l);
-                                    u = l, m || f || h ? Se(s) ? u = s : ! function(e) {
-                                        return Re(e) && Oe(e)
+                                    u = l, m || f || h ? Oe(s) ? u = s : ! function(e) {
+                                        return Ie(e) && Re(e)
                                     }(s) ? f ? (d = !1, u = function(e, t) {
                                         if (t) return e.slice();
                                         var n = e.length,
@@ -796,11 +839,11 @@
                                         for (; ++n < a;) t[n] = e[n];
                                         return t
                                     }(s) : function(e) {
-                                        if (!Re(e) || de(e) != p) return !1;
+                                        if (!Ie(e) || de(e) != p) return !1;
                                         var t = W(e);
                                         if (null === t) return !0;
-                                        var n = w.call(t, "constructor") && t.constructor;
-                                        return "function" == typeof n && n instanceof n && P.call(n) == M
+                                        var n = P.call(t, "constructor") && t.constructor;
+                                        return "function" == typeof n && n instanceof n && w.call(n) == M
                                     }(l) || _e(l) ? (u = s, _e(s) ? u = function(e) {
                                         return function(e, t, n, a) {
                                             var r = !n;
@@ -814,7 +857,7 @@
                                             }
                                             return n
                                         }(e, Be(e))
-                                    }(s) : (!Ae(s) || a && Ie(s)) && (u = function(e) {
+                                    }(s) : (!Ae(s) || a && Ce(s)) && (u = function(e) {
                                         return "function" != typeof e.constructor || ve(e) ? {} : ee(W(e))
                                     }(l))) : d = !1
                                 }
@@ -850,7 +893,7 @@
                                         return e.apply(t, n)
                                     }(e, this, s)
                             }
-                    }(e, t, we), e + "")
+                    }(e, t, Pe), e + "")
                 }
 
                 function Ee(e, t) {
@@ -899,7 +942,7 @@
                         }(t),
                         writable: !0
                     })
-                } : we);
+                } : Pe);
 
                 function Te(e, t) {
                     return e === t || e != e && t != t
@@ -907,18 +950,18 @@
                 var _e = me(function() {
                         return arguments
                     }()) ? me : function(e) {
-                        return Re(e) && w.call(e, "callee") && !X.call(e, "callee")
+                        return Ie(e) && P.call(e, "callee") && !X.call(e, "callee")
                     },
-                    Se = Array.isArray;
+                    Oe = Array.isArray;
 
-                function Oe(e) {
-                    return null != e && De(e.length) && !Ie(e)
+                function Re(e) {
+                    return null != e && De(e.length) && !Ce(e)
                 }
-                var Ce = K || function() {
+                var Se = K || function() {
                     return !1
                 };
 
-                function Ie(e) {
+                function Ce(e) {
                     if (!Ae(e)) return !1;
                     var t = de(e);
                     return t == u || t == d || t == c || t == f
@@ -933,21 +976,21 @@
                     return null != e && ("object" == t || "function" == t)
                 }
 
-                function Re(e) {
+                function Ie(e) {
                     return null != e && "object" == typeof e
                 }
-                var ke = I ? function(e) {
+                var ke = C ? function(e) {
                     return function(t) {
                         return e(t)
                     }
-                }(I) : function(e) {
-                    return Re(e) && De(e.length) && !!y[de(e)]
+                }(C) : function(e) {
+                    return Ie(e) && De(e.length) && !!y[de(e)]
                 };
 
                 function Be(e) {
-                    return Oe(e) ? ie(e, !0) : fe(e)
+                    return Re(e) ? ie(e, !0) : fe(e)
                 }
-                var Pe = function(e) {
+                var we = function(e) {
                     return ge(function(t, n) {
                         var a = -1,
                             r = n.length,
@@ -956,7 +999,7 @@
                         for (i = e.length > 3 && "function" == typeof i ? (r--, i) : void 0, o && function(e, t, n) {
                                 if (!Ae(n)) return !1;
                                 var a = typeof t;
-                                return !!("number" == a ? Oe(n) && be(t, n.length) : "string" == a && t in n) && Te(n[t], e)
+                                return !!("number" == a ? Re(n) && be(t, n.length) : "string" == a && t in n) && Te(n[t], e)
                             }(n[0], n[1], o) && (i = r < 3 ? void 0 : i, r = 1), t = Object(t); ++a < r;) {
                             var s = n[a];
                             s && e(t, s, a, i)
@@ -967,10 +1010,10 @@
                     he(e, t, n)
                 });
 
-                function we(e) {
+                function Pe(e) {
                     return e
                 }
-                n.exports = Pe
+                n.exports = we
             }).call(this, n("yLpj"), n("YuTi")(e))
         },
         "4CVa": function(e, t, n) {},
@@ -1766,12 +1809,12 @@
         },
         DMoW: function(e, t, n) {
             "use strict";
-            var a, r, i, o, s, l, c, u, d, m, p, f, h, g, E, y, b, v, N, T, _, S, O, C, I, D, A, R, k, B, P, w, L, F, M, x, j, U, G, V, W, H, X, z, Y, q, K, Q, J, Z, $, ee, te, ne, ae, re, ie, oe, se, le, ce, ue, de, me, pe, fe, he, ge, Ee, ye, be, ve, Ne, Te, _e, Se, Oe, Ce, Ie, De, Ae, Re, ke, Be, Pe, we, Le, Fe, Me, xe, je, Ue, Ge, Ve, We, He, Xe, ze, Ye, qe, Ke, Qe, Je, Ze, $e, et, tt, nt, at, rt, it;
+            var a, r, i, o, s, l, c, u, d, m, p, f, h, g, E, y, b, v, N, T, _, O, R, S, C, D, A, I, k, B, w, P, L, F, M, x, U, j, G, V, W, H, X, Y, z, q, K, Q, J, Z, $, ee, te, ne, ae, re, ie, oe, se, le, ce, ue, de, me, pe, fe, he, ge, Ee, ye, be, ve, Ne, Te, _e, Oe, Re, Se, Ce, De, Ae, Ie, ke, Be, we, Pe, Le, Fe, Me, xe, Ue, je, Ge, Ve, We, He, Xe, Ye, ze, qe, Ke, Qe, Je, Ze, $e, et, tt, nt, at, rt, it, ot, st, lt;
             n.d(t, "c", function() {
                     return r
-                }), n.d(t, "F", function() {
+                }), n.d(t, "G", function() {
                     return s
-                }), n.d(t, "y", function() {
+                }), n.d(t, "x", function() {
                     return l
                 }), n.d(t, "g", function() {
                     return h
@@ -1781,76 +1824,80 @@
                     return v
                 }), n.d(t, "k", function() {
                     return _
-                }), n.d(t, "O", function() {
-                    return S
-                }), n.d(t, "H", function() {
+                }), n.d(t, "Q", function() {
                     return O
+                }), n.d(t, "I", function() {
+                    return R
                 }), n.d(t, "o", function() {
-                    return C
+                    return S
                 }), n.d(t, "i", function() {
                     return A
-                }), n.d(t, "G", function() {
-                    return R
+                }), n.d(t, "H", function() {
+                    return I
                 }), n.d(t, "b", function() {
                     return F
                 }), n.d(t, "q", function() {
                     return M
                 }), n.d(t, "p", function() {
-                    return j
-                }), n.d(t, "J", function() {
                     return U
-                }), n.d(t, "L", function() {
-                    return G
-                }), n.d(t, "A", function() {
-                    return V
+                }), n.d(t, "K", function() {
+                    return j
                 }), n.d(t, "M", function() {
+                    return G
+                }), n.d(t, "B", function() {
+                    return V
+                }), n.d(t, "N", function() {
                     return W
-                }), n.d(t, "r", function() {
-                    return z
+                }), n.d(t, "A", function() {
+                    return H
+                }), n.d(t, "z", function() {
+                    return X
                 }), n.d(t, "n", function() {
                     return Y
-                }), n.d(t, "K", function() {
-                    return q
+                }), n.d(t, "L", function() {
+                    return z
                 }), n.d(t, "a", function() {
+                    return q
+                }), n.d(t, "t", function() {
                     return K
-                }), n.d(t, "u", function() {
+                }), n.d(t, "v", function() {
                     return Q
-                }), n.d(t, "w", function() {
-                    return J
-                }), n.d(t, "C", function() {
-                    return $
                 }), n.d(t, "D", function() {
-                    return ee
-                }), n.d(t, "B", function() {
-                    return ne
+                    return Z
                 }), n.d(t, "E", function() {
-                    return ae
-                }), n.d(t, "N", function() {
-                    return he
+                    return $
+                }), n.d(t, "C", function() {
+                    return te
+                }), n.d(t, "F", function() {
+                    return ne
+                }), n.d(t, "P", function() {
+                    return ie
+                }), n.d(t, "O", function() {
+                    return fe
                 }), n.d(t, "m", function() {
-                    return Se
+                    return _e
                 }), n.d(t, "l", function() {
                     return Oe
-                }), n.d(t, "P", function() {
-                    return Ae
-                }), n.d(t, "z", function() {
+                }), n.d(t, "R", function() {
+                    return De
+                }), n.d(t, "y", function() {
                     return Le
-                }), n.d(t, "t", function() {
+                }), n.d(t, "s", function() {
                     return xe
                 }), n.d(t, "j", function() {
-                    return Ue
+                    return je
                 }), n.d(t, "h", function() {
                     return Ge
-                }), n.d(t, "v", function() {
+                }), n.d(t, "u", function() {
                     return Ve
-                }), n.d(t, "I", function() {
+                }), n.d(t, "J", function() {
                     return He
-                }), n.d(t, "x", function() {
-                    return Ke
+                }), n.d(t, "w", function() {
+                    return Ze
                 }), n.d(t, "d", function() {
-                    return at
-                }), n.d(t, "s", function() {
-                    return rt
+                    return ot
+                }), n.d(t, "r", function() {
+                    return st
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -1917,16 +1964,16 @@
                 }(_ || (_ = {})),
                 function(e) {
                     e.PRIVATE = "PRIVATE", e.PUBLIC = "PUBLIC"
-                }(S || (S = {})),
-                function(e) {
-                    e.ENDED = "ENDED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.UNKNOWN = "UNKNOWN"
                 }(O || (O = {})),
                 function(e) {
+                    e.ENDED = "ENDED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.UNKNOWN = "UNKNOWN"
+                }(R || (R = {})),
+                function(e) {
                     e.ARCHIVES_DISABLED = "ARCHIVES_DISABLED", e.BROADCASTER_NOT_LIVE = "BROADCASTER_NOT_LIVE", e.BROADCAST_FORMAT_INVALID_PREMIERE = "BROADCAST_FORMAT_INVALID_PREMIERE", e.BROADCAST_FORMAT_INVALID_RERUN = "BROADCAST_FORMAT_INVALID_RERUN", e.INTERNAL_SERVER_ERROR = "INTERNAL_SERVER_ERROR", e.MAX_DESCRIPTION_LENGTH_EXCEEDED = "MAX_DESCRIPTION_LENGTH_EXCEEDED", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED", e.VOD_NOT_READY = "VOD_NOT_READY"
-                }(C || (C = {})),
+                }(S || (S = {})),
                 function(e) {
                     e.DARK = "DARK", e.LIGHT = "LIGHT"
-                }(I || (I = {})),
+                }(C || (C = {})),
                 function(e) {
                     e.CUSTOM = "CUSTOM", e.DISPLAY_ONLY = "DISPLAY_ONLY", e.FIRST_PARTY = "FIRST_PARTY", e.RENDER_ONLY = "RENDER_ONLY", e.SPONSORED = "SPONSORED", e.THIRD_PARTY = "THIRD_PARTY", e.UNKNOWN = "UNKNOWN"
                 }(D || (D = {})),
@@ -1935,7 +1982,7 @@
                 }(A || (A = {})),
                 function(e) {
                     e.AMOUNT_BELOW_MIN_BITS = "AMOUNT_BELOW_MIN_BITS", e.AUTO_MOD_MESSAGE = "AUTO_MOD_MESSAGE", e.AUTO_MOD_PENDING = "AUTO_MOD_PENDING", e.CHANNEL_BLOCKED_TERMS = "CHANNEL_BLOCKED_TERMS", e.CHANNEL_INELIGIBLE = "CHANNEL_INELIGIBLE", e.EMOTE_AMOUNT_BELOW_MIN_BITS = "EMOTE_AMOUNT_BELOW_MIN_BITS", e.INSUFFICIENT_BALANCE = "INSUFFICIENT_BALANCE", e.INVALID_BITS_AMOUNT = "INVALID_BITS_AMOUNT", e.INVALID_BITS_MESSAGE = "INVALID_BITS_MESSAGE", e.INVALID_EVENT_ID = "INVALID_EVENT_ID", e.MESSAGE_LENGTH_EXCEEDED = "MESSAGE_LENGTH_EXCEEDED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.TOO_LARGE_BITS_EMOTE = "TOO_LARGE_BITS_EMOTE", e.TOO_LARGE_CHEER = "TOO_LARGE_CHEER", e.UNKNOWN = "UNKNOWN", e.USER_BANNED = "USER_BANNED", e.USER_INELIGIBLE = "USER_INELIGIBLE", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_MESSAGE = "ZALGO_MESSAGE"
-                }(R || (R = {})),
+                }(I || (I = {})),
                 function(e) {
                     e.NEW_CHATTER = "NEW_CHATTER"
                 }(k || (k = {})),
@@ -1944,10 +1991,10 @@
                 }(B || (B = {})),
                 function(e) {
                     e.FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.SUB_ONLY_MODE_ENFORCEMENT_FAILED = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT"
-                }(P || (P = {})),
+                }(w || (w = {})),
                 function(e) {
                     e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
-                }(w || (w = {})),
+                }(P || (P = {})),
                 function(e) {
                     e.AVAILABLE = "AVAILABLE", e.DISMISSED = "DISMISSED", e.ELIGIBLE = "ELIGIBLE", e.REDEEMED = "REDEEMED"
                 }(L || (L = {})),
@@ -1962,10 +2009,10 @@
                 }(x || (x = {})),
                 function(e) {
                     e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
-                }(j || (j = {})),
+                }(U || (U = {})),
                 function(e) {
                     e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
-                }(U || (U = {})),
+                }(j || (j = {})),
                 function(e) {
                     e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
                 }(G || (G = {})),
@@ -1982,134 +2029,134 @@
                     e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
                 }(X || (X = {})),
                 function(e) {
-                    e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
-                }(z || (z = {})),
-                function(e) {
                     e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
                 }(Y || (Y = {})),
                 function(e) {
                     e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
-                }(q || (q = {})),
+                }(z || (z = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
-                }(K || (K = {})),
+                }(q || (q = {})),
                 function(e) {
                     e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
-                }(Q || (Q = {})),
+                }(K || (K = {})),
                 function(e) {
                     e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
-                }(J || (J = {})),
+                }(Q || (Q = {})),
                 function(e) {
                     e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
-                }(Z || (Z = {})),
+                }(J || (J = {})),
                 function(e) {
                     e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
-                }($ || ($ = {})),
+                }(Z || (Z = {})),
                 function(e) {
                     e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
-                }(ee || (ee = {})),
+                }($ || ($ = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
-                }(te || (te = {})),
+                }(ee || (ee = {})),
                 function(e) {
                     e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
-                }(ne || (ne = {})),
+                }(te || (te = {})),
                 function(e) {
                     e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
-                }(ae || (ae = {})),
-                function(e) {
-                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
-                }(re || (re = {})),
+                }(ne || (ne = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
-                }(ie || (ie = {})),
+                }(ae || (ae = {})),
                 function(e) {
                     e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
-                }(oe || (oe = {})),
+                }(re || (re = {})),
+                function(e) {
+                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                }(ie || (ie = {})),
                 function(e) {
                     e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
-                }(se || (se = {})),
+                }(oe || (oe = {})),
                 function(e) {
                     e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
-                }(le || (le = {})),
+                }(se || (se = {})),
                 function(e) {
                     e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
-                }(ce || (ce = {})),
+                }(le || (le = {})),
                 function(e) {
                     e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
-                }(ue || (ue = {})),
+                }(ce || (ce = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
-                }(de || (de = {})),
+                }(ue || (ue = {})),
                 function(e) {
                     e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
-                }(me || (me = {})),
+                }(de || (de = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
-                }(pe || (pe = {})),
+                }(me || (me = {})),
                 function(e) {
                     e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
-                }(fe || (fe = {})),
+                }(pe || (pe = {})),
                 function(e) {
                     e.CONTENT = "CONTENT", e.TOP = "TOP"
-                }(he || (he = {})),
+                }(fe || (fe = {})),
                 function(e) {
                     e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
-                }(ge || (ge = {})),
+                }(he || (he = {})),
                 function(e) {
                     e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
-                }(Ee || (Ee = {})),
+                }(ge || (ge = {})),
                 function(e) {
                     e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
-                }(ye || (ye = {})),
+                }(Ee || (Ee = {})),
                 function(e) {
                     e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
-                }(be || (be = {})),
+                }(ye || (ye = {})),
                 function(e) {
                     e.GIFT_NOT_CLAIMABLE = "GIFT_NOT_CLAIMABLE", e.NON_EXISTENT_GIFT = "NON_EXISTENT_GIFT", e.UNKNOWN_ERROR = "UNKNOWN_ERROR", e.USER_DOES_NOT_OWN_GIFT = "USER_DOES_NOT_OWN_GIFT"
-                }(ve || (ve = {})),
+                }(be || (be = {})),
                 function(e) {
                     e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
-                }(Ne || (Ne = {})),
+                }(ve || (ve = {})),
                 function(e) {
                     e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
-                }(Te || (Te = {})),
+                }(Ne || (Ne = {})),
                 function(e) {
                     e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
-                }(_e || (_e = {})),
+                }(Te || (Te = {})),
                 function(e) {
                     e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
-                }(Se || (Se = {})),
+                }(_e || (_e = {})),
                 function(e) {
                     e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
                 }(Oe || (Oe = {})),
                 function(e) {
                     e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
-                }(Ce || (Ce = {})),
-                function(e) {
-                    e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
-                }(Ie || (Ie = {})),
-                function(e) {
-                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
-                }(De || (De = {})),
-                function(e) {
-                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
-                }(Ae || (Ae = {})),
-                function(e) {
-                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
                 }(Re || (Re = {})),
                 function(e) {
+                    e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
+                }(Se || (Se = {})),
+                function(e) {
+                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
+                }(Ce || (Ce = {})),
+                function(e) {
+                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
+                }(De || (De = {})),
+                function(e) {
+                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
+                }(Ae || (Ae = {})),
+                function(e) {
                     e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
-                }(ke || (ke = {})),
+                }(Ie || (Ie = {})),
                 function(e) {
                     e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
+                }(ke || (ke = {})),
+                function(e) {
+                    e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
                 }(Be || (Be = {})),
                 function(e) {
                     e.ASC = "ASC", e.DESC = "DESC"
-                }(Pe || (Pe = {})),
+                }(we || (we = {})),
                 function(e) {
                     e.TIME = "TIME", e.VIEWS = "VIEWS"
-                }(we || (we = {})),
+                }(Pe || (Pe = {})),
                 function(e) {
                     e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
                 }(Le || (Le = {})),
@@ -2124,10 +2171,10 @@
                 }(xe || (xe = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
-                }(je || (je = {})),
+                }(Ue || (Ue = {})),
                 function(e) {
                     e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
-                }(Ue || (Ue = {})),
+                }(je || (je = {})),
                 function(e) {
                     e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Ge || (Ge = {})),
@@ -2141,50 +2188,59 @@
                     e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(He || (He = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                    e.SQUAD_NOT_FOUND = "SQUAD_NOT_FOUND", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(Xe || (Xe = {})),
                 function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
-                }(ze || (ze = {})),
-                function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(Ye || (Ye = {})),
                 function(e) {
-                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                }(ze || (ze = {})),
+                function(e) {
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
                 }(qe || (qe = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }(Ke || (Ke = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(Je || (Je = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(Ze || (Ze = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }($e || ($e = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(et || (et = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(tt || (tt = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(nt || (nt = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(at || (at = {})),
                 function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(rt || (rt = {})),
                 function(e) {
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                }(it || (it = {})),
+                function(e) {
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                }(ot || (ot = {})),
+                function(e) {
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                }(st || (st = {})),
+                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(it || (it = {}))
+                }(lt || (lt = {}))
         },
         DNwE: function(e, t, n) {},
         GIun: function(e, t, n) {
@@ -2537,18 +2593,10 @@
                     return e.getTime() + 6e4 * e.getTimezoneOffset()
                 }(e))
             }
-
-            function i(e) {
-                return new Date(function(e) {
-                    return e.getTime() - 6e4 * e.getTimezoneOffset()
-                }(e))
-            }
-            n.d(t, "b", function() {
+            n.d(t, "a", function() {
                 return a
-            }), n.d(t, "c", function() {
+            }), n.d(t, "b", function() {
                 return r
-            }), n.d(t, "a", function() {
-                return i
             })
         },
         JVUd: function(e, t, n) {
@@ -2820,14 +2868,14 @@
                         }), r.createElement(y.Xa, {
                             flexGrow: 1,
                             display: y.X.Flex,
-                            position: y.fb.Relative
+                            position: y.hb.Relative
                         }, r.createElement(y.Pa, {
                             padding: {
                                 x: 1
                             },
                             flexGrow: 1
                         }, r.createElement(y.W, {
-                            type: y.Pb.Span,
+                            type: y.Rb.Span,
                             ellipsis: !0
                         }, this.props.user.name))))))
                     }, t
@@ -2980,7 +3028,7 @@
                         })
                     }, t
                 }(r.Component);
-            var S = Object(i.connect)(function(e) {
+            var O = Object(i.connect)(function(e) {
                 return {
                     user: Object(l.e)(e)
                 }
@@ -2990,7 +3038,7 @@
             }), n.d(t, !1, function() {
                 return _
             }), n.d(t, "a", function() {
-                return S
+                return O
             })
         },
         "LjK+": function(e, t, n) {},
@@ -3208,25 +3256,25 @@
                         padding: {
                             y: 1
                         },
-                        zIndex: s.cc.Above
-                    }, r.createElement(s.zb, {
+                        zIndex: s.ec.Above
+                    }, r.createElement(s.Bb, {
                         color: s.O.Alt2,
-                        textAlign: s.Lb.Center,
+                        textAlign: s.Nb.Center,
                         flexShrink: 1
-                    }, r.createElement(s.ob, {
-                        asset: s.pb.DeadGlitch,
+                    }, r.createElement(s.qb, {
+                        asset: s.rb.DeadGlitch,
                         width: 46,
                         height: 48
                     })), r.createElement(s.Pa, {
                         margin: {
                             top: 1
                         },
-                        textAlign: s.Lb.Center
+                        textAlign: s.Nb.Center
                     }, r.createElement(s.W, {
-                        type: s.Pb.H4,
+                        type: s.Rb.H4,
                         "data-test-selector": "search-error-message"
                     }, Object(o.d)("Search is not available at this time", "DropdownSearchError"))), r.createElement(s.W, {
-                        type: s.Pb.P
+                        type: s.Rb.P
                     }, Object(o.d)("Please try again later", "DropdownSearchError")))
                 },
                 c = n("8Ad5"),
@@ -3270,7 +3318,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = void 0 === this.props.showDropdown || this.props.showDropdown,
                             t = this.props.isErrored ? r.createElement(l, null) : r.Children.only(this.props.children),
-                            n = r.createElement(s.rb, {
+                            n = r.createElement(s.tb, {
                                 onChange: this.handleChange,
                                 onKeyDown: this.onKeyDown,
                                 onBlur: this.handleBlur,
@@ -3285,13 +3333,13 @@
                             });
                         return this.props.inline ? r.createElement(i.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(s.zb, {
+                        }, r.createElement(s.Bb, {
                             background: this.state.isInputFocused || this.state.isOpen ? s.r.Base : void 0,
                             borderRadius: s.x.Large,
                             padding: .5,
-                            position: s.fb.Relative,
+                            position: s.hb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, n, e && r.createElement(s.zb, {
+                        }, n, e && r.createElement(s.Bb, {
                             attachLeft: !0,
                             background: s.r.Base,
                             borderRadius: s.x.Large,
@@ -3300,8 +3348,8 @@
                             padding: {
                                 y: 1
                             },
-                            position: s.fb.Absolute,
-                            zIndex: s.cc.Above,
+                            position: s.hb.Absolute,
+                            zIndex: s.ec.Above,
                             elevation: 3
                         }, r.createElement("div", {
                             tabIndex: 0,
@@ -3351,7 +3399,7 @@
             ! function(e) {
                 e.Android = "Android", e.HTCVive = "HTC Vive", e.iOS = "iOS", e.MacOS = "Mac OS", e.NintendoSwitch = "Nintendo Switch", e.OculusRift = "Oculus Rift", e.PC = "PC", e.PlayStation4 = "PlayStation 4", e.PlayStationVR = "PlayStation VR", e.XboxOne = "Xbox One"
             }(r || (r = {}));
-            var o = ((a = {})[r.Android] = i.pb.Android, a[r.HTCVive] = i.pb.HTCVibe, a[r.iOS] = i.pb.IOS, a[r.MacOS] = i.pb.MacOs, a[r.NintendoSwitch] = i.pb.NintendoSwitch, a[r.OculusRift] = i.pb.OculusVR, a[r.PC] = i.pb.Windows, a[r.PlayStation4] = i.pb.PlayStation, a[r.PlayStationVR] = i.pb.PlayStation, a[r.XboxOne] = i.pb.XboxOne, a)
+            var o = ((a = {})[r.Android] = i.rb.Android, a[r.HTCVive] = i.rb.HTCVibe, a[r.iOS] = i.rb.IOS, a[r.MacOS] = i.rb.MacOs, a[r.NintendoSwitch] = i.rb.NintendoSwitch, a[r.OculusRift] = i.rb.OculusVR, a[r.PC] = i.rb.Windows, a[r.PlayStation4] = i.rb.PlayStation, a[r.PlayStationVR] = i.rb.PlayStation, a[r.XboxOne] = i.rb.XboxOne, a)
         },
         NGrv: function(e, t) {
             var n = {
@@ -4070,12 +4118,12 @@
                     return r.__extends(t, e), t.prototype.render = function() {
                         return i.createElement(c.Xa, {
                             className: "dev-bounty-board-cancel-campaign-modal"
-                        }, i.createElement(c.zb, {
+                        }, i.createElement(c.Bb, {
                             borderBottom: !0,
                             padding: 2,
-                            textAlign: c.Lb.Center
+                            textAlign: c.Nb.Center
                         }, i.createElement(c.W, {
-                            type: c.Pb.H4,
+                            type: c.Rb.H4,
                             bold: !0,
                             "data-test-selector": a.TitleText
                         }, Object(u.d)("Cancel Campaign", "DevBountyCancelCampaignModal")), i.createElement(d.a, null)), i.createElement(c.Xa, {
@@ -4083,7 +4131,7 @@
                             flexDirection: c.Aa.Column,
                             padding: 2
                         }, i.createElement(c.W, {
-                            type: c.Pb.P,
+                            type: c.Rb.P,
                             "data-test-selector": a.ContentText
                         }, Object(u.d)("You must contact <x:link>bountyboard@twitch.tv</x:link> in order to cancel your campaign. Once contacted, cancellations typically take 24-48 hours to process.", {
                             "x:link": function(e) {
@@ -4092,9 +4140,9 @@
                                 }, e)
                             }
                         }, "DevBountyBoardCampaignPage")), i.createElement("br", null), i.createElement(c.W, {
-                            type: c.Pb.P,
+                            type: c.Rb.P,
                             "data-test-selector": a.ContentText
-                        }, Object(u.d)("By cancelling a campaign early you will only have your unclaimed budget refunded. Broadcasters who have already claimed bounties will have their remaining time to complete the bounty.", "DevBountyCancelCampaignModal"))), i.createElement(c.zb, {
+                        }, Object(u.d)("By cancelling a campaign early you will only have your unclaimed budget refunded. Broadcasters who have already claimed bounties will have their remaining time to complete the bounty.", "DevBountyCancelCampaignModal"))), i.createElement(c.Bb, {
                             alignItems: c.f.Center,
                             background: c.r.Alt2,
                             borderTop: !0,
@@ -4114,7 +4162,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(c.zb, {
+                        return i.createElement(c.Bb, {
                             background: c.r.Base,
                             className: "dev-bounty-board-cancel-campaign-modal__container"
                         }, i.createElement(m, {
@@ -4509,7 +4557,7 @@
                         }, r.createElement(o.Ra, {
                             value: this.props.currentGameTitle,
                             type: o.Ta.Text,
-                            icon: o.pb.NavGames,
+                            icon: o.rb.NavGames,
                             disabled: !0
                         })) : r.createElement(s.a, {
                             redrawKey: this.state.redrawKey,
@@ -5001,13 +5049,13 @@
                     return e.indexOf(t) > -1
                 })
             }
-            var S = Object.assign || function(e) {
+            var O = Object.assign || function(e) {
                 for (var t, n = 1, a = arguments.length; n < a; n++)
                     for (var r in t = arguments[n]) Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r]);
                 return e
             };
 
-            function O(e, t) {
+            function R(e, t) {
                 var n = t,
                     a = [];
                 if (e.definitions.forEach(function(e) {
@@ -5017,7 +5065,7 @@
                     if (1 !== a.length) throw new Error("Found " + a.length + " fragments. `fragmentName` must be provided when there is not exactly 1 fragment.");
                     n = a[0].name.value
                 }
-                return S({}, e, {
+                return O({}, e, {
                     definitions: [{
                         kind: "OperationDefinition",
                         operation: "query",
@@ -5035,7 +5083,7 @@
                 })
             }
 
-            function C(e) {
+            function S(e) {
                 for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
                 return t.forEach(function(t) {
                     void 0 !== t && null !== t && Object.keys(t).forEach(function(n) {
@@ -5044,7 +5092,7 @@
                 }), e
             }
 
-            function I(e) {
+            function C(e) {
                 D(e);
                 var t = e.definitions.filter(function(e) {
                     return "OperationDefinition" === e.kind && "mutation" === e.operation
@@ -5070,7 +5118,7 @@
                 })[0]
             }
 
-            function R(e) {
+            function I(e) {
                 var t = A(e);
                 if (!t) throw new Error("GraphQL document is missing an operation");
                 return t
@@ -5090,13 +5138,13 @@
                 })
             }
 
-            function P(e) {
+            function w(e) {
                 var t = A(e);
                 if (!t || "query" !== t.operation) throw new Error("Must contain a query definition.");
                 return t
             }
 
-            function w(e) {
+            function P(e) {
                 if ("Document" !== e.kind) throw new Error('Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a "gql" tag? http://docs.apollostack.com/apollo-client/core.html#gql');
                 if (e.definitions.length > 1) throw new Error("Fragment must have exactly one definition.");
                 var t = e.definitions[0];
@@ -5137,7 +5185,7 @@
                             a = {};
                         return i(a, t.name, n), a
                     });
-                    return C.apply(void 0, [{}].concat(t))
+                    return S.apply(void 0, [{}].concat(t))
                 }
                 return {}
             }
@@ -5152,18 +5200,18 @@
                 return t
             }
 
-            function j(e) {
+            function U(e) {
                 if (Array.isArray(e)) return e.map(function(e) {
-                    return j(e)
+                    return U(e)
                 });
                 if (null !== e && "object" == typeof e) {
                     var t = {};
-                    for (var n in e) e.hasOwnProperty(n) && (t[n] = j(e[n]));
+                    for (var n in e) e.hasOwnProperty(n) && (t[n] = U(e[n]));
                     return t
                 }
                 return e
             }
-            var U = {
+            var j = {
                 kind: "Field",
                 name: {
                     kind: "Name",
@@ -5172,7 +5220,7 @@
             };
 
             function G(e, t) {
-                var n = j(t);
+                var n = U(t);
                 n.definitions.forEach(function(t) {
                     ! function e(t, n) {
                         if (!n.selections) return n;
@@ -5194,7 +5242,7 @@
                         }), n
                     }(e, t.selectionSet)
                 });
-                var a = R(n),
+                var a = I(n),
                     r = F(B(n)),
                     i = function(e) {
                         return e.selectionSet.selections.filter(function(e) {
@@ -5209,13 +5257,13 @@
                 D(e);
                 var t = V.get(e);
                 if (t) return t;
-                var n = j(e);
+                var n = U(e);
                 return n.definitions.forEach(function(e) {
                     var t = "OperationDefinition" === e.kind;
                     ! function e(t, n) {
                         void 0 === n && (n = !1), t.selections && (n || t.selections.some(function(e) {
                             return "Field" === e.kind && "__typename" === e.name.value
-                        }) || t.selections.push(U), t.selections.forEach(function(t) {
+                        }) || t.selections.push(j), t.selections.forEach(function(t) {
                             "Field" === t.kind ? 0 !== t.name.value.lastIndexOf("__", 0) && t.selectionSet && e(t.selectionSet) : "InlineFragment" === t.kind && t.selectionSet && e(t.selectionSet)
                         }))
                     }(e.selectionSet, t)
@@ -5231,14 +5279,14 @@
                 },
                 X = new Map;
 
-            function z(e) {
+            function Y(e) {
                 D(e);
                 var t = X.get(e);
                 if (t) return t;
                 var n = G([H], e);
                 return X.set(e, n), n
             }
-            var Y = n("XvA5");
+            var z = n("XvA5");
 
             function q(e) {
                 try {
@@ -5269,7 +5317,7 @@
             }
 
             function J(e) {
-                return Object(Y.a)() || Object(Y.c)() ? function e(t) {
+                return Object(z.a)() || Object(z.c)() ? function e(t) {
                     return Object.freeze(t), Object.getOwnPropertyNames(t).forEach(function(n) {
                         !t.hasOwnProperty(n) || null === t[n] || "object" != typeof t[n] && "function" != typeof t[n] || Object.isFrozen(t[n]) || e(t[n])
                     }), t
@@ -5278,7 +5326,7 @@
             var Z = Object.create({});
 
             function $(e, t) {
-                if (void 0 === t && (t = "warn"), !Object(Y.b)() && !Z[e]) switch (Object(Y.c)() || (Z[e] = !0), t) {
+                if (void 0 === t && (t = "warn"), !Object(z.b)() && !Z[e]) switch (Object(z.c)() || (Z[e] = !0), t) {
                     case "error":
                         console.error(e);
                         break;
@@ -5297,23 +5345,23 @@
             }), n.d(t, !1, function() {
                 return _
             }), n.d(t, !1, function() {
-                return O
+                return R
             }), n.d(t, !1, function() {
-                return I
+                return C
             }), n.d(t, !1, function() {
                 return D
             }), n.d(t, !1, function() {
                 return A
             }), n.d(t, !1, function() {
-                return R
+                return I
             }), n.d(t, !1, function() {
                 return k
             }), n.d(t, !1, function() {
                 return B
             }), n.d(t, !1, function() {
-                return P
-            }), n.d(t, !1, function() {
                 return w
+            }), n.d(t, !1, function() {
+                return P
             }), n.d(t, !1, function() {
                 return L
             }), n.d(t, !1, function() {
@@ -5327,7 +5375,7 @@
             }), n.d(t, "a", function() {
                 return W
             }), n.d(t, !1, function() {
-                return z
+                return Y
             }), n.d(t, !1, function() {
                 return a
             }), n.d(t, !1, function() {
@@ -5355,15 +5403,15 @@
             }), n.d(t, !1, function() {
                 return E
             }), n.d(t, !1, function() {
-                return C
+                return S
             }), n.d(t, !1, function() {
-                return j
+                return U
             }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {
-                return Y.b
+                return z.b
             }), n.d(t, !1, function() {
-                return Y.a
+                return z.a
             }), n.d(t, !1, function() {
-                return Y.c
+                return z.c
             }), n.d(t, !1, function() {
                 return q
             }), n.d(t, !1, function() {
@@ -5380,21 +5428,24 @@
         WSnR: function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
-                return s
-            }), n.d(t, "c", function() {
                 return l
-            }), n.d(t, "e", function() {
+            }), n.d(t, "c", function() {
                 return c
-            }), n.d(t, "d", function() {
+            }), n.d(t, "f", function() {
                 return u
-            }), n.d(t, "a", function() {
+            }), n.d(t, "d", function() {
                 return d
+            }), n.d(t, "a", function() {
+                return m
+            }), n.d(t, "e", function() {
+                return p
             });
             var a = n("/7QA"),
                 r = n("DMoW"),
-                i = n("JQ82"),
-                o = n("0SKf"),
-                s = function(e) {
+                i = n("17YR"),
+                o = n("JQ82"),
+                s = n("0SKf"),
+                l = function(e) {
                     var t = e.node;
                     if (!t) return "";
                     var n = t.displayName,
@@ -5417,26 +5468,26 @@
                     }
                     return a ? n + " " + a : n
                 },
-                l = function(e) {
+                c = function(e) {
                     switch (e) {
-                        case o.d.BountiesCompleted:
+                        case s.d.BountiesCompleted:
                             return Object(a.d)("Bounties Completed", "DevBountyBoardCampaignPage");
-                        case o.d.Viewers:
+                        case s.d.Viewers:
                             return Object(a.d)("Viewers", "DevBountyBoardCampaignPage");
-                        case o.d.Viewers2m:
+                        case s.d.Viewers2m:
                             return Object(a.d)("Viewers >2 min", "DevBountyBoardCampaignPage");
-                        case o.d.MinutesWatched:
+                        case s.d.MinutesWatched:
                             return Object(a.d)("Minutes Watched", "DevBountyBoardCampaignPage");
                         default:
                             return ""
                     }
                 },
-                c = function(e) {
-                    var t = Object(i.c)(e).getTime(),
-                        n = u(e) ? 4 : 5;
+                u = function(e) {
+                    var t = Object(o.b)(e).getTime(),
+                        n = d(e) ? 4 : 5;
                     return new Date(t - 60 * n * 60 * 1e3)
                 },
-                u = function(e) {
+                d = function(e) {
                     try {
                         return -1 !== Object(a.j)(e, {
                             timeZone: "America/New_York",
@@ -5446,12 +5497,38 @@
                         return !1
                     }
                 },
-                d = function(e) {
+                m = function(e) {
                     var t = e / 100;
                     return t - Math.floor(t) != 0 ? Object(a.f)(t, {
                         style: "currency",
                         currency: "USD"
                     }) : "$" + Object(a.f)(t)
+                },
+                p = function(e, t) {
+                    var n = [
+                        [Object(a.d)("Date", "DevBountyBoardCampaignPage")].concat(t.dates.map(function(e) {
+                            return e.toDateString() + " ET"
+                        }))
+                    ];
+                    return n = n.concat(Object.values(s.d).map(function(n) {
+                        return function(e, t, n) {
+                            return [c(e)].concat(n.sum(t[e].series, function(e) {
+                                return {
+                                    date: e.date,
+                                    value: e.value
+                                }
+                            }))
+                        }(n, e, t)
+                    })), {
+                        fileName: t.isByDay ? Object(a.d)("Report by day {start, date} to {end, date}.csv", {
+                            start: t.interval.start,
+                            end: t.interval.end
+                        }, "DevBountyBoardCampaignPage") : Object(a.d)("Report by week {start, date} to {end, date}.csv", {
+                            start: t.interval.start,
+                            end: t.interval.end
+                        }, "DevBountyBoardCampaignPage"),
+                        csv: Object(i.c)(n).join("\n")
+                    }
                 }
         },
         XvA5: function(e, t, n) {
@@ -5866,7 +5943,7 @@
                         }, this.getMessageFromErrorCode(this.state.errorCode)))), r.createElement(l.Xa, {
                             padding: 3
                         }, r.createElement(l.Xa, null, r.createElement(l.W, {
-                            type: l.Pb.H4
+                            type: l.Rb.H4
                         }, n), r.createElement(l.Xa, {
                             margin: {
                                 y: 1
@@ -5875,7 +5952,7 @@
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(l.W, null, Object(c.d)("Let us know why the bounty didn't work out:", "CancelBountyModal"))), r.createElement(l.vb, {
+                        }, r.createElement(l.W, null, Object(c.d)("Let us know why the bounty didn't work out:", "CancelBountyModal"))), r.createElement(l.xb, {
                             "data-test-selector": "cancel-bounty-modal-reason-select",
                             onChange: this.handleSelectChange,
                             value: this.state.reason
@@ -5921,7 +5998,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(l.zb, {
+                        return r.createElement(l.Bb, {
                             className: "cancel-bounty-modal__container",
                             background: l.r.Base
                         }, r.createElement(h, {
@@ -6246,27 +6323,27 @@
                         flexDirection: d.Aa.Column,
                         justifyContent: d.Wa.Center,
                         alignItems: d.f.Center,
-                        position: d.fb.Absolute
+                        position: d.hb.Absolute
                     }, o.createElement(d.Xa, {
-                        textAlign: d.Lb.Center,
+                        textAlign: d.Nb.Center,
                         flexShrink: 1
-                    }, o.createElement(d.ob, {
+                    }, o.createElement(d.qb, {
                         asset: e.icon,
                         width: 46,
                         height: 48,
-                        type: d.qb.Alt2
+                        type: d.sb.Alt2
                     })), o.createElement(d.Xa, {
                         margin: {
                             top: 1
                         },
-                        textAlign: d.Lb.Center
+                        textAlign: d.Nb.Center
                     }, o.createElement(d.W, {
-                        type: d.Pb.H4,
+                        type: d.Rb.H4,
                         color: d.O.Alt2
                     }, e.titleText)), o.createElement(d.Xa, {
-                        textAlign: d.Lb.Center
+                        textAlign: d.Nb.Center
                     }, o.createElement(d.W, {
-                        type: d.Pb.P,
+                        type: d.Rb.P,
                         color: d.O.Alt2
                     }, e.subText)))
                 },
@@ -6291,13 +6368,13 @@
                         }, o.createElement(d.G, {
                             row: !0
                         }, o.createElement(d.H, {
-                            overflow: d.ab.Hidden
+                            overflow: d.cb.Hidden
                         }, o.createElement(d.Pa, {
                             padding: {
                                 x: 1
                             }
                         }, o.createElement(d.W, {
-                            type: d.Pb.H5,
+                            type: d.Rb.H5,
                             ellipsis: !0
                         }, this.props.title))))))
                     }, t
@@ -6376,7 +6453,7 @@
                     }, o.createElement(d.Ra, {
                         key: this.props.initialGameTitle + "-" + this.props.redrawKey,
                         type: d.Ta.Text,
-                        icon: d.pb.NavGames,
+                        icon: d.rb.NavGames,
                         name: "game",
                         onChange: this.onChange,
                         onFocus: this.onFocus,
@@ -6399,24 +6476,24 @@
                     return 0 === this.props.searchTerm.length || (t = this.props.gameResults ? this.props.gameResults.length > 0 ? this.renderGameResults(this.props.gameResults, this.state.highlightedGameIndex) : this.props.isSearchPending ? o.createElement(d.Za, {
                         fillContent: !0
                     }) : o.createElement(m, {
-                        icon: d.pb.SearchNoResults,
+                        icon: d.rb.SearchNoResults,
                         titleText: Object(s.d)("No results found", "GameSelector"),
                         subText: Object(s.d)("They're probably in another castle", "GameSelector")
                     }) : o.createElement(m, {
-                        icon: d.pb.DeadGlitch,
+                        icon: d.rb.DeadGlitch,
                         titleText: Object(s.d)("Search is not available at this time", "GameSelector"),
                         subText: Object(s.d)("Please try again later", "GameSelector")
                     })), o.createElement("div", {
                         className: e,
                         tabIndex: 0
-                    }, o.createElement(d.zb, {
+                    }, o.createElement(d.Bb, {
                         attachTop: !0,
                         attachRight: !0,
                         attachLeft: !0,
                         attachBottom: !0,
                         background: d.r.Base,
-                        position: d.fb.Absolute,
-                        overflow: d.ab.Hidden,
+                        position: d.hb.Absolute,
+                        overflow: d.cb.Hidden,
                         display: d.X.Block
                     }, o.createElement(c.b, {
                         suppressScrollX: !0,
@@ -6504,13 +6581,13 @@
                             aspect: p.p.BoxArt,
                             borderRadius: p.x.Small
                         }), r.createElement(p.H, {
-                            overflow: p.ab.Hidden
+                            overflow: p.cb.Hidden
                         }, r.createElement(p.Xa, {
                             padding: {
                                 x: 1
                             }
                         }, r.createElement(p.W, {
-                            type: p.Pb.H5,
+                            type: p.Rb.H5,
                             ellipsis: !0
                         }, this.props.title), this.props.tags && r.createElement(p.Xa, {
                             padding: {
@@ -6736,7 +6813,7 @@
                 _ = {
                     "data-test-selector": "bounty-description"
                 },
-                S = function(e) {
+                O = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.onChangePlatform = function(e) {
@@ -6761,9 +6838,9 @@
                                 var t = n.getPlatformIconInfo(e);
                                 return c.createElement(c.Fragment, {
                                     key: e
-                                }, t.asset && c.createElement(y.ob, {
+                                }, t.asset && c.createElement(y.qb, {
                                     asset: t.asset,
-                                    type: y.qb.Alt2
+                                    type: y.sb.Alt2
                                 }), t.suffix && c.createElement(y.Xa, {
                                     display: y.X.Flex,
                                     alignItems: y.f.Center
@@ -6776,7 +6853,7 @@
                                 margin: {
                                     right: 1
                                 }
-                            }, c.createElement(y.vb, a.__assign({}, N, {
+                            }, c.createElement(y.xb, a.__assign({}, N, {
                                 onChange: n.onChangePlatform,
                                 value: n.state.selectedPlatform || void 0
                             }), c.createElement("option", {
@@ -6802,7 +6879,7 @@
                                 }, c.createElement(y.W, null, Object(d.d)("<x:bold>Game key included with bounty activation.</x:bold> Keys are emailed within 72 hours of bounty activation.", {
                                     "x:bold": function(e) {
                                         return c.createElement(y.W, {
-                                            type: y.Pb.Strong
+                                            type: y.Rb.Strong
                                         }, e)
                                     }
                                 }, "BountyItem"))),
@@ -6812,6 +6889,7 @@
                                         bottom: 1
                                     }
                                 }, c.createElement(u, {
+                                    escapeHtml: !0,
                                     source: e.campaign.details,
                                     renderers: {
                                         Link: n.renderNewWindowLink
@@ -6846,7 +6924,7 @@
                                 duration: y.k.Short,
                                 enabled: !0,
                                 timing: y.m.EaseOut
-                            }, c.createElement(y.zb, a.__assign({
+                            }, c.createElement(y.Bb, a.__assign({
                                 className: "bounty-item__expanded",
                                 elevation: 1
                             }, b, {
@@ -6870,7 +6948,7 @@
                             }, c.createElement("img", {
                                 src: r
                             }))), c.createElement(y.Xa, null, c.createElement(y.W, {
-                                type: y.Pb.H4
+                                type: y.Rb.H4
                             }, i), c.createElement(y.W, {
                                 color: y.O.Alt2
                             }, e.campaign.sponsor), c.createElement(y.Xa, {
@@ -6888,7 +6966,7 @@
                                 justifyContent: y.Wa.Between,
                                 alignItems: y.f.Center
                             }, c.createElement(y.Xa, null, c.createElement(y.W, {
-                                type: y.Pb.H4
+                                type: y.Rb.H4
                             }, n.renderPayoutText(e))), c.createElement(y.Xa, {
                                 display: y.X.Flex,
                                 flexDirection: y.Aa.Row,
@@ -6957,13 +7035,13 @@
                             r = e.id === this.props.selectedItem || e.campaign.id === this.props.selectedItem && e.status === m.f.AVAILABLE,
                             i = e.status === m.f.COMPLETED ? e.payoutCents || 0 : e.maximumPayoutCents,
                             o = e.status === m.f.CANCELLED ? c.createElement(y.W, {
-                                type: y.Pb.H2
+                                type: y.Rb.H2
                             }, Object(d.d)("N/A", "BountyItem")) : c.createElement(y.Xa, {
                                 display: y.X.Flex
                             }, c.createElement(y.W, {
                                 fontSize: y.Ca.Size7
                             }, "$"), c.createElement(y.W, {
-                                type: y.Pb.H2
+                                type: y.Rb.H2
                             }, Number.isNaN(i / 100) ? "XX" : i / 100)),
                             s = e.status === m.f.AVAILABLE ? e.campaign.availablePlatforms : e.platform ? [e.platform] : null,
                             l = {
@@ -6975,7 +7053,7 @@
                             margin: {
                                 bottom: 1
                             }
-                        }, c.createElement(y.zb, {
+                        }, c.createElement(y.Bb, {
                             elevation: 2
                         }, c.createElement(y.U, {
                             hoverUnderlineNone: !0,
@@ -6984,9 +7062,9 @@
                             className: "bounty-item__link"
                         }, c.createElement(y.Xa, {
                             display: y.X.Flex,
-                            position: y.fb.Relative
+                            position: y.hb.Relative
                         }, c.createElement(y.Xa, {
-                            position: y.fb.Absolute,
+                            position: y.hb.Absolute,
                             fullWidth: !0,
                             fullHeight: !0
                         }, c.createElement("div", {
@@ -6994,19 +7072,19 @@
                             style: l
                         })), c.createElement(y.Xa, {
                             className: "bounty-item__indicator",
-                            position: y.fb.Relative,
+                            position: y.hb.Relative,
                             display: y.X.Flex,
                             alignItems: y.f.Center,
                             justifyContent: y.Wa.Center,
                             padding: {
                                 left: 2
                             }
-                        }, r ? c.createElement(y.ob, {
-                            asset: y.pb.AngleUp,
-                            type: y.qb.Alt2
-                        }) : c.createElement(y.ob, {
-                            asset: y.pb.AngleDown,
-                            type: y.qb.Alt2
+                        }, r ? c.createElement(y.qb, {
+                            asset: y.rb.AngleUp,
+                            type: y.sb.Alt2
+                        }) : c.createElement(y.qb, {
+                            asset: y.rb.AngleDown,
+                            type: y.sb.Alt2
                         })), c.createElement(y.Xa, {
                             flexGrow: 1,
                             className: "bounty-item__description",
@@ -7018,9 +7096,9 @@
                             },
                             justifyContent: y.Wa.Around,
                             flexDirection: y.Aa.Column,
-                            position: y.fb.Relative
+                            position: y.hb.Relative
                         }, c.createElement(y.W, {
-                            type: y.Pb.H4,
+                            type: y.Rb.H4,
                             color: y.O.Base,
                             ellipsis: !0,
                             title: e.campaign.title
@@ -7029,14 +7107,14 @@
                             alignItems: y.f.Center
                         }), s && this.renderPlatformIcons(s), c.createElement(y.W, {
                             color: y.O.Alt2
-                        }, this.renderTimeString(e)))), c.createElement(y.zb, {
+                        }, this.renderTimeString(e)))), c.createElement(y.Bb, {
                             className: "bounty-item__amount",
                             display: y.X.Flex,
                             alignItems: y.f.Center,
                             justifyContent: y.Wa.Center,
                             flexGrow: 0,
                             flexShrink: 0,
-                            position: y.fb.Relative,
+                            position: y.hb.Relative,
                             background: y.r.Base
                         }, o)))), r && this.renderExpanded(e))
                     }, t.prototype.renderDescriptionText = function(e) {
@@ -7050,21 +7128,21 @@
                                 return 0 === e.payoutCents ? Object(d.d)("Unfortunately your average concurrent viewers did not reach the minimum requirement of <x:bold>{ccuMin} concurrent viewers</x:bold> and you will not receive a payout for this bounty. Make sure to do bounties during your peak hours to increase your chances of a good payout.", {
                                     "x:bold": function(e) {
                                         return c.createElement(y.W, {
-                                            type: y.Pb.Strong
+                                            type: y.Rb.Strong
                                         }, e)
                                     },
                                     ccuMin: e.minimumPayoutCCU || 0
                                 }, "BountyItem") : r === i ? Object(d.d)("Based on your concurrent viewers, you got the max payout of <x:bold>${maxPayout}</x:bold>.  Bounty payouts are bundled with your standard monthly accrued revenue payment.", {
                                     "x:bold": function(e) {
                                         return c.createElement(y.W, {
-                                            type: y.Pb.Strong
+                                            type: y.Rb.Strong
                                         }, e)
                                     },
                                     maxPayout: i / 100
                                 }, "BountyItem") : o ? Object(d.d)("You hit <x:bold>{percentPayout}%</x:bold> of your target payout goal, for a total of <x:bold>${payout}</x:bold>. Bounty payouts are bundled with your standard monthly accrued revenue payment.", {
                                     "x:bold": function(e) {
                                         return c.createElement(y.W, {
-                                            type: y.Pb.Strong
+                                            type: y.Rb.Strong
                                         }, e)
                                     },
                                     percentPayout: Math.floor(r / i * 100),
@@ -7072,7 +7150,7 @@
                                 }, "BountyItem") : Object(d.d)("Based on your concurrent viewers, you got a payout of <x:bold>${payout}</x:bold> out of a potential ${maxPayout}. Bounty payouts are bundled with your standard monthly accrued revenue payment.", {
                                     "x:bold": function(e) {
                                         return c.createElement(y.W, {
-                                            type: y.Pb.Strong
+                                            type: y.Rb.Strong
                                         }, e)
                                     },
                                     payout: r / 100,
@@ -7081,27 +7159,27 @@
                             case m.f.CANCELLED:
                                 return e.lastModifiedAt ? Object(d.d)("This bounty was cancelled on {dateCancelled}.", {
                                     dateCancelled: c.createElement(y.W, {
-                                        type: y.Pb.Strong
+                                        type: y.Rb.Strong
                                     }, Object(d.c)(new Date(e.lastModifiedAt)))
                                 }, "BountyItem") : Object(d.d)("This bounty was cancelled.", "BountyItem");
                             default:
                                 return c.createElement(c.Fragment, null, c.createElement(y.W, a.__assign({}, _, {
-                                    type: y.Pb.P,
+                                    type: y.Rb.P,
                                     key: "bounty_description_" + e.id
                                 }), Object(d.d)("At any point during a stream session, stream {game} for {streamLength} straight with an average of {ccuMax} <x:bold>concurrent viewers</x:bold>. If you don’t hit an average of at least {ccuMin} <x:bold>concurrents</x:bold>, you will not receive a payout. If you achieve the minimum but do not reach the goal, you will get a <x:bold>proportional percentage</x:bold> of the payout.", {
                                     "x:bold": function(e) {
                                         return c.createElement(y.W, {
-                                            type: y.Pb.Strong
+                                            type: y.Rb.Strong
                                         }, e)
                                     },
                                     ccuMax: c.createElement(y.W, {
-                                        type: y.Pb.Strong
+                                        type: y.Rb.Strong
                                     }, o),
                                     ccuMin: c.createElement(y.W, {
-                                        type: y.Pb.Strong
+                                        type: y.Rb.Strong
                                     }, null === e.minimumPayoutCCU ? "XXX" : e.minimumPayoutCCU),
                                     game: c.createElement(y.W, {
-                                        type: y.Pb.Strong
+                                        type: y.Rb.Strong
                                     }, e.campaign.game && e.campaign.game.displayName),
                                     streamLength: Object(g.a)(e.campaign.streamLengthMinutes)
                                 }, "BountyItem")), c.createElement("ul", {
@@ -7114,7 +7192,7 @@
                                 }, Object(d.d)("Use the <x:bold>Bounties widget</x:bold> on your <x:link>Live Dashboard</x:link> to add <x:bold>#sponsored</x:bold> to your stream title.", {
                                     "x:bold": function(e) {
                                         return c.createElement(y.W, {
-                                            type: y.Pb.Strong
+                                            type: y.Rb.Strong
                                         }, e)
                                     },
                                     "x:link": function(e) {
@@ -7127,7 +7205,7 @@
                                 }, Object(d.d)('Turn on the "<x:bold>Store Past Broadcasts</x:bold>" option in your <x:link>Channel Settings</x:link>.', {
                                     "x:bold": function(e) {
                                         return c.createElement(y.W, {
-                                            type: y.Pb.Strong
+                                            type: y.Rb.Strong
                                         }, e)
                                     },
                                     "x:link": function(a) {
@@ -7141,7 +7219,7 @@
                                 }, Object(d.d)("Bounties are held in your queue for a <x:bold>maximum of 5 days</x:bold>. They will expire sooner if the broader bounty campaign is ending.", {
                                     "x:bold": function(e) {
                                         return c.createElement(y.W, {
-                                            type: y.Pb.Strong
+                                            type: y.Rb.Strong
                                         }, e)
                                     }
                                 }, "BountyItem"))))
@@ -7176,10 +7254,10 @@
                         }
                     }, t
                 }(c.Component),
-                O = Object(i.compose)(Object(f.b)("BountyItem", {
+                R = Object(i.compose)(Object(f.b)("BountyItem", {
                     autoReportInteractive: !0
-                }))(S);
-            var C = Object(r.connect)(null, function(e) {
+                }))(O);
+            var S = Object(r.connect)(null, function(e) {
                 return Object(i.bindActionCreators)({
                     showAcceptBountyModal: function(e) {
                         var t = a.__rest(e, []);
@@ -7190,9 +7268,9 @@
                         return Object(o.d)(l.a, t)
                     }
                 }, e)
-            })(O);
+            })(R);
             n.d(t, "a", function() {
-                return C
+                return S
             })
         },
         kRSO: function(e, t, n) {
@@ -7260,7 +7338,7 @@
                             margin: {
                                 right: .5
                             },
-                            textAlign: l.Lb.Right,
+                            textAlign: l.Nb.Right,
                             fullWidth: !0,
                             flexShrink: 0
                         }, r.createElement(l.W, {
@@ -7287,134 +7365,134 @@
                             }
                         }, r.createElement(l.Xa, null, r.createElement(l.W, {
                             bold: !0,
-                            type: l.Pb.Span
+                            type: l.Rb.Span
                         }, Object(c.d)("Bounty:", "AcceptBountyModal")), " ", r.createElement(l.W, {
                             "data-test-selector": "accept-bounty-modal-title",
-                            type: l.Pb.Span
+                            type: l.Rb.Span
                         }, Object(c.d)("{bountyTitle}{platform} with an average of {ccuMax} concurrent viewers and #sponsored in your stream title.", {
                             bountyTitle: this.props.bounty.campaign.title,
                             ccuMax: this.props.bounty.maximumPayoutCCU || 0,
                             platform: e
                         }, "AcceptBountyModal"))), r.createElement(l.Xa, null, r.createElement(l.W, {
                             bold: !0,
-                            type: l.Pb.Span
+                            type: l.Rb.Span
                         }, Object(c.d)("Bounty Partner:", "AcceptBountyModal")), " ", r.createElement(l.W, {
-                            type: l.Pb.Span
+                            type: l.Rb.Span
                         }, this.props.bounty.campaign.sponsor)), r.createElement(l.Xa, null, r.createElement(l.W, {
                             bold: !0,
-                            type: l.Pb.Span
+                            type: l.Rb.Span
                         }, Object(c.d)("Influencer:", "AcceptBountyModal")), " ", r.createElement(l.W, {
-                            type: l.Pb.Span
+                            type: l.Rb.Span
                         }, this.props.channelName, " (", Object(c.d)("Twitch ID: {id}", {
                             id: this.props.channelID
                         }, "AcceptBountyModal"), ")")), r.createElement(l.Xa, null, r.createElement(l.W, {
                             bold: !0,
-                            type: l.Pb.Span
+                            type: l.Rb.Span
                         }, Object(c.d)("Bounty Period:", "AcceptBountyModal")), " ", r.createElement(l.W, {
-                            type: l.Pb.Span
+                            type: l.Rb.Span
                         }, Object(p.a)(this.props.bounty.campaign.streamLengthMinutes))), r.createElement(l.Xa, null, r.createElement(l.W, {
                             bold: !0,
-                            type: l.Pb.Span
+                            type: l.Rb.Span
                         }, Object(c.d)("Compensation:", "AcceptBountyModal")), " ", r.createElement(l.W, {
-                            type: l.Pb.Span
-                        }, "$", this.props.bounty.maximumPayoutCents / 100, " USD")))), r.createElement(l.zb, {
+                            type: l.Rb.Span
+                        }, "$", this.props.bounty.maximumPayoutCents / 100, " USD")))), r.createElement(l.Bb, {
                             className: "accept-bounty-modal__agreement-text",
                             border: !0,
                             padding: 1
                         }, r.createElement(l.Xa, {
-                            textAlign: l.Lb.Center
+                            textAlign: l.Nb.Center
                         }, r.createElement(l.W, {
-                            type: l.Pb.Strong
+                            type: l.Rb.Strong
                         }, "Influencer Bounty Order")), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "This Bounty Order is governed by the (i) Influencer Terms and Conditions attached hereto as Exhibit A and (ii) Bounty Board Service Terms of Use (the “Terms of Use”), both of which are fully incorporated into this Bounty Order. All capitalized terms not defined in this Bounty Order have the respective meanings set forth in the Terms of Use."), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "By accepting this Bounty Order, you, as the Influencer, accept and agree to be bound by and comply with the terms as set forth herein. IF YOU DO NOT ACCEPT AND AGREE TO BE BOUND BY THESE TERMS, PLEASE DO NOT ACCEPT THE BOUNTY ORDER. If you are accepting the Bounty Order on behalf of another person or a corporate entity, you represent and warrant that you have the authority to bind such person or entity to the terms of this Bounty Order."), r.createElement("br", null), r.createElement(l.Xa, null, r.createElement(l.W, {
-                            type: l.Pb.Strong
+                            type: l.Rb.Strong
                         }, "Bounty Requirements:")), r.createElement("br", null), r.createElement("ul", {
                             className: "accept-bounty-modal__bounty-requirements"
                         }, r.createElement("li", null, "Influencer is a party to a Content License Agreement (“Agreement”) with Twitch."), r.createElement("li", null, "Influencer agrees to provide the services as set forth in the Bounty. As compensation for the services, Twitch will pay Influencer in accordance with the terms set forth in the Bounty. Payments by Twitch to Influencer are based on certain concurrent user (“CCU”) requirements being met. If Influencer does not meet the CCU requirements as set forth in the Bounty, Influencer will receive a pro rata portion of the Compensation. In addition, if Influencer does not meet the Minimum Bar as defined above, then no portion of the Compensation will be payable to Influencer."), r.createElement("li", null, 'Title of the broadcast related to the Bounty will state any relationship with the Bounty Partner as instructed by Twitch: i.e. "Ad Content of X", "Paid Advertisement of X" or "#sponsored".'), r.createElement("li", null, "Influencer to save a VOD of the broadcast as a highlight to their Twitch channel."), r.createElement("li", null, "If applicable, Influencer to post on social media accounts/tweet at the start of the broadcast to raise awareness for the Bounty. These posts/tweets and any subsequent posts in connection with the Bounty must contain “#sponsored”."), r.createElement("li", null, "Influencer shall not commit any act or make any statement that disparages Twitch, Bounty Partner, or their respective products/services, or brings Twitch or the Bounty Partner disrepute, contempt, scandal, or ridicule for the Bounty Period and six (6) months thereafter.  Twitch may immediately take down, or request the take down of, any Influencer content that violates this section and Influencer shall cooperate with Twitch to execute such takedowns."), r.createElement("li", null, "If Influencer fails to comply with any of the above Bounty requirements, Twitch may at its discretion immediately terminate this Bounty Order and disqualify the influencer from participating in future Bounties.")), r.createElement("br", null), r.createElement(l.Xa, {
-                            textAlign: l.Lb.Center
+                            textAlign: l.Nb.Center
                         }, r.createElement(l.W, {
-                            type: l.Pb.Strong
+                            type: l.Rb.Strong
                         }, "Exhibit A")), r.createElement(l.Xa, {
-                            textAlign: l.Lb.Center
+                            textAlign: l.Nb.Center
                         }, r.createElement(l.W, {
-                            type: l.Pb.Strong
+                            type: l.Rb.Strong
                         }, "Influencer Terms and Conditions")), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "This Exhibit A is made a part of the Bounty Order to which it is attached, and the Agreement to which the Influencer is a party."), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "1.\t", r.createElement(l.W, {
-                            type: l.Pb.Strong
+                            type: l.Rb.Strong
                         }, "Licenses and Release.")), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "1.1.\t", r.createElement(l.W, {
-                            type: l.Pb.Strong,
-                            decoration: l.Nb.Underline
+                            type: l.Rb.Strong,
+                            decoration: l.Pb.Underline
                         }, "Influencer Trademark and Copyright License."), " Influencer hereby grants Twitch and the Bounty Partner of each particular accepted Bounty Order a royalty-free, non-exclusive, non-transferable, non-sublicensable, revocable, worldwide license to use and display any trademark, service mark, trade dress, trade name, or logo (“Marks”) and reproduce, distribute, publicly display or perform, or make derivative works of any copyrighted materials (“Materials”) belonging to Influencer and specified for use by Influencer for use in connection with the particular accepted Bounty Order. Without limiting the foregoing, all use by Twitch or the Bounty Partner of the Influencer’s Marks shall be in accordance with Influencer’s usage guidelines that have been delivered or made available to Twitch prior to the date of such use. Influencer may provide in writing an updated version of its usage guidelines and Twitch shall make commercially reasonable efforts to alter, modify or change any Influencer’s Marks being used by Twitch or Bounty Partner in accordance with such request as soon as reasonably practical.  Any such use of Influencer’s Marks will inure solely to Influencer’s benefit.  Nothing contained herein or in the Agreement gives Twitch or Bounty Partner any right, title or interest in the Influencer’s Marks or goodwill therein and thereto, or in any Materials, except as expressly provided in this Section.  For avoidance of doubt, nothing in this Section shall be construed to limit any rights with respect to Influencer’s Marks or Materials that Twitch or Bounty Partner would have as a member of the general public."), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "1.2.\t", r.createElement(l.W, {
-                            type: l.Pb.Strong,
-                            decoration: l.Nb.Underline
+                            type: l.Rb.Strong,
+                            decoration: l.Pb.Underline
                         }, "Influencer Release."), " Influencer agrees that Twitch or Bounty Partner of an accepted Bounty Order may use Influencer’s name, voice, signature, likeness, identity, persona or any biographical material concerning Influencer in promotion, advertising, sale, publicizing and exploitation, including ancillary products (e.g., merchandise) in connection with the Bounty and Bounty Partner’s products and services, throughout the world in all media, and in perpetuity.  Influencer agrees that Twitch or Bounty Partner of an accepted Bounty Order may record Influencer’s voice, conversation and sounds, including any performance of any musical composition(s), during and in connection with Influencer’s participation in the Bounty, and that Twitch or Bounty Partner shall have the right, throughout the world, an unlimited number of times in perpetuity, royalty-free, to use and to license others to use, in any manner, all or any portion thereof or of a reproduction thereof in connection with the Bounty.  Influencer waives any right of inspection or approval with respect to any materials created or used by Twitch or Bounty Partner of an accepted Bounty Order and expressly waives any moral rights in connection with its participation in any Bounty."), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "1.3.\t", r.createElement(l.W, {
-                            type: l.Pb.Strong,
-                            decoration: l.Nb.Underline
+                            type: l.Rb.Strong,
+                            decoration: l.Pb.Underline
                         }, "License from Bounty Partner."), " Bounty Partner of an accepted Bounty Order may provide licenses to its content, trademarks and other property for Influencer’s use in connection with the Bounty, either directly or through Twitch.  Influencer shall comply with all requirements, guidelines and restrictions with respect to such licenses."), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "2.\t", r.createElement(l.W, {
-                            type: l.Pb.Strong
+                            type: l.Rb.Strong
                         }, "Compliance with Laws."), " Influencer will comply with all applicable laws, rules, regulations and guidelines, including but not limited to the FTC’s Guidelines Concerning the Use of Testimonials and Endorsements in Advertising and all other advertising, marketing, and sweepstakes, contests and promotions laws."), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "Without limiting the foregoing, Influencer will include in all Influencer Channels for a Bounty all title headers, overlays and other audio or visual disclosures that Twitch requires of Influencer.  Influencer will comply with Twitch’s instructions regarding the format, placement and duration of such disclosures."), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "Influencer agrees and acknowledges that Twitch may edit or take down the Influencer Channel at any time in order to ensure compliance with applicable laws, rules, regulations and guidelines."), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "3.\t", r.createElement(l.W, {
-                            type: l.Pb.Strong
+                            type: l.Rb.Strong
                         }, "Influencer Representations and Warranties."), " Influencer represents and warrants that: (i) it has the requisite power and authority to enter into the Bounty Order and to perform fully its obligations hereunder; (ii) it is not and will not be under any contractual or other legal obligation which will in any way interfere with its full, prompt and complete performance under any  Bounty Order; (iii) it conducts and will conduct its affairs in compliance with all applicable international, federal, state, and local laws, rules and regulations, including but not limited to the representations and warranties; (iv) it is not a member of a union, guild or other labor organization and is not a party to any collective bargaining or similar agreement, and understands that Twitch is not a member of any union, guild or other labor organization, and the Bountys are not subject to any collective bargaining agreement; and (v) all other representations and warranties made by Influencer in the Agreement will continue to apply."), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "4.\t", r.createElement(l.W, {
-                            type: l.Pb.Strong
+                            type: l.Rb.Strong
                         }, "Bounty Partner Confidential Information."), " Twitch or Bounty Partner may disclose to Influencer certain Confidential Information of Bounty Partner or its associated companies, suppliers, or customers.  Influencer agrees to treat such information as Confidential Information under the Agreement."), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "5.\t", r.createElement(l.W, {
-                            type: l.Pb.Strong
+                            type: l.Rb.Strong
                         }, "Influencer Indemnification Obligations."), " Influencer hereby agrees to defend, indemnify and hold harmless Twitch and/or the Bounty Partner of any accepted Bounty Order, and their directors, officers, employees and affiliated entities, against any and all claims, actions, losses, judgments, settlements, damages, costs, and expenses, including reasonable attorneys’ fees (collectively, “Losses”) arising out of or based on any claim by a third party related to, involving or concerning a breach by Influencer of its representations, warranties or obligations under an accepted Bounty Order."), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "6.\t", r.createElement(l.W, {
-                            type: l.Pb.Strong
+                            type: l.Rb.Strong
                         }, "Term and Termination.")), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "6.1.\t", r.createElement(l.W, {
-                            type: l.Pb.Strong,
-                            decoration: l.Nb.Underline
+                            type: l.Rb.Strong,
+                            decoration: l.Pb.Underline
                         }, "Termination for Convenience or Breach."), " Twitch may terminate any particular Bounty Order at any time in its sole discretion or at the request of a Bounty Partner for convenience, or for breach of any requirements set forth in the Bounty Orders by the Influencer.  In the event that Twitch terminates any Bounty Order for breach, Twitch nor its Bounty Partner(s) are obliged to make any payments to the Influencer in connection with the breached Bounty Orders."), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "6.2.\t", r.createElement(l.W, {
-                            type: l.Pb.Strong,
-                            decoration: l.Nb.Underline
+                            type: l.Rb.Strong,
+                            decoration: l.Pb.Underline
                         }, "Obligations Upon Termination."), " Influencer must return, delete, destroy or take down any materials or content in accordance with instructions from Twitch or the applicable Bounty Partner upon termination or expiration of any particular Bounty Orders."), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "7.\t", r.createElement(l.W, {
-                            type: l.Pb.Strong
+                            type: l.Rb.Strong
                         }, "Payment."), " Payment terms shall be net sixty (60) days following the end of the Bounty Period and shall be payable in accordance with the Terms of Use."), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "8.\t", r.createElement(l.W, {
-                            type: l.Pb.Strong
+                            type: l.Rb.Strong
                         }, "Miscellaneous.")), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "8.1.\t", r.createElement(l.W, {
-                            type: l.Pb.Strong,
-                            decoration: l.Nb.Underline
+                            type: l.Rb.Strong,
+                            decoration: l.Pb.Underline
                         }, "Third Party Beneficiaries."), " The Bounty Partner of any accepted Bounty Order shall be a third party beneficiary with respect to that accepted Bounty Order."), r.createElement("br", null), r.createElement(l.W, {
-                            type: l.Pb.P
+                            type: l.Rb.P
                         }, "8.2.\t", r.createElement(l.W, {
-                            type: l.Pb.Strong,
-                            decoration: l.Nb.Underline
-                        }, "Other Terms."), " These Influencer Terms and Conditions and all Bounty Orders are governed by and subject to the Agreement.  Capitalized terms used but not defined in these Influencer Terms and Conditions will have the meanings defined in the Agreement.  Except as amended by these Influencer Terms and Conditions, all other terms and conditions of the Agreement remain in full force and effect.")), r.createElement(l.zb, {
+                            type: l.Rb.Strong,
+                            decoration: l.Pb.Underline
+                        }, "Other Terms."), " These Influencer Terms and Conditions and all Bounty Orders are governed by and subject to the Agreement.  Capitalized terms used but not defined in these Influencer Terms and Conditions will have the meanings defined in the Agreement.  Except as amended by these Influencer Terms and Conditions, all other terms and conditions of the Agreement remain in full force and effect.")), r.createElement(l.Bb, {
                             borderTop: !0,
                             display: l.X.Flex,
                             flexDirection: l.Aa.Row,
@@ -7462,7 +7540,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(l.zb, {
+                        return r.createElement(l.Bb, {
                             className: "accept-bounty-modal__container",
                             background: l.r.Base
                         }, r.createElement(g, {
@@ -7664,19 +7742,19 @@
             }), n.d(t, "c", function() {
                 return _
             }), n.d(t, "i", function() {
-                return S
-            }), n.d(t, "e", function() {
                 return O
+            }), n.d(t, "e", function() {
+                return R
             }), n.d(t, "h", function() {
-                return C
+                return S
             }), n.d(t, "g", function() {
-                return I
+                return C
             }), n.d(t, "k", function() {
                 return D
             }), n.d(t, "j", function() {
                 return A
             }), n.d(t, "l", function() {
-                return R
+                return I
             });
             var a, r, i, o, s = n("mrSG"),
                 l = n("/7QA"),
@@ -7765,13 +7843,13 @@
                 }))
             }
 
-            function S(e, t, n, a) {
+            function O(e, t, n, a) {
                 v() && l.p.tracking.track(c.SpadeEventType.SearchQuerySubmit, s.__assign({}, b(e, t, n), {
                     filter: a
                 }))
             }
 
-            function O(e, t, n, a, r) {
+            function R(e, t, n, a, r) {
                 void 0 === r && (r = {}), v() && l.p.tracking.track(c.SpadeEventType.SearchQueryResult, s.__assign({}, b(e, t, n), function(e) {
                     return {
                         live_results: e.liveResults || 0,
@@ -7785,11 +7863,11 @@
                 }))
             }
 
-            function C(e, t, n, a) {
+            function S(e, t, n, a) {
                 v() && l.p.tracking.track(c.SpadeEventType.SearchResultImpression, s.__assign({}, b(e, t, n), E(a)))
             }
 
-            function I(e, t, n, a) {
+            function C(e, t, n, a) {
                 v() && l.p.tracking.track(c.SpadeEventType.SearchResultClick, s.__assign({}, b(e, t, n), E(a)))
             }
 
@@ -7801,7 +7879,7 @@
                 v() && l.p.tracking.track(c.SpadeEventType.SearchUIClick, s.__assign({}, b(e, t, n), g(a)))
             }
 
-            function R(e) {
+            function I(e) {
                 switch (e) {
                     case u.a.Channels:
                         return "channels";
@@ -7953,7 +8031,7 @@
             n("qnLe");
 
             function i(e) {
-                return a.createElement(r.zb, {
+                return a.createElement(r.Bb, {
                     className: "insight-panel-btn",
                     background: e.background || r.r.Alt,
                     display: r.X.Flex,
@@ -7980,7 +8058,7 @@
             n.d(t, "b", function() {
                 return o
             }), n.d(t, "a", function() {
-                return s
+                return l
             });
             var a = n("/7QA"),
                 r = "en-us",
@@ -8015,25 +8093,27 @@
                     "zh-cn": "zh-cn",
                     "zh-tw": "zh-tw"
                 },
-                o = function(e) {
-                    var t, n = s();
-                    return t = function(e) {
-                        return void 0 !== e.tag_id
-                    }(e) ? {
-                        id: e.tag_id,
+                o = function(e, t) {
+                    var n, a = l();
+                    return n = t ? {
+                        id: s(e) ? e.tag_id : e.objectID,
+                        tagName: e.tag_name,
+                        isAutomated: e.automated || !1,
+                        localizedDescription: s(e) ? "" : e.description_localizations && e.description_localizations[a] || "",
+                        localizedName: ""
+                    } : {
+                        id: s(e) ? e.tag_id : e.objectID,
                         isLanguageTag: e.tag_name.includes("auto___lang"),
                         localizedName: "",
                         tagName: e.tag_name
-                    } : {
-                        id: e.objectID,
-                        tagName: e.tag_name,
-                        isAutomated: e.automated || !1,
-                        localizedDescription: e.description_localizations && e.description_localizations[n] || "",
-                        localizedName: ""
-                    }, e.localizations && e.localizations[n] ? t.localizedName = e.localizations[n] : e.localizations && e.localizations[r] ? t.localizedName = e.localizations[r] : t.localizedName = t.tagName, t
+                    }, e.localizations && e.localizations[a] ? n.localizedName = e.localizations[a] : e.localizations && e.localizations[r] ? n.localizedName = e.localizations[r] : n.localizedName = n.tagName, n
                 };
 
-            function s() {
+            function s(e) {
+                return void 0 !== e.tag_id
+            }
+
+            function l() {
                 return i[a.p.intl.getLanguageCode() || ""] || r
             }
         },
@@ -8483,111 +8563,111 @@
                             }
                         }, u.createElement(d.Xa, null, u.createElement(d.W, {
                             bold: !0,
-                            type: d.Pb.Span
+                            type: d.Rb.Span
                         }, Object(m.d)("Campaign:", "DevBountyCreateCampaignModal")), " ", u.createElement(d.W, {
                             "data-test-selector": a.TitleText,
-                            type: d.Pb.Span
+                            type: d.Rb.Span
                         }, t.title)), u.createElement(d.Xa, null, u.createElement(d.W, {
                             bold: !0,
-                            type: d.Pb.Span
+                            type: d.Rb.Span
                         }, Object(m.d)("Brand:", "DevBountyCreateCampaignModal")), " ", u.createElement(d.W, {
                             "data-test-selector": a.SponsorText,
-                            type: d.Pb.Span
+                            type: d.Rb.Span
                         }, t.sponsor)), u.createElement(d.Xa, null, u.createElement(d.W, {
                             bold: !0,
-                            type: d.Pb.Span
+                            type: d.Rb.Span
                         }, Object(m.d)("Campaign Period:", "DevBountyCreateCampaignModal")), " ", u.createElement(d.W, {
                             "data-test-selector": a.PeriodText,
-                            type: d.Pb.Span
-                        }, Object(m.c)(Object(p.e)(new Date(t.startAt))), " - ", Object(m.c)(Object(p.e)(new Date(t.endAt))), " ")), u.createElement(d.Xa, null, u.createElement(d.W, {
+                            type: d.Rb.Span
+                        }, Object(m.c)(Object(p.f)(new Date(t.startAt))), " - ", Object(m.c)(Object(p.f)(new Date(t.endAt))), " ")), u.createElement(d.Xa, null, u.createElement(d.W, {
                             bold: !0,
-                            type: d.Pb.Span
+                            type: d.Rb.Span
                         }, Object(m.d)("Budget:", "DevBountyCreateCampaignModal")), " ", u.createElement(d.W, {
                             "data-test-selector": a.BudgetText,
-                            type: d.Pb.Span
-                        }, "$", Object(m.f)(n), " USD")))), u.createElement(d.zb, {
+                            type: d.Rb.Span
+                        }, "$", Object(m.f)(n), " USD")))), u.createElement(d.Bb, {
                             "data-test-selector": a.LegalText,
                             className: "accept-bounty-modal__agreement-text",
                             border: !0,
                             padding: 1
                         }, u.createElement(d.Xa, {
-                            textAlign: d.Lb.Center
+                            textAlign: d.Nb.Center
                         }, u.createElement(d.W, {
-                            type: d.Pb.Strong
+                            type: d.Rb.Strong
                         }, "Bounty Board Service Terms of Use"), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "Last Updated: September 27, 2018")), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "Welcome to the Bounty Board operated by Twitch Interactive, Inc. (with its affiliates, “Twitch”, “us”, “we”, “our”).  The Bounty Board consists of this website and any related services available at ", u.createElement(d.U, {
                             to: "https://www.twitch.tv",
                             targetBlank: !0
                         }, "http://www.twitch.tv"), ' and/or related sites or applications (collectively, the “Service”). The following terms of use (the "Terms") govern your access to and use of the Service and form an agreement between Twitch and you.'), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, 'An “Influencer” is defined as a user of the Service offering to create promotional online media content for Advertisers (as defined below). The term "you" refers to the person or entity (i) visiting the Service, browsing or otherwise using the Service (including Influencers), or (ii) communicating with individuals or businesses registered on the Service (each, an “Advertiser”) for the purpose of creating promotional online media content for their products or services (each, a “Bounty”).'), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "By accessing or using the Service, you accept and agree to be bound by and comply with these Terms. IF YOU DO NOT ACCEPT AND AGREE TO BE BOUND BY THESE TERMS, PLEASE DO NOT ACCESS OR USE THE SERVICE. If you are accessing or using the Service on behalf of another person or a corporate entity, you represent and warrant that you have the authority to bind such person or entity to these Terms."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "Your use of the Service is further subject to Twitch’s (i) ", u.createElement(d.W, {
-                            type: d.Pb.Span,
-                            decoration: d.Nb.Underline
+                            type: d.Rb.Span,
+                            decoration: d.Pb.Underline
                         }, "Terms of Service (“TOS”)"), ", (ii) ", u.createElement(d.W, {
-                            type: d.Pb.Span,
-                            decoration: d.Nb.Underline
+                            type: d.Rb.Span,
+                            decoration: d.Pb.Underline
                         }, "Community Guidelines"), ", (iii) ", u.createElement(d.W, {
-                            type: d.Pb.Span,
-                            decoration: d.Nb.Underline
+                            type: d.Rb.Span,
+                            decoration: d.Pb.Underline
                         }, "Privacy Policy"), ", (iv) Bounty Orders, entered into with an Influencer, and (v) Insertion Orders, entered into with an Advertiser, which are incorporated fully herein. Where there is a conflict between the foregoing terms and these Terms, these Terms shall govern."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "The Service is provided solely (the “Permitted Use”) to: (i) as an Influencer, assist you in gathering information about the various types of Bounty opportunities and Advertisers available on the Service, including profiles, price ranges, and Bounty descriptions (each, an “Advertiser Profile”); (ii) as an Advertiser, assist you in gathering information about the various types of Bounties and Influencers available on the Service, including profiles, price quotes, and videos of Influencers (each, an “Influencer Profile”); (iii) enable you to post information regarding yourself and to respond to any Bounty opportunities; (iv) facilitate communication between Advertisers and Influencers with the objective of entering into a Bounty Order; (v) accept payments from Advertisers for Insertion Orders (as defined below); and (vi) transmit payments to Influencers under Bounty Orders."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, u.createElement(d.W, {
-                            type: d.Pb.Strong
+                            type: d.Rb.Strong
                         }, "1. Modifications to these Terms and Service")), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "Twitch reserves the right to change these Terms at any time at our discretion. We will give you notice of the changes by posting an updated version of these Terms online, updating the “Last Modified” date above, or by emailing you at an email address you have provided. Changes to these Terms will be effective as of the date we post them or otherwise notify you of them, unless we specify a different effective date when we make a particular change. Your continued use of the Service after changes to these Terms take effect will constitute your acceptance of the changes. If you do not agree to a change, you must stop using the Service."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, 'Twitch reserves the right to change any information, material or content (including, but not limited to, price, features, availability of Advertiser or Influencer, Influencer Profiles and Advertiser Profiles, types of Bounties, and reviews of Bounties and Advertisers) contained on or provided through the Service (the "Content") at any time, and from time to time, without notice.'), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, u.createElement(d.W, {
-                            type: d.Pb.Strong
+                            type: d.Rb.Strong
                         }, "2. License Grants")), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "The Service is owned and operated by Twitch. Unless otherwise indicated, all content, information, and other materials on the Service are “Materials” as such term is defined in the TOS. Unless otherwise expressly stated in writing by Twitch, by agreeing to these Terms you are granted a license (i.e. a personal and limited right) to access and use the Service and Materials as set forth in Section 7 of the TOS."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "Unless otherwise agreed to in a written agreement between you and Twitch that was signed by an authorized representative of Twitch, you grant to Twitch an unrestricted, worldwide, perpetual, irrevocable, fully sub-licensable, nonexclusive, and royalty-free right to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, perform and display (in any form, format, media or media channels now known or later developed or discovered) any data, information, records and files that (1) you provide, transmit or stream through the Service, or (2) we collect from your local computer system or from third-parties with your permission (collectively, “Bounty Board User Content”) and (in each case) including all results from processing such data, including compilations and derivative works thereof.  All Bounty Board User Content is “User Content” as such term is defined in the TOS."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, u.createElement(d.W, {
-                            type: d.Pb.Strong
+                            type: d.Rb.Strong
                         }, "3. Term and Termination")), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "Twitch reserves the right, without notice and in our sole discretion, to terminate your license to use the Service and to block or prevent your future access to and use of the Service. Your only remedy with respect to any dissatisfaction with (i) the Service, (ii) any term of these Terms, (iii) any policy or practice of Twitch in operating the Service, or (iv) any content or information transmitted through the Service, is to terminate your account and to discontinue use of any and all parts of the Service."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "Any Insertion Order (as defined below) or Bounty Order shall be subject to the cancellation and payment provisions as specified in such Insertion Order or Bounty Order."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, u.createElement(d.W, {
-                            type: d.Pb.Strong
+                            type: d.Rb.Strong
                         }, "4. Insertion Orders and Bounty Orders")), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "The Service permits Advertisers to enter into Bounties pursuant to which Influencers who have registered for our Service will provide online promotional content for Advertiser’s products or services. In order to have Influencers provide such content, Advertiser must enter into an agreement with Twitch that provides for payment to Twitch in order for Twitch to engage Influencers on behalf of Advertiser for the Bounty (each, an “Insertion Order”). The Insertion Order will contain (a) a description of the services Influencers will provide for the Bounty, (b) payment to Twitch, and (c) any other terms and conditions agreed upon between Twitch and the Advertiser through this Service or otherwise."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "In order to participate in a particular Bounty, Influencer must enter into an agreement with Twitch (each, a “Bounty Order”) that contains: (a) a description of the services Influencers will provide for the Bounty, (b) payment from Twitch, and (c) any other terms and conditions as agreed upon between Influencer and the Twitch through this Service or otherwise. Influencer further understands and agrees that any content submitted through the Service shall remain publicly accessible as specified in the Bounty Order."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "Twitch does not make any representations or warranties of any kind with respect to an Advertiser or a Bounty Order."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, u.createElement(d.W, {
-                            type: d.Pb.Strong
+                            type: d.Rb.Strong
                         }, "5. Payments")), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "Advertiser will pay Twitch for each Bounty the amount set forth in the Insertion Order, under the terms set forth in the Insertion Order."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "Twitch will pay each Influencer the amount set forth in the Bounty Order, under the terms set forth in the Bounty Order. Twitch, in its sole discretion, may withhold payments to Influencer for breach of applicable law, or the Bounty Order."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, u.createElement(d.W, {
-                            type: d.Pb.Strong
+                            type: d.Rb.Strong
                         }, "6. No Unlawful or Prohibited Use")), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "BY USING THE SERVICE, YOU AGREE NOT TO violate any law, contract, intellectual property or other third-party right or commit a tort, and that you are solely responsible for your conduct while on the Service."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "You agree that you will comply with these Terms, Twitch’s ", u.createElement(d.U, {
                             to: "https://www.twitch.tv/p/legal/terms-of-service/",
                             targetBlank: !0
@@ -8598,26 +8678,26 @@
                             to: "https://www.twitch.tv/p/legal/community-guidelines/",
                             targetBlank: !0
                         }, "Community Guidelines"), "."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "Twitch takes no responsibility and assumes no liability for any Bounty Board User Content or for any loss or damage resulting therefrom, nor is Twitch liable for any mistakes, defamation, slander, libel, omissions, falsehoods, obscenity, pornography or profanity you may encounter when using the Service. Your use of the Service is at your own risk. In addition, these rules do not create any private right of action on the part of any third party or any reasonable expectation that the Service will not contain any content that is prohibited by such rules."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "Twitch is not liable for any statements or representations included in Bounty Board User Content. Twitch does not endorse any Bounty Board User Content, opinion, recommendation, or advice expressed therein, and Twitch expressly disclaims any and all liability in connection with Bounty Board User Content. Although Twitch has no obligation to screen, edit, or monitor any of the Bounty Board User Content, Twitch reserves the right, and has absolute discretion, to remove, screen or edit any Bounty Board User Content posted or stored on the Service at any time and for any reason without notice, and you are solely responsible for creating backup copies of and replacing any Bounty Board User Content you post or store on the Service at your sole cost and expense. Any use of the Service in violation of the foregoing violates these Terms and may result in, among other things, termination or suspension of your rights to use the Service."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, u.createElement(d.W, {
-                            type: d.Pb.Strong
+                            type: d.Rb.Strong
                         }, "7. Clear and Prominent Disclosure in Bounties of Material Connections Between Influencer and Advertiser")), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "You are required to follow the Federal Trade Commission’s Endorsement Guides (“FTC Guidelines”). You each understand and agree that you are required to clearly and conspicuously disclose any material connection between Influencer and the Advertiser."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "Twitch may include disclosures within the Bounty in order to help you comply with FTC Guidelines. You will not obscure or remove any disclosures that are included by Twitch. However, as an Influencer or an Advertiser, it is your responsibility to independently understand and abide by all applicable laws, rules or regulations."), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "Material connections include, but are not necessarily limited to, the Advertiser providing Influencer with something of value, such as free use of products or services. "), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
+                            type: d.Rb.P
                         }, "In general, disclosures should be:"), u.createElement("ul", {
                             className: "accept-bounty-modal__bounty-requirements"
                         }, u.createElement("li", null, "in clear and unambiguous language;"), u.createElement("li", null, "as close as possible to the native ads to which they relate;"), u.createElement("li", null, "in the same medium as the ad, for instance, in the video or in the Twitter post;"), u.createElement("li", null, "in a font and color that’s easy to read;"), u.createElement("li", null, "in a shade that stands out against the background;"), u.createElement("li", null, "for video ads, on the screen long enough to be noticed, read, and understood; and"), u.createElement("li", null, "for audio disclosures, read at a cadence that’s easy for consumers to follow and in words consumers will understand")), u.createElement("br", null), u.createElement(d.W, {
-                            type: d.Pb.P
-                        }, "You represent and warrant that you will abide by the above. If Twitch learns of Bounties you create or initiate that do not, in our sole discretion, abide by the FTC Guidelines, we may require you to add appropriate disclosures, and we may require you to suspend the Bounty until such disclosures are added. Repeated failure to include appropriate disclosures in your Bounties, or your failure to add disclosures upon request by Twitch, may result in termination of your account."), u.createElement("br", null)), u.createElement(d.zb, {
+                            type: d.Rb.P
+                        }, "You represent and warrant that you will abide by the above. If Twitch learns of Bounties you create or initiate that do not, in our sole discretion, abide by the FTC Guidelines, we may require you to add appropriate disclosures, and we may require you to suspend the Bounty until such disclosures are added. Repeated failure to include appropriate disclosures in your Bounties, or your failure to add disclosures upon request by Twitch, may result in termination of your account."), u.createElement("br", null)), u.createElement(d.Bb, {
                             borderTop: !0,
                             display: d.X.Flex,
                             flexDirection: d.Aa.Row,
@@ -8652,7 +8732,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return u.createElement(d.zb, {
+                        return u.createElement(d.Bb, {
                             background: d.r.Base,
                             className: "create-campaign-modal__container"
                         }, u.createElement(f, {
@@ -8672,25 +8752,25 @@
                 N = n("2oH+"),
                 T = n("oJmH"),
                 _ = n("9C/b"),
-                S = n("ZS2+"),
-                O = n("ZDlU"),
-                C = n("5g1g"),
-                I = n("yR8l"),
+                O = n("ZS2+"),
+                R = n("ZDlU"),
+                S = n("5g1g"),
+                C = n("yR8l"),
                 D = n("geRD"),
                 A = n("DMoW"),
-                R = n("D493"),
+                I = n("D493"),
                 k = n("GnwI"),
                 B = n("jCK8"),
-                P = n("/LlH"),
-                w = n("rZ0H"),
+                w = n("/LlH"),
+                P = n("rZ0H"),
                 L = n("NAv5"),
                 F = n("0SKf");
             ! function(e) {
                 e.Language = "language", e.Country = "country", e.HasUserBlacklist = "hasUserBlacklist", e.UserBlacklist = "userBlacklist", e.StreamingExperience = "streamingExperience", e.AllBroadcasters = "allBroadcasters", e.Budget = "budget", e.VarietyBroadcasters = "varietyBroadcasters", e.AdjustRate = "adjustRate", e.RateMultiplier = "rateMultiplier", e.EndDate = "endDate", e.StartDate = "startDate", e.Platforms = "platforms", e.Message = "message", e.Game = "game"
             }(y || (y = {}));
             var M, x = [y.Budget, y.StartDate, y.EndDate, y.Game, y.Platforms],
-                j = ((g = {})[y.Language] = !0, g[y.Country] = !0, g[y.HasUserBlacklist] = !0, g[y.UserBlacklist] = !0, g[y.StreamingExperience] = !0, g[y.AllBroadcasters] = !0, g[y.Budget] = !0, g[y.VarietyBroadcasters] = !0, g[y.AdjustRate] = !0, g[y.RateMultiplier] = !0, g[y.EndDate] = !0, g[y.StartDate] = !0, g[y.Platforms] = !0, g[y.Message] = !0, g[y.Game] = !0, g),
-                U = ((E = {})[y.Language] = "English", E[y.Country] = "USA", E[y.HasUserBlacklist] = !1, E[y.UserBlacklist] = [], E[y.StreamingExperience] = [], E[y.AllBroadcasters] = !0, E[y.Budget] = 5e3, E[y.VarietyBroadcasters] = !1, E[y.AdjustRate] = !1, E[y.RateMultiplier] = 1, E[y.EndDate] = void 0, E[y.StartDate] = void 0, E[y.Platforms] = [], E[y.Message] = "", E[y.Game] = void 0, E);
+                U = ((g = {})[y.Language] = !0, g[y.Country] = !0, g[y.HasUserBlacklist] = !0, g[y.UserBlacklist] = !0, g[y.StreamingExperience] = !0, g[y.AllBroadcasters] = !0, g[y.Budget] = !0, g[y.VarietyBroadcasters] = !0, g[y.AdjustRate] = !0, g[y.RateMultiplier] = !0, g[y.EndDate] = !0, g[y.StartDate] = !0, g[y.Platforms] = !0, g[y.Message] = !0, g[y.Game] = !0, g),
+                j = ((E = {})[y.Language] = "English", E[y.Country] = "USA", E[y.HasUserBlacklist] = !1, E[y.UserBlacklist] = [], E[y.StreamingExperience] = [], E[y.AllBroadcasters] = !0, E[y.Budget] = 5e3, E[y.VarietyBroadcasters] = !1, E[y.AdjustRate] = !1, E[y.RateMultiplier] = 1, E[y.EndDate] = void 0, E[y.StartDate] = void 0, E[y.Platforms] = [], E[y.Message] = "", E[y.Game] = void 0, E);
 
             function G(e, t) {
                 return {
@@ -8760,8 +8840,8 @@
             function H(e) {
                 return void 0 === e || Number.isNaN(e) || 0 === e || Array.isArray(e) && 0 === e.length || "" === e || !1 === e
             }
-            var X, z = n("Ints"),
-                Y = function(e) {
+            var X, Y = n("Ints"),
+                z = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onChange = function(e) {
@@ -8799,7 +8879,7 @@
                                     left: 1
                                 }
                             }, u.createElement(q.a, null, u.createElement(d.A, {
-                                icon: d.pb.NotificationInfo,
+                                icon: d.rb.NotificationInfo,
                                 type: d.C.Secondary,
                                 blurAfterClick: !0
                             }), u.createElement(d.u, {
@@ -8884,7 +8964,7 @@
                         }, u.createElement(d.Ra, {
                             value: this.props.currentGame ? this.props.currentGame.displayName : "",
                             type: d.Ta.Text,
-                            icon: d.pb.NavGames,
+                            icon: d.rb.NavGames,
                             disabled: !0
                         })) : u.createElement(Q.a, {
                             redrawKey: this.state.redrawKey,
@@ -8927,9 +9007,9 @@
                         })
                     }, t
                 }(u.Component),
-                $ = Object(o.compose)(Object(I.a)(J))(Z),
+                $ = Object(o.compose)(Object(C.a)(J))(Z),
                 ee = n("5hPa"),
-                te = Object(T.compose)(Object(I.a)(ee, {
+                te = Object(T.compose)(Object(C.a)(ee, {
                     options: function(e) {
                         return {
                             variables: {
@@ -8953,13 +9033,13 @@
                         aspect: d.p.BoxArt,
                         borderRadius: d.x.Small
                     }), u.createElement(d.H, {
-                        overflow: d.ab.Hidden
+                        overflow: d.cb.Hidden
                     }, u.createElement(d.Pa, {
                         padding: {
                             x: 1
                         }
                     }, u.createElement(d.W, {
-                        type: d.Pb.H5,
+                        type: d.Rb.H5,
                         ellipsis: !0
                     }, e.name)))))
                 });
@@ -8985,7 +9065,7 @@
                             label: t,
                             error: a && 0 !== a.length,
                             errorMessage: a && a[0]
-                        }, r ? u.createElement(d.zb, {
+                        }, r ? u.createElement(d.Bb, {
                             border: !0,
                             key: r.id,
                             padding: {
@@ -9001,7 +9081,7 @@
                         })), u.createElement(d.A, {
                             disabled: n,
                             "data-test-selector": X.RemoveGameIcon,
-                            icon: d.pb.Hide,
+                            icon: d.rb.Hide,
                             onClick: this.onRemoveGame,
                             type: d.C.Secondary
                         })) : u.createElement($, {
@@ -9066,13 +9146,13 @@
                             errorMessage: a && a[0]
                         }, u.createElement(ie.a, {
                             onChange: this.onChange,
-                            defaultDate: t ? Object(p.e)(t) : t,
+                            defaultDate: t ? Object(p.f)(t) : t,
                             minDate: this.minDate,
                             inputProps: {
                                 readOnly: !0,
                                 placeholder: Object(m.d)("Enter end date", "DevBountyBoardCampaignEndDateField"),
                                 disabled: n,
-                                icon: d.pb.Events,
+                                icon: d.rb.Events,
                                 onClick: this.onClick,
                                 iconRight: !0
                             }
@@ -9087,15 +9167,15 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return u.createElement(u.Fragment, null, u.createElement(d.zb, {
+                        return u.createElement(u.Fragment, null, u.createElement(d.Bb, {
                             attachTop: !0,
                             attachRight: !0,
                             attachBottom: !0,
                             attachLeft: !0,
                             background: d.r.Base,
                             className: "dev-bounty-board-analytics-overlay__background",
-                            position: d.fb.Absolute,
-                            zIndex: d.cc.Above
+                            position: d.hb.Absolute,
+                            zIndex: d.ec.Above
                         }), u.createElement(d.Xa, {
                             alignItems: d.f.Center,
                             attachTop: !0,
@@ -9105,24 +9185,24 @@
                             className: "dev-bounty-board-analytics-overlay__message",
                             display: d.X.Flex,
                             justifyContent: d.Wa.Center,
-                            position: d.fb.Absolute,
+                            position: d.hb.Absolute,
                             padding: {
                                 x: 4
                             },
-                            textAlign: d.Lb.Center,
-                            zIndex: d.cc.Above
+                            textAlign: d.Nb.Center,
+                            zIndex: d.ec.Above
                         }, u.createElement(d.W, {
-                            type: d.Pb.P,
+                            type: d.Rb.P,
                             fontSize: d.Ca.Size5
                         }, Object(m.d)("Analytics will be available once the campaign starts <x:bold>on {date} at {time} ET</x:bold>", {
                             "x:bold": function(e) {
                                 return u.createElement(d.W, {
-                                    type: d.Pb.Span,
+                                    type: d.Rb.Span,
                                     bold: !0
                                 }, e)
                             },
-                            date: Object(m.c)(Object(p.e)(this.props.date)),
-                            time: Object(m.j)(Object(p.e)(this.props.date))
+                            date: Object(m.c)(Object(p.f)(this.props.date)),
+                            time: Object(m.j)(Object(p.f)(this.props.date))
                         }, "DevBountyBoardCampaignPage"))))
                     }, t
                 }(u.Component));
@@ -9168,7 +9248,7 @@
                                 r = t.getFunnel(e),
                                 i = 0 === a ? 0 : Math.floor(100 * r / a),
                                 o = n && n.loading;
-                            return e === F.c.BountiesTotal ? null : u.createElement(d.zb, {
+                            return e === F.c.BountiesTotal ? null : u.createElement(d.Bb, {
                                 key: t.getTitle(e),
                                 padding: {
                                     y: 1,
@@ -9198,7 +9278,7 @@
                                 padding: {
                                     right: 1
                                 },
-                                textAlign: d.Lb.Right
+                                textAlign: d.Nb.Right
                             }, u.createElement(d.W, {
                                 color: d.O.Alt2,
                                 ellipsis: !0,
@@ -9213,15 +9293,15 @@
                                 padding: {
                                     top: .5
                                 }
-                            }, u.createElement(d.Sb, {
+                            }, u.createElement(d.Ub, {
                                 label: o ? "-" : Object(m.f)(r) + " " + t.getTitle(e, 1 !== r),
-                                direction: d.Ub.Top,
-                                align: d.Tb.Center,
+                                direction: d.Wb.Top,
+                                align: d.Vb.Center,
                                 display: d.X.Block,
                                 "data-test-selector": ne.RowTooltipSelector
-                            }, u.createElement(d.zb, {
+                            }, u.createElement(d.Bb, {
                                 background: d.r.Alt2
-                            }, u.createElement(d.ib, {
+                            }, u.createElement(d.kb, {
                                 value: i,
                                 borderRadius: d.x.None,
                                 "data-test-selector": ne.RowBarSelector
@@ -9234,8 +9314,8 @@
                             n = this.getFunnel(F.c.BountiesTotal),
                             a = this.getBrandDetails(),
                             r = a && new Date(a.startTime) > new Date;
-                        return u.createElement(d.zb, {
-                            position: d.fb.Relative,
+                        return u.createElement(d.Bb, {
+                            position: d.hb.Relative,
                             background: d.r.Base,
                             elevation: 1,
                             margin: {
@@ -9251,18 +9331,18 @@
                             flexDirection: d.Aa.Column,
                             padding: 2
                         }, u.createElement(d.W, {
-                            type: d.Pb.H4,
+                            type: d.Rb.H4,
                             bold: !0,
                             "data-test-selector": ne.HeaderSelector
                         }, Object(m.d)("Bounty Funnel", "DevBountyBoardCampaignPage")), u.createElement(d.W, {
-                            type: d.Pb.P,
+                            type: d.Rb.P,
                             fontSize: d.Ca.Size5,
                             color: d.O.Alt2,
                             "data-test-selector": ne.SubheaderSelector
                         }, Object(m.d)("{total, plural, one {{total} broadcaster} other {{total} broadcasters}}", {
                             total: t ? "-" : Object(m.f)(n)
                         }, "DevBountyBoardCampaignPage"))), u.createElement(d.Xa, null, Object.values(F.c).map(this.renderRow))), u.createElement(d.Xa, {
-                            position: d.fb.Relative
+                            position: d.hb.Relative
                         }, e && this.renderHelp(), u.createElement(le.a, {
                             onClick: this.onClickShowHelp,
                             message: Object(m.d)("Completed - Unique Broadcasters ({total})", {
@@ -9289,7 +9369,7 @@
                         }
                     }, t
                 }(u.Component),
-                pe = Object(T.compose)(Object(I.a)(ce, {
+                pe = Object(T.compose)(Object(C.a)(ce, {
                     options: function(e) {
                         return {
                             variables: {
@@ -9307,7 +9387,7 @@
                             t = Math.ceil(e / 206.5 * 1.6);
                         return u.createElement(d.Ea, {
                             label: Object(m.d)("Game Keys", "DevBountyBoardCampaignPage")
-                        }, u.createElement(d.zb, {
+                        }, u.createElement(d.Bb, {
                             borderLeft: !0,
                             borderTop: !0,
                             borderRight: !0,
@@ -9318,7 +9398,7 @@
                             }
                         }, u.createElement(d.Xa, {
                             fullHeight: !0,
-                            position: d.fb.Relative,
+                            position: d.hb.Relative,
                             margin: {
                                 left: .5,
                                 right: .5
@@ -9327,7 +9407,7 @@
                                 right: 1
                             }
                         }, u.createElement(d.W, {
-                            type: d.Pb.P,
+                            type: d.Rb.P,
                             fontSize: d.Ca.Size6
                         }, Object(m.d)("<x:bold>Estimated keys needed</x:bold>: {keys} (send key CSV file to <x:link>bounty-board@twitch.tv</x:link>)", {
                             "x:link": function(e) {
@@ -9337,7 +9417,7 @@
                             },
                             "x:bold": function(e) {
                                 return u.createElement(d.W, {
-                                    type: d.Pb.Span,
+                                    type: d.Rb.Span,
                                     bold: !0
                                 }, e)
                             },
@@ -9354,14 +9434,14 @@
                             var e = t.props,
                                 n = e.disabled,
                                 a = e.value || [];
-                            return a.length ? u.createElement(d.zb, {
+                            return a.length ? u.createElement(d.Bb, {
                                 borderLeft: !0,
                                 borderTop: !0,
                                 borderRight: !0,
                                 borderBottom: n
                             }, a.map(t.renderGame)) : null
                         }, t.renderGame = function(e) {
-                            return u.createElement(d.zb, {
+                            return u.createElement(d.Bb, {
                                 key: e.objectID,
                                 padding: {
                                     y: .5,
@@ -9376,7 +9456,7 @@
                             })), u.createElement(d.A, {
                                 disabled: t.props.disabled,
                                 "data-test-selector": de.RemoveGameIcon,
-                                icon: d.pb.Hide,
+                                icon: d.rb.Hide,
                                 onClick: t.onRemoveGame.bind(t, e),
                                 type: d.C.Secondary
                             }))
@@ -9443,16 +9523,16 @@
                             r = a.broadcasterPool,
                             i = a.minutesWatched,
                             o = a.viewerPool;
-                        return 0 === r.max ? (e = "N/A", t = "N/A", n = "N/A") : (e = Object(m.f)(r.min) + "-" + Object(m.f)(r.max), n = Object(m.f)(o.min) + "-" + Object(m.f)(o.max), t = " " + Object(m.f)(i.min) + "-" + Object(m.f)(i.max)), u.createElement(d.zb, {
+                        return 0 === r.max ? (e = "N/A", t = "N/A", n = "N/A") : (e = Object(m.f)(r.min) + "-" + Object(m.f)(r.max), n = Object(m.f)(o.min) + "-" + Object(m.f)(o.max), t = " " + Object(m.f)(i.min) + "-" + Object(m.f)(i.max)), u.createElement(d.Bb, {
                             background: d.r.Base,
                             elevation: 1,
                             padding: 2,
                             className: "livereach-widget"
-                        }, u.createElement(d.zb, {
+                        }, u.createElement(d.Bb, {
                             fontSize: d.Ca.Size1
-                        }, e), u.createElement(d.zb, {
+                        }, e), u.createElement(d.Bb, {
                             fontSize: d.Ca.Size5
-                        }, Object(m.d)("Broadcasters", "DevBountyBoardCampaignLivereachWidget")), u.createElement(d.zb, {
+                        }, Object(m.d)("Broadcasters", "DevBountyBoardCampaignLivereachWidget")), u.createElement(d.Bb, {
                             padding: {
                                 top: 2
                             }
@@ -9460,21 +9540,21 @@
                             gutterSize: d.Ka.Medium
                         }, u.createElement(d.P, {
                             cols: 6
-                        }, u.createElement(d.zb, {
+                        }, u.createElement(d.Bb, {
                             fontSize: d.Ca.Size6
-                        }, Object(m.d)("who have a total of", "DevBountyBoardCampaignLivereachWidget")), u.createElement(d.zb, {
+                        }, Object(m.d)("who have a total of", "DevBountyBoardCampaignLivereachWidget")), u.createElement(d.Bb, {
                             fontSize: d.Ca.Size3
-                        }, n), u.createElement(d.zb, {
+                        }, n), u.createElement(d.Bb, {
                             fontSize: d.Ca.Size5
                         }, Object(m.d)("Viewers", "DevBountyBoardCampaignLivereachWidget"))), u.createElement(d.P, {
                             cols: 6
-                        }, u.createElement(d.zb, {
+                        }, u.createElement(d.Bb, {
                             fontSize: d.Ca.Size6
-                        }, Object(m.d)("and a typical total of", "DevBountyBoardCampaignLivereachWidget")), u.createElement(d.zb, {
+                        }, Object(m.d)("and a typical total of", "DevBountyBoardCampaignLivereachWidget")), u.createElement(d.Bb, {
                             fontSize: d.Ca.Size3
-                        }, t), u.createElement(d.zb, {
+                        }, t), u.createElement(d.Bb, {
                             fontSize: d.Ca.Size5
-                        }, Object(m.d)("Minutes watched per hour", "DevBountyBoardCampaignLivereachWidget")))), u.createElement(d.zb, {
+                        }, Object(m.d)("Minutes watched per hour", "DevBountyBoardCampaignLivereachWidget")))), u.createElement(d.Bb, {
                             fontSize: d.Ca.Size7,
                             padding: {
                                 top: 2
@@ -9482,7 +9562,7 @@
                         }, Object(m.d)("Estimates are based on the typical number of the available broadcasters within your targeting selections. Actual campaign results may vary", "DevBountyBoardCampaignLivereachWidget"))))
                     }, t
                 }(u.Component),
-                ve = Object(o.compose)(Object(k.b)("DevBountyBoardCampaignLivereachWidget"), Object(I.a)(ye, {
+                ve = Object(o.compose)(Object(k.b)("DevBountyBoardCampaignLivereachWidget"), Object(C.a)(ye, {
                     options: function(e) {
                         return {
                             variables: {
@@ -9508,7 +9588,7 @@
                         return u.createElement(d.Ea, {
                             label: Object(m.d)("Message to Broadcaster", "DevBountyBoardCampaignPlatformField"),
                             labelOptional: this.getRemainingMessage()
-                        }, u.createElement(d.Mb, {
+                        }, u.createElement(d.Ob, {
                             disabled: n,
                             noResize: !0,
                             onChange: this.onChange,
@@ -9551,7 +9631,7 @@
                                 }, e))
                             });
                             return u.createElement(d.Xa, {
-                                position: d.fb.Relative
+                                position: d.hb.Relative
                             }, u.createElement(se.a, {
                                 onClickOut: t.onClickDismissSelect
                             }, u.createElement(d.u, {
@@ -9568,8 +9648,8 @@
                                     right: .5,
                                     bottom: .5
                                 }
-                            }, u.createElement(d.Ib, {
-                                action: d.Jb.Remove,
+                            }, u.createElement(d.Kb, {
+                                action: d.Lb.Remove,
                                 blurAfterClick: !0,
                                 disabled: n,
                                 label: e,
@@ -9627,13 +9707,13 @@
                         }, Object(m.d)("Add Platform(s)", "DevBountyBoardCampaignPlatformField")), i && this.renderFilterBalloon(r)))
                     }, t
                 }(u.Component),
-                Se = n("CF52"),
-                Oe = function(e) {
+                Oe = n("CF52"),
+                Re = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             isLoading: !0,
-                            changeset: G(U, j),
+                            changeset: G(j, U),
                             status: null
                         }, t
                     }
@@ -9658,18 +9738,18 @@
                                         name: e.displayName,
                                         avatar: e.profileImageURL
                                     }
-                                })), a.status = i.status, a.changeset = G(((n = {})[y.Language] = U[y.Language], n[y.Country] = U[y.Country], n[y.HasUserBlacklist] = l.length > 0, n[y.UserBlacklist] = l, n[y.StreamingExperience] = s, n[y.AllBroadcasters] = !!i.brandDetails && !!i.brandDetails.includesAllBroadcasters, n[y.Budget] = (i.brandDetails && i.brandDetails.totalBudgetCents || 0) / 100, n[y.VarietyBroadcasters] = !!i.brandDetails && !!i.brandDetails.includesVarietyBroadcasters, n[y.AdjustRate] = 1 !== o, n[y.RateMultiplier] = o, n[y.EndDate] = new Date(i.endTime), n[y.StartDate] = new Date(i.startTime), n[y.Platforms] = i.availablePlatforms || [], n[y.Message] = i.details, n[y.Game] = i.game || void 0, n), j)
+                                })), a.status = i.status, a.changeset = G(((n = {})[y.Language] = j[y.Language], n[y.Country] = j[y.Country], n[y.HasUserBlacklist] = l.length > 0, n[y.UserBlacklist] = l, n[y.StreamingExperience] = s, n[y.AllBroadcasters] = !!i.brandDetails && !!i.brandDetails.includesAllBroadcasters, n[y.Budget] = (i.brandDetails && i.brandDetails.totalBudgetCents || 0) / 100, n[y.VarietyBroadcasters] = !!i.brandDetails && !!i.brandDetails.includesVarietyBroadcasters, n[y.AdjustRate] = 1 !== o, n[y.RateMultiplier] = o, n[y.EndDate] = new Date(i.endTime), n[y.StartDate] = new Date(i.startTime), n[y.Platforms] = i.availablePlatforms || [], n[y.Message] = i.details, n[y.Game] = i.game || void 0, n), U)
                             }
                             a.isLoading = !1
                         }
-                        return a.isLoading && (a.changeset = G(U, j)), a
+                        return a.isLoading && (a.changeset = G(j, U)), a
                     }, t.prototype.render = function() {
                         return this.props.children(this.state.changeset, this.isError(), this.state.status)
                     }, t.prototype.isError = function() {
                         return !!this.props.data && !!this.props.data.error
                     }, t
                 }(u.Component),
-                Ce = Object(T.compose)(Object(I.a)(Se, {
+                Se = Object(T.compose)(Object(C.a)(Oe, {
                     options: function(e) {
                         return {
                             variables: {
@@ -9677,8 +9757,8 @@
                             }
                         }
                     }
-                }))(Oe),
-                Ie = function(e) {
+                }))(Re),
+                Ce = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -9705,7 +9785,7 @@
                         var e = this.props,
                             t = e.label,
                             n = e.disabled;
-                        return u.createElement(d.zb, {
+                        return u.createElement(d.Bb, {
                             borderLeft: !0,
                             borderTop: !0,
                             borderRight: !0,
@@ -9721,7 +9801,7 @@
                             }
                         }, u.createElement(d.Xa, {
                             fullHeight: !0,
-                            position: d.fb.Relative,
+                            position: d.hb.Relative,
                             margin: {
                                 left: .5,
                                 right: .5
@@ -9730,7 +9810,7 @@
                                 right: 1
                             }
                         }, u.createElement(d.W, {
-                            type: d.Pb.Strong
+                            type: d.Rb.Strong
                         }, t), u.createElement(d.Ra, {
                             disabled: n,
                             type: d.Ta.Number,
@@ -9742,7 +9822,7 @@
                             onBlur: this.onBlur,
                             placeholder: Object(m.d)("1.0", "DevBountyBoardCampaignPage")
                         }), u.createElement(d.W, {
-                            type: d.Pb.P,
+                            type: d.Rb.P,
                             color: d.O.Alt2,
                             fontSize: d.Ca.Size6
                         }, Object(m.d)("Indicate a multiplier between 1.0 and 5.0.", "DevBountyBoardCampaignPage")))), u.createElement(d.P, {
@@ -9784,13 +9864,13 @@
                             errorMessage: a && a[0]
                         }, u.createElement(ie.a, {
                             onChange: this.onChange,
-                            defaultDate: t ? Object(p.e)(t) : t,
+                            defaultDate: t ? Object(p.f)(t) : t,
                             minDate: this.state.minDate,
                             inputProps: {
                                 readOnly: !0,
                                 placeholder: Object(m.d)("Enter start date", "DevBountyBoardCampaignStartDateField"),
                                 disabled: n,
-                                icon: d.pb.Events,
+                                icon: d.rb.Events,
                                 onClick: this.onClick,
                                 iconRight: !0
                             }
@@ -9798,9 +9878,10 @@
                     }, t
                 }(u.Component),
                 Ae = n("dfkd"),
-                Re = n("TDse"),
-                ke = n("z0Ka"),
-                Be = n("+lD8"),
+                Ie = n("TDse"),
+                ke = n("17YR"),
+                Be = n("z0Ka"),
+                we = n("+lD8"),
                 Pe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -9841,7 +9922,7 @@
                         var e = this.props,
                             t = e.timeseries,
                             n = e.label;
-                        return e.isLoading ? u.createElement(Be.a, null) : u.createElement(ke.a, {
+                        return e.isLoading ? u.createElement(we.a, null) : u.createElement(Be.a, {
                             labels: this.props.aggregation.datesAsLabels,
                             datasets: [{
                                 label: n,
@@ -9855,9 +9936,9 @@
                         return e
                     }, t
                 }(u.Component),
-                we = n("y/nc");
+                Le = n("y/nc");
 
-            function Le(e, t) {
+            function Fe(e, t) {
                 if (e.brandDetails && e.brandDetails.campaignReporting && e.brandDetails.campaignReporting.performanceMetrics) {
                     var n = e.brandDetails.campaignReporting.performanceMetrics || [];
                     if (new Date < new Date(e.startTime)) return function() {
@@ -9887,7 +9968,7 @@
                             var n = e[t] || 0;
                             return a += n, {
                                 value: n,
-                                date: Object(p.e)(new Date(e.startTime))
+                                date: Object(p.f)(new Date(e.startTime))
                             }
                         });
                     if (0 === r.length) return F.e;
@@ -9903,7 +9984,7 @@
                 }
                 return F.e
             }
-            var Fe, Me = function(e) {
+            var Me, xe = function(e) {
                     function t() {
                         var t, n = null !== e && e.apply(this, arguments) || this;
                         return n.state = ((t = {})[F.d.BountiesCompleted] = F.e, t[F.d.MinutesWatched] = F.e, t[F.d.Viewers] = F.e, t[F.d.Viewers2m] = F.e, t.isLoading = !0, t), n
@@ -9912,7 +9993,7 @@
                         var a = r.__assign({}, n),
                             i = t.getBrandDetails(e.data);
                         return !0 === n.isLoading && !1 === e.data.loading && i && (a.startTime = new Date(i.startTime), Object.values(F.d).forEach(function(e) {
-                            a[e] = Le(i, e)
+                            a[e] = Fe(i, e)
                         })), a.isLoading = e.data.loading, a
                     }, t.getBrandDetails = function(e) {
                         return e && e.currentUser && e.currentUser.company && e.currentUser.company.bountyCampaigns && e.currentUser.company.bountyCampaigns.edges && e.currentUser.company.bountyCampaigns.edges.length > 0 && e.currentUser.company.bountyCampaigns.edges[0].node || null
@@ -9920,7 +10001,7 @@
                         return this.props.children(this.state)
                     }, t
                 }(u.Component),
-                xe = Object(T.compose)(Object(I.a)(we, {
+                Ue = Object(T.compose)(Object(C.a)(Le, {
                     options: function(e) {
                         return {
                             variables: {
@@ -9928,11 +10009,11 @@
                             }
                         }
                     }
-                }))(Me);
+                }))(xe);
             n("H+Kr");
             ! function(e) {
                 e.Title = "dev-campaign-page-stats-tab-title", e.Label = "dev-campaign-page-stats-tab-label"
-            }(Fe || (Fe = {}));
+            }(Me || (Me = {}));
             var je = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -9953,7 +10034,7 @@
                             flexGrow: 1,
                             justifyContent: d.Wa.Center,
                             display: d.X.Flex,
-                            textAlign: d.Lb.Center
+                            textAlign: d.Nb.Center
                         }, u.createElement(d.U, {
                             onClick: i,
                             className: "top-stats-tab__link",
@@ -9969,44 +10050,45 @@
                             ellipsis: !0
                         }, u.createElement(d.W, {
                             className: "top-stats-tab__title",
-                            "data-test-selector": Fe.Title,
-                            type: d.Pb.H3,
+                            "data-test-selector": Me.Title,
+                            type: d.Rb.H3,
                             key: "dev-campaign-page-stats-tab-value"
                         }, a ? "-" : t), u.createElement(d.W, {
-                            type: d.Pb.H6,
+                            type: d.Rb.H6,
                             color: d.O.Alt2,
-                            "data-test-selector": Fe.Label,
+                            "data-test-selector": Me.Label,
                             title: r,
                             key: "dev-campaign-page-stats-tab-label",
                             ellipsis: !0
                         }, r)))))
                     }, t
                 }(u.Component),
-                Ue = function(e) {
+                Ge = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             statId: F.d.BountiesCompleted,
-                            aggregationInterval: Re.a.Day
+                            aggregationInterval: Ie.a.Day
                         }, t.renderContent = function(e) {
-                            var n = t.state,
-                                a = n.aggregationInterval,
-                                r = n.statId,
-                                i = new Ae.a(a, e[r].interval),
-                                o = e.startTime && e.startTime > new Date;
-                            return u.createElement(d.zb, {
+                            var n, a = t.state,
+                                r = a.aggregationInterval,
+                                i = a.statId,
+                                o = new Ae.a(r, e[i].interval),
+                                s = e.startTime && e.startTime > new Date,
+                                l = ((n = {})[F.d.BountiesCompleted] = e[F.d.BountiesCompleted], n[F.d.MinutesWatched] = e[F.d.MinutesWatched], n[F.d.Viewers] = e[F.d.Viewers], n[F.d.Viewers2m] = e[F.d.Viewers2m], n);
+                            return u.createElement(d.Bb, {
                                 background: d.r.Base,
-                                position: d.fb.Relative,
+                                position: d.hb.Relative,
                                 elevation: 1,
                                 margin: {
                                     bottom: 1
                                 }
-                            }, o && e.startTime && u.createElement(ue, {
+                            }, s && e.startTime && u.createElement(ue, {
                                 date: e.startTime
                             }), u.createElement(d.Xa, {
                                 display: d.X.Flex,
                                 flexWrap: d.Ba.Wrap
-                            }, Object.values(F.d).map(t.renderTab(e))), u.createElement(d.zb, {
+                            }, Object.values(F.d).map(t.renderTab(e))), u.createElement(d.Bb, {
                                 padding: 2,
                                 borderBottom: !0
                             }, u.createElement(d.Xa, {
@@ -10015,20 +10097,23 @@
                                 padding: {
                                     bottom: 1
                                 }
-                            }, u.createElement("div", null, u.createElement(d.vb, {
+                            }, u.createElement("div", null, u.createElement(d.xb, {
                                 onChange: t.handleAggregationChange,
-                                value: a
+                                value: r
                             }, u.createElement("option", {
-                                value: Re.a.Day
-                            }, Object(m.d)("Day", "DevBountyBoardCampaignPage")), u.createElement("option", {
-                                value: Re.a.Week
-                            }, Object(m.d)("Week", "DevBountyBoardCampaignPage"))))), u.createElement(Pe, {
-                                timeseries: e[r],
-                                aggregation: i,
-                                statId: r,
+                                value: Ie.a.Day
+                            }, Object(m.d)("Day", "DevBountyBoardCampaignPage")), " ", u.createElement("option", {
+                                value: Ie.a.Week
+                            }, " ", Object(m.d)("Week", "DevBountyBoardCampaignPage"))))), u.createElement(Pe, {
+                                timeseries: e[i],
+                                aggregation: o,
+                                statId: i,
                                 isLoading: e.isLoading,
-                                label: Object(p.c)(r)
-                            })))
+                                label: Object(p.c)(i)
+                            })), u.createElement(le.a, {
+                                onClick: t.onClickExportData(l, o),
+                                message: Object(m.d)("Export Data", "DevBountyBoardCampaignPage")
+                            }))
                         }, t.handleAggregationChange = function(e) {
                             t.setState({
                                 aggregationInterval: e.currentTarget.value
@@ -10038,6 +10123,11 @@
                                 t.setState({
                                     statId: e
                                 })
+                            }
+                        }, t.onClickExportData = function(e, t) {
+                            return function() {
+                                var n = Object(p.e)(e, t);
+                                Object(ke.a)(n.fileName, n.csv)
                             }
                         }, t.renderTab = function(e) {
                             return function(n) {
@@ -10056,22 +10146,22 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.campaignId;
-                        return u.createElement(xe, {
+                        return u.createElement(Ue, {
                             campaignId: e
                         }, this.renderContent)
                     }, t
                 }(u.Component),
-                Ge = Object(T.compose)(Object(k.b)("DevBountyBoardStats", {
+                Ve = Object(T.compose)(Object(k.b)("DevBountyBoardStats", {
                     autoReportInteractive: !0
-                }))(Ue),
-                Ve = n("/BQy"),
-                We = (n("mxVY"), function(e) {
+                }))(Ge),
+                We = n("/BQy"),
+                He = (n("mxVY"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderRow = function(e, t, n) {
                             void 0 === n && (n = !1);
                             var a = u.createElement(d.W, {
-                                type: d.Pb.P,
+                                type: d.Rb.P,
                                 fontSize: d.Ca.Size5,
                                 bold: !0,
                                 ellipsis: !0
@@ -10079,7 +10169,7 @@
                             return u.createElement(u.Fragment, null, u.createElement(d.P, {
                                 cols: 5
                             }, u.createElement(d.W, {
-                                type: d.Pb.P,
+                                type: d.Rb.P,
                                 fontSize: d.Ca.Size5,
                                 ellipsis: !0
                             }, e)), u.createElement(d.P, {
@@ -10098,15 +10188,15 @@
                         var e = this.getCampaign(),
                             t = e && e.game && e.game.boxArtURL,
                             n = e && e.brandDetails && e.brandDetails.status,
-                            a = e && e.startTime && Object(p.e)(new Date(e.startTime)),
+                            a = e && e.startTime && Object(p.f)(new Date(e.startTime)),
                             r = a && Object(m.c)(a) + " " + Object(m.j)(new Date(a)) + " ET",
-                            i = e && e.endTime && Object(p.e)(new Date(e.endTime)),
+                            i = e && e.endTime && Object(p.f)(new Date(e.endTime)),
                             o = i && Object(m.c)(i) + " " + Object(m.j)(i) + " ET",
                             s = e && e.brandDetails && Object(p.a)(e.brandDetails.totalBudgetCents || 0),
                             l = e && e.brandDetails && e.brandDetails.campaignReporting,
                             c = l && Object(p.a)(l.claimedBudgetCents || 0),
                             f = l && Object(p.a)(l.spentBudgetCents || 0);
-                        return u.createElement(d.zb, {
+                        return u.createElement(d.Bb, {
                             background: d.r.Base,
                             className: "dev-bounty-board-campaign-summary",
                             elevation: 1,
@@ -10119,14 +10209,14 @@
                                 bottom: 2
                             }
                         }, e ? u.createElement(d.W, {
-                            type: d.Pb.H3,
+                            type: d.Rb.H3,
                             ellipsis: !0
-                        }, e ? e.title : "-") : u.createElement(d.eb, {
+                        }, e ? e.title : "-") : u.createElement(d.gb, {
                             height: 28,
                             width: 350
                         })), u.createElement(d.Xa, {
                             display: d.X.Flex
-                        }, u.createElement(d.zb, {
+                        }, u.createElement(d.Bb, {
                             className: "dev-bounty-board-campaign-summary-cover",
                             display: d.X.Flex,
                             flexGrow: 0,
@@ -10148,7 +10238,7 @@
                         return e && e.status && (e.status === A.d.LIVE || e.status === A.d.PENDING || e.status === A.d.APPROVED)
                     }, t
                 }(u.Component)),
-                He = Object(T.compose)(Object(I.a)(Ve, {
+                Xe = Object(T.compose)(Object(C.a)(We, {
                     options: function(e) {
                         return {
                             variables: {
@@ -10156,24 +10246,24 @@
                             }
                         }
                     }
-                }))(We);
-            var Xe, ze = Object(T.compose)(Object(i.connect)(null, function(e) {
+                }))(He);
+            var Ye, ze = Object(T.compose)(Object(i.connect)(null, function(e) {
                     return Object(o.bindActionCreators)({
                         showCancelCampaignModal: function() {
                             return Object(s.d)(c.a, {})
                         }
                     }, e)
-                }))(He),
-                Ye = n("LFRE");
+                }))(Xe),
+                qe = n("LFRE");
             ! function(e) {
                 e.User = "dev-campaign-user-multiselect-user", e.RemoveUserIcon = "dev-campaign-user-multiselect-remove-user-icon"
-            }(Xe || (Xe = {}));
-            var qe, Ke = function(e) {
+            }(Ye || (Ye = {}));
+            var Ke, Qe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderUsers = function() {
                             var e = t.props.value;
-                            return e.length ? u.createElement(d.zb, {
+                            return e.length ? u.createElement(d.Bb, {
                                 borderLeft: !0,
                                 borderTop: !0,
                                 borderRight: !0,
@@ -10181,8 +10271,8 @@
                             }, e.map(t.renderUser)) : null
                         }, t.renderUser = function(e) {
                             var n = t.props.disabled;
-                            return u.createElement(d.zb, {
-                                "data-test-selector": Xe.User,
+                            return u.createElement(d.Bb, {
+                                "data-test-selector": Ye.User,
                                 key: e.id,
                                 padding: {
                                     y: .5,
@@ -10204,8 +10294,8 @@
                                 flexDirection: d.Aa.Column
                             }, u.createElement(d.W, null, e.name)), u.createElement(d.A, {
                                 disabled: n,
-                                "data-test-selector": Xe.RemoveUserIcon,
-                                icon: d.pb.Hide,
+                                "data-test-selector": Ye.RemoveUserIcon,
+                                icon: d.rb.Hide,
                                 onClick: t.onRemoveUser.bind(t, e),
                                 type: d.C.Secondary
                             }))
@@ -10228,23 +10318,23 @@
                             margin: {
                                 top: 1
                             }
-                        }, this.renderUsers(), !e && u.createElement(Ye.a, {
+                        }, this.renderUsers(), !e && u.createElement(qe.a, {
                             limit: 10,
                             onUserSelect: this.onUserSelect
                         }))
                     }, t
                 }(u.Component),
-                Qe = (n("LjK+"), S.a.wrap(function() {
-                    return n.e(105).then(n.bind(null, "Pi1p"))
+                Je = (n("LjK+"), O.a.wrap(function() {
+                    return n.e(106).then(n.bind(null, "Pi1p"))
                 }, "DevLoginPage"));
             ! function(e) {
                 e.Header = "dev-campaign-page-header-selector", e.CreateButton = "dev-campaign-page-create-button-selector", e.CancelCampaignButton = "dev-campaign-page-cancel-campaign-button-selector", e.CancelButton = "dev-campaign-page-cancel-button-selector", e.TargetAllBroadcastersInput = "dev-campaign-target-all-broadcasters-input-selector", e.VarietyStreamersInput = "dev-campaign-variety-streamers-input-selector", e.HasUserBlacklistInput = "dev-campaign-has-user-blacklist-input-selector", e.AdjustRateInput = "dev-campaign-adjust-rate-input-selector", e.ServerErrorMessage = "dev-campaign-server-error-message"
-            }(qe || (qe = {}));
-            var Je = function(e) {
+            }(Ke || (Ke = {}));
+            var Ze = function(e) {
                     function t(t) {
                         var n, a = e.call(this, t) || this;
                         a.renderChangeset = function(e, t, n) {
-                            if (t) return u.createElement(O.a, {
+                            if (t) return u.createElement(R.a, {
                                 message: Object(m.d)("An error has ocurred", "DevBountyBoardCampaignPagePresentation")
                             });
                             var r = e.params,
@@ -10263,9 +10353,9 @@
                                 N = r.startDate,
                                 T = r.streamingExperience,
                                 _ = r.varietyBroadcasters,
-                                S = e.disabled,
-                                C = e.errors,
-                                I = a.props.match.params.campaignId,
+                                O = e.disabled,
+                                S = e.errors,
+                                C = a.props.match.params.campaignId,
                                 D = (T || []).map(function(e) {
                                     return e.name
                                 });
@@ -10284,50 +10374,50 @@
                                 }
                             }, u.createElement(d.Xa, {
                                 flexGrow: 0,
-                                "data-test-selector": qe.Header,
+                                "data-test-selector": Ke.Header,
                                 padding: {
                                     bottom: 3
                                 }
                             }, u.createElement("header", null, u.createElement(d.W, {
-                                type: d.Pb.H1
-                            }, I ? Object(m.d)("Campaign Details", "DevBountyBoardCampaignPagePresentation") : Object(m.d)("New Bounty Campaign", "DevBountyBoardCampaignPagePresentation")))), u.createElement(d.Xa, {
+                                type: d.Rb.H1
+                            }, C ? Object(m.d)("Campaign Details", "DevBountyBoardCampaignPagePresentation") : Object(m.d)("New Bounty Campaign", "DevBountyBoardCampaignPagePresentation")))), u.createElement(d.Xa, {
                                 flexGrow: 1,
-                                position: d.fb.Relative
+                                position: d.hb.Relative
                             }, u.createElement(d.Xa, {
                                 fullWidth: !0
                             }, u.createElement(d.Ja, {
                                 fullHeight: !0,
                                 gutterSize: d.Ka.Large
-                            }, I && n !== A.d.REJECTED && u.createElement(u.Fragment, null, u.createElement(d.P, {
+                            }, C && n !== A.d.REJECTED && u.createElement(u.Fragment, null, u.createElement(d.P, {
                                 cols: {
                                     default: 12,
                                     sm: 8,
                                     md: 6
                                 }
                             }, u.createElement(ze, {
-                                campaignId: I
+                                campaignId: C
                             })), u.createElement(d.P, {
                                 cols: {
                                     default: 12,
                                     md: 6
                                 }
                             }, u.createElement(pe, {
-                                campaignId: I
+                                campaignId: C
                             })), u.createElement(d.P, {
                                 cols: 12
-                            }, u.createElement(Ge, {
-                                campaignId: I
+                            }, u.createElement(Ve, {
+                                campaignId: C
                             }))), u.createElement(d.P, {
                                 cols: {
                                     default: 12,
                                     md: 7
                                 }
-                            }, I && u.createElement(d.Xa, {
+                            }, C && u.createElement(d.Xa, {
                                 padding: {
                                     y: 2
                                 }
                             }, u.createElement(d.W, {
-                                type: d.Pb.P,
+                                type: d.Rb.P,
                                 fontSize: d.Ca.Size5
                             }, Object(m.d)("Once created, campaign details are read only.", "DevBountyBoardCampaignPagePresentation"))), u.createElement(d.Xa, {
                                 margin: {
@@ -10339,8 +10429,8 @@
                                 }
                             }, u.createElement(d.W, {
                                 bold: !0,
-                                type: d.Pb.H4
-                            }, Object(m.d)("Campaign", "DevBountyBoardCampaignPagePresentation"))), u.createElement(d.zb, {
+                                type: d.Rb.H4
+                            }, Object(m.d)("Campaign", "DevBountyBoardCampaignPagePresentation"))), u.createElement(d.Bb, {
                                 background: d.r.Base,
                                 elevation: 1,
                                 padding: 2
@@ -10352,8 +10442,8 @@
                                 label: Object(m.d)("Game", "DevBountyBoardCampaignPagePresentation"),
                                 value: c,
                                 onChange: a.onFieldChanged,
-                                errors: C.game,
-                                disabled: S.game
+                                errors: S.game,
+                                disabled: O.game
                             })), u.createElement(d.P, {
                                 cols: 12
                             }, u.createElement(d.Xa, {
@@ -10363,8 +10453,8 @@
                             }, u.createElement(_e, {
                                 value: v || [],
                                 onChange: a.onFieldChanged,
-                                errors: C.platforms,
-                                disabled: S.platforms
+                                errors: S.platforms,
+                                disabled: O.platforms
                             }))), u.createElement(d.P, {
                                 cols: {
                                     default: 12,
@@ -10377,8 +10467,8 @@
                             }, u.createElement(De, {
                                 endDate: l,
                                 value: N,
-                                errors: C.startDate,
-                                disabled: S.startDate,
+                                errors: S.startDate,
+                                disabled: O.startDate,
                                 onChange: a.onFieldChanged
                             }))), u.createElement(d.P, {
                                 cols: {
@@ -10393,8 +10483,8 @@
                                 startDate: N,
                                 value: l,
                                 onChange: a.onFieldChanged,
-                                errors: C.endDate,
-                                disabled: S.endDate
+                                errors: S.endDate,
+                                disabled: O.endDate
                             }))), u.createElement(d.P, {
                                 cols: {
                                     default: 12,
@@ -10404,11 +10494,11 @@
                                 margin: {
                                     top: 2
                                 }
-                            }, u.createElement(Y, {
+                            }, u.createElement(z, {
                                 value: o,
                                 onChange: a.onFieldChanged,
-                                errors: C.budget,
-                                disabled: S.budget
+                                errors: S.budget,
+                                disabled: O.budget
                             }))), u.createElement(d.P, {
                                 cols: {
                                     default: 12,
@@ -10416,7 +10506,7 @@
                                 }
                             }, u.createElement(d.Xa, {
                                 display: d.X.InlineBlock,
-                                position: d.fb.Relative,
+                                position: d.hb.Relative,
                                 fullWidth: !0,
                                 fullHeight: !0
                             }, u.createElement(d.Xa, {
@@ -10429,9 +10519,9 @@
                                 label: Object(m.d)("Adjust Rate", "DevBountyBoardCampaignPagePresentation"),
                                 value: i,
                                 onChange: a.onFieldChanged,
-                                errors: C.adjustRate,
-                                disabled: S.adjustRate,
-                                "data-test-selector": qe.AdjustRateInput
+                                errors: S.adjustRate,
+                                disabled: O.adjustRate,
+                                "data-test-selector": Ke.AdjustRateInput
                             })))), u.createElement(d.P, {
                                 cols: {
                                     default: 12,
@@ -10441,13 +10531,13 @@
                                 margin: {
                                     top: 2
                                 }
-                            }, i && u.createElement(Ie, {
+                            }, i && u.createElement(Ce, {
                                 label: Object(m.d)("Rate", "DevBountyBoardCampaignPagePresentation"),
                                 value: b,
                                 onChange: a.onFieldChanged,
-                                errors: C.rateMultiplier,
-                                disabled: S.rateMultiplier
-                            }))), !I && u.createElement(d.P, {
+                                errors: S.rateMultiplier,
+                                disabled: O.rateMultiplier
+                            }))), !C && u.createElement(d.P, {
                                 cols: 12
                             }, u.createElement(d.Xa, {
                                 margin: {
@@ -10464,14 +10554,14 @@
                             }, u.createElement(Ne, {
                                 value: h,
                                 onChange: a.onFieldChanged,
-                                errors: C.message,
-                                disabled: S.message
+                                errors: S.message,
+                                disabled: O.message
                             }), u.createElement(d.Xa, {
                                 margin: {
                                     top: .5
                                 }
                             }, u.createElement(d.W, {
-                                type: d.Pb.P,
+                                type: d.Rb.P,
                                 color: d.O.Alt2,
                                 fontSize: d.Ca.Size6
                             }, Object(m.d)("Accepts <x:link>Markdown</x:link>.", {
@@ -10492,7 +10582,7 @@
                                 display: d.X.InlineBlock
                             }, u.createElement(d.W, {
                                 bold: !0,
-                                type: d.Pb.H4
+                                type: d.Rb.H4
                             }, Object(m.d)("Bounty Preview", "DevBountyBoardCampaignPagePresentation")), u.createElement(B.a, {
                                 bounty: a.getBounty(e),
                                 channelID: "1",
@@ -10503,7 +10593,7 @@
                                 linkDisabled: !0,
                                 isPreview: !0
                             })), u.createElement(d.W, {
-                                type: d.Pb.P,
+                                type: d.Rb.P,
                                 color: d.O.Alt2,
                                 fontSize: d.Ca.Size6
                             }, Object(m.d)("Game images are pulled from the <x:link>Giant Bomb Game Directory</x:link>.", {
@@ -10528,8 +10618,8 @@
                                 }
                             }, u.createElement(d.W, {
                                 bold: !0,
-                                type: d.Pb.H4
-                            }, Object(m.d)("Target Broadcaster", "DevBountyBoardCampaignPagePresentation"))), u.createElement(d.zb, {
+                                type: d.Rb.H4
+                            }, Object(m.d)("Target Broadcaster", "DevBountyBoardCampaignPagePresentation"))), u.createElement(d.Bb, {
                                 background: d.r.Base,
                                 elevation: 1,
                                 padding: 2
@@ -10543,8 +10633,8 @@
                             }, u.createElement(Ee, {
                                 value: f || "",
                                 onChange: a.onFieldChanged,
-                                errors: C.language,
-                                disabled: S.language
+                                errors: S.language,
+                                disabled: O.language
                             })), u.createElement(d.P, {
                                 cols: {
                                     default: 12,
@@ -10553,8 +10643,8 @@
                             }, u.createElement(re, {
                                 value: s || "",
                                 onChange: a.onFieldChanged,
-                                errors: C.country,
-                                disabled: S.country
+                                errors: S.country,
+                                disabled: O.country
                             })), u.createElement(d.P, {
                                 cols: 12
                             }, u.createElement(d.Xa, {
@@ -10562,7 +10652,7 @@
                                     top: .5
                                 }
                             }, u.createElement(d.W, {
-                                type: d.Pb.P,
+                                type: d.Rb.P,
                                 color: d.O.Alt2,
                                 fontSize: d.Ca.Size6
                             }, Object(m.d)("Only English speaking NA broadcasters can be targeted at this time.", "DevBountyBoardCampaignPagePresentation"))), u.createElement(d.Xa, {
@@ -10574,9 +10664,9 @@
                                 label: Object(m.d)("Target all broadcasters", "DevBountyBoardCampaignPagePresentation"),
                                 value: E,
                                 onChange: a.onFieldChanged,
-                                errors: C.allBroadcasters,
-                                disabled: S.allBroadcasters,
-                                "data-test-selector": qe.TargetAllBroadcastersInput
+                                errors: S.allBroadcasters,
+                                disabled: O.allBroadcasters,
+                                "data-test-selector": Ke.TargetAllBroadcastersInput
                             })), !E && u.createElement(d.Xa, null, u.createElement(d.Xa, {
                                 margin: {
                                     top: 2
@@ -10585,14 +10675,14 @@
                                 label: Object(m.d)("Streaming Experience", "DevBountyBoardCampaignPagePresentation"),
                                 value: T,
                                 onChange: a.onFieldChanged,
-                                errors: C.streamingExperience,
-                                disabled: S.streamingExperience
+                                errors: S.streamingExperience,
+                                disabled: O.streamingExperience
                             }), u.createElement(d.Xa, {
                                 margin: {
                                     top: .5
                                 }
                             }, u.createElement(d.W, {
-                                type: d.Pb.P,
+                                type: d.Rb.P,
                                 color: d.O.Alt2,
                                 fontSize: d.Ca.Size6
                             }, Object(m.d)("Campaign will target broadcasters who have streamed at least one of the selected experiences.", "DevBountyBoardCampaignPagePresentation")))), u.createElement(d.Xa, {
@@ -10604,28 +10694,28 @@
                                 label: Object(m.d)("Include variety broadcasters", "DevBountyBoardCampaignPagePresentation"),
                                 value: _,
                                 onChange: a.onFieldChanged,
-                                errors: C.varietyBroadcasters,
-                                disabled: S.varietyBroadcasters,
+                                errors: S.varietyBroadcasters,
+                                disabled: O.varietyBroadcasters,
                                 tooltip: Object(m.d)("Variety streamers have communities that are more engaged with the streamer than any one game. These broadcasters, and their communities, love exploring new content.", "DevBountyBoardCampaignPagePresentation"),
-                                "data-test-selector": qe.VarietyStreamersInput
+                                "data-test-selector": Ke.VarietyStreamersInput
                             }))), u.createElement(d.Xa, {
                                 margin: {
                                     top: 2
                                 },
-                                position: d.fb.Relative
+                                position: d.hb.Relative
                             }, u.createElement(K, {
                                 name: y.HasUserBlacklist,
                                 label: Object(m.d)("Exclude specific broadcasters", "DevBountyBoardCampaignPagePresentation"),
                                 value: p,
                                 onChange: a.onFieldChanged,
-                                errors: C.hasUserBlacklist,
-                                disabled: S.hasUserBlacklist,
-                                "data-test-selector": qe.HasUserBlacklistInput
-                            }), p && u.createElement(Ke, {
+                                errors: S.hasUserBlacklist,
+                                disabled: O.hasUserBlacklist,
+                                "data-test-selector": Ke.HasUserBlacklistInput
+                            }), p && u.createElement(Qe, {
                                 value: g || [],
                                 name: y.UserBlacklist,
-                                errors: C.userBlacklist,
-                                disabled: S.userBlacklist,
+                                errors: S.userBlacklist,
+                                disabled: O.userBlacklist,
                                 onChange: a.onFieldChanged
                             }))))))), u.createElement(d.P, {
                                 cols: {
@@ -10634,17 +10724,17 @@
                                 }
                             }, u.createElement(d.Xa, {
                                 fullHeight: !0,
-                                position: d.fb.Relative,
+                                position: d.hb.Relative,
                                 padding: {
                                     bottom: 4,
                                     top: 4
                                 }
                             }, u.createElement(d.Xa, {
                                 fullHeight: !0,
-                                position: d.fb.Relative
+                                position: d.hb.Relative
                             }, u.createElement(d.Xa, null, u.createElement(d.W, {
                                 bold: !0,
-                                type: d.Pb.H4
+                                type: d.Rb.H4
                             }, Object(m.d)("Available Broadcaster Pool", "DevBountyBoardCampaignPagePresentation"))), u.createElement(ve, {
                                 gameNames: D,
                                 targetAllBroadcasters: E,
@@ -10660,7 +10750,7 @@
                                 }
                             }, u.createElement(d.Xa, {
                                 fullHeight: !0,
-                                position: d.fb.Relative,
+                                position: d.hb.Relative,
                                 padding: {
                                     top: 2
                                 }
@@ -10669,7 +10759,7 @@
                             var t, n = !!a.props.match.params.campaignId,
                                 r = e && (e === A.d.LIVE || e === A.d.PENDING || e === A.d.APPROVED);
                             return t = n && r ? u.createElement(d.z, {
-                                "data-test-selector": qe.CancelCampaignButton,
+                                "data-test-selector": Ke.CancelCampaignButton,
                                 onClick: a.props.showCancelCampaignModal,
                                 type: d.F.Alert
                             }, Object(m.d)("Cancel Campaign", "DevBountyBoardCampaignPage")) : n ? null : u.createElement(u.Fragment, null, u.createElement(d.Xa, {
@@ -10683,20 +10773,20 @@
                                 }
                             }, u.createElement(d.W, {
                                 color: d.O.Error,
-                                "data-test-selector": qe.ServerErrorMessage
+                                "data-test-selector": Ke.ServerErrorMessage
                             }, Object(m.d)("A server error has ocurred please try again later.", "DevBountyBoardCampaignPage"))), u.createElement(d.z, {
-                                "data-test-selector": qe.CreateButton,
+                                "data-test-selector": Ke.CreateButton,
                                 onClick: a.onClickCreate,
                                 disabled: a.state.isSubmitting
                             }, Object(m.d)("Create Campaign", "DevBountyBoardCampaignPage"))), u.createElement(d.z, {
-                                "data-test-selector": qe.CancelButton,
+                                "data-test-selector": Ke.CancelButton,
                                 linkTo: "/console/bounty-board",
                                 type: d.F.Hollow
                             }, Object(m.d)("Cancel", "DevBountyBoardCampaignPage"))), u.createElement(d.Xa, {
                                 attachBottom: !0,
                                 attachLeft: !0,
                                 display: d.X.InlineBlock,
-                                position: d.fb.Absolute,
+                                position: d.hb.Absolute,
                                 padding: {
                                     bottom: 2
                                 }
@@ -10712,7 +10802,7 @@
                                     boxArtURL: null,
                                     coverURL: null
                                 };
-                            return N({}, Object(v.a)(R), {
+                            return N({}, Object(v.a)(I), {
                                 id: null,
                                 campaign: {
                                     id: null,
@@ -10725,11 +10815,11 @@
                                     game: s,
                                     boxArtURL: s ? s.boxArtURL : null,
                                     coverURL: s ? s.coverURL : null,
-                                    startAt: o ? Object(p.e)(o).toJSON() : null,
-                                    endAt: n ? Object(p.e)(n).toJSON() : null
+                                    startAt: o ? Object(p.f)(o).toJSON() : null,
+                                    endAt: n ? Object(p.f)(n).toJSON() : null
                                 },
                                 status: A.f.AVAILABLE,
-                                endAt: n ? Object(p.e)(n).toJSON() : null
+                                endAt: n ? Object(p.f)(n).toJSON() : null
                             })
                         }, a.noop = function() {}, a.onFieldChanged = function(e) {
                             a.setState(function(t) {
@@ -10755,40 +10845,40 @@
                             })
                         }, a.createBountyCampaign = function() {
                             return r.__awaiter(a, void 0, void 0, function() {
-                                var e, t, n, a, i, o, s, l, c, u, d, p, f, h, g, E, b, v, N, T;
-                                return r.__generator(this, function(_) {
-                                    switch (_.label) {
+                                var e, t, n, a, i, o, s, l, c, u, d, p, f, h, g, E, y, b, v;
+                                return r.__generator(this, function(N) {
+                                    switch (N.label) {
                                         case 0:
-                                            t = this.state.changeset.params, n = t.adjustRate, a = t.allBroadcasters, i = t.budget, o = t.endDate, s = t.game, l = t.hasUserBlacklist, c = t.message, u = t.platforms, d = t.rateMultiplier, p = t.startDate, f = t.streamingExperience, h = t.userBlacklist, g = t.varietyBroadcasters, E = "Stream " + (s ? s.displayName : "{GAME}") + " for 1 hour", b = (f || []).map(function(e) {
+                                            e = this.state.changeset.params, t = e.adjustRate, n = e.allBroadcasters, a = e.budget, i = e.endDate, o = e.game, s = e.hasUserBlacklist, l = e.message, c = e.platforms, u = e.rateMultiplier, d = e.startDate, p = e.streamingExperience, f = e.userBlacklist, h = e.varietyBroadcasters, g = "Stream " + (o ? o.displayName : "{GAME}") + " for 1 hour", E = (p || []).map(function(e) {
                                                 return e.name
-                                            }), v = [], l && (v = (h || []).map(function(e) {
+                                            }), y = [], s && (y = (f || []).map(function(e) {
                                                 return e.id
-                                            })), N = {
-                                                availablePlatforms: u || [],
-                                                blacklistedBroadcasters: v,
-                                                broadcasterMessage: c || "",
-                                                broadcasterMultiplier: n && d || 1,
-                                                budgetCents: i ? 100 * i : 0,
-                                                contentID: s ? s.id : "",
-                                                endAt: o ? o.toJSON() : "",
-                                                startAt: p ? p.toJSON() : "",
-                                                targetAllBroadcasters: a,
-                                                targetVarietyBroadcasters: g,
-                                                targetedGames: a ? [] : b,
-                                                title: E
-                                            }, _.label = 1;
+                                            })), b = {
+                                                availablePlatforms: c || [],
+                                                blacklistedBroadcasters: y,
+                                                broadcasterMessage: l || "",
+                                                broadcasterMultiplier: t && u || 1,
+                                                budgetCents: a ? 100 * a : 0,
+                                                contentID: o ? o.id : "",
+                                                endAt: i ? i.toJSON() : "",
+                                                startAt: d ? d.toJSON() : "",
+                                                targetAllBroadcasters: n,
+                                                targetVarietyBroadcasters: h,
+                                                targetedGames: n ? [] : E,
+                                                title: g
+                                            }, N.label = 1;
                                         case 1:
-                                            return _.trys.push([1, 3, 4, 5]), this.setState({
+                                            return N.trys.push([1, 3, 4, 5]), this.setState({
                                                 isSubmitting: !0
-                                            }), [4, this.props.createBountyCampaign(Object(D.a)(N))];
+                                            }), [4, this.props.createBountyCampaign(Object(D.a)(b))];
                                         case 2:
-                                            return (T = _.sent()).data && T.data.createBountyCampaign && T.data.createBountyCampaign.campaign && T.data.createBountyCampaign.campaign.id && (this.setState({
+                                            return (v = N.sent()).data && v.data.createBountyCampaign && v.data.createBountyCampaign.campaign && v.data.createBountyCampaign.campaign.id && (this.setState({
                                                 changeset: r.__assign({}, this.state.changeset, {
-                                                    disabled: (e = {}, e[y.Language] = !0, e[y.Country] = !0, e[y.UserBlacklist] = !0, e[y.StreamingExperience] = !0, e[y.AllBroadcasters] = !0, e[y.Budget] = !0, e[y.VarietyBroadcasters] = !0, e[y.AdjustRate] = !0, e[y.RateMultiplier] = !0, e[y.EndDate] = !0, e[y.StartDate] = !0, e[y.Platforms] = !0, e[y.Message] = !0, e[y.Game] = !0, e)
+                                                    disabled: U
                                                 })
-                                            }), m.p.history.push("/console/bounty-board/campaign/" + T.data.createBountyCampaign.campaign.id)), [3, 5];
+                                            }), m.p.history.push("/console/bounty-board/campaign/" + v.data.createBountyCampaign.campaign.id)), [3, 5];
                                         case 3:
-                                            return _.sent(), this.setState({
+                                            return N.sent(), this.setState({
                                                 showServerError: !0
                                             }), [3, 5];
                                         case 4:
@@ -10802,7 +10892,7 @@
                             })
                         };
                         var i = !!a.props.match.params.campaignId,
-                            o = G(U, ((n = {})[y.Language] = !0, n[y.Country] = !0, n[y.HasUserBlacklist] = i, n[y.UserBlacklist] = i, n[y.StreamingExperience] = i, n[y.AllBroadcasters] = i, n[y.Budget] = i, n[y.VarietyBroadcasters] = i, n[y.AdjustRate] = i, n[y.RateMultiplier] = i, n[y.EndDate] = i, n[y.StartDate] = i, n[y.Platforms] = i, n[y.Message] = i, n[y.Game] = i, n));
+                            o = G(j, ((n = {})[y.Language] = !0, n[y.Country] = !0, n[y.HasUserBlacklist] = i, n[y.UserBlacklist] = i, n[y.StreamingExperience] = i, n[y.AllBroadcasters] = i, n[y.Budget] = i, n[y.VarietyBroadcasters] = i, n[y.AdjustRate] = i, n[y.RateMultiplier] = i, n[y.EndDate] = i, n[y.StartDate] = i, n[y.Platforms] = i, n[y.Message] = i, n[y.Game] = i, n));
                         return a.state = {
                             changeset: o,
                             showServerError: !1,
@@ -10810,23 +10900,23 @@
                         }, a
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        if (!this.props.isLoggedIn) return u.createElement(Qe, null);
+                        if (!this.props.isLoggedIn) return u.createElement(Je, null);
                         var e, t = this.props.match.params.campaignId;
-                        return e = t ? u.createElement(Ce, {
+                        return e = t ? u.createElement(Se, {
                             campaignId: t
-                        }, this.renderChangeset) : this.renderChangeset(this.state.changeset, !1, null), u.createElement(C.a, {
+                        }, this.renderChangeset) : this.renderChangeset(this.state.changeset, !1, null), u.createElement(S.a, {
                             name: "bounty_board_brand_portal_enabled"
-                        }, u.createElement(z.a, null, e))
+                        }, u.createElement(Y.a, null, e))
                     }, t.prototype.getCompanyName = function() {
                         return this.props.data && this.props.data.currentUser && this.props.data.currentUser.company && this.props.data.currentUser.company.name || "-"
                     }, t
                 }(u.Component),
-                Ze = Object(T.compose)(Object(I.a)(P), Object(I.a)(w, {
+                $e = Object(T.compose)(Object(C.a)(w), Object(C.a)(P, {
                     name: "createBountyCampaign"
                 }), Object(k.b)("DevBountyBoardCampaignPagePresentation", {
                     autoReportInteractive: !0
-                }), _.a)(Je);
-            var $e = Object(i.connect)(function(e) {
+                }), _.a)(Ze);
+            var et = Object(i.connect)(function(e) {
                 return {
                     isLoggedIn: Object(l.f)(e),
                     user: Object(l.e)(e)
@@ -10841,9 +10931,9 @@
                         return Object(s.d)(c.a, {})
                     }
                 }, e)
-            })(Ze);
+            })($e);
             n.d(t, "DevBountyBoardCampaignPage", function() {
-                return $e
+                return et
             })
         },
         yLwq: function(e, t, n) {
@@ -11034,7 +11124,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         return i.createElement(l.Xa, {
                             className: "top-stats-chart",
-                            position: l.fb.Relative
+                            position: l.hb.Relative
                         }, i.createElement(s.a, {
                             onCanvasReady: this.handleCanvasReady
                         }))

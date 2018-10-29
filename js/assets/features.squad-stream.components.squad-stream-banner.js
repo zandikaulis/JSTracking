@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [126], {
+    [127], {
         "/guG": function(e, n, a) {
             "use strict";
             a.d(n, "b", function() {
@@ -10,8 +10,8 @@
                 return s
             });
             var t = a("mrSG"),
-                i = a("/7QA"),
-                r = a("2xye");
+                r = a("/7QA"),
+                i = a("2xye");
 
             function u(e) {
                 return t.__awaiter(this, void 0, void 0, function() {
@@ -26,7 +26,7 @@
                             player_order: e.playerOrder || null,
                             total_players: e.totalPlayers || null,
                             chat_shown: e.chatShown
-                        }, [2, i.p.tracking.track(r.SpadeEventType.SquadStreamPresentation, a)]
+                        }, [2, r.p.tracking.track(i.SpadeEventType.SquadStreamPresentation, a)]
                     })
                 })
             }
@@ -42,7 +42,7 @@
                             channel_id: a,
                             time: e.time || null,
                             squad_stream_id: e.squadStreamID || null
-                        }, [2, i.p.tracking.track(r.SpadeEventType.SquadStreamBannerAction, u)]
+                        }, [2, r.p.tracking.track(i.SpadeEventType.SquadStreamBannerAction, u)]
                     })
                 })
             }
@@ -62,7 +62,7 @@
                             squad_stream_id: e.squadStreamID || null,
                             squad_stream_session_id: e.squadStreamSessionID || null,
                             is_active: e.isActive
-                        }, [2, i.p.tracking.track(r.SpadeEventType.SquadStreamViewerAction, u)]
+                        }, [2, r.p.tracking.track(i.SpadeEventType.SquadStreamViewerAction, u)]
                     })
                 })
             }
@@ -70,15 +70,15 @@
         FfRw: function(e, n, a) {
             "use strict";
             a.d(n, "a", function() {
-                return r
+                return i
             });
             var t = a("0Log"),
-                i = a("DMoW");
+                r = a("DMoW");
 
-            function r(e) {
+            function i(e) {
                 if (!e || !e.squad) return null;
-                for (var n = [], a = 0, r = e.squad.members; a < r.length; a++) {
-                    var u = r[a],
+                for (var n = [], a = 0, i = e.squad.members; a < i.length; a++) {
+                    var u = i[a],
                         d = {
                             __typename: "User",
                             id: u.id,
@@ -94,12 +94,12 @@
                     status: function(e) {
                         switch (e) {
                             case t.SquadStatus.Pending:
-                                return i.H.PENDING;
+                                return r.I.PENDING;
                             case t.SquadStatus.Live:
-                                return i.H.LIVE;
+                                return r.I.LIVE;
                             case t.SquadStatus.Ended:
                             default:
-                                return i.H.ENDED
+                                return r.I.ENDED
                         }
                     }(e.squad.status),
                     members: n
@@ -110,8 +110,8 @@
             "use strict";
             a.r(n);
             var t = a("mrSG"),
-                i = a("q1tI"),
-                r = a("oJmH"),
+                r = a("q1tI"),
+                i = a("oJmH"),
                 u = a("9C/b"),
                 d = a("/7QA"),
                 s = a("yR8l"),
@@ -122,17 +122,17 @@
                 p = a("GnwI"),
                 S = a("aKsW"),
                 f = a("FfRw"),
-                v = a("egMT"),
-                g = a("/guG"),
-                h = a("Ue10"),
-                k = a("qcLq"),
-                q = function(e) {
+                q = a("egMT"),
+                h = a("/guG"),
+                v = a("Ue10"),
+                g = a("qcLq"),
+                k = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.goToSquadPage = function() {
                             n.trackBannerAction(S.a.Click), n.props.history.push("/" + n.props.channelLogin + "/squad")
                         }, n.trackBannerAction = function(e) {
-                            Object(g.a)({
+                            Object(h.a)({
                                 action: e,
                                 userID: n.props.data.currentUser && n.props.data.currentUser.id,
                                 channel: n.props.channelLogin,
@@ -140,6 +140,39 @@
                                 time: new Date,
                                 squadStreamID: n.props.data.user && n.props.data.user.squadStream && n.props.data.user.squadStream.id
                             })
+                        }, n.makeBannerText = function(e, n) {
+                            var a = function(e) {
+                                return e && e.displayName ? r.createElement(v.W, {
+                                    bold: !0,
+                                    noWrap: !0,
+                                    type: v.Rb.Span,
+                                    color: v.O.Base
+                                }, e.displayName) : ""
+                            };
+                            switch (n.length) {
+                                case 0:
+                                    return Object(d.d)("{channelOwnerName} is Squad Streaming", {
+                                        channelOwnerName: a(e)
+                                    }, "SquadStreamBanner");
+                                case 1:
+                                    return Object(d.d)("{channelOwnerName} is Squad Streaming with {squadMemberIndex0}", {
+                                        channelOwnerName: a(e),
+                                        squadMemberIndex0: a(n[0])
+                                    }, "SquadStreamBanner");
+                                case 2:
+                                    return Object(d.d)("{channelOwnerName} is Squad Streaming with {squadMemberIndex0}, {squadMemberIndex1}", {
+                                        channelOwnerName: a(e),
+                                        squadMemberIndex0: a(n[0]),
+                                        squadMemberIndex1: a(n[1])
+                                    }, "SquadStreamBanner");
+                                default:
+                                    return Object(d.d)("{channelOwnerName} is Squad Streaming with {squadMemberIndex0}, {squadMemberIndex1}, {squadMemberIndex2}", {
+                                        channelOwnerName: a(e),
+                                        squadMemberIndex0: a(n[0]),
+                                        squadMemberIndex1: a(n[1]),
+                                        squadMemberIndex2: a(n[2])
+                                    }, "SquadStreamBanner")
+                            }
                         }, n
                     }
                     return t.__extends(n, e), n.prototype.componentDidMount = function() {
@@ -148,68 +181,73 @@
                         !this.shouldRender(e) && this.shouldRender(this.props) && this.trackBannerAction(S.a.View), this.props.triggerPlayerReposition()
                     }, n.prototype.render = function() {
                         if (!this.shouldRender(this.props)) return null;
-                        var e = this.props.data && this.props.data.user && this.props.data.user.squadStream && this.props.data.user.squadStream.members || [];
-                        if (!e || 0 === e.length) return null;
-                        var n = [];
-                        e.forEach(function(e) {
-                            e.id && e.profileImageURL && n.push(i.createElement(h.Xa, {
-                                key: e.id,
-                                margin: {
-                                    right: 1
-                                }
-                            }, i.createElement(h.q, {
-                                size: 30,
-                                alt: Object(d.d)("avatar", "SquadStreamBanner"),
-                                src: e.profileImageURL
-                            })))
-                        });
-                        var a = this.props.channelDisplayName || this.props.channelLogin;
-                        return i.createElement(h.i, {
-                            type: h.n.SlideInBottom,
-                            delay: h.j.Medium,
-                            duration: h.k.Medium,
+                        var e = this.props.channelID,
+                            n = this.props.data && this.props.data.user && this.props.data.user.squadStream && this.props.data.user.squadStream.members || [],
+                            a = n.filter(function(n) {
+                                return n.id === e
+                            })[0],
+                            t = n.filter(function(n) {
+                                return n.id !== e
+                            }),
+                            i = [a].concat(t).map(function(e) {
+                                return e && e.id && e.profileImageURL ? r.createElement(v.Xa, {
+                                    key: e.id,
+                                    margin: {
+                                        right: 1
+                                    }
+                                }, r.createElement(v.q, {
+                                    size: 30,
+                                    alt: Object(d.d)("avatar", "SquadStreamBanner"),
+                                    src: e.profileImageURL
+                                })) : null
+                            }).filter(function(e) {
+                                return null !== e
+                            });
+                        return r.createElement(v.i, {
+                            type: v.n.SlideInBottom,
+                            delay: v.j.Medium,
+                            duration: v.k.Medium,
                             enabled: !0
-                        }, i.createElement(h.zb, {
-                            display: h.X.Flex,
-                            background: h.r.Base,
-                            alignItems: h.f.Center,
+                        }, r.createElement(v.Bb, {
+                            display: v.X.Flex,
+                            background: v.r.Base,
+                            alignItems: v.f.Center,
                             padding: 1,
                             margin: {
                                 bottom: 1
                             },
-                            borderRadius: h.x.Large,
+                            borderRadius: v.x.Large,
                             elevation: 2
-                        }, i.createElement(h.zb, {
-                            display: h.X.Flex,
-                            color: h.O.Overlay
-                        }, n), i.createElement(h.Xa, null, i.createElement(h.W, {
+                        }, r.createElement(v.Bb, {
+                            display: v.X.Flex,
+                            color: v.O.Overlay
+                        }, i), r.createElement(v.Xa, null, r.createElement(v.W, {
                             noWrap: !0,
-                            type: h.Pb.Span,
-                            color: h.O.Alt2,
-                            fontSize: h.Ca.Size5
-                        }, Object(d.d)("{squadLeader} is Squad Streaming", {
-                            squadLeader: i.createElement(h.W, {
-                                bold: !0,
-                                noWrap: !0,
-                                type: h.Pb.Span,
-                                color: h.O.Base
-                            }, a)
-                        }, "SquadStreamBanner"))), i.createElement(h.Xa, {
-                            display: h.X.Flex,
-                            alignItems: h.f.Start,
+                            type: v.Rb.Span,
+                            color: v.O.Alt2,
+                            fontSize: v.Ca.Size5
+                        }, this.makeBannerText(a, t))), r.createElement(v.Xa, {
+                            display: v.X.Flex,
+                            alignItems: v.f.Start,
                             flexGrow: 1
-                        }), i.createElement(h.Xa, {
+                        }), r.createElement(v.Xa, {
                             margin: {
                                 left: 1
                             }
-                        }, i.createElement(h.z, {
+                        }, r.createElement(v.z, {
                             onClick: this.goToSquadPage
                         }, Object(d.d)("Watch In Squad Mode", "SquadStreamBanner")))))
+                    }, n.prototype.isSquadMember = function(e) {
+                        var n = e.channelID,
+                            a = e.data && e.data.user && e.data.user.squadStream && e.data.user.squadStream.members || [];
+                        return !(!a || !a.some(function(e) {
+                            return e.id === n
+                        }))
                     }, n.prototype.shouldRender = function(e) {
-                        return !!Object(v.a)(e.channelLogin) && (!e.data.loading && !e.data.error && (e.data.user && e.data.user.squadStream && e.data.user.squadStream.status === m.H.LIVE || !1))
+                        return !!Object(q.a)(e.channelLogin) && (!!this.isSquadMember(e) && (!e.data.loading && !e.data.error && (e.data.user && e.data.user.squadStream && e.data.user.squadStream.status === m.I.LIVE || !1)))
                     }, n
-                }(i.Component),
-                _ = Object(r.compose)(Object(s.a)(k, {
+                }(r.Component),
+                b = Object(i.compose)(Object(s.a)(g, {
                     options: function(e) {
                         return {
                             variables: {
@@ -219,7 +257,7 @@
                     }
                 }), Object(o.a)(function(e) {
                     return {
-                        query: k,
+                        query: g,
                         variables: {
                             channelLogin: e.channelLogin
                         },
@@ -232,22 +270,22 @@
                     }
                 }), Object(p.b)("SquadStreamBanner", {
                     autoReportInteractive: !0
-                }), u.a)(q);
+                }), u.a)(k);
             a.d(n, "SquadStreamBannerComponent", function() {
-                return q
+                return k
             }), a.d(n, "SquadStreamBanner", function() {
-                return _
+                return b
             })
         },
         aKsW: function(e, n, a) {
             "use strict";
-            var t, i, r, u;
+            var t, r, i, u;
             a.d(n, "a", function() {
                     return t
                 }), a.d(n, "b", function() {
-                    return i
-                }), a.d(n, "d", function() {
                     return r
+                }), a.d(n, "d", function() {
+                    return i
                 }), a.d(n, "c", function() {
                     return u
                 }),
@@ -256,10 +294,10 @@
                 }(t || (t = {})),
                 function(e) {
                     e.ExitSquadMode = "exit_squad_mode", e.ChannelLink = "channel_link", e.Player = "player", e.Avatar = "avatar", e.ProvideFeedback = "provide_feedback"
-                }(i || (i = {})),
+                }(r || (r = {})),
                 function(e) {
                     e.Hover = "hover", e.Click = "click"
-                }(r || (r = {})),
+                }(i || (i = {})),
                 function(e) {
                     e.TopBar = "top_bar", e.Player = "player", e.ProfileCard = "profile_card", e.EndedState = "ended_state"
                 }(u || (u = {}))
@@ -267,21 +305,26 @@
         egMT: function(e, n, a) {
             "use strict";
             a.d(n, "a", function() {
-                return d
-            }), a.d(n, "b", function() {
                 return s
+            }), a.d(n, "b", function() {
+                return o
             });
             var t = a("/7QA"),
-                i = "squad_stream_dashboard",
-                r = "squad_stream_feature",
+                r = "squad_stream_dashboard",
+                i = "squad_stream_feature",
                 u = "squad_stream_whitelist";
 
             function d(e) {
-                return "on" === t.b.get(r, "off") && t.b.get(u, []).includes(e)
+                var n = t.b.get(u, []);
+                return n.includes("*") || n.includes(e)
             }
 
             function s(e) {
-                return "on" === t.b.get(i, "off") && t.b.get(u, []).includes(e)
+                return "on" === t.b.get(i, "off") && d(e)
+            }
+
+            function o(e) {
+                return "on" === t.b.get(r, "off") && d(e)
             }
         },
         fnDh: function(e, n) {
@@ -537,12 +580,12 @@
                     column: 1
                 }
             };
-            var i = {};
+            var r = {};
             t.definitions = t.definitions.concat(function(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var n = e.name.value;
-                    return !i[n] && (i[n] = !0, !0)
+                    return !r[n] && (r[n] = !0, !0)
                 })
             }(a("fnDh").definitions)), e.exports = t
         }

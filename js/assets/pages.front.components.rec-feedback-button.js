@@ -1,28 +1,29 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [135], {
+    [136], {
         "27KN": function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
-                return o
-            }), n.d(t, "a", function() {
                 return a
+            }), n.d(t, "a", function() {
+                return c
             });
             n("mrSG");
-            var r = n("Yurh");
+            var r = n("Yurh"),
+                o = n("yI6f");
 
-            function o() {
+            function a() {
                 return {
                     id: "fake-id",
                     userID: "fake user",
                     itemID: "fake item id",
-                    itemType: r.a.Category,
-                    category: r.b.NotInterested,
+                    itemType: o.b.Game,
+                    category: r.a.NotInterested,
                     lastUpdated: "2017-08-31T04:21:03Z"
                 }
             }
 
-            function a(e) {
-                return new Array(e).fill(o())
+            function c(e) {
+                return new Array(e).fill(a())
             }
         },
         GyBV: function(e, t, n) {
@@ -35,10 +36,11 @@
                 s = n("fvjX"),
                 i = n("aCAx"),
                 l = n("cZKs"),
-                d = n("Yurh"),
-                u = n("27KN"),
-                p = n("Ue10");
-            var b = function(e) {
+                d = n("27KN"),
+                p = n("yI6f"),
+                u = n("kRI/"),
+                b = n("Ue10");
+            var f = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -54,133 +56,168 @@
                             selectedReasonIndex: r
                         })
                     }, t.submitFeedback = function() {
-                        var e = t.state.selectedReasonIndex;
-                        if (null !== e) {
-                            var n = t.props.feedbackReasons[e],
-                                r = n.feedbackType,
-                                o = n.contentType,
-                                a = t.contentTypeToIDMapping(o);
-                            if (a) {
-                                var c = Promise.resolve(Object(u.b)());
-                                t.props.hideContent(c), t.props.closeModal()
+                        var e = t.getCurrentChoiceData(),
+                            n = e.contentID,
+                            r = e.contentType,
+                            o = e.feedbackType,
+                            a = e.selectedReason;
+                        if (a)
+                            if (n && r && o) {
+                                var c = Promise.resolve(Object(d.b)());
+                                t.props.trackRecFeedbackClickStep({
+                                    clickStep: u.a.Submit,
+                                    feedbackAction: u.b.Add,
+                                    feedbackReason: o,
+                                    feedbackedItemID: n,
+                                    feedbackType: r
+                                }), t.props.hideContent(c), t.props.closeModal()
                             } else {
-                                var s = "Missing content id for reason: " + n + ", type: " + r + ", content: " + o;
+                                var s = "Missing content id for reason: " + a + ", type: " + o + ", content: " + r;
                                 t.logger.error(new Error(s), s)
                             }
-                        } else t.setState({
+                        else t.setState({
                             showError: !0
+                        })
+                    }, t.getCurrentChoiceData = function() {
+                        var e = t.state.selectedReasonIndex;
+                        if (null === e) return {};
+                        var n = t.props.feedbackReasons[e],
+                            r = n.feedbackType,
+                            o = n.contentType;
+                        return {
+                            contentID: t.contentTypeToIDMapping(o),
+                            contentType: o,
+                            feedbackType: r,
+                            selectedReason: n
+                        }
+                    }, t.trackRecFeedbackStepClose = function() {
+                        var e = t.getCurrentChoiceData(),
+                            n = e.contentID,
+                            r = e.contentType,
+                            o = e.feedbackType;
+                        t.props.trackRecFeedbackClickStep({
+                            clickStep: u.a.Close,
+                            feedbackAction: null,
+                            feedbackReason: o || null,
+                            feedbackedItemID: n || null,
+                            feedbackType: r || null
                         })
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e = this;
-                    return o.createElement(p.Xa, null, o.createElement(p.zb, {
-                        background: p.r.Alt,
-                        borderRadius: p.x.Large
-                    }, o.createElement(p.zb, {
+                    return o.createElement(b.Xa, null, o.createElement(b.Bb, {
+                        background: b.r.Alt,
+                        borderRadius: b.x.Large
+                    }, o.createElement(b.Bb, {
                         borderBottom: !0,
                         padding: {
                             y: 2
                         },
-                        textAlign: p.Lb.Center
-                    }, o.createElement(p.Xa, {
+                        textAlign: b.Nb.Center
+                    }, o.createElement(b.Xa, {
                         margin: {
                             x: 5
                         }
-                    }, o.createElement(p.W, {
-                        type: p.Pb.H3,
+                    }, o.createElement(b.W, {
+                        type: b.Rb.H3,
                         bold: !0
-                    }, Object(a.d)("Not interested? Tell us more...", "RecFeedbackModal")))), o.createElement(p.zb, {
+                    }, Object(a.d)("Not interested? Tell us more...", "RecFeedbackModal")))), o.createElement(b.Bb, {
                         borderBottom: !0,
                         padding: 2
-                    }, o.createElement(p.W, {
-                        type: p.Pb.Span,
-                        fontSize: p.Ca.Size4
+                    }, o.createElement(b.W, {
+                        type: b.Rb.Span,
+                        fontSize: b.Ca.Size4
                     }, this.props.feedbackReasons.map(function(t, n) {
-                        return o.createElement(p.Xa, {
+                        return o.createElement(b.Xa, {
                             key: t.text,
                             margin: {
                                 bottom: .5
                             }
-                        }, o.createElement(p.lb, {
+                        }, o.createElement(b.nb, {
                             label: t.text,
                             checked: e.state.selectedReasonIndex === n,
                             onChange: e.onRadioChange,
                             value: n.toString()
                         }))
-                    }))), o.createElement(p.zb, {
-                        display: p.X.Flex,
-                        justifyContent: p.Wa.End,
-                        alignItems: p.f.Center,
+                    }))), o.createElement(b.Bb, {
+                        display: b.X.Flex,
+                        justifyContent: b.Wa.End,
+                        alignItems: b.f.Center,
                         padding: 1,
-                        background: p.r.Alt2,
-                        borderRadius: p.x.Large
-                    }, this.state.showError && o.createElement(p.Xa, {
+                        background: b.r.Alt2,
+                        borderRadius: b.x.Large
+                    }, this.state.showError && o.createElement(b.Xa, {
                         margin: {
                             right: 1
                         },
                         "data-test-selector": "rec-feedback-modal-error"
-                    }, o.createElement(p.W, {
-                        color: p.O.Error
-                    }, Object(a.d)("Please select a reason", "RecFeedbackModal"))), o.createElement(p.z, {
-                        size: p.D.Large,
+                    }, o.createElement(b.W, {
+                        color: b.O.Error
+                    }, Object(a.d)("Please select a reason", "RecFeedbackModal"))), o.createElement(b.z, {
+                        size: b.D.Large,
                         onClick: this.submitFeedback,
                         "data-test-selector": "rec-feedback-modal-submit"
-                    }, Object(a.d)("Done", "RecFeedbackModal")))), o.createElement(l.a, null))
+                    }, Object(a.d)("Done", "RecFeedbackModal")))), o.createElement(l.a, {
+                        onClose: this.trackRecFeedbackStepClose
+                    }))
                 }, t.prototype.contentTypeToIDMapping = function(e) {
                     switch (e) {
-                        case d.a.Shelf:
+                        case p.b.Shelf:
                             return this.props.shelfID;
-                        case d.a.Category:
+                        case p.b.Game:
                             return this.props.categoryID;
-                        case d.a.Channel:
+                        case p.b.Live:
                             return this.props.channelID;
-                        case d.a.Vod:
+                        case p.b.Vod:
                             return this.props.vodID;
+                        case p.b.Clip:
+                            return null;
                         default:
                             return e
                     }
                 }, t
             }(o.Component);
-            var f = Object(c.connect)(null, function(e) {
+            var k = Object(c.connect)(null, function(e) {
                     return Object(s.bindActionCreators)({
                         closeModal: i.c
                     }, e)
-                })(b),
-                h = function(e) {
+                })(f),
+                m = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClick = function(e) {
-                            e.preventDefault(), e.stopPropagation(), t.props.showModal(f, {
+                            e.preventDefault(), e.stopPropagation(), t.props.showModal(k, {
                                 shelfID: t.props.shelfID,
                                 channelID: t.props.channelID,
                                 vodID: t.props.vodID,
                                 categoryID: t.props.categoryID,
                                 feedbackReasons: t.props.feedbackReasons,
-                                hideContent: t.props.hideContent
-                            })
+                                hideContent: t.props.hideContent,
+                                trackRecFeedbackClickStep: t.props.trackRecFeedbackClickStep
+                            }), t.props.onClick()
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(p.Sb, {
+                        return o.createElement(b.Ub, {
                             label: Object(a.d)("Not interested?", "RecFeedbackButton"),
-                            direction: p.Ub.Right
-                        }, o.createElement(p.A, {
-                            icon: p.pb.VisibilityHidden,
-                            size: p.B.Small,
+                            direction: b.Wb.Right
+                        }, o.createElement(b.A, {
+                            icon: b.rb.VisibilityHidden,
+                            size: b.B.Small,
                             onClick: this.onClick
                         }))
                     }, t
                 }(o.Component);
-            var m = Object(c.connect)(null, function(e) {
+            var h = Object(c.connect)(null, function(e) {
                 return Object(s.bindActionCreators)({
                     showModal: i.d
                 }, e)
-            })(h);
+            })(m);
             n.d(t, "RecFeedbackButtonComponent", function() {
-                return h
-            }), n.d(t, "RecFeedbackButton", function() {
                 return m
+            }), n.d(t, "RecFeedbackButton", function() {
+                return h
             })
         }
     }

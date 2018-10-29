@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [115], {
+    [116], {
         EJeP: function(e, n, r) {
             "use strict";
             r.r(n);
@@ -406,11 +406,11 @@
                         display: c.X.Flex,
                         flexGrow: 1,
                         fullHeight: !0
-                    }, o.createElement(c.Vb, {
+                    }, o.createElement(c.Xb, {
                         placeholderItems: 10,
                         center: !0,
-                        gutterSize: c.Xb.Small,
-                        childWidth: c.Wb.Large
+                        gutterSize: c.Zb.Small,
+                        childWidth: c.Yb.Large
                     }, n)) : o.createElement(c.Xa, {
                         "data-test-selector": "no-follow-users",
                         margin: {
@@ -420,7 +420,7 @@
                         flexDirection: c.Aa.Row,
                         justifyContent: c.Wa.Center
                     }, o.createElement(c.W, {
-                        type: c.Pb.H4,
+                        type: c.Rb.H4,
                         color: c.O.Alt2,
                         italic: !0
                     }, Object(a.d)("No Users Found", "ChannelFollowListing")))

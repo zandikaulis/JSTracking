@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [138], {
+    [140], {
         Pz3T: function(e, n) {
             var t = {
                 kind: "Document",
@@ -193,9 +193,9 @@
                             }), s.createElement(v.H, null, s.createElement(v.Xa, {
                                 padding: 1
                             }, s.createElement(v.W, {
-                                type: v.Pb.H4
+                                type: v.Rb.H4
                             }, h.name), s.createElement(v.W, {
-                                type: v.Pb.Span,
+                                type: v.Rb.Span,
                                 color: v.O.Alt2
                             }, Object(c.d)("Created by {extensionAuthor}", {
                                 extensionAuthor: h.authorName
@@ -219,7 +219,7 @@
                         });
                         return s.createElement(u.b, null, s.createElement(v.Xa, {
                             padding: 2
-                        }, x, s.createElement(v.zb, {
+                        }, x, s.createElement(v.Bb, {
                             borderRight: !0,
                             borderLeft: !0,
                             borderBottom: !0,
@@ -246,14 +246,14 @@
                             padding: {
                                 y: 1
                             }
-                        }, s.createElement(v.Xa, null, s.createElement(v.eb, {
+                        }, s.createElement(v.Xa, null, s.createElement(v.gb, {
                             width: 60,
                             height: 60
                         })), s.createElement(v.Xa, {
                             padding: {
                                 left: 1
                             }
-                        }, s.createElement(v.eb, {
+                        }, s.createElement(v.gb, {
                             lineCount: 2,
                             width: 200
                         }))))

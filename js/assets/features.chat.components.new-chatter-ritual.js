@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [181], {
+    [183], {
         "0Ex5": function(e, n) {
             var t = {
                 kind: "Document",
@@ -96,8 +96,8 @@
                     g = t("WkKR"),
                     N = t("LFgC"),
                     y = t("uP5h"),
-                    S = t("QhAx"),
-                    R = t("VyuC"),
+                    R = t("QhAx"),
+                    S = t("VyuC"),
                     D = t("TjZe"),
                     E = t("s/24"),
                     _ = 3e5,
@@ -164,7 +164,7 @@
                                 })
                             }, n.expireRitualToken = function(e) {
                                 delete n.expirationTimeouts[e];
-                                Object(k.e)(S, {
+                                Object(k.e)(R, {
                                     id: n.props.channelID
                                 }, function(n) {
                                     return n.channel && n.channel.self && n.channel.self.ritualTokens && (n.channel.self.ritualTokens = n.channel.self.ritualTokens.filter(function(n) {
@@ -321,7 +321,7 @@
                         isLoggedIn: Object(f.f)(e),
                         isSubsOnlyModeEnabled: e.chat.subsOnlyMode
                     }
-                }, null), Object(u.a)(S, {
+                }, null), Object(u.a)(R, {
                     options: function(e) {
                         return {
                             variables: {
@@ -332,7 +332,7 @@
                     skip: O
                 }), Object(c.a)(function(n) {
                     return {
-                        query: S,
+                        query: R,
                         variables: {
                             id: n.channelID
                         },
@@ -351,7 +351,7 @@
                     },
                     mapMessageTypesToProps: (i = {}, i[m.PubsubMessageType.ChannelStreamUp] = "streamUp", i[m.PubsubMessageType.ChannelStreamDown] = "streamDown", i),
                     skip: O
-                }]), Object(u.a)(R, {
+                }]), Object(u.a)(S, {
                     name: "dismissToken"
                 }), Object(u.a)(D, {
                     name: "redeemToken"
@@ -445,7 +445,7 @@
                                 margin: {
                                     right: .5
                                 }
-                            }, a.createElement(o.Sb, {
+                            }, a.createElement(o.Ub, {
                                 label: n.alt
                             }, a.createElement(o.Ua, {
                                 type: o.Va.Alpha,
@@ -459,7 +459,7 @@
                                 src: Object(s.d)(n.id, 3)
                             })))))
                         });
-                        return a.createElement(o.zb, {
+                        return a.createElement(o.Bb, {
                             background: o.r.Base,
                             border: !0,
                             className: "new-chatter-ritual",
@@ -480,12 +480,12 @@
                             margin: {
                                 right: .5
                             }
-                        }, this.props.bannerMessage), t, a.createElement(o.zb, {
+                        }, this.props.bannerMessage), t, a.createElement(o.Bb, {
                             borderLeft: !0,
                             flexShrink: 0
                         }, a.createElement(o.A, {
                             ariaLabel: "close",
-                            icon: o.pb.Close,
+                            icon: o.rb.Close,
                             onClick: this.onCloseButtonClick,
                             size: o.B.Large,
                             "data-test-selector": "dismiss-button"
