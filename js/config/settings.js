@@ -1319,7 +1319,7 @@ window.__twilightSettings = {
         },
         "b1567f40-9748-42e3-a65b-1b81c90068b1": {
             "name": "TWILIGHT_CAROUSEL_HOLDBACK",
-            "v": 4909,
+            "v": 4963,
             "t": 1,
             "groups": [{
                 "weight": 100,
