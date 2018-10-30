@@ -518,13 +518,13 @@
                         },
                         "data-a-target": "reporting-channel-name"
                     }, o.createElement(u.W, {
-                        type: u.Rb.H4
-                    }, this.props.title), o.createElement(u.Bb, {
+                        type: u.Sb.H4
+                    }, this.props.title), o.createElement(u.Cb, {
                         color: u.O.Alt2,
                         margin: {
                             top: 1
                         }
-                    }, this.headerMessage)), o.createElement("form", null, o.createElement(u.Bb, {
+                    }, this.headerMessage)), o.createElement("form", null, o.createElement(u.Cb, {
                         borderTop: !0,
                         borderBottom: !0,
                         margin: {
@@ -539,10 +539,10 @@
                     }), o.createElement(u.Ea, {
                         id: "reporting__text-area",
                         label: Object(i.d)("Description (required)", "ReportUser")
-                    }, o.createElement(u.Ob, {
+                    }, o.createElement(u.Pb, {
                         defaultValue: this.props.defaultDescription,
                         onChange: this.handleTextAreaChange
-                    }))), o.createElement(u.Bb, {
+                    }))), o.createElement(u.Cb, {
                         display: u.X.Flex,
                         justifyContent: u.Wa.Center
                     }, o.createElement(u.z, {
@@ -574,7 +574,7 @@
                         "reporting__error-container": this.props.submitStatus !== h.Success,
                         "reporting__success-container": this.props.submitStatus === h.Success
                     });
-                    return o.createElement(u.Bb, {
+                    return o.createElement(u.Cb, {
                         className: t,
                         fullWidth: this.props.submitStatus !== h.Success,
                         "data-test-selector": "reporting.error",
@@ -653,7 +653,7 @@
                                 }
                             }, o.createElement(f.W, {
                                 className: "block-user__success",
-                                type: f.Rb.Span
+                                type: f.Sb.Span
                             }, Object(l.d)("{user} blocked", {
                                 user: t.props.targetUser.displayName
                             }, "ReportWizardBlockActions"))), o.createElement(f.U, {
@@ -682,7 +682,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.userBlocked ? this.renderUnblock() : this.renderBlock(),
                             t = Object(v.a)(this.props.targetUser.login, this.props.targetUser.displayName, !0);
-                        return o.createElement(f.Bb, {
+                        return o.createElement(f.Cb, {
                             borderTop: !0,
                             padding: {
                                 y: 1
@@ -692,12 +692,12 @@
                             }
                         }, o.createElement(f.Xa, null, Object(l.d)("Would you like to block {user}?", {
                             user: t
-                        }, "ReportWizardBlockActions")), o.createElement(f.Bb, {
+                        }, "ReportWizardBlockActions")), o.createElement(f.Cb, {
                             color: f.O.Alt2,
                             margin: {
                                 y: 1
                             }
-                        }, o.createElement(f.ac, {
+                        }, o.createElement(f.bc, {
                             baseFontSize: f.Ca.Size6
                         }, o.createElement("p", null, Object(l.d)("Blocking {user} will:", {
                             user: t
@@ -712,7 +712,7 @@
             ! function(e) {
                 e.Link = "link", e.MultipleChoice = "multiple choice", e.Text = "text", e.Textarea = "textarea"
             }(n || (n = {}));
-            var _, O = {
+            var _, C = {
                     generalFilter: function() {
                         return Object(l.d)("I don't think their content or behavior is allowed on Twitch", "ReportModalWizard")
                     },
@@ -738,7 +738,7 @@
                         return Object(l.d)("being hateful, harassing, or abusive", "ReportModalWizard")
                     }
                 },
-                C = {
+                O = {
                     input_description: {
                         getTitle: function() {
                             return Object(l.d)("Could you provide more detail about this issue? You may include links to videos, clips, and content outside Twitch.", "ReportModalWizard")
@@ -833,12 +833,12 @@
                         type: n.Link
                     },
                     messaging_general: {
-                        getTitle: O.generalFilter,
+                        getTitle: C.generalFilter,
                         value: "general_messaging",
                         omitFromDescription: !0
                     },
                     profile_general: {
-                        getTitle: O.generalFilter,
+                        getTitle: C.generalFilter,
                         value: "general_profile",
                         omitFromDescription: !0
                     },
@@ -978,7 +978,7 @@
                         reportReason: T.b.Miscategorized
                     },
                     video_general: {
-                        getTitle: O.generalFilter,
+                        getTitle: C.generalFilter,
                         value: "general_video",
                         omitFromDescription: !0
                     },
@@ -997,12 +997,12 @@
                         reportReason: T.b.Harassment
                     },
                     abusiveViolence: {
-                        getTitle: O.abusiveViolence,
+                        getTitle: C.abusiveViolence,
                         value: "threatening violence",
                         reportReason: T.b.Harm
                     },
                     commitingViolence: {
-                        getTitle: O.commitingViolence,
+                        getTitle: C.commitingViolence,
                         value: "committing violence",
                         reportReason: T.b.Harm
                     },
@@ -1131,7 +1131,7 @@
                         reportReason: T.b.ChatBanEvasion
                     },
                     impersonation_me: {
-                        getTitle: O.me,
+                        getTitle: C.me,
                         value: "impersonating me",
                         reportReason: T.b.Impersonation
                     },
@@ -1143,7 +1143,7 @@
                         reportReason: T.b.Impersonation
                     },
                     impersonation_other: {
-                        getTitle: O.someoneElse,
+                        getTitle: C.someoneElse,
                         value: "impersonating someone else",
                         reportReason: T.b.Impersonation
                     },
@@ -1259,20 +1259,20 @@
                         value: "brigading/raids"
                     },
                     external_threatening: {
-                        getTitle: O.threatening,
+                        getTitle: C.threatening,
                         value: "threatening"
                     },
                     external_harassment: {
-                        getTitle: O.abusive,
+                        getTitle: C.abusive,
                         value: "hateful/harassing"
                     },
                     external_abusiveViolence: {
-                        getTitle: O.abusiveViolence,
+                        getTitle: C.abusiveViolence,
                         value: "external site; threatening violence",
                         reportReason: T.b.Harm
                     },
                     external_commitingViolence: {
-                        getTitle: O.commitingViolence,
+                        getTitle: C.commitingViolence,
                         value: "external site; committing violence",
                         reportReason: T.b.Harm
                     },
@@ -1381,7 +1381,7 @@
                                     }, o.createElement(f.Ea, {
                                         label: t.getTitle(),
                                         labelOptional: t.required ? "" : Object(l.d)("Optional", "ReportModalWizardCard")
-                                    }, o.createElement(f.Ob, {
+                                    }, o.createElement(f.Pb, {
                                         onChange: e.onChange,
                                         rows: t.rows || 3,
                                         name: t.value,
@@ -1476,17 +1476,17 @@
                 },
                 W = {
                     socialMedia: a.__assign({}, x, {
-                        items: [C.endBlurb_socialmedia]
+                        items: [O.endBlurb_socialmedia]
                     }),
                     violence: a.__assign({}, x, {
-                        items: [C.endBlurb_threat]
+                        items: [O.endBlurb_threat]
                     }),
                     legal: {
                         getTitle: z.thanksConcern,
                         getDescription: function() {
                             return Object(l.d)("To submit a claim or report a violation of this type, you will need to follow the steps listed on the relevant page below.", "ReportModalWizard")
                         },
-                        items: [C.endLink_DMCA, C.endLink_trademark, C.endLink_devAgreement],
+                        items: [O.endLink_DMCA, O.endLink_trademark, O.endLink_devAgreement],
                         type: _.Info,
                         value: "ip end"
                     },
@@ -1495,7 +1495,7 @@
                         getDescription: function() {
                             return Object(l.d)("If you know the user personally, and you believe them to be in danger, please contact their local authorities immediately. The link below contains some general information that may be of use.", "ReportModalWizard")
                         },
-                        items: [C.endLink_selfharm],
+                        items: [O.endLink_selfharm],
                         type: _.Info,
                         value: "selfharm end"
                     },
@@ -1504,7 +1504,7 @@
                         getDescription: function() {
                             return Object(l.d)("Please bring this concern to the attention of staff or security at the event if you have not already done so. More information is available at the link below.", "ReportModalWizard")
                         },
-                        items: [C.endLink_eventCoC],
+                        items: [O.endLink_eventCoC],
                         value: "twitch event end",
                         type: _.Info
                     }
@@ -1514,7 +1514,7 @@
                     getLabel: function() {
                         return Object(l.d)("Where is the problem?", "ReportModalWizard")
                     },
-                    items: [C.video, C.whisper, C.chat, C.room, C.profile, C.username, C.report_other],
+                    items: [O.video, O.whisper, O.chat, O.room, O.profile, O.username, O.report_other],
                     type: _.MultipleChoice,
                     value: "content type"
                 },
@@ -1522,21 +1522,21 @@
                     identifyUser: {
                         getTitle: z.reportVideo,
                         getLabel: w.identifyUser,
-                        items: [C.video_streamer, C.video_someoneElse, C.video_chatSomeone],
+                        items: [O.video_streamer, O.video_someoneElse, O.video_chatSomeone],
                         type: _.MultipleChoice,
                         value: "video identify user"
                     },
                     content: {
                         getTitle: z.reportVideo,
                         getLabel: w.contentGeneral,
-                        items: [C.revealPersonalInfo, C.video_labeling, C.video_inactive, C.video_general, C.report_ip, C.violateDevAgreement, C.selfharm],
+                        items: [O.revealPersonalInfo, O.video_labeling, O.video_inactive, O.video_general, O.report_ip, O.violateDevAgreement, O.selfharm],
                         type: _.MultipleChoice,
                         value: "video report reason"
                     },
                     general: {
                         getTitle: z.reportVideo,
                         getLabel: w.content,
-                        items: [C.report_username, C.violence, C.abusive, C.cheating, C.scam, C.inappropriateContent, C.evasion, C.impersonation, C.underage, C.bitsViolation],
+                        items: [O.report_username, O.violence, O.abusive, O.cheating, O.scam, O.inappropriateContent, O.evasion, O.impersonation, O.underage, O.bitsViolation],
                         type: _.MultipleChoice,
                         value: "video general report reason"
                     }
@@ -1545,14 +1545,14 @@
                     content: {
                         getTitle: z.reportMessage,
                         getLabel: w.contentGeneral,
-                        items: [C.revealPersonalInfo, C.evasion, C.spam, C.maliciousRaid, C.report_username, C.messaging_general, C.selfharm],
+                        items: [O.revealPersonalInfo, O.evasion, O.spam, O.maliciousRaid, O.report_username, O.messaging_general, O.selfharm],
                         type: _.MultipleChoice,
                         value: "message report reason"
                     },
                     general: {
                         getTitle: z.reportMessage,
                         getLabel: w.content,
-                        items: [C.report_emotes, C.violence, C.abusive, C.inappropriateContent, C.impersonation, C.underage, C.bitsViolation],
+                        items: [O.report_emotes, O.violence, O.abusive, O.inappropriateContent, O.impersonation, O.underage, O.bitsViolation],
                         type: _.MultipleChoice,
                         value: "message general report reason"
                     }
@@ -1566,42 +1566,42 @@
                     content: {
                         getTitle: z.reportProfile,
                         getLabel: w.contentGeneral,
-                        items: [C.revealPersonalInfo, C.inappropriateBadge, C.inappropriateExtension, C.noModeration, C.profile_general, C.report_ip, C.violateDevAgreement, C.selfharm],
+                        items: [O.revealPersonalInfo, O.inappropriateBadge, O.inappropriateExtension, O.noModeration, O.profile_general, O.report_ip, O.violateDevAgreement, O.selfharm],
                         type: _.MultipleChoice,
                         value: "profile report reason"
                     },
                     general: {
                         getTitle: z.reportProfile,
                         getLabel: w.content,
-                        items: [C.report_username, C.violence, C.abusive, C.scam, C.inappropriateContent, C.evasion, C.impersonation, C.underage, C.bitsViolation],
+                        items: [O.report_username, O.violence, O.abusive, O.scam, O.inappropriateContent, O.evasion, O.impersonation, O.underage, O.bitsViolation],
                         type: _.MultipleChoice,
                         value: "profile general report reason"
                     }
                 },
-                B = {
+                L = {
                     getTitle: function(e) {
                         return Object(l.d)("Report {username}'s Room", {
                             username: e
                         }, "ReportModalWizard")
                     },
                     getLabel: w.identifyUser,
-                    items: [C.report_channelOwner, C.report_member],
+                    items: [O.report_channelOwner, O.report_member],
                     value: "room report user",
                     type: _.MultipleChoice
                 },
-                L = {
+                B = {
                     getTitle: z.tellUsMore,
-                    items: [C.input_description],
+                    items: [O.input_description],
                     type: _.Confirm,
                     value: "tell us more"
                 },
                 V = {
-                    banEvasion: a.__assign({}, L, {
-                        items: [C.input_usernames, C.input_description],
+                    banEvasion: a.__assign({}, B, {
+                        items: [O.input_usernames, O.input_description],
                         value: "ban evasion tell us more"
                     }),
-                    socialMedia: a.__assign({}, L, {
-                        items: [C.input_link, C.input_connection, C.input_description],
+                    socialMedia: a.__assign({}, B, {
+                        items: [O.input_link, O.input_connection, O.input_description],
                         nextCard: W.socialMedia,
                         value: "social media tell us more"
                     })
@@ -1610,7 +1610,7 @@
                     content: {
                         getTitle: z.reportAbusive,
                         getLabel: w.relevantStatements,
-                        items: [C.hateSpeech, C.harassment, C.abusiveViolence, C.commitingViolence, C.swatting, C.personalInfo],
+                        items: [O.hateSpeech, O.harassment, O.abusiveViolence, O.commitingViolence, O.swatting, O.personalInfo],
                         type: _.MultipleChoice,
                         value: "abuse type"
                     },
@@ -1623,7 +1623,7 @@
                         getLabel: function() {
                             return Object(l.d)("Are the threats or actions directed at you or someone else?", "ReportModalWizard")
                         },
-                        items: [C.threat_me, C.threat_person, C.threat_group, C.threat_selfharm],
+                        items: [O.threat_me, O.threat_person, O.threat_group, O.threat_selfharm],
                         type: _.MultipleChoice,
                         value: "violence type"
                     }
@@ -1638,7 +1638,7 @@
                         getLabel: function() {
                             return Object(l.d)("Where did the problem happen?", "ReportModalWizard")
                         },
-                        items: [C.location_onTwitch, C.location_anotherSite, C.location_TwitchEvent],
+                        items: [O.location_onTwitch, O.location_anotherSite, O.location_TwitchEvent],
                         type: _.MultipleChoice,
                         value: "off-site conduct location"
                     },
@@ -1652,17 +1652,17 @@
                         getDescription: function() {
                             return Object(l.d)("Please note that incidents reported through this form must involve Twitch community members. If possible, please submit a report to the site or service where the incident occurred as well.", "ReportModalWizard")
                         },
-                        items: [C.external_incitingRaids, C.external_threatening, C.external_harassment],
+                        items: [O.external_incitingRaids, O.external_threatening, O.external_harassment],
                         type: _.MultipleChoice,
                         nextCard: V.socialMedia,
                         value: "external site conduct"
                     },
                     external_violence: a.__assign({}, F.violence, {
-                        items: [C.threat_me, C.threat_person, C.threat_group],
+                        items: [O.threat_me, O.threat_person, O.threat_group],
                         nextCard: V.socialMedia
                     }),
                     external_abusive: a.__assign({}, F.content, {
-                        items: [C.hateSpeech, C.harassment, C.external_abusiveViolence, C.external_commitingViolence, C.swatting, C.personalInfo],
+                        items: [O.hateSpeech, O.harassment, O.external_abusiveViolence, O.external_commitingViolence, O.swatting, O.personalInfo],
                         nextCard: V.socialMedia
                     })
                 },
@@ -1673,7 +1673,7 @@
                         }, "ReportModalWizard")
                     },
                     getLabel: w.contentGeneral,
-                    items: [C.spam_bot, C.spam_scam, C.spam_repeated],
+                    items: [O.spam_bot, O.spam_scam, O.spam_repeated],
                     type: _.MultipleChoice,
                     value: "spam type"
                 },
@@ -1684,7 +1684,7 @@
                         }, "ReportModalWizard")
                     },
                     getLabel: w.relevantStatements,
-                    items: [C.inappropriate_game, C.gory, C.sexuallyViolent, C.childAnimal, C.pornographic, C.suggestive, C.nudity, C.other],
+                    items: [O.inappropriate_game, O.gory, O.sexuallyViolent, O.childAnimal, O.pornographic, O.suggestive, O.nudity, O.other],
                     type: _.MultipleChoice,
                     value: "inappropriate content type"
                 },
@@ -1698,7 +1698,7 @@
                         return Object(l.d)("What kind of ban are they evading?", "ReportModalWizard")
                     },
                     value: "ban type",
-                    items: [C.evasion_chat, C.evasion_sitewide, C.evasion_messaging],
+                    items: [O.evasion_chat, O.evasion_sitewide, O.evasion_messaging],
                     type: _.MultipleChoice,
                     nextCard: V.banEvasion
                 },
@@ -1714,19 +1714,19 @@
                     getDescription: function() {
                         return Object(l.d)("Parody, cosplay, and other portrayals without the intent to deceive or defraud are allowed under Twitch's Community Guidelines. If you would still like to submit a report, please continue.", "ReportModalWizard")
                     },
-                    items: [C.impersonation_me, C.impersonation_brand, C.impersonation_other],
+                    items: [O.impersonation_me, O.impersonation_brand, O.impersonation_other],
                     type: _.MultipleChoice,
                     value: "impersonation type"
                 },
                 $ = I,
-                K = L,
+                K = B,
                 Y = x,
                 Z = {
                     video: N.identifyUser,
                     whisper: P,
                     chat: D.content,
                     profile: A.content,
-                    room: B,
+                    room: L,
                     "somewhere else": X.identifyLocation,
                     streamer: N.content,
                     "someone else in video": N.content,
@@ -1770,7 +1770,7 @@
                     EVENT_REPORT: A.content,
                     EXTENSION_REPORT: A.content,
                     LIVE_UP_REPORT: A.content,
-                    ROOM_REPORT: B,
+                    ROOM_REPORT: L,
                     WHISPER_REPORT: P,
                     VOD_COMMENT_REPORT: D.content
                 },
@@ -1984,7 +1984,7 @@
                                 onUnblock: this.props.onUnblock,
                                 userBlocked: this.props.userBlocked
                             }) : null,
-                            t = this.state.error ? o.createElement(f.Bb, {
+                            t = this.state.error ? o.createElement(f.Cb, {
                                 fullWidth: !0,
                                 margin: {
                                     bottom: 1
@@ -1993,7 +1993,7 @@
                                 className: "reporting__error-container"
                             }, this.state.error) : null,
                             r = this.state.prevCards.length || this.state.currentCard.type === _.Info ? null : this.renderPrimer();
-                        return o.createElement(f.Bb, {
+                        return o.createElement(f.Cb, {
                             className: "reporting-wizard",
                             display: f.X.Flex,
                             margin: {

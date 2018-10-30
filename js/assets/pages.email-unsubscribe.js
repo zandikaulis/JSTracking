@@ -8,11 +8,11 @@
                 s = i("q1tI"),
                 r = i("oJmH"),
                 c = i("/7QA"),
-                o = i("yR8l"),
-                l = i("V+GM"),
+                l = i("yR8l"),
+                o = i("V+GM"),
                 u = i("geRD"),
-                m = i("NvVO"),
-                b = i("2xye"),
+                b = i("NvVO"),
+                m = i("2xye"),
                 d = i("GnwI"),
                 p = i("sL2n"),
                 E = i("Ue10"),
@@ -32,7 +32,7 @@
                                 },
                                 "data-test-selector": h
                             }, s.createElement(E.W, {
-                                type: E.Rb.H5,
+                                type: E.Sb.H5,
                                 color: E.O.Error
                             }, Object(c.d)("There was an error when unsubscribing.", "EmailUnsubscribe"))) : t.state.isSuccess ? s.createElement(E.Xa, {
                                 margin: {
@@ -40,16 +40,16 @@
                                 },
                                 "data-test-selector": f
                             }, s.createElement(E.W, {
-                                type: E.Rb.H5,
+                                type: E.Sb.H5,
                                 color: E.O.Alt2
                             }, Object(c.d)("You have successfully unsubscribed.", "EmailUnsubscribe"))) : t.state.isLoading ? s.createElement(E.Xa, {
                                 margin: {
                                     top: 1
                                 }
                             }, s.createElement(E.W, {
-                                type: E.Rb.H5,
+                                type: E.Sb.H5,
                                 bold: !0
-                            }, Object(c.d)("Unsubscribing...", "EmailUnsubscribe"))) : s.createElement(E.Bb, {
+                            }, Object(c.d)("Unsubscribing...", "EmailUnsubscribe"))) : s.createElement(E.Cb, {
                                 display: E.X.Flex,
                                 flexDirection: E.Aa.Column,
                                 margin: {
@@ -60,7 +60,7 @@
                                     bottom: 1
                                 }
                             }, s.createElement(E.W, {
-                                type: E.Rb.H5,
+                                type: E.Sb.H5,
                                 color: E.O.Alt2
                             }, Object(c.d)("You will unsubscribe from future emails of this type from Twitch.", "EmailUnsubscribe"))), s.createElement(E.Xa, {
                                 flexGrow: 0
@@ -70,7 +70,7 @@
                             }, Object(c.d)("Confirm", "EmailUnsubscribe"))))
                         }, t.confirmHandler = function() {
                             return n.__awaiter(t, void 0, void 0, function() {
-                                var e, t, i;
+                                var e, t, i, s;
                                 return n.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
@@ -86,7 +86,7 @@
                                         case 1:
                                             return n.trys.push([1, 3, , 4]), [4, this.props.unsubscribeEmail(i)];
                                         case 2:
-                                            return n.sent().data.unsubscribeEmail.isSuccess ? this.setState({
+                                            return (s = n.sent()).data && s.data.unsubscribeEmail && s.data.unsubscribeEmail.isSuccess ? this.setState({
                                                 isSuccess: !0
                                             }) : this.setState({
                                                 isError: !0
@@ -105,7 +105,7 @@
                     return n.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return s.createElement(E.Bb, {
+                        return s.createElement(E.Cb, {
                             padding: {
                                 x: 3,
                                 top: 3,
@@ -115,16 +115,16 @@
                             flexDirection: E.Aa.Column
                         }, s.createElement(E.W, {
                             className: "title",
-                            type: E.Rb.H2
+                            type: E.Sb.H2
                         }, Object(c.d)("Email Unsubscribe", "EmailUnsubscribe")), this.renderStatus())
                     }, t
                 }(s.Component),
-                y = Object(r.compose)(Object(o.a)(p, {
+                y = Object(r.compose)(Object(l.a)(p, {
                     name: "unsubscribeEmail"
                 }), Object(d.b)("EmailUnsubscribePage", {
-                    destination: m.a.EmailUnsubscribe
-                }), Object(l.a)({
-                    location: b.PageviewLocation.EmailUnsubscribe
+                    destination: b.a.EmailUnsubscribe
+                }), Object(o.a)({
+                    location: m.PageviewLocation.EmailUnsubscribe
                 }))(v);
             i.d(t, "EmailUnsubscribePage", function() {
                 return y

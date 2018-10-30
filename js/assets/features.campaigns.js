@@ -42,7 +42,7 @@
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: a.ec.Above
+                            zIndex: a.fc.Above
                         }, r.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -84,7 +84,7 @@
                 k = o.createElement(b.Xa, {
                     fullHeight: !0,
                     fullWidth: !0,
-                    textAlign: b.Nb.Center,
+                    textAlign: b.Ob.Center,
                     padding: {
                         y: 4
                     },
@@ -462,10 +462,10 @@
                 _ = n.n(N),
                 T = n("GA+j"),
                 D = n.n(T),
-                R = n("FBRg"),
-                F = n.n(R),
-                j = n("2xEe"),
-                A = n.n(j),
+                F = n("FBRg"),
+                j = n.n(F),
+                R = n("2xEe"),
+                A = n.n(R),
                 M = n("q8H6"),
                 B = n.n(M),
                 L = n("oQBz"),
@@ -572,7 +572,7 @@
                                             "2x": B.a
                                         } : {
                                             "1x": D.a,
-                                            "2x": F.a
+                                            "2x": j.a
                                         },
                                         alt: Object(o.d)("Paypal", "PaymentMethodImage")
                                     };
@@ -1637,13 +1637,13 @@
                         justifyContent: o.Wa.Center,
                         flexWrap: o.Ba.Wrap
                     }, r.createElement(o.W, {
-                        type: o.Rb.Span,
+                        type: o.Sb.Span,
                         fontSize: o.Ca.Size4,
-                        decoration: this.props.productDiscountPrice ? o.Pb.Strikethrough : void 0,
+                        decoration: this.props.productDiscountPrice ? o.Qb.Strikethrough : void 0,
                         "data-a-target": "js-test-ticket-price-text"
                     }, Object(a.d)("{price} / {interval}", {
                         price: r.createElement(o.W, {
-                            type: o.Rb.Span,
+                            type: o.Sb.Span,
                             bold: !0
                         }, this.props.price),
                         interval: function(e) {
@@ -1666,8 +1666,8 @@
                         }
                     }, r.createElement(o.W, {
                         fontSize: o.Ca.Size4,
-                        type: o.Rb.Span,
-                        decoration: this.props.productDiscountPrice ? o.Pb.Strikethrough : void 0
+                        type: o.Sb.Span,
+                        decoration: this.props.productDiscountPrice ? o.Qb.Strikethrough : void 0
                     }, Object(a.d)("(Includes VAT)", "TicketDescription"))))) : r.createElement(o.Za, {
                         fillContent: !0
                     })
@@ -1908,7 +1908,7 @@
                         }
                     }, t
                 }(s.Component),
-                R = Object(g.compose)(Object(m.a)(_, {
+                F = Object(g.compose)(Object(m.a)(_, {
                     name: "currentSubscriptionData",
                     options: function(e) {
                         return {
@@ -1931,7 +1931,7 @@
                         return !e.currentSubscriptionData || !e.currentSubscriptionData.currentUser || !e.currentSubscriptionData.currentUser.id
                     }
                 }]))(D);
-            var F = Object(g.compose)(k(function(e) {
+            var j = Object(g.compose)(k(function(e) {
                     return {
                         currentActionRequest: e.currentActionRequest,
                         currentChannelID: e.currentChannelID,
@@ -1944,8 +1944,8 @@
                             return Object(y.d)(b.CheckoutModal, t)
                         }
                     }, e)
-                }))(R),
-                j = function(e) {
+                }))(F),
+                R = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1957,7 +1957,7 @@
                                 i = !1;
                             switch (e.action) {
                                 case o.FunctionAction.SubscribeToChannel:
-                                    n = s.createElement(F, null), i = !0;
+                                    n = s.createElement(j, null), i = !0;
                                     break;
                                 default:
                                     return
@@ -2084,7 +2084,7 @@
                         return this.props.panel.description && (t = s.createElement("div", {
                             onClick: this.onDescriptionClick,
                             "data-test-selector": U.Description
-                        }, s.createElement(X.ac, null, s.createElement(L, a.__assign({
+                        }, s.createElement(X.bc, null, s.createElement(L, a.__assign({
                             source: function(e) {
                                 return e.replace(/(^|\n)(#+)([^\s#]+)/g, function(e, t, n, i) {
                                     return "" + t + n + " " + i
@@ -2097,8 +2097,8 @@
                                 right: 2
                             },
                             "data-test-selector": U.Panel
-                        }, Object(X.fc)(this.props)), this.props.panel.title && s.createElement(X.W, {
-                            type: X.Rb.H3,
+                        }, Object(X.gc)(this.props)), this.props.panel.title && s.createElement(X.W, {
+                            type: X.Sb.H3,
                             "data-test-selector": U.Title
                         }, this.props.panel.title), e, t)
                     }, t
@@ -2189,7 +2189,7 @@
                             state: this.state.isCreatingExtensionPanel ? X.E.Loading : X.E.Default,
                             type: X.F.Hollow
                         }, Object(p.d)("Extension Panel", "CreatePanel"));
-                        return this.state.isTypeSelectionMode ? s.createElement(X.Bb, {
+                        return this.state.isTypeSelectionMode ? s.createElement(X.Cb, {
                             border: !0,
                             background: X.r.Alt2,
                             className: "create-panel",
@@ -2212,7 +2212,7 @@
                             onClick: this.createDefaultPanel,
                             state: this.state.isCreatingDefaultPanel ? X.E.Loading : X.E.Default,
                             type: X.F.Hollow
-                        }, Object(p.d)("Add a Text or Image Panel", "CreatePanel"))), this.props.canCreateExtensionPanel && e))) : s.createElement(X.Bb, {
+                        }, Object(p.d)("Add a Text or Image Panel", "CreatePanel"))), this.props.canCreateExtensionPanel && e))) : s.createElement(X.Cb, {
                             border: !0,
                             background: X.r.Alt2,
                             className: "create-panel",
@@ -2331,10 +2331,10 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(X.Bb, {
+                        return s.createElement(X.Cb, {
                             background: X.r.Base,
                             className: "default-panel-image-picker",
-                            textAlign: X.Nb.Center
+                            textAlign: X.Ob.Center
                         }, this.state.base64Image ? this.renderImageCropper() : this.renderFilePicker(), s.createElement(ne.a, {
                             closeOnBackdropClick: !this.state.isCropping
                         }))
@@ -2378,7 +2378,7 @@
                             height: 50,
                             width: 50
                         })), s.createElement(X.W, {
-                            type: X.Rb.H3,
+                            type: X.Sb.H3,
                             color: X.O.Alt2,
                             fontSize: X.Ca.Size4
                         }, Object(p.d)("Choose a file or drag it here.", "DefaultPanelImagePickerComponent")))))
@@ -2636,7 +2636,7 @@
                         className: "panel-preview-image",
                         src: this.state.imagePreviewSRC ? this.state.imagePreviewSRC : e.imageURL || ""
                     })), s.createElement(X.W, {
-                        type: X.Rb.P
+                        type: X.Sb.P
                     }, Object(p.d)("Images will be scaled to 320px wide", "DefaultPanelEdit"))), s.createElement(X.Xa, {
                         margin: {
                             bottom: 1
@@ -2662,8 +2662,8 @@
                             bottom: .5
                         }
                     }, s.createElement(X.W, {
-                        type: X.Rb.Strong
-                    }, Object(p.d)("Description:", "DefaultPanelEdit")), s.createElement(X.Xa, null, t)), s.createElement(X.Ob, {
+                        type: X.Sb.Strong
+                    }, Object(p.d)("Description:", "DefaultPanelEdit")), s.createElement(X.Xa, null, t)), s.createElement(X.Pb, {
                         defaultValue: e.description || "",
                         id: "description",
                         name: "description",
@@ -2682,7 +2682,7 @@
                         type: X.F.Text,
                         onClick: this.props.removePanel
                     }, Object(p.d)("Remove", "DefaultPanelEdit"))), s.createElement(X.Xa, {
-                        textAlign: X.Nb.Center
+                        textAlign: X.Ob.Center
                     }, this.state.errorMessage && s.createElement(X.W, {
                         color: X.O.Error
                     }, this.state.errorMessage)))
@@ -2706,15 +2706,15 @@
                         r = Object(p.d)("This panel's name is: {panelName}", {
                             panelName: s.createElement(X.W, {
                                 bold: !0,
-                                type: X.Rb.Span,
-                                transform: X.Qb.Uppercase
+                                type: X.Sb.Span,
+                                transform: X.Rb.Uppercase
                             }, " ", n.slotID)
                         }, "ExtensionPanelEdit");
                     return s.createElement(X.Xa, {
                         alignItems: X.f.Center,
                         display: X.X.Flex,
                         flexDirection: X.Aa.Column,
-                        textAlign: X.Nb.Center
+                        textAlign: X.Ob.Center
                     }, s.createElement(X.Xa, {
                         margin: {
                             y: 2
@@ -2789,11 +2789,11 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        var e = s.createElement(X.Bb, {
+                        var e = s.createElement(X.Cb, {
                                 border: !0,
                                 className: "edit-panel edit-panel--overlay " + (this.props.isSorting ? "edit-panel--sorting" : ""),
                                 position: X.hb.Absolute,
-                                zIndex: X.ec.Default
+                                zIndex: X.fc.Default
                             }, s.createElement(X.o, {
                                 ratio: X.p.Aspect3x4
                             }, s.createElement(X.Xa, {
@@ -2801,7 +2801,7 @@
                                 display: X.X.Flex,
                                 flexDirection: X.Aa.Column,
                                 justifyContent: X.Wa.Center,
-                                textAlign: X.Nb.Center
+                                textAlign: X.Ob.Center
                             }, s.createElement(X.W, {
                                 color: X.O.Overlay
                             }, Object(p.d)("Are you sure you want to delete this panel?", "EditPanel")), s.createElement(X.Xa, {
@@ -2834,7 +2834,7 @@
                             removePanel: this.removePanel
                         })), s.createElement(X.Xa, {
                             position: X.hb.Relative
-                        }, this.state.showRemoveConfirmation && e, s.createElement(X.Bb, {
+                        }, this.state.showRemoveConfirmation && e, s.createElement(X.Cb, {
                             border: !0,
                             background: X.r.Alt2,
                             className: "edit-panel " + (this.props.isSorting ? "edit-panel--sorting" : ""),
@@ -3026,12 +3026,12 @@
                             i = e.user,
                             r = null;
                         if (n) return s.createElement(B.a, null);
-                        r = this.state.isEditMode ? s.createElement(X.Xa, null, this.renderEditPanels()) : t || !i || i && !i.panels.length ? s.createElement(X.Bb, {
+                        r = this.state.isEditMode ? s.createElement(X.Xa, null, this.renderEditPanels()) : t || !i || i && !i.panels.length ? s.createElement(X.Cb, {
                             color: X.O.Alt2,
                             padding: {
                                 y: 5
                             },
-                            textAlign: X.Nb.Center,
+                            textAlign: X.Ob.Center,
                             "data-test-selector": fe.EmptyMessage
                         }, s.createElement(X.W, {
                             italic: !0,
@@ -3048,7 +3048,7 @@
                                 bottom: 2
                             },
                             "data-test-selector": fe.EditToggle
-                        }, s.createElement(X.Tb, {
+                        }, s.createElement(X.Ub, {
                             id: "edit-panels-toggle",
                             onChange: this.toggleEditMode
                         }), s.createElement(X.Xa, {
@@ -3056,7 +3056,7 @@
                                 left: 1
                             }
                         }, s.createElement(X.W, null, Object(p.d)("Edit Panels", "Channel Panels"))));
-                        return s.createElement(j, {
+                        return s.createElement(R, {
                             channelID: this.props.channelID
                         }, s.createElement(X.Xa, {
                             className: "channel-panels",
@@ -4203,7 +4203,7 @@
                                 onCheckoutProgress: this.props.onCheckoutProgress
                             }))
                         }
-                        return r.createElement(g.Bb, {
+                        return r.createElement(g.Cb, {
                             background: g.r.Alt,
                             className: "checkout-modal__container"
                         }, e, r.createElement(s.a, {
@@ -5424,13 +5424,13 @@
                             type: a.Va.Alpha
                         }, r.createElement(a.Xa, {
                             fullWidth: !0,
-                            textAlign: a.Nb.Center,
+                            textAlign: a.Ob.Center,
                             alignItems: a.f.Center,
                             padding: {
                                 y: 1
                             }
                         }, r.createElement(a.W, {
-                            type: a.Rb.Span,
+                            type: a.Sb.Span,
                             color: a.O.Link
                         }, this.state.collapsed ? this.props.showButtonLabel : this.props.hideButtonLabel))))) : r.createElement(a.H, null, this.props.children)
                     }, t
@@ -5750,7 +5750,7 @@
                                         }, e)
                                     }
                                 }, "CheckoutDescription");
-                            return d.createElement(d.Fragment, null, d.createElement(k.W, null, e), this.props.product.product.interval.unit === g.K.MONTH && d.createElement(k.W, null, t))
+                            return d.createElement(d.Fragment, null, d.createElement(k.W, null, e), this.props.product.product.interval.unit === g.M.MONTH && d.createElement(k.W, null, t))
                         },
                         enumerable: !0,
                         configurable: !0
@@ -5775,7 +5775,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(k.Bb, {
+                        return d.createElement(k.Cb, {
                             className: "checkout-error-brick",
                             background: k.r.Base,
                             borderTop: !0,
@@ -5810,7 +5810,7 @@
                             margin: {
                                 top: 1
                             }
-                        }, d.createElement(k.W, null, this.message))) : this.props.level === E.Info ? d.createElement(k.Bb, {
+                        }, d.createElement(k.W, null, this.message))) : this.props.level === E.Info ? d.createElement(k.Cb, {
                             className: "checkout-error--info",
                             display: k.X.Flex,
                             padding: {
@@ -5848,10 +5848,10 @@
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
                         return this.props.progress === O.a.CONFIRMATION ? d.createElement(k.W, {
-                            type: k.Rb.H2,
+                            type: k.Sb.H2,
                             bold: !0
                         }, Object(p.d)("Purchase Successful", "CheckoutHeader")) : d.createElement(k.W, {
-                            type: k.Rb.H2,
+                            type: k.Sb.H2,
                             bold: !0
                         }, this.headerText)
                     }, Object.defineProperty(t.prototype, "headerText", {
@@ -5949,7 +5949,7 @@
             }! function(e) {
                 e[e.GIFTABLE_RECIPIENT = 0] = "GIFTABLE_RECIPIENT", e[e.NEW_PURCHASE = 1] = "NEW_PURCHASE", e[e.TIER_UPGRADE = 2] = "TIER_UPGRADE", e[e.PRIME_UPGRADE = 3] = "PRIME_UPGRADE", e[e.UNKNOWN = 4] = "UNKNOWN", e[e.NO_ITEM = 5] = "NO_ITEM", e[e.NON_GIFTABLE_RECIPIENT = 6] = "NON_GIFTABLE_RECIPIENT", e[e.NO_MASS_GIFTING = 7] = "NO_MASS_GIFTING", e[e.TIER_DOWNGRADE = 8] = "TIER_DOWNGRADE", e[e.MOBILE_UPGRADE = 9] = "MOBILE_UPGRADE", e[e.API_INELIGIBLE = 10] = "API_INELIGIBLE"
             }(I || (I = {}));
-            var D, R = function(e) {
+            var D, F = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5960,7 +5960,7 @@
                                 e = this.isEsportPurchase ? Object(p.d)("Sorry, an All-Access Pass to this channel is not available for <x:bold>{recipientName}</x:bold>.", {
                                     "x:bold": function(e) {
                                         return d.createElement(k.W, {
-                                            type: k.Rb.Span,
+                                            type: k.Sb.Span,
                                             bold: !0
                                         }, e)
                                     },
@@ -5968,7 +5968,7 @@
                                 }, "IneligiblePurchaseNotice") : Object(p.d)("Sorry, a Gift Subscription to this channel is not available for <x:bold>{recipientName}</x:bold>.", {
                                     "x:bold": function(e) {
                                         return d.createElement(k.W, {
-                                            type: k.Rb.Span,
+                                            type: k.Sb.Span,
                                             bold: !0
                                         }, e)
                                     },
@@ -6011,7 +6011,7 @@
                             default:
                                 e = Object(p.d)("You are not eligible for this purchase.", "IneligiblePurchaseNotice")
                         }
-                        return d.createElement(k.Bb, {
+                        return d.createElement(k.Cb, {
                             background: k.r.Base,
                             borderMarked: !0,
                             padding: 1,
@@ -6030,8 +6030,8 @@
                         configurable: !0
                     }), t
                 }(d.PureComponent),
-                F = function(e) {
-                    return d.createElement(k.Bb, {
+                j = function(e) {
+                    return d.createElement(k.Cb, {
                         background: k.r.Base,
                         borderMarked: !0,
                         padding: 1,
@@ -6050,8 +6050,8 @@
                         }
                     }, d.createElement(k.W, null, Object(p.d)("You'll be able to subscribe to another channel for free with Twitch Prime 30 days after you last used your free subscription.", "UpgradePrimeWarning"))), d.createElement(k.W, null, Object(p.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradePrimeWarning")))
                 },
-                j = function(e) {
-                    return d.createElement(k.Bb, {
+                R = function(e) {
+                    return d.createElement(k.Cb, {
                         background: k.r.Base,
                         borderMarked: !0,
                         padding: 1,
@@ -6089,7 +6089,7 @@
                             if (this.props.eligiblePromotions && this.props.eligiblePromotions.isOneMonthFreeEligible && (e = this.renderOneFreeMonth()), this.props.productEligibility === I.TIER_UPGRADE) t = this.renderTierUpgrade();
                             else if (this.props.productEligibility === I.PRIME_UPGRADE) {
                             var n = this.formattedPrice;
-                            n && (t = d.createElement(F, {
+                            n && (t = d.createElement(j, {
                                 newPrice: n
                             }))
                         } else this.props.productEligibility === I.NEW_PURCHASE && this.hasActiveGiftSubscription && (this.props.eligiblePromotions && this.props.eligiblePromotions.paidUpgradePromotion && (e = this.renderSubtemberDiscount()), t = this.renderGiftSubUpgrade());
@@ -6109,7 +6109,7 @@
                                 currency: n
                             }),
                             a = this.formattedPrice;
-                        return r && a ? d.createElement(j, {
+                        return r && a ? d.createElement(R, {
                             originalPrice: r,
                             newPrice: a
                         }) : null
@@ -6117,7 +6117,7 @@
                         var e = this.props.benefit.endsAt;
                         if (!e) return null;
                         var t = Object(f.c)(e);
-                        return d.createElement(k.Bb, {
+                        return d.createElement(k.Cb, {
                             background: k.r.Base,
                             borderMarked: !0,
                             padding: 1,
@@ -6128,7 +6128,7 @@
                             giftSubEndDateFormatted: t,
                             "x:strong": function(e) {
                                 return d.createElement(k.W, {
-                                    type: k.Rb.Span,
+                                    type: k.Sb.Span,
                                     bold: !0
                                 }, e)
                             }
@@ -6138,16 +6138,16 @@
                         if (this.formattedPrice) return e = this.isEsportPurchase ? Object(p.d)("You are buying a {price} Overwatch League All-Access Pass for {recipientName}.", {
                             price: this.formattedPrice,
                             recipientName: d.createElement(k.W, {
-                                type: k.Rb.Span,
+                                type: k.Sb.Span,
                                 bold: !0
                             }, t || "")
                         }, "PurchasePreview") : Object(p.d)("You are buying a Single Month {price} Gift Subscription for {recipientName}.", {
                             price: this.formattedPrice,
                             recipientName: d.createElement(k.W, {
-                                type: k.Rb.Span,
+                                type: k.Sb.Span,
                                 bold: !0
                             }, t || "")
-                        }, "PurchasePreview"), d.createElement(k.Bb, {
+                        }, "PurchasePreview"), d.createElement(k.Cb, {
                             background: k.r.Base,
                             borderMarked: !0,
                             padding: 1,
@@ -6184,7 +6184,7 @@
                                     currency: this.props.product.product.priceInfo.currency
                                 })
                             }, "PurchasePreview");
-                        return d.createElement(d.Fragment, null, d.createElement(k.Bb, {
+                        return d.createElement(d.Fragment, null, d.createElement(k.Cb, {
                             background: k.r.Base,
                             borderMarked: !0,
                             padding: 1,
@@ -6192,15 +6192,15 @@
                                 y: 1
                             }
                         }, d.createElement(k.Xa, null, d.createElement(k.W, {
-                            type: k.Rb.H5
+                            type: k.Sb.H5
                         }, e)), d.createElement(k.Xa, {
                             margin: {
                                 y: 1
                             }
                         }, d.createElement(k.W, {
-                            type: k.Rb.H5
+                            type: k.Sb.H5
                         }, o)), d.createElement(k.W, {
-                            type: k.Rb.H5,
+                            type: k.Sb.H5,
                             bold: !0
                         }, s)), d.createElement(k.W, null, r))
                     }, t.prototype.renderOneFreeMonth = function() {
@@ -6208,7 +6208,7 @@
                             t = this.props.benefit;
                         t && null !== t.endsAt && (e = Object(f.c)(t.endsAt));
                         var n = new Date(e);
-                        return n.setMonth(e.getMonth() + 1), d.createElement(k.Bb, {
+                        return n.setMonth(e.getMonth() + 1), d.createElement(k.Cb, {
                             background: k.r.Base,
                             borderMarked: !0,
                             padding: 1,
@@ -6219,13 +6219,13 @@
                             futureChargeDate: n,
                             "x:strong": function(e) {
                                 return d.createElement(k.W, {
-                                    type: k.Rb.Span,
+                                    type: k.Sb.Span,
                                     bold: !0
                                 }, e)
                             }
                         }, "PurchasePreview")))
                     }, t.prototype.renderSubtemberDiscount = function() {
-                        return this.enablePaidUpgradeFlag && this.props.eligiblePromotions && this.props.eligiblePromotions.paidUpgradePromotion ? d.createElement(k.Bb, {
+                        return this.enablePaidUpgradeFlag && this.props.eligiblePromotions && this.props.eligiblePromotions.paidUpgradePromotion ? d.createElement(k.Cb, {
                             background: k.r.Base,
                             className: "purchase-preview__promotion-banner",
                             padding: 1,
@@ -6281,7 +6281,7 @@
                             padding: {
                                 bottom: 2
                             }
-                        }, this.getGiftSubReceiptInfo()), d.createElement(k.Bb, {
+                        }, this.getGiftSubReceiptInfo()), d.createElement(k.Cb, {
                             borderTop: !0,
                             borderBottom: !0,
                             padding: {
@@ -6294,7 +6294,7 @@
                             bold: !0
                         }, Object(p.d)("Gift Status", "GiftSubReceipt"))), d.createElement(k.Xa, {
                             display: k.X.InlineBlock
-                        }, d.createElement(k.W, null, Object(p.d)("Active", "GiftSubReceipt")))), this.props.invoicePrice && d.createElement(k.Bb, {
+                        }, d.createElement(k.W, null, Object(p.d)("Active", "GiftSubReceipt")))), this.props.invoicePrice && d.createElement(k.Cb, {
                             borderBottom: !0,
                             padding: {
                                 y: 3
@@ -6329,7 +6329,7 @@
                             recipientDisplayName: this.props.recipientDisplayName || "",
                             "x:strong": function(e) {
                                 return d.createElement(k.W, {
-                                    type: k.Rb.Span,
+                                    type: k.Sb.Span,
                                     bold: !0
                                 }, e)
                             }
@@ -6343,7 +6343,7 @@
                             recipientDisplayName: this.props.recipientDisplayName || "",
                             "x:strong": function(e) {
                                 return d.createElement(k.W, {
-                                    type: k.Rb.Span,
+                                    type: k.Sb.Span,
                                     bold: !0
                                 }, e)
                             }
@@ -6364,11 +6364,11 @@
                             padding: {
                                 y: 2
                             }
-                        }, d.createElement(k.Bb, {
+                        }, d.createElement(k.Cb, {
                             padding: {
                                 bottom: 2
                             }
-                        }, this.getMysteryGiftSubReceiptInfo()), d.createElement(k.Bb, {
+                        }, this.getMysteryGiftSubReceiptInfo()), d.createElement(k.Cb, {
                             borderTop: !0,
                             borderBottom: !0,
                             padding: {
@@ -6381,7 +6381,7 @@
                             bold: !0
                         }, Object(p.d)("Gift Status", "MysteryGiftSubReceipt"))), d.createElement(k.Xa, {
                             display: k.X.InlineBlock
-                        }, d.createElement(k.W, null, Object(p.d)("Active", "MysteryGiftSubReceipt")))), this.props.invoicePrice && d.createElement(k.Bb, {
+                        }, d.createElement(k.W, null, Object(p.d)("Active", "MysteryGiftSubReceipt")))), this.props.invoicePrice && d.createElement(k.Cb, {
                             borderBottom: !0,
                             padding: {
                                 y: 3
@@ -6433,14 +6433,14 @@
                         return e = this.props.giftSubEndsAt ? Object(p.d)("Your paid subscription will begin on <x:strong>{endsAt}</x:strong> after your Gift Subscription ends", {
                             "x:strong": function(e) {
                                 return d.createElement(k.W, {
-                                    type: k.Rb.Span,
+                                    type: k.Sb.Span,
                                     bold: !0
                                 }, e)
                             },
                             endsAt: Object(p.c)(new Date(this.props.giftSubEndsAt), "long")
                         }, "PersonalSubReceipt") : Object(p.d)("Active", "PersonalSubReceipt"), d.createElement(k.Xa, {
                             className: "personal-sub-receipt"
-                        }, d.createElement(k.Bb, {
+                        }, d.createElement(k.Cb, {
                             borderBottom: !0,
                             padding: {
                                 y: 3
@@ -6452,7 +6452,7 @@
                             bold: !0
                         }, Object(p.d)("Subscription for", "PersonalSubReceipt"))), d.createElement(k.Xa, {
                             display: k.X.InlineBlock
-                        }, d.createElement(k.W, null, this.props.purchaserDisplayName))), d.createElement(k.Bb, {
+                        }, d.createElement(k.W, null, this.props.purchaserDisplayName))), d.createElement(k.Cb, {
                             borderBottom: !0,
                             padding: {
                                 y: 3
@@ -6580,7 +6580,7 @@
                     }), t
                 }(d.PureComponent),
                 Z = (n("lqDW"), function() {
-                    return d.createElement(k.Bb, {
+                    return d.createElement(k.Cb, {
                         className: "payment-method--notice--unavailable",
                         display: k.X.Flex,
                         padding: {
@@ -6727,7 +6727,7 @@
                             zipCode: this.state.userZipCode,
                             zipCodeError: this.state.zipCodeError,
                             onChange: this.handleCORChange
-                        })), d.createElement(k.Bb, {
+                        })), d.createElement(k.Cb, {
                             background: k.r.Base,
                             border: !0,
                             className: "recurly-amazon-pay"
@@ -7202,7 +7202,7 @@
                             zipCode: this.state.userZipCode,
                             zipCodeError: this.state.zipCodeError,
                             onChange: this.handleCORChange
-                        })), !this.state.paymentMethodEnabled && d.createElement(Z, null), d.createElement(k.Bb, {
+                        })), !this.state.paymentMethodEnabled && d.createElement(Z, null), d.createElement(k.Cb, {
                             className: "recurly-paypal",
                             background: k.r.Base,
                             border: !0,
@@ -7614,7 +7614,7 @@
                         return Object(p.d)("More Methods", "TicketDescription")
                     }
                 },
-                Re = function(e) {
+                Fe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.paymentProviders = [{
@@ -7716,7 +7716,7 @@
                         }, t))
                     }, t
                 }(d.PureComponent),
-                Fe = function(e) {
+                je = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -7773,7 +7773,7 @@
                             }
                         }
                     }, t.prototype.render = function() {
-                        return d.createElement(k.Xa, null, d.createElement(Re, {
+                        return d.createElement(k.Xa, null, d.createElement(Fe, {
                             eligiblePaymentMethods: this.props.eligiblePaymentMethods,
                             selectedProvider: this.state.selectedProvider,
                             handleClick: this.handlePaymentMethodSelectorToggleChange,
@@ -7785,7 +7785,7 @@
                         }, this.renderPaymentMethods()))
                     }, t
                 }(d.Component),
-                je = n("85n/"),
+                Re = n("85n/"),
                 Ae = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -7869,12 +7869,12 @@
                     }, t.prototype.render = function() {
                         var e = this.props.savedPaymentMethod,
                             t = this.isPaymentMethodExpired(e);
-                        return d.createElement(d.Fragment, null, d.createElement(k.Bb, {
+                        return d.createElement(d.Fragment, null, d.createElement(k.Cb, {
                             background: k.r.Base,
                             border: !0,
                             borderRadius: k.x.Small,
                             padding: 2
-                        }, d.createElement(je.a, {
+                        }, d.createElement(Re.a, {
                             paymentType: e.paymentType,
                             cardType: e.cardType,
                             provider: e.provider,
@@ -8093,7 +8093,7 @@
                             showEuSubs: this.props.showEuSubs
                         }), this.props.configs && t.length > 0 && !(this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature) && d.createElement(k.Xa, {
                             "data-a-target": "PAYMENT_METHOD_SELECTOR"
-                        }, d.createElement(Fe, {
+                        }, d.createElement(je, {
                             handleCompletePurchase: this.props.handleCompletePurchase,
                             handleCountryChange: this.props.handleCountryChange,
                             trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
@@ -8119,10 +8119,10 @@
                         }, this.renderPaymentMethodToggle()))
                     }, t.prototype.renderWalletTitle = function() {
                         return this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature ? d.createElement(k.W, {
-                            type: k.Rb.H4,
+                            type: k.Sb.H4,
                             bold: !0
                         }, Object(p.d)("Saved Payment Method", "Wallet")) : d.createElement(k.W, {
-                            type: k.Rb.H4,
+                            type: k.Sb.H4,
                             bold: !0
                         }, Object(p.d)("Choose Your Payment Method", "Wallet"))
                     }, t.prototype.renderPaymentMethodToggle = function() {
@@ -8395,7 +8395,7 @@
                         return d.createElement(N, {
                             productDescription: this.renderTicketDescription(),
                             header: i
-                        }, !T(this.productEligibility) && d.createElement(d.Fragment, null, d.createElement(R, {
+                        }, !T(this.productEligibility) && d.createElement(d.Fragment, null, d.createElement(F, {
                             product: this.shoppingCartItem,
                             existingPurchases: this.existingPurchases,
                             productEligibility: this.productEligibility,
@@ -8477,10 +8477,10 @@
                                         return e.paymentProvider.toUpperCase() === g.B.PRIME
                                     }),
                                     r = t.find(function(t) {
-                                        return t.productType.toUpperCase() === g.M.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) < parseInt(t.productTier, 10)
+                                        return t.productType.toUpperCase() === g.O.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) < parseInt(t.productTier, 10)
                                     }),
                                     a = t.find(function(t) {
-                                        return t.productType.toUpperCase() === g.M.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) > parseInt(t.productTier, 10)
+                                        return t.productType.toUpperCase() === g.O.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) > parseInt(t.productTier, 10)
                                     }),
                                     o = t.find(function(e) {
                                         return e.paymentProvider.toUpperCase() === g.B.GOOGLE_IAB
@@ -8489,7 +8489,7 @@
                                 if (r) return I.TIER_DOWNGRADE;
                                 if (a) return o ? I.MOBILE_UPGRADE : I.TIER_UPGRADE
                             }
-                            return !this.existingPurchases || this.existingPurchases && !this.existingPurchases.details && !this.existingPurchases.compatiblePurchases || this.existingPurchases.details && this.existingPurchases.details.state === g.N.INACTIVE ? I.NEW_PURCHASE : I.UNKNOWN
+                            return !this.existingPurchases || this.existingPurchases && !this.existingPurchases.details && !this.existingPurchases.compatiblePurchases || this.existingPurchases.details && this.existingPurchases.details.state === g.P.INACTIVE ? I.NEW_PURCHASE : I.UNKNOWN
                         },
                         enumerable: !0,
                         configurable: !0
@@ -9707,7 +9707,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(s.Bb, {
+                        return a.createElement(s.Cb, {
                             className: this.isExpired ? "payment-method-display--expired" : "",
                             display: s.X.Flex,
                             justifyContent: this.props.justifyContent || s.Wa.Between,
@@ -9835,7 +9835,7 @@
                 _ = "test_selector_confirm_button",
                 T = "test_selector_buy_bits_button",
                 D = "test_selector_cancel_button",
-                R = function(e) {
+                F = function(e) {
                     var t = Object(x.a)(),
                         n = Object(f.d)("Confirm", "BitsConfrimationDialogue"),
                         i = Object(f.d)("Settings", "BitsConfrimationDialogue"),
@@ -9929,15 +9929,15 @@
                         "data-test-selector": D,
                         onClick: e.onClose,
                         type: w.F.Hollow
-                    }, e.cancelText)))), m.createElement(w.Bb, {
+                    }, e.cancelText)))), m.createElement(w.Cb, {
                         borderTop: !0,
                         padding: 1
                     }, m.createElement(w.W, {
                         "data-test-selector": N
                     }, s)))
                 },
-                F = "test_selector_buy_bits_button",
-                j = "test_selector_cancel_button",
+                j = "test_selector_buy_bits_button",
+                R = "test_selector_cancel_button",
                 A = Object(x.a)(),
                 M = function(e) {
                     var t, n = e.bitsBalance - e.cost,
@@ -9998,14 +9998,14 @@
                             right: 1
                         }
                     }, m.createElement(w.z, {
-                        "data-test-selector": F,
+                        "data-test-selector": j,
                         linkTo: e.bitsLandingPageUrl,
                         targetBlank: !0,
                         type: w.F.Default
                     }, e.buyBitsText)), m.createElement(w.Xa, {
                         display: w.X.InlineBlock
                     }, m.createElement(w.z, {
-                        "data-test-selector": j,
+                        "data-test-selector": R,
                         onClick: e.onClose,
                         type: w.F.Hollow
                     }, e.cancelText))))
@@ -10017,7 +10017,7 @@
                     if (e)
                         if (e.bitsBalance >= e.cost) {
                             var r = e.bitsBalance - e.cost;
-                            i = m.createElement(R, {
+                            i = m.createElement(F, {
                                 cost: e.cost,
                                 extensionName: e.extensionName,
                                 extensionItemLabel: e.extensionItemLabel,
@@ -10081,7 +10081,7 @@
                     }, t.prototype.render = function() {
                         if (this.props.data.loading || !this.props.data.currentUser) return null;
                         var e = this.props.showSuccessText ? m.createElement(w.W, {
-                                type: w.Rb.Span,
+                                type: w.Sb.Span,
                                 className: "extension-bits-balance-success"
                             }, Object(f.d)("Success!", "ExtensionPanelBitsBalanceDialog")) : null,
                             t = m.createElement(Z.a, {
@@ -10143,13 +10143,13 @@
                     src: e.extension.iconUrl
                 }), m.createElement(w.Xa, {
                     margin: 1,
-                    textAlign: w.Nb.Center
+                    textAlign: w.Ob.Center
                 }, m.createElement(w.W, {
                     fontSize: w.Ca.Size5
                 }, Object(f.d)("{name} is popped out.", {
                     name: m.createElement(w.W, {
                         "data-test-selector": O.ExtensionName,
-                        type: w.Rb.Span,
+                        type: w.Sb.Span,
                         bold: !0
                     }, e.extension.name)
                 }, "ExtensionPopoutPlaceholder"))), m.createElement(w.z, {
@@ -10161,7 +10161,7 @@
             var $, ee = function(e) {
                     return m.createElement(w.Xa, {
                         padding: 1
-                    }, m.createElement(w.Xa, null, m.createElement("span", null, Object(f.d)("You must be logged in to use this extension feature.", "FeatureNeedsAuthDialog")), m.createElement(w.Bb, {
+                    }, m.createElement(w.Xa, null, m.createElement("span", null, Object(f.d)("You must be logged in to use this extension feature.", "FeatureNeedsAuthDialog")), m.createElement(w.Cb, {
                         borderTop: !0,
                         margin: {
                             y: 1
@@ -10179,7 +10179,7 @@
                     var t = function(t) {
                         return m.createElement(w.Xa, null, m.createElement("span", {
                             "data-test-selector": "confirmation_message_selector"
-                        }, t), m.createElement(w.Bb, {
+                        }, t), m.createElement(w.Cb, {
                             borderTop: !0,
                             margin: {
                                 y: 1
@@ -10197,7 +10197,7 @@
                     }, t(Object(f.d)("The channel you are attempting to follow does not exist.", "FollowDialog")));
                     var n = Object(f.d)("You are about to follow {name}.", {
                             name: m.createElement(w.W, {
-                                type: w.Rb.Span,
+                                type: w.Sb.Span,
                                 bold: !0
                             }, e.currentFollowRequest.options.channel)
                         }, "FollowDialog"),
@@ -10206,7 +10206,7 @@
                         }, "FollowDialog"),
                         r = m.createElement(w.Xa, null, m.createElement("span", {
                             "data-test-selector": "confirmation_message_selector"
-                        }, n), m.createElement(w.Bb, {
+                        }, n), m.createElement(w.Cb, {
                             borderTop: !0,
                             margin: {
                                 y: 1
@@ -10225,7 +10225,7 @@
                         }, Object(f.d)("Follow", "FollowDialog"))), m.createElement(w.z, {
                             type: w.F.Hollow,
                             onClick: e.cancelFollow
-                        }, Object(f.d)("Cancel", "FollowDialog"))), m.createElement(w.Bb, {
+                        }, Object(f.d)("Cancel", "FollowDialog"))), m.createElement(w.Cb, {
                             borderTop: !0,
                             margin: {
                                 y: 1
@@ -10236,20 +10236,20 @@
                         }, m.createElement(w.Xa, {
                             flexGrow: 1
                         }, m.createElement(w.W, {
-                            type: w.Rb.Span,
+                            type: w.Sb.Span,
                             fontSize: w.Ca.Size5
-                        }, Object(f.d)("Notifications", "FollowDialog"))), m.createElement(w.Tb, {
+                        }, Object(f.d)("Notifications", "FollowDialog"))), m.createElement(w.Ub, {
                             id: "ext-follow-notification",
                             checked: e.currentFollowRequest.notifications,
                             onChange: e.onNotificationsChanged
                         })), m.createElement(w.W, {
-                            type: w.Rb.Span,
+                            type: w.Sb.Span,
                             color: w.O.Alt2,
                             fontSize: w.Ca.Size7
                         }, i)),
                         a = Object(f.d)("You are already following {name}.", {
                             name: m.createElement(w.W, {
-                                type: w.Rb.Span,
+                                type: w.Sb.Span,
                                 bold: !0
                             }, e.currentFollowRequest.options.channel)
                         }, "FollowDialog"),
@@ -10266,10 +10266,10 @@
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderGrantPermissionsButton = function() {
                         var e = Object(f.d)("Grant Permissions", "ExtensionPanel");
-                        return m.createElement(w.Ub, {
+                        return m.createElement(w.Vb, {
                             label: e,
-                            direction: w.Wb.Top,
-                            align: w.Vb.Right,
+                            direction: w.Xb.Top,
+                            align: w.Wb.Right,
                             offsetX: ".6rem"
                         }, m.createElement(w.Xa, {
                             display: w.X.Flex,
@@ -10280,10 +10280,10 @@
                         })))
                     }, t.renderRevokePermissionsButton = function() {
                         var e = Object(f.d)("Revoke Permissions", "ExtensionPanel");
-                        return m.createElement(w.Ub, {
+                        return m.createElement(w.Vb, {
                             label: e,
-                            direction: w.Wb.Top,
-                            align: w.Vb.Right,
+                            direction: w.Xb.Top,
+                            align: w.Wb.Right,
                             offsetX: ".6rem"
                         }, m.createElement(w.Xa, {
                             display: w.X.Flex,
@@ -10312,12 +10312,12 @@
                     var n = t ? this.renderRevokePermissionsButton() : this.renderGrantPermissionsButton(),
                         i = Object(f.d)("You are granting {name} the following access:", {
                             name: m.createElement(w.W, {
-                                type: w.Rb.Strong
+                                type: w.Sb.Strong
                             }, this.props.extension.name)
                         }, "Extension Panel"),
                         r = Object(f.d)("You are revoking the following access for {name}:", {
                             name: m.createElement(w.W, {
-                                type: w.Rb.Strong
+                                type: w.Sb.Strong
                             }, this.props.extension.name)
                         }, "Extension Panel");
                     return m.createElement(g.a, {
@@ -10331,21 +10331,21 @@
                         size: w.w.Small
                     }, m.createElement(w.Xa, {
                         padding: 1
-                    }, m.createElement(w.Xa, null, t ? r : i), m.createElement(w.Bb, {
+                    }, m.createElement(w.Xa, null, t ? r : i), m.createElement(w.Cb, {
                         borderTop: !0,
                         margin: {
                             y: 1
                         }
                     }), m.createElement(w.Xa, null, m.createElement(w.W, {
-                        type: w.Rb.P,
+                        type: w.Sb.P,
                         bold: !0
                     }, Object(f.d)("Your Twitch User ID", "Extension Panel")), m.createElement(w.W, {
-                        type: w.Rb.P
+                        type: w.Sb.P
                     }, Object(f.d)("Allows this extension to know your User ID on Twitch.", "Extension Panel")), m.createElement("a", {
                         "data-test-selector": $.ManagePermissionsLink,
                         href: "https://twitch.tv/settings/connections",
                         target: "_blank"
-                    }, Object(f.d)("Manage Permissions", "Extension Panel"))), m.createElement(w.Bb, {
+                    }, Object(f.d)("Manage Permissions", "Extension Panel"))), m.createElement(w.Cb, {
                         borderTop: !0,
                         margin: {
                             y: 1
@@ -10377,10 +10377,10 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = Object(f.d)("Pop Out Extension", "PopoutButton");
-                        return m.createElement("span", null, m.createElement(w.Ub, {
+                        return m.createElement("span", null, m.createElement(w.Vb, {
                             label: e,
-                            direction: w.Wb.Top,
-                            align: w.Vb.Right,
+                            direction: w.Xb.Top,
+                            align: w.Wb.Right,
                             offsetX: ".6rem"
                         }, m.createElement(w.Xa, {
                             display: w.X.Flex,
@@ -10429,7 +10429,7 @@
                         }
                     }, m.createElement(w.Xa, {
                         fullWidth: !0,
-                        textAlign: w.Nb.Right
+                        textAlign: w.Ob.Right
                     }, m.createElement(w.W, {
                         fontSize: w.Ca.Size6,
                         bold: !0
@@ -10447,7 +10447,7 @@
                     }, m.createElement(w.W, {
                         className: "t-extension-panel__description",
                         color: w.O.Alt2
-                    }, s.description), m.createElement(w.Bb, {
+                    }, s.description), m.createElement(w.Cb, {
                         borderBottom: !0,
                         margin: {
                             y: 1
@@ -10470,7 +10470,7 @@
                         "data-test-selector": "purchase_ui_cancel_selector",
                         onClick: n,
                         type: w.F.Hollow
-                    }, Object(f.d)("Cancel", "PurchaseConfirmation")))), !a && m.createElement(w.Xa, null, m.createElement(w.Bb, {
+                    }, Object(f.d)("Cancel", "PurchaseConfirmation")))), !a && m.createElement(w.Xa, null, m.createElement(w.Cb, {
                         borderBottom: !0,
                         margin: {
                             y: 1
@@ -10495,7 +10495,7 @@
                         }
                     }, m.createElement(w.W, {
                         fontSize: w.Ca.Size5
-                    }, Object(f.d)("You must be logged in to use this extension feature.", "PurchaseConfirmation"))), m.createElement(w.Bb, {
+                    }, Object(f.d)("You must be logged in to use this extension feature.", "PurchaseConfirmation"))), m.createElement(w.Cb, {
                         borderBottom: !0,
                         margin: {
                             y: 1
@@ -10552,10 +10552,10 @@
                 }, t.prototype.render = function() {
                     if (!this.props.isPopout || !this.state.isRestoreDefaultSizeVisible) return null;
                     var e = Object(f.d)("Resize to Default", "RestoreDefaultSizeButton");
-                    return m.createElement("span", null, m.createElement(w.Ub, {
+                    return m.createElement("span", null, m.createElement(w.Vb, {
                         label: e,
-                        direction: w.Wb.Top,
-                        align: w.Vb.Right,
+                        direction: w.Xb.Top,
+                        align: w.Wb.Right,
                         offsetX: ".6rem"
                     }, m.createElement(w.Xa, {
                         display: w.X.Flex,
@@ -10585,7 +10585,7 @@
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e = null;
                     return e = this.state.declined ? m.createElement(m.Fragment, null, m.createElement(w.W, {
-                        type: w.Rb.P,
+                        type: w.Sb.P,
                         "data-test-selector": se.DeclinedMessage
                     }, Object(f.d)("You’ve declined to use this test extension. To use it, please refresh this page and select accept.", "TestExtensionDialog")), m.createElement(w.Xa, {
                         padding: {
@@ -10598,7 +10598,7 @@
                         linkTo: "https://help.twitch.tv/customer/portal/articles/2861187-how-to-use-extensions",
                         type: w.F.Hollow
                     }, Object(f.d)("Learn More", "TestExtensionDialog")))) : m.createElement(m.Fragment, null, m.createElement(w.W, {
-                        type: w.Rb.P,
+                        type: w.Sb.P,
                         "data-test-selector": se.WarningMessage
                     }, Object(f.d)("This is a Test Extension that Twitch has not evaluated; it may not be ready for primetime. Proceed only if you are familiar with the developer, the Extension, or Channel.", "TestExtensionDialog"), m.createElement(w.Pa, {
                         padding: {
@@ -10626,14 +10626,14 @@
                         "data-test-selector": se.AcceptButton
                     }, Object(f.d)("Accept", "TestExtensionDialog"))))), m.createElement(w.o, {
                         ratio: w.p.Aspect3x4
-                    }, m.createElement(w.Bb, {
+                    }, m.createElement(w.Cb, {
                         alignItems: w.f.Center,
                         border: !0,
                         display: w.X.Flex,
                         justifyContent: w.Wa.Center,
                         padding: 2
                     }, m.createElement(w.Xa, null, m.createElement(w.W, {
-                        type: w.Rb.Strong
+                        type: w.Sb.Strong
                     }, this.props.extensionName), e)))
                 }, t
             }(m.Component);
@@ -10658,7 +10658,7 @@
                             testExtensionAccepted: !1
                         }, t.renderExtensionFrame = function() {
                             var e, n = d("extension-panel-extension-frame", ((e = {})["extension-panel-extension-frame__popout"] = t.props.isPopout, e));
-                            return t.extension.state === p.ExtensionState.Released || t.state.testExtensionAccepted ? m.createElement(w.Xa, null, m.createElement(w.Bb, {
+                            return t.extension.state === p.ExtensionState.Released || t.state.testExtensionAccepted ? m.createElement(w.Xa, null, m.createElement(w.Cb, {
                                 borderTop: !0,
                                 borderRight: !0,
                                 borderLeft: !0
@@ -11012,13 +11012,13 @@
                                 right: 2
                             },
                             "data-test-selector": le.ExtensionPanel
-                        }, a, m.createElement(w.Bb, {
+                        }, a, m.createElement(w.Cb, {
                             borderRight: !0,
                             borderBottom: !0,
                             borderLeft: !0,
                             flexDirection: w.Aa.Column,
                             display: w.X.Flex
-                        }, m.createElement(w.Bb, {
+                        }, m.createElement(w.Cb, {
                             display: w.X.Flex,
                             alignItems: w.f.Center
                         }, m.createElement(w.Xa, {
@@ -11043,10 +11043,10 @@
                             isLinkEnabled: this.state.isLinkEnabled,
                             onLinkIdentity: this.onLinkIdentity,
                             onUnlinkIdentity: this.onUnlinkIdentity
-                        }), this.renderFollowConfirmation(), this.renderFeatureNeedsAuthBalloon(), this.renderUseBitsConfirmation(), m.createElement(g.a, null, m.createElement("span", null, m.createElement(w.Ub, {
+                        }), this.renderFollowConfirmation(), this.renderFeatureNeedsAuthBalloon(), this.renderUseBitsConfirmation(), m.createElement(g.a, null, m.createElement("span", null, m.createElement(w.Vb, {
                             label: t,
-                            direction: w.Wb.Top,
-                            align: w.Vb.Right,
+                            direction: w.Xb.Top,
+                            align: w.Wb.Right,
                             offsetX: ".6rem"
                         }, m.createElement(w.Xa, {
                             display: w.X.Flex,
@@ -11063,10 +11063,10 @@
                             display: w.X.Flex,
                             justifyContent: w.Wa.Between,
                             flexWrap: w.Ba.NoWrap
-                        }, m.createElement(w.Bb, {
+                        }, m.createElement(w.Cb, {
                             padding: 1,
                             flexShrink: 3
-                        }, m.createElement(w.W, null, this.extension.summary)), m.createElement(w.Bb, {
+                        }, m.createElement(w.W, null, this.extension.summary)), m.createElement(w.Cb, {
                             borderLeft: !0,
                             margin: 1
                         }, m.createElement(w.A, {
@@ -11455,14 +11455,14 @@
                         style: {
                             backgroundImage: "url(" + e.bannerImageURL
                         }
-                    }, o.createElement(y.Bb, {
+                    }, o.createElement(y.Cb, {
                         background: y.r.Overlay,
                         position: y.hb.Absolute,
                         fullHeight: !0,
                         fullWidth: !0
                     }), o.createElement(y.Xa, {
                         className: "channel-subscription-header__banner-background",
-                        textAlign: y.Nb.Center
+                        textAlign: y.Ob.Center
                     }, o.createElement(y.Xa, {
                         padding: {
                             top: 3
@@ -11474,7 +11474,7 @@
                         size: 96,
                         src: e.profileImageURL
                     })))), o.createElement(y.Xa, {
-                        textAlign: y.Nb.Center,
+                        textAlign: y.Ob.Center,
                         padding: {
                             bottom: .5
                         }
@@ -11483,12 +11483,12 @@
                             top: 3
                         }
                     }, o.createElement(y.W, {
-                        type: y.Rb.H4,
+                        type: y.Sb.H4,
                         bold: !0
                     }, e.ownerDisplayName)), o.createElement(y.Pa, {
                         margin: .5
                     }, o.createElement(y.W, {
-                        type: y.Rb.H5
+                        type: y.Sb.H5
                     }, e.productDisplayName)), o.createElement(v.a, {
                         price: e.productPrice,
                         interval: e.productPriceInterval,
@@ -11504,16 +11504,16 @@
                     return o.createElement(P.a, null, o.createElement(y.Xa, {
                         className: "error-ticket-description__header",
                         padding: 2
-                    }, o.createElement(y.Bb, {
+                    }, o.createElement(y.Cb, {
                         fullHeight: !0,
                         background: y.r.Alt2
                     }, o.createElement(k.a, null))), o.createElement(C.a, {
                         collapsable: !0
-                    }, o.createElement(y.Bb, {
+                    }, o.createElement(y.Cb, {
                         className: "error-ticket-description__body",
                         padding: 2,
                         borderTop: !0
-                    }, o.createElement(y.Bb, {
+                    }, o.createElement(y.Cb, {
                         fullHeight: !0,
                         background: y.r.Alt2
                     }, o.createElement(k.a, null)))))
@@ -11522,12 +11522,12 @@
                     return o.createElement(P.a, null, o.createElement(y.Xa, {
                         className: "placeholder-ticket-description__header",
                         padding: 2
-                    }, o.createElement(y.Bb, {
+                    }, o.createElement(y.Cb, {
                         fullHeight: !0,
                         background: y.r.Alt2
                     })), o.createElement(C.a, {
                         collapsable: !0
-                    }, o.createElement(y.Bb, {
+                    }, o.createElement(y.Cb, {
                         padding: 2,
                         borderTop: !0
                     }, o.createElement(y.gb, {
@@ -11537,7 +11537,7 @@
                 x = n("KYZ7"),
                 I = n.n(x),
                 w = (n("R9u/"), function(e) {
-                    return o.createElement(P.a, null, o.createElement(y.Bb, {
+                    return o.createElement(P.a, null, o.createElement(y.Cb, {
                         background: y.r.Base
                     }, o.createElement(y.Xa, {
                         className: "turbo-ticket-description__banner-image",
@@ -11549,9 +11549,9 @@
                         className: "turbo-ticket-description__banner-logo",
                         src: I.a,
                         alt: Object(c.d)("Twitch Turbo Logo", "TurboTicketDescription")
-                    })), o.createElement(y.Bb, {
+                    })), o.createElement(y.Cb, {
                         borderBottom: !0,
-                        textAlign: y.Nb.Center,
+                        textAlign: y.Ob.Center,
                         padding: 2
                     }, o.createElement(v.a, {
                         price: e.productPrice,
@@ -11595,7 +11595,7 @@
                 N = n("GnwI"),
                 _ = n("9fjZ"),
                 T = l.a.wrap(function() {
-                    return n.e(192).then(n.bind(null, "skV9"))
+                    return n.e(191).then(n.bind(null, "skV9"))
                 }, "CampaignsTicketDescription"),
                 D = function(e) {
                     function t() {
@@ -11629,7 +11629,7 @@
                             productPriceInterval: t.interval && t.interval.unit,
                             productPriceTaxInclusive: this.taxInclusive,
                             showEuSubs: this.props.showEuSubs
-                        }) : o.createElement(P.a, null, o.createElement(y.Bb, {
+                        }) : o.createElement(P.a, null, o.createElement(y.Cb, {
                             background: y.r.Base
                         }, o.createElement(E, {
                             bannerImageURL: t.owner && t.owner.bannerImageURL,
@@ -11741,7 +11741,7 @@
                         configurable: !0
                     }), t
                 }(o.Component),
-                R = Object(s.compose)(Object(N.b)("TicketDescription"), Object(u.a)(_, {
+                F = Object(s.compose)(Object(N.b)("TicketDescription"), Object(u.a)(_, {
                     options: function(e) {
                         return {
                             variables: {
@@ -11751,13 +11751,13 @@
                         }
                     }
                 }))(D);
-            var F = Object(i.connect)(function(e) {
+            var j = Object(i.connect)(function(e) {
                 return {
                     sessionUser: Object(r.e)(e)
                 }
-            })(R);
+            })(F);
             n.d(t, "a", function() {
-                return F
+                return j
             })
         },
         VK0B: function(e, t) {

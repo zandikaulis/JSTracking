@@ -354,7 +354,7 @@
             ! function(e) {
                 e.SuggestedTags = "suggested-tags"
             }(n || (n = {}));
-            var y, S, E = function(e) {
+            var S, y, C = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -413,17 +413,17 @@
                         }, Object(l.d)("All Tags", "AllTagsTitle")))) : null
                     }, t
                 }(r.Component),
-                C = Object(p.a)(k, {
+                E = Object(p.a)(k, {
                     options: function(e) {
                         return {
                             variables: {
                                 gameName: e.gameName,
-                                tagType: h.O.TOP,
+                                tagType: h.Q.TOP,
                                 limit: 50
                             }
                         }
                     }
-                })(E),
+                })(C),
                 N = a("79jw"),
                 _ = function(e) {
                     function t() {
@@ -477,10 +477,10 @@
             a("97MP");
             ! function(e) {
                 e[e.TagAll = 0] = "TagAll", e[e.TagAllMinusAutomation = 1] = "TagAllMinusAutomation", e[e.TagCategory = 2] = "TagCategory", e[e.StreamTag = 3] = "StreamTag"
-            }(y || (y = {})),
+            }(S || (S = {})),
             function(e) {
                 e.SearchContent = "tag-search-search-content", e.SearchDropdown = "search-dropdown-selector"
-            }(S || (S = {}));
+            }(y || (y = {}));
             var I = function(e) {
                     function t(t) {
                         var a = e.call(this, t) || this;
@@ -490,14 +490,14 @@
                             searchTerm: ""
                         }, a.languageCode = Object(w.a)(), a.renderSearchContent = function() {
                             var e = null;
-                            return e = a.props.type === y.StreamTag ? a.renderStreamTagResults() : a.renderTagResults(), r.createElement(d.b, {
+                            return e = a.props.type === S.StreamTag ? a.renderStreamTagResults() : a.renderTagResults(), r.createElement(d.b, {
                                 className: "tag-search__scrollable-area",
                                 suppressScrollX: !0
                             }, r.createElement(v.Xa, {
-                                "data-test-selector": S.SearchContent
+                                "data-test-selector": y.SearchContent
                             }, a.renderSuggestedTags(), e))
                         }, a.renderTagSearchResult = function(e) {
-                            var t = Object(w.b)(e, a.props.type === y.TagAllMinusAutomation),
+                            var t = Object(w.b)(e, a.props.type === S.TagAllMinusAutomation),
                                 n = "tag_scope" in e ? e.tag_scope : void 0;
                             return r.createElement(b, {
                                 key: t.id,
@@ -507,20 +507,20 @@
                                 tag: t
                             })
                         }, a.renderStreamTagResults = function() {
-                            return a.props.type === y.StreamTag && a.state.isOpen ? "" === a.state.searchTerm ? r.createElement(O, {
+                            return a.props.type === S.StreamTag && a.state.isOpen ? "" === a.state.searchTerm ? r.createElement(O, {
                                 categoryName: a.props.categoryName,
                                 onAddTag: a.onTagResultSelected,
                                 tagsLimit: 100
                             }) : !a.state.searchResults && a.state.searching ? a.renderLoading() : a.state.searchResults && a.state.searchResults.streamTags && a.state.searchResults.streamTags.hits.length ? a.state.searchResults.streamTags.hits.map(a.renderTagSearchResult) : a.renderNoResults() : null
                         }, a.renderTagResults = function() {
-                            return a.state.isOpen ? a.props.type === y.TagAll && "" === a.state.searchTerm ? r.createElement(O, {
+                            return a.state.isOpen ? a.props.type === S.TagAll && "" === a.state.searchTerm ? r.createElement(O, {
                                 onAddTag: a.onTagResultSelected,
                                 tagsLimit: 100
                             }) : !a.state.searchResults && a.state.searching ? a.renderLoading() : a.state.searchResults && a.state.searchResults.tags && a.state.searchResults.tags.hits.length ? a.state.searchResults.tags.hits.map(a.renderTagSearchResult) : a.renderNoResults() : null
                         }, a.setTagSearchRef = function(e) {
                             a.tagSearch = e
                         }, a.onTagResultSelected = function(e, t) {
-                            if (a.toggleTagSearch(!1), a.clearSearchTerm(), a.props.type === y.TagCategory && "SCOPE_ALL" === t ? l.p.history.push(A.a.Popular) : a.props.type === y.TagAll && "SCOPE_CATEGORY" === t && l.p.history.push(A.a.Games), a.props.onTagClick && (a.props.onTagClick(e), a.props.section && a.props.numSelectedTags)) {
+                            if (a.toggleTagSearch(!1), a.clearSearchTerm(), a.props.type === S.TagCategory && "SCOPE_ALL" === t ? l.p.history.push(A.a.Popular) : a.props.type === S.TagAll && "SCOPE_CATEGORY" === t && l.p.history.push(A.a.Games), a.props.onTagClick && (a.props.onTagClick(e), a.props.section && a.props.numSelectedTags)) {
                                 var n = {
                                     section: a.props.section,
                                     tagPosition: a.props.numSelectedTags,
@@ -535,7 +535,7 @@
                                 searchTerm: e,
                                 searching: !0
                             }, function() {
-                                (a.props.type !== y.TagAll && a.props.type !== y.StreamTag || a.props.type === y.TagAll && "" !== a.state.searchTerm || a.props.type === y.StreamTag && "" !== a.state.searchTerm) && (a.inputTimeout = setTimeout(function() {
+                                (a.props.type !== S.TagAll && a.props.type !== S.StreamTag || a.props.type === S.TagAll && "" !== a.state.searchTerm || a.props.type === S.StreamTag && "" !== a.state.searchTerm) && (a.inputTimeout = setTimeout(function() {
                                     a.search(a.state.searchTerm)
                                 }, 200))
                             })
@@ -564,7 +564,7 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         return r.createElement(c.a, {
                             autoFocus: this.props.autoFocus,
-                            "data-test-selector": S.SearchDropdown,
+                            "data-test-selector": y.SearchDropdown,
                             inline: this.props.inline,
                             inputSize: this.props.inputSize,
                             onChange: this.onInputChange,
@@ -592,11 +592,11 @@
                             }
                         }, Object(l.d)("No results found", "TagSearch"))
                     }, t.prototype.renderSuggestedTags = function() {
-                        if (this.props.type !== y.TagAllMinusAutomation || "" !== this.state.searchTerm) return null;
+                        if (this.props.type !== S.TagAllMinusAutomation || "" !== this.state.searchTerm) return null;
                         var e = this.props.selectedTags && this.props.selectedTags.map(function(e) {
                             return e.id
                         }) || [];
-                        return r.createElement(v.Xa, null, r.createElement(C, {
+                        return r.createElement(v.Xa, null, r.createElement(E, {
                             gameName: this.props.categoryName,
                             onAddTag: this.onTagResultSelected,
                             selectedTagIDs: e
@@ -610,7 +610,7 @@
                                         return e = e || "", t = {
                                             hitsPerPage: 100,
                                             restrictSearchableAttributes: ["localizations." + this.languageCode, "tag_name"]
-                                        }, a = g.a.Tags, this.props.type === y.TagAllMinusAutomation ? (t.facetFilters = '["automated:false", "tag_scope:SCOPE_ALL"]', this.props.showAllDashboardTags && (t.hitsPerPage = 300)) : this.props.type === y.TagAll ? this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:SCOPE_ALL" : t.facetFilters = '[["tag_scope:SCOPE_ALL", "tag_scope:SCOPE_CATEGORY"]]' : this.props.type === y.TagCategory ? "" === e || this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:SCOPE_CATEGORY" : t.facetFilters = '[["tag_scope:SCOPE_ALL", "tag_scope:SCOPE_CATEGORY"]]' : this.props.type === y.StreamTag && (a = g.a.StreamTags, t.facetFilters = "category_id:" + this.props.categoryID), [4, this.searchClient.queryForType(a, e, u.a(), t)];
+                                        }, a = g.a.Tags, this.props.type === S.TagAllMinusAutomation ? (t.facetFilters = '["automated:false", "tag_scope:SCOPE_ALL"]', this.props.showAllDashboardTags && (t.hitsPerPage = 300)) : this.props.type === S.TagAll ? this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:SCOPE_ALL" : t.facetFilters = '[["tag_scope:SCOPE_ALL", "tag_scope:SCOPE_CATEGORY"]]' : this.props.type === S.TagCategory ? "" === e || this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:SCOPE_CATEGORY" : t.facetFilters = '[["tag_scope:SCOPE_ALL", "tag_scope:SCOPE_CATEGORY"]]' : this.props.type === S.StreamTag && (a = g.a.StreamTags, t.facetFilters = "category_id:" + this.props.categoryID), [4, this.searchClient.queryForType(a, e, u.a(), t)];
                                     case 1:
                                         return n = i.sent(), this.setState({
                                             searchResults: n,
@@ -623,9 +623,9 @@
                 }(r.Component),
                 L = Object(o.compose)(s.a)(I);
             a.d(t, "b", function() {
-                return y
-            }), a.d(t, !1, function() {
                 return S
+            }), a.d(t, !1, function() {
+                return y
             }), a.d(t, !1, function() {
                 return I
             }), a.d(t, "a", function() {
@@ -1009,10 +1009,10 @@
                         padding: {
                             y: 1
                         },
-                        zIndex: o.ec.Above
-                    }, i.createElement(o.Bb, {
+                        zIndex: o.fc.Above
+                    }, i.createElement(o.Cb, {
                         color: o.O.Alt2,
-                        textAlign: o.Nb.Center,
+                        textAlign: o.Ob.Center,
                         flexShrink: 1
                     }, i.createElement(o.qb, {
                         asset: o.rb.DeadGlitch,
@@ -1022,12 +1022,12 @@
                         margin: {
                             top: 1
                         },
-                        textAlign: o.Nb.Center
+                        textAlign: o.Ob.Center
                     }, i.createElement(o.W, {
-                        type: o.Rb.H4,
+                        type: o.Sb.H4,
                         "data-test-selector": "search-error-message"
                     }, Object(s.d)("Search is not available at this time", "DropdownSearchError"))), i.createElement(o.W, {
-                        type: o.Rb.P
+                        type: o.Sb.P
                     }, Object(s.d)("Please try again later", "DropdownSearchError")))
                 },
                 c = a("8Ad5"),
@@ -1086,13 +1086,13 @@
                             });
                         return this.props.inline ? i.createElement(r.a, {
                             onClickOut: this.onClickOut
-                        }, i.createElement(o.Bb, {
+                        }, i.createElement(o.Cb, {
                             background: this.state.isInputFocused || this.state.isOpen ? o.r.Base : void 0,
                             borderRadius: o.x.Large,
                             padding: .5,
                             position: o.hb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, a, e && i.createElement(o.Bb, {
+                        }, a, e && i.createElement(o.Cb, {
                             attachLeft: !0,
                             background: o.r.Base,
                             borderRadius: o.x.Large,
@@ -1102,7 +1102,7 @@
                                 y: 1
                             },
                             position: o.hb.Absolute,
-                            zIndex: o.ec.Above,
+                            zIndex: o.fc.Above,
                             elevation: 3
                         }, i.createElement("div", {
                             tabIndex: 0,
@@ -2024,7 +2024,7 @@
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(g.Bb, {
+                    return r.createElement(g.Cb, {
                         className: "edit-broadcast__container",
                         background: g.r.Base,
                         padding: {
@@ -2037,8 +2037,8 @@
                             bottom: 1
                         }
                     }, r.createElement(g.W, {
-                        type: g.Rb.H4
-                    }, Object(l.d)("Broadcast Options", "EditBroadcastModal"))), r.createElement(g.Bb, {
+                        type: g.Sb.H4
+                    }, Object(l.d)("Broadcast Options", "EditBroadcastModal"))), r.createElement(g.Cb, {
                         borderTop: !0,
                         margin: {
                             top: 2
@@ -2090,9 +2090,9 @@
                 b = a("N3I0"),
                 T = a("GIun"),
                 k = a("8/mp"),
-                y = a("N0BP"),
-                S = a("Ue10"),
-                E = function(e) {
+                S = a("N0BP"),
+                y = a("Ue10"),
+                C = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClick = function() {
@@ -2100,33 +2100,33 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(S.Ua, o.__assign({
+                        return c.createElement(y.Ua, o.__assign({
                             onClick: this.onClick,
                             tabIndex: -1
-                        }, Object(y.a)(this.props)), c.createElement(S.Xa, {
+                        }, Object(S.a)(this.props)), c.createElement(y.Xa, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, c.createElement(S.G, {
+                        }, c.createElement(y.G, {
                             row: !0
-                        }, c.createElement(S.I, {
+                        }, c.createElement(y.I, {
                             alt: this.props.game.name,
                             src: "https://static-cdn.jtvnw.net/ttv-boxart/" + this.props.game.name + "-40x55.jpg",
-                            size: S.J.Size3,
-                            aspect: S.p.BoxArt
-                        }), c.createElement(S.H, {
-                            overflow: S.cb.Hidden
-                        }, c.createElement(S.Pa, {
+                            size: y.J.Size3,
+                            aspect: y.p.BoxArt
+                        }), c.createElement(y.H, {
+                            overflow: y.cb.Hidden
+                        }, c.createElement(y.Pa, {
                             padding: {
                                 x: 1
                             }
-                        }, c.createElement(S.W, {
-                            type: S.Rb.P
+                        }, c.createElement(y.W, {
+                            type: y.Sb.P
                         }, this.props.game.name))))))
                     }, t
                 }(c.Component),
-                C = function(e) {
+                E = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.gameSearch = null, t.setGameSearchRef = function(e) {
@@ -2141,7 +2141,7 @@
                         var e = this,
                             t = Object(u.d)("Category", "GameSearch"),
                             a = Object(u.d)("Search for a category", "GameSearch");
-                        return c.createElement(S.Ea, {
+                        return c.createElement(y.Ea, {
                             error: this.props.error,
                             errorMessage: this.props.errorMessage,
                             label: t
@@ -2151,7 +2151,7 @@
                             placeholder: a,
                             balloonProps: {
                                 show: this.props.isGameSearchOpen,
-                                direction: S.v.Bottom
+                                direction: y.v.Bottom
                             }
                         }, c.createElement(k.b, {
                             className: "edit-broadcast__game-search",
@@ -2159,7 +2159,7 @@
                         }, c.createElement("div", null, this.props.gameResults && this.props.gameResults.hits.map(function(t) {
                             return c.createElement(T.a, {
                                 key: t.objectID
-                            }, c.createElement(E, {
+                            }, c.createElement(C, {
                                 game: t,
                                 onClick: e.props.onGameResultSelected,
                                 key: t.objectID
@@ -2208,7 +2208,7 @@
                         }), a
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(C, o.__assign({}, this.props, {
+                        return c.createElement(E, o.__assign({}, this.props, {
                             onGameInputChange: this.onGameInputChange,
                             isGameSearchOpen: this.state.isGameSearchOpen,
                             gameResults: this.state.gameResults,
@@ -2479,36 +2479,36 @@
                     }, t.prototype.render = function() {
                         var e = this.props.cancelComponent,
                             t = this.state.requestState;
-                        return this.props.data.error ? null : c.createElement(S.Xa, {
+                        return this.props.data.error ? null : c.createElement(y.Xa, {
                             fullHeight: !0,
-                            display: S.X.Flex,
-                            flexDirection: S.Aa.Column,
-                            alignItems: S.f.Center,
-                            justifyContent: S.Wa.Center
-                        }, c.createElement(S.Xa, {
+                            display: y.X.Flex,
+                            flexDirection: y.Aa.Column,
+                            alignItems: y.f.Center,
+                            justifyContent: y.Wa.Center
+                        }, c.createElement(y.Xa, {
                             fullWidth: !0
-                        }, this.getContent(), c.createElement(S.Xa, {
+                        }, this.getContent(), c.createElement(y.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, c.createElement(S.U, {
+                        }, c.createElement(y.U, {
                             targetBlank: !0,
                             to: F.b
-                        }, Object(u.d)("Your content must follow our guidelines", "EditBroadcastComponent"))), c.createElement(S.Xa, {
-                            alignItems: S.f.Start,
-                            display: S.X.Flex,
-                            flexDirection: S.Aa.Row,
+                        }, Object(u.d)("Your content must follow our guidelines", "EditBroadcastComponent"))), c.createElement(y.Xa, {
+                            alignItems: y.f.Start,
+                            display: y.X.Flex,
+                            flexDirection: y.Aa.Row,
                             fullWidth: !0,
-                            justifyContent: S.Wa.Start,
+                            justifyContent: y.Wa.Start,
                             margin: {
                                 top: 1
                             }
-                        }, c.createElement(S.z, {
+                        }, c.createElement(y.z, {
                             disabled: !this.state.loaded || this.state.buttonDisabled || t === s.Fetching || t === s.Errored,
                             fullWidth: !e,
-                            icon: t === s.Complete ? S.rb.Check : void 0,
+                            icon: t === s.Complete ? y.rb.Check : void 0,
                             onClick: this.handleSubmit,
-                            state: t === s.Complete ? S.E.Success : S.E.Default
+                            state: t === s.Complete ? y.E.Success : y.E.Default
                         }, this.getButtonText()), e || null)))
                     }, t.prototype.getButtonText = function() {
                         switch (this.state.requestState) {
@@ -2533,34 +2533,34 @@
                                 o = x(a.errorType),
                                 l = x(i.errorType),
                                 d = x(s.errorType);
-                            e = c.createElement(c.Fragment, null, c.createElement(S.Xa, {
+                            e = c.createElement(c.Fragment, null, c.createElement(y.Xa, {
                                 "data-test-selector": r.PrimaryContent,
                                 margin: {
                                     bottom: 2
                                 }
-                            }, c.createElement(S.Ea, {
+                            }, c.createElement(y.Ea, {
                                 "data-test-selector": r.TitleLabel,
                                 error: !!o,
                                 errorMessage: o,
                                 label: Object(u.d)("Title", "EditBroadcastComponent"),
                                 labelOptional: this.getRemainingCharacters(a.value)
-                            }, c.createElement(S.Ob, {
+                            }, c.createElement(y.Pb, {
                                 "data-test-selector": r.TitleInput,
                                 onChange: this.handleChangeByType(n.Title),
                                 noResize: !0,
                                 placeholder: Object(u.d)("Enter a title", "EditBroadcastComponent"),
                                 rows: 3,
                                 value: this.state.fields.title.value
-                            }))), this.state.fields.goLiveNotification.isEnabled && c.createElement(S.Xa, {
+                            }))), this.state.fields.goLiveNotification.isEnabled && c.createElement(y.Xa, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, c.createElement(S.Ea, {
+                            }, c.createElement(y.Ea, {
                                 error: !!l,
                                 errorMessage: l,
                                 label: Object(u.d)("Go Live Notification", "EditBroadcastComponent"),
                                 labelOptional: this.getRemainingCharacters(i.value)
-                            }, c.createElement(S.Ob, {
+                            }, c.createElement(y.Pb, {
                                 "data-test-selector": r.GoLiveNotification,
                                 noResize: !0,
                                 onChange: this.handleChangeByType(n.GoLiveNotification),
@@ -2569,7 +2569,7 @@
                                 }, "EditBroadcastComponent"),
                                 rows: 3,
                                 value: this.state.fields.goLiveNotification.value
-                            }))), c.createElement(S.Xa, {
+                            }))), c.createElement(y.Xa, {
                                 margin: {
                                     bottom: 2
                                 }
@@ -2579,7 +2579,7 @@
                                 onGameResultSelected: this.handleGameResultSelected,
                                 onGameCleared: this.handleGameCleared,
                                 selectedGame: this.state.selectedGame
-                            })), this.renderTagSelect(), c.createElement(S.Xa, {
+                            })), this.renderTagSelect(), c.createElement(y.Xa, {
                                 margin: {
                                     bottom: 1
                                 }
@@ -2588,28 +2588,28 @@
                                 onChange: this.handleLanguageChange,
                                 defaultLanguage: this.state.fields.language.value || "en",
                                 disabled: !1
-                            }), c.createElement(S.Xa, {
+                            }), c.createElement(y.Xa, {
                                 margin: {
                                     top: .5
                                 }
-                            }, c.createElement(S.N, {
+                            }, c.createElement(y.N, {
                                 label: Object(u.d)("Restrict Chat Language", "EditBroadcastComponent"),
                                 onChange: this.handleBroadcastLanguageModeEnabledChange,
                                 checked: this.state.broadcasterLanguageModeEnabled,
                                 "data-test-selector": r.BroadcastLanguageMode
                             }))))
-                        } else e = c.createElement(S.Xa, {
+                        } else e = c.createElement(y.Xa, {
                             fullWidth: !0,
                             padding: {
                                 y: 2
                             }
-                        }, c.createElement(S.Za, {
+                        }, c.createElement(y.Za, {
                             fillContent: !0
                         }));
                         return e
                     }, t.prototype.renderTagSelect = function() {
                         var e = x(this.state.fields.tags.errorType);
-                        return c.createElement(S.Xa, {
+                        return c.createElement(y.Xa, {
                             margin: {
                                 bottom: 2
                             }
@@ -2845,9 +2845,9 @@
                                     bottom: .5
                                 },
                                 key: t.id + "_" + a
-                            }, r.createElement(c.Kb, {
+                            }, r.createElement(c.Lb, {
                                 "data-test-selector": n.SelectedTag,
-                                action: t.isAutomated ? void 0 : c.Lb.Remove,
+                                action: t.isAutomated ? void 0 : c.Mb.Remove,
                                 label: t.localizedName || t.tagName,
                                 key: t.id,
                                 onClick: t.isAutomated ? void 0 : e.props.onRemoveTag,

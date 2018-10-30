@@ -6,30 +6,30 @@
                 return s
             });
             var r = n("mrSG"),
-                o = n("q1tI"),
-                a = n("/7QA"),
+                a = n("q1tI"),
+                o = n("/7QA"),
                 i = n("2Ygb");
 
             function s(e, t) {
-                var n = o.createContext(t),
+                var n = a.createContext(t),
                     s = n.Consumer,
                     c = n.Provider;
                 return {
                     withContext: function(t) {
                         return function(n) {
-                            var a;
-                            return (a = function(e) {
-                                function a() {
+                            var o;
+                            return (o = function(e) {
+                                function o() {
                                     return null !== e && e.apply(this, arguments) || this
                                 }
-                                return r.__extends(a, e), a.prototype.render = function() {
+                                return r.__extends(o, e), o.prototype.render = function() {
                                     var e = this;
-                                    return o.createElement(s, null, function(a) {
-                                        var i = t(a);
-                                        return o.createElement(n, r.__assign({}, e.props, i))
+                                    return a.createElement(s, null, function(o) {
+                                        var i = t(o);
+                                        return a.createElement(n, r.__assign({}, e.props, i))
                                     })
-                                }, a
-                            }(o.Component)).displayName = Object(i.a)("With" + e, n), a
+                                }, o
+                            }(a.Component)).displayName = Object(i.a)("With" + e, n), o
                         }
                     },
                     InnerProvider: function(t) {
@@ -37,20 +37,20 @@
                             return null !== t && t.apply(this, arguments) || this
                         }
                         return r.__extends(n, t), n.prototype.componentDidMount = function() {
-                            "object" === typeof this.props.value && this.props.value || a.k.error(new Error(n.displayName + " rendered without an appropriate initial value"), "Set an initial value in your provider component at mount time.")
+                            "object" === typeof this.props.value && this.props.value || o.k.error(new Error(n.displayName + " rendered without an appropriate initial value"), "Set an initial value in your provider component at mount time.")
                         }, n.prototype.render = function() {
-                            return o.createElement(c, {
+                            return a.createElement(c, {
                                 value: this.props.value
                             }, this.props.children)
                         }, n.displayName = "Inner" + e + "Provider", n
-                    }(o.Component)
+                    }(a.Component)
                 }
             }
         },
         "4mBO": function(e, t, n) {
             "use strict";
-            var r, o = n("mrSG"),
-                a = n("q1tI"),
+            var r, a = n("mrSG"),
+                o = n("q1tI"),
                 i = n("1rIY"),
                 s = (r = Object(i.a)("LiveDashboardDeferredLoading", {
                     canRenderAnyComponent: !1,
@@ -80,7 +80,7 @@
                 return void 0 === t && (t = {}),
                     function(n) {
                         return c(u(e, t))(function(t) {
-                            return void 0 !== t.loadFirst[e] || t.canRenderAnyComponent ? a.createElement(n, o.__assign({}, t)) : null
+                            return void 0 !== t.loadFirst[e] || t.canRenderAnyComponent ? o.createElement(n, a.__assign({}, t)) : null
                         })
                     }
             }
@@ -97,7 +97,7 @@
                             t.setState(function(t) {
                                 var n;
                                 return {
-                                    loadFirst: o.__assign({}, t.loadFirst, (n = {}, n[e] = !0, n))
+                                    loadFirst: a.__assign({}, t.loadFirst, (n = {}, n[e] = !0, n))
                                 }
                             })
                         }) : function() {
@@ -105,11 +105,11 @@
                         }
                     }, t
                 }
-                return o.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     var e = this;
                     this.setState(function(t) {
                         return {
-                            loadFirst: o.__assign({}, t.loadFirst, e.autoReportLoadedNames)
+                            loadFirst: a.__assign({}, t.loadFirst, e.autoReportLoadedNames)
                         }
                     })
                 }, t.prototype.componentDidUpdate = function() {
@@ -126,7 +126,7 @@
                         })
                     }
                 }, t.prototype.render = function() {
-                    return a.createElement(s, {
+                    return o.createElement(s, {
                         value: {
                             canRenderAnyComponent: this.state.canRenderDeferredComponents || this.hasReachedMaximumDeferredTime,
                             loadFirst: this.state.loadFirst,
@@ -142,7 +142,7 @@
                     enumerable: !0,
                     configurable: !0
                 }), t
-            }(a.Component);
+            }(o.Component);
             n.d(t, !1, function() {
                 return s
             }), n.d(t, !1, function() {
@@ -156,36 +156,36 @@
         "5zf8": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return o
+                return a
             }), n.d(t, "b", function() {
                 return c
             });
-            var r, o, a = n("/7QA");
+            var r, a, o = n("/7QA");
 
             function i(e, t) {
                 switch (e) {
                     case r.Second:
-                        return Object(a.d)("{secondCount, plural, one {# second} other {# seconds}}", {
+                        return Object(o.d)("{secondCount, plural, one {# second} other {# seconds}}", {
                             secondCount: t
                         }, "formatDuration");
                     case r.Minute:
-                        return Object(a.d)("{minuteCount, plural, one {# minute} other {# minutes}}", {
+                        return Object(o.d)("{minuteCount, plural, one {# minute} other {# minutes}}", {
                             minuteCount: t
                         }, "formatDuration");
                     case r.Hour:
-                        return Object(a.d)("{hourCount, plural, one {# hour} other {# hours}}", {
+                        return Object(o.d)("{hourCount, plural, one {# hour} other {# hours}}", {
                             hourCount: t
                         }, "formatDuration");
                     case r.Day:
-                        return Object(a.d)("{dayCount, plural, one {# day} other {# days}}", {
+                        return Object(o.d)("{dayCount, plural, one {# day} other {# days}}", {
                             dayCount: t
                         }, "formatDuration");
                     case r.Week:
-                        return Object(a.d)("{weekCount, plural, one {# week} other {# weeks}}", {
+                        return Object(o.d)("{weekCount, plural, one {# week} other {# weeks}}", {
                             weekCount: t
                         }, "formatDuration");
                     case r.Month:
-                        return Object(a.d)("{monthCount, plural, one {# month} other {# months}}", {
+                        return Object(o.d)("{monthCount, plural, one {# month} other {# months}}", {
                             monthCount: t
                         }, "formatDuration");
                     default:
@@ -196,27 +196,27 @@
             function s(e, t) {
                 switch (e) {
                     case r.Second:
-                        return Object(a.d)("{secondCount}s", {
+                        return Object(o.d)("{secondCount}s", {
                             secondCount: t
                         }, "formatDuration");
                     case r.Minute:
-                        return Object(a.d)("{minuteCount}m", {
+                        return Object(o.d)("{minuteCount}m", {
                             minuteCount: t
                         }, "formatDuration");
                     case r.Hour:
-                        return Object(a.d)("{hourCount}h", {
+                        return Object(o.d)("{hourCount}h", {
                             hourCount: t
                         }, "formatDuration");
                     case r.Day:
-                        return Object(a.d)("{dayCount}d", {
+                        return Object(o.d)("{dayCount}d", {
                             dayCount: t
                         }, "formatDuration");
                     case r.Week:
-                        return Object(a.d)("{weekCount}w", {
+                        return Object(o.d)("{weekCount}w", {
                             weekCount: t
                         }, "formatDuration");
                     case r.Month:
-                        return Object(a.d)("{monthCount}mo", {
+                        return Object(o.d)("{monthCount}mo", {
                             monthCount: t
                         }, "formatDuration");
                     default:
@@ -226,16 +226,16 @@
 
             function c(e, t) {
                 var n;
-                switch (void 0 === t && (t = o.Humanized), t === o.ClockAuto && (t = e >= 3600 ? o.ClockHMS : o.ClockMS), t) {
-                    case o.ClockHM:
-                    case o.ClockHMS:
+                switch (void 0 === t && (t = a.Humanized), t === a.ClockAuto && (t = e >= 3600 ? a.ClockHMS : a.ClockMS), t) {
+                    case a.ClockHM:
+                    case a.ClockHMS:
                         n = r.Hour;
                         break;
-                    case o.ClockMS:
+                    case a.ClockMS:
                         n = r.Minute
                 }
                 var c = 2;
-                t === o.ClockHMS && (c = 3);
+                t === a.ClockHMS && (c = 3);
                 var d = function(e, t) {
                         void 0 === t && (t = r.Month);
                         var n = {};
@@ -243,16 +243,16 @@
                     }(e, n),
                     l = Object.keys(d);
                 if (l.forEach(function(e, n) {
-                        t !== o.Humanized && t !== o.HumanizedShort || d[e] || delete d[e], n < l.length - c && delete d[e]
-                    }), t === o.Humanized) return function(e) {
+                        t !== a.Humanized && t !== a.HumanizedShort || d[e] || delete d[e], n < l.length - c && delete d[e]
+                    }), t === a.Humanized) return function(e) {
                     return e.months ? i(r.Month, e.months) : e.weeks && e.days ? i(r.Week, e.weeks) + " " + i(r.Day, e.days) : e.weeks ? i(r.Week, e.weeks) : e.days && e.hours ? i(r.Day, e.days) + " " + i(r.Hour, e.hours) : e.days ? i(r.Day, e.days) : e.hours && e.minutes ? i(r.Hour, e.hours) + " " + i(r.Minute, e.minutes) : e.hours ? i(r.Hour, e.hours) : e.minutes && e.seconds ? i(r.Minute, e.minutes) + " " + i(r.Second, e.seconds) : e.minutes ? i(r.Minute, e.minutes) : i(r.Second, e.seconds || 0)
                 }(d);
-                if (t === o.HumanizedShort) return function(e) {
+                if (t === a.HumanizedShort) return function(e) {
                     return e.months ? s(r.Month, e.months) : e.weeks && e.days ? "" + s(r.Week, e.weeks) + s(r.Day, e.days) : e.weeks ? s(r.Week, e.weeks) : e.days && e.hours ? "" + s(r.Day, e.days) + s(r.Hour, e.hours) : e.days ? s(r.Day, e.days) : e.hours && e.minutes ? "" + s(r.Hour, e.hours) + s(r.Minute, e.minutes) : e.hours ? s(r.Hour, e.hours) : e.minutes && e.seconds ? "" + s(r.Minute, e.minutes) + s(r.Second, e.seconds) : e.minutes ? s(r.Minute, e.minutes) : s(r.Second, e.seconds || 0)
                 }(d);
                 var p = ":",
                     m = !1;
-                switch (a.p.intl.getLanguageCode()) {
+                switch (o.p.intl.getLanguageCode()) {
                     case "cy":
                     case "da":
                     case "fi":
@@ -270,11 +270,11 @@
                     f = d.minutes || 0,
                     g = d.hours || 0;
                 switch (t) {
-                    case o.ClockHM:
-                    case o.ClockHMS:
+                    case a.ClockHM:
+                    case a.ClockHMS:
                         var v = (m ? u(g, 2) : g) + p + u(f, 2);
-                        return t === o.ClockHMS && (v += p + u(h, 2)), v;
-                    case o.ClockMS:
+                        return t === a.ClockHMS && (v += p + u(h, 2)), v;
+                    case a.ClockMS:
                         return (m ? u(f, 2) : f) + p + u(h, 2)
                 }
             }
@@ -287,24 +287,24 @@
             }(r || (r = {})),
             function(e) {
                 e[e.Humanized = 0] = "Humanized", e[e.HumanizedShort = 1] = "HumanizedShort", e[e.ClockAuto = 2] = "ClockAuto", e[e.ClockHM = 3] = "ClockHM", e[e.ClockMS = 4] = "ClockMS", e[e.ClockHMS = 5] = "ClockHMS"
-            }(o || (o = {}))
+            }(a || (a = {}))
         },
         "6Ll5": function(e, t, n) {},
         "6XEL": function(e, t, n) {
             "use strict";
             var r = {};
 
-            function o(e) {
+            function a(e) {
                 return "/" + e + "/dashboard/achievements/"
             }
 
-            function a(e) {
+            function o(e) {
                 return "/" + e.channelLogin + "/dashboard/achievements/" + e.id
             }
             n.d(r, "channelAchievements", function() {
-                return o
-            }), n.d(r, "achievement", function() {
                 return a
+            }), n.d(r, "achievement", function() {
+                return o
             });
             var i, s = n("dG1e"),
                 c = n("rSo7"),
@@ -312,10 +312,10 @@
 
             function d(e, t, n) {
                 return e.sort(function(e, r) {
-                    for (var o = 0; o < t.length; o++) {
-                        var a = t[o],
-                            s = n[o] || i.Ascending,
-                            c = l(a(e), a(r)) * s;
+                    for (var a = 0; a < t.length; a++) {
+                        var o = t[a],
+                            s = n[a] || i.Ascending,
+                            c = l(o(e), o(r)) * s;
                         if (0 !== c) return c
                     }
                     return 0
@@ -343,6 +343,9 @@
             })
         },
         "7WKn": function(e, t, n) {},
+        "87PB": function(e, t, n) {
+            e.exports = n.p + "assets/player_me_1x-658cc62393d46c6062b2.png"
+        },
         "9kwc": function(e, t) {
             var n = {
                 kind: "Document",
@@ -544,7 +547,7 @@
             n.d(t, "a", function() {
                 return r
             }), n.d(t, "d", function() {
-                return o
+                return a
             }), n.d(t, "b", function() {
                 return s
             }), n.d(t, "c", function() {
@@ -568,7 +571,7 @@
             }), n.d(t, "h", function() {
                 return w
             });
-            var r, o, a, i, s, c, u = n("mrSG"),
+            var r, a, o, i, s, c, u = n("mrSG"),
                 d = n("/7QA"),
                 l = n("2xye"),
                 p = n("lDS7");
@@ -577,10 +580,10 @@
             }(r || (r = {})),
             function(e) {
                 e.SliderMove = "slidermove", e.StreamDelayClick = "streamdelayclick"
-            }(o || (o = {})),
+            }(a || (a = {})),
             function(e) {
                 e.Click = "click"
-            }(a || (a = {})),
+            }(o || (o = {})),
             function(e) {
                 e.Hover = "hover"
             }(i || (i = {})),
@@ -611,7 +614,7 @@
                 },
                 g = function(e) {
                     d.p.tracking.track(l.SpadeEventType.LiveDashboardStreamHealthEvent, {
-                        action: a.Click,
+                        action: o.Click,
                         target_name: e
                     })
                 },
@@ -656,15 +659,15 @@
         IFXb: function(e, t, n) {
             "use strict";
             var r = n("mrSG"),
-                o = n("q1tI"),
-                a = n("8/mp"),
+                a = n("q1tI"),
+                o = n("8/mp"),
                 i = n("Ue10"),
                 s = (n("wPMx"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(a.b, null, o.createElement(i.Xa, {
+                        return a.createElement(o.b, null, a.createElement(i.Xa, {
                             className: "dashboard-centered-page",
                             margin: {
                                 y: 4
@@ -675,14 +678,14 @@
                             position: i.hb.Relative
                         }, this.props.children))
                     }, t
-                }(o.Component));
+                }(a.Component));
             n.d(t, "a", function() {
                 return s
             })
         },
         JBqe: function(e, t, n) {
             "use strict";
-            var r, o, a = n("mrSG"),
+            var r, a, o = n("mrSG"),
                 i = n("q1tI"),
                 s = n("x7UT"),
                 c = n("0Log"),
@@ -691,9 +694,9 @@
                 l = n("kxrW"),
                 p = n("b6Yk"),
                 m = function(e) {
-                    return a.__awaiter(void 0, void 0, void 0, function() {
+                    return o.__awaiter(void 0, void 0, void 0, function() {
                         var t;
-                        return a.__generator(this, function(n) {
+                        return o.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
                                     return [4, p.a.get("/v5/streams/" + e)];
@@ -722,9 +725,9 @@
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.fetchIsStreamLiveLegacyAPI = function() {
-                            return a.__awaiter(n, void 0, void 0, function() {
+                            return o.__awaiter(n, void 0, void 0, function() {
                                 var e;
-                                return a.__generator(this, function(t) {
+                                return o.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
                                             return [4, m(this.props.channelID)];
@@ -742,9 +745,9 @@
                         }, n.resetLegacyAPIPoll = function() {
                             n.legacyAPIIntervalID && (clearInterval(n.legacyAPIIntervalID), n.pollLegacyAPI())
                         }, n.setInitialLiveState = function() {
-                            return a.__awaiter(n, void 0, void 0, function() {
+                            return o.__awaiter(n, void 0, void 0, function() {
                                 var e;
-                                return a.__generator(this, function(t) {
+                                return o.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
                                             return void 0 !== this.state.isLive ? [3, 2] : [4, m(this.props.channelID)];
@@ -761,7 +764,7 @@
                             onStreamStatusChange: n.onStreamStatusChange
                         }, n
                     }
-                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.onPubsubUpdate(), this.setInitialLiveState(), this.pollLegacyAPI()
                     }, t.prototype.componentDidUpdate = function() {
                         this.onPubsubUpdate()
@@ -786,7 +789,7 @@
                     topic: function(e) {
                         return Object(u.G)(e.channelID)
                     },
-                    mapMessageTypesToProps: (o = {}, o[c.PubsubMessageType.ChannelStreamUp] = "streamUp", o[c.PubsubMessageType.ChannelStreamDown] = "streamDown", o)
+                    mapMessageTypesToProps: (a = {}, a[c.PubsubMessageType.ChannelStreamUp] = "streamUp", a[c.PubsubMessageType.ChannelStreamDown] = "streamDown", a)
                 }])(C);
             n.d(t, !1, function() {
                 return h
@@ -806,8 +809,8 @@
         },
         NQSV: function(e, t, n) {
             "use strict";
-            var r, o = n("mrSG"),
-                a = n("q1tI"),
+            var r, a = n("mrSG"),
+                o = n("q1tI"),
                 i = n("/7QA"),
                 s = n("UWzm"),
                 c = n.n(s),
@@ -815,211 +818,223 @@
                 d = n.n(u),
                 l = n("SX9i"),
                 p = n.n(l),
-                m = n("Nmvj"),
+                m = n("87PB"),
                 h = n.n(m),
-                f = n("g/LZ"),
+                f = n("Nmvj"),
                 g = n.n(f),
-                v = n("wcfy"),
+                v = n("g/LZ"),
                 b = n.n(v),
-                C = n("LWua"),
+                C = n("wcfy"),
                 y = n.n(C),
-                w = n("EkNY"),
-                S = n("Ue10");
+                w = n("LWua"),
+                S = n.n(w),
+                _ = n("EkNY"),
+                E = n("Ue10");
             ! function(e) {
                 e.DownloadButton = "broadast-items-card__download-button"
             }(r || (r = {}));
-            var _ = function(e) {
+            var k = function(e) {
                     var t = e.link,
                         n = e.title;
-                    return a.createElement(S.Bb, {
-                        background: S.r.Base,
+                    return o.createElement(E.Cb, {
+                        background: E.r.Base,
                         elevation: 1,
                         padding: 2,
-                        display: S.X.Flex,
-                        flexDirection: S.Aa.Column,
+                        display: E.X.Flex,
+                        flexDirection: E.Aa.Column,
                         fullHeight: !0
-                    }, a.createElement(S.Xa, {
-                        display: S.X.Flex,
-                        justifyContent: S.Wa.Center,
+                    }, o.createElement(E.Xa, {
+                        display: E.X.Flex,
+                        justifyContent: E.Wa.Center,
                         margin: {
                             top: 1
                         }
-                    }, a.createElement(S.S, {
+                    }, o.createElement(E.S, {
                         alt: n,
                         src: e.imgURL
-                    })), a.createElement(S.Xa, {
+                    })), o.createElement(E.Xa, {
                         margin: {
                             top: 2,
                             bottom: 1
                         }
-                    }, a.createElement(S.W, {
-                        fontSize: S.Ca.Size5
-                    }, n), a.createElement(S.U, {
+                    }, o.createElement(E.W, {
+                        fontSize: E.Ca.Size5
+                    }, n), o.createElement(E.U, {
                         targetBlank: !0,
                         to: t
-                    }, t)), a.createElement(S.W, {
-                        type: S.Rb.P,
-                        color: S.O.Alt2
-                    }, e.longDescription), a.createElement(S.Xa, {
-                        display: S.X.Flex,
-                        flexDirection: S.Aa.Column,
+                    }, t)), o.createElement(E.W, {
+                        type: E.Sb.P,
+                        color: E.O.Alt2
+                    }, e.longDescription), o.createElement(E.Xa, {
+                        display: E.X.Flex,
+                        flexDirection: E.Aa.Column,
                         fullWidth: !0,
                         flexGrow: 1,
-                        justifyContent: S.Wa.End,
+                        justifyContent: E.Wa.End,
                         margin: {
                             top: 2
                         }
-                    }, a.createElement(S.z, {
+                    }, o.createElement(E.z, {
                         "data-test-selector": r.DownloadButton,
                         fullWidth: !0,
-                        type: S.F.Hollow,
+                        type: E.F.Hollow,
                         linkTo: t,
-                        onClick: w.e.bind(null, n)
-                    }, Object(i.d)("Download", "BroadcastItemCard")), a.createElement(S.Xa, {
+                        onClick: _.e.bind(null, n)
+                    }, Object(i.d)("Download", "BroadcastItemCard")), o.createElement(E.Xa, {
                         margin: {
                             top: 1
                         }
-                    }, a.createElement(S.z, {
+                    }, o.createElement(E.z, {
                         fullWidth: !0,
-                        type: S.F.Text,
+                        type: E.F.Text,
                         linkTo: e.setupGuideLink
                     }, Object(i.d)("Setup Guide", "BroadcastItemCard")))))
                 },
-                E = n("IFXb"),
-                k = (n("L/BW"), function(e) {
+                O = n("IFXb"),
+                L = (n("L/BW"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         i.p.setPageTitle(Object(i.d)("Broadcast", "BroadcastPage"))
                     }, t.prototype.render = function() {
-                        return a.createElement(S.Xa, {
-                            display: S.X.Flex,
-                            flexDirection: S.Aa.Column,
-                            flexWrap: S.Ba.NoWrap,
+                        return o.createElement(E.Xa, {
+                            display: E.X.Flex,
+                            flexDirection: E.Aa.Column,
+                            flexWrap: E.Ba.NoWrap,
                             fullHeight: !0
-                        }, a.createElement(S.Xa, {
+                        }, o.createElement(E.Xa, {
                             className: "broadcast-container",
-                            position: S.hb.Relative,
+                            position: E.hb.Relative,
                             flexGrow: 1,
                             fullHeight: !0,
-                            overflow: S.cb.Hidden
-                        }, a.createElement(E.a, null, a.createElement(S.W, {
+                            overflow: E.cb.Hidden
+                        }, o.createElement(O.a, null, o.createElement(E.W, {
                             bold: !0,
-                            type: S.Rb.H4
-                        }, Object(i.d)("Broadcast While You Play", "BroadcastRootPage")), a.createElement(S.Xa, {
+                            type: E.Sb.H4
+                        }, Object(i.d)("Broadcast While You Play", "BroadcastRootPage")), o.createElement(E.Xa, {
                             margin: {
                                 y: 1
                             }
-                        }, a.createElement(S.W, {
-                            color: S.O.Alt2,
-                            type: S.Rb.P
-                        }, Object(i.d)("Here are the most common tools for broadcasting.", "BroadcastRootPage")), a.createElement(S.W, {
-                            color: S.O.Alt2
+                        }, o.createElement(E.W, {
+                            color: E.O.Alt2,
+                            type: E.Sb.P
+                        }, Object(i.d)("Here are the most common tools for broadcasting.", "BroadcastRootPage")), o.createElement(E.W, {
+                            color: E.O.Alt2
                         }, Object(i.d)("For more info, visit the <x:link>Support Center</x:link>.", {
                             "x:link": function(e) {
-                                return a.createElement(S.U, {
+                                return o.createElement(E.U, {
                                     targetBlank: !0,
                                     to: "https://help.twitch.tv/customer/portal/topics/301257-getting-started/articles"
                                 }, e)
                             }
-                        }, "BroadcastRootPage"))), a.createElement(S.W, {
-                            color: S.O.Alt2
+                        }, "BroadcastRootPage"))), o.createElement(E.W, {
+                            color: E.O.Alt2
                         }, Object(i.d)("Looking for your stream key? You can find it on your <x:link>dashboard</x:link>.", {
                             "x:link": function(e) {
-                                return a.createElement(S.U, {
+                                return o.createElement(E.U, {
                                     to: "/dashboard/settings"
                                 }, e)
                             }
-                        }, "BroadcastRootPage")), a.createElement(S.Xa, {
+                        }, "BroadcastRootPage")), o.createElement(E.Xa, {
                             margin: {
                                 y: 2
                             }
-                        }, a.createElement(S.W, {
+                        }, o.createElement(E.W, {
                             bold: !0,
-                            type: S.Rb.H4
-                        }, Object(i.d)("Broadcasting Applications", "BroadcastRootPage"))), a.createElement(S.Xb, {
-                            childWidth: S.Yb.Large,
-                            gutterSize: S.Zb.Small,
+                            type: E.Sb.H4
+                        }, Object(i.d)("Broadcasting Applications", "BroadcastRootPage"))), o.createElement(E.Yb, {
+                            childWidth: E.Zb.Large,
+                            gutterSize: E.ac.Small,
                             noGrow: !0,
                             placeholderItems: 8
-                        }, a.createElement(S.Xa, {
+                        }, o.createElement(E.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(_, {
-                            imgURL: b.a,
+                        }, o.createElement(k, {
+                            imgURL: h.a,
+                            title: "Player.me",
+                            link: "https://player.me/",
+                            longDescription: Object(i.d)("Free, easy-to-use, all-in-one application for streaming and recording. Includes thousands of professionally designed overlays with alerts, a stream dashboard for tracking events, live stream chat and scene switching.", "BroadcastRootPage"),
+                            setupGuideLink: "https://helpdesk.player.me/en/article/streaming-setup-guide-svsjha"
+                        })), o.createElement(E.Xa, {
+                            margin: {
+                                bottom: 2
+                            }
+                        }, o.createElement(k, {
+                            imgURL: y.a,
                             title: "Streamlabs OBS",
                             link: "https://streamlabs.com/streamlabs-obs/",
                             longDescription: Object(i.d)("Streamlabs OBS is free, open source, and easy way to get started streaming. The app is built on top of OBS with a whole lot of exciting features: facemasks, built-in widgets & chat, game specific encoders and thousands of free overlays and themes.", "BroadcastRootPage"),
                             setupGuideLink: "https://support.streamlabs.com/hc/en-us/articles/115004797393-Streamlabs-OBS-All-In-One-Window-Walk-Through"
-                        })), a.createElement(S.Xa, {
+                        })), o.createElement(E.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(_, {
-                            imgURL: y.a,
+                        }, o.createElement(k, {
+                            imgURL: S.a,
                             title: "XSplit Broadcaster",
                             link: "http://www.xsplit.com/",
                             longDescription: Object(i.d)("Simple yet powerful live streaming and recording software. XSplit Broadcaster is a revolutionary audio/video mixing application that allows for highly customizable professional quality live broadcasts by using simple and intuitive interface anyone can master.", "BroadcastRootPage"),
                             setupGuideLink: "https://www.xsplit.com/support"
-                        })), a.createElement(S.Xa, {
+                        })), o.createElement(E.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(_, {
+                        }, o.createElement(k, {
                             imgURL: d.a,
                             title: "Open Broadcast Software",
                             link: "http://obsproject.com/",
                             longDescription: Object(i.d)("Free and open source software for recording and live streaming. Source code is available to everyone to contribute and improve.", "BroadcastRootPage"),
                             setupGuideLink: "https://obsproject.com/help"
-                        }))), a.createElement(S.Xa, {
+                        }))), o.createElement(E.Xa, {
                             margin: {
                                 y: 2
                             }
-                        }, a.createElement(S.W, {
+                        }, o.createElement(E.W, {
                             bold: !0,
-                            type: S.Rb.H4
-                        }, Object(i.d)("Broadcasting Tools", "BroadcastRootPage"))), a.createElement(S.Xb, {
-                            childWidth: S.Yb.Large,
-                            gutterSize: S.Zb.Small,
+                            type: E.Sb.H4
+                        }, Object(i.d)("Broadcasting Tools", "BroadcastRootPage"))), o.createElement(E.Yb, {
+                            childWidth: E.Zb.Large,
+                            gutterSize: E.ac.Small,
                             noGrow: !0,
                             placeholderItems: 3
-                        }, a.createElement(S.Xa, {
+                        }, o.createElement(E.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(_, {
-                            imgURL: g.a,
+                        }, o.createElement(k, {
+                            imgURL: b.a,
                             title: "Streamlabs",
                             link: "https://streamlabs.com/",
                             longDescription: Object(i.d)("Level up your stream with alerts, donations, and 20+ interactive widgets.", "BroadcastRootPage"),
                             setupGuideLink: "https://support.streamlabs.com/hc/en-us/articles/217741147-Setting-up-your-Streamlabs-widgets-"
-                        })), a.createElement(S.Xa, {
+                        })), o.createElement(E.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(_, {
-                            imgURL: h.a,
+                        }, o.createElement(k, {
+                            imgURL: g.a,
                             title: "StreamElements",
                             link: "https://streamelements.com/",
                             longDescription: Object(i.d)("A full suite for all your streaming needs: Bot, Overlays, Loyalty points, Giveaways and much more for new and veteran streamers alike.", "BroadcastRootPage"),
                             setupGuideLink: "https://support.streamelements.com/hc/en-us/articles/115003424812-Quick-Start-Guide"
-                        })), a.createElement(S.Xa, {
+                        })), o.createElement(E.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(_, {
+                        }, o.createElement(k, {
                             imgURL: c.a,
                             title: "Muxy",
                             link: "https://www.muxy.io/",
                             longDescription: Object(i.d)("Muxy provides alerts, tips, a real-time Live Feed, Cheer visualizations, and stream analytics.", "BroadcastRootPage"),
                             setupGuideLink: "https://muxy.io/tutorial/"
-                        })), a.createElement(S.Xa, {
+                        })), o.createElement(E.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(_, {
+                        }, o.createElement(k, {
                             imgURL: p.a,
                             title: "Opera Event",
                             link: "https://gather.operaevent.co/",
@@ -1027,25 +1042,25 @@
                             setupGuideLink: "https://gather.operaevent.co/"
                         }))))))
                     }, t
-                }(a.Component));
+                }(o.Component));
             n.d(t, "a", function() {
-                return k
+                return L
             })
         },
         NkOX: function(e, t, n) {
             "use strict";
-            var r, o;
+            var r, a;
             n.d(t, "a", function() {
                     return r
                 }), n.d(t, "b", function() {
-                    return o
+                    return a
                 }),
                 function(e) {
                     e.AdsWidget = "ads-widget", e.BountyBoardWidget = "bounty-board-widget", e.ExtensionLiveConfigure = "extension-live-configure", e.HostWidget = "host-widget", e.LiveChat = "live-chat", e.SquadStream = "squad-stream", e.Stats = "stats", e.StreamDelay = "stream-delay", e.StreamHealth = "stream-health", e.StreamInformation = "stream-information", e.StreamMarker = "stream-marker", e.VideoPreview = "video-preview", e.VideoProducerWidget = "video-producer-widget"
                 }(r || (r = {})),
                 function(e) {
                     e.AdsWidget = "ads_widget", e.BountyBoardWidget = "bounty_board_widget", e.ExtensionLiveConfigureWidget = "extension_config_widget", e.HostWidget = "host_widget", e.LiveChatWidget = "chat_widget", e.SquadStreamWidget = "squad_stream_widget", e.StatsWidget = "stats_widget", e.StreamDelayWidget = "stream_delay_widget", e.StreamHealthWidget = "stream_health_widget", e.StreamInformationWidget = "stream_information_widget", e.StreamMarkerWidget = "stream_marker_widget", e.VideoPreviewWidget = "video_preview_widget", e.VideoProducerWidget = "video_producer_widget"
-                }(o || (o = {}))
+                }(a || (a = {}))
         },
         Nmvj: function(e, t, n) {
             e.exports = n.p + "assets/streamelements_1x-5a78a214c1701af3da1d.png"
@@ -1059,8 +1074,8 @@
         },
         "b+ID": function(e, t, n) {
             "use strict";
-            var r, o = n("mrSG"),
-                a = n("q1tI"),
+            var r, a = n("mrSG"),
+                o = n("q1tI"),
                 i = n("8Ad5"),
                 s = n("1rIY"),
                 c = (r = Object(s.a)("ExpandedViewButtonContext", {
@@ -1086,16 +1101,16 @@
                             toggleExpandedView: n.toggleExpandedView
                         }, n
                     }
-                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         window.addEventListener("keyup", this.handleKeyUp)
                     }, t.prototype.componentWillUnmount = function() {
                         window.removeEventListener("keyup", this.handleKeyUp)
                     }, t.prototype.render = function() {
-                        return a.createElement(c, {
+                        return o.createElement(c, {
                             value: this.state
                         }, this.props.children)
                     }, t
-                }(a.Component);
+                }(o.Component);
             n.d(t, !1, function() {
                 return c
             }), n.d(t, "b", function() {
@@ -1110,122 +1125,122 @@
                 return i
             });
             var r = n("mrSG"),
-                o = n("/7QA"),
-                a = n("kRBY"),
+                a = n("/7QA"),
+                o = n("kRBY"),
                 i = function() {
                     function e() {}
                     return e.get = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(o) {
-                                switch (o.label) {
+                            return r.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         return [4, this.request(e, r.__assign({}, t, {
                                             method: "GET"
                                         }), n)];
                                     case 1:
-                                        return [2, o.sent()]
+                                        return [2, a.sent()]
                                 }
                             })
                         })
                     }, e.getOrThrow = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(o) {
-                                switch (o.label) {
+                            return r.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         return [4, this.requestOrThrow(e, r.__assign({}, t, {
                                             method: "GET"
                                         }), n)];
                                     case 1:
-                                        return [2, o.sent()]
+                                        return [2, a.sent()]
                                 }
                             })
                         })
                     }, e.put = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(o) {
-                                switch (o.label) {
+                            return r.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         return [4, this.request(e, r.__assign({}, t, {
                                             method: "PUT"
                                         }), n)];
                                     case 1:
-                                        return [2, o.sent()]
+                                        return [2, a.sent()]
                                 }
                             })
                         })
                     }, e.putOrThrow = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(o) {
-                                switch (o.label) {
+                            return r.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         return [4, this.requestOrThrow(e, r.__assign({}, t, {
                                             method: "PUT"
                                         }), n)];
                                     case 1:
-                                        return [2, o.sent()]
+                                        return [2, a.sent()]
                                 }
                             })
                         })
                     }, e.post = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(o) {
-                                switch (o.label) {
+                            return r.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         return [4, this.request(e, r.__assign({}, t, {
                                             method: "POST"
                                         }), n)];
                                     case 1:
-                                        return [2, o.sent()]
+                                        return [2, a.sent()]
                                 }
                             })
                         })
                     }, e.postOrThrow = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(o) {
-                                switch (o.label) {
+                            return r.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         return [4, this.requestOrThrow(e, r.__assign({}, t, {
                                             method: "POST"
                                         }), n)];
                                     case 1:
-                                        return [2, o.sent()]
+                                        return [2, a.sent()]
                                 }
                             })
                         })
                     }, e.delete = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(o) {
-                                switch (o.label) {
+                            return r.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         return [4, this.request(e, r.__assign({}, t, {
                                             method: "DELETE"
                                         }), n)];
                                     case 1:
-                                        return [2, o.sent()]
+                                        return [2, a.sent()]
                                 }
                             })
                         })
                     }, e.deleteOrThrow = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            return r.__generator(this, function(o) {
-                                switch (o.label) {
+                            return r.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         return [4, this.requestOrThrow(e, r.__assign({}, t, {
                                             method: "DELETE"
                                         }), n)];
                                     case 1:
-                                        return [2, o.sent()]
+                                        return [2, a.sent()]
                                 }
                             })
                         })
                     }, e.request = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            var o, a, i, s;
+                            var a, o, i, s;
                             return r.__generator(this, function(c) {
                                 switch (c.label) {
                                     case 0:
-                                        return t = this.constructOptions(t, n), o = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, o), i = r.__assign({}, t, {
-                                            body: a
+                                        return t = this.constructOptions(t, n), a = t.headers ? t.headers["Content-Type"] : void 0, o = this.serialize(t.body, a), i = r.__assign({}, t, {
+                                            body: o
                                         }), [4, this._fetch(e, i)];
                                     case 1:
                                         return s = c.sent(), [4, this.constructLegacyAPIResponse(s)];
@@ -1236,29 +1251,29 @@
                         })
                     }, e.requestOrThrow = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            var o;
-                            return r.__generator(this, function(a) {
-                                switch (a.label) {
+                            var a;
+                            return r.__generator(this, function(o) {
+                                switch (o.label) {
                                     case 0:
-                                        return a.trys.push([0, 2, , 3]), [4, this.request(e, t, n)];
+                                        return o.trys.push([0, 2, , 3]), [4, this.request(e, t, n)];
                                     case 1:
-                                        if ((o = a.sent()).requestError) throw o.requestError;
-                                        if (o.error) throw new Error("Error while sending legacy-api request: " + o.error.status + " - " + o.error.message);
-                                        return [2, r.__assign({}, o, {
-                                            body: o.body
+                                        if ((a = o.sent()).requestError) throw a.requestError;
+                                        if (a.error) throw new Error("Error while sending legacy-api request: " + a.error.status + " - " + a.error.message);
+                                        return [2, r.__assign({}, a, {
+                                            body: a.body
                                         })];
                                     case 2:
-                                        throw a.sent();
+                                        throw o.sent();
                                     case 3:
                                         return [2]
                                 }
                             })
                         })
                     }, e.getAPIURL = function(e) {
-                        return new URL(e, o.p.config.apiBaseURL)
+                        return new URL(e, a.p.config.apiBaseURL)
                     }, e.constructLegacyAPIResponse = function(e) {
                         return r.__awaiter(this, void 0, Promise, function() {
-                            var t, n, o, a;
+                            var t, n, a, o;
                             return r.__generator(this, function(r) {
                                 switch (r.label) {
                                     case 0:
@@ -1270,7 +1285,7 @@
                                     case 2:
                                         return n = r.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
                                     case 3:
-                                        return o = r.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = o), [3, 4];
+                                        return a = r.sent(), e.headers && e.headers.get && (o = e.headers.get("Content-Type")) && -1 !== o.indexOf("application/json") && (t.requestError = a), [3, 4];
                                     case 4:
                                         return [2, t]
                                 }
@@ -1296,36 +1311,36 @@
                             contentType: t
                         }), null) : null
                     }, e.getDefaultHeaders = function(e, t) {
-                        var n = o.p.store.getState(),
+                        var n = a.p.store.getState(),
                             r = {
                                 Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                                 "Accept-Language": "en-us",
-                                "Client-ID": o.p.config.legacyClientID,
+                                "Client-ID": a.p.config.legacyClientID,
                                 "X-Requested-With": "XMLHttpRequest"
                             };
                         e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
-                        var i = Object(a.e)(n);
+                        var i = Object(o.e)(n);
                         return i && (r.Authorization = "OAuth " + i.authToken, i.legacyCSRFToken && (r["Twitch-Api-Token"] = i.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                             r[e] && delete r[e]
                         }), r
-                    }, e.logger = o.p.logger.withCategory("legacy-api"), e
+                    }, e.logger = a.p.logger.withCategory("legacy-api"), e
                 }()
         },
         dG1e: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return a
+                return o
             });
             var r = n("mrSG"),
-                o = n("b6Yk");
+                a = n("b6Yk");
 
-            function a(e, t) {
+            function o(e, t) {
                 return void 0 === t && (t = {}), r.__awaiter(this, void 0, void 0, function() {
                     var n;
                     return r.__generator(this, function(r) {
                         switch (r.label) {
                             case 0:
-                                return [4, o.a.request(e.path, e, t)];
+                                return [4, a.a.request(e.path, e, t)];
                             case 1:
                                 return n = r.sent(), [2, new i(n, e)]
                         }
@@ -1363,8 +1378,8 @@
         lDS7: function(e, t, n) {
             "use strict";
             var r = n("mrSG"),
-                o = n("q1tI"),
-                a = n("oJmH"),
+                a = n("q1tI"),
+                o = n("oJmH"),
                 i = n("/7QA"),
                 s = n("yR8l"),
                 c = n("5zf8"),
@@ -1409,29 +1424,29 @@
                             e[t.props.statType] = !e[t.props.statType], i.m.set("streamStatsConfiguration", e)
                         }, t.renderStat = function() {
                             var e = Object(i.d)("Offline", "LiveDashboard");
-                            return t.state.hidden ? o.createElement(l.Ub, {
+                            return t.state.hidden ? a.createElement(l.Vb, {
                                 label: t.props.statDescription || e,
-                                direction: l.Wb.Right
-                            }, Object(i.d)("Hover to view", "LiveDashboard")) : o.createElement(l.Ub, {
+                                direction: l.Xb.Right
+                            }, Object(i.d)("Hover to view", "LiveDashboard")) : a.createElement(l.Vb, {
                                 label: Object(i.d)("Click to hide", "LiveDashboard"),
-                                direction: l.Wb.Right
+                                direction: l.Xb.Right
                             }, t.props.statDescription || e)
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.color;
-                        return o.createElement(l.Bb, {
+                        return a.createElement(l.Cb, {
                             margin: {
                                 left: 1
                             },
                             fontSize: l.Ca.Size5,
                             color: e
-                        }, o.createElement("span", {
+                        }, a.createElement("span", {
                             onClick: this.handleClick,
                             onMouseOver: this.handleHover
                         }, this.renderStat()))
                     }, t
-                }(o.Component),
+                }(a.Component),
                 m = n("xTFG"),
                 h = n("NkOX"),
                 f = n("qYDK"),
@@ -1470,19 +1485,19 @@
                             var e = n.getStreamInfo(),
                                 t = e && null !== e.viewersCount ? Object(i.f)(e.viewersCount) : 0,
                                 r = n.state.statsConfig && n.state.statsConfig[w.CURRENT_VIEWERS],
-                                a = n.props.isLive;
-                            return o.createElement(p, {
+                                o = n.props.isLive;
+                            return a.createElement(p, {
                                 "data-test-selector": y.CURRENT_VIEWERS_COUNT,
-                                statDescription: a ? t + " " + Object(i.d)("Viewers", "LiveDashboard") : null,
+                                statDescription: o ? t + " " + Object(i.d)("Viewers", "LiveDashboard") : null,
                                 statType: w.CURRENT_VIEWERS,
                                 showStat: r,
-                                color: a ? l.O.Live : void 0
+                                color: o ? l.O.Live : void 0
                             })
                         }, n.renderStreamTime = function() {
                             var e = n.getStreamInfo(),
                                 t = e && e.createdAt || (new Date).toISOString(),
                                 r = n.props.isLive;
-                            return o.createElement(p, {
+                            return a.createElement(p, {
                                 statDescription: r ? Object(c.b)((Date.now() - new Date(t).getTime()) / 1e3, c.a.ClockHM) : null,
                                 statType: w.STREAM_UP_TIME,
                                 showStat: !n.state.statsConfig || n.state.statsConfig[w.STREAM_UP_TIME],
@@ -1491,7 +1506,7 @@
                         }, n.renderNumberOfClips = function() {
                             var e = n.state.broadcastClipsCount,
                                 t = n.props.isLive;
-                            return o.createElement(p, {
+                            return a.createElement(p, {
                                 "data-test-selector": y.NUMBER_OF_CLIPS,
                                 statDescription: t ? Object(i.f)(e) + " " + (1 === e ? Object(i.d)("Clip", "LiveDashboard") : Object(i.d)("Clips", "LiveDashboard")) : null,
                                 statType: w.NUMBER_OF_CLIPS,
@@ -1502,42 +1517,42 @@
                             var e = Object(i.d)("Subscribers", "LiveDashboard"),
                                 t = Object(i.d)("Sub Points", "LiveDashboard"),
                                 r = n.props.data && n.props.data.user && null !== n.props.data.user.subscriberScore ? n.props.data.user.subscriberScore : null,
-                                a = r && r.countBreakdown;
-                            if (!r || !a) return null;
-                            var s = Object(i.f)(a.reduce(function(e, t) {
+                                o = r && r.countBreakdown;
+                            if (!r || !o) return null;
+                            var s = Object(i.f)(o.reduce(function(e, t) {
                                     return e + t.count
                                 }, 0)),
                                 c = Object(i.f)(r.current);
-                            return r.next ? o.createElement(l.Bb, {
+                            return r.next ? a.createElement(l.Cb, {
                                 color: l.O.Alt2,
                                 display: l.X.Flex,
                                 alignItems: l.f.Center,
                                 margin: {
                                     bottom: .5
                                 }
-                            }, o.createElement(l.Ub, {
+                            }, a.createElement(l.Vb, {
                                 label: Object(i.d)("Subscribers shows number of active subs.\n Sub points unlock additional emote slots.", "LiveDashboard"),
-                                direction: l.Wb.Right
-                            }, o.createElement(l.qb, {
+                                direction: l.Xb.Right
+                            }, a.createElement(l.qb, {
                                 asset: l.rb.Star
-                            })), o.createElement(p, {
+                            })), a.createElement(p, {
                                 statDescription: s + " " + e + " (" + c + " / " + Object(i.f)(r.next) + " " + t + ")",
                                 statType: w.SUBSCRIPTIONS,
                                 showStat: n.state.statsConfig && n.state.statsConfig[w.SUBSCRIPTIONS],
                                 color: l.O.Base
-                            })) : o.createElement(l.Bb, {
+                            })) : a.createElement(l.Cb, {
                                 color: l.O.Alt2,
                                 display: l.X.Flex,
                                 alignItems: l.f.Center,
                                 margin: {
                                     bottom: .5
                                 }
-                            }, o.createElement(l.Ub, {
+                            }, a.createElement(l.Vb, {
                                 label: Object(i.d)("Congrats on reaching the max number of emote slots", "LiveDashboard"),
-                                direction: l.Wb.Right
-                            }, o.createElement(l.qb, {
+                                direction: l.Xb.Right
+                            }, a.createElement(l.qb, {
                                 asset: l.rb.Star
-                            })), o.createElement(p, {
+                            })), a.createElement(p, {
                                 statDescription: s + " " + e + " (" + c + " " + t + ")",
                                 statType: w.SUBSCRIPTIONS,
                                 showStat: n.state.statsConfig && n.state.statsConfig[w.SUBSCRIPTIONS],
@@ -1547,7 +1562,7 @@
                             n.intervalID && clearInterval(n.intervalID), n.fetchBroadcastClipsCount(), n.intervalID = setInterval(n.fetchBroadcastClipsCount, 3e4)
                         }, n.fetchBroadcastClipsCount = function() {
                             return r.__awaiter(n, void 0, void 0, function() {
-                                var e, t, n, o, a;
+                                var e, t, n, a, o;
                                 return r.__generator(this, function(r) {
                                     switch (r.label) {
                                         case 0:
@@ -1555,16 +1570,16 @@
                                                 path: "/v4/broadcasts/" + t + "/clips/count"
                                             })] : (this.props.latencyTracking.reportInteractive(), this.props.reportLoaded(), [2]);
                                         case 1:
-                                            return (n = r.sent()).body && !n.error ? (o = n.body.count, this.setState({
-                                                broadcastClipsCount: o
-                                            })) : (a = "Unable to fetch broadcast clips count", i.k.error(new Error(a), a)), this.props.latencyTracking.reportInteractive(), this.props.reportLoaded(), [2]
+                                            return (n = r.sent()).body && !n.error ? (a = n.body.count, this.setState({
+                                                broadcastClipsCount: a
+                                            })) : (o = "Unable to fetch broadcast clips count", i.k.error(new Error(o), o)), this.props.latencyTracking.reportInteractive(), this.props.reportLoaded(), [2]
                                     }
                                 })
                             })
                         };
-                        var a = i.m.get("streamStatsConfiguration", null);
+                        var o = i.m.get("streamStatsConfiguration", null);
                         return n.state = {
-                            statsConfig: a || S,
+                            statsConfig: o || S,
                             broadcastClipsCount: 0
                         }, n
                     }
@@ -1580,89 +1595,89 @@
                             t = e && e.followers,
                             n = Object(i.f)(e && e.profileViewCount || 0),
                             r = e && t && null !== t.totalCount ? Object(i.f)(t.totalCount) : 0;
-                        return o.createElement(f.a, {
+                        return a.createElement(f.a, {
                             title: Object(i.d)("Stats", "LiveDashboard")
-                        }, o.createElement(l.Xa, {
+                        }, a.createElement(l.Xa, {
                             padding: 2
-                        }, o.createElement(l.Bb, {
+                        }, a.createElement(l.Cb, {
                             color: l.O.Alt2,
                             display: l.X.Flex,
                             alignItems: l.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, o.createElement(l.Ub, {
+                        }, a.createElement(l.Vb, {
                             label: Object(i.d)("The number of people currently watching your channel", "LiveDashboard"),
-                            direction: l.Wb.Right
-                        }, o.createElement(l.qb, {
+                            direction: l.Xb.Right
+                        }, a.createElement(l.qb, {
                             asset: l.rb.GlyphLive
-                        })), this.renderViewersCount()), o.createElement(l.Bb, {
+                        })), this.renderViewersCount()), a.createElement(l.Cb, {
                             color: l.O.Alt2,
                             display: l.X.Flex,
                             alignItems: l.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, o.createElement(l.Ub, {
+                        }, a.createElement(l.Vb, {
                             label: Object(i.d)("How long you have been broadcasting for this session", "LiveDashboard"),
-                            direction: l.Wb.Right
-                        }, o.createElement(l.qb, {
+                            direction: l.Xb.Right
+                        }, a.createElement(l.qb, {
                             asset: l.rb.Timeout
-                        })), this.renderStreamTime()), o.createElement(l.Bb, {
+                        })), this.renderStreamTime()), a.createElement(l.Cb, {
                             color: l.O.Alt2,
                             display: l.X.Flex,
                             alignItems: l.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, o.createElement(l.Ub, {
+                        }, a.createElement(l.Vb, {
                             label: Object(i.d)("The number of clips that have been created", "LiveDashboard"),
-                            direction: l.Wb.Right
-                        }, o.createElement(l.Bb, {
+                            direction: l.Xb.Right
+                        }, a.createElement(l.Cb, {
                             className: "stats-widget-clips-icon",
                             display: l.X.InlineFlex
-                        }, o.createElement(l.qb, {
+                        }, a.createElement(l.qb, {
                             asset: l.rb.Clip,
                             height: 20,
                             width: 20
-                        }))), this.renderNumberOfClips()), o.createElement(l.Bb, {
+                        }))), this.renderNumberOfClips()), a.createElement(l.Cb, {
                             color: l.O.Alt2,
                             display: l.X.Flex,
                             alignItems: l.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, o.createElement(l.Ub, {
+                        }, a.createElement(l.Vb, {
                             label: Object(i.d)("The number of people who have viewed the channel", "LiveDashboard"),
-                            direction: l.Wb.Right
-                        }, o.createElement(l.qb, {
+                            direction: l.Xb.Right
+                        }, a.createElement(l.qb, {
                             asset: l.rb.GlyphViews
-                        })), o.createElement(p, {
+                        })), a.createElement(p, {
                             statDescription: n + " " + Object(i.d)("Views", "LiveDashboard"),
                             statType: w.TOTAL_VIEWS,
                             showStat: !this.state.statsConfig || this.state.statsConfig[w.TOTAL_VIEWS],
                             color: l.O.Base
-                        })), o.createElement(l.Bb, {
+                        })), a.createElement(l.Cb, {
                             color: l.O.Alt2,
                             display: l.X.Flex,
                             alignItems: l.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, o.createElement(l.Ub, {
+                        }, a.createElement(l.Vb, {
                             label: Object(i.d)("The number of people currently following your channel", "LiveDashboard"),
-                            direction: l.Wb.Right
-                        }, o.createElement(l.qb, {
+                            direction: l.Xb.Right
+                        }, a.createElement(l.qb, {
                             asset: l.rb.Heart
-                        })), o.createElement(p, {
+                        })), a.createElement(p, {
                             statDescription: r + " " + Object(i.d)("Followers", "LiveDashboard"),
                             statType: w.FOLLOWERS,
                             showStat: !this.state.statsConfig || this.state.statsConfig[w.FOLLOWERS],
                             color: l.O.Base
                         })), this.renderSubscriptionStat()))
                     }, t
-                }(o.Component),
-                E = Object(a.compose)(Object(g.b)(h.a.Stats), v.b, Object(m.b)(h.a.Stats, {
+                }(a.Component),
+                E = Object(o.compose)(Object(g.b)(h.a.Stats), v.b, Object(m.b)(h.a.Stats, {
                     autoReportCardVisibility: !0
                 }), Object(s.a)(C, {
                     options: function(e) {
@@ -1680,8 +1695,8 @@
             "use strict";
             n.r(t);
             var r = n("q1tI"),
-                o = n("/MKj"),
-                a = n("mLw1"),
+                a = n("/MKj"),
+                o = n("mLw1"),
                 i = n("fvjX"),
                 s = n("V+GM"),
                 c = n("NvVO"),
@@ -1689,7 +1704,7 @@
                 d = n("kRBY"),
                 l = n("GnwI"),
                 p = n("NQSV");
-            var m = Object(i.compose)(Object(o.connect)(function(e) {
+            var m = Object(i.compose)(Object(a.connect)(function(e) {
                 var t = Object(d.e)(e);
                 return {
                     isLoggedIn: Object(d.f)(e),
@@ -1701,7 +1716,7 @@
             }), Object(s.a)({
                 location: u.PageviewLocation.Broadcast
             }))(function(e) {
-                return e.isLoggedIn ? r.createElement(a.a, {
+                return e.isLoggedIn ? r.createElement(o.a, {
                     to: "/" + e.userLogin + "/dashboard/broadcast"
                 }) : r.createElement(p.a, null)
             });
@@ -1711,14 +1726,14 @@
         },
         odMz: function(e, t, n) {
             "use strict";
-            var r, o;
+            var r, a;
             ! function(e) {
                 e[e.RemoveTarget = 0] = "RemoveTarget", e[e.SetGrabbed = 1] = "SetGrabbed", e[e.SetTarget = 2] = "SetTarget"
             }(r || (r = {})),
             function(e) {
                 e.Bottom = "bottom", e.Top = "top"
-            }(o || (o = {}));
-            var a = function() {
+            }(a || (a = {}));
+            var o = function() {
                 return function(e, t) {
                     void 0 === t && (t = !1), this.name = e, this.isCollapsed = t, this.isGrabbed = !1
                 }
@@ -1726,14 +1741,14 @@
             n.d(t, "b", function() {
                 return r
             }), n.d(t, "c", function() {
-                return o
-            }), n.d(t, "a", function() {
                 return a
+            }), n.d(t, "a", function() {
+                return o
             })
         },
         qYDK: function(e, t, n) {
             "use strict";
-            var r, o, a, i, s = n("fvjX"),
+            var r, a, o, i, s = n("fvjX"),
                 c = n("1rIY"),
                 u = (r = Object(c.a)("DragAndDropLayoutContext", {
                     dropCard: function() {
@@ -1822,7 +1837,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return p.createElement(f.Bb, {
+                        return p.createElement(f.Cb, {
                             className: "drag-and-drop-card-title",
                             color: f.O.Base,
                             fontSize: f.Ca.Size5,
@@ -1835,10 +1850,10 @@
             n("SMeG");
             ! function(e) {
                 e.ContentCollapsed = "drag-and-drop-card-content__collapsed"
-            }(o || (o = {})),
+            }(a || (a = {})),
             function(e) {
                 e.Card = "drag-and-drop-card", e.Container = "drag-and-drop-card-container", e.Content = "drag-and-drop-card-content"
-            }(a || (a = {})),
+            }(o || (o = {})),
             function(e) {
                 e.Carat = "carat", e.Card = "card", e.Container = "container", e.Header = "header"
             }(i || (i = {}));
@@ -1884,17 +1899,17 @@
                         var n = e.movementX,
                             r = e.movementY;
                         if (t.props.card.isGrabbed) {
-                            var o = t[i.Card];
-                            o.style.left = parseInt(o.style.left || "0", 10) + n + "px", o.style.top = parseInt(o.style.top || "0", 10) + r + "px"
+                            var a = t[i.Card];
+                            a.style.left = parseInt(a.style.left || "0", 10) + n + "px", a.style.top = parseInt(a.style.top || "0", 10) + r + "px"
                         }
                     }, t.handleHeaderMouseDown = function(e) {
                         var n = e.clientY,
                             r = t[i.Card],
-                            o = r.getBoundingClientRect(),
-                            a = o.top,
-                            s = o.left,
-                            c = o.width;
-                        r.style.left = s + "px", r.style.top = a + "px", r.style.width = c + "px";
+                            a = r.getBoundingClientRect(),
+                            o = a.top,
+                            s = a.left,
+                            c = a.width;
+                        r.style.left = s + "px", r.style.top = o + "px", r.style.width = c + "px";
                         var u = t.getPlaceholderPosition(n),
                             d = t.props.card.name;
                         t.props.updateCard(d, {
@@ -1939,14 +1954,14 @@
                         c = n.placeholderPosition,
                         u = e.grabbedCard;
                     return p.createElement(f.Xa, {
-                        "data-test-selector": a.Container,
+                        "data-test-selector": o.Container,
                         display: f.X.Flex,
                         flexDirection: f.Aa.Column,
                         refDelegate: this.registerRef(i.Container)
                     }, p.createElement(g, {
                         cloneStyleRef: u && u.cardRef,
                         show: c === h.c.Top
-                    }), p.createElement(f.Bb, {
+                    }), p.createElement(f.Cb, {
                         background: f.r.Base,
                         border: !0,
                         breakpointLarge: {
@@ -1955,7 +1970,7 @@
                             }
                         },
                         className: "drag-and-drop-card-container" + (s ? " drag-and-drop-card-container__grabbed" : ""),
-                        "data-test-selector": a.Card,
+                        "data-test-selector": o.Card,
                         display: f.X.Flex,
                         elevation: s ? 4 : 1,
                         flexDirection: f.Aa.Column,
@@ -1963,7 +1978,7 @@
                             bottom: 1
                         },
                         refDelegate: this.registerRef(i.Card)
-                    }, p.createElement(f.Bb, {
+                    }, p.createElement(f.Cb, {
                         alignContent: f.e.Center,
                         alignItems: f.f.Center,
                         borderBottom: !0,
@@ -2004,8 +2019,8 @@
                     }, p.createElement(f.qb, {
                         asset: f.rb.DragHandle
                     })))), p.createElement(f.Xa, {
-                        className: "drag-and-drop-card-content" + (r ? " " + o.ContentCollapsed : ""),
-                        "data-test-selector": a.Content,
+                        className: "drag-and-drop-card-content" + (r ? " " + a.ContentCollapsed : ""),
+                        "data-test-selector": o.Content,
                         position: f.hb.Relative
                     }, r && this.props.unmountOnCollapse ? null : this.props.children)), p.createElement(g, {
                         cloneStyleRef: u && u.cardRef,
@@ -2080,7 +2095,7 @@
                         var e = this.props,
                             t = e.grabbedCard,
                             n = e.targetCard;
-                        return p.createElement(f.Bb, {
+                        return p.createElement(f.Cb, {
                             alignContent: f.e.Stretch,
                             alignItems: f.f.Stretch,
                             breakpointLarge: {
@@ -2129,18 +2144,18 @@
                         }, n.dropCard = function() {
                             n.setState(function(e) {
                                 var t, n, r = e.common,
-                                    o = r.grabbedCard,
-                                    a = r.targetCard,
+                                    a = r.grabbedCard,
+                                    o = r.targetCard,
                                     i = e.cards,
                                     s = e.roots;
-                                if (o && a && o.name !== a.name && (s.forEach(function(e, r) {
+                                if (a && o && a.name !== o.name && (s.forEach(function(e, r) {
                                         e.forEach(function(e, i) {
-                                            e.name === o.name ? t = {
+                                            e.name === a.name ? t = {
                                                 column: r,
                                                 el: e.el,
                                                 name: e.name,
                                                 row: i
-                                            } : e.name === a.name && (n = {
+                                            } : e.name === o.name && (n = {
                                                 column: r,
                                                 el: e.el,
                                                 name: e.name,
@@ -2148,14 +2163,14 @@
                                             })
                                         })
                                     }), n || (n = {
-                                        column: a.column || 0,
-                                        el: a.el,
-                                        name: a.name,
-                                        row: a.row || 0
+                                        column: o.column || 0,
+                                        el: o.el,
+                                        name: o.name,
+                                        row: o.row || 0
                                     }), t && n)) {
                                     var c = s[t.column],
                                         u = s[n.column],
-                                        d = a.placeholderPosition === h.c.Bottom;
+                                        d = o.placeholderPosition === h.c.Bottom;
                                     u.splice(n.row + (d ? 1 : 0), 0, t), t.column === n.column ? u.splice(t.row + (t.row > n.row ? 1 : 0), 1) : c.splice(t.row, 1)
                                 }
                                 return {
@@ -2169,31 +2184,31 @@
                             }, n.handleCardsUpdate)
                         }, n.updateCard = function(e, t, r) {
                             void 0 === t && (t = {}), n.setState(function(n) {
-                                var o = l.__assign({}, n),
-                                    a = o.cards,
-                                    i = !!a[e],
-                                    s = l.__assign({}, a[e] || new h.a(e), t);
+                                var a = l.__assign({}, n),
+                                    o = a.cards,
+                                    i = !!o[e],
+                                    s = l.__assign({}, o[e] || new h.a(e), t);
                                 switch (r) {
                                     case h.b.RemoveTarget:
-                                        o.common = l.__assign({}, n.common, {
+                                        a.common = l.__assign({}, n.common, {
                                             targetCard: void 0
                                         });
                                         break;
                                     case h.b.SetGrabbed:
-                                        s.isGrabbed = !0, o.common = l.__assign({}, o.common, {
+                                        s.isGrabbed = !0, a.common = l.__assign({}, a.common, {
                                             grabbedCard: s
                                         });
                                         break;
                                     case h.b.SetTarget:
-                                        o.common = l.__assign({}, o.common, {
+                                        a.common = l.__assign({}, a.common, {
                                             targetCard: s
                                         })
                                 }
-                                return i && (o.cards[e] = s), o
+                                return i && (a.cards[e] = s), a
                             })
                         };
                         var r = {},
-                            o = t.initialCardsState.map(function(e) {
+                            a = t.initialCardsState.map(function(e) {
                                 return e.map(function(e) {
                                     return e.el = document.createElement("div"), r[e.name] = e, {
                                         el: e.el,
@@ -2208,7 +2223,7 @@
                                 onCardsUpdate: n.handleCardsUpdate,
                                 updateCard: n.updateCard
                             },
-                            roots: o
+                            roots: a
                         }, n
                     }
                     return l.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -2269,11 +2284,11 @@
         rSo7: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return o
+                return a
             });
             var r = n("/7QA");
 
-            function o(e) {
+            function a(e) {
                 var t = Math.floor(e / 60),
                     n = e % 60;
                 return t && n ? Object(r.d)("{hours, number}h{minutes, number}m", {
@@ -2294,12 +2309,12 @@
         xTFG: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return a
+                return o
             }), n.d(t, "b", function() {
                 return c
             });
-            var r, o = n("1rIY"),
-                a = (r = Object(o.a)("CardsTrackingContext", {
+            var r, a = n("1rIY"),
+                o = (r = Object(a.a)("CardsTrackingContext", {
                     registerReportCardVisibility: function() {
                         return function() {
                             return null

@@ -1259,7 +1259,7 @@
                         alignItems: u.f.Center,
                         position: u.hb.Absolute
                     }, s.createElement(u.Xa, {
-                        textAlign: u.Nb.Center,
+                        textAlign: u.Ob.Center,
                         flexShrink: 1
                     }, s.createElement(u.qb, {
                         asset: e.icon,
@@ -1270,14 +1270,14 @@
                         margin: {
                             top: 1
                         },
-                        textAlign: u.Nb.Center
+                        textAlign: u.Ob.Center
                     }, s.createElement(u.W, {
-                        type: u.Rb.H4,
+                        type: u.Sb.H4,
                         color: u.O.Alt2
                     }, e.titleText)), s.createElement(u.Xa, {
-                        textAlign: u.Nb.Center
+                        textAlign: u.Ob.Center
                     }, s.createElement(u.W, {
-                        type: u.Rb.P,
+                        type: u.Sb.P,
                         color: u.O.Alt2
                     }, e.subText)))
                 },
@@ -1308,7 +1308,7 @@
                                 x: 1
                             }
                         }, s.createElement(u.W, {
-                            type: u.Rb.H5,
+                            type: u.Sb.H5,
                             ellipsis: !0
                         }, this.props.title))))))
                     }, t
@@ -1420,7 +1420,7 @@
                     })), s.createElement("div", {
                         className: e,
                         tabIndex: 0
-                    }, s.createElement(u.Bb, {
+                    }, s.createElement(u.Cb, {
                         attachTop: !0,
                         attachRight: !0,
                         attachLeft: !0,
@@ -1509,8 +1509,8 @@
                     })
                 },
                 w = n("u5aL"),
-                N = n("geRD"),
-                x = n("hyVY"),
+                x = n("geRD"),
+                N = n("hyVY"),
                 T = n("TSYQ"),
                 P = n("Ue10");
             n("uAdw");
@@ -1545,7 +1545,7 @@
                         className: "numbered-thumbnail"
                     }, r.createElement(P.o, {
                         ratio: P.p.Aspect16x9
-                    }, r.createElement(P.Bb, {
+                    }, r.createElement(P.Cb, {
                         background: P.r.AccentAlt2,
                         display: P.X.Flex,
                         alignItems: P.f.Center,
@@ -1553,18 +1553,18 @@
                     }, r.createElement(P.W, {
                         color: P.O.OverlayAlt,
                         fontSize: P.Ca.Size4,
-                        type: P.Rb.H4
+                        type: P.Sb.H4
                     }, e.displayNumber))))
                 }),
-                R = (n("HszP"), function(e) {
+                H = (n("HszP"), function(e) {
                     var t = null;
-                    return e.error ? t = r.createElement(P.Bb, {
+                    return e.error ? t = r.createElement(P.Cb, {
                         color: P.O.Error,
                         display: P.X.Flex,
                         alignItems: P.f.Center
                     }, r.createElement(P.qb, {
                         asset: P.rb.NotificationError
-                    })) : e.finished && (t = r.createElement(P.Bb, {
+                    })) : e.finished && (t = r.createElement(P.Cb, {
                         className: "status-thumbnail__icon--success",
                         display: P.X.Flex,
                         alignItems: P.f.Center
@@ -1574,7 +1574,7 @@
                         className: "status-thumbnail"
                     }, r.createElement(P.o, {
                         ratio: P.p.Aspect16x9
-                    }, r.createElement(P.Bb, {
+                    }, r.createElement(P.Cb, {
                         background: P.r.AccentAlt2,
                         display: P.X.Flex,
                         alignItems: P.f.Center,
@@ -1584,7 +1584,7 @@
             ! function(e) {
                 e.Title = "queue-card-title", e.Thumbnail = "queue-card-thumbnail", e.Timeline = "queue-card-timeline", e.Timestamps = "queue-card-timestamps", e.Game = "queue-card-game", e.SourceTitle = "queue-card-source-title"
             }(V || (V = {}));
-            var H, M = function(e) {
+            var R, M = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getDurationLength = function() {
@@ -1593,13 +1593,13 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e;
-                        return e = this.props.finished ? r.createElement(R, {
+                        return e = this.props.finished ? r.createElement(H, {
                             finished: !0
-                        }) : this.props.error ? r.createElement(R, {
+                        }) : this.props.error ? r.createElement(H, {
                             error: !0
                         }) : r.createElement(F, {
                             displayNumber: this.props.listIndex + 1
-                        }), r.createElement(P.Bb, {
+                        }), r.createElement(P.Cb, {
                             padding: 1,
                             borderBottom: !0
                         }, r.createElement(P.Xa, {
@@ -1613,7 +1613,7 @@
                             }
                         }, r.createElement(P.W, {
                             ellipsis: !0
-                        }, this.props.title || "<" + Object(o.d)("Untitled", "HighlightQueueCard") + ">")), r.createElement(P.Bb, {
+                        }, this.props.title || "<" + Object(o.d)("Untitled", "HighlightQueueCard") + ">")), r.createElement(P.Cb, {
                             display: P.X.Flex
                         }, r.createElement(P.Xa, {
                             "data-test-selector": V.Thumbnail,
@@ -1628,7 +1628,7 @@
                             margin: {
                                 bottom: .5
                             }
-                        }, r.createElement(P.Bb, {
+                        }, r.createElement(P.Cb, {
                             "data-test-selector": V.Timeline,
                             margin: {
                                 bottom: .5
@@ -1647,7 +1647,7 @@
                                 right: 1
                             },
                             overflow: P.cb.Hidden
-                        }, r.createElement(P.Bb, {
+                        }, r.createElement(P.Cb, {
                             padding: {
                                 right: .5
                             },
@@ -1660,14 +1660,14 @@
                         })), r.createElement(P.W, {
                             ellipsis: !0,
                             color: P.O.Alt2
-                        }, Object(x.b)(this.getDurationLength()) + " (" + Object(x.b)(this.props.offsets.startOffsetSeconds) + " - " + Object(x.b)(this.props.offsets.endOffsetSeconds) + ")")), this.props.game && r.createElement(P.Xa, {
+                        }, Object(N.b)(this.getDurationLength()) + " (" + Object(N.b)(this.props.offsets.startOffsetSeconds) + " - " + Object(N.b)(this.props.offsets.endOffsetSeconds) + ")")), this.props.game && r.createElement(P.Xa, {
                             "data-test-selector": V.Game,
                             display: P.X.Flex,
                             margin: {
                                 right: 1
                             },
                             overflow: P.cb.Hidden
-                        }, r.createElement(P.Bb, {
+                        }, r.createElement(P.Cb, {
                             padding: {
                                 right: .5
                             },
@@ -1687,7 +1687,7 @@
                                 right: 1
                             },
                             overflow: P.cb.Hidden
-                        }, r.createElement(P.Bb, {
+                        }, r.createElement(P.Cb, {
                             padding: {
                                 right: .5
                             },
@@ -1707,8 +1707,8 @@
             n("lBPO");
             ! function(e) {
                 e.TitleInput = "queue-card-title-input", e.Thumbnail = "queue-card-thumbnail", e.Timeline = "queue-card-timeline", e.GameSelector = "queue-card-game-selector", e.SourceTitle = "queue-card-source-title", e.DeleteButton = "queue-card-delete-button"
-            }(H || (H = {}));
-            var A, B = function(e) {
+            }(R || (R = {}));
+            var A, j = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.getDurationLength = function() {
@@ -1744,13 +1744,13 @@
                             currentTitle: this.props.title
                         })
                     }, t.prototype.render = function() {
-                        return r.createElement(P.Bb, {
+                        return r.createElement(P.Cb, {
                             className: "highlight-queue-edit-card highlight-queue-edit-card__card",
                             padding: 1,
                             background: P.r.Alt2,
                             borderBottom: !0
                         }, r.createElement(P.Xa, {
-                            "data-test-selector": H.TitleInput,
+                            "data-test-selector": R.TitleInput,
                             margin: {
                                 bottom: 1
                             }
@@ -1763,7 +1763,7 @@
                             maxLength: 140,
                             onChange: this.onTitleChange
                         })), r.createElement(P.Xa, {
-                            "data-test-selector": H.GameSelector,
+                            "data-test-selector": R.GameSelector,
                             margin: {
                                 bottom: 1
                             }
@@ -1771,14 +1771,14 @@
                             currentGameTitle: this.props.game && this.props.game.name || "",
                             onChange: this.onGameChange,
                             compact: !0
-                        })), r.createElement(P.Bb, {
+                        })), r.createElement(P.Cb, {
                             display: P.X.Flex
                         }, r.createElement(P.Xa, {
-                            "data-test-selector": H.Thumbnail,
+                            "data-test-selector": R.Thumbnail,
                             margin: {
                                 right: 1
                             }
-                        }, this.props.error ? r.createElement(R, {
+                        }, this.props.error ? r.createElement(H, {
                             error: !0
                         }) : r.createElement(F, {
                             displayNumber: this.props.listIndex + 1
@@ -1789,8 +1789,8 @@
                             margin: {
                                 bottom: .5
                             }
-                        }, r.createElement(P.Bb, {
-                            "data-test-selector": H.Timeline,
+                        }, r.createElement(P.Cb, {
+                            "data-test-selector": R.Timeline,
                             margin: {
                                 bottom: .5
                             }
@@ -1807,7 +1807,7 @@
                                 right: 1
                             },
                             overflow: P.cb.Hidden
-                        }, r.createElement(P.Bb, {
+                        }, r.createElement(P.Cb, {
                             padding: {
                                 right: .5
                             },
@@ -1820,14 +1820,14 @@
                         })), r.createElement(P.W, {
                             ellipsis: !0,
                             color: P.O.Alt2
-                        }, Object(x.b)(this.getDurationLength()) + " (" + Object(x.b)(this.props.offsets.startOffsetSeconds) + " - " + Object(x.b)(this.props.offsets.endOffsetSeconds) + ")")), r.createElement(P.Xa, {
+                        }, Object(N.b)(this.getDurationLength()) + " (" + Object(N.b)(this.props.offsets.startOffsetSeconds) + " - " + Object(N.b)(this.props.offsets.endOffsetSeconds) + ")")), r.createElement(P.Xa, {
                             display: P.X.Flex,
                             margin: {
                                 right: 1
                             },
                             overflow: P.cb.Hidden
-                        }, r.createElement(P.Bb, {
-                            "data-test-selector": H.SourceTitle,
+                        }, r.createElement(P.Cb, {
+                            "data-test-selector": R.SourceTitle,
                             padding: {
                                 right: .5
                             },
@@ -1840,8 +1840,8 @@
                         })), r.createElement(P.W, {
                             ellipsis: !0,
                             color: P.O.Alt2
-                        }, this.props.sourceVideoTitle || "<" + Object(o.d)("Untitled Source", "HighlightQueueEditCard") + ">"))))), r.createElement(P.Bb, {
-                            "data-test-selector": H.DeleteButton,
+                        }, this.props.sourceVideoTitle || "<" + Object(o.d)("Untitled Source", "HighlightQueueEditCard") + ">"))))), r.createElement(P.Cb, {
+                            "data-test-selector": R.DeleteButton,
                             display: P.X.Flex,
                             justifyContent: P.Wa.End
                         }, r.createElement(P.A, {
@@ -1856,12 +1856,12 @@
                         return !(t || n)
                     }, t
                 }(r.Component),
-                j = n("zAC8");
+                L = n("zAC8");
             n("x4lo");
             ! function(e) {
                 e.AddButtonDropdown = "segmentqueue-addbuttondropdown", e.ErrorNotification = "segmentqueue-errornotification", e.ChangeVideoButton = "segmentqueue-changevideobutton", e.NoItems = "segmentqueue-noitems", e.SaveButton = "segmentqueue-savebutton", e.SegmentQueue = "segmentqueue-segmentqueue", e.SelectHighlightButton = "segmentqueue-selecthighlight", e.MaxQueueSizeTooltip = "segmentqueue-maxtooltip"
             }(A || (A = {}));
-            var L, W, U, G, q = function(e) {
+            var B, W, U, G, q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1935,7 +1935,7 @@
                                                 }
                                             }, i.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), [4, this.props.createHighlight(Object(N.a)(a))];
+                                            return i.trys.push([1, 3, , 4]), [4, this.props.createHighlight(Object(x.a)(a))];
                                         case 2:
                                             return (r = i.sent().data) && r.createVideoHighlight && r.createVideoHighlight.highlight && (t.success = r.createVideoHighlight.highlight), [3, 4];
                                         case 3:
@@ -1948,12 +1948,12 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(P.Bb, {
+                        return r.createElement(P.Cb, {
                             background: P.r.Base,
                             display: P.X.Flex,
                             flexDirection: P.Aa.Column,
                             fullHeight: !0
-                        }, r.createElement(P.Bb, {
+                        }, r.createElement(P.Cb, {
                             background: P.r.Base,
                             borderBottom: !0,
                             padding: 1,
@@ -1999,12 +1999,12 @@
                             height: 25,
                             width: 25
                         })), r.createElement(P.Xa, {
-                            textAlign: P.Nb.Center
+                            textAlign: P.Ob.Center
                         }, r.createElement(P.W, null, Object(o.d)("No highlights are queued. Click the New Highlight button above to start highlighting.", "HighlighterVideoSegmentQueue"))))
                     }, t.prototype.renderSegments = function() {
                         var e = this,
                             t = this.props.queue.map(function(t, n) {
-                                return t.tempID === e.props.activeID ? r.createElement(B, {
+                                return t.tempID === e.props.activeID ? r.createElement(j, {
                                     game: t.metadata.game,
                                     key: t.tempID,
                                     listIndex: n,
@@ -2089,17 +2089,17 @@
                         }, r.createElement(P.W, {
                             noWrap: !0
                         }, Object(o.d)("New Highlight from Another Broadcast", "HighlighterVideoSegmentQueue")))))));
-                        return this.props.queue.length >= 25 ? r.createElement(P.Ub, {
+                        return this.props.queue.length >= 25 ? r.createElement(P.Vb, {
                             "data-test-selector": A.MaxQueueSizeTooltip,
                             label: Object(o.d)("You can only create at most {max} highlights at once.", {
                                 max: 25
                             }, "VideoSegmentQueue")
                         }, e) : e
                     }, t.prototype.renderErrorMessage = function() {
-                        if (this.state.failedSegments) return r.createElement(P.Bb, {
+                        if (this.state.failedSegments) return r.createElement(P.Cb, {
                             "data-test-selector": A.ErrorNotification,
                             borderBottom: !0
-                        }, r.createElement(P.Bb, {
+                        }, r.createElement(P.Cb, {
                             className: "highlight__segment-queue-error",
                             background: P.r.Alt2,
                             color: P.O.Error,
@@ -2117,15 +2117,15 @@
                             }
                         }, r.createElement(P.W, {
                             color: P.O.Base,
-                            type: P.Rb.Span,
+                            type: P.Sb.Span,
                             bold: !0
                         }, Object(o.d)("Error Processing", "VideoSegmentQueue"))), r.createElement(P.W, {
                             color: P.O.Base,
-                            type: P.Rb.Span
+                            type: P.Sb.Span
                         }, Object(o.d)("Retry again below.", "VideoSegmentQueue"))))
                     }, t
                 }(r.Component),
-                z = Object(g.a)(j, {
+                z = Object(g.a)(L, {
                     name: "createHighlight"
                 })(q),
                 Q = n("oJmH"),
@@ -2142,7 +2142,7 @@
                 o.o.track(y.SpadeEventType.StreamBookmarkListDownload, e)
             }! function(e) {
                 e.Creator = "creator", e.Editor = "editor"
-            }(L || (L = {})),
+            }(B || (B = {})),
             function(e) {
                 e.Marker = "marker", e.Clip = "clip_marker"
             }(W || (W = {})),
@@ -2163,7 +2163,7 @@
                         return {
                             channel_id: t.props.channelID,
                             vod_id: t.props.videoID,
-                            user_type: t.props.userID === t.props.channelID ? L.Creator : L.Editor,
+                            user_type: t.props.userID === t.props.channelID ? B.Creator : B.Editor,
                             list_type: e
                         }
                     }, t
@@ -2238,7 +2238,7 @@
                                     height: ie + "px"
                                 };
                                 i = r.createElement(P.Pa, {
-                                    textAlign: P.Nb.Center
+                                    textAlign: P.Ob.Center
                                 }, r.createElement("div", {
                                     className: "dynamic-pins__cluster",
                                     style: f
@@ -2323,7 +2323,7 @@
                                     onClick: function() {
                                         t.props.requestPlayerTimeChange(e.videoOffset), J(t.trackingFieldsForPin(e, 1))
                                     }
-                                }, Object(x.b)(e.videoOffset))), r.createElement(P.Xa, {
+                                }, Object(N.b)(e.videoOffset))), r.createElement(P.Xa, {
                                     display: P.X.Flex,
                                     flexDirection: P.Aa.Column,
                                     flexGrow: 1
@@ -2371,7 +2371,7 @@
                             return {
                                 channel_id: t.props.channelID,
                                 vod_id: t.props.videoID,
-                                user_type: t.props.channelID === t.props.userID ? L.Creator : L.Editor,
+                                user_type: t.props.channelID === t.props.userID ? B.Creator : B.Editor,
                                 seconds_since_stream_start: e.videoOffset,
                                 first_marker_id: e.id,
                                 first_marker_type: e.type === te.Clip ? W.Clip : W.Marker,
@@ -2524,7 +2524,7 @@
                                         return e.video && e.video.clips && e.video.clips.edges && (a = e.video.clips.edges), n.video && n.video.clips && n.video.clips.edges && (r = n.video.clips.edges), {
                                             video: i.__assign({}, n.video, {
                                                 clips: i.__assign({}, n.video && n.video.clips ? n.video.clips : {}, {
-                                                    edges: Object(N.c)(a, r)
+                                                    edges: Object(x.c)(a, r)
                                                 })
                                             })
                                         }
@@ -2550,7 +2550,7 @@
                                         return e.video && e.video.bookmarks && e.video.bookmarks.edges && (a = e.video.bookmarks.edges), n.video && n.video.bookmarks && n.video.bookmarks.edges && (r = n.video.bookmarks.edges), {
                                             video: i.__assign({}, n.video, {
                                                 bookmarks: i.__assign({}, n.video && n.video.bookmarks ? n.video.bookmarks : {}, {
-                                                    edges: Object(N.c)(a, r)
+                                                    edges: Object(x.c)(a, r)
                                                 })
                                             })
                                         }
@@ -2620,13 +2620,13 @@
                                 direction: P.v.TopRight,
                                 tailOffset: 10,
                                 size: P.w.Small
-                            }, r.createElement(P.Xa, null, r.createElement(P.Bb, {
+                            }, r.createElement(P.Xa, null, r.createElement(P.Cb, {
                                 margin: 1
                             }, r.createElement(P.W, {
                                 color: P.O.Alt
-                            }, this.props.description)), r.createElement(P.Bb, null, Object.keys(e).map(this.renderOption))))));
-                        return n && (a = r.createElement(P.Ub, {
-                            direction: P.Wb.Top,
+                            }, this.props.description)), r.createElement(P.Cb, null, Object.keys(e).map(this.renderOption))))));
+                        return n && (a = r.createElement(P.Vb, {
+                            direction: P.Xb.Top,
                             label: this.props.disabledMessage
                         }, a)), r.createElement(P.Xa, {
                             position: P.hb.Relative,
@@ -2708,7 +2708,7 @@
                         left: this.props.pixelX + "px"
                     };
                     return r.createElement(P.Qa, {
-                        zIndex: P.ec.Above,
+                        zIndex: P.fc.Above,
                         color: P.O.Link,
                         className: "playhead-pin__pin",
                         position: P.hb.Absolute
@@ -2737,13 +2737,13 @@
                         className: "playhead-pin__draggable",
                         borderRadius: P.x.Medium,
                         position: P.hb.Absolute,
-                        zIndex: P.ec.Above
+                        zIndex: P.fc.Above
                     }, r.createElement("div", {
                         style: t,
                         ref: this.props.iconRef,
                         onMouseDown: this.props.onMouseDownHandler,
                         "data-test-selector": ge.PlayheadDraggable
-                    }, r.createElement(P.Bb, {
+                    }, r.createElement(P.Cb, {
                         display: P.X.Flex,
                         justifyContent: P.Wa.Between,
                         alignItems: P.f.Stretch,
@@ -2751,7 +2751,7 @@
                         borderRadius: P.x.Medium
                     }, e, r.createElement(P.W, {
                         className: "playhead-pin__text"
-                    }, Object(x.b)(this.props.currentPlayheadTime, {
+                    }, Object(N.b)(this.props.currentPlayheadTime, {
                         zeroPadAll: !0
                     })))))
                 }, t
@@ -2792,7 +2792,7 @@
                             justifyContent: P.Wa.Between
                         }, r.createElement(P.W, {
                             color: P.O.Base
-                        }, Object(o.d)("Start segment here", "HighlightPlayheadDropdown")), r.createElement(P.Bb, {
+                        }, Object(o.d)("Start segment here", "HighlightPlayheadDropdown")), r.createElement(P.Cb, {
                             padding: {
                                 x: .5
                             },
@@ -2815,7 +2815,7 @@
                             justifyContent: P.Wa.Between
                         }, r.createElement(P.W, {
                             color: P.O.Base
-                        }, Object(o.d)("End segment here", "HighlightPlayheadDropdown")), r.createElement(P.Bb, {
+                        }, Object(o.d)("End segment here", "HighlightPlayheadDropdown")), r.createElement(P.Cb, {
                             padding: {
                                 x: .5
                             },
@@ -2874,7 +2874,7 @@
                             top: "95px"
                         };
                     return r.createElement(P.Qa, {
-                        zIndex: P.ec.Above,
+                        zIndex: P.fc.Above,
                         alignItems: P.f.Center,
                         className: "playhead-dropdown__dropdown",
                         display: P.X.InlineFlex,
@@ -2889,7 +2889,7 @@
                         selected: !1,
                         onClick: this.updateShowBalloon,
                         "data-test-selector": ke.PlayheadDropdownIcon
-                    }, r.createElement(P.Bb, {
+                    }, r.createElement(P.Cb, {
                         padding: {
                             x: .5
                         },
@@ -2913,7 +2913,7 @@
             function(e) {
                 e.PlayheadWrapper = "highlight-playhead-wrapper", e.Playhead = "playhead"
             }(Ie || (Ie = {}));
-            var Ne, xe = function(e) {
+            var xe, Ne = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3042,32 +3042,32 @@
             n("L7ac");
             ! function(e) {
                 e[e.PrecisionTooltip = 0] = "PrecisionTooltip", e[e.StartSelection = 1] = "StartSelection", e[e.EndSelection = 2] = "EndSelection", e[e.UseVideoTimeButton = 3] = "UseVideoTimeButton", e[e.SelectHighlightButton = 4] = "SelectHighlightButton"
-            }(Ne || (Ne = {}));
+            }(xe || (xe = {}));
             var Te = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onUpdateStartToCurrentVideoTime = function() {
                             n.setState(function(e, t) {
                                 if (null !== t.currentVideoOffset) return i.__assign({}, e, {
-                                    startOffset: Object(x.b)(t.currentVideoOffset),
-                                    endOffset: Object(x.b)(t.segment.endOffset)
+                                    startOffset: Object(N.b)(t.currentVideoOffset),
+                                    endOffset: Object(N.b)(t.segment.endOffset)
                                 })
                             }, function() {
                                 n.props.onUpdate({
-                                    startOffset: Object(x.a)(n.state.startOffset),
-                                    endOffset: Object(x.a)(n.state.endOffset)
+                                    startOffset: Object(N.a)(n.state.startOffset),
+                                    endOffset: Object(N.a)(n.state.endOffset)
                                 })
                             })
                         }, n.onUpdateEndToCurrentVideoTime = function() {
                             n.setState(function(e, t) {
                                 if (null !== t.currentVideoOffset) return i.__assign({}, e, {
-                                    startOffset: Object(x.b)(t.segment.startOffset),
-                                    endOffset: Object(x.b)(t.currentVideoOffset)
+                                    startOffset: Object(N.b)(t.segment.startOffset),
+                                    endOffset: Object(N.b)(t.currentVideoOffset)
                                 })
                             }, function() {
                                 n.props.onUpdate({
-                                    startOffset: Object(x.a)(n.state.startOffset),
-                                    endOffset: Object(x.a)(n.state.endOffset)
+                                    startOffset: Object(N.a)(n.state.startOffset),
+                                    endOffset: Object(N.a)(n.state.endOffset)
                                 })
                             })
                         }, n.onStartChange = function(e) {
@@ -3085,8 +3085,8 @@
                         }, n.getTooltipLabel = function() {
                             return Object(o.d)("Use Playhead Time", "HighlighterOffsetSelector")
                         }, n.state = {
-                            startOffset: Object(x.b)(t.segment.startOffset),
-                            endOffset: Object(x.b)(t.segment.endOffset),
+                            startOffset: Object(N.b)(t.segment.startOffset),
+                            endOffset: Object(N.b)(t.segment.endOffset),
                             areOffsetsValid: !0
                         }, n
                     }
@@ -3097,8 +3097,8 @@
                             n = e.segment,
                             a = t.startOffset !== n.startOffset,
                             i = t.endOffset !== n.endOffset,
-                            r = Object(x.b)(n.startOffset),
-                            s = Object(x.b)(n.endOffset),
+                            r = Object(N.b)(n.startOffset),
+                            s = Object(N.b)(n.endOffset),
                             o = r !== this.state.startOffset,
                             l = s !== this.state.endOffset,
                             d = !1,
@@ -3112,19 +3112,19 @@
                         };
                         if (a || i) {
                             var f = this.checkOffsetsWithinBounds({
-                                startSeconds: Object(x.a)(c),
-                                endSeconds: Object(x.a)(u),
+                                startSeconds: Object(N.a)(c),
+                                endSeconds: Object(N.a)(u),
                                 startBound: n.minOffset,
                                 endBound: n.maxOffset
                             });
                             p.areOffsetsValid = f, d && f && this.props.onUpdate({
-                                startOffset: Object(x.a)(c),
-                                endOffset: Object(x.a)(u)
+                                startOffset: Object(N.a)(c),
+                                endOffset: Object(N.a)(u)
                             })
                         }
                         this.setState(p)
                     }, t.prototype.render = function() {
-                        var e = Object(x.a)(this.state.endOffset) - Object(x.a)(this.state.startOffset);
+                        var e = Object(N.a)(this.state.endOffset) - Object(N.a)(this.state.startOffset);
                         return (isNaN(e) || e < 0) && (e = 0), r.createElement(P.Xa, {
                             display: P.X.Flex,
                             justifyContent: P.Wa.Start,
@@ -3135,7 +3135,7 @@
                         }, this.renderStartInput(), this.renderEndInput())
                     }, t.prototype.renderStartInput = function() {
                         var e = this.state.startOffset,
-                            t = !this.validClockValue(e) || Object(x.a)(e) >= this.props.segment.endOffset;
+                            t = !this.validClockValue(e) || Object(N.a)(e) >= this.props.segment.endOffset;
                         return r.createElement(P.Xa, {
                             display: P.X.Flex,
                             alignItems: P.f.Center,
@@ -3150,11 +3150,11 @@
                                     right: 2
                                 }
                             },
-                            "data-test-selector": Ne.StartSelection
+                            "data-test-selector": xe.StartSelection
                         }, r.createElement(P.Pa, {
                             display: P.X.InlineFlex,
                             alignItems: P.f.Center,
-                            textAlign: P.Nb.Right
+                            textAlign: P.Ob.Right
                         }, r.createElement("label", null, r.createElement(P.Xa, {
                             className: "offset-selector__input-label",
                             display: P.X.InlineFlex,
@@ -3174,26 +3174,26 @@
                             required: !0,
                             type: P.Ta.Text,
                             value: this.state.startOffset
-                        })))), r.createElement(P.Ub, {
+                        })))), r.createElement(P.Vb, {
                             label: this.getTooltipLabel()
                         }, r.createElement(P.z, {
                             type: P.F.Hollow,
                             onClick: this.onUpdateStartToCurrentVideoTime,
                             icon: P.rb.Timer,
-                            "data-test-selector": Ne.UseVideoTimeButton
+                            "data-test-selector": xe.UseVideoTimeButton
                         })))
                     }, t.prototype.renderEndInput = function() {
                         var e = this.state.endOffset,
-                            t = !this.validClockValue(e) || Object(x.a)(e) <= this.props.segment.startOffset;
+                            t = !this.validClockValue(e) || Object(N.a)(e) <= this.props.segment.startOffset;
                         return r.createElement(P.Xa, {
                             display: P.X.Flex,
                             alignItems: P.f.Center,
                             justifyContent: P.Wa.End,
-                            "data-test-selector": Ne.EndSelection
+                            "data-test-selector": xe.EndSelection
                         }, r.createElement(P.Pa, {
                             display: P.X.InlineFlex,
                             alignItems: P.f.Center,
-                            textAlign: P.Nb.Right
+                            textAlign: P.Ob.Right
                         }, r.createElement("label", null, r.createElement(P.Xa, {
                             className: "offset-selector__input-label",
                             display: P.X.InlineFlex,
@@ -3213,24 +3213,24 @@
                             required: !0,
                             type: P.Ta.Text,
                             value: e
-                        })))), r.createElement(P.Ub, {
+                        })))), r.createElement(P.Vb, {
                             label: this.getTooltipLabel()
                         }, r.createElement(P.z, {
                             type: P.F.Hollow,
                             onClick: this.onUpdateEndToCurrentVideoTime,
                             icon: P.rb.Timer,
-                            "data-test-selector": Ne.UseVideoTimeButton
+                            "data-test-selector": xe.UseVideoTimeButton
                         })))
                     }, t.prototype.validClockValue = function(e) {
-                        var t = Object(x.a)(e);
+                        var t = Object(N.a)(e);
                         return !isNaN(t)
                     }, t.prototype.canUpdate = function() {
                         if (!(this.validClockValue(this.state.startOffset) && this.validClockValue(this.state.endOffset))) return this.setState({
                             areOffsetsValid: !1
                         }), !1;
                         var e = this.props.segment,
-                            t = Object(x.a)(this.state.startOffset),
-                            n = Object(x.a)(this.state.endOffset),
+                            t = Object(N.a)(this.state.startOffset),
+                            n = Object(N.a)(this.state.endOffset),
                             a = this.checkOffsetsWithinBounds({
                                 startSeconds: t,
                                 endSeconds: n,
@@ -3244,8 +3244,8 @@
                         return !isNaN(e.startSeconds) && !isNaN(e.endSeconds) && (!(e.startSeconds < e.startBound || e.endSeconds > e.endBound) && !(e.endSeconds <= e.startSeconds))
                     }, t.prototype.update = function() {
                         this.canUpdate() && this.props.onManualInputChange({
-                            startOffset: Object(x.a)(this.state.startOffset),
-                            endOffset: Object(x.a)(this.state.endOffset)
+                            startOffset: Object(N.a)(this.state.startOffset),
+                            endOffset: Object(N.a)(this.state.endOffset)
                         })
                     }, t
                 }(r.Component),
@@ -3253,7 +3253,7 @@
                 Ve = (n("Vt/k"), 25),
                 _e = 150,
                 Fe = 200,
-                Re = function(e) {
+                He = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3288,11 +3288,11 @@
                                         position: P.hb.Relative
                                     }, r.createElement("div", {
                                         className: "timeline-ruler__tick"
-                                    }), r.createElement(P.Bb, {
+                                    }), r.createElement(P.Cb, {
                                         className: "timeline-ruler__timestamp",
                                         color: P.O.Alt2,
                                         position: P.hb.Absolute
-                                    }, Object(x.b)(d, {
+                                    }, Object(N.b)(d, {
                                         zeroPadAll: !0
                                     }))))
                                 } else s.push(r.createElement("div", {
@@ -3331,7 +3331,7 @@
                         }))
                     }, t
                 }(r.Component),
-                He = function(e) {
+                Re = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onDrag = function(e) {
@@ -3355,7 +3355,7 @@
                             onRightDragStart: this.props.onEndOffsetFocus,
                             onRightDragEnd: this.props.onDragEnd,
                             showTransition: this.props.showTransition
-                        }, r.createElement(P.Bb, {
+                        }, r.createElement(P.Cb, {
                             alignItems: P.f.Center,
                             display: P.X.Flex,
                             fullWidth: !0,
@@ -3363,8 +3363,8 @@
                             padding: {
                                 y: 3
                             },
-                            textAlign: P.Nb.Center
-                        })), r.createElement(Re, {
+                            textAlign: P.Ob.Center
+                        })), r.createElement(He, {
                             startOffset: 0,
                             endOffset: this.props.duration
                         }))
@@ -3372,7 +3372,7 @@
                 }(r.Component),
                 Me = Object(Q.compose)(Object(D.b)("VideoSegmentEditor", {
                     autoReportInteractive: !0
-                }))(He),
+                }))(Re),
                 Xe = function(e) {
                     return Math.floor(15 * e / 100)
                 },
@@ -3380,8 +3380,8 @@
                     return Math.ceil(85 * e / 100)
                 };
             n("f0Oh");
-            var Be = 250,
-                je = function(e) {
+            var je = 250,
+                Le = function(e) {
                     function t(t) {
                         var n, a = e.call(this, t) || this;
                         a.addTransition = function() {
@@ -3394,7 +3394,7 @@
                                     a.setState({
                                         isTransitioning: !1
                                     })
-                                }, Be)
+                                }, je)
                             })
                         }, a.onOffsetChange = function(e) {
                             a.addTransition();
@@ -3500,7 +3500,7 @@
                             vod_type: this.props.videoType
                         }), r.createElement(P.Xa, {
                             fullWidth: !0
-                        }, r.createElement(xe, {
+                        }, r.createElement(Ne, {
                             currentVideoOffset: this.props.currentVideoOffset,
                             videoDuration: this.props.videoLengthSeconds,
                             requestPlayerTimeChange: this.props.requestPlayerTimeChange,
@@ -3520,7 +3520,7 @@
                             requestPlayerTimeChange: this.props.requestPlayerTimeChange,
                             updateDownloadData: this.updateDownloadData,
                             activeSegment: t
-                        }, r.createElement(P.Bb, {
+                        }, r.createElement(P.Cb, {
                             className: "video-timeline__background",
                             border: !0
                         }, r.createElement(Me, {
@@ -3605,9 +3605,9 @@
                         }
                     }, t
                 }(r.Component),
-                Le = Object(Q.compose)(Object(D.b)("VideoTimeline", {
+                Be = Object(Q.compose)(Object(D.b)("VideoTimeline", {
                     autoReportInteractive: !0
-                }))(je);
+                }))(Le);
 
             function We(e) {
                 return {
@@ -3928,7 +3928,7 @@
                             content: n
                         }, r.createElement(h.b, null, r.createElement(P.pb, {
                             centered: !0
-                        }, r.createElement(P.Bb, {
+                        }, r.createElement(P.Cb, {
                             alignItems: P.f.Stretch,
                             background: P.r.Alt,
                             className: "highlighter-page",
@@ -3955,7 +3955,7 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(P.Bb, {
+                        }, r.createElement(P.Cb, {
                             fullHeight: !0,
                             fullWidth: !0,
                             elevation: 1,
@@ -3985,7 +3985,7 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(P.Bb, {
+                        }, r.createElement(P.Cb, {
                             elevation: 1,
                             background: P.r.Base,
                             fullHeight: !0
@@ -4011,7 +4011,7 @@
                             margin: {
                                 y: 4
                             }
-                        }, r.createElement(Le, {
+                        }, r.createElement(Be, {
                             activeSegment: this.getSegmentByID(this.state.activeID),
                             onStartOffsetFocus: this.onTimelineStartOffsetFocus,
                             onEndOffsetFocus: this.onTimelineEndOffsetFocus,
@@ -4045,13 +4045,13 @@
                             }
                         }, r.createElement(P.W, {
                             "data-test-selector": qe.SourceVideoDate,
-                            type: P.Rb.Span
+                            type: P.Sb.Span
                         }, Object(o.c)(new Date(e.publishedAt), "medium"))), e.game && r.createElement(P.Xa, {
                             display: P.X.Flex,
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(P.Bb, {
+                        }, r.createElement(P.Cb, {
                             padding: {
                                 right: .5
                             },
@@ -4069,7 +4069,7 @@
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(P.Bb, {
+                        }, r.createElement(P.Cb, {
                             padding: {
                                 right: .5
                             },
@@ -4214,7 +4214,7 @@
                             delay: P.j.Medium,
                             duration: P.k.Medium,
                             enabled: !0
-                        }, r.createElement(P.Bb, {
+                        }, r.createElement(P.Cb, {
                             background: P.r.Base,
                             className: "highlighter-vod-selector",
                             display: P.X.Flex,
@@ -4271,7 +4271,7 @@
                                 onClick: e.onVideoClick.bind(e, t),
                                 "data-test-selector": tt.VideoCard,
                                 disabled: a
-                            }, r.createElement(P.Bb, {
+                            }, r.createElement(P.Cb, {
                                 alignItems: P.f.Center,
                                 display: P.X.Flex,
                                 flexDirection: P.Aa.Row,
@@ -4307,7 +4307,7 @@
                     return {
                         user: i.__assign({}, n.user, {
                             searchVideos: i.__assign({}, n.user.searchVideos, {
-                                edges: Object(N.c)(e.user.searchVideos.edges, a)
+                                edges: Object(x.c)(e.user.searchVideos.edges, a)
                             })
                         }),
                         collection: e.collection
@@ -4636,8 +4636,8 @@
                         margin: {
                             bottom: 1
                         },
-                        zIndex: u.ec.Above
-                    }, this.props.popover))), l.createElement(u.Bb, {
+                        zIndex: u.fc.Above
+                    }, this.props.popover))), l.createElement(u.Cb, {
                         className: n,
                         fullWidth: !0,
                         display: u.X.Flex,
@@ -5406,7 +5406,7 @@
                         fullWidth: !0,
                         overflow: o.cb.Hidden
                     }, i.createElement(o.W, {
-                        type: o.Rb.H3,
+                        type: o.Sb.H3,
                         fontSize: o.Ca.Size6,
                         title: e.video.title,
                         ellipsis: !0
@@ -5415,7 +5415,7 @@
                     }, t)))
                 },
                 d = function(e) {
-                    return e ? i.createElement(o.Bb, {
+                    return e ? i.createElement(o.Cb, {
                         background: o.r.Overlay,
                         attachTop: !0,
                         attachLeft: !0,

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [183], {
+    [182], {
         "0Ex5": function(e, n) {
             var t = {
                 kind: "Document",
@@ -445,7 +445,7 @@
                                 margin: {
                                     right: .5
                                 }
-                            }, a.createElement(o.Ub, {
+                            }, a.createElement(o.Vb, {
                                 label: n.alt
                             }, a.createElement(o.Ua, {
                                 type: o.Va.Alpha,
@@ -459,7 +459,7 @@
                                 src: Object(s.d)(n.id, 3)
                             })))))
                         });
-                        return a.createElement(o.Bb, {
+                        return a.createElement(o.Cb, {
                             background: o.r.Base,
                             border: !0,
                             className: "new-chatter-ritual",
@@ -480,7 +480,7 @@
                             margin: {
                                 right: .5
                             }
-                        }, this.props.bannerMessage), t, a.createElement(o.Bb, {
+                        }, this.props.bannerMessage), t, a.createElement(o.Cb, {
                             borderLeft: !0,
                             flexShrink: 0
                         }, a.createElement(o.A, {

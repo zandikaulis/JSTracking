@@ -118,16 +118,16 @@
                     }, e.request = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, Promise, function() {
                             var n, a, s, o;
-                            return i.__generator(this, function(c) {
-                                switch (c.label) {
+                            return i.__generator(this, function(u) {
+                                switch (u.label) {
                                     case 0:
                                         return t = this.constructOptions(t, r), n = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, n), s = i.__assign({}, t, {
                                             body: a
                                         }), [4, this._fetch(e, s)];
                                     case 1:
-                                        return o = c.sent(), [4, this.constructLegacyAPIResponse(o)];
+                                        return o = u.sent(), [4, this.constructLegacyAPIResponse(o)];
                                     case 2:
-                                        return [2, c.sent()]
+                                        return [2, u.sent()]
                                 }
                             })
                         })
@@ -215,14 +215,14 @@
                 a = r("q1tI"),
                 s = r("/MKj"),
                 o = r("9C/b"),
-                c = r("fvjX"),
-                l = r("/7QA"),
-                u = r("yR8l"),
+                u = r("fvjX"),
+                c = r("/7QA"),
+                l = r("yR8l"),
                 d = r("KxT4"),
                 m = r("GnwI"),
                 h = r("O4UZ"),
-                f = r("b6Yk"),
-                p = l.p.logger.withCategory("verify-email"),
+                p = r("b6Yk"),
+                f = c.p.logger.withCategory("verify-email"),
                 y = function(e, t) {
                     return n.__awaiter(void 0, void 0, void 0, function() {
                         var r, i;
@@ -231,7 +231,7 @@
                                 case 0:
                                     r = "/kraken/users/" + e, n.label = 1;
                                 case 1:
-                                    return n.trys.push([1, 3, , 4]), [4, f.a.putOrThrow(r, {
+                                    return n.trys.push([1, 3, , 4]), [4, p.a.putOrThrow(r, {
                                         body: {
                                             email: t
                                         }
@@ -239,7 +239,7 @@
                                 case 2:
                                     return n.sent(), [2, !0];
                                 case 3:
-                                    return i = n.sent(), p.error(i, "Verify Email Service"), [2, !1];
+                                    return i = n.sent(), f.error(i, "Verify Email Service"), [2, !1];
                                 case 4:
                                     return [2]
                             }
@@ -257,9 +257,9 @@
             }), r.d(t, "DISMISS_BTN_SELECTOR", function() {
                 return D
             }), r.d(t, "VERIFY_BTN_SELECTOR", function() {
-                return w
-            }), r.d(t, "VerifyEmailBarPresentation", function() {
                 return C
+            }), r.d(t, "VerifyEmailBarPresentation", function() {
+                return w
             }), r.d(t, "VerifyEmailBar", function() {
                 return O
             });
@@ -268,11 +268,11 @@
                 b = 5e3,
                 T = new Set(["/"]),
                 D = "dimiss-btn",
-                w = "verify-email-btn";
+                C = "verify-email-btn";
             ! function(e) {
                 e[e.INITIAL = 0] = "INITIAL", e[e.CLICK_TO_VERIFY = 1] = "CLICK_TO_VERIFY", e[e.EMAIL_SENT = 2] = "EMAIL_SENT", e[e.ERROR_SENDING = 3] = "ERROR_SENDING", e[e.DISMISSED = 4] = "DISMISSED"
             }(E || (E = {}));
-            var C = function(e) {
+            var w = function(e) {
                     function t(t) {
                         var r = e.call(this, t) || this;
                         return r.state = {
@@ -284,7 +284,7 @@
                             r.dismissalData = {
                                 dismissalCount: t + 1,
                                 dismissalDateTimeMs: Date.now()
-                            }, l.m.set(S, r.dismissalData), r.setState({
+                            }, c.m.set(S, r.dismissalData), r.setState({
                                 verifyEmailBarState: E.DISMISSED
                             }), r.resetAfterDismissalTimeoutID = setTimeout(function() {
                                 return n.__awaiter(r, void 0, void 0, function() {
@@ -299,7 +299,7 @@
                                         }
                                     })
                                 })
-                            }, 1.01 * I), l.p.tracking.track(v.SpadeEventType.VerifyEmailBar, {
+                            }, 1.01 * I), c.p.tracking.track(v.SpadeEventType.VerifyEmailBar, {
                                 action: i.Dismiss
                             })
                         }, r.onClickToVerify = function(e) {
@@ -308,7 +308,7 @@
                                 return n.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return e && e.currentTarget && (t = e.currentTarget) && t.blur(), [4, y(this.props.data.currentUser.id, this.props.data.currentUser.email)];
+                                            return e && e.currentTarget && (t = e.currentTarget) && t.blur(), this.props.data.currentUser && this.props.data.currentUser.id && this.props.data.currentUser.email ? [4, y(this.props.data.currentUser.id, this.props.data.currentUser.email)] : [2];
                                         case 1:
                                             return n.sent() ? this.setState({
                                                 verifyEmailBarState: E.EMAIL_SENT
@@ -318,13 +318,13 @@
                                                 r.setState({
                                                     verifyEmailBarState: E.DISMISSED
                                                 }), r.afterVerifyDismissTimeoutID = null
-                                            }, b), l.p.tracking.track(v.SpadeEventType.VerifyEmailBar, {
+                                            }, b), c.p.tracking.track(v.SpadeEventType.VerifyEmailBar, {
                                                 action: i.Click
                                             }), [2]
                                     }
                                 })
                             })
-                        }, r.dismissalData = l.m.getOptional(S), r
+                        }, r.dismissalData = c.m.getOptional(S), r
                     }
                     return n.__extends(t, e), t.prototype.componentWillUnmount = function() {
                         null !== this.resetAfterDismissalTimeoutID && clearTimeout(this.resetAfterDismissalTimeoutID), null !== this.afterVerifyDismissTimeoutID && clearTimeout(this.afterVerifyDismissTimeoutID)
@@ -342,7 +342,7 @@
                         if (this.state.isError) return null;
                         switch (this.state.verifyEmailBarState) {
                             case E.CLICK_TO_VERIFY:
-                                return this.impressionEventFired || (l.p.tracking.track(v.SpadeEventType.VerifyEmailBar, {
+                                return this.impressionEventFired || (c.p.tracking.track(v.SpadeEventType.VerifyEmailBar, {
                                     action: i.Impress
                                 }), this.impressionEventFired = !0), this.renderClickToVerify();
                             case E.EMAIL_SENT:
@@ -355,13 +355,13 @@
                     }, t.prototype.isVisible = function() {
                         return this.state.verifyEmailBarState !== E.INITIAL && this.state.verifyEmailBarState !== E.DISMISSED
                     }, t.prototype.renderClickToVerify = function() {
-                        return a.createElement(g.i, {
+                        return this.props.data.currentUser && this.props.data.currentUser.email ? a.createElement(g.i, {
                             type: g.n.SlideInTop,
                             duration: g.k.ExtraLong
                         }, a.createElement(g.Xa, {
                             fullWidth: !0,
                             position: g.hb.Relative
-                        }, a.createElement(g.Bb, {
+                        }, a.createElement(g.Cb, {
                             className: "verify-email-bar",
                             display: g.X.Flex,
                             alignItems: g.f.Center,
@@ -373,7 +373,7 @@
                             padding: 1
                         }, a.createElement("button", {
                             onClick: this.onClickToVerify,
-                            "data-test-selector": w
+                            "data-test-selector": C
                         }, a.createElement(g.Xa, {
                             display: g.X.Flex,
                             alignItems: g.f.Center,
@@ -396,9 +396,9 @@
                         }, a.createElement(g.W, {
                             fontSize: g.Ca.Size5,
                             color: g.O.Inherit
-                        }, Object(l.d)("Keep your account secure and verify {email}.", {
+                        }, Object(c.d)("Keep your account secure and verify {email}.", {
                             email: this.props.data.currentUser.email
-                        }, "VerifyEmail")))))), a.createElement(g.Bb, {
+                        }, "VerifyEmail")))))), a.createElement(g.Cb, {
                             className: "verify-email-bar__dismiss",
                             position: g.hb.Absolute,
                             attachRight: !0,
@@ -415,16 +415,16 @@
                             "data-test-selector": D,
                             hoverColorInherit: !0,
                             hoverUnderlineNone: !0
-                        }, Object(l.d)("Not Now", "VerifyEmail"))))))
+                        }, Object(c.d)("Not Now", "VerifyEmail")))))) : null
                     }, t.prototype.renderEmailSent = function() {
-                        return a.createElement(g.Bb, {
+                        return this.props.data.currentUser && this.props.data.currentUser.email ? a.createElement(g.Cb, {
                             className: "verify-email-bar verify-email-bar--success",
                             display: g.X.Flex,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
                             elevation: 1,
                             padding: 1
-                        }, a.createElement(g.Bb, {
+                        }, a.createElement(g.Cb, {
                             display: g.X.Flex,
                             alignItems: g.f.Center,
                             margin: {
@@ -440,18 +440,18 @@
                         })), a.createElement(g.W, {
                             fontSize: g.Ca.Size5,
                             color: g.O.Overlay
-                        }, Object(l.d)("Check your inbox at {email} for your verification email.", {
+                        }, Object(c.d)("Check your inbox at {email} for your verification email.", {
                             email: this.props.data.currentUser.email
-                        }, "VerifyEmail")))
+                        }, "VerifyEmail"))) : null
                     }, t.prototype.renderErrorSending = function() {
-                        return a.createElement(g.Bb, {
+                        return this.props.data.currentUser && this.props.data.currentUser.email ? a.createElement(g.Cb, {
                             className: "verify-email-bar verify-email-bar--error",
                             display: g.X.Flex,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
                             elevation: 1,
                             padding: 1
-                        }, a.createElement(g.Bb, {
+                        }, a.createElement(g.Cb, {
                             display: g.X.Flex,
                             alignItems: g.f.Center,
                             margin: {
@@ -467,9 +467,9 @@
                         })), a.createElement(g.W, {
                             fontSize: g.Ca.Size5,
                             color: g.O.Overlay
-                        }, Object(l.d)("Oops...we were unable to send an email to {email}. Please try again later or update your email.", {
+                        }, Object(c.d)("Oops...we were unable to send an email to {email}. Please try again later or update your email.", {
                             email: this.props.data.currentUser.email
-                        }, "VerifyEmail")), a.createElement(g.Bb, {
+                        }, "VerifyEmail")), a.createElement(g.Cb, {
                             position: g.hb.Absolute,
                             attachRight: !0,
                             margin: {
@@ -479,12 +479,12 @@
                             type: g.F.Hollow,
                             overlay: !0,
                             linkTo: "/settings/profile"
-                        }, Object(l.d)("Update Email", "VerifyEmail"))))
+                        }, Object(c.d)("Update Email", "VerifyEmail")))) : null
                     }, t.prototype.shouldHide = function() {
-                        return !(this.isDataLoaded() && !this.props.data.currentUser.isEmailVerified) || (this.shouldRespectDismissal() || this.isShowingPrimeUpsell() || this.props.blockedByGDPRBanner)
+                        return !!(!this.isDataLoaded() || this.props.data.currentUser && this.props.data.currentUser.isEmailVerified) || (this.shouldRespectDismissal() || this.isShowingPrimeUpsell() || this.props.blockedByGDPRBanner)
                     }, t.prototype.isShowingPrimeUpsell = function() {
                         if (T.has(this.props.location.pathname)) {
-                            var e = this.props.data.currentUser && this.props.data.currentUser.hasPrime,
+                            var e = !(!this.props.data.currentUser || !this.props.data.currentUser.hasPrime),
                                 t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode;
                             return Object(h.p)(e, t)
                         }
@@ -496,11 +496,11 @@
                         return this.props.data && !(this.props.data.loading || this.props.data.error) && this.props.data.currentUser && this.props.data.requestInfo
                     }, t
                 }(a.Component),
-                O = Object(c.compose)(Object(m.b)("VerifyEmail"), Object(u.a)(_), Object(s.connect)(function(e) {
+                O = Object(u.compose)(Object(m.b)("VerifyEmail"), Object(l.a)(_), Object(s.connect)(function(e) {
                     return {
                         blockedByGDPRBanner: Object(d.h)(e)
                     }
-                }), o.a)(C)
+                }), o.a)(w)
         },
         ongj: function(e, t) {
             var r = {

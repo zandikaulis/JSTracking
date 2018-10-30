@@ -26,7 +26,7 @@
                             delay: l.j.Medium,
                             duration: l.k.Medium,
                             enabled: !0
-                        }, a.createElement(l.Bb, {
+                        }, a.createElement(l.Cb, {
                             "data-test-selector": r.TRIAL_BANNER,
                             display: l.X.Flex,
                             background: l.r.Base,
@@ -52,10 +52,10 @@
                             }
                         }, a.createElement(l.W, {
                             fontSize: l.Ca.Size5,
-                            type: l.Rb.Strong
+                            type: l.Sb.Strong
                         }, Object(o.e)("Twitch Multiview", "MultiviewBanner"))), a.createElement(l.W, {
                             fontSize: l.Ca.Size5,
-                            type: l.Rb.Span
+                            type: l.Sb.Span
                         }, Object(o.e)("Choose your own streams including player POVs", "MultiviewBanner"))), a.createElement(l.Xa, {
                             margin: {
                                 left: "auto"

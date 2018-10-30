@@ -17,9 +17,9 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = this.optionElement();
-                        return this.props.disabled && this.props.disabledMessage ? o.createElement(m.Ub, {
-                            direction: m.Wb.Bottom,
-                            align: m.Vb.Left,
+                        return this.props.disabled && this.props.disabledMessage ? o.createElement(m.Vb, {
+                            direction: m.Xb.Bottom,
+                            align: m.Wb.Left,
                             width: 130,
                             display: m.X.Flex,
                             label: this.props.disabledMessage
@@ -117,7 +117,7 @@
                             noTail: !0,
                             show: this.state.isOpen,
                             "data-a-target": "time-selector-balloon"
-                        }, o.createElement(m.Bb, {
+                        }, o.createElement(m.Cb, {
                             className: "time-picker__dropdown"
                         }, t)))))
                     }, t.prototype.getTime = function(e) {
@@ -318,7 +318,7 @@
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: r.ec.Above
+                            zIndex: r.fc.Above
                         }, i.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -2031,14 +2031,14 @@
                             }, E(this.state.fieldErrors.endTime)) : null;
                         return r.createElement(h.Xa, {
                             className: "event-modal"
-                        }, r.createElement(h.Bb, {
+                        }, r.createElement(h.Cb, {
                             className: "event-modal__content",
                             padding: 4,
                             margin: {
                                 top: 5
                             },
                             background: h.r.Base
-                        }, r.createElement(h.Bb, {
+                        }, r.createElement(h.Cb, {
                             display: h.X.Flex,
                             padding: {
                                 bottom: 2
@@ -2052,7 +2052,7 @@
                             flexGrow: 0,
                             flexShrink: 1
                         }, r.createElement(h.W, {
-                            type: h.Rb.H3
+                            type: h.Sb.H3
                         }, Object(o.d)("Create an Event", "EventsModal"))), r.createElement(h.Xa, {
                             flexGrow: 0,
                             flexShrink: 0
@@ -2104,7 +2104,7 @@
                             label: Object(o.d)("Event Description", "EventsModal"),
                             error: !!this.state.fieldErrors.description,
                             errorMessage: E(this.state.fieldErrors.description)
-                        }, r.createElement(h.Ob, {
+                        }, r.createElement(h.Pb, {
                             placeholder: Object(o.d)("Tell viewers why they should watch your event", "EventsModal"),
                             onChange: this.onDescriptionChange,
                             value: this.state.edits.description || "",
@@ -2246,12 +2246,12 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(r.Bb, {
+                        return i.createElement(r.Cb, {
                             className: "vm-edit-cancel-modal",
                             background: r.r.Base,
                             padding: 2
                         }, i.createElement(r.Xa, null, i.createElement(r.W, {
-                            type: r.Rb.H3
+                            type: r.Sb.H3
                         }, this.props.title), i.createElement(r.Xa, {
                             padding: {
                                 y: 1
@@ -3445,7 +3445,7 @@
                             error: !!this.props.errorMessage
                         }, i.createElement(s.Xa, {
                             className: "image-uploader",
-                            textAlign: s.Nb.Center,
+                            textAlign: s.Ob.Center,
                             display: s.X.Flex,
                             flexDirection: s.Aa.Column,
                             alignItems: s.f.Center,
@@ -3478,12 +3478,12 @@
                             margin: 1,
                             "data-test-selector": "image-uploader-loading"
                         }, i.createElement(s.W, {
-                            type: s.Rb.H4
+                            type: s.Sb.H4
                         }, Object(r.d)("Uploading", "ImageUploader")))
                     }, t.prototype.renderNormalState = function() {
                         var e = Object(r.d)("Browse", "ImageUploader");
                         return i.createElement(s.Xa, null, i.createElement(s.Xa, null, i.createElement(s.W, {
-                            type: s.Rb.H4
+                            type: s.Sb.H4
                         }, Object(r.d)("Drag and drop your image here", "ImageUploader"))), i.createElement(s.Xa, {
                             margin: {
                                 bottom: 2
@@ -3495,7 +3495,7 @@
                             fullWidth: !0,
                             "data-test-selector": "image-uploader-hint"
                         }, i.createElement(s.W, {
-                            type: s.Rb.P,
+                            type: s.Sb.P,
                             fontSize: s.Ca.Size7,
                             color: s.O.Alt2
                         }, this.props.hintMessage)), i.createElement(s.Xa, null, i.createElement(s.z, {
@@ -3509,7 +3509,7 @@
                             },
                             "data-test-selector": "image-uploader-error"
                         }, i.createElement(s.W, {
-                            type: s.Rb.H5,
+                            type: s.Sb.H5,
                             color: s.O.Error,
                             bold: !0
                         }, this.props.errorMessage))
@@ -6139,14 +6139,14 @@
                             color: F.O.Error
                         }, this.props.serviceError))), r.createElement(F.Xa, {
                             className: "event-modal"
-                        }, r.createElement(F.Bb, {
+                        }, r.createElement(F.Cb, {
                             className: "event-modal__content",
                             padding: 4,
                             margin: {
                                 top: 5
                             },
                             background: F.r.Base
-                        }, r.createElement(F.Bb, {
+                        }, r.createElement(F.Cb, {
                             display: F.X.Flex,
                             padding: {
                                 bottom: 2
@@ -6160,7 +6160,7 @@
                             flexGrow: 0,
                             flexShrink: 1
                         }, r.createElement(F.W, {
-                            type: F.Rb.H3
+                            type: F.Sb.H3
                         }, Object(l.d)("Create a Series", "CollectionModal"))), r.createElement(F.Xa, {
                             flexGrow: 0,
                             flexShrink: 0
@@ -6212,7 +6212,7 @@
                             label: Object(l.d)("Event Description", "CollectionModal"),
                             error: !!this.state.fieldErrors.description,
                             errorMessage: U(this.state.fieldErrors.description)
-                        }, r.createElement(F.Ob, {
+                        }, r.createElement(F.Pb, {
                             placeholder: Object(l.d)("Tell viewers why they should watch your series", "CollectionModal"),
                             onChange: this.onDescriptionChange,
                             value: this.state.fieldValues.description,
@@ -6469,7 +6469,7 @@
                         return t.renderTitle = function() {
                             var e = Object(l.d)("Events", "DashboardEventsHeader"),
                                 n = r.createElement(F.W, {
-                                    type: F.Rb.H4,
+                                    type: F.Sb.H4,
                                     bold: !0
                                 }, e),
                                 a = null,
@@ -6482,7 +6482,7 @@
                                     left: .5
                                 }
                             }, r.createElement(F.W, {
-                                type: F.Rb.H4,
+                                type: F.Sb.H4,
                                 bold: !0
                             }, "/ ", t.props.navigatedCollection.title))), i = r.createElement(F.Xa, {
                                 margin: {
@@ -6496,7 +6496,7 @@
                             })), n = r.createElement(F.U, {
                                 to: "/" + t.props.channelName + "/dashboard/events"
                             }, r.createElement(F.W, {
-                                type: F.Rb.H4,
+                                type: F.Sb.H4,
                                 bold: !0
                             }, e)), t.props.navigatedCollection.stats && (o = r.createElement(F.W, null, t.props.navigatedCollection.stats.followingCount, " ", Object(l.d)("Reminders Set", "DashboardEventsHeader")))), r.createElement(r.Fragment, null, r.createElement(F.Xa, {
                                 display: F.X.Flex
@@ -6569,7 +6569,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(F.Bb, {
+                        return r.createElement(F.Cb, {
                             className: "dashboard-events-header",
                             alignItems: F.f.Center,
                             borderBottom: !0,
@@ -6578,7 +6578,7 @@
                             flexDirection: F.Aa.Row,
                             justifyContent: F.Wa.Center,
                             position: F.hb.Relative,
-                            zIndex: F.ec.Default,
+                            zIndex: F.fc.Default,
                             fullWidth: !0
                         }, r.createElement(F.Xa, {
                             margin: {
@@ -6648,7 +6648,7 @@
                         var e = Object(l.j)(new Date(this.props.startAt), {
                             timeZoneName: "short"
                         });
-                        return r.createElement(F.Xa, null, r.createElement(F.Bb, {
+                        return r.createElement(F.Xa, null, r.createElement(F.Cb, {
                             className: "dashboard-events-leaf-card__row",
                             margin: {
                                 y: 1
@@ -6687,7 +6687,7 @@
                             to: "/events/" + this.props.id
                         }, r.createElement(F.W, {
                             bold: !0,
-                            type: F.Rb.H5
+                            type: F.Sb.H5
                         }, this.props.title))), r.createElement(F.Xa, null, this.renderInfoBar(e)))), r.createElement(F.Xa, {
                             margin: {
                                 left: 1,
@@ -6803,7 +6803,7 @@
                             margin: {
                                 bottom: 3
                             }
-                        }, r.createElement(F.Bb, {
+                        }, r.createElement(F.Cb, {
                             display: F.X.Flex,
                             justifyContent: F.Wa.Between,
                             padding: {
@@ -6812,7 +6812,7 @@
                             borderBottom: !0
                         }, r.createElement(F.W, {
                             color: F.O.Alt2,
-                            type: F.Rb.H5
+                            type: F.Sb.H5
                         }, this.props.dateString)), t)
                     }, t
                 }(r.Component),
@@ -6916,9 +6916,9 @@
                                 bottom: 1
                             }
                         }, r.createElement(F.W, {
-                            transform: F.Qb.Uppercase,
+                            transform: F.Rb.Uppercase,
                             color: F.O.Alt2,
-                            type: F.Rb.H5
+                            type: F.Sb.H5
                         }, Object(l.d)("Series", "DashboardEventsSidenav"))), r.createElement(F.Xa, {
                             margin: {
                                 bottom: 1
@@ -7062,7 +7062,7 @@
                                 alt: Object(l.d)("No Events in this Series", "DashboardEventsLayout")
                             }), r.createElement(F.Xa, {
                                 display: F.X.Flex,
-                                textAlign: F.Nb.Center,
+                                textAlign: F.Ob.Center,
                                 flexDirection: F.Aa.Column,
                                 justifyContent: F.Wa.Center,
                                 margin: {
@@ -7100,7 +7100,7 @@
                                 alt: Object(l.d)("No Events Created", "DashboardEventsLayout")
                             }), r.createElement(F.Xa, {
                                 display: F.X.Flex,
-                                textAlign: F.Nb.Center,
+                                textAlign: F.Ob.Center,
                                 flexDirection: F.Aa.Column,
                                 justifyContent: F.Wa.Center,
                                 margin: {
@@ -7914,7 +7914,7 @@
                         alignItems: s.f.Center,
                         position: s.hb.Absolute
                     }, r.createElement(s.Xa, {
-                        textAlign: s.Nb.Center,
+                        textAlign: s.Ob.Center,
                         flexShrink: 1
                     }, r.createElement(s.qb, {
                         asset: e.icon,
@@ -7925,14 +7925,14 @@
                         margin: {
                             top: 1
                         },
-                        textAlign: s.Nb.Center
+                        textAlign: s.Ob.Center
                     }, r.createElement(s.W, {
-                        type: s.Rb.H4,
+                        type: s.Sb.H4,
                         color: s.O.Alt2
                     }, e.titleText)), r.createElement(s.Xa, {
-                        textAlign: s.Nb.Center
+                        textAlign: s.Ob.Center
                     }, r.createElement(s.W, {
-                        type: s.Rb.P,
+                        type: s.Sb.P,
                         color: s.O.Alt2
                     }, e.subText)))
                 });
@@ -8037,7 +8037,7 @@
                         })), r.createElement("div", {
                             className: e,
                             tabIndex: 0
-                        }, r.createElement(s.Bb, {
+                        }, r.createElement(s.Cb, {
                             attachTop: !0,
                             attachRight: !0,
                             attachLeft: !0,
@@ -8883,18 +8883,18 @@
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(d.fc)(n.props), {
+                        }, Object(d.gc)(n.props), {
                             download: n.props.text
                         }), n.renderIcon()) : n.isLink() ? r.createElement("a", i.__assign({
                             href: n.getLinkTarget(),
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(d.fc)(n.props)), n.renderIcon()) : r.createElement("button", i.__assign({
+                        }, Object(d.gc)(n.props)), n.renderIcon()) : r.createElement("button", i.__assign({
                             onClick: n.copyPageUrl,
                             onMouseLeave: n.clearIsCopiedStatus,
                             className: e
-                        }, Object(d.fc)(n.props)), n.renderIcon())
+                        }, Object(d.gc)(n.props)), n.renderIcon())
                     }, n.onShareClickHandler = function() {
                         n.props.onShareClick && n.props.onShareClick(n.props.type)
                     }, n.clearIsCopiedStatus = function() {
@@ -8994,9 +8994,9 @@
                 return i.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(d.Xa, {
                         className: "social-button"
-                    }, r.createElement(d.Ub, {
+                    }, r.createElement(d.Vb, {
                         label: this.getTooltipFromType(),
-                        direction: d.Wb.Bottom
+                        direction: d.Xb.Bottom
                     }, this.renderLink()))
                 }, t
             }(r.Component)
@@ -9449,7 +9449,7 @@
                                 "event-modal-image-uploader__preview-image": !0,
                                 "event-modal-image-uploader__preview-image--preview-mode": !1 === this.state.isDraggingOver
                             });
-                            e = o.createElement(f.Bb, {
+                            e = o.createElement(f.Cb, {
                                 display: f.X.Flex,
                                 justifyContent: f.Wa.Center,
                                 alignItems: f.f.Center,

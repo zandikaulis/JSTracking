@@ -391,7 +391,7 @@
                     }
                 }, i.createElement(r.o, {
                     ratio: e.aspectRatio
-                }, i.createElement(r.Bb, {
+                }, i.createElement(r.Cb, {
                     background: r.r.Alt2,
                     fullHeight: !0
                 }, t))))
@@ -885,9 +885,9 @@
                         });
                         t = a.createElement(a.Fragment, null, s)
                     }
-                    return a.createElement(c.Xb, {
-                        gutterSize: c.Zb.Small,
-                        childWidth: e.videoCardSize || c.Yb.Large,
+                    return a.createElement(c.Yb, {
+                        gutterSize: c.ac.Small,
+                        childWidth: e.videoCardSize || c.Zb.Large,
                         placeholderItems: 20
                     }, t, n)
                 },
@@ -1304,7 +1304,7 @@
                                 className: "language-select-menu__balloon"
                             }, l.createElement(p.b, null, l.createElement(f.Xa, {
                                 padding: .5
-                            }, Object(g.b)().map(t.renderLanguageOption)))), l.createElement(f.Bb, {
+                            }, Object(g.b)().map(t.renderLanguageOption)))), l.createElement(f.Cb, {
                                 background: f.r.Alt,
                                 borderTop: !0,
                                 className: "language-select-menu__footer"

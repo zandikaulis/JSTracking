@@ -119,7 +119,7 @@
                 a = n("Ue10"),
                 i = (n("KwO+"), function(e) {
                     var t = null;
-                    e.footer && (t = o.createElement(a.Bb, {
+                    e.footer && (t = o.createElement(a.Cb, {
                         padding: 2,
                         background: a.r.Alt2
                     }, e.footer));
@@ -132,7 +132,7 @@
                         bottomLeft: a.x.Medium,
                         bottomRight: a.x.Medium
                     }, n);
-                    return o.createElement(o.Fragment, null, e.header, o.createElement(a.Bb, {
+                    return o.createElement(o.Fragment, null, e.header, o.createElement(a.Cb, {
                         background: a.r.Base,
                         margin: {
                             bottom: 4
@@ -160,7 +160,7 @@
                         fontSize: o.Ca.Size6,
                         color: e.error ? o.O.Error : o.O.Base,
                         bold: !0
-                    }, e.title))), r.createElement(o.Bb, {
+                    }, e.title))), r.createElement(o.Cb, {
                         padding: 2,
                         className: "settings-row",
                         fullWidth: !0
@@ -403,7 +403,7 @@
                         bottom: 2
                     }
                 }, r.createElement(o.W, {
-                    type: o.Rb.H3,
+                    type: o.Sb.H3,
                     fontSize: o.Ca.Size4,
                     color: o.O.Alt,
                     bold: !0
@@ -700,7 +700,7 @@
                             value: this.props.user.login || ""
                         })), a.createElement(w.a, {
                             label: r
-                        }, a.createElement(j.Ob, {
+                        }, a.createElement(j.Pb, {
                             onChange: this.handleReasonChange
                         })))
                     }, t
@@ -708,7 +708,7 @@
                 F = Object(h.compose)(Object(S.a)(T), Object(S.a)(C, {
                     name: "disableUserAccount"
                 }))(x);
-            var R = Object(d.connect)(function(e) {
+            var P = Object(d.connect)(function(e) {
                     return {
                         user: Object(p.e)(e)
                     }
@@ -717,14 +717,14 @@
                         logout: E.f
                     }, e)
                 })(F),
-                P = function(e) {
+                R = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.deleted && this.props.isLoggedIn ? window.location.replace("/user/delete-account") : this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.deleted ? a.createElement(a.Fragment, null, a.createElement(j.Bb, {
+                        return this.deleted ? a.createElement(a.Fragment, null, a.createElement(j.Cb, {
                             borderBottom: !0
                         }, a.createElement(j.W, {
                             fontSize: j.Ca.Size1
@@ -732,7 +732,7 @@
                             to: "/"
                         }, Object(l.d)("Back to the front page", "DeleteAccountPage")))) : a.createElement(k.a, {
                             loginTrackingSource: b.a.DeleteAccountPage
-                        }, a.createElement(R, {
+                        }, a.createElement(P, {
                             redirect: "/user/delete-account?account_deleted=true",
                             isDelete: !0
                         }))
@@ -748,7 +748,7 @@
                     destination: g.a.DeleteAccount
                 }), Object(f.a)({
                     location: v.PageviewLocation.DeleteAccount
-                }))(P);
+                }))(R);
             var U = Object(d.connect)(function(e) {
                     return {
                         isLoggedIn: Object(p.f)(e)
@@ -761,7 +761,7 @@
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.disabled && this.props.isLoggedIn ? window.location.replace("/user/disable-account") : this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.disabled ? a.createElement(a.Fragment, null, a.createElement(j.Bb, {
+                        return this.disabled ? a.createElement(a.Fragment, null, a.createElement(j.Cb, {
                             borderBottom: !0
                         }, a.createElement(j.W, {
                             fontSize: j.Ca.Size1
@@ -769,7 +769,7 @@
                             to: "/"
                         }, Object(l.d)("Back to the front page", "DisableAccountPage")))) : a.createElement(k.a, {
                             loginTrackingSource: b.a.DisableAccountPage
-                        }, a.createElement(R, {
+                        }, a.createElement(P, {
                             redirect: "/user/disable-account?account_disabled=true"
                         }))
                     }, Object.defineProperty(t.prototype, "disabled", {
@@ -823,9 +823,9 @@
                         })))
                     }, t
                 }(a.Component),
-                B = n("wUQP"),
-                M = n("GxR5"),
-                q = function(e) {
+                M = n("wUQP"),
+                q = n("GxR5"),
+                B = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -842,7 +842,7 @@
                             fontSize: j.Ca.Size4
                         }, a.createElement(j.W, {
                             bold: !0,
-                            type: j.Rb.Span
+                            type: j.Sb.Span
                         }, Object(l.d)("For your security, we need information from you that only the owner of this account would know.", "AccountRecoveryContactSupport"), " "), Object(l.d)("This is the best way for us to verify that you own this account and get it back to you.", "AccountRecoveryContactSupport")), a.createElement(j.Xa, {
                             margin: {
                                 y: 2
@@ -959,7 +959,7 @@
                                     changeStepToEnterUsername: this.changeStepToEnterUsername
                                 });
                             case L.ContactSupport:
-                                return a.createElement(q, {
+                                return a.createElement(B, {
                                     startOver: this.changeStepToEnterEmail
                                 });
                             default:
@@ -972,9 +972,9 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                        Object(B.b)("native_account_recovery") || window.location.replace(Object(M.e)())
+                        Object(M.b)("native_account_recovery") || window.location.replace(Object(q.e)())
                     }, t.prototype.render = function() {
-                        return Object(B.b)("native_account_recovery") ? a.createElement(a.Fragment, null, a.createElement(j.Bb, {
+                        return Object(M.b)("native_account_recovery") ? a.createElement(a.Fragment, null, a.createElement(j.Cb, {
                             className: "account-recovery__header",
                             alignItems: j.f.Center,
                             color: j.O.Overlay,

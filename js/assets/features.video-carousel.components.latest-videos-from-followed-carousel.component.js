@@ -143,7 +143,7 @@
                         flexDirection: c.Aa.Row,
                         alignItems: c.f.Center
                     }, r.createElement(c.W, {
-                        type: c.Rb.H5
+                        type: c.Sb.H5
                     }, Object(s.d)("Expand All", "VideoShelfExpandLink")), r.createElement(c.qb, {
                         asset: c.rb.AngleRight,
                         height: 14
@@ -160,7 +160,7 @@
                     width: 200
                 });
                 var t = r.createElement(c.W, {
-                        type: c.Rb.H4,
+                        type: c.Sb.H4,
                         color: c.O.Base,
                         bold: !0,
                         "data-test-selector": n.Title
@@ -168,7 +168,7 @@
                     i = e.subTitle;
                 return e.subTitle && "string" == typeof e.subTitle ? i = r.createElement(c.W, {
                     color: c.O.Alt2,
-                    type: c.Rb.Span,
+                    type: c.Sb.Span,
                     "data-test-selector": n.SubTitle
                 }, e.subTitle) : e.subTitle && (i = r.createElement(c.Xa, {
                     "data-test-selector": n.SubTitle
@@ -252,7 +252,7 @@
                                 source: {},
                                 itemType: c.TwitchDataType.Video
                             },
-                            videoCardSize: g.Yb.Large,
+                            videoCardSize: g.Zb.Large,
                             videos: e
                         })) : null
                     }, t
@@ -432,11 +432,11 @@
                                 transform: this.transformString()
                             },
                             "data-test-selector": "carousel-body"
-                        }, a.createElement(u.Xb, {
+                        }, a.createElement(u.Yb, {
                             noWrap: !0,
                             noGrow: !0,
-                            childWidth: this.props.cardWidth || u.Yb.Large,
-                            gutterSize: u.Zb.Small,
+                            childWidth: this.props.cardWidth || u.Zb.Large,
+                            gutterSize: u.ac.Small,
                             "data-js-selector": h
                         }, this.props.children)))), a.createElement(u.Xa, {
                             className: "preview-card-carousel__nav",

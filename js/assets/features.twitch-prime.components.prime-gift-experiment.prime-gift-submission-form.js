@@ -56,7 +56,7 @@
                             color: b.O.Alt2
                         }, Object(a.d)("Start typing to see a list of suggestions here.", "PrimeGiftExperiment"))), r.createElement("div", {
                             onKeyDown: this.props.onKeyDown
-                        }, r.createElement(b.Bb, {
+                        }, r.createElement(b.Cb, {
                             className: "gift-recipient-search-result-view",
                             background: b.r.Alt,
                             position: b.hb.Relative,
@@ -80,7 +80,7 @@
                     }, t.prototype.getErrorMessage = function() {
                         return r.createElement(b.Xa, {
                             fullWidth: !0,
-                            textAlign: b.Nb.Center,
+                            textAlign: b.Ob.Center,
                             justifyContent: b.Wa.Center
                         }, r.createElement(b.W, null, Object(a.d)("Something went wrong", "PrimeGiftExperiment")))
                     }, t.prototype.getUserResultContent = function() {
@@ -114,7 +114,7 @@
                                     x: 1
                                 }
                             }, r.createElement(b.W, {
-                                type: b.Rb.H5,
+                                type: b.Sb.H5,
                                 ellipsis: !0
                             }, i))))))
                         }) : r.createElement(b.gb, null)
@@ -367,13 +367,13 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(b.Bb, {
+                        return r.createElement(b.Cb, {
                             display: b.X.Flex,
                             flexDirection: b.Aa.Column,
                             background: b.r.Base
                         }, this.renderHeader(), this.renderHorizontalRule(), this.renderBody(), this.renderFooter())
                     }, t.prototype.renderHorizontalRule = function() {
-                        return r.createElement(b.Bb, {
+                        return r.createElement(b.Cb, {
                             fullWidth: !0,
                             flexGrow: 1,
                             borderTop: !0
@@ -405,7 +405,7 @@
                                 top: 1
                             }
                         }, r.createElement(b.W, {
-                            type: b.Rb.Span
+                            type: b.Sb.Span
                         }, Object(a.d)("The recipient will receive a notification and will need to claim the gift before the offer expires.", "PrimeGiftExperimentSubmission"))), r.createElement(N, {
                             key: "gift-recipient-search-page",
                             onBack: this.goBack,
@@ -436,7 +436,7 @@
                         }, r.createElement(b.W, null, Object(a.d)("Sent gifts to <x:bold>{giftLogins}</x:bold>", {
                             "x:bold": function(e) {
                                 return r.createElement(b.W, {
-                                    type: b.Rb.Span,
+                                    type: b.Sb.Span,
                                     bold: !0
                                 }, e)
                             },
@@ -444,7 +444,7 @@
                         }, "PrimeGiftExperimentSubmission"))) : null
                     }, t.prototype.renderFooter = function() {
                         var e = 10 - this.props.getGiftRecipientList().length;
-                        return r.createElement(b.Bb, {
+                        return r.createElement(b.Cb, {
                             display: b.X.Flex,
                             background: b.r.Alt2,
                             attachBottom: !0,
@@ -462,7 +462,7 @@
                         }, "PrimeGiftExperimentSubmission"))), r.createElement(b.Xa, {
                             flexGrow: 0,
                             flexShrink: 0,
-                            verticalAlign: b.bc.Middle
+                            verticalAlign: b.cc.Middle
                         }, r.createElement(b.i, {
                             duration: b.k.Medium,
                             enabled: this.state.giftSuccess,
@@ -475,7 +475,7 @@
                         }, Object(a.d)("Send as a Gift", "PrimeGiftExperimentSubmission")))))
                     }, t
                 }(r.Component)),
-                R = Object(s.compose)(Object(o.a)(E, {
+                x = Object(s.compose)(Object(o.a)(E, {
                     name: "giveGift"
                 }), Object(u.b)("GiftForm", {
                     autoReportInteractive: !0
@@ -485,7 +485,7 @@
             }), i.d(t, "GiftFormComponent", function() {
                 return F
             }), i.d(t, "GiftForm", function() {
-                return R
+                return x
             })
         },
         "0KHE": function(e, t) {

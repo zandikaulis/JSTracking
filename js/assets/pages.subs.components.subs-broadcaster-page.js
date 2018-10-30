@@ -40,7 +40,7 @@
                             className: "subs-broadcaster-banner"
                         }, o.createElement(h.Xa, {
                             className: "subs-broadcaster-banner__broadcaster-info",
-                            textAlign: h.Nb.Center,
+                            textAlign: h.Ob.Center,
                             display: h.X.Flex,
                             flexDirection: h.Aa.Column,
                             alignItems: h.f.Center,
@@ -88,7 +88,7 @@
                             className: "subs-broadcaster-banner"
                         }, o.createElement(h.Xa, {
                             className: "subs-broadcaster-banner__broadcaster-info",
-                            textAlign: h.Nb.Center,
+                            textAlign: h.Ob.Center,
                             display: h.X.Flex,
                             flexDirection: h.Aa.Column,
                             alignItems: h.f.Center,
@@ -110,7 +110,7 @@
                                 margin: 1
                             }
                         }, o.createElement(h.W, {
-                            type: h.Rb.H2,
+                            type: h.Sb.H2,
                             bold: !0,
                             color: h.O.Overlay
                         }, this.props.data.user.displayName)), o.createElement(h.Pa, {
@@ -192,14 +192,14 @@
                             }
                         }, o.createElement(h.Pa, {
                             margin: 1,
-                            textAlign: h.Nb.Center
+                            textAlign: h.Ob.Center
                         }, o.createElement(h.W, {
-                            type: h.Rb.H3,
+                            type: h.Sb.H3,
                             color: h.O.Link,
                             bold: !0
                         }, this.productName)), o.createElement(h.Pa, {
                             margin: 1,
-                            textAlign: h.Nb.Center
+                            textAlign: h.Ob.Center
                         }, o.createElement(h.W, null, Object(a.d)("Your VIP pass to the best of the Overwatch League", "SubsPlanEsports"))), this.baseEmotes(), o.createElement(h.Xa, {
                             margin: 1,
                             display: h.X.Flex,
@@ -219,7 +219,7 @@
                             l = Object(a.d)("Overwatch In-Game Content", "SubPlanEsports"),
                             u = Object(a.d)("Get All-Access Pass for $19.99 with Twitch Prime", "SubsPlanEsports"),
                             d = Object(a.d)("Offer available for a limited time. Terms and conditions apply", "SubsPlanEsports");
-                        return "IOS" === this.props.subbedPlatform || "ANDROID" === this.props.subbedPlatform ? [o.createElement(h.Bb, {
+                        return "IOS" === this.props.subbedPlatform || "ANDROID" === this.props.subbedPlatform ? [o.createElement(h.Cb, {
                             "data-test-selector": "mobile-sub-container",
                             key: "subs-broadcaster-plan-0",
                             className: "subs-plan-esports__plan",
@@ -228,11 +228,11 @@
                             display: h.X.Flex,
                             flexDirection: h.Aa.Column,
                             padding: 2,
-                            textAlign: h.Nb.Center
+                            textAlign: h.Ob.Center
                         }, o.createElement(h.Pa, {
                             margin: 1
                         }, o.createElement(h.W, {
-                            type: h.Rb.H3,
+                            type: h.Sb.H3,
                             color: h.O.Link
                         }, this.productName)), o.createElement(h.Xa, {
                             margin: {
@@ -250,7 +250,7 @@
                             asset: h.rb.Crown,
                             type: h.sb.Prime
                         })), o.createElement(h.W, {
-                            type: h.Rb.H5
+                            type: h.Sb.H5
                         }, u)), o.createElement(h.U, {
                             to: "https://blog.twitch.tv/overwatch-league-all-access-pass-on-twitch-8cbf3e23df0a",
                             targetBlank: !0,
@@ -270,7 +270,7 @@
                             }
                         }, o.createElement(h.W, null, n), o.createElement(h.W, null, i), o.createElement(h.W, null, r), o.createElement(h.W, null, s), o.createElement(h.W, null, c), o.createElement(h.W, null, l))))] : this.props.subscriptionProducts.map(function(p, m) {
                             var b = p.price;
-                            return Object(S.g)([p]) && (b = Object(S.c)(p)), o.createElement(h.Bb, {
+                            return Object(S.g)([p]) && (b = Object(S.c)(p)), o.createElement(h.Cb, {
                                 key: "subs-broadcaster-plan-" + m,
                                 className: "subs-plan-esports__plan",
                                 margin: 1,
@@ -278,12 +278,12 @@
                                 display: h.X.Flex,
                                 flexDirection: h.Aa.Column,
                                 padding: 2,
-                                textAlign: h.Nb.Center,
+                                textAlign: h.Ob.Center,
                                 "data-test-selector": "sub-tier-container"
                             }, o.createElement(h.Pa, {
                                 margin: 1
                             }, o.createElement(h.W, {
-                                type: h.Rb.H3,
+                                type: h.Sb.H3,
                                 color: h.O.Link
                             }, Object(a.d)("{price} All-Access Pass", {
                                 price: p.price
@@ -303,7 +303,7 @@
                                 asset: h.rb.Crown,
                                 type: h.sb.Prime
                             })), o.createElement(h.W, {
-                                type: h.Rb.H5
+                                type: h.Sb.H5
                             }, u)), o.createElement(h.U, {
                                 to: "https://blog.twitch.tv/overwatch-league-all-access-pass-on-twitch-8cbf3e23df0a",
                                 targetBlank: !0,
@@ -467,23 +467,23 @@
                         }, o.createElement(h.Pa, {
                             margin: 1
                         }, o.createElement(h.W, {
-                            type: h.Rb.H3,
+                            type: h.Sb.H3,
                             color: h.O.Link,
                             bold: !0
                         }, e)), "IOS" !== this.props.subbedPlatform && "ANDROID" !== this.props.subbedPlatform ? this.makeTabs() : null, this.makeTabContents())
                     }, t.prototype.makeTabs = function() {
-                        return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? o.createElement(h.gb, null) : 1 === this.props.subscriptionProducts.length ? o.createElement(h.Db, null, o.createElement(h.Cb, {
+                        return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? o.createElement(h.gb, null) : 1 === this.props.subscriptionProducts.length ? o.createElement(h.Eb, null, o.createElement(h.Db, {
                             active: !0,
                             "data-a-target": "subscribe-tab-" + i.Tier1
-                        }, this.props.subscriptionProducts[0].price)) : o.createElement(h.Xa, null, o.createElement(h.Db, null, o.createElement(h.Cb, {
+                        }, this.props.subscriptionProducts[0].price)) : o.createElement(h.Xa, null, o.createElement(h.Eb, null, o.createElement(h.Db, {
                             active: this.state.activeTab === i.Tier1,
                             onClick: this.toggleActiveTab,
                             "data-a-target": "subscribe-tab-" + i.Tier1
-                        }, this.props.subscriptionProducts[0].price), o.createElement(h.Cb, {
+                        }, this.props.subscriptionProducts[0].price), o.createElement(h.Db, {
                             active: this.state.activeTab === i.Tier2,
                             onClick: this.toggleActiveTab,
                             "data-a-target": "subscribe-tab-" + i.Tier2
-                        }, this.props.subscriptionProducts[1].price), o.createElement(h.Cb, {
+                        }, this.props.subscriptionProducts[1].price), o.createElement(h.Db, {
                             active: this.state.activeTab === i.Tier3,
                             onClick: this.toggleActiveTab,
                             "data-a-target": "subscribe-tab-" + i.Tier3
@@ -494,26 +494,26 @@
                             display: h.X.Flex,
                             flexDirection: h.Aa.Column,
                             alignItems: h.f.Center,
-                            textAlign: h.Nb.Center
+                            textAlign: h.Ob.Center
                         }, o.createElement(h.Pa, {
                             margin: 1
                         }, o.createElement(h.W, {
-                            type: h.Rb.H4,
+                            type: h.Sb.H4,
                             bold: !0
                         }, Object(a.d)("Channel Subscription for {displayName}", {
                             displayName: this.props.channelDisplayName
                         }, "SubsBroadcasterPlanTabs"))), o.createElement(h.W, {
-                            type: h.Rb.P
+                            type: h.Sb.P
                         }, Object(a.d)("{numEmotes, plural, one {Includes Ad-Free Viewing, Subscriber Badges and 1 Emote.} other {Includes Ad-Free Viewing, Subscriber Badges and {numEmotes, number} Emotes.}}", {
                             numEmotes: this.props.subscriptionProducts[0].emotes.length
                         }, "SubsBroadcasterPlanTabs")), o.createElement(h.W, {
-                            type: h.Rb.P
+                            type: h.Sb.P
                         }, this.messages.perkChat), this.getSubButton(), o.createElement(h.Pa, {
                             margin: {
                                 top: 2
                             }
                         }, o.createElement(h.W, {
-                            type: h.Rb.H4,
+                            type: h.Sb.H4,
                             bold: !0
                         }, this.messages.includedEmotes)), this.getBonusEmotes(), this.baseEmotes())
                     }, t.prototype.getSubButton = function() {
@@ -532,7 +532,7 @@
                         var t = e.price;
                         Object(S.g)([e]) && (t = Object(S.c)(e));
                         var n = "IOS" === this.props.subbedPlatform || "ANDROID" === this.props.subbedPlatform ? o.createElement(h.W, {
-                            type: h.Rb.H5
+                            type: h.Sb.H5
                         }, Object(a.d)("Tier 1 Subscription", "SubsBroadcasterPlanTabs")) : o.createElement(P.a, {
                             subscriptionProduct: e
                         });
@@ -609,7 +609,7 @@
                 w = Object(b.b)("SubPlanTabs")(O),
                 x = n("a5fV"),
                 I = n("0WFu"),
-                B = (n("DQVP"), function(e) {
+                D = (n("DQVP"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onSubClick = function(e) {
@@ -645,14 +645,14 @@
                             }
                         }, o.createElement(h.Pa, {
                             margin: 1,
-                            textAlign: h.Nb.Center
+                            textAlign: h.Ob.Center
                         }, o.createElement(h.W, {
-                            type: h.Rb.H3,
+                            type: h.Sb.H3,
                             color: h.O.Link,
                             bold: !0
                         }, e)), o.createElement(h.Pa, {
                             margin: 1,
-                            textAlign: h.Nb.Center
+                            textAlign: h.Ob.Center
                         }, o.createElement(h.W, null, this.messages.subscriptionPerks)), this.baseEmotes(), o.createElement(h.Xa, {
                             margin: 1,
                             display: h.X.Flex,
@@ -667,7 +667,7 @@
                             var t = this.props.subscriptionProducts.find(function(e) {
                                 return "1000" === e.tier
                             });
-                            return [o.createElement(h.Bb, {
+                            return [o.createElement(h.Cb, {
                                 "data-test-selector": "mobile-sub-container",
                                 key: "subs-broadcaster-plan-0",
                                 className: "subs-plan-tiers__plan",
@@ -676,11 +676,11 @@
                                 display: h.X.Flex,
                                 flexDirection: h.Aa.Column,
                                 padding: 2,
-                                textAlign: h.Nb.Center
+                                textAlign: h.Ob.Center
                             }, o.createElement(h.Pa, {
                                 margin: 1
                             }, o.createElement(h.W, {
-                                type: h.Rb.H3,
+                                type: h.Sb.H3,
                                 color: h.O.Link
                             }, Object(a.d)("Tier 1 Subscription", "SubsPlanTiers"))), o.createElement(h.Xa, {
                                 margin: 1,
@@ -707,7 +707,7 @@
                             var s = r ? Object(a.d)("Tier {tier} Subscription", {
                                 tier: r
                             }, "SubsPlanTiers") : Object(a.d)("Subscription", "SubsPlanTiers");
-                            return o.createElement(h.Bb, {
+                            return o.createElement(h.Cb, {
                                 key: "subs-broadcaster-plan-" + n,
                                 className: "subs-plan-tiers__plan",
                                 margin: 1,
@@ -715,12 +715,12 @@
                                 display: h.X.Flex,
                                 flexDirection: h.Aa.Column,
                                 padding: 2,
-                                textAlign: h.Nb.Center,
+                                textAlign: h.Ob.Center,
                                 "data-test-selector": "sub-tier-container"
                             }, o.createElement(h.Pa, {
                                 margin: 1
                             }, o.createElement(h.W, {
-                                type: h.Rb.H3,
+                                type: h.Sb.H3,
                                 color: h.O.Link
                             }, s)), o.createElement(h.Xa, {
                                 margin: 1,
@@ -806,8 +806,8 @@
                         }
                     }, t
                 }(o.Component)),
-                D = Object(b.b)("SubsPlanTiers")(B),
-                W = function(e) {
+                W = Object(b.b)("SubsPlanTiers")(D),
+                B = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -839,7 +839,7 @@
                             breakpointMedium: {
                                 display: h.X.Flex
                             }
-                        }, o.createElement(D, {
+                        }, o.createElement(W, {
                             subbedPlatform: this.props.subbedPlatform,
                             subscriptionProducts: this.props.subscriptionProducts,
                             subTier: this.props.subTier,
@@ -849,7 +849,7 @@
                     }, t
                 }(o.Component),
                 j = n("lEKk"),
-                R = function(e) {
+                F = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -878,7 +878,7 @@
                             s = null,
                             a = null;
                         i && i.subscriptionBenefit && (s = i.subscriptionBenefit.platform, a = i.subscriptionBenefit.tier);
-                        var u = o.createElement(W, {
+                        var u = o.createElement(B, {
                             subbedPlatform: s,
                             channelDisplayName: t.displayName || "",
                             channelId: t.id,
@@ -908,9 +908,9 @@
                         location: m.PageviewLocation.SubsBroadcasterPage
                     })], t)
                 }(o.Component),
-                F = Object(r.connect)()(R);
+                L = Object(r.connect)()(F);
             n.d(t, "SubsBroadcasterPage", function() {
-                return F
+                return L
             })
         },
         "3Bft": function(e, t, n) {
@@ -1141,8 +1141,8 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         if (this.hasDiscount(this.props.subscriptionProducts)) {
                             var e = this.getMessage();
-                            return r.createElement(a.Bb, {
-                                textAlign: a.Nb.Center,
+                            return r.createElement(a.Cb, {
+                                textAlign: a.Ob.Center,
                                 className: "sub-discount-banner",
                                 padding: 1,
                                 color: a.O.Overlay,
@@ -1323,7 +1323,7 @@
                 o = n("/7QA"),
                 a = n("GnwI"),
                 c = n("Ue10"),
-                l = (n("GOKC"), r.createElement(c.Bb, {
+                l = (n("GOKC"), r.createElement(c.Cb, {
                     alignItems: c.f.Center,
                     background: c.r.Overlay,
                     borderRadius: c.x.Small,
@@ -1333,7 +1333,7 @@
                     display: c.X.InlineFlex,
                     justifyContent: c.Wa.Center,
                     position: c.hb.Absolute,
-                    zIndex: c.ec.Above
+                    zIndex: c.fc.Above
                 }, r.createElement(c.qb, {
                     asset: c.rb.Lock,
                     height: 10,
@@ -1368,9 +1368,9 @@
                     }
                     return r.createElement("div", {
                         className: "emote-button"
-                    }, r.createElement(c.Ub, {
+                    }, r.createElement(c.Vb, {
                         label: i || Object(o.d)("Emote", "EmoteButton"),
-                        direction: c.Wb.Bottom
+                        direction: c.Xb.Bottom
                     }, r.createElement(c.Pa, {
                         display: c.X.Flex,
                         alignItems: c.f.Center,
@@ -1593,7 +1593,7 @@
                             linkTo: this.props.isMobileCheckout ? this.props.url : void 0,
                             onClick: this.handleClick,
                             purchase: this.props.tierPrice
-                        }, Object(u.fc)(this.props), {
+                        }, Object(u.gc)(this.props), {
                             fullWidth: this.props.fullWidth
                         }), t)
                     }, t
@@ -1739,7 +1739,7 @@
                         }, i.createElement(a.W, {
                             className: "sub-discount-price-label__original-price",
                             color: a.O.Alt2,
-                            decoration: a.Pb.Strikethrough
+                            decoration: a.Qb.Strikethrough
                         }, d), i.createElement(a.W, {
                             bold: !0,
                             className: "sub-discount-price-label__discount-price"

@@ -276,24 +276,24 @@
                 _ = n("0OKo"),
                 N = n("kduP"),
                 E = n("yziQ"),
-                D = n("Ue10"),
-                G = function(e) {
+                G = n("Ue10"),
+                D = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return null === this.props.game ? i.createElement(D.Xa, {
+                        return null === this.props.game ? i.createElement(G.Xa, {
                             "data-test-selector": "community-card__placeholder",
                             margin: {
                                 bottom: 2
                             }
-                        }, i.createElement(D.Xa, {
+                        }, i.createElement(G.Xa, {
                             margin: {
                                 bottom: .5
                             }
-                        }, i.createElement(D.o, {
-                            ratio: D.p.BoxArt
-                        }, i.createElement(D.gb, null)))) : this.props.followGameCardOptions ? i.createElement(D.Xa, {
+                        }, i.createElement(G.o, {
+                            ratio: G.p.BoxArt
+                        }, i.createElement(G.gb, null)))) : this.props.followGameCardOptions ? i.createElement(G.Xa, {
                             key: this.props.followGameCardOptions.category + "-game-" + this.props.game.id
                         }, i.createElement(E.a, {
                             "data-a-target": "follow-game-card-" + this.props.game.id,
@@ -303,22 +303,22 @@
                             }, "CommunitySelectionFollowCard") : "",
                             title: this.props.game.name,
                             imageAlt: this.props.game.name,
-                            imageSrc: this.props.game.boxArtURL,
+                            imageSrc: this.props.game.boxArtURL || r.a.defaultBoxArtURL,
                             onFollow: this.props.followGameCardOptions.onFollow,
                             onUnfollow: this.props.followGameCardOptions.onUnfollow
-                        })) : i.createElement(D.Xa, {
+                        })) : i.createElement(G.Xa, {
                             key: "game-" + this.props.game.id,
                             padding: {
                                 bottom: 1
                             }
-                        }, i.createElement(D.y, {
+                        }, i.createElement(G.y, {
                             title: this.props.game.name,
                             info: this.props.game.viewersCount ? Object(r.d)("{viewerCount,number} viewers", {
                                 viewerCount: this.props.game.viewersCount
                             }, "CommunitySelectionBoxCard") : "",
                             linkTo: this.props.isCommunity ? Object(N.a)(this.props.game.name) : Object(N.c)(this.props.game.name),
                             alt: this.props.game.name + " cover image",
-                            src: this.props.game.boxArtURL
+                            src: this.props.game.boxArtURL || r.a.defaultBoxArtURL
                         }))
                     }, t
                 }(i.Component),
@@ -333,13 +333,14 @@
                     }, t.prototype.render = function() {
                         var e = null;
                         if (this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.game) e = {
+                            __typename: "Game",
                             id: this.props.data.game.id,
                             name: this.props.data.game.name,
                             boxArtURL: this.props.data.game.avatarURL,
                             viewersCount: this.props.data.game.viewersCount
                         };
                         else if (null === this.props.data.game) return null;
-                        return i.createElement(G, {
+                        return i.createElement(D, {
                             game: e,
                             isCommunity: this.props.directoryType === O.a.Communities,
                             followGameCardOptions: this.props.followGameCardOptions
@@ -366,24 +367,24 @@
                         }, t.renderCardsWithoutAdSlot = function(e) {
                             var n = t.renderCardsFromProps(),
                                 a = 1 === n.length ? 1 : 0;
-                            return i.createElement(D.Xa, {
+                            return i.createElement(G.Xa, {
                                 padding: {
                                     x: 1,
                                     top: 2
                                 }
-                            }, i.createElement(D.Xb, {
-                                gutterSize: D.Zb.Small,
+                            }, i.createElement(G.Yb, {
+                                gutterSize: G.ac.Small,
                                 childWidth: t.props.cardSize,
                                 placeholderItems: t.props.placeholderItems ? t.props.placeholderItems : a,
                                 noWrap: e
                             }, n))
                         }, t.renderCardGridWithAdSlot = function() {
-                            var e = i.createElement(D.Xa, {
+                            var e = i.createElement(G.Xa, {
                                     key: "ad",
                                     "data-test-selector": I,
-                                    display: D.X.Flex,
+                                    display: G.X.Flex,
                                     flexGrow: 1,
-                                    justifyContent: D.Wa.Center,
+                                    justifyContent: G.Wa.Center,
                                     padding: {
                                         bottom: t.state.adDisplayed ? 2 : 0,
                                         left: t.state.adDisplayed ? 1 : 0
@@ -399,21 +400,21 @@
                                     autoEnable: !1
                                 })),
                                 n = t.renderCardsFromProps().map(function(e, t) {
-                                    return i.createElement(D.P, {
+                                    return i.createElement(G.P, {
                                         key: "game-" + t.toString(),
                                         cols: 2
                                     }, e)
                                 });
-                            return n.splice(4, 0, e), i.createElement(D.Xa, {
+                            return n.splice(4, 0, e), i.createElement(G.Xa, {
                                 padding: {
                                     x: 1
                                 }
-                            }, i.createElement(D.Ja, null, n))
+                            }, i.createElement(G.Ja, null, n))
                         }, t.renderCardsFromProps = function() {
                             if (t.props.games) {
                                 var e = t.props.games;
                                 return t.props.withAd && !t.state.adDisplayed && (e = e.slice(0, U)), e.map(function(e, n) {
-                                    return i.createElement(G, {
+                                    if (e) return i.createElement(D, {
                                         key: "community-card-" + e.id + "-" + n,
                                         game: e,
                                         isCommunity: t.props.directoryType === O.a.Communities,
@@ -450,8 +451,8 @@
                 L = n("AO3T"),
                 j = n("R+eK"),
                 X = (n("JJ+Z"), "onboarding_game"),
-                W = 100,
-                P = 500,
+                P = 100,
+                W = 500,
                 M = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -493,7 +494,7 @@
                         }, n.onGameInputChange = function(e) {
                             e.persist(), n.inputTimer && (clearTimeout(n.inputTimer), n.inputTimer = 0), n.inputTimer = setTimeout(function() {
                                 n.props.onSearchChange(e.target.value), n.inputTimer = 0
-                            }, P)
+                            }, W)
                         }, n.userFollowedGamesDataLoaded = function(e) {
                             return e.data && !e.data.loading && !e.data.error && e.data.currentUser
                         };
@@ -509,18 +510,18 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.userFollowedGamesDataLoaded(this.props) && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.userFollowedGamesDataLoaded(this.props) && this.state.inOnboardingExperiment ? i.createElement(D.Bb, {
+                        return this.userFollowedGamesDataLoaded(this.props) && this.state.inOnboardingExperiment ? i.createElement(G.Cb, {
                             className: "community-selection-page",
                             "data-a-target": "community-selection-page",
                             "data-test-selector": "onboarding-community-selection",
-                            background: D.r.Alt2,
-                            display: D.X.Flex,
-                            flexDirection: D.Aa.Column,
+                            background: G.r.Alt2,
+                            display: G.X.Flex,
+                            flexDirection: G.Aa.Column,
                             fullHeight: !0
-                        }, i.createElement(D.Bb, {
-                            background: D.r.Alt,
-                            display: D.X.Flex,
-                            alignItems: D.f.Center,
+                        }, i.createElement(G.Cb, {
+                            background: G.r.Alt,
+                            display: G.X.Flex,
+                            alignItems: G.f.Center,
                             padding: {
                                 x: 1,
                                 y: 1
@@ -530,92 +531,92 @@
                                     x: 2
                                 }
                             },
-                            justifyContent: D.Wa.Between,
+                            justifyContent: G.Wa.Between,
                             flexShrink: 0,
                             fullWidth: !0,
                             borderBottom: !0
-                        }, i.createElement(D.Xa, {
+                        }, i.createElement(G.Xa, {
                             className: "community-selection-page__search",
                             margin: {
                                 left: 1
                             },
                             flexShrink: 1,
                             attachLeft: !0
-                        }, i.createElement(D.tb, {
+                        }, i.createElement(G.tb, {
                             id: "onboarding-community-selection__search",
                             "data-a-target": "onboarding-community-selection__search",
                             onChange: this.onGameInputChange,
                             placeholder: Object(r.d)("Search Games", "CommunitySelectionPage"),
                             spellCheck: !1
-                        })), this.renderTitleText(), this.renderCTA()), i.createElement(D.kb, {
-                            size: D.mb.Small,
+                        })), this.renderTitleText(), this.renderCTA()), i.createElement(G.kb, {
+                            size: G.mb.Small,
                             value: this.calculateProgress()
-                        }), i.createElement(S.b, null, i.createElement(D.Bb, {
-                            background: D.r.Alt2,
-                            overflow: D.cb.Hidden,
+                        }), i.createElement(S.b, null, i.createElement(G.Cb, {
+                            background: G.r.Alt2,
+                            overflow: G.cb.Hidden,
                             padding: {
                                 left: 1,
                                 y: 2
                             },
                             fullHeight: !0
-                        }, this.renderGameCards()))) : this.props.data.error ? (r.k.warn("Data Error in Onboarding Community Selection", this.props.data.error), i.createElement(D.Xa, {
-                            display: D.X.Flex
-                        }, i.createElement(D.W, {
-                            fontSize: D.Ca.Size5,
-                            color: D.O.Alt
+                        }, this.renderGameCards()))) : this.props.data.error ? (r.k.warn("Data Error in Onboarding Community Selection", this.props.data.error), i.createElement(G.Xa, {
+                            display: G.X.Flex
+                        }, i.createElement(G.W, {
+                            fontSize: G.Ca.Size5,
+                            color: G.O.Alt
                         }, Object(r.d)("Hmm...having trouble loading right now.", "CommunitySelectionPage")))) : null
                     }, t.prototype.getNumFollowedGames = function() {
-                        return this.props.data.currentUser.followedGames.nodes.length
+                        return this.props.data.currentUser && this.props.data.currentUser.followedGames && this.props.data.currentUser.followedGames.nodes && this.props.data.currentUser.followedGames.nodes.length || 0
                     }, t.prototype.calculateProgress = function() {
                         return Math.min(1 + this.getNumFollowedGames() / 3 * 99, 100)
                     }, t.prototype.shouldRedirect = function(e, t) {
-                        return !(!this.userFollowedGamesDataLoaded(e) || !(!1 === t.inOnboardingExperiment || !this.doneInitialRedirectCheck && !e.data.currentUser || e.data.currentUser.followedGames.nodes.length >= 10)) && (this.doneInitialRedirectCheck = !0, !0)
+                        return !(!this.userFollowedGamesDataLoaded(e) || !(!1 === t.inOnboardingExperiment || !this.doneInitialRedirectCheck && !e.data.currentUser || e.data.currentUser && e.data.currentUser.followedGames && e.data.currentUser.followedGames.nodes && e.data.currentUser.followedGames.nodes.length >= 10)) && (this.doneInitialRedirectCheck = !0, !0)
                     }, t.prototype.renderTitleText = function() {
-                        return i.createElement(D.Xa, {
-                            display: D.X.Flex,
-                            alignItems: D.f.Center,
-                            flexDirection: D.Aa.Column,
+                        return i.createElement(G.Xa, {
+                            display: G.X.Flex,
+                            alignItems: G.f.Center,
+                            flexDirection: G.Aa.Column,
                             flexShrink: 1
-                        }, i.createElement(D.Xa, {
+                        }, i.createElement(G.Xa, {
                             margin: {
                                 top: .5,
                                 x: 1
                             }
-                        }, i.createElement(D.W, {
-                            color: D.O.Alt,
-                            fontSize: D.Ca.Size5,
+                        }, i.createElement(G.W, {
+                            color: G.O.Alt,
+                            fontSize: G.Ca.Size5,
                             breakpointLarge: {
-                                fontSize: D.Ca.Size4
+                                fontSize: G.Ca.Size4
                             },
                             breakpointExtraExtraLarge: {
-                                fontSize: D.Ca.Size3
+                                fontSize: G.Ca.Size3
                             }
-                        }, Object(r.d)("First, pick three or more you’d like to watch.", "CommunitySelectionPage"))), i.createElement(D.Xa, {
+                        }, Object(r.d)("First, pick three or more you’d like to watch.", "CommunitySelectionPage"))), i.createElement(G.Xa, {
                             margin: {
                                 y: .5
                             },
-                            display: D.X.Hide,
+                            display: G.X.Hide,
                             breakpointMedium: {
-                                display: D.X.Block
+                                display: G.X.Block
                             }
-                        }, i.createElement(D.W, {
-                            color: D.O.Alt2,
-                            fontSize: D.Ca.Size6,
+                        }, i.createElement(G.W, {
+                            color: G.O.Alt2,
+                            fontSize: G.Ca.Size6,
                             breakpointLarge: {
-                                fontSize: D.Ca.Size5
+                                fontSize: G.Ca.Size5
                             },
                             breakpointExtraExtraLarge: {
-                                fontSize: D.Ca.Size4
+                                fontSize: G.Ca.Size4
                             }
                         }, Object(r.d)("We have tons of games, hobbies, and activities being streamed right now.", "CommunitySelectionPage"))))
                     }, t.prototype.renderCTA = function() {
-                        return i.createElement(D.Xa, {
+                        return i.createElement(G.Xa, {
                             margin: {
                                 right: 1
                             },
                             attachRight: !0
-                        }, i.createElement(D.z, {
-                            size: D.D.Large,
+                        }, i.createElement(G.z, {
+                            size: G.D.Large,
                             "data-test-selector": "onboarding_cta",
                             disabled: this.getNumFollowedGames() < 3,
                             onClick: this.moveNextToChannelSurfing
@@ -629,21 +630,21 @@
                             return i.createElement(T, {
                                 games: this.props.gameData,
                                 directoryType: O.a.Games,
-                                cardSize: D.Yb.Small,
+                                cardSize: G.Zb.Small,
                                 followGameCardOptions: e,
                                 placeholderItems: 99
                             })
                         }
                     }, t
                 }(i.Component),
-                z = Object(b.compose)(Object(l.a)(j, {
+                q = Object(b.compose)(Object(l.a)(j, {
                     options: {
                         variables: {
                             limit: 10
                         }
                     }
                 }), Object(g.b)("CommunitySelectionPageComponent"))(M),
-                q = "285x380";
+                z = "285x380";
             var V = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -652,13 +653,10 @@
                         }, n.getData = function() {
                             return n.state.searching && n.state.searchGameResults ? n.state.searchGameResults.map(function(e) {
                                 return n.mapDataToGame(e.title, e.popularity, e.id)
-                            }) : n.gameDataLoaded() ? n.props.data.games.edges.map(function(e) {
-                                return {
-                                    id: e.node.id,
-                                    name: e.node.name,
-                                    boxArtURL: e.node.boxArtURL,
-                                    viewersCount: e.node.viewersCount
-                                }
+                            }) : n.gameDataLoaded() && n.props.data.games && n.props.data.games.edges ? n.props.data.games.edges.filter(function(e) {
+                                return !!e.node
+                            }).map(function(e) {
+                                return e.node
                             }) : void 0
                         }, n.gameDataLoaded = function() {
                             return n.props.data && !n.props.data.loading && !n.props.data.error && n.props.data.games && n.props.data.games.edges
@@ -677,7 +675,7 @@
                                             t = Object(d.a)(), a.label = 1;
                                         case 1:
                                             return a.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(f.a.Games, e, t, {
-                                                hitsPerPage: W
+                                                hitsPerPage: P
                                             })];
                                         case 2:
                                             return (n = a.sent()) && (i = Object(v.b)({
@@ -696,9 +694,10 @@
                             })
                         }, n.mapDataToGame = function(e, t, n) {
                             return {
+                                __typename: "Game",
                                 id: n || e.toString(),
                                 name: e,
-                                boxArtURL: k.a + "/" + encodeURIComponent(e) + "-" + q + ".jpg",
+                                boxArtURL: k.a + "/" + encodeURIComponent(e) + "-" + z + ".jpg",
                                 viewersCount: t
                             }
                         }, n.searchClient = new h.a({
@@ -714,7 +713,7 @@
                         if (!this.props.isLoggedIn) return this.props.latencyTracking.reportInteractive(), void window.location.assign("/" + location.search);
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return i.createElement(z, {
+                        return i.createElement(q, {
                             gameData: this.getData(),
                             onSearchChange: this.onSearchChange
                         })
@@ -723,7 +722,7 @@
                             var t = "enabled" === r.p.experiments.getAssignment(c.b.LocalizeOnboardingGamesQuery);
                             return {
                                 variables: {
-                                    limit: W,
+                                    limit: P,
                                     locale: t ? e.locale : void 0
                                 }
                             }
@@ -737,18 +736,18 @@
                         destination: m.a.OnboardingIndex
                     })], t)
                 }(i.Component),
-                B = Object(o.connect)(function(e) {
+                H = Object(o.connect)(function(e) {
                     return {
                         isLoggedIn: Object(p.f)(e),
                         locale: Object(p.d)(e)
                     }
                 })(V),
-                H = n("wIs1"),
+                B = n("wIs1"),
                 Q = n("jKe7"),
                 $ = n("2INN"),
                 K = n("ZS2+"),
-                Z = n("/8Zs"),
-                J = n("W2HU"),
+                J = n("/8Zs"),
+                Z = n("W2HU"),
                 Y = (n("T6t+"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -756,43 +755,43 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.props.isLoggedIn ? i.createElement(D.Pa, {
-                            position: D.hb.Relative,
+                        return this.props.isLoggedIn ? i.createElement(G.Pa, {
+                            position: G.hb.Relative,
                             attachTop: !0,
                             fullWidth: !0
                         }, i.createElement("nav", {
                             className: "top-nav",
                             "data-a-target": "top-nav-container"
-                        }, i.createElement(D.Xa, {
+                        }, i.createElement(G.Xa, {
                             className: "top-nav__menu",
-                            display: D.X.Flex,
-                            alignItems: D.f.Stretch,
-                            flexWrap: D.Ba.NoWrap,
+                            display: G.X.Flex,
+                            alignItems: G.f.Stretch,
+                            flexWrap: G.Ba.NoWrap,
                             fullHeight: !0
-                        }, i.createElement(D.Pa, {
-                            display: D.X.InlineFlex,
-                            alignItems: D.f.Center,
+                        }, i.createElement(G.Pa, {
+                            display: G.X.InlineFlex,
+                            alignItems: G.f.Center,
                             flexShrink: 0
                         }, i.createElement("span", {
                             className: "top-nav__home-link"
-                        }, i.createElement(D.qb, {
-                            asset: D.rb.LogoGlitch,
+                        }, i.createElement(G.qb, {
+                            asset: G.rb.LogoGlitch,
                             width: 30,
                             height: 30
-                        }))), i.createElement(D.Xa, {
+                        }))), i.createElement(G.Xa, {
                             className: "top-nav__nav-items-container",
-                            display: D.X.Flex,
+                            display: G.X.Flex,
                             flexGrow: 1,
-                            flexWrap: D.Ba.NoWrap,
+                            flexWrap: G.Ba.NoWrap,
                             flexShrink: 0
-                        }, ""), i.createElement(D.Xa, {
+                        }, ""), i.createElement(G.Xa, {
                             className: "top-nav__nav-items-container",
-                            display: D.X.Flex,
-                            alignItems: D.f.Stretch,
-                            flexWrap: D.Ba.NoWrap,
+                            display: G.X.Flex,
+                            alignItems: G.f.Stretch,
+                            flexWrap: G.Ba.NoWrap,
                             flexGrow: 0,
                             flexShrink: 0
-                        }, i.createElement(J.a, {
+                        }, i.createElement(Z.a, {
                             isOnboarding: !0
                         }))))) : (r.k.warn("OnboardingTopNavComponent is only meant to be used for logged in users."), null)
                     }, t = a.__decorate([Object(g.b)("OnboardingTopNav")], t)
@@ -815,28 +814,28 @@
                     return a.__extends(t, e), t.prototype.componentDidUpdate = function() {
                         this.props.isLoggedIn || window.location.assign("/" + location.search)
                     }, t.prototype.render = function() {
-                        return i.createElement(D.Xa, {
-                            display: D.X.Flex,
-                            flexDirection: D.Aa.Column,
-                            flexWrap: D.Ba.NoWrap,
+                        return i.createElement(G.Xa, {
+                            display: G.X.Flex,
+                            flexDirection: G.Aa.Column,
+                            flexWrap: G.Ba.NoWrap,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, i.createElement(ee, null), i.createElement(D.Xa, {
-                            display: D.X.Flex,
-                            flexWrap: D.Ba.NoWrap,
-                            position: D.hb.Relative,
+                        }, i.createElement(ee, null), i.createElement(G.Xa, {
+                            display: G.X.Flex,
+                            flexWrap: G.Ba.NoWrap,
+                            position: G.hb.Relative,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, i.createElement(D.Pa, {
-                            overflow: D.cb.Hidden,
-                            position: D.hb.Relative,
-                            display: D.X.Flex,
-                            flexDirection: D.Aa.Column,
+                        }, i.createElement(G.Pa, {
+                            overflow: G.cb.Hidden,
+                            position: G.hb.Relative,
+                            display: G.X.Flex,
+                            flexDirection: G.Aa.Column,
                             flexGrow: 1,
                             fullHeight: !0,
                             fullWidth: !0
                         }, i.createElement("main", {
-                            className: Z.a
+                            className: J.a
                         }, i.createElement(Q.a, null, i.createElement($.a, {
                             path: "/hi/surf",
                             component: te
@@ -848,13 +847,13 @@
                         autoReportInteractive: !0
                     })], t)
                 }(i.Component);
-            var ie = Object(H.a)(Object(o.connect)(function(e) {
+            var ie = Object(B.a)(Object(o.connect)(function(e) {
                 return {
                     isLoggedIn: Object(p.f)(e)
                 }
             })(ae));
             n.d(t, "CommunitySelectionPage", function() {
-                return B
+                return H
             }), n.d(t, "OnboardingRoot", function() {
                 return ie
             })
@@ -980,6 +979,95 @@
         },
         AXwV: function(e, t, n) {},
         "JJ+Z": function(e, t, n) {},
+        JP4g: function(e, t) {
+            var n = {
+                kind: "Document",
+                definitions: [{
+                    kind: "FragmentDefinition",
+                    name: {
+                        kind: "Name",
+                        value: "communitySelectionPageGame"
+                    },
+                    typeCondition: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Game"
+                        }
+                    },
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "id"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "name"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "boxArtURL"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "width"
+                                },
+                                value: {
+                                    kind: "IntValue",
+                                    value: "285"
+                                }
+                            }, {
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "height"
+                                },
+                                value: {
+                                    kind: "IntValue",
+                                    value: "380"
+                                }
+                            }],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "viewersCount"
+                            },
+                            arguments: [],
+                            directives: []
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 102
+                }
+            };
+            n.loc.source = {
+                body: "fragment communitySelectionPageGame on Game {\nid\nname\nboxArtURL(width: 285 height: 380)\nviewersCount\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = n
+        },
         "R+eK": function(e, t) {
             var n = {
                 kind: "Document",
@@ -1320,7 +1408,7 @@
                         }, this.props.data.currentUser.displayName))));
                         if (this.props.isLoggedIn) {
                             var e = null;
-                            this.props.darkModeEnabled && (e = u.createElement(y.Bb, {
+                            this.props.darkModeEnabled && (e = u.createElement(y.Cb, {
                                 borderBottom: !0,
                                 margin: {
                                     y: 1
@@ -1380,13 +1468,13 @@
                                 className: "minimal-top-nav__username",
                                 "data-a-target": "user-display-name",
                                 ellipsis: !0
-                            }, this.props.data.currentUser.displayName)), u.createElement(y.Bb, {
+                            }, this.props.data.currentUser.displayName)), u.createElement(y.Cb, {
                                 display: y.X.Flex,
                                 flexShrink: 0,
                                 className: "minimal-top-nav__expand"
                             }, u.createElement(y.qb, {
                                 asset: y.rb.GlyphArrDown
-                            }))))), u.createElement(y.Bb, {
+                            }))))), u.createElement(y.Cb, {
                                 fullWidth: !0,
                                 overflow: y.cb.Hidden,
                                 position: y.hb.Absolute,
@@ -1399,7 +1487,7 @@
                             }, e, u.createElement(y.Ua, {
                                 onClick: this.onLogoutClick,
                                 "data-test-selector": a.Logout
-                            }, u.createElement(y.Bb, {
+                            }, u.createElement(y.Cb, {
                                 color: y.O.Alt,
                                 display: y.X.Flex,
                                 alignItems: y.f.Center,
@@ -1687,8 +1775,8 @@
             };
             e.exports = n
         },
-        jkql: function(e, t) {
-            var n = {
+        jkql: function(e, t, n) {
+            var a = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -1790,56 +1878,11 @@
                                             selectionSet: {
                                                 kind: "SelectionSet",
                                                 selections: [{
-                                                    kind: "Field",
+                                                    kind: "FragmentSpread",
                                                     name: {
                                                         kind: "Name",
-                                                        value: "id"
+                                                        value: "communitySelectionPageGame"
                                                     },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "name"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "boxArtURL"
-                                                    },
-                                                    arguments: [{
-                                                        kind: "Argument",
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "width"
-                                                        },
-                                                        value: {
-                                                            kind: "IntValue",
-                                                            value: "285"
-                                                        }
-                                                    }, {
-                                                        kind: "Argument",
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "height"
-                                                        },
-                                                        value: {
-                                                            kind: "IntValue",
-                                                            value: "380"
-                                                        }
-                                                    }],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "viewersCount"
-                                                    },
-                                                    arguments: [],
                                                     directives: []
                                                 }]
                                             }
@@ -1852,18 +1895,25 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 176
+                    end: 266
                 }
             };
-            n.loc.source = {
-                body: "query CommunitySelectionPage($limit: Int $locale: String) {\ngames(first: $limit locale: $locale) {\nedges {\nnode {\nid\nname\nboxArtURL(width: 285 height: 380)\nviewersCount\n}\n}\n}\n}",
+            a.loc.source = {
+                body: '#import "twilight/pages/onboarding/components/community-selection-page/community-selection-page-game-fragment.gql"\nquery CommunitySelectionPage($limit: Int $locale: String) {\ngames(first: $limit locale: $locale) {\nedges {\nnode {\n...communitySelectionPageGame\n}\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
                     column: 1
                 }
             };
-            e.exports = n
+            var i = {};
+            a.definitions = a.definitions.concat(function(e) {
+                return e.filter(function(e) {
+                    if ("FragmentDefinition" !== e.kind) return !0;
+                    var t = e.name.value;
+                    return !i[t] && (i[t] = !0, !0)
+                })
+            }(n("JP4g").definitions)), e.exports = a
         },
         rShu: function(e, t, n) {
             "use strict";
@@ -1968,7 +2018,7 @@
                         onMouseEnter: this.onMouseEnter,
                         onMouseLeave: this.onMouseLeave,
                         onClick: this.onClick
-                    }, Object(d.fc)(this.props)), i.createElement(d.G, {
+                    }, Object(d.gc)(this.props)), i.createElement(d.G, {
                         key: this.props.title
                     }, i.createElement(d.Xa, {
                         position: d.hb.Relative
@@ -2000,7 +2050,7 @@
                         width: 50,
                         height: 50,
                         asset: d.rb.Heart
-                    })), e ? i.createElement(d.Bb, {
+                    })), e ? i.createElement(d.Cb, {
                         className: "follow-game-card__overlay " + (t ? "follow-game-card__overlay--followed" : ""),
                         background: d.r.Overlay,
                         color: d.O.Overlay,
@@ -2009,7 +2059,7 @@
                         alignItems: d.f.Center,
                         justifyContent: d.Wa.Center,
                         position: d.hb.Absolute,
-                        zIndex: d.ec.Above,
+                        zIndex: d.fc.Above,
                         attachBottom: !0,
                         attachTop: !0,
                         attachLeft: !0,

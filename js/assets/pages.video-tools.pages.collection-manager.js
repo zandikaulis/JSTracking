@@ -279,11 +279,11 @@
                                 top: 5
                             }
                         }, r.createElement(k.W, {
-                            type: k.Rb.H4
+                            type: k.Sb.H4
                         }, Object(a.d)("Put all your best videos in one spot.", "CollectionManager")), r.createElement(k.W, {
-                            type: k.Rb.H4
+                            type: k.Sb.H4
                         }, Object(a.d)("Videos organized into collections help your viewers easily find related content.", "CollectionManager")), r.createElement(k.W, {
-                            type: k.Rb.H4
+                            type: k.Sb.H4
                         }, Object(a.d)("Your most recently updated Collection will be featured at the top of channel’s video page.", "CollectionManager")))
                     }, t.prototype.contentUnavaibleError = function() {
                         return r.createElement(k.Xa, {
@@ -791,10 +791,10 @@
                             onClick: this.navigateToEdit
                         }, a.createElement(C.W, {
                             bold: !0,
-                            type: C.Rb.H4,
+                            type: C.Sb.H4,
                             color: C.O.Alt
-                        }, t.title), a.createElement(C.Ub, {
-                            direction: C.Wb.Bottom,
+                        }, t.title), a.createElement(C.Vb, {
+                            direction: C.Xb.Bottom,
                             label: Object(l.d)("Last Updated", "CollectionManagerCard")
                         }, a.createElement(C.W, {
                             color: C.O.Alt2
@@ -911,7 +911,7 @@
                                 fullHeight: !0,
                                 justifyContent: a.Wa.Center,
                                 padding: 2
-                            }, o.createElement(a.Ab, {
+                            }, o.createElement(a.Bb, {
                                 icon: this.props.icon,
                                 label: this.props.label,
                                 value: this.props.value
@@ -1080,7 +1080,7 @@
                             delay: h.j.Short,
                             type: h.n.BounceIn,
                             enabled: !0
-                        }, r.createElement(h.Bb, {
+                        }, r.createElement(h.Cb, {
                             border: !0,
                             margin: {
                                 bottom: 1
@@ -1096,7 +1096,7 @@
                             delay: h.j.Medium,
                             duration: h.k.Medium,
                             enabled: !0
-                        }, r.createElement(h.Bb, {
+                        }, r.createElement(h.Cb, {
                             background: h.r.Base,
                             padding: {
                                 x: 3,
@@ -1226,7 +1226,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(r.Bb, {
+                        return o.createElement(r.Cb, {
                             background: r.r.Base,
                             elevation: 1,
                             display: r.X.Flex,
@@ -1284,7 +1284,7 @@
                             attachLeft: !0,
                             attachRight: !0,
                             attachBottom: !0
-                        }, l.createElement(f.Bb, {
+                        }, l.createElement(f.Cb, {
                             alignItems: f.f.Center,
                             attachRight: !0,
                             className: "collection-preview-image__wrapper",
@@ -1295,7 +1295,7 @@
                             fullHeight: !0,
                             justifyContent: f.Wa.Center,
                             position: f.hb.Absolute,
-                            textAlign: f.Nb.Center
+                            textAlign: f.Ob.Center
                         }, l.createElement(f.qb, {
                             asset: f.rb.Collections,
                             height: 20,

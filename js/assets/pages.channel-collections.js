@@ -555,7 +555,7 @@
                         flexDirection: c.Aa.Row,
                         alignItems: c.f.Center
                     }, r.createElement(c.W, {
-                        type: c.Rb.H5
+                        type: c.Sb.H5
                     }, Object(a.d)("Expand All", "VideoShelfExpandLink")), r.createElement(c.qb, {
                         asset: c.rb.AngleRight,
                         height: 14
@@ -572,7 +572,7 @@
                     width: 200
                 });
                 var t = r.createElement(c.W, {
-                        type: c.Rb.H4,
+                        type: c.Sb.H4,
                         color: c.O.Base,
                         bold: !0,
                         "data-test-selector": i.Title
@@ -580,7 +580,7 @@
                     n = e.subTitle;
                 return e.subTitle && "string" == typeof e.subTitle ? n = r.createElement(c.W, {
                     color: c.O.Alt2,
-                    type: c.Rb.Span,
+                    type: c.Sb.Span,
                     "data-test-selector": i.SubTitle
                 }, e.subTitle) : e.subTitle && (n = r.createElement(c.Xa, {
                     "data-test-selector": i.SubTitle
@@ -863,7 +863,7 @@
                             display: s.X.Flex,
                             flexDirection: s.Aa.Row,
                             padding: .5
-                        }, r.createElement(s.Bb, {
+                        }, r.createElement(s.Cb, {
                             className: "preview-card-game-balloon-row__image-wrapper",
                             flexGrow: 0,
                             flexShrink: 0,
@@ -873,7 +873,7 @@
                         }, r.createElement(s.o, {
                             align: s.d.Center,
                             ratio: s.p.BoxArt
-                        }, r.createElement(s.S, i.__assign({}, e))), r.createElement(s.Bb, {
+                        }, r.createElement(s.S, i.__assign({}, e))), r.createElement(s.Cb, {
                             className: "preview-card-game-balloon-row__image-play-overlay",
                             alignItems: s.f.Center,
                             background: s.r.Overlay,
@@ -1011,7 +1011,7 @@
                 },
                 v = n("N0BP"),
                 b = (n("XA5B"), function(e) {
-                    var t = r.createElement(s.Bb, {
+                    var t = r.createElement(s.Cb, {
                         className: "preview-card-iconic-image__wrapper",
                         borderRadius: s.x.Small,
                         overflow: s.cb.Hidden
@@ -1046,7 +1046,7 @@
                         "data-test-selector": "top-bar-title-selector",
                         color: s.O.Overlay,
                         bold: !0,
-                        transform: s.Qb.Uppercase
+                        transform: s.Rb.Uppercase
                     }, e.title)), e.subTitle && r.createElement(s.Xa, {
                         display: s.X.InlineFlex
                     }, r.createElement(s.W, {
@@ -1054,7 +1054,7 @@
                         color: s.O.Overlay
                     }, e.subTitle)))
                 }),
-                w = (n("m493"), function(e) {
+                S = (n("m493"), function(e) {
                     var t = .5,
                         n = null;
                     "number" == typeof e.progressBarPercent && e.progressBarPercent > 0 && (n = r.createElement(s.Xa, {
@@ -1118,7 +1118,7 @@
                         "data-test-selector": "bottom-right-selector"
                     }, e.bottomRight))
                 }),
-                S = (n("kF1+"), function(e) {
+                w = (n("kF1+"), function(e) {
                     var t = e.icon && r.createElement(s.Xa, {
                         display: s.X.Flex,
                         margin: {
@@ -1129,7 +1129,7 @@
                         width: 10,
                         height: 10
                     }));
-                    return e.withBackground ? r.createElement(s.Bb, {
+                    return e.withBackground ? r.createElement(s.Cb, {
                         alignItems: s.f.Center,
                         background: s.r.Overlay,
                         borderRadius: s.x.Small,
@@ -1138,7 +1138,7 @@
                         display: s.X.Flex,
                         fontSize: s.Ca.Size6,
                         justifyContent: s.Wa.Center
-                    }, t, r.createElement(s.W, null, e.value)) : r.createElement(s.Bb, {
+                    }, t, r.createElement(s.W, null, e.value)) : r.createElement(s.Cb, {
                         className: "preview-card-stat",
                         color: s.O.Overlay,
                         display: s.X.Flex,
@@ -1188,7 +1188,7 @@
                             onBlur: this.handleBlur
                         }), r.createElement("div", i.__assign({}, e, {
                             onClick: this.props.onClick
-                        }), r.createElement(s.Bb, {
+                        }), r.createElement(s.Cb, {
                             background: s.r.Alt2,
                             overflow: s.cb.Hidden
                         }, r.createElement(s.o, {
@@ -1234,7 +1234,7 @@
                         type: s.V.Inherit,
                         "data-test-selector": "preview-card-titles__primary-link"
                     }), r.createElement(s.W, {
-                        type: s.Rb.H3,
+                        type: s.Sb.H3,
                         fontSize: s.Ca.Size5,
                         lines: 1,
                         bold: !0,
@@ -1262,7 +1262,7 @@
                         t = this.props.restriction.canViewRestricted,
                         n = t ? Object(o.d)("unlocked", "VideoPreviewCardRestriction") : Object(o.d)("locked", "VideoPreviewCardRestriction"),
                         i = t ? s.rb.Unlock : s.rb.Lock;
-                    return r.createElement(s.Xa, null, !t && r.createElement(s.Bb, {
+                    return r.createElement(s.Xa, null, !t && r.createElement(s.Cb, {
                         background: s.r.Overlay,
                         className: "video-preview-card-restriction",
                         color: s.O.Overlay,
@@ -1270,11 +1270,11 @@
                         position: s.hb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
-                        zIndex: s.ec.Default,
+                        zIndex: s.fc.Default,
                         padding: {
                             x: 5
                         },
-                        textAlign: s.Nb.Center,
+                        textAlign: s.Ob.Center,
                         fullWidth: !0,
                         fullHeight: !0,
                         alignItems: s.f.Center,
@@ -1300,21 +1300,21 @@
                         disabled: "" === this.props.restriction.upsellLinkTo,
                         linkTo: this.props.restriction.upsellLinkTo,
                         overlay: !0
-                    }, e))), r.createElement(s.Bb, {
+                    }, e))), r.createElement(s.Cb, {
                         display: s.X.InlineFlex,
                         position: s.hb.Absolute,
                         attachTop: this.props.attachTop,
                         attachBottom: !this.props.attachTop,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: s.ec.Default,
+                        zIndex: s.fc.Default,
                         fontSize: s.Ca.Size6,
                         background: s.r.Overlay,
                         borderRadius: s.x.Medium,
                         color: s.O.Overlay
-                    }, r.createElement(s.Ub, {
-                        direction: this.props.attachTop ? s.Wb.Bottom : s.Wb.Top,
-                        align: s.Vb.Right,
+                    }, r.createElement(s.Vb, {
+                        direction: this.props.attachTop ? s.Xb.Bottom : s.Xb.Top,
+                        align: s.Wb.Right,
                         label: n
                     }, r.createElement(s.qb, {
                         asset: i,
@@ -1351,7 +1351,7 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         return r.createElement("div", i.__assign({
                             className: "preview-card"
-                        }, Object(v.a)(this.props)), r.createElement(s.Bb, {
+                        }, Object(v.a)(this.props)), r.createElement(s.Cb, {
                             position: s.hb.Relative,
                             borderRadius: s.x.Medium,
                             overflow: s.cb.Hidden
@@ -1383,47 +1383,47 @@
                     }, t.prototype.renderOverlay = function() {
                         return function(e) {
                             return void 0 !== e.streamType
-                        }(this.props) ? r.createElement(w, {
+                        }(this.props) ? r.createElement(S, {
                             topLeft: r.createElement(L.a, {
                                 type: this.props.streamType,
                                 hosting: !!this.props.hostedByChannelLogin
                             }),
                             topRight: void 0,
-                            bottomLeft: r.createElement(S, {
+                            bottomLeft: r.createElement(w, {
                                 value: Object(o.d)("{viewerCount, plural, one {# viewer} other {# viewers}}", {
                                     viewerCount: this.props.currentViewerCount
                                 }, "VideoPreviewCard")
                             }),
                             bottomRight: void 0
-                        }) : A(this.props) ? r.createElement(w, {
-                            topLeft: void 0 !== this.props.durationInSeconds && r.createElement(S, {
+                        }) : A(this.props) ? r.createElement(S, {
+                            topLeft: void 0 !== this.props.durationInSeconds && r.createElement(w, {
                                 value: Object(O.b)(this.props.durationInSeconds),
                                 icon: s.rb.Play,
                                 withBackground: !0
                             }),
-                            topRight: this.props.listPosition && r.createElement(S, {
+                            topRight: this.props.listPosition && r.createElement(w, {
                                 withBackground: !0,
                                 value: this.getListPositionLabel()
                             }),
-                            bottomLeft: r.createElement(S, {
+                            bottomLeft: r.createElement(w, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: r.createElement(S, {
+                            bottomRight: r.createElement(w, {
                                 value: Object(o.c)(new Date(this.props.datePublished), "medium")
                             }),
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
-                        }) : R(this.props) ? r.createElement(w, {
-                            topLeft: r.createElement(S, {
+                        }) : R(this.props) ? r.createElement(S, {
+                            topLeft: r.createElement(w, {
                                 value: Object(O.b)(this.props.durationInSeconds),
                                 icon: s.rb.Clip,
                                 withBackground: !0
                             }),
                             topRight: void 0,
-                            bottomLeft: r.createElement(S, {
+                            bottomLeft: r.createElement(w, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: r.createElement(S, {
+                            bottomRight: r.createElement(w, {
                                 value: Object(o.c)(new Date(this.props.datePublished), "medium")
                             })
                         }) : void 0
@@ -2154,7 +2154,7 @@
                             attachLeft: !0,
                             attachRight: !0,
                             attachBottom: !0
-                        }, s.createElement(h.Bb, {
+                        }, s.createElement(h.Cb, {
                             alignItems: h.f.Center,
                             attachRight: !0,
                             className: "collection-preview-image__wrapper",
@@ -2165,7 +2165,7 @@
                             fullHeight: !0,
                             justifyContent: h.Wa.Center,
                             position: h.hb.Absolute,
-                            textAlign: h.Nb.Center
+                            textAlign: h.Ob.Center
                         }, s.createElement(h.qb, {
                             asset: h.rb.Collections,
                             height: 20,
@@ -2484,8 +2484,8 @@
                 k = n("yR8l"),
                 y = n("x7UT"),
                 C = n("3Bft"),
-                w = n("tIid"),
-                S = n("ht6z"),
+                S = n("tIid"),
+                w = n("ht6z"),
                 _ = n("/aPz"),
                 E = n("KriR"),
                 I = n("W8Fi"),
@@ -2529,7 +2529,7 @@
                             var n = t.props.data,
                                 i = n.user,
                                 r = !!(i && i.self && i.self.subscriptionBenefit),
-                                o = n.requestInfo && Object(S.a)(n.requestInfo.countryCode);
+                                o = n.requestInfo && Object(w.a)(n.requestInfo.countryCode);
                             Object(N.b)({
                                 action: e.action || "",
                                 channelLogin: t.props.channelLogin || "",
@@ -2579,10 +2579,10 @@
                             return e
                         });
                         if (0 === a.length) return null;
-                        if (this.props.hideEsportsSubscription && Object(w.a)(t.id || "", this.props.sessionUser)) return null;
-                        var s = e.requestInfo && Object(S.a)(e.requestInfo.countryCode),
+                        if (this.props.hideEsportsSubscription && Object(S.a)(t.id || "", this.props.sessionUser)) return null;
+                        var s = e.requestInfo && Object(w.a)(e.requestInfo.countryCode),
                             l = !(!n || !n.subscriptionBenefit),
-                            c = Object(w.a)(t.id || "", this.props.sessionUser),
+                            c = Object(S.a)(t.id || "", this.props.sessionUser),
                             d = 1 === a.length;
                         a.some(function(e) {
                             return !e.emoteSetID
@@ -2731,7 +2731,7 @@
                         return Object(u.d)(l.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(193)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(192)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })
@@ -3203,7 +3203,7 @@
                 var m = this;
                 return d(function(d) {
                     return i.__awaiter(m, void 0, void 0, function() {
-                        var m, h, g, b, k, y, C, w, S;
+                        var m, h, g, b, k, y, C, S, w;
                         return i.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
@@ -3216,11 +3216,11 @@
                                         id: t
                                     }), y = btoa(k), [4, a.a.deleteOrThrow("/v5/collections/" + e.id + "/items/" + y)]) : [3, 3];
                                 case 2:
-                                    return i.sent(), w = h.filter(function(t) {
+                                    return i.sent(), S = h.filter(function(t) {
                                         return t.id !== e.id
                                     }), d.store.dispatch({
                                         type: p,
-                                        containingCollections: w,
+                                        containingCollections: S,
                                         videoID: t
                                     }), Object(o.c)({
                                         channelID: n,
@@ -3236,9 +3236,9 @@
                                         id: t
                                     }, [4, v("/v5/collections/" + e.id + "/items", C)];
                                 case 4:
-                                    i.sent(), w = h.concat([e]), d.store.dispatch({
+                                    i.sent(), S = h.concat([e]), d.store.dispatch({
                                         type: p,
-                                        containingCollections: w,
+                                        containingCollections: S,
                                         videoID: t
                                     }), Object(o.a)({
                                         channelID: n,
@@ -3252,7 +3252,7 @@
                                 case 5:
                                     return [3, 7];
                                 case 6:
-                                    return S = i.sent(), r.k.error(S, "Failed to fetch collections"), d.store.dispatch({
+                                    return w = i.sent(), r.k.error(w, "Failed to fetch collections"), d.store.dispatch({
                                         type: f,
                                         errorType: "Update Failed",
                                         errorMessage: "Updating collection " + e.id + " for channel " + n + " and video " + t + " failed."
@@ -3647,7 +3647,7 @@
                         }, "ChannelCollections");
                         return o.createElement(b.G, r.__assign({
                             key: this.props.title
-                        }, Object(b.fc)(this.props)), o.createElement(b.Pa, {
+                        }, Object(b.gc)(this.props)), o.createElement(b.Pa, {
                             position: b.hb.Relative
                         }, o.createElement(b.U, {
                             to: {
@@ -3692,25 +3692,25 @@
                             color: b.O.Alt2,
                             ellipsis: !0
                         }, o.createElement(b.W, {
-                            type: b.Rb.Span
+                            type: b.Sb.Span
                         }, e), o.createElement(b.W, {
-                            type: b.Rb.Span
+                            type: b.Sb.Span
                         }, " · " + this.computeViewsMessage())))))
                     }, t
                 }(o.Component),
                 C = Object(h.b)("CollectionCard", {
                     autoReportInteractive: !0
                 })(y),
-                w = n("VwyG");
+                S = n("VwyG");
             ! function(e) {
                 e[e.NoCollections = 0] = "NoCollections", e[e.NoCollectionsUpSell = 1] = "NoCollectionsUpSell"
             }(i || (i = {}));
-            var S, _ = function(e) {
+            var w, _ = function(e) {
                     var t;
                     return t = e.canEdit ? o.createElement("div", {
                         "data-test-selector": i.NoCollectionsUpSell
                     }, o.createElement(b.W, {
-                        type: b.Rb.H4
+                        type: b.Sb.H4
                     }, Object(s.d)("Create a collection of your videos from Video Producer.", "collection-page")), o.createElement(b.Xa, {
                         padding: {
                             top: 2
@@ -3719,16 +3719,16 @@
                         type: b.F.Hollow,
                         linkTo: "/" + e.channelLogin + "/manager/collections"
                     }, Object(s.d)("Go to Video Producer", "collection-page")))) : o.createElement(b.W, {
-                        type: b.Rb.H4,
+                        type: b.Sb.H4,
                         italic: !0,
                         "data-test-selector": i.NoCollections
-                    }, Object(s.d)("No collections found.", "collection-page")), o.createElement(b.Bb, {
+                    }, Object(s.d)("No collections found.", "collection-page")), o.createElement(b.Cb, {
                         color: b.O.Alt2,
-                        textAlign: b.Nb.Center
+                        textAlign: b.Ob.Center
                     }, t)
                 },
                 E = function(e) {
-                    return o.createElement(w.a, {
+                    return o.createElement(S.a, {
                         ownerLogin: e.channelLogin,
                         permittedRoles: {
                             owner: !0,
@@ -3747,7 +3747,7 @@
                 N = n("IhxQ");
             ! function(e) {
                 e[e.Filters = 0] = "Filters"
-            }(S || (S = {}));
+            }(w || (w = {}));
             var x = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -3764,7 +3764,7 @@
                             var n = null;
                             return Object(m.a)() || (n = o.createElement(b.Xa, {
                                 alignItems: b.f.End,
-                                "data-test-selector": S.Filters,
+                                "data-test-selector": w.Filters,
                                 display: b.X.Flex,
                                 flexDirection: b.Aa.Row,
                                 justifyContent: b.Wa.Between,
@@ -3797,9 +3797,9 @@
                             }, o.createElement(b.gb, {
                                 width: 100
                             }))));
-                            return o.createElement(b.Xb, {
-                                gutterSize: b.Zb.Small,
-                                childWidth: b.Yb.Medium,
+                            return o.createElement(b.Yb, {
+                                gutterSize: b.ac.Small,
+                                childWidth: b.Zb.Medium,
                                 placeholderItems: 20
                             }, i)
                         }
@@ -3855,9 +3855,9 @@
                                     "data-a-target": "collection-card-" + n
                                 }))
                             });
-                            i = o.createElement(b.Xb, {
-                                gutterSize: b.Zb.Small,
-                                childWidth: b.Yb.Large,
+                            i = o.createElement(b.Yb, {
+                                gutterSize: b.ac.Small,
+                                childWidth: b.Zb.Large,
                                 placeholderItems: 20
                             }, s)
                         }
@@ -3904,7 +3904,7 @@
                     }
                 }))(x);
             n.d(t, "TestSelectors", function() {
-                return S
+                return w
             }), n.d(t, "COLLECTIONS_PLACEHOLDER_SELECTOR", function() {
                 return "collections-placeholder"
             }), n.d(t, "COLLECTIONS_PLACEHOLDER_LIMIT", function() {
@@ -3956,7 +3956,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(p.Bb, {
+                        return c.createElement(p.Cb, {
                             className: this.getClassNames(),
                             color: p.O.Overlay,
                             background: p.r.Overlay,
@@ -3972,7 +3972,7 @@
                                 right: .5
                             }
                         }, this.getIcon()), c.createElement(p.W, {
-                            type: p.Rb.Span
+                            type: p.Sb.Span
                         }, this.getLabel()))
                     }, t.prototype.getClassNames = function() {
                         var e = {
@@ -3980,7 +3980,7 @@
                         };
                         return e[m[this.props.type]] = !0, l(e)
                     }, t.prototype.getIcon = function() {
-                        return this.props.hosting ? c.createElement(p.Bb, {
+                        return this.props.hosting ? c.createElement(p.Cb, {
                             borderRadius: p.x.Rounded,
                             className: "stream-type-indicator__hosting-dot",
                             "data-test-selector": a.HostingDot
@@ -4560,7 +4560,7 @@
                                 margin: {
                                     left: 1
                                 },
-                                textAlign: b.Nb.Left
+                                textAlign: b.Ob.Left
                             }, o.createElement(b.W, {
                                 color: b.O.Alt2,
                                 fontSize: b.Ca.Size6
@@ -4584,7 +4584,7 @@
                 e.Upsell = "upsell"
             }(v || (v = {}));
             var C = n("Ve5Q"),
-                w = (n("wqI2"), function(e) {
+                S = (n("wqI2"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.impressionEventFired = !1, t.signup = function() {
@@ -4602,7 +4602,7 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.trackImpression()
                     }, t.prototype.render = function() {
-                        return o.createElement(b.Bb, {
+                        return o.createElement(b.Cb, {
                             background: b.r.AccentAlt2,
                             display: b.X.Flex,
                             flexDirection: b.Aa.Column,
@@ -4612,7 +4612,7 @@
                             },
                             margin: 1
                         }, this.renderImage(), o.createElement(b.Xa, {
-                            textAlign: b.Nb.Center
+                            textAlign: b.Ob.Center
                         }, this.renderText(), o.createElement(b.z, {
                             onClick: this.signup,
                             size: b.D.Large
@@ -4646,7 +4646,7 @@
                         }, o.createElement(b.Xa, {
                             className: "upsell-center__avatar",
                             position: b.hb.Absolute,
-                            zIndex: b.ec.Above
+                            zIndex: b.fc.Above
                         }, o.createElement(b.q, {
                             src: this.props.data.user.profileImageURL,
                             alt: Object(l.d)("{displayName}'s Profile Image", {
@@ -4664,7 +4664,7 @@
                         }(), this.impressionEventFired = !0)
                     }, t
                 }(o.PureComponent));
-            var S = Object(s.compose)(Object(u.a)(C, {
+            var w = Object(s.compose)(Object(u.a)(C, {
                     options: function(e) {
                         return {
                             variables: {
@@ -4681,14 +4681,14 @@
                             return Object(m.g)(p.a.SideNavUpsellCenter)
                         }
                     }, e)
-                }))(w),
+                }))(S),
                 _ = n("kRBY"),
                 E = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return this.props.isLoggedIn || this.props.collapsed ? null : o.createElement(S, r.__assign({}, this.props))
+                        return this.props.isLoggedIn || this.props.collapsed ? null : o.createElement(w, r.__assign({}, this.props))
                     }, t
                 }(o.PureComponent);
             var I = Object(a.connect)(function(e) {
@@ -4698,7 +4698,7 @@
                 }
             })(E);
             n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {
-                return w
+                return S
             }), n.d(t, !1, function() {
                 return E
             }), n.d(t, "a", function() {
@@ -4816,11 +4816,11 @@
                                 transform: this.transformString()
                             },
                             "data-test-selector": "carousel-body"
-                        }, s.createElement(p.Xb, {
+                        }, s.createElement(p.Yb, {
                             noWrap: !0,
                             noGrow: !0,
-                            childWidth: this.props.cardWidth || p.Yb.Large,
-                            gutterSize: p.Zb.Small,
+                            childWidth: this.props.cardWidth || p.Zb.Large,
+                            gutterSize: p.ac.Small,
                             "data-js-selector": m
                         }, this.props.children)))), s.createElement(p.Xa, {
                             className: "preview-card-carousel__nav",
@@ -4889,8 +4889,8 @@
                 k = n("bdIb"),
                 y = n("XEwr"),
                 C = n("RXle"),
-                w = 10,
-                S = function(e) {
+                S = 10,
+                w = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4943,7 +4943,7 @@
                         }, t.getVideoCards = function() {
                             var e = t.props.videos;
                             if (null === e) {
-                                for (var n = [], i = 0; i < w; i++) n.push(s.createElement(C.VideoPreviewCardPlaceholder, {
+                                for (var n = [], i = 0; i < S; i++) n.push(s.createElement(C.VideoPreviewCardPlaceholder, {
                                     key: "carousel-placeholder-" + i
                                 }));
                                 return n
@@ -4972,7 +4972,7 @@
                             if (t.props.currentlyWatchingVideoID && t.props.renderCurrentlyWatchingCard && t.props.scrollToCurrentlyWatching)
                                 for (var l = t.getCurrentlyWatchingVideoIndex(), c = 0; c < e.length; c++) {
                                     var d = e[c];
-                                    t.props.firstPageLoaded || !(c < l || c > l + w) ? Object(y.a)(d) || r.push(s.createElement(C.VideoPreviewCard, {
+                                    t.props.firstPageLoaded || !(c < l || c > l + S) ? Object(y.a)(d) || r.push(s.createElement(C.VideoPreviewCard, {
                                         context: t.props.listContext,
                                         collectionID: t.props.collectionID,
                                         onClick: t.onPreviewCardClick,
@@ -4993,7 +4993,7 @@
                                     }))
                                 } else
                                     for (c = 0; c < e.length; c++)
-                                        if (c + a < w || t.props.firstPageLoaded) {
+                                        if (c + a < S || t.props.firstPageLoaded) {
                                             d = e[c];
                                             if (Object(y.a)(d)) {
                                                 if (d.slug === t.props.currentlyWatchingVideoID) continue;
@@ -5081,7 +5081,7 @@
                 }(s.Component),
                 _ = Object(c.b)("VideoCarousel", {
                     autoReportInteractive: !0
-                })(S);
+                })(w);
             n.d(t, "a", function() {
                 return E
             });
@@ -5698,7 +5698,7 @@
                             "data-test-selector": g.PlayAllButton
                         }, Object(a.d)("Play all", "LatestCollectionCarousel"))), o.createElement(f.W, {
                             color: f.O.Alt2,
-                            type: f.Rb.Span,
+                            type: f.Sb.Span,
                             "data-test-selector": g.Metadata
                         }, this.renderSubTitle(e))) : o.createElement(f.gb, {
                             width: 250,
@@ -5961,8 +5961,8 @@
                 k = n("Ahlu"),
                 y = n("/MKj"),
                 C = n("fvjX"),
-                w = n("aCAx"),
-                S = n("7CzK"),
+                S = n("aCAx"),
+                w = n("7CzK"),
                 _ = n("94Uw"),
                 E = n("Ue10"),
                 I = (n("/nm5"), n("41XU")),
@@ -6003,7 +6003,7 @@
                         d && !d.loading && this.props.firstPageLoaded && d.user && d.user.bannerImageURL ? (n = "channel-banner__image-loaded", t = {
                             backgroundImage: "url(" + d.user.bannerImageURL + ")"
                         }) : (l["channel-banner__image--default"] = !0, t = {
-                            backgroundImage: "url(" + S + ")"
+                            backgroundImage: "url(" + w + ")"
                         }), this.props.isSideNavBanner && (i = "channel-banner__side-nav-type");
                         var u = null;
                         if (this.props.canEdit) {
@@ -6019,7 +6019,7 @@
                             }), o.createElement(E.W, null, Object(s.d)("Edit", "ChannelBanner"))) : o.createElement(E.Xa, null, o.createElement(E.Xa, null, o.createElement(E.qb, {
                                 asset: E.rb.Edit
                             })), Object(s.d)("Update Profile Banner", "ChannelBanner"));
-                            u = o.createElement(E.Bb, {
+                            u = o.createElement(E.Cb, {
                                 className: r("channel-banner__edit-overlay", c),
                                 background: E.r.Overlay,
                                 position: E.hb.Absolute,
@@ -6071,8 +6071,8 @@
                     }
                 }, function(e) {
                     return Object(C.bindActionCreators)({
-                        closeModal: w.c,
-                        showModal: w.d
+                        closeModal: S.c,
+                        showModal: S.d
                     }, e)
                 })(L),
                 D = n("tuvy"),
@@ -6108,9 +6108,9 @@
             var z = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
-                        return n.verifiedBadgeElement = o.createElement(E.Ub, {
+                        return n.verifiedBadgeElement = o.createElement(E.Vb, {
                             label: Object(s.d)("Verified", "ChannelHeader"),
-                            direction: E.Wb.Right
+                            direction: E.Xb.Right
                         }, o.createElement(E.Xa, {
                             className: "channel-header__verified",
                             "data-target": M,
@@ -6126,9 +6126,9 @@
                                 left: 1
                             },
                             "data-target": G
-                        }, o.createElement(E.Ub, {
+                        }, o.createElement(E.Vb, {
                             label: Object(s.d)("Live Now", "ChannelHeader"),
-                            direction: E.Wb.Right
+                            direction: E.Xb.Right
                         }, o.createElement(E.K, {
                             status: E.M.Live,
                             pulse: !0
@@ -6137,7 +6137,7 @@
                                 live: !1
                             })
                         }, n.renderAvatarEditButton = function() {
-                            return n.props.data && n.props.data.user && n.props.data.user.id && n.props.data.user.login && n.isChannelEditor() ? o.createElement(E.Bb, {
+                            return n.props.data && n.props.data.user && n.props.data.user.id && n.props.data.user.login && n.isChannelEditor() ? o.createElement(E.Cb, {
                                 className: X,
                                 background: E.r.Overlay,
                                 position: E.hb.Absolute,
@@ -6262,7 +6262,7 @@
                                 src: l,
                                 alt: e || ""
                             }), this.renderAvatarEditButton())), e ? o.createElement(E.W, {
-                                type: E.Rb.H5
+                                type: E.Sb.H5
                             }, e) : o.createElement(E.Xa, {
                                 alignItems: E.f.Center
                             }, o.createElement(E.gb, {
@@ -6359,7 +6359,7 @@
                                         left: .5
                                     }
                                 }, o.createElement(E.W, {
-                                    type: E.Rb.Span,
+                                    type: E.Sb.Span,
                                     fontSize: E.Ca.Size5
                                 }, e.count)) : null,
                                 i = t.generateUserLink(e.pathSuffix),
@@ -6382,7 +6382,7 @@
                                 },
                                 display: E.X.Flex
                             }, o.createElement(E.W, {
-                                type: E.Rb.Span,
+                                type: E.Sb.Span,
                                 fontSize: E.Ca.Size5
                             }, e.label), n)))
                         })
@@ -6396,7 +6396,7 @@
                                         left: .5
                                     }
                                 }, o.createElement(E.W, {
-                                    type: E.Rb.Span
+                                    type: E.Sb.Span
                                 }, e.count)) : null,
                                 i = t.generateUserLink(e.pathSuffix);
                             return o.createElement(E.Xa, {
@@ -6413,7 +6413,7 @@
                                 },
                                 display: E.X.Flex
                             }, o.createElement(E.W, {
-                                type: E.Rb.Span
+                                type: E.Sb.Span
                             }, e.label), n)))
                         })
                     }, t.prototype.createChannelLinks = function(e, t, n) {
@@ -7131,7 +7131,7 @@
 
             function s(e) {
                 return i.createElement(a.W, {
-                    type: a.Rb.Strong
+                    type: a.Sb.Strong
                 }, e)
             }
 
@@ -7283,7 +7283,7 @@
                             duration: u.k.Long,
                             timing: u.m.EaseInOut,
                             enabled: !0
-                        }, r.createElement(u.Bb, {
+                        }, r.createElement(u.Cb, {
                             className: "browser-push-notifications-upsell",
                             alignItems: u.f.Center,
                             justifyContent: u.Wa.Center,
@@ -7297,7 +7297,7 @@
                         }, r.createElement(u.Xa, {
                             className: "browser-push-notifications-upsell__container",
                             display: u.X.Flex,
-                            textAlign: u.Nb.Center,
+                            textAlign: u.Ob.Center,
                             padding: {
                                 x: 1
                             },
@@ -7308,7 +7308,7 @@
                             timing: u.m.EaseInOut,
                             enabled: !0
                         }, r.createElement(u.W, {
-                            type: u.Rb.H3,
+                            type: u.Sb.H3,
                             fontSize: u.Ca.Size3,
                             lineHeight: u.Ya.Body
                         }, Object(s.d)("Don't miss out when your favorite streamers go live!", "BrowserNotificationsUpsellModal")), r.createElement(u.Xa, {
@@ -7316,7 +7316,7 @@
                                 top: 1
                             }
                         }, r.createElement(u.W, {
-                            type: u.Rb.H4,
+                            type: u.Sb.H4,
                             fontSize: u.Ca.Size4,
                             color: u.O.OverlayAlt,
                             lineHeight: u.Ya.Body

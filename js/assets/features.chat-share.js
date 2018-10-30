@@ -372,7 +372,7 @@
                             attachLeft: !0,
                             attachRight: !0,
                             position: k.hb.Absolute
-                        }, r.createElement(k.Bb, {
+                        }, r.createElement(k.Cb, {
                             className: "share-input__container",
                             position: k.hb.Relative,
                             border: !0,
@@ -390,7 +390,7 @@
                             "data-a-target": "resub-notification-close-form-btn",
                             "data-test-selector": "share-input__close-form-btn"
                         })), r.createElement(k.Xa, {
-                            textAlign: k.Nb.Center,
+                            textAlign: k.Ob.Center,
                             padding: {
                                 top: 1,
                                 bottom: 2
@@ -729,14 +729,14 @@
                         overflow: k.cb.Hidden,
                         className: "rare-emote"
                     }, r.createElement(k.Pa, {
-                        zIndex: k.ec.Above,
+                        zIndex: k.fc.Above,
                         position: k.hb.Relative
                     }, r.createElement("img", {
                         className: t,
                         src: "https://static-cdn.jtvnw.net/emoticons/v1/" + e.emoteID + "/2.0"
                     })), r.createElement(k.Xa, {
                         position: k.hb.Relative,
-                        zIndex: k.ec.Default,
+                        zIndex: k.fc.Default,
                         className: n
                     }, r.createElement(k.qb, {
                         width: 28,

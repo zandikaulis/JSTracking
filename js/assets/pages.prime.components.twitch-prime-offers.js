@@ -199,7 +199,7 @@
                                     type: h.n.SlideInTop,
                                     duration: h.k.Long,
                                     enabled: !!r
-                                }, a.createElement(h.Bb, {
+                                }, a.createElement(h.Cb, {
                                     "data-test-target": y,
                                     className: "prime-banner-upsell prime-banner-upsell--" + i.toLowerCase(),
                                     padding: {
@@ -228,11 +228,11 @@
                                         md: 4,
                                         lg: 4
                                     }
-                                }, a.createElement(h.Bb, {
+                                }, a.createElement(h.Cb, {
                                     display: h.X.Flex,
                                     justifyContent: h.Wa.Center,
                                     alignItems: h.f.Center,
-                                    textAlign: h.Nb.Center,
+                                    textAlign: h.Ob.Center,
                                     padding: 2,
                                     fullHeight: !0
                                 }, a.createElement(h.Xa, {
@@ -240,7 +240,7 @@
                                     className: "prime-upsell__msg-container",
                                     "data-a-target": "prime-upsellcontainer"
                                 }, a.createElement(h.W, {
-                                    type: h.Rb.P,
+                                    type: h.Sb.P,
                                     fontSize: h.Ca.Size4,
                                     bold: !0,
                                     "data-test-selector": b
@@ -249,7 +249,7 @@
                                         bottom: .5
                                     }
                                 }, a.createElement(h.W, {
-                                    type: h.Rb.P,
+                                    type: h.Sb.P,
                                     fontSize: h.Ca.Size5,
                                     bold: !0
                                 }, Object(o.d)("Powered by", "PrimeUpsell"))), a.createElement(m, null)))), a.createElement(h.P, {
@@ -268,12 +268,12 @@
                                     alt: Object(o.d)("Promotional Banner for Twitch Prime", "TwitchPrimeBanner"),
                                     "data-test-selector": k
                                 });
-                            return a.createElement(h.Bb, {
+                            return a.createElement(h.Cb, {
                                 className: "prime-upsell__logo-container",
                                 display: h.X.Flex,
                                 justifyContent: h.Wa.Center,
                                 alignItems: h.f.Center,
-                                textAlign: h.Nb.Center,
+                                textAlign: h.Ob.Center,
                                 fullHeight: !0
                             }, r || a.createElement(h.qb, {
                                 type: h.sb.Inherit,
@@ -290,7 +290,7 @@
                                 n = !Object(d.n)(e) && t.getTextFromOverride(P) || "",
                                 i = t.getTextFromOverride(E) || "default";
                             return n && r && a.createElement(h.W, {
-                                type: h.Rb.P,
+                                type: h.Sb.P,
                                 fontSize: h.Ca.Size4,
                                 "data-test-selector": v
                             }, a.createElement(h.U, {
@@ -347,7 +347,7 @@
                         return a.createElement(h.Xa, null, this.renderBannerPlaceholder(), this.renderBanner())
                     }, t
                 }(a.Component),
-                I = Object(i.compose)(Object(l.b)("TwitchPrimeBanner"), Object(s.a)(u, {
+                C = Object(i.compose)(Object(l.b)("TwitchPrimeBanner"), Object(s.a)(u, {
                     name: "userData"
                 }), Object(s.a)(g, {
                     name: "promotionData",
@@ -385,7 +385,7 @@
             }), r.d(t, !1, function() {
                 return D
             }), r.d(t, "a", function() {
-                return I
+                return C
             })
         },
         eAh4: function(e, t, r) {
@@ -419,12 +419,12 @@
                                 n = t.renderOfferList(h.a.Game, Object(s.d)("Free Games with Prime", "PrimePageOffers"));
                             switch (e) {
                                 case "Game":
-                                    return a.createElement(y.Bb, {
+                                    return a.createElement(y.Cb, {
                                         background: y.r.Base,
                                         className: "prime-offers"
                                     }, n, r);
                                 default:
-                                    return a.createElement(y.Bb, {
+                                    return a.createElement(y.Cb, {
                                         background: y.r.Base,
                                         className: "prime-offers"
                                     }, r, n)
@@ -468,10 +468,10 @@
                         }), this.renderOfferListsInOrder(), this.renderFooterUpsellButton(), a.createElement(d.a, null)))
                     }, t.prototype.renderFooterUpsellButton = function() {
                         var e = this.props.userData;
-                        if (!Object(b.m)(e) && !Object(b.n)(e)) return a.createElement(y.Bb, {
+                        if (!Object(b.m)(e) && !Object(b.n)(e)) return a.createElement(y.Cb, {
                             justifyContent: y.Wa.Center,
                             alignItems: y.f.Center,
-                            textAlign: y.Nb.Center,
+                            textAlign: y.Ob.Center,
                             padding: 2
                         }, a.createElement(k.a, {
                             externalReftag: this.getReftagFromSearch(),
@@ -514,7 +514,7 @@
                         return a.createElement(s.Xa, {
                             className: "prime-footer",
                             position: s.hb.Relative
-                        }, a.createElement(s.Bb, {
+                        }, a.createElement(s.Cb, {
                             position: s.hb.Absolute,
                             justifyContent: s.Wa.Center,
                             alignItems: s.f.Center,
@@ -524,7 +524,7 @@
                             width: 40,
                             height: 40,
                             type: s.sb.Prime
-                        })), a.createElement(s.Bb, {
+                        })), a.createElement(s.Cb, {
                             display: s.X.Flex,
                             justifyContent: s.Wa.Center,
                             attachTop: !0,
@@ -550,7 +550,7 @@
                         }, a.createElement(s.W, {
                             bold: !0,
                             fontSize: s.Ca.Size5
-                        }, this.props.partnerSocialText)))), a.createElement(s.Bb, {
+                        }, this.props.partnerSocialText)))), a.createElement(s.Cb, {
                             display: s.X.Flex,
                             justifyContent: s.Wa.Center,
                             attachTop: !0,
@@ -561,19 +561,19 @@
                                 top: 2
                             },
                             className: "prime-footer-links"
-                        }, a.createElement(s.Bb, {
+                        }, a.createElement(s.Cb, {
                             padding: 2
                         }, a.createElement(s.U, {
                             to: "https://www.twitch.tv/p/terms-of-sale#twitchprime",
                             targetBlank: !0,
                             "data-a-target": "prime-footer-terms-link"
-                        }, Object(i.d)("Terms", "PrimeSubsiteFooter"))), a.createElement(s.Bb, {
+                        }, Object(i.d)("Terms", "PrimeSubsiteFooter"))), a.createElement(s.Cb, {
                             padding: 2
                         }, a.createElement(s.U, {
                             to: "https://www.amazon.com/twitchprivacy",
                             targetBlank: !0,
                             "data-a-target": "prime-footer-privacy-link"
-                        }, Object(i.d)("Privacy Policy", "PrimeSubsiteFooter"))), a.createElement(s.Bb, {
+                        }, Object(i.d)("Privacy Policy", "PrimeSubsiteFooter"))), a.createElement(s.Cb, {
                             padding: 2
                         }, a.createElement(s.U, {
                             to: "https://help.twitch.tv/customer/en/portal/articles/2572060-twitch-prime-guide",

@@ -746,6 +746,55 @@
                 e.ChannelNotFound = "CHANNEL_NOT_FOUND", e.Forbidden = "FORBIDDEN", e.UserAlreadyModded = "TARGET_ALREADY_MOD", e.UserBanned = "TARGET_IS_CHAT_BANNED", e.UserNotFound = "TARGET_NOT_FOUND"
             }(i || (i = {}))
         },
+        AXTS: function(e, n, t) {
+            "use strict";
+            var i = t("mrSG"),
+                r = t("q1tI"),
+                a = t("/7QA"),
+                s = t("8/mp"),
+                o = t("Kw8/"),
+                l = t("Ue10"),
+                d = function(e) {
+                    function n() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return i.__extends(n, e), n.prototype.render = function() {
+                        var e = this,
+                            n = this.props.users;
+                        return r.createElement(l.u, {
+                            noTail: !0,
+                            offsetY: "-0.5px",
+                            show: !!n && this.props.show
+                        }, r.createElement(s.b, null, r.createElement(l.Xa, {
+                            alignItems: l.f.Center,
+                            display: l.X.Flex,
+                            flexDirection: l.Aa.Column,
+                            justifyContent: l.Wa.Center
+                        }, n && n.length > 0 ? n.map(function(n, t) {
+                            return r.createElement(o.c, {
+                                key: t,
+                                onBlur: e.props.onOptionBlur,
+                                onClick: e.props.onOptionClick,
+                                user: n
+                            })
+                        }) : r.createElement(l.Xa, {
+                            alignItems: l.f.Center,
+                            display: l.X.Flex,
+                            flexDirection: l.Aa.Column,
+                            justifyContent: l.Wa.Center,
+                            padding: {
+                                x: 1,
+                                y: 5
+                            }
+                        }, r.createElement(l.qb, {
+                            asset: l.rb.SearchNoResults
+                        }), r.createElement(l.W, null, Object(a.d)("No users found", "SearchUsersDropdown"))))))
+                    }, n
+                }(r.Component);
+            t.d(n, "a", function() {
+                return d
+            })
+        },
         "CpU+": function(e, n, t) {
             "use strict";
             t.d(n, "a", function() {
@@ -1063,6 +1112,87 @@
                 }
             };
             e.exports = t
+        },
+        "Kw8/": function(e, n, t) {
+            "use strict";
+            var i = t("mrSG"),
+                r = t("q1tI"),
+                a = t("/7QA"),
+                s = t("8Ad5"),
+                o = t("Ue10"),
+                l = (t("sZ5a"), function(e) {
+                    function n() {
+                        var n = null !== e && e.apply(this, arguments) || this;
+                        return n.state = {
+                            focused: !1,
+                            hovered: !1
+                        }, n.handleKeyDown = function(e) {
+                            var t = e.keyCode;
+                            t !== s.a.Space && t !== s.a.Enter || n.handleClick()
+                        }, n.handleClick = function() {
+                            n.props.onClick(n.props.user)
+                        }, n.handleBlur = function(e) {
+                            e.persist(), n.setState({
+                                focused: !1
+                            }, function() {
+                                n.props.onBlur(e.relatedTarget)
+                            })
+                        }, n.handleFocus = function() {
+                            n.setState({
+                                focused: !0
+                            })
+                        }, n.handleMouseOver = function() {
+                            n.setState({
+                                hovered: !0
+                            })
+                        }, n.handleMouseOut = function() {
+                            n.state.hovered && n.setState({
+                                hovered: !1
+                            })
+                        }, n
+                    }
+                    return i.__extends(n, e), n.prototype.render = function() {
+                        var e, n, t = this.props.user;
+                        return r.createElement("div", i.__assign({
+                            className: "roles-page-search-user-option",
+                            onBlur: this.handleBlur,
+                            onFocus: this.handleFocus,
+                            onMouseOver: this.handleMouseOver,
+                            onMouseOut: this.handleMouseOut,
+                            onKeyDown: this.handleKeyDown,
+                            tabIndex: 0
+                        }, ((e = {})["data-component-type"] = ["roles-page-search-user-option"], e)), r.createElement(o.Ua, i.__assign({
+                            hover: this.state.hovered,
+                            onClick: this.handleClick,
+                            selected: this.state.focused,
+                            tabIndex: -1,
+                            type: o.Va.Base
+                        }, ((n = {})["data-component-type"] = ["roles-page-search-user-option"], n)), r.createElement(o.Xa, {
+                            alignItems: o.f.Center,
+                            display: o.X.Flex,
+                            justifyContent: o.Wa.Start,
+                            padding: {
+                                x: 1,
+                                y: .5
+                            }
+                        }, r.createElement(o.Xa, {
+                            margin: {
+                                right: .5
+                            }
+                        }, r.createElement(o.q, {
+                            alt: Object(a.d)("Avatar", "SearchUsersOption"),
+                            src: t.profile_image,
+                            size: 30
+                        })), t.name)))
+                    }, n
+                }(r.Component));
+            t.d(n, "a", function() {
+                return "data-component-type"
+            }), t.d(n, "b", function() {
+                return "roles-page-search-user-option"
+            }), t.d(n, "c", function() {
+                return l
+            })
         },
         "LQi+": function(e, n) {
             var t = {
@@ -1454,10 +1584,10 @@
                         }, this.props.children)
                     }, n
                 }(s.Component),
-                y = t("/7QA"),
-                S = t("IFXb"),
-                N = t("5NYc"),
-                I = t("vYsf"),
+                S = t("/7QA"),
+                y = t("IFXb"),
+                I = t("5NYc"),
+                N = t("vYsf"),
                 D = t("NAv5"),
                 _ = t("ZDlU"),
                 O = t("Ue10"),
@@ -1487,7 +1617,7 @@
             function F(e) {
                 return M(T)(e)
             }
-            var R, L = function(e) {
+            var L, R = function(e) {
                     function n(n) {
                         var t = e.call(this, n) || this;
                         return t.modifyUserInCache = function(e, n) {
@@ -1592,7 +1722,7 @@
                         }), e.data.loading && this.updateUserCache()
                     }, n.prototype.render = function() {
                         return this.props.data.error ? s.createElement(_.a, {
-                            message: Object(y.d)("Whoops, something went wrong.", "UserRolesContext")
+                            message: Object(S.d)("Whoops, something went wrong.", "UserRolesContext")
                         }) : this.props.view !== r.LOADING && this.props.channelID ? s.createElement(A, {
                             value: this.state
                         }, this.props.children) : s.createElement(O.Za, {
@@ -1653,13 +1783,13 @@
                             }
                         }
                     }
-                }))(L),
-                w = (R = Object(p.a)("ChannelVIPContext", {
+                }))(R),
+                w = (L = Object(p.a)("ChannelVIPContext", {
                     maxVIPUserLimit: 0,
                     isAtMaxVIPUserLimit: !1,
                     isVIPUnlocked: !1
                 })).InnerProvider,
-                V = R.withContext,
+                V = L.withContext,
                 x = function(e) {
                     return e
                 };
@@ -1695,10 +1825,10 @@
                                         if (!(e = this.props.channelID)) return [2];
                                         a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, Object(I.a)(e)];
+                                        return a.trys.push([1, 3, , 4]), [4, Object(N.a)(e)];
                                     case 2:
                                         for (n = a.sent(), t = 0, i = n; t < i.length; t++)
-                                            if ((r = i[t]).key === N.b.VIP_BADGE) return this.setState({
+                                            if ((r = i[t]).key === I.b.VIP_BADGE) return this.setState({
                                                 maxVIPUserLimit: r.reward && r.reward.limit || 0,
                                                 isVIPUnlocked: r.is_complete
                                             }), [2];
@@ -1716,8 +1846,8 @@
                 q = t("kYmV"),
                 H = t("cuu2"),
                 $ = "https://help.twitch.tv/customer/en/portal/articles/659115-twitch-chat-badges-guide",
-                z = "https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/1",
-                Q = "https://static-cdn.jtvnw.net/badges/v1/b817aba4-fad8-49e2-b88a-7cc744dfa6ec/1",
+                Q = "https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/1",
+                z = "https://static-cdn.jtvnw.net/badges/v1/b817aba4-fad8-49e2-b88a-7cc744dfa6ec/1",
                 Y = function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
@@ -2015,20 +2145,20 @@
                             elevation: 3,
                             onCloseButtonClick: this.handleModalDismiss,
                             primaryButtonProps: {
-                                children: Object(y.d)("Retry", "RolesPageMessageModal"),
+                                children: Object(S.d)("Retry", "RolesPageMessageModal"),
                                 disabled: this.state.isRetryButtonDisabled,
                                 onClick: this.handleRetryClick
                             },
                             secondaryButtonProps: {
-                                children: Object(y.d)("Cancel", "RolesPageMessageModal"),
+                                children: Object(S.d)("Cancel", "RolesPageMessageModal"),
                                 onClick: this.handleModalDismiss,
                                 type: O.F.Hollow
                             },
                             size: O.bb.Small,
-                            title: Object(y.d)("Something went wrong", "RolesPageMessageModal")
+                            title: Object(S.d)("Something went wrong", "RolesPageMessageModal")
                         }, s.createElement(O.Xa, {
                             padding: 1
-                        }, s.createElement(O.W, null, Object(y.d)("There was an error modifying roles for {user}.", {
+                        }, s.createElement(O.W, null, Object(S.d)("There was an error modifying roles for {user}.", {
                             user: this.props.message.user.displayName
                         }, "RolesPageMessageModal"))))
                     }, n
@@ -2048,7 +2178,7 @@
                         e && (e.type === X.ALL_MUTATIONS_FAILED && this.props.showModal(this.props))
                     }, n
                 }(s.Component);
-            var be, ye = Object(o.compose)(Object(re.connect)(null, function(e) {
+            var be, Se = Object(o.compose)(Object(re.connect)(null, function(e) {
                     return Object(o.bindActionCreators)({
                         closeModal: ae.c,
                         showModal: function(e) {
@@ -2056,8 +2186,8 @@
                         }
                     }, e)
                 }), de, ee, F)(Ce),
-                Se = t("9C/b"),
-                Ne = (t("vsHg"), function(e) {
+                ye = t("9C/b"),
+                Ie = (t("vsHg"), function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2069,13 +2199,13 @@
                             fullWidth: !0,
                             justifyContent: O.Wa.Center,
                             position: O.hb.Absolute,
-                            zIndex: O.ec.Above
+                            zIndex: O.fc.Above
                         }, s.createElement(O.i, {
                             type: O.n.SlideInBottom,
                             duration: O.k.Medium,
                             enabled: !0,
                             timing: O.m.EaseInOut
-                        }, s.createElement(O.Bb, {
+                        }, s.createElement(O.Cb, {
                             background: O.r.Base,
                             borderBottom: !0,
                             borderRadius: O.x.Medium,
@@ -2096,12 +2226,12 @@
                                 right: .5
                             }
                         }, s.createElement(O.q, {
-                            alt: Object(y.d)("VoHiYo", "CenteredBanner"),
+                            alt: Object(S.d)("VoHiYo", "CenteredBanner"),
                             src: "https://static-cdn.jtvnw.net/emoticons/v1/81274/2.0",
                             size: 30
                         })), s.createElement(O.W, {
                             bold: !0,
-                            type: O.Rb.H5
+                            type: O.Sb.H5
                         }, this.props.title)), s.createElement(O.Xa, {
                             margin: {
                                 bottom: 2
@@ -2114,7 +2244,7 @@
             ! function(e) {
                 e.ADD_A_ROLE = "no-users-banner-add-a-role", e.LEARN_MORE = "no-users-banner-learn-more"
             }(be || (be = {}));
-            var Ie = function(e) {
+            var Ne = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.handleAddARoleClick = function() {
@@ -2122,9 +2252,9 @@
                         }, n
                     }
                     return a.__extends(n, e), n.prototype.render = function() {
-                        return s.createElement(Ne, {
-                            body: Object(y.d)("Manage the permissions users have for your community. Start by adding your first role.", "NoUsersBanner"),
-                            title: Object(y.d)("Welcome to Roles", "NoUsersBanner")
+                        return s.createElement(Ie, {
+                            body: Object(S.d)("Manage the permissions users have for your community. Start by adding your first role.", "NoUsersBanner"),
+                            title: Object(S.d)("Welcome to Roles", "NoUsersBanner")
                         }, s.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex,
@@ -2136,14 +2266,14 @@
                         }, s.createElement(O.z, {
                             "data-test-selector": be.ADD_A_ROLE,
                             onClick: this.handleAddARoleClick
-                        }, Object(y.d)("Add a Role", "NoUsersBanner"))), s.createElement(O.z, {
+                        }, Object(S.d)("Add a Role", "NoUsersBanner"))), s.createElement(O.z, {
                             "data-test-selector": be.LEARN_MORE,
                             linkTo: $,
                             type: O.F.Text
-                        }, Object(y.d)("Learn More", "NoUsersBanner"))))
+                        }, Object(S.d)("Learn More", "NoUsersBanner"))))
                     }, n
                 }(s.Component),
-                De = Object(o.compose)(k, Se.a)(Ie),
+                De = Object(o.compose)(k, ye.a)(Ne),
                 _e = function(e) {
                     var n;
                     if (e.selected) switch (e.sortDirection) {
@@ -2171,11 +2301,11 @@
                     return s.createElement(O.z, {
                         type: O.F.Text,
                         onClick: e.onClick
-                    }, s.createElement(O.Bb, {
+                    }, s.createElement(O.Cb, {
                         display: O.X.Flex,
                         alignContent: O.e.Center
                     }, s.createElement(O.W, {
-                        type: O.Rb.Span,
+                        type: O.Sb.Span,
                         bold: !0,
                         color: e.selected ? O.O.Alt : O.O.Link
                     }, e.children), s.createElement(O.Xa, {
@@ -2195,7 +2325,7 @@
                         var e = this.props,
                             n = e.src,
                             t = e.title;
-                        return s.createElement(O.Bb, {
+                        return s.createElement(O.Cb, {
                             alignItems: O.f.Center,
                             background: O.r.Alt,
                             borderRadius: O.x.Medium,
@@ -2257,17 +2387,17 @@
                 }(s.Component));
 
             function Me() {
-                return Object(y.d)("Editor", "FilterUsersComponent")
+                return Object(S.d)("Editor", "FilterUsersComponent")
             }
 
             function Te() {
-                return Object(y.d)("Moderator", "FilterUsersComponent")
+                return Object(S.d)("Moderator", "FilterUsersComponent")
             }
 
             function Fe() {
-                return Object(y.d)("VIP", "FilterUsersComponent")
+                return Object(S.d)("VIP", "FilterUsersComponent")
             }
-            var Re, Le, Pe, we = B(function(e) {
+            var Le, Re, Pe, we = B(function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.handleLearnAboutRolesClick = function() {}, n
@@ -2284,7 +2414,7 @@
                             offsetY: "-0.5px",
                             noTail: !0,
                             show: this.props.show
-                        }, s.createElement(O.Bb, {
+                        }, s.createElement(O.Cb, {
                             border: !0,
                             borderRadius: O.x.Small,
                             elevation: 2
@@ -2297,7 +2427,7 @@
                                 x: 1,
                                 y: 2
                             },
-                            src: z,
+                            src: Q,
                             value: C.IS_MOD
                         }), this.props.isVIPUnlocked && s.createElement(Ae, {
                             checked: i,
@@ -2308,7 +2438,7 @@
                                 x: 1,
                                 bottom: 2
                             },
-                            src: Q,
+                            src: z,
                             value: C.IS_VIP
                         }), s.createElement(Ae, {
                             checked: n,
@@ -2322,7 +2452,7 @@
                             value: C.IS_EDITOR
                         }), s.createElement(O.Ua, {
                             onClick: this.handleLearnAboutRolesClick
-                        }, s.createElement(O.Bb, {
+                        }, s.createElement(O.Cb, {
                             alignItems: O.f.Center,
                             borderTop: !0,
                             display: O.X.Flex,
@@ -2335,7 +2465,7 @@
                             }
                         }, s.createElement(O.qb, {
                             asset: O.rb.NotificationInfo
-                        })), s.createElement(O.W, null, Object(y.e)("Learn about Roles", "RoleSelector")))))))
+                        })), s.createElement(O.W, null, Object(S.e)("Learn about Roles", "RoleSelector")))))))
                     }, n
                 }(s.Component)),
                 Ve = B(function(e) {
@@ -2383,7 +2513,7 @@
                             onClick: this.handleAddRoleClick,
                             size: O.D.Small,
                             type: i ? O.F.Hollow : O.F.Text
-                        }, s.createElement(O.W, null, Object(y.d)("Add Role", "RoleSelector"))), s.createElement(we, {
+                        }, s.createElement(O.W, null, Object(S.d)("Add Role", "RoleSelector"))), s.createElement(we, {
                             isEditor: l,
                             isMod: d,
                             isVIP: c,
@@ -2394,11 +2524,11 @@
                             title: r
                         }), d && s.createElement(Ue, {
                             onRolePillDismissed: n.bind(null, C.IS_MOD),
-                            src: z,
+                            src: Q,
                             title: a
                         }), this.props.isVIPUnlocked && c && s.createElement(Ue, {
                             onRolePillDismissed: n.bind(null, C.IS_VIP),
-                            src: Q,
+                            src: z,
                             title: o
                         }))
                     }, n
@@ -2408,7 +2538,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(n, e), n.prototype.render = function() {
-                        return s.createElement(O.Bb, {
+                        return s.createElement(O.Cb, {
                             alignItems: O.f.Center,
                             background: O.r.Base,
                             borderBottom: !0,
@@ -2437,7 +2567,7 @@
                                 top: .5
                             }
                         }, s.createElement(O.P, {
-                            cols: Re.FIRST_COLUMN
+                            cols: Le.FIRST_COLUMN
                         }, s.createElement(O.Xa, {
                             display: O.X.Flex,
                             alignItems: O.f.Center
@@ -2460,7 +2590,7 @@
                         }, s.createElement(O.W, {
                             bold: !0,
                             color: O.O.Base,
-                            type: O.Rb.P,
+                            type: O.Sb.P,
                             ellipsis: !0
                         }, i), i.toLowerCase() !== r.toLowerCase() && s.createElement(O.Xa, {
                             margin: {
@@ -2470,9 +2600,9 @@
                             bold: !0,
                             color: O.O.Base,
                             ellipsis: !0,
-                            type: O.Rb.P
+                            type: O.Sb.P
                         }, r)))))), s.createElement(O.P, {
-                            cols: Re.SECOND_COLUMN
+                            cols: Le.SECOND_COLUMN
                         }, s.createElement(O.Xa, {
                             display: O.X.Flex,
                             margin: {
@@ -2486,14 +2616,14 @@
                             onDropDownClickOut: this.handleClickOut,
                             onRolePillDismissed: this.handleRolePillDismissed
                         }))), s.createElement(O.P, {
-                            cols: Re.THIRD_COLUMN
+                            cols: Le.THIRD_COLUMN
                         }, s.createElement(O.Xa, {
                             display: O.X.Flex,
                             alignItems: O.f.Center,
                             flexDirection: O.Aa.RowReverse
                         }, s.createElement(O.P, {
                             cols: 6
-                        }, s.createElement(O.W, null, Object(y.c)(n.lastModified))))))
+                        }, s.createElement(O.W, null, Object(S.c)(n.lastModified))))))
                     }, n
                 }(s.Component),
                 je = function(e) {
@@ -2512,7 +2642,7 @@
                     return a.__extends(n, e), n.prototype.render = function() {
                         var e = this,
                             n = [];
-                        return this.props.sortBy === Le.USERNAME && (n = this.sortByUsername()), this.props.sortBy === Le.LAST_MODIFIED && (n = this.sortByLastModified()), this.props.filterType === E.ALL_ROLES ? s.createElement(s.Fragment, null, n.map(function(n) {
+                        return this.props.sortBy === Re.USERNAME && (n = this.sortByUsername()), this.props.sortBy === Re.LAST_MODIFIED && (n = this.sortByLastModified()), this.props.filterType === E.ALL_ROLES ? s.createElement(s.Fragment, null, n.map(function(n) {
                             return s.createElement(Be, {
                                 "data-test-selector": "roles-table-row-" + n,
                                 key: "roles-table-row-" + n,
@@ -2530,10 +2660,10 @@
                 }(s.Component);
             ! function(e) {
                 e[e.FIRST_COLUMN = 3] = "FIRST_COLUMN", e[e.SECOND_COLUMN = 5] = "SECOND_COLUMN", e[e.THIRD_COLUMN = 4] = "THIRD_COLUMN"
-            }(Re || (Re = {})),
+            }(Le || (Le = {})),
             function(e) {
                 e.USERNAME = "username", e.LAST_MODIFIED = "last-modified"
-            }(Le || (Le = {})),
+            }(Re || (Re = {})),
             function(e) {
                 e.ASCENDING = "ascending", e.DESCENDING = "descending"
             }(Pe || (Pe = {}));
@@ -2541,12 +2671,12 @@
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
-                            sortBy: Le.USERNAME,
+                            sortBy: Re.USERNAME,
                             sortDirection: Pe.ASCENDING
                         }, n.handleUsernameHeaderClick = function() {
-                            n.changeSort(Le.USERNAME)
+                            n.changeSort(Re.USERNAME)
                         }, n.handleLastModifiedHeaderClick = function() {
-                            n.changeSort(Le.LAST_MODIFIED)
+                            n.changeSort(Re.LAST_MODIFIED)
                         }, n.changeSort = function(e) {
                             var t;
                             t = n.state.sortDirection && n.state.sortBy === e && n.state.sortDirection !== Pe.DESCENDING ? Pe.DESCENDING : Pe.ASCENDING, n.setState({
@@ -2572,29 +2702,29 @@
                                 bottom: 1
                             }
                         }, s.createElement(O.P, {
-                            cols: Re.FIRST_COLUMN
+                            cols: Le.FIRST_COLUMN
                         }, s.createElement(_e, {
-                            selected: e === Le.USERNAME,
+                            selected: e === Re.USERNAME,
                             sortDirection: n,
                             onClick: this.handleUsernameHeaderClick
-                        }, Object(y.d)("Username", "RolesPageTable"))), s.createElement(O.P, {
-                            cols: Re.SECOND_COLUMN
+                        }, Object(S.d)("Username", "RolesPageTable"))), s.createElement(O.P, {
+                            cols: Le.SECOND_COLUMN
                         }, s.createElement(O.W, {
-                            type: O.Rb.Span,
+                            type: O.Sb.Span,
                             bold: !0,
                             color: O.O.Link
-                        }, " ", Object(y.d)("Roles", "RolesPageTable"), " ")), s.createElement(O.P, {
-                            cols: Re.THIRD_COLUMN
+                        }, " ", Object(S.d)("Roles", "RolesPageTable"), " ")), s.createElement(O.P, {
+                            cols: Le.THIRD_COLUMN
                         }, s.createElement(O.Xa, {
                             display: O.X.Flex,
                             flexDirection: O.Aa.RowReverse
                         }, s.createElement(O.P, {
                             cols: 6
                         }, s.createElement(_e, {
-                            selected: e === Le.LAST_MODIFIED,
+                            selected: e === Re.LAST_MODIFIED,
                             sortDirection: n,
                             onClick: this.handleLastModifiedHeaderClick
-                        }, Object(y.d)("Last Modified", "RolesPageTable")))))), s.createElement(je, {
+                        }, Object(S.d)("Last Modified", "RolesPageTable")))))), s.createElement(je, {
                             filterType: this.props.filterType,
                             userCache: this.props.userCache,
                             sortBy: e,
@@ -2606,116 +2736,11 @@
                 qe = t("f00E"),
                 He = t("H/lO"),
                 $e = t("NZDK"),
-                ze = t("8/mp"),
-                Qe = t("8Ad5"),
-                Ye = (t("sZ5a"), "data-component-type"),
-                Ke = "roles-page-search-user-option",
+                Qe = t("AXTS"),
+                ze = t("Kw8/"),
+                Ye = t("gD7V"),
+                Ke = 250,
                 Je = function(e) {
-                    function n() {
-                        var n = null !== e && e.apply(this, arguments) || this;
-                        return n.state = {
-                            focused: !1,
-                            hovered: !1
-                        }, n.handleKeyDown = function(e) {
-                            var t = e.keyCode;
-                            t !== Qe.a.Space && t !== Qe.a.Enter || n.handleClick()
-                        }, n.handleClick = function() {
-                            n.props.onClick(n.props.user)
-                        }, n.handleBlur = function(e) {
-                            e.persist(), n.setState({
-                                focused: !1
-                            }, function() {
-                                n.props.onBlur(e.relatedTarget)
-                            })
-                        }, n.handleFocus = function() {
-                            n.setState({
-                                focused: !0
-                            })
-                        }, n.handleMouseOver = function() {
-                            n.setState({
-                                hovered: !0
-                            })
-                        }, n.handleMouseOut = function() {
-                            n.state.hovered && n.setState({
-                                hovered: !1
-                            })
-                        }, n
-                    }
-                    return a.__extends(n, e), n.prototype.render = function() {
-                        var e, n, t = this.props.user;
-                        return s.createElement("div", a.__assign({
-                            className: "roles-page-search-user-option",
-                            onBlur: this.handleBlur,
-                            onFocus: this.handleFocus,
-                            onMouseOver: this.handleMouseOver,
-                            onMouseOut: this.handleMouseOut,
-                            onKeyDown: this.handleKeyDown,
-                            tabIndex: 0
-                        }, ((e = {})[Ye] = [Ke], e)), s.createElement(O.Ua, a.__assign({
-                            hover: this.state.hovered,
-                            onClick: this.handleClick,
-                            selected: this.state.focused,
-                            tabIndex: -1,
-                            type: O.Va.Base
-                        }, ((n = {})[Ye] = [Ke], n)), s.createElement(O.Xa, {
-                            alignItems: O.f.Center,
-                            display: O.X.Flex,
-                            justifyContent: O.Wa.Start,
-                            padding: {
-                                x: 1,
-                                y: .5
-                            }
-                        }, s.createElement(O.Xa, {
-                            margin: {
-                                right: .5
-                            }
-                        }, s.createElement(O.q, {
-                            alt: Object(y.d)("Avatar", "SearchUsersOption"),
-                            src: t.profile_image,
-                            size: 30
-                        })), t.name)))
-                    }, n
-                }(s.Component),
-                Ze = function(e) {
-                    function n() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return a.__extends(n, e), n.prototype.render = function() {
-                        var e = this,
-                            n = this.props.users;
-                        return s.createElement(O.u, {
-                            noTail: !0,
-                            offsetY: "-0.5px",
-                            show: !!n && this.props.show
-                        }, s.createElement(ze.b, null, s.createElement(O.Xa, {
-                            alignItems: O.f.Center,
-                            display: O.X.Flex,
-                            flexDirection: O.Aa.Column,
-                            justifyContent: O.Wa.Center
-                        }, n && n.length > 0 ? n.map(function(n, t) {
-                            return s.createElement(Je, {
-                                key: t,
-                                onBlur: e.props.onOptionBlur,
-                                onClick: e.props.onOptionClick,
-                                user: n
-                            })
-                        }) : s.createElement(O.Xa, {
-                            alignItems: O.f.Center,
-                            display: O.X.Flex,
-                            flexDirection: O.Aa.Column,
-                            justifyContent: O.Wa.Center,
-                            padding: {
-                                x: 1,
-                                y: 5
-                            }
-                        }, s.createElement(O.qb, {
-                            asset: O.rb.SearchNoResults
-                        }), s.createElement(O.W, null, Object(y.d)("No users found", "SearchUsersDropdown"))))))
-                    }, n
-                }(s.Component),
-                en = t("gD7V"),
-                nn = 250,
-                tn = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
@@ -2723,12 +2748,12 @@
                             searchedUsers: null,
                             showDropDown: !1
                         }, n.searchClient = new $e.a({
-                            appId: y.a.algoliaApplicationID,
-                            apiKey: y.a.algoliaAPIKey,
-                            apolloClient: y.p.apollo.client,
-                            logger: y.k,
-                            config: y.a,
-                            stats: y.p.stats
+                            appId: S.a.algoliaApplicationID,
+                            apiKey: S.a.algoliaAPIKey,
+                            apolloClient: S.p.apollo.client,
+                            logger: S.k,
+                            config: S.a,
+                            stats: S.p.stats
                         }), n.filterUsersResults = function(e) {
                             var t = n.props.data.user,
                                 i = t && t.id,
@@ -2741,7 +2766,7 @@
                             var t = e.currentTarget.value;
                             return a.__awaiter(n, void 0, void 0, function() {
                                 return a.__generator(this, function(e) {
-                                    return this.algoliaDebounceTimeout && clearTimeout(this.algoliaDebounceTimeout), this.algoliaDebounceTimeout = setTimeout(this.queryAlgolia.bind(this, t), nn), [2]
+                                    return this.algoliaDebounceTimeout && clearTimeout(this.algoliaDebounceTimeout), this.algoliaDebounceTimeout = setTimeout(this.queryAlgolia.bind(this, t), Ke), [2]
                                 })
                             })
                         }, n.queryAlgolia = function(e) {
@@ -2783,7 +2808,7 @@
                             })
                         }, n.handleBlur = function(e) {
                             n.setState({
-                                showDropDown: e && e.getAttribute(Ye) === Ke
+                                showDropDown: e && e.getAttribute(ze.a) === ze.b
                             })
                         }, n.handleClickOut = function() {
                             n.setState({
@@ -2809,7 +2834,7 @@
                                     right: e ? 1 : .5
                                 }
                             }, s.createElement(O.q, {
-                                alt: Object(y.d)("Avatar", "SearchUsers"),
+                                alt: Object(S.d)("Avatar", "SearchUsers"),
                                 size: 30,
                                 src: e && e.profileImageURL
                             }));
@@ -2821,7 +2846,7 @@
                             display: O.X.Flex
                         }, r, s.createElement(O.W, {
                             bold: !0,
-                            type: O.Rb.P,
+                            type: O.Sb.P,
                             ellipsis: !0
                         }, n), n.toLowerCase() !== t.toLowerCase() && s.createElement(O.Xa, {
                             margin: {
@@ -2829,7 +2854,7 @@
                             }
                         }, s.createElement(O.W, {
                             bold: !0,
-                            type: O.Rb.P,
+                            type: O.Sb.P,
                             ellipsis: !0
                         }, t)))), (i || !e) && s.createElement(Oe.a, {
                             onClickOut: this.handleClickOut
@@ -2844,9 +2869,9 @@
                             onBlur: this.handleInputBlur,
                             onChange: this.handleInputChange,
                             onFocus: this.handleInputFocus,
-                            placeholder: Object(y.d)("Search", "SearchUsers"),
+                            placeholder: Object(S.d)("Search", "SearchUsers"),
                             type: O.Ta.Text
-                        }), s.createElement(Ze, {
+                        }), s.createElement(Qe.a, {
                             onOptionClick: this.handleOptionClick,
                             onOptionBlur: this.handleOptionBlur,
                             show: this.state.showDropDown,
@@ -2854,7 +2879,7 @@
                         })))))
                     }, n
                 }(s.Component),
-                rn = Object(o.compose)(F, Se.a, Object(l.a)(en, {
+                Ze = Object(o.compose)(F, ye.a, Object(l.a)(Ye, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2862,11 +2887,11 @@
                             }
                         }
                     }
-                }))(tn);
+                }))(Je);
             ! function(e) {
                 e.CANCEL_BUTTON = "roles-page-add-user-cancel-button", e.SAVE_BUTTON = "roles-page-add-user-save-button"
             }(Xe || (Xe = {}));
-            var an, sn = function(e) {
+            var en, nn = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
@@ -2950,25 +2975,25 @@
                         return s.createElement(O.Xa, {
                             fullWidth: !0,
                             position: O.hb.Relative,
-                            zIndex: O.ec.Above
+                            zIndex: O.fc.Above
                         }, s.createElement(O.i, {
                             duration: O.k.Medium,
                             enabled: !0,
                             type: O.n.SlideInBottom
                         }, s.createElement(xe, null, s.createElement(O.P, {
-                            cols: Re.FIRST_COLUMN
-                        }, s.createElement(rn, {
+                            cols: Le.FIRST_COLUMN
+                        }, s.createElement(Ze, {
                             onUserDeselected: this.handleUserDeselected,
                             onUserSelected: this.handleUserSelected,
                             selectedUser: e
                         })), s.createElement(O.P, {
-                            cols: Re.SECOND_COLUMN
+                            cols: Le.SECOND_COLUMN
                         }, e && s.createElement(Ve, {
                             onCheckBoxChange: this.handleCheckBoxChange,
                             onRolePillDismissed: this.handleRolePillDismissed,
                             user: e
                         })), s.createElement(O.P, {
-                            cols: Re.THIRD_COLUMN
+                            cols: Le.THIRD_COLUMN
                         }, s.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex,
@@ -2981,19 +3006,19 @@
                             "data-test-selector": Xe.CANCEL_BUTTON,
                             onClick: this.handleCancelClick,
                             type: O.F.Hollow
-                        }, Object(y.d)("Cancel", "AddUserComponent"))), s.createElement(O.z, {
+                        }, Object(S.d)("Cancel", "AddUserComponent"))), s.createElement(O.z, {
                             "data-test-selector": Xe.SAVE_BUTTON,
                             disabled: !e || !e.isEditor && !e.isMod && !e.isVIP,
                             onClick: this.handleSaveClick,
                             type: O.F.Success
-                        }, Object(y.d)("Save", "AddUserComponent")))))))
+                        }, Object(S.d)("Save", "AddUserComponent")))))))
                     }, n
                 }(s.Component),
-                on = Object(o.compose)(F, de, ee, k)(sn);
+                tn = Object(o.compose)(F, de, ee, k)(nn);
             ! function(e) {
                 e.ALL_MUTATIONS_SUCCEEDED = "all-mutations-succeeded", e.SOME_MUTATIONS_FAILED = "some-mutations-failed"
-            }(an || (an = {}));
-            var ln = function(e) {
+            }(en || (en = {}));
+            var rn = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
@@ -3018,42 +3043,42 @@
                         }, this.getContent(e)) : null
                     }, n.prototype.getContent = function(e) {
                         var n = this.props.clearMessage,
-                            t = Object(y.d)("Close", "RolesPageTopBar");
+                            t = Object(S.d)("Close", "RolesPageTopBar");
                         switch (e.type) {
                             case X.ALL_MUTATIONS_SUCCEEDED:
                                 return s.createElement(O.Na, {
                                     closeButtonAriaLabel: t,
                                     closeButtonOnClick: n,
-                                    "data-test-selector": an.ALL_MUTATIONS_SUCCEEDED,
-                                    description: Object(y.d)("Specified roles added for {user}.", {
+                                    "data-test-selector": en.ALL_MUTATIONS_SUCCEEDED,
+                                    description: Object(S.d)("Specified roles added for {user}.", {
                                         user: e.user.displayName
                                     }, "RolesPageTopBar"),
-                                    title: Object(y.d)("Success!", "RolesPageTopBar"),
+                                    title: Object(S.d)("Success!", "RolesPageTopBar"),
                                     type: O.Oa.Success
                                 });
                             case X.SOME_MUTATIONS_FAILED:
                                 return s.createElement(O.Na, {
                                     closeButtonAriaLabel: t,
                                     closeButtonOnClick: n,
-                                    "data-test-selector": an.SOME_MUTATIONS_FAILED,
-                                    description: Object(y.d)("Unfortunately, some of the specified roles were unable to be added for {user}.", {
+                                    "data-test-selector": en.SOME_MUTATIONS_FAILED,
+                                    description: Object(S.d)("Unfortunately, some of the specified roles were unable to be added for {user}.", {
                                         user: e.user.displayName
                                     }, "RolesPageTopBar"),
-                                    title: Object(y.d)("Warning!", "RolesPageTopBar"),
+                                    title: Object(S.d)("Warning!", "RolesPageTopBar"),
                                     type: O.Oa.Warning
                                 });
                             case X.MAX_VIPS_REACHED:
                                 return s.createElement(O.Na, {
                                     closeButtonAriaLabel: t,
                                     closeButtonOnClick: this.handleDismissVIPWarningMessage,
-                                    description: Object(y.d)("You have reached the maximum amount of VIP roles. <x:link>Read more about Roles.</x:link>", {
+                                    description: Object(S.d)("You have reached the maximum amount of VIP roles. <x:link>Read more about Roles.</x:link>", {
                                         "x:link": function(e) {
                                             return s.createElement(O.U, {
                                                 linkTo: "TODO"
                                             }, e)
                                         }
                                     }, "RolesPageTopBar"),
-                                    title: Object(y.d)("You can't add any more VIPs.", "RolesPageTopBar"),
+                                    title: Object(S.d)("You can't add any more VIPs.", "RolesPageTopBar"),
                                     type: O.Oa.Warning
                                 });
                             default:
@@ -3070,8 +3095,8 @@
                         })
                     }, n
                 }(s.Component),
-                dn = Object(o.compose)(B, ee)(ln),
-                cn = function(e) {
+                an = Object(o.compose)(B, ee)(rn),
+                sn = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
@@ -3103,7 +3128,7 @@
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(O.W, null, Object(y.d)("Display", "FilterUsersComponent"))), s.createElement(O.Xa, null, s.createElement(Oe.a, {
+                        }, s.createElement(O.W, null, Object(S.d)("Display", "FilterUsersComponent"))), s.createElement(O.Xa, null, s.createElement(Oe.a, {
                             onClickOut: this.handleClickOut
                         }, s.createElement(O.z, {
                             onClick: this.handleButtonClick,
@@ -3132,7 +3157,7 @@
                                 disabled: e === E.MODERATOR,
                                 figure: {
                                     alt: this.getFilterText(E.MODERATOR),
-                                    src: z
+                                    src: Q
                                 },
                                 figureRight: !0,
                                 onClick: this.handleOptionClick.bind(this, E.MODERATOR),
@@ -3141,7 +3166,7 @@
                                 disabled: e === E.VIP,
                                 figure: {
                                     alt: this.getFilterText(E.VIP),
-                                    src: Q
+                                    src: z
                                 },
                                 figureRight: !0,
                                 onClick: this.handleOptionClick.bind(this, E.VIP),
@@ -3157,7 +3182,7 @@
                         switch (e) {
                             default:
                                 case E.ALL_ROLES:
-                                return Object(y.d)("All Roles", "FilterUsersComponent");
+                                return Object(S.d)("All Roles", "FilterUsersComponent");
                             case E.EDITOR:
                                     return Me();
                             case E.MODERATOR:
@@ -3167,8 +3192,8 @@
                         }
                     }, n
                 }(s.Component),
-                un = Object(o.compose)(B, F)(cn),
-                mn = function(e) {
+                on = Object(o.compose)(B, F)(sn),
+                ln = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.handleButtonClick = function() {
@@ -3177,7 +3202,7 @@
                     }
                     return a.__extends(n, e), n.prototype.render = function() {
                         var e = this.props.view === r.ADD_USER;
-                        return s.createElement(s.Fragment, null, s.createElement(O.Bb, {
+                        return s.createElement(s.Fragment, null, s.createElement(O.Cb, {
                             alignItems: O.f.Center,
                             borderBottom: !0,
                             display: O.X.Flex,
@@ -3189,19 +3214,19 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, s.createElement(un, null), s.createElement(O.z, {
+                        }, s.createElement(on, null), s.createElement(O.z, {
                             disabled: e,
                             onClick: this.handleButtonClick
-                        }, Object(y.d)("Add New", "TopBar"))), s.createElement(dn, null), e && s.createElement(on, null))
+                        }, Object(S.d)("Add New", "TopBar"))), s.createElement(an, null), e && s.createElement(tn, null))
                     }, n
                 }(s.Component),
-                pn = Object(o.compose)(ee, k)(mn),
-                hn = k(function(e) {
+                dn = Object(o.compose)(ee, k)(ln),
+                cn = k(function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(n, e), n.prototype.componentDidMount = function() {
-                        y.p.setPageTitle(Object(y.d)("Roles", "RolesPage"))
+                        S.p.setPageTitle(Object(S.d)("Roles", "RolesPage"))
                     }, n.prototype.render = function() {
                         var e = this.props.channelID;
                         return s.createElement(P, {
@@ -3210,11 +3235,11 @@
                             channelID: e
                         }, s.createElement(ie, null, s.createElement(ge, {
                             channelID: e
-                        }, this.props.view === r.NO_USERS ? s.createElement(De, null) : s.createElement(S.a, null, s.createElement(pn, null), s.createElement(We, null), s.createElement(ye, null)), s.createElement(Y, null)))))
+                        }, this.props.view === r.NO_USERS ? s.createElement(De, null) : s.createElement(y.a, null, s.createElement(dn, null), s.createElement(We, null), s.createElement(Se, null)), s.createElement(Y, null)))))
                     }, n
                 }(s.Component)),
-                vn = t("LQi+"),
-                fn = function(e) {
+                un = t("LQi+"),
+                mn = function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -3223,18 +3248,18 @@
                     }, n.prototype.componentDidUpdate = function(e) {
                         e.data.loading && this.reportInteractive()
                     }, n.prototype.render = function() {
-                        return s.createElement(b, null, s.createElement(hn, {
+                        return s.createElement(b, null, s.createElement(cn, {
                             channelID: this.props.data.user && this.props.data.user.id
                         }))
                     }, n.prototype.reportInteractive = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive(1)
                     }, n
                 }(s.Component),
-                kn = Object(o.compose)(Object(m.b)("RolesPage", {
+                pn = Object(o.compose)(Object(m.b)("RolesPage", {
                     destination: c.a.RolesPage
                 }), Object(d.a)({
                     location: u.PageviewLocation.DashboardSettingsRolesPage
-                }), Object(l.a)(vn, {
+                }), Object(l.a)(un, {
                     options: function(e) {
                         return {
                             variables: {
@@ -3242,9 +3267,9 @@
                             }
                         }
                     }
-                }))(fn);
+                }))(mn);
             t.d(n, "RolesPage", function() {
-                return kn
+                return pn
             })
         },
         r6Pb: function(e, n) {

@@ -1183,7 +1183,7 @@
                             alt: this.props.alt,
                             src: this.props.src
                         })), c.createElement(y.Xa, {
-                            textAlign: y.Nb.Center
+                            textAlign: y.Ob.Center
                         }, c.createElement(y.Xa, {
                             margin: {
                                 bottom: 2
@@ -1191,7 +1191,7 @@
                         }, c.createElement(y.W, {
                             bold: !0,
                             fontSize: y.Ca.Size3,
-                            type: y.Rb.H3
+                            type: y.Sb.H3
                         }, this.props.title)), c.createElement(y.W, {
                             fontSize: y.Ca.Size5,
                             color: y.O.Alt2
@@ -1224,7 +1224,7 @@
                 T = r("Jgup"),
                 A = r("geRD"),
                 k = function() {
-                    return c.createElement(y.Bb, {
+                    return c.createElement(y.Cb, {
                         background: y.r.Base,
                         padding: 2,
                         margin: {
@@ -1232,7 +1232,7 @@
                         },
                         border: !0,
                         borderRadius: y.x.Medium
-                    }, c.createElement(y.ac, null, c.createElement("h3", null, Object(u.d)("Partnership Guidelines", "PartnershipSignupGuidelines")), c.createElement("ul", null, c.createElement("li", null, Object(u.d)("Complete the <x:path-to-partner>Path to Partner Achievement</x:path-to-partner> or demonstrate large, engaged viewership/following on other services. Streamers who complete the Path to Partner achievements in your Achievements Dashboard will unlock a button to apply for Partnership, and receive priority for their application to be reviewed. Please note that these Achievements list the minimum criteria we look for in potential Partners, and completing them does not guarantee Partnership.", {
+                    }, c.createElement(y.bc, null, c.createElement("h3", null, Object(u.d)("Partnership Guidelines", "PartnershipSignupGuidelines")), c.createElement("ul", null, c.createElement("li", null, Object(u.d)("Complete the <x:path-to-partner>Path to Partner Achievement</x:path-to-partner> or demonstrate large, engaged viewership/following on other services. Streamers who complete the Path to Partner achievements in your Achievements Dashboard will unlock a button to apply for Partnership, and receive priority for their application to be reviewed. Please note that these Achievements list the minimum criteria we look for in potential Partners, and completing them does not guarantee Partnership.", {
                         "x:path-to-partner": function(e) {
                             return c.createElement(y.U, {
                                 targetBlank: !0,
@@ -1317,14 +1317,14 @@
                             }
                         }, c.createElement(y.W, {
                             bold: !0,
-                            type: y.Rb.H1
+                            type: y.Sb.H1
                         }, Object(u.d)("Partner Application", "PartnershipSignupApplicationTitle"))), e && c.createElement(y.Xa, {
                             "data-test-selector": S.Description,
                             margin: {
                                 bottom: 2
                             }
                         }, c.createElement(y.W, {
-                            type: y.Rb.P,
+                            type: y.Sb.P,
                             fontSize: y.Ca.Size5
                         }, e))), c.createElement(y.Xa, {
                             display: y.X.Flex,
@@ -1529,7 +1529,7 @@
                             "data-test-selector": w.Description,
                             label: Object(u.d)("Details", "PartnershipSignupForm"),
                             hint: Object(u.d)("Tell us about your stream", "PartnershipSignupForm")
-                        }, c.createElement(y.Ob, {
+                        }, c.createElement(y.Pb, {
                             id: M.Description,
                             onChange: this.registerHandleFieldChange(F.Description)
                         }))), c.createElement(y.z, {
@@ -1550,14 +1550,14 @@
                         configurable: !0
                     }), t
                 }(c.Component),
-                R = Object(E.compose)(Object(d.a)(x), Object(d.a)(L, {
+                G = Object(E.compose)(Object(d.a)(x), Object(d.a)(L, {
                     name: "createPartnershipApplication"
                 }))(D);
-            var G, U, B = Object(a.connect)(function(e) {
+            var R, U, B = Object(a.connect)(function(e) {
                     return {
                         sessionUser: Object(i.e)(e)
                     }
-                })(R),
+                })(G),
                 V = r("oCrl"),
                 W = r.n(V),
                 H = function(e) {
@@ -1592,7 +1592,7 @@
                                 "x:strong": function(e) {
                                     return c.createElement(y.W, {
                                         bold: !0,
-                                        type: y.Rb.Span
+                                        type: y.Sb.Span
                                     }, e)
                                 }
                             }, "SubmittedPage"),
@@ -1656,7 +1656,7 @@
                 }(c.Component);
             ! function(e) {
                 e.Criteria = "partner-signup-checklist-criteria", e.Value = "partner-signup-checklist-value"
-            }(G || (G = {})),
+            }(R || (R = {})),
             function(e) {
                 e[e.Complete = 0] = "Complete", e[e.Error = 1] = "Error", e[e.Incomplete = 2] = "Incomplete"
             }(U || (U = {}));
@@ -1673,7 +1673,7 @@
                             fullWidth: !0,
                             justifyContent: y.Wa.Between
                         }, c.createElement(y.W, {
-                            "data-test-selector": G.Criteria,
+                            "data-test-selector": R.Criteria,
                             bold: !0
                         }, this.props.criteria), c.createElement(y.Xa, {
                             alignItems: y.f.Center,
@@ -1685,7 +1685,7 @@
                             }
                         }, "string" == typeof e ? c.createElement(y.W, {
                             color: y.O.Alt2,
-                            "data-test-selector": G.Value
+                            "data-test-selector": R.Value
                         }, e) : e), c.createElement(y.qb, o.__assign({}, this.svgProps))))
                     }, Object.defineProperty(t.prototype, "svgProps", {
                         get: function() {
@@ -1720,7 +1720,7 @@
                         var e = this.props,
                             t = e.borderTop,
                             r = e.margin;
-                        return c.createElement(y.Bb, {
+                        return c.createElement(y.Cb, {
                             background: this.props.background || y.r.Base,
                             borderRadius: this.props.borderRadius || y.x.Medium,
                             borderBottom: !0,
@@ -1891,7 +1891,7 @@
                                         "x:strong": function(e) {
                                             return c.createElement(y.W, {
                                                 bold: !0,
-                                                type: y.Rb.Span
+                                                type: y.Sb.Span
                                             }, e)
                                         }
                                     }, "PartnerSignupVerifyAchievements"),
@@ -1927,7 +1927,7 @@
                                 "x:strong": function(e) {
                                     return c.createElement(y.W, {
                                         bold: !0,
-                                        type: y.Rb.Span
+                                        type: y.Sb.Span
                                     }, e)
                                 }
                             }, "PartnerSignupVerifyAchievements")
@@ -2006,7 +2006,7 @@
                     }))
                 },
                 le = function() {
-                    return c.createElement(ee, null, c.createElement(y.Bb, {
+                    return c.createElement(ee, null, c.createElement(y.Cb, {
                         display: y.X.Flex,
                         justifyContent: y.Wa.Center
                     }, c.createElement(y.qb, {
@@ -2194,7 +2194,7 @@
                     return c.createElement(I, {
                         description: Object(u.d)("The Twitch Partnership Program is for those who are committed to streaming. Twitch Partners are creators who stream a variety of content, from games, music, talk shows, art, to just about anything else you can imagine. If you love sharing what you do with a live audience and have built up a sizeable, engaged community on Twitch or other services, we want to hear from you!", "PartnershipSignupLogin"),
                         flexDirection: y.Aa.Column
-                    }, c.createElement(y.ac, null, c.createElement("hr", null)), c.createElement(y.Xa, {
+                    }, c.createElement(y.bc, null, c.createElement("hr", null)), c.createElement(y.Xa, {
                         alignItems: y.f.Center,
                         display: y.X.Flex,
                         fullWidth: !0,

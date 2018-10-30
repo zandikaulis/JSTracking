@@ -1047,10 +1047,10 @@
                         }, {
                             "esports-square__svg": !0
                         });
-                    return o.createElement(d.Bb, {
+                    return o.createElement(d.Cb, {
                         "data-test-selector": n,
                         className: p,
-                        textAlign: d.Nb.Center,
+                        textAlign: d.Ob.Center,
                         position: d.hb.Relative,
                         borderRadius: d.x.Large,
                         overflow: d.cb.Hidden,
@@ -1861,7 +1861,7 @@
                             margin: {
                                 right: 1
                             },
-                            verticalAlign: p.bc.Bottom
+                            verticalAlign: p.cc.Bottom
                         }, a.createElement(p.z, {
                             "data-test-selector": "esports-claim-all-button",
                             onClick: this.claimAllRewards,
@@ -2107,12 +2107,12 @@
                             className: "esports-milestone-balloon__threshold",
                             bold: !0,
                             fontSize: y.Ca.Size5,
-                            type: y.Rb.Span
+                            type: y.Sb.Span
                         }, Object(u.f)(this.props.threshold))));
                         var r = R("esports-milestone-balloon__image", {
                             "esports-milestone-balloon__image--blizzard": this.props.isHexagon
                         });
-                        return o.createElement(y.Bb, {
+                        return o.createElement(y.Cb, {
                             borderBottom: !0,
                             display: y.X.Flex,
                             alignItems: y.f.Center,
@@ -2129,7 +2129,7 @@
                         }, e, o.createElement(y.W, {
                             bold: !0
                         }, this.props.reward.name)), o.createElement(y.Xa, {
-                            textAlign: y.Nb.Right,
+                            textAlign: y.Ob.Right,
                             margin: {
                                 left: "auto"
                             }
@@ -2185,7 +2185,7 @@
                             d = !!this.props.insiderType;
                         return o.createElement(y.Xa, {
                             className: "esports-milestone-balloon",
-                            textAlign: y.Nb.Left
+                            textAlign: y.Ob.Left
                         }, o.createElement(F, {
                             reward: this.props.reward,
                             threshold: this.props.threshold,
@@ -2224,9 +2224,9 @@
                     }
                 })(T),
                 B = n("uLiP"),
-                A = n("rC/K"),
-                M = (n("JPbf"), n("Ar2k")),
-                O = function(e) {
+                O = n("rC/K"),
+                A = (n("JPbf"), n("Ar2k")),
+                M = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.setContainerRef = function(e) {
@@ -2275,7 +2275,7 @@
                     }, t.prototype.componentWillUnmount = function() {
                         this.removeEventListeners()
                     }, t.prototype.render = function() {
-                        var e, t = this.props.objectiveTag === A.a.Collection && this.props.reward && !this.props.reward.canBeFulfilled && !this.props.reward.isEntitled,
+                        var e, t = this.props.objectiveTag === O.a.Collection && this.props.reward && !this.props.reward.canBeFulfilled && !this.props.reward.isEntitled,
                             n = void 0 !== this.props.globalProgress && this.props.globalProgress < this.props.threshold,
                             i = void 0 !== this.props.globalProgress && this.props.globalProgress >= this.props.threshold && void 0 !== this.props.userProgress && this.props.userProgress < this.props.participationThreshold || void 0 === this.props.globalProgress && void 0 !== this.props.userProgress && this.props.userProgress < this.props.participationThreshold,
                             r = this.props.emoteType && this.props.reward && !this.props.reward.isEntitled || this.props.insiderType !== v.c.InGameContent && void 0 !== this.props.hasInsiderPass && !this.props.hasInsiderPass,
@@ -2283,7 +2283,7 @@
                             a = this.props.type === v.a.Twitch && this.props.emoteType || this.props.type === v.a.Insider && this.props.insiderType !== v.c.HeroSkin;
                         if (this.props.big) {
                             var p = this.props.reward ? this.props.reward.imageURL : "";
-                            this.props.reward && this.props.reward.id === B.c && (p = l.c + "/owl-2017/insider-test/lucio-emote-static-alt.png"), e = o.createElement(y.Bb, {
+                            this.props.reward && this.props.reward.id === B.c && (p = l.c + "/owl-2017/insider-test/lucio-emote-static-alt.png"), e = o.createElement(y.Cb, {
                                 className: "esports-milestone__insider--players-pack",
                                 margin: {
                                     top: 2
@@ -2319,11 +2319,11 @@
                             className: "esports-milestone__clickable",
                             ref: this.setContainerRef
                         }, e))
-                    }, t = a.__decorate([Object(M.c)()], t)
+                    }, t = a.__decorate([Object(A.c)()], t)
                 }(o.Component),
-                L = O;
+                L = M;
             n.d(t, !1, function() {
-                return O
+                return M
             }), n.d(t, "a", function() {
                 return L
             })
@@ -2480,7 +2480,7 @@
                             }
                         }, a.createElement(v.W, {
                             "data-test-selector": "campaign-reward-group-title",
-                            type: v.Rb.H3
+                            type: v.Sb.H3
                         }, this.props.title), this.props.totalRewards > 0 && a.createElement(v.Xa, {
                             className: "campaign-reward-group__entitled-amount",
                             attachRight: !0,
@@ -2549,7 +2549,7 @@
                                 right: 0,
                                 bottom: 2
                             },
-                            textAlign: v.Nb.Center
+                            textAlign: v.Ob.Center
                         }, a.createElement("li", null, a.createElement(w.a, {
                             milestoneID: t ? t.id : "",
                             type: this.props.type,
@@ -2677,7 +2677,7 @@
                                 top: 2,
                                 right: 2
                             }
-                        }, a.createElement(v.Bb, {
+                        }, a.createElement(v.Cb, {
                             "data-test-selector": "esports-reward-group-title",
                             borderBottom: !0
                         }, a.createElement(v.Xa, {
@@ -2686,7 +2686,7 @@
                             }
                         }, a.createElement(v.W, {
                             color: v.O.Link,
-                            transform: v.Qb.Uppercase,
+                            transform: v.Rb.Uppercase,
                             bold: !0
                         }, this.props.title)), a.createElement(v.Xa, {
                             padding: {
@@ -3087,20 +3087,20 @@
                         })))
                     }, t
                 }(a.Component),
-                A = n("rC/K"),
-                M = n("/5u6"),
-                O = n("bwyL"),
+                O = n("rC/K"),
+                A = n("/5u6"),
+                M = n("bwyL"),
                 L = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             canClaimRewards: !1
                         }, t.getIndividualMilestone = function() {
-                            return t.getMilestoneForType(M.a.Individual)
+                            return t.getMilestoneForType(A.a.Individual)
                         }, t.getTeamMilestone = function() {
-                            return t.getMilestoneForType(M.a.Team)
+                            return t.getMilestoneForType(A.a.Team)
                         }, t.getInsiderMilestones = function() {
-                            return t.getMilestoneForType(M.a.Insider)
+                            return t.getMilestoneForType(A.a.Insider)
                         }, t.getMilestoneForType = function(e) {
                             return t.props.data && t.props.data.user.tournament && t.props.data.user.tournament.self ? t.props.data.user.tournament.self.progress.milestones.filter(function(t) {
                                 return t.objectiveTag === e
@@ -3136,7 +3136,7 @@
                         if (!this.props.data || this.props.data.loading) return a.createElement(v.Xa, {
                             fullHeight: !0,
                             fullWidth: !0,
-                            textAlign: v.Nb.Center,
+                            textAlign: v.Ob.Center,
                             padding: {
                                 top: 4
                             }
@@ -3162,7 +3162,7 @@
                             }),
                             l = this.props.data.user.tournament.rewards.insider.badges.concat(o),
                             d = this.props.campaignProperties && this.props.campaignProperties.objectives && this.props.campaignProperties.objectives.filter(function(e) {
-                                return e.tag === A.a.Collection
+                                return e.tag === O.a.Collection
                             }),
                             p = d && d.map(function(e) {
                                 return e.milestones
@@ -3206,7 +3206,7 @@
                         }))
                     }, t
                 }(a.Component),
-                j = Object(o.compose)(Object(l.a)(O, {
+                j = Object(o.compose)(Object(l.a)(M, {
                     options: function(e) {
                         return {
                             variables: {
@@ -3217,7 +3217,7 @@
                 }), Object(d.a)(function(e) {
                     return {
                         topic: e.user ? Object(c.C)(e.user.id) : "",
-                        query: O,
+                        query: M,
                         variables: {
                             channelID: e.channelID
                         },
@@ -3276,12 +3276,12 @@
                             className: "insider-pass-full-skin-reward__image",
                             src: this.props.imageURL
                         }), s.createElement(c.Xa, {
-                            textAlign: c.Nb.Center
+                            textAlign: c.Ob.Center
                         }, s.createElement(c.W, {
                             fontSize: c.Ca.Size4,
                             bold: !0
                         }, this.props.name)), s.createElement(c.Xa, {
-                            textAlign: c.Nb.Center
+                            textAlign: c.Ob.Center
                         }, s.createElement(c.W, {
                             color: c.O.Alt2
                         }, this.props.subText)))
@@ -3369,7 +3369,7 @@
                                         x: 1
                                     },
                                     key: n.name,
-                                    textAlign: c.Nb.Center
+                                    textAlign: c.Ob.Center
                                 }, s.createElement(p.a, {
                                     imageURL: n.imageURL,
                                     size: e ? p.c.Large : p.c.Medium,
@@ -3399,7 +3399,7 @@
                             padding: {
                                 y: 3
                             },
-                            textAlign: c.Nb.Center
+                            textAlign: c.Ob.Center
                         }, s.createElement(c.W, {
                             fontSize: c.Ca.Size3,
                             color: c.O.Link,
@@ -3459,9 +3459,9 @@
                                 left: 1,
                                 right: 1
                             }
-                        }, s.createElement(c.Bb, {
+                        }, s.createElement(c.Cb, {
                             className: "insider-pass-rewards__players-pack",
-                            textAlign: c.Nb.Center,
+                            textAlign: c.Ob.Center,
                             fullWidth: !0
                         }, s.createElement(c.S, {
                             className: "insider-pass-rewards__players-pack__image",
@@ -3493,9 +3493,9 @@
                                 bottom: 2,
                                 top: 2
                             }
-                        }, s.createElement(c.Bb, {
+                        }, s.createElement(c.Cb, {
                             className: "insider-pass-rewards__new-item",
-                            textAlign: c.Nb.Center,
+                            textAlign: c.Ob.Center,
                             fullWidth: !0
                         }, s.createElement(c.S, {
                             className: "insider-pass-rewards__new-item__image",
@@ -3527,9 +3527,9 @@
                                 bottom: 2,
                                 top: 2
                             }
-                        }, s.createElement(c.Bb, {
+                        }, s.createElement(c.Cb, {
                             className: "insider-pass-rewards__new-item",
-                            textAlign: c.Nb.Center,
+                            textAlign: c.Ob.Center,
                             fullWidth: !0
                         }, s.createElement(c.S, {
                             className: "insider-pass-rewards__new-item__image",

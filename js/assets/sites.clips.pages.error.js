@@ -7,7 +7,7 @@
             }), n.d(t, "c", function() {
                 return c
             }), n.d(t, "b", function() {
-                return u
+                return s
             });
             var r, i = n("RcPG"),
                 o = n("a1OF");
@@ -20,7 +20,7 @@
                 var a = n.type === r.Position ? t : e,
                     c = n.map[a];
                 if (c) {
-                    var s = function(e, t) {
+                    var u = function(e, t) {
                         return {
                             images: {
                                 sources: {
@@ -35,12 +35,12 @@
                     }(e, c.id);
                     return {
                         type: i.a.Emote,
-                        content: s
+                        content: u
                     }
                 }
                 return null
             }
-            var s = {
+            var u = {
                 "\\:\\&gt\\;": [":>"],
                 "\\&gt\\;\\(": [">("],
                 "\\&lt\\;\\]": ["<]"],
@@ -62,17 +62,17 @@
                 "R-?\\)": ["R-)", "R)"]
             };
 
-            function u(e) {
+            function s(e) {
                 for (var t = {}, n = 0, r = e; n < r.length; n++) {
                     var i = r[n];
                     if (i && i.emotes)
                         for (var o = 0, c = i.emotes; o < c.length; o++) {
-                            var u = c[o];
-                            if (u && u.id && u.token)
-                                for (var l = 0, d = s[u.token] || [u.token]; l < d.length; l++) {
+                            var s = c[o];
+                            if (s && s.id && s.token)
+                                for (var l = 0, d = u[s.token] || [s.token]; l < d.length; l++) {
                                     var p = d[l];
                                     t[p] && i.id === a || (t[p] = {
-                                        id: u.id,
+                                        id: s.id,
                                         token: p
                                     })
                                 }
@@ -90,9 +90,9 @@
             }), n.d(t, "b", function() {
                 return c
             }), n.d(t, "a", function() {
-                return s
-            }), n.d(t, "t", function() {
                 return u
+            }), n.d(t, "t", function() {
+                return s
             }), n.d(t, "n", function() {
                 return l
             }), n.d(t, "p", function() {
@@ -114,11 +114,11 @@
             }), n.d(t, "e", function() {
                 return O
             }), n.d(t, "i", function() {
-                return C
-            }), n.d(t, "h", function() {
-                return x
-            }), n.d(t, "f", function() {
                 return y
+            }), n.d(t, "h", function() {
+                return C
+            }), n.d(t, "f", function() {
+                return x
             }), n.d(t, "k", function() {
                 return E
             }), n.d(t, "u", function() {
@@ -136,8 +136,8 @@
                 },
                 a = "https://d3aqoihi2n8ty8.cloudfront.net",
                 c = a + "/cheer",
-                s = a + "/actions",
-                u = "bonus",
+                u = a + "/actions",
+                s = "bonus",
                 l = 8e5,
                 d = 1e5,
                 p = 25e4,
@@ -148,9 +148,9 @@
                 v = "UNKNOWN",
                 b = "FIRST_PARTY",
                 O = "CUSTOM",
-                C = "SPONSORED",
-                x = "THIRD_PARTY",
-                y = "DISPLAY_ONLY",
+                y = "SPONSORED",
+                C = "THIRD_PARTY",
+                x = "DISPLAY_ONLY",
                 E = ((r = {})[i.a.Gray] = "#979797", r[i.a.Purple] = "#9c3ee8", r[i.a.Green] = "#1db2a5", r[i.a.Blue] = "#0099fe", r[i.a.Red] = "#f43021", r[i.a.Yellow] = "#f3a71a", r),
                 k = "bits_sponsored_cheermotes",
                 w = "bits_sponsored_cheermotes_announcement",
@@ -209,7 +209,7 @@
                 a = n("wIs1"),
                 c = n("/7QA");
 
-            function s(e) {
+            function u(e) {
                 return function(t) {
                     var n = function(n) {
                         function a(t) {
@@ -223,13 +223,13 @@
                                     n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index, t.email_id = n.location.state.email_id);
                                     var o = i.referenceTracking,
                                         a = o.content,
-                                        s = o.medium,
-                                        u = o.content_index,
+                                        u = o.medium,
+                                        s = o.content_index,
                                         l = o.email_id;
                                     c.p.tracking.trackPageview(r.__assign({
                                         content: a,
-                                        medium: s,
-                                        content_index: u,
+                                        medium: u,
+                                        content_index: s,
                                         email_id: l,
                                         location: e.location
                                     }, t))
@@ -269,21 +269,23 @@
                 }
             }
             n.d(t, "a", function() {
-                return s
+                return u
             })
         },
         XmgI: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
                 return o
-            }), n.d(t, "e", function() {
+            }), n.d(t, "f", function() {
                 return c
-            }), n.d(t, "d", function() {
-                return s
-            }), n.d(t, "b", function() {
+            }), n.d(t, "e", function() {
                 return u
+            }), n.d(t, "b", function() {
+                return s
             }), n.d(t, "c", function() {
                 return l
+            }), n.d(t, "d", function() {
+                return d
             });
             var r = n("5zXJ"),
                 i = n("RcPG"),
@@ -293,51 +295,53 @@
                 },
                 a = /^((?:[A-Za-z0-9]+)(?:[A-Za-z]))([\d]+)$/;
 
-            function c(e, t) {
-                var n = [],
-                    r = e.split(/\s+/);
-                return r.forEach(function(e, o) {
-                    var a = s(e, t);
-                    if (a) n.push(a);
+            function c(e, t, n) {
+                void 0 === n && (n = !1);
+                var r = [],
+                    o = e.split(/\s+/);
+                return o.forEach(function(e, a) {
+                    var c = u(e, t, n);
+                    if (c) r.push(c);
                     else {
-                        var c = n.length && n[n.length - 1],
-                            u = "";
-                        if (o < r.length - 1 && (u = " "), c && c.type === i.a.Text) c.content += e + u;
+                        var s = r.length && r[r.length - 1],
+                            l = "";
+                        if (a < o.length - 1 && (l = " "), s && s.type === i.a.Text) s.content += e + l;
                         else {
-                            var l = "";
-                            o && (l = " "), n.push({
+                            var d = "";
+                            a && (d = " "), r.push({
                                 type: i.a.Text,
-                                content: l + e + u
+                                content: d + e + l
                             })
                         }
                     }
-                }), n
+                }), r
             }
 
-            function s(e, t) {
-                var n = e.match(a);
-                if (!n) return null;
-                var r = n[1].toLowerCase(),
-                    o = Number(n[2]),
-                    c = t.indexedActions[r];
-                if (c) {
-                    var s = c.orderedTiers.find(function(e) {
-                        return e.bits <= o
+            function u(e, t, n) {
+                void 0 === n && (n = !1);
+                var o = e.match(a);
+                if (!o) return null;
+                var c = o[1].toLowerCase(),
+                    u = Number(o[2]),
+                    s = t.indexedActions[c];
+                if (s && (s.type !== r.f || n)) {
+                    var l = s.orderedTiers.find(function(e) {
+                        return e.bits <= u
                     });
-                    if (!s && o && (s = c.orderedTiers[0]), s) return {
+                    if (!l && u && (l = s.orderedTiers[0]), l) return {
                         type: i.a.Emote,
                         content: {
-                            images: l(s),
-                            alt: c.prefix,
-                            cheerAmount: o,
-                            cheerColor: s.color
+                            images: d(l),
+                            alt: s.prefix,
+                            cheerAmount: u,
+                            cheerColor: l.color
                         }
                     }
                 }
                 return null
             }
 
-            function u(e, t) {
+            function s(e, t) {
                 var n = function(e) {
                         var t = new Map;
                         return e.orderedActions.forEach(function(e) {
@@ -366,13 +370,24 @@
                     });
                     var a = Math.trunc(n.total * i);
                     if (a > 0) {
-                        var c = s(r.t + a, t);
+                        var c = u(r.t + a, t, !0);
                         c && e.splice(n.lastAppearance + o++, 0, c.content)
                     }
                 }), e
             }
 
-            function l(e, t, n) {
+            function l(e, t) {
+                return c(e, t, !0).reduce(function(e, t) {
+                    return t.type === i.a.Emote && e.push(t.content), e
+                }, []).some(function(e) {
+                    var n = t.orderedActions.find(function(t) {
+                        return !!e.alt && e.alt === t.prefix
+                    });
+                    return !!n && n.type === r.f
+                })
+            }
+
+            function d(e, t, n) {
                 var r, i;
                 void 0 === n && (n = !0);
                 var o = n ? "animated" : "static";
@@ -417,17 +432,17 @@
                 o = n("oe5X"),
                 a = n("0FG4"),
                 c = n("kRBY"),
-                s = n("60o1"),
-                u = ["#FF0000", "#0000FF", "#008000", "#B22222", "#FF7F50", "#9ACD32", "#FF4500", "#2E8B57", "#DAA520", "#D2691E", "#5F9EA0", "#1E90FF", "#FF69B4", "#8A2BE2", "#00FF7F"],
+                u = n("60o1"),
+                s = ["#FF0000", "#0000FF", "#008000", "#B22222", "#FF7F50", "#9ACD32", "#FF4500", "#2E8B57", "#DAA520", "#D2691E", "#5F9EA0", "#1E90FF", "#FF69B4", "#8A2BE2", "#00FF7F"],
                 l = {};
 
             function d(e, t, n, i, o, a, c) {
                 void 0 === o && (o = !1), void 0 === a && (a = !1), void 0 === c && (c = !1);
-                var u = Object(s.a)(t.displayName, t.username);
+                var s = Object(u.a)(t.displayName, t.username);
                 return {
                     badges: t.badges || {},
                     bits: t.bits,
-                    user: r.__assign({}, u, {
+                    user: r.__assign({}, s, {
                         userLogin: t.username,
                         userID: t.userID,
                         userType: t.userType,
@@ -442,10 +457,10 @@
             }
 
             function p(e, t) {
-                return void 0 === t && (t = 15), "number" != typeof l[e] && (l[e] = Math.floor(Math.random() * t)), u[l[e]]
+                return void 0 === t && (t = 15), "number" != typeof l[e] && (l[e] = Math.floor(Math.random() * t)), s[l[e]]
             }
 
-            function f(e, t, n, r, s, u) {
+            function f(e, t, n, r, u, s) {
                 var l = Object(c.e)(i.p.store.getState()),
                     d = {
                         cheers: n ? r : void 0,
@@ -454,12 +469,12 @@
                             map: t
                         },
                         links: {
-                            blockLinks: s,
+                            blockLinks: u,
                             parseClips: !0,
                             parseVods: !0
                         },
                         mentions: {
-                            senderLogin: u,
+                            senderLogin: s,
                             sessionUser: l
                         }
                     };
@@ -492,20 +507,20 @@
                 a = new RegExp("(?:^|\\s)(?:https?:\\/\\/)?(?:www\\.)?twitch\\.tv\\/(\\w+)\\/clip\\/(\\w+)(?:$|\\s)?");
             var c = new RegExp("(?:^|\\s)(?:https?://)?(?:(?:www|go).)?twitch.tv/videos/(\\d+)(?:$|\\s)?");
             n.d(t, "a", function() {
-                return u
+                return s
             });
-            var s = /^(?:(https?:\/\/)?((?:[\w#%\-+=:~]+\.)+[a-z]{2,8}(?:\/[\w./#%&()\-+=:?~]*)?))$/;
+            var u = /^(?:(https?:\/\/)?((?:[\w#%\-+=:~]+\.)+[a-z]{2,8}(?:\/[\w./#%&()\-+=:?~]*)?))$/;
 
-            function u(e, t) {
-                var n = e.match(s);
+            function s(e, t) {
+                var n = e.match(u);
                 if (!n) return null;
                 if (t.blockLinks) return {
                     type: i.a.Text,
                     content: " <" + Object(r.d)("deleted link", "CreateMessageData") + "> "
                 };
-                var u = n[1],
+                var s = n[1],
                     l = n[2],
-                    d = "" + (u || "https://") + l;
+                    d = "" + (s || "https://") + l;
                 if (t.parseClips && function(e) {
                         void 0 === e && (e = "");
                         var t = o.test(e) && !e.includes("clips.twitch.tv/2017/"),
@@ -562,8 +577,8 @@
                 o = n("/7QA"),
                 a = n("V+GM"),
                 c = n("NvVO"),
-                s = n("2xye"),
-                u = n("a1OF"),
+                u = n("2xye"),
+                s = n("a1OF"),
                 l = n("GnwI"),
                 d = n("rwoo"),
                 p = n("Ue10"),
@@ -633,7 +648,7 @@
                                 }
                         }
                     }(this.props.match.params.error);
-                    return i.createElement(p.Bb, {
+                    return i.createElement(p.Cb, {
                         className: "clips-error-page",
                         background: p.r.Base,
                         margin: {
@@ -641,7 +656,7 @@
                         },
                         elevation: 3,
                         color: p.O.Base,
-                        textAlign: p.Nb.Center
+                        textAlign: p.Ob.Center
                     }, i.createElement(p.o, {
                         ratio: p.p.Aspect16x9
                     }, i.createElement(p.Xa, {
@@ -651,7 +666,7 @@
                         flexDirection: p.Aa.Column,
                         padding: 1
                     }, i.createElement(p.S, {
-                        src: Object(u.d)("58765", 2),
+                        src: Object(s.d)("58765", 2),
                         alt: Object(o.d)("Not like this... not like this", "ClipsError")
                     }), i.createElement(p.W, {
                         fontSize: p.Ca.Size4
@@ -666,7 +681,7 @@
                     destination: c.a.ClipsError,
                     autoReportInteractive: !0
                 }), Object(a.a)({
-                    location: s.PageviewLocation.ClipsError
+                    location: u.PageviewLocation.ClipsError
                 })], t)
             }(i.Component);
             n.d(t, "ClipsError", function() {
@@ -680,8 +695,8 @@
                 o = n("0FG4"),
                 a = n("i6WW"),
                 c = n("gTu3"),
-                s = n("6j5V"),
-                u = /^(['"*([{</]*)@((?:[^\u0000-\u007F]|[\w-])+)/;
+                u = n("6j5V"),
+                s = /^(['"*([{</]*)@((?:[^\u0000-\u007F]|[\w-])+)/;
 
             function l(e, t) {
                 if (!t) return !1;
@@ -704,12 +719,12 @@
                     if (0 === b.length && (O = p), b += t, p !== v.length - 1 && !h(v[p + 1])) return e;
                     var f = d && Object(o.c)(b, O, d);
                     if (f) return e.concat(f);
-                    var C = n && Object(r.d)(b, n);
+                    var y = n && Object(r.e)(b, n);
+                    if (y) return e.concat(y);
+                    var C = m && Object(a.a)(b, m);
                     if (C) return e.concat(C);
-                    var x = m && Object(a.a)(b, m);
-                    if (x) return e.concat(x);
-                    var y = g && function(e, t) {
-                        var n = e.match(u);
+                    var x = g && function(e, t) {
+                        var n = e.match(s);
                         if (!n) return l(e, t.sessionUser) ? [{
                             type: i.a.CurrentUserHighlight,
                             content: e
@@ -718,7 +733,7 @@
                             o = n[1],
                             a = n[2],
                             d = e.slice(n[0].length);
-                        o.length && r.push(Object(s.a)(o));
+                        o.length && r.push(Object(u.a)(o));
                         var p = c.a.Default;
                         return l(a, t.sessionUser) ? p = c.a.Recipient : t.sessionUser && t.sessionUser.login === t.senderLogin && (p = c.a.Sender), r.push({
                             type: i.a.Mention,
@@ -726,15 +741,15 @@
                                 recipient: a,
                                 currentUserMentionRelation: p
                             }
-                        }), d.length && r.push(Object(s.a)(d)), r
+                        }), d.length && r.push(Object(u.a)(d)), r
                     }(b, g);
-                    return y ? e.concat([y]) : e.concat(Object(s.a)(b))
+                    return x ? e.concat([x]) : e.concat(Object(u.a)(b))
                 }, []))
             }
 
             function p(e) {
                 return e.reduce(function(e, t, n) {
-                    return 0 === n ? [].concat.call(e, t) : [].concat.call(e, Object(s.a)(" "), t)
+                    return 0 === n ? [].concat.call(e, t) : [].concat.call(e, Object(u.a)(" "), t)
                 }, []).reduce(function(e, t, n) {
                     if (0 === n) return e.concat(t);
                     var r = e[e.length - 1];

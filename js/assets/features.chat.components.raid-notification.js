@@ -103,13 +103,13 @@
                 },
                 v = function(e) {
                     var t = e.seconds;
-                    return i.createElement(m.Bb, {
+                    return i.createElement(m.Cb, {
                         display: m.X.Flex,
                         alignItems: m.f.Center,
                         justifyContent: m.Wa.Center,
                         color: m.O.Overlay
                     }, i.createElement(m.Za, {
-                        size: m.zb.Large,
+                        size: m.Ab.Large,
                         delay: 0,
                         inheritColor: !0
                     }), i.createElement(m.Xa, {
@@ -145,10 +145,10 @@
                 D = {
                     "data-test-selector": "raid-cancel-button"
                 },
-                k = {
+                S = {
                     "data-test-selector": "raid-now-button"
                 },
-                S = function(e) {
+                k = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -186,7 +186,7 @@
                             type: m.F.Hollow,
                             size: m.D.Small,
                             onClick: this.props.onCancelRaid
-                        }, D), i.createElement(m.Bb, {
+                        }, D), i.createElement(m.Cb, {
                             padding: {
                                 x: 1
                             },
@@ -195,7 +195,7 @@
                             size: m.D.Small,
                             onClick: this.props.onRaidNow,
                             disabled: this.props.timerPhase.isWaiting
-                        }, k), i.createElement(m.Xa, {
+                        }, S), i.createElement(m.Xa, {
                             padding: {
                                 x: 1
                             }
@@ -212,12 +212,12 @@
                         "x:strong": function(e) {
                             return i.createElement(m.W, {
                                 key: "raid-count",
-                                type: m.Rb.Strong
+                                type: m.Sb.Strong
                             }, e)
                         },
                         "x:span": function(e) {
                             return i.createElement(m.W, {
-                                type: m.Rb.Span
+                                type: m.Sb.Span
                             }, e)
                         },
                         raiderCount: e.raid.viewerCount,
@@ -235,12 +235,12 @@
                         "x:strong": function(e) {
                             return i.createElement(m.W, {
                                 key: "raid-count",
-                                type: m.Rb.Strong
+                                type: m.Sb.Strong
                             }, e)
                         },
                         "x:span": function(e) {
                             return i.createElement(m.W, {
-                                type: m.Rb.Span
+                                type: m.Sb.Span
                             }, e)
                         },
                         raiderCount: e.raid.viewerCount,
@@ -251,7 +251,7 @@
                     return i.createElement(C.a, {
                         raid: e.raid
                     }, function(t) {
-                        return i.createElement(S, r.__assign({}, e, {
+                        return i.createElement(k, r.__assign({}, e, {
                             timerPhase: t
                         }))
                     })
@@ -341,10 +341,10 @@
                             return i.createElement(m.W, null, e)
                         },
                         sourceDisplayName: i.createElement(m.W, {
-                            type: m.Rb.Strong
+                            type: m.Sb.Strong
                         }, e.sourceChannel.displayName),
                         targetDisplayName: i.createElement(m.W, {
-                            type: m.Rb.Strong
+                            type: m.Sb.Strong
                         }, e.targetChannel.displayName),
                         viewerCount: e.raid.viewerCount
                     }, "RaidViewerMessage")
@@ -355,7 +355,7 @@
                         size: m.D.Small,
                         type: m.F.Hollow,
                         onClick: t
-                    }, i.createElement(m.Bb, {
+                    }, i.createElement(m.Cb, {
                         padding: {
                             x: 1
                         },
@@ -440,11 +440,11 @@
                                 raid: e,
                                 sourceChannel: n,
                                 targetChannel: a
-                            })), i.createElement(m.Bb, r.__assign({
+                            })), i.createElement(m.Cb, r.__assign({
                                 background: m.r.AccentAlt2,
                                 color: m.O.Overlay,
                                 position: m.hb.Absolute,
-                                zIndex: m.ec.Above,
+                                zIndex: m.fc.Above,
                                 fullWidth: !0
                             }, J), i.createElement(m.Xa, {
                                 padding: {

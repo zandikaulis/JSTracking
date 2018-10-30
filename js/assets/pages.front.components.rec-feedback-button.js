@@ -1,193 +1,197 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
     [136], {
-        "27KN": function(e, t, n) {
-            "use strict";
-            n.d(t, "b", function() {
-                return a
-            }), n.d(t, "a", function() {
-                return c
-            });
-            n("mrSG");
-            var r = n("Yurh"),
-                o = n("yI6f");
-
-            function a() {
-                return {
-                    id: "fake-id",
-                    userID: "fake user",
-                    itemID: "fake item id",
-                    itemType: o.b.Game,
-                    category: r.a.NotInterested,
-                    lastUpdated: "2017-08-31T04:21:03Z"
-                }
-            }
-
-            function c(e) {
-                return new Array(e).fill(a())
-            }
-        },
         GyBV: function(e, t, n) {
             "use strict";
             n.r(t);
-            var r = n("mrSG"),
+            var a = n("mrSG"),
                 o = n("q1tI"),
-                a = n("/7QA"),
+                r = n("/7QA"),
                 c = n("/MKj"),
-                s = n("fvjX"),
-                i = n("aCAx"),
-                l = n("cZKs"),
-                d = n("27KN"),
-                p = n("yI6f"),
-                u = n("kRI/"),
-                b = n("Ue10");
-            var f = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        selectedReasonIndex: null,
-                        showError: !1
-                    }, t.logger = a.p.logger.withCategory("recs-feedback"), t.onRadioChange = function(e) {
-                        t.state.showError && t.setState({
+                i = n("fvjX"),
+                d = n("aCAx"),
+                s = n("cZKs"),
+                l = n("yR8l"),
+                u = n("geRD"),
+                p = n("DMoW"),
+                b = n("yI6f"),
+                k = n("kRI/"),
+                m = n("3lt/"),
+                f = n("Ue10"),
+                h = n("M8Tb");
+            var g = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            selectedReasonIndex: null,
                             showError: !1
-                        });
-                        var n = e.currentTarget.getAttribute("value"),
-                            r = null === n ? null : parseInt(n, 10);
-                        t.setState({
-                            selectedReasonIndex: r
-                        })
-                    }, t.submitFeedback = function() {
-                        var e = t.getCurrentChoiceData(),
-                            n = e.contentID,
-                            r = e.contentType,
-                            o = e.feedbackType,
-                            a = e.selectedReason;
-                        if (a)
-                            if (n && r && o) {
-                                var c = Promise.resolve(Object(d.b)());
-                                t.props.trackRecFeedbackClickStep({
-                                    clickStep: u.a.Submit,
-                                    feedbackAction: u.b.Add,
-                                    feedbackReason: o,
-                                    feedbackedItemID: n,
-                                    feedbackType: r
-                                }), t.props.hideContent(c), t.props.closeModal()
-                            } else {
-                                var s = "Missing content id for reason: " + a + ", type: " + o + ", content: " + r;
-                                t.logger.error(new Error(s), s)
+                        }, t.logger = r.p.logger.withCategory("recs-feedback"), t.onRadioChange = function(e) {
+                            t.state.showError && t.setState({
+                                showError: !1
+                            });
+                            var n = e.currentTarget.getAttribute("value"),
+                                a = null === n ? null : parseInt(n, 10);
+                            t.setState({
+                                selectedReasonIndex: a
+                            })
+                        }, t.submitFeedback = function() {
+                            var e = t.getCurrentChoiceData(),
+                                n = e.contentID,
+                                a = e.contentType,
+                                o = e.feedbackType,
+                                r = e.selectedReason;
+                            if (r)
+                                if (n && a && o) {
+                                    var c = Object(u.a)({
+                                            category: o,
+                                            itemID: n,
+                                            itemType: function(e) {
+                                                switch (e) {
+                                                    case b.b.Shelf:
+                                                        return p.H.SHELF;
+                                                    case b.b.Game:
+                                                        return p.H.CATEGORY;
+                                                    case b.b.Live:
+                                                        return p.H.CHANNEL;
+                                                    case b.b.Vod:
+                                                        return p.H.VOD;
+                                                    case b.b.Clip:
+                                                        return p.H.UNSPECIFIED;
+                                                    default:
+                                                        return e
+                                                }
+                                            }(a),
+                                            sourceItemPage: m.PageviewMedium.TwitchHome,
+                                            sourceItemRequestID: "todo"
+                                        }),
+                                        i = t.props.addFeedback(c);
+                                    t.props.trackRecFeedbackClickStep({
+                                        clickStep: k.a.Submit,
+                                        feedbackAction: k.b.Add,
+                                        feedbackReason: o,
+                                        feedbackedItemID: n,
+                                        feedbackType: a
+                                    }), t.props.hideContent(i), t.props.closeModal()
+                                } else {
+                                    var d = "Missing content id for reason: " + r + ", type: " + o + ", content: " + a;
+                                    t.logger.error(new Error(d), d)
+                                }
+                            else t.setState({
+                                showError: !0
+                            })
+                        }, t.getCurrentChoiceData = function() {
+                            var e = t.state.selectedReasonIndex;
+                            if (null === e) return {};
+                            var n = t.props.feedbackReasons[e],
+                                a = n.feedbackType,
+                                o = n.contentType;
+                            return {
+                                contentID: t.contentTypeToIDMapping(o),
+                                contentType: o,
+                                feedbackType: a,
+                                selectedReason: n
                             }
-                        else t.setState({
-                            showError: !0
-                        })
-                    }, t.getCurrentChoiceData = function() {
-                        var e = t.state.selectedReasonIndex;
-                        if (null === e) return {};
-                        var n = t.props.feedbackReasons[e],
-                            r = n.feedbackType,
-                            o = n.contentType;
-                        return {
-                            contentID: t.contentTypeToIDMapping(o),
-                            contentType: o,
-                            feedbackType: r,
-                            selectedReason: n
-                        }
-                    }, t.trackRecFeedbackStepClose = function() {
-                        var e = t.getCurrentChoiceData(),
-                            n = e.contentID,
-                            r = e.contentType,
-                            o = e.feedbackType;
-                        t.props.trackRecFeedbackClickStep({
-                            clickStep: u.a.Close,
-                            feedbackAction: null,
-                            feedbackReason: o || null,
-                            feedbackedItemID: n || null,
-                            feedbackType: r || null
-                        })
-                    }, t
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    var e = this;
-                    return o.createElement(b.Xa, null, o.createElement(b.Bb, {
-                        background: b.r.Alt,
-                        borderRadius: b.x.Large
-                    }, o.createElement(b.Bb, {
-                        borderBottom: !0,
-                        padding: {
-                            y: 2
-                        },
-                        textAlign: b.Nb.Center
-                    }, o.createElement(b.Xa, {
-                        margin: {
-                            x: 5
-                        }
-                    }, o.createElement(b.W, {
-                        type: b.Rb.H3,
-                        bold: !0
-                    }, Object(a.d)("Not interested? Tell us more...", "RecFeedbackModal")))), o.createElement(b.Bb, {
-                        borderBottom: !0,
-                        padding: 2
-                    }, o.createElement(b.W, {
-                        type: b.Rb.Span,
-                        fontSize: b.Ca.Size4
-                    }, this.props.feedbackReasons.map(function(t, n) {
-                        return o.createElement(b.Xa, {
-                            key: t.text,
-                            margin: {
-                                bottom: .5
-                            }
-                        }, o.createElement(b.nb, {
-                            label: t.text,
-                            checked: e.state.selectedReasonIndex === n,
-                            onChange: e.onRadioChange,
-                            value: n.toString()
-                        }))
-                    }))), o.createElement(b.Bb, {
-                        display: b.X.Flex,
-                        justifyContent: b.Wa.End,
-                        alignItems: b.f.Center,
-                        padding: 1,
-                        background: b.r.Alt2,
-                        borderRadius: b.x.Large
-                    }, this.state.showError && o.createElement(b.Xa, {
-                        margin: {
-                            right: 1
-                        },
-                        "data-test-selector": "rec-feedback-modal-error"
-                    }, o.createElement(b.W, {
-                        color: b.O.Error
-                    }, Object(a.d)("Please select a reason", "RecFeedbackModal"))), o.createElement(b.z, {
-                        size: b.D.Large,
-                        onClick: this.submitFeedback,
-                        "data-test-selector": "rec-feedback-modal-submit"
-                    }, Object(a.d)("Done", "RecFeedbackModal")))), o.createElement(l.a, {
-                        onClose: this.trackRecFeedbackStepClose
-                    }))
-                }, t.prototype.contentTypeToIDMapping = function(e) {
-                    switch (e) {
-                        case p.b.Shelf:
-                            return this.props.shelfID;
-                        case p.b.Game:
-                            return this.props.categoryID;
-                        case p.b.Live:
-                            return this.props.channelID;
-                        case p.b.Vod:
-                            return this.props.vodID;
-                        case p.b.Clip:
-                            return null;
-                        default:
-                            return e
+                        }, t.trackRecFeedbackStepClose = function() {
+                            var e = t.getCurrentChoiceData(),
+                                n = e.contentID,
+                                a = e.contentType,
+                                o = e.feedbackType;
+                            t.props.trackRecFeedbackClickStep({
+                                clickStep: k.a.Close,
+                                feedbackAction: null,
+                                feedbackReason: o || null,
+                                feedbackedItemID: n || null,
+                                feedbackType: a || null
+                            })
+                        }, t
                     }
-                }, t
-            }(o.Component);
-            var k = Object(c.connect)(null, function(e) {
-                    return Object(s.bindActionCreators)({
-                        closeModal: i.c
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        var e = this;
+                        return o.createElement(f.Xa, null, o.createElement(f.Cb, {
+                            background: f.r.Alt,
+                            borderRadius: f.x.Large
+                        }, o.createElement(f.Cb, {
+                            borderBottom: !0,
+                            padding: {
+                                y: 2
+                            },
+                            textAlign: f.Ob.Center
+                        }, o.createElement(f.Xa, {
+                            margin: {
+                                x: 5
+                            }
+                        }, o.createElement(f.W, {
+                            type: f.Sb.H3,
+                            bold: !0,
+                            "data-test-selector": "rec-feedback-modal-header"
+                        }, Object(r.d)("Not interested? Tell us more...", "RecFeedbackModal")))), o.createElement(f.Cb, {
+                            borderBottom: !0,
+                            padding: 2
+                        }, o.createElement(f.W, {
+                            type: f.Sb.Span,
+                            fontSize: f.Ca.Size4
+                        }, this.props.feedbackReasons.map(function(t, n) {
+                            return o.createElement(f.Xa, {
+                                key: t.text,
+                                margin: {
+                                    bottom: .5
+                                }
+                            }, o.createElement(f.nb, {
+                                label: t.text,
+                                checked: e.state.selectedReasonIndex === n,
+                                onChange: e.onRadioChange,
+                                value: n.toString()
+                            }))
+                        }))), o.createElement(f.Cb, {
+                            display: f.X.Flex,
+                            justifyContent: f.Wa.End,
+                            alignItems: f.f.Center,
+                            padding: 1,
+                            background: f.r.Alt2,
+                            borderRadius: f.x.Large
+                        }, this.state.showError && o.createElement(f.Xa, {
+                            margin: {
+                                right: 1
+                            },
+                            "data-test-selector": "rec-feedback-modal-error"
+                        }, o.createElement(f.W, {
+                            color: f.O.Error
+                        }, Object(r.d)("Please select a reason", "RecFeedbackModal"))), o.createElement(f.z, {
+                            size: f.D.Large,
+                            onClick: this.submitFeedback,
+                            "data-test-selector": "rec-feedback-modal-submit"
+                        }, Object(r.d)("Done", "RecFeedbackModal")))), o.createElement(s.a, {
+                            onClose: this.trackRecFeedbackStepClose
+                        }))
+                    }, t.prototype.contentTypeToIDMapping = function(e) {
+                        switch (e) {
+                            case b.b.Shelf:
+                                return this.props.shelfID;
+                            case b.b.Game:
+                                return this.props.categoryID;
+                            case b.b.Live:
+                                return this.props.channelID;
+                            case b.b.Vod:
+                                return this.props.vodID;
+                            case b.b.Clip:
+                                return null;
+                            default:
+                                return e
+                        }
+                    }, t
+                }(o.Component),
+                C = Object(l.a)(h, {
+                    name: "addFeedback"
+                })(g);
+            var v = Object(c.connect)(null, function(e) {
+                    return Object(i.bindActionCreators)({
+                        closeModal: d.c
                     }, e)
-                })(f),
-                m = function(e) {
+                })(C),
+                R = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClick = function(e) {
-                            e.preventDefault(), e.stopPropagation(), t.props.showModal(k, {
+                            e.preventDefault(), e.stopPropagation(), t.props.showModal(v, {
                                 shelfID: t.props.shelfID,
                                 channelID: t.props.channelID,
                                 vodID: t.props.vodID,
@@ -198,27 +202,123 @@
                             }), t.props.onClick()
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(b.Ub, {
-                            label: Object(a.d)("Not interested?", "RecFeedbackButton"),
-                            direction: b.Wb.Right
-                        }, o.createElement(b.A, {
-                            icon: b.rb.VisibilityHidden,
-                            size: b.B.Small,
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        return o.createElement(f.Vb, {
+                            label: Object(r.d)("Not interested?", "RecFeedbackButton"),
+                            direction: f.Xb.Right
+                        }, o.createElement(f.A, {
+                            icon: f.rb.VisibilityHidden,
+                            size: f.B.Small,
                             onClick: this.onClick
                         }))
                     }, t
                 }(o.Component);
-            var h = Object(c.connect)(null, function(e) {
-                return Object(s.bindActionCreators)({
-                    showModal: i.d
+            var y = Object(c.connect)(null, function(e) {
+                return Object(i.bindActionCreators)({
+                    showModal: d.d
                 }, e)
-            })(m);
+            })(R);
             n.d(t, "RecFeedbackButtonComponent", function() {
-                return m
+                return R
             }), n.d(t, "RecFeedbackButton", function() {
-                return h
+                return y
             })
+        },
+        M8Tb: function(e, t) {
+            var n = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "mutation",
+                    name: {
+                        kind: "Name",
+                        value: "AddRecommendationFeedback"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "AddRecommendationFeedbackInput"
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "addRecommendationFeedback"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "input"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "recommendationFeedback"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "id"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 154
+                }
+            };
+            n.loc.source = {
+                body: "mutation AddRecommendationFeedback($input: AddRecommendationFeedbackInput!) {\naddRecommendationFeedback(input: $input) {\nrecommendationFeedback {\nid\n}\n}\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = n
         }
     }
 ]);

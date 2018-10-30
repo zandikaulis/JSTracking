@@ -390,7 +390,7 @@
                         if (this.props.small) {
                             var t = e,
                                 i = p.rb.Heart;
-                            return this.props.areNotificationsEnabled && (t = n, i = p.rb.FollowCheck), s.createElement(p.Ub, {
+                            return this.props.areNotificationsEnabled && (t = n, i = p.rb.FollowCheck), s.createElement(p.Vb, {
                                 label: t,
                                 direction: this.props.tooltipDirection
                             }, s.createElement(p.A, {
@@ -526,7 +526,7 @@
                         o = Object(u.b)(e.event.id),
                         d = !(!e.event.self || !e.event.self.isFollowing),
                         s = e.upwardBalloons ? g.v.Top : g.v.Bottom,
-                        c = e.upwardBalloons ? g.Wb.Top : g.Wb.Bottom,
+                        c = e.upwardBalloons ? g.Xb.Top : g.Xb.Bottom,
                         h = e.event.game && e.event.game.displayName || "-",
                         b = e.channel && (e.channel.displayName || e.channel.login) || "-",
                         E = null,
@@ -562,7 +562,7 @@
                         },
                         eventID: e.event.id,
                         balloonDirection: s
-                    })), l.createElement(g.Bb, {
+                    })), l.createElement(g.Cb, {
                         margin: {
                             y: 1
                         },
@@ -592,7 +592,7 @@
                     }, l.createElement(g.U, {
                         to: o
                     }, l.createElement(g.W, {
-                        type: g.Rb.H4
+                        type: g.Sb.H4
                     }, e.event.title))), l.createElement(g.W, {
                         color: g.O.Alt2
                     }, function(e, n) {
@@ -719,7 +719,7 @@
                         flexDirection: g.Aa.Row,
                         justifyContent: g.Wa.Center
                     }, l.createElement(g.W, {
-                        type: g.Rb.H4,
+                        type: g.Sb.H4,
                         color: g.O.Alt2,
                         italic: !0
                     }, n))), l.createElement(g.Xa, null, i, t, e.data.loading && l.createElement(g.Za, {
@@ -793,7 +793,7 @@
                         t = Object(a.c)(e.date, {
                             day: "numeric"
                         });
-                    return i.createElement(l.Bb, {
+                    return i.createElement(l.Cb, {
                         background: l.r.Base,
                         elevation: 2,
                         display: l.X.Flex,
@@ -807,14 +807,14 @@
                         attachTop: !0,
                         attachLeft: !0,
                         flexWrap: l.Ba.NoWrap
-                    }, i.createElement(l.Bb, {
+                    }, i.createElement(l.Cb, {
                         className: "event-calendar-date__month",
                         display: l.X.Flex,
                         justifyContent: l.Wa.Center,
                         background: l.r.AccentAlt2
                     }, i.createElement(l.W, {
                         fontSize: l.Ca.Size6,
-                        transform: l.Qb.Uppercase,
+                        transform: l.Rb.Uppercase,
                         color: l.O.Overlay
                     }, n)), i.createElement(l.Xa, {
                         display: l.X.Flex,

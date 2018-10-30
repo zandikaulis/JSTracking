@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [202], {
+    [201], {
         "/ZC1": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -39,7 +39,7 @@
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: s.ec.Above
+                            zIndex: s.fc.Above
                         }, r.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -96,15 +96,15 @@
             }), n.d(t, "B", function() {
                 return O
             }), n.d(t, "b", function() {
-                return R
-            }), n.d(t, "a", function() {
                 return S
+            }), n.d(t, "a", function() {
+                return R
             }), n.d(t, "E", function() {
                 return A
             }), n.d(t, "F", function() {
-                return b
-            }), n.d(t, "m", function() {
                 return C
+            }), n.d(t, "m", function() {
+                return b
             }), n.d(t, "C", function() {
                 return v
             }), n.d(t, "D", function() {
@@ -112,9 +112,9 @@
             }), n.d(t, "J", function() {
                 return U
             }), n.d(t, "q", function() {
-                return y
-            }), n.d(t, "w", function() {
                 return P
+            }), n.d(t, "w", function() {
+                return y
             }), n.d(t, "f", function() {
                 return F
             }), n.d(t, "g", function() {
@@ -208,11 +208,11 @@
                 return r.PubsubTopic.UserBitsUpdates + "." + e
             }
 
-            function R() {
+            function S() {
                 return r.PubsubTopic.BitsCampaignEvents + ".updates"
             }
 
-            function S(e) {
+            function R(e) {
                 return r.PubsubTopic.ChannelBitsPinEvents + "." + e
             }
 
@@ -220,11 +220,11 @@
                 return r.PubsubTopic.UserPropertiesUpdates + "." + e
             }
 
-            function b(e) {
+            function C(e) {
                 return r.PubsubTopic.UserSubscribeEvents + "." + e
             }
 
-            function C(e) {
+            function b(e) {
                 return r.PubsubTopic.CampaignGlobalEvents + "." + e
             }
 
@@ -240,11 +240,11 @@
                 return r.PubsubTopic.Whispers + "." + e
             }
 
-            function y(e) {
+            function P(e) {
                 return r.PubsubTopic.OnsiteNotifications + "." + e
             }
 
-            function P(e) {
+            function y(e) {
                 return r.PubsubTopic.StreamChatRoom + "." + e
             }
 
@@ -451,10 +451,10 @@
         By5U: function(e, t) {},
         DMoW: function(e, t, n) {
             "use strict";
-            var a, r, s, i, o, c, u, l, p, d, E, m, h, _, g, f, T, I, D, N, O, R, S, A, b, C, v, L, U, y, P, F, M, j, k, w, G, V, B, H, x, W, Y, X, K, z, q, Z, J, Q, $, ee, te, ne, ae, re, se, ie, oe, ce, ue, le, pe, de, Ee, me, he, _e, ge, fe, Te, Ie, De, Ne, Oe, Re, Se, Ae, be, Ce, ve, Le, Ue, ye, Pe, Fe, Me, je, ke, we, Ge, Ve, Be, He, xe, We, Ye, Xe, Ke, ze, qe, Ze, Je, Qe, $e, et, tt, nt, at, rt, st, it, ot, ct;
+            var a, r, s, i, o, c, u, l, p, d, E, m, h, _, g, f, T, I, D, N, O, S, R, A, C, b, v, L, U, P, y, F, M, j, k, w, G, V, B, H, x, W, Y, X, z, K, q, Z, J, Q, $, ee, te, ne, ae, re, se, ie, oe, ce, ue, le, pe, de, Ee, me, he, _e, ge, fe, Te, Ie, De, Ne, Oe, Se, Re, Ae, Ce, be, ve, Le, Ue, Pe, ye, Fe, Me, je, ke, we, Ge, Ve, Be, He, xe, We, Ye, Xe, ze, Ke, qe, Ze, Je, Qe, $e, et, tt, nt, at, rt, st, it, ot, ct, ut, lt;
             n.d(t, "c", function() {
                     return r
-                }), n.d(t, "G", function() {
+                }), n.d(t, "I", function() {
                     return o
                 }), n.d(t, "x", function() {
                     return c
@@ -466,15 +466,15 @@
                     return I
                 }), n.d(t, "k", function() {
                     return O
-                }), n.d(t, "Q", function() {
-                    return R
-                }), n.d(t, "I", function() {
+                }), n.d(t, "S", function() {
                     return S
+                }), n.d(t, "K", function() {
+                    return R
                 }), n.d(t, "o", function() {
                     return A
                 }), n.d(t, "i", function() {
                     return v
-                }), n.d(t, "H", function() {
+                }), n.d(t, "J", function() {
                     return L
                 }), n.d(t, "b", function() {
                     return j
@@ -482,13 +482,13 @@
                     return k
                 }), n.d(t, "p", function() {
                     return G
-                }), n.d(t, "K", function() {
-                    return V
                 }), n.d(t, "M", function() {
+                    return V
+                }), n.d(t, "O", function() {
                     return B
                 }), n.d(t, "B", function() {
                     return H
-                }), n.d(t, "N", function() {
+                }), n.d(t, "P", function() {
                     return x
                 }), n.d(t, "A", function() {
                     return W
@@ -496,10 +496,10 @@
                     return Y
                 }), n.d(t, "n", function() {
                     return X
-                }), n.d(t, "L", function() {
-                    return K
-                }), n.d(t, "a", function() {
+                }), n.d(t, "N", function() {
                     return z
+                }), n.d(t, "a", function() {
+                    return K
                 }), n.d(t, "t", function() {
                     return q
                 }), n.d(t, "v", function() {
@@ -512,16 +512,16 @@
                     return te
                 }), n.d(t, "F", function() {
                     return ne
-                }), n.d(t, "P", function() {
+                }), n.d(t, "R", function() {
                     return se
-                }), n.d(t, "O", function() {
+                }), n.d(t, "Q", function() {
                     return me
                 }), n.d(t, "m", function() {
                     return Oe
                 }), n.d(t, "l", function() {
-                    return Re
-                }), n.d(t, "R", function() {
-                    return Ce
+                    return Se
+                }), n.d(t, "T", function() {
+                    return be
                 }), n.d(t, "y", function() {
                     return Me
                 }), n.d(t, "s", function() {
@@ -532,14 +532,18 @@
                     return Be
                 }), n.d(t, "u", function() {
                     return He
-                }), n.d(t, "J", function() {
+                }), n.d(t, "L", function() {
                     return We
                 }), n.d(t, "w", function() {
                     return Qe
+                }), n.d(t, "G", function() {
+                    return $e
+                }), n.d(t, "H", function() {
+                    return et
                 }), n.d(t, "d", function() {
-                    return it
+                    return ct
                 }), n.d(t, "r", function() {
-                    return ot
+                    return ut
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -606,19 +610,19 @@
                 }(O || (O = {})),
                 function(e) {
                     e.PRIVATE = "PRIVATE", e.PUBLIC = "PUBLIC"
-                }(R || (R = {})),
+                }(S || (S = {})),
                 function(e) {
                     e.ENDED = "ENDED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.UNKNOWN = "UNKNOWN"
-                }(S || (S = {})),
+                }(R || (R = {})),
                 function(e) {
                     e.ARCHIVES_DISABLED = "ARCHIVES_DISABLED", e.BROADCASTER_NOT_LIVE = "BROADCASTER_NOT_LIVE", e.BROADCAST_FORMAT_INVALID_PREMIERE = "BROADCAST_FORMAT_INVALID_PREMIERE", e.BROADCAST_FORMAT_INVALID_RERUN = "BROADCAST_FORMAT_INVALID_RERUN", e.INTERNAL_SERVER_ERROR = "INTERNAL_SERVER_ERROR", e.MAX_DESCRIPTION_LENGTH_EXCEEDED = "MAX_DESCRIPTION_LENGTH_EXCEEDED", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED", e.VOD_NOT_READY = "VOD_NOT_READY"
                 }(A || (A = {})),
                 function(e) {
                     e.DARK = "DARK", e.LIGHT = "LIGHT"
-                }(b || (b = {})),
+                }(C || (C = {})),
                 function(e) {
                     e.CUSTOM = "CUSTOM", e.DISPLAY_ONLY = "DISPLAY_ONLY", e.FIRST_PARTY = "FIRST_PARTY", e.RENDER_ONLY = "RENDER_ONLY", e.SPONSORED = "SPONSORED", e.THIRD_PARTY = "THIRD_PARTY", e.UNKNOWN = "UNKNOWN"
-                }(C || (C = {})),
+                }(b || (b = {})),
                 function(e) {
                     e.FOLLOWERS_ONLY = "FOLLOWERS_ONLY", e.SLOW_MODE = "SLOW_MODE", e.SUBSCRIBERS_ONLY = "SUBSCRIBERS_ONLY", e.VERIFIED_ONLY = "VERIFIED_ONLY"
                 }(v || (v = {})),
@@ -630,10 +634,10 @@
                 }(U || (U = {})),
                 function(e) {
                     e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
-                }(y || (y = {})),
+                }(P || (P = {})),
                 function(e) {
                     e.FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.SUB_ONLY_MODE_ENFORCEMENT_FAILED = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT"
-                }(P || (P = {})),
+                }(y || (y = {})),
                 function(e) {
                     e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
                 }(F || (F = {})),
@@ -675,10 +679,10 @@
                 }(X || (X = {})),
                 function(e) {
                     e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
-                }(K || (K = {})),
+                }(z || (z = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
-                }(z || (z = {})),
+                }(K || (K = {})),
                 function(e) {
                     e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
                 }(q || (q = {})),
@@ -768,19 +772,19 @@
                 }(Oe || (Oe = {})),
                 function(e) {
                     e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
-                }(Re || (Re = {})),
+                }(Se || (Se = {})),
                 function(e) {
                     e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
-                }(Se || (Se = {})),
+                }(Re || (Re = {})),
                 function(e) {
                     e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
                 }(Ae || (Ae = {})),
                 function(e) {
                     e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
-                }(be || (be = {})),
+                }(Ce || (Ce = {})),
                 function(e) {
                     e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
-                }(Ce || (Ce = {})),
+                }(be || (be = {})),
                 function(e) {
                     e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
                 }(ve || (ve = {})),
@@ -792,10 +796,10 @@
                 }(Ue || (Ue = {})),
                 function(e) {
                     e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
-                }(ye || (ye = {})),
+                }(Pe || (Pe = {})),
                 function(e) {
                     e.ASC = "ASC", e.DESC = "DESC"
-                }(Pe || (Pe = {})),
+                }(ye || (ye = {})),
                 function(e) {
                     e.TIME = "TIME", e.VIEWS = "VIEWS"
                 }(Fe || (Fe = {})),
@@ -837,10 +841,10 @@
                 }(Xe || (Xe = {})),
                 function(e) {
                     e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
-                }(Ke || (Ke = {})),
+                }(ze || (ze = {})),
                 function(e) {
                     e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
-                }(ze || (ze = {})),
+                }(Ke || (Ke = {})),
                 function(e) {
                     e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }(qe || (qe = {})),
@@ -854,35 +858,41 @@
                     e.ALL = "ALL", e.LIVE = "LIVE"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
                 }($e || ($e = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
                 }(et || (et = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }(tt || (tt = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(nt || (nt = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(at || (at = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(rt || (rt = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(st || (st = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(it || (it = {})),
                 function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
                 }(ot || (ot = {})),
                 function(e) {
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                }(ct || (ct = {})),
+                function(e) {
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                }(ut || (ut = {})),
+                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(ct || (ct = {}))
+                }(lt || (lt = {}))
         },
         GD6M: function(e, t, n) {
             "use strict";
@@ -918,7 +928,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(c.Kb, {
+                        return r.createElement(c.Lb, {
                             onClick: this.onClick,
                             label: this.props.game.name
                         })
@@ -1438,7 +1448,7 @@
                             },
                             flexGrow: 1
                         }, r.createElement(f.W, {
-                            type: f.Rb.Span,
+                            type: f.Sb.Span,
                             ellipsis: !0
                         }, this.props.user.name))))))
                     }, t
@@ -1591,7 +1601,7 @@
                         })
                     }, t
                 }(r.Component);
-            var R = Object(s.connect)(function(e) {
+            var S = Object(s.connect)(function(e) {
                 return {
                     user: Object(c.e)(e)
                 }
@@ -1601,7 +1611,7 @@
             }), n.d(t, !1, function() {
                 return O
             }), n.d(t, "a", function() {
-                return R
+                return S
             })
         },
         Lxz1: function(e, t, n) {
@@ -1677,10 +1687,10 @@
                         padding: {
                             y: 1
                         },
-                        zIndex: o.ec.Above
-                    }, r.createElement(o.Bb, {
+                        zIndex: o.fc.Above
+                    }, r.createElement(o.Cb, {
                         color: o.O.Alt2,
-                        textAlign: o.Nb.Center,
+                        textAlign: o.Ob.Center,
                         flexShrink: 1
                     }, r.createElement(o.qb, {
                         asset: o.rb.DeadGlitch,
@@ -1690,12 +1700,12 @@
                         margin: {
                             top: 1
                         },
-                        textAlign: o.Nb.Center
+                        textAlign: o.Ob.Center
                     }, r.createElement(o.W, {
-                        type: o.Rb.H4,
+                        type: o.Sb.H4,
                         "data-test-selector": "search-error-message"
                     }, Object(i.d)("Search is not available at this time", "DropdownSearchError"))), r.createElement(o.W, {
-                        type: o.Rb.P
+                        type: o.Sb.P
                     }, Object(i.d)("Please try again later", "DropdownSearchError")))
                 },
                 u = n("8Ad5"),
@@ -1754,13 +1764,13 @@
                             });
                         return this.props.inline ? r.createElement(s.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(o.Bb, {
+                        }, r.createElement(o.Cb, {
                             background: this.state.isInputFocused || this.state.isOpen ? o.r.Base : void 0,
                             borderRadius: o.x.Large,
                             padding: .5,
                             position: o.hb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, n, e && r.createElement(o.Bb, {
+                        }, n, e && r.createElement(o.Cb, {
                             attachLeft: !0,
                             background: o.r.Base,
                             borderRadius: o.x.Large,
@@ -1770,7 +1780,7 @@
                                 y: 1
                             },
                             position: o.hb.Absolute,
-                            zIndex: o.ec.Above,
+                            zIndex: o.fc.Above,
                             elevation: 3
                         }, r.createElement("div", {
                             tabIndex: 0,
@@ -1827,7 +1837,7 @@
                             error: !!this.props.errorMessage
                         }, r.createElement(o.Xa, {
                             className: "image-uploader",
-                            textAlign: o.Nb.Center,
+                            textAlign: o.Ob.Center,
                             display: o.X.Flex,
                             flexDirection: o.Aa.Column,
                             alignItems: o.f.Center,
@@ -1860,12 +1870,12 @@
                             margin: 1,
                             "data-test-selector": "image-uploader-loading"
                         }, r.createElement(o.W, {
-                            type: o.Rb.H4
+                            type: o.Sb.H4
                         }, Object(s.d)("Uploading", "ImageUploader")))
                     }, t.prototype.renderNormalState = function() {
                         var e = Object(s.d)("Browse", "ImageUploader");
                         return r.createElement(o.Xa, null, r.createElement(o.Xa, null, r.createElement(o.W, {
-                            type: o.Rb.H4
+                            type: o.Sb.H4
                         }, Object(s.d)("Drag and drop your image here", "ImageUploader"))), r.createElement(o.Xa, {
                             margin: {
                                 bottom: 2
@@ -1877,7 +1887,7 @@
                             fullWidth: !0,
                             "data-test-selector": "image-uploader-hint"
                         }, r.createElement(o.W, {
-                            type: o.Rb.P,
+                            type: o.Sb.P,
                             fontSize: o.Ca.Size7,
                             color: o.O.Alt2
                         }, this.props.hintMessage)), r.createElement(o.Xa, null, r.createElement(o.z, {
@@ -1891,7 +1901,7 @@
                             },
                             "data-test-selector": "image-uploader-error"
                         }, r.createElement(o.W, {
-                            type: o.Rb.H5,
+                            type: o.Sb.H5,
                             color: o.O.Error,
                             bold: !0
                         }, this.props.errorMessage))
@@ -2367,28 +2377,28 @@
             }
             var D, N = n("0xbx"),
                 O = n("Ue10"),
-                R = n("HGFl"),
-                S = n("JQ82"),
+                S = n("HGFl"),
+                R = n("JQ82"),
                 A = function(e) {
-                    var t = Object(R.b)(Object(S.b)(e.campaign.startDate), "MM/DD/YYYY, hh:mm a"),
-                        n = Object(R.b)(Object(S.b)(e.campaign.endDate), "MM/DD/YYYY, hh:mm a"),
+                    var t = Object(S.b)(Object(R.b)(e.campaign.startDate), "MM/DD/YYYY, hh:mm a"),
+                        n = Object(S.b)(Object(R.b)(e.campaign.endDate), "MM/DD/YYYY, hh:mm a"),
                         a = "/console/drops/" + e.campaign.id;
-                    return r.createElement(O.Jb, null, r.createElement(O.Gb, null, r.createElement(O.U, {
+                    return r.createElement(O.Kb, null, r.createElement(O.Hb, null, r.createElement(O.U, {
                         linkTo: a
-                    }, e.campaign.name)), r.createElement(O.Gb, null, e.campaign.id), r.createElement(O.Gb, null, t), r.createElement(O.Gb, null, n), r.createElement(O.Gb, null, e.campaign.enabled.toString()))
+                    }, e.campaign.name)), r.createElement(O.Hb, null, e.campaign.id), r.createElement(O.Hb, null, t), r.createElement(O.Hb, null, n), r.createElement(O.Hb, null, e.campaign.enabled.toString()))
                 };
             ! function(e) {
                 e[e.Enabled = 0] = "Enabled", e[e.EndDate = 1] = "EndDate", e[e.Id = 2] = "Id", e[e.Name = 3] = "Name", e[e.StartDate = 4] = "StartDate"
             }(D || (D = {}));
-            var b = function(e) {
+            var C = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            sortingName: O.yb.Default,
-                            sortingId: O.yb.Default,
-                            sortingStartDate: O.yb.Default,
-                            sortingEndDate: O.yb.Default,
-                            sortingEnabled: O.yb.Default
+                            sortingName: O.zb.Default,
+                            sortingId: O.zb.Default,
+                            sortingStartDate: O.zb.Default,
+                            sortingEndDate: O.zb.Default,
+                            sortingEnabled: O.zb.Default
                         }, t.renderCampaignItems = function() {
                             return t.props.campaigns.map(function(e) {
                                 return r.createElement(A, {
@@ -2429,7 +2439,7 @@
                                 t.props.onSort(D.Enabled, t.state.sortingEnabled)
                             })
                         }, t.toggleSorting = function(e) {
-                            return e === O.yb.Default || e === O.yb.Ascending ? O.yb.Descending : O.yb.Ascending
+                            return e === O.zb.Default || e === O.zb.Ascending ? O.zb.Descending : O.zb.Ascending
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
@@ -2446,30 +2456,30 @@
                             onClick: Object(c.c)(c.a.CreateDropsProcessStart),
                             linkTo: "/console/drops/create",
                             icon: O.rb.Plus
-                        }, Object(o.d)("Create Drops Campaign", "DevDropsCampaigns"))), r.createElement(O.Eb, null, r.createElement(O.Hb, null, r.createElement(O.Ib, {
+                        }, Object(o.d)("Create Drops Campaign", "DevDropsCampaigns"))), r.createElement(O.Fb, null, r.createElement(O.Ib, null, r.createElement(O.Jb, {
                             label: Object(o.d)("Campaign Name", "DevDropsCampaigns"),
                             sorting: this.state.sortingName,
                             onClick: this.sortName
-                        }), r.createElement(O.Ib, {
+                        }), r.createElement(O.Jb, {
                             label: Object(o.d)("Campaign ID", "DevDropsCampaigns")
-                        }), r.createElement(O.Ib, {
+                        }), r.createElement(O.Jb, {
                             label: Object(o.d)("Start Date (UTC)", "DevDropsCampaigns"),
                             sorting: this.state.sortingStartDate,
                             onClick: this.sortStartDate
-                        }), r.createElement(O.Ib, {
+                        }), r.createElement(O.Jb, {
                             label: Object(o.d)("End Date (UTC)", "DevDropsCampaigns"),
                             sorting: this.state.sortingEndDate,
                             onClick: this.sortEndDate
-                        }), r.createElement(O.Ib, {
+                        }), r.createElement(O.Jb, {
                             label: Object(o.d)("Enabled", "DevDropsCampaigns"),
                             sorting: this.state.sortingEnabled,
                             onClick: this.sortEnabled
-                        })), r.createElement(O.Fb, null, e)))
+                        })), r.createElement(O.Gb, null, e)))
                     }, t
                 }(r.Component),
-                C = Object(l.compose)(Object(h.b)("DevDropsCampaignsComponent", {
+                b = Object(l.compose)(Object(h.b)("DevDropsCampaignsComponent", {
                     autoReportInteractive: !0
-                }))(b),
+                }))(C),
                 v = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2515,7 +2525,7 @@
                         }, t.onSort = function(e, n) {
                             switch (e) {
                                 case D.Name:
-                                    n === O.yb.Ascending ? t.setState(function(e) {
+                                    n === O.zb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.name.localeCompare(t.name)
@@ -2530,7 +2540,7 @@
                                     });
                                     break;
                                 case D.Id:
-                                    n === O.yb.Ascending ? t.setState(function(e) {
+                                    n === O.zb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.id.localeCompare(t.id)
@@ -2545,7 +2555,7 @@
                                     });
                                     break;
                                 case D.StartDate:
-                                    n === O.yb.Ascending ? t.setState(function(e) {
+                                    n === O.zb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.startDate.getTime() - t.startDate.getTime()
@@ -2560,7 +2570,7 @@
                                     });
                                     break;
                                 case D.EndDate:
-                                    n === O.yb.Ascending ? t.setState(function(e) {
+                                    n === O.zb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.endDate.getTime() - t.endDate.getTime()
@@ -2575,7 +2585,7 @@
                                     });
                                     break;
                                 case D.Enabled:
-                                    n === O.yb.Ascending ? t.setState(function(e) {
+                                    n === O.zb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return Number(e.enabled) - Number(t.enabled)
@@ -2592,7 +2602,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(C, {
+                        return r.createElement(b, {
                             campaigns: this.state.campaigns,
                             onSort: this.onSort
                         })
@@ -2607,8 +2617,8 @@
                     location: m.PageviewLocation.DevSiteDropsCampaigns
                 }), Object(u.a)())(v),
                 U = n("9C/b"),
-                y = n("DMoW"),
-                P = n("PZVp"),
+                P = n("DMoW"),
+                y = n("PZVp"),
                 F = n("/aPz"),
                 M = n("2/NB"),
                 j = n("Lxz1"),
@@ -2643,17 +2653,17 @@
                                                     onMessage: function(e) {
                                                         if (e.upload_id === i) {
                                                             switch (clearTimeout(l.timeoutID), e.status) {
-                                                                case P.a.POSTPROCESS_COMPLETE:
+                                                                case y.a.POSTPROCESS_COMPLETE:
                                                                     l.onFinishUploading && l.onFinishUploading(), t();
                                                                     break;
-                                                                case P.a.WIDTH_VALIDATION_FAILED:
-                                                                case P.a.HEIGHT_VALIDATION_FAILED:
+                                                                case y.a.WIDTH_VALIDATION_FAILED:
+                                                                case y.a.HEIGHT_VALIDATION_FAILED:
                                                                     r(new Error(Object(j.c)()));
                                                                     break;
-                                                                case P.a.FILE_SIZE_VALIDATION_FAILED:
+                                                                case y.a.FILE_SIZE_VALIDATION_FAILED:
                                                                     r(new Error(Object(j.a)()));
                                                                     break;
-                                                                case P.a.IS_IMAGE_VALIDATION_FAILED:
+                                                                case y.a.IS_IMAGE_VALIDATION_FAILED:
                                                                     r(new Error(Object(j.b)(M.b)));
                                                                     break;
                                                                 default:
@@ -2755,16 +2765,16 @@
                 W = n("aCAx"),
                 Y = n("HEnu"),
                 X = n("cZKs"),
-                K = n("NLLf"),
-                z = (n("TofP"), function(e) {
+                z = n("NLLf"),
+                K = (n("TofP"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(O.Bb, {
+                        return r.createElement(O.Cb, {
                             className: "image-uploader-modal",
                             background: O.r.Base
-                        }, r.createElement(K.a, a.__assign({}, this.props)), r.createElement(X.a, {
+                        }, r.createElement(z.a, a.__assign({}, this.props)), r.createElement(X.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t
@@ -2773,7 +2783,7 @@
                     return Object(l.bindActionCreators)({
                         onClose: W.c
                     }, e)
-                })(z),
+                })(K),
                 Z = n("u5aL");
             n("ev0B");
             var J, Q = function(e) {
@@ -2827,15 +2837,15 @@
                             noTail: !0,
                             show: this.state.isOpen,
                             "data-a-target": "time-selector-balloon"
-                        }, r.createElement(O.Bb, {
+                        }, r.createElement(O.Cb, {
                             color: O.O.Link,
                             fontSize: O.Ca.Size5,
                             className: "time-picker__dropdown"
                         }, n))))
                     }, t.prototype.notifyChange = function(e) {
-                        this.props.onChange && this.props.onChange(Object(R.d)(e, this.props.defaultDate))
+                        this.props.onChange && this.props.onChange(Object(S.d)(e, this.props.defaultDate))
                     }, t.prototype.timeToString = function(e) {
-                        return Object(R.b)(e, R.a.timeString)
+                        return Object(S.b)(e, S.a.timeString)
                     }, t.timeOptions = function() {
                         for (var e = [], t = ["00", "30"], n = 0, a = ["am", "pm"]; n < a.length; n++)
                             for (var r = a[n], s = 0; s < 12; ++s)
@@ -2882,11 +2892,11 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderChannels = function() {
                             return t.props.data && t.props.data.users ? t.props.data.users.map(function(e) {
-                                return r.createElement(te, {
-                                    name: e.displayName,
-                                    avatarURL: e.profileImageURL,
-                                    id: e.id,
-                                    key: e.id,
+                                return e && r.createElement(te, {
+                                    name: e.displayName || "",
+                                    avatarURL: e.profileImageURL || "",
+                                    id: e.id || "",
+                                    key: e.id || "",
                                     onClick: t.props.onChannelClick
                                 })
                             }) : null
@@ -2950,7 +2960,7 @@
                                 size: 80
                             }) : null
                         }, n.renderErrorMessage = function() {
-                            if (n.props.errorMessage) return r.createElement(O.Bb, {
+                            if (n.props.errorMessage) return r.createElement(O.Cb, {
                                 className: "dev-drops-campaign-form__error",
                                 color: O.O.Overlay,
                                 "data-test-selector": ae.Error,
@@ -3091,10 +3101,10 @@
                             o = new Date(t.campaign.end_date / 1e6);
                         n.state = {
                             campaignId: t.campaign.id,
-                            startDate: Object(S.b)(i),
-                            startTime: Object(S.b)(i),
-                            endDate: Object(S.b)(o),
-                            endTime: Object(S.b)(o),
+                            startDate: Object(R.b)(i),
+                            startTime: Object(R.b)(i),
+                            endDate: Object(R.b)(o),
+                            endTime: Object(R.b)(o),
                             games: s,
                             isSubmitting: !1,
                             itemIds: new Set(t.campaign.item_ids),
@@ -3110,14 +3120,14 @@
                         channels: [],
                         connectionURL: "",
                         enabled: !1,
-                        endDate: Object(S.a)(),
-                        endTime: Object(S.a)(),
+                        endDate: Object(R.a)(),
+                        endTime: Object(R.a)(),
                         games: [],
                         isSubmitting: !1,
                         itemIds: new Set,
                         itemName: "",
-                        startDate: Object(S.a)(),
-                        startTime: Object(S.a)(),
+                        startDate: Object(R.a)(),
+                        startTime: Object(R.a)(),
                         valid: !1
                     };
                     return n
@@ -3267,16 +3277,16 @@
                             top: 1
                         }
                     }, r.createElement(O.W, {
-                        type: O.Rb.H3
+                        type: O.Sb.H3
                     }, Object(o.d)("Items", "DevDropsCampaignForm"))), r.createElement("fieldset", null, r.createElement(O.Pa, {
                         padding: {
                             y: 1
                         }
                     }, r.createElement("legend", null, r.createElement(O.W, null, Object(o.d)("Select up to {MAX_DROPS_ITEMS_PER_CAMPAIGN} of your currently active items", {
                         MAX_DROPS_ITEMS_PER_CAMPAIGN: $.b
-                    }, "DevDropsCampaignForm")))), r.createElement(O.Xb, {
-                        childWidth: O.Yb.ExtraSmall,
-                        gutterSize: O.Zb.Small,
+                    }, "DevDropsCampaignForm")))), r.createElement(O.Yb, {
+                        childWidth: O.Zb.ExtraSmall,
+                        gutterSize: O.ac.Small,
                         placeholderItems: 20
                     }, this.props.availableItems.map(function(t, n) {
                         var a = t.translations[t.defaultLanguage],
@@ -3299,7 +3309,7 @@
                             src: $.a + "/items/" + e.props.companyId + "/" + t.id + "-120x120.jpg",
                             type: O.Ma.Checkbox,
                             value: t.id
-                        })), s && r.createElement(O.Bb, {
+                        })), s && r.createElement(O.Cb, {
                             display: O.X.InlineFlex,
                             alignItems: O.f.Center,
                             justifyContent: O.Wa.Center,
@@ -3508,7 +3518,7 @@
                                             case 1:
                                                 if (t = a.sent()) return n = {
                                                     campaignID: e,
-                                                    imageType: y.r.LINK_NOTIFICATION,
+                                                    imageType: P.r.LINK_NOTIFICATION,
                                                     serviceID: g(this.props.company),
                                                     token: t
                                                 }, [2, this.props.createUploadURLMutation(n)];
@@ -3541,7 +3551,7 @@
                             display: O.X.Flex,
                             justifyContent: O.Wa.Between
                         }, r.createElement(O.W, {
-                            type: O.Rb.H2
+                            type: O.Sb.H2
                         }, Object(o.d)("Drops Campaign", "DevDropsCreateCampaign")), r.createElement(O.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
@@ -3602,7 +3612,7 @@
                             size: 120
                         }) : null
                     }, n.renderErrorMessage = function() {
-                        if (n.props.errorMessage) return r.createElement(O.Bb, {
+                        if (n.props.errorMessage) return r.createElement(O.Cb, {
                             className: "dev-drops-item-form__error",
                             color: O.O.Overlay,
                             "data-test-selector": Ee.Error,
@@ -3763,7 +3773,7 @@
                         var n = o.a.locales.find(function(e) {
                             return e.locale === t
                         });
-                        if (n) return r.createElement(O.Bb, {
+                        if (n) return r.createElement(O.Cb, {
                             key: t,
                             padding: {
                                 bottom: 1
@@ -3944,7 +3954,7 @@
                                                 return [4, Object(N.a)(f.a.PostItemImageUrl)];
                                             case 1:
                                                 if (t = a.sent()) return n = {
-                                                    imageType: y.r.ITEM,
+                                                    imageType: P.r.ITEM,
                                                     itemID: e,
                                                     serviceID: g(this.props.company),
                                                     token: t
@@ -3967,7 +3977,7 @@
                             display: O.X.Flex,
                             justifyContent: O.Wa.Between
                         }, r.createElement(O.W, {
-                            type: O.Rb.H2
+                            type: O.Sb.H2
                         }, Object(o.d)("Drops Item", "DevDropsCreateItem")), r.createElement(O.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
@@ -4137,7 +4147,7 @@
                                         case 1:
                                             if (e = a.sent()) return t = g(this.props.company), n = {
                                                 campaignID: this.state.campaign.id,
-                                                imageType: y.r.LINK_NOTIFICATION,
+                                                imageType: P.r.LINK_NOTIFICATION,
                                                 serviceID: t,
                                                 token: e
                                             }, [2, this.props.createUploadURLMutation(n)];
@@ -4192,7 +4202,7 @@
                             display: O.X.Flex,
                             justifyContent: O.Wa.Between
                         }, r.createElement(O.W, {
-                            type: O.Rb.H2
+                            type: O.Sb.H2
                         }, Object(o.d)("Drops Campaign: {title}", {
                             title: this.state.campaign.item_name
                         }, "DevDropsEditCampaign")), r.createElement(O.z, {
@@ -4217,7 +4227,7 @@
                         })))) : r.createElement(O.Za, null)
                     }, t
                 }(r.Component),
-                Re = Object(l.compose)(Object(h.b)("DevDropsEditCampaignPage", {
+                Se = Object(l.compose)(Object(h.b)("DevDropsEditCampaignPage", {
                     destination: E.a.DevSiteDropsEditCampaign
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsEditCampaign
@@ -4228,7 +4238,7 @@
             function(e) {
                 e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
             }(Te || (Te = {}));
-            var Se, Ae = function(e) {
+            var Re, Ae = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4383,7 +4393,7 @@
                             display: O.X.Flex,
                             justifyContent: O.Wa.Between
                         }, r.createElement(O.W, {
-                            type: O.Rb.H2
+                            type: O.Sb.H2
                         }, Object(o.d)("Drops Item: {name}", {
                             name: this.state.item.Translations[this.state.item.DefaultLanguage]
                         }, "DevDropsEditItem")), r.createElement(O.z, {
@@ -4406,22 +4416,22 @@
                         })))) : r.createElement(O.Za, null)
                     }, t
                 }(r.Component),
-                be = Object(l.compose)(Object(h.b)("DevDropsEditItemPage", {
+                Ce = Object(l.compose)(Object(h.b)("DevDropsEditItemPage", {
                     destination: E.a.DevSiteDropsEditItem
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsEditItems
                 }), de(), Object(u.a)(), U.a)(Ae),
-                Ce = function(e) {
-                    var t = Object(R.b)(Object(S.b)(e.item.createdAt), "MM/DD/YYYY, hh:mm a"),
-                        n = Object(R.b)(Object(S.b)(e.item.updatedAt), "MM/DD/YYYY, hh:mm a"),
+                be = function(e) {
+                    var t = Object(S.b)(Object(R.b)(e.item.createdAt), "MM/DD/YYYY, hh:mm a"),
+                        n = Object(S.b)(Object(R.b)(e.item.updatedAt), "MM/DD/YYYY, hh:mm a"),
                         a = "/console/drops/items/" + e.item.id;
-                    return r.createElement(O.Jb, null, r.createElement(O.Gb, null, r.createElement(O.U, {
+                    return r.createElement(O.Kb, null, r.createElement(O.Hb, null, r.createElement(O.U, {
                         linkTo: a
-                    }, e.item.translations[e.item.defaultLanguage])), r.createElement(O.Gb, null, e.item.id), r.createElement(O.Gb, null, t), r.createElement(O.Gb, null, n), r.createElement(O.Gb, null, e.item.active.toString()))
+                    }, e.item.translations[e.item.defaultLanguage])), r.createElement(O.Hb, null, e.item.id), r.createElement(O.Hb, null, t), r.createElement(O.Hb, null, n), r.createElement(O.Hb, null, e.item.active.toString()))
                 };
             ! function(e) {
                 e[e.Enabled = 0] = "Enabled", e[e.CreationDate = 1] = "CreationDate", e[e.UpdatedDate = 2] = "UpdatedDate", e[e.Name = 3] = "Name"
-            }(Se || (Se = {}));
+            }(Re || (Re = {}));
             var ve, Le = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -4446,7 +4456,7 @@
                             }
                         }, n.renderCampaignItems = function() {
                             return n.props.items.map(function(e) {
-                                return r.createElement(Ce, {
+                                return r.createElement(be, {
                                     item: e,
                                     key: e.id
                                 })
@@ -4457,7 +4467,7 @@
                                     sortingName: n.toggleSorting(e.sortingName)
                                 }
                             }, function() {
-                                n.props.onSort(Se.Name, n.state.sortingName)
+                                n.props.onSort(Re.Name, n.state.sortingName)
                             })
                         }, n.sortEnabled = function() {
                             n.setState(function(e) {
@@ -4465,7 +4475,7 @@
                                     sortingEnabled: n.toggleSorting(e.sortingEnabled)
                                 }
                             }, function() {
-                                n.props.onSort(Se.Enabled, n.state.sortingEnabled)
+                                n.props.onSort(Re.Enabled, n.state.sortingEnabled)
                             })
                         }, n.sortCreationDate = function() {
                             n.setState(function(e) {
@@ -4473,7 +4483,7 @@
                                     sortingCreationDate: n.toggleSorting(e.sortingCreationDate)
                                 }
                             }, function() {
-                                n.props.onSort(Se.CreationDate, n.state.sortingCreationDate)
+                                n.props.onSort(Re.CreationDate, n.state.sortingCreationDate)
                             })
                         }, n.sortUpdatedDate = function() {
                             n.setState(function(e) {
@@ -4481,15 +4491,15 @@
                                     sortingUpdatedDate: n.toggleSorting(e.sortingUpdatedDate)
                                 }
                             }, function() {
-                                n.props.onSort(Se.UpdatedDate, n.state.sortingUpdatedDate)
+                                n.props.onSort(Re.UpdatedDate, n.state.sortingUpdatedDate)
                             })
                         }, n.toggleSorting = function(e) {
-                            return e === O.yb.Default || e === O.yb.Ascending ? O.yb.Descending : O.yb.Ascending
+                            return e === O.zb.Default || e === O.zb.Ascending ? O.zb.Descending : O.zb.Ascending
                         }, n.state = {
-                            sortingName: O.yb.Default,
-                            sortingEnabled: O.yb.Default,
-                            sortingCreationDate: O.yb.Default,
-                            sortingUpdatedDate: O.yb.Default
+                            sortingName: O.zb.Default,
+                            sortingEnabled: O.zb.Default,
+                            sortingCreationDate: O.zb.Default,
+                            sortingUpdatedDate: O.zb.Default
                         }, n
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
@@ -4512,25 +4522,25 @@
                             onClick: Object(c.c)(c.a.CreateDropsItemProcessStart),
                             linkTo: "/console/drops/items/create",
                             icon: O.rb.Plus
-                        }, Object(o.d)("Create Drops Item", "DevDropsItems"))), r.createElement(O.Eb, null, r.createElement(O.Hb, null, r.createElement(O.Ib, {
+                        }, Object(o.d)("Create Drops Item", "DevDropsItems"))), r.createElement(O.Fb, null, r.createElement(O.Ib, null, r.createElement(O.Jb, {
                             label: Object(o.d)("Item Name", "DevDropsItems"),
                             sorting: this.state.sortingName,
                             onClick: this.sortName
-                        }), r.createElement(O.Ib, {
+                        }), r.createElement(O.Jb, {
                             label: Object(o.d)("Item ID", "DevDropsItems")
-                        }), r.createElement(O.Ib, {
+                        }), r.createElement(O.Jb, {
                             label: Object(o.d)("Creation Date (UTC)", "DevDropsItems"),
                             sorting: this.state.sortingCreationDate,
                             onClick: this.sortCreationDate
-                        }), r.createElement(O.Ib, {
+                        }), r.createElement(O.Jb, {
                             label: Object(o.d)("Last Updated Date (UTC)", "DevDropsItems"),
                             sorting: this.state.sortingUpdatedDate,
                             onClick: this.sortUpdatedDate
-                        }), r.createElement(O.Ib, {
+                        }), r.createElement(O.Jb, {
                             label: Object(o.d)("Enabled", "DevDropsItems"),
                             sorting: this.state.sortingEnabled,
                             onClick: this.sortEnabled
-                        })), r.createElement(O.Fb, null, e)))
+                        })), r.createElement(O.Gb, null, e)))
                     }, t
                 }(r.Component),
                 Ue = function(e) {
@@ -4576,29 +4586,29 @@
                         }, t.onSort = function(e, n) {
                             var a = t.state.pageCursors[t.state.currentPage].items;
                             switch (e) {
-                                case Se.Name:
-                                    a = n === O.yb.Ascending ? a.sort(function(e, t) {
+                                case Re.Name:
+                                    a = n === O.zb.Ascending ? a.sort(function(e, t) {
                                         return e.translations[e.defaultLanguage].localeCompare(t.translations[t.defaultLanguage])
                                     }) : a.sort(function(e, t) {
                                         return t.translations[t.defaultLanguage].localeCompare(e.translations[e.defaultLanguage])
                                     });
                                     break;
-                                case Se.Enabled:
-                                    a = n === O.yb.Ascending ? a.sort(function(e, t) {
+                                case Re.Enabled:
+                                    a = n === O.zb.Ascending ? a.sort(function(e, t) {
                                         return Number(e.active) - Number(t.active)
                                     }) : a.sort(function(e, t) {
                                         return Number(t.active) - Number(e.active)
                                     });
                                     break;
-                                case Se.CreationDate:
-                                    a = n === O.yb.Ascending ? a.sort(function(e, t) {
+                                case Re.CreationDate:
+                                    a = n === O.zb.Ascending ? a.sort(function(e, t) {
                                         return e.createdAt.getTime() - t.createdAt.getTime()
                                     }) : a.sort(function(e, t) {
                                         return t.createdAt.getTime() - e.createdAt.getTime()
                                     });
                                     break;
-                                case Se.UpdatedDate:
-                                    a = n === O.yb.Ascending ? a.sort(function(e, t) {
+                                case Re.UpdatedDate:
+                                    a = n === O.zb.Ascending ? a.sort(function(e, t) {
                                         return e.updatedAt.getTime() - t.updatedAt.getTime()
                                     }) : a.sort(function(e, t) {
                                         return t.updatedAt.getTime() - e.updatedAt.getTime()
@@ -4634,12 +4644,12 @@
                         })
                     }, t
                 }(r.Component),
-                ye = Object(l.compose)(Object(h.b)("DevDropsItemsPage", {
+                Pe = Object(l.compose)(Object(h.b)("DevDropsItemsPage", {
                     destination: E.a.DevSiteDropsItems
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsItems
                 }), Object(u.a)())(Ue),
-                Pe = n("mLw1");
+                ye = n("mLw1");
             (ve || (ve = {})).SubmitButton = "dev-drops-settings-submit";
             var Fe = function(e) {
                     function t() {
@@ -4721,7 +4731,7 @@
                                 bottom: 2
                             }
                         }, r.createElement("header", null, r.createElement(O.Xa, null, r.createElement(O.W, {
-                            type: O.Rb.H2
+                            type: O.Sb.H2
                         }, Object(o.d)("VHS Configuration for Drops", "DevDropsSettings"))), r.createElement(O.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
@@ -4858,7 +4868,7 @@
                             onUpdate: this.onUpdate,
                             currentSettings: this.state.settings,
                             submitSuccess: this.state.submitSuccess
-                        }) : r.createElement(Pe.a, {
+                        }) : r.createElement(ye.a, {
                             to: "/request-access"
                         })
                     }, t
@@ -4879,12 +4889,12 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(O.Db, null, r.createElement(s.a, {
+                        }, r.createElement(O.Eb, null, r.createElement(s.a, {
                             path: "/console/drops",
                             exact: !0
                         }, function(e) {
                             var t = e.match;
-                            return r.createElement(O.Cb, {
+                            return r.createElement(O.Db, {
                                 linkTo: "/console/drops",
                                 active: Boolean(t)
                             }, Object(o.d)("Campaign Manager", "DevDropsDashboardRoot"))
@@ -4893,7 +4903,7 @@
                             exact: !0
                         }, function(t) {
                             var n = t.match;
-                            return r.createElement(O.Cb, {
+                            return r.createElement(O.Db, {
                                 linkTo: e,
                                 active: Boolean(n)
                             }, Object(o.d)("Item Manager", "DevDropsDashboardRoot"))
@@ -4902,7 +4912,7 @@
                             exact: !0
                         }, function(e) {
                             var t = e.match;
-                            return r.createElement(O.Cb, {
+                            return r.createElement(O.Db, {
                                 onClick: Object(c.c)(c.a.ConfigureDropsSettings),
                                 linkTo: "/console/drops/settings",
                                 active: Boolean(t)
@@ -4914,7 +4924,7 @@
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: e,
-                            component: ye
+                            component: Pe
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops/settings",
@@ -4926,7 +4936,7 @@
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops/items/:itemId",
-                            component: be
+                            component: Ce
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops/create",
@@ -4934,7 +4944,7 @@
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops/:campaignId",
-                            component: Re
+                            component: Se
                         })))
                     }, t
                 }(r.Component),

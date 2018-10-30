@@ -193,9 +193,9 @@
                             }), s.createElement(v.H, null, s.createElement(v.Xa, {
                                 padding: 1
                             }, s.createElement(v.W, {
-                                type: v.Rb.H4
+                                type: v.Sb.H4
                             }, h.name), s.createElement(v.W, {
-                                type: v.Rb.Span,
+                                type: v.Sb.Span,
                                 color: v.O.Alt2
                             }, Object(c.d)("Created by {extensionAuthor}", {
                                 extensionAuthor: h.authorName
@@ -219,7 +219,7 @@
                         });
                         return s.createElement(u.b, null, s.createElement(v.Xa, {
                             padding: 2
-                        }, x, s.createElement(v.Bb, {
+                        }, x, s.createElement(v.Cb, {
                             borderRight: !0,
                             borderLeft: !0,
                             borderBottom: !0,
@@ -295,11 +295,11 @@
                     locale: Object(a.d)(e)
                 }
             }
-            var F = Object(i.connect)(L)(y);
+            var S = Object(i.connect)(L)(y);
             t.d(n, "mapStateToProps", function() {
                 return L
             }), t.d(n, "ExtensionConfigurePage", function() {
-                return F
+                return S
             })
         }
     }

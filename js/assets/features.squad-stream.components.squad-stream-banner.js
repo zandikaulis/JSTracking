@@ -94,12 +94,12 @@
                     status: function(e) {
                         switch (e) {
                             case t.SquadStatus.Pending:
-                                return r.I.PENDING;
+                                return r.K.PENDING;
                             case t.SquadStatus.Live:
-                                return r.I.LIVE;
+                                return r.K.LIVE;
                             case t.SquadStatus.Ended:
                             default:
-                                return r.I.ENDED
+                                return r.K.ENDED
                         }
                     }(e.squad.status),
                     members: n
@@ -145,7 +145,7 @@
                                 return e && e.displayName ? r.createElement(v.W, {
                                     bold: !0,
                                     noWrap: !0,
-                                    type: v.Rb.Span,
+                                    type: v.Sb.Span,
                                     color: v.O.Base
                                 }, e.displayName) : ""
                             };
@@ -208,7 +208,7 @@
                             delay: v.j.Medium,
                             duration: v.k.Medium,
                             enabled: !0
-                        }, r.createElement(v.Bb, {
+                        }, r.createElement(v.Cb, {
                             display: v.X.Flex,
                             background: v.r.Base,
                             alignItems: v.f.Center,
@@ -218,12 +218,12 @@
                             },
                             borderRadius: v.x.Large,
                             elevation: 2
-                        }, r.createElement(v.Bb, {
+                        }, r.createElement(v.Cb, {
                             display: v.X.Flex,
                             color: v.O.Overlay
                         }, i), r.createElement(v.Xa, null, r.createElement(v.W, {
                             noWrap: !0,
-                            type: v.Rb.Span,
+                            type: v.Sb.Span,
                             color: v.O.Alt2,
                             fontSize: v.Ca.Size5
                         }, this.makeBannerText(a, t))), r.createElement(v.Xa, {
@@ -244,7 +244,7 @@
                             return e.id === n
                         }))
                     }, n.prototype.shouldRender = function(e) {
-                        return !!Object(q.a)(e.channelLogin) && (!!this.isSquadMember(e) && (!e.data.loading && !e.data.error && (e.data.user && e.data.user.squadStream && e.data.user.squadStream.status === m.I.LIVE || !1)))
+                        return !!Object(q.a)(e.channelLogin) && (!!this.isSquadMember(e) && (!e.data.loading && !e.data.error && (e.data.user && e.data.user.squadStream && e.data.user.squadStream.status === m.K.LIVE || !1)))
                     }, n
                 }(r.Component),
                 b = Object(i.compose)(Object(s.a)(g, {

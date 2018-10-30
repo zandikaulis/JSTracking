@@ -962,7 +962,7 @@
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: r.ec.Above
+                            zIndex: r.fc.Above
                         }, i.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -1664,7 +1664,7 @@
             var a = n("q1tI"),
                 i = n("Ue10"),
                 r = function(e) {
-                    return a.createElement(i.Bb, {
+                    return a.createElement(i.Cb, {
                         className: "settings-page-header",
                         borderTop: !0,
                         borderRight: !0,
@@ -1803,8 +1803,8 @@
                 S = n("2xye"),
                 k = n("geRD"),
                 N = n("EMHe"),
-                T = n("rwxT"),
-                O = n("Ww25"),
+                O = n("rwxT"),
+                T = n("Ww25"),
                 C = n("EpBn"),
                 P = n("3hKJ"),
                 A = n("BK8n"),
@@ -1850,7 +1850,7 @@
                                 placeholder: R,
                                 value: t.state.prefix,
                                 onChange: t.onPrefixChange
-                            }), i.createElement(O.a, {
+                            }), i.createElement(T.a, {
                                 text: Object(p.d)("Prefix must begin with a lowercase letter. Prefix must be 3-10 characters in length, all lowercase. Numbers may follow first character.\nExample of how it will work: {prefix}Emotecode", {
                                     prefix: n
                                 }, "EmoticonPrefix")
@@ -1900,7 +1900,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.prefixState,
                             t = null;
-                        e !== d.s.PENDING && (t = i.createElement(T.a, {
+                        e !== d.s.PENDING && (t = i.createElement(O.a, {
                             status: this.state.saveStatus,
                             onClickSave: this.onClickSave
                         }));
@@ -2095,7 +2095,7 @@
                         position: u.hb.Relative
                     }, this.state.isUploading ? i.createElement(u.Za, null) : i.createElement("img", {
                         src: "" + this.state.url
-                    })), i.createElement(u.Bb, {
+                    })), i.createElement(u.Cb, {
                         padding: {
                             x: 2,
                             y: 2
@@ -2118,7 +2118,7 @@
                         padding: .5
                     }, e ? i.createElement(u.W, {
                         color: u.O.Error,
-                        wordBreak: u.dc.BreakWord
+                        wordBreak: u.ec.BreakWord
                     }, e) : t))), i.createElement(u.W, null, Object(p.d)("{width} x {height}px", {
                         width: this.props.size,
                         height: this.props.size
@@ -2240,7 +2240,7 @@
                             "data-test-selector": "upload-emoticon-button"
                         }, Object(p.d)("Submit Changes", "EmotesUploader")))))
                     }, t.prototype.renderStatus = function() {
-                        return this.state.status === W.Error ? i.createElement(u.Bb, {
+                        return this.state.status === W.Error ? i.createElement(u.Cb, {
                             "data-test-selector": "upload-emoticon-error",
                             borderTop: !0,
                             borderRight: !0,
@@ -2250,7 +2250,7 @@
                                 top: 1
                             },
                             className: "disable-gift-modal__error"
-                        }, i.createElement(u.W, null, Object(p.d)("Something went wrong and your request could not be processed at this time. Please try again later.", "EmotesUploader"))) : this.state.status === W.CodeNotUnique ? i.createElement(u.Bb, {
+                        }, i.createElement(u.W, null, Object(p.d)("Something went wrong and your request could not be processed at this time. Please try again later.", "EmotesUploader"))) : this.state.status === W.CodeNotUnique ? i.createElement(u.Cb, {
                             "data-test-selector": "upload-emoticon-code-invalid",
                             borderTop: !0,
                             borderRight: !0,
@@ -2260,7 +2260,7 @@
                                 top: 1
                             },
                             className: "disable-gift-modal__error"
-                        }, i.createElement(u.W, null, Object(p.d)("An emoticon with the same code already exists.", "EmotesUploader"))) : this.state.status === W.Success ? i.createElement(u.Bb, {
+                        }, i.createElement(u.W, null, Object(p.d)("An emoticon with the same code already exists.", "EmotesUploader"))) : this.state.status === W.Success ? i.createElement(u.Cb, {
                             "data-test-selector": "upload-emoticon-success",
                             borderTop: !0,
                             borderRight: !0,
@@ -2310,11 +2310,11 @@
                                 onChange: this.selectForDelete
                             })),
                             r = n.state && "PENDING" === n.state ? Object(p.d)("( Pending )", "ChatEmoticonsSettingsItem") : "";
-                        return i.createElement(u.Ub, {
+                        return i.createElement(u.Vb, {
                             display: u.X.Flex,
-                            align: u.Vb.Center,
+                            align: u.Wb.Center,
                             label: n.token + r,
-                            direction: u.Wb.Bottom
+                            direction: u.Xb.Bottom
                         }, i.createElement(u.Xa, {
                             display: u.X.InlineBlock,
                             className: "emote-item__img"
@@ -2363,7 +2363,7 @@
                             }, i.createElement(u.Z, null))));
                         var d = r.map(function(t, a) {
                                 var r = null;
-                                if (0 === t.emotes.length) r = i.createElement(u.Bb, {
+                                if (0 === t.emotes.length) r = i.createElement(u.Cb, {
                                     display: u.X.InlineBlock,
                                     key: a,
                                     margin: {
@@ -2506,7 +2506,7 @@
                                 }, "ChatEmoticonsSettingsPage"));
                                 var d = t.props.data.user.subscriberScore.nextEmoteLimit || 0,
                                     c = t.props.data.user.subscriberScore.next || 0;
-                                return i.createElement(i.Fragment, null, t.renderDeleteError(), t.goodStanding(), i.createElement(u.Bb, {
+                                return i.createElement(i.Fragment, null, t.renderDeleteError(), t.goodStanding(), i.createElement(u.Cb, {
                                     className: "chat-emoticons-settings-page__actions"
                                 }, t.state.isEditing ? t.editActions() : i.createElement(u.z, {
                                     onClick: t.toggleEmotesEditing
@@ -2535,7 +2535,7 @@
                                     margin: {
                                         top: 3
                                     }
-                                }, i.createElement(u.Db, null, t.getTabs())), s))
+                                }, i.createElement(u.Eb, null, t.getTabs())), s))
                             }
                             return t.renderPageError()
                         }, t.renderPageError = function() {
@@ -2544,7 +2544,7 @@
                             })
                         }, t.getTabs = function() {
                             return t.props.data.user && t.props.data.user.subscriptionProducts ? t.props.data.user.subscriptionProducts.map(function(e, n) {
-                                return e ? i.createElement(u.Cb, {
+                                return e ? i.createElement(u.Db, {
                                     key: e.tier,
                                     active: t.state.activeTab === n,
                                     "data-tab-target": e.tier,
@@ -2554,7 +2554,7 @@
                                 }, "ChatEmoticonsSettingsPage"))) : null
                             }) : null
                         }, t.goodStanding = function() {
-                            return t.props.data.user && t.props.data.user.isInGoodStanding ? i.createElement(u.Bb, {
+                            return t.props.data.user && t.props.data.user.isInGoodStanding ? i.createElement(u.Cb, {
                                 className: "chat-emoticons-settings-page__goodstanding",
                                 background: u.r.Alt,
                                 color: u.O.Alt,
@@ -2676,7 +2676,7 @@
                             header: e
                         }, this.renderContent())
                     }, t.prototype.renderDeleteError = function() {
-                        return this.state.deleteStatus === z.Error ? i.createElement(u.Bb, {
+                        return this.state.deleteStatus === z.Error ? i.createElement(u.Cb, {
                             borderTop: !0,
                             borderRight: !0,
                             borderBottom: !0,
@@ -2741,7 +2741,7 @@
                 J = n("3R7m"),
                 ee = n("o6p4"),
                 te = function(e) {
-                    return i.createElement(u.Bb, {
+                    return i.createElement(u.Cb, {
                         display: u.X.Flex,
                         flexDirection: u.Aa.Row,
                         background: u.r.Alt,
@@ -2753,7 +2753,7 @@
                         },
                         display: u.X.Flex,
                         alignContent: u.e.Center
-                    }, i.createElement(u.Ub, {
+                    }, i.createElement(u.Vb, {
                         label: e.title,
                         "data-test-selector": "tooltip-selector"
                     }, i.createElement("img", {
@@ -2765,14 +2765,14 @@
                         "data-test-selector": "threshold-selector"
                     }, Object(p.d)("{threshold} Bit Badge", {
                         threshold: Object(p.f)(e.threshold)
-                    }, "ChatBadgeTierItem"))), i.createElement(u.Tb, {
+                    }, "ChatBadgeTierItem"))), i.createElement(u.Ub, {
                         onChange: e.onToggle,
                         checked: e.checked,
                         "data-test-selector": "toggle-selector"
                     }, Object(p.d)("Edit", "ChatBadgeTierItem")))
                 },
                 ne = function() {
-                    return i.createElement(u.Bb, {
+                    return i.createElement(u.Cb, {
                         padding: 1,
                         display: u.X.Flex,
                         flexDirection: u.Aa.Row
@@ -2910,7 +2910,7 @@
                         var e = this.props,
                             t = e.error,
                             n = e.children;
-                        return i.createElement(u.Bb, {
+                        return i.createElement(u.Cb, {
                             position: u.hb.Relative,
                             padding: 5,
                             background: u.r.Alt
@@ -2918,7 +2918,7 @@
                             allowedFileTypes: [".png"],
                             onFilesSubmitted: this.onFilesSubmitted,
                             error: t
-                        }, i.createElement(u.Bb, {
+                        }, i.createElement(u.Cb, {
                             position: u.hb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
@@ -3324,8 +3324,8 @@
             ! function(e) {
                 e.ALLTIME = "ALLTIME", e.MONTH = "MONTH", e.WEEK = "WEEK"
             }(se || (se = {}));
-            var Ne, Te = n("TEIt"),
-                Oe = n("7LUr"),
+            var Ne, Oe = n("TEIt"),
+                Te = n("7LUr"),
                 Ce = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -3354,7 +3354,7 @@
                                         case 1:
                                             return a.trys.push([1, 3, , 4]), [4, i(Object(k.b)(s, d))];
                                         case 2:
-                                            return c = a.sent(), Object(k.e)(Oe, {
+                                            return c = a.sent(), Object(k.e)(Te, {
                                                 login: o
                                             }, function(e) {
                                                 return e.user && e.user.settings && e.user.settings.cheer && c.data.updateCheerPartnerSettings && (e.user.settings.cheer.leaderboard.isEnabled = c.data.updateCheerPartnerSettings.cheer.leaderboard.isEnabled), e
@@ -3391,7 +3391,7 @@
                                         case 1:
                                             return a.trys.push([1, 3, , 4]), [4, i(Object(k.b)(s, d))];
                                         case 2:
-                                            return c = a.sent(), Object(k.e)(Oe, {
+                                            return c = a.sent(), Object(k.e)(Te, {
                                                 login: o
                                             }, function(e) {
                                                 return e.user && e.user.settings && e.user.settings.cheer && c.data.updateCheerPartnerSettings && (e.user.settings.cheer.leaderboard.timePeriod = c.data.updateCheerPartnerSettings.cheer.leaderboard.timePeriod), e
@@ -3420,7 +3420,7 @@
                             checked: t,
                             onChange: this.onLeaderboardEnabledCheckBoxClick,
                             "data-test-selector": "top-cheerers-checkbox-selector"
-                        }), i.createElement(O.a, {
+                        }), i.createElement(T.a, {
                             text: Object(p.d)("Pin Top Cheerers to the top of your chat.", "PinnedCheerSettings")
                         })), i.createElement(C.a, {
                             label: Object(p.d)("Top Cheerers Time Range", "PinnedCheerSettings")
@@ -3447,12 +3447,12 @@
                             value: se.ALLTIME,
                             checked: n === se.ALLTIME,
                             onChange: this.onLeaderboardTimePeriodRadioButtonClick
-                        })), i.createElement(O.a, {
+                        })), i.createElement(T.a, {
                             text: Object(p.d)("Choose Weekly for a leaderboard that automatically resets every Monday 12:01AM PT. Choose Monthly to reset every 1st day of the month. Choose All-Time for a leaderboard that tracks the Top Cheerers in your channel for all time, starting from when Bits launched in June of 2016.", "PinnedCheerSettings")
                         })))
                     }, t
                 }(i.Component),
-                Pe = Object(v.compose)(Object(b.a)(Oe, {
+                Pe = Object(v.compose)(Object(b.a)(Te, {
                     options: function(e) {
                         return {
                             variables: {
@@ -3460,11 +3460,11 @@
                             }
                         }
                     }
-                }), Object(b.a)(Te, {
+                }), Object(b.a)(Oe, {
                     name: "setPinnedCheerSettings"
                 }), Object(c.b)("PinnedCheerSettingsForm"), Object(ye.a)(function(e) {
                     return {
-                        query: Oe,
+                        query: Te,
                         variables: {
                             login: e.channelName
                         },
@@ -3558,7 +3558,7 @@
                         }, e.user.settings.cheer.customPrefix.prefix));
                         var r = this.tiers.map(function(e, t) {
                                 var n = e.images[0];
-                                return i.createElement(u.Bb, {
+                                return i.createElement(u.Cb, {
                                     key: n ? n.id : t,
                                     background: u.r.Alt2,
                                     border: !0,
@@ -3576,7 +3576,7 @@
                             }).length;
                         return i.createElement(C.a, {
                             label: Object(p.d)("Enable Cheermotes", "CheermtoesEnableForm")
-                        }, i.createElement(u.Tb, {
+                        }, i.createElement(u.Ub, {
                             checked: n,
                             onChange: this.onItemToggle,
                             error: t
@@ -3593,10 +3593,10 @@
                         }, i.createElement(u.W, {
                             color: u.O.Alt2
                         }, Object(p.d)("Cheermote Code", "CheermotesEnableForm")), a), i.createElement(u.Xa, null, i.createElement(u.W, {
-                            type: u.Rb.Span,
+                            type: u.Sb.Span,
                             color: u.O.Alt2
                         }, Object(p.d)("Tiers", "CheermotesEnableForm")), " ", i.createElement(u.W, {
-                            type: u.Rb.Span,
+                            type: u.Sb.Span,
                             color: 5 === o ? u.O.Base : u.O.Error
                         }, Object(p.d)("{tierNum}/{totalTiers}", {
                             tierNum: o,
@@ -3645,7 +3645,7 @@
                             className: "cheermote-upload-drop-zone",
                             display: u.X.Flex,
                             flexDirection: u.Aa.Column
-                        }, i.createElement(u.Bb, {
+                        }, i.createElement(u.Cb, {
                             className: "cheermote-upload-drop-zone__drop-zone",
                             position: u.hb.Relative,
                             padding: 5,
@@ -3654,7 +3654,7 @@
                             allowedFileTypes: [".png", ".gif"],
                             onFilesSubmitted: this.onFilesSubmitted,
                             error: this.props.error
-                        }, i.createElement(u.Bb, {
+                        }, i.createElement(u.Cb, {
                             position: u.hb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
@@ -3665,7 +3665,7 @@
                             alignItems: u.f.Center,
                             justifyContent: u.Wa.Center
                         }, e))), i.createElement(u.Xa, {
-                            textAlign: u.Nb.Center,
+                            textAlign: u.Ob.Center,
                             padding: {
                                 top: 1
                             }
@@ -3769,7 +3769,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return this.props.imageSrc && i.createElement(u.Bb, {
+                        return this.props.imageSrc && i.createElement(u.Cb, {
                             background: u.r.Alt,
                             display: u.X.Flex,
                             alignItems: u.f.Center,
@@ -4064,7 +4064,7 @@
                         onImageSubmissionError: this.onCreateUploadRequestError,
                         uploadError: this.state.advancedLoadingError,
                         errorDimension: this.state.errorDimension
-                    })), this.state.uploadType === je.Simple && this.state.simpleLoadingError && i.createElement(u.Bb, {
+                    })), this.state.uploadType === je.Simple && this.state.simpleLoadingError && i.createElement(u.Cb, {
                         display: u.X.Flex,
                         alignItems: u.f.Center,
                         background: u.r.Alt,
@@ -4074,7 +4074,7 @@
                         }
                     }, i.createElement(u.W, {
                         color: u.O.Error
-                    }, this.state.simpleLoadingError)), this.state.uploadType === je.Advanced && this.state.advancedLoadingError && t.length && i.createElement(u.Bb, {
+                    }, this.state.simpleLoadingError)), this.state.uploadType === je.Advanced && this.state.advancedLoadingError && t.length && i.createElement(u.Cb, {
                         display: u.X.Flex,
                         alignItems: u.f.Center,
                         background: u.r.Alt,
@@ -4090,7 +4090,7 @@
                         }
                     }, i.createElement(Xe, {
                         imageSrc: n.url
-                    }))), this.state.uploading && i.createElement(u.Bb, {
+                    }))), this.state.uploading && i.createElement(u.Cb, {
                         className: "cheermote-upload-area__uploading",
                         display: u.X.Flex,
                         flexDirection: u.Aa.Column,
@@ -4200,11 +4200,11 @@
                             className: "cheermote-upload-form__error",
                             fullWidth: !0,
                             justifyContent: u.Wa.Center,
-                            textAlign: u.Nb.Center,
+                            textAlign: u.Ob.Center,
                             alignItems: u.f.Center
                         }, i.createElement(u.W, null, Object(p.d)("An unexpected error occurred while loading the upload wizard", "CheermotesUploadForm")));
                         var t = this.tiers.map(function(t) {
-                                return i.createElement(u.Cb, {
+                                return i.createElement(u.Db, {
                                     key: t.id,
                                     active: e.state.activeTab === t.bits,
                                     onClick: e.onTabSelect,
@@ -4220,7 +4220,7 @@
                             padding: {
                                 bottom: 2
                             }
-                        }, i.createElement(u.W, null, Object(p.d)('Please upload a 112 x 112px GIF image with a transparent background. Your image will be automatically scaled to smaller sizes. To fine-ture smaller sizes and light/dark mode, turn on "Advanced" option below. (The maximum file size is 500kb)', "CheermotesUploadForm"))), i.createElement(u.Db, null, t), i.createElement(u.Xa, {
+                        }, i.createElement(u.W, null, Object(p.d)('Please upload a 112 x 112px GIF image with a transparent background. Your image will be automatically scaled to smaller sizes. To fine-ture smaller sizes and light/dark mode, turn on "Advanced" option below. (The maximum file size is 500kb)', "CheermotesUploadForm"))), i.createElement(u.Eb, null, t), i.createElement(u.Xa, {
                             padding: {
                                 top: 2
                             }
@@ -4371,23 +4371,23 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         return i.createElement(u.Xa, {
                             padding: 3
-                        }, i.createElement(u.Bb, {
+                        }, i.createElement(u.Cb, {
                             padding: {
                                 bottom: 3
                             },
                             borderBottom: !0,
-                            textAlign: u.Nb.Center
+                            textAlign: u.Ob.Center
                         }, i.createElement(u.W, {
-                            type: u.Rb.H4
+                            type: u.Sb.H4
                         }, Object(p.d)("Addendum to Content Partner Agreement – Commerce Addendum", "CommerceAmendmentModal"))), i.createElement(u.Xa, {
                             padding: {
                                 top: 2,
                                 bottom: 2
                             },
-                            textAlign: u.Nb.Center
+                            textAlign: u.Ob.Center
                         }, i.createElement(u.W, {
                             fontSize: u.Ca.Size5
-                        }, Object(p.d)('Please read and agree to the following addendum ("Addendum") to your Content License and Base Agreement (or Content License Agreement, as applicable) (the "Agreement") with Twitch in order to be eligible to earn revenue for certain purchases by a Twitch user that is viewing your Twitch channel.', "CommerceAmendmentModal"))), i.createElement(u.Bb, {
+                        }, Object(p.d)('Please read and agree to the following addendum ("Addendum") to your Content License and Base Agreement (or Content License Agreement, as applicable) (the "Agreement") with Twitch in order to be eligible to earn revenue for certain purchases by a Twitch user that is viewing your Twitch channel.', "CommerceAmendmentModal"))), i.createElement(u.Cb, {
                             borderTop: !0,
                             borderRight: !0,
                             borderBottom: !0,
@@ -4398,13 +4398,13 @@
                             className: "amendment-modal__amendment-text",
                             "data-test-selector": "amendment-modal-text-container"
                         }, i.createElement(u.W, null, 'Twitch, in its sole discretion, may make specially-formatted links appear on your Twitch channel page (a "', i.createElement(u.W, {
-                            type: u.Rb.Span,
+                            type: u.Sb.Span,
                             bold: !0
                         }, "Special Link"), '"), which would direct Twitch users to the purchase of a software application, video game, in-game item or other digital product (a "', i.createElement(u.W, {
-                            type: u.Rb.Span,
+                            type: u.Sb.Span,
                             bold: !0
                         }, "Product"), '") from Twitch. For every such purchase of a Product that is a Qualifying Purchase (as defined below), you will receive a fee (a "', i.createElement(u.W, {
-                            type: u.Rb.Span,
+                            type: u.Sb.Span,
                             bold: !0
                         }, "Product Purchase Fee"), '") that will be equal to five percent (5%) of (a) the purchase price of such Product, as such price was listed by Twitch at the time of the Qualifying Purchase and in the currency in which the Qualifying Purchase was made, less (b) any special discounts or promotions, taxes, service charges, rebates, payment processing fees (e.g. credit card processing fees) and any other related transaction and processing expenses.'), i.createElement(u.W, null, 'A "', i.createElement("strong", null, "Qualifying Purchase"), '" of a Product occurs when: (a) a user of Twitch clicks through a Special Link on your Twitch channel page; (b) such user purchases a Product(s); and (c) Twitch receives a fully settled payment for the purchase by such user.'), i.createElement(u.W, null, "If we pay you a Product Purchase Fee and later issue a refund or credit to the Twitch user for such Qualifying Purchase (or receive a chargeback related to the Qualifying Purchase), we may offset the amount of the Product Purchase Fee we previously paid you for such Qualifying Purchase against future Product Purchase Fees or other amounts that would otherwise be payable to you under the Agreement or this Addendum, or require you to remit that amount to us."), i.createElement(u.W, null, "This Addendum is governed by and subject to the Agreement. Capitalized terms used but not defined in this Addendum will have the meanings defined in the Agreement. Except as amended by this Addendum, all other terms and conditions of the Agreement remain in full force and effect."))), i.createElement(u.Xa, {
                             padding: {
@@ -4413,7 +4413,7 @@
                             }
                         }, i.createElement(u.W, {
                             fontSize: u.Ca.Size4
-                        }, Object(p.d)("Summary", "CommerceAmendmentModal")), i.createElement(u.W, null, Object(p.d)("By accepting below, you may earn revenue for certain purchases by your viewers as described above.", "CommerceAmendmentModal"))), i.createElement(u.Bb, {
+                        }, Object(p.d)("Summary", "CommerceAmendmentModal")), i.createElement(u.W, null, Object(p.d)("By accepting below, you may earn revenue for certain purchases by your viewers as described above.", "CommerceAmendmentModal"))), i.createElement(u.Cb, {
                             borderTop: !0,
                             display: u.X.Flex,
                             flexDirection: u.Aa.Row,
@@ -4443,7 +4443,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(u.Bb, {
+                        return i.createElement(u.Cb, {
                             className: "amendment-modal__container",
                             background: u.r.Base
                         }, i.createElement(rt, {
@@ -4529,7 +4529,7 @@
                             padding: {
                                 left: 2
                             }
-                        }, i.createElement(u.W, null, this.props.brandName))), i.createElement(u.Tb, {
+                        }, i.createElement(u.W, null, this.props.brandName))), i.createElement(u.Ub, {
                             checked: this.props.isOptedIn,
                             onChange: this.onToggle
                         })), i.createElement(u.Pa, {
@@ -4640,8 +4640,8 @@
                 St = n("BLPV"),
                 kt = n("wGZM"),
                 Nt = n("98xD"),
-                Tt = n("qqE+"),
-                Ot = 1,
+                Ot = n("qqE+"),
+                Tt = 1,
                 Ct = 1e4,
                 Pt = function(e) {
                     function t(t) {
@@ -4659,7 +4659,7 @@
                                 o = St.b.DirtyChanges,
                                 s = i,
                                 l = !1;
-                            (!r || !a || r < Ot || a && r < a) && (o = St.b.NoChanges, s = St.b.NoChanges), a && r < a && (l = !0), n.setState({
+                            (!r || !a || r < Tt || a && r < a) && (o = St.b.NoChanges, s = St.b.NoChanges), a && r < a && (l = !0), n.setState({
                                 minBitsToCheer: r,
                                 minBitsToCheerError: l,
                                 minBitsPerEmoteError: !1,
@@ -4674,7 +4674,7 @@
                                 o = i,
                                 s = St.b.DirtyChanges,
                                 l = !1;
-                            (!r || !a || r < Ot || a && a < r) && (o = St.b.NoChanges, s = St.b.NoChanges), a && a < r && (l = !0), n.setState({
+                            (!r || !a || r < Tt || a && a < r) && (o = St.b.NoChanges, s = St.b.NoChanges), a && a < r && (l = !0), n.setState({
                                 minBitsPerEmote: r,
                                 minBitsToCheerError: !1,
                                 minBitsPerEmoteError: l,
@@ -4804,7 +4804,7 @@
                             }
                         }, i.createElement(u.Ra, {
                             type: u.Ta.Number,
-                            min: Ot,
+                            min: Tt,
                             max: Ct,
                             value: isNaN(t) ? "" : String(t),
                             onChange: this.onMinBitsToCheerInputChange,
@@ -4818,17 +4818,17 @@
                                 default: 12,
                                 sm: 8
                             }
-                        }, i.createElement(O.a, {
+                        }, i.createElement(T.a, {
                             text: i.createElement(i.Fragment, null, i.createElement(u.Xa, {
                                 display: u.X.Inline,
                                 margin: {
                                     right: .5
                                 }
-                            }, Object(p.d)("Set the minimum number of Bits needed to send a Cheer message in your channel. We only recommend setting this above 1 to combat spam in chat.", "CheerSettingsPage")), i.createElement(u.Bb, {
+                            }, Object(p.d)("Set the minimum number of Bits needed to send a Cheer message in your channel. We only recommend setting this above 1 to combat spam in chat.", "CheerSettingsPage")), i.createElement(u.Cb, {
                                 display: u.X.InlineBlock,
                                 color: u.O.Alt2,
-                                verticalAlign: u.bc.Middle
-                            }, i.createElement(u.Ub, {
+                                verticalAlign: u.cc.Middle
+                            }, i.createElement(u.Vb, {
                                 label: Object(p.d)("For example, if you choose 30, viewers will not be able to send a Cheer message with 29 or fewer Bits. They will need to use at least 30 Bits, either in a single emote, or by combining emotes that add up to at least 30 Bits.", "CheerSettingsPage"),
                                 width: 300
                             }, i.createElement(u.qb, {
@@ -4855,7 +4855,7 @@
                             }
                         }, i.createElement(u.Ra, {
                             type: u.Ta.Number,
-                            min: Ot,
+                            min: Tt,
                             max: Ct,
                             value: isNaN(a) ? "" : String(a),
                             onChange: this.onMinBitsPerEmoteInputChange,
@@ -4869,17 +4869,17 @@
                                 default: 12,
                                 sm: 8
                             }
-                        }, i.createElement(O.a, {
+                        }, i.createElement(T.a, {
                             text: i.createElement(i.Fragment, null, i.createElement(u.Xa, {
                                 display: u.X.Inline,
                                 margin: {
                                     right: .5
                                 }
-                            }, Object(p.d)("Set the smallest Bit Emote that can be used in your channel. We only recommend setting this above 1 to combat spam in chat.", "CheerSettingsPage")), i.createElement(u.Bb, {
+                            }, Object(p.d)("Set the smallest Bit Emote that can be used in your channel. We only recommend setting this above 1 to combat spam in chat.", "CheerSettingsPage")), i.createElement(u.Cb, {
                                 display: u.X.InlineBlock,
                                 color: u.O.Alt2,
-                                verticalAlign: u.bc.Middle
-                            }, i.createElement(u.Ub, {
+                                verticalAlign: u.cc.Middle
+                            }, i.createElement(u.Vb, {
                                 label: Object(p.d)("Bit Emote means the individual Bit Emotes that appear in chat. For example, if you choose 100, viewers cannot send “Cheer150 Cheer90” because Cheer90 is less than 100. “Cheer150 Cheer150” would be acceptable, because both cheers are greater than 100.", "CheerSettingsPage"),
                                 width: 300
                             }, i.createElement(u.qb, {
@@ -4898,7 +4898,7 @@
                             }
                         }
                     }
-                }), Object(b.a)(Tt, {
+                }), Object(b.a)(Ot, {
                     name: "setMinBitsToCheer"
                 }), Object(b.a)(Nt, {
                     name: "setMinBitsPerEmote"
@@ -5005,13 +5005,13 @@
                                 var d = r.user.settings.cheer,
                                     c = d.hasSignedBitsAmendment,
                                     m = d.isOnboarded;
-                                e = c ? i.createElement(u.Bb, {
+                                e = c ? i.createElement(u.Cb, {
                                     padding: 2,
                                     "data-test-selector": lt.NotOnboardedPrompt
-                                }, i.createElement(u.ac, null, i.createElement("p", null, Object(p.d)("You have successfully completed your tax forms. Now click Enable Bits to complete onboarding.", "CheerSettingsForm"))), i.createElement(u.Xa, {
+                                }, i.createElement(u.bc, null, i.createElement("p", null, Object(p.d)("You have successfully completed your tax forms. Now click Enable Bits to complete onboarding.", "CheerSettingsForm"))), i.createElement(u.Xa, {
                                     display: u.X.Flex,
                                     alignItems: u.f.Center
-                                }, i.createElement(u.Bb, {
+                                }, i.createElement(u.Cb, {
                                     margin: {
                                         right: 1
                                     }
@@ -5023,10 +5023,10 @@
                                     onClick: this.onSuccessLinkClick
                                 }, Object(p.d)("Click here to see your Bits & Cheering settings", "CheerSettingsForm")), l && i.createElement(u.W, {
                                     color: u.O.Error
-                                }, Object(p.d)("There was an error enabling Bits. Please try later or reach out to support.", "CheerSettingsForm")))) : i.createElement(u.Bb, {
+                                }, Object(p.d)("There was an error enabling Bits. Please try later or reach out to support.", "CheerSettingsForm")))) : i.createElement(u.Cb, {
                                     padding: 2,
                                     "data-test-selector": lt.NotSignedBitsAmendmentPrompt
-                                }, i.createElement(u.ac, null, i.createElement("p", null, Object(p.d)("To enable Bits, we need your tax and payout information.", "CheerSettingsForm")), i.createElement("ul", null, i.createElement("li", null, Object(p.d)("After clicking Get Started click Start Over", "CheerSettingsForm")), i.createElement("li", null, Object(p.d)("Complete the registration, partner agreements, tax forms, and payout method.", "CheerSettingsForm")), i.createElement("li", null, Object(p.d)("Once you have completed the 4 steps, come back and click enable Bits!", "CheerSettingsForm")))), i.createElement(u.z, {
+                                }, i.createElement(u.bc, null, i.createElement("p", null, Object(p.d)("To enable Bits, we need your tax and payout information.", "CheerSettingsForm")), i.createElement("ul", null, i.createElement("li", null, Object(p.d)("After clicking Get Started click Start Over", "CheerSettingsForm")), i.createElement("li", null, Object(p.d)("Complete the registration, partner agreements, tax forms, and payout method.", "CheerSettingsForm")), i.createElement("li", null, Object(p.d)("Once you have completed the 4 steps, come back and click enable Bits!", "CheerSettingsForm")))), i.createElement(u.z, {
                                     linkTo: "/" + n + "/dashboard/settings/revenue/payout-onboarding"
                                 }, Object(p.d)("Get Started", "CheerSettingsForm")))
                             } else e = i.createElement(i.Fragment, null, i.createElement(At, {
@@ -5222,10 +5222,10 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         return i.createElement(C.a, {
                             label: this.props.label
-                        }, i.createElement(u.Tb, {
+                        }, i.createElement(u.Ub, {
                             checked: this.props.isToggled,
                             onChange: this.onChange
-                        }), i.createElement(O.a, {
+                        }), i.createElement(T.a, {
                             text: this.props.description
                         }))
                     }, t
@@ -5401,13 +5401,13 @@
                 }))(Ht),
                 $t = n("nHFd"),
                 Zt = function(e) {
-                    return i.createElement(u.Bb, {
+                    return i.createElement(u.Cb, {
                         background: u.r.Base,
                         padding: {
                             x: 2,
                             y: 3
                         }
-                    }, i.createElement(u.Bb, {
+                    }, i.createElement(u.Cb, {
                         borderBottom: !0,
                         margin: {
                             bottom: 2
@@ -5416,12 +5416,12 @@
                             bottom: 2
                         }
                     }, i.createElement(u.W, {
-                        type: u.Rb.H4
+                        type: u.Sb.H4
                     }, Object(p.d)("Save Badge Images", "LoyaltyBadgeUploadModalPresentation"))), i.createElement(u.Xa, {
                         margin: {
                             bottom: 2
                         }
-                    }, i.createElement(u.W, null, Object(p.d)("By uploading and saving these images, you are confirming that you own all rights to the images.", "LoyaltyBadgeUploadModalPresentation"))), i.createElement(u.Bb, {
+                    }, i.createElement(u.W, null, Object(p.d)("By uploading and saving these images, you are confirming that you own all rights to the images.", "LoyaltyBadgeUploadModalPresentation"))), i.createElement(u.Cb, {
                         borderTop: !0,
                         padding: {
                             top: 2
@@ -5651,7 +5651,7 @@
                                 margin: {
                                     right: 1
                                 },
-                                verticalAlign: u.bc.Top
+                                verticalAlign: u.cc.Top
                             }, i.createElement(u.Xa, {
                                 className: t,
                                 margin: {
@@ -5659,8 +5659,8 @@
                                 }
                             }, a), i.createElement(u.W, null, e.name))
                         }, t.renderToolTip = function(e, t) {
-                            return i.createElement(u.Ub, {
-                                direction: u.Wb.Bottom,
+                            return i.createElement(u.Vb, {
+                                direction: u.Xb.Bottom,
                                 label: e
                             }, i.createElement("img", {
                                 src: t,
@@ -5692,7 +5692,7 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderContainer = function(e, n) {
                             return i.createElement(u.Xa, {
-                                textAlign: u.Nb.Center,
+                                textAlign: u.Ob.Center,
                                 margin: {
                                     right: 1
                                 }
@@ -5742,13 +5742,13 @@
                     }, t
                 }(i.Component),
                 gn = function(e) {
-                    return i.createElement(u.Bb, {
+                    return i.createElement(u.Cb, {
                         background: u.r.Base,
                         padding: {
                             x: 2,
                             y: 3
                         }
-                    }, i.createElement(u.Bb, {
+                    }, i.createElement(u.Cb, {
                         borderBottom: !0,
                         margin: {
                             bottom: 2
@@ -5757,12 +5757,12 @@
                             bottom: 2
                         }
                     }, i.createElement(u.W, {
-                        type: u.Rb.H4
+                        type: u.Sb.H4
                     }, Object(p.d)("Are you sure?", "LoyaltyBadgeDeleteModalPresentation"))), i.createElement(u.Xa, {
                         margin: {
                             bottom: 2
                         }
-                    }, i.createElement(u.W, null, Object(p.d)("Deleting your subscriber badge could negatively impact your subscribers.", "LoyaltyBadgeDeleteModalPresentation"))), i.createElement(u.Bb, {
+                    }, i.createElement(u.W, null, Object(p.d)("Deleting your subscriber badge could negatively impact your subscribers.", "LoyaltyBadgeDeleteModalPresentation"))), i.createElement(u.Cb, {
                         borderTop: !0,
                         padding: {
                             top: 2
@@ -5854,7 +5854,7 @@
             var Sn = 25e3,
                 kn = Sn / 1e3,
                 Nn = ["image/png"],
-                Tn = function(e) {
+                On = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -5906,7 +5906,7 @@
                         return i.createElement(u.Xa, {
                             position: u.hb.Relative
                         }, i.createElement(u.Xa, {
-                            textAlign: u.Nb.Center,
+                            textAlign: u.Ob.Center,
                             margin: {
                                 right: 1
                             }
@@ -5923,7 +5923,7 @@
                             padding: .5
                         }, e ? i.createElement(u.W, {
                             color: u.O.Error,
-                            wordBreak: u.dc.BreakWord
+                            wordBreak: u.ec.BreakWord
                         }, e) : this.props.children))), i.createElement(u.W, null, Object(p.d)("{width} x {height}px", {
                             width: this.props.widthRequirement,
                             height: this.props.heightRequirement
@@ -5933,7 +5933,7 @@
                         })))
                     }, t
                 }(i.Component),
-                On = function(e) {
+                Tn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderFilePickerContents = function() {
@@ -5949,19 +5949,19 @@
                             t = e.image1xURL,
                             n = e.image2xURL,
                             a = e.image4xURL;
-                        return i.createElement(i.Fragment, null, i.createElement(Tn, {
+                        return i.createElement(i.Fragment, null, i.createElement(On, {
                             onFileSubmitted: this.props.onImage1xSubmitted,
                             heightRequirement: 18,
                             widthRequirement: 18
                         }, t ? i.createElement("img", {
                             src: t
-                        }) : this.renderFilePickerContents()), i.createElement(Tn, {
+                        }) : this.renderFilePickerContents()), i.createElement(On, {
                             onFileSubmitted: this.props.onImage2xSubmitted,
                             heightRequirement: 36,
                             widthRequirement: 36
                         }, n ? i.createElement("img", {
                             src: n
-                        }) : this.renderFilePickerContents()), i.createElement(Tn, {
+                        }) : this.renderFilePickerContents()), i.createElement(On, {
                             onFileSubmitted: this.props.onImage4xSubmitted,
                             heightRequirement: 72,
                             widthRequirement: 72
@@ -5984,14 +5984,14 @@
                                 return e.availableToAffiliate
                             })).map(function(e) {
                                 var n = e.requiredTenureMonths;
-                                return i.createElement(u.Cb, {
+                                return i.createElement(u.Db, {
                                     key: n,
                                     active: t.props.activeTab === n,
                                     "data-tab-target": n,
                                     onClick: t.toggleActiveTab
                                 }, i.createElement(u.W, null, e.name))
                             });
-                            return i.createElement(u.Db, null, n)
+                            return i.createElement(u.Eb, null, n)
                         }, t.renderTabContent = function() {
                             var e = t.props.activeTab,
                                 n = t.props.badgesMap.get(e);
@@ -6007,7 +6007,7 @@
                                 title: n.title,
                                 onDeleteClick: t.props.onDeleteClick,
                                 deleteStatus: t.props.deleteStatus
-                            }) : i.createElement(On, {
+                            }) : i.createElement(Tn, {
                                 image1xURL: t.props.image1xDataURL,
                                 image2xURL: t.props.image2xDataURL,
                                 image4xURL: t.props.image4xDataURL,
@@ -6016,7 +6016,7 @@
                                 onImage4xSubmitted: t.props.onImage4xSubmitted
                             }))
                         }, t.renderTosWarning = function() {
-                            return "affiliate_access" === p.p.experiments.getAssignment(f.b.SubsAffiliateBadges) ? i.createElement(u.Bb, {
+                            return "affiliate_access" === p.p.experiments.getAssignment(f.b.SubsAffiliateBadges) ? i.createElement(u.Cb, {
                                 className: "loyalty-badges-page__toswarning",
                                 background: u.r.Alt,
                                 color: u.O.Alt,
@@ -6286,7 +6286,7 @@
                     }, t.prototype.render = function() {
                         if (this.state.errorLoadingBadges) return i.createElement(g.a, null);
                         if ((!this.props.data.user || !this.props.data.user.id) && this.props.data.error) return i.createElement(g.a, null);
-                        var e = i.createElement(T.a, {
+                        var e = i.createElement(O.a, {
                                 status: this.state.saveStatus,
                                 onClickSave: this.handleModalOpen
                             }),
@@ -6404,9 +6404,9 @@
                             bottom: 1
                         }
                     }, i.createElement(u.W, {
-                        type: u.Rb.H4
+                        type: u.Sb.H4
                     }, Object(p.d)("Twitch Affiliate Agreement", "AffiliateAgreement"))), i.createElement(u.W, {
-                        type: u.Rb.P
+                        type: u.Sb.P
                     }, Object(p.d)('By clicking the "{buttonLabel}" button below, you agree to the <x:link>Twitch Affiliate Agreement</x:link> (including all policies, appendices, specifications, guidelines, schedules, and other rules incorporated by reference therein); provided, however, that the Twitch Affiliate Agreement shall not be effective until we determine that you are eligible to participate in the Twitch Affiliate Program as further described therein.', {
                         buttonLabel: Object(p.d)("Agree", "AffiliateAgreement"),
                         "x:link": function(e) {
@@ -6422,9 +6422,9 @@
                             bottom: 1
                         }
                     }, i.createElement(u.W, {
-                        type: u.Rb.H4
+                        type: u.Sb.H4
                     }, Object(p.d)("Twitch Partner Program Terms", "CustomPartnerAgreement"))), i.createElement(u.W, {
-                        type: u.Rb.P
+                        type: u.Sb.P
                     }, Object(p.d)("Your Twitch Partner Agreement has been emailed to you via DocuSign. Check the inbox of the email address associated with your Twitch account for an email from DocuSign/Twitch and follow the instructions. Once you have signed the Twitch Partner Agreement, please click {buttonLabel} to continue.", {
                         buttonLabel: Object(p.d)("Next", "CustomPartnerAgreement")
                     }, "CustomPartnerAgreement")))
@@ -6435,15 +6435,15 @@
                             bottom: 1
                         }
                     }, i.createElement(u.W, {
-                        type: u.Rb.H4
+                        type: u.Sb.H4
                     }, Object(p.d)("Twitch Extensions Developer Program Terms", "ExtensionsDeveloperAgreement"))), i.createElement(u.W, {
-                        type: u.Rb.P
+                        type: u.Sb.P
                     }, Object(p.d)("It looks like you've already agreed to the Twitch Developer Agreement! Click {buttonLabel} to continue.", {
                         buttonLabel: Object(p.d)("Next", "ExtensionsDeveloperAgreement")
                     }, "ExtensionsDeveloperAgreement")))
                 },
                 Gn = function(e) {
-                    return i.createElement(u.Bb, {
+                    return i.createElement(u.Cb, {
                         background: u.r.Alt2,
                         padding: {
                             x: 2,
@@ -6455,15 +6455,15 @@
                             right: 1
                         }
                     }, i.createElement(u.W, {
-                        type: u.Rb.H5,
-                        transform: u.Qb.Uppercase,
+                        type: u.Sb.H5,
+                        transform: u.Rb.Uppercase,
                         color: u.O.Alt,
                         bold: !0
                     }, e.title)), !!e.statusText && i.createElement(u.Xa, {
                         display: u.X.InlineBlock
                     }, i.createElement(u.W, {
-                        type: u.Rb.H4,
-                        transform: u.Qb.Uppercase,
+                        type: u.Sb.H4,
+                        transform: u.Rb.Uppercase,
                         bold: !0
                     }, i.createElement(u.eb, {
                         label: e.statusText,
@@ -6495,7 +6495,7 @@
                         }), i.createElement(u.Xa, {
                             padding: 2
                         }, i.createElement(u.W, {
-                            type: u.Rb.P,
+                            type: u.Sb.P,
                             color: u.O.Alt2
                         }, Object(p.d)("Parent or legal guardian: Please type your first and last name and check the box below.", "ParentConfirmation")), i.createElement(u.Xa, {
                             margin: {
@@ -6526,9 +6526,9 @@
                             bottom: 1
                         }
                     }, i.createElement(u.W, {
-                        type: u.Rb.H4
+                        type: u.Sb.H4
                     }, Object(p.d)("Twitch Partner Program Terms", "PartnerRedoInfo"))), i.createElement(u.W, {
-                        type: u.Rb.P
+                        type: u.Sb.P
                     }, Object(p.d)("It looks like you've already agreed to the Twitch Partner Agreement! Click {buttonLabel} to continue.", {
                         buttonLabel: Object(p.d)("Next", "PartnerRedoInfo")
                     }, "PartnerRedoInfo")))
@@ -6627,7 +6627,7 @@
                         }, this.skipAgreement ? Object(p.d)("Next", "PayoutOnboardingAgreement") : Object(p.d)("Agree", "PayoutOnboardingAgreement"));
                         return i.createElement(I.a, {
                             footer: e
-                        }, i.createElement(A.a, null, i.createElement(u.Bb, {
+                        }, i.createElement(A.a, null, i.createElement(u.Cb, {
                             borderMarked: !0,
                             background: u.r.Base,
                             padding: 2,
@@ -6737,7 +6737,7 @@
                                 }
                             }, "PayoutInfoBrick")))
                         }
-                        return i.createElement(u.Bb, {
+                        return i.createElement(u.Cb, {
                             borderMarked: !0,
                             padding: 2,
                             margin: {
@@ -6766,7 +6766,7 @@
                             return null
                     }
                     return i.createElement(u.W, {
-                        type: u.Rb.P
+                        type: u.Sb.P
                     }, Object(p.d)("Need Help? <x:link>See our detailed onboarding guide.</x:link>", {
                         "x:link": function(e) {
                             return i.createElement(u.U, {
@@ -6839,19 +6839,19 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return this.tipaltiURL ? i.createElement(u.Bb, {
+                        return this.tipaltiURL ? i.createElement(u.Cb, {
                             className: "payout-method-modal__container",
                             background: u.r.Base,
                             padding: 2
                         }, i.createElement(oa, {
                             tipaltiURL: this.tipaltiURL
-                        })) : this.props.data.error ? i.createElement(u.Bb, {
+                        })) : this.props.data.error ? i.createElement(u.Cb, {
                             className: "payout-method-modal__container",
                             background: u.r.Base,
                             padding: 5
                         }, i.createElement(g.a, {
                             message: Object(p.d)("Oops, something went wrong.", "PayoutMethodModal")
-                        })) : i.createElement(u.Bb, {
+                        })) : i.createElement(u.Cb, {
                             className: "payout-method-modal__container",
                             background: u.r.Base,
                             padding: 5
@@ -6904,7 +6904,7 @@
                         statusText: this.payoutStatusText,
                         statusType: this.payoutStatusType,
                         borderTop: !0
-                    }), i.createElement(u.Bb, {
+                    }), i.createElement(u.Cb, {
                         borderTop: !0,
                         borderBottom: !0,
                         padding: 2
@@ -6917,7 +6917,7 @@
                     }), i.createElement(u.z, {
                         onClick: this.props.showPayoutMethodModal,
                         type: this.payoutMethodStatus === Xn.NotStarted ? u.F.Default : u.F.Hollow
-                    }, this.payoutMethodButtonText)), i.createElement(u.Bb, {
+                    }, this.payoutMethodButtonText)), i.createElement(u.Cb, {
                         padding: 2,
                         background: u.r.Alt2
                     }, i.createElement(u.z, {
@@ -7316,9 +7316,9 @@
                 }
             }
             var Na = ["AB", "BC", "MB", "NB", "NL", "NT", "NS", "NU", "ON", "PE", "QC", "SK", "YT"],
-                Ta = n("Jgup");
+                Oa = n("Jgup");
 
-            function Oa(e) {
+            function Ta(e) {
                 switch (e.toUpperCase()) {
                     case "AL":
                         return Object(p.d)("Alabama", "format-usa-state");
@@ -7447,16 +7447,16 @@
                             city: "",
                             state: "",
                             postal: ""
-                        }, t.countrySelections = Ta.a.map(function(e) {
+                        }, t.countrySelections = Oa.a.map(function(e) {
                             return Aa.includes(e) ? null : i.createElement("option", {
                                 value: e,
                                 key: "countryCode-" + e
-                            }, Object(Ta.b)(e))
+                            }, Object(Oa.b)(e))
                         }), t.usaStateSelections = Pa.map(function(e) {
                             return i.createElement("option", {
                                 value: e,
                                 key: "usaStateCode-" + e
-                            }, Oa(e))
+                            }, Ta(e))
                         }), t.canadaStateSelections = Na.map(function(e) {
                             return i.createElement("option", {
                                 value: e,
@@ -8068,11 +8068,11 @@
                             statusText: this.statusText,
                             statusType: this.statusType,
                             borderTop: !0
-                        }), i.createElement(u.Bb, {
+                        }), i.createElement(u.Cb, {
                             borderTop: !0,
                             borderBottom: !0,
                             padding: 2
-                        }, i.createElement(u.Bb, {
+                        }, i.createElement(u.Cb, {
                             borderMarked: !0,
                             padding: 2
                         }, this.inReview ? Object(p.d)("Your information is currently under review.", "PayoutOnboardingReview") : Object(p.d)("Your information has been validated by the Partnership Team.", "PayoutOnboardingReview"))), i.createElement(u.Xa, {
@@ -8268,7 +8268,7 @@
                             bottom: 1
                         }
                     }, i.createElement(u.W, {
-                        type: u.Rb.P
+                        type: u.Sb.P
                     }, t ? Object(p.d)("Your developer registration is currently in progress. Please click {buttonLabel} to pick up where you left off.", {
                         buttonLabel: hi()
                     }, "InProgressInfo") : Object(p.d)("Your payout setup is currently in progress. Please click {buttonLabel} to pick up where you left off.", {
@@ -8278,11 +8278,11 @@
                             bottom: 1
                         }
                     }, i.createElement(u.W, {
-                        type: u.Rb.P
+                        type: u.Sb.P
                     }, Object(p.d)("If you would like to modify your information, please click {buttonLabel}.", {
                         buttonLabel: Object(p.d)("Start Over", "InProgressInfo")
                     }, "InProgressInfo"))), i.createElement(u.W, {
-                        type: u.Rb.P
+                        type: u.Sb.P
                     }, t ? Object(p.d)("NOTE: Starting over will lose any progress.", "InProgressInfo") : Object(p.d)("NOTE: If you choose Start Over you will delete any stored payout information on your account and we will hold any payouts until you have fully completed the form.", "InProgressInfo"))))
                 },
                 fi = function(e) {
@@ -8291,14 +8291,14 @@
                             bottom: 1
                         }
                     }, i.createElement(u.W, {
-                        type: u.Rb.H4,
+                        type: u.Sb.H4,
                         bold: !0
                     }, Object(p.d)("Setup Complete", "SetupCompleteInfo"))), e.onboardEntity === d.D.EXTENSIONS_DEVELOPER ? i.createElement(u.Pa, {
                         margin: {
                             bottom: 1
                         }
                     }, i.createElement(u.W, {
-                        type: u.Rb.P
+                        type: u.Sb.P
                     }, Object(p.d)("You made it! You’re all set. Return to the <x:link>Developer Portal.</x:link>", {
                         "x:link": function(e) {
                             return i.createElement(u.U, {
@@ -8310,13 +8310,13 @@
                             bottom: 1
                         }
                     }, i.createElement(u.W, {
-                        type: u.Rb.P
+                        type: u.Sb.P
                     }, Object(p.d)("You made it! You’re all set and no further action is needed.", "SetupCompleteInfo"))), i.createElement(u.Pa, {
                         margin: {
                             bottom: 1
                         }
                     }, i.createElement(u.W, {
-                        type: u.Rb.P
+                        type: u.Sb.P
                     }, Object(p.d)("If you want to change your payout information, click {buttonLabel} to reset the form.", {
                         buttonLabel: Object(p.d)("Start Over", "SetupCompleteInfo")
                     }, "SetupCompleteInfo"))))
@@ -8326,12 +8326,12 @@
             }(Za || (Za = {}));
             var vi, Ei = function(e) {
                 var t = !(!e.currentStep || e.currentStep === d.E.ROYALTY_TAX_INTERVIEW_PENDING || e.currentStep === d.E.SERVICE_TAX_INTERVIEW_PENDING);
-                return i.createElement(u.Bb, {
+                return i.createElement(u.Cb, {
                     padding: 2,
                     borderLeft: !0,
                     borderRight: !0,
                     borderTop: !0
-                }, i.createElement(u.Bb, {
+                }, i.createElement(u.Cb, {
                     borderMarked: !0,
                     padding: 2,
                     elevation: 1
@@ -8385,7 +8385,7 @@
                 e[e.NotStarted = 0] = "NotStarted", e[e.Pending = 1] = "Pending", e[e.Failed = 2] = "Failed", e[e.Completed = 3] = "Completed"
             }(vi || (vi = {}));
             var yi, Si = function(e) {
-                    return i.createElement(u.Bb, {
+                    return i.createElement(u.Cb, {
                         borderLeft: !0,
                         borderRight: !0,
                         borderTop: !0
@@ -8405,7 +8405,7 @@
                             bottom: .5
                         }
                     }, i.createElement(u.W, {
-                        type: u.Rb.H6,
+                        type: u.Sb.H6,
                         bold: !0
                     }, e.title)), i.createElement(u.W, {
                         color: u.O.Alt2
@@ -8413,8 +8413,8 @@
                         display: u.X.Flex,
                         alignItems: u.f.Center
                     }, (e.type === vi.Completed || e.isEnabled) && i.createElement(u.Xa, null, i.createElement(u.W, {
-                        type: u.Rb.H4,
-                        transform: u.Qb.Uppercase,
+                        type: u.Sb.H4,
+                        transform: u.Rb.Uppercase,
                         bold: !0
                     }, i.createElement(u.eb, {
                         label: function(e) {
@@ -8459,13 +8459,13 @@
                 Ni = function() {
                     return Object(p.d)("Choose your payout method.", "PayoutOnboardingSummary")
                 },
-                Ti = function() {
+                Oi = function() {
                     return Object(p.d)("Submit your financial information.", "PayoutOnboardingSummary")
                 };
             ! function(e) {
                 e.REGISTRATION = "registration-selector", e.AGREEMENT = "agreement-selector", e.TAX_INTERVIEW = "tax-interview-selector", e.PAYOUT_METHOD = "payout-method-selector", e.REVIEW = "review-selector"
             }(yi || (yi = {}));
-            var Oi = function(e, t, n) {
+            var Ti = function(e, t, n) {
                     return Object(p.d)("Step {numOfCurrentStep} of {numOfTotalSteps}: {stepTitle}", {
                         numOfCurrentStep: e,
                         numOfTotalSteps: t,
@@ -8482,7 +8482,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(u.Bb, {
+                        return i.createElement(u.Cb, {
                             className: "payout-onboarding-summary",
                             background: u.r.Base,
                             borderBottom: !0,
@@ -8569,7 +8569,7 @@
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "step1Title", {
                         get: function() {
-                            return Oi(Object(p.f)(1), Object(p.f)(this.numOfTotalSteps), gi[Dn.Registration].title[this.props.onboardEntity]())
+                            return Ti(Object(p.f)(1), Object(p.f)(this.numOfTotalSteps), gi[Dn.Registration].title[this.props.onboardEntity]())
                         },
                         enumerable: !0,
                         configurable: !0
@@ -8587,7 +8587,7 @@
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "step2Title", {
                         get: function() {
-                            return Oi(Object(p.f)(2), Object(p.f)(this.numOfTotalSteps), gi[Dn.Agreement].title[this.props.onboardEntity]())
+                            return Ti(Object(p.f)(2), Object(p.f)(this.numOfTotalSteps), gi[Dn.Agreement].title[this.props.onboardEntity]())
                         },
                         enumerable: !0,
                         configurable: !0
@@ -8616,7 +8616,7 @@
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "step3Title", {
                         get: function() {
-                            return Oi(Object(p.f)(3), Object(p.f)(this.numOfTotalSteps), gi[Dn.TaxInterview].title[this.props.onboardEntity]())
+                            return Ti(Object(p.f)(3), Object(p.f)(this.numOfTotalSteps), gi[Dn.TaxInterview].title[this.props.onboardEntity]())
                         },
                         enumerable: !0,
                         configurable: !0
@@ -8673,14 +8673,14 @@
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "step4Title", {
                         get: function() {
-                            return Oi(Object(p.f)(4), Object(p.f)(this.numOfTotalSteps), gi[Dn.PayoutMethod].title[this.props.onboardEntity]())
+                            return Ti(Object(p.f)(4), Object(p.f)(this.numOfTotalSteps), gi[Dn.PayoutMethod].title[this.props.onboardEntity]())
                         },
                         enumerable: !0,
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "step4Description", {
                         get: function() {
                             var e = this.props.onboardEntity === d.D.EXTENSIONS_DEVELOPER;
-                            return this.isTaxInterviewComplete ? this.props.currentStep === d.E.PAYOUT_METHOD_PENDING ? e ? Object(p.d)("Your financial information is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary") : Object(p.d)("Your payout method is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary") : this.isPayoutMethodComplete ? e ? Object(p.d)("Your financial information has been successfully validated.", "PayoutOnboardingSummary") : Object(p.d)("Your payout method has been successfully validated.", "PayoutOnboardingSummary") : e ? Ti() : Ni() : e ? Ti() : Ni()
+                            return this.isTaxInterviewComplete ? this.props.currentStep === d.E.PAYOUT_METHOD_PENDING ? e ? Object(p.d)("Your financial information is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary") : Object(p.d)("Your payout method is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary") : this.isPayoutMethodComplete ? e ? Object(p.d)("Your financial information has been successfully validated.", "PayoutOnboardingSummary") : Object(p.d)("Your payout method has been successfully validated.", "PayoutOnboardingSummary") : e ? Oi() : Ni() : e ? Oi() : Ni()
                         },
                         enumerable: !0,
                         configurable: !0
@@ -8692,7 +8692,7 @@
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "step5Title", {
                         get: function() {
-                            return this.props.onboardEntity === d.D.CUSTOM_PARTNER ? Oi(Object(p.f)(5), Object(p.f)(this.numOfTotalSteps), gi[Dn.Review].title[this.props.onboardEntity]()) : ""
+                            return this.props.onboardEntity === d.D.CUSTOM_PARTNER ? Ti(Object(p.f)(5), Object(p.f)(this.numOfTotalSteps), gi[Dn.Review].title[this.props.onboardEntity]()) : ""
                         },
                         enumerable: !0,
                         configurable: !0
@@ -8777,7 +8777,7 @@
                         default:
                             return null
                     }
-                    return i.createElement(u.Bb, {
+                    return i.createElement(u.Cb, {
                         padding: 2,
                         borderMarked: !0,
                         background: u.r.Base,
@@ -8850,17 +8850,17 @@
                         if (!e || !t) return null;
                         var n = t.map(function(t, n) {
                             var a, r;
-                            if (t === d.P.NAME) a = Object(p.d)("Name", "TaxMismatchSpecificErrors"), r = e.companyName ? e.companyName : [e.firstName, e.middleName, e.lastName].filter(function(e) {
+                            if (t === d.R.NAME) a = Object(p.d)("Name", "TaxMismatchSpecificErrors"), r = e.companyName ? e.companyName : [e.firstName, e.middleName, e.lastName].filter(function(e) {
                                 return null !== e
                             }).join(" ");
-                            else if (t === d.P.EMAIL) a = Object(p.d)("Email", "TaxMismatchSpecificErrors"), r = e.email;
-                            else if (t === d.P.STREET_ADDRESS) a = Object(p.d)("Street Address", "TaxMismatchSpecificErrors"), r = e.streetAddress;
-                            else if (t === d.P.STREET_ADDRESS_2) a = Object(p.d)("Street Address 2", "TaxMismatchSpecificErrors"), r = e.streetAddress2;
-                            else if (t === d.P.CITY) a = Object(p.d)("City or Town", "TaxMismatchSpecificErrors"), r = e.city;
-                            else if (t === d.P.STATE) a = Object(p.d)("State/Province", "TaxMismatchSpecificErrors"), r = "US" === e.countryCode ? Oa(e.stateCode || "") : "CA" === e.countryCode ? ka(e.stateCode || "") : e.stateCode;
-                            else if (t === d.P.COUNTRY) a = Object(p.d)("Country", "TaxMismatchSpecificErrors"), r = Object(Ta.b)(e.countryCode || "");
+                            else if (t === d.R.EMAIL) a = Object(p.d)("Email", "TaxMismatchSpecificErrors"), r = e.email;
+                            else if (t === d.R.STREET_ADDRESS) a = Object(p.d)("Street Address", "TaxMismatchSpecificErrors"), r = e.streetAddress;
+                            else if (t === d.R.STREET_ADDRESS_2) a = Object(p.d)("Street Address 2", "TaxMismatchSpecificErrors"), r = e.streetAddress2;
+                            else if (t === d.R.CITY) a = Object(p.d)("City or Town", "TaxMismatchSpecificErrors"), r = e.city;
+                            else if (t === d.R.STATE) a = Object(p.d)("State/Province", "TaxMismatchSpecificErrors"), r = "US" === e.countryCode ? Ta(e.stateCode || "") : "CA" === e.countryCode ? ka(e.stateCode || "") : e.stateCode;
+                            else if (t === d.R.COUNTRY) a = Object(p.d)("Country", "TaxMismatchSpecificErrors"), r = Object(Oa.b)(e.countryCode || "");
                             else {
-                                if (t !== d.P.POSTAL) return null;
+                                if (t !== d.R.POSTAL) return null;
                                 a = Object(p.d)("Zip Code/Postal Code", "TaxMismatchSpecificErrors"), r = e.postal
                             }
                             return i.createElement(u.Pa, {
@@ -8872,7 +8872,7 @@
                                 fontSize: u.Ca.Size6
                             }, i.createElement(u.W, {
                                 bold: !0,
-                                type: u.Rb.Span
+                                type: u.Sb.Span
                             }, a), " ", r))
                         });
                         return i.createElement(i.Fragment, null, i.createElement(u.Pa, {
@@ -8880,7 +8880,7 @@
                                 bottom: 1
                             }
                         }, i.createElement(u.W, {
-                            type: u.Rb.P,
+                            type: u.Sb.P,
                             color: u.O.Error,
                             bold: !0
                         }, Object(p.d)("Specific Errors", "TaxMismatchSpecificErrors"))), i.createElement(u.Pa, {
@@ -9129,7 +9129,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(u.Bb, {
+                        return i.createElement(u.Cb, {
                             borderMarked: !0,
                             padding: 2
                         }, i.createElement(u.Xa, {
@@ -9259,7 +9259,7 @@
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "country", {
                         get: function() {
-                            return this.registration && Object(Ta.b)(this.registration.countryCode) || ""
+                            return this.registration && Object(Oa.b)(this.registration.countryCode) || ""
                         },
                         enumerable: !0,
                         configurable: !0
@@ -9301,7 +9301,7 @@
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "stateOrProvince", {
                         get: function() {
-                            return this.registration && this.registration.stateCode ? this.inUnitedStates ? Oa(this.registration.stateCode) : this.inCanada ? ka(this.registration.stateCode) : this.registration.stateCode : ""
+                            return this.registration && this.registration.stateCode ? this.inUnitedStates ? Ta(this.registration.stateCode) : this.inCanada ? ka(this.registration.stateCode) : this.registration.stateCode : ""
                         },
                         enumerable: !0,
                         configurable: !0
@@ -9388,23 +9388,23 @@
                     return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
                         clearInterval(this.popupInterval)
                     }, t.prototype.render = function() {
-                        return this.props.data.loading ? i.createElement(u.Bb, {
+                        return this.props.data.loading ? i.createElement(u.Cb, {
                             className: "tax-preview-modal__container",
                             background: u.r.Base,
                             padding: 5
                         }, i.createElement(u.Za, {
                             fillContent: !0
-                        })) : this.props.data.error || !this.taxPreviewQueryResponseIsValid ? i.createElement(u.Bb, {
+                        })) : this.props.data.error || !this.taxPreviewQueryResponseIsValid ? i.createElement(u.Cb, {
                             className: "tax-preview-modal__container",
                             background: u.r.Base,
                             padding: 5
                         }, i.createElement(g.a, {
                             message: Object(p.d)("Oops, something went wrong.", "TaxPreviewModal")
-                        })) : i.createElement(u.Bb, {
+                        })) : i.createElement(u.Cb, {
                             className: "tax-preview-modal__container",
                             background: u.r.Base,
                             padding: 2
-                        }, i.createElement(u.Bb, {
+                        }, i.createElement(u.Cb, {
                             borderBottom: !0,
                             padding: {
                                 bottom: 1
@@ -9413,7 +9413,7 @@
                                 bottom: 1
                             }
                         }, i.createElement(u.W, {
-                            type: u.Rb.H4
+                            type: u.Sb.H4
                         }, Object(p.d)("Information Reference", "TaxPreviewModal"))), i.createElement(Ui, {
                             onboardEntity: this.props.onboardEntity
                         }), i.createElement(Bi, null), i.createElement(u.Xa, {
@@ -9555,7 +9555,7 @@
                         disabled: this.serviceTaxButtonDisabled,
                         onClick: this.handleServiceTaxButtonClick,
                         "data-test-selector": qi.ServiceButton
-                    }, this.serviceTaxButtonText)), i.createElement(u.Bb, {
+                    }, this.serviceTaxButtonText)), i.createElement(u.Cb, {
                         padding: 2,
                         background: u.r.Alt2
                     }, i.createElement(u.z, {
@@ -9731,7 +9731,7 @@
                         }))) : this.props.data.error ? i.createElement(I.a, null, i.createElement(A.a, null, i.createElement(g.a, {
                             message: Object(p.d)("Oops, something went wrong.", "RequireTwoFactorEnabled")
                         }))) : this.hasTwoFactorEnabled ? i.createElement(i.Fragment, null, this.props.children) : i.createElement(I.a, null, i.createElement(A.a, null, i.createElement(u.W, a.__assign({
-                            type: u.Rb.P
+                            type: u.Sb.P
                         }, Ji), this.props.enableTwoFactorMessage)), i.createElement(A.a, null, i.createElement(u.z, {
                             linkTo: "/settings/security"
                         }, Object(p.d)("Enable Two-Factor Authentication", "RequireTwoFactorEnabled"))))
@@ -9784,8 +9784,8 @@
                                 bottom: 2
                             }
                         }, i.createElement(u.W, {
-                            type: u.Rb.H4
-                        }, Object(p.d)("Are you sure you would like to start over?", "StartOverModal"))), i.createElement(u.Bb, {
+                            type: u.Sb.H4
+                        }, Object(p.d)("Are you sure you would like to start over?", "StartOverModal"))), i.createElement(u.Cb, {
                             borderTop: !0,
                             borderBottom: !0,
                             padding: {
@@ -9796,9 +9796,9 @@
                                 bottom: 2
                             }
                         }, i.createElement(u.W, {
-                            type: u.Rb.P
+                            type: u.Sb.P
                         }, Object(p.d)("Your current progress will be lost!", "StartOverModal"))), i.createElement(u.W, {
-                            type: u.Rb.P,
+                            type: u.Sb.P,
                             bold: !0,
                             color: u.O.Error
                         }, Object(p.d)("WARNING: Starting over will lose any progress and make your Twitch account unpayable. We will hold any payouts until you have fully completed the form.", "StartOverModal"))), i.createElement(u.Xa, {
@@ -9841,7 +9841,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(u.Bb, {
+                        return i.createElement(u.Cb, {
                             className: "start-over-modal__container",
                             background: u.r.Base,
                             padding: 2
@@ -10118,7 +10118,7 @@
                             placeholder: Object(p.d)("Enter the name of your subscription ticket", "SubsNameSettingsSection"),
                             value: this.props.displayName,
                             onChange: this.onChange
-                        }), i.createElement(O.a, {
+                        }), i.createElement(T.a, {
                             text: this.props.description
                         }))
                     }, t
@@ -10243,7 +10243,7 @@
                         if (!a || !a.subscriptionProducts) return t ? i.createElement(u.Za, {
                             fillContent: !0
                         }) : n ? i.createElement(g.a, null) : null;
-                        var r = i.createElement(T.a, {
+                        var r = i.createElement(O.a, {
                                 status: this.state.saveStatus,
                                 onClickSave: this.onClickSave
                             }),
@@ -10289,8 +10289,8 @@
                 }), Object(b.a)(Sr, {
                     name: "updateSubscriptionProduct"
                 }))(kr),
-                Tr = n("fT/Q"),
-                Or = n("ESve"),
+                Or = n("fT/Q"),
+                Tr = n("ESve"),
                 Cr = n("9C/b"),
                 Pr = function(e) {
                     function t() {
@@ -10379,14 +10379,14 @@
                             enableTwoFactorMessage: Object(p.d)("You must enable two-factor authentication to accept your agreement.", "UpgradeTermsPage")
                         }, i.createElement(I.a, {
                             header: e
-                        }, i.createElement(A.a, null, i.createElement(u.Bb, {
+                        }, i.createElement(A.a, null, i.createElement(u.Cb, {
                             borderMarked: !0,
                             padding: 2,
                             elevation: 1
                         }, this.renderAgreement)), this.requiresParentConsent && i.createElement(Yn, {
                             updateParentName: this.updateParentName,
                             updateParentConfirmation: this.updateParentConfirmation
-                        }), i.createElement(u.Bb, {
+                        }), i.createElement(u.Cb, {
                             padding: 2,
                             background: u.r.Alt2
                         }, i.createElement(u.z, {
@@ -10454,7 +10454,7 @@
                     destination: y.a.DashboardSettingsRevenueUpgradeTerms
                 }), Object(E.a)({
                     location: S.PageviewLocation.DashboardSettingsRevenueUpgradeTerms
-                }), Object(b.a)(Or), Object(b.a)(Tr, {
+                }), Object(b.a)(Tr), Object(b.a)(Or, {
                     name: "acceptProgramAgreement"
                 }), Cr.a)(Pr),
                 Ir = n("DDis"),
@@ -10464,10 +10464,10 @@
                             bottom: 1
                         }
                     }, i.createElement(u.W, {
-                        type: u.Rb.H4,
+                        type: u.Sb.H4,
                         bold: !0
                     }, Object(p.d)("Custom Partner Agreement", "CustomPartnerAgreement"))), i.createElement(u.W, {
-                        type: u.Rb.P
+                        type: u.Sb.P
                     }, Object(p.d)("Please contact <x:link>support</x:link> for a copy of your active Twitch Partner Agreement.", {
                         "x:link": function(e) {
                             return i.createElement(u.U, {
@@ -10507,7 +10507,7 @@
                             enableTwoFactorMessage: Object(p.d)("You must enable two-factor authentication to view your agreement.", "ViewTermsPage")
                         }, i.createElement(I.a, {
                             header: e
-                        }, i.createElement(A.a, null, i.createElement(u.Bb, {
+                        }, i.createElement(A.a, null, i.createElement(u.Cb, {
                             borderMarked: !0,
                             padding: 2,
                             elevation: 1
@@ -10832,7 +10832,7 @@
                 r = n("Ue10"),
                 o = (n("KwO+"), function(e) {
                     var t = null;
-                    e.footer && (t = i.createElement(r.Bb, {
+                    e.footer && (t = i.createElement(r.Cb, {
                         padding: 2,
                         background: r.r.Alt2
                     }, e.footer));
@@ -10845,7 +10845,7 @@
                         bottomLeft: r.x.Medium,
                         bottomRight: r.x.Medium
                     }, n);
-                    return i.createElement(i.Fragment, null, e.header, i.createElement(r.Bb, {
+                    return i.createElement(i.Fragment, null, e.header, i.createElement(r.Cb, {
                         background: r.r.Base,
                         margin: {
                             bottom: 4
@@ -14656,7 +14656,7 @@
                         bottom: 2
                     }
                 }, a.createElement(i.W, {
-                    type: i.Rb.H3,
+                    type: i.Sb.H3,
                     fontSize: i.Ca.Size4,
                     color: i.O.Alt,
                     bold: !0
@@ -15580,7 +15580,7 @@
                     }, a.createElement(i.Ua, {
                         linkTo: e.linkTo,
                         type: i.Va.Alpha
-                    }, a.createElement(i.Bb, {
+                    }, a.createElement(i.Cb, {
                         padding: 2,
                         alignItems: i.f.Center,
                         display: i.X.Flex,
@@ -15591,7 +15591,7 @@
                         fontSize: i.Ca.Size6,
                         bold: !0
                     }, e.text), a.createElement(i.W, {
-                        type: i.Rb.Span
+                        type: i.Sb.Span
                     }, e.description)), a.createElement(i.Xa, null, a.createElement(i.qb, {
                         asset: i.rb.AngleRight
                     })))))

@@ -286,7 +286,7 @@
                 h = n("8/mp"),
                 f = n("oUNp"),
                 y = n("Ue10"),
-                v = function(e) {
+                g = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.openEditing = function(e) {
@@ -298,7 +298,7 @@
                             r = this.props.override,
                             a = void 0 !== r;
                         return "boolean" == typeof this.props.settingData ? t = i.createElement(y.Xa, null, this.renderToggle(this.props.settingKey, !!this.props.settingData, r)) : (t = i.createElement(y.W, {
-                            wordBreak: y.dc.BreakAll
+                            wordBreak: y.ec.BreakAll
                         }, a ? JSON.stringify(r) : JSON.stringify(this.props.settingData)), e = i.createElement(y.Xa, {
                             margin: {
                                 left: 1
@@ -311,7 +311,7 @@
                                 return n.openEditing(n.props.settingKey)
                             },
                             blurAfterClick: !0
-                        }))), i.createElement(y.Bb, {
+                        }))), i.createElement(y.Cb, {
                             margin: {
                                 bottom: 1,
                                 right: 1
@@ -328,7 +328,7 @@
                         }, t), e)
                     }, t.prototype.renderToggle = function(e, t, n) {
                         var r = this;
-                        return i.createElement(y.Tb, {
+                        return i.createElement(y.Ub, {
                             onChange: function(n) {
                                 var a = n.currentTarget.checked;
                                 r.props.setOverride(e, a === t ? void 0 : a)
@@ -337,7 +337,7 @@
                         })
                     }, t
                 }(i.Component),
-                g = (n("ZHMB"), function(e) {
+                v = (n("ZHMB"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -356,7 +356,7 @@
                         var e = "string" == typeof this.state.value ? this.state.value : JSON.stringify(this.props.value);
                         return i.createElement(h.b, {
                             contentClassName: "dynamic-setting-edit__content"
-                        }, i.createElement(y.Bb, {
+                        }, i.createElement(y.Cb, {
                             background: y.r.Alt,
                             padding: 1,
                             fullWidth: !0,
@@ -373,7 +373,7 @@
                                 y: 1
                             },
                             fullHeight: !0
-                        }, i.createElement(y.Ob, {
+                        }, i.createElement(y.Pb, {
                             placeholder: "(undefined)",
                             onChange: this.onValueChange,
                             value: e,
@@ -516,7 +516,7 @@
                                 y: 1
                             }
                         }, this.filteredDynamicSettings().map(function(t) {
-                            return i.createElement(v, {
+                            return i.createElement(g, {
                                 key: t,
                                 settingKey: t,
                                 override: e.state.overrides[t],
@@ -524,7 +524,7 @@
                                 openEditing: e.openEditing,
                                 setOverride: e.setOverride
                             })
-                        })))), this.state.editingOverrideKey && i.createElement(y.Bb, {
+                        })))), this.state.editingOverrideKey && i.createElement(y.Cb, {
                             position: y.hb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
@@ -532,7 +532,7 @@
                             fullWidth: !0,
                             padding: 1,
                             background: y.r.Overlay
-                        }, i.createElement(g, {
+                        }, i.createElement(v, {
                             close: this.closeEditing,
                             saveOverride: this.setOverride,
                             overrideKey: this.state.editingOverrideKey,
@@ -554,11 +554,10 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this,
-                            t = l.p.experiments.getAssignments();
-                        if (!t) return null;
-                        var n = this.props.experimentData,
+                            t = l.p.experiments.getAssignments(),
+                            n = this.props.experimentData,
                             r = void 0 !== this.props.override;
-                        return i.createElement(y.Bb, {
+                        return i.createElement(y.Cb, {
                             margin: {
                                 bottom: 1,
                                 right: 1
@@ -595,7 +594,7 @@
                         }))))
                     }, t
                 }(i.Component);
-            var x = function(e) {
+            var x, w = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.experiments = Object.keys(window.__twilightSettings.experiments).filter(function(e) {
@@ -615,7 +614,7 @@
                                 onClick: n.enableExperiments
                             }, "Enable experiments and reload")))
                         }, n.enableExperiments = function() {
-                            l.p.storage.set(C.b, !1), window.location.reload()
+                            l.p.storage.remove(C.c), l.p.storage.remove(C.a), window.location.reload()
                         }, n.filteredExperiments = function() {
                             return "" === n.state.searchQuery ? Object.keys(n.experiments) : Object.keys(n.experiments).filter(function(e) {
                                 return E(n.experiments[e].name).includes(n.state.searchQuery)
@@ -640,7 +639,7 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this;
-                        if (!l.p.experiments.getAssignments()) return this.renderExperimentsDisabled();
+                        if (l.p.experiments.getAssignments() === p.a) return this.renderExperimentsDisabled();
                         var t = Object.keys(this.state.overrides).length;
                         return i.createElement(y.Xa, {
                             fullHeight: !0,
@@ -687,24 +686,63 @@
                         })))))
                     }, t
                 }(i.Component),
-                w = n("EuNP");
+                T = n("EuNP"),
+                N = n("zB42"),
+                B = n("3rfY"),
+                O = ((x = {})[B.a.Debug] = "Debug", x[B.a.Info] = "Info", x[B.a.Warn] = "Warn", x[B.a.Error] = "Error", x[B.a.Fatal] = "Fatal", x),
+                X = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            currentLogLevel: l.m.get(l.a.forceMinConsoleLogLevelKey, 0) || (l.a.buildType === N.a.Production ? B.a.Error : B.a.Debug)
+                        }, t.handleLogLevelChange = function(e) {
+                            var n = e.currentTarget,
+                                r = Number(n.value);
+                            l.m.set(l.a.forceMinConsoleLogLevelKey, r), t.setState({
+                                currentLogLevel: r
+                            }), t.props.onChange()
+                        }, t
+                    }
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        var e = String(this.state.currentLogLevel);
+                        return i.createElement(y.Xa, {
+                            alignItems: y.f.Center,
+                            display: y.X.Flex
+                        }, i.createElement(y.Xa, {
+                            margin: {
+                                right: 1
+                            }
+                        }, i.createElement(y.W, {
+                            noWrap: !0
+                        }, "Log Level:")), i.createElement(y.xb, {
+                            value: e,
+                            onChange: this.handleLogLevelChange,
+                            type: y.yb.Hollow
+                        }, Object.keys(O).map(function(e) {
+                            return i.createElement("option", {
+                                key: e,
+                                value: e
+                            }, O[Number(e)])
+                        })))
+                    }, t
+                }(i.Component);
             n("d048");
             n.d(t, "a", function() {
-                return N
+                return L
             }), n.d(t, "b", function() {
-                return D
+                return F
             });
-            var T, N = "twilight.perf-hide",
-                B = "twilight.perf-size",
-                O = "twilight.staff-tab",
-                q = 3,
-                R = c.a.wrap(function() {
+            var q, L = "twilight.perf-hide",
+                R = "twilight.perf-size",
+                D = "twilight.staff-tab",
+                W = 3,
+                M = c.a.wrap(function() {
                     return n.e(32).then(n.bind(null, "Msj/"))
                 }, "DesktopInformation");
             ! function(e) {
                 e.Latency = "Latency", e.Experiments = "Experiments", e.DynamicSettings = "Dynamic Settings", e.Desktop = "Desktop Latency"
-            }(T || (T = {}));
-            var X = function(e) {
+            }(q || (q = {}));
+            var z = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.showUrgentMessage = function(e) {
@@ -712,18 +750,18 @@
                                 urgentMessage: e
                             })
                         }, n.renderDesktopStaffTabButton = function() {
-                            return l.p.integrations.app ? n.renderStaffTabButton(T.Desktop, y.rb.Desktop) : null
+                            return l.p.integrations.app ? n.renderStaffTabButton(q.Desktop, y.rb.Desktop) : null
                         }, n.renderStaffTabButton = function(e, t, r) {
                             void 0 === r && (r = !1);
                             var a = n.state.selectedTab === e;
-                            return i.createElement(y.Ub, {
+                            return i.createElement(y.Vb, {
                                 label: e,
-                                direction: y.Wb.Right
+                                direction: y.Xb.Right
                             }, i.createElement(y.A, {
                                 onClick: function() {
                                     n.setState({
                                         selectedTab: e
-                                    }), l.m.set(O, e)
+                                    }), l.m.set(D, e)
                                 },
                                 icon: t,
                                 size: y.B.Large,
@@ -745,18 +783,22 @@
                             location.reload()
                         }, n.onClickWindowSize = function() {
                             var e = n.state.size + 1;
-                            e > q && (e = 0), l.m.set(B, e.toString()), n.setState({
+                            e > W && (e = 0), l.m.set(R, e.toString()), n.setState({
                                 size: e
                             })
                         }, n.onClickClose = function() {
                             n.props.hideStaffConsole()
+                        }, n.onLogLevelChanged = function() {
+                            n.setState({
+                                urgentMessage: r.OverridesRequireRefresh
+                            })
                         };
                         var a = Object.keys(Object(b.b)()).length > 0,
                             s = Object.keys(Object(b.a)()).length > 0,
                             o = a || s ? r.OverridesOnLoad : r.None;
                         return n.state = {
-                            size: l.m.get(B, 0),
-                            selectedTab: l.m.get(O, T.Latency),
+                            size: l.m.get(R, 0),
+                            selectedTab: l.m.get(D, q.Latency),
                             urgentMessage: o
                         }, n
                     }
@@ -766,27 +808,27 @@
                         if (this.props.hidden) return null;
                         var e = Object.keys(Object(b.b)()).length > 0,
                             t = Object.keys(Object(b.a)()).length > 0;
-                        return i.createElement(y.Bb, {
+                        return i.createElement(y.Cb, {
                             className: "staff-console staff-console--size-" + this.state.size + " " + Object(m.b)(u.a.Dark),
                             position: y.hb.Fixed,
                             display: y.X.Flex
-                        }, i.createElement(y.Bb, {
+                        }, i.createElement(y.Cb, {
                             display: y.X.Flex,
                             border: !0,
                             fullWidth: !0
-                        }, i.createElement(y.Bb, {
+                        }, i.createElement(y.Cb, {
                             className: "staff-consol__select-bar",
                             flexShrink: 1,
                             flexGrow: 0,
                             display: y.X.Flex,
                             flexDirection: y.Aa.Column,
                             borderRight: !0
-                        }, this.renderStaffTabButton(T.Latency, y.rb.OP), this.renderStaffTabButton(T.Experiments, y.rb.Experiment, e), this.renderStaffTabButton(T.DynamicSettings, y.rb.NavSettings, t), this.renderDesktopStaffTabButton()), i.createElement(y.Xa, {
+                        }, this.renderStaffTabButton(q.Latency, y.rb.OP), this.renderStaffTabButton(q.Experiments, y.rb.Experiment, e), this.renderStaffTabButton(q.DynamicSettings, y.rb.NavSettings, t), this.renderDesktopStaffTabButton()), i.createElement(y.Xa, {
                             flexGrow: 1,
                             display: y.X.Flex,
                             flexDirection: y.Aa.Column,
                             overflow: y.cb.Hidden
-                        }, i.createElement(y.Bb, {
+                        }, i.createElement(y.Cb, {
                             className: "staff-console__top-bar",
                             flexGrow: 0,
                             flexShrink: 0,
@@ -802,13 +844,15 @@
                         }, i.createElement(y.W, {
                             bold: !0,
                             fontSize: y.Ca.Size4,
-                            type: y.Rb.Span
+                            type: y.Sb.Span
                         }, this.state.selectedTab)), i.createElement(y.Xa, {
                             display: y.X.Flex,
                             padding: {
                                 right: .5
                             }
-                        }, i.createElement(y.A, {
+                        }, i.createElement(X, {
+                            onChange: this.onLogLevelChanged
+                        }), i.createElement(y.A, {
                             onClick: this.onClickWindowSize,
                             icon: y.rb.Maximize,
                             overlay: !0,
@@ -828,11 +872,11 @@
                                 top: 1
                             },
                             overflow: y.cb.Hidden
-                        }, this.renderTabContent(this.state.selectedTab)), i.createElement(y.Bb, {
+                        }, this.renderTabContent(this.state.selectedTab)), i.createElement(y.Cb, {
                             flexShrink: 0,
                             flexGrow: 0,
                             borderTop: !0
-                        }, this.state.urgentMessage && i.createElement(y.Bb, {
+                        }, this.state.urgentMessage && i.createElement(y.Cb, {
                             background: y.r.Accent,
                             padding: {
                                 x: 1,
@@ -855,28 +899,28 @@
                         }, 'Press "Ctr/Cmd + Shift + S" to toggle Staff Console')))))
                     }, t.prototype.renderTabContent = function(e) {
                         switch (e) {
-                            case T.Latency:
-                                return i.createElement(w.a, {
+                            case q.Latency:
+                                return i.createElement(T.a, {
                                     benchmarking: l.p.benchmarking
                                 });
-                            case T.Experiments:
-                                return i.createElement(x, {
+                            case q.Experiments:
+                                return i.createElement(w, {
                                     showUrgentMessage: this.showUrgentMessage,
                                     autoFocusInput: this.props.hasBeenShownFromUI
                                 });
-                            case T.DynamicSettings:
+                            case q.DynamicSettings:
                                 return i.createElement(S, {
                                     showUrgentMessage: this.showUrgentMessage,
                                     autoFocusInput: this.props.hasBeenShownFromUI
                                 });
-                            case T.Desktop:
-                                return i.createElement(R, null);
+                            case q.Desktop:
+                                return i.createElement(M, null);
                             default:
                                 return null
                         }
                     }, t
                 }(i.Component),
-                D = Object(s.connect)(function(e) {
+                F = Object(s.connect)(function(e) {
                     return {
                         hidden: e.staffConsole.hidden,
                         hasBeenShownFromUI: e.staffConsole.hasBeenShownFromUI
@@ -886,7 +930,7 @@
                         hideStaffConsole: d.b,
                         showStaffConsole: d.c
                     }, e)
-                })(X)
+                })(z)
         },
         EuNP: function(e, t, n) {
             "use strict";
@@ -1205,32 +1249,32 @@
                         })))
                     }, t
                 }(a.Component)),
-                v = n("Ue10"),
-                g = (n("LQTS"), "twilight.perf-tab"),
+                g = n("Ue10"),
+                v = (n("LQTS"), "twilight.perf-tab"),
                 E = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderTab = function(e, t, r) {
                             var i = n.state.selectedTab === e;
-                            return a.createElement(v.Cb, {
+                            return a.createElement(g.Db, {
                                 active: i,
                                 onClick: function() {
                                     return n.onClickTab(e)
                                 }
-                            }, a.createElement(v.Xa, {
-                                display: v.X.Flex
+                            }, a.createElement(g.Xa, {
+                                display: g.X.Flex
                             }, t, r && n.renderTabBubble(r)))
                         }, n.renderTabBubble = function(e) {
-                            return a.createElement(v.Xa, {
+                            return a.createElement(g.Xa, {
                                 margin: {
                                     left: .5
                                 }
-                            }, a.createElement(v.eb, {
+                            }, a.createElement(g.eb, {
                                 label: e.toString(),
-                                type: v.fb.Notification
+                                type: g.fb.Notification
                             }))
                         }, n.onClickTab = function(e) {
-                            i.m.set(g, e), n.setState({
+                            i.m.set(v, e), n.setState({
                                 selectedTab: e
                             })
                         }, n.onLatencyUpdate = function() {
@@ -1247,7 +1291,7 @@
                                 customEvents: i
                             })
                         }, n.tracker = t.benchmarking.getRootLatencyTracker(), n.state = {
-                            selectedTab: i.m.get(g, "overview"),
+                            selectedTab: i.m.get(v, "overview"),
                             componentStats: c.getComponentStats(n.tracker),
                             networkStats: c.getNetworkStats(n.tracker),
                             queryStats: c.getQueryStats(n.tracker),
@@ -1256,27 +1300,27 @@
                         }, n.tracker.subscribeToUpdates(n.onLatencyUpdate), n
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(v.Xa, {
-                            display: v.X.Flex,
-                            flexDirection: v.Aa.Column,
+                        return a.createElement(g.Xa, {
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, a.createElement(v.Xa, {
+                        }, a.createElement(g.Xa, {
                             className: "latency-metrics__header-container",
-                            display: v.X.Flex,
-                            justifyContent: v.Wa.Between,
-                            flexWrap: v.Ba.NoWrap,
-                            alignItems: v.f.Start
-                        }, a.createElement(v.Db, null, this.renderTab("overview", "Overview"), this.renderTab("components", "Components", this.state.componentStats.countByStatus[l.a.Fail]), this.renderTab("queries", "Queries", this.state.queryStats.countByStatus[l.a.Fail]), this.renderTab("requests", "Requests", this.state.networkStats.countByStatus[l.a.Fail]))), a.createElement(v.Xa, {
+                            display: g.X.Flex,
+                            justifyContent: g.Wa.Between,
+                            flexWrap: g.Ba.NoWrap,
+                            alignItems: g.f.Start
+                        }, a.createElement(g.Eb, null, this.renderTab("overview", "Overview"), this.renderTab("components", "Components", this.state.componentStats.countByStatus[l.a.Fail]), this.renderTab("queries", "Queries", this.state.queryStats.countByStatus[l.a.Fail]), this.renderTab("requests", "Requests", this.state.networkStats.countByStatus[l.a.Fail]))), a.createElement(g.Xa, {
                             className: "latency-metrics__body",
-                            display: v.X.Flex,
-                            flexDirection: v.Aa.Column,
+                            display: g.X.Flex,
+                            flexDirection: g.Aa.Column,
                             flexGrow: 1,
-                            overflow: v.cb.Hidden,
+                            overflow: g.cb.Hidden,
                             fullHeight: !0
                         }, a.createElement(s.b, {
                             className: "latency-metrics__scroller"
-                        }, a.createElement(v.Xa, {
+                        }, a.createElement(g.Xa, {
                             margin: {
                                 y: 1,
                                 right: 1
@@ -1288,58 +1332,58 @@
                             n = this.state.queryStats,
                             r = this.state.queryBatchStats,
                             i = this.state.componentStats;
-                        return a.createElement(v.Xa, null, a.createElement(v.Xa, {
+                        return a.createElement(g.Xa, null, a.createElement(g.Xa, {
                             className: "latency-metrics__item",
-                            display: v.X.Flex,
-                            justifyContent: v.Wa.Between,
-                            flexWrap: v.Ba.NoWrap
-                        }, a.createElement(v.Xa, {
+                            display: g.X.Flex,
+                            justifyContent: g.Wa.Between,
+                            flexWrap: g.Ba.NoWrap
+                        }, a.createElement(g.Xa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
-                        }, a.createElement("span", null, o.c.FirstPaint)), a.createElement(v.Xa, {
+                        }, a.createElement("span", null, o.c.FirstPaint)), a.createElement(g.Xa, {
                             className: "latency-metrics__item-right",
-                            display: v.X.Flex,
-                            flexWrap: v.Ba.NoWrap,
+                            display: g.X.Flex,
+                            flexWrap: g.Ba.NoWrap,
                             flexShrink: 0
                         }, a.createElement("div", {
                             className: "latency-metrics__item-number"
                         }, this.tracker.isFirstLoad ? a.createElement(p.a, {
                             metric: this.tracker.firstPaint
-                        }) : a.createElement("span", null, "n/a")))), a.createElement(v.Xa, {
+                        }) : a.createElement("span", null, "n/a")))), a.createElement(g.Xa, {
                             className: "latency-metrics__item",
-                            display: v.X.Flex,
-                            justifyContent: v.Wa.Between,
-                            flexWrap: v.Ba.NoWrap
-                        }, a.createElement(v.Xa, {
+                            display: g.X.Flex,
+                            justifyContent: g.Wa.Between,
+                            flexWrap: g.Ba.NoWrap
+                        }, a.createElement(g.Xa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
-                        }, a.createElement("span", null, "Initialize")), a.createElement(v.Xa, {
+                        }, a.createElement("span", null, "Initialize")), a.createElement(g.Xa, {
                             className: "latency-metrics__item-right",
-                            display: v.X.Flex,
-                            flexWrap: v.Ba.NoWrap,
+                            display: g.X.Flex,
+                            flexWrap: g.Ba.NoWrap,
                             flexShrink: 0
                         }, a.createElement("div", {
                             className: "latency-metrics__item-number"
                         }, this.tracker.isFirstLoad ? a.createElement(p.a, {
                             metric: this.tracker.rootInitDuration
-                        }) : a.createElement("span", null, "n/a")))), a.createElement(v.Xa, {
+                        }) : a.createElement("span", null, "n/a")))), a.createElement(g.Xa, {
                             className: "latency-metrics__item",
-                            display: v.X.Flex,
-                            justifyContent: v.Wa.Between,
-                            flexWrap: v.Ba.NoWrap
-                        }, a.createElement(v.Xa, {
+                            display: g.X.Flex,
+                            justifyContent: g.Wa.Between,
+                            flexWrap: g.Ba.NoWrap
+                        }, a.createElement(g.Xa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
                         }, a.createElement("span", null, this.tracker.isFirstLoad ? "Page Load" : "App Transition")), a.createElement("div", {
                             className: "latency-metrics__item-number"
                         }, a.createElement(p.a, {
                             metric: this.tracker.pageLoadDuration
-                        }))), a.createElement(v.Xa, {
+                        }))), a.createElement(g.Xa, {
                             className: "latency-metrics__item",
-                            display: v.X.Flex,
-                            justifyContent: v.Wa.Between,
-                            flexWrap: v.Ba.NoWrap
-                        }, a.createElement(v.Xa, {
+                            display: g.X.Flex,
+                            justifyContent: g.Wa.Between,
+                            flexWrap: g.Ba.NoWrap
+                        }, a.createElement(g.Xa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
                         }, a.createElement("span", null, "Components (", i.count.value, ")")), a.createElement("div", {
@@ -1354,12 +1398,12 @@
                             className: "latency-metrics__item-stats-label"
                         }, "Average:"), a.createElement(p.a, {
                             metric: i.average
-                        })))), a.createElement(v.Xa, {
+                        })))), a.createElement(g.Xa, {
                             className: "latency-metrics__item",
-                            display: v.X.Flex,
-                            justifyContent: v.Wa.Between,
-                            flexWrap: v.Ba.NoWrap
-                        }, a.createElement(v.Xa, {
+                            display: g.X.Flex,
+                            justifyContent: g.Wa.Between,
+                            flexWrap: g.Ba.NoWrap
+                        }, a.createElement(g.Xa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
                         }, a.createElement("span", null, "Queries (", n.count.value, ")")), a.createElement("div", {
@@ -1378,12 +1422,12 @@
                             className: "latency-metrics__item-stats-label"
                         }, "Average:"), a.createElement(p.a, {
                             metric: n.average
-                        })))), a.createElement(v.Xa, {
+                        })))), a.createElement(g.Xa, {
                             className: "latency-metrics__item",
-                            display: v.X.Flex,
-                            justifyContent: v.Wa.Between,
-                            flexWrap: v.Ba.NoWrap
-                        }, a.createElement(v.Xa, {
+                            display: g.X.Flex,
+                            justifyContent: g.Wa.Between,
+                            flexWrap: g.Ba.NoWrap
+                        }, a.createElement(g.Xa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
                         }, a.createElement("span", null, "Requests (", t.count.value, ")")), a.createElement("div", {
@@ -1407,13 +1451,13 @@
                         }))
                     }, t.prototype.renderCustomEventGroup = function(e, t) {
                         var n = this;
-                        return a.createElement(v.Xa, {
+                        return a.createElement(g.Xa, {
                             key: e,
                             className: "latency-metrics__item",
-                            display: v.X.Flex,
-                            justifyContent: v.Wa.Between,
-                            flexWrap: v.Ba.NoWrap
-                        }, a.createElement(v.Xa, {
+                            display: g.X.Flex,
+                            justifyContent: g.Wa.Between,
+                            flexWrap: g.Ba.NoWrap
+                        }, a.createElement(g.Xa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
                         }, a.createElement("span", null, e)), a.createElement("div", {
@@ -1604,7 +1648,7 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return this.props.isStaff || c.a.buildType !== u.a.Production ? l.createElement(d.Bb, {
+                        return this.props.isStaff || c.a.buildType !== u.a.Production ? l.createElement(d.Cb, {
                             margin: {
                                 bottom: 1
                             },
@@ -1629,13 +1673,13 @@
                             display: d.X.Flex,
                             alignItems: d.f.Center,
                             fullWidth: !0
-                        }, !c.a.forceBenchmarkingTools && !this.state.isEnabled && l.createElement(d.Ub, {
+                        }, !c.a.forceBenchmarkingTools && !this.state.isEnabled && l.createElement(d.Vb, {
                             label: "Enabling will reload the page"
                         }, l.createElement(d.qb, {
                             asset: d.rb.NotificationInfo,
                             width: 16,
                             height: 16
-                        })), c.a.forceBenchmarkingTools && l.createElement(d.Ub, {
+                        })), c.a.forceBenchmarkingTools && l.createElement(d.Vb, {
                             label: "Always enabled in dev"
                         }, l.createElement(d.qb, {
                             asset: d.rb.NotificationInfo,

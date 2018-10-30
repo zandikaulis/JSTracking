@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [192], {
+    [191], {
         "/2zc": function(e, n, t) {},
         "4kMF": function(e, n, t) {},
         "5zXJ": function(e, n, t) {
@@ -766,10 +766,10 @@
                         }, {
                             "esports-square__svg": !0
                         });
-                    return l.createElement(d.Bb, {
+                    return l.createElement(d.Cb, {
                         "data-test-selector": t,
                         className: c,
-                        textAlign: d.Nb.Center,
+                        textAlign: d.Ob.Center,
                         position: d.hb.Relative,
                         borderRadius: d.x.Large,
                         overflow: d.cb.Hidden,
@@ -1084,7 +1084,7 @@
                             margin: {
                                 right: 1
                             },
-                            verticalAlign: c.bc.Bottom
+                            verticalAlign: c.cc.Bottom
                         }, s.createElement(c.z, {
                             "data-test-selector": "esports-claim-all-button",
                             onClick: this.claimAllRewards,
@@ -1369,7 +1369,7 @@
                     }
                     return a.__extends(n, e), n.prototype.render = function() {
                         var e = this.props.productPrice;
-                        return this.props.productDiscountPrice && (e = this.props.productDiscountPrice), i.createElement(g.a, null, i.createElement(h.Bb, {
+                        return this.props.productDiscountPrice && (e = this.props.productDiscountPrice), i.createElement(g.a, null, i.createElement(h.Cb, {
                             background: h.r.Base
                         }, i.createElement(h.Xa, {
                             className: "ticket-description__banner-image",
@@ -1380,9 +1380,9 @@
                             src: o.c + "/owl-2017/all-access-logo.svg",
                             alt: Object(s.d)("Overwatch League All-Access Pass on Twitch", "CampaignsTicketDescription"),
                             height: "80px"
-                        })), i.createElement(h.Bb, {
+                        })), i.createElement(h.Cb, {
                             borderBottom: !0,
-                            textAlign: h.Nb.Center,
+                            textAlign: h.Ob.Center,
                             padding: 2
                         }, i.createElement(p.a, {
                             price: e,
@@ -1487,12 +1487,12 @@
                             className: "insider-pass-full-skin-reward__image",
                             src: this.props.imageURL
                         }), r.createElement(m.Xa, {
-                            textAlign: m.Nb.Center
+                            textAlign: m.Ob.Center
                         }, r.createElement(m.W, {
                             fontSize: m.Ca.Size4,
                             bold: !0
                         }, this.props.name)), r.createElement(m.Xa, {
-                            textAlign: m.Nb.Center
+                            textAlign: m.Ob.Center
                         }, r.createElement(m.W, {
                             color: m.O.Alt2
                         }, this.props.subText)))
@@ -1580,7 +1580,7 @@
                                         x: 1
                                     },
                                     key: t.name,
-                                    textAlign: m.Nb.Center
+                                    textAlign: m.Ob.Center
                                 }, r.createElement(c.a, {
                                     imageURL: t.imageURL,
                                     size: e ? c.c.Large : c.c.Medium,
@@ -1610,7 +1610,7 @@
                             padding: {
                                 y: 3
                             },
-                            textAlign: m.Nb.Center
+                            textAlign: m.Ob.Center
                         }, r.createElement(m.W, {
                             fontSize: m.Ca.Size3,
                             color: m.O.Link,
@@ -1670,9 +1670,9 @@
                                 left: 1,
                                 right: 1
                             }
-                        }, r.createElement(m.Bb, {
+                        }, r.createElement(m.Cb, {
                             className: "insider-pass-rewards__players-pack",
-                            textAlign: m.Nb.Center,
+                            textAlign: m.Ob.Center,
                             fullWidth: !0
                         }, r.createElement(m.S, {
                             className: "insider-pass-rewards__players-pack__image",
@@ -1704,9 +1704,9 @@
                                 bottom: 2,
                                 top: 2
                             }
-                        }, r.createElement(m.Bb, {
+                        }, r.createElement(m.Cb, {
                             className: "insider-pass-rewards__new-item",
-                            textAlign: m.Nb.Center,
+                            textAlign: m.Ob.Center,
                             fullWidth: !0
                         }, r.createElement(m.S, {
                             className: "insider-pass-rewards__new-item__image",
@@ -1738,9 +1738,9 @@
                                 bottom: 2,
                                 top: 2
                             }
-                        }, r.createElement(m.Bb, {
+                        }, r.createElement(m.Cb, {
                             className: "insider-pass-rewards__new-item",
-                            textAlign: m.Nb.Center,
+                            textAlign: m.Ob.Center,
                             fullWidth: !0
                         }, r.createElement(m.S, {
                             className: "insider-pass-rewards__new-item__image",

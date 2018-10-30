@@ -445,7 +445,7 @@
                             "ach-col--l": !0,
                             "ach-col--spotlight": e.isSpotlightShown
                         });
-                    return r.createElement(g.Bb, {
+                    return r.createElement(g.Cb, {
                         className: "ach-page",
                         margin: {
                             bottom: 1
@@ -458,7 +458,7 @@
                             flexDirection: g.Aa.Row
                         },
                         fullHeight: !0
-                    }, r.createElement(g.Bb, {
+                    }, r.createElement(g.Cb, {
                         className: "ach-col-wrapper ach-col-wrapper--q",
                         display: g.X.Flex,
                         flexWrap: g.Ba.NoWrap,
@@ -478,7 +478,7 @@
                             bottom: 2
                         },
                         fullHeight: !0
-                    }, e.left))), r.createElement(g.Bb, {
+                    }, e.left))), r.createElement(g.Cb, {
                         className: "ach-col-wrapper ach-col-wrapper--l",
                         display: g.X.Flex,
                         flexGrow: 1,
@@ -497,9 +497,9 @@
                 O = n("4eyL"),
                 T = n("jvBR"),
                 S = n("i68L"),
-                w = n("xMok"),
-                j = n("5NYc"),
-                C = function(e) {
+                C = n("xMok"),
+                w = n("5NYc"),
+                j = function(e) {
                     var t = Object(E.b)(),
                         n = t ? {
                             x: .5
@@ -507,7 +507,7 @@
                         i = t ? {
                             left: 1
                         } : {};
-                    return r.createElement(g.Bb, {
+                    return r.createElement(g.Cb, {
                         key: e.buttonText,
                         background: g.r.Alt2,
                         borderRadius: g.x.Large,
@@ -537,9 +537,9 @@
                 };
                 o.o.track(m.SpadeEventType.AchievementQuestBannerClick, t)
             }
-            var I, B = n("u2gS"),
-                D = function(e) {
-                    if (e.isPartner) return r.createElement(P, {
+            var I, D = n("u2gS"),
+                P = function(e) {
+                    if (e.isPartner) return r.createElement(q, {
                         title: e.title,
                         subtitle: e.subtitle,
                         url: e.url
@@ -547,7 +547,7 @@
                     var t = e.url ? r.createElement(g.U, {
                         to: e.url
                     }, r.createElement(g.W, {
-                        type: g.Rb.Span,
+                        type: g.Sb.Span,
                         color: g.O.OverlayAlt
                     }, e.subtitle)) : e.subtitle;
                     return r.createElement("div", null, r.createElement(g.W, {
@@ -561,8 +561,8 @@
                         fontSize: g.Ca.Size5
                     }, t))
                 },
-                P = function(e) {
-                    return r.createElement(g.Bb, {
+                q = function(e) {
+                    return r.createElement(g.Cb, {
                         display: g.X.Flex,
                         flexGrow: 1,
                         flexWrap: g.Ba.NoWrap,
@@ -583,17 +583,17 @@
                     }, r.createElement(g.U, {
                         to: e.url
                     }, r.createElement(g.W, {
-                        type: g.Rb.Span,
+                        type: g.Sb.Span,
                         color: g.O.OverlayAlt
-                    }, e.subtitle)))), r.createElement(g.Bb, {
+                    }, e.subtitle)))), r.createElement(g.Cb, {
                         display: g.X.Flex,
                         color: g.O.OverlayAlt
                     }, r.createElement(g.qb, {
                         asset: g.rb.Verified
                     })))
                 },
-                q = function(e) {
-                    return r.createElement(g.Bb, {
+                L = function(e) {
+                    return r.createElement(g.Cb, {
                         display: g.X.Flex,
                         flexGrow: 1,
                         alignItems: g.f.Center
@@ -606,7 +606,7 @@
                         fontSize: g.Ca.Size5
                     }, r.createElement(g.W, {
                         color: g.O.Overlay,
-                        type: g.Rb.Span,
+                        type: g.Sb.Span,
                         bold: !0
                     }, e.title), !!e.subtitle && r.createElement(g.Xa, {
                         display: g.X.Inline,
@@ -615,7 +615,7 @@
                         }
                     }, r.createElement(g.W, {
                         color: g.O.OverlayAlt,
-                        type: g.Rb.Span
+                        type: g.Sb.Span
                     }, e.subtitle)))), r.createElement(g.Xa, {
                         display: g.X.Flex,
                         flexShrink: 0,
@@ -639,44 +639,44 @@
                             i = null,
                             a = null;
                         switch (e.key) {
-                            case j.b.PATH_TO_PARTNER:
-                                e.role === B.d.Partner ? i = r.createElement(W, {
+                            case w.b.PATH_TO_PARTNER:
+                                e.role === D.d.Partner ? i = r.createElement(W, {
                                     channelLogin: this.props.channelLogin,
                                     bannerTitle: Object(o.d)("Congratulations! You’re a Twitch Partner", "AchievementsBannerPathToPartner"),
                                     learnMoreText: n
-                                }) : e.role === B.d.Affiliate && e.isComplete && (i = r.createElement(F, {
+                                }) : e.role === D.d.Affiliate && e.isComplete && (i = r.createElement(F, {
                                     questKey: e.key
                                 }));
                                 break;
-                            case j.b.PATH_TO_AFFILIATE:
-                                e.role === B.d.Affiliate ? i = r.createElement(N, {
+                            case w.b.PATH_TO_AFFILIATE:
+                                e.role === D.d.Affiliate ? i = r.createElement(N, {
                                     channelLogin: this.props.channelLogin,
                                     bannerTitle: t,
                                     learnMoreText: n
-                                }) : e.role === B.d.None && e.isComplete && (i = r.createElement(X, {
+                                }) : e.role === D.d.None && e.isComplete && (i = r.createElement(X, {
                                     channelLogin: this.props.channelLogin,
                                     questKey: e.key,
                                     hasAffiliateInviteError: e.hasAffiliateInviteError,
                                     bannerTitle: Object(o.d)("Congrats! You're eligible for Affiliate status.", "AchievementsBannerPathToAffiliate")
                                 }));
                                 break;
-                            case j.b.IT_BEGINS:
-                                e.isComplete && e.role === B.d.None && (i = r.createElement(L, null));
+                            case w.b.IT_BEGINS:
+                                e.isComplete && e.role === D.d.None && (i = r.createElement(B, null));
                                 break;
-                            case j.b.VIP_BADGE:
-                                this.isVIPBadgeEnabled && (i = r.createElement(q, {
+                            case w.b.VIP_BADGE:
+                                this.isVIPBadgeEnabled && (i = r.createElement(L, {
                                     "data-test-selector": I.BUILD_A_COMMUNITY,
                                     title: Object(o.d)("Congrats! Now you can grant VIP status to your viewers.", "QuestBanner")
-                                }, r.createElement(C, {
+                                }, r.createElement(j, {
                                     buttonText: n,
                                     url: e.learnMoreURL
-                                }), r.createElement(C, {
+                                }), r.createElement(j, {
                                     buttonText: Object(o.d)("Manage Roles", "QuestBanner"),
                                     url: "/" + this.props.channelLogin + "/dashboard/roles",
                                     onClickButton: k.bind(null, e.key)
                                 })))
                         }
-                        return i && (a = r.createElement(g.Bb, {
+                        return i && (a = r.createElement(g.Cb, {
                             borderRadius: this.isVIPBadgeEnabled ? g.x.Large : void 0,
                             background: g.r.AccentAlt2,
                             margin: this.isVIPBadgeEnabled ? {
@@ -687,24 +687,24 @@
                         }, i)), a
                     }, t
                 }(r.Component),
-                L = function() {
-                    return r.createElement(D, {
+                B = function() {
+                    return r.createElement(P, {
                         title: Object(o.d)("You've started your path as a Twitch streamer", "AchievementsBannerItBegins"),
                         subtitle: Object(o.d)("Which achievement will you complete next?", "AchievementsBannerItBegins")
                     })
                 },
                 N = function(e) {
-                    return Object(E.b)() ? r.createElement(q, {
+                    return Object(E.b)() ? r.createElement(L, {
                         title: e.bannerTitle
-                    }, r.createElement(C, {
+                    }, r.createElement(j, {
                         buttonText: e.learnMoreText,
                         url: "https://help.twitch.tv/customer/en/portal/topics/1070347-affiliate-program/articles",
                         buttonType: g.F.Text,
                         targetBlank: !0
-                    }), r.createElement(C, {
+                    }), r.createElement(j, {
                         buttonText: Object(o.d)("Affiliate Settings", "AchievementsBannerPathToPartner"),
                         url: "/" + e.channelLogin + "/dashboard/settings/revenue"
-                    })) : r.createElement(D, {
+                    })) : r.createElement(P, {
                         title: e.bannerTitle,
                         subtitle: e.learnMoreText,
                         url: "https://help.twitch.tv/customer/en/portal/topics/1070347-affiliate-program/articles"
@@ -714,34 +714,34 @@
                     var t = function() {
                         return k(e.questKey)
                     };
-                    return e.hasAffiliateInviteError ? r.createElement(q, {
+                    return e.hasAffiliateInviteError ? r.createElement(L, {
                         title: e.bannerTitle,
                         subtitle: Object(o.d)("First, complete your in-progress developer onboarding.", "AchievementsBannerPathToAffiliate")
-                    }, r.createElement(C, {
+                    }, r.createElement(j, {
                         buttonText: Object(o.d)("Continue", "AchievementsBannerPathToAffiliate"),
                         url: "/" + e.channelLogin + "/dashboard/settings/revenue",
                         onClickButton: t
-                    })) : r.createElement(q, {
+                    })) : r.createElement(L, {
                         title: e.bannerTitle,
                         subtitle: Object(o.d)("Begin your Affiliate onboarding.", "AchievementsBannerPathToAffiliate")
-                    }, r.createElement(C, {
+                    }, r.createElement(j, {
                         buttonText: Object(o.d)("Get Started", "AchievementsBannerPathToAffiliate"),
                         url: "/" + e.channelLogin + "/dashboard/settings/revenue",
                         onClickButton: t
                     }))
                 },
                 W = function(e) {
-                    return Object(E.b)() ? r.createElement(q, {
+                    return Object(E.b)() ? r.createElement(L, {
                         title: e.bannerTitle
-                    }, r.createElement(C, {
+                    }, r.createElement(j, {
                         buttonText: e.learnMoreText,
                         url: "https://help.twitch.tv/customer/portal/topics/301854-partner-program/articles",
                         buttonType: g.F.Text,
                         targetBlank: !0
-                    }), r.createElement(C, {
+                    }), r.createElement(j, {
                         buttonText: Object(o.d)("Partner Settings", "AchievementsBannerPathToPartner"),
                         url: "/" + e.channelLogin + "/dashboard/settings/revenue"
-                    })) : r.createElement(D, {
+                    })) : r.createElement(P, {
                         title: e.bannerTitle,
                         subtitle: e.learnMoreText,
                         url: "https://help.twitch.tv/customer/portal/topics/301854-partner-program/articles",
@@ -749,10 +749,10 @@
                     })
                 },
                 F = function(e) {
-                    return r.createElement(q, {
+                    return r.createElement(L, {
                         title: Object(o.d)("Apply to the Twitch Partner program.", "AchievementsBannerPathToPartner"),
-                        subtitle: Object(o.d)("We usually follow up in 7 business days.", "AchievementsBannerPathToPartner")
-                    }, r.createElement(C, {
+                        subtitle: Object(o.d)("We will follow up in 7 business days.", "AchievementsBannerPathToPartner")
+                    }, r.createElement(j, {
                         buttonText: Object(o.d)("Apply", "AchievementsBannerPathToPartner"),
                         url: "/partner/signup",
                         onClickButton: function() {
@@ -763,7 +763,7 @@
                 U = function(e) {
                     var t = Object(o.d)("Completed", "AchievementsQuests"),
                         n = function() {
-                            return Object(E.b)() ? r.createElement(g.Bb, {
+                            return Object(E.b)() ? r.createElement(g.Cb, {
                                 fontSize: g.Ca.Size4
                             }, r.createElement(g.eb, {
                                 label: t,
@@ -773,15 +773,15 @@
                                 type: g.fb.Success
                             })
                         };
-                    return e.completedAt ? r.createElement(g.Ub, {
+                    return e.completedAt ? r.createElement(g.Vb, {
                         label: Object(o.c)(e.completedAt, "long"),
-                        direction: g.Wb.Left
+                        direction: g.Xb.Left
                     }, n()) : n()
                 },
                 z = n("y/W1"),
                 M = n("qe41"),
-                G = n("9+Lo"),
-                H = (n("qCmY"), function(e) {
+                V = n("9+Lo"),
+                G = (n("qCmY"), function(e) {
                     var t = Object(E.b)(),
                         n = e.quest.completedRequirementsCount,
                         a = e.quest.totalRequirements,
@@ -831,13 +831,13 @@
                             },
                             elevation: e.isActive ? 0 : 1
                         };
-                    return r.createElement(g.Bb, i.__assign({
+                    return r.createElement(g.Cb, i.__assign({
                         className: c,
                         position: g.hb.Relative
                     }, A), r.createElement(g.Ua, {
                         onClick: e.onHeaderClick,
                         blurAfterClick: !0
-                    }, r.createElement(g.Bb, i.__assign({
+                    }, r.createElement(g.Cb, i.__assign({
                         className: "ach-q-item__header quest-header",
                         display: g.X.Flex
                     }, b, {
@@ -854,7 +854,7 @@
                         fullHeight: !0
                     }, v, {
                         alignItems: g.f.Center
-                    }), t && r.createElement(g.Bb, {
+                    }), t && r.createElement(g.Cb, {
                         borderRadius: g.x.Large,
                         className: "quest-header__badge-wrap",
                         margin: {
@@ -866,13 +866,13 @@
                         alt: Object(o.d)("quest image", "AchievementsQuestCard")
                     })), r.createElement(g.W, i.__assign({
                         className: "ach-q-item__title",
-                        type: g.Rb.Strong
+                        type: g.Sb.Strong
                     }, f, {
                         fontSize: g.Ca.Size4
-                    }), e.quest.title)), !h && r.createElement(g.Ub, {
+                    }), e.quest.title)), !h && r.createElement(g.Vb, {
                         label: Object(z.b)(n, a),
-                        direction: g.Wb.Left
-                    }, r.createElement(g.Bb, {
+                        direction: g.Xb.Left
+                    }, r.createElement(g.Cb, {
                         display: g.X.Flex,
                         fullHeight: !0,
                         padding: {
@@ -886,7 +886,7 @@
                             color: g.O.Alt2,
                             fontSize: g.Ca.Size5
                         }, Object(z.b)(e, n));
-                        for (var a = 0; a < e; a++) i.push(r.createElement(g.Bb, {
+                        for (var a = 0; a < e; a++) i.push(r.createElement(g.Cb, {
                             key: "completeReqBar-" + a,
                             className: "quest-progress-bars quest-progress-bars__complete",
                             borderRadius: g.x.Large,
@@ -894,7 +894,7 @@
                                 left: .5
                             }
                         }));
-                        for (a = 0; a < n - e; a++) i.push(r.createElement(g.Bb, {
+                        for (a = 0; a < n - e; a++) i.push(r.createElement(g.Cb, {
                             key: "incompleteReqBar-" + a,
                             className: "quest-progress-bars quest-progress-bars__incomplete",
                             borderRadius: g.x.Large,
@@ -918,13 +918,13 @@
                     })))))), r.createElement(R, {
                         quest: e.quest,
                         channelLogin: p
-                    }), r.createElement(g.Bb, {
+                    }), r.createElement(g.Cb, {
                         background: g.r.Base
                     }, s.map(function(t) {
                         return r.createElement(g.Xa, {
                             key: t.metric
                         }, function(t) {
-                            if (!e.quest.isComplete && t.time_based && !l) return l = !0, r.createElement(G.a, {
+                            if (!e.quest.isComplete && t.time_based && !l) return l = !0, r.createElement(V.a, {
                                 channelLogin: p,
                                 questKey: e.quest.key
                             })
@@ -932,10 +932,10 @@
                             requirement: t,
                             requirementInstructionString: u,
                             isComplete: e.quest.isComplete,
-                            subtext: t.metric === j.a.AVERAGE_CCU ? Object(z.a)(e.quest.requirements) : void 0,
+                            subtext: t.metric === w.a.AVERAGE_CCU ? Object(z.a)(e.quest.requirements) : void 0,
                             ccuTooltipLabel: e.quest.ccuTooltipLabel
                         }))
-                    })), r.createElement(g.Bb, {
+                    })), r.createElement(g.Cb, {
                         display: g.X.Flex,
                         padding: 1,
                         background: t ? g.r.Alt : g.r.Alt2
@@ -953,13 +953,13 @@
                     }, r.createElement(g.W, {
                         color: g.O.Alt2,
                         fontSize: g.Ca.Size6,
-                        type: g.Rb.Span
+                        type: g.Sb.Span
                     }, m, " ", r.createElement(g.U, {
                         targetBlank: !0,
                         to: e.quest.learnMoreURL
                     }, Object(o.d)("Learn more", "AchievementsPathToAffiliate"))))))
                 }),
-                V = function(e) {
+                H = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -974,7 +974,7 @@
                         var e = this,
                             t = this.state.userSelectedQuest || this.props.quests[0],
                             n = this.props.quests.map(function(n) {
-                                return r.createElement(H, {
+                                return r.createElement(G, {
                                     key: n.key,
                                     quest: n,
                                     channelLogin: e.props.channel.name,
@@ -1027,10 +1027,10 @@
                 ee = function(e) {
                     var t = e.title,
                         n = e.subtitle;
-                    return r.createElement(g.Bb, {
+                    return r.createElement(g.Cb, {
                         position: g.hb.Relative,
                         padding: 2,
-                        textAlign: g.Nb.Center,
+                        textAlign: g.Ob.Center,
                         className: "ach-sb",
                         elevation: 1,
                         border: !0
@@ -1065,9 +1065,9 @@
                             x: 4
                         },
                         position: g.hb.Absolute,
-                        zIndex: g.ec.Above
+                        zIndex: g.fc.Above
                     };
-                    return r.createElement(g.Bb, i.__assign({}, t), r.createElement(g.i, {
+                    return r.createElement(g.Cb, i.__assign({}, t), r.createElement(g.i, {
                         type: g.n.BounceIn,
                         duration: g.k.Medium,
                         enabled: !0,
@@ -1090,14 +1090,14 @@
                 re = function() {
                     var e = Object(o.d)("Celebrate milestones and track your progress towards becoming an Affiliate or Partner.", "AchievementsSpotlight"),
                         t = Object(o.d)("Learn more", "AchievementsSpotlight");
-                    return r.createElement(g.Bb, {
+                    return r.createElement(g.Cb, {
                         padding: 2,
                         className: "ach-sb",
                         display: g.X.Flex,
                         alignItems: g.f.Center,
                         elevation: 1,
                         border: !0
-                    }, r.createElement(g.Bb, {
+                    }, r.createElement(g.Cb, {
                         display: g.X.Flex,
                         fullWidth: !0,
                         flexWrap: g.Ba.NoWrap
@@ -1152,16 +1152,16 @@
                             this.handleViewSpotlight();
                             var t = void 0;
                             switch (this.bannerType) {
-                                case j.b.PATH_TO_PARTNER:
+                                case w.b.PATH_TO_PARTNER:
                                     t = r.createElement(ce, null);
                                     break;
-                                case j.b.PATH_TO_AFFILIATE:
+                                case w.b.PATH_TO_AFFILIATE:
                                     t = r.createElement(le, null);
                                     break;
-                                case j.b.IT_BEGINS:
+                                case w.b.IT_BEGINS:
                                     t = r.createElement(se, null);
                                     break;
-                                case j.b.VIP_BADGE:
+                                case w.b.VIP_BADGE:
                                     t = r.createElement(me, null);
                                     break;
                                 default:
@@ -1196,56 +1196,56 @@
                     }), t
                 }(r.PureComponent),
                 ce = function() {
-                    var e = Object(Y.b)(j.b.PATH_TO_PARTNER),
+                    var e = Object(Y.b)(w.b.PATH_TO_PARTNER),
                         t = r.createElement(ue, {
                             title: e.title
                         }),
                         n = e.bannerTitle(t);
                     return x({
                         type: "quest",
-                        questKey: j.b.PATH_TO_PARTNER
+                        questKey: w.b.PATH_TO_PARTNER
                     }), r.createElement(ee, {
                         title: n,
                         subtitle: e.subtitle
                     })
                 },
                 le = function() {
-                    var e = Object(Y.b)(j.b.PATH_TO_AFFILIATE),
+                    var e = Object(Y.b)(w.b.PATH_TO_AFFILIATE),
                         t = r.createElement(ue, {
                             title: e.title
                         }),
                         n = e.bannerTitle(t);
                     return x({
                         type: "quest",
-                        questKey: j.b.PATH_TO_AFFILIATE
+                        questKey: w.b.PATH_TO_AFFILIATE
                     }), r.createElement(ee, {
                         title: n,
                         subtitle: e.subtitle
                     })
                 },
                 se = function() {
-                    var e = Object(Y.b)(j.b.IT_BEGINS),
+                    var e = Object(Y.b)(w.b.IT_BEGINS),
                         t = r.createElement(ue, {
                             title: e.title
                         }),
                         n = e.bannerTitle(t);
                     return x({
                         type: "quest",
-                        questKey: j.b.IT_BEGINS
+                        questKey: w.b.IT_BEGINS
                     }), r.createElement(ee, {
                         title: n,
                         subtitle: e.subtitle
                     })
                 },
                 me = function() {
-                    var e = Object(Y.b)(j.b.VIP_BADGE),
+                    var e = Object(Y.b)(w.b.VIP_BADGE),
                         t = r.createElement(ue, {
                             title: e.title
                         }),
                         n = e.bannerTitle(t);
                     return x({
                         type: "quest",
-                        questKey: j.b.VIP_BADGE
+                        questKey: w.b.VIP_BADGE
                     }), r.createElement(ee, {
                         title: n,
                         subtitle: e.subtitle
@@ -1254,7 +1254,7 @@
                 ue = function(e) {
                     var t = e.title;
                     return r.createElement(g.W, {
-                        type: g.Rb.Span,
+                        type: g.Sb.Span,
                         color: g.O.Base
                     }, t)
                 },
@@ -1272,11 +1272,11 @@
                             return Object(E.b)() ? r.createElement(_.a, null, r.createElement(oe, i.__assign({}, t, {
                                 channelName: e.name
                             }), function() {
-                                return r.createElement(g.Xa, null, r.createElement(V, {
+                                return r.createElement(g.Xa, null, r.createElement(H, {
                                     quests: t.quests,
                                     channel: e,
                                     isLoading: t.isLoading
-                                }), r.createElement(w.a, {
+                                }), r.createElement(C.a, {
                                     achievements: t.achievements,
                                     isLoading: t.isLoading
                                 }))
@@ -1285,12 +1285,12 @@
                             }), function(n) {
                                 return r.createElement(y, {
                                     isSpotlightShown: n,
-                                    left: r.createElement(V, {
+                                    left: r.createElement(H, {
                                         quests: t.quests,
                                         channel: e,
                                         isLoading: t.isLoading
                                     }),
-                                    right: r.createElement(w.a, {
+                                    right: r.createElement(C.a, {
                                         achievements: t.achievements,
                                         isLoading: t.isLoading
                                     })
@@ -1348,7 +1348,7 @@
                             borderTop: !0,
                             borderBottom: !0
                         };
-                    return o.createElement(m.Bb, i.__assign({}, u), o.createElement(m.Xa, {
+                    return o.createElement(m.Cb, i.__assign({}, u), o.createElement(m.Xa, {
                         padding: {
                             left: 1
                         },
@@ -1359,7 +1359,7 @@
                         "x:strong": function(e) {
                             return o.createElement(m.W, {
                                 bold: !0,
-                                type: m.Rb.Span
+                                type: m.Sb.Span
                             }, e)
                         },
                         startDate: n,
@@ -1406,7 +1406,7 @@
                             className: "confetti-layer",
                             position: c.hb.Absolute,
                             overflow: c.cb.Hidden,
-                            zIndex: c.ec.Default,
+                            zIndex: c.fc.Default,
                             attachTop: !0,
                             attachRight: !0,
                             attachBottom: !0,
@@ -1467,7 +1467,7 @@
                         className: s,
                         position: l.hb.Relative,
                         flexShrink: 0
-                    }, a.createElement(l.Bb, i.__assign({
+                    }, a.createElement(l.Cb, i.__assign({
                         className: m,
                         background: l.r.Alt2
                     }, n), a.createElement("img", {
@@ -1475,7 +1475,7 @@
                         className: "ach-card__img",
                         src: e.achievement.image.scale1x,
                         srcSet: e.achievement.image.scale1x + " 1x, " + e.achievement.image.scale3x + " 3x"
-                    })), Boolean(e.achievement.level) && a.createElement(l.Bb, {
+                    })), Boolean(e.achievement.level) && a.createElement(l.Cb, {
                         className: "ach-card__lvl",
                         position: l.hb.Absolute,
                         background: l.r.Alt
@@ -1484,7 +1484,7 @@
                         icon: Object(o.a)(e.achievement.level),
                         size: 20,
                         type: l.t.Dashboard
-                    }))), a.createElement(l.Bb, {
+                    }))), a.createElement(l.Cb, {
                         overflow: l.cb.Hidden,
                         display: l.X.Flex,
                         justifyContent: l.Wa.Center,
@@ -1501,7 +1501,7 @@
                         fontSize: l.Ca.Size5,
                         color: l.O.Alt2,
                         ellipsis: !0
-                    }, e.achievement.description)), a.createElement(l.Bb, {
+                    }, e.achievement.description)), a.createElement(l.Cb, {
                         className: "ach-card__progress-meta",
                         display: l.X.Flex,
                         alignContent: l.e.Center,
@@ -1562,10 +1562,10 @@
                     }, a.createElement(s.kb, {
                         size: s.mb.ExtraSmall,
                         value: 100 * e.achievement.progressRatio
-                    }))), a.createElement(s.Bb, i.__assign({
+                    }))), a.createElement(s.Cb, i.__assign({
                         className: l,
                         position: s.hb.Relative
-                    }, m), a.createElement(s.Bb, {
+                    }, m), a.createElement(s.Cb, {
                         className: "ach-card__inner"
                     }, a.createElement(o.a, {
                         achievement: e.achievement
@@ -1674,7 +1674,7 @@
                         color: t >= n ? void 0 : o.O.Alt2,
                         bold: !0,
                         fontSize: o.Ca.Size4,
-                        type: o.Rb.Span
+                        type: o.Sb.Span
                     }, Object(r.g)(l, {
                         maximumFractionDigits: 2
                     })), i.createElement(o.Xa, {
@@ -1684,16 +1684,16 @@
                     }, i.createElement(o.W, {
                         fontSize: o.Ca.Size5,
                         color: o.O.Alt2,
-                        type: o.Rb.Span
+                        type: o.Sb.Span
                     }, "/")), i.createElement(o.W, {
                         fontSize: o.Ca.Size5,
                         color: o.O.Alt2
                     }, Object(r.g)(n, {
                         maximumFractionDigits: 2
                     })));
-                return t > 999 ? i.createElement(o.Ub, {
+                return t > 999 ? i.createElement(o.Vb, {
                     label: Object(r.f)(l),
-                    direction: o.Wb.Left
+                    direction: o.Xb.Left
                 }, s) : s
             }
         },
@@ -1896,7 +1896,7 @@
             var s = function(e) {
                 var t = e.requirement,
                     n = t.metric === o.a.AVERAGE_CCU;
-                return a.createElement(l.Bb, {
+                return a.createElement(l.Cb, {
                     position: l.hb.Relative,
                     display: l.X.Flex,
                     alignItems: l.f.Center,
@@ -1926,9 +1926,9 @@
                         left: .5,
                         right: 3
                     }
-                }, a.createElement(l.Ub, {
+                }, a.createElement(l.Vb, {
                     label: e.ccuTooltipLabel,
-                    direction: l.Wb.Top,
+                    direction: l.Xb.Top,
                     width: 230
                 }, a.createElement(l.qb, {
                     asset: l.rb.NotificationInfo,
@@ -2018,7 +2018,7 @@
                         alignItems: s.f.Center
                     }, r.createElement(l.a, {
                         date: e.achievement.completedAt
-                    })) : r.createElement(s.Bb, {
+                    })) : r.createElement(s.Cb, {
                         className: "ach-card__pill-wrapper",
                         fontSize: s.Ca.Size5
                     }, r.createElement(s.eb, {
@@ -2055,7 +2055,7 @@
                             margin: {
                                 y: 2
                             },
-                            zIndex: s.ec.Above,
+                            zIndex: s.fc.Above,
                             borderRadius: s.x.Large,
                             fullWidth: !0,
                             fullHeight: !0
@@ -2077,10 +2077,10 @@
                             background: s.r.Alt2,
                             border: !0
                         };
-                    return r.createElement(s.Bb, i.__assign({
+                    return r.createElement(s.Cb, i.__assign({
                         className: n,
                         position: s.hb.Relative
-                    }, o), r.createElement(s.Bb, i.__assign({
+                    }, o), r.createElement(s.Cb, i.__assign({
                         className: "ach-card__inner"
                     }, a, {
                         refDelegate: e.refDelegate
@@ -2107,9 +2107,9 @@
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(s.Bb, i.__assign({}, c), r.createElement(s.q, i.__assign({}, b, {
+                    }, r.createElement(s.Cb, i.__assign({}, c), r.createElement(s.q, i.__assign({}, b, {
                         size: 30
-                    })), r.createElement(s.Bb, {
+                    })), r.createElement(s.Cb, {
                         color: s.O.Alt,
                         margin: {
                             left: .5
@@ -2122,7 +2122,7 @@
                 g = function(e) {
                     return 0 === e.achievement.progress ? r.createElement("span", null) : e.achievement.completedAt ? r.createElement(l.a, {
                         date: e.achievement.completedAt
-                    }) : r.createElement(s.Bb, {
+                    }) : r.createElement(s.Cb, {
                         className: "ach-card__pill-wrapper",
                         fontSize: s.Ca.Size5
                     }, r.createElement(s.eb, {
@@ -2153,7 +2153,7 @@
                         margin: {
                             bottom: 2
                         }
-                    }, e.isLoading ? C() : r.createElement(S, {
+                    }, e.isLoading ? j() : r.createElement(S, {
                         achievements: e.achievements
                     }))
                 },
@@ -2189,11 +2189,11 @@
                                 bottom: .5
                             }
                         }, r.createElement(s.W, {
-                            type: s.Rb.H3,
+                            type: s.Sb.H3,
                             fontSize: s.Ca.Size4,
                             bold: !0
                         }, Object(o.d)("Recently Completed", "AchievementsList"))), this.props.achievements.topRecentlyCompleted.map(function(t) {
-                            return r.createElement(w, {
+                            return r.createElement(C, {
                                 achievement: t,
                                 key: t.id
                             }, !e.state.didCelebrate && r.createElement(A.a, {
@@ -2207,11 +2207,11 @@
                                 bottom: .5
                             }
                         }, r.createElement(s.W, {
-                            type: s.Rb.H3,
+                            type: s.Sb.H3,
                             fontSize: s.Ca.Size4,
                             bold: !0
                         }, Object(o.d)("In Progress", "AchievementsList"))), this.props.achievements.notCompleted.map(function(e) {
-                            return r.createElement(w, {
+                            return r.createElement(C, {
                                 achievement: e,
                                 key: e.id
                             })
@@ -2227,18 +2227,18 @@
                                 bottom: .5
                             }
                         }, r.createElement(s.W, {
-                            type: s.Rb.H3,
+                            type: s.Sb.H3,
                             fontSize: s.Ca.Size4,
                             bold: !0
                         }, Object(o.d)("Completed", "AchievementsList"))), this.props.achievements.pastCompleted.map(function(e) {
-                            return r.createElement(w, {
+                            return r.createElement(C, {
                                 achievement: e,
                                 key: e.id
                             })
                         })))
                     }, t
                 }(r.Component),
-                w = function(e) {
+                C = function(e) {
                     var t = Object(h.b)();
                     return r.createElement(a.a, {
                         path: p.b.achievement(e.achievement),
@@ -2257,15 +2257,15 @@
                             background: s.r.Base,
                             overflow: s.cb.Hidden
                         };
-                        return r.createElement(s.Bb, i.__assign({
+                        return r.createElement(s.Cb, i.__assign({
                             elevation: 1
                         }, o), r.createElement(c.a, {
                             achievement: e.achievement,
                             layoutClassName: "ach-card--in-list"
-                        }, r.createElement("div", null, e.children, j(e.achievement))))
+                        }, r.createElement("div", null, e.children, w(e.achievement))))
                     })
                 },
-                j = function(e) {
+                w = function(e) {
                     return Object(h.b)() ? r.createElement(v.a, {
                         progress: e.progress,
                         progressCap: e.progressCap,
@@ -2274,7 +2274,7 @@
                         achievement: e
                     })
                 },
-                C = function() {
+                j = function() {
                     var e = Array(3).fill("").map(function(e, t) {
                         return r.createElement(s.Xa, {
                             margin: {
@@ -2310,7 +2310,7 @@
             }), n.d(t, "a", function() {
                 return T
             }), n.d(t, "b", function() {
-                return j
+                return w
             })
         },
         "y/W1": function(e, t, n) {
@@ -2336,7 +2336,7 @@
                             "x:strong": function(e) {
                                 return i.createElement(o.W, {
                                     bold: !0,
-                                    type: o.Rb.Span
+                                    type: o.Sb.Span
                                 }, e)
                             },
                             duration: Object(r.f)(Math.floor(100 * n) / 100)
