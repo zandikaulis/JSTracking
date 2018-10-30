@@ -771,13 +771,13 @@ window.__twilightSettings = {
         },
         "4d203dab-d9e9-4726-a438-6bc557cddcb2": {
             "name": "extension_configure_modal",
-            "v": 4482,
+            "v": 4961,
             "t": 2,
             "groups": [{
-                "weight": 5,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 95,
+                "weight": 100,
                 "value": "test"
             }]
         },
