@@ -3034,7 +3034,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.6.31-193d9328";
+    return "2.6.31-c80a5efc";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -4855,7 +4855,7 @@ Queue.prototype.empty = function () {
 
 var map = {
 	"./2buf.json": "./settings/2buf.json",
-	"./abrdelay.json": "./settings/abrdelay.json",
+	"./abrprobe.json": "./settings/abrprobe.json",
 	"./abrreset.json": "./settings/abrreset.json"
 };
 
@@ -4894,14 +4894,14 @@ module.exports = {"buffercontrol":{"minBufferDuration":2}};
 
 /***/ }),
 
-/***/ "./settings/abrdelay.json":
+/***/ "./settings/abrprobe.json":
 /*!********************************!*\
-  !*** ./settings/abrdelay.json ***!
+  !*** ./settings/abrprobe.json ***!
   \********************************/
 /*! exports provided: abr, default */
 /***/ (function(module) {
 
-module.exports = {"abr":{"lowLatencyDelayMode":true}};
+module.exports = {"abr":{"lowLatencyProbe":true}};
 
 /***/ }),
 
