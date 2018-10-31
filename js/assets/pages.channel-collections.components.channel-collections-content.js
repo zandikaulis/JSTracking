@@ -298,7 +298,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(c.a, {
+                        var e = {
                             context: this.props.context,
                             onClick: this.onClickHandler,
                             title: this.props.video.title,
@@ -309,7 +309,7 @@
                             },
                             thumbnailImageProps: {
                                 src: this.props.video.previewThumbnailURL,
-                                alt: this.props.video.title
+                                alt: this.props.video.title || ""
                             },
                             channelDisplayName: this.props.video.owner && this.props.video.owner.displayName || "",
                             channelLogin: this.props.video.owner && this.props.video.owner.login || "",
@@ -319,7 +319,7 @@
                             },
                             channelImageProps: {
                                 src: this.props.video.owner && this.props.video.owner.profileImageURL || "",
-                                alt: this.props.video.owner ? this.props.video.owner.displayName : ""
+                                alt: this.props.video.owner && this.props.video.owner.displayName || ""
                             },
                             gameTitle: this.props.video.game && this.props.video.game.name || "",
                             gameTitleLinkTo: {
@@ -333,8 +333,8 @@
                             videoGameChanges: this.gameChangesWithLinks(),
                             multipleVideoGameMarkersType: this.props.multipleVideoGameMarkersType,
                             datePublished: this.props.video.publishedAt,
-                            viewCount: this.props.video.viewCount,
-                            durationInSeconds: this.props.hideDuration ? void 0 : this.props.video.lengthSeconds,
+                            viewCount: this.props.video.viewCount || 0,
+                            durationInSeconds: !this.props.hideDuration && this.props.video.lengthSeconds ? this.props.video.lengthSeconds : void 0,
                             animatedImageProps: this.props.video.animatedPreviewURL ? {
                                 src: this.props.video.animatedPreviewURL,
                                 alt: ""
@@ -351,14 +351,15 @@
                                 tags: this.props.video.contentTags,
                                 linkPath: g.a.PopularTag
                             } : void 0
-                        })
+                        };
+                        return o.createElement(c.a, i.__assign({}, e))
                     }, t.prototype.generateSearchString = function() {
                         var e = {};
                         this.props.collectionID && (e.collection = this.props.collectionID);
                         var t = l.stringify(e);
                         return t ? "?" + t : ""
                     }, t.prototype.getVideoPreviousWatchPercentage = function() {
-                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / this.props.video.lengthSeconds * 100 : null
+                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / (this.props.video.lengthSeconds || 1 / 0) * 100 : null
                     }, t.prototype.getRestrictionProps = function() {
                         var e = this.props.video.restriction && this.props.video.restriction.productName ? "/products/" + this.props.video.restriction.productName : "";
                         return {
@@ -410,7 +411,7 @@
                         videoGameChanges: this.state.videoGameChanges
                     }, this.props))
                 }, t.prototype.componentWillMount = function() {
-                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== r.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds)
+                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== r.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds || 0)
                 }, t
             }(o.Component)
         },
@@ -877,11 +878,11 @@
                 N = n("QVaV"),
                 P = n("hyVY"),
                 O = n("MXoD"),
-                D = n("0LAi");
+                V = n("0LAi");
             ! function(e) {
                 e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
             }(C || (C = {}));
-            var V, F, A = function(e) {
+            var D, F, A = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -962,7 +963,7 @@
                 return void 0 !== e.clipCreatedByChannelLogin
             }! function(e) {
                 e.Avatar = "preview-card-avatar", e.BoxArt = "preview-card-box-art"
-            }(V || (V = {})),
+            }(D || (D = {})),
             function(e) {
                 e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
             }(F || (F = {}));
@@ -1037,9 +1038,9 @@
                             bottomLeft: o.createElement(E, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: o.createElement(E, {
+                            bottomRight: this.props.datePublished ? o.createElement(E, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
-                            }),
+                            }) : null,
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
                         }) : B(this.props) ? o.createElement(w, {
@@ -1052,9 +1053,9 @@
                             bottomLeft: o.createElement(E, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: o.createElement(E, {
+                            bottomRight: this.props.datePublished ? o.createElement(E, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
-                            })
+                            }) : null
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
                         return R(this.props) && this.props.listPosition ? Object(r.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
@@ -1075,7 +1076,7 @@
                             linkTo: Object(O.a)(this.getTrackingContext(h.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             aspect: l.p.BoxArt,
-                            "data-test-selector": V.BoxArt,
+                            "data-test-selector": D.BoxArt,
                             "data-a-target": "preview-card-boxart-link"
                         })) : (this.props.context === F.SingleGameList || this.props.context === F.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? o.createElement(l.Xa, {
                             margin: {
@@ -1086,7 +1087,7 @@
                             linkTo: Object(O.a)(this.getTrackingContext(h.PageviewContent.UserThumbnail), this.props.channelLinkTo),
                             onClick: this.props.onChannelImageClick || this.props.onChannelLoginClick,
                             aspect: l.p.Aspect1x1,
-                            "data-test-selector": V.Avatar
+                            "data-test-selector": D.Avatar
                         })) : void 0
                     }, t.prototype.renderTitles = function() {
                         var e = null,
@@ -1120,7 +1121,7 @@
                             margin: {
                                 top: .5
                             }
-                        }, o.createElement(D.a, i.__assign({}, this.props.tagListProps, {
+                        }, o.createElement(V.a, i.__assign({}, this.props.tagListProps, {
                             tagNumberLimit: 3
                         }))) : null
                     }, t.prototype.renderVODRestrictionOverlay = function() {
@@ -1155,7 +1156,7 @@
                     autoReportInteractive: !0
                 })(j);
             n.d(t, !1, function() {
-                return V
+                return D
             }), n.d(t, "b", function() {
                 return F
             }), n.d(t, !1, function() {
@@ -2455,7 +2456,7 @@
                             if (!t.state.hasTrackedItemSectionLoad) {
                                 for (var e = t.props.videos ? t.props.videos : [], n = [], i = [], o = 0, r = e; o < r.length; o++) {
                                     var l = r[o];
-                                    n.push(l.id), i.push(l.viewCount)
+                                    n.push(l.id), i.push(l.viewCount || 0)
                                 }
                                 s.o.trackItemSectionLoad(a.__assign({
                                     carousel_content: t.props.tracking.content,
@@ -3041,14 +3042,59 @@
                             }
                         }]
                     }
+                }, {
+                    kind: "FragmentDefinition",
+                    name: {
+                        kind: "Name",
+                        value: "VideoEdge"
+                    },
+                    typeCondition: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "VideoEdge"
+                        }
+                    },
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "cursor"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "node"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "FragmentSpread",
+                                    name: {
+                                        kind: "Name",
+                                        value: "PreviewCardVideo"
+                                    },
+                                    directives: []
+                                }]
+                            }
+                        }]
+                    }
                 }],
                 loc: {
                     start: 0,
-                    end: 454
+                    end: 526
                 }
             };
             i.loc.source = {
-                body: '#import "twilight/features/tags/models/tag-fragment.gql"\nfragment PreviewCardVideo on Video {\nanimatedPreviewURL\ngame {\nboxArtURL(width: 40 height: 56)\nid\ndisplayName\nname\n}\nid\nlengthSeconds\nowner {\ndisplayName\nid\nlogin\nprofileImageURL(width: 50)\n}\npreviewThumbnailURL(width: 320 height: 180)\npublishedAt\nself {\nisRestricted\nviewingHistory {\nposition\nupdatedAt\n}\n}\ntitle\nviewCount\nrestriction {\nproductName\nproductTitle\n}\ncontentTags {\n...tagFragment\n}\n}',
+                body: '#import "twilight/features/tags/models/tag-fragment.gql"\nfragment PreviewCardVideo on Video {\nanimatedPreviewURL\ngame {\nboxArtURL(width: 40 height: 56)\nid\ndisplayName\nname\n}\nid\nlengthSeconds\nowner {\ndisplayName\nid\nlogin\nprofileImageURL(width: 50)\n}\npreviewThumbnailURL(width: 320 height: 180)\npublishedAt\nself {\nisRestricted\nviewingHistory {\nposition\nupdatedAt\n}\n}\ntitle\nviewCount\nrestriction {\nproductName\nproductTitle\n}\ncontentTags {\n...tagFragment\n}\n}\nfragment VideoEdge on VideoEdge {\ncursor\nnode {\n...PreviewCardVideo\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -3124,7 +3170,7 @@
                                     }
                                 }
                                 if (!o) return null;
-                                if (o.viewingPosition / o.value.lengthSeconds > u) {
+                                if (o.viewingPosition / (o.value.lengthSeconds || 1 / 0) > u) {
                                     var m = o.index + 1;
                                     if (m < n) {
                                         var h = t[m];

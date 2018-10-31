@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [173], {
+    [172], {
         "+Mtq": function(e, t, n) {},
         "3GEC": function(e, t, n) {
             "use strict";
@@ -914,7 +914,7 @@
                         }).then(function(t) {
                             e.countryCode = t.data.requestInfo.countryCode
                         }).catch(function(t) {
-                            e.logger.error(t, "Failed to get country code")
+                            e.logger.warn(t, "Failed to get country code")
                         })
                     }, e.prototype.getSearchResults = function(e) {
                         var t = this,
@@ -931,7 +931,7 @@
                                 results: JSON.parse(e.data.search.result)
                             }
                         }).catch(function(e) {
-                            return t.logger.error(e, "Failed to get search results"), e
+                            return t.logger.warn(e, "Failed to get search results"), e
                         })
                     }, e.prototype.getTopResult = function(e, t) {
                         return {

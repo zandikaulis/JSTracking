@@ -1234,6 +1234,20 @@
             }(n("iiOx").definitions)), e.exports = a
         },
         BIFG: function(e, t, n) {},
+        Bk78: function(e, t, n) {
+            "use strict";
+
+            function a(e) {
+                var t = Date.now() - e;
+                return function() {
+                    var n = Date.now();
+                    return t + e <= n ? (t = n, "network-only") : "cache-first"
+                }
+            }
+            n.d(t, "a", function() {
+                return a
+            })
+        },
         C29h: function(e, t, n) {
             "use strict";
             var a, i = n("mrSG"),
@@ -2370,9 +2384,9 @@
                             bottomLeft: i.createElement(C, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: i.createElement(C, {
+                            bottomRight: this.props.datePublished ? i.createElement(C, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
-                            }),
+                            }) : null,
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
                         }) : G(this.props) ? i.createElement(S, {
@@ -2385,9 +2399,9 @@
                             bottomLeft: i.createElement(C, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: i.createElement(C, {
+                            bottomRight: this.props.datePublished ? i.createElement(C, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
-                            })
+                            }) : null
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
                         return R(this.props) && this.props.listPosition ? Object(r.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
@@ -6152,67 +6166,68 @@
             "use strict";
             n.r(t);
             var a = n("moLQ"),
-                i = n("mrSG"),
-                r = n("q1tI"),
-                o = n("/MKj"),
-                s = n("fvjX"),
-                l = n("0GkP"),
-                c = n("kRBY"),
-                d = n("OhOW"),
-                u = n("Igt5"),
-                m = n("17x9"),
-                p = n("/7QA"),
-                g = n("ZDlU"),
-                h = n("MJbm"),
-                f = n("yR8l"),
-                v = n("V+GM");
-            var k = n("geRD"),
-                b = n("NvVO"),
-                y = n("MPw5"),
-                T = n("2xye"),
-                S = n("cTNz"),
-                C = n("GnwI"),
-                w = n("bUox"),
-                N = n("TCeE"),
-                I = n("AZIu"),
-                _ = n("0Rl0"),
-                D = n("rShu"),
-                E = n("8/mp"),
-                x = n("Uive"),
-                F = n("hX9f"),
-                O = n("Ue10"),
-                L = "directory-container",
-                P = function(e) {
+                i = n("/MKj"),
+                r = n("fvjX"),
+                o = n("kRBY"),
+                s = n("OhOW"),
+                l = n("Igt5"),
+                c = n("mrSG"),
+                d = n("17x9"),
+                u = n("q1tI"),
+                m = n("/7QA"),
+                p = n("ZDlU"),
+                g = n("MJbm"),
+                h = n("yR8l"),
+                f = n("V+GM"),
+                v = n("0GkP"),
+                k = n("Bk78"),
+                b = n("geRD"),
+                y = n("NvVO"),
+                T = n("MPw5"),
+                S = n("2xye"),
+                C = n("cTNz"),
+                w = n("GnwI"),
+                N = n("bUox"),
+                I = n("TCeE"),
+                _ = n("AZIu"),
+                D = n("0Rl0"),
+                E = n("rShu"),
+                x = n("8/mp"),
+                F = n("Uive"),
+                O = n("hX9f"),
+                L = n("Ue10"),
+                P = "directory-container",
+                A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.updateDisplayAdOrder = function() {
-                            var e = document.querySelector('[data-target="' + L + '"]'),
-                                t = document.querySelector('[data-target="' + F.a + '"]'),
-                                n = document.querySelector("#" + S.b.directory.rectangle);
+                            var e = document.querySelector('[data-target="' + P + '"]'),
+                                t = document.querySelector('[data-target="' + O.a + '"]'),
+                                n = document.querySelector("#" + C.b.directory.rectangle);
                             if (t && e && n) {
                                 var a = Math.round((e.clientWidth - 300) / t.clientWidth).toString();
                                 n.style.order !== a && "0" !== a && (n.style.order = a)
                             }
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        window.addEventListener("resize", this.updateDisplayAdOrder), this.onRender()
-                    }, t.prototype.componentDidUpdate = function() {
-                        this.onRender()
+                    return c.__extends(t, e), t.prototype.componentDidMount = function() {
+                        window.addEventListener("resize", this.updateDisplayAdOrder), this.onRender(), this.updateDisplayAdOrder()
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.props.sideNavExpanded !== e.sideNavExpanded && this.updateDisplayAdOrder()
                     }, t.prototype.componentWillUnmount = function() {
                         window.removeEventListener("resize", this.updateDisplayAdOrder)
+                    }, t.prototype.componentDidUpdate = function() {
+                        this.onRender()
                     }, t.prototype.render = function() {
-                        return r.createElement(O.Xa, {
+                        return u.createElement(L.Xa, {
                             flexShrink: 0,
-                            "data-target": L,
+                            "data-target": P,
                             "data-test-selector": "direectory-grid-grid-layout"
-                        }, r.createElement(O.Yb, {
-                            gutterSize: O.ac.Small,
-                            childWidth: O.Zb.Large,
+                        }, u.createElement(L.Yb, {
+                            gutterSize: L.ac.Small,
+                            childWidth: L.Zb.Large,
                             placeholderItems: 20
-                        }, r.createElement(x.a, {
+                        }, u.createElement(F.a, {
                             injectStyles: {
                                 textAlign: "center",
                                 marginBottom: 20,
@@ -6220,32 +6235,32 @@
                                 width: 300,
                                 height: 250
                             },
-                            adUnit: S.d.directory,
-                            slotID: S.b.directory.rectangle,
-                            adSize: S.c.directory.rectangle,
+                            adUnit: C.d.directory,
+                            slotID: C.b.directory.rectangle,
+                            adSize: C.c.directory.rectangle,
                             "data-a-target": "directory-card-ad-slot",
                             targeting: {
-                                pagetype: S.a.games,
+                                pagetype: C.a.games,
                                 game: this.props.directoryName
                             },
                             key: -1,
                             autoEnable: !1
-                        }), this.props.children), r.createElement(E.a, {
+                        }), this.props.children), u.createElement(x.a, {
                             enabled: this.props.canLoadMore,
                             loadMore: this.props.loadMore,
                             pixelThreshold: 500
                         }))
                     }, t.prototype.onRender = function() {
-                        var e = r.Children.count(this.props.children);
-                        this.props.latencyTracking.reportInteractive(e > 12 ? 12 : e), this.updateDisplayAdOrder()
+                        var e = u.Children.count(this.props.children);
+                        this.props.latencyTracking.reportInteractive(e > 12 ? 12 : e)
                     }, t
-                }(r.Component),
-                A = Object(C.b)("DirectoryGrid")(P);
-            var j, R = Object(o.connect)(function(e) {
+                }(u.Component),
+                j = Object(w.b)("DirectoryGrid")(A);
+            var R = Object(i.connect)(function(e) {
                     return {
                         sideNavExpanded: e.ui.sideNavExpanded
                     }
-                })(A),
+                })(j),
                 G = n("oJmH"),
                 B = n("oB8h"),
                 M = n("5myU"),
@@ -6257,11 +6272,11 @@
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
+                    return c.__extends(t, e), t.prototype.render = function() {
                         var e = this;
                         if (this.props.data.loading && !this.props.data.game || this.props.data.error) return null;
                         var t = this.props.directoryWidth,
-                            n = T.PageviewMedium.Game,
+                            n = S.PageviewMedium.Game,
                             a = this.props.data.game && this.props.data.game.streams && this.props.data.game.streams.edges || [];
                         if (t && t > 0) {
                             var i = Object(M.a)(t, 300, 1);
@@ -6269,19 +6284,19 @@
                                 a = a.slice(0, i - 0)
                             }
                         }
-                        var o = a.filter(function(e) {
+                        var r = a.filter(function(e) {
                             return e && e.node && e.node.broadcaster && e.node.broadcaster.login && e.node.broadcaster.id
                         }).map(function(t, a) {
                             if (t && t.node) {
                                 var i = t.node,
-                                    o = Object(U.a)({
+                                    r = Object(U.a)({
                                         tags: i.tags,
-                                        section: I.a.IncategoryChannels,
+                                        section: _.a.IncategoryChannels,
                                         onClickTag: e.props.addTagFilter,
                                         tagFilters: e.props.tagFilters,
                                         scrollToTop: e.props.scrollToTop
                                     });
-                                return r.createElement(F.b, {
+                                return u.createElement(O.b, {
                                     directoryName: e.props.directoryName,
                                     directoryType: e.props.directoryType,
                                     streamIndex: a,
@@ -6290,41 +6305,41 @@
                                         id: i.id,
                                         title: i.title || "",
                                         viewersCount: i.viewersCount || 0,
-                                        previewImageURL: i.previewImageURL || p.a.defaultStreamPreviewURL,
+                                        previewImageURL: i.previewImageURL || m.a.defaultStreamPreviewURL,
                                         broadcaster: i.broadcaster ? {
                                             __typename: "User",
                                             id: i.broadcaster.id,
                                             login: i.broadcaster.login,
                                             displayName: i.broadcaster.displayName,
                                             roles: null,
-                                            profileImageURL: i.broadcaster.profileImageURL || p.a.defaultAvatarURL
+                                            profileImageURL: i.broadcaster.profileImageURL || m.a.defaultAvatarURL
                                         } : null,
                                         game: i.game ? {
                                             __typename: "Game",
                                             id: i.game.id,
-                                            boxArtURL: i.game.boxArtURL || p.a.defaultBoxArtURL,
+                                            boxArtURL: i.game.boxArtURL || m.a.defaultBoxArtURL,
                                             name: i.game.name
                                         } : null,
                                         type: Object(W.a)(i.type) || B.a.Live
                                     },
                                     key: i.id,
                                     trackingMedium: n,
-                                    trackingContent: T.PageviewContent.LocalLiveChannel,
+                                    trackingContent: S.PageviewContent.LocalLiveChannel,
                                     trackImageLatency: 0 === a,
-                                    tagListProps: o
+                                    tagListProps: r
                                 })
                             }
                         });
-                        return o.length > 0 ? r.createElement(O.Xa, null, r.createElement(V.a, {
+                        return r.length > 0 ? u.createElement(L.Xa, null, u.createElement(V.a, {
                             languageCode: this.props.languageCode,
                             directoryName: this.props.directoryName
-                        }), r.createElement(O.Yb, {
-                            gutterSize: O.ac.Small,
-                            childWidth: O.Zb.Large
-                        }, o)) : null
+                        }), u.createElement(L.Yb, {
+                            gutterSize: L.ac.Small,
+                            childWidth: L.Zb.Large
+                        }, r)) : null
                     }, t
-                }(r.Component),
-                q = Object(G.compose)(Object(f.a)(X, {
+                }(u.Component),
+                q = Object(G.compose)(Object(h.a)(X, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -6335,7 +6350,7 @@
                             }
                         }
                     }
-                }), Object(C.b)("DirectoryInternationalSection", {
+                }), Object(w.b)("DirectoryInternationalSection", {
                     autoReportInteractive: !0
                 }))(H),
                 z = function(e) {
@@ -6344,38 +6359,24 @@
                         return e && e.node && e.node.id
                     })
                 },
-                Q = n("D7An");
-            ! function(e) {
-                e.Control = "control", e.Experiment = "experiment"
-            }(j || (j = {}));
-            var $ = n("TJgk"),
+                Q = n("vuN2"),
+                $ = n("TJgk"),
                 Y = 0,
-                J = function(e) {
-                    var t = Date.now() - e;
-                    return function() {
-                        var n = Date.now();
-                        return t + e <= n ? (t = n, "network-only") : "cache-first"
-                    }
-                }(3e5),
-                K = function() {
-                    var e = null;
-                    return function() {
-                        return null === e && (e = p.p.experiments.getAssignment(Q.b.DirectoryTTL) === j.Experiment), e
-                    }
-                }();
+                J = Object(k.a)(3e5),
+                K = Object(Q.a)();
             var Z = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.addTagFilter = function(e) {
                             n.props.addTagFilter(e, decodeURIComponent(n.props.match.params.encodedCommunityName))
                         }, n.onResize = function(e) {
-                            clearTimeout(Y), Y = setTimeout(function() {
+                            e !== n.state.directoryWidth && (clearTimeout(Y), Y = setTimeout(function() {
                                 n.setState({
                                     directoryWidth: e
                                 })
-                            }, 50)
+                            }, 50))
                         }, n.renderPlaceholders = function() {
-                            for (var e = [], t = 0; t < 20; t++) e.push(r.createElement(_.a, {
+                            for (var e = [], t = 0; t < 20; t++) e.push(u.createElement(D.a, {
                                 key: t
                             }));
                             return e
@@ -6386,7 +6387,7 @@
                         }, n.onSlotAdded = function() {
                             n.setState(function(e) {
                                 var t = e.numSlotsAdded + 1;
-                                return t === Object.keys(S.b.directory).length && y.a.display(S.b.directory.banner), {
+                                return t === Object.keys(C.b.directory).length && T.a.display(C.b.directory.banner), {
                                     numSlotsAdded: t
                                 }
                             })
@@ -6394,54 +6395,54 @@
                             var e = n.props.data.game;
                             return !(n.props.data.loading || n.props.data.error || !e || "" === e.id || !e.streams || !e.streams.pageInfo || !e.streams.pageInfo.hasNextPage)
                         }, n.state = {
-                            directoryType: D.a.Games,
+                            directoryType: E.a.Games,
                             directoryWidth: -1,
                             numSlotsAdded: 0
                         }, n
                     }
-                    return i.__extends(t, e), t.prototype.componentWillMount = function() {
-                        S.g.addListener(S.e, this.onSlotAdded)
+                    return c.__extends(t, e), t.prototype.componentWillMount = function() {
+                        C.g.addListener(C.e, this.onSlotAdded)
                     }, t.prototype.componentDidMount = function() {
                         this.onRender()
                     }, t.prototype.componentDidUpdate = function() {
                         this.onRender()
                     }, t.prototype.componentWillUnmount = function() {
-                        S.g.removeListener(S.e, this.onSlotAdded)
+                        C.g.removeListener(C.e, this.onSlotAdded)
                     }, t.prototype.render = function() {
                         var e = this,
                             t = null;
-                        if (this.props.tagFilters.length > N.a ? t = r.createElement(w.a, {
-                                errorType: w.b.TooManyTags,
+                        if (this.props.tagFilters.length > I.a ? t = u.createElement(N.a, {
+                                errorType: N.b.TooManyTags,
                                 onClickRemoveLastTag: this.removeLastTag,
                                 tagFilters: this.props.tagFilters
-                            }) : this.props.data.loading || this.props.data.game ? this.props.data.error ? t = r.createElement(g.a, {
-                                message: Object(p.d)("Error loading data.", "DirectoryGamePage")
-                            }) : this.props.data.game && this.props.data.game.streams && this.props.data.game.streams.edges && 0 === this.props.data.game.streams.edges.length && (t = r.createElement(w.a, {
-                                errorType: w.b.NoResults,
+                            }) : this.props.data.loading || this.props.data.game ? this.props.data.error ? t = u.createElement(p.a, {
+                                message: Object(m.d)("Error loading data.", "DirectoryGamePage")
+                            }) : this.props.data.game && this.props.data.game.streams && this.props.data.game.streams.edges && 0 === this.props.data.game.streams.edges.length && (t = u.createElement(N.a, {
+                                errorType: N.b.NoResults,
                                 onClickRemoveLastTag: this.removeLastTag,
                                 tagFilters: this.props.tagFilters
-                            })) : t = r.createElement(g.a, {
-                                message: Object(p.d)("Game does not exist", "DirectoryGamePage")
-                            }), t) return r.createElement(O.Xa, {
+                            })) : t = u.createElement(p.a, {
+                                message: Object(m.d)("Game does not exist", "DirectoryGamePage")
+                            }), t) return u.createElement(L.Xa, {
                             padding: 3
                         }, t);
                         var n = null,
                             a = null;
                         if ("en" !== this.props.languageCode) {
-                            var o = {
-                                color: O.O.Base
+                            var i = {
+                                color: L.O.Base
                             };
-                            a = r.createElement(O.Xa, {
+                            a = u.createElement(L.Xa, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, r.createElement(O.W, i.__assign({
-                                type: O.Sb.H4
-                            }, o, {
+                            }, u.createElement(L.W, c.__assign({
+                                type: L.Sb.H4
+                            }, i, {
                                 "data-a-target": "international-section-header"
-                            }), Object(p.d)("All Channels", "DirectoryInternationalSection"))), this.props.tagFilters.length || this.props.languageTagFilters.length || (n = r.createElement(q, {
+                            }), Object(m.d)("All Channels", "DirectoryInternationalSection"))), this.props.tagFilters.length || this.props.languageTagFilters.length || (n = u.createElement(q, {
                                 directoryName: decodeURIComponent(this.props.match.params.encodedCommunityName),
-                                directoryType: D.a.Games,
+                                directoryType: E.a.Games,
                                 directoryWidth: this.state.directoryWidth,
                                 languageCode: this.props.languageCode,
                                 addTagFilter: this.addTagFilter,
@@ -6449,8 +6450,8 @@
                                 scrollToTop: this.context.scrollToTop
                             }))
                         }
-                        var s, l = this.props.data.game,
-                            c = z(this.props.data).filter(function(e) {
+                        var r, o = this.props.data.game,
+                            s = z(this.props.data).filter(function(e) {
                                 var t = e.node;
                                 return t && t.broadcaster && t.broadcaster.login && t.broadcaster.id
                             }).map(function(t, n) {
@@ -6462,7 +6463,7 @@
                                         id: n.id,
                                         title: n.title || "",
                                         viewersCount: n.viewersCount || 0,
-                                        previewImageURL: n.previewImageURL || p.a.defaultStreamPreviewURL,
+                                        previewImageURL: n.previewImageURL || m.a.defaultStreamPreviewURL,
                                         broadcaster: n.broadcaster ? {
                                             __typename: "User",
                                             id: n.broadcaster.id,
@@ -6474,13 +6475,13 @@
                                         game: n.game ? {
                                             __typename: "Game",
                                             id: n.game.id,
-                                            boxArtURL: n.game.boxArtURL || p.a.defaultBoxArtURL,
+                                            boxArtURL: n.game.boxArtURL || m.a.defaultBoxArtURL,
                                             name: n.game.name
                                         } : null,
                                         type: Object(W.a)(n.type) || B.a.Live
                                     }), t
                                 }(t);
-                                if (a && t.node) return r.createElement(F.b, {
+                                if (a && t.node) return u.createElement(O.b, {
                                     directoryName: decodeURIComponent(e.props.match.params.encodedCommunityName),
                                     directoryType: e.state.directoryType,
                                     streamIndex: n,
@@ -6489,57 +6490,57 @@
                                         tags: t && t.node && t.node.tags,
                                         onClickTag: e.addTagFilter,
                                         tagFilters: e.props.tagFilters,
-                                        section: I.a.IncategoryChannels,
+                                        section: _.a.IncategoryChannels,
                                         scrollToTop: e.context.scrollToTop
                                     }),
                                     key: t.node.id,
                                     trackImageLatency: 0 === n
                                 })
                             });
-                        if (c.length > 0) s = r.createElement(R, {
-                            directoryName: l ? l.displayName : "",
+                        if (s.length > 0) r = u.createElement(R, {
+                            directoryName: o ? o.displayName : "",
                             communityName: decodeURIComponent(this.props.match.params.encodedCommunityName),
                             canLoadMore: this.canLoadMoreGames(),
                             loadMore: this.props.loadMore
-                        }, c);
-                        else if (0 === c.length && this.props.data.loading) {
-                            var d = this.renderPlaceholders();
-                            s = r.createElement(O.Xa, {
+                        }, s);
+                        else if (0 === s.length && this.props.data.loading) {
+                            var l = this.renderPlaceholders();
+                            r = u.createElement(L.Xa, {
                                 flexShrink: 0
-                            }, r.createElement(O.Yb, {
-                                gutterSize: O.ac.Small,
-                                childWidth: O.Zb.Large,
+                            }, u.createElement(L.Yb, {
+                                gutterSize: L.ac.Small,
+                                childWidth: L.Zb.Large,
                                 placeholderItems: 20
-                            }, d))
-                        } else s = r.createElement(O.Xa, {
-                            display: O.X.Flex,
-                            alignItems: O.f.Center,
-                            justifyContent: O.Wa.Center,
+                            }, l))
+                        } else r = u.createElement(L.Xa, {
+                            display: L.X.Flex,
+                            alignItems: L.f.Center,
+                            justifyContent: L.Wa.Center,
                             fullWidth: !0,
                             padding: {
                                 y: 3
                             }
-                        }, r.createElement(O.W, {
-                            color: O.O.Alt2,
-                            fontSize: O.Ca.Size4,
+                        }, u.createElement(L.W, {
+                            color: L.O.Alt2,
+                            fontSize: L.Ca.Size4,
                             italic: !0
-                        }, Object(p.d)("No live channels for this game", "DirectoryGamePage")));
-                        return r.createElement(O.Xa, null, r.createElement(O.Xa, {
+                        }, Object(m.d)("No live channels for this game", "DirectoryGamePage")));
+                        return u.createElement(L.Xa, null, u.createElement(L.Xa, {
                             margin: {
                                 top: 2,
                                 bottom: 3,
                                 x: 3
                             }
-                        }, n, a, s, r.createElement(h.a, {
+                        }, n, a, r, u.createElement(g.a, {
                             onResize: this.onResize
                         })))
                     }, t.prototype.onRender = function() {
-                        this.props.data.loading || (this.props.latencyTracking.reportInteractive(), this.props.data.game && p.p.setPageTitle(this.props.data.game.displayName))
+                        this.props.data.loading || (this.props.latencyTracking.reportInteractive(), this.props.data.game && m.p.setPageTitle(this.props.data.game.displayName))
                     }, t.contextTypes = {
-                        scrollToTop: m.func
+                        scrollToTop: d.func
                     }, t
-                }(r.Component),
-                ee = Object(s.compose)(Object(f.a)($, {
+                }(u.Component),
+                ee = Object(r.compose)(Object(h.a)($, {
                     options: function(e) {
                         var t = decodeURIComponent(e.match.params.encodedCommunityName).toLowerCase(),
                             n = e.languageTagFilters.concat(e.tagFilters.map(function(e) {
@@ -6550,17 +6551,17 @@
                             variables: {
                                 name: t,
                                 limit: 30,
-                                sort: e.sortMode,
+                                sort: v.a.ViewerCount,
                                 tags: n
                             }
                         }
                     },
                     props: function(e) {
-                        return i.__assign({}, e, {
+                        return c.__assign({}, e, {
                             loadMore: function() {
                                 return e.data.fetchMore({
                                     query: $,
-                                    variables: i.__assign({}, e.data.variables, {
+                                    variables: c.__assign({}, e.data.variables, {
                                         cursor: function(e) {
                                             var t = e.game;
                                             if (!t || !t.streams || !t.streams.edges) return null;
@@ -6572,9 +6573,9 @@
                                     updateQuery: function(e, t) {
                                         var n = t.fetchMoreResult;
                                         return {
-                                            game: i.__assign({}, n.game, {
-                                                streams: i.__assign({}, n.game && n.game.streams, {
-                                                    edges: Object(k.c)(z(e), z(n))
+                                            game: c.__assign({}, n.game, {
+                                                streams: c.__assign({}, n.game && n.game.streams, {
+                                                    edges: Object(b.c)(z(e), z(n))
                                                 })
                                             })
                                         }
@@ -6583,73 +6584,61 @@
                             }
                         })
                     }
-                }), Object(C.b)("DirectoryGamePage", {
-                    destination: b.a.DirectoryGameIndex
-                }), Object(v.a)({
-                    location: T.PageviewLocation.Directory,
+                }), Object(w.b)("DirectoryGamePage", {
+                    destination: y.a.DirectoryGameIndex
+                }), Object(f.a)({
+                    location: S.PageviewLocation.Directory,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     },
                     properties: function(e) {
                         return {
-                            content_type: T.PageviewDirectoryContentType.Games,
+                            content_type: S.PageviewDirectoryContentType.Games,
                             game: e.data.game ? e.data.game.displayName : null
                         }
                     }
-                }))(Z),
-                te = l.a.ViewerCount,
-                ne = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {}, t
-                    }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(ee, i.__assign({
-                            sortMode: te
-                        }, this.props))
-                    }, t
-                }(r.Component);
-            var ae = Object(o.connect)(function(e, t) {
+                }))(Z);
+            var te = Object(i.connect)(function(e, t) {
                     return {
-                        languageCode: Object(c.b)(e),
-                        languagePreferences: Object(d.a)(e),
+                        languageCode: Object(o.b)(e),
+                        languagePreferences: Object(s.a)(e),
                         languageTagFilters: Object(a.c)(e),
                         sideNavExpanded: e.ui.sideNavExpanded,
                         tagFilters: Object(a.b)(e, decodeURIComponent(t.match.params.encodedCommunityName))
                     }
                 }, function(e) {
-                    return Object(s.bindActionCreators)({
-                        addTagFilter: u.e,
-                        removeTagFilter: u.h
+                    return Object(r.bindActionCreators)({
+                        addTagFilter: l.e,
+                        removeTagFilter: l.h
                     }, e)
-                })(ne),
-                ie = n("X7a7"),
-                re = n("4p7I"),
-                oe = n("yoKv"),
-                se = n("mLw1"),
-                le = n("ZS2+"),
-                ce = n("cras"),
-                de = n("si2W"),
-                ue = n("C29h"),
-                me = n("HStj"),
-                pe = n("8Ocm"),
-                ge = (n("yetU"), function(e) {
+                })(ee),
+                ne = n("X7a7"),
+                ae = n("4p7I"),
+                ie = n("yoKv"),
+                re = n("mLw1"),
+                oe = n("ZS2+"),
+                se = n("cras"),
+                le = n("si2W"),
+                ce = n("C29h"),
+                de = n("HStj"),
+                ue = n("8Ocm"),
+                me = (n("yetU"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderFilteredBy = function() {
-                            return t.props.selectedContentType !== me.a.Live ? null : t.props.data.game && t.props.data.game.id ? r.createElement(O.Xa, null, r.createElement(O.Xa, {
+                            return t.props.selectedContentType !== de.a.Live ? null : t.props.data.game && t.props.data.game.id ? u.createElement(L.Xa, null, u.createElement(L.Xa, {
                                 margin: {
                                     left: .5,
                                     top: 1
                                 }
-                            }, r.createElement(O.W, null, Object(p.d)("Filters", "DirectoryHeader"))), r.createElement(de.a, {
+                            }, u.createElement(L.W, null, Object(m.d)("Filters", "DirectoryHeader"))), u.createElement(le.a, {
                                 categoryID: t.props.data.game.id,
                                 categoryName: t.props.directoryName,
                                 onAddTagFilter: t.addTagFilter,
                                 onRemoveTagFilter: t.removeTagFilter,
                                 selectedTags: t.props.directoryTagFilters,
-                                tagSearchType: ue.b.StreamTag,
-                                section: I.a.IncategoryChannels
+                                tagSearchType: ce.b.StreamTag,
+                                section: _.a.IncategoryChannels
                             })) : null
                         }, t.addTagFilter = function(e) {
                             t.props.addTagFilter(e, t.props.directoryName)
@@ -6657,27 +6646,27 @@
                             t.props.removeTagFilter(e, t.props.directoryName)
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(O.Cb, {
+                    return c.__extends(t, e), t.prototype.render = function() {
+                        return u.createElement(L.Cb, {
                             className: "directory-header__filters",
-                            display: O.X.Flex,
-                            flexWrap: O.Ba.Wrap,
+                            display: L.X.Flex,
+                            flexWrap: L.Ba.Wrap,
                             padding: {
                                 right: 3
                             }
-                        }, r.createElement(O.Xa, {
+                        }, u.createElement(L.Xa, {
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(ce.a, {
-                            buttonSize: O.D.Large,
+                        }, u.createElement(se.a, {
+                            buttonSize: L.D.Large,
                             contentType: this.props.selectedContentType,
-                            directoryType: D.a.Games,
+                            directoryType: E.a.Games,
                             directoryName: this.props.directoryName
                         })), this.renderFilteredBy())
                     }, t
-                }(r.Component)),
-                he = Object(s.compose)(Object(f.a)(pe, {
+                }(u.Component)),
+                pe = Object(r.compose)(Object(h.a)(ue, {
                     options: function(e) {
                         return {
                             variables: {
@@ -6685,25 +6674,25 @@
                             }
                         }
                     }
-                }))(ge);
-            var fe = Object(o.connect)(function(e, t) {
+                }))(me);
+            var ge = Object(i.connect)(function(e, t) {
                     return {
                         directoryTagFilters: Object(a.b)(e, t.directoryName)
                     }
                 }, function(e) {
-                    return Object(s.bindActionCreators)({
-                        addTagFilter: u.e,
-                        removeTagFilter: u.h
+                    return Object(r.bindActionCreators)({
+                        addTagFilter: l.e,
+                        removeTagFilter: l.h
                     }, e)
-                })(he),
-                ve = n("TSYQ"),
-                ke = n("1/iK"),
-                be = n("y5D0"),
-                ye = n("JcRA"),
-                Te = n("Jl34"),
-                Se = n("y5Wm"),
-                Ce = n("k5cX"),
-                we = function(e) {
+                })(pe),
+                he = n("TSYQ"),
+                fe = n("1/iK"),
+                ve = n("y5D0"),
+                ke = n("JcRA"),
+                be = n("Jl34"),
+                ye = n("y5Wm"),
+                Te = n("k5cX"),
+                Se = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.followClicked = function() {
@@ -6711,12 +6700,12 @@
                         }, t.showUnfollowButton = function() {
                             return t.props.isLoggedIn && t.isFollowing
                         }, t.follow = function() {
-                            return i.__awaiter(t, void 0, void 0, function() {
+                            return c.__awaiter(t, void 0, void 0, function() {
                                 var e, t = this;
-                                return i.__generator(this, function(n) {
+                                return c.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return this.props.followGame && this.props.data && this.props.data.game ? (e = i.__assign({}, Object(k.a)({
+                                            return this.props.followGame && this.props.data && this.props.data.game ? (e = c.__assign({}, Object(b.a)({
                                                 gameID: this.props.data.game.id
                                             }), {
                                                 optimisticResponse: {
@@ -6737,13 +6726,13 @@
                                                 update: function(e, n) {
                                                     var a = n.data.followGame,
                                                         i = e.readQuery({
-                                                            query: Se,
+                                                            query: ye,
                                                             variables: {
                                                                 name: t.props.gameName
                                                             }
                                                         });
                                                     i && i.game && i.game.self && (i.game.self.follow = a && a.game && a.game.self && a.game.self.follow, e.writeQuery({
-                                                        query: Se,
+                                                        query: ye,
                                                         variables: {
                                                             name: t.props.gameName
                                                         },
@@ -6752,17 +6741,17 @@
                                                 }
                                             }), [4, this.props.followGame(e)]) : [2];
                                         case 1:
-                                            return n.sent(), this.track(T.SpadeEventType.GameFollow), [2]
+                                            return n.sent(), this.track(S.SpadeEventType.GameFollow), [2]
                                     }
                                 })
                             })
                         }, t.unfollow = function() {
-                            return i.__awaiter(t, void 0, void 0, function() {
+                            return c.__awaiter(t, void 0, void 0, function() {
                                 var e, t = this;
-                                return i.__generator(this, function(n) {
+                                return c.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return this.props.unfollowGame && this.props.data && this.props.data.game ? (e = i.__assign({}, Object(k.a)({
+                                            return this.props.unfollowGame && this.props.data && this.props.data.game ? (e = c.__assign({}, Object(b.a)({
                                                 gameID: this.props.data.game.id
                                             }), {
                                                 optimisticResponse: {
@@ -6773,13 +6762,13 @@
                                                 },
                                                 update: function(e) {
                                                     var n = e.readQuery({
-                                                        query: Se,
+                                                        query: ye,
                                                         variables: {
                                                             name: t.props.gameName
                                                         }
                                                     });
                                                     n && n.game && n.game.self && (n.game.self.follow = null, e.writeQuery({
-                                                        query: Se,
+                                                        query: ye,
                                                         variables: {
                                                             name: t.props.gameName
                                                         },
@@ -6788,51 +6777,51 @@
                                                 }
                                             }), [4, this.props.unfollowGame(e)]) : [2];
                                         case 1:
-                                            return n.sent(), this.track(T.SpadeEventType.GameUnfollow), [2]
+                                            return n.sent(), this.track(S.SpadeEventType.GameUnfollow), [2]
                                     }
                                 })
                             })
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        var e = Object(p.d)("Follow", "FollowGameButton"),
+                    return c.__extends(t, e), t.prototype.render = function() {
+                        var e = Object(m.d)("Follow", "FollowGameButton"),
                             t = this.props.buttonType,
-                            n = t && t === O.F.Hollow ? O.rb.FollowHollow : O.rb.Heart,
+                            n = t && t === L.F.Hollow ? L.rb.FollowHollow : L.rb.Heart,
                             a = void 0 === this.props.fullWidthButton || this.props.fullWidthButton,
-                            o = {};
-                        if (a && (o.justifyContent = O.Wa.Center), this.props.isLoggedIn && this.isLoading) return r.createElement(O.Xa, i.__assign({
-                            display: O.X.Flex
-                        }, o), r.createElement(O.Xa, {
-                            alignItems: O.f.Center
-                        }, r.createElement(O.gb, {
+                            i = {};
+                        if (a && (i.justifyContent = L.Wa.Center), this.props.isLoggedIn && this.isLoading) return u.createElement(L.Xa, c.__assign({
+                            display: L.X.Flex
+                        }, i), u.createElement(L.Xa, {
+                            alignItems: L.f.Center
+                        }, u.createElement(L.gb, {
                             width: 70,
                             height: 30
                         })));
-                        var s = this.showUnfollowButton() ? Object(p.d)("Unfollow", "FollowGameButton") : e,
-                            l = this.showUnfollowButton() ? "game-directory-unfollow-button" : "game-directory-follow-button",
-                            c = this.showUnfollowButton() ? O.rb.Heart : n,
-                            d = this.showUnfollowButton() ? O.rb.Unheart : O.rb.Heart,
-                            u = this.showUnfollowButton() ? Object(p.d)("Following", "FollowGameButton") : e;
-                        return this.props.animatedButton ? r.createElement(ye.a, {
-                            ariaLabel: s,
-                            "data-a-target": l,
+                        var r = this.showUnfollowButton() ? Object(m.d)("Unfollow", "FollowGameButton") : e,
+                            o = this.showUnfollowButton() ? "game-directory-unfollow-button" : "game-directory-follow-button",
+                            s = this.showUnfollowButton() ? L.rb.Heart : n,
+                            l = this.showUnfollowButton() ? L.rb.Unheart : L.rb.Heart,
+                            d = this.showUnfollowButton() ? Object(m.d)("Following", "FollowGameButton") : e;
+                        return this.props.animatedButton ? u.createElement(ke.a, {
+                            ariaLabel: r,
+                            "data-a-target": o,
                             "data-test-selector": "follow-game-button-component",
-                            icon: c,
-                            iconOnHover: d,
+                            icon: s,
+                            iconOnHover: l,
                             onClick: this.followClicked,
-                            text: u,
-                            type: t || O.F.Default,
+                            text: d,
+                            type: t || L.F.Default,
                             fullWidthButton: a
-                        }) : r.createElement(O.z, {
-                            ariaLabel: s,
-                            "data-a-target": l,
+                        }) : u.createElement(L.z, {
+                            ariaLabel: r,
+                            "data-a-target": o,
                             "data-test-selector": "follow-game-button-component",
-                            icon: c,
+                            icon: s,
                             onClick: this.followClicked,
-                            statusAlertIcon: this.props.isLoggedIn ? d : void 0,
-                            type: t || O.F.Default,
+                            statusAlertIcon: this.props.isLoggedIn ? l : void 0,
+                            type: t || L.F.Default,
                             fullWidth: a
-                        }, u)
+                        }, d)
                     }, Object.defineProperty(t.prototype, "isFollowing", {
                         get: function() {
                             return !!(this.props.data && this.props.data.game && this.props.data.game.self && null !== this.props.data.game.self.follow)
@@ -6846,14 +6835,14 @@
                         enumerable: !0,
                         configurable: !0
                     }), t.prototype.track = function(e) {
-                        p.p.tracking.track(e, {
+                        m.p.tracking.track(e, {
                             src: this.props.src,
-                            kind: e === T.SpadeEventType.GameFollow ? "follow" : "unfollow",
+                            kind: e === S.SpadeEventType.GameFollow ? "follow" : "unfollow",
                             name: this.props.gameName
                         })
                     }, t
-                }(r.Component),
-                Ne = Object(G.compose)(Object(f.a)(Se, {
+                }(u.Component),
+                Ce = Object(G.compose)(Object(h.a)(ye, {
                     options: function(e) {
                         return {
                             variables: {
@@ -6864,43 +6853,43 @@
                     skip: function(e) {
                         return !e.isLoggedIn || !e.gameName
                     }
-                }), Object(f.a)(Te, {
+                }), Object(h.a)(be, {
                     name: "followGame"
-                }), Object(f.a)(Ce, {
+                }), Object(h.a)(Te, {
                     name: "unfollowGame"
-                }))(we);
-            var Ie = Object(o.connect)(function(e) {
+                }))(Se);
+            var we = Object(i.connect)(function(e) {
                     return {
-                        isLoggedIn: Object(c.f)(e)
+                        isLoggedIn: Object(o.f)(e)
                     }
                 }, function(e) {
-                    return Object(s.bindActionCreators)({
+                    return Object(r.bindActionCreators)({
                         showLoginModal: function() {
-                            return Object(be.e)(ke.a.FollowGameButton)
+                            return Object(ve.e)(fe.a.FollowGameButton)
                         }
                     }, e)
-                })(Ne),
-                _e = n("0LAi"),
-                De = n("4HIT"),
-                Ee = n("7ALk");
+                })(Ce),
+                Ne = n("0LAi"),
+                Ie = n("4HIT"),
+                _e = n("7ALk");
             n("Z8yi");
-            var xe, Fe = function(e) {
+            var De, Ee = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderDropsAvailable = function() {
                             var e = t.props.data.game;
                             if (e && e.activeDropCampaigns && e.activeDropCampaigns.some(function(e) {
                                     return !!e.applicableChannels && 0 === e.applicableChannels.length
-                                })) return r.createElement(O.Xa, {
+                                })) return u.createElement(L.Xa, {
                                 margin: {
                                     bottom: .5
                                 },
                                 "data-test-selector": "directory-header-new-drops"
-                            }, r.createElement(O.W, {
-                                color: O.O.Overlay
-                            }, Object(p.d)("Offers in-game Drops. <x:link>Learn More.</x:link>", {
+                            }, u.createElement(L.W, {
+                                color: L.O.Overlay
+                            }, Object(m.d)("Offers in-game Drops. <x:link>Learn More.</x:link>", {
                                 "x:link": function(e) {
-                                    return r.createElement("a", {
+                                    return u.createElement("a", {
                                         href: "https://help.twitch.tv/customer/en/portal/articles/2754380-how-to-earn-drops",
                                         className: "directory-header__link",
                                         target: "_blank"
@@ -6909,21 +6898,21 @@
                             }, "drops")))
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
+                    return c.__extends(t, e), t.prototype.render = function() {
                         var e = null;
                         if (this.props.data.game) {
                             var t = null;
                             null !== this.props.data.game.followersCount && (t = "" + function(e) {
-                                return Object(p.d)("{followerCount,number} Followers", {
+                                return Object(m.d)("{followerCount,number} Followers", {
                                     followerCount: e
                                 }, "DirectoryHeader")
                             }(this.props.data.game.followersCount)), null !== this.props.data.game.viewersCount && (t = t ? t + " · " + function(e) {
-                                return Object(p.d)("{viewerCount,number} Viewers", {
+                                return Object(m.d)("{viewerCount,number} Viewers", {
                                     viewerCount: e
                                 }, "DirectoryHeader")
-                            }(this.props.data.game.viewersCount) : t), e = r.createElement(O.W, {
-                                color: O.O.Base,
-                                type: O.Sb.P
+                            }(this.props.data.game.viewersCount) : t), e = u.createElement(L.W, {
+                                color: L.O.Base,
+                                type: L.Sb.P
                             }, t)
                         }
                         var n = !1,
@@ -6936,25 +6925,25 @@
                         this.props.data.game && (this.props.data.game.coverURL ? a.backgroundImage = "url(" + this.props.data.game.coverURL + ")" : this.props.data.game.streams && this.props.data.game.streams.edges && (n = this.props.data.game.streams.edges.some(function(e) {
                             return !!(e && e.node && e.node.previewImageURL) && (a.backgroundImage = "url(" + e.node.previewImageURL + ")", !0)
                         })));
-                        var i = ve("directory-header-new__banner", {
+                        var i = he("directory-header-new__banner", {
                                 "directory-header-new__banner--blur": n
                             }),
-                            o = this.props.data && this.props.data.game && this.props.data.game.displayName,
-                            s = this.props.data && this.props.data.game && this.props.data.game.avatarURL;
-                        return r.createElement(O.Xa, {
-                            position: O.hb.Relative,
-                            overflow: O.cb.Hidden
-                        }, r.createElement("div", {
+                            r = this.props.data && this.props.data.game && this.props.data.game.displayName,
+                            o = this.props.data && this.props.data.game && this.props.data.game.avatarURL;
+                        return u.createElement(L.Xa, {
+                            position: L.hb.Relative,
+                            overflow: L.cb.Hidden
+                        }, u.createElement("div", {
                             className: i,
                             style: a,
                             "data-test-selector": "directory-banner-image"
-                        }), r.createElement(O.Xa, {
+                        }), u.createElement(L.Xa, {
                             className: "directory-header-new__banner-cover",
                             fullHeight: !0,
                             fullWidth: !0,
-                            position: O.hb.Absolute,
-                            zIndex: O.fc.Below
-                        }), r.createElement(O.Xa, {
+                            position: L.hb.Absolute,
+                            zIndex: L.fc.Below
+                        }), u.createElement(L.Xa, {
                             margin: {
                                 top: 3,
                                 x: 3,
@@ -6963,9 +6952,9 @@
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0
-                        }, r.createElement(O.Xa, {
-                            display: O.X.Flex
-                        }, r.createElement(O.Xa, {
+                        }, u.createElement(L.Xa, {
+                            display: L.X.Flex
+                        }, u.createElement(L.Xa, {
                             margin: {
                                 right: 2
                             },
@@ -6973,84 +6962,84 @@
                             breakpointMedium: {
                                 flexShrink: 0
                             }
-                        }, s ? r.createElement(O.Qa, {
+                        }, o ? u.createElement(L.Qa, {
                             elevation: 3
-                        }, r.createElement(O.S, {
+                        }, u.createElement(L.S, {
                             className: "directory-header-new__box-image",
-                            src: s,
-                            alt: o || Object(p.d)("Game Image", "DirectoryHeader"),
+                            src: o,
+                            alt: r || Object(m.d)("Game Image", "DirectoryHeader"),
                             "data-test-selector": "directory-header-new-avatar-image"
-                        })) : r.createElement(O.gb, {
+                        })) : u.createElement(L.gb, {
                             width: 130,
                             height: 173
-                        })), r.createElement(O.Xa, {
-                            display: O.X.Flex,
-                            flexDirection: O.Aa.Column,
-                            justifyContent: O.Wa.End
-                        }, o ? r.createElement(r.Fragment, null, r.createElement(O.W, {
-                            color: O.O.Base,
-                            type: O.Sb.H1,
+                        })), u.createElement(L.Xa, {
+                            display: L.X.Flex,
+                            flexDirection: L.Aa.Column,
+                            justifyContent: L.Wa.End
+                        }, r ? u.createElement(u.Fragment, null, u.createElement(L.W, {
+                            color: L.O.Base,
+                            type: L.Sb.H1,
                             bold: !0
-                        }, o), this.renderDropsAvailable(), r.createElement(O.Xa, {
+                        }, r), this.renderDropsAvailable(), u.createElement(L.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, e), this.renderTags()) : this.renderPlaceholders(), r.createElement(O.Xa, {
-                            display: O.X.InlineFlex
-                        }, r.createElement(Ie, {
+                        }, e), this.renderTags()) : this.renderPlaceholders(), u.createElement(L.Xa, {
+                            display: L.X.InlineFlex
+                        }, u.createElement(we, {
                             animatedButton: !0,
                             fullWidthButton: !1,
                             gameName: this.props.directoryName,
                             src: "directory"
                         }))))))
                     }, t.prototype.renderPlaceholders = function() {
-                        return r.createElement(r.Fragment, null, r.createElement(O.Xa, {
+                        return u.createElement(u.Fragment, null, u.createElement(L.Xa, {
                             margin: {
                                 bottom: 1,
                                 top: .5
                             }
-                        }, r.createElement(O.gb, {
+                        }, u.createElement(L.gb, {
                             width: 300,
                             height: 50
-                        })), r.createElement(O.Xa, {
+                        })), u.createElement(L.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(O.gb, {
+                        }, u.createElement(L.gb, {
                             width: 200,
                             height: 15
-                        })), r.createElement(O.Xa, {
+                        })), u.createElement(L.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(O.Xa, {
-                            display: O.X.InlineBlock,
+                        }, u.createElement(L.Xa, {
+                            display: L.X.InlineBlock,
                             margin: {
                                 right: .5
                             }
-                        }, r.createElement(O.gb, {
+                        }, u.createElement(L.gb, {
                             width: 50,
                             height: 15
-                        })), r.createElement(O.Xa, {
-                            display: O.X.InlineBlock
-                        }, r.createElement(O.gb, {
+                        })), u.createElement(L.Xa, {
+                            display: L.X.InlineBlock
+                        }, u.createElement(L.gb, {
                             width: 50,
                             height: 15
                         }))))
                     }, t.prototype.renderTags = function() {
                         var e = this.props.data.game;
-                        return !e || !e.tags || e.tags.length <= 0 ? null : r.createElement(O.Xa, {
+                        return !e || !e.tags || e.tags.length <= 0 ? null : u.createElement(L.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(_e.a, {
+                        }, u.createElement(Ne.a, {
                             tags: e.tags,
-                            linkPath: De.a.DirectoryTag,
-                            style: O.Nb.Default
+                            linkPath: Ie.a.DirectoryTag,
+                            style: L.Nb.Default
                         }))
                     }, t
-                }(r.Component),
-                Oe = Object(G.compose)(Object(f.a)(Ee, {
+                }(u.Component),
+                xe = Object(G.compose)(Object(h.a)(_e, {
                     options: function(e) {
                         return {
                             variables: {
@@ -7058,63 +7047,63 @@
                             }
                         }
                     }
-                }), Object(C.b)("TagsDirectoryBanner", {
+                }), Object(w.b)("TagsDirectoryBanner", {
                     autoReportInteractive: !0
-                }))(Fe),
-                Le = n("Bh3T"),
-                Pe = n("JoTo"),
-                Ae = n("cnlr"),
-                je = n("y5I9"),
-                Re = n("mHR/"),
-                Ge = n("kJyr"),
-                Be = le.a.wrap(function() {
+                }))(Ee),
+                Fe = n("Bh3T"),
+                Oe = n("JoTo"),
+                Le = n("cnlr"),
+                Pe = n("y5I9"),
+                Ae = n("mHR/"),
+                je = n("kJyr"),
+                Re = oe.a.wrap(function() {
                     return n.e(132).then(n.bind(null, "3f6U"))
                 }, "DirectoryGameClipsPage"),
-                Me = le.a.wrap(function() {
+                Ge = oe.a.wrap(function() {
                     return n.e(131).then(n.bind(null, "N7a1"))
                 }, "DirectoryGameDetailsPage"),
-                Xe = le.a.wrap(function() {
+                Be = oe.a.wrap(function() {
                     return n.e(130).then(n.bind(null, "TH8Y"))
                 }, "DirectoryGameVideosPage"),
-                Ve = le.a.wrap(function() {
+                Me = oe.a.wrap(function() {
                     return Promise.resolve().then(n.bind(null, "mpcK"))
                 }, "DirectoryGamePage");
             ! function(e) {
                 e.CLIPS = "clips-scroller", e.DEFAULT = "directory-root-scroller", e.GAME = "game-scroller"
-            }(xe || (xe = {}));
-            var Ue = function(e) {
+            }(De || (De = {}));
+            var Xe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderAdBanner = function() {
-                            return Object(Re.c)(t.props.match.path) && t.props.data && !t.props.data.loading && !t.props.data.error && t.props.data.game ? r.createElement(x.a, {
+                            return Object(Ae.c)(t.props.match.path) && t.props.data && !t.props.data.loading && !t.props.data.error && t.props.data.game ? u.createElement(F.a, {
                                 injectStyles: {
                                     textAlign: "center",
                                     marginBottom: 20,
                                     marginTop: 20
                                 },
-                                adUnit: S.d.directory,
-                                slotID: S.b.directory.banner,
-                                adSize: S.c.directory.banner,
+                                adUnit: C.d.directory,
+                                slotID: C.b.directory.banner,
+                                adSize: C.c.directory.banner,
                                 "data-a-target": "directory-banner-ad-slot",
                                 targeting: {
-                                    pagetype: S.a.games,
+                                    pagetype: C.a.games,
                                     game: t.props.data.game.displayName
                                 },
                                 autoEnable: !1
                             }) : null
                         }, t.getContentType = function() {
-                            return Object(Re.a)(t.props.match.path) ? me.a.Clips : Object(Re.b)(t.props.match.path) ? me.a.GameDetails : Object(Re.d)(t.props.match.path) ? me.a.Videos : me.a.Live
+                            return Object(Ae.a)(t.props.match.path) ? de.a.Clips : Object(Ae.b)(t.props.match.path) ? de.a.GameDetails : Object(Ae.d)(t.props.match.path) ? de.a.Videos : de.a.Live
                         }, t.getScrollerName = function() {
-                            var e = xe.DEFAULT;
-                            return Object(Re.a)(t.props.match.path) ? e = xe.CLIPS : Object(Re.c)(t.props.match.path) && (e = xe.GAME), e
+                            var e = De.DEFAULT;
+                            return Object(Ae.a)(t.props.match.path) ? e = De.CLIPS : Object(Ae.c)(t.props.match.path) && (e = De.GAME), e
                         }, t.setTagFilters = function(e, n) {
                             var a = [],
                                 i = [];
                             n ? (a = e.languageTagFilters, i = e.tagFilters) : (a = t.getLocationStateLanguageTagFilters(e), i = t.getLocationStateTagFilters(e));
                             var r = decodeURIComponent(t.props.match.params.encodedCommunityName);
-                            Object(je.b)(e.tagFilters, i) && t.props.changeTagFilters(i, r), Object(je.a)(e.languageTagFilters, a) && t.props.replaceLanguageTags(a)
+                            Object(Pe.b)(e.tagFilters, i) && t.props.changeTagFilters(i, r), Object(Pe.a)(e.languageTagFilters, a) && t.props.replaceLanguageTags(a)
                         }, t.updateHistory = function(e, n) {
-                            if (void 0 === n && (n = !1), Object(je.b)(e.tagFilters, t.getLocationStateTagFilters(e)) || Object(je.a)(e.languageTagFilters, t.getLocationStateLanguageTagFilters(e))) {
+                            if (void 0 === n && (n = !1), Object(Pe.b)(e.tagFilters, t.getLocationStateTagFilters(e)) || Object(Pe.a)(e.languageTagFilters, t.getLocationStateLanguageTagFilters(e))) {
                                 var a = e.tagFilters.length + e.languageTagFilters.length;
                                 t.props.history[n ? "replace" : "push"]({
                                     pathname: e.location.pathname,
@@ -7127,48 +7116,48 @@
                             }
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return c.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.setTagFilters(this.props, !0), this.updateHistory(this.props, !0)
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         var t = this.props.match.path,
                             n = e.match.path;
-                        t !== n ? this.setTagFilters(e, !0) : this.props.location.search !== e.location.search && this.setTagFilters(e), (Object(je.b)(this.props.tagFilters, e.tagFilters) || Object(je.a)(this.props.languageTagFilters, e.languageTagFilters)) && this.updateHistory(e, t !== n)
+                        t !== n ? this.setTagFilters(e, !0) : this.props.location.search !== e.location.search && this.setTagFilters(e), (Object(Pe.b)(this.props.tagFilters, e.tagFilters) || Object(Pe.a)(this.props.languageTagFilters, e.languageTagFilters)) && this.updateHistory(e, t !== n)
                     }, t.prototype.render = function() {
                         var e = decodeURIComponent(this.props.match.params.encodedCommunityName);
-                        return r.createElement(O.Xa, {
+                        return u.createElement(L.Xa, {
                             "data-a-target": this.getScrollerName()
-                        }, r.createElement(Pe.a, null, r.createElement(Ae.a, null)), r.createElement(Le.b, {
+                        }, u.createElement(Oe.a, null, u.createElement(Le.a, null)), u.createElement(Fe.b, {
                             suppressScrollX: !0,
                             addPaddingWhenPlayerIsPersisting: !0
-                        }), r.createElement(Oe, {
+                        }), u.createElement(xe, {
                             directoryName: e
-                        }), this.renderAdBanner(), Object(Re.c)(this.props.match.path) && r.createElement(fe, {
+                        }), this.renderAdBanner(), Object(Ae.c)(this.props.match.path) && u.createElement(ge, {
                             directoryName: e,
                             selectedContentType: this.getContentType()
-                        }), r.createElement(oe.a, null, r.createElement(re.a, {
+                        }), u.createElement(ie.a, null, u.createElement(ae.a, {
                             path: "/communities/:encodedCommunityName/details",
                             render: this.redirectToMainDirectory
-                        }), r.createElement(re.a, {
+                        }), u.createElement(ae.a, {
                             path: "/communities/:encodedCommunityName/:encodedLanguage",
                             render: this.redirectToMainDirectory
-                        }), r.createElement(re.a, {
+                        }), u.createElement(ae.a, {
                             path: "/communities/:encodedCommunityName",
                             render: this.redirectToMainDirectory
-                        }), r.createElement(re.a, {
+                        }), u.createElement(ae.a, {
                             path: "/directory/game/:encodedCommunityName/clips",
-                            component: Be
-                        }), r.createElement(re.a, {
+                            component: Re
+                        }), u.createElement(ae.a, {
                             path: "/directory/game/:encodedCommunityName/details",
-                            component: Me
-                        }), r.createElement(re.a, {
+                            component: Ge
+                        }), u.createElement(ae.a, {
                             path: "/directory/game/:encodedCommunityName/videos/:filter",
-                            component: Xe
-                        }), r.createElement(re.a, {
+                            component: Be
+                        }), u.createElement(ae.a, {
                             path: "/directory/game/:encodedCommunityName",
-                            component: Ve
+                            component: Me
                         })))
                     }, t.prototype.redirectToMainDirectory = function() {
-                        return r.createElement(se.a, {
+                        return u.createElement(re.a, {
                             path: "/",
                             to: "/directory"
                         })
@@ -7177,8 +7166,8 @@
                     }, t.prototype.getLocationStateLanguageTagFilters = function(e) {
                         return e.location.state && e.location.state.languageTagFilters || []
                     }, t
-                }(r.Component),
-                We = Object(s.compose)(Object(f.a)(Ge, {
+                }(u.Component),
+                Ve = Object(r.compose)(Object(h.a)(je, {
                     options: function(e) {
                         return {
                             variables: {
@@ -7186,23 +7175,23 @@
                             }
                         }
                     }
-                }))(Ue);
-            var He = Object(o.connect)(function(e, t) {
+                }))(Xe);
+            var Ue = Object(i.connect)(function(e, t) {
                 var n = decodeURIComponent(t.match.params.encodedCommunityName);
                 return {
                     languageTagFilters: Object(a.c)(e),
                     tagFilters: Object(a.b)(e, n)
                 }
             }, function(e) {
-                return Object(s.bindActionCreators)({
-                    changeTagFilters: u.f,
-                    replaceLanguageTags: ie.b
+                return Object(r.bindActionCreators)({
+                    changeTagFilters: l.f,
+                    replaceLanguageTags: ne.b
                 }, e)
-            })(We);
+            })(Ve);
             n.d(t, "DirectoryGamePage", function() {
-                return ae
+                return te
             }), n.d(t, "DirectoryRootPage", function() {
-                return He
+                return Ue
             })
         },
         oJov: function(e, t, n) {
@@ -7757,6 +7746,23 @@
             n.d(t, "a", function() {
                 return c
             })
+        },
+        vuN2: function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return o
+            });
+            var a, i = n("/7QA"),
+                r = n("D7An");
+
+            function o() {
+                var e = null;
+                return function() {
+                    return null === e && (e = i.p.experiments.getAssignment(r.b.DirectoryTTL) === a.Experiment), e
+                }
+            }! function(e) {
+                e.Control = "control", e.Experiment = "experiment"
+            }(a || (a = {}))
         },
         wqI2: function(e, t, n) {},
         "x/sq": function(e, t, n) {

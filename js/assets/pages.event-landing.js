@@ -815,7 +815,7 @@
                                 search: e,
                                 state: this.props.tracking
                             },
-                            title: this.props.video.title,
+                            title: this.props.video.title || "",
                             "data-test-selector": "preview-image-link",
                             hoverUnderlineNone: !0
                         }, a.createElement(S.Xa, {
@@ -837,7 +837,7 @@
                             "data-test-selector": "video-view-count",
                             icon: S.rb.GlyphViews,
                             label: Object(r.d)("views", "EventVideoCard"),
-                            value: Object(r.g)(this.props.video.viewCount)
+                            value: Object(r.g)(this.props.video.viewCount || 0)
                         })), a.createElement(S.Cb, {
                             display: S.X.InlineFlex,
                             position: S.hb.Absolute,
@@ -853,7 +853,7 @@
                             "data-test-selector": "video-length",
                             icon: S.rb.GlyphLength,
                             label: Object(r.d)("length", "EventVideoCard"),
-                            value: Object(D.b)(this.props.video.lengthSeconds)
+                            value: Object(D.b)(this.props.video.lengthSeconds || 0)
                         })), this.videoPreviewImage()))))))
                     }, t.prototype.videoPreviewImage = function() {
                         var e = this.state.hovered && !this.state.didAnimatedPreviewFailToLoad ? this.props.video.animatedPreviewURL : this.props.video.previewThumbnailURL,
@@ -870,7 +870,7 @@
                         }, a.createElement("figure", null, a.createElement(S.o, {
                             ratio: S.p.Aspect16x9
                         }, a.createElement("img", {
-                            alt: this.props.video.title,
+                            alt: this.props.video.title || "",
                             className: n,
                             "data-test-selector": "preview-image",
                             onLoad: this.onPreviewImageLoad,
@@ -889,11 +889,13 @@
                     if (e.node) {
                         var i = null;
                         e.node.owner && e.node.owner.displayName && e.node.owner.id && e.node.owner.login && (i = {
+                            __typename: "User",
                             displayName: e.node.owner.displayName,
                             id: e.node.owner.id,
                             login: e.node.owner.login,
                             profileImageURL: null
                         }), n = {
+                            __typename: "Video",
                             id: e.node.id,
                             game: null,
                             lengthSeconds: e.node.lengthSeconds || 0,
@@ -955,6 +957,7 @@
                         var t = e.premiere,
                             n = null;
                         t.pastPremiere && (n = {
+                            __typename: "Video",
                             id: t.pastPremiere.id,
                             viewCount: t.pastPremiere.viewCount || 0,
                             title: t.pastPremiere.title || "",
@@ -963,24 +966,29 @@
                             publishedAt: t.pastPremiere.publishedAt || "",
                             lengthSeconds: t.pastPremiere.lengthSeconds || 0,
                             restriction: {
+                                __typename: "VideoRestriction",
                                 productName: t.pastPremiere.restriction ? t.pastPremiere.restriction.productName : "",
                                 productTitle: t.pastPremiere.restriction ? t.pastPremiere.restriction.productTitle : ""
                             },
                             owner: {
+                                __typename: "User",
                                 id: t.pastPremiere.owner && t.pastPremiere.owner.id || "",
                                 login: t.pastPremiere.owner && t.pastPremiere.owner.login || "",
                                 displayName: t.pastPremiere.owner && t.pastPremiere.owner.displayName || "",
                                 profileImageURL: ""
                             },
                             game: {
+                                __typename: "Game",
                                 id: t.pastPremiere.game ? t.pastPremiere.game.id : "",
                                 displayName: t.pastPremiere.game ? t.pastPremiere.game.name : "",
                                 name: t.pastPremiere.game ? t.pastPremiere.game.name : "",
                                 boxArtURL: t.pastPremiere.game && t.pastPremiere.game.boxArtURL || ""
                             },
                             self: {
+                                __typename: "VideoSelfEdge",
                                 isRestricted: !1,
                                 viewingHistory: {
+                                    __typename: "VideoViewingHistory",
                                     position: t.pastPremiere.self && t.pastPremiere.self.viewingHistory && t.pastPremiere.self.viewingHistory.position || 0,
                                     updatedAt: t.pastPremiere.self && t.pastPremiere.self.viewingHistory && t.pastPremiere.self.viewingHistory.updatedAt || null
                                 }
@@ -2532,7 +2540,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(c.a, {
+                        var e = {
                             context: this.props.context,
                             onClick: this.onClickHandler,
                             title: this.props.video.title,
@@ -2543,7 +2551,7 @@
                             },
                             thumbnailImageProps: {
                                 src: this.props.video.previewThumbnailURL,
-                                alt: this.props.video.title
+                                alt: this.props.video.title || ""
                             },
                             channelDisplayName: this.props.video.owner && this.props.video.owner.displayName || "",
                             channelLogin: this.props.video.owner && this.props.video.owner.login || "",
@@ -2553,7 +2561,7 @@
                             },
                             channelImageProps: {
                                 src: this.props.video.owner && this.props.video.owner.profileImageURL || "",
-                                alt: this.props.video.owner ? this.props.video.owner.displayName : ""
+                                alt: this.props.video.owner && this.props.video.owner.displayName || ""
                             },
                             gameTitle: this.props.video.game && this.props.video.game.name || "",
                             gameTitleLinkTo: {
@@ -2567,8 +2575,8 @@
                             videoGameChanges: this.gameChangesWithLinks(),
                             multipleVideoGameMarkersType: this.props.multipleVideoGameMarkersType,
                             datePublished: this.props.video.publishedAt,
-                            viewCount: this.props.video.viewCount,
-                            durationInSeconds: this.props.hideDuration ? void 0 : this.props.video.lengthSeconds,
+                            viewCount: this.props.video.viewCount || 0,
+                            durationInSeconds: !this.props.hideDuration && this.props.video.lengthSeconds ? this.props.video.lengthSeconds : void 0,
                             animatedImageProps: this.props.video.animatedPreviewURL ? {
                                 src: this.props.video.animatedPreviewURL,
                                 alt: ""
@@ -2585,14 +2593,15 @@
                                 tags: this.props.video.contentTags,
                                 linkPath: v.a.PopularTag
                             } : void 0
-                        })
+                        };
+                        return a.createElement(c.a, i.__assign({}, e))
                     }, t.prototype.generateSearchString = function() {
                         var e = {};
                         this.props.collectionID && (e.collection = this.props.collectionID);
                         var t = s.stringify(e);
                         return t ? "?" + t : ""
                     }, t.prototype.getVideoPreviousWatchPercentage = function() {
-                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / this.props.video.lengthSeconds * 100 : null
+                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / (this.props.video.lengthSeconds || 1 / 0) * 100 : null
                     }, t.prototype.getRestrictionProps = function() {
                         var e = this.props.video.restriction && this.props.video.restriction.productName ? "/products/" + this.props.video.restriction.productName : "";
                         return {
@@ -2644,7 +2653,7 @@
                         videoGameChanges: this.state.videoGameChanges
                     }, this.props))
                 }, t.prototype.componentWillMount = function() {
-                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== r.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds)
+                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== r.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds || 0)
                 }, t
             }(a.Component)
         },
@@ -4382,9 +4391,9 @@
                             bottomLeft: a.createElement(w, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: a.createElement(w, {
+                            bottomRight: this.props.datePublished ? a.createElement(w, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
-                            }),
+                            }) : null,
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
                         }) : j(this.props) ? a.createElement(C, {
@@ -4397,9 +4406,9 @@
                             bottomLeft: a.createElement(w, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: a.createElement(w, {
+                            bottomRight: this.props.datePublished ? a.createElement(w, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
-                            })
+                            }) : null
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
                         return U(this.props) && this.props.listPosition ? Object(r.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
@@ -5894,7 +5903,7 @@
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(i || (i = {}));
             var I = l.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(181)]).then(n.bind(null, "f+qK"))
+                    return Promise.all([n.e(0), n.e(180)]).then(n.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
                 L = function(e) {
                     function t() {
@@ -6129,7 +6138,7 @@
                         return Object(u.d)(l.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(192)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(191)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })
@@ -9688,14 +9697,59 @@
                             }
                         }]
                     }
+                }, {
+                    kind: "FragmentDefinition",
+                    name: {
+                        kind: "Name",
+                        value: "VideoEdge"
+                    },
+                    typeCondition: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "VideoEdge"
+                        }
+                    },
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "cursor"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "node"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "FragmentSpread",
+                                    name: {
+                                        kind: "Name",
+                                        value: "PreviewCardVideo"
+                                    },
+                                    directives: []
+                                }]
+                            }
+                        }]
+                    }
                 }],
                 loc: {
                     start: 0,
-                    end: 454
+                    end: 526
                 }
             };
             i.loc.source = {
-                body: '#import "twilight/features/tags/models/tag-fragment.gql"\nfragment PreviewCardVideo on Video {\nanimatedPreviewURL\ngame {\nboxArtURL(width: 40 height: 56)\nid\ndisplayName\nname\n}\nid\nlengthSeconds\nowner {\ndisplayName\nid\nlogin\nprofileImageURL(width: 50)\n}\npreviewThumbnailURL(width: 320 height: 180)\npublishedAt\nself {\nisRestricted\nviewingHistory {\nposition\nupdatedAt\n}\n}\ntitle\nviewCount\nrestriction {\nproductName\nproductTitle\n}\ncontentTags {\n...tagFragment\n}\n}',
+                body: '#import "twilight/features/tags/models/tag-fragment.gql"\nfragment PreviewCardVideo on Video {\nanimatedPreviewURL\ngame {\nboxArtURL(width: 40 height: 56)\nid\ndisplayName\nname\n}\nid\nlengthSeconds\nowner {\ndisplayName\nid\nlogin\nprofileImageURL(width: 50)\n}\npreviewThumbnailURL(width: 320 height: 180)\npublishedAt\nself {\nisRestricted\nviewingHistory {\nposition\nupdatedAt\n}\n}\ntitle\nviewCount\nrestriction {\nproductName\nproductTitle\n}\ncontentTags {\n...tagFragment\n}\n}\nfragment VideoEdge on VideoEdge {\ncursor\nnode {\n...PreviewCardVideo\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,

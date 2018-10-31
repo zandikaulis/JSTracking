@@ -151,7 +151,7 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(d.a, {
+                        var e = {
                             context: this.props.context,
                             onClick: this.onClickHandler,
                             title: this.props.video.title,
@@ -162,7 +162,7 @@
                             },
                             thumbnailImageProps: {
                                 src: this.props.video.previewThumbnailURL,
-                                alt: this.props.video.title
+                                alt: this.props.video.title || ""
                             },
                             channelDisplayName: this.props.video.owner && this.props.video.owner.displayName || "",
                             channelLogin: this.props.video.owner && this.props.video.owner.login || "",
@@ -172,7 +172,7 @@
                             },
                             channelImageProps: {
                                 src: this.props.video.owner && this.props.video.owner.profileImageURL || "",
-                                alt: this.props.video.owner ? this.props.video.owner.displayName : ""
+                                alt: this.props.video.owner && this.props.video.owner.displayName || ""
                             },
                             gameTitle: this.props.video.game && this.props.video.game.name || "",
                             gameTitleLinkTo: {
@@ -186,8 +186,8 @@
                             videoGameChanges: this.gameChangesWithLinks(),
                             multipleVideoGameMarkersType: this.props.multipleVideoGameMarkersType,
                             datePublished: this.props.video.publishedAt,
-                            viewCount: this.props.video.viewCount,
-                            durationInSeconds: this.props.hideDuration ? void 0 : this.props.video.lengthSeconds,
+                            viewCount: this.props.video.viewCount || 0,
+                            durationInSeconds: !this.props.hideDuration && this.props.video.lengthSeconds ? this.props.video.lengthSeconds : void 0,
                             animatedImageProps: this.props.video.animatedPreviewURL ? {
                                 src: this.props.video.animatedPreviewURL,
                                 alt: ""
@@ -204,14 +204,15 @@
                                 tags: this.props.video.contentTags,
                                 linkPath: g.a.PopularTag
                             } : void 0
-                        })
+                        };
+                        return a.createElement(d.a, n.__assign({}, e))
                     }, t.prototype.generateSearchString = function() {
                         var e = {};
                         this.props.collectionID && (e.collection = this.props.collectionID);
                         var t = s.stringify(e);
                         return t ? "?" + t : ""
                     }, t.prototype.getVideoPreviousWatchPercentage = function() {
-                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / this.props.video.lengthSeconds * 100 : null
+                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / (this.props.video.lengthSeconds || 1 / 0) * 100 : null
                     }, t.prototype.getRestrictionProps = function() {
                         var e = this.props.video.restriction && this.props.video.restriction.productName ? "/products/" + this.props.video.restriction.productName : "";
                         return {
@@ -263,7 +264,7 @@
                         videoGameChanges: this.state.videoGameChanges
                     }, this.props))
                 }, t.prototype.componentWillMount = function() {
-                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== r.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds)
+                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== r.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds || 0)
                 }, t
             }(a.Component)
         },
@@ -1023,9 +1024,9 @@
                             bottomLeft: a.createElement(S, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: a.createElement(S, {
+                            bottomRight: this.props.datePublished ? a.createElement(S, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
-                            }),
+                            }) : null,
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
                         }) : X(this.props) ? a.createElement(w, {
@@ -1038,9 +1039,9 @@
                             bottomLeft: a.createElement(S, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: a.createElement(S, {
+                            bottomRight: this.props.datePublished ? a.createElement(S, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
-                            })
+                            }) : null
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
                         return G(this.props) && this.props.listPosition ? Object(r.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
@@ -1218,17 +1219,7 @@
         },
         TCEa: function(e, t, i) {
             "use strict";
-            i.r(t), i.d(t, "TestSelectors", function() {
-                return n
-            }), i.d(t, "DEFAULT_PAGE_SIZE", function() {
-                return y
-            }), i.d(t, "DEFAULT_VIDEO_SORT", function() {
-                return C
-            }), i.d(t, "FilterableVideoTowerComponent", function() {
-                return w
-            }), i.d(t, "FilterableVideoTower", function() {
-                return E
-            });
+            i.r(t);
             var n, a = i("mrSG"),
                 r = i("q1tI"),
                 o = i("fvjX"),
@@ -1243,14 +1234,31 @@
                 g = i("GnwI"),
                 v = i("EJax"),
                 k = i("XKWF"),
-                f = i("Ue10"),
-                b = i("aRnl");
-            ! function(e) {
-                e.NoVideos = "no-videos"
-            }(n || (n = {}));
-            var y = 30,
-                C = k.a.Newest,
-                w = function(e) {
+                f = function(e) {
+                    var t = e.user;
+                    return (t && t.videos && t.videos.edges || []).filter(function(e) {
+                        return e && e.node && e.node.id
+                    })
+                },
+                b = i("Ue10"),
+                y = i("aRnl");
+            i.d(t, "TestSelectors", function() {
+                    return n
+                }), i.d(t, "DEFAULT_PAGE_SIZE", function() {
+                    return C
+                }), i.d(t, "DEFAULT_VIDEO_SORT", function() {
+                    return w
+                }), i.d(t, "FilterableVideoTowerComponent", function() {
+                    return S
+                }), i.d(t, "FilterableVideoTower", function() {
+                    return P
+                }),
+                function(e) {
+                    e.NoVideos = "no-videos"
+                }(n || (n = {}));
+            var C = 30,
+                w = k.a.Newest,
+                S = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1261,22 +1269,22 @@
                             message: Object(s.d)("These videos are temporarily unavailable.", "ChannelVideosPage")
                         });
                         var e = null;
-                        if (!this.props.data.loading && this.props.data.user && this.props.data.user.videos && (e = this.props.data.user.videos.edges.map(function(e) {
-                                return e.node
-                            })), e && 0 === e.length) return r.createElement(f.Cb, {
-                            color: f.O.Alt2,
-                            textAlign: f.Ob.Center,
+                        if (!this.props.data.loading && this.props.data.user && this.props.data.user.videos && this.props.data.user.videos.edges && (e = this.props.data.user.videos.edges.map(function(e) {
+                                if (e && e.node) return e.node
+                            })), e && 0 === e.length) return r.createElement(b.Cb, {
+                            color: b.O.Alt2,
+                            textAlign: b.Ob.Center,
                             key: "no-videos",
                             padding: {
                                 y: 5
                             }
-                        }, r.createElement(f.W, {
-                            type: f.Sb.H4,
+                        }, r.createElement(b.W, {
+                            type: b.Sb.H4,
                             italic: !0,
                             "data-test-selector": n.NoVideos
                         }, Object(s.d)("No videos found.", "ChannelVideosPage")));
-                        var t = !(this.props.data.loading || this.props.data.error || !this.props.data.user || !this.props.data.user.videos || !this.props.data.user.videos.pageInfo.hasNextPage);
-                        return r.createElement(f.Xa, null, r.createElement(v.b, {
+                        var t = !(this.props.data.loading || this.props.data.error || !this.props.data.user || !this.props.data.user.videos || !this.props.data.user.videos.pageInfo || !this.props.data.user.videos.pageInfo.hasNextPage);
+                        return r.createElement(b.Xa, null, r.createElement(v.b, {
                             videos: e,
                             listContext: d.b.SingleChannelList,
                             trackingContent: Object(h.a)(this.props.sort),
@@ -1290,45 +1298,43 @@
                         }))
                     }, t
                 }(r.Component),
-                S = {
+                E = {
                     options: function(e) {
                         return {
                             variables: {
-                                limit: y,
+                                limit: C,
                                 channelOwnerLogin: e.channelLogin,
                                 broadcastType: e.filter ? e.filter : null,
-                                videoSort: e.sort || C
+                                videoSort: e.sort || w
                             }
                         }
                     },
                     props: function(e) {
                         return a.__assign({}, e, {
                             loadMore: function() {
-                                var t = e.data.user && e.data.user.videos ? e.data.user.videos.edges : [],
-                                    i = t.length > 0 ? t[t.length - 1].cursor : void 0;
+                                var t = e.data.user && e.data.user.videos && e.data.user.videos.edges ? e.data.user.videos.edges : [],
+                                    i = t && t.length > 0 ? t[t.length - 1].cursor : void 0;
                                 return e.data.fetchMore({
-                                    query: b,
+                                    query: y,
                                     variables: a.__assign({}, e.data.variables, {
                                         cursor: i
                                     }),
                                     updateQuery: function(e, t) {
                                         var i = t.fetchMoreResult;
-                                        if (!i.user || !i.user.videos) return e;
-                                        var n = e.user && e.user.videos ? e.user.videos.edges : [];
-                                        return {
+                                        return i.user && i.user.videos ? {
                                             user: a.__assign({}, i.user, {
                                                 videos: a.__assign({}, i.user.videos, {
-                                                    edges: Object(m.c)(n, i.user.videos.edges)
+                                                    edges: Object(m.c)(f(e), f(i))
                                                 })
                                             })
-                                        }
+                                        } : e
                                     }
                                 })
                             }
                         })
                     }
                 },
-                E = Object(o.compose)(Object(p.a)(b, S), Object(g.b)("FilterableVideoTower"))(w)
+                P = Object(o.compose)(Object(p.a)(y, E), Object(g.b)("FilterableVideoTower"))(S)
         },
         XA5B: function(e, t, i) {},
         ZbA5: function(e, t, i) {
@@ -1614,32 +1620,12 @@
                                             selectionSet: {
                                                 kind: "SelectionSet",
                                                 selections: [{
-                                                    kind: "Field",
+                                                    kind: "FragmentSpread",
                                                     name: {
                                                         kind: "Name",
-                                                        value: "cursor"
+                                                        value: "VideoEdge"
                                                     },
-                                                    arguments: [],
                                                     directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "node"
-                                                    },
-                                                    arguments: [],
-                                                    directives: [],
-                                                    selectionSet: {
-                                                        kind: "SelectionSet",
-                                                        selections: [{
-                                                            kind: "FragmentSpread",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "PreviewCardVideo"
-                                                            },
-                                                            directives: []
-                                                        }]
-                                                    }
                                                 }]
                                             }
                                         }, {
@@ -1671,11 +1657,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 421
+                    end: 398
                 }
             };
             n.loc.source = {
-                body: '#import "twilight/features/video-preview-card/models/preview-card-video-fragment.gql"\nquery FilterableVideoTower_Videos($channelOwnerLogin: String! $limit: Int $cursor: Cursor $broadcastType: BroadcastType $videoSort: VideoSort) {\nuser(login: $channelOwnerLogin) {\nid\nvideos(first: $limit after: $cursor type: $broadcastType sort: $videoSort) {\nedges {\ncursor\nnode {\n...PreviewCardVideo\n}\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}',
+                body: '#import "twilight/features/video-preview-card/models/preview-card-video-fragment.gql"\nquery FilterableVideoTower_Videos($channelOwnerLogin: String! $limit: Int $cursor: Cursor $broadcastType: BroadcastType $videoSort: VideoSort) {\nuser(login: $channelOwnerLogin) {\nid\nvideos(first: $limit after: $cursor type: $broadcastType sort: $videoSort) {\nedges {\n...VideoEdge\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -2142,14 +2128,59 @@
                             }
                         }]
                     }
+                }, {
+                    kind: "FragmentDefinition",
+                    name: {
+                        kind: "Name",
+                        value: "VideoEdge"
+                    },
+                    typeCondition: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "VideoEdge"
+                        }
+                    },
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "cursor"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "node"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "FragmentSpread",
+                                    name: {
+                                        kind: "Name",
+                                        value: "PreviewCardVideo"
+                                    },
+                                    directives: []
+                                }]
+                            }
+                        }]
+                    }
                 }],
                 loc: {
                     start: 0,
-                    end: 454
+                    end: 526
                 }
             };
             n.loc.source = {
-                body: '#import "twilight/features/tags/models/tag-fragment.gql"\nfragment PreviewCardVideo on Video {\nanimatedPreviewURL\ngame {\nboxArtURL(width: 40 height: 56)\nid\ndisplayName\nname\n}\nid\nlengthSeconds\nowner {\ndisplayName\nid\nlogin\nprofileImageURL(width: 50)\n}\npreviewThumbnailURL(width: 320 height: 180)\npublishedAt\nself {\nisRestricted\nviewingHistory {\nposition\nupdatedAt\n}\n}\ntitle\nviewCount\nrestriction {\nproductName\nproductTitle\n}\ncontentTags {\n...tagFragment\n}\n}',
+                body: '#import "twilight/features/tags/models/tag-fragment.gql"\nfragment PreviewCardVideo on Video {\nanimatedPreviewURL\ngame {\nboxArtURL(width: 40 height: 56)\nid\ndisplayName\nname\n}\nid\nlengthSeconds\nowner {\ndisplayName\nid\nlogin\nprofileImageURL(width: 50)\n}\npreviewThumbnailURL(width: 320 height: 180)\npublishedAt\nself {\nisRestricted\nviewingHistory {\nposition\nupdatedAt\n}\n}\ntitle\nviewCount\nrestriction {\nproductName\nproductTitle\n}\ncontentTags {\n...tagFragment\n}\n}\nfragment VideoEdge on VideoEdge {\ncursor\nnode {\n...PreviewCardVideo\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,

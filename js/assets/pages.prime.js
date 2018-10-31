@@ -332,7 +332,7 @@
                         }
                     }
                 }), Object(u.b)("PrimeClaimButton"))(O),
-                S = (n("KbPt"), function(e) {
+                E = (n("KbPt"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.toggleShowDescription = function() {
@@ -420,9 +420,9 @@
                         return this.state.showDescription && (t = n ? this.renderVerticalDescriptionBlock() : this.renderHorizontalDescriptionBlock()), t
                     }, t
                 }(o.Component)),
-                E = Object(u.b)("PrimeClaimDescription", {
+                S = Object(u.b)("PrimeClaimDescription", {
                     autoReportInteractive: !0
-                })(S),
+                })(E),
                 N = n("fvjX"),
                 _ = n("aCAx"),
                 D = n("kRBY"),
@@ -600,7 +600,7 @@
                     }, t.prototype.getClaimDescriptionSection = function() {
                         if (this.props.offerType === k.e.EXTERNAL_OFFER || this.props.externalURL) return null;
                         var e = this.props.data;
-                        return o.createElement(E, {
+                        return o.createElement(S, {
                             description: this.props.offerDescription,
                             offerID: this.props.offerID,
                             externalURL: this.props.externalURL,
@@ -1820,8 +1820,8 @@
                 y = n("1/iK"),
                 O = n("y5D0"),
                 C = n("kRBY"),
-                S = n("TSYQ"),
-                E = n("u5aL"),
+                E = n("TSYQ"),
+                S = n("u5aL"),
                 N = n("yR8l"),
                 _ = n("9pSj"),
                 D = n("Ue10"),
@@ -1853,7 +1853,7 @@
                         if (this.props.data.error) return i.createElement(_.c, null);
                         if (this.props.data.loading) return this.renderPlaceholders();
                         if (this.props.isLoggedIn) {
-                            var e = S({
+                            var e = E({
                                 "twitch-prime-top-nav-user__dropdown--open": this.state.dropdownOpen
                             });
                             return i.createElement(D.Pa, {
@@ -1862,7 +1862,7 @@
                                     right: 2
                                 },
                                 fullHeight: !0
-                            }, i.createElement(E.a, {
+                            }, i.createElement(S.a, {
                                 onClickOut: this.onClickOut,
                                 className: e
                             }, i.createElement(D.Xa, {
@@ -1931,7 +1931,7 @@
                             onClick: this.onLoginClick
                         }, Object(f.d)("Log in", "PrimeUser"))))
                     }, t.prototype.renderDropdown = function() {
-                        var e = S({
+                        var e = E({
                                 "twitch-prime-top-nav-user__dropdown": !0,
                                 "twitch-prime-top-nav-user__dropdown--open": this.state.dropdownOpen
                             }),
@@ -2099,16 +2099,16 @@
                     autoReportInteractive: !0
                 })(T),
                 L = c.a.wrap(function() {
-                    return n.e(171).then(n.bind(null, "eAh4"))
+                    return n.e(170).then(n.bind(null, "eAh4"))
                 }, "TwitchPrimeOffersPage"),
                 U = c.a.wrap(function() {
-                    return n.e(170).then(n.bind(null, "di4w"))
+                    return n.e(169).then(n.bind(null, "di4w"))
                 }, "TwitchPrimeFortniteSuccessPage"),
                 F = c.a.wrap(function() {
-                    return n.e(169).then(n.bind(null, "IyqF"))
+                    return n.e(168).then(n.bind(null, "IyqF"))
                 }, "TwitchPrimeFortniteLinkingPage"),
                 j = c.a.wrap(function() {
-                    return n.e(168).then(n.bind(null, "CinY"))
+                    return n.e(167).then(n.bind(null, "CinY"))
                 }, "TwitchPrimeFortnitePage"),
                 B = function(e) {
                     function t() {
@@ -2400,8 +2400,8 @@
             ! function(e) {
                 e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
             }(r || (r = {}));
-            var S = n("QAxy"),
-                E = n("SXud"),
+            var E = n("QAxy"),
+                S = n("SXud"),
                 N = (n("l0e4"), n("yO+B")),
                 _ = function(e) {
                     function t() {
@@ -2613,7 +2613,7 @@
                         configurable: !0
                     }), t
                 }(s.Component),
-                D = Object(l.compose)(Object(d.a)(E, {
+                D = Object(l.compose)(Object(d.a)(S, {
                     name: "offersData",
                     skip: function(e) {
                         return !e.firstPageLoaded && !e.openByDefault
@@ -2628,7 +2628,7 @@
                     }
                 }), Object(d.a)(N, {
                     name: "userData"
-                }), Object(d.a)(S, {
+                }), Object(d.a)(E, {
                     name: "updatePrimeOfferStatus"
                 }), Object(h.b)("PrimeOffers"))(_);
             var I = Object(i.connect)(function(e) {
@@ -3010,10 +3010,7 @@
                     return function(l) {
                         function c() {
                             var e = null !== l && l.apply(this, arguments) || this;
-                            return e.state = {
-                                hadImpression: !1,
-                                didScroll: !1
-                            }, e.logger = a.k.withCategory("with-impression-listener"), e.setRef = function(t) {
+                            return e.hadImpression = !1, e.logger = a.k.withCategory("with-impression-listener"), e.setRef = function(t) {
                                 return e.element = t
                             }, e.registerImpressionCallback = function(t) {
                                 e.reportImpression = t
@@ -3028,8 +3025,6 @@
                         }, c.prototype.render = function() {
                             var e = {
                                 impressionListener: {
-                                    hadImpression: this.state.hadImpression,
-                                    didScroll: this.state.didScroll,
                                     registerImpressionCallback: this.registerImpressionCallback
                                 }
                             };
@@ -3040,10 +3035,7 @@
                             return r.__awaiter(this, void 0, void 0, function() {
                                 var t, n;
                                 return r.__generator(this, function(r) {
-                                    return this.state.hadImpression || (t = this.isVisible(e)) && (n = this.isScrolled(), this.setState({
-                                        hadImpression: t,
-                                        didScroll: n
-                                    }), this.reportImpression && this.reportImpression(n)), [2]
+                                    return this.hadImpression || (t = this.isVisible(e)) && (n = this.isScrolled(), this.hadImpression = t, this.reportImpression && this.reportImpression(n)), [2]
                                 })
                             })
                         }, c.prototype.isVisible = function(e) {
@@ -3125,9 +3117,9 @@
             }), n.d(t, "f", function() {
                 return h
             }), n.d(t, "i", function() {
-                return S
-            }), n.d(t, "n", function() {
                 return E
+            }), n.d(t, "n", function() {
+                return S
             }), n.d(t, "m", function() {
                 return N
             }), n.d(t, "k", function() {
@@ -3203,12 +3195,12 @@
             ! function(e) {
                 e.DateOverride = "dateOverride", e.CountryCode = "countryCode"
             }(h || (h = {}));
-            var S = function(e) {
+            var E = function(e) {
                     var t = location.search,
                         n = a.parse(t);
                     return n && n[e] || void 0
                 },
-                E = function(e) {
+                S = function(e) {
                     return e && !e.loading && !e.error && null !== e.currentUser && e.currentUser.hasPrime
                 },
                 N = function(e) {
@@ -4077,38 +4069,38 @@
             }
 
             function h(e) {
-                E(e, i.Click, a.StartYourFreeTrial)
+                S(e, i.Click, a.StartYourFreeTrial)
             }
 
             function g(e) {
-                E(e, i.Hover, a.StartYourFreeTrial)
+                S(e, i.Hover, a.StartYourFreeTrial)
             }
 
             function v(e, t) {
-                E(t, i.Click, e ? a.MoreInfo : a.CloseInfo)
+                S(t, i.Click, e ? a.MoreInfo : a.CloseInfo)
             }
 
             function b(e, t) {
-                S(e, i.Click, t)
+                E(e, i.Click, t)
             }
 
             function k(e) {
-                E(e, i.Hover, a.MoreInfo)
+                S(e, i.Hover, a.MoreInfo)
             }
 
             function y(e) {
-                E(e, i.Hover, a.CloseInfo)
+                S(e, i.Hover, a.CloseInfo)
             }
 
             function O(e, t) {
-                S(e, i.Hover, t)
+                E(e, i.Hover, t)
             }
 
             function C(e) {
-                E(e, i.Impression, a.Offer)
+                S(e, i.Impression, a.Offer)
             }
 
-            function S(e, t, n) {
+            function E(e, t, n) {
                 var r;
                 switch (n) {
                     case d.e.CLAIM_CODE:
@@ -4120,10 +4112,10 @@
                     case d.e.DIRECT_ENTITLEMENT:
                         r = a.ClaimOffer
                 }
-                r && E(e, t, r)
+                r && S(e, t, r)
             }
 
-            function E(e, t, n) {
+            function S(e, t, n) {
                 c.o.track(u.SpadeEventType.PrimeOfferInteraction, {
                     offer_id: e.offerID,
                     external_url: e.externalURL,

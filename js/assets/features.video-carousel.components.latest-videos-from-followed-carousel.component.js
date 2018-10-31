@@ -515,7 +515,7 @@
                             if (!t.state.hasTrackedItemSectionLoad) {
                                 for (var e = t.props.videos ? t.props.videos : [], i = [], n = [], r = 0, o = e; r < o.length; r++) {
                                     var a = o[r];
-                                    i.push(a.id), n.push(a.viewCount)
+                                    i.push(a.id), n.push(a.viewCount || 0)
                                 }
                                 l.o.trackItemSectionLoad(s.__assign({
                                     carousel_content: t.props.tracking.content,

@@ -451,7 +451,7 @@
                             id: r.id,
                             emotes: d(m(r.emotes), r.id)
                         };
-                        c.has(parseInt(r.id, 10)) ? t.push(o) : n.push(o)
+                        r.owner && (o.owner = r.owner), c.has(parseInt(r.id, 10)) ? t.push(o) : n.push(o)
                     }
                 }
                 return n.concat(t)
@@ -764,12 +764,12 @@
                         }
                     }
                 }), Object(v.b)("DropsList"))(F),
-                j = n("OpME"),
-                w = function(e) {
+                w = n("OpME"),
+                j = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderEmote = function(e) {
-                            var t = Object(j.b)([e])[0],
+                            var t = Object(w.b)([e])[0],
                                 n = t.srcSet.split(", ").pop().split(" ").shift();
                             return s.createElement(k.Xa, {
                                 key: t.id,
@@ -845,7 +845,7 @@
                 }(s.Component),
                 L = Object(i.compose)(Object(v.b)("EmoticonsList", {
                     autoReportInteractive: !0
-                }))(w),
+                }))(j),
                 R = n("eJ65"),
                 W = n("VeT4"),
                 I = n("4h+t"),

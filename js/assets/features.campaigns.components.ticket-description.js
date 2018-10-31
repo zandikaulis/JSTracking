@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [191], {
+    [190], {
         "/2zc": function(e, n, t) {},
         "4kMF": function(e, n, t) {},
         "5zXJ": function(e, n, t) {
@@ -1362,8 +1362,7 @@
                                     bottom: 1
                                 }
                             }, i.createElement(f.a, {
-                                emotes: Object(k.b)(n.props.emotes),
-                                locked: !1
+                                emotes: Object(k.b)(n.props.emotes)
                             })))
                         }, n
                     }

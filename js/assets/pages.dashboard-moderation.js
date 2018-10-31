@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [156], {
+    [155], {
         "2bi+": function(e, t, n) {
             "use strict";
             n("DLhE");
@@ -6334,7 +6334,7 @@
                 y = n("F6GT"),
                 S = n("x0gr"),
                 _ = c.a.wrap(function() {
-                    return n.e(180).then(n.bind(null, "8MX0"))
+                    return n.e(179).then(n.bind(null, "8MX0"))
                 }, "ChatSettingsComponent"),
                 E = function(e) {
                     function t() {

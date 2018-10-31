@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [185], {
+    [184], {
         "/HY+": function(e, t, n) {
             "use strict";
             var r = n("dAHa"),
@@ -3938,10 +3938,7 @@
                     return function(c) {
                         function l() {
                             var e = null !== c && c.apply(this, arguments) || this;
-                            return e.state = {
-                                hadImpression: !1,
-                                didScroll: !1
-                            }, e.logger = o.k.withCategory("with-impression-listener"), e.setRef = function(t) {
+                            return e.hadImpression = !1, e.logger = o.k.withCategory("with-impression-listener"), e.setRef = function(t) {
                                 return e.element = t
                             }, e.registerImpressionCallback = function(t) {
                                 e.reportImpression = t
@@ -3956,8 +3953,6 @@
                         }, l.prototype.render = function() {
                             var e = {
                                 impressionListener: {
-                                    hadImpression: this.state.hadImpression,
-                                    didScroll: this.state.didScroll,
                                     registerImpressionCallback: this.registerImpressionCallback
                                 }
                             };
@@ -3968,10 +3963,7 @@
                             return r.__awaiter(this, void 0, void 0, function() {
                                 var t, n;
                                 return r.__generator(this, function(r) {
-                                    return this.state.hadImpression || (t = this.isVisible(e)) && (n = this.isScrolled(), this.setState({
-                                        hadImpression: t,
-                                        didScroll: n
-                                    }), this.reportImpression && this.reportImpression(n)), [2]
+                                    return this.hadImpression || (t = this.isVisible(e)) && (n = this.isScrolled(), this.hadImpression = t, this.reportImpression && this.reportImpression(n)), [2]
                                 })
                             })
                         }, l.prototype.isVisible = function(e) {
@@ -9888,7 +9880,7 @@
                         return Object(d.d)(s.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(192)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(191)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })
