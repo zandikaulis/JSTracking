@@ -4859,6 +4859,29 @@
           "possibleTypes": null
         }, 
         {
+          "description": "Settings tied to a bits user.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Settings specific to the first cheer tutorial.", 
+              "isDeprecated": false, 
+              "name": "firstCheerTutorial", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "FirstCheerTutorial", 
+                "ofType": null
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "BitsUserSettings", 
+          "possibleTypes": null
+        }, 
+        {
           "description": "An enumerable that dictates user's Bits usage state.", 
           "enumValues": [
             {
@@ -25262,6 +25285,41 @@
           "interfaces": [], 
           "kind": "OBJECT", 
           "name": "FeedItemTracking", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "Settings specific to the first cheer tutorial.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Optional field that dictates whether a user has exited out of the first cheer tutorial by clicking out of the experience.", 
+              "isDeprecated": false, 
+              "name": "hasAbandoned", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "Boolean", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Optional field that dictates whether a user has skipped the first cheer tutorial by clicking the skip button.", 
+              "isDeprecated": false, 
+              "name": "hasSkipped", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "Boolean", 
+                "ofType": null
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "FirstCheerTutorial", 
           "possibleTypes": null
         }, 
         {
@@ -64866,6 +64924,18 @@
                     "ofType": null
                   }
                 }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Settings tied to a bits user.", 
+              "isDeprecated": false, 
+              "name": "bitsUserSettings", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "BitsUserSettings", 
+                "ofType": null
               }
             }, 
             {
