@@ -2384,7 +2384,7 @@
             }(i || (i = {}))
         },
         "3qZk": function(e, t, n) {
-            e.exports = n.p + "assets/friend_requests-aec9595d7e19764bc23d.png"
+            e.exports = n.p + "assets/friend_requests-aec9595d7e19764bc23d_v0.png"
         },
         "3rfY": function(e, t, n) {
             "use strict";
@@ -6079,7 +6079,7 @@
         },
         "7APm": function(e, t, n) {},
         "7CzK": function(e, t, n) {
-            e.exports = n.p + "assets/bg_glitch_pattern-34ca2e369aad1ed33b57.png"
+            e.exports = n.p + "assets/bg_glitch_pattern-34ca2e369aad1ed33b57_v0.png"
         },
         "7PB7": function(e, t, n) {},
         "7fv/": function(e, t, n) {},
@@ -32861,7 +32861,7 @@
             })
         },
         fRbW: function(e, t, n) {
-            e.exports = n.p + "assets/cookie_2x-0cb6234911f4ba5e848e.png"
+            e.exports = n.p + "assets/cookie_2x-0cb6234911f4ba5e848e_v0.png"
         },
         fWal: function(e, t, n) {
             "use strict";
@@ -42542,7 +42542,7 @@
         },
         sZeT: function(e, t, n) {},
         sg0o: function(e, t, n) {
-            e.exports = n.p + "assets/cookie_1x-f162930eb94991733b56.png"
+            e.exports = n.p + "assets/cookie_1x-f162930eb94991733b56_v0.png"
         },
         sgJZ: function(e, t) {
             var n = {
