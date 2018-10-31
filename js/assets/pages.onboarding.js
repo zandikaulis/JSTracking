@@ -275,27 +275,27 @@
                 C = n("cTNz"),
                 _ = n("0OKo"),
                 N = n("kduP"),
-                G = n("yziQ"),
-                E = n("Ue10"),
+                E = n("yziQ"),
+                G = n("Ue10"),
                 D = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return null === this.props.game ? i.createElement(E.Xa, {
+                        return null === this.props.game ? i.createElement(G.Xa, {
                             "data-test-selector": "community-card__placeholder",
                             margin: {
                                 bottom: 2
                             }
-                        }, i.createElement(E.Xa, {
+                        }, i.createElement(G.Xa, {
                             margin: {
                                 bottom: .5
                             }
-                        }, i.createElement(E.o, {
-                            ratio: E.p.BoxArt
-                        }, i.createElement(E.gb, null)))) : this.props.followGameCardOptions ? i.createElement(E.Xa, {
+                        }, i.createElement(G.o, {
+                            ratio: G.p.BoxArt
+                        }, i.createElement(G.gb, null)))) : this.props.followGameCardOptions ? i.createElement(G.Xa, {
                             key: this.props.followGameCardOptions.category + "-game-" + this.props.game.id
-                        }, i.createElement(G.a, {
+                        }, i.createElement(E.a, {
                             "data-a-target": "follow-game-card-" + this.props.game.id,
                             "data-test-selector": X,
                             info: this.props.game.viewersCount ? Object(r.d)("{viewerCount,number} viewers", {
@@ -306,12 +306,12 @@
                             imageSrc: this.props.game.boxArtURL || r.a.defaultBoxArtURL,
                             onFollow: this.props.followGameCardOptions.onFollow,
                             onUnfollow: this.props.followGameCardOptions.onUnfollow
-                        })) : i.createElement(E.Xa, {
+                        })) : i.createElement(G.Xa, {
                             key: "game-" + this.props.game.id,
                             padding: {
                                 bottom: 1
                             }
-                        }, i.createElement(E.y, {
+                        }, i.createElement(G.y, {
                             title: this.props.game.name,
                             info: this.props.game.viewersCount ? Object(r.d)("{viewerCount,number} viewers", {
                                 viewerCount: this.props.game.viewersCount
@@ -367,24 +367,24 @@
                         }, t.renderCardsWithoutAdSlot = function(e) {
                             var n = t.renderCardsFromProps(),
                                 a = 1 === n.length ? 1 : 0;
-                            return i.createElement(E.Xa, {
+                            return i.createElement(G.Xa, {
                                 padding: {
                                     x: 1,
                                     top: 2
                                 }
-                            }, i.createElement(E.Yb, {
-                                gutterSize: E.ac.Small,
+                            }, i.createElement(G.Yb, {
+                                gutterSize: G.ac.Small,
                                 childWidth: t.props.cardSize,
                                 placeholderItems: t.props.placeholderItems ? t.props.placeholderItems : a,
                                 noWrap: e
                             }, n))
                         }, t.renderCardGridWithAdSlot = function() {
-                            var e = i.createElement(E.Xa, {
+                            var e = i.createElement(G.Xa, {
                                     key: "ad",
                                     "data-test-selector": I,
-                                    display: E.X.Flex,
+                                    display: G.X.Flex,
                                     flexGrow: 1,
-                                    justifyContent: E.Wa.Center,
+                                    justifyContent: G.Wa.Center,
                                     padding: {
                                         bottom: t.state.adDisplayed ? 2 : 0,
                                         left: t.state.adDisplayed ? 1 : 0
@@ -400,16 +400,16 @@
                                     autoEnable: !1
                                 })),
                                 n = t.renderCardsFromProps().map(function(e, t) {
-                                    return i.createElement(E.P, {
+                                    return i.createElement(G.P, {
                                         key: "game-" + t.toString(),
                                         cols: 2
                                     }, e)
                                 });
-                            return n.splice(4, 0, e), i.createElement(E.Xa, {
+                            return n.splice(4, 0, e), i.createElement(G.Xa, {
                                 padding: {
                                     x: 1
                                 }
-                            }, i.createElement(E.Ja, null, n))
+                            }, i.createElement(G.Ja, null, n))
                         }, t.renderCardsFromProps = function() {
                             if (t.props.games) {
                                 var e = t.props.games;
@@ -447,8 +447,8 @@
                     }, t
                 }(i.Component),
                 T = Object(g.b)("CommunityCardRow")(A),
-                L = n("TDc0"),
-                R = n("AO3T"),
+                R = n("TDc0"),
+                L = n("AO3T"),
                 j = n("R+eK"),
                 X = (n("JJ+Z"), "onboarding_game"),
                 P = 100,
@@ -474,7 +474,7 @@
                                     })
                                 }
                                 return t
-                            }), Object(R.c)(u.SpadeEventType.GameFollow, e)
+                            }), Object(L.c)(u.SpadeEventType.GameFollow, e)
                         }, n.onUnfollow = function(e) {
                             n.props.data.updateQuery(function(t) {
                                 return t.currentUser && t.currentUser.followedGames && t.currentUser.followedGames.nodes ? a.__assign({}, t, {
@@ -486,7 +486,7 @@
                                         })
                                     })
                                 }) : t
-                            }), Object(R.c)(u.SpadeEventType.GameUnfollow, e)
+                            }), Object(L.c)(u.SpadeEventType.GameUnfollow, e)
                         }, n.moveNextToChannelSurfing = function() {
                             r.p.history.push("/hi/surf" + location.search)
                         }, n.redirectToFrontPage = function() {
@@ -500,7 +500,7 @@
                         };
                         var i = r.p.experiments.getAssignment(c.b.WebOnboarding);
                         return n.state = {
-                            inOnboardingExperiment: Object(L.a)(i)
+                            inOnboardingExperiment: Object(R.a)(i)
                         }, n
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -510,18 +510,18 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.userFollowedGamesDataLoaded(this.props) && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.userFollowedGamesDataLoaded(this.props) && this.state.inOnboardingExperiment ? i.createElement(E.Cb, {
+                        return this.userFollowedGamesDataLoaded(this.props) && this.state.inOnboardingExperiment ? i.createElement(G.Cb, {
                             className: "community-selection-page",
                             "data-a-target": "community-selection-page",
                             "data-test-selector": "onboarding-community-selection",
-                            background: E.r.Alt2,
-                            display: E.X.Flex,
-                            flexDirection: E.Aa.Column,
+                            background: G.r.Alt2,
+                            display: G.X.Flex,
+                            flexDirection: G.Aa.Column,
                             fullHeight: !0
-                        }, i.createElement(E.Cb, {
-                            background: E.r.Alt,
-                            display: E.X.Flex,
-                            alignItems: E.f.Center,
+                        }, i.createElement(G.Cb, {
+                            background: G.r.Alt,
+                            display: G.X.Flex,
+                            alignItems: G.f.Center,
                             padding: {
                                 x: 1,
                                 y: 1
@@ -531,39 +531,39 @@
                                     x: 2
                                 }
                             },
-                            justifyContent: E.Wa.Between,
+                            justifyContent: G.Wa.Between,
                             flexShrink: 0,
                             fullWidth: !0,
                             borderBottom: !0
-                        }, i.createElement(E.Xa, {
+                        }, i.createElement(G.Xa, {
                             className: "community-selection-page__search",
                             margin: {
                                 left: 1
                             },
                             flexShrink: 1,
                             attachLeft: !0
-                        }, i.createElement(E.tb, {
+                        }, i.createElement(G.tb, {
                             id: "onboarding-community-selection__search",
                             "data-a-target": "onboarding-community-selection__search",
                             onChange: this.onGameInputChange,
                             placeholder: Object(r.d)("Search Games", "CommunitySelectionPage"),
                             spellCheck: !1
-                        })), this.renderTitleText(), this.renderCTA()), i.createElement(E.kb, {
-                            size: E.mb.Small,
+                        })), this.renderTitleText(), this.renderCTA()), i.createElement(G.kb, {
+                            size: G.mb.Small,
                             value: this.calculateProgress()
-                        }), i.createElement(S.b, null, i.createElement(E.Cb, {
-                            background: E.r.Alt2,
-                            overflow: E.cb.Hidden,
+                        }), i.createElement(S.b, null, i.createElement(G.Cb, {
+                            background: G.r.Alt2,
+                            overflow: G.cb.Hidden,
                             padding: {
                                 left: 1,
                                 y: 2
                             },
                             fullHeight: !0
-                        }, this.renderGameCards()))) : this.props.data.error ? (r.k.warn("Data Error in Onboarding Community Selection", this.props.data.error), i.createElement(E.Xa, {
-                            display: E.X.Flex
-                        }, i.createElement(E.W, {
-                            fontSize: E.Ca.Size5,
-                            color: E.O.Alt
+                        }, this.renderGameCards()))) : this.props.data.error ? (r.k.warn("Data Error in Onboarding Community Selection", this.props.data.error), i.createElement(G.Xa, {
+                            display: G.X.Flex
+                        }, i.createElement(G.W, {
+                            fontSize: G.Ca.Size5,
+                            color: G.O.Alt
                         }, Object(r.d)("Hmm...having trouble loading right now.", "CommunitySelectionPage")))) : null
                     }, t.prototype.getNumFollowedGames = function() {
                         return this.props.data.currentUser && this.props.data.currentUser.followedGames && this.props.data.currentUser.followedGames.nodes && this.props.data.currentUser.followedGames.nodes.length || 0
@@ -572,51 +572,51 @@
                     }, t.prototype.shouldRedirect = function(e, t) {
                         return !(!this.userFollowedGamesDataLoaded(e) || !(!1 === t.inOnboardingExperiment || !this.doneInitialRedirectCheck && !e.data.currentUser || e.data.currentUser && e.data.currentUser.followedGames && e.data.currentUser.followedGames.nodes && e.data.currentUser.followedGames.nodes.length >= 10)) && (this.doneInitialRedirectCheck = !0, !0)
                     }, t.prototype.renderTitleText = function() {
-                        return i.createElement(E.Xa, {
-                            display: E.X.Flex,
-                            alignItems: E.f.Center,
-                            flexDirection: E.Aa.Column,
+                        return i.createElement(G.Xa, {
+                            display: G.X.Flex,
+                            alignItems: G.f.Center,
+                            flexDirection: G.Aa.Column,
                             flexShrink: 1
-                        }, i.createElement(E.Xa, {
+                        }, i.createElement(G.Xa, {
                             margin: {
                                 top: .5,
                                 x: 1
                             }
-                        }, i.createElement(E.W, {
-                            color: E.O.Alt,
-                            fontSize: E.Ca.Size5,
+                        }, i.createElement(G.W, {
+                            color: G.O.Alt,
+                            fontSize: G.Ca.Size5,
                             breakpointLarge: {
-                                fontSize: E.Ca.Size4
+                                fontSize: G.Ca.Size4
                             },
                             breakpointExtraExtraLarge: {
-                                fontSize: E.Ca.Size3
+                                fontSize: G.Ca.Size3
                             }
-                        }, Object(r.d)("First, pick three or more you’d like to watch.", "CommunitySelectionPage"))), i.createElement(E.Xa, {
+                        }, Object(r.d)("First, pick three or more you’d like to watch.", "CommunitySelectionPage"))), i.createElement(G.Xa, {
                             margin: {
                                 y: .5
                             },
-                            display: E.X.Hide,
+                            display: G.X.Hide,
                             breakpointMedium: {
-                                display: E.X.Block
+                                display: G.X.Block
                             }
-                        }, i.createElement(E.W, {
-                            color: E.O.Alt2,
-                            fontSize: E.Ca.Size6,
+                        }, i.createElement(G.W, {
+                            color: G.O.Alt2,
+                            fontSize: G.Ca.Size6,
                             breakpointLarge: {
-                                fontSize: E.Ca.Size5
+                                fontSize: G.Ca.Size5
                             },
                             breakpointExtraExtraLarge: {
-                                fontSize: E.Ca.Size4
+                                fontSize: G.Ca.Size4
                             }
                         }, Object(r.d)("We have tons of games, hobbies, and activities being streamed right now.", "CommunitySelectionPage"))))
                     }, t.prototype.renderCTA = function() {
-                        return i.createElement(E.Xa, {
+                        return i.createElement(G.Xa, {
                             margin: {
                                 right: 1
                             },
                             attachRight: !0
-                        }, i.createElement(E.z, {
-                            size: E.D.Large,
+                        }, i.createElement(G.z, {
+                            size: G.D.Large,
                             "data-test-selector": "onboarding_cta",
                             disabled: this.getNumFollowedGames() < 3,
                             onClick: this.moveNextToChannelSurfing
@@ -630,21 +630,21 @@
                             return i.createElement(T, {
                                 games: this.props.gameData,
                                 directoryType: O.a.Games,
-                                cardSize: E.Zb.Small,
+                                cardSize: G.Zb.Small,
                                 followGameCardOptions: e,
                                 placeholderItems: 99
                             })
                         }
                     }, t
                 }(i.Component),
-                z = Object(b.compose)(Object(l.a)(j, {
+                q = Object(b.compose)(Object(l.a)(j, {
                     options: {
                         variables: {
                             limit: 10
                         }
                     }
                 }), Object(g.b)("CommunitySelectionPageComponent"))(M),
-                q = "285x380";
+                z = "285x380";
             var V = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -697,7 +697,7 @@
                                 __typename: "Game",
                                 id: n || e.toString(),
                                 name: e,
-                                boxArtURL: k.a + "/" + encodeURIComponent(e) + "-" + q + ".jpg",
+                                boxArtURL: k.a + "/" + encodeURIComponent(e) + "-" + z + ".jpg",
                                 viewersCount: t
                             }
                         }, n.searchClient = new h.a({
@@ -713,7 +713,7 @@
                         if (!this.props.isLoggedIn) return this.props.latencyTracking.reportInteractive(), void window.location.assign("/" + location.search);
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return i.createElement(z, {
+                        return i.createElement(q, {
                             gameData: this.getData(),
                             onSearchChange: this.onSearchChange
                         })
@@ -755,40 +755,40 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.props.isLoggedIn ? i.createElement(E.Pa, {
-                            position: E.hb.Relative,
+                        return this.props.isLoggedIn ? i.createElement(G.Pa, {
+                            position: G.hb.Relative,
                             attachTop: !0,
                             fullWidth: !0
                         }, i.createElement("nav", {
                             className: "top-nav",
                             "data-a-target": "top-nav-container"
-                        }, i.createElement(E.Xa, {
+                        }, i.createElement(G.Xa, {
                             className: "top-nav__menu",
-                            display: E.X.Flex,
-                            alignItems: E.f.Stretch,
-                            flexWrap: E.Ba.NoWrap,
+                            display: G.X.Flex,
+                            alignItems: G.f.Stretch,
+                            flexWrap: G.Ba.NoWrap,
                             fullHeight: !0
-                        }, i.createElement(E.Pa, {
-                            display: E.X.InlineFlex,
-                            alignItems: E.f.Center,
+                        }, i.createElement(G.Pa, {
+                            display: G.X.InlineFlex,
+                            alignItems: G.f.Center,
                             flexShrink: 0
                         }, i.createElement("span", {
                             className: "top-nav__home-link"
-                        }, i.createElement(E.qb, {
-                            asset: E.rb.LogoGlitch,
+                        }, i.createElement(G.qb, {
+                            asset: G.rb.LogoGlitch,
                             width: 30,
                             height: 30
-                        }))), i.createElement(E.Xa, {
+                        }))), i.createElement(G.Xa, {
                             className: "top-nav__nav-items-container",
-                            display: E.X.Flex,
+                            display: G.X.Flex,
                             flexGrow: 1,
-                            flexWrap: E.Ba.NoWrap,
+                            flexWrap: G.Ba.NoWrap,
                             flexShrink: 0
-                        }, ""), i.createElement(E.Xa, {
+                        }, ""), i.createElement(G.Xa, {
                             className: "top-nav__nav-items-container",
-                            display: E.X.Flex,
-                            alignItems: E.f.Stretch,
-                            flexWrap: E.Ba.NoWrap,
+                            display: G.X.Flex,
+                            alignItems: G.f.Stretch,
+                            flexWrap: G.Ba.NoWrap,
                             flexGrow: 0,
                             flexShrink: 0
                         }, i.createElement(Z.a, {
@@ -802,7 +802,7 @@
                     }
                 })(Y),
                 te = K.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(164)]).then(n.bind(null, "6tis"))
+                    return Promise.all([n.e(0), n.e(165)]).then(n.bind(null, "6tis"))
                 }, "ChannelSurfingPage"),
                 ne = K.a.wrap(function() {
                     return Promise.resolve().then(n.bind(null, "8n14"))
@@ -814,23 +814,23 @@
                     return a.__extends(t, e), t.prototype.componentDidUpdate = function() {
                         this.props.isLoggedIn || window.location.assign("/" + location.search)
                     }, t.prototype.render = function() {
-                        return i.createElement(E.Xa, {
-                            display: E.X.Flex,
-                            flexDirection: E.Aa.Column,
-                            flexWrap: E.Ba.NoWrap,
+                        return i.createElement(G.Xa, {
+                            display: G.X.Flex,
+                            flexDirection: G.Aa.Column,
+                            flexWrap: G.Ba.NoWrap,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, i.createElement(ee, null), i.createElement(E.Xa, {
-                            display: E.X.Flex,
-                            flexWrap: E.Ba.NoWrap,
-                            position: E.hb.Relative,
+                        }, i.createElement(ee, null), i.createElement(G.Xa, {
+                            display: G.X.Flex,
+                            flexWrap: G.Ba.NoWrap,
+                            position: G.hb.Relative,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, i.createElement(E.Pa, {
-                            overflow: E.cb.Hidden,
-                            position: E.hb.Relative,
-                            display: E.X.Flex,
-                            flexDirection: E.Aa.Column,
+                        }, i.createElement(G.Pa, {
+                            overflow: G.cb.Hidden,
+                            position: G.hb.Relative,
+                            display: G.X.Flex,
+                            flexDirection: G.Aa.Column,
                             flexGrow: 1,
                             fullHeight: !0,
                             fullWidth: !0
@@ -1937,123 +1937,152 @@
         },
         yziQ: function(e, t, n) {
             "use strict";
+            var a = n("mrSG"),
+                i = n("q1tI"),
+                o = n("yR8l"),
+                r = n("geRD"),
+                l = n("G1cX");
+
+            function s(e, t, n, a) {
+                void 0 === n && (n = {});
+                var i = e.readQuery({
+                    query: t,
+                    variables: n
+                });
+                if (i) {
+                    var o = l(i, function(e) {
+                        return e
+                    }, function(e) {
+                        return a(e)
+                    });
+                    e.writeQuery({
+                        query: t,
+                        variables: n,
+                        data: o
+                    })
+                }
+            }
+            var d = n("Ue10"),
+                c = n("4ErZ"),
+                m = n("bSYX"),
+                u = (n("AXwV"), n("g3/t"));
             n.d(t, "a", function() {
                 return p
             });
-            var a = n("mrSG"),
-                i = n("q1tI"),
-                o = n("oJmH"),
-                r = n("yR8l"),
-                l = n("geRD"),
-                s = n("Ue10"),
-                d = n("4ErZ"),
-                c = n("bSYX"),
-                m = (n("AXwV"), n("g3/t")),
-                u = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            hovered: !1,
-                            inProgress: !1
-                        }, t.onClick = function() {
-                            t.state.inProgress || t.setState({
-                                inProgress: !0
-                            }, t.mutateFollowGame)
-                        }, t.mutateFollowGame = function() {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                return a.__generator(this, function(e) {
-                                    switch (e.label) {
-                                        case 0:
-                                            return this.followGameDataLoadedWithoutError() && this.props.data.game ? this.isFollowing() ? [3, 2] : [4, this.followGame(this.props.data.game.id)] : [2];
-                                        case 1:
-                                            return e.sent(), [3, 4];
-                                        case 2:
-                                            return [4, this.unfollowGame(this.props.data.game.id)];
-                                        case 3:
-                                            e.sent(), e.label = 4;
-                                        case 4:
-                                            return [2]
-                                    }
-                                })
-                            })
-                        }, t.onMouseEnter = function() {
-                            t.setState({
-                                hovered: !0
-                            })
-                        }, t.onMouseLeave = function() {
-                            t.setState({
-                                hovered: !1
-                            })
-                        }, t
-                    }
-                    return a.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(s.Pa, {
-                            position: s.hb.Relative,
-                            margin: {
-                                bottom: 1
-                            }
-                        }, i.createElement("div", a.__assign({
-                            className: "follow-game-card",
-                            "data-test-selector": "follow-game-card",
-                            onMouseEnter: this.onMouseEnter,
-                            onMouseLeave: this.onMouseLeave,
-                            onClick: this.onClick
-                        }, Object(s.gc)(this.props)), i.createElement(s.G, {
-                            key: this.props.title
-                        }, i.createElement(s.Xa, {
-                            position: s.hb.Relative
-                        }, this.renderOverlay(), i.createElement(s.I, {
-                            aspect: s.p.Aspect3x4,
-                            alt: this.props.imageAlt,
-                            src: this.props.imageSrc
-                        })), i.createElement(s.H, null, i.createElement(s.Xa, {
-                            margin: {
-                                top: .5,
-                                bottom: 1
-                            }
-                        }, i.createElement(s.W, {
-                            color: s.O.Base,
-                            fontSize: s.Ca.Size5
-                        }, this.props.title), i.createElement(s.W, {
-                            color: s.O.Alt,
-                            fontSize: s.Ca.Size6
-                        }, this.props.info))))))
-                    }, t.prototype.renderOverlay = function() {
-                        var e, t = this.isFollowing();
-                        return this.state.inProgress ? e = i.createElement(s.Za, {
-                            delay: 0
-                        }) : this.state.hovered ? e = i.createElement(s.qb, {
-                            width: 50,
-                            height: 50,
-                            asset: t ? s.rb.Unheart : s.rb.Heart
-                        }) : t && (e = i.createElement(s.qb, {
-                            width: 50,
-                            height: 50,
-                            asset: s.rb.Heart
-                        })), e ? i.createElement(s.Cb, {
-                            className: "follow-game-card__overlay " + (t ? "follow-game-card__overlay--followed" : ""),
-                            background: s.r.Overlay,
-                            color: s.O.Overlay,
-                            "data-a-target": t ? "follow-game-card--followed" : "",
-                            display: s.X.Flex,
-                            alignItems: s.f.Center,
-                            justifyContent: s.Wa.Center,
-                            position: s.hb.Absolute,
-                            zIndex: s.fc.Above,
-                            attachBottom: !0,
-                            attachTop: !0,
-                            attachLeft: !0,
-                            attachRight: !0
-                        }, e) : null
-                    }, t.prototype.followGame = function(e) {
-                        return a.__awaiter(this, void 0, void 0, function() {
-                            var t, n, i, o = this;
-                            return a.__generator(this, function(a) {
-                                switch (a.label) {
+            var p = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        hovered: !1,
+                        inProgress: !1
+                    }, t.onClick = function() {
+                        t.state.inProgress || t.setState({
+                            inProgress: !0
+                        }, t.mutateFollowGame)
+                    }, t.mutateFollowGame = function() {
+                        return a.__awaiter(t, void 0, void 0, function() {
+                            return a.__generator(this, function(e) {
+                                switch (e.label) {
                                     case 0:
-                                        t = {
-                                            gameID: e
-                                        }, n = {
+                                        return this.followGameDataLoadedWithoutError() && this.props.data.game ? this.isFollowing() ? [3, 2] : [4, this.followGame(this.props.data.game.id)] : [2];
+                                    case 1:
+                                        return e.sent(), [3, 4];
+                                    case 2:
+                                        return [4, this.unfollowGame(this.props.data.game.id)];
+                                    case 3:
+                                        e.sent(), e.label = 4;
+                                    case 4:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, t.onMouseEnter = function() {
+                        t.setState({
+                            hovered: !0
+                        })
+                    }, t.onMouseLeave = function() {
+                        t.setState({
+                            hovered: !1
+                        })
+                    }, t
+                }
+                return a.__extends(t, e), t.prototype.render = function() {
+                    return i.createElement(d.Pa, {
+                        position: d.hb.Relative,
+                        margin: {
+                            bottom: 1
+                        }
+                    }, i.createElement("div", a.__assign({
+                        className: "follow-game-card",
+                        "data-test-selector": "follow-game-card",
+                        onMouseEnter: this.onMouseEnter,
+                        onMouseLeave: this.onMouseLeave,
+                        onClick: this.onClick
+                    }, Object(d.gc)(this.props)), i.createElement(d.G, {
+                        key: this.props.title
+                    }, i.createElement(d.Xa, {
+                        position: d.hb.Relative
+                    }, this.renderOverlay(), i.createElement(d.I, {
+                        aspect: d.p.Aspect3x4,
+                        alt: this.props.imageAlt,
+                        src: this.props.imageSrc
+                    })), i.createElement(d.H, null, i.createElement(d.Xa, {
+                        margin: {
+                            top: .5,
+                            bottom: 1
+                        }
+                    }, i.createElement(d.W, {
+                        color: d.O.Base,
+                        fontSize: d.Ca.Size5
+                    }, this.props.title), i.createElement(d.W, {
+                        color: d.O.Alt,
+                        fontSize: d.Ca.Size6
+                    }, this.props.info))))))
+                }, t.prototype.renderOverlay = function() {
+                    var e, t = this.isFollowing();
+                    return this.state.inProgress ? e = i.createElement(d.Za, {
+                        delay: 0
+                    }) : this.state.hovered ? e = i.createElement(d.qb, {
+                        width: 50,
+                        height: 50,
+                        asset: t ? d.rb.Unheart : d.rb.Heart
+                    }) : t && (e = i.createElement(d.qb, {
+                        width: 50,
+                        height: 50,
+                        asset: d.rb.Heart
+                    })), e ? i.createElement(d.Cb, {
+                        className: "follow-game-card__overlay " + (t ? "follow-game-card__overlay--followed" : ""),
+                        background: d.r.Overlay,
+                        color: d.O.Overlay,
+                        "data-a-target": t ? "follow-game-card--followed" : "",
+                        display: d.X.Flex,
+                        alignItems: d.f.Center,
+                        justifyContent: d.Wa.Center,
+                        position: d.hb.Absolute,
+                        zIndex: d.fc.Above,
+                        attachBottom: !0,
+                        attachTop: !0,
+                        attachLeft: !0,
+                        attachRight: !0
+                    }, e) : null
+                }, t.prototype.followGame = function(e) {
+                    return a.__awaiter(this, void 0, void 0, function() {
+                        var t, n = this;
+                        return a.__generator(this, function(i) {
+                            switch (i.label) {
+                                case 0:
+                                    t = a.__assign({}, Object(r.a)({
+                                        gameID: e
+                                    }), {
+                                        update: function(e, t) {
+                                            var a = t.data.followGame;
+                                            s(e, m, {
+                                                name: n.props.title
+                                            }, function(e) {
+                                                return e.game && a && a.game ? (e.game.self.follow = a.game.self.follow, e) : e
+                                            })
+                                        },
+                                        optimisticResponse: {
                                             followGame: {
                                                 __typename: "FollowGamePayload",
                                                 game: {
@@ -2067,37 +2096,43 @@
                                                     }
                                                 }
                                             }
-                                        }, a.label = 1;
-                                    case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, this.props.followGame(Object(l.b)(t, n))];
-                                    case 2:
-                                        return i = a.sent(), Object(l.e)(c, {
-                                            name: this.props.title
-                                        }, function(e) {
-                                            return e.game && e.game.self && i.data.followGame && i.data.followGame.game && i.data.followGame.game.self && (e.game.self.follow = i.data.followGame.game.self.follow), e
-                                        }), this.setState({
-                                            inProgress: !1
-                                        }, function() {
-                                            o.props.onFollow && o.props.onFollow(o.props.title)
-                                        }), [3, 4];
-                                    case 3:
-                                        return a.sent(), this.setState({
-                                            inProgress: !1
-                                        }), [3, 4];
-                                    case 4:
-                                        return [2]
-                                }
-                            })
+                                        }
+                                    }), i.label = 1;
+                                case 1:
+                                    return i.trys.push([1, 3, , 4]), [4, this.props.followGame(t)];
+                                case 2:
+                                    return i.sent(), this.setState({
+                                        inProgress: !1
+                                    }, function() {
+                                        n.props.onFollow && n.props.onFollow(n.props.title)
+                                    }), [3, 4];
+                                case 3:
+                                    return i.sent(), this.setState({
+                                        inProgress: !1
+                                    }), [3, 4];
+                                case 4:
+                                    return [2]
+                            }
                         })
-                    }, t.prototype.unfollowGame = function(e) {
-                        return a.__awaiter(this, void 0, void 0, function() {
-                            var t, n, i, o = this;
-                            return a.__generator(this, function(a) {
-                                switch (a.label) {
-                                    case 0:
-                                        t = {
-                                            gameID: e
-                                        }, n = {
+                    })
+                }, t.prototype.unfollowGame = function(e) {
+                    return a.__awaiter(this, void 0, void 0, function() {
+                        var t, n = this;
+                        return a.__generator(this, function(i) {
+                            switch (i.label) {
+                                case 0:
+                                    t = a.__assign({}, Object(r.a)({
+                                        gameID: e
+                                    }), {
+                                        update: function(e, t) {
+                                            var a = t.data.unfollowGame;
+                                            s(e, m, {
+                                                name: n.props.title
+                                            }, function(e) {
+                                                return e.game && a && a.game ? (e.game.self.follow = a.game.self.follow, e) : e
+                                            })
+                                        },
+                                        optimisticResponse: {
                                             unfollowGame: {
                                                 __typename: "UnfollowGamePayload",
                                                 game: {
@@ -2108,35 +2143,30 @@
                                                     }
                                                 }
                                             }
-                                        }, a.label = 1;
-                                    case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, this.props.unfollowGame(Object(l.b)(t, n))];
-                                    case 2:
-                                        return i = a.sent(), Object(l.e)(c, {
-                                            name: this.props.title
-                                        }, function(e) {
-                                            return e.game && e.game.self && i.data.unfollowGame && i.data.unfollowGame.game && i.data.unfollowGame.game.self && (e.game.self.follow = i.data.unfollowGame.game.self.follow), e
-                                        }), this.setState({
-                                            inProgress: !1
-                                        }, function() {
-                                            o.props.onUnfollow && o.props.onUnfollow(o.props.title)
-                                        }), [3, 4];
-                                    case 3:
-                                        return a.sent(), this.setState({
-                                            inProgress: !1
-                                        }), [3, 4];
-                                    case 4:
-                                        return [2]
-                                }
-                            })
+                                        }
+                                    }), i.label = 1;
+                                case 1:
+                                    return i.trys.push([1, 3, , 4]), [4, this.props.unfollowGame(t)];
+                                case 2:
+                                    return i.sent(), this.setState({
+                                        inProgress: !1
+                                    }, function() {
+                                        n.props.onUnfollow && n.props.onUnfollow(n.props.title)
+                                    }), [3, 4];
+                                case 3:
+                                    return i.sent(), this.setState({
+                                        inProgress: !1
+                                    }), [3, 4];
+                                case 4:
+                                    return [2]
+                            }
                         })
-                    }, t.prototype.isFollowing = function() {
-                        return !!(this.followGameDataLoadedWithoutError() && this.props.data.game && this.props.data.game.self && this.props.data.game.self.follow)
-                    }, t.prototype.followGameDataLoadedWithoutError = function() {
-                        return !(!this.props || !this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.game)
-                    }, t
-                }(i.Component),
-                p = Object(o.compose)(Object(r.a)(c, {
+                    })
+                }, t.prototype.isFollowing = function() {
+                    return !!(this.followGameDataLoadedWithoutError() && this.props.data.game && this.props.data.game.self && this.props.data.game.self.follow)
+                }, t.prototype.followGameDataLoadedWithoutError = function() {
+                    return !(!this.props || !this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.game)
+                }, t = a.__decorate([Object(o.a)(m, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2144,11 +2174,12 @@
                             }
                         }
                     }
-                }), Object(r.a)(d, {
+                }), Object(o.a)(c, {
                     name: "followGame"
-                }), Object(r.a)(m, {
+                }), Object(o.a)(u, {
                     name: "unfollowGame"
-                }))(u)
+                })], t)
+            }(i.Component)
         }
     }
 ]);

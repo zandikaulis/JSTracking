@@ -1422,7 +1422,7 @@
                             id: a.id,
                             emotes: d(l(a.emotes), a.id)
                         };
-                        a.owner && (s.owner = a.owner), u.has(parseInt(a.id, 10)) ? t.push(s) : n.push(s)
+                        u.has(parseInt(a.id, 10)) ? t.push(s) : n.push(s)
                     }
                 }
                 return n.concat(t)
@@ -1945,7 +1945,8 @@
                         return 0 === e.length ? null : d.createElement(B.Xa, null, d.createElement(B.W, null, Object(l.d)("{count, plural, one {# subscriber emote} other {# subscriber emotes}}", {
                             count: e.length
                         }, "SubscriptionBenefitsBalloon")), d.createElement(z.a, {
-                            emotes: e
+                            emotes: e,
+                            locked: !1
                         }))
                     }, Object.defineProperty(t.prototype, "hasAdFree", {
                         get: function() {

@@ -573,18 +573,18 @@
                 f = n("V+GM"),
                 b = n("1/iK"),
                 g = n("NvVO"),
-                y = n("2xye"),
-                E = n("GnwI"),
-                v = n("5X7D"),
-                S = n("y5D0"),
-                k = n("yR8l"),
+                v = n("2xye"),
+                y = n("GnwI"),
+                k = n("5X7D"),
+                E = n("y5D0"),
+                S = n("yR8l"),
                 O = n("geRD"),
                 w = n("EpBn"),
                 A = n("BK8n"),
-                C = n("7PeK"),
-                D = n("c0Zc"),
+                D = n("7PeK"),
+                _ = n("c0Zc"),
                 j = n("Ue10"),
-                _ = n("K6Vg"),
+                C = n("K6Vg"),
                 T = n("kOk9");
             ! function(e) {
                 e.PADMessage = "PAD_MESSAGE_SELECTOR"
@@ -640,7 +640,7 @@
                     return o.__extends(t, e), t.prototype.render = function() {
                         if (this.state.error) {
                             var e = this.props.isDelete ? Object(l.d)("Something went wrong when attempting to delete your account.", "DisableAccountForm") : Object(l.d)("Something went wrong when attempting to disable your account.", "DisableAccountForm");
-                            return a.createElement(C.a, null, a.createElement(A.a, null, a.createElement(j.W, {
+                            return a.createElement(D.a, null, a.createElement(A.a, null, a.createElement(j.W, {
                                 color: j.O.Error
                             }, e)))
                         }
@@ -655,7 +655,7 @@
                             i = this.props.isDelete ? Object(l.d)("Are you sure you'd like to delete your Twitch account? This will permanently erase all your content and personal information, and you will no longer be able to claim {login} as your user ID.", {
                                 login: this.props.user.login
                             }, "DisableAccountForm") : Object(l.d)("We're sorry to see you go. Disabling your account does not delete your user information. Contact us at support@twitch.tv if there's anything we can do to change your mind.", "DisableAccountForm");
-                        return r = n ? this.renderPADSection() : this.renderDisableSection(n, o), a.createElement(a.Fragment, null, a.createElement(D.a, {
+                        return r = n ? this.renderPADSection() : this.renderDisableSection(n, o), a.createElement(a.Fragment, null, a.createElement(_.a, {
                             title: o,
                             description: i
                         }), r)
@@ -676,7 +676,7 @@
                             }, "DisableAccountForm"),
                             n = this.props.isDelete ? e : t,
                             o = this.props.isDelete ? Object(l.d)("Delete Your Twitch Account", "DisableAccountForm") : Object(l.d)("Disable Your Twitch Account", "DisableAccountForm");
-                        return a.createElement(C.a, null, a.createElement(w.a, {
+                        return a.createElement(D.a, null, a.createElement(w.a, {
                             "data-test-selector": r.PADMessage,
                             label: o,
                             orientation: j.Fa.Horizontal
@@ -690,7 +690,7 @@
                                 state: this.state.working ? j.E.Loading : j.E.Default,
                                 disabled: this.state.working || e
                             }, t));
-                        return a.createElement(C.a, {
+                        return a.createElement(D.a, {
                             footer: o
                         }, a.createElement(w.a, {
                             label: n
@@ -705,19 +705,19 @@
                         })))
                     }, t
                 }(a.Component),
-                F = Object(h.compose)(Object(k.a)(T), Object(k.a)(_, {
+                F = Object(h.compose)(Object(S.a)(T), Object(S.a)(C, {
                     name: "disableUserAccount"
                 }))(x);
-            var R = Object(d.connect)(function(e) {
+            var P = Object(d.connect)(function(e) {
                     return {
                         user: Object(p.e)(e)
                     }
                 }, function(e) {
                     return Object(h.bindActionCreators)({
-                        logout: S.f
+                        logout: E.f
                     }, e)
                 })(F),
-                P = function(e) {
+                R = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -730,9 +730,9 @@
                             fontSize: j.Ca.Size1
                         }, Object(l.d)("Your account has been deleted", "DeleteAccountPage"))), a.createElement(j.Xa, null, a.createElement(j.U, {
                             to: "/"
-                        }, Object(l.d)("Back to the front page", "DeleteAccountPage")))) : a.createElement(v.a, {
+                        }, Object(l.d)("Back to the front page", "DeleteAccountPage")))) : a.createElement(k.a, {
                             loginTrackingSource: b.a.DeleteAccountPage
-                        }, a.createElement(R, {
+                        }, a.createElement(P, {
                             redirect: "/user/delete-account?account_deleted=true",
                             isDelete: !0
                         }))
@@ -744,16 +744,16 @@
                         configurable: !0
                     }), t
                 }(a.Component),
-                U = Object(h.compose)(Object(E.b)("DeleteAccountPage", {
+                I = Object(h.compose)(Object(y.b)("DeleteAccountPage", {
                     destination: g.a.DeleteAccount
                 }), Object(f.a)({
-                    location: y.PageviewLocation.DeleteAccount
-                }))(P);
-            var I = Object(d.connect)(function(e) {
+                    location: v.PageviewLocation.DeleteAccount
+                }))(R);
+            var U = Object(d.connect)(function(e) {
                     return {
                         isLoggedIn: Object(p.f)(e)
                     }
-                })(U),
+                })(I),
                 z = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -767,9 +767,9 @@
                             fontSize: j.Ca.Size1
                         }, Object(l.d)("Your account has been disabled", "DisableAccountPage"))), a.createElement(j.Xa, null, a.createElement(j.U, {
                             to: "/"
-                        }, Object(l.d)("Back to the front page", "DisableAccountPage")))) : a.createElement(v.a, {
+                        }, Object(l.d)("Back to the front page", "DisableAccountPage")))) : a.createElement(k.a, {
                             loginTrackingSource: b.a.DisableAccountPage
-                        }, a.createElement(R, {
+                        }, a.createElement(P, {
                             redirect: "/user/disable-account?account_disabled=true"
                         }))
                     }, Object.defineProperty(t.prototype, "disabled", {
@@ -780,17 +780,17 @@
                         configurable: !0
                     }), t
                 }(a.Component),
-                X = Object(h.compose)(Object(E.b)("DisableAccountPage", {
+                X = Object(h.compose)(Object(y.b)("DisableAccountPage", {
                     destination: g.a.DisableAccount
                 }), Object(f.a)({
-                    location: y.PageviewLocation.DisableAccount
+                    location: v.PageviewLocation.DisableAccount
                 }))(z);
-            var L, W = Object(d.connect)(function(e) {
+            var L, N = Object(d.connect)(function(e) {
                     return {
                         isLoggedIn: Object(p.f)(e)
                     }
                 })(X),
-                N = function(e) {
+                W = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -806,10 +806,10 @@
                             flexWrap: j.Ba.NoWrap
                         }, a.createElement(c.a, null, a.createElement(i.a, {
                             path: "/user/disable-account",
-                            component: W
+                            component: N
                         }), a.createElement(i.a, {
                             path: "/user/delete-account",
-                            component: I
+                            component: U
                         }), a.createElement(s.a, {
                             from: "/user/disable_account",
                             exact: !0,
@@ -827,10 +827,7 @@
                 q = n("GxR5"),
                 B = function(e) {
                     function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.startOver = function() {
-                            t.props.clearInputs(), t.props.changeStepToEnterEmail()
-                        }, t
+                        return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
                         return a.createElement(a.Fragment, null, a.createElement(j.W, {
@@ -865,22 +862,20 @@
                             linkTo: "https://www.twitch.tv/help"
                         }, Object(l.d)("Contact Support", "AccountRecoveryContactSupport"))), a.createElement(j.z, {
                             type: j.F.Hollow,
-                            onClick: this.startOver
+                            onClick: this.props.startOver
                         }, Object(l.d)("Start Over", "AccountRecoveryContactSupport"))))
                     }, t
                 }(a.PureComponent),
-                K = n("rACw"),
-                G = function(e) {
+                G = n("rACw"),
+                K = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.handleKeyPress = function(e) {
-                            "Enter" === e.key && Object(K.b)(t.props.email) && t.props.changeStepToEnterUsername()
-                        }, t.handleChange = function(e) {
+                        return t.handleChange = function(e) {
                             t.props.onChange(e.target.value)
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        var e = !Object(K.b)(this.props.email);
+                        var e = !Object(G.b)(this.props.email);
                         return a.createElement(a.Fragment, null, a.createElement(j.W, {
                             fontSize: j.Ca.Size3,
                             bold: !0
@@ -902,8 +897,7 @@
                             defaultValue: this.props.email,
                             autoFocus: !0,
                             type: j.Ta.Text,
-                            onChange: this.handleChange,
-                            onKeyDown: this.handleKeyPress
+                            onChange: this.handleChange
                         }))), a.createElement(j.U, {
                             onClick: this.props.changeStepToContactSupport
                         }, Object(l.d)("Forgot or having problems with your email?", "AccountRecoveryEmail")), a.createElement(j.Xa, {
@@ -915,96 +909,24 @@
                             onClick: this.props.changeStepToEnterUsername
                         }, Object(l.d)("Continue", "AccountRecoveryEmail"))))
                     }, t
-                }(a.PureComponent),
-                Q = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.handleChange = function(e) {
-                            t.props.onChange(e.target.value)
-                        }, t
-                    }
-                    return o.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(a.Fragment, null, a.createElement(j.W, {
-                            fontSize: j.Ca.Size3,
-                            bold: !0
-                        }, Object(l.d)("Getting back into your Twitch account", "AccountRecoveryUsername")), a.createElement(j.Xa, {
-                            margin: {
-                                top: 1,
-                                bottom: 2
-                            }
-                        }, a.createElement(j.W, {
-                            fontSize: j.Ca.Size4
-                        }, Object(l.d)("Next, give us the Twitch username you're having trouble with.", "AccountRecoveryUsername"))), a.createElement(j.Xa, {
-                            margin: {
-                                y: 2
-                            }
-                        }, a.createElement(j.Ea, {
-                            label: Object(l.d)("Email", "AccountRecoveryUsername")
-                        }, a.createElement(j.Xa, {
-                            display: j.X.Flex,
-                            alignItems: j.f.Center
-                        }, a.createElement(j.Xa, {
-                            margin: {
-                                right: .5
-                            }
-                        }, a.createElement(j.W, {
-                            fontSize: j.Ca.Size4,
-                            color: j.O.Alt2,
-                            bold: !0
-                        }, this.props.email)), a.createElement(j.A, {
-                            icon: j.rb.Edit,
-                            onClick: this.props.changeStepToEnterEmail,
-                            ariaLabel: Object(l.d)("Edit", "AccountRecoveryUsername")
-                        })))), a.createElement(j.Xa, {
-                            margin: {
-                                y: .5
-                            }
-                        }, a.createElement(j.Ea, {
-                            label: Object(l.d)("Enter your username", "AccountRecoveryUsername")
-                        }, a.createElement(j.Ra, {
-                            ariaLabel: Object(l.d)("Username", "AccountRecoveryUsername"),
-                            defaultValue: this.props.username,
-                            autoFocus: !0,
-                            type: j.Ta.Text,
-                            onChange: this.handleChange
-                        }))), a.createElement(j.Xa, {
-                            margin: {
-                                y: 2
-                            },
-                            display: j.X.Flex
-                        }, a.createElement(j.Xa, {
-                            margin: {
-                                right: 1
-                            }
-                        }, a.createElement(j.z, {
-                            disabled: this.props.username.length < 3
-                        }, Object(l.d)("Send My Password Reset Link", "AccountRecoveryUsername"))), a.createElement(j.z, {
-                            type: j.F.Hollow
-                        }, Object(l.d)("I Don't Know My Username", "AccountRecoveryUsername"))))
-                    }, t
-                }(a.PureComponent);
+                }(a.Component);
             ! function(e) {
                 e.EnterEmail = "enterEmail", e.EnterUsername = "enterUsername", e.CheckEmail = "checkEmail", e.ContactSupport = "contactSupport"
             }(L || (L = {}));
             n("jFXk");
-            var V = function(e) {
+            var Q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             email: "",
-                            username: "",
                             currentStep: L.EnterEmail
-                        }, t.changeStepToEnterEmail = function() {
-                            t.setState({
-                                currentStep: L.EnterEmail
-                            })
                         }, t.emailChanged = function(e) {
                             t.setState({
                                 email: e
                             })
-                        }, t.usernameChanged = function(e) {
+                        }, t.changeStepToEnterEmail = function() {
                             t.setState({
-                                username: e
+                                currentStep: L.EnterEmail
                             })
                         }, t.changeStepToContactSupport = function() {
                             t.setState({
@@ -1013,11 +935,6 @@
                         }, t.changeStepToEnterUsername = function() {
                             t.setState({
                                 currentStep: L.EnterUsername
-                            })
-                        }, t.clearInputs = function() {
-                            t.setState({
-                                email: "",
-                                username: ""
                             })
                         }, t
                     }
@@ -1035,30 +952,22 @@
                     }, t.prototype.renderContent = function() {
                         switch (this.state.currentStep) {
                             case L.EnterEmail:
-                                return a.createElement(G, {
+                                return a.createElement(K, {
                                     email: this.state.email,
                                     onChange: this.emailChanged,
                                     changeStepToContactSupport: this.changeStepToContactSupport,
                                     changeStepToEnterUsername: this.changeStepToEnterUsername
                                 });
-                            case L.EnterUsername:
-                                return a.createElement(Q, {
-                                    email: this.state.email,
-                                    username: this.state.username,
-                                    onChange: this.usernameChanged,
-                                    changeStepToEnterEmail: this.changeStepToEnterEmail
-                                });
                             case L.ContactSupport:
                                 return a.createElement(B, {
-                                    clearInputs: this.clearInputs,
-                                    changeStepToEnterEmail: this.changeStepToEnterEmail
+                                    startOver: this.changeStepToEnterEmail
                                 });
                             default:
                                 return null
                         }
                     }, t
                 }(a.Component),
-                Y = (n("y6xW"), function(e) {
+                V = (n("y6xW"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1078,19 +987,19 @@
                             asset: j.rb.LogoGlitch,
                             width: 30,
                             height: 30
-                        })), a.createElement(V, null)) : null
+                        })), a.createElement(Q, null)) : null
                     }, t
                 }(a.Component)),
-                Z = Object(h.compose)(Object(E.b)("AccountRecoveryPage", {
+                Y = Object(h.compose)(Object(y.b)("AccountRecoveryPage", {
                     destination: g.a.RecoverAccount,
                     autoReportInteractive: !0
                 }), Object(f.a)({
-                    location: y.PageviewLocation.RecoverAccount
-                }))(Y);
+                    location: v.PageviewLocation.RecoverAccount
+                }))(V);
             n.d(t, "UserRoot", function() {
-                return N
+                return W
             }), n.d(t, "AccountRecoveryPage", function() {
-                return Z
+                return Y
             })
         },
         y6xW: function(e, t, n) {}

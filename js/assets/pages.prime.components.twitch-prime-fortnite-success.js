@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [169], {
+    [170], {
         "+U0Y": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -990,9 +990,9 @@
                             bottomLeft: a.createElement(T, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? a.createElement(T, {
+                            bottomRight: a.createElement(T, {
                                 value: Object(i.c)(new Date(this.props.datePublished), "medium")
-                            }) : null,
+                            }),
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
                         }) : R(this.props) ? a.createElement(C, {
@@ -1005,9 +1005,9 @@
                             bottomLeft: a.createElement(T, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? a.createElement(T, {
+                            bottomRight: a.createElement(T, {
                                 value: Object(i.c)(new Date(this.props.datePublished), "medium")
-                            }) : null
+                            })
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
                         return G(this.props) && this.props.listPosition ? Object(i.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {

@@ -822,9 +822,9 @@
                             bottomLeft: i.createElement(S, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? i.createElement(S, {
+                            bottomRight: i.createElement(S, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
-                            }) : null,
+                            }),
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
                         }) : B(this.props) ? i.createElement(w, {
@@ -837,9 +837,9 @@
                             bottomLeft: i.createElement(S, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? i.createElement(S, {
+                            bottomRight: i.createElement(S, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
-                            }) : null
+                            })
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
                         return R(this.props) && this.props.listPosition ? Object(r.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
@@ -994,29 +994,27 @@
                 f = n("yR8l"),
                 k = n("V+GM"),
                 y = n("oB8h"),
-                C = n("Bk78"),
-                w = n("geRD"),
-                S = n("kduP"),
-                x = n("NvVO"),
-                T = n("MPw5"),
-                N = n("2xye"),
-                I = n("Uive"),
-                L = n("cTNz"),
-                P = n("GnwI"),
-                E = n("Bh3T"),
-                D = n("bUox"),
-                O = n("TCeE"),
-                _ = n("AZIu"),
-                F = n("x/sq"),
-                A = n("vuN2"),
-                j = n("5myU"),
-                R = n("rShu"),
-                B = n("VW9G"),
-                V = n("hX9f"),
-                G = n("QV0j"),
-                M = n("Ue10"),
-                H = n("YGU1"),
-                W = function(e) {
+                C = n("geRD"),
+                w = n("kduP"),
+                S = n("NvVO"),
+                x = n("MPw5"),
+                T = n("2xye"),
+                N = n("Uive"),
+                I = n("cTNz"),
+                L = n("GnwI"),
+                P = n("Bh3T"),
+                E = n("bUox"),
+                D = n("TCeE"),
+                O = n("AZIu"),
+                _ = n("x/sq"),
+                F = n("5myU"),
+                A = n("rShu"),
+                j = n("VW9G"),
+                R = n("hX9f"),
+                B = n("QV0j"),
+                V = n("Ue10"),
+                G = n("YGU1"),
+                M = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1024,11 +1022,11 @@
                         var e = this;
                         if (this.props.data.loading && !this.props.data.streams || this.props.data.error || !this.props.data.streams) return null;
                         var t = this.props.directoryWidth,
-                            n = N.PageviewMedium.Browse,
-                            a = N.PageviewContent.LocalPopularChannel,
+                            n = T.PageviewMedium.Browse,
+                            a = T.PageviewContent.LocalPopularChannel,
                             i = this.props.data.streams.edges || [];
                         if (t && t > 0) {
-                            var r = Object(j.a)(t, 300, 1);
+                            var r = Object(F.a)(t, 300, 1);
                             if (r - 1 < i.length) {
                                 i = i.slice(0, r - 0)
                             }
@@ -1038,15 +1036,15 @@
                         }).map(function(t, i) {
                             if (!t || !t.node) return null;
                             var r = t.node,
-                                o = Object(F.a)({
+                                o = Object(_.a)({
                                     tags: r.tags,
-                                    section: _.a.LiveChannels,
+                                    section: O.a.LiveChannels,
                                     onClickTag: e.props.addTagFilter,
                                     tagFilters: e.props.tagFilters,
                                     scrollToTop: e.props.scrollToTop
                                 });
-                            return u.createElement(V.b, {
-                                directoryType: R.a.Communities,
+                            return u.createElement(R.b, {
+                                directoryType: A.a.Communities,
                                 streamIndex: i,
                                 streamNode: {
                                     __typename: "Stream",
@@ -1068,7 +1066,7 @@
                                         boxArtURL: r.game.boxArtURL || p.a.defaultBoxArtURL,
                                         name: r.game.name
                                     } : null,
-                                    type: Object(G.a)(r.type) || y.a.Live
+                                    type: Object(B.a)(r.type) || y.a.Live
                                 },
                                 key: r.id,
                                 trackingMedium: n,
@@ -1076,16 +1074,16 @@
                                 tagListProps: o
                             })
                         });
-                        return o.length > 0 ? u.createElement("div", null, u.createElement(B.a, {
+                        return o.length > 0 ? u.createElement("div", null, u.createElement(j.a, {
                             languageCode: this.props.languageCode
-                        }), u.createElement(M.Yb, {
-                            gutterSize: M.ac.Small,
-                            childWidth: M.Zb.Large,
+                        }), u.createElement(V.Yb, {
+                            gutterSize: V.ac.Small,
+                            childWidth: V.Zb.Large,
                             placeholderItems: 20
                         }, o)) : null
                     }, t
                 }(u.Component),
-                X = Object(m.compose)(Object(f.a)(H, {
+                H = Object(m.compose)(Object(f.a)(G, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -1096,50 +1094,45 @@
                             }
                         }
                     }
-                }), Object(P.b)("PopularInternationalSection", {
+                }), Object(L.b)("PopularInternationalSection", {
                     autoReportInteractive: !0
-                }))(W),
-                U = {
+                }))(M),
+                W = {
                     "/directory/all": "all",
                     "/directory/all/:encodedLanguage": "all",
                     "/directory/all/xbox": "xbox",
                     "/directory/all/xb1": "xbox",
                     "/directory/all/ps4": "ps4"
                 },
-                z = n("yI6f"),
-                q = n("T2RZ"),
-                Q = n("V6sb"),
-                $ = "directory-first-item",
-                Y = "directory-container",
-                J = Object(q.a)(N.PageviewMedium.Browse, z.b.Live, z.c.BrowseLiveChannels)(h.a),
-                Z = 0;
+                X = n("yI6f"),
+                U = n("T2RZ"),
+                z = n("V6sb"),
+                q = "directory-first-item",
+                Q = "directory-container",
+                $ = Object(U.a)(T.PageviewMedium.Browse, X.b.Live, X.c.BrowseLiveChannels)(h.a);
 
-            function K(e) {
+            function Y(e) {
                 var t = e.streams && e.streams.edges;
                 return t ? t.filter(function(e) {
                     return e && e.node && e.node.id
                 }) : []
             }
-            var ee = Object(C.a)(3e5),
-                te = Object(A.a)();
-            var ne = function(e) {
+            var J = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             numSlotsAdded: 0,
                             directoryWidth: -1
                         }, t.onResize = function(e) {
-                            e !== t.state.directoryWidth && (clearTimeout(Z), Z = setTimeout(function() {
-                                t.setState({
-                                    directoryWidth: e
-                                })
-                            }, 50))
+                            t.setState({
+                                directoryWidth: e
+                            })
                         }, t.onWindowResize = function() {
                             return requestAnimationFrame(t.updateDisplayAdOrder)
                         }, t.updateDisplayAdOrder = function() {
-                            var e = document.querySelector('[data-target="' + Y + '"]'),
-                                t = document.querySelector('[data-target="' + $ + '"]'),
-                                n = document.querySelector("#" + L.b.directory.rectangle);
+                            var e = document.querySelector('[data-target="' + Q + '"]'),
+                                t = document.querySelector('[data-target="' + q + '"]'),
+                                n = document.querySelector("#" + I.b.directory.rectangle);
                             if (t && e && n) {
                                 var a = Math.round((e.clientWidth - 300) / t.clientWidth).toString();
                                 n.style.order !== a && "0" !== a && (n.style.order = a)
@@ -1150,44 +1143,44 @@
                             var e = t.props.tagFilters[t.props.tagFilters.length - 1];
                             t.props.removeTagFilter(e, l.a.LiveChannels);
                             var n = {
-                                section: _.a.LiveChannels,
+                                section: O.a.LiveChannels,
                                 tagPosition: t.props.tagFilters.length - 1,
                                 searchEvent: !0,
                                 tagId: e.id,
                                 dismiss: !0
                             };
-                            Object(_.b)(n)
+                            Object(O.b)(n)
                         }, t.onSlotAdded = function() {
                             t.setState(function(e) {
                                 var t = e.numSlotsAdded + 1;
-                                return t === Object.keys(L.b.directory).length && T.a.display(L.b.directory.banner), {
+                                return t === Object.keys(I.b.directory).length && x.a.display(I.b.directory.banner), {
                                     numSlotsAdded: t
                                 }
                             })
                         }, t
                     }
                     return d.__extends(t, e), t.prototype.componentWillMount = function() {
-                        L.g.addListener(L.e, this.onSlotAdded)
+                        I.g.addListener(I.e, this.onSlotAdded)
                     }, t.prototype.componentDidMount = function() {
                         p.p.setPageTitle(Object(p.d)("Top Channels", "DirectoryPopularPage")), window.addEventListener("resize", this.onWindowResize), this.onRender()
                     }, t.prototype.componentDidUpdate = function() {
                         this.onRender()
                     }, t.prototype.componentWillUnmount = function() {
-                        window.removeEventListener("resize", this.onWindowResize), L.g.removeListener(L.e, this.onSlotAdded)
+                        window.removeEventListener("resize", this.onWindowResize), I.g.removeListener(I.e, this.onSlotAdded)
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.props.sideNavExpanded !== e.sideNavExpanded && this.onWindowResize(), this.props.lastBrowsePath !== e.location.pathname && this.props.changeLastBrowsePath(decodeURIComponent(e.location.pathname))
                     }, t.prototype.render = function() {
                         var e = this;
-                        if (this.props.tagFilters.length > O.a) return u.createElement(D.a, {
-                            errorType: D.b.TooManyTags,
+                        if (this.props.tagFilters.length > D.a) return u.createElement(E.a, {
+                            errorType: E.b.TooManyTags,
                             onClickRemoveLastTag: this.removeLastTag,
                             tagFilters: this.props.tagFilters
                         });
                         if (!this.props.data.loading && !this.props.data.streams || this.props.data.error) return u.createElement(g.a, {
                             message: Object(p.d)("Error loading data.", "DirectoryPopularPage")
                         });
-                        if (this.props.data.streams && this.props.data.streams.edges && 0 === this.props.data.streams.edges.length) return u.createElement(D.a, {
-                            errorType: D.b.NoResults,
+                        if (this.props.data.streams && this.props.data.streams.edges && 0 === this.props.data.streams.edges.length) return u.createElement(E.a, {
+                            errorType: E.b.NoResults,
                             onClickRemoveLastTag: this.removeLastTag,
                             tagFilters: this.props.tagFilters
                         });
@@ -1195,44 +1188,44 @@
                             n = null;
                         if ("en" !== this.props.languageCode) {
                             var a = {
-                                color: M.O.Base
+                                color: V.O.Base
                             };
-                            n = u.createElement(M.Xa, {
+                            n = u.createElement(V.Xa, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, u.createElement(M.W, d.__assign({
-                                type: M.Sb.H4
-                            }, a), Object(p.d)("All Channels", "PopularInternationalSection"))), this.props.tagFilters.length || this.props.languageTagFilters.length || (t = u.createElement(X, {
+                            }, u.createElement(V.W, d.__assign({
+                                type: V.Sb.H4
+                            }, a), Object(p.d)("All Channels", "PopularInternationalSection"))), this.props.tagFilters.length || this.props.languageTagFilters.length || (t = u.createElement(H, {
                                 directoryWidth: this.state.directoryWidth,
                                 languageCode: this.props.languageCode,
-                                platformType: U[decodeURIComponent(this.props.match.path)] || "all",
+                                platformType: W[decodeURIComponent(this.props.match.path)] || "all",
                                 addTagFilter: this.addTagFilter,
                                 tagFilters: this.props.tagFilters,
                                 scrollToTop: this.context.scrollToTop
                             }))
                         }
-                        var i = N.PageviewMedium.Browse,
-                            r = K(this.props.data).map(function(t, n) {
+                        var i = T.PageviewMedium.Browse,
+                            r = Y(this.props.data).map(function(t, n) {
                                 var a = t && t.node;
                                 return a && a.broadcaster && a.broadcaster.id ? u.createElement("div", {
                                     key: a.id,
-                                    "data-target": n ? "" : $,
+                                    "data-target": n ? "" : q,
                                     style: {
                                         order: n
                                     }
-                                }, u.createElement(M.Xa, {
+                                }, u.createElement(V.Xa, {
                                     margin: {
                                         bottom: 2
                                     },
                                     "data-target": "directory-game__card_container"
-                                }, u.createElement(J, {
+                                }, u.createElement($, {
                                     context: h.b.MixedGameAndChannelList,
                                     title: a.title || Object(p.d)("Untitled Broadcast", "DirectoryGamePage"),
                                     linkTo: {
                                         pathname: "/" + a.broadcaster.login,
                                         state: {
-                                            content: N.PageviewContent.Live,
+                                            content: T.PageviewContent.Live,
                                             content_index: n,
                                             medium: i
                                         }
@@ -1249,17 +1242,17 @@
                                         pathname: "/" + a.broadcaster.login + "/videos",
                                         state: {
                                             medium: i,
-                                            content: N.PageviewContent.Live,
+                                            content: T.PageviewContent.Live,
                                             content_index: n
                                         }
                                     },
                                     channelLogin: a.broadcaster.login || "",
                                     gameTitle: a.game && a.game.name || "",
                                     gameTitleLinkTo: {
-                                        pathname: Object(S.c)(a.game && a.game.name || ""),
+                                        pathname: Object(w.c)(a.game && a.game.name || ""),
                                         state: {
                                             medium: i,
-                                            content: N.PageviewContent.Live,
+                                            content: T.PageviewContent.Live,
                                             content_index: n
                                         }
                                     },
@@ -1269,16 +1262,16 @@
                                     },
                                     "data-a-target": "card-" + n,
                                     "data-a-id": "card-" + (a.broadcaster.login || "").replace(/ /g, ""),
-                                    streamType: Object(G.a)(a.type) || y.a.Live,
+                                    streamType: Object(B.a)(a.type) || y.a.Live,
                                     channelImageProps: {
                                         src: a.broadcaster.profileImageURL || "",
                                         alt: a.broadcaster.displayName || ""
                                     },
-                                    tagListProps: Object(F.a)({
+                                    tagListProps: Object(_.a)({
                                         tags: t && t.node && t.node.tags,
                                         onClickTag: e.addTagFilter,
                                         tagFilters: e.props.tagFilters,
-                                        section: _.a.LiveChannels,
+                                        section: O.a.LiveChannels,
                                         scrollToTop: e.context.scrollToTop
                                     }),
                                     trackingProps: {
@@ -1291,16 +1284,16 @@
                                 }))) : null
                             }),
                             o = !(this.props.data.loading || this.props.data.error || !this.props.data.streams || !this.props.data.streams.pageInfo || !this.props.data.streams.pageInfo.hasNextPage);
-                        return u.createElement(M.Xa, {
+                        return u.createElement(V.Xa, {
                             flexShrink: 0,
-                            "data-target": Y
-                        }, u.createElement(E.b, {
+                            "data-target": Q
+                        }, u.createElement(P.b, {
                             addPaddingWhenPlayerIsPersisting: !0
-                        }), t, n, u.createElement(M.Yb, {
-                            gutterSize: M.ac.Small,
-                            childWidth: M.Zb.Large,
+                        }), t, n, u.createElement(V.Yb, {
+                            gutterSize: V.ac.Small,
+                            childWidth: V.Zb.Large,
                             placeholderItems: 20
-                        }, u.createElement(I.a, {
+                        }, u.createElement(N.a, {
                             key: -1,
                             injectStyles: {
                                 textAlign: "center",
@@ -1309,11 +1302,11 @@
                                 width: 300,
                                 height: 250
                             },
-                            adUnit: L.d.directory,
-                            slotID: L.b.directory.rectangle,
-                            adSize: L.c.directory.rectangle,
+                            adUnit: I.d.directory,
+                            slotID: I.b.directory.rectangle,
+                            adSize: I.c.directory.rectangle,
                             targeting: {
-                                pagetype: L.a.games
+                                pagetype: I.a.games
                             },
                             slotRendered: this.updateDisplayAdOrder,
                             autoEnable: !1
@@ -1330,13 +1323,13 @@
                         scrollToTop: c.func
                     }, t
                 }(u.Component),
-                ae = Object(m.compose)(Object(f.a)(Q, {
+                Z = Object(m.compose)(Object(f.a)(z, {
                     options: function(e) {
                         return {
-                            fetchPolicy: te() ? ee() : "network-only",
+                            fetchPolicy: "network-only",
                             variables: {
                                 limit: 30,
-                                platformType: U[decodeURIComponent(e.match.path)] || "all",
+                                platformType: W[decodeURIComponent(e.match.path)] || "all",
                                 languages: [],
                                 tags: e.languageTagFilters.concat(e.tagFilters.map(function(e) {
                                     return e.id
@@ -1353,7 +1346,7 @@
                                     i = t.streams,
                                     r = i && i.edges && i.edges[i.edges.length - 5];
                                 return n({
-                                    query: Q,
+                                    query: z,
                                     variables: d.__assign({}, a, {
                                         cursor: r ? r.cursor : null
                                     }),
@@ -1361,7 +1354,7 @@
                                         var n = t.fetchMoreResult;
                                         return {
                                             streams: d.__assign({}, n.streams, {
-                                                edges: Object(w.c)(K(e), K(n))
+                                                edges: Object(C.c)(Y(e), Y(n))
                                             })
                                         }
                                     }
@@ -1369,12 +1362,12 @@
                             }
                         })
                     }
-                }), Object(P.b)("DirectoryPopularPage", {
-                    destination: x.a.DirectoryPopular
+                }), Object(L.b)("DirectoryPopularPage", {
+                    destination: S.a.DirectoryPopular
                 }), Object(k.a)({
-                    location: N.PageviewLocation.DirectoryPopular
-                }))(ne);
-            var ie = Object(a.connect)(function(e) {
+                    location: T.PageviewLocation.DirectoryPopular
+                }))(J);
+            var K = Object(a.connect)(function(e) {
                 return {
                     languageCode: Object(r.b)(e),
                     languageTagFilters: Object(l.c)(e),
@@ -1388,9 +1381,9 @@
                     changeLastBrowsePath: o.d,
                     removeTagFilter: s.h
                 }, e)
-            })(ae);
+            })(Z);
             n.d(t, "DirectoryPopularPage", function() {
-                return ie
+                return K
             })
         },
         MJbm: function(e, t, n) {

@@ -1264,9 +1264,9 @@
                             bottomLeft: r.createElement(w, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? r.createElement(w, {
+                            bottomRight: r.createElement(w, {
                                 value: Object(i.c)(new Date(this.props.datePublished), "medium")
-                            }) : null,
+                            }),
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
                         }) : j(this.props) ? r.createElement(E, {
@@ -1279,9 +1279,9 @@
                             bottomLeft: r.createElement(w, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? r.createElement(w, {
+                            bottomRight: r.createElement(w, {
                                 value: Object(i.c)(new Date(this.props.datePublished), "medium")
-                            }) : null
+                            })
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
                         return R(this.props) && this.props.listPosition ? Object(i.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {

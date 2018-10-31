@@ -56,7 +56,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = {
+                        return a.createElement(l.a, {
                             context: this.props.context,
                             onClick: this.onClickHandler,
                             title: this.props.video.title,
@@ -67,7 +67,7 @@
                             },
                             thumbnailImageProps: {
                                 src: this.props.video.previewThumbnailURL,
-                                alt: this.props.video.title || ""
+                                alt: this.props.video.title
                             },
                             channelDisplayName: this.props.video.owner && this.props.video.owner.displayName || "",
                             channelLogin: this.props.video.owner && this.props.video.owner.login || "",
@@ -77,7 +77,7 @@
                             },
                             channelImageProps: {
                                 src: this.props.video.owner && this.props.video.owner.profileImageURL || "",
-                                alt: this.props.video.owner && this.props.video.owner.displayName || ""
+                                alt: this.props.video.owner ? this.props.video.owner.displayName : ""
                             },
                             gameTitle: this.props.video.game && this.props.video.game.name || "",
                             gameTitleLinkTo: {
@@ -91,8 +91,8 @@
                             videoGameChanges: this.gameChangesWithLinks(),
                             multipleVideoGameMarkersType: this.props.multipleVideoGameMarkersType,
                             datePublished: this.props.video.publishedAt,
-                            viewCount: this.props.video.viewCount || 0,
-                            durationInSeconds: !this.props.hideDuration && this.props.video.lengthSeconds ? this.props.video.lengthSeconds : void 0,
+                            viewCount: this.props.video.viewCount,
+                            durationInSeconds: this.props.hideDuration ? void 0 : this.props.video.lengthSeconds,
                             animatedImageProps: this.props.video.animatedPreviewURL ? {
                                 src: this.props.video.animatedPreviewURL,
                                 alt: ""
@@ -109,15 +109,14 @@
                                 tags: this.props.video.contentTags,
                                 linkPath: h.a.PopularTag
                             } : void 0
-                        };
-                        return a.createElement(l.a, i.__assign({}, e))
+                        })
                     }, t.prototype.generateSearchString = function() {
                         var e = {};
                         this.props.collectionID && (e.collection = this.props.collectionID);
                         var t = s.stringify(e);
                         return t ? "?" + t : ""
                     }, t.prototype.getVideoPreviousWatchPercentage = function() {
-                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / (this.props.video.lengthSeconds || 1 / 0) * 100 : null
+                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / this.props.video.lengthSeconds * 100 : null
                     }, t.prototype.getRestrictionProps = function() {
                         var e = this.props.video.restriction && this.props.video.restriction.productName ? "/products/" + this.props.video.restriction.productName : "";
                         return {
@@ -169,7 +168,7 @@
                         videoGameChanges: this.state.videoGameChanges
                     }, this.props))
                 }, t.prototype.componentWillMount = function() {
-                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== r.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds || 0)
+                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== r.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds)
                 }, t
             }(a.Component)
         },
@@ -501,17 +500,11 @@
                 b = n("EJax"),
                 w = n("XKWF"),
                 S = n("rShu"),
-                C = function(e) {
-                    var t = e.game;
-                    return (t && t.videos && t.videos.edges || []).filter(function(e) {
-                        return e && e.node && e.node.id
-                    })
-                },
-                _ = n("HStj"),
-                N = n("Ue10"),
-                P = n("tBbK"),
-                T = (n("TB8s"), w.a.Popular),
-                F = function(e) {
+                C = n("HStj"),
+                _ = n("Ue10"),
+                N = n("tBbK"),
+                P = (n("TB8s"), w.a.Popular),
+                T = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onVideoSortChange = function(e) {
@@ -527,7 +520,7 @@
                     }, t.prototype.render = function() {
                         var e = null,
                             t = decodeURIComponent(this.props.match.params.encodedCommunityName),
-                            n = Object(g.r)(this.props) || T,
+                            n = Object(g.r)(this.props) || P,
                             i = Object(g.t)(this.props);
                         if (this.props.data.error) {
                             var a = Object(s.d)("{gameName} videos are temporarily unavailable.", {
@@ -545,19 +538,19 @@
                                 message: a
                             })
                         }
-                        this.props.data.game && this.props.data.game.videos && this.props.data.game.videos.edges && (e = this.props.data.game.videos.edges.map(function(e) {
-                            if (e && e.node) return e.node
+                        this.props.data.game && this.props.data.game.videos && (e = this.props.data.game.videos.edges.map(function(e) {
+                            return e.node
                         }));
                         var r = o.createElement(k.a, {
-                                buttonSize: N.D.Large,
-                                contentType: _.a.Videos,
+                                buttonSize: _.D.Large,
+                                contentType: C.a.Videos,
                                 directoryType: this.state.directoryType,
                                 directoryName: t
                             }),
-                            u = o.createElement(N.Xa, {
+                            u = o.createElement(_.Xa, {
                                 className: "directory-game-videos-page__filters",
-                                display: N.X.Flex,
-                                flexDirection: N.Aa.Row,
+                                display: _.X.Flex,
+                                flexDirection: _.Aa.Row,
                                 fullWidth: !0,
                                 padding: {
                                     top: 1,
@@ -569,7 +562,7 @@
                                 selectedSort: n,
                                 broadcastType: i
                             }));
-                        return o.createElement(o.Fragment, null, u, o.createElement(N.Xa, {
+                        return o.createElement(o.Fragment, null, u, o.createElement(_.Xa, {
                             padding: {
                                 top: 2,
                                 bottom: 3,
@@ -587,8 +580,8 @@
                             loadMore: this.props.loadMore
                         })))
                     }, t.prototype.enablePagination = function() {
-                        return !!(this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.game && this.props.data.game.videos && this.props.data.game.videos.pageInfo && this.props.data.game.videos.pageInfo.hasNextPage)
-                    }, t = r.__decorate([Object(u.a)(P, {
+                        return this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.game && this.props.data.game.videos && !!this.props.data.game.videos.pageInfo.hasNextPage
+                    }, t = r.__decorate([Object(u.a)(N, {
                         options: function(e) {
                             return {
                                 fetchPolicy: "network-only",
@@ -605,16 +598,16 @@
                             return r.__assign({}, e, {
                                 loadMore: function() {
                                     return e.data.fetchMore({
-                                        query: P,
+                                        query: N,
                                         variables: r.__assign({}, e.data.variables, {
-                                            followedCursor: e.data.game && e.data.game.videos && e.data.game.videos.edges && e.data.game.videos.edges.length > 0 ? e.data.game.videos.edges[e.data.game.videos.edges.length - 1].cursor : void 0
+                                            followedCursor: e.data.game && e.data.game.videos.edges.length > 0 ? e.data.game.videos.edges[e.data.game.videos.edges.length - 1].cursor : void 0
                                         }),
                                         updateQuery: function(e, t) {
                                             var n = t.fetchMoreResult;
                                             return {
                                                 game: r.__assign({}, n.game, {
-                                                    videos: r.__assign({}, n.game && n.game.videos, {
-                                                        edges: Object(p.c)(C(e), C(n))
+                                                    videos: r.__assign({}, n.game.videos, {
+                                                        edges: Object(p.c)(e.game.videos.edges, n.game.videos.edges)
                                                     })
                                                 })
                                             }
@@ -635,13 +628,13 @@
                         }
                     })], t)
                 }(o.Component);
-            var V = Object(i.connect)(function(e) {
+            var F = Object(i.connect)(function(e) {
                 return {
                     languagePreferences: Object(a.a)(e)
                 }
-            })(F);
+            })(T);
             n.d(t, "DirectoryGameVideosPage", function() {
-                return V
+                return F
             })
         },
         b6Yk: function(e, t, n) {
@@ -1217,59 +1210,14 @@
                             }
                         }]
                     }
-                }, {
-                    kind: "FragmentDefinition",
-                    name: {
-                        kind: "Name",
-                        value: "VideoEdge"
-                    },
-                    typeCondition: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "VideoEdge"
-                        }
-                    },
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "cursor"
-                            },
-                            arguments: [],
-                            directives: []
-                        }, {
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "node"
-                            },
-                            arguments: [],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "FragmentSpread",
-                                    name: {
-                                        kind: "Name",
-                                        value: "PreviewCardVideo"
-                                    },
-                                    directives: []
-                                }]
-                            }
-                        }]
-                    }
                 }],
                 loc: {
                     start: 0,
-                    end: 526
+                    end: 454
                 }
             };
             i.loc.source = {
-                body: '#import "twilight/features/tags/models/tag-fragment.gql"\nfragment PreviewCardVideo on Video {\nanimatedPreviewURL\ngame {\nboxArtURL(width: 40 height: 56)\nid\ndisplayName\nname\n}\nid\nlengthSeconds\nowner {\ndisplayName\nid\nlogin\nprofileImageURL(width: 50)\n}\npreviewThumbnailURL(width: 320 height: 180)\npublishedAt\nself {\nisRestricted\nviewingHistory {\nposition\nupdatedAt\n}\n}\ntitle\nviewCount\nrestriction {\nproductName\nproductTitle\n}\ncontentTags {\n...tagFragment\n}\n}\nfragment VideoEdge on VideoEdge {\ncursor\nnode {\n...PreviewCardVideo\n}\n}',
+                body: '#import "twilight/features/tags/models/tag-fragment.gql"\nfragment PreviewCardVideo on Video {\nanimatedPreviewURL\ngame {\nboxArtURL(width: 40 height: 56)\nid\ndisplayName\nname\n}\nid\nlengthSeconds\nowner {\ndisplayName\nid\nlogin\nprofileImageURL(width: 50)\n}\npreviewThumbnailURL(width: 320 height: 180)\npublishedAt\nself {\nisRestricted\nviewingHistory {\nposition\nupdatedAt\n}\n}\ntitle\nviewCount\nrestriction {\nproductName\nproductTitle\n}\ncontentTags {\n...tagFragment\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -1677,12 +1625,32 @@
                                             selectionSet: {
                                                 kind: "SelectionSet",
                                                 selections: [{
-                                                    kind: "FragmentSpread",
+                                                    kind: "Field",
                                                     name: {
                                                         kind: "Name",
-                                                        value: "VideoEdge"
+                                                        value: "cursor"
                                                     },
+                                                    arguments: [],
                                                     directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "node"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "FragmentSpread",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "PreviewCardVideo"
+                                                            },
+                                                            directives: []
+                                                        }]
+                                                    }
                                                 }]
                                             }
                                         }, {
@@ -1714,11 +1682,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 451
+                    end: 474
                 }
             };
             i.loc.source = {
-                body: '#import "twilight/features/video-preview-card/models/preview-card-video-fragment.gql"\nquery DirectoryVideos_Game($gameName: String $videoLimit: Int $followedCursor: Cursor $videoSort: VideoSort $languages: [String!] $broadcastTypes: [BroadcastType!]) {\ngame(name: $gameName) {\nid\nname\nvideos(first: $videoLimit after: $followedCursor languages: $languages types: $broadcastTypes sort: $videoSort) {\nedges{\n...VideoEdge\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}',
+                body: '#import "twilight/features/video-preview-card/models/preview-card-video-fragment.gql"\nquery DirectoryVideos_Game($gameName: String $videoLimit: Int $followedCursor: Cursor $videoSort: VideoSort $languages: [String!] $broadcastTypes: [BroadcastType!]) {\ngame(name: $gameName) {\nid\nname\nvideos(first: $videoLimit after: $followedCursor languages: $languages types: $broadcastTypes sort: $videoSort) {\nedges{\ncursor\nnode {\n...PreviewCardVideo\n}\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,

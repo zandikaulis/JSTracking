@@ -1102,8 +1102,8 @@
                 N = n("H1ft"),
                 T = n("ZbA5"),
                 L = n("QVaV"),
-                P = n("hyVY"),
-                O = n("MXoD"),
+                O = n("hyVY"),
+                P = n("MXoD"),
                 F = n("0LAi");
             ! function(e) {
                 e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
@@ -1212,7 +1212,7 @@
                             borderRadius: l.x.Medium,
                             overflow: l.cb.Hidden
                         }, this.renderVODRestrictionOverlay(), r.createElement(l.U, {
-                            to: Object(O.a)(this.getTrackingContext(g.PageviewContent.VideoThumbnail), this.props.linkTo),
+                            to: Object(P.a)(this.getTrackingContext(g.PageviewContent.VideoThumbnail), this.props.linkTo),
                             onClick: this.props.onThumbnailClick || this.props.onClick,
                             "data-a-target": "preview-card-image-link"
                         }, this.props.thumbnailImageProps && r.createElement(x, {
@@ -1253,7 +1253,7 @@
                             bottomRight: void 0
                         }) : R(this.props) ? r.createElement(E, {
                             topLeft: void 0 !== this.props.durationInSeconds && r.createElement(w, {
-                                value: Object(P.b)(this.props.durationInSeconds),
+                                value: Object(O.b)(this.props.durationInSeconds),
                                 icon: l.rb.Play,
                                 withBackground: !0
                             }),
@@ -1264,14 +1264,14 @@
                             bottomLeft: r.createElement(w, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? r.createElement(w, {
+                            bottomRight: r.createElement(w, {
                                 value: Object(i.c)(new Date(this.props.datePublished), "medium")
-                            }) : null,
+                            }),
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
                         }) : j(this.props) ? r.createElement(E, {
                             topLeft: r.createElement(w, {
-                                value: Object(P.b)(this.props.durationInSeconds),
+                                value: Object(O.b)(this.props.durationInSeconds),
                                 icon: l.rb.Clip,
                                 withBackground: !0
                             }),
@@ -1279,9 +1279,9 @@
                             bottomLeft: r.createElement(w, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? r.createElement(w, {
+                            bottomRight: r.createElement(w, {
                                 value: Object(i.c)(new Date(this.props.datePublished), "medium")
-                            }) : null
+                            })
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
                         return R(this.props) && this.props.listPosition ? Object(i.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
@@ -1299,7 +1299,7 @@
                             }
                         }, r.createElement(b, {
                             imageProps: this.props.gameBoxArtImageProps,
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(g.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             aspect: l.p.BoxArt,
                             "data-test-selector": A.BoxArt,
@@ -1310,7 +1310,7 @@
                             }
                         }, r.createElement(b, {
                             imageProps: this.props.channelImageProps,
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.UserThumbnail), this.props.channelLinkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(g.PageviewContent.UserThumbnail), this.props.channelLinkTo),
                             onClick: this.props.onChannelImageClick || this.props.onChannelLoginClick,
                             aspect: l.p.Aspect1x1,
                             "data-test-selector": A.Avatar
@@ -1320,7 +1320,7 @@
                             t = [];
                         return this.shouldShowGameBalloon(this.props) || t.push({
                             text: Object(L.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(g.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
                             onClick: this.props.onChannelLoginClick,
                             automationSelector: "preview-card-channel-link"
                         }), j(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
@@ -1332,13 +1332,13 @@
                             automationSelector: "preview-card-clip-curator-link"
                         }) : R(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== X.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
                             text: this.props.gameTitle,
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(g.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             automationSelector: "preview-card-game-link"
                         }), r.createElement(r.Fragment, null, r.createElement(I, {
                             title: this.props.title,
                             onClick: this.props.onVideoTitleClick || this.props.onClick,
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.VideoTitle), this.props.linkTo),
+                            linkTo: Object(P.a)(this.getTrackingContext(g.PageviewContent.VideoTitle), this.props.linkTo),
                             subtitles: t,
                             "data-a-target": "preview-card-title-link"
                         }), e)
@@ -3116,7 +3116,7 @@
                     }, t
                 }(i.Component)),
                 L = n("dIU+"),
-                P = (n("EZOg"), function(e) {
+                O = (n("EZOg"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getContentRender = function() {
@@ -3265,11 +3265,11 @@
                         })
                     }, t
                 }(i.Component));
-            var O, F = Object(a.connect)(function(e) {
+            var P, F = Object(a.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
-                })(P),
+                })(O),
                 A = n("44NB"),
                 X = (n("QzrU"), 6),
                 D = function(e) {
@@ -3421,11 +3421,11 @@
                 j = n("pR+Y");
             ! function(e) {
                 e[e.AnonFront = 1] = "AnonFront", e[e.Front = 2] = "Front"
-            }(O || (O = {}));
+            }(P || (P = {}));
 
             function B(e, t, n) {
                 switch (t) {
-                    case O.AnonFront:
+                    case P.AnonFront:
                         return i.createElement(R, {
                             items: e,
                             isLoading: n,
@@ -3981,7 +3981,7 @@
                             className: "anon-front__content-section",
                             padding: this.state.takeoverRendered ? 2 : 0
                         }, i.createElement(z, {
-                            renderContext: O.AnonFront
+                            renderContext: P.AnonFront
                         })), i.createElement(E.Xa, {
                             className: "anon-front__sizzle-strip",
                             display: E.X.Flex,

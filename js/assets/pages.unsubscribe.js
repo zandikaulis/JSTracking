@@ -1086,7 +1086,7 @@
                             id: a.id,
                             emotes: l(d(a.emotes), a.id)
                         };
-                        a.owner && (s.owner = a.owner), c.has(parseInt(a.id, 10)) ? t.push(s) : n.push(s)
+                        c.has(parseInt(a.id, 10)) ? t.push(s) : n.push(s)
                     }
                 }
                 return n.concat(t)
@@ -1242,7 +1242,8 @@
                     }, s.createElement(g.W, null, Object(c.d)("{numEmotes, plural, one {# Subscriber Emote:} other {# Subscriber Emotes:}}", {
                         numEmotes: e.emotes.length
                     }, "ChannelSubscriptionBenefits"))), s.createElement(h.a, {
-                        emotes: Object(f.b)(e.emotes)
+                        emotes: Object(f.b)(e.emotes),
+                        locked: !1
                     })))
                 },
                 k = n("C8FX"),
@@ -1295,16 +1296,16 @@
                     })))
                 }),
                 E = n("ZDlU"),
-                w = n("QV0B"),
-                S = n("mb7O"),
+                S = n("QV0B"),
+                w = n("mb7O"),
                 N = (n("ZsMu"), function() {
-                    return s.createElement(S.a, null, s.createElement(g.Xa, {
+                    return s.createElement(w.a, null, s.createElement(g.Xa, {
                         className: "error-ticket-description__header",
                         padding: 2
                     }, s.createElement(g.Cb, {
                         fullHeight: !0,
                         background: g.r.Alt2
-                    }, s.createElement(E.a, null))), s.createElement(w.a, {
+                    }, s.createElement(E.a, null))), s.createElement(S.a, {
                         collapsable: !0
                     }, s.createElement(g.Cb, {
                         className: "error-ticket-description__body",
@@ -1316,13 +1317,13 @@
                     }, s.createElement(E.a, null)))))
                 }),
                 O = (n("1P3F"), function() {
-                    return s.createElement(S.a, null, s.createElement(g.Xa, {
+                    return s.createElement(w.a, null, s.createElement(g.Xa, {
                         className: "placeholder-ticket-description__header",
                         padding: 2
                     }, s.createElement(g.Cb, {
                         fullHeight: !0,
                         background: g.r.Alt2
-                    })), s.createElement(w.a, {
+                    })), s.createElement(S.a, {
                         collapsable: !0
                     }, s.createElement(g.Cb, {
                         padding: 2,
@@ -1334,7 +1335,7 @@
                 _ = n("KYZ7"),
                 T = n.n(_),
                 C = (n("R9u/"), function(e) {
-                    return s.createElement(S.a, null, s.createElement(g.Cb, {
+                    return s.createElement(w.a, null, s.createElement(g.Cb, {
                         background: g.r.Base
                     }, s.createElement(g.Xa, {
                         className: "turbo-ticket-description__banner-image",
@@ -1355,7 +1356,7 @@
                         interval: e.productPriceInterval,
                         productPriceTaxInclusive: e.productPriceTaxInclusive,
                         showEuSubs: e.showEuSubs
-                    })), s.createElement(w.a, {
+                    })), s.createElement(S.a, {
                         collapsable: !0,
                         showButtonLabel: Object(c.d)("Show Turbo Benefits", "TurboTicketDescription"),
                         hideButtonLabel: Object(c.d)("Hide Turbo Benefits", "TurboTicketDescription")
@@ -1392,7 +1393,7 @@
                 P = n("GnwI"),
                 I = n("9fjZ"),
                 F = u.a.wrap(function() {
-                    return n.e(190).then(n.bind(null, "skV9"))
+                    return n.e(191).then(n.bind(null, "skV9"))
                 }, "CampaignsTicketDescription"),
                 D = function(e) {
                     function t() {
@@ -1426,7 +1427,7 @@
                             productPriceInterval: t.interval && t.interval.unit,
                             productPriceTaxInclusive: this.taxInclusive,
                             showEuSubs: this.props.showEuSubs
-                        }) : s.createElement(S.a, null, s.createElement(g.Cb, {
+                        }) : s.createElement(w.a, null, s.createElement(g.Cb, {
                             background: g.r.Base
                         }, s.createElement(y, {
                             bannerImageURL: t.owner && t.owner.bannerImageURL,
@@ -1438,7 +1439,7 @@
                             productPriceInterval: t.interval && t.interval.unit,
                             productPriceTaxInclusive: this.taxInclusive,
                             showEuSubs: this.props.showEuSubs
-                        }), s.createElement(w.a, {
+                        }), s.createElement(S.a, {
                             collapsable: !0,
                             showButtonLabel: Object(c.d)("Show Subscription Benefits", "TicketDescription"),
                             hideButtonLabel: Object(c.d)("Hide Subscription Benefits", "TicketDescription")
@@ -1843,8 +1844,8 @@
                 k = n("DMoW"),
                 y = n("V+q8"),
                 E = n("NAv5"),
-                w = n("oJmH"),
-                S = n("qyxT"),
+                S = n("oJmH"),
+                w = n("qyxT"),
                 N = n("Ue10"),
                 O = function(e) {
                     function t() {
@@ -1912,7 +1913,7 @@
                         }))))
                     }, t
                 }(f.Component),
-                _ = Object(w.compose)(Object(m.b)("ReasonInput", {
+                _ = Object(S.compose)(Object(m.b)("ReasonInput", {
                     autoReportInteractive: !0
                 }))(O),
                 T = function(e) {
@@ -2060,7 +2061,7 @@
                             reason: "",
                             unsubscribing: !1,
                             showUnsubConfirmation: !1
-                        }, t.cancelReasons = "turbo" === t.props.productName ? B : A, t.doNotRenewReasons = "turbo" === t.props.productName ? R : x, t.isCancel = t.props.unsubscribeType === r.Cancel, t.reasons = t.isCancel ? Object(S.a)(t.cancelReasons.slice()) : Object(S.a)(t.doNotRenewReasons.slice()), t.updateReason = function(e) {
+                        }, t.cancelReasons = "turbo" === t.props.productName ? B : A, t.doNotRenewReasons = "turbo" === t.props.productName ? R : x, t.isCancel = t.props.unsubscribeType === r.Cancel, t.reasons = t.isCancel ? Object(w.a)(t.cancelReasons.slice()) : Object(w.a)(t.doNotRenewReasons.slice()), t.updateReason = function(e) {
                             t.setState({
                                 reason: e
                             })
@@ -2199,7 +2200,7 @@
                         configurable: !0
                     }), t
                 }(f.Component),
-                W = Object(w.compose)(Object(m.b)("UnsubscrbeForm", {
+                W = Object(S.compose)(Object(m.b)("UnsubscrbeForm", {
                     autoReportInteractive: !0
                 }))(L),
                 X = (n("9ELW"), function(e) {

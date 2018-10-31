@@ -555,10 +555,10 @@
                     }(),
                     D = C && C.isTypedArray;
 
-                function A(e, t) {
+                function I(e, t) {
                     return "__proto__" == t ? void 0 : e[t]
                 }
-                var I = Array.prototype,
+                var A = Array.prototype,
                     R = Function.prototype,
                     k = Object.prototype,
                     B = S["__core-js_shared__"],
@@ -582,7 +582,7 @@
                     }(Object.getPrototypeOf, Object),
                     H = Object.create,
                     X = k.propertyIsEnumerable,
-                    Y = I.splice,
+                    Y = A.splice,
                     z = j ? j.toStringTag : void 0,
                     q = function() {
                         try {
@@ -598,7 +598,7 @@
                     ee = function() {
                         function e() {}
                         return function(t) {
-                            if (!Ie(t)) return {};
+                            if (!Ae(t)) return {};
                             if (H) return H(t);
                             e.prototype = t;
                             var n = new e;
@@ -777,7 +777,7 @@
                 }
 
                 function pe(e) {
-                    return !(!Ie(e) || function(e) {
+                    return !(!Ae(e) || function(e) {
                         return !!L && L in e
                     }(e)) && (De(e) ? x : g).test(function(e) {
                         if (null != e) {
@@ -793,7 +793,7 @@
                 }
 
                 function fe(e) {
-                    if (!Ie(e)) return function(e) {
+                    if (!Ae(e)) return function(e) {
                         var t = [];
                         if (null != e)
                             for (var n in Object(e)) t.push(n);
@@ -807,10 +807,10 @@
 
                 function he(e, t, n, a, r) {
                     e !== t && ue(t, function(i, o) {
-                        if (Ie(i)) r || (r = new re),
+                        if (Ae(i)) r || (r = new re),
                             function(e, t, n, a, r, i, o) {
-                                var s = A(e, n),
-                                    l = A(t, n),
+                                var s = I(e, n),
+                                    l = I(t, n),
                                     c = o.get(l);
                                 if (c) return void oe(e, n, c);
                                 var u = i ? i(s, l, n + "", e, t, o) : void 0,
@@ -857,7 +857,7 @@
                                             }
                                             return n
                                         }(e, Be(e))
-                                    }(s) : (!Ie(s) || a && De(s)) && (u = function(e) {
+                                    }(s) : (!Ae(s) || a && De(s)) && (u = function(e) {
                                         return "function" != typeof e.constructor || ve(e) ? {} : ee(W(e))
                                     }(l))) : d = !1
                                 }
@@ -865,7 +865,7 @@
                                 oe(e, n, u)
                             }(e, t, o, n, he, a, r);
                         else {
-                            var s = a ? a(A(e, o), i, o + "", e, t, r) : void 0;
+                            var s = a ? a(I(e, o), i, o + "", e, t, r) : void 0;
                             void 0 === s && (s = i), oe(e, o, s)
                         }
                     }, Be)
@@ -955,23 +955,23 @@
                     _e = Array.isArray;
 
                 function Oe(e) {
-                    return null != e && Ae(e.length) && !De(e)
+                    return null != e && Ie(e.length) && !De(e)
                 }
                 var Ce = K || function() {
                     return !1
                 };
 
                 function De(e) {
-                    if (!Ie(e)) return !1;
+                    if (!Ae(e)) return !1;
                     var t = de(e);
                     return t == u || t == d || t == c || t == f
                 }
 
-                function Ae(e) {
+                function Ie(e) {
                     return "number" == typeof e && e > -1 && e % 1 == 0 && e <= s
                 }
 
-                function Ie(e) {
+                function Ae(e) {
                     var t = typeof e;
                     return null != e && ("object" == t || "function" == t)
                 }
@@ -984,7 +984,7 @@
                         return e(t)
                     }
                 }(D) : function(e) {
-                    return Re(e) && Ae(e.length) && !!y[de(e)]
+                    return Re(e) && Ie(e.length) && !!y[de(e)]
                 };
 
                 function Be(e) {
@@ -997,7 +997,7 @@
                             i = r > 1 ? n[r - 1] : void 0,
                             o = r > 2 ? n[2] : void 0;
                         for (i = e.length > 3 && "function" == typeof i ? (r--, i) : void 0, o && function(e, t, n) {
-                                if (!Ie(n)) return !1;
+                                if (!Ae(n)) return !1;
                                 var a = typeof t;
                                 return !!("number" == a ? Oe(n) && be(t, n.length) : "string" == a && t in n) && Ne(n[t], e)
                             }(n[0], n[1], o) && (i = r < 3 ? void 0 : i, r = 1), t = Object(t); ++a < r;) {
@@ -1809,7 +1809,7 @@
         },
         DMoW: function(e, t, n) {
             "use strict";
-            var a, r, i, o, s, l, c, u, d, m, p, f, h, g, E, y, b, v, S, N, T, _, O, C, D, A, I, R, k, B, w, P, L, F, M, x, U, j, G, V, W, H, X, Y, z, q, K, Q, J, Z, $, ee, te, ne, ae, re, ie, oe, se, le, ce, ue, de, me, pe, fe, he, ge, Ee, ye, be, ve, Se, Ne, Te, _e, Oe, Ce, De, Ae, Ie, Re, ke, Be, we, Pe, Le, Fe, Me, xe, Ue, je, Ge, Ve, We, He, Xe, Ye, ze, qe, Ke, Qe, Je, Ze, $e, et, tt, nt, at, rt, it, ot, st, lt, ct, ut, dt;
+            var a, r, i, o, s, l, c, u, d, m, p, f, h, g, E, y, b, v, S, N, T, _, O, C, D, I, A, R, k, B, w, P, L, F, M, x, U, j, G, V, W, H, X, Y, z, q, K, Q, J, Z, $, ee, te, ne, ae, re, ie, oe, se, le, ce, ue, de, me, pe, fe, he, ge, Ee, ye, be, ve, Se, Ne, Te, _e, Oe, Ce, De, Ie, Ae, Re, ke, Be, we, Pe, Le, Fe, Me, xe, Ue, je, Ge, Ve, We, He, Xe, Ye, ze, qe, Ke, Qe, Je, Ze, $e, et, tt, nt, at, rt, it, ot, st, lt, ct, ut;
             n.d(t, "c", function() {
                     return r
                 }), n.d(t, "I", function() {
@@ -1831,7 +1831,7 @@
                 }), n.d(t, "o", function() {
                     return C
                 }), n.d(t, "i", function() {
-                    return I
+                    return A
                 }), n.d(t, "J", function() {
                     return R
                 }), n.d(t, "b", function() {
@@ -1879,7 +1879,7 @@
                 }), n.d(t, "l", function() {
                     return _e
                 }), n.d(t, "T", function() {
-                    return Ae
+                    return Ie
                 }), n.d(t, "y", function() {
                     return Le
                 }), n.d(t, "s", function() {
@@ -1893,15 +1893,15 @@
                 }), n.d(t, "L", function() {
                     return He
                 }), n.d(t, "w", function() {
-                    return $e
+                    return Ze
                 }), n.d(t, "G", function() {
-                    return et
+                    return $e
                 }), n.d(t, "H", function() {
-                    return tt
+                    return et
                 }), n.d(t, "d", function() {
-                    return ct
+                    return lt
                 }), n.d(t, "r", function() {
-                    return ut
+                    return ct
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -1980,10 +1980,10 @@
                 }(D || (D = {})),
                 function(e) {
                     e.CUSTOM = "CUSTOM", e.DISPLAY_ONLY = "DISPLAY_ONLY", e.FIRST_PARTY = "FIRST_PARTY", e.RENDER_ONLY = "RENDER_ONLY", e.SPONSORED = "SPONSORED", e.THIRD_PARTY = "THIRD_PARTY", e.UNKNOWN = "UNKNOWN"
-                }(A || (A = {})),
+                }(I || (I = {})),
                 function(e) {
                     e.FOLLOWERS_ONLY = "FOLLOWERS_ONLY", e.SLOW_MODE = "SLOW_MODE", e.SUBSCRIBERS_ONLY = "SUBSCRIBERS_ONLY", e.VERIFIED_ONLY = "VERIFIED_ONLY"
-                }(I || (I = {})),
+                }(A || (A = {})),
                 function(e) {
                     e.AMOUNT_BELOW_MIN_BITS = "AMOUNT_BELOW_MIN_BITS", e.AUTO_MOD_MESSAGE = "AUTO_MOD_MESSAGE", e.AUTO_MOD_PENDING = "AUTO_MOD_PENDING", e.CHANNEL_BLOCKED_TERMS = "CHANNEL_BLOCKED_TERMS", e.CHANNEL_INELIGIBLE = "CHANNEL_INELIGIBLE", e.EMOTE_AMOUNT_BELOW_MIN_BITS = "EMOTE_AMOUNT_BELOW_MIN_BITS", e.INSUFFICIENT_BALANCE = "INSUFFICIENT_BALANCE", e.INVALID_BITS_AMOUNT = "INVALID_BITS_AMOUNT", e.INVALID_BITS_MESSAGE = "INVALID_BITS_MESSAGE", e.INVALID_EVENT_ID = "INVALID_EVENT_ID", e.MESSAGE_LENGTH_EXCEEDED = "MESSAGE_LENGTH_EXCEEDED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.TOO_LARGE_BITS_EMOTE = "TOO_LARGE_BITS_EMOTE", e.TOO_LARGE_CHEER = "TOO_LARGE_CHEER", e.UNKNOWN = "UNKNOWN", e.USER_BANNED = "USER_BANNED", e.USER_INELIGIBLE = "USER_INELIGIBLE", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_MESSAGE = "ZALGO_MESSAGE"
                 }(R || (R = {})),
@@ -2142,10 +2142,10 @@
                 }(De || (De = {})),
                 function(e) {
                     e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
-                }(Ae || (Ae = {})),
+                }(Ie || (Ie = {})),
                 function(e) {
                     e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
-                }(Ie || (Ie = {})),
+                }(Ae || (Ae = {})),
                 function(e) {
                     e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
                 }(Re || (Re = {})),
@@ -2195,65 +2195,62 @@
                     e.SQUAD_NOT_FOUND = "SQUAD_NOT_FOUND", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(Xe || (Xe = {})),
                 function(e) {
-                    e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(Ye || (Ye = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(ze || (ze = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
                 }(qe || (qe = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }(Ke || (Ke = {})),
                 function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
+                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(Je || (Je = {})),
                 function(e) {
-                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(Ze || (Ze = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
                 }($e || ($e = {})),
                 function(e) {
-                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
+                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
                 }(et || (et = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }(tt || (tt = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(nt || (nt = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(at || (at = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(rt || (rt = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(it || (it = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(ot || (ot = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
                 }(st || (st = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
                 }(lt || (lt = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
                 }(ct || (ct = {})),
                 function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
-                }(ut || (ut = {})),
-                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(dt || (dt = {}))
+                }(ut || (ut = {}))
         },
         DNwE: function(e, t, n) {},
         GIun: function(e, t, n) {
@@ -2646,7 +2643,10 @@
                     return function(l) {
                         function c() {
                             var e = null !== l && l.apply(this, arguments) || this;
-                            return e.hadImpression = !1, e.logger = o.k.withCategory("with-impression-listener"), e.setRef = function(t) {
+                            return e.state = {
+                                hadImpression: !1,
+                                didScroll: !1
+                            }, e.logger = o.k.withCategory("with-impression-listener"), e.setRef = function(t) {
                                 return e.element = t
                             }, e.registerImpressionCallback = function(t) {
                                 e.reportImpression = t
@@ -2661,6 +2661,8 @@
                         }, c.prototype.render = function() {
                             var e = {
                                 impressionListener: {
+                                    hadImpression: this.state.hadImpression,
+                                    didScroll: this.state.didScroll,
                                     registerImpressionCallback: this.registerImpressionCallback
                                 }
                             };
@@ -2671,7 +2673,10 @@
                             return a.__awaiter(this, void 0, void 0, function() {
                                 var t, n;
                                 return a.__generator(this, function(a) {
-                                    return this.hadImpression || (t = this.isVisible(e)) && (n = this.isScrolled(), this.hadImpression = t, this.reportImpression && this.reportImpression(n)), [2]
+                                    return this.state.hadImpression || (t = this.isVisible(e)) && (n = this.isScrolled(), this.setState({
+                                        hadImpression: t,
+                                        didScroll: n
+                                    }), this.reportImpression && this.reportImpression(n)), [2]
                                 })
                             })
                         }, c.prototype.isVisible = function(e) {
@@ -2901,8 +2906,7 @@
                                 }))
                             })), e
                         }, t.onSelect = function(e) {
-                            var n = t.props.clearOnSelect;
-                            t.userSearch && t.userSearch.setValue(n ? "" : e.login), t.props.onUserSelect(e)
+                            t.userSearch && t.userSearch.setValue(e.login), t.props.onUserSelect(e)
                         }, t.setUserSearchRef = function(e) {
                             t.userSearch = e
                         }, t
@@ -3024,7 +3028,6 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         return r.createElement(S, {
-                            clearOnSelect: this.props.clearOnSelect,
                             userResults: this.state.userResult,
                             open: this.state.searchOpen,
                             waiting: this.state.waiting,
@@ -3946,7 +3949,7 @@
                         }).then(function(t) {
                             e.countryCode = t.data.requestInfo.countryCode
                         }).catch(function(t) {
-                            e.logger.warn(t, "Failed to get country code")
+                            e.logger.error(t, "Failed to get country code")
                         })
                     }, e.prototype.getSearchResults = function(e) {
                         var t = this,
@@ -3963,7 +3966,7 @@
                                 results: JSON.parse(e.data.search.result)
                             }
                         }).catch(function(e) {
-                            return t.logger.warn(e, "Failed to get search results"), e
+                            return t.logger.error(e, "Failed to get search results"), e
                         })
                     }, e.prototype.getTopResult = function(e, t) {
                         return {
@@ -5100,7 +5103,7 @@
             }
 
             function D(e) {
-                A(e);
+                I(e);
                 var t = e.definitions.filter(function(e) {
                     return "OperationDefinition" === e.kind && "mutation" === e.operation
                 })[0];
@@ -5108,7 +5111,7 @@
                 return t
             }
 
-            function A(e) {
+            function I(e) {
                 if ("Document" !== e.kind) throw new Error('Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a "gql" tag? http://docs.apollostack.com/apollo-client/core.html#gql');
                 var t = e.definitions.filter(function(e) {
                     return "FragmentDefinition" !== e.kind
@@ -5119,14 +5122,14 @@
                 if (t.length > 1) throw new Error("Ambiguous GraphQL document: contains " + t.length + " operations")
             }
 
-            function I(e) {
-                return A(e), e.definitions.filter(function(e) {
+            function A(e) {
+                return I(e), e.definitions.filter(function(e) {
                     return "OperationDefinition" === e.kind
                 })[0]
             }
 
             function R(e) {
-                var t = I(e);
+                var t = A(e);
                 if (!t) throw new Error("GraphQL document is missing an operation");
                 return t
             }
@@ -5146,7 +5149,7 @@
             }
 
             function w(e) {
-                var t = I(e);
+                var t = A(e);
                 if (!t || "query" !== t.operation) throw new Error("Must contain a query definition.");
                 return t
             }
@@ -5161,7 +5164,7 @@
 
             function L(e) {
                 var t;
-                A(e);
+                I(e);
                 for (var n = 0, a = e.definitions; n < a.length; n++) {
                     var r = a[n];
                     if ("OperationDefinition" === r.kind) {
@@ -5261,7 +5264,7 @@
             var V = new Map;
 
             function W(e) {
-                A(e);
+                I(e);
                 var t = V.get(e);
                 if (t) return t;
                 var n = U(e);
@@ -5287,7 +5290,7 @@
                 X = new Map;
 
             function Y(e) {
-                A(e);
+                I(e);
                 var t = X.get(e);
                 if (t) return t;
                 var n = G([H], e);
@@ -5356,9 +5359,9 @@
             }), n.d(t, !1, function() {
                 return D
             }), n.d(t, !1, function() {
-                return A
-            }), n.d(t, !1, function() {
                 return I
+            }), n.d(t, !1, function() {
+                return A
             }), n.d(t, !1, function() {
                 return R
             }), n.d(t, !1, function() {
@@ -7757,9 +7760,9 @@
             }), n.d(t, "g", function() {
                 return D
             }), n.d(t, "k", function() {
-                return A
-            }), n.d(t, "j", function() {
                 return I
+            }), n.d(t, "j", function() {
+                return A
             }), n.d(t, "l", function() {
                 return R
             });
@@ -7878,11 +7881,11 @@
                 v() && l.p.tracking.track(c.SpadeEventType.SearchResultClick, s.__assign({}, b(e, t, n), E(a)))
             }
 
-            function A(e, t, n, a) {
+            function I(e, t, n, a) {
                 v() && l.p.tracking.track(c.SpadeEventType.SearchUIImpression, s.__assign({}, b(e, t, n), g(a)))
             }
 
-            function I(e, t, n, a) {
+            function A(e, t, n, a) {
                 v() && l.p.tracking.track(c.SpadeEventType.SearchUIClick, s.__assign({}, b(e, t, n), g(a)))
             }
 
@@ -8763,8 +8766,8 @@
                 O = n("ZDlU"),
                 C = n("5g1g"),
                 D = n("yR8l"),
-                A = n("geRD"),
-                I = n("DMoW"),
+                I = n("geRD"),
+                A = n("DMoW"),
                 R = n("D493"),
                 k = n("GnwI"),
                 B = n("jCK8"),
@@ -9845,7 +9848,7 @@
                         }, u.createElement(d.W, null, Object(m.d)("Get chosen first. Stand out next to other bounties by offering a higher rate than your competitors", "DevBountyBoardCampaignPage"))))))
                     }, t
                 }(u.Component),
-                Ae = function(e) {
+                Ie = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t.onClick = function() {
@@ -9884,7 +9887,7 @@
                         }))
                     }, t
                 }(u.Component),
-                Ie = n("dfkd"),
+                Ae = n("dfkd"),
                 Re = n("TDse"),
                 ke = n("17YR"),
                 Be = n("z0Ka"),
@@ -10080,7 +10083,7 @@
                             var n, a = t.state,
                                 r = a.aggregationInterval,
                                 i = a.statId,
-                                o = new Ie.a(r, e[i].interval),
+                                o = new Ae.a(r, e[i].interval),
                                 s = e.startTime && e.startTime > new Date,
                                 l = ((n = {})[F.d.BountiesCompleted] = e[F.d.BountiesCompleted], n[F.d.MinutesWatched] = e[F.d.MinutesWatched], n[F.d.Viewers] = e[F.d.Viewers], n[F.d.Viewers2m] = e[F.d.Viewers2m], n);
                             return u.createElement(d.Cb, {
@@ -10242,7 +10245,7 @@
                         }, Object(m.d)("Cancel Campaign", "DevBountyBoardCampaignSummary")))))
                     }, t.prototype.isCancellable = function() {
                         var e = this.getCampaign();
-                        return e && e.status && (e.status === I.d.LIVE || e.status === I.d.PENDING || e.status === I.d.APPROVED)
+                        return e && e.status && (e.status === A.d.LIVE || e.status === A.d.PENDING || e.status === A.d.APPROVED)
                     }, t
                 }(u.Component)),
                 Xe = Object(N.compose)(Object(D.a)(We, {
@@ -10363,7 +10366,7 @@
                                 _ = e.disabled,
                                 C = e.errors,
                                 D = a.props.match.params.campaignId,
-                                A = (N || []).map(function(e) {
+                                I = (N || []).map(function(e) {
                                     return e.name
                                 });
                             return u.createElement(d.Xa, {
@@ -10395,7 +10398,7 @@
                             }, u.createElement(d.Ja, {
                                 fullHeight: !0,
                                 gutterSize: d.Ka.Large
-                            }, D && n !== I.d.REJECTED && u.createElement(u.Fragment, null, u.createElement(d.P, {
+                            }, D && n !== A.d.REJECTED && u.createElement(u.Fragment, null, u.createElement(d.P, {
                                 cols: {
                                     default: 12,
                                     sm: 8,
@@ -10471,7 +10474,7 @@
                                 margin: {
                                     top: 2
                                 }
-                            }, u.createElement(Ae, {
+                            }, u.createElement(Ie, {
                                 endDate: l,
                                 value: S,
                                 errors: C.startDate,
@@ -10743,7 +10746,7 @@
                                 bold: !0,
                                 type: d.Sb.H4
                             }, Object(m.d)("Available Broadcaster Pool", "DevBountyBoardCampaignPagePresentation"))), u.createElement(ve, {
-                                gameNames: A,
+                                gameNames: I,
                                 targetAllBroadcasters: E,
                                 targetVarietyBroadcasters: T
                             })))), u.createElement(d.P, {
@@ -10764,7 +10767,7 @@
                             }, a.renderActions(n)))))))
                         }, a.renderActions = function(e) {
                             var t, n = !!a.props.match.params.campaignId,
-                                r = e && (e === I.d.LIVE || e === I.d.PENDING || e === I.d.APPROVED);
+                                r = e && (e === A.d.LIVE || e === A.d.PENDING || e === A.d.APPROVED);
                             return t = n && r ? u.createElement(d.z, {
                                 "data-test-selector": Ke.CancelCampaignButton,
                                 onClick: a.props.showCancelCampaignModal,
@@ -10814,7 +10817,7 @@
                                 campaign: {
                                     id: null,
                                     title: "Stream " + (s ? s.displayName : "{GAME}") + " for 1 hour",
-                                    type: I.e.PAY_TO_STREAM,
+                                    type: A.e.PAY_TO_STREAM,
                                     sponsor: a.getCompanyName(),
                                     details: r,
                                     streamLengthMinutes: 60,
@@ -10825,7 +10828,7 @@
                                     startAt: o ? Object(p.f)(o).toJSON() : null,
                                     endAt: n ? Object(p.f)(n).toJSON() : null
                                 },
-                                status: I.f.AVAILABLE,
+                                status: A.f.AVAILABLE,
                                 endAt: n ? Object(p.f)(n).toJSON() : null
                             })
                         }, a.noop = function() {}, a.onFieldChanged = function(e) {
@@ -10877,7 +10880,7 @@
                                         case 1:
                                             return S.trys.push([1, 3, 4, 5]), this.setState({
                                                 isSubmitting: !0
-                                            }), [4, this.props.createBountyCampaign(Object(A.a)(b))];
+                                            }), [4, this.props.createBountyCampaign(Object(I.a)(b))];
                                         case 2:
                                             return (v = S.sent()).data && v.data.createBountyCampaign && v.data.createBountyCampaign.campaign && v.data.createBountyCampaign.campaign.id && (this.setState({
                                                 changeset: r.__assign({}, this.state.changeset, {

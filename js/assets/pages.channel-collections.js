@@ -654,7 +654,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = {
+                        return r.createElement(c.a, {
                             context: this.props.context,
                             onClick: this.onClickHandler,
                             title: this.props.video.title,
@@ -665,7 +665,7 @@
                             },
                             thumbnailImageProps: {
                                 src: this.props.video.previewThumbnailURL,
-                                alt: this.props.video.title || ""
+                                alt: this.props.video.title
                             },
                             channelDisplayName: this.props.video.owner && this.props.video.owner.displayName || "",
                             channelLogin: this.props.video.owner && this.props.video.owner.login || "",
@@ -675,7 +675,7 @@
                             },
                             channelImageProps: {
                                 src: this.props.video.owner && this.props.video.owner.profileImageURL || "",
-                                alt: this.props.video.owner && this.props.video.owner.displayName || ""
+                                alt: this.props.video.owner ? this.props.video.owner.displayName : ""
                             },
                             gameTitle: this.props.video.game && this.props.video.game.name || "",
                             gameTitleLinkTo: {
@@ -689,8 +689,8 @@
                             videoGameChanges: this.gameChangesWithLinks(),
                             multipleVideoGameMarkersType: this.props.multipleVideoGameMarkersType,
                             datePublished: this.props.video.publishedAt,
-                            viewCount: this.props.video.viewCount || 0,
-                            durationInSeconds: !this.props.hideDuration && this.props.video.lengthSeconds ? this.props.video.lengthSeconds : void 0,
+                            viewCount: this.props.video.viewCount,
+                            durationInSeconds: this.props.hideDuration ? void 0 : this.props.video.lengthSeconds,
                             animatedImageProps: this.props.video.animatedPreviewURL ? {
                                 src: this.props.video.animatedPreviewURL,
                                 alt: ""
@@ -707,15 +707,14 @@
                                 tags: this.props.video.contentTags,
                                 linkPath: f.a.PopularTag
                             } : void 0
-                        };
-                        return r.createElement(c.a, i.__assign({}, e))
+                        })
                     }, t.prototype.generateSearchString = function() {
                         var e = {};
                         this.props.collectionID && (e.collection = this.props.collectionID);
                         var t = s.stringify(e);
                         return t ? "?" + t : ""
                     }, t.prototype.getVideoPreviousWatchPercentage = function() {
-                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / (this.props.video.lengthSeconds || 1 / 0) * 100 : null
+                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / this.props.video.lengthSeconds * 100 : null
                     }, t.prototype.getRestrictionProps = function() {
                         var e = this.props.video.restriction && this.props.video.restriction.productName ? "/products/" + this.props.video.restriction.productName : "";
                         return {
@@ -767,7 +766,7 @@
                         videoGameChanges: this.state.videoGameChanges
                     }, this.props))
                 }, t.prototype.componentWillMount = function() {
-                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== o.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds || 0)
+                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== o.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds)
                 }, t
             }(r.Component)
         },
@@ -1338,7 +1337,7 @@
             function(e) {
                 e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
             }(B || (B = {}));
-            var V = function(e) {
+            var U = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getTrackingContext = function(e) {
@@ -1409,9 +1408,9 @@
                             bottomLeft: r.createElement(w, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? r.createElement(w, {
+                            bottomRight: r.createElement(w, {
                                 value: Object(o.c)(new Date(this.props.datePublished), "medium")
-                            }) : null,
+                            }),
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
                         }) : R(this.props) ? r.createElement(S, {
@@ -1424,9 +1423,9 @@
                             bottomLeft: r.createElement(w, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? r.createElement(w, {
+                            bottomRight: r.createElement(w, {
                                 value: Object(o.c)(new Date(this.props.datePublished), "medium")
-                            }) : null
+                            })
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
                         return A(this.props) && this.props.listPosition ? Object(o.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
@@ -1523,17 +1522,17 @@
                         }
                     }, t
                 }(r.Component),
-                U = Object(_.b)("PreviewCard", {
+                V = Object(_.b)("PreviewCard", {
                     autoReportInteractive: !0
-                })(V);
+                })(U);
             n.d(t, !1, function() {
                 return F
             }), n.d(t, "b", function() {
                 return B
             }), n.d(t, !1, function() {
-                return V
-            }), n.d(t, "a", function() {
                 return U
+            }), n.d(t, "a", function() {
+                return V
             })
         },
         GxR5: function(e, t, n) {
@@ -2497,7 +2496,7 @@
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(i || (i = {}));
             var T = l.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(180)]).then(n.bind(null, "f+qK"))
+                    return Promise.all([n.e(0), n.e(181)]).then(n.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
                 O = function(e) {
                     function t() {
@@ -2732,7 +2731,7 @@
                         return Object(u.d)(l.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(191)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(192)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })
@@ -4900,7 +4899,7 @@
                             if (!t.state.hasTrackedItemSectionLoad) {
                                 for (var e = t.props.videos ? t.props.videos : [], n = [], i = [], r = 0, o = e; r < o.length; r++) {
                                     var s = o[r];
-                                    n.push(s.id), i.push(s.viewCount || 0)
+                                    n.push(s.id), i.push(s.viewCount)
                                 }
                                 l.o.trackItemSectionLoad(a.__assign({
                                     carousel_content: t.props.tracking.content,
@@ -5540,59 +5539,14 @@
                             }
                         }]
                     }
-                }, {
-                    kind: "FragmentDefinition",
-                    name: {
-                        kind: "Name",
-                        value: "VideoEdge"
-                    },
-                    typeCondition: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "VideoEdge"
-                        }
-                    },
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "cursor"
-                            },
-                            arguments: [],
-                            directives: []
-                        }, {
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "node"
-                            },
-                            arguments: [],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "FragmentSpread",
-                                    name: {
-                                        kind: "Name",
-                                        value: "PreviewCardVideo"
-                                    },
-                                    directives: []
-                                }]
-                            }
-                        }]
-                    }
                 }],
                 loc: {
                     start: 0,
-                    end: 526
+                    end: 454
                 }
             };
             i.loc.source = {
-                body: '#import "twilight/features/tags/models/tag-fragment.gql"\nfragment PreviewCardVideo on Video {\nanimatedPreviewURL\ngame {\nboxArtURL(width: 40 height: 56)\nid\ndisplayName\nname\n}\nid\nlengthSeconds\nowner {\ndisplayName\nid\nlogin\nprofileImageURL(width: 50)\n}\npreviewThumbnailURL(width: 320 height: 180)\npublishedAt\nself {\nisRestricted\nviewingHistory {\nposition\nupdatedAt\n}\n}\ntitle\nviewCount\nrestriction {\nproductName\nproductTitle\n}\ncontentTags {\n...tagFragment\n}\n}\nfragment VideoEdge on VideoEdge {\ncursor\nnode {\n...PreviewCardVideo\n}\n}',
+                body: '#import "twilight/features/tags/models/tag-fragment.gql"\nfragment PreviewCardVideo on Video {\nanimatedPreviewURL\ngame {\nboxArtURL(width: 40 height: 56)\nid\ndisplayName\nname\n}\nid\nlengthSeconds\nowner {\ndisplayName\nid\nlogin\nprofileImageURL(width: 50)\n}\npreviewThumbnailURL(width: 320 height: 180)\npublishedAt\nself {\nisRestricted\nviewingHistory {\nposition\nupdatedAt\n}\n}\ntitle\nviewCount\nrestriction {\nproductName\nproductTitle\n}\ncontentTags {\n...tagFragment\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -5668,7 +5622,7 @@
                                     }
                                 }
                                 if (!r) return null;
-                                if (r.viewingPosition / (r.value.lengthSeconds || 1 / 0) > p) {
+                                if (r.viewingPosition / r.value.lengthSeconds > p) {
                                     var m = r.index + 1;
                                     if (m < n) {
                                         var h = t[m];
@@ -6137,12 +6091,12 @@
             }), n.d(t, "c", function() {
                 return Q
             });
-            var V, U = l.a.wrap(function() {
+            var U, V = l.a.wrap(function() {
                 return n.e(134).then(n.bind(null, "g9Rq"))
             }, "EditProfileOverlay");
             ! function(e) {
                 e.SocialButtonsDefault = "channel-header__social-buttons-default", e.SocialButtonsVariantB = "channel-header__social-buttons-variant-b"
-            }(V || (V = {}));
+            }(U || (U = {}));
             var W, X = "channel-header__edit-profile-overlay",
                 M = "channel-header__verified-badge",
                 G = "channel-header__live-indicator",
@@ -6194,7 +6148,7 @@
                                 display: E.X.InlineFlex,
                                 alignItems: E.f.Center,
                                 justifyContent: E.Wa.Center
-                            }, o.createElement(U, {
+                            }, o.createElement(V, {
                                 userID: n.props.data.user.id,
                                 login: n.props.data.user.login,
                                 displayName: n.props.data.user.displayName || n.props.data.user.login
@@ -6540,7 +6494,7 @@
                     }, t.prototype.renderSocialButtons = function() {
                         var e = this.getFollowingState(),
                             t = null,
-                            n = V.SocialButtonsDefault;
+                            n = U.SocialButtonsDefault;
                         if (Object(P.a)()) {
                             var i = r("channel-header__follow-btn", {
                                     "channel-header__follow-btn--following": !!this.state.showLiveNotificationsButton
@@ -6548,7 +6502,7 @@
                                 a = r("channel-header__notification-toggle-container", {
                                     "channel-header__notification-toggle-container--visible": !!this.state.showLiveNotificationsButton
                                 });
-                            n = V.SocialButtonsVariantB, t = o.createElement(o.Fragment, null, o.createElement(E.Xa, {
+                            n = U.SocialButtonsVariantB, t = o.createElement(o.Fragment, null, o.createElement(E.Xa, {
                                 className: "channel-header__follow-btn-container",
                                 display: E.X.Flex,
                                 overflow: E.cb.Hidden,
@@ -6596,7 +6550,7 @@
                                 unsubscribedButtonType: e ? E.F.Default : E.F.Hollow,
                                 forceIcon: !0
                             })))
-                        } else(this.props.channelIsHosting || Object(P.c)()) && (n = V.SocialButtonsDefault, t = o.createElement(o.Fragment, null, o.createElement(E.Xa, {
+                        } else(this.props.channelIsHosting || Object(P.c)()) && (n = U.SocialButtonsDefault, t = o.createElement(o.Fragment, null, o.createElement(E.Xa, {
                             display: E.X.Flex,
                             alignItems: E.f.Stretch,
                             margin: {

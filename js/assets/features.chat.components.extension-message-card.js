@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [183], {
+    [184], {
         "/HY+": function(e, t, n) {
             "use strict";
             var r = n("dAHa"),
@@ -207,65 +207,69 @@
         },
         "22qk": function(e, t, n) {
             "use strict";
+            n.d(t, "d", function() {
+                return a
+            }), n.d(t, "b", function() {
+                return i
+            }), n.d(t, "c", function() {
+                return s
+            }), n.d(t, "e", function() {
+                return l
+            }), n.d(t, "h", function() {
+                return c
+            }), n.d(t, "f", function() {
+                return d
+            }), n.d(t, "a", function() {
+                return u
+            }), n.d(t, "g", function() {
+                return p
+            });
+            var r = n("/7QA"),
+                o = n("D7An");
 
-            function r(e, t) {
-                return "/ext/" + u(e, t)
+            function a(e, t) {
+                return "/ext/" + m(e, t)
             }
 
-            function o(e, t, n) {
-                return {
-                    pathname: "" + i(e),
-                    search: "?configure=true&extensionID=" + u(t, n)
+            function i(e, t, n) {
+                return "control" === r.p.experiments.getAssignment(o.b.ExtensionConfigureModal) ? {
+                    pathname: s(e) + "/" + m(t, n) + "/configure"
+                } : {
+                    pathname: "" + l(e),
+                    search: "?configure=true&extensionID=" + m(t, n)
                 }
             }
 
-            function a(e) {
+            function s(e) {
                 return "/" + e + "/dashboard/extensions"
             }
 
-            function i(e) {
+            function l(e) {
                 return "/" + e + "/dashboard/extensions/manage"
             }
 
-            function s(e) {
+            function c(e) {
                 return "/" + e + "/dashboard/extensions/whitelisted"
             }
 
-            function l(e, t) {
+            function d(e, t) {
                 return {
                     pathname: "/" + e + "/dashboard/extensions/permissions",
                     state: t
                 }
             }
 
-            function c(e) {
+            function u(e) {
                 return "/ext/categories/" + e
             }
 
-            function d(e) {
+            function p(e) {
                 return "/ext/search?q=" + encodeURIComponent(e)
             }
 
-            function u(e, t) {
+            function m(e, t) {
                 return t ? e + "-" + t : e
             }
-            n.d(t, "d", function() {
-                return r
-            }), n.d(t, "b", function() {
-                return o
-            }), n.d(t, "c", function() {
-                return a
-            }), n.d(t, "e", function() {
-                return i
-            }), n.d(t, "h", function() {
-                return s
-            }), n.d(t, "f", function() {
-                return l
-            }), n.d(t, "a", function() {
-                return c
-            }), n.d(t, "g", function() {
-                return d
-            })
         },
         "4qQ0": function(e, t, n) {
             "use strict";

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [180], {
+    [181], {
         "+naV": function(e, t, n) {
             e.exports = n.p + "assets/10-gifts-2x-2f03f55cc8cde11ce21f.png"
         },
@@ -4106,7 +4106,10 @@
                     return function(c) {
                         function u() {
                             var e = null !== c && c.apply(this, arguments) || this;
-                            return e.hadImpression = !1, e.logger = o.k.withCategory("with-impression-listener"), e.setRef = function(t) {
+                            return e.state = {
+                                hadImpression: !1,
+                                didScroll: !1
+                            }, e.logger = o.k.withCategory("with-impression-listener"), e.setRef = function(t) {
                                 return e.element = t
                             }, e.registerImpressionCallback = function(t) {
                                 e.reportImpression = t
@@ -4121,6 +4124,8 @@
                         }, u.prototype.render = function() {
                             var e = {
                                 impressionListener: {
+                                    hadImpression: this.state.hadImpression,
+                                    didScroll: this.state.didScroll,
                                     registerImpressionCallback: this.registerImpressionCallback
                                 }
                             };
@@ -4131,7 +4136,10 @@
                             return i.__awaiter(this, void 0, void 0, function() {
                                 var t, n;
                                 return i.__generator(this, function(i) {
-                                    return this.hadImpression || (t = this.isVisible(e)) && (n = this.isScrolled(), this.hadImpression = t, this.reportImpression && this.reportImpression(n)), [2]
+                                    return this.state.hadImpression || (t = this.isVisible(e)) && (n = this.isScrolled(), this.setState({
+                                        hadImpression: t,
+                                        didScroll: n
+                                    }), this.reportImpression && this.reportImpression(n)), [2]
                                 })
                             })
                         }, u.prototype.isVisible = function(e) {
@@ -4489,7 +4497,7 @@
                         }).then(function(t) {
                             e.countryCode = t.data.requestInfo.countryCode
                         }).catch(function(t) {
-                            e.logger.warn(t, "Failed to get country code")
+                            e.logger.error(t, "Failed to get country code")
                         })
                     }, e.prototype.getSearchResults = function(e) {
                         var t = this,
@@ -4506,7 +4514,7 @@
                                 results: JSON.parse(e.data.search.result)
                             }
                         }).catch(function(e) {
-                            return t.logger.warn(e, "Failed to get search results"), e
+                            return t.logger.error(e, "Failed to get search results"), e
                         })
                     }, e.prototype.getTopResult = function(e, t) {
                         return {
@@ -5153,7 +5161,7 @@
                             id: a.id,
                             emotes: l(d(a.emotes), a.id)
                         };
-                        a.owner && (o.owner = a.owner), c.has(parseInt(a.id, 10)) ? t.push(o) : n.push(o)
+                        c.has(parseInt(a.id, 10)) ? t.push(o) : n.push(o)
                     }
                 }
                 return n.concat(t)

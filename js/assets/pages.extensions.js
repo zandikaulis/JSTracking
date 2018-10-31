@@ -170,9 +170,6 @@
                                 fullHeight: !0
                             }, s.createElement(g.Xa, {
                                 className: "extension-card__thumbnail__summary",
-                                display: g.X.Flex,
-                                flexDirection: g.Aa.Column,
-                                justifyContent: g.Wa.Center,
                                 overflow: g.cb.Hidden
                             }, s.createElement(g.W, {
                                 type: g.Sb.P
@@ -491,65 +488,69 @@
         },
         "22qk": function(e, n, t) {
             "use strict";
+            t.d(n, "d", function() {
+                return r
+            }), t.d(n, "b", function() {
+                return s
+            }), t.d(n, "c", function() {
+                return o
+            }), t.d(n, "e", function() {
+                return l
+            }), t.d(n, "h", function() {
+                return d
+            }), t.d(n, "f", function() {
+                return c
+            }), t.d(n, "a", function() {
+                return u
+            }), t.d(n, "g", function() {
+                return m
+            });
+            var i = t("/7QA"),
+                a = t("D7An");
 
-            function i(e, n) {
-                return "/ext/" + u(e, n)
+            function r(e, n) {
+                return "/ext/" + p(e, n)
             }
 
-            function a(e, n, t) {
-                return {
-                    pathname: "" + s(e),
-                    search: "?configure=true&extensionID=" + u(n, t)
+            function s(e, n, t) {
+                return "control" === i.p.experiments.getAssignment(a.b.ExtensionConfigureModal) ? {
+                    pathname: o(e) + "/" + p(n, t) + "/configure"
+                } : {
+                    pathname: "" + l(e),
+                    search: "?configure=true&extensionID=" + p(n, t)
                 }
             }
 
-            function r(e) {
+            function o(e) {
                 return "/" + e + "/dashboard/extensions"
             }
 
-            function s(e) {
+            function l(e) {
                 return "/" + e + "/dashboard/extensions/manage"
             }
 
-            function o(e) {
+            function d(e) {
                 return "/" + e + "/dashboard/extensions/whitelisted"
             }
 
-            function l(e, n) {
+            function c(e, n) {
                 return {
                     pathname: "/" + e + "/dashboard/extensions/permissions",
                     state: n
                 }
             }
 
-            function d(e) {
+            function u(e) {
                 return "/ext/categories/" + e
             }
 
-            function c(e) {
+            function m(e) {
                 return "/ext/search?q=" + encodeURIComponent(e)
             }
 
-            function u(e, n) {
+            function p(e, n) {
                 return n ? e + "-" + n : e
             }
-            t.d(n, "d", function() {
-                return i
-            }), t.d(n, "b", function() {
-                return a
-            }), t.d(n, "c", function() {
-                return r
-            }), t.d(n, "e", function() {
-                return s
-            }), t.d(n, "h", function() {
-                return o
-            }), t.d(n, "f", function() {
-                return l
-            }), t.d(n, "a", function() {
-                return d
-            }), t.d(n, "g", function() {
-                return c
-            })
         },
         "5IFo": function(e, n, t) {
             "use strict";

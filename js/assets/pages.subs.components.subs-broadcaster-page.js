@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [171], {
+    [172], {
         "+Mtq": function(e, t, n) {},
         "0WFu": function(e, t, n) {
             "use strict";
@@ -345,7 +345,8 @@
                             margin: 1,
                             className: "subs-plan-esports__base-emotes"
                         }, o.createElement(v.a, {
-                            emotes: e
+                            emotes: e,
+                            locked: !1
                         }))
                     }, t = s.__decorate([Object(b.b)("SubsPlanEsports")], t)
                 }(o.Component)),
@@ -600,7 +601,8 @@
                         return o.createElement(h.Xa, {
                             className: "subs-broadcaster-tabbed-tiers__emotes"
                         }, o.createElement(v.a, {
-                            emotes: e
+                            emotes: e,
+                            locked: !1
                         }))
                     }, t
                 }(o.Component),
@@ -753,7 +755,8 @@
                             margin: 1,
                             className: "subs-plan-tiers__base-emotes"
                         }, o.createElement(v.a, {
-                            emotes: e
+                            emotes: e,
+                            locked: !1
                         }))
                     }, t.prototype.bonusEmotesMessage = function(e) {
                         var t = 0;
@@ -1880,7 +1883,7 @@
                             id: s.id,
                             emotes: u(d(s.emotes), s.id)
                         };
-                        s.owner && (o.owner = s.owner), c.has(parseInt(s.id, 10)) ? t.push(o) : n.push(o)
+                        c.has(parseInt(s.id, 10)) ? t.push(o) : n.push(o)
                     }
                 }
                 return n.concat(t)

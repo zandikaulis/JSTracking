@@ -781,7 +781,7 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        var e = {
+                        return r.createElement(c.a, {
                             context: this.props.context,
                             onClick: this.onClickHandler,
                             title: this.props.video.title,
@@ -792,7 +792,7 @@
                             },
                             thumbnailImageProps: {
                                 src: this.props.video.previewThumbnailURL,
-                                alt: this.props.video.title || ""
+                                alt: this.props.video.title
                             },
                             channelDisplayName: this.props.video.owner && this.props.video.owner.displayName || "",
                             channelLogin: this.props.video.owner && this.props.video.owner.login || "",
@@ -802,7 +802,7 @@
                             },
                             channelImageProps: {
                                 src: this.props.video.owner && this.props.video.owner.profileImageURL || "",
-                                alt: this.props.video.owner && this.props.video.owner.displayName || ""
+                                alt: this.props.video.owner ? this.props.video.owner.displayName : ""
                             },
                             gameTitle: this.props.video.game && this.props.video.game.name || "",
                             gameTitleLinkTo: {
@@ -816,8 +816,8 @@
                             videoGameChanges: this.gameChangesWithLinks(),
                             multipleVideoGameMarkersType: this.props.multipleVideoGameMarkersType,
                             datePublished: this.props.video.publishedAt,
-                            viewCount: this.props.video.viewCount || 0,
-                            durationInSeconds: !this.props.hideDuration && this.props.video.lengthSeconds ? this.props.video.lengthSeconds : void 0,
+                            viewCount: this.props.video.viewCount,
+                            durationInSeconds: this.props.hideDuration ? void 0 : this.props.video.lengthSeconds,
                             animatedImageProps: this.props.video.animatedPreviewURL ? {
                                 src: this.props.video.animatedPreviewURL,
                                 alt: ""
@@ -834,15 +834,14 @@
                                 tags: this.props.video.contentTags,
                                 linkPath: g.a.PopularTag
                             } : void 0
-                        };
-                        return r.createElement(c.a, n.__assign({}, e))
+                        })
                     }, t.prototype.generateSearchString = function() {
                         var e = {};
                         this.props.collectionID && (e.collection = this.props.collectionID);
                         var t = l.stringify(e);
                         return t ? "?" + t : ""
                     }, t.prototype.getVideoPreviousWatchPercentage = function() {
-                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / (this.props.video.lengthSeconds || 1 / 0) * 100 : null
+                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / this.props.video.lengthSeconds * 100 : null
                     }, t.prototype.getRestrictionProps = function() {
                         var e = this.props.video.restriction && this.props.video.restriction.productName ? "/products/" + this.props.video.restriction.productName : "";
                         return {
@@ -894,7 +893,7 @@
                         videoGameChanges: this.state.videoGameChanges
                     }, this.props))
                 }, t.prototype.componentWillMount = function() {
-                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== a.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds || 0)
+                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== a.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds)
                 }, t
             }(r.Component)
         },
@@ -1594,8 +1593,8 @@
                         }
                     }, t, r.createElement(l.W, null, e.value))
                 }),
-                N = i("GnwI"),
-                x = (i("B3R5"), function(e) {
+                x = i("GnwI"),
+                N = (i("B3R5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1659,7 +1658,7 @@
                         })))
                     }, t
                 }(r.Component)),
-                T = Object(N.b)("PreviewCardThumbnail")(x),
+                T = Object(x.b)("PreviewCardThumbnail")(N),
                 I = (i("80G/"), function(e) {
                     var t = null;
                     return e.subtitles && e.subtitles.length > 0 && (t = e.subtitles.map(function(e, t) {
@@ -1855,9 +1854,9 @@
                             bottomLeft: r.createElement(S, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? r.createElement(S, {
+                            bottomRight: r.createElement(S, {
                                 value: Object(a.c)(new Date(this.props.datePublished), "medium")
-                            }) : null,
+                            }),
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
                         }) : B(this.props) ? r.createElement(w, {
@@ -1870,9 +1869,9 @@
                             bottomLeft: r.createElement(S, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? r.createElement(S, {
+                            bottomRight: r.createElement(S, {
                                 value: Object(a.c)(new Date(this.props.datePublished), "medium")
-                            }) : null
+                            })
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
                         return G(this.props) && this.props.listPosition ? Object(a.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
@@ -1969,7 +1968,7 @@
                         }
                     }, t
                 }(r.Component),
-                j = Object(N.b)("PreviewCard", {
+                j = Object(x.b)("PreviewCard", {
                     autoReportInteractive: !0
                 })(R);
             i.d(t, !1, function() {
@@ -2337,17 +2336,17 @@
                         })), o.createElement(o.Fragment, null, n, r)
                     }, t
                 }(o.Component),
-                N = Object(m.b)("LatestCollectionsShelf", {
+                x = Object(m.b)("LatestCollectionsShelf", {
                     autoReportInteractive: !0
                 })(Object(C.a)(S)),
-                x = i("YDp0"),
+                N = i("YDp0"),
                 T = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         if (this.props.data && this.props.data.error) return null;
-                        if (!this.props.data || this.props.data.loading) return o.createElement(N, {
+                        if (!this.props.data || this.props.data.loading) return o.createElement(x, {
                             channelLogin: this.props.channelLogin,
                             collections: null,
                             multipleVideoGameMarkersType: this.props.multipleVideoGameMarkersType,
@@ -2367,7 +2366,7 @@
                         }
                         var n = this.props.data.currentUser,
                             r = !(!n || n.id !== e.id) || !(!e.self || !e.self.isEditor);
-                        return o.createElement(N, {
+                        return o.createElement(x, {
                             channelLogin: this.props.channelLogin,
                             collections: t,
                             multipleVideoGameMarkersType: this.props.multipleVideoGameMarkersType,
@@ -2383,7 +2382,7 @@
                         }
                     }, t
                 }(o.Component),
-                I = Object(f.compose)(Object(k.a)(x, {
+                I = Object(f.compose)(Object(k.a)(N, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2399,7 +2398,7 @@
                                 var t = Math.max(e.data.user.collections.edges.length - 1, 0),
                                     i = e.data.user.collections.edges[t];
                                 return i ? e.data.fetchMore({
-                                    query: x,
+                                    query: N,
                                     variables: a.__assign({}, e.data.variables, {
                                         cursor: i.cursor
                                     }),
@@ -2504,10 +2503,10 @@
                         if (t && i)
                             for (var n = 0, r = t; n < r.length; n++) {
                                 var a = r[n];
-                                a && a.node && i.push(a.node)
+                                a.node && i.push(a.node)
                             }
                         var l, s = e.maxAgeDays;
-                        if (i && i.length > 0 && s && !(Object(v.differenceInDays)(new Date, new Date(i[0].publishedAt || 0)) <= s)) return null;
+                        if (i && i.length > 0 && s && !(Object(v.differenceInDays)(new Date, new Date(i[0].publishedAt)) <= s)) return null;
                         if (e.separateGames) return this.renderGameShelves(i);
                         if (e.quickHits) return this.renderQuickHitsShelf(e.quickHits, i);
                         var c = e.videoTypes;
@@ -2536,7 +2535,7 @@
                             var r = [],
                                 a = [];
                             t.forEach(function(t) {
-                                (t.lengthSeconds || 0) <= e.maxLengthSeconds ? r.push(t) : a.push(t)
+                                t.lengthSeconds <= e.maxLengthSeconds ? r.push(t) : a.push(t)
                             }), i = r, n = a
                         }
                         return o.createElement(o.Fragment, null, o.createElement(A, {
@@ -3328,7 +3327,7 @@
                             if (!t.state.hasTrackedItemSectionLoad) {
                                 for (var e = t.props.videos ? t.props.videos : [], i = [], n = [], r = 0, a = e; r < a.length; r++) {
                                     var l = a[r];
-                                    i.push(l.id), n.push(l.viewCount || 0)
+                                    i.push(l.id), n.push(l.viewCount)
                                 }
                                 s.o.trackItemSectionLoad(o.__assign({
                                     carousel_content: t.props.tracking.content,
@@ -3508,17 +3507,17 @@
                         }, this.getVideoCards())
                     }, t
                 }(l.Component),
-                N = Object(c.b)("VideoCarousel", {
+                x = Object(c.b)("VideoCarousel", {
                     autoReportInteractive: !0
                 })(S);
             i.d(t, "a", function() {
-                return x
+                return N
             });
-            var x = Object(a.connect)(function(e) {
+            var N = Object(a.connect)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
-            })(N)
+            })(x)
         },
         gAd6: function(e, t) {
             var i = {
@@ -3924,59 +3923,14 @@
                             }
                         }]
                     }
-                }, {
-                    kind: "FragmentDefinition",
-                    name: {
-                        kind: "Name",
-                        value: "VideoEdge"
-                    },
-                    typeCondition: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "VideoEdge"
-                        }
-                    },
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "cursor"
-                            },
-                            arguments: [],
-                            directives: []
-                        }, {
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "node"
-                            },
-                            arguments: [],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "FragmentSpread",
-                                    name: {
-                                        kind: "Name",
-                                        value: "PreviewCardVideo"
-                                    },
-                                    directives: []
-                                }]
-                            }
-                        }]
-                    }
                 }],
                 loc: {
                     start: 0,
-                    end: 526
+                    end: 454
                 }
             };
             n.loc.source = {
-                body: '#import "twilight/features/tags/models/tag-fragment.gql"\nfragment PreviewCardVideo on Video {\nanimatedPreviewURL\ngame {\nboxArtURL(width: 40 height: 56)\nid\ndisplayName\nname\n}\nid\nlengthSeconds\nowner {\ndisplayName\nid\nlogin\nprofileImageURL(width: 50)\n}\npreviewThumbnailURL(width: 320 height: 180)\npublishedAt\nself {\nisRestricted\nviewingHistory {\nposition\nupdatedAt\n}\n}\ntitle\nviewCount\nrestriction {\nproductName\nproductTitle\n}\ncontentTags {\n...tagFragment\n}\n}\nfragment VideoEdge on VideoEdge {\ncursor\nnode {\n...PreviewCardVideo\n}\n}',
+                body: '#import "twilight/features/tags/models/tag-fragment.gql"\nfragment PreviewCardVideo on Video {\nanimatedPreviewURL\ngame {\nboxArtURL(width: 40 height: 56)\nid\ndisplayName\nname\n}\nid\nlengthSeconds\nowner {\ndisplayName\nid\nlogin\nprofileImageURL(width: 50)\n}\npreviewThumbnailURL(width: 320 height: 180)\npublishedAt\nself {\nisRestricted\nviewingHistory {\nposition\nupdatedAt\n}\n}\ntitle\nviewCount\nrestriction {\nproductName\nproductTitle\n}\ncontentTags {\n...tagFragment\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -4052,7 +4006,7 @@
                                     }
                                 }
                                 if (!r) return null;
-                                if (r.viewingPosition / (r.value.lengthSeconds || 1 / 0) > u) {
+                                if (r.viewingPosition / r.value.lengthSeconds > u) {
                                     var m = r.index + 1;
                                     if (m < i) {
                                         var h = t[m];

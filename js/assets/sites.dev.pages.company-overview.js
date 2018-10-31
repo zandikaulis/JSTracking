@@ -149,8 +149,7 @@
                                 }))
                             })), e
                         }, t.onSelect = function(e) {
-                            var r = t.props.clearOnSelect;
-                            t.userSearch && t.userSearch.setValue(r ? "" : e.login), t.props.onUserSelect(e)
+                            t.userSearch && t.userSearch.setValue(e.login), t.props.onUserSelect(e)
                         }, t.setUserSearchRef = function(e) {
                             t.userSearch = e
                         }, t
@@ -180,10 +179,10 @@
                         }, e)))))
                     }, t
                 }(a.Component),
-                S = Object(p.compose)(Object(f.b)("DevUserSearchDropdown", {
+                k = Object(p.compose)(Object(f.b)("DevUserSearchDropdown", {
                     autoReportInteractive: !0
                 }))(_),
-                k = 100,
+                S = 100,
                 C = function(e) {
                     function t(t) {
                         var r = e.call(this, t) || this;
@@ -200,7 +199,7 @@
                                 waiting: !0
                             }), r.inputTimer = setTimeout(function() {
                                 return r.doUserSearch(e)
-                            }, k)) : r.setState({
+                            }, S)) : r.setState({
                                 userResult: [],
                                 waiting: !1,
                                 searchTerm: ""
@@ -271,8 +270,7 @@
                         }), r
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(S, {
-                            clearOnSelect: this.props.clearOnSelect,
+                        return a.createElement(k, {
                             userResults: this.state.userResult,
                             open: this.state.searchOpen,
                             waiting: this.state.waiting,
@@ -289,7 +287,7 @@
                 }
             })(C);
             r.d(t, !1, function() {
-                return k
+                return S
             }), r.d(t, !1, function() {
                 return C
             }), r.d(t, "a", function() {
@@ -614,8 +612,8 @@
                 b = r("mLw1"),
                 y = r("ZDlU"),
                 _ = r("V+GM"),
-                S = r("Svt6"),
-                k = r("NvVO"),
+                k = r("Svt6"),
+                S = r("NvVO"),
                 C = r("2xye"),
                 E = r("1mFg"),
                 w = r("uLRL"),
@@ -629,7 +627,7 @@
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                r = Object(N.e)(S.a + "/v5/rbac/validate", {
+                                r = Object(N.e)(k.a + "/v5/rbac/validate", {
                                     domain_id: F.c,
                                     permission_name: t,
                                     resource: e
@@ -843,7 +841,7 @@
                         }
                     }
                 }))(j),
-                P = S.a + "/v5/rbac/users",
+                P = k.a + "/v5/rbac/users",
                 q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -863,7 +861,7 @@
                                 return n.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return n.trys.push([0, 5, , 6]), [4, Object(E.a)(S.a + "/v5/rbac/companies/" + e.id + "/members")];
+                                            return n.trys.push([0, 5, , 6]), [4, Object(E.a)(k.a + "/v5/rbac/companies/" + e.id + "/members")];
                                         case 1:
                                             return 200 !== (t = n.sent()).status ? [3, 3] : [4, t.json()];
                                         case 2:
@@ -936,7 +934,7 @@
                                             if ("administrator" === r && this.state.members.administrator.length < 2) return [2];
                                             n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 5, , 6]), "administrator" === r && (r = "admin"), t = S.a + "/v5/rbac/companies/" + this.props.company.id + "/members/" + e + "/roles/" + this.props.company.identifier + "::" + r, [4, Object(E.a)(t, {
+                                            return n.trys.push([1, 5, , 6]), "administrator" === r && (r = "admin"), t = k.a + "/v5/rbac/companies/" + this.props.company.id + "/members/" + e + "/roles/" + this.props.company.identifier + "::" + r, [4, Object(E.a)(t, {
                                                 method: "DELETE"
                                             })];
                                         case 2:
@@ -977,7 +975,7 @@
                                                 body: JSON.stringify(t)
                                             })];
                                         case 2:
-                                            return n.sent(), "administrator" === r && (r = "admin"), l = S.a + "/v5/rbac/companies/" + this.props.company.id + "/members/" + e + "/roles/" + this.props.company.identifier + "::" + r, [4, Object(E.a)(l, {
+                                            return n.sent(), "administrator" === r && (r = "admin"), l = k.a + "/v5/rbac/companies/" + this.props.company.id + "/members/" + e + "/roles/" + this.props.company.identifier + "::" + r, [4, Object(E.a)(l, {
                                                 method: "POST"
                                             })];
                                         case 3:
@@ -1047,7 +1045,7 @@
                     }, t
                 }(o.Component),
                 L = Object(s.compose)(Object(l.b)("DevCompanyOverview", {
-                    destination: k.a.DevSiteCompanyOverview
+                    destination: S.a.DevSiteCompanyOverview
                 }), Object(_.a)({
                     location: C.PageviewLocation.DevSiteCompanyOverview
                 }), Object(w.a)())(q);
@@ -1331,7 +1329,7 @@
                         }).then(function(t) {
                             e.countryCode = t.data.requestInfo.countryCode
                         }).catch(function(t) {
-                            e.logger.warn(t, "Failed to get country code")
+                            e.logger.error(t, "Failed to get country code")
                         })
                     }, e.prototype.getSearchResults = function(e) {
                         var t = this,
@@ -1348,7 +1346,7 @@
                                 results: JSON.parse(e.data.search.result)
                             }
                         }).catch(function(e) {
-                            return t.logger.warn(e, "Failed to get search results"), e
+                            return t.logger.error(e, "Failed to get search results"), e
                         })
                     }, e.prototype.getTopResult = function(e, t) {
                         return {
