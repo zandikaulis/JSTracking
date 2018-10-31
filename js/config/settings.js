@@ -1645,14 +1645,14 @@ window.__twilightSettings = {
         },
         "ea3c43f2-6518-4d1e-be39-735013d4718e": {
             "name": "twilight_prime_dismiss_offer",
-            "v": 4969,
+            "v": 4970,
             "t": 2,
             "groups": [{
                 "weight": 100,
-                "value": "control"
+                "value": "off"
             }, {
                 "weight": 0,
-                "value": "active"
+                "value": "on"
             }]
         },
         "eafe4659-5bfa-45d8-98f9-8750cbbadb08": {
