@@ -173,13 +173,13 @@ window.__twilightSettings = {
         },
         "0186f46f-a8d8-40b9-963a-168302603fe8": {
             "name": "new_user_survey",
-            "v": 4938,
+            "v": 4968,
             "t": 1,
             "groups": [{
-                "weight": 95,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "active"
             }]
         },
@@ -1640,6 +1640,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 100,
                 "value": "experiment"
+            }]
+        },
+        "ea3c43f2-6518-4d1e-be39-735013d4718e": {
+            "name": "twilight_prime_dismiss_offer",
+            "v": 4969,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
             }]
         },
         "eafe4659-5bfa-45d8-98f9-8750cbbadb08": {
