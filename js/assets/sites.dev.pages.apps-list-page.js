@@ -177,9 +177,9 @@
                                 bottom: .5
                             }
                         }, a.createElement(_.W, {
-                            type: _.Sb.H3
+                            type: _.Tb.H3
                         }, Object(o.d)("Developer Applications", "DevApps"))), a.createElement(_.W, {
-                            type: _.Sb.P
+                            type: _.Tb.P
                         }, Object(o.d)("You have registered these apps to use the Twitch API", "DevApps"))), a.createElement(_.Xa, {
                             margin: {
                                 bottom: 1

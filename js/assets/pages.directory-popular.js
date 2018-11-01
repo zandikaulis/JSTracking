@@ -460,7 +460,7 @@
                         "data-test-selector": "top-bar-title-selector",
                         color: s.O.Overlay,
                         bold: !0,
-                        transform: s.Rb.Uppercase
+                        transform: s.Sb.Uppercase
                     }, e.title)), e.subTitle && i.createElement(s.Xa, {
                         display: s.X.InlineFlex
                     }, i.createElement(s.W, {
@@ -532,7 +532,7 @@
                         "data-test-selector": "bottom-right-selector"
                     }, e.bottomRight))
                 }),
-                S = (n("kF1+"), function(e) {
+                x = (n("kF1+"), function(e) {
                     var t = e.icon && i.createElement(s.Xa, {
                         display: s.X.Flex,
                         margin: {
@@ -561,7 +561,7 @@
                         }
                     }, t, i.createElement(s.W, null, e.value))
                 }),
-                x = n("GnwI"),
+                S = n("GnwI"),
                 T = (n("B3R5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -626,7 +626,7 @@
                         })))
                     }, t
                 }(i.Component)),
-                N = Object(x.b)("PreviewCardThumbnail")(T),
+                N = Object(S.b)("PreviewCardThumbnail")(T),
                 I = (n("80G/"), function(e) {
                     var t = null;
                     return e.subtitles && e.subtitles.length > 0 && (t = e.subtitles.map(function(e, t) {
@@ -648,7 +648,7 @@
                         type: s.V.Inherit,
                         "data-test-selector": "preview-card-titles__primary-link"
                     }), i.createElement(s.W, {
-                        type: s.Sb.H3,
+                        type: s.Tb.H3,
                         fontSize: s.Ca.Size5,
                         lines: 1,
                         bold: !0,
@@ -660,8 +660,8 @@
                 L = n("H1ft"),
                 P = n("ZbA5"),
                 E = n("QVaV"),
-                D = n("hyVY"),
-                O = n("MXoD"),
+                O = n("hyVY"),
+                D = n("MXoD"),
                 _ = n("0LAi");
             ! function(e) {
                 e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
@@ -684,11 +684,11 @@
                         position: s.hb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
-                        zIndex: s.fc.Default,
+                        zIndex: s.gc.Default,
                         padding: {
                             x: 5
                         },
-                        textAlign: s.Ob.Center,
+                        textAlign: s.Pb.Center,
                         fullWidth: !0,
                         fullHeight: !0,
                         alignItems: s.f.Center,
@@ -721,14 +721,14 @@
                         attachBottom: !this.props.attachTop,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: s.fc.Default,
+                        zIndex: s.gc.Default,
                         fontSize: s.Ca.Size6,
                         background: s.r.Overlay,
                         borderRadius: s.x.Medium,
                         color: s.O.Overlay
-                    }, i.createElement(s.Vb, {
-                        direction: this.props.attachTop ? s.Xb.Bottom : s.Xb.Top,
-                        align: s.Wb.Right,
+                    }, i.createElement(s.Wb, {
+                        direction: this.props.attachTop ? s.Yb.Bottom : s.Yb.Top,
+                        align: s.Xb.Right,
                         label: n
                     }, i.createElement(s.qb, {
                         asset: a,
@@ -751,7 +751,7 @@
             function(e) {
                 e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
             }(A || (A = {}));
-            var V = function(e) {
+            var G = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getTrackingContext = function(e) {
@@ -770,7 +770,7 @@
                             borderRadius: s.x.Medium,
                             overflow: s.cb.Hidden
                         }, this.renderVODRestrictionOverlay(), i.createElement(s.U, {
-                            to: Object(O.a)(this.getTrackingContext(g.PageviewContent.VideoThumbnail), this.props.linkTo),
+                            to: Object(D.a)(this.getTrackingContext(g.PageviewContent.VideoThumbnail), this.props.linkTo),
                             onClick: this.props.onThumbnailClick || this.props.onClick,
                             "data-a-target": "preview-card-image-link"
                         }, this.props.thumbnailImageProps && i.createElement(N, {
@@ -803,43 +803,43 @@
                                 hosting: !!this.props.hostedByChannelLogin
                             }),
                             topRight: void 0,
-                            bottomLeft: i.createElement(S, {
+                            bottomLeft: i.createElement(x, {
                                 value: Object(r.d)("{viewerCount, plural, one {# viewer} other {# viewers}}", {
                                     viewerCount: this.props.currentViewerCount
                                 }, "VideoPreviewCard")
                             }),
                             bottomRight: void 0
                         }) : R(this.props) ? i.createElement(w, {
-                            topLeft: void 0 !== this.props.durationInSeconds && i.createElement(S, {
-                                value: Object(D.b)(this.props.durationInSeconds),
+                            topLeft: void 0 !== this.props.durationInSeconds && i.createElement(x, {
+                                value: Object(O.b)(this.props.durationInSeconds),
                                 icon: s.rb.Play,
                                 withBackground: !0
                             }),
-                            topRight: this.props.listPosition && i.createElement(S, {
+                            topRight: this.props.listPosition && i.createElement(x, {
                                 withBackground: !0,
                                 value: this.getListPositionLabel()
                             }),
-                            bottomLeft: i.createElement(S, {
+                            bottomLeft: i.createElement(x, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: i.createElement(S, {
+                            bottomRight: this.props.datePublished ? i.createElement(x, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
-                            }),
+                            }) : null,
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
                         }) : B(this.props) ? i.createElement(w, {
-                            topLeft: i.createElement(S, {
-                                value: Object(D.b)(this.props.durationInSeconds),
+                            topLeft: i.createElement(x, {
+                                value: Object(O.b)(this.props.durationInSeconds),
                                 icon: s.rb.Clip,
                                 withBackground: !0
                             }),
                             topRight: void 0,
-                            bottomLeft: i.createElement(S, {
+                            bottomLeft: i.createElement(x, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: i.createElement(S, {
+                            bottomRight: this.props.datePublished ? i.createElement(x, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
-                            })
+                            }) : null
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
                         return R(this.props) && this.props.listPosition ? Object(r.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
@@ -857,7 +857,7 @@
                             }
                         }, i.createElement(f, {
                             imageProps: this.props.gameBoxArtImageProps,
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
+                            linkTo: Object(D.a)(this.getTrackingContext(g.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             aspect: s.p.BoxArt,
                             "data-test-selector": F.BoxArt,
@@ -868,7 +868,7 @@
                             }
                         }, i.createElement(f, {
                             imageProps: this.props.channelImageProps,
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.UserThumbnail), this.props.channelLinkTo),
+                            linkTo: Object(D.a)(this.getTrackingContext(g.PageviewContent.UserThumbnail), this.props.channelLinkTo),
                             onClick: this.props.onChannelImageClick || this.props.onChannelLoginClick,
                             aspect: s.p.Aspect1x1,
                             "data-test-selector": F.Avatar
@@ -878,7 +878,7 @@
                             t = [];
                         return this.shouldShowGameBalloon(this.props) || t.push({
                             text: Object(E.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
+                            linkTo: Object(D.a)(this.getTrackingContext(g.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
                             onClick: this.props.onChannelLoginClick,
                             automationSelector: "preview-card-channel-link"
                         }), B(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
@@ -890,13 +890,13 @@
                             automationSelector: "preview-card-clip-curator-link"
                         }) : R(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== A.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
                             text: this.props.gameTitle,
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
+                            linkTo: Object(D.a)(this.getTrackingContext(g.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             automationSelector: "preview-card-game-link"
                         }), i.createElement(i.Fragment, null, i.createElement(I, {
                             title: this.props.title,
                             onClick: this.props.onVideoTitleClick || this.props.onClick,
-                            linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.VideoTitle), this.props.linkTo),
+                            linkTo: Object(D.a)(this.getTrackingContext(g.PageviewContent.VideoTitle), this.props.linkTo),
                             subtitles: t,
                             "data-a-target": "preview-card-title-link"
                         }), e)
@@ -936,17 +936,17 @@
                         }
                     }, t
                 }(i.Component),
-                G = Object(x.b)("PreviewCard", {
+                V = Object(S.b)("PreviewCard", {
                     autoReportInteractive: !0
-                })(V);
+                })(G);
             n.d(t, !1, function() {
                 return F
             }), n.d(t, "b", function() {
                 return A
             }), n.d(t, !1, function() {
-                return V
-            }), n.d(t, "a", function() {
                 return G
+            }), n.d(t, "a", function() {
+                return V
             })
         },
         H1ft: function(e, t, n) {
@@ -994,27 +994,31 @@
                 f = n("yR8l"),
                 k = n("V+GM"),
                 y = n("oB8h"),
-                C = n("geRD"),
-                w = n("kduP"),
+                C = n("Bk78"),
+                w = n("geRD"),
+                x = n("kduP"),
                 S = n("NvVO"),
-                x = n("MPw5"),
-                T = n("2xye"),
-                N = n("Uive"),
-                I = n("cTNz"),
-                L = n("GnwI"),
-                P = n("Bh3T"),
-                E = n("bUox"),
+                T = n("MPw5"),
+                N = n("2xye"),
+                I = n("Uive"),
+                L = n("cTNz"),
+                P = n("GnwI"),
+                E = n("Bh3T"),
+                O = n("bUox"),
                 D = n("TCeE"),
-                O = n("AZIu"),
-                _ = n("x/sq"),
-                F = n("5myU"),
-                A = n("rShu"),
-                j = n("VW9G"),
-                R = n("hX9f"),
-                B = n("QV0j"),
-                V = n("Ue10"),
-                G = n("YGU1"),
-                M = function(e) {
+                _ = n("AZIu"),
+                F = n("x/sq"),
+                A = n("vuN2"),
+                j = n("5myU"),
+                R = n("rShu"),
+                B = n("VW9G"),
+                G = n("hX9f"),
+                V = n("QV0j"),
+                M = n("Ue10"),
+                H = n("YGU1"),
+                W = Object(C.a)(3e5),
+                X = Object(A.a)();
+            var U = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1022,11 +1026,11 @@
                         var e = this;
                         if (this.props.data.loading && !this.props.data.streams || this.props.data.error || !this.props.data.streams) return null;
                         var t = this.props.directoryWidth,
-                            n = T.PageviewMedium.Browse,
-                            a = T.PageviewContent.LocalPopularChannel,
+                            n = N.PageviewMedium.Browse,
+                            a = N.PageviewContent.LocalPopularChannel,
                             i = this.props.data.streams.edges || [];
                         if (t && t > 0) {
-                            var r = Object(F.a)(t, 300, 1);
+                            var r = Object(j.a)(t, 300, 1);
                             if (r - 1 < i.length) {
                                 i = i.slice(0, r - 0)
                             }
@@ -1036,15 +1040,15 @@
                         }).map(function(t, i) {
                             if (!t || !t.node) return null;
                             var r = t.node,
-                                o = Object(_.a)({
+                                o = Object(F.a)({
                                     tags: r.tags,
-                                    section: O.a.LiveChannels,
+                                    section: _.a.LiveChannels,
                                     onClickTag: e.props.addTagFilter,
                                     tagFilters: e.props.tagFilters,
                                     scrollToTop: e.props.scrollToTop
                                 });
-                            return u.createElement(R.b, {
-                                directoryType: A.a.Communities,
+                            return u.createElement(G.b, {
+                                directoryType: R.a.Communities,
                                 streamIndex: i,
                                 streamNode: {
                                     __typename: "Stream",
@@ -1066,7 +1070,7 @@
                                         boxArtURL: r.game.boxArtURL || p.a.defaultBoxArtURL,
                                         name: r.game.name
                                     } : null,
-                                    type: Object(B.a)(r.type) || y.a.Live
+                                    type: Object(V.a)(r.type) || y.a.Live
                                 },
                                 key: r.id,
                                 trackingMedium: n,
@@ -1074,65 +1078,70 @@
                                 tagListProps: o
                             })
                         });
-                        return o.length > 0 ? u.createElement("div", null, u.createElement(j.a, {
+                        return o.length > 0 ? u.createElement("div", null, u.createElement(B.a, {
                             languageCode: this.props.languageCode
-                        }), u.createElement(V.Yb, {
-                            gutterSize: V.ac.Small,
-                            childWidth: V.Zb.Large,
+                        }), u.createElement(M.Zb, {
+                            gutterSize: M.bc.Small,
+                            childWidth: M.ac.Large,
                             placeholderItems: 20
                         }, o)) : null
                     }, t
                 }(u.Component),
-                H = Object(m.compose)(Object(f.a)(G, {
+                z = Object(m.compose)(Object(f.a)(H, {
                     options: function(e) {
                         return {
-                            fetchPolicy: "network-only",
+                            fetchPolicy: X() ? W() : "network-only",
                             variables: {
-                                limit: 30,
+                                limit: 10,
                                 languages: [e.languageCode],
                                 platformType: e.platformType
                             }
                         }
                     }
-                }), Object(L.b)("PopularInternationalSection", {
+                }), Object(P.b)("PopularInternationalSection", {
                     autoReportInteractive: !0
-                }))(M),
-                W = {
+                }))(U),
+                q = {
                     "/directory/all": "all",
                     "/directory/all/:encodedLanguage": "all",
                     "/directory/all/xbox": "xbox",
                     "/directory/all/xb1": "xbox",
                     "/directory/all/ps4": "ps4"
                 },
-                X = n("yI6f"),
-                U = n("T2RZ"),
-                z = n("V6sb"),
-                q = "directory-first-item",
-                Q = "directory-container",
-                $ = Object(U.a)(T.PageviewMedium.Browse, X.b.Live, X.c.BrowseLiveChannels)(h.a);
+                Q = n("yI6f"),
+                $ = n("T2RZ"),
+                Y = n("V6sb"),
+                J = "directory-first-item",
+                Z = "directory-container",
+                K = Object($.a)(N.PageviewMedium.Browse, Q.b.Live, Q.c.BrowseLiveChannels)(h.a),
+                ee = 0;
 
-            function Y(e) {
+            function te(e) {
                 var t = e.streams && e.streams.edges;
                 return t ? t.filter(function(e) {
                     return e && e.node && e.node.id
                 }) : []
             }
-            var J = function(e) {
+            var ne = Object(C.a)(3e5),
+                ae = Object(A.a)();
+            var ie = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             numSlotsAdded: 0,
                             directoryWidth: -1
                         }, t.onResize = function(e) {
-                            t.setState({
-                                directoryWidth: e
-                            })
+                            e !== t.state.directoryWidth && (clearTimeout(ee), ee = setTimeout(function() {
+                                t.setState({
+                                    directoryWidth: e
+                                })
+                            }, 50))
                         }, t.onWindowResize = function() {
                             return requestAnimationFrame(t.updateDisplayAdOrder)
                         }, t.updateDisplayAdOrder = function() {
-                            var e = document.querySelector('[data-target="' + Q + '"]'),
-                                t = document.querySelector('[data-target="' + q + '"]'),
-                                n = document.querySelector("#" + I.b.directory.rectangle);
+                            var e = document.querySelector('[data-target="' + Z + '"]'),
+                                t = document.querySelector('[data-target="' + J + '"]'),
+                                n = document.querySelector("#" + L.b.directory.rectangle);
                             if (t && e && n) {
                                 var a = Math.round((e.clientWidth - 300) / t.clientWidth).toString();
                                 n.style.order !== a && "0" !== a && (n.style.order = a)
@@ -1143,44 +1152,44 @@
                             var e = t.props.tagFilters[t.props.tagFilters.length - 1];
                             t.props.removeTagFilter(e, l.a.LiveChannels);
                             var n = {
-                                section: O.a.LiveChannels,
+                                section: _.a.LiveChannels,
                                 tagPosition: t.props.tagFilters.length - 1,
                                 searchEvent: !0,
                                 tagId: e.id,
                                 dismiss: !0
                             };
-                            Object(O.b)(n)
+                            Object(_.b)(n)
                         }, t.onSlotAdded = function() {
                             t.setState(function(e) {
                                 var t = e.numSlotsAdded + 1;
-                                return t === Object.keys(I.b.directory).length && x.a.display(I.b.directory.banner), {
+                                return t === Object.keys(L.b.directory).length && T.a.display(L.b.directory.banner), {
                                     numSlotsAdded: t
                                 }
                             })
                         }, t
                     }
                     return d.__extends(t, e), t.prototype.componentWillMount = function() {
-                        I.g.addListener(I.e, this.onSlotAdded)
+                        L.g.addListener(L.e, this.onSlotAdded)
                     }, t.prototype.componentDidMount = function() {
                         p.p.setPageTitle(Object(p.d)("Top Channels", "DirectoryPopularPage")), window.addEventListener("resize", this.onWindowResize), this.onRender()
                     }, t.prototype.componentDidUpdate = function() {
                         this.onRender()
                     }, t.prototype.componentWillUnmount = function() {
-                        window.removeEventListener("resize", this.onWindowResize), I.g.removeListener(I.e, this.onSlotAdded)
+                        window.removeEventListener("resize", this.onWindowResize), L.g.removeListener(L.e, this.onSlotAdded)
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.props.sideNavExpanded !== e.sideNavExpanded && this.onWindowResize(), this.props.lastBrowsePath !== e.location.pathname && this.props.changeLastBrowsePath(decodeURIComponent(e.location.pathname))
                     }, t.prototype.render = function() {
                         var e = this;
-                        if (this.props.tagFilters.length > D.a) return u.createElement(E.a, {
-                            errorType: E.b.TooManyTags,
+                        if (this.props.tagFilters.length > D.a) return u.createElement(O.a, {
+                            errorType: O.b.TooManyTags,
                             onClickRemoveLastTag: this.removeLastTag,
                             tagFilters: this.props.tagFilters
                         });
                         if (!this.props.data.loading && !this.props.data.streams || this.props.data.error) return u.createElement(g.a, {
                             message: Object(p.d)("Error loading data.", "DirectoryPopularPage")
                         });
-                        if (this.props.data.streams && this.props.data.streams.edges && 0 === this.props.data.streams.edges.length) return u.createElement(E.a, {
-                            errorType: E.b.NoResults,
+                        if (this.props.data.streams && this.props.data.streams.edges && 0 === this.props.data.streams.edges.length) return u.createElement(O.a, {
+                            errorType: O.b.NoResults,
                             onClickRemoveLastTag: this.removeLastTag,
                             tagFilters: this.props.tagFilters
                         });
@@ -1188,44 +1197,44 @@
                             n = null;
                         if ("en" !== this.props.languageCode) {
                             var a = {
-                                color: V.O.Base
+                                color: M.O.Base
                             };
-                            n = u.createElement(V.Xa, {
+                            n = u.createElement(M.Xa, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, u.createElement(V.W, d.__assign({
-                                type: V.Sb.H4
-                            }, a), Object(p.d)("All Channels", "PopularInternationalSection"))), this.props.tagFilters.length || this.props.languageTagFilters.length || (t = u.createElement(H, {
+                            }, u.createElement(M.W, d.__assign({
+                                type: M.Tb.H4
+                            }, a), Object(p.d)("All Channels", "PopularInternationalSection"))), this.props.tagFilters.length || this.props.languageTagFilters.length || (t = u.createElement(z, {
                                 directoryWidth: this.state.directoryWidth,
                                 languageCode: this.props.languageCode,
-                                platformType: W[decodeURIComponent(this.props.match.path)] || "all",
+                                platformType: q[decodeURIComponent(this.props.match.path)] || "all",
                                 addTagFilter: this.addTagFilter,
                                 tagFilters: this.props.tagFilters,
                                 scrollToTop: this.context.scrollToTop
                             }))
                         }
-                        var i = T.PageviewMedium.Browse,
-                            r = Y(this.props.data).map(function(t, n) {
+                        var i = N.PageviewMedium.Browse,
+                            r = te(this.props.data).map(function(t, n) {
                                 var a = t && t.node;
                                 return a && a.broadcaster && a.broadcaster.id ? u.createElement("div", {
                                     key: a.id,
-                                    "data-target": n ? "" : q,
+                                    "data-target": n ? "" : J,
                                     style: {
                                         order: n
                                     }
-                                }, u.createElement(V.Xa, {
+                                }, u.createElement(M.Xa, {
                                     margin: {
                                         bottom: 2
                                     },
                                     "data-target": "directory-game__card_container"
-                                }, u.createElement($, {
+                                }, u.createElement(K, {
                                     context: h.b.MixedGameAndChannelList,
                                     title: a.title || Object(p.d)("Untitled Broadcast", "DirectoryGamePage"),
                                     linkTo: {
                                         pathname: "/" + a.broadcaster.login,
                                         state: {
-                                            content: T.PageviewContent.Live,
+                                            content: N.PageviewContent.Live,
                                             content_index: n,
                                             medium: i
                                         }
@@ -1242,17 +1251,17 @@
                                         pathname: "/" + a.broadcaster.login + "/videos",
                                         state: {
                                             medium: i,
-                                            content: T.PageviewContent.Live,
+                                            content: N.PageviewContent.Live,
                                             content_index: n
                                         }
                                     },
                                     channelLogin: a.broadcaster.login || "",
                                     gameTitle: a.game && a.game.name || "",
                                     gameTitleLinkTo: {
-                                        pathname: Object(w.c)(a.game && a.game.name || ""),
+                                        pathname: Object(x.c)(a.game && a.game.name || ""),
                                         state: {
                                             medium: i,
-                                            content: T.PageviewContent.Live,
+                                            content: N.PageviewContent.Live,
                                             content_index: n
                                         }
                                     },
@@ -1262,16 +1271,16 @@
                                     },
                                     "data-a-target": "card-" + n,
                                     "data-a-id": "card-" + (a.broadcaster.login || "").replace(/ /g, ""),
-                                    streamType: Object(B.a)(a.type) || y.a.Live,
+                                    streamType: Object(V.a)(a.type) || y.a.Live,
                                     channelImageProps: {
                                         src: a.broadcaster.profileImageURL || "",
                                         alt: a.broadcaster.displayName || ""
                                     },
-                                    tagListProps: Object(_.a)({
+                                    tagListProps: Object(F.a)({
                                         tags: t && t.node && t.node.tags,
                                         onClickTag: e.addTagFilter,
                                         tagFilters: e.props.tagFilters,
-                                        section: O.a.LiveChannels,
+                                        section: _.a.LiveChannels,
                                         scrollToTop: e.context.scrollToTop
                                     }),
                                     trackingProps: {
@@ -1284,16 +1293,16 @@
                                 }))) : null
                             }),
                             o = !(this.props.data.loading || this.props.data.error || !this.props.data.streams || !this.props.data.streams.pageInfo || !this.props.data.streams.pageInfo.hasNextPage);
-                        return u.createElement(V.Xa, {
+                        return u.createElement(M.Xa, {
                             flexShrink: 0,
-                            "data-target": Q
-                        }, u.createElement(P.b, {
+                            "data-target": Z
+                        }, u.createElement(E.b, {
                             addPaddingWhenPlayerIsPersisting: !0
-                        }), t, n, u.createElement(V.Yb, {
-                            gutterSize: V.ac.Small,
-                            childWidth: V.Zb.Large,
+                        }), t, n, u.createElement(M.Zb, {
+                            gutterSize: M.bc.Small,
+                            childWidth: M.ac.Large,
                             placeholderItems: 20
-                        }, u.createElement(N.a, {
+                        }, u.createElement(I.a, {
                             key: -1,
                             injectStyles: {
                                 textAlign: "center",
@@ -1302,11 +1311,11 @@
                                 width: 300,
                                 height: 250
                             },
-                            adUnit: I.d.directory,
-                            slotID: I.b.directory.rectangle,
-                            adSize: I.c.directory.rectangle,
+                            adUnit: L.d.directory,
+                            slotID: L.b.directory.rectangle,
+                            adSize: L.c.directory.rectangle,
                             targeting: {
-                                pagetype: I.a.games
+                                pagetype: L.a.games
                             },
                             slotRendered: this.updateDisplayAdOrder,
                             autoEnable: !1
@@ -1323,13 +1332,13 @@
                         scrollToTop: c.func
                     }, t
                 }(u.Component),
-                Z = Object(m.compose)(Object(f.a)(z, {
+                re = Object(m.compose)(Object(f.a)(Y, {
                     options: function(e) {
                         return {
-                            fetchPolicy: "network-only",
+                            fetchPolicy: ae() ? ne() : "network-only",
                             variables: {
                                 limit: 30,
-                                platformType: W[decodeURIComponent(e.match.path)] || "all",
+                                platformType: q[decodeURIComponent(e.match.path)] || "all",
                                 languages: [],
                                 tags: e.languageTagFilters.concat(e.tagFilters.map(function(e) {
                                     return e.id
@@ -1346,7 +1355,7 @@
                                     i = t.streams,
                                     r = i && i.edges && i.edges[i.edges.length - 5];
                                 return n({
-                                    query: z,
+                                    query: Y,
                                     variables: d.__assign({}, a, {
                                         cursor: r ? r.cursor : null
                                     }),
@@ -1354,7 +1363,7 @@
                                         var n = t.fetchMoreResult;
                                         return {
                                             streams: d.__assign({}, n.streams, {
-                                                edges: Object(C.c)(Y(e), Y(n))
+                                                edges: Object(w.c)(te(e), te(n))
                                             })
                                         }
                                     }
@@ -1362,12 +1371,12 @@
                             }
                         })
                     }
-                }), Object(L.b)("DirectoryPopularPage", {
+                }), Object(P.b)("DirectoryPopularPage", {
                     destination: S.a.DirectoryPopular
                 }), Object(k.a)({
-                    location: T.PageviewLocation.DirectoryPopular
-                }))(J);
-            var K = Object(a.connect)(function(e) {
+                    location: N.PageviewLocation.DirectoryPopular
+                }))(ie);
+            var oe = Object(a.connect)(function(e) {
                 return {
                     languageCode: Object(r.b)(e),
                     languageTagFilters: Object(l.c)(e),
@@ -1381,9 +1390,9 @@
                     changeLastBrowsePath: o.d,
                     removeTagFilter: s.h
                 }, e)
-            })(Z);
+            })(re);
             n.d(t, "DirectoryPopularPage", function() {
-                return K
+                return oe
             })
         },
         MJbm: function(e, t, n) {
@@ -1760,7 +1769,7 @@
                                 bottom: 2
                             }
                         }, l.createElement(p.W, {
-                            type: p.Sb.H4,
+                            type: p.Tb.H4,
                             color: p.O.Base,
                             "data-a-target": "international-section-header",
                             "data-test-selector": "international-section-header-tags"
@@ -2158,7 +2167,7 @@
                                 right: .5
                             }
                         }, this.getIcon()), d.createElement(m.W, {
-                            type: m.Sb.Span
+                            type: m.Tb.Span
                         }, this.getLabel()))
                     }, t.prototype.getClassNames = function() {
                         var e = {

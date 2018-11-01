@@ -39,7 +39,7 @@
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: i.fc.Above
+                            zIndex: i.gc.Above
                         }, r.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -77,8 +77,8 @@
                 h = a("kMGJ"),
                 v = a("vpah"),
                 I = a("GnwI"),
-                S = a("Ue10"),
-                E = (a("DGtd"), a("MTto")),
+                E = a("Ue10"),
+                S = (a("DGtd"), a("MTto")),
                 y = ["image/*"],
                 U = function(e) {
                     function t() {
@@ -184,44 +184,44 @@
                             userName: e
                         }, "UserImageUploader"));
                         var a = null;
-                        if (this.state.loading) a = l.createElement(S.Xa, {
+                        if (this.state.loading) a = l.createElement(E.Xa, {
                             className: "user-image-uploader__upload-svg--anim-fill",
-                            position: S.hb.Relative,
+                            position: E.hb.Relative,
                             "data-test-selector": "loading-status"
-                        }, l.createElement(S.qb, {
-                            asset: S.rb.Upload,
-                            type: S.sb.Brand,
+                        }, l.createElement(E.qb, {
+                            asset: E.rb.Upload,
+                            type: E.sb.Brand,
                             width: 99,
                             height: 76
                         }));
                         else {
                             var n = Object(c.d)("Recommended image size: 1200x380 and less than 10MB.", "UserImageUploader");
-                            this.props.imageType === f.a.ChannelOfflineImage && (n = Object(c.d)("Recommended image size: 1920x1080 and less than 10MB.", "UserImageUploader")), a = l.createElement(S.Xa, null, l.createElement(S.Xa, {
+                            this.props.imageType === f.a.ChannelOfflineImage && (n = Object(c.d)("Recommended image size: 1920x1080 and less than 10MB.", "UserImageUploader")), a = l.createElement(E.Xa, null, l.createElement(E.Xa, {
                                 className: "user-image-uploader__upload-info"
-                            }, l.createElement(S.Xa, null, l.createElement(S.qb, {
-                                asset: S.rb.Plus,
-                                type: S.sb.Alt2,
+                            }, l.createElement(E.Xa, null, l.createElement(E.qb, {
+                                asset: E.rb.Plus,
+                                type: E.sb.Alt2,
                                 height: 20,
                                 width: 20
-                            })), l.createElement(S.W, {
-                                type: S.Sb.H3,
-                                color: S.O.Alt2,
-                                fontSize: S.Ca.Size4
-                            }, Object(c.d)("Upload a Photo", "User Image Uploader"))), l.createElement(S.Xa, {
+                            })), l.createElement(E.W, {
+                                type: E.Tb.H3,
+                                color: E.O.Alt2,
+                                fontSize: E.Ca.Size4
+                            }, Object(c.d)("Upload a Photo", "User Image Uploader"))), l.createElement(E.Xa, {
                                 className: "user-image-uploader__upload-recommendation",
-                                position: S.hb.Absolute,
-                                textAlign: S.Ob.Left,
+                                position: E.hb.Absolute,
+                                textAlign: E.Pb.Left,
                                 attachLeft: !0,
                                 attachBottom: !0,
                                 margin: {
                                     left: 3,
                                     bottom: 1
                                 }
-                            }, l.createElement(S.W, {
-                                type: S.Sb.H6,
-                                color: S.O.Alt2,
-                                fontSize: S.Ca.Size8,
-                                align: S.cc.TextBottom
+                            }, l.createElement(E.W, {
+                                type: E.Tb.H6,
+                                color: E.O.Alt2,
+                                fontSize: E.Ca.Size8,
+                                align: E.dc.TextBottom
                             }, n)))
                         }
                         var r = null;
@@ -229,59 +229,59 @@
                         var i = null;
                         if (null !== this.state.statusMessage) {
                             var o = Object(v.c)(this.state.statusMessage);
-                            i = l.createElement(S.eb, {
+                            i = l.createElement(E.eb, {
                                 label: o.message,
                                 type: o.type
                             })
                         }
-                        return l.createElement(S.Xa, {
+                        return l.createElement(E.Xa, {
                             className: "user-image-uploader",
-                            position: S.hb.Relative,
+                            position: E.hb.Relative,
                             fullHeight: !0
-                        }, l.createElement(S.Cb, {
+                        }, l.createElement(E.Cb, {
                             className: "user-image-uploader__background-container",
-                            background: S.r.Base,
+                            background: E.r.Base,
                             fullWidth: !0
-                        }, l.createElement(S.Xa, {
+                        }, l.createElement(E.Xa, {
                             padding: 2,
-                            display: S.X.InlineBlock,
-                            position: S.hb.Relative,
-                            textAlign: S.Ob.Center,
+                            display: E.X.InlineBlock,
+                            position: E.hb.Relative,
+                            textAlign: E.Pb.Center,
                             fullWidth: !0
-                        }, l.createElement(S.Cb, {
+                        }, l.createElement(E.Cb, {
                             borderBottom: !0,
                             margin: {
                                 bottom: 2
                             }
-                        }, l.createElement(S.W, {
-                            type: S.Sb.H3,
-                            fontSize: S.Ca.Size4
-                        }, t)), l.createElement(S.Xa, {
+                        }, l.createElement(E.W, {
+                            type: E.Tb.H3,
+                            fontSize: E.Ca.Size4
+                        }, t)), l.createElement(E.Xa, {
                             className: "user-image-uploader__upload-container",
-                            display: S.X.InlineBlock,
-                            position: S.hb.Relative,
-                            textAlign: S.Ob.Center,
+                            display: E.X.InlineBlock,
+                            position: E.hb.Relative,
+                            textAlign: E.Pb.Center,
                             margin: {
                                 bottom: 1
                             }
-                        }, l.createElement(S.Xa, {
+                        }, l.createElement(E.Xa, {
                             className: "user-image-uploader__upload",
-                            display: S.X.InlineBlock,
-                            position: S.hb.Relative,
-                            textAlign: S.Ob.Center
+                            display: E.X.InlineBlock,
+                            position: E.hb.Relative,
+                            textAlign: E.Pb.Center
                         }, l.createElement(d.a, {
                             allowedFileTypes: y,
                             onFilesSubmitted: this.onImageInputChange
-                        }, a))), l.createElement(S.Cb, {
+                        }, a))), l.createElement(E.Cb, {
                             "data-test-selector": "status-message",
-                            fontSize: S.Ca.Size4,
-                            position: S.hb.Relative,
-                            textAlign: S.Ob.Center,
+                            fontSize: E.Ca.Size4,
+                            position: E.hb.Relative,
+                            textAlign: E.Pb.Center,
                             className: "user-image-uploader__status-message"
                         }, i))), r)
                     }, t
                 }(l.Component),
-                O = Object(u.compose)(Object(I.b)("User Image Upload"), Object(m.a)(E, {
+                O = Object(u.compose)(Object(I.b)("User Image Upload"), Object(m.a)(S, {
                     options: function(e) {
                         return {
                             variables: {

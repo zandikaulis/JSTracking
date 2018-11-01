@@ -32,7 +32,7 @@
                                 },
                                 "data-test-selector": h
                             }, s.createElement(E.W, {
-                                type: E.Sb.H5,
+                                type: E.Tb.H5,
                                 color: E.O.Error
                             }, Object(c.d)("There was an error when unsubscribing.", "EmailUnsubscribe"))) : t.state.isSuccess ? s.createElement(E.Xa, {
                                 margin: {
@@ -40,14 +40,14 @@
                                 },
                                 "data-test-selector": f
                             }, s.createElement(E.W, {
-                                type: E.Sb.H5,
+                                type: E.Tb.H5,
                                 color: E.O.Alt2
                             }, Object(c.d)("You have successfully unsubscribed.", "EmailUnsubscribe"))) : t.state.isLoading ? s.createElement(E.Xa, {
                                 margin: {
                                     top: 1
                                 }
                             }, s.createElement(E.W, {
-                                type: E.Sb.H5,
+                                type: E.Tb.H5,
                                 bold: !0
                             }, Object(c.d)("Unsubscribing...", "EmailUnsubscribe"))) : s.createElement(E.Cb, {
                                 display: E.X.Flex,
@@ -60,7 +60,7 @@
                                     bottom: 1
                                 }
                             }, s.createElement(E.W, {
-                                type: E.Sb.H5,
+                                type: E.Tb.H5,
                                 color: E.O.Alt2
                             }, Object(c.d)("You will unsubscribe from future emails of this type from Twitch.", "EmailUnsubscribe"))), s.createElement(E.Xa, {
                                 flexGrow: 0
@@ -115,7 +115,7 @@
                             flexDirection: E.Aa.Column
                         }, s.createElement(E.W, {
                             className: "title",
-                            type: E.Sb.H2
+                            type: E.Tb.H2
                         }, Object(c.d)("Email Unsubscribe", "EmailUnsubscribe")), this.renderStatus())
                     }, t
                 }(s.Component),

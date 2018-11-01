@@ -132,7 +132,7 @@
                                 bottom: 1
                             }
                         }, s.createElement(r.W, {
-                            type: r.Sb.H4
+                            type: r.Tb.H4
                         }, e.title)), s.createElement(r.Xa, {
                             margin: {
                                 bottom: 1

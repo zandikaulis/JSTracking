@@ -51,7 +51,7 @@
                                 right: 1
                             }
                         }, o.createElement(c.W, {
-                            type: c.Sb.Span
+                            type: c.Tb.Span
                         }, Object(s.d)("Interactions Available", "Orbis"))), o.createElement(c.Xa, {
                             display: c.X.Flex,
                             justifyContent: c.Wa.Between,

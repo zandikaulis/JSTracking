@@ -1454,7 +1454,7 @@
                 var t, n = e.clip;
                 if (!(n.video && n.video.id && null !== n.videoOffsetSeconds && n.broadcaster && n.broadcaster.login && n.video.broadcastType === l.g.ARCHIVE)) {
                     var d = n.video ? Object(r.d)("You can only highlight past broadcasts", "ClipsFullVideoButton") : Object(r.d)("Full video not available", "ClipsFullVideoButton");
-                    return a.createElement(c.Vb, {
+                    return a.createElement(c.Wb, {
                         label: d
                     }, a.createElement(c.z, {
                         type: e.buttonType,
@@ -1810,7 +1810,7 @@
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderForClipsViewing = function() {
-                            return s.createElement("div", null, s.createElement(k.Pb, {
+                            return s.createElement("div", null, s.createElement(k.Qb, {
                                 id: T.TITLE_INPUT,
                                 "data-test-selector": T.TITLE_INPUT,
                                 value: n.state.title,
@@ -2567,7 +2567,7 @@
                     return p
                 }),
                 function(e) {
-                    e.Forbidden = "FORBIDDEN", e.TargetNotFound = "TARGET_NOT_FOUND", e.TargetIsSelf = "TARGET_IS_SELF", e.TargetIsAnonymous = "TARGET_IS_ANONYMOUS", e.TargetIsMod = "TARGET_IS_MOD", e.TargetIsBroadcaster = "TARGET_IS_BROADCASTER", e.TargetIsStaff = "TARGET_IS_STAFF", e.TargetIsAdmin = "TARGET_IS_ADMIN", e.TargetIsGlobalMod = "TARGET_IS_GLOBAL_MOD", e.TargetIsAlreadyBanned = "TARGET_ALREADY_BANNED", e.DurationInvalid = "DURATION_INVALID"
+                    e.Forbidden = "FORBIDDEN", e.TargetNotFound = "TARGET_NOT_FOUND", e.TargetIsSelf = "TARGET_IS_SELF", e.TargetIsAnonymous = "TARGET_IS_ANONYMOUS", e.TargetIsMod = "TARGET_IS_MOD", e.TargetIsBroadcaster = "TARGET_IS_BROADCASTER", e.TargetIsStaff = "TARGET_IS_STAFF", e.TargetIsVIP = "TARGET_IS_VIP", e.TargetIsAdmin = "TARGET_IS_ADMIN", e.TargetIsGlobalMod = "TARGET_IS_GLOBAL_MOD", e.TargetIsAlreadyBanned = "TARGET_ALREADY_BANNED", e.DurationInvalid = "DURATION_INVALID"
                 }(d || (d = {}))
         },
         jeZI: function(e, t, n) {},
@@ -2603,7 +2603,7 @@
                                 background: s.r.Alt,
                                 fullWidth: !0
                             }, a.createElement(s.W, {
-                                type: s.Sb.Strong
+                                type: s.Tb.Strong
                             }, t.props.successContent)) : null
                         }, t.renderError = function() {
                             return t.props.errorContent ? a.createElement(s.Cb, {
@@ -2619,7 +2619,7 @@
                                 background: s.r.Alt,
                                 fullWidth: !0
                             }, a.createElement(s.W, {
-                                type: s.Sb.Strong,
+                                type: s.Tb.Strong,
                                 color: s.O.Error
                             }, t.props.errorContent)) : null
                         }, t.onSubmit = function() {
@@ -2704,10 +2704,10 @@
                             hasSucceeded: !1
                         }, t.renderTitle = function() {
                             return t.props.isTemporary ? a.createElement(s.W, {
-                                type: s.Sb.H5,
+                                type: s.Tb.H5,
                                 ellipsis: !0
                             }, Object(r.d)("Timeout this Clip Creator for 24 hours from Your Channel", "ClipsModalBanUser")) : a.createElement(s.W, {
-                                type: s.Sb.H5,
+                                type: s.Tb.H5,
                                 ellipsis: !0
                             }, Object(r.d)("Ban this Clip Creator from Your Channel", "ClipsModalBanUser"))
                         }, t.renderBodyText = function() {
@@ -2824,14 +2824,14 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = [a.createElement(s.W, {
                             key: "title",
-                            type: s.Sb.H4
+                            type: s.Tb.H4
                         }, Object(r.d)("Delete This Clip", "ClipsModalDelete")), a.createElement(s.Xa, {
                             key: "message",
                             margin: {
                                 top: 1
                             }
                         }, a.createElement(s.W, {
-                            type: s.Sb.P,
+                            type: s.Tb.P,
                             color: s.O.Alt2
                         }, Object(r.d)("This clip will be permanently deleted.", "ClipsModalDelete")))];
                         if (!this.props.data.clip) return null;
@@ -2852,7 +2852,7 @@
                         }, a.createElement("img", {
                             src: this.props.data.clip.thumbnailURL
                         }))), a.createElement(s.Xa, null, a.createElement(s.W, {
-                            type: s.Sb.H5
+                            type: s.Tb.H5
                         }, this.props.data.clip.title), a.createElement(s.W, {
                             color: s.O.Alt2
                         }, Object(r.d)("{created, date, medium}", {
@@ -2952,13 +2952,13 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = a.createElement(s.W, {
-                            type: s.Sb.P
+                            type: s.Tb.P
                         }, Object(r.d)("This clip and all other clips created from the same video will be permanently deleted.", "ClipsModalDeleteAll"));
                         return a.createElement(c, {
                             onSubmit: this.deleteAll,
                             onClose: this.props.onClose,
                             title: a.createElement(s.W, {
-                                type: s.Sb.H4
+                                type: s.Tb.H4
                             }, Object(r.d)("Delete All Clips from Related Video", "ClipsModalDeleteAll")),
                             body: e,
                             buttonContent: Object(r.d)("Delete", "ClipsModalDeleteAll"),
@@ -3074,10 +3074,10 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = a.createElement(s.W, {
-                                type: s.Sb.H4
+                                type: s.Tb.H4
                             }, Object(r.d)("Delete these clips?", "ClipsModalBatchDelete")),
                             t = a.createElement(s.W, {
-                                type: s.Sb.P
+                                type: s.Tb.P
                             }, Object(r.d)("These clips will be permanently deleted. Are you sure?", "ClipsModalBatchDelete"));
                         return a.createElement(c, {
                             onSubmit: this.onDeleteClick,
@@ -3324,30 +3324,30 @@
                 j = n("kduP"),
                 U = n("+GjP"),
                 B = n("D7An"),
-                V = n("ndwU"),
-                X = n("X7Ac"),
-                P = n("EdhP"),
+                X = n("ndwU"),
+                P = n("X7Ac"),
+                V = n("EdhP"),
                 W = n("4L7N"),
                 G = n("Ue10"),
                 H = [{
-                    type: X.b.Twitter,
+                    type: P.b.Twitter,
                     params: {
                         tt_medium: "twtr"
                     }
                 }, {
-                    type: X.b.Facebook,
+                    type: P.b.Facebook,
                     params: {
                         tt_medium: "fb"
                     }
                 }, {
-                    type: X.b.VKontakte
+                    type: P.b.VKontakte
                 }, {
-                    type: X.b.Reddit,
+                    type: P.b.Reddit,
                     params: {
                         tt_medium: "redt"
                     }
                 }, {
-                    type: X.b.Copy
+                    type: P.b.Copy
                 }];
 
             function q(e) {
@@ -3355,7 +3355,7 @@
             }
             var Q = Object(b.b)("ClipsManagerSocialShare")(function(e) {
                     var t = Object(w.d)("Share", "ClipsManagerSocialShare");
-                    return s.createElement(A.a, null, s.createElement("div", null, s.createElement(G.Vb, {
+                    return s.createElement(A.a, null, s.createElement("div", null, s.createElement(G.Wb, {
                         label: t
                     }, s.createElement(G.A, {
                         ariaLabel: t,
@@ -3374,7 +3374,7 @@
                         pageType: e.pageType,
                         forceShow: !0
                     }), H.map(function(t) {
-                        return s.createElement(X.a, {
+                        return s.createElement(P.a, {
                             key: t.type,
                             type: t.type,
                             text: e.clip.title,
@@ -3403,7 +3403,7 @@
                     }, s.createElement(G.Ra, {
                         readOnly: !0,
                         type: G.Ta.Text,
-                        value: Object(P.a)(e.clip.embedURL),
+                        value: Object(V.a)(e.clip.embedURL),
                         onFocus: q
                     })))))
                 }),
@@ -3419,7 +3419,7 @@
                 Y = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
-                        return n.clipsMaintenance = Object(V.a)(), n.renderTitle = function() {
+                        return n.clipsMaintenance = Object(X.a)(), n.renderTitle = function() {
                             var e = n.props.clip;
                             return n.props.data.currentUser.id === (e && e.curator && e.curator.id) ? s.createElement(K.a, {
                                 clipId: e.id,
@@ -3447,7 +3447,7 @@
                         }, n.renderModerationIcon = function() {
                             if (!n.props.clip.broadcaster || n.props.data.currentUser.id !== n.props.clip.broadcaster.id) return null;
                             var e = Object(w.d)("Moderation", "ClipsManagerExpandedRow");
-                            return s.createElement(G.Vb, {
+                            return s.createElement(G.Wb, {
                                 label: e
                             }, s.createElement(G.Xa, {
                                 margin: {
@@ -3592,7 +3592,7 @@
                                     }
                                 }
                             })
-                        }), this.renderModerationIcon(), s.createElement(G.Vb, {
+                        }), this.renderModerationIcon(), s.createElement(G.Wb, {
                             label: a
                         }, s.createElement(G.Xa, {
                             margin: {
@@ -3611,9 +3611,9 @@
                         }, s.createElement(Q, {
                             clip: this.props.clip,
                             pageType: this.props.pageType
-                        })), s.createElement(G.Vb, {
+                        })), s.createElement(G.Wb, {
                             label: Object(w.d)("Watch on Clips Page", "ClipsManagerExpandedRow"),
-                            align: G.Wb.Left
+                            align: G.Xb.Left
                         }, s.createElement(G.A, {
                             ariaLabel: Object(w.d)("Popout", "ClipsManagerExpandedRow"),
                             type: G.C.Hollow,
@@ -3621,9 +3621,9 @@
                                 tt_medium: "my_clips"
                             }),
                             icon: G.rb.Popout
-                        }))), s.createElement(G.Vb, {
+                        }))), s.createElement(G.Wb, {
                             label: i,
-                            align: G.Wb.Left
+                            align: G.Xb.Left
                         }, s.createElement(G.Xa, {
                             flexGrow: 0
                         }, s.createElement(G.A, {
@@ -3691,7 +3691,7 @@
                             bold: !0
                         }, Object(w.d)("Created On", "ClipsManagerExpandedRow")), s.createElement(G.W, {
                             ellipsis: !0,
-                            transform: G.Rb.Capitalize,
+                            transform: G.Sb.Capitalize,
                             title: n
                         }, n))), s.createElement(G.P, {
                             cols: {
@@ -3796,7 +3796,7 @@
                                     left: 1
                                 }
                             }, s.createElement(G.W, {
-                                type: G.Sb.H5
+                                type: G.Tb.H5
                             }, e.title), s.createElement(G.W, {
                                 className: "clmgr-result__subtitle",
                                 ellipsis: !0
@@ -3818,7 +3818,7 @@
                                     left: 1
                                 }
                             }, s.createElement(G.W, {
-                                type: G.Sb.H5
+                                type: G.Tb.H5
                             }, e.name), s.createElement(G.W, {
                                 className: "clmgr-result__subtitle",
                                 ellipsis: !0
@@ -3919,7 +3919,7 @@
                                 display: G.X.Flex,
                                 flexDirection: G.Aa.Column
                             }, s.createElement(G.Cb, {
-                                textAlign: G.Ob.Center,
+                                textAlign: G.Pb.Center,
                                 padding: {
                                     y: 5
                                 }
@@ -3929,9 +3929,9 @@
                                 width: 36,
                                 type: G.sb.Brand
                             }), s.createElement(G.W, {
-                                type: G.Sb.H4
+                                type: G.Tb.H4
                             }, Object(w.d)("No results found", "ClipsManagerSearch")), s.createElement(G.W, {
-                                type: G.Sb.P,
+                                type: G.Tb.P,
                                 color: G.O.Alt
                             }, Object(w.d)("They're probably in another castle", "ClipsManagerSearch"))))
                         }, n.setSearchResultRefs = function(e) {
@@ -4262,7 +4262,7 @@
                             imageURL: this.props.clip.thumbnailURL,
                             className: "clmgr-thumb"
                         })), s.createElement(G.W, {
-                            type: G.Sb.H5,
+                            type: G.Tb.H5,
                             title: e.title,
                             ellipsis: !0
                         }, e.title))), s.createElement(G.P, {
@@ -4295,7 +4295,7 @@
                             "data-test-selector": "clips-manager-row-time-created",
                             "data-a-target": "clips-manager-row-time-created",
                             title: t,
-                            transform: G.Rb.Capitalize,
+                            transform: G.Sb.Capitalize,
                             ellipsis: !0
                         }, t))), s.createElement(G.P, {
                             cols: 2
@@ -4461,12 +4461,12 @@
                         })), 0 === this.props.clips.length && !this.props.loading && s.createElement(G.Xa, {
                             display: G.X.Flex,
                             justifyContent: G.Wa.Center,
-                            textAlign: G.Ob.Center,
+                            textAlign: G.Pb.Center,
                             padding: 2,
                             fullWidth: !0,
                             fullHeight: !0
                         }, s.createElement(G.W, {
-                            type: G.Sb.H4,
+                            type: G.Tb.H4,
                             color: G.O.Alt2,
                             "data-test-selector": ye
                         }, Object(w.d)("Create Clips to fill this space with the most memorable moments from your favorite Twitch streams and videos. Just hit the Clip button on the video player to try it out. {learnHowLink} to use Clips.", {
@@ -5236,18 +5236,18 @@
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(c.gc)(n.props), {
+                        }, Object(c.hc)(n.props), {
                             download: n.props.text
                         }), n.renderIcon()) : n.isLink() ? r.createElement("a", a.__assign({
                             href: n.getLinkTarget(),
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(c.gc)(n.props)), n.renderIcon()) : r.createElement("button", a.__assign({
+                        }, Object(c.hc)(n.props)), n.renderIcon()) : r.createElement("button", a.__assign({
                             onClick: n.copyPageUrl,
                             onMouseLeave: n.clearIsCopiedStatus,
                             className: e
-                        }, Object(c.gc)(n.props)), n.renderIcon())
+                        }, Object(c.hc)(n.props)), n.renderIcon())
                     }, n.onShareClickHandler = function() {
                         n.props.onShareClick && n.props.onShareClick(n.props.type)
                     }, n.clearIsCopiedStatus = function() {
@@ -5347,9 +5347,9 @@
                 return a.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(c.Xa, {
                         className: "social-button"
-                    }, r.createElement(c.Vb, {
+                    }, r.createElement(c.Wb, {
                         label: this.getTooltipFromType(),
-                        direction: c.Xb.Bottom
+                        direction: c.Yb.Bottom
                     }, this.renderLink()))
                 }, t
             }(r.Component)

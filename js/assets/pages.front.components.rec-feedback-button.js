@@ -114,20 +114,20 @@
                             padding: {
                                 y: 2
                             },
-                            textAlign: f.Ob.Center
+                            textAlign: f.Pb.Center
                         }, o.createElement(f.Xa, {
                             margin: {
                                 x: 5
                             }
                         }, o.createElement(f.W, {
-                            type: f.Sb.H3,
+                            type: f.Tb.H3,
                             bold: !0,
                             "data-test-selector": "rec-feedback-modal-header"
                         }, Object(r.d)("Not interested? Tell us more...", "RecFeedbackModal")))), o.createElement(f.Cb, {
                             borderBottom: !0,
                             padding: 2
                         }, o.createElement(f.W, {
-                            type: f.Sb.Span,
+                            type: f.Tb.Span,
                             fontSize: f.Ca.Size4
                         }, this.props.feedbackReasons.map(function(t, n) {
                             return o.createElement(f.Xa, {
@@ -203,9 +203,9 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(f.Vb, {
+                        return o.createElement(f.Wb, {
                             label: Object(r.d)("Not interested?", "RecFeedbackButton"),
-                            direction: f.Xb.Right
+                            direction: f.Yb.Right
                         }, o.createElement(f.A, {
                             icon: f.rb.VisibilityHidden,
                             size: f.B.Small,

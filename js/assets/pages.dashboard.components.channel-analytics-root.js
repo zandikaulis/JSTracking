@@ -92,7 +92,7 @@
                             bottom: 1
                         }
                     }, a.createElement(i.W, {
-                        type: i.Sb.H5,
+                        type: i.Tb.H5,
                         bold: !0
                     }, t), n && a.createElement(s.a, {
                         direction: i.v.TopRight
@@ -379,7 +379,7 @@
                         ellipsis: !0
                     }, a.createElement(i.W, {
                         color: i.O.Base,
-                        type: i.Sb.H5,
+                        type: i.Tb.H5,
                         ellipsis: !0
                     }, e.title), a.createElement(i.Xa, {
                         display: i.X.Flex,
@@ -394,7 +394,7 @@
                         },
                         ellipsis: !0
                     }, a.createElement(i.W, {
-                        type: i.Sb.Span
+                        type: i.Tb.Span
                     }, e.curatorName)))))), a.createElement(i.Xa, {
                         display: i.X.Flex,
                         flexGrow: 1,
@@ -414,7 +414,7 @@
                         bold: !0,
                         fontSize: i.Ca.Size5,
                         color: i.O.Alt,
-                        type: i.Sb.Span
+                        type: i.Tb.Span
                     }, Object(r.d)("{views, number}", {
                         views: e.views
                     }, "StreamSummaryClipViews"))))))))
@@ -546,7 +546,7 @@
                             borderRadius: j.x.Small
                         }, s.createElement(j.Cb, {
                             padding: 1,
-                            textAlign: j.Ob.Center
+                            textAlign: j.Pb.Center
                         }, s.createElement(j.W, {
                             noWrap: !0,
                             fontSize: j.Ca.Size5
@@ -681,7 +681,7 @@
                             padding: {
                                 right: 2
                             },
-                            textAlign: j.Ob.Center
+                            textAlign: j.Pb.Center
                         }, s.createElement(j.W, {
                             color: j.O.Alt2,
                             fontSize: j.Ca.Size4
@@ -695,7 +695,7 @@
                             padding: {
                                 right: 2
                             },
-                            textAlign: j.Ob.Center
+                            textAlign: j.Pb.Center
                         }, s.createElement(j.W, {
                             color: j.O.Alt2,
                             fontSize: j.Ca.Size4
@@ -774,7 +774,7 @@
                             t = this.props.urlStore.params;
                         return s.createElement(j.Xa, {
                             position: j.hb.Relative,
-                            zIndex: j.fc.Above
+                            zIndex: j.gc.Above
                         }, s.createElement(W.a, {
                             onOpen: this.handleDatePickerOpen,
                             control: function(n) {
@@ -792,7 +792,7 @@
                                     type: j.Va.Base,
                                     onClick: a
                                 }), s.createElement(j.Xa, {
-                                    textAlign: j.Ob.Center
+                                    textAlign: j.Pb.Center
                                 }, s.createElement(j.W, r.__assign({
                                     color: j.O.Link
                                 }, B, {
@@ -812,7 +812,7 @@
                                 display: j.X.Flex,
                                 alignItems: j.f.Center,
                                 flexDirection: j.Aa.Column,
-                                zIndex: j.fc.Above,
+                                zIndex: j.gc.Above,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 attachRight: !0
@@ -824,7 +824,7 @@
                                 position: j.hb.Relative,
                                 display: j.X.Flex,
                                 background: j.r.Base,
-                                zIndex: j.fc.Above,
+                                zIndex: j.gc.Above,
                                 attachTop: !0
                             }, s.createElement(j.Xa, {
                                 padding: {
@@ -1055,14 +1055,14 @@
                                 left: 1
                             }
                         }, s.createElement(j.W, {
-                            type: j.Sb.H5
+                            type: j.Tb.H5
                         }, this.props.title))), s.createElement(j.Xa, {
-                            textAlign: j.Ob.Right
+                            textAlign: j.Pb.Right
                         }, s.createElement(j.W, {
-                            type: j.Sb.H5,
+                            type: j.Tb.H5,
                             bold: !0
                         }, this.props.revenue), s.createElement(j.W, {
-                            type: j.Sb.H6,
+                            type: j.Tb.H6,
                             color: j.O.Alt2
                         }, Object(u.d)("{lastRevenue} last period", {
                             lastRevenue: this.props.lastRevenue
@@ -1156,12 +1156,12 @@
                             bottom: 1
                         }
                     }, s.createElement(j.Xa, {
-                        textAlign: j.Ob.Right,
+                        textAlign: j.Pb.Right,
                         padding: {
                             x: 2
                         }
                     }, s.createElement(j.W, {
-                        type: j.Sb.H6,
+                        type: j.Tb.H6,
                         bold: !0,
                         color: j.O.Alt2
                     }, Object(u.d)("Estimated Revenue (USD)", "ChannelAnalyticsRevenueBreakdownPanel"))), s.createElement(j.Xa, null, s.createElement(ce, {
@@ -1237,7 +1237,7 @@
                 },
                 Se = function(e) {
                     return s.createElement(j.Xa, r.__assign({
-                        textAlign: j.Ob.Center,
+                        textAlign: j.Pb.Center,
                         padding: {
                             y: 2
                         }
@@ -1245,7 +1245,7 @@
                         display: j.X.Flex,
                         justifyContent: j.Wa.Center
                     }, s.createElement(j.W, {
-                        type: j.Sb.H2
+                        type: j.Tb.H2
                     }, Object(le.a)(e.totalAmount, function(e, t) {
                         switch (e.type) {
                             case "currency":
@@ -1256,42 +1256,42 @@
                                         top: .5,
                                         right: .5
                                     },
-                                    verticalAlign: 0 === t ? j.cc.TextTop : j.cc.Baseline
+                                    verticalAlign: 0 === t ? j.dc.TextTop : j.dc.Baseline
                                 }, s.createElement(j.W, {
                                     color: j.O.Alt2,
                                     fontSize: j.Ca.Size6,
-                                    type: j.Sb.Span
+                                    type: j.Tb.Span
                                 }, e.value));
                             case "integer":
                             case "group":
                                 return s.createElement(j.W, {
                                     key: t,
-                                    type: j.Sb.Span,
+                                    type: j.Tb.Span,
                                     bold: !0
                                 }, e.value);
                             case "decimal":
                             case "fraction":
                                 return s.createElement(j.W, {
                                     key: t,
-                                    type: j.Sb.Span,
+                                    type: j.Tb.Span,
                                     fontSize: j.Ca.Size6,
                                     bold: !0
                                 }, e.value);
                             default:
                                 return s.createElement(j.W, {
                                     key: t,
-                                    type: j.Sb.Span,
+                                    type: j.Tb.Span,
                                     bold: !0
                                 }, e.value)
                         }
                     }, function(e) {
                         return s.createElement(j.W, {
                             key: "key",
-                            type: j.Sb.Span,
+                            type: j.Tb.Span,
                             bold: !0
                         }, e)
                     }))), s.createElement(j.W, {
-                        type: j.Sb.H6
+                        type: j.Tb.H6
                     }, Object(u.d)("Total Estimated Revenue (USD)", "ChannelAnalyticsRevenueBreakdownPanel")))
                 },
                 Ce = function(e) {
@@ -1394,7 +1394,7 @@
                                 bottom: 2
                             }
                         }, s.createElement(j.W, {
-                            type: j.Sb.H4,
+                            type: j.Tb.H4,
                             color: j.O.Alt
                         }, Object(u.d)("Download Subscriber List", "ChannelAnalyticsEmailSubsList"))), s.createElement(j.Cb, {
                             borderBottom: !0
@@ -1542,7 +1542,7 @@
                                 }
                             }, s.createElement(j.Ea, {
                                 label: Object(u.d)("Message Body", "ChannelAnalyticsEmailSubs")
-                            }, s.createElement(j.Pb, {
+                            }, s.createElement(j.Qb, {
                                 onChange: this.handleBodyChange,
                                 rows: 6
                             }))), this.state.requestState === ie.Failed && e)), s.createElement(j.Xa, {
@@ -1597,7 +1597,7 @@
                                 bottom: 2
                             }
                         }, s.createElement(j.W, {
-                            type: j.Sb.H4,
+                            type: j.Tb.H4,
                             color: j.O.Alt
                         }, Object(u.d)("Send Email to Subscribers", "ChannelAnalyticsEmailSubs"))), this.state.requestState === ie.Success ? n : t, s.createElement(we.a, {
                             closeOnBackdropClick: !0
@@ -1732,25 +1732,25 @@
                     }, s.createElement(j.Ja, null, s.createElement(j.P, {
                         cols: 8
                     }, s.createElement(j.Xa, {
-                        textAlign: j.Ob.Right
+                        textAlign: j.Pb.Right
                     }, s.createElement(j.W, {
-                        type: j.Sb.H6,
+                        type: j.Tb.H6,
                         bold: !0,
                         color: j.O.Alt2
                     }, Object(u.d)("Revenue Split", "ChannelAnalyticsSubscribersPanel")))), s.createElement(j.P, {
                         cols: 2
                     }, s.createElement(j.Xa, {
-                        textAlign: j.Ob.Right
+                        textAlign: j.Pb.Right
                     }, s.createElement(j.W, {
-                        type: j.Sb.H6,
+                        type: j.Tb.H6,
                         bold: !0,
                         color: j.O.Alt2
                     }, Object(u.d)("Sub Points", "ChannelAnalyticsSubscribersPanel")))), s.createElement(j.P, {
                         cols: 2
                     }, s.createElement(j.Xa, {
-                        textAlign: j.Ob.Right
+                        textAlign: j.Pb.Right
                     }, s.createElement(j.W, {
-                        type: j.Sb.H6,
+                        type: j.Tb.H6,
                         bold: !0,
                         color: j.O.Alt2
                     }, Object(u.d)("Subscribers", "ChannelAnalyticsSubscribersPanel"))))))
@@ -1778,29 +1778,29 @@
                     }, s.createElement(j.Ja, null, s.createElement(j.P, {
                         cols: 6
                     }, s.createElement(j.Xa, {
-                        textAlign: j.Ob.Left
+                        textAlign: j.Pb.Left
                     }, s.createElement(j.W, {
-                        type: j.Sb.H5,
+                        type: j.Tb.H5,
                         color: j.O.Alt
                     }, e.name))), s.createElement(j.P, {
                         cols: 2
                     }, s.createElement(j.Xa, {
-                        textAlign: j.Ob.Right
+                        textAlign: j.Pb.Right
                     }, s.createElement(j.W, {
-                        type: j.Sb.H5
+                        type: j.Tb.H5
                     }, e.revSplit))), s.createElement(j.P, {
                         cols: 2
                     }, s.createElement(j.Xa, {
-                        textAlign: j.Ob.Right
+                        textAlign: j.Pb.Right
                     }, s.createElement(j.W, {
-                        type: j.Sb.H5,
+                        type: j.Tb.H5,
                         bold: !0
                     }, e.score))), s.createElement(j.P, {
                         cols: 2
                     }, s.createElement(j.Xa, {
-                        textAlign: j.Ob.Right
+                        textAlign: j.Pb.Right
                     }, s.createElement(j.W, {
-                        type: j.Sb.H5,
+                        type: j.Tb.H5,
                         bold: !0
                     }, e.count)))))
                 },
@@ -2481,11 +2481,11 @@
                         ellipsis: !0
                     }, s.createElement(j.W, {
                         color: j.O.Base,
-                        type: j.Sb.H5,
+                        type: j.Tb.H5,
                         ellipsis: !0
                     }, t.startChannelStatus), s.createElement(j.W, {
                         color: j.O.Alt2,
-                        type: j.Sb.Span,
+                        type: j.Tb.Span,
                         ellipsis: !0
                     }, Object(u.d)("{start} - {end, time, short}", {
                         start: Object(u.c)(t.interval.start, {
@@ -2507,7 +2507,7 @@
                         bold: !0,
                         fontSize: j.Ca.Size5,
                         color: j.O.Alt,
-                        type: j.Sb.Span
+                        type: j.Tb.Span
                     }, Ct), Object(u.d)("{statNum, number}", {
                         statNum: function(e) {
                             if (e < 10) return Math.floor(10 * e) / 10;
@@ -2629,7 +2629,7 @@
                             display: j.X.Flex,
                             justifyContent: j.Wa.Between
                         }, s.createElement(j.Xa, null, s.createElement(j.W, {
-                            type: j.Sb.H5,
+                            type: j.Tb.H5,
                             noWrap: !0
                         }, Object(u.d)("{count} streams", {
                             count: s.createElement("strong", null, n)
@@ -2929,9 +2929,9 @@
                     margin: {
                         top: 5
                     },
-                    zIndex: j.fc.Default
-                }, s.createElement(j.Yb, {
-                    childWidth: j.Zb.Medium,
+                    zIndex: j.gc.Default
+                }, s.createElement(j.Zb, {
+                    childWidth: j.ac.Medium,
                     center: !0
                 }, s.createElement("div", {
                     className: "ca-welcome-modal"
@@ -2958,9 +2958,9 @@
                         left: .5
                     }
                 }, s.createElement(j.W, {
-                    type: j.Sb.H4,
+                    type: j.Tb.H4,
                     bold: !0
-                }, Object(u.d)("Welcome to Channel Analytics", "NoAvailableChannelAnalyticsNotice")))), s.createElement(j.bc, null, s.createElement(j.W, {
+                }, Object(u.d)("Welcome to Channel Analytics", "NoAvailableChannelAnalyticsNotice")))), s.createElement(j.cc, null, s.createElement(j.W, {
                     fontSize: j.Ca.Size5
                 }, Object(u.d)("Your stream and revenue stats – all in one place. Stream to get started!", "NoAvailableChannelAnalyticsNotice"))), s.createElement(j.Xa, {
                     padding: {
@@ -3200,7 +3200,7 @@
                             else if (this.props.data.loading) e = s.createElement(j.Xa, {
                             fullHeight: !0,
                             fullWidth: !0,
-                            textAlign: j.Ob.Center,
+                            textAlign: j.Pb.Center,
                             padding: {
                                 y: 4
                             },
@@ -3217,10 +3217,10 @@
                                 width: "100%",
                                 src: a.payout.history.iframeURL
                             }), s.createElement(j.Xa, {
-                                textAlign: j.Ob.Left,
+                                textAlign: j.Pb.Left,
                                 margin: 1
                             }, s.createElement(j.W, {
-                                type: j.Sb.P
+                                type: j.Tb.P
                             }, Object(Qt.d)("Showing all payouts since October 2016. For information regarding payouts before that date, please <x:link>contact support</x:link>.", {
                                 "x:link": function(e) {
                                     return s.createElement(j.U, {
@@ -3229,15 +3229,15 @@
                                     }, e)
                                 }
                             }, "ChannelAnalyticsPayoutsPage"))), s.createElement(j.Xa, {
-                                textAlign: j.Ob.Left,
+                                textAlign: j.Pb.Left,
                                 margin: 1
                             }, s.createElement(j.W, {
-                                type: j.Sb.P
+                                type: j.Tb.P
                             }, Object(Qt.d)("This page shows your earnings from Twitch for each pay period. These numbers may not exactly match your revenue on the Channel Analytics page, as the latter is an estimate of your earnings.", "ChannelAnalyticsPayoutsPage"))), s.createElement(j.Xa, {
-                                textAlign: j.Ob.Left,
+                                textAlign: j.Pb.Left,
                                 margin: 1
                             }, s.createElement(j.W, {
-                                type: j.Sb.P,
+                                type: j.Tb.P,
                                 bold: !0
                             }, Object(Qt.d)("Have a new payout method you would like to use? <x:link>Change your payout method.</x:link>", {
                                 "x:link": function(e) {
@@ -5384,7 +5384,7 @@
                         }, N), s.createElement(p.Pa, {
                             flexGrow: 1,
                             flexDirection: p.Aa.Column,
-                            textAlign: p.Ob.Center
+                            textAlign: p.Pb.Center
                         }, s.createElement(p.U, {
                             onClick: this.props.onClick,
                             to: this.props.linkTo,
@@ -5403,9 +5403,9 @@
                             ellipsis: !0
                         }, s.createElement(p.W, {
                             className: "top-stats-tab__title",
-                            type: p.Sb.H3
+                            type: p.Tb.H3
                         }, this.props.title, this.renderTrendIndicator()), s.createElement(p.W, {
-                            type: p.Sb.H6,
+                            type: p.Tb.H6,
                             color: p.O.Alt2,
                             title: this.props.subtitle,
                             ellipsis: !0
@@ -5893,7 +5893,7 @@
                                     return s.createElement(p.W, {
                                         className: "top-stats-tab-revenue__currency",
                                         fontSize: p.Ca.Size5,
-                                        type: p.Sb.Span,
+                                        type: p.Tb.Span,
                                         key: t
                                     }, e.value);
                                 case "fraction":
@@ -5901,7 +5901,7 @@
                                     return s.createElement(p.W, {
                                         className: "top-stats-tab-revenue__fraction",
                                         fontSize: p.Ca.Size4,
-                                        type: p.Sb.Span,
+                                        type: p.Tb.Span,
                                         key: t
                                     }, e.value);
                                 default:

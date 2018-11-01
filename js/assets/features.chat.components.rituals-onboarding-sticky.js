@@ -280,13 +280,13 @@
                             }
                         }, a.createElement(g.W, {
                             bold: !0,
-                            type: g.Sb.H5
+                            type: g.Tb.H5
                         }, Object(o.d)("Introducing: New Chatter Announcements!", "RitualsOnboardingSticky"))), a.createElement(g.Xa, {
                             margin: {
                                 bottom: .5
                             }
                         }, a.createElement(g.W, {
-                            type: g.Sb.Span
+                            type: g.Tb.Span
                         }, Object(o.d)("New chatter announcements are now active in your channel, making it easier to welcome new people.", "RitualsOnboardingSticky")), a.createElement(g.W, null, a.createElement(g.U, {
                             onClick: this.props.onClick,
                             to: "/" + this.props.channelLogin + "/dashboard/settings",
@@ -312,7 +312,7 @@
                             }
                         }, a.createElement(g.W, {
                             fontSize: g.Ca.Size8,
-                            type: g.Sb.Span
+                            type: g.Tb.Span
                         }, Object(o.d)("You see this because you own this channel", "RitualsOnboardingSticky")))), a.createElement(g.Cb, {
                             attachRight: !0,
                             attachTop: !0,
@@ -360,10 +360,10 @@
                     }, n
                 }(a.Component);
 
-            function S(e) {
+            function D(e) {
                 return e.currentUserID !== e.channelID || !Object(k.a)()
             }
-            var D = Object(r.compose)(Object(s.connect)(function(e) {
+            var S = Object(r.compose)(Object(s.connect)(function(e) {
                 var n = Object(m.e)(e);
                 return {
                     currentUserID: n && n.id
@@ -376,7 +376,7 @@
                         }
                     }
                 },
-                skip: S
+                skip: D
             }), Object(c.a)(function(e) {
                 return {
                     query: p,
@@ -388,13 +388,13 @@
                     mutator: function(e, n) {
                         return n.channel.settings.isRitualsEnabled = e.data.is_rituals_enabled, n
                     },
-                    skip: S(e)
+                    skip: D(e)
                 }
             }))(y);
             t.d(n, "RitualsOnboardingStickyContainer", function() {
                 return y
             }), t.d(n, "RitualsOnboardingSticky", function() {
-                return D
+                return S
             })
         },
         wo8Z: function(e, n, t) {

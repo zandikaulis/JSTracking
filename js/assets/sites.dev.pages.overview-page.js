@@ -70,7 +70,7 @@
                         }, r.createElement(v.Xa, {
                             className: "tenant-panel__info",
                             display: v.X.Block,
-                            textAlign: v.Ob.Center,
+                            textAlign: v.Pb.Center,
                             margin: {
                                 y: 1
                             },
@@ -82,12 +82,12 @@
                                 bottom: 2
                             }
                         }, r.createElement(v.W, {
-                            type: v.Sb.H2,
+                            type: v.Tb.H2,
                             className: "tenant-panel__count",
                             color: v.O.Alt2
                         }, this.props.tenant.count)), r.createElement(v.W, {
-                            type: v.Sb.H3,
-                            transform: v.Rb.Uppercase,
+                            type: v.Tb.H3,
+                            transform: v.Sb.Uppercase,
                             className: "tenant-panel__name",
                             color: v.O.Alt2
                         }, this.props.tenant.name)), r.createElement(v.Cb, {
@@ -103,7 +103,7 @@
                             onClick: Object(g.c)(this.trackLabel()),
                             linkTo: this.props.tenant.entryUrl
                         }, r.createElement(v.W, {
-                            transform: v.Rb.Uppercase
+                            transform: v.Sb.Uppercase
                         }, this.buttonText()))))
                     }, e.prototype.trackLabel = function() {
                         var t = this.props.tenant.name.toLowerCase();
@@ -287,7 +287,7 @@
                         })
                     }, e
                 }(r.Component),
-                O = Object(o.compose)(Object(l.b)("DevOverviewPage", {
+                j = Object(o.compose)(Object(l.b)("DevOverviewPage", {
                     destination: p.a.DevSiteOverview
                 }), Object(i.a)({
                     location: u.PageviewLocation.DevSiteOverview
@@ -299,7 +299,7 @@
             n.d(e, "DevOverviewPageContainer", function() {
                 return C
             }), n.d(e, "DevOverviewPage", function() {
-                return O
+                return j
             })
         },
         "V+GM": function(t, e, n) {

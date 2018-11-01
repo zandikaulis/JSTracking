@@ -914,7 +914,7 @@
                         }).then(function(t) {
                             e.countryCode = t.data.requestInfo.countryCode
                         }).catch(function(t) {
-                            e.logger.error(t, "Failed to get country code")
+                            e.logger.warn(t, "Failed to get country code")
                         })
                     }, e.prototype.getSearchResults = function(e) {
                         var t = this,
@@ -931,7 +931,7 @@
                                 results: JSON.parse(e.data.search.result)
                             }
                         }).catch(function(e) {
-                            return t.logger.error(e, "Failed to get search results"), e
+                            return t.logger.warn(e, "Failed to get search results"), e
                         })
                     }, e.prototype.getTopResult = function(e, t) {
                         return {
@@ -1216,8 +1216,8 @@
                 v = n("y5D0"),
                 y = n("kRBY"),
                 _ = n("yR8l"),
-                S = n("geRD"),
-                k = n("Ue10"),
+                k = n("geRD"),
+                S = n("Ue10"),
                 w = (n("tftU"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -1229,16 +1229,16 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this.props.followedChannel.profileImageURL;
-                        return e || (e = "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_150x150.png"), s.createElement(k.U, {
+                        return e || (e = "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_150x150.png"), s.createElement(S.U, {
                             className: "followed-channel-link",
                             to: "/subs/" + this.props.followedChannel.login,
                             onClick: this.handleClick
-                        }, s.createElement(k.Xa, {
-                            textAlign: k.Ob.Center,
+                        }, s.createElement(S.Xa, {
+                            textAlign: S.Pb.Center,
                             padding: {
                                 bottom: 1
                             }
-                        }, s.createElement(k.Pa, {
+                        }, s.createElement(S.Pa, {
                             margin: {
                                 bottom: 1
                             }
@@ -1246,14 +1246,14 @@
                             className: "followed-channel-link__avatar",
                             src: e,
                             alt: this.props.followedChannel.displayName
-                        })), s.createElement(k.Pa, {
+                        })), s.createElement(S.Pa, {
                             margin: {
                                 top: 0,
                                 bottom: 1
                             }
-                        }, s.createElement(k.W, {
+                        }, s.createElement(S.W, {
                             className: "followed-channel-link__name",
-                            color: k.O.Link,
+                            color: S.O.Link,
                             ellipsis: !0,
                             noWrap: !0
                         }, this.props.followedChannel.displayName))))
@@ -1274,7 +1274,7 @@
                             e.preventDefault(), t.props.login()
                         }, t.renderFollowedChannels = function() {
                             var e = t.props.data;
-                            if (e.loading || e.error) return s.createElement(k.gb, {
+                            if (e.loading || e.error) return s.createElement(S.gb, {
                                 key: "followed-channels-placeholder-1",
                                 height: 96
                             });
@@ -1291,7 +1291,7 @@
                                     key: "followed-channel-link-" + e.id,
                                     onClick: t.onFollowClick
                                 })
-                            })), n.length > 0 ? n : s.createElement(k.W, {
+                            })), n.length > 0 ? n : s.createElement(S.W, {
                                 key: "followed-channels_empty"
                             }, t.messages.emptyFollows)
                         }, t.onFollowClick = function(e, t) {
@@ -1301,12 +1301,12 @@
                                 clickthroughLocation: "followed"
                             })
                         }, t.getShowMore = function() {
-                            return !t.props.data.loading && !t.props.data.error && t.props.data.currentUser && t.props.data.currentUser.follows && t.props.data.currentUser.follows.pageInfo && t.props.data.currentUser.follows.pageInfo.hasNextPage ? s.createElement(k.Xa, {
+                            return !t.props.data.loading && !t.props.data.error && t.props.data.currentUser && t.props.data.currentUser.follows && t.props.data.currentUser.follows.pageInfo && t.props.data.currentUser.follows.pageInfo.hasNextPage ? s.createElement(S.Xa, {
                                 className: "subs-landing-followed-channels__show-more",
                                 margin: {
                                     top: 1
                                 }
-                            }, s.createElement(k.z, {
+                            }, s.createElement(S.z, {
                                 fullWidth: !0,
                                 onClick: t.onShowMore
                             }, t.messages.showMore)) : null
@@ -1315,34 +1315,34 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return this.props.isLoggedIn ? s.createElement(k.Xa, {
+                        return this.props.isLoggedIn ? s.createElement(S.Xa, {
                             className: "subs-landing-followed-channels",
-                            display: k.X.Flex,
-                            alignItems: k.f.Center,
-                            flexDirection: k.Aa.Column,
+                            display: S.X.Flex,
+                            alignItems: S.f.Center,
+                            flexDirection: S.Aa.Column,
                             fullWidth: !0
-                        }, s.createElement(k.Pa, {
+                        }, s.createElement(S.Pa, {
                             margin: {
                                 top: 3,
                                 bottom: 2
                             }
-                        }, s.createElement(k.W, {
+                        }, s.createElement(S.W, {
                             bold: !0,
                             className: "subs-landing-followed-channels__title",
-                            color: k.O.Link,
-                            type: k.Sb.H3
-                        }, this.messages.title)), s.createElement(k.Yb, {
+                            color: S.O.Link,
+                            type: S.Tb.H3
+                        }, this.messages.title)), s.createElement(S.Zb, {
                             center: !0,
-                            gutterSize: k.ac.Small
-                        }, this.renderFollowedChannels()), this.getShowMore()) : s.createElement(k.Xa, {
-                            textAlign: k.Ob.Center,
+                            gutterSize: S.bc.Small
+                        }, this.renderFollowedChannels()), this.getShowMore()) : s.createElement(S.Xa, {
+                            textAlign: S.Pb.Center,
                             margin: {
                                 top: 3
                             }
-                        }, s.createElement(k.z, {
+                        }, s.createElement(S.z, {
                             onClick: this.onLoginClick,
                             "data-a-target": "login-button"
-                        }, this.messages.login), s.createElement(k.W, null, this.messages.loginTitle))
+                        }, this.messages.login), s.createElement(S.W, null, this.messages.loginTitle))
                     }, t = i.__decorate([Object(_.a)(T, {
                         options: function() {
                             return {
@@ -1363,7 +1363,7 @@
                                         updateQuery: function(e, t) {
                                             var n = t.fetchMoreResult,
                                                 r = [];
-                                            return e.currentUser && n.currentUser ? (e.currentUser.follows && e.currentUser.follows.edges && n.currentUser.follows && n.currentUser.follows.edges ? r = Object(S.c)(e.currentUser.follows.edges, n.currentUser.follows.edges) : !e.currentUser.follows && n.currentUser.follows && n.currentUser.follows.edges ? r = n.currentUser.follows.edges : e.currentUser.follows && e.currentUser.follows.edges && !n.currentUser.follows && (r = e.currentUser.follows.edges), {
+                                            return e.currentUser && n.currentUser ? (e.currentUser.follows && e.currentUser.follows.edges && n.currentUser.follows && n.currentUser.follows.edges ? r = Object(k.c)(e.currentUser.follows.edges, n.currentUser.follows.edges) : !e.currentUser.follows && n.currentUser.follows && n.currentUser.follows.edges ? r = n.currentUser.follows.edges : e.currentUser.follows && e.currentUser.follows.edges && !n.currentUser.follows && (r = e.currentUser.follows.edges), {
                                                 currentUser: i.__assign({}, n.currentUser, {
                                                     follows: i.__assign({}, n.currentUser.follows, {
                                                         edges: r
@@ -1408,40 +1408,40 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e;
-                        return e = this.props.isWaiting ? s.createElement(k.Za, {
+                        return e = this.props.isWaiting ? s.createElement(S.Za, {
                             fillContent: !0
-                        }) : this.props.isErrored ? this.getErrorMessage() : this.props.streamerResults && this.props.streamerResults.totalHits > 0 ? this.getStreamerResultContent() : this.getNoResultsMessage(), s.createElement(k.Cb, {
+                        }) : this.props.isErrored ? this.getErrorMessage() : this.props.streamerResults && this.props.streamerResults.totalHits > 0 ? this.getStreamerResultContent() : this.getNoResultsMessage(), s.createElement(S.Cb, {
                             elevation: 4
                         }, s.createElement("div", {
                             className: "streamer-search-panel " + (this.props.isOpen ? "" : "streamer-search-panel--closed"),
                             tabIndex: 0,
                             onKeyDown: this.props.onKeyDown
-                        }, s.createElement(k.Cb, {
+                        }, s.createElement(S.Cb, {
                             className: "streamer-search-panel__results",
-                            background: k.r.Base,
-                            position: k.hb.Relative,
-                            overflow: k.cb.Hidden,
-                            display: k.X.Block,
+                            background: S.r.Base,
+                            position: S.hb.Relative,
+                            overflow: S.cb.Hidden,
+                            display: S.X.Block,
                             attachLeft: !0,
                             attachRight: !0,
                             attachBottom: !0,
                             fullHeight: !0
-                        }, s.createElement(k.Pa, {
-                            overflow: k.cb.Hidden,
-                            position: k.hb.Relative,
+                        }, s.createElement(S.Pa, {
+                            overflow: S.cb.Hidden,
+                            position: S.hb.Relative,
                             fullHeight: !0
                         }, s.createElement(d.b, {
                             suppressScrollX: !0
-                        }, s.createElement(k.Xa, null, e, s.createElement(d.a, {
+                        }, s.createElement(S.Xa, null, e, s.createElement(d.a, {
                             enabled: !this.props.isWaiting && this.props.isOpen,
                             loadMore: this.props.loadMore
                         })))))))
                     }, t.prototype.getStreamerResultContent = function() {
                         var e = this;
-                        if (!this.props.streamerResults) return s.createElement(k.Xa, null);
+                        if (!this.props.streamerResults) return s.createElement(S.Xa, null);
                         var t = this.props.streamerResults.results.map(function(t) {
                             var n = Object(H.a)(t.login || "", t.name || "");
-                            return s.createElement(k.Ua, {
+                            return s.createElement(S.Ua, {
                                 linkTo: "/subs/" + t.login,
                                 tabIndex: -1,
                                 "data-ts_selectable": !0,
@@ -1450,34 +1450,34 @@
                                 "data-streamer_id": t.id,
                                 "data-streamer_login": t.login,
                                 onClick: e.onStreamerClick
-                            }, s.createElement(k.Xa, {
+                            }, s.createElement(S.Xa, {
                                 padding: {
                                     y: .5,
                                     x: 1
                                 }
-                            }, s.createElement(k.G, {
+                            }, s.createElement(S.G, {
                                 row: !0
-                            }, s.createElement(k.I, {
+                            }, s.createElement(S.I, {
                                 alt: t.thumbnailAltText,
                                 src: t.thumbnail ? t.thumbnail : "",
-                                size: k.J.Size4,
-                                aspect: k.p.Aspect1x1
-                            }), s.createElement(k.H, {
-                                overflow: k.cb.Hidden
-                            }, s.createElement(k.Pa, {
+                                size: S.J.Size4,
+                                aspect: S.p.Aspect1x1
+                            }), s.createElement(S.H, {
+                                overflow: S.cb.Hidden
+                            }, s.createElement(S.Pa, {
                                 padding: {
                                     x: 1
                                 }
-                            }, s.createElement(k.W, {
-                                type: k.Sb.H5,
+                            }, s.createElement(S.W, {
+                                type: S.Tb.H5,
                                 ellipsis: !0
                             }, n))))))
                         });
-                        return s.createElement(k.Xa, null, t)
+                        return s.createElement(S.Xa, null, t)
                     }, t.prototype.getErrorMessage = function() {
-                        return s.createElement(k.W, null, Object(o.d)("Error", "StreamerSearchResultPanel"))
+                        return s.createElement(S.W, null, Object(o.d)("Error", "StreamerSearchResultPanel"))
                     }, t.prototype.getNoResultsMessage = function() {
-                        return s.createElement(k.W, null, Object(o.d)("No Results", "StreamerSearchResultPanel"))
+                        return s.createElement(S.W, null, Object(o.d)("No Results", "StreamerSearchResultPanel"))
                     }, t
                 }(s.Component)),
                 I = (n("bfDQ"), function(e) {
@@ -1488,31 +1488,31 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(k.Xa, {
+                        return s.createElement(S.Xa, {
                             margin: {
                                 top: 2
                             },
-                            display: k.X.Flex,
-                            justifyContent: k.Wa.Center,
+                            display: S.X.Flex,
+                            justifyContent: S.Wa.Center,
                             fullWidth: !0
-                        }, s.createElement(k.Pa, {
+                        }, s.createElement(S.Pa, {
                             fullWidth: !0,
-                            zIndex: k.fc.Above,
-                            position: k.hb.Relative
+                            zIndex: S.gc.Above,
+                            position: S.hb.Relative
                         }, s.createElement("div", {
                             className: this.props.isOpen ? "streamer-search__container streamer-search__container--open" : "streamer-search__container"
                         }, s.createElement(L.a, {
                             onClickOut: this.props.onClickOut
-                        }, s.createElement(k.tb, {
+                        }, s.createElement(S.tb, {
                             onChange: this.handleChange,
                             onFocus: this.props.onFocus,
                             onKeyDown: this.props.onKeyDown,
                             placeholder: Object(o.d)("Search for a Streamer", "StreamerSearch"),
                             id: "streamer-search-input"
-                        }), s.createElement(k.u, {
-                            direction: k.v.BottomCenter,
+                        }), s.createElement(S.u, {
+                            direction: S.v.BottomCenter,
                             noTail: !0,
-                            size: k.w.ExtraLarge,
+                            size: S.w.ExtraLarge,
                             show: this.props.isOpen
                         }, s.createElement(U, {
                             isOpen: this.props.isOpen,
@@ -1711,146 +1711,146 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive(), o.p.setPageTitle("Subscriptions")
                     }, t.prototype.render = function() {
-                        return s.createElement(k.Xa, {
+                        return s.createElement(S.Xa, {
                             className: "subs-landing-page",
                             fullHeight: !0,
-                            display: k.X.Flex,
-                            justifyContent: k.Wa.Center
-                        }, s.createElement(k.Pa, {
+                            display: S.X.Flex,
+                            justifyContent: S.Wa.Center
+                        }, s.createElement(S.Pa, {
                             fullWidth: !0
                         }, s.createElement(d.b, {
                             suppressScrollX: !0
-                        }, s.createElement(k.Xa, {
+                        }, s.createElement(S.Xa, {
                             fullWidth: !0,
-                            display: k.X.Flex,
-                            justifyContent: k.Wa.Center
-                        }, s.createElement(k.Xa, {
+                            display: S.X.Flex,
+                            justifyContent: S.Wa.Center
+                        }, s.createElement(S.Xa, {
                             className: "subs-landing-page-contents",
-                            textAlign: k.Ob.Center,
-                            display: k.X.Flex,
-                            justifyContent: k.Wa.Center,
-                            alignItems: k.f.Center,
-                            flexWrap: k.Ba.NoWrap,
-                            flexDirection: k.Aa.Column,
+                            textAlign: S.Pb.Center,
+                            display: S.X.Flex,
+                            justifyContent: S.Wa.Center,
+                            alignItems: S.f.Center,
+                            flexWrap: S.Ba.NoWrap,
+                            flexDirection: S.Aa.Column,
                             padding: {
                                 x: 2
                             },
                             fullHeight: !0
-                        }, s.createElement(k.Pa, {
+                        }, s.createElement(S.Pa, {
                             margin: {
                                 top: 4
                             }
-                        }, s.createElement(k.W, {
-                            type: k.Sb.H2,
-                            color: k.O.Link,
+                        }, s.createElement(S.W, {
+                            type: S.Tb.H2,
+                            color: S.O.Link,
                             bold: !0
-                        }, this.messages.title)), s.createElement(k.Pa, {
+                        }, this.messages.title)), s.createElement(S.Pa, {
                             margin: {
                                 top: 2
                             },
                             className: "subs-landing-page-contents__paragraph"
-                        }, s.createElement(k.W, {
-                            type: k.Sb.P,
-                            fontSize: k.Ca.Size5
-                        }, this.messages.info)), s.createElement(k.Pa, {
+                        }, s.createElement(S.W, {
+                            type: S.Tb.P,
+                            fontSize: S.Ca.Size5
+                        }, this.messages.info)), s.createElement(S.Pa, {
                             margin: {
                                 top: 3
                             },
                             className: "subs-landing-page-contents__heading"
-                        }, s.createElement(k.W, {
-                            type: k.Sb.H3,
-                            color: k.O.Link,
+                        }, s.createElement(S.W, {
+                            type: S.Tb.H3,
+                            color: S.O.Link,
                             bold: !0,
-                            fontSize: k.Ca.Size4
-                        }, this.messages.searchTitle)), s.createElement(k.Pa, {
+                            fontSize: S.Ca.Size4
+                        }, this.messages.searchTitle)), s.createElement(S.Pa, {
                             margin: {
                                 top: 2
                             },
                             className: "subs-landing-page-contents__paragraph"
-                        }, s.createElement(k.W, {
-                            type: k.Sb.P,
-                            fontSize: k.Ca.Size5
-                        }, this.messages.searchInfo)), s.createElement(j, null), s.createElement(E, null), s.createElement(k.Xa, {
+                        }, s.createElement(S.W, {
+                            type: S.Tb.P,
+                            fontSize: S.Ca.Size5
+                        }, this.messages.searchInfo)), s.createElement(j, null), s.createElement(E, null), s.createElement(S.Xa, {
                             className: "subs-landing-page-contents__section",
-                            display: k.X.Flex,
-                            justifyContent: k.Wa.Center,
-                            flexWrap: k.Ba.Wrap
-                        }, s.createElement(k.Xa, {
+                            display: S.X.Flex,
+                            justifyContent: S.Wa.Center,
+                            flexWrap: S.Ba.Wrap
+                        }, s.createElement(S.Xa, {
                             className: "subs-landing-page-contents__section-info",
-                            display: k.X.Flex,
-                            justifyContent: k.Wa.Center,
-                            alignItems: k.f.Center,
-                            flexDirection: k.Aa.Column,
+                            display: S.X.Flex,
+                            justifyContent: S.Wa.Center,
+                            alignItems: S.f.Center,
+                            flexDirection: S.Aa.Column,
                             margin: {
                                 x: 3
                             }
-                        }, s.createElement(k.Pa, {
+                        }, s.createElement(S.Pa, {
                             margin: {
                                 top: 3
                             },
                             className: "subs-landing-page-contents__heading"
-                        }, s.createElement(k.W, {
-                            type: k.Sb.H3,
-                            color: k.O.Link,
+                        }, s.createElement(S.W, {
+                            type: S.Tb.H3,
+                            color: S.O.Link,
                             bold: !0,
-                            fontSize: k.Ca.Size4
-                        }, this.messages.perksTitle)), s.createElement(k.Pa, {
+                            fontSize: S.Ca.Size4
+                        }, this.messages.perksTitle)), s.createElement(S.Pa, {
                             margin: {
                                 top: 2
                             },
                             className: "subs-landing-page-contents__paragraph"
-                        }, s.createElement(k.W, {
-                            type: k.Sb.P,
-                            fontSize: k.Ca.Size5
-                        }, this.messages.perksInfo))), s.createElement(k.Xa, {
+                        }, s.createElement(S.W, {
+                            type: S.Tb.P,
+                            fontSize: S.Ca.Size5
+                        }, this.messages.perksInfo))), s.createElement(S.Xa, {
                             margin: {
                                 top: 2
                             },
                             className: "subs-landing-page-contents__image"
                         }, s.createElement("img", {
                             src: l.a
-                        }))), s.createElement(k.Xa, {
+                        }))), s.createElement(S.Xa, {
                             className: "subs-landing-page-contents__section",
-                            display: k.X.Flex,
-                            justifyContent: k.Wa.Center,
-                            flexWrap: k.Ba.Wrap,
+                            display: S.X.Flex,
+                            justifyContent: S.Wa.Center,
+                            flexWrap: S.Ba.Wrap,
                             margin: {
                                 bottom: 2
                             }
-                        }, s.createElement(k.Xa, {
+                        }, s.createElement(S.Xa, {
                             margin: {
                                 top: 2
                             },
                             className: "subs-landing-page-contents__image"
                         }, s.createElement("img", {
                             src: u.a
-                        })), s.createElement(k.Xa, {
+                        })), s.createElement(S.Xa, {
                             className: "subs-landing-page__section-info",
-                            display: k.X.Flex,
-                            justifyContent: k.Wa.Center,
-                            alignItems: k.f.Center,
-                            flexDirection: k.Aa.Column,
+                            display: S.X.Flex,
+                            justifyContent: S.Wa.Center,
+                            alignItems: S.f.Center,
+                            flexDirection: S.Aa.Column,
                             margin: {
                                 x: 3
                             }
-                        }, s.createElement(k.Pa, {
+                        }, s.createElement(S.Pa, {
                             margin: {
                                 top: 3
                             },
                             className: "subs-landing-page-contents__heading"
-                        }, s.createElement(k.W, {
-                            type: k.Sb.H3,
-                            color: k.O.Link,
+                        }, s.createElement(S.W, {
+                            type: S.Tb.H3,
+                            color: S.O.Link,
                             bold: !0,
-                            fontSize: k.Ca.Size4
-                        }, this.messages.emotesTitle)), s.createElement(k.Pa, {
+                            fontSize: S.Ca.Size4
+                        }, this.messages.emotesTitle)), s.createElement(S.Pa, {
                             margin: {
                                 top: 2
                             },
                             className: "subs-landing-page-contents__paragraph"
-                        }, s.createElement(k.W, {
-                            type: k.Sb.P,
-                            fontSize: k.Ca.Size5
+                        }, s.createElement(S.W, {
+                            type: S.Tb.P,
+                            fontSize: S.Ca.Size5
                         }, this.messages.emotesInfo)))))))))
                     }, t = i.__decorate([Object(g.b)("SubsLandingPage", {
                         destination: h.a.SubsLandingPage

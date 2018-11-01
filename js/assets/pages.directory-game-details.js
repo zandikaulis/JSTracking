@@ -1132,11 +1132,11 @@
                         }))), r.createElement(C.P, {
                             cols: 8
                         }, r.createElement(C.W, {
-                            type: C.Sb.P,
+                            type: C.Tb.P,
                             fontSize: C.Ca.Size4,
                             title: l
                         }, l), r.createElement(C.W, {
-                            type: C.Sb.P,
+                            type: C.Tb.P,
                             color: C.O.Alt2,
                             title: s
                         }, s), r.createElement(C.Xa, {
@@ -1151,13 +1151,13 @@
                         }, r.createElement(y.a, {
                             onClickBuyNow: this.onBuyInGameContentNow,
                             options: c
-                        })), r.createElement(C.bc, null, r.createElement(k, {
+                        })), r.createElement(C.cc, null, r.createElement(k, {
                             source: a || t
                         }))))))
                     }, t
                 }(r.Component),
-                S = Object(g.b)("FeaturedContent")(E),
-                N = function(e) {
+                N = Object(g.b)("FeaturedContent")(E),
+                S = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1175,7 +1175,7 @@
                         }, this.props.children)
                     }, t
                 }(r.Component),
-                D = Object(g.b)("GameDetailsSection")(N),
+                D = Object(g.b)("GameDetailsSection")(S),
                 O = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -1188,7 +1188,7 @@
                                 bottom: 1
                             }
                         }, r.createElement(C.W, {
-                            type: C.Sb.H3
+                            type: C.Tb.H3
                         }, this.props.title))
                     }, t
                 }(r.Component),
@@ -1204,7 +1204,7 @@
                             t = this.props.contentList;
                         if (0 === t.length) return null;
                         var n = t.map(function(t, n) {
-                            return r.createElement(S, {
+                            return r.createElement(N, {
                                 content: t,
                                 countryCode: e.props.countryCode,
                                 game: e.props.game,
@@ -1325,7 +1325,7 @@
                                 channel: r.createElement(C.W, {
                                     key: "game-details-bold",
                                     bold: !0,
-                                    type: C.Sb.Span
+                                    type: C.Tb.Span
                                 }, this.props.referrer.displayName),
                                 "x:link": this.renderSharedRevenueLink
                             }, "GameDetailsBox");
@@ -1407,7 +1407,7 @@
                                     key: t + "audio",
                                     cols: 3
                                 }, r.createElement(C.Cb, {
-                                    textAlign: C.Ob.Center
+                                    textAlign: C.Pb.Center
                                 }, e.hasAudio && r.createElement(C.qb, {
                                     asset: C.rb.Check,
                                     type: C.sb.Success
@@ -1415,7 +1415,7 @@
                                     key: t + "int",
                                     cols: 3
                                 }, r.createElement(C.Cb, {
-                                    textAlign: C.Ob.Center
+                                    textAlign: C.Pb.Center
                                 }, e.hasInterface && r.createElement(C.qb, {
                                     asset: C.rb.Check,
                                     type: C.sb.Success
@@ -1423,7 +1423,7 @@
                                     key: t + "subs",
                                     cols: 3
                                 }, r.createElement(C.Cb, {
-                                    textAlign: C.Ob.Center
+                                    textAlign: C.Pb.Center
                                 }, e.hasSubtitles && r.createElement(C.qb, {
                                     asset: C.rb.Check,
                                     type: C.sb.Success
@@ -1455,7 +1455,7 @@
                             }
                         }, r.createElement(F, {
                             title: Object(l.d)("Description", "DirectoryGameDetailsPage")
-                        }), r.createElement(C.bc, null, r.createElement(k, {
+                        }), r.createElement(C.cc, null, r.createElement(k, {
                             source: t.description
                         }))), r.createElement(C.Xa, {
                             margin: {
@@ -1463,7 +1463,7 @@
                             }
                         }, r.createElement(F, {
                             title: Object(l.d)("Features", "DirectoryGameDetailsPage")
-                        }), r.createElement(C.bc, null, r.createElement("ul", null, s))), r.createElement(C.Cb, {
+                        }), r.createElement(C.cc, null, r.createElement("ul", null, s))), r.createElement(C.Cb, {
                             margin: {
                                 top: 4
                             },
@@ -1487,7 +1487,7 @@
                                 bottom: 1
                             }
                         }, r.createElement(C.W, {
-                            type: C.Sb.H4,
+                            type: C.Tb.H4,
                             bold: !0
                         }, Object(l.d)("Minimum", "DirectoryGameDetailsPage"))), d, r.createElement(C.Xa, {
                             padding: {
@@ -1495,7 +1495,7 @@
                                 bottom: 1
                             }
                         }, r.createElement(C.W, {
-                            type: C.Sb.H4,
+                            type: C.Tb.H4,
                             bold: !0
                         }, Object(l.d)("Recommended", "DirectoryGameDetailsPage"))), u), r.createElement(C.Xa, {
                             margin: {
@@ -1511,17 +1511,17 @@
                             cols: 3
                         }, r.createElement(C.Cb, {
                             color: C.O.Alt2,
-                            textAlign: C.Ob.Center
+                            textAlign: C.Pb.Center
                         }, Object(l.d)("Audio", "DirectoryGameDetailsPage"))), r.createElement(C.P, {
                             cols: 3
                         }, r.createElement(C.Cb, {
                             color: C.O.Alt2,
-                            textAlign: C.Ob.Center
+                            textAlign: C.Pb.Center
                         }, Object(l.d)("Interface", "DirectoryGameDetailsPage"))), r.createElement(C.P, {
                             cols: 3
                         }, r.createElement(C.Cb, {
                             color: C.O.Alt2,
-                            textAlign: C.Ob.Center
+                            textAlign: C.Pb.Center
                         }, Object(l.d)("Subtitles", "DirectoryGameDetailsPage"))), r.createElement(C.P, {
                             cols: 12
                         }, r.createElement(C.Cb, {
@@ -1560,9 +1560,9 @@
                 j = Object(g.b)("GameInfoSection")(G),
                 A = n("/MKj"),
                 B = n("fvjX"),
-                U = n("aCAx"),
-                X = n("cZKs"),
-                q = function(e) {
+                T = n("aCAx"),
+                U = n("cZKs"),
+                X = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1575,17 +1575,17 @@
                             background: C.r.Base
                         }, r.createElement("img", {
                             src: this.props.screenshotURL
-                        }), r.createElement(X.a, {
+                        }), r.createElement(U.a, {
                             closeOnBackdropClick: !0,
                             closeOnPageNavigation: !0
                         }))
                     }, t
                 }(r.Component);
-            var T = Object(B.compose)(Object(A.connect)(null, function(e) {
+            var q = Object(B.compose)(Object(A.connect)(null, function(e) {
                     return Object(B.bindActionCreators)({
-                        closeModal: U.c
+                        closeModal: T.c
                     }, e)
-                }))(q),
+                }))(X),
                 V = n("2rRr"),
                 W = n("eFQ3"),
                 M = Object(g.b)("VideoEmbed", {
@@ -1684,7 +1684,7 @@
                     return Object(B.bindActionCreators)({
                         showImageViewerModal: function(e) {
                             var t = i.__rest(e, []);
-                            return Object(U.d)(T, t)
+                            return Object(T.d)(q, t)
                         }
                     }, e)
                 })(H),
@@ -1732,7 +1732,7 @@
                                     right: 1
                                 },
                                 position: C.hb.Absolute,
-                                textAlign: C.Ob.Right
+                                textAlign: C.Pb.Right
                             }, p)
                         }
                         var f = o ? r.createElement(C.o, {
@@ -1755,12 +1755,12 @@
                         }, r.createElement(C.Xa, {
                             className: "in-game-content__info-header"
                         }, r.createElement(C.W, {
-                            type: C.Sb.P,
+                            type: C.Tb.P,
                             fontSize: C.Ca.Size5,
                             bold: !0,
                             title: c
                         }, c), r.createElement(C.W, {
-                            type: C.Sb.P,
+                            type: C.Tb.P,
                             color: C.O.Alt2,
                             title: d
                         }, d)), r.createElement(C.Xa, {
@@ -1808,15 +1808,15 @@
                             alt: !0
                         }, r.createElement(F, {
                             title: Object(l.d)("In-Game Content", "FeaturedContentRow")
-                        }), r.createElement(C.Yb, {
-                            childWidth: C.Zb.Medium,
-                            gutterSize: C.ac.Small,
+                        }), r.createElement(C.Zb, {
+                            childWidth: C.ac.Medium,
+                            gutterSize: C.bc.Small,
                             noGrow: !0
                         }, n))
                     }, t
                 }(r.Component),
-                Y = Object(g.b)("InGameContentRow")(K),
-                Z = n("HStj"),
+                Z = Object(g.b)("InGameContentRow")(K),
+                Y = n("HStj"),
                 ee = n("FBjy"),
                 te = n("6qyE"),
                 ne = (n("JzX6"), function(e) {
@@ -1879,7 +1879,7 @@
                             }
                         }, r.createElement(f.a, {
                             buttonSize: C.D.Large,
-                            contentType: Z.a.GameDetails,
+                            contentType: Y.a.GameDetails,
                             directoryType: h.a.Games,
                             directoryName: decodeURIComponent(this.props.match.params.encodedCommunityName)
                         }));
@@ -1900,7 +1900,7 @@
                             hasPrime: d,
                             refetchData: this.refetchData,
                             referrer: u
-                        }), r.createElement(Y, {
+                        }), r.createElement(Z, {
                             contentList: v,
                             countryCode: m,
                             game: n,
@@ -2765,7 +2765,7 @@
                                 },
                                 key: "fuel-free-label"
                             }, a.createElement(s.W, {
-                                type: s.Sb.Strong
+                                type: s.Tb.Strong
                             }, Object(o.d)("Free", "FuelBuyButton"))), a.createElement("div", {
                                 className: "fuel-buy-button__prime-trial-button",
                                 key: "fuel-trial"

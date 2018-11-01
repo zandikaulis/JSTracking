@@ -79,7 +79,7 @@
         "4brS": function(e, n, t) {},
         DMoW: function(e, n, t) {
             "use strict";
-            var E, a, i, o, r, N, T, c, _, R, u, d, A, l, O, I, D, s, m, S, C, L, p, f, b, M, P, v, U, g, B, F, y, V, G, k, H, h, W, Y, j, K, X, w, x, J, z, Q, Z, q, $, ee, ne, te, Ee, ae, ie, oe, re, Ne, Te, ce, _e, Re, ue, de, Ae, le, Oe, Ie, De, se, me, Se, Ce, Le, pe, fe, be, Me, Pe, ve, Ue, ge, Be, Fe, ye, Ve, Ge, ke, He, he, We, Ye, je, Ke, Xe, we, xe, Je, ze, Qe, Ze, qe, $e, en, nn, tn, En, an, on, rn, Nn, Tn, cn, _n;
+            var E, a, i, o, r, N, T, c, _, R, u, d, A, l, O, I, D, s, m, S, C, L, p, f, b, M, P, U, v, g, B, F, y, V, G, k, H, h, W, Y, j, K, X, w, x, J, z, Q, Z, q, $, ee, ne, te, Ee, ae, ie, oe, re, Ne, Te, ce, _e, Re, ue, de, Ae, le, Oe, Ie, De, se, me, Se, Ce, Le, pe, fe, be, Me, Pe, Ue, ve, ge, Be, Fe, ye, Ve, Ge, ke, He, he, We, Ye, je, Ke, Xe, we, xe, Je, ze, Qe, Ze, qe, $e, en, nn, tn, En, an, on, rn, Nn, Tn, cn, _n, Rn;
             t.d(n, "c", function() {
                     return a
                 }), t.d(n, "I", function() {
@@ -103,7 +103,7 @@
                 }), t.d(n, "i", function() {
                     return P
                 }), t.d(n, "J", function() {
-                    return v
+                    return U
                 }), t.d(n, "b", function() {
                     return V
                 }), t.d(n, "q", function() {
@@ -163,15 +163,15 @@
                 }), t.d(n, "L", function() {
                     return Ke
                 }), t.d(n, "w", function() {
-                    return qe
-                }), t.d(n, "G", function() {
                     return $e
-                }), t.d(n, "H", function() {
+                }), t.d(n, "G", function() {
                     return en
+                }), t.d(n, "H", function() {
+                    return nn
                 }), t.d(n, "d", function() {
-                    return Tn
-                }), t.d(n, "r", function() {
                     return cn
+                }), t.d(n, "r", function() {
+                    return _n
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -256,10 +256,10 @@
                 }(P || (P = {})),
                 function(e) {
                     e.AMOUNT_BELOW_MIN_BITS = "AMOUNT_BELOW_MIN_BITS", e.AUTO_MOD_MESSAGE = "AUTO_MOD_MESSAGE", e.AUTO_MOD_PENDING = "AUTO_MOD_PENDING", e.CHANNEL_BLOCKED_TERMS = "CHANNEL_BLOCKED_TERMS", e.CHANNEL_INELIGIBLE = "CHANNEL_INELIGIBLE", e.EMOTE_AMOUNT_BELOW_MIN_BITS = "EMOTE_AMOUNT_BELOW_MIN_BITS", e.INSUFFICIENT_BALANCE = "INSUFFICIENT_BALANCE", e.INVALID_BITS_AMOUNT = "INVALID_BITS_AMOUNT", e.INVALID_BITS_MESSAGE = "INVALID_BITS_MESSAGE", e.INVALID_EVENT_ID = "INVALID_EVENT_ID", e.MESSAGE_LENGTH_EXCEEDED = "MESSAGE_LENGTH_EXCEEDED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.TOO_LARGE_BITS_EMOTE = "TOO_LARGE_BITS_EMOTE", e.TOO_LARGE_CHEER = "TOO_LARGE_CHEER", e.UNKNOWN = "UNKNOWN", e.USER_BANNED = "USER_BANNED", e.USER_INELIGIBLE = "USER_INELIGIBLE", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_MESSAGE = "ZALGO_MESSAGE"
-                }(v || (v = {})),
+                }(U || (U = {})),
                 function(e) {
                     e.NEW_CHATTER = "NEW_CHATTER"
-                }(U || (U = {})),
+                }(v || (v = {})),
                 function(e) {
                     e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
                 }(g || (g = {})),
@@ -418,10 +418,10 @@
                 }(Pe || (Pe = {})),
                 function(e) {
                     e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
-                }(ve || (ve = {})),
+                }(Ue || (Ue = {})),
                 function(e) {
                     e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
-                }(Ue || (Ue = {})),
+                }(ve || (ve = {})),
                 function(e) {
                     e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
                 }(ge || (ge = {})),
@@ -465,62 +465,65 @@
                     e.SQUAD_NOT_FOUND = "SQUAD_NOT_FOUND", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(Xe || (Xe = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }(we || (we = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(xe || (xe = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(Je || (Je = {})),
                 function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
                 }(ze || (ze = {})),
                 function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(Ze || (Ze = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(qe || (qe = {})),
                 function(e) {
-                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }($e || ($e = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
+                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
                 }(en || (en = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
                 }(nn || (nn = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }(tn || (tn = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(En || (En = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(an || (an = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(on || (on = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(rn || (rn = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(Nn || (Nn = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
                 }(Tn || (Tn = {})),
                 function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
                 }(cn || (cn = {})),
                 function(e) {
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                }(_n || (_n = {})),
+                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(_n || (_n = {}))
+                }(Rn || (Rn = {}))
         },
         H3dc: function(e, n, t) {
             var E = {
@@ -1174,9 +1177,9 @@
                         }, i.createElement(T.Cb, {
                             borderBottom: !0,
                             padding: 2,
-                            textAlign: T.Ob.Center
+                            textAlign: T.Pb.Center
                         }, i.createElement(T.W, {
-                            type: T.Sb.H4,
+                            type: T.Tb.H4,
                             bold: !0,
                             "data-test-selector": E.TitleText
                         }, Object(c.d)("Cancel Campaign", "DevBountyCancelCampaignModal")), i.createElement(_.a, null)), i.createElement(T.Xa, {
@@ -1184,7 +1187,7 @@
                             flexDirection: T.Aa.Column,
                             padding: 2
                         }, i.createElement(T.W, {
-                            type: T.Sb.P,
+                            type: T.Tb.P,
                             "data-test-selector": E.ContentText
                         }, Object(c.d)("You must contact <x:link>bountyboard@twitch.tv</x:link> in order to cancel your campaign. Once contacted, cancellations typically take 24-48 hours to process.", {
                             "x:link": function(e) {
@@ -1193,7 +1196,7 @@
                                 }, e)
                             }
                         }, "DevBountyBoardCampaignPage")), i.createElement("br", null), i.createElement(T.W, {
-                            type: T.Sb.P,
+                            type: T.Tb.P,
                             "data-test-selector": E.ContentText
                         }, Object(c.d)("By cancelling a campaign early you will only have your unclaimed budget refunded. Broadcasters who have already claimed bounties will have their remaining time to complete the bounty.", "DevBountyCancelCampaignModal"))), i.createElement(T.Cb, {
                             alignItems: T.f.Center,
@@ -1668,7 +1671,7 @@
                         }, Object(r.c)(t) + " " + Object(r.j)(t))), i.createElement(T.Hb, null, i.createElement(T.W, {
                             fontSize: T.Ca.Size5
                         }, Object(r.c)(E) + " " + Object(r.j)(E))), i.createElement(T.Hb, {
-                            textAlign: T.Ob.Center
+                            textAlign: T.Pb.Center
                         }, i.createElement(T.Xa, {
                             display: T.X.Inline,
                             margin: {
@@ -1726,7 +1729,7 @@
                             }, Object(r.c)(E) + " " + Object(r.j)(E))), i.createElement(T.Hb, null, i.createElement(T.W, {
                                 fontSize: T.Ca.Size5
                             }, Object(r.c)(a) + " " + Object(r.j)(a))), i.createElement(T.Hb, {
-                                textAlign: T.Ob.Center
+                                textAlign: T.Pb.Center
                             }, i.createElement(T.Xa, {
                                 display: T.X.Inline,
                                 margin: {
@@ -1816,7 +1819,7 @@
                             }, Object(r.c)(E) + " " + Object(r.j)(E))), i.createElement(T.Hb, null, i.createElement(T.W, {
                                 fontSize: T.Ca.Size5
                             }, Object(r.c)(a) + " " + Object(r.j)(a))), i.createElement(T.Hb, {
-                                textAlign: T.Ob.Center
+                                textAlign: T.Pb.Center
                             }, i.createElement(T.Xa, {
                                 display: T.X.Inline,
                                 margin: {
@@ -1868,7 +1871,7 @@
                 P = Object(o.compose)(Object(N.b)("DevBountyDashboardQueueCampaignList", {
                     autoReportInteractive: !0
                 }))(M);
-            var v, U = Object(o.compose)(Object(s.connect)(null, function(e) {
+            var U, v = Object(o.compose)(Object(s.connect)(null, function(e) {
                 return Object(m.bindActionCreators)({
                     showCancelCampaignModal: function() {
                         return Object(S.d)(C.a, {})
@@ -1877,7 +1880,7 @@
             }))(P);
             ! function(e) {
                 e.DetailsButtonSelector = "dev-bounty-rejected-campaign-details-button", e.DeleteButtonSelector = "dev-bounty-rejected-campaign-delete-button"
-            }(v || (v = {}));
+            }(U || (U = {}));
             var g = function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
@@ -1911,14 +1914,14 @@
                         }, n.title))), i.createElement(T.Hb, null, i.createElement(T.W, {
                             fontSize: T.Ca.Size5
                         }, n.rejectionReason)), i.createElement(T.Hb, {
-                            textAlign: T.Ob.Center
+                            textAlign: T.Pb.Center
                         }, i.createElement(T.Xa, {
                             display: T.X.Inline,
                             margin: {
                                 right: 1
                             }
                         }, i.createElement(T.z, {
-                            "data-test-selector": v.DetailsButtonSelector,
+                            "data-test-selector": U.DetailsButtonSelector,
                             fullWidth: !0,
                             type: T.F.Hollow,
                             linkTo: "/console/bounty-board/campaign/" + n.id
@@ -1962,7 +1965,7 @@
                             margin: {
                                 y: 2
                             }
-                        }, i.createElement(U, null)), i.createElement(T.Xa, {
+                        }, i.createElement(v, null)), i.createElement(T.Xa, {
                             margin: {
                                 y: 2
                             }

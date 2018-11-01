@@ -567,7 +567,7 @@
                                 x: .5
                             }
                         }, o.createElement(s.W, {
-                            type: s.Sb.Span
+                            type: s.Tb.Span
                         }, Object(i.d)("Who can chat in this room?", "RoomPermissionsToggle"))), o.createElement(s.Cb, {
                             padding: {
                                 x: 1
@@ -585,9 +585,9 @@
                         }, o.createElement("label", {
                             htmlFor: "room-permissions-toggle__mods-permission"
                         }, o.createElement(s.W, {
-                            type: s.Sb.Strong,
+                            type: s.Tb.Strong,
                             color: s.O.Alt
-                        }, Object(i.d)("Mods", "RoomPermissionsToggle")))), o.createElement(s.Ub, {
+                        }, Object(i.d)("Mods", "RoomPermissionsToggle")))), o.createElement(s.Vb, {
                             id: "room-permissions-toggle__mods-permission",
                             disabled: !0,
                             checked: !0,
@@ -609,9 +609,9 @@
                         }, o.createElement("label", {
                             htmlFor: "room-permissions-toggle__subs-permission"
                         }, o.createElement(s.W, {
-                            type: s.Sb.Strong,
+                            type: s.Tb.Strong,
                             color: s.O.Alt
-                        }, Object(i.d)("Subs", "RoomPermissionsToggle")))), o.createElement(s.Ub, {
+                        }, Object(i.d)("Subs", "RoomPermissionsToggle")))), o.createElement(s.Vb, {
                             id: "room-permissions-toggle__subs-permission",
                             checked: this.state.minimumAllowedRole !== a.b.Moderator,
                             onChange: this.toggleSubRole,
@@ -633,9 +633,9 @@
                         }, o.createElement("label", {
                             htmlFor: "room-permissions-toggle__everyone-permission"
                         }, o.createElement(s.W, {
-                            type: s.Sb.Strong,
+                            type: s.Tb.Strong,
                             color: s.O.Alt
-                        }, Object(i.d)("Everyone", "RoomPermissionsToggle")))), o.createElement(s.Ub, {
+                        }, Object(i.d)("Everyone", "RoomPermissionsToggle")))), o.createElement(s.Vb, {
                             id: "room-permissions-toggle__everyone-permission",
                             checked: this.state.minimumAllowedRole === a.b.Everyone,
                             onChange: this.toggleAllRole,
@@ -679,14 +679,14 @@
                         }, this.renderPreviewabilityToggle())))))
                     }, t.prototype.renderPreviewabilityToggle = function() {
                         var e = this.state.minimumAllowedRole !== a.b.Subscriber,
-                            t = o.createElement(s.Ub, {
+                            t = o.createElement(s.Vb, {
                                 disabled: e,
                                 checked: this.state.isPreviewable,
                                 onChange: this.togglePreviewability,
                                 "data-test-selector": "previewability-toggle"
                             });
-                        return this.state.minimumAllowedRole === a.b.Moderator && (t = o.createElement(s.Vb, {
-                            direction: s.Xb.Left,
+                        return this.state.minimumAllowedRole === a.b.Moderator && (t = o.createElement(s.Wb, {
+                            direction: s.Yb.Left,
                             width: 100,
                             label: Object(i.d)("This room is only for moderators", "RoomPermissionsToggle")
                         }, t)), t
@@ -1087,7 +1087,7 @@
                         },
                         "data-a-target": "reporting-channel-name"
                     }, i.createElement(d.W, {
-                        type: d.Sb.H4
+                        type: d.Tb.H4
                     }, this.props.title), i.createElement(d.Cb, {
                         color: d.O.Alt2,
                         margin: {
@@ -1108,7 +1108,7 @@
                     }), i.createElement(d.Ea, {
                         id: "reporting__text-area",
                         label: Object(a.d)("Description (required)", "ReportUser")
-                    }, i.createElement(d.Pb, {
+                    }, i.createElement(d.Qb, {
                         defaultValue: this.props.defaultDescription,
                         onChange: this.handleTextAreaChange
                     }))), i.createElement(d.Cb, {
@@ -1307,7 +1307,7 @@
                                 }
                             }, i.createElement(f.W, {
                                 className: "block-user__success",
-                                type: f.Sb.Span
+                                type: f.Tb.Span
                             }, Object(l.d)("{user} blocked", {
                                 user: t.props.targetUser.displayName
                             }, "ReportWizardBlockActions"))), i.createElement(f.U, {
@@ -1351,7 +1351,7 @@
                             margin: {
                                 y: 1
                             }
-                        }, i.createElement(f.bc, {
+                        }, i.createElement(f.cc, {
                             baseFontSize: f.Ca.Size6
                         }, i.createElement("p", null, Object(l.d)("Blocking {user} will:", {
                             user: t
@@ -2035,7 +2035,7 @@
                                     }, i.createElement(f.Ea, {
                                         label: t.getTitle(),
                                         labelOptional: t.required ? "" : Object(l.d)("Optional", "ReportModalWizardCard")
-                                    }, i.createElement(f.Pb, {
+                                    }, i.createElement(f.Qb, {
                                         onChange: e.onChange,
                                         rows: t.rows || 3,
                                         name: t.value,
@@ -3273,7 +3273,7 @@
                                 bottom: 2
                             }
                         }, d.createElement(b.W, {
-                            type: b.Sb.H4
+                            type: b.Tb.H4
                         }, Object(u.d)("Delete #{roomName}?", {
                             roomName: this.props.roomName
                         }, "DeleteRoomModal")), d.createElement(b.Xa, {
@@ -3281,13 +3281,13 @@
                                 top: 1
                             }
                         }, d.createElement(b.W, {
-                            type: b.Sb.Span,
+                            type: b.Tb.Span,
                             color: b.O.Alt2
                         }, Object(u.d)("This will remove all messages in this room permanently from your channel", "DeleteRoomModal")))), d.createElement(b.Xa, {
                             padding: {
                                 top: 2
                             },
-                            textAlign: b.Ob.Right
+                            textAlign: b.Pb.Right
                         }, d.createElement(b.Xa, {
                             display: b.X.Inline,
                             margin: {
@@ -3464,7 +3464,7 @@
                             label: Object(u.d)("Room topic", "RoomLabelsEditor"),
                             error: !!this.props.editRoomTopicError,
                             errorMessage: this.props.editRoomTopicError
-                        }, d.createElement(b.Pb, {
+                        }, d.createElement(b.Qb, {
                             noResize: !0,
                             value: this.props.roomTopic,
                             onChange: this.onRoomTopicChange,
@@ -3903,7 +3903,7 @@
                     }, t.prototype.getTopicField = function() {
                         var e, t = void 0 === this.state.updatedRoomTopic ? this.props.data.room.topic : this.state.updatedRoomTopic,
                             n = Object(u.d)("What do you want your community to talk about in this room?", "RoomDetails");
-                        return e = this.state.isTopicFocused ? d.createElement(b.Pb, {
+                        return e = this.state.isTopicFocused ? d.createElement(b.Qb, {
                             autoFocus: !0,
                             noResize: !0,
                             onChange: this.onRoomTopicChange,

@@ -123,7 +123,7 @@
                                 bottom: 2
                             }
                         }, m.createElement(v.W, {
-                            type: v.Sb.P,
+                            type: v.Tb.P,
                             fontSize: v.Ca.Size3
                         }, Object(d.d)("Welcome to the Twitch Developer Console, where code enhances live streaming experiences", "DevLogin"))), m.createElement(v.z, {
                             onClick: this.login,
@@ -263,11 +263,11 @@
                             padding: 1,
                             justifyContent: h.Wa.Start,
                             alignItems: h.f.Start,
-                            textAlign: h.Ob.Left
+                            textAlign: h.Pb.Left
                         }, s.createElement(h.Xa, {
                             justifyContent: h.Wa.Start,
                             alignItems: h.f.Start,
-                            textAlign: h.Ob.Left,
+                            textAlign: h.Pb.Left,
                             className: "dev-insights-video-player"
                         }, s.createElement("iframe", {
                             src: "https://player.twitch.tv/?channel=" + t.name + "&muted=true",
@@ -283,7 +283,7 @@
                                 right: 2,
                                 bottom: 1
                             },
-                            textAlign: h.Ob.Left
+                            textAlign: h.Pb.Left
                         }, s.createElement(h.W, {
                             color: h.O.Link,
                             fontSize: h.Ca.Size4,
@@ -302,16 +302,16 @@
                             padding: {
                                 bottom: 1
                             },
-                            textAlign: h.Ob.Left
+                            textAlign: h.Pb.Left
                         }, s.createElement(h.W, {
                             color: h.O.Alt,
                             fontSize: h.Ca.Size3,
                             ellipsis: !0,
                             lines: 1
-                        }, D(e.cardType))), s.createElement(h.Xa, {
+                        }, A(e.cardType))), s.createElement(h.Xa, {
                             justifyContent: h.Wa.Start,
                             alignItems: h.f.Start,
-                            textAlign: h.Ob.Left,
+                            textAlign: h.Pb.Left,
                             className: "dev-insights-video-player"
                         }, s.createElement("iframe", {
                             src: "https://player.twitch.tv/?channel=" + S(e.cardType, a) + "&muted=true",
@@ -327,7 +327,7 @@
                                 right: 2,
                                 bottom: 1
                             },
-                            textAlign: h.Ob.Left
+                            textAlign: h.Pb.Left
                         }, s.createElement("a", {
                             href: "https://www.twitch.tv/" + S(e.cardType, a)
                         }, s.createElement(h.W, {
@@ -336,26 +336,26 @@
                             bold: !0,
                             ellipsis: !0,
                             lines: 1
-                        }, O(e.cardType, a)))), s.createElement(h.Xa, {
+                        }, D(e.cardType, a)))), s.createElement(h.Xa, {
                             padding: 1,
-                            textAlign: h.Ob.Left
+                            textAlign: h.Pb.Left
                         }, s.createElement(h.W, {
                             color: h.O.Alt,
                             fontSize: h.Ca.Size5
-                        }, A(e.cardType, a))))
+                        }, P(e.cardType, a))))
                     }
                     return null
                 },
                 S = function(e, t) {
                     return e === n.TopBroadcaster && t.top_broadcaster ? t.top_broadcaster.name : e === n.DedicatedBroadcaster && t.dedicated_broadcaster ? t.dedicated_broadcaster.name : t.rising_star ? t.rising_star.name : null
                 },
-                O = function(e, t) {
+                D = function(e, t) {
                     return e === n.TopBroadcaster && t.top_broadcaster ? t.top_broadcaster.display_name : e === n.DedicatedBroadcaster && t.dedicated_broadcaster ? t.dedicated_broadcaster.display_name : t.rising_star ? t.rising_star.display_name : null
                 },
-                D = function(e) {
+                A = function(e) {
                     return e === n.TopBroadcaster ? C() : e === n.DedicatedBroadcaster ? _() : E()
                 },
-                A = function(e, t) {
+                P = function(e, t) {
                     return e === n.TopBroadcaster && t.top_broadcaster ? Object(c.d)("Streamed your game for {TopBroadcasterHoursStreamed} hours and generated {TopBroadcasterHoursWatched} hours watched with {avgConcurrentViewers} avg concurrent viewers.", {
                         TopBroadcasterHoursStreamed: t.top_broadcaster.hours_broadcast,
                         TopBroadcasterHoursWatched: t.top_broadcaster.hours_watched,
@@ -373,7 +373,7 @@
                 w = (a("R79Y"), function() {
                     return Object(c.d)("Popular Live Channels", "DevBroadcasterCardGroup")
                 }),
-                X = function(e) {
+                O = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -383,17 +383,17 @@
                             var t = this.props.gameData.broadcaster_stats;
                             return s.createElement(h.Xa, {
                                 className: "broadcasters__wrapper",
-                                zIndex: h.fc.Above,
+                                zIndex: h.gc.Above,
                                 fullWidth: !0,
                                 display: h.X.Flex,
                                 justifyContent: h.Wa.Center,
                                 position: h.hb.Relative,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 alignItems: h.f.Center
                             }, s.createElement(h.Xa, {
                                 className: "broadcasters__content",
                                 position: h.hb.Relative,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 justifyContent: h.Wa.Center,
                                 alignItems: h.f.Center
                             }, s.createElement(h.Xa, {
@@ -404,19 +404,19 @@
                                     bottom: 1,
                                     top: 1
                                 },
-                                textAlign: h.Ob.Left
+                                textAlign: h.Pb.Left
                             }, s.createElement(h.W, {
                                 color: h.O.Link,
                                 fontSize: h.Ca.Size4,
                                 bold: !0
                             }, e)), s.createElement(h.Xa, {
                                 display: h.X.Flex,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 justifyContent: h.Wa.Center,
                                 alignItems: h.f.Center
-                            }, s.createElement(h.Yb, {
-                                childWidth: h.Zb.Large,
-                                gutterSize: h.ac.Small,
+                            }, s.createElement(h.Zb, {
+                                childWidth: h.ac.Large,
+                                gutterSize: h.bc.Small,
                                 placeholderItems: 6,
                                 center: !0
                             }, t.top_broadcaster ? s.createElement(y, {
@@ -444,12 +444,12 @@
                                 display: h.X.Flex,
                                 justifyContent: h.Wa.Center,
                                 position: h.hb.Relative,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 alignItems: h.f.Center
                             }, s.createElement(h.Xa, {
                                 className: "broadcasters__content",
                                 position: h.hb.Relative,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 justifyContent: h.Wa.Center,
                                 alignItems: h.f.Center
                             }, s.createElement(h.Xa, {
@@ -459,19 +459,19 @@
                                     top: 3,
                                     bottom: 3
                                 },
-                                textAlign: h.Ob.Left
+                                textAlign: h.Pb.Left
                             }, s.createElement(h.W, {
                                 color: h.O.Link,
                                 fontSize: h.Ca.Size4,
                                 bold: !0
                             }, w())), s.createElement(h.Xa, {
                                 display: h.X.Flex,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 justifyContent: h.Wa.Center,
                                 alignItems: h.f.Center
-                            }, s.createElement(h.Yb, {
-                                childWidth: h.Zb.Large,
-                                gutterSize: h.ac.Small,
+                            }, s.createElement(h.Zb, {
+                                childWidth: h.ac.Large,
+                                gutterSize: h.bc.Small,
                                 placeholderItems: 6,
                                 center: !0
                             }, a)))))
@@ -479,12 +479,12 @@
                         return null
                     }, t
                 }(s.Component),
-                W = a("TSYQ");
+                X = a("TSYQ");
             ! function(e) {
                 e.Afghanistan = "AF", e.AlandIslands = "AX", e.Albania = "AL", e.Algeria = "DZ", e.AmericanSamoa = "AS", e.Andorra = "AD", e.Angola = "AO", e.Anguilla = "AI", e.Antarctica = "AQ", e.AntiguaAndBarbuda = "AG", e.Argentina = "AR", e.Armenia = "AM", e.Aruba = "AW", e.Australia = "AU", e.Austria = "AT", e.Azerbaijan = "AZ", e.Bahamas = "BS", e.Bahrain = "BH", e.Bangladesh = "BD", e.Barbados = "BB", e.Belarus = "BY", e.Belgium = "BE", e.Belize = "BZ", e.Benin = "BJ", e.Bermuda = "BM", e.Bhutan = "BT", e.Bolivia = "BO", e.BosniaAndHerzegovina = "BA", e.Botswana = "BW", e.BouvetIsland = "BV", e.Brazil = "BR", e.BritishIndianOceanTerritory = "IO", e.BruneiDarussalam = "BN", e.Bulgaria = "BG", e.BurkinaFaso = "BF", e.Burundi = "BI", e.Cambodia = "KH", e.Cameroon = "CM", e.Canada = "CA", e.CapeVerde = "CV", e.CaymanIslands = "KY", e.CentralAfricanRepublic = "CF", e.Chad = "TD", e.Chile = "CL", e.China = "CN", e.ChristmasIsland = "CX", e.CocosKeelingIslands = "CC", e.Colombia = "CO", e.Comoros = "KM", e.Congo = "CG", e.CongoDemocraticRepublic = "CD", e.CookIslands = "CK", e.CostaRica = "CR", e.CoteDIvoire = "CI", e.Croatia = "HR", e.Cuba = "CU", e.Cyprus = "CY", e.CzechRepublic = "CZ", e.Denmark = "DK", e.Djibouti = "DJ", e.Dominica = "DM", e.DominicanRepublic = "DO", e.Ecuador = "EC", e.Egypt = "EG", e.ElSalvador = "SV", e.EquatorialGuinea = "GQ", e.Eritrea = "ER", e.Estonia = "EE", e.Ethiopia = "ET", e.FalklandIslands = "FK", e.FaroeIslands = "FO", e.Fiji = "FJ", e.Finland = "FI", e.France = "FR", e.FrenchGuiana = "GF", e.FrenchPolynesia = "PF", e.FrenchSouthernTerritories = "TF", e.Gabon = "GA", e.Gambia = "GM", e.Georgia = "GE", e.Germany = "DE", e.Ghana = "GH", e.Gibraltar = "GI", e.Greece = "GR", e.Greenland = "GL", e.Grenada = "GD", e.Guadeloupe = "GP", e.Guam = "GU", e.Guatemala = "GT", e.Guernsey = "GG", e.Guinea = "GN", e.GuineaBissau = "GW", e.Guyana = "GY", e.Haiti = "HT", e.HeardIslandMcdonaldIslands = "HM", e.HolySeeVaticanCityState = "VA", e.Honduras = "HN", e.HongKong = "HK", e.Hungary = "HU", e.Iceland = "IS", e.India = "IN", e.Indonesia = "ID", e.Iran = "IR", e.Iraq = "IQ", e.Ireland = "IE", e.IsleOfMan = "IM", e.Israel = "IL", e.Italy = "IT", e.Jamaica = "JM", e.Japan = "JP", e.Jersey = "JE", e.Jordan = "JO", e.Kazakhstan = "KZ", e.Kenya = "KE", e.Kiribati = "KI", e.Kuwait = "KW", e.Kyrgyzstan = "KG", e.LaoPeoplesDemocraticRepublic = "LA", e.Latvia = "LV", e.Lebanon = "LB", e.Lesotho = "LS", e.Liberia = "LR", e.Libyan = "LY", e.Liechtenstein = "LI", e.Lithuania = "LT", e.Luxembourg = "LU", e.Macao = "MO", e.Macedonia = "MK", e.Madagascar = "MG", e.Malawi = "MW", e.Malaysia = "MY", e.Maldives = "MV", e.Mali = "ML", e.Malta = "MT", e.MarshallIslands = "MH", e.Martinique = "MQ", e.Mauritania = "MR", e.Mauritius = "MU", e.Mayotte = "YT", e.Mexico = "MX", e.Micronesia = "FM", e.Moldova = "MD", e.Monaco = "MC", e.Mongolia = "MN", e.Montenegro = "ME", e.Montserrat = "MS", e.Morocco = "MA", e.Mozambique = "MZ", e.Myanmar = "MM", e.Namibia = "NA", e.Nauru = "NR", e.Nepal = "NP", e.Netherlands = "NL", e.NewCaledonia = "NC", e.NewZealand = "NZ", e.Nicaragua = "NI", e.Niger = "NE", e.Nigeria = "NG", e.Niue = "NU", e.NorfolkIsland = "NF", e.NorthernMarianaIslands = "MP", e.Norway = "NO", e.NorthKorea = "KP", e.Oman = "OM", e.Pakistan = "PK", e.Palau = "PW", e.PalestinianTerritory = "PS", e.Panama = "PA", e.PapuaNewGuinea = "PG", e.Paraguay = "PY", e.Peru = "PE", e.Philippines = "PH", e.Pitcairn = "PN", e.Poland = "PL", e.Portugal = "PT", e.PuertoRico = "PR", e.Qatar = "QA", e.Reunion = "RE", e.Romania = "RO", e.RussianFederation = "RU", e.Rwanda = "RW", e.SaintBarthelemy = "BL", e.SaintHelena = "SH", e.SaintKittsAndNevis = "KN", e.SaintLucia = "LC", e.SaintMartin = "MF", e.SaintPierreAndMiquelon = "PM", e.SaintVincentAndGrenadines = "VC", e.Samoa = "WS", e.SanMarino = "SM", e.SaoTomeAndPrincipe = "ST", e.SaudiArabia = "SA", e.Senegal = "SN", e.Serbia = "RS", e.Seychelles = "SC", e.SierraLeone = "SL", e.Singapore = "SG", e.Slovakia = "SK", e.Slovenia = "SI", e.SolomonIslands = "SB", e.Somalia = "SO", e.SouthAfrica = "ZA", e.SouthSudan = "SS", e.SouthGeorgiaAndSandwichIsl = "GS", e.SouthKorea = "KR", e.Spain = "ES", e.SriLanka = "LK", e.Sudan = "SD", e.Suriname = "SR", e.SvalbardAndJanMayen = "SJ", e.Swaziland = "SZ", e.Sweden = "SE", e.Switzerland = "CH", e.SyrianArabRepublic = "SY", e.Taiwan = "TW", e.Tajikistan = "TJ", e.Tanzania = "TZ", e.Thailand = "TH", e.TimorLeste = "TL", e.Togo = "TG", e.Tokelau = "TK", e.Tonga = "TO", e.TrinidadAndTobago = "TT", e.Tunisia = "TN", e.Turkey = "TR", e.Turkmenistan = "TM", e.TurksAndCaicosIslands = "TC", e.Tuvalu = "TV", e.Uganda = "UG", e.Ukraine = "UA", e.UnitedArabEmirates = "AE", e.UnitedKingdom = "GB", e.UnitedStates = "US", e.UnitedStatesOutlyingIslands = "UM", e.Uruguay = "UY", e.Uzbekistan = "UZ", e.Vanuatu = "VU", e.Venezuela = "VE", e.VietNam = "VN", e.VirginIslandsBritish = "VG", e.VirginIslandsUS = "VI", e.WallisAndFutuna = "WF", e.WesternSahara = "EH", e.Yemen = "YE", e.Zambia = "ZM", e.Zimbabwe = "ZW"
             }(b || (b = {}));
-            var I = ((x = {})[h.p.Aspect1x1] = "1x1", x[h.p.Aspect4x3] = "4x3", x),
-                P = function(e) {
+            var W = ((x = {})[h.p.Aspect1x1] = "1x1", x[h.p.Aspect4x3] = "4x3", x),
+                I = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -507,10 +507,10 @@
                         })) : s.createElement(h.o, {
                             ratio: e
                         }, s.createElement(h.S, r.__assign({
-                            className: W({
+                            className: X({
                                 "tw-flag": !0
                             })
-                        }, Object(h.gc)(this.props), {
+                        }, Object(h.hc)(this.props), {
                             src: this.state.src,
                             alt: this.props.alt
                         })))
@@ -520,7 +520,7 @@
                             return r.__generator(this, function(r) {
                                 switch (r.label) {
                                     case 0:
-                                        return e = this.props.country.toLowerCase(), t = this.props.aspect ? I[this.props.aspect] : I[h.p.Aspect4x3], [4, a("h4Vz")("./" + t + "/" + e + ".svg")];
+                                        return e = this.props.country.toLowerCase(), t = this.props.aspect ? W[this.props.aspect] : W[h.p.Aspect4x3], [4, a("h4Vz")("./" + t + "/" + e + ".svg")];
                                     case 1:
                                         return n = r.sent(), this.setState({
                                             src: n.default
@@ -784,7 +784,7 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.countryCode.toUpperCase();
-                        return z[e] ? s.createElement(P, {
+                        return z[e] ? s.createElement(I, {
                             alt: this.props.alt,
                             country: z[e],
                             aspect: this.props.aspect
@@ -820,7 +820,7 @@
                         display: h.X.Flex,
                         flexDirection: h.Aa.Column,
                         background: h.r.Alt2,
-                        textAlign: h.Ob.Center
+                        textAlign: h.Pb.Center
                     }, e.countryData.map(function(e) {
                         return T(e, t, a)
                     }))
@@ -833,7 +833,7 @@
                     }, s.createElement(h.P, {
                         cols: 2
                     }, s.createElement(h.Xa, {
-                        className: W(t)
+                        className: X(t)
                     }, s.createElement(N, {
                         alt: e.code,
                         aspect: h.p.Aspect4x3,
@@ -843,14 +843,14 @@
                     }, s.createElement(h.Xa, {
                         padding: 1,
                         display: h.X.Flex,
-                        textAlign: h.Ob.Left
+                        textAlign: h.Pb.Left
                     }, s.createElement(h.W, {
                         color: h.O.Alt,
                         fontSize: a
                     }, e.name))), s.createElement(h.P, {
                         cols: 4
                     }, s.createElement(h.Xa, {
-                        textAlign: h.Ob.Right,
+                        textAlign: h.Pb.Right,
                         display: h.X.Flex,
                         padding: 1
                     }, s.createElement(h.W, {
@@ -880,7 +880,7 @@
                         justifyContent: h.Wa.Start,
                         alignItems: h.f.Start
                     }, s.createElement(h.Cb, {
-                        className: W(a),
+                        className: X(a),
                         position: h.hb.Relative,
                         margin: 1
                     }, s.createElement(h.o, {
@@ -896,7 +896,7 @@
                         position: h.hb.Absolute,
                         attachBottom: !0,
                         attachRight: !0,
-                        textAlign: h.Ob.Center
+                        textAlign: h.Pb.Center
                     }, s.createElement(h.W, {
                         color: h.O.Overlay,
                         fontSize: h.Ca.Size3,
@@ -965,7 +965,7 @@
                                     }))
                                 });
                             return s.createElement(h.Cb, {
-                                className: W(l),
+                                className: X(l),
                                 position: h.hb.Relative,
                                 display: h.X.Flex,
                                 alignItems: h.f.Center
@@ -976,12 +976,12 @@
                                 display: h.X.Flex,
                                 flexDirection: h.Aa.Column,
                                 background: h.r.Base,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 justifyContent: h.Wa.Center
                             }, s.createElement(h.Xa, {
-                                className: W(t),
+                                className: X(t),
                                 position: h.hb.Relative,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 justifyContent: h.Wa.Center,
                                 alignItems: h.f.Center,
                                 fullHeight: !0,
@@ -1012,7 +1012,7 @@
                                 cols: 6
                             }, s.createElement(h.Cb, {
                                 className: "country-board-card",
-                                textAlign: h.Ob.Left,
+                                textAlign: h.Pb.Left,
                                 justifyContent: h.Wa.Start,
                                 alignItems: h.f.Start,
                                 margin: {
@@ -1030,7 +1030,7 @@
                                 cols: 6
                             }, s.createElement(h.Cb, {
                                 className: "country-board-card",
-                                textAlign: h.Ob.Left,
+                                textAlign: h.Pb.Left,
                                 justifyContent: h.Wa.Start,
                                 alignItems: h.f.Start,
                                 margin: {
@@ -1079,11 +1079,11 @@
                                 }))
                             });
                             return s.createElement(h.Cb, {
-                                className: W(l),
+                                className: X(l),
                                 position: h.hb.Relative,
                                 display: h.X.Flex,
                                 flexDirection: h.Aa.Column,
-                                textAlign: h.Ob.Center
+                                textAlign: h.Pb.Center
                             }, s.createElement(h.Xa, {
                                 className: "recommendation__content",
                                 fullWidth: !0,
@@ -1091,7 +1091,7 @@
                                 display: h.X.Flex
                             }, s.createElement(h.Xa, {
                                 className: "recommendation__content-cards",
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 alignItems: h.f.Center,
                                 fullHeight: !0,
                                 padding: {
@@ -1106,7 +1106,7 @@
                                     right: 2
                                 },
                                 display: h.X.Flex,
-                                textAlign: h.Ob.Left,
+                                textAlign: h.Pb.Left,
                                 justifyContent: h.Wa.Start,
                                 alignItems: h.f.Start
                             }, s.createElement(h.W, {
@@ -1121,7 +1121,7 @@
                                     right: 2
                                 },
                                 display: h.X.Flex,
-                                textAlign: h.Ob.Left,
+                                textAlign: h.Pb.Left,
                                 justifyContent: h.Wa.Start,
                                 alignItems: h.f.Start
                             }, s.createElement(h.W, {
@@ -1140,7 +1140,7 @@
                                 right: 2
                             },
                             display: h.X.Flex,
-                            textAlign: h.Ob.Left,
+                            textAlign: h.Pb.Left,
                             justifyContent: h.Wa.Start,
                             alignItems: h.f.Start
                         }, s.createElement(h.W, {
@@ -1161,7 +1161,7 @@
                                 left: 1
                             },
                             display: h.X.Flex,
-                            textAlign: h.Ob.Left,
+                            textAlign: h.Pb.Left,
                             justifyContent: h.Wa.Start,
                             alignItems: h.f.Start
                         }, s.createElement(h.W, {
@@ -1171,14 +1171,14 @@
                     }, t.prototype.renderCustomizedTitle = function() {
                         return this.props.ifPoster ? null : s.createElement(h.Xa, null, s.createElement(h.Xa, {
                             padding: 1,
-                            textAlign: h.Ob.Left
+                            textAlign: h.Pb.Left
                         }, s.createElement(h.W, {
                             color: h.O.Link,
                             bold: !0,
                             fontSize: h.Ca.Size4
                         }, Object(c.d)("Audience Insights", "DevGameFactSheet"))), s.createElement(h.Xa, {
                             padding: 1,
-                            textAlign: h.Ob.Left
+                            textAlign: h.Pb.Left
                         }, s.createElement(h.W, {
                             color: h.O.Alt,
                             fontSize: h.Ca.Size3
@@ -1186,14 +1186,14 @@
                     }, t.prototype.renderGenericTitle = function() {
                         return this.props.ifPoster ? null : s.createElement(h.Xa, null, s.createElement(h.Xa, {
                             padding: 1,
-                            textAlign: h.Ob.Left
+                            textAlign: h.Pb.Left
                         }, s.createElement(h.W, {
                             color: h.O.Link,
                             fontSize: h.Ca.Size4,
                             bold: !0
                         }, Object(c.d)("Games", "DevGameFactSheet"))), s.createElement(h.Xa, {
                             padding: 1,
-                            textAlign: h.Ob.Left
+                            textAlign: h.Pb.Left
                         }, s.createElement(h.W, {
                             color: h.O.Alt,
                             fontSize: h.Ca.Size3
@@ -1201,7 +1201,7 @@
                     }, t.prototype.renderPosterViewNote = function(e) {
                         return s.createElement(h.Xa, {
                             padding: e,
-                            zIndex: h.fc.Above
+                            zIndex: h.gc.Above
                         }, s.createElement(h.W, {
                             fontSize: h.Ca.Size3,
                             color: h.O.Alt
@@ -1217,10 +1217,10 @@
                 }(s.Component)),
                 q = a("fgkf"),
                 U = a.n(q),
-                Q = a("064O"),
-                V = a.n(Q),
-                Y = a("B9MZ"),
-                H = a.n(Y),
+                V = a("064O"),
+                Q = a.n(V),
+                H = a("B9MZ"),
+                Y = a.n(H),
                 K = a("/XS/"),
                 Z = a.n(K),
                 J = a("p4Zc"),
@@ -1277,7 +1277,7 @@
                             },
                             display: h.X.Flex,
                             className: "insights-white-btn",
-                            zIndex: h.fc.Above
+                            zIndex: h.gc.Above
                         }, s.createElement("button", {
                             onClick: this.handleClick,
                             className: "insights-white-btn__text"
@@ -1292,7 +1292,7 @@
                             },
                             display: h.X.Flex,
                             className: "insights-btn",
-                            zIndex: h.fc.Above
+                            zIndex: h.gc.Above
                         }, s.createElement("button", {
                             onClick: this.handleClick,
                             className: "insights-btn__text"
@@ -1300,14 +1300,14 @@
                             fontSize: h.Ca.Size6
                         }, this.props.text))) : s.createElement(h.Pa, {
                             display: h.X.InlineBlock,
-                            zIndex: h.fc.Above
+                            zIndex: h.gc.Above
                         }, s.createElement("button", {
                             onClick: this.handleClick
                         }, s.createElement(h.W, {
                             className: "insights-link",
                             fontSize: h.Ca.Size5,
                             bold: !0,
-                            decoration: h.Qb.Underline
+                            decoration: h.Rb.Underline
                         }, this.props.text)))
                     }, t
                 }(s.Component),
@@ -1318,7 +1318,7 @@
                         padding: 1,
                         display: h.X.Flex,
                         position: h.hb.Relative,
-                        textAlign: h.Ob.Center,
+                        textAlign: h.Pb.Center,
                         justifyContent: h.Wa.Center,
                         alignItems: h.f.Center
                     }, s.createElement(h.Cb, {
@@ -1326,7 +1326,7 @@
                         display: h.X.Flex,
                         flexDirection: h.Aa.Column,
                         position: h.hb.Relative,
-                        textAlign: h.Ob.Center,
+                        textAlign: h.Pb.Center,
                         justifyContent: h.Wa.Center,
                         alignItems: h.f.Center,
                         padding: {
@@ -1344,7 +1344,7 @@
                         padding: 2,
                         justifyContent: h.Wa.Center,
                         alignItems: h.f.Center,
-                        textAlign: h.Ob.Center,
+                        textAlign: h.Pb.Center,
                         fullWidth: !0,
                         fullHeight: !0
                     }, s.createElement(h.Xa, {
@@ -1352,7 +1352,7 @@
                         position: h.hb.Relative,
                         justifyContent: h.Wa.Center,
                         alignItems: h.f.Center,
-                        textAlign: h.Ob.Center
+                        textAlign: h.Pb.Center
                     }, s.createElement(h.W, {
                         color: h.O.Overlay,
                         fontSize: h.Ca.Size1,
@@ -1361,7 +1361,7 @@
                         display: h.X.Inline,
                         justifyContent: h.Wa.Center,
                         alignItems: h.f.Center,
-                        textAlign: h.Ob.Center
+                        textAlign: h.Pb.Center
                     }, oe(t))), le(e.topic, t, !1, h.O.Overlay)))
                 }),
                 oe = function(e) {
@@ -1377,21 +1377,21 @@
                     return 0 !== t ? s.createElement(h.Xa, null, s.createElement(h.Xa, {
                         justifyContent: h.Wa.Center,
                         alignItems: h.f.Center,
-                        textAlign: h.Ob.Center
+                        textAlign: h.Pb.Center
                     }, s.createElement(h.W, {
                         color: n,
                         fontSize: h.Ca.Size5
                     }, e)), s.createElement(h.Xa, {
                         justifyContent: h.Wa.Center,
                         alignItems: h.f.Center,
-                        textAlign: h.Ob.Center
+                        textAlign: h.Pb.Center
                     }, s.createElement(h.W, {
                         color: n,
                         fontSize: h.Ca.Size5
                     }, k(t)))) : s.createElement(h.Xa, null, s.createElement(h.Xa, {
                         justifyContent: h.Wa.Center,
                         alignItems: h.f.Center,
-                        textAlign: h.Ob.Center
+                        textAlign: h.Pb.Center
                     }, s.createElement(h.W, {
                         color: n,
                         fontSize: h.Ca.Size5
@@ -1423,9 +1423,9 @@
                                 display: h.X.Flex,
                                 justifyContent: h.Wa.Center,
                                 alignItems: h.f.Center,
-                                textAlign: h.Ob.Center
+                                textAlign: h.Pb.Center
                             }, s.createElement(h.Qa, {
-                                zIndex: h.fc.Above
+                                zIndex: h.gc.Above
                             }, s.createElement(h.W, {
                                 fontSize: h.Ca.Size5,
                                 italic: !0
@@ -1454,7 +1454,7 @@
                             fullWidth: !0
                         }, s.createElement(h.Xa, {
                             className: "drop-stats__content-cards",
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             alignItems: h.f.Center,
                             fullHeight: !0
                         }, s.createElement(h.Xa, {
@@ -1474,9 +1474,9 @@
                         }, s.createElement(h.W, {
                             color: h.O.Overlay,
                             fontSize: h.Ca.Size3
-                        }, ce())), s.createElement(h.Yb, {
-                            childWidth: h.Zb.Large,
-                            gutterSize: h.ac.Small,
+                        }, ce())), s.createElement(h.Zb, {
+                            childWidth: h.ac.Large,
+                            gutterSize: h.bc.Small,
                             placeholderItems: 3,
                             center: !0
                         }, s.createElement(ie, {
@@ -1498,7 +1498,7 @@
                             },
                             display: h.X.Flex,
                             justifyContent: h.Wa.Center,
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             alignItems: h.f.Center
                         }, s.createElement(se, {
                             type: re.Transparent,
@@ -1521,14 +1521,14 @@
                             right: 4
                         } : 0;
                     return s.createElement(h.Cb, {
-                        className: W(n),
+                        className: X(n),
                         position: h.hb.Relative
                     }, s.createElement(h.Xa, {
                         className: "drop-stats__content",
                         fullWidth: !0
                     }, s.createElement(h.Xa, {
-                        className: W(r),
-                        textAlign: h.Ob.Center,
+                        className: X(r),
+                        textAlign: h.Pb.Center,
                         alignItems: h.f.Center,
                         fullHeight: !0
                     }, s.createElement(h.Xa, {
@@ -1649,25 +1649,25 @@
                             bottom: 1
                         };
                     return s.createElement(h.Xa, {
-                        className: W(t),
+                        className: X(t),
                         position: h.hb.Relative,
                         justifyContent: h.Wa.Center,
                         alignItems: h.f.Center,
-                        textAlign: h.Ob.Center
+                        textAlign: h.Pb.Center
                     }, s.createElement(h.Xa, {
-                        className: W(n),
+                        className: X(n),
                         justifyContent: h.Wa.Center,
                         alignItems: h.f.Center,
                         position: h.hb.Relative,
-                        textAlign: h.Ob.Center,
+                        textAlign: h.Pb.Center,
                         display: h.X.Flex
                     }, s.createElement("img", {
-                        className: W(a),
+                        className: X(a),
                         src: e.src,
                         alt: e.name
                     })), s.createElement(h.Cb, {
                         background: h.r.Overlay,
-                        className: W(r)
+                        className: X(r)
                     }, s.createElement(h.Xa, {
                         padding: i
                     }, s.createElement(h.W, {
@@ -1689,12 +1689,12 @@
                         padding: e.paddingBetween,
                         justifyContent: h.Wa.Center,
                         alignItems: h.f.Center,
-                        textAlign: h.Ob.Center,
+                        textAlign: h.Pb.Center,
                         fullWidth: !0,
                         position: h.hb.Relative,
                         display: h.X.Flex
                     }, s.createElement(ue, {
-                        src: V.a,
+                        src: Q.a,
                         name: Object(c.d)("Hi-Rez Expo", "DevDropsCardBoard"),
                         ifPoster: !!e.ifPoster && e.ifPoster,
                         description: s.createElement(h.Xa, null, s.createElement(h.W, {
@@ -1713,7 +1713,7 @@
                         padding: e.paddingBetween,
                         justifyContent: h.Wa.Center,
                         alignItems: h.f.Center,
-                        textAlign: h.Ob.Center,
+                        textAlign: h.Pb.Center,
                         fullWidth: !0,
                         position: h.hb.Relative,
                         display: h.X.Flex
@@ -1734,12 +1734,12 @@
                         padding: e.paddingBetween,
                         justifyContent: h.Wa.Center,
                         alignItems: h.f.Center,
-                        textAlign: h.Ob.Center,
+                        textAlign: h.Pb.Center,
                         fullWidth: !0,
                         position: h.hb.Relative,
                         display: h.X.Flex
                     }, s.createElement(ue, {
-                        src: H.a,
+                        src: Y.a,
                         name: Object(c.d)("Overwatch League", "DevDropsCardBoard"),
                         ifPoster: !!e.ifPoster && e.ifPoster,
                         description: s.createElement(h.W, {
@@ -1761,10 +1761,10 @@
                             top: 3
                         }
                     }, s.createElement(h.Cb, {
-                        className: W(t),
+                        className: X(t),
                         position: h.hb.Relative,
                         background: h.r.AccentAlt2,
-                        textAlign: h.Ob.Center
+                        textAlign: h.Pb.Center
                     }, s.createElement(h.Cb, {
                         className: "info-card__thumbnail",
                         border: !0,
@@ -1784,7 +1784,7 @@
                         attachTop: !0,
                         attachLeft: !0,
                         attachBottom: !0,
-                        zIndex: h.fc.Above
+                        zIndex: h.gc.Above
                     }, xe(e))))), s.createElement(h.Xa, {
                         padding: {
                             top: 3
@@ -1812,7 +1812,7 @@
                 },
                 be = function(e) {
                     return e.ifPoster ? null : s.createElement(h.Xa, {
-                        textAlign: h.Ob.Left,
+                        textAlign: h.Pb.Left,
                         overflow: h.cb.Hidden,
                         padding: {
                             top: 1
@@ -1827,7 +1827,7 @@
                     }, e.extensionStats.description))
                 },
                 Ce = function(e) {
-                    return e.ifPoster ? h.Ob.Center : h.Ob.Left
+                    return e.ifPoster ? h.Pb.Center : h.Pb.Left
                 },
                 _e = (a("aWRw"), function(e) {
                     function t() {
@@ -1852,7 +1852,7 @@
                                     padding: {
                                         bottom: 1
                                     },
-                                    textAlign: h.Ob.Left,
+                                    textAlign: h.Pb.Left,
                                     position: h.hb.Absolute
                                 }, s.createElement("a", {
                                     onClick: t.handleClick(e)
@@ -1881,7 +1881,7 @@
                             className: "extension-stats__wrapper",
                             fullWidth: !0,
                             position: h.hb.Relative,
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             justifyContent: h.Wa.Center,
                             alignItems: h.f.Center,
                             display: h.X.Flex,
@@ -1893,20 +1893,20 @@
                             fullWidth: !0,
                             fullHeight: !0,
                             position: h.hb.Relative,
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             justifyContent: h.Wa.Center,
                             alignItems: h.f.Center,
                             display: h.X.Flex
                         }, s.createElement(h.Xa, {
                             className: "extension-stats__content-cards",
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             justifyContent: h.Wa.Center,
                             alignItems: h.f.Center
                         }, s.createElement(h.Xa, {
                             padding: {
                                 top: 5
                             },
-                            textAlign: h.Ob.Left
+                            textAlign: h.Pb.Left
                         }, s.createElement(h.W, {
                             color: h.O.Link,
                             fontSize: h.Ca.Size4,
@@ -1916,13 +1916,13 @@
                                 top: 2,
                                 bottom: 1
                             },
-                            textAlign: h.Ob.Left
+                            textAlign: h.Pb.Left
                         }, s.createElement(h.W, {
                             color: h.O.Alt,
                             fontSize: h.Ca.Size3
-                        }, Ee(this.props.gameData))), s.createElement(h.Yb, {
-                            childWidth: h.Zb.Large,
-                            gutterSize: h.ac.Small,
+                        }, Ee(this.props.gameData))), s.createElement(h.Zb, {
+                            childWidth: h.ac.Large,
+                            gutterSize: h.bc.Small,
                             placeholderItems: 3,
                             center: !0
                         }, this.extensionStatsRow(e)), s.createElement(h.Xa, {
@@ -1959,31 +1959,31 @@
                 Se = (a("SWWJ"), {
                     "data-test-selector": "dev-insights-nav-bar"
                 }),
-                Oe = {
+                De = {
                     "data-test-selector": "dev-insights-nav-bar-time-range"
                 },
-                De = {
+                Ae = {
                     "data-test-selector": "dev-insights-nav-bar-date-picker-toggle"
                 },
-                Ae = {
+                Pe = {
                     "data-test-selector": "dev-insights-nav-bar-backward_button"
                 },
                 we = {
                     "data-test-selector": "dev-insights-nav-bar-forward_button"
                 },
-                Xe = {
+                Oe = {
                     "data-test-selector": "dev-insights-nav-bar-calendar"
                 },
-                We = {
+                Xe = {
                     "data-test-selector": "dev-insights-nav-bar-calendar-year"
                 },
-                Ie = {
+                We = {
                     1: ["Q1", "Jan", "Feb", "Mar", "January", "February", "March"],
                     2: ["Q2", "Apr", "May", "Jun", "April", "May", "June"],
                     3: ["Q3", "Jul", "Aug", "Sep", "July", "August", "September"],
                     4: ["Q4", "Oct", "Nov", "Dec", "October", "November", "December"]
                 },
-                Pe = function(e) {
+                Ie = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1999,14 +1999,14 @@
                                 display: h.X.Flex,
                                 alignItems: h.f.Center,
                                 flexDirection: h.Aa.Column,
-                                zIndex: h.fc.Above,
+                                zIndex: h.gc.Above,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 attachRight: !0
                             }, s.createElement(h.Cb, {
                                 position: h.hb.Relative,
                                 background: h.r.Base,
-                                zIndex: h.fc.Above,
+                                zIndex: h.gc.Above,
                                 attachTop: !0,
                                 flexDirection: h.Aa.Row,
                                 flexWrap: h.Ba.Wrap,
@@ -2050,7 +2050,7 @@
                                     left: 2,
                                     right: 2
                                 }
-                            }, We), s.createElement(h.W, {
+                            }, Xe), s.createElement(h.W, {
                                 bold: !0,
                                 fontSize: h.Ca.Size5,
                                 color: h.O.Alt
@@ -2075,7 +2075,7 @@
                                 background: h.r.Base,
                                 display: h.X.Flex,
                                 flexWrap: h.Ba.NoWrap
-                            }, s.createElement(ze, r.__assign({}, Ae, {
+                            }, s.createElement(ze, r.__assign({}, Pe, {
                                 ifForward: !1,
                                 year: t.state.selectedYear,
                                 quarter: t.state.selectedQuarter,
@@ -2088,14 +2088,14 @@
                                 alignItems: h.f.Center,
                                 borderRight: !0,
                                 borderLeft: !0
-                            }, s.createElement(h.z, r.__assign({}, De, {
+                            }, s.createElement(h.z, r.__assign({}, Ae, {
                                 type: h.F.Text,
                                 onClick: a,
                                 fullWidth: !0,
                                 blurAfterClick: !0
                             }), s.createElement(h.Xa, {
                                 padding: .5
-                            }, s.createElement(h.W, r.__assign({}, Oe, {
+                            }, s.createElement(h.W, r.__assign({}, De, {
                                 fontSize: h.Ca.Size4
                             }), t.formatDateRange())))), s.createElement(ze, r.__assign({}, we, {
                                 ifForward: !0,
@@ -2128,15 +2128,15 @@
                                 })
                             }
                         }, t.quarterColumns = function(e) {
-                            var a = Ie[e],
+                            var a = We[e],
                                 n = {
                                     "quarter-row": !0,
                                     "quarter-row--selected": t.state.selectedQuarter === e
                                 };
                             return s.createElement("div", {
                                 onClick: t.clickQuarterColumns(e)
-                            }, s.createElement(h.Xa, null, s.createElement(h.Xa, r.__assign({}, Xe, {
-                                className: W(n),
+                            }, s.createElement(h.Xa, null, s.createElement(h.Xa, r.__assign({}, Oe, {
+                                className: X(n),
                                 padding: {
                                     right: .5
                                 }
@@ -2196,7 +2196,7 @@
                             flexWrap: h.Ba.NoWrap,
                             alignItems: h.f.Stretch,
                             position: h.hb.Relative,
-                            zIndex: h.fc.Above,
+                            zIndex: h.gc.Above,
                             className: "insights-nav-bar-layout__width"
                         }), s.createElement(ye.a, {
                             control: this.openCalendar
@@ -2231,7 +2231,7 @@
                         onClick: e.onClick,
                         type: h.F.Text,
                         blurAfterClick: !0
-                    }, Object(h.gc)(e)), s.createElement(h.Xa, {
+                    }, Object(h.hc)(e)), s.createElement(h.Xa, {
                         fullWidth: !0,
                         display: h.X.Flex
                     }, s.createElement(h.W, {
@@ -2239,7 +2239,7 @@
                     }, e.children))))
                 },
                 Ne = function(e, t) {
-                    var a = Ie[t];
+                    var a = We[t];
                     return Object(c.d)("{year}, {quarter} – {month1}, {month2}, {month3}", {
                         year: e,
                         quarter: a[0],
@@ -2268,24 +2268,24 @@
                                 "social-impacts__ears": t.props.ifPoster
                             };
                             return s.createElement(h.Xa, {
-                                className: W(a),
+                                className: X(a),
                                 display: h.X.Flex,
                                 position: h.hb.Relative,
                                 justifyContent: h.Wa.Center,
                                 alignItems: h.f.Center,
-                                textAlign: h.Ob.Center
+                                textAlign: h.Pb.Center
                             }, s.createElement(h.Xa, r.__assign({
                                 position: h.hb.Relative,
                                 justifyContent: h.Wa.Center,
                                 alignItems: h.f.Center,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 padding: 3,
                                 display: h.X.Flex,
                                 flexDirection: h.Aa.Column
                             }, ke), s.createElement(h.Xa, {
-                                zIndex: h.fc.Above,
+                                zIndex: h.gc.Above,
                                 position: h.hb.Relative,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 alignItems: h.f.Center
                             }, s.createElement(h.W, {
                                 color: h.O.Alt,
@@ -2294,9 +2294,9 @@
                                 numOfChatMessages: j(e.num_of_chat_messages),
                                 percentageOfEngagement: e.percent_of_engagement
                             }, "DevGameFactSheet"))), s.createElement(h.Xa, {
-                                zIndex: h.fc.Above,
+                                zIndex: h.gc.Above,
                                 position: h.hb.Relative,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 alignItems: h.f.Center
                             }, s.createElement(h.W, {
                                 color: h.O.Alt,
@@ -2308,7 +2308,7 @@
                                 "social-impacts__ears": t.props.ifPoster
                             };
                             return s.createElement(h.Xa, r.__assign({
-                                className: W(e),
+                                className: X(e),
                                 position: h.hb.Relative,
                                 justifyContent: h.Wa.Center,
                                 padding: {
@@ -2318,19 +2318,19 @@
                                 className: "social-impacts__ears"
                             }), s.createElement(h.Xa, {
                                 padding: 1,
-                                zIndex: h.fc.Above,
+                                zIndex: h.gc.Above,
                                 position: h.hb.Relative,
-                                textAlign: h.Ob.Center
+                                textAlign: h.Pb.Center
                             }, s.createElement(h.W, {
                                 color: h.O.Alt,
                                 fontSize: h.Ca.Size3
                             }, Object(c.d)("Grow your streamer community with Bounty Board to stream your game at scale.", "DevOnePagerSocialImpacts"))), s.createElement(h.Xa, {
-                                zIndex: h.fc.Above,
+                                zIndex: h.gc.Above,
                                 padding: {
                                     bottom: 3
                                 },
                                 position: h.hb.Relative,
-                                textAlign: h.Ob.Center
+                                textAlign: h.Pb.Center
                             }, s.createElement(h.W, {
                                 color: h.O.Alt,
                                 fontSize: h.Ca.Size3
@@ -2341,7 +2341,7 @@
                         return this.renderSocialImpacts()
                     }, t.prototype.renderBountyBoardMessage = function() {
                         return s.createElement(h.Xa, {
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             padding: {
                                 top: 2
                             },
@@ -2377,14 +2377,14 @@
                                 className: "social-impacts__content",
                                 fullWidth: !0,
                                 position: h.hb.Relative,
-                                zIndex: h.fc.Above,
-                                textAlign: h.Ob.Center,
+                                zIndex: h.gc.Above,
+                                textAlign: h.Pb.Center,
                                 padding: {
                                     bottom: 5
                                 }
                             }, s.createElement(h.Xa, {
                                 className: "social-impacts__content-info",
-                                textAlign: h.Ob.Left,
+                                textAlign: h.Pb.Left,
                                 alignItems: h.f.Start
                             }, this.renderSocialImpactsMessage(e), this.renderBountyBoardMessage())))
                         }
@@ -2396,14 +2396,14 @@
                             className: "social-impacts__content",
                             fullWidth: !0,
                             position: h.hb.Relative,
-                            textAlign: h.Ob.Center,
-                            zIndex: h.fc.Above,
+                            textAlign: h.Pb.Center,
+                            zIndex: h.gc.Above,
                             padding: {
                                 bottom: 5
                             }
                         }, s.createElement(h.Xa, {
                             className: "social-impacts__content-info",
-                            textAlign: h.Ob.Left,
+                            textAlign: h.Pb.Left,
                             alignItems: h.f.Start
                         }, this.renderBountyBoardMessage())))
                     }, t
@@ -2429,16 +2429,16 @@
                 Ue = function() {
                     return Object(c.d)("minutes watched", "DevGameFactSheet")
                 },
-                Qe = function() {
+                Ve = function() {
                     return Object(c.d)("unique monthly broadcasters", "DevGameFactSheet")
                 },
-                Ve = function() {
+                Qe = function() {
                     return Object(c.d)("unique daily visitors", "DevGameFactSheet")
                 },
-                Ye = function() {
+                He = function() {
                     return Object(c.d)("partnered streamers", "DevGameFactSheet")
                 },
-                He = function() {
+                Ye = function() {
                     return Object(c.d)("affiliate streamers", "DevGameFactSheet")
                 },
                 Ke = function() {
@@ -2450,14 +2450,14 @@
                         return s.createElement(h.Xa, {
                             className: "dev-stats-card-group",
                             fullWidth: !0,
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             alignItems: h.f.Center,
                             position: h.hb.Absolute,
                             justifyContent: h.Wa.Center,
                             display: h.X.Flex
-                        }, s.createElement(h.Yb, {
-                            childWidth: h.Zb.Large,
-                            gutterSize: h.ac.Small,
+                        }, s.createElement(h.Zb, {
+                            childWidth: h.ac.Large,
+                            gutterSize: h.bc.Small,
                             placeholderItems: 6,
                             center: !0
                         }, s.createElement(ie, {
@@ -2490,7 +2490,7 @@
                         t = e.gameData.general_stats;
                         return s.createElement(h.Xa, {
                             className: "dev-stats-card-group",
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             alignItems: h.f.Center,
                             justifyContent: h.Wa.Center,
                             position: h.hb.Absolute
@@ -2502,25 +2502,25 @@
                         }, s.createElement(h.W, {
                             fontSize: h.Ca.Size3,
                             color: h.O.Overlay
-                        }, Object(c.d)("Twitch has an incredible community, in 2017...", "DevGameFactSheet"))), s.createElement(h.Yb, {
-                            childWidth: h.Zb.Large,
-                            gutterSize: h.ac.Small,
+                        }, Object(c.d)("Twitch has an incredible community, in 2017...", "DevGameFactSheet"))), s.createElement(h.Zb, {
+                            childWidth: h.ac.Large,
+                            gutterSize: h.bc.Small,
                             placeholderItems: 6,
                             center: !0
                         }, s.createElement(ie, {
                             topic: Ue(),
                             value: t.minutes_watched
                         }), s.createElement(ie, {
-                            topic: Qe(),
+                            topic: Ve(),
                             value: t.unique_monthly_broadcasters
                         }), s.createElement(ie, {
-                            topic: Ve(),
+                            topic: Qe(),
                             value: t.unique_daily_visitors
                         }), s.createElement(ie, {
-                            topic: Ye(),
+                            topic: He(),
                             value: t.partnered_streamers
                         }), s.createElement(ie, {
-                            topic: He(),
+                            topic: Ye(),
                             value: t.affiliate_streamers
                         }), s.createElement(ie, {
                             topic: Ke(),
@@ -2549,7 +2549,7 @@
                         return s.createElement(h.Xa, {
                             className: "game-fact-sheet",
                             justifyContent: h.Wa.Center,
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             alignItems: h.f.Center,
                             position: h.hb.Relative,
                             fullHeight: !0,
@@ -2557,7 +2557,7 @@
                         }, this.renderPrintSticker(), s.createElement(h.Xa, {
                             className: "game-fact-sheet__header",
                             position: h.hb.Relative,
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             alignItems: h.f.Center,
                             display: h.X.Block
                         }, s.createElement(h.Cb, {
@@ -2566,13 +2566,13 @@
                             fullWidth: !0,
                             fullHeight: !0,
                             position: h.hb.Absolute,
-                            textAlign: h.Ob.Center
+                            textAlign: h.Pb.Center
                         }), s.createElement(h.Xa, {
                             className: "game-fact-sheet__info",
                             alignItems: h.f.Center,
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             position: h.hb.Absolute,
-                            zIndex: h.fc.Default,
+                            zIndex: h.gc.Default,
                             fullWidth: !0
                         }, s.createElement(h.Xa, {
                             margin: {
@@ -2598,7 +2598,7 @@
                             fullWidth: !0,
                             position: h.hb.Absolute,
                             justifyContent: h.Wa.Center,
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             alignItems: h.f.Center
                         }, s.createElement(h.Xa, {
                             className: "game-fact-sheet__nav-bar",
@@ -2609,11 +2609,11 @@
                             fullWidth: !0,
                             display: h.X.Flex,
                             justifyContent: h.Wa.Center,
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             alignItems: h.f.Center,
-                            zIndex: h.fc.Above,
+                            zIndex: h.gc.Above,
                             position: h.hb.Absolute
-                        }, s.createElement(Pe, {
+                        }, s.createElement(Ie, {
                             year: this.props.year,
                             quarter: this.props.quarter,
                             onQuarterChange: this.props.onQuarterChange
@@ -2622,19 +2622,19 @@
                             display: h.X.Flex,
                             fullWidth: !0,
                             position: h.hb.Relative,
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             alignItems: h.f.Center
                         }, s.createElement(h.Xa, {
                             className: "game-overview-stats__content",
                             fullWidth: !0,
                             position: h.hb.Absolute,
                             display: h.X.Flex,
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             alignItems: h.f.Center,
                             justifyContent: h.Wa.Center
                         }, s.createElement(Ze, {
                             gameData: this.props.gameData
-                        }))), s.createElement(X, {
+                        }))), s.createElement(O, {
                             gameData: this.props.gameData
                         }), s.createElement(Fe, {
                             ifPoster: !1,
@@ -2660,15 +2660,15 @@
                                 top: 5,
                                 bottom: 5
                             },
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             alignItems: h.f.Center
                         }, s.createElement(h.Xa, {
                             className: "insights-footer__content",
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             alignItems: h.f.Center
                         }, s.createElement(h.Xa, {
                             className: "insights-footer__content-text",
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             alignItems: h.f.Center,
                             fullHeight: !0
                         }, s.createElement(h.Xa, {
@@ -2686,7 +2686,7 @@
                             color: h.O.Overlay
                         }, Object(c.d)("Interested in diving deeper on analytics and insights surrounding your games?", "DevGameFactSheet")))), s.createElement(h.Xa, {
                             padding: 1,
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             alignItems: h.f.Center,
                             display: h.X.Flex,
                             justifyContent: h.Wa.Center
@@ -2728,9 +2728,9 @@
                             display: h.X.Flex,
                             justifyContent: h.Wa.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Ob.Center
+                            textAlign: h.Pb.Center
                         }, s.createElement(h.Qa, {
-                            zIndex: h.fc.Above
+                            zIndex: h.gc.Above
                         }, s.createElement("a", {
                             className: "insights-footer__contact",
                             href: "mailto:insights@twitch.tv"
@@ -2907,25 +2907,25 @@
                             })), s.createElement(h.P, {
                                 cols: 4
                             }, s.createElement(mt, {
-                                topic: Qe(),
+                                topic: Ve(),
                                 value: e.unique_monthly_broadcasters,
                                 percentage: 0
                             })), s.createElement(h.P, {
                                 cols: 4
                             }, s.createElement(mt, {
-                                topic: Ve(),
+                                topic: Qe(),
                                 value: e.unique_daily_visitors,
                                 percentage: 0
                             }))), s.createElement(h.Ja, null, s.createElement(h.P, {
                                 cols: 4
                             }, s.createElement(mt, {
-                                topic: Ye(),
+                                topic: He(),
                                 value: e.partnered_streamers,
                                 percentage: 0
                             })), s.createElement(h.P, {
                                 cols: 4
                             }, s.createElement(mt, {
-                                topic: He(),
+                                topic: Ye(),
                                 value: e.affiliate_streamers,
                                 percentage: 0
                             })), s.createElement(h.P, {
@@ -3001,25 +3001,25 @@
                         display: h.X.Flex,
                         flexDirection: h.Aa.Column,
                         position: h.hb.Relative,
-                        textAlign: h.Ob.Center,
+                        textAlign: h.Pb.Center,
                         justifyContent: h.Wa.Center,
                         alignItems: h.f.Center,
                         padding: 1,
                         fullHeight: !0
                     }, s.createElement(h.Xa, {
-                        className: W(a),
+                        className: X(a),
                         display: h.X.Flex,
                         position: h.hb.Relative,
                         justifyContent: h.Wa.Center,
                         alignItems: h.f.Center,
-                        textAlign: h.Ob.Center,
+                        textAlign: h.Pb.Center,
                         fullHeight: !0
                     }, s.createElement(h.Xa, {
                         display: h.X.Inline,
                         position: h.hb.Relative,
                         justifyContent: h.Wa.Center,
                         alignItems: h.f.Center,
-                        textAlign: h.Ob.Center
+                        textAlign: h.Pb.Center
                     }, s.createElement(h.W, {
                         color: t,
                         fontSize: h.Ca.Size1,
@@ -3028,11 +3028,11 @@
                         display: h.X.Inline,
                         justifyContent: h.Wa.Center,
                         alignItems: h.f.Center,
-                        textAlign: h.Ob.Center
+                        textAlign: h.Pb.Center
                     }, oe(e.percentage))), e.percentage ? le(e.topic, e.percentage, !0, t) : s.createElement(h.Xa, {
                         justifyContent: h.Wa.Center,
                         alignItems: h.f.Center,
-                        textAlign: h.Ob.Center,
+                        textAlign: h.Pb.Center,
                         className: "dev-poster-view-stats__topics"
                     }, s.createElement(h.W, {
                         color: t,
@@ -3056,7 +3056,7 @@
                                 flexDirection: h.Aa.Column,
                                 justifyContent: h.Wa.Center,
                                 alignItems: h.f.Center,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 position: h.hb.Relative,
                                 background: h.r.Alt2,
                                 fullWidth: !0
@@ -3073,7 +3073,7 @@
                             }, ce())), s.createElement(h.Xa, r.__assign({
                                 fullWidth: !0,
                                 justifyContent: h.Wa.Center,
-                                textAlign: h.Ob.Center
+                                textAlign: h.Pb.Center
                             }, pt), this.renderDropsStats(e))))
                         }
                         return this.props.gameData.audience_stats && 0 !== this.props.gameData.audience_stats.top_broadcaster_countries.length && 0 !== this.props.gameData.audience_stats.top_viewer_countries.length ? s.createElement(h.Cb, {
@@ -3082,10 +3082,10 @@
                             flexDirection: h.Aa.Column,
                             justifyContent: h.Wa.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Ob.Center,
+                            textAlign: h.Pb.Center,
                             position: h.hb.Relative,
                             background: h.r.Alt2,
-                            zIndex: h.fc.Above
+                            zIndex: h.gc.Above
                         }, s.createElement(h.Xa, {
                             className: "dev-game-fact-sheet-poster-view-drops__default-smaller-content"
                         }, s.createElement(h.Xa, {
@@ -3098,7 +3098,7 @@
                         }, Object(c.d)("Use Twitch Drops to reward your viewers with in-game loot!", "DevGameFactSheetPosterViewDrops"))), s.createElement(h.Xa, {
                             fullWidth: !0,
                             justifyContent: h.Wa.Center,
-                            textAlign: h.Ob.Center
+                            textAlign: h.Pb.Center
                         }, s.createElement(ve, {
                             ifPoster: !0,
                             paddingBetween: {
@@ -3160,7 +3160,7 @@
                                 bottom: 4
                             },
                             justifyContent: h.Wa.Center,
-                            textAlign: h.Ob.Center
+                            textAlign: h.Pb.Center
                         }, s.createElement(h.Xa, null, s.createElement(h.W, {
                             color: h.O.Alt,
                             fontSize: h.Ca.Size3
@@ -3172,7 +3172,7 @@
                             fullWidth: !0,
                             justifyContent: h.Wa.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Ob.Center
+                            textAlign: h.Pb.Center
                         }, t))) : null
                     }, t
                 }(s.Component)),
@@ -3196,7 +3196,7 @@
                                 margin: {
                                     top: 1
                                 },
-                                textAlign: h.Ob.Center
+                                textAlign: h.Pb.Center
                             }, s.createElement(h.W, {
                                 color: h.O.Overlay,
                                 fontSize: h.Ca.Size4
@@ -3256,14 +3256,14 @@
                                     display: h.X.Flex,
                                     className: "dev-game-fact-sheet-poster-view-broadcasters__smaller-img",
                                     justifyContent: h.Wa.Center,
-                                    textAlign: h.Ob.Center
+                                    textAlign: h.Pb.Center
                                 }, s.createElement("img", {
                                     src: t[i].img,
                                     alt: t[i].display_name
                                 })), s.createElement(h.Xa, {
                                     display: h.X.Flex,
                                     justifyContent: h.Wa.Center,
-                                    textAlign: h.Ob.Center,
+                                    textAlign: h.Pb.Center,
                                     className: "dev-game-fact-sheet-poster-view-broadcasters__smaller-title"
                                 }, s.createElement(h.W, {
                                     fontSize: h.Ca.Size5,
@@ -3272,7 +3272,7 @@
                             else 2 === t.length && n.push(s.createElement(h.Xa, r.__assign({
                                 justifyContent: h.Wa.Center,
                                 alignItems: h.f.Center,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 margin: {
                                     left: 5
                                 }
@@ -3284,7 +3284,7 @@
                                 flexDirection: h.Aa.Column,
                                 justifyContent: h.Wa.Center,
                                 alignItems: h.f.Center,
-                                textAlign: h.Ob.Center
+                                textAlign: h.Pb.Center
                             }, s.createElement(h.W, {
                                 fontSize: h.Ca.Size3,
                                 color: h.O.Overlay
@@ -3293,7 +3293,7 @@
                                 className: "dev-game-fact-sheet-poster-view-broadcasters__larger_img",
                                 justifyContent: h.Wa.Center,
                                 alignItems: h.f.Center,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 padding: {
                                     top: 1
                                 }
@@ -3302,7 +3302,7 @@
                                 alt: t[1].display_name
                             })), s.createElement(h.Xa, {
                                 justifyContent: h.Wa.Center,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 padding: {
                                     top: 1
                                 }
@@ -3319,7 +3319,7 @@
                             }, vt), s.createElement(h.Xa, {
                                 justifyContent: h.Wa.Center,
                                 alignItems: h.f.Center,
-                                textAlign: h.Ob.Center
+                                textAlign: h.Pb.Center
                             }, s.createElement(h.Xa, {
                                 padding: {
                                     bottom: 1
@@ -3328,7 +3328,7 @@
                                 flexDirection: h.Aa.Column,
                                 justifyContent: h.Wa.Center,
                                 alignItems: h.f.Center,
-                                textAlign: h.Ob.Center
+                                textAlign: h.Pb.Center
                             }, s.createElement(h.W, {
                                 fontSize: h.Ca.Size3,
                                 color: h.O.Overlay
@@ -3337,7 +3337,7 @@
                                 className: "dev-game-fact-sheet-poster-view-broadcasters__larger_img",
                                 justifyContent: h.Wa.Center,
                                 alignItems: h.f.Center,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 padding: {
                                     top: 1
                                 }
@@ -3346,7 +3346,7 @@
                                 alt: t[0].display_name
                             })), s.createElement(h.Xa, {
                                 justifyContent: h.Wa.Center,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 padding: {
                                     top: 1
                                 }
@@ -3403,7 +3403,7 @@
                             }, s.createElement(h.Cb, {
                                 className: "dev-game-fact-sheet-poster-view-header__logo",
                                 justifyContent: h.Wa.Center,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 margin: {
                                     top: 1
                                 }
@@ -3416,7 +3416,7 @@
                                 flexDirection: h.Aa.Column,
                                 className: "dev-game-fact-sheet-poster-view-header__info",
                                 justifyContent: h.Wa.Center,
-                                textAlign: h.Ob.Center
+                                textAlign: h.Pb.Center
                             }, xt), s.createElement(h.Xa, {
                                 margin: {
                                     bottom: 1,
@@ -3445,7 +3445,7 @@
                                 margin: {
                                     top: 1
                                 },
-                                textAlign: h.Ob.Center
+                                textAlign: h.Pb.Center
                             }, bt), s.createElement(h.Xa, null, s.createElement(h.W, {
                                 color: h.O.Overlay
                             }, Ne(t.props.year, t.props.quarter))), s.createElement(h.Xa, {

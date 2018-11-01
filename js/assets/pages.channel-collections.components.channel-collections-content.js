@@ -199,7 +199,7 @@
                         flexDirection: c.Aa.Row,
                         alignItems: c.f.Center
                     }, o.createElement(c.W, {
-                        type: c.Sb.H5
+                        type: c.Tb.H5
                     }, Object(a.d)("Expand All", "VideoShelfExpandLink")), o.createElement(c.qb, {
                         asset: c.rb.AngleRight,
                         height: 14
@@ -216,7 +216,7 @@
                     width: 200
                 });
                 var t = o.createElement(c.W, {
-                        type: c.Sb.H4,
+                        type: c.Tb.H4,
                         color: c.O.Base,
                         bold: !0,
                         "data-test-selector": i.Title
@@ -224,7 +224,7 @@
                     n = e.subTitle;
                 return e.subTitle && "string" == typeof e.subTitle ? n = o.createElement(c.W, {
                     color: c.O.Alt2,
-                    type: c.Sb.Span,
+                    type: c.Tb.Span,
                     "data-test-selector": i.SubTitle
                 }, e.subTitle) : e.subTitle && (n = o.createElement(c.Xa, {
                     "data-test-selector": i.SubTitle
@@ -298,7 +298,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(c.a, {
+                        var e = {
                             context: this.props.context,
                             onClick: this.onClickHandler,
                             title: this.props.video.title,
@@ -309,7 +309,7 @@
                             },
                             thumbnailImageProps: {
                                 src: this.props.video.previewThumbnailURL,
-                                alt: this.props.video.title
+                                alt: this.props.video.title || ""
                             },
                             channelDisplayName: this.props.video.owner && this.props.video.owner.displayName || "",
                             channelLogin: this.props.video.owner && this.props.video.owner.login || "",
@@ -319,7 +319,7 @@
                             },
                             channelImageProps: {
                                 src: this.props.video.owner && this.props.video.owner.profileImageURL || "",
-                                alt: this.props.video.owner ? this.props.video.owner.displayName : ""
+                                alt: this.props.video.owner && this.props.video.owner.displayName || ""
                             },
                             gameTitle: this.props.video.game && this.props.video.game.name || "",
                             gameTitleLinkTo: {
@@ -333,8 +333,8 @@
                             videoGameChanges: this.gameChangesWithLinks(),
                             multipleVideoGameMarkersType: this.props.multipleVideoGameMarkersType,
                             datePublished: this.props.video.publishedAt,
-                            viewCount: this.props.video.viewCount,
-                            durationInSeconds: this.props.hideDuration ? void 0 : this.props.video.lengthSeconds,
+                            viewCount: this.props.video.viewCount || 0,
+                            durationInSeconds: !this.props.hideDuration && this.props.video.lengthSeconds ? this.props.video.lengthSeconds : void 0,
                             animatedImageProps: this.props.video.animatedPreviewURL ? {
                                 src: this.props.video.animatedPreviewURL,
                                 alt: ""
@@ -351,14 +351,15 @@
                                 tags: this.props.video.contentTags,
                                 linkPath: g.a.PopularTag
                             } : void 0
-                        })
+                        };
+                        return o.createElement(c.a, i.__assign({}, e))
                     }, t.prototype.generateSearchString = function() {
                         var e = {};
                         this.props.collectionID && (e.collection = this.props.collectionID);
                         var t = l.stringify(e);
                         return t ? "?" + t : ""
                     }, t.prototype.getVideoPreviousWatchPercentage = function() {
-                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / this.props.video.lengthSeconds * 100 : null
+                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / (this.props.video.lengthSeconds || 1 / 0) * 100 : null
                     }, t.prototype.getRestrictionProps = function() {
                         var e = this.props.video.restriction && this.props.video.restriction.productName ? "/products/" + this.props.video.restriction.productName : "";
                         return {
@@ -410,7 +411,7 @@
                         videoGameChanges: this.state.videoGameChanges
                     }, this.props))
                 }, t.prototype.componentWillMount = function() {
-                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== r.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds)
+                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== r.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds || 0)
                 }, t
             }(o.Component)
         },
@@ -675,7 +676,7 @@
                         "data-test-selector": "top-bar-title-selector",
                         color: l.O.Overlay,
                         bold: !0,
-                        transform: l.Rb.Uppercase
+                        transform: l.Sb.Uppercase
                     }, e.title)), e.subTitle && o.createElement(l.Xa, {
                         display: l.X.InlineFlex
                     }, o.createElement(l.W, {
@@ -777,7 +778,7 @@
                     }, t, o.createElement(l.W, null, e.value))
                 }),
                 I = n("GnwI"),
-                S = (n("B3R5"), function(e) {
+                x = (n("B3R5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -841,7 +842,7 @@
                         })))
                     }, t
                 }(o.Component)),
-                x = Object(I.b)("PreviewCardThumbnail")(S),
+                S = Object(I.b)("PreviewCardThumbnail")(x),
                 T = (n("80G/"), function(e) {
                     var t = null;
                     return e.subtitles && e.subtitles.length > 0 && (t = e.subtitles.map(function(e, t) {
@@ -863,7 +864,7 @@
                         type: l.V.Inherit,
                         "data-test-selector": "preview-card-titles__primary-link"
                     }), o.createElement(l.W, {
-                        type: l.Sb.H3,
+                        type: l.Tb.H3,
                         fontSize: l.Ca.Size5,
                         lines: 1,
                         bold: !0,
@@ -899,11 +900,11 @@
                         position: l.hb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
-                        zIndex: l.fc.Default,
+                        zIndex: l.gc.Default,
                         padding: {
                             x: 5
                         },
-                        textAlign: l.Ob.Center,
+                        textAlign: l.Pb.Center,
                         fullWidth: !0,
                         fullHeight: !0,
                         alignItems: l.f.Center,
@@ -936,14 +937,14 @@
                         attachBottom: !this.props.attachTop,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: l.fc.Default,
+                        zIndex: l.gc.Default,
                         fontSize: l.Ca.Size6,
                         background: l.r.Overlay,
                         borderRadius: l.x.Medium,
                         color: l.O.Overlay
-                    }, o.createElement(l.Vb, {
-                        direction: this.props.attachTop ? l.Xb.Bottom : l.Xb.Top,
-                        align: l.Wb.Right,
+                    }, o.createElement(l.Wb, {
+                        direction: this.props.attachTop ? l.Yb.Bottom : l.Yb.Top,
+                        align: l.Xb.Right,
                         label: n
                     }, o.createElement(l.qb, {
                         asset: i,
@@ -988,7 +989,7 @@
                             to: Object(O.a)(this.getTrackingContext(h.PageviewContent.VideoThumbnail), this.props.linkTo),
                             onClick: this.props.onThumbnailClick || this.props.onClick,
                             "data-a-target": "preview-card-image-link"
-                        }, this.props.thumbnailImageProps && o.createElement(x, {
+                        }, this.props.thumbnailImageProps && o.createElement(S, {
                             staticImageProps: this.props.thumbnailImageProps,
                             animatedImageProps: R(this.props) && this.props.animatedImageProps || void 0,
                             trackImageLatency: this.props.trackImageLatency
@@ -1037,9 +1038,9 @@
                             bottomLeft: o.createElement(E, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: o.createElement(E, {
+                            bottomRight: this.props.datePublished ? o.createElement(E, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
-                            }),
+                            }) : null,
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
                         }) : B(this.props) ? o.createElement(w, {
@@ -1052,9 +1053,9 @@
                             bottomLeft: o.createElement(E, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: o.createElement(E, {
+                            bottomRight: this.props.datePublished ? o.createElement(E, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
-                            })
+                            }) : null
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
                         return R(this.props) && this.props.listPosition ? Object(r.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
@@ -1447,7 +1448,7 @@
                             fullHeight: !0,
                             justifyContent: h.Wa.Center,
                             position: h.hb.Absolute,
-                            textAlign: h.Ob.Center
+                            textAlign: h.Pb.Center
                         }, l.createElement(h.qb, {
                             asset: h.rb.Collections,
                             height: 20,
@@ -1827,7 +1828,7 @@
                         }, "ChannelCollections");
                         return r.createElement(k.G, o.__assign({
                             key: this.props.title
-                        }, Object(k.gc)(this.props)), r.createElement(k.Pa, {
+                        }, Object(k.hc)(this.props)), r.createElement(k.Pa, {
                             position: k.hb.Relative
                         }, r.createElement(k.U, {
                             to: {
@@ -1872,9 +1873,9 @@
                             color: k.O.Alt2,
                             ellipsis: !0
                         }, r.createElement(k.W, {
-                            type: k.Sb.Span
+                            type: k.Tb.Span
                         }, e), r.createElement(k.W, {
-                            type: k.Sb.Span
+                            type: k.Tb.Span
                         }, " · " + this.computeViewsMessage())))))
                     }, t
                 }(r.Component),
@@ -1890,7 +1891,7 @@
                     return t = e.canEdit ? r.createElement("div", {
                         "data-test-selector": i.NoCollectionsUpSell
                     }, r.createElement(k.W, {
-                        type: k.Sb.H4
+                        type: k.Tb.H4
                     }, Object(l.d)("Create a collection of your videos from Video Producer.", "collection-page")), r.createElement(k.Xa, {
                         padding: {
                             top: 2
@@ -1899,15 +1900,15 @@
                         type: k.F.Hollow,
                         linkTo: "/" + e.channelLogin + "/manager/collections"
                     }, Object(l.d)("Go to Video Producer", "collection-page")))) : r.createElement(k.W, {
-                        type: k.Sb.H4,
+                        type: k.Tb.H4,
                         italic: !0,
                         "data-test-selector": i.NoCollections
                     }, Object(l.d)("No collections found.", "collection-page")), r.createElement(k.Cb, {
                         color: k.O.Alt2,
-                        textAlign: k.Ob.Center
+                        textAlign: k.Pb.Center
                     }, t)
                 },
-                S = function(e) {
+                x = function(e) {
                     return r.createElement(w.a, {
                         ownerLogin: e.channelLogin,
                         permittedRoles: {
@@ -1923,7 +1924,7 @@
                         })
                     })
                 },
-                x = n("cERj"),
+                S = n("cERj"),
                 T = n("IhxQ");
             ! function(e) {
                 e[e.Filters = 0] = "Filters"
@@ -1951,7 +1952,7 @@
                                 padding: {
                                     bottom: 2
                                 }
-                            }, Object(m.b)() ? r.createElement(x.a, {
+                            }, Object(m.b)() ? r.createElement(S.a, {
                                 channelLogin: this.props.channelLogin
                             }) : r.createElement("div", null), r.createElement(v.a, {
                                 channelLogin: this.props.channelLogin
@@ -1977,9 +1978,9 @@
                             }, r.createElement(k.gb, {
                                 width: 100
                             }))));
-                            return r.createElement(k.Yb, {
-                                gutterSize: k.ac.Small,
-                                childWidth: k.Zb.Medium,
+                            return r.createElement(k.Zb, {
+                                gutterSize: k.bc.Small,
+                                childWidth: k.ac.Medium,
                                 placeholderItems: 20
                             }, i)
                         }
@@ -1996,7 +1997,7 @@
                             padding: {
                                 y: 5
                             }
-                        }, r.createElement(S, {
+                        }, r.createElement(x, {
                             channelLogin: this.props.channelLogin
                         }));
                         if (Object(m.a)() || Object(m.b)()) {
@@ -2035,9 +2036,9 @@
                                     "data-a-target": "collection-card-" + n
                                 }))
                             });
-                            i = r.createElement(k.Yb, {
-                                gutterSize: k.ac.Small,
-                                childWidth: k.Zb.Large,
+                            i = r.createElement(k.Zb, {
+                                gutterSize: k.bc.Small,
+                                childWidth: k.ac.Large,
                                 placeholderItems: 20
                             }, l)
                         }
@@ -2152,7 +2153,7 @@
                                 right: .5
                             }
                         }, this.getIcon()), c.createElement(u.W, {
-                            type: u.Sb.Span
+                            type: u.Tb.Span
                         }, this.getLabel()))
                     }, t.prototype.getClassNames = function() {
                         var e = {
@@ -2372,11 +2373,11 @@
                                 transform: this.transformString()
                             },
                             "data-test-selector": "carousel-body"
-                        }, l.createElement(u.Yb, {
+                        }, l.createElement(u.Zb, {
                             noWrap: !0,
                             noGrow: !0,
-                            childWidth: this.props.cardWidth || u.Zb.Large,
-                            gutterSize: u.ac.Small,
+                            childWidth: this.props.cardWidth || u.ac.Large,
+                            gutterSize: u.bc.Small,
                             "data-js-selector": m
                         }, this.props.children)))), l.createElement(u.Xa, {
                             className: "preview-card-carousel__nav",
@@ -2455,7 +2456,7 @@
                             if (!t.state.hasTrackedItemSectionLoad) {
                                 for (var e = t.props.videos ? t.props.videos : [], n = [], i = [], o = 0, r = e; o < r.length; o++) {
                                     var l = r[o];
-                                    n.push(l.id), i.push(l.viewCount)
+                                    n.push(l.id), i.push(l.viewCount || 0)
                                 }
                                 s.o.trackItemSectionLoad(a.__assign({
                                     carousel_content: t.props.tracking.content,
@@ -2639,9 +2640,9 @@
                     autoReportInteractive: !0
                 })(E);
             n.d(t, "a", function() {
-                return S
+                return x
             });
-            var S = Object(r.connect)(function(e) {
+            var x = Object(r.connect)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
@@ -3124,7 +3125,7 @@
                                     }
                                 }
                                 if (!o) return null;
-                                if (o.viewingPosition / o.value.lengthSeconds > u) {
+                                if (o.viewingPosition / (o.value.lengthSeconds || 1 / 0) > u) {
                                     var m = o.index + 1;
                                     if (m < n) {
                                         var h = t[m];
@@ -3200,7 +3201,7 @@
                             "data-test-selector": v.PlayAllButton
                         }, Object(a.d)("Play all", "LatestCollectionCarousel"))), r.createElement(g.W, {
                             color: g.O.Alt2,
-                            type: g.Sb.Span,
+                            type: g.Tb.Span,
                             "data-test-selector": v.Metadata
                         }, this.renderSubTitle(e))) : r.createElement(g.gb, {
                             width: 250,

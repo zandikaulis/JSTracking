@@ -38,8 +38,8 @@
             var b = a("GD6M"),
                 E = a("Ue10"),
                 S = "company-request-access-form-company-name",
-                C = "company-request-access-form-company-website",
-                T = "company-request-access-form-industry",
+                T = "company-request-access-form-company-website",
+                C = "company-request-access-form-industry",
                 _ = "company-request-access-form-company-size",
                 R = "company-request-access-form-city",
                 q = "company-request-access-form-state",
@@ -192,7 +192,7 @@
                             required: !0,
                             type: E.Ta.Text,
                             onChange: this.setCompanyWebsite,
-                            "data-test-selector": C
+                            "data-test-selector": T
                         }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
@@ -249,7 +249,7 @@
                             required: !0,
                             type: E.Ta.Text,
                             onChange: this.setIndustry,
-                            "data-test-selector": T
+                            "data-test-selector": C
                         }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
@@ -398,9 +398,9 @@
                                     bottom: .5
                                 }
                             }, r.createElement(E.W, {
-                                type: E.Sb.H4
+                                type: E.Tb.H4
                             }, Object(i.d)("Error", "DevRequestAccess"))), r.createElement(E.W, {
-                                type: E.Sb.P
+                                type: E.Tb.P
                             }, t.props.errorMessage))
                         }, t
                     }
@@ -431,9 +431,9 @@
                                 bottom: 1
                             }
                         }, r.createElement(E.W, {
-                            type: E.Sb.H2
+                            type: E.Tb.H2
                         }, Object(i.d)("Register your company and game with Twitch", "DevRequestAccess"))), r.createElement(E.W, {
-                            type: E.Sb.P
+                            type: E.Tb.P
                         }, Object(i.d)("The Twitch Developer Console helps you to link and manage your games and their assets on Twitch. Before providing access, we just need to capture some simple details. We will need to confirm that you are authorized for the company you specify. Communications will be sent to the email you have on file with your Twitch.tv account.", "DevRequestAccess")))), r.createElement(E.Ja, null, r.createElement(E.P, {
                             cols: {
                                 default: 12,
@@ -445,10 +445,10 @@
                         }))))))
                     }, t
                 }(r.Component),
-                L = Object(c.compose)(Object(g.b)("DevCompanyRequestAccess", {
+                X = Object(c.compose)(Object(g.b)("DevCompanyRequestAccess", {
                     autoReportInteractive: !0
                 }))(I);
-            var X = function(e) {
+            var L = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -487,7 +487,7 @@
                         }, t
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(L, {
+                        return r.createElement(X, {
                             isLoggedIn: this.props.isLoggedIn,
                             onSubmit: this.handleApplicationSubmit,
                             errorMessage: this.state.error,
@@ -505,9 +505,9 @@
                     destination: l.a.DevSiteRequestAccess
                 }), Object(m.a)({
                     location: v.PageviewLocation.DevSiteRequestCompanyAccess
-                }))(X);
+                }))(L);
             a.d(t, "DevCompanyRequestAccessContainer", function() {
-                return X
+                return L
             }), a.d(t, "DevCompanyRequestAccessPage", function() {
                 return P
             })
@@ -546,7 +546,7 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(i.Lb, {
+                        return s.createElement(i.Mb, {
                             onClick: this.onClick,
                             label: this.props.game.name
                         })
@@ -712,7 +712,7 @@
                 b = a("1mFg"),
                 E = v.a + "/kraken/search/games",
                 S = 7,
-                C = function(e) {
+                T = function(e) {
                     function t(t) {
                         var a = e.call(this, t) || this;
                         return a.state = {
@@ -764,7 +764,7 @@
             a.d(t, "a", function() {
                 return y
             }), a.d(t, "b", function() {
-                return C
+                return T
             })
         },
         "V+GM": function(e, t, a) {

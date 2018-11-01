@@ -241,7 +241,7 @@
                             message: Object(a.e)("There was an error setting the toast enabled setting.", "DesktopNotificationSettingsEnabledToggle")
                         }) : s.createElement(s.Fragment, null, s.createElement(u.a, {
                             label: Object(a.e)("Toasts", "DesktopNotificationSettingsEnabledToggle")
-                        }, s.createElement(d.Xa, null, s.createElement(d.Ub, {
+                        }, s.createElement(d.Xa, null, s.createElement(d.Vb, {
                             checked: this.state.checked,
                             disabled: this.state.disabled,
                             onChange: this.onChangeShowToastSetting

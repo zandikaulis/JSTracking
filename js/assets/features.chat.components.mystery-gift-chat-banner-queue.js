@@ -171,7 +171,7 @@
                                 displayName: r.createElement(v.W, {
                                     bold: !0,
                                     color: v.O.Link,
-                                    type: v.Sb.Span
+                                    type: v.Tb.Span
                                 }, Object(m.a)(n, e)),
                                 mysteryGiftCount: t.props.mysteryGiftCount,
                                 tier: i

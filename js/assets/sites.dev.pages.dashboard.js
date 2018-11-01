@@ -90,7 +90,7 @@
                             },
                             borderBottom: !0
                         }, i.createElement(f.W, {
-                            type: f.Sb.H2
+                            type: f.Tb.H2
                         }, Object(u.d)("Dashboard", "DevDashboard"))), i.createElement(f.Xa, {
                             margin: {
                                 bottom: 2

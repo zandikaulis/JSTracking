@@ -167,7 +167,7 @@
                             if (e.props.filterAction === n.All || t.action === e.props.filterAction) {
                                 switch (t.actor && (c = t.actor.logo, s = t.actor.display_name, d = i.createElement(g.W, {
                                     bold: !0,
-                                    type: g.Sb.Span
+                                    type: g.Tb.Span
                                 }, i.createElement(g.U, {
                                     to: "/" + t.actor.name
                                 }, s))), t.action) {
