@@ -22375,30 +22375,6 @@
             {
               "args": [], 
               "deprecationReason": null, 
-              "description": "The list of categories that the developer has set for the extension.", 
-              "isDeprecated": false, 
-              "name": "categories", 
-              "type": {
-                "kind": "NON_NULL", 
-                "name": null, 
-                "ofType": {
-                  "kind": "LIST", 
-                  "name": null, 
-                  "ofType": {
-                    "kind": "NON_NULL", 
-                    "name": null, 
-                    "ofType": {
-                      "kind": "SCALAR", 
-                      "name": "String", 
-                      "ofType": null
-                    }
-                  }
-                }
-              }
-            }, 
-            {
-              "args": [], 
-              "deprecationReason": null, 
               "description": "The client ID of the extension. Also used as the non-composite, non-unique ID of an extension internally.", 
               "isDeprecated": false, 
               "name": "clientID", 
