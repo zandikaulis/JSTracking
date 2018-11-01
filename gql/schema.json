@@ -22375,6 +22375,30 @@
             {
               "args": [], 
               "deprecationReason": null, 
+              "description": "The list of categories that the developer has set for the extension.", 
+              "isDeprecated": false, 
+              "name": "categories", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "LIST", 
+                  "name": null, 
+                  "ofType": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "SCALAR", 
+                      "name": "String", 
+                      "ofType": null
+                    }
+                  }
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
               "description": "The client ID of the extension. Also used as the non-composite, non-unique ID of an extension internally.", 
               "isDeprecated": false, 
               "name": "clientID", 
@@ -35879,6 +35903,33 @@
               "type": {
                 "kind": "OBJECT", 
                 "name": "UpdateBroadcastSettingsPayload", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [
+                {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "input", 
+                  "type": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "INPUT_OBJECT", 
+                      "name": "UpdateChanletContentAttributesInput", 
+                      "ofType": null
+                    }
+                  }
+                }
+              ], 
+              "deprecationReason": null, 
+              "description": "updateChanletContentAttributes allows users to make changes to the multi-view content attributes on a chanlet.", 
+              "isDeprecated": false, 
+              "name": "updateChanletContentAttributes", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "UpdateChanletContentAttributesPayload", 
                 "ofType": null
               }
             }, 
@@ -61551,6 +61602,72 @@
           "interfaces": [], 
           "kind": "OBJECT", 
           "name": "UpdateBroadcastSettingsPayload", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "Mutation input for updating chanlet content attributes.", 
+          "enumValues": null, 
+          "fields": null, 
+          "inputFields": [
+            {
+              "defaultValue": null, 
+              "description": "Identifier of the chanlet.", 
+              "name": "chanletID", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "defaultValue": null, 
+              "description": "A list of multi-view content attribute IDs.\nThe provided list will override the list of IDs currently stored.", 
+              "name": "contentAttributeIDs", 
+              "type": {
+                "kind": "LIST", 
+                "name": null, 
+                "ofType": {
+                  "kind": "NON_NULL", 
+                  "name": null, 
+                  "ofType": {
+                    "kind": "SCALAR", 
+                    "name": "ID", 
+                    "ofType": null
+                  }
+                }
+              }
+            }
+          ], 
+          "interfaces": null, 
+          "kind": "INPUT_OBJECT", 
+          "name": "UpdateChanletContentAttributesInput", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "Response payload.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Updated chanlet.", 
+              "isDeprecated": false, 
+              "name": "chanlet", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "Channel", 
+                "ofType": null
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "UpdateChanletContentAttributesPayload", 
           "possibleTypes": null
         }, 
         {
