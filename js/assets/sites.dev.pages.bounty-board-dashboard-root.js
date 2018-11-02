@@ -102,7 +102,7 @@
                             type: v.F.Text,
                             linkTo: "/console"
                         }, Object(u.d)("Dashboard", "DevBountyBoardDashboardRoot"))), i.createElement(v.W, {
-                            type: v.Tb.H3
+                            type: v.Sb.H3
                         }, Object(u.d)("Bounty Board Dashboard", "DevBountyBoardDashboardRoot")), i.createElement(v.Cb, {
                             borderTop: !0,
                             margin: {
@@ -134,17 +134,17 @@
                         })))))) : i.createElement(f, null)
                     }, n
                 }(i.Component),
-                D = Object(d.compose)(Object(m.b)("DevBountyBoardDashboardRootPresentation", {
+                S = Object(d.compose)(Object(m.b)("DevBountyBoardDashboardRootPresentation", {
                     autoReportInteractive: !0
                 }))(y);
-            var S = Object(a.connect)(function(e) {
+            var D = Object(a.connect)(function(e) {
                 return {
                     isLoggedIn: Object(r.f)(e),
                     user: Object(r.e)(e)
                 }
-            })(D);
+            })(S);
             t.d(n, "DevBountyBoardDashboardRoot", function() {
-                return S
+                return D
             })
         },
         QSSE: function(e, n, t) {},

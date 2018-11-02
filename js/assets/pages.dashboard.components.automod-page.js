@@ -425,7 +425,7 @@
                             fullHeight: !0
                         }, n)), o.createElement(c.P, {
                             cols: 1
-                        }, o.createElement(c.Wb, {
+                        }, o.createElement(c.Vb, {
                             label: s
                         }, o.createElement(c.A, {
                             "data-a-target": "edit-term",
@@ -435,7 +435,7 @@
                             onClick: this.handleEdit
                         }))), o.createElement(c.P, {
                             cols: 1
-                        }, o.createElement(c.Wb, {
+                        }, o.createElement(c.Vb, {
                             label: u
                         }, o.createElement(c.A, {
                             "data-a-target": "delete-term",
@@ -474,7 +474,7 @@
                             onKeyDown: this.handleEditKeyDown
                         })), o.createElement(c.Xa, {
                             flexShrink: 0
-                        }, o.createElement(c.Wb, {
+                        }, o.createElement(c.Vb, {
                             label: n
                         }, o.createElement(c.A, {
                             "data-a-target": "save-term-edit",
@@ -482,7 +482,7 @@
                             icon: c.rb.Check,
                             ariaLabel: n,
                             onClick: this.confirmEdit
-                        })), o.createElement(c.Wb, {
+                        })), o.createElement(c.Vb, {
                             label: i
                         }, o.createElement(c.A, {
                             "data-a-target": "cancel-term-edit",
@@ -689,12 +689,12 @@
                             cols: 2
                         }, o.createElement(c.W, {
                             color: c.O.Alt2,
-                            type: c.Tb.Strong
+                            type: c.Sb.Strong
                         }, Object(d.d)("Blocked and Permitted Terms", "AutoModTermsTitle"))), o.createElement(c.P, {
                             cols: 5
                         }, o.createElement(c.W, {
                             color: c.O.Alt2,
-                            type: c.Tb.Strong
+                            type: c.Sb.Strong
                         }, Object(d.d)("Blocked Terms or Phrases", "AutoModBlockedTermsTitle")), o.createElement(c.W, {
                             color: c.O.Alt2
                         }, Object(d.d)("Messages containing these terms or phrases will be blocked from chat. Terms are automatically added when a mod denies a caught message.", "AutoModBlockedTermsDescription")), o.createElement(k, {
@@ -705,7 +705,7 @@
                             terms: this.props.data.user.blockedTerms
                         }), o.createElement(c.W, {
                             color: c.O.Alt2,
-                            type: c.Tb.Strong
+                            type: c.Sb.Strong
                         }, Object(d.d)("Permitted Terms or Phrases", "AutoModPermittedTermsTitle")), o.createElement(c.W, {
                             color: c.O.Alt2
                         }, Object(d.d)("Messages containing these terms, and no other blocked terms, will not be caught by AutoMod. Terms are automatically added when a mod allows a message.", "AutoModPermittedTermsDescription")), o.createElement(k, {
@@ -1241,7 +1241,7 @@
                             border: !0,
                             background: b.r.Alt,
                             position: b.hb.Absolute,
-                            zIndex: b.gc.Above
+                            zIndex: b.fc.Above
                         }, this.renderMenuItem(0), this.renderMenuItem(6), this.renderMenuItem(5), this.renderMenuItem(4), this.renderMenuItem(3)) : ""
                     }, t.prototype.renderMenuItem = function(e) {
                         return i.createElement(b.Ua, {
@@ -1287,7 +1287,7 @@
                             display: b.X.Flex,
                             padding: .5
                         }, a, i.createElement(b.W, {
-                            align: b.dc.Middle,
+                            align: b.cc.Middle,
                             color: b.O.Alt2
                         }, o))
                     }, t = a.__decorate([Object(m.b)("AutomodCategoryDisplay")], t)
@@ -1305,7 +1305,7 @@
                             }
                         }, i.createElement("strong", null, this.props.category), i.createElement(b.W, {
                             color: b.O.Alt2,
-                            type: b.Tb.P
+                            type: b.Sb.P
                         }, this.props.description)))
                     }, t
                 }(i.Component),
@@ -1337,7 +1337,7 @@
                             color: b.O.Alt2,
                             padding: 2
                         }, i.createElement(b.W, {
-                            type: b.Tb.H4,
+                            type: b.Sb.H4,
                             color: b.O.Link,
                             bold: !0
                         }, Object(d.d)("AutoMod Tip", "AutoModSettings")), i.createElement(b.Xa, {
@@ -1352,7 +1352,7 @@
                             "data-test-selector": "automod-tip-dismiss-button"
                         })), i.createElement(b.W, {
                             color: b.O.Alt2,
-                            type: b.Tb.Span
+                            type: b.Sb.Span
                         }, Object(d.d)("Did you know AutoMod catches misspelled words and evasion? N!ce try, pe0ple wh0 t@lk lik3 th!s.", "AutoModSettings"))))) : ""
                     }, t
                 }(i.Component),
@@ -1384,7 +1384,7 @@
                             }
                         }, i.createElement(b.W, {
                             color: b.O.Alt2,
-                            type: b.Tb.P
+                            type: b.Sb.P
                         }, Object(d.d)("Your AutoMod setting:", "AutoModSettingsSlider"))), i.createElement(b.ob, {
                             min: 0,
                             max: 4,
@@ -1400,7 +1400,7 @@
                             }
                         }, a), i.createElement(b.W, {
                             color: b.O.Alt2,
-                            type: b.Tb.Strong
+                            type: b.Sb.Strong
                         }, n)), i.createElement(b.Cb, {
                             background: b.r.Alt2,
                             padding: 1,
@@ -1499,7 +1499,7 @@
                                 padding: {
                                     top: 2
                                 },
-                                textAlign: b.Pb.Center
+                                textAlign: b.Ob.Center
                             }, Object(d.d)("Your current AutoMod level: 0", "AutoModSettings")), i.createElement(b.Cb, {
                                 margin: {
                                     x: 2
@@ -1508,7 +1508,7 @@
                                     y: 1,
                                     x: 5
                                 },
-                                textAlign: b.Pb.Center
+                                textAlign: b.Ob.Center
                             }, i.createElement(b.z, {
                                 fullWidth: !0,
                                 onClick: t.showAutoModCategories,
@@ -1530,7 +1530,7 @@
                                 alignItems: b.f.Center
                             }, i.createElement(b.W, {
                                 color: b.O.Alt2,
-                                type: b.Tb.Span
+                                type: b.Sb.Span
                             }, Object(d.d)("Your AutoMod setting:", "AutoModSettings")), i.createElement(b.Xa, {
                                 padding: {
                                     left: .5
@@ -1538,7 +1538,7 @@
                                 display: b.X.InlineFlex
                             }, i.createElement(b.W, {
                                 color: b.O.Alt2,
-                                type: b.Tb.Strong
+                                type: b.Sb.Strong
                             }, Object(d.d)("Custom", "AutoModSettingsValue"))))), i.createElement(b.P, {
                                 cols: 5
                             }, i.createElement(b.z, {
@@ -1565,10 +1565,10 @@
                                 top: 2
                             },
                             color: b.O.Alt2,
-                            textAlign: b.Pb.Center,
+                            textAlign: b.Ob.Center,
                             "data-test-selector": "automod-placeholder-container"
                         }, i.createElement(b.W, {
-                            type: b.Tb.H3,
+                            type: b.Sb.H3,
                             italic: !0
                         }, Object(d.d)("You do not have permission to access this dashboard.", "AutoModSettings")));
                         var e = this.isBlankState();
@@ -1580,7 +1580,7 @@
                             cols: 2
                         }, i.createElement(b.W, {
                             color: b.O.Alt2,
-                            type: b.Tb.Strong
+                            type: b.Sb.Strong
                         }, Object(d.d)("AutoMod Rulesets", "AutoModSettings"))), i.createElement(b.P, {
                             cols: 5
                         }, this.AutomodTableHeader(), this.renderSlider(e), this.AutomodCategories(e), this.AutomodTableFooter(e))))
@@ -1737,13 +1737,13 @@
                         return e.data.user.autoModProperties
                     }, t
                 }(i.Component),
-                M = n("K1HF"),
-                O = n("hxCz");
+                O = n("K1HF"),
+                M = n("hxCz");
             var N = Object(o.compose)(Object(p.connect)(function(e) {
                     return {
                         isLoggedIn: Object(h.f)(e)
                     }
-                }), Object(v.a)(M, {
+                }), Object(v.a)(O, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1755,7 +1755,7 @@
                     skip: function(e) {
                         return !e.isLoggedIn
                     }
-                }), Object(v.a)(O, {
+                }), Object(v.a)(M, {
                     name: "onUpdateAutoModProperties"
                 }), Object(m.b)("AutomodControls"))(T),
                 I = n("F7O8"),
@@ -1801,7 +1801,7 @@
                             padding: 2,
                             position: b.hb.Relative
                         }, i.createElement(b.W, {
-                            type: b.Tb.H3
+                            type: b.Sb.H3
                         }, Object(d.d)("Moderation Settings", "AutoModPage")), i.createElement(j, {
                             channelLogin: this.props.match.params.channelName
                         })))

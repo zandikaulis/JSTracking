@@ -559,7 +559,7 @@
                         flexDirection: c.Aa.Row,
                         alignItems: c.f.Center
                     }, r.createElement(c.W, {
-                        type: c.Tb.H5
+                        type: c.Sb.H5
                     }, Object(o.d)("Expand All", "VideoShelfExpandLink")), r.createElement(c.qb, {
                         asset: c.rb.AngleRight,
                         height: 14
@@ -576,7 +576,7 @@
                     width: 200
                 });
                 var t = r.createElement(c.W, {
-                        type: c.Tb.H4,
+                        type: c.Sb.H4,
                         color: c.O.Base,
                         bold: !0,
                         "data-test-selector": n.Title
@@ -584,7 +584,7 @@
                     i = e.subTitle;
                 return e.subTitle && "string" == typeof e.subTitle ? i = r.createElement(c.W, {
                     color: c.O.Alt2,
-                    type: c.Tb.Span,
+                    type: c.Sb.Span,
                     "data-test-selector": n.SubTitle
                 }, e.subTitle) : e.subTitle && (i = r.createElement(c.Xa, {
                     "data-test-selector": n.SubTitle
@@ -670,7 +670,7 @@
                             var n = this.props.data.collection.title;
                             i = r.createElement(k.W, {
                                 color: k.O.Alt2,
-                                type: k.Tb.Span
+                                type: k.Sb.Span
                             }, Object(l.d)("{numVideos, plural, one {Playing # video from collection: <x:link>collectionTitle</x:link>} other {Playing # videos from collection: <x:link>collectionTitle</x:link>}}", {
                                 numVideos: t.length,
                                 "x:link": function() {
@@ -678,7 +678,7 @@
                                         to: Object(c.i)(null, null, e.props.collectionID)
                                     }, r.createElement(k.W, {
                                         bold: !0,
-                                        type: k.Tb.Span
+                                        type: k.Sb.Span
                                     }, n))
                                 }
                             }, "VideoQueueCollectionCarousel"))
@@ -781,7 +781,7 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        var e = {
+                        return r.createElement(c.a, {
                             context: this.props.context,
                             onClick: this.onClickHandler,
                             title: this.props.video.title,
@@ -792,7 +792,7 @@
                             },
                             thumbnailImageProps: {
                                 src: this.props.video.previewThumbnailURL,
-                                alt: this.props.video.title || ""
+                                alt: this.props.video.title
                             },
                             channelDisplayName: this.props.video.owner && this.props.video.owner.displayName || "",
                             channelLogin: this.props.video.owner && this.props.video.owner.login || "",
@@ -802,7 +802,7 @@
                             },
                             channelImageProps: {
                                 src: this.props.video.owner && this.props.video.owner.profileImageURL || "",
-                                alt: this.props.video.owner && this.props.video.owner.displayName || ""
+                                alt: this.props.video.owner ? this.props.video.owner.displayName : ""
                             },
                             gameTitle: this.props.video.game && this.props.video.game.name || "",
                             gameTitleLinkTo: {
@@ -816,8 +816,8 @@
                             videoGameChanges: this.gameChangesWithLinks(),
                             multipleVideoGameMarkersType: this.props.multipleVideoGameMarkersType,
                             datePublished: this.props.video.publishedAt,
-                            viewCount: this.props.video.viewCount || 0,
-                            durationInSeconds: !this.props.hideDuration && this.props.video.lengthSeconds ? this.props.video.lengthSeconds : void 0,
+                            viewCount: this.props.video.viewCount,
+                            durationInSeconds: this.props.hideDuration ? void 0 : this.props.video.lengthSeconds,
                             animatedImageProps: this.props.video.animatedPreviewURL ? {
                                 src: this.props.video.animatedPreviewURL,
                                 alt: ""
@@ -834,15 +834,14 @@
                                 tags: this.props.video.contentTags,
                                 linkPath: g.a.PopularTag
                             } : void 0
-                        };
-                        return r.createElement(c.a, n.__assign({}, e))
+                        })
                     }, t.prototype.generateSearchString = function() {
                         var e = {};
                         this.props.collectionID && (e.collection = this.props.collectionID);
                         var t = l.stringify(e);
                         return t ? "?" + t : ""
                     }, t.prototype.getVideoPreviousWatchPercentage = function() {
-                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / (this.props.video.lengthSeconds || 1 / 0) * 100 : null
+                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / this.props.video.lengthSeconds * 100 : null
                     }, t.prototype.getRestrictionProps = function() {
                         var e = this.props.video.restriction && this.props.video.restriction.productName ? "/products/" + this.props.video.restriction.productName : "";
                         return {
@@ -894,7 +893,7 @@
                         videoGameChanges: this.state.videoGameChanges
                     }, this.props))
                 }, t.prototype.componentWillMount = function() {
-                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== a.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds || 0)
+                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== a.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds)
                 }, t
             }(r.Component)
         },
@@ -1493,7 +1492,7 @@
                         "data-test-selector": "top-bar-title-selector",
                         color: l.O.Overlay,
                         bold: !0,
-                        transform: l.Sb.Uppercase
+                        transform: l.Rb.Uppercase
                     }, e.title)), e.subTitle && r.createElement(l.Xa, {
                         display: l.X.InlineFlex
                     }, r.createElement(l.W, {
@@ -1681,7 +1680,7 @@
                         type: l.V.Inherit,
                         "data-test-selector": "preview-card-titles__primary-link"
                     }), r.createElement(l.W, {
-                        type: l.Tb.H3,
+                        type: l.Sb.H3,
                         fontSize: l.Ca.Size5,
                         lines: 1,
                         bold: !0,
@@ -1717,11 +1716,11 @@
                         position: l.hb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
-                        zIndex: l.gc.Default,
+                        zIndex: l.fc.Default,
                         padding: {
                             x: 5
                         },
-                        textAlign: l.Pb.Center,
+                        textAlign: l.Ob.Center,
                         fullWidth: !0,
                         fullHeight: !0,
                         alignItems: l.f.Center,
@@ -1754,14 +1753,14 @@
                         attachBottom: !this.props.attachTop,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: l.gc.Default,
+                        zIndex: l.fc.Default,
                         fontSize: l.Ca.Size6,
                         background: l.r.Overlay,
                         borderRadius: l.x.Medium,
                         color: l.O.Overlay
-                    }, r.createElement(l.Wb, {
-                        direction: this.props.attachTop ? l.Yb.Bottom : l.Yb.Top,
-                        align: l.Xb.Right,
+                    }, r.createElement(l.Vb, {
+                        direction: this.props.attachTop ? l.Xb.Bottom : l.Xb.Top,
+                        align: l.Wb.Right,
                         label: i
                     }, r.createElement(l.qb, {
                         asset: n,
@@ -1855,9 +1854,9 @@
                             bottomLeft: r.createElement(S, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? r.createElement(S, {
+                            bottomRight: r.createElement(S, {
                                 value: Object(a.c)(new Date(this.props.datePublished), "medium")
-                            }) : null,
+                            }),
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
                         }) : B(this.props) ? r.createElement(w, {
@@ -1870,9 +1869,9 @@
                             bottomLeft: r.createElement(S, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? r.createElement(S, {
+                            bottomRight: r.createElement(S, {
                                 value: Object(a.c)(new Date(this.props.datePublished), "medium")
-                            }) : null
+                            })
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
                         return G(this.props) && this.props.listPosition ? Object(a.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
@@ -2504,10 +2503,10 @@
                         if (t && i)
                             for (var n = 0, r = t; n < r.length; n++) {
                                 var a = r[n];
-                                a && a.node && i.push(a.node)
+                                a.node && i.push(a.node)
                             }
                         var l, s = e.maxAgeDays;
-                        if (i && i.length > 0 && s && !(Object(v.differenceInDays)(new Date, new Date(i[0].publishedAt || 0)) <= s)) return null;
+                        if (i && i.length > 0 && s && !(Object(v.differenceInDays)(new Date, new Date(i[0].publishedAt)) <= s)) return null;
                         if (e.separateGames) return this.renderGameShelves(i);
                         if (e.quickHits) return this.renderQuickHitsShelf(e.quickHits, i);
                         var c = e.videoTypes;
@@ -2536,7 +2535,7 @@
                             var r = [],
                                 a = [];
                             t.forEach(function(t) {
-                                (t.lengthSeconds || 0) <= e.maxLengthSeconds ? r.push(t) : a.push(t)
+                                t.lengthSeconds <= e.maxLengthSeconds ? r.push(t) : a.push(t)
                             }), i = r, n = a
                         }
                         return o.createElement(o.Fragment, null, o.createElement(A, {
@@ -2736,7 +2735,7 @@
                                 right: .5
                             }
                         }, this.getIcon()), c.createElement(u.W, {
-                            type: u.Tb.Span
+                            type: u.Sb.Span
                         }, this.getLabel()))
                     }, t.prototype.getClassNames = function() {
                         var e = {
@@ -3120,9 +3119,9 @@
                         });
                         t = r.createElement(r.Fragment, null, l)
                     }
-                    return r.createElement(d.Zb, {
-                        gutterSize: d.bc.Small,
-                        childWidth: e.videoCardSize || d.ac.Large,
+                    return r.createElement(d.Yb, {
+                        gutterSize: d.ac.Small,
+                        childWidth: e.videoCardSize || d.Zb.Large,
                         placeholderItems: 20
                     }, t, i)
                 },
@@ -3245,11 +3244,11 @@
                                 transform: this.transformString()
                             },
                             "data-test-selector": "carousel-body"
-                        }, l.createElement(u.Zb, {
+                        }, l.createElement(u.Yb, {
                             noWrap: !0,
                             noGrow: !0,
-                            childWidth: this.props.cardWidth || u.ac.Large,
-                            gutterSize: u.bc.Small,
+                            childWidth: this.props.cardWidth || u.Zb.Large,
+                            gutterSize: u.ac.Small,
                             "data-js-selector": m
                         }, this.props.children)))), l.createElement(u.Xa, {
                             className: "preview-card-carousel__nav",
@@ -3328,7 +3327,7 @@
                             if (!t.state.hasTrackedItemSectionLoad) {
                                 for (var e = t.props.videos ? t.props.videos : [], i = [], n = [], r = 0, a = e; r < a.length; r++) {
                                     var l = a[r];
-                                    i.push(l.id), n.push(l.viewCount || 0)
+                                    i.push(l.id), n.push(l.viewCount)
                                 }
                                 s.o.trackItemSectionLoad(o.__assign({
                                     carousel_content: t.props.tracking.content,
@@ -4007,7 +4006,7 @@
                                     }
                                 }
                                 if (!r) return null;
-                                if (r.viewingPosition / (r.value.lengthSeconds || 1 / 0) > u) {
+                                if (r.viewingPosition / r.value.lengthSeconds > u) {
                                     var m = r.index + 1;
                                     if (m < i) {
                                         var h = t[m];
@@ -4083,7 +4082,7 @@
                             "data-test-selector": v.PlayAllButton
                         }, Object(o.d)("Play all", "LatestCollectionCarousel"))), a.createElement(g.W, {
                             color: g.O.Alt2,
-                            type: g.Tb.Span,
+                            type: g.Sb.Span,
                             "data-test-selector": v.Metadata
                         }, this.renderSubTitle(e))) : a.createElement(g.gb, {
                             width: 250,

@@ -78,7 +78,7 @@
                         return v.createElement(E.Xa, {
                             className: "activate-device-wrapper",
                             alignSelf: E.g.Center,
-                            textAlign: E.Pb.Center,
+                            textAlign: E.Ob.Center,
                             fullHeight: !0,
                             fullWidth: !0
                         }, v.createElement(E.Cb, {
@@ -86,7 +86,7 @@
                             background: E.r.Base,
                             display: E.X.InlineBlock,
                             position: E.hb.Relative,
-                            textAlign: E.Pb.Center
+                            textAlign: E.Ob.Center
                         }, v.createElement(E.Ja, null, v.createElement(E.P, {
                             cols: 6
                         }, v.createElement(E.Cb, {
@@ -134,7 +134,7 @@
                                 className: "activate-device-wrapper__success",
                                 alignItems: E.f.Center,
                                 position: E.hb.Relative,
-                                textAlign: E.Pb.Center,
+                                textAlign: E.Ob.Center,
                                 "data-test-selector": i.ActivationSuccessMessage
                             }, v.createElement(E.Xa, {
                                 className: "activate-device-wrapper__check_mark",
@@ -149,7 +149,7 @@
                                     bottom: 1
                                 }
                             }, v.createElement(E.W, {
-                                type: E.Tb.H2
+                                type: E.Sb.H2
                             }, Object(m.d)("You've Done It!", "ActivateDevice"))), v.createElement(E.Xa, {
                                 margin: {
                                     x: 1
@@ -178,13 +178,13 @@
                             className: "activate-device-wrapper__form",
                             alignItems: E.f.Center,
                             position: E.hb.Relative,
-                            textAlign: E.Pb.Center
+                            textAlign: E.Ob.Center
                         }, v.createElement(E.Xa, {
                             padding: {
                                 top: 2
                             }
                         }, v.createElement(E.W, {
-                            type: E.Tb.H2
+                            type: E.Sb.H2
                         }, Object(m.d)("Activate Your Device", "ActivateDevice"))), v.createElement(E.Xa, {
                             padding: 1
                         }, v.createElement(E.W, {
@@ -195,7 +195,7 @@
                             className: "activate-device-wrapper__input",
                             alignItems: E.f.Center,
                             position: E.hb.Relative,
-                            textAlign: E.Pb.Center
+                            textAlign: E.Ob.Center
                         }, v.createElement(E.Ra, {
                             type: E.Ta.Text,
                             onChange: this.onChange,
@@ -226,7 +226,7 @@
                         }
                         return v.createElement(E.Cb, {
                             className: "activate-device-form__error",
-                            textAlign: E.Pb.Center,
+                            textAlign: E.Ob.Center,
                             fontSize: E.Ca.Size4
                         }, v.createElement(E.eb, {
                             label: e,
@@ -238,7 +238,7 @@
                 A = Object(f.a)(S, {
                     name: "linkSSO"
                 })(k);
-            var C = Object(r.connect)(function(e) {
+            var O = Object(r.connect)(function(e) {
                     return {
                         isLoggedIn: Object(d.f)(e)
                     }
@@ -249,7 +249,7 @@
                         }
                     }, e)
                 })(A),
-                O = function(e) {
+                C = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -261,7 +261,7 @@
                         }, v.createElement(E.Xa, {
                             fullHeight: !0,
                             fullWidth: !0
-                        }, v.createElement(C, null))) : (this.props.login(), v.createElement(E.Xa, null, v.createElement(p.a, {
+                        }, v.createElement(O, null))) : (this.props.login(), v.createElement(E.Xa, null, v.createElement(p.a, {
                             message: Object(m.d)("You must be logged in to view this page", "ActivateDevicePage")
                         })))
                     }, t
@@ -276,11 +276,11 @@
                         return Object(l.e)(s.a.ActivateDevice)
                     }
                 }, e)
-            })(O);
+            })(C);
             n.d(t, "ActivateDevicePage", function() {
                 return w
             }), n.d(t, "ActivateDevice", function() {
-                return C
+                return O
             })
         },
         Bt4M: function(e, t, n) {},

@@ -351,9 +351,9 @@
             }), n.d(t, "e", function() {
                 return C
             }), n.d(t, "f", function() {
-                return y
-            }), n.d(t, "h", function() {
                 return S
+            }), n.d(t, "h", function() {
+                return y
             });
             var a, r, o, i, s, d, c = n("mrSG"),
                 l = n("/7QA"),
@@ -384,7 +384,7 @@
                     })
                 },
                 f = function(e) {
-                    S(d.StreamInformation, {
+                    y(d.StreamInformation, {
                         target_name: "update",
                         update_successful: e
                     })
@@ -412,7 +412,7 @@
                     })
                 },
                 v = function(e, t, n, a) {
-                    S(d.StreamDelay, {
+                    y(d.StreamDelay, {
                         type: e,
                         slider_start_position: t,
                         slider_position: n,
@@ -425,7 +425,7 @@
                         broadcast_software: e
                     })
                 },
-                y = function(e) {
+                S = function(e) {
                     l.p.tracking.track(u.SpadeEventType.DashboardSettingsInteraction, {
                         setting_name: e.settingName,
                         setting_value: e.settingValue,
@@ -434,7 +434,7 @@
                         channel_id: e.channelID
                     })
                 },
-                S = function(e, t) {
+                y = function(e, t) {
                     l.p.tracking.track(u.SpadeEventType.LiveDashboardInteraction, c.__assign({
                         action: e
                     }, t || {}))
@@ -542,7 +542,7 @@
                         })
                     }, t
                 }(i.Component),
-                y = Object(s.a)([{
+                S = Object(s.a)([{
                     topic: function(e) {
                         return Object(c.G)(e.channelID)
                     },
@@ -557,7 +557,7 @@
             }), n.d(t, !1, function() {
                 return C
             }), n.d(t, "a", function() {
-                return y
+                return S
             })
         },
         "L/BW": function(e, t, n) {},
@@ -582,9 +582,9 @@
                 b = n("g/LZ"),
                 v = n.n(b),
                 C = n("wcfy"),
-                y = n.n(C),
-                S = n("LWua"),
-                w = n.n(S),
+                S = n.n(C),
+                y = n("LWua"),
+                w = n.n(y),
                 E = n("EkNY"),
                 _ = n("Ue10");
             ! function(e) {
@@ -620,7 +620,7 @@
                         targetBlank: !0,
                         to: t
                     }, t)), o.createElement(_.W, {
-                        type: _.Tb.P,
+                        type: _.Sb.P,
                         color: _.O.Alt2
                     }, e.longDescription), o.createElement(_.Xa, {
                         display: _.X.Flex,
@@ -668,14 +668,14 @@
                             overflow: _.cb.Hidden
                         }, o.createElement(k.a, null, o.createElement(_.W, {
                             bold: !0,
-                            type: _.Tb.H4
+                            type: _.Sb.H4
                         }, Object(i.d)("Broadcast While You Play", "BroadcastRootPage")), o.createElement(_.Xa, {
                             margin: {
                                 y: 1
                             }
                         }, o.createElement(_.W, {
                             color: _.O.Alt2,
-                            type: _.Tb.P
+                            type: _.Sb.P
                         }, Object(i.d)("Here are the most common tools for broadcasting.", "BroadcastRootPage")), o.createElement(_.W, {
                             color: _.O.Alt2
                         }, Object(i.d)("For more info, visit the <x:link>Support Center</x:link>.", {
@@ -699,10 +699,10 @@
                             }
                         }, o.createElement(_.W, {
                             bold: !0,
-                            type: _.Tb.H4
-                        }, Object(i.d)("Broadcasting Applications", "BroadcastRootPage"))), o.createElement(_.Zb, {
-                            childWidth: _.ac.Large,
-                            gutterSize: _.bc.Small,
+                            type: _.Sb.H4
+                        }, Object(i.d)("Broadcasting Applications", "BroadcastRootPage"))), o.createElement(_.Yb, {
+                            childWidth: _.Zb.Large,
+                            gutterSize: _.ac.Small,
                             noGrow: !0,
                             placeholderItems: 8
                         }, o.createElement(_.Xa, {
@@ -720,7 +720,7 @@
                                 bottom: 2
                             }
                         }, o.createElement(L, {
-                            imgURL: y.a,
+                            imgURL: S.a,
                             title: "Streamlabs OBS",
                             link: "https://streamlabs.com/streamlabs-obs/",
                             longDescription: Object(i.d)("Streamlabs OBS is free, open source, and easy way to get started streaming. The app is built on top of OBS with a whole lot of exciting features: facemasks, built-in widgets & chat, game specific encoders and thousands of free overlays and themes.", "BroadcastRootPage"),
@@ -751,10 +751,10 @@
                             }
                         }, o.createElement(_.W, {
                             bold: !0,
-                            type: _.Tb.H4
-                        }, Object(i.d)("Broadcasting Tools", "BroadcastRootPage"))), o.createElement(_.Zb, {
-                            childWidth: _.ac.Large,
-                            gutterSize: _.bc.Small,
+                            type: _.Sb.H4
+                        }, Object(i.d)("Broadcasting Tools", "BroadcastRootPage"))), o.createElement(_.Yb, {
+                            childWidth: _.Zb.Large,
+                            gutterSize: _.ac.Small,
                             noGrow: !0,
                             placeholderItems: 3
                         }, o.createElement(_.Xa, {
@@ -813,10 +813,10 @@
                     return r
                 }),
                 function(e) {
-                    e.ActivityFeed = "activity-feed", e.AdsWidget = "ads-widget", e.BountyBoardWidget = "bounty-board-widget", e.ExtensionLiveConfigure = "extension-live-configure", e.HostWidget = "host-widget", e.LiveChat = "live-chat", e.SquadStream = "squad-stream", e.Stats = "stats", e.StreamDelay = "stream-delay", e.StreamHealth = "stream-health", e.StreamInformation = "stream-information", e.StreamMarker = "stream-marker", e.VideoPreview = "video-preview", e.VideoProducerWidget = "video-producer-widget"
+                    e.AdsWidget = "ads-widget", e.BountyBoardWidget = "bounty-board-widget", e.ExtensionLiveConfigure = "extension-live-configure", e.HostWidget = "host-widget", e.LiveChat = "live-chat", e.SquadStream = "squad-stream", e.Stats = "stats", e.StreamDelay = "stream-delay", e.StreamHealth = "stream-health", e.StreamInformation = "stream-information", e.StreamMarker = "stream-marker", e.VideoPreview = "video-preview", e.VideoProducerWidget = "video-producer-widget"
                 }(a || (a = {})),
                 function(e) {
-                    e.ActivityFeedWidget = "activity_feed_widget", e.AdsWidget = "ads_widget", e.BountyBoardWidget = "bounty_board_widget", e.ExtensionLiveConfigureWidget = "extension_config_widget", e.HostWidget = "host_widget", e.LiveChatWidget = "chat_widget", e.SquadStreamWidget = "squad_stream_widget", e.StatsWidget = "stats_widget", e.StreamDelayWidget = "stream_delay_widget", e.StreamHealthWidget = "stream_health_widget", e.StreamInformationWidget = "stream_information_widget", e.StreamMarkerWidget = "stream_marker_widget", e.VideoPreviewWidget = "video_preview_widget", e.VideoProducerWidget = "video_producer_widget"
+                    e.AdsWidget = "ads_widget", e.BountyBoardWidget = "bounty_board_widget", e.ExtensionLiveConfigureWidget = "extension_config_widget", e.HostWidget = "host_widget", e.LiveChatWidget = "chat_widget", e.SquadStreamWidget = "squad_stream_widget", e.StatsWidget = "stats_widget", e.StreamDelayWidget = "stream_delay_widget", e.StreamHealthWidget = "stream_health_widget", e.StreamInformationWidget = "stream_information_widget", e.StreamMarkerWidget = "stream_marker_widget", e.VideoPreviewWidget = "video_preview_widget", e.VideoProducerWidget = "video_producer_widget"
                 }(r || (r = {}))
         },
         Nmvj: function(e, t, n) {
@@ -851,22 +851,22 @@
                         }, t.handleHover = function() {
                             var e;
                             switch (t.props.statType) {
-                                case S.CURRENT_VIEWERS:
+                                case y.CURRENT_VIEWERS:
                                     e = "viewers_value";
                                     break;
-                                case S.STREAM_UP_TIME:
+                                case y.STREAM_UP_TIME:
                                     e = "uptime_value";
                                     break;
-                                case S.NUMBER_OF_CLIPS:
+                                case y.NUMBER_OF_CLIPS:
                                     e = "clips_value";
                                     break;
-                                case S.TOTAL_VIEWS:
+                                case y.TOTAL_VIEWS:
                                     e = "views_value";
                                     break;
-                                case S.FOLLOWERS:
+                                case y.FOLLOWERS:
                                     e = "followers_value";
                                     break;
-                                case S.SUBSCRIPTIONS:
+                                case y.SUBSCRIPTIONS:
                                     e = "subscribers_value";
                                     break;
                                 default:
@@ -881,12 +881,12 @@
                             e[t.props.statType] = !e[t.props.statType], i.m.set("streamStatsConfiguration", e)
                         }, t.renderStat = function() {
                             var e = Object(i.d)("Offline", "LiveDashboard");
-                            return t.state.hidden ? r.createElement(u.Wb, {
+                            return t.state.hidden ? r.createElement(u.Vb, {
                                 label: t.props.statDescription || e,
-                                direction: u.Yb.Right
-                            }, Object(i.d)("Hover to view", "LiveDashboard")) : r.createElement(u.Wb, {
+                                direction: u.Xb.Right
+                            }, Object(i.d)("Hover to view", "LiveDashboard")) : r.createElement(u.Vb, {
                                 label: Object(i.d)("Click to hide", "LiveDashboard"),
-                                direction: u.Yb.Right
+                                direction: u.Xb.Right
                             }, t.props.statDescription || e)
                         }, t
                     }
@@ -914,11 +914,11 @@
             n.d(t, "a", function() {
                 return w
             }), n.d(t, "b", function() {
-                return S
+                return y
             }), n.d(t, "c", function() {
                 return _
             });
-            var y, S, w = {
+            var S, y, w = {
                 showViewers: !0,
                 showUptime: !0,
                 showViews: !0,
@@ -929,10 +929,10 @@
             };
             ! function(e) {
                 e.CURRENT_VIEWERS_COUNT = "current-viewers-count", e.NUMBER_OF_CLIPS = "number-of-clips"
-            }(y || (y = {})),
+            }(S || (S = {})),
             function(e) {
                 e.CURRENT_VIEWERS = "showViewers", e.STREAM_UP_TIME = "showUptime", e.TOTAL_VIEWS = "showViews", e.FOLLOWERS = "showFollowers", e.NUMBER_OF_CLIPS = "showClips", e.SUBSCRIPTIONS = "showSubs"
-            }(S || (S = {}));
+            }(y || (y = {}));
             var E = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -941,12 +941,12 @@
                         }, n.renderViewersCount = function() {
                             var e = n.getStreamInfo(),
                                 t = e && null !== e.viewersCount ? Object(i.f)(e.viewersCount) : 0,
-                                a = n.state.statsConfig && n.state.statsConfig[S.CURRENT_VIEWERS],
+                                a = n.state.statsConfig && n.state.statsConfig[y.CURRENT_VIEWERS],
                                 o = n.props.isLive;
                             return r.createElement(p, {
-                                "data-test-selector": y.CURRENT_VIEWERS_COUNT,
+                                "data-test-selector": S.CURRENT_VIEWERS_COUNT,
                                 statDescription: o ? t + " " + Object(i.d)("Viewers", "LiveDashboard") : null,
-                                statType: S.CURRENT_VIEWERS,
+                                statType: y.CURRENT_VIEWERS,
                                 showStat: a,
                                 color: o ? u.O.Live : void 0
                             })
@@ -956,18 +956,18 @@
                                 a = n.props.isLive;
                             return r.createElement(p, {
                                 statDescription: a ? Object(d.b)((Date.now() - new Date(t).getTime()) / 1e3, d.a.ClockHM) : null,
-                                statType: S.STREAM_UP_TIME,
-                                showStat: !n.state.statsConfig || n.state.statsConfig[S.STREAM_UP_TIME],
+                                statType: y.STREAM_UP_TIME,
+                                showStat: !n.state.statsConfig || n.state.statsConfig[y.STREAM_UP_TIME],
                                 color: a ? u.O.Base : void 0
                             })
                         }, n.renderNumberOfClips = function() {
                             var e = n.state.broadcastClipsCount,
                                 t = n.props.isLive;
                             return r.createElement(p, {
-                                "data-test-selector": y.NUMBER_OF_CLIPS,
+                                "data-test-selector": S.NUMBER_OF_CLIPS,
                                 statDescription: t ? Object(i.f)(e) + " " + (1 === e ? Object(i.d)("Clip", "LiveDashboard") : Object(i.d)("Clips", "LiveDashboard")) : null,
-                                statType: S.NUMBER_OF_CLIPS,
-                                showStat: n.state.statsConfig && n.state.statsConfig[S.NUMBER_OF_CLIPS],
+                                statType: y.NUMBER_OF_CLIPS,
+                                showStat: n.state.statsConfig && n.state.statsConfig[y.NUMBER_OF_CLIPS],
                                 color: t ? u.O.Base : void 0
                             })
                         }, n.renderSubscriptionStat = function() {
@@ -987,15 +987,15 @@
                                 margin: {
                                     bottom: .5
                                 }
-                            }, r.createElement(u.Wb, {
+                            }, r.createElement(u.Vb, {
                                 label: Object(i.d)("Subscribers shows number of active subs.\n Sub points unlock additional emote slots.", "LiveDashboard"),
-                                direction: u.Yb.Right
+                                direction: u.Xb.Right
                             }, r.createElement(u.qb, {
                                 asset: u.rb.Star
                             })), r.createElement(p, {
                                 statDescription: s + " " + e + " (" + d + " / " + Object(i.f)(a.next) + " " + t + ")",
-                                statType: S.SUBSCRIPTIONS,
-                                showStat: n.state.statsConfig && n.state.statsConfig[S.SUBSCRIPTIONS],
+                                statType: y.SUBSCRIPTIONS,
+                                showStat: n.state.statsConfig && n.state.statsConfig[y.SUBSCRIPTIONS],
                                 color: u.O.Base
                             })) : r.createElement(u.Cb, {
                                 color: u.O.Alt2,
@@ -1004,15 +1004,15 @@
                                 margin: {
                                     bottom: .5
                                 }
-                            }, r.createElement(u.Wb, {
+                            }, r.createElement(u.Vb, {
                                 label: Object(i.d)("Congrats on reaching the max number of emote slots", "LiveDashboard"),
-                                direction: u.Yb.Right
+                                direction: u.Xb.Right
                             }, r.createElement(u.qb, {
                                 asset: u.rb.Star
                             })), r.createElement(p, {
                                 statDescription: s + " " + e + " (" + d + " " + t + ")",
-                                statType: S.SUBSCRIPTIONS,
-                                showStat: n.state.statsConfig && n.state.statsConfig[S.SUBSCRIPTIONS],
+                                statType: y.SUBSCRIPTIONS,
+                                showStat: n.state.statsConfig && n.state.statsConfig[y.SUBSCRIPTIONS],
                                 color: u.O.Base
                             }))
                         }, n.setFetchBroadcastClipsCountInterval = function() {
@@ -1063,9 +1063,9 @@
                             margin: {
                                 bottom: .5
                             }
-                        }, r.createElement(u.Wb, {
+                        }, r.createElement(u.Vb, {
                             label: Object(i.d)("The number of people currently watching your channel", "LiveDashboard"),
-                            direction: u.Yb.Right
+                            direction: u.Xb.Right
                         }, r.createElement(u.qb, {
                             asset: u.rb.GlyphLive
                         })), this.renderViewersCount()), r.createElement(u.Cb, {
@@ -1075,9 +1075,9 @@
                             margin: {
                                 bottom: .5
                             }
-                        }, r.createElement(u.Wb, {
+                        }, r.createElement(u.Vb, {
                             label: Object(i.d)("How long you have been broadcasting for this session", "LiveDashboard"),
-                            direction: u.Yb.Right
+                            direction: u.Xb.Right
                         }, r.createElement(u.qb, {
                             asset: u.rb.Timeout
                         })), this.renderStreamTime()), r.createElement(u.Cb, {
@@ -1087,9 +1087,9 @@
                             margin: {
                                 bottom: .5
                             }
-                        }, r.createElement(u.Wb, {
+                        }, r.createElement(u.Vb, {
                             label: Object(i.d)("The number of clips that have been created", "LiveDashboard"),
-                            direction: u.Yb.Right
+                            direction: u.Xb.Right
                         }, r.createElement(u.Cb, {
                             className: "stats-widget-clips-icon",
                             display: u.X.InlineFlex
@@ -1104,15 +1104,15 @@
                             margin: {
                                 bottom: .5
                             }
-                        }, r.createElement(u.Wb, {
+                        }, r.createElement(u.Vb, {
                             label: Object(i.d)("The number of people who have viewed the channel", "LiveDashboard"),
-                            direction: u.Yb.Right
+                            direction: u.Xb.Right
                         }, r.createElement(u.qb, {
                             asset: u.rb.GlyphViews
                         })), r.createElement(p, {
                             statDescription: n + " " + Object(i.d)("Views", "LiveDashboard"),
-                            statType: S.TOTAL_VIEWS,
-                            showStat: !this.state.statsConfig || this.state.statsConfig[S.TOTAL_VIEWS],
+                            statType: y.TOTAL_VIEWS,
+                            showStat: !this.state.statsConfig || this.state.statsConfig[y.TOTAL_VIEWS],
                             color: u.O.Base
                         })), r.createElement(u.Cb, {
                             color: u.O.Alt2,
@@ -1121,15 +1121,15 @@
                             margin: {
                                 bottom: .5
                             }
-                        }, r.createElement(u.Wb, {
+                        }, r.createElement(u.Vb, {
                             label: Object(i.d)("The number of people currently following your channel", "LiveDashboard"),
-                            direction: u.Yb.Right
+                            direction: u.Xb.Right
                         }, r.createElement(u.qb, {
                             asset: u.rb.Heart
                         })), r.createElement(p, {
                             statDescription: a + " " + Object(i.d)("Followers", "LiveDashboard"),
-                            statType: S.FOLLOWERS,
-                            showStat: !this.state.statsConfig || this.state.statsConfig[S.FOLLOWERS],
+                            statType: y.FOLLOWERS,
+                            showStat: !this.state.statsConfig || this.state.statsConfig[y.FOLLOWERS],
                             color: u.O.Base
                         })), this.renderSubscriptionStat()))
                     }, t
@@ -1256,7 +1256,7 @@
                         }, this.props.children)))
                     }, t
                 }(p.Component),
-                y = function(e) {
+                S = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1281,7 +1281,7 @@
             function(e) {
                 e.Carat = "carat", e.Card = "card", e.Container = "container", e.Header = "header"
             }(i || (i = {}));
-            var S = function(e) {
+            var y = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleContainerMouseEnter = function(e) {
@@ -1428,7 +1428,7 @@
                         ariaLabel: Object(m.d)("Collapse/Expand", "DragAndDropCard"),
                         icon: h.rb.GlyphArrDown,
                         onClick: this.handleCaratClick
-                    }))), p.createElement(y, {
+                    }))), p.createElement(S, {
                         title: this.props.title
                     })), p.createElement(h.Xa, {
                         display: h.X.Flex,
@@ -1467,7 +1467,7 @@
                 }), t
             }(p.Component);
             i.Carat, i.Card, i.Container, i.Header;
-            var w, E = S,
+            var w, E = y,
                 _ = (w = Object(d.a)("DragAndDropCardContext", {
                     card: new f.a("unknown")
                 })).InnerProvider,
@@ -1694,7 +1694,7 @@
                         })))
                     }, t
                 }(p.Component));
-            var T = Object(D.b)(function(e) {
+            var B = Object(D.b)(function(e) {
                 return {
                     isExpandedView: e.isExpandedView
                 }
@@ -1702,7 +1702,7 @@
             n.d(t, "a", function() {
                 return k
             }), n.d(t, "b", function() {
-                return T
+                return B
             })
         },
         uZYF: function(e, t, n) {},

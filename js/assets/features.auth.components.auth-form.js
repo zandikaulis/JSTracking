@@ -396,10 +396,10 @@
                         w.unbind("enter")
                     }, t.prototype.render = function() {
                         return a.createElement(F.Xa, null, a.createElement(F.W, {
-                            type: F.Tb.Span,
+                            type: F.Sb.Span,
                             bold: !0
                         }, Object(s.d)("We need to make sure you're not a robot!", "CaptchaForm")), " ", a.createElement(F.W, {
-                            type: F.Tb.Span
+                            type: F.Sb.Span
                         }, Object(s.d)("Please complete the reCAPTCHA below.", "CaptchaForm")), a.createElement(F.Xa, {
                             margin: 2,
                             display: F.X.Flex,
@@ -521,12 +521,12 @@
                             right: 1
                         }
                     }, a.createElement(F.W, {
-                        type: F.Tb.Strong,
+                        type: F.Sb.Strong,
                         color: F.O.Base,
                         fontSize: F.Ca.Size6,
                         ellipsis: !0
                     }, e.facebookName), a.createElement(F.W, {
-                        type: F.Tb.Span,
+                        type: F.Sb.Span,
                         color: F.O.Alt2,
                         fontSize: F.Ca.Size7,
                         ellipsis: !0
@@ -684,7 +684,7 @@
                             onFocus: this.onPasswordInputFocus,
                             value: Object(N.b)(this.props.password),
                             error: this.props.error
-                        }, Object(F.hc)(this.props))), a.createElement(F.Cb, {
+                        }, Object(F.gc)(this.props))), a.createElement(F.Cb, {
                             color: F.O.OverlayAlt,
                             padding: {
                                 right: 1
@@ -743,7 +743,7 @@
                             error: this.props.error,
                             refDelegate: this.props.refDelegate,
                             autoFocus: !0
-                        }, Object(F.hc)(this.props))))
+                        }, Object(F.gc)(this.props))))
                     }, t.prototype.renderValidIndicator = function() {
                         var e = {
                             shouldShowNone: void 0 === this.props.error,
@@ -814,7 +814,7 @@
                         onBlur: this.onUsernameBlur,
                         autoFocus: this.props.autoFocus,
                         refDelegate: this.props.refDelegate
-                    }, Object(F.hc)(this.props))))
+                    }, Object(F.gc)(this.props))))
                 }, t.prototype.renderValidIndicator = function() {
                     var e = {
                         shouldShowLoading: this.state.isTyping,
@@ -1007,7 +1007,7 @@
                     }, t.prototype.renderFooterLink = function() {
                         return a.createElement(F.Xa, {
                             "data-test-selector": "facebook-signup-form__footer",
-                            textAlign: F.Pb.Center,
+                            textAlign: F.Ob.Center,
                             margin: {
                                 top: 2
                             }
@@ -1219,7 +1219,7 @@
                             value: Object(N.b)(this.props.value),
                             error: this.props.error,
                             refDelegate: this.getInputRef
-                        }, Object(F.hc)(this.props))), a.createElement(F.Cb, {
+                        }, Object(F.gc)(this.props))), a.createElement(F.Cb, {
                             position: F.hb.Absolute,
                             display: F.X.Flex,
                             alignItems: F.f.Center,
@@ -1362,7 +1362,7 @@
                     }, t.prototype.renderFooterLink = function() {
                         return a.createElement(F.Xa, {
                             "data-test-selector": "facebook-signup-form__footer",
-                            textAlign: F.Pb.Center,
+                            textAlign: F.Ob.Center,
                             margin: {
                                 top: 2
                             }
@@ -1505,7 +1505,7 @@
                         }
                     }, a.createElement(F.W, {
                         fontSize: F.Ca.Size6,
-                        type: F.Tb.Strong
+                        type: F.Sb.Strong
                     }, e.message), a.createElement(F.Xa, null, a.createElement(F.W, {
                         fontSize: F.Ca.Size6,
                         color: F.O.Alt2
@@ -1982,7 +1982,7 @@
                             margin: {
                                 bottom: 2
                             },
-                            textAlign: F.Pb.Center
+                            textAlign: F.Ob.Center
                         }, a.createElement(F.W, {
                             fontSize: F.Ca.Size7,
                             color: F.O.Alt2
@@ -2081,10 +2081,10 @@
                         }, 1e3))
                     }, t.prototype.render = function() {
                         return a.createElement(F.Xa, null, a.createElement(F.W, {
-                            type: F.Tb.Span,
+                            type: F.Sb.Span,
                             bold: !0
                         }, Object(s.d)("Enter the code sent to you by text message or found in the Authy app.", "TwoFactorForm")), " ", a.createElement(F.W, {
-                            type: F.Tb.Span
+                            type: F.Sb.Span
                         }, Object(s.d)("If you've lost your phone, please contact <x:ts>Twitch Support</x:ts>.", {
                             "x:ts": function(e) {
                                 return a.createElement("a", {
@@ -4308,7 +4308,7 @@
 
             function i(e) {
                 return n.createElement(s.W, {
-                    type: s.Tb.Strong
+                    type: s.Sb.Strong
                 }, e)
             }
 

@@ -445,7 +445,7 @@
                                 margin: {
                                     right: .5
                                 }
-                            }, a.createElement(o.Wb, {
+                            }, a.createElement(o.Vb, {
                                 label: n.alt
                             }, a.createElement(o.Ua, {
                                 type: o.Va.Alpha,

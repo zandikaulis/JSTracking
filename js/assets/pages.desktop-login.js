@@ -219,11 +219,11 @@
             ! function(e) {
                 e[e.BlacklistedIP = 2001] = "BlacklistedIP", e[e.EmailThrottled = 2013] = "EmailThrottled", e[e.FacebookAccountAlreadyLinked = 5006] = "FacebookAccountAlreadyLinked", e[e.FailedToDecodeJSON = 1002] = "FailedToDecodeJSON", e[e.IPThrottled = 2014] = "IPThrottled", e[e.InvalidPassword = 2005] = "InvalidPassword", e[e.InvalidUsername = 2004] = "InvalidUsername", e[e.TooManyUsers = 2017] = "TooManyUsers", e[e.UnableToVerifyIdentity = 5003] = "UnableToVerifyIdentity", e[e.UnexpectedFacebookIssue = 5001] = "UnexpectedFacebookIssue", e[e.UnexpectedSignupIssue = 2e3] = "UnexpectedSignupIssue", e[e.UsernameExists = 2008] = "UsernameExists"
             }(f || (f = {}));
-            var v, k = "https://passport.twitch.tv/facebook/register";
+            var v, S = "https://passport.twitch.tv/facebook/register";
             ! function(e) {
                 e[e.DeviceCookieThrottleReached = 3009] = "DeviceCookieThrottleReached", e[e.FacebookAccountAlreadyLinked = 5006] = "FacebookAccountAlreadyLinked", e[e.FailedToDecodeJSON = 1002] = "FailedToDecodeJSON", e[e.FailedToVerifyAuthyToken = 3012] = "FailedToVerifyAuthyToken", e[e.IncorrectCaptcha = 1e3] = "IncorrectCaptcha", e[e.InvalidAuthyToken = 3013] = "InvalidAuthyToken", e[e.InvalidPassword = 2005] = "InvalidPassword", e[e.InvalidUsername = 2004] = "InvalidUsername", e[e.MissingAuthyToken = 3011] = "MissingAuthyToken", e[e.MultipleAccountsLinkedToEmail = 3004] = "MultipleAccountsLinkedToEmail", e[e.NoAccountLinkedToEmail = 3005] = "NoAccountLinkedToEmail", e[e.PasswordMissing = 3003] = "PasswordMissing", e[e.SuspendedUser = 3008] = "SuspendedUser", e[e.UnableToConnect = 5005] = "UnableToConnect", e[e.UnexpectedError = 3e3] = "UnexpectedError", e[e.UnexpectedFacebookIssue = 5001] = "UnexpectedFacebookIssue", e[e.UserCredentialsIncorrect = 3001] = "UserCredentialsIncorrect", e[e.UserDoesNotExist = 1014] = "UserDoesNotExist", e[e.UserHasBeenDeleted = 3007] = "UserHasBeenDeleted", e[e.UserNeedsPasswordReset = 3006] = "UserNeedsPasswordReset", e[e.UsernameMissing = 3002] = "UsernameMissing"
             }(v || (v = {}));
-            var S = "https://passport.twitch.tv/facebook/connect";
+            var k = "https://passport.twitch.tv/facebook/connect";
             var y = r("ZqP/"),
                 F = r("Ue10"),
                 E = function(e) {
@@ -396,10 +396,10 @@
                         C.unbind("enter")
                     }, t.prototype.render = function() {
                         return a.createElement(F.Xa, null, a.createElement(F.W, {
-                            type: F.Tb.Span,
+                            type: F.Sb.Span,
                             bold: !0
                         }, Object(s.d)("We need to make sure you're not a robot!", "CaptchaForm")), " ", a.createElement(F.W, {
-                            type: F.Tb.Span
+                            type: F.Sb.Span
                         }, Object(s.d)("Please complete the reCAPTCHA below.", "CaptchaForm")), a.createElement(F.Xa, {
                             margin: 2,
                             display: F.X.Flex,
@@ -521,12 +521,12 @@
                             right: 1
                         }
                     }, a.createElement(F.W, {
-                        type: F.Tb.Strong,
+                        type: F.Sb.Strong,
                         color: F.O.Base,
                         fontSize: F.Ca.Size6,
                         ellipsis: !0
                     }, e.facebookName), a.createElement(F.W, {
-                        type: F.Tb.Span,
+                        type: F.Sb.Span,
                         color: F.O.Alt2,
                         fontSize: F.Ca.Size7,
                         ellipsis: !0
@@ -684,7 +684,7 @@
                             onFocus: this.onPasswordInputFocus,
                             value: Object(R.b)(this.props.password),
                             error: this.props.error
-                        }, Object(F.hc)(this.props))), a.createElement(F.Cb, {
+                        }, Object(F.gc)(this.props))), a.createElement(F.Cb, {
                             color: F.O.OverlayAlt,
                             padding: {
                                 right: 1
@@ -743,7 +743,7 @@
                             error: this.props.error,
                             refDelegate: this.props.refDelegate,
                             autoFocus: !0
-                        }, Object(F.hc)(this.props))))
+                        }, Object(F.gc)(this.props))))
                     }, t.prototype.renderValidIndicator = function() {
                         var e = {
                             shouldShowNone: void 0 === this.props.error,
@@ -814,7 +814,7 @@
                         onBlur: this.onUsernameBlur,
                         autoFocus: this.props.autoFocus,
                         refDelegate: this.props.refDelegate
-                    }, Object(F.hc)(this.props))))
+                    }, Object(F.gc)(this.props))))
                 }, t.prototype.renderValidIndicator = function() {
                     var e = {
                         shouldShowLoading: this.state.isTyping,
@@ -1007,7 +1007,7 @@
                     }, t.prototype.renderFooterLink = function() {
                         return a.createElement(F.Xa, {
                             "data-test-selector": "facebook-signup-form__footer",
-                            textAlign: F.Pb.Center,
+                            textAlign: F.Ob.Center,
                             margin: {
                                 top: 2
                             }
@@ -1123,10 +1123,10 @@
                 return e.length >= fe && e.length <= be
             }
 
-            function ke(e) {
+            function Se(e) {
                 return e.length < fe ? Object(s.d)("Passwords must be at least 8 characters long.", "PasswordValidator") : e.length > be ? Object(s.d)("Passwords must be shorter than 72 characters.", "PasswordValidator") : void 0
             }
-            var Se = (me.config({
+            var ke = (me.config({
                     maxLength: be,
                     minLength: fe,
                     minPhraseLength: 20,
@@ -1196,7 +1196,7 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        var e = Se(this.props.value),
+                        var e = ke(this.props.value),
                             t = this.props.isCapsLockOn && this.state.isFocused;
                         return a.createElement(q, {
                             error: !!this.props.error,
@@ -1219,7 +1219,7 @@
                             value: Object(R.b)(this.props.value),
                             error: this.props.error,
                             refDelegate: this.getInputRef
-                        }, Object(F.hc)(this.props))), a.createElement(F.Cb, {
+                        }, Object(F.gc)(this.props))), a.createElement(F.Cb, {
                             position: F.hb.Absolute,
                             display: F.X.Flex,
                             alignItems: F.f.Center,
@@ -1283,7 +1283,7 @@
                         }, t.onPasswordInputChanged = function(e) {
                             var r = e.currentTarget.value,
                                 n = !ve(r),
-                                o = ke(r);
+                                o = Se(r);
                             t.props.onFacebookSignupFormValuesChanged({
                                 password: r,
                                 isPasswordInvalid: n,
@@ -1362,7 +1362,7 @@
                     }, t.prototype.renderFooterLink = function() {
                         return a.createElement(F.Xa, {
                             "data-test-selector": "facebook-signup-form__footer",
-                            textAlign: F.Pb.Center,
+                            textAlign: F.Ob.Center,
                             margin: {
                                 top: 2
                             }
@@ -1505,7 +1505,7 @@
                         }
                     }, a.createElement(F.W, {
                         fontSize: F.Ca.Size6,
-                        type: F.Tb.Strong
+                        type: F.Sb.Strong
                     }, e.message), a.createElement(F.Xa, null, a.createElement(F.W, {
                         fontSize: F.Ca.Size6,
                         color: F.O.Alt2
@@ -1873,7 +1873,7 @@
                             })
                         }, t.onPasswordInputChanged = function(e) {
                             var r = e.currentTarget.value,
-                                n = ke(r),
+                                n = Se(r),
                                 o = !!n;
                             t.props.onSignupFormValuesChanged({
                                 password: r,
@@ -1982,7 +1982,7 @@
                             margin: {
                                 bottom: 2
                             },
-                            textAlign: F.Pb.Center
+                            textAlign: F.Ob.Center
                         }, a.createElement(F.W, {
                             fontSize: F.Ca.Size7,
                             color: F.O.Alt2
@@ -2081,10 +2081,10 @@
                         }, 1e3))
                     }, t.prototype.render = function() {
                         return a.createElement(F.Xa, null, a.createElement(F.W, {
-                            type: F.Tb.Span,
+                            type: F.Sb.Span,
                             bold: !0
                         }, Object(s.d)("Enter the code sent to you by text message or found in the Authy app.", "TwoFactorForm")), " ", a.createElement(F.W, {
-                            type: F.Tb.Span
+                            type: F.Sb.Span
                         }, Object(s.d)("If you've lost your phone, please contact <x:ts>Twitch Support</x:ts>.", {
                             "x:ts": function(e) {
                                 return a.createElement("a", {
@@ -3209,7 +3209,7 @@
                                                         },
                                                         client_id: s.p.config.authSettings.clientID
                                                     };
-                                                return l(k, r, {
+                                                return l(S, r, {
                                                     logger: t
                                                 })
                                             }(function(e, t) {
@@ -3257,7 +3257,7 @@
                                                     value: e.captchaValue
                                                 } : e.captchaProof && (r.captcha = {
                                                     proof: e.captchaProof
-                                                }), l(S, r, {
+                                                }), l(k, r, {
                                                     logger: t
                                                 })
                                             }(function(e, t, r, n) {
@@ -4384,28 +4384,28 @@
                 f = r("GnwI"),
                 b = r("oJmH"),
                 v = r("yR8l"),
-                k = r("QVaV"),
-                S = r("Ue10"),
+                S = r("QVaV"),
+                k = r("Ue10"),
                 y = function(e) {
                     var t = e.customButtonText || Object(s.d)("Try again", "DesktopLoginErrorForm");
-                    return o.createElement(S.Cb, {
-                        background: S.r.Base,
+                    return o.createElement(k.Cb, {
+                        background: k.r.Base,
                         fullWidth: !0,
-                        flexDirection: S.Aa.Column,
-                        display: S.X.Flex,
-                        justifyContent: S.Wa.Center,
-                        alignItems: S.f.Center
-                    }, o.createElement(S.W, {
-                        fontSize: S.Ca.Size3
-                    }, Object(s.d)("Oops,", "DesktopLoginErrorForm")), o.createElement(S.W, {
-                        fontSize: S.Ca.Size7,
-                        color: S.O.Alt2
-                    }, e.errorMessage), o.createElement(S.Xa, {
+                        flexDirection: k.Aa.Column,
+                        display: k.X.Flex,
+                        justifyContent: k.Wa.Center,
+                        alignItems: k.f.Center
+                    }, o.createElement(k.W, {
+                        fontSize: k.Ca.Size3
+                    }, Object(s.d)("Oops,", "DesktopLoginErrorForm")), o.createElement(k.W, {
+                        fontSize: k.Ca.Size7,
+                        color: k.O.Alt2
+                    }, e.errorMessage), o.createElement(k.Xa, {
                         margin: 2,
                         fullWidth: !0
-                    }, o.createElement(S.z, {
+                    }, o.createElement(k.z, {
                         onClick: e.onTryAgain,
-                        size: S.D.Large,
+                        size: k.D.Large,
                         fullWidth: !0
                     }, t)))
                 },
@@ -4460,27 +4460,27 @@
                             errorMessage: this.state.errorMessage,
                             onTryAgain: this.props.onBack,
                             customButtonText: Object(s.d)("Go to log in instead", "DesktopLoginErrorForm")
-                        }) : o.createElement(S.Cb, {
-                            background: S.r.Base,
-                            color: S.O.Base,
+                        }) : o.createElement(k.Cb, {
+                            background: k.r.Base,
+                            color: k.O.Base,
                             fullWidth: !0,
-                            flexDirection: S.Aa.Column,
-                            display: S.X.Flex,
-                            justifyContent: S.Wa.Center,
-                            alignItems: S.f.Center
-                        }, o.createElement(S.qb, {
-                            asset: S.rb.LogoGlitch,
+                            flexDirection: k.Aa.Column,
+                            display: k.X.Flex,
+                            justifyContent: k.Wa.Center,
+                            alignItems: k.f.Center
+                        }, o.createElement(k.qb, {
+                            asset: k.rb.LogoGlitch,
                             width: 40,
                             height: 40,
-                            type: S.sb.Brand
-                        }), o.createElement(S.Xa, {
+                            type: k.sb.Brand
+                        }), o.createElement(k.Xa, {
                             margin: {
                                 top: 2,
                                 left: 2,
                                 right: 2
                             },
-                            justifyContent: S.Wa.Center
-                        }, this.renderLogInAs(), this.renderAvatarBox()), this.renderContinueButton(), o.createElement(S.Xa, {
+                            justifyContent: k.Wa.Center
+                        }, this.renderLogInAs(), this.renderAvatarBox()), this.renderContinueButton(), o.createElement(k.Xa, {
                             padding: {
                                 x: 2,
                                 top: 2
@@ -4489,64 +4489,64 @@
                     }, t.prototype.renderAvatarBox = function() {
                         var e = this.getFormattedDisplayNameString(),
                             t = this.props.data && this.props.data.user && this.props.data.user.profileImageURL,
-                            r = e ? o.createElement(S.W, {
-                                fontSize: S.Ca.Size7,
-                                type: S.Tb.Strong
-                            }, this.getFormattedDisplayNameHtml()) : o.createElement(S.gb, {
+                            r = e ? o.createElement(k.W, {
+                                fontSize: k.Ca.Size7,
+                                type: k.Sb.Strong
+                            }, this.getFormattedDisplayNameHtml()) : o.createElement(k.gb, {
                                 height: 10,
                                 width: 100
                             }),
-                            n = t && e ? o.createElement(S.q, {
+                            n = t && e ? o.createElement(k.q, {
                                 alt: Object(s.d)("{username}'s profile image", {
                                     username: e
                                 }, "DesktopFastLoginForm"),
                                 src: t,
                                 size: 40
-                            }) : o.createElement(S.gb, {
+                            }) : o.createElement(k.gb, {
                                 height: 40,
                                 width: 40
                             });
-                        return o.createElement(S.Cb, {
+                        return o.createElement(k.Cb, {
                             margin: 2,
                             padding: .5,
                             border: !0,
-                            flexDirection: S.Aa.Row,
-                            display: S.X.Flex
-                        }, n, o.createElement(S.Xa, {
+                            flexDirection: k.Aa.Row,
+                            display: k.X.Flex
+                        }, n, o.createElement(k.Xa, {
                             padding: {
                                 left: .5
                             },
-                            flexDirection: S.Aa.Column,
-                            display: S.X.Flex,
-                            alignItems: S.f.Start,
-                            justifyContent: S.Wa.Center
-                        }, r, o.createElement(S.W, {
-                            fontSize: S.Ca.Size7,
-                            color: S.O.Alt2
+                            flexDirection: k.Aa.Column,
+                            display: k.X.Flex,
+                            alignItems: k.f.Start,
+                            justifyContent: k.Wa.Center
+                        }, r, o.createElement(k.W, {
+                            fontSize: k.Ca.Size7,
+                            color: k.O.Alt2
                         }, Object(s.d)("On Twitch", "DesktopFastLoginForm"))))
                     }, t.prototype.renderGoBackLink = function() {
-                        return o.createElement(S.U, {
+                        return o.createElement(k.U, {
                             onClick: this.props.onBack,
-                            type: S.V.Inherit,
+                            type: k.V.Inherit,
                             hoverColorInherit: !0
                         }, Object(s.d)("Not you? Switch accounts", "DesktopFastLoginForm"))
                     }, t.prototype.renderLogInAs = function() {
                         var e = this.getFormattedDisplayNameString();
-                        return e ? o.createElement(S.W, {
-                            fontSize: S.Ca.Size4,
-                            type: S.Tb.Strong
+                        return e ? o.createElement(k.W, {
+                            fontSize: k.Ca.Size4,
+                            type: k.Sb.Strong
                         }, Object(s.d)("Log in as {username} ", {
                             username: e
-                        }, "DesktopFastLoginForm")) : o.createElement(S.gb, {
+                        }, "DesktopFastLoginForm")) : o.createElement(k.gb, {
                             height: 20,
                             width: 200
                         })
                     }, t.prototype.renderContinueButton = function() {
-                        return o.createElement(S.z, {
+                        return o.createElement(k.z, {
                             disabled: this.state.loading,
                             onClick: this.handleFastLoginClick,
-                            size: S.D.Large,
-                            state: this.state.loading ? S.E.Loading : S.E.Default,
+                            size: k.D.Large,
+                            state: this.state.loading ? k.E.Loading : k.E.Default,
                             fullWidth: !0
                         }, Object(s.d)("Continue", "DesktopFastLoginForm"))
                     }, t.prototype.getDisplayName = function() {
@@ -4554,11 +4554,11 @@
                     }, t.prototype.getFormattedDisplayNameHtml = function() {
                         var e = this.getDisplayName(),
                             t = this.getLoginName();
-                        return t && e ? Object(k.a)(t, e) : null
+                        return t && e ? Object(S.a)(t, e) : null
                     }, t.prototype.getFormattedDisplayNameString = function() {
                         var e = this.getDisplayName(),
                             t = this.getLoginName();
-                        return t && e ? Object(k.a)(t, e, !0) : null
+                        return t && e ? Object(S.a)(t, e, !0) : null
                     }, t.prototype.getLoginName = function() {
                         return this.props.data && this.props.data.user && this.props.data.user.login ? this.props.data.user.login : null
                     }, t
@@ -4620,49 +4620,49 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return o.createElement(S.Ja, {
-                            gutterSize: S.Ka.None,
+                        return o.createElement(k.Ja, {
+                            gutterSize: k.Ka.None,
                             fullHeight: !0
-                        }, o.createElement(S.P, {
+                        }, o.createElement(k.P, {
                             cols: 6
-                        }, o.createElement(S.Cb, {
-                            background: S.r.Base,
-                            color: S.O.Base,
+                        }, o.createElement(k.Cb, {
+                            background: k.r.Base,
+                            color: k.O.Base,
                             fullHeight: !0,
-                            display: S.X.Flex,
-                            flexDirection: S.Aa.Column,
-                            justifyContent: S.Wa.Center,
-                            alignItems: S.f.Center
-                        }, o.createElement(S.Pa, {
+                            display: k.X.Flex,
+                            flexDirection: k.Aa.Column,
+                            justifyContent: k.Wa.Center,
+                            alignItems: k.f.Center
+                        }, o.createElement(k.Pa, {
                             fullWidth: !0
                         }, o.createElement(i.b, {
                             suppressScrollX: !0,
                             className: "desktop-login-page__scroll"
-                        }, o.createElement(S.Xa, {
+                        }, o.createElement(k.Xa, {
                             padding: 2,
                             fullWidth: !0,
                             fullHeight: !0,
-                            display: S.X.Flex,
-                            flexDirection: S.Aa.Column,
-                            justifyContent: S.Wa.Center,
-                            alignItems: S.f.Center
-                        }, o.createElement(S.Cb, {
+                            display: k.X.Flex,
+                            flexDirection: k.Aa.Column,
+                            justifyContent: k.Wa.Center,
+                            alignItems: k.f.Center
+                        }, o.createElement(k.Cb, {
                             className: "desktop-login-page__container",
-                            background: S.r.Base,
-                            borderRadius: S.x.Medium,
-                            overflow: S.cb.Hidden,
-                            display: S.X.Flex,
-                            flexDirection: S.Aa.Column,
-                            justifyContent: S.Wa.Center
-                        }, this.renderContents())))))), o.createElement(S.P, {
+                            background: k.r.Base,
+                            borderRadius: k.x.Medium,
+                            overflow: k.cb.Hidden,
+                            display: k.X.Flex,
+                            flexDirection: k.Aa.Column,
+                            justifyContent: k.Wa.Center
+                        }, this.renderContents())))))), o.createElement(k.P, {
                             cols: 6
-                        }, o.createElement(S.Cb, {
-                            background: S.r.Accent,
-                            color: S.O.Overlay,
+                        }, o.createElement(k.Cb, {
+                            background: k.r.Accent,
+                            color: k.O.Overlay,
                             fullHeight: !0
                         })))
                     }, t.prototype.renderContents = function() {
-                        return this.state.loading ? o.createElement(S.Za, {
+                        return this.state.loading ? o.createElement(k.Za, {
                             fillContent: !0
                         }) : this.renderAuthForm()
                     }, t.prototype.renderAuthForm = function() {
@@ -4740,7 +4740,7 @@
 
             function i(e) {
                 return n.createElement(s.W, {
-                    type: s.Tb.Strong
+                    type: s.Sb.Strong
                 }, e)
             }
 

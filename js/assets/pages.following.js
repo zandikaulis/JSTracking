@@ -1289,15 +1289,15 @@
                         p = !0
                 }
                 var g = c.seconds || 0,
-                    h = c.minutes || 0,
-                    v = c.hours || 0;
+                    v = c.minutes || 0,
+                    h = c.hours || 0;
                 switch (t) {
                     case a.ClockHM:
                     case a.ClockHMS:
-                        var f = (p ? d(v, 2) : v) + m + d(h, 2);
+                        var f = (p ? d(h, 2) : h) + m + d(v, 2);
                         return t === a.ClockHMS && (f += m + d(g, 2)), f;
                     case a.ClockMS:
-                        return (p ? d(h, 2) : h) + m + d(g, 2)
+                        return (p ? d(v, 2) : v) + m + d(g, 2)
                 }
             }
 
@@ -1327,8 +1327,8 @@
                 m = n("vRsq"),
                 p = n("2xye"),
                 g = n("GnwI"),
-                h = n("4HIT"),
-                v = function(e) {
+                v = n("4HIT"),
+                h = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClickHandler = function() {
@@ -1368,7 +1368,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = {
+                        return a.createElement(d.a, {
                             context: this.props.context,
                             onClick: this.onClickHandler,
                             title: this.props.video.title,
@@ -1379,7 +1379,7 @@
                             },
                             thumbnailImageProps: {
                                 src: this.props.video.previewThumbnailURL,
-                                alt: this.props.video.title || ""
+                                alt: this.props.video.title
                             },
                             channelDisplayName: this.props.video.owner && this.props.video.owner.displayName || "",
                             channelLogin: this.props.video.owner && this.props.video.owner.login || "",
@@ -1389,7 +1389,7 @@
                             },
                             channelImageProps: {
                                 src: this.props.video.owner && this.props.video.owner.profileImageURL || "",
-                                alt: this.props.video.owner && this.props.video.owner.displayName || ""
+                                alt: this.props.video.owner ? this.props.video.owner.displayName : ""
                             },
                             gameTitle: this.props.video.game && this.props.video.game.name || "",
                             gameTitleLinkTo: {
@@ -1403,8 +1403,8 @@
                             videoGameChanges: this.gameChangesWithLinks(),
                             multipleVideoGameMarkersType: this.props.multipleVideoGameMarkersType,
                             datePublished: this.props.video.publishedAt,
-                            viewCount: this.props.video.viewCount || 0,
-                            durationInSeconds: !this.props.hideDuration && this.props.video.lengthSeconds ? this.props.video.lengthSeconds : void 0,
+                            viewCount: this.props.video.viewCount,
+                            durationInSeconds: this.props.hideDuration ? void 0 : this.props.video.lengthSeconds,
                             animatedImageProps: this.props.video.animatedPreviewURL ? {
                                 src: this.props.video.animatedPreviewURL,
                                 alt: ""
@@ -1419,17 +1419,16 @@
                             trackingContext: this.props.tracking,
                             tagListProps: !0 !== this.props.hideTags && this.props.video.contentTags ? {
                                 tags: this.props.video.contentTags,
-                                linkPath: h.a.PopularTag
+                                linkPath: v.a.PopularTag
                             } : void 0
-                        };
-                        return a.createElement(d.a, i.__assign({}, e))
+                        })
                     }, t.prototype.generateSearchString = function() {
                         var e = {};
                         this.props.collectionID && (e.collection = this.props.collectionID);
                         var t = l.stringify(e);
                         return t ? "?" + t : ""
                     }, t.prototype.getVideoPreviousWatchPercentage = function() {
-                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / (this.props.video.lengthSeconds || 1 / 0) * 100 : null
+                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / this.props.video.lengthSeconds * 100 : null
                     }, t.prototype.getRestrictionProps = function() {
                         var e = this.props.video.restriction && this.props.video.restriction.productName ? "/products/" + this.props.video.restriction.productName : "";
                         return {
@@ -1451,7 +1450,7 @@
                 }(a.Component),
                 f = Object(g.b)("VideoPreviewCard", {
                     autoReportInteractive: !0
-                })(v);
+                })(h);
             n.d(t, "a", function() {
                 return k
             });
@@ -1481,7 +1480,7 @@
                         videoGameChanges: this.state.videoGameChanges
                     }, this.props))
                 }, t.prototype.componentWillMount = function() {
-                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== r.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds || 0)
+                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== r.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds)
                 }, t
             }(a.Component)
         },
@@ -1936,7 +1935,7 @@
                 }(a.Component)),
                 p = n("kduP"),
                 g = n("2xye"),
-                h = function(e) {
+                v = function(e) {
                     return a.createElement(l.Xa, null, a.createElement(l.W, {
                         color: l.O.Alt,
                         ellipsis: !0
@@ -1952,10 +1951,10 @@
                                 }
                             },
                             type: l.V.Inherit
-                        }, t.label, v(n, i.length - 1) ? null : ", "))
+                        }, t.label, h(n, i.length - 1) ? null : ", "))
                     })))
                 },
-                v = function(e, t) {
+                h = function(e, t) {
                     return e === t
                 },
                 f = n("N0BP"),
@@ -1995,7 +1994,7 @@
                         "data-test-selector": "top-bar-title-selector",
                         color: l.O.Overlay,
                         bold: !0,
-                        transform: l.Sb.Uppercase
+                        transform: l.Rb.Uppercase
                     }, e.title)), e.subTitle && a.createElement(l.Xa, {
                         display: l.X.InlineFlex
                     }, a.createElement(l.W, {
@@ -2183,7 +2182,7 @@
                         type: l.V.Inherit,
                         "data-test-selector": "preview-card-titles__primary-link"
                     }), a.createElement(l.W, {
-                        type: l.Tb.H3,
+                        type: l.Sb.H3,
                         fontSize: l.Ca.Size5,
                         lines: 1,
                         bold: !0,
@@ -2219,11 +2218,11 @@
                         position: l.hb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
-                        zIndex: l.gc.Default,
+                        zIndex: l.fc.Default,
                         padding: {
                             x: 5
                         },
-                        textAlign: l.Pb.Center,
+                        textAlign: l.Ob.Center,
                         fullWidth: !0,
                         fullHeight: !0,
                         alignItems: l.f.Center,
@@ -2256,14 +2255,14 @@
                         attachBottom: !this.props.attachTop,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: l.gc.Default,
+                        zIndex: l.fc.Default,
                         fontSize: l.Ca.Size6,
                         background: l.r.Overlay,
                         borderRadius: l.x.Medium,
                         color: l.O.Overlay
-                    }, a.createElement(l.Wb, {
-                        direction: this.props.attachTop ? l.Yb.Bottom : l.Yb.Top,
-                        align: l.Xb.Right,
+                    }, a.createElement(l.Vb, {
+                        direction: this.props.attachTop ? l.Xb.Bottom : l.Xb.Top,
+                        align: l.Wb.Right,
                         label: n
                     }, a.createElement(l.qb, {
                         asset: i,
@@ -2357,9 +2356,9 @@
                             bottomLeft: a.createElement(S, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? a.createElement(S, {
+                            bottomRight: a.createElement(S, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
-                            }) : null,
+                            }),
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
                         }) : j(this.props) ? a.createElement(C, {
@@ -2372,9 +2371,9 @@
                             bottomLeft: a.createElement(S, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? a.createElement(S, {
+                            bottomRight: a.createElement(S, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
-                            }) : null
+                            })
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
                         return U(this.props) && this.props.listPosition ? Object(r.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
@@ -2460,7 +2459,7 @@
                                     onBalloonItemClick: i
                                 });
                             case L.a.Inline:
-                                return a.createElement(h, {
+                                return a.createElement(v, {
                                     videoGameChanges: t,
                                     trackingContext: this.props.trackingContext
                                 });
@@ -3460,8 +3459,8 @@
                 m = n("/7QA"),
                 p = n("ZDlU"),
                 g = n("GnwI"),
-                h = n("Bh3T"),
-                v = n("yR8l"),
+                v = n("Bh3T"),
+                h = n("yR8l"),
                 f = n("V+GM"),
                 k = n("DMoW"),
                 b = n("NvVO"),
@@ -3507,7 +3506,7 @@
                                 bottom: 2
                             }
                         }, d.createElement(y.Eb, null, t))
-                    }, t = s.__decorate([Object(g.b)("FollowingHeaderTabs"), Object(v.a)(C)], t)
+                    }, t = s.__decorate([Object(g.b)("FollowingHeaderTabs"), Object(h.a)(C)], t)
                 }(d.Component),
                 N = n("aCAx"),
                 E = n("cZKs"),
@@ -3521,7 +3520,7 @@
                         return n.state = {
                             followCount: 0
                         }, n.getAndStoreShuffledGameCards = function() {
-                            n.props.data && n.props.data.games && n.props.data.games.edges && (n.shuffledGameCards = Object(F.a)(n.props.data.games.edges.map(function(e, t) {
+                            n.props.data && n.props.data.games && (n.shuffledGameCards = Object(F.a)(n.props.data.games.edges.map(function(e, t) {
                                 var i = e.node;
                                 return i && i.id ? d.createElement(y.Xa, {
                                     key: i.id
@@ -3529,7 +3528,7 @@
                                     info: "",
                                     title: i.name,
                                     imageAlt: i.name,
-                                    imageSrc: i.boxArtURL || "",
+                                    imageSrc: i.boxArtURL,
                                     onFollow: n.onFollow,
                                     onUnfollow: n.onUnfollow,
                                     "data-a-target": "follow-game-card-" + t
@@ -3570,7 +3569,7 @@
                             margin: {
                                 bottom: 1
                             },
-                            textAlign: y.Pb.Center,
+                            textAlign: y.Ob.Center,
                             display: y.X.Flex,
                             flexDirection: y.Aa.Column,
                             alignContent: y.e.Center
@@ -3595,9 +3594,9 @@
                             suppressScrollX: !0
                         }, d.createElement(y.Xa, {
                             padding: 1
-                        }, d.createElement(y.Zb, {
-                            childWidth: y.ac.Small,
-                            gutterSize: y.bc.Small,
+                        }, d.createElement(y.Yb, {
+                            childWidth: y.Zb.Small,
+                            gutterSize: y.ac.Small,
                             placeholderItems: 99
                         }, this.shuffledGameCards)))), d.createElement(y.Xa, {
                             display: y.X.Flex,
@@ -3612,7 +3611,7 @@
                             onClick: this.onClickContinue,
                             disabled: 0 === this.state.followCount
                         }, Object(m.d)("Continue", "FollowGamesModal"))), d.createElement(E.a, null)))
-                    }, t = s.__decorate([Object(v.a)(T, {
+                    }, t = s.__decorate([Object(h.a)(T, {
                         options: {
                             variables: {
                                 limit: 40
@@ -3637,7 +3636,7 @@
                                 bottom: 2
                             }
                         }, d.createElement(y.W, {
-                            type: y.Tb.H4,
+                            type: y.Sb.H4,
                             color: y.O.Base,
                             bold: !0,
                             "data-a-target": "live-games-header"
@@ -3725,9 +3724,9 @@
                                 })
                             }))
                         });
-                        return d.createElement("div", null, e, d.createElement(y.Zb, {
-                            gutterSize: y.bc.Small,
-                            childWidth: y.ac.Small,
+                        return d.createElement("div", null, e, d.createElement(y.Yb, {
+                            gutterSize: y.ac.Small,
+                            childWidth: y.Zb.Small,
                             placeholderItems: 30
                         }, a, t))
                     }, t
@@ -3779,7 +3778,7 @@
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t
                 }(d.Component),
-                H = Object(a.compose)(Object(v.a)(V, {
+                H = Object(a.compose)(Object(h.a)(V, {
                     options: {
                         fetchPolicy: "cache-and-network",
                         variables: {
@@ -3817,14 +3816,14 @@
                         x: "auto"
                     }
                 }, d.createElement(y.Xa, {
-                    textAlign: y.Pb.Center,
+                    textAlign: y.Ob.Center,
                     margin: {
                         bottom: 2
                     }
                 }, d.createElement(y.W, {
                     color: y.O.Alt2,
                     fontSize: y.Ca.Size4,
-                    type: y.Tb.H4
+                    type: y.Sb.H4
                 }, Object(m.d)("Never miss the Channels you love.", "EmptyChannelList"))), d.createElement(y.Xa, {
                     display: y.X.Flex,
                     justifyContent: y.Wa.Between
@@ -3847,7 +3846,7 @@
                     attachLeft: !0,
                     attachTop: !0,
                     background: y.r.Alt,
-                    textAlign: y.Pb.Center
+                    textAlign: y.Ob.Center
                 }, Object(m.f)(1))), d.createElement(y.Xa, {
                     className: "following__empty-information",
                     position: y.hb.Relative
@@ -3867,7 +3866,7 @@
                     attachLeft: !0,
                     attachTop: !0,
                     background: y.r.Alt,
-                    textAlign: y.Pb.Center
+                    textAlign: y.Ob.Center
                 }, Object(m.f)(2))), d.createElement(y.Xa, {
                     className: "following__empty-information",
                     position: y.hb.Relative
@@ -3887,7 +3886,7 @@
                     attachLeft: !0,
                     attachTop: !0,
                     background: y.r.Alt,
-                    textAlign: y.Pb.Center
+                    textAlign: y.Ob.Center
                 }, Object(m.f)(3)))))
             }
             var z = n("HrG3");
@@ -3899,13 +3898,13 @@
                             bottom: 2
                         }
                     }, d.createElement(y.W, {
-                        type: y.Tb.H4,
+                        type: y.Sb.H4,
                         color: y.O.Base,
                         bold: !0,
                         "data-a-target": "live-hosts-header"
                     }, t));
                 if (!e.hosts || 0 === e.hosts.length) return e.followsCount > 0 ? d.createElement("div", null, n, d.createElement(y.Xa, {
-                    textAlign: y.Pb.Center,
+                    textAlign: y.Ob.Center,
                     padding: {
                         y: 5
                     }
@@ -3995,9 +3994,9 @@
                         }))
                     }
                 });
-                return d.createElement("div", null, n, d.createElement(y.Zb, {
-                    gutterSize: y.bc.Small,
-                    childWidth: y.ac.Large,
+                return d.createElement("div", null, n, d.createElement(y.Yb, {
+                    gutterSize: y.ac.Small,
+                    childWidth: y.Zb.Large,
                     placeholderItems: 20
                 }, o, i))
             }
@@ -4064,7 +4063,7 @@
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t
                 }(d.Component),
-                J = Object(B.compose)(Object(v.a)($, {
+                J = Object(B.compose)(Object(h.a)($, {
                     options: function() {
                         return {
                             fetchPolicy: "cache-and-network",
@@ -4098,13 +4097,13 @@
                             bottom: 2
                         }
                     }, d.createElement(y.W, {
-                        type: y.Tb.H4,
+                        type: y.Sb.H4,
                         color: y.O.Base,
                         bold: !0,
                         "data-a-target": "live-channels-header"
                     }, t));
                 if (null !== e.users && 0 === e.users.length) return e.followsCount > 0 ? d.createElement("div", null, n, d.createElement(y.Xa, {
-                    textAlign: y.Pb.Center,
+                    textAlign: y.Ob.Center,
                     padding: {
                         y: 5
                     }
@@ -4175,9 +4174,9 @@
                     for (var l = 0; l < 5; l++) o.push(d.createElement(ee.VideoPreviewCardPlaceholder, {
                         key: "live-channels-placeholder-" + l
                     }));
-                return d.createElement("div", null, n, d.createElement(y.Zb, {
-                    gutterSize: y.bc.Small,
-                    childWidth: y.ac.Large,
+                return d.createElement("div", null, n, d.createElement(y.Yb, {
+                    gutterSize: y.ac.Small,
+                    childWidth: y.Zb.Large,
                     placeholderItems: 20
                 }, o, i))
             }
@@ -4191,19 +4190,19 @@
                     return s.__extends(t, e), t.prototype.componentDidUpdate = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (this.props.data.loading || this.props.data.error || !this.props.data.currentUser || !this.props.data.currentUser.recommendations || !this.props.data.currentUser.recommendations.videos || !this.props.data.currentUser.recommendations.videos.edges || 0 === this.props.data.currentUser.recommendations.videos.edges.length) return null;
+                        if (this.props.data.loading || this.props.data.error || !this.props.data.currentUser || !this.props.data.currentUser.recommendations || 0 === this.props.data.currentUser.recommendations.videos.edges.length) return null;
                         var e = d.createElement(y.Xa, {
                                 margin: {
                                     bottom: 2
                                 }
                             }, d.createElement(y.W, {
-                                type: y.Tb.H4,
+                                type: y.Sb.H4,
                                 color: y.O.Base,
                                 bold: !0
                             }, Object(m.d)("Based on your viewing history", "SuggestedVideos"))),
                             t = [];
-                        if (this.props.data.currentUser.recommendations.videos && this.props.data.currentUser.recommendations.videos.edges && (t = this.props.data.currentUser.recommendations.videos.edges.map(function(e) {
-                                if (e && e.node) return e.node
+                        if (this.props.data.currentUser.recommendations.videos && (t = this.props.data.currentUser.recommendations.videos.edges.map(function(e) {
+                                return e.node
                             })), this.props.directoryWidth > 0) {
                             var n = Object(P.a)(this.props.directoryWidth, 240, 2);
                             t = t.slice(0, n)
@@ -4212,10 +4211,10 @@
                             listContext: ne.b.MixedGameAndChannelList,
                             trackingMedium: w.PageviewMedium.Following,
                             trackingContent: w.PageviewContent.SuggestedVideos,
-                            videoCardSize: y.ac.Large,
+                            videoCardSize: y.Zb.Large,
                             videos: t
                         }))
-                    }, t = s.__decorate([Object(v.a)(ae, {
+                    }, t = s.__decorate([Object(h.a)(ae, {
                         options: {
                             fetchPolicy: "network-only",
                             variables: {
@@ -4308,7 +4307,7 @@
                         }))
                     }, t.prototype.onRender = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                    }, t = s.__decorate([Object(v.a)(ue, {
+                    }, t = s.__decorate([Object(h.a)(ue, {
                         options: {
                             fetchPolicy: "cache-and-network",
                             variables: {
@@ -4333,7 +4332,7 @@
                     }
                 })(me),
                 ge = n("Uc21");
-            var he = function(e) {
+            var ve = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -4379,7 +4378,7 @@
                         }))
                     }, t.prototype.onRender = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                    }, t = s.__decorate([Object(v.a)(ge, {
+                    }, t = s.__decorate([Object(h.a)(ge, {
                         options: function() {
                             return {
                                 fetchPolicy: "cache-and-network",
@@ -4446,16 +4445,16 @@
                         }
                     })], t)
                 }(d.Component),
-                ve = function(e) {
+                he = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return this.props.isLoggedIn ? d.createElement(y.Xa, null, d.createElement(h.b, {
+                        return this.props.isLoggedIn ? d.createElement(y.Xa, null, d.createElement(v.b, {
                             addPaddingWhenPlayerIsPersisting: !0
                         }), d.createElement(u.a, null, d.createElement(c.a, {
                             path: "/directory/following/live",
-                            component: he
+                            component: ve
                         }), d.createElement(c.a, {
                             path: "/directory/following/hosts",
                             component: J
@@ -4472,7 +4471,7 @@
                 }(d.Component),
                 fe = Object(g.b)("FollowingPageRoot", {
                     autoReportInteractive: !0
-                })(ve);
+                })(he);
             var ke = Object(i.connect)(function(e) {
                 return {
                     isLoggedIn: Object(l.f)(e)
@@ -4999,8 +4998,8 @@
             }(o || (o = {}));
             var p = ((i = {})[u.a.Live] = "stream-type-indicator--live", i[u.a.Premiere] = "stream-type-indicator--premiere", i[u.a.Rerun] = "stream-type-indicator--rerun", i[u.a.WatchParty] = "stream-type-indicator--rerun", i),
                 g = ((a = {})[u.a.Premiere] = m.rb.VideoPremiere, a[u.a.Rerun] = m.rb.VideoRerun, a[u.a.WatchParty] = m.rb.VideoRerun, a),
-                h = ((r = {})[u.a.Premiere] = m.sb.Live, r[u.a.Rerun] = m.sb.Inherit, r[u.a.WatchParty] = m.sb.Inherit, r),
-                v = function(e) {
+                v = ((r = {})[u.a.Premiere] = m.sb.Live, r[u.a.Rerun] = m.sb.Inherit, r[u.a.WatchParty] = m.sb.Inherit, r),
+                h = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5021,7 +5020,7 @@
                                 right: .5
                             }
                         }, this.getIcon()), d.createElement(m.W, {
-                            type: m.Tb.Span
+                            type: m.Sb.Span
                         }, this.getLabel()))
                     }, t.prototype.getClassNames = function() {
                         var e = {
@@ -5042,7 +5041,7 @@
                             size: m.L.Small
                         })) : d.createElement(m.qb, {
                             asset: g[this.props.type],
-                            type: h[this.props.type],
+                            type: v[this.props.type],
                             width: 14,
                             height: 14
                         })
@@ -5064,7 +5063,7 @@
             n.d(t, !1, function() {
                 return o
             }), n.d(t, "a", function() {
-                return v
+                return h
             })
         },
         b6Yk: function(e, t, n) {
@@ -5489,9 +5488,9 @@
                         });
                         t = a.createElement(a.Fragment, null, l)
                     }
-                    return a.createElement(c.Zb, {
-                        gutterSize: c.bc.Small,
-                        childWidth: e.videoCardSize || c.ac.Large,
+                    return a.createElement(c.Yb, {
+                        gutterSize: c.ac.Small,
+                        childWidth: e.videoCardSize || c.Zb.Large,
                         placeholderItems: 20
                     }, t, n)
                 },
@@ -6058,9 +6057,9 @@
                         position: o.hb.Absolute,
                         attachTop: !0,
                         attachRight: !0
-                    }, Object(o.hc)(e)), a.createElement(o.Wb, {
-                        direction: o.Yb.Top,
-                        align: o.Xb.Right,
+                    }, Object(o.gc)(e)), a.createElement(o.Vb, {
+                        direction: o.Xb.Top,
+                        align: o.Wb.Right,
                         label: Object(r.d)("Offers in-game Drops", "DropsBadge")
                     }, a.createElement(o.Cb, {
                         className: "drops-badge__drops-icon",
@@ -6073,7 +6072,7 @@
                         },
                         overflow: o.cb.Hidden,
                         color: o.O.Overlay,
-                        zIndex: o.gc.Default
+                        zIndex: o.fc.Default
                     }, a.createElement(o.U, {
                         type: o.V.Inherit,
                         hoverColorInherit: !0,
@@ -6126,7 +6125,7 @@
                     ellipsis: !0
                 }, a.createElement(o.W, {
                     className: "tw-box-art-card__title",
-                    type: o.Tb.H3,
+                    type: o.Sb.H3,
                     fontSize: o.Ca.Size5,
                     lineHeight: o.Ya.Body,
                     ellipsis: !0
@@ -6153,7 +6152,7 @@
                     tabIndex: e.tabIndex
                 }, t)), a.createElement("div", i.__assign({
                     className: "tw-box-art-card"
-                }, Object(o.hc)(e)), a.createElement(o.G, {
+                }, Object(o.gc)(e)), a.createElement(o.G, {
                     key: e.title
                 }, t), e.tagListProps && 0 !== e.tagListProps.tags.length && a.createElement(o.Xa, {
                     margin: {
@@ -6396,8 +6395,8 @@
                 m = n("vSJR"),
                 p = n("8/mp"),
                 g = n("HSqT"),
-                h = n("2xye"),
-                v = n("GnwI"),
+                v = n("2xye"),
+                h = n("GnwI"),
                 f = n("Ue10");
             n("S58p");
             ! function(e) {
@@ -6454,7 +6453,7 @@
                             })))
                         }, t.trackLanguageChange = function(e, n) {
                             var i = "";
-                            t.props.match && t.props.match.params && (i = decodeURIComponent(t.props.match.params.encodedCommunityName).toLowerCase()), u.p.tracking.track(h.SpadeEventType.LanguageFilterChange, {
+                            t.props.match && t.props.match.params && (i = decodeURIComponent(t.props.match.params.encodedCommunityName).toLowerCase()), u.p.tracking.track(v.SpadeEventType.LanguageFilterChange, {
                                 item_name: "language",
                                 item_value: e,
                                 item_action: n ? "select" : "deselect",
@@ -6474,7 +6473,7 @@
                         }, this.renderDropdownContent()))
                     }, t
                 }(d.Component),
-                b = Object(r.compose)(c.a, Object(v.b)("LanguageSelectMenu"))(k);
+                b = Object(r.compose)(c.a, Object(h.b)("LanguageSelectMenu"))(k);
             var w = Object(a.connect)(function(e) {
                 return {
                     languagePreferences: Object(l.a)(e)
@@ -6503,7 +6502,7 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         return a.createElement("div", i.__assign({
                             className: "live-channel-card"
-                        }, Object(l.hc)(this.props)), a.createElement(r.a, {
+                        }, Object(l.gc)(this.props)), a.createElement(r.a, {
                             context: r.b.MixedGameAndChannelList,
                             title: this.props.title,
                             linkTo: this.props.linkTo,
@@ -6612,7 +6611,7 @@
                             y: 1
                         },
                         position: s.hb.Absolute,
-                        zIndex: s.gc.Above
+                        zIndex: s.fc.Above
                     }, e)))
                 }, t.prototype.toggleDropdown = function(e) {
                     void 0 === e && (e = !this.state.isOpen), this.setState({
@@ -6836,123 +6835,152 @@
         },
         yziQ: function(e, t, n) {
             "use strict";
+            var i = n("mrSG"),
+                a = n("q1tI"),
+                r = n("yR8l"),
+                o = n("geRD"),
+                l = n("G1cX");
+
+            function s(e, t, n, i) {
+                void 0 === n && (n = {});
+                var a = e.readQuery({
+                    query: t,
+                    variables: n
+                });
+                if (a) {
+                    var r = l(a, function(e) {
+                        return e
+                    }, function(e) {
+                        return i(e)
+                    });
+                    e.writeQuery({
+                        query: t,
+                        variables: n,
+                        data: r
+                    })
+                }
+            }
+            var d = n("Ue10"),
+                c = n("4ErZ"),
+                u = n("bSYX"),
+                m = (n("AXwV"), n("g3/t"));
             n.d(t, "a", function() {
                 return p
             });
-            var i = n("mrSG"),
-                a = n("q1tI"),
-                r = n("oJmH"),
-                o = n("yR8l"),
-                l = n("geRD"),
-                s = n("Ue10"),
-                d = n("4ErZ"),
-                c = n("bSYX"),
-                u = (n("AXwV"), n("g3/t")),
-                m = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            hovered: !1,
-                            inProgress: !1
-                        }, t.onClick = function() {
-                            t.state.inProgress || t.setState({
-                                inProgress: !0
-                            }, t.mutateFollowGame)
-                        }, t.mutateFollowGame = function() {
-                            return i.__awaiter(t, void 0, void 0, function() {
-                                return i.__generator(this, function(e) {
-                                    switch (e.label) {
-                                        case 0:
-                                            return this.followGameDataLoadedWithoutError() && this.props.data.game ? this.isFollowing() ? [3, 2] : [4, this.followGame(this.props.data.game.id)] : [2];
-                                        case 1:
-                                            return e.sent(), [3, 4];
-                                        case 2:
-                                            return [4, this.unfollowGame(this.props.data.game.id)];
-                                        case 3:
-                                            e.sent(), e.label = 4;
-                                        case 4:
-                                            return [2]
-                                    }
-                                })
-                            })
-                        }, t.onMouseEnter = function() {
-                            t.setState({
-                                hovered: !0
-                            })
-                        }, t.onMouseLeave = function() {
-                            t.setState({
-                                hovered: !1
-                            })
-                        }, t
-                    }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(s.Pa, {
-                            position: s.hb.Relative,
-                            margin: {
-                                bottom: 1
-                            }
-                        }, a.createElement("div", i.__assign({
-                            className: "follow-game-card",
-                            "data-test-selector": "follow-game-card",
-                            onMouseEnter: this.onMouseEnter,
-                            onMouseLeave: this.onMouseLeave,
-                            onClick: this.onClick
-                        }, Object(s.hc)(this.props)), a.createElement(s.G, {
-                            key: this.props.title
-                        }, a.createElement(s.Xa, {
-                            position: s.hb.Relative
-                        }, this.renderOverlay(), a.createElement(s.I, {
-                            aspect: s.p.Aspect3x4,
-                            alt: this.props.imageAlt,
-                            src: this.props.imageSrc
-                        })), a.createElement(s.H, null, a.createElement(s.Xa, {
-                            margin: {
-                                top: .5,
-                                bottom: 1
-                            }
-                        }, a.createElement(s.W, {
-                            color: s.O.Base,
-                            fontSize: s.Ca.Size5
-                        }, this.props.title), a.createElement(s.W, {
-                            color: s.O.Alt,
-                            fontSize: s.Ca.Size6
-                        }, this.props.info))))))
-                    }, t.prototype.renderOverlay = function() {
-                        var e, t = this.isFollowing();
-                        return this.state.inProgress ? e = a.createElement(s.Za, {
-                            delay: 0
-                        }) : this.state.hovered ? e = a.createElement(s.qb, {
-                            width: 50,
-                            height: 50,
-                            asset: t ? s.rb.Unheart : s.rb.Heart
-                        }) : t && (e = a.createElement(s.qb, {
-                            width: 50,
-                            height: 50,
-                            asset: s.rb.Heart
-                        })), e ? a.createElement(s.Cb, {
-                            className: "follow-game-card__overlay " + (t ? "follow-game-card__overlay--followed" : ""),
-                            background: s.r.Overlay,
-                            color: s.O.Overlay,
-                            "data-a-target": t ? "follow-game-card--followed" : "",
-                            display: s.X.Flex,
-                            alignItems: s.f.Center,
-                            justifyContent: s.Wa.Center,
-                            position: s.hb.Absolute,
-                            zIndex: s.gc.Above,
-                            attachBottom: !0,
-                            attachTop: !0,
-                            attachLeft: !0,
-                            attachRight: !0
-                        }, e) : null
-                    }, t.prototype.followGame = function(e) {
-                        return i.__awaiter(this, void 0, void 0, function() {
-                            var t, n, a, r = this;
-                            return i.__generator(this, function(i) {
-                                switch (i.label) {
+            var p = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        hovered: !1,
+                        inProgress: !1
+                    }, t.onClick = function() {
+                        t.state.inProgress || t.setState({
+                            inProgress: !0
+                        }, t.mutateFollowGame)
+                    }, t.mutateFollowGame = function() {
+                        return i.__awaiter(t, void 0, void 0, function() {
+                            return i.__generator(this, function(e) {
+                                switch (e.label) {
                                     case 0:
-                                        t = {
-                                            gameID: e
-                                        }, n = {
+                                        return this.followGameDataLoadedWithoutError() && this.props.data.game ? this.isFollowing() ? [3, 2] : [4, this.followGame(this.props.data.game.id)] : [2];
+                                    case 1:
+                                        return e.sent(), [3, 4];
+                                    case 2:
+                                        return [4, this.unfollowGame(this.props.data.game.id)];
+                                    case 3:
+                                        e.sent(), e.label = 4;
+                                    case 4:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, t.onMouseEnter = function() {
+                        t.setState({
+                            hovered: !0
+                        })
+                    }, t.onMouseLeave = function() {
+                        t.setState({
+                            hovered: !1
+                        })
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return a.createElement(d.Pa, {
+                        position: d.hb.Relative,
+                        margin: {
+                            bottom: 1
+                        }
+                    }, a.createElement("div", i.__assign({
+                        className: "follow-game-card",
+                        "data-test-selector": "follow-game-card",
+                        onMouseEnter: this.onMouseEnter,
+                        onMouseLeave: this.onMouseLeave,
+                        onClick: this.onClick
+                    }, Object(d.gc)(this.props)), a.createElement(d.G, {
+                        key: this.props.title
+                    }, a.createElement(d.Xa, {
+                        position: d.hb.Relative
+                    }, this.renderOverlay(), a.createElement(d.I, {
+                        aspect: d.p.Aspect3x4,
+                        alt: this.props.imageAlt,
+                        src: this.props.imageSrc
+                    })), a.createElement(d.H, null, a.createElement(d.Xa, {
+                        margin: {
+                            top: .5,
+                            bottom: 1
+                        }
+                    }, a.createElement(d.W, {
+                        color: d.O.Base,
+                        fontSize: d.Ca.Size5
+                    }, this.props.title), a.createElement(d.W, {
+                        color: d.O.Alt,
+                        fontSize: d.Ca.Size6
+                    }, this.props.info))))))
+                }, t.prototype.renderOverlay = function() {
+                    var e, t = this.isFollowing();
+                    return this.state.inProgress ? e = a.createElement(d.Za, {
+                        delay: 0
+                    }) : this.state.hovered ? e = a.createElement(d.qb, {
+                        width: 50,
+                        height: 50,
+                        asset: t ? d.rb.Unheart : d.rb.Heart
+                    }) : t && (e = a.createElement(d.qb, {
+                        width: 50,
+                        height: 50,
+                        asset: d.rb.Heart
+                    })), e ? a.createElement(d.Cb, {
+                        className: "follow-game-card__overlay " + (t ? "follow-game-card__overlay--followed" : ""),
+                        background: d.r.Overlay,
+                        color: d.O.Overlay,
+                        "data-a-target": t ? "follow-game-card--followed" : "",
+                        display: d.X.Flex,
+                        alignItems: d.f.Center,
+                        justifyContent: d.Wa.Center,
+                        position: d.hb.Absolute,
+                        zIndex: d.fc.Above,
+                        attachBottom: !0,
+                        attachTop: !0,
+                        attachLeft: !0,
+                        attachRight: !0
+                    }, e) : null
+                }, t.prototype.followGame = function(e) {
+                    return i.__awaiter(this, void 0, void 0, function() {
+                        var t, n = this;
+                        return i.__generator(this, function(a) {
+                            switch (a.label) {
+                                case 0:
+                                    t = i.__assign({}, Object(o.a)({
+                                        gameID: e
+                                    }), {
+                                        update: function(e, t) {
+                                            var i = t.data.followGame;
+                                            s(e, u, {
+                                                name: n.props.title
+                                            }, function(e) {
+                                                return e.game && i && i.game ? (e.game.self.follow = i.game.self.follow, e) : e
+                                            })
+                                        },
+                                        optimisticResponse: {
                                             followGame: {
                                                 __typename: "FollowGamePayload",
                                                 game: {
@@ -6966,37 +6994,43 @@
                                                     }
                                                 }
                                             }
-                                        }, i.label = 1;
-                                    case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, this.props.followGame(Object(l.b)(t, n))];
-                                    case 2:
-                                        return a = i.sent(), Object(l.e)(c, {
-                                            name: this.props.title
-                                        }, function(e) {
-                                            return e.game && e.game.self && a.data.followGame && a.data.followGame.game && a.data.followGame.game.self && (e.game.self.follow = a.data.followGame.game.self.follow), e
-                                        }), this.setState({
-                                            inProgress: !1
-                                        }, function() {
-                                            r.props.onFollow && r.props.onFollow(r.props.title)
-                                        }), [3, 4];
-                                    case 3:
-                                        return i.sent(), this.setState({
-                                            inProgress: !1
-                                        }), [3, 4];
-                                    case 4:
-                                        return [2]
-                                }
-                            })
+                                        }
+                                    }), a.label = 1;
+                                case 1:
+                                    return a.trys.push([1, 3, , 4]), [4, this.props.followGame(t)];
+                                case 2:
+                                    return a.sent(), this.setState({
+                                        inProgress: !1
+                                    }, function() {
+                                        n.props.onFollow && n.props.onFollow(n.props.title)
+                                    }), [3, 4];
+                                case 3:
+                                    return a.sent(), this.setState({
+                                        inProgress: !1
+                                    }), [3, 4];
+                                case 4:
+                                    return [2]
+                            }
                         })
-                    }, t.prototype.unfollowGame = function(e) {
-                        return i.__awaiter(this, void 0, void 0, function() {
-                            var t, n, a, r = this;
-                            return i.__generator(this, function(i) {
-                                switch (i.label) {
-                                    case 0:
-                                        t = {
-                                            gameID: e
-                                        }, n = {
+                    })
+                }, t.prototype.unfollowGame = function(e) {
+                    return i.__awaiter(this, void 0, void 0, function() {
+                        var t, n = this;
+                        return i.__generator(this, function(a) {
+                            switch (a.label) {
+                                case 0:
+                                    t = i.__assign({}, Object(o.a)({
+                                        gameID: e
+                                    }), {
+                                        update: function(e, t) {
+                                            var i = t.data.unfollowGame;
+                                            s(e, u, {
+                                                name: n.props.title
+                                            }, function(e) {
+                                                return e.game && i && i.game ? (e.game.self.follow = i.game.self.follow, e) : e
+                                            })
+                                        },
+                                        optimisticResponse: {
                                             unfollowGame: {
                                                 __typename: "UnfollowGamePayload",
                                                 game: {
@@ -7007,35 +7041,30 @@
                                                     }
                                                 }
                                             }
-                                        }, i.label = 1;
-                                    case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, this.props.unfollowGame(Object(l.b)(t, n))];
-                                    case 2:
-                                        return a = i.sent(), Object(l.e)(c, {
-                                            name: this.props.title
-                                        }, function(e) {
-                                            return e.game && e.game.self && a.data.unfollowGame && a.data.unfollowGame.game && a.data.unfollowGame.game.self && (e.game.self.follow = a.data.unfollowGame.game.self.follow), e
-                                        }), this.setState({
-                                            inProgress: !1
-                                        }, function() {
-                                            r.props.onUnfollow && r.props.onUnfollow(r.props.title)
-                                        }), [3, 4];
-                                    case 3:
-                                        return i.sent(), this.setState({
-                                            inProgress: !1
-                                        }), [3, 4];
-                                    case 4:
-                                        return [2]
-                                }
-                            })
+                                        }
+                                    }), a.label = 1;
+                                case 1:
+                                    return a.trys.push([1, 3, , 4]), [4, this.props.unfollowGame(t)];
+                                case 2:
+                                    return a.sent(), this.setState({
+                                        inProgress: !1
+                                    }, function() {
+                                        n.props.onUnfollow && n.props.onUnfollow(n.props.title)
+                                    }), [3, 4];
+                                case 3:
+                                    return a.sent(), this.setState({
+                                        inProgress: !1
+                                    }), [3, 4];
+                                case 4:
+                                    return [2]
+                            }
                         })
-                    }, t.prototype.isFollowing = function() {
-                        return !!(this.followGameDataLoadedWithoutError() && this.props.data.game && this.props.data.game.self && this.props.data.game.self.follow)
-                    }, t.prototype.followGameDataLoadedWithoutError = function() {
-                        return !(!this.props || !this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.game)
-                    }, t
-                }(a.Component),
-                p = Object(r.compose)(Object(o.a)(c, {
+                    })
+                }, t.prototype.isFollowing = function() {
+                    return !!(this.followGameDataLoadedWithoutError() && this.props.data.game && this.props.data.game.self && this.props.data.game.self.follow)
+                }, t.prototype.followGameDataLoadedWithoutError = function() {
+                    return !(!this.props || !this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.game)
+                }, t = i.__decorate([Object(r.a)(u, {
                     options: function(e) {
                         return {
                             variables: {
@@ -7043,11 +7072,12 @@
                             }
                         }
                     }
-                }), Object(o.a)(d, {
+                }), Object(r.a)(c, {
                     name: "followGame"
-                }), Object(o.a)(u, {
+                }), Object(r.a)(m, {
                     name: "unfollowGame"
-                }))(m)
+                })], t)
+            }(a.Component)
         }
     }
 ]);

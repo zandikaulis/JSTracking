@@ -100,19 +100,19 @@
                     }, o.createElement(l.pb, {
                         centered: !0
                     }, o.createElement(l.Xa, {
-                        textAlign: l.Pb.Center,
+                        textAlign: l.Ob.Center,
                         margin: {
                             bottom: 2
                         }
                     }, o.createElement(l.W, {
-                        type: l.Tb.H2
+                        type: l.Sb.H2
                     }, Object(s.d)("Your request is in progress!", "DevCompanyRequestPending"))), o.createElement(l.Xa, {
-                        textAlign: l.Pb.Center,
+                        textAlign: l.Ob.Center,
                         margin: {
                             bottom: 2
                         }
                     }, o.createElement(l.W, null, Object(s.d)("Please expect your access in 2-3 business days while we confirm your authorization to manage the game titles of the company you specified. We will send you a confirmation email using the address you provided. Be sure to check your spam filter if you haven't received a response in that timeframe.", "DevCompanyRequestPending"))), o.createElement(l.Xa, {
-                        textAlign: l.Pb.Center
+                        textAlign: l.Ob.Center
                     }, o.createElement(l.U, {
                         to: "/console"
                     }, Object(s.d)("Click here to return to your dashboard!", "DevCompanyRequestPending"))))) : o.createElement(r.a, {

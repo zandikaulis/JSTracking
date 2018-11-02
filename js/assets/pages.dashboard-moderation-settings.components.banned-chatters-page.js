@@ -241,7 +241,7 @@
                             "x:bold": function(e) {
                                 return i.createElement(m.W, {
                                     bold: !0,
-                                    type: m.Tb.Span
+                                    type: m.Sb.Span
                                 }, e)
                             }
                         }, "BannedChatters")), i.createElement(m.Fb, null, i.createElement(m.Ib, null, i.createElement(m.Jb, {
@@ -251,7 +251,7 @@
                         }), i.createElement(m.Jb, {
                             label: Object(d.d)("Time Banned", "BannedChatters")
                         }), i.createElement(m.Jb, {
-                            textAlign: m.Pb.Center,
+                            textAlign: m.Ob.Center,
                             label: Object(d.d)("Actions", "BannedChatters")
                         })), i.createElement(m.Gb, null, t.map(function(n) {
                             return i.createElement(m.Kb, {
@@ -270,8 +270,8 @@
                             }, n.modUser && n.modUser.displayName || Object(d.d)("an unknown user", "BannedChatters"))), i.createElement(m.Hb, null, i.createElement(m.W, {
                                 "data-test-selector": a.BannedDate
                             }, Object(d.c)(new Date(n.bannedAt)))), i.createElement(m.Hb, {
-                                textAlign: m.Pb.Center
-                            }, i.createElement(m.Wb, {
+                                textAlign: m.Ob.Center
+                            }, i.createElement(m.Vb, {
                                 label: Object(d.d)("Unban", "BannedChatters")
                             }, i.createElement(m.A, {
                                 "data-chatter-login": n.bannedUser ? n.bannedUser.login : "",

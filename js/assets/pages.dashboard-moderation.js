@@ -366,7 +366,7 @@
                         return o.createElement(d.Xa, {
                             className: this.props.classNames,
                             position: d.hb.Relative
-                        }, o.createElement(d.Qb, {
+                        }, o.createElement(d.Pb, {
                             error: this.state.showCoolDownState,
                             maxLength: 512,
                             noResize: !0,
@@ -1231,8 +1231,8 @@
                             asset: s.rb.Conversations,
                             type: s.sb.Inherit
                         })), o.createElement(s.W, {
-                            align: s.dc.Middle,
-                            type: s.Tb.Span
+                            align: s.cc.Middle,
+                            type: s.Sb.Span
                         }, e))) : this.props.context === a.a ? o.createElement(s.A, {
                             ariaLabel: e,
                             type: s.C.Hollow,
@@ -1250,7 +1250,7 @@
                             onClick: this.onReplyClickHandler,
                             "data-test-selector": "reply-reply-button"
                         }, o.createElement(s.W, {
-                            type: s.Tb.Span
+                            type: s.Sb.Span
                         }, e)))
                     }, t
                 }(o.Component))
@@ -4020,7 +4020,7 @@
                             context: e
                         }), u.createElement(O.W, {
                             color: O.O.Base,
-                            type: O.Tb.H5
+                            type: O.Sb.H5
                         }, e.video.title))), u.createElement(O.P, {
                             cols: {
                                 default: 12,
@@ -4259,9 +4259,9 @@
                             }(this.props)) return u.createElement(O.Cb, {
                             className: d.f + "__permissions",
                             color: O.O.Alt2,
-                            textAlign: O.Pb.Center
+                            textAlign: O.Ob.Center
                         }, u.createElement(O.W, {
-                            type: O.Tb.H3,
+                            type: O.Sb.H3,
                             italic: !0,
                             "data-test-selector": "unauthorized-test-selector"
                         }, this.props.errorMessage || Object(p.d)("You do not have permission to access this dashboard.", "ModerationPageComponent")));
@@ -4280,10 +4280,10 @@
                             "" !== this.props.videoFilter && (a = Object(p.d)("You currently have no messages on this video. Add a message to this video to encourage conversation in your community.", "ModerationDashboard")), i = u.createElement(O.Cb, {
                                 className: d.f + "__empty",
                                 color: O.O.Alt2,
-                                textAlign: O.Pb.Center,
+                                textAlign: O.Ob.Center,
                                 key: "modDashboardNoComments"
                             }, u.createElement(O.W, {
-                                type: O.Tb.H3,
+                                type: O.Sb.H3,
                                 italic: !0,
                                 "data-test-selector": "no-comments-test-selector"
                             }, a))
@@ -5128,10 +5128,10 @@
                     }, t.prototype.render = function() {
                         var e = null;
                         return this.props.message === Object(u.a)().chatReplayFilterError && (e = i.createElement(m.W, {
-                            type: m.Tb.Span
+                            type: m.Sb.Span
                         }, " ", i.createElement(m.W, {
-                            type: m.Tb.Span,
-                            decoration: m.Rb.Underline
+                            type: m.Sb.Span,
+                            decoration: m.Qb.Underline
                         }, i.createElement("a", {
                             onClick: this.props.onMessageClick
                         }, Object(s.d)("Click here to show all messages.", "CommentError"))))), i.createElement(m.Cb, {
@@ -5148,9 +5148,9 @@
                                 x: 2
                             },
                             position: m.hb.Absolute,
-                            zIndex: m.gc.Above
+                            zIndex: m.fc.Above
                         }, i.createElement(m.W, {
-                            type: m.Tb.Span
+                            type: m.Sb.Span
                         }, this.props.message, e), i.createElement(m.Xa, {
                             alignSelf: m.g.Start
                         }, i.createElement(m.A, {
@@ -5196,7 +5196,7 @@
                             }
                         }, i.createElement(m.Xa, null, Object(h.d)("Show me only messages posted during the live broadcast", "VideoChatSettings")), i.createElement(m.Xa, {
                             flexShrink: 0
-                        }, i.createElement(m.Vb, {
+                        }, i.createElement(m.Ub, {
                             checked: this.props.isReplayFilterOn,
                             "data-test-selector": "reply-mode",
                             onChange: this.onReplayModeChange
@@ -5233,7 +5233,7 @@
                             }
                         }, i.createElement(m.Xa, null, Object(h.d)("Hide timestamps", "VideoChatSettings")), i.createElement(m.Xa, {
                             flexShrink: 0
-                        }, i.createElement(m.Vb, {
+                        }, i.createElement(m.Ub, {
                             "data-test-selector": "timestamp-mode",
                             checked: this.props.hideTimestamps,
                             onChange: this.onTimestampModeChange
@@ -5397,9 +5397,9 @@
                         margin: {
                             right: .5
                         }
-                    }, i.createElement(m.Wb, {
-                        align: m.Xb.Left,
-                        direction: m.Yb.Top,
+                    }, i.createElement(m.Vb, {
+                        align: m.Wb.Left,
+                        direction: m.Xb.Top,
                         label: Object(h.d)("Jump to video", "TimeStamp")
                     }, i.createElement(m.Ua, {
                         onClick: n,
@@ -5461,7 +5461,7 @@
                                     bottom: .5
                                 }
                             }, i.createElement(m.W, {
-                                type: m.Tb.Span
+                                type: m.Sb.Span
                             }, Object(h.d)("Are you sure you want to perform this action?", "chomments.moderation.confirmAction"))), i.createElement(m.Xa, {
                                 display: m.X.Flex,
                                 justifyContent: m.Wa.Center,
@@ -5496,7 +5496,7 @@
                                 fullWidth: !0,
                                 borderBottom: !0
                             }, i.createElement(m.W, {
-                                type: m.Tb.Span
+                                type: m.Sb.Span
                             }, Object(h.d)("Posted ", "MessageOptionsMenu"), Object(h.i)(t.props.context.comment.createdAt)))), i.createElement(m.Cb, {
                                 key: t.props.context.comment.id + "2",
                                 display: m.X.Flex,
@@ -5770,7 +5770,7 @@
                             }, i.createElement(m.W, {
                                 color: m.O.Alt2,
                                 fontSize: m.Ca.Size7,
-                                type: m.Tb.Span
+                                type: m.Sb.Span
                             }, " • " + Object(h.i)(e.comment.createdAt))))
                         }, t.makeReply = function(e) {
                             var n = null;
@@ -5837,7 +5837,7 @@
                         }, i.createElement(m.W, {
                             color: m.O.Alt2,
                             fontSize: m.Ca.Size7,
-                            type: m.Tb.Span
+                            type: m.Sb.Span
                         }, " • " + Object(h.i)(this.props.parentMessage.comment.createdAt))))), i.createElement(m.Xa, null, n, i.createElement(m.Xa, {
                             margin: {
                                 y: .5,
@@ -5913,7 +5913,7 @@
                             "data-test-selector": "message-timestamp",
                             display: m.X.Flex,
                             flexShrink: 0,
-                            textAlign: m.Pb.Right
+                            textAlign: m.Ob.Right
                         }, i.createElement(x, {
                             offset: this.props.timeStampOffset,
                             onClick: this.onTimestampClickHandler
@@ -6230,7 +6230,7 @@
                             flexShrink: 0,
                             justifyContent: m.Wa.Center
                         }, i.createElement(m.W, {
-                            type: m.Tb.Span
+                            type: m.Sb.Span
                         }, Object(s.d)("Chat on Videos", "VideoChatPresentation"))), g, i.createElement(ce, {
                             startSynced: h,
                             isScrollingSynced: this.props.isScrollingSynced,
@@ -6643,8 +6643,8 @@
                         onClick: this.onBadgeClickHandler,
                         target: "_blank",
                         "data-a-target": "chat-badge"
-                    }, c)), this.state.isHovering ? o.createElement(a.Wb, {
-                        align: a.Xb.Left,
+                    }, c)), this.state.isHovering ? o.createElement(a.Vb, {
+                        align: a.Wb.Left,
                         "data-a-target": "chat-badge",
                         display: a.X.Inline,
                         key: n,
@@ -6964,7 +6964,7 @@
                         fullWidth: !0,
                         overflow: s.cb.Hidden
                     }, o.createElement(s.W, {
-                        type: s.Tb.H3,
+                        type: s.Sb.H3,
                         fontSize: s.Ca.Size6,
                         title: e.video.title,
                         ellipsis: !0

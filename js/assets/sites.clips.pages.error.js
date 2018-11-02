@@ -656,7 +656,7 @@
                         },
                         elevation: 3,
                         color: p.O.Base,
-                        textAlign: p.Pb.Center
+                        textAlign: p.Ob.Center
                     }, i.createElement(p.o, {
                         ratio: p.p.Aspect16x9
                     }, i.createElement(p.Xa, {

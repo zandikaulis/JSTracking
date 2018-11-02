@@ -64,7 +64,7 @@
                         width: 50,
                         height: 50
                     })), r.createElement(v.W, {
-                        type: v.Tb.H3
+                        type: v.Sb.H3
                     }, Object(d.d)("Earn revenue as an extension developer!", "DevExtensionsEnableMonetization"))), r.createElement(v.Cb, {
                         margin: {
                             bottom: 2
@@ -121,7 +121,7 @@
                         }
                     }, "DevExtensionsEnableMonetization"))), r.createElement(v.Xa, {
                         display: v.X.Block,
-                        textAlign: v.Pb.Center,
+                        textAlign: v.Ob.Center,
                         padding: {
                             left: 2,
                             right: 2,

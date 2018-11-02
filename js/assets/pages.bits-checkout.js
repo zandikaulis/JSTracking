@@ -1206,8 +1206,8 @@
                 I = r("5e4V"),
                 w = r("FKsR"),
                 N = r.n(w),
-                T = r("zLG5"),
-                R = r.n(T),
+                R = r("zLG5"),
+                T = r.n(R),
                 L = r("cVJH"),
                 M = r.n(L),
                 U = r("winl"),
@@ -1222,7 +1222,7 @@
                 X = (r("4mbJ"), {
                     100: N.a,
                     500: W.a,
-                    1000: R.a,
+                    1000: T.a,
                     1500: x.a,
                     5000: z.a,
                     10000: M.a,
@@ -1258,7 +1258,7 @@
                             padding: 1
                         }, d.createElement(V.W, {
                             color: V.O.Alt2,
-                            type: V.Tb.Span
+                            type: V.Sb.Span
                         }, r)), d.createElement(V.Cb, {
                             display: V.X.Flex,
                             alignItems: V.f.Stretch,
@@ -1268,10 +1268,10 @@
                             padding: 1
                         }, d.createElement(V.W, {
                             color: V.O.Alt2,
-                            type: V.Tb.Span
+                            type: V.Sb.Span
                         }, Object(b.d)("Total with VAT", "BitsCheckoutInfoCard")), d.createElement(V.W, {
                             color: V.O.Alt2,
-                            type: V.Tb.Span
+                            type: V.Sb.Span
                         }, Object(b.f)(K(e.total, e.localizedCurrency), {
                             style: "currency",
                             currency: e.localizedCurrency
@@ -1284,10 +1284,10 @@
                             padding: 1
                         }, d.createElement(V.W, {
                             color: V.O.Alt2,
-                            type: V.Tb.Span
+                            type: V.Sb.Span
                         }, r), d.createElement(V.W, {
                             color: V.O.Alt2,
-                            type: V.Tb.Span
+                            type: V.Sb.Span
                         }, Object(b.f)(K(e.price, e.localizedCurrency), {
                             style: "currency",
                             currency: e.localizedCurrency
@@ -1301,10 +1301,10 @@
                             padding: 1
                         }, d.createElement(V.W, {
                             color: V.O.Alt2,
-                            type: V.Tb.Span
+                            type: V.Sb.Span
                         }, Object(b.d)("Estimated Tax", "BitsCheckoutInfoCard")), d.createElement(V.W, {
                             color: V.O.Alt2,
-                            type: V.Tb.Span
+                            type: V.Sb.Span
                         }, Object(b.f)(K(e.tax, e.localizedCurrency), {
                             style: "currency",
                             currency: e.localizedCurrency
@@ -1317,10 +1317,10 @@
                             padding: 1
                         }, d.createElement(V.W, {
                             color: V.O.Alt2,
-                            type: V.Tb.Span
+                            type: V.Sb.Span
                         }, Object(b.d)("Total", "BitsCheckoutInfoCard")), d.createElement(V.W, {
                             color: V.O.Alt2,
-                            type: V.Tb.Span
+                            type: V.Sb.Span
                         }, Object(b.f)(K(e.total, e.localizedCurrency), {
                             style: "currency",
                             currency: e.localizedCurrency
@@ -1536,7 +1536,7 @@
                                 x: 3
                             }
                         }, d.createElement(V.W, {
-                            type: V.Tb.H4
+                            type: V.Sb.H4
                         }, Object(b.d)("Select Payment Service", "BitsCheckoutSelectPage"))), d.createElement(V.Cb, {
                             borderTop: !0,
                             padding: 3
@@ -1637,7 +1637,7 @@
                             bottom: 1
                         }
                     }, d.createElement(V.W, {
-                        type: V.Tb.H3
+                        type: V.Sb.H3
                     }, Object(b.d)("Purchase Bits", "BitsCheckoutSelectPage"))), d.createElement(V.pb, {
                         centered: !0
                     }, d.createElement(V.Ja, {
@@ -1679,7 +1679,7 @@
                 ne = r("geRD"),
                 ae = function(e) {
                     return d.createElement(V.Xa, {
-                        textAlign: V.Pb.Center,
+                        textAlign: V.Ob.Center,
                         padding: {
                             y: 5,
                             x: 1
@@ -1689,7 +1689,7 @@
                             y: 2
                         }
                     }, d.createElement(V.W, {
-                        type: V.Tb.H4,
+                        type: V.Sb.H4,
                         bold: !0
                     }, Object(b.d)("Oh nooooooes", "BitsPurchaseError"))), d.createElement(V.Pa, {
                         margin: {
@@ -1741,7 +1741,7 @@
                             bottom: 2
                         }
                     }, d.createElement(V.W, {
-                        type: V.Tb.H4
+                        type: V.Sb.H4
                     }, Object(b.d)("Purchase Successful!", "BitsPurchaseSuccess"))), d.createElement(V.Pa, {
                         margin: {
                             y: 1
@@ -1813,7 +1813,7 @@
                             bottom: 2
                         }
                     }, d.createElement(V.W, {
-                        type: V.Tb.H5
+                        type: V.Sb.H5
                     }, Object(b.d)("Hi, {name}", {
                         name: e.firstName
                     }, "Greeting")), d.createElement(V.U, {
@@ -1837,8 +1837,8 @@
                         }
                     }, d.createElement(V.W, {
                         color: V.O.Alt2,
-                        transform: V.Sb.Uppercase,
-                        type: V.Tb.H5
+                        transform: V.Rb.Uppercase,
+                        type: V.Sb.H5
                     }, Object(b.d)("Payment Method", "PayNow"))), d.createElement(V.Xa, {
                         padding: {
                             y: 2
@@ -1896,10 +1896,10 @@
                         padding: {
                             y: 2
                         },
-                        textAlign: V.Pb.Center,
+                        textAlign: V.Ob.Center,
                         className: e.type === se.Success ? "purchase-feedback-banner__success" : "purchase-feedback-banner__error"
                     }, d.createElement(V.W, {
-                        type: V.Tb.H4
+                        type: V.Sb.H4
                     }, e.type === se.Success ? Object(b.d)("Purchase Successful!", "PurchaseFeedbackBanner") : Object(b.d)("Purchase Failed", "PurchaseFeedbackBanner")))
                 },
                 Ee = r("Jgup"),
@@ -2040,13 +2040,13 @@
                 _e = function() {
                     return d.createElement(V.Xa, {
                         padding: 3,
-                        textAlign: V.Pb.Center
+                        textAlign: V.Ob.Center
                     }, d.createElement(V.Pa, {
                         margin: {
                             y: 2
                         }
                     }, d.createElement(V.W, {
-                        type: V.Tb.H4
+                        type: V.Sb.H4
                     }, Object(b.d)("Sorry, PayPal is not supported in your region, but we're working on rolling it out to more countries soon. Stay tuned!", "UnsupportedCountryError"))), d.createElement(V.Xa, {
                         margin: {
                             y: 3
@@ -2091,7 +2091,7 @@
                                     bottom: 1
                                 }
                             }, d.createElement(V.W, {
-                                type: V.Tb.H3
+                                type: V.Sb.H3
                             }, Object(b.d)("Purchase Bits", "BitsCheckoutSummaryPage")))
                         }, t.renderBitsDescription = function() {
                             return t.state.openingPayPalLogin || null === t.props.bitsAmount || null === t.state.localizedCurrency || null === t.state.price || null === t.state.tax || null === t.state.total || null === t.state.taxInclusive ? d.createElement(Y, null) : d.createElement(J, {
@@ -2380,11 +2380,11 @@
                         width: 94,
                         height: 32
                     }), d.createElement(V.W, {
-                        type: V.Tb.H5
+                        type: V.Sb.H5
                     }, e.userDisplayName)))
                 }),
-                Te = r("Ko9/"),
-                Re = (r("Kl+D"), function(e) {
+                Re = r("Ko9/"),
+                Te = (r("Kl+D"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.productID = u.parse(t.props.location.search).asin, t.renderMainContent = function() {
@@ -2462,7 +2462,7 @@
                 }(d.Component)),
                 Le = Object(l.compose)(Object(g.b)("BitsCheckoutRoot", {
                     autoReportInteractive: !0
-                }), Object(h.a)(Te))(Re);
+                }), Object(h.a)(Re))(Te);
             var Me = Object(n.connect)(function(e) {
                 return {
                     isLoggedIn: Object(i.f)(e)

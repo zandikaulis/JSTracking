@@ -1,21 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
     [132], {
-        "+U0Y": function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return r
-            }), n.d(t, "b", function() {
-                return i
-            });
-            var r = "core.user-preferences.LANGUAGE_PREFERENCES_UPDATED";
-
-            function i(e) {
-                return {
-                    type: r,
-                    languagePreferences: e
-                }
-            }
-        },
         "/HY+": function(e, t, n) {
             "use strict";
             var r = n("dAHa"),
@@ -539,50 +523,6 @@
                 }
             };
             e.exports = n
-        },
-        "5xw2": function(e, t, n) {
-            "use strict";
-            n.d(t, "c", function() {
-                return l
-            }), n.d(t, "a", function() {
-                return c
-            }), n.d(t, "b", function() {
-                return d
-            });
-            var r = n("mrSG"),
-                i = n("/7QA"),
-                a = n("HSqT"),
-                o = n("+U0Y"),
-                s = "languageDirectoryFilters";
-
-            function l(e, t) {
-                var n = this;
-                return function(a) {
-                    return r.__awaiter(n, void 0, void 0, function() {
-                        var n, l;
-                        return r.__generator(this, function(r) {
-                            return n = new Set(d()), t ? n.add(e) : n.delete(e), l = Array.from(n), i.m.set(s, l), a(Object(o.b)(l)), [2]
-                        })
-                    })
-                }
-            }
-
-            function c() {
-                var e = this;
-                return function(t) {
-                    return r.__awaiter(e, void 0, void 0, function() {
-                        return r.__generator(this, function(e) {
-                            return i.m.set(s, []), t(Object(o.b)([])), [2]
-                        })
-                    })
-                }
-            }
-
-            function d() {
-                return i.m.get(s, []).filter(function(e) {
-                    return a.a.has(e)
-                })
-            }
         },
         "8jSG": function(e, t) {
             var n = {
@@ -1495,9 +1435,9 @@
                         var e = this;
                         return 0 === this.props.clips.length ? a.createElement("div", null, this.renderEmpty()) : a.createElement(y.Xa, {
                             fullWidth: !0
-                        }, a.createElement(y.Zb, {
-                            gutterSize: y.bc.Small,
-                            childWidth: y.ac.Large,
+                        }, a.createElement(y.Yb, {
+                            gutterSize: y.ac.Small,
+                            childWidth: y.Zb.Large,
                             placeholderItems: 20
                         }, this.props.clips.map(function(t, n) {
                             return a.createElement(y.Xa, {
@@ -1584,7 +1524,7 @@
                         }), a.createElement(y.P, {
                             cols: 6
                         }, a.createElement(y.Xa, {
-                            textAlign: y.Pb.Center
+                            textAlign: y.Ob.Center
                         }, e)), a.createElement(y.P, {
                             cols: 3
                         })))
@@ -1628,9 +1568,9 @@
                             for (var n = [], r = 0; r < 20; r++) n.push(a.createElement(w.a, {
                                 key: r
                             }));
-                            e = a.createElement(y.Zb, {
-                                gutterSize: y.bc.Small,
-                                childWidth: y.ac.Large,
+                            e = a.createElement(y.Yb, {
+                                gutterSize: y.ac.Small,
+                                childWidth: y.Zb.Large,
                                 placeholderItems: 20
                             }, n)
                         } else e = a.createElement(_, {
@@ -1672,122 +1612,6 @@
             }), n.d(t, "a", function() {
                 return N
             })
-        },
-        HSqT: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return o
-            }), n.d(t, "b", function() {
-                return s
-            });
-            var r = n("/7QA"),
-                i = [{
-                    code: "ar",
-                    label: "العربية"
-                }, {
-                    code: "bg",
-                    label: "Български"
-                }, {
-                    code: "cs",
-                    label: "Čeština"
-                }, {
-                    code: "da",
-                    label: "Dansk"
-                }, {
-                    code: "de",
-                    label: "Deutsch"
-                }, {
-                    code: "el",
-                    label: "Ελληνικά"
-                }, {
-                    code: "en",
-                    label: "English"
-                }, {
-                    code: "es",
-                    label: "Español"
-                }, {
-                    code: "fi",
-                    label: "Suomi"
-                }, {
-                    code: "fr",
-                    label: "Français"
-                }, {
-                    code: "hu",
-                    label: "Magyar"
-                }, {
-                    code: "it",
-                    label: "Italiano"
-                }, {
-                    code: "ja",
-                    label: "日本語"
-                }, {
-                    code: "ko",
-                    label: "한국어"
-                }, {
-                    code: "nl",
-                    label: "Nederlands"
-                }, {
-                    code: "no",
-                    label: "Norsk"
-                }, {
-                    code: "pl",
-                    label: "Polski"
-                }, {
-                    code: "pt",
-                    label: "Português"
-                }, {
-                    code: "ro",
-                    label: "Română"
-                }, {
-                    code: "ru",
-                    label: "Русский"
-                }, {
-                    code: "sk",
-                    label: "Slovenčina"
-                }, {
-                    code: "sv",
-                    label: "Svenska"
-                }, {
-                    code: "th",
-                    label: "ภาษาไทย"
-                }, {
-                    code: "tr",
-                    label: "Türkçe"
-                }, {
-                    code: "vi",
-                    label: "Tiếng Việt"
-                }, {
-                    code: "zh-hk",
-                    label: "中文(粵語)"
-                }, {
-                    code: "zh",
-                    label: "中文"
-                }];
-
-            function a(e) {
-                return void 0 === e && (e = !1), [{
-                    code: "asl",
-                    label: "American Sign Language"
-                }, {
-                    code: "other",
-                    label: e ? Object(r.d)("Other", "broadcaster-languages") : "Other"
-                }]
-            }
-            var o = new Set(i.concat(a()).map(function(e) {
-                return e.code
-            }));
-
-            function s() {
-                var e = r.p.intl.getLanguageCode(),
-                    t = function(t) {
-                        return "en" === t.code ? 0 : e && e.startsWith(t.code) ? 1 : 2
-                    };
-                return i.slice().sort(function(e, n) {
-                    var r = t(e),
-                        i = t(n);
-                    return r !== i ? r - i : r + ":" + e.label < i + ":" + n.label ? -1 : 1
-                }).concat(a(!0))
-            }
         },
         "Jxh/": function(e, t, n) {
             "use strict";
@@ -2430,7 +2254,7 @@
                         }, this.props.clip.title), c.createElement(R.Xa, {
                             flexShrink: 0
                         }, c.createElement(R.W, {
-                            type: R.Tb.Span,
+                            type: R.Sb.Span,
                             color: R.O.Alt2
                         }, " • ", Object(d.d)("{created, date, medium}", {
                             created: new Date(this.props.clip.createdAt)
@@ -2628,32 +2452,6 @@
                 return V
             }), n.d(t, !1, function() {})
         },
-        OhOW: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return s
-            });
-            var r = n("mrSG"),
-                i = n("/7QA"),
-                a = n("+U0Y"),
-                o = n("5xw2");
-
-            function s(e) {
-                return e.userPreferences.languagePreferences
-            }
-            i.p.store.registerReducer("userPreferences", function(e, t) {
-                switch (void 0 === e && (e = {
-                    languagePreferences: Object(o.b)()
-                }), t.type) {
-                    case a.a:
-                        return r.__assign({}, e, {
-                            languagePreferences: t.languagePreferences
-                        });
-                    default:
-                        return e
-                }
-            })
-        },
         Oy4H: function(e, t, n) {},
         RQ6e: function(e, t, n) {
             "use strict";
@@ -2772,7 +2570,7 @@
                         },
                         "data-a-target": "reporting-channel-name"
                     }, a.createElement(d.W, {
-                        type: d.Tb.H4
+                        type: d.Sb.H4
                     }, this.props.title), a.createElement(d.Cb, {
                         color: d.O.Alt2,
                         margin: {
@@ -2793,7 +2591,7 @@
                     }), a.createElement(d.Ea, {
                         id: "reporting__text-area",
                         label: Object(o.d)("Description (required)", "ReportUser")
-                    }, a.createElement(d.Qb, {
+                    }, a.createElement(d.Pb, {
                         defaultValue: this.props.defaultDescription,
                         onChange: this.handleTextAreaChange
                     }))), a.createElement(d.Cb, {
@@ -3466,7 +3264,7 @@
                                 }
                             }, a.createElement(f.W, {
                                 className: "block-user__success",
-                                type: f.Tb.Span
+                                type: f.Sb.Span
                             }, Object(l.d)("{user} blocked", {
                                 user: t.props.targetUser.displayName
                             }, "ReportWizardBlockActions"))), a.createElement(f.U, {
@@ -3510,7 +3308,7 @@
                             margin: {
                                 y: 1
                             }
-                        }, a.createElement(f.cc, {
+                        }, a.createElement(f.bc, {
                             baseFontSize: f.Ca.Size6
                         }, a.createElement("p", null, Object(l.d)("Blocking {user} will:", {
                             user: t
@@ -4194,7 +3992,7 @@
                                     }, a.createElement(f.Ea, {
                                         label: t.getTitle(),
                                         labelOptional: t.required ? "" : Object(l.d)("Optional", "ReportModalWizardCard")
-                                    }, a.createElement(f.Qb, {
+                                    }, a.createElement(f.Pb, {
                                         onChange: e.onChange,
                                         rows: t.rows || 3,
                                         name: t.value,
@@ -4532,8 +4330,8 @@
                     value: "impersonation type"
                 },
                 $ = U,
-                Y = z,
-                K = D,
+                K = z,
+                Y = D,
                 Z = {
                     video: F.identifyUser,
                     whisper: A,
@@ -4573,7 +4371,7 @@
                 J = {
                     selfharm: I.selfharm,
                     harm: I.violence,
-                    other: K
+                    other: Y
                 },
                 ee = {
                     CHANNEL_FEED_POST_REPORT: W.content,
@@ -4665,7 +4463,7 @@
                                     i = t.state.displacedSelections[t.state.displacedSelections.length - 1],
                                     a = t.state.currentSelection.differentTarget || t.state.targetUnknown,
                                     o = t.state.currentSelection.reportContext || t.state.reportContext,
-                                    s = e.nextCard || Y;
+                                    s = e.nextCard || K;
                                 Z[t.state.currentSelection.value] && (s = Z[t.state.currentSelection.value]);
                                 var l = t.state.currentSelection.reportReason || t.state.reportReason,
                                     c = s.type === T.Info;
@@ -4712,7 +4510,7 @@
                                                     });
                                                     break;
                                                 case E.a.Success:
-                                                    r = K, J[t] && (r = J[t]), this.state.currentCard.nextCard && (r = this.state.currentCard.nextCard), this.setState({
+                                                    r = Y, J[t] && (r = J[t]), this.state.currentCard.nextCard && (r = this.state.currentCard.nextCard), this.setState({
                                                         currentCard: r,
                                                         prevCards: [],
                                                         prevSelections: [],
@@ -5261,7 +5059,7 @@
                     return p
                 }),
                 function(e) {
-                    e.Forbidden = "FORBIDDEN", e.TargetNotFound = "TARGET_NOT_FOUND", e.TargetIsSelf = "TARGET_IS_SELF", e.TargetIsAnonymous = "TARGET_IS_ANONYMOUS", e.TargetIsMod = "TARGET_IS_MOD", e.TargetIsBroadcaster = "TARGET_IS_BROADCASTER", e.TargetIsStaff = "TARGET_IS_STAFF", e.TargetIsVIP = "TARGET_IS_VIP", e.TargetIsAdmin = "TARGET_IS_ADMIN", e.TargetIsGlobalMod = "TARGET_IS_GLOBAL_MOD", e.TargetIsAlreadyBanned = "TARGET_ALREADY_BANNED", e.DurationInvalid = "DURATION_INVALID"
+                    e.Forbidden = "FORBIDDEN", e.TargetNotFound = "TARGET_NOT_FOUND", e.TargetIsSelf = "TARGET_IS_SELF", e.TargetIsAnonymous = "TARGET_IS_ANONYMOUS", e.TargetIsMod = "TARGET_IS_MOD", e.TargetIsBroadcaster = "TARGET_IS_BROADCASTER", e.TargetIsStaff = "TARGET_IS_STAFF", e.TargetIsAdmin = "TARGET_IS_ADMIN", e.TargetIsGlobalMod = "TARGET_IS_GLOBAL_MOD", e.TargetIsAlreadyBanned = "TARGET_ALREADY_BANNED", e.DurationInvalid = "DURATION_INVALID"
                 }(d || (d = {}))
         },
         jeZI: function(e, t, n) {},
@@ -5297,7 +5095,7 @@
                                 background: s.r.Alt,
                                 fullWidth: !0
                             }, i.createElement(s.W, {
-                                type: s.Tb.Strong
+                                type: s.Sb.Strong
                             }, t.props.successContent)) : null
                         }, t.renderError = function() {
                             return t.props.errorContent ? i.createElement(s.Cb, {
@@ -5313,7 +5111,7 @@
                                 background: s.r.Alt,
                                 fullWidth: !0
                             }, i.createElement(s.W, {
-                                type: s.Tb.Strong,
+                                type: s.Sb.Strong,
                                 color: s.O.Error
                             }, t.props.errorContent)) : null
                         }, t.onSubmit = function() {
@@ -5398,10 +5196,10 @@
                             hasSucceeded: !1
                         }, t.renderTitle = function() {
                             return t.props.isTemporary ? i.createElement(s.W, {
-                                type: s.Tb.H5,
+                                type: s.Sb.H5,
                                 ellipsis: !0
                             }, Object(a.d)("Timeout this Clip Creator for 24 hours from Your Channel", "ClipsModalBanUser")) : i.createElement(s.W, {
-                                type: s.Tb.H5,
+                                type: s.Sb.H5,
                                 ellipsis: !0
                             }, Object(a.d)("Ban this Clip Creator from Your Channel", "ClipsModalBanUser"))
                         }, t.renderBodyText = function() {
@@ -5518,14 +5316,14 @@
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = [i.createElement(s.W, {
                             key: "title",
-                            type: s.Tb.H4
+                            type: s.Sb.H4
                         }, Object(a.d)("Delete This Clip", "ClipsModalDelete")), i.createElement(s.Xa, {
                             key: "message",
                             margin: {
                                 top: 1
                             }
                         }, i.createElement(s.W, {
-                            type: s.Tb.P,
+                            type: s.Sb.P,
                             color: s.O.Alt2
                         }, Object(a.d)("This clip will be permanently deleted.", "ClipsModalDelete")))];
                         if (!this.props.data.clip) return null;
@@ -5546,7 +5344,7 @@
                         }, i.createElement("img", {
                             src: this.props.data.clip.thumbnailURL
                         }))), i.createElement(s.Xa, null, i.createElement(s.W, {
-                            type: s.Tb.H5
+                            type: s.Sb.H5
                         }, this.props.data.clip.title), i.createElement(s.W, {
                             color: s.O.Alt2
                         }, Object(a.d)("{created, date, medium}", {
@@ -5646,13 +5444,13 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = i.createElement(s.W, {
-                            type: s.Tb.P
+                            type: s.Sb.P
                         }, Object(a.d)("This clip and all other clips created from the same video will be permanently deleted.", "ClipsModalDeleteAll"));
                         return i.createElement(c, {
                             onSubmit: this.deleteAll,
                             onClose: this.props.onClose,
                             title: i.createElement(s.W, {
-                                type: s.Tb.H4
+                                type: s.Sb.H4
                             }, Object(a.d)("Delete All Clips from Related Video", "ClipsModalDeleteAll")),
                             body: e,
                             buttonContent: Object(a.d)("Delete", "ClipsModalDeleteAll"),
@@ -5768,10 +5566,10 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = i.createElement(s.W, {
-                                type: s.Tb.H4
+                                type: s.Sb.H4
                             }, Object(a.d)("Delete these clips?", "ClipsModalBatchDelete")),
                             t = i.createElement(s.W, {
-                                type: s.Tb.P
+                                type: s.Sb.P
                             }, Object(a.d)("These clips will be permanently deleted. Are you sure?", "ClipsModalBatchDelete"));
                         return i.createElement(c, {
                             onSubmit: this.onDeleteClick,
@@ -6326,7 +6124,7 @@
                         return i.createElement(s.Xa, r.__assign({
                             position: s.hb.Relative,
                             className: "selectable-input-wrapper"
-                        }, Object(s.hc)(this.props)), i.createElement(s.Ra, {
+                        }, Object(s.gc)(this.props)), i.createElement(s.Ra, {
                             type: s.Ta.Text,
                             value: this.props.text,
                             readOnly: !0,
@@ -6710,18 +6508,18 @@
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(c.hc)(n.props), {
+                        }, Object(c.gc)(n.props), {
                             download: n.props.text
                         }), n.renderIcon()) : n.isLink() ? a.createElement("a", i.__assign({
                             href: n.getLinkTarget(),
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(c.hc)(n.props)), n.renderIcon()) : a.createElement("button", i.__assign({
+                        }, Object(c.gc)(n.props)), n.renderIcon()) : a.createElement("button", i.__assign({
                             onClick: n.copyPageUrl,
                             onMouseLeave: n.clearIsCopiedStatus,
                             className: e
-                        }, Object(c.hc)(n.props)), n.renderIcon())
+                        }, Object(c.gc)(n.props)), n.renderIcon())
                     }, n.onShareClickHandler = function() {
                         n.props.onShareClick && n.props.onShareClick(n.props.type)
                     }, n.clearIsCopiedStatus = function() {
@@ -6821,9 +6619,9 @@
                 return i.__extends(t, e), t.prototype.render = function() {
                     return a.createElement(c.Xa, {
                         className: "social-button"
-                    }, a.createElement(c.Wb, {
+                    }, a.createElement(c.Vb, {
                         label: this.getTooltipFromType(),
-                        direction: c.Yb.Bottom
+                        direction: c.Xb.Bottom
                     }, this.renderLink()))
                 }, t
             }(a.Component)

@@ -67,7 +67,7 @@
                             message: Object(d.d)("Failed to load friends", "FriendRequestsPage")
                         });
                         if (0 === this.state.filteredUsers.length) return i.createElement(y.Xa, {
-                            textAlign: y.Pb.Center,
+                            textAlign: y.Ob.Center,
                             padding: {
                                 y: 5
                             }
@@ -91,10 +91,10 @@
                                 }
                             })) : null
                         });
-                        return i.createElement(y.Zb, {
+                        return i.createElement(y.Yb, {
                             center: !0,
-                            childWidth: y.ac.Large,
-                            gutterSize: y.bc.Small,
+                            childWidth: y.Zb.Large,
+                            gutterSize: y.ac.Small,
                             placeholderItems: 10
                         }, e)
                     }, n.prototype.detectUserDataChange = function(e, n) {
@@ -305,7 +305,7 @@
                         bottom: 2
                     }
                 }, i.createElement(o.W, {
-                    type: o.Tb.H2
+                    type: o.Sb.H2
                 }, Object(a.d)("Friends", "FriendsHeader")), i.createElement(o.Xa, {
                     margin: {
                         top: 1

@@ -506,8 +506,8 @@
         "43KI": function(e, t, n) {
             (t = e.exports = n("rXFu")).Stream = t, t.Readable = t, t.Writable = n("3BRs"), t.Duplex = n("sZro"), t.Transform = n("J78i"), t.PassThrough = n("eA/Y")
         },
-        463: function(e, t) {},
-        464: function(e, t) {},
+        459: function(e, t) {},
+        460: function(e, t) {},
         "49sm": function(e, t) {
             var n = {}.toString;
             e.exports = Array.isArray || function(e) {
@@ -854,10 +854,10 @@
             l(L);
             var R = new Array(512);
             l(R);
-            var B = new Array(256);
-            l(B);
-            var O = new Array(h);
+            var O = new Array(256);
             l(O);
+            var B = new Array(h);
+            l(B);
             var D, M, j, I = new Array(m);
 
             function N(e, t, n, r, i) {
@@ -929,7 +929,7 @@
                 var r, i, o, a, s = 0;
                 if (0 !== e.last_lit)
                     do {
-                        r = e.pending_buf[e.d_buf + 2 * s] << 8 | e.pending_buf[e.d_buf + 2 * s + 1], i = e.pending_buf[e.l_buf + s], s++, 0 === r ? H(e, i, t) : (H(e, (o = B[i]) + p + 1, t), 0 !== (a = C[o]) && W(e, i -= O[o], a), H(e, o = $(--r), n), 0 !== (a = S[o]) && W(e, r -= I[o], a))
+                        r = e.pending_buf[e.d_buf + 2 * s] << 8 | e.pending_buf[e.d_buf + 2 * s + 1], i = e.pending_buf[e.l_buf + s], s++, 0 === r ? H(e, i, t) : (H(e, (o = O[i]) + p + 1, t), 0 !== (a = C[o]) && W(e, i -= B[o], a), H(e, o = $(--r), n), 0 !== (a = S[o]) && W(e, r -= I[o], a))
                     } while (s < e.last_lit);
                 H(e, k, t)
             }
@@ -1008,8 +1008,8 @@
                 ee || (function() {
                     var e, t, n, r, i, o = new Array(v + 1);
                     for (n = 0, r = 0; r < h - 1; r++)
-                        for (O[r] = n, e = 0; e < 1 << C[r]; e++) B[n++] = r;
-                    for (B[n - 1] = r, i = 0, r = 0; r < 16; r++)
+                        for (B[r] = n, e = 0; e < 1 << C[r]; e++) O[n++] = r;
+                    for (O[n - 1] = r, i = 0, r = 0; r < 16; r++)
                         for (I[r] = i, e = 0; e < 1 << S[r]; e++) R[i++] = r;
                     for (i >>= 7; r < m; r++)
                         for (I[r] = i << 7, e = 0; e < 1 << S[r] - 7; e++) R[256 + i++] = r;
@@ -1041,7 +1041,7 @@
                     Q(e, e.dyn_ltree, t - 1), Q(e, e.dyn_dtree, n - 1)
                 }(e, e.l_desc.max_code + 1, e.d_desc.max_code + 1, h + 1), Y(e, e.dyn_ltree, e.dyn_dtree)), V(e), r && G(e)
             }, t._tr_tally = function(e, t, n) {
-                return e.pending_buf[e.d_buf + 2 * e.last_lit] = t >>> 8 & 255, e.pending_buf[e.d_buf + 2 * e.last_lit + 1] = 255 & t, e.pending_buf[e.l_buf + e.last_lit] = 255 & n, e.last_lit++, 0 === t ? e.dyn_ltree[2 * n]++ : (e.matches++, t--, e.dyn_ltree[2 * (B[n] + p + 1)]++, e.dyn_dtree[2 * $(t)]++), e.last_lit === e.lit_bufsize - 1
+                return e.pending_buf[e.d_buf + 2 * e.last_lit] = t >>> 8 & 255, e.pending_buf[e.d_buf + 2 * e.last_lit + 1] = 255 & t, e.pending_buf[e.l_buf + e.last_lit] = 255 & n, e.last_lit++, 0 === t ? e.dyn_ltree[2 * n]++ : (e.matches++, t--, e.dyn_ltree[2 * (O[n] + p + 1)]++, e.dyn_dtree[2 * $(t)]++), e.last_lit === e.lit_bufsize - 1
             }, t._tr_align = function(e) {
                 W(e, u << 1, 3), H(e, k, F),
                     function(e) {
@@ -2086,9 +2086,9 @@
                                 }, t.onCompositionEnd(), t.removeListener("mousedown", R), "compositionend" == e.type && r.range && t.selection.setRange(r.range), (i.isChrome && i.isChrome >= 53 || i.isWebKit && i.isWebKit >= 603) && S()
                             }
                         },
-                        B = a.delayedCall(L, 50);
+                        O = a.delayedCall(L, 50);
 
-                    function O() {
+                    function B() {
                         clearTimeout(F), F = setTimeout(function() {
                             g && (n.style.cssText = g, g = ""), null == t.renderer.$keepTextAreaAtCursor && (t.renderer.$keepTextAreaAtCursor = !0, t.renderer.$moveTextAreaToCursor())
                         }, 0)
@@ -2096,11 +2096,11 @@
                     r.addListener(n, "compositionstart", function(e) {
                         m || !t.onCompositionStart || t.$readOnly || ((m = {}).canUndo = t.session.$undoManager, t.onCompositionStart(), setTimeout(L, 0), t.on("mousedown", R), m.canUndo && !t.selection.isEmpty() && (t.insert(""), t.session.markUndoGroup(), t.selection.clearSelection()), t.session.markUndoGroup())
                     }), i.isGecko ? r.addListener(n, "text", function() {
-                        B.schedule()
+                        O.schedule()
                     }) : (r.addListener(n, "keyup", function() {
-                        B.schedule()
+                        O.schedule()
                     }), r.addListener(n, "keydown", function() {
-                        B.schedule()
+                        O.schedule()
                     })), r.addListener(n, "compositionend", R), this.getElement = function() {
                         return n
                     }, this.setReadOnly = function(e) {
@@ -2120,13 +2120,13 @@
                             h = function(e) {
                                 n.style.left = e.clientX - u - 2 + "px", n.style.top = Math.min(e.clientY - c - 2, d) + "px"
                             };
-                        h(e), "mousedown" == e.type && (t.renderer.$keepTextAreaAtCursor && (t.renderer.$keepTextAreaAtCursor = null), clearTimeout(F), i.isWin && r.capture(t.container, h, O))
-                    }, this.onContextMenuClose = O;
+                        h(e), "mousedown" == e.type && (t.renderer.$keepTextAreaAtCursor && (t.renderer.$keepTextAreaAtCursor = null), clearTimeout(F), i.isWin && r.capture(t.container, h, B))
+                    }, this.onContextMenuClose = B;
                     var D = function(e) {
-                        t.textInput.onContextMenu(e), O()
+                        t.textInput.onContextMenu(e), B()
                     };
                     if (r.addListener(n, "mouseup", D), r.addListener(n, "mousedown", function(e) {
-                            e.preventDefault(), O()
+                            e.preventDefault(), B()
                         }), r.addListener(t.renderer.scroller, "contextmenu", D), r.addListener(n, "contextmenu", D), i.isIOS) {
                         var M = null,
                             j = !1;
@@ -2338,7 +2338,7 @@
                                 }
                             }
                         },
-                        B = function(e) {
+                        O = function(e) {
                             if (t.onCompositionEnd && !t.$readOnly) {
                                 var r = p;
                                 p = !1;
@@ -2349,10 +2349,10 @@
                                 });
                                 k = function(e) {
                                     return o && clearTimeout(o), (e = e.replace(/\u2028/g, "")) == r.lastValue ? "" : (r.lastValue && o && t.undo(), e)
-                                }, t.onCompositionEnd(), t.removeListener("mousedown", B), "compositionend" == e.type && r.range && t.selection.setRange(r.range), (i.isChrome && i.isChrome >= 53 || i.isWebKit && i.isWebKit >= 603) && _()
+                                }, t.onCompositionEnd(), t.removeListener("mousedown", O), "compositionend" == e.type && r.range && t.selection.setRange(r.range), (i.isChrome && i.isChrome >= 53 || i.isWebKit && i.isWebKit >= 603) && _()
                             }
                         },
-                        O = a.delayedCall(R, 50);
+                        B = a.delayedCall(R, 50);
 
                     function D() {
                         clearTimeout(L), L = setTimeout(function() {
@@ -2360,14 +2360,14 @@
                         }, 0)
                     }
                     r.addListener(n, "compositionstart", function(e) {
-                        p || !t.onCompositionStart || t.$readOnly || ((p = {}).canUndo = t.session.$undoManager, t.onCompositionStart(), setTimeout(R, 0), t.on("mousedown", B), p.canUndo && !t.selection.isEmpty() && (t.insert(""), t.session.markUndoGroup(), t.selection.clearSelection()), t.session.markUndoGroup())
+                        p || !t.onCompositionStart || t.$readOnly || ((p = {}).canUndo = t.session.$undoManager, t.onCompositionStart(), setTimeout(R, 0), t.on("mousedown", O), p.canUndo && !t.selection.isEmpty() && (t.insert(""), t.session.markUndoGroup(), t.selection.clearSelection()), t.session.markUndoGroup())
                     }), i.isGecko ? r.addListener(n, "text", function() {
-                        O.schedule()
+                        B.schedule()
                     }) : (r.addListener(n, "keyup", function() {
-                        O.schedule()
+                        B.schedule()
                     }), r.addListener(n, "keydown", function() {
-                        O.schedule()
-                    })), r.addListener(n, "compositionend", B), this.getElement = function() {
+                        B.schedule()
+                    })), r.addListener(n, "compositionend", O), this.getElement = function() {
                         return n
                     }, this.setReadOnly = function(e) {
                         n.readOnly = e
@@ -3272,7 +3272,7 @@
                     L = [F, F, F, F, F, F, F, F, F, b, g, b, y, g, F, F, F, F, F, F, F, F, F, F, F, F, F, F, g, g, g, b, y, m, m, x, x, x, m, m, m, m, m, k, w, k, w, w, p, p, p, p, p, p, p, p, p, p, w, m, m, m, m, m, m, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, m, m, m, m, m, m, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, d, m, m, m, m, F, F, F, F, F, F, g, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, w, m, x, x, x, x, m, m, m, m, d, m, m, F, m, m, x, x, p, p, m, d, m, m, m, p, d, m, m, m, m, m],
                     R = [y, y, y, y, y, y, y, y, y, y, y, F, F, F, d, h, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, y, g, _, C, S, A, T, w, x, x, x, x, x, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, w, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, m, y];
 
-                function B(e, t, n) {
+                function O(e, t, n) {
                     if (!(i < e))
                         if (1 != e || r != u || a)
                             for (var o, s, l, c, d = n.length, h = 0; h < d;) {
@@ -3285,7 +3285,7 @@
                             } else n.reverse()
                 }
 
-                function O(e, t, n, i) {
+                function B(e, t, n, i) {
                     var l, c, u, L, R = t[i];
                     switch (R) {
                         case d:
@@ -3312,9 +3312,9 @@
                         case E:
                             for (u = t.length, L = i + 1; L < u && t[L] == E;) L++;
                             if (L < u) {
-                                var B = e[i],
-                                    O = B >= 1425 && B <= 2303 || 64286 == B;
-                                if (l = t[L], O && (l == h || l == v)) return h
+                                var O = e[i],
+                                    B = O >= 1425 && O <= 2303 || 64286 == O;
+                                if (l = t[L], B && (l == h || l == v)) return h
                             }
                             return i < 1 || (l = t[i - 1]) == g ? m : n[i - 1];
                         case g:
@@ -3358,7 +3358,7 @@
                             if (!u)
                                 for (k = 0, u = []; k < n; k++) u[k] = D(e[k]);
                             for (i = r, o = !1, !1, a = !1, s = !1, x = 0; x < n; x++) {
-                                if (h = m, E[x] = p = O(e, u, E, x), v = 240 & (m = d[h][p]), m &= 15, t[x] = f = d[m][5], v > 0)
+                                if (h = m, E[x] = p = B(e, u, E, x), v = 240 & (m = d[h][p]), m &= 15, t[x] = f = d[m][5], v > 0)
                                     if (16 == v) {
                                         for (k = w; k < x; k++) t[k] = 1;
                                         w = -1
@@ -3378,7 +3378,7 @@
                                     }
                         }(p, x, p.length, n);
                     for (var E = 0; E < w.length; w[E] = E, E++);
-                    B(2, x, w), B(1, x, w);
+                    O(2, x, w), O(1, x, w);
                     for (E = 0; E < w.length - 1; E++) n[E] === f ? x[E] = t.AN : x[E] === h && (n[E] > v && n[E] < _ || n[E] === m || n[E] === F) ? x[E] = t.ON_R : E > 0 && "ل" === p[E - 1] && /\u0622|\u0623|\u0625|\u0627/.test(p[E]) && (x[E - 1] = x[E] = t.R_H, E++);
                     p[p.length - 1] === t.DOT && (x[p.length - 1] = t.B);
                     for (E = 0; E < w.length; E++) k[E] = x[w[E]];
@@ -10986,10 +10986,10 @@
                     }(p.unixPermissions, S)) : (R = 20, L |= function(e, t) {
                         return 63 & (e || 0)
                     }(p.dosPermissions)), d = A.getUTCHours(), d <<= 6, d |= A.getUTCMinutes(), d <<= 5, d |= A.getUTCSeconds() / 2, h = A.getUTCFullYear() - 1980, h <<= 4, h |= A.getUTCMonth() + 1, h <<= 5, h |= A.getUTCDate(), k && (_ = l(1, 1) + l(a(g), 4) + b, E += "up" + l(_.length, 2) + _), x && (C = l(1, 1) + l(a(y), 4) + w, E += "uc" + l(C.length, 2) + C);
-                    var B = "";
-                    return B += "\n\0", B += l(F, 2), B += f.magic, B += l(d, 2), B += l(h, 2), B += l(T.crc32, 4), B += l(T.compressedSize, 4), B += l(T.uncompressedSize, 4), B += l(g.length, 2), B += l(E.length, 2), {
-                        fileRecord: s.LOCAL_FILE_HEADER + B + g + E,
-                        dirRecord: s.CENTRAL_FILE_HEADER + l(R, 2) + B + l(y.length, 2) + "\0\0\0\0" + l(L, 4) + l(i, 4) + g + E + y
+                    var O = "";
+                    return O += "\n\0", O += l(F, 2), O += f.magic, O += l(d, 2), O += l(h, 2), O += l(T.crc32, 4), O += l(T.compressedSize, 4), O += l(T.uncompressedSize, 4), O += l(g.length, 2), O += l(E.length, 2), {
+                        fileRecord: s.LOCAL_FILE_HEADER + O + g + E,
+                        dirRecord: s.CENTRAL_FILE_HEADER + l(R, 2) + O + l(y.length, 2) + "\0\0\0\0" + l(L, 4) + l(i, 4) + g + E + y
                     }
                 };
 
@@ -12067,7 +12067,7 @@
                             position: g.hb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-channel-selection",
                             fullHeight: !0,
@@ -12075,7 +12075,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             padding: 1
                         }, d.createElement(g.W, {
@@ -12165,7 +12165,7 @@
                             position: g.hb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-choose-sample",
                             fullHeight: !0,
@@ -12173,7 +12173,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             padding: 1
                         }, d.createElement(g.W, {
@@ -12238,7 +12238,7 @@
                             position: g.hb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-choose-type",
                             fullHeight: !0,
@@ -12246,7 +12246,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             padding: 1
                         }, d.createElement(g.W, {
@@ -12291,10 +12291,10 @@
                         }))
                     }, t
                 }(d.Component),
-                B = (n("WH3u"), {
+                O = (n("WH3u"), {
                     "data-test-selector": "dev-sandbox-on-boarding-code-left-arrow"
                 }),
-                O = {
+                B = {
                     "data-test-selector": "dev-sandbox-on-boarding-code-right-arrow"
                 },
                 D = function() {
@@ -12311,7 +12311,7 @@
                             position: g.hb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-code-section",
                             fullHeight: !0,
@@ -12319,7 +12319,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             padding: 1
                         }, d.createElement(g.W, {
@@ -12339,7 +12339,7 @@
                         }, d.createElement(g.A, i.__assign({
                             icon: g.rb.AngleLeft,
                             onClick: this.props.onPre
-                        }, B))), d.createElement(g.Xa, null, d.createElement(g.Xa, null, d.createElement(g.W, {
+                        }, O))), d.createElement(g.Xa, null, d.createElement(g.Xa, null, d.createElement(g.W, {
                             fontSize: g.Ca.Size5,
                             color: g.O.Link
                         }, Object(p.d)("Edit the sample extension code in this section. To see a preview on the channel, click the Run button. Note: after the first run, changes will be reflected live as you code.", "DevSandboxOnBoardingCodeSectionStep"))), d.createElement(g.Xa, {
@@ -12364,7 +12364,7 @@
                         }, d.createElement(g.A, i.__assign({
                             icon: g.rb.AngleRight,
                             onClick: this.props.onNext
-                        }, O)))), d.createElement(g.Xa, {
+                        }, B)))), d.createElement(g.Xa, {
                             display: g.X.Flex
                         }, d.createElement(E, {
                             linkTo: "https://dev.twitch.tv/docs/extensions/required-technical-background/#architecture-overview",
@@ -12399,7 +12399,7 @@
                             position: g.hb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-download",
                             fullHeight: !0,
@@ -12407,7 +12407,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             padding: 1
                         }, d.createElement(g.W, {
@@ -12479,7 +12479,7 @@
                             position: g.hb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-intro",
                             fullHeight: !0,
@@ -12487,7 +12487,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             padding: 1
                         }, d.createElement(g.W, {
@@ -12542,7 +12542,7 @@
                             position: g.hb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-manual-run",
                             fullHeight: !0,
@@ -12550,7 +12550,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             padding: 1
                         }, d.createElement(g.W, {
@@ -12621,7 +12621,7 @@
                             position: g.hb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-switch-window",
                             fullHeight: !0,
@@ -12629,7 +12629,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             padding: 1
                         }, d.createElement(g.W, {
@@ -12678,7 +12678,7 @@
                             position: g.hb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-welcome-back",
                             fullHeight: !0,
@@ -12686,7 +12686,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             padding: 1
                         }, d.createElement(g.W, {
@@ -12975,7 +12975,7 @@
                             className: "dev-channel-header-mock",
                             fullWidth: !0,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center,
+                            textAlign: g.Ob.Center,
                             margin: {
                                 bottom: 1
                             }
@@ -13209,7 +13209,7 @@
                             position: g.hb.Relative,
                             justifyContent: g.Wa.Start,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center,
+                            textAlign: g.Ob.Center,
                             display: g.X.Flex
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-download-modal",
@@ -13217,7 +13217,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Start,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center,
+                            textAlign: g.Ob.Center,
                             padding: {
                                 left: 4,
                                 right: 4
@@ -13291,7 +13291,7 @@
                             position: g.hb.Relative,
                             justifyContent: g.Wa.Start,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-share-modal",
                             fullHeight: !0,
@@ -13299,7 +13299,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Start,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Cb, {
                             color: g.O.Link
                         }, d.createElement(g.qb, {
@@ -13320,7 +13320,7 @@
                             display: g.X.Flex,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             padding: {
                                 right: 5,
@@ -13393,7 +13393,7 @@
                                     left: 1
                                 },
                                 display: g.X.Flex,
-                                textAlign: g.Pb.Center,
+                                textAlign: g.Ob.Center,
                                 alignItems: g.f.Center,
                                 className: "dev-editor-extension-type-btn__text"
                             }, d.createElement(g.W, {
@@ -13411,7 +13411,7 @@
                                     left: 1
                                 },
                                 display: g.X.Flex,
-                                textAlign: g.Pb.Center,
+                                textAlign: g.Ob.Center,
                                 alignItems: g.f.Center
                             }, d.createElement(g.W, {
                                 fontSize: g.Ca.Size4
@@ -13602,10 +13602,10 @@
                 Re = (n("GGHV"), function() {
                     return Object(p.d)("Panel", "DevSandboxIPAddressBarMock")
                 }),
-                Be = function() {
+                Oe = function() {
                     return Object(p.d)("Component", "DevSandboxIPAddressBarMock")
                 },
-                Oe = function(e) {
+                Be = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -13652,7 +13652,7 @@
                                     right: 1,
                                     bottom: 1
                                 }
-                            }, d.createElement(g.Vb, {
+                            }, d.createElement(g.Ub, {
                                 onChange: t.props.onHideChannelMockClick,
                                 checked: t.props.ifHideChannelMock
                             }))))
@@ -13665,7 +13665,7 @@
                                 background: g.r.Base,
                                 display: g.X.Flex,
                                 alignItems: g.f.Center,
-                                textAlign: g.Pb.Left,
+                                textAlign: g.Ob.Left,
                                 justifyContent: g.Wa.Start,
                                 fullHeight: !0
                             }, d.createElement(g.Ua, {
@@ -13678,7 +13678,7 @@
                                 className: "dev-ip-address-bar__selection-text-wrapper",
                                 justifyContent: g.Wa.Start,
                                 alignItems: g.f.Center,
-                                textAlign: g.Pb.Left
+                                textAlign: g.Ob.Left
                             }, d.createElement(g.Xa, {
                                 padding: {
                                     left: 2,
@@ -13687,7 +13687,7 @@
                                 className: "dev-ip-address-bar__selection-text",
                                 justifyContent: g.Wa.Start,
                                 alignItems: g.f.Center,
-                                textAlign: g.Pb.Left
+                                textAlign: g.Ob.Left
                             }, d.createElement(g.W, {
                                 fontSize: g.Ca.Size4
                             }, t.extensionType())), d.createElement(g.Xa, {
@@ -13708,7 +13708,7 @@
                                 width: 15
                             }))))))
                         }, t.extensionType = function() {
-                            return t.props.extensionTypeSelected === _e.panel ? Re() : Be()
+                            return t.props.extensionTypeSelected === _e.panel ? Re() : Oe()
                         }, t.onTypeChange = function(e, n) {
                             return function() {
                                 t.props.onExtensionTypeChange(n), e()
@@ -13721,14 +13721,14 @@
                                 display: g.X.Flex,
                                 alignItems: g.f.Center,
                                 flexDirection: g.Aa.Column,
-                                zIndex: g.gc.Above,
+                                zIndex: g.fc.Above,
                                 position: g.hb.Absolute
                             }, d.createElement(g.Cb, {
                                 position: g.hb.Relative,
                                 className: "dev-ip-address-bar__dropdown-content",
                                 fullWidth: !0,
                                 background: g.r.Base,
-                                zIndex: g.gc.Above,
+                                zIndex: g.fc.Above,
                                 attachTop: !0,
                                 flexDirection: g.Aa.Row,
                                 flexWrap: g.Ba.Wrap,
@@ -13743,7 +13743,7 @@
                                     left: 2
                                 },
                                 className: "dev-ip-address-bar__option",
-                                textAlign: g.Pb.Left
+                                textAlign: g.Ob.Left
                             }, d.createElement(g.W, {
                                 fontSize: g.Ca.Size4
                             }, Re()))), d.createElement("div", {
@@ -13753,10 +13753,10 @@
                                     left: 2
                                 },
                                 className: "dev-ip-address-bar__option",
-                                textAlign: g.Pb.Left
+                                textAlign: g.Ob.Left
                             }, d.createElement(g.W, {
                                 fontSize: g.Ca.Size4
-                            }, Be()))))))
+                            }, Oe()))))))
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
@@ -13911,8 +13911,8 @@
                                 allowFullScreen: !0
                             }) : void 0
                         }, t.renderChannelPanel = function() {
-                            var e = g.ec.Hidden;
-                            t.props.extensionType !== _e.panel && (e = g.ec.Visible);
+                            var e = g.dc.Hidden;
+                            t.props.extensionType !== _e.panel && (e = g.dc.Visible);
                             var n = d.createElement(g.Cb, {
                                 background: g.r.Alt2,
                                 className: "channel-placeholder__panel-group",
@@ -13927,7 +13927,7 @@
                                 position: g.hb.Relative,
                                 justifyContent: g.Wa.Center,
                                 alignItems: g.f.Start,
-                                textAlign: g.Pb.Center,
+                                textAlign: g.Ob.Center,
                                 fullHeight: !0,
                                 fullWidth: !0
                             }, n, d.createElement(De, null))
@@ -13939,7 +13939,7 @@
                             justifyContent: g.Wa.Center,
                             display: g.X.Flex,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center,
+                            textAlign: g.Ob.Center,
                             padding: {
                                 left: 3,
                                 right: 3,
@@ -13953,7 +13953,7 @@
                             className: "channel-placeholder__box-shadow"
                         }, d.createElement(g.Xa, i.__assign({
                             className: "channel-placeholder__channel-nav"
-                        }, Me), d.createElement(Oe, {
+                        }, Me), d.createElement(Be, {
                             onBoardingStep: this.props.onBoardingStep,
                             onChannelChange: this.props.onChannelChange,
                             shownChannel: this.props.channel,
@@ -13978,7 +13978,7 @@
                             justifyContent: g.Wa.Center,
                             display: g.X.Flex,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center,
+                            textAlign: g.Ob.Center,
                             padding: {
                                 left: 3,
                                 right: 3,
@@ -13992,7 +13992,7 @@
                             className: "channel-placeholder__box-shadow"
                         }, d.createElement(g.Xa, i.__assign({
                             className: "channel-placeholder__channel-nav"
-                        }, Me), d.createElement(Oe, {
+                        }, Me), d.createElement(Be, {
                             onBoardingStep: this.props.onBoardingStep,
                             onChannelChange: this.props.onChannelChange,
                             shownChannel: this.props.channel,
@@ -14061,7 +14061,7 @@
                             position: g.hb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-undo-modal",
                             fullHeight: !0,
@@ -14069,7 +14069,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Ob.Center
                         }, d.createElement(g.Xa, null, d.createElement(g.qb, {
                             asset: g.rb.VideoRerun,
                             height: 80,
@@ -14189,7 +14189,7 @@
                                 display: g.X.Flex,
                                 alignItems: g.f.Center,
                                 flexDirection: g.Aa.Column,
-                                zIndex: g.gc.Above,
+                                zIndex: g.fc.Above,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 attachRight: !0
@@ -14198,7 +14198,7 @@
                                 className: "dev-editor-tabs__dropdown-content",
                                 fullWidth: !0,
                                 background: g.r.Base,
-                                zIndex: g.gc.Above,
+                                zIndex: g.fc.Above,
                                 attachTop: !0,
                                 flexDirection: g.Aa.Row,
                                 flexWrap: g.Ba.Wrap
@@ -14212,7 +14212,7 @@
                                 background: g.r.Base,
                                 display: g.X.Flex,
                                 alignItems: g.f.Center,
-                                textAlign: g.Pb.Left,
+                                textAlign: g.Ob.Left,
                                 justifyContent: g.Wa.Start
                             }, d.createElement(g.Ua, {
                                 onClick: n,
@@ -14225,7 +14225,7 @@
                                 className: "dev-editor-tabs__selection-text-wrapper",
                                 justifyContent: g.Wa.Start,
                                 alignItems: g.f.Center,
-                                textAlign: g.Pb.Left
+                                textAlign: g.Ob.Left
                             }, d.createElement(g.Xa, {
                                 padding: {
                                     left: 2,
@@ -14234,7 +14234,7 @@
                                 className: "dev-editor-tabs__selection-text",
                                 justifyContent: g.Wa.Start,
                                 alignItems: g.f.Center,
-                                textAlign: g.Pb.Left
+                                textAlign: g.Ob.Left
                             }, d.createElement(g.W, {
                                 fontSize: g.Ca.Size4
                             }, t.filenameForType(t.props.activeTab))), d.createElement(g.Xa, {
@@ -14297,7 +14297,7 @@
                             flexWrap: g.Ba.NoWrap,
                             alignItems: g.f.Stretch,
                             position: g.hb.Relative,
-                            zIndex: g.gc.Above,
+                            zIndex: g.fc.Above,
                             padding: {
                                 left: 1
                             }
@@ -14495,12 +14495,12 @@
                             display: g.X.Flex,
                             className: "dev-sandbox__editor-separator",
                             background: g.r.Accent,
-                            zIndex: g.gc.Above
+                            zIndex: g.fc.Above
                         }))), d.createElement(g.Xa, {
                             className: "dev-sandbox__channel",
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
-                            textAlign: g.Pb.Center,
+                            textAlign: g.Ob.Center,
                             fullHeight: !0
                         }, t.renderChannelMock()))
                     }, t.renderChannelOnlyWindow = function() {
@@ -14511,13 +14511,13 @@
                             display: g.X.Flex,
                             className: J(e),
                             justifyContent: g.Wa.Center,
-                            textAlign: g.Pb.Center,
+                            textAlign: g.Ob.Center,
                             alignItems: g.f.Start
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox__channel-fullscreen",
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
-                            textAlign: g.Pb.Center,
+                            textAlign: g.Ob.Center,
                             fullHeight: !0
                         }, t.renderChannelMock()))
                     }, t.renderEditorOnlyWindow = function() {
@@ -14681,7 +14681,7 @@
                                     id: "panel-extension-preview"
                                 }))), d.createElement(g.Xa, {
                                     alignItems: g.f.Start
-                                }, d.createElement(Oe, {
+                                }, d.createElement(Be, {
                                     onBoardingStep: t.state.onBoardingStep,
                                     onChannelChange: t.onChannelChange,
                                     shownChannel: t.state.channelName,
@@ -16534,8 +16534,8 @@
                     L = {};
                 L["[object Float32Array]"] = L["[object Float64Array]"] = L["[object Int8Array]"] = L["[object Int16Array]"] = L["[object Int32Array]"] = L["[object Uint8Array]"] = L["[object Uint8ClampedArray]"] = L["[object Uint16Array]"] = L["[object Uint32Array]"] = !0, L[l] = L[c] = L[S] = L[d] = L[A] = L[h] = L[p] = L[f] = L[g] = L[b] = L[y] = L[k] = L[x] = L[E] = L["[object WeakMap]"] = !1;
                 var R = "object" == typeof e && e && e.Object === Object && e,
-                    B = "object" == typeof self && self && self.Object === Object && self,
-                    O = R || B || Function("return this")(),
+                    O = "object" == typeof self && self && self.Object === Object && self,
+                    B = R || O || Function("return this")(),
                     D = "object" == typeof t && t && !t.nodeType && t,
                     M = D && "object" == typeof n && n && !n.nodeType && n,
                     j = M && M.exports === D,
@@ -16575,7 +16575,7 @@
                 var U = Array.prototype,
                     q = Function.prototype,
                     V = Object.prototype,
-                    G = O["__core-js_shared__"],
+                    G = B["__core-js_shared__"],
                     X = q.toString,
                     K = V.hasOwnProperty,
                     Y = function() {
@@ -16584,9 +16584,9 @@
                     }(),
                     J = V.toString,
                     Z = RegExp("^" + X.call(K).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
-                    Q = j ? O.Buffer : void 0,
-                    ee = O.Symbol,
-                    te = O.Uint8Array,
+                    Q = j ? B.Buffer : void 0,
+                    ee = B.Symbol,
+                    te = B.Uint8Array,
                     ne = V.propertyIsEnumerable,
                     re = U.splice,
                     ie = ee ? ee.toStringTag : void 0,
@@ -16597,11 +16597,11 @@
                             return e(t(n))
                         }
                     }(Object.keys, Object),
-                    le = je(O, "DataView"),
-                    ce = je(O, "Map"),
-                    ue = je(O, "Promise"),
-                    de = je(O, "Set"),
-                    he = je(O, "WeakMap"),
+                    le = je(B, "DataView"),
+                    ce = je(B, "Map"),
+                    ue = je(B, "Promise"),
+                    de = je(B, "Set"),
+                    he = je(B, "WeakMap"),
                     pe = je(Object, "create"),
                     fe = $e(le),
                     me = $e(ce),
@@ -16703,7 +16703,7 @@
                             if (!Ue(t)) return !1;
                             u = !0, w = !1
                         }
-                        if (T && !w) return s || (s = new Ce), u || Ke(e) ? Oe(e, t, n, r, i, s) : function(e, t, n, r, i, s, l) {
+                        if (T && !w) return s || (s = new Ce), u || Ke(e) ? Be(e, t, n, r, i, s) : function(e, t, n, r, i, s, l) {
                             switch (n) {
                                 case A:
                                     if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) return !1;
@@ -16727,7 +16727,7 @@
                                     var f = l.get(e);
                                     if (f) return f == t;
                                     r |= a, l.set(e, t);
-                                    var m = Oe(c(e), c(t), r, i, s, l);
+                                    var m = Be(c(e), c(t), r, i, s, l);
                                     return l.delete(e), m;
                                 case _:
                                     if (we) return we.call(e) == we.call(t)
@@ -16739,8 +16739,8 @@
                                 L = C && K.call(t, "__wrapped__");
                             if (F || L) {
                                 var R = F ? e.value() : e,
-                                    B = L ? t.value() : t;
-                                return s || (s = new Ce), i(R, B, n, r, s)
+                                    O = L ? t.value() : t;
+                                return s || (s = new Ce), i(R, O, n, r, s)
                             }
                         }
                         if (!T) return !1;
@@ -16786,7 +16786,7 @@
                     }(e)) && (qe(e) ? Z : T).test($e(e))
                 }
 
-                function Be(e) {
+                function Oe(e) {
                     if (! function(e) {
                             var t = e && e.constructor,
                                 n = "function" == typeof t && t.prototype || V;
@@ -16797,7 +16797,7 @@
                     return t
                 }
 
-                function Oe(e, t, n, r, i, s) {
+                function Be(e, t, n, r, i, s) {
                     var l = n & o,
                         c = e.length,
                         u = t.length;
@@ -17019,7 +17019,7 @@
                 function Ye(e) {
                     return function(e) {
                         return null != e && Ve(e.length) && !qe(e)
-                    }(e) ? Se(e) : Be(e)
+                    }(e) ? Se(e) : Oe(e)
                 }
                 n.exports = function(e, t) {
                     return Le(e, t)
@@ -17029,7 +17029,7 @@
         Xhqo: function(e, t, n) {
             "use strict";
             var r = n("hwdV").Buffer,
-                i = n(463);
+                i = n(459);
 
             function o(e, t, n) {
                 e.copy(t, n)
@@ -17673,8 +17673,8 @@
                     F = 0,
                     L = 0,
                     R = 0,
-                    B = 0,
-                    O = null,
+                    O = 0,
+                    B = null,
                     D = 0,
                     M = new r.Buf16(16),
                     j = new r.Buf16(16),
@@ -17690,24 +17690,24 @@
                 if (L > 0 && (0 === e || 1 !== S)) return -1;
                 for (j[1] = 0, E = 1; E < 15; E++) j[E + 1] = j[E] + M[E];
                 for (_ = 0; _ < l; _++) 0 !== t[n + _] && (d[j[t[n + _]]++] = _);
-                if (0 === e ? (O = I = d, v = 19) : 1 === e ? (O = i, D -= 257, I = o, N -= 257, v = 256) : (O = a, I = s, v = -1), B = 0, _ = 0, E = C, b = u, T = A, F = 0, m = -1, g = (R = 1 << A) - 1, 1 === e && R > 852 || 2 === e && R > 592) return 1;
+                if (0 === e ? (B = I = d, v = 19) : 1 === e ? (B = i, D -= 257, I = o, N -= 257, v = 256) : (B = a, I = s, v = -1), O = 0, _ = 0, E = C, b = u, T = A, F = 0, m = -1, g = (R = 1 << A) - 1, 1 === e && R > 852 || 2 === e && R > 592) return 1;
                 for (;;) {
-                    y = E - F, d[_] < v ? (w = 0, k = d[_]) : d[_] > v ? (w = I[N + d[_]], k = O[D + d[_]]) : (w = 96, k = 0), p = 1 << E - F, C = f = 1 << T;
+                    y = E - F, d[_] < v ? (w = 0, k = d[_]) : d[_] > v ? (w = I[N + d[_]], k = B[D + d[_]]) : (w = 96, k = 0), p = 1 << E - F, C = f = 1 << T;
                     do {
-                        c[b + (B >> F) + (f -= p)] = y << 24 | w << 16 | k | 0
+                        c[b + (O >> F) + (f -= p)] = y << 24 | w << 16 | k | 0
                     } while (0 !== f);
-                    for (p = 1 << E - 1; B & p;) p >>= 1;
-                    if (0 !== p ? (B &= p - 1, B += p) : B = 0, _++, 0 == --M[E]) {
+                    for (p = 1 << E - 1; O & p;) p >>= 1;
+                    if (0 !== p ? (O &= p - 1, O += p) : O = 0, _++, 0 == --M[E]) {
                         if (E === S) break;
                         E = t[n + d[_]]
                     }
-                    if (E > A && (B & g) !== m) {
+                    if (E > A && (O & g) !== m) {
                         for (0 === F && (F = A), b += C, L = 1 << (T = E - F); T + F < S && !((L -= M[T + F]) <= 0);) T++, L <<= 1;
                         if (R += 1 << T, 1 === e && R > 852 || 2 === e && R > 592) return 1;
-                        c[m = B & g] = A << 24 | T << 16 | b - u | 0
+                        c[m = O & g] = A << 24 | T << 16 | b - u | 0
                     }
                 }
-                return 0 !== B && (c[b + B] = E - F << 24 | 64 << 16 | 0), h.bits = A, 0
+                return 0 !== O && (c[b + O] = E - F << 24 | 64 << 16 | 0), h.bits = A, 0
             }
         },
         acAU: function(e, t, n) {
@@ -18893,8 +18893,8 @@
                 F = 8,
                 L = 9,
                 R = 10,
-                B = 11,
-                O = 12,
+                O = 11,
+                B = 12,
                 D = 13,
                 M = 14,
                 j = 15,
@@ -18974,7 +18974,7 @@
                     Ae = new r.Buf8(4),
                     Te = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
                 if (!e || !e.state || !e.output || !e.input && 0 !== e.avail_in) return b;
-                (n = e.state).mode === O && (n.mode = D), ie = e.next_out, te = e.output, ae = e.avail_out, ne = e.next_in, ee = e.input, oe = e.avail_in, se = n.hold, le = n.bits, ce = oe, ue = ae, Ee = f;
+                (n = e.state).mode === B && (n.mode = D), ie = e.next_out, te = e.output, ae = e.avail_out, ne = e.next_in, ee = e.input, oe = e.avail_in, se = n.hold, le = n.bits, ce = oe, ue = ae, Ee = f;
                 e: for (;;) switch (n.mode) {
                     case x:
                         if (0 === n.wrap) {
@@ -19002,7 +19002,7 @@
                             e.msg = "invalid window size", n.mode = J;
                             break
                         }
-                        n.dmax = 1 << xe, e.adler = n.check = 1, n.mode = 512 & se ? R : O, se = 0, le = 0;
+                        n.dmax = 1 << xe, e.adler = n.check = 1, n.mode = 512 & se ? R : B, se = 0, le = 0;
                         break;
                     case E:
                         for (; le < 16;) {
@@ -19074,18 +19074,18 @@
                             }
                             se = 0, le = 0
                         }
-                        n.head && (n.head.hcrc = n.flags >> 9 & 1, n.head.done = !0), e.adler = n.check = 0, n.mode = O;
+                        n.head && (n.head.hcrc = n.flags >> 9 & 1, n.head.done = !0), e.adler = n.check = 0, n.mode = B;
                         break;
                     case R:
                         for (; le < 32;) {
                             if (0 === oe) break e;
                             oe--, se += ee[ne++] << le, le += 8
                         }
-                        e.adler = n.check = re(se), se = 0, le = 0, n.mode = B;
-                    case B:
-                        if (0 === n.havedict) return e.next_out = ie, e.avail_out = ae, e.next_in = ne, e.avail_in = oe, n.hold = se, n.bits = le, g;
-                        e.adler = n.check = 1, n.mode = O;
+                        e.adler = n.check = re(se), se = 0, le = 0, n.mode = O;
                     case O:
+                        if (0 === n.havedict) return e.next_out = ie, e.avail_out = ae, e.next_in = ne, e.avail_in = oe, n.hold = se, n.bits = le, g;
+                        e.adler = n.check = 1, n.mode = B;
+                    case B:
                         if (t === h || t === p) break e;
                     case D:
                         if (n.last) {
@@ -19132,7 +19132,7 @@
                             r.arraySet(te, ee, ne, pe, ie), oe -= pe, ne += pe, ae -= pe, ie += pe, n.length -= pe;
                             break
                         }
-                        n.mode = O;
+                        n.mode = B;
                         break;
                     case N:
                         for (; le < 14;) {
@@ -19220,7 +19220,7 @@
                         n.mode = W;
                     case W:
                         if (oe >= 6 && ae >= 258) {
-                            e.next_out = ie, e.avail_out = ae, e.next_in = ne, e.avail_in = oe, n.hold = se, n.bits = le, a(e, ue), ie = e.next_out, te = e.output, ae = e.avail_out, ne = e.next_in, ee = e.input, oe = e.avail_in, se = n.hold, le = n.bits, n.mode === O && (n.back = -1);
+                            e.next_out = ie, e.avail_out = ae, e.next_in = ne, e.avail_in = oe, n.hold = se, n.bits = le, a(e, ue), ie = e.next_out, te = e.output, ae = e.avail_out, ne = e.next_in, ee = e.input, oe = e.avail_in, se = n.hold, le = n.bits, n.mode === B && (n.back = -1);
                             break
                         }
                         for (n.back = 0; be = (Se = n.lencode[se & (1 << n.lenbits) - 1]) >>> 16 & 255, ve = 65535 & Se, !((ge = Se >>> 24) <= le);) {
@@ -19239,7 +19239,7 @@
                             break
                         }
                         if (32 & be) {
-                            n.back = -1, n.mode = O;
+                            n.back = -1, n.mode = B;
                             break
                         }
                         if (64 & be) {
@@ -19343,7 +19343,7 @@
                     default:
                         return b
                 }
-                return e.next_out = ie, e.avail_out = ae, e.next_in = ne, e.avail_in = oe, n.hold = se, n.bits = le, (n.wsize || ue !== e.avail_out && n.mode < J && (n.mode < X || t !== d)) && he(e, e.output, e.next_out, ue - e.avail_out) ? (n.mode = Z, y) : (ce -= e.avail_in, ue -= e.avail_out, e.total_in += ce, e.total_out += ue, n.total += ue, n.wrap && ue && (e.adler = n.check = n.flags ? o(n.check, te, ue, e.next_out - ue) : i(n.check, te, ue, e.next_out - ue)), e.data_type = n.bits + (n.last ? 64 : 0) + (n.mode === O ? 128 : 0) + (n.mode === z || n.mode === j ? 256 : 0), (0 === ce && 0 === ue || t === d) && Ee === f && (Ee = w), Ee)
+                return e.next_out = ie, e.avail_out = ae, e.next_in = ne, e.avail_in = oe, n.hold = se, n.bits = le, (n.wsize || ue !== e.avail_out && n.mode < J && (n.mode < X || t !== d)) && he(e, e.output, e.next_out, ue - e.avail_out) ? (n.mode = Z, y) : (ce -= e.avail_in, ue -= e.avail_out, e.total_in += ce, e.total_out += ue, n.total += ue, n.wrap && ue && (e.adler = n.check = n.flags ? o(n.check, te, ue, e.next_out - ue) : i(n.check, te, ue, e.next_out - ue)), e.data_type = n.bits + (n.last ? 64 : 0) + (n.mode === B ? 128 : 0) + (n.mode === z || n.mode === j ? 256 : 0), (0 === ce && 0 === ue || t === d) && Ee === f && (Ee = w), Ee)
             }, t.inflateEnd = function(e) {
                 if (!e || !e.state) return b;
                 var t = e.state;
@@ -19353,7 +19353,7 @@
                 return e && e.state ? 0 == (2 & (n = e.state).wrap) ? b : (n.head = t, t.done = !1, f) : b
             }, t.inflateSetDictionary = function(e, t) {
                 var n, r = t.length;
-                return e && e.state ? 0 !== (n = e.state).wrap && n.mode !== B ? b : n.mode === B && i(1, t, r, 0) !== n.check ? v : he(e, t, r, r) ? (n.mode = Z, y) : (n.havedict = 1, f) : b
+                return e && e.state ? 0 !== (n = e.state).wrap && n.mode !== O ? b : n.mode === O && i(1, t, r, 0) !== n.check ? v : he(e, t, r, r) ? (n.mode = Z, y) : (n.havedict = 1, f) : b
             }, t.inflateInfo = "pako inflate (from Nodeca project)"
         },
         oQ3n: function(e, t, n) {},
@@ -19387,8 +19387,8 @@
                 F = 8,
                 L = 286,
                 R = 30,
-                B = 19,
-                O = 2 * L + 1,
+                O = 19,
+                B = 2 * L + 1,
                 D = 15,
                 M = 3,
                 j = 258,
@@ -19549,7 +19549,7 @@
                 if (t === y && (t = 6), r < 0 ? (s = 0, r = -r) : r > 15 && (s = 2, r -= 16), o < 1 || o > A || n !== S || r < 8 || r > 15 || t < 0 || t > 9 || a < 0 || a > E) return J(e, g);
                 8 === r && (r = 9);
                 var l = new function() {
-                    this.strm = null, this.status = 0, this.pending_buf = null, this.pending_buf_size = 0, this.pending_out = 0, this.pending = 0, this.wrap = 0, this.gzhead = null, this.gzindex = 0, this.method = S, this.last_flush = -1, this.w_size = 0, this.w_bits = 0, this.w_mask = 0, this.window = null, this.window_size = 0, this.prev = null, this.head = null, this.ins_h = 0, this.hash_size = 0, this.hash_bits = 0, this.hash_mask = 0, this.hash_shift = 0, this.block_start = 0, this.match_length = 0, this.prev_match = 0, this.match_available = 0, this.strstart = 0, this.match_start = 0, this.lookahead = 0, this.prev_length = 0, this.max_chain_length = 0, this.max_lazy_match = 0, this.level = 0, this.strategy = 0, this.good_match = 0, this.nice_match = 0, this.dyn_ltree = new i.Buf16(2 * O), this.dyn_dtree = new i.Buf16(2 * (2 * R + 1)), this.bl_tree = new i.Buf16(2 * (2 * B + 1)), Q(this.dyn_ltree), Q(this.dyn_dtree), Q(this.bl_tree), this.l_desc = null, this.d_desc = null, this.bl_desc = null, this.bl_count = new i.Buf16(D + 1), this.heap = new i.Buf16(2 * L + 1), Q(this.heap), this.heap_len = 0, this.heap_max = 0, this.depth = new i.Buf16(2 * L + 1), Q(this.depth), this.l_buf = 0, this.lit_bufsize = 0, this.last_lit = 0, this.d_buf = 0, this.opt_len = 0, this.static_len = 0, this.matches = 0, this.insert = 0, this.bi_buf = 0, this.bi_valid = 0
+                    this.strm = null, this.status = 0, this.pending_buf = null, this.pending_buf_size = 0, this.pending_out = 0, this.pending = 0, this.wrap = 0, this.gzhead = null, this.gzindex = 0, this.method = S, this.last_flush = -1, this.w_size = 0, this.w_bits = 0, this.w_mask = 0, this.window = null, this.window_size = 0, this.prev = null, this.head = null, this.ins_h = 0, this.hash_size = 0, this.hash_bits = 0, this.hash_mask = 0, this.hash_shift = 0, this.block_start = 0, this.match_length = 0, this.prev_match = 0, this.match_available = 0, this.strstart = 0, this.match_start = 0, this.lookahead = 0, this.prev_length = 0, this.max_chain_length = 0, this.max_lazy_match = 0, this.level = 0, this.strategy = 0, this.good_match = 0, this.nice_match = 0, this.dyn_ltree = new i.Buf16(2 * B), this.dyn_dtree = new i.Buf16(2 * (2 * R + 1)), this.bl_tree = new i.Buf16(2 * (2 * O + 1)), Q(this.dyn_ltree), Q(this.dyn_dtree), Q(this.bl_tree), this.l_desc = null, this.d_desc = null, this.bl_desc = null, this.bl_count = new i.Buf16(D + 1), this.heap = new i.Buf16(2 * L + 1), Q(this.heap), this.heap_len = 0, this.heap_max = 0, this.depth = new i.Buf16(2 * L + 1), Q(this.depth), this.l_buf = 0, this.lit_bufsize = 0, this.last_lit = 0, this.d_buf = 0, this.opt_len = 0, this.static_len = 0, this.matches = 0, this.insert = 0, this.bi_buf = 0, this.bi_valid = 0
                 };
                 return e.state = l, l.strm = e, l.wrap = s, l.gzhead = null, l.w_bits = r, l.w_size = 1 << l.w_bits, l.w_mask = l.w_size - 1, l.hash_bits = o + 7, l.hash_size = 1 << l.hash_bits, l.hash_mask = l.hash_size - 1, l.hash_shift = ~~((l.hash_bits + M - 1) / M), l.window = new i.Buf8(2 * l.w_size), l.head = new i.Buf16(l.hash_size), l.prev = new i.Buf16(l.w_size), l.lit_bufsize = 1 << o + 6, l.pending_buf_size = 4 * l.lit_bufsize, l.pending_buf = new i.Buf8(l.pending_buf_size), l.d_buf = 1 * l.lit_bufsize, l.l_buf = 3 * l.lit_bufsize, l.level = t, l.strategy = a, l.method = n, de(e)
             }
@@ -19726,7 +19726,7 @@
                     u = t.Uint8Array || function() {};
                 var d = n("Onz0");
                 d.inherits = n("P7XM");
-                var h = n(464),
+                var h = n(460),
                     p = void 0;
                 p = h && h.debuglog ? h.debuglog("stream") : function() {};
                 var f, m = n("Xhqo"),
@@ -19870,13 +19870,13 @@
                     var n
                 }
 
-                function B(e) {
+                function O(e) {
                     var t = e._readableState;
                     if (t.length > 0) throw new Error('"endReadable()" called on non-empty stream');
-                    t.endEmitted || (t.ended = !0, i.nextTick(O, t, e))
+                    t.endEmitted || (t.ended = !0, i.nextTick(B, t, e))
                 }
 
-                function O(e, t) {
+                function B(e, t) {
                     e.endEmitted || 0 !== e.length || (e.endEmitted = !0, t.readable = !1, t.emit("end"))
                 }
 
@@ -19889,10 +19889,10 @@
                     p("read", e), e = parseInt(e, 10);
                     var t = this._readableState,
                         n = e;
-                    if (0 !== e && (t.emittedReadable = !1), 0 === e && t.needReadable && (t.length >= t.highWaterMark || t.ended)) return p("read: emitReadable", t.length, t.ended), 0 === t.length && t.ended ? B(this) : _(this), null;
-                    if (0 === (e = E(e, t)) && t.ended) return 0 === t.length && B(this), null;
+                    if (0 !== e && (t.emittedReadable = !1), 0 === e && t.needReadable && (t.length >= t.highWaterMark || t.ended)) return p("read: emitReadable", t.length, t.ended), 0 === t.length && t.ended ? O(this) : _(this), null;
+                    if (0 === (e = E(e, t)) && t.ended) return 0 === t.length && O(this), null;
                     var r, i = t.needReadable;
-                    return p("need readable", i), (0 === t.length || t.length - e < t.highWaterMark) && p("length less than watermark", i = !0), t.ended || t.reading ? p("reading or ended", i = !1) : i && (p("do read"), t.reading = !0, t.sync = !0, 0 === t.length && (t.needReadable = !0), this._read(t.highWaterMark), t.sync = !1, t.reading || (e = E(n, t))), null === (r = e > 0 ? R(e, t) : null) ? (t.needReadable = !0, e = 0) : t.length -= e, 0 === t.length && (t.ended || (t.needReadable = !0), n !== e && t.ended && B(this)), null !== r && this.emit("data", r), r
+                    return p("need readable", i), (0 === t.length || t.length - e < t.highWaterMark) && p("length less than watermark", i = !0), t.ended || t.reading ? p("reading or ended", i = !1) : i && (p("do read"), t.reading = !0, t.sync = !0, 0 === t.length && (t.needReadable = !0), this._read(t.highWaterMark), t.sync = !1, t.reading || (e = E(n, t))), null === (r = e > 0 ? R(e, t) : null) ? (t.needReadable = !0, e = 0) : t.length -= e, 0 === t.length && (t.ended || (t.needReadable = !0), n !== e && t.ended && O(this)), null !== r && this.emit("data", r), r
                 }, y.prototype._read = function(e) {
                     this.emit("error", new Error("_read() is not implemented"))
                 }, y.prototype.pipe = function(e, t) {
@@ -20567,13 +20567,13 @@
                     if (e + t > n) throw new RangeError("Trying to access beyond buffer length")
                 }
 
-                function B(e, t, n, r, i, o) {
+                function O(e, t, n, r, i, o) {
                     if (!l.isBuffer(e)) throw new TypeError('"buffer" argument must be a Buffer instance');
                     if (t > i || t < o) throw new RangeError('"value" argument is out of bounds');
                     if (n + r > e.length) throw new RangeError("Index out of range")
                 }
 
-                function O(e, t, n, r) {
+                function B(e, t, n, r) {
                     t < 0 && (t = 65535 + t + 1);
                     for (var i = 0, o = Math.min(e.length - n, 2); i < o; ++i) e[n + i] = (t & 255 << 8 * (r ? i : 1 - i)) >>> 8 * (r ? i : 1 - i)
                 }
@@ -20653,31 +20653,31 @@
                 }, l.prototype.readDoubleBE = function(e, t) {
                     return t || R(e, 8, this.length), i.read(this, e, !1, 52, 8)
                 }, l.prototype.writeUIntLE = function(e, t, n, r) {
-                    (e = +e, t |= 0, n |= 0, r) || B(this, e, t, n, Math.pow(2, 8 * n) - 1, 0);
+                    (e = +e, t |= 0, n |= 0, r) || O(this, e, t, n, Math.pow(2, 8 * n) - 1, 0);
                     var i = 1,
                         o = 0;
                     for (this[t] = 255 & e; ++o < n && (i *= 256);) this[t + o] = e / i & 255;
                     return t + n
                 }, l.prototype.writeUIntBE = function(e, t, n, r) {
-                    (e = +e, t |= 0, n |= 0, r) || B(this, e, t, n, Math.pow(2, 8 * n) - 1, 0);
+                    (e = +e, t |= 0, n |= 0, r) || O(this, e, t, n, Math.pow(2, 8 * n) - 1, 0);
                     var i = n - 1,
                         o = 1;
                     for (this[t + i] = 255 & e; --i >= 0 && (o *= 256);) this[t + i] = e / o & 255;
                     return t + n
                 }, l.prototype.writeUInt8 = function(e, t, n) {
-                    return e = +e, t |= 0, n || B(this, e, t, 1, 255, 0), l.TYPED_ARRAY_SUPPORT || (e = Math.floor(e)), this[t] = 255 & e, t + 1
+                    return e = +e, t |= 0, n || O(this, e, t, 1, 255, 0), l.TYPED_ARRAY_SUPPORT || (e = Math.floor(e)), this[t] = 255 & e, t + 1
                 }, l.prototype.writeUInt16LE = function(e, t, n) {
-                    return e = +e, t |= 0, n || B(this, e, t, 2, 65535, 0), l.TYPED_ARRAY_SUPPORT ? (this[t] = 255 & e, this[t + 1] = e >>> 8) : O(this, e, t, !0), t + 2
+                    return e = +e, t |= 0, n || O(this, e, t, 2, 65535, 0), l.TYPED_ARRAY_SUPPORT ? (this[t] = 255 & e, this[t + 1] = e >>> 8) : B(this, e, t, !0), t + 2
                 }, l.prototype.writeUInt16BE = function(e, t, n) {
-                    return e = +e, t |= 0, n || B(this, e, t, 2, 65535, 0), l.TYPED_ARRAY_SUPPORT ? (this[t] = e >>> 8, this[t + 1] = 255 & e) : O(this, e, t, !1), t + 2
+                    return e = +e, t |= 0, n || O(this, e, t, 2, 65535, 0), l.TYPED_ARRAY_SUPPORT ? (this[t] = e >>> 8, this[t + 1] = 255 & e) : B(this, e, t, !1), t + 2
                 }, l.prototype.writeUInt32LE = function(e, t, n) {
-                    return e = +e, t |= 0, n || B(this, e, t, 4, 4294967295, 0), l.TYPED_ARRAY_SUPPORT ? (this[t + 3] = e >>> 24, this[t + 2] = e >>> 16, this[t + 1] = e >>> 8, this[t] = 255 & e) : D(this, e, t, !0), t + 4
+                    return e = +e, t |= 0, n || O(this, e, t, 4, 4294967295, 0), l.TYPED_ARRAY_SUPPORT ? (this[t + 3] = e >>> 24, this[t + 2] = e >>> 16, this[t + 1] = e >>> 8, this[t] = 255 & e) : D(this, e, t, !0), t + 4
                 }, l.prototype.writeUInt32BE = function(e, t, n) {
-                    return e = +e, t |= 0, n || B(this, e, t, 4, 4294967295, 0), l.TYPED_ARRAY_SUPPORT ? (this[t] = e >>> 24, this[t + 1] = e >>> 16, this[t + 2] = e >>> 8, this[t + 3] = 255 & e) : D(this, e, t, !1), t + 4
+                    return e = +e, t |= 0, n || O(this, e, t, 4, 4294967295, 0), l.TYPED_ARRAY_SUPPORT ? (this[t] = e >>> 24, this[t + 1] = e >>> 16, this[t + 2] = e >>> 8, this[t + 3] = 255 & e) : D(this, e, t, !1), t + 4
                 }, l.prototype.writeIntLE = function(e, t, n, r) {
                     if (e = +e, t |= 0, !r) {
                         var i = Math.pow(2, 8 * n - 1);
-                        B(this, e, t, n, i - 1, -i)
+                        O(this, e, t, n, i - 1, -i)
                     }
                     var o = 0,
                         a = 1,
@@ -20687,7 +20687,7 @@
                 }, l.prototype.writeIntBE = function(e, t, n, r) {
                     if (e = +e, t |= 0, !r) {
                         var i = Math.pow(2, 8 * n - 1);
-                        B(this, e, t, n, i - 1, -i)
+                        O(this, e, t, n, i - 1, -i)
                     }
                     var o = n - 1,
                         a = 1,
@@ -20695,15 +20695,15 @@
                     for (this[t + o] = 255 & e; --o >= 0 && (a *= 256);) e < 0 && 0 === s && 0 !== this[t + o + 1] && (s = 1), this[t + o] = (e / a >> 0) - s & 255;
                     return t + n
                 }, l.prototype.writeInt8 = function(e, t, n) {
-                    return e = +e, t |= 0, n || B(this, e, t, 1, 127, -128), l.TYPED_ARRAY_SUPPORT || (e = Math.floor(e)), e < 0 && (e = 255 + e + 1), this[t] = 255 & e, t + 1
+                    return e = +e, t |= 0, n || O(this, e, t, 1, 127, -128), l.TYPED_ARRAY_SUPPORT || (e = Math.floor(e)), e < 0 && (e = 255 + e + 1), this[t] = 255 & e, t + 1
                 }, l.prototype.writeInt16LE = function(e, t, n) {
-                    return e = +e, t |= 0, n || B(this, e, t, 2, 32767, -32768), l.TYPED_ARRAY_SUPPORT ? (this[t] = 255 & e, this[t + 1] = e >>> 8) : O(this, e, t, !0), t + 2
+                    return e = +e, t |= 0, n || O(this, e, t, 2, 32767, -32768), l.TYPED_ARRAY_SUPPORT ? (this[t] = 255 & e, this[t + 1] = e >>> 8) : B(this, e, t, !0), t + 2
                 }, l.prototype.writeInt16BE = function(e, t, n) {
-                    return e = +e, t |= 0, n || B(this, e, t, 2, 32767, -32768), l.TYPED_ARRAY_SUPPORT ? (this[t] = e >>> 8, this[t + 1] = 255 & e) : O(this, e, t, !1), t + 2
+                    return e = +e, t |= 0, n || O(this, e, t, 2, 32767, -32768), l.TYPED_ARRAY_SUPPORT ? (this[t] = e >>> 8, this[t + 1] = 255 & e) : B(this, e, t, !1), t + 2
                 }, l.prototype.writeInt32LE = function(e, t, n) {
-                    return e = +e, t |= 0, n || B(this, e, t, 4, 2147483647, -2147483648), l.TYPED_ARRAY_SUPPORT ? (this[t] = 255 & e, this[t + 1] = e >>> 8, this[t + 2] = e >>> 16, this[t + 3] = e >>> 24) : D(this, e, t, !0), t + 4
+                    return e = +e, t |= 0, n || O(this, e, t, 4, 2147483647, -2147483648), l.TYPED_ARRAY_SUPPORT ? (this[t] = 255 & e, this[t + 1] = e >>> 8, this[t + 2] = e >>> 16, this[t + 3] = e >>> 24) : D(this, e, t, !0), t + 4
                 }, l.prototype.writeInt32BE = function(e, t, n) {
-                    return e = +e, t |= 0, n || B(this, e, t, 4, 2147483647, -2147483648), e < 0 && (e = 4294967295 + e + 1), l.TYPED_ARRAY_SUPPORT ? (this[t] = e >>> 24, this[t + 1] = e >>> 16, this[t + 2] = e >>> 8, this[t + 3] = 255 & e) : D(this, e, t, !1), t + 4
+                    return e = +e, t |= 0, n || O(this, e, t, 4, 2147483647, -2147483648), e < 0 && (e = 4294967295 + e + 1), l.TYPED_ARRAY_SUPPORT ? (this[t] = e >>> 24, this[t + 1] = e >>> 16, this[t + 2] = e >>> 8, this[t + 3] = 255 & e) : D(this, e, t, !1), t + 4
                 }, l.prototype.writeFloatLE = function(e, t, n) {
                     return j(this, e, t, !0, n)
                 }, l.prototype.writeFloatBE = function(e, t, n) {
@@ -24005,7 +24005,7 @@
                     L = S ? S.prototype : void 0,
                     R = L ? L.toString : void 0;
 
-                function B(e) {
+                function O(e) {
                     var t = -1,
                         n = e ? e.length : 0;
                     for (this.clear(); ++t < n;) {
@@ -24014,7 +24014,7 @@
                     }
                 }
 
-                function O(e) {
+                function B(e) {
                     var t = -1,
                         n = e ? e.length : 0;
                     for (this.clear(); ++t < n;) {
@@ -24089,43 +24089,43 @@
                     }(e, t);
                     return I(n) ? n : void 0
                 }
-                B.prototype.clear = function() {
+                O.prototype.clear = function() {
                     this.__data__ = F ? F(null) : {}
-                }, B.prototype.delete = function(e) {
+                }, O.prototype.delete = function(e) {
                     return this.has(e) && delete this.__data__[e]
-                }, B.prototype.get = function(e) {
+                }, O.prototype.get = function(e) {
                     var t = this.__data__;
                     if (F) {
                         var n = t[e];
                         return n === r ? void 0 : n
                     }
                     return E.call(t, e) ? t[e] : void 0
-                }, B.prototype.has = function(e) {
+                }, O.prototype.has = function(e) {
                     var t = this.__data__;
                     return F ? void 0 !== t[e] : E.call(t, e)
-                }, B.prototype.set = function(e, t) {
+                }, O.prototype.set = function(e, t) {
                     return this.__data__[e] = F && void 0 === t ? r : t, this
-                }, O.prototype.clear = function() {
+                }, B.prototype.clear = function() {
                     this.__data__ = []
-                }, O.prototype.delete = function(e) {
+                }, B.prototype.delete = function(e) {
                     var t = this.__data__,
                         n = M(t, e);
                     return !(n < 0 || (n == t.length - 1 ? t.pop() : A.call(t, n, 1), 0))
-                }, O.prototype.get = function(e) {
+                }, B.prototype.get = function(e) {
                     var t = this.__data__,
                         n = M(t, e);
                     return n < 0 ? void 0 : t[n][1]
-                }, O.prototype.has = function(e) {
+                }, B.prototype.has = function(e) {
                     return M(this.__data__, e) > -1
-                }, O.prototype.set = function(e, t) {
+                }, B.prototype.set = function(e, t) {
                     var n = this.__data__,
                         r = M(n, e);
                     return r < 0 ? n.push([e, t]) : n[r][1] = t, this
                 }, D.prototype.clear = function() {
                     this.__data__ = {
-                        hash: new B,
-                        map: new(T || O),
-                        string: new B
+                        hash: new O,
+                        map: new(T || B),
+                        string: new O
                     }
                 }, D.prototype.delete = function(e) {
                     return N(this, e).delete(e)

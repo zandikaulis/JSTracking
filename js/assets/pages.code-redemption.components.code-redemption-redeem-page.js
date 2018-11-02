@@ -33,17 +33,17 @@
             }), n.d(t, "e", function() {
                 return v
             }), n.d(t, "i", function() {
-                return y
-            }), n.d(t, "h", function() {
                 return S
+            }), n.d(t, "h", function() {
+                return y
             }), n.d(t, "f", function() {
                 return E
             }), n.d(t, "k", function() {
                 return C
             }), n.d(t, "u", function() {
-                return _
-            }), n.d(t, "s", function() {
                 return O
+            }), n.d(t, "s", function() {
+                return _
             }), n.d(t, "d", function() {
                 return R
             });
@@ -67,12 +67,12 @@
                 k = "UNKNOWN",
                 b = "FIRST_PARTY",
                 v = "CUSTOM",
-                y = "SPONSORED",
-                S = "THIRD_PARTY",
+                S = "SPONSORED",
+                y = "THIRD_PARTY",
                 E = "DISPLAY_ONLY",
                 C = ((i = {})[o.a.Gray] = "#979797", i[o.a.Purple] = "#9c3ee8", i[o.a.Green] = "#1db2a5", i[o.a.Blue] = "#0099fe", i[o.a.Red] = "#f43021", i[o.a.Yellow] = "#f3a71a", i),
-                _ = "bits_sponsored_cheermotes",
-                O = "bits_sponsored_cheermotes_announcement",
+                O = "bits_sponsored_cheermotes",
+                _ = "bits_sponsored_cheermotes_announcement",
                 R = "bits_charity_event"
         },
         "E2x/": function(e, t, n) {},
@@ -398,8 +398,8 @@
                 k = n("GnwI"),
                 b = n("5ELF"),
                 v = n("yR8l"),
-                y = n("8Ad5"),
-                S = n("geRD"),
+                S = n("8Ad5"),
+                y = n("geRD"),
                 E = n("Ue10"),
                 C = function() {
                     return c.createElement(E.Xa, {
@@ -417,12 +417,12 @@
                         }
                     }, c.createElement(E.Za, null)))
                 },
-                _ = n("KXOz");
+                O = n("KXOz");
             n("lAq8");
             ! function(e) {
                 e.CannotClaimMessage = "claimed", e.ExpiredMessage = "expired_message"
             }(i || (i = {}));
-            var O = function(e) {
+            var _ = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -479,7 +479,7 @@
                         }
                     }, t
                 }(c.Component),
-                R = Object(d.compose)(Object(v.a)(_, {
+                R = Object(d.compose)(Object(v.a)(O, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -489,7 +489,7 @@
                             }
                         }
                     }
-                }))(O);
+                }))(_);
             var w, N = Object(o.connect)(function(e) {
                     return {
                         user: Object(a.e)(e)
@@ -642,7 +642,7 @@
                                             }, this.setState({
                                                 code: "",
                                                 isCodeValid: !1
-                                            }), t = Object(S.a)(e), n.label = 1;
+                                            }), t = Object(y.a)(e), n.label = 1;
                                         case 1:
                                             return n.trys.push([1, 3, , 4]), [4, this.props.redeemKey(t)];
                                         case 2:
@@ -667,7 +667,7 @@
                                     switch (n.label) {
                                         case 0:
                                             switch (t = e.charCode || e.keyCode, t) {
-                                                case y.a.Enter:
+                                                case S.a.Enter:
                                                     return [3, 1]
                                             }
                                             return [3, 4];
@@ -707,7 +707,7 @@
                             padding: {
                                 bottom: 4
                             },
-                            textAlign: E.Pb.Left
+                            textAlign: E.Ob.Left
                         }, c.createElement(E.W, {
                             bold: !0,
                             fontSize: E.Ca.Size1,
@@ -724,7 +724,7 @@
                             "x:bold": function() {
                                 return c.createElement(E.W, {
                                     bold: !0,
-                                    type: E.Tb.Span
+                                    type: E.Sb.Span
                                 }, e.props.user.displayName)
                             }
                         }, "RedeemPage")))), c.createElement(E.Xa, {
@@ -747,7 +747,7 @@
                             margin: {
                                 bottom: 1
                             },
-                            textAlign: E.Pb.Left
+                            textAlign: E.Ob.Left
                         }, c.createElement(E.Ra, {
                             autoFocus: !0,
                             placeholder: "00000-00000-00000",

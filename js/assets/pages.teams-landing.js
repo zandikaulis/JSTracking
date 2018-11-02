@@ -52,7 +52,7 @@
                         svgAsset: s.rb.Team,
                         title: e.displayName,
                         tooltip: Object(r.d)("Team", "TeamLink")
-                    }, Object(s.hc)(e)))
+                    }, Object(s.gc)(e)))
                 };
             t.d(n, "a", function() {
                 return l
@@ -528,8 +528,8 @@
                 u = t("aCAx"),
                 m = t("kRBY"),
                 p = t("GnwI"),
-                v = t("oJmH"),
-                g = t("/7QA"),
+                g = t("oJmH"),
+                v = t("/7QA"),
                 b = t("2+sX"),
                 k = t("u5aL"),
                 f = t("eJ65"),
@@ -641,11 +641,11 @@
                         }) && (c = !0);
                         var u = null;
                         t && t.subscriptionBenefit && (u = t.subscriptionBenefit.purchasedWithPrime ? S.a.Prime : t.subscriptionBenefit.tier, this.modalLevel = "");
-                        var m, p = l ? Object(g.d)("All-Access Pass", "SubscribeButton") : Object(g.d)("Get the All-Access Pass", "SubscribeButton"),
-                            v = t && Object(F.h)(o, t.subscriptionBenefit);
+                        var m, p = l ? Object(v.d)("All-Access Pass", "SubscribeButton") : Object(v.d)("Get the All-Access Pass", "SubscribeButton"),
+                            g = t && Object(F.h)(o, t.subscriptionBenefit);
                         if (l) {
                             var b = "";
-                            if (b = c ? Object(g.d)("Subscribed", "SubscribeButton") : v ? Object(g.d)("Continue Sub for $1", "SubscribeButton") : Object(g.d)("Gift A Sub", "SubscribeButton"), m = this.props.hostChannelID ? Object(g.d)("Subscribed to {username}", {
+                            if (b = c ? Object(v.d)("Subscribed", "SubscribeButton") : g ? Object(v.d)("Continue Sub for $1", "SubscribeButton") : Object(v.d)("Gift A Sub", "SubscribeButton"), m = this.props.hostChannelID ? Object(v.d)("Subscribed to {username}", {
                                     username: n.displayName || ""
                                 }, "SubscribeButton") : b, c && !d) return r.createElement(I.z, {
                                 disabled: !0,
@@ -653,9 +653,9 @@
                                 icon: I.rb.Star
                             }, m);
                             d && (m = p)
-                        } else m = d ? p : this.props.hostChannelID ? Object(g.d)("Subscribe to {username}", {
+                        } else m = d ? p : this.props.hostChannelID ? Object(v.d)("Subscribe to {username}", {
                             username: n.displayName || ""
-                        }, "SubscribeButton") : Object(g.d)("Subscribe", "SubscribeButton");
+                        }, "SubscribeButton") : Object(v.d)("Subscribe", "SubscribeButton");
                         var k = r.createElement(I.z, {
                                 ariaLabel: m,
                                 "data-a-target": l ? "subscribed-button" : "subscribe-button",
@@ -684,7 +684,7 @@
                             "data-test-selector": i.BalloonLayerButton,
                             refDelegate: this.setContainerRefDelegate
                         }, k) : r.createElement(I.Xa, {
-                            className: v ? "subscribe-button--promo" : ""
+                            className: g ? "subscribe-button--promo" : ""
                         }, r.createElement(f.a, {
                             "data-test-selector": i.DefaultButton,
                             onToggle: this.handleMenuToggle
@@ -702,7 +702,7 @@
                     }, n.prototype.isUserDataReady = function(e) {
                         return e.data && e.data.user && !e.data.loading && !e.data.error
                     }, n.prototype.checkAndDisplaySubscriptionCheckout = function() {
-                        var e = g.n.get(d.b, "");
+                        var e = v.n.get(d.b, "");
                         if (e) {
                             var n = this.props.data.user;
                             if (n && n.subscriptionProducts) n.subscriptionProducts.filter(function(e) {
@@ -710,9 +710,9 @@
                             }).map(function(e) {
                                 return e.name
                             }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
-                                mysteryGiftCount: Number(g.n.get(d.a, "")),
+                                mysteryGiftCount: Number(v.n.get(d.a, "")),
                                 productName: e,
-                                recipientLogin: g.n.get(d.c, ""),
+                                recipientLogin: v.n.get(d.c, ""),
                                 trackingContext: {
                                     source: w.c.ChannelSubscribeButton
                                 }
@@ -720,7 +720,7 @@
                         }
                     }, n
                 }(r.Component),
-                M = Object(v.compose)(Object(h.a)(T, {
+                M = Object(g.compose)(Object(h.a)(T, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1771,7 +1771,7 @@
 
             function d(e) {
                 return i.__awaiter(this, void 0, void 0, function() {
-                    var n, t, l, d, c, u, m, p, v, g, b, k, f;
+                    var n, t, l, d, c, u, m, p, g, v, b, k, f;
                     return i.__generator(this, function(i) {
                         switch (i.label) {
                             case 0:
@@ -1795,7 +1795,7 @@
                                     channelID: e.channelID
                                 }), m = null, d && t && ((p = d && d.data && d.data.video) ? m = Object(o.a)(p.broadcastType) : a.k.error(new Error("GraphQL empty response"), "Query for video info in SubEvent reporting returned no data.", {
                                     currentVideoID: n
-                                })), v = u && u.self, g = v ? !!v.subscriptionBenefit : null, b = v && v.subscriptionBenefit && v.subscriptionBenefit.purchasedWithPrime || !1, k = v ? v.canPrimeSubscribe : null, f = {
+                                })), g = u && u.self, v = g ? !!g.subscriptionBenefit : null, b = g && g.subscriptionBenefit && g.subscriptionBenefit.purchasedWithPrime || !1, k = g ? g.canPrimeSubscribe : null, f = {
                                     action: e.action,
                                     can_subscribe: k,
                                     channel: e.channelLogin,
@@ -1805,8 +1805,8 @@
                                     host_channel: e.hostChannelLogin,
                                     host_channel_id: e.hostChannelID,
                                     is_menu_open: e.isMenuOpen,
-                                    is_subscribed: g,
-                                    is_subscribed_current_tier: v && v.subscriptionBenefit && v.subscriptionBenefit.tier,
+                                    is_subscribed: v,
+                                    is_subscribed_current_tier: g && g.subscriptionBenefit && g.subscriptionBenefit.tier,
                                     mystery_gift_count: e.mysteryGiftCount || null,
                                     sub_location: e.sub_location,
                                     sub_recipient: e.giftRecipient,
@@ -1870,8 +1870,8 @@
                 u = t("/7QA"),
                 m = t("ZDlU"),
                 p = t("LA8z"),
-                v = t("4VQm"),
-                g = t("yR8l"),
+                g = t("4VQm"),
+                v = t("yR8l"),
                 b = t("8/mp"),
                 k = t("Ue10"),
                 f = function(e) {
@@ -2101,7 +2101,7 @@
                                 flexDirection: k.Aa.Column,
                                 background: k.r.Base,
                                 elevation: 1
-                            }, i.createElement(v.b, {
+                            }, i.createElement(g.b, {
                                 scrollRef: this.saveScrollRef
                             }, i.createElement(k.Xa, null, n, i.createElement("div", {
                                 style: {
@@ -2166,7 +2166,7 @@
                         }, Object(u.d)("Back to Top", "TeamLandingPage_MemberList")))) : null
                     }, n
                 }(i.Component),
-                T = Object(a.compose)(Object(l.b)("MemberList"), Object(g.a)(w, {
+                T = Object(a.compose)(Object(l.b)("MemberList"), Object(v.a)(w, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2247,7 +2247,7 @@
                         margin: {
                             top: 1
                         }
-                    }, i.createElement(k.cc, null, i.createElement(L, {
+                    }, i.createElement(k.bc, null, i.createElement(L, {
                         source: e.description
                     })))) : null
                 }),
@@ -2343,7 +2343,7 @@
                         }, i.createElement(k.U, {
                             to: "/" + this.props.channelLogin
                         }, i.createElement(k.W, {
-                            type: k.Tb.Span,
+                            type: k.Sb.Span,
                             fontSize: k.Ca.Size4,
                             title: e.displayName
                         }, e.displayName))), i.createElement(k.Cb, {
@@ -2389,10 +2389,10 @@
                             size: k.w.Medium,
                             direction: k.v.BottomRight
                         }, i.createElement(k.Xa, {
-                            zIndex: k.gc.Above,
+                            zIndex: k.fc.Above,
                             padding: 1
                         }, i.createElement(k.W, {
-                            type: k.Tb.Span,
+                            type: k.Sb.Span,
                             fontSize: k.Ca.Size6,
                             color: k.O.Alt2
                         }, e.description)))), i.createElement(k.Xa, {
@@ -2422,7 +2422,7 @@
                             },
                             ellipsis: !0
                         }, i.createElement(k.W, {
-                            type: k.Tb.Span,
+                            type: k.Sb.Span,
                             fontSize: k.Ca.Size4,
                             title: e
                         }, e)), i.createElement(k.Xa, {
@@ -2445,7 +2445,7 @@
                         }))))
                     }, n
                 }(i.Component),
-                W = Object(a.compose)(Object(l.b)("TeamsPlayer"), Object(g.a)(X, {
+                W = Object(a.compose)(Object(l.b)("TeamsPlayer"), Object(v.a)(X, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2496,7 +2496,7 @@
                             className: "teams-page-body__outer-container teams-page-body__team-asset",
                             style: this.getBackgroundStyle(),
                             "data-test-selector": S.BackgroundImage
-                        }, i.createElement(v.b, null, i.createElement(k.Xa, {
+                        }, i.createElement(g.b, null, i.createElement(k.Xa, {
                             display: k.X.Flex,
                             justifyContent: k.Wa.Center,
                             padding: {
@@ -2578,7 +2578,7 @@
                         }(e) : ""
                     }, n
                 }(i.Component),
-                H = Object(a.compose)(c.a, Object(l.b)("TeamsPageBody"), Object(g.a)(q, {
+                H = Object(a.compose)(c.a, Object(l.b)("TeamsPageBody"), Object(v.a)(q, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2711,18 +2711,18 @@
                             target: "_blank",
                             className: e,
                             onClick: t.onShareClickHandler
-                        }, Object(d.hc)(t.props), {
+                        }, Object(d.gc)(t.props), {
                             download: t.props.text
                         }), t.renderIcon()) : t.isLink() ? r.createElement("a", a.__assign({
                             href: t.getLinkTarget(),
                             target: "_blank",
                             className: e,
                             onClick: t.onShareClickHandler
-                        }, Object(d.hc)(t.props)), t.renderIcon()) : r.createElement("button", a.__assign({
+                        }, Object(d.gc)(t.props)), t.renderIcon()) : r.createElement("button", a.__assign({
                             onClick: t.copyPageUrl,
                             onMouseLeave: t.clearIsCopiedStatus,
                             className: e
-                        }, Object(d.hc)(t.props)), t.renderIcon())
+                        }, Object(d.gc)(t.props)), t.renderIcon())
                     }, t.onShareClickHandler = function() {
                         t.props.onShareClick && t.props.onShareClick(t.props.type)
                     }, t.clearIsCopiedStatus = function() {
@@ -2822,9 +2822,9 @@
                 return a.__extends(n, e), n.prototype.render = function() {
                     return r.createElement(d.Xa, {
                         className: "social-button"
-                    }, r.createElement(d.Wb, {
+                    }, r.createElement(d.Vb, {
                         label: this.getTooltipFromType(),
-                        direction: d.Yb.Bottom
+                        direction: d.Xb.Bottom
                     }, this.renderLink()))
                 }, n
             }(r.Component)
@@ -3737,10 +3737,10 @@
                         },
                         display: r.X.Flex,
                         alignItems: r.f.Center
-                    }, a.createElement(r.Wb, {
-                        align: r.Xb.Left,
+                    }, a.createElement(r.Vb, {
+                        align: r.Wb.Left,
                         label: e.tooltip,
-                        direction: r.Yb.Bottom
+                        direction: r.Xb.Bottom
                     }, a.createElement(r.Xa, {
                         margin: {
                             right: .5
@@ -3756,7 +3756,7 @@
                         ellipsis: !0
                     }, a.createElement(r.U, i.__assign({
                         to: e.linkTo
-                    }, Object(r.hc)(e), {
+                    }, Object(r.gc)(e), {
                         targetBlank: !0
                     }), e.title))))
                 };

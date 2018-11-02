@@ -1,7 +1,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
     [144], {
-        "4HoE": function(e, t) {
-            var n = {
+        "4HoE": function(e, n) {
+            var t = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -134,7 +134,7 @@
                     end: 119
                 }
             };
-            n.loc.source = {
+            t.loc.source = {
                 body: "mutation ModUser($input: ModUserInput!){\nmodUser(input: $input) {\nchannel {\nid\n}\ntarget {\nid\nlogin\n}\nerror {\ncode\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
@@ -142,10 +142,10 @@
                     column: 1
                 }
             };
-            e.exports = n
+            e.exports = t
         },
-        "91YW": function(e, t) {
-            var n = {
+        "91YW": function(e, n) {
+            var t = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -695,7 +695,7 @@
                     end: 628
                 }
             };
-            n.loc.source = {
+            t.loc.source = {
                 body: "query UserRolesCacheQuery ($channelLogin: String! $includeEditors: Boolean! $includeMods: Boolean! $includeVIPs: Boolean! $modsCursor: Cursor $vipsCursor: Cursor) {\nuser(login: $channelLogin) {\nid\neditors @include(if: $includeEditors) {\nedges {\ncursor\ngrantedAt\nnode {\nid\ndisplayName\nlogin\nprofileImageURL(width: 50)\n}\n}\n}\nmods(first: 100 after: $modsCursor) @include(if: $includeMods) {\nedges {\ncursor\ngrantedAt\nnode {\nid\ndisplayName\nlogin\nprofileImageURL(width: 50)\n}\n}\n}\nvips(first: 100 after: $vipsCursor) @include(if: $includeVIPs) {\nedges {\ncursor\ngrantedAt\nnode {\nid\ndisplayName\nlogin\nprofileImageURL(width: 50)\n}\n}\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
@@ -703,32 +703,32 @@
                     column: 1
                 }
             };
-            e.exports = n
+            e.exports = t
         },
-        AKV8: function(e, t, n) {
+        AKV8: function(e, n, t) {
             "use strict";
-            n.d(t, "a", function() {
+            t.d(n, "a", function() {
                 return i
-            }), n.d(t, "b", function() {
+            }), t.d(n, "b", function() {
                 return o
             });
-            var i, r = n("mrSG"),
-                a = n("yR8l"),
-                s = n("4HoE");
+            var i, r = t("mrSG"),
+                a = t("yR8l"),
+                s = t("4HoE");
 
             function o(e) {
-                var t = this;
+                var n = this;
                 return Object(a.a)(s, {
-                    props: function(n) {
+                    props: function(t) {
                         return {
                             modUserMutation: function(i) {
-                                return r.__awaiter(t, void 0, void 0, function() {
-                                    var t;
+                                return r.__awaiter(n, void 0, void 0, function() {
+                                    var n;
                                     return r.__generator(this, function(r) {
-                                        if (t = e(n.ownProps).channelID, n.mutate) return [2, n.mutate({
+                                        if (n = e(t.ownProps).channelID, t.mutate) return [2, t.mutate({
                                             variables: {
                                                 input: {
-                                                    channelID: t,
+                                                    channelID: n,
                                                     targetLogin: i
                                                 }
                                             }
@@ -746,36 +746,36 @@
                 e.ChannelNotFound = "CHANNEL_NOT_FOUND", e.Forbidden = "FORBIDDEN", e.UserAlreadyModded = "TARGET_ALREADY_MOD", e.UserBanned = "TARGET_IS_CHAT_BANNED", e.UserNotFound = "TARGET_NOT_FOUND"
             }(i || (i = {}))
         },
-        AXTS: function(e, t, n) {
+        AXTS: function(e, n, t) {
             "use strict";
-            var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("/7QA"),
-                s = n("8/mp"),
-                o = n("Kw8/"),
-                l = n("Ue10"),
+            var i = t("mrSG"),
+                r = t("q1tI"),
+                a = t("/7QA"),
+                s = t("8/mp"),
+                o = t("Kw8/"),
+                l = t("Ue10"),
                 d = function(e) {
-                    function t() {
+                    function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
+                    return i.__extends(n, e), n.prototype.render = function() {
                         var e = this,
-                            t = this.props.users;
+                            n = this.props.users;
                         return r.createElement(l.u, {
                             noTail: !0,
                             offsetY: "-0.5px",
-                            show: !!t && this.props.show
+                            show: !!n && this.props.show
                         }, r.createElement(s.b, null, r.createElement(l.Xa, {
                             alignItems: l.f.Center,
                             display: l.X.Flex,
                             flexDirection: l.Aa.Column,
                             justifyContent: l.Wa.Center
-                        }, t && t.length > 0 ? t.map(function(t, n) {
+                        }, n && n.length > 0 ? n.map(function(n, t) {
                             return r.createElement(o.c, {
-                                key: n,
+                                key: t,
                                 onBlur: e.props.onOptionBlur,
                                 onClick: e.props.onOptionClick,
-                                user: t
+                                user: n
                             })
                         }) : r.createElement(l.Xa, {
                             alignItems: l.f.Center,
@@ -789,36 +789,36 @@
                         }, r.createElement(l.qb, {
                             asset: l.rb.SearchNoResults
                         }), r.createElement(l.W, null, Object(a.d)("No users found", "SearchUsersDropdown"))))))
-                    }, t
+                    }, n
                 }(r.Component);
-            n.d(t, "a", function() {
+            t.d(n, "a", function() {
                 return d
             })
         },
-        "CpU+": function(e, t, n) {
+        "CpU+": function(e, n, t) {
             "use strict";
-            n.d(t, "a", function() {
+            t.d(n, "a", function() {
                 return s
             });
-            var i = n("mrSG"),
-                r = n("yR8l"),
-                a = n("JiJH");
+            var i = t("mrSG"),
+                r = t("yR8l"),
+                a = t("JiJH");
 
             function s() {
                 var e = this;
                 return Object(r.a)(a, {
-                    props: function(t) {
+                    props: function(n) {
                         return {
-                            unVIPUserMutation: function(n) {
+                            unVIPUserMutation: function(t) {
                                 return i.__awaiter(e, void 0, void 0, function() {
                                     return i.__generator(this, function(e) {
                                         switch (e.label) {
                                             case 0:
-                                                return t.mutate ? [4, t.mutate({
+                                                return n.mutate ? [4, n.mutate({
                                                     variables: {
                                                         input: {
-                                                            channelID: t.ownProps.channelID,
-                                                            revokeeLogin: n
+                                                            channelID: n.ownProps.channelID,
+                                                            revokeeLogin: t
                                                         }
                                                     }
                                                 })] : [2];
@@ -833,8 +833,8 @@
                 })
             }
         },
-        FAYk: function(e, t) {
-            var n = {
+        FAYk: function(e, n) {
+            var t = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -959,7 +959,7 @@
                     end: 119
                 }
             };
-            n.loc.source = {
+            t.loc.source = {
                 body: "mutation UnmodUser($input: UnmodUserInput!){\nunmodUser(input: $input) {\nchannel {\nid\n}\ntarget {\nid\n}\nerror {\ncode\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
@@ -967,10 +967,10 @@
                     column: 1
                 }
             };
-            e.exports = n
+            e.exports = t
         },
-        JiJH: function(e, t) {
-            var n = {
+        JiJH: function(e, n) {
+            var t = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -1103,7 +1103,7 @@
                     end: 126
                 }
             };
-            n.loc.source = {
+            t.loc.source = {
                 body: "mutation UnVIPUser($input: RevokeVIPInput!){\nrevokeVIP(input: $input) {\nchannel {\nid\n}\nrevokee {\nid\nlogin\n}\nerror {\ncode\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
@@ -1111,48 +1111,48 @@
                     column: 1
                 }
             };
-            e.exports = n
+            e.exports = t
         },
-        "Kw8/": function(e, t, n) {
+        "Kw8/": function(e, n, t) {
             "use strict";
-            var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("/7QA"),
-                s = n("8Ad5"),
-                o = n("Ue10"),
-                l = (n("sZ5a"), function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
+            var i = t("mrSG"),
+                r = t("q1tI"),
+                a = t("/7QA"),
+                s = t("8Ad5"),
+                o = t("Ue10"),
+                l = (t("sZ5a"), function(e) {
+                    function n() {
+                        var n = null !== e && e.apply(this, arguments) || this;
+                        return n.state = {
                             focused: !1,
                             hovered: !1
-                        }, t.handleKeyDown = function(e) {
-                            var n = e.keyCode;
-                            n !== s.a.Space && n !== s.a.Enter || t.handleClick()
-                        }, t.handleClick = function() {
-                            t.props.onClick(t.props.user)
-                        }, t.handleBlur = function(e) {
-                            e.persist(), t.setState({
+                        }, n.handleKeyDown = function(e) {
+                            var t = e.keyCode;
+                            t !== s.a.Space && t !== s.a.Enter || n.handleClick()
+                        }, n.handleClick = function() {
+                            n.props.onClick(n.props.user)
+                        }, n.handleBlur = function(e) {
+                            e.persist(), n.setState({
                                 focused: !1
                             }, function() {
-                                t.props.onBlur(e.relatedTarget)
+                                n.props.onBlur(e.relatedTarget)
                             })
-                        }, t.handleFocus = function() {
-                            t.setState({
+                        }, n.handleFocus = function() {
+                            n.setState({
                                 focused: !0
                             })
-                        }, t.handleMouseOver = function() {
-                            t.setState({
+                        }, n.handleMouseOver = function() {
+                            n.setState({
                                 hovered: !0
                             })
-                        }, t.handleMouseOut = function() {
-                            t.state.hovered && t.setState({
+                        }, n.handleMouseOut = function() {
+                            n.state.hovered && n.setState({
                                 hovered: !1
                             })
-                        }, t
+                        }, n
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        var e, t, n = this.props.user;
+                    return i.__extends(n, e), n.prototype.render = function() {
+                        var e, n, t = this.props.user;
                         return r.createElement("div", i.__assign({
                             className: "roles-page-search-user-option",
                             onBlur: this.handleBlur,
@@ -1167,7 +1167,7 @@
                             selected: this.state.focused,
                             tabIndex: -1,
                             type: o.Va.Base
-                        }, ((t = {})["data-component-type"] = ["roles-page-search-user-option"], t)), r.createElement(o.Xa, {
+                        }, ((n = {})["data-component-type"] = ["roles-page-search-user-option"], n)), r.createElement(o.Xa, {
                             alignItems: o.f.Center,
                             display: o.X.Flex,
                             justifyContent: o.Wa.Start,
@@ -1181,21 +1181,21 @@
                             }
                         }, r.createElement(o.q, {
                             alt: Object(a.d)("Avatar", "SearchUsersOption"),
-                            src: n.profile_image,
+                            src: t.profile_image,
                             size: 30
-                        })), n.name)))
-                    }, t
+                        })), t.name)))
+                    }, n
                 }(r.Component));
-            n.d(t, "a", function() {
+            t.d(n, "a", function() {
                 return "data-component-type"
-            }), n.d(t, "b", function() {
+            }), t.d(n, "b", function() {
                 return "roles-page-search-user-option"
-            }), n.d(t, "c", function() {
+            }), t.d(n, "c", function() {
                 return l
             })
         },
-        "LQi+": function(e, t) {
-            var n = {
+        "LQi+": function(e, n) {
+            var t = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -1268,7 +1268,7 @@
                     end: 82
                 }
             };
-            n.loc.source = {
+            t.loc.source = {
                 body: "query RolesPageQuery($channelLogin: String!) {\nuser(login: $channelLogin) {\nid\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
@@ -1276,11 +1276,10 @@
                     column: 1
                 }
             };
-            e.exports = n
+            e.exports = t
         },
-        MWdL: function(e, t, n) {},
-        OBYv: function(e, t) {
-            var n = {
+        OBYv: function(e, n) {
+            var t = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -1405,7 +1404,7 @@
                     end: 127
                 }
             };
-            n.loc.source = {
+            t.loc.source = {
                 body: "mutation AddEditorUser($input: AddEditorInput!){\naddEditor(input: $input) {\nchannel {\nid\n}\ntargetUser {\nid\n}\nerror {\ncode\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
@@ -1413,33 +1412,33 @@
                     column: 1
                 }
             };
-            e.exports = n
+            e.exports = t
         },
-        eqbG: function(e, t, n) {},
-        fKMw: function(e, t, n) {
+        eqbG: function(e, n, t) {},
+        fKMw: function(e, n, t) {
             "use strict";
-            n.d(t, "a", function() {
+            t.d(n, "a", function() {
                 return s
             });
-            var i = n("mrSG"),
-                r = n("yR8l"),
-                a = n("sMoq");
+            var i = t("mrSG"),
+                r = t("yR8l"),
+                a = t("sMoq");
 
             function s() {
                 var e = this;
                 return Object(r.a)(a, {
-                    props: function(t) {
+                    props: function(n) {
                         return {
-                            vipUserMutation: function(n) {
+                            vipUserMutation: function(t) {
                                 return i.__awaiter(e, void 0, void 0, function() {
                                     return i.__generator(this, function(e) {
                                         switch (e.label) {
                                             case 0:
-                                                return t.mutate ? [4, t.mutate({
+                                                return n.mutate ? [4, n.mutate({
                                                     variables: {
                                                         input: {
-                                                            channelID: t.ownProps.channelID,
-                                                            granteeLogin: n
+                                                            channelID: n.ownProps.channelID,
+                                                            granteeLogin: t
                                                         }
                                                     }
                                                 })] : [2];
@@ -1454,8 +1453,8 @@
                 })
             }
         },
-        gD7V: function(e, t) {
-            var n = {
+        gD7V: function(e, n) {
+            var t = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -1528,7 +1527,7 @@
                     end: 69
                 }
             };
-            n.loc.source = {
+            t.loc.source = {
                 body: "query SearchUserQuery($login: String!) {\nuser(login: $login) {\nid\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
@@ -1536,20 +1535,20 @@
                     column: 1
                 }
             };
-            e.exports = n
+            e.exports = t
         },
-        qcBk: function(e, t, n) {
+        qcBk: function(e, n, t) {
             "use strict";
-            n.r(t);
-            var i, r, a = n("mrSG"),
-                s = n("q1tI"),
-                o = n("fvjX"),
-                l = n("yR8l"),
-                d = n("V+GM"),
-                c = n("NvVO"),
-                u = n("2xye"),
-                m = n("GnwI"),
-                p = n("1rIY");
+            t.r(n);
+            var i, r, a = t("mrSG"),
+                s = t("q1tI"),
+                o = t("fvjX"),
+                l = t("yR8l"),
+                d = t("V+GM"),
+                c = t("NvVO"),
+                u = t("2xye"),
+                m = t("GnwI"),
+                p = t("1rIY");
             ! function(e) {
                 e[e.ADD_USER = 0] = "ADD_USER", e[e.DEFAULT = 1] = "DEFAULT", e[e.LOADING = 2] = "LOADING", e[e.NO_USERS = 3] = "NO_USERS"
             }(r || (r = {}));
@@ -1568,31 +1567,31 @@
                 return v(f)(e)
             }
             var g, E, C, b = function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        return n.setView = function(e) {
-                            n.setState({
+                    function n(n) {
+                        var t = e.call(this, n) || this;
+                        return t.setView = function(e) {
+                            t.setState({
                                 view: e
                             })
-                        }, n.state = {
-                            setView: n.setView,
+                        }, t.state = {
+                            setView: t.setView,
                             view: r.LOADING
-                        }, n
+                        }, t
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         return s.createElement(h, {
                             value: this.state
                         }, this.props.children)
-                    }, t
+                    }, n
                 }(s.Component),
-                y = n("/7QA"),
-                I = n("IFXb"),
-                S = n("5NYc"),
-                N = n("vYsf"),
-                D = n("NAv5"),
-                _ = n("ZDlU"),
-                O = n("Ue10"),
-                U = n("91YW");
+                S = t("/7QA"),
+                y = t("IFXb"),
+                I = t("5NYc"),
+                N = t("vYsf"),
+                D = t("NAv5"),
+                _ = t("ZDlU"),
+                O = t("Ue10"),
+                U = t("91YW");
             ! function(e) {
                 e[e.ALL_ROLES = 0] = "ALL_ROLES", e[e.EDITOR = 1] = "EDITOR", e[e.MODERATOR = 2] = "MODERATOR", e[e.VIP = 3] = "VIP"
             }(E || (E = {})),
@@ -1619,23 +1618,23 @@
                 return M(T)(e)
             }
             var L, R = function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        return n.modifyUserInCache = function(e, t) {
+                    function n(n) {
+                        var t = e.call(this, n) || this;
+                        return t.modifyUserInCache = function(e, n) {
                             var i = e.id;
-                            i && n.setState(function(t) {
-                                var n, r = t.totalVIPs,
-                                    s = t.userCache,
+                            i && t.setState(function(n) {
+                                var t, r = n.totalVIPs,
+                                    s = n.userCache,
                                     o = s[i] || {};
                                 return {
-                                    userCache: a.__assign({}, s, (n = {}, n[i] = a.__assign({}, o, e), n)),
+                                    userCache: a.__assign({}, s, (t = {}, t[i] = a.__assign({}, o, e), t)),
                                     totalVIPs: r + (o.isVIP !== e.isVIP && (e.isVIP ? 1 : -1) || 0)
                                 }
                             }, function() {
-                                t && t()
+                                n && n()
                             })
-                        }, n.setUserCache = function(e, t, n) {
-                            for (var i, r = 0, a = t; r < a.length; r++) {
+                        }, t.setUserCache = function(e, n, t) {
+                            for (var i, r = 0, a = n; r < a.length; r++) {
                                 var s = a[r],
                                     o = s.node;
                                 if (o) {
@@ -1653,7 +1652,7 @@
                                                 isMod: !1,
                                                 isVIP: !1
                                             };
-                                        c[n] = !0, c.isMod && c.isVIP && (c.isVIP = !1), c.lastModified = Object(D.max)(c.lastModified, new Date(d)), e[l] = c
+                                        c[t] = !0, c.isMod && c.isVIP && (c.isVIP = !1), c.lastModified = Object(D.max)(c.lastModified, new Date(d)), e[l] = c
                                     }
                                 }
                             }
@@ -1661,9 +1660,9 @@
                                 cursor: i,
                                 userCache: e
                             }
-                        }, n.fetchMore = function(e, t) {
-                            return a.__awaiter(n, void 0, void 0, function() {
-                                var n;
+                        }, t.fetchMore = function(e, n) {
+                            return a.__awaiter(t, void 0, void 0, function() {
+                                var t;
                                 return a.__generator(this, function(i) {
                                     switch (i.label) {
                                         case 0:
@@ -1674,17 +1673,17 @@
                                                     channelID: this.props.channelID,
                                                     includeEditors: !1,
                                                     includeMods: !!e,
-                                                    includeVIPs: !!t,
+                                                    includeVIPs: !!n,
                                                     modsCursor: e,
-                                                    vipsCursor: t
+                                                    vipsCursor: n
                                                 },
-                                                updateQuery: function(e, t) {
-                                                    if (!t.fetchMoreResult.user) return e;
-                                                    var n = t.fetchMoreResult.user,
-                                                        i = n.mods,
-                                                        r = n.vips;
+                                                updateQuery: function(e, n) {
+                                                    if (!n.fetchMoreResult.user) return e;
+                                                    var t = n.fetchMoreResult.user,
+                                                        i = t.mods,
+                                                        r = t.vips;
                                                     return {
-                                                        user: a.__assign({}, t.fetchMoreResult.user, {
+                                                        user: a.__assign({}, n.fetchMoreResult.user, {
                                                             mods: i || null,
                                                             vips: r || null
                                                         })
@@ -1692,74 +1691,74 @@
                                                 }
                                             })];
                                         case 1:
-                                            return n = i.sent(), this.updateUserCache(n.data), [2]
+                                            return t = i.sent(), this.updateUserCache(t.data), [2]
                                     }
                                 })
                             })
-                        }, n.setFilterType = function(e) {
-                            e !== n.state.filterType && n.setState(function(t) {
-                                var n = t.userCache;
+                        }, t.setFilterType = function(e) {
+                            e !== t.state.filterType && t.setState(function(n) {
+                                var t = n.userCache;
                                 return {
                                     filterType: e,
-                                    userCache: Object.keys(n).reduce(function(e, t) {
-                                        var i = n[t];
-                                        return (i.isEditor || i.isMod || i.isVIP) && (e[t] = i), e
+                                    userCache: Object.keys(t).reduce(function(e, n) {
+                                        var i = t[n];
+                                        return (i.isEditor || i.isMod || i.isVIP) && (e[n] = i), e
                                     }, {})
                                 }
                             })
-                        }, n.state = {
-                            modifyUserInCache: n.modifyUserInCache,
+                        }, t.state = {
+                            modifyUserInCache: t.modifyUserInCache,
                             filterType: E.ALL_ROLES,
-                            setFilterType: n.setFilterType,
+                            setFilterType: t.setFilterType,
                             totalVIPs: 0,
                             userCache: {}
-                        }, n
+                        }, t
                     }
-                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(n, e), n.prototype.componentDidMount = function() {
                         this.updateUserCache()
-                    }, t.prototype.componentDidUpdate = function(e) {
+                    }, n.prototype.componentDidUpdate = function(e) {
                         e.channelID !== this.props.channelID && this.setState({
                             userCache: {}
                         }), e.data.loading && this.updateUserCache()
-                    }, t.prototype.render = function() {
+                    }, n.prototype.render = function() {
                         return this.props.data.error ? s.createElement(_.a, {
-                            message: Object(y.d)("Whoops, something went wrong.", "UserRolesContext")
+                            message: Object(S.d)("Whoops, something went wrong.", "UserRolesContext")
                         }) : this.props.view !== r.LOADING && this.props.channelID ? s.createElement(A, {
                             value: this.state
                         }, this.props.children) : s.createElement(O.Za, {
                             fillContent: !0
                         })
-                    }, t.prototype.updateUserCache = function(e) {
-                        var t = this;
+                    }, n.prototype.updateUserCache = function(e) {
+                        var n = this;
                         void 0 === e && (e = this.props.data);
-                        var n, i, s = e.error,
+                        var t, i, s = e.error,
                             o = e.loading,
                             l = e.user;
                         s || o || !l || this.props.view !== r.LOADING || this.setState(function(e) {
                             var r = a.__assign({}, e);
                             if (r.userCache || (r.userCache = {}), l.editors && l.editors.edges) {
-                                var s = t.setUserCache(r.userCache, l.editors.edges, C.IS_EDITOR).userCache;
+                                var s = n.setUserCache(r.userCache, l.editors.edges, C.IS_EDITOR).userCache;
                                 r.userCache = a.__assign({}, r.userCache, s)
                             }
                             if (l.mods && l.mods.edges) {
-                                var o = t.setUserCache(r.userCache, l.mods.edges, C.IS_MOD),
+                                var o = n.setUserCache(r.userCache, l.mods.edges, C.IS_MOD),
                                     d = o.cursor;
                                 s = o.userCache;
-                                n = d, r.userCache = a.__assign({}, r.userCache, s)
+                                t = d, r.userCache = a.__assign({}, r.userCache, s)
                             }
                             if (l.vips && l.vips.edges) {
-                                var c = t.setUserCache(r.userCache, l.vips.edges, C.IS_VIP);
+                                var c = n.setUserCache(r.userCache, l.vips.edges, C.IS_VIP);
                                 d = c.cursor, s = c.userCache;
                                 i = d, r.userCache = a.__assign({}, r.userCache, s), r.totalVIPs = e.totalVIPs + l.vips.edges.length
                             }
                             var u = l.id;
                             return u && r.userCache && r.userCache[u] && delete r.userCache[u], r
                         }, function() {
-                            return a.__awaiter(t, void 0, void 0, function() {
+                            return a.__awaiter(n, void 0, void 0, function() {
                                 return a.__generator(this, function(e) {
                                     switch (e.label) {
                                         case 0:
-                                            return n || i ? [4, this.fetchMore(n, i)] : [3, 2];
+                                            return t || i ? [4, this.fetchMore(t, i)] : [3, 2];
                                         case 1:
                                             return e.sent(), [3, 3];
                                         case 2:
@@ -1770,9 +1769,9 @@
                                 })
                             })
                         })
-                    }, t
+                    }, n
                 }(s.Component),
-                w = Object(o.compose)(k, Object(m.b)("WithUserRolesCacheProvider"), Object(l.a)(U, {
+                P = Object(o.compose)(k, Object(m.b)("WithUserRolesCacheProvider"), Object(l.a)(U, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -1785,7 +1784,7 @@
                         }
                     }
                 }))(R),
-                P = (L = Object(p.a)("ChannelVIPContext", {
+                w = (L = Object(p.a)("ChannelVIPContext", {
                     maxVIPUserLimit: 0,
                     isAtMaxVIPUserLimit: !1,
                     isVIPUnlocked: !1
@@ -1799,27 +1798,27 @@
                 return V(x)(e)
             }
             var j, X, G = F(function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        return n.state = {
+                    function n(n) {
+                        var t = e.call(this, n) || this;
+                        return t.state = {
                             maxVIPUserLimit: 0,
                             isVIPUnlocked: !1
-                        }, n
+                        }, t
                     }
-                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(n, e), n.prototype.componentDidMount = function() {
                         this.fetchVIPQuestData()
-                    }, t.prototype.componentDidUpdate = function(e) {
+                    }, n.prototype.componentDidUpdate = function(e) {
                         e.channelID || this.fetchVIPQuestData()
-                    }, t.prototype.render = function() {
+                    }, n.prototype.render = function() {
                         var e = this.state.maxVIPUserLimit;
-                        return s.createElement(P, {
+                        return s.createElement(w, {
                             value: a.__assign({}, this.state, {
                                 isAtMaxVIPUserLimit: !(this.props.totalVIPs !== e || !e)
                             })
                         }, this.props.children)
-                    }, t.prototype.fetchVIPQuestData = function() {
+                    }, n.prototype.fetchVIPQuestData = function() {
                         return a.__awaiter(this, void 0, void 0, function() {
-                            var e, t, n, i, r;
+                            var e, n, t, i, r;
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
@@ -1828,8 +1827,8 @@
                                     case 1:
                                         return a.trys.push([1, 3, , 4]), [4, Object(N.a)(e)];
                                     case 2:
-                                        for (t = a.sent(), n = 0, i = t; n < i.length; n++)
-                                            if ((r = i[n]).key === S.b.VIP_BADGE) return this.setState({
+                                        for (n = a.sent(), t = 0, i = n; t < i.length; t++)
+                                            if ((r = i[t]).key === I.b.VIP_BADGE) return this.setState({
                                                 maxVIPUserLimit: r.reward && r.reward.limit || 0,
                                                 isVIPUnlocked: r.is_complete
                                             }), [2];
@@ -1841,24 +1840,24 @@
                                 }
                             })
                         })
-                    }, t
+                    }, n
                 }(s.Component)),
-                W = n("GIFg"),
-                q = n("kYmV"),
-                H = n("cuu2"),
+                W = t("GIFg"),
+                q = t("kYmV"),
+                H = t("cuu2"),
                 $ = "https://help.twitch.tv/customer/en/portal/articles/659115-twitch-chat-badges-guide",
                 Q = "https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/1",
                 z = "https://static-cdn.jtvnw.net/badges/v1/b817aba4-fad8-49e2-b88a-7cc744dfa6ec/1",
                 Y = function(e) {
-                    function t() {
+                    function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         return s.createElement(W.a, null, s.createElement(H.a, {
                             learnMoreUrl: $,
                             page: q.b.Roles
                         }))
-                    }, t
+                    }, n
                 }(s.Component);
             ! function(e) {
                 e[e.ALL_MUTATIONS_FAILED = 0] = "ALL_MUTATIONS_FAILED", e[e.ALL_MUTATIONS_SUCCEEDED = 1] = "ALL_MUTATIONS_SUCCEEDED", e[e.MAX_VIPS_REACHED = 2] = "MAX_VIPS_REACHED", e[e.SOME_MUTATIONS_FAILED = 3] = "SOME_MUTATIONS_FAILED"
@@ -1880,35 +1879,35 @@
             function ee(e) {
                 return J(Z)(e)
             }
-            var te, ne, ie = function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        return n.clearMessage = function() {
-                            n.setState({
+            var ne, te, ie = function(e) {
+                    function n(n) {
+                        var t = e.call(this, n) || this;
+                        return t.clearMessage = function() {
+                            t.setState({
                                 message: null
                             })
-                        }, n.setMessage = function(e) {
-                            n.setState({
+                        }, t.setMessage = function(e) {
+                            t.setState({
                                 message: e
                             })
-                        }, n.state = {
-                            clearMessage: n.clearMessage,
+                        }, t.state = {
+                            clearMessage: t.clearMessage,
                             message: null,
-                            setMessage: n.setMessage
-                        }, n
+                            setMessage: t.setMessage
+                        }, t
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         return s.createElement(K, {
                             value: this.state
                         }, this.props.children)
-                    }, t
+                    }, n
                 }(s.Component),
-                re = n("/MKj"),
-                ae = n("aCAx");
+                re = t("/MKj"),
+                ae = t("aCAx");
             ! function(e) {
                 e.FATAL = "FATAL"
-            }(ne || (ne = {}));
-            var se = (te = Object(p.a)("MutateUserRolesContext", {
+            }(te || (te = {}));
+            var se = (ne = Object(p.a)("MutateUserRolesContext", {
                     mutateUser: function() {
                         return Promise.resolve({
                             editorError: null,
@@ -1917,7 +1916,7 @@
                         })
                     }
                 })).InnerProvider,
-                oe = te.withContext,
+                oe = ne.withContext,
                 le = function(e) {
                     return e
                 };
@@ -1926,19 +1925,19 @@
                 return oe(le)(e)
             }
             var ce = function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        return n.mutateUser = function(e) {
-                            return a.__awaiter(n, void 0, void 0, function() {
-                                var t, n, i, r, s, o, l, d, c, u, m, p, h, v;
+                    function n(n) {
+                        var t = e.call(this, n) || this;
+                        return t.mutateUser = function(e) {
+                            return a.__awaiter(t, void 0, void 0, function() {
+                                var n, t, i, r, s, o, l, d, c, u, m, p, h, v;
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return t = e.channelLogin, (n = e.id) && t ? (i = this.props.userCache, r = i[n] || {
+                                            return n = e.channelLogin, (t = e.id) && n ? (i = this.props.userCache, r = i[t] || {
                                                 isEditor: !1,
                                                 isMod: !1,
                                                 isVIP: !1
-                                            }, s = e.isEditor, o = e.isMod, l = e.isVIP, d = !!s !== r.isEditor, c = !!o !== r.isMod, u = this.props.isVIPUnlocked && !!l !== r.isVIP, [4, Promise.all([d ? this.mutateEditor(t, !!s) : this.genericPromise(), c ? this.mutateMod(t, !!o) : this.genericPromise(), u ? this.mutateVIP(t, !!l) : this.genericPromise()])]) : [2, ne.FATAL];
+                                            }, s = e.isEditor, o = e.isMod, l = e.isVIP, d = !!s !== r.isEditor, c = !!o !== r.isMod, u = this.props.isVIPUnlocked && !!l !== r.isVIP, [4, Promise.all([d ? this.mutateEditor(n, !!s) : this.genericPromise(), c ? this.mutateMod(n, !!o) : this.genericPromise(), u ? this.mutateVIP(n, !!l) : this.genericPromise()])]) : [2, te.FATAL];
                                         case 1:
                                             return m = a.sent(), p = m[0], h = m[1], v = m[2], [2, {
                                                 editorError: p,
@@ -1948,88 +1947,88 @@
                                     }
                                 })
                             })
-                        }, n.genericPromise = function() {
-                            return a.__awaiter(n, void 0, void 0, function() {
+                        }, t.genericPromise = function() {
+                            return a.__awaiter(t, void 0, void 0, function() {
                                 return a.__generator(this, function(e) {
                                     return [2, Promise.resolve(null)]
                                 })
                             })
-                        }, n.mutateEditor = function(e, t) {
-                            return a.__awaiter(n, void 0, void 0, function() {
-                                var n, i;
+                        }, t.mutateEditor = function(e, n) {
+                            return a.__awaiter(t, void 0, void 0, function() {
+                                var t, i;
                                 return a.__generator(this, function(r) {
                                     switch (r.label) {
                                         case 0:
-                                            return r.trys.push([0, 4, , 5]), t ? [4, this.props.addEditorUserMutation(e)] : [3, 2];
+                                            return r.trys.push([0, 4, , 5]), n ? [4, this.props.addEditorUserMutation(e)] : [3, 2];
                                         case 1:
-                                            return (n = r.sent()) && n.addEditor ? [2, n.addEditor.error ? n.addEditor.error.code : null] : [2, ne.FATAL];
+                                            return (t = r.sent()) && t.addEditor ? [2, t.addEditor.error ? t.addEditor.error.code : null] : [2, te.FATAL];
                                         case 2:
                                             return [4, this.props.removeEditorUserMutation(e)];
                                         case 3:
-                                            return (i = r.sent()) && i.removeEditor ? [2, i.removeEditor.error ? i.removeEditor.error.code : null] : [2, ne.FATAL];
+                                            return (i = r.sent()) && i.removeEditor ? [2, i.removeEditor.error ? i.removeEditor.error.code : null] : [2, te.FATAL];
                                         case 4:
-                                            return r.sent(), [2, ne.FATAL];
+                                            return r.sent(), [2, te.FATAL];
                                         case 5:
                                             return [2]
                                     }
                                 })
                             })
-                        }, n.mutateMod = function(e, t) {
-                            return a.__awaiter(n, void 0, void 0, function() {
-                                var n, i;
+                        }, t.mutateMod = function(e, n) {
+                            return a.__awaiter(t, void 0, void 0, function() {
+                                var t, i;
                                 return a.__generator(this, function(r) {
                                     switch (r.label) {
                                         case 0:
-                                            return r.trys.push([0, 4, , 5]), t ? [4, this.props.modUserMutation(e)] : [3, 2];
+                                            return r.trys.push([0, 4, , 5]), n ? [4, this.props.modUserMutation(e)] : [3, 2];
                                         case 1:
-                                            return (n = r.sent()) && n.modUser ? [2, n.modUser.error ? n.modUser.error.code : null] : [2, ne.FATAL];
+                                            return (t = r.sent()) && t.modUser ? [2, t.modUser.error ? t.modUser.error.code : null] : [2, te.FATAL];
                                         case 2:
                                             return [4, this.props.unmodUserMutation(e)];
                                         case 3:
-                                            return (i = r.sent()) && i.unmodUser ? [2, i.unmodUser.error ? i.unmodUser.error.code : null] : [2, ne.FATAL];
+                                            return (i = r.sent()) && i.unmodUser ? [2, i.unmodUser.error ? i.unmodUser.error.code : null] : [2, te.FATAL];
                                         case 4:
-                                            return r.sent(), [2, ne.FATAL];
+                                            return r.sent(), [2, te.FATAL];
                                         case 5:
                                             return [2]
                                     }
                                 })
                             })
-                        }, n.mutateVIP = function(e, t) {
-                            return a.__awaiter(n, void 0, void 0, function() {
-                                var n, i;
+                        }, t.mutateVIP = function(e, n) {
+                            return a.__awaiter(t, void 0, void 0, function() {
+                                var t, i;
                                 return a.__generator(this, function(r) {
                                     switch (r.label) {
                                         case 0:
-                                            return r.trys.push([0, 4, , 5]), t ? [4, this.props.vipUserMutation(e)] : [3, 2];
+                                            return r.trys.push([0, 4, , 5]), n ? [4, this.props.vipUserMutation(e)] : [3, 2];
                                         case 1:
-                                            return (n = r.sent()) && n.grantVIP ? [2, n.grantVIP.error ? n.grantVIP.error.code : null] : [2, ne.FATAL];
+                                            return (t = r.sent()) && t.grantVIP ? [2, t.grantVIP.error ? t.grantVIP.error.code : null] : [2, te.FATAL];
                                         case 2:
                                             return [4, this.props.unVIPUserMutation(e)];
                                         case 3:
-                                            return (i = r.sent()) && i.revokeVIP ? [2, i.revokeVIP.error ? i.revokeVIP.error.code : null] : [2, ne.FATAL];
+                                            return (i = r.sent()) && i.revokeVIP ? [2, i.revokeVIP.error ? i.revokeVIP.error.code : null] : [2, te.FATAL];
                                         case 4:
-                                            return r.sent(), [2, ne.FATAL];
+                                            return r.sent(), [2, te.FATAL];
                                         case 5:
                                             return [2]
                                     }
                                 })
                             })
-                        }, n.state = {
-                            mutateUser: n.mutateUser
-                        }, n
+                        }, t.state = {
+                            mutateUser: t.mutateUser
+                        }, t
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         return s.createElement(se, {
                             value: this.state
                         }, this.props.children)
-                    }, t
+                    }, n
                 }(s.Component),
-                ue = n("AKV8"),
-                me = n("yzwe"),
-                pe = n("CpU+"),
-                he = n("fKMw"),
-                ve = n("OBYv");
-            var fe = n("r6Pb");
+                ue = t("AKV8"),
+                me = t("yzwe"),
+                pe = t("CpU+"),
+                he = t("fKMw"),
+                ve = t("OBYv");
+            var fe = t("r6Pb");
 
             function ke(e) {
                 return {
@@ -2039,18 +2038,18 @@
             var ge = Object(o.compose)(B, F, function() {
                     var e = this;
                     return Object(l.a)(ve, {
-                        props: function(t) {
+                        props: function(n) {
                             return {
-                                addEditorUserMutation: function(n) {
+                                addEditorUserMutation: function(t) {
                                     return a.__awaiter(e, void 0, void 0, function() {
                                         return a.__generator(this, function(e) {
                                             switch (e.label) {
                                                 case 0:
-                                                    return t.mutate ? [4, t.mutate({
+                                                    return n.mutate ? [4, n.mutate({
                                                         variables: {
                                                             input: {
-                                                                channelID: t.ownProps.channelID,
-                                                                targetUserLogin: n
+                                                                channelID: n.ownProps.channelID,
+                                                                targetUserLogin: t
                                                             }
                                                         }
                                                     })] : [2];
@@ -2066,18 +2065,18 @@
                 }(), function() {
                     var e = this;
                     return Object(l.a)(fe, {
-                        props: function(t) {
+                        props: function(n) {
                             return {
-                                removeEditorUserMutation: function(n) {
+                                removeEditorUserMutation: function(t) {
                                     return a.__awaiter(e, void 0, void 0, function() {
                                         return a.__generator(this, function(e) {
                                             switch (e.label) {
                                                 case 0:
-                                                    return t.mutate ? [4, t.mutate({
+                                                    return n.mutate ? [4, n.mutate({
                                                         variables: {
                                                             input: {
-                                                                channelID: t.ownProps.channelID,
-                                                                targetUserLogin: n
+                                                                channelID: n.ownProps.channelID,
+                                                                targetUserLogin: t
                                                             }
                                                         }
                                                     })] : [2];
@@ -2092,94 +2091,94 @@
                     })
                 }(), Object(ue.b)(ke), Object(me.b)(ke), Object(pe.a)(), Object(he.a)())(ce),
                 Ee = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
+                    function n() {
+                        var n = null !== e && e.apply(this, arguments) || this;
+                        return n.state = {
                             isRetryButtonDisabled: !1
-                        }, t.handleModalDismiss = function() {
-                            t.props.clearMessage(), t.props.closeModal()
-                        }, t.handleRetryClick = function() {
-                            t.setState({
+                        }, n.handleModalDismiss = function() {
+                            n.props.clearMessage(), n.props.closeModal()
+                        }, n.handleRetryClick = function() {
+                            n.setState({
                                 isRetryButtonDisabled: !0
-                            }, t.handleRetry)
-                        }, t.handleRetry = function() {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n, i, r, s, o, l = this;
+                            }, n.handleRetry)
+                        }, n.handleRetry = function() {
+                            return a.__awaiter(n, void 0, void 0, function() {
+                                var e, n, t, i, r, s, o, l = this;
                                 return a.__generator(this, function(d) {
                                     switch (d.label) {
                                         case 0:
-                                            return e = this.props.message, t = e.user, [4, this.props.mutateUser(t)];
+                                            return e = this.props.message, n = e.user, [4, this.props.mutateUser(n)];
                                         case 1:
-                                            return (n = d.sent()) === ne.FATAL ? (this.setState({
+                                            return (t = d.sent()) === te.FATAL ? (this.setState({
                                                 isRetryButtonDisabled: !1
-                                            }), [2]) : (i = n.editorError, r = n.modError, s = n.vipError, i || r || s ? (o = a.__assign({
-                                                channelLogin: t.channelLogin,
-                                                displayName: t.displayName,
-                                                lastModified: t.lastModified,
-                                                id: t.id,
-                                                profileImageURL: t.profileImageURL
+                                            }), [2]) : (i = t.editorError, r = t.modError, s = t.vipError, i || r || s ? (o = a.__assign({
+                                                channelLogin: n.channelLogin,
+                                                displayName: n.displayName,
+                                                lastModified: n.lastModified,
+                                                id: n.id,
+                                                profileImageURL: n.profileImageURL
                                             }, i ? {} : {
-                                                isEditor: t.isEditor
+                                                isEditor: n.isEditor
                                             }, r ? {} : {
-                                                isMod: t.isMod
+                                                isMod: n.isMod
                                             }, s ? {} : {
-                                                isVIP: t.isVIP
+                                                isVIP: n.isVIP
                                             }), this.props.modifyUserInCache(o, function() {
                                                 l.props.setMessage({
-                                                    user: t,
-                                                    error: n,
+                                                    user: n,
+                                                    error: t,
                                                     type: X.SOME_MUTATIONS_FAILED
                                                 }), l.props.closeModal()
-                                            }), [2]) : (this.props.modifyUserInCache(t, function() {
+                                            }), [2]) : (this.props.modifyUserInCache(n, function() {
                                                 l.props.setMessage({
-                                                    user: t,
+                                                    user: n,
                                                     type: X.ALL_MUTATIONS_SUCCEEDED
                                                 }), l.props.closeModal()
                                             }), [2]))
                                     }
                                 })
                             })
-                        }, t
+                        }, n
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         return s.createElement(O.ab, {
                             elevation: 3,
                             onCloseButtonClick: this.handleModalDismiss,
                             primaryButtonProps: {
-                                children: Object(y.d)("Retry", "RolesPageMessageModal"),
+                                children: Object(S.d)("Retry", "RolesPageMessageModal"),
                                 disabled: this.state.isRetryButtonDisabled,
                                 onClick: this.handleRetryClick
                             },
                             secondaryButtonProps: {
-                                children: Object(y.d)("Cancel", "RolesPageMessageModal"),
+                                children: Object(S.d)("Cancel", "RolesPageMessageModal"),
                                 onClick: this.handleModalDismiss,
                                 type: O.F.Hollow
                             },
                             size: O.bb.Small,
-                            title: Object(y.d)("Something went wrong", "RolesPageMessageModal")
+                            title: Object(S.d)("Something went wrong", "RolesPageMessageModal")
                         }, s.createElement(O.Xa, {
                             padding: 1
-                        }, s.createElement(O.W, null, Object(y.d)("There was an error modifying roles for {user}.", {
+                        }, s.createElement(O.W, null, Object(S.d)("There was an error modifying roles for {user}.", {
                             user: this.props.message.user.displayName
                         }, "RolesPageMessageModal"))))
-                    }, t
+                    }, n
                 }(s.Component),
                 Ce = function(e) {
-                    function t() {
+                    function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(n, e), n.prototype.componentDidMount = function() {
                         this.tryToShowModal()
-                    }, t.prototype.componentDidUpdate = function(e) {
+                    }, n.prototype.componentDidUpdate = function(e) {
                         e.message || this.tryToShowModal()
-                    }, t.prototype.render = function() {
+                    }, n.prototype.render = function() {
                         return null
-                    }, t.prototype.tryToShowModal = function() {
+                    }, n.prototype.tryToShowModal = function() {
                         var e = this.props.message;
                         e && (e.type === X.ALL_MUTATIONS_FAILED && this.props.showModal(this.props))
-                    }, t
+                    }, n
                 }(s.Component);
-            var be, ye = Object(o.compose)(Object(re.connect)(null, function(e) {
+            var be, Se = Object(o.compose)(Object(re.connect)(null, function(e) {
                     return Object(o.bindActionCreators)({
                         closeModal: ae.c,
                         showModal: function(e) {
@@ -2187,12 +2186,12 @@
                         }
                     }, e)
                 }), de, ee, F)(Ce),
-                Ie = n("9C/b"),
-                Se = (n("vsHg"), function(e) {
-                    function t() {
+                ye = t("9C/b"),
+                Ie = (t("vsHg"), function(e) {
+                    function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         return s.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex,
@@ -2200,7 +2199,7 @@
                             fullWidth: !0,
                             justifyContent: O.Wa.Center,
                             position: O.hb.Absolute,
-                            zIndex: O.gc.Above
+                            zIndex: O.fc.Above
                         }, s.createElement(O.i, {
                             type: O.n.SlideInBottom,
                             duration: O.k.Medium,
@@ -2227,12 +2226,12 @@
                                 right: .5
                             }
                         }, s.createElement(O.q, {
-                            alt: Object(y.d)("VoHiYo", "CenteredBanner"),
+                            alt: Object(S.d)("VoHiYo", "CenteredBanner"),
                             src: "https://static-cdn.jtvnw.net/emoticons/v1/81274/2.0",
                             size: 30
                         })), s.createElement(O.W, {
                             bold: !0,
-                            type: O.Tb.H5
+                            type: O.Sb.H5
                         }, this.props.title)), s.createElement(O.Xa, {
                             margin: {
                                 bottom: 2
@@ -2240,22 +2239,22 @@
                         }, s.createElement(O.W, {
                             fontSize: O.Ca.Size5
                         }, this.props.body)), this.props.children)))
-                    }, t
+                    }, n
                 }(s.Component));
             ! function(e) {
                 e.ADD_A_ROLE = "no-users-banner-add-a-role", e.LEARN_MORE = "no-users-banner-learn-more"
             }(be || (be = {}));
             var Ne = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.handleAddARoleClick = function() {
-                            t.props.setView(r.DEFAULT)
-                        }, t
+                    function n() {
+                        var n = null !== e && e.apply(this, arguments) || this;
+                        return n.handleAddARoleClick = function() {
+                            n.props.setView(r.DEFAULT)
+                        }, n
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(Se, {
-                            body: Object(y.d)("Manage the permissions users have for your community. Start by adding your first role.", "NoUsersBanner"),
-                            title: Object(y.d)("Welcome to Roles", "NoUsersBanner")
+                    return a.__extends(n, e), n.prototype.render = function() {
+                        return s.createElement(Ie, {
+                            body: Object(S.d)("Manage the permissions users have for your community. Start by adding your first role.", "NoUsersBanner"),
+                            title: Object(S.d)("Welcome to Roles", "NoUsersBanner")
                         }, s.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex,
@@ -2267,36 +2266,35 @@
                         }, s.createElement(O.z, {
                             "data-test-selector": be.ADD_A_ROLE,
                             onClick: this.handleAddARoleClick
-                        }, Object(y.d)("Add a Role", "NoUsersBanner"))), s.createElement(O.z, {
+                        }, Object(S.d)("Add a Role", "NoUsersBanner"))), s.createElement(O.z, {
                             "data-test-selector": be.LEARN_MORE,
                             linkTo: $,
                             type: O.F.Text
-                        }, Object(y.d)("Learn More", "NoUsersBanner"))))
-                    }, t
+                        }, Object(S.d)("Learn More", "NoUsersBanner"))))
+                    }, n
                 }(s.Component),
-                De = Object(o.compose)(k, Ie.a)(Ne),
-                _e = n("TSYQ"),
-                Oe = function(e) {
-                    var t;
+                De = Object(o.compose)(k, ye.a)(Ne),
+                _e = function(e) {
+                    var n;
                     if (e.selected) switch (e.sortDirection) {
-                        case je.ASCENDING:
-                            t = s.createElement(O.qb, {
+                        case Pe.ASCENDING:
+                            n = s.createElement(O.qb, {
                                 asset: O.rb.GlyphArrUp,
                                 width: 10
                             });
                             break;
-                        case je.DESCENDING:
-                            t = s.createElement(O.qb, {
+                        case Pe.DESCENDING:
+                            n = s.createElement(O.qb, {
                                 asset: O.rb.GlyphArrDown,
                                 width: 10
                             });
                             break;
                         default:
-                            t = s.createElement(O.qb, {
+                            n = s.createElement(O.qb, {
                                 asset: O.rb.GlyphArrUpDown,
                                 width: 10
                             })
-                    } else t = s.createElement(O.qb, {
+                    } else n = s.createElement(O.qb, {
                         asset: O.rb.GlyphArrUpDown,
                         width: 10
                     });
@@ -2307,7 +2305,7 @@
                         display: O.X.Flex,
                         alignContent: O.e.Center
                     }, s.createElement(O.W, {
-                        type: O.Tb.Span,
+                        type: O.Sb.Span,
                         bold: !0,
                         color: e.selected ? O.O.Alt : O.O.Link
                     }, e.children), s.createElement(O.Xa, {
@@ -2316,17 +2314,17 @@
                         margin: {
                             left: .5
                         }
-                    }, t)))
+                    }, n)))
                 },
-                Ue = n("u5aL"),
-                Ae = function(e) {
-                    function t() {
+                Oe = t("u5aL"),
+                Ue = function(e) {
+                    function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         var e = this.props,
-                            t = e.src,
-                            n = e.title;
+                            n = e.src,
+                            t = e.title;
                         return s.createElement(O.Cb, {
                             alignItems: O.f.Center,
                             background: O.r.Alt,
@@ -2336,38 +2334,38 @@
                             margin: {
                                 x: 1
                             }
-                        }, t && s.createElement(O.Xa, {
+                        }, n && s.createElement(O.Xa, {
                             margin: {
                                 right: .5
                             }
                         }, s.createElement(O.S, {
-                            alt: n,
-                            src: t
+                            alt: t,
+                            src: n
                         })), s.createElement(O.Xa, {
                             margin: {
                                 right: 1
                             }
                         }, s.createElement(O.W, {
                             bold: !0
-                        }, n)), s.createElement(O.A, {
+                        }, t)), s.createElement(O.A, {
                             icon: O.rb.NotificationError,
                             onClick: this.props.onRolePillDismissed,
                             size: O.B.Small
                         }))
-                    }, t
+                    }, n
                 }(s.Component),
-                Me = (n("eqbG"), function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.handleCheckBoxChange = function(e) {
-                            var n;
-                            t.props.onCheckBoxChange(((n = {})[t.props.value] = e.currentTarget.checked, n))
-                        }, t
+                Ae = (t("eqbG"), function(e) {
+                    function n() {
+                        var n = null !== e && e.apply(this, arguments) || this;
+                        return n.handleCheckBoxChange = function(e) {
+                            var t;
+                            n.props.onCheckBoxChange(((t = {})[n.props.value] = e.currentTarget.checked, t))
+                        }, n
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         var e = this.props,
-                            t = e.disabled,
-                            n = e.label,
+                            n = e.disabled,
+                            t = e.label,
                             i = e.src;
                         return s.createElement(O.Xa, {
                             alignItems: O.f.Center,
@@ -2376,38 +2374,38 @@
                             margin: this.props.margin
                         }, s.createElement(O.N, {
                             checked: this.props.checked,
-                            disabled: t,
-                            label: n,
+                            disabled: n,
+                            label: t,
                             onChange: this.handleCheckBoxChange,
                             value: this.props.value
                         }), i && s.createElement(O.S, {
-                            alt: n,
-                            className: t ? "disabled-role-selector-icon" : "",
+                            alt: t,
+                            className: n ? "disabled-role-selector-icon" : "",
                             src: i
                         }))
-                    }, t
+                    }, n
                 }(s.Component));
 
+            function Me() {
+                return Object(S.d)("Editor", "FilterUsersComponent")
+            }
+
             function Te() {
-                return Object(y.d)("Editor", "FilterUsersComponent")
+                return Object(S.d)("Moderator", "FilterUsersComponent")
             }
 
             function Fe() {
-                return Object(y.d)("Moderator", "FilterUsersComponent")
+                return Object(S.d)("VIP", "FilterUsersComponent")
             }
-
-            function Le() {
-                return Object(y.d)("VIP", "FilterUsersComponent")
-            }
-            var Re, we = B(function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.handleLearnAboutRolesClick = function() {}, t
+            var Le, Re, Pe, we = B(function(e) {
+                    function n() {
+                        var n = null !== e && e.apply(this, arguments) || this;
+                        return n.handleLearnAboutRolesClick = function() {}, n
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         var e = this.props,
-                            t = e.isEditor,
-                            n = e.isMod,
+                            n = e.isEditor,
+                            t = e.isMod,
                             i = e.isVIP,
                             r = e.onCheckBoxChange;
                         return s.createElement(O.Xa, {
@@ -2420,10 +2418,10 @@
                             border: !0,
                             borderRadius: O.x.Small,
                             elevation: 2
-                        }, s.createElement(Me, {
-                            checked: n,
+                        }, s.createElement(Ae, {
+                            checked: t,
                             disabled: i,
-                            label: Fe(),
+                            label: Te(),
                             onCheckBoxChange: r,
                             margin: {
                                 x: 1,
@@ -2431,10 +2429,10 @@
                             },
                             src: Q,
                             value: C.IS_MOD
-                        }), this.props.isVIPUnlocked && s.createElement(Me, {
+                        }), this.props.isVIPUnlocked && s.createElement(Ae, {
                             checked: i,
-                            disabled: n || this.props.isAtMaxVIPUserLimit && !i,
-                            label: Le(),
+                            disabled: t || this.props.isAtMaxVIPUserLimit && !i,
+                            label: Fe(),
                             onCheckBoxChange: r,
                             margin: {
                                 x: 1,
@@ -2442,10 +2440,10 @@
                             },
                             src: z,
                             value: C.IS_VIP
-                        }), s.createElement(Me, {
-                            checked: t,
+                        }), s.createElement(Ae, {
+                            checked: n,
                             disabled: !1,
-                            label: Te(),
+                            label: Me(),
                             onCheckBoxChange: r,
                             margin: {
                                 x: 1,
@@ -2467,80 +2465,79 @@
                             }
                         }, s.createElement(O.qb, {
                             asset: O.rb.NotificationInfo
-                        })), s.createElement(O.W, null, Object(y.e)("Learn about Roles", "RoleSelector")))))))
-                    }, t
+                        })), s.createElement(O.W, null, Object(S.e)("Learn about Roles", "RoleSelector")))))))
+                    }, n
                 }(s.Component)),
-                Pe = B(function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
+                Ve = B(function(e) {
+                    function n() {
+                        var n = null !== e && e.apply(this, arguments) || this;
+                        return n.state = {
                             isBalloonOpen: !1
-                        }, t.handleAddRoleClick = function() {
-                            t.setState(function(e) {
+                        }, n.handleAddRoleClick = function() {
+                            n.setState(function(e) {
                                 return {
                                     isBalloonOpen: !e.isBalloonOpen
                                 }
                             })
-                        }, t.handleClickOut = function() {
-                            t.setState({
+                        }, n.handleClickOut = function() {
+                            n.setState({
                                 isBalloonOpen: !1
                             }, function() {
-                                var e = t.props.onDropDownClickOut;
+                                var e = n.props.onDropDownClickOut;
                                 e && e()
                             })
-                        }, t
+                        }, n
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         var e = this.props,
-                            t = e.onRolePillDismissed,
-                            n = e.user,
+                            n = e.onRolePillDismissed,
+                            t = e.user,
                             i = this.state.isBalloonOpen,
-                            r = Te(),
-                            a = Fe(),
-                            o = Le(),
-                            l = n.isEditor,
-                            d = n.isMod,
-                            c = n.isVIP;
+                            r = Me(),
+                            a = Te(),
+                            o = Fe(),
+                            l = t.isEditor,
+                            d = t.isMod,
+                            c = t.isVIP;
                         return s.createElement(O.Xa, {
                             alignItems: O.f.Center,
-                            display: O.X.Flex,
-                            flexDirection: this.props.roleOrder
+                            display: O.X.Flex
+                        }, s.createElement(Oe.a, {
+                            onClickOut: this.handleClickOut
                         }, !i && s.createElement(O.A, {
                             onClick: this.handleAddRoleClick,
                             icon: O.rb.Plus,
                             size: O.B.Small
-                        }), i && s.createElement(Ue.a, {
-                            onClickOut: this.handleClickOut
-                        }, s.createElement(O.z, {
+                        }), i && s.createElement(s.Fragment, null, s.createElement(O.z, {
                             icon: O.rb.Plus,
                             onClick: this.handleAddRoleClick,
                             size: O.D.Small,
                             type: i ? O.F.Hollow : O.F.Text
-                        }, s.createElement(O.W, null, Object(y.d)("Add Role", "RoleSelector"))), s.createElement(we, {
+                        }, s.createElement(O.W, null, Object(S.d)("Add Role", "RoleSelector"))), s.createElement(we, {
                             isEditor: l,
                             isMod: d,
                             isVIP: c,
                             onCheckBoxChange: this.props.onCheckBoxChange,
                             show: i
-                        })), l && s.createElement(Ae, {
-                            onRolePillDismissed: t.bind(null, C.IS_EDITOR),
+                        }))), l && s.createElement(Ue, {
+                            onRolePillDismissed: n.bind(null, C.IS_EDITOR),
                             title: r
-                        }), d && s.createElement(Ae, {
-                            onRolePillDismissed: t.bind(null, C.IS_MOD),
+                        }), d && s.createElement(Ue, {
+                            onRolePillDismissed: n.bind(null, C.IS_MOD),
                             src: Q,
                             title: a
-                        }), this.props.isVIPUnlocked && c && s.createElement(Ae, {
-                            onRolePillDismissed: t.bind(null, C.IS_VIP),
+                        }), this.props.isVIPUnlocked && c && s.createElement(Ue, {
+                            onRolePillDismissed: n.bind(null, C.IS_VIP),
                             src: z,
                             title: o
                         }))
-                    }, t
+                    }, n
                 }(s.Component)),
-                Ve = function(e) {
-                    function t() {
+                xe = function(e) {
+                    function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         return s.createElement(O.Cb, {
                             alignItems: O.f.Center,
                             background: O.r.Base,
@@ -2552,65 +2549,37 @@
                             margin: this.props.margin,
                             padding: 1
                         }, this.props.children)
-                    }, t
-                }(s.Component);
-            ! function(e) {
-                e.CJK_NAME = "cjk_name"
-            }(Re || (Re = {}));
-            var xe, Be, je, Xe = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.handleCheckBoxChange = function(e) {
-                            var n = a.__assign({}, t.props.userCache[t.props.userID], e);
-                            t.props.modifyUserInCache(n)
-                        }, t.handleClickOut = function() {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n, i, r;
-                                return a.__generator(this, function(a) {
-                                    switch (a.label) {
-                                        case 0:
-                                            return e = this.props.userCache[this.props.userID], [4, this.props.mutateUser(e)];
-                                        case 1:
-                                            return (t = a.sent()) === ne.FATAL ? [2] : (n = t.editorError, i = t.modError, r = t.vipError, n || i || r ? [2] : (this.props.modifyUserInCache(e), [2]))
-                                    }
-                                })
-                            })
-                        }, t.handleRolePillDismissed = function(e) {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                var t, n, i, r, s, o;
-                                return a.__generator(this, function(l) {
-                                    switch (l.label) {
-                                        case 0:
-                                            return n = a.__assign({}, this.props.userCache[this.props.userID], ((t = {})[e] = !1, t)), [4, this.props.mutateUser(n)];
-                                        case 1:
-                                            return (i = l.sent()) === ne.FATAL ? [2] : (r = i.editorError, s = i.modError, o = i.vipError, r || s || o ? [2] : (this.props.modifyUserInCache(n), [2]))
-                                    }
-                                })
-                            })
-                        }, t
+                    }, n
+                }(s.Component),
+                Be = function(e) {
+                    function n() {
+                        var n = null !== e && e.apply(this, arguments) || this;
+                        return n.handleCheckBoxChange = function() {}, n.handleClickOut = function() {}, n.handleRolePillDismissed = function() {}, n
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.userCache[this.props.userID],
-                            t = e.displayName,
-                            n = e.channelLogin;
-                        return s.createElement(Ve, {
+                    return a.__extends(n, e), n.prototype.render = function() {
+                        var e = this.props,
+                            n = e.user,
+                            t = e.user,
+                            i = t.channelLogin,
+                            r = t.displayName;
+                        return s.createElement(xe, {
                             margin: {
                                 top: .5
                             }
                         }, s.createElement(O.P, {
-                            cols: xe.FIRST_COLUMN
+                            cols: Le.FIRST_COLUMN
                         }, s.createElement(O.Xa, {
                             display: O.X.Flex,
                             alignItems: O.f.Center
                         }, s.createElement(O.U, {
-                            to: "/" + n,
+                            to: "/" + i,
                             targetBlank: !0
                         }, s.createElement(O.q, {
-                            src: e.profileImageURL,
-                            alt: n,
+                            src: n.profileImageURL,
+                            alt: i,
                             size: 30
                         })), s.createElement(O.U, {
-                            to: "/" + n,
+                            to: "/" + i,
                             targetBlank: !0
                         }, s.createElement(O.Xa, {
                             margin: {
@@ -2621,20 +2590,19 @@
                         }, s.createElement(O.W, {
                             bold: !0,
                             color: O.O.Base,
-                            type: O.Tb.P,
+                            type: O.Sb.P,
                             ellipsis: !0
-                        }, n), n.toLowerCase() !== t.toLowerCase() && s.createElement(O.Xa, {
+                        }, i), i.toLowerCase() !== r.toLowerCase() && s.createElement(O.Xa, {
                             margin: {
                                 left: 1
                             }
                         }, s.createElement(O.W, {
                             bold: !0,
                             color: O.O.Base,
-                            type: O.Tb.P,
                             ellipsis: !0,
-                            "data-test-selector": Re.CJK_NAME
-                        }, t)))))), s.createElement(O.P, {
-                            cols: xe.SECOND_COLUMN
+                            type: O.Sb.P
+                        }, r)))))), s.createElement(O.P, {
+                            cols: Le.SECOND_COLUMN
                         }, s.createElement(O.Xa, {
                             display: O.X.Flex,
                             margin: {
@@ -2642,241 +2610,231 @@
                             },
                             flexGrow: 1,
                             alignItems: O.f.Center
-                        }, s.createElement(Pe, {
-                            user: e,
+                        }, s.createElement(Ve, {
+                            user: n,
                             onCheckBoxChange: this.handleCheckBoxChange,
                             onDropDownClickOut: this.handleClickOut,
-                            onRolePillDismissed: this.handleRolePillDismissed,
-                            roleOrder: O.Aa.RowReverse
+                            onRolePillDismissed: this.handleRolePillDismissed
                         }))), s.createElement(O.P, {
-                            cols: xe.THIRD_COLUMN
+                            cols: Le.THIRD_COLUMN
                         }, s.createElement(O.Xa, {
                             display: O.X.Flex,
                             alignItems: O.f.Center,
                             flexDirection: O.Aa.RowReverse
                         }, s.createElement(O.P, {
                             cols: 6
-                        }, s.createElement(O.W, null, Object(y.c)(e.lastModified))))))
-                    }, t
+                        }, s.createElement(O.W, null, Object(S.c)(n.lastModified))))))
+                    }, n
                 }(s.Component),
-                Ge = Object(o.compose)(F, de, k)(Xe),
-                We = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.sortByUsername = function() {
-                            return Object.keys(t.props.userCache).sort(function(e, n) {
-                                return t.props.sortDirection === je.ASCENDING && t.props.userCache[e].channelLogin > t.props.userCache[n].channelLogin ? 1 : t.props.sortDirection === je.DESCENDING && t.props.userCache[e].channelLogin < t.props.userCache[n].channelLogin ? 1 : 0
+                je = function(e) {
+                    function n() {
+                        var n = null !== e && e.apply(this, arguments) || this;
+                        return n.sortByUsername = function() {
+                            return Object.keys(n.props.userCache).sort(function(e, t) {
+                                return n.props.sortDirection === Pe.ASCENDING && n.props.userCache[e].channelLogin > n.props.userCache[t].channelLogin ? 1 : n.props.sortDirection === Pe.DESCENDING && n.props.userCache[e].channelLogin < n.props.userCache[t].channelLogin ? 1 : 0
                             })
-                        }, t.sortByLastModified = function() {
-                            return Object.keys(t.props.userCache).sort(function(e, n) {
-                                return t.props.sortDirection === je.ASCENDING && t.props.userCache[e].lastModified < t.props.userCache[n].lastModified ? 1 : t.props.sortDirection === je.DESCENDING && t.props.userCache[e].lastModified > t.props.userCache[n].lastModified ? 1 : 0
+                        }, n.sortByLastModified = function() {
+                            return Object.keys(n.props.userCache).sort(function(e, t) {
+                                return n.props.sortDirection === Pe.ASCENDING && n.props.userCache[e].lastModified < n.props.userCache[t].lastModified ? 1 : n.props.sortDirection === Pe.DESCENDING && n.props.userCache[e].lastModified > n.props.userCache[t].lastModified ? 1 : 0
                             })
-                        }, t
+                        }, n
                     }
-                    return a.__extends(t, e), t.prototype.shouldComponentUpdate = function(e) {
-                        return Object.keys(e.userCache).length !== Object.keys(this.props.userCache).length || e.filterType !== this.props.filterType || e.sortBy !== this.props.sortBy || e.sortDirection !== this.props.sortDirection
-                    }, t.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         var e = this,
-                            t = [];
-                        return this.props.sortBy === Be.USERNAME && (t = this.sortByUsername()), this.props.sortBy === Be.LAST_MODIFIED && (t = this.sortByLastModified()), this.props.filterType === E.ALL_ROLES ? s.createElement(s.Fragment, null, t.map(function(e) {
-                            return s.createElement(Ge, {
-                                "data-test-selector": "roles-table-row-" + e,
-                                key: "roles-table-row-" + e,
-                                userID: e
-                            })
-                        })) : s.createElement(s.Fragment, null, t.reduce(function(t, n) {
-                            var i = e.props.userCache[n];
-                            return i && (e.props.filterType === E.EDITOR && i[C.IS_EDITOR] || e.props.filterType === E.MODERATOR && i[C.IS_MOD] || e.props.filterType === E.VIP && i[C.IS_VIP]) && t.push(s.createElement(Ge, {
+                            n = [];
+                        return this.props.sortBy === Re.USERNAME && (n = this.sortByUsername()), this.props.sortBy === Re.LAST_MODIFIED && (n = this.sortByLastModified()), this.props.filterType === E.ALL_ROLES ? s.createElement(s.Fragment, null, n.map(function(n) {
+                            return s.createElement(Be, {
                                 "data-test-selector": "roles-table-row-" + n,
                                 key: "roles-table-row-" + n,
-                                userID: n
-                            })), t
+                                user: e.props.userCache[n]
+                            })
+                        })) : s.createElement(s.Fragment, null, n.reduce(function(n, t) {
+                            var i = e.props.userCache[t];
+                            return i && (e.props.filterType === E.EDITOR && i[C.IS_EDITOR] || e.props.filterType === E.MODERATOR && i[C.IS_MOD] || e.props.filterType === E.VIP && i[C.IS_VIP]) && n.push(s.createElement(Be, {
+                                "data-test-selector": "roles-table-row-" + t,
+                                key: "roles-table-row-" + t,
+                                user: i
+                            })), n
                         }, []))
-                    }, t
+                    }, n
                 }(s.Component);
-            n("MWdL");
             ! function(e) {
                 e[e.FIRST_COLUMN = 3] = "FIRST_COLUMN", e[e.SECOND_COLUMN = 5] = "SECOND_COLUMN", e[e.THIRD_COLUMN = 4] = "THIRD_COLUMN"
-            }(xe || (xe = {})),
+            }(Le || (Le = {})),
             function(e) {
                 e.USERNAME = "username", e.LAST_MODIFIED = "last-modified"
-            }(Be || (Be = {})),
+            }(Re || (Re = {})),
             function(e) {
                 e.ASCENDING = "ascending", e.DESCENDING = "descending"
-            }(je || (je = {}));
-            var qe, He = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            sortBy: Be.USERNAME,
-                            sortDirection: je.ASCENDING
-                        }, t.handleUsernameHeaderClick = function() {
-                            t.changeSort(Be.USERNAME)
-                        }, t.handleLastModifiedHeaderClick = function() {
-                            t.changeSort(Be.LAST_MODIFIED)
-                        }, t.changeSort = function(e) {
-                            var n;
-                            n = t.state.sortDirection && t.state.sortBy === e && t.state.sortDirection !== je.DESCENDING ? je.DESCENDING : je.ASCENDING, t.setState({
+            }(Pe || (Pe = {}));
+            var Xe, Ge = function(e) {
+                    function n() {
+                        var n = null !== e && e.apply(this, arguments) || this;
+                        return n.state = {
+                            sortBy: Re.USERNAME,
+                            sortDirection: Pe.ASCENDING
+                        }, n.handleUsernameHeaderClick = function() {
+                            n.changeSort(Re.USERNAME)
+                        }, n.handleLastModifiedHeaderClick = function() {
+                            n.changeSort(Re.LAST_MODIFIED)
+                        }, n.changeSort = function(e) {
+                            var t;
+                            t = n.state.sortDirection && n.state.sortBy === e && n.state.sortDirection !== Pe.DESCENDING ? Pe.DESCENDING : Pe.ASCENDING, n.setState({
                                 sortBy: e,
-                                sortDirection: n
+                                sortDirection: t
                             })
-                        }, t
+                        }, n
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         var e = this.state.sortBy,
-                            t = this.state.sortDirection,
-                            n = {
-                                "disabled-rows": this.props.view !== r.DEFAULT
-                            };
+                            n = this.state.sortDirection;
                         return s.createElement(O.Xa, {
                             fullWidth: !0,
                             fullHeight: !0,
                             margin: {
-                                top: 1
+                                top: 2
                             }
                         }, s.createElement(O.Xa, {
                             display: O.X.Flex,
                             alignItems: O.f.Center,
                             padding: {
                                 x: 1,
-                                bottom: .5
+                                bottom: 1
                             }
                         }, s.createElement(O.P, {
-                            cols: xe.FIRST_COLUMN
-                        }, s.createElement(Oe, {
-                            selected: e === Be.USERNAME,
-                            sortDirection: t,
+                            cols: Le.FIRST_COLUMN
+                        }, s.createElement(_e, {
+                            selected: e === Re.USERNAME,
+                            sortDirection: n,
                             onClick: this.handleUsernameHeaderClick
-                        }, Object(y.d)("Username", "RolesPageTable"))), s.createElement(O.P, {
-                            cols: xe.SECOND_COLUMN
+                        }, Object(S.d)("Username", "RolesPageTable"))), s.createElement(O.P, {
+                            cols: Le.SECOND_COLUMN
                         }, s.createElement(O.W, {
-                            type: O.Tb.Span,
+                            type: O.Sb.Span,
                             bold: !0,
                             color: O.O.Link
-                        }, " ", Object(y.d)("Roles", "RolesPageTable"), " ")), s.createElement(O.P, {
-                            cols: xe.THIRD_COLUMN
+                        }, " ", Object(S.d)("Roles", "RolesPageTable"), " ")), s.createElement(O.P, {
+                            cols: Le.THIRD_COLUMN
                         }, s.createElement(O.Xa, {
                             display: O.X.Flex,
                             flexDirection: O.Aa.RowReverse
                         }, s.createElement(O.P, {
                             cols: 6
-                        }, s.createElement(Oe, {
-                            selected: e === Be.LAST_MODIFIED,
-                            sortDirection: t,
+                        }, s.createElement(_e, {
+                            selected: e === Re.LAST_MODIFIED,
+                            sortDirection: n,
                             onClick: this.handleLastModifiedHeaderClick
-                        }, Object(y.d)("Last Modified", "RolesPageTable")))))), s.createElement(O.Xa, {
-                            className: _e(n)
-                        }, s.createElement(We, {
+                        }, Object(S.d)("Last Modified", "RolesPageTable")))))), s.createElement(je, {
                             filterType: this.props.filterType,
                             userCache: this.props.userCache,
                             sortBy: e,
-                            sortDirection: t
-                        })))
-                    }, t
+                            sortDirection: n
+                        }))
+                    }, n
                 }(s.Component),
-                $e = Object(o.compose)(k, F)(He),
-                Qe = n("f00E"),
-                ze = n("H/lO"),
-                Ye = n("NZDK"),
-                Ke = n("AXTS"),
-                Je = n("Kw8/"),
-                Ze = n("gD7V"),
-                et = 250,
-                tt = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
+                We = Object(o.compose)(F)(Ge),
+                qe = t("f00E"),
+                He = t("H/lO"),
+                $e = t("NZDK"),
+                Qe = t("AXTS"),
+                ze = t("Kw8/"),
+                Ye = t("gD7V"),
+                Ke = 250,
+                Je = function(e) {
+                    function n() {
+                        var n = null !== e && e.apply(this, arguments) || this;
+                        return n.state = {
                             canEditInputField: !0,
                             searchedUsers: null,
                             showDropDown: !1
-                        }, t.searchClient = new Ye.a({
-                            appId: y.a.algoliaApplicationID,
-                            apiKey: y.a.algoliaAPIKey,
-                            apolloClient: y.p.apollo.client,
-                            logger: y.k,
-                            config: y.a,
-                            stats: y.p.stats
-                        }), t.filterUsersResults = function(e) {
-                            var n = t.props.data.user,
-                                i = n && n.id,
-                                r = t.props.userCache;
+                        }, n.searchClient = new $e.a({
+                            appId: S.a.algoliaApplicationID,
+                            apiKey: S.a.algoliaAPIKey,
+                            apolloClient: S.p.apollo.client,
+                            logger: S.k,
+                            config: S.a,
+                            stats: S.p.stats
+                        }), n.filterUsersResults = function(e) {
+                            var t = n.props.data.user,
+                                i = t && t.id,
+                                r = n.props.userCache;
                             return e.hits.filter(function(e) {
-                                var t = e.objectID;
-                                return t && t !== i && !r[t]
+                                var n = e.objectID;
+                                return n && n !== i && !r[n]
                             })
-                        }, t.handleInputChange = function(e) {
-                            var n = e.currentTarget.value;
-                            return a.__awaiter(t, void 0, void 0, function() {
+                        }, n.handleInputChange = function(e) {
+                            var t = e.currentTarget.value;
+                            return a.__awaiter(n, void 0, void 0, function() {
                                 return a.__generator(this, function(e) {
-                                    return this.algoliaDebounceTimeout && clearTimeout(this.algoliaDebounceTimeout), this.algoliaDebounceTimeout = setTimeout(this.queryAlgolia.bind(this, n), et), [2]
+                                    return this.algoliaDebounceTimeout && clearTimeout(this.algoliaDebounceTimeout), this.algoliaDebounceTimeout = setTimeout(this.queryAlgolia.bind(this, t), Ke), [2]
                                 })
                             })
-                        }, t.queryAlgolia = function(e) {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                var t;
-                                return a.__generator(this, function(n) {
-                                    switch (n.label) {
+                        }, n.queryAlgolia = function(e) {
+                            return a.__awaiter(n, void 0, void 0, function() {
+                                var n;
+                                return a.__generator(this, function(t) {
+                                    switch (t.label) {
                                         case 0:
-                                            return e ? [4, this.searchClient.queryForType(ze.a.Users, e, Object(Qe.a)(), {
+                                            return e ? [4, this.searchClient.queryForType(He.a.Users, e, Object(qe.a)(), {
                                                 hitsPerPage: 10
                                             })] : [3, 2];
                                         case 1:
-                                            return (t = n.sent()) && t.users && this.setState({
-                                                searchedUsers: this.filterUsersResults(t.users)
+                                            return (n = t.sent()) && n.users && this.setState({
+                                                searchedUsers: this.filterUsersResults(n.users)
                                             }, this.deselectUser), [3, 3];
                                         case 2:
                                             this.setState({
                                                 searchedUsers: null
-                                            }, this.deselectUser), n.label = 3;
+                                            }, this.deselectUser), t.label = 3;
                                         case 3:
                                             return [2]
                                     }
                                 })
                             })
-                        }, t.handleInputFocus = function() {
-                            t.setState({
+                        }, n.handleInputFocus = function() {
+                            n.setState({
                                 showDropDown: !0
                             })
-                        }, t.handleInputBlur = function(e) {
-                            e.persist(), t.handleBlur(e.relatedTarget)
-                        }, t.handleOptionBlur = function(e) {
-                            t.handleBlur(e)
-                        }, t.handleOptionClick = function(e) {
-                            t.setState({
+                        }, n.handleInputBlur = function(e) {
+                            e.persist(), n.handleBlur(e.relatedTarget)
+                        }, n.handleOptionBlur = function(e) {
+                            n.handleBlur(e)
+                        }, n.handleOptionClick = function(e) {
+                            n.setState({
                                 canEditInputField: !1,
                                 showDropDown: !1
                             }, function() {
-                                t.props.onUserSelected(e)
+                                n.props.onUserSelected(e)
                             })
-                        }, t.handleBlur = function(e) {
-                            t.setState({
-                                showDropDown: e && e.getAttribute(Je.a) === Je.b
+                        }, n.handleBlur = function(e) {
+                            n.setState({
+                                showDropDown: e && e.getAttribute(ze.a) === ze.b
                             })
-                        }, t.handleClickOut = function() {
-                            t.setState({
+                        }, n.handleClickOut = function() {
+                            n.setState({
                                 canEditInputField: !1,
                                 showDropDown: !1
                             })
-                        }, t.enableInputField = function() {
-                            t.setState({
+                        }, n.enableInputField = function() {
+                            n.setState({
                                 canEditInputField: !0
                             })
-                        }, t.deselectUser = function() {
-                            t.props.selectedUser && t.props.onUserDeselected()
-                        }, t
+                        }, n.deselectUser = function() {
+                            n.props.selectedUser && n.props.onUserDeselected()
+                        }, n
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         if (this.props.data.loading) return null;
                         var e = this.props.selectedUser,
-                            t = e && e.channelLogin || "",
-                            n = e && e.displayName || "",
+                            n = e && e.channelLogin || "",
+                            t = e && e.displayName || "",
                             i = this.state.canEditInputField,
                             r = s.createElement(O.Xa, {
                                 margin: {
                                     right: e ? 1 : .5
                                 }
                             }, s.createElement(O.q, {
-                                alt: Object(y.d)("Avatar", "SearchUsers"),
+                                alt: Object(S.d)("Avatar", "SearchUsers"),
                                 size: 30,
                                 src: e && e.profileImageURL
                             }));
@@ -2888,17 +2846,17 @@
                             display: O.X.Flex
                         }, r, s.createElement(O.W, {
                             bold: !0,
-                            type: O.Tb.P,
+                            type: O.Sb.P,
                             ellipsis: !0
-                        }, t), t.toLowerCase() !== n.toLowerCase() && s.createElement(O.Xa, {
+                        }, n), n.toLowerCase() !== t.toLowerCase() && s.createElement(O.Xa, {
                             margin: {
                                 left: 1
                             }
                         }, s.createElement(O.W, {
                             bold: !0,
-                            type: O.Tb.P,
+                            type: O.Sb.P,
                             ellipsis: !0
-                        }, n)))), (i || !e) && s.createElement(Ue.a, {
+                        }, t)))), (i || !e) && s.createElement(Oe.a, {
                             onClickOut: this.handleClickOut
                         }, s.createElement(O.Xa, {
                             alignItems: O.f.Center,
@@ -2907,21 +2865,21 @@
                             position: O.hb.Relative
                         }, s.createElement(O.Ra, {
                             autoFocus: !0,
-                            defaultValue: n,
+                            defaultValue: t,
                             onBlur: this.handleInputBlur,
                             onChange: this.handleInputChange,
                             onFocus: this.handleInputFocus,
-                            placeholder: Object(y.d)("Search", "SearchUsers"),
+                            placeholder: Object(S.d)("Search", "SearchUsers"),
                             type: O.Ta.Text
-                        }), s.createElement(Ke.a, {
+                        }), s.createElement(Qe.a, {
                             onOptionClick: this.handleOptionClick,
                             onOptionBlur: this.handleOptionBlur,
                             show: this.state.showDropDown,
                             users: this.state.searchedUsers
                         })))))
-                    }, t
+                    }, n
                 }(s.Component),
-                nt = Object(o.compose)(F, Ie.a, Object(l.a)(Ze, {
+                Ze = Object(o.compose)(F, ye.a, Object(l.a)(Ye, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2929,31 +2887,31 @@
                             }
                         }
                     }
-                }))(tt);
+                }))(Je);
             ! function(e) {
                 e.CANCEL_BUTTON = "roles-page-add-user-cancel-button", e.SAVE_BUTTON = "roles-page-add-user-save-button"
-            }(qe || (qe = {}));
-            var it, rt = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
+            }(Xe || (Xe = {}));
+            var en, nn = function(e) {
+                    function n() {
+                        var n = null !== e && e.apply(this, arguments) || this;
+                        return n.state = {
                             selectedUser: null
-                        }, t.handleCheckBoxChange = function(e) {
-                            t.setState(function(t) {
-                                var n = t.selectedUser;
-                                return n ? {
-                                    selectedUser: a.__assign({}, n, e)
+                        }, n.handleCheckBoxChange = function(e) {
+                            n.setState(function(n) {
+                                var t = n.selectedUser;
+                                return t ? {
+                                    selectedUser: a.__assign({}, t, e)
                                 } : null
                             })
-                        }, t.handleRolePillDismissed = function(e) {
-                            t.setState(function(t) {
-                                var n, i = t.selectedUser;
+                        }, n.handleRolePillDismissed = function(e) {
+                            n.setState(function(n) {
+                                var t, i = n.selectedUser;
                                 return i ? {
-                                    selectedUser: a.__assign({}, i, (n = {}, n[e] = !1, n))
+                                    selectedUser: a.__assign({}, i, (t = {}, t[e] = !1, t))
                                 } : null
                             })
-                        }, t.handleUserSelected = function(e) {
-                            t.setState({
+                        }, n.handleUserSelected = function(e) {
+                            n.setState({
                                 selectedUser: {
                                     displayName: e.name,
                                     channelLogin: e.login,
@@ -2965,31 +2923,31 @@
                                     isVIP: !1
                                 }
                             })
-                        }, t.handleUserDeselected = function() {
-                            t.setState({
+                        }, n.handleUserDeselected = function() {
+                            n.setState({
                                 selectedUser: null
                             })
-                        }, t.handleCancelClick = function() {
-                            t.props.setView(r.DEFAULT)
-                        }, t.handleSaveClick = function() {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n, i, s, o, l = this;
+                        }, n.handleCancelClick = function() {
+                            n.props.setView(r.DEFAULT)
+                        }, n.handleSaveClick = function() {
+                            return a.__awaiter(n, void 0, void 0, function() {
+                                var e, n, t, i, s, o, l = this;
                                 return a.__generator(this, function(d) {
                                     switch (d.label) {
                                         case 0:
                                             return e = this.state.selectedUser, [4, this.props.mutateUser(e)];
                                         case 1:
-                                            return t = d.sent(), this.props.setView(r.DEFAULT), t === ne.FATAL ? (this.props.setMessage({
+                                            return n = d.sent(), this.props.setView(r.DEFAULT), n === te.FATAL ? (this.props.setMessage({
                                                 user: e,
-                                                error: t,
+                                                error: n,
                                                 type: X.ALL_MUTATIONS_FAILED
-                                            }), [2]) : (n = t.editorError, i = t.modError, s = t.vipError, n || i || s ? (o = a.__assign({
+                                            }), [2]) : (t = n.editorError, i = n.modError, s = n.vipError, t || i || s ? (o = a.__assign({
                                                 channelLogin: e.channelLogin,
                                                 displayName: e.displayName,
                                                 lastModified: e.lastModified,
                                                 id: e.id,
                                                 profileImageURL: e.profileImageURL
-                                            }, n ? {} : {
+                                            }, t ? {} : {
                                                 isEditor: e.isEditor
                                             }, i ? {} : {
                                                 isMod: e.isMod
@@ -2998,7 +2956,7 @@
                                             }), this.props.modifyUserInCache(o, function() {
                                                 l.props.setMessage({
                                                     user: e,
-                                                    error: t,
+                                                    error: n,
                                                     type: X.SOME_MUTATIONS_FAILED
                                                 })
                                             }), [2]) : (this.props.modifyUserInCache(e, function() {
@@ -3010,32 +2968,32 @@
                                     }
                                 })
                             })
-                        }, t
+                        }, n
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         var e = this.state.selectedUser;
                         return s.createElement(O.Xa, {
                             fullWidth: !0,
                             position: O.hb.Relative,
-                            zIndex: O.gc.Above
+                            zIndex: O.fc.Above
                         }, s.createElement(O.i, {
                             duration: O.k.Medium,
                             enabled: !0,
                             type: O.n.SlideInBottom
-                        }, s.createElement(Ve, null, s.createElement(O.P, {
-                            cols: xe.FIRST_COLUMN
-                        }, s.createElement(nt, {
+                        }, s.createElement(xe, null, s.createElement(O.P, {
+                            cols: Le.FIRST_COLUMN
+                        }, s.createElement(Ze, {
                             onUserDeselected: this.handleUserDeselected,
                             onUserSelected: this.handleUserSelected,
                             selectedUser: e
                         })), s.createElement(O.P, {
-                            cols: xe.SECOND_COLUMN
-                        }, e && s.createElement(Pe, {
+                            cols: Le.SECOND_COLUMN
+                        }, e && s.createElement(Ve, {
                             onCheckBoxChange: this.handleCheckBoxChange,
                             onRolePillDismissed: this.handleRolePillDismissed,
                             user: e
                         })), s.createElement(O.P, {
-                            cols: xe.THIRD_COLUMN
+                            cols: Le.THIRD_COLUMN
                         }, s.createElement(O.Xa, {
                             alignItems: O.f.Center,
                             display: O.X.Flex,
@@ -3045,37 +3003,37 @@
                                 right: 1
                             }
                         }, s.createElement(O.z, {
-                            "data-test-selector": qe.CANCEL_BUTTON,
+                            "data-test-selector": Xe.CANCEL_BUTTON,
                             onClick: this.handleCancelClick,
                             type: O.F.Hollow
-                        }, Object(y.d)("Cancel", "AddUserComponent"))), s.createElement(O.z, {
-                            "data-test-selector": qe.SAVE_BUTTON,
+                        }, Object(S.d)("Cancel", "AddUserComponent"))), s.createElement(O.z, {
+                            "data-test-selector": Xe.SAVE_BUTTON,
                             disabled: !e || !e.isEditor && !e.isMod && !e.isVIP,
                             onClick: this.handleSaveClick,
                             type: O.F.Success
-                        }, Object(y.d)("Save", "AddUserComponent")))))))
-                    }, t
+                        }, Object(S.d)("Save", "AddUserComponent")))))))
+                    }, n
                 }(s.Component),
-                at = Object(o.compose)(F, de, ee, k)(rt);
+                tn = Object(o.compose)(F, de, ee, k)(nn);
             ! function(e) {
                 e.ALL_MUTATIONS_SUCCEEDED = "all-mutations-succeeded", e.SOME_MUTATIONS_FAILED = "some-mutations-failed"
-            }(it || (it = {}));
-            var st = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
+            }(en || (en = {}));
+            var rn = function(e) {
+                    function n() {
+                        var n = null !== e && e.apply(this, arguments) || this;
+                        return n.state = {
                             wasVIPWarningMessageDismissed: !1
-                        }, t.handleDismissVIPWarningMessage = function() {
-                            t.props.clearMessage(), t.setState({
+                        }, n.handleDismissVIPWarningMessage = function() {
+                            n.props.clearMessage(), n.setState({
                                 wasVIPWarningMessageDismissed: !0
                             })
-                        }, t
+                        }, n
                     }
-                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(n, e), n.prototype.componentDidMount = function() {
                         this.tryToShowOrHideVIPWarningMessage()
-                    }, t.prototype.componentDidUpdate = function() {
+                    }, n.prototype.componentDidUpdate = function() {
                         this.tryToShowOrHideVIPWarningMessage()
-                    }, t.prototype.render = function() {
+                    }, n.prototype.render = function() {
                         var e = this.props.message;
                         return e ? s.createElement(O.Xa, {
                             fullWidth: !0,
@@ -3083,85 +3041,85 @@
                                 bottom: 2
                             }
                         }, this.getContent(e)) : null
-                    }, t.prototype.getContent = function(e) {
-                        var t = this.props.clearMessage,
-                            n = Object(y.d)("Close", "RolesPageTopBar");
+                    }, n.prototype.getContent = function(e) {
+                        var n = this.props.clearMessage,
+                            t = Object(S.d)("Close", "RolesPageTopBar");
                         switch (e.type) {
                             case X.ALL_MUTATIONS_SUCCEEDED:
                                 return s.createElement(O.Na, {
-                                    closeButtonAriaLabel: n,
-                                    closeButtonOnClick: t,
-                                    "data-test-selector": it.ALL_MUTATIONS_SUCCEEDED,
-                                    description: Object(y.d)("Specified roles added for {user}.", {
+                                    closeButtonAriaLabel: t,
+                                    closeButtonOnClick: n,
+                                    "data-test-selector": en.ALL_MUTATIONS_SUCCEEDED,
+                                    description: Object(S.d)("Specified roles added for {user}.", {
                                         user: e.user.displayName
                                     }, "RolesPageTopBar"),
-                                    title: Object(y.d)("Success!", "RolesPageTopBar"),
+                                    title: Object(S.d)("Success!", "RolesPageTopBar"),
                                     type: O.Oa.Success
                                 });
                             case X.SOME_MUTATIONS_FAILED:
                                 return s.createElement(O.Na, {
-                                    closeButtonAriaLabel: n,
-                                    closeButtonOnClick: t,
-                                    "data-test-selector": it.SOME_MUTATIONS_FAILED,
-                                    description: Object(y.d)("Unfortunately, some of the specified roles were unable to be added for {user}.", {
+                                    closeButtonAriaLabel: t,
+                                    closeButtonOnClick: n,
+                                    "data-test-selector": en.SOME_MUTATIONS_FAILED,
+                                    description: Object(S.d)("Unfortunately, some of the specified roles were unable to be added for {user}.", {
                                         user: e.user.displayName
                                     }, "RolesPageTopBar"),
-                                    title: Object(y.d)("Warning!", "RolesPageTopBar"),
+                                    title: Object(S.d)("Warning!", "RolesPageTopBar"),
                                     type: O.Oa.Warning
                                 });
                             case X.MAX_VIPS_REACHED:
                                 return s.createElement(O.Na, {
-                                    closeButtonAriaLabel: n,
+                                    closeButtonAriaLabel: t,
                                     closeButtonOnClick: this.handleDismissVIPWarningMessage,
-                                    description: Object(y.d)("You have reached the maximum amount of VIP roles. <x:link>Read more about Roles.</x:link>", {
+                                    description: Object(S.d)("You have reached the maximum amount of VIP roles. <x:link>Read more about Roles.</x:link>", {
                                         "x:link": function(e) {
                                             return s.createElement(O.U, {
                                                 linkTo: "TODO"
                                             }, e)
                                         }
                                     }, "RolesPageTopBar"),
-                                    title: Object(y.d)("You can't add any more VIPs.", "RolesPageTopBar"),
+                                    title: Object(S.d)("You can't add any more VIPs.", "RolesPageTopBar"),
                                     type: O.Oa.Warning
                                 });
                             default:
                                 return null
                         }
-                    }, t.prototype.tryToShowOrHideVIPWarningMessage = function() {
+                    }, n.prototype.tryToShowOrHideVIPWarningMessage = function() {
                         var e = this.props,
-                            t = e.isAtMaxVIPUserLimit,
-                            n = e.message;
-                        !t || n || this.state.wasVIPWarningMessageDismissed ? n && n.type === X.MAX_VIPS_REACHED && !t && (this.props.clearMessage(), this.setState({
+                            n = e.isAtMaxVIPUserLimit,
+                            t = e.message;
+                        !n || t || this.state.wasVIPWarningMessageDismissed ? t && t.type === X.MAX_VIPS_REACHED && !n && (this.props.clearMessage(), this.setState({
                             wasVIPWarningMessageDismissed: !1
                         })) : this.props.setMessage({
                             type: X.MAX_VIPS_REACHED
                         })
-                    }, t
+                    }, n
                 }(s.Component),
-                ot = Object(o.compose)(B, ee)(st),
-                lt = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
+                an = Object(o.compose)(B, ee)(rn),
+                sn = function(e) {
+                    function n() {
+                        var n = null !== e && e.apply(this, arguments) || this;
+                        return n.state = {
                             showDropDownMenu: !1
-                        }, t.handleOptionClick = function(e) {
-                            t.setState({
+                        }, n.handleOptionClick = function(e) {
+                            n.setState({
                                 showDropDownMenu: !1
                             }, function() {
-                                t.props.setFilterType(e)
+                                n.props.setFilterType(e)
                             })
-                        }, t.handleButtonClick = function() {
-                            t.setState(function(e) {
+                        }, n.handleButtonClick = function() {
+                            n.setState(function(e) {
                                 return {
                                     showDropDownMenu: !e.showDropDownMenu
                                 }
                             })
-                        }, t.handleClickOut = function() {
-                            t.setState({
+                        }, n.handleClickOut = function() {
+                            n.setState({
                                 showDropDownMenu: !1
                             })
-                        }, t
+                        }, n
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         var e = this.props.filterType;
                         return s.createElement(O.Xa, {
                             alignItems: O.f.Center,
@@ -3170,7 +3128,7 @@
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(O.W, null, Object(y.d)("Display", "FilterUsersComponent"))), s.createElement(O.Xa, null, s.createElement(Ue.a, {
+                        }, s.createElement(O.W, null, Object(S.d)("Display", "FilterUsersComponent"))), s.createElement(O.Xa, null, s.createElement(Oe.a, {
                             onClickOut: this.handleClickOut
                         }, s.createElement(O.z, {
                             onClick: this.handleButtonClick,
@@ -3220,29 +3178,29 @@
                             }]),
                             show: this.state.showDropDownMenu
                         })))))
-                    }, t.prototype.getFilterText = function(e) {
+                    }, n.prototype.getFilterText = function(e) {
                         switch (e) {
                             default:
                                 case E.ALL_ROLES:
-                                return Object(y.d)("All Roles", "FilterUsersComponent");
+                                return Object(S.d)("All Roles", "FilterUsersComponent");
                             case E.EDITOR:
-                                    return Te();
+                                    return Me();
                             case E.MODERATOR:
-                                    return Fe();
+                                    return Te();
                             case E.VIP:
-                                    return Le()
+                                    return Fe()
                         }
-                    }, t
+                    }, n
                 }(s.Component),
-                dt = Object(o.compose)(B, F)(lt),
-                ct = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.handleButtonClick = function() {
-                            t.props.setView(r.ADD_USER), t.props.clearMessage()
-                        }, t
+                on = Object(o.compose)(B, F)(sn),
+                ln = function(e) {
+                    function n() {
+                        var n = null !== e && e.apply(this, arguments) || this;
+                        return n.handleButtonClick = function() {
+                            n.props.setView(r.ADD_USER), n.props.clearMessage()
+                        }, n
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         var e = this.props.view === r.ADD_USER;
                         return s.createElement(s.Fragment, null, s.createElement(O.Cb, {
                             alignItems: O.f.Center,
@@ -3251,57 +3209,57 @@
                             fullWidth: !0,
                             justifyContent: O.Wa.Between,
                             margin: {
-                                bottom: 1
+                                bottom: 2
                             },
                             padding: {
                                 bottom: 1
                             }
-                        }, s.createElement(dt, null), s.createElement(O.z, {
+                        }, s.createElement(on, null), s.createElement(O.z, {
                             disabled: e,
                             onClick: this.handleButtonClick
-                        }, Object(y.d)("Add New", "TopBar"))), s.createElement(ot, null), e && s.createElement(at, null))
-                    }, t
+                        }, Object(S.d)("Add New", "TopBar"))), s.createElement(an, null), e && s.createElement(tn, null))
+                    }, n
                 }(s.Component),
-                ut = Object(o.compose)(ee, k)(ct),
-                mt = k(function(e) {
-                    function t() {
+                dn = Object(o.compose)(ee, k)(ln),
+                cn = k(function(e) {
+                    function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                        y.p.setPageTitle(Object(y.d)("Roles", "RolesPage"))
-                    }, t.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.componentDidMount = function() {
+                        S.p.setPageTitle(Object(S.d)("Roles", "RolesPage"))
+                    }, n.prototype.render = function() {
                         var e = this.props.channelID;
-                        return s.createElement(w, {
+                        return s.createElement(P, {
                             channelID: e
                         }, s.createElement(G, {
                             channelID: e
                         }, s.createElement(ie, null, s.createElement(ge, {
                             channelID: e
-                        }, this.props.view === r.NO_USERS ? s.createElement(De, null) : s.createElement(I.a, null, s.createElement(ut, null), s.createElement($e, null), s.createElement(ye, null)), s.createElement(Y, null)))))
-                    }, t
+                        }, this.props.view === r.NO_USERS ? s.createElement(De, null) : s.createElement(y.a, null, s.createElement(dn, null), s.createElement(We, null), s.createElement(Se, null)), s.createElement(Y, null)))))
+                    }, n
                 }(s.Component)),
-                pt = n("LQi+"),
-                ht = function(e) {
-                    function t() {
+                un = t("LQi+"),
+                mn = function(e) {
+                    function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(n, e), n.prototype.componentDidMount = function() {
                         this.reportInteractive()
-                    }, t.prototype.componentDidUpdate = function(e) {
+                    }, n.prototype.componentDidUpdate = function(e) {
                         e.data.loading && this.reportInteractive()
-                    }, t.prototype.render = function() {
-                        return s.createElement(b, null, s.createElement(mt, {
+                    }, n.prototype.render = function() {
+                        return s.createElement(b, null, s.createElement(cn, {
                             channelID: this.props.data.user && this.props.data.user.id
                         }))
-                    }, t.prototype.reportInteractive = function() {
+                    }, n.prototype.reportInteractive = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive(1)
-                    }, t
+                    }, n
                 }(s.Component),
-                vt = Object(o.compose)(Object(m.b)("RolesPage", {
+                pn = Object(o.compose)(Object(m.b)("RolesPage", {
                     destination: c.a.RolesPage
                 }), Object(d.a)({
                     location: u.PageviewLocation.DashboardSettingsRolesPage
-                }), Object(l.a)(pt, {
+                }), Object(l.a)(un, {
                     options: function(e) {
                         return {
                             variables: {
@@ -3309,13 +3267,13 @@
                             }
                         }
                     }
-                }))(ht);
-            n.d(t, "RolesPage", function() {
-                return vt
+                }))(mn);
+            t.d(n, "RolesPage", function() {
+                return pn
             })
         },
-        r6Pb: function(e, t) {
-            var n = {
+        r6Pb: function(e, n) {
+            var t = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -3440,7 +3398,7 @@
                     end: 136
                 }
             };
-            n.loc.source = {
+            t.loc.source = {
                 body: "mutation RemoveEditorUser($input: RemoveEditorInput!){\nremoveEditor(input: $input) {\nchannel {\nid\n}\ntargetUser {\nid\n}\nerror {\ncode\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
@@ -3448,10 +3406,10 @@
                     column: 1
                 }
             };
-            e.exports = n
+            e.exports = t
         },
-        sMoq: function(e, t) {
-            var n = {
+        sMoq: function(e, n) {
+            var t = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -3584,7 +3542,7 @@
                     end: 122
                 }
             };
-            n.loc.source = {
+            t.loc.source = {
                 body: "mutation VIPUser($input: GrantVIPInput!){\ngrantVIP(input: $input) {\nchannel {\nid\n}\ngrantee {\nid\nlogin\n}\nerror {\ncode\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
@@ -3592,57 +3550,57 @@
                     column: 1
                 }
             };
-            e.exports = n
+            e.exports = t
         },
-        sZ5a: function(e, t, n) {},
-        vYsf: function(e, t, n) {
+        sZ5a: function(e, n, t) {},
+        vYsf: function(e, n, t) {
             "use strict";
-            n.d(t, "a", function() {
+            t.d(n, "a", function() {
                 return a
             });
-            var i = n("mrSG"),
-                r = n("b6Yk");
+            var i = t("mrSG"),
+                r = t("b6Yk");
 
             function a(e) {
                 return i.__awaiter(this, void 0, Promise, function() {
-                    var t, n;
+                    var n, t;
                     return i.__generator(this, function(i) {
                         switch (i.label) {
                             case 0:
                                 return [4, r.a.get("/v5/channels/" + e + "/quests")];
                             case 1:
-                                if (t = i.sent(), n = t.body, 200 !== t.status || !n) throw new Error("failed to fetch quests");
-                                return [2, n.quests]
+                                if (n = i.sent(), t = n.body, 200 !== n.status || !t) throw new Error("failed to fetch quests");
+                                return [2, t.quests]
                         }
                     })
                 })
             }
         },
-        vsHg: function(e, t, n) {},
-        yzwe: function(e, t, n) {
+        vsHg: function(e, n, t) {},
+        yzwe: function(e, n, t) {
             "use strict";
-            n.d(t, "a", function() {
+            t.d(n, "a", function() {
                 return i
-            }), n.d(t, "b", function() {
+            }), t.d(n, "b", function() {
                 return o
             });
-            var i, r = n("mrSG"),
-                a = n("yR8l"),
-                s = n("FAYk");
+            var i, r = t("mrSG"),
+                a = t("yR8l"),
+                s = t("FAYk");
 
             function o(e) {
-                var t = this;
+                var n = this;
                 return Object(a.a)(s, {
-                    props: function(n) {
+                    props: function(t) {
                         return {
                             unmodUserMutation: function(i) {
-                                return r.__awaiter(t, void 0, void 0, function() {
-                                    var t;
+                                return r.__awaiter(n, void 0, void 0, function() {
+                                    var n;
                                     return r.__generator(this, function(r) {
-                                        if (t = e(n.ownProps).channelID, n.mutate) return [2, n.mutate({
+                                        if (n = e(t.ownProps).channelID, t.mutate) return [2, t.mutate({
                                             variables: {
                                                 input: {
-                                                    channelID: t,
+                                                    channelID: n,
                                                     targetLogin: i
                                                 }
                                             }

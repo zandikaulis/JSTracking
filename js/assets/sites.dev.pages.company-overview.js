@@ -128,7 +128,7 @@
                             },
                             flexGrow: 1
                         }, a.createElement(b.W, {
-                            type: b.Tb.Span,
+                            type: b.Sb.Span,
                             ellipsis: !0
                         }, this.props.user.name))))))
                     }, t
@@ -149,8 +149,7 @@
                                 }))
                             })), e
                         }, t.onSelect = function(e) {
-                            var r = t.props.clearOnSelect;
-                            t.userSearch && t.userSearch.setValue(r ? "" : e.login), t.props.onUserSelect(e)
+                            t.userSearch && t.userSearch.setValue(e.login), t.props.onUserSelect(e)
                         }, t.setUserSearchRef = function(e) {
                             t.userSearch = e
                         }, t
@@ -272,7 +271,6 @@
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
                         return a.createElement(k, {
-                            clearOnSelect: this.props.clearOnSelect,
                             userResults: this.state.userResult,
                             open: this.state.searchOpen,
                             waiting: this.state.waiting,
@@ -314,10 +312,10 @@
                         padding: {
                             y: 1
                         },
-                        zIndex: o.gc.Above
+                        zIndex: o.fc.Above
                     }, a.createElement(o.Cb, {
                         color: o.O.Alt2,
-                        textAlign: o.Pb.Center,
+                        textAlign: o.Ob.Center,
                         flexShrink: 1
                     }, a.createElement(o.qb, {
                         asset: o.rb.DeadGlitch,
@@ -327,12 +325,12 @@
                         margin: {
                             top: 1
                         },
-                        textAlign: o.Pb.Center
+                        textAlign: o.Ob.Center
                     }, a.createElement(o.W, {
-                        type: o.Tb.H4,
+                        type: o.Sb.H4,
                         "data-test-selector": "search-error-message"
                     }, Object(i.d)("Search is not available at this time", "DropdownSearchError"))), a.createElement(o.W, {
-                        type: o.Tb.P
+                        type: o.Sb.P
                     }, Object(i.d)("Please try again later", "DropdownSearchError")))
                 },
                 u = r("8Ad5"),
@@ -407,7 +405,7 @@
                                 y: 1
                             },
                             position: o.hb.Absolute,
-                            zIndex: o.gc.Above,
+                            zIndex: o.fc.Above,
                             elevation: 3
                         }, a.createElement("div", {
                             tabIndex: 0,
@@ -646,8 +644,8 @@
                     })
                 })
             }
-            var T = r("yR8l"),
-                D = function(e) {
+            var D = r("yR8l"),
+                T = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderRemoveButton = function() {
@@ -684,7 +682,7 @@
                 }(o.Component),
                 U = Object(s.compose)(Object(l.b)("DevMemberItem", {
                     autoReportInteractive: !0
-                }))(D);
+                }))(T);
             var I = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -737,8 +735,8 @@
                             padding: 2,
                             display: h.X.Flex,
                             justifyContent: h.Wa.Between
-                        }, o.createElement("header", null, o.createElement(h.Wb, {
-                            direction: h.Yb.Right,
+                        }, o.createElement("header", null, o.createElement(h.Vb, {
+                            direction: h.Xb.Right,
                             label: function(e) {
                                 var t = "";
                                 switch (e) {
@@ -757,7 +755,7 @@
                                 return t
                             }(this.props.title)
                         }, o.createElement(h.W, {
-                            type: h.Tb.H4
+                            type: h.Sb.H4
                         }, e)), r)), o.createElement(h.Xa, null, o.createElement(h.Ja, null, t)))
                     }, t
                 }(o.Component),
@@ -826,7 +824,7 @@
                         return o.createElement(h.Xa, null, e)
                     }, t
                 }(o.Component),
-                M = Object(s.compose)(Object(l.b)("DevCompanyMember"), Object(T.a)(A, {
+                M = Object(s.compose)(Object(l.b)("DevCompanyMember"), Object(D.a)(A, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1032,9 +1030,9 @@
                                 top: 2,
                                 bottom: 4
                             },
-                            textAlign: h.Pb.Center
+                            textAlign: h.Ob.Center
                         }, o.createElement(h.W, {
-                            type: h.Tb.H1
+                            type: h.Sb.H1
                         }, Object(c.d)("{name} Role Management", {
                             name: e
                         }, "DevCompanyMembers"))), o.createElement(h.Xa, null, o.createElement(M, {
@@ -1331,7 +1329,7 @@
                         }).then(function(t) {
                             e.countryCode = t.data.requestInfo.countryCode
                         }).catch(function(t) {
-                            e.logger.warn(t, "Failed to get country code")
+                            e.logger.error(t, "Failed to get country code")
                         })
                     }, e.prototype.getSearchResults = function(e) {
                         var t = this,
@@ -1348,7 +1346,7 @@
                                 results: JSON.parse(e.data.search.result)
                             }
                         }).catch(function(e) {
-                            return t.logger.warn(e, "Failed to get search results"), e
+                            return t.logger.error(e, "Failed to get search results"), e
                         })
                     }, e.prototype.getTopResult = function(e, t) {
                         return {

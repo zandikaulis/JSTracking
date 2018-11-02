@@ -518,7 +518,7 @@
                         },
                         "data-a-target": "reporting-channel-name"
                     }, o.createElement(u.W, {
-                        type: u.Tb.H4
+                        type: u.Sb.H4
                     }, this.props.title), o.createElement(u.Cb, {
                         color: u.O.Alt2,
                         margin: {
@@ -539,7 +539,7 @@
                     }), o.createElement(u.Ea, {
                         id: "reporting__text-area",
                         label: Object(i.d)("Description (required)", "ReportUser")
-                    }, o.createElement(u.Qb, {
+                    }, o.createElement(u.Pb, {
                         defaultValue: this.props.defaultDescription,
                         onChange: this.handleTextAreaChange
                     }))), o.createElement(u.Cb, {
@@ -653,7 +653,7 @@
                                 }
                             }, o.createElement(f.W, {
                                 className: "block-user__success",
-                                type: f.Tb.Span
+                                type: f.Sb.Span
                             }, Object(l.d)("{user} blocked", {
                                 user: t.props.targetUser.displayName
                             }, "ReportWizardBlockActions"))), o.createElement(f.U, {
@@ -697,7 +697,7 @@
                             margin: {
                                 y: 1
                             }
-                        }, o.createElement(f.cc, {
+                        }, o.createElement(f.bc, {
                             baseFontSize: f.Ca.Size6
                         }, o.createElement("p", null, Object(l.d)("Blocking {user} will:", {
                             user: t
@@ -1381,7 +1381,7 @@
                                     }, o.createElement(f.Ea, {
                                         label: t.getTitle(),
                                         labelOptional: t.required ? "" : Object(l.d)("Optional", "ReportModalWizardCard")
-                                    }, o.createElement(f.Qb, {
+                                    }, o.createElement(f.Pb, {
                                         onChange: e.onChange,
                                         rows: t.rows || 3,
                                         name: t.value,

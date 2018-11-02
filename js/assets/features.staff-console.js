@@ -298,7 +298,7 @@
                             r = this.props.override,
                             a = void 0 !== r;
                         return "boolean" == typeof this.props.settingData ? t = i.createElement(y.Xa, null, this.renderToggle(this.props.settingKey, !!this.props.settingData, r)) : (t = i.createElement(y.W, {
-                            wordBreak: y.fc.BreakAll
+                            wordBreak: y.ec.BreakAll
                         }, a ? JSON.stringify(r) : JSON.stringify(this.props.settingData)), e = i.createElement(y.Xa, {
                             margin: {
                                 left: 1
@@ -328,7 +328,7 @@
                         }, t), e)
                     }, t.prototype.renderToggle = function(e, t, n) {
                         var r = this;
-                        return i.createElement(y.Vb, {
+                        return i.createElement(y.Ub, {
                             onChange: function(n) {
                                 var a = n.currentTarget.checked;
                                 r.props.setOverride(e, a === t ? void 0 : a)
@@ -373,7 +373,7 @@
                                 y: 1
                             },
                             fullHeight: !0
-                        }, i.createElement(y.Qb, {
+                        }, i.createElement(y.Pb, {
                             placeholder: "(undefined)",
                             onChange: this.onValueChange,
                             value: e,
@@ -606,15 +606,15 @@
                         }, {}), n.renderExperimentsDisabled = function() {
                             return i.createElement(y.Xa, null, i.createElement(y.W, {
                                 fontSize: y.Ca.Size5
-                            }, "Experiments are forced to default assignments via localStorage."), i.createElement(y.Xa, {
+                            }, "Experiments are disabled from local storage."), i.createElement(y.Xa, {
                                 margin: {
                                     top: 1
                                 }
                             }, i.createElement(y.z, {
                                 onClick: n.enableExperiments
-                            }, "Enable normal assignments and reload")))
+                            }, "Enable experiments and reload")))
                         }, n.enableExperiments = function() {
-                            l.p.storage.remove(C.b), window.location.reload()
+                            l.p.storage.remove(C.c), l.p.storage.remove(C.a), window.location.reload()
                         }, n.filteredExperiments = function() {
                             return "" === n.state.searchQuery ? Object.keys(n.experiments) : Object.keys(n.experiments).filter(function(e) {
                                 return E(n.experiments[e].name).includes(n.state.searchQuery)
@@ -754,9 +754,9 @@
                         }, n.renderStaffTabButton = function(e, t, r) {
                             void 0 === r && (r = !1);
                             var a = n.state.selectedTab === e;
-                            return i.createElement(y.Wb, {
+                            return i.createElement(y.Vb, {
                                 label: e,
-                                direction: y.Yb.Right
+                                direction: y.Xb.Right
                             }, i.createElement(y.A, {
                                 onClick: function() {
                                     n.setState({
@@ -844,7 +844,7 @@
                         }, i.createElement(y.W, {
                             bold: !0,
                             fontSize: y.Ca.Size4,
-                            type: y.Tb.Span
+                            type: y.Sb.Span
                         }, this.state.selectedTab)), i.createElement(y.Xa, {
                             display: y.X.Flex,
                             padding: {
@@ -1673,13 +1673,13 @@
                             display: d.X.Flex,
                             alignItems: d.f.Center,
                             fullWidth: !0
-                        }, !c.a.forceBenchmarkingTools && !this.state.isEnabled && l.createElement(d.Wb, {
+                        }, !c.a.forceBenchmarkingTools && !this.state.isEnabled && l.createElement(d.Vb, {
                             label: "Enabling will reload the page"
                         }, l.createElement(d.qb, {
                             asset: d.rb.NotificationInfo,
                             width: 16,
                             height: 16
-                        })), c.a.forceBenchmarkingTools && l.createElement(d.Wb, {
+                        })), c.a.forceBenchmarkingTools && l.createElement(d.Vb, {
                             label: "Always enabled in dev"
                         }, l.createElement(d.qb, {
                             asset: d.rb.NotificationInfo,

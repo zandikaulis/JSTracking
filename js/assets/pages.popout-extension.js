@@ -671,65 +671,69 @@
         },
         "22qk": function(e, t, n) {
             "use strict";
+            n.d(t, "d", function() {
+                return i
+            }), n.d(t, "b", function() {
+                return a
+            }), n.d(t, "c", function() {
+                return s
+            }), n.d(t, "e", function() {
+                return l
+            }), n.d(t, "h", function() {
+                return c
+            }), n.d(t, "f", function() {
+                return u
+            }), n.d(t, "a", function() {
+                return d
+            }), n.d(t, "g", function() {
+                return p
+            });
+            var r = n("/7QA"),
+                o = n("D7An");
 
-            function r(e, t) {
-                return "/ext/" + d(e, t)
+            function i(e, t) {
+                return "/ext/" + E(e, t)
             }
 
-            function o(e, t, n) {
-                return {
-                    pathname: "" + a(e),
-                    search: "?configure=true&extensionID=" + d(t, n)
+            function a(e, t, n) {
+                return "control" === r.p.experiments.getAssignment(o.b.ExtensionConfigureModal) ? {
+                    pathname: s(e) + "/" + E(t, n) + "/configure"
+                } : {
+                    pathname: "" + l(e),
+                    search: "?configure=true&extensionID=" + E(t, n)
                 }
             }
 
-            function i(e) {
+            function s(e) {
                 return "/" + e + "/dashboard/extensions"
             }
 
-            function a(e) {
+            function l(e) {
                 return "/" + e + "/dashboard/extensions/manage"
             }
 
-            function s(e) {
+            function c(e) {
                 return "/" + e + "/dashboard/extensions/whitelisted"
             }
 
-            function l(e, t) {
+            function u(e, t) {
                 return {
                     pathname: "/" + e + "/dashboard/extensions/permissions",
                     state: t
                 }
             }
 
-            function c(e) {
+            function d(e) {
                 return "/ext/categories/" + e
             }
 
-            function u(e) {
+            function p(e) {
                 return "/ext/search?q=" + encodeURIComponent(e)
             }
 
-            function d(e, t) {
+            function E(e, t) {
                 return t ? e + "-" + t : e
             }
-            n.d(t, "d", function() {
-                return r
-            }), n.d(t, "b", function() {
-                return o
-            }), n.d(t, "c", function() {
-                return i
-            }), n.d(t, "e", function() {
-                return a
-            }), n.d(t, "h", function() {
-                return s
-            }), n.d(t, "f", function() {
-                return l
-            }), n.d(t, "a", function() {
-                return c
-            }), n.d(t, "g", function() {
-                return u
-            })
         },
         "3CMh": function(e, t, n) {
             "use strict";
@@ -766,7 +770,7 @@
                     var m = e.formattedNumber ? Object(a.f)(e.amount) : e.amount;
                     p = i.createElement(u.Pa, {
                         padding: e.size === r.Small ? 0 : void 0,
-                        textAlign: e.size === r.Small ? u.Pb.Center : void 0
+                        textAlign: e.size === r.Small ? u.Ob.Center : void 0
                     }, i.createElement("strong", {
                         className: E,
                         style: {
@@ -1441,7 +1445,7 @@
         },
         DMoW: function(e, t, n) {
             "use strict";
-            var r, o, i, a, s, l, c, u, d, p, E, m, h, f, g, T, _, R, b, v, I, O, C, y, S, A, N, D, P, L, M, k, x, U, w, B, F, V, W, j, G, H, z, X, Y, q, K, Q, Z, J, $, ee, te, ne, re, oe, ie, ae, se, le, ce, ue, de, pe, Ee, me, he, fe, ge, Te, _e, Re, be, ve, Ie, Oe, Ce, ye, Se, Ae, Ne, De, Pe, Le, Me, ke, xe, Ue, we, Be, Fe, Ve, We, je, Ge, He, ze, Xe, Ye, qe, Ke, Qe, Ze, Je, $e, et, tt, nt, rt, ot, it, at, st, lt, ct, ut, dt;
+            var r, o, i, a, s, l, c, u, d, p, E, m, h, f, g, T, _, R, b, v, I, O, C, y, S, A, N, D, P, L, M, k, x, U, w, B, F, V, W, j, G, H, z, X, Y, q, K, Q, Z, J, $, ee, te, ne, re, oe, ie, ae, se, le, ce, ue, de, pe, Ee, me, he, fe, ge, Te, _e, Re, be, ve, Ie, Oe, Ce, ye, Se, Ae, Ne, De, Pe, Le, Me, ke, xe, Ue, we, Be, Fe, Ve, We, je, Ge, He, ze, Xe, Ye, qe, Ke, Qe, Ze, Je, $e, et, tt, nt, rt, ot, it, at, st, lt, ct, ut;
             n.d(t, "c", function() {
                     return o
                 }), n.d(t, "I", function() {
@@ -1525,15 +1529,15 @@
                 }), n.d(t, "L", function() {
                     return He
                 }), n.d(t, "w", function() {
-                    return $e
+                    return Je
                 }), n.d(t, "G", function() {
-                    return et
+                    return $e
                 }), n.d(t, "H", function() {
-                    return tt
+                    return et
                 }), n.d(t, "d", function() {
-                    return ct
+                    return lt
                 }), n.d(t, "r", function() {
-                    return ut
+                    return ct
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -1827,65 +1831,62 @@
                     e.SQUAD_NOT_FOUND = "SQUAD_NOT_FOUND", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(ze || (ze = {})),
                 function(e) {
-                    e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(Xe || (Xe = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(Ye || (Ye = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
                 }(qe || (qe = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }(Ke || (Ke = {})),
                 function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
+                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(Ze || (Ze = {})),
                 function(e) {
-                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(Je || (Je = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
                 }($e || ($e = {})),
                 function(e) {
-                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
+                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
                 }(et || (et = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }(tt || (tt = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(nt || (nt = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(rt || (rt = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(ot || (ot = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(it || (it = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(at || (at = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
                 }(st || (st = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
                 }(lt || (lt = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
                 }(ct || (ct = {})),
                 function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
-                }(ut || (ut = {})),
-                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(dt || (dt = {}))
+                }(ut || (ut = {}))
         },
         Fxe2: function(e, t, n) {
             "use strict";
@@ -1946,7 +1947,10 @@
                     return function(l) {
                         function c() {
                             var e = null !== l && l.apply(this, arguments) || this;
-                            return e.hadImpression = !1, e.logger = a.k.withCategory("with-impression-listener"), e.setRef = function(t) {
+                            return e.state = {
+                                hadImpression: !1,
+                                didScroll: !1
+                            }, e.logger = a.k.withCategory("with-impression-listener"), e.setRef = function(t) {
                                 return e.element = t
                             }, e.registerImpressionCallback = function(t) {
                                 e.reportImpression = t
@@ -1961,6 +1965,8 @@
                         }, c.prototype.render = function() {
                             var e = {
                                 impressionListener: {
+                                    hadImpression: this.state.hadImpression,
+                                    didScroll: this.state.didScroll,
                                     registerImpressionCallback: this.registerImpressionCallback
                                 }
                             };
@@ -1971,7 +1977,10 @@
                             return r.__awaiter(this, void 0, void 0, function() {
                                 var t, n;
                                 return r.__generator(this, function(r) {
-                                    return this.hadImpression || (t = this.isVisible(e)) && (n = this.isScrolled(), this.hadImpression = t, this.reportImpression && this.reportImpression(n)), [2]
+                                    return this.state.hadImpression || (t = this.isVisible(e)) && (n = this.isScrolled(), this.setState({
+                                        hadImpression: t,
+                                        didScroll: n
+                                    }), this.reportImpression && this.reportImpression(n)), [2]
                                 })
                             })
                         }, c.prototype.isVisible = function(e) {
@@ -2147,7 +2156,7 @@
                         },
                         "data-a-target": "reporting-channel-name"
                     }, i.createElement(u.W, {
-                        type: u.Tb.H4
+                        type: u.Sb.H4
                     }, this.props.title), i.createElement(u.Cb, {
                         color: u.O.Alt2,
                         margin: {
@@ -2168,7 +2177,7 @@
                     }), i.createElement(u.Ea, {
                         id: "reporting__text-area",
                         label: Object(a.d)("Description (required)", "ReportUser")
-                    }, i.createElement(u.Qb, {
+                    }, i.createElement(u.Pb, {
                         defaultValue: this.props.defaultDescription,
                         onChange: this.handleTextAreaChange
                     }))), i.createElement(u.Cb, {
@@ -2525,7 +2534,7 @@
                     }, t.prototype.render = function() {
                         if (this.props.data.loading || !this.props.data.currentUser) return null;
                         var e = this.props.showSuccessText ? E.createElement(A.W, {
-                                type: A.Tb.Span,
+                                type: A.Sb.Span,
                                 className: "extension-bits-balance-success"
                             }, Object(h.d)("Success!", "ExtensionPanelBitsBalanceDialog")) : null,
                             t = E.createElement(K.a, {
@@ -2587,13 +2596,13 @@
                     src: e.extension.iconUrl
                 }), E.createElement(A.Xa, {
                     margin: 1,
-                    textAlign: A.Pb.Center
+                    textAlign: A.Ob.Center
                 }, E.createElement(A.W, {
                     fontSize: A.Ca.Size5
                 }, Object(h.d)("{name} is popped out.", {
                     name: E.createElement(A.W, {
                         "data-test-selector": C.ExtensionName,
-                        type: A.Tb.Span,
+                        type: A.Sb.Span,
                         bold: !0
                     }, e.extension.name)
                 }, "ExtensionPopoutPlaceholder"))), E.createElement(A.z, {
@@ -2641,7 +2650,7 @@
                     }, t(Object(h.d)("The channel you are attempting to follow does not exist.", "FollowDialog")));
                     var n = Object(h.d)("You are about to follow {name}.", {
                             name: E.createElement(A.W, {
-                                type: A.Tb.Span,
+                                type: A.Sb.Span,
                                 bold: !0
                             }, e.currentFollowRequest.options.channel)
                         }, "FollowDialog"),
@@ -2680,20 +2689,20 @@
                         }, E.createElement(A.Xa, {
                             flexGrow: 1
                         }, E.createElement(A.W, {
-                            type: A.Tb.Span,
+                            type: A.Sb.Span,
                             fontSize: A.Ca.Size5
-                        }, Object(h.d)("Notifications", "FollowDialog"))), E.createElement(A.Vb, {
+                        }, Object(h.d)("Notifications", "FollowDialog"))), E.createElement(A.Ub, {
                             id: "ext-follow-notification",
                             checked: e.currentFollowRequest.notifications,
                             onChange: e.onNotificationsChanged
                         })), E.createElement(A.W, {
-                            type: A.Tb.Span,
+                            type: A.Sb.Span,
                             color: A.O.Alt2,
                             fontSize: A.Ca.Size7
                         }, r)),
                         i = Object(h.d)("You are already following {name}.", {
                             name: E.createElement(A.W, {
-                                type: A.Tb.Span,
+                                type: A.Sb.Span,
                                 bold: !0
                             }, e.currentFollowRequest.options.channel)
                         }, "FollowDialog"),
@@ -2710,10 +2719,10 @@
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderGrantPermissionsButton = function() {
                         var e = Object(h.d)("Grant Permissions", "ExtensionPanel");
-                        return E.createElement(A.Wb, {
+                        return E.createElement(A.Vb, {
                             label: e,
-                            direction: A.Yb.Top,
-                            align: A.Xb.Right,
+                            direction: A.Xb.Top,
+                            align: A.Wb.Right,
                             offsetX: ".6rem"
                         }, E.createElement(A.Xa, {
                             display: A.X.Flex,
@@ -2724,10 +2733,10 @@
                         })))
                     }, t.renderRevokePermissionsButton = function() {
                         var e = Object(h.d)("Revoke Permissions", "ExtensionPanel");
-                        return E.createElement(A.Wb, {
+                        return E.createElement(A.Vb, {
                             label: e,
-                            direction: A.Yb.Top,
-                            align: A.Xb.Right,
+                            direction: A.Xb.Top,
+                            align: A.Wb.Right,
                             offsetX: ".6rem"
                         }, E.createElement(A.Xa, {
                             display: A.X.Flex,
@@ -2756,12 +2765,12 @@
                     var n = t ? this.renderRevokePermissionsButton() : this.renderGrantPermissionsButton(),
                         r = Object(h.d)("You are granting {name} the following access:", {
                             name: E.createElement(A.W, {
-                                type: A.Tb.Strong
+                                type: A.Sb.Strong
                             }, this.props.extension.name)
                         }, "Extension Panel"),
                         o = Object(h.d)("You are revoking the following access for {name}:", {
                             name: E.createElement(A.W, {
-                                type: A.Tb.Strong
+                                type: A.Sb.Strong
                             }, this.props.extension.name)
                         }, "Extension Panel");
                     return E.createElement(f.a, {
@@ -2781,10 +2790,10 @@
                             y: 1
                         }
                     }), E.createElement(A.Xa, null, E.createElement(A.W, {
-                        type: A.Tb.P,
+                        type: A.Sb.P,
                         bold: !0
                     }, Object(h.d)("Your Twitch User ID", "Extension Panel")), E.createElement(A.W, {
-                        type: A.Tb.P
+                        type: A.Sb.P
                     }, Object(h.d)("Allows this extension to know your User ID on Twitch.", "Extension Panel")), E.createElement("a", {
                         "data-test-selector": $.ManagePermissionsLink,
                         href: "https://twitch.tv/settings/connections",
@@ -2821,10 +2830,10 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = Object(h.d)("Pop Out Extension", "PopoutButton");
-                        return E.createElement("span", null, E.createElement(A.Wb, {
+                        return E.createElement("span", null, E.createElement(A.Vb, {
                             label: e,
-                            direction: A.Yb.Top,
-                            align: A.Xb.Right,
+                            direction: A.Xb.Top,
+                            align: A.Wb.Right,
                             offsetX: ".6rem"
                         }, E.createElement(A.Xa, {
                             display: A.X.Flex,
@@ -2873,7 +2882,7 @@
                         }
                     }, E.createElement(A.Xa, {
                         fullWidth: !0,
-                        textAlign: A.Pb.Right
+                        textAlign: A.Ob.Right
                     }, E.createElement(A.W, {
                         fontSize: A.Ca.Size6,
                         bold: !0
@@ -2996,10 +3005,10 @@
                 }, t.prototype.render = function() {
                     if (!this.props.isPopout || !this.state.isRestoreDefaultSizeVisible) return null;
                     var e = Object(h.d)("Resize to Default", "RestoreDefaultSizeButton");
-                    return E.createElement("span", null, E.createElement(A.Wb, {
+                    return E.createElement("span", null, E.createElement(A.Vb, {
                         label: e,
-                        direction: A.Yb.Top,
-                        align: A.Xb.Right,
+                        direction: A.Xb.Top,
+                        align: A.Wb.Right,
                         offsetX: ".6rem"
                     }, E.createElement(A.Xa, {
                         display: A.X.Flex,
@@ -3029,7 +3038,7 @@
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e = null;
                     return e = this.state.declined ? E.createElement(E.Fragment, null, E.createElement(A.W, {
-                        type: A.Tb.P,
+                        type: A.Sb.P,
                         "data-test-selector": se.DeclinedMessage
                     }, Object(h.d)("You’ve declined to use this test extension. To use it, please refresh this page and select accept.", "TestExtensionDialog")), E.createElement(A.Xa, {
                         padding: {
@@ -3042,7 +3051,7 @@
                         linkTo: "https://help.twitch.tv/customer/portal/articles/2861187-how-to-use-extensions",
                         type: A.F.Hollow
                     }, Object(h.d)("Learn More", "TestExtensionDialog")))) : E.createElement(E.Fragment, null, E.createElement(A.W, {
-                        type: A.Tb.P,
+                        type: A.Sb.P,
                         "data-test-selector": se.WarningMessage
                     }, Object(h.d)("This is a Test Extension that Twitch has not evaluated; it may not be ready for primetime. Proceed only if you are familiar with the developer, the Extension, or Channel.", "TestExtensionDialog"), E.createElement(A.Pa, {
                         padding: {
@@ -3077,7 +3086,7 @@
                         justifyContent: A.Wa.Center,
                         padding: 2
                     }, E.createElement(A.Xa, null, E.createElement(A.W, {
-                        type: A.Tb.Strong
+                        type: A.Sb.Strong
                     }, this.props.extensionName), e)))
                 }, t
             }(E.Component);
@@ -3487,10 +3496,10 @@
                             isLinkEnabled: this.state.isLinkEnabled,
                             onLinkIdentity: this.onLinkIdentity,
                             onUnlinkIdentity: this.onUnlinkIdentity
-                        }), this.renderFollowConfirmation(), this.renderFeatureNeedsAuthBalloon(), this.renderUseBitsConfirmation(), E.createElement(f.a, null, E.createElement("span", null, E.createElement(A.Wb, {
+                        }), this.renderFollowConfirmation(), this.renderFeatureNeedsAuthBalloon(), this.renderUseBitsConfirmation(), E.createElement(f.a, null, E.createElement("span", null, E.createElement(A.Vb, {
                             label: t,
-                            direction: A.Yb.Top,
-                            align: A.Xb.Right,
+                            direction: A.Xb.Top,
+                            align: A.Wb.Right,
                             offsetX: ".6rem"
                         }, E.createElement(A.Xa, {
                             display: A.X.Flex,
@@ -3801,7 +3810,6 @@
                     UserCrateEvent: "crate-event",
                     UserGiftEvent: "gift-event",
                     UserMention: "user_mention",
-                    UserPropertiesUpdate: "user_properties_update",
                     VideoThumbnailProcessingComplete: "processing_complete",
                     VideoThumbnailProcessingError: "processing_error",
                     ViewCount: "viewcount",
@@ -4182,7 +4190,7 @@
                         onClick: this.handleInsideBalloonClick
                     }, l)));
                     var c = a;
-                    return this.props.tooltipProps && (c = i.createElement(s.Wb, o.__assign({}, this.props.tooltipProps), a)), i.createElement(s.Xa, {
+                    return this.props.tooltipProps && (c = i.createElement(s.Vb, o.__assign({}, this.props.tooltipProps), a)), i.createElement(s.Xa, {
                         "data-toggle-balloon-id": this.toggleBalloonId,
                         display: this.props.display,
                         position: s.hb.Relative
@@ -4275,7 +4283,7 @@
                                 }
                             }, i.createElement(T.W, {
                                 className: "block-user__success",
-                                type: T.Tb.Span
+                                type: T.Sb.Span
                             }, Object(l.d)("{user} blocked", {
                                 user: t.props.targetUser.displayName
                             }, "ReportWizardBlockActions"))), i.createElement(T.U, {
@@ -4319,7 +4327,7 @@
                             margin: {
                                 y: 1
                             }
-                        }, i.createElement(T.cc, {
+                        }, i.createElement(T.bc, {
                             baseFontSize: T.Ca.Size6
                         }, i.createElement("p", null, Object(l.d)("Blocking {user} will:", {
                             user: t
@@ -5003,7 +5011,7 @@
                                     }, i.createElement(T.Ea, {
                                         label: t.getTitle(),
                                         labelOptional: t.required ? "" : Object(l.d)("Optional", "ReportModalWizardCard")
-                                    }, i.createElement(T.Qb, {
+                                    }, i.createElement(T.Pb, {
                                         onChange: e.onChange,
                                         rows: t.rows || 3,
                                         name: t.value,

@@ -496,8 +496,8 @@
                 _ = n("IFXb"),
                 O = n("4eyL"),
                 T = n("jvBR"),
-                C = n("i68L"),
-                S = n("xMok"),
+                S = n("i68L"),
+                C = n("xMok"),
                 w = n("5NYc"),
                 j = function(e) {
                     var t = Object(E.b)(),
@@ -547,7 +547,7 @@
                     var t = e.url ? r.createElement(g.U, {
                         to: e.url
                     }, r.createElement(g.W, {
-                        type: g.Tb.Span,
+                        type: g.Sb.Span,
                         color: g.O.OverlayAlt
                     }, e.subtitle)) : e.subtitle;
                     return r.createElement("div", null, r.createElement(g.W, {
@@ -583,7 +583,7 @@
                     }, r.createElement(g.U, {
                         to: e.url
                     }, r.createElement(g.W, {
-                        type: g.Tb.Span,
+                        type: g.Sb.Span,
                         color: g.O.OverlayAlt
                     }, e.subtitle)))), r.createElement(g.Cb, {
                         display: g.X.Flex,
@@ -606,7 +606,7 @@
                         fontSize: g.Ca.Size5
                     }, r.createElement(g.W, {
                         color: g.O.Overlay,
-                        type: g.Tb.Span,
+                        type: g.Sb.Span,
                         bold: !0
                     }, e.title), !!e.subtitle && r.createElement(g.Xa, {
                         display: g.X.Inline,
@@ -615,7 +615,7 @@
                         }
                     }, r.createElement(g.W, {
                         color: g.O.OverlayAlt,
-                        type: g.Tb.Span
+                        type: g.Sb.Span
                     }, e.subtitle)))), r.createElement(g.Xa, {
                         display: g.X.Flex,
                         flexShrink: 0,
@@ -773,15 +773,15 @@
                                 type: g.fb.Success
                             })
                         };
-                    return e.completedAt ? r.createElement(g.Wb, {
+                    return e.completedAt ? r.createElement(g.Vb, {
                         label: Object(o.c)(e.completedAt, "long"),
-                        direction: g.Yb.Left
+                        direction: g.Xb.Left
                     }, n()) : n()
                 },
                 z = n("y/W1"),
                 M = n("qe41"),
-                G = n("9+Lo"),
-                H = (n("qCmY"), function(e) {
+                V = n("9+Lo"),
+                G = (n("qCmY"), function(e) {
                     var t = Object(E.b)(),
                         n = e.quest.completedRequirementsCount,
                         a = e.quest.totalRequirements,
@@ -866,12 +866,12 @@
                         alt: Object(o.d)("quest image", "AchievementsQuestCard")
                     })), r.createElement(g.W, i.__assign({
                         className: "ach-q-item__title",
-                        type: g.Tb.Strong
+                        type: g.Sb.Strong
                     }, f, {
                         fontSize: g.Ca.Size4
-                    }), e.quest.title)), !h && r.createElement(g.Wb, {
+                    }), e.quest.title)), !h && r.createElement(g.Vb, {
                         label: Object(z.b)(n, a),
-                        direction: g.Yb.Left
+                        direction: g.Xb.Left
                     }, r.createElement(g.Cb, {
                         display: g.X.Flex,
                         fullHeight: !0,
@@ -924,7 +924,7 @@
                         return r.createElement(g.Xa, {
                             key: t.metric
                         }, function(t) {
-                            if (!e.quest.isComplete && t.time_based && !l) return l = !0, r.createElement(G.a, {
+                            if (!e.quest.isComplete && t.time_based && !l) return l = !0, r.createElement(V.a, {
                                 channelLogin: p,
                                 questKey: e.quest.key
                             })
@@ -953,13 +953,13 @@
                     }, r.createElement(g.W, {
                         color: g.O.Alt2,
                         fontSize: g.Ca.Size6,
-                        type: g.Tb.Span
+                        type: g.Sb.Span
                     }, m, " ", r.createElement(g.U, {
                         targetBlank: !0,
                         to: e.quest.learnMoreURL
                     }, Object(o.d)("Learn more", "AchievementsPathToAffiliate"))))))
                 }),
-                V = function(e) {
+                H = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -974,7 +974,7 @@
                         var e = this,
                             t = this.state.userSelectedQuest || this.props.quests[0],
                             n = this.props.quests.map(function(n) {
-                                return r.createElement(H, {
+                                return r.createElement(G, {
                                     key: n.key,
                                     quest: n,
                                     channelLogin: e.props.channel.name,
@@ -1012,8 +1012,8 @@
                         }))]
                     }, t
                 }(r.Component),
-                Y = n("j8bx"),
-                Q = n("Tc9I"),
+                Q = n("j8bx"),
+                Y = n("Tc9I"),
                 K = {
                     "data-test-selector": "title"
                 },
@@ -1030,7 +1030,7 @@
                     return r.createElement(g.Cb, {
                         position: g.hb.Relative,
                         padding: 2,
-                        textAlign: g.Pb.Center,
+                        textAlign: g.Ob.Center,
                         className: "ach-sb",
                         elevation: 1,
                         border: !0
@@ -1065,7 +1065,7 @@
                             x: 4
                         },
                         position: g.hb.Absolute,
-                        zIndex: g.gc.Above
+                        zIndex: g.fc.Above
                     };
                     return r.createElement(g.Cb, i.__assign({}, t), r.createElement(g.i, {
                         type: g.n.BounceIn,
@@ -1182,7 +1182,7 @@
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "bannerType", {
                         get: function() {
-                            var e = Y.a.topCelebratable(this.props.quests);
+                            var e = Q.a.topCelebratable(this.props.quests);
                             return e ? e.key : "first_time"
                         },
                         enumerable: !0,
@@ -1196,7 +1196,7 @@
                     }), t
                 }(r.PureComponent),
                 ce = function() {
-                    var e = Object(Q.b)(w.b.PATH_TO_PARTNER),
+                    var e = Object(Y.b)(w.b.PATH_TO_PARTNER),
                         t = r.createElement(ue, {
                             title: e.title
                         }),
@@ -1210,7 +1210,7 @@
                     })
                 },
                 le = function() {
-                    var e = Object(Q.b)(w.b.PATH_TO_AFFILIATE),
+                    var e = Object(Y.b)(w.b.PATH_TO_AFFILIATE),
                         t = r.createElement(ue, {
                             title: e.title
                         }),
@@ -1224,7 +1224,7 @@
                     })
                 },
                 se = function() {
-                    var e = Object(Q.b)(w.b.IT_BEGINS),
+                    var e = Object(Y.b)(w.b.IT_BEGINS),
                         t = r.createElement(ue, {
                             title: e.title
                         }),
@@ -1238,7 +1238,7 @@
                     })
                 },
                 me = function() {
-                    var e = Object(Q.b)(w.b.VIP_BADGE),
+                    var e = Object(Y.b)(w.b.VIP_BADGE),
                         t = r.createElement(ue, {
                             title: e.title
                         }),
@@ -1254,7 +1254,7 @@
                 ue = function(e) {
                     var t = e.title;
                     return r.createElement(g.W, {
-                        type: g.Tb.Span,
+                        type: g.Sb.Span,
                         color: g.O.Base
                     }, t)
                 },
@@ -1272,11 +1272,11 @@
                             return Object(E.b)() ? r.createElement(_.a, null, r.createElement(oe, i.__assign({}, t, {
                                 channelName: e.name
                             }), function() {
-                                return r.createElement(g.Xa, null, r.createElement(V, {
+                                return r.createElement(g.Xa, null, r.createElement(H, {
                                     quests: t.quests,
                                     channel: e,
                                     isLoading: t.isLoading
-                                }), r.createElement(S.a, {
+                                }), r.createElement(C.a, {
                                     achievements: t.achievements,
                                     isLoading: t.isLoading
                                 }))
@@ -1285,12 +1285,12 @@
                             }), function(n) {
                                 return r.createElement(y, {
                                     isSpotlightShown: n,
-                                    left: r.createElement(V, {
+                                    left: r.createElement(H, {
                                         quests: t.quests,
                                         channel: e,
                                         isLoading: t.isLoading
                                     }),
-                                    right: r.createElement(S.a, {
+                                    right: r.createElement(C.a, {
                                         achievements: t.achievements,
                                         isLoading: t.isLoading
                                     })
@@ -1299,7 +1299,7 @@
                         }) : null
                     }, t
                 }(r.Component),
-                he = Object(a.compose)(Object(c.a)(C, {
+                he = Object(a.compose)(Object(c.a)(S, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1359,7 +1359,7 @@
                         "x:strong": function(e) {
                             return o.createElement(m.W, {
                                 bold: !0,
-                                type: m.Tb.Span
+                                type: m.Sb.Span
                             }, e)
                         },
                         startDate: n,
@@ -1406,7 +1406,7 @@
                             className: "confetti-layer",
                             position: c.hb.Absolute,
                             overflow: c.cb.Hidden,
-                            zIndex: c.gc.Default,
+                            zIndex: c.fc.Default,
                             attachTop: !0,
                             attachRight: !0,
                             attachBottom: !0,
@@ -1674,7 +1674,7 @@
                         color: t >= n ? void 0 : o.O.Alt2,
                         bold: !0,
                         fontSize: o.Ca.Size4,
-                        type: o.Tb.Span
+                        type: o.Sb.Span
                     }, Object(r.g)(l, {
                         maximumFractionDigits: 2
                     })), i.createElement(o.Xa, {
@@ -1684,16 +1684,16 @@
                     }, i.createElement(o.W, {
                         fontSize: o.Ca.Size5,
                         color: o.O.Alt2,
-                        type: o.Tb.Span
+                        type: o.Sb.Span
                     }, "/")), i.createElement(o.W, {
                         fontSize: o.Ca.Size5,
                         color: o.O.Alt2
                     }, Object(r.g)(n, {
                         maximumFractionDigits: 2
                     })));
-                return t > 999 ? i.createElement(o.Wb, {
+                return t > 999 ? i.createElement(o.Vb, {
                     label: Object(r.f)(l),
-                    direction: o.Yb.Left
+                    direction: o.Xb.Left
                 }, s) : s
             }
         },
@@ -1926,9 +1926,9 @@
                         left: .5,
                         right: 3
                     }
-                }, a.createElement(l.Wb, {
+                }, a.createElement(l.Vb, {
                     label: e.ccuTooltipLabel,
-                    direction: l.Yb.Top,
+                    direction: l.Xb.Top,
                     width: 230
                 }, a.createElement(l.qb, {
                     asset: l.rb.NotificationInfo,
@@ -2055,7 +2055,7 @@
                             margin: {
                                 y: 2
                             },
-                            zIndex: s.gc.Above,
+                            zIndex: s.fc.Above,
                             borderRadius: s.x.Large,
                             fullWidth: !0,
                             fullHeight: !0
@@ -2153,11 +2153,11 @@
                         margin: {
                             bottom: 2
                         }
-                    }, e.isLoading ? j() : r.createElement(C, {
+                    }, e.isLoading ? j() : r.createElement(S, {
                         achievements: e.achievements
                     }))
                 },
-                C = function(e) {
+                S = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2189,11 +2189,11 @@
                                 bottom: .5
                             }
                         }, r.createElement(s.W, {
-                            type: s.Tb.H3,
+                            type: s.Sb.H3,
                             fontSize: s.Ca.Size4,
                             bold: !0
                         }, Object(o.d)("Recently Completed", "AchievementsList"))), this.props.achievements.topRecentlyCompleted.map(function(t) {
-                            return r.createElement(S, {
+                            return r.createElement(C, {
                                 achievement: t,
                                 key: t.id
                             }, !e.state.didCelebrate && r.createElement(A.a, {
@@ -2207,11 +2207,11 @@
                                 bottom: .5
                             }
                         }, r.createElement(s.W, {
-                            type: s.Tb.H3,
+                            type: s.Sb.H3,
                             fontSize: s.Ca.Size4,
                             bold: !0
                         }, Object(o.d)("In Progress", "AchievementsList"))), this.props.achievements.notCompleted.map(function(e) {
-                            return r.createElement(S, {
+                            return r.createElement(C, {
                                 achievement: e,
                                 key: e.id
                             })
@@ -2227,18 +2227,18 @@
                                 bottom: .5
                             }
                         }, r.createElement(s.W, {
-                            type: s.Tb.H3,
+                            type: s.Sb.H3,
                             fontSize: s.Ca.Size4,
                             bold: !0
                         }, Object(o.d)("Completed", "AchievementsList"))), this.props.achievements.pastCompleted.map(function(e) {
-                            return r.createElement(S, {
+                            return r.createElement(C, {
                                 achievement: e,
                                 key: e.id
                             })
                         })))
                     }, t
                 }(r.Component),
-                S = function(e) {
+                C = function(e) {
                     var t = Object(h.b)();
                     return r.createElement(a.a, {
                         path: p.b.achievement(e.achievement),
@@ -2336,7 +2336,7 @@
                             "x:strong": function(e) {
                                 return i.createElement(o.W, {
                                     bold: !0,
-                                    type: o.Tb.Span
+                                    type: o.Sb.Span
                                 }, e)
                             },
                             duration: Object(r.f)(Math.floor(100 * n) / 100)

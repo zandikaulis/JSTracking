@@ -534,7 +534,7 @@
                     display: u.X.InlineFlex,
                     justifyContent: u.Wa.Center,
                     position: u.hb.Absolute,
-                    zIndex: u.gc.Above
+                    zIndex: u.fc.Above
                 }, i.createElement(u.qb, {
                     asset: u.rb.Lock,
                     height: 10,
@@ -569,9 +569,9 @@
                     }
                     return i.createElement("div", {
                         className: "emote-button"
-                    }, i.createElement(u.Wb, {
+                    }, i.createElement(u.Vb, {
                         label: r || Object(s.d)("Emote", "EmoteButton"),
-                        direction: u.Yb.Bottom
+                        direction: u.Xb.Bottom
                     }, i.createElement(u.Pa, {
                         display: u.X.Flex,
                         alignItems: u.f.Center,
@@ -697,7 +697,7 @@
                                     return i.createElement(s.W, {
                                         bold: !0,
                                         key: "SubPromoBannerBoldText",
-                                        type: s.Tb.Span
+                                        type: s.Sb.Span
                                     }, e)
                                 }
                             }, "SubPromoBanner")));
@@ -1422,7 +1422,7 @@
                             id: a.id,
                             emotes: d(l(a.emotes), a.id)
                         };
-                        a.owner && (s.owner = a.owner), u.has(parseInt(a.id, 10)) ? t.push(s) : n.push(s)
+                        u.has(parseInt(a.id, 10)) ? t.push(s) : n.push(s)
                     }
                 }
                 return n.concat(t)
@@ -1490,7 +1490,7 @@
                         flexDirection: B.Aa.Column,
                         alignItems: B.f.Center,
                         justifyContent: B.Wa.Center,
-                        textAlign: B.Pb.Center,
+                        textAlign: B.Ob.Center,
                         margin: {
                             bottom: 2,
                             right: 2
@@ -1506,7 +1506,7 @@
                         }
                     }, d.createElement(B.W, {
                         bold: !0,
-                        type: B.Tb.H3
+                        type: B.Sb.H3
                     }, Object(l.d)("Use your free channel subscription", "AvailablePrimeSubCard"))), d.createElement(B.Pa, {
                         margin: {
                             top: 1
@@ -1753,7 +1753,7 @@
                             position: B.hb.Relative
                         }, d.createElement(x.a, {
                             onClickOut: this.onClickOut
-                        }, d.createElement(B.Wb, {
+                        }, d.createElement(B.Vb, {
                             label: e
                         }, d.createElement(B.A, {
                             ariaLabel: e,
@@ -1795,7 +1795,7 @@
                             key: "edit-subscription-" + e
                         }), d.createElement(B.Xa, {
                             padding: 1,
-                            textAlign: B.Pb.Center
+                            textAlign: B.Ob.Center
                         }, d.createElement(B.W, null, t)))
                     }, t.prototype.renderMobileMessage = function() {
                         return this.props.subscriptionBenefit.platform === A.ANDROID ? d.createElement(B.W, null, Object(l.d)("To edit this subscription, please go to the Twitch Subscription Manager on your Android device.              <x:link>               Click here for more information.             </x:link>", {
@@ -1945,7 +1945,8 @@
                         return 0 === e.length ? null : d.createElement(B.Xa, null, d.createElement(B.W, null, Object(l.d)("{count, plural, one {# subscriber emote} other {# subscriber emotes}}", {
                             count: e.length
                         }, "SubscriptionBenefitsBalloon")), d.createElement(z.a, {
-                            emotes: e
+                            emotes: e,
+                            locked: !1
                         }))
                     }, Object.defineProperty(t.prototype, "hasAdFree", {
                         get: function() {
@@ -2125,7 +2126,7 @@
                             onCancelPaidUpgradeSuccess: this.onCancelPaidUpgradeSuccess,
                             onDisableGiftSuccess: this.onGiftDisableSuccess,
                             subscriptionBenefit: this.props.subBenefit
-                        })), d.createElement(B.Wb, {
+                        })), d.createElement(B.Vb, {
                             label: a,
                             offsetY: "-1rem"
                         }, d.createElement(B.Xa, {
@@ -2144,7 +2145,7 @@
                             type: B.V.Inherit
                         }, d.createElement(B.W, {
                             bold: !0,
-                            type: B.Tb.H3,
+                            type: B.Sb.H3,
                             ellipsis: !0
                         }, e)), this.renderVerifiedPartnerBadge())), this.renderTierDisplay(), this.renderCurrentSubscriberBadge(), this.renderGiftInfo(), this.renderBenefitRenewsOrEndsOn(), this.renderPaidUpgradeInfo(), (n || r) && d.createElement(B.Xa, {
                             display: B.X.Flex,
@@ -2597,7 +2598,7 @@
                         }, d.createElement(h.b, {
                             suppressScrollX: !0
                         }), d.createElement(B.W, {
-                            type: B.Tb.H2
+                            type: B.Sb.H2
                         }, Object(l.d)("Subscriptions", "SubscriptionsManagementPage")), this.renderTabs(), this.renderTabContent(), d.createElement("div", {
                             className: "subscriptions-management__balloon-spacer"
                         }), " ") : (this.props.login(), d.createElement(p.a, {
@@ -3384,8 +3385,8 @@
                         onClick: this.onBadgeClickHandler,
                         target: "_blank",
                         "data-a-target": "chat-badge"
-                    }, u)), this.state.isHovering ? i.createElement(s.Wb, {
-                        align: s.Xb.Left,
+                    }, u)), this.state.isHovering ? i.createElement(s.Vb, {
+                        align: s.Wb.Left,
                         "data-a-target": "chat-badge",
                         display: s.X.Inline,
                         key: n,

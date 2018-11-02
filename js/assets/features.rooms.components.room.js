@@ -532,12 +532,12 @@
                         "x:strong": function(e) {
                             return o.createElement(f.W, {
                                 key: "raid-count",
-                                type: f.Tb.Strong
+                                type: f.Sb.Strong
                             }, e)
                         },
                         "x:span": function(e) {
                             return o.createElement(f.W, {
-                                type: f.Tb.Span
+                                type: f.Sb.Span
                             }, e)
                         },
                         raiderCount: e.raid.viewerCount,
@@ -555,12 +555,12 @@
                         "x:strong": function(e) {
                             return o.createElement(f.W, {
                                 key: "raid-count",
-                                type: f.Tb.Strong
+                                type: f.Sb.Strong
                             }, e)
                         },
                         "x:span": function(e) {
                             return o.createElement(f.W, {
-                                type: f.Tb.Span
+                                type: f.Sb.Span
                             }, e)
                         },
                         raiderCount: e.raid.viewerCount,
@@ -661,10 +661,10 @@
                             return o.createElement(f.W, null, e)
                         },
                         sourceDisplayName: o.createElement(f.W, {
-                            type: f.Tb.Strong
+                            type: f.Sb.Strong
                         }, e.sourceChannel.displayName),
                         targetDisplayName: o.createElement(f.W, {
-                            type: f.Tb.Strong
+                            type: f.Sb.Strong
                         }, e.targetChannel.displayName),
                         viewerCount: e.raid.viewerCount
                     }, "RaidViewerMessage")
@@ -764,7 +764,7 @@
                                 background: f.r.AccentAlt2,
                                 color: f.O.Overlay,
                                 position: f.hb.Absolute,
-                                zIndex: f.gc.Above,
+                                zIndex: f.fc.Above,
                                 fullWidth: !0
                             }, B), o.createElement(f.Xa, {
                                 padding: {
@@ -2430,7 +2430,7 @@
                             width: "54",
                             height: "45"
                         })), this.getCopy(), s.createElement(f.Xa, {
-                            textAlign: f.Pb.Center,
+                            textAlign: f.Ob.Center,
                             padding: {
                                 y: 3,
                                 x: 2
@@ -2466,7 +2466,7 @@
                                 e = s.createElement(f.W, null, t)
                         }
                         return s.createElement(f.Xa, {
-                            textAlign: f.Pb.Center
+                            textAlign: f.Ob.Center
                         }, s.createElement(f.Xa, {
                             padding: {
                                 y: 1,
@@ -3190,13 +3190,13 @@
                             right: 1
                         }
                     }, s.createElement(f.W, {
-                        type: f.Tb.Span
+                        type: f.Sb.Span
                     }, s.createElement(f.gb, {
                         width: 70
                     }))), s.createElement(f.Pa, {
                         display: f.X.InlineBlock
                     }, s.createElement(f.W, {
-                        type: f.Tb.Span
+                        type: f.Sb.Span
                     }, s.createElement(f.gb, {
                         width: 50 + 89 * e % 151
                     }))))
@@ -3223,7 +3223,7 @@
                                     "data-username": n,
                                     onClick: e.usernameClickHandler
                                 }, s.createElement(f.W, {
-                                    transform: f.Sb.Capitalize
+                                    transform: f.Rb.Capitalize
                                 }, n)))
                             });
                         return s.createElement(f.Xa, {
@@ -3232,7 +3232,7 @@
                                 bottom: 2
                             }
                         }, s.createElement(f.W, {
-                            transform: f.Sb.Uppercase
+                            transform: f.Rb.Uppercase
                         }, i), o)
                     }, n
                 }(s.Component)),
@@ -3257,7 +3257,7 @@
                         fullWidth: !0,
                         fullHeight: !0,
                         flexShrink: 0,
-                        zIndex: f.gc.Default
+                        zIndex: f.fc.Default
                     }, s.createElement(f.Xa, {
                         className: "member-list__pane",
                         display: f.X.Flex,
@@ -3458,7 +3458,7 @@
                         elevation: 3,
                         fullWidth: !0,
                         padding: 1,
-                        textAlign: f.Pb.Center,
+                        textAlign: f.Ob.Center,
                         className: "rooms-bits-prompt__content"
                     }, s.createElement(f.Xa, {
                         padding: {
@@ -3466,7 +3466,7 @@
                         }
                     }, s.createElement(f.W, {
                         color: f.O.Link,
-                        type: f.Tb.H4,
+                        type: f.Sb.H4,
                         bold: !0
                     }, Object(l.d)("Cheering is not available in Rooms", "DisabledBitsCard"))), s.createElement(f.Xa, {
                         display: f.X.Flex,
@@ -3543,7 +3543,7 @@
                             }
                         }, s.createElement(f.W, {
                             color: f.O.Alt2,
-                            transform: f.Sb.Uppercase
+                            transform: f.Rb.Uppercase
                         }, Object(l.d)("Chat Options", "RoomSettings"))), s.createElement(f.Xa, {
                             margin: {
                                 bottom: 1
@@ -3582,7 +3582,7 @@
                             }
                         }, s.createElement(f.W, {
                             color: f.O.Alt2,
-                            transform: f.Sb.Uppercase
+                            transform: f.Rb.Uppercase
                         }, Object(l.d)("Mod Tools", "RoomSettings"))), s.createElement(f.Xa, {
                             margin: {
                                 bottom: 1
@@ -3868,7 +3868,7 @@
                             }
                         }, s.createElement(f.Xa, {
                             position: f.hb.Relative,
-                            zIndex: f.gc.Default
+                            zIndex: f.fc.Default
                         }, this.state.showCard === sn.Bits && !o && s.createElement(Qe, null), s.createElement(Xe.c, {
                             channelOwnerID: this.props.channelID,
                             roomID: this.props.roomID,
@@ -4081,7 +4081,7 @@
                             className: "room-message-mod-icons__mod-icon",
                             "data-test-selector": "default-action-button",
                             onClick: n
-                        }, s.createElement(f.Wb, {
+                        }, s.createElement(f.Vb, {
                             label: i
                         }, s.createElement(f.qb, {
                             width: 20,
@@ -4095,7 +4095,7 @@
                             className: "room-message-mod-icons__mod-icon",
                             "data-test-selector": "timeout-action-button",
                             onClick: this.onTimeoutUser
-                        }, s.createElement(f.Wb, {
+                        }, s.createElement(f.Vb, {
                             label: Object(l.d)("Timeout", "RoomMessageModIcons")
                         }, s.createElement(f.qb, {
                             width: 20,
@@ -4642,7 +4642,7 @@
                             fullHeight: !0,
                             fullWidth: !0,
                             position: f.hb.Absolute,
-                            zIndex: f.gc.Default
+                            zIndex: f.fc.Default
                         }, s.createElement(be.a, {
                             isPopout: this.props.isPopout,
                             isEmbedded: !1,

@@ -145,7 +145,7 @@
                                 return e && e.displayName ? r.createElement(v.W, {
                                     bold: !0,
                                     noWrap: !0,
-                                    type: v.Tb.Span,
+                                    type: v.Sb.Span,
                                     color: v.O.Base
                                 }, e.displayName) : ""
                             };
@@ -223,7 +223,7 @@
                             color: v.O.Overlay
                         }, i), r.createElement(v.Xa, null, r.createElement(v.W, {
                             noWrap: !0,
-                            type: v.Tb.Span,
+                            type: v.Sb.Span,
                             color: v.O.Alt2,
                             fontSize: v.Ca.Size5
                         }, this.makeBannerText(a, t))), r.createElement(v.Xa, {
