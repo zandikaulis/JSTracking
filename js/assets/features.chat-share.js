@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [174], {
+    [185], {
         "1VMv": function(e, t) {
             var n = {
                 kind: "Document",
@@ -390,7 +390,7 @@
                             "data-a-target": "resub-notification-close-form-btn",
                             "data-test-selector": "share-input__close-form-btn"
                         })), r.createElement(k.Xa, {
-                            textAlign: k.Ob.Center,
+                            textAlign: k.Pb.Center,
                             padding: {
                                 top: 1,
                                 bottom: 2
@@ -729,14 +729,14 @@
                         overflow: k.cb.Hidden,
                         className: "rare-emote"
                     }, r.createElement(k.Pa, {
-                        zIndex: k.fc.Above,
+                        zIndex: k.gc.Above,
                         position: k.hb.Relative
                     }, r.createElement("img", {
                         className: t,
                         src: "https://static-cdn.jtvnw.net/emoticons/v1/" + e.emoteID + "/2.0"
                     })), r.createElement(k.Xa, {
                         position: k.hb.Relative,
-                        zIndex: k.fc.Default,
+                        zIndex: k.gc.Default,
                         className: n
                     }, r.createElement(k.qb, {
                         width: 28,
@@ -757,7 +757,7 @@
                         }, t.randomEmoteId = t.getRandomEmoteId(), t.dataIsReady = function(e) {
                             return e.data && !e.data.loading && !e.data.error
                         }, t.resubExists = function(e, t) {
-                            return e.data.user.self && e.data.user.self.resubNotification && !t.resubDismissed
+                            return e.data.user && e.data.user.self && e.data.user.self.resubNotification && !t.resubDismissed
                         }, t.manageParentSpace = function() {
                             t.dataIsReady(t.props) && t.resubExists(t.props, t.state) ? t.props.requestSpace() : t.props.dismissSpace()
                         }, t.toggleContentShown = function() {
@@ -776,7 +776,7 @@
                                 return i.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            if (this.state.sendingMessage || !this.props.data.user.self || !this.props.data.user.self.resubNotification) return [2];
+                                            if (this.state.sendingMessage || !this.props.data.user || !this.props.data.user.self || !this.props.data.user.self.resubNotification) return [2];
                                             this.setState({
                                                 sendingMessage: !0
                                             }), a.label = 1;
@@ -826,7 +826,7 @@
                                             }(this.props.channelLogin, this.props.data.user.self.resubNotification.token, e, this.props.authToken)] : [3, 3];
                                         case 2:
                                             a.sent(), t = function(e) {
-                                                return e.user.self && (e.user.self.resubNotification = null), e
+                                                return e.user && e.user.self && (e.user.self.resubNotification = null), e
                                             }, Object(h.e)(F, {
                                                 channelLogin: this.props.channelLogin
                                             }, t), this.dismissResubNotification(), a.label = 3;
@@ -850,9 +850,9 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.manageParentSpace()
                     }, t.prototype.componentWillReceiveProps = function(e) {
-                        this.dataIsReady(e) && e.data.user.self && e.data.user.self.resubNotification && !this.randomEmoteId && (this.randomEmoteId = this.getRandomEmoteId()), this.dataIsReady(e) && e.pubsub.messages.subscriptionInfo !== this.props.pubsub.messages.subscriptionInfo && this.props.data.refetch()
+                        this.dataIsReady(e) && e.data.user && e.data.user.self && e.data.user.self.resubNotification && !this.randomEmoteId && (this.randomEmoteId = this.getRandomEmoteId()), this.dataIsReady(e) && e.pubsub.messages.subscriptionInfo !== this.props.pubsub.messages.subscriptionInfo && this.props.data.refetch()
                     }, t.prototype.render = function() {
-                        return this.dataIsReady(this.props) && this.resubExists(this.props, this.state) && this.props.data.user.self && this.props.data.user.self.resubNotification ? this.renderResubToken(this.props.data.user.self.resubNotification) : null
+                        return this.dataIsReady(this.props) && this.resubExists(this.props, this.state) && this.props.data.user && this.props.data.user.self && this.props.data.user.self.resubNotification ? this.renderResubToken(this.props.data.user.self.resubNotification) : null
                     }, t.prototype.renderResubToken = function(e) {
                         return r.createElement(k.Xa, {
                             className: "chat-resub-notification",

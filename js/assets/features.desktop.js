@@ -354,9 +354,9 @@
                             display: T.X.Flex,
                             justifyContent: T.Wa.Between,
                             flexWrap: T.Ba.NoWrap
-                        }, g.createElement(T.Vb, {
+                        }, g.createElement(T.Wb, {
                             label: "= Launcher Window Shown - Launcher Start Time",
-                            direction: T.Xb.Right
+                            direction: T.Yb.Right
                         }, g.createElement(T.Xa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
@@ -369,9 +369,9 @@
                             display: T.X.Flex,
                             justifyContent: T.Wa.Between,
                             flexWrap: T.Ba.NoWrap
-                        }, g.createElement(T.Vb, {
+                        }, g.createElement(T.Wb, {
                             label: "= Twilight Complete - Launcher Start",
-                            direction: T.Xb.Right
+                            direction: T.Yb.Right
                         }, g.createElement(T.Xa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
@@ -384,9 +384,9 @@
                             display: T.X.Flex,
                             justifyContent: T.Wa.Between,
                             flexWrap: T.Ba.NoWrap
-                        }, g.createElement(T.Vb, {
+                        }, g.createElement(T.Wb, {
                             label: "= Launcher End Update - Launcher Start Update",
-                            direction: T.Xb.Right
+                            direction: T.Yb.Right
                         }, g.createElement(T.Xa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
@@ -399,9 +399,9 @@
                             display: T.X.Flex,
                             justifyContent: T.Wa.Between,
                             flexWrap: T.Ba.NoWrap
-                        }, g.createElement(T.Vb, {
+                        }, g.createElement(T.Wb, {
                             label: "= Electron Launch - Launcher Process Start",
-                            direction: T.Xb.Right
+                            direction: T.Yb.Right
                         }, g.createElement(T.Xa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
@@ -414,9 +414,9 @@
                             display: T.X.Flex,
                             justifyContent: T.Wa.Between,
                             flexWrap: T.Ba.NoWrap
-                        }, g.createElement(T.Vb, {
+                        }, g.createElement(T.Wb, {
                             label: "= Show Window - Electron Process Start",
-                            direction: T.Xb.Right
+                            direction: T.Yb.Right
                         }, g.createElement(T.Xa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
@@ -439,9 +439,9 @@
                             display: T.X.Flex,
                             justifyContent: T.Wa.Between,
                             flexWrap: T.Ba.NoWrap
-                        }, g.createElement(T.Vb, {
+                        }, g.createElement(T.Wb, {
                             label: "Start Time: " + e.startTime,
-                            direction: T.Xb.Right
+                            direction: T.Yb.Right
                         }, g.createElement(T.Xa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0

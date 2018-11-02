@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [177], {
+    [188], {
         IhlH: function(e, t, n) {},
         T3fw: function(e, t, n) {
             "use strict";
@@ -51,7 +51,7 @@
                                 right: 1
                             }
                         }, o.createElement(c.W, {
-                            type: c.Sb.Span
+                            type: c.Tb.Span
                         }, Object(s.d)("Interactions Available", "Orbis"))), o.createElement(c.Xa, {
                             display: c.X.Flex,
                             justifyContent: c.Wa.Between,

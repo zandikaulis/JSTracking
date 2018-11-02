@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [176], {
+    [187], {
         "6TSi": function(e, t) {},
         "6XEL": function(e, t, n) {
             "use strict";
@@ -145,10 +145,10 @@
                 D = {
                     "data-test-selector": "raid-cancel-button"
                 },
-                S = {
+                k = {
                     "data-test-selector": "raid-now-button"
                 },
-                k = function(e) {
+                S = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -195,7 +195,7 @@
                             size: m.D.Small,
                             onClick: this.props.onRaidNow,
                             disabled: this.props.timerPhase.isWaiting
-                        }, S), i.createElement(m.Xa, {
+                        }, k), i.createElement(m.Xa, {
                             padding: {
                                 x: 1
                             }
@@ -212,12 +212,12 @@
                         "x:strong": function(e) {
                             return i.createElement(m.W, {
                                 key: "raid-count",
-                                type: m.Sb.Strong
+                                type: m.Tb.Strong
                             }, e)
                         },
                         "x:span": function(e) {
                             return i.createElement(m.W, {
-                                type: m.Sb.Span
+                                type: m.Tb.Span
                             }, e)
                         },
                         raiderCount: e.raid.viewerCount,
@@ -235,28 +235,28 @@
                         "x:strong": function(e) {
                             return i.createElement(m.W, {
                                 key: "raid-count",
-                                type: m.Sb.Strong
+                                type: m.Tb.Strong
                             }, e)
                         },
                         "x:span": function(e) {
                             return i.createElement(m.W, {
-                                type: m.Sb.Span
+                                type: m.Tb.Span
                             }, e)
                         },
                         raiderCount: e.raid.viewerCount,
                         targetDisplayName: e.targetChannel.displayName
                     }, "RaidCreatorMessageCanRaid")
                 },
-                N = function(e) {
+                T = function(e) {
                     return i.createElement(C.a, {
                         raid: e.raid
                     }, function(t) {
-                        return i.createElement(k, r.__assign({}, e, {
+                        return i.createElement(S, r.__assign({}, e, {
                             timerPhase: t
                         }))
                     })
                 },
-                T = n("ll/k"),
+                N = n("ll/k"),
                 O = n("nIRf"),
                 P = function(e) {
                     function t() {
@@ -301,7 +301,7 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.hasJoined && (this.joinDelayTimerID = setTimeout(this.props.onJoinRaid, Object(T.a)(5e3))), R(this.props.raid, y)
+                        this.props.hasJoined && (this.joinDelayTimerID = setTimeout(this.props.onJoinRaid, Object(N.a)(5e3))), R(this.props.raid, y)
                     }, t.prototype.componentWillUnmount = function() {
                         clearTimeout(this.joinDelayTimerID)
                     }, t.prototype.render = function() {
@@ -341,10 +341,10 @@
                             return i.createElement(m.W, null, e)
                         },
                         sourceDisplayName: i.createElement(m.W, {
-                            type: m.Sb.Strong
+                            type: m.Tb.Strong
                         }, e.sourceChannel.displayName),
                         targetDisplayName: i.createElement(m.W, {
-                            type: m.Sb.Strong
+                            type: m.Tb.Strong
                         }, e.targetChannel.displayName),
                         viewerCount: e.raid.viewerCount
                     }, "RaidViewerMessage")
@@ -433,7 +433,7 @@
                                     sourceChannel: n,
                                     targetChannel: a
                                 });
-                            return this.isRaidCreator && (o = i.createElement(N, {
+                            return this.isRaidCreator && (o = i.createElement(T, {
                                 onCancelRaid: this.handleCancelRaid,
                                 onRaidNow: this.handleRaidNow,
                                 onRaidGo: this.handleRaidGo,
@@ -444,7 +444,7 @@
                                 background: m.r.AccentAlt2,
                                 color: m.O.Overlay,
                                 position: m.hb.Absolute,
-                                zIndex: m.fc.Above,
+                                zIndex: m.gc.Above,
                                 fullWidth: !0
                             }, J), i.createElement(m.Xa, {
                                 padding: {

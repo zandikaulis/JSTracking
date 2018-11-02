@@ -863,7 +863,7 @@
                         targetBlank: !0,
                         to: t
                     }, t)), o.createElement(E.W, {
-                        type: E.Sb.P,
+                        type: E.Tb.P,
                         color: E.O.Alt2
                     }, e.longDescription), o.createElement(E.Xa, {
                         display: E.X.Flex,
@@ -911,14 +911,14 @@
                             overflow: E.cb.Hidden
                         }, o.createElement(O.a, null, o.createElement(E.W, {
                             bold: !0,
-                            type: E.Sb.H4
+                            type: E.Tb.H4
                         }, Object(i.d)("Broadcast While You Play", "BroadcastRootPage")), o.createElement(E.Xa, {
                             margin: {
                                 y: 1
                             }
                         }, o.createElement(E.W, {
                             color: E.O.Alt2,
-                            type: E.Sb.P
+                            type: E.Tb.P
                         }, Object(i.d)("Here are the most common tools for broadcasting.", "BroadcastRootPage")), o.createElement(E.W, {
                             color: E.O.Alt2
                         }, Object(i.d)("For more info, visit the <x:link>Support Center</x:link>.", {
@@ -942,10 +942,10 @@
                             }
                         }, o.createElement(E.W, {
                             bold: !0,
-                            type: E.Sb.H4
-                        }, Object(i.d)("Broadcasting Applications", "BroadcastRootPage"))), o.createElement(E.Yb, {
-                            childWidth: E.Zb.Large,
-                            gutterSize: E.ac.Small,
+                            type: E.Tb.H4
+                        }, Object(i.d)("Broadcasting Applications", "BroadcastRootPage"))), o.createElement(E.Zb, {
+                            childWidth: E.ac.Large,
+                            gutterSize: E.bc.Small,
                             noGrow: !0,
                             placeholderItems: 8
                         }, o.createElement(E.Xa, {
@@ -994,10 +994,10 @@
                             }
                         }, o.createElement(E.W, {
                             bold: !0,
-                            type: E.Sb.H4
-                        }, Object(i.d)("Broadcasting Tools", "BroadcastRootPage"))), o.createElement(E.Yb, {
-                            childWidth: E.Zb.Large,
-                            gutterSize: E.ac.Small,
+                            type: E.Tb.H4
+                        }, Object(i.d)("Broadcasting Tools", "BroadcastRootPage"))), o.createElement(E.Zb, {
+                            childWidth: E.ac.Large,
+                            gutterSize: E.bc.Small,
                             noGrow: !0,
                             placeholderItems: 3
                         }, o.createElement(E.Xa, {
@@ -1056,10 +1056,10 @@
                     return a
                 }),
                 function(e) {
-                    e.AdsWidget = "ads-widget", e.BountyBoardWidget = "bounty-board-widget", e.ExtensionLiveConfigure = "extension-live-configure", e.HostWidget = "host-widget", e.LiveChat = "live-chat", e.SquadStream = "squad-stream", e.Stats = "stats", e.StreamDelay = "stream-delay", e.StreamHealth = "stream-health", e.StreamInformation = "stream-information", e.StreamMarker = "stream-marker", e.VideoPreview = "video-preview", e.VideoProducerWidget = "video-producer-widget"
+                    e.ActivityFeed = "activity-feed", e.AdsWidget = "ads-widget", e.BountyBoardWidget = "bounty-board-widget", e.ExtensionLiveConfigure = "extension-live-configure", e.HostWidget = "host-widget", e.LiveChat = "live-chat", e.SquadStream = "squad-stream", e.Stats = "stats", e.StreamDelay = "stream-delay", e.StreamHealth = "stream-health", e.StreamInformation = "stream-information", e.StreamMarker = "stream-marker", e.VideoPreview = "video-preview", e.VideoProducerWidget = "video-producer-widget"
                 }(r || (r = {})),
                 function(e) {
-                    e.AdsWidget = "ads_widget", e.BountyBoardWidget = "bounty_board_widget", e.ExtensionLiveConfigureWidget = "extension_config_widget", e.HostWidget = "host_widget", e.LiveChatWidget = "chat_widget", e.SquadStreamWidget = "squad_stream_widget", e.StatsWidget = "stats_widget", e.StreamDelayWidget = "stream_delay_widget", e.StreamHealthWidget = "stream_health_widget", e.StreamInformationWidget = "stream_information_widget", e.StreamMarkerWidget = "stream_marker_widget", e.VideoPreviewWidget = "video_preview_widget", e.VideoProducerWidget = "video_producer_widget"
+                    e.ActivityFeedWidget = "activity_feed_widget", e.AdsWidget = "ads_widget", e.BountyBoardWidget = "bounty_board_widget", e.ExtensionLiveConfigureWidget = "extension_config_widget", e.HostWidget = "host_widget", e.LiveChatWidget = "chat_widget", e.SquadStreamWidget = "squad_stream_widget", e.StatsWidget = "stats_widget", e.StreamDelayWidget = "stream_delay_widget", e.StreamHealthWidget = "stream_health_widget", e.StreamInformationWidget = "stream_information_widget", e.StreamMarkerWidget = "stream_marker_widget", e.VideoPreviewWidget = "video_preview_widget", e.VideoProducerWidget = "video_producer_widget"
                 }(a || (a = {}))
         },
         Nmvj: function(e, t, n) {
@@ -1424,12 +1424,12 @@
                             e[t.props.statType] = !e[t.props.statType], i.m.set("streamStatsConfiguration", e)
                         }, t.renderStat = function() {
                             var e = Object(i.d)("Offline", "LiveDashboard");
-                            return t.state.hidden ? a.createElement(l.Vb, {
+                            return t.state.hidden ? a.createElement(l.Wb, {
                                 label: t.props.statDescription || e,
-                                direction: l.Xb.Right
-                            }, Object(i.d)("Hover to view", "LiveDashboard")) : a.createElement(l.Vb, {
+                                direction: l.Yb.Right
+                            }, Object(i.d)("Hover to view", "LiveDashboard")) : a.createElement(l.Wb, {
                                 label: Object(i.d)("Click to hide", "LiveDashboard"),
-                                direction: l.Xb.Right
+                                direction: l.Yb.Right
                             }, t.props.statDescription || e)
                         }, t
                     }
@@ -1530,9 +1530,9 @@
                                 margin: {
                                     bottom: .5
                                 }
-                            }, a.createElement(l.Vb, {
+                            }, a.createElement(l.Wb, {
                                 label: Object(i.d)("Subscribers shows number of active subs.\n Sub points unlock additional emote slots.", "LiveDashboard"),
-                                direction: l.Xb.Right
+                                direction: l.Yb.Right
                             }, a.createElement(l.qb, {
                                 asset: l.rb.Star
                             })), a.createElement(p, {
@@ -1547,9 +1547,9 @@
                                 margin: {
                                     bottom: .5
                                 }
-                            }, a.createElement(l.Vb, {
+                            }, a.createElement(l.Wb, {
                                 label: Object(i.d)("Congrats on reaching the max number of emote slots", "LiveDashboard"),
-                                direction: l.Xb.Right
+                                direction: l.Yb.Right
                             }, a.createElement(l.qb, {
                                 asset: l.rb.Star
                             })), a.createElement(p, {
@@ -1606,9 +1606,9 @@
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(l.Vb, {
+                        }, a.createElement(l.Wb, {
                             label: Object(i.d)("The number of people currently watching your channel", "LiveDashboard"),
-                            direction: l.Xb.Right
+                            direction: l.Yb.Right
                         }, a.createElement(l.qb, {
                             asset: l.rb.GlyphLive
                         })), this.renderViewersCount()), a.createElement(l.Cb, {
@@ -1618,9 +1618,9 @@
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(l.Vb, {
+                        }, a.createElement(l.Wb, {
                             label: Object(i.d)("How long you have been broadcasting for this session", "LiveDashboard"),
-                            direction: l.Xb.Right
+                            direction: l.Yb.Right
                         }, a.createElement(l.qb, {
                             asset: l.rb.Timeout
                         })), this.renderStreamTime()), a.createElement(l.Cb, {
@@ -1630,9 +1630,9 @@
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(l.Vb, {
+                        }, a.createElement(l.Wb, {
                             label: Object(i.d)("The number of clips that have been created", "LiveDashboard"),
-                            direction: l.Xb.Right
+                            direction: l.Yb.Right
                         }, a.createElement(l.Cb, {
                             className: "stats-widget-clips-icon",
                             display: l.X.InlineFlex
@@ -1647,9 +1647,9 @@
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(l.Vb, {
+                        }, a.createElement(l.Wb, {
                             label: Object(i.d)("The number of people who have viewed the channel", "LiveDashboard"),
-                            direction: l.Xb.Right
+                            direction: l.Yb.Right
                         }, a.createElement(l.qb, {
                             asset: l.rb.GlyphViews
                         })), a.createElement(p, {
@@ -1664,9 +1664,9 @@
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(l.Vb, {
+                        }, a.createElement(l.Wb, {
                             label: Object(i.d)("The number of people currently following your channel", "LiveDashboard"),
-                            direction: l.Xb.Right
+                            direction: l.Yb.Right
                         }, a.createElement(l.qb, {
                             asset: l.rb.Heart
                         })), a.createElement(p, {

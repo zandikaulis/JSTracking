@@ -39,7 +39,7 @@
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: o.fc.Above
+                            zIndex: o.gc.Above
                         }, a.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -588,7 +588,7 @@
                             Z(e, "input");
                             var n = c(e),
                                 a = C(e, !0),
-                                o = X(e);
+                                o = W(e);
                             return {
                                 kind: i.INPUT_OBJECT_TYPE_DEFINITION,
                                 description: r,
@@ -688,7 +688,7 @@
                                         Z(e, "extend"), Z(e, "input");
                                         var r = c(e),
                                             n = C(e, !0),
-                                            a = X(e);
+                                            a = W(e);
                                         if (0 === n.length && 0 === a.length) throw q(e);
                                         return {
                                             kind: i.INPUT_OBJECT_TYPE_EXTENSION,
@@ -713,7 +713,7 @@
                                 Y(e, o.TokenKind.PIPE);
                                 var t = [];
                                 do {
-                                    t.push(W(e))
+                                    t.push(X(e))
                                 } while (Y(e, o.TokenKind.PIPE));
                                 return t
                             }(e);
@@ -838,11 +838,11 @@
                 }
             }
 
-            function X(e) {
+            function W(e) {
                 return z(e, o.TokenKind.BRACE_L) ? Q(e, o.TokenKind.BRACE_L, x, o.TokenKind.BRACE_R) : []
             }
 
-            function W(e) {
+            function X(e) {
                 var t = e.token,
                     r = c(e);
                 if (s.DirectiveLocation.hasOwnProperty(r.value)) return r;
@@ -1524,8 +1524,8 @@
                         bold: !0,
                         color: a.O.Alt,
                         fontSize: a.Ca.Size7,
-                        transform: a.Rb.Uppercase,
-                        type: a.Sb.H4
+                        transform: a.Sb.Uppercase,
+                        type: a.Tb.H4
                     }, e.children))
                 };
             r.d(t, "a", function() {
@@ -1633,9 +1633,9 @@
                                     disabled: t.state.buttonDisabled,
                                     onClick: t.handleSubmit
                                 }, t.props.buttonText),
-                                r = h.createElement(k.Vb, {
+                                r = h.createElement(k.Wb, {
                                     label: t.props.errorString,
-                                    direction: k.Xb.Right,
+                                    direction: k.Yb.Right,
                                     show: !0
                                 }, e);
                             return t.props.errorString.length && !t.state.changedSinceSubmit ? r : e
@@ -1701,45 +1701,45 @@
                             var e = t.props.buttonConfiguration === a.AllButtons,
                                 r = e || t.props.buttonConfiguration === a.MoveUpAndRemoveOnly,
                                 o = e || t.props.buttonConfiguration === a.MoveDownAndRemoveOnly;
-                            return h.createElement(k.Xa, null, r && h.createElement(k.Vb, {
+                            return h.createElement(k.Xa, null, r && h.createElement(k.Wb, {
                                 label: Object(g.d)("Move Up", "TeamsDashboard"),
-                                direction: k.Xb.Left
+                                direction: k.Yb.Left
                             }, h.createElement(k.z, {
                                 type: k.F.Text,
                                 blurAfterClick: !0,
                                 icon: k.rb.ArrowUp,
                                 onClick: t.handleOnMoveClick(n.Up),
                                 disabled: t.props.isDisabled
-                            })), o && h.createElement(k.Vb, {
+                            })), o && h.createElement(k.Wb, {
                                 label: Object(g.d)("Move Down", "TeamsDashboard"),
-                                direction: k.Xb.Left
+                                direction: k.Yb.Left
                             }, h.createElement(k.z, {
                                 type: k.F.Text,
                                 blurAfterClick: !0,
                                 icon: k.rb.ArrowDown,
                                 onClick: t.handleOnMoveClick(n.Down),
                                 disabled: t.props.isDisabled
-                            })), r && h.createElement(k.Vb, {
+                            })), r && h.createElement(k.Wb, {
                                 label: Object(g.d)("Move To Top", "TeamsDashboard"),
-                                direction: k.Xb.Left
+                                direction: k.Yb.Left
                             }, h.createElement(k.z, {
                                 type: k.F.Text,
                                 blurAfterClick: !0,
                                 icon: k.rb.ToTop,
                                 onClick: t.handleOnMoveClick(n.ToTop),
                                 disabled: t.props.isDisabled
-                            })), o && h.createElement(k.Vb, {
+                            })), o && h.createElement(k.Wb, {
                                 label: Object(g.d)("Move To Bottom", "TeamsDashboard"),
-                                direction: k.Xb.Left
+                                direction: k.Yb.Left
                             }, h.createElement(k.z, {
                                 type: k.F.Text,
                                 blurAfterClick: !0,
                                 icon: k.rb.ToBottom,
                                 onClick: t.handleOnMoveClick(n.ToBottom),
                                 disabled: t.props.isDisabled
-                            })), h.createElement(k.Vb, {
+                            })), h.createElement(k.Wb, {
                                 label: Object(g.d)("Remove", "TeamsDashboard"),
-                                direction: k.Xb.Left
+                                direction: k.Yb.Left
                             }, h.createElement(k.z, {
                                 type: k.F.Text,
                                 blurAfterClick: !0,
@@ -1827,7 +1827,7 @@
                             bottom: 2
                         }
                     }, e.header && h.createElement(k.W, {
-                        type: k.Sb.H3
+                        type: k.Tb.H3
                     }, e.header), e.members.length ? function(r) {
                         var n = e.onMoveClick ? t : void 0;
                         return h.createElement(S.b, null, h.createElement(k.Xa, {
@@ -1866,7 +1866,7 @@
                         fullWidth: !0
                     }, h.createElement(k.W, {
                         "data-test-selector": e.titleSelector,
-                        type: k.Sb.H1
+                        type: k.Tb.H1
                     }, e.title)), e.children))
                 };
             ! function(e) {
@@ -1925,7 +1925,7 @@
                 K = function() {
                     return Object(g.d)("Twitch username", "TeamsDashboard")
                 },
-                X = function(e) {
+                W = function(e) {
                     switch (e) {
                         case N.Revenue:
                             return Object(g.d)("Revenue", "TeamsDashboard");
@@ -1941,14 +1941,14 @@
                             return ""
                     }
                 },
-                W = r("b6Yk"),
+                X = r("b6Yk"),
                 V = function(e, t) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         var r, n, a, o;
                         return l.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return r = "/v5/teams/" + e + "/dashboard/featured_channels", [4, W.a.post(r, {
+                                    return r = "/v5/teams/" + e + "/dashboard/featured_channels", [4, X.a.post(r, {
                                         body: {
                                             channel_login: t
                                         }
@@ -1973,7 +1973,7 @@
                         return l.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, W.a.delete(e)];
+                                    return [4, X.a.delete(e)];
                                 case 1:
                                     return [2, 204 === t.sent().status]
                             }
@@ -1991,7 +1991,7 @@
                         return l.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, W.a.put(e, {
+                                    return [4, X.a.put(e, {
                                         body: {
                                             display_position: t
                                         }
@@ -2086,7 +2086,7 @@
                                                 return l.__generator(this, function(a) {
                                                     switch (a.label) {
                                                         case 0:
-                                                            return t = "/v5/teams/" + e + "/dashboard/featured_channels", [4, W.a.get(t)];
+                                                            return t = "/v5/teams/" + e + "/dashboard/featured_channels", [4, X.a.get(t)];
                                                         case 1:
                                                             return !(r = a.sent()).body || 200 !== r.status || r.error || r.requestError ? [2, []] : (n = r.body.featured_channels.map(function(e) {
                                                                 return e.channel
@@ -2104,7 +2104,7 @@
                         })
                     }, t.prototype.render = function() {
                         return h.createElement(L, {
-                            title: X(N.FeaturedChannels),
+                            title: W(N.FeaturedChannels),
                             titleSelector: "featured-channels-page-title"
                         }, h.createElement(C, {
                             descriptor: Object(g.d)("Pick channels to feature. Featured channels do not need to be a member of the team.\nIf none of the featured channels are live, your team will feature a live member based on member ordering.", "TeamsDashboard"),
@@ -2153,7 +2153,7 @@
                         return l.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return r = "/v5/teams/" + e + "/dashboard/invitations", [4, W.a.post(r, {
+                                    return r = "/v5/teams/" + e + "/dashboard/invitations", [4, X.a.post(r, {
                                         body: {
                                             channel_login: t
                                         }
@@ -2289,7 +2289,7 @@
                         })
                     }, t.prototype.render = function() {
                         return h.createElement(L, {
-                            title: X(N.Members),
+                            title: W(N.Members),
                             titleSelector: "members-page-title"
                         }, h.createElement(C, {
                             descriptor: Object(g.d)("Live team members will always be at the top. Order is respected for live members and offline members.\nOrder also determines which member will be featured in the video player.", "TeamsDashboard"),
@@ -2608,7 +2608,7 @@
             var _e, ke, Ce = function(e) {
                     var t, r;
                     return e.isLoading ? (t = h.createElement(k.W, {
-                        type: k.Sb.H5
+                        type: k.Tb.H5
                     }, h.createElement(k.gb, {
                         width: 90
                     })), r = h.createElement(k.Xa, null, h.createElement(k.gb, {
@@ -2616,7 +2616,7 @@
                         height: 40
                     }))) : (t = h.createElement(k.W, {
                         color: k.O.Alt2,
-                        type: k.Sb.H5,
+                        type: k.Tb.H5,
                         "data-test-selector": ne.Title
                     }, e.title), r = h.createElement(k.Xa, {
                         alignItems: k.f.Start,
@@ -2628,10 +2628,10 @@
                         }
                     }, h.createElement(k.W, {
                         "data-test-selector": ne.Symbol,
-                        type: k.Sb.H4
+                        type: k.Tb.H4
                     }, "$")), h.createElement(k.W, {
                         "data-test-selector": ne.Dollars,
-                        type: k.Sb.H1
+                        type: k.Tb.H1
                     }, Object(g.f)(Math.floor(e.cents / 100))))), h.createElement(k.Xa, {
                         display: k.X.Flex,
                         flexDirection: k.Aa.Column,
@@ -2800,20 +2800,20 @@
                     })
                 },
                 Ke = function(e, t, r) {
-                    for (var n = Xe(e, t), a = 0, o = Object.keys(r); a < o.length; a++)
+                    for (var n = We(e, t), a = 0, o = Object.keys(r); a < o.length; a++)
                         for (var i = o[a], s = 0, c = Object.keys(r[i]); s < c.length; s++) {
                             var u = c[s];
                             if (pe.includes(u))
                                 for (var l = 0, d = r[i][u]; l < d.length; l++) {
                                     var m = d[l],
-                                        h = We(m.timestamp);
+                                        h = Xe(m.timestamp);
                                     n[h] && (n[h][u] += m.cents)
                                 }
                         }
                     return n
                 },
-                Xe = function(e, t) {
-                    for (var r = {}, n = new Date(We(e)); n < new Date(t); n.setUTCDate(n.getUTCDate() + 1)) r[n.toISOString()] = {
+                We = function(e, t) {
+                    for (var r = {}, n = new Date(Xe(e)); n < new Date(t); n.setUTCDate(n.getUTCDate() + 1)) r[n.toISOString()] = {
                         gift_subscriptions: 0,
                         twitch_subscriptions: 0,
                         prime_subscriptions: 0,
@@ -2823,7 +2823,7 @@
                     };
                     return r
                 },
-                We = function(e) {
+                Xe = function(e) {
                     var t = new Date(e);
                     return new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate())).toISOString()
                 },
@@ -2921,7 +2921,7 @@
                             })
                         }, r.handleCSVClick = function() {
                             var e = Le(r.state.revenues, He, Ve());
-                            Re(e, X(N.Revenue) + " - " + ue(r.state.startTime) + ".csv")
+                            Re(e, W(N.Revenue) + " - " + ue(r.state.startTime) + ".csv")
                         }, r.state = {
                             isLoadingMembers: !0,
                             members: [],
@@ -2967,7 +2967,7 @@
                     }, t.prototype.render = function() {
                         var e = this.state.isLoadingMembers || this.state.isLoadingRevenues;
                         return h.createElement(L, {
-                            title: X(N.Revenue),
+                            title: W(N.Revenue),
                             titleSelector: "revenue-page-title"
                         }, h.createElement(k.Cb, {
                             border: !0,
@@ -3042,16 +3042,16 @@
                     }, h.createElement(Qe.a, null, Object(g.d)("Team Dashboard", "TeamsDashboard")), h.createElement("ul", null, h.createElement(tt, {
                         to: "/teams/" + t + "/dashboard/" + N.Revenue,
                         testSelector: "side-nav-revenue"
-                    }, X(N.Revenue)), h.createElement(tt, {
+                    }, W(N.Revenue)), h.createElement(tt, {
                         to: "/teams/" + t + "/dashboard/" + N.Stats,
                         testSelector: "side-nav-stats"
-                    }, X(N.Stats)), h.createElement(tt, {
+                    }, W(N.Stats)), h.createElement(tt, {
                         to: "/teams/" + t + "/dashboard/" + N.Members
-                    }, X(N.Members)), h.createElement(tt, {
+                    }, W(N.Members)), h.createElement(tt, {
                         to: "/teams/" + t + "/dashboard/" + N.FeaturedChannels
-                    }, X(N.FeaturedChannels)), h.createElement(tt, {
+                    }, W(N.FeaturedChannels)), h.createElement(tt, {
                         to: "/teams/" + t + "/dashboard/" + N.Settings
-                    }, X(N.Settings)))))
+                    }, W(N.Settings)))))
                 },
                 tt = function(e) {
                     return h.createElement("li", null, h.createElement($e.a, {
@@ -3099,7 +3099,7 @@
                                         category: t.category,
                                         file_type: t.fileType,
                                         size: t.size
-                                    }, [4, W.a.post(r, {
+                                    }, [4, X.a.post(r, {
                                         body: n
                                     })];
                                 case 1:
@@ -3174,7 +3174,7 @@
                             fullWidth: !0,
                             justifyContent: k.Wa.Center,
                             overflow: k.cb.Hidden,
-                            textAlign: k.Ob.Center
+                            textAlign: k.Pb.Center
                         }, h.createElement(k.i, {
                             duration: k.k.Long,
                             enabled: e,
@@ -3301,7 +3301,7 @@
                                         display_name: e.displayName,
                                         description_markdown: e.description,
                                         logo_id: e.logoID
-                                    }, [4, W.a.put(t, {
+                                    }, [4, X.a.put(t, {
                                         body: r
                                     })];
                                 case 1:
@@ -3418,7 +3418,7 @@
                     }, t.prototype.render = function() {
                         var e = this.state.team;
                         return h.createElement(L, {
-                            title: X(N.Settings),
+                            title: W(N.Settings),
                             titleSelector: ct.PageTitle
                         }, h.createElement(k.Xa, {
                             className: "settings-page"
@@ -3449,7 +3449,7 @@
                             label: Object(g.d)("Description", "TeamsDashboard"),
                             labelOptional: this.formatOptionalLabel(),
                             hint: Object(g.d)("Supports Markdown", "TeamsDashboard")
-                        }, h.createElement(k.Pb, {
+                        }, h.createElement(k.Qb, {
                             disabled: this.state.isSaving,
                             id: this.textAreaID,
                             maxLength: 1e4,
@@ -3627,7 +3627,7 @@
                         case gt.AverageViewers:
                             t = Object(g.d)("Average = {number}", {
                                 number: h.createElement(k.W, {
-                                    type: k.Sb.Strong
+                                    type: k.Tb.Strong
                                 }, a(o))
                             }, "TeamsDashboardMetricSummary");
                             break;
@@ -3639,7 +3639,7 @@
                         case gt.StreamDuration:
                             t = Object(g.d)("Total = {numberOrDuration}", {
                                 numberOrDuration: h.createElement(k.W, {
-                                    type: k.Sb.Strong
+                                    type: k.Tb.Strong
                                 }, a(o))
                             }, "TeamsDashboardMetricSummary");
                             break;
@@ -3878,7 +3878,7 @@
                             default: 2
                         }
                     }, h.createElement(k.Xa, {
-                        textAlign: k.Ob.Right
+                        textAlign: k.Pb.Right
                     }, h.createElement(k.W, {
                         bold: !0
                     }, Object(g.d)("Views", "TeamsDashboard")))), h.createElement(k.P, {
@@ -3886,7 +3886,7 @@
                             default: 2
                         }
                     }, h.createElement(k.Xa, {
-                        textAlign: k.Ob.Right
+                        textAlign: k.Pb.Right
                     }, h.createElement(k.W, {
                         bold: !0
                     }, Object(g.d)("Percent", "TeamsDashboard")))))
@@ -3915,13 +3915,13 @@
                             default: 2
                         }
                     }, h.createElement(k.Xa, {
-                        textAlign: k.Ob.Right
+                        textAlign: k.Pb.Right
                     }, h.createElement(k.W, null, Object(g.f)(t.views)))), h.createElement(k.P, {
                         cols: {
                             default: 2
                         }
                     }, h.createElement(k.Xa, {
-                        textAlign: k.Ob.Right
+                        textAlign: k.Pb.Right
                     }, h.createElement(k.W, null, Object(g.f)(t.percent), "%"))))
                 },
                 Bt = function(e, t, r, n) {
@@ -3964,7 +3964,7 @@
                         columnName: t
                     }), n)
                 },
-                Xt = function(e) {
+                Wt = function(e) {
                     var t, r, n = e.rowData.reduce(function(e, t) {
                             return e + t.views
                         }, 0),
@@ -3985,10 +3985,10 @@
                             bottom: 1
                         }
                     }, h.createElement(k.W, {
-                        type: k.Sb.H4
+                        type: k.Tb.H4
                     }, t)), r)
                 },
-                Wt = function(e) {
+                Xt = function(e) {
                     var t = Object(g.d)("Referrer", "TeamsDashboard"),
                         r = Object(g.d)("Views by Referrer", "TeamsDashboard"),
                         n = "";
@@ -3997,7 +3997,7 @@
                         flexGrow: 1,
                         borderBottom: !0,
                         borderLeft: !0
-                    }, h.createElement(Xt, {
+                    }, h.createElement(Wt, {
                         isLoading: e.isLoading,
                         tableName: Object(g.d)("Views from Twitch", "TeamsDashboard"),
                         columnName: t,
@@ -4016,7 +4016,7 @@
                         display: k.X.Flex,
                         flexGrow: 1,
                         borderBottom: !0
-                    }, h.createElement(Xt, {
+                    }, h.createElement(Wt, {
                         isLoading: e.isLoading,
                         tableName: Object(g.d)("Views by Location", "TeamsDashboard"),
                         columnName: Object(g.d)("Location", "TeamsDashboard"),
@@ -4025,7 +4025,7 @@
                     })), h.createElement(k.Cb, {
                         display: k.X.Flex,
                         flexGrow: 1
-                    }, h.createElement(Xt, {
+                    }, h.createElement(Wt, {
                         isLoading: e.isLoading,
                         tableName: Object(g.d)("Views by Platform", "TeamsDashboard"),
                         columnName: Object(g.d)("Platform", "TeamsDashboard"),
@@ -4039,7 +4039,7 @@
                         display: k.X.Flex,
                         flexGrow: 1,
                         borderLeft: !0
-                    }, h.createElement(Xt, {
+                    }, h.createElement(Wt, {
                         isLoading: e.isLoading,
                         tableName: r,
                         columnName: t,
@@ -4499,7 +4499,7 @@
                                         case 0:
                                             return [4, yr(this.props.teamName, G(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                         case 1:
-                                            return e = r.sent(), 0 === Object.keys(e).length ? [2] : (t = Le(e, Er, Or()), Re(t, X(N.Stats) + " - " + ue(this.state.startTime) + ".csv"), [2])
+                                            return e = r.sent(), 0 === Object.keys(e).length ? [2] : (t = Le(e, Er, Or()), Re(t, W(N.Stats) + " - " + ue(this.state.startTime) + ".csv"), [2])
                                     }
                                 })
                             })
@@ -4546,7 +4546,7 @@
                                 size: k.Ab.Large
                             }))
                         }, r.renderViewershipTables = function() {
-                            return h.createElement(Wt, l.__assign({
+                            return h.createElement(Xt, l.__assign({
                                 isLoading: r.state.isLoadingDemographics
                             }, r.state.demographics))
                         }, r.state = {
@@ -4594,7 +4594,7 @@
                     }, t.prototype.render = function() {
                         var e = this.state.isLoadingMembers || this.state.isLoadingStats || this.state.isLoadingDemographics;
                         return h.createElement(L, {
-                            title: X(N.Stats),
+                            title: W(N.Stats),
                             titleSelector: "stats-page-title"
                         }, h.createElement(k.Cb, {
                             border: !0,
@@ -4826,7 +4826,7 @@
                         className: "dashboard-side-nav__link",
                         exact: e.exact,
                         to: e.linkTo
-                    }, Object(i.gc)(e)), e.children))
+                    }, Object(i.hc)(e)), e.children))
                 });
             r.d(t, "a", function() {
                 return s

@@ -80,7 +80,7 @@
                     }, t.prototype.getErrorMessage = function() {
                         return r.createElement(b.Xa, {
                             fullWidth: !0,
-                            textAlign: b.Ob.Center,
+                            textAlign: b.Pb.Center,
                             justifyContent: b.Wa.Center
                         }, r.createElement(b.W, null, Object(a.d)("Something went wrong", "PrimeGiftExperiment")))
                     }, t.prototype.getUserResultContent = function() {
@@ -114,7 +114,7 @@
                                     x: 1
                                 }
                             }, r.createElement(b.W, {
-                                type: b.Sb.H5,
+                                type: b.Tb.H5,
                                 ellipsis: !0
                             }, i))))))
                         }) : r.createElement(b.gb, null)
@@ -308,10 +308,10 @@
                         }
                     }, t
                 }(r.Component),
-                N = Object(s.compose)(Object(u.b)("GiftRecipientSearch", {
+                E = Object(s.compose)(Object(u.b)("GiftRecipientSearch", {
                     autoReportInteractive: !0
                 }))(_),
-                E = i("0KHE"),
+                N = i("0KHE"),
                 F = (i("g1hO"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -405,8 +405,8 @@
                                 top: 1
                             }
                         }, r.createElement(b.W, {
-                            type: b.Sb.Span
-                        }, Object(a.d)("The recipient will receive a notification and will need to claim the gift before the offer expires.", "PrimeGiftExperimentSubmission"))), r.createElement(N, {
+                            type: b.Tb.Span
+                        }, Object(a.d)("The recipient will receive a notification and will need to claim the gift before the offer expires.", "PrimeGiftExperimentSubmission"))), r.createElement(E, {
                             key: "gift-recipient-search-page",
                             onBack: this.goBack,
                             handleFormAction: this.handleFormAction
@@ -415,7 +415,8 @@
                         if (this.state.error) return r.createElement(b.Xa, {
                             margin: {
                                 bottom: 1
-                            }
+                            },
+                            "data-test-selector": "prime-send-gift-error"
                         }, r.createElement(b.W, {
                             color: b.O.Alt2,
                             italic: !0
@@ -429,14 +430,15 @@
                             }
                         }, "PrimeGiftExperimentSubmission")));
                         var e = this.props.getGiftRecipientList();
-                        return e ? r.createElement(b.Xa, {
+                        return e && 0 !== e.length ? r.createElement(b.Xa, {
                             margin: {
                                 bottom: 1
-                            }
+                            },
+                            "data-test-selector": "prime-gifts-left"
                         }, r.createElement(b.W, null, Object(a.d)("Sent gifts to <x:bold>{giftLogins}</x:bold>", {
                             "x:bold": function(e) {
                                 return r.createElement(b.W, {
-                                    type: b.Sb.Span,
+                                    type: b.Tb.Span,
                                     bold: !0
                                 }, e)
                             },
@@ -462,7 +464,7 @@
                         }, "PrimeGiftExperimentSubmission"))), r.createElement(b.Xa, {
                             flexGrow: 0,
                             flexShrink: 0,
-                            verticalAlign: b.cc.Middle
+                            verticalAlign: b.dc.Middle
                         }, r.createElement(b.i, {
                             duration: b.k.Medium,
                             enabled: this.state.giftSuccess,
@@ -475,17 +477,23 @@
                         }, Object(a.d)("Send as a Gift", "PrimeGiftExperimentSubmission")))))
                     }, t
                 }(r.Component)),
-                x = Object(s.compose)(Object(o.a)(E, {
+                R = Object(s.compose)(Object(o.a)(N, {
                     name: "giveGift"
                 }), Object(u.b)("GiftForm", {
                     autoReportInteractive: !0
                 }))(F);
             i.d(t, "PRIME_SEND_GIFT_BUTTON_SELECTOR", function() {
                 return "prime-send-gift-button"
+            }), i.d(t, "PRIME_GIFT_ERROR_SELECTOR", function() {
+                return "prime-send-gift-error"
+            }), i.d(t, "PRIME_GIFTEE_LIST_SELECTOR", function() {
+                return "prime-gifts-left"
+            }), i.d(t, "GIFTING_LIMIT", function() {
+                return 10
             }), i.d(t, "GiftFormComponent", function() {
                 return F
             }), i.d(t, "GiftForm", function() {
-                return x
+                return R
             })
         },
         "0KHE": function(e, t) {
@@ -1167,7 +1175,7 @@
                         }).then(function(t) {
                             e.countryCode = t.data.requestInfo.countryCode
                         }).catch(function(t) {
-                            e.logger.error(t, "Failed to get country code")
+                            e.logger.warn(t, "Failed to get country code")
                         })
                     }, e.prototype.getSearchResults = function(e) {
                         var t = this,
@@ -1184,7 +1192,7 @@
                                 results: JSON.parse(e.data.search.result)
                             }
                         }).catch(function(e) {
-                            return t.logger.error(e, "Failed to get search results"), e
+                            return t.logger.warn(e, "Failed to get search results"), e
                         })
                     }, e.prototype.getTopResult = function(e, t) {
                         return {

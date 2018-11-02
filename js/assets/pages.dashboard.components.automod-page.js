@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [162], {
+    [173], {
         "4l1H": function(e, t) {
             var n = {
                 kind: "Document",
@@ -176,581 +176,147 @@
             };
             e.exports = n
         },
-        F7O8: function(e, t, n) {
-            "use strict";
-            var a, i, r = n("mrSG"),
-                o = n("q1tI"),
-                d = n("/7QA"),
-                l = n("u5aL"),
-                s = n("8Ad5"),
-                c = n("Ue10");
-            n("zjB3");
-            ! function(e) {
-                e.DisplayedTerm = "term", e.AddTermInput = "add-term-input", e.EditTermInput = "edit-term-input", e.EditTermArea = "edit-term-area", e.AddTermButton = "add-term-button", e.EditTermButton = "edit-term-button", e.DelTermButton = "del-term-button", e.EditConfirmButton = "edit-confirm-button", e.EditCancelButton = "edit-cancel-button"
-            }(a || (a = {})),
-            function(e) {
-                e.Banned = "banned", e.Permitted = "permitted"
-            }(i || (i = {}));
-            var u = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            editingIndex: null,
-                            justSavedIndex: null,
-                            editingIsModEditable: null,
-                            terms: [],
-                            justSaved: !1,
-                            errorAddingTerm: !1,
-                            errorAddingLabel: null
-                        }, t.onCheckModEditableChange = function(e) {
-                            t.setState({
-                                editingIsModEditable: !e.target.checked
-                            })
-                        }, t.handleAdd = function() {
-                            if (t.addInput.value.trim()) {
-                                for (var e = 0, n = t.state.terms; e < n.length; e++) {
-                                    if (n[e].phrases.join(" ") === t.addInput.value.trim()) return void t.setState({
-                                        errorAddingTerm: !0,
-                                        errorAddingLabel: Object(d.d)("Duplicate Term", "ChatTermsControl")
-                                    })
-                                }
-                                var a = {
-                                    phrases: [t.addInput.value.trim()],
-                                    category: t.props.type,
-                                    createdAt: null,
-                                    updatedAt: null,
-                                    expiresAt: null,
-                                    isModEditable: t.props.channelID !== t.props.userID
-                                };
-                                t.props.onTermAdd(a, !0) && (t.addInput.value = ""), t.setState({
-                                    justSavedIndex: 0,
-                                    justSaved: !0
-                                })
+        Jpqj: function(e, t) {
+            var n = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "ModLogs"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "channelLogin"
                             }
-                        }, t.handleEdit = function(e) {
-                            var n = e.currentTarget.closest("[data-index]").getAttribute("data-index");
-                            n && t.setState({
-                                editingIndex: +n
-                            })
-                        }, t.handleDelete = function(e) {
-                            var n = e.currentTarget.closest("[data-index]").getAttribute("data-index");
-                            if (n) {
-                                +n == t.state.terms.length - 1 ? t.setState({
-                                    justSavedIndex: +n - 1,
-                                    justSaved: !0
-                                }) : t.setState({
-                                    justSavedIndex: +n,
-                                    justSaved: !0
-                                }), t.props.onTermDelete(t.state.terms[+n], !1);
-                                var a = t.state.editingIndex;
-                                null === a || +n === a ? a = null : a > +n && (a -= 1), a !== t.state.editingIndex && t.setState({
-                                    editingIndex: a
-                                })
-                            }
-                        }, t.saveAddInputRef = function(e) {
-                            t.addInput = e
-                        }, t.saveEditInputRef = function(e) {
-                            t.editInput = e
-                        }, t.handleAddKeyDown = function(e) {
-                            e.keyCode === s.a.Enter && t.handleAdd(), t.state.errorAddingTerm && t.setState({
-                                errorAddingTerm: !1
-                            })
-                        }, t.handleEditKeyDown = function(e) {
-                            switch (e.keyCode) {
-                                case s.a.Enter:
-                                    t.confirmEdit();
-                                    break;
-                                case s.a.Esc:
-                                    t.cancelEdit();
-                                    break;
-                                default:
-                                    return
-                            }
-                        }, t.cancelEdit = function() {
-                            t.setState({
-                                editingIndex: null
-                            })
-                        }, t.clearLabels = function() {
-                            (t.state.justSaved || t.state.errorAddingTerm) && t.setState({
-                                justSaved: !1,
-                                justSavedIndex: null,
-                                errorAddingTerm: !1,
-                                errorAddingLabel: null
-                            })
-                        }, t.confirmEdit = function() {
-                            if (null !== t.state.editingIndex && t.editInput) {
-                                var e = t.state.terms[t.state.editingIndex].isModEditable;
-                                null !== t.state.editingIsModEditable && (e = t.state.editingIsModEditable);
-                                var n = {
-                                    isModEditable: e,
-                                    category: t.props.type,
-                                    phrases: [t.editInput.value],
-                                    createdAt: null,
-                                    updatedAt: null,
-                                    expiresAt: null
-                                };
-                                t.props.onTermEdit(t.state.terms[t.state.editingIndex], n, e);
-                                var a = t.state.terms;
-                                a[t.state.editingIndex] = n, t.setState(function() {
-                                    return {
-                                        terms: a,
-                                        editingIndex: -1,
-                                        justSaved: !0,
-                                        justSavedIndex: t.state.editingIndex
-                                    }
-                                })
-                            }
-                        }, t
-                    }
-                    return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
-                        if (this.state.terms === e.terms) return null;
-                        this.setState({
-                            terms: e.terms
-                        })
-                    }, t.prototype.render = function() {
-                        for (var e = [], t = 0; t < this.state.terms.length; t++) e.push(this.renderTerm(this.state.terms[t], t));
-                        return o.createElement(c.Pa, {
-                            fullWidth: !0
-                        }, o.createElement("div", {
-                            className: "chat-terms-control",
-                            "data-a-target": "chat-terms-control"
-                        }, o.createElement(c.Xa, {
-                            display: c.X.Flex,
-                            flexDirection: c.Aa.Row,
-                            alignItems: c.f.Stretch,
-                            fullWidth: !0,
-                            flexWrap: c.Ba.NoWrap
-                        }, o.createElement(c.Xa, {
-                            flexGrow: 1
-                        }, o.createElement(c.Ea, {
-                            label: "",
-                            error: this.state.errorAddingTerm,
-                            errorMessage: this.state.errorAddingLabel || ""
-                        }, o.createElement(c.Ra, {
-                            "data-a-target": "add-term-input",
-                            "data-test-selector": a.AddTermInput,
-                            ariaLabel: Object(d.d)("Add term", "ChatTermsControl"),
-                            refDelegate: this.saveAddInputRef,
-                            type: c.Ta.Text,
-                            placeholder: this.props.addPlaceholder,
-                            onKeyDown: this.handleAddKeyDown,
-                            error: this.state.errorAddingTerm
-                        }))), o.createElement(c.Xa, {
-                            flexShrink: 0,
-                            margin: {
-                                top: .5
-                            }
-                        }, o.createElement(c.z, {
-                            onClick: this.handleAdd,
-                            "data-a-target": "add-term",
-                            "data-test-selector": a.AddTermButton
-                        }, Object(d.d)("Add", "ChatTermsControl")))), o.createElement(c.Xa, {
-                            className: "chat-terms"
-                        }, e)))
-                    }, t.prototype.renderTerm = function(e, t) {
-                        if (t === this.state.editingIndex) return this.renderEditTermRow(e, t);
-                        var n = null;
-                        if (!0 == !e.isModEditable && this.props.type === i.Banned) n = o.createElement(c.Xa, {
-                            alignItems: c.f.Center,
-                            display: c.X.Flex,
-                            margin: {
-                                left: "auto"
-                            },
-                            fullHeight: !0
-                        }, o.createElement(c.eb, {
-                            label: Object(d.d)("private", "ChatTermsControl")
-                        }));
-                        else if (e.expiresAt) {
-                            var r = Object(d.i)(new Date(e.expiresAt), {
-                                style: "numeric"
-                            });
-                            n = o.createElement(c.Xa, {
-                                margin: {
-                                    right: 1
-                                }
-                            }, o.createElement(c.W, {
-                                ellipsis: !0,
-                                color: c.O.Alt2
-                            }, " ", Object(d.d)("Expires {relativeTime}", {
-                                relativeTime: r
-                            }, "ChatTermsControl"), " "))
-                        }
-                        var l = null;
-                        t === this.state.justSavedIndex && (l = o.createElement(c.Pa, {
-                            position: c.hb.Absolute,
-                            margin: {
-                                left: 5
-                            }
-                        }, o.createElement("span", {
-                            className: "chat-terms-control__saved"
-                        }, o.createElement(c.i, {
-                            delay: c.j.Long,
-                            duration: c.k.Medium,
-                            type: c.n.FadeOut,
-                            enabled: !0,
-                            onAnimationEnd: this.clearLabels
-                        }, o.createElement(c.Xa, {
-                            position: c.hb.Absolute,
-                            attachRight: !0
-                        }, Object(d.d)("Saved", "ChatTermsControl"))))));
-                        var s = Object(d.d)("Edit", "ChatTermsControl"),
-                            u = Object(d.d)("Delete", "ChatTermsControl");
-                        return o.createElement(c.Pa, {
-                            className: "chat-term-row",
-                            key: t,
-                            "data-index": t
-                        }, o.createElement("div", {
-                            className: "chat-terms-control__term-row",
-                            "data-selectable": t,
-                            "data-test-selector": a.EditTermArea
-                        }, o.createElement(c.Ja, null, o.createElement(c.P, {
-                            cols: 6
-                        }, o.createElement(c.Xa, {
-                            "data-test-selector": a.DisplayedTerm,
-                            margin: {
-                                right: 1
-                            },
-                            display: c.X.Flex,
-                            alignItems: c.f.Center,
-                            justifyContent: c.Wa.Between,
-                            fullHeight: !0
-                        }, o.createElement(c.W, {
-                            ellipsis: !0
-                        }, e.phrases.join(" ")))), o.createElement(c.P, {
-                            cols: 4
-                        }, o.createElement(c.Xa, {
-                            alignItems: c.f.Center,
-                            display: c.X.Flex,
-                            flexWrap: c.Ba.NoWrap,
-                            fullHeight: !0
-                        }, n)), o.createElement(c.P, {
-                            cols: 1
-                        }, o.createElement(c.Vb, {
-                            label: s
-                        }, o.createElement(c.A, {
-                            "data-a-target": "edit-term",
-                            "data-test-selector": a.EditTermButton,
-                            icon: c.rb.Edit,
-                            ariaLabel: s,
-                            onClick: this.handleEdit
-                        }))), o.createElement(c.P, {
-                            cols: 1
-                        }, o.createElement(c.Vb, {
-                            label: u
-                        }, o.createElement(c.A, {
-                            "data-a-target": "delete-term",
-                            "data-test-selector": a.DelTermButton,
-                            icon: c.rb.Trash,
-                            ariaLabel: u,
-                            onClick: this.handleDelete
-                        })), l))))
-                    }, t.prototype.renderEditTermRow = function(e, t) {
-                        var n = Object(d.d)("Save", "ChatTermsControl"),
-                            i = Object(d.d)("Cancel", "ChatTermsControl"),
-                            r = this.renderEditBalloon(e, t);
-                        return o.createElement(l.a, {
-                            key: "clickout-item-" + t,
-                            onClickOut: this.cancelEdit
-                        }, o.createElement(c.Xa, {
-                            key: "line-item-" + t,
-                            className: "chat-term-row",
-                            position: c.hb.Relative
-                        }, o.createElement(c.Xa, {
-                            key: t,
-                            "data-index": t,
-                            display: c.X.Flex,
-                            flexDirection: c.Aa.Row,
-                            flexWrap: c.Ba.NoWrap
-                        }, o.createElement(c.Xa, {
-                            flexGrow: 1
-                        }, o.createElement(c.Ra, {
-                            autoFocus: !0,
-                            ariaLabel: Object(d.d)("Edit term", "ChatTermsControl"),
-                            "data-a-target": "edit-term-input",
-                            "data-test-selector": a.EditTermInput,
-                            refDelegate: this.saveEditInputRef,
-                            type: c.Ta.Text,
-                            defaultValue: e.phrases.join(" "),
-                            onKeyDown: this.handleEditKeyDown
-                        })), o.createElement(c.Xa, {
-                            flexShrink: 0
-                        }, o.createElement(c.Vb, {
-                            label: n
-                        }, o.createElement(c.A, {
-                            "data-a-target": "save-term-edit",
-                            "data-test-selector": a.EditConfirmButton,
-                            icon: c.rb.Check,
-                            ariaLabel: n,
-                            onClick: this.confirmEdit
-                        })), o.createElement(c.Vb, {
-                            label: i
-                        }, o.createElement(c.A, {
-                            "data-a-target": "cancel-term-edit",
-                            "data-test-selector": a.EditCancelButton,
-                            icon: c.rb.Close,
-                            ariaLabel: i,
-                            onClick: this.cancelEdit
-                        })))), r))
-                    }, t.prototype.renderEditBalloon = function(e, t) {
-                        var n = null;
-                        return e.expiresAt ? n = o.createElement(c.Xa, null, Object(d.d)("Save changes to make term always active", "ChatTermsControl")) : this.props.type === i.Banned && this.props.channelID === this.props.userID && (n = o.createElement(c.Xa, null, o.createElement(c.N, {
-                            "data-test-selector": "isModEditableCheckbox",
-                            id: "isModEditableCheckbox",
-                            label: "Mark as Private",
-                            defaultChecked: !e.isModEditable,
-                            onChange: this.onCheckModEditableChange
-                        }), o.createElement(c.W, {
-                            color: c.O.Alt2,
-                            fontSize: c.Ca.Size8
-                        }, Object(d.d)("Private terms are not viewable to anyone except for yourself.", "ChatTermsControl")))), n ? o.createElement(c.u, {
-                            key: "edit-balloon-" + t,
-                            direction: c.v.Right,
-                            size: c.w.Large,
-                            show: !0
-                        }, o.createElement(c.Xa, {
-                            margin: 1
-                        }, o.createElement(c.Cb, {
-                            borderBottom: !0,
-                            margin: {
-                                bottom: .5
-                            }
-                        }, e.phrases.join(" ")), n)) : null
-                    }, t
-                }(o.Component),
-                m = n("yR8l"),
-                p = n("4l1H"),
-                h = n("Temx"),
-                g = n("kk6A"),
-                v = n("5R7h"),
-                k = (n("R17a"), function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        return n.state = {
-                            terms: []
-                        }, n.addTerm = function(e, t) {
-                            return r.__awaiter(n, void 0, void 0, function() {
-                                var n, a = this;
-                                return r.__generator(this, function(r) {
-                                    switch (r.label) {
-                                        case 0:
-                                            return null === this.state.terms ? [2, !1] : this.props.type !== i.Banned ? [3, 2] : [4, this.props.addChannelBlockedTerm({
-                                                variables: {
-                                                    input: {
-                                                        channelID: this.props.channelID,
-                                                        phrases: e.phrases,
-                                                        isModEditable: e.isModEditable
-                                                    }
-                                                }
-                                            })];
-                                        case 1:
-                                            return r.sent(), [3, 4];
-                                        case 2:
-                                            return this.props.type !== i.Permitted ? [3, 4] : [4, this.props.addChannelPermittedTerm({
-                                                variables: {
-                                                    input: {
-                                                        channelID: this.props.channelID,
-                                                        phrases: e.phrases
-                                                    }
-                                                }
-                                            })];
-                                        case 3:
-                                            r.sent(), r.label = 4;
-                                        case 4:
-                                            return n = this.state.terms, !0 === t && n.unshift(e), this.setState(function() {
-                                                return {
-                                                    terms: a.state.terms
-                                                }
-                                            }), [2, !0]
-                                    }
-                                })
-                            })
-                        }, n.deleteTerm = function(e, t) {
-                            return r.__awaiter(n, void 0, void 0, function() {
-                                return r.__generator(this, function(n) {
-                                    switch (n.label) {
-                                        case 0:
-                                            return null === this.state.terms ? [2, !1] : (!1 === t && this.setState(function(t) {
-                                                return {
-                                                    terms: t.terms.filter(function(t) {
-                                                        return t.phrases.join(" ") !== e.phrases.join(" ")
-                                                    })
-                                                }
-                                            }), this.props.type !== i.Banned ? [3, 2] : [4, this.props.deleteChannelBlockedTerm({
-                                                variables: {
-                                                    input: {
-                                                        channelID: this.props.channelID,
-                                                        phrases: e.phrases
-                                                    }
-                                                }
-                                            })]);
-                                        case 1:
-                                            return n.sent(), [3, 4];
-                                        case 2:
-                                            return this.props.type !== i.Permitted ? [3, 4] : [4, this.props.deleteChannelPermittedTerm({
-                                                variables: {
-                                                    input: {
-                                                        channelID: this.props.channelID,
-                                                        phrases: e.phrases
-                                                    }
-                                                }
-                                            })];
-                                        case 3:
-                                            n.sent(), n.label = 4;
-                                        case 4:
-                                            return [2, !0]
-                                    }
-                                })
-                            })
-                        }, n.editTerm = function(e, t, a) {
-                            return r.__awaiter(n, void 0, void 0, function() {
-                                var n;
-                                return r.__generator(this, function(i) {
-                                    switch (i.label) {
-                                        case 0:
-                                            return [4, this.deleteTerm(e, !0)];
-                                        case 1:
-                                            return i.sent(), t.isModEditable = a, [4, this.addTerm(t, !1)];
-                                        case 2:
-                                            return i.sent(), n = this.state.terms, this.setState({
-                                                terms: n
-                                            }), [2]
-                                    }
-                                })
-                            })
-                        }, n
-                    }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                        if (this.state.terms === []) return null;
-                        var e = [];
-                        this.props.terms.forEach(function(t) {
-                            e.push(t)
-                        }), this.setState({
-                            terms: e
-                        })
-                    }, t.prototype.render = function() {
-                        if (!this.state.terms) return null;
-                        var e = null;
-                        return this.props.type === i.Banned && (e = o.createElement(c.W, {
-                            color: c.O.Alt2,
-                            fontSize: c.Ca.Size8
-                        }, Object(d.d)("Tip: Some terms may be marked as Private and only visible to the channel owner.", "ChatTermsSetting"))), o.createElement(c.Xa, {
-                            margin: {
-                                bottom: 2
-                            }
-                        }, o.createElement("div", {
-                            className: "chat-terms-setting"
-                        }, o.createElement(u, {
-                            channelID: this.props.channelID,
-                            userID: this.props.userID,
-                            addPlaceholder: this.props.addPlaceholderMsg,
-                            terms: this.state.terms,
-                            onTermAdd: this.addTerm,
-                            onTermEdit: this.editTerm,
-                            onTermDelete: this.deleteTerm,
-                            type: this.props.type
-                        })), o.createElement(c.Xa, {
-                            margin: {
-                                top: .5
-                            }
-                        }, e))
-                    }, t = r.__decorate([Object(m.a)(p, {
-                        name: "addChannelBlockedTerm"
-                    }), Object(m.a)(h, {
-                        name: "addChannelPermittedTerm"
-                    }), Object(m.a)(g, {
-                        name: "deleteChannelBlockedTerm"
-                    }), Object(m.a)(v, {
-                        name: "deleteChannelPermittedTerm"
-                    })], t)
-                }(o.Component)),
-                b = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.handleOptOutChange = function(e) {
-                            var n = e.currentTarget;
-                            t.props.onUpdateChatSettings({
-                                variables: {
-                                    input: {
-                                        channelID: t.props.data.user.id,
-                                        isOptedOutOfGlobalBannedWordsList: n.checked
-                                    }
-                                }
-                            })
-                        }, t
-                    }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.latencyTracking.reportInteractive()
-                    }, t.prototype.render = function() {
-                        return !this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.user ? o.createElement(c.Xa, null) : o.createElement(c.Cb, {
-                            padding: {
-                                top: 2
-                            }
-                        }, o.createElement(c.Ja, null, o.createElement(c.P, {
-                            cols: 2
-                        }, o.createElement(c.W, {
-                            color: c.O.Alt2,
-                            type: c.Sb.Strong
-                        }, Object(d.d)("Blocked and Permitted Terms", "AutoModTermsTitle"))), o.createElement(c.P, {
-                            cols: 5
-                        }, o.createElement(c.W, {
-                            color: c.O.Alt2,
-                            type: c.Sb.Strong
-                        }, Object(d.d)("Blocked Terms or Phrases", "AutoModBlockedTermsTitle")), o.createElement(c.W, {
-                            color: c.O.Alt2
-                        }, Object(d.d)("Messages containing these terms or phrases will be blocked from chat. Terms are automatically added when a mod denies a caught message.", "AutoModBlockedTermsDescription")), o.createElement(k, {
-                            channelID: this.props.data.user.id,
-                            userID: this.props.data.currentUser.id,
-                            type: i.Banned,
-                            addPlaceholderMsg: Object(d.d)("Add new blocked term or phrase", "AutoModBlockedTermAdditionPlaceHolder"),
-                            terms: this.props.data.user.blockedTerms
-                        }), o.createElement(c.W, {
-                            color: c.O.Alt2,
-                            type: c.Sb.Strong
-                        }, Object(d.d)("Permitted Terms or Phrases", "AutoModPermittedTermsTitle")), o.createElement(c.W, {
-                            color: c.O.Alt2
-                        }, Object(d.d)("Messages containing these terms, and no other blocked terms, will not be caught by AutoMod. Terms are automatically added when a mod allows a message.", "AutoModPermittedTermsDescription")), o.createElement(k, {
-                            channelID: this.props.data.user.id,
-                            userID: this.props.data.currentUser.id,
-                            type: i.Permitted,
-                            addPlaceholderMsg: Object(d.d)("Add new permitted term or phrase", "AutoModPermittedTermsAdditionPlaceholder"),
-                            terms: this.props.data.user.permittedTerms
-                        }), o.createElement(c.N, {
-                            defaultChecked: this.props.data.user.chatSettings.isOptedOutOfGlobalBannedWordsList,
-                            label: Object(d.d)("Opt out of commonly blocked terms", "AutoModSettings"),
-                            onChange: this.handleOptOutChange
-                        }), o.createElement(c.W, {
-                            color: c.O.Alt2,
-                            fontSize: c.Ca.Size8
-                        }, Object(d.d)("AutoMod level 0 automatically holds messages containing commonly blocked terms for mods to review. If you enable this feature AutoMod won't hold these messages.", "AutoModSettings")))))
-                    }, t
-                }(o.Component),
-                f = n("/MKj"),
-                S = n("fvjX"),
-                y = n("kRBY"),
-                A = n("GnwI"),
-                E = n("Z6v5"),
-                C = n("ah12");
-            var T = Object(S.compose)(Object(f.connect)(function(e) {
-                return {
-                    isLoggedIn: Object(y.f)(e)
-                }
-            }), Object(m.a)(E, {
-                options: function(e) {
-                    return {
-                        variables: {
-                            channelLogin: e.channelLogin
                         },
-                        fetchPolicy: "cache-and-network"
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "String"
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "currentUser"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "displayName"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }]
+                            }
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "user"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "channelLogin"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "modLogsRoleAccess"
+                                    },
+                                    arguments: [{
+                                        kind: "Argument",
+                                        name: {
+                                            kind: "Name",
+                                            value: "role"
+                                        },
+                                        value: {
+                                            kind: "EnumValue",
+                                            value: "MODERATOR"
+                                        }
+                                    }],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "accessLevel"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
                     }
+                }],
+                loc: {
+                    start: 0,
+                    end: 157
                 }
-            }), Object(m.a)(C, {
-                name: "onUpdateChatSettings"
-            }), Object(A.b)("ChatTermsContainer"))(b);
-            n.d(t, !1, function() {
-                return b
-            }), n.d(t, "a", function() {
-                return T
-            })
+            };
+            n.loc.source = {
+                body: "query ModLogs($channelLogin: String!) {\ncurrentUser {\nid\ndisplayName\n}\nuser(login: $channelLogin) {\nid\nmodLogsRoleAccess(role: MODERATOR) {\naccessLevel\n}\n}\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = n
         },
         K1HF: function(e, t) {
             var n = {
@@ -1188,15 +754,15 @@
                 i = n("q1tI"),
                 r = n("wIs1"),
                 o = n("fvjX"),
-                d = n("/7QA"),
-                l = n("4VQm"),
-                s = n("V+GM"),
+                s = n("/7QA"),
+                d = n("4VQm"),
+                l = n("V+GM"),
                 c = n("NvVO"),
                 u = n("2xye"),
                 m = n("GnwI"),
                 p = n("/MKj"),
-                h = n("kRBY"),
-                g = n("oJmH"),
+                g = n("kRBY"),
+                h = n("oJmH"),
                 v = n("yR8l"),
                 k = n("u5aL"),
                 b = n("Ue10"),
@@ -1241,7 +807,7 @@
                             border: !0,
                             background: b.r.Alt,
                             position: b.hb.Absolute,
-                            zIndex: b.fc.Above
+                            zIndex: b.gc.Above
                         }, this.renderMenuItem(0), this.renderMenuItem(6), this.renderMenuItem(5), this.renderMenuItem(4), this.renderMenuItem(3)) : ""
                     }, t.prototype.renderMenuItem = function(e) {
                         return i.createElement(b.Ua, {
@@ -1270,7 +836,7 @@
                                 return 0
                         }
                     }, t.prototype.menuOption = function(e) {
-                        for (var t = [Object(d.d)("No filtering", "AutoModSettings"), Object(d.d)("Less filtering", "AutoModSettings"), Object(d.d)("Some filtering", "AutoModSettings"), Object(d.d)("More filtering", "AutoModSettings"), Object(d.d)("Most filtering", "AutoModSettings")], n = this.getNumShields(e), a = [], r = 0; r < n; r++) a.push(i.createElement(b.Xa, {
+                        for (var t = [Object(s.d)("No filtering", "AutoModSettings"), Object(s.d)("Less filtering", "AutoModSettings"), Object(s.d)("Some filtering", "AutoModSettings"), Object(s.d)("More filtering", "AutoModSettings"), Object(s.d)("Most filtering", "AutoModSettings")], n = this.getNumShields(e), a = [], r = 0; r < n; r++) a.push(i.createElement(b.Xa, {
                             key: "shield" + r,
                             display: b.X.InlineFlex,
                             padding: {
@@ -1287,7 +853,7 @@
                             display: b.X.Flex,
                             padding: .5
                         }, a, i.createElement(b.W, {
-                            align: b.cc.Middle,
+                            align: b.dc.Middle,
                             color: b.O.Alt2
                         }, o))
                     }, t = a.__decorate([Object(m.b)("AutomodCategoryDisplay")], t)
@@ -1305,7 +871,7 @@
                             }
                         }, i.createElement("strong", null, this.props.category), i.createElement(b.W, {
                             color: b.O.Alt2,
-                            type: b.Sb.P
+                            type: b.Tb.P
                         }, this.props.description)))
                     }, t
                 }(i.Component),
@@ -1316,13 +882,13 @@
                         return t.state = {
                             onboardingVisible: !1
                         }, t.onCloseOnboarding = function() {
-                            d.m.set(y, !0), t.setState({
+                            s.m.set(y, !0), t.setState({
                                 onboardingVisible: !1
                             })
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                        var e = d.m.getOptional(y);
+                        var e = s.m.getOptional(y);
                         null === e ? this.setState({
                             onboardingVisible: !0
                         }) : this.setState({
@@ -1337,10 +903,10 @@
                             color: b.O.Alt2,
                             padding: 2
                         }, i.createElement(b.W, {
-                            type: b.Sb.H4,
+                            type: b.Tb.H4,
                             color: b.O.Link,
                             bold: !0
-                        }, Object(d.d)("AutoMod Tip", "AutoModSettings")), i.createElement(b.Xa, {
+                        }, Object(s.d)("AutoMod Tip", "AutoModSettings")), i.createElement(b.Xa, {
                             padding: 1,
                             position: b.hb.Absolute,
                             attachTop: !0,
@@ -1352,8 +918,8 @@
                             "data-test-selector": "automod-tip-dismiss-button"
                         })), i.createElement(b.W, {
                             color: b.O.Alt2,
-                            type: b.Sb.Span
-                        }, Object(d.d)("Did you know AutoMod catches misspelled words and evasion? N!ce try, pe0ple wh0 t@lk lik3 th!s.", "AutoModSettings"))))) : ""
+                            type: b.Tb.Span
+                        }, Object(s.d)("Did you know AutoMod catches misspelled words and evasion? N!ce try, pe0ple wh0 t@lk lik3 th!s.", "AutoModSettings"))))) : ""
                     }, t
                 }(i.Component),
                 E = function(e) {
@@ -1365,10 +931,10 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        var e = [Object(d.d)("Only commonly blocked terms", "AutoModSettings"), Object(d.d)("A Little Moderation", "AutoModSettings"), Object(d.d)("Some Moderation", "AutoModSettings"), Object(d.d)("More Moderation", "AutoModSettings"), Object(d.d)("A Lot of Moderation", "AutoModSettings")],
+                        var e = [Object(s.d)("Only commonly blocked terms", "AutoModSettings"), Object(s.d)("A Little Moderation", "AutoModSettings"), Object(s.d)("Some Moderation", "AutoModSettings"), Object(s.d)("More Moderation", "AutoModSettings"), Object(s.d)("A Lot of Moderation", "AutoModSettings")],
                             t = this.props.level,
                             n = e[t],
-                            a = Object(d.d)("Level {lvl,number}", {
+                            a = Object(s.d)("Level {lvl,number}", {
                                 lvl: t
                             }, "AutoModSettings");
                         return i.createElement(b.Cb, {
@@ -1384,8 +950,8 @@
                             }
                         }, i.createElement(b.W, {
                             color: b.O.Alt2,
-                            type: b.Sb.P
-                        }, Object(d.d)("Your AutoMod setting:", "AutoModSettingsSlider"))), i.createElement(b.ob, {
+                            type: b.Tb.P
+                        }, Object(s.d)("Your AutoMod setting:", "AutoModSettingsSlider"))), i.createElement(b.ob, {
                             min: 0,
                             max: 4,
                             step: 1,
@@ -1400,7 +966,7 @@
                             }
                         }, a), i.createElement(b.W, {
                             color: b.O.Alt2,
-                            type: b.Sb.Strong
+                            type: b.Tb.Strong
                         }, n)), i.createElement(b.Cb, {
                             background: b.r.Alt2,
                             padding: 1,
@@ -1499,8 +1065,8 @@
                                 padding: {
                                     top: 2
                                 },
-                                textAlign: b.Ob.Center
-                            }, Object(d.d)("Your current AutoMod level: 0", "AutoModSettings")), i.createElement(b.Cb, {
+                                textAlign: b.Pb.Center
+                            }, Object(s.d)("Your current AutoMod level: 0", "AutoModSettings")), i.createElement(b.Cb, {
                                 margin: {
                                     x: 2
                                 },
@@ -1508,12 +1074,12 @@
                                     y: 1,
                                     x: 5
                                 },
-                                textAlign: b.Ob.Center
+                                textAlign: b.Pb.Center
                             }, i.createElement(b.z, {
                                 fullWidth: !0,
                                 onClick: t.showAutoModCategories,
                                 state: b.E.Default
-                            }, Object(d.d)("Choose level", "AutoModSettings"))))) : t.state.isCustom || void 0 === t.state.level ? i.createElement(b.Cb, {
+                            }, Object(s.d)("Choose level", "AutoModSettings"))))) : t.state.isCustom || void 0 === t.state.level ? i.createElement(b.Cb, {
                                 borderLeft: !0,
                                 borderRight: !0,
                                 padding: {
@@ -1530,21 +1096,21 @@
                                 alignItems: b.f.Center
                             }, i.createElement(b.W, {
                                 color: b.O.Alt2,
-                                type: b.Sb.Span
-                            }, Object(d.d)("Your AutoMod setting:", "AutoModSettings")), i.createElement(b.Xa, {
+                                type: b.Tb.Span
+                            }, Object(s.d)("Your AutoMod setting:", "AutoModSettings")), i.createElement(b.Xa, {
                                 padding: {
                                     left: .5
                                 },
                                 display: b.X.InlineFlex
                             }, i.createElement(b.W, {
                                 color: b.O.Alt2,
-                                type: b.Sb.Strong
-                            }, Object(d.d)("Custom", "AutoModSettingsValue"))))), i.createElement(b.P, {
+                                type: b.Tb.Strong
+                            }, Object(s.d)("Custom", "AutoModSettingsValue"))))), i.createElement(b.P, {
                                 cols: 5
                             }, i.createElement(b.z, {
                                 type: b.F.Hollow,
                                 onClick: t.revertToSlider
-                            }, Object(d.d)("Revert to defaults", "AutoModSettings"))))) : i.createElement(E, {
+                            }, Object(s.d)("Revert to defaults", "AutoModSettings"))))) : i.createElement(E, {
                                 level: t.state.level.valueOf(),
                                 onLevelChange: t.handleLevelChange
                             })
@@ -1565,12 +1131,12 @@
                                 top: 2
                             },
                             color: b.O.Alt2,
-                            textAlign: b.Ob.Center,
+                            textAlign: b.Pb.Center,
                             "data-test-selector": "automod-placeholder-container"
                         }, i.createElement(b.W, {
-                            type: b.Sb.H3,
+                            type: b.Tb.H3,
                             italic: !0
-                        }, Object(d.d)("You do not have permission to access this dashboard.", "AutoModSettings")));
+                        }, Object(s.d)("You do not have permission to access this dashboard.", "AutoModSettings")));
                         var e = this.isBlankState();
                         return i.createElement(b.Xa, null, i.createElement(b.Cb, {
                             margin: {
@@ -1580,8 +1146,8 @@
                             cols: 2
                         }, i.createElement(b.W, {
                             color: b.O.Alt2,
-                            type: b.Sb.Strong
-                        }, Object(d.d)("AutoMod Rulesets", "AutoModSettings"))), i.createElement(b.P, {
+                            type: b.Tb.Strong
+                        }, Object(s.d)("AutoMod Rulesets", "AutoModSettings"))), i.createElement(b.P, {
                             cols: 5
                         }, this.AutomodTableHeader(), this.renderSlider(e), this.AutomodCategories(e), this.AutomodTableFooter(e))))
                     }, t.prototype.isBlankState = function() {
@@ -1593,7 +1159,7 @@
                             background: b.r.Alt2
                         }, i.createElement(b.Ja, null, i.createElement(b.P, {
                             cols: 7
-                        }, Object(d.d)("You can adjust how much moderation you'd like for your channel.", "AutoModSettings")), i.createElement(b.P, {
+                        }, Object(s.d)("You can adjust how much moderation you'd like for your channel.", "AutoModSettings")), i.createElement(b.P, {
                             cols: 5
                         }, i.createElement(b.Xa, {
                             display: b.X.Flex,
@@ -1604,7 +1170,7 @@
                         }, i.createElement(b.z, {
                             onClick: this.showAutoModCategories,
                             type: b.F.Hollow
-                        }, Object(d.d)("See how rulesets work", "AutoModSettings")))))) : i.createElement(b.Xa, null, i.createElement(b.Cb, {
+                        }, Object(s.d)("See how rulesets work", "AutoModSettings")))))) : i.createElement(b.Xa, null, i.createElement(b.Cb, {
                             border: !0,
                             padding: {
                                 y: 1,
@@ -1614,7 +1180,7 @@
                         }, i.createElement("a", {
                             href: "https://help.twitch.tv/customer/portal/articles/2662186-how-to-use-automod",
                             target: "_blank"
-                        }, Object(d.d)("Learn more in our help page", "AutoModSettings"))), i.createElement(b.Xa, {
+                        }, Object(s.d)("Learn more in our help page", "AutoModSettings"))), i.createElement(b.Xa, {
                             display: b.X.Flex,
                             padding: {
                                 y: 1
@@ -1629,21 +1195,21 @@
                         }, i.createElement(b.z, {
                             onClick: this.updateAutoModProperties,
                             state: this.state.submissionState
-                        }, Object(d.d)("Save", "AutoModSettings"))), i.createElement(b.z, {
+                        }, Object(s.d)("Save", "AutoModSettings"))), i.createElement(b.z, {
                             onClick: this.resetAutoModProperties,
                             type: b.F.Text,
                             disabled: this.state.cancelDisabled
-                        }, Object(d.d)("Cancel", "AutoModSettings"))))
+                        }, Object(s.d)("Cancel", "AutoModSettings"))))
                     }, t.prototype.AutomodCategories = function(e) {
                         if (!e && 0 !== this.state.level && this.state.categories) {
-                            var t = Object(d.d)("Identity language", "AutoModSettings"),
-                                n = Object(d.d)("Referring to race, religion, gender, orientation, disability, or similar", "AutoModSettings"),
-                                a = Object(d.d)("Sexually Explicit Language", "AutoModSettings"),
-                                r = Object(d.d)("Referring to sexual acts, sexual content, and body parts", "AutoModSettings"),
-                                o = Object(d.d)("Aggressive language", "AutoModSettings"),
-                                l = Object(d.d)("Hostility towards other people, often associated with bullying", "AutoModSettings"),
-                                s = Object(d.d)("Profanity", "AutoModSettings"),
-                                c = Object(d.d)("Expletives, curse words, things you wouldn’t say to grandma", "AutoModSettings");
+                            var t = Object(s.d)("Identity language", "AutoModSettings"),
+                                n = Object(s.d)("Referring to race, religion, gender, orientation, disability, or similar", "AutoModSettings"),
+                                a = Object(s.d)("Sexually Explicit Language", "AutoModSettings"),
+                                r = Object(s.d)("Referring to sexual acts, sexual content, and body parts", "AutoModSettings"),
+                                o = Object(s.d)("Aggressive language", "AutoModSettings"),
+                                d = Object(s.d)("Hostility towards other people, often associated with bullying", "AutoModSettings"),
+                                l = Object(s.d)("Profanity", "AutoModSettings"),
+                                c = Object(s.d)("Expletives, curse words, things you wouldn’t say to grandma", "AutoModSettings");
                             return i.createElement(b.Cb, {
                                 borderLeft: !0,
                                 borderRight: !0,
@@ -1668,13 +1234,13 @@
                                 onLevelChange: this.handleCategoryLevelChange
                             }), i.createElement(S, {
                                 category: o,
-                                description: l
+                                description: d
                             }), i.createElement(f, {
                                 category: 0,
                                 categoryLevel: this.state.categories[0],
                                 onLevelChange: this.handleCategoryLevelChange
                             }), i.createElement(S, {
-                                category: s,
+                                category: l,
                                 description: c
                             }), i.createElement(f, {
                                 category: 2,
@@ -1683,8 +1249,8 @@
                             })))
                         }
                     }, t.prototype.AutomodTableHeader = function() {
-                        var e = Object(d.d)("AutoMod", "AutoModSettings"),
-                            t = Object(d.d)("Automatically hold risky messages for moderators to review.", "AutoModSettings");
+                        var e = Object(s.d)("AutoMod", "AutoModSettings"),
+                            t = Object(s.d)("Automatically hold risky messages for moderators to review.", "AutoModSettings");
                         return i.createElement(b.G, {
                             border: !0,
                             row: !0
@@ -1737,13 +1303,13 @@
                         return e.data.user.autoModProperties
                     }, t
                 }(i.Component),
-                O = n("K1HF"),
-                M = n("hxCz");
-            var N = Object(o.compose)(Object(p.connect)(function(e) {
+                N = n("K1HF"),
+                O = n("hxCz");
+            var M, L, I = Object(o.compose)(Object(p.connect)(function(e) {
                     return {
-                        isLoggedIn: Object(h.f)(e)
+                        isLoggedIn: Object(g.f)(e)
                     }
-                }), Object(v.a)(O, {
+                }), Object(v.a)(N, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1755,11 +1321,696 @@
                     skip: function(e) {
                         return !e.isLoggedIn
                     }
-                }), Object(v.a)(M, {
+                }), Object(v.a)(O, {
                     name: "onUpdateAutoModProperties"
                 }), Object(m.b)("AutomodControls"))(T),
-                I = n("F7O8"),
-                x = (n("gBSZ"), function(e) {
+                D = n("8Ad5");
+            n("zjB3");
+            ! function(e) {
+                e.DisplayedTerm = "term", e.AddTermInput = "add-term-input", e.EditTermInput = "edit-term-input", e.EditTermArea = "edit-term-area", e.AddTermButton = "add-term-button", e.EditTermButton = "edit-term-button", e.DelTermButton = "del-term-button", e.EditConfirmButton = "edit-confirm-button", e.EditCancelButton = "edit-cancel-button"
+            }(M || (M = {})),
+            function(e) {
+                e.Banned = "banned", e.Permitted = "permitted"
+            }(L || (L = {}));
+            var x = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            editingIndex: null,
+                            justSavedIndex: null,
+                            editingIsModEditable: null,
+                            terms: [],
+                            justSaved: !1,
+                            errorAddingTerm: !1,
+                            errorAddingLabel: null
+                        }, t.onCheckModEditableChange = function(e) {
+                            t.setState({
+                                editingIsModEditable: !e.target.checked
+                            })
+                        }, t.handleAdd = function() {
+                            if (t.addInput.value.trim()) {
+                                for (var e = 0, n = t.state.terms; e < n.length; e++) {
+                                    if (n[e].phrases.join(" ") === t.addInput.value.trim()) return void t.setState({
+                                        errorAddingTerm: !0,
+                                        errorAddingLabel: Object(s.d)("Duplicate Term", "ChatTermsControl")
+                                    })
+                                }
+                                var a = {
+                                    phrases: [t.addInput.value.trim()],
+                                    category: t.props.type,
+                                    createdAt: null,
+                                    updatedAt: null,
+                                    expiresAt: null,
+                                    isModEditable: t.props.channelID !== t.props.userID
+                                };
+                                t.props.onTermAdd(a, !0) && (t.addInput.value = ""), t.setState({
+                                    justSavedIndex: 0,
+                                    justSaved: !0
+                                })
+                            }
+                        }, t.handleEdit = function(e) {
+                            var n = e.currentTarget.closest("[data-index]").getAttribute("data-index");
+                            n && t.setState({
+                                editingIndex: +n
+                            })
+                        }, t.handleDelete = function(e) {
+                            var n = e.currentTarget.closest("[data-index]").getAttribute("data-index");
+                            if (n) {
+                                +n == t.state.terms.length - 1 ? t.setState({
+                                    justSavedIndex: +n - 1,
+                                    justSaved: !0
+                                }) : t.setState({
+                                    justSavedIndex: +n,
+                                    justSaved: !0
+                                }), t.props.onTermDelete(t.state.terms[+n], !1);
+                                var a = t.state.editingIndex;
+                                null === a || +n === a ? a = null : a > +n && (a -= 1), a !== t.state.editingIndex && t.setState({
+                                    editingIndex: a
+                                })
+                            }
+                        }, t.saveAddInputRef = function(e) {
+                            t.addInput = e
+                        }, t.saveEditInputRef = function(e) {
+                            t.editInput = e
+                        }, t.handleAddKeyDown = function(e) {
+                            e.keyCode === D.a.Enter && t.handleAdd(), t.state.errorAddingTerm && t.setState({
+                                errorAddingTerm: !1
+                            })
+                        }, t.handleEditKeyDown = function(e) {
+                            switch (e.keyCode) {
+                                case D.a.Enter:
+                                    t.confirmEdit();
+                                    break;
+                                case D.a.Esc:
+                                    t.cancelEdit();
+                                    break;
+                                default:
+                                    return
+                            }
+                        }, t.cancelEdit = function() {
+                            t.setState({
+                                editingIndex: null
+                            })
+                        }, t.clearLabels = function() {
+                            (t.state.justSaved || t.state.errorAddingTerm) && t.setState({
+                                justSaved: !1,
+                                justSavedIndex: null,
+                                errorAddingTerm: !1,
+                                errorAddingLabel: null
+                            })
+                        }, t.confirmEdit = function() {
+                            if (null !== t.state.editingIndex && t.editInput) {
+                                var e = t.state.terms[t.state.editingIndex].isModEditable;
+                                null !== t.state.editingIsModEditable && (e = t.state.editingIsModEditable);
+                                var n = {
+                                    isModEditable: e,
+                                    category: t.props.type,
+                                    phrases: [t.editInput.value],
+                                    createdAt: null,
+                                    updatedAt: null,
+                                    expiresAt: null
+                                };
+                                t.props.onTermEdit(t.state.terms[t.state.editingIndex], n, e);
+                                var a = t.state.terms;
+                                a[t.state.editingIndex] = n, t.setState(function() {
+                                    return {
+                                        terms: a,
+                                        editingIndex: -1,
+                                        justSaved: !0,
+                                        justSavedIndex: t.state.editingIndex
+                                    }
+                                })
+                            }
+                        }, t
+                    }
+                    return a.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                        if (this.state.terms === e.terms) return null;
+                        this.setState({
+                            terms: e.terms
+                        })
+                    }, t.prototype.render = function() {
+                        for (var e = [], t = 0; t < this.state.terms.length; t++) e.push(this.renderTerm(this.state.terms[t], t));
+                        return i.createElement(b.Pa, {
+                            fullWidth: !0
+                        }, i.createElement("div", {
+                            className: "chat-terms-control",
+                            "data-a-target": "chat-terms-control"
+                        }, i.createElement(b.Xa, {
+                            display: b.X.Flex,
+                            flexDirection: b.Aa.Row,
+                            alignItems: b.f.Stretch,
+                            fullWidth: !0,
+                            flexWrap: b.Ba.NoWrap
+                        }, i.createElement(b.Xa, {
+                            flexGrow: 1
+                        }, i.createElement(b.Ea, {
+                            label: "",
+                            error: this.state.errorAddingTerm,
+                            errorMessage: this.state.errorAddingLabel || ""
+                        }, i.createElement(b.Ra, {
+                            "data-a-target": "add-term-input",
+                            "data-test-selector": M.AddTermInput,
+                            ariaLabel: Object(s.d)("Add term", "ChatTermsControl"),
+                            refDelegate: this.saveAddInputRef,
+                            type: b.Ta.Text,
+                            placeholder: this.props.addPlaceholder,
+                            onKeyDown: this.handleAddKeyDown,
+                            error: this.state.errorAddingTerm
+                        }))), i.createElement(b.Xa, {
+                            flexShrink: 0,
+                            margin: {
+                                top: .5
+                            }
+                        }, i.createElement(b.z, {
+                            onClick: this.handleAdd,
+                            "data-a-target": "add-term",
+                            "data-test-selector": M.AddTermButton
+                        }, Object(s.d)("Add", "ChatTermsControl")))), i.createElement(b.Xa, {
+                            className: "chat-terms"
+                        }, e)))
+                    }, t.prototype.renderTerm = function(e, t) {
+                        if (t === this.state.editingIndex) return this.renderEditTermRow(e, t);
+                        var n = null;
+                        if (!0 == !e.isModEditable && this.props.type === L.Banned) n = i.createElement(b.Xa, {
+                            alignItems: b.f.Center,
+                            display: b.X.Flex,
+                            margin: {
+                                left: "auto"
+                            },
+                            fullHeight: !0
+                        }, i.createElement(b.eb, {
+                            label: Object(s.d)("private", "ChatTermsControl")
+                        }));
+                        else if (e.expiresAt) {
+                            var a = Object(s.i)(new Date(e.expiresAt), {
+                                style: "numeric"
+                            });
+                            n = i.createElement(b.Xa, {
+                                margin: {
+                                    right: 1
+                                }
+                            }, i.createElement(b.W, {
+                                ellipsis: !0,
+                                color: b.O.Alt2
+                            }, " ", Object(s.d)("Expires {relativeTime}", {
+                                relativeTime: a
+                            }, "ChatTermsControl"), " "))
+                        }
+                        var r = null;
+                        t === this.state.justSavedIndex && (r = i.createElement(b.Pa, {
+                            position: b.hb.Absolute,
+                            margin: {
+                                left: 5
+                            }
+                        }, i.createElement("span", {
+                            className: "chat-terms-control__saved"
+                        }, i.createElement(b.i, {
+                            delay: b.j.Long,
+                            duration: b.k.Medium,
+                            type: b.n.FadeOut,
+                            enabled: !0,
+                            onAnimationEnd: this.clearLabels
+                        }, i.createElement(b.Xa, {
+                            position: b.hb.Absolute,
+                            attachRight: !0
+                        }, Object(s.d)("Saved", "ChatTermsControl"))))));
+                        var o = Object(s.d)("Edit", "ChatTermsControl"),
+                            d = Object(s.d)("Delete", "ChatTermsControl");
+                        return i.createElement(b.Pa, {
+                            className: "chat-term-row",
+                            key: t,
+                            "data-index": t
+                        }, i.createElement("div", {
+                            className: "chat-terms-control__term-row",
+                            "data-selectable": t,
+                            "data-test-selector": M.EditTermArea
+                        }, i.createElement(b.Ja, null, i.createElement(b.P, {
+                            cols: 6
+                        }, i.createElement(b.Xa, {
+                            "data-test-selector": M.DisplayedTerm,
+                            margin: {
+                                right: 1
+                            },
+                            display: b.X.Flex,
+                            alignItems: b.f.Center,
+                            justifyContent: b.Wa.Between,
+                            fullHeight: !0
+                        }, i.createElement(b.W, {
+                            ellipsis: !0
+                        }, e.phrases.join(" ")))), i.createElement(b.P, {
+                            cols: 4
+                        }, i.createElement(b.Xa, {
+                            alignItems: b.f.Center,
+                            display: b.X.Flex,
+                            flexWrap: b.Ba.NoWrap,
+                            fullHeight: !0
+                        }, n)), i.createElement(b.P, {
+                            cols: 1
+                        }, i.createElement(b.Wb, {
+                            label: o
+                        }, i.createElement(b.A, {
+                            "data-a-target": "edit-term",
+                            "data-test-selector": M.EditTermButton,
+                            icon: b.rb.Edit,
+                            ariaLabel: o,
+                            onClick: this.handleEdit
+                        }))), i.createElement(b.P, {
+                            cols: 1
+                        }, i.createElement(b.Wb, {
+                            label: d
+                        }, i.createElement(b.A, {
+                            "data-a-target": "delete-term",
+                            "data-test-selector": M.DelTermButton,
+                            icon: b.rb.Trash,
+                            ariaLabel: d,
+                            onClick: this.handleDelete
+                        })), r))))
+                    }, t.prototype.renderEditTermRow = function(e, t) {
+                        var n = Object(s.d)("Save", "ChatTermsControl"),
+                            a = Object(s.d)("Cancel", "ChatTermsControl"),
+                            r = this.renderEditBalloon(e, t);
+                        return i.createElement(k.a, {
+                            key: "clickout-item-" + t,
+                            onClickOut: this.cancelEdit
+                        }, i.createElement(b.Xa, {
+                            key: "line-item-" + t,
+                            className: "chat-term-row",
+                            position: b.hb.Relative
+                        }, i.createElement(b.Xa, {
+                            key: t,
+                            "data-index": t,
+                            display: b.X.Flex,
+                            flexDirection: b.Aa.Row,
+                            flexWrap: b.Ba.NoWrap
+                        }, i.createElement(b.Xa, {
+                            flexGrow: 1
+                        }, i.createElement(b.Ra, {
+                            autoFocus: !0,
+                            ariaLabel: Object(s.d)("Edit term", "ChatTermsControl"),
+                            "data-a-target": "edit-term-input",
+                            "data-test-selector": M.EditTermInput,
+                            refDelegate: this.saveEditInputRef,
+                            type: b.Ta.Text,
+                            defaultValue: e.phrases.join(" "),
+                            onKeyDown: this.handleEditKeyDown
+                        })), i.createElement(b.Xa, {
+                            flexShrink: 0
+                        }, i.createElement(b.Wb, {
+                            label: n
+                        }, i.createElement(b.A, {
+                            "data-a-target": "save-term-edit",
+                            "data-test-selector": M.EditConfirmButton,
+                            icon: b.rb.Check,
+                            ariaLabel: n,
+                            onClick: this.confirmEdit
+                        })), i.createElement(b.Wb, {
+                            label: a
+                        }, i.createElement(b.A, {
+                            "data-a-target": "cancel-term-edit",
+                            "data-test-selector": M.EditCancelButton,
+                            icon: b.rb.Close,
+                            ariaLabel: a,
+                            onClick: this.cancelEdit
+                        })))), r))
+                    }, t.prototype.renderEditBalloon = function(e, t) {
+                        var n = null;
+                        return e.expiresAt ? n = i.createElement(b.Xa, null, Object(s.d)("Save changes to make term always active", "ChatTermsControl")) : this.props.type === L.Banned && this.props.channelID === this.props.userID && (n = i.createElement(b.Xa, null, i.createElement(b.N, {
+                            "data-test-selector": "isModEditableCheckbox",
+                            id: "isModEditableCheckbox",
+                            label: "Mark as Private",
+                            defaultChecked: !e.isModEditable,
+                            onChange: this.onCheckModEditableChange
+                        }), i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            fontSize: b.Ca.Size8
+                        }, Object(s.d)("Private terms are not viewable to anyone except for yourself.", "ChatTermsControl")))), n ? i.createElement(b.u, {
+                            key: "edit-balloon-" + t,
+                            direction: b.v.Right,
+                            size: b.w.Large,
+                            show: !0
+                        }, i.createElement(b.Xa, {
+                            margin: 1
+                        }, i.createElement(b.Cb, {
+                            borderBottom: !0,
+                            margin: {
+                                bottom: .5
+                            }
+                        }, e.phrases.join(" ")), n)) : null
+                    }, t
+                }(i.Component),
+                j = n("4l1H"),
+                F = n("Temx"),
+                P = n("kk6A"),
+                w = n("5R7h"),
+                _ = (n("R17a"), function(e) {
+                    function t(t) {
+                        var n = e.call(this, t) || this;
+                        return n.state = {
+                            terms: []
+                        }, n.addTerm = function(e, t) {
+                            return a.__awaiter(n, void 0, void 0, function() {
+                                var n, i = this;
+                                return a.__generator(this, function(a) {
+                                    switch (a.label) {
+                                        case 0:
+                                            return null === this.state.terms ? [2, !1] : this.props.type !== L.Banned ? [3, 2] : [4, this.props.addChannelBlockedTerm({
+                                                variables: {
+                                                    input: {
+                                                        channelID: this.props.channelID,
+                                                        phrases: e.phrases,
+                                                        isModEditable: e.isModEditable
+                                                    }
+                                                }
+                                            })];
+                                        case 1:
+                                            return a.sent(), [3, 4];
+                                        case 2:
+                                            return this.props.type !== L.Permitted ? [3, 4] : [4, this.props.addChannelPermittedTerm({
+                                                variables: {
+                                                    input: {
+                                                        channelID: this.props.channelID,
+                                                        phrases: e.phrases
+                                                    }
+                                                }
+                                            })];
+                                        case 3:
+                                            a.sent(), a.label = 4;
+                                        case 4:
+                                            return n = this.state.terms, !0 === t && n.unshift(e), this.setState(function() {
+                                                return {
+                                                    terms: i.state.terms
+                                                }
+                                            }), [2, !0]
+                                    }
+                                })
+                            })
+                        }, n.deleteTerm = function(e, t) {
+                            return a.__awaiter(n, void 0, void 0, function() {
+                                return a.__generator(this, function(n) {
+                                    switch (n.label) {
+                                        case 0:
+                                            return null === this.state.terms ? [2, !1] : (!1 === t && this.setState(function(t) {
+                                                return {
+                                                    terms: t.terms.filter(function(t) {
+                                                        return t.phrases.join(" ") !== e.phrases.join(" ")
+                                                    })
+                                                }
+                                            }), this.props.type !== L.Banned ? [3, 2] : [4, this.props.deleteChannelBlockedTerm({
+                                                variables: {
+                                                    input: {
+                                                        channelID: this.props.channelID,
+                                                        phrases: e.phrases
+                                                    }
+                                                }
+                                            })]);
+                                        case 1:
+                                            return n.sent(), [3, 4];
+                                        case 2:
+                                            return this.props.type !== L.Permitted ? [3, 4] : [4, this.props.deleteChannelPermittedTerm({
+                                                variables: {
+                                                    input: {
+                                                        channelID: this.props.channelID,
+                                                        phrases: e.phrases
+                                                    }
+                                                }
+                                            })];
+                                        case 3:
+                                            n.sent(), n.label = 4;
+                                        case 4:
+                                            return [2, !0]
+                                    }
+                                })
+                            })
+                        }, n.editTerm = function(e, t, i) {
+                            return a.__awaiter(n, void 0, void 0, function() {
+                                var n;
+                                return a.__generator(this, function(a) {
+                                    switch (a.label) {
+                                        case 0:
+                                            return [4, this.deleteTerm(e, !0)];
+                                        case 1:
+                                            return a.sent(), t.isModEditable = i, [4, this.addTerm(t, !1)];
+                                        case 2:
+                                            return a.sent(), n = this.state.terms, this.setState({
+                                                terms: n
+                                            }), [2]
+                                    }
+                                })
+                            })
+                        }, n
+                    }
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                        if (this.state.terms === []) return null;
+                        var e = [];
+                        this.props.terms.forEach(function(t) {
+                            e.push(t)
+                        }), this.setState({
+                            terms: e
+                        })
+                    }, t.prototype.render = function() {
+                        if (!this.state.terms) return null;
+                        var e = null;
+                        return this.props.type === L.Banned && (e = i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            fontSize: b.Ca.Size8
+                        }, Object(s.d)("Tip: Some terms may be marked as Private and only visible to the channel owner.", "ChatTermsSetting"))), i.createElement(b.Xa, {
+                            margin: {
+                                bottom: 2
+                            }
+                        }, i.createElement("div", {
+                            className: "chat-terms-setting"
+                        }, i.createElement(x, {
+                            channelID: this.props.channelID,
+                            userID: this.props.userID,
+                            addPlaceholder: this.props.addPlaceholderMsg,
+                            terms: this.state.terms,
+                            onTermAdd: this.addTerm,
+                            onTermEdit: this.editTerm,
+                            onTermDelete: this.deleteTerm,
+                            type: this.props.type
+                        })), i.createElement(b.Xa, {
+                            margin: {
+                                top: .5
+                            }
+                        }, e))
+                    }, t = a.__decorate([Object(v.a)(j, {
+                        name: "addChannelBlockedTerm"
+                    }), Object(v.a)(F, {
+                        name: "addChannelPermittedTerm"
+                    }), Object(v.a)(P, {
+                        name: "deleteChannelBlockedTerm"
+                    }), Object(v.a)(w, {
+                        name: "deleteChannelPermittedTerm"
+                    })], t)
+                }(i.Component)),
+                B = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.handleOptOutChange = function(e) {
+                            var n = e.currentTarget;
+                            t.props.onUpdateChatSettings({
+                                variables: {
+                                    input: {
+                                        channelID: t.props.data.user.id,
+                                        isOptedOutOfGlobalBannedWordsList: n.checked
+                                    }
+                                }
+                            })
+                        }, t
+                    }
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                        this.props.latencyTracking.reportInteractive()
+                    }, t.prototype.render = function() {
+                        return !this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.user ? i.createElement(b.Xa, null) : i.createElement(b.Cb, {
+                            padding: {
+                                top: 2
+                            }
+                        }, i.createElement(b.Ja, null, i.createElement(b.P, {
+                            cols: 2
+                        }, i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            type: b.Tb.Strong
+                        }, Object(s.d)("Blocked and Permitted Terms", "AutoModTermsTitle"))), i.createElement(b.P, {
+                            cols: 5
+                        }, i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            type: b.Tb.Strong
+                        }, Object(s.d)("Blocked Terms or Phrases", "AutoModBlockedTermsTitle")), i.createElement(b.W, {
+                            color: b.O.Alt2
+                        }, Object(s.d)("Messages containing these terms or phrases will be blocked from chat. Terms are automatically added when a mod denies a caught message.", "AutoModBlockedTermsDescription")), i.createElement(_, {
+                            channelID: this.props.data.user.id,
+                            userID: this.props.data.currentUser.id,
+                            type: L.Banned,
+                            addPlaceholderMsg: Object(s.d)("Add new blocked term or phrase", "AutoModBlockedTermAdditionPlaceHolder"),
+                            terms: this.props.data.user.blockedTerms
+                        }), i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            type: b.Tb.Strong
+                        }, Object(s.d)("Permitted Terms or Phrases", "AutoModPermittedTermsTitle")), i.createElement(b.W, {
+                            color: b.O.Alt2
+                        }, Object(s.d)("Messages containing these terms, and no other blocked terms, will not be caught by AutoMod. Terms are automatically added when a mod allows a message.", "AutoModPermittedTermsDescription")), i.createElement(_, {
+                            channelID: this.props.data.user.id,
+                            userID: this.props.data.currentUser.id,
+                            type: L.Permitted,
+                            addPlaceholderMsg: Object(s.d)("Add new permitted term or phrase", "AutoModPermittedTermsAdditionPlaceholder"),
+                            terms: this.props.data.user.permittedTerms
+                        }), i.createElement(b.N, {
+                            defaultChecked: this.props.data.user.chatSettings.isOptedOutOfGlobalBannedWordsList,
+                            label: Object(s.d)("Opt out of commonly blocked terms", "AutoModSettings"),
+                            onChange: this.handleOptOutChange
+                        }), i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            fontSize: b.Ca.Size8
+                        }, Object(s.d)("AutoMod level 0 automatically holds messages containing commonly blocked terms for mods to review. If you enable this feature AutoMod won't hold these messages.", "AutoModSettings")))))
+                    }, t
+                }(i.Component),
+                R = n("Z6v5"),
+                W = n("ah12");
+            var X = Object(o.compose)(Object(p.connect)(function(e) {
+                    return {
+                        isLoggedIn: Object(g.f)(e)
+                    }
+                }), Object(v.a)(R, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                channelLogin: e.channelLogin
+                            },
+                            fetchPolicy: "cache-and-network"
+                        }
+                    }
+                }), Object(v.a)(W, {
+                    name: "onUpdateChatSettings"
+                }), Object(m.b)("ChatTermsContainer"))(B),
+                V = n("DMoW"),
+                U = n("Ww25"),
+                z = n("l/RX"),
+                G = n("Jpqj"),
+                q = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            canAccess: !!t.props.data.user && !!t.props.data.user.modLogsRoleAccess && t.props.data.user.modLogsRoleAccess.accessLevel === V.z.WRITE,
+                            error: !1,
+                            enabled: !1
+                        }, t.onChange = function() {
+                            return a.__awaiter(t, void 0, void 0, function() {
+                                return a.__generator(this, function(e) {
+                                    switch (e.label) {
+                                        case 0:
+                                            return this.props.data.currentUser && this.props.data.currentUser.id ? this.state.canAccess ? [4, this.toggleAccessOff()] : [3, 2] : [2];
+                                        case 1:
+                                            return e.sent(), [3, 4];
+                                        case 2:
+                                            return [4, this.toggleAccessOn()];
+                                        case 3:
+                                            e.sent(), e.label = 4;
+                                        case 4:
+                                            return [2]
+                                    }
+                                })
+                            })
+                        }, t.toggleAccessOff = function() {
+                            if (t.props.data.currentUser && t.props.data.currentUser.id && t.props.setModLogsAccess) return t.props.setModLogsAccess({
+                                variables: {
+                                    input: {
+                                        channelID: t.props.data.currentUser.id,
+                                        channelRole: V.i.MODERATOR,
+                                        accessLevel: V.z.NONE
+                                    }
+                                }
+                            }).then(function() {
+                                t.setState({
+                                    canAccess: !1,
+                                    error: !1
+                                })
+                            }).catch(function() {
+                                t.setState({
+                                    error: !0
+                                })
+                            })
+                        }, t.toggleAccessOn = function() {
+                            if (t.props.data.currentUser && t.props.data.currentUser.id) return t.props.setModLogsAccess({
+                                variables: {
+                                    input: {
+                                        channelID: t.props.data.currentUser.id,
+                                        channelRole: V.i.MODERATOR,
+                                        accessLevel: V.z.WRITE
+                                    }
+                                }
+                            }).then(function() {
+                                t.setState({
+                                    canAccess: !0,
+                                    error: !1
+                                })
+                            }).catch(function() {
+                                t.setState({
+                                    error: !0
+                                })
+                            })
+                        }, t
+                    }
+                    return a.__extends(t, e), t.prototype.componentWillMount = function() {
+                        var e = s.b.get("viewer_card_mod_logs", !1);
+                        this.setState({
+                            enabled: e
+                        })
+                    }, t.prototype.componentDidMount = function() {
+                        this.props.latencyTracking.reportInteractive()
+                    }, t.prototype.componentWillReceiveProps = function(e) {
+                        !e.data.loading && this.props.data.loading && e.data.user && e.data.user.modLogsRoleAccess && this.setState({
+                            canAccess: e.data.user.modLogsRoleAccess.accessLevel === V.z.WRITE,
+                            error: !!e.data.error
+                        })
+                    }, t.prototype.render = function() {
+                        return this.props.data.loading || !this.state.enabled ? null : this.props.data.currentUser && this.props.data.user && this.props.data.currentUser.id !== this.props.data.user.id ? null : i.createElement(b.Cb, {
+                            borderTop: !0,
+                            margin: {
+                                top: 2
+                            },
+                            padding: {
+                                top: 3
+                            }
+                        }, i.createElement(b.Ja, null, i.createElement(b.P, {
+                            cols: 2
+                        }, i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            type: b.Tb.Strong
+                        }, Object(s.d)("Chat Logs for Mods", "ModLogsAccessToggle")), i.createElement(b.Xa, {
+                            display: b.X.Inline,
+                            padding: {
+                                x: 1
+                            }
+                        }, i.createElement(b.eb, {
+                            label: Object(s.d)("private", "ModLogsAccessToggle")
+                        }))), i.createElement(b.P, {
+                            cols: 5
+                        }, i.createElement(b.Vb, {
+                            checked: this.state.canAccess,
+                            error: this.state.error,
+                            disabled: this.props.data.loading || !!this.props.data.error,
+                            onChange: this.onChange,
+                            "data-test-selector": "dashboard-moderation-chat-logs-access-toggle"
+                        }), i.createElement(U.a, {
+                            text: Object(s.d)("Allows your moderators to view chat and ban history for users in your channel, and view and add comments on users.", "ModLogsAccessToggle")
+                        }), this.state.error && i.createElement(b.W, {
+                            color: b.O.Error,
+                            "data-test-selector": "dashboard-moderation-chat-logs-access-error-message"
+                        }, Object(s.d)("Sorry, something went wrong. Please try again later.", "ModLogsAccessToggle")))))
+                    }, t
+                }(i.Component),
+                H = Object(o.compose)(Object(m.b)("ModLogsAccessToggle"), Object(v.a)(G, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                channelLogin: e.channelLogin
+                            }
+                        }
+                    }
+                }), Object(v.a)(z, {
+                    name: "setModLogsAccess"
+                }))(q),
+                $ = (n("gBSZ"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1771,7 +2022,7 @@
                             padding: {
                                 y: 3
                             }
-                        }, i.createElement(N, {
+                        }, i.createElement(I, {
                             channelLogin: this.props.channelLogin
                         }), i.createElement(b.Cb, {
                             borderTop: !0,
@@ -1781,42 +2032,44 @@
                             margin: {
                                 y: 1
                             }
-                        }), i.createElement(I.a, {
+                        }), i.createElement(X, {
+                            channelLogin: this.props.channelLogin
+                        }), i.createElement(H, {
                             channelLogin: this.props.channelLogin
                         }))
                     }, t
                 }(i.Component)),
-                L = Object(g.compose)(Object(m.b)("AutoModWrapper"))(x);
-            var j = Object(p.connect)(function(e) {
+                J = Object(h.compose)(Object(m.b)("AutoModWrapper"))($);
+            var Q = Object(p.connect)(function(e) {
                     return {
-                        isLoggedIn: Object(h.f)(e)
+                        isLoggedIn: Object(g.f)(e)
                     }
-                })(L),
-                D = function(e) {
+                })(J),
+                K = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(l.b, null, i.createElement(b.Xa, {
+                        return i.createElement(d.b, null, i.createElement(b.Xa, {
                             padding: 2,
                             position: b.hb.Relative
                         }, i.createElement(b.W, {
-                            type: b.Sb.H3
-                        }, Object(d.d)("Moderation Settings", "AutoModPage")), i.createElement(j, {
+                            type: b.Tb.H3
+                        }, Object(s.d)("Moderation Settings", "AutoModPage")), i.createElement(Q, {
                             channelLogin: this.props.match.params.channelName
                         })))
                     }, t
                 }(i.Component),
-                F = Object(o.compose)(r.a, Object(m.b)("AutoModPage", {
+                Y = Object(o.compose)(r.a, Object(m.b)("AutoModPage", {
                     autoReportInteractive: !0,
                     destination: c.a.DashboardSettingsAutoMod
-                }), Object(s.a)({
+                }), Object(l.a)({
                     location: u.PageviewLocation.DashboardSettingsAutoMod
-                }))(D);
+                }))(K);
             n.d(t, "AutoModPageComponent", function() {
-                return D
+                return K
             }), n.d(t, "AutoModPage", function() {
-                return F
+                return Y
             })
         },
         Z6v5: function(e, t) {
@@ -2404,6 +2657,110 @@
             };
             n.loc.source = {
                 body: "mutation Chat_DeleteChannelBlockedTerm($input: DeleteChannelBlockedTermInput!) {\ndeleteChannelBlockedTerm(input: $input) {\ndeletedAt\n}\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = n
+        },
+        "l/RX": function(e, t) {
+            var n = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "mutation",
+                    name: {
+                        kind: "Name",
+                        value: "setModLogsAccess"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "SetModLogsAccessInput"
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "setModLogsAccess"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "input"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "modLogsAccess"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "channelRole"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "accessLevel"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 139
+                }
+            };
+            n.loc.source = {
+                body: "mutation setModLogsAccess($input: SetModLogsAccessInput!) {\nsetModLogsAccess(input: $input) {\nmodLogsAccess {\nchannelRole\naccessLevel\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,

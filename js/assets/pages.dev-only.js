@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [68], {
+    [67], {
         "+5a/": function(e, t) {
             var n = {
                 kind: "Document",
@@ -956,17 +956,17 @@
                     }, "Logging and error reporting"), a.createElement("div", null, a.createElement(c.z, {
                         onClick: k
                     }, "Log a debug-level message"), a.createElement(c.z, {
-                        onClick: S
-                    }, "Log a info-level message"), a.createElement(c.z, {
                         onClick: C
+                    }, "Log a info-level message"), a.createElement(c.z, {
+                        onClick: w
                     }, "Log a warning-level message"), a.createElement(c.z, {
                         onClick: O
                     }, "Log an error-level message with error"), a.createElement(c.z, {
-                        onClick: x
+                        onClick: T
                     }, "Log a fatal-level message with error"), a.createElement(c.z, {
-                        onClick: w
+                        onClick: S
                     }, "Log message with unserializable argument"), a.createElement(c.z, {
-                        onClick: N
+                        onClick: x
                     }, "Throw an error")), a.createElement("h2", {
                         style: {
                             margin: "2rem 0"
@@ -1034,7 +1034,7 @@
                             top: 2
                         }
                     }, a.createElement(c.W, {
-                        type: c.Sb.H2
+                        type: c.Tb.H2
                     }, "Infinite Scroll Test"), a.createElement(_, null))))
                 });
 
@@ -1042,15 +1042,15 @@
                 f.k.debug("debug message")
             }
 
-            function S() {
+            function C() {
                 f.k.info("info message")
             }
 
-            function C() {
+            function w() {
                 f.k.warn("warn message")
             }
 
-            function w() {
+            function S() {
                 var e = {};
                 e.self = e, f.k.info("Can't serialize this arg, oh no.", e)
             }
@@ -1063,7 +1063,7 @@
                 }
             }
 
-            function x() {
+            function T() {
                 try {
                     throw new Error("throwing a super bad unrecoverable error.")
                 } catch (e) {
@@ -1071,11 +1071,11 @@
                 }
             }
 
-            function N() {
+            function x() {
                 throw new Error("Throwing an uncaught error.")
             }
-            var P = n("VQbD"),
-                T = (n("NrqC"), function(e) {
+            var N = n("VQbD"),
+                P = (n("NrqC"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1084,7 +1084,7 @@
                             className: "testing-carousel",
                             padding: 3
                         }, a.createElement(c.W, {
-                            type: c.Sb.H2
+                            type: c.Tb.H2
                         }, "Media Carousel - Standard"), a.createElement(c.Xa, {
                             "data-a-target": "carousel-standard"
                         }, a.createElement(c.Pa, {
@@ -1092,10 +1092,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(P.a, {
+                        }, a.createElement(N.a, {
                             items: this.renderStandardItems()
                         }))), a.createElement(c.W, {
-                            type: c.Sb.H2
+                            type: c.Tb.H2
                         }, "Media Carousel - Tiny"), a.createElement(c.Xa, {
                             "data-a-target": "carousel-standard-tiny"
                         }, a.createElement(c.Pa, {
@@ -1103,10 +1103,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(P.a, {
+                        }, a.createElement(N.a, {
                             items: this.renderStandardTinyItems()
                         }))), a.createElement(c.W, {
-                            type: c.Sb.H2
+                            type: c.Tb.H2
                         }, "Media Carousel - HUGE"), a.createElement(c.Xa, {
                             "data-a-target": "carousel-standard-huge"
                         }, a.createElement(c.Pa, {
@@ -1114,10 +1114,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(P.a, {
+                        }, a.createElement(N.a, {
                             items: this.renderStandardHugeItems()
                         }))), a.createElement(c.W, {
-                            type: c.Sb.H2
+                            type: c.Tb.H2
                         }, "Media Carousel - Single"), a.createElement(c.Xa, {
                             "data-a-target": "carousel-single"
                         }, a.createElement(c.Pa, {
@@ -1125,10 +1125,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(P.a, {
+                        }, a.createElement(N.a, {
                             items: this.renderSingleItem()
                         }))), a.createElement(c.W, {
-                            type: c.Sb.H2
+                            type: c.Tb.H2
                         }, "Media Carousel - Single and HUGE"), a.createElement(c.Xa, {
                             "data-a-target": "carousel-single-huge"
                         }, a.createElement(c.Pa, {
@@ -1136,10 +1136,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(P.a, {
+                        }, a.createElement(N.a, {
                             items: this.renderSingleHugeItem()
                         }))), a.createElement(c.W, {
-                            type: c.Sb.H2
+                            type: c.Tb.H2
                         }, "Media Carousel - Various Widths"), a.createElement(c.Xa, {
                             "data-a-target": "carousel-various-widths"
                         }, a.createElement(c.Pa, {
@@ -1147,7 +1147,7 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(P.a, {
+                        }, a.createElement(N.a, {
                             items: this.renderVariousWidthItems()
                         })))))
                     }, t.prototype.renderStandardItems = function() {
@@ -1165,7 +1165,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Sb.H1,
+                                type: c.Tb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1184,7 +1184,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Sb.H1,
+                                type: c.Tb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1203,7 +1203,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Sb.H1,
+                                type: c.Tb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1222,7 +1222,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Sb.H1,
+                                type: c.Tb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1241,7 +1241,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Sb.H1,
+                                type: c.Tb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1260,7 +1260,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Sb.H1,
+                                type: c.Tb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1305,7 +1305,7 @@
                         }, t ? "Enabled" : "Disabled"), a.createElement(c.W, null, "Query String: ?gdpr_override / ?eea"), a.createElement(c.W, null, "Dynamic Settings: gdpr_consent_enabled"), a.createElement(c.Ea, {
                             label: "Grant test consent",
                             orientation: c.Fa.Horizontal
-                        }, a.createElement(c.Ub, {
+                        }, a.createElement(c.Vb, {
                             onChange: this.onToggleTwitchAdsConsent,
                             checked: this.props.twitchAdsConsent
                         }))), a.createElement(c.Cb, {
@@ -1534,7 +1534,7 @@
                         component: te
                     }), a.createElement(i.a, {
                         path: "/_dev/testing/carousel",
-                        component: T
+                        component: P
                     }), a.createElement(i.a, {
                         path: "/_dev/context",
                         component: g

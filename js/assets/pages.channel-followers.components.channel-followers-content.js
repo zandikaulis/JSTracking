@@ -406,11 +406,11 @@
                         display: c.X.Flex,
                         flexGrow: 1,
                         fullHeight: !0
-                    }, o.createElement(c.Yb, {
+                    }, o.createElement(c.Zb, {
                         placeholderItems: 10,
                         center: !0,
-                        gutterSize: c.ac.Small,
-                        childWidth: c.Zb.Large
+                        gutterSize: c.bc.Small,
+                        childWidth: c.ac.Large
                     }, n)) : o.createElement(c.Xa, {
                         "data-test-selector": "no-follow-users",
                         margin: {
@@ -420,7 +420,7 @@
                         flexDirection: c.Aa.Row,
                         justifyContent: c.Wa.Center
                     }, o.createElement(c.W, {
-                        type: c.Sb.H4,
+                        type: c.Tb.H4,
                         color: c.O.Alt2,
                         italic: !0
                     }, Object(a.d)("No Users Found", "ChannelFollowListing")))

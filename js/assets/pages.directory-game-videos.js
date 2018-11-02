@@ -1,6 +1,66 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [130], {
+    [140], {
+        "+U0Y": function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return i
+            }), n.d(t, "b", function() {
+                return a
+            });
+            var i = "core.user-preferences.LANGUAGE_PREFERENCES_UPDATED";
+
+            function a(e) {
+                return {
+                    type: i,
+                    languagePreferences: e
+                }
+            }
+        },
         "0T/G": function(e, t) {},
+        "5xw2": function(e, t, n) {
+            "use strict";
+            n.d(t, "c", function() {
+                return d
+            }), n.d(t, "a", function() {
+                return l
+            }), n.d(t, "b", function() {
+                return c
+            });
+            var i = n("mrSG"),
+                a = n("/7QA"),
+                r = n("HSqT"),
+                o = n("+U0Y"),
+                s = "languageDirectoryFilters";
+
+            function d(e, t) {
+                var n = this;
+                return function(r) {
+                    return i.__awaiter(n, void 0, void 0, function() {
+                        var n, d;
+                        return i.__generator(this, function(i) {
+                            return n = new Set(c()), t ? n.add(e) : n.delete(e), d = Array.from(n), a.m.set(s, d), r(Object(o.b)(d)), [2]
+                        })
+                    })
+                }
+            }
+
+            function l() {
+                var e = this;
+                return function(t) {
+                    return i.__awaiter(e, void 0, void 0, function() {
+                        return i.__generator(this, function(e) {
+                            return a.m.set(s, []), t(Object(o.b)([])), [2]
+                        })
+                    })
+                }
+            }
+
+            function c() {
+                return a.m.get(s, []).filter(function(e) {
+                    return r.a.has(e)
+                })
+            }
+        },
         "86FS": function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
@@ -56,7 +116,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(l.a, {
+                        var e = {
                             context: this.props.context,
                             onClick: this.onClickHandler,
                             title: this.props.video.title,
@@ -67,7 +127,7 @@
                             },
                             thumbnailImageProps: {
                                 src: this.props.video.previewThumbnailURL,
-                                alt: this.props.video.title
+                                alt: this.props.video.title || ""
                             },
                             channelDisplayName: this.props.video.owner && this.props.video.owner.displayName || "",
                             channelLogin: this.props.video.owner && this.props.video.owner.login || "",
@@ -77,7 +137,7 @@
                             },
                             channelImageProps: {
                                 src: this.props.video.owner && this.props.video.owner.profileImageURL || "",
-                                alt: this.props.video.owner ? this.props.video.owner.displayName : ""
+                                alt: this.props.video.owner && this.props.video.owner.displayName || ""
                             },
                             gameTitle: this.props.video.game && this.props.video.game.name || "",
                             gameTitleLinkTo: {
@@ -91,8 +151,8 @@
                             videoGameChanges: this.gameChangesWithLinks(),
                             multipleVideoGameMarkersType: this.props.multipleVideoGameMarkersType,
                             datePublished: this.props.video.publishedAt,
-                            viewCount: this.props.video.viewCount,
-                            durationInSeconds: this.props.hideDuration ? void 0 : this.props.video.lengthSeconds,
+                            viewCount: this.props.video.viewCount || 0,
+                            durationInSeconds: !this.props.hideDuration && this.props.video.lengthSeconds ? this.props.video.lengthSeconds : void 0,
                             animatedImageProps: this.props.video.animatedPreviewURL ? {
                                 src: this.props.video.animatedPreviewURL,
                                 alt: ""
@@ -109,14 +169,15 @@
                                 tags: this.props.video.contentTags,
                                 linkPath: h.a.PopularTag
                             } : void 0
-                        })
+                        };
+                        return a.createElement(l.a, i.__assign({}, e))
                     }, t.prototype.generateSearchString = function() {
                         var e = {};
                         this.props.collectionID && (e.collection = this.props.collectionID);
                         var t = s.stringify(e);
                         return t ? "?" + t : ""
                     }, t.prototype.getVideoPreviousWatchPercentage = function() {
-                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / this.props.video.lengthSeconds * 100 : null
+                        return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / (this.props.video.lengthSeconds || 1 / 0) * 100 : null
                     }, t.prototype.getRestrictionProps = function() {
                         var e = this.props.video.restriction && this.props.video.restriction.productName ? "/products/" + this.props.video.restriction.productName : "";
                         return {
@@ -168,7 +229,7 @@
                         videoGameChanges: this.state.videoGameChanges
                     }, this.props))
                 }, t.prototype.componentWillMount = function() {
-                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== r.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds)
+                    this.props.multipleVideoGameMarkersType && this.props.multipleVideoGameMarkersType !== r.a.None && !this.promise && this.maybeFetchVideoMarkers(this.props.video.id, this.props.video.lengthSeconds || 0)
                 }, t
             }(a.Component)
         },
@@ -351,6 +412,122 @@
                 return c.a
             })
         },
+        HSqT: function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return o
+            }), n.d(t, "b", function() {
+                return s
+            });
+            var i = n("/7QA"),
+                a = [{
+                    code: "ar",
+                    label: "العربية"
+                }, {
+                    code: "bg",
+                    label: "Български"
+                }, {
+                    code: "cs",
+                    label: "Čeština"
+                }, {
+                    code: "da",
+                    label: "Dansk"
+                }, {
+                    code: "de",
+                    label: "Deutsch"
+                }, {
+                    code: "el",
+                    label: "Ελληνικά"
+                }, {
+                    code: "en",
+                    label: "English"
+                }, {
+                    code: "es",
+                    label: "Español"
+                }, {
+                    code: "fi",
+                    label: "Suomi"
+                }, {
+                    code: "fr",
+                    label: "Français"
+                }, {
+                    code: "hu",
+                    label: "Magyar"
+                }, {
+                    code: "it",
+                    label: "Italiano"
+                }, {
+                    code: "ja",
+                    label: "日本語"
+                }, {
+                    code: "ko",
+                    label: "한국어"
+                }, {
+                    code: "nl",
+                    label: "Nederlands"
+                }, {
+                    code: "no",
+                    label: "Norsk"
+                }, {
+                    code: "pl",
+                    label: "Polski"
+                }, {
+                    code: "pt",
+                    label: "Português"
+                }, {
+                    code: "ro",
+                    label: "Română"
+                }, {
+                    code: "ru",
+                    label: "Русский"
+                }, {
+                    code: "sk",
+                    label: "Slovenčina"
+                }, {
+                    code: "sv",
+                    label: "Svenska"
+                }, {
+                    code: "th",
+                    label: "ภาษาไทย"
+                }, {
+                    code: "tr",
+                    label: "Türkçe"
+                }, {
+                    code: "vi",
+                    label: "Tiếng Việt"
+                }, {
+                    code: "zh-hk",
+                    label: "中文(粵語)"
+                }, {
+                    code: "zh",
+                    label: "中文"
+                }];
+
+            function r(e) {
+                return void 0 === e && (e = !1), [{
+                    code: "asl",
+                    label: "American Sign Language"
+                }, {
+                    code: "other",
+                    label: e ? Object(i.d)("Other", "broadcaster-languages") : "Other"
+                }]
+            }
+            var o = new Set(a.concat(r()).map(function(e) {
+                return e.code
+            }));
+
+            function s() {
+                var e = i.p.intl.getLanguageCode(),
+                    t = function(t) {
+                        return "en" === t.code ? 0 : e && e.startsWith(t.code) ? 1 : 2
+                    };
+                return a.slice().sort(function(e, n) {
+                    var i = t(e),
+                        a = t(n);
+                    return i !== a ? i - a : i + ":" + e.label < a + ":" + n.label ? -1 : 1
+                }).concat(r(!0))
+            }
+        },
         HrG3: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -410,6 +587,32 @@
                     }));
                     return i.createElement(i.Fragment, null, t)
                 }
+        },
+        OhOW: function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return s
+            });
+            var i = n("mrSG"),
+                a = n("/7QA"),
+                r = n("+U0Y"),
+                o = n("5xw2");
+
+            function s(e) {
+                return e.userPreferences.languagePreferences
+            }
+            a.p.store.registerReducer("userPreferences", function(e, t) {
+                switch (void 0 === e && (e = {
+                    languagePreferences: Object(o.b)()
+                }), t.type) {
+                    case r.a:
+                        return i.__assign({}, e, {
+                            languagePreferences: t.languagePreferences
+                        });
+                    default:
+                        return e
+                }
+            })
         },
         PfQt: function(e, t, n) {
             "use strict";
@@ -496,15 +699,21 @@
                 v = n("2xye"),
                 f = n("llur"),
                 k = n("cras"),
-                y = n("GnwI"),
-                b = n("EJax"),
+                b = n("GnwI"),
+                y = n("EJax"),
                 w = n("XKWF"),
                 S = n("rShu"),
+                _ = function(e) {
+                    var t = e.game;
+                    return (t && t.videos && t.videos.edges || []).filter(function(e) {
+                        return e && e.node && e.node.id
+                    })
+                },
                 C = n("HStj"),
-                _ = n("Ue10"),
-                N = n("tBbK"),
-                P = (n("TB8s"), w.a.Popular),
-                T = function(e) {
+                N = n("Ue10"),
+                P = n("tBbK"),
+                T = (n("TB8s"), w.a.Popular),
+                F = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onVideoSortChange = function(e) {
@@ -520,7 +729,7 @@
                     }, t.prototype.render = function() {
                         var e = null,
                             t = decodeURIComponent(this.props.match.params.encodedCommunityName),
-                            n = Object(g.r)(this.props) || P,
+                            n = Object(g.r)(this.props) || T,
                             i = Object(g.t)(this.props);
                         if (this.props.data.error) {
                             var a = Object(s.d)("{gameName} videos are temporarily unavailable.", {
@@ -538,37 +747,37 @@
                                 message: a
                             })
                         }
-                        this.props.data.game && this.props.data.game.videos && (e = this.props.data.game.videos.edges.map(function(e) {
-                            return e.node
+                        this.props.data.game && this.props.data.game.videos && this.props.data.game.videos.edges && (e = this.props.data.game.videos.edges.map(function(e) {
+                            if (e && e.node) return e.node
                         }));
                         var r = o.createElement(k.a, {
-                                buttonSize: _.D.Large,
+                                buttonSize: N.D.Large,
                                 contentType: C.a.Videos,
                                 directoryType: this.state.directoryType,
                                 directoryName: t
                             }),
-                            u = o.createElement(_.Xa, {
+                            u = o.createElement(N.Xa, {
                                 className: "directory-game-videos-page__filters",
-                                display: _.X.Flex,
-                                flexDirection: _.Aa.Row,
+                                display: N.X.Flex,
+                                flexDirection: N.Aa.Row,
                                 fullWidth: !0,
                                 padding: {
                                     top: 1,
                                     right: 3
                                 }
-                            }, r, o.createElement(b.a, {
+                            }, r, o.createElement(y.a, {
                                 onVideoSortChange: this.onVideoSortChange,
                                 onVideoFilterChange: this.onVideoFilterChange,
                                 selectedSort: n,
                                 broadcastType: i
                             }));
-                        return o.createElement(o.Fragment, null, u, o.createElement(_.Xa, {
+                        return o.createElement(o.Fragment, null, u, o.createElement(N.Xa, {
                             padding: {
                                 top: 2,
                                 bottom: 3,
                                 x: 3
                             }
-                        }, o.createElement(b.b, {
+                        }, o.createElement(y.b, {
                             hideGameArt: !0,
                             trackingContent: Object(f.a)(n),
                             trackingMedium: v.PageviewMedium.GameVideos,
@@ -580,8 +789,8 @@
                             loadMore: this.props.loadMore
                         })))
                     }, t.prototype.enablePagination = function() {
-                        return this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.game && this.props.data.game.videos && !!this.props.data.game.videos.pageInfo.hasNextPage
-                    }, t = r.__decorate([Object(u.a)(N, {
+                        return !!(this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.game && this.props.data.game.videos && this.props.data.game.videos.pageInfo && this.props.data.game.videos.pageInfo.hasNextPage)
+                    }, t = r.__decorate([Object(u.a)(P, {
                         options: function(e) {
                             return {
                                 fetchPolicy: "network-only",
@@ -598,16 +807,16 @@
                             return r.__assign({}, e, {
                                 loadMore: function() {
                                     return e.data.fetchMore({
-                                        query: N,
+                                        query: P,
                                         variables: r.__assign({}, e.data.variables, {
-                                            followedCursor: e.data.game && e.data.game.videos.edges.length > 0 ? e.data.game.videos.edges[e.data.game.videos.edges.length - 1].cursor : void 0
+                                            followedCursor: e.data.game && e.data.game.videos && e.data.game.videos.edges && e.data.game.videos.edges.length > 0 ? e.data.game.videos.edges[e.data.game.videos.edges.length - 1].cursor : void 0
                                         }),
                                         updateQuery: function(e, t) {
                                             var n = t.fetchMoreResult;
                                             return {
                                                 game: r.__assign({}, n.game, {
-                                                    videos: r.__assign({}, n.game.videos, {
-                                                        edges: Object(p.c)(e.game.videos.edges, n.game.videos.edges)
+                                                    videos: r.__assign({}, n.game && n.game.videos, {
+                                                        edges: Object(p.c)(_(e), _(n))
                                                     })
                                                 })
                                             }
@@ -616,7 +825,7 @@
                                 }
                             })
                         }
-                    }), Object(y.b)("DirectoryGameVideosPage", {
+                    }), Object(b.b)("DirectoryGameVideosPage", {
                         destination: h.a.DirectoryGameVideos
                     }), Object(m.a)({
                         location: v.PageviewLocation.Directory,
@@ -628,13 +837,13 @@
                         }
                     })], t)
                 }(o.Component);
-            var F = Object(i.connect)(function(e) {
+            var V = Object(i.connect)(function(e) {
                 return {
                     languagePreferences: Object(a.a)(e)
                 }
-            })(T);
+            })(F);
             n.d(t, "DirectoryGameVideosPage", function() {
-                return F
+                return V
             })
         },
         b6Yk: function(e, t, n) {
@@ -885,9 +1094,9 @@
                         });
                         t = a.createElement(a.Fragment, null, s)
                     }
-                    return a.createElement(c.Yb, {
-                        gutterSize: c.ac.Small,
-                        childWidth: e.videoCardSize || c.Zb.Large,
+                    return a.createElement(c.Zb, {
+                        gutterSize: c.bc.Small,
+                        childWidth: e.videoCardSize || c.ac.Large,
                         placeholderItems: 20
                     }, t, n)
                 },
@@ -1272,6 +1481,77 @@
                 }
             }
         },
+        "qy/S": function(e, t, n) {
+            var i = {
+                kind: "Document",
+                definitions: [{
+                    kind: "FragmentDefinition",
+                    name: {
+                        kind: "Name",
+                        value: "VideoEdge"
+                    },
+                    typeCondition: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "VideoEdge"
+                        }
+                    },
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "cursor"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "node"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "FragmentSpread",
+                                    name: {
+                                        kind: "Name",
+                                        value: "PreviewCardVideo"
+                                    },
+                                    directives: []
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 157
+                }
+            };
+            i.loc.source = {
+                body: '#import "twilight/features/video-preview-card/models/preview-card-video-fragment.gql"\nfragment VideoEdge on VideoEdge {\ncursor\nnode {\n...PreviewCardVideo\n}\n}',
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            var a = {};
+            i.definitions = i.definitions.concat(function(e) {
+                return e.filter(function(e) {
+                    if ("FragmentDefinition" !== e.kind) return !0;
+                    var t = e.name.value;
+                    return !a[t] && (a[t] = !0, !0)
+                })
+            }(n("he03").definitions)), e.exports = i
+        },
         sLlB: function(e, t, n) {
             "use strict";
             var i, a = n("/MKj"),
@@ -1363,8 +1643,8 @@
                         }, this.renderDropdownContent()))
                     }, t
                 }(l.Component),
-                y = Object(r.compose)(c.a, Object(v.b)("LanguageSelectMenu"))(k);
-            var b = Object(a.connect)(function(e) {
+                b = Object(r.compose)(c.a, Object(v.b)("LanguageSelectMenu"))(k);
+            var y = Object(a.connect)(function(e) {
                 return {
                     languagePreferences: Object(s.a)(e)
                 }
@@ -1373,9 +1653,9 @@
                     updateLanguagePreferences: o.c,
                     clearLanguagePreferences: o.a
                 }, e)
-            })(y);
+            })(b);
             n.d(t, "a", function() {
-                return b
+                return y
             })
         },
         tBbK: function(e, t, n) {
@@ -1625,32 +1905,12 @@
                                             selectionSet: {
                                                 kind: "SelectionSet",
                                                 selections: [{
-                                                    kind: "Field",
+                                                    kind: "FragmentSpread",
                                                     name: {
                                                         kind: "Name",
-                                                        value: "cursor"
+                                                        value: "VideoEdge"
                                                     },
-                                                    arguments: [],
                                                     directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "node"
-                                                    },
-                                                    arguments: [],
-                                                    directives: [],
-                                                    selectionSet: {
-                                                        kind: "SelectionSet",
-                                                        selections: [{
-                                                            kind: "FragmentSpread",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "PreviewCardVideo"
-                                                            },
-                                                            directives: []
-                                                        }]
-                                                    }
                                                 }]
                                             }
                                         }, {
@@ -1682,11 +1942,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 474
+                    end: 443
                 }
             };
             i.loc.source = {
-                body: '#import "twilight/features/video-preview-card/models/preview-card-video-fragment.gql"\nquery DirectoryVideos_Game($gameName: String $videoLimit: Int $followedCursor: Cursor $videoSort: VideoSort $languages: [String!] $broadcastTypes: [BroadcastType!]) {\ngame(name: $gameName) {\nid\nname\nvideos(first: $videoLimit after: $followedCursor languages: $languages types: $broadcastTypes sort: $videoSort) {\nedges{\ncursor\nnode {\n...PreviewCardVideo\n}\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}',
+                body: '#import "twilight/features/video-preview-card/models/video-edge-fragment.gql"\nquery DirectoryVideos_Game($gameName: String $videoLimit: Int $followedCursor: Cursor $videoSort: VideoSort $languages: [String!] $broadcastTypes: [BroadcastType!]) {\ngame(name: $gameName) {\nid\nname\nvideos(first: $videoLimit after: $followedCursor languages: $languages types: $broadcastTypes sort: $videoSort) {\nedges{\n...VideoEdge\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -1700,7 +1960,7 @@
                     var t = e.name.value;
                     return !a[t] && (a[t] = !0, !0)
                 })
-            }(n("he03").definitions)), e.exports = i
+            }(n("qy/S").definitions)), e.exports = i
         },
         yWUM: function(e, t, n) {
             "use strict";

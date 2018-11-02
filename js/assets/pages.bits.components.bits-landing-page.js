@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [167], {
+    [178], {
         "+Mtq": function(e, t, n) {},
         "0iXB": function(e, t, n) {},
         "3CMh": function(e, t, n) {
@@ -37,7 +37,7 @@
                     var h = e.formattedNumber ? Object(o.f)(e.amount) : e.amount;
                     p = a.createElement(d.Pa, {
                         padding: e.size === r.Small ? 0 : void 0,
-                        textAlign: e.size === r.Small ? d.Ob.Center : void 0
+                        textAlign: e.size === r.Small ? d.Pb.Center : void 0
                     }, a.createElement("strong", {
                         className: m,
                         style: {
@@ -583,7 +583,7 @@
                             top: 2
                         }
                     }, l.createElement(y.W, {
-                        type: y.Sb.P,
+                        type: y.Tb.P,
                         color: y.O.Base
                     }, e.text))
                 }),
@@ -595,14 +595,14 @@
                         })
                     });
                     return l.createElement(y.Xa, {
-                        textAlign: y.Ob.Center,
+                        textAlign: y.Pb.Center,
                         className: "bits-landing-page-cheermote-description"
                     }, l.createElement(y.Pa, {
                         margin: {
                             top: 3
                         }
                     }, l.createElement(y.W, {
-                        type: y.Sb.H3,
+                        type: y.Tb.H3,
                         fontSize: y.Ca.Size4,
                         color: y.O.Link,
                         bold: !0
@@ -610,7 +610,7 @@
                         className: "bits-landing-page-cheermote-description__cheermotes",
                         display: y.X.Flex,
                         alignContent: y.e.Center,
-                        textAlign: y.Ob.Center,
+                        textAlign: y.Pb.Center,
                         padding: {
                             y: 2
                         },
@@ -628,12 +628,12 @@
                         margin: {
                             top: 3
                         },
-                        textAlign: y.Ob.Center,
+                        textAlign: y.Pb.Center,
                         breakpointSmall: {
-                            textAlign: y.Ob.Left
+                            textAlign: y.Pb.Left
                         }
                     }, l.createElement(y.W, {
-                        type: y.Sb.H3,
+                        type: y.Tb.H3,
                         color: y.O.Link,
                         bold: !0
                     }, e.title)), t)
@@ -686,7 +686,7 @@
                             top: 3
                         }
                     }, l.createElement(y.W, {
-                        type: y.Sb.H3,
+                        type: y.Tb.H3,
                         fontSize: y.Ca.Size4,
                         color: y.O.Link,
                         bold: !0
@@ -809,17 +809,17 @@
                         margin: {
                             top: 3
                         },
-                        textAlign: y.Ob.Center,
+                        textAlign: y.Pb.Center,
                         breakpointSmall: {
-                            textAlign: y.Ob.Left
+                            textAlign: y.Pb.Left
                         }
                     }, l.createElement(y.W, {
-                        type: y.Sb.H1,
+                        type: y.Tb.H1,
                         color: y.O.Link,
                         bold: !0
                     }, e.text)), n)
                 }),
-                S = function() {
+                x = function() {
                     return l.createElement(y.Xa, {
                         className: "bits-landing-page-intro"
                     }, l.createElement(_, {
@@ -827,16 +827,16 @@
                         additionalInfo: Object(A.d)("Bits are a virtual good you can buy and use to Cheer. A Cheer is a chat message that uses Bits, and includes animated emotes to amplify your voice in chat and celebrate the moment. Cheering is another way to support Partners and Affiliates, similar to subscribing.", "BitsLandingPage")
                     }))
                 },
-                x = n("opIq"),
-                O = n("bYOw"),
-                T = n("RiD7"),
+                S = n("opIq"),
+                T = n("bYOw"),
+                O = n("RiD7"),
                 N = function(e) {
                     if (!e.isLoggedIn) return l.createElement(y.Xa, {
                         display: y.X.Inline,
                         alignItems: y.f.Center
                     }, l.createElement(y.W, {
                         color: y.O.Base,
-                        type: y.Sb.Span
+                        type: y.Tb.Span
                     }, Object(d.d)("<x:link>Log in</x:link> to see your Bits Balance", {
                         "x:link": function(t) {
                             return l.createElement(y.z, {
@@ -861,7 +861,7 @@
                     }, l.createElement(y.Pa, {
                         alignItems: y.f.Center
                     }, l.createElement(y.W, {
-                        type: y.Sb.H5,
+                        type: y.Tb.H5,
                         color: y.O.Base
                     }, Object(d.d)("You have {amount} Bits", {
                         amount: t
@@ -882,10 +882,10 @@
                         padding: {
                             bottom: 2
                         },
-                        textAlign: y.Ob.Center,
+                        textAlign: y.Pb.Center,
                         className: "bits-landing-page-right-pane__buy-bits-title-container",
                         breakpointSmall: {
-                            textAlign: y.Ob.Left,
+                            textAlign: y.Pb.Left,
                             display: y.X.Flex,
                             flexDirection: y.Aa.Row
                         },
@@ -902,7 +902,7 @@
                             }
                         }
                     }, l.createElement(y.W, {
-                        type: y.Sb.H3,
+                        type: y.Tb.H3,
                         color: y.O.Link,
                         bold: !0
                     }, Object(d.d)("Buy Bits", "BitsLandingPage"))), l.createElement(N, {
@@ -910,19 +910,19 @@
                         bitsConfig: e.bitsConfig,
                         isLoggedIn: e.isLoggedIn,
                         login: e.login
-                    })), l.createElement(x.a, {
+                    })), l.createElement(S.a, {
                         bitsConfig: e.bitsConfig,
                         closeAllBits: W,
                         onClose: W,
                         trackBitsCardInteraction: W,
-                        location: T.b.BitsLandingPage,
+                        location: O.b.BitsLandingPage,
                         hideWateb: !0,
-                        size: O.b.Fullsize
+                        size: T.b.Fullsize
                     }))
                 }),
                 W = function() {},
                 L = n("U+cV"),
-                j = (n("EzP7"), function(e) {
+                P = (n("EzP7"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.bitsConfig = Object(f.a)(), t
@@ -946,7 +946,7 @@
                             className: "bits-landing-page__gems-banner"
                         }), l.createElement(y.Xa, {
                             className: "bits-landing-page__content",
-                            textAlign: y.Ob.Left,
+                            textAlign: y.Pb.Left,
                             padding: {
                                 x: 2
                             },
@@ -964,7 +964,7 @@
                             breakpointSmall: {
                                 display: y.X.InlineBlock
                             }
-                        }, l.createElement(S, null)), l.createElement(y.Xa, {
+                        }, l.createElement(x, null)), l.createElement(y.Xa, {
                             className: "bits-landing-page__content--right-pane"
                         }, l.createElement(I, {
                             bitsBalance: this.props.data && this.props.data.currentUser && this.props.data.currentUser.bitsBalance,
@@ -990,7 +990,7 @@
                         }
                     })], t)
                 }(l.Component));
-            var P = Object(r.connect)(function(e) {
+            var j = Object(r.connect)(function(e) {
                 return {
                     isLoggedIn: Object(s.f)(e)
                 }
@@ -1000,9 +1000,9 @@
                         return Object(o.e)(a.a.BitsLandingPage)
                     }
                 }, e)
-            })(j);
+            })(P);
             n.d(t, "BitsLandingPage", function() {
-                return P
+                return j
             })
         },
         "HAa/": function(e, t, n) {
@@ -1276,13 +1276,13 @@
                 return i.__extends(t, e), t.prototype.render = function() {
                     return void 0 !== this.props.bitsBalance ? a.createElement(c.Xa, {
                         "data-test-selector": r.BitsBalanceHeader,
-                        textAlign: c.Ob.Center,
+                        textAlign: c.Pb.Center,
                         fullWidth: !0,
                         padding: {
                             y: .5
                         }
                     }, a.createElement(c.W, {
-                        type: c.Sb.Span
+                        type: c.Tb.Span
                     }, Object(o.d)("You have {bitsBalance}", {
                         bitsBalance: a.createElement(s.a, {
                             withImage: !0,
@@ -1292,13 +1292,13 @@
                         })
                     }, "Bits--GetBitsButton"))) : a.createElement(c.Xa, {
                         "data-test-selector": r.BitsBalanceLoggedOutHeader,
-                        textAlign: c.Ob.Center,
+                        textAlign: c.Pb.Center,
                         fullWidth: !0,
                         padding: {
                             y: .5
                         }
                     }, a.createElement(c.W, {
-                        type: c.Sb.Span
+                        type: c.Tb.Span
                     }, Object(o.d)("{bitsGem} Log in to see your Bits balance", {
                         bitsGem: a.createElement(s.a, {
                             count: 100,
@@ -1765,7 +1765,7 @@
                         }, Object(s.d)("Watch Ad", "Bits--WatchAdOffer")), e && i.createElement(p.Xa, {
                             className: "bits-buy-card__sub-text",
                             alignSelf: p.g.Stretch,
-                            textAlign: p.Ob.Center,
+                            textAlign: p.Pb.Center,
                             margin: {
                                 top: .5
                             }
@@ -1841,19 +1841,19 @@
                             className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
                             "data-test-selector": "first-time-promo-form"
                         }, i.createElement(p.W, {
-                            type: p.Sb.Strong,
+                            type: p.Tb.Strong,
                             fontSize: p.Ca.Size6
                         }, Object(s.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(b.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === g.c ? t = i.createElement(p.Xa, {
                             className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
                             "data-test-selector": "black-friday-promo-form"
                         }, i.createElement(p.W, {
-                            type: p.Sb.Strong,
+                            type: p.Tb.Strong,
                             fontSize: p.Ca.Size6
                         }, Object(s.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))) : Object(b.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === g.d && (t = i.createElement(p.Xa, {
                             className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
                             "data-test-selector": "prime-promo-promo-form"
                         }, i.createElement(p.W, {
-                            type: p.Sb.Strong,
+                            type: p.Tb.Strong,
                             fontSize: p.Ca.Size6
                         }, Object(s.d)("Twitch Prime Bits Discount", "Bits--BuyCard"))));
                         var n = null;
@@ -1886,7 +1886,7 @@
                             }, i.createElement(p.Xa, {
                                 flexGrow: 1
                             }, i.createElement(p.W, {
-                                type: p.Sb.H5,
+                                type: p.Tb.H5,
                                 color: p.O.Base,
                                 bold: !0
                             }, Object(s.d)("{bits} Bits", {
@@ -1907,7 +1907,7 @@
                                 "data-a-target": "bits-purchase-button-" + this.props.offer.bits
                             }, this.props.offer.price), (n || r) && i.createElement(p.Xa, {
                                 alignSelf: p.g.Stretch,
-                                textAlign: p.Ob.Right,
+                                textAlign: p.Pb.Right,
                                 margin: {
                                     top: .5
                                 }
@@ -2496,17 +2496,17 @@
                 E = n("lZCe"),
                 A = n("8/mp"),
                 _ = n("edgk"),
-                S = n("D7An"),
-                x = n("jv9u"),
-                O = n("bYOw"),
-                T = function(e) {
+                x = n("D7An"),
+                S = n("jv9u"),
+                T = n("bYOw"),
+                O = function(e) {
                     var t = l.createElement(b.W, {
-                        type: b.Sb.P,
+                        type: b.Tb.P,
                         color: b.O.Alt
                     }, Object(u.d)("Prices are shown in <x:bold>{currencyCode}</x:bold>", {
                         "x:bold": function(e) {
                             return l.createElement(b.W, {
-                                type: b.Sb.Span,
+                                type: b.Tb.Span,
                                 bold: !0
                             }, e)
                         },
@@ -2514,12 +2514,12 @@
                     }, "Bits--BuyCard"));
                     e.pricesIncludeVAT && (t = l.createElement(b.W, {
                         "data-test-selector": "prices-include-vat-selector",
-                        type: b.Sb.P,
+                        type: b.Tb.P,
                         color: b.O.Alt
                     }, Object(u.d)("Prices are shown in <x:bold>{currencyCode}</x:bold> and <x:bold>include VAT</x:bold>", {
                         "x:bold": function(e) {
                             return l.createElement(b.W, {
-                                type: b.Sb.Span,
+                                type: b.Tb.Span,
                                 bold: !0
                             }, e)
                         },
@@ -2548,7 +2548,7 @@
                         flexShrink: 0,
                         fullWidth: !0
                     }, l.createElement(b.Xa, null, e.location === g.b.ChatTooltip && l.createElement(b.W, {
-                        type: b.Sb.H4,
+                        type: b.Tb.H4,
                         color: b.O.Alt
                     }, Object(u.d)("Purchase Bits", "Bits--BuyCard")), t), e.location === g.b.ChatTooltip && l.createElement(b.Xa, {
                         margin: {
@@ -2560,8 +2560,8 @@
                 I = n("3CMh"),
                 W = n("T3bn"),
                 L = n("ebRM"),
-                j = "min-bits-to-cheer-selector",
-                P = "prices-include-vat-selector",
+                P = "min-bits-to-cheer-selector",
+                j = "prices-include-vat-selector",
                 R = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2589,7 +2589,7 @@
                             i = null,
                             a = null;
                         return void 0 !== this.props.specialOffer && null !== this.props.specialOffer && (r = l.createElement(b.W, {
-                            type: b.Sb.H4,
+                            type: b.Tb.H4,
                             color: b.O.Base,
                             bold: !0
                         }, Object(u.d)("Special offer, {percent} off for first-time Bits buyers!", {
@@ -2614,7 +2614,7 @@
                             borderBottom: !0,
                             flexShrink: 0,
                             fullWidth: !0,
-                            textAlign: b.Ob.Center
+                            textAlign: b.Pb.Center
                         }, l.createElement(b.Xa, {
                             margin: {
                                 bottom: 1
@@ -2636,24 +2636,24 @@
                         }, e))
                     }, t.prototype.renderCurrencyDisclaimer = function(e, t) {
                         return e ? l.createElement(b.W, {
-                            "data-test-selector": P,
-                            type: b.Sb.P,
+                            "data-test-selector": j,
+                            type: b.Tb.P,
                             color: b.O.Alt
                         }, Object(u.d)("Prices are shown in <x:bold>{currencyCode}</x:bold> and <x:bold>include VAT</x:bold>", {
                             "x:bold": function(e) {
                                 return l.createElement(b.W, {
-                                    type: b.Sb.Span,
+                                    type: b.Tb.Span,
                                     bold: !0
                                 }, e)
                             },
                             currencyCode: t
                         }, "Bits--NewUserCheerHeader")) : l.createElement(b.W, {
-                            type: b.Sb.P,
+                            type: b.Tb.P,
                             color: b.O.Alt
                         }, Object(u.d)("Prices are shown in <x:bold>{currencyCode}</x:bold>", {
                             "x:bold": function(e) {
                                 return l.createElement(b.W, {
-                                    type: b.Sb.Span,
+                                    type: b.Tb.Span,
                                     bold: !0
                                 }, e)
                             },
@@ -2661,7 +2661,7 @@
                         }, "Bits--NewUserCheerHeader"))
                     }, t.prototype.renderMinBitsToCheerInChannel = function(e, t) {
                         return t && t > 1 ? l.createElement(b.W, {
-                            "data-test-selector": j,
+                            "data-test-selector": P,
                             color: b.O.Alt,
                             italic: !0
                         }, Object(u.d)("{displayName} requires {minBits} Bits to Cheer in this channel.", {
@@ -2705,7 +2705,7 @@
                             alignItems: b.f.Center,
                             flexWrap: b.Ba.NoWrap
                         }, l.createElement(b.W, {
-                            type: b.Sb.H4,
+                            type: b.Tb.H4,
                             bold: !0
                         }, Object(u.d)("You got {bitsAmount,number} Bits!", {
                             bitsAmount: this.props.amount
@@ -2822,7 +2822,7 @@
                             bottom: 1
                         }
                     }, l.createElement(b.W, {
-                        type: b.Sb.H4,
+                        type: b.Tb.H4,
                         bold: !0
                     }, t)), l.createElement(b.W, {
                         color: b.O.Alt2
@@ -2858,7 +2858,7 @@
                         }, t.renderWatebTerms = function(e) {
                             return l.createElement(b.Xa, {
                                 className: e,
-                                textAlign: b.Ob.Left,
+                                textAlign: b.Pb.Left,
                                 fullWidth: !0,
                                 padding: {
                                     x: 2,
@@ -2882,7 +2882,7 @@
                                 onClick: t.onCloseWatebTerms
                             }, l.createElement(b.W, {
                                 color: b.O.Link,
-                                type: b.Sb.Span
+                                type: b.Tb.Span
                             }, l.createElement(b.qb, {
                                 asset: b.rb.ChatSettingsBack,
                                 height: 10,
@@ -2892,7 +2892,7 @@
                                     bottom: 2
                                 }
                             }, l.createElement(b.W, {
-                                type: b.Sb.Span
+                                type: b.Tb.Span
                             }, Object(u.d)("Before continuing to watch ads to earn Bits, we remind you that the <x:link>Bits Acceptable Use Policy</x:link> applies to your participation with this feature and any Bits you may obtain. As a reminder, you may not:", {
                                 "x:link": function(e) {
                                     return l.createElement("a", {
@@ -2950,10 +2950,10 @@
                                 "bits-buy-card": !0,
                                 "bits-buy-card__chat-tooltip": t
                             });
-                        if (!this.props.data || this.props.data.loading) return l.createElement(x.a, null);
+                        if (!this.props.data || this.props.data.loading) return l.createElement(S.a, null);
                         if (this.props.data.error) return l.createElement(b.Xa, {
                             className: k(n, "bits-buy-card--shorter"),
-                            textAlign: b.Ob.Center,
+                            textAlign: b.Pb.Center,
                             "data-a-target": "bits-buy-card-error",
                             alignItems: b.f.Center,
                             justifyContent: b.Wa.Center,
@@ -2966,7 +2966,7 @@
                         if (this.state.showWatebTerms) return this.renderWatebTerms(n);
                         var r = this.renderWatebCard();
                         if (r) return l.createElement(b.Xa, {
-                            textAlign: b.Ob.Center,
+                            textAlign: b.Pb.Center,
                             className: k(n, "bits-buy-card--shorter"),
                             fullWidth: !0
                         }, r);
@@ -2984,7 +2984,7 @@
                                     return e.renderNewUserCheerBuyCard(n, i)
                                 }
                             },
-                            name: S.b.BitsNewUserCheer
+                            name: x.b.BitsNewUserCheer
                         };
                         return l.createElement(E.a, c.__assign({}, a))
                     }, t.prototype.renderDefaultBuyCard = function(e, t) {
@@ -2992,7 +2992,7 @@
                             r = this.getCurrencyCode(t),
                             i = this.props.data && this.props.data.currentUser,
                             a = this.props.data && this.props.data.user,
-                            o = l.createElement(T, {
+                            o = l.createElement(O, {
                                 bitsBalance: i && i.bitsBalance,
                                 displayName: a && a.displayName || this.props.channelLogin || "",
                                 minBitsToCheer: a && a.cheer && a.cheer.settings && a.cheer.settings.cheerMinimumBits,
@@ -3012,7 +3012,7 @@
                         }, o, s)
                     }, t.prototype.renderNewUserCheerBuyCard = function(e, t) {
                         var n = this.getSpecialOffer(t);
-                        if (void 0 === n || this.props.size === O.b.Fullsize) return this.renderDefaultBuyCard(e, t);
+                        if (void 0 === n || this.props.size === T.b.Fullsize) return this.renderDefaultBuyCard(e, t);
                         var r = this.doPricesIncludeVAT(t),
                             i = this.getCurrencyCode(t),
                             a = l.createElement(R, {
@@ -3032,7 +3032,7 @@
                             o = this.renderBitsOffers(t, {
                                 hidePromos: !0,
                                 hideWateb: !1,
-                                size: O.b.Smallnoscroll
+                                size: T.b.Smallnoscroll
                             });
                         return l.createElement(A.b, {
                             "data-a-target": "bits-buy-card",
@@ -3044,7 +3044,7 @@
                             i = t.size;
                         if (!this.props || !this.props.data) return null;
                         var a = this.props.data.user ? this.props.data.user.id : "";
-                        return l.createElement(O.a, {
+                        return l.createElement(T.a, {
                             offers: e,
                             size: i,
                             hidePromos: n,

@@ -59,10 +59,10 @@
                     return t.e(106).then(t.bind(null, "Pi1p"))
                 }, "DevLoginPage")),
                 g = l.a.wrap(function() {
-                    return t.e(208).then(t.bind(null, "epaB"))
+                    return t.e(219).then(t.bind(null, "epaB"))
                 }, "DevBountyBoardCampaignManagerPage"),
                 h = l.a.wrap(function() {
-                    return t.e(207).then(t.bind(null, "aztO"))
+                    return t.e(218).then(t.bind(null, "aztO"))
                 }, "DevBountyBoardAnalyticsPage"),
                 y = function(e) {
                     function n() {
@@ -102,7 +102,7 @@
                             type: v.F.Text,
                             linkTo: "/console"
                         }, Object(u.d)("Dashboard", "DevBountyBoardDashboardRoot"))), i.createElement(v.W, {
-                            type: v.Sb.H3
+                            type: v.Tb.H3
                         }, Object(u.d)("Bounty Board Dashboard", "DevBountyBoardDashboardRoot")), i.createElement(v.Cb, {
                             borderTop: !0,
                             margin: {
@@ -134,17 +134,17 @@
                         })))))) : i.createElement(f, null)
                     }, n
                 }(i.Component),
-                S = Object(d.compose)(Object(m.b)("DevBountyBoardDashboardRootPresentation", {
+                D = Object(d.compose)(Object(m.b)("DevBountyBoardDashboardRootPresentation", {
                     autoReportInteractive: !0
                 }))(y);
-            var D = Object(a.connect)(function(e) {
+            var S = Object(a.connect)(function(e) {
                 return {
                     isLoggedIn: Object(r.f)(e),
                     user: Object(r.e)(e)
                 }
-            })(S);
+            })(D);
             t.d(n, "DevBountyBoardDashboardRoot", function() {
-                return D
+                return S
             })
         },
         QSSE: function(e, n, t) {},

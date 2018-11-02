@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [182], {
+    [193], {
         "0Ex5": function(e, n) {
             var t = {
                 kind: "Document",
@@ -445,7 +445,7 @@
                                 margin: {
                                     right: .5
                                 }
-                            }, a.createElement(o.Vb, {
+                            }, a.createElement(o.Wb, {
                                 label: n.alt
                             }, a.createElement(o.Ua, {
                                 type: o.Va.Alpha,

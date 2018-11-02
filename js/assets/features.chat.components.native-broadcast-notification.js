@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [178], {
+    [189], {
         KSjr: function(e, t, n) {
             "use strict";
             n.r(t);
@@ -132,7 +132,7 @@
                                 bottom: 1
                             }
                         }, s.createElement(r.W, {
-                            type: r.Sb.H4
+                            type: r.Tb.H4
                         }, e.title)), s.createElement(r.Xa, {
                             margin: {
                                 bottom: 1

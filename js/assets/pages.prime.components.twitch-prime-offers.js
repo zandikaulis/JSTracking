@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [171], {
+    [182], {
         EpOa: function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
@@ -232,7 +232,7 @@
                                     display: h.X.Flex,
                                     justifyContent: h.Wa.Center,
                                     alignItems: h.f.Center,
-                                    textAlign: h.Ob.Center,
+                                    textAlign: h.Pb.Center,
                                     padding: 2,
                                     fullHeight: !0
                                 }, a.createElement(h.Xa, {
@@ -240,7 +240,7 @@
                                     className: "prime-upsell__msg-container",
                                     "data-a-target": "prime-upsellcontainer"
                                 }, a.createElement(h.W, {
-                                    type: h.Sb.P,
+                                    type: h.Tb.P,
                                     fontSize: h.Ca.Size4,
                                     bold: !0,
                                     "data-test-selector": b
@@ -249,7 +249,7 @@
                                         bottom: .5
                                     }
                                 }, a.createElement(h.W, {
-                                    type: h.Sb.P,
+                                    type: h.Tb.P,
                                     fontSize: h.Ca.Size5,
                                     bold: !0
                                 }, Object(o.d)("Powered by", "PrimeUpsell"))), a.createElement(m, null)))), a.createElement(h.P, {
@@ -273,7 +273,7 @@
                                 display: h.X.Flex,
                                 justifyContent: h.Wa.Center,
                                 alignItems: h.f.Center,
-                                textAlign: h.Ob.Center,
+                                textAlign: h.Pb.Center,
                                 fullHeight: !0
                             }, r || a.createElement(h.qb, {
                                 type: h.sb.Inherit,
@@ -290,7 +290,7 @@
                                 n = !Object(d.n)(e) && t.getTextFromOverride(P) || "",
                                 i = t.getTextFromOverride(E) || "default";
                             return n && r && a.createElement(h.W, {
-                                type: h.Sb.P,
+                                type: h.Tb.P,
                                 fontSize: h.Ca.Size4,
                                 "data-test-selector": v
                             }, a.createElement(h.U, {
@@ -471,7 +471,7 @@
                         if (!Object(b.m)(e) && !Object(b.n)(e)) return a.createElement(y.Cb, {
                             justifyContent: y.Wa.Center,
                             alignItems: y.f.Center,
-                            textAlign: y.Ob.Center,
+                            textAlign: y.Pb.Center,
                             padding: 2
                         }, a.createElement(k.a, {
                             externalReftag: this.getReftagFromSearch(),

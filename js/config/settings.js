@@ -1127,6 +1127,18 @@ window.__twilightSettings = {
                 "value": "active"
             }]
         },
+        "84768cc8-b1f7-4af2-a258-4e0910c0829c": {
+            "name": "stream_summary_notifications_analytics",
+            "v": 4992,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "treatment"
+            }]
+        },
         "86332d5a-1141-4aa6-8fb7-7bcb0c5690d7": {
             "name": "STREAMER_TRAILERS",
             "v": 2165,
@@ -1682,7 +1694,7 @@ window.__twilightSettings = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 4978,
+            "v": 4993,
             "t": 1,
             "groups": [{
                 "weight": 5,
@@ -1691,8 +1703,17 @@ window.__twilightSettings = {
                 "weight": 5,
                 "value": "2.6.31+control"
             }, {
-                "weight": 90,
+                "weight": 84,
                 "value": "2.6.31"
+            }, {
+                "weight": 2,
+                "value": "2.6.31+abrctrl"
+            }, {
+                "weight": 2,
+                "value": "2.6.310+abrprobe"
+            }, {
+                "weight": 2,
+                "value": "2.6.310"
             }]
         },
         "ee491c3c-d6f7-4f00-8c53-c630dfa10f41": {

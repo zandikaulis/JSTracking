@@ -63,7 +63,7 @@
                         if (0 === this.props.friendRequestsUserData.filter(function(e) {
                                 return e && e.node && e.node.id
                             }).length) return i.createElement(R.Xa, {
-                            textAlign: R.Ob.Center,
+                            textAlign: R.Pb.Center,
                             padding: {
                                 y: 5
                             }
@@ -86,10 +86,10 @@
                                 }
                             })) : null
                         });
-                        return i.createElement(R.Yb, {
+                        return i.createElement(R.Zb, {
                             center: !0,
-                            childWidth: R.Zb.Large,
-                            gutterSize: R.ac.Small,
+                            childWidth: R.ac.Large,
+                            gutterSize: R.bc.Small,
                             placeholderItems: 10
                         }, e, i.createElement(b.a, {
                             enabled: this.props.canLoadMore,
@@ -98,8 +98,8 @@
                         }))
                     }, n
                 }(i.Component),
-                S = t("nFAG"),
-                y = function(e) {
+                y = t("nFAG"),
+                S = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.loadMore = function() {
@@ -109,7 +109,7 @@
                                     switch (t.label) {
                                         case 0:
                                             return (e = this.props.data) && e.currentUser && e.currentUser.incomingFriendRequests ? (n = e.currentUser.incomingFriendRequests.edges, [4, e.fetchMore({
-                                                query: S,
+                                                query: y,
                                                 variables: r.__assign({}, e.variables, {
                                                     cursor: n[n.length - 1].cursor
                                                 }),
@@ -171,7 +171,7 @@
                         return Object(m.e)(l.a.FriendsPage)
                     }
                 }, e)
-            }), Object(d.a)(S, {
+            }), Object(d.a)(y, {
                 skip: w,
                 options: function() {
                     return {
@@ -187,7 +187,7 @@
                 destination: g.a.FriendRequests
             }), Object(u.a)({
                 location: k.PageviewLocation.FriendRequests
-            }))(y);
+            }))(S);
             t.d(n, "FriendRequestsPage", function() {
                 return N
             })
@@ -206,7 +206,7 @@
                         bottom: 2
                     }
                 }, i.createElement(s.W, {
-                    type: s.Sb.H2
+                    type: s.Tb.H2
                 }, Object(a.d)("Friends", "FriendsHeader")), i.createElement(s.Xa, {
                     margin: {
                         top: 1

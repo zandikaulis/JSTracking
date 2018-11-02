@@ -390,7 +390,7 @@
                         if (this.props.small) {
                             var t = e,
                                 i = p.rb.Heart;
-                            return this.props.areNotificationsEnabled && (t = n, i = p.rb.FollowCheck), s.createElement(p.Vb, {
+                            return this.props.areNotificationsEnabled && (t = n, i = p.rb.FollowCheck), s.createElement(p.Wb, {
                                 label: t,
                                 direction: this.props.tooltipDirection
                             }, s.createElement(p.A, {
@@ -526,7 +526,7 @@
                         o = Object(u.b)(e.event.id),
                         d = !(!e.event.self || !e.event.self.isFollowing),
                         s = e.upwardBalloons ? g.v.Top : g.v.Bottom,
-                        c = e.upwardBalloons ? g.Xb.Top : g.Xb.Bottom,
+                        c = e.upwardBalloons ? g.Yb.Top : g.Yb.Bottom,
                         h = e.event.game && e.event.game.displayName || "-",
                         b = e.channel && (e.channel.displayName || e.channel.login) || "-",
                         E = null,
@@ -592,7 +592,7 @@
                     }, l.createElement(g.U, {
                         to: o
                     }, l.createElement(g.W, {
-                        type: g.Sb.H4
+                        type: g.Tb.H4
                     }, e.event.title))), l.createElement(g.W, {
                         color: g.O.Alt2
                     }, function(e, n) {
@@ -719,7 +719,7 @@
                         flexDirection: g.Aa.Row,
                         justifyContent: g.Wa.Center
                     }, l.createElement(g.W, {
-                        type: g.Sb.H4,
+                        type: g.Tb.H4,
                         color: g.O.Alt2,
                         italic: !0
                     }, n))), l.createElement(g.Xa, null, i, t, e.data.loading && l.createElement(g.Za, {
@@ -814,7 +814,7 @@
                         background: l.r.AccentAlt2
                     }, i.createElement(l.W, {
                         fontSize: l.Ca.Size6,
-                        transform: l.Rb.Uppercase,
+                        transform: l.Sb.Uppercase,
                         color: l.O.Overlay
                     }, n)), i.createElement(l.Xa, {
                         display: l.X.Flex,

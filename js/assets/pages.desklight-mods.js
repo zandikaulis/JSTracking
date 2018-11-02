@@ -1,91 +1,244 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [55], {
-        "4Agi": function(t, e, r) {
+    [68], {
+        "1rIY": function(e, t, n) {
             "use strict";
-            r.r(e);
-            var n = r("mrSG"),
-                a = r("q1tI"),
-                s = r("/7QA"),
-                o = r("Ue10"),
-                i = function(t) {
-                    function e(e) {
-                        var r = t.call(this, e) || this;
-                        return r.state = {}, r
+            n.d(t, "a", function() {
+                return s
+            });
+            var r = n("mrSG"),
+                o = n("q1tI"),
+                a = n("/7QA"),
+                i = n("2Ygb");
+
+            function s(e, t) {
+                var n = o.createContext(t),
+                    s = n.Consumer,
+                    c = n.Provider;
+                return {
+                    withContext: function(t) {
+                        return function(n) {
+                            var a;
+                            return (a = function(e) {
+                                function a() {
+                                    return null !== e && e.apply(this, arguments) || this
+                                }
+                                return r.__extends(a, e), a.prototype.render = function() {
+                                    var e = this;
+                                    return o.createElement(s, null, function(a) {
+                                        var i = t(a);
+                                        return o.createElement(n, r.__assign({}, e.props, i))
+                                    })
+                                }, a
+                            }(o.Component)).displayName = Object(i.a)("With" + e, n), a
+                        }
+                    },
+                    InnerProvider: function(t) {
+                        function n() {
+                            return null !== t && t.apply(this, arguments) || this
+                        }
+                        return r.__extends(n, t), n.prototype.componentDidMount = function() {
+                            "object" === typeof this.props.value && this.props.value || a.k.error(new Error(n.displayName + " rendered without an appropriate initial value"), "Set an initial value in your provider component at mount time.")
+                        }, n.prototype.render = function() {
+                            return o.createElement(c, {
+                                value: this.props.value
+                            }, this.props.children)
+                        }, n.displayName = "Inner" + e + "Provider", n
+                    }(o.Component)
+                }
+            }
+        },
+        "4Agi": function(e, t, n) {
+            "use strict";
+            n.r(t);
+            var r = n("mrSG"),
+                o = n("q1tI"),
+                a = n("4p7I"),
+                i = n("yoKv"),
+                s = n("ZS2+"),
+                c = n("ad4Y"),
+                u = n("/MKj"),
+                l = n("fvjX"),
+                p = n("aCAx"),
+                d = n("9x10");
+            var m = Object(u.connect)(null, function(e) {
+                    return Object(l.bindActionCreators)({
+                        showModal: p.d
+                    }, e)
+                })(d.a),
+                f = n("Ue10"),
+                h = s.a.wrap(function() {
+                    return n.e(139).then(n.bind(null, "Mg9V"))
+                }, "DesklightModsAvailableGamesPage"),
+                v = s.a.wrap(function() {
+                    return n.e(138).then(n.bind(null, "UYLc"))
+                }, "GameRoot"),
+                C = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
                     }
-                    return n.__extends(e, t), e.prototype.componentDidMount = function() {
-                        var t = this;
-                        s.p.integrations.demo && (this.heartbeatUnsubscriber = s.p.integrations.demo.onPong(function(e) {
-                            t.setState({
-                                lastHeartbeat: e.lastPing
+                    return r.__extends(t, e), t.prototype.render = function() {
+                        return o.createElement(m, null, o.createElement(c.a, null, o.createElement(f.Xa, {
+                            className: "mods-root",
+                            fullWidth: !0,
+                            fullHeight: !0
+                        }, o.createElement(i.a, null, o.createElement(a.a, {
+                            exact: !0,
+                            path: "/mods",
+                            component: h
+                        }), o.createElement(a.a, {
+                            path: "/mods/games/:gameId",
+                            component: v
+                        })))))
+                    }, t
+                }(o.Component);
+            n.d(t, "DesklightModsRoot", function() {
+                return C
+            })
+        },
+        "9x10": function(e, t, n) {
+            "use strict";
+            var r = n("mrSG"),
+                o = n("q1tI"),
+                a = n("1rIY"),
+                i = n("/MKj"),
+                s = n("fvjX"),
+                c = n("aCAx"),
+                u = n("/7QA"),
+                l = n("Ue10"),
+                p = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return r.__extends(t, e), t.prototype.render = function() {
+                        return o.createElement(l.Cb, {
+                            background: l.r.Base,
+                            padding: 2
+                        }, o.createElement(l.Xa, {
+                            display: l.X.Flex,
+                            justifyContent: l.Wa.Center,
+                            alignItems: l.f.Center,
+                            flexDirection: l.Aa.Column
+                        }, o.createElement(l.W, null, this.props.message), o.createElement(l.Xa, {
+                            margin: {
+                                top: 2
+                            }
+                        }, o.createElement(l.z, {
+                            onClick: this.props.onClose
+                        }, Object(u.d)("Ok", "ModsNotificationModal")))))
+                    }, t
+                }(o.Component),
+                d = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.onClose = function() {
+                            t.props.onClose && t.props.onClose(), t.props.closeModal()
+                        }, t
+                    }
+                    return r.__extends(t, e), t.prototype.render = function() {
+                        return o.createElement(p, {
+                            message: this.props.message,
+                            onClose: this.onClose
+                        })
+                    }, t
+                }(o.Component);
+            var m, f = Object(i.connect)(null, function(e) {
+                return Object(s.bindActionCreators)({
+                    closeModal: c.c
+                }, e)
+            })(d);
+            n.d(t, "b", function() {
+                return v
+            }), n.d(t, "a", function() {
+                return C
+            });
+            var h = (m = Object(a.a)("ModsNotificationContext", {
+                    showModal: function() {
+                        return null
+                    }
+                })).InnerProvider,
+                v = m.withContext,
+                C = function(e) {
+                    function t(t) {
+                        var n = e.call(this, t) || this;
+                        return n.showNotificationModal = function(e, t) {
+                            n.props.showModal(f, {
+                                message: e,
+                                onClose: t
                             })
+                        }, n.state = {
+                            showModal: n.showNotificationModal
+                        }, n
+                    }
+                    return r.__extends(t, e), t.prototype.render = function() {
+                        return o.createElement(h, {
+                            value: this.state
+                        }, this.props.children)
+                    }, t
+                }(o.Component)
+        },
+        ad4Y: function(e, t, n) {
+            "use strict";
+            var r, o = n("mrSG"),
+                a = n("q1tI"),
+                i = n("/7QA"),
+                s = n("1rIY"),
+                c = (r = Object(s.a)("GameInstanceContext", {
+                    gameInstances: [],
+                    fetchGameInstances: function() {
+                        return null
+                    }
+                })).InnerProvider,
+                u = r.withContext,
+                l = function(e) {
+                    function t(t) {
+                        var n = e.call(this, t) || this;
+                        return n.fetchGameInstances = function() {
+                            return o.__awaiter(n, void 0, void 0, function() {
+                                var e;
+                                return o.__generator(this, function(t) {
+                                    switch (t.label) {
+                                        case 0:
+                                            if (!i.p.integrations.mods) return [3, 4];
+                                            t.label = 1;
+                                        case 1:
+                                            return t.trys.push([1, 3, , 4]), [4, i.p.integrations.mods.getGameInstances()];
+                                        case 2:
+                                            return e = t.sent(), this.setState({
+                                                gameInstances: e.gameInstances
+                                            }), [3, 4];
+                                        case 3:
+                                            return t.sent(), [2];
+                                        case 4:
+                                            return [2]
+                                    }
+                                })
+                            })
+                        }, n.state = {
+                            gameInstances: [],
+                            fetchGameInstances: n.fetchGameInstances
+                        }, n
+                    }
+                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
+                        var e = this;
+                        this.fetchGameInstances(), i.p.integrations.mods && (this.gameInstanceSubscriber = i.p.integrations.mods.onGameInstancesChanged(function() {
+                            e.fetchDebouncer || (e.fetchDebouncer = window.setTimeout(function() {
+                                e.fetchGameInstances(), e.fetchDebouncer = 0
+                            }, 300))
                         }))
-                    }, e.prototype.componentWillUnmount = function() {
-                        this.heartbeatUnsubscriber && this.heartbeatUnsubscriber()
-                    }, e.prototype.render = function() {
-                        return a.createElement(o.Xa, null, this.renderLastHeartbeatTime())
-                    }, e.prototype.renderLastHeartbeatTime = function() {
-                        return this.state.lastHeartbeat ? Object(s.d)("Last Heartbeat: {startTime, time, medium}.", {
-                            startTime: new Date(this.state.lastHeartbeat)
-                        }, "DesklightHeartbeatTest") : Object(s.d)("No Heartbeat Available!", "DesklightHeartbeatTest")
-                    }, e
-                }(a.Component),
-                u = function(t) {
-                    function e() {
-                        var e = null !== t && t.apply(this, arguments) || this;
-                        return e.startHeartbeat = function() {
-                            return n.__awaiter(e, void 0, void 0, function() {
-                                var t;
-                                return n.__generator(this, function(e) {
-                                    switch (e.label) {
-                                        case 0:
-                                            if (!s.p.integrations.demo) return [3, 4];
-                                            e.label = 1;
-                                        case 1:
-                                            return e.trys.push([1, 3, , 4]), [4, s.p.integrations.demo.startPing()];
-                                        case 2:
-                                            return e.sent(), s.p.logger.debug("Successfully started heartbeat!"), [3, 4];
-                                        case 3:
-                                            return t = e.sent(), s.p.logger.error(t, "Unable to start heartbeat."), [3, 4];
-                                        case 4:
-                                            return [2]
-                                    }
-                                })
-                            })
-                        }, e.stopHeartbeat = function() {
-                            return n.__awaiter(e, void 0, void 0, function() {
-                                var t;
-                                return n.__generator(this, function(e) {
-                                    switch (e.label) {
-                                        case 0:
-                                            if (!s.p.integrations.demo) return [3, 4];
-                                            e.label = 1;
-                                        case 1:
-                                            return e.trys.push([1, 3, , 4]), [4, s.p.integrations.demo.stopPing()];
-                                        case 2:
-                                            return e.sent(), s.p.logger.debug("Successfully stopped heartbeat!"), [3, 4];
-                                        case 3:
-                                            return t = e.sent(), s.p.logger.error(t, "Unable to stop heartbeat."), [3, 4];
-                                        case 4:
-                                            return [2]
-                                    }
-                                })
-                            })
-                        }, e
-                    }
-                    return n.__extends(e, t), e.prototype.render = function() {
-                        return a.createElement(o.Xa, {
-                            padding: 3
-                        }, a.createElement(o.Xa, null, a.createElement(o.W, {
-                            fontSize: o.Ca.Size2
-                        }, Object(s.d)("Mods", "DesklightModsRootPage")), a.createElement(o.z, {
-                            onClick: this.startHeartbeat
-                        }, a.createElement(o.W, null, Object(s.d)("Start Heartbeat", "DesklightModsRootPage"))), a.createElement(o.z, {
-                            onClick: this.stopHeartbeat
-                        }, a.createElement(o.W, null, Object(s.d)("Stop Heartbeat", "DesklightModsRootPage")))), a.createElement(i, null))
-                    }, e
+                    }, t.prototype.componentWillUnmount = function() {
+                        this.fetchDebouncer = 0, this.gameInstanceSubscriber()
+                    }, t.prototype.render = function() {
+                        return a.createElement(c, {
+                            value: this.state
+                        }, this.props.children)
+                    }, t
                 }(a.Component);
-            r.d(e, "DesklightModsRootPage", function() {
+            n.d(t, !1, function() {
+                return c
+            }), n.d(t, "b", function() {
                 return u
+            }), n.d(t, "a", function() {
+                return l
             })
         }
     }

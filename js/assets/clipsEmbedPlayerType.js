@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [196], {
+    [207], {
         "/PkA": function(e, t, a) {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1107,8 +1107,8 @@
                         return a && e(t.prototype, a), n && e(t, n), t
                     }
                 }(),
-                r = C(a("q1tI")),
-                l = C(a("17x9")),
+                r = g(a("q1tI")),
+                l = g(a("17x9")),
                 i = a("CJqN"),
                 o = a("inRc"),
                 u = a("/reP"),
@@ -1121,24 +1121,23 @@
                 h = a("olXp"),
                 y = a("HqgC"),
                 v = a("j63F"),
-                _ = a("Rnd+"),
-                b = a("A8Fc"),
-                g = a("IPyt");
+                _ = a("A8Fc"),
+                b = a("IPyt");
 
-            function C(e) {
+            function g(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
             a("a1sr");
-            var E = {
+            var C = {
                     store: l.default.object.isRequired
                 },
-                k = {
+                E = {
                     player: l.default.object.isRequired,
                     root: l.default.object.isRequired
                 },
-                w = function(e) {
+                k = function(e) {
                     function t() {
                         return function(e, t) {
                                 if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
@@ -1165,12 +1164,12 @@
                                 t = e.player,
                                 a = e.root,
                                 n = this.context.store;
-                            n.getState().experiments.get(_.CLIPS_GOT_EM), a.classList.add("player", "theme--dark");
+                            a.classList.add("player", "theme--dark");
                             var r = new d.ClipsLoadingTimeSpentTracker(n, t),
                                 l = new f.ClipsMinutesWatched(n);
                             this.setState({
                                 legacyUI: [r, l]
-                            }), n.dispatch((0, b.trackClipsAppReadyEvent)())
+                            }), n.dispatch((0, _.trackClipsAppReadyEvent)())
                         }
                     }, {
                         key: "componentWillUnmount",
@@ -1184,7 +1183,7 @@
                         value: function() {
                             return r.default.createElement("div", {
                                 id: "clips_embed"
-                            }, r.default.createElement(m.ClipPlayButtonOverlay, null), r.default.createElement(p.PlayerClickHandlerOverlay, null), r.default.createElement(y.ClipShareOverlayContainer, null), r.default.createElement(h.ClipKeyboardShortcutsOverlayContainer, null), r.default.createElement(g.AutomatedMuteOverlay, null), r.default.createElement(i.LoadingOverlay, null), r.default.createElement(u.PlayerRoot, {
+                            }, r.default.createElement(m.ClipPlayButtonOverlay, null), r.default.createElement(p.PlayerClickHandlerOverlay, null), r.default.createElement(y.ClipShareOverlayContainer, null), r.default.createElement(h.ClipKeyboardShortcutsOverlayContainer, null), r.default.createElement(b.AutomatedMuteOverlay, null), r.default.createElement(i.LoadingOverlay, null), r.default.createElement(u.PlayerRoot, {
                                 root: this.props.root
                             }, r.default.createElement(c.ShowOnHover, null, r.default.createElement(s.ClipInfoOverlay, null), r.default.createElement(v.ClipPostplayRecommendations, null), r.default.createElement(o.PlayerControls, {
                                 showTopControls: !1,
@@ -1194,7 +1193,7 @@
                         }
                     }]), t
                 }();
-            t.default = w, w.contextTypes = E, w.propTypes = k
+            t.default = k, k.contextTypes = C, k.propTypes = E
         },
         bm50: function(e, t, a) {
             "use strict";

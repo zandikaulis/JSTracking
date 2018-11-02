@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [157], {
+    [168], {
         "/+vS": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -200,11 +200,11 @@
                     name: "createCollection"
                 }))(Object(E.a)(_)),
                 N = n("7BY1"),
-                x = n("3udf");
+                T = n("3udf");
             ! function(e) {
                 e.CollectionsUnavailableError = "CollectionsUnavailableError", e.CreateCollection = "CreateCollection", e.noCollectionsCTA = "noCollectionsCTA"
             }(i || (i = {}));
-            var T = function(e) {
+            var x = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.refetchCreatorCollection = function() {
@@ -279,11 +279,11 @@
                                 top: 5
                             }
                         }, r.createElement(k.W, {
-                            type: k.Sb.H4
+                            type: k.Tb.H4
                         }, Object(a.d)("Put all your best videos in one spot.", "CollectionManager")), r.createElement(k.W, {
-                            type: k.Sb.H4
+                            type: k.Tb.H4
                         }, Object(a.d)("Videos organized into collections help your viewers easily find related content.", "CollectionManager")), r.createElement(k.W, {
-                            type: k.Sb.H4
+                            type: k.Tb.H4
                         }, Object(a.d)("Your most recently updated Collection will be featured at the top of channel’s video page.", "CollectionManager")))
                     }, t.prototype.contentUnavaibleError = function() {
                         return r.createElement(k.Xa, {
@@ -298,7 +298,7 @@
                         }
                     }, t
                 }(r.Component),
-                M = Object(u.compose)(Object(s.graphql)(x, {
+                M = Object(u.compose)(Object(s.graphql)(T, {
                     options: function(e) {
                         return {
                             variables: {
@@ -312,7 +312,7 @@
                                 var t = e.data.user && e.data.user.collections ? e.data.user.collections.edges : [],
                                     n = t.length > 0 ? t[t.length - 1].cursor : void 0;
                                 return e.data.fetchMore({
-                                    query: x,
+                                    query: T,
                                     variables: o.__assign({}, e.data.variables, {
                                         after: n
                                     }),
@@ -346,7 +346,7 @@
                     skip: function(e) {
                         return e.data.loading
                     }
-                }))(T),
+                }))(x),
                 j = function(e) {
                     return r.createElement(c.a, {
                         ownerLogin: e.match.params.creatorLogin,
@@ -791,10 +791,10 @@
                             onClick: this.navigateToEdit
                         }, a.createElement(C.W, {
                             bold: !0,
-                            type: C.Sb.H4,
+                            type: C.Tb.H4,
                             color: C.O.Alt
-                        }, t.title), a.createElement(C.Vb, {
-                            direction: C.Xb.Bottom,
+                        }, t.title), a.createElement(C.Wb, {
+                            direction: C.Yb.Bottom,
                             label: Object(l.d)("Last Updated", "CollectionManagerCard")
                         }, a.createElement(C.W, {
                             color: C.O.Alt2
@@ -1295,7 +1295,7 @@
                             fullHeight: !0,
                             justifyContent: f.Wa.Center,
                             position: f.hb.Absolute,
-                            textAlign: f.Ob.Center
+                            textAlign: f.Pb.Center
                         }, l.createElement(f.qb, {
                             asset: f.rb.Collections,
                             height: 20,

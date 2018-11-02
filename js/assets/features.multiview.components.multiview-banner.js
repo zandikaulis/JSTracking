@@ -52,10 +52,10 @@
                             }
                         }, a.createElement(l.W, {
                             fontSize: l.Ca.Size5,
-                            type: l.Sb.Strong
+                            type: l.Tb.Strong
                         }, Object(o.e)("Twitch Multiview", "MultiviewBanner"))), a.createElement(l.W, {
                             fontSize: l.Ca.Size5,
-                            type: l.Sb.Span
+                            type: l.Tb.Span
                         }, Object(o.e)("Choose your own streams including player POVs", "MultiviewBanner"))), a.createElement(l.Xa, {
                             margin: {
                                 left: "auto"

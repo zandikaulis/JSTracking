@@ -86,7 +86,7 @@
                                 bottom: 2
                             }
                         }, d.createElement(f.W, {
-                            type: f.Sb.P,
+                            type: f.Tb.P,
                             fontSize: f.Ca.Size3
                         }, Object(g.d)("Welcome to the Twitch Developer Console, where code enhances live streaming experiences", "DevLogin"))), d.createElement(f.z, {
                             onClick: this.login,

@@ -3,9 +3,9 @@
         "/guG": function(e, n, a) {
             "use strict";
             a.d(n, "b", function() {
-                return u
-            }), a.d(n, "a", function() {
                 return d
+            }), a.d(n, "a", function() {
+                return u
             }), a.d(n, "c", function() {
                 return s
             });
@@ -13,7 +13,7 @@
                 r = a("/7QA"),
                 i = a("2xye");
 
-            function u(e) {
+            function d(e) {
                 return t.__awaiter(this, void 0, void 0, function() {
                     var n, a;
                     return t.__generator(this, function(t) {
@@ -31,27 +31,27 @@
                 })
             }
 
-            function d(e) {
+            function u(e) {
                 return t.__awaiter(this, void 0, void 0, function() {
-                    var n, a, u;
+                    var n, a, d;
                     return t.__generator(this, function(t) {
-                        return n = null, e.userID && (n = parseInt(e.userID, 10), isNaN(n) && (n = null)), a = null, e.channelID && (a = parseInt(e.channelID, 10), isNaN(a) && (a = null)), u = {
+                        return n = null, e.userID && (n = parseInt(e.userID, 10), isNaN(n) && (n = null)), a = null, e.channelID && (a = parseInt(e.channelID, 10), isNaN(a) && (a = null)), d = {
                             action: e.action || null,
                             user_id: n,
                             channel: e.channel || null,
                             channel_id: a,
                             time: e.time || null,
                             squad_stream_id: e.squadStreamID || null
-                        }, [2, r.p.tracking.track(i.SpadeEventType.SquadStreamBannerAction, u)]
+                        }, [2, r.p.tracking.track(i.SpadeEventType.SquadStreamBannerAction, d)]
                     })
                 })
             }
 
             function s(e) {
                 return t.__awaiter(this, void 0, void 0, function() {
-                    var n, a, u;
+                    var n, a, d;
                     return t.__generator(this, function(t) {
-                        return n = null, e.userID && (n = parseInt(e.userID, 10), isNaN(n) && (n = null)), a = null, e.channelID && (a = parseInt(e.channelID, 10), isNaN(a) && (a = null)), u = {
+                        return n = null, e.userID && (n = parseInt(e.userID, 10), isNaN(n) && (n = null)), a = null, e.channelID && (a = parseInt(e.channelID, 10), isNaN(a) && (a = null)), d = {
                             element: e.element || null,
                             type: e.type || null,
                             location: e.location || null,
@@ -62,7 +62,7 @@
                             squad_stream_id: e.squadStreamID || null,
                             squad_stream_session_id: e.squadStreamSessionID || null,
                             is_active: e.isActive
-                        }, [2, r.p.tracking.track(i.SpadeEventType.SquadStreamViewerAction, u)]
+                        }, [2, r.p.tracking.track(i.SpadeEventType.SquadStreamViewerAction, d)]
                     })
                 })
             }
@@ -78,15 +78,15 @@
             function i(e) {
                 if (!e || !e.squad) return null;
                 for (var n = [], a = 0, i = e.squad.members; a < i.length; a++) {
-                    var u = i[a],
-                        d = {
+                    var d = i[a],
+                        u = {
                             __typename: "User",
-                            id: u.id,
-                            login: u.login,
-                            displayName: u.display_name,
-                            profileImageURL: u.profile_image_url_150
+                            id: d.id,
+                            login: d.login,
+                            displayName: d.display_name,
+                            profileImageURL: d.profile_image_url_150
                         };
-                    n.push(d)
+                    n.push(u)
                 }
                 return {
                     __typename: "SquadStream",
@@ -94,15 +94,19 @@
                     status: function(e) {
                         switch (e) {
                             case t.SquadStatus.Pending:
-                                return r.K.PENDING;
+                                return r.M.PENDING;
                             case t.SquadStatus.Live:
-                                return r.K.LIVE;
+                                return r.M.LIVE;
                             case t.SquadStatus.Ended:
                             default:
-                                return r.K.ENDED
+                                return r.M.ENDED
                         }
                     }(e.squad.status),
-                    members: n
+                    members: n,
+                    owner: {
+                        __typename: "User",
+                        id: e.squad.owner_id
+                    }
                 }
             }
         },
@@ -112,8 +116,8 @@
             var t = a("mrSG"),
                 r = a("q1tI"),
                 i = a("oJmH"),
-                u = a("9C/b"),
-                d = a("/7QA"),
+                d = a("9C/b"),
+                u = a("/7QA"),
                 s = a("yR8l"),
                 o = a("eDVu"),
                 l = a("0Log"),
@@ -145,28 +149,28 @@
                                 return e && e.displayName ? r.createElement(v.W, {
                                     bold: !0,
                                     noWrap: !0,
-                                    type: v.Sb.Span,
+                                    type: v.Tb.Span,
                                     color: v.O.Base
                                 }, e.displayName) : ""
                             };
                             switch (n.length) {
                                 case 0:
-                                    return Object(d.d)("{channelOwnerName} is Squad Streaming", {
+                                    return Object(u.d)("{channelOwnerName} is Squad Streaming", {
                                         channelOwnerName: a(e)
                                     }, "SquadStreamBanner");
                                 case 1:
-                                    return Object(d.d)("{channelOwnerName} is Squad Streaming with {squadMemberIndex0}", {
+                                    return Object(u.d)("{channelOwnerName} is Squad Streaming with {squadMemberIndex0}", {
                                         channelOwnerName: a(e),
                                         squadMemberIndex0: a(n[0])
                                     }, "SquadStreamBanner");
                                 case 2:
-                                    return Object(d.d)("{channelOwnerName} is Squad Streaming with {squadMemberIndex0}, {squadMemberIndex1}", {
+                                    return Object(u.d)("{channelOwnerName} is Squad Streaming with {squadMemberIndex0}, {squadMemberIndex1}", {
                                         channelOwnerName: a(e),
                                         squadMemberIndex0: a(n[0]),
                                         squadMemberIndex1: a(n[1])
                                     }, "SquadStreamBanner");
                                 default:
-                                    return Object(d.d)("{channelOwnerName} is Squad Streaming with {squadMemberIndex0}, {squadMemberIndex1}, {squadMemberIndex2}", {
+                                    return Object(u.d)("{channelOwnerName} is Squad Streaming with {squadMemberIndex0}, {squadMemberIndex1}, {squadMemberIndex2}", {
                                         channelOwnerName: a(e),
                                         squadMemberIndex0: a(n[0]),
                                         squadMemberIndex1: a(n[1]),
@@ -197,7 +201,7 @@
                                     }
                                 }, r.createElement(v.q, {
                                     size: 30,
-                                    alt: Object(d.d)("avatar", "SquadStreamBanner"),
+                                    alt: Object(u.d)("avatar", "SquadStreamBanner"),
                                     src: e.profileImageURL
                                 })) : null
                             }).filter(function(e) {
@@ -223,7 +227,7 @@
                             color: v.O.Overlay
                         }, i), r.createElement(v.Xa, null, r.createElement(v.W, {
                             noWrap: !0,
-                            type: v.Sb.Span,
+                            type: v.Tb.Span,
                             color: v.O.Alt2,
                             fontSize: v.Ca.Size5
                         }, this.makeBannerText(a, t))), r.createElement(v.Xa, {
@@ -236,7 +240,7 @@
                             }
                         }, r.createElement(v.z, {
                             onClick: this.goToSquadPage
-                        }, Object(d.d)("Watch In Squad Mode", "SquadStreamBanner")))))
+                        }, Object(u.d)("Watch In Squad Mode", "SquadStreamBanner")))))
                     }, n.prototype.isSquadMember = function(e) {
                         var n = e.channelID,
                             a = e.data && e.data.user && e.data.user.squadStream && e.data.user.squadStream.members || [];
@@ -244,7 +248,7 @@
                             return e.id === n
                         }))
                     }, n.prototype.shouldRender = function(e) {
-                        return !!Object(q.a)(e.channelLogin) && (!!this.isSquadMember(e) && (!e.data.loading && !e.data.error && (e.data.user && e.data.user.squadStream && e.data.user.squadStream.status === m.K.LIVE || !1)))
+                        return !!Object(q.a)(e.channelLogin) && (!!this.isSquadMember(e) && (!e.data.loading && !e.data.error && (e.data.user && e.data.user.squadStream && e.data.user.squadStream.status === m.M.LIVE || !1)))
                     }, n
                 }(r.Component),
                 b = Object(i.compose)(Object(s.a)(g, {
@@ -270,7 +274,7 @@
                     }
                 }), Object(p.b)("SquadStreamBanner", {
                     autoReportInteractive: !0
-                }), u.a)(k);
+                }), d.a)(k);
             a.d(n, "SquadStreamBannerComponent", function() {
                 return k
             }), a.d(n, "SquadStreamBanner", function() {
@@ -279,7 +283,7 @@
         },
         aKsW: function(e, n, a) {
             "use strict";
-            var t, r, i, u;
+            var t, r, i, d;
             a.d(n, "a", function() {
                     return t
                 }), a.d(n, "b", function() {
@@ -287,7 +291,7 @@
                 }), a.d(n, "d", function() {
                     return i
                 }), a.d(n, "c", function() {
-                    return u
+                    return d
                 }),
                 function(e) {
                     e.View = "view", e.Click = "click"
@@ -300,7 +304,7 @@
                 }(i || (i = {})),
                 function(e) {
                     e.TopBar = "top_bar", e.Player = "player", e.ProfileCard = "profile_card", e.EndedState = "ended_state"
-                }(u || (u = {}))
+                }(d || (d = {}))
         },
         egMT: function(e, n, a) {
             "use strict";
@@ -312,19 +316,19 @@
             var t = a("/7QA"),
                 r = "squad_stream_dashboard",
                 i = "squad_stream_feature",
-                u = "squad_stream_whitelist";
+                d = "squad_stream_whitelist";
 
-            function d(e) {
-                var n = t.b.get(u, []);
+            function u(e) {
+                var n = t.b.get(d, []);
                 return n.includes("*") || n.includes(e)
             }
 
             function s(e) {
-                return "on" === t.b.get(i, "off") && d(e)
+                return "on" === t.b.get(i, "off") && u(e)
             }
 
             function o(e) {
-                return "on" === t.b.get(r, "off") && d(e)
+                return "on" === t.b.get(r, "off") && u(e)
             }
         },
         fnDh: function(e, n) {
@@ -378,6 +382,26 @@
                                         kind: "Name",
                                         value: "squadStreamMember"
                                     },
+                                    directives: []
+                                }]
+                            }
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "owner"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
                                     directives: []
                                 }]
                             }
@@ -446,11 +470,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 173
+                    end: 186
                 }
             };
             a.loc.source = {
-                body: "fragment squadStreamData on SquadStream {\nid\nstatus\nmembers {\n...squadStreamMember\n}\n}\nfragment squadStreamMember on User {\nid\nlogin\ndisplayName\nprofileImageURL(width:150)\n}",
+                body: "fragment squadStreamData on SquadStream {\nid\nstatus\nmembers {\n...squadStreamMember\n}\nowner {\nid\n}\n}\nfragment squadStreamMember on User {\nid\nlogin\ndisplayName\nprofileImageURL(width:150)\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
