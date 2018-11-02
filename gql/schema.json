@@ -7678,6 +7678,22 @@
             }, 
             {
               "args": [], 
+              "deprecationReason": null, 
+              "description": "Whether or not the channel is a hidden multi-view chanlet that is only meant to be accessible through another channel and not exist as a completely independent channel.", 
+              "isDeprecated": false, 
+              "name": "isHiddenChanlet", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Boolean", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
               "deprecationReason": "Use stream.isMature instead.", 
               "description": null, 
               "isDeprecated": true, 
