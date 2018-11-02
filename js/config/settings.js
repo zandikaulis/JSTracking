@@ -1355,6 +1355,18 @@ window.__twilightSettings = {
                 "value": "variant1"
             }]
         },
+        "b3478dd7-47e8-434d-8f0d-e3e837b5add7": {
+            "name": "watch_thud_modal_i1",
+            "v": 4988,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant_a"
+            }]
+        },
         "b40e065c-7a73-4c4f-b060-a6b1647fc1a2": {
             "name": "twilight_editing_im_upset",
             "v": 4447,
