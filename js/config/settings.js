@@ -175,13 +175,13 @@ window.__twilightSettings = {
         },
         "0186f46f-a8d8-40b9-963a-168302603fe8": {
             "name": "new_user_survey",
-            "v": 4986,
+            "v": 4995,
             "t": 1,
             "groups": [{
-                "weight": 96,
+                "weight": 98,
                 "value": "control"
             }, {
-                "weight": 4,
+                "weight": 2,
                 "value": "active"
             }]
         },
