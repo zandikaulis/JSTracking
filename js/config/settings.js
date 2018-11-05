@@ -26,7 +26,7 @@ window.__twilightSettings = {
     "bounty_board_live_dashboard_widget": "on",
     "cc_v2_flag": "off",
     "cc_v2_trial_test_enabled": false,
-    "cc_v2_whitelist": ["cpt_meticulous-staff", "testnioh123-staff", "jnguyening-staff"],
+    "cc_v2_whitelist": ["cpt_meticulous-staff", "testnioh123-staff", "jnguyening-staff", "gummyace-staff"],
     "channel_feed_enabled": false,
     "chat_input_box_followers_only_restriction_enabled": "off",
     "chat_input_box_verified_only_restriction_enabled": "off",
