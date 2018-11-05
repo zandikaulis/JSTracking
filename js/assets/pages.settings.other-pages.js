@@ -2715,7 +2715,7 @@
                 return {
                     text: Object(i.d)("I am not interested in this category", "FeedbackReason"),
                     contentType: a.b.Game,
-                    feedbackType: r.I.NOT_INTERESTED
+                    feedbackType: r.J.NOT_INTERESTED
                 }
             }
 
@@ -2732,7 +2732,7 @@
                 return null === l && (l = [o(), {
                     text: s(),
                     contentType: a.b.Shelf,
-                    feedbackType: r.I.OTHER
+                    feedbackType: r.J.OTHER
                 }]), l
             }
             var u = null;
@@ -2741,11 +2741,11 @@
                 return null === u && (u = [{
                     text: c(),
                     contentType: a.b.Live,
-                    feedbackType: r.I.NOT_INTERESTED
+                    feedbackType: r.J.NOT_INTERESTED
                 }, o(), {
                     text: s(),
                     contentType: a.b.Live,
-                    feedbackType: r.I.OTHER
+                    feedbackType: r.J.OTHER
                 }]), u
             }
             var p = null;
@@ -2754,7 +2754,7 @@
                 return null === p && (p = [o(), {
                     text: s(),
                     contentType: a.b.Game,
-                    feedbackType: r.I.OTHER
+                    feedbackType: r.J.OTHER
                 }]), p
             }
             var h = null;
@@ -2763,19 +2763,19 @@
                 return null === h && (h = [{
                     text: Object(i.d)("I am not interested in this video", "FeedbackReason"),
                     contentType: a.b.Vod,
-                    feedbackType: r.I.NOT_INTERESTED
+                    feedbackType: r.J.NOT_INTERESTED
                 }, {
                     text: c(),
                     contentType: a.b.Live,
-                    feedbackType: r.I.NOT_INTERESTED
+                    feedbackType: r.J.NOT_INTERESTED
                 }, o(), {
                     text: Object(i.d)("I have already watched this video", "FeedbackReason"),
                     contentType: a.b.Vod,
-                    feedbackType: r.I.ALREADY_WATCHED
+                    feedbackType: r.J.ALREADY_WATCHED
                 }, {
                     text: s(),
                     contentType: a.b.Vod,
-                    feedbackType: r.I.OTHER
+                    feedbackType: r.J.OTHER
                 }]), h
             }
         },
@@ -7334,7 +7334,7 @@
                             subtitle: this.props.subtitle,
                             emptyStateDescription: this.props.emptyStateDescription,
                             normalizedFeedbackItems: e,
-                            showLoadingSpinner: this.props.type === s.J.CATEGORY
+                            showLoadingSpinner: this.props.type === s.K.CATEGORY
                         }), t && r.createElement(k.Xa, {
                             margin: {
                                 top: 1
@@ -7455,17 +7455,17 @@
                             title: Object(d.d)("Category Feedback", "SettingsRecommendationsPage"),
                             subtitle: Object(d.d)("Your feedback on Twitch's personalized category recommendations", "SettingsRecommendationsPage"),
                             emptyStateDescription: Object(d.d)("You haven't given any category recommendation feedback", "SettingsRecommendationsPage"),
-                            type: s.J.CATEGORY
+                            type: s.K.CATEGORY
                         }, {
                             title: Object(d.d)("Channel Feedback", "SettingsRecommendationsPage"),
                             subtitle: Object(d.d)("Your feedback on Twitch's personalized channel recommendations", "SettingsRecommendationsPage"),
                             emptyStateDescription: Object(d.d)("You haven't given any channel recommendation feedback", "SettingsRecommendationsPage"),
-                            type: s.J.CHANNEL
+                            type: s.K.CHANNEL
                         }, {
                             title: Object(d.d)("Video Feedback", "SettingsRecommendationsPage"),
                             subtitle: Object(d.d)("Your feedback on Twitch's personalized video recommendations", "SettingsRecommendationsPage"),
                             emptyStateDescription: Object(d.d)("You haven't given any video recommendation feedback", "SettingsRecommendationsPage"),
-                            type: s.J.VOD
+                            type: s.K.VOD
                         }], t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
@@ -8706,14 +8706,14 @@
                         }, t.getErrorMessage = function(e) {
                             if (null === e) return Object(s.d)("Something went wrong. Please try again.", "AddBannedChatters");
                             switch (e) {
-                                case d.b.TARGET_NOT_FOUND:
+                                case d.c.TARGET_NOT_FOUND:
                                     return Object(s.d)("That user is suspended or does not exist.", "AddBannedChatters");
-                                case d.b.TARGET_IS_MOD:
-                                case d.b.TARGET_IS_SELF:
-                                case d.b.TARGET_IS_STAFF:
-                                case d.b.TARGET_IS_BROADCASTER:
-                                case d.b.TARGET_IS_ADMIN:
-                                case d.b.TARGET_ALREADY_BANNED:
+                                case d.c.TARGET_IS_MOD:
+                                case d.c.TARGET_IS_SELF:
+                                case d.c.TARGET_IS_STAFF:
+                                case d.c.TARGET_IS_BROADCASTER:
+                                case d.c.TARGET_IS_ADMIN:
+                                case d.c.TARGET_ALREADY_BANNED:
                                     return Object(s.d)("You cannot ban that user.", "AddBannedChatters");
                                 default:
                                     return Object(s.d)("An unknown error occurred. Please try again.", "AddBannedChatters")
@@ -9190,15 +9190,15 @@
                     feedback_action: r.Remove,
                     feedback_type: function(e) {
                         switch (e) {
-                            case c.J.CATEGORY:
+                            case c.K.CATEGORY:
                                 return l.b.Game;
-                            case c.J.CHANNEL:
+                            case c.K.CHANNEL:
                                 return l.b.Live;
-                            case c.J.SHELF:
+                            case c.K.SHELF:
                                 return l.b.Shelf;
-                            case c.J.VOD:
+                            case c.K.VOD:
                                 return l.b.Vod;
-                            case c.J.UNSPECIFIED:
+                            case c.K.UNSPECIFIED:
                                 return null;
                             default:
                                 return e

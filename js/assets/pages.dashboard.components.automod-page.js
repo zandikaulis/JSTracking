@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [173], {
+    [174], {
         "4l1H": function(e, t) {
             var n = {
                 kind: "Document",
@@ -875,20 +875,20 @@
                         }, this.props.description)))
                     }, t
                 }(i.Component),
-                y = "automod-onboarding-closed",
-                A = function(e) {
+                A = "automod-onboarding-closed",
+                y = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             onboardingVisible: !1
                         }, t.onCloseOnboarding = function() {
-                            s.m.set(y, !0), t.setState({
+                            s.m.set(A, !0), t.setState({
                                 onboardingVisible: !1
                             })
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                        var e = s.m.getOptional(y);
+                        var e = s.m.getOptional(A);
                         null === e ? this.setState({
                             onboardingVisible: !0
                         }) : this.setState({
@@ -1142,7 +1142,7 @@
                             margin: {
                                 bottom: 2
                             }
-                        }, i.createElement(A, null)), i.createElement(b.Ja, null, i.createElement(b.P, {
+                        }, i.createElement(y, null)), i.createElement(b.Ja, null, i.createElement(b.P, {
                             cols: 2
                         }, i.createElement(b.W, {
                             color: b.O.Alt2,
@@ -1884,13 +1884,13 @@
                 }), Object(m.b)("ChatTermsContainer"))(B),
                 V = n("DMoW"),
                 U = n("Ww25"),
-                z = n("l/RX"),
-                G = n("Jpqj"),
+                G = n("l/RX"),
+                z = n("Jpqj"),
                 q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            canAccess: !!t.props.data.user && !!t.props.data.user.modLogsRoleAccess && t.props.data.user.modLogsRoleAccess.accessLevel === V.z.WRITE,
+                            canAccess: !!t.props.data.user && !!t.props.data.user.modLogsRoleAccess && t.props.data.user.modLogsRoleAccess.accessLevel === V.A.WRITE,
                             error: !1,
                             enabled: !1
                         }, t.onChange = function() {
@@ -1915,8 +1915,8 @@
                                 variables: {
                                     input: {
                                         channelID: t.props.data.currentUser.id,
-                                        channelRole: V.i.MODERATOR,
-                                        accessLevel: V.z.NONE
+                                        channelRole: V.j.MODERATOR,
+                                        accessLevel: V.A.NONE
                                     }
                                 }
                             }).then(function() {
@@ -1934,8 +1934,8 @@
                                 variables: {
                                     input: {
                                         channelID: t.props.data.currentUser.id,
-                                        channelRole: V.i.MODERATOR,
-                                        accessLevel: V.z.WRITE
+                                        channelRole: V.j.MODERATOR,
+                                        accessLevel: V.A.WRITE
                                     }
                                 }
                             }).then(function() {
@@ -1959,7 +1959,7 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         !e.data.loading && this.props.data.loading && e.data.user && e.data.user.modLogsRoleAccess && this.setState({
-                            canAccess: e.data.user.modLogsRoleAccess.accessLevel === V.z.WRITE,
+                            canAccess: e.data.user.modLogsRoleAccess.accessLevel === V.A.WRITE,
                             error: !!e.data.error
                         })
                     }, t.prototype.render = function() {
@@ -1999,7 +1999,7 @@
                         }, Object(s.d)("Sorry, something went wrong. Please try again later.", "ModLogsAccessToggle")))))
                     }, t
                 }(i.Component),
-                H = Object(o.compose)(Object(m.b)("ModLogsAccessToggle"), Object(v.a)(G, {
+                H = Object(o.compose)(Object(m.b)("ModLogsAccessToggle"), Object(v.a)(z, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2007,7 +2007,7 @@
                             }
                         }
                     }
-                }), Object(v.a)(z, {
+                }), Object(v.a)(G, {
                     name: "setModLogsAccess"
                 }))(q),
                 $ = (n("gBSZ"), function(e) {

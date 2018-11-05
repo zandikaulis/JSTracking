@@ -150,7 +150,7 @@
                                 m = r.contentIndex,
                                 p = r.medium,
                                 g = l;
-                            return i !== c.w.RELEASED && l.length > 100 && (g = l.substring(0, 100) + "..."), s.createElement(v.Cb, {
+                            return i !== c.x.RELEASED && l.length > 100 && (g = l.substring(0, 100) + "..."), s.createElement(v.Cb, {
                                 className: "extension-card__thumbnail__details-preview",
                                 background: v.r.Alt2,
                                 position: v.hb.Absolute,
@@ -176,7 +176,7 @@
                                 overflow: v.cb.Hidden
                             }, s.createElement(v.W, {
                                 type: v.Tb.P
-                            }, g), i !== c.w.RELEASED && s.createElement(v.Xa, {
+                            }, g), i !== c.x.RELEASED && s.createElement(v.Xa, {
                                 padding: {
                                     top: .5
                                 }
@@ -376,7 +376,7 @@
                         }, s.createElement(v.qb, {
                             "data-test-selector": x.InstalledIndicator,
                             asset: v.rb.Check
-                        })), o !== c.w.RELEASED && s.createElement(v.Cb, {
+                        })), o !== c.x.RELEASED && s.createElement(v.Cb, {
                             attachBottom: !0,
                             attachRight: !0,
                             alignItems: v.f.Center,
@@ -411,7 +411,7 @@
                             }
                         }, s.createElement(E, {
                             type: m
-                        })), o !== c.w.RELEASED && s.createElement(p.a, {
+                        })), o !== c.x.RELEASED && s.createElement(p.a, {
                             state: o
                         })))))
                     }, n.prototype.isMissingCheeringRequirement = function() {
@@ -420,7 +420,7 @@
                             t = e.extensionClientID,
                             i = e.extensionState,
                             a = e.monetizationType;
-                        return !this.projectFreewayIDs.includes(t) && (i === c.w.RELEASED && a === g.b.Bits && !n)
+                        return !this.projectFreewayIDs.includes(t) && (i === c.x.RELEASED && a === g.b.Bits && !n)
                     }, n
                 }(s.Component),
                 S = Object(f.c)()(y);
@@ -682,31 +682,31 @@
                 o = function(e) {
                     var n;
                     switch (e.state) {
-                        case r.w.IN_TEST:
+                        case r.x.IN_TEST:
                             n = Object(a.d)("TESTING", "ExtensionStatusPill");
                             break;
-                        case r.w.READY_FOR_REVIEW:
+                        case r.x.READY_FOR_REVIEW:
                             n = Object(a.d)("READY FOR REVIEW", "ExtensionStatusPill");
                             break;
-                        case r.w.IN_REVIEW:
+                        case r.x.IN_REVIEW:
                             n = Object(a.d)("IN REVIEW", "ExtensionStatusPill");
                             break;
-                        case r.w.REJECTED:
+                        case r.x.REJECTED:
                             n = Object(a.d)("REJECTED", "ExtensionStatusPill");
                             break;
-                        case r.w.APPROVED:
+                        case r.x.APPROVED:
                             n = Object(a.d)("APPROVED", "ExtensionStatusPill");
                             break;
-                        case r.w.DEPRECATED:
+                        case r.x.DEPRECATED:
                             n = Object(a.d)("DEPRECATED", "ExtensionStatusPill");
                             break;
-                        case r.w.PENDING_ACTION:
+                        case r.x.PENDING_ACTION:
                             n = Object(a.d)("PENDING DEVELOPER ACTION", "ExtensionStatusPill");
                             break;
-                        case r.w.UPLOADING:
+                        case r.x.UPLOADING:
                             n = Object(a.d)("UPLOAD IN PROGRESS", "ExtensionStatusPill");
                             break;
-                        case r.w.ASSETS_UPLOADED:
+                        case r.x.ASSETS_UPLOADED:
                             n = Object(a.d)("ASSETS UPLOADED", "ExtensionStatusPill");
                             break;
                         default:
@@ -1930,7 +1930,7 @@
 
             function l(e) {
                 var n = [];
-                return e.component && e.component.viewerURL && n.push(s.u.COMPONENT), e.panel && e.panel.viewerURL && n.push(s.u.PANEL), e.videoOverlay && e.videoOverlay.viewerURL && n.push(s.u.VIDEO_OVERLAY), n
+                return e.component && e.component.viewerURL && n.push(s.v.COMPONENT), e.panel && e.panel.viewerURL && n.push(s.v.PANEL), e.videoOverlay && e.videoOverlay.viewerURL && n.push(s.v.VIDEO_OVERLAY), n
             }
 
             function d(e) {
@@ -3080,8 +3080,8 @@
                 C = t("0QYl"),
                 I = t("d9uE"),
                 D = t("8xJJ"),
-                w = t("1IJ0"),
-                O = t("OzNJ"),
+                O = t("1IJ0"),
+                w = t("OzNJ"),
                 P = t("22qk"),
                 T = t("vYrU"),
                 j = t("GnwI"),
@@ -3206,7 +3206,7 @@
                             type: F.Tb.P
                         }, o.description))), a.createElement(k.b, null, a.createElement(F.Xa, {
                             padding: 4
-                        }, a.createElement(w.a, {
+                        }, a.createElement(O.a, {
                             channelLogin: r && r.login,
                             showBackLink: n,
                             title: u
@@ -3246,7 +3246,7 @@
                             hasInstallPermission: null !== r.self && r.self.canInstall,
                             splashImageURL: r.iconURLs.discoverySplash,
                             iconURL: r.iconURLs.square100,
-                            monetizationType: Object(O.e)(r),
+                            monetizationType: Object(w.e)(r),
                             isInstalled: this.isExtensionInstalled(r.id),
                             installExtension: this.props.isLoggedIn ? this.installExtension : this.props.showLoginModal,
                             extensionState: r.state,
@@ -3254,8 +3254,8 @@
                                 medium: N.PageviewMedium.ExtensionCategory
                             },
                             summary: r.summary,
-                            supportedAnchors: Object(O.f)(r.views),
-                            supportedPlatforms: Object(O.g)(r.views)
+                            supportedAnchors: Object(w.f)(r.views),
+                            supportedPlatforms: Object(w.g)(r.views)
                         }))
                     }, n.prototype.isExtensionInstalled = function(e) {
                         var n = this.props.extensionCategoryPageData.currentUser;
@@ -3355,7 +3355,7 @@
                         onClick: c,
                         "data-test-selector": M.EnabledInstallButton
                     }, p);
-                if (t === z.w.RELEASED && d === O.b.Bits && !r && !m.includes(n)) {
+                if (t === z.x.RELEASED && d === w.b.Bits && !r && !m.includes(n)) {
                     var v = Object(E.d)("This extension can only be used by Partner or Affiliate channels that have Bits enabled.", "ExtensionPage");
                     g = a.createElement(F.Wb, {
                         label: v,
@@ -3472,7 +3472,7 @@
                 }, Object(E.d)("Features", "ExtensionDetails"))), e.hasChatSupport && a.createElement(F.W, {
                     "data-test-selector": H.ChatFeature,
                     type: F.Tb.P
-                }, Object(E.d)("This extension can send messages to your chat.", "ExtensionDetails"))), e.releaseState !== z.w.RELEASED && a.createElement(F.Cb, {
+                }, Object(E.d)("This extension can send messages to your chat.", "ExtensionDetails"))), e.releaseState !== z.x.RELEASED && a.createElement(F.Cb, {
                     "data-test-selector": H.TestStatusDisclosure,
                     borderTop: !0,
                     padding: {
@@ -3497,7 +3497,7 @@
                     target: "_blank",
                     rel: "noopener",
                     href: "https://help.twitch.tv/customer/portal/articles/2861187-how-to-use-extensions"
-                }, Object(E.d)("Learn More.", "ExtensionDetailsTest"))))), e.monetizationType === O.b.InExtensionPurchases && a.createElement(F.Cb, {
+                }, Object(E.d)("Learn More.", "ExtensionDetailsTest"))))), e.monetizationType === w.b.InExtensionPurchases && a.createElement(F.Cb, {
                     borderTop: !0,
                     padding: {
                         top: 1
@@ -3530,7 +3530,7 @@
                         target: "_blank",
                         rel: "noopener"
                     }, Object(E.d)("Amazon's Twitch Customer Service", "ExtensionDetails"))
-                }, "ExtensionDetailsPurchases"))), e.monetizationType === O.b.Bits && a.createElement(F.Cb, {
+                }, "ExtensionDetailsPurchases"))), e.monetizationType === w.b.Bits && a.createElement(F.Cb, {
                     borderTop: !0,
                     padding: {
                         top: 1
@@ -3712,9 +3712,9 @@
                                     return e.extension.id === i.id
                                 });
                                 a && n.props.showExtensionDestructionWarningModal({
-                                    destructionType: O.a.Uninstall,
+                                    destructionType: w.a.Uninstall,
                                     extensionName: i.name,
-                                    monetizationType: Object(O.e)(i),
+                                    monetizationType: Object(w.e)(i),
                                     onConfirm: function() {
                                         return n.uninstallExtension(a.id)
                                     }
@@ -3807,7 +3807,7 @@
                             isChannelCheeringEnabled: d,
                             isExtensionInstalled: this.isExtensionInstalled(),
                             userLogin: i,
-                            monetizationType: Object(O.e)(o),
+                            monetizationType: Object(w.e)(o),
                             onInstall: this.onInstallExtension,
                             onUninstall: this.confirmExtensionUninstallation
                         })), a.createElement(F.Ja, null, a.createElement(F.P, {
@@ -3825,11 +3825,11 @@
                             description: o.description,
                             extensionVersion: o.version,
                             hasChatSupport: o.hasChatSupport,
-                            monetizationType: Object(O.e)(o),
+                            monetizationType: Object(w.e)(o),
                             privacyPolicyURL: o.privacyPolicyURL,
                             releaseState: o.state,
-                            supportedAnchors: Object(O.f)(o.views),
-                            supportedPlatforms: Object(O.g)(o.views),
+                            supportedAnchors: Object(w.f)(o.views),
+                            supportedPlatforms: Object(w.g)(o.views),
                             supportEmail: o.supportEmail,
                             termsURL: o.termsURL
                         }))))) : a.createElement(h.a, null, n && a.createElement(F.z, {
@@ -3839,7 +3839,7 @@
                         var e = this.props,
                             n = e.isLoggedIn,
                             t = e.userLogin;
-                        return a.createElement(w.a, {
+                        return a.createElement(O.a, {
                             channelLogin: t,
                             showBackLink: n,
                             title: Object(E.d)("Details", "ExtensionDetailsPageComponent")
@@ -4097,7 +4097,7 @@
                     else n && n.extensions && (i = n.extensions.edges.map(this.renderCard, this));
                     return a.createElement(k.b, null, a.createElement(F.Xa, {
                         padding: 4
-                    }, a.createElement(w.a, {
+                    }, a.createElement(O.a, {
                         channelLogin: n && n.currentUser && n.currentUser.login,
                         showBackLink: t,
                         title: Object(E.d)("Extension Search Results", "ExtensionSearchPage")
@@ -4140,15 +4140,15 @@
                         splashImageURL: t.iconURLs.discoverySplash,
                         iconURL: t.iconURLs.square100,
                         isInstalled: this.isExtensionInstalled(t.id),
-                        monetizationType: Object(O.e)(t),
+                        monetizationType: Object(w.e)(t),
                         installExtension: this.props.isLoggedIn ? this.installExtension : this.props.showLoginModal,
                         extensionState: t.state,
                         trackingContext: {
                             medium: N.PageviewMedium.ExtensionSearch
                         },
                         summary: t.summary,
-                        supportedAnchors: Object(O.f)(t.views),
-                        supportedPlatforms: Object(O.g)(t.views)
+                        supportedAnchors: Object(w.f)(t.views),
+                        supportedPlatforms: Object(w.g)(t.views)
                     }))
                 }, n.prototype.isExtensionInstalled = function(e) {
                     var n = this.props.extensionSearchData;
@@ -4369,13 +4369,13 @@
                 r = function(e, n) {
                     var t;
                     switch (e) {
-                        case a.u.COMPONENT:
+                        case a.v.COMPONENT:
                             t = n ? Object(i.d)("COMPONENT", "ExtensionAnchorType") : Object(i.d)("Component", "ExtensionAnchorType");
                             break;
-                        case a.u.PANEL:
+                        case a.v.PANEL:
                             t = n ? Object(i.d)("PANEL", "ExtensionAnchorType") : Object(i.d)("Panel", "ExtensionAnchorType");
                             break;
-                        case a.u.VIDEO_OVERLAY:
+                        case a.v.VIDEO_OVERLAY:
                             t = n ? Object(i.d)("OVERLAY", "ExtensionAnchorType") : Object(i.d)("Overlay", "ExtensionAnchorType");
                             break;
                         default:

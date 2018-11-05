@@ -413,19 +413,20 @@
                         }, Object(l.d)("All Tags", "AllTagsTitle")))) : null
                     }, t
                 }(r.Component),
-                E = Object(p.a)(k, {
+                N = Object(p.a)(k, {
                     options: function(e) {
                         return {
                             variables: {
                                 gameName: e.gameName,
-                                tagType: h.S.TOP,
+                                tagType: h.T.TOP,
                                 limit: 50
                             }
                         }
                     }
                 })(C),
-                N = a("79jw"),
-                _ = function(e) {
+                E = a("TCeE"),
+                _ = a("79jw"),
+                w = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderTags = function() {
@@ -435,11 +436,12 @@
                                 return e.localizedName.localeCompare(t.localizedName)
                             }).map(t.renderTag) : null
                         }, t.renderTag = function(e) {
+                            var a = t.props.categoryName ? E.b.Category : E.b.All;
                             return r.createElement(f.a, {
                                 key: e.id
                             }, r.createElement(v.Ua, {
                                 onClick: function() {
-                                    return t.props.onAddTag(e)
+                                    return t.props.onAddTag(e, a)
                                 }
                             }, r.createElement(v.Xa, {
                                 padding: {
@@ -460,7 +462,7 @@
                         }, r.createElement(v.Za, null)) : r.createElement(v.Xa, null, this.renderTags())
                     }, t
                 }(r.Component),
-                w = Object(o.compose)(Object(p.a)(N, {
+                F = Object(o.compose)(Object(p.a)(_, {
                     options: function(e) {
                         return {
                             variables: {
@@ -470,8 +472,7 @@
                             }
                         }
                     }
-                }))(_),
-                F = a("TCeE"),
+                }))(w),
                 O = a("sLmD"),
                 A = a("AZIu"),
                 I = a("4HIT");
@@ -508,20 +509,20 @@
                                 tag: t
                             })
                         }, a.renderStreamTagResults = function() {
-                            return a.props.type === y.StreamTag && a.state.isOpen ? "" === a.state.searchTerm ? r.createElement(w, {
+                            return a.props.type === y.StreamTag && a.state.isOpen ? "" === a.state.searchTerm ? r.createElement(F, {
                                 categoryName: a.props.categoryName,
                                 onAddTag: a.onTagResultSelected,
                                 tagsLimit: 100
                             }) : !a.state.searchResults && a.state.searching ? a.renderLoading() : a.state.searchResults && a.state.searchResults.streamTags && a.state.searchResults.streamTags.hits.length ? a.state.searchResults.streamTags.hits.map(a.renderTagSearchResult) : a.renderNoResults() : null
                         }, a.renderTagResults = function() {
-                            return a.state.isOpen ? a.props.type === y.TagAll && "" === a.state.searchTerm ? r.createElement(w, {
+                            return a.state.isOpen ? a.props.type === y.TagAll && "" === a.state.searchTerm ? r.createElement(F, {
                                 onAddTag: a.onTagResultSelected,
                                 tagsLimit: 100
                             }) : !a.state.searchResults && a.state.searching ? a.renderLoading() : a.state.searchResults && a.state.searchResults.tags && a.state.searchResults.tags.hits.length ? a.state.searchResults.tags.hits.map(a.renderTagSearchResult) : a.renderNoResults() : null
                         }, a.setTagSearchRef = function(e) {
                             a.tagSearch = e
                         }, a.onTagResultSelected = function(e, t) {
-                            if (a.toggleTagSearch(!1), a.clearSearchTerm(), a.props.type === y.TagCategory && t === F.b.All ? l.p.history.push(I.a.Popular) : a.props.type === y.TagAll && t === F.b.Category && l.p.history.push(I.a.Games), a.props.onTagClick && (a.props.onTagClick(e, t), a.props.section && a.props.numSelectedTags)) {
+                            if (a.toggleTagSearch(!1), a.clearSearchTerm(), a.props.type === y.TagCategory && t === E.b.All ? l.p.history.push(I.a.Popular) : a.props.type === y.TagAll && t === E.b.Category && l.p.history.push(I.a.Games), a.props.onTagClick && (a.props.onTagClick(e, t), a.props.section && a.props.numSelectedTags)) {
                                 var n = {
                                     section: a.props.section,
                                     tagPosition: a.props.numSelectedTags,
@@ -597,7 +598,7 @@
                         var e = this.props.selectedTags && this.props.selectedTags.map(function(e) {
                             return e.id
                         }) || [];
-                        return r.createElement(v.Xa, null, r.createElement(E, {
+                        return r.createElement(v.Xa, null, r.createElement(N, {
                             gameName: this.props.categoryName,
                             onAddTag: this.onTagResultSelected,
                             selectedTagIDs: e
@@ -611,7 +612,7 @@
                                         return e = e || "", t = {
                                             hitsPerPage: 100,
                                             restrictSearchableAttributes: ["localizations." + this.languageCode, "tag_name"]
-                                        }, a = g.a.Tags, this.props.type === y.TagAllMinusAutomation ? (t.facetFilters = '["automated:false", "tag_scope:' + F.b.All + '"]', this.props.showAllDashboardTags && (t.hitsPerPage = 300)) : this.props.type === y.TagAll ? this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:" + F.b.All : t.facetFilters = '[["tag_scope:' + F.b.All + '", "tag_scope:' + F.b.Category + '"]]' : this.props.type === y.TagCategory ? "" === e || this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:" + F.b.Category : t.facetFilters = '[["tag_scope:' + F.b.All + '", "tag_scope:' + F.b.Category + '"]]' : this.props.type === y.StreamTag && (a = g.a.StreamTags, t.facetFilters = "category_id:" + this.props.categoryID), [4, this.searchClient.queryForType(a, e, u.a(), t)];
+                                        }, a = g.a.Tags, this.props.type === y.TagAllMinusAutomation ? (t.facetFilters = '["automated:false", "tag_scope:' + E.b.All + '"]', this.props.showAllDashboardTags && (t.hitsPerPage = 300)) : this.props.type === y.TagAll ? this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:" + E.b.All : t.facetFilters = '[["tag_scope:' + E.b.All + '", "tag_scope:' + E.b.Category + '"]]' : this.props.type === y.TagCategory ? "" === e || this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:" + E.b.Category : t.facetFilters = '[["tag_scope:' + E.b.All + '", "tag_scope:' + E.b.Category + '"]]' : this.props.type === y.StreamTag && (a = g.a.StreamTags, t.facetFilters = "category_id:" + this.props.categoryID), [4, this.searchClient.queryForType(a, e, u.a(), t)];
                                     case 1:
                                         return n = i.sent(), this.setState({
                                             searchResults: n,
@@ -2139,7 +2140,7 @@
                         }, this.props.game.name))))))
                     }, t
                 }(c.Component),
-                E = function(e) {
+                N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.gameSearch = null, t.setGameSearchRef = function(e) {
@@ -2180,7 +2181,7 @@
                         })))))
                     }, t
                 }(c.Component),
-                N = a("H/lO"),
+                E = a("H/lO"),
                 _ = a("NZDK"),
                 w = 100,
                 F = function(e) {
@@ -2221,7 +2222,7 @@
                         }), a
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(E, o.__assign({}, this.props, {
+                        return c.createElement(N, o.__assign({}, this.props, {
                             onGameInputChange: this.onGameInputChange,
                             isGameSearchOpen: this.state.isGameSearchOpen,
                             gameResults: this.state.gameResults,
@@ -2240,7 +2241,7 @@
                                     case 1:
                                         i.sent(), a = null, i.label = 2;
                                     case 2:
-                                        return i.trys.push([2, 4, , 5]), [4, this.searchClient.queryForType(N.a.Games, e, t)];
+                                        return i.trys.push([2, 4, , 5]), [4, this.searchClient.queryForType(E.a.Games, e, t)];
                                     case 3:
                                         return a = i.sent(), [3, 5];
                                     case 4:
@@ -2732,7 +2733,7 @@
                                         for (i in t = [], a = [], n = this.state.modifiedTags) !0 === n[i] ? t.push(i) : a.push(i);
                                         return 0 === t.length && 0 === a.length ? [2] : (r = {
                                             contentID: e,
-                                            contentType: h.o.LIVE_CHANNEL,
+                                            contentType: h.p.LIVE_CHANNEL,
                                             addedTagIDs: t,
                                             removedTagIDs: a,
                                             authorID: e

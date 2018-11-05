@@ -47,15 +47,15 @@
                                             itemType: function(e) {
                                                 switch (e) {
                                                     case b.b.Shelf:
-                                                        return p.J.SHELF;
+                                                        return p.K.SHELF;
                                                     case b.b.Game:
-                                                        return p.J.CATEGORY;
+                                                        return p.K.CATEGORY;
                                                     case b.b.Live:
-                                                        return p.J.CHANNEL;
+                                                        return p.K.CHANNEL;
                                                     case b.b.Vod:
-                                                        return p.J.VOD;
+                                                        return p.K.VOD;
                                                     case b.b.Clip:
-                                                        return p.J.UNSPECIFIED;
+                                                        return p.K.UNSPECIFIED;
                                                     default:
                                                         return e
                                                 }

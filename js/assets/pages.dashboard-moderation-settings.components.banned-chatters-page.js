@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [160], {
+    [161], {
         "0l36": function(e, n, t) {
             var a = {
                 kind: "Document",
@@ -540,14 +540,14 @@
                         }, n.getErrorMessage = function(e) {
                             if (null === e) return Object(d.d)("Something went wrong. Please try again.", "AddBannedChatters");
                             switch (e) {
-                                case c.b.TARGET_NOT_FOUND:
+                                case c.c.TARGET_NOT_FOUND:
                                     return Object(d.d)("That user is suspended or does not exist.", "AddBannedChatters");
-                                case c.b.TARGET_IS_MOD:
-                                case c.b.TARGET_IS_SELF:
-                                case c.b.TARGET_IS_STAFF:
-                                case c.b.TARGET_IS_BROADCASTER:
-                                case c.b.TARGET_IS_ADMIN:
-                                case c.b.TARGET_ALREADY_BANNED:
+                                case c.c.TARGET_IS_MOD:
+                                case c.c.TARGET_IS_SELF:
+                                case c.c.TARGET_IS_STAFF:
+                                case c.c.TARGET_IS_BROADCASTER:
+                                case c.c.TARGET_IS_ADMIN:
+                                case c.c.TARGET_ALREADY_BANNED:
                                     return Object(d.d)("You cannot ban that user.", "AddBannedChatters");
                                 default:
                                     return Object(d.d)("An unknown error occurred. Please try again.", "AddBannedChatters")

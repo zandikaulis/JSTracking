@@ -1239,14 +1239,15 @@
                         return {
                             variables: {
                                 gameName: e.gameName,
-                                tagType: h.S.TOP,
+                                tagType: h.T.TOP,
                                 limit: 50
                             }
                         }
                     }
                 })(S),
-                _ = n("79jw"),
-                I = function(e) {
+                _ = n("TCeE"),
+                I = n("79jw"),
+                N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderTags = function() {
@@ -1256,11 +1257,12 @@
                                 return e.localizedName.localeCompare(t.localizedName)
                             }).map(t.renderTag) : null
                         }, t.renderTag = function(e) {
+                            var n = t.props.categoryName ? _.b.Category : _.b.All;
                             return i.createElement(f.a, {
                                 key: e.id
                             }, i.createElement(v.Ua, {
                                 onClick: function() {
-                                    return t.props.onAddTag(e)
+                                    return t.props.onAddTag(e, n)
                                 }
                             }, i.createElement(v.Xa, {
                                 padding: {
@@ -1281,7 +1283,7 @@
                         }, i.createElement(v.Za, null)) : i.createElement(v.Xa, null, this.renderTags())
                     }, t
                 }(i.Component),
-                N = Object(s.compose)(Object(m.a)(_, {
+                D = Object(s.compose)(Object(m.a)(I, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1291,8 +1293,7 @@
                             }
                         }
                     }
-                }))(I),
-                D = n("TCeE"),
+                }))(N),
                 F = n("sLmD"),
                 E = n("AZIu"),
                 O = n("4HIT");
@@ -1329,20 +1330,20 @@
                                 tag: t
                             })
                         }, n.renderStreamTagResults = function() {
-                            return n.props.type === b.StreamTag && n.state.isOpen ? "" === n.state.searchTerm ? i.createElement(N, {
+                            return n.props.type === b.StreamTag && n.state.isOpen ? "" === n.state.searchTerm ? i.createElement(D, {
                                 categoryName: n.props.categoryName,
                                 onAddTag: n.onTagResultSelected,
                                 tagsLimit: 100
                             }) : !n.state.searchResults && n.state.searching ? n.renderLoading() : n.state.searchResults && n.state.searchResults.streamTags && n.state.searchResults.streamTags.hits.length ? n.state.searchResults.streamTags.hits.map(n.renderTagSearchResult) : n.renderNoResults() : null
                         }, n.renderTagResults = function() {
-                            return n.state.isOpen ? n.props.type === b.TagAll && "" === n.state.searchTerm ? i.createElement(N, {
+                            return n.state.isOpen ? n.props.type === b.TagAll && "" === n.state.searchTerm ? i.createElement(D, {
                                 onAddTag: n.onTagResultSelected,
                                 tagsLimit: 100
                             }) : !n.state.searchResults && n.state.searching ? n.renderLoading() : n.state.searchResults && n.state.searchResults.tags && n.state.searchResults.tags.hits.length ? n.state.searchResults.tags.hits.map(n.renderTagSearchResult) : n.renderNoResults() : null
                         }, n.setTagSearchRef = function(e) {
                             n.tagSearch = e
                         }, n.onTagResultSelected = function(e, t) {
-                            if (n.toggleTagSearch(!1), n.clearSearchTerm(), n.props.type === b.TagCategory && t === D.b.All ? c.p.history.push(O.a.Popular) : n.props.type === b.TagAll && t === D.b.Category && c.p.history.push(O.a.Games), n.props.onTagClick && (n.props.onTagClick(e, t), n.props.section && n.props.numSelectedTags)) {
+                            if (n.toggleTagSearch(!1), n.clearSearchTerm(), n.props.type === b.TagCategory && t === _.b.All ? c.p.history.push(O.a.Popular) : n.props.type === b.TagAll && t === _.b.Category && c.p.history.push(O.a.Games), n.props.onTagClick && (n.props.onTagClick(e, t), n.props.section && n.props.numSelectedTags)) {
                                 var a = {
                                     section: n.props.section,
                                     tagPosition: n.props.numSelectedTags,
@@ -1432,7 +1433,7 @@
                                         return e = e || "", t = {
                                             hitsPerPage: 100,
                                             restrictSearchableAttributes: ["localizations." + this.languageCode, "tag_name"]
-                                        }, n = p.a.Tags, this.props.type === b.TagAllMinusAutomation ? (t.facetFilters = '["automated:false", "tag_scope:' + D.b.All + '"]', this.props.showAllDashboardTags && (t.hitsPerPage = 300)) : this.props.type === b.TagAll ? this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:" + D.b.All : t.facetFilters = '[["tag_scope:' + D.b.All + '", "tag_scope:' + D.b.Category + '"]]' : this.props.type === b.TagCategory ? "" === e || this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:" + D.b.Category : t.facetFilters = '[["tag_scope:' + D.b.All + '", "tag_scope:' + D.b.Category + '"]]' : this.props.type === b.StreamTag && (n = p.a.StreamTags, t.facetFilters = "category_id:" + this.props.categoryID), [4, this.searchClient.queryForType(n, e, u.a(), t)];
+                                        }, n = p.a.Tags, this.props.type === b.TagAllMinusAutomation ? (t.facetFilters = '["automated:false", "tag_scope:' + _.b.All + '"]', this.props.showAllDashboardTags && (t.hitsPerPage = 300)) : this.props.type === b.TagAll ? this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:" + _.b.All : t.facetFilters = '[["tag_scope:' + _.b.All + '", "tag_scope:' + _.b.Category + '"]]' : this.props.type === b.TagCategory ? "" === e || this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:" + _.b.Category : t.facetFilters = '[["tag_scope:' + _.b.All + '", "tag_scope:' + _.b.Category + '"]]' : this.props.type === b.StreamTag && (n = p.a.StreamTags, t.facetFilters = "category_id:" + this.props.categoryID), [4, this.searchClient.queryForType(n, e, u.a(), t)];
                                     case 1:
                                         return a = r.sent(), this.setState({
                                             searchResults: a,
@@ -2349,7 +2350,7 @@
                         })
                     }, t
                 }(r.Component),
-                $ = Object(i.compose)(Object(d.b)("DirectoryPage", {
+                K = Object(i.compose)(Object(d.b)("DirectoryPage", {
                     autoReportInteractive: !0,
                     destination: c.a.BrowseGames
                 }), Object(s.a)({
@@ -2358,7 +2359,7 @@
             n.d(t, "BrowseGamesPageComponent", function() {
                 return Y
             }), n.d(t, "BrowseGamesPage", function() {
-                return $
+                return K
             })
         },
         T2RZ: function(e, t, n) {
@@ -3213,15 +3214,15 @@
                     feedback_action: r.Remove,
                     feedback_type: function(e) {
                         switch (e) {
-                            case c.J.CATEGORY:
+                            case c.K.CATEGORY:
                                 return l.b.Game;
-                            case c.J.CHANNEL:
+                            case c.K.CHANNEL:
                                 return l.b.Live;
-                            case c.J.SHELF:
+                            case c.K.SHELF:
                                 return l.b.Shelf;
-                            case c.J.VOD:
+                            case c.K.VOD:
                                 return l.b.Vod;
-                            case c.J.UNSPECIFIED:
+                            case c.K.UNSPECIFIED:
                                 return null;
                             default:
                                 return e

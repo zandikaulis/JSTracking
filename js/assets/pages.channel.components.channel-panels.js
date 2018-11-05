@@ -70,7 +70,7 @@
             ! function(e) {
                 e.Default = "default", e.Extension = "extension"
             }(i || (i = {}));
-            var s = ((r = {})[o.A.DEFAULT] = i.Default, r[o.A.EXTENSION] = i.Extension, r);
+            var s = ((r = {})[o.B.DEFAULT] = i.Default, r[o.B.EXTENSION] = i.Extension, r);
 
             function c(e, t) {
                 a.o.track(e, {
@@ -396,24 +396,24 @@
                             var t = this.props.paymentInstrumentType ? this.props.paymentInstrumentType.toUpperCase() : void 0,
                                 n = this.props.cardType ? this.props.cardType.toUpperCase() : void 0;
                             switch (t) {
-                                case G.C.CREDIT_CARD:
+                                case G.D.CREDIT_CARD:
                                     switch (n) {
-                                        case G.B.AMERICAN_EXPRESS:
+                                        case G.C.AMERICAN_EXPRESS:
                                             return {
                                                 src: b.a,
                                                 alt: Object(o.d)("American Express", "PaymentMethodImage")
                                             };
-                                        case G.B.DISCOVER:
+                                        case G.C.DISCOVER:
                                             return {
                                                 src: E.a,
                                                 alt: Object(o.d)("Discover", "PaymentMethodImage")
                                             };
-                                        case G.B.MASTERCARD:
+                                        case G.C.MASTERCARD:
                                             return {
                                                 src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? S.a : k.a,
                                                 alt: Object(o.d)("Mastercard", "PaymentMethodImage")
                                             };
-                                        case G.B.VISA:
+                                        case G.C.VISA:
                                             return {
                                                 src: O.a,
                                                 alt: Object(o.d)("Visa", "PaymentMethodImage")
@@ -428,7 +428,7 @@
                                                 alt: e
                                             }
                                     }
-                                case G.C.AMAZON:
+                                case G.D.AMAZON:
                                     return {
                                         src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? p.a : c.a,
                                         srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
@@ -440,7 +440,7 @@
                                         },
                                         alt: Object(o.d)("Amazon Pay", "PaymentMethodImage")
                                     };
-                                case G.C.PAYPAL:
+                                case G.D.PAYPAL:
                                     return {
                                         src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? A.a : D.a,
                                         srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
@@ -1575,45 +1575,6 @@
             };
             e.exports = n
         },
-        BzTJ: function(e, t, n) {
-            "use strict";
-            var r, i = n("mrSG"),
-                a = n("q1tI"),
-                o = n("/MKj"),
-                s = n("/7QA");
-            ! function(e) {
-                e.English = "english", e.All = "all", e.None = "none"
-            }(r || (r = {}));
-            var c = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        var e = s.b.get("creator_camp_launch", r.None),
-                            t = this.props.unavailable || null;
-                        switch (e) {
-                            case r.English:
-                                return "en" === this.props.languageCode ? this.props.children : t;
-                            case r.All:
-                                return this.props.children;
-                            default:
-                                return t
-                        }
-                    }, t
-                }(a.Component),
-                l = Object(o.connect)(function(e) {
-                    return {
-                        languageCode: e.session.languageCode
-                    }
-                })(c);
-            n.d(t, !1, function() {
-                return r
-            }), n.d(t, !1, function() {
-                return c
-            }), n.d(t, "a", function() {
-                return l
-            })
-        },
         C8FX: function(e, t, n) {
             "use strict";
             var r = n("mrSG"),
@@ -2132,7 +2093,7 @@
                                         case 1:
                                             return e.trys.push([1, 3, , 4]), [4, this.props.createPanel({
                                                 channelID: this.props.channelID,
-                                                type: K.A.DEFAULT
+                                                type: K.B.DEFAULT
                                             })];
                                         case 2:
                                             return e.sent(), this.setState({
@@ -2161,7 +2122,7 @@
                                         case 1:
                                             return e.trys.push([1, 3, , 4]), [4, this.props.createPanel({
                                                 channelID: this.props.channelID,
-                                                type: K.A.EXTENSION
+                                                type: K.B.EXTENSION
                                             })];
                                         case 2:
                                             return e.sent(), this.setState({
@@ -2707,13 +2668,12 @@
                 })(he),
                 ye = n("AfzZ"),
                 be = n("22qk"),
-                ve = n("eJ65"),
-                Ee = n("BzTJ");
+                ve = n("eJ65");
             n("EgbR");
             ! function(e) {
                 e.ExtensionManagement = "extension-management", e.LearnMore = "learn-more"
             }(fe || (fe = {}));
-            var Ce = function(e) {
+            var Ee = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2744,7 +2704,7 @@
                                 y: .5,
                                 x: 1
                             }
-                        }, s.createElement(G.W, null, Object(p.d)("Extension Manager", "ExtensionPanelHelpButton")))), s.createElement(Ee.a, null, s.createElement(G.Ua, {
+                        }, s.createElement(G.W, null, Object(p.d)("Extension Manager", "ExtensionPanelHelpButton")))), s.createElement(G.Ua, {
                             linkTo: "https://www.twitch.tv/creatorcamp/en/level-up/extensions/",
                             targetBlank: !0
                         }, s.createElement(G.Xa, {
@@ -2752,7 +2712,7 @@
                                 y: .5,
                                 x: 1
                             }
-                        }, s.createElement(G.W, null, Object(p.d)("Creator Camp", "ExtensionPanelHelpButton"))))), s.createElement(G.Ua, {
+                        }, s.createElement(G.W, null, Object(p.d)("Creator Camp", "ExtensionPanelHelpButton")))), s.createElement(G.Ua, {
                             "data-test-selector": fe.LearnMore,
                             linkTo: "https://help.twitch.tv/customer/portal/articles/2861187-how-to-use-extensions",
                             targetBlank: !0
@@ -2764,18 +2724,18 @@
                         }, s.createElement(G.W, null, Object(p.d)("Learn More", "ExtensionPanelHelpButton")))))))
                     }, t
                 }(s.Component),
-                ke = function(e) {
+                Ce = function(e) {
                     var t = e.channelLogin,
                         n = e.children;
                     return s.createElement(G.Xa, {
                         display: G.X.Flex,
                         fullWidth: !0,
                         justifyContent: G.Wa.Between
-                    }, s.createElement(Ce, {
+                    }, s.createElement(Ee, {
                         channelLogin: t
                     }), s.createElement(G.Xa, null, n))
                 },
-                Pe = (n("b5uE"), function(e) {
+                ke = (n("b5uE"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClickConfigure = function() {
@@ -2826,7 +2786,7 @@
                             }, d))), s.createElement(G.W, null, Object(p.d)("Panel Extension {panelExtensionNumber} of {totalPanelExtensionsAvailable}", {
                                 panelExtensionNumber: i,
                                 totalPanelExtensionsAvailable: Z.a
-                            }, "ExtensionPanelEdit"))), s.createElement(ke, {
+                            }, "ExtensionPanelEdit"))), s.createElement(Ce, {
                                 channelLogin: n
                             }, s.createElement(G.z, {
                                 type: G.F.Text,
@@ -2858,7 +2818,7 @@
                                 padding: {
                                     y: 2
                                 }
-                            }, s.createElement(G.W, null, m))), s.createElement(ke, {
+                            }, s.createElement(G.W, null, m))), s.createElement(Ce, {
                                 channelLogin: n
                             }, s.createElement(G.z, {
                                 type: G.F.Text,
@@ -2881,15 +2841,15 @@
                         })), e)
                     }, t
                 }(s.PureComponent));
-            var Se, xe = Object(i.connect)(null, function(e) {
+            var Pe, Se = Object(i.connect)(null, function(e) {
                     return Object(g.bindActionCreators)({
                         showExtensionConfigureModal: function(e) {
                             var t = a.__rest(e, []);
                             return Object(y.d)(ye.a, t)
                         }
                     }, e)
-                })(Pe),
-                Oe = (n("abgr"), function(e) {
+                })(ke),
+                xe = (n("abgr"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2935,7 +2895,7 @@
                             panel: this.props.panel,
                             removePanel: this.removePanel,
                             updatePanel: this.props.updatePanel
-                        }) : "ExtensionPanel" === this.props.panel.__typename && (e = s.createElement(xe, {
+                        }) : "ExtensionPanel" === this.props.panel.__typename && (e = s.createElement(Se, {
                             channelLogin: this.props.channelLogin,
                             extensionInstallation: this.props.extensionInstallation,
                             extensionPanelCount: this.props.extensionPanelCount,
@@ -2993,12 +2953,12 @@
                         }, Object(p.d)("Remove", "EditPanel")))))))
                     }, t
                 }(s.PureComponent)),
-                Ie = Object(d.SortableElement)(function(e) {
+                Oe = Object(d.SortableElement)(function(e) {
                     return s.createElement(G.Xa, {
                         margin: {
                             x: 1
                         }
-                    }, s.createElement(Oe, {
+                    }, s.createElement(xe, {
                         channelID: e.channelID,
                         channelLogin: e.channelLogin,
                         extensionInstallation: e.extensionInstallation,
@@ -3009,11 +2969,11 @@
                         isSorting: e.isSorting
                     }))
                 }),
-                we = Object(d.SortableContainer)(function(e) {
+                Ie = Object(d.SortableContainer)(function(e) {
                     var t = 0,
                         n = e.items.map(function(n, r) {
                             var i, a = !1;
-                            return "ExtensionPanel" === n.__typename && (i = e.extensionSlots[n.slotID], a = !0, t++), s.createElement(Ie, {
+                            return "ExtensionPanel" === n.__typename && (i = e.extensionSlots[n.slotID], a = !0, t++), s.createElement(Oe, {
                                 key: n.id,
                                 channelID: e.channelID,
                                 channelLogin: e.channelLogin,
@@ -3044,23 +3004,23 @@
                         justifyContent: G.Wa.Center
                     }, n, i)
                 }),
-                _e = n("Oz8M"),
-                Te = n("saS/"),
-                Ne = n("Rsna"),
-                De = n("ry+o"),
-                Re = n("Og0W");
+                we = n("Oz8M"),
+                _e = n("saS/"),
+                Te = n("Rsna"),
+                Ne = n("ry+o"),
+                De = n("Og0W");
             n("1pP+");
             ! function(e) {
                 e.Container = "channel_panels_container_selector", e.EmptyMessage = "no_panels_message", e.Masonry = "masonry_container_selector", e.EditToggle = "channel_panels_toggle_selector", e.Sortable = "sortable_edit_panel_list_selector"
-            }(Se || (Se = {}));
-            var je = {
+            }(Pe || (Pe = {}));
+            var Re = {
                     columnWidth: 320,
                     fitWidth: !0,
                     gutter: 20,
                     horizontalOrder: !0,
                     transitionDuration: "0"
                 },
-                Fe = function(e) {
+                je = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3111,7 +3071,7 @@
                                     });
                                 t.props.orderPanels(Object(h.a)({
                                     ids: i
-                                })), Object(h.e)(Re, {
+                                })), Object(h.e)(De, {
                                     login: t.props.channelName
                                 }, function(e) {
                                     return e.user && (e.user.panels = r), e
@@ -3127,7 +3087,7 @@
                                                 channelID: this.props.channelID
                                             })))];
                                         case 1:
-                                            return t = n.sent().data, Object(h.e)(Re, {
+                                            return t = n.sent().data, Object(h.e)(De, {
                                                 login: this.props.channelName
                                             }, function(e) {
                                                 return t.createPanel && e.user && e.user.panels.push(t.createPanel.panel), e
@@ -3146,7 +3106,7 @@
                                         case 0:
                                             return [4, this.props.deletePanel(Object(h.a)(e))];
                                         case 1:
-                                            return t.sent(), Object(h.e)(Re, {
+                                            return t.sent(), Object(h.e)(De, {
                                                 login: this.props.channelName
                                             }, function(t) {
                                                 return t.user && (t.user.panels = t.user.panels.filter(function(t) {
@@ -3184,14 +3144,14 @@
                                 y: 5
                             },
                             textAlign: G.Pb.Center,
-                            "data-test-selector": Se.EmptyMessage
+                            "data-test-selector": Pe.EmptyMessage
                         }, s.createElement(G.W, {
                             italic: !0,
                             fontSize: G.Ca.Size4
                         }, Object(p.d)("It's empty in here", "ChannelPanels"))) : s.createElement(u.a, {
                             className: "channel-panels-container",
-                            options: je,
-                            "data-test-selector": Se.Masonry,
+                            options: Re,
+                            "data-test-selector": Pe.Masonry,
                             ref: this.saveMasonryRef
                         }, this.renderPanels());
                         var a = s.createElement(G.Xa, {
@@ -3199,7 +3159,7 @@
                             margin: {
                                 bottom: 2
                             },
-                            "data-test-selector": Se.EditToggle
+                            "data-test-selector": Pe.EditToggle
                         }, s.createElement(G.Vb, {
                             id: "edit-panels-toggle",
                             onChange: this.toggleEditMode
@@ -3212,7 +3172,7 @@
                             channelID: this.props.channelID
                         }, s.createElement(G.Xa, {
                             className: "channel-panels",
-                            "data-test-selector": Se.Container
+                            "data-test-selector": Pe.Container
                         }, this.canEditPanels() && a, i))
                     }, t.prototype.renderEditPanels = function() {
                         var e = this.props.channelPanelsData.user;
@@ -3220,7 +3180,7 @@
                         var t = e.panels.filter(function(e) {
                             return e
                         });
-                        return s.createElement(we, {
+                        return s.createElement(Ie, {
                             axis: "xy",
                             channelID: this.props.channelID,
                             channelLogin: this.props.channelName,
@@ -3280,7 +3240,7 @@
                         }, {}) : {}
                     }, t
                 }(s.Component),
-                Ae = Object(c.compose)(Object(M.b)("ChannelPanels"), Object(m.a)(Re, {
+                Fe = Object(c.compose)(Object(M.b)("ChannelPanels"), Object(m.a)(De, {
                     name: "channelPanelsData",
                     options: function(e) {
                         return {
@@ -3289,13 +3249,13 @@
                             }
                         }
                     }
-                }), Object(m.a)(_e, {
+                }), Object(m.a)(we, {
                     name: "createPanel"
-                }), Object(m.a)(Te, {
+                }), Object(m.a)(_e, {
                     name: "deletePanel"
-                }), Object(m.a)(De, {
-                    name: "updatePanel"
                 }), Object(m.a)(Ne, {
+                    name: "updatePanel"
+                }), Object(m.a)(Te, {
                     name: "orderPanels"
                 }), Object(f.c)({
                     name: "extensionsForChannel",
@@ -3306,15 +3266,15 @@
                             }
                         }
                     }
-                }))(Fe);
-            var Me = Object(i.connect)(function(e) {
+                }))(je);
+            var Ae = Object(i.connect)(function(e) {
                 return {
                     rightColumnExpanded: e.ui.rightColumnExpanded,
                     sideNavExpanded: e.ui.sideNavExpanded
                 }
-            })(Ae);
+            })(Fe);
             n.d(t, "PublicProps", function() {}), n.d(t, "ChannelPanels", function() {
-                return Me
+                return Ae
             })
         },
         FBRg: function(e, t, n) {
@@ -5293,7 +5253,7 @@
 
             function c(e) {
                 var t = [];
-                return e.component && e.component.viewerURL && t.push(o.u.COMPONENT), e.panel && e.panel.viewerURL && t.push(o.u.PANEL), e.videoOverlay && e.videoOverlay.viewerURL && t.push(o.u.VIDEO_OVERLAY), t
+                return e.component && e.component.viewerURL && t.push(o.v.COMPONENT), e.panel && e.panel.viewerURL && t.push(o.v.PANEL), e.videoOverlay && e.videoOverlay.viewerURL && t.push(o.v.VIDEO_OVERLAY), t
             }
 
             function l(e) {
@@ -5732,7 +5692,7 @@
                                             }, e)
                                         }
                                     }, "CheckoutDescription");
-                                return d.createElement(d.Fragment, null, d.createElement(C.W, null, e), this.props.product.product.interval.unit === g.O.MONTH && d.createElement(C.W, null, t))
+                                return d.createElement(d.Fragment, null, d.createElement(C.W, null, e), this.props.product.product.interval.unit === g.P.MONTH && d.createElement(C.W, null, t))
                             }
                         },
                         enumerable: !0,
@@ -7799,10 +7759,10 @@
                                                 awaitingResponse: !0,
                                                 zipCodeError: !1
                                             }), this.props.savedPaymentMethod.paymentType.toUpperCase()) {
-                                                case g.C.AMAZON:
+                                                case g.D.AMAZON:
                                                     e = Q.b.RecurlyPayWithAmazon, t = "amazon";
                                                     break;
-                                                case g.C.PAYPAL:
+                                                case g.D.PAYPAL:
                                                     e = Q.b.RecurlyPaypal, t = "paypal";
                                                     break;
                                                 default:
@@ -7901,11 +7861,11 @@
                     }, Object.defineProperty(e.prototype, "recurlySavedPaymentEligible", {
                         get: function() {
                             if (this.savedPaymentMethodPaymentType) switch (this.savedPaymentMethodPaymentType.toUpperCase()) {
-                                case g.C.AMAZON:
+                                case g.D.AMAZON:
                                     return this.recurlyAmazonPayEligible;
-                                case g.C.CREDIT_CARD:
+                                case g.D.CREDIT_CARD:
                                     return this.recurlyCreditCardEligible;
-                                case g.C.PAYPAL:
+                                case g.D.PAYPAL:
                                     return this.recurlyPaypalEligible;
                                 default:
                                     return !1
@@ -8167,9 +8127,9 @@
                     }), Object.defineProperty(t.prototype, "savedPaymentMethod", {
                         get: function() {
                             var e = (this.props.data && this.props.data.currentUser && this.props.data.currentUser.paymentMethods || []).filter(function(e) {
-                                return e.provider.toUpperCase() === g.D.RECURLY
+                                return e.provider.toUpperCase() === g.E.RECURLY
                             })[0];
-                            return e ? e.paymentType.toUpperCase() === g.C.PAYPAL && this.disablePayPal ? null : e.paymentType.toUpperCase() === g.C.AMAZON && this.disableAmazonPay ? null : e : null
+                            return e ? e.paymentType.toUpperCase() === g.D.PAYPAL && this.disablePayPal ? null : e.paymentType.toUpperCase() === g.D.AMAZON && this.disableAmazonPay ? null : e : null
                         },
                         enumerable: !0,
                         configurable: !0
@@ -8477,22 +8437,22 @@
                             var t = this.existingPurchases && this.existingPurchases.compatiblePurchases;
                             if (t) {
                                 var n = t.find(function(e) {
-                                        return e.paymentProvider.toUpperCase() === g.D.PRIME
+                                        return e.paymentProvider.toUpperCase() === g.E.PRIME
                                     }),
                                     i = t.find(function(t) {
-                                        return t.productType.toUpperCase() === g.Q.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) < parseInt(t.productTier, 10)
+                                        return t.productType.toUpperCase() === g.R.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) < parseInt(t.productTier, 10)
                                     }),
                                     a = t.find(function(t) {
-                                        return t.productType.toUpperCase() === g.Q.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) > parseInt(t.productTier, 10)
+                                        return t.productType.toUpperCase() === g.R.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) > parseInt(t.productTier, 10)
                                     }),
                                     o = t.find(function(e) {
-                                        return e.paymentProvider.toUpperCase() === g.D.GOOGLE_IAB
+                                        return e.paymentProvider.toUpperCase() === g.E.GOOGLE_IAB
                                     });
                                 if (n) return I.PRIME_UPGRADE;
                                 if (i) return I.TIER_DOWNGRADE;
                                 if (a) return o ? I.MOBILE_UPGRADE : I.TIER_UPGRADE
                             }
-                            return !this.existingPurchases || this.existingPurchases && !this.existingPurchases.details && !this.existingPurchases.compatiblePurchases || this.existingPurchases.details && this.existingPurchases.details.state === g.R.INACTIVE ? I.NEW_PURCHASE : I.UNKNOWN
+                            return !this.existingPurchases || this.existingPurchases && !this.existingPurchases.details && !this.existingPurchases.compatiblePurchases || this.existingPurchases.details && this.existingPurchases.details.state === g.S.INACTIVE ? I.NEW_PURCHASE : I.UNKNOWN
                         },
                         enumerable: !0,
                         configurable: !0
@@ -8550,7 +8510,7 @@
                     }), Object.defineProperty(t.prototype, "DEPRECRATE_hasActiveMobileSub", {
                         get: function() {
                             var e = this.existingPurchases;
-                            return !(!e || !e.details || e.details.paymentProvider.toUpperCase() !== g.D.GOOGLE_IAB)
+                            return !(!e || !e.details || e.details.paymentProvider.toUpperCase() !== g.E.GOOGLE_IAB)
                         },
                         enumerable: !0,
                         configurable: !0
@@ -11603,7 +11563,7 @@
                 _ = n("GnwI"),
                 T = n("9fjZ"),
                 N = l.a.wrap(function() {
-                    return n.e(202).then(n.bind(null, "skV9"))
+                    return n.e(203).then(n.bind(null, "skV9"))
                 }, "CampaignsTicketDescription"),
                 D = function(e) {
                     function t() {
@@ -11698,7 +11658,7 @@
                     }), Object.defineProperty(t.prototype, "productDisplayName", {
                         get: function() {
                             var e = this.props.data.product;
-                            return e && e.priceInfo && e.priceInfo.currency !== p.q.USD ? this.tierToDisplayMap[e.tier || ""] || Object(c.d)("Channel Subscription", "TicketDescription") : e && e.displayName
+                            return e && e.priceInfo && e.priceInfo.currency !== p.r.USD ? this.tierToDisplayMap[e.tier || ""] || Object(c.d)("Channel Subscription", "TicketDescription") : e && e.displayName
                         },
                         enumerable: !0,
                         configurable: !0

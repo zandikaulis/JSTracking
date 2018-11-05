@@ -4,29 +4,27 @@
             "use strict";
             n.r(t);
             var r, i = n("mrSG"),
-                a = n("q1tI"),
-                o = n("/7QA"),
-                l = n("Ue10"),
-                u = "cc_v2_trial_test_enabled";
+                o = n("q1tI"),
+                a = n("/7QA"),
+                l = n("Ue10");
             ! function(e) {
                 e.TRIAL_BANNER = "multiview_banner_trial_banner", e.ENTER_TRIAL_BUTTON = "multiview_banner_enter_trial_button"
             }(r || (r = {}));
-            var s = function(e) {
+            var u = function(e) {
                     function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.trialOverrideEnabled = o.b.get(u, !1), t
+                        return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.trialOverrideEnabled && this.props.triggerPlayerReposition()
+                        this.props.triggerPlayerReposition()
                     }, t.prototype.componentDidUpdate = function() {
-                        this.trialOverrideEnabled && this.props.triggerPlayerReposition()
+                        this.props.triggerPlayerReposition()
                     }, t.prototype.render = function() {
-                        return this.trialOverrideEnabled ? a.createElement(l.i, {
+                        return o.createElement(l.i, {
                             type: l.n.SlideInBottom,
                             delay: l.j.Medium,
                             duration: l.k.Medium,
                             enabled: !0
-                        }, a.createElement(l.Cb, {
+                        }, o.createElement(l.Cb, {
                             "data-test-selector": r.TRIAL_BANNER,
                             display: l.X.Flex,
                             background: l.r.Base,
@@ -39,41 +37,39 @@
                                 topLeft: l.x.Large,
                                 topRight: l.x.Large
                             }
-                        }, a.createElement(l.qb, {
+                        }, o.createElement(l.qb, {
                             asset: l.rb.MultiscreenEqualThree,
                             type: l.sb.Inherit
-                        }), a.createElement(l.Xa, {
+                        }), o.createElement(l.Xa, {
                             margin: {
                                 x: 1
                             }
-                        }, a.createElement(l.Pa, {
+                        }, o.createElement(l.Pa, {
                             margin: {
                                 right: 1
                             }
-                        }, a.createElement(l.W, {
+                        }, o.createElement(l.W, {
                             fontSize: l.Ca.Size5,
                             type: l.Tb.Strong
-                        }, Object(o.e)("Twitch Multiview", "MultiviewBanner"))), a.createElement(l.W, {
+                        }, Object(a.e)("Twitch Multiview", "MultiviewBanner"))), o.createElement(l.W, {
                             fontSize: l.Ca.Size5,
                             type: l.Tb.Span
-                        }, Object(o.e)("Choose your own streams including player POVs", "MultiviewBanner"))), a.createElement(l.Xa, {
+                        }, Object(a.e)("Choose your own streams including player POVs", "MultiviewBanner"))), o.createElement(l.Xa, {
                             margin: {
                                 left: "auto"
                             }
-                        }, a.createElement(l.z, {
+                        }, o.createElement(l.z, {
                             "data-test-selector": r.ENTER_TRIAL_BUTTON,
                             type: l.F.Hollow,
-                            linkTo: "/" + this.props.channelLogin + "/multiview"
-                        }, Object(o.e)("Try Multiview For Free", "MultiviewBanner"))))) : null
+                            linkTo: "multiview"
+                        }, Object(a.e)("Launch Multiview", "MultiviewBanner")))))
                     }, t
-                }(a.Component),
-                c = s;
-            n.d(t, "TRIAL_ENABLED_OVERRIDE_SETTING", function() {
-                return u
-            }), n.d(t, "TestSelectors", function() {
+                }(o.Component),
+                c = u;
+            n.d(t, "TestSelectors", function() {
                 return r
             }), n.d(t, "MultiviewBannerPresentation", function() {
-                return s
+                return u
             }), n.d(t, "MultiviewBanner", function() {
                 return c
             })

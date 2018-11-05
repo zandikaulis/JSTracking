@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [170], {
+    [171], {
         "/2kD": function(e, t) {
             var n = {
                 kind: "Document",
@@ -1452,7 +1452,7 @@
             }(i || (i = {}));
             var d = function(e) {
                 var t, n = e.clip;
-                if (!(n.video && n.video.id && null !== n.videoOffsetSeconds && n.broadcaster && n.broadcaster.login && n.video.broadcastType === l.g.ARCHIVE)) {
+                if (!(n.video && n.video.id && null !== n.videoOffsetSeconds && n.broadcaster && n.broadcaster.login && n.video.broadcastType === l.h.ARCHIVE)) {
                     var d = n.video ? Object(r.d)("You can only highlight past broadcasts", "ClipsFullVideoButton") : Object(r.d)("Full video not available", "ClipsFullVideoButton");
                     return a.createElement(c.Wb, {
                         label: d

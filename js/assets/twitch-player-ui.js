@@ -2631,42 +2631,42 @@
                             var t = this;
                             switch (e) {
                                 case s.PLAYER_AMAZON_LIVE:
-                                    return n.e(209).then(function() {
+                                    return n.e(210).then(function() {
                                         var e = n("iSLP");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_CLIPS_VIEWING:
-                                    return n.e(208).then(function() {
+                                    return n.e(209).then(function() {
                                         var e = n("5Kqy");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_CLIPS_EMBED:
-                                    return n.e(207).then(function() {
+                                    return n.e(208).then(function() {
                                         var e = n("aRgI");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_CLIPS_EDITING:
-                                    return n.e(206).then(function() {
+                                    return n.e(207).then(function() {
                                         var e = n("3K1P");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_CLIPS_WATCH:
-                                    return n.e(205).then(function() {
+                                    return n.e(206).then(function() {
                                         var e = n("8/R1");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_HIGHLIGHTER:
-                                    return n.e(204).then(function() {
+                                    return n.e(205).then(function() {
                                         var e = n("SVNA");
                                         t.setState({
                                             playerTypeComponent: e.default
@@ -5954,15 +5954,6 @@
                         notifications: n
                     },
                     method: "PUT"
-                })
-            }, t.getCommunitiesFromChannel = function(e) {
-                return C(e).then(function(e) {
-                    var t = e._id;
-                    return O("channels/" + t + "/communities").then(function(e) {
-                        return Promise.resolve(e)
-                    }).catch(function(e) {
-                        return Promise.reject("Bad communities for " + t + ": " + e)
-                    })
                 })
             }, t.getFeaturedCollection = function(e) {
                 return b({
@@ -9591,19 +9582,19 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.FETCH_METADATA_TIMEOUT = t.VIEWERS_NOT_SET = t.ACTION_UPDATE_STREAMMETADATA = t.ACTION_SET_STREAMMETADATA = void 0, t.setVODStreamMetadata = _, t.setLiveStreamMetadata = h, t.updateLiveStreamMetadata = function(e) {
+            }), t.FETCH_METADATA_TIMEOUT = t.VIEWERS_NOT_SET = t.ACTION_UPDATE_STREAMMETADATA = t.ACTION_SET_STREAMMETADATA = void 0, t.setVODStreamMetadata = p, t.setLiveStreamMetadata = _, t.updateLiveStreamMetadata = function(e) {
                 var t = e.gameName,
                     n = e.title;
                 return {
-                    type: d,
+                    type: c,
                     streamMetadata: {
                         gameName: t,
                         title: n
                     }
                 }
-            }, t.setLiveStreamMetadataTags = m, t.updateBroadcastID = function(e) {
+            }, t.setLiveStreamMetadataTags = h, t.updateBroadcastID = function(e) {
                 return {
-                    type: c,
+                    type: u,
                     streamMetadata: {
                         broadcastID: e
                     }
@@ -9615,11 +9606,11 @@
                         i = t().streamMetadata.broadcastID;
                     return new Promise(function(s, l) {
                         ! function n(a, i, u, c) {
-                            if (i !== t().stream.channel || u !== t().streamMetadata.broadcastID || a >= p.length) return void l();
+                            if (i !== t().stream.channel || u !== t().streamMetadata.broadcastID || a >= f.length) return void l();
                             (0, r.streamInfo)(i).then(function(t) {
-                                t.stream && t.stream._id === u ? (e((0, o.updateViewerCount)(t.stream.viewers)), e(h(t.stream)), s(t)) : c.setTimeout(function() {
+                                t.stream && t.stream._id === u ? (e((0, o.updateViewerCount)(t.stream.viewers)), e(_(t.stream)), s(t)) : c.setTimeout(function() {
                                     return n(a + 1, i, u, c)
-                                }, p[a])
+                                }, f[a])
                             })
                         }(0, a, i, n)
                     })
@@ -9628,15 +9619,15 @@
                 return function(t, n) {
                     if (e.contentType === a.CONTENT_MODE_LIVE) {
                         (0, r.streamInfo)(e.channel).then(function(n) {
-                            n.stream ? t(h(n.stream)) : (0, r.channelInfo)(e.channel).then(function(e) {
+                            n.stream ? t(_(n.stream)) : (0, r.channelInfo)(e.channel).then(function(e) {
                                 t({
-                                    type: c,
-                                    streamMetadata: E(e)
+                                    type: u,
+                                    streamMetadata: m(e)
                                 })
                             })
                         }), (0, r.channelStreamInfo)(e.channel).then(function(e) {
                             t({
-                                type: c,
+                                type: u,
                                 streamMetadata: function(e) {
                                     return {
                                         isEncrypted: !!e.channel.stream.isEncrypted
@@ -9645,21 +9636,19 @@
                             })
                         });
                         var o = n();
-                        o.env.playerType !== u.PLAYER_SITE && o.experiments.get(l.TWILIGHT_TAGS).then(function(n) {
-                            "experiment" === n && (0, r.channelTagsInfo)(e.channel).then(function(e) {
-                                e.channel && e.channel.stream && t(m(e.channel.stream.tags))
-                            })
+                        o.env.playerType !== l.PLAYER_SITE && (0, r.channelTagsInfo)(e.channel).then(function(e) {
+                            e.channel && e.channel.stream && t(h(e.channel.stream.tags))
                         })
                     } else e.contentType === i.CONTENT_MODE_VOD && (0, r.videoInfo)(e.videoId).then(function(e) {
-                        t(_(e))
+                        t(p(e))
                     })
                 }
             }, t.fetchDeadLtvStreamMetadata = function(e) {
                 return function(t, n) {
                     (0, r.channelInfo)(e).then(function(e) {
                         t({
-                            type: c,
-                            streamMetadata: (0, s.default)({}, E(e), {
+                            type: u,
+                            streamMetadata: (0, s.default)({}, m(e), {
                                 streamType: "dead_ltv"
                             })
                         })
@@ -9667,7 +9656,7 @@
                 }
             }, t.setClipStreamMetadata = function(e) {
                 return {
-                    type: c,
+                    type: u,
                     streamMetadata: (0, s.default)({}, function(e) {
                         var t = {
                                 id: e.tracking_id,
@@ -9706,7 +9695,7 @@
                 }
             }, t.setEditClipStreamMetadata = function(e) {
                 return {
-                    type: c,
+                    type: u,
                     streamMetadata: (0, s.default)({}, function(e) {
                         return {
                             duration: e.duration,
@@ -9724,16 +9713,15 @@
                         default: e
                     }
                 }(n("3OWR")),
-                l = n("Rnd+"),
-                u = n("uC+K");
-            var c = t.ACTION_SET_STREAMMETADATA = "set streammetadata",
-                d = t.ACTION_UPDATE_STREAMMETADATA = "update streammetadata",
-                f = t.VIEWERS_NOT_SET = 0,
-                p = t.FETCH_METADATA_TIMEOUT = [15e3, 3e4, 6e4, 12e4, 3e5, 6e5];
+                l = n("uC+K");
+            var u = t.ACTION_SET_STREAMMETADATA = "set streammetadata",
+                c = t.ACTION_UPDATE_STREAMMETADATA = "update streammetadata",
+                d = t.VIEWERS_NOT_SET = 0,
+                f = t.FETCH_METADATA_TIMEOUT = [15e3, 3e4, 6e4, 12e4, 3e5, 6e5];
 
-            function _(e) {
+            function p(e) {
                 return {
-                    type: c,
+                    type: u,
                     streamMetadata: function(e) {
                         return {
                             broadcastID: e.broadcast_id,
@@ -9755,15 +9743,15 @@
                                 template: e.preview.template
                             },
                             url: e.url,
-                            viewers: f
+                            viewers: d
                         }
                     }(e)
                 }
             }
 
-            function h(e) {
+            function _(e) {
                 return {
-                    type: c,
+                    type: u,
                     streamMetadata: function(e) {
                         return {
                             broadcastID: e._id,
@@ -9792,16 +9780,16 @@
                 }
             }
 
-            function m(e) {
+            function h(e) {
                 return {
-                    type: c,
+                    type: u,
                     streamMetadata: {
                         tags: e
                     }
                 }
             }
 
-            function E(e) {
+            function m(e) {
                 return {
                     channel: {
                         displayName: e.display_name,
@@ -11534,38 +11522,6 @@
                     isClipsPlayerType: (0, l.default)(T.CLIPS_PLAYER_TYPES, t.playerType)
                 }
             }, C)(P)
-        },
-        CZM8: function(e, t, n) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.setCommunitiesData = function(e) {
-                if (!e) return {
-                    type: a
-                };
-                return {
-                    type: r,
-                    communities: function(e) {
-                        var t = e.communities;
-                        if (t.length < 1) return {
-                            data: [],
-                            ids: ""
-                        };
-                        return {
-                            data: t,
-                            ids: i(t)
-                        }
-                    }(e)
-                }
-            }, t.joinCommunitiesIds = i;
-            var r = t.ACTION_SET_COMMUNITIES_DATA = "set communities data",
-                a = t.ACTION_INVALID_COMMUNITIES_DATA = "invalid communities data";
-
-            function i(e) {
-                return e.map(function(e) {
-                    return e._id
-                }).join(",")
-            }
         },
         CZoQ: function(e, t) {
             e.exports = function(e, t, n) {
@@ -13595,12 +13551,7 @@
                         default: e
                     }
                 }(n("J2m7"));
-            var d = 30,
-                f = function(e) {
-                    return Array.isArray(e) && 0 !== e.length ? e.map(function(e) {
-                        return e._id
-                    }).join(",") : null
-                };
+            var d = 30;
             t.AdsRequestContext = function() {
                 function e(t) {
                     var n = t.adType,
@@ -13608,19 +13559,18 @@
                         i = t.channelInfo,
                         o = t.channelStreamInfo,
                         s = t.channelViewerInfo,
-                        l = t.communitiesInfo,
-                        c = t.creativeId,
-                        p = t.duration,
-                        _ = t.embedPromo,
-                        h = t.forced,
-                        m = t.lastAdDisplay,
-                        E = t.raid,
-                        y = t.requestType,
-                        v = t.state,
-                        g = t.viewerInfo;
+                        l = t.creativeId,
+                        c = t.duration,
+                        f = t.embedPromo,
+                        p = t.forced,
+                        _ = t.lastAdDisplay,
+                        h = t.raid,
+                        m = t.requestType,
+                        E = t.state,
+                        y = t.viewerInfo;
                     ! function(e, t) {
                         if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-                    }(this, e), this.contentType = v.stream.contentType, this.adSessionId = (0, a.generate)(d), this.adType = n, this.raid = E, this.channel = i.name, this.channelId = i._id, this.communityIds = f(l.communities), this.twitchCorrelator = (0, a.generate)(), this.deviceId = u.get(!1), this.duration = p, this.requestType = y, this.lastAdDisplay = m, this.forced = h, this.requestTime = Date.now(), this.creativeId = c, this.embedPromo = _, this._initViewerInfoFields(g), this._initChannelInfoFields(i, o), this._initStateFields(v), this._initAmazonFields(), this._initChannelAdPropertiesFields(r), this._initChannelViewerInfoFields(s)
+                    }(this, e), this.contentType = E.stream.contentType, this.adSessionId = (0, a.generate)(d), this.adType = n, this.raid = h, this.channel = i.name, this.channelId = i._id, this.twitchCorrelator = (0, a.generate)(), this.deviceId = u.get(!1), this.duration = c, this.requestType = m, this.lastAdDisplay = _, this.forced = p, this.requestTime = Date.now(), this.creativeId = l, this.embedPromo = f, this._initViewerInfoFields(y), this._initChannelInfoFields(i, o), this._initStateFields(E), this._initAmazonFields(), this._initChannelAdPropertiesFields(r), this._initChannelViewerInfoFields(s)
                 }
                 return r(e, [{
                     key: "_initChannelViewerInfoFields",
@@ -14718,7 +14668,7 @@
                     sdk: e.sdk,
                     broadcaster_software: e.broadcasterSoftware
                 };
-                if (null !== e.communityIds && (t.community = e.communityIds), null !== e.kruxId && (t.kuid = e.kruxId), e.contentType === u.CONTENT_MODE_VOD && (t.vod_id = e.vod.id, t.vod_name = e.vod.name, t.vod_type = e.vod.type), t.embed) {
+                if (null !== e.kruxId && (t.kuid = e.kruxId), e.contentType === u.CONTENT_MODE_VOD && (t.vod_id = e.vod.id, t.vod_name = e.vod.name, t.vod_type = e.vod.type), t.embed) {
                     var n = function(e) {
                         var t = (0, s.parseUri)(e);
                         if (function(e) {
@@ -17739,7 +17689,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            t.APP_VERSION = "8.8.0"
+            t.APP_VERSION = "8.9.0"
         },
         "NE/w": function(e, t, n) {
             var r;
@@ -19446,31 +19396,29 @@
                     });
                     return Promise.reject(new Error("Invalid stream: " + e))
                 }(n.stream).then(function(e) {
-                    return Promise.all([(0, s.viewerInfo)(), (0, s.channelInfo)(e), (0, s.channelStreamInfo)(e), (0, s.channelViewerInfo)(e), (0, s.getChannelAdProperties)(e), (0, s.getCommunitiesFromChannel)(e)])
+                    return Promise.all([(0, s.viewerInfo)(), (0, s.channelInfo)(e), (0, s.channelStreamInfo)(e), (0, s.channelViewerInfo)(e), (0, s.getChannelAdProperties)(e)])
                 }).then(function(i) {
-                    var o = r(i, 6),
+                    var o = r(i, 5),
                         s = o[0],
                         p = o[1],
                         _ = o[2],
                         h = o[3],
                         m = o[4],
-                        E = o[5],
-                        y = (0, c.parseUri)(n.window.location.href).queryKey,
-                        v = "raid" === y.referrer,
-                        g = "true" === y.promo;
+                        E = (0, c.parseUri)(n.window.location.href).queryKey,
+                        y = "raid" === E.referrer,
+                        v = "true" === E.promo;
                     return new a.AdsRequestContext({
                         adType: e,
                         channelAdProperties: m,
                         channelInfo: p,
                         channelStreamInfo: _,
                         channelViewerInfo: h,
-                        communitiesInfo: E,
                         creativeId: d,
                         duration: t,
-                        embedPromo: g,
+                        embedPromo: v,
                         forced: u,
                         lastAdDisplay: l.localStore.get("lastAdDisplay", 0),
-                        raid: v,
+                        raid: y,
                         requestType: f,
                         sdk: n.sdk,
                         state: n,
@@ -21146,7 +21094,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            t.trustedSpadeURI = "//video-edge-8447d4.sjc02.hls.ttvnw.net/v1/segment/Cp5wsSefFVmU4yOWH66bxovBj_mSSQ6sdpOVwQ6-kOmYJu2yEVY-mahTPyCHzpffoE5B4VgGePtd12G-9Lw1wOpdiTh25Okr1-nmOXfOqcOXzI0MymtG0hNWnou-t-OqzJl2suD011MbHR1iqtaxLhZs-Jxi0kPhTjhO1BgaLT-JuHfDqt8NbtkdqimF8VOZjlwhZlRpNHwdSDCeU9if1UjKb-7WcP3XaptgQTjv23sQXQCibclAT-gJ0KZ-N-Vq2ZKCAgy5Gq8io8k3d3s5M1_dSiKw7XyG8x5TbqQIggIBx0a_HWm0pZ3_B2RxBiSwEaDJWdpMceADAFfVe6W4zLiSqmS1W0rlOf2to55rkLxuMwFJWfML9Hc9i1_syXgQJMk_BmrepIr2ruYjB1rNBpGSMz8qbn5dzfMMw0ebQUZoo7mizqPjHCcJb7Ij96TO-OXVzs-PUAJTVPJgz7JfsAmZ1DBb0cKDD1p2Wl_fjkByBjIxvTYe6SqSCqSmu2ePQlLZZHft-bOade0O68AzcMqaPz5EV01aL4kxSXMCxKHrLVpZDg8snOwAOG-FUUk-u8kFslz5N-EUuIYd53GBLG0WZIFm3lYPcZVS_8UICzJaoa7CKRhhZUkE-MOcGKOsSJVcBSgvXSV-ILHqQ9qpj6UiMMSdy9nRXFYPp57Fc-tXidPnDrXVJT8SS6_k7aXry17ZHkoukbK5jZTrMx_uMjLds8vjrEnmUBfA8DV9_HqjDwCqI4ZKC-rTkpGWBCAJEHvT-2UJbDl_CZIS.ts"
+            t.trustedSpadeURI = "//video-edge-65edad.sjc02.hls.ttvnw.net/v1/segment/CmuWN2zB2crsu_57cftsHi7Xfwm7Hfi1zSZIxT9S4ILmk7V0u52HhVrwo9GVyJreHhCPHCvXef7cTgWedfDNpW8_ASBSQRoAntW6C8iqWOGWdOIOX5PnaddBg8bapk-jVUzWkS3L4HuZJ7MNAuD2XFVtcxWt4yEwwRlRzNwKrRfnsfJQt3YUrjn8ziKuvo2lZtBBfSp8XSWpwWDeo4T_DKrx0zMVpXFaE8fwszu_TnH887diuu7GfHDT3E8cIUWmfIpch-dtzRak2foRF9Kf0GmDfMmJnX12raPodZE1rzBgVMnFoBLnCj-mXGIahfclyVduKH-7WmQJr9JC7JOtI2wpFbdG4II34lIDSqLmxM49NXjXO0Vs75qHugREQZgKW2AtLDqkaROYGJm19nyxN0klvLbJGJn_3vUvT4cIUz5NNvPynWfhkEEd35bhLfIPX-Jlx3yxRflDyCqjPe05AF_KC-s-8NXEUttwz87pSTu9GuX-atx2wPnQPNyluyDoxbJPKb6lYB7ojQ0g4ZUBN392q4kVrUn0r395ESgftvlrCg4Smq8ZCckI3gw6fFpPyKdaLVC58YtAIxXw4V2w6qDpSrSckTd8AdzBzcI8GpYdvFcBRgha8CnTKftsNwfguRhsacqXmG2bEi4rjqNL5ap4bxsifveo55iBHJodSghnjqxgddKNmwcAIp4SGg1mXCYU1agklJ_8QjuRMalD5DTshRZr9yD3gcvmfIpUZVMZtQsgcaeXb2rDrQxigUyH3VTEyv_ekSk1DJ9NOuIfbCf60.ts"
         },
         RhBK: function(e, t, n) {
             "use strict";
@@ -21154,7 +21102,7 @@
                 value: !0
             }), t.init = function() {
                 var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                return (0, r.createStore)(he, e, (0, r.compose)((0, r.applyMiddleware)(a.default, (0, ce.createVideoApiMiddleware)()), (0, r.applyMiddleware)(a.default, (0, de.createIssueReportingMiddleware)()), (0, r.applyMiddleware)(a.default, (0, oe.createEventEmitterMiddleware)()), (0, r.applyMiddleware)(a.default, (0, se.createExtensionsMiddleware)()), (0, r.applyMiddleware)(a.default, (0, ie.createEmbedHostMiddleware)()), (0, r.applyMiddleware)(a.default, (0, ae.createAnalyticsTrackerMiddleware)()), (0, r.applyMiddleware)(a.default, (0, fe.clipsTrackerMiddleware)()), (0, r.applyMiddleware)(a.default, (0, ue.createUIMiddleware)()), (0, r.applyMiddleware)(a.default, (0, le.createPerformanceMiddleware)()), (0, r.applyMiddleware)(a.default, (0, pe.createSettingsMiddlware)()), (0, r.applyMiddleware)(a.default, (0, _e.createCaptionsMiddleware)()), (window.devToolsExtension, function(e) {
+                return (0, r.createStore)(_e, e, (0, r.compose)((0, r.applyMiddleware)(a.default, (0, ue.createVideoApiMiddleware)()), (0, r.applyMiddleware)(a.default, (0, ce.createIssueReportingMiddleware)()), (0, r.applyMiddleware)(a.default, (0, ie.createEventEmitterMiddleware)()), (0, r.applyMiddleware)(a.default, (0, oe.createExtensionsMiddleware)()), (0, r.applyMiddleware)(a.default, (0, ae.createEmbedHostMiddleware)()), (0, r.applyMiddleware)(a.default, (0, re.createAnalyticsTrackerMiddleware)()), (0, r.applyMiddleware)(a.default, (0, de.clipsTrackerMiddleware)()), (0, r.applyMiddleware)(a.default, (0, le.createUIMiddleware)()), (0, r.applyMiddleware)(a.default, (0, se.createPerformanceMiddleware)()), (0, r.applyMiddleware)(a.default, (0, fe.createSettingsMiddlware)()), (0, r.applyMiddleware)(a.default, (0, pe.createCaptionsMiddleware)()), (window.devToolsExtension, function(e) {
                     return e
                 })))
             };
@@ -21180,55 +21128,54 @@
                 y = n("13Ki"),
                 v = n("/Qvl"),
                 g = n("Ynch"),
-                T = n("yNbp"),
-                b = n("O8dT"),
-                S = n("KR5+"),
-                O = n("Z5jU"),
-                C = n("jGRf"),
-                A = n("hm9X"),
-                P = n("zyzd"),
-                N = n("XuXH"),
-                I = n("pQoL"),
-                R = n("6PyS"),
-                w = n("xrA/"),
-                M = n("EZvc"),
-                k = n("eBJc"),
-                L = n("uAxA"),
-                D = n("u0WJ"),
-                B = n("ipln"),
-                x = n("mPFt"),
-                U = n("/njL"),
-                j = n("xsDr"),
-                V = n("biAU"),
-                q = n("wGJd"),
-                F = n("HVPV"),
-                H = n("BnOB"),
-                Y = n("gcXI"),
-                G = n("j4+h"),
-                K = n("Qkup"),
-                W = n("XbkD"),
-                Q = n("USpt"),
-                z = n("pbqf"),
-                X = n("wOLs"),
-                Z = n("byJi"),
-                J = n("/71H"),
-                $ = n("duhj"),
-                ee = n("i48D"),
-                te = n("l0UL"),
-                ne = n("vJTo"),
-                re = n("KAcK"),
-                ae = (n("9Ppm"), n("Irul"), n("aNnM")),
-                ie = n("yVH7"),
-                oe = n("mrID"),
-                se = n("Eb0K"),
-                le = n("8d/D"),
-                ue = n("7duF"),
-                ce = n("xVnJ"),
-                de = n("VpNB"),
-                fe = n("XpsQ"),
-                pe = n("Os9p"),
-                _e = n("h+ef");
-            var he = (0, r.combineReducers)({
+                T = n("O8dT"),
+                b = n("KR5+"),
+                S = n("Z5jU"),
+                O = n("jGRf"),
+                C = n("hm9X"),
+                A = n("zyzd"),
+                P = n("XuXH"),
+                N = n("pQoL"),
+                I = n("6PyS"),
+                R = n("xrA/"),
+                w = n("EZvc"),
+                M = n("eBJc"),
+                k = n("uAxA"),
+                L = n("u0WJ"),
+                D = n("ipln"),
+                B = n("mPFt"),
+                x = n("/njL"),
+                U = n("xsDr"),
+                j = n("biAU"),
+                V = n("wGJd"),
+                q = n("HVPV"),
+                F = n("BnOB"),
+                H = n("gcXI"),
+                Y = n("j4+h"),
+                G = n("Qkup"),
+                K = n("XbkD"),
+                W = n("USpt"),
+                Q = n("pbqf"),
+                z = n("wOLs"),
+                X = n("byJi"),
+                Z = n("/71H"),
+                J = n("duhj"),
+                $ = n("i48D"),
+                ee = n("l0UL"),
+                te = n("vJTo"),
+                ne = n("KAcK"),
+                re = (n("9Ppm"), n("Irul"), n("aNnM")),
+                ae = n("yVH7"),
+                ie = n("mrID"),
+                oe = n("Eb0K"),
+                se = n("8d/D"),
+                le = n("7duF"),
+                ue = n("xVnJ"),
+                ce = n("VpNB"),
+                de = n("XpsQ"),
+                fe = n("Os9p"),
+                pe = n("h+ef");
+            var _e = (0, r.combineReducers)({
                 accessToken: i.accessToken,
                 ads: o.ads,
                 adsManager: s.adsManager,
@@ -21245,43 +21192,42 @@
                 clipsData: y.clipsData,
                 clipsEditing: v.clipsEditing,
                 collection: g.collection,
-                communities: T.communities,
-                comscore: b.comscore,
-                env: S.env,
-                error: O.error,
-                experiments: C.experiments,
-                extensions: A.extensions,
-                follow: P.follow,
-                gdprConsent: N.gdprConsent,
-                lang: I.lang,
-                manifestInfo: R.manifestInfo,
-                multiview: w.multiview,
-                notifications: M.notifications,
-                online: k.online,
-                onlineStatus: L.onlineStatus,
-                performance: D.performance,
-                playback: B.playback,
-                playerDimensions: x.playerDimensions,
-                playerOptions: U.playerOptions,
-                quality: j.quality,
-                recommendations: V.recommendations,
-                resumeWatch: q.resumeWatch,
-                screen: F.screen,
-                screenMode: H.screenMode,
-                settings: Y.settings,
-                stats: G.stats,
-                stream: K.stream,
-                streamMetadata: W.streamMetadata,
-                subscriptions: Q.subscriptions,
-                timelineMetadata: z.timelineMetadata,
-                tracking: X.tracking,
-                ui: Z.ui,
-                user: J.user,
-                usher: $.usher,
-                viewercount: ee.viewercount,
-                vod: te.vod,
-                watchParty: ne.watchParty,
-                window: re.windowReducer
+                comscore: T.comscore,
+                env: b.env,
+                error: S.error,
+                experiments: O.experiments,
+                extensions: C.extensions,
+                follow: A.follow,
+                gdprConsent: P.gdprConsent,
+                lang: N.lang,
+                manifestInfo: I.manifestInfo,
+                multiview: R.multiview,
+                notifications: w.notifications,
+                online: M.online,
+                onlineStatus: k.onlineStatus,
+                performance: L.performance,
+                playback: D.playback,
+                playerDimensions: B.playerDimensions,
+                playerOptions: x.playerOptions,
+                quality: U.quality,
+                recommendations: j.recommendations,
+                resumeWatch: V.resumeWatch,
+                screen: q.screen,
+                screenMode: F.screenMode,
+                settings: H.settings,
+                stats: Y.stats,
+                stream: G.stream,
+                streamMetadata: K.streamMetadata,
+                subscriptions: W.subscriptions,
+                timelineMetadata: Q.timelineMetadata,
+                tracking: z.tracking,
+                ui: X.ui,
+                user: Z.user,
+                usher: J.usher,
+                viewercount: $.viewercount,
+                vod: ee.vod,
+                watchParty: te.watchParty,
+                window: ne.windowReducer
             })
         },
         Rmx2: function(e, t, n) {
@@ -21413,16 +21359,16 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.HIDDEN_MW = t.TWILIGHT_VOD_ARCHER = t.TWILIGHT_VOD_TOP_SHELF = t.TWILIGHT_TAGS = t.NIELSEN_ANALYTICS = t.VIDEO_EDGE_REASSIGNMENT = t.PLAYER_CORE_STAFF_VERSION = t.PLAYER_CORE_WASM = t.CLIPS_ON_THE_BRAIN = t.MEDIAPLAYER_VERSION_CONTROL = t.REALTIME_QOS = t.PINEAPPLE = t.MARKERS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = function(e) {
+            }), t.HIDDEN_MW = t.TWILIGHT_VOD_ARCHER = t.TWILIGHT_VOD_TOP_SHELF = t.NIELSEN_ANALYTICS = t.VIDEO_EDGE_REASSIGNMENT = t.PLAYER_CORE_STAFF_VERSION = t.PLAYER_CORE_WASM = t.CLIPS_ON_THE_BRAIN = t.MEDIAPLAYER_VERSION_CONTROL = t.REALTIME_QOS = t.PINEAPPLE = t.MARKERS = t.NETWORK_PROFILE_COLLECTION = void 0, t.bakingBreadSafeBrowser = function(e) {
                 var t = u.default._detect(e);
                 if (!t.firefox) return !0;
                 return !!t.version && parseInt(t.version.slice(0, 2), 10) > 45
             }, t.createClient = function(e) {
                 var t, n, l = (0, i.default)(s.default.SERVICE_URL, "http") ? s.default.SERVICE_URL : "https:" + s.default.SERVICE_URL;
                 return new o.default({
-                    defaults: (t = {}, f(t, p, "no"), f(t, _, "no"), f(t, h, "no"), f(t, m, "control"), f(t, E, "2.5.4"), f(t, y, "control"), f(t, v, "asmjs"), f(t, g, "2.5.4"), f(t, T, "no"), f(t, b, c.EXPERIMENT_INACTIVE), f(t, S, "control"), f(t, O, "control"), f(t, C, "control"), f(t, A, "control"), t),
+                    defaults: (t = {}, f(t, p, "no"), f(t, _, "no"), f(t, h, "no"), f(t, m, "control"), f(t, E, "2.5.4"), f(t, y, "control"), f(t, v, "asmjs"), f(t, g, "2.5.4"), f(t, T, "no"), f(t, b, c.EXPERIMENT_INACTIVE), f(t, S, "control"), f(t, O, "control"), f(t, C, "control"), t),
                     deviceID: e.deviceID,
-                    overrides: (0, a.default)((n = {}, f(n, _, P("vca")), f(n, h, P("yes")), f(n, v, P("wasm")), f(n, S, P("experiment")), n), JSON.parse(r.cookie.get("experiment_overrides", "{}"))),
+                    overrides: (0, a.default)((n = {}, f(n, _, A("vca")), f(n, h, A("yes")), f(n, v, A("wasm")), n), JSON.parse(r.cookie.get("experiment_overrides", "{}"))),
                     platform: "web",
                     login: e.login,
                     provider: new s.default(l),
@@ -21462,12 +21408,11 @@
                 g = t.PLAYER_CORE_STAFF_VERSION = "3c3a5d48-117f-43ac-8b35-091f13b2d479",
                 T = t.VIDEO_EDGE_REASSIGNMENT = "e2fecbd4-98e4-45e0-aad5-624cc70d6b85",
                 b = t.NIELSEN_ANALYTICS = "7cdee701-0ac3-4b47-94d3-b47b3b707dc8",
-                S = t.TWILIGHT_TAGS = "e911d915-baca-46b8-b6fe-e991baee776b",
-                O = t.TWILIGHT_VOD_TOP_SHELF = "9edf91e6-0499-49f2-b171-30f85573bf5a",
-                C = t.TWILIGHT_VOD_ARCHER = "de013c6f-a800-45ee-9ab4-7965c405e3eb",
-                A = t.HIDDEN_MW = "13198dad-8463-4a94-a3ee-560d8740877b";
+                S = t.TWILIGHT_VOD_TOP_SHELF = "9edf91e6-0499-49f2-b171-30f85573bf5a",
+                O = t.TWILIGHT_VOD_ARCHER = "de013c6f-a800-45ee-9ab4-7965c405e3eb",
+                C = t.HIDDEN_MW = "13198dad-8463-4a94-a3ee-560d8740877b";
 
-            function P(e) {
+            function A(e) {
                 return (0, l.krakenUserInfo)().then(function(t) {
                     return "staff" === t.type ? e : Promise.reject()
                 })
@@ -23445,84 +23390,82 @@
                     function() {
                         var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                             b = void 0;
-                        if (b = "string" == typeof e || e instanceof String ? document.getElementById(e) : e) {
-                            if (ae.dispatch((0, k.setWindow)(window)), ae.dispatch((0, pe.playerSetBaseMilestone)("web_player_init", n)), ae.dispatch((0, S.setPlayerOptions)(t)), (0, V.setOAuthToken)(t), t.debug && t.verbose && ae.subscribe(function() {
-                                    console.debug("state change: %o", ae.getState())
-                                }), t.force_manifest_node && ae.dispatch((0, fe.setUsherHostOverride)(t.force_manifest_node)), ae.dispatch(P.loadExperiments({
-                                    login: c.cookie.get("login") || null,
-                                    deviceID: d.get(!1),
-                                    userAgent: ae.getState().window.navigator.userAgent
-                                })), ae.dispatch(I.loadDefaultLang(ae.getState().window.navigator, t.lang)), ae.dispatch((0, M.setEnvironment)({
-                                    deviceId: d.get(!1)
-                                })), ae.dispatch((0, M.setPlayerType)(t.player)), ae.dispatch((0, K.setTrackingProperties)(t.tracking)), t.gdpr) {
-                                var C = t.gdpr,
-                                    H = C.amazon,
-                                    Y = C.comscore,
-                                    G = C.google,
-                                    Q = C.nielsen;
-                                ae.dispatch((0, N.setAmazonConsent)(H)), ae.dispatch((0, N.setComscoreConsent)(Y)), ae.dispatch((0, N.setGoogleConsent)(G)), ae.dispatch((0, N.setNielsenConsent)(Q))
-                            }
-                            ke.push(new y.PubSub(ae, t)), ke.push(new ne.OfflineRecommendationsManager(ae)), ke.push(new re.UserManager(ae)), ke.push(new $.VodMidrollManager(ae)), ke.push(new ve.VideoMomentsManager(ae)), ce = new s.AnalyticsTracker(ae, t), ae.dispatch((0, x.setAnalyticsTracker)(ce)), ae.dispatch((0, w.initializeQuality)()), (0, r.default)(u.CLIPS_PLAYER_TYPES, ae.getState().env.playerType) && (ge = new _e.ClipsBenchmarkTracking(ae), ae.dispatch((0, U.setClipsTracker)(ge))),
-                                function() {
-                                    var e = ae.getState().window,
-                                        t = ae.getState().analyticsTracker;
-                                    e.google ? e.google && ae.dispatch((0, O.imaScriptLoaded)(!0)) : Te.then(function() {
-                                        ae.dispatch((0, O.imaScriptLoaded)(!0))
-                                    }).catch(function() {
-                                        ae.dispatch((0, O.imaScriptLoaded)(!1)), t.trackEvent(i.AD_REQUEST_ERROR, {
-                                            reason: "ima load failed"
-                                        })
+                        if (b = "string" == typeof e || e instanceof String ? document.getElementById(e) : e, ae.dispatch((0, k.setWindow)(window)), ae.dispatch((0, pe.playerSetBaseMilestone)("web_player_init", n)), ae.dispatch((0, S.setPlayerOptions)(t)), (0, V.setOAuthToken)(t), t.debug && t.verbose && ae.subscribe(function() {
+                                console.debug("state change: %o", ae.getState())
+                            }), t.force_manifest_node && ae.dispatch((0, fe.setUsherHostOverride)(t.force_manifest_node)), ae.dispatch(P.loadExperiments({
+                                login: c.cookie.get("login") || null,
+                                deviceID: d.get(!1),
+                                userAgent: ae.getState().window.navigator.userAgent
+                            })), ae.dispatch(I.loadDefaultLang(ae.getState().window.navigator, t.lang)), ae.dispatch((0, M.setEnvironment)({
+                                deviceId: d.get(!1)
+                            })), ae.dispatch((0, M.setPlayerType)(t.player)), ae.dispatch((0, K.setTrackingProperties)(t.tracking)), t.gdpr) {
+                            var C = t.gdpr,
+                                H = C.amazon,
+                                Y = C.comscore,
+                                G = C.google,
+                                Q = C.nielsen;
+                            ae.dispatch((0, N.setAmazonConsent)(H)), ae.dispatch((0, N.setComscoreConsent)(Y)), ae.dispatch((0, N.setGoogleConsent)(G)), ae.dispatch((0, N.setNielsenConsent)(Q))
+                        }
+                        ke.push(new y.PubSub(ae, t)), ke.push(new ne.OfflineRecommendationsManager(ae)), ke.push(new re.UserManager(ae)), ke.push(new $.VodMidrollManager(ae)), ke.push(new ve.VideoMomentsManager(ae)), ce = new s.AnalyticsTracker(ae, t), ae.dispatch((0, x.setAnalyticsTracker)(ce)), ae.dispatch((0, w.initializeQuality)()), (0, r.default)(u.CLIPS_PLAYER_TYPES, ae.getState().env.playerType) && (ge = new _e.ClipsBenchmarkTracking(ae), ae.dispatch((0, U.setClipsTracker)(ge))),
+                            function() {
+                                var e = ae.getState().window,
+                                    t = ae.getState().analyticsTracker;
+                                e.google ? e.google && ae.dispatch((0, O.imaScriptLoaded)(!0)) : Te.then(function() {
+                                    ae.dispatch((0, O.imaScriptLoaded)(!0))
+                                }).catch(function() {
+                                    ae.dispatch((0, O.imaScriptLoaded)(!1)), t.trackEvent(i.AD_REQUEST_ERROR, {
+                                        reason: "ima load failed"
                                     })
-                                }(), be = t.allowfullscreen ? t.externalfullscreen && (0, g.supportsExternalFullScreen)() ? new g.ExternalFullScreen(b, ae) : new v.FullScreen(b, ae) : new T.NoFullScreen(b, ae), Ne = new te.TimelineMetadataManager(ae), Ie = new X.CollectionManager(ae);
-                            var z = ae.getState().window;
-                            ae.dispatch((0, pe.performanceTimedMilestoneReached)(pe.WEB_VIDEO_API_INIT_STARTED, z.performance.now())), Oe = new p.Video(b, ae, t), ae.dispatch((0, pe.performanceTimedMilestoneReached)(pe.WEB_VIDEO_API_INIT_DONE, z.performance.now())), (Re = new Z.PlayerResizeManager(ae)).observe(b), we = new J.FollowManager(ae), t.player === u.PLAYER_TWITCH_EVERYWHERE && (ke.push(new ee.TwitchEverywhereManager(ae)), t.targetOrigin || console.error("Missing targetOrigin option"), ae.dispatch((0, M.setTwitchEverywhereParams)({
-                                    targetOrigin: t.targetOrigin
-                                }))), (0, _.forwardProperties)(a, Oe), Ae = new h.EmbedHost(a, ae, {
-                                    origin: t.origin
-                                }), Ce = new o.Analytics(Oe, ce, ae, t), ae.dispatch((0, B.setAutoplay)(t.autoplay)),
-                                function(e) {
-                                    Oe.setVolume(e.volume), Oe.setMuted(e.muted), e.debug && l.allEvents.forEach(function(e) {
-                                        (0, r.default)(l.debugIgnoreEvents, e) || Oe.addEventListener(e, function(t) {
-                                            t ? console.log("video event: ", e, t) : console.log("video event: ", e)
-                                        })
-                                    }), Oe.addEventListener(j.ERROR, function(e) {
-                                        console.error("video error:", Oe.getError() || e)
+                                })
+                            }(), be = t.allowfullscreen ? t.externalfullscreen && (0, g.supportsExternalFullScreen)() ? new g.ExternalFullScreen(b, ae) : new v.FullScreen(b, ae) : new T.NoFullScreen(b, ae), Ne = new te.TimelineMetadataManager(ae), Ie = new X.CollectionManager(ae);
+                        var z = ae.getState().window;
+                        ae.dispatch((0, pe.performanceTimedMilestoneReached)(pe.WEB_VIDEO_API_INIT_STARTED, z.performance.now())), Oe = new p.Video(b, ae, t), ae.dispatch((0, pe.performanceTimedMilestoneReached)(pe.WEB_VIDEO_API_INIT_DONE, z.performance.now())), (Re = new Z.PlayerResizeManager(ae)).observe(b), we = new J.FollowManager(ae), t.player === u.PLAYER_TWITCH_EVERYWHERE && (ke.push(new ee.TwitchEverywhereManager(ae)), t.targetOrigin || console.error("Missing targetOrigin option"), ae.dispatch((0, M.setTwitchEverywhereParams)({
+                                targetOrigin: t.targetOrigin
+                            }))), (0, _.forwardProperties)(a, Oe), Ae = new h.EmbedHost(a, ae, {
+                                origin: t.origin
+                            }), Ce = new o.Analytics(Oe, ce, ae, t), ae.dispatch((0, B.setAutoplay)(t.autoplay)),
+                            function(e) {
+                                Oe.setVolume(e.volume), Oe.setMuted(e.muted), e.debug && l.allEvents.forEach(function(e) {
+                                    (0, r.default)(l.debugIgnoreEvents, e) || Oe.addEventListener(e, function(t) {
+                                        t ? console.log("video event: ", e, t) : console.log("video event: ", e)
                                     })
-                                }(t), ke.push(new m.PlayerHotkeys(Oe, b, ae, t)), t.controls && (Pe = new q.ClipGenerator(ae), ae.dispatch((0, F.clipGeneratorLoaded)(Pe)), ae.dispatch((0, pe.performanceTimedMilestoneReached)(pe.WEB_UI_INIT_STARTED, z.performance.now())), Se = (0, E.uiLoader)(Oe, b, ae, Pe, t), ae.dispatch((0, pe.performanceTimedMilestoneReached)(pe.WEB_UI_INIT_DONE, z.performance.now()))), Me = new de.PlayerUIResume(Oe, ae),
-                                function(e) {
-                                    return (0, r.default)([u.PLAYER_CLIPS_VIEWING, u.PLAYER_CLIPS_WATCH, u.PLAYER_CLIPS_EMBED], e.player) ? a.setClip(e.clip) : u.PLAYER_CLIPS_EDITING === e.player ? Promise.resolve(!0) : e.customerId && e.contentId ? a._setContent(e.customerId, e.contentId) : e.stream && e.channelId ? a._setLiveToVod(e.stream, e.channelId) : e.channelId ? (0, V.krakenRequestv5)("channels/" + e.channelId).then(function(e) {
-                                        return a.setChannel(e.name)
-                                    }) : e.channel ? a.setChannel(e.channel) : e.collection ? Promise.resolve(ae.dispatch((0, A.requestCollection)(e.collection, e.video, e.time, !0))) : e.video && e.time ? a.setVideo(e.video, f.parse(e.time)) : e.video ? a.setVideo(e.video) : Promise.resolve(!1)
-                                }(t).then(function() {
-                                    ae.dispatch((0, K.setTrackingProperties)({
-                                        content: t.tt_content,
-                                        medium: t.tt_medium
-                                    })), ae.dispatch((0, le.emitPlayerReady)())
-                                }), ae.dispatch((0, D.initVodResume)()), Oe.addEventListener(j.LOADED_METADATA, function() {
-                                    ae.dispatch((0, L.setCanFullScreen)(be.canFullScreen()))
-                                }), t.initialVideoMarkers && ae.dispatch((0, ye.videoMarkersUpdated)(t.initialVideoMarkers)), t.multiview && (ae.dispatch((0, R.multiviewEnabled)(!0)), ae.dispatch((0, R.multiviewRestricted)(t.multiview.isRestricted))),
-                                function(e) {
-                                    var t = e.getState().window,
-                                        n = function(e) {
-                                            var t = void 0,
-                                                n = void 0;
-                                            return void 0 !== e.hidden ? (t = "hidden", n = "visibilitychange") : void 0 !== e.msHidden ? (t = "msHidden", n = "msvisibilitychange") : void 0 !== e.webkitHidden && (t = "webkitHidden", n = "webkitvisibilitychange"), {
-                                                hidden: t,
-                                                visibilityChange: n
-                                            }
-                                        }(t.document),
-                                        r = n.hidden,
-                                        a = n.visibilityChange,
-                                        i = function() {
-                                            return e.dispatch((0, W.pageVisibilityChange)(t.document[r]))
-                                        };
-                                    t.document.addEventListener(a, i), ke.push({
-                                        destroy: function() {
-                                            return t.document.removeEventListener(a, i)
+                                }), Oe.addEventListener(j.ERROR, function(e) {
+                                    console.error("video error:", Oe.getError() || e)
+                                })
+                            }(t), ke.push(new m.PlayerHotkeys(Oe, b, ae, t)), t.controls && (Pe = new q.ClipGenerator(ae), ae.dispatch((0, F.clipGeneratorLoaded)(Pe)), ae.dispatch((0, pe.performanceTimedMilestoneReached)(pe.WEB_UI_INIT_STARTED, z.performance.now())), Se = (0, E.uiLoader)(Oe, b, ae, Pe, t), ae.dispatch((0, pe.performanceTimedMilestoneReached)(pe.WEB_UI_INIT_DONE, z.performance.now()))), Me = new de.PlayerUIResume(Oe, ae),
+                            function(e) {
+                                return (0, r.default)([u.PLAYER_CLIPS_VIEWING, u.PLAYER_CLIPS_WATCH, u.PLAYER_CLIPS_EMBED], e.player) ? a.setClip(e.clip) : u.PLAYER_CLIPS_EDITING === e.player ? Promise.resolve(!0) : e.customerId && e.contentId ? a._setContent(e.customerId, e.contentId) : e.stream && e.channelId ? a._setLiveToVod(e.stream, e.channelId) : e.channelId ? (0, V.krakenRequestv5)("channels/" + e.channelId).then(function(e) {
+                                    return a.setChannel(e.name)
+                                }) : e.channel ? a.setChannel(e.channel) : e.collection ? Promise.resolve(ae.dispatch((0, A.requestCollection)(e.collection, e.video, e.time, !0))) : e.video && e.time ? a.setVideo(e.video, f.parse(e.time)) : e.video ? a.setVideo(e.video) : Promise.resolve(!1)
+                            }(t).then(function() {
+                                ae.dispatch((0, K.setTrackingProperties)({
+                                    content: t.tt_content,
+                                    medium: t.tt_medium
+                                })), ae.dispatch((0, le.emitPlayerReady)())
+                            }), ae.dispatch((0, D.initVodResume)()), Oe.addEventListener(j.LOADED_METADATA, function() {
+                                ae.dispatch((0, L.setCanFullScreen)(be.canFullScreen()))
+                            }), t.initialVideoMarkers && ae.dispatch((0, ye.videoMarkersUpdated)(t.initialVideoMarkers)), t.multiview && (ae.dispatch((0, R.multiviewEnabled)(!0)), ae.dispatch((0, R.multiviewRestricted)(t.multiview.isRestricted))),
+                            function(e) {
+                                var t = e.getState().window,
+                                    n = function(e) {
+                                        var t = void 0,
+                                            n = void 0;
+                                        return void 0 !== e.hidden ? (t = "hidden", n = "visibilitychange") : void 0 !== e.msHidden ? (t = "msHidden", n = "msvisibilitychange") : void 0 !== e.webkitHidden && (t = "webkitHidden", n = "webkitvisibilitychange"), {
+                                            hidden: t,
+                                            visibilityChange: n
                                         }
-                                    })
-                                }(ae)
-                        } else console.error("Root element not found, unable to initialize player.")
+                                    }(t.document),
+                                    r = n.hidden,
+                                    a = n.visibilityChange,
+                                    i = function() {
+                                        return e.dispatch((0, W.pageVisibilityChange)(t.document[r]))
+                                    };
+                                t.document.addEventListener(a, i), ke.push({
+                                    destroy: function() {
+                                        return t.document.removeEventListener(a, i)
+                                    }
+                                })
+                            }(ae)
                     }(ue), a.destroy = function() {
                         Me.destroy(), Se && Se.destroy(), Oe.destroy(), Ce.destroy(), Ae.destroy(), ke.forEach(function(e) {
                             return e.destroy()
@@ -28016,13 +27959,13 @@
                         return n && e(t.prototype, n), r && e(t, r), t
                     }
                 }();
-            t.removeVariantName = F;
-            var i = j(n("3OWR")),
-                o = j(n("zdiy")),
-                s = j(n("JZM8")),
-                l = j(n("J2m7")),
-                u = j(n("UfWW")),
-                c = j(n("ijCd")),
+            t.removeVariantName = q;
+            var i = U(n("3OWR")),
+                o = U(n("zdiy")),
+                s = U(n("JZM8")),
+                l = U(n("J2m7")),
+                u = U(n("UfWW")),
+                c = U(n("ijCd")),
                 d = n("jxNe"),
                 f = n("jby0"),
                 p = n("ikhW"),
@@ -28032,26 +27975,25 @@
                 E = n("C1iI"),
                 y = n("Vo+h"),
                 v = n("LzuL"),
-                g = j(n("m7yn")),
-                T = U(n("J0qE")),
+                g = U(n("m7yn")),
+                T = x(n("J0qE")),
                 b = n("56nq"),
-                S = U(n("H6wP")),
+                S = x(n("H6wP")),
                 O = n("QBeZ"),
                 C = n("Rnd+"),
                 A = n("qT8i"),
                 P = n("uC+K"),
                 N = n("CM3j"),
-                I = n("CZM8"),
-                R = U(n("nC/T")),
-                w = U(n("JZwe")),
-                M = n("8U7r"),
-                k = n("VIow"),
-                L = n("wSP4"),
-                D = j(n("y+GA")),
-                B = n("rRi7"),
-                x = n("ipln");
+                I = x(n("nC/T")),
+                R = x(n("JZwe")),
+                w = n("8U7r"),
+                M = n("VIow"),
+                k = n("wSP4"),
+                L = U(n("y+GA")),
+                D = n("rRi7"),
+                B = n("ipln");
 
-            function U(e) {
+            function x(e) {
                 if (e && e.__esModule) return e;
                 var t = {};
                 if (null != e)
@@ -28059,18 +28001,18 @@
                 return t.default = e, t
             }
 
-            function j(e) {
+            function U(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
             t.REBROADCAST_TYPE = "rebroadcast", t.VIDEO_PLAY_LOAD_START = "video_play_load_start", t.VIDEO_PLAY_OAUTH = "video_play_oauth", t.VIDEO_PLAY_NAUTH = "video_play_nauth", t.VIDEO_PLAY_MASTER_MANIFEST = "video_play_master_manifest", t.VIDEO_PLAY_VARIANT_MANIFEST = "video_play_variant_manifest", t.SITE_MINIPLAYER_ACTION = "site_mini_player_action", t.BROADCAST_PLATFORM_WATCH_PARTY = "watch_party", t.BROADCAST_PLATFORM_WATCH_PARTY_RERUN = "watch_party_rerun", t.BROADCAST_PLATFORM_WATCH_PARTY_PREMIERE = "watch_party_premiere";
-            var V = Object.freeze({
+            var j = Object.freeze({
                     segment_protocol: "https"
                 }),
-                q = [30];
+                V = [30];
 
-            function F(e) {
+            function q(e) {
                 var t = String(e).trim(),
                     n = t.indexOf(" ");
                 return n > 0 ? t.slice(0, n) : t
@@ -28135,12 +28077,12 @@
                         var e = this.store.getState(),
                             t = e.window,
                             n = e.playerOptions;
-                        this.nSecondPlayTimer = new _.NSecondPlay(t), this.nSecondPlayTimer.onNSecondPlay(this.onNSecondPlay.bind(this)), n.nSecondPlayPeriods.length > 0 ? this.nSecondPlayTimer.setPeriods(n.nSecondPlayPeriods) : this.nSecondPlayTimer.setPeriods(q)
+                        this.nSecondPlayTimer = new _.NSecondPlay(t), this.nSecondPlayTimer.onNSecondPlay(this.onNSecondPlay.bind(this)), n.nSecondPlayPeriods.length > 0 ? this.nSecondPlayTimer.setPeriods(n.nSecondPlayPeriods) : this.nSecondPlayTimer.setPeriods(V)
                     }
                 }, {
                     key: "initEvents",
                     value: function() {
-                        this.initMinutesWatchedTimer(), this.player.addEventListener(R.PLAYER_INIT, this.onBackendInit.bind(this)), this.player.addEventListener(w.LOADSTART, this.onLoadStart.bind(this)), this.player.addEventListener(w.PAUSE, this.onPause.bind(this)), this.player.addEventListener(w.WAITING, this.onWaiting.bind(this)), this.player.addEventListener(w.PLAYING, this.onPlaying.bind(this)), this.player.addEventListener(w.PLAYBACK_BLOCKED, this.onPlaybackBlocked.bind(this)), this.player.addEventListener(w.PLAYING, this.onQualityChange.bind(this)), this.player.addEventListener(w.ENDED, this.onEnded.bind(this)), this.player.addEventListener(w.SEEKING, this.onSeeking.bind(this)), this.player.addEventListener(w.TIME_UPDATE, this.onTimeUpdate.bind(this)), this.player.addEventListener(w.CAN_PLAY, this.onCanPlay.bind(this))
+                        this.initMinutesWatchedTimer(), this.player.addEventListener(I.PLAYER_INIT, this.onBackendInit.bind(this)), this.player.addEventListener(R.LOADSTART, this.onLoadStart.bind(this)), this.player.addEventListener(R.PAUSE, this.onPause.bind(this)), this.player.addEventListener(R.WAITING, this.onWaiting.bind(this)), this.player.addEventListener(R.PLAYING, this.onPlaying.bind(this)), this.player.addEventListener(R.PLAYBACK_BLOCKED, this.onPlaybackBlocked.bind(this)), this.player.addEventListener(R.PLAYING, this.onQualityChange.bind(this)), this.player.addEventListener(R.ENDED, this.onEnded.bind(this)), this.player.addEventListener(R.SEEKING, this.onSeeking.bind(this)), this.player.addEventListener(R.TIME_UPDATE, this.onTimeUpdate.bind(this)), this.player.addEventListener(R.CAN_PLAY, this.onCanPlay.bind(this))
                     }
                 }, {
                     key: "getNetworkProfileStats",
@@ -28177,50 +28119,48 @@
                             t = e.analytics,
                             n = e.captions,
                             r = e.collection,
-                            a = e.communities,
-                            o = e.lang,
-                            s = e.manifestInfo,
-                            l = e.performance,
-                            c = e.stream,
-                            f = e.streamMetadata,
-                            p = e.playback,
-                            _ = {
+                            a = e.lang,
+                            o = e.manifestInfo,
+                            s = e.performance,
+                            l = e.stream,
+                            c = e.streamMetadata,
+                            f = e.playback,
+                            p = {
                                 autoplayed: this.options.autoplay,
-                                broadcast_id: f.broadcastID,
+                                broadcast_id: c.broadcastID,
                                 captions_enabled: n.enabled,
-                                community_ids: a.ids,
-                                language: o.langCode,
-                                manifest_broadcast_id: s.broadcast_id,
+                                language: a.langCode,
+                                manifest_broadcast_id: o.broadcast_id,
                                 minutes_logged: this.minutesWatchedTimer.totalMinutes,
                                 player_size_mode: this._getPlayerDisplayMode(),
                                 quality_change_count: t.qualityChangeCount,
                                 seconds_offset: this.minutesWatchedTimer.initialDelay / 1e3,
-                                streamType: f.streamType,
+                                streamType: c.streamType,
                                 tab_session_id: (0, d.getTwilightSessionId)(),
-                                time_spent_hidden: parseInt(l.timeHidden, 10),
-                                transcoder_type: s.transcodestack,
+                                time_spent_hidden: parseInt(s.timeHidden, 10),
+                                transcoder_type: o.transcodestack,
                                 auto_muted: this.firstPlayAutoMuted
                             };
-                        if (c.contentType === k.CONTENT_MODE_VOD && ((0, i.default)(_, {
-                                vod_timestamp: p.currentTime
+                        if (l.contentType === M.CONTENT_MODE_VOD && ((0, i.default)(p, {
+                                vod_timestamp: f.currentTime
                             }), r.id)) {
-                            this.store.dispatch((0, B.updateCollectionSessionTimestamp)());
-                            var h = m.sessionStore.get(B.COLLECTION_SESSION_KEY),
-                                E = h ? h[B.COLLECTION_SESSION_ID_KEY] : "";
-                            (0, i.default)(_, {
+                            this.store.dispatch((0, D.updateCollectionSessionTimestamp)());
+                            var _ = m.sessionStore.get(D.COLLECTION_SESSION_KEY),
+                                h = _ ? _[D.COLLECTION_SESSION_ID_KEY] : "";
+                            (0, i.default)(p, {
                                 collection_item_position: (0, u.default)(r.items, {
-                                    itemId: c.videoId.substr(1)
+                                    itemId: l.videoId.substr(1)
                                 }),
                                 collection_id: r.id,
-                                collection_session_id: E
+                                collection_session_id: h
                             })
                         }
-                        return _
+                        return p
                     }
                 }, {
                     key: "trackEvent",
                     value: function(e, t) {
-                        var n = (0, i.default)({}, V, this.player.getVideoInfo()),
+                        var n = (0, i.default)({}, j, this.player.getVideoInfo()),
                             r = (0, o.default)({}, (0, s.default)(n, ["bandwidth", "cluster", "current_bitrate", "current_fps", "decoded_frames", "dropped_frames", "hls_latency_broadcaster", "hls_latency_encoder", "hls_latency_broadcaster_send_time", "hls_latency_ingest_receive_time", "hls_latency_ingest_send_time", "hls_latency_transcode_receive_time", "hls_latency_transcode_send_time", "hls_target_duration", "manifest_cluster", "manifest_node", "manifest_node_type", "serving_id", "node", "user_ip", "vid_display_height", "vid_display_width", "vid_height", "vid_width", "video_buffer_size", "vod_cdn_origin", "vod_cdn_region"]), {
                                 volume: this.player.getVolume(),
                                 muted: this.player.getMuted(),
@@ -28241,7 +28181,7 @@
                         var n = this.getNetworkProfileStats(t),
                             r = this._getBaseMinuteWatchedProperties(),
                             a = (0, o.default)({}, r, n);
-                        this.trackEvent(M.TIER_1_EVENTS.MINUTE_WATCHED, a), this.store.dispatch((0, N.resetQualityChangeCount)()), this.trackNetworkProfile.then(function(n) {
+                        this.trackEvent(w.TIER_1_EVENTS.MINUTE_WATCHED, a), this.store.dispatch((0, N.resetQualityChangeCount)()), this.trackNetworkProfile.then(function(n) {
                             "yes" === n && t.length > 0 && e.tracker.trackEvents(t.map(function(e) {
                                 return {
                                     event: "network_profile",
@@ -28273,7 +28213,7 @@
                         var t = (0, o.default)({}, this._getBaseMinuteWatchedProperties(), {
                             seconds_after_play: e
                         });
-                        this.trackEvent(M.N_SECOND_PLAY, t)
+                        this.trackEvent(w.N_SECOND_PLAY, t)
                     }
                 }, {
                     key: "onBackendInit",
@@ -28288,38 +28228,32 @@
                 }, {
                     key: "onLoadChannel",
                     value: function() {
-                        var e = this,
-                            t = this.player.getChannel(),
-                            n = (0, b.channelInfo)(t),
-                            a = (0, b.channelStreamInfo)(t);
-                        n.then(function(e) {
+                        var e = this.player.getChannel(),
+                            t = (0, b.channelInfo)(e),
+                            n = (0, b.channelStreamInfo)(e);
+                        t.then(function(e) {
                             this.countessTracker.trackView("channel", e._id)
                         }.bind(this));
-                        var i = {},
-                            o = {},
-                            s = Promise.all([n, a]).then(function(e) {
-                                var n = r(e, 2),
-                                    a = n[0],
-                                    s = n[1];
-                                return i = a, o = s, (0, b.getCommunitiesFromChannel)(t)
-                            }).then(function(t) {
-                                e.store.dispatch((0, I.setCommunitiesData)(t));
-                                var n = (o.channel && o.channel.stream ? o.channel.stream : {}).broadcasterSoftware,
-                                    r = (0, f.getContentInfo)(n),
-                                    a = r.live,
-                                    s = r.contentMode;
-                                return {
-                                    broadcaster_software: n,
-                                    live: a,
-                                    channel: i.name,
-                                    channel_id: i._id,
-                                    game: i.game,
-                                    content_mode: s,
-                                    partner: i.partner,
-                                    vod_type: void 0
-                                }
-                            });
-                        this.tracker.setProperties(s)
+                        var a = Promise.all([t, n]).then(function(e) {
+                            var t = r(e, 2),
+                                n = t[0],
+                                a = t[1],
+                                i = (a.channel && a.channel.stream ? a.channel.stream : {}).broadcasterSoftware,
+                                o = (0, f.getContentInfo)(i),
+                                s = o.live,
+                                l = o.contentMode;
+                            return {
+                                broadcaster_software: i,
+                                live: s,
+                                channel: n.name,
+                                channel_id: n._id,
+                                game: n.game,
+                                content_mode: l,
+                                partner: n.partner,
+                                vod_type: void 0
+                            }
+                        });
+                        this.tracker.setProperties(a)
                     }
                 }, {
                     key: "onLoadVideo",
@@ -28349,14 +28283,12 @@
                     key: "onWaiting",
                     value: function() {
                         var e = this.store.getState(),
-                            t = e.communities,
-                            n = e.manifestInfo,
-                            r = e.streamMetadata;
-                        this.player.getSeeking() || (this.bufferEmptyStartTime = (new Date).getTime(), this.bufferEmptyCount++, this.trackEvent(M.TIER_1_EVENTS.BUFFER_EMPTY, {
+                            t = e.manifestInfo,
+                            n = e.streamMetadata;
+                        this.player.getSeeking() || (this.bufferEmptyStartTime = (new Date).getTime(), this.bufferEmptyCount++, this.trackEvent(w.TIER_1_EVENTS.BUFFER_EMPTY, {
                             buffer_empty_count: this.bufferEmptyCount,
-                            community_ids: t.ids,
-                            broadcast_id: r.broadcastID,
-                            manifest_broadcast_id: n.broadcast_id
+                            broadcast_id: n.broadcastID,
+                            manifest_broadcast_id: t.broadcast_id
                         }))
                     }
                 }, {
@@ -28372,50 +28304,47 @@
                             n = t.analytics,
                             r = t.backendInfo,
                             a = t.collection,
-                            i = t.communities,
-                            o = t.env,
-                            s = t.manifestInfo,
-                            l = t.performance,
-                            f = t.stream,
-                            p = t.streamMetadata,
-                            _ = t.playback;
+                            i = t.env,
+                            o = t.manifestInfo,
+                            s = t.performance,
+                            l = t.stream,
+                            f = t.streamMetadata,
+                            p = t.playback;
                         if (null !== this.bufferEmptyStartTime) {
-                            var h = (new Date).getTime();
-                            this.trackEvent(M.TIER_1_EVENTS.BUFFER_REFILL, {
-                                buffering_time: (h - this.bufferEmptyStartTime) / 1e3,
+                            var _ = (new Date).getTime();
+                            this.trackEvent(w.TIER_1_EVENTS.BUFFER_REFILL, {
+                                buffering_time: (_ - this.bufferEmptyStartTime) / 1e3,
                                 buffer_empty_count: this.bufferEmptyCount,
-                                broadcast_id: p.broadcastID,
-                                community_ids: i.ids,
-                                manifest_broadcast_id: s.broadcast_id
+                                broadcast_id: f.broadcastID,
+                                manifest_broadcast_id: o.broadcast_id
                             }), this.bufferEmptyStartTime = null
                         }
                         if (!this.hasPlayed) {
-                            this.firstPlayAutoMuted = _.automatedMute;
-                            var E = {
+                            this.firstPlayAutoMuted = p.automatedMute;
+                            var h = {
                                 time_since_load_start: Date.now() - n.playSessionStartTime,
-                                community_ids: i.ids,
-                                manifest_broadcast_id: s.broadcast_id,
-                                broadcast_id: p.broadcastID,
+                                manifest_broadcast_id: o.broadcast_id,
+                                broadcast_id: f.broadcastID,
                                 autoplayed: this.options.autoplay,
                                 tab_session_id: (0, d.getTwilightSessionId)(),
                                 auto_muted: this.firstPlayAutoMuted,
                                 using_wasm_backend: r.isWasm
                             };
-                            if ((0, c.default)(P.CLIPS_PLAYER_TYPES, o.playerType) || (E.seconds_offset = this.minutesWatchedTimer.initialDelay / 1e3), l.timedMilestones.forEach(function(e) {
+                            if ((0, c.default)(P.CLIPS_PLAYER_TYPES, i.playerType) || (h.seconds_offset = this.minutesWatchedTimer.initialDelay / 1e3), s.timedMilestones.forEach(function(e) {
                                     var t = "time_to_" + e.name;
-                                    E[t] = parseInt(e.time - l.initTime, 10)
-                                }), l.otherMetrics.forEach(function(e) {
-                                    E[e.name] = e.value
-                                }), E.is_first_video_play = 0 === n.videoPlayCount, E.player_instance_plays = n.videoPlayCount + 1, E.playback_gated = _.contentRestriction !== x.CONTENT_UNRESTRICTED, E.time_spent_hidden = parseInt(l.timeHidden, 10), E.autoplay_succeeded = !this.playbackBlocked, f.contentType === k.CONTENT_MODE_VOD && ((0, b.videoInfo)(f.videoId).then(function(t) {
+                                    h[t] = parseInt(e.time - s.initTime, 10)
+                                }), s.otherMetrics.forEach(function(e) {
+                                    h[e.name] = e.value
+                                }), h.is_first_video_play = 0 === n.videoPlayCount, h.player_instance_plays = n.videoPlayCount + 1, h.playback_gated = p.contentRestriction !== B.CONTENT_UNRESTRICTED, h.time_spent_hidden = parseInt(s.timeHidden, 10), h.autoplay_succeeded = !this.playbackBlocked, l.contentType === M.CONTENT_MODE_VOD && ((0, b.videoInfo)(l.videoId).then(function(t) {
                                     e.countessTracker.trackVODView(t)
                                 }), a.id)) {
-                                var y = m.sessionStore.get(B.COLLECTION_SESSION_KEY),
-                                    v = y ? y[B.COLLECTION_SESSION_ID_KEY] : "";
-                                E.collection_item_position = (0, u.default)(a.items, {
-                                    itemId: f.videoId.substr(1)
-                                }), E.collection_id = a.id, E.collection_session_id = v
+                                var E = m.sessionStore.get(D.COLLECTION_SESSION_KEY),
+                                    y = E ? E[D.COLLECTION_SESSION_ID_KEY] : "";
+                                h.collection_item_position = (0, u.default)(a.items, {
+                                    itemId: l.videoId.substr(1)
+                                }), h.collection_id = a.id, h.collection_session_id = y
                             }
-                            this.trackEvent(M.TIER_1_EVENTS.VIDEO_PLAY, E), this.store.dispatch((0, N.incrementVideoPlayCount)()), this.hasPlayed = !0, this.store.dispatch(S.sendPlayerBeacon()), this.store.dispatch(S.sendVideoBeacon()), this.nSecondPlayTimer.start()
+                            this.trackEvent(w.TIER_1_EVENTS.VIDEO_PLAY, h), this.store.dispatch((0, N.incrementVideoPlayCount)()), this.hasPlayed = !0, this.store.dispatch(S.sendPlayerBeacon()), this.store.dispatch(S.sendVideoBeacon()), this.nSecondPlayTimer.start()
                         }
                         this.minutesWatchedTimer.start()
                     }
@@ -28448,7 +28377,7 @@
                             t = e.ads,
                             n = e.adsManager,
                             r = e.stream;
-                        (t.currentMetadata.contentType !== O.AdContentTypes.IMA || r.contentType !== k.CONTENT_MODE_VOD || n.paused) && (this.minutesWatchedTimer.stop(), this.nSecondPlayTimer.reset())
+                        (t.currentMetadata.contentType !== O.AdContentTypes.IMA || r.contentType !== M.CONTENT_MODE_VOD || n.paused) && (this.minutesWatchedTimer.stop(), this.nSecondPlayTimer.reset())
                     }
                 }, {
                     key: "onPlaybackEnded",
@@ -28461,8 +28390,8 @@
                         var e = this.store.getState().error,
                             t = e.hasError,
                             n = e.code;
-                        t && this.trackEvent(M.VIDEO_PLAYBACK_ERROR, {
-                            reason: D.default.getMessage(n),
+                        t && this.trackEvent(w.VIDEO_PLAYBACK_ERROR, {
+                            reason: L.default.getMessage(n),
                             code: n
                         })
                     }
@@ -28474,7 +28403,7 @@
                                 content_id: "",
                                 customer_id: ""
                             };
-                        e.contentType === L.CONTENT_MODE_PROVIDED && (t = (0, i.default)(t, {
+                        e.contentType === k.CONTENT_MODE_PROVIDED && (t = (0, i.default)(t, {
                             content_id: e.contentId,
                             customer_id: e.customerId
                         })), this.tracker.setProperties(t)
@@ -28513,7 +28442,7 @@
                                     return t.group === e.selected
                                 }),
                                 n = t ? t.name : e.current;
-                            this.tracker.setProperty("quality", F(n)), this.tracker.setProperty("stream_format", e.current)
+                            this.tracker.setProperty("quality", q(n)), this.tracker.setProperty("stream_format", e.current)
                         }
                     }
                 }, {
@@ -33515,20 +33444,18 @@
                     }
                     return e
                 },
-                a = d(n("q1tI")),
-                i = d(n("17x9")),
+                a = u(n("q1tI")),
+                i = u(n("17x9")),
                 o = n("9kay"),
-                s = d(n("TSYQ")),
-                l = n("5+Kj"),
-                u = n("SXV3"),
-                c = n("Rnd+");
+                s = u(n("TSYQ")),
+                l = n("5+Kj");
 
-            function d(e) {
+            function u(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            var f = {
+            var c = {
                     gameName: i.default.string,
                     gameUrl: i.default.string,
                     lang: i.default.object,
@@ -33543,73 +33470,70 @@
                     viewerCount: i.default.number,
                     className: i.default.string
                 },
-                p = (0, s.default)("player-text-link", "player-text-link--no-color", "qa-game-name"),
-                _ = {
+                d = (0, s.default)("player-text-link", "player-text-link--no-color", "qa-game-name"),
+                f = {
                     container: "player-streaminfo__name",
                     a: (0, s.default)("player-text-link", "player-text-link--no-color", "qa-display-name")
                 },
-                h = t.StreamInfoDisplayComponent = function(e) {
+                p = t.StreamInfoDisplayComponent = function(e) {
                     var t = e.gameName,
                         n = e.gameUrl,
                         i = e.lang,
-                        d = e.live,
-                        f = e.name,
-                        h = e.streamUrl,
-                        m = e.streamTags,
-                        E = e.onClick,
-                        y = e.title,
-                        v = e.viewerCount,
-                        g = e.className,
-                        T = e.isEmbed,
-                        b = e.isMobile,
-                        S = Number(v).toLocaleString(i.shortCode),
-                        O = T ? {
+                        u = e.live,
+                        c = e.name,
+                        p = e.streamUrl,
+                        _ = e.streamTags,
+                        h = e.onClick,
+                        m = e.title,
+                        E = e.viewerCount,
+                        y = e.className,
+                        v = e.isEmbed,
+                        g = e.isMobile,
+                        T = Number(E).toLocaleString(i.shortCode),
+                        b = v ? {
                             target: "_blank",
                             rel: "noopener noreferrer"
                         } : {},
-                        C = a.default.createElement("a", r({
-                            className: p,
+                        S = a.default.createElement("a", r({
+                            className: d,
                             href: n
-                        }, O), t),
-                        A = a.default.createElement("span", null, S),
-                        P = null,
-                        N = (0, s.default)({
+                        }, b), t),
+                        O = a.default.createElement("span", null, T),
+                        C = null,
+                        A = (0, s.default)({
                             "player-streaminfo__title": !0,
                             "qa-stream-title": !0,
-                            "player-streaminfo__title--hide": d && b
+                            "player-streaminfo__title--hide": u && g
                         });
-                    return d && (P = a.default.createElement("div", {
+                    return u && (C = a.default.createElement("div", {
                         className: "player-streaminfo__viewers"
                     }, a.default.createElement(o.Interpolate, {
                         i18nKey: "playing {{game}} for {{viewerCount}} viewer",
-                        game: C,
-                        viewerCount: A,
+                        game: S,
+                        viewerCount: O,
                         options: {
-                            count: v
+                            count: E
                         }
                     }))), a.default.createElement("div", {
-                        className: g
+                        className: y
                     }, a.default.createElement("div", {
-                        className: _.container
+                        className: f.container
                     }, a.default.createElement("a", r({
-                        className: _.a,
-                        href: h
-                    }, O, {
-                        onClick: E
-                    }), f)), a.default.createElement("div", {
-                        className: N
-                    }, y), a.default.createElement("div", {
+                        className: f.a,
+                        href: p
+                    }, b, {
+                        onClick: h
+                    }), c)), a.default.createElement("div", {
+                        className: A
+                    }, m), a.default.createElement("div", {
                         className: "player-streaminfo__game"
-                    }, P), a.default.createElement(u.Experiment, {
-                        uuid: c.TWILIGHT_TAGS,
-                        renderValue: "experiment"
-                    }, a.default.createElement(l.StreamTags, {
-                        tags: m,
-                        openInNewTab: T
-                    })))
+                    }, C), a.default.createElement(l.StreamTags, {
+                        tags: _,
+                        openInNewTab: v
+                    }))
                 };
-            h.propTypes = f;
-            t.StreamInfoDisplay = (0, o.translate)()(h)
+            p.propTypes = c;
+            t.StreamInfoDisplay = (0, o.translate)()(p)
         },
         gu39: function(e, t, n) {
             "use strict";
@@ -34797,7 +34721,7 @@
                                 if (e._video.readyState >= 3) t(e._video.play());
                                 else {
                                     e._video.addEventListener(i.CAN_PLAY, function n() {
-                                        e._video.removeEventListener(i.CAN_PLAY, n), t(e._video.play())
+                                        e._video && e._video.removeEventListener && e._video.removeEventListener(i.CAN_PLAY, n), t(e._video.play())
                                     })
                                 }
                             })
@@ -36782,12 +36706,13 @@
                     videoResolution: "",
                     displayResolution: "",
                     backendVersion: ""
-                });
+                }),
+                J = Object.freeze(["minute-watched", "video-play", "buffer-refill", "buffer-empty"]);
             (t.BackendMediaPlayer = function() {
                 function e() {
                     var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         n = arguments[1];
-                    M(this, e), this.store = n, this._unsubscribes = [], this._options = t, this._mediaPlayer = null, this._eventEmitter = new u.default, this._apiCallQueue = [], this._readyStateStatus = E.HAVE_NOTHING, this._networkState = y.NETWORK_NO_SOURCE, this._hiddenTimer = null, this._fireLoadedMetadata = !1, this._hasRetried = !1, this._src = "", this._currentCaptionData = {}, this._mediaPlayerLogLevel = t["cvp-log"] || "error", this.initialize()
+                    M(this, e), this.store = n, this._unsubscribes = [], this._options = t, this._mediaPlayer = null, this._eventEmitter = new u.default, this._apiCallQueue = [], this._readyStateStatus = E.HAVE_NOTHING, this._networkState = y.NETWORK_NO_SOURCE, this._hiddenTimer = null, this._sendUntrustedTier1 = Math.random() < .01, this._fireLoadedMetadata = !1, this._hasRetried = !1, this._src = "", this._currentCaptionData = {}, this._mediaPlayerLogLevel = t["cvp-log"] || "error", this.initialize()
                 }
                 return r(e, [{
                     key: "initialize",
@@ -37048,9 +36973,9 @@
                 }, {
                     key: "getBuffered",
                     value: function() {
-                        if (null === this._mediaPlayer) return new J;
+                        if (null === this._mediaPlayer) return new $;
                         var e = this._mediaPlayer.getBuffered();
-                        return new J(e.start, e.end)
+                        return new $(e.start, e.end)
                     }
                 }, {
                     key: "getReadyState",
@@ -37165,7 +37090,7 @@
                 }, {
                     key: "getPlayed",
                     value: function() {
-                        return new J
+                        return new $
                     }
                 }, {
                     key: "getStatsEnabled",
@@ -37312,7 +37237,7 @@
                     value: function(e) {
                         var t = e.name,
                             n = e.properties;
-                        "video_error" !== t && "abs_stream_format_change" !== t && "buffer_2_seconds" !== t || (n.broadcast_id = this.store.getState().streamMetadata.broadcastID, n.manifest_broadcast_id = this.store.getState().manifestInfo.broadcast_id, this.store.dispatch((0, v.trackEvent)(t, n)))
+                        "video_error" !== t && "abs_stream_format_change" !== t && "buffer_2_seconds" !== t || (n.broadcast_id = this.store.getState().streamMetadata.broadcastID, n.manifest_broadcast_id = this.store.getState().manifestInfo.broadcast_id, this.store.dispatch((0, v.trackEvent)(t, n))), (0, _.default)(J, t) && this._sendUntrustedTier1 && this.store.dispatch((0, v.trackEvent)("x_untrusted_" + t, n))
                     }
                 }, {
                     key: "onPerformanceTimedEvent",
@@ -37522,7 +37447,7 @@
             }()).canPlay = function() {
                 return h.default.canLoadMediaplayer()
             };
-            var J = function() {
+            var $ = function() {
                 function e(t, n) {
                     M(this, e), this.length = void 0 === t ? 0 : 1, this._start = t, this._end = n
                 }
@@ -38234,7 +38159,6 @@
                                                 previewImageUrl: e.vod_preview_image_url
                                             },
                                             segments: e.segments,
-                                            communities: e.communities,
                                             editUrl: e.edit_url,
                                             infoUrl: e.info_url,
                                             statusUrl: e.status_url,
@@ -40286,21 +40210,22 @@
                 value: !0
             }), t.getTwilightSessionId = t.getClipsSessionId = t.getSessionId = t.TWILIGHT_TAB_SESSION_ID_KEY = t.CLIPS_TAB_SESSION_ID_KEY = void 0;
             var r = n("uXPQ"),
-                a = t.CLIPS_TAB_SESSION_ID_KEY = "clips_rec_sid",
-                i = t.TWILIGHT_TAB_SESSION_ID_KEY = "session_storage_unique_id",
-                o = t.getSessionId = function(e) {
+                a = n("EoNM"),
+                i = t.CLIPS_TAB_SESSION_ID_KEY = "clips_rec_sid",
+                o = t.TWILIGHT_TAB_SESSION_ID_KEY = "session_storage_unique_id",
+                s = t.getSessionId = function(e) {
                     var t = void 0;
                     try {
-                        (t = window.sessionStorage.getItem(e)) || (t = (0, r.generate)()), window.sessionStorage.setItem(e, t)
+                        (t = a.sessionStore.get(e)) || (t = (0, r.generate)()), a.sessionStore.set(e, t)
                     } catch (e) {
                         t = null
                     }
                     return t
                 };
             t.getClipsSessionId = function() {
-                return o(a)
+                return s(i)
             }, t.getTwilightSessionId = function() {
-                return o(i)
+                return s(o)
             }
         },
         k2Rd: function(e, t, n) {
@@ -41456,8 +41381,7 @@
                                 a = (0, o.default)(e, "streamMetadata.createdAt"),
                                 i = (0, o.default)(e, "streamMetadata.video_id"),
                                 s = (0, o.default)(e, "streamMetadata.name"),
-                                u = (0, o.default)(e, "communities.data[0].display_name"),
-                                c = (0, o.default)(e, "playback.duration");
+                                u = (0, o.default)(e, "playback.duration");
                             if (this._isLive()) return {
                                 type: "content",
                                 assetid: n,
@@ -41466,7 +41390,7 @@
                                 title: t,
                                 length: 86400,
                                 segA: r,
-                                segB: u,
+                                segB: "",
                                 airdate: a,
                                 adloadtype: "2"
                             };
@@ -41476,19 +41400,19 @@
                                 isfullepisode: "y",
                                 program: n,
                                 title: s,
-                                length: c,
+                                length: u,
                                 segA: r,
-                                segB: u,
+                                segB: "",
                                 airdate: a,
                                 adloadtype: "2"
                             };
                             if (this._isAd()) {
-                                var d = (0, o.default)(e, "ads.currentMetadata.rollType"),
-                                    f = (0, o.default)(e, "ads.details.adWrapperIds"),
-                                    p = (0, o.default)(e, "ads.details.adId");
+                                var c = (0, o.default)(e, "ads.currentMetadata.rollType"),
+                                    d = (0, o.default)(e, "ads.details.adWrapperIds"),
+                                    f = (0, o.default)(e, "ads.details.adId");
                                 return {
-                                    type: d,
-                                    assetid: (0, l.default)(f) || p,
+                                    type: c,
+                                    assetid: (0, l.default)(d) || f,
                                     title: (0, o.default)(e, "ads.details.title")
                                 }
                             }
@@ -49339,41 +49263,6 @@
             var r = [],
                 a = r.forEach,
                 i = r.slice
-        },
-        yNbp: function(e, t, n) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.DEFAULT_COMMUNITIES = void 0, t.communities = function() {
-                var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : i,
-                    t = arguments[1];
-                switch (t.type) {
-                    case a.ACTION_SET_COMMUNITIES_DATA:
-                        return (0, r.default)({}, e, {
-                            data: t.communities.data,
-                            ids: t.communities.ids
-                        });
-                    default:
-                        return e
-                }
-            };
-            var r = function(e) {
-                    return e && e.__esModule ? e : {
-                        default: e
-                    }
-                }(n("zdiy")),
-                a = n("CZM8");
-            var i = t.DEFAULT_COMMUNITIES = {
-                data: [{
-                    _id: "",
-                    owner_id: "",
-                    name: "",
-                    summary: "",
-                    description: "",
-                    rules: ""
-                }],
-                ids: ""
-            }
         },
         ySAb: function(e, t, n) {
             "use strict";

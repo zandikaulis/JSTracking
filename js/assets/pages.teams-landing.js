@@ -548,7 +548,7 @@
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(i || (i = {}));
             var L = l.a.wrap(function() {
-                    return Promise.all([t.e(0), t.e(192)]).then(t.bind(null, "f+qK"))
+                    return Promise.all([t.e(0), t.e(193)]).then(t.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
                 B = function(e) {
                     function n() {
@@ -783,7 +783,7 @@
                         return Object(u.d)(l.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([t.e(0), t.e(203)]).then(t.bind(null, "KJv/"))
+                                return Promise.all([t.e(0), t.e(204)]).then(t.bind(null, "KJv/"))
                             },
                             componentProps: n
                         })

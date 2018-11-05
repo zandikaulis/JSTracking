@@ -7218,7 +7218,7 @@
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(i || (i = {}));
             var I = l.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(192)]).then(n.bind(null, "f+qK"))
+                    return Promise.all([n.e(0), n.e(193)]).then(n.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
                 x = function(e) {
                     function t() {
@@ -7453,7 +7453,7 @@
                         return Object(u.d)(l.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(203)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(204)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })
@@ -11272,10 +11272,10 @@
                             }
                         }) : o || !t ? i.createElement(_, null) : i.createElement(_, {
                             data: {
-                                title: t.title || (t.broadcaster ? Object(r.d)("Clip of {broadcaster}", {
+                                title: t.title || (t.broadcaster && t.broadcaster.displayName ? Object(r.d)("Clip of {broadcaster}", {
                                     broadcaster: t.broadcaster.displayName
                                 }, "ClipsChatCard") : ""),
-                                description: t.curator ? Object(r.d)("Clipped by {curator}", {
+                                description: t.curator && t.curator.displayName ? Object(r.d)("Clipped by {curator}", {
                                     curator: t.curator.displayName
                                 }, "ClipsChatCard") : "",
                                 previewImageURL: t.thumbnailURL,
@@ -15558,7 +15558,7 @@
                             n = this.getCollectionVideos();
                         if (n && 0 === n.length) return null;
                         var r = 0,
-                            d = t && t.type === l.n.SERIES && n && n.length >= 4;
+                            d = t && t.type === l.o.SERIES && n && n.length >= 4;
                         if (t && n && d && Object(c.a)() && Object(c.c)()) {
                             var m = function(e) {
                                 for (var t = e.items.edges, n = t.length, r = null, o = 0; o < t.length; o++) {
@@ -15685,36 +15685,6 @@
                 b = Object(d.b)("CollectionCarousel", {
                     autoReportInteractive: !0
                 })(v)
-        },
-        i4un: function(e, t, n) {
-            "use strict";
-            n.d(t, "c", function() {
-                return s
-            }), n.d(t, "b", function() {
-                return l
-            }), n.d(t, "a", function() {
-                return c
-            });
-            var i, r = n("/7QA"),
-                o = n("D7An");
-
-            function a() {
-                return r.p.experiments.getAssignment(o.b.SocialButtonsMove) || i.Control
-            }
-
-            function s() {
-                return a() === i.Control
-            }
-
-            function l() {
-                return a() === i.VariantA
-            }
-
-            function c() {
-                return a() === i.VariantB
-            }! function(e) {
-                e.Control = "control", e.VariantA = "variant_a", e.VariantB = "variant_b"
-            }(i || (i = {}))
         },
         i6WW: function(e, t, n) {
             "use strict";
@@ -16749,7 +16719,7 @@
                         var e = this.getFollowingState(),
                             t = null,
                             n = A.SocialButtonsDefault;
-                        if (Object(M.a)()) {
+                        if (Object(M.c)()) {
                             var i = r("channel-header__follow-btn", {
                                     "channel-header__follow-btn--following": !!this.state.showLiveNotificationsButton
                                 }),
@@ -16787,7 +16757,8 @@
                                 hideDropdownWhenFollowing: !0,
                                 fullWidthButton: !0,
                                 hollowIcons: !0,
-                                animatedButton: !0
+                                animatedButton: !0,
+                                useContextualModals: !0
                             })))), o.createElement("div", {
                                 className: a
                             }, o.createElement(L.a, {
@@ -16804,7 +16775,7 @@
                                 unsubscribedButtonType: e ? w.F.Default : w.F.Hollow,
                                 forceIcon: !0
                             })))
-                        } else(this.props.channelIsHosting || Object(M.c)()) && (n = A.SocialButtonsDefault, t = o.createElement(o.Fragment, null, o.createElement(w.Xa, {
+                        } else(this.props.channelIsHosting || Object(M.e)()) && (n = A.SocialButtonsDefault, t = o.createElement(o.Fragment, null, o.createElement(w.Xa, {
                             display: w.X.Flex,
                             alignItems: w.f.Stretch,
                             margin: {
@@ -16815,7 +16786,8 @@
                             channelLogin: this.props.channelLogin,
                             onFollow: this.maybeShowBrowserNotificationsUpsell,
                             followUIType: j.b.IconAndText,
-                            unfollowUIType: j.b.IconOnly
+                            unfollowUIType: j.b.IconOnly,
+                            useContextualModals: !0
                         })), o.createElement(w.Xa, {
                             margin: {
                                 left: 1
@@ -18072,7 +18044,7 @@
                             return Object(k.d)(m.a, {
                                 component: "CheckoutModal",
                                 loader: function() {
-                                    return Promise.all([n.e(0), n.e(203)]).then(n.bind(null, "KJv/"))
+                                    return Promise.all([n.e(0), n.e(204)]).then(n.bind(null, "KJv/"))
                                 },
                                 componentProps: t
                             })
@@ -21298,7 +21270,7 @@
                 C = n("F6GT"),
                 S = n("x0gr"),
                 E = l.a.wrap(function() {
-                    return n.e(191).then(n.bind(null, "8MX0"))
+                    return n.e(192).then(n.bind(null, "8MX0"))
                 }, "ChatSettingsComponent"),
                 _ = function(e) {
                     function t() {

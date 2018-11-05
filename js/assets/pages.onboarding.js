@@ -802,7 +802,7 @@
                     }
                 })(Y),
                 te = K.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(176)]).then(n.bind(null, "6tis"))
+                    return Promise.all([n.e(0), n.e(177)]).then(n.bind(null, "6tis"))
                 }, "ChannelSurfingPage"),
                 ne = K.a.wrap(function() {
                     return Promise.resolve().then(n.bind(null, "8n14"))

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [192], {
+    [193], {
         "+naV": function(e, t, n) {
             e.exports = n.p + "assets/10-gifts-2x-2f03f55cc8cde11ce21f.png"
         },
@@ -2399,7 +2399,7 @@
                                                 id: t.id,
                                                 purchasedWithPrime: !0,
                                                 tier: c.a.Prime,
-                                                platform: l.P.WEB,
+                                                platform: l.Q.WEB,
                                                 gift: {
                                                     __typename: "SubscriptionGift",
                                                     isGift: !1,
@@ -7342,7 +7342,7 @@
                         }, l))
                     }
                     var d = e.subscriptionProducts[0],
-                        m = (d.interval && d.interval.unit) === Fe.O.ONE_TIME;
+                        m = (d.interval && d.interval.unit) === Fe.P.ONE_TIME;
                     return a.createElement(p.Xa, {
                         padding: 2
                     }, i, a.createElement(p.Xa, null, a.createElement(p.W, {

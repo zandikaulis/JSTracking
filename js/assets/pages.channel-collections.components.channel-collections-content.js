@@ -3099,7 +3099,7 @@
                             n = this.getCollectionVideos();
                         if (n && 0 === n.length) return null;
                         var o = 0,
-                            d = t && t.type === s.n.SERIES && n && n.length >= 4;
+                            d = t && t.type === s.o.SERIES && n && n.length >= 4;
                         if (t && n && d && Object(c.a)() && Object(c.c)()) {
                             var m = function(e) {
                                 for (var t = e.items.edges, n = t.length, o = null, r = 0; r < t.length; r++) {

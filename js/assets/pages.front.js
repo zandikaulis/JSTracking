@@ -2922,7 +2922,7 @@
                 return {
                     text: Object(i.d)("I am not interested in this category", "FeedbackReason"),
                     contentType: a.b.Game,
-                    feedbackType: r.I.NOT_INTERESTED
+                    feedbackType: r.J.NOT_INTERESTED
                 }
             }
 
@@ -2939,7 +2939,7 @@
                 return null === c && (c = [o(), {
                     text: s(),
                     contentType: a.b.Shelf,
-                    feedbackType: r.I.OTHER
+                    feedbackType: r.J.OTHER
                 }]), c
             }
             var u = null;
@@ -2948,11 +2948,11 @@
                 return null === u && (u = [{
                     text: l(),
                     contentType: a.b.Live,
-                    feedbackType: r.I.NOT_INTERESTED
+                    feedbackType: r.J.NOT_INTERESTED
                 }, o(), {
                     text: s(),
                     contentType: a.b.Live,
-                    feedbackType: r.I.OTHER
+                    feedbackType: r.J.OTHER
                 }]), u
             }
             var m = null;
@@ -2961,7 +2961,7 @@
                 return null === m && (m = [o(), {
                     text: s(),
                     contentType: a.b.Game,
-                    feedbackType: r.I.OTHER
+                    feedbackType: r.J.OTHER
                 }]), m
             }
             var g = null;
@@ -2970,19 +2970,19 @@
                 return null === g && (g = [{
                     text: Object(i.d)("I am not interested in this video", "FeedbackReason"),
                     contentType: a.b.Vod,
-                    feedbackType: r.I.NOT_INTERESTED
+                    feedbackType: r.J.NOT_INTERESTED
                 }, {
                     text: l(),
                     contentType: a.b.Live,
-                    feedbackType: r.I.NOT_INTERESTED
+                    feedbackType: r.J.NOT_INTERESTED
                 }, o(), {
                     text: Object(i.d)("I have already watched this video", "FeedbackReason"),
                     contentType: a.b.Vod,
-                    feedbackType: r.I.ALREADY_WATCHED
+                    feedbackType: r.J.ALREADY_WATCHED
                 }, {
                     text: s(),
                     contentType: a.b.Vod,
-                    feedbackType: r.I.OTHER
+                    feedbackType: r.J.OTHER
                 }]), g
             }
         },
@@ -9541,15 +9541,15 @@
                     feedback_action: r.Remove,
                     feedback_type: function(e) {
                         switch (e) {
-                            case l.J.CATEGORY:
+                            case l.K.CATEGORY:
                                 return c.b.Game;
-                            case l.J.CHANNEL:
+                            case l.K.CHANNEL:
                                 return c.b.Live;
-                            case l.J.SHELF:
+                            case l.K.SHELF:
                                 return c.b.Shelf;
-                            case l.J.VOD:
+                            case l.K.VOD:
                                 return c.b.Vod;
-                            case l.J.UNSPECIFIED:
+                            case l.K.UNSPECIFIED:
                                 return null;
                             default:
                                 return e

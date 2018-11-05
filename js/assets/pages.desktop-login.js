@@ -280,8 +280,8 @@
                         configurable: !0
                     }), t
                 }(a.PureComponent),
-                C = r("imBb"),
-                w = (r("VcSt"), r("/MKj")),
+                w = r("imBb"),
+                C = (r("VcSt"), r("/MKj")),
                 T = r("kRBY"),
                 O = r("TSYQ"),
                 M = r("tKDy"),
@@ -291,9 +291,9 @@
                         return t.state = {
                             widgetId: null
                         }, t.onChange = function(e) {
-                            Object(M.g)({
+                            Object(M.k)({
                                 screen: t.props.screen,
-                                target: M.d.Captcha,
+                                target: M.h.Captcha,
                                 action: M.a.Complete
                             }), t.props.onChange(e)
                         }, t.onExpired = function() {
@@ -342,7 +342,7 @@
                         }
                     }, t
                 }(a.PureComponent);
-            var j = Object(w.connect)(function(e) {
+            var j = Object(C.connect)(function(e) {
                     return {
                         languageCode: Object(T.b)(e)
                     }
@@ -351,7 +351,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClick = function(e) {
-                            Object(M.g)({
+                            Object(M.k)({
                                 screen: t.props.screen,
                                 target: t.props.target,
                                 action: M.a.Click
@@ -368,9 +368,9 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onEnter = function() {
-                            t.props.disableContinueButton || (Object(M.g)({
-                                screen: M.c.Captcha,
-                                target: M.d.Submit,
+                            t.props.disableContinueButton || (Object(M.k)({
+                                screen: M.g.Captcha,
+                                target: M.h.Submit,
                                 action: M.a.Enter
                             }), t.continue())
                         }, t.continue = function() {
@@ -391,9 +391,9 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                        C.bindGlobal("enter", this.onEnter), Object(M.f)(M.c.Captcha)
+                        w.bindGlobal("enter", this.onEnter), Object(M.j)(M.g.Captcha)
                     }, t.prototype.componentWillUnmount = function() {
-                        C.unbind("enter")
+                        w.unbind("enter")
                     }, t.prototype.render = function() {
                         return a.createElement(F.Xa, null, a.createElement(F.W, {
                             type: F.Tb.Span,
@@ -406,12 +406,12 @@
                             justifyContent: F.Wa.Center,
                             className: "captcha-form__captcha"
                         }, a.createElement(j, {
-                            screen: M.c.Captcha,
+                            screen: M.g.Captcha,
                             refDelegate: this.onCaptchaRefDelegate,
                             onChange: this.props.onCaptchaChanged
                         })), a.createElement(I, {
-                            screen: M.c.Captcha,
-                            target: M.d.Submit,
+                            screen: M.g.Captcha,
+                            target: M.h.Submit,
                             fullWidth: !0,
                             onClick: this.continue,
                             disabled: this.props.isLoading || this.props.disableContinueButton,
@@ -425,9 +425,9 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onFacebookLoginClicked = function() {
-                            Object(M.g)({
+                            Object(M.k)({
                                 screen: t.props.screen,
-                                target: M.d.FacebookFooter,
+                                target: M.h.FacebookFooter,
                                 action: M.a.Click
                             })
                         }, t.handleCallback = function(e) {
@@ -489,7 +489,7 @@
                         })))
                     }, t
                 }(a.PureComponent));
-            var A, V = Object(w.connect)(function(e) {
+            var A, V = Object(C.connect)(function(e) {
                     return {
                         facebookLocale: Object(T.d)(e).replace("-", "_")
                     }
@@ -616,7 +616,7 @@
                         })
                     }, t.prototype.trackAuthInteraction = function(e) {
                         var t = e.isFocusing;
-                        Object(M.g)({
+                        Object(M.k)({
                             screen: this.props.screen,
                             target: this.props.target,
                             action: t ? M.a.Focus : M.a.Blur
@@ -656,9 +656,9 @@
                             var r = e.currentTarget.value;
                             t.props.onChange(r)
                         }, t.onPasswordResetClicked = function() {
-                            Object(M.g)({
+                            Object(M.k)({
                                 screen: t.props.screen,
-                                target: M.d.TroubleLoggingIn,
+                                target: M.h.TroubleLoggingIn,
                                 action: M.a.Click
                             })
                         }, t
@@ -677,7 +677,7 @@
                         }, a.createElement(X, o.__assign({
                             autoComplete: "current-password",
                             screen: this.props.screen,
-                            target: M.d.Password,
+                            target: M.h.Password,
                             type: F.Ta.Password,
                             onChange: this.onPasswordInputChanged,
                             onBlur: this.onPasswordInputBlur,
@@ -736,7 +736,7 @@
                         }, a.createElement(X, o.__assign({
                             autoComplete: "username",
                             screen: this.props.screen,
-                            target: M.d.Username,
+                            target: M.h.Username,
                             type: F.Ta.Text,
                             onChange: this.onUsernameInputChanged,
                             value: Object(R.b)(this.props.username),
@@ -805,7 +805,7 @@
                         skipGrowAnimation: this.state.skipGrowAnimation
                     }, a.createElement(X, o.__assign({
                         screen: this.props.screen,
-                        target: M.d.Username,
+                        target: M.h.Username,
                         type: F.Ta.Text,
                         onChange: this.onChange,
                         value: Object(R.b)(this.props.value),
@@ -921,9 +921,9 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onSubmit = function(e) {
-                            e.preventDefault(), t.canLogin && (Object(M.g)({
-                                screen: M.c.FacebookConnect,
-                                target: M.d.Connect,
+                            e.preventDefault(), t.canLogin && (Object(M.k)({
+                                screen: M.g.FacebookConnect,
+                                target: M.h.Connect,
                                 action: M.a.Enter
                             }), t.login())
                         }, t.login = function() {
@@ -975,7 +975,7 @@
                                 top: 2
                             }
                         }, a.createElement(G, {
-                            screen: M.c.FacebookConnect,
+                            screen: M.g.FacebookConnect,
                             username: this.props.values.username,
                             error: this.props.serverErrors.usernameError,
                             onChange: this.onUsernameInputChanged,
@@ -987,7 +987,7 @@
                                 top: 2
                             }
                         }, a.createElement(Y, {
-                            screen: M.c.FacebookConnect,
+                            screen: M.g.FacebookConnect,
                             password: this.props.values.password,
                             error: this.props.serverErrors.passwordError,
                             onChange: this.onPasswordInputChanged,
@@ -1012,8 +1012,8 @@
                                 top: 2
                             }
                         }, a.createElement(I, {
-                            screen: M.c.FacebookConnect,
-                            target: M.d.CreateAccount,
+                            screen: M.g.FacebookConnect,
+                            target: M.h.CreateAccount,
                             type: F.F.Text,
                             onClick: this.goToFacebookSignupForm
                         }, Object(s.d)("Create a new Twitch account instead", "FacebookConnectForm")))
@@ -1211,7 +1211,7 @@
                         }, a.createElement(X, o.__assign({
                             autoComplete: "new-password",
                             screen: this.props.screen,
-                            target: M.d.Password,
+                            target: M.h.Password,
                             type: this.state.isPasswordVisible ? F.Ta.Text : F.Ta.Password,
                             onChange: this.props.onChange,
                             onFocus: this.onPasswordFocus,
@@ -1252,9 +1252,9 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onSubmit = function(e) {
-                            e.preventDefault(), t.canSignup && Object(M.g)({
-                                screen: M.c.FacebookSignup,
-                                target: M.d.Signup,
+                            e.preventDefault(), t.canSignup && Object(M.k)({
+                                screen: M.g.FacebookSignup,
+                                target: M.h.Signup,
                                 action: M.a.Enter
                             }), t.signup()
                         }, t.signup = function() {
@@ -1326,7 +1326,7 @@
                                 top: 2
                             }
                         }, a.createElement(J, {
-                            screen: M.c.FacebookSignup,
+                            screen: M.g.FacebookSignup,
                             onUsernameChanged: this.onUsernameInputChanged,
                             onValidationRequested: this.onUsernameValidationRequested,
                             value: this.props.values.username,
@@ -1341,7 +1341,7 @@
                                 top: 2
                             }
                         }, a.createElement(ye, {
-                            screen: M.c.FacebookSignup,
+                            screen: M.g.FacebookSignup,
                             value: this.props.values.password,
                             onChange: this.onPasswordInputChanged,
                             error: this.props.values.isPasswordInvalid || this.props.serverErrors.passwordError,
@@ -1367,8 +1367,8 @@
                                 top: 2
                             }
                         }, a.createElement(I, {
-                            screen: M.c.FacebookSignup,
-                            target: M.d.LinkAccount,
+                            screen: M.g.FacebookSignup,
+                            target: M.h.LinkAccount,
                             type: F.F.Text,
                             onClick: this.goToFacebookConnectForm
                         }, Object(s.d)("Link an existing Twitch account instead", "FacebookSignupForm")))
@@ -1384,16 +1384,16 @@
                     autoReportInteractive: !0
                 }), ue())(Fe);
 
-            function Ce(e, t) {
+            function we(e, t) {
                 return !t.usernameError && !t.passwordError && (!!e.username && !!e.password)
             }
-            var we, Te = function(e) {
+            var Ce, Te = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onSubmit = function(e) {
-                            e.preventDefault(), t.canLogin && (Object(M.g)({
-                                screen: M.c.Login,
-                                target: M.d.Login,
+                            e.preventDefault(), t.canLogin && (Object(M.k)({
+                                screen: M.g.Login,
+                                target: M.h.Login,
                                 action: M.a.Enter
                             }), t.props.onLoginRequested())
                         }, t.onUsernameInputChanged = function(e) {
@@ -1407,7 +1407,7 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                        Object(M.f)(M.c.Login)
+                        Object(M.j)(M.g.Login)
                     }, t.prototype.render = function() {
                         return a.createElement("form", {
                             noValidate: !0,
@@ -1422,7 +1422,7 @@
                                 top: 2
                             }
                         }, a.createElement(F.z, {
-                            disabled: this.props.isLoading || !Ce(this.props.values, this.props.serverErrors),
+                            disabled: this.props.isLoading || !we(this.props.values, this.props.serverErrors),
                             state: this.props.isLoading ? F.E.Loading : F.E.Default,
                             fullWidth: !0,
                             "data-a-target": "passport-login-button"
@@ -1433,7 +1433,7 @@
                                 top: 2
                             }
                         }, a.createElement(G, {
-                            screen: M.c.Login,
+                            screen: M.g.Login,
                             username: this.props.values.username,
                             error: this.props.serverErrors.usernameError,
                             onChange: this.onUsernameInputChanged,
@@ -1446,7 +1446,7 @@
                                 top: 2
                             }
                         }, a.createElement(Y, {
-                            screen: M.c.Login,
+                            screen: M.g.Login,
                             password: this.props.values.password,
                             error: this.props.serverErrors.passwordError,
                             onChange: this.onPasswordInputChanged,
@@ -1455,7 +1455,7 @@
                         }))
                     }, Object.defineProperty(t.prototype, "canLogin", {
                         get: function() {
-                            return Ce(this.props.values, this.props.serverErrors)
+                            return we(this.props.values, this.props.serverErrors)
                         },
                         enumerable: !0,
                         configurable: !0
@@ -1517,15 +1517,15 @@
                 });
             ! function(e) {
                 e.Day = "D", e.Month = "M", e.Year = "Y"
-            }(we || (we = {}));
+            }(Ce || (Ce = {}));
             r("qV8A");
             var Ie = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleMonthChange = function(e) {
-                        Object(M.g)({
-                            screen: M.c.Signup,
-                            target: M.d.DateOfBirthMonth,
+                        Object(M.k)({
+                            screen: M.g.Signup,
+                            target: M.h.DateOfBirthMonth,
                             action: M.a.Click
                         }), t.props.onChanged(o.__assign({}, t.props.date, {
                             month: +e.target.value
@@ -1567,7 +1567,7 @@
                 return o.__extends(t, e), t.prototype.render = function() {
                     var e = function(e) {
                         var t = je[e.toLowerCase()];
-                        return e && t ? [t.substring(0, 1), t.substring(1, 2), t.substring(2, 3)] : [we.Month, we.Day, we.Year]
+                        return e && t ? [t.substring(0, 1), t.substring(1, 2), t.substring(2, 3)] : [Ce.Month, Ce.Day, Ce.Year]
                     }(this.props.locale);
                     return a.createElement(F.Xa, {
                         display: F.X.Flex,
@@ -1583,11 +1583,11 @@
                     }, this.renderBasedOnDateOrder(e[2])))
                 }, t.prototype.renderBasedOnDateOrder = function(e) {
                     switch (e) {
-                        case we.Day:
+                        case Ce.Day:
                             return this.renderDayInput();
-                        case we.Month:
+                        case Ce.Month:
                             return this.renderMonthSelect();
-                        case we.Year:
+                        case Ce.Year:
                             return this.renderYearInput();
                         default:
                             return null
@@ -1596,8 +1596,8 @@
                     return a.createElement(F.Xa, {
                         className: "birthday-picker__input"
                     }, a.createElement(X, {
-                        screen: M.c.Signup,
-                        target: M.d.DateOfBirthDay,
+                        screen: M.g.Signup,
+                        target: M.h.DateOfBirthDay,
                         type: F.Ta.Text,
                         value: Object(R.a)(this.props.date && this.props.date.day),
                         placeholder: Object(s.d)("Day", "BirthdayPicker"),
@@ -1612,8 +1612,8 @@
                     return a.createElement(F.Xa, {
                         className: "birthday-picker__input"
                     }, a.createElement(X, {
-                        screen: M.c.Signup,
-                        target: M.d.DateOfBirthYear,
+                        screen: M.g.Signup,
+                        target: M.h.DateOfBirthYear,
                         type: F.Ta.Text,
                         value: Object(R.a)(this.props.date && this.props.date.year),
                         placeholder: Object(s.d)("Year", "BirthdayPicker"),
@@ -1664,7 +1664,7 @@
                     }, Object(s.d)("December", "BirthdayPicker"))))
                 }, t
             }(a.Component);
-            var _e = Object(w.connect)(function(e) {
+            var _e = Object(C.connect)(function(e) {
                     return {
                         locale: Object(T.d)(e)
                     }
@@ -1785,8 +1785,8 @@
                             label: Object(s.d)("Email", "SignupEmailFormGroup"),
                             validationComponent: this.renderValidIndicator()
                         }, a.createElement(X, {
-                            screen: M.c.Signup,
-                            target: M.d.Email,
+                            screen: M.g.Signup,
+                            target: M.h.Email,
                             type: F.Ta.Email,
                             onChange: this.onChange,
                             onFocus: this.onEmailFocus,
@@ -1901,7 +1901,7 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                        Object(M.f)(M.c.Signup)
+                        Object(M.j)(M.g.Signup)
                     }, t.prototype.render = function() {
                         return a.createElement("form", {
                             noValidate: !0,
@@ -1918,7 +1918,7 @@
                                 top: 2
                             }
                         }, a.createElement(J, {
-                            screen: M.c.Signup,
+                            screen: M.g.Signup,
                             onUsernameChanged: this.onUsernameInputChanged,
                             onValidationRequested: this.onUsernameValidationRequested,
                             value: this.props.values.username,
@@ -1934,7 +1934,7 @@
                                 top: 2
                             }
                         }, a.createElement(ye, {
-                            screen: M.c.Signup,
+                            screen: M.g.Signup,
                             value: this.props.values.password,
                             onChange: this.onPasswordInputChanged,
                             error: this.props.values.isPasswordInvalid || !!this.props.serverErrors.passwordError,
@@ -1968,7 +1968,7 @@
                         }))
                     }, t.prototype.renderCaptcha = function() {
                         return a.createElement(j, {
-                            screen: M.c.Signup,
+                            screen: M.g.Signup,
                             refDelegate: this.onCaptchaRefDelegate,
                             onChange: this.onCaptchaInputChanged,
                             invisible: !0
@@ -2018,9 +2018,9 @@
                             return o.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
-                                        return this.canSignup ? (Object(M.g)({
-                                            screen: M.c.Signup,
-                                            target: M.d.Signup,
+                                        return this.canSignup ? (Object(M.k)({
+                                            screen: M.g.Signup,
+                                            target: M.h.Signup,
                                             action: M.a.Enter
                                         }), [4, this.props.onSignupRequested()]) : [3, 2];
                                     case 1:
@@ -2044,15 +2044,15 @@
                         return t.state = {
                             isSMSSuccessVisible: !1
                         }, t.onEnter = function() {
-                            t.props.values.token && (Object(M.g)({
-                                screen: M.c.TwoFactor,
-                                target: M.d.Submit,
+                            t.props.values.token && (Object(M.k)({
+                                screen: M.g.TwoFactor,
+                                target: M.h.Submit,
                                 action: M.a.Enter
                             }), t.submitToken())
                         }, t.onRememberMeToggled = function(e) {
-                            Object(M.g)({
-                                screen: M.c.TwoFactor,
-                                target: M.d.RememberMe,
+                            Object(M.k)({
+                                screen: M.g.TwoFactor,
+                                target: M.h.RememberMe,
                                 action: M.a.Click
                             }), t.props.onTwoFactorFormValuesChanged({
                                 rememberMe: e.currentTarget.checked
@@ -2067,9 +2067,9 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                        C.bindGlobal("enter", this.onEnter), Object(M.f)(M.c.TwoFactor)
+                        w.bindGlobal("enter", this.onEnter), Object(M.j)(M.g.TwoFactor)
                     }, t.prototype.componentWillUnmount = function() {
-                        C.unbind("enter"), this.smsTimerHandle && clearTimeout(this.smsTimerHandle)
+                        w.unbind("enter"), this.smsTimerHandle && clearTimeout(this.smsTimerHandle)
                     }, t.prototype.componentDidUpdate = function(e) {
                         var t = this;
                         e.smsRequestState === Re.Loading && this.props.smsRequestState === Re.Success && (this.smsTimerHandle && clearTimeout(this.smsTimerHandle), this.setState({
@@ -2100,8 +2100,8 @@
                             label: Object(s.d)("Token", "TwoFactorForm"),
                             orientation: F.Fa.Vertical
                         }, a.createElement(X, {
-                            screen: M.c.TwoFactor,
-                            target: M.d.Token,
+                            screen: M.g.TwoFactor,
+                            target: M.h.Token,
                             type: F.Ta.Text,
                             onChange: this.onTokenInputChanged,
                             value: Object(R.b)(this.props.values.token),
@@ -2122,8 +2122,8 @@
                                 top: 2
                             }
                         }, a.createElement(I, {
-                            screen: M.c.TwoFactor,
-                            target: M.d.Submit,
+                            screen: M.g.TwoFactor,
+                            target: M.h.Submit,
                             onClick: this.submitToken,
                             disabled: this.props.isLoading || !this.props.values.token,
                             state: this.props.isLoading ? F.E.Loading : F.E.Default
@@ -2132,8 +2132,8 @@
                                 left: 2
                             }
                         }, a.createElement(I, {
-                            screen: M.c.TwoFactor,
-                            target: M.d.Sms,
+                            screen: M.g.TwoFactor,
+                            target: M.h.Sms,
                             type: F.F.Hollow,
                             onClick: this.props.onSMSRequested,
                             disabled: this.props.smsRequestState === Re.Loading,
@@ -3100,7 +3100,7 @@
                                         case 11:
                                             return [2, void 0];
                                         case 12:
-                                            return Object(M.i)({
+                                            return Object(M.m)({
                                                 errorCode: e,
                                                 step: t
                                             }), [2]
@@ -3117,7 +3117,7 @@
                                 return o.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
-                                            return Ce(this.state.loginFormValues, this.state.loginFormServerErrors) && this.beginSubmit() ? [4, function(e) {
+                                            return we(this.state.loginFormValues, this.state.loginFormServerErrors) && this.beginSubmit() ? [4, function(e) {
                                                 var t = s.p.logger.withCategory("auth.login"),
                                                     r = {
                                                         username: e.username,
@@ -3143,7 +3143,7 @@
                                         case 1:
                                             return (e = t.sent()).complete ? [4, e.complete()] : [3, 3];
                                         case 2:
-                                            return t.sent(), Object(M.j)(), [3, 4];
+                                            return t.sent(), Object(M.n)(), [3, 4];
                                         case 3:
                                             this.setState($e(this.state.currentStep, this.startSignup, this.state.captchaState, this.state.isCapsLockOn, e.errorCode, e.captchaProof, e.smsProof)), t.label = 4;
                                         case 4:
@@ -3180,7 +3180,7 @@
                                         case 1:
                                             return (r = o.sent()).complete ? [4, r.complete()] : [3, 3];
                                         case 2:
-                                            return o.sent(), Object(M.j)(), [3, 4];
+                                            return o.sent(), Object(M.n)(), [3, 4];
                                         case 3:
                                             this.setState(Je(function() {
                                                 return n.changeFacebookFormType(y.a.FacebookSignup)
@@ -3225,7 +3225,7 @@
                                         case 1:
                                             return (n = o.sent()).complete ? [4, n.complete()] : [3, 3];
                                         case 2:
-                                            return o.sent(), Object(M.k)(), [3, 4];
+                                            return o.sent(), Object(M.q)(), [3, 4];
                                         case 3:
                                             this.setState(Ke(this.startSignup, this.facebookLogin, n.errorCode)), o.label = 4;
                                         case 4:
@@ -3274,7 +3274,7 @@
                                         case 1:
                                             return (n = o.sent()).complete ? [4, n.complete()] : [3, 3];
                                         case 2:
-                                            return o.sent(), Object(M.j)(), [3, 4];
+                                            return o.sent(), Object(M.n)(), [3, 4];
                                         case 3:
                                             this.setState(He(this.state.currentStep, this.startSignup, this.facebookLogin, this.state.captchaState, n.errorCode, n.captchaProof, n.smsProof)), o.label = 4;
                                         case 4:
@@ -3322,7 +3322,7 @@
                                         case 1:
                                             return (e = r.sent()).complete ? [4, e.complete()] : [3, 3];
                                         case 2:
-                                            return r.sent(), Object(M.k)(), [3, 4];
+                                            return r.sent(), Object(M.q)(), [3, 4];
                                         case 3:
                                             this.setState(function(r) {
                                                 return o.__assign({
@@ -3373,9 +3373,9 @@
                     return o.__extends(t, e), t.prototype.componentWillMount = function() {
                         document.addEventListener("keydown", this.onKeyPressed), document.addEventListener("keyup", this.onKeyPressed)
                     }, t.prototype.componentWillUnmount = function() {
-                        document.removeEventListener("keyup", this.onKeyPressed), document.removeEventListener("keydown", this.onKeyPressed), Object(M.g)({
-                            screen: Object(M.e)(this.state.currentStep),
-                            target: M.d.Close,
+                        document.removeEventListener("keyup", this.onKeyPressed), document.removeEventListener("keydown", this.onKeyPressed), Object(M.k)({
+                            screen: Object(M.i)(this.state.currentStep),
+                            target: M.h.Close,
                             action: M.a.Click
                         })
                     }, t.prototype.componentDidMount = function() {
@@ -3503,7 +3503,7 @@
                             }
                         }, a.createElement(V, {
                             onFacebookConnected: this.onFacebookConnected,
-                            screen: Object(M.e)(this.state.currentStep),
+                            screen: Object(M.i)(this.state.currentStep),
                             disableConnectButton: this.state.isSubmitInTransit
                         }))
                     }, t.prototype.isReadyForSubmit = function(e, t) {
@@ -4411,7 +4411,7 @@
                 },
                 F = r("Ideu"),
                 E = r("obJ3"),
-                C = function(e) {
+                w = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4563,7 +4563,7 @@
                         return this.props.data && this.props.data.user && this.props.data.user.login ? this.props.data.user.login : null
                     }, t
                 }(o.Component),
-                w = Object(b.compose)(Object(v.a)(E, {
+                C = Object(b.compose)(Object(v.a)(E, {
                     options: function(e) {
                         return {
                             variables: {
@@ -4574,7 +4574,7 @@
                     skip: function(e) {
                         return !e.userID
                     }
-                }))(C),
+                }))(w),
                 T = (r("mGa3"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -4598,7 +4598,7 @@
                             return n.__generator(this, function(r) {
                                 switch (r.label) {
                                     case 0:
-                                        if (Object(m.h)({
+                                        if (Object(m.l)({
                                                 step: g.a.StartLogin,
                                                 source: u.a.DesktopLogin,
                                                 style: m.b.Native
@@ -4620,26 +4620,15 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return o.createElement(S.Ja, {
-                            gutterSize: S.Ka.None,
-                            fullHeight: !0
-                        }, o.createElement(S.P, {
-                            cols: 6
-                        }, o.createElement(S.Cb, {
-                            background: S.r.Base,
-                            color: S.O.Base,
-                            fullHeight: !0,
-                            display: S.X.Flex,
-                            flexDirection: S.Aa.Column,
-                            justifyContent: S.Wa.Center,
-                            alignItems: S.f.Center
-                        }, o.createElement(S.Pa, {
-                            fullWidth: !0
+                        return this.state.loading ? o.createElement(S.Za, {
+                            fillContent: !0
+                        }) : o.createElement(S.Qa, {
+                            background: S.r.Accent
                         }, o.createElement(i.b, {
-                            suppressScrollX: !0,
-                            className: "desktop-login-page__scroll"
-                        }, o.createElement(S.Xa, {
-                            padding: 2,
+                            suppressScrollX: !0
+                        }, o.createElement(S.Cb, {
+                            className: "desklight-login__container",
+                            padding: 3,
                             fullWidth: !0,
                             fullHeight: !0,
                             display: S.X.Flex,
@@ -4647,26 +4636,27 @@
                             justifyContent: S.Wa.Center,
                             alignItems: S.f.Center
                         }, o.createElement(S.Cb, {
-                            className: "desktop-login-page__container",
+                            className: "desklight-login__login-container",
                             background: S.r.Base,
-                            borderRadius: S.x.Medium,
+                            borderRadius: S.x.Large,
                             overflow: S.cb.Hidden,
                             display: S.X.Flex,
                             flexDirection: S.Aa.Column,
                             justifyContent: S.Wa.Center
-                        }, this.renderContents())))))), o.createElement(S.P, {
-                            cols: 6
-                        }, o.createElement(S.Cb, {
-                            background: S.r.Accent,
-                            color: S.O.Overlay,
-                            fullHeight: !0
-                        })))
-                    }, t.prototype.renderContents = function() {
-                        return this.state.loading ? o.createElement(S.Za, {
-                            fillContent: !0
-                        }) : this.renderAuthForm()
+                        }, this.renderAuthForm()), o.createElement(S.Cb, {
+                            padding: {
+                                x: 2,
+                                top: 2
+                            },
+                            color: S.O.Overlay
+                        }, o.createElement(S.U, {
+                            to: "https://help.twitch.tv/",
+                            targetBlank: !0,
+                            type: S.V.Inherit,
+                            hoverColorInherit: !0
+                        }, Object(s.e)("Contact Support", "DesklightLoginPage"))))))
                     }, t.prototype.renderAuthForm = function() {
-                        return s.p.integrations.session && this.state.fastLoginID ? o.createElement(w, {
+                        return s.p.integrations.session && this.state.fastLoginID ? o.createElement(C, {
                             userID: this.state.fastLoginID,
                             onBack: this.disableFastLogin
                         }) : o.createElement(h.AuthForm, {

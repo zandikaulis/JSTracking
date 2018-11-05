@@ -160,7 +160,7 @@
                             kind: "Variable",
                             name: {
                                 kind: "Name",
-                                value: "channelLogin"
+                                value: "channelID"
                             }
                         },
                         type: {
@@ -169,7 +169,7 @@
                                 kind: "NamedType",
                                 name: {
                                     kind: "Name",
-                                    value: "String"
+                                    value: "ID"
                                 }
                             }
                         }
@@ -276,13 +276,13 @@
                                 kind: "Argument",
                                 name: {
                                     kind: "Name",
-                                    value: "login"
+                                    value: "id"
                                 },
                                 value: {
                                     kind: "Variable",
                                     name: {
                                         kind: "Name",
-                                        value: "channelLogin"
+                                        value: "channelID"
                                     }
                                 }
                             }],
@@ -692,11 +692,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 628
+                    end: 615
                 }
             };
             n.loc.source = {
-                body: "query UserRolesCacheQuery ($channelLogin: String! $includeEditors: Boolean! $includeMods: Boolean! $includeVIPs: Boolean! $modsCursor: Cursor $vipsCursor: Cursor) {\nuser(login: $channelLogin) {\nid\neditors @include(if: $includeEditors) {\nedges {\ncursor\ngrantedAt\nnode {\nid\ndisplayName\nlogin\nprofileImageURL(width: 50)\n}\n}\n}\nmods(first: 100 after: $modsCursor) @include(if: $includeMods) {\nedges {\ncursor\ngrantedAt\nnode {\nid\ndisplayName\nlogin\nprofileImageURL(width: 50)\n}\n}\n}\nvips(first: 100 after: $vipsCursor) @include(if: $includeVIPs) {\nedges {\ncursor\ngrantedAt\nnode {\nid\ndisplayName\nlogin\nprofileImageURL(width: 50)\n}\n}\n}\n}\n}",
+                body: "query UserRolesCacheQuery ($channelID: ID! $includeEditors: Boolean! $includeMods: Boolean! $includeVIPs: Boolean! $modsCursor: Cursor $vipsCursor: Cursor) {\nuser(id: $channelID) {\nid\neditors @include(if: $includeEditors) {\nedges {\ncursor\ngrantedAt\nnode {\nid\ndisplayName\nlogin\nprofileImageURL(width: 50)\n}\n}\n}\nmods(first: 100 after: $modsCursor) @include(if: $includeMods) {\nedges {\ncursor\ngrantedAt\nnode {\nid\ndisplayName\nlogin\nprofileImageURL(width: 50)\n}\n}\n}\nvips(first: 100 after: $vipsCursor) @include(if: $includeVIPs) {\nedges {\ncursor\ngrantedAt\nnode {\nid\ndisplayName\nlogin\nprofileImageURL(width: 50)\n}\n}\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -1544,30 +1544,31 @@
             var i, r, a = n("mrSG"),
                 s = n("q1tI"),
                 o = n("fvjX"),
-                l = n("yR8l"),
-                d = n("V+GM"),
-                c = n("NvVO"),
-                u = n("2xye"),
-                m = n("GnwI"),
-                p = n("1rIY");
+                l = n("ZDlU"),
+                d = n("yR8l"),
+                c = n("V+GM"),
+                u = n("NvVO"),
+                m = n("2xye"),
+                p = n("GnwI"),
+                h = n("1rIY");
             ! function(e) {
                 e[e.ADD_USER = 0] = "ADD_USER", e[e.DEFAULT = 1] = "DEFAULT", e[e.LOADING = 2] = "LOADING", e[e.NO_USERS = 3] = "NO_USERS"
             }(r || (r = {}));
-            var h = (i = Object(p.a)("RolesPageViewContext", {
+            var f = (i = Object(h.a)("RolesPageViewContext", {
                     setView: function() {
                         return null
                     },
                     view: r.LOADING
                 })).InnerProvider,
                 v = i.withContext,
-                f = function(e) {
+                k = function(e) {
                     return e
                 };
 
-            function k(e) {
-                return v(f)(e)
+            function g(e) {
+                return v(k)(e)
             }
-            var g, E, C, b = function(e) {
+            var E, C, y, b = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.setView = function(e) {
@@ -1580,37 +1581,36 @@
                         }, n
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(h, {
+                        return s.createElement(f, {
                             value: this.state
                         }, this.props.children)
                     }, t
                 }(s.Component),
-                y = n("/7QA"),
-                I = n("IFXb"),
-                S = n("5NYc"),
-                N = n("vYsf"),
-                D = n("NAv5"),
-                _ = n("ZDlU"),
-                O = n("Ue10"),
+                I = n("Ue10"),
+                S = n("/7QA"),
+                N = n("IFXb"),
+                D = n("5NYc"),
+                _ = n("vYsf"),
+                O = n("NAv5"),
                 U = n("91YW");
             ! function(e) {
                 e[e.ALL_ROLES = 0] = "ALL_ROLES", e[e.EDITOR = 1] = "EDITOR", e[e.MODERATOR = 2] = "MODERATOR", e[e.VIP = 3] = "VIP"
-            }(E || (E = {})),
+            }(C || (C = {})),
             function(e) {
                 e.IS_EDITOR = "isEditor", e.IS_MOD = "isMod", e.IS_VIP = "isVIP"
-            }(C || (C = {}));
-            var A = (g = Object(p.a)("UserRolesCacheContext", {
+            }(y || (y = {}));
+            var A = (E = Object(h.a)("UserRolesCacheContext", {
                     modifyUserInCache: function() {
                         return null
                     },
-                    filterType: E.ALL_ROLES,
+                    filterType: C.ALL_ROLES,
                     setFilterType: function() {
                         return null
                     },
                     totalVIPs: 0,
                     userCache: {}
                 })).InnerProvider,
-                M = g.withContext,
+                M = E.withContext,
                 T = function(e) {
                     return e
                 };
@@ -1653,7 +1653,7 @@
                                                 isMod: !1,
                                                 isVIP: !1
                                             };
-                                        c[n] = !0, c.isMod && c.isVIP && (c.isVIP = !1), c.lastModified = Object(D.max)(c.lastModified, new Date(d)), e[l] = c
+                                        c[n] = !0, c.isMod && c.isVIP && (c.isVIP = !1), c.lastModified = Object(O.max)(c.lastModified, new Date(d)), e[l] = c
                                     }
                                 }
                             }
@@ -1709,7 +1709,7 @@
                             })
                         }, n.state = {
                             modifyUserInCache: n.modifyUserInCache,
-                            filterType: E.ALL_ROLES,
+                            filterType: C.ALL_ROLES,
                             setFilterType: n.setFilterType,
                             totalVIPs: 0,
                             userCache: {}
@@ -1722,13 +1722,13 @@
                             userCache: {}
                         }), e.data.loading && this.updateUserCache()
                     }, t.prototype.render = function() {
-                        return this.props.data.error ? s.createElement(_.a, {
-                            message: Object(y.d)("Whoops, something went wrong.", "UserRolesContext")
-                        }) : this.props.view !== r.LOADING && this.props.channelID ? s.createElement(A, {
-                            value: this.state
-                        }, this.props.children) : s.createElement(O.Za, {
+                        return this.props.data.error ? s.createElement(l.a, {
+                            message: Object(S.d)("Whoops, something went wrong.", "UserRolesContext")
+                        }) : this.props.view === r.LOADING ? s.createElement(I.Za, {
                             fillContent: !0
-                        })
+                        }) : s.createElement(A, {
+                            value: this.state
+                        }, this.props.children)
                     }, t.prototype.updateUserCache = function(e) {
                         var t = this;
                         void 0 === e && (e = this.props.data);
@@ -1738,17 +1738,17 @@
                         s || o || !l || this.props.view !== r.LOADING || this.setState(function(e) {
                             var r = a.__assign({}, e);
                             if (r.userCache || (r.userCache = {}), l.editors && l.editors.edges) {
-                                var s = t.setUserCache(r.userCache, l.editors.edges, C.IS_EDITOR).userCache;
+                                var s = t.setUserCache(r.userCache, l.editors.edges, y.IS_EDITOR).userCache;
                                 r.userCache = a.__assign({}, r.userCache, s)
                             }
                             if (l.mods && l.mods.edges) {
-                                var o = t.setUserCache(r.userCache, l.mods.edges, C.IS_MOD),
+                                var o = t.setUserCache(r.userCache, l.mods.edges, y.IS_MOD),
                                     d = o.cursor;
                                 s = o.userCache;
                                 n = d, r.userCache = a.__assign({}, r.userCache, s)
                             }
                             if (l.vips && l.vips.edges) {
-                                var c = t.setUserCache(r.userCache, l.vips.edges, C.IS_VIP);
+                                var c = t.setUserCache(r.userCache, l.vips.edges, y.IS_VIP);
                                 d = c.cursor, s = c.userCache;
                                 i = d, r.userCache = a.__assign({}, r.userCache, s), r.totalVIPs = e.totalVIPs + l.vips.edges.length
                             }
@@ -1772,7 +1772,7 @@
                         })
                     }, t
                 }(s.Component),
-                w = Object(o.compose)(k, Object(m.b)("WithUserRolesCacheProvider"), Object(l.a)(U, {
+                w = Object(o.compose)(g, Object(p.b)("WithUserRolesCacheProvider"), Object(d.a)(U, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -1785,7 +1785,7 @@
                         }
                     }
                 }))(R),
-                P = (L = Object(p.a)("ChannelVIPContext", {
+                P = (L = Object(h.a)("ChannelVIPContext", {
                     maxVIPUserLimit: 0,
                     isAtMaxVIPUserLimit: !1,
                     isVIPUnlocked: !1
@@ -1826,10 +1826,10 @@
                                         if (!(e = this.props.channelID)) return [2];
                                         a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, Object(N.a)(e)];
+                                        return a.trys.push([1, 3, , 4]), [4, Object(_.a)(e)];
                                     case 2:
                                         for (t = a.sent(), n = 0, i = t; n < i.length; n++)
-                                            if ((r = i[n]).key === S.b.VIP_BADGE) return this.setState({
+                                            if ((r = i[n]).key === D.b.VIP_BADGE) return this.setState({
                                                 maxVIPUserLimit: r.reward && r.reward.limit || 0,
                                                 isVIPUnlocked: r.is_complete
                                             }), [2];
@@ -1849,7 +1849,7 @@
                 $ = "https://help.twitch.tv/customer/en/portal/articles/659115-twitch-chat-badges-guide",
                 Q = "https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/1",
                 z = "https://static-cdn.jtvnw.net/badges/v1/b817aba4-fad8-49e2-b88a-7cc744dfa6ec/1",
-                Y = function(e) {
+                K = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1863,7 +1863,7 @@
             ! function(e) {
                 e[e.ALL_MUTATIONS_FAILED = 0] = "ALL_MUTATIONS_FAILED", e[e.ALL_MUTATIONS_SUCCEEDED = 1] = "ALL_MUTATIONS_SUCCEEDED", e[e.MAX_VIPS_REACHED = 2] = "MAX_VIPS_REACHED", e[e.SOME_MUTATIONS_FAILED = 3] = "SOME_MUTATIONS_FAILED"
             }(X || (X = {}));
-            var K = (j = Object(p.a)("RolesPageMessageContext", {
+            var Y = (j = Object(h.a)("RolesPageMessageContext", {
                     clearMessage: function() {
                         return null
                     },
@@ -1898,7 +1898,7 @@
                         }, n
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(K, {
+                        return s.createElement(Y, {
                             value: this.state
                         }, this.props.children)
                     }, t
@@ -1908,7 +1908,7 @@
             ! function(e) {
                 e.FATAL = "FATAL"
             }(ne || (ne = {}));
-            var se = (te = Object(p.a)("MutateUserRolesContext", {
+            var se = (te = Object(h.a)("MutateUserRolesContext", {
                     mutateUser: function() {
                         return Promise.resolve({
                             editorError: null,
@@ -1930,7 +1930,7 @@
                         var n = e.call(this, t) || this;
                         return n.mutateUser = function(e) {
                             return a.__awaiter(n, void 0, void 0, function() {
-                                var t, n, i, r, s, o, l, d, c, u, m, p, h, v;
+                                var t, n, i, r, s, o, l, d, c, u, m, p, h, f;
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
@@ -1940,10 +1940,10 @@
                                                 isVIP: !1
                                             }, s = e.isEditor, o = e.isMod, l = e.isVIP, d = !!s !== r.isEditor, c = !!o !== r.isMod, u = this.props.isVIPUnlocked && !!l !== r.isVIP, [4, Promise.all([d ? this.mutateEditor(t, !!s) : this.genericPromise(), c ? this.mutateMod(t, !!o) : this.genericPromise(), u ? this.mutateVIP(t, !!l) : this.genericPromise()])]) : [2, ne.FATAL];
                                         case 1:
-                                            return m = a.sent(), p = m[0], h = m[1], v = m[2], [2, {
+                                            return m = a.sent(), p = m[0], h = m[1], f = m[2], [2, {
                                                 editorError: p,
                                                 modError: h,
-                                                vipError: v
+                                                vipError: f
                                             }]
                                     }
                                 })
@@ -2028,8 +2028,8 @@
                 me = n("yzwe"),
                 pe = n("CpU+"),
                 he = n("fKMw"),
-                ve = n("OBYv");
-            var fe = n("r6Pb");
+                fe = n("OBYv");
+            var ve = n("r6Pb");
 
             function ke(e) {
                 return {
@@ -2038,7 +2038,7 @@
             }
             var ge = Object(o.compose)(B, F, function() {
                     var e = this;
-                    return Object(l.a)(ve, {
+                    return Object(d.a)(fe, {
                         props: function(t) {
                             return {
                                 addEditorUserMutation: function(n) {
@@ -2065,7 +2065,7 @@
                     })
                 }(), function() {
                     var e = this;
-                    return Object(l.a)(fe, {
+                    return Object(d.a)(ve, {
                         props: function(t) {
                             return {
                                 removeEditorUserMutation: function(n) {
@@ -2142,24 +2142,24 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(O.ab, {
+                        return s.createElement(I.ab, {
                             elevation: 3,
                             onCloseButtonClick: this.handleModalDismiss,
                             primaryButtonProps: {
-                                children: Object(y.d)("Retry", "RolesPageMessageModal"),
+                                children: Object(S.d)("Retry", "RolesPageMessageModal"),
                                 disabled: this.state.isRetryButtonDisabled,
                                 onClick: this.handleRetryClick
                             },
                             secondaryButtonProps: {
-                                children: Object(y.d)("Cancel", "RolesPageMessageModal"),
+                                children: Object(S.d)("Cancel", "RolesPageMessageModal"),
                                 onClick: this.handleModalDismiss,
-                                type: O.F.Hollow
+                                type: I.F.Hollow
                             },
-                            size: O.bb.Small,
-                            title: Object(y.d)("Something went wrong", "RolesPageMessageModal")
-                        }, s.createElement(O.Xa, {
+                            size: I.bb.Small,
+                            title: Object(S.d)("Something went wrong", "RolesPageMessageModal")
+                        }, s.createElement(I.Xa, {
                             padding: 1
-                        }, s.createElement(O.W, null, Object(y.d)("There was an error modifying roles for {user}.", {
+                        }, s.createElement(I.W, null, Object(S.d)("There was an error modifying roles for {user}.", {
                             user: this.props.message.user.displayName
                         }, "RolesPageMessageModal"))))
                     }, t
@@ -2179,7 +2179,7 @@
                         e && (e.type === X.ALL_MUTATIONS_FAILED && this.props.showModal(this.props))
                     }, t
                 }(s.Component);
-            var be, ye = Object(o.compose)(Object(re.connect)(null, function(e) {
+            var ye, be = Object(o.compose)(Object(re.connect)(null, function(e) {
                     return Object(o.bindActionCreators)({
                         closeModal: ae.c,
                         showModal: function(e) {
@@ -2193,58 +2193,58 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(O.Xa, {
-                            alignItems: O.f.Center,
-                            display: O.X.Flex,
+                        return s.createElement(I.Xa, {
+                            alignItems: I.f.Center,
+                            display: I.X.Flex,
                             fullHeight: !0,
                             fullWidth: !0,
-                            justifyContent: O.Wa.Center,
-                            position: O.hb.Absolute,
-                            zIndex: O.gc.Above
-                        }, s.createElement(O.i, {
-                            type: O.n.SlideInBottom,
-                            duration: O.k.Medium,
+                            justifyContent: I.Wa.Center,
+                            position: I.hb.Absolute,
+                            zIndex: I.gc.Above
+                        }, s.createElement(I.i, {
+                            type: I.n.SlideInBottom,
+                            duration: I.k.Medium,
                             enabled: !0,
-                            timing: O.m.EaseInOut
-                        }, s.createElement(O.Cb, {
-                            background: O.r.Base,
+                            timing: I.m.EaseInOut
+                        }, s.createElement(I.Cb, {
+                            background: I.r.Base,
                             borderBottom: !0,
-                            borderRadius: O.x.Medium,
+                            borderRadius: I.x.Medium,
                             className: "dashboard-centered-banner",
-                            display: O.X.Flex,
+                            display: I.X.Flex,
                             elevation: 3,
-                            flexDirection: O.Aa.Column,
+                            flexDirection: I.Aa.Column,
                             padding: 2
-                        }, s.createElement(O.Xa, {
-                            alignItems: O.f.Center,
-                            display: O.X.Flex,
-                            justifyContent: O.Wa.Start,
+                        }, s.createElement(I.Xa, {
+                            alignItems: I.f.Center,
+                            display: I.X.Flex,
+                            justifyContent: I.Wa.Start,
                             margin: {
                                 bottom: 1
                             }
-                        }, s.createElement(O.Xa, {
+                        }, s.createElement(I.Xa, {
                             margin: {
                                 right: .5
                             }
-                        }, s.createElement(O.q, {
-                            alt: Object(y.d)("VoHiYo", "CenteredBanner"),
+                        }, s.createElement(I.q, {
+                            alt: Object(S.d)("VoHiYo", "CenteredBanner"),
                             src: "https://static-cdn.jtvnw.net/emoticons/v1/81274/2.0",
                             size: 30
-                        })), s.createElement(O.W, {
+                        })), s.createElement(I.W, {
                             bold: !0,
-                            type: O.Tb.H5
-                        }, this.props.title)), s.createElement(O.Xa, {
+                            type: I.Tb.H5
+                        }, this.props.title)), s.createElement(I.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, s.createElement(O.W, {
-                            fontSize: O.Ca.Size5
+                        }, s.createElement(I.W, {
+                            fontSize: I.Ca.Size5
                         }, this.props.body)), this.props.children)))
                     }, t
                 }(s.Component));
             ! function(e) {
                 e.ADD_A_ROLE = "no-users-banner-add-a-role", e.LEARN_MORE = "no-users-banner-learn-more"
-            }(be || (be = {}));
+            }(ye || (ye = {}));
             var Ne = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2254,65 +2254,65 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         return s.createElement(Se, {
-                            body: Object(y.d)("Manage the permissions users have for your community. Start by adding your first role.", "NoUsersBanner"),
-                            title: Object(y.d)("Welcome to Roles", "NoUsersBanner")
-                        }, s.createElement(O.Xa, {
-                            alignItems: O.f.Center,
-                            display: O.X.Flex,
-                            justifyContent: O.Wa.Start
-                        }, s.createElement(O.Xa, {
+                            body: Object(S.d)("Manage the permissions users have for your community. Start by adding your first role.", "NoUsersBanner"),
+                            title: Object(S.d)("Welcome to Roles", "NoUsersBanner")
+                        }, s.createElement(I.Xa, {
+                            alignItems: I.f.Center,
+                            display: I.X.Flex,
+                            justifyContent: I.Wa.Start
+                        }, s.createElement(I.Xa, {
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(O.z, {
-                            "data-test-selector": be.ADD_A_ROLE,
+                        }, s.createElement(I.z, {
+                            "data-test-selector": ye.ADD_A_ROLE,
                             onClick: this.handleAddARoleClick
-                        }, Object(y.d)("Add a Role", "NoUsersBanner"))), s.createElement(O.z, {
-                            "data-test-selector": be.LEARN_MORE,
+                        }, Object(S.d)("Add a Role", "NoUsersBanner"))), s.createElement(I.z, {
+                            "data-test-selector": ye.LEARN_MORE,
                             linkTo: $,
-                            type: O.F.Text
-                        }, Object(y.d)("Learn More", "NoUsersBanner"))))
+                            type: I.F.Text
+                        }, Object(S.d)("Learn More", "NoUsersBanner"))))
                     }, t
                 }(s.Component),
-                De = Object(o.compose)(k, Ie.a)(Ne),
+                De = Object(o.compose)(g, Ie.a)(Ne),
                 _e = n("TSYQ"),
                 Oe = function(e) {
                     var t;
                     if (e.selected) switch (e.sortDirection) {
                         case je.ASCENDING:
-                            t = s.createElement(O.qb, {
-                                asset: O.rb.GlyphArrUp,
+                            t = s.createElement(I.qb, {
+                                asset: I.rb.GlyphArrUp,
                                 width: 10
                             });
                             break;
                         case je.DESCENDING:
-                            t = s.createElement(O.qb, {
-                                asset: O.rb.GlyphArrDown,
+                            t = s.createElement(I.qb, {
+                                asset: I.rb.GlyphArrDown,
                                 width: 10
                             });
                             break;
                         default:
-                            t = s.createElement(O.qb, {
-                                asset: O.rb.GlyphArrUpDown,
+                            t = s.createElement(I.qb, {
+                                asset: I.rb.GlyphArrUpDown,
                                 width: 10
                             })
-                    } else t = s.createElement(O.qb, {
-                        asset: O.rb.GlyphArrUpDown,
+                    } else t = s.createElement(I.qb, {
+                        asset: I.rb.GlyphArrUpDown,
                         width: 10
                     });
-                    return s.createElement(O.z, {
-                        type: O.F.Text,
+                    return s.createElement(I.z, {
+                        type: I.F.Text,
                         onClick: e.onClick
-                    }, s.createElement(O.Cb, {
-                        display: O.X.Flex,
-                        alignContent: O.e.Center
-                    }, s.createElement(O.W, {
-                        type: O.Tb.Span,
+                    }, s.createElement(I.Cb, {
+                        display: I.X.Flex,
+                        alignContent: I.e.Center
+                    }, s.createElement(I.W, {
+                        type: I.Tb.Span,
                         bold: !0,
-                        color: e.selected ? O.O.Alt : O.O.Link
-                    }, e.children), s.createElement(O.Xa, {
-                        display: O.X.Flex,
-                        alignItems: O.f.Center,
+                        color: e.selected ? I.O.Alt : I.O.Link
+                    }, e.children), s.createElement(I.Xa, {
+                        display: I.X.Flex,
+                        alignItems: I.f.Center,
                         margin: {
                             left: .5
                         }
@@ -2327,32 +2327,32 @@
                         var e = this.props,
                             t = e.src,
                             n = e.title;
-                        return s.createElement(O.Cb, {
-                            alignItems: O.f.Center,
-                            background: O.r.Alt,
-                            borderRadius: O.x.Medium,
-                            display: O.X.Flex,
-                            justifyContent: O.Wa.Center,
+                        return s.createElement(I.Cb, {
+                            alignItems: I.f.Center,
+                            background: I.r.Alt,
+                            borderRadius: I.x.Medium,
+                            display: I.X.Flex,
+                            justifyContent: I.Wa.Center,
                             margin: {
                                 x: 1
                             }
-                        }, t && s.createElement(O.Xa, {
+                        }, t && s.createElement(I.Xa, {
                             margin: {
                                 right: .5
                             }
-                        }, s.createElement(O.S, {
+                        }, s.createElement(I.S, {
                             alt: n,
                             src: t
-                        })), s.createElement(O.Xa, {
+                        })), s.createElement(I.Xa, {
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(O.W, {
+                        }, s.createElement(I.W, {
                             bold: !0
-                        }, n)), s.createElement(O.A, {
-                            icon: O.rb.NotificationError,
+                        }, n)), s.createElement(I.A, {
+                            icon: I.rb.NotificationError,
                             onClick: this.props.onRolePillDismissed,
-                            size: O.B.Small
+                            size: I.B.Small
                         }))
                     }, t
                 }(s.Component),
@@ -2369,18 +2369,18 @@
                             t = e.disabled,
                             n = e.label,
                             i = e.src;
-                        return s.createElement(O.Xa, {
-                            alignItems: O.f.Center,
-                            display: O.X.Flex,
-                            justifyContent: O.Wa.Between,
+                        return s.createElement(I.Xa, {
+                            alignItems: I.f.Center,
+                            display: I.X.Flex,
+                            justifyContent: I.Wa.Between,
                             margin: this.props.margin
-                        }, s.createElement(O.N, {
+                        }, s.createElement(I.N, {
                             checked: this.props.checked,
                             disabled: t,
                             label: n,
                             onChange: this.handleCheckBoxChange,
                             value: this.props.value
-                        }), i && s.createElement(O.S, {
+                        }), i && s.createElement(I.S, {
                             alt: n,
                             className: t ? "disabled-role-selector-icon" : "",
                             src: i
@@ -2389,15 +2389,15 @@
                 }(s.Component));
 
             function Te() {
-                return Object(y.d)("Editor", "FilterUsersComponent")
+                return Object(S.d)("Editor", "FilterUsersComponent")
             }
 
             function Fe() {
-                return Object(y.d)("Moderator", "FilterUsersComponent")
+                return Object(S.d)("Moderator", "FilterUsersComponent")
             }
 
             function Le() {
-                return Object(y.d)("VIP", "FilterUsersComponent")
+                return Object(S.d)("VIP", "FilterUsersComponent")
             }
             var Re, we = B(function(e) {
                     function t() {
@@ -2410,15 +2410,15 @@
                             n = e.isMod,
                             i = e.isVIP,
                             r = e.onCheckBoxChange;
-                        return s.createElement(O.Xa, {
-                            position: O.hb.Relative
-                        }, s.createElement(O.u, {
+                        return s.createElement(I.Xa, {
+                            position: I.hb.Relative
+                        }, s.createElement(I.u, {
                             offsetY: "-0.5px",
                             noTail: !0,
                             show: this.props.show
-                        }, s.createElement(O.Cb, {
+                        }, s.createElement(I.Cb, {
                             border: !0,
-                            borderRadius: O.x.Small,
+                            borderRadius: I.x.Small,
                             elevation: 2
                         }, s.createElement(Me, {
                             checked: n,
@@ -2430,7 +2430,7 @@
                                 y: 2
                             },
                             src: Q,
-                            value: C.IS_MOD
+                            value: y.IS_MOD
                         }), this.props.isVIPUnlocked && s.createElement(Me, {
                             checked: i,
                             disabled: n || this.props.isAtMaxVIPUserLimit && !i,
@@ -2441,7 +2441,7 @@
                                 bottom: 2
                             },
                             src: z,
-                            value: C.IS_VIP
+                            value: y.IS_VIP
                         }), s.createElement(Me, {
                             checked: t,
                             disabled: !1,
@@ -2451,23 +2451,23 @@
                                 x: 1,
                                 bottom: 2
                             },
-                            value: C.IS_EDITOR
-                        }), s.createElement(O.Ua, {
+                            value: y.IS_EDITOR
+                        }), s.createElement(I.Ua, {
                             onClick: this.handleLearnAboutRolesClick
-                        }, s.createElement(O.Cb, {
-                            alignItems: O.f.Center,
+                        }, s.createElement(I.Cb, {
+                            alignItems: I.f.Center,
                             borderTop: !0,
-                            display: O.X.Flex,
+                            display: I.X.Flex,
                             padding: 1
-                        }, s.createElement(O.Xa, {
-                            alignItems: O.f.Center,
-                            display: O.X.Flex,
+                        }, s.createElement(I.Xa, {
+                            alignItems: I.f.Center,
+                            display: I.X.Flex,
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(O.qb, {
-                            asset: O.rb.NotificationInfo
-                        })), s.createElement(O.W, null, Object(y.e)("Learn about Roles", "RoleSelector")))))))
+                        }, s.createElement(I.qb, {
+                            asset: I.rb.NotificationInfo
+                        })), s.createElement(I.W, null, Object(S.e)("Learn about Roles", "RoleSelector")))))))
                     }, t
                 }(s.Component)),
                 Pe = B(function(e) {
@@ -2484,9 +2484,6 @@
                         }, t.handleClickOut = function() {
                             t.setState({
                                 isBalloonOpen: !1
-                            }, function() {
-                                var e = t.props.onDropDownClickOut;
-                                e && e()
                             })
                         }, t
                     }
@@ -2501,36 +2498,36 @@
                             l = n.isEditor,
                             d = n.isMod,
                             c = n.isVIP;
-                        return s.createElement(O.Xa, {
-                            alignItems: O.f.Center,
-                            display: O.X.Flex,
+                        return s.createElement(I.Xa, {
+                            alignItems: I.f.Center,
+                            display: I.X.Flex,
                             flexDirection: this.props.roleOrder
-                        }, !i && s.createElement(O.A, {
+                        }, !i && s.createElement(I.A, {
                             onClick: this.handleAddRoleClick,
-                            icon: O.rb.Plus,
-                            size: O.B.Small
+                            icon: I.rb.Plus,
+                            size: I.B.Small
                         }), i && s.createElement(Ue.a, {
                             onClickOut: this.handleClickOut
-                        }, s.createElement(O.z, {
-                            icon: O.rb.Plus,
+                        }, s.createElement(I.z, {
+                            icon: I.rb.Plus,
                             onClick: this.handleAddRoleClick,
-                            size: O.D.Small,
-                            type: i ? O.F.Hollow : O.F.Text
-                        }, s.createElement(O.W, null, Object(y.d)("Add Role", "RoleSelector"))), s.createElement(we, {
+                            size: I.D.Small,
+                            type: I.F.Text
+                        }, s.createElement(I.W, null, Object(S.d)("Add Role", "RoleSelector"))), s.createElement(we, {
                             isEditor: l,
                             isMod: d,
                             isVIP: c,
                             onCheckBoxChange: this.props.onCheckBoxChange,
                             show: i
                         })), l && s.createElement(Ae, {
-                            onRolePillDismissed: t.bind(null, C.IS_EDITOR),
+                            onRolePillDismissed: t.bind(null, y.IS_EDITOR),
                             title: r
                         }), d && s.createElement(Ae, {
-                            onRolePillDismissed: t.bind(null, C.IS_MOD),
+                            onRolePillDismissed: t.bind(null, y.IS_MOD),
                             src: Q,
                             title: a
                         }), this.props.isVIPUnlocked && c && s.createElement(Ae, {
-                            onRolePillDismissed: t.bind(null, C.IS_VIP),
+                            onRolePillDismissed: t.bind(null, y.IS_VIP),
                             src: z,
                             title: o
                         }))
@@ -2541,12 +2538,12 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(O.Cb, {
-                            alignItems: O.f.Center,
-                            background: O.r.Base,
+                        return s.createElement(I.Cb, {
+                            alignItems: I.f.Center,
+                            background: I.r.Base,
                             borderBottom: !0,
-                            borderRadius: O.x.Large,
-                            display: O.X.Flex,
+                            borderRadius: I.x.Large,
+                            display: I.X.Flex,
                             elevation: 1,
                             fullWidth: !0,
                             margin: this.props.margin,
@@ -2560,33 +2557,46 @@
             var xe, Be, je, Xe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.handleCheckBoxChange = function(e) {
-                            var n = a.__assign({}, t.props.userCache[t.props.userID], e);
-                            t.props.modifyUserInCache(n)
-                        }, t.handleClickOut = function() {
+                        return t.handleUserMutation = function(e) {
                             return a.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n, i, r;
-                                return a.__generator(this, function(a) {
-                                    switch (a.label) {
-                                        case 0:
-                                            return e = this.props.userCache[this.props.userID], [4, this.props.mutateUser(e)];
-                                        case 1:
-                                            return (t = a.sent()) === ne.FATAL ? [2] : (n = t.editorError, i = t.modError, r = t.vipError, n || i || r ? [2] : (this.props.modifyUserInCache(e), [2]))
-                                    }
-                                })
-                            })
-                        }, t.handleRolePillDismissed = function(e) {
-                            return a.__awaiter(t, void 0, void 0, function() {
-                                var t, n, i, r, s, o;
+                                var t, n, i, r, s, o = this;
                                 return a.__generator(this, function(l) {
                                     switch (l.label) {
                                         case 0:
-                                            return n = a.__assign({}, this.props.userCache[this.props.userID], ((t = {})[e] = !1, t)), [4, this.props.mutateUser(n)];
+                                            return [4, this.props.mutateUser(e)];
                                         case 1:
-                                            return (i = l.sent()) === ne.FATAL ? [2] : (r = i.editorError, s = i.modError, o = i.vipError, r || s || o ? [2] : (this.props.modifyUserInCache(n), [2]))
+                                            return (t = l.sent()) === ne.FATAL ? (this.props.setMessage({
+                                                user: e,
+                                                error: t,
+                                                type: X.ALL_MUTATIONS_FAILED
+                                            }), [2]) : (n = t.editorError, i = t.modError, r = t.vipError, n || i || r ? (s = a.__assign({
+                                                channelLogin: e.channelLogin,
+                                                displayName: e.displayName,
+                                                lastModified: e.lastModified,
+                                                id: e.id,
+                                                profileImageURL: e.profileImageURL
+                                            }, n ? {} : {
+                                                isEditor: e.isEditor
+                                            }, i ? {} : {
+                                                isMod: e.isMod
+                                            }, r ? {} : {
+                                                isVIP: e.isVIP
+                                            }), this.props.modifyUserInCache(s, function() {
+                                                o.props.setMessage({
+                                                    user: e,
+                                                    error: t,
+                                                    type: X.SOME_MUTATIONS_FAILED
+                                                })
+                                            }), [2]) : (this.props.modifyUserInCache(e), [2]))
                                     }
                                 })
                             })
+                        }, t.handleCheckBoxChange = function(e) {
+                            var n = a.__assign({}, t.props.userCache[t.props.userID], e);
+                            t.handleUserMutation(n)
+                        }, t.handleRolePillDismissed = function(e) {
+                            var n, i = a.__assign({}, t.props.userCache[t.props.userID], ((n = {})[e] = !1, n));
+                            t.handleUserMutation(i)
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
@@ -2597,79 +2607,98 @@
                             margin: {
                                 top: .5
                             }
-                        }, s.createElement(O.P, {
+                        }, s.createElement(I.P, {
                             cols: xe.FIRST_COLUMN
-                        }, s.createElement(O.Xa, {
-                            display: O.X.Flex,
-                            alignItems: O.f.Center
-                        }, s.createElement(O.U, {
+                        }, s.createElement(I.Xa, {
+                            display: I.X.Flex,
+                            alignItems: I.f.Center
+                        }, s.createElement(I.U, {
                             to: "/" + n,
                             targetBlank: !0
-                        }, s.createElement(O.q, {
+                        }, s.createElement(I.q, {
                             src: e.profileImageURL,
                             alt: n,
                             size: 30
-                        })), s.createElement(O.U, {
+                        })), s.createElement(I.U, {
                             to: "/" + n,
                             targetBlank: !0
-                        }, s.createElement(O.Xa, {
+                        }, s.createElement(I.Xa, {
                             margin: {
                                 left: 1
                             },
-                            display: O.X.Flex,
-                            alignItems: O.f.Center
-                        }, s.createElement(O.W, {
+                            display: I.X.Flex,
+                            alignItems: I.f.Center
+                        }, s.createElement(I.W, {
                             bold: !0,
-                            color: O.O.Base,
-                            type: O.Tb.P,
+                            color: I.O.Base,
+                            type: I.Tb.P,
                             ellipsis: !0
-                        }, n), n.toLowerCase() !== t.toLowerCase() && s.createElement(O.Xa, {
+                        }, n), n.toLowerCase() !== t.toLowerCase() && s.createElement(I.Xa, {
                             margin: {
                                 left: 1
                             }
-                        }, s.createElement(O.W, {
+                        }, s.createElement(I.W, {
                             bold: !0,
-                            color: O.O.Base,
-                            type: O.Tb.P,
+                            color: I.O.Base,
+                            type: I.Tb.P,
                             ellipsis: !0,
                             "data-test-selector": Re.CJK_NAME
-                        }, t)))))), s.createElement(O.P, {
+                        }, t)))))), s.createElement(I.P, {
                             cols: xe.SECOND_COLUMN
-                        }, s.createElement(O.Xa, {
-                            display: O.X.Flex,
+                        }, s.createElement(I.Xa, {
+                            display: I.X.Flex,
                             margin: {
                                 right: 5
                             },
                             flexGrow: 1,
-                            alignItems: O.f.Center
+                            alignItems: I.f.Center
                         }, s.createElement(Pe, {
                             user: e,
                             onCheckBoxChange: this.handleCheckBoxChange,
-                            onDropDownClickOut: this.handleClickOut,
                             onRolePillDismissed: this.handleRolePillDismissed,
-                            roleOrder: O.Aa.RowReverse
-                        }))), s.createElement(O.P, {
+                            roleOrder: I.Aa.RowReverse
+                        }))), s.createElement(I.P, {
                             cols: xe.THIRD_COLUMN
-                        }, s.createElement(O.Xa, {
-                            display: O.X.Flex,
-                            alignItems: O.f.Center,
-                            flexDirection: O.Aa.RowReverse
-                        }, s.createElement(O.P, {
+                        }, s.createElement(I.Xa, {
+                            display: I.X.Flex,
+                            alignItems: I.f.Center,
+                            flexDirection: I.Aa.RowReverse
+                        }, s.createElement(I.P, {
                             cols: 6
-                        }, s.createElement(O.W, null, Object(y.c)(e.lastModified))))))
+                        }, s.createElement(I.W, null, Object(S.c)(e.lastModified))))))
                     }, t
                 }(s.Component),
-                Ge = Object(o.compose)(F, de, k)(Xe),
+                Ge = Object(o.compose)(ee, F, de)(Xe),
                 We = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.sortByUsername = function() {
                             return Object.keys(t.props.userCache).sort(function(e, n) {
-                                return t.props.sortDirection === je.ASCENDING && t.props.userCache[e].channelLogin > t.props.userCache[n].channelLogin ? 1 : t.props.sortDirection === je.DESCENDING && t.props.userCache[e].channelLogin < t.props.userCache[n].channelLogin ? 1 : 0
+                                var i = t.props.userCache[e].channelLogin,
+                                    r = t.props.userCache[n].channelLogin;
+                                if (t.props.sortDirection === je.ASCENDING) {
+                                    if (i > r) return 1;
+                                    if (i < r) return -1
+                                }
+                                if (t.props.sortDirection === je.DESCENDING) {
+                                    if (i < r) return 1;
+                                    if (i > r) return -1
+                                }
+                                return 0
                             })
                         }, t.sortByLastModified = function() {
                             return Object.keys(t.props.userCache).sort(function(e, n) {
-                                return t.props.sortDirection === je.ASCENDING && t.props.userCache[e].lastModified < t.props.userCache[n].lastModified ? 1 : t.props.sortDirection === je.DESCENDING && t.props.userCache[e].lastModified > t.props.userCache[n].lastModified ? 1 : 0
+                                var i = t.props.userCache[e].lastModified,
+                                    r = t.props.userCache[n].lastModified;
+                                if (t.props.sortDirection === je.ASCENDING) {
+                                    if (i < r) return 1;
+                                    if (i > r) return -1
+                                }
+                                if (t.props.sortDirection === je.DESCENDING) {
+                                    if (i > r) return 1;
+                                    if (i < r) return -1
+                                }
+                                return 0
                             })
                         }, t
                     }
@@ -2678,7 +2707,7 @@
                     }, t.prototype.render = function() {
                         var e = this,
                             t = [];
-                        return this.props.sortBy === Be.USERNAME && (t = this.sortByUsername()), this.props.sortBy === Be.LAST_MODIFIED && (t = this.sortByLastModified()), this.props.filterType === E.ALL_ROLES ? s.createElement(s.Fragment, null, t.map(function(e) {
+                        return this.props.sortBy === Be.USERNAME && (t = this.sortByUsername()), this.props.sortBy === Be.LAST_MODIFIED && (t = this.sortByLastModified()), this.props.filterType === C.ALL_ROLES ? s.createElement(s.Fragment, null, t.map(function(e) {
                             return s.createElement(Ge, {
                                 "data-test-selector": "roles-table-row-" + e,
                                 key: "roles-table-row-" + e,
@@ -2686,7 +2715,7 @@
                             })
                         })) : s.createElement(s.Fragment, null, t.reduce(function(t, n) {
                             var i = e.props.userCache[n];
-                            return i && (e.props.filterType === E.EDITOR && i[C.IS_EDITOR] || e.props.filterType === E.MODERATOR && i[C.IS_MOD] || e.props.filterType === E.VIP && i[C.IS_VIP]) && t.push(s.createElement(Ge, {
+                            return i && (e.props.filterType === C.EDITOR && i[y.IS_EDITOR] || e.props.filterType === C.MODERATOR && i[y.IS_MOD] || e.props.filterType === C.VIP && i[y.IS_VIP]) && t.push(s.createElement(Ge, {
                                 "data-test-selector": "roles-table-row-" + n,
                                 key: "roles-table-row-" + n,
                                 userID: n
@@ -2728,43 +2757,43 @@
                             n = {
                                 "disabled-rows": this.props.view !== r.DEFAULT
                             };
-                        return s.createElement(O.Xa, {
+                        return s.createElement(I.Xa, {
                             fullWidth: !0,
                             fullHeight: !0,
                             margin: {
                                 top: 1
                             }
-                        }, s.createElement(O.Xa, {
-                            display: O.X.Flex,
-                            alignItems: O.f.Center,
+                        }, s.createElement(I.Xa, {
+                            display: I.X.Flex,
+                            alignItems: I.f.Center,
                             padding: {
                                 x: 1,
                                 bottom: .5
                             }
-                        }, s.createElement(O.P, {
+                        }, s.createElement(I.P, {
                             cols: xe.FIRST_COLUMN
                         }, s.createElement(Oe, {
                             selected: e === Be.USERNAME,
                             sortDirection: t,
                             onClick: this.handleUsernameHeaderClick
-                        }, Object(y.d)("Username", "RolesPageTable"))), s.createElement(O.P, {
+                        }, Object(S.d)("Username", "RolesPageTable"))), s.createElement(I.P, {
                             cols: xe.SECOND_COLUMN
-                        }, s.createElement(O.W, {
-                            type: O.Tb.Span,
+                        }, s.createElement(I.W, {
+                            type: I.Tb.Span,
                             bold: !0,
-                            color: O.O.Link
-                        }, " ", Object(y.d)("Roles", "RolesPageTable"), " ")), s.createElement(O.P, {
+                            color: I.O.Link
+                        }, " ", Object(S.d)("Roles", "RolesPageTable"), " ")), s.createElement(I.P, {
                             cols: xe.THIRD_COLUMN
-                        }, s.createElement(O.Xa, {
-                            display: O.X.Flex,
-                            flexDirection: O.Aa.RowReverse
-                        }, s.createElement(O.P, {
+                        }, s.createElement(I.Xa, {
+                            display: I.X.Flex,
+                            flexDirection: I.Aa.RowReverse
+                        }, s.createElement(I.P, {
                             cols: 6
                         }, s.createElement(Oe, {
                             selected: e === Be.LAST_MODIFIED,
                             sortDirection: t,
                             onClick: this.handleLastModifiedHeaderClick
-                        }, Object(y.d)("Last Modified", "RolesPageTable")))))), s.createElement(O.Xa, {
+                        }, Object(S.d)("Last Modified", "RolesPageTable")))))), s.createElement(I.Xa, {
                             className: _e(n)
                         }, s.createElement(We, {
                             filterType: this.props.filterType,
@@ -2774,15 +2803,16 @@
                         })))
                     }, t
                 }(s.Component),
-                $e = Object(o.compose)(k, F)(He),
-                Qe = n("f00E"),
-                ze = n("H/lO"),
+                $e = Object(o.compose)(g, F)(He),
+                Qe = n("8Ad5"),
+                ze = n("f00E"),
+                Ke = n("H/lO"),
                 Ye = n("NZDK"),
-                Ke = n("AXTS"),
-                Je = n("Kw8/"),
-                Ze = n("gD7V"),
-                et = 250,
-                tt = function(e) {
+                Je = n("AXTS"),
+                Ze = n("Kw8/"),
+                et = n("gD7V"),
+                tt = 250,
+                nt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2790,12 +2820,12 @@
                             searchedUsers: null,
                             showDropDown: !1
                         }, t.searchClient = new Ye.a({
-                            appId: y.a.algoliaApplicationID,
-                            apiKey: y.a.algoliaAPIKey,
-                            apolloClient: y.p.apollo.client,
-                            logger: y.k,
-                            config: y.a,
-                            stats: y.p.stats
+                            appId: S.a.algoliaApplicationID,
+                            apiKey: S.a.algoliaAPIKey,
+                            apolloClient: S.p.apollo.client,
+                            logger: S.k,
+                            config: S.a,
+                            stats: S.p.stats
                         }), t.filterUsersResults = function(e) {
                             var n = t.props.data.user,
                                 i = n && n.id,
@@ -2808,7 +2838,7 @@
                             var n = e.currentTarget.value;
                             return a.__awaiter(t, void 0, void 0, function() {
                                 return a.__generator(this, function(e) {
-                                    return this.algoliaDebounceTimeout && clearTimeout(this.algoliaDebounceTimeout), this.algoliaDebounceTimeout = setTimeout(this.queryAlgolia.bind(this, n), et), [2]
+                                    return this.algoliaDebounceTimeout && clearTimeout(this.algoliaDebounceTimeout), this.algoliaDebounceTimeout = setTimeout(this.queryAlgolia.bind(this, n), tt), [2]
                                 })
                             })
                         }, t.queryAlgolia = function(e) {
@@ -2817,7 +2847,7 @@
                                 return a.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return e ? [4, this.searchClient.queryForType(ze.a.Users, e, Object(Qe.a)(), {
+                                            return e ? [4, this.searchClient.queryForType(Ke.a.Users, e, Object(ze.a)(), {
                                                 hitsPerPage: 10
                                             })] : [3, 2];
                                         case 1:
@@ -2850,7 +2880,7 @@
                             })
                         }, t.handleBlur = function(e) {
                             t.setState({
-                                showDropDown: e && e.getAttribute(Je.a) === Je.b
+                                showDropDown: e && e.getAttribute(Ze.a) === Ze.b
                             })
                         }, t.handleClickOut = function() {
                             t.setState({
@@ -2871,49 +2901,50 @@
                             t = e && e.channelLogin || "",
                             n = e && e.displayName || "",
                             i = this.state.canEditInputField,
-                            r = s.createElement(O.Xa, {
+                            r = s.createElement(I.Xa, {
                                 margin: {
                                     right: e ? 1 : .5
                                 }
-                            }, s.createElement(O.q, {
-                                alt: Object(y.d)("Avatar", "SearchUsers"),
+                            }, s.createElement(I.q, {
+                                alt: Object(S.d)("Avatar", "SearchUsers"),
                                 size: 30,
                                 src: e && e.profileImageURL
                             }));
-                        return s.createElement(O.Xa, null, !i && e && s.createElement(O.Ua, {
+                        return s.createElement(I.Xa, null, !i && e && s.createElement(I.Ua, {
                             onClick: this.enableInputField,
-                            type: O.Va.Overlay
-                        }, s.createElement(O.Xa, {
-                            alignItems: O.f.Center,
-                            display: O.X.Flex
-                        }, r, s.createElement(O.W, {
+                            type: I.Va.Overlay
+                        }, s.createElement(I.Xa, {
+                            alignItems: I.f.Center,
+                            display: I.X.Flex
+                        }, r, s.createElement(I.W, {
                             bold: !0,
-                            type: O.Tb.P,
+                            type: I.Tb.P,
                             ellipsis: !0
-                        }, t), t.toLowerCase() !== n.toLowerCase() && s.createElement(O.Xa, {
+                        }, t), t.toLowerCase() !== n.toLowerCase() && s.createElement(I.Xa, {
                             margin: {
                                 left: 1
                             }
-                        }, s.createElement(O.W, {
+                        }, s.createElement(I.W, {
                             bold: !0,
-                            type: O.Tb.P,
+                            type: I.Tb.P,
                             ellipsis: !0
                         }, n)))), (i || !e) && s.createElement(Ue.a, {
                             onClickOut: this.handleClickOut
-                        }, s.createElement(O.Xa, {
-                            alignItems: O.f.Center,
-                            display: O.X.Flex
-                        }, r, s.createElement(O.Xa, {
-                            position: O.hb.Relative
-                        }, s.createElement(O.Ra, {
+                        }, s.createElement(I.Xa, {
+                            alignItems: I.f.Center,
+                            display: I.X.Flex
+                        }, r, s.createElement(I.Xa, {
+                            position: I.hb.Relative
+                        }, s.createElement(I.Ra, {
                             autoFocus: !0,
                             defaultValue: n,
                             onBlur: this.handleInputBlur,
                             onChange: this.handleInputChange,
                             onFocus: this.handleInputFocus,
-                            placeholder: Object(y.d)("Search", "SearchUsers"),
-                            type: O.Ta.Text
-                        }), s.createElement(Ke.a, {
+                            onKeyDown: this.props.onInputKeyDown,
+                            placeholder: Object(S.d)("Search", "SearchUsers"),
+                            type: I.Ta.Text
+                        }), s.createElement(Je.a, {
                             onOptionClick: this.handleOptionClick,
                             onOptionBlur: this.handleOptionBlur,
                             show: this.state.showDropDown,
@@ -2921,7 +2952,7 @@
                         })))))
                     }, t
                 }(s.Component),
-                nt = Object(o.compose)(F, Ie.a, Object(l.a)(Ze, {
+                it = Object(o.compose)(F, Ie.a, Object(d.a)(et, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2929,11 +2960,11 @@
                             }
                         }
                     }
-                }))(tt);
+                }))(nt);
             ! function(e) {
                 e.CANCEL_BUTTON = "roles-page-add-user-cancel-button", e.SAVE_BUTTON = "roles-page-add-user-save-button"
             }(qe || (qe = {}));
-            var it, rt = function(e) {
+            var rt, at = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2952,17 +2983,19 @@
                                     selectedUser: a.__assign({}, i, (n = {}, n[e] = !1, n))
                                 } : null
                             })
+                        }, t.handleInputKeyDown = function(e) {
+                            e.keyCode === Qe.a.Esc && t.props.setView(r.DEFAULT)
                         }, t.handleUserSelected = function(e) {
                             t.setState({
                                 selectedUser: {
-                                    displayName: e.name,
                                     channelLogin: e.login,
+                                    displayName: e.name,
                                     id: e.objectID,
-                                    profileImageURL: e.profile_image || "",
                                     lastModified: new Date,
                                     isEditor: !1,
                                     isMod: !1,
-                                    isVIP: !1
+                                    isVIP: !1,
+                                    profileImageURL: e.profile_image || ""
                                 }
                             })
                         }, t.handleUserDeselected = function() {
@@ -3014,53 +3047,54 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.selectedUser;
-                        return s.createElement(O.Xa, {
+                        return s.createElement(I.Xa, {
                             fullWidth: !0,
-                            position: O.hb.Relative,
-                            zIndex: O.gc.Above
-                        }, s.createElement(O.i, {
-                            duration: O.k.Medium,
+                            position: I.hb.Relative,
+                            zIndex: I.gc.Above
+                        }, s.createElement(I.i, {
+                            duration: I.k.Medium,
                             enabled: !0,
-                            type: O.n.SlideInBottom
-                        }, s.createElement(Ve, null, s.createElement(O.P, {
+                            type: I.n.SlideInBottom
+                        }, s.createElement(Ve, null, s.createElement(I.P, {
                             cols: xe.FIRST_COLUMN
-                        }, s.createElement(nt, {
+                        }, s.createElement(it, {
+                            onInputKeyDown: this.handleInputKeyDown,
                             onUserDeselected: this.handleUserDeselected,
                             onUserSelected: this.handleUserSelected,
                             selectedUser: e
-                        })), s.createElement(O.P, {
+                        })), s.createElement(I.P, {
                             cols: xe.SECOND_COLUMN
                         }, e && s.createElement(Pe, {
                             onCheckBoxChange: this.handleCheckBoxChange,
                             onRolePillDismissed: this.handleRolePillDismissed,
                             user: e
-                        })), s.createElement(O.P, {
+                        })), s.createElement(I.P, {
                             cols: xe.THIRD_COLUMN
-                        }, s.createElement(O.Xa, {
-                            alignItems: O.f.Center,
-                            display: O.X.Flex,
-                            justifyContent: O.Wa.End
-                        }, s.createElement(O.Xa, {
+                        }, s.createElement(I.Xa, {
+                            alignItems: I.f.Center,
+                            display: I.X.Flex,
+                            justifyContent: I.Wa.End
+                        }, s.createElement(I.Xa, {
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(O.z, {
+                        }, s.createElement(I.z, {
                             "data-test-selector": qe.CANCEL_BUTTON,
                             onClick: this.handleCancelClick,
-                            type: O.F.Hollow
-                        }, Object(y.d)("Cancel", "AddUserComponent"))), s.createElement(O.z, {
+                            type: I.F.Hollow
+                        }, Object(S.d)("Cancel", "AddUserComponent"))), s.createElement(I.z, {
                             "data-test-selector": qe.SAVE_BUTTON,
                             disabled: !e || !e.isEditor && !e.isMod && !e.isVIP,
                             onClick: this.handleSaveClick,
-                            type: O.F.Success
-                        }, Object(y.d)("Save", "AddUserComponent")))))))
+                            type: I.F.Success
+                        }, Object(S.d)("Save", "AddUserComponent")))))))
                     }, t
                 }(s.Component),
-                at = Object(o.compose)(F, de, ee, k)(rt);
+                st = Object(o.compose)(F, de, ee, g)(at);
             ! function(e) {
                 e.ALL_MUTATIONS_SUCCEEDED = "all-mutations-succeeded", e.SOME_MUTATIONS_FAILED = "some-mutations-failed"
-            }(it || (it = {}));
-            var st = function(e) {
+            }(rt || (rt = {}));
+            var ot = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3077,7 +3111,7 @@
                         this.tryToShowOrHideVIPWarningMessage()
                     }, t.prototype.render = function() {
                         var e = this.props.message;
-                        return e ? s.createElement(O.Xa, {
+                        return e ? s.createElement(I.Xa, {
                             fullWidth: !0,
                             margin: {
                                 bottom: 2
@@ -3085,43 +3119,43 @@
                         }, this.getContent(e)) : null
                     }, t.prototype.getContent = function(e) {
                         var t = this.props.clearMessage,
-                            n = Object(y.d)("Close", "RolesPageTopBar");
+                            n = Object(S.d)("Close", "RolesPageTopBar");
                         switch (e.type) {
                             case X.ALL_MUTATIONS_SUCCEEDED:
-                                return s.createElement(O.Na, {
+                                return s.createElement(I.Na, {
                                     closeButtonAriaLabel: n,
                                     closeButtonOnClick: t,
-                                    "data-test-selector": it.ALL_MUTATIONS_SUCCEEDED,
-                                    description: Object(y.d)("Specified roles added for {user}.", {
+                                    "data-test-selector": rt.ALL_MUTATIONS_SUCCEEDED,
+                                    description: Object(S.d)("Specified roles added for {user}.", {
                                         user: e.user.displayName
                                     }, "RolesPageTopBar"),
-                                    title: Object(y.d)("Success!", "RolesPageTopBar"),
-                                    type: O.Oa.Success
+                                    title: Object(S.d)("Success!", "RolesPageTopBar"),
+                                    type: I.Oa.Success
                                 });
                             case X.SOME_MUTATIONS_FAILED:
-                                return s.createElement(O.Na, {
+                                return s.createElement(I.Na, {
                                     closeButtonAriaLabel: n,
                                     closeButtonOnClick: t,
-                                    "data-test-selector": it.SOME_MUTATIONS_FAILED,
-                                    description: Object(y.d)("Unfortunately, some of the specified roles were unable to be added for {user}.", {
+                                    "data-test-selector": rt.SOME_MUTATIONS_FAILED,
+                                    description: Object(S.d)("Unfortunately, some of the specified roles were unable to be added for {user}.", {
                                         user: e.user.displayName
                                     }, "RolesPageTopBar"),
-                                    title: Object(y.d)("Warning!", "RolesPageTopBar"),
-                                    type: O.Oa.Warning
+                                    title: Object(S.d)("Warning!", "RolesPageTopBar"),
+                                    type: I.Oa.Warning
                                 });
                             case X.MAX_VIPS_REACHED:
-                                return s.createElement(O.Na, {
+                                return s.createElement(I.Na, {
                                     closeButtonAriaLabel: n,
                                     closeButtonOnClick: this.handleDismissVIPWarningMessage,
-                                    description: Object(y.d)("You have reached the maximum amount of VIP roles. <x:link>Read more about Roles.</x:link>", {
+                                    description: Object(S.d)("You have reached the maximum amount of VIP roles. <x:link>Read more about Roles.</x:link>", {
                                         "x:link": function(e) {
-                                            return s.createElement(O.U, {
+                                            return s.createElement(I.U, {
                                                 linkTo: "TODO"
                                             }, e)
                                         }
                                     }, "RolesPageTopBar"),
-                                    title: Object(y.d)("You can't add any more VIPs.", "RolesPageTopBar"),
-                                    type: O.Oa.Warning
+                                    title: Object(S.d)("You can't add any more VIPs.", "RolesPageTopBar"),
+                                    type: I.Oa.Warning
                                 });
                             default:
                                 return null
@@ -3137,8 +3171,8 @@
                         })
                     }, t
                 }(s.Component),
-                ot = Object(o.compose)(B, ee)(st),
-                lt = function(e) {
+                lt = Object(o.compose)(B, ee)(ot),
+                dt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3163,79 +3197,79 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.filterType;
-                        return s.createElement(O.Xa, {
-                            alignItems: O.f.Center,
-                            display: O.X.Flex
-                        }, s.createElement(O.Xa, {
+                        return s.createElement(I.Xa, {
+                            alignItems: I.f.Center,
+                            display: I.X.Flex
+                        }, s.createElement(I.Xa, {
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(O.W, null, Object(y.d)("Display", "FilterUsersComponent"))), s.createElement(O.Xa, null, s.createElement(Ue.a, {
+                        }, s.createElement(I.W, null, Object(S.d)("Display", "FilterUsersComponent"))), s.createElement(I.Xa, null, s.createElement(Ue.a, {
                             onClickOut: this.handleClickOut
-                        }, s.createElement(O.z, {
+                        }, s.createElement(I.z, {
                             onClick: this.handleButtonClick,
-                            type: O.F.Text
-                        }, s.createElement(O.Xa, {
-                            alignItems: O.f.Center,
-                            display: O.X.Flex
-                        }, s.createElement(O.Xa, {
+                            type: I.F.Text
+                        }, s.createElement(I.Xa, {
+                            alignItems: I.f.Center,
+                            display: I.X.Flex
+                        }, s.createElement(I.Xa, {
                             margin: {
                                 right: .5
                             }
-                        }, s.createElement(O.W, {
+                        }, s.createElement(I.W, {
                             bold: !0
-                        }, this.getFilterText(e))), s.createElement(O.qb, {
-                            asset: O.rb.Carat,
+                        }, this.getFilterText(e))), s.createElement(I.qb, {
+                            asset: I.rb.Carat,
                             height: 16,
                             width: 16
-                        }))), s.createElement(O.Xa, {
-                            position: O.hb.Relative
-                        }, s.createElement(O.Y, {
+                        }))), s.createElement(I.Xa, {
+                            position: I.hb.Relative
+                        }, s.createElement(I.Y, {
                             items: [{
-                                disabled: e === E.ALL_ROLES,
-                                onClick: this.handleOptionClick.bind(this, E.ALL_ROLES),
-                                title: this.getFilterText(E.ALL_ROLES)
+                                disabled: e === C.ALL_ROLES,
+                                onClick: this.handleOptionClick.bind(this, C.ALL_ROLES),
+                                title: this.getFilterText(C.ALL_ROLES)
                             }, {
-                                disabled: e === E.MODERATOR,
+                                disabled: e === C.MODERATOR,
                                 figure: {
-                                    alt: this.getFilterText(E.MODERATOR),
+                                    alt: this.getFilterText(C.MODERATOR),
                                     src: Q
                                 },
                                 figureRight: !0,
-                                onClick: this.handleOptionClick.bind(this, E.MODERATOR),
-                                title: this.getFilterText(E.MODERATOR)
+                                onClick: this.handleOptionClick.bind(this, C.MODERATOR),
+                                title: this.getFilterText(C.MODERATOR)
                             }].concat(this.props.isVIPUnlocked ? [{
-                                disabled: e === E.VIP,
+                                disabled: e === C.VIP,
                                 figure: {
-                                    alt: this.getFilterText(E.VIP),
+                                    alt: this.getFilterText(C.VIP),
                                     src: z
                                 },
                                 figureRight: !0,
-                                onClick: this.handleOptionClick.bind(this, E.VIP),
-                                title: this.getFilterText(E.VIP)
+                                onClick: this.handleOptionClick.bind(this, C.VIP),
+                                title: this.getFilterText(C.VIP)
                             }] : []).concat([{
-                                disabled: e === E.EDITOR,
-                                onClick: this.handleOptionClick.bind(this, E.EDITOR),
-                                title: this.getFilterText(E.EDITOR)
+                                disabled: e === C.EDITOR,
+                                onClick: this.handleOptionClick.bind(this, C.EDITOR),
+                                title: this.getFilterText(C.EDITOR)
                             }]),
                             show: this.state.showDropDownMenu
                         })))))
                     }, t.prototype.getFilterText = function(e) {
                         switch (e) {
                             default:
-                                case E.ALL_ROLES:
-                                return Object(y.d)("All Roles", "FilterUsersComponent");
-                            case E.EDITOR:
+                                case C.ALL_ROLES:
+                                return Object(S.d)("All Roles", "FilterUsersComponent");
+                            case C.EDITOR:
                                     return Te();
-                            case E.MODERATOR:
+                            case C.MODERATOR:
                                     return Fe();
-                            case E.VIP:
+                            case C.VIP:
                                     return Le()
                         }
                     }, t
                 }(s.Component),
-                dt = Object(o.compose)(B, F)(lt),
-                ct = function(e) {
+                ct = Object(o.compose)(B, F)(dt),
+                ut = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleButtonClick = function() {
@@ -3244,31 +3278,31 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.view === r.ADD_USER;
-                        return s.createElement(s.Fragment, null, s.createElement(O.Cb, {
-                            alignItems: O.f.Center,
+                        return s.createElement(s.Fragment, null, s.createElement(I.Cb, {
+                            alignItems: I.f.Center,
                             borderBottom: !0,
-                            display: O.X.Flex,
+                            display: I.X.Flex,
                             fullWidth: !0,
-                            justifyContent: O.Wa.Between,
+                            justifyContent: I.Wa.Between,
                             margin: {
                                 bottom: 1
                             },
                             padding: {
                                 bottom: 1
                             }
-                        }, s.createElement(dt, null), s.createElement(O.z, {
+                        }, s.createElement(ct, null), s.createElement(I.z, {
                             disabled: e,
                             onClick: this.handleButtonClick
-                        }, Object(y.d)("Add New", "TopBar"))), s.createElement(ot, null), e && s.createElement(at, null))
+                        }, Object(S.d)("Add New", "TopBar"))), s.createElement(lt, null), e && s.createElement(st, null))
                     }, t
                 }(s.Component),
-                ut = Object(o.compose)(ee, k)(ct),
-                mt = k(function(e) {
+                mt = Object(o.compose)(ee, g)(ut),
+                pt = g(function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                        y.p.setPageTitle(Object(y.d)("Roles", "RolesPage"))
+                        S.p.setPageTitle(Object(S.d)("Roles", "RolesPage"))
                     }, t.prototype.render = function() {
                         var e = this.props.channelID;
                         return s.createElement(w, {
@@ -3277,11 +3311,11 @@
                             channelID: e
                         }, s.createElement(ie, null, s.createElement(ge, {
                             channelID: e
-                        }, this.props.view === r.NO_USERS ? s.createElement(De, null) : s.createElement(I.a, null, s.createElement(ut, null), s.createElement($e, null), s.createElement(ye, null)), s.createElement(Y, null)))))
+                        }, this.props.view === r.NO_USERS ? s.createElement(De, null) : s.createElement(N.a, null, s.createElement(mt, null), s.createElement($e, null), s.createElement(be, null)), s.createElement(K, null)))))
                     }, t
                 }(s.Component)),
-                pt = n("LQi+"),
-                ht = function(e) {
+                ht = n("LQi+"),
+                ft = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -3290,18 +3324,24 @@
                     }, t.prototype.componentDidUpdate = function(e) {
                         e.data.loading && this.reportInteractive()
                     }, t.prototype.render = function() {
-                        return s.createElement(b, null, s.createElement(mt, {
-                            channelID: this.props.data.user && this.props.data.user.id
-                        }))
+                        if (this.props.data.loading) return s.createElement(I.Za, {
+                            fillContent: !0
+                        });
+                        if (this.props.data.error) return s.createElement(l.a, null);
+                        var e = this.props.data,
+                            t = e.user && e.user.id;
+                        return t ? s.createElement(b, null, s.createElement(pt, {
+                            channelID: t
+                        })) : null
                     }, t.prototype.reportInteractive = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive(1)
                     }, t
                 }(s.Component),
-                vt = Object(o.compose)(Object(m.b)("RolesPage", {
-                    destination: c.a.RolesPage
-                }), Object(d.a)({
-                    location: u.PageviewLocation.DashboardSettingsRolesPage
-                }), Object(l.a)(pt, {
+                vt = Object(o.compose)(Object(p.b)("RolesPage", {
+                    destination: u.a.RolesPage
+                }), Object(c.a)({
+                    location: m.PageviewLocation.DashboardSettingsRolesPage
+                }), Object(d.a)(ht, {
                     options: function(e) {
                         return {
                             variables: {
@@ -3309,7 +3349,7 @@
                             }
                         }
                     }
-                }))(ht);
+                }))(ft);
             n.d(t, "RolesPage", function() {
                 return vt
             })

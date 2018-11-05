@@ -94,12 +94,12 @@
                     status: function(e) {
                         switch (e) {
                             case t.SquadStatus.Pending:
-                                return r.M.PENDING;
+                                return r.N.PENDING;
                             case t.SquadStatus.Live:
-                                return r.M.LIVE;
+                                return r.N.LIVE;
                             case t.SquadStatus.Ended:
                             default:
-                                return r.M.ENDED
+                                return r.N.ENDED
                         }
                     }(e.squad.status),
                     members: n,
@@ -248,7 +248,7 @@
                             return e.id === n
                         }))
                     }, n.prototype.shouldRender = function(e) {
-                        return !!Object(q.a)(e.channelLogin) && (!!this.isSquadMember(e) && (!e.data.loading && !e.data.error && (e.data.user && e.data.user.squadStream && e.data.user.squadStream.status === m.M.LIVE || !1)))
+                        return !!Object(q.a)(e.channelLogin) && (!!this.isSquadMember(e) && (!e.data.loading && !e.data.error && (e.data.user && e.data.user.squadStream && e.data.user.squadStream.status === m.N.LIVE || !1)))
                     }, n
                 }(r.Component),
                 b = Object(i.compose)(Object(s.a)(g, {

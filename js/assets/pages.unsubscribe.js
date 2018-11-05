@@ -1391,10 +1391,10 @@
                 }),
                 P = n("GnwI"),
                 I = n("9fjZ"),
-                D = u.a.wrap(function() {
-                    return n.e(202).then(n.bind(null, "skV9"))
+                F = u.a.wrap(function() {
+                    return n.e(203).then(n.bind(null, "skV9"))
                 }, "CampaignsTicketDescription"),
-                F = function(e) {
+                D = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.isTurboProduct = "turbo" === t.props.productName, t.tierToDisplayMap = {
@@ -1417,7 +1417,7 @@
                             productPriceInterval: t.interval && t.interval.unit,
                             productPriceTaxInclusive: this.taxInclusive,
                             showEuSubs: this.props.showEuSubs
-                        }) : this.isEsportsProduct ? s.createElement(D, {
+                        }) : this.isEsportsProduct ? s.createElement(F, {
                             ownerID: t.owner && t.owner.id,
                             badges: this.badges,
                             emotes: this.emotes,
@@ -1487,7 +1487,7 @@
                     }), Object.defineProperty(t.prototype, "productDisplayName", {
                         get: function() {
                             var e = this.props.data.product;
-                            return e && e.priceInfo && e.priceInfo.currency !== p.q.USD ? this.tierToDisplayMap[e.tier || ""] || Object(c.d)("Channel Subscription", "TicketDescription") : e && e.displayName
+                            return e && e.priceInfo && e.priceInfo.currency !== p.r.USD ? this.tierToDisplayMap[e.tier || ""] || Object(c.d)("Channel Subscription", "TicketDescription") : e && e.displayName
                         },
                         enumerable: !0,
                         configurable: !0
@@ -1547,7 +1547,7 @@
                             }
                         }
                     }
-                }))(F);
+                }))(D);
             var U = Object(r.connect)(function(e) {
                 return {
                     sessionUser: Object(i.e)(e)
@@ -1978,13 +1978,13 @@
                         return Object(g.d)("Financial reasons", "unsubscribe-reasons")
                     }
                 },
-                D = {
+                F = {
                     value: "I prefer to manually renew my subscriptions",
                     translation: function() {
                         return Object(g.d)("I prefer to manually renew my subscriptions", "unsubscribe-reasons")
                     }
                 },
-                F = {
+                D = {
                     value: "I accidentally subscribed",
                     translation: function() {
                         return Object(g.d)("I accidentally subscribed", "unsubscribe-reasons")
@@ -2017,13 +2017,13 @@
                     translation: function() {
                         return Object(g.d)("I need to change my payment method", "unsubscribe-reasons")
                     }
-                }, I, D, P, {
+                }, I, F, P, {
                     value: "My schedule changed and I can't keep up with the stream anymore",
                     translation: function() {
                         return Object(g.d)("My schedule changed and I can't keep up with the stream anymore", "unsubscribe-reasons")
                     }
                 }],
-                R = [F, I, {
+                R = [D, I, {
                     value: "I just wanted to get a shoutout",
                     translation: function() {
                         return Object(g.d)("I just wanted to get a shoutout", "unsubscribe-reasons")
@@ -2034,13 +2034,13 @@
                         return Object(g.d)("The channel benefits are not what I expected", "unsubscribe-reasons")
                     }
                 }],
-                A = [U, I, D, P, j, {
+                A = [U, I, F, P, j, {
                     value: "I don't feel like Turbo offers enough value",
                     translation: function() {
                         return Object(g.d)("I don't feel like Turbo offers enough value", "unsubscribe-reasons")
                     }
                 }],
-                B = [F, U, I, {
+                B = [D, U, I, {
                     value: "I only wanted ad-free viewing for one day",
                     translation: function() {
                         return Object(g.d)("I only wanted ad-free viewing for one day", "unsubscribe-reasons")
@@ -2300,11 +2300,11 @@
                             var e = this.props.data.subscriptionProduct;
                             if (!e) return !1;
                             switch (e.type.toUpperCase()) {
-                                case k.Q.CHANSUB:
-                                case k.Q.TEAMSUB:
+                                case k.R.CHANSUB:
+                                case k.R.TEAMSUB:
                                     return !!(e && e.self && e.self.benefit);
-                                case k.Q.TURBO:
-                                    return !!(e && e.self && e.self.purchase && e.self.purchase.details && e.self.purchase.details.productType.toUpperCase() === k.Q.TURBO && e.self.purchase.details.state.toUpperCase() === k.R.ACTIVE);
+                                case k.R.TURBO:
+                                    return !!(e && e.self && e.self.purchase && e.self.purchase.details && e.self.purchase.details.productType.toUpperCase() === k.R.TURBO && e.self.purchase.details.state.toUpperCase() === k.S.ACTIVE);
                                 default:
                                     return this.logger.error(new Error("Cannot determine if user has subscription benefit."), "Unexpected subscription product type:", e.type), !1
                             }
@@ -2317,10 +2317,10 @@
                             if (!e) return !1;
                             if (this.isMobileSub) return !1;
                             switch (e.type.toUpperCase()) {
-                                case k.Q.CHANSUB:
-                                case k.Q.TEAMSUB:
+                                case k.R.CHANSUB:
+                                case k.R.TEAMSUB:
                                     return this.unsubscribeType === r.DoNotRenew ? !!(e && e.self && e.self.benefit && e.self.benefit.renewsAt) : this.unsubscribeType === r.Cancel && !!(e && e.self && e.self.benefit && e.self.benefit.isRefundable);
-                                case k.Q.TURBO:
+                                case k.R.TURBO:
                                     return this.hasSubscriptionBenefit;
                                 default:
                                     return !1
@@ -2331,7 +2331,7 @@
                     }), Object.defineProperty(t.prototype, "isMobileSub", {
                         get: function() {
                             var e = this.props.data.subscriptionProduct;
-                            return !!(e && e.self && e.self.purchase && e.self.purchase.details && e.self.purchase.details.paymentProvider && e.self.purchase.details.paymentProvider.toUpperCase() === k.D.GOOGLE_IAB)
+                            return !!(e && e.self && e.self.purchase && e.self.purchase.details && e.self.purchase.details.paymentProvider && e.self.purchase.details.paymentProvider.toUpperCase() === k.E.GOOGLE_IAB)
                         },
                         enumerable: !0,
                         configurable: !0

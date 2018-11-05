@@ -2099,16 +2099,16 @@
                     autoReportInteractive: !0
                 })(P),
                 L = c.a.wrap(function() {
-                    return n.e(182).then(n.bind(null, "eAh4"))
+                    return n.e(183).then(n.bind(null, "eAh4"))
                 }, "TwitchPrimeOffersPage"),
                 U = c.a.wrap(function() {
-                    return n.e(181).then(n.bind(null, "di4w"))
+                    return n.e(182).then(n.bind(null, "di4w"))
                 }, "TwitchPrimeFortniteSuccessPage"),
                 F = c.a.wrap(function() {
-                    return n.e(180).then(n.bind(null, "IyqF"))
+                    return n.e(181).then(n.bind(null, "IyqF"))
                 }, "TwitchPrimeFortniteLinkingPage"),
                 j = c.a.wrap(function() {
-                    return n.e(179).then(n.bind(null, "CinY"))
+                    return n.e(180).then(n.bind(null, "CinY"))
                 }, "TwitchPrimeFortnitePage"),
                 B = function(e) {
                     function t() {

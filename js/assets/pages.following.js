@@ -3785,7 +3785,7 @@
                         fetchPolicy: "cache-and-network",
                         variables: {
                             limit: 100,
-                            type: k.x.LIVE
+                            type: k.y.LIVE
                         }
                     }
                 }), Object(g.b)("FollowingGamesPage", {

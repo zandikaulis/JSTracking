@@ -3981,7 +3981,7 @@
                             i = this.getCollectionVideos();
                         if (i && 0 === i.length) return null;
                         var r = 0,
-                            d = t && t.type === s.n.SERIES && i && i.length >= 4;
+                            d = t && t.type === s.o.SERIES && i && i.length >= 4;
                         if (t && i && d && Object(c.a)() && Object(c.c)()) {
                             var m = function(e) {
                                 for (var t = e.items.edges, i = t.length, r = null, a = 0; a < t.length; a++) {

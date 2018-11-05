@@ -1,8 +1,8 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [219], {
+    [220], {
         "0SKf": function(e, n, t) {
             "use strict";
-            t.d(n, "g", function() {
+            t.d(n, "h", function() {
                 return a
             }), t.d(n, "b", function() {
                 return i
@@ -10,24 +10,27 @@
                 return o
             }), t.d(n, "f", function() {
                 return r
-            }), t.d(n, "h", function() {
+            }), t.d(n, "i", function() {
                 return N
+            }), t.d(n, "g", function() {
+                return T
             }), t.d(n, "d", function() {
                 return E
             }), t.d(n, "e", function() {
-                return c
+                return R
             }), t.d(n, "c", function() {
-                return T
+                return c
             });
             var E, a = 500,
                 i = 5e3,
                 o = 15e4,
                 r = 5,
-                N = 4;
+                N = 4,
+                T = 40;
             ! function(e) {
                 e.BountiesCompleted = "completedBountyCount", e.Viewers = "totalViewerCount", e.Viewers2m = "twoMinuteViewerCount", e.MinutesWatched = "minutesWatched"
             }(E || (E = {}));
-            var T, c = {
+            var c, R = {
                 series: [],
                 total: 0,
                 interval: {
@@ -37,7 +40,7 @@
             };
             ! function(e) {
                 e.BountiesExpanded = "expandedBountyCount", e.BountiesAccepted = "claimedBountyCount", e.BountiesCompleted = "completedBountyCount", e.BountiesTotal = "viewedBountyCount"
-            }(T || (T = {}))
+            }(c || (c = {}))
         },
         "17YR": function(e, n, t) {
             "use strict";
@@ -80,101 +83,103 @@
         DMoW: function(e, n, t) {
             "use strict";
             var E, a, i, o, r, N, T, c, R, _, u, d, A, O, l, I, D, s, m, S, C, L, f, p, b, M, P, U, v, g, B, F, y, V, G, k, H, h, W, Y, j, K, X, w, x, J, z, Q, Z, q, $, ee, ne, te, Ee, ae, ie, oe, re, Ne, Te, ce, Re, _e, ue, de, Ae, Oe, le, Ie, De, se, me, Se, Ce, Le, fe, pe, be, Me, Pe, Ue, ve, ge, Be, Fe, ye, Ve, Ge, ke, He, he, We, Ye, je, Ke, Xe, we, xe, Je, ze, Qe, Ze, qe, $e, en, nn, tn, En, an, on, rn, Nn, Tn, cn, Rn, _n, un, dn;
-            t.d(n, "c", function() {
+            t.d(n, "d", function() {
                     return a
-                }), t.d(n, "K", function() {
-                    return r
-                }), t.d(n, "y", function() {
-                    return N
-                }), t.d(n, "g", function() {
-                    return A
-                }), t.d(n, "e", function() {
-                    return D
-                }), t.d(n, "f", function() {
-                    return s
-                }), t.d(n, "l", function() {
-                    return C
-                }), t.d(n, "U", function() {
-                    return L
-                }), t.d(n, "M", function() {
-                    return f
-                }), t.d(n, "p", function() {
-                    return p
-                }), t.d(n, "j", function() {
-                    return P
                 }), t.d(n, "L", function() {
-                    return U
+                    return r
+                }), t.d(n, "z", function() {
+                    return N
                 }), t.d(n, "b", function() {
-                    return V
-                }), t.d(n, "r", function() {
-                    return G
+                    return c
+                }), t.d(n, "h", function() {
+                    return A
+                }), t.d(n, "f", function() {
+                    return D
+                }), t.d(n, "g", function() {
+                    return s
+                }), t.d(n, "m", function() {
+                    return C
+                }), t.d(n, "V", function() {
+                    return L
+                }), t.d(n, "N", function() {
+                    return f
                 }), t.d(n, "q", function() {
+                    return p
+                }), t.d(n, "k", function() {
+                    return P
+                }), t.d(n, "M", function() {
+                    return U
+                }), t.d(n, "c", function() {
+                    return V
+                }), t.d(n, "s", function() {
+                    return G
+                }), t.d(n, "r", function() {
                     return H
-                }), t.d(n, "O", function() {
-                    return h
-                }), t.d(n, "Q", function() {
-                    return W
-                }), t.d(n, "D", function() {
-                    return Y
-                }), t.d(n, "R", function() {
-                    return j
-                }), t.d(n, "C", function() {
-                    return K
-                }), t.d(n, "B", function() {
-                    return X
-                }), t.d(n, "o", function() {
-                    return w
                 }), t.d(n, "P", function() {
+                    return h
+                }), t.d(n, "R", function() {
+                    return W
+                }), t.d(n, "E", function() {
+                    return Y
+                }), t.d(n, "S", function() {
+                    return j
+                }), t.d(n, "D", function() {
+                    return K
+                }), t.d(n, "C", function() {
+                    return X
+                }), t.d(n, "p", function() {
+                    return w
+                }), t.d(n, "Q", function() {
                     return x
                 }), t.d(n, "a", function() {
                     return J
-                }), t.d(n, "u", function() {
-                    return z
-                }), t.d(n, "w", function() {
-                    return Q
-                }), t.d(n, "F", function() {
-                    return q
-                }), t.d(n, "G", function() {
-                    return $
-                }), t.d(n, "E", function() {
-                    return ne
-                }), t.d(n, "H", function() {
-                    return te
-                }), t.d(n, "T", function() {
-                    return ie
-                }), t.d(n, "S", function() {
-                    return de
-                }), t.d(n, "n", function() {
-                    return Ce
-                }), t.d(n, "m", function() {
-                    return Le
-                }), t.d(n, "V", function() {
-                    return Me
-                }), t.d(n, "A", function() {
-                    return ye
-                }), t.d(n, "z", function() {
-                    return ke
-                }), t.d(n, "i", function() {
-                    return He
-                }), t.d(n, "t", function() {
-                    return he
-                }), t.d(n, "k", function() {
-                    return Ye
-                }), t.d(n, "h", function() {
-                    return je
                 }), t.d(n, "v", function() {
-                    return Ke
-                }), t.d(n, "N", function() {
-                    return we
+                    return z
                 }), t.d(n, "x", function() {
-                    return nn
+                    return Q
+                }), t.d(n, "G", function() {
+                    return q
+                }), t.d(n, "H", function() {
+                    return $
+                }), t.d(n, "F", function() {
+                    return ne
                 }), t.d(n, "I", function() {
-                    return tn
+                    return te
+                }), t.d(n, "U", function() {
+                    return ie
+                }), t.d(n, "T", function() {
+                    return de
+                }), t.d(n, "o", function() {
+                    return Ce
+                }), t.d(n, "n", function() {
+                    return Le
+                }), t.d(n, "W", function() {
+                    return Me
+                }), t.d(n, "B", function() {
+                    return ye
+                }), t.d(n, "A", function() {
+                    return ke
+                }), t.d(n, "j", function() {
+                    return He
+                }), t.d(n, "u", function() {
+                    return he
+                }), t.d(n, "l", function() {
+                    return Ye
+                }), t.d(n, "i", function() {
+                    return je
+                }), t.d(n, "w", function() {
+                    return Ke
+                }), t.d(n, "O", function() {
+                    return we
+                }), t.d(n, "y", function() {
+                    return nn
                 }), t.d(n, "J", function() {
+                    return tn
+                }), t.d(n, "K", function() {
                     return En
-                }), t.d(n, "d", function() {
+                }), t.d(n, "e", function() {
                     return _n
-                }), t.d(n, "s", function() {
+                }), t.d(n, "t", function() {
                     return un
                 }),
                 function(e) {
@@ -1458,12 +1463,12 @@
                         i = n.game,
                         o = n.type;
                     if (i && i.displayName && (t = i.displayName), !t) return "";
-                    switch (o !== a.e.GAME_TRAILER && o !== a.e.MISC_TRAILER || (E = "[Trailer]"), o) {
-                        case a.e.GAME_TRAILER:
-                        case a.e.MISC_TRAILER:
+                    switch (o !== a.f.GAME_TRAILER && o !== a.f.MISC_TRAILER || (E = "[Trailer]"), o) {
+                        case a.f.GAME_TRAILER:
+                        case a.f.MISC_TRAILER:
                             E = "[Trailer]";
                             break;
-                        case a.e.PAY_TO_STREAM:
+                        case a.f.PAY_TO_STREAM:
                             E = (n.availablePlatforms || []).map(function(e) {
                                 return "[" + e + "]"
                             }).join(" ");
@@ -1573,7 +1578,7 @@
                     }, n.prototype.render = function() {
                         var e = this,
                             n = [];
-                        return Object.values(_.d).forEach(function(t) {
+                        return Object.values(_.e).forEach(function(t) {
                             n = n.concat(e.getCampaigns(t))
                         }), n.sort(this.compareCampaigns), !this.props.data.currentUser && this.props.data.loading ? this.renderLoading() : 0 === n.length ? this.renderEmpty() : i.createElement(i.Fragment, null, i.createElement(T.a, {
                             title: Object(r.d)("{title} ({count})", {

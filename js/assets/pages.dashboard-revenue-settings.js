@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [164], {
+    [165], {
         "+UBe": function(e, t) {
             var n = {
                 kind: "Document",
@@ -1910,14 +1910,14 @@
                 A = (n("o5vO"), n("I1TM")),
                 I = 10,
                 _ = "prefix",
-                F = function(e) {
+                w = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             prefix: t.props.prefix || "",
                             saveStatus: E.b.NoChanges
                         }, t.renderBanner = function(e) {
-                            return e === m.t.REJECTED ? i.createElement(P.Xa, {
+                            return e === m.u.REJECTED ? i.createElement(P.Xa, {
                                 className: "emoticon-prefix__rejected-prefix-banner",
                                 padding: {
                                     y: 1,
@@ -1943,7 +1943,7 @@
                                 label: Object(h.d)("Unique Prefix", "EmoticonPrefix")
                             }, i.createElement(P.Ra, {
                                 type: P.Ta.Text,
-                                disabled: e === m.t.PENDING,
+                                disabled: e === m.u.PENDING,
                                 maxLength: I,
                                 placeholder: _,
                                 value: t.state.prefix,
@@ -1954,7 +1954,7 @@
                                 }, "EmoticonPrefix")
                             }))
                         }, t.renderPendingMessage = function() {
-                            return t.props.prefixState === m.t.PENDING && i.createElement(O.a, null, i.createElement(P.W, {
+                            return t.props.prefixState === m.u.PENDING && i.createElement(O.a, null, i.createElement(P.W, {
                                 bold: !0
                             }, Object(h.d)("Your prefix has been submitted for approval. Thank you for your patience.", "EmoticonPrefix")))
                         }, t.onPrefixChange = function(e) {
@@ -1998,7 +1998,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.prefixState,
                             t = null;
-                        e !== m.t.PENDING && (t = i.createElement(S.a, {
+                        e !== m.u.PENDING && (t = i.createElement(S.a, {
                             status: this.state.saveStatus,
                             onClickSave: this.onClickSave
                         }));
@@ -2013,11 +2013,11 @@
                         }, this.renderPrefixSection(), this.renderPendingMessage()))
                     }, t
                 }(i.Component),
-                w = Object(g.compose)(Object(u.a)(A, {
+                x = Object(g.compose)(Object(u.a)(A, {
                     name: "submitEmoticon"
-                }))(F),
-                x = n("yvrX"),
-                R = n("b6Yk");
+                }))(w),
+                R = n("yvrX"),
+                F = n("b6Yk");
 
             function D(e, t, n, i) {
                 return a.__awaiter(this, void 0, void 0, function() {
@@ -2025,7 +2025,7 @@
                     return a.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
-                                return [4, R.a.post("v" + h.a.defaultAPIVersion + "/subscriptions/" + e + "/emoticons", {
+                                return [4, F.a.post("v" + h.a.defaultAPIVersion + "/subscriptions/" + e + "/emoticons", {
                                     body: {
                                         code_suffix: i,
                                         product_id: t,
@@ -2142,7 +2142,7 @@
                                                 return a.__generator(this, function(n) {
                                                     switch (n.label) {
                                                         case 0:
-                                                            return [4, R.a.post("v" + h.a.defaultAPIVersion + "/subscriptions/" + e + "/emoticons/upload_configuration", {
+                                                            return [4, F.a.post("v" + h.a.defaultAPIVersion + "/subscriptions/" + e + "/emoticons/upload_configuration", {
                                                                 headers: {
                                                                     "Content-Type": "application/json; charset=utf-8",
                                                                     Accept: "application/json"
@@ -2544,7 +2544,7 @@
             ! function(e) {
                 e[e.None = 0] = "None", e[e.Error = 1] = "Error", e[e.Success = 2] = "Success"
             }(W || (W = {}));
-            var Y = function(e) {
+            var H = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2701,7 +2701,7 @@
                                                     return a.__generator(this, function(n) {
                                                         switch (n.label) {
                                                             case 0:
-                                                                return [4, R.a.deleteOrThrow("v" + h.a.defaultAPIVersion + "/ticket_products/" + e + "/remove_emoticon", {
+                                                                return [4, F.a.deleteOrThrow("v" + h.a.defaultAPIVersion + "/ticket_products/" + e + "/remove_emoticon", {
                                                                     headers: {
                                                                         "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
                                                                         Accept: "application/json"
@@ -2786,7 +2786,7 @@
                         }, i.createElement(P.W, null, Object(h.d)("Something went wrong and your request could not be processed at this time. Please try again later.", "ChatEmoticonsSettingsPage"))) : null
                     }, t
                 }(i.Component),
-                H = Object(g.compose)(Object(u.a)(q, {
+                Y = Object(g.compose)(Object(u.a)(q, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2794,7 +2794,7 @@
                             }
                         }
                     }
-                }))(Y),
+                }))(H),
                 Q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2807,10 +2807,10 @@
                     }, t.prototype.componentDidUpdate = function(e) {
                         (e.data.loading && !this.props.data.loading || this.props.data.error) && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.props.data.user && this.props.data.user.id && this.props.data.user.emoticonPrefix && this.props.data.user.emoticonPrefix.state ? this.props.data.user && this.props.data.user.emoticonPrefix.state === m.t.ACTIVE ? i.createElement(H, {
+                        return this.props.data.user && this.props.data.user.id && this.props.data.user.emoticonPrefix && this.props.data.user.emoticonPrefix.state ? this.props.data.user && this.props.data.user.emoticonPrefix.state === m.u.ACTIVE ? i.createElement(Y, {
                             channelName: this.props.match.params.channelName,
                             emoticonPrefix: this.props.data.user.emoticonPrefix.name
-                        }) : i.createElement(w, {
+                        }) : i.createElement(x, {
                             channelId: this.props.data.user.id,
                             channelName: this.props.match.params.channelName,
                             prefix: this.props.data.user.emoticonPrefix.name,
@@ -2827,7 +2827,7 @@
                     destination: f.a.DashboardSettingsRevenueChatEmoticons
                 }), Object(b.a)({
                     location: v.PageviewLocation.DashboardSettingsRevenueChatEmoticons
-                }), Object(u.a)(x, {
+                }), Object(u.a)(R, {
                     options: function(e) {
                         return {
                             variables: {
@@ -3717,7 +3717,7 @@
                         configurable: !0
                     }), t
                 }(i.Component)),
-                Fe = Object(r.compose)(Object(u.a)(Ie, {
+                we = Object(r.compose)(Object(u.a)(Ie, {
                     name: "data",
                     options: function(e) {
                         return {
@@ -3729,7 +3729,7 @@
                 }), Object(u.a)(Ae, {
                     name: "setCheermotesEnable"
                 }), Object(p.b)("CheermotesEnableForm"))(_e),
-                we = (n("4VZt"), function(e) {
+                xe = (n("4VZt"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onFilesSubmitted = function(e) {
@@ -3773,13 +3773,13 @@
                     }, t
                 }(i.Component));
 
-            function xe(e, t) {
+            function Re(e, t) {
                 return a.__awaiter(this, void 0, Promise, function() {
                     var n;
                     return a.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
-                                return [4, R.a.post("/v5/channels/" + e + "/bits/customcheermotes", {
+                                return [4, F.a.post("/v5/channels/" + e + "/bits/customcheermotes", {
                                     body: {
                                         background: t.background,
                                         animation_type: t.animationType,
@@ -3799,7 +3799,7 @@
                     })
                 })
             }
-            var Re, De, je, Ue = ((Se = {})[1] = 28, Se[1.5] = 42, Se[2] = 56, Se[3] = 84, Se[4] = 112, Se),
+            var Fe, De, je, Ue = ((Se = {})[1] = 28, Se[1.5] = 42, Se[2] = 56, Se[3] = 84, Se[4] = 112, Se),
                 Le = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -3817,7 +3817,7 @@
                                                 tier: "" + this.props.tier
                                             }, a.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, xe(this.props.channelID, t)];
+                                            return a.trys.push([1, 3, , 4]), [4, Re(this.props.channelID, t)];
                                         case 2:
                                             return i = a.sent(), this.props.onImageSubmitted(this.props.tier, e, i, Ue[n]), [3, 4];
                                         case 3:
@@ -3839,7 +3839,7 @@
                                     padding: {
                                         bottom: 1
                                     }
-                                }, i.createElement(we, {
+                                }, i.createElement(xe, {
                                     onImageSubmit: e.onImageSubmitted,
                                     dimension: a,
                                     dpiScale: n.dpiScale,
@@ -3900,7 +3900,7 @@
                                                 tier: "" + this.props.tier
                                             }, a.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, xe(this.props.channelID, t)];
+                                            return a.trys.push([1, 3, , 4]), [4, Re(this.props.channelID, t)];
                                         case 2:
                                             return n = a.sent(), this.props.onImageSubmitted(this.props.tier, e, n, 112), [3, 4];
                                         case 3:
@@ -3913,7 +3913,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(we, {
+                        return i.createElement(xe, {
                             onImageSubmit: this.onImageSubmitted,
                             dimension: 112,
                             error: !!this.props.uploadError
@@ -3952,7 +3952,7 @@
             n("3rX6");
             ! function(e) {
                 e.Simple = "simple", e.Advanced = "advanced"
-            }(Re || (Re = {})),
+            }(Fe || (Fe = {})),
             function(e) {
                 e.Light = "light", e.Dark = "dark"
             }(De || (De = {})),
@@ -3963,7 +3963,7 @@
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        uploadType: Re.Simple,
+                        uploadType: Fe.Simple,
                         background: De.Light,
                         animation: je.Animated,
                         uploading: !1
@@ -3985,11 +3985,11 @@
                             animation: n
                         })
                     }, t.onSimpleImageSubmitted = function(e, n, a, i) {
-                        t.uploadImageProgress(e, n, a, Re.Simple, i, function(e, n) {
+                        t.uploadImageProgress(e, n, a, Fe.Simple, i, function(e, n) {
                             t.props.onSimpleImageSubmitted(e, n)
                         })
                     }, t.onAdvancedImageUpload = function(e, n, a, i) {
-                        t.uploadImageProgress(e, n, a, Re.Advanced, i, function(e, n) {
+                        t.uploadImageProgress(e, n, a, Fe.Advanced, i, function(e, n) {
                             t.props.onAdvancedImageSubmitted(e, n[0])
                         })
                     }, t.uploadImageProgress = function(e, n, i, r, o, s) {
@@ -4079,8 +4079,8 @@
                                 i = Object(h.d)("Something went wrong. Please try again", "CheermoteUploadArea")
                         }
                         t.setState({
-                            simpleLoadingError: n === Re.Simple ? i : void 0,
-                            advancedLoadingError: n === Re.Advanced ? i : void 0,
+                            simpleLoadingError: n === Fe.Simple ? i : void 0,
+                            advancedLoadingError: n === Fe.Advanced ? i : void 0,
                             errorDimension: a
                         })
                     }, t.onCreateUploadRequestError = function(e, n) {
@@ -4088,8 +4088,8 @@
                             errorMsg: n.message
                         }, "CheermoteUploadArea");
                         t.setState({
-                            simpleLoadingError: e === Re.Simple ? a : void 0,
-                            advancedLoadingError: e === Re.Advanced ? a : void 0
+                            simpleLoadingError: e === Fe.Simple ? a : void 0,
+                            advancedLoadingError: e === Fe.Advanced ? a : void 0
                         })
                     }, t
                 }
@@ -4116,12 +4116,12 @@
                     }, i.createElement(Xe, {
                         name: "cheermote-upload-wizard-type",
                         selected: this.state.uploadType,
-                        left: Re.Simple,
+                        left: Fe.Simple,
                         leftTitle: Object(h.d)("Simple", "CheermoteUploadArea"),
-                        right: Re.Advanced,
+                        right: Fe.Advanced,
                         rightTitle: Object(h.d)("Advanced", "CheermoteUploadArea"),
                         onToggle: this.onUploadTypeChange
-                    }), this.state.uploadType === Re.Advanced && i.createElement(P.Xa, {
+                    }), this.state.uploadType === Fe.Advanced && i.createElement(P.Xa, {
                         padding: {
                             x: 2
                         }
@@ -4133,7 +4133,7 @@
                         right: De.Dark,
                         rightTitle: Object(h.d)("Dark", "CheermoteUploadArea"),
                         onToggle: this.onBackgroundChange
-                    })), this.state.uploadType === Re.Advanced && i.createElement(Xe, {
+                    })), this.state.uploadType === Fe.Advanced && i.createElement(Xe, {
                         name: "cheermote-animation",
                         selected: this.state.animation,
                         left: je.Animated,
@@ -4145,14 +4145,14 @@
                         padding: {
                             top: 2
                         }
-                    }, this.state.uploadType === Re.Simple && i.createElement(Be, {
+                    }, this.state.uploadType === Fe.Simple && i.createElement(Be, {
                         channelID: this.props.channelID,
                         tier: this.props.uploadTier.bits,
                         image: n && n.url,
                         onImageSubmitted: this.onSimpleImageSubmitted,
                         onImageSubmissionError: this.onCreateUploadRequestError,
                         uploadError: this.state.simpleLoadingError
-                    }), this.state.uploadType === Re.Advanced && i.createElement(Le, {
+                    }), this.state.uploadType === Fe.Advanced && i.createElement(Le, {
                         channelID: this.props.channelID,
                         images: t,
                         tier: this.props.uploadTier.bits,
@@ -4162,7 +4162,7 @@
                         onImageSubmissionError: this.onCreateUploadRequestError,
                         uploadError: this.state.advancedLoadingError,
                         errorDimension: this.state.errorDimension
-                    })), this.state.uploadType === Re.Simple && this.state.simpleLoadingError && i.createElement(P.Cb, {
+                    })), this.state.uploadType === Fe.Simple && this.state.simpleLoadingError && i.createElement(P.Cb, {
                         display: P.X.Flex,
                         alignItems: P.f.Center,
                         background: P.r.Alt,
@@ -4172,7 +4172,7 @@
                         }
                     }, i.createElement(P.W, {
                         color: P.O.Error
-                    }, this.state.simpleLoadingError)), this.state.uploadType === Re.Advanced && this.state.advancedLoadingError && t.length && i.createElement(P.Cb, {
+                    }, this.state.simpleLoadingError)), this.state.uploadType === Fe.Advanced && this.state.advancedLoadingError && t.length && i.createElement(P.Cb, {
                         display: P.X.Flex,
                         alignItems: P.f.Center,
                         background: P.r.Alt,
@@ -4347,7 +4347,7 @@
                         }
                     }
                 }), Object(p.b)("CheermotesUploadForm"))(ze),
-                Ye = function(e) {
+                He = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -4362,19 +4362,19 @@
                             });
                         return i.createElement(C.a, {
                             header: t
-                        }, i.createElement(Fe, {
+                        }, i.createElement(we, {
                             channelName: e.params.channelName
                         }), i.createElement(qe, {
                             channelName: e.params.channelName
                         }))
                     }, t
                 }(i.Component),
-                He = Object(g.compose)(Object(p.b)("CheermotesSettingsPage", {
+                Ye = Object(g.compose)(Object(p.b)("CheermotesSettingsPage", {
                     autoReportInteractive: !0,
                     destination: f.a.DashboardSettingsRevenueCheermotes
                 }), Object(b.a)({
                     location: v.PageviewLocation.DashboardSettingsRevenueCheermotes
-                }))(Ye),
+                }))(He),
                 Qe = n("/MKj"),
                 $e = n("aCAx"),
                 Ze = n("dWDG"),
@@ -5163,25 +5163,25 @@
                 }), Object(u.a)(Pt, {
                     name: "onboardUser"
                 }))(It);
-            var Ft = Object(Qe.connect)(function(e) {
+            var wt = Object(Qe.connect)(function(e) {
                 var t = Object(ct.e)(e);
                 return {
                     isStaff: !!(t && t.roles && t.roles.isStaff)
                 }
             })(_t);
 
-            function wt(e, t) {
+            function xt(e, t) {
                 if (!e || !t) return !1;
-                if (t.workflow.currentStep === m.G.AGREEMENT_PENDING_UPGRADE) return !1;
+                if (t.workflow.currentStep === m.H.AGREEMENT_PENDING_UPGRADE) return !1;
                 var n = e.find(function(e) {
-                    return e.category === m.E.PARTNER && e.isReceivingRevenue
+                    return e.category === m.F.PARTNER && e.isReceivingRevenue
                 });
-                return !(!(n && n.tags && n.tags.includes(m.H.LEGACY) && t) || t.isLegacy) || !(n && n.tags && (n.tags.includes(m.H.STANDARD) || n.tags.includes(m.H.PREMIUM)) && t && t.category === m.F.CUSTOM_PARTNER) && !!n
+                return !(!(n && n.tags && n.tags.includes(m.I.LEGACY) && t) || t.isLegacy) || !(n && n.tags && (n.tags.includes(m.I.STANDARD) || n.tags.includes(m.I.PREMIUM)) && t && t.category === m.G.CUSTOM_PARTNER) && !!n
             }
-            var xt, Rt = n("wNpX");
+            var Rt, Ft = n("wNpX");
             ! function(e) {
                 e.PAYOUT_ONBOARDING_LINK = "onboarding-section__payout-onboarding-link", e.UPGRADE_AGREEMENT_LINK = "onboarding-section__upgrade-agreement-link", e.PAYOUTS_LINK = "onboarding-section__payouts-link", e.AFFILIATE_AGREEMENT_LINK = "onboarding-section__affiliate-agreement-link", e.PARTNER_AGREEMENT_LINK = "onboarding-section__partner-agreement-link", e.EXTENSIONS_DEVELOPER_AGREEMENT_LINK = "onboarding-section__extensions-developer-agreement-link"
-            }(xt || (xt = {}));
+            }(Rt || (Rt = {}));
             var Dt = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -5198,39 +5198,39 @@
                         return t || n || !a || this.props.channelName !== a.login ? null : i.createElement(i.Fragment, null, i.createElement(pt.a, {
                             title: Object(h.d)("Onboarding", "OnboardingSection")
                         }), i.createElement(C.a, null, !this.hasAgreementPendingUpgrade && i.createElement(mt.a, {
-                            "data-test-selector": xt.PAYOUT_ONBOARDING_LINK,
+                            "data-test-selector": Rt.PAYOUT_ONBOARDING_LINK,
                             text: this.payoutOnboardingLinkText,
                             linkTo: "/" + this.props.channelName + "/dashboard/settings/revenue/payout-onboarding"
                         }), this.hasAgreementPendingUpgrade && i.createElement(mt.a, {
-                            "data-test-selector": xt.UPGRADE_AGREEMENT_LINK,
+                            "data-test-selector": Rt.UPGRADE_AGREEMENT_LINK,
                             text: this.upgradeTermsLinkText,
                             linkTo: "/" + this.props.channelName + "/dashboard/settings/revenue/upgrade-terms"
                         }), this.hasCompletedOnboarding && i.createElement(mt.a, {
-                            "data-test-selector": xt.PAYOUTS_LINK,
+                            "data-test-selector": Rt.PAYOUTS_LINK,
                             text: Object(h.d)("Change Payout Method", "OnboardingSection"),
                             linkTo: "/" + this.props.channelName + "/dashboard/settings/revenue/payouts"
                         }), a && a.roles && a.roles.isAffiliate && i.createElement(mt.a, {
-                            "data-test-selector": xt.AFFILIATE_AGREEMENT_LINK,
+                            "data-test-selector": Rt.AFFILIATE_AGREEMENT_LINK,
                             text: Object(h.d)("View Affiliate Agreement", "OnboardingSection"),
                             linkTo: "https://twitch.tv/p/legal/affiliate-agreement/"
                         }), this.showPartnerAgreementLink && i.createElement(mt.a, {
-                            "data-test-selector": xt.PARTNER_AGREEMENT_LINK,
+                            "data-test-selector": Rt.PARTNER_AGREEMENT_LINK,
                             text: Object(h.d)("View Active Partner Agreement", "OnboardingSection"),
                             linkTo: "/" + this.props.channelName + "/dashboard/settings/revenue/view-terms"
                         }), a && a.roles && a.roles.isExtensionsDeveloper && i.createElement(mt.a, {
-                            "data-test-selector": xt.EXTENSIONS_DEVELOPER_AGREEMENT_LINK,
+                            "data-test-selector": Rt.EXTENSIONS_DEVELOPER_AGREEMENT_LINK,
                             text: Object(h.d)("View Extensions Developer Agreement", "OnboardingSection"),
                             linkTo: "https://twitch.tv/p/legal/developer-agreement/"
                         })))
                     }, Object.defineProperty(t.prototype, "hasAgreementPendingUpgrade", {
                         get: function() {
-                            return !!(this.props.data.currentUser && this.props.data.currentUser.payoutInvite && this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === m.G.AGREEMENT_PENDING_UPGRADE)
+                            return !!(this.props.data.currentUser && this.props.data.currentUser.payoutInvite && this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === m.H.AGREEMENT_PENDING_UPGRADE)
                         },
                         enumerable: !0,
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "hasCompletedOnboarding", {
                         get: function() {
-                            return !!(this.props.data.currentUser && this.props.data.currentUser.payoutInvite && this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === m.G.COMPLETED)
+                            return !!(this.props.data.currentUser && this.props.data.currentUser.payoutInvite && this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === m.H.COMPLETED)
                         },
                         enumerable: !0,
                         configurable: !0
@@ -5239,13 +5239,13 @@
                             var e = this.props.data.currentUser;
                             if (!e || !e.payoutInvite) return null;
                             switch (e.payoutInvite.category) {
-                                case m.F.AFFILIATE:
+                                case m.G.AFFILIATE:
                                     return Object(h.d)("Affiliate Onboarding", "OnboardingSection");
-                                case m.F.STANDARD_PARTNER:
-                                case m.F.PREMIUM_PARTNER:
-                                case m.F.CUSTOM_PARTNER:
+                                case m.G.STANDARD_PARTNER:
+                                case m.G.PREMIUM_PARTNER:
+                                case m.G.CUSTOM_PARTNER:
                                     return Object(h.d)("Partner Onboarding", "OnboardingSection");
-                                case m.F.EXTENSIONS_DEVELOPER:
+                                case m.G.EXTENSIONS_DEVELOPER:
                                     return Object(h.d)("Extensions Developer Onboarding", "OnboardingSection");
                                 default:
                                     return null
@@ -5258,10 +5258,10 @@
                             var e = this.props.data.currentUser;
                             if (!e || !e.payoutInvite) return null;
                             switch (e.payoutInvite.category) {
-                                case m.F.AFFILIATE:
+                                case m.G.AFFILIATE:
                                     return Object(h.d)("Agree to the Twitch Affiliate Agreement", "OnboardingSection");
-                                case m.F.STANDARD_PARTNER:
-                                case m.F.PREMIUM_PARTNER:
+                                case m.G.STANDARD_PARTNER:
+                                case m.G.PREMIUM_PARTNER:
                                     return Object(h.d)("Agree to the Twitch Partner Agreement", "OnboardingSection");
                                 default:
                                     return null
@@ -5272,7 +5272,7 @@
                     }), Object.defineProperty(t.prototype, "showPartnerAgreementLink", {
                         get: function() {
                             var e = this.props.data.currentUser;
-                            return !!e && wt(e.payoutPlans && e.payoutPlans.map(function(e) {
+                            return !!e && xt(e.payoutPlans && e.payoutPlans.map(function(e) {
                                 return {
                                     category: e.category,
                                     tags: e.tags,
@@ -5290,7 +5290,7 @@
                         configurable: !0
                     }), t
                 }(i.Component),
-                jt = Object(r.compose)(Object(p.b)("OnboardingSection"), Object(u.a)(Rt))(Dt),
+                jt = Object(r.compose)(Object(p.b)("OnboardingSection"), Object(u.a)(Ft))(Dt),
                 Ut = Object(p.b)("OtherRevenueStreamsForm", {
                     autoReportInteractive: !0
                 })(function(e) {
@@ -5436,7 +5436,7 @@
                     name: "updateSubscriptionProduct"
                 }))(Gt),
                 qt = n("+UBe"),
-                Yt = function(e) {
+                Ht = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5449,7 +5449,7 @@
                             channelName: this.channelName
                         }), (this.isAffiliate || this.isPartner) && i.createElement(i.Fragment, null, i.createElement(zt, {
                             channelName: this.channelName
-                        }), i.createElement(Ft, {
+                        }), i.createElement(wt, {
                             channelName: this.channelName,
                             isPartner: this.isPartner
                         })), this.isPartner && i.createElement(Mt, {
@@ -5477,7 +5477,7 @@
                         configurable: !0
                     }), t
                 }(i.Component),
-                Ht = Object(g.compose)(Object(p.b)("DashboardRevenueSettingsIndexPage", {
+                Yt = Object(g.compose)(Object(p.b)("DashboardRevenueSettingsIndexPage", {
                     destination: f.a.DashboardSettingsRevenueIndex
                 }), Object(b.a)({
                     location: v.PageviewLocation.DashboardSettingsRevenueIndex
@@ -5489,7 +5489,7 @@
                             }
                         }
                     }
-                }))(Yt),
+                }))(Ht),
                 Qt = n("nHFd"),
                 $t = function(e) {
                     return i.createElement(P.Cb, {
@@ -5563,7 +5563,7 @@
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return a.trys.push([0, 2, , 3]), [4, R.a.getOrThrow(en + "/" + e + "/badges", {
+                                        return a.trys.push([0, 2, , 3]), [4, F.a.getOrThrow(en + "/" + e + "/badges", {
                                             credentials: "include"
                                         })];
                                     case 1:
@@ -5581,7 +5581,7 @@
                             return a.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return n.trys.push([0, 2, , 3]), [4, R.a.getOrThrow(en + "/" + e + "/timeout_statuses", {
+                                        return n.trys.push([0, 2, , 3]), [4, F.a.getOrThrow(en + "/" + e + "/timeout_statuses", {
                                             credentials: "include"
                                         })];
                                     case 1:
@@ -5599,7 +5599,7 @@
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return a.trys.push([0, 2, , 3]), [4, R.a.deleteOrThrow(en + "/" + e + "/badges/" + t, {
+                                        return a.trys.push([0, 2, , 3]), [4, F.a.deleteOrThrow(en + "/" + e + "/badges/" + t, {
                                             credentials: "include"
                                         })];
                                     case 1:
@@ -5617,7 +5617,7 @@
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return a.trys.push([0, 2, , 3]), (n = new FormData).append("required_tenure_months", t.requiredTenureMonths.toString()), n.append("image_1x", t.image1x), n.append("image_2x", t.image2x), n.append("image_4x", t.image4x), [4, R.a.postOrThrow(en + "/" + e + "/badges", {
+                                        return a.trys.push([0, 2, , 3]), (n = new FormData).append("required_tenure_months", t.requiredTenureMonths.toString()), n.append("image_1x", t.image1x), n.append("image_2x", t.image2x), n.append("image_4x", t.image4x), [4, F.a.postOrThrow(en + "/" + e + "/badges", {
                                             body: n,
                                             credentials: "include"
                                         })];
@@ -6431,7 +6431,7 @@
                         })
                     }, t
                 }(i.Component),
-                Fn = Object(g.compose)(Object(p.b)("LoyaltyBadgesPage", {
+                wn = Object(g.compose)(Object(p.b)("LoyaltyBadgesPage", {
                     destination: f.a.DashboardSettingsRevenueLoyaltyBadges
                 }), Object(b.a)({
                     location: v.PageviewLocation.DashboardSettingsRevenueLoyaltyBadges
@@ -6444,15 +6444,15 @@
                         }
                     }
                 }))(_n);
-            var wn, xn = Object(Qe.connect)(null, function(e) {
+            var xn, Rn = Object(Qe.connect)(null, function(e) {
                     return Object(g.bindActionCreators)({
                         showUploadBadgeModal: function(e) {
                             var t = a.__rest(e, []);
                             return Object($e.d)(Jt, t)
                         }
                     }, e)
-                })(Fn),
-                Rn = function(e) {
+                })(wn),
+                Fn = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -6480,14 +6480,14 @@
                     destination: f.a.DashboardSettingsRevenueMerchByAmazon
                 }), Object(b.a)({
                     location: v.PageviewLocation.DashboardSettingsRevenueMerchByAmazon
-                }))(Rn),
+                }))(Fn),
                 jn = n("cr+I"),
                 Un = n("wIs1"),
                 Ln = n("x7UT"),
                 Mn = n("NAv5");
             ! function(e) {
                 e[e.Summary = 0] = "Summary", e[e.Registration = 1] = "Registration", e[e.Agreement = 2] = "Agreement", e[e.TaxInterview = 3] = "TaxInterview", e[e.PayoutMethod = 4] = "PayoutMethod", e[e.Review = 5] = "Review"
-            }(wn || (wn = {}));
+            }(xn || (xn = {}));
             var Bn, Xn = n("h3C/"),
                 Wn = function() {
                     return i.createElement(i.Fragment, null, i.createElement(P.Xa, {
@@ -6611,7 +6611,7 @@
                         })))))
                     }, t
                 }(i.Component),
-                Yn = function() {
+                Hn = function() {
                     return i.createElement(i.Fragment, null, i.createElement(P.Xa, {
                         margin: {
                             bottom: 1
@@ -6624,7 +6624,7 @@
                         buttonLabel: Object(h.d)("Next", "PartnerRedoInfo")
                     }, "PartnerRedoInfo")))
                 },
-                Hn = function(e) {
+                Yn = function(e) {
                     return i.createElement(P.Xa, {
                         position: P.hb.Relative
                     }, i.createElement(P.Xa, {
@@ -6689,7 +6689,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return e = this.props.data.currentUser && this.props.data.currentUser.id, this.props.onboardEntity === m.F.STANDARD_PARTNER || this.props.onboardEntity === m.F.PREMIUM_PARTNER ? (i = this.props.data.currentUser && this.props.data.currentUser.programAgreement, t = i && i.type, n = i && i.version) : (t = this.props.onboardEntity, n = "v1"), e && t && n ? (r = Object(y.a)({
+                                            return e = this.props.data.currentUser && this.props.data.currentUser.id, this.props.onboardEntity === m.G.STANDARD_PARTNER || this.props.onboardEntity === m.G.PREMIUM_PARTNER ? (i = this.props.data.currentUser && this.props.data.currentUser.programAgreement, t = i && i.type, n = i && i.version) : (t = this.props.onboardEntity, n = "v1"), e && t && n ? (r = Object(y.a)({
                                                 targetUserID: e,
                                                 type: t,
                                                 version: n
@@ -6697,7 +6697,7 @@
                                         case 1:
                                             return (o = a.sent()).data.acceptProgramAgreement && o.data.acceptProgramAgreement.error ? (this.setState({
                                                 processingAgreement: !1
-                                            }), [2]) : (this.props.updateStepDisplayed(wn.TaxInterview), [2])
+                                            }), [2]) : (this.props.updateStepDisplayed(xn.TaxInterview), [2])
                                     }
                                 })
                             })
@@ -6729,19 +6729,19 @@
                         }))
                     }, Object.defineProperty(t.prototype, "renderAgreement", {
                         get: function() {
-                            if (this.isPartnerRedo) return i.createElement(Yn, null);
+                            if (this.isPartnerRedo) return i.createElement(Hn, null);
                             switch (this.props.onboardEntity) {
-                                case m.F.AFFILIATE:
+                                case m.G.AFFILIATE:
                                     return i.createElement(Wn, null);
-                                case m.F.EXTENSIONS_DEVELOPER:
+                                case m.G.EXTENSIONS_DEVELOPER:
                                     return i.createElement(Gn, null);
-                                case m.F.STANDARD_PARTNER:
-                                case m.F.PREMIUM_PARTNER:
+                                case m.G.STANDARD_PARTNER:
+                                case m.G.PREMIUM_PARTNER:
                                     var e = this.props.data.currentUser && this.props.data.currentUser.programAgreement;
-                                    return e && i.createElement(Hn, {
+                                    return e && i.createElement(Yn, {
                                         body: e.body
                                     });
-                                case m.F.CUSTOM_PARTNER:
+                                case m.G.CUSTOM_PARTNER:
                                     return i.createElement(Vn, null);
                                 default:
                                     return null
@@ -6753,15 +6753,15 @@
                         get: function() {
                             if (!(this.props.data.currentUser && this.props.data.currentUser.roles && this.props.data.currentUser.roles.isPartner && this.props.data.currentUser.payoutPlans)) return !1;
                             var e = this.props.data.currentUser.payoutPlans.find(function(e) {
-                                return e.category === m.E.PARTNER
+                                return e.category === m.F.PARTNER
                             });
-                            return !!e && (!!e.isReceivingRevenue && (!!e.tags && (!(!this.props.data.currentUser.payoutInvite || !this.props.data.currentUser.payoutInvite.isLegacy) || !e.tags.includes(m.H.LEGACY) && (e.tags.includes(m.H.STANDARD) ? this.props.onboardEntity === m.F.STANDARD_PARTNER : e.tags.includes(m.H.PREMIUM) ? this.props.onboardEntity === m.F.PREMIUM_PARTNER : !!e.tags.includes(m.H.CUSTOM) && this.props.onboardEntity === m.F.CUSTOM_PARTNER))))
+                            return !!e && (!!e.isReceivingRevenue && (!!e.tags && (!(!this.props.data.currentUser.payoutInvite || !this.props.data.currentUser.payoutInvite.isLegacy) || !e.tags.includes(m.I.LEGACY) && (e.tags.includes(m.I.STANDARD) ? this.props.onboardEntity === m.G.STANDARD_PARTNER : e.tags.includes(m.I.PREMIUM) ? this.props.onboardEntity === m.G.PREMIUM_PARTNER : !!e.tags.includes(m.I.CUSTOM) && this.props.onboardEntity === m.G.CUSTOM_PARTNER))))
                         },
                         enumerable: !0,
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "skipAgreement", {
                         get: function() {
-                            return this.props.onboardEntity === m.F.EXTENSIONS_DEVELOPER || this.props.onboardEntity === m.F.CUSTOM_PARTNER || this.isPartnerRedo
+                            return this.props.onboardEntity === m.G.EXTENSIONS_DEVELOPER || this.props.onboardEntity === m.G.CUSTOM_PARTNER || this.isPartnerRedo
                         },
                         enumerable: !0,
                         configurable: !0
@@ -6785,7 +6785,7 @@
                     options: function(e) {
                         return {
                             variables: {
-                                withAgreement: e.onboardEntity === m.F.STANDARD_PARTNER || e.onboardEntity === m.F.PREMIUM_PARTNER
+                                withAgreement: e.onboardEntity === m.G.STANDARD_PARTNER || e.onboardEntity === m.G.PREMIUM_PARTNER
                             }
                         }
                     }
@@ -6801,13 +6801,13 @@
                         if (this.props.data.loading || this.props.status === Bn.Completed) return null;
                         var e;
                         if (this.props.status === Bn.UnderReview) switch (this.props.onboardEntity) {
-                            case m.F.EXTENSIONS_DEVELOPER:
+                            case m.G.EXTENSIONS_DEVELOPER:
                                 e = i.createElement(P.W, null, Object(h.d)("Your financial information is currently under review. This process usually takes a few minutes.", "PayoutInfoBrick"));
                                 break;
-                            case m.F.AFFILIATE:
-                            case m.F.STANDARD_PARTNER:
-                            case m.F.PREMIUM_PARTNER:
-                            case m.F.CUSTOM_PARTNER:
+                            case m.G.AFFILIATE:
+                            case m.G.STANDARD_PARTNER:
+                            case m.G.PREMIUM_PARTNER:
+                            case m.G.CUSTOM_PARTNER:
                                 e = i.createElement(P.W, null, Object(h.d)("Your payout information is currently under review. This typically only takes a few minutes.", "PayoutInfoBrick"))
                         } else if (this.props.status === Bn.NotStarted) {
                             var t = !!(this.props.data && this.props.data.currentUser && this.props.data.currentUser.roles && this.props.data.currentUser.roles.isPartner && this.props.data.currentUser.roles.isExtensionsDeveloper);
@@ -6819,7 +6819,7 @@
                                 margin: {
                                     bottom: 1
                                 }
-                            }, i.createElement(P.W, null, Object(h.d)("Choose Hold Payouts to have us hold your money until you request a payout; otherwise, you will be paid automatically.", "PayoutInfoBrick"))), this.props.onboardEntity === m.F.AFFILIATE && !t && i.createElement(P.W, null, Object(h.d)("Twitch uses a third party to process your payouts and the processor charges a transaction fee each time you get paid. The fees vary based on the payout method. See the fees <x:link>here.</x:link>", {
+                            }, i.createElement(P.W, null, Object(h.d)("Choose Hold Payouts to have us hold your money until you request a payout; otherwise, you will be paid automatically.", "PayoutInfoBrick"))), this.props.onboardEntity === m.G.AFFILIATE && !t && i.createElement(P.W, null, Object(h.d)("Twitch uses a third party to process your payouts and the processor charges a transaction fee each time you get paid. The fees vary based on the payout method. See the fees <x:link>here.</x:link>", {
                                 "x:link": function(e) {
                                     return i.createElement(P.U, {
                                         to: "https://help.twitch.tv/customer/portal/articles/2785925-affiliate-onboarding-guide#fees",
@@ -6842,15 +6842,15 @@
                 ta = function(e) {
                     var t;
                     switch (e.onboardEntity) {
-                        case m.F.AFFILIATE:
+                        case m.G.AFFILIATE:
                             t = "https://help.twitch.tv/customer/portal/articles/2785925-affiliate-onboarding-guide";
                             break;
-                        case m.F.EXTENSIONS_DEVELOPER:
+                        case m.G.EXTENSIONS_DEVELOPER:
                             t = "https://dev.twitch.tv/docs/extensions/onboarding";
                             break;
-                        case m.F.STANDARD_PARTNER:
-                        case m.F.PREMIUM_PARTNER:
-                        case m.F.CUSTOM_PARTNER:
+                        case m.G.STANDARD_PARTNER:
+                        case m.G.PREMIUM_PARTNER:
+                        case m.G.CUSTOM_PARTNER:
                             t = "https://help.twitch.tv/customer/portal/articles/2853658-partner-onboarding-guide";
                             break;
                         default:
@@ -6869,7 +6869,7 @@
                 },
                 na = function(e) {
                     var t;
-                    return e.onboardEntity === m.F.EXTENSIONS_DEVELOPER ? (e.status === Bn.NotStarted && (t = i.createElement(P.W, null, Object(h.d)("Click the button below to submit your financial information.", "PayoutInfoText"))), e.status === Bn.UnderReview && (t = i.createElement(P.W, null, Object(h.d)("You can change your financial information if you wish to modify any previously submitted information. You may want to do this if your financial information has been under review for more than 48 hours.", "PayoutInfoText"))), e.status === Bn.Completed && (t = i.createElement(i.Fragment, null, i.createElement(P.Xa, {
+                    return e.onboardEntity === m.G.EXTENSIONS_DEVELOPER ? (e.status === Bn.NotStarted && (t = i.createElement(P.W, null, Object(h.d)("Click the button below to submit your financial information.", "PayoutInfoText"))), e.status === Bn.UnderReview && (t = i.createElement(P.W, null, Object(h.d)("You can change your financial information if you wish to modify any previously submitted information. You may want to do this if your financial information has been under review for more than 48 hours.", "PayoutInfoText"))), e.status === Bn.Completed && (t = i.createElement(i.Fragment, null, i.createElement(P.Xa, {
                         margin: {
                             bottom: 1
                         }
@@ -6985,7 +6985,7 @@
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleContinueClick = function() {
-                        var e = t.isCustomPartnerOnboarding ? wn.Review : wn.Summary;
+                        var e = t.isCustomPartnerOnboarding ? xn.Review : xn.Summary;
                         t.props.updateStepDisplayed(e)
                     }, t
                 }
@@ -7017,23 +7017,23 @@
                     }, this.isCustomPartnerOnboarding ? Object(h.d)("Continue", "PayoutOnboardingPayoutMethod") : Object(h.d)("Done", "PayoutOnboardingPayoutMethod"))))
                 }, Object.defineProperty(t.prototype, "isExtensionsDeveloperOnboarding", {
                     get: function() {
-                        return this.props.onboardEntity === m.F.EXTENSIONS_DEVELOPER
+                        return this.props.onboardEntity === m.G.EXTENSIONS_DEVELOPER
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "isCustomPartnerOnboarding", {
                     get: function() {
-                        return this.props.onboardEntity === m.F.CUSTOM_PARTNER
+                        return this.props.onboardEntity === m.G.CUSTOM_PARTNER
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "payoutMethodStatus", {
                     get: function() {
                         switch (this.props.currentStep) {
-                            case m.G.PAYOUT_METHOD_PENDING:
+                            case m.H.PAYOUT_METHOD_PENDING:
                                 return Bn.UnderReview;
-                            case m.G.COMPLETED:
-                            case m.G.REVIEW_PENDING:
+                            case m.H.COMPLETED:
+                            case m.H.REVIEW_PENDING:
                                 return Bn.Completed;
                             default:
                                 return Bn.NotStarted
@@ -7075,7 +7075,7 @@
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "continueButtonDisabled", {
                     get: function() {
-                        return this.isCustomPartnerOnboarding ? this.props.currentStep !== m.G.REVIEW_PENDING : this.props.currentStep === m.G.PAYOUT_METHOD_NOT_STARTED
+                        return this.isCustomPartnerOnboarding ? this.props.currentStep !== m.H.REVIEW_PENDING : this.props.currentStep === m.H.PAYOUT_METHOD_NOT_STARTED
                     },
                     enumerable: !0,
                     configurable: !0
@@ -7739,7 +7739,7 @@
                         }
                     }, "RegistrationInfoBrick")
                 },
-                Fa = function() {
+                wa = function() {
                     return i.createElement(i.Fragment, null, i.createElement(P.Xa, {
                         margin: {
                             bottom: 1
@@ -7774,7 +7774,7 @@
                         fontSize: P.Ca.Size6
                     }, Object(h.d)("You will be able to edit this page later if your information changes.", "RegistrationInfoBrick"))))
                 },
-                wa = function() {
+                xa = function() {
                     return i.createElement(i.Fragment, null, i.createElement(P.Xa, {
                         margin: {
                             bottom: 1
@@ -7791,24 +7791,24 @@
                         fontSize: P.Ca.Size6
                     }, Object(h.d)("This form must match your tax information exactly, and any inconsistencies may cause delays in your Payout Registration approval. Don't worry, you will still be able to edit this page later on if your information changes.", "RegistrationInfoBrick")))
                 },
-                xa = function(e) {
-                    return i.createElement(i.Fragment, null, e.onboardEntity === m.F.EXTENSIONS_DEVELOPER ? i.createElement(Fa, null) : i.createElement(wa, null))
+                Ra = function(e) {
+                    return i.createElement(i.Fragment, null, e.onboardEntity === m.G.EXTENSIONS_DEVELOPER ? i.createElement(wa, null) : i.createElement(xa, null))
                 };
             ! function(e) {
                 e.MONTH = "select-birthdate__month", e.YEAR = "select-birthdate__year", e.DAY = "select-birthdate__day"
             }(Aa || (Aa = {}));
-            for (var Ra = [], Da = (new Date).getFullYear(), ja = Da; ja > Da - 100; ja--) Ra.push(i.createElement("option", {
+            for (var Fa = [], Da = (new Date).getFullYear(), ja = Da; ja > Da - 100; ja--) Fa.push(i.createElement("option", {
                 value: ja,
                 key: "year-" + ja
             }, ja));
-            var Ua, La, Ma, Ba, Xa, Wa, Va, Ga, za, qa, Ya, Ha, Qa, $a, Za = function(e) {
+            var Ua, La, Ma, Ba, Xa, Wa, Va, Ga, za, qa, Ha, Ya, Qa, $a, Za = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             month: void 0,
                             year: void 0,
                             day: void 0
-                        }, t.yearSelections = Ra, t.handleMonthChange = function(e) {
+                        }, t.yearSelections = Fa, t.handleMonthChange = function(e) {
                             var n = +e.target.value;
                             return t.setState({
                                 month: n
@@ -8041,7 +8041,7 @@
                                         case 2:
                                             return !(o = a.sent()).data.registerPayoutInformation || o.data.registerPayoutInformation.error ? (this.setState({
                                                 submittingRegistration: !1
-                                            }), [2]) : (this.props.updateStepDisplayed(wn.Agreement), [3, 4]);
+                                            }), [2]) : (this.props.updateStepDisplayed(xn.Agreement), [3, 4]);
                                         case 3:
                                             return a.sent(), this.setState({
                                                 submittingRegistration: !1
@@ -8054,7 +8054,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                        if (!this.props.currentStep || this.props.currentStep !== m.G.REGISTRATION_NOT_STARTED) {
+                        if (!this.props.currentStep || this.props.currentStep !== m.H.REGISTRATION_NOT_STARTED) {
                             var e = Object(y.a)({
                                 targetUserID: this.props.userID
                             });
@@ -8069,7 +8069,7 @@
                         }, Object(h.d)("Continue", "PayoutOnboardingRegistration"));
                         return i.createElement(C.a, {
                             footer: e
-                        }, i.createElement(O.a, null, i.createElement(xa, {
+                        }, i.createElement(O.a, null, i.createElement(Ra, {
                             onboardEntity: this.props.onboardEntity
                         })), i.createElement(zn, {
                             title: Object(h.d)("Contact Info", "PayoutOnboardingRegistration")
@@ -8150,7 +8150,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleContinueClick = function() {
-                            t.props.updateStepDisplayed(wn.Summary)
+                            t.props.updateStepDisplayed(xn.Summary)
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
@@ -8174,7 +8174,7 @@
                         }, Object(h.d)("Continue", "PayoutOnboardingReview"))))
                     }, Object.defineProperty(t.prototype, "inReview", {
                         get: function() {
-                            return this.props.currentStep === m.G.REVIEW_PENDING
+                            return this.props.currentStep === m.H.REVIEW_PENDING
                         },
                         enumerable: !0,
                         configurable: !0
@@ -8222,126 +8222,126 @@
                 mi = function() {
                     return Object(h.d)("Choose your payout method.", "PayoutOnboardingContainer")
                 },
-                pi = ((Ua = {})[wn.Summary] = {
-                    title: (La = {}, La[m.F.AFFILIATE] = function() {
+                pi = ((Ua = {})[xn.Summary] = {
+                    title: (La = {}, La[m.G.AFFILIATE] = function() {
                         return Object(h.d)("Affiliate Onboarding", "PayoutOnboardingContainer")
-                    }, La[m.F.EXTENSIONS_DEVELOPER] = function() {
+                    }, La[m.G.EXTENSIONS_DEVELOPER] = function() {
                         return Object(h.d)("Extensions Developer Onboarding", "PayoutOnboardingContainer")
-                    }, La[m.F.STANDARD_PARTNER] = function() {
+                    }, La[m.G.STANDARD_PARTNER] = function() {
                         return ai()
-                    }, La[m.F.PREMIUM_PARTNER] = function() {
+                    }, La[m.G.PREMIUM_PARTNER] = function() {
                         return ai()
-                    }, La[m.F.CUSTOM_PARTNER] = function() {
+                    }, La[m.G.CUSTOM_PARTNER] = function() {
                         return ai()
                     }, La),
-                    description: (Ma = {}, Ma[m.F.AFFILIATE] = function() {
+                    description: (Ma = {}, Ma[m.G.AFFILIATE] = function() {
                         return ii()
-                    }, Ma[m.F.EXTENSIONS_DEVELOPER] = function() {
+                    }, Ma[m.G.EXTENSIONS_DEVELOPER] = function() {
                         return Object(h.d)("Manage or modify your Extensions Developer Onboarding.", "PayoutOnboardingContainer")
-                    }, Ma[m.F.STANDARD_PARTNER] = function() {
+                    }, Ma[m.G.STANDARD_PARTNER] = function() {
                         return ii()
-                    }, Ma[m.F.PREMIUM_PARTNER] = function() {
+                    }, Ma[m.G.PREMIUM_PARTNER] = function() {
                         return ii()
-                    }, Ma[m.F.CUSTOM_PARTNER] = function() {
+                    }, Ma[m.G.CUSTOM_PARTNER] = function() {
                         return ii()
                     }, Ma)
-                }, Ua[wn.Registration] = {
-                    title: (Ba = {}, Ba[m.F.AFFILIATE] = function() {
+                }, Ua[xn.Registration] = {
+                    title: (Ba = {}, Ba[m.G.AFFILIATE] = function() {
                         return ri()
-                    }, Ba[m.F.EXTENSIONS_DEVELOPER] = function() {
+                    }, Ba[m.G.EXTENSIONS_DEVELOPER] = function() {
                         return Object(h.d)("Extensions Developer Registration", "PayoutOnboardingContainer")
-                    }, Ba[m.F.STANDARD_PARTNER] = function() {
+                    }, Ba[m.G.STANDARD_PARTNER] = function() {
                         return ri()
-                    }, Ba[m.F.PREMIUM_PARTNER] = function() {
+                    }, Ba[m.G.PREMIUM_PARTNER] = function() {
                         return ri()
-                    }, Ba[m.F.CUSTOM_PARTNER] = function() {
+                    }, Ba[m.G.CUSTOM_PARTNER] = function() {
                         return ri()
                     }, Ba),
-                    description: (Xa = {}, Xa[m.F.AFFILIATE] = function() {
+                    description: (Xa = {}, Xa[m.G.AFFILIATE] = function() {
                         return oi()
-                    }, Xa[m.F.EXTENSIONS_DEVELOPER] = function() {
+                    }, Xa[m.G.EXTENSIONS_DEVELOPER] = function() {
                         return Object(h.d)("Begin your Extensions Developer Registration.", "PayoutOnboardingContainer")
-                    }, Xa[m.F.STANDARD_PARTNER] = function() {
+                    }, Xa[m.G.STANDARD_PARTNER] = function() {
                         return oi()
-                    }, Xa[m.F.PREMIUM_PARTNER] = function() {
+                    }, Xa[m.G.PREMIUM_PARTNER] = function() {
                         return oi()
-                    }, Xa[m.F.CUSTOM_PARTNER] = function() {
+                    }, Xa[m.G.CUSTOM_PARTNER] = function() {
                         return oi()
                     }, Xa)
-                }, Ua[wn.Agreement] = {
-                    title: (Wa = {}, Wa[m.F.AFFILIATE] = function() {
+                }, Ua[xn.Agreement] = {
+                    title: (Wa = {}, Wa[m.G.AFFILIATE] = function() {
                         return Object(h.d)("Twitch Affiliate Agreement", "PayoutOnboardingContainer")
-                    }, Wa[m.F.EXTENSIONS_DEVELOPER] = function() {
+                    }, Wa[m.G.EXTENSIONS_DEVELOPER] = function() {
                         return Object(h.d)("Twitch Extensions Developer Agreement", "PayoutOnboardingContainer")
-                    }, Wa[m.F.STANDARD_PARTNER] = function() {
+                    }, Wa[m.G.STANDARD_PARTNER] = function() {
                         return si()
-                    }, Wa[m.F.PREMIUM_PARTNER] = function() {
+                    }, Wa[m.G.PREMIUM_PARTNER] = function() {
                         return si()
-                    }, Wa[m.F.CUSTOM_PARTNER] = function() {
+                    }, Wa[m.G.CUSTOM_PARTNER] = function() {
                         return si()
                     }, Wa),
-                    description: (Va = {}, Va[m.F.AFFILIATE] = function() {
+                    description: (Va = {}, Va[m.G.AFFILIATE] = function() {
                         return Object(h.d)("Agree to the Twitch Affiliate Agreement.", "PayoutOnboardingContainer")
-                    }, Va[m.F.EXTENSIONS_DEVELOPER] = function() {
+                    }, Va[m.G.EXTENSIONS_DEVELOPER] = function() {
                         return Object(h.d)("Agree to the Twitch Extensions Developer Agreement.", "PayoutOnboardingContainer")
-                    }, Va[m.F.STANDARD_PARTNER] = function() {
+                    }, Va[m.G.STANDARD_PARTNER] = function() {
                         return li()
-                    }, Va[m.F.PREMIUM_PARTNER] = function() {
+                    }, Va[m.G.PREMIUM_PARTNER] = function() {
                         return li()
-                    }, Va[m.F.CUSTOM_PARTNER] = function() {
+                    }, Va[m.G.CUSTOM_PARTNER] = function() {
                         return li()
                     }, Va)
-                }, Ua[wn.TaxInterview] = {
-                    title: (Ga = {}, Ga[m.F.AFFILIATE] = function() {
+                }, Ua[xn.TaxInterview] = {
+                    title: (Ga = {}, Ga[m.G.AFFILIATE] = function() {
                         return di()
-                    }, Ga[m.F.EXTENSIONS_DEVELOPER] = function() {
+                    }, Ga[m.G.EXTENSIONS_DEVELOPER] = function() {
                         return di()
-                    }, Ga[m.F.STANDARD_PARTNER] = function() {
+                    }, Ga[m.G.STANDARD_PARTNER] = function() {
                         return di()
-                    }, Ga[m.F.PREMIUM_PARTNER] = function() {
+                    }, Ga[m.G.PREMIUM_PARTNER] = function() {
                         return di()
-                    }, Ga[m.F.CUSTOM_PARTNER] = function() {
+                    }, Ga[m.G.CUSTOM_PARTNER] = function() {
                         return di()
                     }, Ga),
-                    description: (za = {}, za[m.F.AFFILIATE] = function() {
+                    description: (za = {}, za[m.G.AFFILIATE] = function() {
                         return ci()
-                    }, za[m.F.EXTENSIONS_DEVELOPER] = function() {
+                    }, za[m.G.EXTENSIONS_DEVELOPER] = function() {
                         return ci()
-                    }, za[m.F.STANDARD_PARTNER] = function() {
+                    }, za[m.G.STANDARD_PARTNER] = function() {
                         return ci()
-                    }, za[m.F.PREMIUM_PARTNER] = function() {
+                    }, za[m.G.PREMIUM_PARTNER] = function() {
                         return ci()
-                    }, za[m.F.CUSTOM_PARTNER] = function() {
+                    }, za[m.G.CUSTOM_PARTNER] = function() {
                         return ci()
                     }, za)
-                }, Ua[wn.PayoutMethod] = {
-                    title: (qa = {}, qa[m.F.AFFILIATE] = function() {
+                }, Ua[xn.PayoutMethod] = {
+                    title: (qa = {}, qa[m.G.AFFILIATE] = function() {
                         return ui()
-                    }, qa[m.F.EXTENSIONS_DEVELOPER] = function() {
+                    }, qa[m.G.EXTENSIONS_DEVELOPER] = function() {
                         return Object(h.d)("Financial Information", "PayoutOnboardingContainer")
-                    }, qa[m.F.STANDARD_PARTNER] = function() {
+                    }, qa[m.G.STANDARD_PARTNER] = function() {
                         return ui()
-                    }, qa[m.F.PREMIUM_PARTNER] = function() {
+                    }, qa[m.G.PREMIUM_PARTNER] = function() {
                         return ui()
-                    }, qa[m.F.CUSTOM_PARTNER] = function() {
+                    }, qa[m.G.CUSTOM_PARTNER] = function() {
                         return ui()
                     }, qa),
-                    description: (Ya = {}, Ya[m.F.AFFILIATE] = function() {
+                    description: (Ha = {}, Ha[m.G.AFFILIATE] = function() {
                         return mi()
-                    }, Ya[m.F.EXTENSIONS_DEVELOPER] = function() {
+                    }, Ha[m.G.EXTENSIONS_DEVELOPER] = function() {
                         return Object(h.d)("Submit your financial information.", "PayoutOnboardingContainer")
-                    }, Ya[m.F.STANDARD_PARTNER] = function() {
+                    }, Ha[m.G.STANDARD_PARTNER] = function() {
                         return mi()
-                    }, Ya[m.F.PREMIUM_PARTNER] = function() {
+                    }, Ha[m.G.PREMIUM_PARTNER] = function() {
                         return mi()
-                    }, Ya[m.F.CUSTOM_PARTNER] = function() {
+                    }, Ha[m.G.CUSTOM_PARTNER] = function() {
                         return mi()
-                    }, Ya)
-                }, Ua[wn.Review] = {
-                    title: (Ha = {}, Ha[m.F.CUSTOM_PARTNER] = function() {
+                    }, Ha)
+                }, Ua[xn.Review] = {
+                    title: (Ya = {}, Ya[m.G.CUSTOM_PARTNER] = function() {
                         return Object(h.d)("Partnership Approval", "PayoutOnboardingContainer")
-                    }, Ha),
-                    description: (Qa = {}, Qa[m.F.CUSTOM_PARTNER] = function() {
+                    }, Ya),
+                    description: (Qa = {}, Qa[m.G.CUSTOM_PARTNER] = function() {
                         return Object(h.d)("The Partnership Team will validate your paperwork and activate your new agreement.", "PayoutOnboardingContainer")
                     }, Qa)
                 }, Ua),
@@ -8349,7 +8349,7 @@
                     return Object(h.d)("Continue", "InProgressInfo")
                 },
                 hi = function(e) {
-                    var t = e.onboardEntity === m.F.EXTENSIONS_DEVELOPER;
+                    var t = e.onboardEntity === m.G.EXTENSIONS_DEVELOPER;
                     return i.createElement(P.Xa, {
                         margin: {
                             bottom: 1
@@ -8384,7 +8384,7 @@
                     }, i.createElement(P.W, {
                         type: P.Tb.H4,
                         bold: !0
-                    }, Object(h.d)("Setup Complete", "SetupCompleteInfo"))), e.onboardEntity === m.F.EXTENSIONS_DEVELOPER ? i.createElement(P.Pa, {
+                    }, Object(h.d)("Setup Complete", "SetupCompleteInfo"))), e.onboardEntity === m.G.EXTENSIONS_DEVELOPER ? i.createElement(P.Pa, {
                         margin: {
                             bottom: 1
                         }
@@ -8416,7 +8416,7 @@
                 e.START_OVER_BUTTON = "progress-brick__start-over-button", e.CONTINUE_BUTTON = "progress-brick__continue-button"
             }($a || ($a = {}));
             var fi, vi = function(e) {
-                var t = !(!e.currentStep || e.currentStep === m.G.ROYALTY_TAX_INTERVIEW_PENDING || e.currentStep === m.G.SERVICE_TAX_INTERVIEW_PENDING);
+                var t = !(!e.currentStep || e.currentStep === m.H.ROYALTY_TAX_INTERVIEW_PENDING || e.currentStep === m.H.SERVICE_TAX_INTERVIEW_PENDING);
                 return i.createElement(P.Cb, {
                     padding: 2,
                     borderLeft: !0,
@@ -8426,14 +8426,14 @@
                     borderMarked: !0,
                     padding: 2,
                     elevation: 1
-                }, e.currentStep === m.G.COMPLETED ? i.createElement(bi, {
+                }, e.currentStep === m.H.COMPLETED ? i.createElement(bi, {
                     onboardEntity: e.onboardEntity
                 }) : i.createElement(hi, {
                     onboardEntity: e.onboardEntity,
                     startOverEnabled: t
                 }), i.createElement(P.Xa, {
                     display: P.X.Flex
-                }, e.currentStep !== m.G.COMPLETED && i.createElement(P.Xa, {
+                }, e.currentStep !== m.H.COMPLETED && i.createElement(P.Xa, {
                     margin: {
                         right: 1
                     }
@@ -8442,26 +8442,26 @@
                     onClick: function() {
                         return e.updateStepDisplayed(function(e) {
                             switch (e) {
-                                case m.G.AGREEMENT_NOT_STARTED:
-                                    return wn.Agreement;
-                                case m.G.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
-                                case m.G.ROYALTY_TAX_INTERVIEW_PENDING:
-                                case m.G.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
-                                case m.G.ROYALTY_TAX_INTERVIEW_MISMATCH:
-                                case m.G.ROYALTY_TAX_INTERVIEW_FAILED:
-                                case m.G.SERVICE_TAX_INTERVIEW_NOT_STARTED:
-                                case m.G.SERVICE_TAX_INTERVIEW_PENDING:
-                                case m.G.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED:
-                                case m.G.SERVICE_TAX_INTERVIEW_MISMATCH:
-                                case m.G.SERVICE_TAX_INTERVIEW_FAILED:
-                                    return wn.TaxInterview;
-                                case m.G.PAYOUT_METHOD_NOT_STARTED:
-                                case m.G.PAYOUT_METHOD_PENDING:
-                                    return wn.PayoutMethod;
-                                case m.G.REVIEW_PENDING:
-                                    return wn.Review;
+                                case m.H.AGREEMENT_NOT_STARTED:
+                                    return xn.Agreement;
+                                case m.H.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
+                                case m.H.ROYALTY_TAX_INTERVIEW_PENDING:
+                                case m.H.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
+                                case m.H.ROYALTY_TAX_INTERVIEW_MISMATCH:
+                                case m.H.ROYALTY_TAX_INTERVIEW_FAILED:
+                                case m.H.SERVICE_TAX_INTERVIEW_NOT_STARTED:
+                                case m.H.SERVICE_TAX_INTERVIEW_PENDING:
+                                case m.H.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED:
+                                case m.H.SERVICE_TAX_INTERVIEW_MISMATCH:
+                                case m.H.SERVICE_TAX_INTERVIEW_FAILED:
+                                    return xn.TaxInterview;
+                                case m.H.PAYOUT_METHOD_NOT_STARTED:
+                                case m.H.PAYOUT_METHOD_PENDING:
+                                    return xn.PayoutMethod;
+                                case m.H.REVIEW_PENDING:
+                                    return xn.Review;
                                 default:
-                                    return wn.Summary
+                                    return xn.Summary
                             }
                         }(e.currentStep))
                     }
@@ -8591,82 +8591,82 @@
                             title: this.step1Title,
                             description: this.step1Description,
                             type: this.step1Status,
-                            onClick: this.updateStepDisplayed(wn.Registration),
+                            onClick: this.updateStepDisplayed(xn.Registration),
                             isEnabled: !this.isRegistrationComplete
                         }), i.createElement(Ei, {
                             "data-test-selector": yi.AGREEMENT,
                             title: this.step2Title,
                             description: this.step2Description,
                             type: this.step2Status,
-                            onClick: this.updateStepDisplayed(wn.Agreement),
+                            onClick: this.updateStepDisplayed(xn.Agreement),
                             isEnabled: this.isRegistrationComplete && !this.isAgreementComplete
                         }), i.createElement(Ei, {
                             "data-test-selector": yi.TAX_INTERVIEW,
                             title: this.step3Title,
                             description: this.step3Description,
                             type: this.step3Status,
-                            onClick: this.updateStepDisplayed(wn.TaxInterview),
+                            onClick: this.updateStepDisplayed(xn.TaxInterview),
                             isEnabled: this.isAgreementComplete && !this.isTaxInterviewComplete
                         }), i.createElement(Ei, {
                             "data-test-selector": yi.PAYOUT_METHOD,
                             title: this.step4Title,
                             description: this.step4Description,
                             type: this.step4Status,
-                            onClick: this.updateStepDisplayed(wn.PayoutMethod),
+                            onClick: this.updateStepDisplayed(xn.PayoutMethod),
                             isEnabled: this.isTaxInterviewComplete && !this.isPayoutMethodComplete
-                        }), this.props.onboardEntity === m.F.CUSTOM_PARTNER && i.createElement(Ei, {
+                        }), this.props.onboardEntity === m.G.CUSTOM_PARTNER && i.createElement(Ei, {
                             "data-test-selector": yi.REVIEW,
                             title: this.step5Title,
                             description: this.step5Description,
                             type: this.step5Status,
-                            onClick: this.updateStepDisplayed(wn.Review),
+                            onClick: this.updateStepDisplayed(xn.Review),
                             isEnabled: this.isPayoutMethodComplete && !this.isReviewComplete
                         }))
                     }, Object.defineProperty(t.prototype, "isRegistrationComplete", {
                         get: function() {
-                            return !(!this.props.currentStep || this.props.currentStep === m.G.CANCELED) && this.props.currentStep !== m.G.REGISTRATION_NOT_STARTED
+                            return !(!this.props.currentStep || this.props.currentStep === m.H.CANCELED) && this.props.currentStep !== m.H.REGISTRATION_NOT_STARTED
                         },
                         enumerable: !0,
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "isAgreementComplete", {
                         get: function() {
-                            return !(!this.isRegistrationComplete || !this.props.currentStep || this.props.currentStep === m.G.AGREEMENT_NOT_STARTED)
+                            return !(!this.isRegistrationComplete || !this.props.currentStep || this.props.currentStep === m.H.AGREEMENT_NOT_STARTED)
                         },
                         enumerable: !0,
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "isTaxInterviewComplete", {
                         get: function() {
-                            return !(!this.isAgreementComplete || !this.props.currentStep || this.props.currentStep === m.G.ROYALTY_TAX_INTERVIEW_NOT_STARTED || this.props.currentStep === m.G.ROYALTY_TAX_INTERVIEW_PENDING || this.props.currentStep === m.G.ROYALTY_TAX_INTERVIEW_FAILED || this.props.currentStep === m.G.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED || this.props.currentStep === m.G.ROYALTY_TAX_INTERVIEW_MISMATCH || this.props.currentStep === m.G.SERVICE_TAX_INTERVIEW_NOT_STARTED || this.props.currentStep === m.G.SERVICE_TAX_INTERVIEW_PENDING || this.props.currentStep === m.G.SERVICE_TAX_INTERVIEW_FAILED || this.props.currentStep === m.G.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED || this.props.currentStep === m.G.SERVICE_TAX_INTERVIEW_MISMATCH)
+                            return !(!this.isAgreementComplete || !this.props.currentStep || this.props.currentStep === m.H.ROYALTY_TAX_INTERVIEW_NOT_STARTED || this.props.currentStep === m.H.ROYALTY_TAX_INTERVIEW_PENDING || this.props.currentStep === m.H.ROYALTY_TAX_INTERVIEW_FAILED || this.props.currentStep === m.H.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED || this.props.currentStep === m.H.ROYALTY_TAX_INTERVIEW_MISMATCH || this.props.currentStep === m.H.SERVICE_TAX_INTERVIEW_NOT_STARTED || this.props.currentStep === m.H.SERVICE_TAX_INTERVIEW_PENDING || this.props.currentStep === m.H.SERVICE_TAX_INTERVIEW_FAILED || this.props.currentStep === m.H.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED || this.props.currentStep === m.H.SERVICE_TAX_INTERVIEW_MISMATCH)
                         },
                         enumerable: !0,
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "isPayoutMethodComplete", {
                         get: function() {
-                            return !(!this.isTaxInterviewComplete || !this.props.currentStep || this.props.currentStep === m.G.PAYOUT_METHOD_NOT_STARTED || this.props.currentStep === m.G.PAYOUT_METHOD_PENDING)
+                            return !(!this.isTaxInterviewComplete || !this.props.currentStep || this.props.currentStep === m.H.PAYOUT_METHOD_NOT_STARTED || this.props.currentStep === m.H.PAYOUT_METHOD_PENDING)
                         },
                         enumerable: !0,
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "isReviewComplete", {
                         get: function() {
-                            return !(!this.isPayoutMethodComplete || !this.props.currentStep || this.props.currentStep === m.G.REVIEW_PENDING)
+                            return !(!this.isPayoutMethodComplete || !this.props.currentStep || this.props.currentStep === m.H.REVIEW_PENDING)
                         },
                         enumerable: !0,
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "numOfTotalSteps", {
                         get: function() {
-                            return this.props.onboardEntity === m.F.CUSTOM_PARTNER ? 5 : 4
+                            return this.props.onboardEntity === m.G.CUSTOM_PARTNER ? 5 : 4
                         },
                         enumerable: !0,
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "step1Title", {
                         get: function() {
-                            return Ti(Object(h.f)(1), Object(h.f)(this.numOfTotalSteps), pi[wn.Registration].title[this.props.onboardEntity]())
+                            return Ti(Object(h.f)(1), Object(h.f)(this.numOfTotalSteps), pi[xn.Registration].title[this.props.onboardEntity]())
                         },
                         enumerable: !0,
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "step1Description", {
                         get: function() {
-                            return this.props.onboardEntity === m.F.EXTENSIONS_DEVELOPER ? this.isRegistrationComplete ? Object(h.d)("Your Extensions Developer Registration is complete.", "PayoutOnboardingSummary") : Object(h.d)("Begin your Extensions Developer Registration.", "PayoutOnboardingSummary") : this.isRegistrationComplete ? Object(h.d)("Your payout registration is complete.", "PayoutOnboardingSummary") : Object(h.d)("Begin your payout registration.", "PayoutOnboardingSummary")
+                            return this.props.onboardEntity === m.G.EXTENSIONS_DEVELOPER ? this.isRegistrationComplete ? Object(h.d)("Your Extensions Developer Registration is complete.", "PayoutOnboardingSummary") : Object(h.d)("Begin your Extensions Developer Registration.", "PayoutOnboardingSummary") : this.isRegistrationComplete ? Object(h.d)("Your payout registration is complete.", "PayoutOnboardingSummary") : Object(h.d)("Begin your payout registration.", "PayoutOnboardingSummary")
                         },
                         enumerable: !0,
                         configurable: !0
@@ -8678,20 +8678,20 @@
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "step2Title", {
                         get: function() {
-                            return Ti(Object(h.f)(2), Object(h.f)(this.numOfTotalSteps), pi[wn.Agreement].title[this.props.onboardEntity]())
+                            return Ti(Object(h.f)(2), Object(h.f)(this.numOfTotalSteps), pi[xn.Agreement].title[this.props.onboardEntity]())
                         },
                         enumerable: !0,
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "step2Description", {
                         get: function() {
                             switch (this.props.onboardEntity) {
-                                case m.F.AFFILIATE:
+                                case m.G.AFFILIATE:
                                     return this.isAgreementComplete ? Object(h.d)("You have agreed to the Twitch Affiliate Agreement.", "PayoutOnboardingSummary") : Object(h.d)("Agree to the Twitch Affiliate Agreement.", "PayoutOnboardingSummary");
-                                case m.F.EXTENSIONS_DEVELOPER:
+                                case m.G.EXTENSIONS_DEVELOPER:
                                     return this.isAgreementComplete ? Object(h.d)("You have agreed to the Twitch Extensions Developer Agreement.", "PayoutOnboardingSummary") : Object(h.d)("Agree to the Twitch Extensions Developer Agreement.", "PayoutOnboardingSummary");
-                                case m.F.STANDARD_PARTNER:
-                                case m.F.PREMIUM_PARTNER:
-                                case m.F.CUSTOM_PARTNER:
+                                case m.G.STANDARD_PARTNER:
+                                case m.G.PREMIUM_PARTNER:
+                                case m.G.CUSTOM_PARTNER:
                                     return this.isAgreementComplete ? Object(h.d)("You have agreed to the Twitch Partner Agreement.", "PayoutOnboardingSummary") : Object(h.d)("Agree to the Twitch Partner Agreement.", "PayoutOnboardingSummary");
                                 default:
                                     return ""
@@ -8707,7 +8707,7 @@
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "step3Title", {
                         get: function() {
-                            return Ti(Object(h.f)(3), Object(h.f)(this.numOfTotalSteps), pi[wn.TaxInterview].title[this.props.onboardEntity]())
+                            return Ti(Object(h.f)(3), Object(h.f)(this.numOfTotalSteps), pi[xn.TaxInterview].title[this.props.onboardEntity]())
                         },
                         enumerable: !0,
                         configurable: !0
@@ -8715,20 +8715,20 @@
                         get: function() {
                             if (!this.props.currentStep || !this.isAgreementComplete) return Si();
                             switch (this.props.currentStep) {
-                                case m.G.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
+                                case m.H.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
                                     return Si();
-                                case m.G.ROYALTY_TAX_INTERVIEW_PENDING:
+                                case m.H.ROYALTY_TAX_INTERVIEW_PENDING:
                                     return Object(h.d)("Your royalty tax information is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary");
-                                case m.G.ROYALTY_TAX_INTERVIEW_FAILED:
-                                case m.G.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
-                                case m.G.ROYALTY_TAX_INTERVIEW_MISMATCH:
-                                case m.G.SERVICE_TAX_INTERVIEW_FAILED:
-                                case m.G.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED:
-                                case m.G.SERVICE_TAX_INTERVIEW_MISMATCH:
+                                case m.H.ROYALTY_TAX_INTERVIEW_FAILED:
+                                case m.H.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
+                                case m.H.ROYALTY_TAX_INTERVIEW_MISMATCH:
+                                case m.H.SERVICE_TAX_INTERVIEW_FAILED:
+                                case m.H.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED:
+                                case m.H.SERVICE_TAX_INTERVIEW_MISMATCH:
                                     return Object(h.d)("We could not successfully validate your tax information. Please review and correct your tax information.", "PayoutOnboardingSummary");
-                                case m.G.SERVICE_TAX_INTERVIEW_NOT_STARTED:
+                                case m.H.SERVICE_TAX_INTERVIEW_NOT_STARTED:
                                     return Object(h.d)("Royalty tax approved. Please complete your service tax information.", "PayoutOnboardingSummary");
-                                case m.G.SERVICE_TAX_INTERVIEW_PENDING:
+                                case m.H.SERVICE_TAX_INTERVIEW_PENDING:
                                     return Object(h.d)("Your service tax information is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary");
                                 default:
                                     return Object(h.d)("Your tax information has been successfully validated.", "PayoutOnboardingSummary")
@@ -8740,21 +8740,21 @@
                         get: function() {
                             if (!this.props.currentStep || !this.isAgreementComplete) return fi.NotStarted;
                             switch (this.props.currentStep) {
-                                case m.G.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
+                                case m.H.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
                                     return fi.NotStarted;
-                                case m.G.ROYALTY_TAX_INTERVIEW_PENDING:
+                                case m.H.ROYALTY_TAX_INTERVIEW_PENDING:
                                     return fi.Pending;
-                                case m.G.ROYALTY_TAX_INTERVIEW_FAILED:
-                                case m.G.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
-                                case m.G.ROYALTY_TAX_INTERVIEW_MISMATCH:
+                                case m.H.ROYALTY_TAX_INTERVIEW_FAILED:
+                                case m.H.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
+                                case m.H.ROYALTY_TAX_INTERVIEW_MISMATCH:
                                     return fi.Failed;
-                                case m.G.SERVICE_TAX_INTERVIEW_NOT_STARTED:
+                                case m.H.SERVICE_TAX_INTERVIEW_NOT_STARTED:
                                     return fi.NotStarted;
-                                case m.G.SERVICE_TAX_INTERVIEW_PENDING:
+                                case m.H.SERVICE_TAX_INTERVIEW_PENDING:
                                     return fi.Pending;
-                                case m.G.SERVICE_TAX_INTERVIEW_FAILED:
-                                case m.G.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED:
-                                case m.G.SERVICE_TAX_INTERVIEW_MISMATCH:
+                                case m.H.SERVICE_TAX_INTERVIEW_FAILED:
+                                case m.H.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED:
+                                case m.H.SERVICE_TAX_INTERVIEW_MISMATCH:
                                     return fi.Failed;
                                 default:
                                     return fi.Completed
@@ -8764,38 +8764,38 @@
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "step4Title", {
                         get: function() {
-                            return Ti(Object(h.f)(4), Object(h.f)(this.numOfTotalSteps), pi[wn.PayoutMethod].title[this.props.onboardEntity]())
+                            return Ti(Object(h.f)(4), Object(h.f)(this.numOfTotalSteps), pi[xn.PayoutMethod].title[this.props.onboardEntity]())
                         },
                         enumerable: !0,
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "step4Description", {
                         get: function() {
-                            var e = this.props.onboardEntity === m.F.EXTENSIONS_DEVELOPER;
-                            return this.isTaxInterviewComplete ? this.props.currentStep === m.G.PAYOUT_METHOD_PENDING ? e ? Object(h.d)("Your financial information is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary") : Object(h.d)("Your payout method is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary") : this.isPayoutMethodComplete ? e ? Object(h.d)("Your financial information has been successfully validated.", "PayoutOnboardingSummary") : Object(h.d)("Your payout method has been successfully validated.", "PayoutOnboardingSummary") : e ? Ni() : ki() : e ? Ni() : ki()
+                            var e = this.props.onboardEntity === m.G.EXTENSIONS_DEVELOPER;
+                            return this.isTaxInterviewComplete ? this.props.currentStep === m.H.PAYOUT_METHOD_PENDING ? e ? Object(h.d)("Your financial information is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary") : Object(h.d)("Your payout method is currently under review. This process usually takes a few minutes.", "PayoutOnboardingSummary") : this.isPayoutMethodComplete ? e ? Object(h.d)("Your financial information has been successfully validated.", "PayoutOnboardingSummary") : Object(h.d)("Your payout method has been successfully validated.", "PayoutOnboardingSummary") : e ? Ni() : ki() : e ? Ni() : ki()
                         },
                         enumerable: !0,
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "step4Status", {
                         get: function() {
-                            return this.isTaxInterviewComplete ? this.props.currentStep === m.G.PAYOUT_METHOD_PENDING ? fi.Pending : this.isPayoutMethodComplete ? fi.Completed : fi.NotStarted : fi.NotStarted
+                            return this.isTaxInterviewComplete ? this.props.currentStep === m.H.PAYOUT_METHOD_PENDING ? fi.Pending : this.isPayoutMethodComplete ? fi.Completed : fi.NotStarted : fi.NotStarted
                         },
                         enumerable: !0,
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "step5Title", {
                         get: function() {
-                            return this.props.onboardEntity === m.F.CUSTOM_PARTNER ? Ti(Object(h.f)(5), Object(h.f)(this.numOfTotalSteps), pi[wn.Review].title[this.props.onboardEntity]()) : ""
+                            return this.props.onboardEntity === m.G.CUSTOM_PARTNER ? Ti(Object(h.f)(5), Object(h.f)(this.numOfTotalSteps), pi[xn.Review].title[this.props.onboardEntity]()) : ""
                         },
                         enumerable: !0,
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "step5Description", {
                         get: function() {
-                            return this.isPayoutMethodComplete ? this.props.currentStep === m.G.REVIEW_PENDING ? Object(h.d)("The Partnership Team is currently validating your paperwork.", "PayoutOnboardingSummary") : Object(h.d)("The Partnership Team has approved your new agreement.", "PayoutOnboardingSummary") : Object(h.d)("The Partnership Team will validate your paperwork and activate your new agreement.", "PayoutOnboardingSummary")
+                            return this.isPayoutMethodComplete ? this.props.currentStep === m.H.REVIEW_PENDING ? Object(h.d)("The Partnership Team is currently validating your paperwork.", "PayoutOnboardingSummary") : Object(h.d)("The Partnership Team has approved your new agreement.", "PayoutOnboardingSummary") : Object(h.d)("The Partnership Team will validate your paperwork and activate your new agreement.", "PayoutOnboardingSummary")
                         },
                         enumerable: !0,
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "step5Status", {
                         get: function() {
-                            return this.isPayoutMethodComplete ? this.props.currentStep === m.G.REVIEW_PENDING ? fi.Pending : fi.Completed : fi.NotStarted
+                            return this.isPayoutMethodComplete ? this.props.currentStep === m.H.REVIEW_PENDING ? fi.Pending : fi.Completed : fi.NotStarted
                         },
                         enumerable: !0,
                         configurable: !0
@@ -8931,7 +8931,7 @@
                     }, "Email address: ", e.email)))
                 },
                 _i = n("dOGv"),
-                Fi = function(e) {
+                wi = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -8941,17 +8941,17 @@
                         if (!e || !t) return null;
                         var n = t.map(function(t, n) {
                             var a, r;
-                            if (t === m.T.NAME) a = Object(h.d)("Name", "TaxMismatchSpecificErrors"), r = e.companyName ? e.companyName : [e.firstName, e.middleName, e.lastName].filter(function(e) {
+                            if (t === m.U.NAME) a = Object(h.d)("Name", "TaxMismatchSpecificErrors"), r = e.companyName ? e.companyName : [e.firstName, e.middleName, e.lastName].filter(function(e) {
                                 return null !== e
                             }).join(" ");
-                            else if (t === m.T.EMAIL) a = Object(h.d)("Email", "TaxMismatchSpecificErrors"), r = e.email;
-                            else if (t === m.T.STREET_ADDRESS) a = Object(h.d)("Street Address", "TaxMismatchSpecificErrors"), r = e.streetAddress;
-                            else if (t === m.T.STREET_ADDRESS_2) a = Object(h.d)("Street Address 2", "TaxMismatchSpecificErrors"), r = e.streetAddress2;
-                            else if (t === m.T.CITY) a = Object(h.d)("City or Town", "TaxMismatchSpecificErrors"), r = e.city;
-                            else if (t === m.T.STATE) a = Object(h.d)("State/Province", "TaxMismatchSpecificErrors"), r = "US" === e.countryCode ? Ta(e.stateCode || "") : "CA" === e.countryCode ? Sa(e.stateCode || "") : e.stateCode;
-                            else if (t === m.T.COUNTRY) a = Object(h.d)("Country", "TaxMismatchSpecificErrors"), r = Object(Na.b)(e.countryCode || "");
+                            else if (t === m.U.EMAIL) a = Object(h.d)("Email", "TaxMismatchSpecificErrors"), r = e.email;
+                            else if (t === m.U.STREET_ADDRESS) a = Object(h.d)("Street Address", "TaxMismatchSpecificErrors"), r = e.streetAddress;
+                            else if (t === m.U.STREET_ADDRESS_2) a = Object(h.d)("Street Address 2", "TaxMismatchSpecificErrors"), r = e.streetAddress2;
+                            else if (t === m.U.CITY) a = Object(h.d)("City or Town", "TaxMismatchSpecificErrors"), r = e.city;
+                            else if (t === m.U.STATE) a = Object(h.d)("State/Province", "TaxMismatchSpecificErrors"), r = "US" === e.countryCode ? Ta(e.stateCode || "") : "CA" === e.countryCode ? Sa(e.stateCode || "") : e.stateCode;
+                            else if (t === m.U.COUNTRY) a = Object(h.d)("Country", "TaxMismatchSpecificErrors"), r = Object(Na.b)(e.countryCode || "");
                             else {
-                                if (t !== m.T.POSTAL) return null;
+                                if (t !== m.U.POSTAL) return null;
                                 a = Object(h.d)("Zip Code/Postal Code", "TaxMismatchSpecificErrors"), r = e.postal
                             }
                             return i.createElement(P.Pa, {
@@ -8995,8 +8995,8 @@
                         }, "TaxMismatchSpecificErrors"))))
                     }, t
                 }(i.Component),
-                wi = Object(r.compose)(Object(u.a)(_i))(Fi),
-                xi = function(e) {
+                xi = Object(r.compose)(Object(u.a)(_i))(wi),
+                Ri = function(e) {
                     switch (e.taxStatus) {
                         case qi.NotStarted:
                             return i.createElement(i.Fragment, null, i.createElement(P.Pa, {
@@ -9065,7 +9065,7 @@
                                 onboardEntity: e.onboardEntity
                             })));
                         case qi.Mismatch:
-                            return i.createElement(i.Fragment, null, i.createElement(wi, null), i.createElement(P.Xa, {
+                            return i.createElement(i.Fragment, null, i.createElement(xi, null), i.createElement(P.Xa, {
                                 margin: {
                                     bottom: 2
                                 }
@@ -9084,7 +9084,7 @@
                             return null
                     }
                 },
-                Ri = function(e) {
+                Fi = function(e) {
                     if (!e.royaltyTaxCompleted) return i.createElement(i.Fragment, null, i.createElement(P.Pa, {
                         margin: {
                             bottom: 1
@@ -9160,7 +9160,7 @@
                                 onboardEntity: e.onboardEntity
                             })));
                         case qi.Mismatch:
-                            return i.createElement(i.Fragment, null, i.createElement(wi, null), i.createElement(P.Xa, {
+                            return i.createElement(i.Fragment, null, i.createElement(xi, null), i.createElement(P.Xa, {
                                 margin: {
                                     bottom: 2
                                 }
@@ -9194,7 +9194,7 @@
                         }
                     }, i.createElement(P.W, {
                         fontSize: P.Ca.Size6
-                    }, Object(h.d)("It is important that you enter consistent information throughout the onboarding process to ensure that we have your correct contact information, tax information, and payout information. When filling out the tax form on the following page, please make sure that you enter the same information as you did in Step 1. For your reference, here is the information you entered in Step 1.", "TaxPreviewInstructions"))), e.onboardEntity !== m.F.EXTENSIONS_DEVELOPER && i.createElement(P.Pa, {
+                    }, Object(h.d)("It is important that you enter consistent information throughout the onboarding process to ensure that we have your correct contact information, tax information, and payout information. When filling out the tax form on the following page, please make sure that you enter the same information as you did in Step 1. For your reference, here is the information you entered in Step 1.", "TaxPreviewInstructions"))), e.onboardEntity !== m.G.EXTENSIONS_DEVELOPER && i.createElement(P.Pa, {
                         margin: {
                             bottom: 2
                         }
@@ -9202,7 +9202,7 @@
                         fontSize: P.Ca.Size6
                     }, Object(h.d)('If any of this information is incorrect, you must restart your Payout Registration by clicking "{buttonLabel}" below.', {
                         buttonLabel: Di()
-                    }, "TaxPreviewInstructions"))), e.onboardEntity === m.F.EXTENSIONS_DEVELOPER && i.createElement(P.Pa, {
+                    }, "TaxPreviewInstructions"))), e.onboardEntity === m.G.EXTENSIONS_DEVELOPER && i.createElement(P.Pa, {
                         margin: {
                             bottom: 2
                         }
@@ -9570,12 +9570,12 @@
                         }))
                     }, t
                 }(i.Component);
-            var Gi, zi, qi, Yi = Object(g.compose)(Object(Qe.connect)(null, function(e) {
+            var Gi, zi, qi, Hi = Object(g.compose)(Object(Qe.connect)(null, function(e) {
                     return Object(g.bindActionCreators)({
                         closeModal: $e.c
                     }, e)
                 }))(Vi),
-                Hi = n("VB3o");
+                Yi = n("VB3o");
             ! function(e) {
                 e.RoyaltyHeader = "payout-onboarding-tax-interview__royalty-header", e.RoyaltyButton = "payout-onboarding-tax-interview__royalty-button", e.ServiceHeader = "payout-onboarding-tax-interview__service-header", e.ServiceButton = "payout-onboarding-tax-interview__service-button", e.ContinueButton = "payout-onboarding-tax-interview__continue-button"
             }(Gi || (Gi = {})),
@@ -9602,7 +9602,7 @@
                             showStartOverModal: i
                         })
                     }, t.handleContinueClick = function() {
-                        t.props.updateStepDisplayed(wn.PayoutMethod)
+                        t.props.updateStepDisplayed(xn.PayoutMethod)
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
@@ -9616,7 +9616,7 @@
                         padding: 2
                     }, i.createElement(Pi, {
                         taxStatus: this.royaltyTaxStatus
-                    }), i.createElement(xi, {
+                    }), i.createElement(Ri, {
                         taxStatus: this.royaltyTaxStatus,
                         onboardEntity: this.props.onboardEntity,
                         email: this.props.data.currentUser.payoutInvite.workflow.registration.email,
@@ -9635,7 +9635,7 @@
                         padding: 2
                     }, i.createElement(Pi, {
                         taxStatus: this.serviceTaxStatus
-                    }), i.createElement(Ri, {
+                    }), i.createElement(Fi, {
                         royaltyTaxCompleted: this.royaltyTaxStatus === qi.Completed,
                         taxStatus: this.serviceTaxStatus,
                         onboardEntity: this.props.onboardEntity,
@@ -9659,17 +9659,17 @@
                 }, Object.defineProperty(t.prototype, "royaltyTaxStatus", {
                     get: function() {
                         switch (this.props.currentStep) {
-                            case m.G.REGISTRATION_NOT_STARTED:
-                            case m.G.AGREEMENT_NOT_STARTED:
-                            case m.G.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
+                            case m.H.REGISTRATION_NOT_STARTED:
+                            case m.H.AGREEMENT_NOT_STARTED:
+                            case m.H.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
                                 return qi.NotStarted;
-                            case m.G.ROYALTY_TAX_INTERVIEW_PENDING:
+                            case m.H.ROYALTY_TAX_INTERVIEW_PENDING:
                                 return qi.Pending;
-                            case m.G.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
+                            case m.H.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
                                 return qi.ActionRequired;
-                            case m.G.ROYALTY_TAX_INTERVIEW_MISMATCH:
+                            case m.H.ROYALTY_TAX_INTERVIEW_MISMATCH:
                                 return qi.Mismatch;
-                            case m.G.ROYALTY_TAX_INTERVIEW_FAILED:
+                            case m.H.ROYALTY_TAX_INTERVIEW_FAILED:
                                 return qi.Failed;
                             default:
                                 return qi.Completed
@@ -9680,22 +9680,22 @@
                 }), Object.defineProperty(t.prototype, "serviceTaxStatus", {
                     get: function() {
                         switch (this.props.currentStep) {
-                            case m.G.REGISTRATION_NOT_STARTED:
-                            case m.G.AGREEMENT_NOT_STARTED:
-                            case m.G.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
-                            case m.G.ROYALTY_TAX_INTERVIEW_PENDING:
-                            case m.G.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
-                            case m.G.ROYALTY_TAX_INTERVIEW_MISMATCH:
-                            case m.G.ROYALTY_TAX_INTERVIEW_FAILED:
-                            case m.G.SERVICE_TAX_INTERVIEW_NOT_STARTED:
+                            case m.H.REGISTRATION_NOT_STARTED:
+                            case m.H.AGREEMENT_NOT_STARTED:
+                            case m.H.ROYALTY_TAX_INTERVIEW_NOT_STARTED:
+                            case m.H.ROYALTY_TAX_INTERVIEW_PENDING:
+                            case m.H.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED:
+                            case m.H.ROYALTY_TAX_INTERVIEW_MISMATCH:
+                            case m.H.ROYALTY_TAX_INTERVIEW_FAILED:
+                            case m.H.SERVICE_TAX_INTERVIEW_NOT_STARTED:
                                 return qi.NotStarted;
-                            case m.G.SERVICE_TAX_INTERVIEW_PENDING:
+                            case m.H.SERVICE_TAX_INTERVIEW_PENDING:
                                 return qi.Pending;
-                            case m.G.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED:
+                            case m.H.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED:
                                 return qi.ActionRequired;
-                            case m.G.SERVICE_TAX_INTERVIEW_MISMATCH:
+                            case m.H.SERVICE_TAX_INTERVIEW_MISMATCH:
                                 return qi.Mismatch;
-                            case m.G.SERVICE_TAX_INTERVIEW_FAILED:
+                            case m.H.SERVICE_TAX_INTERVIEW_FAILED:
                                 return qi.Failed;
                             default:
                                 return qi.Completed
@@ -9800,11 +9800,11 @@
                     configurable: !0
                 }), t
             }(i.Component);
-            var $i = Object(r.compose)(Object(u.a)(Hi), Object(Qe.connect)(null, function(e) {
+            var $i = Object(r.compose)(Object(u.a)(Yi), Object(Qe.connect)(null, function(e) {
                     return Object(g.bindActionCreators)({
                         showTaxPreviewModal: function(e) {
                             var t = a.__rest(e, []);
-                            return Object($e.d)(Yi, t)
+                            return Object($e.d)(Hi, t)
                         }
                     }, e)
                 }))(Qi),
@@ -9855,7 +9855,7 @@
                                                 targetUserID: this.props.userID
                                             }), [4, this.props.cancelPayoutOnboardingWorkflow(e)];
                                         case 2:
-                                            return (t = n.sent()).data.cancelPayoutOnboardingWorkflow && t.data.cancelPayoutOnboardingWorkflow.workflow ? (this.props.updateStepDisplayed(wn.Summary), this.props.callCloseModal(), [3, 4]) : (this.setState({
+                                            return (t = n.sent()).data.cancelPayoutOnboardingWorkflow && t.data.cancelPayoutOnboardingWorkflow.workflow ? (this.props.updateStepDisplayed(xn.Summary), this.props.callCloseModal(), [3, 4]) : (this.setState({
                                                 canceling: !1
                                             }), [2]);
                                         case 3:
@@ -9955,11 +9955,11 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            stepDisplayed: wn.Summary,
+                            stepDisplayed: xn.Summary,
                             redirectedAlready: !1
-                        }, t.backLinkURL = "/" + t.props.channelName + "/dashboard/settings/revenue", t.totalSteps = t.props.onboardEntity === m.F.CUSTOM_PARTNER ? 5 : 4, t.goBackToSummary = function() {
+                        }, t.backLinkURL = "/" + t.props.channelName + "/dashboard/settings/revenue", t.totalSteps = t.props.onboardEntity === m.G.CUSTOM_PARTNER ? 5 : 4, t.goBackToSummary = function() {
                             t.setState({
-                                stepDisplayed: wn.Summary
+                                stepDisplayed: xn.Summary
                             })
                         }, t.updateStepDisplayed = function(e) {
                             t.setState({
@@ -9981,7 +9981,7 @@
                     }), t.prototype.componentDidUpdate = function() {
                         this.shouldRedirectPayoutMethod && this.setState({
                             redirectedAlready: !0,
-                            stepDisplayed: wn.PayoutMethod
+                            stepDisplayed: xn.PayoutMethod
                         })
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         var t = this.props.pubsub.messages.payoutOnboardingEvent,
@@ -9994,7 +9994,7 @@
                             if (this.state.redirectedAlready) return !1;
                             var e = this.props.data.currentUser && this.props.data.currentUser.payoutInvite && this.props.data.currentUser.payoutInvite.workflow;
                             if (!e) return !1;
-                            if (e.currentStep !== m.G.PAYOUT_METHOD_NOT_STARTED && e.currentStep !== m.G.PAYOUT_METHOD_PENDING && e.currentStep !== m.G.COMPLETED && e.currentStep !== m.G.REVIEW_PENDING) return !1;
+                            if (e.currentStep !== m.H.PAYOUT_METHOD_NOT_STARTED && e.currentStep !== m.H.PAYOUT_METHOD_PENDING && e.currentStep !== m.H.COMPLETED && e.currentStep !== m.H.REVIEW_PENDING) return !1;
                             var t = jn.parse(this.props.location.search);
                             return !!t && "true" === t.redirect_tipalti
                         },
@@ -10008,7 +10008,7 @@
                         })));
                         var e, t = this.props.data.currentUser && this.props.data.currentUser.payoutInvite && this.props.data.currentUser.payoutInvite.workflow;
                         switch (this.state.stepDisplayed) {
-                            case wn.Summary:
+                            case xn.Summary:
                                 return i.createElement(i.Fragment, null, this.renderDefaultHeader(), i.createElement(er, {
                                     enableTwoFactorMessage: this.enableTwoFactorMessage
                                 }, i.createElement(Oi, {
@@ -10017,7 +10017,7 @@
                                     updateStepDisplayed: this.updateStepDisplayed,
                                     showStartOverModal: this.showStartOverModal
                                 })));
-                            case wn.Registration:
+                            case xn.Registration:
                                 e = i.createElement(ti, {
                                     channelName: this.props.channelName,
                                     userID: this.props.data.currentUser.id,
@@ -10026,14 +10026,14 @@
                                     updateStepDisplayed: this.updateStepDisplayed
                                 });
                                 break;
-                            case wn.Agreement:
+                            case xn.Agreement:
                                 if (!t) return this.renderErrorComponent();
                                 e = i.createElement(Zn, {
                                     onboardEntity: this.props.onboardEntity,
                                     updateStepDisplayed: this.updateStepDisplayed
                                 });
                                 break;
-                            case wn.TaxInterview:
+                            case xn.TaxInterview:
                                 if (!t) return this.renderErrorComponent();
                                 e = i.createElement($i, {
                                     onboardEntity: this.props.onboardEntity,
@@ -10042,7 +10042,7 @@
                                     showStartOverModal: this.showStartOverModal
                                 });
                                 break;
-                            case wn.PayoutMethod:
+                            case xn.PayoutMethod:
                                 if (!t) return this.renderErrorComponent();
                                 e = i.createElement(ma, {
                                     onboardEntity: this.props.onboardEntity,
@@ -10050,7 +10050,7 @@
                                     updateStepDisplayed: this.updateStepDisplayed
                                 });
                                 break;
-                            case wn.Review:
+                            case xn.Review:
                                 if (!t) return this.renderErrorComponent();
                                 e = i.createElement(ni, {
                                     currentStep: t.currentStep,
@@ -10073,8 +10073,8 @@
                         }, e))
                     }, t.prototype.renderDefaultHeader = function() {
                         return i.createElement(T.a, {
-                            title: pi[wn.Summary].title[this.props.onboardEntity](),
-                            description: pi[wn.Summary].description[this.props.onboardEntity](),
+                            title: pi[xn.Summary].title[this.props.onboardEntity](),
+                            description: pi[xn.Summary].description[this.props.onboardEntity](),
                             linkToParent: this.backLinkURL
                         })
                     }, t.prototype.renderErrorComponent = function() {
@@ -10127,7 +10127,7 @@
                         }))
                     }, Object.defineProperty(t.prototype, "hasAgreementPendingUpgrade", {
                         get: function() {
-                            return !!(this.props.data.currentUser && this.props.data.currentUser.payoutInvite && this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep && this.props.data.currentUser.payoutInvite.workflow.currentStep === m.G.AGREEMENT_PENDING_UPGRADE)
+                            return !!(this.props.data.currentUser && this.props.data.currentUser.payoutInvite && this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep && this.props.data.currentUser.payoutInvite.workflow.currentStep === m.H.AGREEMENT_PENDING_UPGRADE)
                         },
                         enumerable: !0,
                         configurable: !0
@@ -10174,7 +10174,7 @@
                         }))))
                     }, Object.defineProperty(t.prototype, "isOnboardingComplete", {
                         get: function() {
-                            return !!(this.props.data.currentUser && this.props.data.currentUser.payoutInvite && this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === m.G.COMPLETED)
+                            return !!(this.props.data.currentUser && this.props.data.currentUser.payoutInvite && this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === m.H.COMPLETED)
                         },
                         enumerable: !0,
                         configurable: !0
@@ -10490,10 +10490,10 @@
                         get: function() {
                             if (!this.props.data.currentUser || !this.props.data.currentUser.payoutInvite) return "";
                             switch (this.props.data.currentUser.payoutInvite.category) {
-                                case m.F.AFFILIATE:
+                                case m.G.AFFILIATE:
                                     return Object(h.d)("Agree to the Twitch Affiliate Agreement", "UpgradeTermsPage");
-                                case m.F.STANDARD_PARTNER:
-                                case m.F.PREMIUM_PARTNER:
+                                case m.G.STANDARD_PARTNER:
+                                case m.G.PREMIUM_PARTNER:
                                     return Object(h.d)("Agree to the Twitch Partner Agreement", "UpgradeTermsPage");
                                 default:
                                     return ""
@@ -10503,7 +10503,7 @@
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "hasAgreementPendingUpgrade", {
                         get: function() {
-                            return !!(this.props.data.currentUser && this.props.data.currentUser.payoutInvite && this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === m.G.AGREEMENT_PENDING_UPGRADE)
+                            return !!(this.props.data.currentUser && this.props.data.currentUser.payoutInvite && this.props.data.currentUser.payoutInvite.workflow && this.props.data.currentUser.payoutInvite.workflow.currentStep === m.H.AGREEMENT_PENDING_UPGRADE)
                         },
                         enumerable: !0,
                         configurable: !0
@@ -10511,12 +10511,12 @@
                         get: function() {
                             if (!this.props.data.currentUser || !this.props.data.currentUser.payoutInvite) return null;
                             switch (this.props.data.currentUser.payoutInvite.category) {
-                                case m.F.AFFILIATE:
+                                case m.G.AFFILIATE:
                                     return i.createElement(Wn, null);
-                                case m.F.STANDARD_PARTNER:
-                                case m.F.PREMIUM_PARTNER:
+                                case m.G.STANDARD_PARTNER:
+                                case m.G.PREMIUM_PARTNER:
                                     var e = this.props.data.currentUser.programAgreement;
-                                    return e && i.createElement(Hn, {
+                                    return e && i.createElement(Yn, {
                                         body: e.body
                                     });
                                 default:
@@ -10606,7 +10606,7 @@
                     }, Object.defineProperty(t.prototype, "canAccessViewTermsPage", {
                         get: function() {
                             var e = this.props.data.currentUser;
-                            return !!e && wt(e.payoutPlans && e.payoutPlans.map(function(e) {
+                            return !!e && xt(e.payoutPlans && e.payoutPlans.map(function(e) {
                                 return {
                                     category: e.category,
                                     tags: e.tags,
@@ -10627,10 +10627,10 @@
                             var e = this.props.data.currentUser;
                             if (!e || !e.payoutInvite) return null;
                             var t = e.payoutInvite;
-                            if (t.isLegacy || t.category === m.F.CUSTOM_PARTNER) return i.createElement(Ir, null);
-                            if (t.category === m.F.STANDARD_PARTNER || t.category === m.F.PREMIUM_PARTNER) {
+                            if (t.isLegacy || t.category === m.G.CUSTOM_PARTNER) return i.createElement(Ir, null);
+                            if (t.category === m.G.STANDARD_PARTNER || t.category === m.G.PREMIUM_PARTNER) {
                                 var n = this.props.data.currentUser && this.props.data.currentUser.programAgreement;
-                                return n && i.createElement(Hn, {
+                                return n && i.createElement(Yn, {
                                     body: n.body
                                 })
                             }
@@ -10639,14 +10639,14 @@
                         configurable: !0
                     }), t
                 }(i.Component),
-                Fr = Object(r.compose)(Object(p.b)("ViewTermsPage", {
+                wr = Object(r.compose)(Object(p.b)("ViewTermsPage", {
                     destination: f.a.DashboardSettingsRevenueViewTerms
                 }), Object(b.a)({
                     location: v.PageviewLocation.DashboardSettingsRevenueViewTerms
                 }), Object(u.a)(Ar))(_r),
-                wr = n("IFXb"),
-                xr = n("/HQc"),
-                Rr = function(e) {
+                xr = n("IFXb"),
+                Rr = n("/HQc"),
+                Fr = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -10661,10 +10661,10 @@
                             a = e.currentUser;
                         return a && n ? this.isChannelOwner || this.isStaff ? this.isChannelOwner && !this.hasPayoutInvite || this.isStaff && !this.isChannelAffiliate && !this.isChannelPartner ? i.createElement(P.Xa, {
                             fullHeight: !0
-                        }, i.createElement(c.a, null)) : i.createElement(wr.a, null, i.createElement(l.a, null, i.createElement(o.a, {
+                        }, i.createElement(c.a, null)) : i.createElement(xr.a, null, i.createElement(l.a, null, i.createElement(o.a, {
                             path: "/:channelName/dashboard/settings/revenue",
                             exact: !0,
-                            component: Ht
+                            component: Yt
                         }), this.isChannelOwner && i.createElement(o.a, {
                             path: "/:channelName/dashboard/settings/revenue/payout-onboarding",
                             component: mr
@@ -10676,7 +10676,7 @@
                             component: Pr
                         }), this.isChannelOwner && i.createElement(o.a, {
                             path: "/:channelName/dashboard/settings/revenue/view-terms",
-                            component: Fr
+                            component: wr
                         }), (this.isChannelAffiliate || this.isChannelPartner) && i.createElement(o.a, {
                             path: "/:channelName/dashboard/settings/revenue/cheer",
                             component: Pe
@@ -10691,10 +10691,10 @@
                             component: kr
                         }), (this.isChannelAffiliate || this.isChannelPartner) && i.createElement(o.a, {
                             path: "/:channelLogin/dashboard/settings/revenue/subscription/badges",
-                            component: xn
+                            component: Rn
                         }), this.isChannelPartner && i.createElement(o.a, {
                             path: "/:channelName/dashboard/settings/revenue/cheermotes",
-                            component: He
+                            component: Ye
                         }), this.isChannelPartner && i.createElement(o.a, {
                             path: "/:channelName/dashboard/settings/revenue/game-commerce",
                             component: dt
@@ -10720,7 +10720,7 @@
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "hasPayoutInvite", {
                         get: function() {
-                            return !(!this.props.data.currentUser || !this.props.data.currentUser.payoutInvite || this.props.data.currentUser.payoutInvite.category === m.F.UNPAID_PARTNER)
+                            return !(!this.props.data.currentUser || !this.props.data.currentUser.payoutInvite || this.props.data.currentUser.payoutInvite.category === m.G.UNPAID_PARTNER)
                         },
                         enumerable: !0,
                         configurable: !0
@@ -10744,7 +10744,7 @@
                         configurable: !0
                     }), t
                 }(i.Component),
-                Dr = Object(r.compose)(Object(p.b)("DashboardRevenueSettingsRoot"), Object(u.a)(xr, {
+                Dr = Object(r.compose)(Object(p.b)("DashboardRevenueSettingsRoot"), Object(u.a)(Rr, {
                     options: function(e) {
                         return {
                             variables: {
@@ -10752,9 +10752,9 @@
                             }
                         }
                     }
-                }))(Rr);
+                }))(Fr);
             n.d(t, "DashboardRevenueSettingsRootComponent", function() {
-                return Rr
+                return Fr
             }), n.d(t, "DashboardRevenueSettingsRoot", function() {
                 return Dr
             })

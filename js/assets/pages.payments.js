@@ -184,24 +184,24 @@
                             var t = this.props.paymentInstrumentType ? this.props.paymentInstrumentType.toUpperCase() : void 0,
                                 n = this.props.cardType ? this.props.cardType.toUpperCase() : void 0;
                             switch (t) {
-                                case H.C.CREDIT_CARD:
+                                case H.D.CREDIT_CARD:
                                     switch (n) {
-                                        case H.B.AMERICAN_EXPRESS:
+                                        case H.C.AMERICAN_EXPRESS:
                                             return {
                                                 src: b.a,
                                                 alt: Object(s.d)("American Express", "PaymentMethodImage")
                                             };
-                                        case H.B.DISCOVER:
+                                        case H.C.DISCOVER:
                                             return {
                                                 src: E.a,
                                                 alt: Object(s.d)("Discover", "PaymentMethodImage")
                                             };
-                                        case H.B.MASTERCARD:
+                                        case H.C.MASTERCARD:
                                             return {
                                                 src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? w.a : P.a,
                                                 alt: Object(s.d)("Mastercard", "PaymentMethodImage")
                                             };
-                                        case H.B.VISA:
+                                        case H.C.VISA:
                                             return {
                                                 src: j.a,
                                                 alt: Object(s.d)("Visa", "PaymentMethodImage")
@@ -216,7 +216,7 @@
                                                 alt: e
                                             }
                                     }
-                                case H.C.AMAZON:
+                                case H.D.AMAZON:
                                     return {
                                         src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? p.a : c.a,
                                         srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
@@ -228,7 +228,7 @@
                                         },
                                         alt: Object(s.d)("Amazon Pay", "PaymentMethodImage")
                                     };
-                                case H.C.PAYPAL:
+                                case H.D.PAYPAL:
                                     return {
                                         src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? I.a : M.a,
                                         srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
@@ -2277,23 +2277,23 @@
                             updatePaymentError: !1
                         }, t.renderPaymentProvider = function() {
                             var e = t.props.paymentProviderConfig;
-                            return e.provider === E.D.RECURLY ? d.createElement(oe, {
+                            return e.provider === E.E.RECURLY ? d.createElement(oe, {
                                 config: e,
                                 updatePaymentMethod: t.updatePaymentMethod
-                            }) : e.provider === E.D.ZUORA ? d.createElement(we, {
+                            }) : e.provider === E.E.ZUORA ? d.createElement(we, {
                                 config: e,
                                 updatePaymentMethod: t.updatePaymentMethod
-                            }) : e.provider === E.D.XSOLLA_V3 ? d.createElement(ve, {
+                            }) : e.provider === E.E.XSOLLA_V3 ? d.createElement(ve, {
                                 config: e
                             }) : d.createElement(P.W, null, Object(p.d)("Oops! Payment provider is unavailable. Please try again later.", "PaymentMethodCard"))
                         }, t.renderActionButtons = function() {
                             var e, n;
-                            if (t.props.paymentProviderConfig.provider === E.D.GOOGLE_IAB) return d.createElement(P.z, {
+                            if (t.props.paymentProviderConfig.provider === E.E.GOOGLE_IAB) return d.createElement(P.z, {
                                 disabled: !0,
                                 fullWidth: !0
                             }, Object(p.d)("Manage on Android Device", "PaymentMethodCard"));
                             if (t.state.viewType === Pe.SubRows) {
-                                var r = t.props.paymentProviderConfig.provider === E.D.XSOLLA_V3 ? Object(p.d)("Manage with Xsolla", "PaymentMethodCard") : Object(p.d)("Update Payment Info", "PaymentMethodCard");
+                                var r = t.props.paymentProviderConfig.provider === E.E.XSOLLA_V3 ? Object(p.d)("Manage with Xsolla", "PaymentMethodCard") : Object(p.d)("Update Payment Info", "PaymentMethodCard");
                                 e = d.createElement(P.z, {
                                     onClick: t.handleUpdateToggleButton,
                                     fullWidth: !0,
@@ -2305,7 +2305,7 @@
                                 type: P.F.Text,
                                 "data-test-selector": Ce.CLOSE_BUTTON
                             }, Object(p.d)("Cancel", "PaymentMethodCard"));
-                            return [E.D.RECURLY, E.D.ZUORA].includes(t.props.paymentProviderConfig.provider) && (n = d.createElement(P.z, {
+                            return [E.E.RECURLY, E.E.ZUORA].includes(t.props.paymentProviderConfig.provider) && (n = d.createElement(P.z, {
                                 onClick: t.handleDeleteButton,
                                 fullWidth: !0,
                                 type: P.F.Hollow
@@ -2659,17 +2659,17 @@
                                 a = t.paymentMethods;
                             if (r) return a && a.map(function(t) {
                                 var a, i = t.provider.toUpperCase();
-                                if (t.provider === "xsolla_v3".toUpperCase() && (i = E.D.XSOLLA_V3), i === E.D.RECURLY) a = r.recurly;
-                                else if (i === E.D.XSOLLA_V3) a = r.xsolla;
-                                else if (i === E.D.ZUORA) a = r.zuora;
+                                if (t.provider === "xsolla_v3".toUpperCase() && (i = E.E.XSOLLA_V3), i === E.E.RECURLY) a = r.recurly;
+                                else if (i === E.E.XSOLLA_V3) a = r.xsolla;
+                                else if (i === E.E.ZUORA) a = r.zuora;
                                 else {
-                                    if (i !== E.D.GOOGLE_IAB) return void k.warn("Received invalid payment provider type: " + i);
+                                    if (i !== E.E.GOOGLE_IAB) return void k.warn("Received invalid payment provider type: " + i);
                                     a = {}
                                 }
                                 var s = l.__assign({}, a, {
                                     provider: i
                                 });
-                                if (s.provider === E.D.ZUORA && (s.isProductionConfig = r.recurly.payWithAmazonConfigs.isProduction), i !== E.D.GOOGLE_IAB || null !== t.recurringPaymentDetails && 0 !== t.recurringPaymentDetails.length) {
+                                if (s.provider === E.E.ZUORA && (s.isProductionConfig = r.recurly.payWithAmazonConfigs.isProduction), i !== E.E.GOOGLE_IAB || null !== t.recurringPaymentDetails && 0 !== t.recurringPaymentDetails.length) {
                                     var o = [];
                                     return t.recurringPaymentDetails && t.recurringPaymentDetails.forEach(function(e) {
                                         e.expiresAt && e.renewalCurrency && e.renewalPrice ? o.push({

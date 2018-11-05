@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [172], {
+    [173], {
         "+gf1": function(e, t, n) {},
         "534W": function(e, t, n) {},
         "7Vxt": function(e, t, n) {
@@ -833,7 +833,7 @@
                                         case 2:
                                             return (n = a.sent()).data.cancelBounty && n.data.cancelBounty.error ? e = n.data.cancelBounty.error.code : n.data.cancelBounty && n.data.cancelBounty.bounty && this.props.handleBountyStatusChanged(n.data.cancelBounty.bounty), [3, 5];
                                         case 3:
-                                            return a.sent(), e = m.h.UNKNOWN_ERROR, [3, 5];
+                                            return a.sent(), e = m.i.UNKNOWN_ERROR, [3, 5];
                                         case 4:
                                             return e ? this.setState({
                                                 errorCode: e
@@ -844,7 +844,7 @@
                                 })
                             })
                         }, t.getMessageFromErrorCode = function(e) {
-                            return e === m.h.BOUNTY_NOT_LIVE ? Object(c.d)("This bounty is no longer live. It may have already been completed or cancelled.", "CancelBountyModal") : Object(c.d)("Something went wrong and the bounty could not be cancelled.", "CancelBountyModal")
+                            return e === m.i.BOUNTY_NOT_LIVE ? Object(c.d)("This bounty is no longer live. It may have already been completed or cancelled.", "CancelBountyModal") : Object(c.d)("Something went wrong and the bounty could not be cancelled.", "CancelBountyModal")
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
@@ -1179,7 +1179,7 @@
                         var e = this.props,
                             t = e.bounty,
                             n = e.channelName;
-                        return e.isSelected ? Object(f.c)(n) : t.status === m.f.AVAILABLE ? Object(f.b)(n, t.campaign) : Object(f.a)(n, t)
+                        return e.isSelected ? Object(f.c)(n) : t.status === m.g.AVAILABLE ? Object(f.b)(n, t.campaign) : Object(f.a)(n, t)
                     }, t
                 }(r.Component),
                 x = function(e) {
@@ -1938,17 +1938,17 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.AVAILABLE = Object(i.d)("Available", "BountiesPage"), t.COMPLETED = Object(i.d)("Completed", "BountiesPage"), t.IN_QUEUE = Object(i.d)("In Queue", "BountiesPage"), t.impressionGroupID = Object(d.b)(), t.renderBounty = function(e) {
                             switch (e.campaign.type) {
-                                case m.e.PAY_TO_STREAM:
+                                case m.f.PAY_TO_STREAM:
                                     return t.renderLegacyBounty(e);
-                                case m.e.GAME_TRAILER:
-                                case m.e.MISC_TRAILER:
+                                case m.f.GAME_TRAILER:
+                                case m.f.MISC_TRAILER:
                                     return t.renderTrailerBounty(e);
                                 default:
                                     return t.renderLegacyBounty(e)
                             }
                         }, t.renderTrailerBounty = function(e) {
                             var n = t.props.match.params.selectedID,
-                                o = e.id === n || e.campaign.id === n && e.status === m.f.AVAILABLE,
+                                o = e.id === n || e.campaign.id === n && e.status === m.g.AVAILABLE,
                                 i = {
                                     bounty: e,
                                     channelID: t.props.data.user.id,
@@ -1960,13 +1960,13 @@
                                     impressionGroupID: t.impressionGroupID
                                 };
                             switch (e.status) {
-                                case m.f.AVAILABLE:
+                                case m.g.AVAILABLE:
                                     return r.createElement(R, a.__assign({}, i));
-                                case m.f.COMPLETED:
+                                case m.g.COMPLETED:
                                     return r.createElement(_, a.__assign({}, i));
-                                case m.f.CANCELLED:
+                                case m.g.CANCELLED:
                                     return r.createElement(I, a.__assign({}, i));
-                                case m.f.LIVE:
+                                case m.g.LIVE:
                                     return r.createElement(z, a.__assign({}, i));
                                 default:
                                     return null
@@ -2021,16 +2021,16 @@
                                 }), t.user.completedBounties = t.user.completedBounties.filter(function(t) {
                                     return t.id !== e.id
                                 }), e.status) {
-                                    case m.f.AVAILABLE:
+                                    case m.g.AVAILABLE:
                                         t.user.availableBounties.unshift(e);
                                         break;
-                                    case m.f.LIVE:
+                                    case m.g.LIVE:
                                         t.user.liveBounties.unshift(e);
                                         break;
-                                    case m.f.COMPLETED:
+                                    case m.g.COMPLETED:
                                         t.user.completedBounties.unshift(e);
                                         break;
-                                    case m.f.CANCELLED:
+                                    case m.g.CANCELLED:
                                     default:
                                         t.user.cancelledBounties.unshift(e)
                                 }
@@ -2308,13 +2308,13 @@
                                     }
                                 })) : null;
                             switch (e.status) {
-                                case m.f.AVAILABLE:
+                                case m.g.AVAILABLE:
                                     t = c.createElement(c.Fragment, null, l && n.renderPlatformSelector(i || []), c.createElement(g.z, a.__assign({}, E, {
                                         disabled: s || !e.id,
                                         onClick: n.showAcceptBountyModal
                                     }), Object(d.d)("Activate Bounty", "BountyItem")));
                                     break;
-                                case m.f.LIVE:
+                                case m.g.LIVE:
                                     t = c.createElement(c.Fragment, null, c.createElement(g.Xa, {
                                         margin: {
                                             right: 2
@@ -2327,8 +2327,8 @@
                                         type: g.F.Hollow
                                     }, Object(d.d)("Cancel Bounty", "BountyItem")));
                                     break;
-                                case m.f.COMPLETED:
-                                case m.f.CANCELLED:
+                                case m.g.COMPLETED:
+                                case m.g.CANCELLED:
                                     p = null, y = null
                             }
                             return c.createElement(g.i, {
@@ -2432,7 +2432,7 @@
                             })
                         };
                         var r = t.bounty.campaign.availablePlatforms;
-                        return t.bounty.status === m.f.AVAILABLE && r && 1 === r.length ? n.state = {
+                        return t.bounty.status === m.g.AVAILABLE && r && 1 === r.length ? n.state = {
                             selectedPlatform: r[0]
                         } : n.state = {
                             selectedPlatform: void 0
@@ -2444,9 +2444,9 @@
                         var e = this.props.bounty,
                             t = this.props.channelName,
                             n = this.props.linkDisabled,
-                            r = e.id === this.props.selectedItem || e.campaign.id === this.props.selectedItem && e.status === m.f.AVAILABLE,
-                            o = e.status === m.f.COMPLETED ? e.payoutCents || 0 : e.maximumPayoutCents,
-                            i = e.status === m.f.CANCELLED ? c.createElement(g.W, {
+                            r = e.id === this.props.selectedItem || e.campaign.id === this.props.selectedItem && e.status === m.g.AVAILABLE,
+                            o = e.status === m.g.COMPLETED ? e.payoutCents || 0 : e.maximumPayoutCents,
+                            i = e.status === m.g.CANCELLED ? c.createElement(g.W, {
                                 type: g.Tb.H2
                             }, Object(d.d)("N/A", "BountyItem")) : c.createElement(g.Xa, {
                                 display: g.X.Flex
@@ -2455,12 +2455,12 @@
                             }, "$"), c.createElement(g.W, {
                                 type: g.Tb.H2
                             }, Number.isNaN(o / 100) ? "XX" : o / 100)),
-                            l = e.status === m.f.AVAILABLE ? e.campaign.availablePlatforms : e.platform ? [e.platform] : null,
+                            l = e.status === m.g.AVAILABLE ? e.campaign.availablePlatforms : e.platform ? [e.platform] : null,
                             s = {
                                 backgroundImage: "url(" + (e.campaign.game && e.campaign.game.coverURL || "") + ")"
                             },
                             u = Object(h.c)(t);
-                        return r || (u = e.status === m.f.AVAILABLE ? Object(h.b)(t, e.campaign) : Object(h.a)(t, e)), n && (u = "#"), c.createElement(g.Xa, {
+                        return r || (u = e.status === m.g.AVAILABLE ? Object(h.b)(t, e.campaign) : Object(h.a)(t, e)), n && (u = "#"), c.createElement(g.Xa, {
                             className: "bounty-item",
                             margin: {
                                 bottom: 1
@@ -2536,7 +2536,7 @@
                             o = e.maximumPayoutCents || 0,
                             i = e.maximumPayoutCCU || "XXXX";
                         switch (e.status) {
-                            case m.f.COMPLETED:
+                            case m.g.COMPLETED:
                                 return 0 === e.payoutCents ? Object(d.d)("Unfortunately your average concurrent viewers did not reach the minimum requirement of <x:bold>{ccuMin} concurrent viewers</x:bold> and you will not receive a payout for this bounty. Make sure to do bounties during your peak hours to increase your chances of a good payout.", {
                                     "x:bold": function(e) {
                                         return c.createElement(g.W, {
@@ -2568,7 +2568,7 @@
                                     payout: r / 100,
                                     maxPayout: o / 100
                                 }, "BountyItem");
-                            case m.f.CANCELLED:
+                            case m.g.CANCELLED:
                                 return e.lastModifiedAt ? Object(d.d)("This bounty was cancelled on {dateCancelled}.", {
                                     dateCancelled: c.createElement(g.W, {
                                         type: g.Tb.Strong
@@ -2637,7 +2637,7 @@
                                 }, "BountyItem"))))
                         }
                     }, t.prototype.renderPayoutText = function(e) {
-                        if (e.status === m.f.COMPLETED) return Object(d.d)("Your Payout: ${amount}", {
+                        if (e.status === m.g.COMPLETED) return Object(d.d)("Your Payout: ${amount}", {
                             amount: (e.payoutCents || 0) / 100
                         }, "BountyItem");
                         var t = Number.isNaN(e.maximumPayoutCents / 100) ? "XX" : e.maximumPayoutCents / 100;
@@ -2646,20 +2646,20 @@
                         }, "BountyItem")
                     }, t.prototype.renderTimeString = function(e) {
                         switch (e.status) {
-                            case m.f.LIVE:
+                            case m.g.LIVE:
                                 return e.endAt ? Object(d.d)("Expires {relativeDate}", {
                                     relativeDate: Object(d.i)(new Date(e.endAt))
                                 }, "BountyItem") : "";
-                            case m.f.COMPLETED:
+                            case m.g.COMPLETED:
                                 return e.lastModifiedAt ? Object(d.d)("Completed on {relativeOrAbsoluteDate}", {
                                     relativeOrAbsoluteDate: Object(d.c)(new Date(e.lastModifiedAt))
                                 }, "BountyItem") : "";
-                            case m.f.CANCELLED:
+                            case m.g.CANCELLED:
                                 return e.lastModifiedAt ? Object(d.d)("Cancelled on {relativeOrAbsoluteDate}", {
                                     relativeOrAbsoluteDate: Object(d.c)(new Date(e.lastModifiedAt))
                                 }, "BountyItem") : "";
                             default:
-                            case m.f.AVAILABLE:
+                            case m.g.AVAILABLE:
                                 return e.endAt ? Object(d.d)("Available until {relativeOrAbsoluteDate}", {
                                     relativeOrAbsoluteDate: Object(d.c)(new Date(e.campaign.endAt)) + " " + Object(d.j)(new Date(e.campaign.endAt))
                                 }, "BountyItem") : "Available until {DATE}"
@@ -2704,7 +2704,7 @@
                         var t, n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
                             errorCode: null
-                        }, n.bountyErrorCodeToMessage = ((t = {})[m.k.BOUNTY_LIMIT_REACHED] = Object(c.d)("You have already reached your limit of active bounties. Please complete or cancel an active bounty before activating a new one.", "AcceptBountyModal"), t[m.k.BOUNTY_ALREADY_CLAIMED] = Object(c.d)("Oops, it looks like this bounty is no longer available.", "AcceptBountyModal"), t.default = Object(c.d)("Something went wrong and the bounty could not be activated.", "AcceptBountyModal"), t), n.onClose = function() {
+                        }, n.bountyErrorCodeToMessage = ((t = {})[m.l.BOUNTY_LIMIT_REACHED] = Object(c.d)("You have already reached your limit of active bounties. Please complete or cancel an active bounty before activating a new one.", "AcceptBountyModal"), t[m.l.BOUNTY_ALREADY_CLAIMED] = Object(c.d)("Oops, it looks like this bounty is no longer available.", "AcceptBountyModal"), t.default = Object(c.d)("Something went wrong and the bounty could not be activated.", "AcceptBountyModal"), t), n.onClose = function() {
                             n.state.errorCode && n.props.refreshData(), n.props.onClose()
                         }, n.onAccept = function() {
                             return a.__awaiter(n, void 0, void 0, function() {
@@ -2723,7 +2723,7 @@
                                         case 2:
                                             return (n = a.sent()).data.claimBounty && n.data.claimBounty.error ? e = n.data.claimBounty.error.code : n.data.claimBounty && n.data.claimBounty.claimedBounty && this.props.handleBountyStatusChanged(n.data.claimBounty.claimedBounty), [3, 5];
                                         case 3:
-                                            return a.sent(), e = m.k.UNKNOWN_ERROR, [3, 5];
+                                            return a.sent(), e = m.l.UNKNOWN_ERROR, [3, 5];
                                         case 4:
                                             return e ? this.setState({
                                                 errorCode: e
@@ -2914,7 +2914,7 @@
                                 top: 2
                             },
                             flexWrap: s.Ba.Wrap
-                        }, a, this.props.bounty.status === m.f.AVAILABLE ? r.createElement(r.Fragment, null, r.createElement(s.Xa, {
+                        }, a, this.props.bounty.status === m.g.AVAILABLE ? r.createElement(r.Fragment, null, r.createElement(s.Xa, {
                             margin: {
                                 left: .5,
                                 right: .5

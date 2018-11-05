@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [198, 187], {
+    [199, 188], {
         "+oKn": function(e, n) {
             var t = {
                 kind: "Document",
@@ -3854,7 +3854,7 @@
                                         trackBitsCardInteraction: e.trackBitsCardInteraction,
                                         visible: e.state.showCard === sn.Bits,
                                         cheerMessageAutoModded: !1,
-                                        bitsSendErrorCode: Fe.L.UNKNOWN,
+                                        bitsSendErrorCode: Fe.M.UNKNOWN,
                                         bitsSendHasError: !1
                                     })
                                 }

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [169], {
+    [170], {
         "+AC8": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -2892,7 +2892,7 @@
                             __typename: "CollectionItemEdge"
                         },
                         l = r.slice();
-                    return e.type === E.n.SERIES ? l.push(a) : l.unshift(a), o.__assign({}, Object(v.a)({
+                    return e.type === E.o.SERIES ? l.push(a) : l.unshift(a), o.__assign({}, Object(v.a)({
                         collectionID: e.id,
                         itemID: t.id,
                         itemType: n
@@ -3331,7 +3331,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onSeriesCollectionClick = function(e) {
-                            var n = e.target.checked ? E.n.SERIES : E.n.DEFAULT;
+                            var n = e.target.checked ? E.o.SERIES : E.o.DEFAULT;
                             t.props.onChange(n)
                         }, t
                     }
@@ -3349,7 +3349,7 @@
                         }, r.createElement(N.Xa, {
                             display: N.X.InlineFlex
                         }, r.createElement(N.N, {
-                            checked: this.props.collectionType === E.n.SERIES,
+                            checked: this.props.collectionType === E.o.SERIES,
                             onChange: this.onSeriesCollectionClick,
                             label: Object(a.d)("This collection is a series", "CollectionEditorInfoCard")
                         })), r.createElement(N.Xa, {
