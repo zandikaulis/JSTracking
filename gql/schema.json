@@ -22313,6 +22313,151 @@
           "possibleTypes": null
         }, 
         {
+          "description": "Data about an inactive subscription to a broadcaster.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The channel that the expired subscription belongs to.", 
+              "isDeprecated": false, 
+              "name": "channelOwner", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "OBJECT", 
+                  "name": "User", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The unique identifier.", 
+              "isDeprecated": false, 
+              "name": "id", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The total tenure of a user to a broadcaster.", 
+              "isDeprecated": false, 
+              "name": "tenure", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "String", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "ExpiredSubscription", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "A paginated list of expired subscriptions.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The list of expired subscriptions.", 
+              "isDeprecated": false, 
+              "name": "edges", 
+              "type": {
+                "kind": "LIST", 
+                "name": null, 
+                "ofType": {
+                  "kind": "NON_NULL", 
+                  "name": null, 
+                  "ofType": {
+                    "kind": "OBJECT", 
+                    "name": "ExpiredSubscriptionEdge", 
+                    "ofType": null
+                  }
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Information about this page of expired subs.", 
+              "isDeprecated": false, 
+              "name": "pageInfo", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "OBJECT", 
+                  "name": "PageInfo", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "ExpiredSubscriptionConnection", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "An element in a paginated list of expired subscriptions.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Opaque cursor describing this edge's position in the paginated list.", 
+              "isDeprecated": false, 
+              "name": "cursor", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "Cursor", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The element node.", 
+              "isDeprecated": false, 
+              "name": "node", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "ExpiredSubscription", 
+                "ofType": null
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "ExpiredSubscriptionEdge", 
+          "possibleTypes": null
+        }, 
+        {
           "description": "Twitch Extension.", 
           "enumValues": null, 
           "fields": [
@@ -57139,6 +57284,16 @@
                 {
                   "defaultValue": null, 
                   "description": null, 
+                  "name": "isAnonymous", 
+                  "type": {
+                    "kind": "SCALAR", 
+                    "name": "Boolean", 
+                    "ofType": null
+                  }
+                }, 
+                {
+                  "defaultValue": null, 
+                  "description": null, 
                   "name": "isGift", 
                   "type": {
                     "kind": "NON_NULL", 
@@ -65655,6 +65810,39 @@
               "type": {
                 "kind": "OBJECT", 
                 "name": "DeprecatedEventConnection", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [
+                {
+                  "defaultValue": "10", 
+                  "description": null, 
+                  "name": "first", 
+                  "type": {
+                    "kind": "SCALAR", 
+                    "name": "Int", 
+                    "ofType": null
+                  }
+                }, 
+                {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "after", 
+                  "type": {
+                    "kind": "SCALAR", 
+                    "name": "Cursor", 
+                    "ofType": null
+                  }
+                }
+              ], 
+              "deprecationReason": null, 
+              "description": "A paginated list of user's all expired subscriptions.\nOnly resolves for the current user. Returns a forbidden error if requested for another user.", 
+              "isDeprecated": false, 
+              "name": "expiredSubscriptions", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "ExpiredSubscriptionConnection", 
                 "ofType": null
               }
             }, 
