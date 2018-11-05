@@ -31636,6 +31636,18 @@
             {
               "args": [], 
               "deprecationReason": null, 
+              "description": "Time when this content attribute is created.", 
+              "isDeprecated": false, 
+              "name": "createdAt", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "Time", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
               "description": "id is a unique identifier generated on the server side.", 
               "isDeprecated": false, 
               "name": "id", 
@@ -31647,6 +31659,18 @@
                   "name": "ID", 
                   "ofType": null
                 }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "URL to the image (icon) of the content attribute.", 
+              "isDeprecated": false, 
+              "name": "imageURL", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "String", 
+                "ofType": null
               }
             }, 
             {
@@ -31688,13 +31712,9 @@
               "isDeprecated": false, 
               "name": "ownerChannel", 
               "type": {
-                "kind": "NON_NULL", 
-                "name": null, 
-                "ofType": {
-                  "kind": "OBJECT", 
-                  "name": "Channel", 
-                  "ofType": null
-                }
+                "kind": "OBJECT", 
+                "name": "Channel", 
+                "ofType": null
               }
             }, 
             {
@@ -31718,6 +31738,18 @@
               "type": {
                 "kind": "SCALAR", 
                 "name": "String", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Time when this content attribute is last modified.", 
+              "isDeprecated": false, 
+              "name": "updatedAt", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "Time", 
                 "ofType": null
               }
             }, 
@@ -31763,6 +31795,26 @@
           "inputFields": [
             {
               "defaultValue": null, 
+              "description": "Unique identifier.", 
+              "name": "id", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "ID", 
+                "ofType": null
+              }
+            }, 
+            {
+              "defaultValue": null, 
+              "description": "Optional an URL to the icon of this content attribute.", 
+              "name": "imageURL", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "String", 
+                "ofType": null
+              }
+            }, 
+            {
+              "defaultValue": null, 
               "description": "Indicates the type of the attribute.", 
               "name": "key", 
               "type": {
@@ -31787,6 +31839,16 @@
                   "name": "String", 
                   "ofType": null
                 }
+              }
+            }, 
+            {
+              "defaultValue": null, 
+              "description": "The channel that the content attribute is created under.", 
+              "name": "ownerChannelID", 
+              "type": {
+                "kind": "SCALAR", 
+                "name": "ID", 
+                "ofType": null
               }
             }, 
             {
@@ -36334,6 +36396,33 @@
               "type": {
                 "kind": "OBJECT", 
                 "name": "UpdateIsSharingActivityPayload", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [
+                {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "input", 
+                  "type": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "INPUT_OBJECT", 
+                      "name": "UpdateMultiviewContentAttributesInput", 
+                      "ofType": null
+                    }
+                  }
+                }
+              ], 
+              "deprecationReason": null, 
+              "description": "Modifies multi-view content attributes.", 
+              "isDeprecated": false, 
+              "name": "updateMultiviewContentAttributes", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "UpdateMultiviewContentAttributesPayload", 
                 "ofType": null
               }
             }, 
@@ -62804,6 +62893,98 @@
           "interfaces": [], 
           "kind": "OBJECT", 
           "name": "UpdateIsSharingActivityPayload", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "Contains a list of multi-view content attributes to be updated.", 
+          "enumValues": null, 
+          "fields": null, 
+          "inputFields": [
+            {
+              "defaultValue": null, 
+              "description": "List of multi-view content attributes to be updated.", 
+              "name": "params", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "LIST", 
+                  "name": null, 
+                  "ofType": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "INPUT_OBJECT", 
+                      "name": "MultiviewContentAttributeParams", 
+                      "ofType": null
+                    }
+                  }
+                }
+              }
+            }
+          ], 
+          "interfaces": null, 
+          "kind": "INPUT_OBJECT", 
+          "name": "UpdateMultiviewContentAttributesInput", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "Contains the server response payload.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Unprocssed content attribute updates.", 
+              "isDeprecated": false, 
+              "name": "failedUpdates", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "LIST", 
+                  "name": null, 
+                  "ofType": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "OBJECT", 
+                      "name": "MultiviewContentAttribute", 
+                      "ofType": null
+                    }
+                  }
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Processed content attribute updates.", 
+              "isDeprecated": false, 
+              "name": "succeededUpdates", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "LIST", 
+                  "name": null, 
+                  "ofType": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "OBJECT", 
+                      "name": "MultiviewContentAttribute", 
+                      "ofType": null
+                    }
+                  }
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "UpdateMultiviewContentAttributesPayload", 
           "possibleTypes": null
         }, 
         {
