@@ -54439,9 +54439,24 @@
               }
             }, 
             {
-              "args": [], 
+              "args": [
+                {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "status", 
+                  "type": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "ENUM", 
+                      "name": "SquadStreamInvitationStatus", 
+                      "ofType": null
+                    }
+                  }
+                }
+              ], 
               "deprecationReason": null, 
-              "description": "The invitations that have been sent by members to other users to join to squad stream.", 
+              "description": "The invitations with the given status that have been sent by members to other users to join to squad stream.", 
               "isDeprecated": false, 
               "name": "invitations", 
               "type": {
@@ -54576,6 +54591,18 @@
                   "name": "ID", 
                   "ofType": null
                 }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "If the invitation's status is rejected, the reason for the rejection.", 
+              "isDeprecated": false, 
+              "name": "reasonRejected", 
+              "type": {
+                "kind": "ENUM", 
+                "name": "SquadStreamInvitationRejectedReason", 
+                "ofType": null
               }
             }, 
             {
@@ -54733,6 +54760,35 @@
           "interfaces": [], 
           "kind": "OBJECT", 
           "name": "SquadStreamInvitationEdge", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "Describes the reason a squad stream invitation was rejected.", 
+          "enumValues": [
+            {
+              "deprecationReason": null, 
+              "description": "The recipient rejected the invitation.", 
+              "isDeprecated": false, 
+              "name": "RECIPIENT_REJECTED"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "The recipient cannot access the squad stream product (e.g. due to missing transcode, partner-only launch).", 
+              "isDeprecated": false, 
+              "name": "RECIPIENT_CANNOT_ACCESS_SQUAD_STREAM"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "The recipient does not allow the sender of the invitation to invite them (e.g. due to their squad stream settings).", 
+              "isDeprecated": false, 
+              "name": "RECIPIENT_CANNOT_BE_INVITED"
+            }
+          ], 
+          "fields": null, 
+          "inputFields": null, 
+          "interfaces": null, 
+          "kind": "ENUM", 
+          "name": "SquadStreamInvitationRejectedReason", 
           "possibleTypes": null
         }, 
         {
