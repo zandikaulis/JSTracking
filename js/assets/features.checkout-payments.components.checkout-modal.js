@@ -275,7 +275,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleClickEmote = function(e) {
-                            t.props.onClickEmote && t.props.onClickEmote(e)
+                            t.props.onClickEmote && t.props.onClickEmote(e, t.props.context)
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
@@ -1849,9 +1849,9 @@
             }), r.d(t, "a", function() {
                 return m
             }), r.d(t, "f", function() {
-                return y
+                return h
             }), r.d(t, "d", function() {
-                return f
+                return y
             });
             var n = r("mrSG"),
                 i = r("lZdE"),
@@ -1887,15 +1887,14 @@
             function u(e) {
                 for (var t = [], r = function(e) {
                         if (!e || !e.id || !e.token) return "continue";
-                        var r = h(e.token),
-                            i = o[r] || r,
-                            a = s.reduce(function(t, r) {
+                        var r = o[e.token] || e.token,
+                            i = s.reduce(function(t, r) {
                                 var n = t;
                                 return n && (n = n.concat(", ")), n.concat("https://static-cdn.jtvnw.net/emoticons/v1/" + e.id + "/" + r + " " + r + "x")
                             }, "");
                         t.push(n.__assign({
-                            displayName: i,
-                            srcSet: a
+                            displayName: r,
+                            srcSet: i
                         }, e))
                     }, i = 0, a = e; i < a.length; i++) {
                     r(a[i])
@@ -1952,12 +1951,7 @@
                 }
                 return r.concat(t)
             }
-            var h = function(e) {
-                    return function(e) {
-                        return /[\|\\\^\$\*\+\?\:\#]/.test(e)
-                    }(e) ? "^" + e.replace(/\\(?=[&;:])/g, "") + "$" : e
-                },
-                y = function(e, t, r) {
+            var h = function(e, t, r) {
                     var n = r || a.d,
                         o = [],
                         s = [],
@@ -1973,7 +1967,7 @@
                         return n[t.token].count - n[e.token].count
                     }), c.concat(o).concat(s)
                 },
-                f = function(e) {
+                y = function(e) {
                     var t = {};
                     return e.filter(function(e) {
                         return !t.hasOwnProperty(e.token) && (t[e.token] = !0)

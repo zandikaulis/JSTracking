@@ -4226,7 +4226,8 @@
                             "data-a-target": "blue-bar__link",
                             href: a,
                             target: "_blank",
-                            rel: "noopener noreferrer"
+                            rel: "noopener noreferrer",
+                            "data-test-selector": "blue-bar-left-url"
                         }, o))), s.createElement(b.W, {
                             className: "blue-bar__headline",
                             type: b.Tb.Span,
@@ -4244,7 +4245,8 @@
                             className: "blue-bar__link",
                             href: u,
                             target: "_blank",
-                            rel: "noopener noreferrer"
+                            rel: "noopener noreferrer",
+                            "data-test-selector": "blue-bar-right-url"
                         }, d))))))
                     }, t
                 }(s.Component),
@@ -5048,7 +5050,7 @@
         },
         DMoW: function(e, t, n) {
             "use strict";
-            var i, r, a, o, s, c, l, u, d, p, m, f, h, g, b, v, E, y, _, k, N, S, C, O, T, I, A, R, D, w, L, x, P, U, F, B, M, j, W, G, X, V, H, q, z, Y, K, Q, J, Z, $, ee, te, ne, ie, re, ae, oe, se, ce, le, ue, de, pe, me, fe, he, ge, be, ve, Ee, ye, _e, ke, Ne, Se, Ce, Oe, Te, Ie, Ae, Re, De, we, Le, xe, Pe, Ue, Fe, Be, Me, je, We, Ge, Xe, Ve, He, qe, ze, Ye, Ke, Qe, Je, Ze, $e, et, tt, nt, it, rt, at, ot, st, ct, lt, ut, dt, pt, mt;
+            var i, r, a, o, s, c, l, u, d, p, m, f, h, g, b, v, E, y, _, k, N, S, C, O, T, I, A, R, D, w, L, x, P, U, F, B, M, j, W, G, X, V, H, q, z, Y, K, Q, J, Z, $, ee, te, ne, ie, re, ae, oe, se, ce, le, ue, de, pe, me, fe, he, ge, be, ve, Ee, ye, _e, ke, Ne, Se, Ce, Oe, Te, Ie, Ae, Re, De, we, Le, xe, Pe, Ue, Fe, Be, Me, je, We, Ge, Xe, Ve, He, qe, ze, Ye, Ke, Qe, Je, Ze, $e, et, tt, nt, it, rt, at, ot, st, ct, lt, ut, dt, pt, mt, ft;
             n.d(t, "d", function() {
                     return r
                 }), n.d(t, "L", function() {
@@ -5065,7 +5067,7 @@
                     return y
                 }), n.d(t, "m", function() {
                     return N
-                }), n.d(t, "V", function() {
+                }), n.d(t, "W", function() {
                     return S
                 }), n.d(t, "N", function() {
                     return C
@@ -5079,6 +5081,8 @@
                     return U
                 }), n.d(t, "s", function() {
                     return F
+                }), n.d(t, "V", function() {
+                    return B
                 }), n.d(t, "r", function() {
                     return M
                 }), n.d(t, "P", function() {
@@ -5119,7 +5123,7 @@
                     return Ne
                 }), n.d(t, "n", function() {
                     return Se
-                }), n.d(t, "W", function() {
+                }), n.d(t, "X", function() {
                     return Ie
                 }), n.d(t, "B", function() {
                     return Pe
@@ -5138,15 +5142,15 @@
                 }), n.d(t, "O", function() {
                     return qe
                 }), n.d(t, "y", function() {
-                    return tt
-                }), n.d(t, "J", function() {
                     return nt
-                }), n.d(t, "K", function() {
+                }), n.d(t, "J", function() {
                     return it
+                }), n.d(t, "K", function() {
+                    return rt
                 }), n.d(t, "e", function() {
-                    return dt
-                }), n.d(t, "t", function() {
                     return pt
+                }), n.d(t, "t", function() {
+                    return mt
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -5449,62 +5453,65 @@
                     e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }(Ye || (Ye = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }(Ke || (Ke = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(Je || (Je = {})),
                 function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
                 }(Ze || (Ze = {})),
                 function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }($e || ($e = {})),
                 function(e) {
                     e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(et || (et = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(tt || (tt = {})),
                 function(e) {
-                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(nt || (nt = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
+                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
                 }(it || (it = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
                 }(rt || (rt = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }(at || (at = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(ot || (ot = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(st || (st = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(ct || (ct = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(lt || (lt = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(ut || (ut = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
                 }(dt || (dt = {})),
                 function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
                 }(pt || (pt = {})),
                 function(e) {
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                }(mt || (mt = {})),
+                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(mt || (mt = {}))
+                }(ft || (ft = {}))
         },
         DS6v: function(e, t) {
             var n = {
@@ -14050,8 +14057,8 @@
                     return t.state = {
                         showBalloon: !!t.props.openByDefault,
                         hasInteracted: !!t.props.openByDefault
-                    }, t.toggleBalloonId = Object(o.a)(), t.handleButtonClick = function() {
-                        t.setState(function(e) {
+                    }, t.toggleBalloonId = Object(o.a)(), t.handleButtonClick = function(e) {
+                        t.props.preventDefault && e.preventDefault(), t.props.stopPropagation && e.stopPropagation(), t.setState(function(e) {
                             return {
                                 showBalloon: !e.showBalloon,
                                 hasInteracted: !0
@@ -14079,9 +14086,8 @@
                     var e = a.Children.toArray(this.props.children);
                     if (2 !== e.length) throw new Error("ToggleBalloonWrapper should only be given two children: a clickable and a Balloon");
                     var t = e[0],
-                        n = e[1];
-                    if (n.type !== s.u) throw new Error("ToggleBalloonWrapper needs a Balloon as its second child element");
-                    var o = a.cloneElement(t, {
+                        n = e[1],
+                        o = a.cloneElement(t, {
                             onClick: this.handleButtonClick
                         }),
                         c = null;
@@ -14553,7 +14559,7 @@
 
             function _() {
                 return i.__awaiter(this, void 0, void 0, function() {
-                    var e, t, n;
+                    var e, t, n, a;
                     return i.__generator(this, function(i) {
                         switch (i.label) {
                             case 0:
@@ -14575,7 +14581,7 @@
                                     setAgainInSeconds: t
                                 }), u = setTimeout(_, 1e3 * t), [3, 4];
                             case 3:
-                                return n = i.sent(), d.warn("Failed to update status. Trying again in 60 seconds.", n), u = setTimeout(_, 6e4), [3, 4];
+                                return n = i.sent(), a = 5e4 + 2e4 * Math.random(), d.warn("Failed to update status. Trying again in " + a + " seconds.", n), u = setTimeout(_, a), [3, 4];
                             case 4:
                                 return [2]
                         }

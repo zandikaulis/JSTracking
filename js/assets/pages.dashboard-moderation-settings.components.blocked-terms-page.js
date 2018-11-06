@@ -247,16 +247,16 @@
                     })], t)
                 }(i.Component)),
                 h = n("IFXb"),
-                v = function(e) {
+                T = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (!this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.user) return i.createElement(l.Xa, null);
-                        var e = new Map,
-                            t = new Map,
+                        if (!this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.user || !this.props.data.user.id || !this.props.data.currentUser || !this.props.data.currentUser.id) return i.createElement(l.Xa, null);
+                        var e = new Array,
+                            t = new Array,
                             n = "",
                             a = "";
                         return this.props.termCategory === d.a.Banned ? (e = this.props.data.user.blockedTerms, t = this.props.data.user.permittedTerms, n = Object(r.d)("Blocked Terms And Phrases", "StandaloneChatTerms"), a = Object(r.d)("Messages containing these terms or phrases will be blocked from chat. Terms are automatically added when a mod denies a caught message.", "StandaloneChatTerms")) : this.props.termCategory === d.a.Permitted && (e = this.props.data.user.permittedTerms, t = this.props.data.user.blockedTerms, n = Object(r.d)("Permitted Terms And Phrases", "StandaloneChatTerms"), a = Object(r.d)("Messages containing these terms or phrases will be allowed in chat. Terms are automatically added when a mod approves a caught message.", "StandaloneChatTerms")), i.createElement(h.a, null, i.createElement(l.Cb, {
@@ -297,14 +297,13 @@
                     }, t
                 }(i.Component),
                 b = n("/MKj"),
-                T = n("fvjX"),
-                k = n("kRBY"),
-                g = n("GnwI"),
-                f = n("suAp"),
-                E = n("UFsw");
-            var y = Object(T.compose)(Object(b.connect)(function(e) {
+                v = n("fvjX"),
+                g = n("kRBY"),
+                k = n("GnwI"),
+                f = n("suAp");
+            var E = Object(v.compose)(Object(b.connect)(function(e) {
                 return {
-                    isLoggedIn: Object(k.f)(e)
+                    isLoggedIn: Object(g.f)(e)
                 }
             }), Object(s.a)(f, {
                 options: function(e) {
@@ -315,13 +314,11 @@
                         fetchPolicy: "cache-and-network"
                     }
                 }
-            }), Object(s.a)(E, {
-                name: "onUpdateChatSettings"
-            }), Object(g.b)("ChatTermsContainer"))(v);
+            }), Object(k.b)("ChatTermsContainer"))(T);
             n.d(t, !1, function() {
-                return v
+                return T
             }), n.d(t, "a", function() {
-                return y
+                return E
             })
         },
         DUGL: function(e, t, n) {
@@ -441,102 +438,6 @@
             };
             e.exports = n
         },
-        UFsw: function(e, t) {
-            var n = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "mutation",
-                    name: {
-                        kind: "Name",
-                        value: "UpdateChatSettings_StandaloneUpdateChatSettingsInput"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "UpdateChatSettingsInput"
-                                }
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "updateChatSettings"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "input"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "chatSettings"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "isOptedOutOfGlobalBannedWordsList"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 188
-                }
-            };
-            n.loc.source = {
-                body: "mutation UpdateChatSettings_StandaloneUpdateChatSettingsInput($input: UpdateChatSettingsInput!) {\nupdateChatSettings(input: $input) {\nchatSettings {\nisOptedOutOfGlobalBannedWordsList\n}\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = n
-        },
         ZnYx: function(e, t, n) {
             "use strict";
             var a = n("mrSG"),
@@ -556,7 +457,7 @@
             ! function(e) {
                 e.DisplayedTerm = "term", e.EditTermInput = "edit-term-input", e.EditTermArea = "edit-term-area", e.EditTermButton = "edit-term-button", e.DelTermButton = "del-term-button", e.EditConfirmButton = "edit-confirm-button", e.EditCancelButton = "edit-cancel-button"
             }(m || (m = {}));
-            var p, u, h, v = function(e) {
+            var p, u, h, T = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1103,7 +1004,7 @@
                         fontSize: c.Ca.Size6
                     }, Object(r.d)("Based on your moderators' actions", "StandaloneChatTerms"))
                 }, t.prototype.renderTerm = function(e, t, n) {
-                    return i.createElement(v, {
+                    return i.createElement(T, {
                         term: e,
                         termType: n,
                         termCategory: this.props.type,

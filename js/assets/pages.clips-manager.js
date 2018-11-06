@@ -126,12 +126,12 @@
         },
         "2cRt": function(e, t, n) {
             "use strict";
-            var i = n("q1tI"),
-                a = n("/7QA"),
+            var a = n("q1tI"),
+                i = n("/7QA"),
                 r = n("SGIe"),
                 l = function(e) {
-                    return i.createElement(r.a, {
-                        callToAction: Object(a.d)("Save as Highlight", "ClipsFullVideoButton"),
+                    return a.createElement(r.a, {
+                        callToAction: Object(i.d)("Save as Highlight", "ClipsFullVideoButton"),
                         clip: e.clip,
                         onClick: e.onClick
                     })
@@ -142,8 +142,8 @@
         },
         "4L7N": function(e, t, n) {
             "use strict";
-            var i = n("/MKj"),
-                a = n("kRBY"),
+            var a = n("/MKj"),
+                i = n("kRBY"),
                 r = n("mrSG"),
                 l = n("q1tI"),
                 s = n("VwyG"),
@@ -160,22 +160,22 @@
                             t = this.props.data.clip,
                             n = "";
                         if (t && t.videoQualities) {
-                            var i = t.videoQualities[0];
-                            n = i.sourceURL
+                            var a = t.videoQualities[0];
+                            n = a.sourceURL
                         }
-                        var a = this.props,
-                            r = a.broadcasterId,
-                            c = a.broadcasterLogin,
-                            u = a.forceShow;
+                        var i = this.props,
+                            r = i.broadcasterId,
+                            c = i.broadcasterLogin,
+                            u = i.forceShow;
                         return l.createElement(s.a, {
                             ownerLogin: this.props.broadcasterLogin,
                             permittedRoles: {
                                 editor: !0,
                                 staff: !0
                             }
-                        }, function(i) {
-                            var a = i.permitted;
-                            return n && (a || u) ? l.createElement(o.a, {
+                        }, function(a) {
+                            var i = a.permitted;
+                            return n && (i || u) ? l.createElement(o.a, {
                                 type: o.b.Download,
                                 text: e.props.slug,
                                 url: n,
@@ -185,8 +185,8 @@
                     }, t
                 }(l.Component),
                 m = Object(c.a)(u)(p);
-            var g = Object(i.connect)(function(e) {
-                var t = Object(a.e)(e);
+            var g = Object(a.connect)(function(e) {
+                var t = Object(i.e)(e);
                 return {
                     userLogin: t ? t.login : ""
                 }
@@ -255,6 +255,46 @@
                                     kind: "Field",
                                     name: {
                                         kind: "Name",
+                                        value: "ban"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "isPermanent"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "bannedUser"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "id"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }]
+                                            }
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
                                         value: "error"
                                     },
                                     arguments: [],
@@ -278,11 +318,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 126
+                    end: 164
                 }
             };
             n.loc.source = {
-                body: "mutation Chat_BanUserFromChatRoom($input: BanUserFromChatRoomInput!) {\nbanUserFromChatRoom(input: $input) {\nerror {\ncode\n}\n}\n}",
+                body: "mutation Chat_BanUserFromChatRoom($input: BanUserFromChatRoomInput!) {\nbanUserFromChatRoom(input: $input) {\nban {\nisPermanent\nbannedUser {\nid\n}\n}\nerror {\ncode\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -418,13 +458,13 @@
         "BQs+": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return i
+                return a
             }), n.d(t, "c", function() {
                 return d
             }), n.d(t, "b", function() {
                 return u
             });
-            var i, a = n("mrSG"),
+            var a, i = n("mrSG"),
                 r = n("/7QA"),
                 l = n("2xye"),
                 s = n("I6K6"),
@@ -432,26 +472,26 @@
                 c = n("L7EG");
 
             function d(e, t, n) {
-                return a.__awaiter(this, void 0, void 0, function() {
-                    var i, o, u, p;
-                    return a.__generator(this, function(a) {
-                        switch (a.label) {
+                return i.__awaiter(this, void 0, void 0, function() {
+                    var a, o, u, p;
+                    return i.__generator(this, function(i) {
+                        switch (i.label) {
                             case 0:
-                                return a.trys.push([0, 2, , 3]), [4, n.query({
+                                return i.trys.push([0, 2, , 3]), [4, n.query({
                                     query: c,
                                     variables: {
                                         videoID: e.id
                                     }
                                 })];
                             case 1:
-                                return i = a.sent().data, o = function(e, t) {
+                                return a = i.sent().data, o = function(e, t) {
                                     return {
                                         id: e.id,
                                         owner: t.owner,
                                         broadcastType: t.broadcastType,
                                         game: t.game
                                     }
-                                }(e, i.video), u = {
+                                }(e, a.video), u = {
                                     channel: o.owner ? o.owner.login : null,
                                     channel_id: Number(e.owner.id),
                                     game: o.game ? o.game.name : null,
@@ -466,7 +506,7 @@
                                     source_item_type: Object(s.a)(o.broadcastType)
                                 }, r.p.tracking.track(l.SpadeEventType.ShareItem, u), [3, 3];
                             case 2:
-                                return p = a.sent(), r.k.error(p.toString(), d.name), [3, 3];
+                                return p = i.sent(), r.k.error(p.toString(), d.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -475,23 +515,23 @@
             }
 
             function u(e, t, n) {
-                return a.__awaiter(this, void 0, void 0, function() {
-                    var i, s, c;
-                    return a.__generator(this, function(a) {
-                        switch (a.label) {
+                return i.__awaiter(this, void 0, void 0, function() {
+                    var a, s, c;
+                    return i.__generator(this, function(i) {
+                        switch (i.label) {
                             case 0:
-                                return a.trys.push([0, 2, , 3]), [4, n.query({
+                                return i.trys.push([0, 2, , 3]), [4, n.query({
                                     query: o,
                                     variables: {
                                         creatorID: e.owner.id
                                     }
                                 })];
                             case 1:
-                                return i = a.sent().data, s = {
-                                    channel: i.user ? i.user.login : null,
+                                return a = i.sent().data, s = {
+                                    channel: a.user ? a.user.login : null,
                                     channel_id: Number(e.owner.id),
                                     game: null,
-                                    partner: !!i.user && i.user.roles.isPartner,
+                                    partner: !!a.user && a.user.roles.isPartner,
                                     location: t.location,
                                     share_context: null,
                                     share_platform: t.platform,
@@ -502,7 +542,7 @@
                                     source_item_type: l.SourceItemType.Collection
                                 }, r.p.tracking.track(l.SpadeEventType.ShareItem, s), [3, 3];
                             case 2:
-                                return c = a.sent(), r.k.error(c.toString(), u.name), [3, 3];
+                                return c = i.sent(), r.k.error(c.toString(), u.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -510,22 +550,22 @@
                 })
             }! function(e) {
                 e.Copy = "link", e.Embed = "option_embed", e.Facebook = "fb", e.Link = "option_link", e.Reddit = "reddit", e.Twitter = "twitter", e.Unknown = "", e.VKontakte = "vk", e.Download = "download"
-            }(i || (i = {}))
+            }(a || (a = {}))
         },
         CLrI: function(e, t, n) {
             "use strict";
-            var i, a;
+            var a, i;
             n.d(t, "a", function() {
-                    return i
-                }), n.d(t, "b", function() {
                     return a
+                }), n.d(t, "b", function() {
+                    return i
                 }),
                 function(e) {
                     e.TrackingID = "trackingID", e.GameName = "game", e.GameID = "gameID", e.Title = "title", e.Start = "start", e.End = "end"
-                }(i || (i = {})),
+                }(a || (a = {})),
                 function(e) {
                     e.VideoStartTime = "t"
-                }(a || (a = {}))
+                }(i || (i = {}))
         },
         DJtx: function(e, t) {
             var n = {
@@ -698,8 +738,8 @@
             }), n.d(t, "a", function() {
                 return c
             });
-            var i = n("mrSG"),
-                a = n("cr+I"),
+            var a = n("mrSG"),
+                i = n("cr+I"),
                 r = n("/7QA"),
                 l = n("vRsq"),
                 s = {
@@ -712,25 +752,141 @@
             function o(e, t) {
                 return c(function(e) {
                     e.video && (e.video = Object(l.p)(e.video));
-                    var t = a.stringify(e);
+                    var t = i.stringify(e);
                     return r.p.config.playerBaseURL + "/?" + t
                 }(e), t)
             }
 
             function c(e, t) {
                 void 0 === t && (t = s);
-                var n = i.__assign({}, s, t),
-                    a = '<iframe src="' + e + '" frameborder="0" ' + (n.allowFullscreen ? 'allowfullscreen="true" ' : "") + (n.allowScrolling ? "" : 'scrolling="no" ') + 'height="' + n.height + '" width="' + n.width + '"></iframe>';
-                return n.textLink && (a += function(e, t) {
+                var n = a.__assign({}, s, t),
+                    i = '<iframe src="' + e + '" frameborder="0" ' + (n.allowFullscreen ? 'allowfullscreen="true" ' : "") + (n.allowScrolling ? "" : 'scrolling="no" ') + 'height="' + n.height + '" width="' + n.width + '"></iframe>';
+                return n.textLink && (i += function(e, t) {
                     return '<a href="' + e + '" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">' + t + "</a>"
-                }(n.textLink.url, n.textLink.text)), a
+                }(n.textLink.url, n.textLink.text)), i
             }
+        },
+        HzXE: function(e, t) {
+            var n = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "ChatRoomBanStatus"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "targetUserID"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "ID"
+                                }
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "channelID"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "ID"
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "chatRoomBanStatus"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "channelID"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "channelID"
+                                    }
+                                }
+                            }, {
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "userID"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "targetUserID"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "isPermanent"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 142
+                }
+            };
+            n.loc.source = {
+                body: "query ChatRoomBanStatus($targetUserID: ID! $channelID: ID!) {\nchatRoomBanStatus(channelID: $channelID userID: $targetUserID) {\nisPermanent\n}\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = n
         },
         II1B: function(e, t, n) {},
         "Jxh/": function(e, t, n) {
             "use strict";
 
-            function i(e) {
+            function a(e) {
                 var t = document.createElement("textarea");
                 t.style.position = "fixed", t.style.top = "0", t.style.left = "0", t.style.fontSize = "12pt", t.style.width = "2em", t.style.height = "2em", t.style.padding = "0", t.style.border = "none", t.style.outline = "none", t.style.boxShadow = "none", t.style.background = "transparent", t.value = e, document.body.appendChild(t), t.select();
                 var n = !0;
@@ -742,7 +898,7 @@
                 return document.body.removeChild(t), n
             }
             n.d(t, "a", function() {
-                return i
+                return a
             })
         },
         L7EG: function(e, t) {
@@ -924,11 +1080,11 @@
             }), n.d(t, "d", function() {
                 return g
             });
-            var i, a, r = n("/7QA"),
+            var a, i, r = n("/7QA"),
                 l = n("wbMx"),
                 s = n("2xye"),
                 o = n("BQs+"),
-                c = ((i = {})[l.b.Twitter] = "twitter", i[l.b.Reddit] = "reddit", i[l.b.VKontakte] = "vkontakte", i[l.b.Facebook] = "facebook", i[l.b.Copy] = "link", i[l.b.CopyInput] = "option_link", i[l.b.Download] = "download", i),
+                c = ((a = {})[l.b.Twitter] = "twitter", a[l.b.Reddit] = "reddit", a[l.b.VKontakte] = "vkontakte", a[l.b.Facebook] = "facebook", a[l.b.Copy] = "link", a[l.b.CopyInput] = "option_link", a[l.b.Download] = "download", a),
                 d = {
                     MyClips: "MyClips",
                     ClipsOfMyChannel: "ClipsOfMyChannel"
@@ -937,36 +1093,36 @@
                     Game: "TopClipsGame",
                     Channel: "TopClipsChannel"
                 },
-                p = ((a = {
+                p = ((i = {
                     MyClips: s.PageviewLocation.MyClipsManager,
                     ClipsOfMyChannel: s.PageviewLocation.ChannelClipsManager,
                     TopClipsGame: s.PageviewLocation.ClipsGame,
                     TopClipsChannel: s.PageviewLocation.ChannelClips
-                })[s.PageviewLocation.ClipsEditing] = s.PageviewLocation.ClipsEditing, a[s.PageviewLocation.ClipsViewing] = s.PageviewLocation.ClipsViewing, a[s.PageviewLocation.ClipsWatchPage] = s.PageviewLocation.ClipsWatchPage, a),
-                m = function(e, t, n, i, a) {
+                })[s.PageviewLocation.ClipsEditing] = s.PageviewLocation.ClipsEditing, i[s.PageviewLocation.ClipsViewing] = s.PageviewLocation.ClipsViewing, i[s.PageviewLocation.ClipsWatchPage] = s.PageviewLocation.ClipsWatchPage, i),
+                m = function(e, t, n, a, i) {
                     return function(l) {
                         r.p.tracking.track(s.SpadeEventType.VideoShare, {
                             vod_id: e,
                             vod_type: s.SpadeVideoBroadcastType.Clip,
                             share_platform: c[l],
-                            location: p[a],
+                            location: p[i],
                             game: t,
                             channel_id: Number(n || 0),
-                            channel: i,
+                            channel: a,
                             live: null
                         })
                     }
                 },
-                g = function(e, t, n, i, a, l) {
+                g = function(e, t, n, a, i, l) {
                     return function() {
                         r.p.tracking.track(s.SpadeEventType.VideoShare, {
                             vod_id: e,
                             vod_type: s.SpadeVideoBroadcastType.Clip,
                             share_platform: o.a.Link,
-                            location: p[a],
+                            location: p[i],
                             game: t,
                             channel_id: Number(n || 0),
-                            channel: i,
+                            channel: a,
                             live: null,
                             shared_item_url: l
                         })
@@ -996,8 +1152,8 @@
             }), n.d(t, "h", function() {
                 return b
             });
-            var i = n("+GjP"),
-                a = n("rwoo"),
+            var a = n("+GjP"),
+                i = n("rwoo"),
                 r = n("QK1T"),
                 l = "https://static-cdn.jtvnw.net/emoticons/v1/",
                 s = "manager";
@@ -1011,41 +1167,41 @@
             }
 
             function d(e, t) {
-                return void 0 === e && (e = null), void 0 === t && (t = {}), Object(i.e)(u(e) + "/clips", t)
+                return void 0 === e && (e = null), void 0 === t && (t = {}), Object(a.e)(u(e) + "/clips", t)
             }
 
             function u(e, t) {
-                return void 0 === e && (e = null), void 0 === t && (t = {}), e ? Object(i.e)(o(e + "/" + s), t) : Object(i.e)(o(s), t)
+                return void 0 === e && (e = null), void 0 === t && (t = {}), e ? Object(a.e)(o(e + "/" + s), t) : Object(a.e)(o(s), t)
             }
 
             function p(e, t) {
-                return void 0 === t && (t = {}), Object(i.e)(o("" + e), t)
+                return void 0 === t && (t = {}), Object(a.e)(o("" + e), t)
             }
 
             function m(e, t, n) {
-                return void 0 === n && (n = {}), Object(i.e)(u(e) + "/highlighter/" + t, n)
+                return void 0 === n && (n = {}), Object(a.e)(u(e) + "/highlighter/" + t, n)
             }
 
             function g(e, t) {
-                return void 0 === t && (t = {}), Object(i.e)(o("videos/" + e), t)
+                return void 0 === t && (t = {}), Object(a.e)(o("videos/" + e), t)
             }
 
             function h(e, t) {
-                return void 0 === t && (t = {}), Object(i.e)(function(e) {
+                return void 0 === t && (t = {}), Object(a.e)(function(e) {
                     return o("directory/game/" + e)
                 }(e) + "/clips", t)
             }
 
             function f(e, t) {
                 void 0 === t && (t = {});
-                var n = Object(i.e)(p(e) + "/clips", t);
+                var n = Object(a.e)(p(e) + "/clips", t);
                 return Object(r.a)(window.navigator.userAgent) ? function(e, t) {
                     return "intent://stream/" + e + "#Intent;scheme=twitch;package=tv.twitch.android.app;S.browser_fallback_url=" + t + ";end"
                 }(e, n) : n
             }
 
             function b(e) {
-                return void 0 === e && (e = a.a.Default), "/clips/" + e
+                return void 0 === e && (e = i.a.Default), "/clips/" + e
             }
         },
         OlqP: function(e, t) {
@@ -1099,6 +1255,25 @@
                 }
             };
             e.exports = n
+        },
+        "Pub/": function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return i
+            });
+            var a = n("HzXE");
+
+            function i(e, t, n) {
+                try {
+                    return e.readQuery({
+                        query: a,
+                        variables: {
+                            channelID: t,
+                            targetUserID: n
+                        }
+                    })
+                } catch (e) {}
+            }
         },
         QlyS: function(e, t) {
             var n = {
@@ -1441,7 +1616,7 @@
             n.d(t, "a", function() {
                 return d
             });
-            var i, a = n("q1tI"),
+            var a, i = n("q1tI"),
                 r = n("/7QA"),
                 l = n("DMoW"),
                 s = n("CLrI"),
@@ -1449,24 +1624,24 @@
                 c = n("Ue10");
             ! function(e) {
                 e.ClipsVideoButtonHighlight = "clips-video-button-highlight"
-            }(i || (i = {}));
+            }(a || (a = {}));
             var d = function(e) {
                 var t, n = e.clip;
                 if (!(n.video && n.video.id && null !== n.videoOffsetSeconds && n.broadcaster && n.broadcaster.login && n.video.broadcastType === l.h.ARCHIVE)) {
                     var d = n.video ? Object(r.d)("You can only highlight past broadcasts", "ClipsFullVideoButton") : Object(r.d)("Full video not available", "ClipsFullVideoButton");
-                    return a.createElement(c.Wb, {
+                    return i.createElement(c.Wb, {
                         label: d
-                    }, a.createElement(c.z, {
+                    }, i.createElement(c.z, {
                         type: e.buttonType,
                         disabled: !0
                     }, e.callToAction))
                 }
-                return a.createElement(c.z, {
+                return i.createElement(c.z, {
                     targetBlank: !0,
                     linkTo: Object(o.g)(n.broadcaster.login, n.video.id, (t = {}, t[s.a.TrackingID] = n.id, t[s.a.Start] = n.videoOffsetSeconds.toString(), t[s.a.End] = (n.videoOffsetSeconds + n.durationSeconds).toString(), t[s.a.Title] = n.title || "Clip: " + n.video.title, t[s.a.GameName] = n.game && n.game.displayName || "", t[s.a.GameID] = n.game && n.game.id || "", t)),
                     onClick: e.onClick,
                     type: e.buttonType,
-                    "data-test-selector": i.ClipsVideoButtonHighlight
+                    "data-test-selector": a.ClipsVideoButtonHighlight
                 }, e.callToAction)
             }
         },
@@ -1596,8 +1771,8 @@
         },
         VwyG: function(e, t, n) {
             "use strict";
-            var i = n("/MKj"),
-                a = n("kRBY"),
+            var a = n("/MKj"),
+                i = n("kRBY"),
                 r = n("mrSG"),
                 l = n("q1tI"),
                 s = n("oJmH"),
@@ -1672,9 +1847,9 @@
                     return !e.isLoggedIn
                 }
             }), Object(d.b)("RoleRestricted"))(p);
-            var g = Object(i.connect)(function(e) {
+            var g = Object(a.connect)(function(e) {
                 return {
-                    isLoggedIn: Object(a.f)(e)
+                    isLoggedIn: Object(i.f)(e)
                 }
             })(m);
             n.d(t, "a", function() {
@@ -1683,14 +1858,14 @@
         },
         WSjS: function(e, t, n) {
             "use strict";
-            var i, a, r, l = n("mrSG"),
+            var a, i, r, l = n("mrSG"),
                 s = n("q1tI"),
                 o = n("/7QA"),
                 c = n("yR8l"),
                 d = n("8Ad5"),
                 u = n("geRD"),
                 p = n("2xye"),
-                m = function(e, t, n, i, a) {
+                m = function(e, t, n, a, i) {
                     var r = Date.now() / 1e3;
                     o.p.tracking.track(p.SpadeEventType.ClipEdit, {
                         channel_id: e,
@@ -1698,12 +1873,12 @@
                         clip_id: t,
                         clip_slug: n,
                         effect_name: "title",
-                        effect_setting: i,
+                        effect_setting: a,
                         front_end: !0,
-                        location: a
+                        location: i
                     })
                 },
-                g = function(e, t, n, i, a) {
+                g = function(e, t, n, a, i) {
                     var r = Date.now() / 1e3;
                     o.p.tracking.track(p.SpadeEventType.ClipEdit, {
                         channel_id: e,
@@ -1711,18 +1886,18 @@
                         clip_id: t,
                         clip_slug: n,
                         effect_name: "publish-twilight",
-                        effect_setting: i,
+                        effect_setting: a,
                         front_end: !0,
-                        location: a
+                        location: i
                     })
                 },
                 h = n("9C/b");
             ! function(e) {
                 e.AlreadyPublished = "already_published", e.EditingWindowExpired = "editing_window_expired", e.InvalidSpeedDuration = "invalid_speed_duration", e.InvalidDuration = "invalid_duration", e.InvalidTitle = "invalid_title", e.Unknown = "unknown"
-            }(i || (i = {})),
+            }(a || (a = {})),
             function(e) {
                 e.InvalidTitle = "invalid_title"
-            }(a || (a = {})),
+            }(i || (i = {})),
             function(e) {
                 e.Unsent = "unsent", e.Sending = "sending", e.Error = "error", e.Successful = "successful"
             }(r || (r = {}));
@@ -1745,16 +1920,16 @@
                         }, t.onPublish = function() {
                             return l.__awaiter(t, void 0, void 0, function() {
                                 var e, t, n;
-                                return l.__generator(this, function(a) {
-                                    switch (a.label) {
+                                return l.__generator(this, function(i) {
+                                    switch (i.label) {
                                         case 0:
                                             if (this.setState({
                                                     publishState: r.Sending
-                                                }), e = this.props.endOffset - this.props.startOffset, this.props.startOffset > this.props.endOffset || e < b || e > v) return this.onError(i.InvalidDuration), [2];
+                                                }), e = this.props.endOffset - this.props.startOffset, this.props.startOffset > this.props.endOffset || e < b || e > v) return this.onError(a.InvalidDuration), [2];
                                             if ("" === this.props.title.trim()) return this.onError(f.emptySubmission), [2];
-                                            a.label = 1;
+                                            i.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, this.props.publishClip(Object(u.a)({
+                                            return i.trys.push([1, 3, , 4]), [4, this.props.publishClip(Object(u.a)({
                                                 segments: [{
                                                     offsetSeconds: this.props.startOffset,
                                                     durationSeconds: this.props.endOffset - this.props.startOffset,
@@ -1764,14 +1939,14 @@
                                                 title: this.props.title
                                             }))];
                                         case 2:
-                                            return (t = a.sent()).data.publishClip && t.data.publishClip.error && t.data.publishClip.error.message ? (n = t.data.publishClip.error.message, this.onError(n)) : (g(Number(this.props.clipBroadcasterId), this.props.clipId, this.props.slug, this.props.title, p.PageviewLocation.ClipsEditing), this.setState({
+                                            return (t = i.sent()).data.publishClip && t.data.publishClip.error && t.data.publishClip.error.message ? (n = t.data.publishClip.error.message, this.onError(n)) : (g(Number(this.props.clipBroadcasterId), this.props.clipId, this.props.slug, this.props.title, p.PageviewLocation.ClipsEditing), this.setState({
                                                 publishState: r.Successful
                                             }), this.props.history.push("/create", {
                                                 isPostEdit: !0,
                                                 slug: this.props.slug
                                             })), [3, 4];
                                         case 3:
-                                            return a.sent(), n = i.Unknown, this.onError(n), [3, 4];
+                                            return i.sent(), n = a.Unknown, this.onError(n), [3, 4];
                                         case 4:
                                             return [2]
                                     }
@@ -1797,7 +1972,7 @@
                 }(s.Component),
                 E = Object(h.a)(y),
                 w = n("/2kD"),
-                T = {
+                N = {
                     TITLE_INPUT: "cmgr-title-input",
                     TITLE_SAVE: "cmgr-title-save",
                     TITLE_SAVE_TOOLTIP: "cmgr-title-save-tooltip"
@@ -1805,14 +1980,14 @@
             ! function(e) {
                 e.emptySubmission = "emptySubmission", e.characterLimitReached = "characterLimitReached", e.channelViolation = "channelViolation", e.notCurator = "notCurator", e.unknown = "unknown"
             }(f || (f = {}));
-            var N = 100,
+            var T = 100,
                 D = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderForClipsViewing = function() {
                             return s.createElement("div", null, s.createElement(k.Qb, {
-                                id: T.TITLE_INPUT,
-                                "data-test-selector": T.TITLE_INPUT,
+                                id: N.TITLE_INPUT,
+                                "data-test-selector": N.TITLE_INPUT,
                                 value: n.state.title,
                                 onChange: n.handleTitleEdit,
                                 onKeyDown: n.handleKeyDown
@@ -1830,7 +2005,7 @@
                             }, n.getRemainingCharacterText()), s.createElement(k.Xa, {
                                 display: k.X.Flex
                             }, s.createElement(k.z, {
-                                "data-test-selector": T.TITLE_SAVE,
+                                "data-test-selector": N.TITLE_SAVE,
                                 onClick: n.props.onCancel,
                                 type: k.F.Hollow
                             }, Object(o.d)("Cancel", "ClipsTitleEdit")), s.createElement(k.Xa, {
@@ -1840,7 +2015,7 @@
                             }, n.renderSave()))))
                         }, n.renderForManager = function() {
                             return s.createElement(k.Ea, {
-                                id: T.TITLE_INPUT,
+                                id: N.TITLE_INPUT,
                                 label: Object(o.d)("Title", "ClipsTitleEdit"),
                                 hint: n.getRemainingCharacterText()
                             }, s.createElement(k.Xa, {
@@ -1852,8 +2027,8 @@
                                     right: 1
                                 }
                             }, s.createElement(k.Ra, {
-                                id: T.TITLE_INPUT,
-                                "data-test-selector": T.TITLE_INPUT,
+                                id: N.TITLE_INPUT,
+                                "data-test-selector": N.TITLE_INPUT,
                                 type: k.Ta.Text,
                                 value: n.state.title,
                                 onChange: n.handleTitleEdit,
@@ -1865,7 +2040,7 @@
                                 position: k.hb.Relative
                             }, n.renderSave(), s.createElement(k.Ua, {
                                 onClick: n.dismissMessage,
-                                "data-test-selector": T.TITLE_SAVE_TOOLTIP
+                                "data-test-selector": N.TITLE_SAVE_TOOLTIP
                             }, s.createElement(k.u, {
                                 direction: k.v.TopRight,
                                 show: n.state.showError || n.state.showSuccess
@@ -1889,8 +2064,8 @@
                             }, n.getRemainingCharacterText()), s.createElement(k.Xa, null, s.createElement(k.Xa, {
                                 fullWidth: !0
                             }, s.createElement(k.Ra, {
-                                id: T.TITLE_INPUT,
-                                "data-test-selector": T.TITLE_INPUT,
+                                id: N.TITLE_INPUT,
+                                "data-test-selector": N.TITLE_INPUT,
                                 type: k.Ta.Text,
                                 value: n.state.title,
                                 onChange: n.handleTitleEdit,
@@ -1923,7 +2098,7 @@
                             })))))
                         }, n.renderSave = function() {
                             return s.createElement(k.z, {
-                                "data-test-selector": T.TITLE_SAVE,
+                                "data-test-selector": N.TITLE_SAVE,
                                 disabled: !n.canSaveEditedTitle(),
                                 onClick: n.editClipTitle
                             }, Object(o.d)("Save", "ClipsTitleEdit"))
@@ -1935,7 +2110,7 @@
                             })
                         }, n.getRemainingCharacterText = function() {
                             return Object(o.d)("{characterCount, number} remaining", {
-                                characterCount: N - n.state.title.length
+                                characterCount: T - n.state.title.length
                             }, "ClipsTitleEdit")
                         }, n.onSuccess = function() {
                             n.props.onSuccess && n.props.onSuccess(), n.setState({
@@ -1953,7 +2128,7 @@
                                 showSuccess: !1
                             })
                         }, n.handleTitleEdit = function(e) {
-                            var t = e.currentTarget.value.slice(0, N);
+                            var t = e.currentTarget.value.slice(0, T);
                             n.setState({
                                 title: t,
                                 showError: !1,
@@ -2020,14 +2195,14 @@
                                 return Object(o.d)("Whoops. Something went wrong.", "ClipsTitleEdit")
                         }
                     }, t.prototype.errorMessageToError = function(e) {
-                        return null === e ? f.unknown : e.includes("403:") || e.toLowerCase() === i.InvalidTitle.toLowerCase() || e.toLowerCase() === a.InvalidTitle.toLowerCase() ? f.channelViolation : e === f.emptySubmission ? f.emptySubmission : f.unknown
+                        return null === e ? f.unknown : e.includes("403:") || e.toLowerCase() === a.InvalidTitle.toLowerCase() || e.toLowerCase() === i.InvalidTitle.toLowerCase() ? f.channelViolation : e === f.emptySubmission ? f.emptySubmission : f.unknown
                     }, t
                 }(s.Component),
                 O = Object(c.a)(w, {
                     name: "editTitle"
                 })(D);
             n.d(t, !1, function() {
-                return T
+                return N
             }), n.d(t, "b", function() {
                 return f
             }), n.d(t, !1, function() {
@@ -2038,11 +2213,11 @@
         },
         X7Ac: function(e, t, n) {
             "use strict";
-            var i = n("wbMx");
+            var a = n("wbMx");
             n.d(t, "a", function() {
-                return i.a
+                return a.a
             }), n.d(t, "b", function() {
-                return i.b
+                return a.b
             })
         },
         Y9ZL: function(e, t) {
@@ -2114,7 +2289,7 @@
             e.exports = n
         },
         "a+SD": function(e, t, n) {
-            var i = {
+            var a = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -2353,7 +2528,7 @@
                     end: 360
                 }
             };
-            i.loc.source = {
+            a.loc.source = {
                 body: '#import "twilight/pages/clips-manager/components/clips-manager-table/clip-fragment.gql"\nquery ClipsManagerTable_User($login: String! $limit: Int $cursor: Cursor $criteria: UserClipsInput){\nuser(login: $login) {\nid\ndisplayName\nclips(first: $limit after: $cursor criteria: $criteria) {\npageInfo {\nhasNextPage\n}\nedges {\ncursor\nnode {\n...clipsManagerClip\n}\n}\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
@@ -2361,14 +2536,14 @@
                     column: 1
                 }
             };
-            var a = {};
-            i.definitions = i.definitions.concat(function(e) {
+            var i = {};
+            a.definitions = a.definitions.concat(function(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
-                    return !a[t] && (a[t] = !0, !0)
+                    return !i[t] && (i[t] = !0, !0)
                 })
-            }(n("QlyS").definitions)), e.exports = i
+            }(n("QlyS").definitions)), e.exports = a
         },
         bTcf: function(e, t) {
             var n = {
@@ -2486,67 +2661,90 @@
         hTDB: function(e, t, n) {},
         iyGE: function(e, t, n) {
             "use strict";
-            var i = n("mrSG"),
-                a = n("yR8l"),
-                r = 60,
-                l = 60 * r,
-                s = 24 * l,
-                o = 7 * s,
-                c = 4 * o;
-            var d, u = n("4w0E");
+            var a = n("mrSG"),
+                i = n("yR8l"),
+                r = n("Pub/"),
+                l = n("HzXE"),
+                s = 60,
+                o = 60 * s,
+                c = 24 * o,
+                d = 7 * c,
+                u = 4 * d;
+            var p = n("4w0E");
 
-            function p(e) {
+            function m(e) {
                 var t = this;
-                return Object(a.a)(u, {
+                return Object(i.a)(p, {
                     props: function(n) {
                         return {
-                            banUserMutation: function(a, d) {
-                                return void 0 === d && (d = null), i.__awaiter(t, void 0, void 0, function() {
+                            banUserMutation: function(i, p) {
+                                return void 0 === p && (p = null), a.__awaiter(t, void 0, void 0, function() {
                                     var t;
-                                    return i.__generator(this, function(i) {
-                                        switch (i.label) {
+                                    return a.__generator(this, function(m) {
+                                        switch (m.label) {
                                             case 0:
                                                 if (t = e(n.ownProps).channelID, !n.mutate) return [3, 5];
-                                                i.label = 1;
+                                                m.label = 1;
                                             case 1:
-                                                return i.trys.push([1, 3, , 4]), [4, n.mutate({
+                                                return m.trys.push([1, 3, , 4]), [4, n.mutate({
                                                     variables: {
                                                         input: {
                                                             channelID: t,
-                                                            bannedUserLogin: a,
-                                                            expiresIn: d && function(e) {
+                                                            bannedUserLogin: i,
+                                                            expiresIn: p && function(e) {
                                                                 if (!e) return "0s";
                                                                 var t = e,
                                                                     n = "";
+                                                                if (t > u) {
+                                                                    var a = Math.floor(t / u);
+                                                                    t -= a * u, n += a + "mo"
+                                                                }
+                                                                if (t > d) {
+                                                                    var i = Math.floor(t / d);
+                                                                    t -= i * d, n += i + "w"
+                                                                }
                                                                 if (t > c) {
-                                                                    var i = Math.floor(t / c);
-                                                                    t -= i * c, n += i + "mo"
+                                                                    var r = Math.floor(t / c);
+                                                                    t -= r * c, n += r + "d"
                                                                 }
                                                                 if (t > o) {
-                                                                    var a = Math.floor(t / o);
-                                                                    t -= a * o, n += a + "w"
+                                                                    var l = Math.floor(t / o);
+                                                                    t -= l * o, n += l + "h"
                                                                 }
                                                                 if (t > s) {
-                                                                    var d = Math.floor(t / s);
-                                                                    t -= d * s, n += d + "d"
-                                                                }
-                                                                if (t > l) {
-                                                                    var u = Math.floor(t / l);
-                                                                    t -= u * l, n += u + "h"
-                                                                }
-                                                                if (t > r) {
-                                                                    var p = Math.floor(t / r);
-                                                                    t -= p * r, n += p + "m"
+                                                                    var p = Math.floor(t / s);
+                                                                    t -= p * s, n += p + "m"
                                                                 }
                                                                 return t > 0 && (n += t + "s"), n
-                                                            }(d)
+                                                            }(p)
                                                         }
+                                                    },
+                                                    update: function(e, n) {
+                                                        return function(e, t, n) {
+                                                            if (t && t.data && t.data.banUserFromChatRoom && t.data.banUserFromChatRoom.ban && t.data.banUserFromChatRoom.ban.bannedUser && t.data.banUserFromChatRoom.ban.bannedUser.id) {
+                                                                var i = Object(r.a)(e, n, t.data.banUserFromChatRoom.ban.bannedUser.id);
+                                                                if (!i) return;
+                                                                e.writeQuery({
+                                                                    query: l,
+                                                                    variables: {
+                                                                        targetUserID: t.data.banUserFromChatRoom.ban.bannedUser.id,
+                                                                        channelID: n
+                                                                    },
+                                                                    data: a.__assign({}, i, {
+                                                                        chatRoomBanStatus: {
+                                                                            isPermanent: t.data.banUserFromChatRoom.ban.isPermanent,
+                                                                            __typename: "ChatRoomBanStatus"
+                                                                        }
+                                                                    })
+                                                                })
+                                                            }
+                                                        }(e, n, t)
                                                     }
                                                 })];
                                             case 2:
-                                                return [2, i.sent().data];
+                                                return [2, m.sent().data];
                                             case 3:
-                                                throw i.sent(), new Error("Unable to ban user");
+                                                throw m.sent(), new Error("Unable to ban user");
                                             case 4:
                                                 return [3, 6];
                                             case 5:
@@ -2562,19 +2760,14 @@
                 })
             }
             n.d(t, "a", function() {
-                    return d
-                }), n.d(t, "b", function() {
-                    return p
-                }),
-                function(e) {
-                    e.Forbidden = "FORBIDDEN", e.TargetNotFound = "TARGET_NOT_FOUND", e.TargetIsSelf = "TARGET_IS_SELF", e.TargetIsAnonymous = "TARGET_IS_ANONYMOUS", e.TargetIsMod = "TARGET_IS_MOD", e.TargetIsBroadcaster = "TARGET_IS_BROADCASTER", e.TargetIsStaff = "TARGET_IS_STAFF", e.TargetIsVIP = "TARGET_IS_VIP", e.TargetIsAdmin = "TARGET_IS_ADMIN", e.TargetIsGlobalMod = "TARGET_IS_GLOBAL_MOD", e.TargetIsAlreadyBanned = "TARGET_ALREADY_BANNED", e.DurationInvalid = "DURATION_INVALID"
-                }(d || (d = {}))
+                return m
+            })
         },
         jeZI: function(e, t, n) {},
         jsEL: function(e, t, n) {
             "use strict";
-            var i = n("mrSG"),
-                a = n("q1tI"),
+            var a = n("mrSG"),
+                i = n("q1tI"),
                 r = n("/7QA"),
                 l = n("u5aL"),
                 s = n("Ue10"),
@@ -2590,7 +2783,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderSuccess = function() {
-                            return t.props.successContent ? a.createElement(s.Cb, {
+                            return t.props.successContent ? i.createElement(s.Cb, {
                                 "data-test-selector": o.SUCCESS_BODY,
                                 padding: {
                                     x: 2,
@@ -2602,11 +2795,11 @@
                                 borderMarked: !0,
                                 background: s.r.Alt,
                                 fullWidth: !0
-                            }, a.createElement(s.W, {
+                            }, i.createElement(s.W, {
                                 type: s.Tb.Strong
                             }, t.props.successContent)) : null
                         }, t.renderError = function() {
-                            return t.props.errorContent ? a.createElement(s.Cb, {
+                            return t.props.errorContent ? i.createElement(s.Cb, {
                                 "data-test-selector": o.ERROR_BODY,
                                 padding: {
                                     x: 1,
@@ -2618,7 +2811,7 @@
                                 borderMarked: !0,
                                 background: s.r.Alt,
                                 fullWidth: !0
-                            }, a.createElement(s.W, {
+                            }, i.createElement(s.W, {
                                 type: s.Tb.Strong,
                                 color: s.O.Error
                             }, t.props.errorContent)) : null
@@ -2626,30 +2819,30 @@
                             t.props.onSubmit()
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        return this.props.successContent ? a.createElement(l.a, {
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        return this.props.successContent ? i.createElement(l.a, {
                             onClickOut: this.props.onClose
-                        }, a.createElement(s.Cb, {
+                        }, i.createElement(s.Cb, {
                             padding: 2,
                             background: s.r.Base,
                             className: "clip-modal"
-                        }, this.renderSuccess(), a.createElement(s.Xa, {
+                        }, this.renderSuccess(), i.createElement(s.Xa, {
                             display: s.X.Flex,
                             justifyContent: s.Wa.Center
-                        }, a.createElement(s.Xa, {
+                        }, i.createElement(s.Xa, {
                             margin: {
                                 x: 1
                             }
-                        }, a.createElement(s.z, {
+                        }, i.createElement(s.z, {
                             "data-test-selector": o.CANCEL_BUTTON,
                             onClick: this.props.onClose
-                        }, Object(r.d)("Close", "ClipsModal")))))) : a.createElement(l.a, {
+                        }, Object(r.d)("Close", "ClipsModal")))))) : i.createElement(l.a, {
                             onClickOut: this.props.onClose
-                        }, a.createElement(s.Cb, {
+                        }, i.createElement(s.Cb, {
                             padding: 2,
                             background: s.r.Base,
                             className: "clip-modal"
-                        }, a.createElement(s.Cb, {
+                        }, i.createElement(s.Cb, {
                             "data-test-selector": o.TITLE,
                             borderBottom: !0,
                             margin: {
@@ -2658,7 +2851,7 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, this.props.title), a.createElement(s.Cb, {
+                        }, this.props.title), i.createElement(s.Cb, {
                             "data-test-selector": o.MAIN_BODY,
                             borderBottom: !0,
                             margin: {
@@ -2667,31 +2860,31 @@
                             padding: {
                                 bottom: 2
                             }
-                        }, this.renderError(), this.props.body), a.createElement(s.Xa, {
+                        }, this.renderError(), this.props.body), i.createElement(s.Xa, {
                             display: s.X.Flex,
                             justifyContent: s.Wa.Center
-                        }, a.createElement(s.Xa, {
+                        }, i.createElement(s.Xa, {
                             margin: {
                                 x: 1
                             }
-                        }, a.createElement(s.z, {
+                        }, i.createElement(s.z, {
                             "data-test-selector": o.CANCEL_BUTTON,
                             type: s.F.Text,
                             onClick: this.props.onClose
-                        }, Object(r.d)("Cancel", "ClipsModal"))), a.createElement(s.Xa, {
+                        }, Object(r.d)("Cancel", "ClipsModal"))), i.createElement(s.Xa, {
                             margin: {
                                 x: 1
                             }
-                        }, a.createElement(s.z, {
+                        }, i.createElement(s.z, {
                             "data-test-selector": o.SUBMIT_BUTTON,
                             type: this.props.buttonType ? this.props.buttonType : s.F.Default,
                             onClick: this.onSubmit,
                             disabled: this.props.submitDisabled
-                        }, this.props.buttonContent), this.props.isLoading && a.createElement(s.Za, {
+                        }, this.props.buttonContent), this.props.isLoading && i.createElement(s.Za, {
                             delay: 0
                         })))))
                     }, t
-                }(a.Component),
+                }(i.Component),
                 d = n("iyGE"),
                 u = n("GnwI"),
                 p = 86400,
@@ -2703,17 +2896,17 @@
                             hasErrored: !1,
                             hasSucceeded: !1
                         }, t.renderTitle = function() {
-                            return t.props.isTemporary ? a.createElement(s.W, {
+                            return t.props.isTemporary ? i.createElement(s.W, {
                                 type: s.Tb.H5,
                                 ellipsis: !0
-                            }, Object(r.d)("Timeout this Clip Creator for 24 hours from Your Channel", "ClipsModalBanUser")) : a.createElement(s.W, {
+                            }, Object(r.d)("Timeout this Clip Creator for 24 hours from Your Channel", "ClipsModalBanUser")) : i.createElement(s.W, {
                                 type: s.Tb.H5,
                                 ellipsis: !0
                             }, Object(r.d)("Ban this Clip Creator from Your Channel", "ClipsModalBanUser"))
                         }, t.renderBodyText = function() {
-                            return t.props.isTemporary ? a.createElement(s.W, null, Object(r.d)("{clipCreator} will temporarily be timed out from creating clips and chatting in your channel for 24 hours.", {
+                            return t.props.isTemporary ? i.createElement(s.W, null, Object(r.d)("{clipCreator} will temporarily be timed out from creating clips and chatting in your channel for 24 hours.", {
                                 clipCreator: t.props.targetUser.displayName
-                            }, "ClipsModalBanUser")) : a.createElement(s.W, null, Object(r.d)("{clipCreator} will be permanently banned from creating clips and chatting in your channel.", {
+                            }, "ClipsModalBanUser")) : i.createElement(s.W, null, Object(r.d)("{clipCreator} will be permanently banned from creating clips and chatting in your channel.", {
                                 clipCreator: t.props.targetUser.displayName
                             }, "ClipsModalBanUser"))
                         }, t.renderButtonText = function() {
@@ -2723,20 +2916,20 @@
                         }, t.renderFailure = function() {
                             return t.state.hasErrored ? t.props.isTemporary ? Object(r.d)("There was a problem timing out this clip creator", "ClipsModalBanUser") : Object(r.d)("There was a problem banning this clip creator", "ClipsModalBanUser") : null
                         }, t.banUser = function() {
-                            return i.__awaiter(t, void 0, void 0, function() {
-                                var e, t;
-                                return i.__generator(this, function(n) {
-                                    switch (n.label) {
+                            return a.__awaiter(t, void 0, void 0, function() {
+                                var e, t, n;
+                                return a.__generator(this, function(a) {
+                                    switch (a.label) {
                                         case 0:
                                             this.setState({
                                                 isLoading: !0,
                                                 hasSucceeded: !1,
                                                 hasErrored: !1
-                                            }), e = this.props.targetUser.login, t = this.props.isTemporary ? this.props.banUserMutation(e, p) : this.props.banUserMutation(e), n.label = 1;
+                                            }), e = this.props.targetUser.login, t = this.props.isTemporary ? this.props.banUserMutation(e, p) : this.props.banUserMutation(e), a.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 3, , 4]), [4, t];
+                                            return a.trys.push([1, 3, , 4]), [4, t];
                                         case 2:
-                                            return n.sent().banUserFromChatRoom.error ? this.setState({
+                                            return !(n = a.sent().banUserFromChatRoom) || n.error ? this.setState({
                                                 hasErrored: !0,
                                                 isLoading: !1
                                             }) : this.setState({
@@ -2744,7 +2937,7 @@
                                                 isLoading: !1
                                             }), [3, 4];
                                         case 3:
-                                            return n.sent(), this.setState({
+                                            return a.sent(), this.setState({
                                                 hasErrored: !0,
                                                 isLoading: !1
                                             }), [3, 4];
@@ -2755,10 +2948,10 @@
                             })
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return a.createElement(c, {
+                        return i.createElement(c, {
                             onSubmit: this.banUser,
                             onClose: this.props.onClose,
                             title: this.renderTitle(),
@@ -2771,8 +2964,8 @@
                             isLoading: this.state.isLoading
                         })
                     }, t
-                }(a.Component),
-                g = Object(u.b)("ClipsModalBanUser")(Object(d.b)(function(e) {
+                }(i.Component),
+                g = Object(u.b)("ClipsModalBanUser")(Object(d.a)(function(e) {
                     return {
                         channelID: e.broadcasterID
                     }
@@ -2793,8 +2986,8 @@
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onDeleteClick = function() {
-                            return i.__awaiter(n, void 0, void 0, function() {
-                                return i.__generator(this, function(e) {
+                            return a.__awaiter(n, void 0, void 0, function() {
+                                return a.__generator(this, function(e) {
                                     switch (e.label) {
                                         case 0:
                                             this.setState({
@@ -2821,48 +3014,48 @@
                             })
                         }, n.state = k, n
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        var e = [a.createElement(s.W, {
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        var e = [i.createElement(s.W, {
                             key: "title",
                             type: s.Tb.H4
-                        }, Object(r.d)("Delete This Clip", "ClipsModalDelete")), a.createElement(s.Xa, {
+                        }, Object(r.d)("Delete This Clip", "ClipsModalDelete")), i.createElement(s.Xa, {
                             key: "message",
                             margin: {
                                 top: 1
                             }
-                        }, a.createElement(s.W, {
+                        }, i.createElement(s.W, {
                             type: s.Tb.P,
                             color: s.O.Alt2
                         }, Object(r.d)("This clip will be permanently deleted.", "ClipsModalDelete")))];
                         if (!this.props.data.clip) return null;
                         var t = null;
-                        this.props.data.clip.curator && (t = a.createElement("span", null, " • ", Object(r.d)("Clipped by {curator}", {
+                        this.props.data.clip.curator && (t = i.createElement("span", null, " • ", Object(r.d)("Clipped by {curator}", {
                             curator: this.props.data.clip.curator.login
                         }, "ClipsModalDelete")));
-                        var n = a.createElement(s.Cb, {
+                        var n = i.createElement(s.Cb, {
                             display: s.X.Flex,
                             flexWrap: s.Ba.NoWrap
-                        }, a.createElement(s.Xa, {
+                        }, i.createElement(s.Xa, {
                             className: "clips-modal-delete__thumb",
                             margin: {
                                 right: 1
                             }
-                        }, a.createElement(s.o, {
+                        }, i.createElement(s.o, {
                             ratio: s.p.Aspect16x9
-                        }, a.createElement("img", {
+                        }, i.createElement("img", {
                             src: this.props.data.clip.thumbnailURL
-                        }))), a.createElement(s.Xa, null, a.createElement(s.W, {
+                        }))), i.createElement(s.Xa, null, i.createElement(s.W, {
                             type: s.Tb.H5
-                        }, this.props.data.clip.title), a.createElement(s.W, {
+                        }, this.props.data.clip.title), i.createElement(s.W, {
                             color: s.O.Alt2
                         }, Object(r.d)("{created, date, medium}", {
                             created: new Date(this.props.data.clip.createdAt)
-                        }, "ClipsModalDelete"), t), a.createElement(s.W, {
+                        }, "ClipsModalDelete"), t), i.createElement(s.W, {
                             color: s.O.Alt2
                         }, Object(r.d)("{viewCount, number} views", {
                             viewCount: this.props.data.clip.viewCount
                         }, "ClipsModalDelete"))));
-                        return a.createElement(c, {
+                        return i.createElement(c, {
                             onSubmit: this.onDeleteClick,
                             onClose: this.props.onClose,
                             title: e,
@@ -2875,17 +3068,17 @@
                             isLoading: this.state.isLoading
                         })
                     }, t
-                }(a.Component),
+                }(i.Component),
                 S = Object(h.a)(v)(b({
                     props: function(e) {
                         return {
                             deleteClip: function(t) {
-                                return i.__awaiter(void 0, void 0, void 0, function() {
+                                return a.__awaiter(void 0, void 0, void 0, function() {
                                     var n;
-                                    return i.__generator(this, function(i) {
-                                        switch (i.label) {
+                                    return a.__generator(this, function(a) {
+                                        switch (a.label) {
                                             case 0:
-                                                return i.trys.push([0, 2, , 3]), [4, e.mutate({
+                                                return a.trys.push([0, 2, , 3]), [4, e.mutate({
                                                     variables: {
                                                         input: {
                                                             slugs: [t]
@@ -2893,9 +3086,9 @@
                                                     }
                                                 })];
                                             case 1:
-                                                return i.sent(), e.ownProps.onDelete && e.ownProps.onDelete(t), [3, 3];
+                                                return a.sent(), e.ownProps.onDelete && e.ownProps.onDelete(t), [3, 3];
                                             case 2:
-                                                throw n = i.sent(), r.k.error(n, "Failed to delete clip"), n;
+                                                throw n = a.sent(), r.k.error(n, "Failed to delete clip"), n;
                                             case 3:
                                                 return [2]
                                         }
@@ -2912,12 +3105,12 @@
                     hasErrored: !1,
                     hasSucceeded: !1
                 },
-                T = function(e) {
+                N = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.deleteAll = function() {
-                            return i.__awaiter(n, void 0, void 0, function() {
-                                return i.__generator(this, function(e) {
+                            return a.__awaiter(n, void 0, void 0, function() {
+                                return a.__generator(this, function(e) {
                                     switch (e.label) {
                                         case 0:
                                             this.setState({
@@ -2948,16 +3141,16 @@
                             return n.state.hasErrored ? Object(r.d)("There was a problem deleting this clip.", "ClipsModalDeleteAll") : null
                         }, n.state = w, n
                     }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        var e = a.createElement(s.W, {
+                        var e = i.createElement(s.W, {
                             type: s.Tb.P
                         }, Object(r.d)("This clip and all other clips created from the same video will be permanently deleted.", "ClipsModalDeleteAll"));
-                        return a.createElement(c, {
+                        return i.createElement(c, {
                             onSubmit: this.deleteAll,
                             onClose: this.props.onClose,
-                            title: a.createElement(s.W, {
+                            title: i.createElement(s.W, {
                                 type: s.Tb.H4
                             }, Object(r.d)("Delete All Clips from Related Video", "ClipsModalDeleteAll")),
                             body: e,
@@ -2969,17 +3162,17 @@
                             errorContent: this.renderFailure()
                         })
                     }, t
-                }(a.Component),
-                N = Object(y.compose)(Object(u.b)("ClipsModalDeleteAll"), b({
+                }(i.Component),
+                T = Object(y.compose)(Object(u.b)("ClipsModalDeleteAll"), b({
                     props: function(e) {
                         return {
                             deleteAllClips: function(t, n) {
-                                return i.__awaiter(void 0, void 0, void 0, function() {
-                                    var a, l, s;
-                                    return i.__generator(this, function(i) {
-                                        switch (i.label) {
+                                return a.__awaiter(void 0, void 0, void 0, function() {
+                                    var i, l, s;
+                                    return a.__generator(this, function(a) {
+                                        switch (a.label) {
                                             case 0:
-                                                return i.trys.push([0, 6, , 7]), a = void 0, n ? [4, e.mutate({
+                                                return a.trys.push([0, 6, , 7]), i = void 0, n ? [4, e.mutate({
                                                     variables: {
                                                         input: {
                                                             videoID: n
@@ -2987,7 +3180,7 @@
                                                     }
                                                 })] : [3, 2];
                                             case 1:
-                                                return l = i.sent(), a = l.data, [3, 5];
+                                                return l = a.sent(), i = l.data, [3, 5];
                                             case 2:
                                                 return t ? [4, e.mutate({
                                                     variables: {
@@ -2997,13 +3190,13 @@
                                                     }
                                                 })] : [3, 4];
                                             case 3:
-                                                return l = i.sent(), a = l.data, [3, 5];
+                                                return l = a.sent(), i = l.data, [3, 5];
                                             case 4:
                                                 throw new Error("Invalid broadcastID specified for deleteAllClips");
                                             case 5:
-                                                return e.ownProps.onDeleteAll && e.ownProps.onDeleteAll(a.deleteClips.clips), [3, 7];
+                                                return e.ownProps.onDeleteAll && e.ownProps.onDeleteAll(i.deleteClips.clips), [3, 7];
                                             case 6:
-                                                throw s = i.sent(), r.k.error(s, "Failed to delete clips from VOD"), s;
+                                                throw s = a.sent(), r.k.error(s, "Failed to delete clips from VOD"), s;
                                             case 7:
                                                 return [2]
                                         }
@@ -3030,7 +3223,7 @@
                             }
                         }
                     }
-                }))(T),
+                }))(N),
                 D = {
                     isLoading: !1,
                     hasErrored: !1,
@@ -3044,8 +3237,8 @@
                         }, n.renderError = function() {
                             return n.state.hasErrored ? Object(r.d)("There was a problem deleting this clip.", "ClipsModalBatchDelete") : null
                         }, n.onDeleteClick = function() {
-                            return i.__awaiter(n, void 0, void 0, function() {
-                                return i.__generator(this, function(e) {
+                            return a.__awaiter(n, void 0, void 0, function() {
+                                return a.__generator(this, function(e) {
                                     switch (e.label) {
                                         case 0:
                                             this.setState({
@@ -3072,14 +3265,14 @@
                             })
                         }, n.state = D, n
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        var e = a.createElement(s.W, {
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        var e = i.createElement(s.W, {
                                 type: s.Tb.H4
                             }, Object(r.d)("Delete these clips?", "ClipsModalBatchDelete")),
-                            t = a.createElement(s.W, {
+                            t = i.createElement(s.W, {
                                 type: s.Tb.P
                             }, Object(r.d)("These clips will be permanently deleted. Are you sure?", "ClipsModalBatchDelete"));
-                        return a.createElement(c, {
+                        return i.createElement(c, {
                             onSubmit: this.onDeleteClick,
                             onClose: this.props.onClose,
                             title: e,
@@ -3092,14 +3285,14 @@
                             errorContent: this.renderError()
                         })
                     }, t
-                }(a.Component),
+                }(i.Component),
                 _ = b({
                     props: function(e) {
                         return {
                             deleteClips: function() {
-                                return i.__awaiter(void 0, void 0, void 0, function() {
+                                return a.__awaiter(void 0, void 0, void 0, function() {
                                     var t;
-                                    return i.__generator(this, function(n) {
+                                    return a.__generator(this, function(n) {
                                         switch (n.label) {
                                             case 0:
                                                 return n.trys.push([0, 2, , 3]), [4, e.mutate({
@@ -3129,7 +3322,7 @@
             }), n.d(t, "d", function() {
                 return S
             }), n.d(t, "e", function() {
-                return N
+                return T
             }), n.d(t, "c", function() {
                 return _
             })
@@ -3283,7 +3476,7 @@
         pC3c: function(e, t, n) {
             "use strict";
             n.r(t);
-            var i, a, r, l = n("mrSG"),
+            var a, i, r, l = n("mrSG"),
                 s = n("q1tI"),
                 o = n("oJmH"),
                 c = n("9C/b"),
@@ -3293,11 +3486,11 @@
             ! function(e) {
                 e[e.ViewsAscending = 0] = "ViewsAscending", e[e.ViewsDescending = 1] = "ViewsDescending", e[e.CreatedAtAscending = 2] = "CreatedAtAscending", e[e.CreatedAtDescending = 3] = "CreatedAtDescending"
             }(r || (r = {}));
-            var m, g = ((i = {})[r.CreatedAtAscending] = "CREATED_AT_ASC", i[r.CreatedAtDescending] = "CREATED_AT_DESC", i[r.ViewsAscending] = "VIEWS_ASC", i[r.ViewsDescending] = "VIEWS_DESC", i);
+            var m, g = ((a = {})[r.CreatedAtAscending] = "CREATED_AT_ASC", a[r.CreatedAtDescending] = "CREATED_AT_DESC", a[r.ViewsAscending] = "VIEWS_ASC", a[r.ViewsDescending] = "VIEWS_DESC", a);
             ! function(e) {
                 e[e.Day = 0] = "Day", e[e.Week = 1] = "Week", e[e.Month = 2] = "Month", e[e.All = 3] = "All"
             }(m || (m = {}));
-            var h, f = ((a = {})[m.Day] = "LAST_DAY", a[m.Week] = "LAST_WEEK", a[m.Month] = "LAST_MONTH", a[m.All] = "ALL_TIME", a);
+            var h, f = ((i = {})[m.Day] = "LAST_DAY", i[m.Week] = "LAST_WEEK", i[m.Month] = "LAST_MONTH", i[m.All] = "ALL_TIME", i);
             ! function(e) {
                 e[e.Broadcaster = 0] = "Broadcaster", e[e.Curator = 1] = "Curator"
             }(h || (h = {}));
@@ -3309,45 +3502,45 @@
                 y = n("kRBY"),
                 E = n("17x9"),
                 w = n("/7QA"),
-                T = n("ZDlU"),
-                N = n("yR8l"),
+                N = n("ZDlU"),
+                T = n("yR8l"),
                 D = n("H/lO"),
                 O = n("geRD"),
                 _ = n("aCAx"),
                 R = n("8/mp"),
                 I = n("jsEL"),
-                M = n("MLDe"),
-                x = n("u5aL"),
-                L = n("lZCe"),
-                F = n("VwyG"),
-                A = n("eJ65"),
-                j = n("kduP"),
-                U = n("+GjP"),
+                x = n("MLDe"),
+                M = n("u5aL"),
+                F = n("lZCe"),
+                L = n("VwyG"),
+                j = n("eJ65"),
+                U = n("kduP"),
+                A = n("+GjP"),
                 B = n("D7An"),
-                X = n("ndwU"),
-                P = n("X7Ac"),
+                P = n("ndwU"),
+                X = n("X7Ac"),
                 V = n("EdhP"),
                 W = n("4L7N"),
                 G = n("Ue10"),
                 H = [{
-                    type: P.b.Twitter,
+                    type: X.b.Twitter,
                     params: {
                         tt_medium: "twtr"
                     }
                 }, {
-                    type: P.b.Facebook,
+                    type: X.b.Facebook,
                     params: {
                         tt_medium: "fb"
                     }
                 }, {
-                    type: P.b.VKontakte
+                    type: X.b.VKontakte
                 }, {
-                    type: P.b.Reddit,
+                    type: X.b.Reddit,
                     params: {
                         tt_medium: "redt"
                     }
                 }, {
-                    type: P.b.Copy
+                    type: X.b.Copy
                 }];
 
             function q(e) {
@@ -3355,7 +3548,7 @@
             }
             var Q = Object(b.b)("ClipsManagerSocialShare")(function(e) {
                     var t = Object(w.d)("Share", "ClipsManagerSocialShare");
-                    return s.createElement(A.a, null, s.createElement("div", null, s.createElement(G.Wb, {
+                    return s.createElement(j.a, null, s.createElement("div", null, s.createElement(G.Wb, {
                         label: t
                     }, s.createElement(G.A, {
                         ariaLabel: t,
@@ -3374,12 +3567,12 @@
                         pageType: e.pageType,
                         forceShow: !0
                     }), H.map(function(t) {
-                        return s.createElement(P.a, {
+                        return s.createElement(X.a, {
                             key: t.type,
                             type: t.type,
                             text: e.clip.title,
-                            url: Object(U.e)(e.clip.url, t.params),
-                            onShareClick: Object(M.c)(e.clip.id, e.clip.game && e.clip.game.name, e.clip.broadcaster && e.clip.broadcaster.id, e.clip.broadcaster && e.clip.broadcaster.login, e.pageType)
+                            url: Object(A.e)(e.clip.url, t.params),
+                            onShareClick: Object(x.c)(e.clip.id, e.clip.game && e.clip.game.name, e.clip.broadcaster && e.clip.broadcaster.id, e.clip.broadcaster && e.clip.broadcaster.login, e.pageType)
                         })
                     })), s.createElement(G.Xa, {
                         padding: {
@@ -3419,7 +3612,7 @@
                 Y = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
-                        return n.clipsMaintenance = Object(X.a)(), n.renderTitle = function() {
+                        return n.clipsMaintenance = Object(P.a)(), n.renderTitle = function() {
                             var e = n.props.clip;
                             return n.props.data.currentUser.id === (e && e.curator && e.curator.id) ? s.createElement(K.a, {
                                 clipId: e.id,
@@ -3441,7 +3634,7 @@
                         }, n.renderGameLink = function(e) {
                             return e.game ? s.createElement(G.U, {
                                 "data-test-selector": J.GAME_LINK,
-                                to: Object(j.c)(e.game.name),
+                                to: Object(U.c)(e.game.name),
                                 title: e.game.name
                             }, e.game.name) : null
                         }, n.renderModerationIcon = function() {
@@ -3453,7 +3646,7 @@
                                 margin: {
                                     right: .5
                                 }
-                            }, s.createElement(A.a, null, s.createElement(G.A, {
+                            }, s.createElement(j.a, null, s.createElement(G.A, {
                                 ariaLabel: e,
                                 type: G.C.Hollow,
                                 icon: G.rb.Sword,
@@ -3542,9 +3735,9 @@
                         var e = this,
                             t = this.props.clip,
                             n = Object(w.c)(new Date(t.createdAt), "medium"),
-                            i = Object(w.d)("Close", "ClipsManagerExpandedRow"),
-                            a = Object(w.d)("Delete", "ClipsManagerExpandedRow");
-                        return s.createElement(x.a, {
+                            a = Object(w.d)("Close", "ClipsManagerExpandedRow"),
+                            i = Object(w.d)("Delete", "ClipsManagerExpandedRow");
+                        return s.createElement(M.a, {
                             onClickOut: this.onClickOutside
                         }, s.createElement(G.Cb, {
                             "data-target": this.props.dataTarget,
@@ -3565,7 +3758,7 @@
                             borderBottom: !0
                         }, s.createElement(G.Xa, {
                             display: G.X.Flex
-                        }, s.createElement(F.a, {
+                        }, s.createElement(L.a, {
                             ownerLogin: t.broadcaster && t.broadcaster.login || "",
                             permittedRoles: {
                                 owner: !0,
@@ -3573,13 +3766,13 @@
                                 staff: !0
                             }
                         }, function(n) {
-                            var i = n.permitted,
-                                a = n.loading;
-                            return !i || a ? null : s.createElement(L.a, {
+                            var a = n.permitted,
+                                i = n.loading;
+                            return !a || i ? null : s.createElement(F.a, {
                                 name: B.b.VODPike,
                                 assignments: {
                                     variant: function() {
-                                        return e.props.pageType !== M.a.ClipsOfMyChannel ? null : s.createElement(G.Xa, {
+                                        return e.props.pageType !== x.a.ClipsOfMyChannel ? null : s.createElement(G.Xa, {
                                             padding: {
                                                 right: 1
                                             }
@@ -3593,13 +3786,13 @@
                                 }
                             })
                         }), this.renderModerationIcon(), s.createElement(G.Wb, {
-                            label: a
+                            label: i
                         }, s.createElement(G.Xa, {
                             margin: {
                                 right: .5
                             }
                         }, s.createElement(G.A, {
-                            ariaLabel: a,
+                            ariaLabel: i,
                             type: G.C.Hollow,
                             icon: G.rb.Trash,
                             onClick: this.openDeleteModal,
@@ -3617,17 +3810,17 @@
                         }, s.createElement(G.A, {
                             ariaLabel: Object(w.d)("Popout", "ClipsManagerExpandedRow"),
                             type: G.C.Hollow,
-                            linkTo: Object(U.e)(this.props.clip.url, {
+                            linkTo: Object(A.e)(this.props.clip.url, {
                                 tt_medium: "my_clips"
                             }),
                             icon: G.rb.Popout
                         }))), s.createElement(G.Wb, {
-                            label: i,
+                            label: a,
                             align: G.Xb.Left
                         }, s.createElement(G.Xa, {
                             flexGrow: 0
                         }, s.createElement(G.A, {
-                            ariaLabel: i,
+                            ariaLabel: a,
                             type: G.C.Hollow,
                             icon: G.rb.Close,
                             onClick: this.props.onClose
@@ -3651,7 +3844,7 @@
                         }, s.createElement(G.o, {
                             ratio: G.p.Aspect16x9
                         }, s.createElement("iframe", {
-                            src: Object(U.e)(t.embedURL, {
+                            src: Object(A.e)(t.embedURL, {
                                 autoplay: "false"
                             }),
                             frameBorder: 0,
@@ -3760,7 +3953,7 @@
                         }, this.renderGameLink(t)))))))))))
                     }, t
                 }(s.Component),
-                Z = Object(b.b)("ClipsManagerExpandedRow")(Object(N.a)(z)(Y));
+                Z = Object(b.b)("ClipsManagerExpandedRow")(Object(T.a)(z)(Y));
             var ee = Object(v.connect)(null, function(e) {
                     return Object(k.bindActionCreators)({
                         showModal: _.d,
@@ -3769,8 +3962,8 @@
                 })(Z),
                 te = n("8Ad5"),
                 ne = n("NZDK"),
-                ie = n("9kXc");
-            var ae = n("roU9");
+                ae = n("9kXc");
+            var ie = n("roU9");
             n("Rc6/");
             var re = function(e) {
                     function t() {
@@ -3786,7 +3979,7 @@
                                 size: G.J.Size3,
                                 aspect: G.p.Aspect3x4,
                                 src: function(e) {
-                                    return ae.a + "/" + e + "-" + ae.b + ".jpg"
+                                    return ie.a + "/" + e + "-" + ie.b + ".jpg"
                                 }(e.title),
                                 alt: e.thumbnailAltText
                             }), s.createElement(G.H, {
@@ -3900,8 +4093,8 @@
                                 })
                             }
                             if (e === D.a.Games) {
-                                var i = n.state.gameResults;
-                                return 0 === i.length ? n.renderNoResults() : i.map(function(e, t) {
+                                var a = n.state.gameResults;
+                                return 0 === a.length ? n.renderNoResults() : a.map(function(e, t) {
                                     return s.createElement(re, {
                                         key: e.id + "_" + t,
                                         searchResult: e,
@@ -3938,8 +4131,8 @@
                             if (null !== e) {
                                 var t = e.dataset.refIndex;
                                 if (t) {
-                                    var i = parseInt(t, 0);
-                                    n.searchResultRefs[i] = e
+                                    var a = parseInt(t, 0);
+                                    n.searchResultRefs[a] = e
                                 }
                             }
                         }, n.setSearchTypeGame = function() {
@@ -3991,9 +4184,9 @@
                             void 0 === e && (e = !0);
                             var t = n.getResultsLength();
                             0 !== t && n.setState(function(n) {
-                                var i = n.focusedIndex;
+                                var a = n.focusedIndex;
                                 return {
-                                    focusedIndex: null === i ? e ? 0 : t - 1 : e ? i + 1 >= t ? 0 : i + 1 : i - 1 < 0 ? t - 1 : i - 1,
+                                    focusedIndex: null === a ? e ? 0 : t - 1 : e ? a + 1 >= t ? 0 : a + 1 : a - 1 < 0 ? t - 1 : a - 1,
                                     isShowingResults: !0
                                 }
                             })
@@ -4010,11 +4203,11 @@
                         }, n.focusSearchInput = function() {
                             n.searchInputRef && n.searchInputRef.focus()
                         }, n.selectResult = function(e) {
-                            var t, i = n.state,
-                                a = i.currentCategory,
-                                r = i.gameResults,
-                                l = i.userResults;
-                            if (a === D.a.Games) t = r[e].title, n.context.setSearchTerm(t);
+                            var t, a = n.state,
+                                i = a.currentCategory,
+                                r = a.gameResults,
+                                l = a.userResults;
+                            if (i === D.a.Games) t = r[e].title, n.context.setSearchTerm(t);
                             else {
                                 var s = l[e];
                                 t = s.name, n.context.setSearchTerm(s.id)
@@ -4033,16 +4226,16 @@
                         }, n.performQuery = function() {
                             var e = n.state,
                                 t = e.isLoading,
-                                i = e.searchTerm,
-                                a = e.currentCategory;
+                                a = e.searchTerm,
+                                i = e.currentCategory;
                             t && n.setState({
                                 isLoading: !0,
                                 isShowingResults: !0
-                            }), n.searchClient.queryForType(a, i, "", {
+                            }), n.searchClient.queryForType(i, a, "", {
                                 hitsPerPage: se
                             }).then(function(e) {
                                 if (e) {
-                                    var t = Object(ie.b)({
+                                    var t = Object(ae.b)({
                                         searchResults: e
                                     });
                                     n.setState({
@@ -4076,8 +4269,8 @@
                         })
                     }, t.prototype.componentDidUpdate = function(e, t) {
                         var n = this.state.focusedIndex,
-                            i = t.focusedIndex;
-                        null !== i && null === n ? this.blurResultRef(i) : null !== n && i !== n && this.focusResultRef(n)
+                            a = t.focusedIndex;
+                        null !== a && null === n ? this.blurResultRef(a) : null !== n && a !== n && this.focusResultRef(n)
                     }, t.prototype.render = function() {
                         return s.createElement(G.Xa, {
                             position: G.hb.Relative
@@ -4085,7 +4278,7 @@
                             margin: {
                                 bottom: 1
                             }
-                        }, this.renderSearchOptions()), s.createElement(x.a, {
+                        }, this.renderSearchOptions()), s.createElement(M.a, {
                             onClickOut: this.hideResults
                         }, s.createElement(G.tb, {
                             id: le.SEARCH_INPUT,
@@ -4322,7 +4515,7 @@
                         return e.game ? s.createElement(G.Pa, {
                             ellipsis: !0
                         }, s.createElement(G.U, {
-                            to: Object(j.c)(e.game.name),
+                            to: Object(U.c)(e.game.name),
                             title: e.game.name
                         }, e.game.name)) : null
                     }, t
@@ -4351,16 +4544,16 @@
                             })
                         }, n.selectClip = function(e, t) {
                             void 0 === t && (t = !0), n.setState(function(n) {
-                                var i = n.selectedClipSlugs;
-                                if (t) i = i.concat([e]);
+                                var a = n.selectedClipSlugs;
+                                if (t) a = a.concat([e]);
                                 else {
-                                    var a = i.indexOf(e);
-                                    i = i.filter(function(e, t) {
-                                        return t !== a
+                                    var i = a.indexOf(e);
+                                    a = a.filter(function(e, t) {
+                                        return t !== i
                                     })
                                 }
                                 return {
-                                    selectedClipSlugs: i
+                                    selectedClipSlugs: a
                                 }
                             })
                         }, n.toggleViewsSort = function() {
@@ -4539,9 +4732,9 @@
                             onClick: this.renderBatchDeleteModal,
                             "data-test-selector": ke
                         })))));
-                        var i = this.props.sort,
-                            a = i === r.ViewsAscending || i === r.ViewsDescending,
-                            l = i === r.CreatedAtAscending || i === r.CreatedAtDescending,
+                        var a = this.props.sort,
+                            i = a === r.ViewsAscending || a === r.ViewsDescending,
+                            l = a === r.CreatedAtAscending || a === r.CreatedAtDescending,
                             o = Object(w.d)("Created", "ClipsManagerTable"),
                             c = Object(w.d)("Views", "ClipsManagerTable");
                         return s.createElement(G.Ja, null, s.createElement(G.P, {
@@ -4593,7 +4786,7 @@
                             bold: !0,
                             ellipsis: !0
                         }, o), l && s.createElement(G.qb, {
-                            asset: i === r.CreatedAtDescending ? G.rb.GlyphArrDown : G.rb.GlyphArrUp,
+                            asset: a === r.CreatedAtDescending ? G.rb.GlyphArrDown : G.rb.GlyphArrUp,
                             type: G.sb.Brand
                         }))))), s.createElement(G.P, {
                             cols: 2
@@ -4622,14 +4815,14 @@
                             title: c,
                             bold: !0,
                             ellipsis: !0
-                        }, c), a && s.createElement(G.qb, {
-                            asset: i === r.ViewsDescending ? G.rb.GlyphArrDown : G.rb.GlyphArrUp,
+                        }, c), i && s.createElement(G.qb, {
+                            asset: a === r.ViewsDescending ? G.rb.GlyphArrDown : G.rb.GlyphArrUp,
                             type: G.sb.Brand
                         }))))))
                     }, t.prototype.renderClipRow = function(e) {
                         var t = this.state.selectedClipSlugs.includes(e.slug);
                         if (e.slug === this.state.expandedSlug) {
-                            var n = this.props.userRole === h.Curator ? M.a.MyClips : M.a.ClipsOfMyChannel;
+                            var n = this.props.userRole === h.Curator ? x.a.MyClips : x.a.ClipsOfMyChannel;
                             return s.createElement(ee, {
                                 key: e.slug,
                                 dataTarget: "clips-manager-table-row",
@@ -4651,7 +4844,7 @@
                     }, t
                 }(s.Component),
                 we = n("a+SD");
-            var Te = Object(o.compose)(Object(b.b)("ClipsManagerTable"), Object(N.a)(we, {
+            var Ne = Object(o.compose)(Object(b.b)("ClipsManagerTable"), Object(T.a)(we, {
                     options: function(e) {
                         var t = {
                             sort: g[e.sort],
@@ -4669,14 +4862,14 @@
                     props: function(e) {
                         var t = [],
                             n = "",
-                            i = !1;
+                            a = !1;
                         return e.data.user && e.data.user.clips && (n = e.data.user.id, t = e.data.user.clips.edges.map(function(e) {
                             return e.node
-                        }), i = e.data.user.clips.pageInfo.hasNextPage), {
+                        }), a = e.data.user.clips.pageInfo.hasNextPage), {
                             userID: n,
                             clips: t,
                             loading: e.data.loading,
-                            hasNextPage: i,
+                            hasNextPage: a,
                             error: e.data.error,
                             loadMore: function() {
                                 var t = e.data.user.clips.edges,
@@ -4687,12 +4880,12 @@
                                     }),
                                     updateQuery: function(e, t) {
                                         var n = t.fetchMoreResult,
-                                            i = e.user.clips.edges,
-                                            a = n.user.clips.edges;
+                                            a = e.user.clips.edges,
+                                            i = n.user.clips.edges;
                                         return {
                                             user: l.__assign({}, n.user, {
                                                 clips: l.__assign({}, n.user.clips, {
-                                                    edges: Object(O.c)(i, a)
+                                                    edges: Object(O.c)(a, i)
                                                 })
                                             })
                                         }
@@ -4735,7 +4928,7 @@
                         closeModal: _.c
                     }, e)
                 }))(Ee),
-                Ne = n("Y9ZL"),
+                Te = n("Y9ZL"),
                 De = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -4784,7 +4977,7 @@
                     }, t.prototype.componentDidUpdate = function(e) {
                         this.reportInteractive(), e.data.loading && !this.props.data.loading && this.setPageTitle()
                     }, t.prototype.render = function() {
-                        return this.props.data.loading || this.props.data.error || !this.props.data.currentUser ? null : this.props.data.currentUser.login.toLowerCase() !== this.props.channelName.toLowerCase() ? s.createElement(T.a, {
+                        return this.props.data.loading || this.props.data.error || !this.props.data.currentUser ? null : this.props.data.currentUser.login.toLowerCase() !== this.props.channelName.toLowerCase() ? s.createElement(N.a, {
                             message: Object(w.d)("Access Denied: you don't have access to these videos", "ClipsManagerPage")
                         }) : s.createElement(G.Xa, {
                             className: "scroll-y",
@@ -4793,7 +4986,7 @@
                                 top: 3
                             },
                             fullHeight: !0
-                        }, s.createElement(Te, {
+                        }, s.createElement(Ne, {
                             channelName: this.props.data.currentUser.login,
                             channelID: this.props.data.currentUser.id,
                             sort: this.state.sortOption,
@@ -4816,7 +5009,7 @@
                         clearSearch: E.func
                     }, t
                 }(s.Component),
-                Oe = Object(o.compose)(Object(b.b)("ClipsManager"), Object(N.a)(Ne), c.a)(De);
+                Oe = Object(o.compose)(Object(b.b)("ClipsManager"), Object(T.a)(Te), c.a)(De);
             var _e = Object(v.connect)(function(e) {
                 return {
                     isLoggedIn: Object(y.f)(e)
@@ -4849,7 +5042,7 @@
                         })
                     }, t
                 }(s.Component),
-                Me = Object(o.compose)(Object(b.b)("ClipsOfMeManagerPage", {
+                xe = Object(o.compose)(Object(b.b)("ClipsOfMeManagerPage", {
                     destination: u.a.ChannelClipsManager
                 }), Object(d.a)({
                     location: p.PageviewLocation.ChannelClipsManager,
@@ -4857,7 +5050,7 @@
                         is_live: !1
                     }
                 }), c.a)(Ie),
-                xe = function(e) {
+                Me = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onRoleChange = function(e) {
@@ -4874,7 +5067,7 @@
                         })
                     }, t
                 }(s.Component),
-                Le = Object(o.compose)(Object(b.b)("MyClipsManagerPage", {
+                Fe = Object(o.compose)(Object(b.b)("MyClipsManagerPage", {
                     autoReportInteractive: !0,
                     destination: u.a.MyClipsManager
                 }), Object(d.a)({
@@ -4882,11 +5075,11 @@
                     properties: {
                         is_live: !1
                     }
-                }), c.a)(xe);
+                }), c.a)(Me);
             n.d(t, "ChannelClipsManagerPage", function() {
-                return Me
+                return xe
             }), n.d(t, "MyClipsManagerPage", function() {
-                return Le
+                return Fe
             })
         },
         r62z: function(e, t, n) {
@@ -4900,34 +5093,34 @@
             }), n.d(t, "d", function() {
                 return u
             });
-            var i = n("+GjP"),
-                a = "https://www.facebook.com/sharer/sharer.php",
+            var a = n("+GjP"),
+                i = "https://www.facebook.com/sharer/sharer.php",
                 r = "https://www.twitter.com/share",
                 l = "https://www.reddit.com/submit",
                 s = "https://vk.com/share.php";
 
             function o(e) {
-                return Object(i.e)(a, {
+                return Object(a.e)(i, {
                     u: e
                 })
             }
 
             function c(e, t) {
-                return Object(i.e)(r, {
+                return Object(a.e)(r, {
                     url: e,
                     text: t
                 })
             }
 
             function d(e, t) {
-                return Object(i.e)(l, {
+                return Object(a.e)(l, {
                     url: e,
                     title: t
                 })
             }
 
             function u(e) {
-                return Object(i.e)(s, {
+                return Object(a.e)(s, {
                     url: e
                 })
             }
@@ -4935,22 +5128,22 @@
         roU9: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return i
-            }), n.d(t, "b", function() {
                 return a
+            }), n.d(t, "b", function() {
+                return i
             });
-            var i = "//static-cdn.jtvnw.net/ttv-boxart",
-                a = "52x72"
+            var a = "//static-cdn.jtvnw.net/ttv-boxart",
+                i = "52x72"
         },
         rwoo: function(e, t, n) {
             "use strict";
-            var i;
+            var a;
             n.d(t, "a", function() {
-                    return i
+                    return a
                 }),
                 function(e) {
                     e.ChannelNotLive = "channel_not_live", e.UserBanned = "user_banned", e.UserTimedOut = "user_timed_out", e.ChannelBanned = "channel_banned", e.ChannelNotClippable = "channel_not_clippable", e.NotLoggedIn = "not_logged_in", e.VideoNotAvailable = "video_not_available", e.SubOnlyVod = "video_subonly", e.ClipMissing = "clip_missing", e.ClipMaintenance = "maintenance", e.Default = "500"
-                }(i || (i = {}))
+                }(a || (a = {}))
         },
         v8tf: function(e, t) {
             var n = {
@@ -5212,11 +5405,11 @@
         wbMx: function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
-                return i
+                return a
             }), n.d(t, "a", function() {
                 return d
             });
-            var i, a = n("mrSG"),
+            var a, i = n("mrSG"),
                 r = n("q1tI"),
                 l = n("/7QA"),
                 s = n("Jxh/"),
@@ -5225,25 +5418,25 @@
             n("jeZI");
             ! function(e) {
                 e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput", e[e.Download = 6] = "Download"
-            }(i || (i = {}));
+            }(a || (a = {}));
             var d = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderLink = function() {
                         var e = "social-button__link " + n.addSocialClassModifier("social-button__link");
-                        return n.props.type === i.Download ? r.createElement("a", a.__assign({
+                        return n.props.type === a.Download ? r.createElement("a", i.__assign({
                             href: n.props.url,
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
                         }, Object(c.hc)(n.props), {
                             download: n.props.text
-                        }), n.renderIcon()) : n.isLink() ? r.createElement("a", a.__assign({
+                        }), n.renderIcon()) : n.isLink() ? r.createElement("a", i.__assign({
                             href: n.getLinkTarget(),
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(c.hc)(n.props)), n.renderIcon()) : r.createElement("button", a.__assign({
+                        }, Object(c.hc)(n.props)), n.renderIcon()) : r.createElement("button", i.__assign({
                             onClick: n.copyPageUrl,
                             onMouseLeave: n.clearIsCopiedStatus,
                             className: e
@@ -5271,53 +5464,53 @@
                             asset: e
                         }))
                     }, n.isLink = function() {
-                        return n.props.type !== i.Copy
+                        return n.props.type !== a.Copy
                     }, n.getTooltipFromType = function() {
                         switch (n.props.type) {
-                            case i.Twitter:
+                            case a.Twitter:
                                 return "Twitter";
-                            case i.Reddit:
+                            case a.Reddit:
                                 return "Reddit";
-                            case i.Facebook:
+                            case a.Facebook:
                                 return "Facebook";
-                            case i.VKontakte:
+                            case a.VKontakte:
                                 return "VKontakte";
-                            case i.Download:
+                            case a.Download:
                                 return Object(l.d)("Download", "SocialButton");
-                            case i.Copy:
+                            case a.Copy:
                                 return n.state.isCopied ? Object(l.d)("Copied", "SocialButton") : Object(l.d)("Copy to clipboard", "SocialButton");
                             default:
                                 return ""
                         }
                     }, n.getAssetFromType = function() {
                         switch (n.props.type) {
-                            case i.Twitter:
+                            case a.Twitter:
                                 return c.rb.Twitter;
-                            case i.Facebook:
+                            case a.Facebook:
                                 return c.rb.Facebook;
-                            case i.VKontakte:
+                            case a.VKontakte:
                                 return c.rb.VKontakte;
-                            case i.Reddit:
+                            case a.Reddit:
                                 return c.rb.Reddit;
-                            case i.Download:
+                            case a.Download:
                                 return c.rb.Download;
-                            case i.Copy:
+                            case a.Copy:
                             default:
                                 return c.rb.Copy
                         }
                     }, n.addSocialClassModifier = function(e) {
                         switch (n.props.type) {
-                            case i.Twitter:
+                            case a.Twitter:
                                 return e + "--twitter";
-                            case i.Reddit:
+                            case a.Reddit:
                                 return e + "--reddit";
-                            case i.Facebook:
+                            case a.Facebook:
                                 return e + "--facebook";
-                            case i.VKontakte:
+                            case a.VKontakte:
                                 return e + "--vkontakte";
-                            case i.Download:
+                            case a.Download:
                                 return e + "--download";
-                            case i.Copy:
+                            case a.Copy:
                                 return e + "--copy";
                             default:
                                 return ""
@@ -5325,17 +5518,17 @@
                     }, n.getLinkTarget = function() {
                         var e = n.props,
                             t = e.text,
-                            a = e.type,
+                            i = e.type,
                             r = n.getUrl(),
                             l = t || "";
-                        switch (a) {
-                            case i.Reddit:
+                        switch (i) {
+                            case a.Reddit:
                                 return Object(o.b)(r, l);
-                            case i.VKontakte:
+                            case a.VKontakte:
                                 return Object(o.d)(r);
-                            case i.Facebook:
+                            case a.Facebook:
                                 return Object(o.a)(r);
-                            case i.Twitter:
+                            case a.Twitter:
                                 return Object(o.c)(r, l);
                             default:
                                 return ""
@@ -5344,7 +5537,7 @@
                         isCopied: !1
                     }, n
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(c.Xa, {
                         className: "social-button"
                     }, r.createElement(c.Wb, {

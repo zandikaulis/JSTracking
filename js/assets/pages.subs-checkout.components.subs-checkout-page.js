@@ -32,8 +32,8 @@
                 O = r.n(g),
                 N = r("bOWA"),
                 _ = r.n(N),
-                C = r("KL9a"),
-                T = r.n(C),
+                T = r("KL9a"),
+                C = r.n(T),
                 I = r("iSjI"),
                 R = r.n(I),
                 A = r("bQeB"),
@@ -114,7 +114,7 @@
                                             };
                                         case H.C.MASTERCARD:
                                             return {
-                                                src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? T.a : _.a,
+                                                src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? C.a : _.a,
                                                 alt: Object(o.d)("Mastercard", "PaymentMethodImage")
                                             };
                                         case H.C.VISA:
@@ -275,7 +275,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleClickEmote = function(e) {
-                            t.props.onClickEmote && t.props.onClickEmote(e)
+                            t.props.onClickEmote && t.props.onClickEmote(e, t.props.context)
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
@@ -910,7 +910,7 @@
         },
         DMoW: function(e, t, r) {
             "use strict";
-            var n, i, a, o, s, c, u, d, l, p, m, E, h, y, f, b, g, O, N, _, C, T, I, R, A, S, P, v, D, k, M, L, F, U, j, w, G, B, x, V, W, H, X, Y, z, K, Z, q, Q, J, $, ee, te, re, ne, ie, ae, oe, se, ce, ue, de, le, pe, me, Ee, he, ye, fe, be, ge, Oe, Ne, _e, Ce, Te, Ie, Re, Ae, Se, Pe, ve, De, ke, Me, Le, Fe, Ue, je, we, Ge, Be, xe, Ve, We, He, Xe, Ye, ze, Ke, Ze, qe, Qe, Je, $e, et, tt, rt, nt, it, at, ot, st, ct, ut, dt, lt, pt, mt;
+            var n, i, a, o, s, c, u, d, l, p, m, E, h, y, f, b, g, O, N, _, T, C, I, R, A, S, P, v, D, k, M, L, F, U, j, w, G, B, x, V, W, H, X, Y, z, K, Z, q, Q, J, $, ee, te, re, ne, ie, ae, oe, se, ce, ue, de, le, pe, me, Ee, he, ye, fe, be, ge, Oe, Ne, _e, Te, Ce, Ie, Re, Ae, Se, Pe, ve, De, ke, Me, Le, Fe, Ue, je, we, Ge, Be, xe, Ve, We, He, Xe, Ye, ze, Ke, Ze, qe, Qe, Je, $e, et, tt, rt, nt, it, at, ot, st, ct, ut, dt, lt, pt, mt, Et;
             r.d(t, "d", function() {
                     return i
                 }), r.d(t, "L", function() {
@@ -926,9 +926,9 @@
                 }), r.d(t, "g", function() {
                     return O
                 }), r.d(t, "m", function() {
-                    return C
-                }), r.d(t, "V", function() {
                     return T
+                }), r.d(t, "W", function() {
+                    return C
                 }), r.d(t, "N", function() {
                     return I
                 }), r.d(t, "q", function() {
@@ -941,6 +941,8 @@
                     return U
                 }), r.d(t, "s", function() {
                     return j
+                }), r.d(t, "V", function() {
+                    return w
                 }), r.d(t, "r", function() {
                     return G
                 }), r.d(t, "P", function() {
@@ -978,10 +980,10 @@
                 }), r.d(t, "T", function() {
                     return Ee
                 }), r.d(t, "o", function() {
-                    return Ce
-                }), r.d(t, "n", function() {
                     return Te
-                }), r.d(t, "W", function() {
+                }), r.d(t, "n", function() {
+                    return Ce
+                }), r.d(t, "X", function() {
                     return Se
                 }), r.d(t, "B", function() {
                     return Fe
@@ -1000,15 +1002,15 @@
                 }), r.d(t, "O", function() {
                     return Ye
                 }), r.d(t, "y", function() {
-                    return tt
-                }), r.d(t, "J", function() {
                     return rt
-                }), r.d(t, "K", function() {
+                }), r.d(t, "J", function() {
                     return nt
+                }), r.d(t, "K", function() {
+                    return it
                 }), r.d(t, "e", function() {
-                    return lt
-                }), r.d(t, "t", function() {
                     return pt
+                }), r.d(t, "t", function() {
+                    return mt
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -1072,10 +1074,10 @@
                 }(_ || (_ = {})),
                 function(e) {
                     e.CREATED = "CREATED", e.CREATING = "CREATING", e.FAILED = "FAILED"
-                }(C || (C = {})),
+                }(T || (T = {})),
                 function(e) {
                     e.PRIVATE = "PRIVATE", e.PUBLIC = "PUBLIC"
-                }(T || (T = {})),
+                }(C || (C = {})),
                 function(e) {
                     e.ENDED = "ENDED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.UNKNOWN = "UNKNOWN"
                 }(I || (I = {})),
@@ -1234,10 +1236,10 @@
                 }(_e || (_e = {})),
                 function(e) {
                     e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
-                }(Ce || (Ce = {})),
+                }(Te || (Te = {})),
                 function(e) {
                     e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
-                }(Te || (Te = {})),
+                }(Ce || (Ce = {})),
                 function(e) {
                     e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
                 }(Ie || (Ie = {})),
@@ -1311,62 +1313,65 @@
                     e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }(Ke || (Ke = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }(Ze || (Ze = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(qe || (qe = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
                 }(Je || (Je = {})),
                 function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }($e || ($e = {})),
                 function(e) {
                     e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(et || (et = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(tt || (tt = {})),
                 function(e) {
-                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(rt || (rt = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
+                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
                 }(nt || (nt = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
                 }(it || (it = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }(at || (at = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(ot || (ot = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(st || (st = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(ct || (ct = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(ut || (ut = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(dt || (dt = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
                 }(lt || (lt = {})),
                 function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
                 }(pt || (pt = {})),
                 function(e) {
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                }(mt || (mt = {})),
+                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(mt || (mt = {}))
+                }(Et || (Et = {}))
         },
         E78O: function(e, t, r) {},
         EF6p: function(e, t, r) {
@@ -2193,9 +2198,9 @@
             }), r.d(t, "a", function() {
                 return m
             }), r.d(t, "f", function() {
-                return h
+                return E
             }), r.d(t, "d", function() {
-                return y
+                return h
             });
             var n = r("mrSG"),
                 i = r("lZdE"),
@@ -2231,15 +2236,14 @@
             function u(e) {
                 for (var t = [], r = function(e) {
                         if (!e || !e.id || !e.token) return "continue";
-                        var r = E(e.token),
-                            i = o[r] || r,
-                            a = s.reduce(function(t, r) {
+                        var r = o[e.token] || e.token,
+                            i = s.reduce(function(t, r) {
                                 var n = t;
                                 return n && (n = n.concat(", ")), n.concat("https://static-cdn.jtvnw.net/emoticons/v1/" + e.id + "/" + r + " " + r + "x")
                             }, "");
                         t.push(n.__assign({
-                            displayName: i,
-                            srcSet: a
+                            displayName: r,
+                            srcSet: i
                         }, e))
                     }, i = 0, a = e; i < a.length; i++) {
                     r(a[i])
@@ -2296,12 +2300,7 @@
                 }
                 return r.concat(t)
             }
-            var E = function(e) {
-                    return function(e) {
-                        return /[\|\\\^\$\*\+\?\:\#]/.test(e)
-                    }(e) ? "^" + e.replace(/\\(?=[&;:])/g, "") + "$" : e
-                },
-                h = function(e, t, r) {
+            var E = function(e, t, r) {
                     var n = r || a.d,
                         o = [],
                         s = [],
@@ -2317,7 +2316,7 @@
                         return n[t.token].count - n[e.token].count
                     }), c.concat(o).concat(s)
                 },
-                y = function(e) {
+                h = function(e) {
                     var t = {};
                     return e.filter(function(e) {
                         return !t.hasOwnProperty(e.token) && (t[e.token] = !0)
@@ -2496,7 +2495,7 @@
                         configurable: !0
                     }), t
                 }(l.PureComponent),
-                C = (r("JH5r"), function(e) {
+                T = (r("JH5r"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2525,12 +2524,12 @@
             function(e) {
                 e[e.Info = 0] = "Info", e[e.Error = 1] = "Error"
             }(O || (O = {}));
-            var T = function(e) {
+            var C = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return u.__extends(t, e), t.prototype.render = function() {
-                        return this.props.level === O.Error ? l.createElement(C, null, l.createElement(N.W, {
+                        return this.props.level === O.Error ? l.createElement(T, null, l.createElement(N.W, {
                             bold: !0
                         }, this.title), l.createElement(N.Xa, {
                             margin: {
@@ -4319,8 +4318,8 @@
                 Oe = r.n(ge),
                 Ne = r("AVF4"),
                 _e = r.n(Ne),
-                Ce = r("BIez"),
-                Te = r.n(Ce),
+                Te = r("BIez"),
+                Ce = r.n(Te),
                 Ie = r("EF6p"),
                 Re = r.n(Ie),
                 Ae = r("xgE2"),
@@ -4355,7 +4354,7 @@
                                 alt: Me.CreditCard(),
                                 srcSet: {
                                     "1x": _e.a,
-                                    "2x": Te.a
+                                    "2x": Ce.a
                                 }
                             }
                         }, {
@@ -4367,7 +4366,7 @@
                                 alt: Me.CreditCard(),
                                 srcSet: {
                                     "1x": _e.a,
-                                    "2x": Te.a
+                                    "2x": Ce.a
                                 }
                             }
                         }, {
@@ -5173,7 +5172,7 @@
                             margin: {
                                 y: 2
                             }
-                        }, l.createElement(T, {
+                        }, l.createElement(C, {
                             errorCode: this.state.errors.code,
                             level: this.state.errors.level
                         })), l.createElement(We, {
@@ -6716,9 +6715,9 @@
                 }),
                 N = r("ZDlU"),
                 _ = r("QV0B"),
-                C = r("mb7O"),
-                T = (r("ZsMu"), function() {
-                    return o.createElement(C.a, null, o.createElement(f.Xa, {
+                T = r("mb7O"),
+                C = (r("ZsMu"), function() {
+                    return o.createElement(T.a, null, o.createElement(f.Xa, {
                         className: "error-ticket-description__header",
                         padding: 2
                     }, o.createElement(f.Cb, {
@@ -6736,7 +6735,7 @@
                     }, o.createElement(N.a, null)))))
                 }),
                 I = (r("1P3F"), function() {
-                    return o.createElement(C.a, null, o.createElement(f.Xa, {
+                    return o.createElement(T.a, null, o.createElement(f.Xa, {
                         className: "placeholder-ticket-description__header",
                         padding: 2
                     }, o.createElement(f.Cb, {
@@ -6754,7 +6753,7 @@
                 R = r("KYZ7"),
                 A = r.n(R),
                 S = (r("R9u/"), function(e) {
-                    return o.createElement(C.a, null, o.createElement(f.Cb, {
+                    return o.createElement(T.a, null, o.createElement(f.Cb, {
                         background: f.r.Base
                     }, o.createElement(f.Xa, {
                         className: "turbo-ticket-description__banner-image",
@@ -6832,7 +6831,7 @@
                             t = e.product,
                             r = e.loading,
                             n = e.error;
-                        return !t && r ? o.createElement(I, null) : !t || n ? o.createElement(T, null) : this.isTurboProduct ? o.createElement(S, {
+                        return !t && r ? o.createElement(I, null) : !t || n ? o.createElement(C, null) : this.isTurboProduct ? o.createElement(S, {
                             productPrice: this.price,
                             productPriceInterval: t.interval && t.interval.unit,
                             productPriceTaxInclusive: this.taxInclusive,
@@ -6846,7 +6845,7 @@
                             productPriceInterval: t.interval && t.interval.unit,
                             productPriceTaxInclusive: this.taxInclusive,
                             showEuSubs: this.props.showEuSubs
-                        }) : o.createElement(C.a, null, o.createElement(f.Cb, {
+                        }) : o.createElement(T.a, null, o.createElement(f.Cb, {
                             background: f.r.Base
                         }, o.createElement(O, {
                             bannerImageURL: t.owner && t.owner.bannerImageURL,
@@ -7625,8 +7624,8 @@
                 O = r("NvVO"),
                 N = r("2xye"),
                 _ = r("SNyx"),
-                C = r("KriR"),
-                T = r("5ELF"),
+                T = r("KriR"),
+                C = r("5ELF"),
                 I = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -7640,7 +7639,7 @@
                             position: E.hb.Relative,
                             fullWidth: !0,
                             fullHeight: !0
-                        }, d.createElement(T.a, null), d.createElement(E.Xa, {
+                        }, d.createElement(C.a, null), d.createElement(E.Xa, {
                             padding: {
                                 top: 5
                             },
@@ -7663,7 +7662,7 @@
                                         recipientID: e && e.id,
                                         recipientDisplayName: e && e.displayName,
                                         trackingContext: {
-                                            source: C.c.Direct
+                                            source: T.c.Direct
                                         }
                                     })
                                 }

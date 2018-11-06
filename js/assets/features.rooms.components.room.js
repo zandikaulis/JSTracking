@@ -2762,22 +2762,28 @@
                             var t = Object(G.k)("/ban " + e);
                             if (t && !t.duration) {
                                 var i = n.userLogin(t.banTarget);
-                                return i ? {
-                                    deferred: n.props.banUserMutation(i).then(function(e) {
-                                        var t = e.banUserFromChatRoom;
-                                        return t.error ? {
-                                            notice: Object($.a)(i, t.error.code)
-                                        } : n.props.suppressLocalSuccessMessage ? {} : {
-                                            notice: Object(l.d)("{userLogin} is now banned from this channel.", {
-                                                userLogin: i
-                                            }, "BanCommandHandler")
-                                        }
-                                    }).catch(function() {
-                                        return {
-                                            notice: Object(l.d)("Unable to ban user.", "BanCommandHandler")
-                                        }
-                                    })
-                                } : {
+                                if (i) {
+                                    var o = Object(l.d)("Unable to ban user.", "BanCommandHandler");
+                                    return {
+                                        deferred: n.props.banUserMutation(i).then(function(e) {
+                                            var t = e.banUserFromChatRoom;
+                                            return t ? t.error ? {
+                                                notice: Object($.a)(i, t.error.code)
+                                            } : n.props.suppressLocalSuccessMessage ? {} : {
+                                                notice: Object(l.d)("{userLogin} is now banned from this channel.", {
+                                                    userLogin: i
+                                                }, "BanCommandHandler")
+                                            } : {
+                                                notice: o
+                                            }
+                                        }).catch(function() {
+                                            return {
+                                                notice: o
+                                            }
+                                        })
+                                    }
+                                }
+                                return {
                                     deferred: Promise.resolve({
                                         notice: Object(l.d)("Please specify a user to ban.", "BanCommandHandler")
                                     })
@@ -2790,20 +2796,23 @@
                             }
                         }, n.unbanUser = function(e) {
                             if (e && 0 !== e.length) {
-                                var t = n.userLogin(e);
+                                var t = n.userLogin(e),
+                                    i = Object(l.d)("Unable to unban user.", "BanCommandHandler");
                                 return {
                                     deferred: n.props.unbanUserMutation(t).then(function(e) {
-                                        var i = e.unbanUserFromChatRoom;
-                                        return i.error ? {
-                                            notice: Object(z.a)(t, i.error.code)
+                                        var o = e.unbanUserFromChatRoom;
+                                        return o ? o.error ? {
+                                            notice: Object(z.a)(t, o.error.code)
                                         } : n.props.suppressLocalSuccessMessage ? {} : {
                                             notice: Object(l.d)("{bannedUserLogin} is no longer banned from this channel.", {
                                                 bannedUserLogin: t
                                             }, "BanCommandHandler")
+                                        } : {
+                                            notice: i
                                         }
                                     }).catch(function() {
                                         return {
-                                            notice: Object(l.d)("Unable to unban user.", "BanCommandHandler")
+                                            notice: i
                                         }
                                     })
                                 }
@@ -2818,23 +2827,29 @@
                             if (t) {
                                 var i = n.userLogin(t.banTarget),
                                     o = t.duration || J;
-                                return i ? {
-                                    deferred: n.props.banUserMutation(i, o).then(function(e) {
-                                        var t = e.banUserFromChatRoom;
-                                        return t.error ? {
-                                            notice: Object($.a)(i, t.error.code, !0)
-                                        } : n.props.suppressLocalSuccessMessage ? {} : {
-                                            notice: Object(l.d)("{userLogin} has been timed out for {duration} seconds.", {
-                                                userLogin: i,
-                                                duration: o
-                                            }, "BanCommandHandler")
-                                        }
-                                    }).catch(function() {
-                                        return {
-                                            notice: Object(l.d)("Unable to timeout user.", "BanCommandHandler")
-                                        }
-                                    })
-                                } : {
+                                if (i) {
+                                    var a = Object(l.d)("Unable to timeout user.", "BanCommandHandler");
+                                    return {
+                                        deferred: n.props.banUserMutation(i, o).then(function(e) {
+                                            var t = e.banUserFromChatRoom;
+                                            return t ? t.error ? {
+                                                notice: Object($.a)(i, t.error.code, !0)
+                                            } : n.props.suppressLocalSuccessMessage ? {} : {
+                                                notice: Object(l.d)("{userLogin} has been timed out for {duration} seconds.", {
+                                                    userLogin: i,
+                                                    duration: o
+                                                }, "BanCommandHandler")
+                                            } : {
+                                                notice: a
+                                            }
+                                        }).catch(function() {
+                                            return {
+                                                notice: a
+                                            }
+                                        })
+                                    }
+                                }
+                                return {
                                     deferred: Promise.resolve({
                                         notice: Object(l.d)("Please specify a user to timeout.", "BanCommandHandler")
                                     })
@@ -2847,20 +2862,23 @@
                             }
                         }, n.untimeoutUser = function(e) {
                             if (e) {
-                                var t = n.userLogin(e);
+                                var t = n.userLogin(e),
+                                    i = Object(l.d)("Unable to untimeout user.", "BanCommandHandler");
                                 return {
                                     deferred: n.props.unbanUserMutation(t).then(function(e) {
-                                        var i = e.unbanUserFromChatRoom;
-                                        return i.error ? {
-                                            notice: Object(z.a)(t, i.error.code, !0)
+                                        var o = e.unbanUserFromChatRoom;
+                                        return o ? o.error ? {
+                                            notice: Object(z.a)(t, o.error.code, !0)
                                         } : n.props.suppressLocalSuccessMessage ? {} : {
                                             notice: Object(l.d)("{login} is no longer timed out in this channel.", {
                                                 login: t
                                             }, "BanCommandHandler")
+                                        } : {
+                                            notice: i
                                         }
                                     }).catch(function() {
                                         return {
-                                            notice: Object(l.d)("Unable to untimeout user.", "BanCommandHandler")
+                                            notice: i
                                         }
                                     })
                                 }
@@ -2897,7 +2915,7 @@
                         channelID: e.channelID
                     }
                 },
-                K = Object(d.compose)(Object(q.b)(Y), Object(W.b)(Y))(Q),
+                K = Object(d.compose)(Object(q.a)(Y), Object(W.a)(Y))(Q),
                 Z = t("IRJ5"),
                 ee = t("bhOa"),
                 ne = t("Q8Sx"),

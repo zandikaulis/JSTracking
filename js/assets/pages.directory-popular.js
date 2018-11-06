@@ -1195,9 +1195,10 @@
                             tagFilters: this.props.tagFilters
                         });
                         var t = null,
-                            n = null;
-                        if ("en" !== this.props.languageCode) {
-                            var a = {
+                            n = null,
+                            a = this.props.languageCode.split("-")[0];
+                        if ("en" !== a) {
+                            var i = {
                                 color: M.O.Base
                             };
                             n = u.createElement(M.Xa, {
@@ -1206,17 +1207,17 @@
                                 }
                             }, u.createElement(M.W, d.__assign({
                                 type: M.Tb.H4
-                            }, a), Object(p.d)("All Channels", "PopularInternationalSection"))), this.props.tagFilters.length || this.props.languageTagFilters.length || (t = u.createElement(z, {
+                            }, i), Object(p.d)("All Channels", "PopularInternationalSection"))), this.props.tagFilters.length || this.props.languageTagFilters.length || (t = u.createElement(z, {
                                 directoryWidth: this.state.directoryWidth,
-                                languageCode: this.props.languageCode,
+                                languageCode: a,
                                 platformType: q[decodeURIComponent(this.props.match.path)] || "all",
                                 addTagFilter: this.addTagFilter,
                                 tagFilters: this.props.tagFilters,
                                 scrollToTop: this.context.scrollToTop
                             }))
                         }
-                        var i = N.PageviewMedium.Browse,
-                            r = te(this.props.data).map(function(t, n) {
+                        var r = N.PageviewMedium.Browse,
+                            o = te(this.props.data).map(function(t, n) {
                                 var a = t && t.node;
                                 return a && a.broadcaster && a.broadcaster.id ? u.createElement("div", {
                                     key: a.id,
@@ -1237,7 +1238,7 @@
                                         state: {
                                             content: N.PageviewContent.Live,
                                             content_index: n,
-                                            medium: i
+                                            medium: r
                                         }
                                     },
                                     thumbnailImageProps: {
@@ -1251,7 +1252,7 @@
                                     channelLinkTo: {
                                         pathname: "/" + a.broadcaster.login + "/videos",
                                         state: {
-                                            medium: i,
+                                            medium: r,
                                             content: N.PageviewContent.Live,
                                             content_index: n
                                         }
@@ -1261,7 +1262,7 @@
                                     gameTitleLinkTo: {
                                         pathname: Object(x.c)(a.game && a.game.name || ""),
                                         state: {
-                                            medium: i,
+                                            medium: r,
                                             content: N.PageviewContent.Live,
                                             content_index: n
                                         }
@@ -1293,7 +1294,7 @@
                                     }
                                 }))) : null
                             }),
-                            o = !(this.props.data.loading || this.props.data.error || !this.props.data.streams || !this.props.data.streams.pageInfo || !this.props.data.streams.pageInfo.hasNextPage);
+                            s = !(this.props.data.loading || this.props.data.error || !this.props.data.streams || !this.props.data.streams.pageInfo || !this.props.data.streams.pageInfo.hasNextPage);
                         return u.createElement(M.Xa, {
                             flexShrink: 0,
                             "data-target": Z
@@ -1320,8 +1321,8 @@
                             },
                             slotRendered: this.updateDisplayAdOrder,
                             autoEnable: !1
-                        }), r), u.createElement(b.a, {
-                            enabled: o,
+                        }), o), u.createElement(b.a, {
+                            enabled: s,
                             loadMore: this.props.loadMore,
                             pixelThreshold: 200
                         }), u.createElement(v.a, {

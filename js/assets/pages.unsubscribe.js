@@ -205,7 +205,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleClickEmote = function(e) {
-                            t.props.onClickEmote && t.props.onClickEmote(e)
+                            t.props.onClickEmote && t.props.onClickEmote(e, t.props.context)
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
@@ -988,9 +988,9 @@
             }), n.d(t, "a", function() {
                 return m
             }), n.d(t, "f", function() {
-                return h
+                return b
             }), n.d(t, "d", function() {
-                return f
+                return h
             });
             var r = n("mrSG"),
                 i = n("lZdE"),
@@ -1026,15 +1026,14 @@
             function u(e) {
                 for (var t = [], n = function(e) {
                         if (!e || !e.id || !e.token) return "continue";
-                        var n = b(e.token),
-                            i = s[n] || n,
-                            a = o.reduce(function(t, n) {
+                        var n = s[e.token] || e.token,
+                            i = o.reduce(function(t, n) {
                                 var r = t;
                                 return r && (r = r.concat(", ")), r.concat("https://static-cdn.jtvnw.net/emoticons/v1/" + e.id + "/" + n + " " + n + "x")
                             }, "");
                         t.push(r.__assign({
-                            displayName: i,
-                            srcSet: a
+                            displayName: n,
+                            srcSet: i
                         }, e))
                     }, i = 0, a = e; i < a.length; i++) {
                     n(a[i])
@@ -1091,12 +1090,7 @@
                 }
                 return n.concat(t)
             }
-            var b = function(e) {
-                    return function(e) {
-                        return /[\|\\\^\$\*\+\?\:\#]/.test(e)
-                    }(e) ? "^" + e.replace(/\\(?=[&;:])/g, "") + "$" : e
-                },
-                h = function(e, t, n) {
+            var b = function(e, t, n) {
                     var r = n || a.d,
                         s = [],
                         o = [],
@@ -1112,7 +1106,7 @@
                         return r[t.token].count - r[e.token].count
                     }), c.concat(s).concat(o)
                 },
-                f = function(e) {
+                h = function(e) {
                     var t = {};
                     return e.filter(function(e) {
                         return !t.hasOwnProperty(e.token) && (t[e.token] = !0)
@@ -1548,13 +1542,13 @@
                         }
                     }
                 }))(D);
-            var U = Object(r.connect)(function(e) {
+            var x = Object(r.connect)(function(e) {
                 return {
                     sessionUser: Object(i.e)(e)
                 }
             })(j);
             n.d(t, "a", function() {
-                return U
+                return x
             })
         },
         VrOd: function(e, t, n) {},
@@ -1996,13 +1990,13 @@
                         return Object(g.d)("I didn't use Turbo as much as I expected", "unsubscribe-reasons")
                     }
                 },
-                U = {
+                x = {
                     value: "I still saw advertisements",
                     translation: function() {
                         return Object(g.d)("I still saw advertisements", "unsubscribe-reasons")
                     }
                 },
-                x = [{
+                U = [{
                     value: "I had a bad interaction with the broadcaster",
                     translation: function() {
                         return Object(g.d)("I had a bad interaction with the broadcaster", "unsubscribe-reasons")
@@ -2034,13 +2028,13 @@
                         return Object(g.d)("The channel benefits are not what I expected", "unsubscribe-reasons")
                     }
                 }],
-                A = [U, I, F, P, j, {
+                A = [x, I, F, P, j, {
                     value: "I don't feel like Turbo offers enough value",
                     translation: function() {
                         return Object(g.d)("I don't feel like Turbo offers enough value", "unsubscribe-reasons")
                     }
                 }],
-                B = [D, U, I, {
+                B = [D, x, I, {
                     value: "I only wanted ad-free viewing for one day",
                     translation: function() {
                         return Object(g.d)("I only wanted ad-free viewing for one day", "unsubscribe-reasons")
@@ -2061,7 +2055,7 @@
                             reason: "",
                             unsubscribing: !1,
                             showUnsubConfirmation: !1
-                        }, t.cancelReasons = "turbo" === t.props.productName ? B : R, t.doNotRenewReasons = "turbo" === t.props.productName ? A : x, t.isCancel = t.props.unsubscribeType === r.Cancel, t.reasons = t.isCancel ? Object(N.a)(t.cancelReasons.slice()) : Object(N.a)(t.doNotRenewReasons.slice()), t.updateReason = function(e) {
+                        }, t.cancelReasons = "turbo" === t.props.productName ? B : R, t.doNotRenewReasons = "turbo" === t.props.productName ? A : U, t.isCancel = t.props.unsubscribeType === r.Cancel, t.reasons = t.isCancel ? Object(N.a)(t.cancelReasons.slice()) : Object(N.a)(t.doNotRenewReasons.slice()), t.updateReason = function(e) {
                             t.setState({
                                 reason: e
                             })

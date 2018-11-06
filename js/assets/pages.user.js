@@ -719,7 +719,7 @@
                         logout: S.f
                     }, e)
                 })(F),
-                P = function(e) {
+                I = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -746,16 +746,16 @@
                         configurable: !0
                     }), t
                 }(a.Component),
-                I = Object(h.compose)(Object(E.b)("DeleteAccountPage", {
+                P = Object(h.compose)(Object(E.b)("DeleteAccountPage", {
                     destination: g.a.DeleteAccount
                 }), Object(f.a)({
                     location: y.PageviewLocation.DeleteAccount
-                }))(P);
+                }))(I);
             var U = Object(d.connect)(function(e) {
                     return {
                         isLoggedIn: Object(p.f)(e)
                     }
-                })(I),
+                })(P),
                 X = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -787,12 +787,12 @@
                 }), Object(f.a)({
                     location: y.PageviewLocation.DisableAccount
                 }))(X);
-            var N, L = Object(d.connect)(function(e) {
+            var N, M = Object(d.connect)(function(e) {
                     return {
                         isLoggedIn: Object(p.f)(e)
                     }
                 })(z),
-                M = function(e) {
+                W = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -808,7 +808,7 @@
                             flexWrap: _.Ba.NoWrap
                         }, a.createElement(c.a, null, a.createElement(i.a, {
                             path: "/user/disable-account",
-                            component: L
+                            component: M
                         }), a.createElement(i.a, {
                             path: "/user/delete-account",
                             component: U
@@ -825,9 +825,9 @@
                         })))
                     }, t
                 }(a.Component),
-                W = n("wUQP"),
+                L = n("wUQP"),
                 q = n("GxR5"),
-                K = function(e) {
+                B = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.startOver = function() {
@@ -871,18 +871,18 @@
                         }, Object(l.d)("Start Over", "AccountRecoveryContactSupport"))))
                     }, t
                 }(a.PureComponent),
-                B = n("rACw"),
+                K = n("rACw"),
                 G = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleKeyPress = function(e) {
-                            "Enter" === e.key && Object(B.b)(t.props.email) && t.props.changeStepToEnterUsername()
+                            "Enter" === e.key && Object(K.b)(t.props.email) && t.props.changeStepToEnterUsername()
                         }, t.handleChange = function(e) {
                             t.props.onChange(e.target.value)
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        var e = !Object(B.b)(this.props.email);
+                        var e = !Object(K.b)(this.props.email);
                         return a.createElement(a.Fragment, null, a.createElement(_.W, {
                             fontSize: _.Ca.Size3,
                             bold: !0
@@ -1051,7 +1051,7 @@
                                     changeStepToEnterEmail: this.changeStepToEnterEmail
                                 });
                             case N.ContactSupport:
-                                return a.createElement(K, {
+                                return a.createElement(B, {
                                     clearInputs: this.clearInputs,
                                     changeStepToEnterEmail: this.changeStepToEnterEmail
                                 });
@@ -1065,9 +1065,9 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                        Object(W.b)("native_account_recovery") || window.location.replace(Object(q.e)())
+                        Object(L.b)("native_account_recovery") || window.location.replace(Object(q.e)())
                     }, t.prototype.render = function() {
-                        return Object(W.b)("native_account_recovery") ? a.createElement(a.Fragment, null, a.createElement(_.Cb, {
+                        return Object(L.b)("native_account_recovery") ? a.createElement(a.Fragment, null, a.createElement(_.Cb, {
                             className: "account-recovery__header",
                             alignItems: _.f.Center,
                             color: _.O.Overlay,
@@ -1088,12 +1088,38 @@
                     autoReportInteractive: !0
                 }), Object(f.a)({
                     location: y.PageviewLocation.RecoverAccount
-                }))(H);
+                }))(H),
+                J = function() {
+                    return a.createElement(a.Fragment, null, a.createElement(_.W, {
+                        fontSize: _.Ca.Size3,
+                        bold: !0
+                    }, Object(l.d)("Account has been reported.", "NotMeReportedAccount")), a.createElement(_.Xa, {
+                        margin: {
+                            top: 1,
+                            bottom: 3
+                        }
+                    }, a.createElement(_.W, {
+                        fontSize: _.Ca.Size4
+                    }, Object(l.d)("Thank you for reporting. We have disabled the account. If you need additional assistance, <x:link>please contact our support team</x:link>.", {
+                        "x:link": function(e) {
+                            return a.createElement(_.U, {
+                                linkTo: "https://www.twitch.tv/help"
+                            }, e)
+                        }
+                    }, "NotMeReportedAccount"))), a.createElement(_.Xa, {
+                        margin: {
+                            y: 2
+                        },
+                        display: _.X.Flex
+                    }, a.createElement(_.z, {
+                        linkTo: "https://www.twitch.tv/"
+                    }, Object(l.d)("Back to Twitch", "NotMeReportedAccount"))))
+                };
             ! function(e) {
-                e.AccountInquiry = "accountInquiry"
+                e.AccountInquiry = "accountInquiry", e.ReportedAccount = "reportedAccount"
             }(V || (V = {}));
             n("7iKH");
-            var J = function(e) {
+            var $ = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1112,15 +1138,20 @@
                             className: "not-me-content__body"
                         }, this.renderContent()))
                     }, t.prototype.renderContent = function() {
-                        return this.state.currentStep, null
+                        switch (this.state.currentStep) {
+                            case V.ReportedAccount:
+                                return a.createElement(J, null);
+                            default:
+                                return null
+                        }
                     }, t
                 }(a.Component),
-                $ = (n("9IY9"), function(e) {
+                ee = (n("9IY9"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return Object(W.b)("native_not_me") ? a.createElement(a.Fragment, null, a.createElement(_.Cb, {
+                        return Object(L.b)("native_not_me") ? a.createElement(a.Fragment, null, a.createElement(_.Cb, {
                             className: "not-me-page__header",
                             alignItems: _.f.Center,
                             color: _.O.Overlay,
@@ -1133,21 +1164,21 @@
                             asset: _.rb.LogoGlitch,
                             width: 30,
                             height: 30
-                        })), a.createElement(J, null)) : a.createElement(u.a, null)
+                        })), a.createElement($, null)) : a.createElement(u.a, null)
                     }, t
                 }(a.Component)),
-                ee = Object(h.compose)(Object(E.b)("NotMePage", {
+                te = Object(h.compose)(Object(E.b)("NotMePage", {
                     destination: g.a.NotMe,
                     autoReportInteractive: !0
                 }), Object(f.a)({
                     location: y.PageviewLocation.NotMe
-                }))($);
+                }))(ee);
             n.d(t, "UserRoot", function() {
-                return M
+                return W
             }), n.d(t, "AccountRecoveryPage", function() {
                 return Z
             }), n.d(t, "NotMePage", function() {
-                return ee
+                return te
             })
         },
         y6xW: function(e, t, n) {}

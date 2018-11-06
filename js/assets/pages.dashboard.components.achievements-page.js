@@ -751,7 +751,7 @@
                 F = function(e) {
                     return r.createElement(L, {
                         title: Object(o.d)("Apply to the Twitch Partner program.", "AchievementsBannerPathToPartner"),
-                        subtitle: Object(o.d)("We will follow up in 7 business days.", "AchievementsBannerPathToPartner")
+                        subtitle: Object(o.d)("We usually follow up in 7 business days.", "AchievementsBannerPathToPartner")
                     }, r.createElement(j, {
                         buttonText: Object(o.d)("Apply", "AchievementsBannerPathToPartner"),
                         url: "/partner/signup",

@@ -3,22 +3,62 @@
         GyBV: function(e, t, n) {
             "use strict";
             n.r(t);
-            var a = n("mrSG"),
-                o = n("q1tI"),
+            var o = n("mrSG"),
+                a = n("q1tI"),
                 r = n("/7QA"),
-                c = n("/MKj"),
-                i = n("fvjX"),
-                d = n("aCAx"),
-                s = n("cZKs"),
-                l = n("yR8l"),
-                u = n("geRD"),
-                p = n("DMoW"),
-                b = n("yI6f"),
-                k = n("kRI/"),
-                m = n("3lt/"),
-                f = n("Ue10"),
-                h = n("M8Tb");
-            var g = function(e) {
+                i = n("eJ65"),
+                c = n("Ue10"),
+                d = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.onClick = function(e) {
+                            e.preventDefault(), e.stopPropagation(), t.props.openModal()
+                        }, t.onToggle = function(e) {
+                            !e && t.props.onMenuOpen && t.props.onMenuOpen()
+                        }, t
+                    }
+                    return o.__extends(t, e), t.prototype.render = function() {
+                        return a.createElement(i.a, {
+                            preventDefault: !0,
+                            stopPropagation: !0,
+                            onToggle: this.onToggle
+                        }, a.createElement(c.A, {
+                            icon: c.rb.More,
+                            size: c.B.Small
+                        }), a.createElement(c.Y, {
+                            direction: c.v.TopRight,
+                            items: [{
+                                title: Object(r.d)("I am not interested in this recommendation", "RecFeedbackButton"),
+                                onClick: this.onClick,
+                                figure: {
+                                    icon: c.rb.VisibilityHidden
+                                }
+                            }]
+                        }))
+                    }, t
+                }(a.Component),
+                s = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return o.__extends(t, e), t.prototype.render = function() {
+                        return a.createElement(c.z, {
+                            type: c.F.Text,
+                            onClick: this.props.openModal
+                        }, Object(r.d)("Not interested?", "RecFeedbackButton"))
+                    }, t
+                }(a.Component),
+                l = n("/MKj"),
+                p = n("fvjX"),
+                u = n("aCAx"),
+                b = n("yR8l"),
+                m = n("geRD"),
+                k = n("DMoW"),
+                f = n("yI6f"),
+                h = n("kRI/"),
+                g = n("3lt/"),
+                v = n("M8Tb");
+            var y = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -29,50 +69,50 @@
                                 showError: !1
                             });
                             var n = e.currentTarget.getAttribute("value"),
-                                a = null === n ? null : parseInt(n, 10);
+                                o = null === n ? null : parseInt(n, 10);
                             t.setState({
-                                selectedReasonIndex: a
+                                selectedReasonIndex: o
                             })
                         }, t.submitFeedback = function() {
                             var e = t.getCurrentChoiceData(),
                                 n = e.contentID,
-                                a = e.contentType,
-                                o = e.feedbackType,
+                                o = e.contentType,
+                                a = e.feedbackType,
                                 r = e.selectedReason;
                             if (r)
-                                if (n && a && o) {
-                                    var c = Object(u.a)({
-                                            category: o,
+                                if (n && o && a) {
+                                    var i = Object(m.a)({
+                                            category: a,
                                             itemID: n,
                                             itemType: function(e) {
                                                 switch (e) {
-                                                    case b.b.Shelf:
-                                                        return p.K.SHELF;
-                                                    case b.b.Game:
-                                                        return p.K.CATEGORY;
-                                                    case b.b.Live:
-                                                        return p.K.CHANNEL;
-                                                    case b.b.Vod:
-                                                        return p.K.VOD;
-                                                    case b.b.Clip:
-                                                        return p.K.UNSPECIFIED;
+                                                    case f.b.Shelf:
+                                                        return k.K.SHELF;
+                                                    case f.b.Game:
+                                                        return k.K.CATEGORY;
+                                                    case f.b.Live:
+                                                        return k.K.CHANNEL;
+                                                    case f.b.Vod:
+                                                        return k.K.VOD;
+                                                    case f.b.Clip:
+                                                        return k.K.UNSPECIFIED;
                                                     default:
                                                         return e
                                                 }
-                                            }(a),
-                                            sourceItemPage: m.PageviewMedium.TwitchHome,
+                                            }(o),
+                                            sourceItemPage: g.PageviewMedium.TwitchHome,
                                             sourceItemRequestID: "todo"
                                         }),
-                                        i = t.props.addFeedback(c);
+                                        c = t.props.addFeedback(i);
                                     t.props.trackRecFeedbackClickStep({
-                                        clickStep: k.a.Submit,
-                                        feedbackAction: k.b.Add,
-                                        feedbackReason: o,
+                                        clickStep: h.a.Submit,
+                                        feedbackAction: h.b.Add,
+                                        feedbackReason: a,
                                         feedbackedItemID: n,
-                                        feedbackType: a
-                                    }), t.props.hideContent(i), t.props.closeModal()
+                                        feedbackType: o
+                                    }), t.props.hideContent(c), t.props.closeModal()
                                 } else {
-                                    var d = "Missing content id for reason: " + r + ", type: " + o + ", content: " + a;
+                                    var d = "Missing content id for reason: " + r + ", type: " + a + ", content: " + o;
                                     t.logger.error(new Error(d), d)
                                 }
                             else t.setState({
@@ -82,116 +122,100 @@
                             var e = t.state.selectedReasonIndex;
                             if (null === e) return {};
                             var n = t.props.feedbackReasons[e],
-                                a = n.feedbackType,
-                                o = n.contentType;
+                                o = n.feedbackType,
+                                a = n.contentType;
                             return {
-                                contentID: t.contentTypeToIDMapping(o),
-                                contentType: o,
-                                feedbackType: a,
+                                contentID: t.contentTypeToIDMapping(a),
+                                contentType: a,
+                                feedbackType: o,
                                 selectedReason: n
                             }
-                        }, t.trackRecFeedbackStepClose = function() {
+                        }, t.closeModal = function() {
+                            t.props.closeModal();
                             var e = t.getCurrentChoiceData(),
                                 n = e.contentID,
-                                a = e.contentType,
-                                o = e.feedbackType;
+                                o = e.contentType,
+                                a = e.feedbackType;
                             t.props.trackRecFeedbackClickStep({
-                                clickStep: k.a.Close,
+                                clickStep: h.a.Close,
                                 feedbackAction: null,
-                                feedbackReason: o || null,
+                                feedbackReason: a || null,
                                 feedbackedItemID: n || null,
-                                feedbackType: a || null
+                                feedbackType: o || null
                             })
                         }, t
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return o.__extends(t, e), t.prototype.render = function() {
                         var e = this;
-                        return o.createElement(f.Xa, null, o.createElement(f.Cb, {
-                            background: f.r.Alt,
-                            borderRadius: f.x.Large
-                        }, o.createElement(f.Cb, {
+                        return a.createElement(c.ab, {
+                            title: Object(r.d)("Not interested? Tell us more...", "RecFeedbackModal"),
+                            onCloseButtonClick: this.closeModal,
+                            size: c.bb.Medium,
+                            primaryButtonProps: {
+                                children: Object(r.d)("Done", "RecFeedbackModal"),
+                                size: c.D.Large,
+                                onClick: this.submitFeedback
+                            }
+                        }, a.createElement(c.Cb, {
                             borderBottom: !0,
                             padding: {
-                                y: 2
-                            },
-                            textAlign: f.Pb.Center
-                        }, o.createElement(f.Xa, {
-                            margin: {
-                                x: 5
+                                bottom: 2,
+                                x: 2
                             }
-                        }, o.createElement(f.W, {
-                            type: f.Tb.H3,
-                            bold: !0,
-                            "data-test-selector": "rec-feedback-modal-header"
-                        }, Object(r.d)("Not interested? Tell us more...", "RecFeedbackModal")))), o.createElement(f.Cb, {
-                            borderBottom: !0,
-                            padding: 2
-                        }, o.createElement(f.W, {
-                            type: f.Tb.Span,
-                            fontSize: f.Ca.Size4
+                        }, a.createElement(c.Xa, {
+                            margin: {
+                                y: .5
+                            },
+                            visibility: this.state.showError ? c.ec.Visible : c.ec.Hidden,
+                            "data-test-selector": "rec-feedback-modal-error"
+                        }, a.createElement(c.W, {
+                            color: c.O.Error
+                        }, Object(r.d)("Please select a reason", "RecFeedbackModal"))), a.createElement(c.W, {
+                            type: c.Tb.Span,
+                            fontSize: c.Ca.Size4
                         }, this.props.feedbackReasons.map(function(t, n) {
-                            return o.createElement(f.Xa, {
+                            return a.createElement(c.Xa, {
                                 key: t.text,
                                 margin: {
                                     bottom: .5
                                 }
-                            }, o.createElement(f.nb, {
+                            }, a.createElement(c.nb, {
                                 label: t.text,
                                 checked: e.state.selectedReasonIndex === n,
                                 onChange: e.onRadioChange,
                                 value: n.toString()
                             }))
-                        }))), o.createElement(f.Cb, {
-                            display: f.X.Flex,
-                            justifyContent: f.Wa.End,
-                            alignItems: f.f.Center,
-                            padding: 1,
-                            background: f.r.Alt2,
-                            borderRadius: f.x.Large
-                        }, this.state.showError && o.createElement(f.Xa, {
-                            margin: {
-                                right: 1
-                            },
-                            "data-test-selector": "rec-feedback-modal-error"
-                        }, o.createElement(f.W, {
-                            color: f.O.Error
-                        }, Object(r.d)("Please select a reason", "RecFeedbackModal"))), o.createElement(f.z, {
-                            size: f.D.Large,
-                            onClick: this.submitFeedback,
-                            "data-test-selector": "rec-feedback-modal-submit"
-                        }, Object(r.d)("Done", "RecFeedbackModal")))), o.createElement(s.a, {
-                            onClose: this.trackRecFeedbackStepClose
-                        }))
+                        }))))
                     }, t.prototype.contentTypeToIDMapping = function(e) {
                         switch (e) {
-                            case b.b.Shelf:
+                            case f.b.Shelf:
                                 return this.props.shelfID;
-                            case b.b.Game:
+                            case f.b.Game:
                                 return this.props.categoryID;
-                            case b.b.Live:
+                            case f.b.Live:
                                 return this.props.channelID;
-                            case b.b.Vod:
+                            case f.b.Vod:
                                 return this.props.vodID;
-                            case b.b.Clip:
+                            case f.b.Clip:
                                 return null;
                             default:
                                 return e
                         }
                     }, t
-                }(o.Component),
-                C = Object(l.a)(h, {
+                }(a.Component),
+                C = Object(b.a)(v, {
                     name: "addFeedback"
-                })(g);
-            var v = Object(c.connect)(null, function(e) {
-                    return Object(i.bindActionCreators)({
-                        closeModal: d.c
+                })(y);
+            var I = Object(l.connect)(null, function(e) {
+                    return Object(p.bindActionCreators)({
+                        closeModal: u.c
                     }, e)
                 })(C),
                 R = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.onClick = function(e) {
-                            e.preventDefault(), e.stopPropagation(), t.props.showModal(v, {
+                        return t.openModal = function() {
+                            t.props.showModal(I, {
                                 shelfID: t.props.shelfID,
                                 channelID: t.props.channelID,
                                 vodID: t.props.vodID,
@@ -199,29 +223,27 @@
                                 feedbackReasons: t.props.feedbackReasons,
                                 hideContent: t.props.hideContent,
                                 trackRecFeedbackClickStep: t.props.trackRecFeedbackClickStep
-                            }), t.props.onClick()
+                            }), t.props.onModalOpen()
                         }, t
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(f.Wb, {
-                            label: Object(r.d)("Not interested?", "RecFeedbackButton"),
-                            direction: f.Yb.Right
-                        }, o.createElement(f.A, {
-                            icon: f.rb.VisibilityHidden,
-                            size: f.B.Small,
-                            onClick: this.onClick
-                        }))
+                    return o.__extends(t, e), t.prototype.render = function() {
+                        return this.props.isShelf ? a.createElement(s, {
+                            openModal: this.openModal
+                        }) : a.createElement(d, {
+                            openModal: this.openModal,
+                            onMenuOpen: this.props.onMenuOpen
+                        })
                     }, t
-                }(o.Component);
-            var y = Object(c.connect)(null, function(e) {
-                return Object(i.bindActionCreators)({
-                    showModal: d.d
+                }(a.Component);
+            var D = Object(l.connect)(null, function(e) {
+                return Object(p.bindActionCreators)({
+                    showModal: u.d
                 }, e)
             })(R);
             n.d(t, "RecFeedbackButtonComponent", function() {
                 return R
             }), n.d(t, "RecFeedbackButton", function() {
-                return y
+                return D
             })
         },
         M8Tb: function(e, t) {

@@ -573,11 +573,11 @@
                     }(),
                     F = k.toString,
                     M = w.call(Object),
-                    x = RegExp("^" + w.call(P).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
-                    U = O ? T.Buffer : void 0,
+                    U = RegExp("^" + w.call(P).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
+                    x = O ? T.Buffer : void 0,
                     j = T.Symbol,
                     G = T.Uint8Array,
-                    V = U ? U.allocUnsafe : void 0,
+                    V = x ? x.allocUnsafe : void 0,
                     W = function(e, t) {
                         return function(n) {
                             return e(t(n))
@@ -593,7 +593,7 @@
                             return e({}, "", {}), e
                         } catch (e) {}
                     }(),
-                    K = U ? U.isBuffer : void 0,
+                    K = x ? x.isBuffer : void 0,
                     Q = Math.max,
                     J = Date.now,
                     Z = ye(T, "Map"),
@@ -782,7 +782,7 @@
                 function pe(e) {
                     return !(!Ie(e) || function(e) {
                         return !!L && L in e
-                    }(e)) && (De(e) ? x : g).test(function(e) {
+                    }(e)) && (De(e) ? U : g).test(function(e) {
                         if (null != e) {
                             try {
                                 return w.call(e)
@@ -1812,7 +1812,7 @@
         },
         DMoW: function(e, t, n) {
             "use strict";
-            var a, r, i, o, s, l, c, u, d, m, p, f, h, g, E, y, b, v, T, N, _, O, C, S, D, A, I, R, k, B, w, P, L, F, M, x, U, j, G, V, W, H, X, Y, z, q, K, Q, J, Z, $, ee, te, ne, ae, re, ie, oe, se, le, ce, ue, de, me, pe, fe, he, ge, Ee, ye, be, ve, Te, Ne, _e, Oe, Ce, Se, De, Ae, Ie, Re, ke, Be, we, Pe, Le, Fe, Me, xe, Ue, je, Ge, Ve, We, He, Xe, Ye, ze, qe, Ke, Qe, Je, Ze, $e, et, tt, nt, at, rt, it, ot, st, lt, ct, ut, dt, mt, pt;
+            var a, r, i, o, s, l, c, u, d, m, p, f, h, g, E, y, b, v, T, N, _, O, C, S, D, A, I, R, k, B, w, P, L, F, M, U, x, j, G, V, W, H, X, Y, z, q, K, Q, J, Z, $, ee, te, ne, ae, re, ie, oe, se, le, ce, ue, de, me, pe, fe, he, ge, Ee, ye, be, ve, Te, Ne, _e, Oe, Ce, Se, De, Ae, Ie, Re, ke, Be, we, Pe, Le, Fe, Me, Ue, xe, je, Ge, Ve, We, He, Xe, Ye, ze, qe, Ke, Qe, Je, Ze, $e, et, tt, nt, at, rt, it, ot, st, lt, ct, ut, dt, mt, pt, ft;
             n.d(t, "d", function() {
                     return r
                 }), n.d(t, "L", function() {
@@ -1829,7 +1829,7 @@
                     return v
                 }), n.d(t, "m", function() {
                     return _
-                }), n.d(t, "V", function() {
+                }), n.d(t, "W", function() {
                     return O
                 }), n.d(t, "N", function() {
                     return C
@@ -1843,8 +1843,10 @@
                     return F
                 }), n.d(t, "s", function() {
                     return M
-                }), n.d(t, "r", function() {
+                }), n.d(t, "V", function() {
                     return U
+                }), n.d(t, "r", function() {
+                    return x
                 }), n.d(t, "P", function() {
                     return j
                 }), n.d(t, "R", function() {
@@ -1883,14 +1885,14 @@
                     return _e
                 }), n.d(t, "n", function() {
                     return Oe
-                }), n.d(t, "W", function() {
+                }), n.d(t, "X", function() {
                     return Ae
                 }), n.d(t, "B", function() {
                     return Le
                 }), n.d(t, "A", function() {
-                    return xe
-                }), n.d(t, "j", function() {
                     return Ue
+                }), n.d(t, "j", function() {
+                    return xe
                 }), n.d(t, "u", function() {
                     return je
                 }), n.d(t, "l", function() {
@@ -1902,15 +1904,15 @@
                 }), n.d(t, "O", function() {
                     return Ye
                 }), n.d(t, "y", function() {
-                    return tt
-                }), n.d(t, "J", function() {
                     return nt
-                }), n.d(t, "K", function() {
+                }), n.d(t, "J", function() {
                     return at
+                }), n.d(t, "K", function() {
+                    return rt
                 }), n.d(t, "e", function() {
-                    return dt
-                }), n.d(t, "t", function() {
                     return mt
+                }), n.d(t, "t", function() {
+                    return pt
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -2019,10 +2021,10 @@
                 }(M || (M = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.TARGET_NOT_BANNED = "TARGET_NOT_BANNED", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
-                }(x || (x = {})),
+                }(U || (U = {})),
                 function(e) {
                     e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
-                }(U || (U = {})),
+                }(x || (x = {})),
                 function(e) {
                     e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
                 }(j || (j = {})),
@@ -2181,10 +2183,10 @@
                 }(Me || (Me = {})),
                 function(e) {
                     e.NONE = "NONE", e.READ = "READ", e.WRITE = "WRITE"
-                }(xe || (xe = {})),
+                }(Ue || (Ue = {})),
                 function(e) {
                     e.BROADCASTER = "BROADCASTER", e.EDITOR = "EDITOR", e.MODERATOR = "MODERATOR", e.REGULAR = "REGULAR", e.SUBSCRIBER = "SUBSCRIBER"
-                }(Ue || (Ue = {})),
+                }(xe || (xe = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
                 }(je || (je = {})),
@@ -2213,62 +2215,65 @@
                     e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }(qe || (qe = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }(Ke || (Ke = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(Je || (Je = {})),
                 function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
                 }(Ze || (Ze = {})),
                 function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }($e || ($e = {})),
                 function(e) {
                     e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(et || (et = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(tt || (tt = {})),
                 function(e) {
-                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(nt || (nt = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
+                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
                 }(at || (at = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
                 }(rt || (rt = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }(it || (it = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(ot || (ot = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(st || (st = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(lt || (lt = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(ct || (ct = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(ut || (ut = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
                 }(dt || (dt = {})),
                 function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
                 }(mt || (mt = {})),
                 function(e) {
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                }(pt || (pt = {})),
+                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(pt || (pt = {}))
+                }(ft || (ft = {}))
         },
         DNwE: function(e, t, n) {},
         EuVB: function(e, t, n) {},
@@ -4943,7 +4948,7 @@
                 return {}
             }
 
-            function x(e) {
+            function U(e) {
                 var t = new Set;
                 if (e.variableDefinitions)
                     for (var n = 0, a = e.variableDefinitions; n < a.length; n++) {
@@ -4953,13 +4958,13 @@
                 return t
             }
 
-            function U(e) {
+            function x(e) {
                 if (Array.isArray(e)) return e.map(function(e) {
-                    return U(e)
+                    return x(e)
                 });
                 if (null !== e && "object" == typeof e) {
                     var t = {};
-                    for (var n in e) e.hasOwnProperty(n) && (t[n] = U(e[n]));
+                    for (var n in e) e.hasOwnProperty(n) && (t[n] = x(e[n]));
                     return t
                 }
                 return e
@@ -4973,7 +4978,7 @@
             };
 
             function G(e, t) {
-                var n = U(t);
+                var n = x(t);
                 n.definitions.forEach(function(t) {
                     ! function e(t, n) {
                         if (!n.selections) return n;
@@ -5010,7 +5015,7 @@
                 A(e);
                 var t = V.get(e);
                 if (t) return t;
-                var n = U(e);
+                var n = x(e);
                 return n.definitions.forEach(function(e) {
                     var t = "OperationDefinition" === e.kind;
                     ! function e(t, n) {
@@ -5122,7 +5127,7 @@
             }), n.d(t, !1, function() {
                 return M
             }), n.d(t, !1, function() {
-                return x
+                return U
             }), n.d(t, !1, function() {
                 return G
             }), n.d(t, "a", function() {
@@ -5158,7 +5163,7 @@
             }), n.d(t, !1, function() {
                 return S
             }), n.d(t, !1, function() {
-                return U
+                return x
             }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {
                 return z.b
             }), n.d(t, !1, function() {
@@ -8791,8 +8796,8 @@
             ! function(e) {
                 e.Language = "language", e.Country = "country", e.HasUserBlacklist = "hasUserBlacklist", e.UserBlacklist = "userBlacklist", e.StreamingExperience = "streamingExperience", e.AllBroadcasters = "allBroadcasters", e.Budget = "budget", e.VarietyBroadcasters = "varietyBroadcasters", e.AdjustRate = "adjustRate", e.RateMultiplier = "rateMultiplier", e.EndDate = "endDate", e.StartDate = "startDate", e.Platforms = "platforms", e.Message = "message", e.Game = "game"
             }(y || (y = {}));
-            var M, x = [y.Budget, y.StartDate, y.EndDate, y.Game, y.Platforms],
-                U = ((g = {})[y.Language] = !0, g[y.Country] = !0, g[y.HasUserBlacklist] = !0, g[y.UserBlacklist] = !0, g[y.StreamingExperience] = !0, g[y.AllBroadcasters] = !0, g[y.Budget] = !0, g[y.VarietyBroadcasters] = !0, g[y.AdjustRate] = !0, g[y.RateMultiplier] = !0, g[y.EndDate] = !0, g[y.StartDate] = !0, g[y.Platforms] = !0, g[y.Message] = !0, g[y.Game] = !0, g),
+            var M, U = [y.Budget, y.StartDate, y.EndDate, y.Game, y.Platforms],
+                x = ((g = {})[y.Language] = !0, g[y.Country] = !0, g[y.HasUserBlacklist] = !0, g[y.UserBlacklist] = !0, g[y.StreamingExperience] = !0, g[y.AllBroadcasters] = !0, g[y.Budget] = !0, g[y.VarietyBroadcasters] = !0, g[y.AdjustRate] = !0, g[y.RateMultiplier] = !0, g[y.EndDate] = !0, g[y.StartDate] = !0, g[y.Platforms] = !0, g[y.Message] = !0, g[y.Game] = !0, g),
                 j = ((E = {})[y.Language] = "English", E[y.Country] = "USA", E[y.HasUserBlacklist] = !1, E[y.UserBlacklist] = [], E[y.StreamingExperience] = [], E[y.AllBroadcasters] = !0, E[y.Budget] = 5e3, E[y.VarietyBroadcasters] = !1, E[y.AdjustRate] = !1, E[y.RateMultiplier] = 1, E[y.EndDate] = void 0, E[y.StartDate] = void 0, E[y.Platforms] = [], E[y.Message] = "", E[y.Game] = void 0, E);
 
             function G(e, t) {
@@ -8807,7 +8812,7 @@
 
             function V(e) {
                 var t = function(e) {
-                    return x.reduce(function(t, n) {
+                    return U.reduce(function(t, n) {
                         if (H(e.params[n]) && H(e.data[n])) {
                             var a = t[n] || [];
                             n === y.Platforms ? a.push(Object(m.d)("You must select at least one platform.", "DevBountyBoardCampaignPage")) : a.push(Object(m.d)("Cannot be blank.", "DevBountyBoardCampaignPage")), t[n] = a
@@ -9758,7 +9763,7 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             isLoading: !0,
-                            changeset: G(j, U),
+                            changeset: G(j, x),
                             status: null
                         }, t
                     }
@@ -9783,11 +9788,11 @@
                                         name: e.displayName,
                                         avatar: e.profileImageURL
                                     }
-                                })), a.status = i.status, a.changeset = G(((n = {})[y.Language] = j[y.Language], n[y.Country] = j[y.Country], n[y.HasUserBlacklist] = l.length > 0, n[y.UserBlacklist] = l, n[y.StreamingExperience] = s, n[y.AllBroadcasters] = !!i.brandDetails && !!i.brandDetails.includesAllBroadcasters, n[y.Budget] = (i.brandDetails && i.brandDetails.totalBudgetCents || 0) / 100, n[y.VarietyBroadcasters] = !!i.brandDetails && !!i.brandDetails.includesVarietyBroadcasters, n[y.AdjustRate] = 1 !== o, n[y.RateMultiplier] = o, n[y.EndDate] = new Date(i.endTime), n[y.StartDate] = new Date(i.startTime), n[y.Platforms] = i.availablePlatforms || [], n[y.Message] = i.details, n[y.Game] = i.game || void 0, n), U)
+                                })), a.status = i.status, a.changeset = G(((n = {})[y.Language] = j[y.Language], n[y.Country] = j[y.Country], n[y.HasUserBlacklist] = l.length > 0, n[y.UserBlacklist] = l, n[y.StreamingExperience] = s, n[y.AllBroadcasters] = !!i.brandDetails && !!i.brandDetails.includesAllBroadcasters, n[y.Budget] = (i.brandDetails && i.brandDetails.totalBudgetCents || 0) / 100, n[y.VarietyBroadcasters] = !!i.brandDetails && !!i.brandDetails.includesVarietyBroadcasters, n[y.AdjustRate] = 1 !== o, n[y.RateMultiplier] = o, n[y.EndDate] = new Date(i.endTime), n[y.StartDate] = new Date(i.startTime), n[y.Platforms] = i.availablePlatforms || [], n[y.Message] = i.details, n[y.Game] = i.game || void 0, n), x)
                             }
                             a.isLoading = !1
                         }
-                        return a.isLoading && (a.changeset = G(j, U)), a
+                        return a.isLoading && (a.changeset = G(j, x)), a
                     }, t.prototype.render = function() {
                         return this.props.children(this.state.changeset, this.isError(), this.state.status)
                     }, t.prototype.isError = function() {
@@ -9987,7 +9992,7 @@
                     }, t
                 }(u.Component),
                 Fe = n("y/nc");
-            var Me, xe = function(e) {
+            var Me, Ue = function(e) {
                     function t() {
                         var t, n = null !== e && e.apply(this, arguments) || this;
                         return n.state = ((t = {})[F.d.BountiesCompleted] = F.e, t[F.d.MinutesWatched] = F.e, t[F.d.Viewers] = F.e, t[F.d.Viewers2m] = F.e, t.isLoading = !0, t), n
@@ -10028,7 +10033,7 @@
                         return this.props.children(this.state)
                     }, t
                 }(u.Component),
-                Ue = Object(N.compose)(Object(D.a)(Fe, {
+                xe = Object(N.compose)(Object(D.a)(Fe, {
                     options: function(e) {
                         return {
                             variables: {
@@ -10036,7 +10041,7 @@
                             }
                         }
                     }
-                }))(xe);
+                }))(Ue);
             n("H+Kr");
             ! function(e) {
                 e.Title = "dev-campaign-page-stats-tab-title", e.Label = "dev-campaign-page-stats-tab-label"
@@ -10173,7 +10178,7 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.campaignId;
-                        return u.createElement(Ue, {
+                        return u.createElement(xe, {
                             campaignId: e
                         }, this.renderContent)
                     }, t
@@ -10890,7 +10895,7 @@
                                         case 2:
                                             return (v = T.sent()).data && v.data.createBountyCampaign && v.data.createBountyCampaign.campaign && v.data.createBountyCampaign.campaign.id && (this.setState({
                                                 changeset: r.__assign({}, this.state.changeset, {
-                                                    disabled: U
+                                                    disabled: x
                                                 })
                                             }), m.p.history.push("/console/bounty-board/campaign/" + v.data.createBountyCampaign.campaign.id)), [3, 5];
                                         case 3:

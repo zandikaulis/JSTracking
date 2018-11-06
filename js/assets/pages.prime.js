@@ -2741,7 +2741,8 @@
                             "data-a-target": "blue-bar__link",
                             href: o,
                             target: "_blank",
-                            rel: "noopener noreferrer"
+                            rel: "noopener noreferrer",
+                            "data-test-selector": "blue-bar-left-url"
                         }, a))), s.createElement(v.W, {
                             className: "blue-bar__headline",
                             type: v.Tb.Span,
@@ -2759,7 +2760,8 @@
                             className: "blue-bar__link",
                             href: u,
                             target: "_blank",
-                            rel: "noopener noreferrer"
+                            rel: "noopener noreferrer",
+                            "data-test-selector": "blue-bar-right-url"
                         }, d))))))
                     }, t
                 }(s.Component),
@@ -4625,8 +4627,8 @@
                     return t.state = {
                         showBalloon: !!t.props.openByDefault,
                         hasInteracted: !!t.props.openByDefault
-                    }, t.toggleBalloonId = Object(a.a)(), t.handleButtonClick = function() {
-                        t.setState(function(e) {
+                    }, t.toggleBalloonId = Object(a.a)(), t.handleButtonClick = function(e) {
+                        t.props.preventDefault && e.preventDefault(), t.props.stopPropagation && e.stopPropagation(), t.setState(function(e) {
                             return {
                                 showBalloon: !e.showBalloon,
                                 hasInteracted: !0
@@ -4654,9 +4656,8 @@
                     var e = o.Children.toArray(this.props.children);
                     if (2 !== e.length) throw new Error("ToggleBalloonWrapper should only be given two children: a clickable and a Balloon");
                     var t = e[0],
-                        n = e[1];
-                    if (n.type !== s.u) throw new Error("ToggleBalloonWrapper needs a Balloon as its second child element");
-                    var a = o.cloneElement(t, {
+                        n = e[1],
+                        a = o.cloneElement(t, {
                             onClick: this.handleButtonClick
                         }),
                         l = null;

@@ -570,9 +570,9 @@
             }), n.d(t, "a", function() {
                 return p
             }), n.d(t, "f", function() {
-                return v
+                return f
             }), n.d(t, "d", function() {
-                return g
+                return v
             });
             var i = n("mrSG"),
                 a = n("lZdE"),
@@ -608,15 +608,14 @@
             function d(e) {
                 for (var t = [], n = function(e) {
                         if (!e || !e.id || !e.token) return "continue";
-                        var n = f(e.token),
-                            a = o[n] || n,
-                            r = s.reduce(function(t, n) {
+                        var n = o[e.token] || e.token,
+                            a = s.reduce(function(t, n) {
                                 var i = t;
                                 return i && (i = i.concat(", ")), i.concat("https://static-cdn.jtvnw.net/emoticons/v1/" + e.id + "/" + n + " " + n + "x")
                             }, "");
                         t.push(i.__assign({
-                            displayName: a,
-                            srcSet: r
+                            displayName: n,
+                            srcSet: a
                         }, e))
                     }, a = 0, r = e; a < r.length; a++) {
                     n(r[a])
@@ -673,12 +672,7 @@
                 }
                 return n.concat(t)
             }
-            var f = function(e) {
-                    return function(e) {
-                        return /[\|\\\^\$\*\+\?\:\#]/.test(e)
-                    }(e) ? "^" + e.replace(/\\(?=[&;:])/g, "") + "$" : e
-                },
-                v = function(e, t, n) {
+            var f = function(e, t, n) {
                     var i = n || r.d,
                         o = [],
                         s = [],
@@ -694,7 +688,7 @@
                         return i[t.token].count - i[e.token].count
                     }), c.concat(o).concat(s)
                 },
-                g = function(e) {
+                v = function(e) {
                     var t = {};
                     return e.filter(function(e) {
                         return !t.hasOwnProperty(e.token) && (t[e.token] = !0)

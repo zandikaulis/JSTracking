@@ -3526,8 +3526,8 @@
                 i = n("kRBY"),
                 o = n("mrSG"),
                 s = n("q1tI"),
-                l = n("mLw1"),
-                c = n("4p7I"),
+                l = n("4p7I"),
+                c = n("mLw1"),
                 d = n("jKe7"),
                 u = n("/7QA"),
                 p = n("EOHf"),
@@ -3597,10 +3597,10 @@
                 x = (n("okVe"), {
                     "data-test-selector": "cancel-button"
                 }),
-                P = {
+                R = {
                     "data-test-selector": "close-button"
                 },
-                R = {
+                P = {
                     "data-test-selector": "remove-button"
                 };
             ! function(e) {
@@ -3650,7 +3650,7 @@
                                 margin: {
                                     x: 1
                                 }
-                            }, s.createElement(T.z, o.__assign({}, P, {
+                            }, s.createElement(T.z, o.__assign({}, R, {
                                 onClick: this.props.onClose
                             }), Object(u.d)("Close", "ChannelSettingsAuthorizedStreamersPage"))))),
                             t = s.createElement(s.Fragment, null, s.createElement(T.Xa, null, s.createElement(T.Xa, {
@@ -3677,7 +3677,7 @@
                                 margin: {
                                     x: 1
                                 }
-                            }, s.createElement(T.z, o.__assign({}, R, {
+                            }, s.createElement(T.z, o.__assign({}, P, {
                                 disabled: this.state.requestState === r.InFlight,
                                 onClick: this.onClickRemove
                             }), Object(u.d)("Yes, Remove Them", "ChannelSettingsAuthorizedStreamersPage")))));
@@ -3698,8 +3698,8 @@
                         }))
                     }, t
                 }(s.Component),
-                L = n("IFXb"),
-                F = n("B+LW"),
+                F = n("IFXb"),
+                L = n("B+LW"),
                 A = n("kMWa"),
                 N = (n("rJj9"), {
                     "data-test-selector": "email"
@@ -3867,7 +3867,7 @@
                                     onClick: function() {
                                         return t.resendInvite(n.email)
                                     }
-                                }, Object(u.d)("Resend Invite", "ChannelSettingsAuthorizedStreamersPage"))), s.createElement(F.a, {
+                                }, Object(u.d)("Resend Invite", "ChannelSettingsAuthorizedStreamersPage"))), s.createElement(L.a, {
                                     triggerModal: function(r) {
                                         return s.createElement(M, {
                                             channelID: e.id,
@@ -3943,7 +3943,7 @@
                             n = e.loading,
                             r = e.user,
                             a = this.state.requestState;
-                        if (n || a === j.Loading) return s.createElement(L.a, null, s.createElement(T.gb, {
+                        if (n || a === j.Loading) return s.createElement(F.a, null, s.createElement(T.gb, {
                             height: 600
                         }));
                         if (t || !r || !r.login || !r.id) return s.createElement(g.a, null);
@@ -3951,7 +3951,7 @@
                             title: Object(u.d)("People who can stream to your channel", "ChannelSettingsAuthorizedStreamersPage"),
                             linkToParent: "/" + r.login + "/dashboard/settings"
                         });
-                        return s.createElement(L.a, null, s.createElement(_.a, {
+                        return s.createElement(F.a, null, s.createElement(_.a, {
                             header: i
                         }, s.createElement(T.Cb, {
                             background: T.r.Base,
@@ -4704,7 +4704,7 @@
                             title: Object(u.d)("Host list", "AuthohostListPage"),
                             linkToParent: "/" + this.props.match.params.channelLogin + "/dashboard/settings"
                         });
-                        return s.createElement(L.a, null, s.createElement(_.a, {
+                        return s.createElement(F.a, null, s.createElement(_.a, {
                             header: e
                         }, s.createElement(H.a, {
                             error: !!this.state.autohostError,
@@ -4730,7 +4730,7 @@
                 Ie = n("mAXC"),
                 Te = n("fWal"),
                 xe = n("+vgv"),
-                Pe = function(e) {
+                Re = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleToggleEnabled = function(e) {
@@ -4816,7 +4816,7 @@
                         }))
                     }, t
                 }(s.Component),
-                Re = function(e) {
+                Pe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleSetRaidPreference = function(e) {
@@ -4873,11 +4873,11 @@
                         }))))
                     }, t
                 }(s.Component),
-                De = Object(E.b)("RaidSettingsForm")(Re),
+                De = Object(E.b)("RaidSettingsForm")(Pe),
                 je = function(e) {
                     return s.createElement(s.Fragment, null, s.createElement(ke.a, {
                         title: Object(u.d)("Auto Hosting", "DashboardSettings")
-                    }), s.createElement(Pe, {
+                    }), s.createElement(Re, {
                         channelName: e.channelName,
                         autohostSettings: e.autohostSettings,
                         requestState: e.requestState,
@@ -4996,8 +4996,8 @@
                         })
                     }, t
                 }(s.Component),
-                Le = n("EkNY"),
-                Fe = n("Jxh/"),
+                Fe = n("EkNY"),
+                Le = n("Jxh/"),
                 Ae = n("geRD"),
                 Ne = function(e) {
                     var t = e.saving || e.errorLoading;
@@ -5224,7 +5224,7 @@
                                 onClick: t.props.handleStreamKeyDisplayToggled
                             }, Object(u.d)("Hide", "StreamKeySettingsForm"))
                         }, t.showStreamKeyLink = function() {
-                            return s.createElement(F.a, {
+                            return s.createElement(L.a, {
                                 triggerModal: function(e) {
                                     return s.createElement(ze, {
                                         onClose: e,
@@ -5253,7 +5253,7 @@
                                 })
                             })
                         }, t.copyToClipboard = function(e, n) {
-                            e && (Object(Fe.a)(e.value) && (n ? t.setState({
+                            e && (Object(Le.a)(e.value) && (n ? t.setState({
                                 backupStreamKeyCopied: !0
                             }, t.handleResetStreamKeyCopiedState) : t.setState({
                                 streamKeyCopied: !0
@@ -5553,8 +5553,8 @@
                                             saveVodsError: i,
                                             saveVodsState: xe.a.Error,
                                             saveVodsSaving: !1
-                                        }), [2]) : (s = u.o.getLastPageview(), l = null, c = null, s && (l = s.medium || null, c = s.content || null), Object(Le.f)({
-                                            settingName: Le.b.StorePastBroadcasts,
+                                        }), [2]) : (s = u.o.getLastPageview(), l = null, c = null, s && (l = s.medium || null, c = s.content || null), Object(Fe.f)({
+                                            settingName: Fe.b.StorePastBroadcasts,
                                             settingValue: this.state.channelProperties.saveVods.toString(),
                                             content: c,
                                             medium: l,
@@ -6158,7 +6158,7 @@
                     }, t
                 }(s.Component),
                 xt = Object(E.b)("TeamSettings")(Tt),
-                Pt = function(e) {
+                Rt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -6515,19 +6515,19 @@
                         return this.state.invitations.length > 0 || this.state.managedTeams.length > 0 || this.state.memberships.length > 0
                     }, t
                 }(s.Component);
-            var Rt, Dt = Object(a.connect)(function(e) {
+            var Pt, Dt = Object(a.connect)(function(e) {
                     return {
                         user: Object(i.e)(e)
                     }
-                })(Pt),
+                })(Rt),
                 jt = n("4rCz"),
                 Mt = n("7lJP"),
-                Lt = n("94Uw"),
-                Ft = n("Ww25"),
+                Ft = n("94Uw"),
+                Lt = n("Ww25"),
                 At = n("FEav");
             ! function(e) {
                 e.Banner = "upload-video-player__banner", e.OfflineImage = "upload-video-player__offline-image", e.ErrorMessage = "upload-video-player__error-message"
-            }(Rt || (Rt = {}));
+            }(Pt || (Pt = {}));
             var Nt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -6574,7 +6574,7 @@
                                 userID: e.id,
                                 login: e.login,
                                 displayName: e.displayName,
-                                imageType: Lt.a.ChannelOfflineImage,
+                                imageType: Ft.a.ChannelOfflineImage,
                                 showCloser: !0,
                                 successCallback: t.imageUploaded
                             })
@@ -6585,7 +6585,7 @@
                             t = null;
                         if (this.props.data && this.props.data.user && this.props.data.user.offlineImageURL) {
                             e = s.createElement("img", {
-                                "data-test-selector": Rt.OfflineImage,
+                                "data-test-selector": Pt.OfflineImage,
                                 height: 90,
                                 width: 160,
                                 src: this.props.data.user.offlineImageURL
@@ -6623,18 +6623,18 @@
                         }, s.createElement(T.Xa, {
                             display: T.X.Flex
                         }, s.createElement(T.z, {
-                            "data-test-selector": Rt.Banner,
+                            "data-test-selector": Pt.Banner,
                             onClick: this.showModal,
                             type: T.F.Hollow
                         }, s.createElement(T.Xa, {
                             padding: {
                                 x: 1
                             }
-                        }, Object(jt.d)("Update", "UploadVideoPlayerBanner"))), t), s.createElement(Ft.a, {
+                        }, Object(jt.d)("Update", "UploadVideoPlayerBanner"))), t), s.createElement(Lt.a, {
                             text: Object(jt.d)("Max 10mb GIF, JPG, or PNG", "UploadVideoPlayerBanner")
                         }), this.state.deletionError && s.createElement(T.W, {
                             color: T.O.Error,
-                            "data-test-selector": Rt.ErrorMessage
+                            "data-test-selector": Pt.ErrorMessage
                         }, Object(jt.d)("Sorry, something went wrong. Please try again later.", "UploadVideoPlayerBanner")))))))
                     }, t
                 }(s.Component),
@@ -6647,7 +6647,7 @@
                         }
                     }
                 })(Nt);
-            var Xt = Object(a.connect)(function(e) {
+            var Xt, Wt = Object(a.connect)(function(e) {
                     return {
                         user: Object(i.e)(e)
                     }
@@ -6656,7 +6656,7 @@
                         showModal: Et.d
                     }, e)
                 })(Ut),
-                Wt = function(e) {
+                Bt = function(e) {
                     return s.createElement(Oe.a, {
                         orientation: T.Fa.Horizontal,
                         label: Object(u.d)("Followers-only mode", "DashboardSettingsModPrefFollowersOnly")
@@ -6685,11 +6685,11 @@
                         value: ne.FollowersDurationSeconds.OneMonth
                     }, Object(u.d)("1 Month", "DashboardSettingsModPrefFollowersOnly")), s.createElement("option", {
                         value: ne.FollowersDurationSeconds.ThreeMonths
-                    }, Object(u.d)("3 Months", "DashboardSettingsModPrefFollowersOnly"))))), s.createElement(Ft.a, {
+                    }, Object(u.d)("3 Months", "DashboardSettingsModPrefFollowersOnly"))))), s.createElement(Lt.a, {
                         text: Object(u.d)("When enabled, viewers must follow you for the specified amount of time before they are allowed to post messages on your videos.", "DashboardSettingsModPrefFollowersOnly")
                     })))
                 },
-                Bt = function(e) {
+                qt = function(e) {
                     return s.createElement(Oe.a, {
                         orientation: T.Fa.Horizontal,
                         label: Object(u.d)("Messages on videos", "DashboardSettingsModPrefMessages")
@@ -6728,7 +6728,7 @@
                         value: ne.ChommentsPublishingMode.Disabled
                     })))
                 },
-                qt = function(e) {
+                zt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleSetPublishingMode = function(e) {
@@ -6756,18 +6756,18 @@
                             title: Object(u.d)("Video Moderation", "DashboardSettingsModPref")
                         }), s.createElement(_.a, null, this.props.requestState === xe.a.Error && s.createElement(H.a, null, s.createElement(T.W, {
                             color: T.O.Error
-                        }, Object(u.d)("Something went wrong. Give it another try later.", "DashboardSettingsModPrefMessagesError"))), s.createElement(Bt, {
+                        }, Object(u.d)("Something went wrong. Give it another try later.", "DashboardSettingsModPrefMessagesError"))), s.createElement(qt, {
                             onSetPublishingMode: this.handleSetPublishingMode,
                             publishingMode: this.props.moderationSettings.publishingMode,
                             requestState: this.props.requestState
-                        }), s.createElement(Wt, {
+                        }), s.createElement(Bt, {
                             onSetFollowersOnlyDuration: this.handleSetFollowersOnlyDuration,
                             followersOnlyDurationSeconds: this.props.moderationSettings.followersOnlyDurationSeconds
                         })))
                     }, t
                 }(s.Component),
-                zt = Object(E.b)("VideoModerationSettings")(qt),
-                Kt = function(e) {
+                Kt = Object(E.b)("VideoModerationSettings")(zt),
+                Ht = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -6856,17 +6856,17 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return s.createElement(zt, {
+                        return s.createElement(Kt, {
                             moderationSettings: this.state.moderationSettings,
                             requestState: this.state.requestState,
                             saveSettings: this.saveSettings
                         })
                     }, t
                 }(s.Component),
-                Ht = n("wo8Z"),
-                Vt = n("bDCY"),
-                Gt = n("HOmj"),
-                Yt = function(e) {
+                Vt = n("wo8Z"),
+                Gt = n("bDCY"),
+                Yt = n("HOmj"),
+                Qt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -6934,13 +6934,13 @@
                         })))
                     }, Object.defineProperty(t.prototype, "show", {
                         get: function() {
-                            return Object(Ht.a)() && this.props.data && !this.props.data.error && this.props.data.channel && this.props.data.channel.settings && this.props.data.channel.settings.isRitualsWhitelisted
+                            return Object(Vt.a)() && this.props.data && !this.props.data.error && this.props.data.channel && this.props.data.channel.settings && this.props.data.channel.settings.isRitualsWhitelisted
                         },
                         enumerable: !0,
                         configurable: !0
                     }), t
                 }(s.Component),
-                Qt = Object(nt.compose)(Object(f.a)(Vt, {
+                Jt = Object(nt.compose)(Object(f.a)(Gt, {
                     options: function(e) {
                         return {
                             variables: {
@@ -6949,13 +6949,13 @@
                         }
                     },
                     skip: function(e) {
-                        return !e.channelID || !Object(Ht.a)()
+                        return !e.channelID || !Object(Vt.a)()
                     }
-                }), Object(f.a)(Gt, {
+                }), Object(f.a)(Yt, {
                     name: "toggleRitualsEnabled"
-                }))(Yt),
-                Jt = n("4bS+"),
-                Zt = function(e) {
+                }))(Qt),
+                Zt = n("4bS+"),
+                $t = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -6963,33 +6963,24 @@
                         var e = this.props,
                             t = e.data.user,
                             n = e.match.params.channelLogin;
-                        return s.createElement(L.a, null, s.createElement(ke.a, {
+                        return s.createElement(F.a, null, s.createElement(ke.a, {
                             title: Object(u.d)("Stream Key & Preferences", "DashboardSettings")
-                        }), s.createElement(tt, null), this.isChannelOwner && s.createElement(lt, {
+                        }), s.createElement(tt, null), s.createElement(lt, {
                             channelLogin: n
-                        }), s.createElement(Xt, null), s.createElement(Me, {
+                        }), s.createElement(Wt, null), s.createElement(Me, {
                             channelName: n
                         }), s.createElement(Dt, null), s.createElement(ke.a, {
                             title: Object(u.d)("Drops", "DashboardSettings")
                         }), s.createElement(st, {
                             channelName: n
-                        }), t && t.id && s.createElement(Kt, {
+                        }), t && t.id && s.createElement(Ht, {
                             channelID: t.id
-                        }), s.createElement(Qt, {
+                        }), s.createElement(Jt, {
                             channelID: t && t.id
                         }))
-                    }, Object.defineProperty(t.prototype, "isChannelOwner", {
-                        get: function() {
-                            var e = this.props,
-                                t = e.match,
-                                n = e.sessionUser;
-                            return Boolean(n && n.login === t.params.channelLogin)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), t
+                    }, t
                 }(s.Component),
-                $t = Object(m.compose)(Object(f.a)(Jt, {
+                en = Object(m.compose)(Object(f.a)(Zt, {
                     options: function(e) {
                         return {
                             variables: {
@@ -7002,36 +6993,31 @@
                     destination: y.a.DashboardSettingsIndex
                 }), Object(b.a)({
                     location: S.PageviewLocation.DashboardSettingsIndex
-                }))(Zt);
-            var en, tn = Object(a.connect)(function(e) {
-                    return {
-                        sessionUser: Object(i.e)(e)
-                    }
-                })($t),
-                nn = n("3iFw"),
-                rn = n("rqzT"),
-                an = n("NMMG"),
-                on = n("jreu");
+                }))($t),
+                tn = n("3iFw"),
+                nn = n("rqzT"),
+                rn = n("NMMG"),
+                an = n("jreu");
             n("0HR6");
             ! function(e) {
                 e.CancelButton = "cancel-button", e.ErrorMessage = "error-message", e.KeepButton = "keep-button", e.RemoveButton = "remove-button", e.RetryButton = "retry-button"
-            }(en || (en = {}));
-            var sn, ln = function(e) {
+            }(Xt || (Xt = {}));
+            var on, sn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             isRequestInFlight: !1,
                             retryable: !1
                         }, t.renderRetry = function() {
-                            return s.createElement(s.Fragment, null, s.createElement(cn, null, s.createElement(T.W, {
+                            return s.createElement(s.Fragment, null, s.createElement(ln, null, s.createElement(T.W, {
                                 color: T.O.Error,
-                                "data-test-selector": en.ErrorMessage
-                            }, Object(u.d)("Failed to remove yourself as an editor on this channel.", "EditableChannelsRemoveConfirmation"))), s.createElement(dn, null, s.createElement(T.Xa, {
+                                "data-test-selector": Xt.ErrorMessage
+                            }, Object(u.d)("Failed to remove yourself as an editor on this channel.", "EditableChannelsRemoveConfirmation"))), s.createElement(cn, null, s.createElement(T.Xa, {
                                 margin: {
                                     right: .5
                                 }
                             }, s.createElement(T.z, {
-                                "data-test-selector": en.CancelButton,
+                                "data-test-selector": Xt.CancelButton,
                                 onClick: t.props.onClose,
                                 type: T.F.Hollow
                             }, Object(u.d)("Cancel", "EditableChannelsRemoveConfirmation"))), s.createElement(T.Xa, {
@@ -7039,7 +7025,7 @@
                                     left: .5
                                 }
                             }, s.createElement(T.z, {
-                                "data-test-selector": en.RetryButton,
+                                "data-test-selector": Xt.RetryButton,
                                 disabled: t.state.isRequestInFlight,
                                 onClick: t.onRemoveClick,
                                 state: t.state.isRequestInFlight ? T.E.Loading : T.E.Default
@@ -7047,7 +7033,7 @@
                         }, t.renderConfirmation = function() {
                             var e = t.props.channel,
                                 n = t.state.isRequestInFlight;
-                            return s.createElement(s.Fragment, null, s.createElement(cn, null, s.createElement(T.q, {
+                            return s.createElement(s.Fragment, null, s.createElement(ln, null, s.createElement(T.q, {
                                 alt: e.login,
                                 size: 50,
                                 src: ie(e)
@@ -7058,12 +7044,12 @@
                             }, s.createElement(T.W, {
                                 color: T.O.Alt2,
                                 fontSize: T.Ca.Size5
-                            }, e.displayname))), s.createElement(dn, null, s.createElement(T.Xa, {
+                            }, e.displayname))), s.createElement(cn, null, s.createElement(T.Xa, {
                                 margin: {
                                     right: .5
                                 }
                             }, s.createElement(T.z, {
-                                "data-test-selector": en.KeepButton,
+                                "data-test-selector": Xt.KeepButton,
                                 disabled: n,
                                 onClick: t.props.onClose,
                                 type: T.F.Hollow
@@ -7072,7 +7058,7 @@
                                     left: 1
                                 }
                             }, s.createElement(T.z, {
-                                "data-test-selector": en.RemoveButton,
+                                "data-test-selector": Xt.RemoveButton,
                                 disabled: n,
                                 onClick: t.onRemoveClick,
                                 state: n ? T.E.Loading : T.E.Default
@@ -7087,7 +7073,7 @@
                                                 isRequestInFlight: !0
                                             }), i.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), [4, Object(on.a)({
+                                            return i.trys.push([1, 3, , 4]), [4, Object(an.a)({
                                                 channelID: t,
                                                 editorID: a
                                             })];
@@ -7127,7 +7113,7 @@
                         }))
                     }, t
                 }(s.Component),
-                cn = function(e) {
+                ln = function(e) {
                     var t = e.children;
                     return s.createElement(T.Xa, {
                         alignItems: T.f.Center,
@@ -7139,7 +7125,7 @@
                         }
                     }, t)
                 },
-                dn = function(e) {
+                cn = function(e) {
                     var t = e.children;
                     return s.createElement(T.Cb, {
                         background: T.r.Alt,
@@ -7148,13 +7134,13 @@
                         padding: 2
                     }, t)
                 },
-                un = {
+                dn = {
                     "data-test-selector": "display-name"
                 },
-                pn = {
+                un = {
                     "data-test-selector": "empty"
                 },
-                hn = function(e) {
+                pn = function(e) {
                     var t = e.channels,
                         n = e.userID;
                     if (0 === t.length) return s.createElement(T.Xa, o.__assign({
@@ -7169,7 +7155,7 @@
                             bottom: 5,
                             left: 0
                         }
-                    }, pn), s.createElement(T.Xa, {
+                    }, un), s.createElement(T.Xa, {
                         padding: {
                             bottom: .5
                         }
@@ -7210,7 +7196,7 @@
                             }
                         }, s.createElement(T.U, {
                             to: "/" + t.login
-                        }, s.createElement(T.W, o.__assign({}, un), t.displayname)))), s.createElement(T.Xa, null, s.createElement(T.Xa, {
+                        }, s.createElement(T.W, o.__assign({}, dn), t.displayname)))), s.createElement(T.Xa, null, s.createElement(T.Xa, {
                             margin: {
                                 right: 1
                             },
@@ -7223,13 +7209,13 @@
                                 right: 1
                             },
                             display: T.X.InlineFlex
-                        }, s.createElement(rn.a, {
+                        }, s.createElement(nn.a, {
                             isButtonIcon: !0,
-                            threadID: Object(an.a)(n, t.id),
+                            threadID: Object(rn.a)(n, t.id),
                             isPopout: !1
-                        })), s.createElement(F.a, {
+                        })), s.createElement(L.a, {
                             triggerModal: function(r) {
-                                return s.createElement(ln, {
+                                return s.createElement(sn, {
                                     channel: t,
                                     onClose: r,
                                     onSuccess: e.onChannelRemoved,
@@ -7247,10 +7233,10 @@
                         })))
                     }))
                 },
-                mn = {
+                hn = {
                     "data-test-selector": "error"
                 },
-                gn = function() {
+                mn = function() {
                     return s.createElement(T.Xa, o.__assign({
                         display: T.X.Flex,
                         flexDirection: T.Aa.Column,
@@ -7263,7 +7249,7 @@
                             bottom: 5,
                             left: 0
                         }
-                    }, mn), s.createElement(T.Xa, {
+                    }, hn), s.createElement(T.Xa, {
                         padding: {
                             top: 5,
                             bottom: .5
@@ -7277,18 +7263,18 @@
                         fontSize: T.Ca.Size5
                     }, Object(u.d)("An error occured while loading channels you can manage.", "ChannelSettingsEditableChannelsPage")))
                 },
-                fn = n("CEZT"),
-                bn = n("OZZe");
+                gn = n("CEZT"),
+                fn = n("OZZe");
             n("L7tE");
             ! function(e) {
                 e[e.Loading = 0] = "Loading", e[e.Success = 1] = "Success", e[e.Error = 2] = "Error"
-            }(sn || (sn = {}));
-            var vn = function(e) {
+            }(on || (on = {}));
+            var bn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             editableChannels: [],
-                            requestState: sn.Loading
+                            requestState: on.Loading
                         }, t.handleChannelRemoved = function(e) {
                             t.setState(function(t) {
                                 return {
@@ -7331,7 +7317,7 @@
                             n = e.loading,
                             r = e.user,
                             a = this.state.requestState;
-                        if (n || a === sn.Loading) return s.createElement(L.a, null, s.createElement(T.gb, {
+                        if (n || a === on.Loading) return s.createElement(F.a, null, s.createElement(T.gb, {
                             height: 600
                         }));
                         if (t || !r || !r.login || !r.id) return s.createElement(g.a, null);
@@ -7339,7 +7325,7 @@
                             title: Object(u.d)("Channels you can manage", "ChannelSettingsEditableChannelsPage"),
                             linkToParent: "/" + r.login + "/dashboard/settings"
                         });
-                        return s.createElement(s.Fragment, null, s.createElement(L.a, null, s.createElement(_.a, {
+                        return s.createElement(s.Fragment, null, s.createElement(F.a, null, s.createElement(_.a, {
                             header: i
                         }, s.createElement(T.Cb, {
                             background: T.r.Base,
@@ -7354,11 +7340,11 @@
                             display: T.X.Flex,
                             justifyContent: T.Wa.Center,
                             margin: 1
-                        }, a === sn.Success && s.createElement(hn, {
+                        }, a === on.Success && s.createElement(pn, {
                             channels: this.state.editableChannels,
                             onChannelRemoved: this.handleChannelRemoved,
                             userID: r.id
-                        }), a === sn.Error && s.createElement(gn, null))))), s.createElement(nn.Whispers, null))
+                        }), a === on.Error && s.createElement(mn, null))))), s.createElement(tn.Whispers, null))
                     }, t.prototype.setEditableChannels = function() {
                         return o.__awaiter(this, void 0, void 0, function() {
                             var e, t;
@@ -7368,15 +7354,15 @@
                                         if (!(e = this.props.data.user) || !e.id) return [2];
                                         n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, , 4]), [4, Object(fn.a)(e.id)];
+                                        return n.trys.push([1, 3, , 4]), [4, Object(gn.a)(e.id)];
                                     case 2:
                                         return t = n.sent(), this.setState({
                                             editableChannels: t,
-                                            requestState: sn.Success
+                                            requestState: on.Success
                                         }), [3, 4];
                                     case 3:
                                         return n.sent(), this.setState({
-                                            requestState: sn.Error
+                                            requestState: on.Error
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -7385,7 +7371,7 @@
                         })
                     }, t
                 }(s.Component),
-                yn = Object(m.compose)(h.a, Object(f.a)(bn, {
+                vn = Object(m.compose)(h.a, Object(f.a)(fn, {
                     options: function(e) {
                         return {
                             variables: {
@@ -7397,7 +7383,8 @@
                     destination: y.a.EditableChannels
                 }), Object(b.a)({
                     location: S.PageviewLocation.EditableChannels
-                }))(vn),
+                }))(bn),
+                yn = n("m9vr"),
                 Sn = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -7405,58 +7392,37 @@
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         u.p.setPageTitle(Object(u.d)("Dashboard Settings", "DashboardSettingsRoot"))
                     }, t.prototype.render = function() {
-                        var e = this.props.user,
-                            t = e && e.login,
-                            n = e && e.roles && e.roles.isStaff;
-                        return this.props.match.params.channelLogin === t || n ? s.createElement(d.a, null, this.isChannelOwner && s.createElement(c.a, {
+                        var e = this.props,
+                            t = e.match.params.channelLogin,
+                            n = e.user;
+                        return t !== (n && n.login) ? s.createElement(yn.a, null) : s.createElement(d.a, null, s.createElement(l.a, {
                             exact: !0,
                             path: "/:channelLogin/dashboard/settings/authorized-streamers",
                             component: K
-                        }), this.isChannelOwner && s.createElement(c.a, {
+                        }), s.createElement(l.a, {
+                            exact: !0,
+                            path: "/:channelLogin/dashboard/settings/autohost",
+                            component: we
+                        }), s.createElement(l.a, {
                             exact: !0,
                             path: "/:channelLogin/dashboard/settings/managed-channels",
-                            component: yn
+                            component: vn
                         }), s.createElement(c.a, {
-                            path: "/:channelLogin/dashboard/settings/autohost",
                             exact: !0,
-                            component: we
-                        }), s.createElement(c.a, {
                             path: "/:channelLogin/dashboard/settings/moderation",
-                            exact: !0,
-                            render: function(e) {
-                                var t = e.match;
-                                return s.createElement(l.a, {
-                                    to: "/" + t.params.channelLogin + "/dashboard/settings"
-                                })
-                            }
+                            to: "/:channelLogin/dashboard/settings"
                         }), s.createElement(c.a, {
+                            exact: !0,
                             path: "/:channelLogin/dashboard/settings/streamkey",
-                            exact: !0,
-                            render: function(e) {
-                                var t = e.match;
-                                return s.createElement(l.a, {
-                                    to: "/" + t.params.channelLogin + "/dashboard/settings"
-                                })
-                            }
-                        }), s.createElement(c.a, {
+                            to: "/:channelLogin/dashboard/settings"
+                        }), s.createElement(l.a, {
                             exact: !0,
                             path: "/:channelLogin/dashboard/settings",
-                            component: tn
-                        }), s.createElement(c.a, {
+                            component: en
+                        }), s.createElement(l.a, {
                             component: p.a
-                        })) : s.createElement(l.a, {
-                            to: "/" + t + "/dashboard/settings"
-                        })
-                    }, Object.defineProperty(t.prototype, "isChannelOwner", {
-                        get: function() {
-                            var e = this.props,
-                                t = e.user,
-                                n = e.match;
-                            return Boolean(t && t.login === n.params.channelLogin)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), t
+                        }))
+                    }, t
                 }(s.Component);
             var En = Object(a.connect)(function(e) {
                 return {
@@ -7777,7 +7743,7 @@
                 I = n("i8i4"),
                 T = n("8/mp"),
                 x = n("b+ID"),
-                P = function(e) {
+                R = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.setRootContainerRef = function(e) {
@@ -7792,7 +7758,7 @@
                         })
                     }, t
                 }(p.Component),
-                R = (n("6Ll5"), function(e) {
+                P = (n("6Ll5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleContainerMouseOver = function() {
@@ -7964,7 +7930,7 @@
                             fullWidth: !0,
                             justifyContent: g.Wa.Between
                         }, this.state.roots.map(function(t, n) {
-                            return p.createElement(R, {
+                            return p.createElement(P, {
                                 column: n,
                                 key: n,
                                 grabbedCard: e.state.common.grabbedCard,
@@ -7974,7 +7940,7 @@
                             }, t.map(function(e) {
                                 var t = e.el,
                                     n = e.name;
-                                return p.createElement(P, {
+                                return p.createElement(R, {
                                     element: t,
                                     key: n
                                 })

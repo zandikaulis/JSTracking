@@ -82,7 +82,7 @@
         "4brS": function(e, n, t) {},
         DMoW: function(e, n, t) {
             "use strict";
-            var E, a, i, o, r, N, T, c, R, _, u, d, A, O, l, I, D, s, m, S, C, L, f, p, b, M, P, U, v, g, B, F, y, V, G, k, H, h, W, Y, j, K, X, w, x, J, z, Q, Z, q, $, ee, ne, te, Ee, ae, ie, oe, re, Ne, Te, ce, Re, _e, ue, de, Ae, Oe, le, Ie, De, se, me, Se, Ce, Le, fe, pe, be, Me, Pe, Ue, ve, ge, Be, Fe, ye, Ve, Ge, ke, He, he, We, Ye, je, Ke, Xe, we, xe, Je, ze, Qe, Ze, qe, $e, en, nn, tn, En, an, on, rn, Nn, Tn, cn, Rn, _n, un, dn;
+            var E, a, i, o, r, N, T, c, R, _, u, d, A, O, l, I, D, s, m, S, C, L, f, p, b, M, U, P, v, g, B, F, y, V, G, k, H, h, W, Y, j, K, X, w, x, J, z, Q, Z, q, $, ee, ne, te, Ee, ae, ie, oe, re, Ne, Te, ce, Re, _e, ue, de, Ae, Oe, le, Ie, De, se, me, Se, Ce, Le, fe, pe, be, Me, Ue, Pe, ve, ge, Be, Fe, ye, Ve, Ge, ke, He, he, We, Ye, je, Ke, Xe, we, xe, Je, ze, Qe, Ze, qe, $e, en, nn, tn, En, an, on, rn, Nn, Tn, cn, Rn, _n, un, dn, An;
             t.d(n, "d", function() {
                     return a
                 }), t.d(n, "L", function() {
@@ -99,20 +99,22 @@
                     return s
                 }), t.d(n, "m", function() {
                     return C
-                }), t.d(n, "V", function() {
+                }), t.d(n, "W", function() {
                     return L
                 }), t.d(n, "N", function() {
                     return f
                 }), t.d(n, "q", function() {
                     return p
                 }), t.d(n, "k", function() {
-                    return P
-                }), t.d(n, "M", function() {
                     return U
+                }), t.d(n, "M", function() {
+                    return P
                 }), t.d(n, "c", function() {
                     return V
                 }), t.d(n, "s", function() {
                     return G
+                }), t.d(n, "V", function() {
+                    return k
                 }), t.d(n, "r", function() {
                     return H
                 }), t.d(n, "P", function() {
@@ -153,7 +155,7 @@
                     return Ce
                 }), t.d(n, "n", function() {
                     return Le
-                }), t.d(n, "W", function() {
+                }), t.d(n, "X", function() {
                     return Me
                 }), t.d(n, "B", function() {
                     return ye
@@ -172,15 +174,15 @@
                 }), t.d(n, "O", function() {
                     return we
                 }), t.d(n, "y", function() {
-                    return nn
-                }), t.d(n, "J", function() {
                     return tn
-                }), t.d(n, "K", function() {
+                }), t.d(n, "J", function() {
                     return En
+                }), t.d(n, "K", function() {
+                    return an
                 }), t.d(n, "e", function() {
-                    return _n
-                }), t.d(n, "t", function() {
                     return un
+                }), t.d(n, "t", function() {
+                    return dn
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -262,10 +264,10 @@
                 }(M || (M = {})),
                 function(e) {
                     e.FOLLOWERS_ONLY = "FOLLOWERS_ONLY", e.SLOW_MODE = "SLOW_MODE", e.SUBSCRIBERS_ONLY = "SUBSCRIBERS_ONLY", e.VERIFIED_ONLY = "VERIFIED_ONLY"
-                }(P || (P = {})),
+                }(U || (U = {})),
                 function(e) {
                     e.AMOUNT_BELOW_MIN_BITS = "AMOUNT_BELOW_MIN_BITS", e.AUTO_MOD_MESSAGE = "AUTO_MOD_MESSAGE", e.AUTO_MOD_PENDING = "AUTO_MOD_PENDING", e.CHANNEL_BLOCKED_TERMS = "CHANNEL_BLOCKED_TERMS", e.CHANNEL_INELIGIBLE = "CHANNEL_INELIGIBLE", e.EMOTE_AMOUNT_BELOW_MIN_BITS = "EMOTE_AMOUNT_BELOW_MIN_BITS", e.INSUFFICIENT_BALANCE = "INSUFFICIENT_BALANCE", e.INVALID_BITS_AMOUNT = "INVALID_BITS_AMOUNT", e.INVALID_BITS_MESSAGE = "INVALID_BITS_MESSAGE", e.INVALID_EVENT_ID = "INVALID_EVENT_ID", e.MESSAGE_LENGTH_EXCEEDED = "MESSAGE_LENGTH_EXCEEDED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.TOO_LARGE_BITS_EMOTE = "TOO_LARGE_BITS_EMOTE", e.TOO_LARGE_CHEER = "TOO_LARGE_CHEER", e.UNKNOWN = "UNKNOWN", e.USER_BANNED = "USER_BANNED", e.USER_INELIGIBLE = "USER_INELIGIBLE", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_MESSAGE = "ZALGO_MESSAGE"
-                }(U || (U = {})),
+                }(P || (P = {})),
                 function(e) {
                     e.NEW_CHATTER = "NEW_CHATTER"
                 }(v || (v = {})),
@@ -424,10 +426,10 @@
                 }(Me || (Me = {})),
                 function(e) {
                     e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
-                }(Pe || (Pe = {})),
+                }(Ue || (Ue = {})),
                 function(e) {
                     e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
-                }(Ue || (Ue = {})),
+                }(Pe || (Pe = {})),
                 function(e) {
                     e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
                 }(ve || (ve = {})),
@@ -483,62 +485,65 @@
                     e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }(Je || (Je = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }(ze || (ze = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(Ze || (Ze = {})),
                 function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
                 }(qe || (qe = {})),
                 function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }($e || ($e = {})),
                 function(e) {
                     e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(en || (en = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(nn || (nn = {})),
                 function(e) {
-                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(tn || (tn = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
+                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
                 }(En || (En = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
                 }(an || (an = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }(on || (on = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(rn || (rn = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(Nn || (Nn = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(Tn || (Tn = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(cn || (cn = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(Rn || (Rn = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
                 }(_n || (_n = {})),
                 function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
                 }(un || (un = {})),
                 function(e) {
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                }(dn || (dn = {})),
+                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(dn || (dn = {}))
+                }(An || (An = {}))
         },
         H3dc: function(e, n, t) {
             var E = {
@@ -1883,19 +1888,19 @@
                         }))
                     }, n
                 }(i.Component),
-                P = Object(o.compose)(Object(N.b)("DevBountyDashboardQueueCampaignList", {
+                U = Object(o.compose)(Object(N.b)("DevBountyDashboardQueueCampaignList", {
                     autoReportInteractive: !0
                 }))(M);
-            var U, v = Object(o.compose)(Object(s.connect)(null, function(e) {
+            var P, v = Object(o.compose)(Object(s.connect)(null, function(e) {
                 return Object(m.bindActionCreators)({
                     showCancelCampaignModal: function() {
                         return Object(S.d)(C.a, {})
                     }
                 }, e)
-            }))(P);
+            }))(U);
             ! function(e) {
                 e.DetailsButtonSelector = "dev-bounty-rejected-campaign-details-button", e.DeleteButtonSelector = "dev-bounty-rejected-campaign-delete-button"
-            }(U || (U = {}));
+            }(P || (P = {}));
             var g = function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
@@ -1936,7 +1941,7 @@
                                 right: 1
                             }
                         }, i.createElement(T.z, {
-                            "data-test-selector": U.DetailsButtonSelector,
+                            "data-test-selector": P.DetailsButtonSelector,
                             fullWidth: !0,
                             type: T.F.Hollow,
                             linkTo: "/console/bounty-board/campaign/" + n.id

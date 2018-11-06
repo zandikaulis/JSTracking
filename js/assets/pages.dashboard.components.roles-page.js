@@ -1454,90 +1454,6 @@
                 })
             }
         },
-        gD7V: function(e, t) {
-            var n = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "query",
-                    name: {
-                        kind: "Name",
-                        value: "SearchUserQuery"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "login"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "String"
-                                }
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "user"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "login"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "login"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "id"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 69
-                }
-            };
-            n.loc.source = {
-                body: "query SearchUserQuery($login: String!) {\nuser(login: $login) {\nid\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = n
-        },
         qcBk: function(e, t, n) {
             "use strict";
             n.r(t);
@@ -1568,7 +1484,7 @@
             function g(e) {
                 return v(k)(e)
             }
-            var E, C, y, b = function(e) {
+            var E, C, I, b = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.setView = function(e) {
@@ -1586,7 +1502,7 @@
                         }, this.props.children)
                     }, t
                 }(s.Component),
-                I = n("Ue10"),
+                y = n("Ue10"),
                 S = n("/7QA"),
                 N = n("IFXb"),
                 D = n("5NYc"),
@@ -1598,7 +1514,7 @@
             }(C || (C = {})),
             function(e) {
                 e.IS_EDITOR = "isEditor", e.IS_MOD = "isMod", e.IS_VIP = "isVIP"
-            }(y || (y = {}));
+            }(I || (I = {}));
             var A = (E = Object(h.a)("UserRolesCacheContext", {
                     modifyUserInCache: function() {
                         return null
@@ -1724,7 +1640,7 @@
                     }, t.prototype.render = function() {
                         return this.props.data.error ? s.createElement(l.a, {
                             message: Object(S.d)("Whoops, something went wrong.", "UserRolesContext")
-                        }) : this.props.view === r.LOADING ? s.createElement(I.Za, {
+                        }) : this.props.view === r.LOADING ? s.createElement(y.Za, {
                             fillContent: !0
                         }) : s.createElement(A, {
                             value: this.state
@@ -1738,17 +1654,17 @@
                         s || o || !l || this.props.view !== r.LOADING || this.setState(function(e) {
                             var r = a.__assign({}, e);
                             if (r.userCache || (r.userCache = {}), l.editors && l.editors.edges) {
-                                var s = t.setUserCache(r.userCache, l.editors.edges, y.IS_EDITOR).userCache;
+                                var s = t.setUserCache(r.userCache, l.editors.edges, I.IS_EDITOR).userCache;
                                 r.userCache = a.__assign({}, r.userCache, s)
                             }
                             if (l.mods && l.mods.edges) {
-                                var o = t.setUserCache(r.userCache, l.mods.edges, y.IS_MOD),
+                                var o = t.setUserCache(r.userCache, l.mods.edges, I.IS_MOD),
                                     d = o.cursor;
                                 s = o.userCache;
                                 n = d, r.userCache = a.__assign({}, r.userCache, s)
                             }
                             if (l.vips && l.vips.edges) {
-                                var c = t.setUserCache(r.userCache, l.vips.edges, y.IS_VIP);
+                                var c = t.setUserCache(r.userCache, l.vips.edges, I.IS_VIP);
                                 d = c.cursor, s = c.userCache;
                                 i = d, r.userCache = a.__assign({}, r.userCache, s), r.totalVIPs = e.totalVIPs + l.vips.edges.length
                             }
@@ -1847,8 +1763,8 @@
                 q = n("kYmV"),
                 H = n("cuu2"),
                 $ = "https://help.twitch.tv/customer/en/portal/articles/659115-twitch-chat-badges-guide",
-                Q = "https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/1",
-                z = "https://static-cdn.jtvnw.net/badges/v1/b817aba4-fad8-49e2-b88a-7cc744dfa6ec/1",
+                z = "https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/1",
+                Q = "https://static-cdn.jtvnw.net/badges/v1/b817aba4-fad8-49e2-b88a-7cc744dfa6ec/1",
                 K = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -2142,7 +2058,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(I.ab, {
+                        return s.createElement(y.ab, {
                             elevation: 3,
                             onCloseButtonClick: this.handleModalDismiss,
                             primaryButtonProps: {
@@ -2153,13 +2069,13 @@
                             secondaryButtonProps: {
                                 children: Object(S.d)("Cancel", "RolesPageMessageModal"),
                                 onClick: this.handleModalDismiss,
-                                type: I.F.Hollow
+                                type: y.F.Hollow
                             },
-                            size: I.bb.Small,
+                            size: y.bb.Small,
                             title: Object(S.d)("Something went wrong", "RolesPageMessageModal")
-                        }, s.createElement(I.Xa, {
+                        }, s.createElement(y.Xa, {
                             padding: 1
-                        }, s.createElement(I.W, null, Object(S.d)("There was an error modifying roles for {user}.", {
+                        }, s.createElement(y.W, null, Object(S.d)("There was an error modifying roles for {user}.", {
                             user: this.props.message.user.displayName
                         }, "RolesPageMessageModal"))))
                     }, t
@@ -2179,7 +2095,7 @@
                         e && (e.type === X.ALL_MUTATIONS_FAILED && this.props.showModal(this.props))
                     }, t
                 }(s.Component);
-            var ye, be = Object(o.compose)(Object(re.connect)(null, function(e) {
+            var Ie, be = Object(o.compose)(Object(re.connect)(null, function(e) {
                     return Object(o.bindActionCreators)({
                         closeModal: ae.c,
                         showModal: function(e) {
@@ -2187,64 +2103,64 @@
                         }
                     }, e)
                 }), de, ee, F)(Ce),
-                Ie = n("9C/b"),
+                ye = n("9C/b"),
                 Se = (n("vsHg"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(I.Xa, {
-                            alignItems: I.f.Center,
-                            display: I.X.Flex,
+                        return s.createElement(y.Xa, {
+                            alignItems: y.f.Center,
+                            display: y.X.Flex,
                             fullHeight: !0,
                             fullWidth: !0,
-                            justifyContent: I.Wa.Center,
-                            position: I.hb.Absolute,
-                            zIndex: I.gc.Above
-                        }, s.createElement(I.i, {
-                            type: I.n.SlideInBottom,
-                            duration: I.k.Medium,
+                            justifyContent: y.Wa.Center,
+                            position: y.hb.Absolute,
+                            zIndex: y.gc.Above
+                        }, s.createElement(y.i, {
+                            type: y.n.SlideInBottom,
+                            duration: y.k.Medium,
                             enabled: !0,
-                            timing: I.m.EaseInOut
-                        }, s.createElement(I.Cb, {
-                            background: I.r.Base,
+                            timing: y.m.EaseInOut
+                        }, s.createElement(y.Cb, {
+                            background: y.r.Base,
                             borderBottom: !0,
-                            borderRadius: I.x.Medium,
+                            borderRadius: y.x.Medium,
                             className: "dashboard-centered-banner",
-                            display: I.X.Flex,
+                            display: y.X.Flex,
                             elevation: 3,
-                            flexDirection: I.Aa.Column,
+                            flexDirection: y.Aa.Column,
                             padding: 2
-                        }, s.createElement(I.Xa, {
-                            alignItems: I.f.Center,
-                            display: I.X.Flex,
-                            justifyContent: I.Wa.Start,
+                        }, s.createElement(y.Xa, {
+                            alignItems: y.f.Center,
+                            display: y.X.Flex,
+                            justifyContent: y.Wa.Start,
                             margin: {
                                 bottom: 1
                             }
-                        }, s.createElement(I.Xa, {
+                        }, s.createElement(y.Xa, {
                             margin: {
                                 right: .5
                             }
-                        }, s.createElement(I.q, {
+                        }, s.createElement(y.q, {
                             alt: Object(S.d)("VoHiYo", "CenteredBanner"),
                             src: "https://static-cdn.jtvnw.net/emoticons/v1/81274/2.0",
                             size: 30
-                        })), s.createElement(I.W, {
+                        })), s.createElement(y.W, {
                             bold: !0,
-                            type: I.Tb.H5
-                        }, this.props.title)), s.createElement(I.Xa, {
+                            type: y.Tb.H5
+                        }, this.props.title)), s.createElement(y.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, s.createElement(I.W, {
-                            fontSize: I.Ca.Size5
+                        }, s.createElement(y.W, {
+                            fontSize: y.Ca.Size5
                         }, this.props.body)), this.props.children)))
                     }, t
                 }(s.Component));
             ! function(e) {
                 e.ADD_A_ROLE = "no-users-banner-add-a-role", e.LEARN_MORE = "no-users-banner-learn-more"
-            }(ye || (ye = {}));
+            }(Ie || (Ie = {}));
             var Ne = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2256,63 +2172,63 @@
                         return s.createElement(Se, {
                             body: Object(S.d)("Manage the permissions users have for your community. Start by adding your first role.", "NoUsersBanner"),
                             title: Object(S.d)("Welcome to Roles", "NoUsersBanner")
-                        }, s.createElement(I.Xa, {
-                            alignItems: I.f.Center,
-                            display: I.X.Flex,
-                            justifyContent: I.Wa.Start
-                        }, s.createElement(I.Xa, {
+                        }, s.createElement(y.Xa, {
+                            alignItems: y.f.Center,
+                            display: y.X.Flex,
+                            justifyContent: y.Wa.Start
+                        }, s.createElement(y.Xa, {
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(I.z, {
-                            "data-test-selector": ye.ADD_A_ROLE,
+                        }, s.createElement(y.z, {
+                            "data-test-selector": Ie.ADD_A_ROLE,
                             onClick: this.handleAddARoleClick
-                        }, Object(S.d)("Add a Role", "NoUsersBanner"))), s.createElement(I.z, {
-                            "data-test-selector": ye.LEARN_MORE,
+                        }, Object(S.d)("Add a Role", "NoUsersBanner"))), s.createElement(y.z, {
+                            "data-test-selector": Ie.LEARN_MORE,
                             linkTo: $,
-                            type: I.F.Text
+                            type: y.F.Text
                         }, Object(S.d)("Learn More", "NoUsersBanner"))))
                     }, t
                 }(s.Component),
-                De = Object(o.compose)(g, Ie.a)(Ne),
+                De = Object(o.compose)(g, ye.a)(Ne),
                 _e = n("TSYQ"),
                 Oe = function(e) {
                     var t;
                     if (e.selected) switch (e.sortDirection) {
                         case je.ASCENDING:
-                            t = s.createElement(I.qb, {
-                                asset: I.rb.GlyphArrUp,
+                            t = s.createElement(y.qb, {
+                                asset: y.rb.GlyphArrUp,
                                 width: 10
                             });
                             break;
                         case je.DESCENDING:
-                            t = s.createElement(I.qb, {
-                                asset: I.rb.GlyphArrDown,
+                            t = s.createElement(y.qb, {
+                                asset: y.rb.GlyphArrDown,
                                 width: 10
                             });
                             break;
                         default:
-                            t = s.createElement(I.qb, {
-                                asset: I.rb.GlyphArrUpDown,
+                            t = s.createElement(y.qb, {
+                                asset: y.rb.GlyphArrUpDown,
                                 width: 10
                             })
-                    } else t = s.createElement(I.qb, {
-                        asset: I.rb.GlyphArrUpDown,
+                    } else t = s.createElement(y.qb, {
+                        asset: y.rb.GlyphArrUpDown,
                         width: 10
                     });
-                    return s.createElement(I.z, {
-                        type: I.F.Text,
+                    return s.createElement(y.z, {
+                        type: y.F.Text,
                         onClick: e.onClick
-                    }, s.createElement(I.Cb, {
-                        display: I.X.Flex,
-                        alignContent: I.e.Center
-                    }, s.createElement(I.W, {
-                        type: I.Tb.Span,
+                    }, s.createElement(y.Cb, {
+                        display: y.X.Flex,
+                        alignContent: y.e.Center
+                    }, s.createElement(y.W, {
+                        type: y.Tb.Span,
                         bold: !0,
-                        color: e.selected ? I.O.Alt : I.O.Link
-                    }, e.children), s.createElement(I.Xa, {
-                        display: I.X.Flex,
-                        alignItems: I.f.Center,
+                        color: e.selected ? y.O.Alt : y.O.Link
+                    }, e.children), s.createElement(y.Xa, {
+                        display: y.X.Flex,
+                        alignItems: y.f.Center,
                         margin: {
                             left: .5
                         }
@@ -2327,32 +2243,32 @@
                         var e = this.props,
                             t = e.src,
                             n = e.title;
-                        return s.createElement(I.Cb, {
-                            alignItems: I.f.Center,
-                            background: I.r.Alt,
-                            borderRadius: I.x.Medium,
-                            display: I.X.Flex,
-                            justifyContent: I.Wa.Center,
+                        return s.createElement(y.Cb, {
+                            alignItems: y.f.Center,
+                            background: y.r.Alt,
+                            borderRadius: y.x.Medium,
+                            display: y.X.Flex,
+                            justifyContent: y.Wa.Center,
                             margin: {
                                 x: 1
                             }
-                        }, t && s.createElement(I.Xa, {
+                        }, t && s.createElement(y.Xa, {
                             margin: {
                                 right: .5
                             }
-                        }, s.createElement(I.S, {
+                        }, s.createElement(y.S, {
                             alt: n,
                             src: t
-                        })), s.createElement(I.Xa, {
+                        })), s.createElement(y.Xa, {
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(I.W, {
+                        }, s.createElement(y.W, {
                             bold: !0
-                        }, n)), s.createElement(I.A, {
-                            icon: I.rb.NotificationError,
+                        }, n)), s.createElement(y.A, {
+                            icon: y.rb.NotificationError,
                             onClick: this.props.onRolePillDismissed,
-                            size: I.B.Small
+                            size: y.B.Small
                         }))
                     }, t
                 }(s.Component),
@@ -2369,18 +2285,18 @@
                             t = e.disabled,
                             n = e.label,
                             i = e.src;
-                        return s.createElement(I.Xa, {
-                            alignItems: I.f.Center,
-                            display: I.X.Flex,
-                            justifyContent: I.Wa.Between,
+                        return s.createElement(y.Xa, {
+                            alignItems: y.f.Center,
+                            display: y.X.Flex,
+                            justifyContent: y.Wa.Between,
                             margin: this.props.margin
-                        }, s.createElement(I.N, {
+                        }, s.createElement(y.N, {
                             checked: this.props.checked,
                             disabled: t,
                             label: n,
                             onChange: this.handleCheckBoxChange,
                             value: this.props.value
-                        }), i && s.createElement(I.S, {
+                        }), i && s.createElement(y.S, {
                             alt: n,
                             className: t ? "disabled-role-selector-icon" : "",
                             src: i
@@ -2410,15 +2326,15 @@
                             n = e.isMod,
                             i = e.isVIP,
                             r = e.onCheckBoxChange;
-                        return s.createElement(I.Xa, {
-                            position: I.hb.Relative
-                        }, s.createElement(I.u, {
+                        return s.createElement(y.Xa, {
+                            position: y.hb.Relative
+                        }, s.createElement(y.u, {
                             offsetY: "-0.5px",
                             noTail: !0,
                             show: this.props.show
-                        }, s.createElement(I.Cb, {
+                        }, s.createElement(y.Cb, {
                             border: !0,
-                            borderRadius: I.x.Small,
+                            borderRadius: y.x.Small,
                             elevation: 2
                         }, s.createElement(Me, {
                             checked: n,
@@ -2429,8 +2345,8 @@
                                 x: 1,
                                 y: 2
                             },
-                            src: Q,
-                            value: y.IS_MOD
+                            src: z,
+                            value: I.IS_MOD
                         }), this.props.isVIPUnlocked && s.createElement(Me, {
                             checked: i,
                             disabled: n || this.props.isAtMaxVIPUserLimit && !i,
@@ -2440,8 +2356,8 @@
                                 x: 1,
                                 bottom: 2
                             },
-                            src: z,
-                            value: y.IS_VIP
+                            src: Q,
+                            value: I.IS_VIP
                         }), s.createElement(Me, {
                             checked: t,
                             disabled: !1,
@@ -2451,23 +2367,23 @@
                                 x: 1,
                                 bottom: 2
                             },
-                            value: y.IS_EDITOR
-                        }), s.createElement(I.Ua, {
+                            value: I.IS_EDITOR
+                        }), s.createElement(y.Ua, {
                             onClick: this.handleLearnAboutRolesClick
-                        }, s.createElement(I.Cb, {
-                            alignItems: I.f.Center,
+                        }, s.createElement(y.Cb, {
+                            alignItems: y.f.Center,
                             borderTop: !0,
-                            display: I.X.Flex,
+                            display: y.X.Flex,
                             padding: 1
-                        }, s.createElement(I.Xa, {
-                            alignItems: I.f.Center,
-                            display: I.X.Flex,
+                        }, s.createElement(y.Xa, {
+                            alignItems: y.f.Center,
+                            display: y.X.Flex,
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(I.qb, {
-                            asset: I.rb.NotificationInfo
-                        })), s.createElement(I.W, null, Object(S.e)("Learn about Roles", "RoleSelector")))))))
+                        }, s.createElement(y.qb, {
+                            asset: y.rb.NotificationInfo
+                        })), s.createElement(y.W, null, Object(S.e)("Learn about Roles", "RoleSelector")))))))
                     }, t
                 }(s.Component)),
                 Pe = B(function(e) {
@@ -2498,37 +2414,37 @@
                             l = n.isEditor,
                             d = n.isMod,
                             c = n.isVIP;
-                        return s.createElement(I.Xa, {
-                            alignItems: I.f.Center,
-                            display: I.X.Flex,
+                        return s.createElement(y.Xa, {
+                            alignItems: y.f.Center,
+                            display: y.X.Flex,
                             flexDirection: this.props.roleOrder
-                        }, !i && s.createElement(I.A, {
+                        }, !i && s.createElement(y.A, {
                             onClick: this.handleAddRoleClick,
-                            icon: I.rb.Plus,
-                            size: I.B.Small
+                            icon: y.rb.Plus,
+                            size: y.B.Small
                         }), i && s.createElement(Ue.a, {
                             onClickOut: this.handleClickOut
-                        }, s.createElement(I.z, {
-                            icon: I.rb.Plus,
+                        }, s.createElement(y.z, {
+                            icon: y.rb.Plus,
                             onClick: this.handleAddRoleClick,
-                            size: I.D.Small,
-                            type: I.F.Text
-                        }, s.createElement(I.W, null, Object(S.d)("Add Role", "RoleSelector"))), s.createElement(we, {
+                            size: y.D.Small,
+                            type: y.F.Text
+                        }, s.createElement(y.W, null, Object(S.d)("Add Role", "RoleSelector"))), s.createElement(we, {
                             isEditor: l,
                             isMod: d,
                             isVIP: c,
                             onCheckBoxChange: this.props.onCheckBoxChange,
                             show: i
                         })), l && s.createElement(Ae, {
-                            onRolePillDismissed: t.bind(null, y.IS_EDITOR),
+                            onRolePillDismissed: t.bind(null, I.IS_EDITOR),
                             title: r
                         }), d && s.createElement(Ae, {
-                            onRolePillDismissed: t.bind(null, y.IS_MOD),
-                            src: Q,
+                            onRolePillDismissed: t.bind(null, I.IS_MOD),
+                            src: z,
                             title: a
                         }), this.props.isVIPUnlocked && c && s.createElement(Ae, {
-                            onRolePillDismissed: t.bind(null, y.IS_VIP),
-                            src: z,
+                            onRolePillDismissed: t.bind(null, I.IS_VIP),
+                            src: Q,
                             title: o
                         }))
                     }, t
@@ -2538,12 +2454,12 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(I.Cb, {
-                            alignItems: I.f.Center,
-                            background: I.r.Base,
+                        return s.createElement(y.Cb, {
+                            alignItems: y.f.Center,
+                            background: y.r.Base,
                             borderBottom: !0,
-                            borderRadius: I.x.Large,
-                            display: I.X.Flex,
+                            borderRadius: y.x.Large,
+                            display: y.X.Flex,
                             elevation: 1,
                             fullWidth: !0,
                             margin: this.props.margin,
@@ -2607,65 +2523,65 @@
                             margin: {
                                 top: .5
                             }
-                        }, s.createElement(I.P, {
+                        }, s.createElement(y.P, {
                             cols: xe.FIRST_COLUMN
-                        }, s.createElement(I.Xa, {
-                            display: I.X.Flex,
-                            alignItems: I.f.Center
-                        }, s.createElement(I.U, {
+                        }, s.createElement(y.Xa, {
+                            display: y.X.Flex,
+                            alignItems: y.f.Center
+                        }, s.createElement(y.U, {
                             to: "/" + n,
                             targetBlank: !0
-                        }, s.createElement(I.q, {
+                        }, s.createElement(y.q, {
                             src: e.profileImageURL,
                             alt: n,
                             size: 30
-                        })), s.createElement(I.U, {
+                        })), s.createElement(y.U, {
                             to: "/" + n,
                             targetBlank: !0
-                        }, s.createElement(I.Xa, {
+                        }, s.createElement(y.Xa, {
                             margin: {
                                 left: 1
                             },
-                            display: I.X.Flex,
-                            alignItems: I.f.Center
-                        }, s.createElement(I.W, {
+                            display: y.X.Flex,
+                            alignItems: y.f.Center
+                        }, s.createElement(y.W, {
                             bold: !0,
-                            color: I.O.Base,
-                            type: I.Tb.P,
+                            color: y.O.Base,
+                            type: y.Tb.P,
                             ellipsis: !0
-                        }, n), n.toLowerCase() !== t.toLowerCase() && s.createElement(I.Xa, {
+                        }, n), n.toLowerCase() !== t.toLowerCase() && s.createElement(y.Xa, {
                             margin: {
                                 left: 1
                             }
-                        }, s.createElement(I.W, {
+                        }, s.createElement(y.W, {
                             bold: !0,
-                            color: I.O.Base,
-                            type: I.Tb.P,
+                            color: y.O.Base,
+                            type: y.Tb.P,
                             ellipsis: !0,
                             "data-test-selector": Re.CJK_NAME
-                        }, t)))))), s.createElement(I.P, {
+                        }, t)))))), s.createElement(y.P, {
                             cols: xe.SECOND_COLUMN
-                        }, s.createElement(I.Xa, {
-                            display: I.X.Flex,
+                        }, s.createElement(y.Xa, {
+                            display: y.X.Flex,
                             margin: {
                                 right: 5
                             },
                             flexGrow: 1,
-                            alignItems: I.f.Center
+                            alignItems: y.f.Center
                         }, s.createElement(Pe, {
                             user: e,
                             onCheckBoxChange: this.handleCheckBoxChange,
                             onRolePillDismissed: this.handleRolePillDismissed,
-                            roleOrder: I.Aa.RowReverse
-                        }))), s.createElement(I.P, {
+                            roleOrder: y.Aa.RowReverse
+                        }))), s.createElement(y.P, {
                             cols: xe.THIRD_COLUMN
-                        }, s.createElement(I.Xa, {
-                            display: I.X.Flex,
-                            alignItems: I.f.Center,
-                            flexDirection: I.Aa.RowReverse
-                        }, s.createElement(I.P, {
+                        }, s.createElement(y.Xa, {
+                            display: y.X.Flex,
+                            alignItems: y.f.Center,
+                            flexDirection: y.Aa.RowReverse
+                        }, s.createElement(y.P, {
                             cols: 6
-                        }, s.createElement(I.W, null, Object(S.c)(e.lastModified))))))
+                        }, s.createElement(y.W, null, Object(S.c)(e.lastModified))))))
                     }, t
                 }(s.Component),
                 Ge = Object(o.compose)(ee, F, de)(Xe),
@@ -2715,7 +2631,7 @@
                             })
                         })) : s.createElement(s.Fragment, null, t.reduce(function(t, n) {
                             var i = e.props.userCache[n];
-                            return i && (e.props.filterType === C.EDITOR && i[y.IS_EDITOR] || e.props.filterType === C.MODERATOR && i[y.IS_MOD] || e.props.filterType === C.VIP && i[y.IS_VIP]) && t.push(s.createElement(Ge, {
+                            return i && (e.props.filterType === C.EDITOR && i[I.IS_EDITOR] || e.props.filterType === C.MODERATOR && i[I.IS_MOD] || e.props.filterType === C.VIP && i[I.IS_VIP]) && t.push(s.createElement(Ge, {
                                 "data-test-selector": "roles-table-row-" + n,
                                 key: "roles-table-row-" + n,
                                 userID: n
@@ -2757,43 +2673,43 @@
                             n = {
                                 "disabled-rows": this.props.view !== r.DEFAULT
                             };
-                        return s.createElement(I.Xa, {
+                        return s.createElement(y.Xa, {
                             fullWidth: !0,
                             fullHeight: !0,
                             margin: {
                                 top: 1
                             }
-                        }, s.createElement(I.Xa, {
-                            display: I.X.Flex,
-                            alignItems: I.f.Center,
+                        }, s.createElement(y.Xa, {
+                            display: y.X.Flex,
+                            alignItems: y.f.Center,
                             padding: {
                                 x: 1,
                                 bottom: .5
                             }
-                        }, s.createElement(I.P, {
+                        }, s.createElement(y.P, {
                             cols: xe.FIRST_COLUMN
                         }, s.createElement(Oe, {
                             selected: e === Be.USERNAME,
                             sortDirection: t,
                             onClick: this.handleUsernameHeaderClick
-                        }, Object(S.d)("Username", "RolesPageTable"))), s.createElement(I.P, {
+                        }, Object(S.d)("Username", "RolesPageTable"))), s.createElement(y.P, {
                             cols: xe.SECOND_COLUMN
-                        }, s.createElement(I.W, {
-                            type: I.Tb.Span,
+                        }, s.createElement(y.W, {
+                            type: y.Tb.Span,
                             bold: !0,
-                            color: I.O.Link
-                        }, " ", Object(S.d)("Roles", "RolesPageTable"), " ")), s.createElement(I.P, {
+                            color: y.O.Link
+                        }, " ", Object(S.d)("Roles", "RolesPageTable"), " ")), s.createElement(y.P, {
                             cols: xe.THIRD_COLUMN
-                        }, s.createElement(I.Xa, {
-                            display: I.X.Flex,
-                            flexDirection: I.Aa.RowReverse
-                        }, s.createElement(I.P, {
+                        }, s.createElement(y.Xa, {
+                            display: y.X.Flex,
+                            flexDirection: y.Aa.RowReverse
+                        }, s.createElement(y.P, {
                             cols: 6
                         }, s.createElement(Oe, {
                             selected: e === Be.LAST_MODIFIED,
                             sortDirection: t,
                             onClick: this.handleLastModifiedHeaderClick
-                        }, Object(S.d)("Last Modified", "RolesPageTable")))))), s.createElement(I.Xa, {
+                        }, Object(S.d)("Last Modified", "RolesPageTable")))))), s.createElement(y.Xa, {
                             className: _e(n)
                         }, s.createElement(We, {
                             filterType: this.props.filterType,
@@ -2804,15 +2720,14 @@
                     }, t
                 }(s.Component),
                 $e = Object(o.compose)(g, F)(He),
-                Qe = n("8Ad5"),
-                ze = n("f00E"),
+                ze = n("8Ad5"),
+                Qe = n("f00E"),
                 Ke = n("H/lO"),
                 Ye = n("NZDK"),
                 Je = n("AXTS"),
                 Ze = n("Kw8/"),
-                et = n("gD7V"),
-                tt = 250,
-                nt = function(e) {
+                et = 250,
+                tt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2826,19 +2741,27 @@
                             logger: S.k,
                             config: S.a,
                             stats: S.p.stats
-                        }), t.filterUsersResults = function(e) {
-                            var n = t.props.data.user,
-                                i = n && n.id,
-                                r = t.props.userCache;
+                        }), t.filterUsersResults = function(e, n) {
+                            var i = t.props.userCache,
+                                r = t.props.match.params.channelLogin;
+                            if (n.match(/^\".*\"$/i)) {
+                                var a = n.replace(/\"/g, "").toLowerCase();
+                                return e.hits.filter(function(e) {
+                                    var t = e.login,
+                                        n = e.objectID;
+                                    return n && !i[n] && t !== r && a === t
+                                })
+                            }
                             return e.hits.filter(function(e) {
-                                var t = e.objectID;
-                                return t && t !== i && !r[t]
+                                var t = e.login,
+                                    n = e.objectID;
+                                return n && t !== r && !i[n]
                             })
                         }, t.handleInputChange = function(e) {
                             var n = e.currentTarget.value;
                             return a.__awaiter(t, void 0, void 0, function() {
                                 return a.__generator(this, function(e) {
-                                    return this.algoliaDebounceTimeout && clearTimeout(this.algoliaDebounceTimeout), this.algoliaDebounceTimeout = setTimeout(this.queryAlgolia.bind(this, n), tt), [2]
+                                    return this.algoliaDebounceTimeout && clearTimeout(this.algoliaDebounceTimeout), this.algoliaDebounceTimeout = setTimeout(this.queryAlgolia.bind(this, n), et), [2]
                                 })
                             })
                         }, t.queryAlgolia = function(e) {
@@ -2847,12 +2770,12 @@
                                 return a.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return e ? [4, this.searchClient.queryForType(Ke.a.Users, e, Object(ze.a)(), {
+                                            return e ? [4, this.searchClient.queryForType(Ke.a.Users, e, Object(Qe.a)(), {
                                                 hitsPerPage: 10
                                             })] : [3, 2];
                                         case 1:
                                             return (t = n.sent()) && t.users && this.setState({
-                                                searchedUsers: this.filterUsersResults(t.users)
+                                                searchedUsers: this.filterUsersResults(t.users, e)
                                             }, this.deselectUser), [3, 3];
                                         case 2:
                                             this.setState({
@@ -2896,46 +2819,45 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        if (this.props.data.loading) return null;
                         var e = this.props.selectedUser,
                             t = e && e.channelLogin || "",
                             n = e && e.displayName || "",
                             i = this.state.canEditInputField,
-                            r = s.createElement(I.Xa, {
+                            r = s.createElement(y.Xa, {
                                 margin: {
                                     right: e ? 1 : .5
                                 }
-                            }, s.createElement(I.q, {
+                            }, s.createElement(y.q, {
                                 alt: Object(S.d)("Avatar", "SearchUsers"),
                                 size: 30,
                                 src: e && e.profileImageURL
                             }));
-                        return s.createElement(I.Xa, null, !i && e && s.createElement(I.Ua, {
+                        return s.createElement(y.Xa, null, !i && e && s.createElement(y.Ua, {
                             onClick: this.enableInputField,
-                            type: I.Va.Overlay
-                        }, s.createElement(I.Xa, {
-                            alignItems: I.f.Center,
-                            display: I.X.Flex
-                        }, r, s.createElement(I.W, {
+                            type: y.Va.Overlay
+                        }, s.createElement(y.Xa, {
+                            alignItems: y.f.Center,
+                            display: y.X.Flex
+                        }, r, s.createElement(y.W, {
                             bold: !0,
-                            type: I.Tb.P,
+                            type: y.Tb.P,
                             ellipsis: !0
-                        }, t), t.toLowerCase() !== n.toLowerCase() && s.createElement(I.Xa, {
+                        }, t), t.toLowerCase() !== n.toLowerCase() && s.createElement(y.Xa, {
                             margin: {
                                 left: 1
                             }
-                        }, s.createElement(I.W, {
+                        }, s.createElement(y.W, {
                             bold: !0,
-                            type: I.Tb.P,
+                            type: y.Tb.P,
                             ellipsis: !0
                         }, n)))), (i || !e) && s.createElement(Ue.a, {
                             onClickOut: this.handleClickOut
-                        }, s.createElement(I.Xa, {
-                            alignItems: I.f.Center,
-                            display: I.X.Flex
-                        }, r, s.createElement(I.Xa, {
-                            position: I.hb.Relative
-                        }, s.createElement(I.Ra, {
+                        }, s.createElement(y.Xa, {
+                            alignItems: y.f.Center,
+                            display: y.X.Flex
+                        }, r, s.createElement(y.Xa, {
+                            position: y.hb.Relative
+                        }, s.createElement(y.Ra, {
                             autoFocus: !0,
                             defaultValue: n,
                             onBlur: this.handleInputBlur,
@@ -2943,7 +2865,7 @@
                             onFocus: this.handleInputFocus,
                             onKeyDown: this.props.onInputKeyDown,
                             placeholder: Object(S.d)("Search", "SearchUsers"),
-                            type: I.Ta.Text
+                            type: y.Ta.Text
                         }), s.createElement(Je.a, {
                             onOptionClick: this.handleOptionClick,
                             onOptionBlur: this.handleOptionBlur,
@@ -2952,19 +2874,11 @@
                         })))))
                     }, t
                 }(s.Component),
-                it = Object(o.compose)(F, Ie.a, Object(d.a)(et, {
-                    options: function(e) {
-                        return {
-                            variables: {
-                                login: e.match.params.channelLogin
-                            }
-                        }
-                    }
-                }))(nt);
+                nt = Object(o.compose)(F, ye.a)(tt);
             ! function(e) {
                 e.CANCEL_BUTTON = "roles-page-add-user-cancel-button", e.SAVE_BUTTON = "roles-page-add-user-save-button"
             }(qe || (qe = {}));
-            var rt, at = function(e) {
+            var it, rt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2984,7 +2898,7 @@
                                 } : null
                             })
                         }, t.handleInputKeyDown = function(e) {
-                            e.keyCode === Qe.a.Esc && t.props.setView(r.DEFAULT)
+                            e.keyCode === ze.a.Esc && t.props.setView(r.DEFAULT)
                         }, t.handleUserSelected = function(e) {
                             t.setState({
                                 selectedUser: {
@@ -3047,54 +2961,54 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.selectedUser;
-                        return s.createElement(I.Xa, {
+                        return s.createElement(y.Xa, {
                             fullWidth: !0,
-                            position: I.hb.Relative,
-                            zIndex: I.gc.Above
-                        }, s.createElement(I.i, {
-                            duration: I.k.Medium,
+                            position: y.hb.Relative,
+                            zIndex: y.gc.Above
+                        }, s.createElement(y.i, {
+                            duration: y.k.Medium,
                             enabled: !0,
-                            type: I.n.SlideInBottom
-                        }, s.createElement(Ve, null, s.createElement(I.P, {
+                            type: y.n.SlideInBottom
+                        }, s.createElement(Ve, null, s.createElement(y.P, {
                             cols: xe.FIRST_COLUMN
-                        }, s.createElement(it, {
+                        }, s.createElement(nt, {
                             onInputKeyDown: this.handleInputKeyDown,
                             onUserDeselected: this.handleUserDeselected,
                             onUserSelected: this.handleUserSelected,
                             selectedUser: e
-                        })), s.createElement(I.P, {
+                        })), s.createElement(y.P, {
                             cols: xe.SECOND_COLUMN
                         }, e && s.createElement(Pe, {
                             onCheckBoxChange: this.handleCheckBoxChange,
                             onRolePillDismissed: this.handleRolePillDismissed,
                             user: e
-                        })), s.createElement(I.P, {
+                        })), s.createElement(y.P, {
                             cols: xe.THIRD_COLUMN
-                        }, s.createElement(I.Xa, {
-                            alignItems: I.f.Center,
-                            display: I.X.Flex,
-                            justifyContent: I.Wa.End
-                        }, s.createElement(I.Xa, {
+                        }, s.createElement(y.Xa, {
+                            alignItems: y.f.Center,
+                            display: y.X.Flex,
+                            justifyContent: y.Wa.End
+                        }, s.createElement(y.Xa, {
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(I.z, {
+                        }, s.createElement(y.z, {
                             "data-test-selector": qe.CANCEL_BUTTON,
                             onClick: this.handleCancelClick,
-                            type: I.F.Hollow
-                        }, Object(S.d)("Cancel", "AddUserComponent"))), s.createElement(I.z, {
+                            type: y.F.Hollow
+                        }, Object(S.d)("Cancel", "AddUserComponent"))), s.createElement(y.z, {
                             "data-test-selector": qe.SAVE_BUTTON,
                             disabled: !e || !e.isEditor && !e.isMod && !e.isVIP,
                             onClick: this.handleSaveClick,
-                            type: I.F.Success
+                            type: y.F.Success
                         }, Object(S.d)("Save", "AddUserComponent")))))))
                     }, t
                 }(s.Component),
-                st = Object(o.compose)(F, de, ee, g)(at);
+                at = Object(o.compose)(F, de, ee, g)(rt);
             ! function(e) {
                 e.ALL_MUTATIONS_SUCCEEDED = "all-mutations-succeeded", e.SOME_MUTATIONS_FAILED = "some-mutations-failed"
-            }(rt || (rt = {}));
-            var ot = function(e) {
+            }(it || (it = {}));
+            var st = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3111,7 +3025,7 @@
                         this.tryToShowOrHideVIPWarningMessage()
                     }, t.prototype.render = function() {
                         var e = this.props.message;
-                        return e ? s.createElement(I.Xa, {
+                        return e ? s.createElement(y.Xa, {
                             fullWidth: !0,
                             margin: {
                                 bottom: 2
@@ -3122,40 +3036,40 @@
                             n = Object(S.d)("Close", "RolesPageTopBar");
                         switch (e.type) {
                             case X.ALL_MUTATIONS_SUCCEEDED:
-                                return s.createElement(I.Na, {
+                                return s.createElement(y.Na, {
                                     closeButtonAriaLabel: n,
                                     closeButtonOnClick: t,
-                                    "data-test-selector": rt.ALL_MUTATIONS_SUCCEEDED,
+                                    "data-test-selector": it.ALL_MUTATIONS_SUCCEEDED,
                                     description: Object(S.d)("Specified roles added for {user}.", {
                                         user: e.user.displayName
                                     }, "RolesPageTopBar"),
                                     title: Object(S.d)("Success!", "RolesPageTopBar"),
-                                    type: I.Oa.Success
+                                    type: y.Oa.Success
                                 });
                             case X.SOME_MUTATIONS_FAILED:
-                                return s.createElement(I.Na, {
+                                return s.createElement(y.Na, {
                                     closeButtonAriaLabel: n,
                                     closeButtonOnClick: t,
-                                    "data-test-selector": rt.SOME_MUTATIONS_FAILED,
+                                    "data-test-selector": it.SOME_MUTATIONS_FAILED,
                                     description: Object(S.d)("Unfortunately, some of the specified roles were unable to be added for {user}.", {
                                         user: e.user.displayName
                                     }, "RolesPageTopBar"),
                                     title: Object(S.d)("Warning!", "RolesPageTopBar"),
-                                    type: I.Oa.Warning
+                                    type: y.Oa.Warning
                                 });
                             case X.MAX_VIPS_REACHED:
-                                return s.createElement(I.Na, {
+                                return s.createElement(y.Na, {
                                     closeButtonAriaLabel: n,
                                     closeButtonOnClick: this.handleDismissVIPWarningMessage,
                                     description: Object(S.d)("You have reached the maximum amount of VIP roles. <x:link>Read more about Roles.</x:link>", {
                                         "x:link": function(e) {
-                                            return s.createElement(I.U, {
+                                            return s.createElement(y.U, {
                                                 linkTo: "TODO"
                                             }, e)
                                         }
                                     }, "RolesPageTopBar"),
                                     title: Object(S.d)("You can't add any more VIPs.", "RolesPageTopBar"),
-                                    type: I.Oa.Warning
+                                    type: y.Oa.Warning
                                 });
                             default:
                                 return null
@@ -3171,8 +3085,8 @@
                         })
                     }, t
                 }(s.Component),
-                lt = Object(o.compose)(B, ee)(ot),
-                dt = function(e) {
+                ot = Object(o.compose)(B, ee)(st),
+                lt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3197,34 +3111,34 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.filterType;
-                        return s.createElement(I.Xa, {
-                            alignItems: I.f.Center,
-                            display: I.X.Flex
-                        }, s.createElement(I.Xa, {
+                        return s.createElement(y.Xa, {
+                            alignItems: y.f.Center,
+                            display: y.X.Flex
+                        }, s.createElement(y.Xa, {
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(I.W, null, Object(S.d)("Display", "FilterUsersComponent"))), s.createElement(I.Xa, null, s.createElement(Ue.a, {
+                        }, s.createElement(y.W, null, Object(S.d)("Display", "FilterUsersComponent"))), s.createElement(y.Xa, null, s.createElement(Ue.a, {
                             onClickOut: this.handleClickOut
-                        }, s.createElement(I.z, {
+                        }, s.createElement(y.z, {
                             onClick: this.handleButtonClick,
-                            type: I.F.Text
-                        }, s.createElement(I.Xa, {
-                            alignItems: I.f.Center,
-                            display: I.X.Flex
-                        }, s.createElement(I.Xa, {
+                            type: y.F.Text
+                        }, s.createElement(y.Xa, {
+                            alignItems: y.f.Center,
+                            display: y.X.Flex
+                        }, s.createElement(y.Xa, {
                             margin: {
                                 right: .5
                             }
-                        }, s.createElement(I.W, {
+                        }, s.createElement(y.W, {
                             bold: !0
-                        }, this.getFilterText(e))), s.createElement(I.qb, {
-                            asset: I.rb.Carat,
+                        }, this.getFilterText(e))), s.createElement(y.qb, {
+                            asset: y.rb.Carat,
                             height: 16,
                             width: 16
-                        }))), s.createElement(I.Xa, {
-                            position: I.hb.Relative
-                        }, s.createElement(I.Y, {
+                        }))), s.createElement(y.Xa, {
+                            position: y.hb.Relative
+                        }, s.createElement(y.Y, {
                             items: [{
                                 disabled: e === C.ALL_ROLES,
                                 onClick: this.handleOptionClick.bind(this, C.ALL_ROLES),
@@ -3233,7 +3147,7 @@
                                 disabled: e === C.MODERATOR,
                                 figure: {
                                     alt: this.getFilterText(C.MODERATOR),
-                                    src: Q
+                                    src: z
                                 },
                                 figureRight: !0,
                                 onClick: this.handleOptionClick.bind(this, C.MODERATOR),
@@ -3242,7 +3156,7 @@
                                 disabled: e === C.VIP,
                                 figure: {
                                     alt: this.getFilterText(C.VIP),
-                                    src: z
+                                    src: Q
                                 },
                                 figureRight: !0,
                                 onClick: this.handleOptionClick.bind(this, C.VIP),
@@ -3268,8 +3182,8 @@
                         }
                     }, t
                 }(s.Component),
-                ct = Object(o.compose)(B, F)(dt),
-                ut = function(e) {
+                dt = Object(o.compose)(B, F)(lt),
+                ct = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleButtonClick = function() {
@@ -3278,26 +3192,26 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.view === r.ADD_USER;
-                        return s.createElement(s.Fragment, null, s.createElement(I.Cb, {
-                            alignItems: I.f.Center,
+                        return s.createElement(s.Fragment, null, s.createElement(y.Cb, {
+                            alignItems: y.f.Center,
                             borderBottom: !0,
-                            display: I.X.Flex,
+                            display: y.X.Flex,
                             fullWidth: !0,
-                            justifyContent: I.Wa.Between,
+                            justifyContent: y.Wa.Between,
                             margin: {
                                 bottom: 1
                             },
                             padding: {
                                 bottom: 1
                             }
-                        }, s.createElement(ct, null), s.createElement(I.z, {
+                        }, s.createElement(dt, null), s.createElement(y.z, {
                             disabled: e,
                             onClick: this.handleButtonClick
-                        }, Object(S.d)("Add New", "TopBar"))), s.createElement(lt, null), e && s.createElement(st, null))
+                        }, Object(S.d)("Add New", "TopBar"))), s.createElement(ot, null), e && s.createElement(at, null))
                     }, t
                 }(s.Component),
-                mt = Object(o.compose)(ee, g)(ut),
-                pt = g(function(e) {
+                ut = Object(o.compose)(ee, g)(ct),
+                mt = g(function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -3311,11 +3225,11 @@
                             channelID: e
                         }, s.createElement(ie, null, s.createElement(ge, {
                             channelID: e
-                        }, this.props.view === r.NO_USERS ? s.createElement(De, null) : s.createElement(N.a, null, s.createElement(mt, null), s.createElement($e, null), s.createElement(be, null)), s.createElement(K, null)))))
+                        }, this.props.view === r.NO_USERS ? s.createElement(De, null) : s.createElement(N.a, null, s.createElement(ut, null), s.createElement($e, null), s.createElement(be, null)), s.createElement(K, null)))))
                     }, t
                 }(s.Component)),
-                ht = n("LQi+"),
-                ft = function(e) {
+                pt = n("LQi+"),
+                ht = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -3324,24 +3238,24 @@
                     }, t.prototype.componentDidUpdate = function(e) {
                         e.data.loading && this.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (this.props.data.loading) return s.createElement(I.Za, {
+                        if (this.props.data.loading) return s.createElement(y.Za, {
                             fillContent: !0
                         });
                         if (this.props.data.error) return s.createElement(l.a, null);
                         var e = this.props.data,
                             t = e.user && e.user.id;
-                        return t ? s.createElement(b, null, s.createElement(pt, {
+                        return t ? s.createElement(b, null, s.createElement(mt, {
                             channelID: t
                         })) : null
                     }, t.prototype.reportInteractive = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive(1)
                     }, t
                 }(s.Component),
-                vt = Object(o.compose)(Object(p.b)("RolesPage", {
+                ft = Object(o.compose)(Object(p.b)("RolesPage", {
                     destination: u.a.RolesPage
                 }), Object(c.a)({
                     location: m.PageviewLocation.DashboardSettingsRolesPage
-                }), Object(d.a)(ht, {
+                }), Object(d.a)(pt, {
                     options: function(e) {
                         return {
                             variables: {
@@ -3349,9 +3263,9 @@
                             }
                         }
                     }
-                }))(ft);
+                }))(ht);
             n.d(t, "RolesPage", function() {
-                return vt
+                return ft
             })
         },
         r6Pb: function(e, t) {

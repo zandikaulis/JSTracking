@@ -785,10 +785,10 @@
                     return e === u.a.DirectoryTag || e === u.a.PopularTag
                 },
                 j = n("G1iw"),
-                B = y.a.wrap(function() {
+                M = y.a.wrap(function() {
                     return Promise.resolve().then(n.bind(null, "SKDF"))
                 }, "BrowseGamesPage"),
-                M = y.a.wrap(function() {
+                B = y.a.wrap(function() {
                     return n.e(129).then(n.bind(null, "JTXL"))
                 }, "DirectoryPopularPage"),
                 G = function(e) {
@@ -883,16 +883,16 @@
                             render: this.redirectToTagCreative
                         }), f.createElement(v.a, {
                             path: u.a.PopularTag,
-                            component: M
+                            component: B
                         }), f.createElement(v.a, {
                             path: u.a.Popular,
-                            component: M
+                            component: B
                         }), f.createElement(v.a, {
                             path: u.a.DirectoryTag,
-                            component: B
+                            component: M
                         }), f.createElement(v.a, {
                             path: u.a.DirectoryCategory,
-                            component: B
+                            component: M
                         }))))
                     }, t.prototype.redirectToTagCreative = function() {
                         return f.createElement(T.a, {
@@ -990,7 +990,7 @@
                                 l = Object(i.g)(c.title).rowName,
                                 d = {
                                     trackImpression: this.trackImpression,
-                                    trackRecFeedbackHideClick: this.context.trackRecFeedbackHideClick,
+                                    trackRecFeedbackPreModalClick: this.context.trackRecFeedbackPreModalClick,
                                     trackRecFeedbackClickStep: this.context.trackRecFeedbackClickStep,
                                     trackRecFeedbackClickStepPostSubmit: this.context.trackRecFeedbackClickStepPostSubmit,
                                     trackClick: this.trackClick,
@@ -2109,8 +2109,8 @@
                 A = n("vuN2"),
                 R = n("yI6f"),
                 j = n("T2RZ"),
-                B = n("Ue10"),
-                M = n("0egc"),
+                M = n("Ue10"),
+                B = n("0egc"),
                 G = Object(j.a)(l.PageviewMedium.Browse, R.b.Game, R.c.BrowseCategories)(N.a),
                 W = "directory-first-item",
                 q = "directory-container",
@@ -2177,7 +2177,7 @@
                             onClickRemoveLastTag: this.removeLastTag,
                             tagFilters: this.props.tagFilters
                         });
-                        if (this.props.data.loading) return r.createElement(B.Za, {
+                        if (this.props.data.loading) return r.createElement(M.Za, {
                             fillContent: !0
                         });
                         if (!this.props.data.directoriesWithTags) return r.createElement(k.a, {
@@ -2209,12 +2209,12 @@
                                         style: {
                                             order: a
                                         }
-                                    }, r.createElement(B.Xa, {
+                                    }, r.createElement(M.Xa, {
                                         margin: {
                                             bottom: 2
                                         },
                                         "data-target": "directory-page__card-container",
-                                        position: B.hb.Relative
+                                        position: M.hb.Relative
                                     }, r.createElement(G, {
                                         linkTo: {
                                             pathname: Object(S.c)(i.name),
@@ -2247,13 +2247,13 @@
                                 }
                                 return null
                             });
-                        return r.createElement(B.Xa, null, r.createElement(D.b, {
+                        return r.createElement(M.Xa, null, r.createElement(D.b, {
                             addPaddingWhenPlayerIsPersisting: !0
                         }), r.createElement("div", {
                             "data-target": q
-                        }, r.createElement(B.Zb, {
-                            gutterSize: B.bc.Small,
-                            childWidth: B.ac.Small,
+                        }, r.createElement(M.Zb, {
+                            gutterSize: M.bc.Small,
+                            childWidth: M.ac.Small,
                             placeholderItems: 20
                         }, r.createElement(_.a, {
                             key: -1,
@@ -2284,7 +2284,7 @@
                         scrollToTop: f.func
                     }, t
                 }(r.Component),
-                H = Object(p.compose)(Object(d.b)("BrowseDirectory"), Object(y.a)(M, {
+                H = Object(p.compose)(Object(d.b)("BrowseDirectory"), Object(y.a)(B, {
                     options: function(e) {
                         return {
                             fetchPolicy: X() ? U() : "network-only",
@@ -2302,7 +2302,7 @@
                         return a.__assign({}, e, {
                             loadMore: function() {
                                 return e.data.fetchMore({
-                                    query: M,
+                                    query: B,
                                     variables: a.__assign({}, e.data.variables, {
                                         cursor: function(e) {
                                             if (!e.directoriesWithTags || !e.directoriesWithTags.edges) return null;
@@ -3163,7 +3163,6 @@
 
             function p(e) {
                 u({
-                    click_step: a.NotInterested,
                     section: i.TwitchHome,
                     item_page: d.PageviewMedium.TwitchHome,
                     feedback_type: null,
@@ -3171,6 +3170,7 @@
                     feedback_action: null,
                     feedback_reason: null,
                     item_name: null,
+                    click_step: e.clickStep,
                     clicked_item_id: e.clickedItemID,
                     item_tracking_id: e.itemTrackingID,
                     item_position: e.itemPosition,
@@ -3244,7 +3244,7 @@
                     feedback_reason: e.feedbackReason
                 })
             }! function(e) {
-                e.NotInterested = "not_interested", e.Close = "close", e.Submit = "submit", e.PostSubmit = "post_submit", e.SettingsChange = "settings_change"
+                e.Ellipsis = "ellipsis", e.NotInterested = "not_interested", e.Close = "close", e.Submit = "submit", e.PostSubmit = "post_submit", e.SettingsChange = "settings_change"
             }(a || (a = {})),
             function(e) {
                 e.Add = "add", e.Remove = "remove", e.Undo = "undo", e.Manage = "manage"
@@ -3979,7 +3979,7 @@
                     trackTitleImpression: r.func,
                     trackImpression: r.func,
                     trackClick: r.func,
-                    trackRecFeedbackHideClick: r.func,
+                    trackRecFeedbackPreModalClick: r.func,
                     trackRecFeedbackClickStep: r.func,
                     trackRecFeedbackClickStepPostSubmit: r.func
                 };
@@ -3993,7 +3993,7 @@
                                 return {
                                     trackTitleClick: n.trackTitleClick,
                                     trackTitleImpression: n.trackTitleImpression,
-                                    trackRecFeedbackHideClick: n.trackRecFeedbackHideClick,
+                                    trackRecFeedbackPreModalClick: n.trackRecFeedbackPreModalClick,
                                     trackRecFeedbackClickStep: n.trackRecFeedbackClickStep,
                                     trackRecFeedbackClickStepPostSubmit: n.trackRecFeedbackClickStepPostSubmit,
                                     trackImpression: n.trackImpression,
@@ -4112,30 +4112,31 @@
                                         };
                                     Object(s.h)(f, r)
                                 }
-                            }, n.trackRecFeedbackHideClick = function(e, t, r) {
-                                var i, o = n.state.cardIDtoItemTrackingIDMap,
-                                    l = Object(s.g)(e.title),
-                                    d = l.reasonType,
-                                    u = l.reasonTarget,
-                                    p = l.reasonTargetType,
-                                    g = l.rowName,
-                                    m = Object(s.e)(t),
-                                    h = m.itemID,
-                                    f = m.contentType,
-                                    v = h || e.id,
-                                    k = {
-                                        itemTrackingID: t && t.node ? o[t.node.id] : null,
-                                        itemPosition: r,
+                            }, n.trackRecFeedbackPreModalClick = function(e, t, r, i) {
+                                var o, l = n.state.cardIDtoItemTrackingIDMap,
+                                    d = Object(s.g)(t.title),
+                                    u = d.reasonType,
+                                    p = d.reasonTarget,
+                                    g = d.reasonTargetType,
+                                    m = d.rowName,
+                                    h = Object(s.e)(r),
+                                    f = h.itemID,
+                                    v = h.contentType,
+                                    k = f || t.id,
+                                    T = {
+                                        clickStep: e,
+                                        itemTrackingID: r && r.node ? l[r.node.id] : null,
+                                        itemPosition: i,
                                         rowPosition: n.props.position,
-                                        reasonType: d,
-                                        reasonTarget: u,
-                                        reasonTargetType: p,
-                                        rowName: g,
-                                        modelTrackingID: t ? t.trackingID : null,
-                                        clickedContentType: f || s.b.Shelf,
-                                        clickedItemID: h || e.id
+                                        reasonType: u,
+                                        reasonTarget: p,
+                                        reasonTargetType: g,
+                                        rowName: m,
+                                        modelTrackingID: r ? r.trackingID : null,
+                                        clickedContentType: v || s.b.Shelf,
+                                        clickedItemID: f || t.id
                                     };
-                                n.feedbackDataMap = a.__assign({}, n.feedbackDataMap, ((i = {})[v] = k, i)), Object(c.c)(k)
+                                n.feedbackDataMap = a.__assign({}, n.feedbackDataMap, ((o = {})[k] = T, o)), Object(c.c)(T)
                             }, n.trackRecFeedbackClickStep = function(e, t) {
                                 var r, i = a.__assign({}, n.feedbackDataMap[e], {
                                     clickStep: t.clickStep,
@@ -4171,7 +4172,7 @@
                                 n = {
                                     trackTitleClick: this.getChildContext().trackTitleClick,
                                     trackTitleImpression: this.getChildContext().trackTitleImpression,
-                                    trackRecFeedbackHideClick: this.getChildContext().trackRecFeedbackHideClick,
+                                    trackRecFeedbackPreModalClick: this.getChildContext().trackRecFeedbackPreModalClick,
                                     trackImpression: this.getChildContext().trackImpression,
                                     trackClick: this.getChildContext().trackClick,
                                     trackRecFeedbackClickStep: this.getChildContext().trackRecFeedbackClickStep,

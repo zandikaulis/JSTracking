@@ -742,7 +742,7 @@
 
             function S() {
                 return a.__awaiter(this, void 0, void 0, function() {
-                    var e, t, n;
+                    var e, t, n, r;
                     return a.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
@@ -764,7 +764,7 @@
                                     setAgainInSeconds: t
                                 }), u = setTimeout(S, 1e3 * t), [3, 4];
                             case 3:
-                                return n = a.sent(), p.warn("Failed to update status. Trying again in 60 seconds.", n), u = setTimeout(S, 6e4), [3, 4];
+                                return n = a.sent(), r = 5e4 + 2e4 * Math.random(), p.warn("Failed to update status. Trying again in " + r + " seconds.", n), u = setTimeout(S, r), [3, 4];
                             case 4:
                                 return [2]
                         }

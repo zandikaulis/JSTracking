@@ -2275,7 +2275,8 @@
                             "data-a-target": "blue-bar__link",
                             href: a,
                             target: "_blank",
-                            rel: "noopener noreferrer"
+                            rel: "noopener noreferrer",
+                            "data-test-selector": "blue-bar-left-url"
                         }, o))), s.createElement(h.W, {
                             className: "blue-bar__headline",
                             type: h.Tb.Span,
@@ -2293,7 +2294,8 @@
                             className: "blue-bar__link",
                             href: l,
                             target: "_blank",
-                            rel: "noopener noreferrer"
+                            rel: "noopener noreferrer",
+                            "data-test-selector": "blue-bar-right-url"
                         }, d))))))
                     }, t
                 }(s.Component),
@@ -5055,9 +5057,9 @@
             }), n.d(t, "a", function() {
                 return m
             }), n.d(t, "f", function() {
-                return b
+                return f
             }), n.d(t, "d", function() {
-                return g
+                return b
             });
             var i = n("mrSG"),
                 r = n("lZdE"),
@@ -5093,15 +5095,14 @@
             function u(e) {
                 for (var t = [], n = function(e) {
                         if (!e || !e.id || !e.token) return "continue";
-                        var n = f(e.token),
-                            r = o[n] || n,
-                            a = s.reduce(function(t, n) {
+                        var n = o[e.token] || e.token,
+                            r = s.reduce(function(t, n) {
                                 var i = t;
                                 return i && (i = i.concat(", ")), i.concat("https://static-cdn.jtvnw.net/emoticons/v1/" + e.id + "/" + n + " " + n + "x")
                             }, "");
                         t.push(i.__assign({
-                            displayName: r,
-                            srcSet: a
+                            displayName: n,
+                            srcSet: r
                         }, e))
                     }, r = 0, a = e; r < a.length; r++) {
                     n(a[r])
@@ -5158,12 +5159,7 @@
                 }
                 return n.concat(t)
             }
-            var f = function(e) {
-                    return function(e) {
-                        return /[\|\\\^\$\*\+\?\:\#]/.test(e)
-                    }(e) ? "^" + e.replace(/\\(?=[&;:])/g, "") + "$" : e
-                },
-                b = function(e, t, n) {
+            var f = function(e, t, n) {
                     var i = n || a.d,
                         o = [],
                         s = [],
@@ -5179,7 +5175,7 @@
                         return i[t.token].count - i[e.token].count
                     }), c.concat(o).concat(s)
                 },
-                g = function(e) {
+                b = function(e) {
                     var t = {};
                     return e.filter(function(e) {
                         return !t.hasOwnProperty(e.token) && (t[e.token] = !0)

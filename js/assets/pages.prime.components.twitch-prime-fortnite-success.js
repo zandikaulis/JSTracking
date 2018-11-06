@@ -393,7 +393,7 @@
                                 l = Object(a.g)(s.title).rowName,
                                 u = {
                                     trackImpression: this.trackImpression,
-                                    trackRecFeedbackHideClick: this.context.trackRecFeedbackHideClick,
+                                    trackRecFeedbackPreModalClick: this.context.trackRecFeedbackPreModalClick,
                                     trackRecFeedbackClickStep: this.context.trackRecFeedbackClickStep,
                                     trackRecFeedbackClickStepPostSubmit: this.context.trackRecFeedbackClickStepPostSubmit,
                                     trackClick: this.trackClick,
@@ -413,7 +413,7 @@
         B3R5: function(e, t, n) {},
         DMoW: function(e, t, n) {
             "use strict";
-            var r, i, a, o, c, s, l, u, d, E, m, p, T, _, N, I, A, f, h, R, g, O, C, D, S, k, L, P, b, v, y, w, M, F, U, G, V, B, H, x, W, Y, X, j, Q, K, q, z, Z, J, $, ee, te, ne, re, ie, ae, oe, ce, se, le, ue, de, Ee, me, pe, Te, _e, Ne, Ie, Ae, fe, he, Re, ge, Oe, Ce, De, Se, ke, Le, Pe, be, ve, ye, we, Me, Fe, Ue, Ge, Ve, Be, He, xe, We, Ye, Xe, je, Qe, Ke, qe, ze, Ze, Je, $e, et, tt, nt, rt, it, at, ot, ct, st, lt, ut, dt, Et, mt;
+            var r, i, a, o, c, s, l, u, d, E, m, p, T, _, N, I, A, f, h, R, g, O, C, S, D, k, L, P, b, v, y, w, M, F, U, G, V, B, H, x, W, Y, X, j, Q, K, q, z, Z, J, $, ee, te, ne, re, ie, ae, oe, ce, se, le, ue, de, Ee, me, pe, Te, _e, Ne, Ie, Ae, fe, he, Re, ge, Oe, Ce, Se, De, ke, Le, Pe, be, ve, ye, we, Me, Fe, Ue, Ge, Ve, Be, He, xe, We, Ye, Xe, je, Qe, Ke, qe, ze, Ze, Je, $e, et, tt, nt, rt, it, at, ot, ct, st, lt, ut, dt, Et, mt, pt;
             n.d(t, "d", function() {
                     return i
                 }), n.d(t, "L", function() {
@@ -430,12 +430,12 @@
                     return f
                 }), n.d(t, "m", function() {
                     return g
-                }), n.d(t, "V", function() {
+                }), n.d(t, "W", function() {
                     return O
                 }), n.d(t, "N", function() {
                     return C
                 }), n.d(t, "q", function() {
-                    return D
+                    return S
                 }), n.d(t, "k", function() {
                     return L
                 }), n.d(t, "M", function() {
@@ -444,6 +444,8 @@
                     return F
                 }), n.d(t, "s", function() {
                     return U
+                }), n.d(t, "V", function() {
+                    return G
                 }), n.d(t, "r", function() {
                     return V
                 }), n.d(t, "P", function() {
@@ -484,7 +486,7 @@
                     return ge
                 }), n.d(t, "n", function() {
                     return Oe
-                }), n.d(t, "W", function() {
+                }), n.d(t, "X", function() {
                     return ke
                 }), n.d(t, "B", function() {
                     return Me
@@ -503,15 +505,15 @@
                 }), n.d(t, "O", function() {
                     return je
                 }), n.d(t, "y", function() {
-                    return tt
-                }), n.d(t, "J", function() {
                     return nt
-                }), n.d(t, "K", function() {
+                }), n.d(t, "J", function() {
                     return rt
+                }), n.d(t, "K", function() {
+                    return it
                 }), n.d(t, "e", function() {
-                    return dt
-                }), n.d(t, "t", function() {
                     return Et
+                }), n.d(t, "t", function() {
+                    return mt
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -584,10 +586,10 @@
                 }(C || (C = {})),
                 function(e) {
                     e.ARCHIVES_DISABLED = "ARCHIVES_DISABLED", e.BROADCASTER_NOT_LIVE = "BROADCASTER_NOT_LIVE", e.BROADCAST_FORMAT_INVALID_PREMIERE = "BROADCAST_FORMAT_INVALID_PREMIERE", e.BROADCAST_FORMAT_INVALID_RERUN = "BROADCAST_FORMAT_INVALID_RERUN", e.INTERNAL_SERVER_ERROR = "INTERNAL_SERVER_ERROR", e.MAX_DESCRIPTION_LENGTH_EXCEEDED = "MAX_DESCRIPTION_LENGTH_EXCEEDED", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED", e.VOD_NOT_READY = "VOD_NOT_READY"
-                }(D || (D = {})),
+                }(S || (S = {})),
                 function(e) {
                     e.DARK = "DARK", e.LIGHT = "LIGHT"
-                }(S || (S = {})),
+                }(D || (D = {})),
                 function(e) {
                     e.CUSTOM = "CUSTOM", e.DISPLAY_ONLY = "DISPLAY_ONLY", e.FIRST_PARTY = "FIRST_PARTY", e.RENDER_ONLY = "RENDER_ONLY", e.SPONSORED = "SPONSORED", e.THIRD_PARTY = "THIRD_PARTY", e.UNKNOWN = "UNKNOWN"
                 }(k || (k = {})),
@@ -746,10 +748,10 @@
                 }(Ce || (Ce = {})),
                 function(e) {
                     e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
-                }(De || (De = {})),
+                }(Se || (Se = {})),
                 function(e) {
                     e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
-                }(Se || (Se = {})),
+                }(De || (De = {})),
                 function(e) {
                     e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
                 }(ke || (ke = {})),
@@ -814,62 +816,65 @@
                     e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }(Ke || (Ke = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }(qe || (qe = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(ze || (ze = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(Ze || (Ze = {})),
                 function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
                 }(Je || (Je = {})),
                 function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }($e || ($e = {})),
                 function(e) {
                     e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(et || (et = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(tt || (tt = {})),
                 function(e) {
-                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(nt || (nt = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
+                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
                 }(rt || (rt = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
                 }(it || (it = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }(at || (at = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(ot || (ot = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(ct || (ct = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(st || (st = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(lt || (lt = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(ut || (ut = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
                 }(dt || (dt = {})),
                 function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
                 }(Et || (Et = {})),
                 function(e) {
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                }(mt || (mt = {})),
+                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(mt || (mt = {}))
+                }(pt || (pt = {}))
         },
         E8KT: function(e, t, n) {},
         ER97: function(e, t, n) {},
@@ -1254,8 +1259,8 @@
                         })))
                     }, t
                 }(i.Component)),
-                D = Object(O.b)("PreviewCardThumbnail")(C),
-                S = (n("80G/"), function(e) {
+                S = Object(O.b)("PreviewCardThumbnail")(C),
+                D = (n("80G/"), function(e) {
                     var t = null;
                     return e.subtitles && e.subtitles.length > 0 && (t = e.subtitles.map(function(e, t) {
                         return i.createElement(c.Xa, {
@@ -1401,7 +1406,7 @@
                             to: Object(v.a)(this.getTrackingContext(p.PageviewContent.VideoThumbnail), this.props.linkTo),
                             onClick: this.props.onThumbnailClick || this.props.onClick,
                             "data-a-target": "preview-card-image-link"
-                        }, this.props.thumbnailImageProps && i.createElement(D, {
+                        }, this.props.thumbnailImageProps && i.createElement(S, {
                             staticImageProps: this.props.thumbnailImageProps,
                             animatedImageProps: U(this.props) && this.props.animatedImageProps || void 0,
                             trackImageLatency: this.props.trackImageLatency
@@ -1522,7 +1527,7 @@
                             linkTo: Object(v.a)(this.getTrackingContext(p.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             automationSelector: "preview-card-game-link"
-                        }), i.createElement(i.Fragment, null, i.createElement(S, {
+                        }), i.createElement(i.Fragment, null, i.createElement(D, {
                             title: this.props.title,
                             onClick: this.props.onVideoTitleClick || this.props.onClick,
                             linkTo: Object(v.a)(this.getTrackingContext(p.PageviewContent.VideoTitle), this.props.linkTo),
@@ -2803,7 +2808,7 @@
                         type: A.a.Live
                     }), t
                 },
-                D = Object(a.compose)(Object(E.b)("TwitchPrimeStreamers"), Object(s.a)(g, {
+                S = Object(a.compose)(Object(E.b)("TwitchPrimeStreamers"), Object(s.a)(g, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -2815,11 +2820,11 @@
                         }
                     }
                 }))(O);
-            var S = Object(N.connect)(function(e) {
+            var D = Object(N.connect)(function(e) {
                     return {
                         languagePreferences: Object(I.a)(e)
                     }
-                }, null)(D),
+                }, null)(S),
                 k = n("nNY8"),
                 L = n("HieK"),
                 P = (n("FXNN"), function(e) {
@@ -2889,7 +2894,7 @@
                                     type: R.V.Overlay
                                 }, e)
                             }
-                        }, "FortniteSuccess"))))), i.createElement(S, null), i.createElement(m.a, {
+                        }, "FortniteSuccess"))))), i.createElement(D, null), i.createElement(m.a, {
                             hash: this.props.location.hash.replace("#", "")
                         }), i.createElement(p.a, {
                             partnerSocialLink: "https://twitter.com/FortniteGame",
@@ -3372,7 +3377,6 @@
 
             function E(e) {
                 d({
-                    click_step: r.NotInterested,
                     section: a.TwitchHome,
                     item_page: u.PageviewMedium.TwitchHome,
                     feedback_type: null,
@@ -3380,6 +3384,7 @@
                     feedback_action: null,
                     feedback_reason: null,
                     item_name: null,
+                    click_step: e.clickStep,
                     clicked_item_id: e.clickedItemID,
                     item_tracking_id: e.itemTrackingID,
                     item_position: e.itemPosition,
@@ -3453,7 +3458,7 @@
                     feedback_reason: e.feedbackReason
                 })
             }! function(e) {
-                e.NotInterested = "not_interested", e.Close = "close", e.Submit = "submit", e.PostSubmit = "post_submit", e.SettingsChange = "settings_change"
+                e.Ellipsis = "ellipsis", e.NotInterested = "not_interested", e.Close = "close", e.Submit = "submit", e.PostSubmit = "post_submit", e.SettingsChange = "settings_change"
             }(r || (r = {})),
             function(e) {
                 e.Add = "add", e.Remove = "remove", e.Undo = "undo", e.Manage = "manage"
@@ -3813,7 +3818,7 @@
                     trackTitleImpression: i.func,
                     trackImpression: i.func,
                     trackClick: i.func,
-                    trackRecFeedbackHideClick: i.func,
+                    trackRecFeedbackPreModalClick: i.func,
                     trackRecFeedbackClickStep: i.func,
                     trackRecFeedbackClickStepPostSubmit: i.func
                 };
@@ -3827,7 +3832,7 @@
                                 return {
                                     trackTitleClick: n.trackTitleClick,
                                     trackTitleImpression: n.trackTitleImpression,
-                                    trackRecFeedbackHideClick: n.trackRecFeedbackHideClick,
+                                    trackRecFeedbackPreModalClick: n.trackRecFeedbackPreModalClick,
                                     trackRecFeedbackClickStep: n.trackRecFeedbackClickStep,
                                     trackRecFeedbackClickStepPostSubmit: n.trackRecFeedbackClickStepPostSubmit,
                                     trackImpression: n.trackImpression,
@@ -3946,30 +3951,31 @@
                                         };
                                     Object(c.h)(_, i)
                                 }
-                            }, n.trackRecFeedbackHideClick = function(e, t, i) {
-                                var a, o = n.state.cardIDtoItemTrackingIDMap,
-                                    l = Object(c.g)(e.title),
-                                    u = l.reasonType,
-                                    d = l.reasonTarget,
-                                    E = l.reasonTargetType,
-                                    m = l.rowName,
-                                    p = Object(c.e)(t),
-                                    T = p.itemID,
-                                    _ = p.contentType,
-                                    N = T || e.id,
-                                    I = {
-                                        itemTrackingID: t && t.node ? o[t.node.id] : null,
-                                        itemPosition: i,
+                            }, n.trackRecFeedbackPreModalClick = function(e, t, i, a) {
+                                var o, l = n.state.cardIDtoItemTrackingIDMap,
+                                    u = Object(c.g)(t.title),
+                                    d = u.reasonType,
+                                    E = u.reasonTarget,
+                                    m = u.reasonTargetType,
+                                    p = u.rowName,
+                                    T = Object(c.e)(i),
+                                    _ = T.itemID,
+                                    N = T.contentType,
+                                    I = _ || t.id,
+                                    A = {
+                                        clickStep: e,
+                                        itemTrackingID: i && i.node ? l[i.node.id] : null,
+                                        itemPosition: a,
                                         rowPosition: n.props.position,
-                                        reasonType: u,
-                                        reasonTarget: d,
-                                        reasonTargetType: E,
-                                        rowName: m,
-                                        modelTrackingID: t ? t.trackingID : null,
-                                        clickedContentType: _ || c.b.Shelf,
-                                        clickedItemID: T || e.id
+                                        reasonType: d,
+                                        reasonTarget: E,
+                                        reasonTargetType: m,
+                                        rowName: p,
+                                        modelTrackingID: i ? i.trackingID : null,
+                                        clickedContentType: N || c.b.Shelf,
+                                        clickedItemID: _ || t.id
                                     };
-                                n.feedbackDataMap = r.__assign({}, n.feedbackDataMap, ((a = {})[N] = I, a)), Object(s.c)(I)
+                                n.feedbackDataMap = r.__assign({}, n.feedbackDataMap, ((o = {})[I] = A, o)), Object(s.c)(A)
                             }, n.trackRecFeedbackClickStep = function(e, t) {
                                 var i, a = r.__assign({}, n.feedbackDataMap[e], {
                                     clickStep: t.clickStep,
@@ -4005,7 +4011,7 @@
                                 n = {
                                     trackTitleClick: this.getChildContext().trackTitleClick,
                                     trackTitleImpression: this.getChildContext().trackTitleImpression,
-                                    trackRecFeedbackHideClick: this.getChildContext().trackRecFeedbackHideClick,
+                                    trackRecFeedbackPreModalClick: this.getChildContext().trackRecFeedbackPreModalClick,
                                     trackImpression: this.getChildContext().trackImpression,
                                     trackClick: this.getChildContext().trackClick,
                                     trackRecFeedbackClickStep: this.getChildContext().trackRecFeedbackClickStep,
