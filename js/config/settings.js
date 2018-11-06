@@ -1694,26 +1694,32 @@ window.__twilightSettings = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 4993,
+            "v": 5013,
             "t": 1,
             "groups": [{
-                "weight": 5,
-                "value": "2.6.31+abrreset"
-            }, {
-                "weight": 5,
-                "value": "2.6.31+control"
-            }, {
-                "weight": 84,
+                "weight": 87,
                 "value": "2.6.31"
             }, {
-                "weight": 2,
-                "value": "2.6.31+abrctrl"
+                "weight": 1,
+                "value": "2.6.32"
             }, {
                 "weight": 2,
-                "value": "2.6.310+abrprobe"
+                "value": "2.6.32+control"
             }, {
                 "weight": 2,
-                "value": "2.6.310"
+                "value": "2.6.32+abrdisp"
+            }, {
+                "weight": 2,
+                "value": "2.6.32+abrlower"
+            }, {
+                "weight": 2,
+                "value": "2.6.32+abrprobe"
+            }, {
+                "weight": 2,
+                "value": "2.6.32+abrreset"
+            }, {
+                "weight": 2,
+                "value": "2.6.32+range"
             }]
         },
         "ee491c3c-d6f7-4f00-8c53-c630dfa10f41": {
