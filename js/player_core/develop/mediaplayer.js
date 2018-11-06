@@ -2880,7 +2880,11 @@ var MediaPlayer = exports.MediaPlayer = function MediaPlayer(config, worker) {
         onstop: this._onSinkStop.bind(this),
         onerror: this._onSinkError.bind(this),
         onplay: this._onSinkPlay.bind(this),
+        onvideodisplaysizechanged: this._onSinkVideoDisplaySizeChanged.bind(this),
     });
+
+    var configSettings = loadSettings(config.settings);
+    this._enableVideoDisplaySizeChange = (configSettings.abr && configSettings.abr.displaySizeChange);
 
     // This represents cached state from the worker. State objects
     // like this one are sent from the worker on when the player
@@ -2897,7 +2901,7 @@ var MediaPlayer = exports.MediaPlayer = function MediaPlayer(config, worker) {
 
     // Create a companion instance instance in the worker.
     this._postMessage(WorkerMessage.CREATE, {
-        settings: loadSettings(config.settings),
+        settings: configSettings,
         logLevel: String(config.logLevel), // must be a string
         localStorage: getLocalStorage(LOCAL_STORAGE_PREFIX),
         mseSupported: isMSESupported(),
@@ -3034,7 +3038,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.6.31-28719112";
+    return "2.6.31-b2641581";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3497,6 +3501,12 @@ MediaPlayer.prototype._onSinkError = function (mediaError) {
 
 MediaPlayer.prototype._onSinkPlay = function () {
     this._emitter.emit(PlayerEvent.PROFILE, ProfileEvent.VIDEO_ELEMENT_PLAY);
+};
+
+MediaPlayer.prototype._onSinkVideoDisplaySizeChanged = function (width, height) {
+    if(this._enableVideoDisplaySizeChange) {
+        this.setAutoMaxVideoSize(width, height);
+    }
 };
 
 MediaPlayer.prototype._onTwitchInfo = function (properties) {
@@ -4259,6 +4269,7 @@ function PlaybackMonitor(video, config) {
     this._onbufferupdate = config.onbufferupdate;
     this._ontimeupdate = config.ontimeupdate;
     this._onplay = config.onplay;
+    this._onvideodisplaysizechanged = config.onvideodisplaysizechanged;
 
     this._video = video;
     this._intervalId = 0;
@@ -4393,6 +4404,14 @@ PlaybackMonitor.prototype._heartbeat = function () {
         this._checkBufferUpdate(buffered);
         this._lastPlayhead = this._video.currentTime;
     }
+
+    this._updateMaxVideoDisplaySize();
+};
+
+PlaybackMonitor.prototype._updateMaxVideoDisplaySize = function () {
+    var width = this._video.clientWidth * window.devicePixelRatio;
+    var height = this._video.clientHeight * window.devicePixelRatio;
+    this._onvideodisplaysizechanged(width, height);
 };
 
 PlaybackMonitor.prototype._checkBufferUpdate = function (buffered) {
@@ -4855,6 +4874,8 @@ Queue.prototype.empty = function () {
 
 var map = {
 	"./2buf.json": "./settings/2buf.json",
+	"./abrdisp.json": "./settings/abrdisp.json",
+	"./abrlower.json": "./settings/abrlower.json",
 	"./abrprobe.json": "./settings/abrprobe.json",
 	"./abrreset.json": "./settings/abrreset.json",
 	"./range.json": "./settings/range.json"
@@ -4892,6 +4913,28 @@ webpackContext.id = "./settings sync recursive ^\\.\\/.*\\.json$";
 /***/ (function(module) {
 
 module.exports = {"buffercontrol":{"minBufferDuration":2}};
+
+/***/ }),
+
+/***/ "./settings/abrdisp.json":
+/*!*******************************!*\
+  !*** ./settings/abrdisp.json ***!
+  \*******************************/
+/*! exports provided: abr, default */
+/***/ (function(module) {
+
+module.exports = {"abr":{"displaySizeChange":true}};
+
+/***/ }),
+
+/***/ "./settings/abrlower.json":
+/*!********************************!*\
+  !*** ./settings/abrlower.json ***!
+  \********************************/
+/*! exports provided: abr, default */
+/***/ (function(module) {
+
+module.exports = {"abr":{"lowerEstimate":true}};
 
 /***/ }),
 
