@@ -3038,7 +3038,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.6.31-b2641581";
+    return "2.6.32-5d9b2b76";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -4873,7 +4873,6 @@ Queue.prototype.empty = function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./2buf.json": "./settings/2buf.json",
 	"./abrdisp.json": "./settings/abrdisp.json",
 	"./abrlower.json": "./settings/abrlower.json",
 	"./abrprobe.json": "./settings/abrprobe.json",
@@ -4902,17 +4901,6 @@ webpackContext.keys = function webpackContextKeys() {
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = "./settings sync recursive ^\\.\\/.*\\.json$";
-
-/***/ }),
-
-/***/ "./settings/2buf.json":
-/*!****************************!*\
-  !*** ./settings/2buf.json ***!
-  \****************************/
-/*! exports provided: buffercontrol, default */
-/***/ (function(module) {
-
-module.exports = {"buffercontrol":{"minBufferDuration":2}};
 
 /***/ }),
 
