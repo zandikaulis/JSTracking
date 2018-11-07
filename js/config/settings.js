@@ -588,11 +588,11 @@ window.__twilightSettings = {
         },
         "3c3a5d48-117f-43ac-8b35-091f13b2d479": {
             "name": "MediaPlayer Staff Version",
-            "v": 5008,
+            "v": 5022,
             "t": 1,
             "groups": [{
                 "weight": 100,
-                "value": "2.6.32+abrprobe"
+                "value": "2.6.33"
             }]
         },
         "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773": {
@@ -1429,6 +1429,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 100,
                 "value": "treatment"
+            }]
+        },
+        "bd9234fc-3c40-45f6-a544-868478744ba7": {
+            "name": "featured_collection_disable",
+            "v": 5023,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "disabled"
             }]
         },
         "bf00cae3-c729-4ff9-816c-f9ede2f69f02": {
