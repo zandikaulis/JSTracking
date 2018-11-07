@@ -1221,6 +1221,18 @@ window.__twilightSettings = {
                 "value": "expanded"
             }]
         },
+        "963aa90b-96dd-430e-9924-f4870621108c": {
+            "name": "bits_new_user_cheer_part_2",
+            "v": 5018,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "treatment"
+            }]
+        },
         "96bdeb52-260d-4b6d-8ff8-5f4c13f450c2": {
             "name": "TWILIGHT_RAID_NOW",
             "v": 4691,
