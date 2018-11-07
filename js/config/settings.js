@@ -23,7 +23,7 @@ window.__twilightSettings = {
     "bounty_board_available_bounties_date": "Wed June 27 2018 00:00:00 GMT-0700 (PDT)",
     "bounty_board_brand_portal_enabled": "on",
     "bounty_board_live_dashboard_widget": "on",
-    "cc_v2_whitelist": ["cpt_meticulous-staff", "testnioh123-staff", "jnguyening-staff", "gummyace-staff"],
+    "cc_v2_whitelist": ["cpt_meticulous-staff", "testnioh123-staff", "jnguyening-staff", "gummyace-staff", "MissCoded-staff"],
     "channel_feed_enabled": false,
     "chat_input_box_followers_only_restriction_enabled": "off",
     "chat_input_box_verified_only_restriction_enabled": "on",
