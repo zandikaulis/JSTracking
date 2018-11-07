@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [213], {
+    [219], {
         "/ZC1": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -34,12 +34,12 @@
                             dragOver: this.state.isDraggingOver,
                             error: this.props.error
                         }, r.createElement(s.Pa, {
-                            position: s.hb.Absolute,
+                            position: s.jb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: s.gc.Above
+                            zIndex: s.ic.Above
                         }, r.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -72,15 +72,15 @@
             }), n.d(t, "I", function() {
                 return p
             }), n.d(t, "n", function() {
-                return d
-            }), n.d(t, "A", function() {
                 return E
+            }), n.d(t, "A", function() {
+                return d
             }), n.d(t, "G", function() {
                 return m
             }), n.d(t, "r", function() {
-                return h
-            }), n.d(t, "s", function() {
                 return _
+            }), n.d(t, "s", function() {
+                return h
             }), n.d(t, "o", function() {
                 return g
             }), n.d(t, "t", function() {
@@ -128,9 +128,9 @@
             }), n.d(t, "u", function() {
                 return G
             }), n.d(t, "z", function() {
-                return V
-            }), n.d(t, "y", function() {
                 return B
+            }), n.d(t, "y", function() {
+                return V
             });
             var a = n("/7QA"),
                 r = n("0Log"),
@@ -160,11 +160,11 @@
                 return r.PubsubTopic.VideoThumbnailProcessing + "." + e
             }
 
-            function d(e) {
+            function E(e) {
                 return r.PubsubTopic.ImageUpload + "." + e
             }
 
-            function E(e) {
+            function d(e) {
                 return r.PubsubTopic.UploadService + "." + e
             }
 
@@ -172,11 +172,11 @@
                 return r.PubsubTopic.VideoPlaybackById + "." + e
             }
 
-            function h(e) {
+            function _(e) {
                 return r.PubsubTopic.PayoutOnboardingEvents + "." + e
             }
 
-            function _(e) {
+            function h(e) {
                 return r.PubsubTopic.Presence + "." + e
             }
 
@@ -272,7 +272,7 @@
                 return r.PubsubTopic.SquadUpdates + "." + e
             }
 
-            function V(e) {
+            function B(e) {
                 return a.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -285,7 +285,7 @@
                 })
             }
 
-            function B(e) {
+            function V(e) {
                 return a.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -451,107 +451,117 @@
         By5U: function(e, t) {},
         DMoW: function(e, t, n) {
             "use strict";
-            var a, r, s, i, o, c, u, l, p, d, E, m, h, _, g, T, f, I, D, N, O, R, S, A, C, b, v, L, U, P, y, F, M, j, k, w, G, V, B, H, x, W, Y, X, z, K, q, Z, J, Q, $, ee, te, ne, ae, re, se, ie, oe, ce, ue, le, pe, de, Ee, me, he, _e, ge, Te, fe, Ie, De, Ne, Oe, Re, Se, Ae, Ce, be, ve, Le, Ue, Pe, ye, Fe, Me, je, ke, we, Ge, Ve, Be, He, xe, We, Ye, Xe, ze, Ke, qe, Ze, Je, Qe, $e, et, tt, nt, at, rt, st, it, ot, ct, ut, lt, pt, dt, Et, mt;
-            n.d(t, "d", function() {
+            var a, r, s, i, o, c, u, l, p, E, d, m, _, h, g, T, f, I, D, N, O, R, S, A, C, b, v, L, U, P, y, F, M, j, k, w, G, B, V, H, x, W, Y, X, K, z, q, Z, J, Q, $, ee, te, ne, ae, re, se, ie, oe, ce, ue, le, pe, Ee, de, me, _e, he, ge, Te, fe, Ie, De, Ne, Oe, Re, Se, Ae, Ce, be, ve, Le, Ue, Pe, ye, Fe, Me, je, ke, we, Ge, Be, Ve, He, xe, We, Ye, Xe, Ke, ze, qe, Ze, Je, Qe, $e, et, tt, nt, at, rt, st, it, ot, ct, ut, lt, pt, Et, dt, mt, _t, ht, gt;
+            n.d(t, "N", function() {
+                    return a
+                }), n.d(t, "e", function() {
                     return r
-                }), n.d(t, "L", function() {
+                }), n.d(t, "O", function() {
                     return o
-                }), n.d(t, "z", function() {
+                }), n.d(t, "B", function() {
                     return c
                 }), n.d(t, "b", function() {
                     return l
-                }), n.d(t, "h", function() {
-                    return h
-                }), n.d(t, "f", function() {
-                    return f
+                }), n.d(t, "i", function() {
+                    return _
+                }), n.d(t, "d", function() {
+                    return g
                 }), n.d(t, "g", function() {
                     return I
-                }), n.d(t, "m", function() {
+                }), n.d(t, "h", function() {
+                    return D
+                }), n.d(t, "Z", function() {
                     return O
-                }), n.d(t, "W", function() {
+                }), n.d(t, "n", function() {
                     return R
-                }), n.d(t, "N", function() {
+                }), n.d(t, "Ba", function() {
                     return S
-                }), n.d(t, "q", function() {
-                    return A
-                }), n.d(t, "k", function() {
-                    return v
-                }), n.d(t, "M", function() {
-                    return L
-                }), n.d(t, "c", function() {
-                    return j
-                }), n.d(t, "s", function() {
-                    return k
-                }), n.d(t, "V", function() {
-                    return w
-                }), n.d(t, "r", function() {
-                    return G
-                }), n.d(t, "P", function() {
-                    return V
                 }), n.d(t, "R", function() {
+                    return A
+                }), n.d(t, "s", function() {
+                    return C
+                }), n.d(t, "l", function() {
+                    return L
+                }), n.d(t, "P", function() {
+                    return U
+                }), n.d(t, "c", function() {
+                    return k
+                }), n.d(t, "u", function() {
+                    return w
+                }), n.d(t, "Aa", function() {
+                    return G
+                }), n.d(t, "t", function() {
                     return B
-                }), n.d(t, "E", function() {
+                }), n.d(t, "T", function() {
+                    return V
+                }), n.d(t, "V", function() {
                     return H
-                }), n.d(t, "S", function() {
+                }), n.d(t, "G", function() {
                     return x
-                }), n.d(t, "D", function() {
+                }), n.d(t, "W", function() {
                     return W
-                }), n.d(t, "C", function() {
+                }), n.d(t, "F", function() {
                     return Y
-                }), n.d(t, "p", function() {
+                }), n.d(t, "E", function() {
                     return X
-                }), n.d(t, "Q", function() {
+                }), n.d(t, "q", function() {
+                    return K
+                }), n.d(t, "U", function() {
                     return z
                 }), n.d(t, "a", function() {
-                    return K
-                }), n.d(t, "v", function() {
                     return q
                 }), n.d(t, "x", function() {
                     return Z
-                }), n.d(t, "G", function() {
-                    return Q
-                }), n.d(t, "H", function() {
-                    return $
-                }), n.d(t, "F", function() {
-                    return te
+                }), n.d(t, "z", function() {
+                    return J
                 }), n.d(t, "I", function() {
-                    return ne
-                }), n.d(t, "U", function() {
-                    return se
-                }), n.d(t, "T", function() {
-                    return me
-                }), n.d(t, "o", function() {
-                    return Oe
-                }), n.d(t, "n", function() {
-                    return Re
-                }), n.d(t, "X", function() {
-                    return be
-                }), n.d(t, "B", function() {
-                    return Me
-                }), n.d(t, "A", function() {
-                    return we
-                }), n.d(t, "j", function() {
-                    return Ge
-                }), n.d(t, "u", function() {
-                    return Ve
-                }), n.d(t, "l", function() {
-                    return He
-                }), n.d(t, "i", function() {
-                    return xe
-                }), n.d(t, "w", function() {
-                    return We
-                }), n.d(t, "O", function() {
-                    return Xe
-                }), n.d(t, "y", function() {
-                    return nt
+                    return $
                 }), n.d(t, "J", function() {
-                    return at
+                    return ee
+                }), n.d(t, "H", function() {
+                    return ne
                 }), n.d(t, "K", function() {
-                    return rt
-                }), n.d(t, "e", function() {
-                    return dt
-                }), n.d(t, "t", function() {
-                    return Et
+                    return ae
+                }), n.d(t, "Y", function() {
+                    return ie
+                }), n.d(t, "X", function() {
+                    return _e
+                }), n.d(t, "p", function() {
+                    return Re
+                }), n.d(t, "o", function() {
+                    return Se
+                }), n.d(t, "Ca", function() {
+                    return ve
+                }), n.d(t, "D", function() {
+                    return je
+                }), n.d(t, "C", function() {
+                    return Ge
+                }), n.d(t, "k", function() {
+                    return Be
+                }), n.d(t, "w", function() {
+                    return Ve
+                }), n.d(t, "m", function() {
+                    return xe
+                }), n.d(t, "j", function() {
+                    return We
+                }), n.d(t, "y", function() {
+                    return Ye
+                }), n.d(t, "S", function() {
+                    return Ke
+                }), n.d(t, "r", function() {
+                    return ze
+                }), n.d(t, "Q", function() {
+                    return Qe
+                }), n.d(t, "A", function() {
+                    return st
+                }), n.d(t, "L", function() {
+                    return it
+                }), n.d(t, "M", function() {
+                    return ot
+                }), n.d(t, "f", function() {
+                    return _t
+                }), n.d(t, "v", function() {
+                    return ht
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -582,337 +592,346 @@
                 }(p || (p = {})),
                 function(e) {
                     e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
-                }(d || (d = {})),
+                }(E || (E = {})),
                 function(e) {
                     e.AR = "AR", e.BG = "BG", e.CS = "CS", e.DA = "DA", e.DE = "DE", e.EL = "EL", e.EN = "EN", e.EN_GB = "EN_GB", e.ES = "ES", e.ES_MX = "ES_MX", e.FI = "FI", e.FR = "FR", e.HI = "HI", e.HU = "HU", e.IT = "IT", e.JA = "JA", e.KO = "KO", e.NL = "NL", e.NO = "NO", e.PL = "PL", e.PT = "PT", e.PT_BR = "PT_BR", e.RO = "RO", e.RU = "RU", e.SK = "SK", e.SV = "SV", e.TH = "TH", e.TR = "TR", e.VI = "VI", e.ZH = "ZH", e.ZH_CN = "ZH_CN", e.ZH_TW = "ZH_TW"
-                }(E || (E = {})),
+                }(d || (d = {})),
                 function(e) {
                     e.AR = "AR", e.ASL = "ASL", e.BG = "BG", e.CS = "CS", e.DA = "DA", e.DE = "DE", e.EL = "EL", e.EN = "EN", e.ES = "ES", e.FI = "FI", e.FR = "FR", e.HU = "HU", e.IT = "IT", e.JA = "JA", e.KO = "KO", e.NL = "NL", e.NO = "NO", e.OTHER = "OTHER", e.PL = "PL", e.PT = "PT", e.RO = "RO", e.RU = "RU", e.SK = "SK", e.SV = "SV", e.TH = "TH", e.TR = "TR", e.VI = "VI", e.ZH = "ZH", e.ZH_HK = "ZH_HK"
                 }(m || (m = {})),
                 function(e) {
                     e.ARCHIVE = "ARCHIVE", e.HIGHLIGHT = "HIGHLIGHT", e.PAST_PREMIERE = "PAST_PREMIERE", e.PREMIERE_UPLOAD = "PREMIERE_UPLOAD", e.UPLOAD = "UPLOAD"
-                }(h || (h = {})),
-                function(e) {
-                    e.GET_BITS = "GET_BITS", e.GET_TURBO = "GET_TURBO", e.SUBSCRIBE = "SUBSCRIBE", e.VISIT_URL = "VISIT_URL"
                 }(_ || (_ = {})),
                 function(e) {
-                    e.ALLTIME = "ALLTIME", e.MONTH = "MONTH", e.WEEK = "WEEK"
+                    e.GET_BITS = "GET_BITS", e.GET_TURBO = "GET_TURBO", e.SUBSCRIBE = "SUBSCRIBE", e.VISIT_URL = "VISIT_URL"
+                }(h || (h = {})),
+                function(e) {
+                    e.ACQUIRED = "ACQUIRED", e.CHEERED = "CHEERED", e.NEW_USER = "NEW_USER", e.SKIPPED = "SKIPPED", e.UNKNOWN = "UNKNOWN"
                 }(g || (g = {})),
                 function(e) {
-                    e.AD = "AD", e.BUNDLE = "BUNDLE"
+                    e.ALLTIME = "ALLTIME", e.MONTH = "MONTH", e.WEEK = "WEEK"
                 }(T || (T = {})),
                 function(e) {
-                    e.GAME_TRAILER = "GAME_TRAILER", e.MISC_TRAILER = "MISC_TRAILER", e.PAY_TO_STREAM = "PAY_TO_STREAM"
+                    e.AD = "AD", e.BUNDLE = "BUNDLE"
                 }(f || (f = {})),
                 function(e) {
-                    e.AVAILABLE = "AVAILABLE", e.CANCELLED = "CANCELLED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE"
+                    e.GAME_TRAILER = "GAME_TRAILER", e.MISC_TRAILER = "MISC_TRAILER", e.PAY_TO_STREAM = "PAY_TO_STREAM"
                 }(I || (I = {})),
                 function(e) {
-                    e.FIXED_VALUE_OFF = "FIXED_VALUE_OFF", e.NONE = "NONE", e.PERCENT_OFF = "PERCENT_OFF"
+                    e.AVAILABLE = "AVAILABLE", e.CANCELLED = "CANCELLED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE"
                 }(D || (D = {})),
                 function(e) {
-                    e.CHEER = "CHEER"
+                    e.FIXED_VALUE_OFF = "FIXED_VALUE_OFF", e.NONE = "NONE", e.PERCENT_OFF = "PERCENT_OFF"
                 }(N || (N = {})),
                 function(e) {
-                    e.CREATED = "CREATED", e.CREATING = "CREATING", e.FAILED = "FAILED"
+                    e.CHEER = "CHEER"
                 }(O || (O = {})),
                 function(e) {
-                    e.PRIVATE = "PRIVATE", e.PUBLIC = "PUBLIC"
+                    e.CREATED = "CREATED", e.CREATING = "CREATING", e.FAILED = "FAILED"
                 }(R || (R = {})),
                 function(e) {
-                    e.ENDED = "ENDED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.UNKNOWN = "UNKNOWN"
+                    e.PRIVATE = "PRIVATE", e.PUBLIC = "PUBLIC"
                 }(S || (S = {})),
                 function(e) {
-                    e.ARCHIVES_DISABLED = "ARCHIVES_DISABLED", e.BROADCASTER_NOT_LIVE = "BROADCASTER_NOT_LIVE", e.BROADCAST_FORMAT_INVALID_PREMIERE = "BROADCAST_FORMAT_INVALID_PREMIERE", e.BROADCAST_FORMAT_INVALID_RERUN = "BROADCAST_FORMAT_INVALID_RERUN", e.INTERNAL_SERVER_ERROR = "INTERNAL_SERVER_ERROR", e.MAX_DESCRIPTION_LENGTH_EXCEEDED = "MAX_DESCRIPTION_LENGTH_EXCEEDED", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED", e.VOD_NOT_READY = "VOD_NOT_READY"
+                    e.ENDED = "ENDED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.UNKNOWN = "UNKNOWN"
                 }(A || (A = {})),
                 function(e) {
-                    e.DARK = "DARK", e.LIGHT = "LIGHT"
+                    e.ARCHIVES_DISABLED = "ARCHIVES_DISABLED", e.BROADCASTER_NOT_LIVE = "BROADCASTER_NOT_LIVE", e.BROADCAST_FORMAT_INVALID_PREMIERE = "BROADCAST_FORMAT_INVALID_PREMIERE", e.BROADCAST_FORMAT_INVALID_RERUN = "BROADCAST_FORMAT_INVALID_RERUN", e.INTERNAL_SERVER_ERROR = "INTERNAL_SERVER_ERROR", e.MAX_DESCRIPTION_LENGTH_EXCEEDED = "MAX_DESCRIPTION_LENGTH_EXCEEDED", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED", e.VOD_NOT_READY = "VOD_NOT_READY"
                 }(C || (C = {})),
                 function(e) {
-                    e.CUSTOM = "CUSTOM", e.DISPLAY_ONLY = "DISPLAY_ONLY", e.FIRST_PARTY = "FIRST_PARTY", e.RENDER_ONLY = "RENDER_ONLY", e.SPONSORED = "SPONSORED", e.THIRD_PARTY = "THIRD_PARTY", e.UNKNOWN = "UNKNOWN"
+                    e.DARK = "DARK", e.LIGHT = "LIGHT"
                 }(b || (b = {})),
                 function(e) {
-                    e.FOLLOWERS_ONLY = "FOLLOWERS_ONLY", e.SLOW_MODE = "SLOW_MODE", e.SUBSCRIBERS_ONLY = "SUBSCRIBERS_ONLY", e.VERIFIED_ONLY = "VERIFIED_ONLY"
+                    e.CUSTOM = "CUSTOM", e.DISPLAY_ONLY = "DISPLAY_ONLY", e.FIRST_PARTY = "FIRST_PARTY", e.RENDER_ONLY = "RENDER_ONLY", e.SPONSORED = "SPONSORED", e.THIRD_PARTY = "THIRD_PARTY", e.UNKNOWN = "UNKNOWN"
                 }(v || (v = {})),
                 function(e) {
-                    e.AMOUNT_BELOW_MIN_BITS = "AMOUNT_BELOW_MIN_BITS", e.AUTO_MOD_MESSAGE = "AUTO_MOD_MESSAGE", e.AUTO_MOD_PENDING = "AUTO_MOD_PENDING", e.CHANNEL_BLOCKED_TERMS = "CHANNEL_BLOCKED_TERMS", e.CHANNEL_INELIGIBLE = "CHANNEL_INELIGIBLE", e.EMOTE_AMOUNT_BELOW_MIN_BITS = "EMOTE_AMOUNT_BELOW_MIN_BITS", e.INSUFFICIENT_BALANCE = "INSUFFICIENT_BALANCE", e.INVALID_BITS_AMOUNT = "INVALID_BITS_AMOUNT", e.INVALID_BITS_MESSAGE = "INVALID_BITS_MESSAGE", e.INVALID_EVENT_ID = "INVALID_EVENT_ID", e.MESSAGE_LENGTH_EXCEEDED = "MESSAGE_LENGTH_EXCEEDED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.TOO_LARGE_BITS_EMOTE = "TOO_LARGE_BITS_EMOTE", e.TOO_LARGE_CHEER = "TOO_LARGE_CHEER", e.UNKNOWN = "UNKNOWN", e.USER_BANNED = "USER_BANNED", e.USER_INELIGIBLE = "USER_INELIGIBLE", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_MESSAGE = "ZALGO_MESSAGE"
+                    e.FOLLOWERS_ONLY = "FOLLOWERS_ONLY", e.SLOW_MODE = "SLOW_MODE", e.SUBSCRIBERS_ONLY = "SUBSCRIBERS_ONLY", e.VERIFIED_ONLY = "VERIFIED_ONLY"
                 }(L || (L = {})),
                 function(e) {
-                    e.NEW_CHATTER = "NEW_CHATTER"
+                    e.AMOUNT_BELOW_MIN_BITS = "AMOUNT_BELOW_MIN_BITS", e.AUTO_MOD_MESSAGE = "AUTO_MOD_MESSAGE", e.AUTO_MOD_PENDING = "AUTO_MOD_PENDING", e.CHANNEL_BLOCKED_TERMS = "CHANNEL_BLOCKED_TERMS", e.CHANNEL_INELIGIBLE = "CHANNEL_INELIGIBLE", e.EMOTE_AMOUNT_BELOW_MIN_BITS = "EMOTE_AMOUNT_BELOW_MIN_BITS", e.INSUFFICIENT_BALANCE = "INSUFFICIENT_BALANCE", e.INVALID_BITS_AMOUNT = "INVALID_BITS_AMOUNT", e.INVALID_BITS_MESSAGE = "INVALID_BITS_MESSAGE", e.INVALID_EVENT_ID = "INVALID_EVENT_ID", e.MESSAGE_LENGTH_EXCEEDED = "MESSAGE_LENGTH_EXCEEDED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.TOO_LARGE_BITS_EMOTE = "TOO_LARGE_BITS_EMOTE", e.TOO_LARGE_CHEER = "TOO_LARGE_CHEER", e.UNKNOWN = "UNKNOWN", e.USER_BANNED = "USER_BANNED", e.USER_INELIGIBLE = "USER_INELIGIBLE", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_MESSAGE = "ZALGO_MESSAGE"
                 }(U || (U = {})),
                 function(e) {
-                    e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
+                    e.NEW_CHATTER = "NEW_CHATTER"
                 }(P || (P = {})),
                 function(e) {
-                    e.FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.SUB_ONLY_MODE_ENFORCEMENT_FAILED = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT"
+                    e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
                 }(y || (y = {})),
                 function(e) {
-                    e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
+                    e.FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.SUB_ONLY_MODE_ENFORCEMENT_FAILED = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT"
                 }(F || (F = {})),
                 function(e) {
-                    e.AVAILABLE = "AVAILABLE", e.DISMISSED = "DISMISSED", e.ELIGIBLE = "ELIGIBLE", e.REDEEMED = "REDEEMED"
+                    e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
                 }(M || (M = {})),
                 function(e) {
-                    e.DURATION_INVALID = "DURATION_INVALID", e.FORBIDDEN = "FORBIDDEN", e.TARGET_ALREADY_BANNED = "TARGET_ALREADY_BANNED", e.TARGET_IS_ADMIN = "TARGET_IS_ADMIN", e.TARGET_IS_ANONYMOUS = "TARGET_IS_ANONYMOUS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_GLOBAL_MOD = "TARGET_IS_GLOBAL_MOD", e.TARGET_IS_MOD = "TARGET_IS_MOD", e.TARGET_IS_SELF = "TARGET_IS_SELF", e.TARGET_IS_STAFF = "TARGET_IS_STAFF", e.TARGET_IS_VIP = "TARGET_IS_VIP", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
+                    e.AVAILABLE = "AVAILABLE", e.DISMISSED = "DISMISSED", e.ELIGIBLE = "ELIGIBLE", e.REDEEMED = "REDEEMED"
                 }(j || (j = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.SUCCESS = "SUCCESS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_MODERATOR = "TARGET_IS_MODERATOR"
+                    e.DURATION_INVALID = "DURATION_INVALID", e.FORBIDDEN = "FORBIDDEN", e.TARGET_ALREADY_BANNED = "TARGET_ALREADY_BANNED", e.TARGET_IS_ADMIN = "TARGET_IS_ADMIN", e.TARGET_IS_ANONYMOUS = "TARGET_IS_ANONYMOUS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_GLOBAL_MOD = "TARGET_IS_GLOBAL_MOD", e.TARGET_IS_MOD = "TARGET_IS_MOD", e.TARGET_IS_SELF = "TARGET_IS_SELF", e.TARGET_IS_STAFF = "TARGET_IS_STAFF", e.TARGET_IS_VIP = "TARGET_IS_VIP", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
                 }(k || (k = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.TARGET_NOT_BANNED = "TARGET_NOT_BANNED", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
+                    e.FORBIDDEN = "FORBIDDEN", e.SUCCESS = "SUCCESS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_MODERATOR = "TARGET_IS_MODERATOR"
                 }(w || (w = {})),
                 function(e) {
-                    e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
+                    e.FORBIDDEN = "FORBIDDEN", e.TARGET_NOT_BANNED = "TARGET_NOT_BANNED", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
                 }(G || (G = {})),
+                function(e) {
+                    e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
+                }(B || (B = {})),
                 function(e) {
                     e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
                 }(V || (V = {})),
                 function(e) {
                     e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
-                }(B || (B = {})),
-                function(e) {
-                    e.GOOGLE_IAB = "GOOGLE_IAB", e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
                 }(H || (H = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
+                    e.GOOGLE_IAB = "GOOGLE_IAB", e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
                 }(x || (x = {})),
                 function(e) {
-                    e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
+                    e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
                 }(W || (W = {})),
                 function(e) {
-                    e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
+                    e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
                 }(Y || (Y = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
+                    e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
                 }(X || (X = {})),
+                function(e) {
+                    e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
+                }(K || (K = {})),
                 function(e) {
                     e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
                 }(z || (z = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
-                }(K || (K = {})),
-                function(e) {
-                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
                 }(q || (q = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
+                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
                 }(Z || (Z = {})),
                 function(e) {
-                    e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
+                    e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
                 }(J || (J = {})),
                 function(e) {
-                    e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
+                    e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
                 }(Q || (Q = {})),
                 function(e) {
-                    e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
+                    e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
                 }($ || ($ = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
+                    e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
                 }(ee || (ee = {})),
                 function(e) {
-                    e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
+                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }(te || (te = {})),
                 function(e) {
-                    e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
+                    e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
                 }(ne || (ne = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
+                    e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
                 }(ae || (ae = {})),
                 function(e) {
-                    e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }(re || (re = {})),
                 function(e) {
-                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                    e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(se || (se = {})),
                 function(e) {
-                    e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
+                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(ie || (ie = {})),
                 function(e) {
-                    e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
+                    e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
                 }(oe || (oe = {})),
                 function(e) {
-                    e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
+                    e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
                 }(ce || (ce = {})),
                 function(e) {
-                    e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
+                    e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
                 }(ue || (ue = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
+                    e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
                 }(le || (le = {})),
                 function(e) {
-                    e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
+                    e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
                 }(pe || (pe = {})),
+                function(e) {
+                    e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
+                }(Ee || (Ee = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
                 }(de || (de = {})),
                 function(e) {
                     e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
-                }(Ee || (Ee = {})),
+                }(me || (me = {})),
                 function(e) {
                     e.CONTENT = "CONTENT", e.TOP = "TOP"
-                }(me || (me = {})),
+                }(_e || (_e = {})),
                 function(e) {
                     e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
                 }(he || (he = {})),
                 function(e) {
                     e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
-                }(_e || (_e = {})),
-                function(e) {
-                    e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
                 }(ge || (ge = {})),
                 function(e) {
-                    e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
+                    e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
                 }(Te || (Te = {})),
                 function(e) {
-                    e.GIFT_NOT_CLAIMABLE = "GIFT_NOT_CLAIMABLE", e.NON_EXISTENT_GIFT = "NON_EXISTENT_GIFT", e.UNKNOWN_ERROR = "UNKNOWN_ERROR", e.USER_DOES_NOT_OWN_GIFT = "USER_DOES_NOT_OWN_GIFT"
+                    e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
                 }(fe || (fe = {})),
                 function(e) {
-                    e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
+                    e.GIFT_NOT_CLAIMABLE = "GIFT_NOT_CLAIMABLE", e.NON_EXISTENT_GIFT = "NON_EXISTENT_GIFT", e.UNKNOWN_ERROR = "UNKNOWN_ERROR", e.USER_DOES_NOT_OWN_GIFT = "USER_DOES_NOT_OWN_GIFT"
                 }(Ie || (Ie = {})),
                 function(e) {
-                    e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
+                    e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
                 }(De || (De = {})),
                 function(e) {
-                    e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
+                    e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
                 }(Ne || (Ne = {})),
                 function(e) {
-                    e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
+                    e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
                 }(Oe || (Oe = {})),
                 function(e) {
-                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
+                    e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
                 }(Re || (Re = {})),
                 function(e) {
-                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
+                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
                 }(Se || (Se = {})),
                 function(e) {
-                    e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
+                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
                 }(Ae || (Ae = {})),
                 function(e) {
-                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
+                    e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
                 }(Ce || (Ce = {})),
                 function(e) {
-                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
+                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
                 }(be || (be = {})),
                 function(e) {
-                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
+                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
                 }(ve || (ve = {})),
                 function(e) {
-                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
+                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
                 }(Le || (Le = {})),
                 function(e) {
-                    e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
+                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
                 }(Ue || (Ue = {})),
                 function(e) {
-                    e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
+                    e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
                 }(Pe || (Pe = {})),
                 function(e) {
-                    e.ASC = "ASC", e.DESC = "DESC"
+                    e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
                 }(ye || (ye = {})),
                 function(e) {
-                    e.TIME = "TIME", e.VIEWS = "VIEWS"
+                    e.ASC = "ASC", e.DESC = "DESC"
                 }(Fe || (Fe = {})),
                 function(e) {
-                    e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
+                    e.TIME = "TIME", e.VIEWS = "VIEWS"
                 }(Me || (Me = {})),
                 function(e) {
-                    e.ALREADY_CLAIMED = "ALREADY_CLAIMED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN = "UNKNOWN"
+                    e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
                 }(je || (je = {})),
                 function(e) {
-                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
+                    e.ALREADY_CLAIMED = "ALREADY_CLAIMED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN = "UNKNOWN"
                 }(ke || (ke = {})),
                 function(e) {
-                    e.NONE = "NONE", e.READ = "READ", e.WRITE = "WRITE"
+                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
                 }(we || (we = {})),
                 function(e) {
-                    e.BROADCASTER = "BROADCASTER", e.EDITOR = "EDITOR", e.MODERATOR = "MODERATOR", e.REGULAR = "REGULAR", e.SUBSCRIBER = "SUBSCRIBER"
+                    e.NONE = "NONE", e.READ = "READ", e.WRITE = "WRITE"
                 }(Ge || (Ge = {})),
+                function(e) {
+                    e.BROADCASTER = "BROADCASTER", e.EDITOR = "EDITOR", e.MODERATOR = "MODERATOR", e.REGULAR = "REGULAR", e.SUBSCRIBER = "SUBSCRIBER"
+                }(Be || (Be = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
                 }(Ve || (Ve = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
-                }(Be || (Be = {})),
-                function(e) {
-                    e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(He || (He = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(xe || (xe = {})),
                 function(e) {
-                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(We || (We = {})),
                 function(e) {
-                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
                 }(Ye || (Ye = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Xe || (Xe = {})),
                 function(e) {
-                    e.SQUAD_NOT_FOUND = "SQUAD_NOT_FOUND", e.UNAUTHORIZED = "UNAUTHORIZED"
-                }(ze || (ze = {})),
-                function(e) {
-                    e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Ke || (Ke = {})),
                 function(e) {
-                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
+                    e.INVITATION_ALREADY_EXISTS = "INVITATION_ALREADY_EXISTS", e.INVITATION_INVALID = "INVITATION_INVALID", e.SQUAD_FULL = "SQUAD_FULL", e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_ALREADY_IN_SQUAD = "USER_ALREADY_IN_SQUAD"
+                }(ze || (ze = {})),
+                function(e) {
+                    e.SQUAD_CANNOT_BE_UPDATED = "SQUAD_CANNOT_BE_UPDATED", e.SQUAD_NOT_FOUND = "SQUAD_NOT_FOUND", e.SQUAD_TOO_FEW_MEMBERS = "SQUAD_TOO_FEW_MEMBERS", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(qe || (qe = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }(Ze || (Ze = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }(Je || (Je = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                    e.ACCEPTED = "ACCEPTED", e.DELETED = "DELETED", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }($e || ($e = {})),
                 function(e) {
-                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(et || (et = {})),
                 function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
                 }(tt || (tt = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }(nt || (nt = {})),
                 function(e) {
-                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
+                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(at || (at = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(rt || (rt = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(st || (st = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
                 }(it || (it = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
                 }(ot || (ot = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }(ct || (ct = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(ut || (ut = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(lt || (lt = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(pt || (pt = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
-                }(dt || (dt = {})),
-                function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(Et || (Et = {})),
                 function(e) {
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                }(dt || (dt = {})),
+                function(e) {
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                }(mt || (mt = {})),
+                function(e) {
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                }(_t || (_t = {})),
+                function(e) {
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                }(ht || (ht = {})),
+                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(mt || (mt = {}))
+                }(gt || (gt = {}))
         },
         GD6M: function(e, t, n) {
             "use strict";
@@ -948,14 +967,14 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(c.Mb, {
+                        return r.createElement(c.Ob, {
                             onClick: this.onClick,
                             label: this.props.game.name
                         })
                     }, t
                 }(r.Component),
-                d = 100,
-                E = "GAME_SEARCH_INPUT_SELECTOR",
+                E = 100,
+                d = "GAME_SEARCH_INPUT_SELECTOR",
                 m = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -970,7 +989,7 @@
                             }, function() {
                                 n.inputTimer && (clearTimeout(n.inputTimer), n.inputTimer = 0), n.inputTimer = setTimeout(function() {
                                     return n.props.onInputChange(n.state.searchTerm)
-                                }, d)
+                                }, E)
                             })
                         }, n.onClickOut = function() {
                             n.setState({
@@ -1050,12 +1069,12 @@
                         return r.createElement(c.Xa, null, r.createElement(i.a, {
                             onClickOut: this.onClickOut
                         }, r.createElement(c.Xa, {
-                            position: c.hb.Relative,
+                            position: c.jb.Relative,
                             padding: {
                                 bottom: 1
                             }
                         }, r.createElement(c.Ra, {
-                            "data-test-selector": E,
+                            "data-test-selector": d,
                             value: this.state.searchTerm,
                             onChange: this.onGameSearch,
                             type: c.Ta.Text,
@@ -1070,10 +1089,10 @@
                         }, t)))
                     }, t
                 }(r.Component),
-                h = Object(s.compose)(Object(o.b)("DevGameSearch", {
+                _ = Object(s.compose)(Object(o.b)("DevGameSearch", {
                     autoReportInteractive: !0
                 }))(m),
-                _ = function(e) {
+                h = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1100,7 +1119,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(h, {
+                        return r.createElement(_, {
                             onGameSelect: this.onGameSelect,
                             gameSuggestions: this.state.games,
                             onInputChange: this.findGames,
@@ -1155,7 +1174,7 @@
                         }, n.state.games = t.defaultGames || [], n
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(h, {
+                        return r.createElement(_, {
                             onGameSelect: this.onGameSelect,
                             gameSuggestions: this.state.games,
                             onInputChange: this.findGames,
@@ -1164,7 +1183,7 @@
                     }, t
                 }(r.Component);
             n.d(t, "a", function() {
-                return _
+                return h
             }), n.d(t, "b", function() {
                 return N
             })
@@ -1428,11 +1447,11 @@
                 u = n("H/lO"),
                 l = n("NZDK"),
                 p = n("fvjX"),
-                d = n("N3I0"),
-                E = n("GIun"),
+                E = n("N3I0"),
+                d = n("GIun"),
                 m = n("8/mp"),
-                h = n("GnwI"),
-                _ = n("N0BP"),
+                _ = n("GnwI"),
+                h = n("N0BP"),
                 g = n("yLwq"),
                 T = n("Ue10"),
                 f = function(e) {
@@ -1449,7 +1468,7 @@
                                 y: .5,
                                 x: 1
                             }
-                        }, Object(_.a)(this.props)), r.createElement(T.Ua, {
+                        }, Object(h.a)(this.props)), r.createElement(T.Ua, {
                             onClick: this.onSelect
                         }, r.createElement(T.G, {
                             row: !0
@@ -1461,14 +1480,14 @@
                         }), r.createElement(T.Xa, {
                             flexGrow: 1,
                             display: T.X.Flex,
-                            position: T.hb.Relative
+                            position: T.jb.Relative
                         }, r.createElement(T.Pa, {
                             padding: {
                                 x: 1
                             },
                             flexGrow: 1
                         }, r.createElement(T.W, {
-                            type: T.Tb.Span,
+                            type: T.Vb.Span,
                             ellipsis: !0
                         }, this.props.user.name))))))
                     }, t
@@ -1481,7 +1500,7 @@
                             return t.props.waiting ? e = r.createElement(T.Za, {
                                 fillContent: !0
                             }) : t.props.userResults && (e = t.props.userResults.map(function(e) {
-                                return r.createElement(E.a, {
+                                return r.createElement(d.a, {
                                     key: e.id
                                 }, r.createElement(f, {
                                     user: e,
@@ -1499,7 +1518,7 @@
                         this.userSearch && e.open !== this.props.open && this.userSearch.toggle(e.open)
                     }, t.prototype.render = function() {
                         var e = this.renderSearchContent();
-                        return r.createElement(T.Xa, null, r.createElement(d.a, {
+                        return r.createElement(T.Xa, null, r.createElement(E.a, {
                             onChange: this.props.onInputChange,
                             onFocusInput: this.props.onFocusInput,
                             ref: this.setUserSearchRef,
@@ -1520,7 +1539,7 @@
                         }, e)))))
                     }, t
                 }(r.Component),
-                D = Object(p.compose)(Object(h.b)("DevUserSearchDropdown", {
+                D = Object(p.compose)(Object(_.b)("DevUserSearchDropdown", {
                     autoReportInteractive: !0
                 }))(I),
                 N = 100,
@@ -1651,7 +1670,7 @@
             }), n.d(t, "d", function() {
                 return p
             }), n.d(t, "b", function() {
-                return E
+                return d
             });
             var a, r = n("/7QA"),
                 s = n("2/NB"),
@@ -1681,10 +1700,10 @@
                 p = function() {
                     return Object(r.d)("Unexpected error while uploading your image. Please try again later", "ImageUploader")
                 },
-                d = ((a = {})[s.a.JPEG] = "JPG", a[s.a.PNG] = "PNG", a[s.a.GIF] = "GIF", a),
-                E = function(e) {
+                E = ((a = {})[s.a.JPEG] = "JPG", a[s.a.PNG] = "PNG", a[s.a.GIF] = "GIF", a),
+                d = function(e) {
                     var t = e.map(function(e) {
-                        return d[e]
+                        return E[e]
                     });
                     return t.length > 1 && (t[t.length - 1] = "or " + t[t.length - 1]), Object(r.d)("Incompatible format. File must be an image in {allowedTypes} format.", {
                         allowedTypes: t.join(", ")
@@ -1709,25 +1728,25 @@
                         padding: {
                             y: 1
                         },
-                        zIndex: o.gc.Above
-                    }, r.createElement(o.Cb, {
+                        zIndex: o.ic.Above
+                    }, r.createElement(o.Eb, {
                         color: o.O.Alt2,
-                        textAlign: o.Pb.Center,
+                        textAlign: o.Rb.Center,
                         flexShrink: 1
-                    }, r.createElement(o.qb, {
-                        asset: o.rb.DeadGlitch,
+                    }, r.createElement(o.sb, {
+                        asset: o.tb.DeadGlitch,
                         width: 46,
                         height: 48
                     })), r.createElement(o.Pa, {
                         margin: {
                             top: 1
                         },
-                        textAlign: o.Pb.Center
+                        textAlign: o.Rb.Center
                     }, r.createElement(o.W, {
-                        type: o.Tb.H4,
+                        type: o.Vb.H4,
                         "data-test-selector": "search-error-message"
                     }, Object(i.d)("Search is not available at this time", "DropdownSearchError"))), r.createElement(o.W, {
-                        type: o.Tb.P
+                        type: o.Vb.P
                     }, Object(i.d)("Please try again later", "DropdownSearchError")))
                 },
                 u = n("8Ad5"),
@@ -1771,7 +1790,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = void 0 === this.props.showDropdown || this.props.showDropdown,
                             t = this.props.isErrored ? r.createElement(c, null) : r.Children.only(this.props.children),
-                            n = r.createElement(o.tb, {
+                            n = r.createElement(o.vb, {
                                 onChange: this.handleChange,
                                 onKeyDown: this.onKeyDown,
                                 onBlur: this.handleBlur,
@@ -1786,13 +1805,13 @@
                             });
                         return this.props.inline ? r.createElement(s.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(o.Cb, {
+                        }, r.createElement(o.Eb, {
                             background: this.state.isInputFocused || this.state.isOpen ? o.r.Base : void 0,
                             borderRadius: o.x.Large,
                             padding: .5,
-                            position: o.hb.Relative,
+                            position: o.jb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, n, e && r.createElement(o.Cb, {
+                        }, n, e && r.createElement(o.Eb, {
                             attachLeft: !0,
                             background: o.r.Base,
                             borderRadius: o.x.Large,
@@ -1801,8 +1820,8 @@
                             padding: {
                                 y: 1
                             },
-                            position: o.hb.Absolute,
-                            zIndex: o.gc.Above,
+                            position: o.jb.Absolute,
+                            zIndex: o.ic.Above,
                             elevation: 3
                         }, r.createElement("div", {
                             tabIndex: 0,
@@ -1859,31 +1878,31 @@
                             error: !!this.props.errorMessage
                         }, r.createElement(o.Xa, {
                             className: "image-uploader",
-                            textAlign: o.Pb.Center,
+                            textAlign: o.Rb.Center,
                             display: o.X.Flex,
                             flexDirection: o.Aa.Column,
                             alignItems: o.f.Center,
                             justifyContent: o.Wa.Center,
-                            position: o.hb.Relative,
+                            position: o.jb.Relative,
                             fullHeight: !0,
                             fullWidth: !0
                         }, this.renderErrorMessage(), r.createElement(o.Xa, {
-                            position: o.hb.Relative
+                            position: o.jb.Relative
                         }, r.createElement(o.Xa, {
                             className: "image-uploader__upload-svg--anim-backfill"
-                        }, r.createElement(o.qb, {
-                            asset: o.rb.Upload,
-                            type: o.sb.Alt2,
+                        }, r.createElement(o.sb, {
+                            asset: o.tb.Upload,
+                            type: o.ub.Alt2,
                             width: this.props.iconWidth || 99,
                             height: this.props.iconWidth || 76
                         })), r.createElement(o.Xa, {
                             className: "image-uploader__upload-svg--anim-fill",
-                            position: o.hb.Absolute,
+                            position: o.jb.Absolute,
                             display: this.props.isLoading ? o.X.Block : o.X.Hide,
                             attachTop: !0
-                        }, r.createElement(o.qb, {
-                            asset: o.rb.Upload,
-                            type: o.sb.Brand,
+                        }, r.createElement(o.sb, {
+                            asset: o.tb.Upload,
+                            type: o.ub.Brand,
                             width: this.props.iconWidth || 99,
                             height: this.props.iconHeight || 76
                         }))), this.props.isLoading ? this.renderLoadingState() : this.renderNormalState()))
@@ -1892,12 +1911,12 @@
                             margin: 1,
                             "data-test-selector": "image-uploader-loading"
                         }, r.createElement(o.W, {
-                            type: o.Tb.H4
+                            type: o.Vb.H4
                         }, Object(s.d)("Uploading", "ImageUploader")))
                     }, t.prototype.renderNormalState = function() {
                         var e = Object(s.d)("Browse", "ImageUploader");
                         return r.createElement(o.Xa, null, r.createElement(o.Xa, null, r.createElement(o.W, {
-                            type: o.Tb.H4
+                            type: o.Vb.H4
                         }, Object(s.d)("Drag and drop your image here", "ImageUploader"))), r.createElement(o.Xa, {
                             margin: {
                                 bottom: 2
@@ -1909,7 +1928,7 @@
                             fullWidth: !0,
                             "data-test-selector": "image-uploader-hint"
                         }, r.createElement(o.W, {
-                            type: o.Tb.P,
+                            type: o.Vb.P,
                             fontSize: o.Ca.Size7,
                             color: o.O.Alt2
                         }, this.props.hintMessage)), r.createElement(o.Xa, null, r.createElement(o.z, {
@@ -1923,7 +1942,7 @@
                             },
                             "data-test-selector": "image-uploader-error"
                         }, r.createElement(o.W, {
-                            type: o.Tb.H5,
+                            type: o.Vb.H5,
                             color: o.O.Error,
                             bold: !0
                         }, this.props.errorMessage))
@@ -2002,7 +2021,7 @@
         NZDK: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return d
+                return E
             });
             var a = n("mrSG"),
                 r = n("hnrd"),
@@ -2043,10 +2062,10 @@
                         indexName: o.a.Channels,
                         hitsPerPage: 6,
                         get topNumericFilters() {
-                            return ["channel_count>10", "updated_on>" + m(E())]
+                            return ["channel_count>10", "updated_on>" + m(d())]
                         },
                         get singleTypeNumericFilters() {
-                            return ["updated_on>" + m(E())]
+                            return ["updated_on>" + m(d())]
                         },
                         optionalFacetFilters: ""
                     },
@@ -2065,7 +2084,7 @@
                         optionalFacetFilters: ""
                     }
                 },
-                d = function() {
+                E = function() {
                     function e(e) {
                         this.apolloClient = e.apolloClient, this.client = r(e.appId, e.apiKey), this.stats = e.stats, this.logger = e.logger.withCategory("search-client"), this.sendSearchRequestToForage = "variant" === s.p.experiments.getAssignment(i.b.NewSearchBackend), this.getCountryCode()
                     }
@@ -2125,13 +2144,13 @@
                             c = void 0 === i ? 0 : i,
                             u = s.hitsPerPage,
                             l = void 0 === u ? 50 : u,
-                            d = s.facetFilters,
-                            E = void 0 === d ? "" : d,
+                            E = s.facetFilters,
+                            d = void 0 === E ? "" : E,
                             m = s.numericFilters,
-                            h = s.restrictSearchableAttributes,
-                            _ = void 0 === h ? [] : h;
+                            _ = s.restrictSearchableAttributes,
+                            h = void 0 === _ ? [] : _;
                         return a.__awaiter(this, void 0, void 0, function() {
-                            var r, s, i, u, d, h, g, T, f = this;
+                            var r, s, i, u, E, _, g, T, f = this;
                             return a.__generator(this, function(I) {
                                 switch (I.label) {
                                     case 0:
@@ -2152,8 +2171,8 @@
                                                                     hitsPerPage: l,
                                                                     numericFilters: m || e.singleTypeNumericFilters,
                                                                     facets: "*",
-                                                                    facetFilters: E,
-                                                                    restrictSearchableAttributes: _
+                                                                    facetFilters: d,
+                                                                    restrictSearchableAttributes: h
                                                                 }
                                                             }, [4, this.query([n])];
                                                         case 1:
@@ -2191,13 +2210,13 @@
                                     case 4:
                                         return u.users = I.sent(), [3, 14];
                                     case 5:
-                                        return d = r, [4, s(p.channels)];
+                                        return E = r, [4, s(p.channels)];
                                     case 6:
-                                        return d.channels = I.sent(), [3, 14];
+                                        return E.channels = I.sent(), [3, 14];
                                     case 7:
-                                        return h = r, [4, s(p.videos)];
+                                        return _ = r, [4, s(p.videos)];
                                     case 8:
-                                        return h.videos = I.sent(), [3, 14];
+                                        return _.videos = I.sent(), [3, 14];
                                     case 9:
                                         return g = r, [4, s(p.streamTags)];
                                     case 10:
@@ -2332,7 +2351,7 @@
                     }, e
                 }();
 
-            function E() {
+            function d() {
                 return Math.floor(((new Date).getTime() - 6e5) / 1e3)
             }
 
@@ -2362,11 +2381,11 @@
                 u = n("uLRL"),
                 l = n("fvjX"),
                 p = n("V+GM"),
-                d = n("Svt6"),
-                E = n("NvVO"),
+                E = n("Svt6"),
+                d = n("NvVO"),
                 m = n("2xye"),
-                h = n("GnwI"),
-                _ = n("1mFg");
+                _ = n("GnwI"),
+                h = n("1mFg");
 
             function g(e) {
                 return !e.legacy && e.curseCompanyId && -1 !== e.curseCompanyId ? e.curseCompanyId.toString() : e.id
@@ -2405,9 +2424,9 @@
                     var t = Object(R.b)(Object(S.b)(e.campaign.startDate), "MM/DD/YYYY, hh:mm a"),
                         n = Object(R.b)(Object(S.b)(e.campaign.endDate), "MM/DD/YYYY, hh:mm a"),
                         a = "/console/drops/" + e.campaign.id;
-                    return r.createElement(O.Kb, null, r.createElement(O.Hb, null, r.createElement(O.U, {
+                    return r.createElement(O.Mb, null, r.createElement(O.Jb, null, r.createElement(O.U, {
                         linkTo: a
-                    }, e.campaign.name)), r.createElement(O.Hb, null, e.campaign.id), r.createElement(O.Hb, null, t), r.createElement(O.Hb, null, n), r.createElement(O.Hb, null, e.campaign.enabled.toString()))
+                    }, e.campaign.name)), r.createElement(O.Jb, null, e.campaign.id), r.createElement(O.Jb, null, t), r.createElement(O.Jb, null, n), r.createElement(O.Jb, null, e.campaign.enabled.toString()))
                 };
             ! function(e) {
                 e[e.Enabled = 0] = "Enabled", e[e.EndDate = 1] = "EndDate", e[e.Id = 2] = "Id", e[e.Name = 3] = "Name", e[e.StartDate = 4] = "StartDate"
@@ -2416,11 +2435,11 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            sortingName: O.zb.Default,
-                            sortingId: O.zb.Default,
-                            sortingStartDate: O.zb.Default,
-                            sortingEndDate: O.zb.Default,
-                            sortingEnabled: O.zb.Default
+                            sortingName: O.Bb.Default,
+                            sortingId: O.Bb.Default,
+                            sortingStartDate: O.Bb.Default,
+                            sortingEndDate: O.Bb.Default,
+                            sortingEnabled: O.Bb.Default
                         }, t.renderCampaignItems = function() {
                             return t.props.campaigns.map(function(e) {
                                 return r.createElement(A, {
@@ -2461,7 +2480,7 @@
                                 t.props.onSort(D.Enabled, t.state.sortingEnabled)
                             })
                         }, t.toggleSorting = function(e) {
-                            return e === O.zb.Default || e === O.zb.Ascending ? O.zb.Descending : O.zb.Ascending
+                            return e === O.Bb.Default || e === O.Bb.Ascending ? O.Bb.Descending : O.Bb.Ascending
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
@@ -2477,29 +2496,29 @@
                         }, r.createElement(O.z, {
                             onClick: Object(c.c)(c.a.CreateDropsProcessStart),
                             linkTo: "/console/drops/create",
-                            icon: O.rb.Plus
-                        }, Object(o.d)("Create Drops Campaign", "DevDropsCampaigns"))), r.createElement(O.Fb, null, r.createElement(O.Ib, null, r.createElement(O.Jb, {
+                            icon: O.tb.Plus
+                        }, Object(o.d)("Create Drops Campaign", "DevDropsCampaigns"))), r.createElement(O.Hb, null, r.createElement(O.Kb, null, r.createElement(O.Lb, {
                             label: Object(o.d)("Campaign Name", "DevDropsCampaigns"),
                             sorting: this.state.sortingName,
                             onClick: this.sortName
-                        }), r.createElement(O.Jb, {
+                        }), r.createElement(O.Lb, {
                             label: Object(o.d)("Campaign ID", "DevDropsCampaigns")
-                        }), r.createElement(O.Jb, {
+                        }), r.createElement(O.Lb, {
                             label: Object(o.d)("Start Date (UTC)", "DevDropsCampaigns"),
                             sorting: this.state.sortingStartDate,
                             onClick: this.sortStartDate
-                        }), r.createElement(O.Jb, {
+                        }), r.createElement(O.Lb, {
                             label: Object(o.d)("End Date (UTC)", "DevDropsCampaigns"),
                             sorting: this.state.sortingEndDate,
                             onClick: this.sortEndDate
-                        }), r.createElement(O.Jb, {
+                        }), r.createElement(O.Lb, {
                             label: Object(o.d)("Enabled", "DevDropsCampaigns"),
                             sorting: this.state.sortingEnabled,
                             onClick: this.sortEnabled
-                        })), r.createElement(O.Gb, null, e)))
+                        })), r.createElement(O.Ib, null, e)))
                     }, t
                 }(r.Component),
-                b = Object(l.compose)(Object(h.b)("DevDropsCampaignsComponent", {
+                b = Object(l.compose)(Object(_.b)("DevDropsCampaignsComponent", {
                     autoReportInteractive: !0
                 }))(C),
                 v = function(e) {
@@ -2515,7 +2534,7 @@
                                         case 0:
                                             return [4, Object(N.a)(T.a.GetCampaignsByCompany)];
                                         case 1:
-                                            return (e = a.sent()) ? (t = g(this.props.company), n = d.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(_.a)(n, {
+                                            return (e = a.sent()) ? (t = g(this.props.company), n = E.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(h.a)(n, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": e
                                                 }
@@ -2547,7 +2566,7 @@
                         }, t.onSort = function(e, n) {
                             switch (e) {
                                 case D.Name:
-                                    n === O.zb.Ascending ? t.setState(function(e) {
+                                    n === O.Bb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.name.localeCompare(t.name)
@@ -2562,7 +2581,7 @@
                                     });
                                     break;
                                 case D.Id:
-                                    n === O.zb.Ascending ? t.setState(function(e) {
+                                    n === O.Bb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.id.localeCompare(t.id)
@@ -2577,7 +2596,7 @@
                                     });
                                     break;
                                 case D.StartDate:
-                                    n === O.zb.Ascending ? t.setState(function(e) {
+                                    n === O.Bb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.startDate.getTime() - t.startDate.getTime()
@@ -2592,7 +2611,7 @@
                                     });
                                     break;
                                 case D.EndDate:
-                                    n === O.zb.Ascending ? t.setState(function(e) {
+                                    n === O.Bb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.endDate.getTime() - t.endDate.getTime()
@@ -2607,7 +2626,7 @@
                                     });
                                     break;
                                 case D.Enabled:
-                                    n === O.zb.Ascending ? t.setState(function(e) {
+                                    n === O.Bb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return Number(e.enabled) - Number(t.enabled)
@@ -2632,9 +2651,9 @@
                         this.getCampaigns()
                     }, t
                 }(r.Component),
-                L = Object(l.compose)(Object(h.b)("DevDropsCampaignsPage", {
+                L = Object(l.compose)(Object(_.b)("DevDropsCampaignsPage", {
                     autoReportInteractive: !0,
-                    destination: E.a.DevSiteDropsCampaigns
+                    destination: d.a.DevSiteDropsCampaigns
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsCampaigns
                 }), Object(u.a)())(v),
@@ -2706,15 +2725,15 @@
                         }
                     }
                 }();
-            var G = d.a + "/v5/rbac/current-games";
+            var G = E.a + "/v5/rbac/current-games";
 
-            function V() {
+            function B() {
                 return a.__awaiter(this, void 0, void 0, function() {
                     var e, t, n;
                     return a.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
-                                return e = [], [4, Object(_.a)(G)];
+                                return e = [], [4, Object(h.a)(G)];
                             case 1:
                                 return 200 !== (t = a.sent()).status ? [3, 3] : [4, t.json()];
                             case 2:
@@ -2736,7 +2755,7 @@
                     })
                 })
             }
-            var B = n("cr+I");
+            var V = n("cr+I");
 
             function H(e) {
                 return a.__awaiter(this, void 0, Promise, function() {
@@ -2746,12 +2765,12 @@
                             case 0:
                                 return t = e.activeOnly, n = e.companyId, r = e.prevCursor, s = e.nextCursor, i = e.limit, [4, Object(N.a)(T.a.GetItemsByCompany)];
                             case 1:
-                                return (o = a.sent()) ? (c = d.a + "/kraken/accounts/" + n + "/items", (u = B.stringify({
+                                return (o = a.sent()) ? (c = E.a + "/kraken/accounts/" + n + "/items", (u = V.stringify({
                                     active_only: t,
                                     after: s,
                                     before: r,
                                     limit: i
-                                })) && (c += "?" + u), [4, Object(_.a)(c, {
+                                })) && (c += "?" + u), [4, Object(h.a)(c, {
                                     headers: {
                                         "X-Twitch-VHSCF": o
                                     }
@@ -2787,16 +2806,16 @@
                 W = n("aCAx"),
                 Y = n("HEnu"),
                 X = n("cZKs"),
-                z = n("NLLf"),
-                K = (n("TofP"), function(e) {
+                K = n("NLLf"),
+                z = (n("TofP"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(O.Cb, {
+                        return r.createElement(O.Eb, {
                             className: "image-uploader-modal",
                             background: O.r.Base
-                        }, r.createElement(z.a, a.__assign({}, this.props)), r.createElement(X.a, {
+                        }, r.createElement(K.a, a.__assign({}, this.props)), r.createElement(X.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t
@@ -2805,7 +2824,7 @@
                     return Object(l.bindActionCreators)({
                         onClose: W.c
                     }, e)
-                })(K),
+                })(z),
                 Z = n("u5aL");
             n("ev0B");
             var J, Q = function(e) {
@@ -2845,7 +2864,7 @@
                                 }, t))
                             });
                         return r.createElement(O.Xa, {
-                            position: O.hb.Relative,
+                            position: O.jb.Relative,
                             className: "time-picker"
                         }, r.createElement(Z.a, {
                             onClickOut: this.onClickOut
@@ -2859,7 +2878,7 @@
                             noTail: !0,
                             show: this.state.isOpen,
                             "data-a-target": "time-selector-balloon"
-                        }, r.createElement(O.Cb, {
+                        }, r.createElement(O.Eb, {
                             color: O.O.Link,
                             fontSize: O.Ca.Size5,
                             className: "time-picker__dropdown"
@@ -2982,7 +3001,7 @@
                                 size: 80
                             }) : null
                         }, n.renderErrorMessage = function() {
-                            if (n.props.errorMessage) return r.createElement(O.Cb, {
+                            if (n.props.errorMessage) return r.createElement(O.Eb, {
                                 className: "dev-drops-campaign-form__error",
                                 color: O.O.Overlay,
                                 "data-test-selector": ae.Error,
@@ -3299,23 +3318,23 @@
                             top: 1
                         }
                     }, r.createElement(O.W, {
-                        type: O.Tb.H3
+                        type: O.Vb.H3
                     }, Object(o.d)("Items", "DevDropsCampaignForm"))), r.createElement("fieldset", null, r.createElement(O.Pa, {
                         padding: {
                             y: 1
                         }
                     }, r.createElement("legend", null, r.createElement(O.W, null, Object(o.d)("Select up to {MAX_DROPS_ITEMS_PER_CAMPAIGN} of your currently active items", {
                         MAX_DROPS_ITEMS_PER_CAMPAIGN: $.b
-                    }, "DevDropsCampaignForm")))), r.createElement(O.Zb, {
-                        childWidth: O.ac.ExtraSmall,
-                        gutterSize: O.bc.Small,
+                    }, "DevDropsCampaignForm")))), r.createElement(O.bc, {
+                        childWidth: O.cc.ExtraSmall,
+                        gutterSize: O.dc.Small,
                         placeholderItems: 20
                     }, this.props.availableItems.map(function(t, n) {
                         var a = t.translations[t.defaultLanguage],
                             s = e.state.itemIds.has(t.id);
                         return r.createElement(O.Xa, {
                             key: n,
-                            position: O.hb.Relative,
+                            position: O.jb.Relative,
                             className: "drops-item-selector-container",
                             margin: {
                                 bottom: 2
@@ -3331,16 +3350,16 @@
                             src: $.a + "/items/" + e.props.companyId + "/" + t.id + "-120x120.jpg",
                             type: O.Ma.Checkbox,
                             value: t.id
-                        })), s && r.createElement(O.Cb, {
+                        })), s && r.createElement(O.Eb, {
                             display: O.X.InlineFlex,
                             alignItems: O.f.Center,
                             justifyContent: O.Wa.Center,
                             background: O.r.Accent,
-                            position: O.hb.Absolute,
+                            position: O.jb.Absolute,
                             color: O.O.Overlay,
                             attachTop: !0
-                        }, r.createElement(O.qb, {
-                            asset: O.rb.Check
+                        }, r.createElement(O.sb, {
+                            asset: O.tb.Check
                         })), r.createElement(O.W, {
                             bold: s,
                             ellipsis: !0
@@ -3374,7 +3393,7 @@
                 })(ue),
                 pe = n("QKmf");
 
-            function de() {
+            function Ee() {
                 var e = this;
                 return Object(ee.a)(pe, {
                     props: function(t) {
@@ -3408,7 +3427,7 @@
                     }
                 })
             }
-            var Ee, me = function(e) {
+            var de, me = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3421,7 +3440,7 @@
                                 return a.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
-                                            return t.trys.push([0, 2, , 3]), [4, V()];
+                                            return t.trys.push([0, 2, , 3]), [4, B()];
                                         case 1:
                                             return e = t.sent(), this.setState({
                                                 games: e,
@@ -3470,7 +3489,7 @@
                                         case 0:
                                             return a.trys.push([0, 12, , 13]), t = g(this.props.company), n = f(e, t), [4, Object(N.a)(T.a.PostCampaign)];
                                         case 1:
-                                            return (r = a.sent()) ? (s = d.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(_.a)(s, {
+                                            return (r = a.sent()) ? (s = E.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(h.a)(s, {
                                                 method: "POST",
                                                 body: JSON.stringify(n),
                                                 headers: {
@@ -3540,7 +3559,7 @@
                                             case 1:
                                                 if (t = a.sent()) return n = {
                                                     campaignID: e,
-                                                    imageType: P.t.LINK_NOTIFICATION,
+                                                    imageType: P.v.LINK_NOTIFICATION,
                                                     serviceID: g(this.props.company),
                                                     token: t
                                                 }, [2, this.props.createUploadURLMutation(n)];
@@ -3573,7 +3592,7 @@
                             display: O.X.Flex,
                             justifyContent: O.Wa.Between
                         }, r.createElement(O.W, {
-                            type: O.Tb.H2
+                            type: O.Vb.H2
                         }, Object(o.d)("Drops Campaign", "DevDropsCreateCampaign")), r.createElement(O.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
@@ -3593,12 +3612,12 @@
                         })))) : r.createElement(O.Za, null)
                     }, t
                 }(r.Component),
-                he = Object(l.compose)(Object(h.b)("DevDropsCreateCampaignPage", {
-                    destination: E.a.DevSiteDropsCreateCampaign
+                _e = Object(l.compose)(Object(_.b)("DevDropsCreateCampaignPage", {
+                    destination: d.a.DevSiteDropsCreateCampaign
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsCreateCampaign
-                }), de(), Object(u.a)(), U.a)(me),
-                _e = function(e) {
+                }), Ee(), Object(u.a)(), U.a)(me),
+                he = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3622,22 +3641,22 @@
             n("WM9t");
             ! function(e) {
                 e.DefaultLocaleSelect = "dev-drops-item-form-language-field", e.Error = "dev-drops-item-form-error", e.FileButton = "dev-drops-item-form-file-button", e.SubmitButton = "dev-drops-item-form-submit-button"
-            }(Ee || (Ee = {}));
+            }(de || (de = {}));
             var ge = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderDropsItemImage = function() {
-                        return n.props.item ? r.createElement(_e, {
+                        return n.props.item ? r.createElement(he, {
                             id: n.props.item.ItemID,
                             companyId: n.props.companyId,
                             name: n.props.item.Translations[n.props.item.DefaultLanguage],
                             size: 120
                         }) : null
                     }, n.renderErrorMessage = function() {
-                        if (n.props.errorMessage) return r.createElement(O.Cb, {
+                        if (n.props.errorMessage) return r.createElement(O.Eb, {
                             className: "dev-drops-item-form__error",
                             color: O.O.Overlay,
-                            "data-test-selector": Ee.Error,
+                            "data-test-selector": de.Error,
                             margin: {
                                 top: 1
                             },
@@ -3767,7 +3786,7 @@
                         display: O.X.Flex,
                         alignItems: O.f.Center
                     }, r.createElement(O.z, {
-                        "data-test-selector": Ee.FileButton,
+                        "data-test-selector": de.FileButton,
                         onClick: this.onUploadButtonClick
                     }, Object(o.d)("Upload Image", "DevDropsItemForm")), this.state.image && r.createElement(O.Xa, {
                         padding: {
@@ -3795,7 +3814,7 @@
                         var n = o.a.locales.find(function(e) {
                             return e.locale === t
                         });
-                        if (n) return r.createElement(O.Cb, {
+                        if (n) return r.createElement(O.Eb, {
                             key: t,
                             padding: {
                                 bottom: 1
@@ -3822,7 +3841,7 @@
                         }, Object(o.d)("Remove", "DevDropsItemForm"))))))
                     }), r.createElement(O.Ja, null, r.createElement(O.P, {
                         cols: 4
-                    }, r.createElement(O.xb, {
+                    }, r.createElement(O.zb, {
                         refDelegate: this.setLocaleSelectorRef
                     }, o.a.locales.filter(function(t) {
                         return !e.state.translations[t.locale]
@@ -3856,10 +3875,10 @@
                     }, r.createElement(O.Ea, {
                         label: Object(o.d)("Default Locale for Item Name", "DevDropsItemForm"),
                         hint: Object(o.d)("The locale to use when no value is provided in the viewer's locale.", "DevDropsItemForm")
-                    }, r.createElement(O.xb, {
+                    }, r.createElement(O.zb, {
                         value: this.state.defaultLocale,
                         onChange: this.setDefaultLocale,
-                        "data-test-selector": Ee.DefaultLocaleSelect
+                        "data-test-selector": de.DefaultLocaleSelect
                     }, o.a.locales.map(function(e) {
                         return r.createElement("option", {
                             key: e.locale,
@@ -3878,7 +3897,7 @@
                         type: O.F.Hollow,
                         onClick: this.onClickCancel
                     }, Object(o.d)("Cancel", "DevDropsItemForm"))), r.createElement(O.z, {
-                        "data-test-selector": Ee.SubmitButton,
+                        "data-test-selector": de.SubmitButton,
                         disabled: !this.state.valid,
                         onClick: this.onSubmit,
                         state: t
@@ -3903,7 +3922,7 @@
                                         case 0:
                                             return a.trys.push([0, 13, , 14]), t = g(this.props.company), [4, Object(N.a)(T.a.CreateItem)];
                                         case 1:
-                                            return (n = a.sent()) ? (r = I(e, t, n), s = d.a + "/kraken/accounts/" + t + "/items", [4, Object(_.a)(s, {
+                                            return (n = a.sent()) ? (r = I(e, t, n), s = E.a + "/kraken/accounts/" + t + "/items", [4, Object(h.a)(s, {
                                                 method: "POST",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -3976,7 +3995,7 @@
                                                 return [4, Object(N.a)(T.a.PostItemImageUrl)];
                                             case 1:
                                                 if (t = a.sent()) return n = {
-                                                    imageType: P.t.ITEM,
+                                                    imageType: P.v.ITEM,
                                                     itemID: e,
                                                     serviceID: g(this.props.company),
                                                     token: t
@@ -3999,7 +4018,7 @@
                             display: O.X.Flex,
                             justifyContent: O.Wa.Between
                         }, r.createElement(O.W, {
-                            type: O.Tb.H2
+                            type: O.Vb.H2
                         }, Object(o.d)("Drops Item", "DevDropsCreateItem")), r.createElement(O.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
@@ -4017,12 +4036,12 @@
                         }))))
                     }, t
                 }(r.Component),
-                Ne = Object(l.compose)(Object(h.b)("DevDropsCreateItemPage", {
+                Ne = Object(l.compose)(Object(_.b)("DevDropsCreateItemPage", {
                     autoReportInteractive: !0,
-                    destination: E.a.DevSiteDropsCreateItem
+                    destination: d.a.DevSiteDropsCreateItem
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsCreateItem
-                }), de(), Object(u.a)(), U.a)(De),
+                }), Ee(), Object(u.a)(), U.a)(De),
                 Oe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -4039,7 +4058,7 @@
                                 return a.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
-                                            return t.trys.push([0, 2, , 3]), [4, V()];
+                                            return t.trys.push([0, 2, , 3]), [4, B()];
                                         case 1:
                                             return e = t.sent(), this.setState({
                                                 games: e,
@@ -4084,9 +4103,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 6, , 7]), e = d.a + "/kraken/campaigns/" + this.props.match.params.campaignId, [4, Object(N.a)(T.a.GetCampaignById)];
+                                            return a.trys.push([0, 6, , 7]), e = E.a + "/kraken/campaigns/" + this.props.match.params.campaignId, [4, Object(N.a)(T.a.GetCampaignById)];
                                         case 1:
-                                            return (t = a.sent()) ? [4, Object(_.a)(e, {
+                                            return (t = a.sent()) ? [4, Object(h.a)(e, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": t
                                                 }
@@ -4116,7 +4135,7 @@
                                         case 0:
                                             return a.trys.push([0, 10, , 11]), t = g(this.props.company), n = f(e, String(t)), [4, Object(N.a)(T.a.PutCampaign)];
                                         case 1:
-                                            return (r = a.sent()) ? (s = d.a + "/kraken/accounts/" + t + "/campaigns/" + e.id, [4, Object(_.a)(s, {
+                                            return (r = a.sent()) ? (s = E.a + "/kraken/accounts/" + t + "/campaigns/" + e.id, [4, Object(h.a)(s, {
                                                 method: "PUT",
                                                 body: JSON.stringify(n),
                                                 headers: {
@@ -4169,7 +4188,7 @@
                                         case 1:
                                             if (e = a.sent()) return t = g(this.props.company), n = {
                                                 campaignID: this.state.campaign.id,
-                                                imageType: P.t.LINK_NOTIFICATION,
+                                                imageType: P.v.LINK_NOTIFICATION,
                                                 serviceID: t,
                                                 token: e
                                             }, [2, this.props.createUploadURLMutation(n)];
@@ -4224,7 +4243,7 @@
                             display: O.X.Flex,
                             justifyContent: O.Wa.Between
                         }, r.createElement(O.W, {
-                            type: O.Tb.H2
+                            type: O.Vb.H2
                         }, Object(o.d)("Drops Campaign: {title}", {
                             title: this.state.campaign.item_name
                         }, "DevDropsEditCampaign")), r.createElement(O.z, {
@@ -4249,11 +4268,11 @@
                         })))) : r.createElement(O.Za, null)
                     }, t
                 }(r.Component),
-                Re = Object(l.compose)(Object(h.b)("DevDropsEditCampaignPage", {
-                    destination: E.a.DevSiteDropsEditCampaign
+                Re = Object(l.compose)(Object(_.b)("DevDropsEditCampaignPage", {
+                    destination: d.a.DevSiteDropsEditCampaign
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsEditCampaign
-                }), de(), Object(u.a)(), U.a)(Oe);
+                }), Ee(), Object(u.a)(), U.a)(Oe);
             ! function(e) {
                 e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
             }(Te || (Te = {})),
@@ -4271,9 +4290,9 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 6, , 7]), e = g(this.props.company), t = d.a + "/kraken/accounts/" + e + "/items/" + this.props.match.params.itemId, [4, Object(N.a)(T.a.GetItemByID)];
+                                            return a.trys.push([0, 6, , 7]), e = g(this.props.company), t = E.a + "/kraken/accounts/" + e + "/items/" + this.props.match.params.itemId, [4, Object(N.a)(T.a.GetItemByID)];
                                         case 1:
-                                            return (n = a.sent()) ? [4, Object(_.a)(t, {
+                                            return (n = a.sent()) ? [4, Object(h.a)(t, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": n
                                                 }
@@ -4305,7 +4324,7 @@
                                         case 0:
                                             return a.trys.push([0, 10, , 11]), t = g(this.props.company), [4, Object(N.a)(T.a.UpdateItem)];
                                         case 1:
-                                            return (n = a.sent()) ? (r = I(e, String(t), n), s = d.a + "/kraken/accounts/" + t + "/items/" + e.item_id, [4, Object(_.a)(s, {
+                                            return (n = a.sent()) ? (r = I(e, String(t), n), s = E.a + "/kraken/accounts/" + t + "/items/" + e.item_id, [4, Object(h.a)(s, {
                                                 method: "PUT",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -4415,7 +4434,7 @@
                             display: O.X.Flex,
                             justifyContent: O.Wa.Between
                         }, r.createElement(O.W, {
-                            type: O.Tb.H2
+                            type: O.Vb.H2
                         }, Object(o.d)("Drops Item: {name}", {
                             name: this.state.item.Translations[this.state.item.DefaultLanguage]
                         }, "DevDropsEditItem")), r.createElement(O.z, {
@@ -4438,18 +4457,18 @@
                         })))) : r.createElement(O.Za, null)
                     }, t
                 }(r.Component),
-                Ce = Object(l.compose)(Object(h.b)("DevDropsEditItemPage", {
-                    destination: E.a.DevSiteDropsEditItem
+                Ce = Object(l.compose)(Object(_.b)("DevDropsEditItemPage", {
+                    destination: d.a.DevSiteDropsEditItem
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsEditItems
-                }), de(), Object(u.a)(), U.a)(Ae),
+                }), Ee(), Object(u.a)(), U.a)(Ae),
                 be = function(e) {
                     var t = Object(R.b)(Object(S.b)(e.item.createdAt), "MM/DD/YYYY, hh:mm a"),
                         n = Object(R.b)(Object(S.b)(e.item.updatedAt), "MM/DD/YYYY, hh:mm a"),
                         a = "/console/drops/items/" + e.item.id;
-                    return r.createElement(O.Kb, null, r.createElement(O.Hb, null, r.createElement(O.U, {
+                    return r.createElement(O.Mb, null, r.createElement(O.Jb, null, r.createElement(O.U, {
                         linkTo: a
-                    }, e.item.translations[e.item.defaultLanguage])), r.createElement(O.Hb, null, e.item.id), r.createElement(O.Hb, null, t), r.createElement(O.Hb, null, n), r.createElement(O.Hb, null, e.item.active.toString()))
+                    }, e.item.translations[e.item.defaultLanguage])), r.createElement(O.Jb, null, e.item.id), r.createElement(O.Jb, null, t), r.createElement(O.Jb, null, n), r.createElement(O.Jb, null, e.item.active.toString()))
                 };
             ! function(e) {
                 e[e.Enabled = 0] = "Enabled", e[e.CreationDate = 1] = "CreationDate", e[e.UpdatedDate = 2] = "UpdatedDate", e[e.Name = 3] = "Name"
@@ -4516,12 +4535,12 @@
                                 n.props.onSort(Se.UpdatedDate, n.state.sortingUpdatedDate)
                             })
                         }, n.toggleSorting = function(e) {
-                            return e === O.zb.Default || e === O.zb.Ascending ? O.zb.Descending : O.zb.Ascending
+                            return e === O.Bb.Default || e === O.Bb.Ascending ? O.Bb.Descending : O.Bb.Ascending
                         }, n.state = {
-                            sortingName: O.zb.Default,
-                            sortingEnabled: O.zb.Default,
-                            sortingCreationDate: O.zb.Default,
-                            sortingUpdatedDate: O.zb.Default
+                            sortingName: O.Bb.Default,
+                            sortingEnabled: O.Bb.Default,
+                            sortingCreationDate: O.Bb.Default,
+                            sortingUpdatedDate: O.Bb.Default
                         }, n
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
@@ -4543,26 +4562,26 @@
                         }), r.createElement(O.z, {
                             onClick: Object(c.c)(c.a.CreateDropsItemProcessStart),
                             linkTo: "/console/drops/items/create",
-                            icon: O.rb.Plus
-                        }, Object(o.d)("Create Drops Item", "DevDropsItems"))), r.createElement(O.Fb, null, r.createElement(O.Ib, null, r.createElement(O.Jb, {
+                            icon: O.tb.Plus
+                        }, Object(o.d)("Create Drops Item", "DevDropsItems"))), r.createElement(O.Hb, null, r.createElement(O.Kb, null, r.createElement(O.Lb, {
                             label: Object(o.d)("Item Name", "DevDropsItems"),
                             sorting: this.state.sortingName,
                             onClick: this.sortName
-                        }), r.createElement(O.Jb, {
+                        }), r.createElement(O.Lb, {
                             label: Object(o.d)("Item ID", "DevDropsItems")
-                        }), r.createElement(O.Jb, {
+                        }), r.createElement(O.Lb, {
                             label: Object(o.d)("Creation Date (UTC)", "DevDropsItems"),
                             sorting: this.state.sortingCreationDate,
                             onClick: this.sortCreationDate
-                        }), r.createElement(O.Jb, {
+                        }), r.createElement(O.Lb, {
                             label: Object(o.d)("Last Updated Date (UTC)", "DevDropsItems"),
                             sorting: this.state.sortingUpdatedDate,
                             onClick: this.sortUpdatedDate
-                        }), r.createElement(O.Jb, {
+                        }), r.createElement(O.Lb, {
                             label: Object(o.d)("Enabled", "DevDropsItems"),
                             sorting: this.state.sortingEnabled,
                             onClick: this.sortEnabled
-                        })), r.createElement(O.Gb, null, e)))
+                        })), r.createElement(O.Ib, null, e)))
                     }, t
                 }(r.Component),
                 Ue = function(e) {
@@ -4609,28 +4628,28 @@
                             var a = t.state.pageCursors[t.state.currentPage].items;
                             switch (e) {
                                 case Se.Name:
-                                    a = n === O.zb.Ascending ? a.sort(function(e, t) {
+                                    a = n === O.Bb.Ascending ? a.sort(function(e, t) {
                                         return e.translations[e.defaultLanguage].localeCompare(t.translations[t.defaultLanguage])
                                     }) : a.sort(function(e, t) {
                                         return t.translations[t.defaultLanguage].localeCompare(e.translations[e.defaultLanguage])
                                     });
                                     break;
                                 case Se.Enabled:
-                                    a = n === O.zb.Ascending ? a.sort(function(e, t) {
+                                    a = n === O.Bb.Ascending ? a.sort(function(e, t) {
                                         return Number(e.active) - Number(t.active)
                                     }) : a.sort(function(e, t) {
                                         return Number(t.active) - Number(e.active)
                                     });
                                     break;
                                 case Se.CreationDate:
-                                    a = n === O.zb.Ascending ? a.sort(function(e, t) {
+                                    a = n === O.Bb.Ascending ? a.sort(function(e, t) {
                                         return e.createdAt.getTime() - t.createdAt.getTime()
                                     }) : a.sort(function(e, t) {
                                         return t.createdAt.getTime() - e.createdAt.getTime()
                                     });
                                     break;
                                 case Se.UpdatedDate:
-                                    a = n === O.zb.Ascending ? a.sort(function(e, t) {
+                                    a = n === O.Bb.Ascending ? a.sort(function(e, t) {
                                         return e.updatedAt.getTime() - t.updatedAt.getTime()
                                     }) : a.sort(function(e, t) {
                                         return t.updatedAt.getTime() - e.updatedAt.getTime()
@@ -4666,8 +4685,8 @@
                         })
                     }, t
                 }(r.Component),
-                Pe = Object(l.compose)(Object(h.b)("DevDropsItemsPage", {
-                    destination: E.a.DevSiteDropsItems
+                Pe = Object(l.compose)(Object(_.b)("DevDropsItemsPage", {
+                    destination: d.a.DevSiteDropsItems
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsItems
                 }), Object(u.a)())(Ue),
@@ -4753,7 +4772,7 @@
                                 bottom: 2
                             }
                         }, r.createElement("header", null, r.createElement(O.Xa, null, r.createElement(O.W, {
-                            type: O.Tb.H2
+                            type: O.Vb.H2
                         }, Object(o.d)("VHS Configuration for Drops", "DevDropsSettings"))), r.createElement(O.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
@@ -4799,7 +4818,7 @@
                         }))), e)))
                     }, t
                 }(r.Component),
-                Me = Object(l.compose)(Object(h.b)("DevDropsSettingsComponent"))(Fe),
+                Me = Object(l.compose)(Object(_.b)("DevDropsSettingsComponent"))(Fe),
                 je = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -4821,13 +4840,13 @@
                                             if (!(t = a.sent())) return [3, 5];
                                             a.label = 2;
                                         case 2:
-                                            return a.trys.push([2, 4, , 5]), n = g(this.props.company), r = d.a + "/kraken/service/" + n, s = {
+                                            return a.trys.push([2, 4, , 5]), n = g(this.props.company), r = E.a + "/kraken/service/" + n, s = {
                                                 client_id: e.clientId,
                                                 enabled: e.sendReport,
                                                 endpoint: e.endpoint,
                                                 readable_name: this.props.company.companyName,
                                                 sign_request: !1
-                                            }, [4, Object(_.a)(r, {
+                                            }, [4, Object(h.a)(r, {
                                                 body: JSON.stringify(s),
                                                 method: "PUT",
                                                 headers: {
@@ -4857,7 +4876,7 @@
                                             if (!(e = a.sent())) return [3, 7];
                                             a.label = 2;
                                         case 2:
-                                            return a.trys.push([2, 6, , 7]), t = g(this.props.company), n = d.a + "/kraken/service/" + t, [4, Object(_.a)(n, {
+                                            return a.trys.push([2, 6, , 7]), t = g(this.props.company), n = E.a + "/kraken/service/" + t, [4, Object(h.a)(n, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": e
                                                 }
@@ -4895,9 +4914,9 @@
                         })
                     }, t
                 }(r.Component),
-                ke = Object(l.compose)(Object(h.b)("DevDropsSettingsPage", {
+                ke = Object(l.compose)(Object(_.b)("DevDropsSettingsPage", {
                     autoReportInteractive: !0,
-                    destination: E.a.DevSiteDropsSettings
+                    destination: d.a.DevSiteDropsSettings
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsSettings
                 }), Object(u.a)())(je),
@@ -4911,12 +4930,12 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(O.Eb, null, r.createElement(s.a, {
+                        }, r.createElement(O.Gb, null, r.createElement(s.a, {
                             path: "/console/drops",
                             exact: !0
                         }, function(e) {
                             var t = e.match;
-                            return r.createElement(O.Db, {
+                            return r.createElement(O.Fb, {
                                 linkTo: "/console/drops",
                                 active: Boolean(t)
                             }, Object(o.d)("Campaign Manager", "DevDropsDashboardRoot"))
@@ -4925,7 +4944,7 @@
                             exact: !0
                         }, function(t) {
                             var n = t.match;
-                            return r.createElement(O.Db, {
+                            return r.createElement(O.Fb, {
                                 linkTo: e,
                                 active: Boolean(n)
                             }, Object(o.d)("Item Manager", "DevDropsDashboardRoot"))
@@ -4934,7 +4953,7 @@
                             exact: !0
                         }, function(e) {
                             var t = e.match;
-                            return r.createElement(O.Db, {
+                            return r.createElement(O.Fb, {
                                 onClick: Object(c.c)(c.a.ConfigureDropsSettings),
                                 linkTo: "/console/drops/settings",
                                 active: Boolean(t)
@@ -4962,7 +4981,7 @@
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops/create",
-                            component: he
+                            component: _e
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops/:campaignId",

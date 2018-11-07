@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [115], {
+    [116], {
         DXJk: function(e, n) {
             var t = {
                 kind: "Document",
@@ -174,8 +174,8 @@
         },
         Jhye: function(e, n, t) {
             "use strict";
-            var i = t("mrSG"),
-                a = t("q1tI"),
+            var a = t("mrSG"),
+                i = t("q1tI"),
                 l = t("/7QA"),
                 r = t("X7Ac"),
                 o = t("eJ65");
@@ -214,59 +214,59 @@
                             })
                         }, n
                     }
-                    return i.__extends(n, e), n.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         var e = function(e) {
                                 return "https://www.twitch.tv/events/" + e
                             }(this.props.id),
                             n = this.props.children;
-                        return this.props.children || (n = a.createElement(s.z, {
+                        return this.props.children || (n = i.createElement(s.z, {
                             dropdown: !0,
                             type: s.F.Hollow
-                        }, Object(l.d)("Share", "ShareEvent"))), a.createElement(o.a, null, n, a.createElement(s.u, {
+                        }, Object(l.d)("Share", "ShareEvent"))), i.createElement(o.a, null, n, i.createElement(s.u, {
                             direction: this.props.balloonDirection
-                        }, a.createElement(s.Xa, {
+                        }, i.createElement(s.Xa, {
                             padding: 1
-                        }, a.createElement(s.Xa, {
+                        }, i.createElement(s.Xa, {
                             display: s.X.Flex,
                             flexDirection: s.Aa.Row,
                             flexWrap: s.Ba.NoWrap,
                             justifyContent: s.Wa.Center
-                        }, a.createElement(r.a, {
+                        }, i.createElement(r.a, {
                             type: r.b.Twitter,
                             text: this.props.title,
                             url: e,
                             onShareClick: this.onShareClicked
-                        }), a.createElement(r.a, {
+                        }), i.createElement(r.a, {
                             type: r.b.Facebook,
                             text: this.props.title,
                             url: e,
                             onShareClick: this.onShareClicked
-                        }), a.createElement(r.a, {
+                        }), i.createElement(r.a, {
                             type: r.b.Reddit,
                             text: this.props.title,
                             url: e,
                             onShareClick: this.onShareClicked
-                        }), a.createElement(r.a, {
+                        }), i.createElement(r.a, {
                             type: r.b.VKontakte,
                             text: this.props.title,
                             url: e,
                             onShareClick: this.onShareClicked
-                        }), a.createElement(r.a, {
+                        }), i.createElement(r.a, {
                             type: r.b.Copy,
                             text: this.props.title,
                             url: e,
                             onShareClick: this.onShareClicked
                         })))))
                     }, n
-                }(a.Component);
+                }(i.Component);
             t.d(n, "a", function() {
                 return c
             })
         },
         LfZz: function(e, n, t) {
             "use strict";
-            var i = t("mrSG"),
-                a = t("/MKj"),
+            var a = t("mrSG"),
+                i = t("/MKj"),
                 l = t("fvjX"),
                 r = t("1/iK"),
                 o = t("aCAx"),
@@ -276,7 +276,7 @@
                 u = t("q1tI"),
                 m = t("/7QA"),
                 v = t("eJ65"),
-                p = t("4qQ0"),
+                p = t("DMoW"),
                 k = t("Ue10"),
                 f = function(e) {
                     function n() {
@@ -287,7 +287,7 @@
                                 var e = "https://www.twitch.tv/events/" + n.props.eventID;
                                 n.props.showReportUserModal({
                                     reportContext: {
-                                        contentType: p.a.User,
+                                        contentType: p.N.USER_REPORT,
                                         targetUserID: n.props.targetUser.id
                                     },
                                     title: Object(m.d)("Report {channelName}", {
@@ -298,9 +298,9 @@
                             }
                         }, n
                     }
-                    return i.__extends(n, e), n.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         return u.createElement(v.a, null, u.createElement(k.z, {
-                            icon: k.rb.More,
+                            icon: k.tb.More,
                             type: k.F.Hollow
                         }), u.createElement(k.u, {
                             direction: this.props.balloonDirection,
@@ -320,7 +320,7 @@
                         }, Object(m.d)("Report", "EventMoreMenu"))))))
                     }, n
                 }(u.Component);
-            var g = Object(a.connect)(function(e) {
+            var g = Object(i.connect)(function(e) {
                 return {
                     isLoggedIn: Object(s.f)(e)
                 }
@@ -330,7 +330,7 @@
                         return Object(d.e)(r.a.ReportChannel)
                     },
                     showReportUserModal: function(e) {
-                        var n = i.__rest(e, []);
+                        var n = a.__rest(e, []);
                         return Object(o.d)(c.a, n)
                     }
                 }, e)
@@ -341,30 +341,30 @@
         },
         ePeS: function(e, n, t) {
             "use strict";
-            var i;
+            var a;
 
-            function a(e) {
+            function i(e) {
                 switch (e) {
                     case "past":
-                        return i.Past;
+                        return a.Past;
                     case "future":
                     default:
-                        return i.Future
+                        return a.Future
                 }
             }
             t.d(n, "a", function() {
-                    return i
-                }), t.d(n, "b", function() {
                     return a
+                }), t.d(n, "b", function() {
+                    return i
                 }),
                 function(e) {
                     e.Future = "future", e.Past = "past"
-                }(i || (i = {}))
+                }(a || (a = {}))
         },
         irYM: function(e, n, t) {
             "use strict";
-            var i = t("/MKj"),
-                a = t("fvjX"),
+            var a = t("/MKj"),
+                i = t("fvjX"),
                 l = t("1/iK"),
                 r = t("y5D0"),
                 o = t("kRBY"),
@@ -389,13 +389,13 @@
                             n = Object(c.d)("Reminder Set", "FollowEvent");
                         if (this.props.small) {
                             var t = e,
-                                i = p.rb.Heart;
-                            return this.props.areNotificationsEnabled && (t = n, i = p.rb.FollowCheck), s.createElement(p.Wb, {
+                                a = p.tb.Heart;
+                            return this.props.areNotificationsEnabled && (t = n, a = p.tb.FollowCheck), s.createElement(p.Yb, {
                                 label: t,
                                 direction: this.props.tooltipDirection
                             }, s.createElement(p.A, {
                                 size: p.B.Default,
-                                icon: i,
+                                icon: a,
                                 onClick: this.handleButton,
                                 ariaLabel: t
                             }))
@@ -403,7 +403,7 @@
                         return s.createElement(p.z, {
                             type: this.props.areNotificationsEnabled ? p.F.Success : p.F.Default,
                             onClick: this.handleButton,
-                            icon: this.props.areNotificationsEnabled ? p.rb.FollowCheck : p.rb.Heart,
+                            icon: this.props.areNotificationsEnabled ? p.tb.FollowCheck : p.tb.Heart,
                             ariaLabel: this.props.areNotificationsEnabled ? n : e
                         }, this.props.areNotificationsEnabled ? n : e)
                     }, n.prototype.toggleFollowing = function() {
@@ -479,17 +479,17 @@
                         this.props.unfollowEvent(t)
                     }, n
                 }(s.PureComponent),
-                h = Object(a.compose)(Object(u.a)(k, {
+                h = Object(i.compose)(Object(u.a)(k, {
                     name: "followEvent"
                 }), Object(u.a)(f, {
                     name: "unfollowEvent"
                 }))(g);
-            var b = Object(i.connect)(function(e) {
+            var b = Object(a.connect)(function(e) {
                 return {
                     isLoggedIn: Object(o.f)(e)
                 }
             }, function(e) {
-                return Object(a.bindActionCreators)({
+                return Object(i.bindActionCreators)({
                     login: function() {
                         return Object(r.e)(l.a.EventFollowButton)
                     }
@@ -502,8 +502,8 @@
         r93r: function(e, n, t) {
             "use strict";
             t.r(n);
-            var i = t("mrSG"),
-                a = t("cr+I"),
+            var a = t("mrSG"),
+                i = t("cr+I"),
                 l = t("q1tI"),
                 r = t("/7QA"),
                 o = t("8/mp"),
@@ -522,17 +522,17 @@
                 })(function(e) {
                     var n = new Date(e.event.startAt),
                         t = new Date(e.event.endAt),
-                        a = n > new Date,
+                        i = n > new Date,
                         o = Object(u.b)(e.event.id),
                         d = !(!e.event.self || !e.event.self.isFollowing),
                         s = e.upwardBalloons ? g.v.Top : g.v.Bottom,
-                        c = e.upwardBalloons ? g.Yb.Top : g.Yb.Bottom,
+                        c = e.upwardBalloons ? g.ac.Top : g.ac.Bottom,
                         h = e.event.game && e.event.game.displayName || "-",
                         b = e.channel && (e.channel.displayName || e.channel.login) || "-",
                         E = null,
                         y = null,
                         N = null;
-                    return e.channel && e.channel.id && e.channel.login && (a && (E = l.createElement(g.Xa, {
+                    return e.channel && e.channel.id && e.channel.login && (i && (E = l.createElement(g.Xa, {
                         margin: {
                             right: 1
                         }
@@ -562,7 +562,7 @@
                         },
                         eventID: e.event.id,
                         balloonDirection: s
-                    })), l.createElement(g.Cb, {
+                    })), l.createElement(g.Eb, {
                         margin: {
                             y: 1
                         },
@@ -592,12 +592,12 @@
                     }, l.createElement(g.U, {
                         to: o
                     }, l.createElement(g.W, {
-                        type: g.Tb.H4
+                        type: g.Vb.H4
                     }, e.event.title))), l.createElement(g.W, {
                         color: g.O.Alt2
                     }, function(e, n) {
                         var t = new Date,
-                            a = {
+                            i = {
                                 weekday: "long",
                                 month: "short",
                                 day: "numeric"
@@ -605,16 +605,16 @@
                             l = {
                                 timeZoneName: "short"
                             };
-                        t.getFullYear() !== e.getFullYear() && (a = i.__assign({}, a, {
+                        t.getFullYear() !== e.getFullYear() && (i = a.__assign({}, i, {
                             year: "numeric"
-                        })), e.getDate() !== n.getDate() && (l = i.__assign({}, l, {
+                        })), e.getDate() !== n.getDate() && (l = a.__assign({}, l, {
                             weekday: "long",
                             month: "short",
                             day: "numeric"
-                        }), t.getFullYear() !== n.getFullYear() && (l = i.__assign({}, l, {
+                        }), t.getFullYear() !== n.getFullYear() && (l = a.__assign({}, l, {
                             year: "numeric"
                         })));
-                        var o = Object(r.j)(e, a),
+                        var o = Object(r.j)(e, i),
                             d = Object(r.j)(n, l);
                         return Object(r.d)("{startTime} - {endTime}", {
                             startTime: o,
@@ -655,23 +655,23 @@
                         }
                     },
                     props: function(e) {
-                        return i.__assign({}, e, {
+                        return a.__assign({}, e, {
                             loadMore: function() {
                                 if (e.data.user && e.data.user.eventLeaves && e.data.user.eventLeaves.edges) {
                                     var n = e.data.user.eventLeaves.edges[Math.max(e.data.user.eventLeaves.edges.length - 1, 0)],
                                         t = n && n.cursor || "";
                                     return e.data.fetchMore({
                                         query: y,
-                                        variables: i.__assign({}, e.data.variables, {
+                                        variables: a.__assign({}, e.data.variables, {
                                             cursor: t
                                         }),
                                         updateQuery: function(e, n) {
                                             var t = n.fetchMoreResult,
-                                                a = e.user && e.user.eventLeaves && e.user.eventLeaves.edges || [];
-                                            return t.user && t.user.eventLeaves && t.user.eventLeaves.edges && (a = a.concat(t.user.eventLeaves.edges)), {
-                                                user: i.__assign({}, t.user, {
-                                                    eventLeaves: i.__assign({}, t.user && t.user.eventLeaves || {}, {
-                                                        edges: a
+                                                i = e.user && e.user.eventLeaves && e.user.eventLeaves.edges || [];
+                                            return t.user && t.user.eventLeaves && t.user.eventLeaves.edges && (i = i.concat(t.user.eventLeaves.edges)), {
+                                                user: a.__assign({}, t.user, {
+                                                    eventLeaves: a.__assign({}, t.user && t.user.eventLeaves || {}, {
+                                                        edges: i
                                                     })
                                                 })
                                             }
@@ -687,13 +687,13 @@
                 }))(function(e) {
                     var n = null,
                         t = null,
-                        i = null,
-                        a = !1;
-                    if (!e.data.loading && !e.data.error && e.data.user && e.data.user.eventLeaves) e.data.user.eventLeaves.edges && 0 !== e.data.user.eventLeaves.edges.length ? i = e.data.user.eventLeaves.edges.map(function(e, n, t) {
+                        a = null,
+                        i = !1;
+                    if (!e.data.loading && !e.data.error && e.data.user && e.data.user.eventLeaves) e.data.user.eventLeaves.edges && 0 !== e.data.user.eventLeaves.edges.length ? a = e.data.user.eventLeaves.edges.map(function(e, n, t) {
                         if (!e || !e.node) return null;
-                        var i = n === t.length - 1,
-                            a = null;
-                        switch (e.node.channel && e.node.channel.id && e.node.channel.login && (a = {
+                        var a = n === t.length - 1,
+                            i = null;
+                        switch (e.node.channel && e.node.channel.id && e.node.channel.login && (i = {
                             id: e.node.channel.id,
                             login: e.node.channel.login,
                             displayName: e.node.channel.displayName
@@ -702,13 +702,13 @@
                                 return l.createElement(h, {
                                     key: e.node.id,
                                     event: e.node,
-                                    channel: a,
-                                    upwardBalloons: i
+                                    channel: i,
+                                    upwardBalloons: a
                                 });
                             default:
                                 return null
                         }
-                    }) : n = Object(r.d)("Nothing here yet", "ChannelEventsSchedule"), a = e.data.user.eventLeaves.pageInfo.hasNextPage;
+                    }) : n = Object(r.d)("Nothing here yet", "ChannelEventsSchedule"), i = e.data.user.eventLeaves.pageInfo.hasNextPage;
                     else if (e.data.error) n = Object(r.d)("Error loading events", "ChannelEventsSchedule");
                     else if (e.data.loading && (!e.data.user || !e.data.user.eventLeaves)) return l.createElement(b.a, null);
                     return null !== n && (t = l.createElement(g.Xa, {
@@ -719,14 +719,14 @@
                         flexDirection: g.Aa.Row,
                         justifyContent: g.Wa.Center
                     }, l.createElement(g.W, {
-                        type: g.Tb.H4,
+                        type: g.Vb.H4,
                         color: g.O.Alt2,
                         italic: !0
-                    }, n))), l.createElement(g.Xa, null, i, t, e.data.loading && l.createElement(g.Za, {
+                    }, n))), l.createElement(g.Xa, null, a, t, e.data.loading && l.createElement(g.Za, {
                         fillContent: !0
                     }), l.createElement(o.a, {
                         loadMore: e.loadMore,
-                        enabled: a
+                        enabled: i
                     }))
                 }),
                 F = function(e) {
@@ -734,13 +734,13 @@
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.handleToggleChange = function(e) {
                             var t = Object(E.b)(e.currentTarget.value),
-                                i = a.parse(n.props.searchQuery);
-                            t !== E.a.Future ? i.filter = t : delete i.filter, n.props.onEventToggle(a.stringify(i))
+                                a = i.parse(n.props.searchQuery);
+                            t !== E.a.Future ? a.filter = t : delete a.filter, n.props.onEventToggle(i.stringify(a))
                         }, n
                     }
-                    return i.__extends(n, e), n.prototype.render = function() {
+                    return a.__extends(n, e), n.prototype.render = function() {
                         var e = this.props.channelLogin,
-                            n = a.parse(this.props.searchQuery),
+                            n = i.parse(this.props.searchQuery),
                             t = Object(E.b)(n.filter);
                         return l.createElement(g.Xa, {
                             display: g.X.Flex,
@@ -754,13 +754,13 @@
                                 y: 2,
                                 x: 3
                             }
-                        }, l.createElement(g.ub, null, l.createElement(g.vb, {
+                        }, l.createElement(g.wb, null, l.createElement(g.xb, {
                             name: "events-toggle",
                             label: Object(r.d)("Future Events", "ChannelEventsPage"),
                             defaultChecked: t === E.a.Future,
                             onChange: this.handleToggleChange,
                             value: E.a.Future
-                        }), l.createElement(g.vb, {
+                        }), l.createElement(g.xb, {
                             name: "events-toggle",
                             label: Object(r.d)("Past Events", "ChannelEventsPage"),
                             defaultChecked: t === E.a.Past,
@@ -783,17 +783,17 @@
         },
         rO6o: function(e, n, t) {
             "use strict";
-            var i = t("q1tI"),
-                a = t("/7QA"),
+            var a = t("q1tI"),
+                i = t("/7QA"),
                 l = t("Ue10"),
                 r = (t("z3xZ"), function(e) {
-                    var n = Object(a.c)(e.date, {
+                    var n = Object(i.c)(e.date, {
                             month: "short"
                         }),
-                        t = Object(a.c)(e.date, {
+                        t = Object(i.c)(e.date, {
                             day: "numeric"
                         });
-                    return i.createElement(l.Cb, {
+                    return a.createElement(l.Eb, {
                         background: l.r.Base,
                         elevation: 2,
                         display: l.X.Flex,
@@ -803,23 +803,23 @@
                             top: .5,
                             left: .5
                         },
-                        position: l.hb.Absolute,
+                        position: l.jb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         flexWrap: l.Ba.NoWrap
-                    }, i.createElement(l.Cb, {
+                    }, a.createElement(l.Eb, {
                         className: "event-calendar-date__month",
                         display: l.X.Flex,
                         justifyContent: l.Wa.Center,
                         background: l.r.AccentAlt2
-                    }, i.createElement(l.W, {
+                    }, a.createElement(l.W, {
                         fontSize: l.Ca.Size6,
-                        transform: l.Sb.Uppercase,
+                        transform: l.Ub.Uppercase,
                         color: l.O.Overlay
-                    }, n)), i.createElement(l.Xa, {
+                    }, n)), a.createElement(l.Xa, {
                         display: l.X.Flex,
                         justifyContent: l.Wa.Center
-                    }, i.createElement(l.W, {
+                    }, a.createElement(l.W, {
                         fontSize: l.Ca.Size3,
                         color: l.O.Base
                     }, t)))
@@ -831,15 +831,15 @@
         "ug+5": function(e, n, t) {
             "use strict";
             t.d(n, "a", function() {
-                return i
-            }), t.d(n, "b", function() {
                 return a
+            }), t.d(n, "b", function() {
+                return i
             }), t.d(n, "c", function() {
                 return o
             }), t.d(n, "d", function() {
                 return d
             });
-            var i, a, l = t("/7QA"),
+            var a, i, l = t("/7QA"),
                 r = t("2xye");
 
             function o(e) {
@@ -864,10 +864,10 @@
                 return l.p.tracking.track(r.SpadeEventType.EventFollowing, n)
             }! function(e) {
                 e.ChannelEvents = "channel_events", e.DashboardEvents = "dashboard_events", e.EventDetails = "event_details", e.EventManagment = "event_managment", e.EventSidebar = "event_sidebar"
-            }(i || (i = {})),
+            }(a || (a = {})),
             function(e) {
                 e.RemindMeOpen = "remind_me_open_modal", e.EmailReminderOn = "email_reminder_on", e.EmailReminderOff = "email_reminder_off"
-            }(a || (a = {}))
+            }(i || (i = {}))
         },
         wSZZ: function(e, n) {
             var t = {

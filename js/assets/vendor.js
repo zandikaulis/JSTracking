@@ -1947,7 +1947,7 @@
         "12bw": function(e, t, n) {
             "use strict";
             var r = n("NfvW").default;
-            n(74), (t = e.exports = r).default = t
+            n(75), (t = e.exports = r).default = t
         },
         "16Al": function(e, t, n) {
             "use strict";
@@ -4104,7 +4104,7 @@
         "7Inb": function(e, t, n) {
             "use strict";
             var r = n("W6Rk").default;
-            n(72), (t = e.exports = r).default = t
+            n(73), (t = e.exports = r).default = t
         },
         "7Ix3": function(e, t) {
             e.exports = function(e) {
@@ -8293,11 +8293,7 @@
                 v = (t.EVENT_PLAYER_CONTEXT_UPDATE = "playercontext", t.EVENT_CONTEXT_UPDATE = "contextupdate", function(e) {
                     function n(t) {
                         var n = e.call(this) || this;
-                        return n.currentControlHandlers = {
-                            onShouldFetchExtensions: function() {},
-                            onDestroyExtension: function() {},
-                            onActivationChanged: function() {}
-                        }, n.currentExtensionUnsubscribes = (0, p.dict)(), n.hasPurchaseCompletedSubscriptionList = (0, p.dict)(), n.hasBitsTransactionCompletedSubscriptionList = (0, p.dict)(), n.onPlayerContextUpdate = function() {
+                        return n.currentControlHandlers = [], n.broadcastSettingsUnsubscribe = null, n.currentChannelUnsubscribe = null, n.currentExtensionUnsubscribes = (0, p.dict)(), n.hasPurchaseCompletedSubscriptionList = (0, p.dict)(), n.hasBitsTransactionCompletedSubscriptionList = (0, p.dict)(), n.onPlayerContextUpdate = function() {
                             n.emit(s.ExtensionServiceEvents.ContextUpdate)
                         }, n.onTwilightContextUpdate = function(e) {
                             n.emit(s.ExtensionServiceEvents.ContextUpdate, e)
@@ -8307,22 +8303,22 @@
                                     if (e.maxDelayMS > 0) {
                                         var t = Math.random() * e.maxDelayMS;
                                         setTimeout(function() {
-                                            n.currentControlHandlers.onShouldFetchExtensions()
+                                            n.onShouldFetchExtensions()
                                         }, t)
-                                    } else n.currentControlHandlers.onShouldFetchExtensions();
+                                    } else n.onShouldFetchExtensions();
                                     break;
                                 case "anchor_changed":
                                     var r = e.activationConfig;
-                                    r && n.currentControlHandlers.onActivationChanged && n.currentControlHandlers.onActivationChanged(e.extensionId, r);
+                                    r && n.onActivationChanged(e.extensionId, r);
                                     break;
                                 case "deactivate":
                                 case "uninstall":
-                                    n.currentControlHandlers.onDestroyExtension(e.extensionId)
+                                    n.onDestroyExtension(e.extensionId)
                             }
                         }, n.onExtensionMassControlMessage = function(e) {
                             switch (e.status) {
                                 case "mass_deactivate":
-                                    n.currentControlHandlers.onDestroyExtension(e.extensionId)
+                                    n.onDestroyExtension(e.extensionId)
                             }
                         }, n.onBroadcastSettingsUpdateMessage = function(e) {
                             var t = e.channel_id,
@@ -8331,6 +8327,18 @@
                             n.currentChannelId && t === n.currentChannelId || !n.broadcastSettingsUnsubscribe ? r !== o && n.emit(s.ExtensionServiceEvents.ContextUpdate, {
                                 game: r
                             }) : n.broadcastSettingsUnsubscribe()
+                        }, n.onShouldFetchExtensions = function() {
+                            n.currentControlHandlers.forEach(function(e) {
+                                e.onShouldFetchExtensions()
+                            })
+                        }, n.onActivationChanged = function(e, t) {
+                            n.currentControlHandlers.forEach(function(n) {
+                                n.onActivationChanged && n.onActivationChanged(e, t)
+                            })
+                        }, n.onDestroyExtension = function(e) {
+                            n.currentControlHandlers.forEach(function(t) {
+                                t.onDestroyExtension(e)
+                            })
                         }, n.pubsub = t || new u.Pubsub, n
                     }
                     return r.__extends(n, e), n.prototype.getInstalledExtensions = function(e) {
@@ -8355,23 +8363,25 @@
                             authToken: e.authToken
                         })
                     }, n.prototype.subscribeToExtensionControl = function(e, t) {
-                        this.currentChannelId && e !== this.currentChannelId && this.unsubscribeFromExtensionControl(this.currentChannelId), this.currentChannelId = e, this.currentControlHandlers = t, this.currentChannelUnsubscribe = this.pubsub.subscribe({
-                            topic: "extension-control." + e,
+                        var n = String(e);
+                        this.currentChannelId && n !== this.currentChannelId && this.unsubscribeFromExtensionControl(this.currentChannelId), this.currentChannelId = n, this.currentControlHandlers.push(t), this.currentChannelUnsubscribe || (this.currentChannelUnsubscribe = this.pubsub.subscribe({
+                            topic: "extension-control." + n,
                             success: this.onSubscribeSuccess,
                             failure: this.onSubscribeFailure,
                             message: this.onExtensionControlMessage
-                        }), this.broadcastSettingsUnsubscribe = this.pubsub.subscribe({
-                            topic: "broadcast-settings-update." + e,
+                        })), this.broadcastSettingsUnsubscribe || (this.broadcastSettingsUnsubscribe = this.pubsub.subscribe({
+                            topic: "broadcast-settings-update." + n,
                             success: this.onSubscribeSuccess,
                             failure: this.onSubscribeFailure,
                             message: this.onBroadcastSettingsUpdateMessage
-                        })
+                        }))
                     }, n.prototype.unsubscribeFromExtensionControl = function(e) {
-                        if (this.currentChannelId && e === this.currentChannelId) {
-                            this.currentChannelUnsubscribe && this.currentChannelUnsubscribe(), this.broadcastSettingsUnsubscribe && this.broadcastSettingsUnsubscribe();
-                            for (var t = 0, n = Object.keys(this.currentExtensionUnsubscribes); t < n.length; t++) {
-                                var r = n[t];
-                                this.currentExtensionUnsubscribes[r]()
+                        var t = String(e);
+                        if (this.currentChannelId && t === this.currentChannelId) {
+                            this.currentChannelUnsubscribe && (this.currentChannelUnsubscribe(), this.currentChannelUnsubscribe = null), this.broadcastSettingsUnsubscribe && (this.broadcastSettingsUnsubscribe(), this.broadcastSettingsUnsubscribe = null), this.currentControlHandlers.length > 0 && (this.currentControlHandlers = []);
+                            for (var n = 0, r = Object.keys(this.currentExtensionUnsubscribes); n < r.length; n++) {
+                                var o = r[n];
+                                this.currentExtensionUnsubscribes[o]()
                             }
                         }
                     }, n.prototype.registerPlayer = function(e) {
@@ -9373,13 +9383,13 @@
                     return e.prototype.destroy = function() {
                         this.coordinator.off(r.ExtensionAction.TwitchExtPubsubListen, this.onHelperListenMessage), this.coordinator.off(r.ExtensionAction.TwitchExtPubsubUnlisten, this.onHelperUnlistenMessage)
                     }, e.prototype.listen = function(e) {
-                        this.unsubscribeMap[e] = this.pubsub.subscribe({
+                        this.unsubscribeMap[e] || (this.unsubscribeMap[e] = this.pubsub.subscribe({
                             topic: this.convertToTopic(e),
                             success: this.onSubscribeSuccess,
                             failure: this.createSubscribeFailureCallbackForTarget(e),
                             message: this.createCallbackForTarget(e),
                             token: this.authData && this.authData.token
-                        }), this.lastSequenceInfoMap[e] = {}
+                        }), this.lastSequenceInfoMap[e] = {})
                     }, e.prototype.unlisten = function(e) {
                         var t = this.unsubscribeMap[e];
                         t && (t(), delete this.lastSequenceInfoMap[e])
@@ -34202,7 +34212,7 @@
         ty1X: function(e, t, n) {
             "use strict";
             var r = n("p8t8").default;
-            n(73), (t = e.exports = r).default = t
+            n(74), (t = e.exports = r).default = t
         },
         u3z5: function(e, t, n) {
             var r = n("yHON"),

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [86], {
+    [87], {
         "+w5N": function(e, t, r) {
             e.exports = r.p + "assets/bits_checkout_amazon_1x-642f385e965902094114.png"
         },
@@ -1193,10 +1193,10 @@
                 h = r("yR8l"),
                 g = r("GnwI"),
                 O = r("V+GM"),
-                j = r("NvVO"),
-                C = r("2xye"),
-                E = r("+w5N"),
-                S = r.n(E),
+                E = r("NvVO"),
+                j = r("2xye"),
+                S = r("+w5N"),
+                C = r.n(S),
                 v = r("Esfa"),
                 k = r.n(v),
                 P = r("rZLd"),
@@ -1206,8 +1206,8 @@
                 I = r("5e4V"),
                 w = r("FKsR"),
                 N = r.n(w),
-                T = r("zLG5"),
-                R = r.n(T),
+                R = r("zLG5"),
+                T = r.n(R),
                 L = r("cVJH"),
                 M = r.n(L),
                 U = r("winl"),
@@ -1216,15 +1216,15 @@
                 G = r.n(D),
                 F = r("vx7K"),
                 W = r.n(F),
-                H = r("zeym"),
-                z = r.n(H),
-                V = r("Ue10"),
+                V = r("zeym"),
+                H = r.n(V),
+                z = r("Ue10"),
                 X = (r("4mbJ"), {
                     100: N.a,
                     500: W.a,
-                    1000: R.a,
+                    1000: T.a,
                     1500: x.a,
-                    5000: z.a,
+                    5000: H.a,
                     10000: M.a,
                     25000: G.a
                 });
@@ -1248,149 +1248,149 @@
                         r = Object(b.d)("{bitsAmount, number} Bits", {
                             bitsAmount: e.bitsAmount
                         }, "BitsCheckoutInfoCard"),
-                        n = e.taxInclusive ? d.createElement(d.Fragment, null, d.createElement(V.Cb, {
-                            display: V.X.Flex,
-                            alignItems: V.f.Stretch,
-                            flexWrap: V.Ba.NoWrap,
+                        n = e.taxInclusive ? d.createElement(d.Fragment, null, d.createElement(z.Eb, {
+                            display: z.X.Flex,
+                            alignItems: z.f.Stretch,
+                            flexWrap: z.Ba.NoWrap,
                             fullHeight: !0,
-                            justifyContent: V.Wa.Between,
+                            justifyContent: z.Wa.Between,
                             borderBottom: !0,
                             padding: 1
-                        }, d.createElement(V.W, {
-                            color: V.O.Alt2,
-                            type: V.Tb.Span
-                        }, r)), d.createElement(V.Cb, {
-                            display: V.X.Flex,
-                            alignItems: V.f.Stretch,
-                            flexWrap: V.Ba.NoWrap,
+                        }, d.createElement(z.W, {
+                            color: z.O.Alt2,
+                            type: z.Vb.Span
+                        }, r)), d.createElement(z.Eb, {
+                            display: z.X.Flex,
+                            alignItems: z.f.Stretch,
+                            flexWrap: z.Ba.NoWrap,
                             fullHeight: !0,
-                            justifyContent: V.Wa.Between,
+                            justifyContent: z.Wa.Between,
                             padding: 1
-                        }, d.createElement(V.W, {
-                            color: V.O.Alt2,
-                            type: V.Tb.Span
-                        }, Object(b.d)("Total with VAT", "BitsCheckoutInfoCard")), d.createElement(V.W, {
-                            color: V.O.Alt2,
-                            type: V.Tb.Span
+                        }, d.createElement(z.W, {
+                            color: z.O.Alt2,
+                            type: z.Vb.Span
+                        }, Object(b.d)("Total with VAT", "BitsCheckoutInfoCard")), d.createElement(z.W, {
+                            color: z.O.Alt2,
+                            type: z.Vb.Span
                         }, Object(b.f)(K(e.total, e.localizedCurrency), {
                             style: "currency",
                             currency: e.localizedCurrency
-                        })))) : d.createElement(d.Fragment, null, d.createElement(V.Cb, {
-                            display: V.X.Flex,
-                            alignItems: V.f.Stretch,
-                            flexWrap: V.Ba.NoWrap,
+                        })))) : d.createElement(d.Fragment, null, d.createElement(z.Eb, {
+                            display: z.X.Flex,
+                            alignItems: z.f.Stretch,
+                            flexWrap: z.Ba.NoWrap,
                             fullHeight: !0,
-                            justifyContent: V.Wa.Between,
+                            justifyContent: z.Wa.Between,
                             padding: 1
-                        }, d.createElement(V.W, {
-                            color: V.O.Alt2,
-                            type: V.Tb.Span
-                        }, r), d.createElement(V.W, {
-                            color: V.O.Alt2,
-                            type: V.Tb.Span
+                        }, d.createElement(z.W, {
+                            color: z.O.Alt2,
+                            type: z.Vb.Span
+                        }, r), d.createElement(z.W, {
+                            color: z.O.Alt2,
+                            type: z.Vb.Span
                         }, Object(b.f)(K(e.price, e.localizedCurrency), {
                             style: "currency",
                             currency: e.localizedCurrency
-                        }))), d.createElement(V.Cb, {
-                            display: V.X.Flex,
-                            alignItems: V.f.Stretch,
-                            flexWrap: V.Ba.NoWrap,
+                        }))), d.createElement(z.Eb, {
+                            display: z.X.Flex,
+                            alignItems: z.f.Stretch,
+                            flexWrap: z.Ba.NoWrap,
                             fullHeight: !0,
-                            justifyContent: V.Wa.Between,
+                            justifyContent: z.Wa.Between,
                             borderBottom: !0,
                             padding: 1
-                        }, d.createElement(V.W, {
-                            color: V.O.Alt2,
-                            type: V.Tb.Span
-                        }, Object(b.d)("Estimated Tax", "BitsCheckoutInfoCard")), d.createElement(V.W, {
-                            color: V.O.Alt2,
-                            type: V.Tb.Span
+                        }, d.createElement(z.W, {
+                            color: z.O.Alt2,
+                            type: z.Vb.Span
+                        }, Object(b.d)("Estimated Tax", "BitsCheckoutInfoCard")), d.createElement(z.W, {
+                            color: z.O.Alt2,
+                            type: z.Vb.Span
                         }, Object(b.f)(K(e.tax, e.localizedCurrency), {
                             style: "currency",
                             currency: e.localizedCurrency
-                        }))), d.createElement(V.Cb, {
-                            display: V.X.Flex,
-                            alignItems: V.f.Stretch,
-                            flexWrap: V.Ba.NoWrap,
+                        }))), d.createElement(z.Eb, {
+                            display: z.X.Flex,
+                            alignItems: z.f.Stretch,
+                            flexWrap: z.Ba.NoWrap,
                             fullHeight: !0,
-                            justifyContent: V.Wa.Between,
+                            justifyContent: z.Wa.Between,
                             padding: 1
-                        }, d.createElement(V.W, {
-                            color: V.O.Alt2,
-                            type: V.Tb.Span
-                        }, Object(b.d)("Total", "BitsCheckoutInfoCard")), d.createElement(V.W, {
-                            color: V.O.Alt2,
-                            type: V.Tb.Span
+                        }, d.createElement(z.W, {
+                            color: z.O.Alt2,
+                            type: z.Vb.Span
+                        }, Object(b.d)("Total", "BitsCheckoutInfoCard")), d.createElement(z.W, {
+                            color: z.O.Alt2,
+                            type: z.Vb.Span
                         }, Object(b.f)(K(e.total, e.localizedCurrency), {
                             style: "currency",
                             currency: e.localizedCurrency
                         }))));
-                    return d.createElement(V.Cb, {
+                    return d.createElement(z.Eb, {
                         className: "bits-checkout-info-card",
-                        background: V.r.Alt,
+                        background: z.r.Alt,
                         border: !0
-                    }, d.createElement(V.Cb, {
-                        display: V.X.Flex,
-                        justifyContent: V.Wa.Center,
+                    }, d.createElement(z.Eb, {
+                        display: z.X.Flex,
+                        justifyContent: z.Wa.Center,
                         padding: 2
-                    }, d.createElement(V.Cb, {
-                        display: V.X.Flex
-                    }, d.createElement(V.S, {
+                    }, d.createElement(z.Eb, {
+                        display: z.X.Flex
+                    }, d.createElement(z.S, {
                         src: t,
                         alt: r
-                    }))), d.createElement(V.Cb, {
+                    }))), d.createElement(z.Eb, {
                         padding: 1
                     }, n))
                 }),
                 Y = (r("tMHb"), function() {
-                    return d.createElement(V.Cb, {
+                    return d.createElement(z.Eb, {
                         className: "bits-checkout-info-card-placeholder",
-                        background: V.r.Alt,
+                        background: z.r.Alt,
                         border: !0
-                    }, d.createElement(V.Cb, {
-                        display: V.X.Flex,
-                        justifyContent: V.Wa.Center,
+                    }, d.createElement(z.Eb, {
+                        display: z.X.Flex,
+                        justifyContent: z.Wa.Center,
                         padding: 2,
                         borderBottom: !0
-                    }, d.createElement(V.Cb, {
-                        display: V.X.Flex
-                    }, d.createElement(V.gb, {
+                    }, d.createElement(z.Eb, {
+                        display: z.X.Flex
+                    }, d.createElement(z.ib, {
                         width: 150,
                         height: 150
-                    }))), d.createElement(V.Cb, {
+                    }))), d.createElement(z.Eb, {
                         padding: 1
-                    }, d.createElement(V.Cb, {
-                        display: V.X.Flex,
-                        alignItems: V.f.Stretch,
-                        flexWrap: V.Ba.NoWrap,
+                    }, d.createElement(z.Eb, {
+                        display: z.X.Flex,
+                        alignItems: z.f.Stretch,
+                        flexWrap: z.Ba.NoWrap,
                         fullHeight: !0,
-                        justifyContent: V.Wa.Between,
+                        justifyContent: z.Wa.Between,
                         padding: 1
-                    }, d.createElement(V.gb, {
+                    }, d.createElement(z.ib, {
                         lineCount: 1
-                    })), d.createElement(V.Cb, {
-                        display: V.X.Flex,
-                        alignItems: V.f.Stretch,
-                        flexWrap: V.Ba.NoWrap,
+                    })), d.createElement(z.Eb, {
+                        display: z.X.Flex,
+                        alignItems: z.f.Stretch,
+                        flexWrap: z.Ba.NoWrap,
                         fullHeight: !0,
-                        justifyContent: V.Wa.Between,
+                        justifyContent: z.Wa.Between,
                         borderBottom: !0,
                         padding: 1
-                    }, d.createElement(V.gb, {
+                    }, d.createElement(z.ib, {
                         lineCount: 1
-                    })), d.createElement(V.Cb, {
-                        display: V.X.Flex,
-                        alignItems: V.f.Stretch,
-                        flexWrap: V.Ba.NoWrap,
+                    })), d.createElement(z.Eb, {
+                        display: z.X.Flex,
+                        alignItems: z.f.Stretch,
+                        flexWrap: z.Ba.NoWrap,
                         fullHeight: !0,
-                        justifyContent: V.Wa.Between,
+                        justifyContent: z.Wa.Between,
                         padding: 1
-                    }, d.createElement(V.gb, {
+                    }, d.createElement(z.ib, {
                         lineCount: 1
                     }))))
                 }),
                 Z = function() {
-                    return d.createElement(V.U, {
+                    return d.createElement(z.U, {
                         to: "https://help.twitch.tv/customer/portal/emails/new"
                     }, Object(b.d)("Need help? Contact Purchase Support", "NeedHelpText"))
                 },
@@ -1529,42 +1529,42 @@
                             taxInclusive: t.state.taxInclusive
                         }) : void 0 : null
                     }, t.renderMainContent = function() {
-                        return d.createElement(d.Fragment, null, d.createElement(V.Cb, {
-                            background: V.r.Base,
+                        return d.createElement(d.Fragment, null, d.createElement(z.Eb, {
+                            background: z.r.Base,
                             padding: {
                                 y: 2,
                                 x: 3
                             }
-                        }, d.createElement(V.W, {
-                            type: V.Tb.H4
-                        }, Object(b.d)("Select Payment Service", "BitsCheckoutSelectPage"))), d.createElement(V.Cb, {
+                        }, d.createElement(z.W, {
+                            type: z.Vb.H4
+                        }, Object(b.d)("Select Payment Service", "BitsCheckoutSelectPage"))), d.createElement(z.Eb, {
                             borderTop: !0,
                             padding: 3
-                        }, d.createElement("fieldset", null, d.createElement(V.Cb, {
-                            display: V.X.InlineBlock,
+                        }, d.createElement("fieldset", null, d.createElement(z.Eb, {
+                            display: z.X.InlineBlock,
                             margin: {
                                 y: 1,
                                 right: 1
                             },
-                            background: V.r.Base
-                        }, d.createElement(V.La, {
+                            background: z.r.Base
+                        }, d.createElement(z.La, {
                             alt: Object(b.d)("Amazon", "BitsCheckoutSelectPage"),
                             label: $.Amazon,
-                            src: S.a,
+                            src: C.a,
                             srcSet: {
-                                "1x": S.a,
+                                "1x": C.a,
                                 "2x": k.a
                             },
-                            type: V.Ma.Radio,
+                            type: z.Ma.Radio,
                             onChange: t.setProviderWrapper($.Amazon),
                             checked: t.state.provider === $.Amazon
-                        })), d.createElement(V.Cb, {
-                            display: V.X.InlineBlock,
+                        })), d.createElement(z.Eb, {
+                            display: z.X.InlineBlock,
                             margin: {
                                 y: 1
                             },
-                            background: V.r.Base
-                        }, d.createElement(V.La, {
+                            background: z.r.Base
+                        }, d.createElement(z.La, {
                             alt: Object(b.d)("Paypal", "BitsCheckoutSelectPage"),
                             label: $.Amazon,
                             src: B.a,
@@ -1572,14 +1572,14 @@
                                 "1x": B.a,
                                 "2x": A.a
                             },
-                            type: V.Ma.Radio,
+                            type: z.Ma.Radio,
                             onChange: t.setProviderWrapper($.Paypal),
                             checked: t.state.provider === $.Paypal
-                        }))), d.createElement(V.Xa, {
+                        }))), d.createElement(z.Xa, {
                             margin: {
                                 y: 3
                             }
-                        }, t.renderContinueButton()), d.createElement(V.Xa, {
+                        }, t.renderContinueButton()), d.createElement(z.Xa, {
                             margin: {
                                 y: 1
                             }
@@ -1622,7 +1622,7 @@
                         if (r === $.Amazon) {
                             e = "https://twitch.amazon.com/checkout/summary" + ("?asin=" + n + "&br_id=" + (t.props.sessionUser && t.props.sessionUser.id) + "&lang=" + (Object(I.a)() || "en"))
                         } else r === $.Paypal && (e = "/bits-checkout/summary?asin=" + n);
-                        return d.createElement(V.z, {
+                        return d.createElement(z.z, {
                             linkTo: e
                         }, Object(b.d)("Continue", "BitsCheckoutSelectPage"))
                     }, t
@@ -1630,35 +1630,35 @@
                 return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.getBitsPrice()
                 }, t.prototype.render = function() {
-                    return d.createElement(V.Xa, {
+                    return d.createElement(z.Xa, {
                         padding: 2
-                    }, d.createElement(V.Xa, {
+                    }, d.createElement(z.Xa, {
                         margin: {
                             bottom: 1
                         }
-                    }, d.createElement(V.W, {
-                        type: V.Tb.H3
-                    }, Object(b.d)("Purchase Bits", "BitsCheckoutSelectPage"))), d.createElement(V.pb, {
+                    }, d.createElement(z.W, {
+                        type: z.Vb.H3
+                    }, Object(b.d)("Purchase Bits", "BitsCheckoutSelectPage"))), d.createElement(z.rb, {
                         centered: !0
-                    }, d.createElement(V.Ja, {
-                        gutterSize: V.Ka.Medium
-                    }, this.state.priceViewable && d.createElement(V.P, {
+                    }, d.createElement(z.Ja, {
+                        gutterSize: z.Ka.Medium
+                    }, this.state.priceViewable && d.createElement(z.P, {
                         cols: {
                             default: 12,
                             md: 3
                         }
-                    }, d.createElement(V.Xa, {
+                    }, d.createElement(z.Xa, {
                         margin: {
                             y: 1
                         }
-                    }, this.renderBitsDescription())), d.createElement(V.P, {
+                    }, this.renderBitsDescription())), d.createElement(z.P, {
                         cols: {
                             default: 12,
                             md: this.state.priceViewable ? 9 : 12
                         }
-                    }, d.createElement(V.Cb, {
+                    }, d.createElement(z.Eb, {
                         border: !0,
-                        background: V.r.Alt,
+                        background: z.r.Alt,
                         fullWidth: !0,
                         margin: {
                             y: 1
@@ -1668,9 +1668,9 @@
             }(d.Component);
             var re = Object(a.compose)(Object(g.b)("BitsCheckoutSelectPage", {
                     autoReportInteractive: !0,
-                    destination: j.a.BitsCheckoutSelect
+                    destination: E.a.BitsCheckoutSelect
                 }), Object(O.a)({
-                    location: C.PageviewLocation.BitsCheckoutSelect
+                    location: j.PageviewLocation.BitsCheckoutSelect
                 }), Object(n.connect)(function(e) {
                     return {
                         sessionUser: Object(i.e)(e)
@@ -1678,34 +1678,34 @@
                 }, null))(te),
                 ne = r("geRD"),
                 ae = function(e) {
-                    return d.createElement(V.Xa, {
-                        textAlign: V.Pb.Center,
+                    return d.createElement(z.Xa, {
+                        textAlign: z.Rb.Center,
                         padding: {
                             y: 5,
                             x: 1
                         }
-                    }, d.createElement(V.Pa, {
+                    }, d.createElement(z.Pa, {
                         margin: {
                             y: 2
                         }
-                    }, d.createElement(V.W, {
-                        type: V.Tb.H4,
+                    }, d.createElement(z.W, {
+                        type: z.Vb.H4,
                         bold: !0
-                    }, Object(b.d)("Oh nooooooes", "BitsPurchaseError"))), d.createElement(V.Pa, {
+                    }, Object(b.d)("Oh nooooooes", "BitsPurchaseError"))), d.createElement(z.Pa, {
                         margin: {
                             y: 2
                         }
-                    }, d.createElement(V.W, null, Object(b.d)("Looks like we encountered an error. Please try again.", "BitsPurchaseError"))), d.createElement(V.Pa, {
+                    }, d.createElement(z.W, null, Object(b.d)("Looks like we encountered an error. Please try again.", "BitsPurchaseError"))), d.createElement(z.Pa, {
                         margin: {
                             y: 2
                         }
-                    }, d.createElement(V.W, null, Object(b.d)("If you continue to have issues, try another payment method.", "BitsPurchaseError"))), d.createElement(V.Xa, {
+                    }, d.createElement(z.W, null, Object(b.d)("If you continue to have issues, try another payment method.", "BitsPurchaseError"))), d.createElement(z.Xa, {
                         margin: {
                             y: 2
                         }
-                    }, d.createElement(V.z, {
+                    }, d.createElement(z.z, {
                         onClick: e.onTryAgainClick
-                    }, Object(b.d)("Try Again", "BitsPurchaseError"))), d.createElement(V.Xa, {
+                    }, Object(b.d)("Try Again", "BitsPurchaseError"))), d.createElement(z.Xa, {
                         margin: {
                             y: 1
                         }
@@ -1718,45 +1718,45 @@
                 (window.opener || window.top !== window.self) && (parent.window.close(), window.close()), window.location.assign("https://www.twitch.tv")
             }
             var se, ue = function() {
-                    return d.createElement(V.z, {
-                        size: V.D.Large,
+                    return d.createElement(z.z, {
+                        size: z.D.Large,
                         onClick: ie
                     }, Object(b.d)("Back to Twitch", "BackToTwitchButton"))
                 },
                 de = function(e) {
-                    return d.createElement(V.Xa, {
+                    return d.createElement(z.Xa, {
                         fullWidth: !0
-                    }, d.createElement(V.Xa, {
+                    }, d.createElement(z.Xa, {
                         fullWidth: !0
-                    }, d.createElement(V.S, {
+                    }, d.createElement(z.S, {
                         alt: Object(b.d)("Bits Banner", "BitsPurchaseSuccess"),
                         src: oe.a
-                    })), d.createElement(V.Xa, {
+                    })), d.createElement(z.Xa, {
                         padding: {
                             y: 2,
                             x: 3
                         }
-                    }, d.createElement(V.Pa, {
+                    }, d.createElement(z.Pa, {
                         margin: {
                             bottom: 2
                         }
-                    }, d.createElement(V.W, {
-                        type: V.Tb.H4
-                    }, Object(b.d)("Purchase Successful!", "BitsPurchaseSuccess"))), d.createElement(V.Pa, {
+                    }, d.createElement(z.W, {
+                        type: z.Vb.H4
+                    }, Object(b.d)("Purchase Successful!", "BitsPurchaseSuccess"))), d.createElement(z.Pa, {
                         margin: {
                             y: 1
                         }
-                    }, d.createElement(V.W, null, Object(b.d)("Order: {orderID}", {
+                    }, d.createElement(z.W, null, Object(b.d)("Order: {orderID}", {
                         orderID: e.orderID
-                    }, "BitsPurchaseSuccess"))), d.createElement(V.Pa, {
+                    }, "BitsPurchaseSuccess"))), d.createElement(z.Pa, {
                         margin: {
                             y: 1
                         }
-                    }, d.createElement(V.W, null, Object(b.d)("Thank you for purchasing Bits! Your payment has been confirmed and your inventory will update momentarily.", "BitsPurchaseSuccess"))), d.createElement(V.Xa, {
+                    }, d.createElement(z.W, null, Object(b.d)("Thank you for purchasing Bits! Your payment has been confirmed and your inventory will update momentarily.", "BitsPurchaseSuccess"))), d.createElement(z.Xa, {
                         margin: {
                             y: 2
                         }
-                    }, d.createElement(ue, null)), d.createElement(V.Xa, {
+                    }, d.createElement(ue, null)), d.createElement(z.Xa, {
                         margin: {
                             y: 1
                         }
@@ -1775,26 +1775,26 @@
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
                         var e = "";
-                        return this.props.data.loading || (e = this.props.data.requestInfo.countryCode), d.createElement(V.Cb, {
-                            background: V.r.Base,
+                        return this.props.data.loading || (e = this.props.data.requestInfo.countryCode), d.createElement(z.Eb, {
+                            background: z.r.Base,
                             padding: {
                                 y: 2,
                                 x: 3
                             },
-                            display: V.X.Flex,
-                            justifyContent: V.Wa.Between,
+                            display: z.X.Flex,
+                            justifyContent: z.Wa.Between,
                             fullWidth: !0
-                        }, d.createElement(V.S, {
+                        }, d.createElement(z.S, {
                             alt: Object(b.d)("PayPal", "ChangePaymentService"),
                             src: me.a,
                             srcSet: {
                                 "1x": me.a,
                                 "2x": fe.a
                             }
-                        }), this.showChangePaymentLink(e) && d.createElement(V.Xa, {
-                            display: V.X.Flex,
-                            alignItems: V.f.Center
-                        }, d.createElement(V.U, {
+                        }), this.showChangePaymentLink(e) && d.createElement(z.Xa, {
+                            display: z.X.Flex,
+                            alignItems: z.f.Center
+                        }, d.createElement(z.U, {
                             to: "/bits-checkout/select?asin=" + this.props.productID
                         }, Object(b.d)("Change Payment Service", "ChangePaymentService"))))
                     }, t.prototype.showChangePaymentLink = function(e) {
@@ -1803,26 +1803,26 @@
                 }(d.PureComponent),
                 ge = Object(h.a)(ye)(he),
                 Oe = function(e) {
-                    return d.createElement(V.Xa, {
-                        display: V.X.Flex,
-                        justifyContent: V.Wa.Between,
+                    return d.createElement(z.Xa, {
+                        display: z.X.Flex,
+                        justifyContent: z.Wa.Between,
                         padding: {
                             x: .5
                         },
                         margin: {
                             bottom: 2
                         }
-                    }, d.createElement(V.W, {
-                        type: V.Tb.H5
+                    }, d.createElement(z.W, {
+                        type: z.Vb.H5
                     }, Object(b.d)("Hi, {name}", {
                         name: e.firstName
-                    }, "Greeting")), d.createElement(V.U, {
+                    }, "Greeting")), d.createElement(z.U, {
                         onClick: e.openPayPalLogin
                     }, Object(b.d)("Not you?", "Greeting")))
                 },
-                je = function(e) {
-                    return d.createElement(d.Fragment, null, d.createElement(V.Cb, {
-                        background: V.r.Base,
+                Ee = function(e) {
+                    return d.createElement(d.Fragment, null, d.createElement(z.Eb, {
+                        background: z.r.Base,
                         border: !0,
                         padding: {
                             x: 2
@@ -1830,53 +1830,53 @@
                         margin: {
                             bottom: 2
                         }
-                    }, d.createElement(V.Cb, {
+                    }, d.createElement(z.Eb, {
                         borderBottom: !0,
                         padding: {
                             y: 2
                         }
-                    }, d.createElement(V.W, {
-                        color: V.O.Alt2,
-                        transform: V.Sb.Uppercase,
-                        type: V.Tb.H5
-                    }, Object(b.d)("Payment Method", "PayNow"))), d.createElement(V.Xa, {
+                    }, d.createElement(z.W, {
+                        color: z.O.Alt2,
+                        transform: z.Ub.Uppercase,
+                        type: z.Vb.H5
+                    }, Object(b.d)("Payment Method", "PayNow"))), d.createElement(z.Xa, {
                         padding: {
                             y: 2
                         }
-                    }, d.createElement(V.U, {
+                    }, d.createElement(z.U, {
                         onClick: e.openPayPalLogin
-                    }, Object(b.d)("Visit PayPal to review, edit, or add payment methods", "PayNow")))), d.createElement(V.Ja, null, d.createElement(V.P, {
+                    }, Object(b.d)("Visit PayPal to review, edit, or add payment methods", "PayNow")))), d.createElement(z.Ja, null, d.createElement(z.P, {
                         cols: {
                             default: 6,
                             md: 3
                         }
-                    }, d.createElement(V.z, {
-                        state: e.purchasing ? V.E.Loading : V.E.Default,
+                    }, d.createElement(z.z, {
+                        state: e.purchasing ? z.E.Loading : z.E.Default,
                         disabled: e.purchasing,
                         fullWidth: !0,
-                        size: V.D.Large,
+                        size: z.D.Large,
                         onClick: e.purchaseBits
-                    }, Object(b.d)("Pay Now", "PayNow")))), d.createElement(V.Pa, {
+                    }, Object(b.d)("Pay Now", "PayNow")))), d.createElement(z.Pa, {
                         margin: {
                             top: 2
                         }
-                    }, d.createElement(V.W, null, Object(b.d)("By clicking Pay Now, you agree to the <x:use>Twitch Bits Acceptable Use Policy</x:use>, <x:tos>Terms of Sale</x:tos>, and <x:privacy>Privacy Policy</x:privacy> and that we may start to deliver this order. You cannot cancel your order once delivery has started.", {
+                    }, d.createElement(z.W, null, Object(b.d)("By clicking Pay Now, you agree to the <x:use>Twitch Bits Acceptable Use Policy</x:use>, <x:tos>Terms of Sale</x:tos>, and <x:privacy>Privacy Policy</x:privacy> and that we may start to deliver this order. You cannot cancel your order once delivery has started.", {
                         "x:use": function(e) {
-                            return d.createElement(V.U, {
+                            return d.createElement(z.U, {
                                 to: "https://twitch.tv/p/legal/bits-acceptable-use/"
                             }, e)
                         },
                         "x:tos": function(e) {
-                            return d.createElement(V.U, {
+                            return d.createElement(z.U, {
                                 to: "https://twitch.tv/p/legal/terms-of-sale/"
                             }, e)
                         },
                         "x:privacy": function(e) {
-                            return d.createElement(V.U, {
+                            return d.createElement(z.U, {
                                 to: "https://twitch.tv/p/legal/privacy-policy/"
                             }, e)
                         }
-                    }, "PayNow"))), d.createElement(V.Xa, {
+                    }, "PayNow"))), d.createElement(z.Xa, {
                         margin: {
                             top: 2
                         }
@@ -1886,24 +1886,24 @@
             ! function(e) {
                 e[e.Success = 0] = "Success", e[e.Error = 1] = "Error"
             }(se || (se = {}));
-            var Ce = function(e) {
-                    return d.createElement(V.Cb, {
+            var je = function(e) {
+                    return d.createElement(z.Eb, {
                         fullWidth: !0,
-                        color: V.O.Overlay,
+                        color: z.O.Overlay,
                         margin: {
                             bottom: 1
                         },
                         padding: {
                             y: 2
                         },
-                        textAlign: V.Pb.Center,
+                        textAlign: z.Rb.Center,
                         className: e.type === se.Success ? "purchase-feedback-banner__success" : "purchase-feedback-banner__error"
-                    }, d.createElement(V.W, {
-                        type: V.Tb.H4
+                    }, d.createElement(z.W, {
+                        type: z.Vb.H4
                     }, e.type === se.Success ? Object(b.d)("Purchase Successful!", "PurchaseFeedbackBanner") : Object(b.d)("Purchase Failed", "PurchaseFeedbackBanner")))
                 },
-                Ee = r("Jgup"),
-                Se = r("lr0V"),
+                Se = r("Jgup"),
+                Ce = r("lr0V"),
                 ve = /^\d{5}$/,
                 ke = /^[A-Z]\d[A-Z] \d[A-Z]\d$/,
                 Pe = function(e) {
@@ -1914,13 +1914,13 @@
                             postalCode: t.props.defaultPostalCode || "",
                             settingResidence: !1,
                             error: !1
-                        }, t.unsupportedCountries = new Set(["A1", "A2", "AP", "AQ", "CU", "EU", "IR", "KP", "MM", "O1", "SD", "SS", "SY", "TL"]), t.displayCountries = Ee.a.filter(function(e) {
+                        }, t.unsupportedCountries = new Set(["A1", "A2", "AP", "AQ", "CU", "EU", "IR", "KP", "MM", "O1", "SD", "SS", "SY", "TL"]), t.displayCountries = Se.a.filter(function(e) {
                             return !t.unsupportedCountries.has(e)
                         }), t.countrySelections = t.displayCountries.map(function(e) {
                             return d.createElement("option", {
                                 value: e,
                                 key: "countryCode-" + e
-                            }, Object(Ee.b)(e))
+                            }, Object(Se.b)(e))
                         }), t.handleCountryChange = function(e) {
                             var r = e.target.value;
                             t.setState({
@@ -1966,40 +1966,40 @@
                         }, t
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(V.Cb, {
+                        return d.createElement(z.Eb, {
                             borderTop: !0,
                             padding: {
                                 top: 2
                             }
-                        }, d.createElement(V.Xa, {
-                            display: V.X.InlineBlock,
+                        }, d.createElement(z.Xa, {
+                            display: z.X.InlineBlock,
                             margin: {
                                 y: 2,
                                 right: 2
                             }
-                        }, d.createElement(V.Ea, {
+                        }, d.createElement(z.Ea, {
                             label: Object(b.d)("Select Country of Residence", "SelectResidence"),
-                            orientation: V.Fa.Vertical
-                        }, d.createElement(V.xb, {
+                            orientation: z.Fa.Vertical
+                        }, d.createElement(z.zb, {
                             defaultValue: this.state.countryCode,
                             onChange: this.handleCountryChange
                         }, d.createElement("option", {
                             value: "",
                             disabled: !0
-                        }), this.countrySelections))), this.postalCodeRequired && d.createElement(V.Xa, {
-                            display: V.X.InlineBlock,
+                        }), this.countrySelections))), this.postalCodeRequired && d.createElement(z.Xa, {
+                            display: z.X.InlineBlock,
                             margin: {
                                 y: 2
                             }
-                        }, d.createElement(V.Ea, {
+                        }, d.createElement(z.Ea, {
                             label: Object(b.d)("Zip Code/Postal Code", "SelectResidence"),
-                            orientation: V.Fa.Vertical
-                        }, d.createElement(V.Ra, {
-                            type: V.Ta.Text,
+                            orientation: z.Fa.Vertical
+                        }, d.createElement(z.Ra, {
+                            type: z.Ta.Text,
                             value: this.state.postalCode,
                             onChange: this.handlePostalCodeChange,
                             maxLength: "US" === this.state.countryCode ? 5 : 7
-                        }))), d.createElement(V.Xa, {
+                        }))), d.createElement(z.Xa, {
                             margin: {
                                 top: 2,
                                 bottom: 5
@@ -2007,14 +2007,14 @@
                             padding: {
                                 bottom: 5
                             }
-                        }, this.state.error && d.createElement(V.Xa, {
+                        }, this.state.error && d.createElement(z.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, d.createElement(V.W, {
-                            color: V.O.Error
-                        }, Object(b.d)("There was an error processing your information. Please try again.", "SelectResidence"))), d.createElement(V.z, {
-                            state: this.state.settingResidence ? V.E.Loading : V.E.Default,
+                        }, d.createElement(z.W, {
+                            color: z.O.Error
+                        }, Object(b.d)("There was an error processing your information. Please try again.", "SelectResidence"))), d.createElement(z.z, {
+                            state: this.state.settingResidence ? z.E.Loading : z.E.Default,
                             disabled: !this.residenceValid || this.state.settingResidence,
                             onClick: this.setUserResidence
                         }, Object(b.d)("Proceed", "SelectResidence"))), d.createElement(Z, null))
@@ -2034,24 +2034,24 @@
                 }(d.Component),
                 Be = Object(l.compose)(Object(g.b)("SelectResidence", {
                     autoReportInteractive: !0
-                }), Object(h.a)(Se, {
+                }), Object(h.a)(Ce, {
                     name: "setUserResidence"
                 }))(Pe),
                 _e = function() {
-                    return d.createElement(V.Xa, {
+                    return d.createElement(z.Xa, {
                         padding: 3,
-                        textAlign: V.Pb.Center
-                    }, d.createElement(V.Pa, {
+                        textAlign: z.Rb.Center
+                    }, d.createElement(z.Pa, {
                         margin: {
                             y: 2
                         }
-                    }, d.createElement(V.W, {
-                        type: V.Tb.H4
-                    }, Object(b.d)("Sorry, PayPal is not supported in your region, but we're working on rolling it out to more countries soon. Stay tuned!", "UnsupportedCountryError"))), d.createElement(V.Xa, {
+                    }, d.createElement(z.W, {
+                        type: z.Vb.H4
+                    }, Object(b.d)("Sorry, PayPal is not supported in your region, but we're working on rolling it out to more countries soon. Stay tuned!", "UnsupportedCountryError"))), d.createElement(z.Xa, {
                         margin: {
                             y: 3
                         }
-                    }, d.createElement(ue, null)), d.createElement(V.Xa, {
+                    }, d.createElement(ue, null)), d.createElement(z.Xa, {
                         margin: {
                             y: 1
                         }
@@ -2082,16 +2082,16 @@
                             cancelURL: window.location.origin + "/bits-checkout/select?asin=" + t.props.productID,
                             returnURL: window.location.origin + "/bits-checkout/summary?asin=" + t.props.productID
                         }, t.renderHeader = function() {
-                            return t.state.purchaseSuccess ? d.createElement(Ce, {
+                            return t.state.purchaseSuccess ? d.createElement(je, {
                                 type: se.Success
-                            }) : t.state.purchaseError ? d.createElement(Ce, {
+                            }) : t.state.purchaseError ? d.createElement(je, {
                                 type: se.Error
-                            }) : d.createElement(V.Xa, {
+                            }) : d.createElement(z.Xa, {
                                 margin: {
                                     bottom: 1
                                 }
-                            }, d.createElement(V.W, {
-                                type: V.Tb.H3
+                            }, d.createElement(z.W, {
+                                type: z.Vb.H3
                             }, Object(b.d)("Purchase Bits", "BitsCheckoutSummaryPage")))
                         }, t.renderBitsDescription = function() {
                             return t.state.openingPayPalLogin || null === t.props.bitsAmount || null === t.state.localizedCurrency || null === t.state.price || null === t.state.tax || null === t.state.total || null === t.state.taxInclusive ? d.createElement(Y, null) : d.createElement(J, {
@@ -2106,14 +2106,14 @@
                             var e = t.props.data.currentUser;
                             return t.state.fetchingPrice || t.state.creatingBillingAgreement || t.state.openingPayPalLogin || t.props.data.loading ? d.createElement(d.Fragment, null, d.createElement(ge, {
                                 productID: t.props.productID
-                            }), d.createElement(V.Cb, {
+                            }), d.createElement(z.Eb, {
                                 borderTop: !0,
                                 padding: 3
-                            }, d.createElement(V.gb, {
+                            }, d.createElement(z.ib, {
                                 lineCount: 15
                             }))) : t.state.generalError || t.props.data.error ? d.createElement(d.Fragment, null, d.createElement(ge, {
                                 productID: t.props.productID
-                            }), d.createElement(V.Cb, {
+                            }), d.createElement(z.Eb, {
                                 borderTop: !0,
                                 padding: {
                                     y: 5
@@ -2124,13 +2124,13 @@
                                 orderID: t.state.orderID
                             }) : e && e.id && e.payPalBillingAgreement ? d.createElement(d.Fragment, null, d.createElement(ge, {
                                 productID: t.props.productID
-                            }), d.createElement(V.Cb, {
+                            }), d.createElement(z.Eb, {
                                 borderTop: !0,
                                 padding: 3
                             }, d.createElement(Oe, {
                                 firstName: e.payPalBillingAgreement.firstName,
                                 openPayPalLogin: t.openPayPalLogin
-                            }), d.createElement(je, {
+                            }), d.createElement(Ee, {
                                 purchasing: t.state.purchasing,
                                 purchaseBits: t.purchaseBits,
                                 openPayPalLogin: t.openPayPalLogin
@@ -2261,14 +2261,14 @@
                         this.props.data.loading || this.props.latencyTracking.reportInteractive(), this.token || this.state.openingPayPalLogin || this.props.data.loading || this.props.data.error || !this.props.data.currentUser || this.props.data.currentUser.payPalBillingAgreement || this.openPayPalLogin()
                     }, t.prototype.render = function() {
                         var e = this.props.data.currentUser;
-                        return e && e.id && e.payPalBillingAgreement && this.askForResidence ? d.createElement(V.Xa, {
+                        return e && e.id && e.payPalBillingAgreement && this.askForResidence ? d.createElement(z.Xa, {
                             padding: 2
-                        }, d.createElement(V.Cb, {
+                        }, d.createElement(z.Eb, {
                             border: !0,
-                            background: V.r.Alt
+                            background: z.r.Alt
                         }, d.createElement(ge, {
                             productID: this.props.productID
-                        }), d.createElement(V.Cb, {
+                        }), d.createElement(z.Eb, {
                             borderTop: !0,
                             padding: 3
                         }, d.createElement(Oe, {
@@ -2279,41 +2279,41 @@
                             defaultCountryCode: e.residence && e.residence.countryCode,
                             defaultPostalCode: e.residence && e.residence.postalCode,
                             onSetResidenceSuccess: this.onSetResidenceSuccess
-                        })))) : this.state.fetchingPrice || this.props.data.loading || !this.state.unsupportedCountry ? d.createElement(V.Xa, {
+                        })))) : this.state.fetchingPrice || this.props.data.loading || !this.state.unsupportedCountry ? d.createElement(z.Xa, {
                             padding: 2
-                        }, this.renderHeader(), d.createElement(V.pb, {
+                        }, this.renderHeader(), d.createElement(z.rb, {
                             centered: !0
-                        }, d.createElement(V.Ja, {
-                            gutterSize: V.Ka.Medium
-                        }, d.createElement(V.P, {
+                        }, d.createElement(z.Ja, {
+                            gutterSize: z.Ka.Medium
+                        }, d.createElement(z.P, {
                             cols: {
                                 default: 12,
                                 md: 3
                             }
-                        }, d.createElement(V.Xa, {
+                        }, d.createElement(z.Xa, {
                             margin: {
                                 y: 1
                             }
-                        }, this.renderBitsDescription())), d.createElement(V.P, {
+                        }, this.renderBitsDescription())), d.createElement(z.P, {
                             cols: {
                                 default: 12,
                                 md: 9
                             }
-                        }, d.createElement(V.Cb, {
+                        }, d.createElement(z.Eb, {
                             border: !0,
-                            background: V.r.Alt,
+                            background: z.r.Alt,
                             fullWidth: !0,
                             margin: {
                                 y: 1
                             }
-                        }, this.renderMainContent()))))) : d.createElement(V.Xa, {
+                        }, this.renderMainContent()))))) : d.createElement(z.Xa, {
                             padding: 2
-                        }, d.createElement(V.Cb, {
+                        }, d.createElement(z.Eb, {
                             border: !0,
-                            background: V.r.Alt
+                            background: z.r.Alt
                         }, d.createElement(ge, {
                             productID: this.props.productID
-                        }), d.createElement(V.Cb, {
+                        }), d.createElement(z.Eb, {
                             borderTop: !0
                         }, d.createElement(_e, null))))
                     }, Object.defineProperty(t.prototype, "askForResidence", {
@@ -2333,9 +2333,9 @@
                     }), t
                 }(d.Component);
             var we = Object(a.compose)(Object(g.b)("BitsCheckoutSummaryPage", {
-                destination: j.a.BitsCheckoutSummary
+                destination: E.a.BitsCheckoutSummary
             }), Object(O.a)({
-                location: C.PageviewLocation.BitsCheckoutSummary
+                location: j.PageviewLocation.BitsCheckoutSummary
             }), Object(h.a)(Ae, {
                 options: function(e) {
                     var t = u.parse(e.location.search).asin;
@@ -2359,32 +2359,32 @@
                         userDisplayName: e.session.user && e.session.user.displayName
                     }
                 }, null))(function(e) {
-                    return d.createElement(V.Cb, {
+                    return d.createElement(z.Eb, {
                         className: "bits-checkout-top-nav",
-                        display: V.X.Flex,
-                        justifyContent: V.Wa.Center,
+                        display: z.X.Flex,
+                        justifyContent: z.Wa.Center,
                         fullWidth: !0
-                    }, d.createElement(V.Cb, {
+                    }, d.createElement(z.Eb, {
                         className: "bits-checkout-top-nav__content",
-                        display: V.X.Flex,
-                        alignItems: V.f.Center,
-                        flexWrap: V.Ba.NoWrap,
-                        justifyContent: V.Wa.Between,
+                        display: z.X.Flex,
+                        alignItems: z.f.Center,
+                        flexWrap: z.Ba.NoWrap,
+                        justifyContent: z.Wa.Between,
                         fullWidth: !0,
                         fullHeight: !0,
                         padding: 2,
                         borderBottom: !0
-                    }, d.createElement(V.qb, {
-                        asset: V.rb.LogoTwitch,
-                        type: V.sb.Brand,
+                    }, d.createElement(z.sb, {
+                        asset: z.tb.LogoTwitch,
+                        type: z.ub.Brand,
                         width: 94,
                         height: 32
-                    }), d.createElement(V.W, {
-                        type: V.Tb.H5
+                    }), d.createElement(z.W, {
+                        type: z.Vb.H5
                     }, e.userDisplayName)))
                 }),
-                Te = r("Ko9/"),
-                Re = (r("Kl+D"), function(e) {
+                Re = r("Ko9/"),
+                Te = (r("Kl+D"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.productID = u.parse(t.props.location.search).asin, t.renderMainContent = function() {
@@ -2403,11 +2403,11 @@
                                 render: t.renderBitsCheckoutSummaryPage
                             })) : d.createElement(y.a, null) : (t.props.promptLogin(), d.createElement(y.a, {
                                 message: Object(b.d)("You must be logged in to view this page", "BitsCheckoutRoot")
-                            }, d.createElement(V.Xa, {
+                            }, d.createElement(z.Xa, {
                                 margin: {
                                     top: 1
                                 }
-                            }, d.createElement(V.z, {
+                            }, d.createElement(z.z, {
                                 onClick: t.props.promptLogin
                             }, Object(b.d)("Log In", "BitsCheckoutRoot")))))
                         }, t.renderBitsCheckoutSelectPage = function() {
@@ -2423,14 +2423,14 @@
                         }, t
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(V.Cb, {
-                            background: V.r.Base,
+                        return d.createElement(z.Eb, {
+                            background: z.r.Base,
                             fullWidth: !0,
                             fullHeight: !0,
-                            display: V.X.Flex,
-                            justifyContent: V.Wa.Center,
-                            overflow: V.cb.Auto
-                        }, d.createElement(V.Xa, {
+                            display: z.X.Flex,
+                            justifyContent: z.Wa.Center,
+                            overflow: z.cb.Auto
+                        }, d.createElement(z.Xa, {
                             className: "bits-checkout-root__routes-container",
                             fullHeight: !0,
                             fullWidth: !0
@@ -2462,7 +2462,7 @@
                 }(d.Component)),
                 Le = Object(l.compose)(Object(g.b)("BitsCheckoutRoot", {
                     autoReportInteractive: !0
-                }), Object(h.a)(Te))(Re);
+                }), Object(h.a)(Re))(Te);
             var Me = Object(n.connect)(function(e) {
                 return {
                     isLoggedIn: Object(i.f)(e)

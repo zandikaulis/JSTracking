@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [217], {
+    [223], {
         "V+GM": function(e, t, n) {
             "use strict";
             var r = n("mrSG"),
@@ -102,9 +102,9 @@
                     }, t.prototype.render = function() {
                         var e = h(new Date(this.props.app.created_at), "MM/DD/YYYY, hh:mm a"),
                             t = h(new Date(this.props.app.updated_at), "MM/DD/YYYY, hh:mm a");
-                        return a.createElement(_.Kb, {
+                        return a.createElement(_.Mb, {
                             key: this.props.app.id
-                        }, a.createElement(_.Hb, null, this.props.app.name), a.createElement(_.Hb, null, this.props.app.redirect_uri), a.createElement(_.Hb, null, e), a.createElement(_.Hb, null, t), a.createElement(_.Hb, null, a.createElement(_.Xa, {
+                        }, a.createElement(_.Jb, null, this.props.app.name), a.createElement(_.Jb, null, this.props.app.redirect_uri), a.createElement(_.Jb, null, e), a.createElement(_.Jb, null, t), a.createElement(_.Jb, null, a.createElement(_.Xa, {
                             display: _.X.Flex,
                             justifyContent: _.Wa.Center
                         }, a.createElement(_.Xa, {
@@ -140,19 +140,19 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this.renderAppRows();
-                        return a.createElement(_.Fb, {
+                        return a.createElement(_.Hb, {
                             alternateRows: !0
-                        }, a.createElement(_.Ib, null, a.createElement(_.Jb, {
+                        }, a.createElement(_.Kb, null, a.createElement(_.Lb, {
                             label: Object(o.d)("Name", "DevAppsList")
-                        }), a.createElement(_.Jb, {
+                        }), a.createElement(_.Lb, {
                             label: Object(o.d)("URL", "DevAppsList")
-                        }), a.createElement(_.Jb, {
+                        }), a.createElement(_.Lb, {
                             label: Object(o.d)("Date Created", "DevAppsList")
-                        }), a.createElement(_.Jb, {
+                        }), a.createElement(_.Lb, {
                             label: Object(o.d)("Last Updated", "DevAppsList")
-                        }), a.createElement(_.Jb, {
+                        }), a.createElement(_.Lb, {
                             label: ""
-                        })), a.createElement(_.Gb, null, e))
+                        })), a.createElement(_.Ib, null, e))
                     }, t = r.__decorate([Object(l.b)("DevAppsList", {
                         autoReportInteractive: !0
                     })], t)
@@ -177,9 +177,9 @@
                                 bottom: .5
                             }
                         }, a.createElement(_.W, {
-                            type: _.Tb.H3
+                            type: _.Vb.H3
                         }, Object(o.d)("Developer Applications", "DevApps"))), a.createElement(_.W, {
-                            type: _.Tb.P
+                            type: _.Vb.P
                         }, Object(o.d)("You have registered these apps to use the Twitch API", "DevApps"))), a.createElement(_.Xa, {
                             margin: {
                                 bottom: 1
@@ -187,7 +187,7 @@
                             justifyContent: _.Wa.End,
                             display: _.X.Flex
                         }, a.createElement(_.z, {
-                            icon: _.rb.Plus,
+                            icon: _.tb.Plus,
                             onClick: Object(d.c)(d.a.RegisterApp),
                             linkTo: "/console/apps/create"
                         }, Object(o.d)("Register Your Application", "DevApps"))))), a.createElement(_.Xa, null, a.createElement(v, {

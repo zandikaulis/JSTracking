@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [100], {
+    [101], {
         "+BzL": function(e, t, n) {
             "use strict";
             var r = "undefined" != typeof Uint8Array && "undefined" != typeof Uint16Array && "undefined" != typeof Uint32Array,
@@ -506,8 +506,8 @@
         "43KI": function(e, t, n) {
             (t = e.exports = n("rXFu")).Stream = t, t.Readable = t, t.Writable = n("3BRs"), t.Duplex = n("sZro"), t.Transform = n("J78i"), t.PassThrough = n("eA/Y")
         },
-        467: function(e, t) {},
-        468: function(e, t) {},
+        471: function(e, t) {},
+        472: function(e, t) {},
         "49sm": function(e, t) {
             var n = {}.toString;
             e.exports = Array.isArray || function(e) {
@@ -12042,7 +12042,7 @@
                         return d.createElement(g.Xa, {
                             padding: 2,
                             display: g.X.Flex,
-                            position: g.hb.Absolute,
+                            position: g.jb.Absolute,
                             attachBottom: !0
                         }, e)
                     }, t
@@ -12061,13 +12061,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Cb, {
+                        return d.createElement(g.Eb, {
                             className: "dev-sandbox-onboarding-channel-selection__container dev-sandbox-onboarding-channel-selection__gradient-border",
                             background: g.r.Base,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-channel-selection",
                             fullHeight: !0,
@@ -12075,7 +12075,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             padding: 1
                         }, d.createElement(g.W, {
@@ -12084,7 +12084,7 @@
                             color: g.O.Link
                         }, k())), d.createElement(g.Xa, {
                             padding: 1,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             display: g.X.Flex,
                             fullWidth: !0,
                             justifyContent: g.Wa.Center,
@@ -12095,7 +12095,7 @@
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({
-                            icon: g.rb.AngleLeft,
+                            icon: g.tb.AngleLeft,
                             onClick: this.props.onPre
                         }, y))), d.createElement(g.Xa, {
                             padding: {
@@ -12111,7 +12111,7 @@
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({
-                            icon: g.rb.AngleRight,
+                            icon: g.tb.AngleRight,
                             onClick: this.props.onNext
                         }, w)))), d.createElement(g.Xa, {
                             display: g.X.Flex
@@ -12159,13 +12159,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Cb, {
+                        return d.createElement(g.Eb, {
                             className: "dev-sandbox-onboarding-choose-sample__container dev-sandbox-onboarding-choose-sample__gradient-border",
                             background: g.r.Base,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-choose-sample",
                             fullHeight: !0,
@@ -12173,7 +12173,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             padding: 1
                         }, d.createElement(g.W, {
@@ -12182,7 +12182,7 @@
                             color: g.O.Link
                         }, S())), d.createElement(g.Xa, {
                             padding: 1,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             display: g.X.Flex
                         }, d.createElement(g.Xa, {
                             padding: {
@@ -12190,7 +12190,7 @@
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({}, _, {
-                            icon: g.rb.AngleLeft,
+                            icon: g.tb.AngleLeft,
                             onClick: this.props.onPre
                         }))), d.createElement(g.Xa, null, d.createElement(g.W, {
                             fontSize: g.Ca.Size5,
@@ -12201,7 +12201,7 @@
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({}, C, {
-                            icon: g.rb.AngleRight,
+                            icon: g.tb.AngleRight,
                             onClick: this.props.onNext
                         })))), d.createElement(g.Xa, {
                             display: g.X.Flex
@@ -12232,13 +12232,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Cb, {
+                        return d.createElement(g.Eb, {
                             className: "dev-sandbox-onboarding-choose-type__container dev-sandbox-onboarding-choose-type__gradient-border",
                             background: g.r.Base,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-choose-type",
                             fullHeight: !0,
@@ -12246,7 +12246,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             padding: 1
                         }, d.createElement(g.W, {
@@ -12255,7 +12255,7 @@
                             color: g.O.Link
                         }, L())), d.createElement(g.Xa, {
                             padding: 1,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             display: g.X.Flex
                         }, d.createElement(g.Xa, {
                             padding: {
@@ -12263,7 +12263,7 @@
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({}, T, {
-                            icon: g.rb.AngleLeft,
+                            icon: g.tb.AngleLeft,
                             onClick: this.props.onPre
                         }))), d.createElement(g.Xa, null, d.createElement(g.W, {
                             fontSize: g.Ca.Size5,
@@ -12274,7 +12274,7 @@
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({}, F, {
-                            icon: g.rb.AngleRight,
+                            icon: g.tb.AngleRight,
                             onClick: this.props.onNext
                         })))), d.createElement(g.Xa, {
                             display: g.X.Flex
@@ -12305,13 +12305,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Cb, {
+                        return d.createElement(g.Eb, {
                             className: "dev-sandbox-onboarding-code-section__container dev-sandbox-onboarding-code-section__gradient-border",
                             background: g.r.Base,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-code-section",
                             fullHeight: !0,
@@ -12319,7 +12319,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             padding: 1
                         }, d.createElement(g.W, {
@@ -12328,7 +12328,7 @@
                             color: g.O.Link
                         }, D())), d.createElement(g.Xa, {
                             padding: 1,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             display: g.X.Flex,
                             alignItems: g.f.Center
                         }, d.createElement(g.Xa, {
@@ -12337,7 +12337,7 @@
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({
-                            icon: g.rb.AngleLeft,
+                            icon: g.tb.AngleLeft,
                             onClick: this.props.onPre
                         }, B))), d.createElement(g.Xa, null, d.createElement(g.Xa, null, d.createElement(g.W, {
                             fontSize: g.Ca.Size5,
@@ -12362,7 +12362,7 @@
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({
-                            icon: g.rb.AngleRight,
+                            icon: g.tb.AngleRight,
                             onClick: this.props.onNext
                         }, O)))), d.createElement(g.Xa, {
                             display: g.X.Flex
@@ -12393,13 +12393,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Cb, {
+                        return d.createElement(g.Eb, {
                             className: "dev-sandbox-onboarding-download__container dev-sandbox-onboarding-download__gradient-border",
                             background: g.r.Base,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-download",
                             fullHeight: !0,
@@ -12407,7 +12407,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             padding: 1
                         }, d.createElement(g.W, {
@@ -12416,7 +12416,7 @@
                             color: g.O.Link
                         }, N())), d.createElement(g.Xa, {
                             padding: 1,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             display: g.X.Flex
                         }, d.createElement(g.Xa, {
                             padding: {
@@ -12424,7 +12424,7 @@
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({}, j, {
-                            icon: g.rb.AngleLeft,
+                            icon: g.tb.AngleLeft,
                             onClick: this.props.onPre
                         }))), d.createElement(g.Xa, null, d.createElement(g.W, {
                             fontSize: g.Ca.Size5,
@@ -12435,7 +12435,7 @@
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({}, I, {
-                            icon: g.rb.AngleRight,
+                            icon: g.tb.AngleRight,
                             onClick: this.props.onNext
                         })))), d.createElement(g.Xa, {
                             display: g.X.Flex
@@ -12473,13 +12473,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Cb, {
+                        return d.createElement(g.Eb, {
                             className: "dev-sandbox-onboarding-intro__container dev-sandbox-onboarding-intro__gradient-border",
                             background: g.r.Base,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-intro",
                             fullHeight: !0,
@@ -12487,7 +12487,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             padding: 1
                         }, d.createElement(g.W, {
@@ -12536,13 +12536,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Cb, {
+                        return d.createElement(g.Eb, {
                             className: "dev-sandbox-onboarding-manual-run__container dev-sandbox-onboarding-manual-run__gradient-border",
                             background: g.r.Base,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-manual-run",
                             fullHeight: !0,
@@ -12550,7 +12550,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             padding: 1
                         }, d.createElement(g.W, {
@@ -12559,7 +12559,7 @@
                             color: g.O.Link
                         }, H())), d.createElement(g.Xa, {
                             padding: 1,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             display: g.X.Flex
                         }, d.createElement(g.Xa, {
                             padding: {
@@ -12567,7 +12567,7 @@
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({}, z, {
-                            icon: g.rb.AngleLeft,
+                            icon: g.tb.AngleLeft,
                             onClick: this.props.onPre
                         }))), d.createElement(g.Xa, null, d.createElement(g.W, {
                             fontSize: g.Ca.Size5,
@@ -12580,8 +12580,8 @@
                             fontSize: g.Ca.Size5,
                             color: g.O.Link
                         }, Object(p.d)("If there is an issue with the refresh or you are making a change that requires a re-run (i.e call an API), then you may need to manually run the extension. Click the {run} button to do so.", {
-                            run: d.createElement(g.qb, {
-                                asset: g.rb.MiniPlayerPlay,
+                            run: d.createElement(g.sb, {
+                                asset: g.tb.MiniPlayerPlay,
                                 height: 14,
                                 width: 14
                             })
@@ -12591,7 +12591,7 @@
                                 right: 2
                             }
                         }, d.createElement(g.A, i.__assign({}, W, {
-                            icon: g.rb.AngleRight,
+                            icon: g.tb.AngleRight,
                             onClick: this.props.onNext
                         })))), d.createElement(g.Xa, {
                             display: g.X.Flex
@@ -12615,13 +12615,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Cb, {
+                        return d.createElement(g.Eb, {
                             className: "dev-sandbox-onboarding-switch-window__container dev-sandbox-onboarding-intro__gradient-border",
                             background: g.r.Base,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-switch-window",
                             fullHeight: !0,
@@ -12629,7 +12629,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             padding: 1
                         }, d.createElement(g.W, {
@@ -12638,18 +12638,18 @@
                             color: g.O.Link
                         }, Object(p.d)("Focus your work", "DevSandboxOnBoardingSwitchWindowStep"))), d.createElement(g.Xa, {
                             padding: 1,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             display: g.X.Flex,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center
                         }, d.createElement(g.Xa, null, d.createElement(g.A, i.__assign({
-                            icon: g.rb.AngleLeft,
+                            icon: g.tb.AngleLeft,
                             onClick: this.props.onPre
                         }, q))), d.createElement(g.Xa, null, d.createElement(g.W, {
                             fontSize: g.Ca.Size5,
                             color: g.O.Link
                         }, Object(p.d)("If you want to just focus on code or just preview the design, you can use this toggle to change the view of the sandbox.", "DevSandboxOnBoardingSwitchWindowStep"))), d.createElement(g.Xa, null, d.createElement(g.A, i.__assign({
-                            icon: g.rb.AngleRight,
+                            icon: g.tb.AngleRight,
                             onClick: this.props.onNext
                         }, V)))), d.createElement(g.Xa, {
                             display: g.X.Flex
@@ -12672,13 +12672,13 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Cb, {
+                        return d.createElement(g.Eb, {
                             className: "dev-sandbox-onboarding-welcome-back__container dev-sandbox-onboarding-welcome-back__gradient-border",
                             background: g.r.Base,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-onboarding-welcome-back",
                             fullHeight: !0,
@@ -12686,7 +12686,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             padding: 1
                         }, d.createElement(g.W, {
@@ -12932,9 +12932,9 @@
                         onClick: e.onClick
                     }, d.createElement(g.Xa, {
                         fullWidth: !0,
-                        position: g.hb.Relative,
+                        position: g.jb.Relative,
                         className: "mobile-warning-bar"
-                    }, d.createElement(g.Cb, {
+                    }, d.createElement(g.Eb, {
                         className: "mobile-warning-bar__content",
                         display: g.X.Flex,
                         alignItems: g.f.Center,
@@ -12968,14 +12968,14 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         for (var e = [], t = 0; t < 4; t++) e.push(this.renderHeaderPlaceHolder(t));
-                        return d.createElement(g.Cb, {
+                        return d.createElement(g.Eb, {
                             display: g.X.Flex,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             attachTop: !0,
                             className: "dev-channel-header-mock",
                             fullWidth: !0,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center,
+                            textAlign: g.Rb.Center,
                             margin: {
                                 bottom: 1
                             }
@@ -12995,7 +12995,7 @@
                             },
                             className: "dev-channel-header-mock__btn-mock",
                             attachRight: !0,
-                            position: g.hb.Absolute,
+                            position: g.jb.Absolute,
                             display: g.X.Flex
                         }))
                     }, t
@@ -13046,7 +13046,7 @@
                         return d.createElement(g.Xa, {
                             className: "dev-channel-nav-mock__menu dev-channel-nav-mock",
                             alignItems: g.f.Center,
-                            position: g.hb.Relative
+                            position: g.jb.Relative
                         }, d.createElement(g.Xa, {
                             display: g.X.Flex
                         }, d.createElement(g.Xa, {
@@ -13067,7 +13067,7 @@
                             className: "dev-channel-nav-mock__search-mock"
                         })), d.createElement(g.Xa, {
                             display: g.X.Flex,
-                            position: g.hb.Absolute,
+                            position: g.jb.Absolute,
                             attachRight: !0,
                             alignItems: g.f.Center,
                             justifyContent: g.Wa.End,
@@ -13081,10 +13081,10 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e, t = J("dev-channel-panel-mock__placeholder-box", ((e = {})["dev-channel-panel-mock__placeholder-box-both"] = this.props.sandboxMode === He.both, e["dev-channel-panel-mock__placeholder-box-channel-only"] = this.props.sandboxMode === He.channelOnly, e));
-                        return d.createElement(g.Cb, {
+                        return d.createElement(g.Eb, {
                             flexDirection: g.Aa.Column,
                             display: g.X.Flex,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             className: "dev-channel-panel-mock",
                             fullWidth: !0,
                             alignItems: g.f.Start,
@@ -13103,7 +13103,7 @@
                                 top: 1
                             },
                             className: "dev-channel-panel-mock__placeholder-long"
-                        }), d.createElement(g.Cb, {
+                        }), d.createElement(g.Eb, {
                             margin: {
                                 top: 1
                             },
@@ -13128,7 +13128,7 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         for (var e = [], t = 0; t < 3; t++) e.push(this.renderLogoMockGroup(t));
-                        return d.createElement(g.Cb, {
+                        return d.createElement(g.Eb, {
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
                             className: "dev-channel-side-nav-mock",
@@ -13142,17 +13142,17 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Cb, {
+                        return d.createElement(g.Eb, {
                             background: g.r.Base,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             className: "channel-placeholder__menu-bar",
                             margin: {
                                 left: 2,
                                 right: 2
                             }
-                        }, d.createElement(g.Cb, {
+                        }, d.createElement(g.Eb, {
                             display: g.X.Flex,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             className: "dev-channel-video-bar-mock",
                             alignItems: g.f.Center,
                             padding: {
@@ -13187,7 +13187,7 @@
                             },
                             className: "dev-channel-video-bar-mock__btn-mock",
                             attachRight: !0,
-                            position: g.hb.Absolute,
+                            position: g.jb.Absolute,
                             display: g.X.Flex
                         })))
                     }, t
@@ -13203,13 +13203,13 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Cb, {
+                        return d.createElement(g.Eb, {
                             className: "dev-sandbox-download-modal__container dev-sandbox-share-modal__gradient-border",
                             background: g.r.Base,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             justifyContent: g.Wa.Start,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center,
+                            textAlign: g.Rb.Center,
                             display: g.X.Flex
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-download-modal",
@@ -13217,7 +13217,7 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Start,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center,
+                            textAlign: g.Rb.Center,
                             padding: {
                                 left: 4,
                                 right: 4
@@ -13285,13 +13285,13 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Cb, {
+                        return d.createElement(g.Eb, {
                             className: "dev-sandbox-share-modal__container dev-sandbox-share-modal__gradient-border",
                             background: g.r.Base,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             justifyContent: g.Wa.Start,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-share-modal",
                             fullHeight: !0,
@@ -13299,11 +13299,11 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Start,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
-                        }, d.createElement(g.Cb, {
+                            textAlign: g.Rb.Center
+                        }, d.createElement(g.Eb, {
                             color: g.O.Link
-                        }, d.createElement(g.qb, {
-                            asset: g.rb.LogoTwitch,
+                        }, d.createElement(g.sb, {
+                            asset: g.tb.LogoTwitch,
                             height: 200,
                             width: 200
                         })), d.createElement(g.Xa, {
@@ -13311,7 +13311,7 @@
                         }, d.createElement(g.W, {
                             color: g.O.Link,
                             fontSize: g.Ca.Size3
-                        }, Object(p.d)("Share the sandbox with a friend", "DevSandboxShare"))), d.createElement(g.Cb, {
+                        }, Object(p.d)("Share the sandbox with a friend", "DevSandboxShare"))), d.createElement(g.Eb, {
                             className: "dev-sandbox-share-modal__copy-link-box",
                             background: g.r.Alt2,
                             margin: {
@@ -13320,7 +13320,7 @@
                             display: g.X.Flex,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             padding: {
                                 right: 5,
@@ -13369,11 +13369,11 @@
                         return t.state = {
                             ifShown: !1
                         }, t.showDropDown = function() {
-                            return d.createElement(g.Cb, i.__assign({
+                            return d.createElement(g.Eb, i.__assign({
                                 className: "dev-extension-sample-code-btn__dropdown",
                                 background: g.r.Alt2,
                                 display: g.X.Flex,
-                                position: g.hb.Absolute,
+                                position: g.jb.Absolute,
                                 alignItems: g.f.Center,
                                 flexDirection: g.Aa.Column,
                                 justifyContent: g.Wa.Center
@@ -13383,7 +13383,7 @@
                             }, d.createElement(g.Pa, null, d.createElement(g.Ua, {
                                 onClick: t.selectSample(ge.helloWorld)
                             }, d.createElement(g.Xa, {
-                                position: g.hb.Relative,
+                                position: g.jb.Relative,
                                 display: g.X.Flex,
                                 justifyContent: g.Wa.Start,
                                 alignItems: g.f.Center,
@@ -13393,7 +13393,7 @@
                                     left: 1
                                 },
                                 display: g.X.Flex,
-                                textAlign: g.Pb.Center,
+                                textAlign: g.Rb.Center,
                                 alignItems: g.f.Center,
                                 className: "dev-editor-extension-type-btn__text"
                             }, d.createElement(g.W, {
@@ -13401,7 +13401,7 @@
                             }, xe()))))), d.createElement(g.Pa, null, d.createElement(g.Ua, {
                                 onClick: t.selectSample(ge.helloGlitch)
                             }, d.createElement(g.Xa, {
-                                position: g.hb.Relative,
+                                position: g.jb.Relative,
                                 display: g.X.Flex,
                                 justifyContent: g.Wa.Start,
                                 alignItems: g.f.Center,
@@ -13411,7 +13411,7 @@
                                     left: 1
                                 },
                                 display: g.X.Flex,
-                                textAlign: g.Pb.Center,
+                                textAlign: g.Rb.Center,
                                 alignItems: g.f.Center
                             }, d.createElement(g.W, {
                                 fontSize: g.Ca.Size4
@@ -13480,7 +13480,7 @@
                                 display: g.X.Flex,
                                 flexGrow: 1,
                                 flexShrink: 1
-                            }, d.createElement(g.Cb, {
+                            }, d.createElement(g.Eb, {
                                 background: g.r.Alt2,
                                 display: g.X.Flex,
                                 fullWidth: !0,
@@ -13493,10 +13493,10 @@
                         }, t.renderModeSwitchButton = function(e) {
                             var n = Object(p.d)("Code", "DevSandboxTopNavBarComponent"),
                                 r = Se;
-                            return e === He.both ? (n = Object(p.d)("Both", "DevSandboxTopNavBarComponent"), r = Te) : e === He.channelOnly && (n = Object(p.d)("Channel", "DevSandboxTopNavBarComponent"), r = Ae), d.createElement(g.vb, i.__assign({
+                            return e === He.both ? (n = Object(p.d)("Both", "DevSandboxTopNavBarComponent"), r = Te) : e === He.channelOnly && (n = Object(p.d)("Channel", "DevSandboxTopNavBarComponent"), r = Ae), d.createElement(g.xb, i.__assign({
                                 name: "sandbox-top-nav-bar__segment-btn",
                                 label: n,
-                                type: g.wb.Radio,
+                                type: g.yb.Radio,
                                 onChange: t.windowModeSelectionButtonClick(e),
                                 checked: t.props.sandboxMode === e
                             }, r))
@@ -13505,18 +13505,18 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e, t, n = J("sandbox-top-nav-bar__window", ((e = {})["dev-onboarding-on-going"] = this.props.onBoardingStep === r.switchWindow, e)),
                             i = J("sandbox-top-nav-bar__start-building-btn", ((t = {})["dev-onboarding-on-going"] = this.props.onBoardingStep === r.codeDownload, t));
-                        return d.createElement(g.Cb, {
+                        return d.createElement(g.Eb, {
                             display: g.X.InlineFlex,
                             className: "sandbox-top-nav-bar",
                             background: g.r.Alt2,
                             fullWidth: !0
-                        }, this.renderDropDown(), d.createElement(g.Cb, {
+                        }, this.renderDropDown(), d.createElement(g.Eb, {
                             background: g.r.Alt2,
                             className: n,
                             display: g.X.Flex,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center
-                        }, d.createElement(g.ub, null, this.renderModeSwitchButton(He.editorOnly), this.renderModeSwitchButton(He.both), this.renderModeSwitchButton(He.channelOnly))), d.createElement(g.Xa, {
+                        }, d.createElement(g.wb, null, this.renderModeSwitchButton(He.editorOnly), this.renderModeSwitchButton(He.both), this.renderModeSwitchButton(He.channelOnly))), d.createElement(g.Xa, {
                             className: "sandbox-top-nav-bar__btn-group",
                             display: g.X.Flex,
                             justifyContent: g.Wa.End,
@@ -13539,8 +13539,8 @@
                                 right: 1,
                                 top: .5
                             }
-                        }, d.createElement(g.qb, {
-                            asset: g.rb.Share,
+                        }, d.createElement(g.sb, {
+                            asset: g.tb.Share,
                             height: 15,
                             width: 15
                         })), d.createElement(g.W, null, Object(p.d)("Share", "DevSandboxTopNavBarComponent"))))), d.createElement(g.z, {
@@ -13555,8 +13555,8 @@
                                 right: 1,
                                 top: .5
                             }
-                        }, d.createElement(g.qb, {
-                            asset: g.rb.Document,
+                        }, d.createElement(g.sb, {
+                            asset: g.tb.Document,
                             height: 15,
                             width: 15
                         })), d.createElement(g.W, null, Object(p.d)("View Guide", "DevSandboxTopNavBarComponent")))), d.createElement(g.Xa, {
@@ -13578,8 +13578,8 @@
                                 right: 1,
                                 top: .5
                             }
-                        }, d.createElement(g.qb, {
-                            asset: g.rb.Wrench,
+                        }, d.createElement(g.sb, {
+                            asset: g.tb.Wrench,
                             height: 15,
                             width: 15
                         })), d.createElement(g.W, null, Object(p.d)("Download Code", "DevSandboxTopNavBarComponent")))))))
@@ -13616,7 +13616,7 @@
                         }, t.renderExtensionTypeSelectionDropDown = function() {
                             var e, n = J(((e = {})["dev-onboarding-on-going"] = t.props.onBoardingStep === r.chooseType, e));
                             return d.createElement(g.Xa, {
-                                position: g.hb.Relative,
+                                position: g.jb.Relative,
                                 className: n
                             }, d.createElement(fe.a, {
                                 control: t.openExtensionTypeSelectionBar
@@ -13631,15 +13631,15 @@
                         }, t.renderExtensionOnlyModeSticker = function() {
                             var e = t.props.ifHideChannelMock && t.props.extensionTypeSelected === _e.panel,
                                 n = e ? void 0 : g.r.Alt2,
-                                r = e ? g.hb.Relative : g.hb.Absolute;
-                            return d.createElement(g.Cb, {
+                                r = e ? g.jb.Relative : g.jb.Absolute;
+                            return d.createElement(g.Eb, {
                                 display: g.X.Flex,
                                 position: r,
                                 attachRight: !0,
                                 margin: {
                                     right: 2
                                 }
-                            }, d.createElement(g.Cb, {
+                            }, d.createElement(g.Eb, {
                                 background: n,
                                 display: g.X.Flex
                             }, d.createElement(g.Xa, {
@@ -13652,7 +13652,7 @@
                                     right: 1,
                                     bottom: 1
                                 }
-                            }, d.createElement(g.Vb, {
+                            }, d.createElement(g.Xb, {
                                 onChange: t.props.onHideChannelMockClick,
                                 checked: t.props.ifHideChannelMock
                             }))))
@@ -13660,12 +13660,12 @@
                             var n = e.toggle;
                             return d.createElement(g.Xa, {
                                 className: "dev-ip-address-bar__selection"
-                            }, d.createElement(g.Cb, {
+                            }, d.createElement(g.Eb, {
                                 className: "dev-ip-address-bar__selection-content",
                                 background: g.r.Base,
                                 display: g.X.Flex,
                                 alignItems: g.f.Center,
-                                textAlign: g.Pb.Left,
+                                textAlign: g.Rb.Left,
                                 justifyContent: g.Wa.Start,
                                 fullHeight: !0
                             }, d.createElement(g.Ua, {
@@ -13673,12 +13673,12 @@
                                 blurAfterClick: !0
                             }, d.createElement(g.Xa, {
                                 display: g.X.Flex,
-                                position: g.hb.Relative,
+                                position: g.jb.Relative,
                                 fullWidth: !0,
                                 className: "dev-ip-address-bar__selection-text-wrapper",
                                 justifyContent: g.Wa.Start,
                                 alignItems: g.f.Center,
-                                textAlign: g.Pb.Left
+                                textAlign: g.Rb.Left
                             }, d.createElement(g.Xa, {
                                 padding: {
                                     left: 2,
@@ -13687,7 +13687,7 @@
                                 className: "dev-ip-address-bar__selection-text",
                                 justifyContent: g.Wa.Start,
                                 alignItems: g.f.Center,
-                                textAlign: g.Pb.Left
+                                textAlign: g.Rb.Left
                             }, d.createElement(g.W, {
                                 fontSize: g.Ca.Size4
                             }, t.extensionType())), d.createElement(g.Xa, {
@@ -13700,10 +13700,10 @@
                                     left: 1
                                 },
                                 className: "dev-ip-address-bar__selection-arrow",
-                                position: g.hb.Absolute,
+                                position: g.jb.Absolute,
                                 attachRight: !0
-                            }, d.createElement(g.qb, {
-                                asset: g.rb.AngleDown,
+                            }, d.createElement(g.sb, {
+                                asset: g.tb.AngleDown,
                                 height: 15,
                                 width: 15
                             }))))))
@@ -13715,20 +13715,20 @@
                             }
                         }, t.renderTypeDropDown = function(e) {
                             var n = e.close;
-                            return d.createElement(g.Cb, {
+                            return d.createElement(g.Eb, {
                                 className: "dev-ip-address-bar__dropdown",
                                 background: g.r.Base,
                                 display: g.X.Flex,
                                 alignItems: g.f.Center,
                                 flexDirection: g.Aa.Column,
-                                zIndex: g.gc.Above,
-                                position: g.hb.Absolute
-                            }, d.createElement(g.Cb, {
-                                position: g.hb.Relative,
+                                zIndex: g.ic.Above,
+                                position: g.jb.Absolute
+                            }, d.createElement(g.Eb, {
+                                position: g.jb.Relative,
                                 className: "dev-ip-address-bar__dropdown-content",
                                 fullWidth: !0,
                                 background: g.r.Base,
-                                zIndex: g.gc.Above,
+                                zIndex: g.ic.Above,
                                 attachTop: !0,
                                 flexDirection: g.Aa.Row,
                                 flexWrap: g.Ba.Wrap,
@@ -13743,7 +13743,7 @@
                                     left: 2
                                 },
                                 className: "dev-ip-address-bar__option",
-                                textAlign: g.Pb.Left
+                                textAlign: g.Rb.Left
                             }, d.createElement(g.W, {
                                 fontSize: g.Ca.Size4
                             }, Re()))), d.createElement("div", {
@@ -13753,7 +13753,7 @@
                                     left: 2
                                 },
                                 className: "dev-ip-address-bar__option",
-                                textAlign: g.Pb.Left
+                                textAlign: g.Rb.Left
                             }, d.createElement(g.W, {
                                 fontSize: g.Ca.Size4
                             }, Be()))))))
@@ -13763,7 +13763,7 @@
                         var e;
                         if (this.props.ifHideChannelMock && this.props.extensionTypeSelected !== _e.videoOverlay) return d.createElement(g.Xa, {
                             display: g.X.Flex,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             fullWidth: !0,
                             alignItems: g.f.Center,
                             margin: {
@@ -13777,9 +13777,9 @@
                             }
                         }, this.renderExtensionOnlyModeSticker())));
                         var t = J("dev-ip-address-bar__address-text-bar", ((e = {})["dev-onboarding-on-going"] = this.props.onBoardingStep === r.channelSelection, e));
-                        return d.createElement(g.Cb, {
+                        return d.createElement(g.Eb, {
                             display: g.X.Flex,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             className: "dev-ip-address-bar",
                             fullWidth: !0,
                             alignItems: g.f.Center,
@@ -13790,11 +13790,11 @@
                             className: "dev-ip-address-bar__minimize-btn dev-ip-address-bar__btn"
                         }), d.createElement("div", {
                             className: "dev-ip-address-bar__maximize-btn dev-ip-address-bar__btn"
-                        }), d.createElement(g.Cb, {
+                        }), d.createElement(g.Eb, {
                             className: t,
                             display: g.X.Flex,
                             margin: 1
-                        }, d.createElement(g.Cb, {
+                        }, d.createElement(g.Eb, {
                             background: g.r.Base,
                             display: g.X.Flex,
                             alignItems: g.f.Center
@@ -13807,7 +13807,7 @@
                             color: g.O.Link
                         }, Object(p.d)("twitch.tv/", "DevSandboxIPAddressBarMock")))), d.createElement(g.Xa, {
                             display: g.X.Flex,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             className: "dev-ip-address-bar__input"
                         }, d.createElement(g.Xa, {
                             fullWidth: !0
@@ -13817,10 +13817,10 @@
                             value: this.state.channelName,
                             onKeyDown: this.onKeyDown
                         })), d.createElement(g.Xa, {
-                            position: g.hb.Absolute,
+                            position: g.jb.Absolute,
                             attachRight: !0
                         }, d.createElement(g.A, {
-                            icon: g.rb.ArrowRight,
+                            icon: g.tb.ArrowRight,
                             onClick: this.onConfirmChangeChannelBtnClick
                         })))), this.renderExtensionTypeSelectionDropDown(), this.renderExtensionOnlyModeSticker())
                     }, t
@@ -13837,7 +13837,7 @@
                                 top: 1
                             },
                             fullWidth: !0,
-                            position: g.hb.Absolute
+                            position: g.jb.Absolute
                         }, d.createElement(g.Xa, {
                             className: "panel-extension-preview-container__iframe",
                             display: g.X.Flex,
@@ -13861,10 +13861,10 @@
                             }, d.createElement(ce, {
                                 sandboxMode: t.props.windowType
                             })));
-                            return d.createElement(g.Cb, {
+                            return d.createElement(g.Eb, {
                                 background: g.r.Alt2,
                                 fullWidth: !0,
-                                position: g.hb.Relative
+                                position: g.jb.Relative
                             }, d.createElement(g.Ja, {
                                 justifyContent: g.Wa.Start,
                                 alignItems: g.f.Start
@@ -13911,41 +13911,41 @@
                                 allowFullScreen: !0
                             }) : void 0
                         }, t.renderChannelPanel = function() {
-                            var e = g.ec.Hidden;
-                            t.props.extensionType !== _e.panel && (e = g.ec.Visible);
-                            var n = d.createElement(g.Cb, {
+                            var e = g.gc.Hidden;
+                            t.props.extensionType !== _e.panel && (e = g.gc.Visible);
+                            var n = d.createElement(g.Eb, {
                                 background: g.r.Alt2,
                                 className: "channel-placeholder__panel-group",
                                 display: g.X.Flex,
                                 visibility: e,
                                 fullWidth: !0,
-                                position: g.hb.Relative
+                                position: g.jb.Relative
                             }, t.renderPanelPlaceholderGroup());
-                            return d.createElement(g.Cb, {
+                            return d.createElement(g.Eb, {
                                 display: g.X.Flex,
                                 background: g.r.Alt2,
-                                position: g.hb.Relative,
+                                position: g.jb.Relative,
                                 justifyContent: g.Wa.Center,
                                 alignItems: g.f.Start,
-                                textAlign: g.Pb.Center,
+                                textAlign: g.Rb.Center,
                                 fullHeight: !0,
                                 fullWidth: !0
                             }, n, d.createElement(De, null))
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return this.props.ifHideChannel ? d.createElement(g.Cb, {
+                        return this.props.ifHideChannel ? d.createElement(g.Eb, {
                             className: "channel-placeholder",
                             justifyContent: g.Wa.Center,
                             display: g.X.Flex,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center,
+                            textAlign: g.Rb.Center,
                             padding: {
                                 left: 3,
                                 right: 3,
                                 bottom: 2
                             }
-                        }, d.createElement(g.Cb, {
+                        }, d.createElement(g.Eb, {
                             margin: {
                                 top: 1
                             },
@@ -13963,7 +13963,7 @@
                             onHideChannelMockClick: this.props.onHideChannelMockClick
                         })), d.createElement(g.Xa, {
                             display: g.X.Flex,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             className: "channel-placeholder__frame",
                             fullWidth: !0
                         }, d.createElement(g.Xa, {
@@ -13973,18 +13973,18 @@
                             fullWidth: !0
                         }, this.renderVideoPlayer()), d.createElement("div", {
                             id: "overlay-extension-preview"
-                        })))) : d.createElement(g.Cb, {
+                        })))) : d.createElement(g.Eb, {
                             className: "channel-placeholder",
                             justifyContent: g.Wa.Center,
                             display: g.X.Flex,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center,
+                            textAlign: g.Rb.Center,
                             padding: {
                                 left: 3,
                                 right: 3,
                                 bottom: 2
                             }
-                        }, d.createElement(g.Cb, {
+                        }, d.createElement(g.Eb, {
                             margin: {
                                 top: 1
                             },
@@ -14004,7 +14004,7 @@
                             windowType: this.props.windowType
                         })), d.createElement(g.Xa, {
                             display: g.X.Flex,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             fullWidth: !0,
                             fullHeight: !0,
                             className: "channel-placeholder__channel-window"
@@ -14012,11 +14012,11 @@
                             display: g.X.Flex,
                             className: "channel-placeholder__side-bar",
                             alignItems: g.f.Center,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             justifyContent: g.Wa.Center
                         }, d.createElement(ue, null)), d.createElement(g.Xa, {
                             display: g.X.Flex,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             className: "channel-placeholder__frame",
                             fullWidth: !0
                         }, d.createElement(g.Xa, {
@@ -14024,10 +14024,10 @@
                             flexDirection: g.Aa.Column,
                             className: "channel-placeholder__video",
                             fullWidth: !0
-                        }, d.createElement(oe, null), d.createElement(g.Cb, {
+                        }, d.createElement(oe, null), d.createElement(g.Eb, {
                             background: g.r.Alt2,
                             display: g.X.Flex,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             className: "channel-placeholder__video-player",
                             fullHeight: !0,
                             padding: {
@@ -14037,9 +14037,9 @@
                             }
                         }, this.renderVideoPlayer(), d.createElement("div", {
                             id: "overlay-extension-preview"
-                        })), d.createElement(g.Cb, {
+                        })), d.createElement(g.Eb, {
                             background: g.r.Alt2,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             alignItems: g.f.Start
                         }, d.createElement(de, null)), this.renderChannelPanel())), this.renderChatBar())))
                     }, t
@@ -14055,13 +14055,13 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(g.Cb, {
+                        return d.createElement(g.Eb, {
                             className: "dev-sandbox-undo-modal__container dev-sandbox-undo-modal__gradient-border",
                             background: g.r.Base,
-                            position: g.hb.Relative,
+                            position: g.jb.Relative,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
+                            textAlign: g.Rb.Center
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox-undo-modal",
                             fullHeight: !0,
@@ -14069,9 +14069,9 @@
                             flexDirection: g.Aa.Column,
                             justifyContent: g.Wa.Center,
                             alignItems: g.f.Center,
-                            textAlign: g.Pb.Center
-                        }, d.createElement(g.Xa, null, d.createElement(g.qb, {
-                            asset: g.rb.VideoRerun,
+                            textAlign: g.Rb.Center
+                        }, d.createElement(g.Xa, null, d.createElement(g.sb, {
+                            asset: g.tb.VideoRerun,
                             height: 80,
                             width: 80
                         })), d.createElement(g.Xa, {
@@ -14120,13 +14120,13 @@
                                 className: e
                             }, d.createElement("button", {
                                 onClick: t.props.onRun
-                            }, d.createElement(g.Cb, {
+                            }, d.createElement(g.Eb, {
                                 color: g.O.Overlay,
                                 padding: {
                                     right: .5
                                 }
-                            }, d.createElement(g.qb, {
-                                asset: g.rb.MiniPlayerPlay,
+                            }, d.createElement(g.sb, {
+                                asset: g.tb.MiniPlayerPlay,
                                 height: 20,
                                 width: 20
                             }))))
@@ -14141,22 +14141,22 @@
                             }, d.createElement("button", {
                                 className: "dev-editor-tabs__reset-btn",
                                 onClick: t.showUndoModal
-                            }, d.createElement(g.Cb, {
+                            }, d.createElement(g.Eb, {
                                 color: g.O.Overlay,
                                 padding: {
                                     right: .5
                                 }
-                            }, d.createElement(g.qb, {
-                                asset: g.rb.VideoRerun,
+                            }, d.createElement(g.sb, {
+                                asset: g.tb.VideoRerun,
                                 height: 20,
                                 width: 20
                             }))))
                         }, t.renderDownloadCodeButton = function() {
-                            return d.createElement(g.Cb, {
+                            return d.createElement(g.Eb, {
                                 margin: {
                                     right: 2
                                 },
-                                position: g.hb.Absolute,
+                                position: g.jb.Absolute,
                                 attachRight: !0,
                                 display: g.X.Flex,
                                 background: g.r.Overlay
@@ -14182,23 +14182,23 @@
                             }
                         }, t.renderDropDown = function(e) {
                             var n = e.close;
-                            return d.createElement(g.Cb, {
+                            return d.createElement(g.Eb, {
                                 className: "dev-editor-tabs__dropdown",
                                 background: g.r.Base,
-                                position: g.hb.Absolute,
+                                position: g.jb.Absolute,
                                 display: g.X.Flex,
                                 alignItems: g.f.Center,
                                 flexDirection: g.Aa.Column,
-                                zIndex: g.gc.Above,
+                                zIndex: g.ic.Above,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 attachRight: !0
-                            }, d.createElement(g.Cb, {
-                                position: g.hb.Relative,
+                            }, d.createElement(g.Eb, {
+                                position: g.jb.Relative,
                                 className: "dev-editor-tabs__dropdown-content",
                                 fullWidth: !0,
                                 background: g.r.Base,
-                                zIndex: g.gc.Above,
+                                zIndex: g.ic.Above,
                                 attachTop: !0,
                                 flexDirection: g.Aa.Row,
                                 flexWrap: g.Ba.Wrap
@@ -14207,12 +14207,12 @@
                             var n = e.toggle;
                             return d.createElement(g.Xa, {
                                 className: "dev-editor-tabs__selection"
-                            }, d.createElement(g.Cb, {
+                            }, d.createElement(g.Eb, {
                                 className: "dev-editor-tabs__selection-content",
                                 background: g.r.Base,
                                 display: g.X.Flex,
                                 alignItems: g.f.Center,
-                                textAlign: g.Pb.Left,
+                                textAlign: g.Rb.Left,
                                 justifyContent: g.Wa.Start
                             }, d.createElement(g.Ua, {
                                 onClick: n,
@@ -14220,12 +14220,12 @@
                                 type: g.Va.Inverted
                             }, d.createElement(g.Xa, {
                                 display: g.X.Flex,
-                                position: g.hb.Relative,
+                                position: g.jb.Relative,
                                 fullWidth: !0,
                                 className: "dev-editor-tabs__selection-text-wrapper",
                                 justifyContent: g.Wa.Start,
                                 alignItems: g.f.Center,
-                                textAlign: g.Pb.Left
+                                textAlign: g.Rb.Left
                             }, d.createElement(g.Xa, {
                                 padding: {
                                     left: 2,
@@ -14234,7 +14234,7 @@
                                 className: "dev-editor-tabs__selection-text",
                                 justifyContent: g.Wa.Start,
                                 alignItems: g.f.Center,
-                                textAlign: g.Pb.Left
+                                textAlign: g.Rb.Left
                             }, d.createElement(g.W, {
                                 fontSize: g.Ca.Size4
                             }, t.filenameForType(t.props.activeTab))), d.createElement(g.Xa, {
@@ -14243,10 +14243,10 @@
                                     right: 1
                                 },
                                 className: "dev-editor-tabs__selection-arrow",
-                                position: g.hb.Absolute,
+                                position: g.jb.Absolute,
                                 attachRight: !0
-                            }, d.createElement(g.qb, {
-                                asset: g.rb.AngleDown,
+                            }, d.createElement(g.sb, {
+                                asset: g.tb.AngleDown,
                                 height: 15,
                                 width: 15
                             }))))))
@@ -14292,12 +14292,12 @@
                                 top: 1,
                                 bottom: 1
                             },
-                            position: g.hb.Relative
+                            position: g.jb.Relative
                         }, d.createElement(g.Xa, {
                             flexWrap: g.Ba.NoWrap,
                             alignItems: g.f.Stretch,
-                            position: g.hb.Relative,
-                            zIndex: g.gc.Above,
+                            position: g.jb.Relative,
+                            zIndex: g.ic.Above,
                             padding: {
                                 left: 1
                             }
@@ -14332,7 +14332,7 @@
                         return d.createElement(g.Xa, {
                             display: g.X.Flex,
                             fullWidth: !0
-                        }, d.createElement(g.Cb, {
+                        }, d.createElement(g.Eb, {
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
                             fullWidth: !0,
@@ -14491,16 +14491,16 @@
                             className: "dev-sandbox__editor"
                         }, d.createElement(g.Ja, null, d.createElement(g.Xa, {
                             className: "dev-sandbox__editor-text-area"
-                        }, t.renderDevEditor()), d.createElement(g.Cb, {
+                        }, t.renderDevEditor()), d.createElement(g.Eb, {
                             display: g.X.Flex,
                             className: "dev-sandbox__editor-separator",
                             background: g.r.Accent,
-                            zIndex: g.gc.Above
+                            zIndex: g.ic.Above
                         }))), d.createElement(g.Xa, {
                             className: "dev-sandbox__channel",
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
-                            textAlign: g.Pb.Center,
+                            textAlign: g.Rb.Center,
                             fullHeight: !0
                         }, t.renderChannelMock()))
                     }, t.renderChannelOnlyWindow = function() {
@@ -14511,13 +14511,13 @@
                             display: g.X.Flex,
                             className: J(e),
                             justifyContent: g.Wa.Center,
-                            textAlign: g.Pb.Center,
+                            textAlign: g.Rb.Center,
                             alignItems: g.f.Start
                         }, d.createElement(g.Xa, {
                             className: "dev-sandbox__channel-fullscreen",
                             display: g.X.Flex,
                             flexDirection: g.Aa.Column,
-                            textAlign: g.Pb.Center,
+                            textAlign: g.Rb.Center,
                             fullHeight: !0
                         }, t.renderChannelMock()))
                     }, t.renderEditorOnlyWindow = function() {
@@ -14662,7 +14662,7 @@
                                     "dev-sandbox__panel-extension-only-display": !0,
                                     "dev-sandbox__panel-show-channel": t.state.sandboxMode !== He.channelOnly
                                 };
-                                return d.createElement(g.Cb, {
+                                return d.createElement(g.Eb, {
                                     padding: {
                                         top: 2,
                                         bottom: 5
@@ -14712,7 +14712,7 @@
                         display: g.X.Flex,
                         flexDirection: g.Aa.Column,
                         className: "dev-sandbox",
-                        position: g.hb.Relative
+                        position: g.jb.Relative
                     }, d.createElement(Le, {
                         onBoardingStep: this.state.onBoardingStep,
                         showOnBoardingModal: this.openOnBoardingModal,
@@ -17029,7 +17029,7 @@
         Xhqo: function(e, t, n) {
             "use strict";
             var r = n("hwdV").Buffer,
-                i = n(467);
+                i = n(471);
 
             function o(e, t, n) {
                 e.copy(t, n)
@@ -19726,7 +19726,7 @@
                     u = t.Uint8Array || function() {};
                 var d = n("Onz0");
                 d.inherits = n("P7XM");
-                var h = n(468),
+                var h = n(472),
                     p = void 0;
                 p = h && h.debuglog ? h.debuglog("stream") : function() {};
                 var f, m = n("Xhqo"),

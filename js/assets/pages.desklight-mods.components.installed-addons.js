@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [137], {
+    [138], {
         "5fUb": function(e, t, n) {},
         BLOD: function(e, t, n) {
             "use strict";
@@ -58,7 +58,7 @@
                                     })
                                 });
                                 return s.createElement(f.Pa, {
-                                    position: f.hb.Relative
+                                    position: f.jb.Relative
                                 }, s.createElement("div", {
                                     "data-test-selector": u.BrowseFolder,
                                     onMouseOver: t.showFolders,
@@ -101,14 +101,14 @@
                     }, t.renderDiskAction = function() {
                         return t.props.instance.hasUpdate ? s.createElement(c.a, {
                             title: Object(d.d)("Update", "InstalledContextMenu"),
-                            icon: f.rb.Download,
+                            icon: f.tb.Download,
                             borderTop: !0,
                             borderBottom: !0,
                             "data-test-selector": u.DiskActionOption,
                             onClick: t.onUpdate
                         }) : s.createElement(c.a, {
                             title: Object(d.d)("Reinstall", "InstalledContextMenu"),
-                            icon: f.rb.Download,
+                            icon: f.tb.Download,
                             borderTop: !0,
                             borderBottom: !0,
                             "data-test-selector": u.DiskActionOption,
@@ -157,18 +157,18 @@
                         }
                     }, e, s.createElement(c.a, {
                         title: Object(d.d)("Auto Install Updates", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferenceAutoInstallUpdates ? f.rb.Check : void 0,
+                        icon: this.props.instance.preferences.preferenceAutoInstallUpdates ? f.tb.Check : void 0,
                         onClick: this.setAutoInstallUpdates
                     }), s.createElement(c.a, {
                         title: Object(d.d)("Install Libraries Seperately", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferenceAlternateFile ? f.rb.Check : void 0,
+                        icon: this.props.instance.preferences.preferenceAlternateFile ? f.tb.Check : void 0,
                         onClick: this.setInstallSeperatly
                     }), s.createElement(c.a, {
                         title: Object(d.d)("Ignored", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferenceIsIgnored ? f.rb.Check : void 0,
+                        icon: this.props.instance.preferences.preferenceIsIgnored ? f.tb.Check : void 0,
                         onClick: this.setIsignored
                     }), s.createElement(f.Pa, {
-                        position: f.hb.Relative
+                        position: f.jb.Relative
                     }, s.createElement("div", {
                         "data-test-selector": u.ReleaseTypeItem,
                         onMouseOver: this.showReleaseTypes,
@@ -182,43 +182,43 @@
                     }, s.createElement(c.a, {
                         "data-test-selector": u.ReleaseOption,
                         title: Object(d.d)("Release", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferredReleaseType === m.ModsIntegrationFileType.Release ? f.rb.Check : void 0,
+                        icon: this.props.instance.preferences.preferredReleaseType === m.ModsIntegrationFileType.Release ? f.tb.Check : void 0,
                         value: m.ModsIntegrationFileType.Release,
                         onClick: this.setFileType,
                         borderBottom: !0
                     }), s.createElement(c.a, {
                         title: Object(d.d)("Beta", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferredReleaseType === m.ModsIntegrationFileType.Beta ? f.rb.Check : void 0,
+                        icon: this.props.instance.preferences.preferredReleaseType === m.ModsIntegrationFileType.Beta ? f.tb.Check : void 0,
                         value: m.ModsIntegrationFileType.Beta,
                         onClick: this.setFileType
                     }), s.createElement(c.a, {
                         title: Object(d.d)("Alpha", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferredReleaseType === m.ModsIntegrationFileType.Alpha ? f.rb.Check : void 0,
+                        icon: this.props.instance.preferences.preferredReleaseType === m.ModsIntegrationFileType.Alpha ? f.tb.Check : void 0,
                         value: m.ModsIntegrationFileType.Alpha,
                         onClick: this.setFileType
                     })))), s.createElement(c.a, {
                         title: Object(d.d)("Report a Bug", "InstalledContextMenu"),
-                        icon: f.rb.Sword,
+                        icon: f.tb.Sword,
                         borderTop: !0,
                         onClick: this.reportABug,
                         "data-test-selector": u.ReportABugOption
                     }), s.createElement(c.a, {
                         title: Object(d.d)("View Addon Website", "InstalledContextMenu"),
-                        icon: f.rb.Popout,
+                        icon: f.tb.Popout,
                         onClick: this.visitWebsite,
                         "data-test-selector": u.VisitWebsiteOption
                     }), s.createElement(c.a, {
                         title: Object(d.d)("View Changelogs", "InstalledContextMenu"),
-                        icon: f.rb.ViewerList,
+                        icon: f.tb.ViewerList,
                         onClick: this.viewChanelogs,
                         "data-test-selector": u.ViewChangelogOption
                     }), t, s.createElement(c.a, {
                         title: Object(d.d)("Delete Settings (Saved Variables)", "InstalledContextMenu"),
-                        icon: f.rb.Close,
+                        icon: f.tb.Close,
                         borderBottom: !0
                     }), s.createElement(c.a, {
                         title: Object(d.d)("Delete", "InstalledContextMenu"),
-                        icon: f.rb.Trash,
+                        icon: f.tb.Trash,
                         interactableType: f.Va.Alert,
                         onClick: this.onUninstall
                     }))
@@ -249,14 +249,14 @@
                             top: 2
                         }
                     }, s.createElement(c.a, {
-                        icon: f.rb.Download,
+                        icon: f.tb.Download,
                         title: Object(d.d)("Install", "NotInstalledMenu"),
                         borderBottom: !0,
                         borderTop: !0,
                         "data-test-selector": g.InstallOption,
                         onClick: this.onInstall
                     }), s.createElement(c.a, {
-                        icon: f.rb.Popout,
+                        icon: f.tb.Popout,
                         title: Object(d.d)("Browse Addon Website", "NotInstalledMenu"),
                         onClick: this.openSite,
                         "data-test-selector": g.OpenSiteOption
@@ -290,7 +290,7 @@
                                     left: 1
                                 }
                             }, s.createElement(f.W, {
-                                type: f.Tb.H2,
+                                type: f.Vb.H2,
                                 fontSize: f.Ca.Size4
                             }, t.props.addon.name), s.createElement(f.W, {
                                 color: f.O.Alt2
@@ -356,7 +356,7 @@
                             bottom: 3
                         }
                     }, a.createElement(h.W, {
-                        type: h.Tb.P,
+                        type: h.Vb.P,
                         fontSize: h.Ca.Size3
                     }, Object(m.d)("Ready for battle? Install addons and you can manage them here!", "DesklightModsNoAddonsFound"))), a.createElement(h.Xa, {
                         display: h.X.Flex
@@ -396,29 +396,29 @@
                             display: h.X.Flex
                         }, a.createElement(h.z, {
                             type: h.F.Text,
-                            icon: h.rb.Refresh,
+                            icon: h.tb.Refresh,
                             onClick: this.props.onRefresh
                         }, Object(m.d)("Refresh", "InstalledAddonNavigationBar")), a.createElement(h.z, {
                             type: h.F.Text,
-                            icon: h.rb.Download,
+                            icon: h.tb.Download,
                             onClick: this.props.onUpdateAll
                         }, Object(m.d)("Update All", "InstalledAddonNavigationBar")), a.createElement(h.z, {
                             type: h.F.Text,
-                            icon: h.rb.Download,
+                            icon: h.tb.Download,
                             disabled: !this.props.canUpdate,
                             onClick: this.props.onUpdate
                         }, Object(m.d)("Update", "InstalledAddonNavigationBar")), a.createElement(h.z, {
                             type: h.F.Text,
-                            icon: h.rb.Close,
+                            icon: h.tb.Close,
                             disabled: !this.props.canDelete,
                             onClick: this.props.onDelete
                         }, Object(m.d)("Delete", "InstalledAddonNavigationBar")), a.createElement(h.z, {
                             type: h.F.Text,
-                            icon: h.rb.Copy,
+                            icon: h.tb.Copy,
                             onClick: this.props.onSync
                         }, Object(m.d)("Sync", "InstalledAddonNavigationBar"))), a.createElement(h.Xa, null, a.createElement("form", {
                             onSubmit: this.onSearchSubmit
-                        }, a.createElement(h.tb, {
+                        }, a.createElement(h.vb, {
                             placeholder: Object(m.d)("Search", "InstalledAddonNavigationBar"),
                             value: this.state.searchTerm,
                             onChange: this.setSearchTerm
@@ -472,8 +472,8 @@
                             src: this.props.instance.addon.primaryCategoryAvatarUrl,
                             alt: this.props.instance.addon.name,
                             size: 40
-                        }))), a.createElement(h.Hb, {
-                            verticalAlign: h.dc.Middle
+                        }))), a.createElement(h.Jb, {
+                            verticalAlign: h.fc.Middle
                         }, a.createElement(h.Xa, {
                             className: "installed-addon__name"
                         }, a.createElement(h.U, {
@@ -493,12 +493,12 @@
                         }, a.createElement(C.a, {
                             instance: this.props.instance.installedData,
                             addon: this.props.instance.addon
-                        }))), a.createElement(h.Hb, {
-                            verticalAlign: h.dc.Middle
-                        }, e), a.createElement(h.Hb, {
-                            verticalAlign: h.dc.Middle
-                        }, t), a.createElement(h.Hb, {
-                            verticalAlign: h.dc.Middle
+                        }))), a.createElement(h.Jb, {
+                            verticalAlign: h.fc.Middle
+                        }, e), a.createElement(h.Jb, {
+                            verticalAlign: h.fc.Middle
+                        }, t), a.createElement(h.Jb, {
+                            verticalAlign: h.fc.Middle
                         }, this.props.instance.addon.primaryAuthorName)))
                     }, t
                 }(a.Component)),
@@ -510,8 +510,8 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            nameSorting: h.zb.Default,
-                            statusSorting: h.zb.Default
+                            nameSorting: h.Bb.Default,
+                            statusSorting: h.Bb.Default
                         }, t.renderAddons = function() {
                             return t.props.instances.map(function(e, n) {
                                 var o = t.props.selectedAddons.some(function(t) {
@@ -528,38 +528,38 @@
                             })
                         }, t.sortByName = function() {
                             var e = t.setSorting("nameSorting");
-                            t.props.onSort(o.Name, e === h.zb.Descending)
+                            t.props.onSort(o.Name, e === h.Bb.Descending)
                         }, t.sortByStatus = function() {
                             var e = t.setSorting("statusSorting");
-                            t.props.onSort(o.Status, e === h.zb.Descending)
+                            t.props.onSort(o.Status, e === h.Bb.Descending)
                         }, t.setSorting = function(e) {
-                            var n, o = t.state[e] === h.zb.Descending ? h.zb.Ascending : h.zb.Descending,
+                            var n, o = t.state[e] === h.Bb.Descending ? h.Bb.Ascending : h.Bb.Descending,
                                 s = ((n = {
-                                    nameSorting: h.zb.Default,
-                                    statusSorting: h.zb.Default
+                                    nameSorting: h.Bb.Default,
+                                    statusSorting: h.Bb.Default
                                 })[e] = o, n);
                             return t.setState(s), o
                         }, t
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
                         var e = this.renderAddons();
-                        return a.createElement(h.Fb, null, a.createElement(h.Ib, null, a.createElement(h.Jb, {
+                        return a.createElement(h.Hb, null, a.createElement(h.Kb, null, a.createElement(h.Lb, {
                             label: ""
-                        }), a.createElement(h.Jb, {
+                        }), a.createElement(h.Lb, {
                             label: Object(m.d)("Addon", "InstalledAddonsTable"),
                             sorting: this.state.nameSorting,
                             onClick: this.sortByName
-                        }), a.createElement(h.Jb, {
+                        }), a.createElement(h.Lb, {
                             label: Object(m.d)("Status", "InstalledAddonsTable"),
                             sorting: this.state.statusSorting,
                             onClick: this.sortByStatus
-                        }), a.createElement(h.Jb, {
+                        }), a.createElement(h.Lb, {
                             label: Object(m.d)("Latest Version", "InstalledAddonsTable")
-                        }), a.createElement(h.Jb, {
+                        }), a.createElement(h.Lb, {
                             label: Object(m.d)("Game Version", "InstalledAddonsTable")
-                        }), a.createElement(h.Jb, {
+                        }), a.createElement(h.Lb, {
                             label: Object(m.d)("Author", "InstalledAddonsTable")
-                        })), a.createElement(h.Gb, null, e))
+                        })), a.createElement(h.Ib, null, e))
                     }, t
                 }(a.Component),
                 O = function(e) {
@@ -609,7 +609,7 @@
                             var d = t.state.contextX - s + "px",
                                 i = t.state.contextY - r + "px";
                             return a.createElement(h.Xa, {
-                                position: h.hb.Relative
+                                position: h.jb.Relative
                             }, a.createElement(l.a, {
                                 onClickOut: t.closeContext
                             }, a.createElement(h.u, {
@@ -834,7 +834,7 @@
                             justifyContent: i.Wa.Center,
                             alignItems: i.f.Center,
                             "data-test-selector": o.InstallProgress
-                        }, a.createElement(i.kb, {
+                        }, a.createElement(i.mb, {
                             value: e.progress
                         }), a.createElement(i.W, null, e.shortStatusText))
                     }, t.onUpdate = function() {
@@ -872,8 +872,8 @@
                             return a.createElement(i.Xa, {
                                 display: i.X.Flex,
                                 "data-test-selector": o.WorkingCopy
-                            }, a.createElement(i.qb, {
-                                asset: i.rb.Wrench
+                            }, a.createElement(i.sb, {
+                                asset: i.tb.Wrench
                             }), a.createElement(i.Xa, {
                                 margin: {
                                     left: .5

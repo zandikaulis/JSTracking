@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [139], {
+    [140], {
         Mg9V: function(e, t, n) {
             "use strict";
             n.r(t);
@@ -73,8 +73,8 @@
                                 x: 3,
                                 top: 1
                             }
-                        }, r.createElement(g.Zb, {
-                            childWidth: g.ac.Small,
+                        }, r.createElement(g.bc, {
+                            childWidth: g.cc.Small,
                             placeholderItems: 10
                         }, e))
                     }, t

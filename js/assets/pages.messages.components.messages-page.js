@@ -4,12 +4,12 @@
         b6Yk: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return a
+                return i
             });
             var r = n("mrSG"),
                 s = n("/7QA"),
                 o = n("kRBY"),
-                a = function() {
+                i = function() {
                     function e() {}
                     return e.get = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
@@ -117,15 +117,15 @@
                         })
                     }, e.request = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
-                            var s, o, a, i;
+                            var s, o, i, a;
                             return r.__generator(this, function(c) {
                                 switch (c.label) {
                                     case 0:
-                                        return t = this.constructOptions(t, n), s = t.headers ? t.headers["Content-Type"] : void 0, o = this.serialize(t.body, s), a = r.__assign({}, t, {
+                                        return t = this.constructOptions(t, n), s = t.headers ? t.headers["Content-Type"] : void 0, o = this.serialize(t.body, s), i = r.__assign({}, t, {
                                             body: o
-                                        }), [4, this._fetch(e, a)];
+                                        }), [4, this._fetch(e, i)];
                                     case 1:
-                                        return i = c.sent(), [4, this.constructLegacyAPIResponse(i)];
+                                        return a = c.sent(), [4, this.constructLegacyAPIResponse(a)];
                                     case 2:
                                         return [2, c.sent()]
                                 }
@@ -201,8 +201,8 @@
                                 "X-Requested-With": "XMLHttpRequest"
                             };
                         e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
-                        var a = Object(o.e)(n);
-                        return a && (r.Authorization = "OAuth " + a.authToken, a.legacyCSRFToken && (r["Twitch-Api-Token"] = a.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                        var i = Object(o.e)(n);
+                        return i && (r.Authorization = "OAuth " + i.authToken, i.legacyCSRFToken && (r["Twitch-Api-Token"] = i.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                             r[e] && delete r[e]
                         }), r
                     }, e.logger = s.p.logger.withCategory("legacy-api"), e
@@ -214,8 +214,8 @@
             var r = n("/MKj"),
                 s = n("fvjX"),
                 o = n("1/iK"),
-                a = n("y5D0"),
-                i = n("kRBY"),
+                i = n("y5D0"),
+                a = n("kRBY"),
                 c = n("mrSG"),
                 u = n("q1tI"),
                 l = n("/7QA"),
@@ -234,7 +234,7 @@
                         return u.createElement(g.Xa, {
                             className: "file-download-button"
                         }, u.createElement(g.z, {
-                            icon: g.rb.Download,
+                            icon: g.tb.Download,
                             type: g.F.Default,
                             onClick: this.initiateDownload
                         }, Object(l.d)("Download", "FileDownload")))
@@ -289,7 +289,7 @@
                             fullWidth: !0,
                             fullHeight: !0,
                             justifyContent: g.Wa.Center,
-                            position: g.hb.Absolute
+                            position: g.jb.Absolute
                         }, u.createElement(g.Xa, {
                             alignItems: g.f.Center,
                             className: "messages-page__body",
@@ -299,7 +299,7 @@
                     }, t.prototype.renderPlaceholder = function() {
                         return u.createElement(u.Fragment, null, u.createElement(g.Xa, {
                             justifyContent: g.Wa.Center
-                        }, u.createElement(g.gb, {
+                        }, u.createElement(g.ib, {
                             height: 130,
                             width: 180
                         })), u.createElement(g.Xa, {
@@ -307,47 +307,47 @@
                                 bottom: 1,
                                 top: 4
                             }
-                        }, u.createElement(g.gb, {
+                        }, u.createElement(g.ib, {
                             height: 15,
                             width: 370
                         }), u.createElement(g.Xa, {
                             margin: {
                                 y: 1
                             }
-                        }), u.createElement(g.gb, {
+                        }), u.createElement(g.ib, {
                             height: 15,
                             width: 380
                         }), u.createElement(g.Xa, {
                             margin: {
                                 y: 1
                             }
-                        }), u.createElement(g.gb, {
+                        }), u.createElement(g.ib, {
                             height: 15,
                             width: 65
                         }), u.createElement(g.Xa, {
                             margin: {
                                 y: 2
                             }
-                        }), u.createElement(g.gb, {
+                        }), u.createElement(g.ib, {
                             height: 15,
                             width: 310
                         }), u.createElement(g.Xa, {
                             margin: {
                                 y: 2
                             }
-                        }), u.createElement(g.gb, {
+                        }), u.createElement(g.ib, {
                             height: 15,
                             width: 390
                         }), u.createElement(g.Xa, {
                             margin: {
                                 y: 1
                             }
-                        }), u.createElement(g.gb, {
+                        }), u.createElement(g.ib, {
                             height: 15,
                             width: 300
                         })), u.createElement(g.Xa, {
                             justifyContent: g.Wa.Center
-                        }, u.createElement(g.gb, {
+                        }, u.createElement(g.ib, {
                             height: 25,
                             width: 100
                         })))
@@ -391,12 +391,12 @@
                 }))(v);
             var O = Object(r.connect)(function(e) {
                 return {
-                    sessionUser: Object(i.e)(e)
+                    sessionUser: Object(a.e)(e)
                 }
             }, function(e) {
                 return Object(s.bindActionCreators)({
                     login: function() {
-                        return Object(a.e)(o.a.MessagesPage)
+                        return Object(i.e)(o.a.MessagesPage)
                     }
                 }, e)
             })(E);

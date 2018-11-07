@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [152], {
+    [157], {
         "0eTn": function(e, t, r) {},
         "16Gl": function(e, t, r) {
             "use strict";
@@ -86,7 +86,7 @@
                         }
                     }, n.createElement(c, {
                         tooltip: r
-                    }, i), n.createElement(s.Cb, {
+                    }, i), n.createElement(s.Eb, {
                         borderRadius: Object(a.b)() ? s.x.Large : void 0,
                         elevation: 1,
                         background: s.r.Base
@@ -102,7 +102,7 @@
                             bottom: 1
                         }
                     }, n.createElement(s.W, {
-                        type: s.Tb.H5,
+                        type: s.Vb.H5,
                         bold: !0
                     }, t), r && n.createElement(i.a, {
                         direction: s.v.TopRight
@@ -153,12 +153,12 @@
                             }, l.createElement(h.Xa, null, l.createElement(h.Pa, {
                                 fullWidth: !0,
                                 fullHeight: !0,
-                                position: h.hb.Absolute
+                                position: h.jb.Absolute
                             }, l.createElement("img", {
                                 src: i
                             })), l.createElement(h.Xa, {
                                 className: "embed-card__overlay",
-                                position: h.hb.Absolute,
+                                position: h.jb.Absolute,
                                 attachLeft: !0,
                                 attachTop: !0,
                                 fullWidth: !0,
@@ -167,17 +167,17 @@
                                 className: "embed-card__play",
                                 display: h.X.Flex,
                                 justifyContent: h.Wa.Center,
-                                position: h.hb.Absolute,
+                                position: h.jb.Absolute,
                                 attachLeft: !0,
                                 attachTop: !0,
                                 fullWidth: !0,
                                 fullHeight: !0
-                            }, l.createElement(h.qb, {
-                                asset: h.rb.Play,
+                            }, l.createElement(h.sb, {
+                                asset: h.tb.Play,
                                 width: 50,
                                 height: 50
                             })), l.createElement(h.Xa, {
-                                position: h.hb.Absolute,
+                                position: h.jb.Absolute,
                                 padding: 1,
                                 attachBottom: !0,
                                 attachLeft: !0
@@ -189,25 +189,25 @@
                             }, l.createElement(h.K, {
                                 status: h.M.Live
                             })), void 0 !== o && l.createElement("span", null, t.getFormattedViewCount(o, s)))), l.createElement(h.Xa, {
-                                position: h.hb.Absolute,
+                                position: h.jb.Absolute,
                                 padding: 1,
                                 attachBottom: !0,
                                 attachRight: !0
-                            }, c && l.createElement(h.Xa, null, l.createElement(h.W, null, c)))), l.createElement(h.Cb, {
-                                position: h.hb.Absolute,
+                            }, c && l.createElement(h.Xa, null, l.createElement(h.W, null, c)))), l.createElement(h.Eb, {
+                                position: h.jb.Absolute,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 margin: 1,
                                 fontSize: h.Ca.Size5
-                            }, s === f.Stream && l.createElement(h.eb, {
+                            }, s === f.Stream && l.createElement(h.gb, {
                                 label: Object(u.d)("Live", "EmbedOverlayPill"),
-                                type: h.fb.Live
-                            }), s === f.Video && l.createElement(h.eb, {
+                                type: h.hb.Live
+                            }), s === f.Video && l.createElement(h.gb, {
                                 label: Object(u.d)("Video", "EmbedOverlayPill"),
-                                type: h.fb.Overlay
-                            }), s === f.Clip && l.createElement(h.eb, {
+                                type: h.hb.Overlay
+                            }), s === f.Clip && l.createElement(h.gb, {
                                 label: Object(u.d)("Clip", "EmbedOverlayPill"),
-                                type: h.fb.Overlay
+                                type: h.hb.Overlay
                             })))))
                         }, t.handleClick = function(e) {
                             e.preventDefault(), t.setState({
@@ -554,15 +554,14 @@
                             return (e = {})[h.a.HOUR_COUNT] = Object(l.d)("Stream for 25 hours", "AchievementsPathToPartner"), e[h.a.UNIQUE_DAYS] = Object(l.d)("Stream on 12 different days", "AchievementsPathToPartner"), e[h.a.AVERAGE_CCU] = Object(l.d)("Average of 75 viewers", "AchievementsPathToPartner"), e
                         }
                     }, e[h.b.VIP_BADGE] = {
-                        title: Object(l.d)("Build a community", "VIPBadge"),
+                        title: Object(l.d)("Build a Community", "VIPBadge"),
                         getInstructions: function() {
-                            return Object(l.d)("It's all about loyalty.", "VIPBadge")
+                            return Object(l.d)("Completing this achievement unlocks the ability to grant VIP status to members of your community. VIPs have the ability to equip a special chat badge and chat in slow, sub-only, or follower-only modes.", "VIPBadge")
                         },
                         getQuestReqStrings: function() {
                             var e;
                             return (e = {})[h.a.UNIQUE_CHATTERS] = Object(l.d)("Reach 5 unique chatters in a stream", "VIPBadge"), e[h.a.FOLLOW_COUNT] = Object(l.d)("Reach 50 followers", "VIPBadge"), e
                         },
-                        learnMoreURL: "https://help.twitch.tv/customer/portal/articles/659115-chat-icons-and-emoticons",
                         hasTimedCompletionWindow: !1,
                         position: 1,
                         ccuTooltipLabel: ""
@@ -709,7 +708,7 @@
                             borderTop: !0,
                             borderBottom: !0
                         };
-                    return s.createElement(u.Cb, n.__assign({}, m), s.createElement(u.Xa, {
+                    return s.createElement(u.Eb, n.__assign({}, m), s.createElement(u.Xa, {
                         padding: {
                             left: 1
                         },
@@ -720,7 +719,7 @@
                         "x:strong": function(e) {
                             return s.createElement(u.W, {
                                 bold: !0,
-                                type: u.Tb.Span
+                                type: u.Vb.Span
                             }, e)
                         },
                         startDate: r,
@@ -730,6 +729,7 @@
                             right: 1
                         }
                     }, s.createElement(u.U, {
+                        tabIndex: e.disableTabSelectable ? -1 : void 0,
                         to: {
                             pathname: "/" + e.channelLogin + "/dashboard/channel-analytics",
                             search: "?" + i.stringify({
@@ -767,15 +767,15 @@
                 S = r("gq0V"),
                 E = r("6E8S"),
                 w = r("sBDM"),
-                C = r("2psh"),
+                j = r("2psh"),
                 _ = r("6XEL"),
-                j = r("Ue10"),
+                C = r("Ue10"),
                 O = function(e) {
-                    if (e.query.isLoading || !e.streamSummaryCursor.current) return a.createElement(j.Xa, {
+                    if (e.query.isLoading || !e.streamSummaryCursor.current) return a.createElement(C.Xa, {
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(j.gb, {
+                    }, a.createElement(C.ib, {
                         height: 400
                     }));
                     var t = e.streamSummaryCursor.current.interval,
@@ -786,11 +786,11 @@
                     }
                     return r.length ? a.createElement(E.a, {
                         title: Object(o.d)("What is my achievements progress?", "StreamSummaryAchievementsPanel")
-                    }, a.createElement(j.Cb, {
-                        borderRadius: j.x.Large,
+                    }, a.createElement(C.Eb, {
+                        borderRadius: C.x.Large,
                         elevation: 1,
-                        background: j.r.Base
-                    }, a.createElement(j.Cb, {
+                        background: C.r.Base
+                    }, a.createElement(C.Eb, {
                         padding: Object(S.b)() ? {
                             top: 1
                         } : 2,
@@ -802,7 +802,7 @@
                         }, Object(y.b)(e))
                     })), a.createElement(w.a, {
                         message: Object(o.d)("View achievements", "StreamSummaryAchievementsPanel"),
-                        onClick: C.e,
+                        onClick: j.e,
                         linkTo: _.b.channelAchievements(e.streamSummaryCursor.current.channel.name),
                         targetBlank: !0
                     }))) : a.createElement("span", null)
@@ -812,12 +812,12 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(j.Xa, {
+                        return a.createElement(C.Xa, {
                             className: "sm-mw__col",
-                            display: j.X.Flex,
+                            display: C.X.Flex,
                             flexGrow: 1,
-                            flexWrap: j.Ba.NoWrap,
-                            flexDirection: j.Aa.Column,
+                            flexWrap: C.Ba.NoWrap,
+                            flexDirection: C.Aa.Column,
                             padding: {
                                 left: 1,
                                 right: 1
@@ -830,18 +830,18 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(j.Cb, {
+                        return a.createElement(C.Eb, {
                             className: "sm-mw",
                             margin: {
                                 top: 1,
                                 bottom: 1
                             },
-                            display: j.X.Flex,
-                            flexDirection: j.Aa.Column,
-                            flexWrap: j.Ba.NoWrap,
-                            alignItems: j.f.Stretch,
+                            display: C.X.Flex,
+                            flexDirection: C.Aa.Column,
+                            flexWrap: C.Ba.NoWrap,
+                            alignItems: C.f.Stretch,
                             breakpointMedium: {
-                                flexDirection: j.Aa.Row
+                                flexDirection: C.Aa.Row
                             }
                         }, this.props.children)
                     }, t
@@ -863,116 +863,89 @@
                 var t = e.query,
                     r = e.currentStreamSummary;
                 if (!t.isLoading && !t.streamSummaries.length && t.channel && !r) {
-                    var i = a.createElement(j.z, n.__assign({
+                    var i = a.createElement(C.z, n.__assign({
                         linkTo: "/" + t.channel.name + "/dashboard/live"
                     }, x), Object(o.d)("Go to Live Dashboard", "StreamSummaryNoAvailableStreamSummariesNotice"));
-                    return t.channel.role === T.d.None && (i = a.createElement(j.z, n.__assign({
+                    return t.channel.role === T.d.None && (i = a.createElement(C.z, n.__assign({
                         linkTo: "/" + t.channel.name + "/dashboard/broadcast"
-                    }, D), Object(o.d)("Go to Streaming Tools", "StreamSummaryNoAvailableStreamSummariesNotice"))), a.createElement(j.Xa, {
-                        position: j.hb.Absolute,
+                    }, D), Object(o.d)("Go to Streaming Tools", "StreamSummaryNoAvailableStreamSummariesNotice"))), a.createElement(C.Xa, {
+                        position: C.jb.Absolute,
                         fullWidth: !0,
                         margin: {
                             top: 5
                         },
-                        zIndex: j.gc.Above
-                    }, a.createElement(j.Zb, {
-                        childWidth: j.ac.Medium,
+                        zIndex: C.ic.Above
+                    }, a.createElement(C.bc, {
+                        childWidth: C.cc.Medium,
                         center: !0
                     }, a.createElement("div", {
                         className: "sm-welcome-modal"
-                    }, a.createElement(j.i, {
-                        type: j.n.SlideInBottom,
-                        duration: j.k.Medium,
+                    }, a.createElement(C.i, {
+                        type: C.n.SlideInBottom,
+                        duration: C.k.Medium,
                         enabled: !0,
-                        timing: j.m.EaseInOut
-                    }, a.createElement(j.Cb, {
+                        timing: C.m.EaseInOut
+                    }, a.createElement(C.Eb, {
                         border: !0,
                         padding: 2,
-                        background: j.r.Base,
+                        background: C.r.Base,
                         elevation: 3
-                    }, a.createElement(j.Xa, {
-                        display: j.X.Flex,
-                        alignItems: j.f.Center,
+                    }, a.createElement(C.Xa, {
+                        display: C.X.Flex,
+                        alignItems: C.f.Center,
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(j.q, n.__assign({}, R, {
+                    }, a.createElement(C.q, n.__assign({}, R, {
                         size: 30
-                    })), a.createElement(j.Xa, {
+                    })), a.createElement(C.Xa, {
                         margin: {
                             left: .5
                         }
-                    }, a.createElement(j.W, {
-                        type: j.Tb.H4,
+                    }, a.createElement(C.W, {
+                        type: C.Vb.H4,
                         bold: !0
-                    }, Object(o.d)("Welcome to Stream Summary", "StreamSummaryNoAvailableStreamSummariesNotice")))), a.createElement(j.cc, null, a.createElement(j.W, {
-                        fontSize: j.Ca.Size5
-                    }, Object(o.d)("See a summary of your past streams with stats, clips, achievements, and more. Stream to get started!", "StreamSummaryNoAvailableStreamSummariesNotice"))), a.createElement(j.Xa, {
+                    }, Object(o.d)("Welcome to Stream Summary", "StreamSummaryNoAvailableStreamSummariesNotice")))), a.createElement(C.ec, null, a.createElement(C.W, {
+                        fontSize: C.Ca.Size5
+                    }, Object(o.d)("See a summary of your past streams with stats, clips, achievements, and more. Stream to get started!", "StreamSummaryNoAvailableStreamSummariesNotice"))), a.createElement(C.Xa, {
                         padding: {
                             top: 1
                         }
-                    }, a.createElement(j.Xa, {
+                    }, a.createElement(C.Xa, {
                         margin: {
                             right: 1
                         },
-                        display: j.X.InlineBlock
-                    }, i), a.createElement(j.z, {
+                        display: C.X.InlineBlock
+                    }, i), a.createElement(C.z, {
                         linkTo: P,
-                        type: j.F.Text
+                        type: C.F.Text
                     }, Object(o.d)("Learn More", "StreamSummaryNoAvailableStreamSummariesNotice"))))))))
                 }
                 return a.createElement("div", null)
             }
             var L = r("5NYc"),
-                N = (r("wQAB"), r("y/W1")),
-                V = r("qe41"),
+                V = (r("wQAB"), r("y/W1")),
+                N = r("qe41"),
                 M = r("9+Lo"),
-                q = (r("Dm0L"), function(e, t) {
-                    return Object(S.b)() ? a.createElement(a.Fragment, null, Array.from({
-                        length: e
-                    }).map(function(e, t) {
-                        return a.createElement(j.Cb, {
-                            key: "completeReqBar-" + t,
-                            className: "quest-progress-bars quest-progress-bars__complete",
-                            borderRadius: j.x.Large,
-                            margin: {
-                                left: .5
-                            }
-                        })
-                    }), Array.from({
-                        length: t - e
-                    }).map(function(e, t) {
-                        return a.createElement(j.Cb, {
-                            key: "incompleteReqBar-" + t,
-                            className: "quest-progress-bars quest-progress-bars__incomplete",
-                            borderRadius: j.x.Large,
-                            margin: {
-                                left: .5
-                            }
-                        })
-                    })) : a.createElement(j.W, {
-                        color: j.O.Alt2,
-                        fontSize: j.Ca.Size5
-                    }, function(e, t) {
-                        return Object(o.d)("{numCompleted, number} of {numTotal, number} requirements met", {
-                            numCompleted: e,
-                            numTotal: t
-                        }, "StreamSummaryQuest")
-                    }(e, t))
+                X = (r("Dm0L"), function(e, t) {
+                    return Object(o.d)("{numCompleted, number} of {numTotal, number} requirements met", {
+                        numCompleted: e,
+                        numTotal: t
+                    }, "StreamSummaryQuest")
                 }),
-                X = function(e) {
+                q = function(e) {
                     var t = Object(S.b)(),
                         r = e.quest,
                         i = !1;
                     if (r && !r.isComplete) {
-                        var s = Object(N.c)(r.requirements),
+                        var s = Object(V.c)(r.requirements),
                             c = r.getQuestReqStrings(),
                             l = t && {
-                                alignItems: j.f.Center,
-                                display: j.X.Flex
+                                alignItems: C.f.Center,
+                                display: C.X.Flex
                             },
                             u = t ? {
-                                display: j.X.Flex,
+                                display: C.X.Flex,
                                 padding: {
                                     left: 1
                                 }
@@ -980,86 +953,116 @@
                                 padding: 2
                             },
                             m = t && {
-                                borderRadius: j.x.Large,
-                                overflow: j.cb.Hidden
+                                borderRadius: C.x.Large,
+                                overflow: C.cb.Hidden
                             };
-                        return a.createElement(j.Cb, n.__assign({
+                        return a.createElement(C.Eb, n.__assign({
                             elevation: 1,
-                            background: j.r.Base,
+                            background: C.r.Base,
                             margin: {
                                 bottom: 2
                             }
-                        }, m), a.createElement(j.Cb, n.__assign({
-                            display: j.X.Flex,
-                            alignItems: j.f.Center
+                        }, m), a.createElement(C.Eb, n.__assign({
+                            display: C.X.Flex,
+                            alignItems: C.f.Center
                         }, u, {
                             borderBottom: !0
-                        }), t && a.createElement(j.Cb, {
-                            borderRadius: j.x.Large,
+                        }), t && a.createElement(C.Eb, {
+                            borderRadius: C.x.Large,
                             className: "quest-header__badge-wrap",
                             margin: {
                                 y: 1,
                                 right: 1
                             },
-                            overflow: j.cb.Hidden
-                        }, a.createElement(j.S, {
+                            overflow: C.cb.Hidden
+                        }, a.createElement(C.S, {
                             src: r.image,
                             alt: Object(o.d)("quest image", "StreamSummaryQuestPanel")
-                        })), a.createElement(j.Xa, n.__assign({
+                        })), a.createElement(C.Xa, n.__assign({
                             flexGrow: 1
-                        }, l), a.createElement(j.W, {
-                            type: j.Tb.H4,
+                        }, l), a.createElement(C.W, {
+                            type: C.Vb.H4,
                             bold: !0
-                        }, r.title)), a.createElement(j.Cb, {
-                            display: j.X.Flex,
+                        }, r.title)), a.createElement(C.Eb, {
+                            display: C.X.Flex,
                             flexShrink: 0,
                             padding: {
                                 right: 1
                             },
-                            color: j.O.Alt2
-                        }, q(r.completedRequirementsCount, r.totalRequirements))), s.map(function(t) {
-                            return a.createElement(j.Xa, {
+                            color: C.O.Alt2
+                        }, function(e, t) {
+                            return Object(S.b)() ? a.createElement(C.Yb, {
+                                label: X(e, t),
+                                direction: C.ac.Left
+                            }, Array.from({
+                                length: e
+                            }).map(function(e, t) {
+                                return a.createElement(C.Eb, {
+                                    key: "completeReqBar-" + t,
+                                    className: "quest-progress-bars quest-progress-bars__complete",
+                                    borderRadius: C.x.Large,
+                                    margin: {
+                                        left: .5
+                                    }
+                                })
+                            }), Array.from({
+                                length: t - e
+                            }).map(function(e, t) {
+                                return a.createElement(C.Eb, {
+                                    key: "incompleteReqBar-" + t,
+                                    className: "quest-progress-bars quest-progress-bars__incomplete",
+                                    borderRadius: C.x.Large,
+                                    margin: {
+                                        left: .5
+                                    }
+                                })
+                            })) : a.createElement(C.W, {
+                                color: C.O.Alt2,
+                                fontSize: C.Ca.Size5
+                            }, X(e, t))
+                        }(r.completedRequirementsCount, r.totalRequirements))), s.map(function(t) {
+                            return a.createElement(C.Xa, {
                                 key: t.metric
                             }, function(t) {
                                 if (!r.isComplete && t.time_based && !i) return i = !0, a.createElement(M.a, {
                                     channelLogin: e.channelName,
                                     questKey: r.key
                                 })
-                            }(t), a.createElement(V.a, {
+                            }(t), a.createElement(N.a, {
                                 requirement: t,
                                 requirementInstructionString: c,
                                 isComplete: r.isComplete,
-                                subtext: t.metric === L.a.AVERAGE_CCU ? Object(N.a)(r.requirements) : void 0,
+                                subtext: t.metric === L.a.AVERAGE_CCU ? Object(V.a)(r.requirements) : void 0,
                                 ccuTooltipLabel: r.ccuTooltipLabel
                             }))
                         }))
                     }
-                    return e.quest ? a.createElement("span", null) : a.createElement(j.Xa, {
+                    return e.quest ? a.createElement("span", null) : a.createElement(C.Xa, {
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(j.gb, {
+                    }, a.createElement(C.ib, {
                         height: 400
                     }))
                 },
                 B = r("NAv5"),
-                W = r("gi7w"),
-                z = r("ybsN"),
+                z = r("gi7w"),
+                W = r("ybsN"),
                 F = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleTrackClick = function() {
-                            Object(z.f)(z.a, t.props.streamSummary)
+                            Object(W.f)(W.a, t.props.streamSummary)
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.componentDidMount = function() {
-                        Object(z.g)(z.a, this.props.streamSummary)
+                        Object(W.g)(W.a, this.props.streamSummary)
                     }, Object.defineProperty(t.prototype, "bannerTitle", {
                         get: function() {
                             var e = this.props.achievement,
                                 t = e.title,
                                 r = e.level,
-                                n = a.createElement("span", null, Object(W.b)(r));
+                                n = a.createElement("span", null, Object(z.b)(r));
                             return r ? Object(o.d)("Achievement Unlocked! {title} {romanNumeralLevel}", {
                                 title: t,
                                 romanNumeralLevel: n
@@ -1085,11 +1088,11 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleTrackClick = function() {
-                            Object(z.f)(z.c, t.props.streamSummary)
+                            Object(W.f)(W.c, t.props.streamSummary)
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.componentDidMount = function() {
-                        Object(z.g)(z.c, this.props.streamSummary)
+                        Object(W.g)(W.c, this.props.streamSummary)
                     }, t.prototype.render = function() {
                         var e = Object(U.b)(this.props.quest.key),
                             t = a.createElement(H, {
@@ -1107,9 +1110,9 @@
                 }(a.PureComponent),
                 H = function(e) {
                     var t = e.title;
-                    return a.createElement(j.W, {
-                        type: j.Tb.Span,
-                        color: j.O.Base
+                    return a.createElement(C.W, {
+                        type: C.Vb.Span,
+                        color: C.O.Base
                     }, t)
                 },
                 Q = r("ll/k"),
@@ -1126,11 +1129,11 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleTrackClick = function() {
-                            Object(z.f)(z.b, t.props.streamSummary)
+                            Object(W.f)(W.b, t.props.streamSummary)
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.componentDidMount = function() {
-                        Object(z.g)(z.b, this.props.streamSummary)
+                        Object(W.g)(W.b, this.props.streamSummary)
                     }, t.prototype.render = function() {
                         return a.createElement(se, {
                             title: Object(o.d)("Top Clip of the Stream", "StreamSummarySpotlightClip"),
@@ -1263,24 +1266,24 @@
                     "data-test-selector": "dismiss"
                 },
                 se = (r("Qtpw"), function(e) {
-                    return a.createElement(j.Xa, {
+                    return a.createElement(C.Xa, {
                         className: "sm-sb-flourish-emotes",
-                        position: j.hb.Relative
-                    }, a.createElement(j.i, {
-                        type: j.n.BounceIn,
-                        duration: j.k.Medium,
+                        position: C.jb.Relative
+                    }, a.createElement(C.i, {
+                        type: C.n.BounceIn,
+                        duration: C.k.Medium,
                         enabled: !0,
-                        timing: j.m.EaseInOut
-                    }, a.createElement(oe, n.__assign({}, e)), a.createElement(j.Xa, {
+                        timing: C.m.EaseInOut
+                    }, a.createElement(oe, n.__assign({}, e)), a.createElement(C.Xa, {
                         className: "sm-sb-flourish-emotes__dismiss",
-                        position: j.hb.Absolute,
-                        zIndex: j.gc.Above,
+                        position: C.jb.Absolute,
+                        zIndex: C.ic.Above,
                         attachTop: !0,
                         attachRight: !0
-                    }, a.createElement(j.A, n.__assign({}, ie, {
+                    }, a.createElement(C.A, n.__assign({}, ie, {
                         ariaLabel: Object(U.a)().spotlightDismiss,
-                        size: j.B.Large,
-                        icon: j.rb.Close,
+                        size: C.B.Large,
+                        icon: C.tb.Close,
                         onClick: e.onSpotlightDismiss,
                         overlay: !0
                     })))))
@@ -1291,42 +1294,42 @@
                         className: "sm-sb-flourish-emotes__link",
                         target: "_blank",
                         onClick: e.onSpotlightClick
-                    }), a.createElement(j.Cb, {
+                    }), a.createElement(C.Eb, {
                         className: "sm-sb-flourish-emotes__content",
-                        position: j.hb.Relative,
-                        zIndex: j.gc.Default,
-                        color: j.O.Overlay,
-                        textAlign: j.Pb.Center,
+                        position: C.jb.Relative,
+                        zIndex: C.ic.Default,
+                        color: C.O.Overlay,
+                        textAlign: C.Rb.Center,
                         margin: {
                             bottom: 2
                         },
                         padding: 2,
-                        borderRadius: j.x.Small
-                    }, a.createElement(j.Cb, {
+                        borderRadius: C.x.Small
+                    }, a.createElement(C.Eb, {
                         className: "sm-sb-flourish-emotes__emotes-layer",
-                        position: j.hb.Absolute,
-                        overflow: j.cb.Hidden,
+                        position: C.jb.Absolute,
+                        overflow: C.cb.Hidden,
                         attachTop: !0,
                         attachRight: !0,
                         attachBottom: !0,
                         attachLeft: !0,
-                        borderRadius: j.x.Small
-                    }, e.flourish), a.createElement(j.Cb, {
+                        borderRadius: C.x.Small
+                    }, e.flourish), a.createElement(C.Eb, {
                         className: "sm-sb-flourish-emotes__text",
-                        position: j.hb.Relative,
-                        zIndex: j.gc.Above,
+                        position: C.jb.Relative,
+                        zIndex: C.ic.Above,
                         padding: {
                             x: .5,
                             y: 0
                         },
-                        borderRadius: j.x.Medium
-                    }, a.createElement(j.W, n.__assign({}, re, {
-                        fontSize: j.Ca.Size4,
+                        borderRadius: C.x.Medium
+                    }, a.createElement(C.W, n.__assign({}, re, {
+                        fontSize: C.Ca.Size4,
                         bold: !0,
                         ellipsis: !0
-                    }), e.title), a.createElement(j.W, n.__assign({}, ne, {
-                        fontSize: j.Ca.Size5,
-                        color: j.O.OverlayAlt,
+                    }), e.title), a.createElement(C.W, n.__assign({}, ne, {
+                        fontSize: C.Ca.Size5,
+                        color: C.O.OverlayAlt,
                         ellipsis: !0
                     }), e.subtitle))))
                 },
@@ -1334,34 +1337,34 @@
                 le = r("FuXV"),
                 ue = (r("xcDG"), ["rgba(168, 136, 230, 1)", "rgba(158, 128, 221, 1)", "rgba(136, 109, 200, 1)", "rgba(129, 104, 193, 1)"]),
                 me = function(e) {
-                    return a.createElement(j.Xa, {
+                    return a.createElement(C.Xa, {
                         className: "sm-sb-flourish-confetti",
-                        position: j.hb.Relative
-                    }, a.createElement(j.i, {
-                        type: j.n.BounceIn,
-                        duration: j.k.Medium,
+                        position: C.jb.Relative
+                    }, a.createElement(C.i, {
+                        type: C.n.BounceIn,
+                        duration: C.k.Medium,
                         enabled: !0,
-                        timing: j.m.EaseInOut
-                    }, a.createElement(j.Cb, {
+                        timing: C.m.EaseInOut
+                    }, a.createElement(C.Eb, {
                         className: "sm-sb-flourish-confetti__wrap",
-                        position: j.hb.Relative,
+                        position: C.jb.Relative,
                         margin: {
                             bottom: 2
                         },
                         elevation: 1,
                         border: !0,
-                        borderRadius: j.x.Small
-                    }, a.createElement(de, n.__assign({}, e)), a.createElement(j.Xa, {
+                        borderRadius: C.x.Small
+                    }, a.createElement(de, n.__assign({}, e)), a.createElement(C.Xa, {
                         className: "sm-sb-flourish-confetti__dismiss",
-                        position: j.hb.Absolute,
-                        zIndex: j.gc.Above,
+                        position: C.jb.Absolute,
+                        zIndex: C.ic.Above,
                         attachTop: !0,
                         attachRight: !0
-                    }, a.createElement(j.A, n.__assign({}, ie, {
+                    }, a.createElement(C.A, n.__assign({}, ie, {
                         ariaLabel: Object(U.a)().spotlightDismiss,
-                        type: j.C.Default,
-                        size: j.B.Large,
-                        icon: j.rb.Close,
+                        type: C.C.Default,
+                        size: C.B.Large,
+                        icon: C.tb.Close,
                         onClick: e.onSpotlightDismiss,
                         overlay: e.purpleScale
                     }))), a.createElement(le.a, {
@@ -1380,23 +1383,23 @@
                         href: e.url,
                         target: "_blank",
                         onClick: e.onSpotlightClick
-                    }), a.createElement(j.Cb, {
+                    }), a.createElement(C.Eb, {
                         className: t,
-                        position: j.hb.Relative,
-                        zIndex: j.gc.Default,
-                        textAlign: j.Pb.Center,
+                        position: C.jb.Relative,
+                        zIndex: C.ic.Default,
+                        textAlign: C.Rb.Center,
                         padding: 2,
                         fullWidth: !0,
-                        borderRadius: j.x.Small
-                    }, a.createElement(j.W, n.__assign({}, re, {
-                        type: j.Tb.Span,
-                        fontSize: j.Ca.Size4,
-                        color: e.purpleScale ? j.O.Overlay : j.O.Base,
+                        borderRadius: C.x.Small
+                    }, a.createElement(C.W, n.__assign({}, re, {
+                        type: C.Vb.Span,
+                        fontSize: C.Ca.Size4,
+                        color: e.purpleScale ? C.O.Overlay : C.O.Base,
                         bold: !0,
                         ellipsis: !0
-                    }), e.title), a.createElement(j.W, n.__assign({}, ne, {
-                        fontSize: j.Ca.Size5,
-                        color: e.purpleScale ? j.O.OverlayAlt : j.O.Alt2,
+                    }), e.title), a.createElement(C.W, n.__assign({}, ne, {
+                        fontSize: C.Ca.Size5,
+                        color: e.purpleScale ? C.O.OverlayAlt : C.O.Alt2,
                         ellipsis: !0
                     }), e.subtitle)))
                 },
@@ -1411,47 +1414,47 @@
                     "data-test-selector": "increase"
                 },
                 ge = function(e) {
-                    return a.createElement(j.Xa, n.__assign({
-                        display: j.X.Flex,
-                        flexDirection: j.Aa.Column
-                    }, Object(pe.a)(e)), a.createElement(j.Cb, {
-                        display: j.X.Flex,
+                    return a.createElement(C.Xa, n.__assign({
+                        display: C.X.Flex,
+                        flexDirection: C.Aa.Column
+                    }, Object(pe.a)(e)), a.createElement(C.Eb, {
+                        display: C.X.Flex,
                         flexGrow: 1,
-                        flexDirection: j.Aa.Column,
+                        flexDirection: C.Aa.Column,
                         margin: {
                             bottom: 2
                         },
                         elevation: 1,
                         padding: 2,
-                        background: j.r.Base
-                    }, a.createElement(j.Cb, {
-                        display: j.X.Flex,
-                        flexDirection: j.Aa.Column
-                    }, a.createElement(j.W, {
-                        fontSize: j.Ca.Size4,
+                        background: C.r.Base
+                    }, a.createElement(C.Eb, {
+                        display: C.X.Flex,
+                        flexDirection: C.Aa.Column
+                    }, a.createElement(C.W, {
+                        fontSize: C.Ca.Size4,
                         bold: !0
-                    }, e.title), a.createElement(j.W, n.__assign({
-                        fontSize: j.Ca.Size5,
-                        color: j.O.Alt2
-                    }, he), e.subtitle || a.createElement("br", null))), a.createElement(j.Cb, {
-                        display: j.X.Flex,
+                    }, e.title), a.createElement(C.W, n.__assign({
+                        fontSize: C.Ca.Size5,
+                        color: C.O.Alt2
+                    }, he), e.subtitle || a.createElement("br", null))), a.createElement(C.Eb, {
+                        display: C.X.Flex,
                         flexGrow: 1,
-                        alignItems: j.f.End,
+                        alignItems: C.f.End,
                         padding: {
                             top: 2
                         }
-                    }, a.createElement(j.W, n.__assign({
-                        type: j.Tb.Span,
-                        fontSize: j.Ca.Size2,
+                    }, a.createElement(C.W, n.__assign({
+                        type: C.Vb.Span,
+                        fontSize: C.Ca.Size2,
                         bold: !0,
-                        color: j.O.Link
+                        color: C.O.Link
                     }, fe), e.value, e.isIncrease && a.createElement(ve, null)))))
                 };
 
             function ve() {
-                return a.createElement(j.qb, n.__assign({
-                    asset: j.rb.GlyphArrUp,
-                    type: j.sb.Success
+                return a.createElement(C.sb, n.__assign({
+                    asset: C.tb.GlyphArrUp,
+                    type: C.ub.Success
                 }, be))
             }
 
@@ -1494,11 +1497,11 @@
                     isIncrease: !1
                 }, Ee))
             }
-            var Ce = r("kO/C"),
+            var je = r("kO/C"),
                 _e = {
                     "data-test-selector": "stream-summary-avg-viewer-stat-card"
                 },
-                je = {
+                Ce = {
                     "data-test-selector": "stream-summary-max-viewer-stat-card"
                 },
                 Oe = {
@@ -1524,9 +1527,9 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(j.Zb, {
-                            childWidth: j.ac.Medium,
-                            gutterSize: j.bc.Small,
+                        return a.createElement(C.bc, {
+                            childWidth: C.cc.Medium,
+                            gutterSize: C.dc.Small,
                             placeholderItems: 3
                         }, this.cards())
                     }, t.prototype.cards = function() {
@@ -1535,12 +1538,12 @@
                             r = e.previousStreamSummary,
                             i = e.data.user;
                         if (!t) return Array(8).fill("").map(function(e, t) {
-                            return a.createElement(j.Xa, {
+                            return a.createElement(C.Xa, {
                                 key: "placeholder-" + t,
                                 margin: {
                                     bottom: 2
                                 }
-                            }, a.createElement(j.gb, {
+                            }, a.createElement(C.ib, {
                                 height: 131
                             }))
                         });
@@ -1558,7 +1561,7 @@
                             title: Object(o.d)("Max Viewers", "StreamSummaryStatCard"),
                             currentValue: t.maxViewerCount,
                             previousValue: r && r.maxViewerCount
-                        }, je)), a.createElement(ye, n.__assign({
+                        }, Ce)), a.createElement(ye, n.__assign({
                             key: "unique-viewers",
                             title: Object(o.d)("Unique Viewers", "StreamSummaryStatCard"),
                             currentValue: t.uniqueViewers,
@@ -1592,7 +1595,7 @@
                         }, Ae))])
                     }, t
                 }(a.Component),
-                Pe = Object(c.a)(Ce, {
+                Pe = Object(c.a)(je, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1603,8 +1606,8 @@
                 })(Re),
                 Ie = r("KYAw"),
                 Le = r("WyAD"),
-                Ne = r("OGSR"),
-                Ve = j.R.Purple12,
+                Ve = r("OGSR"),
+                Ne = C.R.Purple12,
                 Me = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -1619,12 +1622,12 @@
                                                 maxRotation: 0,
                                                 minRotation: 0,
                                                 maxTicksLimit: 4,
-                                                fontColor: Ve,
+                                                fontColor: Ne,
                                                 fontSize: 10,
                                                 padding: 5
                                             },
                                             gridLines: {
-                                                color: j.R.White,
+                                                color: C.R.White,
                                                 lineWidth: 1,
                                                 drawBorder: !1,
                                                 display: !1
@@ -1634,7 +1637,7 @@
                                             ticks: {
                                                 min: 0,
                                                 maxTicksLimit: 6,
-                                                fontColor: Ve,
+                                                fontColor: Ne,
                                                 fontSize: 10,
                                                 padding: 5
                                             },
@@ -1650,8 +1653,8 @@
                                     },
                                     tooltips: {
                                         backgroundColor: "rgba(0,0,0,0.95)",
-                                        titleFontColor: j.R.HintedGrey15,
-                                        bodyFontColor: j.R.HintedGrey11,
+                                        titleFontColor: C.R.HintedGrey15,
+                                        bodyFontColor: C.R.HintedGrey11,
                                         cornerRadius: 3,
                                         displayColors: !1,
                                         callbacks: {
@@ -1672,7 +1675,7 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(Ne.a, {
+                        return a.createElement(Ve.a, {
                             onCanvasReady: this.handleCanvasReady
                         })
                     }, t.prototype.componentDidUpdate = function() {
@@ -1684,30 +1687,30 @@
                                 label: this.props.datasetLabel,
                                 data: this.props.values,
                                 backgroundColor: this.getBarGradient(e),
-                                hoverBackgroundColor: j.R.Purple10,
-                                hoverBorderColor: j.R.Purple8,
+                                hoverBackgroundColor: C.R.Purple10,
+                                hoverBorderColor: C.R.Purple8,
                                 hoverBorderWidth: 1
                             }]
                         }
                     }, t.prototype.getBarGradient = function(e) {
                         var t = e.getContext("2d").createLinearGradient(0, 0, 0, 190);
-                        return t.addColorStop(0, j.R.Purple15), t.addColorStop(1, j.R.Purple11), t
+                        return t.addColorStop(0, C.R.Purple15), t.addColorStop(1, C.R.Purple11), t
                     }, t
                 }(a.Component),
-                qe = r("17YR"),
-                Xe = 5;
+                Xe = r("17YR"),
+                qe = 5;
             var Be = {
                 get: function() {
                     return Object(o.d)("Error", "StreamSummaryExportTimeseriesStats")
                 }
             };
 
-            function We(e, t) {
+            function ze(e, t) {
                 return e.isError ? Be : e.data.dates.reduce(function(r, n, a) {
                     return r.set(n.getTime(), String(t(e.data)[a] || ""))
                 }, new Map)
             }
-            var ze = r("cr+I"),
+            var We = r("cr+I"),
                 Fe = 5;
 
             function Ue(e, t) {
@@ -1716,7 +1719,7 @@
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return r = ze.stringify(Object(Se.i)(t)), [4, Object(_.c)({
+                                return r = We.stringify(Object(Se.i)(t)), [4, Object(_.c)({
                                     path: "/v5/channels/" + e + "/analytics/chat_time_series?" + r
                                 })];
                             case 1:
@@ -1745,7 +1748,7 @@
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return r = ze.stringify(Object(Se.i)(t)), [4, Object(_.c)({
+                                return r = We.stringify(Object(Se.i)(t)), [4, Object(_.c)({
                                     path: "/v5/channels/" + e + "/analytics/clips_time_series?" + r
                                 })];
                             case 1:
@@ -1779,7 +1782,7 @@
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return r = ze.stringify(Object(Se.i)(t)), [4, Object(_.c)({
+                                return r = We.stringify(Object(Se.i)(t)), [4, Object(_.c)({
                                     path: "/v5/channels/" + e + "/analytics/commercials_time_series?" + r
                                 })];
                             case 1:
@@ -1807,7 +1810,7 @@
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return r = ze.stringify(Object(Se.i)(t)), [4, Object(_.c)({
+                                return r = We.stringify(Object(Se.i)(t)), [4, Object(_.c)({
                                     path: "/v5/channels/" + e + "/analytics/stats_time_series?" + r
                                 })];
                             case 1:
@@ -1835,7 +1838,7 @@
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return r = ze.stringify(Object(Se.i)(t)), [4, Object(_.c)({
+                                return r = We.stringify(Object(Se.i)(t)), [4, Object(_.c)({
                                     path: "/v5/channels/" + e + "/analytics/followers_time_series?" + r
                                 })];
                             case 1:
@@ -1863,7 +1866,7 @@
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return r = ze.stringify(Object(Se.i)(t)), [4, Object(_.c)({
+                                return r = We.stringify(Object(Se.i)(t)), [4, Object(_.c)({
                                     path: "/v5/channels/" + e + "/analytics/subscription_purchase?" + r
                                 })];
                             case 1:
@@ -1891,7 +1894,7 @@
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return r = ze.stringify(Object(Se.i)(t)), [4, Object(_.c)({
+                                return r = We.stringify(Object(Se.i)(t)), [4, Object(_.c)({
                                     path: "/v5/channels/" + e + "/analytics/view_summary_time_series?" + r
                                 })];
                             case 1:
@@ -1944,7 +1947,7 @@
                                 return n.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            Object(C.a)(), e = this.props.streamSummary, n.label = 1;
+                                            Object(j.a)(), e = this.props.streamSummary, n.label = 1;
                                         case 1:
                                             return n.trys.push([1, 3, , 4]), [4, this.fetchAllTimeseries(e.channel.id, e.interval)];
                                         case 2:
@@ -1957,7 +1960,7 @@
                                                     return e[t].isError
                                                 }))
                                             }(t) && this.alert(Object(o.d)("Part of the CSV export failed. Please try again in a few minutes.", "StreamSummaryTimeseriesExport")), a = function(e) {
-                                                for (var t = e.interval, r = e.timeseriesResponse, n = [], a = Object(B.addMinutes)(t.start, (Xe - t.start.getMinutes() % Xe) % Xe); a.getTime() <= t.end.getTime();) n.push(a), a = Object(B.addMinutes)(a, Xe);
+                                                for (var t = e.interval, r = e.timeseriesResponse, n = [], a = Object(B.addMinutes)(t.start, (qe - t.start.getMinutes() % qe) % qe); a.getTime() <= t.end.getTime();) n.push(a), a = Object(B.addMinutes)(a, qe);
                                                 var i = [
                                                     [Object(o.d)("Timestamp", "StreamSummaryExportTimeseriesStats")].concat(n.map(function(e) {
                                                         return Object(o.c)(e, {
@@ -1967,46 +1970,46 @@
                                                     }))
                                                 ];
                                                 return new Map([
-                                                    [Object(o.d)("Viewers", "StreamSummaryExportTimeseriesStats"), We(r.viewers, function(e) {
+                                                    [Object(o.d)("Viewers", "StreamSummaryExportTimeseriesStats"), ze(r.viewers, function(e) {
                                                         return e.values
                                                     })],
-                                                    [Object(o.d)("Live Views", "StreamSummaryExportTimeseriesStats"), We(r.liveViews, function(e) {
+                                                    [Object(o.d)("Live Views", "StreamSummaryExportTimeseriesStats"), ze(r.liveViews, function(e) {
                                                         return e.totalViews
                                                     })],
-                                                    [Object(o.d)("New Followers", "StreamSummaryExportTimeseriesStats"), We(r.followers, function(e) {
+                                                    [Object(o.d)("New Followers", "StreamSummaryExportTimeseriesStats"), ze(r.followers, function(e) {
                                                         return e.values
                                                     })],
-                                                    [Object(o.d)("Chatters", "StreamSummaryExportTimeseriesStats"), We(r.chat, function(e) {
+                                                    [Object(o.d)("Chatters", "StreamSummaryExportTimeseriesStats"), ze(r.chat, function(e) {
                                                         return e.participants
                                                     })],
-                                                    [Object(o.d)("Chat Messages", "StreamSummaryExportTimeseriesStats"), We(r.chat, function(e) {
+                                                    [Object(o.d)("Chat Messages", "StreamSummaryExportTimeseriesStats"), ze(r.chat, function(e) {
                                                         return e.messages
                                                     })],
-                                                    [Object(o.d)("Ad Breaks", "StreamSummaryExportTimeseriesStats"), We(r.commercials, function(e) {
+                                                    [Object(o.d)("Ad Breaks", "StreamSummaryExportTimeseriesStats"), ze(r.commercials, function(e) {
                                                         return e.values
                                                     })],
-                                                    [Object(o.d)("Subscriptions", "StreamSummaryExportTimeseriesStats"), We(r.subscriptions, function(e) {
+                                                    [Object(o.d)("Subscriptions", "StreamSummaryExportTimeseriesStats"), ze(r.subscriptions, function(e) {
                                                         return e.values
                                                     })],
-                                                    [Object(o.d)("Clips Created", "StreamSummaryExportTimeseriesStats"), We(r.clips, function(e) {
+                                                    [Object(o.d)("Clips Created", "StreamSummaryExportTimeseriesStats"), ze(r.clips, function(e) {
                                                         return e.creates
                                                     })],
-                                                    [Object(o.d)("All Clip Views", "StreamSummaryExportTimeseriesStats"), We(r.clips, function(e) {
+                                                    [Object(o.d)("All Clip Views", "StreamSummaryExportTimeseriesStats"), ze(r.clips, function(e) {
                                                         return e.plays
                                                     })],
-                                                    [Object(o.d)("Twitch Clip Views", "StreamSummaryExportTimeseriesStats"), We(r.clips, function(e) {
+                                                    [Object(o.d)("Twitch Clip Views", "StreamSummaryExportTimeseriesStats"), ze(r.clips, function(e) {
                                                         return e.twitchPlays
                                                     })],
-                                                    [Object(o.d)("Reddit Clip Views", "StreamSummaryExportTimeseriesStats"), We(r.clips, function(e) {
+                                                    [Object(o.d)("Reddit Clip Views", "StreamSummaryExportTimeseriesStats"), ze(r.clips, function(e) {
                                                         return e.redditPlays
                                                     })],
-                                                    [Object(o.d)("Facebook Clip Views", "StreamSummaryExportTimeseriesStats"), We(r.clips, function(e) {
+                                                    [Object(o.d)("Facebook Clip Views", "StreamSummaryExportTimeseriesStats"), ze(r.clips, function(e) {
                                                         return e.facebookPlays
                                                     })],
-                                                    [Object(o.d)("Twitter Clip Views", "StreamSummaryExportTimeseriesStats"), We(r.clips, function(e) {
+                                                    [Object(o.d)("Twitter Clip Views", "StreamSummaryExportTimeseriesStats"), ze(r.clips, function(e) {
                                                         return e.twitterPlays
                                                     })],
-                                                    [Object(o.d)("Other Clip Views", "StreamSummaryExportTimeseriesStats"), We(r.clips, function(e) {
+                                                    [Object(o.d)("Other Clip Views", "StreamSummaryExportTimeseriesStats"), ze(r.clips, function(e) {
                                                         return e.otherPlays
                                                     })]
                                                 ]).forEach(function(e, t) {
@@ -2018,37 +2021,37 @@
                                                         start: t.start,
                                                         end: t.end
                                                     }, "StreamSummaryExportTimeseriesStats"),
-                                                    rows: Object(qe.c)(i)
+                                                    rows: Object(Xe.c)(i)
                                                 }
                                             }({
                                                 interval: e.interval,
                                                 timeseriesResponse: t
-                                            }), this.downloadFile(a.fileName, Object(qe.b)(a.rows)), [2]
+                                            }), this.downloadFile(a.fileName, Object(Xe.b)(a.rows)), [2]
                                     }
                                 })
                             })
-                        }, r.downloadFile = t.downloadFile || qe.a, r.alert = t.alert || window.alert, r.fetchAllTimeseries = t.fetchAllTimeseries || Je, r
+                        }, r.downloadFile = t.downloadFile || Xe.a, r.alert = t.alert || window.alert, r.fetchAllTimeseries = t.fetchAllTimeseries || Je, r
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(j.Cb, {
+                        return a.createElement(C.Eb, {
                             className: "timeseries-panel__btn",
-                            display: j.X.Flex,
+                            display: C.X.Flex,
                             flexGrow: 1,
-                            flexWrap: j.Ba.NoWrap
-                        }, a.createElement(j.z, {
-                            type: j.F.Text,
+                            flexWrap: C.Ba.NoWrap
+                        }, a.createElement(C.z, {
+                            type: C.F.Text,
                             onClick: this.handleExport,
                             fullWidth: !0
-                        }, a.createElement(j.W, {
-                            color: j.O.OverlayAlt
+                        }, a.createElement(C.W, {
+                            color: C.O.OverlayAlt
                         }, Object(o.d)("Export data", "StreamSummaryTimeseriesPanel"))))
                     }, t
                 }(a.Component),
                 tt = (r("SwG+"), function(e) {
-                    return a.createElement(j.Qa, {
-                        display: j.X.Block,
-                        borderRadius: j.x.Medium,
-                        fontSize: j.Ca.Size6,
+                    return a.createElement(C.Qa, {
+                        display: C.X.Block,
+                        borderRadius: C.x.Medium,
+                        fontSize: C.Ca.Size6,
                         padding: {
                             left: 1,
                             y: .5,
@@ -2108,27 +2111,27 @@
                     }, t.prototype.componentDidUpdate = function(e, t) {
                         e.streamSummary !== this.props.streamSummary && this.fetchCurrentStatData(), e.streamSummary === this.props.streamSummary && t.currentStatIndex === this.state.currentStatIndex || this.trackChartView()
                     }, t.prototype.render = function() {
-                        return this.props.streamSummary ? a.createElement(j.Cb, {
+                        return this.props.streamSummary ? a.createElement(C.Eb, {
                             className: "timeseries-panel",
-                            background: j.r.Accent,
-                            borderRadius: j.x.Small,
+                            background: C.r.Accent,
+                            borderRadius: C.x.Small,
                             margin: {
                                 bottom: 4
                             },
                             elevation: 1
-                        }, a.createElement(j.Xa, {
+                        }, a.createElement(C.Xa, {
                             padding: 2
-                        }, a.createElement(j.Cb, {
+                        }, a.createElement(C.Eb, {
                             margin: {
                                 bottom: 2
                             },
                             padding: {
                                 bottom: .5
                             },
-                            display: j.X.Flex,
-                            color: j.O.Overlay,
-                            justifyContent: j.Wa.Between,
-                            alignItems: j.f.Center
+                            display: C.X.Flex,
+                            color: C.O.Overlay,
+                            justifyContent: C.Wa.Between,
+                            alignItems: C.f.Center
                         }, a.createElement("div", null, a.createElement("div", {
                             className: "timeseries-panel__select-wrap"
                         }, a.createElement(tt, {
@@ -2140,44 +2143,44 @@
                             }, e.titleMessage())
                         })))), a.createElement("div", n.__assign({}, rt), Boolean(this.state.statData.values.length) && this.currentStat.subtitleMessage(this.props.streamSummary))), this.chartContent()), a.createElement(et, {
                             streamSummary: this.props.streamSummary
-                        })) : a.createElement(j.Xa, {
+                        })) : a.createElement(C.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(j.gb, {
+                        }, a.createElement(C.ib, {
                             height: 378
                         }))
                     }, t.prototype.chartContent = function() {
-                        return this.state.inFlightStatRequest ? a.createElement(j.Cb, {
-                            color: j.O.Overlay,
+                        return this.state.inFlightStatRequest ? a.createElement(C.Eb, {
+                            color: C.O.Overlay,
                             fullHeight: !0
-                        }, a.createElement(j.Za, {
+                        }, a.createElement(C.Za, {
                             inheritColor: !0,
                             fillContent: !0
-                        })) : this.state.didError ? a.createElement(j.W, n.__assign({
-                            color: j.O.OverlayAlt,
-                            fontSize: j.Ca.Size5
-                        }, nt), Object(o.d)("Whoops. Something went wrong.", "StreamSummaryTimeseriesPanel")) : 0 === this.state.statData.values.length ? a.createElement(j.Xa, {
+                        })) : this.state.didError ? a.createElement(C.W, n.__assign({
+                            color: C.O.OverlayAlt,
+                            fontSize: C.Ca.Size5
+                        }, nt), Object(o.d)("Whoops. Something went wrong.", "StreamSummaryTimeseriesPanel")) : 0 === this.state.statData.values.length ? a.createElement(C.Xa, {
                             padding: {
                                 y: 2
                             },
-                            display: j.X.Flex,
-                            flexDirection: j.Aa.Column,
-                            alignItems: j.f.Center,
-                            alignContent: j.e.Center,
-                            justifyContent: j.Wa.Center,
+                            display: C.X.Flex,
+                            flexDirection: C.Aa.Column,
+                            alignItems: C.f.Center,
+                            alignContent: C.e.Center,
+                            justifyContent: C.Wa.Center,
                             fullHeight: !0
-                        }, a.createElement(j.Xa, {
+                        }, a.createElement(C.Xa, {
                             padding: {
                                 bottom: .5
                             }
-                        }, a.createElement(j.q, {
+                        }, a.createElement(C.q, {
                             src: "https://static-cdn.jtvnw.net/emoticons/v1/90076/3.0",
                             alt: "StinkyCheese",
                             size: 50
-                        })), a.createElement(j.W, {
-                            color: j.O.OverlayAlt,
-                            fontSize: j.Ca.Size5
+                        })), a.createElement(C.W, {
+                            color: C.O.OverlayAlt,
+                            fontSize: C.Ca.Size5
                         }, Object(o.d)("Not enough data for us to display", "StreamSummaryTimeseriesPanel"))) : a.createElement(Me, {
                             datasetLabel: this.currentStat.titleMessage(),
                             labels: this.formattedDates,
@@ -2487,47 +2490,47 @@
                 dt = "VoHiYo",
                 pt = function(e) {
                     var t = e.tip;
-                    return e.isLoading ? a.createElement(j.Xa, {
+                    return e.isLoading ? a.createElement(C.Xa, {
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(j.gb, {
+                    }, a.createElement(C.ib, {
                         height: 121
                     })) : a.createElement("div", null, a.createElement(E.a, {
                         title: Object(o.d)("What is my tip of the day?", "StreamSummaryTipsPanel")
-                    }, a.createElement(j.Cb, {
+                    }, a.createElement(C.Eb, {
                         margin: {
                             bottom: 2
                         },
                         elevation: 1,
                         padding: 2,
-                        background: j.r.Base
-                    }, a.createElement(j.Xa, {
-                        display: j.X.Flex,
-                        alignItems: j.f.Center,
+                        background: C.r.Base
+                    }, a.createElement(C.Xa, {
+                        display: C.X.Flex,
+                        alignItems: C.f.Center,
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(j.q, {
+                    }, a.createElement(C.q, {
                         src: mt,
                         alt: dt,
                         size: 30
-                    }), a.createElement(j.Xa, {
+                    }), a.createElement(C.Xa, {
                         margin: {
                             left: .5
                         }
-                    }, a.createElement(j.W, n.__assign({
-                        type: j.Tb.Span,
-                        fontSize: j.Ca.Size5
+                    }, a.createElement(C.W, n.__assign({
+                        type: C.Vb.Span,
+                        fontSize: C.Ca.Size5
                     }, lt), t.body), a.createElement(ht, {
                         url: t.url
                     }))))))
                 },
                 ht = function(e) {
                     var t = e.url;
-                    return t ? a.createElement(j.W, n.__assign({
-                        type: j.Tb.Span,
-                        fontSize: j.Ca.Size5
+                    return t ? a.createElement(C.W, n.__assign({
+                        type: C.Vb.Span,
+                        fontSize: C.Ca.Size5
                     }, ut), " ", a.createElement("a", {
                         target: "_blank",
                         href: t
@@ -2580,50 +2583,50 @@
                     }), t ? a.createElement(w.a, {
                         message: n,
                         linkTo: "/" + t.channel.name + "/manager/clips/channel",
-                        onClick: C.f,
+                        onClick: j.f,
                         targetBlank: !0
                     }) : a.createElement("p", null, n))
                 },
                 vt = function(e) {
                     if (e.clipsAttrs.isLoading)
-                        for (var t = [], r = 0; r < 5; r++) t.push(a.createElement(j.Cb, {
+                        for (var t = [], r = 0; r < 5; r++) t.push(a.createElement(C.Eb, {
                             padding: {
                                 x: 2,
                                 y: 1
                             },
                             key: r,
                             borderBottom: !0
-                        }, a.createElement(j.gb, {
+                        }, a.createElement(C.ib, {
                             height: 50
                         })));
-                    return a.createElement(j.Cb, {
+                    return a.createElement(C.Eb, {
                         borderBottom: !0
                     }, e.clipsAttrs.clips.slice(0, 5).map(function(e, t) {
                         return a.createElement(bt.a, n.__assign({}, e, {
                             key: t,
-                            onClick: C.d
+                            onClick: j.d
                         }))
                     }))
                 },
                 yt = function() {
-                    return a.createElement(j.Xa, {
+                    return a.createElement(C.Xa, {
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(j.gb, {
+                    }, a.createElement(C.ib, {
                         height: 448
                     }))
                 },
                 St = r("2rRr"),
                 Et = r("eFQ3"),
                 wt = r("16Gl"),
-                Ct = function(e) {
+                jt = function(e) {
                     var t = e.streamSummary;
                     return t ? t.videoId ? a.createElement(E.a, {
                         title: Object(o.d)("What is the video for this stream?", "StreamSummaryVodPanel")
                     }, a.createElement(St.a, {
                         key: t.videoId,
-                        onClick: C.c,
+                        onClick: j.c,
                         type: St.b.Video,
                         viewCount: t.videoViews,
                         thumbnailURL: t.videoMediumThumbnail
@@ -2633,19 +2636,19 @@
                         playerTypeOverride: Et.a.Dashboard
                     })), a.createElement(w.a, {
                         message: Object(o.d)("Highlight video", "StreamSummaryVodPanelCTA"),
-                        onClick: C.h,
+                        onClick: j.h,
                         linkTo: Object(wt.c)(t.channel.name, t.videoId.substring(1)),
                         targetBlank: !0
-                    })) : null : a.createElement(j.Xa, {
+                    })) : null : a.createElement(C.Xa, {
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(j.gb, {
+                    }, a.createElement(C.ib, {
                         height: 448
                     }))
                 },
                 _t = r("3lt/"),
-                jt = function(e) {
+                Ct = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2669,11 +2672,11 @@
                         }), a.createElement(gt, {
                             streamSummary: this.props.sessionCursor.current,
                             topClips: this.props.topClips
-                        }), a.createElement(Ct, {
+                        }), a.createElement(jt, {
                             streamSummary: this.props.sessionCursor.current
                         }), !e && a.createElement(ft, {
                             isLoading: !this.props.sessionCursor.current
-                        })), a.createElement(k, null, a.createElement(X, {
+                        })), a.createElement(k, null, a.createElement(q, {
                             quest: this.props.sessionCursor.current && this.props.achievementProgressions.quests[0],
                             channelName: this.props.channel.name
                         }), a.createElement(O, {
@@ -2684,7 +2687,7 @@
                                 isLoading: 0 === t.length,
                                 sessions: t
                             },
-                            onViewDetails: C.g,
+                            onViewDetails: j.g,
                             linkToDetails: t.length > 0 ? {
                                 pathname: "/" + this.props.channel.name + "/dashboard/stream-summary/" + this.props.sessionCursor.current.id + "/referrals",
                                 state: {
@@ -2765,14 +2768,14 @@
                         return a.createElement(a.Fragment, null, a.createElement(f.a, null, a.createElement(Tt.a, {
                             query: this.props.streamSummaryQuery,
                             summaryID: this.props.streamSummaryID,
-                            getURLForStreamSummary: z.d
+                            getURLForStreamSummary: W.d
                         }, function(r) {
                             return a.createElement(At, {
                                 previousStreamSummary: r.previous,
                                 streamSummary: r.current,
                                 channel: t
                             }, function(n) {
-                                return a.createElement(jt, {
+                                return a.createElement(Ct, {
                                     channel: t,
                                     sessionCursor: r,
                                     achievementProgressions: n.achievementProgressionsQuery,
@@ -2868,7 +2871,7 @@
                         targetBlank: !0,
                         linkTo: e.url + "?tt_content=" + i.PageviewContent.TopClips + "&tt_medium=" + i.PageviewMedium.ChannelAnalytics,
                         onClick: e.onClick
-                    }, n.createElement(s.Cb, {
+                    }, n.createElement(s.Eb, {
                         padding: {
                             x: 2,
                             y: 1
@@ -2897,14 +2900,14 @@
                         ellipsis: !0
                     }, n.createElement(s.W, {
                         color: s.O.Base,
-                        type: s.Tb.H5,
+                        type: s.Vb.H5,
                         ellipsis: !0
                     }, e.title), n.createElement(s.Xa, {
                         display: s.X.Flex,
                         flexWrap: s.Ba.NoWrap
-                    }, n.createElement(s.qb, {
-                        asset: s.rb.GlyphLive,
-                        type: s.sb.Alt2
+                    }, n.createElement(s.sb, {
+                        asset: s.tb.GlyphLive,
+                        type: s.ub.Alt2
                     }), n.createElement(s.Xa, {
                         display: s.X.Inline,
                         padding: {
@@ -2912,7 +2915,7 @@
                         },
                         ellipsis: !0
                     }, n.createElement(s.W, {
-                        type: s.Tb.Span
+                        type: s.Vb.Span
                     }, e.curatorName)))))), n.createElement(s.Xa, {
                         display: s.X.Flex,
                         flexGrow: 1,
@@ -2920,9 +2923,9 @@
                         padding: {
                             left: 2
                         }
-                    }, n.createElement(s.qb, {
-                        asset: s.rb.GlyphViews,
-                        type: s.sb.Alt2
+                    }, n.createElement(s.sb, {
+                        asset: s.tb.GlyphViews,
+                        type: s.ub.Alt2
                     }), n.createElement(s.Xa, {
                         display: s.X.Flex,
                         padding: {
@@ -2932,7 +2935,7 @@
                         bold: !0,
                         fontSize: s.Ca.Size5,
                         color: s.O.Alt,
-                        type: s.Tb.Span
+                        type: s.Vb.Span
                     }, Object(a.d)("{views, number}", {
                         views: e.views
                     }, "StreamSummaryClipViews"))))))))
@@ -2964,9 +2967,9 @@
                             });
                         return i.createElement(o.Xa, {
                             className: "confetti-layer",
-                            position: o.hb.Absolute,
+                            position: o.jb.Absolute,
                             overflow: o.cb.Hidden,
-                            zIndex: o.gc.Default,
+                            zIndex: o.ic.Default,
                             attachTop: !0,
                             attachRight: !0,
                             attachBottom: !0,
@@ -3044,13 +3047,13 @@
                     return i.createElement(c.Xa, n.__assign({
                         display: c.X.Flex,
                         flexWrap: c.Ba.NoWrap,
-                        position: c.hb.Relative,
+                        position: c.jb.Relative,
                         flexShrink: 0
                     }, m), i.createElement(c.Xa, {
                         className: l,
-                        position: c.hb.Relative,
+                        position: c.jb.Relative,
                         flexShrink: 0
-                    }, i.createElement(c.Cb, n.__assign({
+                    }, i.createElement(c.Eb, n.__assign({
                         className: u,
                         background: c.r.Alt2
                     }, r), i.createElement("img", {
@@ -3058,16 +3061,16 @@
                         className: "ach-card__img",
                         src: e.achievement.image.scale1x,
                         srcSet: e.achievement.image.scale1x + " 1x, " + e.achievement.image.scale3x + " 3x"
-                    })), Boolean(e.achievement.level) && i.createElement(c.Cb, {
+                    })), Boolean(e.achievement.level) && i.createElement(c.Eb, {
                         className: "ach-card__lvl",
-                        position: c.hb.Absolute,
+                        position: c.jb.Absolute,
                         background: c.r.Alt
                     }, i.createElement(c.s, {
                         border: !0,
                         icon: Object(s.a)(e.achievement.level),
                         size: 20,
                         type: c.t.Dashboard
-                    }))), i.createElement(c.Cb, {
+                    }))), i.createElement(c.Eb, {
                         overflow: c.cb.Hidden,
                         display: c.X.Flex,
                         justifyContent: c.Wa.Center,
@@ -3084,7 +3087,7 @@
                         fontSize: c.Ca.Size5,
                         color: c.O.Alt2,
                         ellipsis: !0
-                    }, e.achievement.description)), i.createElement(c.Cb, {
+                    }, e.achievement.description)), i.createElement(c.Eb, {
                         className: "ach-card__progress-meta",
                         display: c.X.Flex,
                         alignContent: c.e.Center,
@@ -3398,45 +3401,46 @@
                     "data-test-selector": "achievement-card"
                 },
                 m = function(e) {
-                    return i.createElement(l.U, n.__assign({
+                    return i.createElement(l.Xa, n.__assign({
                         className: "ach-link",
-                        "aria-hidden": e.isHidden,
-                        tabIndex: e.isHidden ? -1 : void 0,
-                        to: c.b.achievement(e.achievement)
-                    }, u, {
-                        hoverUnderlineNone: !0
-                    }), i.createElement(d, {
+                        "aria-hidden": e.isHidden
+                    }, u), i.createElement(d, {
                         achievement: e.achievement,
-                        className: e.layoutClassName
+                        className: e.layoutClassName,
+                        isHidden: e.isHidden
                     }, e.children))
                 },
                 d = function(e) {
                     var t, r = Object(o.b)(),
-                        c = a(e.className, {
+                        u = a(e.className, {
                             "ach-card": !r,
                             "ach-card-vip": r,
                             "ach-card-vip--completed": Boolean(e.achievement.completedAt),
                             "ach-card--recent": e.achievement.wasRecentlyCompleted
                         }),
-                        u = r && {
+                        m = r && {
                             padding: 1
                         };
                     return e.achievement.completedAt || (t = i.createElement(l.Xa, {
-                        position: l.hb.Absolute,
+                        position: l.jb.Absolute,
                         attachBottom: !0,
                         attachLeft: !0,
                         attachRight: !0
-                    }, i.createElement(l.kb, {
-                        size: l.mb.ExtraSmall,
+                    }, i.createElement(l.mb, {
+                        size: l.ob.ExtraSmall,
                         value: 100 * e.achievement.progressRatio
-                    }))), i.createElement(l.Cb, n.__assign({
-                        className: c,
-                        position: l.hb.Relative
-                    }, u), i.createElement(l.Cb, {
+                    }))), i.createElement(l.Eb, {
+                        className: u,
+                        position: l.jb.Relative
+                    }, i.createElement(l.Ua, {
+                        tabIndex: e.isHidden ? -1 : void 0,
+                        type: l.Va.Base,
+                        linkTo: c.b.achievement(e.achievement)
+                    }, i.createElement(l.Eb, n.__assign({
                         className: "ach-card__inner"
-                    }, i.createElement(s.a, {
+                    }, m), i.createElement(s.a, {
                         achievement: e.achievement
-                    }, i.createElement("div", null, e.children, !r && t)), r && t))
+                    }, i.createElement("div", null, e.children, !r && t)), r && t)))
                 };
             r.d(t, !1, function() {
                 return u
@@ -3534,7 +3538,7 @@
                             return e.videoPlayExternalReferrers
                         })),
                         y = n.createElement(s.a, null);
-                    return (b.total || g.total || v.total) && (y = n.createElement(n.Fragment, null, n.createElement(m.Cb, {
+                    return (b.total || g.total || v.total) && (y = n.createElement(n.Fragment, null, n.createElement(m.Eb, {
                         borderBottom: !0,
                         padding: {
                             bottom: 1
@@ -3567,7 +3571,7 @@
                         margin: {
                             bottom: 2
                         }
-                    }, n.createElement(m.gb, {
+                    }, n.createElement(m.ib, {
                         height: 448
                     }))
                 };
@@ -3774,9 +3778,9 @@
                     return n.createElement(s.Xa, {
                         display: s.X.Flex,
                         justifyContent: s.Wa.End
-                    }, n.createElement(s.qb, {
+                    }, n.createElement(s.sb, {
                         type: e.checkMarkType,
-                        asset: s.rb.Check,
+                        asset: s.tb.Check,
                         width: 20,
                         height: 20
                     }))
@@ -3788,17 +3792,17 @@
                 var t = e.progress,
                     r = e.progressCap;
                 if (e.isComplete) return n.createElement(o, {
-                    checkMarkType: s.sb.Success
+                    checkMarkType: s.ub.Success
                 });
                 if (e.completedAt) return n.createElement(i.a, {
                     date: e.completedAt
                 });
                 if (1 === r && 1 === t) return n.createElement(o, {
-                    checkMarkType: s.sb.Alt
+                    checkMarkType: s.ub.Alt
                 });
                 var c = Math.floor(100 * t) / 100,
                     l = n.createElement(s.Xa, {
-                        position: s.hb.Relative,
+                        position: s.jb.Relative,
                         display: s.X.Flex,
                         alignItems: s.f.Center
                     }, n.createElement(s.W, {
@@ -3806,7 +3810,7 @@
                         color: t >= r ? void 0 : s.O.Alt2,
                         bold: !0,
                         fontSize: s.Ca.Size4,
-                        type: s.Tb.Span
+                        type: s.Vb.Span
                     }, Object(a.g)(c, {
                         maximumFractionDigits: 2
                     })), n.createElement(s.Xa, {
@@ -3816,16 +3820,16 @@
                     }, n.createElement(s.W, {
                         fontSize: s.Ca.Size5,
                         color: s.O.Alt2,
-                        type: s.Tb.Span
+                        type: s.Vb.Span
                     }, "/")), n.createElement(s.W, {
                         fontSize: s.Ca.Size5,
                         color: s.O.Alt2
                     }, Object(a.g)(r, {
                         maximumFractionDigits: 2
                     })));
-                return t > 999 ? n.createElement(s.Wb, {
+                return t > 999 ? n.createElement(s.Yb, {
                     label: Object(a.f)(c),
-                    direction: s.Yb.Left
+                    direction: s.ac.Left
                 }, l) : l
             }
         },
@@ -3834,11 +3838,11 @@
             "use strict";
             var n = r("Ue10"),
                 a = {
-                    1: n.rb.Roman1,
-                    2: n.rb.Roman2,
-                    3: n.rb.Roman3,
-                    4: n.rb.Roman4,
-                    5: n.rb.Roman5
+                    1: n.tb.Roman1,
+                    2: n.tb.Roman2,
+                    3: n.tb.Roman3,
+                    4: n.tb.Roman4,
+                    5: n.tb.Roman5
                 };
 
             function i(e) {
@@ -4026,20 +4030,20 @@
                         return a.createElement("div", {
                             onMouseEnter: this.handleMouseEnter,
                             onMouseLeave: this.handleMouseLeave
-                        }, a.createElement(i.Cb, {
+                        }, a.createElement(i.Eb, {
                             display: i.X.Flex,
                             margin: {
                                 x: 1
                             },
-                            position: i.hb.Relative
-                        }, a.createElement(i.Cb, {
+                            position: i.jb.Relative
+                        }, a.createElement(i.Eb, {
                             className: "hoverable-icon",
                             display: i.X.InlineFlex,
                             color: i.O.Alt2,
                             alignItems: i.f.Center,
                             justifyContent: i.Wa.Center
-                        }, a.createElement(i.qb, {
-                            asset: i.rb.NotificationInfo,
+                        }, a.createElement(i.sb, {
+                            asset: i.tb.NotificationInfo,
                             width: 16,
                             height: 16
                         })), a.createElement(i.u, {
@@ -4076,8 +4080,8 @@
             var l = function(e) {
                 var t = e.requirement,
                     r = t.metric === s.a.AVERAGE_CCU;
-                return i.createElement(c.Cb, {
-                    position: c.hb.Relative,
+                return i.createElement(c.Eb, {
+                    position: c.jb.Relative,
                     display: c.X.Flex,
                     alignItems: c.f.Center,
                     padding: {
@@ -4106,15 +4110,15 @@
                         left: .5,
                         right: 3
                     }
-                }, i.createElement(c.Wb, {
+                }, i.createElement(c.Yb, {
                     label: e.ccuTooltipLabel,
-                    direction: c.Yb.Top,
+                    direction: c.ac.Top,
                     width: 230
-                }, i.createElement(c.qb, {
-                    asset: c.rb.NotificationInfo,
+                }, i.createElement(c.sb, {
+                    asset: c.tb.NotificationInfo,
                     width: 16,
                     height: 16,
-                    type: c.sb.Alt2
+                    type: c.ub.Alt2
                 })))), e.subtext && !e.isComplete && i.createElement(c.W, {
                     color: c.O.Alt2,
                     "data-test-selector": n.QUEST_SUBTEXT
@@ -4146,7 +4150,7 @@
             r("qnLe");
 
             function i(e) {
-                return n.createElement(a.Cb, {
+                return n.createElement(a.Eb, {
                     className: "insight-panel-btn",
                     background: e.background || a.r.Alt,
                     display: a.X.Flex,
@@ -4228,10 +4232,10 @@
                         alignItems: l.f.Center
                     }, a.createElement(c.a, {
                         date: e.achievement.completedAt
-                    })) : a.createElement(l.Cb, {
+                    })) : a.createElement(l.Eb, {
                         className: "ach-card__pill-wrapper",
                         fontSize: l.Ca.Size5
-                    }, a.createElement(l.eb, {
+                    }, a.createElement(l.gb, {
                         label: Object(s.f)(e.achievement.progressRatio, "percent")
                     }))
                 },
@@ -4265,7 +4269,7 @@
                             margin: {
                                 y: 2
                             },
-                            zIndex: l.gc.Above,
+                            zIndex: l.ic.Above,
                             borderRadius: l.x.Large,
                             fullWidth: !0,
                             fullHeight: !0
@@ -4287,10 +4291,10 @@
                             background: l.r.Alt2,
                             border: !0
                         };
-                    return a.createElement(l.Cb, n.__assign({
+                    return a.createElement(l.Eb, n.__assign({
                         className: r,
-                        position: l.hb.Relative
-                    }, s), a.createElement(l.Cb, n.__assign({
+                        position: l.jb.Relative
+                    }, s), a.createElement(l.Eb, n.__assign({
                         className: "ach-card__inner"
                     }, i, {
                         refDelegate: e.refDelegate
@@ -4299,7 +4303,7 @@
                     }, t ? void 0 : a.createElement(g, {
                         achievement: e.achievement
                     })), a.createElement(l.Xa, {
-                        position: l.hb.Absolute,
+                        position: l.jb.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         margin: {
@@ -4308,18 +4312,18 @@
                         }
                     }, a.createElement(l.A, {
                         ariaLabel: "Close",
-                        icon: l.rb.Close,
+                        icon: l.tb.Close,
                         linkTo: h.b.channelAchievements(e.achievement.channelLogin)
                     })), a.createElement(l.Xa, {
                         display: l.X.Flex,
                         flexGrow: 1,
-                        position: l.hb.Relative,
+                        position: l.jb.Relative,
                         padding: {
                             top: 1
                         }
-                    }, a.createElement(l.Cb, n.__assign({}, o), a.createElement(l.q, n.__assign({}, f, {
+                    }, a.createElement(l.Eb, n.__assign({}, o), a.createElement(l.q, n.__assign({}, f, {
                         size: 30
-                    })), a.createElement(l.Cb, {
+                    })), a.createElement(l.Eb, {
                         color: l.O.Alt,
                         margin: {
                             left: .5
@@ -4332,10 +4336,10 @@
                 g = function(e) {
                     return 0 === e.achievement.progress ? a.createElement("span", null) : e.achievement.completedAt ? a.createElement(c.a, {
                         date: e.achievement.completedAt
-                    }) : a.createElement(l.Cb, {
+                    }) : a.createElement(l.Eb, {
                         className: "ach-card__pill-wrapper",
                         fontSize: l.Ca.Size5
-                    }, a.createElement(l.eb, {
+                    }, a.createElement(l.gb, {
                         label: Object(s.f)(e.achievement.progressRatio, "percent")
                     }))
                 },
@@ -4348,7 +4352,7 @@
                 w = {
                     "data-test-selector": "not-completed-achievements-list"
                 },
-                C = {
+                j = {
                     "data-test-selector": "past-completed-achievements-list"
                 },
                 _ = function(e) {
@@ -4363,11 +4367,11 @@
                         margin: {
                             bottom: 2
                         }
-                    }, e.isLoading ? A() : a.createElement(j, {
+                    }, e.isLoading ? A() : a.createElement(C, {
                         achievements: e.achievements
                     }))
                 },
-                j = function(e) {
+                C = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4399,7 +4403,7 @@
                                 bottom: .5
                             }
                         }, a.createElement(l.W, {
-                            type: l.Tb.H3,
+                            type: l.Vb.H3,
                             fontSize: l.Ca.Size4,
                             bold: !0
                         }, Object(s.d)("Recently Completed", "AchievementsList"))), this.props.achievements.topRecentlyCompleted.map(function(t) {
@@ -4417,7 +4421,7 @@
                                 bottom: .5
                             }
                         }, a.createElement(l.W, {
-                            type: l.Tb.H3,
+                            type: l.Vb.H3,
                             fontSize: l.Ca.Size4,
                             bold: !0
                         }, Object(s.d)("In Progress", "AchievementsList"))), this.props.achievements.notCompleted.map(function(e) {
@@ -4429,7 +4433,7 @@
                             margin: {
                                 top: 3
                             }
-                        }, C), a.createElement(l.Xa, {
+                        }, j), a.createElement(l.Xa, {
                             padding: {
                                 bottom: 1
                             },
@@ -4437,7 +4441,7 @@
                                 bottom: .5
                             }
                         }, a.createElement(l.W, {
-                            type: l.Tb.H3,
+                            type: l.Vb.H3,
                             fontSize: l.Ca.Size4,
                             bold: !0
                         }, Object(s.d)("Completed", "AchievementsList"))), this.props.achievements.pastCompleted.map(function(e) {
@@ -4467,7 +4471,7 @@
                             background: l.r.Base,
                             overflow: l.cb.Hidden
                         };
-                        return a.createElement(l.Cb, n.__assign({
+                        return a.createElement(l.Eb, n.__assign({
                             elevation: 1
                         }, s), a.createElement(o.a, {
                             achievement: e.achievement,
@@ -4491,7 +4495,7 @@
                                 bottom: 1
                             },
                             key: t
-                        }, a.createElement(l.gb, {
+                        }, a.createElement(l.ib, {
                             height: 70
                         }))
                     });
@@ -4507,7 +4511,7 @@
                         margin: {
                             top: 3
                         }
-                    }, C, {
+                    }, j, {
                         key: "past-completed"
                     }), e)]
                 };
@@ -4516,7 +4520,7 @@
             }), r.d(t, !1, function() {
                 return w
             }), r.d(t, !1, function() {
-                return C
+                return j
             }), r.d(t, "a", function() {
                 return _
             }), r.d(t, "b", function() {
@@ -4547,7 +4551,7 @@
                             "x:strong": function(e) {
                                 return n.createElement(s.W, {
                                     bold: !0,
-                                    type: s.Tb.Span
+                                    type: s.Vb.Span
                                 }, e)
                             },
                             duration: Object(a.f)(Math.floor(100 * r) / 100)

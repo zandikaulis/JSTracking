@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [126], {
+    [127], {
         "5k+0": function(e, t, n) {
             "use strict";
             n.r(t);
@@ -24,7 +24,7 @@
                             delay: l.j.Medium,
                             duration: l.k.Medium,
                             enabled: !0
-                        }, o.createElement(l.Cb, {
+                        }, o.createElement(l.Eb, {
                             "data-test-selector": r.TRIAL_BANNER,
                             display: l.X.Flex,
                             background: l.r.Base,
@@ -37,9 +37,9 @@
                                 topLeft: l.x.Large,
                                 topRight: l.x.Large
                             }
-                        }, o.createElement(l.qb, {
-                            asset: l.rb.MultiscreenEqualThree,
-                            type: l.sb.Inherit
+                        }, o.createElement(l.sb, {
+                            asset: l.tb.MultiscreenEqualThree,
+                            type: l.ub.Inherit
                         }), o.createElement(l.Xa, {
                             margin: {
                                 x: 1
@@ -50,10 +50,10 @@
                             }
                         }, o.createElement(l.W, {
                             fontSize: l.Ca.Size5,
-                            type: l.Tb.Strong
+                            type: l.Vb.Strong
                         }, Object(a.e)("Twitch Multiview", "MultiviewBanner"))), o.createElement(l.W, {
                             fontSize: l.Ca.Size5,
-                            type: l.Tb.Span
+                            type: l.Vb.Span
                         }, Object(a.e)("Choose your own streams including player POVs", "MultiviewBanner"))), o.createElement(l.Xa, {
                             margin: {
                                 left: "auto"

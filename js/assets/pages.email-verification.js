@@ -30,7 +30,7 @@
                             padding: 3
                         }, n.createElement(d.W, {
                             className: "title",
-                            type: d.Tb.H2
+                            type: d.Vb.H2
                         }, Object(o.d)("Email Verification", "EmailVerification")), this.renderVerificationStatus())
                     }, t.prototype.renderVerificationStatus = function() {
                         if (this.state.isLoading) return n.createElement(d.Xa, {
@@ -39,7 +39,7 @@
                             },
                             "data-test-selector": "verify-loading"
                         }, n.createElement(d.W, {
-                            type: d.Tb.Strong
+                            type: d.Vb.Strong
                         }, Object(o.d)("Verifying Email...", "EmailVerification")));
                         if (this.state.isEmailVerified) return n.createElement(d.Xa, {
                             margin: {
@@ -57,7 +57,7 @@
                             "data-test-selector": "verify-error"
                         }, n.createElement(d.W, {
                             color: d.O.Error,
-                            type: d.Tb.Strong
+                            type: d.Vb.Strong
                         }, e))
                     }, t.prototype.maybeGetLocalizedErrorMessage = function(e) {
                         return e ? "Not Found" === e ? Object(o.d)("Not Found", "EmailVerification") : e : Object(o.d)("Unknown Error", "EmailVerification")

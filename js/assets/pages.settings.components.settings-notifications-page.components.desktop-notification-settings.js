@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [147], {
+    [148], {
         Frpv: function(t, e) {
             var i = {
                 kind: "Document",
@@ -174,7 +174,7 @@
                             message: Object(a.e)("There was an error setting the toast display setting.", "DesktopNotificationSettingsDisplaySelect")
                         }) : s.createElement(u.a, {
                             label: Object(a.e)("Toast Display", "DesktopNotificationSettingsDisplaySelect")
-                        }, s.createElement(d.xb, {
+                        }, s.createElement(d.zb, {
                             value: this.getDisplayValue(),
                             disabled: this.state.disabled,
                             onChange: this.onChangeToastDisplaySetting
@@ -241,7 +241,7 @@
                             message: Object(a.e)("There was an error setting the toast enabled setting.", "DesktopNotificationSettingsEnabledToggle")
                         }) : s.createElement(s.Fragment, null, s.createElement(u.a, {
                             label: Object(a.e)("Toasts", "DesktopNotificationSettingsEnabledToggle")
-                        }, s.createElement(d.Xa, null, s.createElement(d.Vb, {
+                        }, s.createElement(d.Xa, null, s.createElement(d.Xb, {
                             checked: this.state.checked,
                             disabled: this.state.disabled,
                             onChange: this.onChangeShowToastSetting
@@ -362,7 +362,7 @@
                             message: Object(a.e)("There was an error setting the toast position setting.", "DesktopNotificationSettingsPositionSelect")
                         }) : s.createElement(u.a, {
                             label: Object(a.e)("Toast Position", "DesktopNotificationSettingsPositionSelect")
-                        }, s.createElement(d.xb, {
+                        }, s.createElement(d.zb, {
                             value: this.state.value,
                             disabled: this.state.disabled,
                             onChange: this.onChangeToastPositionSetting

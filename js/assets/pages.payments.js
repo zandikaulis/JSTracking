@@ -116,14 +116,14 @@
                 E = n.n(v),
                 k = n("bOWA"),
                 P = n.n(k),
-                C = n("KL9a"),
-                w = n.n(C),
+                w = n("KL9a"),
+                C = n.n(w),
                 T = n("iSjI"),
                 j = n.n(T),
                 _ = n("bQeB"),
                 S = n.n(_),
-                D = n("HvcU"),
-                O = n.n(D),
+                O = n("HvcU"),
+                D = n.n(O),
                 x = n("GA+j"),
                 M = n.n(x),
                 F = n("FBRg"),
@@ -132,32 +132,32 @@
                 I = n.n(N),
                 R = n("q8H6"),
                 X = n.n(R),
-                z = n("oQBz"),
-                U = n.n(z),
-                B = n("PwAB"),
-                W = n.n(B),
+                U = n("oQBz"),
+                B = n.n(U),
+                z = n("PwAB"),
+                W = n.n(z),
                 L = n("/0dD"),
                 H = n("DMoW"),
                 V = n("XDQu"),
-                Y = n("Ue10"),
-                q = (n("88jh"), function(e) {
+                G = n("Ue10"),
+                Y = (n("88jh"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        if ("prime" === this.props.paymentProvider) return a.createElement(Y.qb, {
-                            asset: Y.rb.LogoTwitchPrime,
+                        if ("prime" === this.props.paymentProvider) return a.createElement(G.sb, {
+                            asset: G.tb.LogoTwitchPrime,
                             width: 66,
                             height: 30,
-                            type: Y.sb.Brand
+                            type: G.ub.Brand
                         });
                         var e = this.imageSource,
                             t = e.src,
                             n = e.alt,
                             r = e.srcSet;
-                        return a.createElement(Y.Xa, {
+                        return a.createElement(G.Xa, {
                             className: "payment-method-image"
-                        }, a.createElement(Y.S, {
+                        }, a.createElement(G.S, {
                             src: t,
                             alt: n,
                             srcSet: r
@@ -170,7 +170,7 @@
                                     return {
                                         src: W.a,
                                         srcSet: {
-                                            "1x": U.a,
+                                            "1x": B.a,
                                             "2x": W.a
                                         },
                                         alt: Object(s.d)("Xsolla icon", "PaymentMethodImage")
@@ -184,24 +184,24 @@
                             var t = this.props.paymentInstrumentType ? this.props.paymentInstrumentType.toUpperCase() : void 0,
                                 n = this.props.cardType ? this.props.cardType.toUpperCase() : void 0;
                             switch (t) {
-                                case H.D.CREDIT_CARD:
+                                case H.F.CREDIT_CARD:
                                     switch (n) {
-                                        case H.C.AMERICAN_EXPRESS:
+                                        case H.E.AMERICAN_EXPRESS:
                                             return {
                                                 src: b.a,
                                                 alt: Object(s.d)("American Express", "PaymentMethodImage")
                                             };
-                                        case H.C.DISCOVER:
+                                        case H.E.DISCOVER:
                                             return {
                                                 src: E.a,
                                                 alt: Object(s.d)("Discover", "PaymentMethodImage")
                                             };
-                                        case H.C.MASTERCARD:
+                                        case H.E.MASTERCARD:
                                             return {
-                                                src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? w.a : P.a,
+                                                src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? C.a : P.a,
                                                 alt: Object(s.d)("Mastercard", "PaymentMethodImage")
                                             };
-                                        case H.C.VISA:
+                                        case H.E.VISA:
                                             return {
                                                 src: j.a,
                                                 alt: Object(s.d)("Visa", "PaymentMethodImage")
@@ -211,12 +211,12 @@
                                                 src: S.a,
                                                 srcSet: {
                                                     "1x": S.a,
-                                                    "2x": O.a
+                                                    "2x": D.a
                                                 },
                                                 alt: e
                                             }
                                     }
-                                case H.D.AMAZON:
+                                case H.F.AMAZON:
                                     return {
                                         src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? p.a : c.a,
                                         srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
@@ -228,7 +228,7 @@
                                         },
                                         alt: Object(s.d)("Amazon Pay", "PaymentMethodImage")
                                     };
-                                case H.D.PAYPAL:
+                                case H.F.PAYPAL:
                                     return {
                                         src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? I.a : M.a,
                                         srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
@@ -245,7 +245,7 @@
                                         src: S.a,
                                         srcSet: {
                                             "1x": S.a,
-                                            "2x": O.a
+                                            "2x": D.a
                                         },
                                         alt: e
                                     }
@@ -255,15 +255,15 @@
                         configurable: !0
                     }), t
                 }(a.Component));
-            var G = Object(i.connect)(function(e) {
+            var q = Object(i.connect)(function(e) {
                 return {
                     darkModeEnabled: Object(V.a)(e) === L.a.Dark
                 }
-            })(q);
+            })(Y);
             n.d(t, !1, function() {
-                return q
+                return Y
             }), n.d(t, "a", function() {
-                return G
+                return q
             })
         },
         "60o1": function(e, t, n) {
@@ -705,7 +705,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(o.Cb, {
+                        return i.createElement(o.Eb, {
                             className: this.isExpired ? "payment-method-display--expired" : "",
                             display: o.X.Flex,
                             justifyContent: this.props.justifyContent || o.Wa.Between,
@@ -1150,15 +1150,15 @@
             }(r || (r = {}));
             var k = p.k.withCategory("[payments]"),
                 P = n("Ue10"),
-                C = n("aCAx"),
-                w = n("b6Yk"),
+                w = n("aCAx"),
+                C = n("b6Yk"),
                 T = n("85n/");
             var j = n("2DIU"),
                 _ = n.n(j),
                 S = n("TSpM"),
-                D = n.n(S),
-                O = n("vE+g"),
-                x = n.n(O),
+                O = n.n(S),
+                D = n("vE+g"),
+                x = n.n(D),
                 M = n("/Z6v"),
                 F = n.n(M),
                 A = n("D409"),
@@ -1166,16 +1166,16 @@
                 I = n("QyYb"),
                 R = n.n(I),
                 X = n("GA+j"),
-                z = n.n(X),
-                U = n("FBRg"),
-                B = n.n(U),
+                U = n.n(X),
+                B = n("FBRg"),
+                z = n.n(B),
                 W = n("2xEe"),
                 L = n.n(W),
                 H = n("q8H6"),
                 V = n.n(H),
-                Y = n("x1M1"),
-                q = n("sV2v"),
-                G = n("/0dD"),
+                G = n("x1M1"),
+                Y = n("sV2v"),
+                q = n("/0dD"),
                 Z = n("XDQu"),
                 Q = n("6fcp"),
                 J = (n("1nFn"), {
@@ -1457,7 +1457,7 @@
                 }(d.Component);
             var te, ne = Object(a.connect)(function(e) {
                     return {
-                        darkModeEnabled: Object(Z.a)(e) === G.a.Dark
+                        darkModeEnabled: Object(Z.a)(e) === q.a.Dark
                     }
                 })(ee),
                 re = (n("Bd+v"), function() {
@@ -1548,7 +1548,7 @@
                                 top: 2,
                                 bottom: 1
                             },
-                            textAlign: P.Pb.Center
+                            textAlign: P.Rb.Center
                         }, d.createElement(P.Xa, {
                             display: this.state.walletLoaded ? P.X.Hide : P.X.Block
                         }, d.createElement("div", {
@@ -1667,7 +1667,7 @@
                             margin: {
                                 top: 2
                             }
-                        }, d.createElement(q.a, null), d.createElement(P.Ea, {
+                        }, d.createElement(Y.a, null), d.createElement(P.Ea, {
                             id: "payment-option",
                             label: Object(p.d)("Payment Option", "RecurlyCardWrapper")
                         }, d.createElement("div", {
@@ -1717,13 +1717,13 @@
                             checked: this.state.selectedOption === te.PayWithAmazon
                         })), d.createElement("label", {
                             htmlFor: te.PayWithAmazon
-                        }, d.createElement(Y.a, {
+                        }, d.createElement(G.a, {
                             alt: Object(p.d)("Amazon Pay", "RecurlyPaymentMethod"),
                             sources: {
                                 themed: !0,
                                 light: {
                                     "1x": _.a,
-                                    "2x": D.a
+                                    "2x": O.a
                                 },
                                 dark: {
                                     "1x": x.a,
@@ -1749,13 +1749,13 @@
                             checked: this.state.selectedOption === te.PayPal
                         })), d.createElement("label", {
                             htmlFor: te.PayPal
-                        }, d.createElement(Y.a, {
+                        }, d.createElement(G.a, {
                             alt: Object(p.d)("PayPal", "RecurlyPaymentMethod"),
                             sources: {
                                 themed: !0,
                                 light: {
-                                    "1x": z.a,
-                                    "2x": B.a
+                                    "1x": U.a,
+                                    "2x": z.a
                                 },
                                 dark: {
                                     "1x": L.a,
@@ -1817,7 +1817,7 @@
                         return t.state = {
                             showingMore: !1
                         }, t.renderNoRenewingSubscriptionsMessage = function() {
-                            return d.createElement(P.Cb, {
+                            return d.createElement(P.Eb, {
                                 alignItems: P.f.Center,
                                 background: P.r.Base,
                                 borderBottom: !0,
@@ -1850,7 +1850,7 @@
                         var e = this.props.subscriptions.slice(0, 5),
                             t = this.state.showingMore ? this.props.subscriptions : e,
                             n = this.state.showingMore ? Object(p.d)("Show Less", "SubscriptionRows") : Object(p.d)("Show More", "SubscriptionRows");
-                        return d.createElement(d.Fragment, null, d.createElement(P.Cb, {
+                        return d.createElement(d.Fragment, null, d.createElement(P.Eb, {
                             borderLeft: !0,
                             borderRight: !0,
                             display: P.X.Flex,
@@ -1862,9 +1862,9 @@
                         }, d.createElement(P.W, {
                             bold: !0,
                             color: P.O.Alt2,
-                            type: P.Tb.P,
+                            type: P.Vb.P,
                             "data-test-selector": ue.TOTAL_SUB_PRICE_TEXT
-                        }, this.numOfSubscriptionsCopy, " (", this.pricePerMonth, ")")), d.createElement(P.Cb, {
+                        }, this.numOfSubscriptionsCopy, " (", this.pricePerMonth, ")")), d.createElement(P.Eb, {
                             background: P.r.Base,
                             border: !0,
                             padding: {
@@ -1877,7 +1877,7 @@
                                 subExpirationDate: Object(de.c)(e.expiresAt)
                             }, "SubscriptionRows") : Object(p.d)("Expires {subExpirationDate, date, short}", {
                                 subExpirationDate: Object(de.c)(e.expiresAt)
-                            }, "SubscriptionRows"), d.createElement(P.Cb, {
+                            }, "SubscriptionRows"), d.createElement(P.Eb, {
                                 borderBottom: n !== t.length - 1,
                                 fullWidth: !0,
                                 key: e.id,
@@ -2028,9 +2028,9 @@
                         margin: {
                             right: .5
                         }
-                    }, d.createElement(P.qb, {
-                        asset: P.rb.Check,
-                        type: P.sb.Success
+                    }, d.createElement(P.sb, {
+                        asset: P.tb.Check,
+                        type: P.ub.Success
                     })), d.createElement(P.W, null, Object(p.d)("Your payment method has been updated.", "UpdatePaymentSuccess"))), d.createElement(P.Xa, {
                         display: P.X.Flex,
                         justifyContent: P.Wa.Center,
@@ -2258,7 +2258,7 @@
                     configurable: !0
                 }), t
             }(d.Component);
-            var Pe, Ce, we = Object(a.connect)(function(e) {
+            var Pe, we, Ce = Object(a.connect)(function(e) {
                 return {
                     languageCode: Object(c.b)(e)
                 }
@@ -2268,7 +2268,7 @@
             }(Pe || (Pe = {})),
             function(e) {
                 e.NUM_SUBS_TEXT = "payment-method-card__num-subs-text", e.UPDATE_BUTTON = "payment-method-card__update-button", e.CLOSE_BUTTON = "payment-method-card__close-button"
-            }(Ce || (Ce = {}));
+            }(we || (we = {}));
             var Te = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2277,35 +2277,35 @@
                             updatePaymentError: !1
                         }, t.renderPaymentProvider = function() {
                             var e = t.props.paymentProviderConfig;
-                            return e.provider === E.E.RECURLY ? d.createElement(oe, {
+                            return e.provider === E.G.RECURLY ? d.createElement(oe, {
                                 config: e,
                                 updatePaymentMethod: t.updatePaymentMethod
-                            }) : e.provider === E.E.ZUORA ? d.createElement(we, {
+                            }) : e.provider === E.G.ZUORA ? d.createElement(Ce, {
                                 config: e,
                                 updatePaymentMethod: t.updatePaymentMethod
-                            }) : e.provider === E.E.XSOLLA_V3 ? d.createElement(ve, {
+                            }) : e.provider === E.G.XSOLLA_V3 ? d.createElement(ve, {
                                 config: e
                             }) : d.createElement(P.W, null, Object(p.d)("Oops! Payment provider is unavailable. Please try again later.", "PaymentMethodCard"))
                         }, t.renderActionButtons = function() {
                             var e, n;
-                            if (t.props.paymentProviderConfig.provider === E.E.GOOGLE_IAB) return d.createElement(P.z, {
+                            if (t.props.paymentProviderConfig.provider === E.G.GOOGLE_IAB) return d.createElement(P.z, {
                                 disabled: !0,
                                 fullWidth: !0
                             }, Object(p.d)("Manage on Android Device", "PaymentMethodCard"));
                             if (t.state.viewType === Pe.SubRows) {
-                                var r = t.props.paymentProviderConfig.provider === E.E.XSOLLA_V3 ? Object(p.d)("Manage with Xsolla", "PaymentMethodCard") : Object(p.d)("Update Payment Info", "PaymentMethodCard");
+                                var r = t.props.paymentProviderConfig.provider === E.G.XSOLLA_V3 ? Object(p.d)("Manage with Xsolla", "PaymentMethodCard") : Object(p.d)("Update Payment Info", "PaymentMethodCard");
                                 e = d.createElement(P.z, {
                                     onClick: t.handleUpdateToggleButton,
                                     fullWidth: !0,
-                                    "data-test-selector": Ce.UPDATE_BUTTON
+                                    "data-test-selector": we.UPDATE_BUTTON
                                 }, r)
                             } else e = d.createElement(P.z, {
                                 onClick: t.handleUpdateToggleButton,
                                 fullWidth: !0,
                                 type: P.F.Text,
-                                "data-test-selector": Ce.CLOSE_BUTTON
+                                "data-test-selector": we.CLOSE_BUTTON
                             }, Object(p.d)("Cancel", "PaymentMethodCard"));
-                            return [E.E.RECURLY, E.E.ZUORA].includes(t.props.paymentProviderConfig.provider) && (n = d.createElement(P.z, {
+                            return [E.G.RECURLY, E.G.ZUORA].includes(t.props.paymentProviderConfig.provider) && (n = d.createElement(P.z, {
                                 onClick: t.handleDeleteButton,
                                 fullWidth: !0,
                                 type: P.F.Hollow
@@ -2359,7 +2359,7 @@
                                                 gateway: n,
                                                 token: r,
                                                 billing_info_country: a
-                                            }, [4, w.a.put(t, {
+                                            }, [4, C.a.put(t, {
                                                 body: i
                                             }, {
                                                 version: 5
@@ -2385,10 +2385,10 @@
                             margin: {
                                 y: 3
                             }
-                        }, d.createElement(P.Cb, {
+                        }, d.createElement(P.Eb, {
                             border: !0,
                             background: P.r.Base
-                        }, d.createElement(P.Cb, {
+                        }, d.createElement(P.Eb, {
                             padding: {
                                 x: 2,
                                 y: 1
@@ -2457,7 +2457,7 @@
                             }
                         }(this.state.errorCode))), this.props.subscriptions && !!this.props.subscriptions.length && d.createElement(P.W, {
                             color: P.O.Alt2,
-                            "data-test-selector": Ce.NUM_SUBS_TEXT
+                            "data-test-selector": we.NUM_SUBS_TEXT
                         }, this.numOfSubscriptionsWillRenew)))), this.state.viewType === Pe.SubRows && d.createElement(he, {
                             subscriptions: this.props.subscriptions
                         }))
@@ -2474,8 +2474,8 @@
                 je = n("cZKs"),
                 _e = n("geRD"),
                 Se = n("TQGo"),
-                De = n("h7rm"),
-                Oe = (n("uCCD"), function(e) {
+                Oe = n("h7rm"),
+                De = (n("uCCD"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2485,7 +2485,7 @@
                             var e = Object(p.d)("Delete saved payment method", "DeletePaymentMethodModal");
                             return t.hasRenewingSubscriptions && (e = Object(p.d)("Unable to delete payment method", "DeletePaymentMethodModal")), d.createElement(P.W, {
                                 bold: !0,
-                                type: P.Tb.H1,
+                                type: P.Vb.H1,
                                 fontSize: P.Ca.Size4
                             }, e)
                         }, t.renderBodyContent = function() {
@@ -2542,7 +2542,7 @@
                         }, t
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(P.Cb, {
+                        return d.createElement(P.Eb, {
                             className: "delete-payment-method-modal"
                         }, d.createElement(P.Xa, {
                             margin: {
@@ -2575,15 +2575,15 @@
                         configurable: !0
                     }), t
                 }(d.Component)),
-                xe = Object(u.compose)(Object(b.a)(De, {
+                xe = Object(u.compose)(Object(b.a)(Oe, {
                     name: "deleteDefaultPaymentMethod"
-                }))(Oe),
+                }))(De),
                 Me = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(P.Cb, {
+                        return d.createElement(P.Eb, {
                             background: P.r.Base,
                             padding: 2
                         }, d.createElement(xe, {
@@ -2605,14 +2605,14 @@
                 }(d.Component);
             var Fe = Object(a.connect)(null, function(e) {
                 return Object(i.bindActionCreators)({
-                    closeModal: C.c
+                    closeModal: w.c
                 }, e)
             })(Me);
             var Ae, Ne = Object(a.connect)(null, function(e) {
                     return Object(i.bindActionCreators)({
                         showDeletePaymentMethodModal: function(e) {
                             var t = l.__rest(e, []);
-                            return Object(C.d)(Fe, t)
+                            return Object(w.d)(Fe, t)
                         }
                     }, e)
                 })(Te),
@@ -2640,7 +2640,7 @@
                         var e = this.renderPaymentMethodCards();
                         return e && e.length ? d.createElement(P.Xa, {
                             className: "payment-methods-tab"
-                        }, e) : d.createElement(P.Cb, {
+                        }, e) : d.createElement(P.Eb, {
                             background: P.r.Alt,
                             border: !0,
                             className: "payment-methods-tab",
@@ -2659,17 +2659,17 @@
                                 a = t.paymentMethods;
                             if (r) return a && a.map(function(t) {
                                 var a, i = t.provider.toUpperCase();
-                                if (t.provider === "xsolla_v3".toUpperCase() && (i = E.E.XSOLLA_V3), i === E.E.RECURLY) a = r.recurly;
-                                else if (i === E.E.XSOLLA_V3) a = r.xsolla;
-                                else if (i === E.E.ZUORA) a = r.zuora;
+                                if (t.provider === "xsolla_v3".toUpperCase() && (i = E.G.XSOLLA_V3), i === E.G.RECURLY) a = r.recurly;
+                                else if (i === E.G.XSOLLA_V3) a = r.xsolla;
+                                else if (i === E.G.ZUORA) a = r.zuora;
                                 else {
-                                    if (i !== E.E.GOOGLE_IAB) return void k.warn("Received invalid payment provider type: " + i);
+                                    if (i !== E.G.GOOGLE_IAB) return void k.warn("Received invalid payment provider type: " + i);
                                     a = {}
                                 }
                                 var s = l.__assign({}, a, {
                                     provider: i
                                 });
-                                if (s.provider === E.E.ZUORA && (s.isProductionConfig = r.recurly.payWithAmazonConfigs.isProduction), i !== E.E.GOOGLE_IAB || null !== t.recurringPaymentDetails && 0 !== t.recurringPaymentDetails.length) {
+                                if (s.provider === E.G.ZUORA && (s.isProductionConfig = r.recurly.payWithAmazonConfigs.isProduction), i !== E.G.GOOGLE_IAB || null !== t.recurringPaymentDetails && 0 !== t.recurringPaymentDetails.length) {
                                     var o = [];
                                     return t.recurringPaymentDetails && t.recurringPaymentDetails.forEach(function(e) {
                                         e.expiresAt && e.renewalCurrency && e.renewalPrice ? o.push({
@@ -2721,12 +2721,12 @@
                     }), t
                 }(d.Component),
                 Xe = Object(u.compose)(Object(b.a)(Ie), Object(g.b)("PaymentMethodsTab"))(Re),
-                ze = n("HEnu"),
-                Ue = function(e, t) {
+                Ue = n("HEnu"),
+                Be = function(e, t) {
                     if (void 0 === e && (e = 1), void 0 === t && (t = 10), t < e) throw new Error("Invalid range");
                     return Array.from(Array(t + 1).keys()).slice(e)
                 },
-                Be = function(e) {
+                ze = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.handlePageJump = function(e) {
@@ -2748,25 +2748,25 @@
                             n = this.state.currentPage,
                             r = t - 3;
                         if (t <= 10) {
-                            var a = Ue(1, Math.max(t, 1)).map(function(t) {
+                            var a = Be(1, Math.max(t, 1)).map(function(t) {
                                 return e.renderButton(t)
                             });
                             return this.renderWrapper(a)
                         }
-                        var i = Ue(1, 2).map(function(t) {
+                        var i = Be(1, 2).map(function(t) {
                                 return e.renderButton(t)
                             }),
-                            s = Ue(t - 1, t).map(function(t) {
+                            s = Be(t - 1, t).map(function(t) {
                                 return e.renderButton(t)
                             }),
-                            o = Ue(n - 1, n + 1).map(function(t) {
+                            o = Be(n - 1, n + 1).map(function(t) {
                                 return e.renderButton(t)
                             }),
                             c = this.renderEllipsis("start"),
                             l = this.renderEllipsis("end");
-                        return n <= 4 ? (i = Ue(1, Math.max(n + 1, 2)).map(function(t) {
+                        return n <= 4 ? (i = Be(1, Math.max(n + 1, 2)).map(function(t) {
                             return e.renderButton(t)
-                        }), this.renderWrapper(i.concat([c], s))) : n >= r ? (s = Ue(n - 1, t).map(function(t) {
+                        }), this.renderWrapper(i.concat([c], s))) : n >= r ? (s = Be(n - 1, t).map(function(t) {
                             return e.renderButton(t)
                         }), this.renderWrapper(i.concat([c], s))) : this.renderWrapper(i.concat([c], o, [l], s))
                     }, t.prototype.renderWrapper = function(e) {
@@ -2778,7 +2778,7 @@
                             }
                         }, d.createElement(P.z, {
                             type: P.F.Hollow,
-                            icon: P.rb.AngleLeft,
+                            icon: P.tb.AngleLeft,
                             onClick: this.props.onBack,
                             disabled: 1 === this.state.currentPage,
                             "data-test-selector": "table-pagination__back-button"
@@ -2788,7 +2788,7 @@
                             }
                         }, d.createElement(P.z, {
                             type: P.F.Hollow,
-                            icon: P.rb.AngleRight,
+                            icon: P.tb.AngleRight,
                             onClick: this.props.onNext,
                             disabled: this.state.currentPage === this.state.totalNumberPages,
                             "data-test-selector": "table-pagination__next-button"
@@ -2822,11 +2822,11 @@
             var Le, He, Ve = function() {
                     return Object(p.d)("Twitch Turbo", "TransactionHistoryTab")
                 },
-                Ye = function(e) {
-                    return d.createElement(P.Kb, null, d.createElement(P.Hb, {
-                        verticalAlign: P.dc.Middle
-                    }, d.createElement(P.W, null, e.purchasedAt ? Object(p.c)(Object(de.c)(e.purchasedAt), "medium") : "-")), d.createElement(P.Hb, {
-                        verticalAlign: P.dc.Middle
+                Ge = function(e) {
+                    return d.createElement(P.Mb, null, d.createElement(P.Jb, {
+                        verticalAlign: P.fc.Middle
+                    }, d.createElement(P.W, null, e.purchasedAt ? Object(p.c)(Object(de.c)(e.purchasedAt), "medium") : "-")), d.createElement(P.Jb, {
+                        verticalAlign: P.fc.Middle
                     }, d.createElement(P.Xa, {
                         display: P.X.Flex
                     }, d.createElement(P.U, {
@@ -2847,8 +2847,8 @@
                         type: P.V.Inherit,
                         to: e.product.owner ? "/" + e.product.owner.login : void 0,
                         hoverUnderlineNone: !0
-                    }, "Turbo" === e.product.name ? Ve() : e.product.name))))), d.createElement(P.Hb, {
-                        verticalAlign: P.dc.Middle
+                    }, "Turbo" === e.product.name ? Ve() : e.product.name))))), d.createElement(P.Jb, {
+                        verticalAlign: P.fc.Middle
                     }, d.createElement(P.W, null, function(e, t) {
                         if ("SUBSCRIPTION" === e.type) {
                             if ("Turbo" === e.name) return Object(p.d)("Turbo - Subscription", "TransactionHistoryTab");
@@ -2902,8 +2902,8 @@
                         gift: e.isGift,
                         recipient: e.recipient,
                         quantity: e.quantity
-                    }))), d.createElement(P.Hb, {
-                        verticalAlign: P.dc.Middle
+                    }))), d.createElement(P.Jb, {
+                        verticalAlign: P.fc.Middle
                     }, d.createElement(P.Xa, {
                         display: P.X.Flex,
                         justifyContent: P.Wa.End
@@ -2918,22 +2918,22 @@
                             return e < 0 ? "+" + n : n
                         }
                         return "-"
-                    }(e.grossAmount, e.currency)))), d.createElement(P.Hb, {
-                        verticalAlign: P.dc.Middle
+                    }(e.grossAmount, e.currency)))), d.createElement(P.Jb, {
+                        verticalAlign: P.fc.Middle
                     }, d.createElement(We.a, {
                         paymentProvider: e.paymentMethod.provider,
                         paymentInstrumentType: e.paymentMethod.paymentType,
                         cardType: e.paymentMethod.cardType || void 0
                     })))
                 },
-                qe = n("e3pt");
+                Ye = n("e3pt");
             ! function(e) {
                 e.PurchaseDateDesc = "PURCHASE_DATE_DESC", e.PurchaseDateAsc = "PURCHASE_DATE_ASC", e.PriceDesc = "PRICE_DESC", e.PriceAsc = "PRICE_ASC"
             }(Le || (Le = {})),
             function(e) {
                 e.All = "ALL", e.Subscriptions = "SUBSCRIPTIONS"
             }(He || (He = {}));
-            var Ge = 15,
+            var qe = 15,
                 Ze = "no-transactions-text-selector",
                 Qe = function(e) {
                     function t() {
@@ -2941,11 +2941,11 @@
                         return t.state = {
                             currentIndex: 0,
                             currentFilters: l.__assign({}, t.props.data.variables.filters),
-                            dateSortType: P.zb.Descending,
-                            costSortType: P.zb.Default,
+                            dateSortType: P.Bb.Descending,
+                            costSortType: P.Bb.Default,
                             refetching: !1
                         }, t.renderNoTransactionsMessage = function() {
-                            return d.createElement(P.Cb, {
+                            return d.createElement(P.Eb, {
                                 alignItems: P.f.Center,
                                 borderBottom: !0,
                                 borderLeft: !0,
@@ -2968,16 +2968,16 @@
                                 }
                             }, "TransactionHistoryTab"))))
                         }, t.getCurrentPage = function() {
-                            return Math.floor(t.state.currentIndex / Ge) + 1
+                            return Math.floor(t.state.currentIndex / qe) + 1
                         }, t.getTotalPages = function() {
-                            return t.props.data.currentUser && t.props.data.currentUser.paymentTransactions && t.props.data.currentUser.paymentTransactions.totalCount && Math.ceil(t.props.data.currentUser.paymentTransactions.totalCount / Ge) || 1
+                            return t.props.data.currentUser && t.props.data.currentUser.paymentTransactions && t.props.data.currentUser.paymentTransactions.totalCount && Math.ceil(t.props.data.currentUser.paymentTransactions.totalCount / qe) || 1
                         }, t.handlePageJump = function(e) {
                             return l.__awaiter(t, void 0, void 0, function() {
                                 var t;
                                 return l.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return this.state.refetching ? [2] : (t = (e - 1) * Ge, [4, this.queryPageJump(t)]);
+                                            return this.state.refetching ? [2] : (t = (e - 1) * qe, [4, this.queryPageJump(t)]);
                                         case 1:
                                             return n.sent(), this.setState({
                                                 currentIndex: t
@@ -3005,11 +3005,11 @@
                                 return l.__generator(this, function(e) {
                                     switch (e.label) {
                                         case 0:
-                                            return this.state.refetching ? [2] : [4, this.queryPageJump(this.state.currentIndex + Ge)];
+                                            return this.state.refetching ? [2] : [4, this.queryPageJump(this.state.currentIndex + qe)];
                                         case 1:
                                             return e.sent(), this.setState(function(e) {
                                                 return {
-                                                    currentIndex: e.currentIndex + Ge
+                                                    currentIndex: e.currentIndex + qe
                                                 }
                                             }), [2]
                                     }
@@ -3020,11 +3020,11 @@
                                 return l.__generator(this, function(e) {
                                     switch (e.label) {
                                         case 0:
-                                            return this.state.refetching ? [2] : [4, this.queryPageJump(this.state.currentIndex - Ge)];
+                                            return this.state.refetching ? [2] : [4, this.queryPageJump(this.state.currentIndex - qe)];
                                         case 1:
                                             return e.sent(), this.setState(function(e) {
                                                 return {
-                                                    currentIndex: e.currentIndex - Ge
+                                                    currentIndex: e.currentIndex - qe
                                                 }
                                             }), [2]
                                     }
@@ -3036,15 +3036,15 @@
                                 return l.__generator(this, function(r) {
                                     switch (r.label) {
                                         case 0:
-                                            return e = this.state.dateSortType, t = e === P.zb.Default || e === P.zb.Ascending ? P.zb.Descending : P.zb.Ascending, n = l.__assign({}, this.state.currentFilters, {
-                                                sortBy: t === P.zb.Descending ? Le.PurchaseDateDesc : Le.PurchaseDateAsc
+                                            return e = this.state.dateSortType, t = e === P.Bb.Default || e === P.Bb.Ascending ? P.Bb.Descending : P.Bb.Ascending, n = l.__assign({}, this.state.currentFilters, {
+                                                sortBy: t === P.Bb.Descending ? Le.PurchaseDateDesc : Le.PurchaseDateAsc
                                             }), [4, this.props.getFilteredQuery(n)];
                                         case 1:
                                             return r.sent(), this.setState({
                                                 currentIndex: 0,
                                                 currentFilters: n,
                                                 dateSortType: t,
-                                                costSortType: P.zb.Default
+                                                costSortType: P.Bb.Default
                                             }), [2]
                                     }
                                 })
@@ -3055,15 +3055,15 @@
                                 return l.__generator(this, function(r) {
                                     switch (r.label) {
                                         case 0:
-                                            return e = this.state.costSortType, t = e === P.zb.Default || e === P.zb.Ascending ? P.zb.Descending : P.zb.Ascending, n = l.__assign({}, this.state.currentFilters, {
-                                                sortBy: t === P.zb.Descending ? Le.PriceDesc : Le.PriceAsc
+                                            return e = this.state.costSortType, t = e === P.Bb.Default || e === P.Bb.Ascending ? P.Bb.Descending : P.Bb.Ascending, n = l.__assign({}, this.state.currentFilters, {
+                                                sortBy: t === P.Bb.Descending ? Le.PriceDesc : Le.PriceAsc
                                             }), [4, this.props.getFilteredQuery(n)];
                                         case 1:
                                             return r.sent(), this.setState({
                                                 currentIndex: 0,
                                                 currentFilters: n,
                                                 costSortType: t,
-                                                dateSortType: P.zb.Default
+                                                dateSortType: P.Bb.Default
                                             }), [2]
                                     }
                                 })
@@ -3123,7 +3123,7 @@
                         var e = [];
                         return this.props.data.currentUser && this.props.data.currentUser.paymentTransactions && this.props.data.currentUser.paymentTransactions.edges && this.props.data.currentUser.paymentTransactions.edges.forEach(function(t) {
                             var n = t.node;
-                            n && e.push(d.createElement(Ye, l.__assign({
+                            n && e.push(d.createElement(Ge, l.__assign({
                                 key: n.id
                             }, n)))
                         }), d.createElement(P.Xa, null, d.createElement(P.Xa, {
@@ -3143,7 +3143,7 @@
                             flexDirection: P.Aa.Column
                         }, d.createElement(P.W, {
                             bold: !0
-                        }, Object(p.d)("Start", "TransactionHistoryTab")), d.createElement(ze.a, {
+                        }, Object(p.d)("Start", "TransactionHistoryTab")), d.createElement(Ue.a, {
                             defaultDate: this.state.currentFilters.purchasedAfter,
                             maxDate: this.state.currentFilters.purchasedBefore,
                             onChange: this.handleMinDate,
@@ -3155,7 +3155,7 @@
                             flexDirection: P.Aa.Column
                         }, d.createElement(P.W, {
                             bold: !0
-                        }, Object(p.d)("End", "TransactionHistoryTab")), d.createElement(ze.a, {
+                        }, Object(p.d)("End", "TransactionHistoryTab")), d.createElement(Ue.a, {
                             defaultDate: this.state.currentFilters.purchasedBefore,
                             minDate: this.state.currentFilters.purchasedAfter,
                             onChange: this.handleMaxDate,
@@ -3183,31 +3183,31 @@
                             type: P.F.Hollow,
                             linkTo: "https://www.paypal.com/mep/dashboard",
                             targetBlank: !0
-                        }, Object(p.d)("View Your PayPal Order History", "TransactionHistoryTab"))))), d.createElement(P.Cb, {
+                        }, Object(p.d)("View Your PayPal Order History", "TransactionHistoryTab"))))), d.createElement(P.Eb, {
                             background: P.r.Base,
                             elevation: 2,
                             margin: {
                                 y: 2
                             }
-                        }, d.createElement(P.Fb, {
+                        }, d.createElement(P.Hb, {
                             alternateRows: !0
-                        }, d.createElement(P.Ib, null, d.createElement(P.Jb, {
+                        }, d.createElement(P.Kb, null, d.createElement(P.Lb, {
                             label: Object(p.d)("Date", "TransactionHistoryTab"),
                             sorting: this.state.dateSortType,
                             onClick: this.handleSortDate,
                             "data-test-selector": "date-table-heading-selector"
-                        }), d.createElement(P.Jb, {
+                        }), d.createElement(P.Lb, {
                             label: Object(p.d)("Channel", "TransactionHistoryTab")
-                        }), d.createElement(P.Jb, {
+                        }), d.createElement(P.Lb, {
                             label: Object(p.d)("Product", "TransactionHistoryTab")
-                        }), d.createElement(P.Jb, {
+                        }), d.createElement(P.Lb, {
                             label: Object(p.d)("Price", "TransactionHistoryTab"),
                             sorting: this.state.costSortType,
                             onClick: this.handleSortCost,
                             "data-test-selector": "price-table-heading-selector"
-                        }), d.createElement(P.Jb, {
+                        }), d.createElement(P.Lb, {
                             label: Object(p.d)("Payment Method", "TransactionHistoryTab")
-                        })), d.createElement(P.Gb, null, e)), !e.length && this.renderNoTransactionsMessage()), d.createElement(Be, {
+                        })), d.createElement(P.Ib, null, e)), !e.length && this.renderNoTransactionsMessage()), d.createElement(ze, {
                             currentPage: this.getCurrentPage(),
                             totalNumberPages: this.getTotalPages(),
                             onNext: this.handleNextPage,
@@ -3232,11 +3232,11 @@
                     return {
                         currentUserID: t.user && t.user.id || null
                     }
-                }), Object(b.a)(qe, {
+                }), Object(b.a)(Ye, {
                     options: function(e) {
                         return {
                             variables: {
-                                first: Ge,
+                                first: qe,
                                 after: "0",
                                 filters: {
                                     userID: e.currentUserID,
@@ -3250,7 +3250,7 @@
                         return l.__assign({}, e, {
                             getOffsetQuery: function(t, n) {
                                 return e.data.fetchMore({
-                                    query: qe,
+                                    query: Ye,
                                     variables: {
                                         first: e.data.variables.first,
                                         after: "" + t,
@@ -3263,7 +3263,7 @@
                             },
                             getFilteredQuery: function(t) {
                                 return e.data.fetchMore({
-                                    query: qe,
+                                    query: Ye,
                                     variables: {
                                         first: e.data.variables.first,
                                         after: "0",
@@ -3293,7 +3293,7 @@
                         }, t
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return this.props.isLoggedIn ? d.createElement(P.Cb, {
+                        return this.props.isLoggedIn ? d.createElement(P.Eb, {
                             background: P.r.Alt,
                             fullWidth: !0,
                             alignContent: P.e.Center
@@ -3303,15 +3303,15 @@
                                 y: 3
                             }
                         }, d.createElement(P.W, {
-                            type: P.Tb.H2
+                            type: P.Vb.H2
                         }, Object(p.d)("Payments", "PaymentsLandingPagePresentationComponent")), d.createElement(P.Xa, {
                             margin: {
                                 top: 2
                             }
-                        }, d.createElement(P.Eb, null, d.createElement(P.Db, {
+                        }, d.createElement(P.Gb, null, d.createElement(P.Fb, {
                             active: !this.state.txnHistoryTabActive,
                             onClick: this.switchToPaymentMethodsTab
-                        }, Object(p.d)("Payment Methods", "PaymentsLandingPagePresentationComponent")), d.createElement(P.Db, {
+                        }, Object(p.d)("Payment Methods", "PaymentsLandingPagePresentationComponent")), d.createElement(P.Fb, {
                             active: this.state.txnHistoryTabActive,
                             onClick: this.switchToTxnTab
                         }, Object(p.d)("Purchase History", "PaymentsLandingPagePresentationComponent"))), d.createElement(P.Xa, {

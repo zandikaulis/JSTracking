@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [105], {
+    [106], {
         "3lt/": function(e, t, a) {
             "use strict";
             a("mrSG"), a("uhBA");
@@ -38,8 +38,8 @@
             var b = a("GD6M"),
                 E = a("Ue10"),
                 S = "company-request-access-form-company-name",
-                T = "company-request-access-form-company-website",
-                C = "company-request-access-form-industry",
+                C = "company-request-access-form-company-website",
+                T = "company-request-access-form-industry",
                 _ = "company-request-access-form-company-size",
                 R = "company-request-access-form-city",
                 q = "company-request-access-form-state",
@@ -192,7 +192,7 @@
                             required: !0,
                             type: E.Ta.Text,
                             onChange: this.setCompanyWebsite,
-                            "data-test-selector": T
+                            "data-test-selector": C
                         }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
@@ -203,7 +203,7 @@
                             margin: {
                                 y: 1
                             }
-                        }, r.createElement(E.nb, {
+                        }, r.createElement(E.pb, {
                             name: "companytype",
                             label: Object(i.d)("Developer", "DevRequestAccess"),
                             value: n.Developer,
@@ -213,7 +213,7 @@
                             margin: {
                                 y: 1
                             }
-                        }, r.createElement(E.nb, {
+                        }, r.createElement(E.pb, {
                             name: "companytype",
                             label: Object(i.d)("Publisher", "DevRequestAccess"),
                             value: n.Publisher,
@@ -223,7 +223,7 @@
                             margin: {
                                 y: 1
                             }
-                        }, r.createElement(E.nb, {
+                        }, r.createElement(E.pb, {
                             name: "companytype",
                             label: Object(i.d)("Other", "DevRequestAccess"),
                             value: n.Other,
@@ -249,7 +249,7 @@
                             required: !0,
                             type: E.Ta.Text,
                             onChange: this.setIndustry,
-                            "data-test-selector": C
+                            "data-test-selector": T
                         }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
@@ -398,9 +398,9 @@
                                     bottom: .5
                                 }
                             }, r.createElement(E.W, {
-                                type: E.Tb.H4
+                                type: E.Vb.H4
                             }, Object(i.d)("Error", "DevRequestAccess"))), r.createElement(E.W, {
-                                type: E.Tb.P
+                                type: E.Vb.P
                             }, t.props.errorMessage))
                         }, t
                     }
@@ -415,7 +415,7 @@
                         return this.props.errorMessage && this.props.errorMessage.length && (e = this.renderErrorMessage()), r.createElement(E.Xa, {
                             className: "dev-company-request-access",
                             fullWidth: !0
-                        }, r.createElement(E.pb, {
+                        }, r.createElement(E.rb, {
                             centered: !0
                         }, r.createElement(E.Xa, {
                             margin: {
@@ -431,9 +431,9 @@
                                 bottom: 1
                             }
                         }, r.createElement(E.W, {
-                            type: E.Tb.H2
+                            type: E.Vb.H2
                         }, Object(i.d)("Register your company and game with Twitch", "DevRequestAccess"))), r.createElement(E.W, {
-                            type: E.Tb.P
+                            type: E.Vb.P
                         }, Object(i.d)("The Twitch Developer Console helps you to link and manage your games and their assets on Twitch. Before providing access, we just need to capture some simple details. We will need to confirm that you are authorized for the company you specify. Communications will be sent to the email you have on file with your Twitch.tv account.", "DevRequestAccess")))), r.createElement(E.Ja, null, r.createElement(E.P, {
                             cols: {
                                 default: 12,
@@ -546,7 +546,7 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(i.Mb, {
+                        return s.createElement(i.Ob, {
                             onClick: this.onClick,
                             label: this.props.game.name
                         })
@@ -648,7 +648,7 @@
                         return s.createElement(i.Xa, null, s.createElement(o.a, {
                             onClickOut: this.onClickOut
                         }, s.createElement(i.Xa, {
-                            position: i.hb.Relative,
+                            position: i.jb.Relative,
                             padding: {
                                 bottom: 1
                             }
@@ -712,7 +712,7 @@
                 b = a("1mFg"),
                 E = v.a + "/kraken/search/games",
                 S = 7,
-                T = function(e) {
+                C = function(e) {
                     function t(t) {
                         var a = e.call(this, t) || this;
                         return a.state = {
@@ -764,7 +764,7 @@
             a.d(t, "a", function() {
                 return y
             }), a.d(t, "b", function() {
-                return T
+                return C
             })
         },
         "V+GM": function(e, t, a) {

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [199, 188], {
+    [205, 194], {
         "+oKn": function(e, n) {
             var t = {
                 kind: "Document",
@@ -412,8 +412,8 @@
                         size: 36,
                         src: n.profileImageURL,
                         alt: n.displayName
-                    }), o.createElement(f.qb, {
-                        asset: f.rb.AngleRight,
+                    }), o.createElement(f.sb, {
+                        asset: f.tb.AngleRight,
                         height: 10
                     }), o.createElement(f.q, {
                         size: 36,
@@ -423,17 +423,17 @@
                 },
                 v = function(e) {
                     var n = e.seconds;
-                    return o.createElement(f.Cb, {
+                    return o.createElement(f.Eb, {
                         display: f.X.Flex,
                         alignItems: f.f.Center,
                         justifyContent: f.Wa.Center,
                         color: f.O.Overlay
                     }, o.createElement(f.Za, {
-                        size: f.Ab.Large,
+                        size: f.Cb.Large,
                         delay: 0,
                         inheritColor: !0
                     }), o.createElement(f.Xa, {
-                        position: f.hb.Absolute
+                        position: f.jb.Absolute
                     }, n))
                 },
                 b = t("2xye"),
@@ -459,10 +459,10 @@
                 p.o.track(e, o)
             }
             var S = t("eRLD"),
-                C = {
+                I = {
                     "data-test-selector": "raid-message"
                 },
-                I = {
+                C = {
                     "data-test-selector": "raid-cancel-button"
                 },
                 E = {
@@ -490,7 +490,7 @@
                             padding: {
                                 left: 1
                             }
-                        }, C), this.props.timerPhase.isWaiting ? w(this.props, this.props.timerPhase.secondsUntilTransition) : R(this.props))), this.props.timerPhase.isReady && this.props.timerPhase.secondsUntilTransition <= 10 && o.createElement(v, {
+                        }, I), this.props.timerPhase.isWaiting ? w(this.props, this.props.timerPhase.secondsUntilTransition) : R(this.props))), this.props.timerPhase.isReady && this.props.timerPhase.secondsUntilTransition <= 10 && o.createElement(v, {
                             seconds: this.props.timerPhase.secondsUntilTransition
                         })), o.createElement(f.Xa, {
                             display: f.X.Flex,
@@ -506,7 +506,7 @@
                             type: f.F.Hollow,
                             size: f.D.Small,
                             onClick: this.props.onCancelRaid
-                        }, I), o.createElement(f.Cb, {
+                        }, C), o.createElement(f.Eb, {
                             padding: {
                                 x: 1
                             },
@@ -532,12 +532,12 @@
                         "x:strong": function(e) {
                             return o.createElement(f.W, {
                                 key: "raid-count",
-                                type: f.Tb.Strong
+                                type: f.Vb.Strong
                             }, e)
                         },
                         "x:span": function(e) {
                             return o.createElement(f.W, {
-                                type: f.Tb.Span
+                                type: f.Vb.Span
                             }, e)
                         },
                         raiderCount: e.raid.viewerCount,
@@ -555,12 +555,12 @@
                         "x:strong": function(e) {
                             return o.createElement(f.W, {
                                 key: "raid-count",
-                                type: f.Tb.Strong
+                                type: f.Vb.Strong
                             }, e)
                         },
                         "x:span": function(e) {
                             return o.createElement(f.W, {
-                                type: f.Tb.Span
+                                type: f.Vb.Span
                             }, e)
                         },
                         raiderCount: e.raid.viewerCount,
@@ -605,7 +605,7 @@
                         return null
                     }, n
                 }(o.Component),
-                A = function(e) {
+                j = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
@@ -638,7 +638,7 @@
                             padding: {
                                 left: 1
                             }
-                        }, F(this.props))), o.createElement(f.Xa, {
+                        }, A(this.props))), o.createElement(f.Xa, {
                             alignSelf: f.g.Center
                         }, this.renderActionable())), this.props.raid.isGoing && o.createElement(L, {
                             from: this.props.raid.jitterSeconds,
@@ -650,21 +650,21 @@
                             seconds: this.state.remainingJitterSeconds
                         }) : this.props.hasJoined ? o.createElement(U, {
                             onLeaveRaid: this.handleLeaveRaid
-                        }) : o.createElement(j, {
+                        }) : o.createElement(F, {
                             onJoinRaid: this.props.onJoinRaid
                         })
                     }, n
                 }(o.Component),
-                F = function(e) {
+                A = function(e) {
                     return Object(p.d)("{viewerCount, plural,     one {<x:block>{sourceDisplayName} is</x:block><x:block>raiding {targetDisplayName}</x:block><x:block>with # raider</x:block>}     other {<x:block>{sourceDisplayName} is</x:block><x:block>raiding {targetDisplayName}</x:block><x:block>with # raiders</x:block>}}", {
                         "x:block": function(e) {
                             return o.createElement(f.W, null, e)
                         },
                         sourceDisplayName: o.createElement(f.W, {
-                            type: f.Tb.Strong
+                            type: f.Vb.Strong
                         }, e.sourceChannel.displayName),
                         targetDisplayName: o.createElement(f.W, {
-                            type: f.Tb.Strong
+                            type: f.Vb.Strong
                         }, e.targetChannel.displayName),
                         viewerCount: e.raid.viewerCount
                     }, "RaidViewerMessage")
@@ -675,14 +675,14 @@
                         size: f.D.Small,
                         type: f.F.Hollow,
                         onClick: n
-                    }, o.createElement(f.Cb, {
+                    }, o.createElement(f.Eb, {
                         padding: {
                             x: 1
                         },
                         color: f.O.Overlay
                     }, Object(p.d)("Leave", "RaidViewerButton")))
                 },
-                j = function(e) {
+                F = function(e) {
                     var n = e.onJoinRaid;
                     return o.createElement(f.z, {
                         size: f.D.Small,
@@ -744,7 +744,7 @@
                                 n = this.props.data,
                                 t = n.sourceChannel,
                                 a = n.targetChannel,
-                                r = o.createElement(A, {
+                                r = o.createElement(j, {
                                     hasJoined: this.hasJoinedCurrentRaid,
                                     onJoinRaid: this.handleJoinRaid,
                                     onLeaveRaid: this.handleLeaveRaid,
@@ -760,11 +760,11 @@
                                 raid: e,
                                 sourceChannel: t,
                                 targetChannel: a
-                            })), o.createElement(f.Cb, i.__assign({
+                            })), o.createElement(f.Eb, i.__assign({
                                 background: f.r.AccentAlt2,
                                 color: f.O.Overlay,
-                                position: f.hb.Absolute,
-                                zIndex: f.gc.Above,
+                                position: f.jb.Absolute,
+                                zIndex: f.ic.Above,
                                 fullWidth: !0
                             }, B), o.createElement(f.Xa, {
                                 padding: {
@@ -2413,10 +2413,10 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(n, e), n.prototype.render = function() {
-                        return this.props.data && this.props.data.loading ? s.createElement(f.gb, {
+                        return this.props.data && this.props.data.loading ? s.createElement(f.ib, {
                             lineCount: 4,
                             width: 160
-                        }) : this.props.data && this.props.data.error ? s.createElement(f.Xa, null) : s.createElement(f.Cb, {
+                        }) : this.props.data && this.props.data.error ? s.createElement(f.Xa, null) : s.createElement(f.Eb, {
                             borderLeft: !0,
                             fullHeight: !0,
                             fullWidth: !0,
@@ -2430,7 +2430,7 @@
                             width: "54",
                             height: "45"
                         })), this.getCopy(), s.createElement(f.Xa, {
-                            textAlign: f.Pb.Center,
+                            textAlign: f.Rb.Center,
                             padding: {
                                 y: 3,
                                 x: 2
@@ -2466,7 +2466,7 @@
                                 e = s.createElement(f.W, null, t)
                         }
                         return s.createElement(f.Xa, {
-                            textAlign: f.Pb.Center
+                            textAlign: f.Rb.Center
                         }, s.createElement(f.Xa, {
                             padding: {
                                 y: 1,
@@ -2494,8 +2494,8 @@
                 e[e.RoomMessageEvent = 0] = "RoomMessageEvent", e[e.ModerationEvent = 1] = "ModerationEvent", e[e.SystemMessageEvent = 2] = "SystemMessageEvent", e[e.DeletedMessageEvent = 3] = "DeletedMessageEvent", e[e.CheerbombEvent = 4] = "CheerbombEvent"
             }(v || (v = {}));
             var S = t("8EgP"),
-                C = t("oK83"),
-                I = t("aF6k");
+                I = t("oK83"),
+                C = t("aF6k");
 
             function E(e) {
                 return r.__assign({}, e, {
@@ -2506,7 +2506,7 @@
             function M(e) {
                 return {
                     kind: v.SystemMessageEvent,
-                    id: Object(I.a)("roomSystemMessage"),
+                    id: Object(C.a)("roomSystemMessage"),
                     text: e
                 }
             }
@@ -2705,7 +2705,7 @@
                                         i.consumeRoomEvent(function(e, n, t) {
                                             return {
                                                 kind: v.ModerationEvent,
-                                                id: Object(I.a)(n + "-moderation-event"),
+                                                id: Object(C.a)(n + "-moderation-event"),
                                                 channelID: e,
                                                 userID: n,
                                                 purgeAfter: t
@@ -2722,7 +2722,7 @@
                                         i.consumeRoomEvent(function(e, n, t, i, o, a, r, s) {
                                             return {
                                                 kind: v.CheerbombEvent,
-                                                id: Object(I.a)(n + "-cheerbomb-event"),
+                                                id: Object(C.a)(n + "-cheerbomb-event"),
                                                 messageID: e,
                                                 userID: n,
                                                 displayName: t,
@@ -2731,7 +2731,7 @@
                                                 selectedCount: o,
                                                 bitsAmount: r,
                                                 domain: s,
-                                                sourceType: C.a.room_message
+                                                sourceType: I.a.room_message
                                             }
                                         }(i.roomID, n.data.userID, n.data.displayName, n.data.userLogin, n.data.selectedCount, n.data.minCheerAmount, n.data.bitsAmount, n.data.domain))
                                 }
@@ -2739,10 +2739,10 @@
                         })
                     }
                 }(),
-                A = t("lZCe"),
-                F = t("Mj6i"),
+                j = t("lZCe"),
+                A = t("Mj6i"),
                 U = t("tIid"),
-                j = t("geRD"),
+                F = t("geRD"),
                 x = t("oe5X"),
                 B = t("D7An"),
                 P = t("uIkQ"),
@@ -3179,8 +3179,8 @@
                 De = t("YXxK"),
                 Ne = t("lNGo"),
                 Se = t("ySk3"),
-                Ce = t("oi4T"),
-                Ie = function() {
+                Ie = t("oi4T"),
+                Ce = function() {
                     var e = Array.from(Array(21).keys()).map(function(e) {
                         return Ee(e)
                     });
@@ -3208,14 +3208,14 @@
                             right: 1
                         }
                     }, s.createElement(f.W, {
-                        type: f.Tb.Span
-                    }, s.createElement(f.gb, {
+                        type: f.Vb.Span
+                    }, s.createElement(f.ib, {
                         width: 70
                     }))), s.createElement(f.Pa, {
                         display: f.X.InlineBlock
                     }, s.createElement(f.W, {
-                        type: f.Tb.Span
-                    }, s.createElement(f.gb, {
+                        type: f.Vb.Span
+                    }, s.createElement(f.ib, {
                         width: 50 + 89 * e % 151
                     }))))
                 },
@@ -3225,7 +3225,7 @@
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.usernameClickHandler = function(e) {
                             var t = e.currentTarget.getAttribute("data-username");
-                            t && n.props.onUsernameClick(t, C.a.member_list, "", e.currentTarget.getBoundingClientRect().bottom)
+                            t && n.props.onUsernameClick(t, I.a.member_list, "", e.currentTarget.getBoundingClientRect().bottom)
                         }, n
                     }
                     return r.__extends(n, e), n.prototype.render = function() {
@@ -3241,7 +3241,7 @@
                                     "data-username": n,
                                     onClick: e.usernameClickHandler
                                 }, s.createElement(f.W, {
-                                    transform: f.Sb.Capitalize
+                                    transform: f.Ub.Capitalize
                                 }, n)))
                             });
                         return s.createElement(f.Xa, {
@@ -3250,7 +3250,7 @@
                                 bottom: 2
                             }
                         }, s.createElement(f.W, {
-                            transform: f.Sb.Uppercase
+                            transform: f.Ub.Uppercase
                         }, i), o)
                     }, n
                 }(s.Component)),
@@ -3275,13 +3275,13 @@
                         fullWidth: !0,
                         fullHeight: !0,
                         flexShrink: 0,
-                        zIndex: f.gc.Default
+                        zIndex: f.ic.Default
                     }, s.createElement(f.Xa, {
                         className: "member-list__pane",
                         display: f.X.Flex,
                         flexDirection: f.Aa.Column,
                         flexWrap: f.Ba.NoWrap,
-                        position: f.hb.Absolute,
+                        position: f.jb.Absolute,
                         attachBottom: !0,
                         attachLeft: !0,
                         attachRight: !0
@@ -3298,13 +3298,13 @@
                         },
                         flexShrink: 0
                     }, s.createElement(f.Xa, {
-                        position: f.hb.Absolute,
+                        position: f.jb.Absolute,
                         attachLeft: !0,
                         margin: {
                             left: 1
                         }
                     }, s.createElement(f.A, {
-                        icon: f.rb.Close,
+                        icon: f.tb.Close,
                         ariaLabel: Object(l.d)("Close", "MemberList"),
                         onClick: this.props.closeMemberList,
                         "data-test-selector": "member-list-close-button"
@@ -3400,10 +3400,10 @@
                 })(Oe),
                 Te = t("eJ65"),
                 Le = t("8Ad5"),
-                Ae = t("f00E"),
-                Fe = t("DMoW"),
+                je = t("f00E"),
+                Ae = t("DMoW"),
                 Ue = t("okS7"),
-                je = t("ry0r"),
+                Fe = t("ry0r"),
                 xe = t("5zXJ"),
                 Be = t("XmgI"),
                 Pe = t("ebRM"),
@@ -3468,15 +3468,15 @@
                 Qe = (t("BsQe"), function() {
                     return s.createElement(f.Xa, {
                         fullWidth: !0,
-                        position: f.hb.Absolute,
+                        position: f.jb.Absolute,
                         className: "rooms-bits-prompt"
-                    }, s.createElement(f.Cb, {
+                    }, s.createElement(f.Eb, {
                         border: !0,
                         background: f.r.Base,
                         elevation: 3,
                         fullWidth: !0,
                         padding: 1,
-                        textAlign: f.Pb.Center,
+                        textAlign: f.Rb.Center,
                         className: "rooms-bits-prompt__content"
                     }, s.createElement(f.Xa, {
                         padding: {
@@ -3484,7 +3484,7 @@
                         }
                     }, s.createElement(f.W, {
                         color: f.O.Link,
-                        type: f.Tb.H4,
+                        type: f.Vb.H4,
                         bold: !0
                     }, Object(l.d)("Cheering is not available in Rooms", "DisabledBitsCard"))), s.createElement(f.Xa, {
                         display: f.X.Flex,
@@ -3536,11 +3536,11 @@
                     return r.__extends(n, e), n.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, n.prototype.render = function() {
-                        return this.props.data.loading ? s.createElement(f.gb, {
+                        return this.props.data.loading ? s.createElement(f.ib, {
                             lineCount: 4
                         }) : this.props.data.error ? s.createElement(f.Xa, null) : s.createElement(Me.b, {
                             className: "room-settings"
-                        }, s.createElement(f.Cb, {
+                        }, s.createElement(f.Eb, {
                             className: "room-settings__content",
                             background: f.r.Base,
                             color: f.O.Base,
@@ -3555,13 +3555,13 @@
                             label: Object(l.d)("Dark Mode", "RoomSettings"),
                             onChange: this.onDarkModeToggle
                         });
-                        return s.createElement(f.Xa, null, s.createElement(f.Cb, {
+                        return s.createElement(f.Xa, null, s.createElement(f.Eb, {
                             padding: {
                                 bottom: 2
                             }
                         }, s.createElement(f.W, {
                             color: f.O.Alt2,
-                            transform: f.Sb.Uppercase
+                            transform: f.Ub.Uppercase
                         }, Object(l.d)("Chat Options", "RoomSettings"))), s.createElement(f.Xa, {
                             margin: {
                                 bottom: 1
@@ -3585,7 +3585,7 @@
                             "data-test-selector": "popout-button"
                         }, Object(l.d)("Popout", "RoomSettings"))))
                     }, n.prototype.renderModTools = function() {
-                        if (this.hasModPermissions()) return s.createElement(f.Cb, {
+                        if (this.hasModPermissions()) return s.createElement(f.Eb, {
                             borderTop: !0,
                             "data-test-selector": "mod-tools",
                             margin: {
@@ -3600,7 +3600,7 @@
                             }
                         }, s.createElement(f.W, {
                             color: f.O.Alt2,
-                            transform: f.Sb.Uppercase
+                            transform: f.Ub.Uppercase
                         }, Object(l.d)("Mod Tools", "RoomSettings"))), s.createElement(f.Xa, {
                             margin: {
                                 bottom: 1
@@ -3718,7 +3718,7 @@
                                             }), this.chatInputRef.focus(), [2];
                                             o.label = 2;
                                         case 2:
-                                            t = Object(Ae.a)(), o.label = 3;
+                                            t = Object(je.a)(), o.label = 3;
                                         case 3:
                                             return o.trys.push([3, 5, , 6]), [4, this.props.sendCheer({
                                                 variables: {
@@ -3824,7 +3824,7 @@
                             t = null,
                             i = this.props.data.user && this.props.data.user.campaignProperties && this.props.data.user.campaignProperties.domains && this.props.data.user.campaignProperties.domains.length > 0 || !1,
                             o = this.props.bitsConfig.orderedActions.length && i && Object(U.b)(this.props.channelID, this.props.user);
-                        return o && (n.unshift(s.createElement(A.a, {
+                        return o && (n.unshift(s.createElement(j.a, {
                             key: "cheer",
                             assignments: {
                                 fallback: function() {
@@ -3836,7 +3836,7 @@
                                 on: function() {
                                     return s.createElement(f.A, {
                                         key: "bits",
-                                        icon: f.rb.Bits,
+                                        icon: f.tb.Bits,
                                         ariaLabel: Object(l.d)("Bits", "RoomInput"),
                                         type: f.C.Secondary,
                                         onClick: e.onBitsIconClick,
@@ -3845,7 +3845,7 @@
                                 }
                             },
                             name: B.b.OWLRoomCheering
-                        })), t = s.createElement(A.a, {
+                        })), t = s.createElement(j.a, {
                             assignments: {
                                 fallback: function() {
                                     return s.createElement(f.Xa, {
@@ -3858,7 +3858,7 @@
                                     }, s.createElement(Qe, null))
                                 },
                                 on: function() {
-                                    return s.createElement(je.a, {
+                                    return s.createElement(Fe.a, {
                                         bitsConfig: e.props.bitsConfig,
                                         channelID: e.props.channelID,
                                         channelLogin: e.props.channelLogin,
@@ -3872,7 +3872,7 @@
                                         trackBitsCardInteraction: e.trackBitsCardInteraction,
                                         visible: e.state.showCard === sn.Bits,
                                         cheerMessageAutoModded: !1,
-                                        bitsSendErrorCode: Fe.M.UNKNOWN,
+                                        bitsSendErrorCode: Ae.P.UNKNOWN,
                                         bitsSendHasError: !1
                                     })
                                 }
@@ -3885,8 +3885,8 @@
                                 bottom: 2
                             }
                         }, s.createElement(f.Xa, {
-                            position: f.hb.Relative,
-                            zIndex: f.gc.Default
+                            position: f.jb.Relative,
+                            zIndex: f.ic.Default
                         }, this.state.showCard === sn.Bits && !o && s.createElement(Qe, null), s.createElement(Xe.c, {
                             channelOwnerID: this.props.channelID,
                             roomID: this.props.roomID,
@@ -3913,7 +3913,7 @@
                             channelLogin: this.props.channelLogin,
                             roomMembers: this.state.roomMembers
                         })), s.createElement(f.Xa, {
-                            position: f.hb.Absolute,
+                            position: f.jb.Absolute,
                             attachRight: !0,
                             attachTop: !0
                         }, n)), s.createElement(f.Xa, {
@@ -3926,7 +3926,7 @@
                             display: f.X.Flex,
                             flexDirection: f.Aa.Row
                         }, s.createElement(Te.a, null, s.createElement(f.A, {
-                            icon: f.rb.Gear,
+                            icon: f.tb.Gear,
                             ariaLabel: Object(l.d)("Room Settings", "RoomInput")
                         }), s.createElement(f.u, {
                             direction: f.v.Top,
@@ -3938,7 +3938,7 @@
                             sendMessage: this.props.sendMessage
                         }))), s.createElement(f.A, {
                             ariaLabel: Object(l.d)("Member List", "RoomInput"),
-                            icon: f.rb.ViewerList,
+                            icon: f.tb.ViewerList,
                             onClick: this.onShowMemberList
                         })), s.createElement(f.z, {
                             onClick: this.handleMessageSend,
@@ -3985,7 +3985,7 @@
                                     bottom: 2,
                                     x: 2
                                 }
-                            }, s.createElement(f.Cb, {
+                            }, s.createElement(f.Eb, {
                                 padding: {
                                     bottom: 1,
                                     x: 2
@@ -4042,7 +4042,7 @@
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.handleUsernameClick = function(e) {
-                            n.props.onUsernameClick(n.props.sender.login, C.a.room_message, n.props.roomID, e.currentTarget.getBoundingClientRect().bottom)
+                            n.props.onUsernameClick(n.props.sender.login, I.a.room_message, n.props.roomID, e.currentTarget.getBoundingClientRect().bottom)
                         }, n
                     }
                     return r.__extends(n, e), n.prototype.render = function() {
@@ -4084,9 +4084,9 @@
                     return r.__extends(n, e), n.prototype.render = function() {
                         var e = this.props.message.deletedAt,
                             n = this.onBanUser,
-                            t = f.rb.Ban,
+                            t = f.tb.Ban,
                             i = Object(l.d)("Ban", "RoomMessageModIcons");
-                        return e && (n = this.onUnbanUser, t = f.rb.FollowCheck, i = Object(l.d)("Unban", "RoomMessageModIcons")), s.createElement(f.Xa, {
+                        return e && (n = this.onUnbanUser, t = f.tb.FollowCheck, i = Object(l.d)("Unban", "RoomMessageModIcons")), s.createElement(f.Xa, {
                             display: f.X.InlineFlex,
                             margin: {
                                 right: .5
@@ -4099,12 +4099,12 @@
                             className: "room-message-mod-icons__mod-icon",
                             "data-test-selector": "default-action-button",
                             onClick: n
-                        }, s.createElement(f.Wb, {
+                        }, s.createElement(f.Yb, {
                             label: i
-                        }, s.createElement(f.qb, {
+                        }, s.createElement(f.sb, {
                             width: 20,
                             height: 20,
-                            type: f.sb.Inherit,
+                            type: f.ub.Inherit,
                             asset: t
                         })))), s.createElement(f.Qa, {
                             color: f.O.Alt2,
@@ -4113,13 +4113,13 @@
                             className: "room-message-mod-icons__mod-icon",
                             "data-test-selector": "timeout-action-button",
                             onClick: this.onTimeoutUser
-                        }, s.createElement(f.Wb, {
+                        }, s.createElement(f.Yb, {
                             label: Object(l.d)("Timeout", "RoomMessageModIcons")
-                        }, s.createElement(f.qb, {
+                        }, s.createElement(f.sb, {
                             width: 20,
                             height: 20,
-                            type: f.sb.Inherit,
-                            asset: f.rb.Timeout
+                            type: f.ub.Inherit,
+                            asset: f.tb.Timeout
                         })))))
                     }, n
                 }(s.Component)),
@@ -4191,7 +4191,7 @@
                     }, n
                 }(s.Component)),
                 Sn = (t("JrF4"), function(e) {
-                    return s.createElement(f.Cb, {
+                    return s.createElement(f.Eb, {
                         className: "room-system-message",
                         color: f.O.Alt2,
                         key: e.message.id,
@@ -4201,7 +4201,7 @@
                         }
                     }, s.createElement(f.W, null, e.message.text))
                 }),
-                Cn = function(e) {
+                In = function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -4235,7 +4235,7 @@
                         }
                     }, n
                 }(s.Component),
-                In = (t("CFPd"), ["scroll", "wheel", "mousewheel", "DOMMouseScroll", "keyup", "mousedown"]),
+                Cn = (t("CFPd"), ["scroll", "wheel", "mousewheel", "DOMMouseScroll", "keyup", "mousedown"]),
                 En = 10,
                 Mn = function(e) {
                     function n() {
@@ -4268,12 +4268,12 @@
                         var e = this;
                         this.setState({
                             disableInfiniteTrigger: !1
-                        }), this.scroll && this.scroll.scrollContent && (this.scrollToBottom(), In.forEach(function(n) {
+                        }), this.scroll && this.scroll.scrollContent && (this.scrollToBottom(), Cn.forEach(function(n) {
                             e.scroll.scrollContent && e.scroll.scrollContent.addEventListener(n, e.handleScrollEvent)
                         }))
                     }, n.prototype.componentWillUnmount = function() {
                         var e = this;
-                        In.forEach(function(n) {
+                        Cn.forEach(function(n) {
                             e.scroll && e.scroll.scrollContent && e.scroll.scrollContent.removeEventListener(n, e.handleScrollEvent)
                         })
                     }, n.prototype.componentWillReceiveProps = function(e) {
@@ -4346,20 +4346,20 @@
                             requestCap: 2
                         }))), s.createElement(f.Xa, {
                             className: "room-list__more-messages-placeholder",
-                            position: f.hb.Relative,
+                            position: f.jb.Relative,
                             margin: {
                                 x: 2
                             }
                         }, this.moreMessages()))
                     }, n.prototype.moreMessages = function() {
-                        return this.state.isAutoScrolling ? null : s.createElement(f.Cb, {
+                        return this.state.isAutoScrolling ? null : s.createElement(f.Eb, {
                             alignItems: f.f.Center,
                             attachBottom: !0,
                             display: f.X.Flex,
                             fullWidth: !0,
                             background: f.r.Overlay,
                             justifyContent: f.Wa.Center,
-                            position: f.hb.Absolute,
+                            position: f.jb.Absolute,
                             borderRadius: f.x.Medium
                         }, s.createElement(f.z, {
                             onClick: this.handleClickMoreMessages,
@@ -4373,7 +4373,7 @@
                         var e = this,
                             n = this.props.messages;
                         return 0 === n.length && (n = [M(Object(l.d)("Welcome to the chat room!", "RoomList"))]), n.map(function(n) {
-                            return s.createElement(Cn, {
+                            return s.createElement(In, {
                                 key: n.id,
                                 badgeSets: e.props.badgeSets,
                                 bitsConfig: e.props.bitsConfig,
@@ -4428,10 +4428,10 @@
                 _n = t("vcHY"),
                 Tn = t("UJc8"),
                 Ln = t("Vgpr"),
-                An = t("pbBk"),
-                Fn = (t("N4Vp"), ["137512364", "188864445", "188863650", "190160460", "192718746"]),
+                jn = t("pbBk"),
+                An = (t("N4Vp"), ["137512364", "188864445", "188863650", "190160460", "192718746"]),
                 Un = 3e4,
-                jn = 6e4,
+                Fn = 6e4,
                 xn = function(e) {
                     function n(n) {
                         var t = e.call(this, n) || this;
@@ -4439,19 +4439,19 @@
                             showMemberList: !1,
                             hasSeenFirstTimeRoomTopic: !1
                         }, t.hasQueuedUpdate = !1, t.isLastReadAtThrottled = !1, t.lastReadAtThrottleTimer = null, t.renderPlaceholders = function() {
-                            return s.createElement(f.Cb, {
+                            return s.createElement(f.Eb, {
                                 className: "room-pane",
                                 display: f.X.Flex,
                                 flexDirection: f.Aa.Column,
                                 flexWrap: f.Ba.NoWrap,
-                                position: f.hb.Relative,
+                                position: f.jb.Relative,
                                 flexGrow: 1,
                                 fullHeight: !0,
                                 overflow: f.cb.Hidden,
                                 color: f.O.Base,
                                 background: f.r.Alt2,
                                 borderLeft: !0
-                            }, s.createElement(Ie, null))
+                            }, s.createElement(Ce, null))
                         }, t.sendMessage = function(e) {
                             if (e && 0 !== e.length && t.props.sessionUser) {
                                 var n = Object(G.i)(e, t.props.channel && t.props.channel.login || "");
@@ -4500,7 +4500,7 @@
                                 return r.__generator(this, function(m) {
                                     switch (m.label) {
                                         case 0:
-                                            return [4, this.props.sendRoomMessage(Object(j.a)({
+                                            return [4, this.props.sendRoomMessage(Object(F.a)({
                                                 roomID: this.props.roomID,
                                                 message: e
                                             }))];
@@ -4534,7 +4534,7 @@
                             Object(N.e)(Object(N.c)(l.p.apollo.client.link, r.__assign({
                                 query: wn
                             }, function(e) {
-                                return r.__assign({}, Object(j.a)({
+                                return r.__assign({}, Object(F.a)({
                                     lastReadAt: (new Date).toISOString(),
                                     roomID: e
                                 }))
@@ -4544,21 +4544,21 @@
                         }, t.unthrottleLastReadAtUpdate = function() {
                             t.hasQueuedUpdate ? (t.throttleLastReadAtUpdate(), t.hasQueuedUpdate = !1) : t.isLastReadAtThrottled = !1
                         }, t.activeMembers = new On(n.channelID), n.sessionUser && t.activeMembers.setCurrentUserID(n.sessionUser.id), t.trackingIntervalHandle = setInterval(function() {
-                            Object(Ce.c)({
+                            Object(Ie.c)({
                                 channelID: t.props.channelID,
                                 channelLogin: t.props.channel && t.props.channel.login || "",
                                 isHostMode: t.props.isHostMode,
                                 roomID: t.props.roomID,
                                 roomMinimumRole: t.props.minimumAllowedRole
                             })
-                        }, jn), t
+                        }, Fn), t
                     }
                     return r.__extends(n, e), n.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, n.prototype.componentWillReceiveProps = function(e) {
                         var n = this,
                             t = this.props;
-                        !e.loading && ((e.isFirstTimeVisit || Fn.includes(this.props.channelID)) && e.roomTopic && e.roomTopic.length > 0 && !this.state.hasSeenFirstTimeRoomTopic || void 0 !== this.props.roomTopic && this.props.roomTopic !== e.roomTopic) && (this.setState({
+                        !e.loading && ((e.isFirstTimeVisit || An.includes(this.props.channelID)) && e.roomTopic && e.roomTopic.length > 0 && !this.state.hasSeenFirstTimeRoomTopic || void 0 !== this.props.roomTopic && this.props.roomTopic !== e.roomTopic) && (this.setState({
                             hasSeenFirstTimeRoomTopic: !0
                         }), this.props.onRoomEvent(function(e) {
                             var n = Object(l.d)('Broadcaster set this room\'s topic to "{topic}"', {
@@ -4566,7 +4566,7 @@
                             }, "RoomTopic");
                             return {
                                 kind: v.SystemMessageEvent,
-                                id: Object(I.a)("initialRoomTopicMessage"),
+                                id: Object(C.a)("initialRoomTopicMessage"),
                                 text: n
                             }
                         }(e.roomTopic && e.roomTopic || ""))), e.sessionUser && t.sessionUser !== e.sessionUser && this.activeMembers.setCurrentUserID(e.sessionUser.id), t.channelID !== e.channelID && this.activeMembers.resetWithRoomOwnerID(e.channelID);
@@ -4589,7 +4589,7 @@
                             t = this.props.emoteSetsData && this.props.emoteSetsData.emoteSets || [],
                             i = this.props.user && this.props.user.campaignProperties && this.props.user.campaignProperties.domains && this.props.user.campaignProperties.domains.length > 0 || !1,
                             o = null;
-                        return this.props.bitsConfig.orderedActions.length && i && Object(U.b)(this.props.channelID, this.props.sessionUser) && (o = s.createElement(A.a, {
+                        return this.props.bitsConfig.orderedActions.length && i && Object(U.b)(this.props.channelID, this.props.sessionUser) && (o = s.createElement(j.a, {
                             assignments: {
                                 fallback: function() {
                                     return null
@@ -4610,12 +4610,12 @@
                                 }
                             },
                             name: B.b.OWLRoomCheering
-                        })), s.createElement(f.Cb, {
+                        })), s.createElement(f.Eb, {
                             className: "room-pane",
                             display: f.X.Flex,
                             flexDirection: f.Aa.Column,
                             flexWrap: f.Ba.NoWrap,
-                            position: f.hb.Relative,
+                            position: f.jb.Relative,
                             flexGrow: 1,
                             fullHeight: !0,
                             overflow: f.cb.Hidden,
@@ -4659,8 +4659,8 @@
                             className: "room-pane__viewer-card",
                             fullHeight: !0,
                             fullWidth: !0,
-                            position: f.hb.Absolute,
-                            zIndex: f.gc.Default
+                            position: f.jb.Absolute,
+                            zIndex: f.ic.Default
                         }, s.createElement(be.a, {
                             isPopout: this.props.isPopout,
                             isEmbedded: !1,
@@ -4723,7 +4723,7 @@
                             }
                         }
                     }
-                }), Object(F.a)(), Object(c.a)(An, {
+                }), Object(A.a)(), Object(c.a)(jn, {
                     name: "sendRoomMessage"
                 }), Object(h.b)("RoomPane"))(xn),
                 Pn = function(e) {

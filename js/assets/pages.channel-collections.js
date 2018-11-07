@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [48, 120], {
+    [48, 124], {
         "+Vfn": function(e, t, n) {
             var i = {
                 kind: "Document",
@@ -187,7 +187,7 @@
                 o = function() {
                     return i.createElement(r.G, null, i.createElement(r.o, {
                         ratio: r.p.Aspect16x9
-                    }, i.createElement(r.gb, null)), i.createElement(r.H, null, i.createElement(r.Xa, {
+                    }, i.createElement(r.ib, null)), i.createElement(r.H, null, i.createElement(r.Xa, {
                         display: r.X.Flex,
                         margin: {
                             bottom: 1
@@ -198,7 +198,7 @@
                             top: 1,
                             right: 1
                         }
-                    }, i.createElement(r.gb, {
+                    }, i.createElement(r.ib, {
                         width: 40,
                         height: 56
                     })), i.createElement(r.Xa, {
@@ -206,11 +206,11 @@
                         margin: {
                             top: 1
                         }
-                    }, i.createElement(r.W, null, i.createElement(r.gb, {
+                    }, i.createElement(r.W, null, i.createElement(r.ib, {
                         width: 150
                     })), i.createElement(r.W, {
                         fontSize: r.Ca.Size7
-                    }, i.createElement(r.gb, {
+                    }, i.createElement(r.ib, {
                         width: 100
                     }))))))
                 }
@@ -555,9 +555,9 @@
                         flexDirection: c.Aa.Row,
                         alignItems: c.f.Center
                     }, r.createElement(c.W, {
-                        type: c.Tb.H5
-                    }, Object(a.d)("Expand All", "VideoShelfExpandLink")), r.createElement(c.qb, {
-                        asset: c.rb.AngleRight,
+                        type: c.Vb.H5
+                    }, Object(a.d)("Expand All", "VideoShelfExpandLink")), r.createElement(c.sb, {
+                        asset: c.tb.AngleRight,
                         height: 14
                     })))
                 });
@@ -568,11 +568,11 @@
                     e.Title = "title", e.SubTitle = "subtitle"
                 }(i || (i = {}));
             var u = function(e) {
-                if (!e.titleMessage) return r.createElement(c.gb, {
+                if (!e.titleMessage) return r.createElement(c.ib, {
                     width: 200
                 });
                 var t = r.createElement(c.W, {
-                        type: c.Tb.H4,
+                        type: c.Vb.H4,
                         color: c.O.Base,
                         bold: !0,
                         "data-test-selector": i.Title
@@ -580,7 +580,7 @@
                     n = e.subTitle;
                 return e.subTitle && "string" == typeof e.subTitle ? n = r.createElement(c.W, {
                     color: c.O.Alt2,
-                    type: c.Tb.Span,
+                    type: c.Vb.Span,
                     "data-test-selector": i.SubTitle
                 }, e.subTitle) : e.subTitle && (n = r.createElement(c.Xa, {
                     "data-test-selector": i.SubTitle
@@ -864,31 +864,31 @@
                             display: s.X.Flex,
                             flexDirection: s.Aa.Row,
                             padding: .5
-                        }, r.createElement(s.Cb, {
+                        }, r.createElement(s.Eb, {
                             className: "preview-card-game-balloon-row__image-wrapper",
                             flexGrow: 0,
                             flexShrink: 0,
                             borderRadius: s.x.Small,
                             overflow: s.cb.Hidden,
-                            position: s.hb.Relative
+                            position: s.jb.Relative
                         }, r.createElement(s.o, {
                             align: s.d.Center,
                             ratio: s.p.BoxArt
-                        }, r.createElement(s.S, i.__assign({}, e))), r.createElement(s.Cb, {
+                        }, r.createElement(s.S, i.__assign({}, e))), r.createElement(s.Eb, {
                             className: "preview-card-game-balloon-row__image-play-overlay",
                             alignItems: s.f.Center,
                             background: s.r.Overlay,
                             color: s.O.Overlay,
                             display: s.X.Flex,
                             justifyContent: s.Wa.Center,
-                            position: s.hb.Absolute,
+                            position: s.jb.Absolute,
                             attachTop: !0,
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0
-                        }, r.createElement(s.qb, {
-                            asset: s.rb.Play,
-                            type: s.sb.Inherit
+                        }, r.createElement(s.sb, {
+                            asset: s.tb.Play,
+                            type: s.ub.Inherit
                         }))), r.createElement(s.Xa, {
                             display: s.X.Flex,
                             flexDirection: s.Aa.Column,
@@ -926,7 +926,7 @@
                         return r.createElement(s.Xa, {
                             className: "preview-card-game-balloon",
                             display: s.X.InlineBlock,
-                            position: s.hb.Relative,
+                            position: s.jb.Relative,
                             margin: {
                                 top: .5
                             }
@@ -936,7 +936,7 @@
                             onToggle: this.onBalloonToggle
                         }, r.createElement(s.z, {
                             type: s.F.Hollow,
-                            icon: s.rb.ViewerList
+                            icon: s.tb.ViewerList
                         }, r.createElement(s.Xa, {
                             display: s.X.Flex,
                             flexDirection: s.Aa.Row
@@ -944,7 +944,7 @@
                             margin: {
                                 left: 1
                             }
-                        }, r.createElement(s.eb, {
+                        }, r.createElement(s.gb, {
                             label: this.props.videoGameChanges.length.toString()
                         })))), r.createElement(s.u, {
                             direction: s.v.TopLeft,
@@ -1012,7 +1012,7 @@
                 },
                 v = n("N0BP"),
                 b = (n("XA5B"), function(e) {
-                    var t = r.createElement(s.Cb, {
+                    var t = r.createElement(s.Eb, {
                         className: "preview-card-iconic-image__wrapper",
                         borderRadius: s.x.Small,
                         overflow: s.cb.Hidden
@@ -1047,7 +1047,7 @@
                         "data-test-selector": "top-bar-title-selector",
                         color: s.O.Overlay,
                         bold: !0,
-                        transform: s.Sb.Uppercase
+                        transform: s.Ub.Uppercase
                     }, e.title)), e.subTitle && r.createElement(s.Xa, {
                         display: s.X.InlineFlex
                     }, r.createElement(s.W, {
@@ -1059,30 +1059,30 @@
                     var t = .5,
                         n = null;
                     "number" == typeof e.progressBarPercent && e.progressBarPercent > 0 && (n = r.createElement(s.Xa, {
-                        position: s.hb.Absolute,
+                        position: s.jb.Absolute,
                         attachBottom: !0,
                         fullWidth: !0
-                    }, r.createElement(s.kb, {
+                    }, r.createElement(s.mb, {
                         borderRadius: s.x.None,
-                        size: s.mb.Small,
+                        size: s.ob.Small,
                         value: e.progressBarPercent,
                         mask: !0
                     })), t = 1);
                     var o = 1,
                         a = null;
                     return e.topBar && (a = r.createElement(s.Xa, {
-                        position: s.hb.Absolute,
+                        position: s.jb.Absolute,
                         attachTop: !0,
                         fullWidth: !0
                     }, r.createElement(C, i.__assign({}, e.topBar))), o = 3), r.createElement(s.Xa, {
-                        position: s.hb.Absolute,
+                        position: s.jb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
                         className: "preview-card-overlay"
                     }, a, n, r.createElement(s.Xa, {
-                        position: s.hb.Absolute,
+                        position: s.jb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         margin: e.topBar ? {
@@ -1091,7 +1091,7 @@
                         } : 1,
                         "data-test-selector": "top-left-selector"
                     }, e.topLeft), r.createElement(s.Xa, {
-                        position: s.hb.Absolute,
+                        position: s.jb.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         margin: e.topBar ? {
@@ -1100,7 +1100,7 @@
                         } : 1,
                         "data-test-selector": "top-right-selector"
                     }, e.topRight), r.createElement(s.Xa, {
-                        position: s.hb.Absolute,
+                        position: s.jb.Absolute,
                         attachBottom: !0,
                         attachLeft: !0,
                         margin: {
@@ -1109,7 +1109,7 @@
                         },
                         "data-test-selector": "bottom-left-selector"
                     }, e.bottomLeft), r.createElement(s.Xa, {
-                        position: s.hb.Absolute,
+                        position: s.jb.Absolute,
                         attachBottom: !0,
                         attachRight: !0,
                         margin: {
@@ -1125,12 +1125,12 @@
                         margin: {
                             right: .5
                         }
-                    }, r.createElement(s.qb, {
+                    }, r.createElement(s.sb, {
                         asset: e.icon,
                         width: 10,
                         height: 10
                     }));
-                    return e.withBackground ? r.createElement(s.Cb, {
+                    return e.withBackground ? r.createElement(s.Eb, {
                         alignItems: s.f.Center,
                         background: s.r.Overlay,
                         borderRadius: s.x.Small,
@@ -1139,7 +1139,7 @@
                         display: s.X.Flex,
                         fontSize: s.Ca.Size6,
                         justifyContent: s.Wa.Center
-                    }, t, r.createElement(s.W, null, e.value)) : r.createElement(s.Cb, {
+                    }, t, r.createElement(s.W, null, e.value)) : r.createElement(s.Eb, {
                         className: "preview-card-stat",
                         color: s.O.Overlay,
                         display: s.X.Flex,
@@ -1189,7 +1189,7 @@
                             onBlur: this.handleBlur
                         }), r.createElement("div", i.__assign({}, e, {
                             onClick: this.props.onClick
-                        }), r.createElement(s.Cb, {
+                        }), r.createElement(s.Eb, {
                             background: s.r.Alt2,
                             overflow: s.cb.Hidden
                         }, r.createElement(s.o, {
@@ -1235,7 +1235,7 @@
                         type: s.V.Inherit,
                         "data-test-selector": "preview-card-titles__primary-link"
                     }), r.createElement(s.W, {
-                        type: s.Tb.H3,
+                        type: s.Vb.H3,
                         fontSize: s.Ca.Size5,
                         lines: 1,
                         bold: !0,
@@ -1245,15 +1245,15 @@
                     }, t))
                 }),
                 x = n("H1ft"),
-                T = n("ZbA5"),
-                L = n("QVaV"),
+                L = n("ZbA5"),
+                T = n("QVaV"),
                 O = n("hyVY"),
                 D = n("MXoD"),
                 P = n("0LAi");
             ! function(e) {
                 e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
             }(k || (k = {}));
-            var F, B, j = function(e) {
+            var F, j, B = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1262,20 +1262,20 @@
                     var e = Object(o.d)("Get It Now", "VideoPreviewCardRestriction"),
                         t = this.props.restriction.canViewRestricted,
                         n = t ? Object(o.d)("unlocked", "VideoPreviewCardRestriction") : Object(o.d)("locked", "VideoPreviewCardRestriction"),
-                        i = t ? s.rb.Unlock : s.rb.Lock;
-                    return r.createElement(s.Xa, null, !t && r.createElement(s.Cb, {
+                        i = t ? s.tb.Unlock : s.tb.Lock;
+                    return r.createElement(s.Xa, null, !t && r.createElement(s.Eb, {
                         background: s.r.Overlay,
                         className: "video-preview-card-restriction",
                         color: s.O.Overlay,
                         display: s.X.Flex,
-                        position: s.hb.Absolute,
+                        position: s.jb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
-                        zIndex: s.gc.Default,
+                        zIndex: s.ic.Default,
                         padding: {
                             x: 5
                         },
-                        textAlign: s.Pb.Center,
+                        textAlign: s.Rb.Center,
                         fullWidth: !0,
                         fullHeight: !0,
                         alignItems: s.f.Center,
@@ -1301,23 +1301,23 @@
                         disabled: "" === this.props.restriction.upsellLinkTo,
                         linkTo: this.props.restriction.upsellLinkTo,
                         overlay: !0
-                    }, e))), r.createElement(s.Cb, {
+                    }, e))), r.createElement(s.Eb, {
                         display: s.X.InlineFlex,
-                        position: s.hb.Absolute,
+                        position: s.jb.Absolute,
                         attachTop: this.props.attachTop,
                         attachBottom: !this.props.attachTop,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: s.gc.Default,
+                        zIndex: s.ic.Default,
                         fontSize: s.Ca.Size6,
                         background: s.r.Overlay,
                         borderRadius: s.x.Medium,
                         color: s.O.Overlay
-                    }, r.createElement(s.Wb, {
-                        direction: this.props.attachTop ? s.Yb.Bottom : s.Yb.Top,
-                        align: s.Xb.Right,
+                    }, r.createElement(s.Yb, {
+                        direction: this.props.attachTop ? s.ac.Bottom : s.ac.Top,
+                        align: s.Zb.Right,
                         label: n
-                    }, r.createElement(s.qb, {
+                    }, r.createElement(s.sb, {
                         asset: i,
                         height: 20,
                         width: 20
@@ -1337,8 +1337,8 @@
             }(F || (F = {})),
             function(e) {
                 e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
-            }(B || (B = {}));
-            var U = function(e) {
+            }(j || (j = {}));
+            var V = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getTrackingContext = function(e) {
@@ -1352,8 +1352,8 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         return r.createElement("div", i.__assign({
                             className: "preview-card"
-                        }, Object(v.a)(this.props)), r.createElement(s.Cb, {
-                            position: s.hb.Relative,
+                        }, Object(v.a)(this.props)), r.createElement(s.Eb, {
+                            position: s.jb.Relative,
                             borderRadius: s.x.Medium,
                             overflow: s.cb.Hidden
                         }, this.renderVODRestrictionOverlay(), r.createElement(s.U, {
@@ -1386,7 +1386,7 @@
                         return function(e) {
                             return void 0 !== e.streamType
                         }(this.props) ? r.createElement(w, {
-                            topLeft: r.createElement(T.a, {
+                            topLeft: r.createElement(L.a, {
                                 type: this.props.streamType,
                                 hosting: !!this.props.hostedByChannelLogin
                             }),
@@ -1400,7 +1400,7 @@
                         }) : A(this.props) ? r.createElement(w, {
                             topLeft: void 0 !== this.props.durationInSeconds && r.createElement(S, {
                                 value: Object(O.b)(this.props.durationInSeconds),
-                                icon: s.rb.Play,
+                                icon: s.tb.Play,
                                 withBackground: !0
                             }),
                             topRight: this.props.listPosition && r.createElement(S, {
@@ -1418,7 +1418,7 @@
                         }) : R(this.props) ? r.createElement(w, {
                             topLeft: r.createElement(S, {
                                 value: Object(O.b)(this.props.durationInSeconds),
-                                icon: s.rb.Clip,
+                                icon: s.tb.Clip,
                                 withBackground: !0
                             }),
                             topRight: void 0,
@@ -1439,7 +1439,7 @@
                             viewerCount: this.props.viewCount
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.renderIconicImage = function() {
-                        return this.props.context === B.SingleChannelList && this.props.gameBoxArtImageProps && this.props.gameBoxArtImageProps.src && this.props.gameTitleLinkTo ? r.createElement(s.Xa, {
+                        return this.props.context === j.SingleChannelList && this.props.gameBoxArtImageProps && this.props.gameBoxArtImageProps.src && this.props.gameTitleLinkTo ? r.createElement(s.Xa, {
                             margin: {
                                 right: 1
                             }
@@ -1450,7 +1450,7 @@
                             aspect: s.p.BoxArt,
                             "data-test-selector": F.BoxArt,
                             "data-a-target": "preview-card-boxart-link"
-                        })) : (this.props.context === B.SingleGameList || this.props.context === B.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? r.createElement(s.Xa, {
+                        })) : (this.props.context === j.SingleGameList || this.props.context === j.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? r.createElement(s.Xa, {
                             margin: {
                                 right: 1
                             }
@@ -1465,7 +1465,7 @@
                         var e = null,
                             t = [];
                         return this.shouldShowGameBalloon(this.props) || t.push({
-                            text: Object(L.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
+                            text: Object(T.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
                             linkTo: Object(D.a)(this.getTrackingContext(h.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
                             onClick: this.props.onChannelLoginClick,
                             automationSelector: "preview-card-channel-link"
@@ -1476,7 +1476,7 @@
                             linkTo: this.props.clipCreatedByChannelLoginLinkTo,
                             onClick: this.props.onClipCreatedByChannelLoginClick,
                             automationSelector: "preview-card-clip-curator-link"
-                        }) : A(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== B.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
+                        }) : A(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== j.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
                             text: this.props.gameTitle,
                             linkTo: Object(D.a)(this.getTrackingContext(h.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
@@ -1497,7 +1497,7 @@
                             tagNumberLimit: 3
                         }))) : null
                     }, t.prototype.renderVODRestrictionOverlay = function() {
-                        return A(this.props) && this.props.restriction && this.props.restriction.productName && this.props.restriction.title ? r.createElement(j, {
+                        return A(this.props) && this.props.restriction && this.props.restriction.productName && this.props.restriction.title ? r.createElement(B, {
                             restriction: this.props.restriction,
                             attachTop: !0
                         }) : null
@@ -1524,17 +1524,17 @@
                         }
                     }, t
                 }(r.Component),
-                V = Object(_.b)("PreviewCard", {
+                U = Object(_.b)("PreviewCard", {
                     autoReportInteractive: !0
-                })(U);
+                })(V);
             n.d(t, !1, function() {
                 return F
             }), n.d(t, "b", function() {
-                return B
+                return j
             }), n.d(t, !1, function() {
-                return U
-            }), n.d(t, "a", function() {
                 return V
+            }), n.d(t, "a", function() {
+                return U
             })
         },
         GxR5: function(e, t, n) {
@@ -2151,12 +2151,12 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e, t, n, i = null;
                         "number" == typeof this.props.videoCount && (i = s.createElement(h.Xa, {
-                            position: h.hb.Absolute,
+                            position: h.jb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             attachRight: !0,
                             attachBottom: !0
-                        }, s.createElement(h.Cb, {
+                        }, s.createElement(h.Eb, {
                             alignItems: h.f.Center,
                             attachRight: !0,
                             className: "collection-preview-image__wrapper",
@@ -2166,10 +2166,10 @@
                             fontSize: h.Ca.Size5,
                             fullHeight: !0,
                             justifyContent: h.Wa.Center,
-                            position: h.hb.Absolute,
-                            textAlign: h.Pb.Center
-                        }, s.createElement(h.qb, {
-                            asset: h.rb.Collections,
+                            position: h.jb.Absolute,
+                            textAlign: h.Rb.Center
+                        }, s.createElement(h.sb, {
+                            asset: h.tb.Collections,
                             height: 20,
                             width: 20
                         }), s.createElement(h.W, {
@@ -2179,7 +2179,7 @@
                         }, "CollectionCard")))));
                         var a = o.Full;
                         return this.props.fallbackSize && (a = this.props.fallbackSize), !this.props.src || this.state.imageLoadError ? (t = f[a], (e = {})[a + "w"] = t, n = e) : (t = this.props.src, n = this.props.srcSet), s.createElement(h.Xa, {
-                            position: h.hb.Relative
+                            position: h.jb.Relative
                         }, s.createElement(h.S, {
                             alt: this.props.alt,
                             onError: this.onErrorHandler,
@@ -2493,12 +2493,12 @@
                 I = n("W8Fi"),
                 N = n("br9A"),
                 x = n("Ue10"),
-                T = (n("a7aT"), n("z+dA"));
+                L = (n("a7aT"), n("z+dA"));
             ! function(e) {
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(i || (i = {}));
-            var L = l.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(193)]).then(n.bind(null, "f+qK"))
+            var T = l.a.wrap(function() {
+                    return Promise.all([n.e(0), n.e(199)]).then(n.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
                 O = function(e) {
                     function t() {
@@ -2600,7 +2600,7 @@
                                 }, "SubscribeButton") : g, d && !c) return o.createElement(x.z, {
                                 disabled: !0,
                                 ariaLabel: p,
-                                icon: x.rb.Star
+                                icon: x.tb.Star
                             }, p);
                             c && (p = m)
                         } else p = c ? m : this.props.hostChannelID ? Object(f.d)("Subscribe to {username}", {
@@ -2617,7 +2617,7 @@
                                 type: this.getButtonType(l)
                             }, p),
                             k = a[0];
-                        return this.setBalloonWrapperContent(o.createElement(L, {
+                        return this.setBalloonWrapperContent(o.createElement(T, {
                             authToken: this.props.authToken,
                             channelLogin: this.props.channelLogin || "",
                             "data-test-selector": i.SubscribeBalloon,
@@ -2648,7 +2648,7 @@
                         return e && void 0 !== this.props.subscribedButtonType ? this.props.subscribedButtonType : e ? x.F.Success : this.props.unsubscribedButtonType || x.F.Default
                     }, t.prototype.getButtonIcon = function(e, t) {
                         var n = void 0;
-                        return e ? n = t === C.a.Prime ? x.rb.Crown : x.rb.Star : this.props.forceIcon && (n = x.rb.StarHollow), n
+                        return e ? n = t === C.a.Prime ? x.tb.Crown : x.tb.Star : this.props.forceIcon && (n = x.tb.StarHollow), n
                     }, t.prototype.isUserDataReady = function(e) {
                         return e.data && e.data.user && !e.data.loading && !e.data.error
                     }, t.prototype.checkAndDisplaySubscriptionCheckout = function() {
@@ -2670,7 +2670,7 @@
                         }
                     }, t
                 }(o.Component),
-                D = Object(h.compose)(Object(k.a)(T, {
+                D = Object(h.compose)(Object(k.a)(L, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2733,7 +2733,7 @@
                         return Object(u.d)(l.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(204)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })
@@ -3649,8 +3649,8 @@
                         }, "ChannelCollections");
                         return o.createElement(b.G, r.__assign({
                             key: this.props.title
-                        }, Object(b.hc)(this.props)), o.createElement(b.Pa, {
-                            position: b.hb.Relative
+                        }, Object(b.jc)(this.props)), o.createElement(b.Pa, {
+                            position: b.jb.Relative
                         }, o.createElement(b.U, {
                             to: {
                                 pathname: this.props.linkTo,
@@ -3694,9 +3694,9 @@
                             color: b.O.Alt2,
                             ellipsis: !0
                         }, o.createElement(b.W, {
-                            type: b.Tb.Span
+                            type: b.Vb.Span
                         }, e), o.createElement(b.W, {
-                            type: b.Tb.Span
+                            type: b.Vb.Span
                         }, " · " + this.computeViewsMessage())))))
                     }, t
                 }(o.Component),
@@ -3712,7 +3712,7 @@
                     return t = e.canEdit ? o.createElement("div", {
                         "data-test-selector": i.NoCollectionsUpSell
                     }, o.createElement(b.W, {
-                        type: b.Tb.H4
+                        type: b.Vb.H4
                     }, Object(s.d)("Create a collection of your videos from Video Producer.", "collection-page")), o.createElement(b.Xa, {
                         padding: {
                             top: 2
@@ -3721,12 +3721,12 @@
                         type: b.F.Hollow,
                         linkTo: "/" + e.channelLogin + "/manager/collections"
                     }, Object(s.d)("Go to Video Producer", "collection-page")))) : o.createElement(b.W, {
-                        type: b.Tb.H4,
+                        type: b.Vb.H4,
                         italic: !0,
                         "data-test-selector": i.NoCollections
-                    }, Object(s.d)("No collections found.", "collection-page")), o.createElement(b.Cb, {
+                    }, Object(s.d)("No collections found.", "collection-page")), o.createElement(b.Eb, {
                         color: b.O.Alt2,
-                        textAlign: b.Pb.Center
+                        textAlign: b.Rb.Center
                     }, t)
                 },
                 E = function(e) {
@@ -3792,16 +3792,16 @@
                                 }
                             }, o.createElement(b.o, {
                                 ratio: b.p.Aspect16x9
-                            }, o.createElement(b.gb, null))), o.createElement(b.W, null, o.createElement(b.gb, {
+                            }, o.createElement(b.ib, null))), o.createElement(b.W, null, o.createElement(b.ib, {
                                 width: 150
                             })), o.createElement(b.W, {
                                 fontSize: b.Ca.Size7
-                            }, o.createElement(b.gb, {
+                            }, o.createElement(b.ib, {
                                 width: 100
                             }))));
-                            return o.createElement(b.Zb, {
-                                gutterSize: b.bc.Small,
-                                childWidth: b.ac.Medium,
+                            return o.createElement(b.bc, {
+                                gutterSize: b.dc.Small,
+                                childWidth: b.cc.Medium,
                                 placeholderItems: 20
                             }, i)
                         }
@@ -3857,9 +3857,9 @@
                                     "data-a-target": "collection-card-" + n
                                 }))
                             });
-                            i = o.createElement(b.Zb, {
-                                gutterSize: b.bc.Small,
-                                childWidth: b.ac.Large,
+                            i = o.createElement(b.bc, {
+                                gutterSize: b.dc.Small,
+                                childWidth: b.cc.Large,
                                 placeholderItems: 20
                             }, s)
                         }
@@ -3870,7 +3870,7 @@
                         }))
                     }, t
                 }(o.Component),
-                T = Object(a.compose)(Object(h.b)("ChannelCollectionsContent"), Object(d.a)(N, {
+                L = Object(a.compose)(Object(h.b)("ChannelCollectionsContent"), Object(d.a)(N, {
                     options: function(e) {
                         return {
                             variables: {
@@ -3914,7 +3914,7 @@
             }), n.d(t, "ChannelCollectionsContentComponent", function() {
                 return x
             }), n.d(t, "ChannelCollectionsContent", function() {
-                return T
+                return L
             })
         },
         XA5B: function(e, t, n) {},
@@ -3951,14 +3951,14 @@
                 e.HostingDot = "stream-type-indicator__hosting-dot"
             }(a || (a = {}));
             var m = ((i = {})[u.a.Live] = "stream-type-indicator--live", i[u.a.Premiere] = "stream-type-indicator--premiere", i[u.a.Rerun] = "stream-type-indicator--rerun", i[u.a.WatchParty] = "stream-type-indicator--rerun", i),
-                h = ((r = {})[u.a.Premiere] = p.rb.VideoPremiere, r[u.a.Rerun] = p.rb.VideoRerun, r[u.a.WatchParty] = p.rb.VideoRerun, r),
-                f = ((o = {})[u.a.Premiere] = p.sb.Live, o[u.a.Rerun] = p.sb.Inherit, o[u.a.WatchParty] = p.sb.Inherit, o),
+                h = ((r = {})[u.a.Premiere] = p.tb.VideoPremiere, r[u.a.Rerun] = p.tb.VideoRerun, r[u.a.WatchParty] = p.tb.VideoRerun, r),
+                f = ((o = {})[u.a.Premiere] = p.ub.Live, o[u.a.Rerun] = p.ub.Inherit, o[u.a.WatchParty] = p.ub.Inherit, o),
                 g = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(p.Cb, {
+                        return c.createElement(p.Eb, {
                             className: this.getClassNames(),
                             color: p.O.Overlay,
                             background: p.r.Overlay,
@@ -3974,7 +3974,7 @@
                                 right: .5
                             }
                         }, this.getIcon()), c.createElement(p.W, {
-                            type: p.Tb.Span
+                            type: p.Vb.Span
                         }, this.getLabel()))
                     }, t.prototype.getClassNames = function() {
                         var e = {
@@ -3982,7 +3982,7 @@
                         };
                         return e[m[this.props.type]] = !0, l(e)
                     }, t.prototype.getIcon = function() {
-                        return this.props.hosting ? c.createElement(p.Cb, {
+                        return this.props.hosting ? c.createElement(p.Eb, {
                             borderRadius: p.x.Rounded,
                             className: "stream-type-indicator__hosting-dot",
                             "data-test-selector": a.HostingDot
@@ -3993,7 +3993,7 @@
                         }, c.createElement(p.K, {
                             status: p.M.Live,
                             size: p.L.Small
-                        })) : c.createElement(p.qb, {
+                        })) : c.createElement(p.sb, {
                             asset: h[this.props.type],
                             type: f[this.props.type],
                             width: 14,
@@ -4555,14 +4555,14 @@
                                 display: b.X.Flex,
                                 flexDirection: b.Aa.Row,
                                 alignItems: b.f.Start
-                            }, o.createElement(b.qb, {
-                                type: b.sb.Alt2,
-                                asset: b.rb.Check
+                            }, o.createElement(b.sb, {
+                                type: b.ub.Alt2,
+                                asset: b.tb.Check
                             }), o.createElement(b.Xa, {
                                 margin: {
                                     left: 1
                                 },
-                                textAlign: b.Pb.Left
+                                textAlign: b.Rb.Left
                             }, o.createElement(b.W, {
                                 color: b.O.Alt2,
                                 fontSize: b.Ca.Size6
@@ -4604,7 +4604,7 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.trackImpression()
                     }, t.prototype.render = function() {
-                        return o.createElement(b.Cb, {
+                        return o.createElement(b.Eb, {
                             background: b.r.AccentAlt2,
                             display: b.X.Flex,
                             flexDirection: b.Aa.Column,
@@ -4614,7 +4614,7 @@
                             },
                             margin: 1
                         }, this.renderImage(), o.createElement(b.Xa, {
-                            textAlign: b.Pb.Center
+                            textAlign: b.Rb.Center
                         }, this.renderText(), o.createElement(b.z, {
                             onClick: this.signup,
                             size: b.D.Large
@@ -4644,11 +4644,11 @@
                             src: d.a
                         });
                         return this.props.channelLogin && this.props.data && this.props.data.user && this.props.data.user.profileImageURL ? o.createElement(b.Xa, {
-                            position: b.hb.Relative
+                            position: b.jb.Relative
                         }, o.createElement(b.Xa, {
                             className: "upsell-center__avatar",
-                            position: b.hb.Absolute,
-                            zIndex: b.gc.Above
+                            position: b.jb.Absolute,
+                            zIndex: b.ic.Above
                         }, o.createElement(b.q, {
                             src: this.props.data.user.profileImageURL,
                             alt: Object(l.d)("{displayName}'s Profile Image", {
@@ -4798,14 +4798,14 @@
                             margin: {
                                 y: 1
                             },
-                            position: p.hb.Relative
+                            position: p.jb.Relative
                         }, s.createElement("div", {
                             className: "preview-card-carousel",
                             ref: this.refHandler
                         }, s.createElement(p.Xa, {
                             className: "preview-card-carousel__child-container",
                             overflow: p.cb.Hidden,
-                            position: p.hb.Relative,
+                            position: p.jb.Relative,
                             fullWidth: !0,
                             "data-test-selector": "child-container"
                         }, s.createElement(p.Pa, {
@@ -4818,17 +4818,17 @@
                                 transform: this.transformString()
                             },
                             "data-test-selector": "carousel-body"
-                        }, s.createElement(p.Zb, {
+                        }, s.createElement(p.bc, {
                             noWrap: !0,
                             noGrow: !0,
-                            childWidth: this.props.cardWidth || p.ac.Large,
-                            gutterSize: p.bc.Small,
+                            childWidth: this.props.cardWidth || p.cc.Large,
+                            gutterSize: p.dc.Small,
                             "data-js-selector": m
                         }, this.props.children)))), s.createElement(p.Xa, {
                             className: "preview-card-carousel__nav",
                             display: p.X.Flex,
                             alignItems: p.f.Center,
-                            position: p.hb.Absolute,
+                            position: p.jb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullHeight: !0
@@ -4840,7 +4840,7 @@
                             className: "preview-card-carousel__nav",
                             display: p.X.Flex,
                             alignItems: p.f.Center,
-                            position: p.hb.Absolute,
+                            position: p.jb.Absolute,
                             attachTop: !0,
                             attachRight: !0,
                             fullHeight: !0
@@ -4866,7 +4866,7 @@
                     DirectionNext: "next"
                 },
                 g = ((i = {})[f.DirectionPrevious] = "previous", i[f.DirectionNext] = "next", i),
-                v = ((r = {})[f.DirectionPrevious] = p.rb.AngleLeft, r[f.DirectionNext] = p.rb.AngleRight, r),
+                v = ((r = {})[f.DirectionPrevious] = p.tb.AngleLeft, r[f.DirectionNext] = p.tb.AngleRight, r),
                 b = function(e) {
                     var t, n = g[e.direction],
                         i = ((t = {})[f.DirectionPrevious] = Object(l.d)("previous", "CarouselNavButton"), t[f.DirectionNext] = Object(l.d)("next", "CarouselNavButton"), t),
@@ -4875,7 +4875,7 @@
                         });
                     return s.createElement(p.Xa, {
                         className: r,
-                        position: p.hb.Relative,
+                        position: p.jb.Relative,
                         display: p.X.Flex,
                         alignItems: p.f.Stretch
                     }, s.createElement(p.A, {
@@ -5597,7 +5597,7 @@
                             n = this.getCollectionVideos();
                         if (n && 0 === n.length) return null;
                         var r = 0,
-                            d = t && t.type === l.o.SERIES && n && n.length >= 4;
+                            d = t && t.type === l.p.SERIES && n && n.length >= 4;
                         if (t && n && d && Object(c.a)() && Object(c.c)()) {
                             var m = function(e) {
                                 for (var t = e.items.edges, n = t.length, r = null, o = 0; o < t.length; o++) {
@@ -5695,14 +5695,14 @@
                         }))), !Object(c.a)() && o.createElement(f.z, {
                             type: f.F.Hollow,
                             size: f.D.Small,
-                            icon: f.rb.Play,
+                            icon: f.tb.Play,
                             linkTo: "/collections/" + e.id,
                             "data-test-selector": g.PlayAllButton
                         }, Object(a.d)("Play all", "LatestCollectionCarousel"))), o.createElement(f.W, {
                             color: f.O.Alt2,
-                            type: f.Tb.Span,
+                            type: f.Vb.Span,
                             "data-test-selector": g.Metadata
-                        }, this.renderSubTitle(e))) : o.createElement(f.gb, {
+                        }, this.renderSubTitle(e))) : o.createElement(f.ib, {
                             width: 250,
                             lineCount: 1
                         })
@@ -5939,7 +5939,7 @@
                 E = n("Ue10"),
                 I = (n("/nm5"), n("41XU")),
                 N = l.a.wrap(function() {
-                    return n.e(143).then(n.bind(null, "7lJP"))
+                    return n.e(144).then(n.bind(null, "7lJP"))
                 }, "UserImageUploader"),
                 x = function(e) {
                     function t() {
@@ -5986,15 +5986,15 @@
                                 },
                                 justifyContent: E.Wa.Between,
                                 fullWidth: !0
-                            }, o.createElement(E.qb, {
-                                asset: E.rb.Edit
-                            }), o.createElement(E.W, null, Object(s.d)("Edit", "ChannelBanner"))) : o.createElement(E.Xa, null, o.createElement(E.Xa, null, o.createElement(E.qb, {
-                                asset: E.rb.Edit
+                            }, o.createElement(E.sb, {
+                                asset: E.tb.Edit
+                            }), o.createElement(E.W, null, Object(s.d)("Edit", "ChannelBanner"))) : o.createElement(E.Xa, null, o.createElement(E.Xa, null, o.createElement(E.sb, {
+                                asset: E.tb.Edit
                             })), Object(s.d)("Update Profile Banner", "ChannelBanner"));
-                            u = o.createElement(E.Cb, {
+                            u = o.createElement(E.Eb, {
                                 className: r("channel-banner__edit-overlay", c),
                                 background: E.r.Overlay,
-                                position: E.hb.Absolute,
+                                position: E.jb.Absolute,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 fullWidth: !0
@@ -6025,7 +6025,7 @@
                         this.props.closeModal()
                     }, t
                 }(o.Component),
-                T = Object(u.a)(I, {
+                L = Object(u.a)(I, {
                     options: function(e) {
                         return {
                             variables: {
@@ -6037,7 +6037,7 @@
                         return !e.channelLogin || !e.firstPageLoaded
                     }
                 })(x);
-            var L, O = Object(y.connect)(function(e) {
+            var T, O = Object(y.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
@@ -6046,43 +6046,43 @@
                         closeModal: w.c,
                         showModal: w.d
                     }, e)
-                })(T),
+                })(L),
                 D = n("tuvy"),
                 P = n("i4un"),
                 F = n("dIU+"),
-                B = n("GnwI"),
-                j = n("Ba7Q"),
+                j = n("GnwI"),
+                B = n("Ba7Q"),
                 A = n("QjI3"),
                 R = (n("BOil"), n("HXcb"));
             n.d(t, "a", function() {
                 return H
             }), n.d(t, "b", function() {
-                return q
+                return z
             }), n.d(t, "d", function() {
                 return W
             }), n.d(t, "c", function() {
                 return Q
             });
-            var U, V = l.a.wrap(function() {
-                return n.e(144).then(n.bind(null, "g9Rq"))
+            var V, U = l.a.wrap(function() {
+                return n.e(145).then(n.bind(null, "g9Rq"))
             }, "EditProfileOverlay");
             ! function(e) {
                 e.SocialButtonsDefault = "channel-header__social-buttons-default", e.SocialButtonsVariantB = "channel-header__social-buttons-variant-b"
-            }(U || (U = {}));
+            }(V || (V = {}));
             var W, X = "channel-header__edit-profile-overlay",
                 M = "channel-header__verified-badge",
                 G = "channel-header__live-indicator",
                 H = "yes",
-                q = "browser-notifications-upsell-seen";
+                z = "browser-notifications-upsell-seen";
             ! function(e) {
                 e[e.Channel = 1] = "Channel", e[e.Clips = 2] = "Clips", e[e.Collections = 3] = "Collections", e[e.Events = 4] = "Events", e[e.Success = 5] = "Success", e[e.Followers = 6] = "Followers", e[e.Following = 7] = "Following", e[e.Videos = 8] = "Videos"
             }(W || (W = {}));
-            var z = function(e) {
+            var q = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
-                        return n.verifiedBadgeElement = o.createElement(E.Wb, {
+                        return n.verifiedBadgeElement = o.createElement(E.Yb, {
                             label: Object(s.d)("Verified", "ChannelHeader"),
-                            direction: E.Yb.Right
+                            direction: E.ac.Right
                         }, o.createElement(E.Xa, {
                             className: "channel-header__verified",
                             "data-target": M,
@@ -6091,16 +6091,16 @@
                             margin: {
                                 left: 1
                             }
-                        }, o.createElement(E.qb, {
-                            asset: E.rb.Verified
+                        }, o.createElement(E.sb, {
+                            asset: E.tb.Verified
                         }))), n.ChannelStatusIndicatorElement = o.createElement(E.Xa, {
                             margin: {
                                 left: 1
                             },
                             "data-target": G
-                        }, o.createElement(E.Wb, {
+                        }, o.createElement(E.Yb, {
                             label: Object(s.d)("Live Now", "ChannelHeader"),
-                            direction: E.Yb.Right
+                            direction: E.ac.Right
                         }, o.createElement(E.K, {
                             status: E.M.Live,
                             pulse: !0
@@ -6109,10 +6109,10 @@
                                 live: !1
                             })
                         }, n.renderAvatarEditButton = function() {
-                            return n.props.data && n.props.data.user && n.props.data.user.id && n.props.data.user.login && n.isChannelEditor() ? o.createElement(E.Cb, {
+                            return n.props.data && n.props.data.user && n.props.data.user.id && n.props.data.user.login && n.isChannelEditor() ? o.createElement(E.Eb, {
                                 className: X,
                                 background: E.r.Overlay,
-                                position: E.hb.Absolute,
+                                position: E.jb.Absolute,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 fullHeight: !0,
@@ -6120,7 +6120,7 @@
                                 display: E.X.InlineFlex,
                                 alignItems: E.f.Center,
                                 justifyContent: E.Wa.Center
-                            }, o.createElement(V, {
+                            }, o.createElement(U, {
                                 userID: n.props.data.user.id,
                                 login: n.props.data.user.login,
                                 displayName: n.props.data.user.displayName || n.props.data.user.login
@@ -6153,9 +6153,9 @@
                                 return i.__generator(this, function(e) {
                                     switch (e.label) {
                                         case 0:
-                                            return !s.m.get(q, !1) && Object(v.a)() && Object(b.c)() && s.p.experiments.getAssignment(f.b.BrowserNotificationsUpsell) === H ? [4, g.a.hasPushSubscription()] : [3, 3];
+                                            return !s.m.get(z, !1) && Object(v.a)() && Object(b.c)() && s.p.experiments.getAssignment(f.b.BrowserNotificationsUpsell) === H ? [4, g.a.hasPushSubscription()] : [3, 3];
                                         case 1:
-                                            return e.sent() ? [3, 3] : (s.m.set(q, !0), this.props.showBrowserNotificationsUpsellModal(), [4, g.a.userSubscribe(k.a.Channel)]);
+                                            return e.sent() ? [3, 3] : (s.m.set(z, !0), this.props.showBrowserNotificationsUpsellModal(), [4, g.a.userSubscribe(k.a.Channel)]);
                                         case 2:
                                             e.sent(), this.props.closeBrowserNotificationsUpsellModal(), e.label = 3;
                                         case 3:
@@ -6228,16 +6228,16 @@
                                 flexShrink: 0,
                                 alignItems: E.f.Stretch
                             }, o.createElement(E.Xa, {
-                                position: E.hb.Relative
+                                position: E.jb.Relative
                             }, o.createElement(E.q, {
                                 size: 36,
                                 src: l,
                                 alt: e || ""
                             }), this.renderAvatarEditButton())), e ? o.createElement(E.W, {
-                                type: E.Tb.H5
+                                type: E.Vb.H5
                             }, e) : o.createElement(E.Xa, {
                                 alignItems: E.f.Center
-                            }, o.createElement(E.gb, {
+                            }, o.createElement(E.ib, {
                                 lineCount: 1,
                                 width: 120
                             })), p && this.ChannelStatusIndicatorElement, t && this.verifiedBadgeElement);
@@ -6301,7 +6301,7 @@
                         }, o.createElement(d.a, {
                             alwaysMountBalloonContent: !0
                         }, o.createElement(E.A, {
-                            icon: E.rb.NavMore,
+                            icon: E.tb.NavMore,
                             ariaLabel: Object(s.d)("More", "ChannelHeader")
                         }), o.createElement(E.u, {
                             direction: E.v.Bottom,
@@ -6331,7 +6331,7 @@
                                         left: .5
                                     }
                                 }, o.createElement(E.W, {
-                                    type: E.Tb.Span,
+                                    type: E.Vb.Span,
                                     fontSize: E.Ca.Size5
                                 }, e.count)) : null,
                                 i = t.generateUserLink(e.pathSuffix),
@@ -6354,7 +6354,7 @@
                                 },
                                 display: E.X.Flex
                             }, o.createElement(E.W, {
-                                type: E.Tb.Span,
+                                type: E.Vb.Span,
                                 fontSize: E.Ca.Size5
                             }, e.label), n)))
                         })
@@ -6368,7 +6368,7 @@
                                         left: .5
                                     }
                                 }, o.createElement(E.W, {
-                                    type: E.Tb.Span
+                                    type: E.Vb.Span
                                 }, e.count)) : null,
                                 i = t.generateUserLink(e.pathSuffix);
                             return o.createElement(E.Xa, {
@@ -6385,7 +6385,7 @@
                                 },
                                 display: E.X.Flex
                             }, o.createElement(E.W, {
-                                type: E.Tb.Span
+                                type: E.Vb.Span
                             }, e.label), n)))
                         })
                     }, t.prototype.createChannelLinks = function(e, t, n) {
@@ -6466,7 +6466,7 @@
                     }, t.prototype.renderSocialButtons = function() {
                         var e = this.getFollowingState(),
                             t = null,
-                            n = U.SocialButtonsDefault;
+                            n = V.SocialButtonsDefault;
                         if (Object(P.c)()) {
                             var i = r("channel-header__follow-btn", {
                                     "channel-header__follow-btn--following": !!this.state.showLiveNotificationsButton
@@ -6474,7 +6474,7 @@
                                 a = r("channel-header__notification-toggle-container", {
                                     "channel-header__notification-toggle-container--visible": !!this.state.showLiveNotificationsButton
                                 });
-                            n = U.SocialButtonsVariantB, t = o.createElement(o.Fragment, null, o.createElement(E.Xa, {
+                            n = V.SocialButtonsVariantB, t = o.createElement(o.Fragment, null, o.createElement(E.Xa, {
                                 className: "channel-header__follow-btn-container",
                                 display: E.X.Flex,
                                 overflow: E.cb.Hidden,
@@ -6509,9 +6509,9 @@
                                 useContextualModals: !0
                             })))), o.createElement("div", {
                                 className: a
-                            }, o.createElement(j.a, {
+                            }, o.createElement(B.a, {
                                 channelLogin: this.props.channelLogin,
-                                toggleType: j.b.Button,
+                                toggleType: B.b.Button,
                                 tabIndex: this.state.showLiveNotificationsButton ? 0 : -1,
                                 followData: this.getFollowData(),
                                 showTooltips: !0
@@ -6523,7 +6523,7 @@
                                 unsubscribedButtonType: e ? E.F.Default : E.F.Hollow,
                                 forceIcon: !0
                             })))
-                        } else(this.props.channelIsHosting || Object(P.e)()) && (n = U.SocialButtonsDefault, t = o.createElement(o.Fragment, null, o.createElement(E.Xa, {
+                        } else(this.props.channelIsHosting || Object(P.e)()) && (n = V.SocialButtonsDefault, t = o.createElement(o.Fragment, null, o.createElement(E.Xa, {
                             display: E.X.Flex,
                             alignItems: E.f.Stretch,
                             margin: {
@@ -6578,8 +6578,8 @@
                     skip: function(e) {
                         return !e.channelLogin
                     },
-                    mapMessageTypesToProps: (L = {}, L[m.PubsubMessageType.ViewCount] = "viewCount", L)
-                }]), Object(B.b)("ChannelHeader"))(z)
+                    mapMessageTypesToProps: (T = {}, T[m.PubsubMessageType.ViewCount] = "viewCount", T)
+                }]), Object(j.b)("ChannelHeader"))(q)
         },
         "lmt/": function(e, t, n) {
             "use strict";
@@ -7105,7 +7105,7 @@
 
             function s(e) {
                 return i.createElement(a.W, {
-                    type: a.Tb.Strong
+                    type: a.Vb.Strong
                 }, e)
             }
 
@@ -7257,11 +7257,11 @@
                             duration: u.k.Long,
                             timing: u.m.EaseInOut,
                             enabled: !0
-                        }, r.createElement(u.Cb, {
+                        }, r.createElement(u.Eb, {
                             className: "browser-push-notifications-upsell",
                             alignItems: u.f.Center,
                             justifyContent: u.Wa.Center,
-                            position: u.hb.Fixed,
+                            position: u.jb.Fixed,
                             display: u.X.Flex,
                             background: u.r.Overlay,
                             fullHeight: !0,
@@ -7271,18 +7271,18 @@
                         }, r.createElement(u.Xa, {
                             className: "browser-push-notifications-upsell__container",
                             display: u.X.Flex,
-                            textAlign: u.Pb.Center,
+                            textAlign: u.Rb.Center,
                             padding: {
                                 x: 1
                             },
-                            position: u.hb.Relative
+                            position: u.jb.Relative
                         }, r.createElement(u.i, {
                             type: u.n.SlideInBottom,
                             duration: u.k.Long,
                             timing: u.m.EaseInOut,
                             enabled: !0
                         }, r.createElement(u.W, {
-                            type: u.Tb.H3,
+                            type: u.Vb.H3,
                             fontSize: u.Ca.Size3,
                             lineHeight: u.Ya.Body
                         }, Object(s.d)("Don't miss out when your favorite streamers go live!", "BrowserNotificationsUpsellModal")), r.createElement(u.Xa, {
@@ -7290,13 +7290,13 @@
                                 top: 1
                             }
                         }, r.createElement(u.W, {
-                            type: u.Tb.H4,
+                            type: u.Vb.H4,
                             fontSize: u.Ca.Size4,
                             color: u.O.OverlayAlt,
                             lineHeight: u.Ya.Body
                         }, Object(s.d)("Turn on Browser Notifications to get updates even when your browser window is minimized", "BrowserNotificationsUpsellModal")))), r.createElement(u.Xa, {
                             className: "browser-push-notifications-upsell__arrow",
-                            position: u.hb.Absolute,
+                            position: u.jb.Absolute,
                             attachTop: !0,
                             attachLeft: !0
                         }, r.createElement(u.i, {

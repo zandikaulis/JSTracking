@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [178], {
+    [184], {
         "/ysg": function(e, t) {
             var r = {
                 kind: "Document",
@@ -115,7 +115,7 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        var e = a.createElement(o.xb, {
+                        var e = a.createElement(o.zb, {
                             onChange: this.onChange,
                             disabled: this.props.disabled,
                             defaultValue: this.props.defaultLanguage
@@ -1183,7 +1183,7 @@
                             alt: this.props.alt,
                             src: this.props.src
                         })), c.createElement(y.Xa, {
-                            textAlign: y.Pb.Center
+                            textAlign: y.Rb.Center
                         }, c.createElement(y.Xa, {
                             margin: {
                                 bottom: 2
@@ -1191,7 +1191,7 @@
                         }, c.createElement(y.W, {
                             bold: !0,
                             fontSize: y.Ca.Size3,
-                            type: y.Tb.H3
+                            type: y.Vb.H3
                         }, this.props.title)), c.createElement(y.W, {
                             fontSize: y.Ca.Size5,
                             color: y.O.Alt2
@@ -1224,7 +1224,7 @@
                 T = r("Jgup"),
                 A = r("geRD"),
                 k = function() {
-                    return c.createElement(y.Cb, {
+                    return c.createElement(y.Eb, {
                         background: y.r.Base,
                         padding: 2,
                         margin: {
@@ -1232,7 +1232,7 @@
                         },
                         border: !0,
                         borderRadius: y.x.Medium
-                    }, c.createElement(y.cc, null, c.createElement("h3", null, Object(u.d)("Partnership Guidelines", "PartnershipSignupGuidelines")), c.createElement("ul", null, c.createElement("li", null, Object(u.d)("Complete the <x:path-to-partner>Path to Partner Achievement</x:path-to-partner> or demonstrate large, engaged viewership/following on other services. Streamers who complete the Path to Partner achievements in your Achievements Dashboard will unlock a button to apply for Partnership, and receive priority for their application to be reviewed. Please note that these Achievements list the minimum criteria we look for in potential Partners, and completing them does not guarantee Partnership.", {
+                    }, c.createElement(y.ec, null, c.createElement("h3", null, Object(u.d)("Partnership Guidelines", "PartnershipSignupGuidelines")), c.createElement("ul", null, c.createElement("li", null, Object(u.d)("Complete the <x:path-to-partner>Path to Partner Achievement</x:path-to-partner> or demonstrate large, engaged viewership/following on other services. Streamers who complete the Path to Partner achievements in your Achievements Dashboard will unlock a button to apply for Partnership, and receive priority for their application to be reviewed. Please note that these Achievements list the minimum criteria we look for in potential Partners, and completing them does not guarantee Partnership.", {
                         "x:path-to-partner": function(e) {
                             return c.createElement(y.U, {
                                 targetBlank: !0,
@@ -1317,14 +1317,14 @@
                             }
                         }, c.createElement(y.W, {
                             bold: !0,
-                            type: y.Tb.H1
+                            type: y.Vb.H1
                         }, Object(u.d)("Partner Application", "PartnershipSignupApplicationTitle"))), e && c.createElement(y.Xa, {
                             "data-test-selector": S.Description,
                             margin: {
                                 bottom: 2
                             }
                         }, c.createElement(y.W, {
-                            type: y.Tb.P,
+                            type: y.Vb.P,
                             fontSize: y.Ca.Size5
                         }, e))), c.createElement(y.Xa, {
                             display: y.X.Flex,
@@ -1346,7 +1346,7 @@
                     }, t
                 }(c.Component),
                 L = r("/ysg"),
-                x = r("IeOy");
+                D = r("IeOy");
             ! function(e) {
                 e.ChannelLogin = "partner-signup-channel-login", e.Button = "partner-signup-submit-button", e.Category = "partner-signup-category", e.Country = "ppartner-signup-country", e.Description = "partner-signup-description", e.Email = "partnership_signup-email", e.FullName = "partner-signup-full-name", e.Language = "partner-signup-language"
             }(w || (w = {})),
@@ -1362,7 +1362,7 @@
             function(e) {
                 e.Category = "category", e.Country = "country", e.Description = "description", e.FullName = "fullName", e.Language = "language"
             }(F || (F = {}));
-            var D = function(e) {
+            var x = function(e) {
                     function t(t) {
                         var r, n = e.call(this, t) || this;
                         n.logger = u.k.withCategory("PartnershipApplication"), n.handleLanguageChange = function(e) {
@@ -1468,7 +1468,7 @@
                         }, c.createElement(y.Ea, {
                             id: M.Category,
                             label: Object(u.d)("Category", "PartnershipSignupForm")
-                        }, c.createElement(y.xb, {
+                        }, c.createElement(y.zb, {
                             "data-test-selector": w.Category,
                             id: M.Category,
                             onChange: this.registerHandleFieldChange(F.Category)
@@ -1483,7 +1483,7 @@
                         }, c.createElement(y.Ea, {
                             id: M.Country,
                             label: Object(u.d)("Applicant Country", "PartnershipSignupForm")
-                        }, c.createElement(y.xb, {
+                        }, c.createElement(y.zb, {
                             "data-test-selector": w.Country,
                             id: M.Country,
                             value: this.state.fields.country,
@@ -1529,7 +1529,7 @@
                             "data-test-selector": w.Description,
                             label: Object(u.d)("Details", "PartnershipSignupForm"),
                             hint: Object(u.d)("Tell us about your stream", "PartnershipSignupForm")
-                        }, c.createElement(y.Qb, {
+                        }, c.createElement(y.Sb, {
                             id: M.Description,
                             onChange: this.registerHandleFieldChange(F.Description)
                         }))), c.createElement(y.z, {
@@ -1550,14 +1550,14 @@
                         configurable: !0
                     }), t
                 }(c.Component),
-                G = Object(E.compose)(Object(d.a)(x), Object(d.a)(L, {
+                R = Object(E.compose)(Object(d.a)(D), Object(d.a)(L, {
                     name: "createPartnershipApplication"
-                }))(D);
-            var R, U, B = Object(a.connect)(function(e) {
+                }))(x);
+            var G, U, B = Object(a.connect)(function(e) {
                     return {
                         sessionUser: Object(i.e)(e)
                     }
-                })(G),
+                })(R),
                 V = r("oCrl"),
                 W = r.n(V),
                 H = function(e) {
@@ -1575,8 +1575,8 @@
                     }, t
                 }(c.Component),
                 X = r("Z4LW"),
-                q = r.n(X),
-                Y = function(e) {
+                Y = r.n(X),
+                q = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1592,12 +1592,12 @@
                                 "x:strong": function(e) {
                                     return c.createElement(y.W, {
                                         bold: !0,
-                                        type: y.Tb.Span
+                                        type: y.Vb.Span
                                     }, e)
                                 }
                             }, "SubmittedPage"),
                             title: Object(u.d)("Review Complete", "SubmittedPage"),
-                            src: q.a
+                            src: Y.a
                         })
                     }, t
                 }(c.Component),
@@ -1636,8 +1636,8 @@
                         configurable: !0
                     }), t
                 }(c.Component),
-                Z = r("5NYc"),
-                z = r("vYsf"),
+                z = r("5NYc"),
+                Z = r("vYsf"),
                 J = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -1656,7 +1656,7 @@
                 }(c.Component);
             ! function(e) {
                 e.Criteria = "partner-signup-checklist-criteria", e.Value = "partner-signup-checklist-value"
-            }(R || (R = {})),
+            }(G || (G = {})),
             function(e) {
                 e[e.Complete = 0] = "Complete", e[e.Error = 1] = "Error", e[e.Incomplete = 2] = "Incomplete"
             }(U || (U = {}));
@@ -1673,7 +1673,7 @@
                             fullWidth: !0,
                             justifyContent: y.Wa.Between
                         }, c.createElement(y.W, {
-                            "data-test-selector": R.Criteria,
+                            "data-test-selector": G.Criteria,
                             bold: !0
                         }, this.props.criteria), c.createElement(y.Xa, {
                             alignItems: y.f.Center,
@@ -1685,26 +1685,26 @@
                             }
                         }, "string" == typeof e ? c.createElement(y.W, {
                             color: y.O.Alt2,
-                            "data-test-selector": R.Value
-                        }, e) : e), c.createElement(y.qb, o.__assign({}, this.svgProps))))
+                            "data-test-selector": G.Value
+                        }, e) : e), c.createElement(y.sb, o.__assign({}, this.svgProps))))
                     }, Object.defineProperty(t.prototype, "svgProps", {
                         get: function() {
                             switch (this.props.type) {
                                 default:
                                     case U.Complete:
                                     return {
-                                    asset: y.rb.Check,
-                                    type: y.sb.Success
+                                    asset: y.tb.Check,
+                                    type: y.ub.Success
                                 };
                                 case U.Error:
                                         return {
-                                        asset: y.rb.NotificationError,
-                                        type: y.sb.Alert
+                                        asset: y.tb.NotificationError,
+                                        type: y.ub.Alert
                                     };
                                 case U.Incomplete:
                                         return {
-                                        asset: y.rb.Check,
-                                        type: y.sb.Alt2
+                                        asset: y.tb.Check,
+                                        type: y.ub.Alt2
                                     }
                             }
                         },
@@ -1720,7 +1720,7 @@
                         var e = this.props,
                             t = e.borderTop,
                             r = e.margin;
-                        return c.createElement(y.Cb, {
+                        return c.createElement(y.Eb, {
                             background: this.props.background || y.r.Base,
                             borderRadius: this.props.borderRadius || y.x.Medium,
                             borderBottom: !0,
@@ -1749,8 +1749,8 @@
                             margin: {
                                 right: 1
                             }
-                        }, c.createElement(y.W, null, this.props.message)), c.createElement(y.qb, {
-                            asset: y.rb.Popout
+                        }, c.createElement(y.W, null, this.props.message)), c.createElement(y.sb, {
+                            asset: y.tb.Popout
                         })))
                     }, t
                 }(c.Component);
@@ -1891,7 +1891,7 @@
                                         "x:strong": function(e) {
                                             return c.createElement(y.W, {
                                                 bold: !0,
-                                                type: y.Tb.Span
+                                                type: y.Vb.Span
                                             }, e)
                                         }
                                     }, "PartnerSignupVerifyAchievements"),
@@ -1927,7 +1927,7 @@
                                 "x:strong": function(e) {
                                     return c.createElement(y.W, {
                                         bold: !0,
-                                        type: y.Tb.Span
+                                        type: y.Vb.Span
                                     }, e)
                                 }
                             }, "PartnerSignupVerifyAchievements")
@@ -1949,26 +1949,26 @@
                                         if (!(e = this.props.sessionUser)) return [2, re.Error];
                                         t = !1, r = !1, n = !1, a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, Object(z.a)(e.id)];
+                                        return a.trys.push([1, 3, , 4]), [4, Object(Z.a)(e.id)];
                                     case 2:
                                         return a.sent().forEach(function(e) {
                                             var a = e.is_complete,
                                                 i = e.key,
                                                 o = e.progress;
                                             switch (i) {
-                                                case Z.b.IT_BEGINS:
+                                                case z.b.IT_BEGINS:
                                                     for (var c = 0, s = o; c < s.length; c++) {
                                                         var u = s[c];
-                                                        if (u.metric === Z.a.HAS_FIRST_STREAM) {
+                                                        if (u.metric === z.a.HAS_FIRST_STREAM) {
                                                             n = Boolean(u.progress);
                                                             break
                                                         }
                                                     }
                                                     break;
-                                                case Z.b.PATH_TO_AFFILIATE:
+                                                case z.b.PATH_TO_AFFILIATE:
                                                     r = a;
                                                     break;
-                                                case Z.b.PATH_TO_PARTNER:
+                                                case z.b.PATH_TO_PARTNER:
                                                     t = a
                                             }
                                         }), [3, 4];
@@ -2006,14 +2006,14 @@
                     }))
                 },
                 le = function() {
-                    return c.createElement(ee, null, c.createElement(y.Cb, {
+                    return c.createElement(ee, null, c.createElement(y.Eb, {
                         display: y.X.Flex,
                         justifyContent: y.Wa.Center
-                    }, c.createElement(y.qb, {
-                        asset: y.rb.DeadGlitch,
+                    }, c.createElement(y.sb, {
+                        asset: y.tb.DeadGlitch,
                         height: 50,
                         width: 50,
-                        type: y.sb.Alt2
+                        type: y.ub.Alt2
                     })))
                 },
                 de = Object(d.a)(ae)(se);
@@ -2124,13 +2124,13 @@
                                 margin: {
                                     bottom: 1
                                 }
-                            }, c.createElement(y.nb, {
+                            }, c.createElement(y.pb, {
                                 checked: e,
                                 "data-test-selector": be.RadioYes,
                                 label: Object(u.d)("Yes", "PartnerSignupVerifySocialMedia"),
                                 onChange: t.handleRadioChange,
                                 value: he.Yes
-                            })), c.createElement(y.nb, {
+                            })), c.createElement(y.pb, {
                                 checked: !e,
                                 "data-test-selector": be.RadioNo,
                                 label: Object(u.d)("No", "PartnerSignupVerifySocialMedia"),
@@ -2194,7 +2194,7 @@
                     return c.createElement(I, {
                         description: Object(u.d)("The Twitch Partnership Program is for those who are committed to streaming. Twitch Partners are creators who stream a variety of content, from games, music, talk shows, art, to just about anything else you can imagine. If you love sharing what you do with a live audience and have built up a sizeable, engaged community on Twitch or other services, we want to hear from you!", "PartnershipSignupLogin"),
                         flexDirection: y.Aa.Column
-                    }, c.createElement(y.cc, null, c.createElement("hr", null)), c.createElement(y.Xa, {
+                    }, c.createElement(y.ec, null, c.createElement("hr", null)), c.createElement(y.Xa, {
                         alignItems: y.f.Center,
                         display: y.X.Flex,
                         fullWidth: !0,
@@ -2269,7 +2269,7 @@
                                 var o = this.getUTCDate(),
                                     s = this.getUTCDate(new Date(i)),
                                     u = new Date(s.setDate(s.getDate() + 14));
-                                if (u >= o) return c.createElement(Y, {
+                                if (u >= o) return c.createElement(q, {
                                     email: n,
                                     reviewedByDate: u
                                 })

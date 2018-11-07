@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [140], {
+    [141], {
         "+U0Y": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -362,12 +362,12 @@
                     }, t.prototype.renderCheckmark = function(e) {
                         return this.props.broadcastType === e ? r.createElement(u.Xa, {
                             attachRight: !0,
-                            position: u.hb.Absolute,
+                            position: u.jb.Absolute,
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(u.qb, {
-                            asset: u.rb.Check,
+                        }, r.createElement(u.sb, {
+                            asset: u.tb.Check,
                             height: 18,
                             width: 18
                         })) : null
@@ -380,7 +380,7 @@
                     }, t.prototype.renderSortSelector = function() {
                         if (this.props.hideSortSelector) return null;
                         var e = this.props.selectedSort && Object(c.b)(this.props.selectedSort) || c.a.Newest,
-                            t = r.createElement(u.xb, {
+                            t = r.createElement(u.zb, {
                                 "data-a-target": "video-sort-select",
                                 "data-test-selector": i.SortSelector,
                                 name: "sort",
@@ -568,7 +568,7 @@
                     }
                 }, i.createElement(r.o, {
                     ratio: e.aspectRatio
-                }, i.createElement(r.Cb, {
+                }, i.createElement(r.Eb, {
                     background: r.r.Alt2,
                     fullHeight: !0
                 }, t))))
@@ -702,34 +702,31 @@
                 b = n("GnwI"),
                 y = n("EJax"),
                 w = n("XKWF"),
-                S = n("rShu"),
-                _ = function(e) {
+                S = function(e) {
                     var t = e.game;
                     return (t && t.videos && t.videos.edges || []).filter(function(e) {
                         return e && e.node && e.node.id
                     })
                 },
-                C = n("HStj"),
+                _ = n("HStj"),
                 N = n("Ue10"),
-                P = n("tBbK"),
-                T = (n("TB8s"), w.a.Popular),
-                F = function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        return n.onVideoSortChange = function(e) {
-                            Object(g.u)("/directory/game/" + n.props.match.params.encodedCommunityName + "/videos", n.props, void 0, e)
-                        }, n.onVideoFilterChange = function(e) {
-                            Object(g.u)("/directory/game/" + n.props.match.params.encodedCommunityName + "/videos", n.props, e)
-                        }, n.state = {
-                            directoryType: S.a.Games
-                        }, n
+                C = n("tBbK"),
+                P = (n("TB8s"), w.a.Popular),
+                T = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.onVideoSortChange = function(e) {
+                            Object(g.u)("/directory/game/" + t.props.match.params.encodedCommunityName + "/videos", t.props, void 0, e)
+                        }, t.onVideoFilterChange = function(e) {
+                            Object(g.u)("/directory/game/" + t.props.match.params.encodedCommunityName + "/videos", t.props, e)
+                        }, t
                     }
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive(), s.p.setPageTitle(decodeURIComponent(this.props.match.params.encodedCommunityName))
                     }, t.prototype.render = function() {
                         var e = null,
                             t = decodeURIComponent(this.props.match.params.encodedCommunityName),
-                            n = Object(g.r)(this.props) || T,
+                            n = Object(g.r)(this.props) || P,
                             i = Object(g.t)(this.props);
                         if (this.props.data.error) {
                             var a = Object(s.d)("{gameName} videos are temporarily unavailable.", {
@@ -752,8 +749,7 @@
                         }));
                         var r = o.createElement(k.a, {
                                 buttonSize: N.D.Large,
-                                contentType: C.a.Videos,
-                                directoryType: this.state.directoryType,
+                                contentType: _.a.Videos,
                                 directoryName: t
                             }),
                             u = o.createElement(N.Xa, {
@@ -790,7 +786,7 @@
                         })))
                     }, t.prototype.enablePagination = function() {
                         return !!(this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.game && this.props.data.game.videos && this.props.data.game.videos.pageInfo && this.props.data.game.videos.pageInfo.hasNextPage)
-                    }, t = r.__decorate([Object(u.a)(P, {
+                    }, t = r.__decorate([Object(u.a)(C, {
                         options: function(e) {
                             return {
                                 fetchPolicy: "network-only",
@@ -807,7 +803,7 @@
                             return r.__assign({}, e, {
                                 loadMore: function() {
                                     return e.data.fetchMore({
-                                        query: P,
+                                        query: C,
                                         variables: r.__assign({}, e.data.variables, {
                                             followedCursor: e.data.game && e.data.game.videos && e.data.game.videos.edges && e.data.game.videos.edges.length > 0 ? e.data.game.videos.edges[e.data.game.videos.edges.length - 1].cursor : void 0
                                         }),
@@ -816,7 +812,7 @@
                                             return {
                                                 game: r.__assign({}, n.game, {
                                                     videos: r.__assign({}, n.game && n.game.videos, {
-                                                        edges: Object(p.c)(_(e), _(n))
+                                                        edges: Object(p.c)(S(e), S(n))
                                                     })
                                                 })
                                             }
@@ -837,13 +833,13 @@
                         }
                     })], t)
                 }(o.Component);
-            var V = Object(i.connect)(function(e) {
+            var F = Object(i.connect)(function(e) {
                 return {
                     languagePreferences: Object(a.a)(e)
                 }
-            })(F);
+            })(T);
             n.d(t, "DirectoryGameVideosPage", function() {
-                return V
+                return F
             })
         },
         b6Yk: function(e, t, n) {
@@ -1094,9 +1090,9 @@
                         });
                         t = a.createElement(a.Fragment, null, s)
                     }
-                    return a.createElement(c.Zb, {
-                        gutterSize: c.bc.Small,
-                        childWidth: e.videoCardSize || c.ac.Large,
+                    return a.createElement(c.bc, {
+                        gutterSize: c.dc.Small,
+                        childWidth: e.videoCardSize || c.cc.Large,
                         placeholderItems: 20
                     }, t, n)
                 },
@@ -1584,7 +1580,7 @@
                                 className: "language-select-menu__balloon"
                             }, l.createElement(p.b, null, l.createElement(f.Xa, {
                                 padding: .5
-                            }, Object(g.b)().map(t.renderLanguageOption)))), l.createElement(f.Cb, {
+                            }, Object(g.b)().map(t.renderLanguageOption)))), l.createElement(f.Eb, {
                                 background: f.r.Alt,
                                 borderTop: !0,
                                 className: "language-select-menu__footer"
@@ -1617,8 +1613,8 @@
                                 margin: {
                                     left: .5
                                 }
-                            }, 0 !== e && l.createElement(f.eb, {
-                                type: f.fb.Brand,
+                            }, 0 !== e && l.createElement(f.gb, {
+                                type: f.hb.Brand,
                                 label: e.toString()
                             })))
                         }, t.trackLanguageChange = function(e, n) {
