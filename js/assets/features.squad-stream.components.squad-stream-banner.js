@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [127], {
+    [128], {
         "/guG": function(e, n, a) {
             "use strict";
             a.d(n, "b", function() {
@@ -67,49 +67,6 @@
                 })
             }
         },
-        FfRw: function(e, n, a) {
-            "use strict";
-            a.d(n, "a", function() {
-                return i
-            });
-            var t = a("0Log"),
-                r = a("DMoW");
-
-            function i(e) {
-                if (!e || !e.squad) return null;
-                for (var n = [], a = 0, i = e.squad.members; a < i.length; a++) {
-                    var d = i[a],
-                        u = {
-                            __typename: "User",
-                            id: d.id,
-                            login: d.login,
-                            displayName: d.display_name,
-                            profileImageURL: d.profile_image_url_150
-                        };
-                    n.push(u)
-                }
-                return {
-                    __typename: "SquadStream",
-                    id: e.squad.id,
-                    status: function(e) {
-                        switch (e) {
-                            case t.SquadStatus.Pending:
-                                return r.N.PENDING;
-                            case t.SquadStatus.Live:
-                                return r.N.LIVE;
-                            case t.SquadStatus.Ended:
-                            default:
-                                return r.N.ENDED
-                        }
-                    }(e.squad.status),
-                    members: n,
-                    owner: {
-                        __typename: "User",
-                        id: e.squad.owner_id
-                    }
-                }
-            }
-        },
         KGyh: function(e, n, a) {
             "use strict";
             a.r(n);
@@ -119,18 +76,52 @@
                 d = a("9C/b"),
                 u = a("/7QA"),
                 s = a("yR8l"),
-                o = a("eDVu"),
-                l = a("0Log"),
+                l = a("eDVu"),
+                o = a("0Log"),
                 c = a("/aPz"),
                 m = a("DMoW"),
                 p = a("GnwI"),
-                S = a("aKsW"),
-                f = a("FfRw"),
-                q = a("egMT"),
+                S = a("aKsW");
+
+            function f(e) {
+                if (!e || !e.squad) return null;
+                for (var n = [], a = 0, t = e.squad.members; a < t.length; a++) {
+                    var r = t[a],
+                        i = {
+                            __typename: "User",
+                            id: r.id,
+                            login: r.login,
+                            displayName: r.display_name,
+                            profileImageURL: r.profile_image_url_150
+                        };
+                    n.push(i)
+                }
+                return {
+                    __typename: "SquadStream",
+                    id: e.squad.id,
+                    status: function(e) {
+                        switch (e) {
+                            case o.SquadStatus.Pending:
+                                return m.R.PENDING;
+                            case o.SquadStatus.Live:
+                                return m.R.LIVE;
+                            case o.SquadStatus.Ended:
+                            default:
+                                return m.R.ENDED
+                        }
+                    }(e.squad.status),
+                    members: n,
+                    owner: {
+                        __typename: "User",
+                        id: e.squad.owner_id
+                    }
+                }
+            }
+            var q = a("egMT"),
                 h = a("/guG"),
                 v = a("Ue10"),
-                g = a("qcLq"),
-                k = function(e) {
+                k = a("qcLq"),
+                g = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.goToSquadPage = function() {
@@ -149,7 +140,7 @@
                                 return e && e.displayName ? r.createElement(v.W, {
                                     bold: !0,
                                     noWrap: !0,
-                                    type: v.Tb.Span,
+                                    type: v.Vb.Span,
                                     color: v.O.Base
                                 }, e.displayName) : ""
                             };
@@ -212,7 +203,7 @@
                             delay: v.j.Medium,
                             duration: v.k.Medium,
                             enabled: !0
-                        }, r.createElement(v.Cb, {
+                        }, r.createElement(v.Eb, {
                             display: v.X.Flex,
                             background: v.r.Base,
                             alignItems: v.f.Center,
@@ -222,12 +213,12 @@
                             },
                             borderRadius: v.x.Large,
                             elevation: 2
-                        }, r.createElement(v.Cb, {
+                        }, r.createElement(v.Eb, {
                             display: v.X.Flex,
                             color: v.O.Overlay
                         }, i), r.createElement(v.Xa, null, r.createElement(v.W, {
                             noWrap: !0,
-                            type: v.Tb.Span,
+                            type: v.Vb.Span,
                             color: v.O.Alt2,
                             fontSize: v.Ca.Size5
                         }, this.makeBannerText(a, t))), r.createElement(v.Xa, {
@@ -248,10 +239,10 @@
                             return e.id === n
                         }))
                     }, n.prototype.shouldRender = function(e) {
-                        return !!Object(q.a)(e.channelLogin) && (!!this.isSquadMember(e) && (!e.data.loading && !e.data.error && (e.data.user && e.data.user.squadStream && e.data.user.squadStream.status === m.N.LIVE || !1)))
+                        return !!Object(q.a)(e.channelLogin) && (!!this.isSquadMember(e) && (!e.data.loading && !e.data.error && (e.data.user && e.data.user.squadStream && e.data.user.squadStream.status === m.R.LIVE || !1)))
                     }, n
                 }(r.Component),
-                b = Object(i.compose)(Object(s.a)(g, {
+                b = Object(i.compose)(Object(s.a)(k, {
                     options: function(e) {
                         return {
                             variables: {
@@ -259,24 +250,24 @@
                             }
                         }
                     }
-                }), Object(o.a)(function(e) {
+                }), Object(l.a)(function(e) {
                     return {
-                        query: g,
+                        query: k,
                         variables: {
                             channelLogin: e.channelLogin
                         },
                         topic: Object(c.g)(e.channelID),
-                        type: l.PubsubMessageType.Squad,
+                        type: o.PubsubMessageType.Squad,
                         mutator: function(e, n) {
-                            var a = Object(f.a)(e);
+                            var a = f(e);
                             return n.user && (n.user.squadStream = a), n
                         }
                     }
                 }), Object(p.b)("SquadStreamBanner", {
                     autoReportInteractive: !0
-                }), d.a)(k);
+                }), d.a)(g);
             a.d(n, "SquadStreamBannerComponent", function() {
-                return k
+                return g
             }), a.d(n, "SquadStreamBanner", function() {
                 return b
             })
@@ -311,7 +302,7 @@
             a.d(n, "a", function() {
                 return s
             }), a.d(n, "b", function() {
-                return o
+                return l
             });
             var t = a("/7QA"),
                 r = "squad_stream_dashboard",
@@ -327,7 +318,7 @@
                 return "on" === t.b.get(i, "off") && u(e)
             }
 
-            function o(e) {
+            function l(e) {
                 return "on" === t.b.get(r, "off") && u(e)
             }
         },

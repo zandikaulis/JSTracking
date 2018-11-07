@@ -63,7 +63,7 @@
                         if (0 === this.props.friendRequestsUserData.filter(function(e) {
                                 return e && e.node && e.node.id
                             }).length) return i.createElement(R.Xa, {
-                            textAlign: R.Pb.Center,
+                            textAlign: R.Rb.Center,
                             padding: {
                                 y: 5
                             }
@@ -86,10 +86,10 @@
                                 }
                             })) : null
                         });
-                        return i.createElement(R.Zb, {
+                        return i.createElement(R.bc, {
                             center: !0,
-                            childWidth: R.ac.Large,
-                            gutterSize: R.bc.Small,
+                            childWidth: R.cc.Large,
+                            gutterSize: R.dc.Small,
                             placeholderItems: 10
                         }, e, i.createElement(b.a, {
                             enabled: this.props.canLoadMore,
@@ -206,15 +206,15 @@
                         bottom: 2
                     }
                 }, i.createElement(s.W, {
-                    type: s.Tb.H2
+                    type: s.Vb.H2
                 }, Object(a.d)("Friends", "FriendsHeader")), i.createElement(s.Xa, {
                     margin: {
                         top: 1
                     }
-                }, i.createElement(s.Eb, null, i.createElement(s.Db, {
+                }, i.createElement(s.Gb, null, i.createElement(s.Fb, {
                     active: e.activeTab === r.Friends,
                     linkTo: "/friends"
-                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(s.Db, {
+                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(s.Fb, {
                     active: e.activeTab === r.Requests,
                     linkTo: "/friends/requests"
                 }, Object(a.d)("Friend Requests", "FriendsHeader")))))

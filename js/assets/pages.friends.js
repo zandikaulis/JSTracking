@@ -19,9 +19,9 @@
                 v = t("3lt/"),
                 h = t("ZDlU"),
                 b = t("ff13"),
-                k = t("jytb"),
-                y = t("Ue10"),
-                F = function(e) {
+                F = t("jytb"),
+                k = t("Ue10"),
+                y = function(e) {
                     function n(n) {
                         var t = e.call(this, n) || this;
                         t.state = {
@@ -48,17 +48,17 @@
                             })
                         }
                     }, n.prototype.render = function() {
-                        return this.props.isLoggedIn ? i.createElement(y.Xa, {
+                        return this.props.isLoggedIn ? i.createElement(k.Xa, {
                             padding: {
                                 x: 3,
                                 y: 2
                             }
                         }, i.createElement(b.a, {
                             activeTab: b.b.Friends
-                        }), this.renderContent(), i.createElement(y.Xa, {
-                            display: y.X.Flex,
-                            justifyContent: y.Wa.Center
-                        }, this.props.loading && i.createElement(y.Za, null))) : (this.props.login(), i.createElement(h.a, {
+                        }), this.renderContent(), i.createElement(k.Xa, {
+                            display: k.X.Flex,
+                            justifyContent: k.Wa.Center
+                        }, this.props.loading && i.createElement(k.Za, null))) : (this.props.login(), i.createElement(h.a, {
                             message: Object(d.d)("You must be logged in to view this page", "FriendsPage")
                         }))
                     }, n.prototype.renderContent = function() {
@@ -66,35 +66,35 @@
                         if (this.props.error) return i.createElement(h.a, {
                             message: Object(d.d)("Failed to load friends", "FriendRequestsPage")
                         });
-                        if (0 === this.state.filteredUsers.length) return i.createElement(y.Xa, {
-                            textAlign: y.Pb.Center,
+                        if (0 === this.state.filteredUsers.length) return i.createElement(k.Xa, {
+                            textAlign: k.Rb.Center,
                             padding: {
                                 y: 5
                             }
-                        }, i.createElement(y.W, {
-                            color: y.O.Alt2,
-                            fontSize: y.Ca.Size4,
+                        }, i.createElement(k.W, {
+                            color: k.O.Alt2,
+                            fontSize: k.Ca.Size4,
                             italic: !0
                         }, Object(d.d)("You don't have any friends yet. :(", "FriendsPage")));
                         var e = this.state.filteredUsers.map(function(e) {
-                            return e.id ? i.createElement(y.Xa, {
+                            return e.id ? i.createElement(k.Xa, {
                                 key: e.id,
                                 margin: {
                                     bottom: 2
                                 }
-                            }, i.createElement(k.b, {
+                            }, i.createElement(F.b, {
                                 id: e.id,
-                                bodyType: k.c.Presence,
+                                bodyType: F.c.Presence,
                                 showButtonsOnHover: !0,
                                 userData: {
                                     user: e
                                 }
                             })) : null
                         });
-                        return i.createElement(y.Zb, {
+                        return i.createElement(k.bc, {
                             center: !0,
-                            childWidth: y.ac.Large,
-                            gutterSize: y.bc.Small,
+                            childWidth: k.cc.Large,
+                            gutterSize: k.dc.Small,
                             placeholderItems: 10
                         }, e)
                     }, n.prototype.detectUserDataChange = function(e, n) {
@@ -136,14 +136,14 @@
                                 loading: e && e.loading || !1,
                                 login: this.props.login
                             };
-                        return i.createElement(F, r.__assign({}, n))
+                        return i.createElement(y, r.__assign({}, n))
                     }, n
                 }(i.Component);
 
             function P(e) {
                 return !e.isLoggedIn
             }
-            var D = Object(a.compose)(Object(o.connect)(function(e) {
+            var E = Object(a.compose)(Object(o.connect)(function(e) {
                 return {
                     isLoggedIn: Object(g.f)(e)
                 }
@@ -164,7 +164,7 @@
                 location: v.PageviewLocation.Friends
             }))(w);
             t.d(n, "FriendsPage", function() {
-                return D
+                return E
             })
         },
         "3lt/": function(e, n, t) {
@@ -305,15 +305,15 @@
                         bottom: 2
                     }
                 }, i.createElement(o.W, {
-                    type: o.Tb.H2
+                    type: o.Vb.H2
                 }, Object(a.d)("Friends", "FriendsHeader")), i.createElement(o.Xa, {
                     margin: {
                         top: 1
                     }
-                }, i.createElement(o.Eb, null, i.createElement(o.Db, {
+                }, i.createElement(o.Gb, null, i.createElement(o.Fb, {
                     active: e.activeTab === r.Friends,
                     linkTo: "/friends"
-                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(o.Db, {
+                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(o.Fb, {
                     active: e.activeTab === r.Requests,
                     linkTo: "/friends/requests"
                 }, Object(a.d)("Friend Requests", "FriendsHeader")))))

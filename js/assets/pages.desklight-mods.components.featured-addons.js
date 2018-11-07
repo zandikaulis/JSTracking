@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [135], {
+    [136], {
         BBBA: function(e, t, a) {
             "use strict";
             a.r(t);
@@ -44,7 +44,7 @@
                         flexShrink: 1,
                         overflow: f.cb.Hidden
                     }, r.createElement(f.W, {
-                        type: f.Tb.H2,
+                        type: f.Vb.H2,
                         fontSize: f.Ca.Size4,
                         ellipsis: !0
                     }, e.addon.name), r.createElement(f.Xa, {
@@ -57,8 +57,8 @@
                         display: f.X.Flex
                     }, r.createElement(f.Xa, {
                         display: f.X.Flex
-                    }, r.createElement(f.qb, {
-                        asset: f.rb.Download
+                    }, r.createElement(f.sb, {
+                        asset: f.tb.Download
                     }), r.createElement(f.Xa, {
                         margin: {
                             left: .5
@@ -68,8 +68,8 @@
                         margin: {
                             left: 1
                         }
-                    }, r.createElement(f.qb, {
-                        asset: f.rb.NavProfile
+                    }, r.createElement(f.sb, {
+                        asset: f.tb.NavProfile
                     }), r.createElement(f.Xa, {
                         margin: {
                             left: .5
@@ -114,11 +114,11 @@
                             justifyContent: f.Wa.Between
                         }, r.createElement(f.Xa, null, r.createElement(f.z, {
                             onClick: this.props.onRefresh,
-                            icon: f.rb.Refresh,
+                            icon: f.tb.Refresh,
                             type: f.F.Text
                         }, Object(h.d)("Refresh", "FeaturedAddonsNavigationBar")), r.createElement(f.z, {
                             linkTo: "/mods/games/" + this.props.match.params.gameId + "/browse",
-                            icon: f.rb.ViewerList,
+                            icon: f.tb.ViewerList,
                             type: f.F.Text
                         }, Object(h.d)("See All", "FeaturedAddonsNavigationBar"))), r.createElement(f.Xa, {
                             display: f.X.Flex
@@ -126,12 +126,12 @@
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(f.xb, {
+                        }, r.createElement(f.zb, {
                             defaultValue: this.props.selectedCategory.toString(),
                             onChange: this.onCategoryChange
                         }, e)), r.createElement("form", {
                             onSubmit: this.onSearchSubmit
-                        }, r.createElement(f.tb, {
+                        }, r.createElement(f.vb, {
                             placeholder: Object(h.d)("Search", "FeaturedAddonsNavigationBar"),
                             value: this.state.searchTerm,
                             onChange: this.setSearchTerm
@@ -190,7 +190,7 @@
                             display: f.X.Flex,
                             alignItems: f.f.Center
                         }, r.createElement(f.W, {
-                            type: f.Tb.H2
+                            type: f.Vb.H2
                         }, Object(h.d)("Popular", "FeaturedAddonsPage")), r.createElement(f.Xa, {
                             margin: {
                                 left: 2
@@ -205,8 +205,8 @@
                         }, r.createElement(f.W, {
                             color: f.O.Alt,
                             bold: !0
-                        }, a), r.createElement(f.qb, {
-                            asset: f.rb.AngleRight,
+                        }, a), r.createElement(f.sb, {
+                            asset: f.tb.AngleRight,
                             height: 10,
                             width: 10
                         }))))), r.createElement(f.W, null, Object(h.d)("Check out the hottest addons in the {game} community.", {
@@ -215,7 +215,7 @@
                             display: f.X.Flex,
                             alignItems: f.f.Center
                         }, r.createElement(f.W, {
-                            type: f.Tb.H2
+                            type: f.Vb.H2
                         }, Object(h.d)("New Releases", "FeaturedAddonsPage")), r.createElement(f.Xa, {
                             margin: {
                                 left: 2
@@ -230,8 +230,8 @@
                         }, r.createElement(f.W, {
                             color: f.O.Alt,
                             bold: !0
-                        }, a), r.createElement(f.qb, {
-                            asset: f.rb.AngleRight,
+                        }, a), r.createElement(f.sb, {
+                            asset: f.tb.AngleRight,
                             height: 10,
                             width: 10
                         }))))), r.createElement(f.W, null, Object(h.d)("Looking for a change? Explore new addons for {game}", {

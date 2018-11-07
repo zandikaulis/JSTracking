@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [195], {
+    [201], {
         A39y: function(e, t, r) {
             "use strict";
             r.r(t);
@@ -41,7 +41,7 @@
                                     "data-username": t,
                                     onClick: e.usernameClickHandler
                                 }, a.createElement(m.W, {
-                                    transform: m.Sb.Capitalize
+                                    transform: m.Ub.Capitalize
                                 }, t)))
                             }),
                             s = "chat-viewers-list-header-" + i;
@@ -139,8 +139,8 @@
                                 display: m.X.Flex,
                                 alignItems: m.f.Center,
                                 justifyContent: m.Wa.Center,
-                                zIndex: m.gc.Above,
-                                position: m.hb.Absolute,
+                                zIndex: m.ic.Above,
+                                position: m.jb.Absolute,
                                 attachTop: !0,
                                 attachBottom: !0,
                                 attachLeft: !0,
@@ -151,7 +151,7 @@
                             fullWidth: !0,
                             fullHeight: !0,
                             flexShrink: 0,
-                            zIndex: m.gc.Default
+                            zIndex: m.ic.Default
                         }, a.createElement("section", {
                             "aria-labelledby": "chat-viewers__header"
                         }, a.createElement(m.Xa, {
@@ -159,7 +159,7 @@
                             display: m.X.Flex,
                             flexDirection: m.Aa.Column,
                             flexWrap: m.Ba.NoWrap,
-                            position: m.hb.Absolute,
+                            position: m.jb.Absolute,
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0
@@ -173,13 +173,13 @@
                             },
                             flexShrink: 0
                         }, a.createElement(m.Xa, {
-                            position: m.hb.Absolute,
+                            position: m.jb.Absolute,
                             attachLeft: !0,
                             margin: {
                                 left: 1
                             }
                         }, a.createElement(m.A, {
-                            icon: m.rb.Close,
+                            icon: m.tb.Close,
                             ariaLabel: Object(o.d)("Close", "ChatViewers"),
                             "data-a-target": "chat-viewer-list",
                             onClick: this.props.closeViewersList

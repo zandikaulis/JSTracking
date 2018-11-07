@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [134], {
+    [135], {
         "5fUb": function(e, t, n) {},
         "Ar/j": function(e, t, n) {
             "use strict";
@@ -145,7 +145,7 @@
                                     })
                                 });
                                 return a.createElement(m.Pa, {
-                                    position: m.hb.Relative
+                                    position: m.jb.Relative
                                 }, a.createElement("div", {
                                     "data-test-selector": u.BrowseFolder,
                                     onMouseOver: t.showFolders,
@@ -188,14 +188,14 @@
                     }, t.renderDiskAction = function() {
                         return t.props.instance.hasUpdate ? a.createElement(c.a, {
                             title: Object(i.d)("Update", "InstalledContextMenu"),
-                            icon: m.rb.Download,
+                            icon: m.tb.Download,
                             borderTop: !0,
                             borderBottom: !0,
                             "data-test-selector": u.DiskActionOption,
                             onClick: t.onUpdate
                         }) : a.createElement(c.a, {
                             title: Object(i.d)("Reinstall", "InstalledContextMenu"),
-                            icon: m.rb.Download,
+                            icon: m.tb.Download,
                             borderTop: !0,
                             borderBottom: !0,
                             "data-test-selector": u.DiskActionOption,
@@ -244,18 +244,18 @@
                         }
                     }, e, a.createElement(c.a, {
                         title: Object(i.d)("Auto Install Updates", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferenceAutoInstallUpdates ? m.rb.Check : void 0,
+                        icon: this.props.instance.preferences.preferenceAutoInstallUpdates ? m.tb.Check : void 0,
                         onClick: this.setAutoInstallUpdates
                     }), a.createElement(c.a, {
                         title: Object(i.d)("Install Libraries Seperately", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferenceAlternateFile ? m.rb.Check : void 0,
+                        icon: this.props.instance.preferences.preferenceAlternateFile ? m.tb.Check : void 0,
                         onClick: this.setInstallSeperatly
                     }), a.createElement(c.a, {
                         title: Object(i.d)("Ignored", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferenceIsIgnored ? m.rb.Check : void 0,
+                        icon: this.props.instance.preferences.preferenceIsIgnored ? m.tb.Check : void 0,
                         onClick: this.setIsignored
                     }), a.createElement(m.Pa, {
-                        position: m.hb.Relative
+                        position: m.jb.Relative
                     }, a.createElement("div", {
                         "data-test-selector": u.ReleaseTypeItem,
                         onMouseOver: this.showReleaseTypes,
@@ -269,43 +269,43 @@
                     }, a.createElement(c.a, {
                         "data-test-selector": u.ReleaseOption,
                         title: Object(i.d)("Release", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferredReleaseType === h.ModsIntegrationFileType.Release ? m.rb.Check : void 0,
+                        icon: this.props.instance.preferences.preferredReleaseType === h.ModsIntegrationFileType.Release ? m.tb.Check : void 0,
                         value: h.ModsIntegrationFileType.Release,
                         onClick: this.setFileType,
                         borderBottom: !0
                     }), a.createElement(c.a, {
                         title: Object(i.d)("Beta", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferredReleaseType === h.ModsIntegrationFileType.Beta ? m.rb.Check : void 0,
+                        icon: this.props.instance.preferences.preferredReleaseType === h.ModsIntegrationFileType.Beta ? m.tb.Check : void 0,
                         value: h.ModsIntegrationFileType.Beta,
                         onClick: this.setFileType
                     }), a.createElement(c.a, {
                         title: Object(i.d)("Alpha", "InstalledContextMenu"),
-                        icon: this.props.instance.preferences.preferredReleaseType === h.ModsIntegrationFileType.Alpha ? m.rb.Check : void 0,
+                        icon: this.props.instance.preferences.preferredReleaseType === h.ModsIntegrationFileType.Alpha ? m.tb.Check : void 0,
                         value: h.ModsIntegrationFileType.Alpha,
                         onClick: this.setFileType
                     })))), a.createElement(c.a, {
                         title: Object(i.d)("Report a Bug", "InstalledContextMenu"),
-                        icon: m.rb.Sword,
+                        icon: m.tb.Sword,
                         borderTop: !0,
                         onClick: this.reportABug,
                         "data-test-selector": u.ReportABugOption
                     }), a.createElement(c.a, {
                         title: Object(i.d)("View Addon Website", "InstalledContextMenu"),
-                        icon: m.rb.Popout,
+                        icon: m.tb.Popout,
                         onClick: this.visitWebsite,
                         "data-test-selector": u.VisitWebsiteOption
                     }), a.createElement(c.a, {
                         title: Object(i.d)("View Changelogs", "InstalledContextMenu"),
-                        icon: m.rb.ViewerList,
+                        icon: m.tb.ViewerList,
                         onClick: this.viewChanelogs,
                         "data-test-selector": u.ViewChangelogOption
                     }), t, a.createElement(c.a, {
                         title: Object(i.d)("Delete Settings (Saved Variables)", "InstalledContextMenu"),
-                        icon: m.rb.Close,
+                        icon: m.tb.Close,
                         borderBottom: !0
                     }), a.createElement(c.a, {
                         title: Object(i.d)("Delete", "InstalledContextMenu"),
-                        icon: m.rb.Trash,
+                        icon: m.tb.Trash,
                         interactableType: m.Va.Alert,
                         onClick: this.onUninstall
                     }))
@@ -336,14 +336,14 @@
                             top: 2
                         }
                     }, a.createElement(c.a, {
-                        icon: m.rb.Download,
+                        icon: m.tb.Download,
                         title: Object(i.d)("Install", "NotInstalledMenu"),
                         borderBottom: !0,
                         borderTop: !0,
                         "data-test-selector": g.InstallOption,
                         onClick: this.onInstall
                     }), a.createElement(c.a, {
-                        icon: m.rb.Popout,
+                        icon: m.tb.Popout,
                         title: Object(i.d)("Browse Addon Website", "NotInstalledMenu"),
                         onClick: this.openSite,
                         "data-test-selector": g.OpenSiteOption
@@ -377,7 +377,7 @@
                                     left: 1
                                 }
                             }, a.createElement(m.W, {
-                                type: m.Tb.H2,
+                                type: m.Vb.H2,
                                 fontSize: m.Ca.Size4
                             }, t.props.addon.name), a.createElement(m.W, {
                                 color: m.O.Alt2
@@ -517,7 +517,7 @@
                             }
                         }, a.createElement(h.W, {
                             fontSize: h.Ca.Size3,
-                            type: h.Tb.H2
+                            type: h.Vb.H2
                         }, this.props.addon.name)), a.createElement(h.W, {
                             color: h.O.Alt2
                         }, e)), a.createElement(h.Xa, {
@@ -536,13 +536,13 @@
                         }, a.createElement(h.Xa, {
                             display: h.X.Flex,
                             alignItems: h.f.Center
-                        }, a.createElement(h.qb, {
-                            asset: h.rb.Download
+                        }, a.createElement(h.sb, {
+                            asset: h.tb.Download
                         }), o)), a.createElement(h.Xa, {
                             display: h.X.Flex,
                             alignItems: h.f.Center
-                        }, a.createElement(h.qb, {
-                            asset: h.rb.NavProfile
+                        }, a.createElement(h.sb, {
+                            asset: h.tb.NavProfile
                         }), n)), a.createElement(h.Xa, {
                             className: "addon-header__action"
                         }, a.createElement(u.a, {
@@ -591,7 +591,7 @@
                     }, a.createElement(h.z, {
                         onClick: this.onBack,
                         type: h.F.Text,
-                        icon: h.rb.AngleLeft
+                        icon: h.tb.AngleLeft
                     }, Object(p.d)("Back", "AddonDetailNavigationBar")), a.createElement(h.Xa, {
                         display: h.X.Flex
                     }, a.createElement(h.Xa, {
@@ -599,17 +599,17 @@
                             right: 2
                         }
                     }, a.createElement(h.z, {
-                        icon: h.rb.Popout,
+                        icon: h.tb.Popout,
                         targetBlank: !0,
                         type: h.F.Text,
                         linkTo: this.props.addon.websiteUrl
                     }, Object(p.d)("Website", "AddonDetailNavigation"))), a.createElement(I.a, {
                         onClickOut: this.closeContextMenu
                     }, a.createElement(h.Xa, {
-                        position: h.hb.Relative
+                        position: h.jb.Relative
                     }, a.createElement(h.z, {
                         "data-test-selector": g.ContextMenuButton,
-                        icon: h.rb.NavMore,
+                        icon: h.tb.NavMore,
                         type: h.F.Text,
                         onClick: this.toggleContextMenu
                     }, Object(p.d)("More", "AddonDetailNavigation")), a.createElement(h.u, {
@@ -656,42 +656,42 @@
                                 x: 2,
                                 y: 1
                             }
-                        }, a.createElement(h.Eb, null, a.createElement(h.Db, {
+                        }, a.createElement(h.Gb, null, a.createElement(h.Fb, {
                             active: this.isTabActive(E.Description),
                             linkTo: "/mods/games/" + this.props.match.params.gameId + "/addons/" + this.props.match.params.addonId
                         }, a.createElement(h.W, {
-                            transform: h.Sb.Uppercase
-                        }, Object(p.d)("Overview", "AddonDetailTabs"))), a.createElement(h.Db, {
+                            transform: h.Ub.Uppercase
+                        }, Object(p.d)("Overview", "AddonDetailTabs"))), a.createElement(h.Fb, {
                             "data-test-selector": v.ChangelogTab,
                             active: this.isTabActive(E.Changelog),
                             linkTo: "/mods/games/" + this.props.match.params.gameId + "/addons/" + this.props.match.params.addonId + "/changelog"
                         }, a.createElement(h.W, {
-                            transform: h.Sb.Uppercase
-                        }, Object(p.d)("Changelog", "AddonDetailTabs"))), a.createElement(h.Db, {
+                            transform: h.Ub.Uppercase
+                        }, Object(p.d)("Changelog", "AddonDetailTabs"))), a.createElement(h.Fb, {
                             active: this.isTabActive(E.Screenshots),
                             linkTo: "/mods/games/" + this.props.match.params.gameId + "/addons/" + this.props.match.params.addonId + "/screenshots"
                         }, a.createElement(h.W, {
-                            transform: h.Sb.Uppercase
-                        }, Object(p.d)("Screenshots", "AddonDetailTabs"))), a.createElement(h.Db, {
+                            transform: h.Ub.Uppercase
+                        }, Object(p.d)("Screenshots", "AddonDetailTabs"))), a.createElement(h.Fb, {
                             active: this.isTabActive(E.Versions),
                             linkTo: "/mods/games/" + this.props.match.params.gameId + "/addons/" + this.props.match.params.addonId + "/versions"
                         }, a.createElement(h.W, {
-                            transform: h.Sb.Uppercase
+                            transform: h.Ub.Uppercase
                         }, Object(p.d)("Versions", "AddonDetailTabs")))))
                     }, t
                 }(a.Component),
                 x = Object(s.compose)(r.a)(y),
-                w = c.a.wrap(function() {
-                    return n.e(133).then(n.bind(null, "CG/P"))
-                }, "AddonDetailsDescriptionPage"),
-                T = c.a.wrap(function() {
-                    return n.e(132).then(n.bind(null, "eojJ"))
-                }, "AddonDetailsScreenshotsPage"),
                 j = c.a.wrap(function() {
-                    return n.e(131).then(n.bind(null, "coCq"))
-                }, "AddonDetailsChangelogPage"),
+                    return n.e(134).then(n.bind(null, "CG/P"))
+                }, "AddonDetailsDescriptionPage"),
+                w = c.a.wrap(function() {
+                    return n.e(133).then(n.bind(null, "eojJ"))
+                }, "AddonDetailsScreenshotsPage"),
                 F = c.a.wrap(function() {
-                    return n.e(130).then(n.bind(null, "x5gZ"))
+                    return n.e(132).then(n.bind(null, "coCq"))
+                }, "AddonDetailsChangelogPage"),
+                T = c.a.wrap(function() {
+                    return n.e(131).then(n.bind(null, "x5gZ"))
                 }, "AddonDetailsVersionPage"),
                 k = function(e) {
                     function t() {
@@ -708,28 +708,28 @@
                         }), a.createElement(x, null), a.createElement(d.a, null, a.createElement(l.a, {
                             exact: !0,
                             path: "/mods/games/:gameId/addons/:addonId",
-                            component: w
-                        }), a.createElement(l.a, {
-                            exact: !0,
-                            path: "/mods/games/:gameId/addons/:addonId/changelog",
                             component: j
                         }), a.createElement(l.a, {
                             exact: !0,
+                            path: "/mods/games/:gameId/addons/:addonId/changelog",
+                            component: F
+                        }), a.createElement(l.a, {
+                            exact: !0,
                             path: "/mods/games/:gameId/addons/:addonId/screenshots",
-                            component: T
+                            component: w
                         }), a.createElement(l.a, {
                             exact: !0,
                             path: "/mods/games/:gameId/addons/:addonId/versions",
-                            component: F
+                            component: T
                         }))) : a.createElement(h.Za, null)
                     }, t
                 }(a.Component);
-            var S = Object(i.b)(function(e) {
+            var M = Object(i.b)(function(e) {
                     return {
                         initialized: e.initialized
                     }
                 })(k),
-                D = function(e) {
+                S = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onInstall = function() {}, t
@@ -737,17 +737,17 @@
                     return o.__extends(t, e), t.prototype.render = function() {
                         return a.createElement(i.a, {
                             addonId: this.props.match.params.addonId
-                        }, a.createElement(S, {
+                        }, a.createElement(M, {
                             gameId: this.props.match.params.gameId,
                             onInstall: this.onInstall
                         }))
                     }, t
                 }(a.Component),
-                M = Object(s.compose)(r.a)(D);
+                U = Object(s.compose)(r.a)(S);
             n.d(t, "AddonDetailsContainer", function() {
-                return D
+                return S
             }), n.d(t, "AddonDetailsPage", function() {
-                return M
+                return U
             })
         },
         gXjh: function(e, t, n) {
@@ -780,7 +780,7 @@
                             justifyContent: d.Wa.Center,
                             alignItems: d.f.Center,
                             "data-test-selector": o.InstallProgress
-                        }, r.createElement(d.kb, {
+                        }, r.createElement(d.mb, {
                             value: e.progress
                         }), r.createElement(d.W, null, e.shortStatusText))
                     }, t.onUpdate = function() {
@@ -818,8 +818,8 @@
                             return r.createElement(d.Xa, {
                                 display: d.X.Flex,
                                 "data-test-selector": o.WorkingCopy
-                            }, r.createElement(d.qb, {
-                                asset: d.rb.Wrench
+                            }, r.createElement(d.sb, {
+                                asset: d.tb.Wrench
                             }), r.createElement(d.Xa, {
                                 margin: {
                                     left: .5

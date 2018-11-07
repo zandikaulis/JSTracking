@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [188], {
+    [194], {
         "6TSi": function(e, t) {},
         "6XEL": function(e, t, n) {
             "use strict";
@@ -92,8 +92,8 @@
                         size: 36,
                         src: t.profileImageURL,
                         alt: t.displayName
-                    }), i.createElement(m.qb, {
-                        asset: m.rb.AngleRight,
+                    }), i.createElement(m.sb, {
+                        asset: m.tb.AngleRight,
                         height: 10
                     }), i.createElement(m.q, {
                         size: 36,
@@ -103,17 +103,17 @@
                 },
                 v = function(e) {
                     var t = e.seconds;
-                    return i.createElement(m.Cb, {
+                    return i.createElement(m.Eb, {
                         display: m.X.Flex,
                         alignItems: m.f.Center,
                         justifyContent: m.Wa.Center,
                         color: m.O.Overlay
                     }, i.createElement(m.Za, {
-                        size: m.Ab.Large,
+                        size: m.Cb.Large,
                         delay: 0,
                         inheritColor: !0
                     }), i.createElement(m.Xa, {
-                        position: m.hb.Absolute
+                        position: m.jb.Absolute
                     }, t))
                 },
                 _ = n("2xye"),
@@ -186,7 +186,7 @@
                             type: m.F.Hollow,
                             size: m.D.Small,
                             onClick: this.props.onCancelRaid
-                        }, D), i.createElement(m.Cb, {
+                        }, D), i.createElement(m.Eb, {
                             padding: {
                                 x: 1
                             },
@@ -212,12 +212,12 @@
                         "x:strong": function(e) {
                             return i.createElement(m.W, {
                                 key: "raid-count",
-                                type: m.Tb.Strong
+                                type: m.Vb.Strong
                             }, e)
                         },
                         "x:span": function(e) {
                             return i.createElement(m.W, {
-                                type: m.Tb.Span
+                                type: m.Vb.Span
                             }, e)
                         },
                         raiderCount: e.raid.viewerCount,
@@ -235,19 +235,19 @@
                         "x:strong": function(e) {
                             return i.createElement(m.W, {
                                 key: "raid-count",
-                                type: m.Tb.Strong
+                                type: m.Vb.Strong
                             }, e)
                         },
                         "x:span": function(e) {
                             return i.createElement(m.W, {
-                                type: m.Tb.Span
+                                type: m.Vb.Span
                             }, e)
                         },
                         raiderCount: e.raid.viewerCount,
                         targetDisplayName: e.targetChannel.displayName
                     }, "RaidCreatorMessageCanRaid")
                 },
-                T = function(e) {
+                N = function(e) {
                     return i.createElement(C.a, {
                         raid: e.raid
                     }, function(t) {
@@ -256,7 +256,7 @@
                         }))
                     })
                 },
-                N = n("ll/k"),
+                T = n("ll/k"),
                 O = n("nIRf"),
                 P = function(e) {
                     function t() {
@@ -301,7 +301,7 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.hasJoined && (this.joinDelayTimerID = setTimeout(this.props.onJoinRaid, Object(N.a)(5e3))), R(this.props.raid, y)
+                        this.props.hasJoined && (this.joinDelayTimerID = setTimeout(this.props.onJoinRaid, Object(T.a)(5e3))), R(this.props.raid, y)
                     }, t.prototype.componentWillUnmount = function() {
                         clearTimeout(this.joinDelayTimerID)
                     }, t.prototype.render = function() {
@@ -341,10 +341,10 @@
                             return i.createElement(m.W, null, e)
                         },
                         sourceDisplayName: i.createElement(m.W, {
-                            type: m.Tb.Strong
+                            type: m.Vb.Strong
                         }, e.sourceChannel.displayName),
                         targetDisplayName: i.createElement(m.W, {
-                            type: m.Tb.Strong
+                            type: m.Vb.Strong
                         }, e.targetChannel.displayName),
                         viewerCount: e.raid.viewerCount
                     }, "RaidViewerMessage")
@@ -355,7 +355,7 @@
                         size: m.D.Small,
                         type: m.F.Hollow,
                         onClick: t
-                    }, i.createElement(m.Cb, {
+                    }, i.createElement(m.Eb, {
                         padding: {
                             x: 1
                         },
@@ -377,7 +377,7 @@
             var J = {
                     "data-test-selector": "raid-banner"
                 },
-                q = function(e) {
+                V = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleRaidGo = function(e) {
@@ -433,18 +433,18 @@
                                     sourceChannel: n,
                                     targetChannel: a
                                 });
-                            return this.isRaidCreator && (o = i.createElement(T, {
+                            return this.isRaidCreator && (o = i.createElement(N, {
                                 onCancelRaid: this.handleCancelRaid,
                                 onRaidNow: this.handleRaidNow,
                                 onRaidGo: this.handleRaidGo,
                                 raid: e,
                                 sourceChannel: n,
                                 targetChannel: a
-                            })), i.createElement(m.Cb, r.__assign({
+                            })), i.createElement(m.Eb, r.__assign({
                                 background: m.r.AccentAlt2,
                                 color: m.O.Overlay,
-                                position: m.hb.Absolute,
-                                zIndex: m.gc.Above,
+                                position: m.jb.Absolute,
+                                zIndex: m.ic.Above,
                                 fullWidth: !0
                             }, J), i.createElement(m.Xa, {
                                 padding: {
@@ -478,7 +478,7 @@
                         configurable: !0
                     }), t
                 }(i.Component);
-            var G = Object(o.compose)(Object(s.connect)(function(e) {
+            var q = Object(o.compose)(Object(s.connect)(function(e) {
                     return {
                         user: Object(d.e)(e)
                     }
@@ -488,13 +488,13 @@
                             component: e
                         }))
                     }
-                })(q),
-                V = function(e) {
+                })(V),
+                G = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return this.props.raid ? i.createElement(G, {
+                        return this.props.raid ? i.createElement(q, {
                             raid: this.props.raid,
                             onJoin: this.props.onJoin,
                             onLeave: this.props.onLeave,
@@ -508,11 +508,11 @@
                     return i.createElement(a.a, {
                         channelID: e.channelID
                     }, function(t) {
-                        return i.createElement(V, r.__assign({}, e, t))
+                        return i.createElement(G, r.__assign({}, e, t))
                     })
                 };
             n.d(t, "RaidNotificationComponent", function() {
-                return V
+                return G
             }), n.d(t, "RaidNotification", function() {
                 return X
             })

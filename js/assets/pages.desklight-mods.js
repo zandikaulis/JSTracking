@@ -67,12 +67,12 @@
                 })(d.a),
                 f = n("Ue10"),
                 h = s.a.wrap(function() {
-                    return n.e(139).then(n.bind(null, "Mg9V"))
+                    return n.e(140).then(n.bind(null, "Mg9V"))
                 }, "DesklightModsAvailableGamesPage"),
                 v = s.a.wrap(function() {
-                    return n.e(138).then(n.bind(null, "UYLc"))
+                    return n.e(139).then(n.bind(null, "UYLc"))
                 }, "GameRoot"),
-                C = function(e) {
+                b = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -92,7 +92,7 @@
                     }, t
                 }(o.Component);
             n.d(t, "DesklightModsRoot", function() {
-                return C
+                return b
             })
         },
         "9x10": function(e, t, n) {
@@ -110,7 +110,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(l.Cb, {
+                        return o.createElement(l.Eb, {
                             background: l.r.Base,
                             padding: 2
                         }, o.createElement(l.Xa, {
@@ -149,7 +149,7 @@
             n.d(t, "b", function() {
                 return v
             }), n.d(t, "a", function() {
-                return C
+                return b
             });
             var h = (m = Object(a.a)("ModsNotificationContext", {
                     showModal: function() {
@@ -157,7 +157,7 @@
                     }
                 })).InnerProvider,
                 v = m.withContext,
-                C = function(e) {
+                b = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.showNotificationModal = function(e, t) {

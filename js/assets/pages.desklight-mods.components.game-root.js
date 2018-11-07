@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [138], {
+    [139], {
         "3ir2": function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
@@ -277,7 +277,7 @@
                             type: this.props.interactableType ? this.props.interactableType : r.Va.Base,
                             onClick: this.onClick,
                             blurAfterClick: !0
-                        }, s.createElement(r.Cb, {
+                        }, s.createElement(r.Eb, {
                             padding: {
                                 x: 1,
                                 y: .5
@@ -290,7 +290,7 @@
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(r.qb, {
+                        }, s.createElement(r.sb, {
                             asset: this.props.icon,
                             width: 20,
                             height: 15
@@ -302,8 +302,8 @@
                             margin: {
                                 left: "auto"
                             }
-                        }, s.createElement(r.qb, {
-                            asset: r.rb.AngleRight
+                        }, s.createElement(r.sb, {
+                            asset: r.tb.AngleRight
                         })))))
                     }, t
                 }(s.Component));
@@ -388,18 +388,18 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = u.p.integrations && u.p.integrations.mods && u.p.integrations.mods.repairFileAssociations;
                         return s.createElement(b.Xa, null, s.createElement(I.a, {
-                            icon: b.rb.NavSettings,
+                            icon: b.tb.NavSettings,
                             title: Object(u.d)("Settings", "GameInstanceActionsMenu")
                         }), s.createElement(I.a, {
-                            icon: b.rb.Plus,
+                            icon: b.tb.Plus,
                             title: Object(u.d)("Add a Game", "GameInstanceActionsMenu"),
                             onClick: this.props.onAddGame
                         }), s.createElement(I.a, {
-                            icon: b.rb.Desktop,
+                            icon: b.tb.Desktop,
                             title: Object(u.d)("Scan for installed games", "GameInstanceActionsMenu"),
                             onClick: this.props.onScan
                         }), e && s.createElement(I.a, {
-                            icon: b.rb.Wrench,
+                            icon: b.tb.Wrench,
                             title: Object(u.d)("Repair File Associactions", "GameInstanceActionsMenu"),
                             onClick: this.props.onRepairAssociations
                         }))
@@ -448,7 +448,7 @@
                                 margin: {
                                     bottom: 1
                                 }
-                            }, s.createElement(b.kb, {
+                            }, s.createElement(b.mb, {
                                 value: t.props.scanCurrentProgress
                             })), s.createElement(b.W, null, Object(u.d)("Folder: {folder}", {
                                 folder: t.props.scanCurrentFolder
@@ -457,8 +457,8 @@
                             }, "GameInstanceScanModal"))) : null
                         }, t.renderComplete = function() {
                             var e = t.props.errorMessage ? t.props.errorMessage : Object(u.d)("Scan Complete", "GameInstanceScanModal");
-                            return s.createElement(b.Xa, null, s.createElement(b.Cb, {
-                                textAlign: b.Pb.Center
+                            return s.createElement(b.Xa, null, s.createElement(b.Eb, {
+                                textAlign: b.Rb.Center
                             }, s.createElement(b.W, null, e)), s.createElement(b.Xa, {
                                 display: b.X.Flex,
                                 justifyContent: b.Wa.Center,
@@ -472,7 +472,7 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = null;
-                        return e = this.props.isScanning ? this.renderScanning() : this.props.isComplete ? this.renderComplete() : this.renderInstructions(), s.createElement(b.Cb, {
+                        return e = this.props.isScanning ? this.renderScanning() : this.props.isComplete ? this.renderComplete() : this.renderInstructions(), s.createElement(b.Eb, {
                             background: b.r.Base,
                             padding: 2
                         }, s.createElement(b.Xa, {
@@ -483,7 +483,7 @@
                                 bottom: 1
                             }
                         }, s.createElement(b.W, {
-                            type: b.Tb.H2
+                            type: b.Vb.H2
                         }, Object(u.d)("Scan for Installed Games", "GameInstanceScanModal"))), e))
                     }, t
                 }(s.Component),
@@ -571,7 +571,7 @@
                         return t.state.menuOpen ? s.createElement(f.a, {
                             onClickOut: t.closeMenu
                         }, s.createElement(b.Xa, {
-                            position: b.hb.Relative
+                            position: b.jb.Relative
                         }, s.createElement(b.u, {
                             show: !0,
                             direction: b.v.Left
@@ -588,7 +588,7 @@
                                 key: e.guid
                             }, e.installPath)
                         });
-                        return s.createElement(b.xb, {
+                        return s.createElement(b.zb, {
                             value: t.props.instance.guid,
                             onChange: t.onInstanceSelection
                         }, e)
@@ -676,11 +676,11 @@
                     }, e), s.createElement(b.Xa, {
                         display: b.X.Flex
                     }, s.createElement(b.A, {
-                        icon: b.rb.Play,
+                        icon: b.tb.Play,
                         "data-test-selector": y.PlayButton,
                         onClick: this.launchGame
                     }), s.createElement(b.Xa, null, t, s.createElement(b.A, {
-                        icon: b.rb.NavSettings,
+                        icon: b.tb.NavSettings,
                         onClick: this.openMenu,
                         "data-test-selector": y.MenuButton
                     }))))
@@ -697,7 +697,7 @@
                     showNotification: e.showModal
                 }
             }))(w);
-            var _, j, D = Object(m.connect)(null, function(e) {
+            var _, j, O = Object(m.connect)(null, function(e) {
                 return Object(g.bindActionCreators)({
                     showModal: h.d
                 }, e)
@@ -708,7 +708,7 @@
             function(e) {
                 e.Installed = "installed", e.Browse = "browse"
             }(j || (j = {}));
-            var O = function(e) {
+            var D = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getBannerURL = function() {
@@ -716,7 +716,7 @@
                         }, t.getLogoURL = function() {
                             return "https://client.forgecdn.net/desktopAssets/gameAssets/addonBanner/" + t.props.gameId + "/bannerLogo.svg"
                         }, t.renderMoreAddons = function() {
-                            if (t.props.installed) return s.createElement(b.Db, {
+                            if (t.props.installed) return s.createElement(b.Fb, {
                                 active: t.isActive(j.Browse),
                                 linkTo: "/mods/games/" + t.props.gameId + "/featured",
                                 "data-test-selector": _.MoreAddonsTab
@@ -737,7 +737,7 @@
                         var e = this.getBannerURL(),
                             t = this.getLogoURL(),
                             n = this.renderMoreAddons();
-                        return s.createElement(b.Cb, {
+                        return s.createElement(b.Eb, {
                             background: b.r.Alt2,
                             padding: {
                                 x: 3
@@ -761,7 +761,7 @@
                         }, s.createElement(b.S, {
                             src: t,
                             alt: Object(u.d)("Game Logo", "DesklightModsGameDetailBanner")
-                        })), s.createElement(b.Eb, null, s.createElement(b.Db, {
+                        })), s.createElement(b.Gb, null, s.createElement(b.Fb, {
                             active: this.isActive(j.Installed),
                             linkTo: "/mods/games/" + this.props.gameId
                         }, Object(u.d)("My Addons", "DesklightModsGameDetailBanner")), n))), s.createElement(b.S, {
@@ -773,7 +773,7 @@
                             },
                             display: b.X.Flex,
                             alignItems: b.f.Center
-                        }, s.createElement(D, {
+                        }, s.createElement(O, {
                             gameId: this.props.gameId
                         }))))
                     }, t
@@ -831,7 +831,7 @@
                                 bottom: 3
                             }
                         }, s.createElement(b.W, {
-                            type: b.Tb.P,
+                            type: b.Vb.P,
                             fontSize: b.Ca.Size3
                         }, Object(u.d)("We didn't find this game! Lets try this again.", "DesklightModsNoAddonsFound"))), s.createElement(b.Xa, {
                             display: b.X.Flex
@@ -859,16 +859,16 @@
                 })(T),
                 U = n("sSlw"),
                 R = l.a.wrap(function() {
-                    return n.e(137).then(n.bind(null, "Pjs9"))
+                    return n.e(138).then(n.bind(null, "Pjs9"))
                 }, "InstalledAddonsPage"),
                 x = l.a.wrap(function() {
-                    return n.e(136).then(n.bind(null, "E7BC"))
+                    return n.e(137).then(n.bind(null, "E7BC"))
                 }, "BrowsableaddonsPage"),
                 X = l.a.wrap(function() {
-                    return n.e(135).then(n.bind(null, "BBBA"))
+                    return n.e(136).then(n.bind(null, "BBBA"))
                 }, "FeaturedAddonsPage"),
                 N = l.a.wrap(function() {
-                    return n.e(134).then(n.bind(null, "f1MR"))
+                    return n.e(135).then(n.bind(null, "f1MR"))
                 }, "AddonDetailsPage"),
                 B = function(e) {
                     function t() {
@@ -902,7 +902,7 @@
                             className: "game-instance-root",
                             fullWidth: !0,
                             fullHeight: !0
-                        }, s.createElement(U.a, null, s.createElement(O, {
+                        }, s.createElement(U.a, null, s.createElement(D, {
                             gameId: this.props.gameId,
                             installed: t
                         })), e)

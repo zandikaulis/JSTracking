@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [158], {
+    [163], {
         "7MYR": function(e, t, n) {
             var a = {
                 kind: "Document",
@@ -272,6 +272,54 @@
                             kind: "Field",
                             name: {
                                 kind: "Name",
+                                value: "chanletStreamKey"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "stream"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "previewImageURL"
+                                    },
+                                    arguments: [{
+                                        kind: "Argument",
+                                        name: {
+                                            kind: "Name",
+                                            value: "height"
+                                        },
+                                        value: {
+                                            kind: "IntValue",
+                                            value: "270"
+                                        }
+                                    }, {
+                                        kind: "Argument",
+                                        name: {
+                                            kind: "Name",
+                                            value: "width"
+                                        },
+                                        value: {
+                                            kind: "IntValue",
+                                            value: "480"
+                                        }
+                                    }],
+                                    directives: []
+                                }]
+                            }
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
                                 value: "contentAttributes"
                             },
                             arguments: [],
@@ -292,11 +340,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 217
+                    end: 266
                 }
             };
             a.loc.source = {
-                body: '#import "twilight/pages/dashboard/components/multiview-page/models/content-attribute-fragment.gql"\nfragment dashboardChanlet on Channel {\nid\nname\n# chanletStreamKey\ncontentAttributes {\n...multiviewContentAttribute\n}\n}',
+                body: '#import "twilight/pages/dashboard/components/multiview-page/models/content-attribute-fragment.gql"\nfragment dashboardChanlet on Channel {\nid\nname\nchanletStreamKey\nstream {\npreviewImageURL(height: 270 width: 480)\n}\ncontentAttributes {\n...multiviewContentAttribute\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -455,458 +503,237 @@
             }
             a.definitions = a.definitions.concat(r(n("sRk+").definitions)), a.definitions = a.definitions.concat(r(n("TFsW").definitions)), e.exports = a
         },
+        "aw+h": function(e, t, n) {
+            var a = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "mutation",
+                    name: {
+                        kind: "Name",
+                        value: "UpdateChanlet"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "UpdateChanletContentAttributesInput"
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "updateChanletContentAttributes"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "input"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "chanlet"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "FragmentSpread",
+                                            name: {
+                                                kind: "Name",
+                                                value: "dashboardChanlet"
+                                            },
+                                            directives: []
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 242
+                }
+            };
+            a.loc.source = {
+                body: '#import "twilight/pages/dashboard/components/multiview-page/models/chanlet-fragment.gql"\nmutation UpdateChanlet($input: UpdateChanletContentAttributesInput!){\nupdateChanletContentAttributes(input: $input) {\nchanlet {\n...dashboardChanlet\n}\n}\n}',
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            var i = {};
+            a.definitions = a.definitions.concat(function(e) {
+                return e.filter(function(e) {
+                    if ("FragmentDefinition" !== e.kind) return !0;
+                    var t = e.name.value;
+                    return !i[t] && (i[t] = !0, !0)
+                })
+            }(n("TFsW").definitions)), e.exports = a
+        },
+        il7S: function(e, t, n) {
+            "use strict";
+            n.d(t, "c", function() {
+                return r
+            }), n.d(t, "a", function() {
+                return a
+            }), n.d(t, "b", function() {
+                return i
+            });
+            var a, i, r = "cc_v2_flag";
+            ! function(e) {
+                e.Group = "group", e.Team = "team", e.Player = "player", e.Role = "role"
+            }(a || (a = {})),
+            function(e) {
+                e.Group = "Group", e.Team = "team", e.Player = "Player", e.Role = "Role"
+            }(i || (i = {}))
+        },
         mcoV: function(e, t, n) {
             "use strict";
             n.r(t);
-            var a, i, r, l = n("/MKj"),
-                o = n("kRBY"),
-                s = n("mrSG"),
-                c = n("q1tI"),
-                u = n("fvjX"),
-                d = n("/7QA"),
-                m = n("LA8z"),
-                p = n("8/mp"),
+            var a, i = n("/MKj"),
+                r = n("kRBY"),
+                l = n("mrSG"),
+                s = n("q1tI"),
+                o = n("4p7I"),
+                u = n("yoKv"),
+                d = n("fvjX"),
+                c = n("/7QA"),
+                m = n("ZS2+"),
+                p = n("LA8z"),
+                v = n("8/mp"),
                 h = n("yR8l"),
                 b = n("geRD"),
-                v = n("GnwI"),
-                C = n("eJ65"),
-                f = n("IFXb"),
-                k = n("9rZX"),
+                k = n("GnwI"),
+                f = n("bRMw"),
                 g = n("Ue10"),
-                y = (n("xefp"), function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {}, t
-                    }
-                    return s.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.latencyTracking.reportInteractive()
-                    }, t.prototype.render = function() {
-                        return c.createElement(k, {
-                            overlayClassName: "modal__backdrop",
-                            className: "modal__content",
-                            isOpen: this.props.isOpen,
-                            ariaHideApp: !1
-                        }, c.createElement(g.Xa, {
-                            className: "multiview-modal"
-                        }, c.createElement(g.Cb, {
-                            className: "multiview-modal__content",
-                            padding: 4,
-                            margin: {
-                                top: 5
-                            },
-                            background: g.r.Base
-                        }, this.props.children)))
-                    }, t
-                }(c.Component)),
-                E = Object(u.compose)(Object(v.b)("MultiviewModal"))(y);
+                C = n("BwG8"),
+                w = n("7MYR"),
+                N = n("V2z7"),
+                S = n("aw+h"),
+                A = m.a.wrap(function() {
+                    return n.e(155).then(n.bind(null, "Jtig"))
+                }, "ChanletsTab"),
+                y = m.a.wrap(function() {
+                    return n.e(154).then(n.bind(null, "iw5t"))
+                }, "PlayersTab"),
+                T = m.a.wrap(function() {
+                    return n.e(153).then(n.bind(null, "tgcK"))
+                }, "RolesTab"),
+                F = m.a.wrap(function() {
+                    return n.e(152).then(n.bind(null, "vD5X"))
+                }, "TeamsTab");
             ! function(e) {
-                e.Group = "group", e.Player = "player", e.Role = "role"
-            }(a || (a = {})),
-            function(e) {
-                e.Group = "Group", e.Player = "Player", e.Role = "Role"
-            }(i || (i = {})),
-            function(e) {
-                e.ChanletList = "chanlets-tab__chanlet-list", e.GroupList = "chanlets-tab__group-list", e.EmptyList = "chanlets-tab__empty-list"
-            }(r || (r = {}));
-            var S, w = function(e) {
+                e.Tabs = "multiview-page__tabs", e.WrongUser = "multiview-page__wrong-user", e.ChanletsTab = "multiview-page__chanlets-tab", e.TeamsTab = "multiview-page__teams-tab", e.PlayersTab = "multiview-page__players-tab", e.RolesTab = "multiview-page__roles-tab"
+            }(a || (a = {}));
+            var D = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            isChanletModalOpen: !1,
-                            isChanletGroupModalOpen: !1,
-                            isSaving: !1
-                        }, t.onGroupNameChange = function(e) {
-                            var n = e.target.value,
-                                a = Object.assign({}, t.state.contentAttribute, {
-                                    value: n
-                                });
-                            t.setState({
-                                contentAttribute: a
-                            })
-                        }, t.createChanlet = function() {
-                            return s.__awaiter(t, void 0, void 0, function() {
-                                var e;
-                                return s.__generator(this, function(t) {
-                                    switch (t.label) {
-                                        case 0:
-                                            this.setState({
-                                                isSaving: !0
-                                            }), t.label = 1;
-                                        case 1:
-                                            return t.trys.push([1, 3, , 4]), [4, this.props.createChanlet()];
-                                        case 2:
-                                            return t.sent(), [3, 4];
-                                        case 3:
-                                            return e = t.sent(), d.k.error(e, "Could not create content attribute"), [3, 4];
-                                        case 4:
-                                            return this.closeChanletModal(), [2]
-                                    }
-                                })
-                            })
-                        }, t.createChanletGroup = function() {
-                            return s.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n;
-                                return s.__generator(this, function(a) {
-                                    switch (a.label) {
-                                        case 0:
-                                            this.setState({
-                                                isSaving: !0
-                                            }), a.label = 1;
-                                        case 1:
-                                            return a.trys.push([1, 3, , 4]), e = this.state.contentAttribute, t = s.__assign({
-                                                __typename: "MultiviewContentAttributeParams"
-                                            }, e), [4, this.props.createContentAttributes([t])];
-                                        case 2:
-                                            return a.sent(), [3, 4];
-                                        case 3:
-                                            return n = a.sent(), d.k.error(n, "Could not create content attribute"), [3, 4];
-                                        case 4:
-                                            return this.closeChanletGroupModal(), [2]
-                                    }
-                                })
-                            })
-                        }, t.openChanletModal = function() {
-                            t.setState({
-                                isChanletModalOpen: !0,
-                                isSaving: !1
-                            })
-                        }, t.closeChanletModal = function() {
-                            t.setState({
-                                isChanletModalOpen: !1,
-                                isSaving: !1
-                            })
-                        }, t.openChanletGroupModal = function() {
-                            var e = {
-                                __typename: "MultiviewContentAttribute",
-                                key: a.Group,
-                                name: i.Group,
-                                value: ""
-                            };
-                            t.setState({
-                                contentAttribute: e,
-                                isChanletGroupModalOpen: !0,
-                                isSaving: !1
-                            })
-                        }, t.editChanletGroupModal = function(e) {
-                            t.setState({
-                                contentAttribute: e,
-                                isChanletGroupModalOpen: !0,
-                                isSaving: !1
-                            })
-                        }, t.closeChanletGroupModal = function() {
-                            t.setState({
-                                isChanletGroupModalOpen: !1,
-                                isSaving: !1
-                            })
-                        }, t.renderMoreButton = function(e, t) {
-                            return c.createElement(g.Xa, {
-                                margin: {
-                                    right: .5
-                                }
-                            }, c.createElement(C.a, null, c.createElement(g.z, {
-                                icon: g.rb.More,
-                                type: g.F.Text
-                            }), c.createElement(g.u, {
-                                direction: g.v.BottomRight,
-                                tailOffset: 8
-                            }, c.createElement(g.Ua, {
-                                onClick: e
-                            }, c.createElement(g.Xa, {
-                                className: "chanlets-tab__balloon-item",
-                                padding: {
-                                    x: 1,
-                                    y: 1
-                                },
-                                display: g.X.Flex,
-                                alignItems: g.f.Center
-                            }, c.createElement(g.qb, {
-                                asset: g.rb.Edit,
-                                type: g.sb.Brand
-                            }), c.createElement(g.Xa, {
-                                margin: {
-                                    left: 1
-                                }
-                            }, Object(d.e)("Edit", "ChanletsGroup")))), t && c.createElement(g.Ua, {
-                                onClick: t
-                            }, c.createElement(g.Xa, {
-                                className: "chanlets-tab__balloon-item",
-                                padding: {
-                                    x: 1,
-                                    y: 1
-                                },
-                                display: g.X.Flex,
-                                alignItems: g.f.Center
-                            }, c.createElement(g.qb, {
-                                asset: g.rb.Trash,
-                                type: g.sb.Brand
-                            }), c.createElement(g.Xa, {
-                                margin: {
-                                    left: 1
-                                }
-                            }, Object(d.e)("Delete", "ChanletsGroup")))))))
-                        }, t
-                    }
-                    return s.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.latencyTracking.reportInteractive()
-                    }, t.prototype.render = function() {
-                        return c.createElement(f.a, null, this.renderChanletGroups(), this.renderChanlets())
-                    }, t.prototype.renderChanletGroups = function() {
-                        var e = this,
-                            t = this.props.availableContentAttributes.filter(function(e) {
-                                return e.key === a.Group
+                        return t.renderChanletsTab = function() {
+                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(g.Za, {
+                                fillContent: !0
                             });
-                        return c.createElement(g.Xa, {
-                            margin: {
-                                bottom: 3
-                            }
-                        }, c.createElement(g.Cb, {
-                            display: g.X.Flex,
-                            justifyContent: g.Wa.Between,
-                            padding: {
-                                bottom: 2
-                            }
-                        }, c.createElement(g.W, {
-                            type: g.Tb.H4,
-                            bold: !0
-                        }, Object(d.e)("Chanlet Groups", "ChanletsTab")), c.createElement(g.Xa, null, c.createElement(g.z, {
-                            icon: g.rb.Plus,
-                            type: g.F.Hollow,
-                            onClick: this.openChanletGroupModal
-                        }, Object(d.e)("Add Group", "ChanletsTab")))), !t.length && this.renderEmptyList(Object(d.e)("No Chanlet Groups", "ChanletsGroup")), t.map(function(t) {
-                            return c.createElement(g.Cb, {
-                                background: g.r.Base,
-                                elevation: 1,
-                                padding: 2,
-                                alignItems: g.f.Center,
-                                justifyContent: g.Wa.Between,
-                                display: g.X.Flex,
-                                flexDirection: g.Aa.Row,
-                                margin: {
-                                    bottom: 1
-                                },
-                                key: t.id
-                            }, c.createElement(g.W, null, t.value), e.renderMoreButton(e.editChanletGroupModal.bind(e, t)))
-                        }), this.renderChanletGroupModal())
-                    }, t.prototype.renderChanlets = function() {
-                        var e = this,
-                            t = this.props.chanlets;
-                        return c.createElement(g.Xa, null, c.createElement(g.Cb, {
-                            display: g.X.Flex,
-                            justifyContent: g.Wa.Between,
-                            padding: {
-                                bottom: 2
-                            }
-                        }, c.createElement(g.W, {
-                            type: g.Tb.H4,
-                            bold: !0
-                        }, Object(d.e)("All Chanlets", "ChanletsTab")), c.createElement(g.Xa, null, c.createElement(g.z, {
-                            icon: g.rb.Plus,
-                            type: g.F.Hollow,
-                            onClick: this.openChanletModal
-                        }, Object(d.e)("Add Chanlet", "ChanletsTab")))), !t.length && this.renderEmptyList(Object(d.e)("No Chanlets", "ChanletsGroup")), t.map(function(n) {
-                            return c.createElement(g.Cb, {
-                                background: g.r.Base,
-                                elevation: 1,
-                                padding: 2,
-                                margin: {
-                                    bottom: 1
-                                },
-                                alignItems: g.f.Center,
-                                justifyContent: g.Wa.Between,
-                                display: g.X.Flex,
-                                flexDirection: g.Aa.Row,
-                                key: n.id
-                            }, c.createElement(g.W, null, n.name), e.renderMoreButton(e.openChanletModal.bind(e, t)))
-                        }), this.renderChanletModal())
-                    }, t.prototype.renderChanletModal = function() {
-                        return c.createElement(E, {
-                            isOpen: this.state.isChanletModalOpen
-                        }, c.createElement(g.Cb, {
-                            display: g.X.Flex,
-                            padding: {
-                                bottom: 2
-                            },
-                            margin: {
-                                bottom: 2
-                            },
-                            justifyContent: g.Wa.Between
-                        }, c.createElement(g.Xa, {
-                            flexGrow: 0,
-                            flexShrink: 1
-                        }, c.createElement(g.W, {
-                            type: g.Tb.H3
-                        }, Object(d.e)("Edit Channel", "ChanletsTab"))), c.createElement(g.Xa, {
-                            flexGrow: 0,
-                            flexShrink: 0
-                        }, c.createElement(g.z, {
-                            onClick: this.closeChanletModal,
-                            type: g.F.Text
-                        }, this.cancelText()), c.createElement(g.z, {
-                            onClick: this.createChanlet,
-                            disabled: this.state.isSaving
-                        }, Object(d.e)("Save Chanlet", "ChanletsTab")))), c.createElement(p.b, null, c.createElement(g.Ja, {
-                            gutterSize: g.Ka.Large
-                        }, c.createElement(g.P, {
-                            cols: {
-                                default: 12,
-                                md: 6,
-                                lg: 5
-                            }
-                        }, c.createElement(g.Xa, null)), c.createElement(g.P, {
-                            cols: {
-                                default: 12,
-                                md: 6,
-                                lg: 7
-                            }
-                        }, c.createElement(g.Xa, {
-                            margin: {
-                                bottom: 2
-                            }
-                        }, c.createElement(g.Ea, {
-                            id: "chanlet-title",
-                            label: Object(d.e)("Chanlet Title", "ChanletsTab")
-                        }, c.createElement(g.Ra, {
-                            type: g.Ta.Text
-                        })))))))
-                    }, t.prototype.renderChanletGroupModal = function() {
-                        var e = this.state.contentAttribute;
-                        if (e) return c.createElement(E, {
-                            isOpen: this.state.isChanletGroupModalOpen
-                        }, c.createElement(g.Cb, {
-                            display: g.X.Flex,
-                            padding: {
-                                bottom: 2
-                            },
-                            margin: {
-                                bottom: 2
-                            },
-                            justifyContent: g.Wa.Between
-                        }, c.createElement(g.Xa, {
-                            flexGrow: 0,
-                            flexShrink: 1
-                        }, c.createElement(g.W, {
-                            type: g.Tb.H3
-                        }, Object(d.e)("Edit Metadata Group", "ChanletsTab"))), c.createElement(g.Xa, {
-                            flexGrow: 0,
-                            flexShrink: 0
-                        }, c.createElement(g.z, {
-                            onClick: this.closeChanletGroupModal,
-                            type: g.F.Text
-                        }, this.cancelText()), c.createElement(g.z, {
-                            onClick: this.createChanletGroup,
-                            disabled: this.state.isSaving
-                        }, Object(d.e)("Save Group", "ChanletsTab")))), c.createElement(p.b, null, c.createElement(g.Cb, {
-                            background: g.r.Alt,
-                            padding: 2,
-                            margin: {
-                                bottom: 2
-                            }
-                        }, c.createElement(g.Ea, {
-                            id: "group-name",
-                            label: Object(d.e)("Group Name", "ChanletsTab")
-                        }, c.createElement(g.Ra, {
-                            type: g.Ta.Text,
-                            onChange: this.onGroupNameChange,
-                            value: e.value
-                        })))))
-                    }, t.prototype.renderEmptyList = function(e) {
-                        return c.createElement(g.Cb, {
-                            "data-test-selector": r.EmptyList,
-                            padding: {
-                                y: 2
-                            },
-                            borderTop: !0
-                        }, c.createElement(g.W, {
-                            italic: !0,
-                            color: g.O.Alt2
-                        }, e))
-                    }, t.prototype.cancelText = function() {
-                        return Object(d.e)("Cancel", "ChanletsTab")
-                    }, t
-                }(c.Component),
-                A = Object(u.compose)(Object(v.b)("ChanletsTab"))(w),
-                N = n("bRMw"),
-                T = n("BwG8"),
-                M = n("7MYR"),
-                O = n("V2z7");
-            ! function(e) {
-                e.Tabs = "multiview-page__tabs", e.WrongUser = "multiview-page__wrong-user"
-            }(S || (S = {}));
-            var _ = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            activeIndex: 0
-                        }, t.renderChanletsTab = function() {
-                            if (t.props.data && t.props.data.user && t.props.data.user.channel) {
-                                var e = t.props.data.user.channel;
-                                return c.createElement(A, {
-                                    channelID: t.props.data.user.id,
-                                    chanlets: e.chanlets || [],
-                                    availableContentAttributes: e.availableContentAttributes || [],
-                                    createChanlet: t.createChanlet,
-                                    updateChanlet: t.updateChanlet,
-                                    createContentAttributes: t.createContentAttributes,
-                                    updateContentAttributes: t.updateContentAttributes
-                                })
-                            }
+                            var e = t.props.data.user.channel;
+                            return s.createElement(A, {
+                                "data-test-selector": a.ChanletsTab,
+                                channelID: t.props.data.user.id,
+                                chanlets: e.chanlets || [],
+                                availableContentAttributes: e.availableContentAttributes || [],
+                                createChanlet: t.createChanlet,
+                                updateChanlet: t.updateChanlet,
+                                createContentAttributes: t.createContentAttributes,
+                                updateContentAttributes: t.updateContentAttributes
+                            })
                         }, t.renderTeamsTab = function() {
-                            if (t.props.data && t.props.data.user && t.props.data.user.channel) {
-                                var e = t.props.data.user.channel;
-                                return c.createElement(A, {
-                                    channelID: t.props.data.user.id,
-                                    chanlets: e.chanlets || [],
-                                    availableContentAttributes: e.availableContentAttributes || [],
-                                    createChanlet: t.createChanlet,
-                                    updateChanlet: t.updateChanlet,
-                                    createContentAttributes: t.createContentAttributes,
-                                    updateContentAttributes: t.updateContentAttributes
-                                })
-                            }
+                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(g.Za, {
+                                fillContent: !0
+                            });
+                            var e = t.props.data.user.channel;
+                            return s.createElement(F, {
+                                "data-test-selector": a.TeamsTab,
+                                channelID: t.props.data.user.id,
+                                availableContentAttributes: e.availableContentAttributes || [],
+                                createContentAttributes: t.createContentAttributes,
+                                updateContentAttributes: t.updateContentAttributes
+                            })
                         }, t.renderPlayersTab = function() {
-                            if (t.props.data && t.props.data.user && t.props.data.user.channel) {
-                                var e = t.props.data.user.channel;
-                                return c.createElement(A, {
-                                    channelID: t.props.data.user.id,
-                                    chanlets: e.chanlets || [],
-                                    availableContentAttributes: e.availableContentAttributes || [],
-                                    createChanlet: t.createChanlet,
-                                    updateChanlet: t.updateChanlet,
-                                    createContentAttributes: t.createContentAttributes,
-                                    updateContentAttributes: t.updateContentAttributes
-                                })
-                            }
+                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(g.Za, {
+                                fillContent: !0
+                            });
+                            var e = t.props.data.user.channel;
+                            return s.createElement(y, {
+                                "data-test-selector": a.PlayersTab,
+                                channelID: t.props.data.user.id,
+                                availableContentAttributes: e.availableContentAttributes || [],
+                                createContentAttributes: t.createContentAttributes,
+                                updateContentAttributes: t.updateContentAttributes
+                            })
                         }, t.renderRolesTab = function() {
-                            if (t.props.data && t.props.data.user && t.props.data.user.channel) {
-                                var e = t.props.data.user.channel;
-                                return c.createElement(A, {
-                                    channelID: t.props.data.user.id,
-                                    chanlets: e.chanlets || [],
-                                    availableContentAttributes: e.availableContentAttributes || [],
-                                    createChanlet: t.createChanlet,
-                                    updateChanlet: t.updateChanlet,
-                                    createContentAttributes: t.createContentAttributes,
-                                    updateContentAttributes: t.updateContentAttributes
-                                })
-                            }
+                            if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(g.Za, {
+                                fillContent: !0
+                            });
+                            var e = t.props.data.user.channel;
+                            return s.createElement(T, {
+                                "data-test-selector": a.RolesTab,
+                                channelID: t.props.data.user.id,
+                                availableContentAttributes: e.availableContentAttributes || [],
+                                createContentAttributes: t.createContentAttributes,
+                                updateContentAttributes: t.updateContentAttributes
+                            })
                         }, t.createChanlet = function() {
-                            return s.__awaiter(t, void 0, void 0, function() {
+                            return l.__awaiter(t, void 0, void 0, function() {
                                 var e, t;
-                                return s.__generator(this, function(n) {
+                                return l.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
                                             return (e = this.props.data.user && this.props.data.user.id) ? [4, this.props.createChanlet(Object(b.a)({
                                                 channelID: e
                                             }))] : [2];
                                         case 1:
-                                            return t = n.sent(), Object(b.e)(O, {
+                                            return t = n.sent(), Object(b.e)(N, {
                                                 channelLogin: this.props.match.params.channelLogin
                                             }, function(e) {
                                                 var n = e.user && e.user.channel;
                                                 if (n && n.chanlets) {
                                                     var a = t.data && t.data.createChanlet && t.data.createChanlet.chanlet;
                                                     if (a) {
-                                                        var i = s.__assign({}, a, {
+                                                        var i = l.__assign({}, a, {
+                                                            stream: null,
+                                                            chanletStreamKey: null,
                                                             contentAttributes: []
                                                         });
                                                         n.chanlets.push(i)
@@ -917,23 +744,48 @@
                                     }
                                 })
                             })
-                        }, t.updateChanlet = function() {
-                            return s.__awaiter(t, void 0, void 0, function() {
-                                return s.__generator(this, function(e) {
-                                    return [2]
+                        }, t.updateChanlet = function(e, n) {
+                            return l.__awaiter(t, void 0, void 0, function() {
+                                var t;
+                                return l.__generator(this, function(a) {
+                                    switch (a.label) {
+                                        case 0:
+                                            return this.props.data.user && this.props.data.user.id ? [4, this.props.updateChanlet(Object(b.a)({
+                                                chanletID: e,
+                                                contentAttributeIDs: n
+                                            }))] : [2];
+                                        case 1:
+                                            return t = a.sent(), Object(b.e)(N, {
+                                                channelLogin: this.props.match.params.channelLogin
+                                            }, function(e) {
+                                                var n = e.user && e.user.channel;
+                                                if (n && n.chanlets) {
+                                                    var a = t.data && t.data.updateChanletContentAttributes && t.data.updateChanletContentAttributes.chanlet;
+                                                    if (a) {
+                                                        var i = l.__assign({}, a);
+                                                        for (var r in n.chanlets)
+                                                            if (n.chanlets[r].id === i.id) {
+                                                                n.chanlets[r] = i;
+                                                                break
+                                                            }
+                                                    }
+                                                }
+                                                return e
+                                            }), [2]
+                                    }
                                 })
                             })
                         }, t.createContentAttributes = function(e) {
-                            return s.__awaiter(t, void 0, void 0, function() {
+                            return l.__awaiter(t, void 0, void 0, function() {
                                 var t;
-                                return s.__generator(this, function(n) {
+                                return l.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
                                             return [4, this.props.createContentAttributes(Object(b.a)({
                                                 params: e
                                             }))];
                                         case 1:
-                                            return t = n.sent(), Object(b.e)(O, {
+                                            return t = n.sent(), Object(b.e)(N, {
                                                 channelLogin: this.props.match.params.channelLogin
                                             }, function(e) {
                                                 var n = e.user && e.user.channel;
@@ -947,82 +799,80 @@
                                 })
                             })
                         }, t.updateContentAttributes = function(e) {
-                            return s.__awaiter(t, void 0, void 0, function() {
-                                return s.__generator(this, function(e) {
+                            return l.__awaiter(t, void 0, void 0, function() {
+                                return l.__generator(this, function(e) {
                                     return [2]
                                 })
                             })
-                        }, t.onTabClick = function(e, n) {
-                            e.preventDefault(), t.setState({
-                                activeIndex: n
-                            })
                         }, t
                     }
-                    return s.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (!Object(N.b)(N.a, this.props.match.params.channelLogin)) return c.createElement(m.a, null);
-                        if (this.props.data.loading) return c.createElement(g.Za, {
+                        if (!Object(f.b)(f.a, this.props.match.params.channelLogin)) return s.createElement(p.a, null);
+                        if (this.props.data.loading) return s.createElement(g.Za, {
                             fillContent: !0
                         });
-                        if (this.props.data.error || !this.props.data.user || !this.props.data.user.channel) return c.createElement(g.Xa, {
+                        if (this.props.data.error || !this.props.data.user || !this.props.data.user.channel) return s.createElement(g.Xa, {
                             padding: 2
-                        }, c.createElement(g.W, {
+                        }, s.createElement(g.W, {
                             italic: !0
-                        }, Object(d.e)("There was an issue loading your Multiview settings.", "MultiviewPage")));
+                        }, Object(c.e)("There was an issue loading your Multiview settings.", "MultiviewPage")));
                         if (this.props.user && this.props.user.id !== this.props.data.user.id) {
                             var e = this.props.user.login;
-                            return c.createElement(g.Xa, {
+                            return s.createElement(g.Xa, {
                                 padding: 2,
-                                "data-test-selector": S.WrongUser
-                            }, c.createElement(g.W, {
+                                "data-test-selector": a.WrongUser
+                            }, s.createElement(g.W, {
                                 italic: !0
-                            }, Object(d.e)("You can not edit the Multiview settings for this channel. <x:link>Click here</x:link> to get to your channel’s Multiview dashboard", {
+                            }, Object(c.e)("You can not edit the Multiview settings for this channel. <x:link>Click here</x:link> to get to your channel’s Multiview dashboard", {
                                 "x:link": function(t) {
-                                    return c.createElement(g.U, {
+                                    return s.createElement(g.U, {
                                         to: "/" + e + "/dashboard/multiview"
                                     }, t)
                                 }
                             }, "MultiviewPage")))
                         }
-                        return c.createElement(p.b, null, c.createElement(g.Xa, {
+                        for (var t = [{
+                                linkTo: "",
+                                label: Object(c.e)("Chanlets", "MultiviewPage")
+                            }, {
+                                linkTo: "/teams",
+                                label: Object(c.e)("Teams", "MultiviewPage")
+                            }, {
+                                linkTo: "/players",
+                                label: Object(c.e)("Players", "MultiviewPage")
+                            }, {
+                                linkTo: "/roles",
+                                label: Object(c.e)("Roles", "MultiviewPage")
+                            }], n = 0, i = 0; i < t.length; i++) this.props.location.pathname.match(t[i].linkTo) && (n = i), t[i].linkTo = "/" + this.props.match.params.channelLogin + "/dashboard/multiview" + t[i].linkTo;
+                        return s.createElement(v.b, null, s.createElement(g.Xa, {
                             padding: 2
-                        }, c.createElement(g.Lb, {
-                            "data-test-selector": S.Tabs,
-                            activeTabIndex: this.state.activeIndex,
+                        }, s.createElement(g.Nb, {
+                            "data-test-selector": a.Tabs,
+                            activeTabIndex: n,
                             justifyContent: g.Wa.Start,
-                            tabs: [{
-                                onClick: this.onTabClick,
-                                label: Object(d.e)("Chanlets", "MultiviewPage")
-                            }, {
-                                onClick: this.onTabClick,
-                                label: Object(d.e)("Teams", "MultiviewPage")
-                            }, {
-                                onClick: this.onTabClick,
-                                label: Object(d.e)("Players", "MultiviewPage")
-                            }, {
-                                onClick: this.onTabClick,
-                                label: Object(d.e)("Roles", "MultiviewPage")
-                            }]
-                        }), c.createElement(g.Xa, {
+                            tabs: t
+                        }), s.createElement(g.Xa, {
                             padding: 2
-                        }, this.renderTabContent())))
-                    }, t.prototype.renderTabContent = function() {
-                        switch (this.state.activeIndex) {
-                            case 0:
-                                return this.renderChanletsTab();
-                            case 1:
-                                return this.renderTeamsTab();
-                            case 2:
-                                return this.renderPlayersTab();
-                            case 3:
-                                return this.renderRolesTab();
-                            default:
-                                return c.createElement(g.Xa, null)
-                        }
+                        }, s.createElement(u.a, null, s.createElement(o.a, {
+                            path: "/" + this.props.match.params.channelLogin + "/dashboard/multiview/teams",
+                            exact: !0,
+                            render: this.renderTeamsTab
+                        }), s.createElement(o.a, {
+                            path: "/" + this.props.match.params.channelLogin + "/dashboard/multiview/players",
+                            exact: !0,
+                            render: this.renderPlayersTab
+                        }), s.createElement(o.a, {
+                            path: "/" + this.props.match.params.channelLogin + "/dashboard/multiview/roles",
+                            exact: !0,
+                            render: this.renderRolesTab
+                        }), s.createElement(o.a, {
+                            render: this.renderChanletsTab
+                        })))))
                     }, t
-                }(c.Component),
-                F = Object(u.compose)(Object(v.b)("Multiview"), Object(h.a)(O, {
+                }(s.Component),
+                _ = Object(d.compose)(Object(k.b)("Multiview"), Object(h.a)(N, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1030,20 +880,23 @@
                             }
                         }
                     }
-                }), Object(h.a)(T, {
+                }), Object(h.a)(C, {
                     name: "createChanlet"
-                }), Object(h.a)(M, {
+                }), Object(h.a)(S, {
+                    name: "updateChanlet"
+                }), Object(h.a)(w, {
                     name: "createContentAttributes"
-                }))(_);
-            var G = Object(l.connect)(function(e) {
+                }))(D),
+                O = n("il7S");
+            var L = Object(i.connect)(function(e) {
                 return {
-                    user: Object(o.e)(e)
+                    user: Object(r.e)(e)
                 }
-            })(F);
+            })(_);
             n.d(t, "FEATURE_FLAG", function() {
-                return "cc_v2_flag"
+                return O.c
             }), n.d(t, "MultiviewPage", function() {
-                return G
+                return L
             })
         },
         "sRk+": function(e, t) {
@@ -1138,7 +991,6 @@
                 }
             };
             e.exports = n
-        },
-        xefp: function(e, t, n) {}
+        }
     }
 ]);

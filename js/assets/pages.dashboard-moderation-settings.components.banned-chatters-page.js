@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [161], {
+    [166], {
         "0l36": function(e, n, t) {
             var a = {
                 kind: "Document",
@@ -228,7 +228,7 @@
                         return i.createElement(o.b, {
                             className: "banned-chatters__list",
                             autoHide: !0
-                        }, i.createElement(m.Cb, {
+                        }, i.createElement(m.Eb, {
                             background: m.r.Base,
                             elevation: 1,
                             padding: {
@@ -241,22 +241,22 @@
                             "x:bold": function(e) {
                                 return i.createElement(m.W, {
                                     bold: !0,
-                                    type: m.Tb.Span
+                                    type: m.Vb.Span
                                 }, e)
                             }
-                        }, "BannedChatters")), i.createElement(m.Fb, null, i.createElement(m.Ib, null, i.createElement(m.Jb, {
+                        }, "BannedChatters")), i.createElement(m.Hb, null, i.createElement(m.Kb, null, i.createElement(m.Lb, {
                             label: Object(d.d)("Username", "BannedChatters")
-                        }), i.createElement(m.Jb, {
+                        }), i.createElement(m.Lb, {
                             label: Object(d.d)("Added By", "BannedChatters")
-                        }), i.createElement(m.Jb, {
+                        }), i.createElement(m.Lb, {
                             label: Object(d.d)("Time Banned", "BannedChatters")
-                        }), i.createElement(m.Jb, {
-                            textAlign: m.Pb.Center,
+                        }), i.createElement(m.Lb, {
+                            textAlign: m.Rb.Center,
                             label: Object(d.d)("Actions", "BannedChatters")
-                        })), i.createElement(m.Gb, null, t.map(function(n) {
-                            return i.createElement(m.Kb, {
+                        })), i.createElement(m.Ib, null, t.map(function(n) {
+                            return i.createElement(m.Mb, {
                                 key: n.bannedUser.id
-                            }, i.createElement(m.Hb, null, i.createElement(m.Pa, {
+                            }, i.createElement(m.Jb, null, i.createElement(m.Pa, {
                                 padding: {
                                     right: 4,
                                     bottom: .5
@@ -265,18 +265,18 @@
                                 ellipsis: !0,
                                 bold: !0,
                                 "data-test-selector": a.BannedUserName
-                            }, n.bannedUser && n.bannedUser.login))), i.createElement(m.Hb, null, i.createElement(m.W, {
+                            }, n.bannedUser && n.bannedUser.login))), i.createElement(m.Jb, null, i.createElement(m.W, {
                                 "data-test-selector": a.BannedByUserName
-                            }, n.modUser && n.modUser.displayName || Object(d.d)("an unknown user", "BannedChatters"))), i.createElement(m.Hb, null, i.createElement(m.W, {
+                            }, n.modUser && n.modUser.displayName || Object(d.d)("an unknown user", "BannedChatters"))), i.createElement(m.Jb, null, i.createElement(m.W, {
                                 "data-test-selector": a.BannedDate
-                            }, Object(d.c)(new Date(n.bannedAt)))), i.createElement(m.Hb, {
-                                textAlign: m.Pb.Center
-                            }, i.createElement(m.Wb, {
+                            }, Object(d.c)(new Date(n.bannedAt)))), i.createElement(m.Jb, {
+                                textAlign: m.Rb.Center
+                            }, i.createElement(m.Yb, {
                                 label: Object(d.d)("Unban", "BannedChatters")
                             }, i.createElement(m.A, {
                                 "data-chatter-login": n.bannedUser ? n.bannedUser.login : "",
                                 "data-chatter-id": n.bannedUser ? n.bannedUser.id : "",
-                                icon: m.rb.Trash,
+                                icon: m.tb.Trash,
                                 type: m.C.Secondary,
                                 onClick: e.handleDeleteBannedChatterClick,
                                 disabled: !!e.state.working
@@ -688,7 +688,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return c.__extends(n, e), n.prototype.render = function() {
-                        return this.props.sessionUser ? u.createElement(b.a, null, u.createElement(k.Cb, {
+                        return this.props.sessionUser ? u.createElement(b.a, null, u.createElement(k.Eb, {
                             background: k.r.Base,
                             border: !0,
                             padding: {
@@ -699,8 +699,8 @@
                             }
                         }, u.createElement(k.Xa, {
                             display: k.X.Flex
-                        }, u.createElement(k.qb, {
-                            asset: k.rb.AngleLeft
+                        }, u.createElement(k.sb, {
+                            asset: k.tb.AngleLeft
                         }), u.createElement(k.Xa, {
                             padding: {
                                 left: 3
@@ -711,7 +711,7 @@
                         }, Object(m.d)("Banned Users", "BannedChattersPage")), u.createElement(k.W, {
                             fontSize: k.Ca.Size7,
                             color: k.O.Alt2
-                        }, Object(m.d)("View and modify your banned users list", "BannedChattersPage"))))), u.createElement(k.Cb, {
+                        }, Object(m.d)("View and modify your banned users list", "BannedChattersPage"))))), u.createElement(k.Eb, {
                             background: k.r.Base,
                             borderBottom: !0,
                             borderLeft: !0,

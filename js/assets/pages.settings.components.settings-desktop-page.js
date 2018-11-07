@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [148], {
+    [149], {
         Rpd6: function(t, e, n) {
             "use strict";
             n.r(e);
@@ -88,7 +88,7 @@
                                 },
                                 display: u.X.Flex,
                                 flexDirection: u.Aa.Row
-                            }, i.createElement(u.nb, {
+                            }, i.createElement(u.pb, {
                                 checked: n.selected,
                                 value: n.value,
                                 label: n.label,

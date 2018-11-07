@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [53, 143], {
+    [53, 144], {
         "/ZC1": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -34,12 +34,12 @@
                             dragOver: this.state.isDraggingOver,
                             error: this.props.error
                         }, i.createElement(r.Pa, {
-                            position: r.hb.Absolute,
+                            position: r.jb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: r.gc.Above
+                            zIndex: r.ic.Above
                         }, i.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -287,7 +287,7 @@
                 r = n("Ue10"),
                 o = (n("KwO+"), function(e) {
                     var t = null;
-                    e.footer && (t = i.createElement(r.Cb, {
+                    e.footer && (t = i.createElement(r.Eb, {
                         padding: 2,
                         background: r.r.Alt2
                     }, e.footer));
@@ -300,7 +300,7 @@
                         bottomLeft: r.x.Medium,
                         bottomRight: r.x.Medium
                     }, n);
-                    return i.createElement(i.Fragment, null, e.header, i.createElement(r.Cb, {
+                    return i.createElement(i.Fragment, null, e.header, i.createElement(r.Eb, {
                         background: r.r.Base,
                         margin: {
                             bottom: 4
@@ -332,8 +332,8 @@
                 h = n("Sejb"),
                 b = n("kMGJ"),
                 v = n("vpah"),
-                y = n("GnwI"),
-                E = n("Ue10"),
+                E = n("GnwI"),
+                y = n("Ue10"),
                 S = (n("DGtd"), n("MTto")),
                 k = ["image/*"],
                 _ = function(e) {
@@ -440,44 +440,44 @@
                             userName: e
                         }, "UserImageUploader"));
                         var n = null;
-                        if (this.state.loading) n = l.createElement(E.Xa, {
+                        if (this.state.loading) n = l.createElement(y.Xa, {
                             className: "user-image-uploader__upload-svg--anim-fill",
-                            position: E.hb.Relative,
+                            position: y.jb.Relative,
                             "data-test-selector": "loading-status"
-                        }, l.createElement(E.qb, {
-                            asset: E.rb.Upload,
-                            type: E.sb.Brand,
+                        }, l.createElement(y.sb, {
+                            asset: y.tb.Upload,
+                            type: y.ub.Brand,
                             width: 99,
                             height: 76
                         }));
                         else {
                             var a = Object(c.d)("Recommended image size: 1200x380 and less than 10MB.", "UserImageUploader");
-                            this.props.imageType === f.a.ChannelOfflineImage && (a = Object(c.d)("Recommended image size: 1920x1080 and less than 10MB.", "UserImageUploader")), n = l.createElement(E.Xa, null, l.createElement(E.Xa, {
+                            this.props.imageType === f.a.ChannelOfflineImage && (a = Object(c.d)("Recommended image size: 1920x1080 and less than 10MB.", "UserImageUploader")), n = l.createElement(y.Xa, null, l.createElement(y.Xa, {
                                 className: "user-image-uploader__upload-info"
-                            }, l.createElement(E.Xa, null, l.createElement(E.qb, {
-                                asset: E.rb.Plus,
-                                type: E.sb.Alt2,
+                            }, l.createElement(y.Xa, null, l.createElement(y.sb, {
+                                asset: y.tb.Plus,
+                                type: y.ub.Alt2,
                                 height: 20,
                                 width: 20
-                            })), l.createElement(E.W, {
-                                type: E.Tb.H3,
-                                color: E.O.Alt2,
-                                fontSize: E.Ca.Size4
-                            }, Object(c.d)("Upload a Photo", "User Image Uploader"))), l.createElement(E.Xa, {
+                            })), l.createElement(y.W, {
+                                type: y.Vb.H3,
+                                color: y.O.Alt2,
+                                fontSize: y.Ca.Size4
+                            }, Object(c.d)("Upload a Photo", "User Image Uploader"))), l.createElement(y.Xa, {
                                 className: "user-image-uploader__upload-recommendation",
-                                position: E.hb.Absolute,
-                                textAlign: E.Pb.Left,
+                                position: y.jb.Absolute,
+                                textAlign: y.Rb.Left,
                                 attachLeft: !0,
                                 attachBottom: !0,
                                 margin: {
                                     left: 3,
                                     bottom: 1
                                 }
-                            }, l.createElement(E.W, {
-                                type: E.Tb.H6,
-                                color: E.O.Alt2,
-                                fontSize: E.Ca.Size8,
-                                align: E.dc.TextBottom
+                            }, l.createElement(y.W, {
+                                type: y.Vb.H6,
+                                color: y.O.Alt2,
+                                fontSize: y.Ca.Size8,
+                                align: y.fc.TextBottom
                             }, a)))
                         }
                         var i = null;
@@ -485,59 +485,59 @@
                         var r = null;
                         if (null !== this.state.statusMessage) {
                             var o = Object(v.c)(this.state.statusMessage);
-                            r = l.createElement(E.eb, {
+                            r = l.createElement(y.gb, {
                                 label: o.message,
                                 type: o.type
                             })
                         }
-                        return l.createElement(E.Xa, {
+                        return l.createElement(y.Xa, {
                             className: "user-image-uploader",
-                            position: E.hb.Relative,
+                            position: y.jb.Relative,
                             fullHeight: !0
-                        }, l.createElement(E.Cb, {
+                        }, l.createElement(y.Eb, {
                             className: "user-image-uploader__background-container",
-                            background: E.r.Base,
+                            background: y.r.Base,
                             fullWidth: !0
-                        }, l.createElement(E.Xa, {
+                        }, l.createElement(y.Xa, {
                             padding: 2,
-                            display: E.X.InlineBlock,
-                            position: E.hb.Relative,
-                            textAlign: E.Pb.Center,
+                            display: y.X.InlineBlock,
+                            position: y.jb.Relative,
+                            textAlign: y.Rb.Center,
                             fullWidth: !0
-                        }, l.createElement(E.Cb, {
+                        }, l.createElement(y.Eb, {
                             borderBottom: !0,
                             margin: {
                                 bottom: 2
                             }
-                        }, l.createElement(E.W, {
-                            type: E.Tb.H3,
-                            fontSize: E.Ca.Size4
-                        }, t)), l.createElement(E.Xa, {
+                        }, l.createElement(y.W, {
+                            type: y.Vb.H3,
+                            fontSize: y.Ca.Size4
+                        }, t)), l.createElement(y.Xa, {
                             className: "user-image-uploader__upload-container",
-                            display: E.X.InlineBlock,
-                            position: E.hb.Relative,
-                            textAlign: E.Pb.Center,
+                            display: y.X.InlineBlock,
+                            position: y.jb.Relative,
+                            textAlign: y.Rb.Center,
                             margin: {
                                 bottom: 1
                             }
-                        }, l.createElement(E.Xa, {
+                        }, l.createElement(y.Xa, {
                             className: "user-image-uploader__upload",
-                            display: E.X.InlineBlock,
-                            position: E.hb.Relative,
-                            textAlign: E.Pb.Center
+                            display: y.X.InlineBlock,
+                            position: y.jb.Relative,
+                            textAlign: y.Rb.Center
                         }, l.createElement(d.a, {
                             allowedFileTypes: k,
                             onFilesSubmitted: this.onImageInputChange
-                        }, n))), l.createElement(E.Cb, {
+                        }, n))), l.createElement(y.Eb, {
                             "data-test-selector": "status-message",
-                            fontSize: E.Ca.Size4,
-                            position: E.hb.Relative,
-                            textAlign: E.Pb.Center,
+                            fontSize: y.Ca.Size4,
+                            position: y.jb.Relative,
+                            textAlign: y.Rb.Center,
                             className: "user-image-uploader__status-message"
                         }, r))), i)
                     }, t
                 }(l.Component),
-                O = Object(u.compose)(Object(y.b)("User Image Upload"), Object(p.a)(S, {
+                w = Object(u.compose)(Object(E.b)("User Image Upload"), Object(p.a)(S, {
                     options: function(e) {
                         return {
                             variables: {
@@ -546,7 +546,7 @@
                         }
                     }
                 }))(_);
-            var w = Object(a.connect)(function(e) {
+            var O = Object(a.connect)(function(e) {
                 return {
                     authToken: Object(o.a)(e)
                 }
@@ -556,9 +556,9 @@
                         return t.successCallback && t.successCallback(), Object(r.c)()
                     }
                 }, e)
-            })(O);
+            })(w);
             n.d(t, "UserImageUploader", function() {
-                return w
+                return O
             }), n.d(t, "PublicProps", function() {})
         },
         "8Z7p": function(e, t, n) {
@@ -600,35 +600,35 @@
                 h = n("ZS2+"),
                 b = n("ZDlU"),
                 v = n("Bh3T"),
-                y = n("sSlw"),
-                E = n("OCR+"),
+                E = n("sSlw"),
+                y = n("OCR+"),
                 S = n("oJmH"),
                 k = n("V+GM"),
                 _ = n("NvVO"),
-                O = n("2xye"),
-                w = n("GnwI"),
+                w = n("2xye"),
+                O = n("GnwI"),
                 I = n("BK8n"),
                 N = n("7PeK"),
-                P = n("c0Zc"),
-                C = n("EpBn"),
-                U = n("Ue10"),
-                T = function() {
-                    return c.createElement(C.a, {
+                U = n("c0Zc"),
+                P = n("EpBn"),
+                T = n("Ue10"),
+                C = function() {
+                    return c.createElement(P.a, {
                         label: Object(f.d)("Disable Your Twitch Account", "DisableAccountLink"),
-                        orientation: U.Fa.Horizontal
+                        orientation: T.Fa.Horizontal
                     }, Object(f.d)("If you want to disable your Twitch account, you can do so from the <x:link>Disable Account</x:link> page.", {
                         "x:link": function(e) {
-                            return c.createElement(U.U, {
+                            return c.createElement(T.U, {
                                 to: "/user/disable-account",
                                 "data-a-target": "disable-account-link"
                             }, e)
                         }
                     }, "DisableAccountLink"))
                 },
-                D = n("yR8l"),
-                j = n("wUQP"),
-                x = n("b6Yk"),
-                R = n("EMHe"),
+                j = n("yR8l"),
+                D = n("wUQP"),
+                R = n("b6Yk"),
+                x = n("EMHe"),
                 A = n("rwxT"),
                 M = n("8Z7p"),
                 F = n("w+Ve"),
@@ -696,7 +696,7 @@
                         return this.props.emailVerified ? Object(f.d)("Additional Twitch accounts can be created using this verified email address", "MultiAccountSetting") : Object(f.d)("You must have a verified email address to modify this setting", "MultiAccountSetting")
                     }, t
                 }(c.Component),
-                q = Object(D.a)(H, {
+                q = Object(j.a)(H, {
                     name: "updateEmailReusable"
                 })(V),
                 X = 5e3,
@@ -711,7 +711,7 @@
                             verificationEmailStatus: a.CanSendVerificationEmail,
                             working: !1,
                             verificationEmailSentTime: ""
-                        }, t.logger = f.k.withCategory("email-settings"), t.multiAccountFeatureReleased = Object(j.b)(W), t.onClickVerify = function() {
+                        }, t.logger = f.k.withCategory("email-settings"), t.multiAccountFeatureReleased = Object(D.b)(W), t.onClickVerify = function() {
                             return u.__awaiter(t, void 0, void 0, function() {
                                 var e, t, n = this;
                                 return u.__generator(this, function(i) {
@@ -721,7 +721,7 @@
                                                 working: !0
                                             }), e = a.Error, t = this.state.verificationEmailSentTime, i.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), [4, x.a.put("/kraken/users/" + this.props.userID, {
+                                            return i.trys.push([1, 3, , 4]), [4, R.a.put("/kraken/users/" + this.props.userID, {
                                                 body: {
                                                     email: this.props.email
                                                 }
@@ -755,7 +755,7 @@
                                         case 0:
                                             e = this.state.verificationEmailSentTime, n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 3, , 4]), [4, x.a.get("/kraken/users/" + this.props.userID + "/verificationstatus", {})];
+                                            return n.trys.push([1, 3, , 4]), [4, R.a.get("/kraken/users/" + this.props.userID + "/verificationstatus", {})];
                                         case 2:
                                             return 200 === (t = n.sent()).status && void 0 !== t.body && (e = t.body.modified), [3, 4];
                                         case 3:
@@ -779,23 +779,23 @@
                         this.feedbackTimerHandle && clearTimeout(this.feedbackTimerHandle)
                     }, t.prototype.render = function() {
                         var e = this.props.disabled || this.state.working;
-                        return c.createElement(c.Fragment, null, c.createElement(C.a, {
+                        return c.createElement(c.Fragment, null, c.createElement(P.a, {
                             id: "profile-account-info-setting__email-input",
                             error: this.state.verificationEmailStatus === a.Error,
                             label: Object(f.d)("Email", "EmailSettings")
-                        }, c.createElement(U.Xa, {
-                            display: U.X.Flex
-                        }, c.createElement(U.Xa, {
+                        }, c.createElement(T.Xa, {
+                            display: T.X.Flex
+                        }, c.createElement(T.Xa, {
                             flexGrow: 1
-                        }, c.createElement(U.Ra, {
+                        }, c.createElement(T.Ra, {
                             id: "profile-account-info-setting__email-input",
-                            type: U.Ta.Email,
+                            type: T.Ta.Email,
                             disabled: !0,
                             value: this.props.email,
                             "data-a-target": "profile-email-input"
-                        })), c.createElement(U.A, {
+                        })), c.createElement(T.A, {
                             ariaLabel: Object(f.d)("Change Email", "EmailSettings"),
-                            icon: U.rb.Edit,
+                            icon: T.tb.Edit,
                             linkTo: "/settings/profile/change_email",
                             "data-a-target": "profile-email-change-link"
                         }), this.renderVerifyButton(e)), c.createElement(L.a, {
@@ -810,21 +810,21 @@
                         if (this.props.loading || this.props.verified) return null;
                         switch (this.state.verificationEmailStatus) {
                             case a.CanSendVerificationEmail:
-                                return c.createElement(U.z, {
-                                    type: U.F.Default,
+                                return c.createElement(T.z, {
+                                    type: T.F.Default,
                                     disabled: e,
                                     onClick: this.onClickVerify,
                                     "data-a-target": "profile-email-verify-button"
                                 }, Object(f.d)("Verify", "EmailSettings"));
                             case a.VerificationEmailSent:
-                                return c.createElement(U.z, {
-                                    type: U.F.Success,
+                                return c.createElement(T.z, {
+                                    type: T.F.Success,
                                     disabled: !0,
                                     "data-a-target": "profile-email-sent-button"
                                 }, Object(f.d)("Email Sent", "EmailSettings"));
                             case a.Error:
-                                return c.createElement(U.z, {
-                                    type: U.F.Alert,
+                                return c.createElement(T.z, {
+                                    type: T.F.Alert,
                                     disabled: !0,
                                     "data-a-target": "profile-email-error-button"
                                 }, Object(f.d)("Error", "EmailSettings"));
@@ -873,22 +873,22 @@
                     }, t.prototype.componentDidUpdate = function(e) {
                         !e.emailVerified && this.props.emailVerified && this.fetchChangeEligibility()
                     }, t.prototype.render = function() {
-                        return c.createElement(C.a, {
+                        return c.createElement(P.a, {
                             label: Object(f.d)("Username", "UsernameSetting"),
                             error: this.state.status === G.Error,
                             errorMessage: this.state.status === G.Error ? this.renderErrorMessage() : void 0
-                        }, c.createElement(U.Xa, {
-                            display: U.X.Flex
-                        }, c.createElement(U.Xa, {
+                        }, c.createElement(T.Xa, {
+                            display: T.X.Flex
+                        }, c.createElement(T.Xa, {
                             flexGrow: 1
-                        }, c.createElement(U.Ra, {
-                            type: U.Ta.Text,
+                        }, c.createElement(T.Ra, {
+                            type: T.Ta.Text,
                             disabled: !0,
                             value: this.props.login,
                             "data-a-target": "profile-username-input"
-                        })), this.state.status === G.Eligible && c.createElement(U.A, {
+                        })), this.state.status === G.Eligible && c.createElement(T.A, {
                             ariaLabel: Object(f.d)("Edit Username", "UsernameSetting"),
-                            icon: U.rb.Edit,
+                            icon: T.tb.Edit,
                             linkTo: "https://www.twitch.tv/logins/new",
                             "data-a-target": "profile-edit-username-button"
                         })), c.createElement(L.a, {
@@ -921,7 +921,7 @@
                             return u.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return t.trys.push([0, 2, , 3]), [4, x.a.get("/kraken/user/rename_status?scope=user_read")];
+                                        return t.trys.push([0, 2, , 3]), [4, R.a.get("/kraken/user/rename_status?scope=user_read")];
                                     case 1:
                                         return (e = t.sent()).body && e.body.is_rename_eligible ? this.setState({
                                             status: G.Eligible
@@ -960,27 +960,27 @@
                         }), c.createElement(Z, {
                             emailVerified: this.props.emailVerified,
                             login: this.props.login
-                        }), c.createElement(C.a, {
+                        }), c.createElement(P.a, {
                             id: "profile-account-info-setting__displayname-input",
                             error: !!this.props.displayNameError,
                             errorMessage: this.props.displayNameError ? this.renderDisplayNameError() : void 0,
                             label: Object(f.d)("Display Name", "ProfileAccountInfo")
-                        }, c.createElement(U.Ra, {
+                        }, c.createElement(T.Ra, {
                             id: "profile-account-info-setting__displayname-input",
                             "data-a-target": "profile-displayname-input",
-                            type: U.Ta.Text,
+                            type: T.Ta.Text,
                             disabled: this.props.controlsDisabled,
                             onChange: this.props.onDisplayNameChange,
                             value: this.props.displayName
                         }), c.createElement(L.a, {
                             textDataTarget: "profile-displayname-description",
                             text: this.renderDisplayNameDescription()
-                        })), c.createElement(C.a, {
+                        })), c.createElement(P.a, {
                             id: ee,
                             error: !!this.props.bioError,
                             errorMessage: this.props.bioError ? this.renderBioError() : void 0,
                             label: Object(f.d)("Bio", "ProfileAccountInfo")
-                        }, c.createElement(U.Qb, {
+                        }, c.createElement(T.Sb, {
                             id: ee,
                             disabled: this.props.controlsDisabled,
                             onChange: this.props.onBioChange,
@@ -1013,7 +1013,7 @@
                             displayName: null,
                             displayNameError: !1,
                             email: null,
-                            saveStatus: R.b.Working
+                            saveStatus: x.b.Working
                         }, t.logger = f.k.withCategory("profile-account-info-settings"), t.onBioChange = function(e) {
                             return t.setState({
                                 bio: e.currentTarget.value,
@@ -1032,14 +1032,14 @@
                                         case 0:
                                             if (!this.props.data.currentUser) return [2];
                                             this.setState({
-                                                saveStatus: R.b.Working
-                                            }), e = R.b.Error, t = !1, n = !1, s.label = 1;
+                                                saveStatus: x.b.Working
+                                            }), e = x.b.Error, t = !1, n = !1, s.label = 1;
                                         case 1:
-                                            return s.trys.push([1, 3, , 4]), [4, x.a.put("/kraken/users/" + this.props.data.currentUser.id, {
+                                            return s.trys.push([1, 3, , 4]), [4, R.a.put("/kraken/users/" + this.props.data.currentUser.id, {
                                                 body: this.buildRequestBody()
                                             })];
                                         case 2:
-                                            return a = s.sent(), i = a.error && a.error.message, 200 === a.status ? e = R.b.Success : i ? i.includes(M.a.DisplayName) ? t = !0 : i.includes(M.a.Bio) ? n = !0 : this.logErrorToSentinel(a) : this.logErrorToSentinel(a), [3, 4];
+                                            return a = s.sent(), i = a.error && a.error.message, 200 === a.status ? e = x.b.Success : i ? i.includes(M.a.DisplayName) ? t = !0 : i.includes(M.a.Bio) ? n = !0 : this.logErrorToSentinel(a) : this.logErrorToSentinel(a), [3, 4];
                                         case 3:
                                             return r = s.sent(), this.logger.warn("Network error submitting profile for user", {
                                                 user: this.props.data.currentUser && this.props.data.currentUser.login,
@@ -1051,7 +1051,7 @@
                                                 bioError: n,
                                                 displayNameError: t
                                             }, function() {
-                                                e === R.b.Success && o.props.data.refetch && o.props.data.refetch()
+                                                e === x.b.Success && o.props.data.refetch && o.props.data.refetch()
                                             }), [2]
                                     }
                                 })
@@ -1077,7 +1077,7 @@
                             loading: n,
                             bio: this.state.bio || "",
                             bioError: this.state.bioError,
-                            controlsDisabled: this.state.saveStatus === R.b.Working || n,
+                            controlsDisabled: this.state.saveStatus === x.b.Working || n,
                             displayName: this.state.displayName || "",
                             displayNameError: this.state.displayNameError,
                             email: this.state.email || "",
@@ -1092,7 +1092,7 @@
                         if (!this.props.data.currentUser) return !1;
                         var e = this.state.bio !== this.props.data.currentUser.description || this.state.email !== this.props.data.currentUser.email || this.state.displayName !== this.props.data.currentUser.displayName;
                         this.setState({
-                            saveStatus: e ? R.b.DirtyChanges : R.b.NoChanges
+                            saveStatus: e ? x.b.DirtyChanges : x.b.NoChanges
                         })
                     }, t.prototype.buildRequestBody = function() {
                         return {
@@ -1112,14 +1112,14 @@
                             bio: e.data.currentUser.description,
                             displayName: e.data.currentUser.displayName,
                             email: e.data.currentUser.email,
-                            saveStatus: R.b.NoChanges
+                            saveStatus: x.b.NoChanges
                         })
                     }, t
                 }(c.Component),
-                ie = Object(D.a)(ne, {
+                ie = Object(j.a)(ne, {
                     options: {
                         variables: {
-                            skipEmailReusable: !Object(j.b)(W)
+                            skipEmailReusable: !Object(D.b)(W)
                         }
                     }
                 })(ae),
@@ -1159,18 +1159,18 @@
                     }, t.prototype.render = function() {
                         var e = this.props.data,
                             t = e && e.currentUser;
-                        if (!e.loading && !t) return c.createElement(U.W, {
-                            type: U.Tb.Span,
-                            color: U.O.Error
+                        if (!e.loading && !t) return c.createElement(T.W, {
+                            type: T.Vb.Span,
+                            color: T.O.Error
                         }, Object(f.d)("Sorry, something went wrong. Please try again later.", "ProfileBannerSetting"));
                         var n = Object(f.d)("Profile Banner", "ProfileBannerSetting"),
                             a = null;
-                        return a = e.loading ? c.createElement(U.gb, {
+                        return a = e.loading ? c.createElement(T.ib, {
                             "data-test-selector": K.Placeholder,
                             "data-a-target": "profile-banner-image",
                             height: 140,
                             width: 440
-                        }) : t && t.bannerImageURL ? c.createElement(U.S, {
+                        }) : t && t.bannerImageURL ? c.createElement(T.S, {
                             src: t.bannerImageURL,
                             alt: n,
                             className: "profile-banner-setting__current-image",
@@ -1183,28 +1183,28 @@
                             },
                             "data-a-target": "profile-banner-image",
                             "data-test-selector": K.DefaultBanner
-                        }), c.createElement(U.Xa, {
+                        }), c.createElement(T.Xa, {
                             className: "profile-banner-setting"
-                        }, c.createElement(U.Xa, {
-                            display: U.X.Flex,
-                            flexDirection: U.Aa.Row
-                        }, c.createElement(U.Cb, {
-                            borderRadius: U.x.Medium,
-                            overflow: U.cb.Hidden,
+                        }, c.createElement(T.Xa, {
+                            display: T.X.Flex,
+                            flexDirection: T.Aa.Row
+                        }, c.createElement(T.Eb, {
+                            borderRadius: T.x.Medium,
+                            overflow: T.cb.Hidden,
                             margin: {
                                 right: 2
                             }
-                        }, a), c.createElement(U.Xa, {
+                        }, a), c.createElement(T.Xa, {
                             margin: {
                                 y: "auto"
                             }
-                        }, c.createElement(U.z, {
+                        }, c.createElement(T.z, {
                             ariaLabel: Object(f.d)("Update Profile Banner", "ProfileBannerSetting"),
-                            type: U.F.Hollow,
+                            type: T.F.Hollow,
                             onClick: this.openModal,
                             "data-a-target": "profile-banner-upload-button",
                             "data-test-selector": K.UploadButton
-                        }, c.createElement(U.Xa, {
+                        }, c.createElement(T.Xa, {
                             padding: {
                                 x: 1
                             }
@@ -1213,7 +1213,7 @@
                         }))))
                     }, t
                 }(c.Component),
-                me = Object(S.compose)(Object(w.b)("ProfileBannerSetting"), Object(D.a)(ce))(de);
+                me = Object(S.compose)(Object(O.b)("ProfileBannerSetting"), Object(j.a)(ce))(de);
             var pe, ge = Object(i.connect)(null, function(e) {
                     return Object(r.bindActionCreators)({
                         showModal: re.d
@@ -1240,37 +1240,37 @@
                         this.props.latencyTracking.reportInteractive(1)
                     }, t.prototype.render = function() {
                         var e = this.props.data && this.props.data.currentUser,
-                            t = c.createElement(U.gb, {
+                            t = c.createElement(T.ib, {
                                 height: 140,
                                 width: 140
                             });
-                        return e && e.profileImageURL && (t = c.createElement(w.a, {
+                        return e && e.profileImageURL && (t = c.createElement(O.a, {
                             src: e.profileImageURL,
                             alt: Object(f.d)("Profile Picture", "ProfileImageSetting"),
                             className: "profile-image-setting__current-image",
                             "data-a-target": "profile-image"
-                        })), c.createElement(U.Xa, {
+                        })), c.createElement(T.Xa, {
                             className: "profile-image-setting"
-                        }, c.createElement(U.Xa, {
-                            display: U.X.Flex,
-                            flexDirection: U.Aa.Row
-                        }, c.createElement(U.Cb, {
-                            borderRadius: U.x.Medium,
-                            overflow: U.cb.Hidden,
+                        }, c.createElement(T.Xa, {
+                            display: T.X.Flex,
+                            flexDirection: T.Aa.Row
+                        }, c.createElement(T.Eb, {
+                            borderRadius: T.x.Medium,
+                            overflow: T.cb.Hidden,
                             margin: {
                                 right: 2
                             }
-                        }, t), c.createElement(U.Xa, {
+                        }, t), c.createElement(T.Xa, {
                             margin: {
                                 y: "auto"
                             }
-                        }, c.createElement(U.z, {
+                        }, c.createElement(T.z, {
                             ariaLabel: Object(f.d)("Update Profile Picture", "ProfileImageSetting"),
-                            type: U.F.Hollow,
+                            type: T.F.Hollow,
                             onClick: this.openModal,
                             "data-a-target": "profile-image-upload-button",
                             "data-test-selector": pe.UploadButton
-                        }, c.createElement(U.Xa, {
+                        }, c.createElement(T.Xa, {
                             padding: {
                                 x: 1
                             }
@@ -1279,8 +1279,8 @@
                         }))))
                     }, t
                 }(c.Component),
-                ve = Object(S.compose)(Object(w.b)("ProfileImageSetting"), Object(D.a)(he))(be);
-            var ye, Ee, Se = Object(i.connect)(null, function(e) {
+                ve = Object(S.compose)(Object(O.b)("ProfileImageSetting"), Object(j.a)(he))(be);
+            var Ee, ye, Se = Object(i.connect)(null, function(e) {
                     return Object(r.bindActionCreators)({
                         showModal: re.d
                     }, e)
@@ -1290,34 +1290,34 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return u.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(c.Fragment, null, c.createElement(P.a, {
+                        return c.createElement(c.Fragment, null, c.createElement(U.a, {
                             title: Object(f.d)("Profile Picture", "SettingsProfilePage")
-                        }), c.createElement(N.a, null, c.createElement(I.a, null, c.createElement(Se, null))), c.createElement(P.a, {
+                        }), c.createElement(N.a, null, c.createElement(I.a, null, c.createElement(Se, null))), c.createElement(U.a, {
                             title: Object(f.d)("Profile Banner", "SettingsProfilePage")
-                        }), c.createElement(N.a, null, c.createElement(I.a, null, c.createElement(ge, null))), c.createElement(P.a, {
+                        }), c.createElement(N.a, null, c.createElement(I.a, null, c.createElement(ge, null))), c.createElement(U.a, {
                             title: Object(f.d)("Profile Settings", "SettingsProfilePage"),
                             description: Object(f.d)("Change identifying details for your account", "SettingsProfilePage")
-                        }), c.createElement(ie, null), c.createElement(P.a, {
+                        }), c.createElement(ie, null), c.createElement(U.a, {
                             title: Object(f.d)("Disabling Your Twitch Account", "SettingsProfilePage"),
                             description: Object(f.d)("Completely deactivate your account", "SettingsProfilePage")
-                        }), c.createElement(N.a, null, c.createElement(T, null)))
+                        }), c.createElement(N.a, null, c.createElement(C, null)))
                     }, t
                 }(c.Component),
-                _e = Object(S.compose)(Object(w.b)("SettingsProfilePage", {
+                _e = Object(S.compose)(Object(O.b)("SettingsProfilePage", {
                     autoReportInteractive: !0,
                     destination: _.a.SettingsProfile
                 }), Object(k.a)({
-                    location: O.PageviewLocation.SettingsPage
+                    location: w.PageviewLocation.SettingsPage
                 }))(ke),
-                Oe = n("ht6z"),
-                we = n("IwUd"),
-                Ie = Object(E.a)();
+                we = n("ht6z"),
+                Oe = n("IwUd"),
+                Ie = Object(y.a)();
             ! function(e) {
                 e.PrimeTab = "settings-tabs__prime-tab", e.TurboTab = "settings-tabs__turbo-tab", e.DesktopTab = "settings-tabs__desktop-tab"
-            }(ye || (ye = {})),
+            }(Ee || (Ee = {})),
             function(e) {
                 e.Channel = "channel", e.Notifications = "notifications", e.Profile = "profile", e.Security = "security", e.Connections = "connections", e.Prime = "prime", e.Turbo = "turbo", e.Recommendations = "recommendations", e.Desktop = "desktop"
-            }(Ee || (Ee = {}));
+            }(ye || (ye = {}));
             var Ne = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -1325,96 +1325,96 @@
                     return u.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return c.createElement(U.Xa, {
+                        return c.createElement(T.Xa, {
                             className: "settings-tabs",
                             padding: {
                                 x: Le,
                                 top: Le
                             }
-                        }, c.createElement(U.Xa, {
+                        }, c.createElement(T.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, c.createElement(U.W, {
-                            type: U.Tb.H2
-                        }, Object(f.d)("Settings", "SettingsTabs"))), c.createElement(U.Xa, null, c.createElement(U.Eb, null, f.p.integrations.appSettings && c.createElement(U.Db, {
+                        }, c.createElement(T.W, {
+                            type: T.Vb.H2
+                        }, Object(f.d)("Settings", "SettingsTabs"))), c.createElement(T.Xa, null, c.createElement(T.Gb, null, f.p.integrations.appSettings && c.createElement(T.Fb, {
                             linkTo: "/settings/desktop",
-                            active: this.props.tabName === Ee.Desktop,
-                            "data-test-selector": ye.DesktopTab,
+                            active: this.props.tabName === ye.Desktop,
+                            "data-test-selector": Ee.DesktopTab,
                             "data-a-target": "desktop-tab"
-                        }, Object(f.d)("General", "SettingsTabs")), c.createElement(U.Db, {
+                        }, Object(f.d)("General", "SettingsTabs")), c.createElement(T.Fb, {
                             linkTo: "/settings/profile",
-                            active: this.props.tabName === Ee.Profile,
+                            active: this.props.tabName === ye.Profile,
                             "data-a-target": "profile-tab"
-                        }, Object(f.d)("Profile", "SettingsTabs")), this.renderPremiumTab(), c.createElement(U.Db, {
+                        }, Object(f.d)("Profile", "SettingsTabs")), this.renderPremiumTab(), c.createElement(T.Fb, {
                             linkTo: "/settings/channel",
-                            active: this.props.tabName === Ee.Channel,
+                            active: this.props.tabName === ye.Channel,
                             "data-a-target": "channel-tab"
-                        }, Object(f.d)("Channel and Videos", "SettingsTabs")), c.createElement(U.Db, {
+                        }, Object(f.d)("Channel and Videos", "SettingsTabs")), c.createElement(T.Fb, {
                             linkTo: "/settings/security",
-                            active: this.props.tabName === Ee.Security,
+                            active: this.props.tabName === ye.Security,
                             "data-a-target": "security-tab"
-                        }, Object(f.d)("Security and Privacy", "SettingsTabs")), c.createElement(U.Db, {
+                        }, Object(f.d)("Security and Privacy", "SettingsTabs")), c.createElement(T.Fb, {
                             linkTo: "/settings/notifications",
-                            active: this.props.tabName === Ee.Notifications,
+                            active: this.props.tabName === ye.Notifications,
                             "data-a-target": "notifications-tab"
-                        }, Object(f.d)("Notifications", "SettingsTab")), c.createElement(U.Db, {
+                        }, Object(f.d)("Notifications", "SettingsTab")), c.createElement(T.Fb, {
                             linkTo: "/settings/connections",
-                            active: this.props.tabName === Ee.Connections,
+                            active: this.props.tabName === ye.Connections,
                             "data-a-target": "connections-tab"
-                        }, Object(f.d)("Connections", "SettingsTabs")), Ie() && c.createElement(U.Db, {
+                        }, Object(f.d)("Connections", "SettingsTabs")), Ie() && c.createElement(T.Fb, {
                             linkTo: "/settings/recommendations",
-                            active: this.props.tabName === Ee.Recommendations,
+                            active: this.props.tabName === ye.Recommendations,
                             "data-a-target": "recommendations-tab"
                         }, Object(f.d)("Recommendations", "SettingsTabs")))))
                     }, t.prototype.renderPremiumTab = function() {
                         var e = Object(f.d)("Twitch Prime", "SettingsTabs");
-                        if (!this.props.data.currentUser || !this.props.data.requestInfo) return c.createElement(U.Db, {
+                        if (!this.props.data.currentUser || !this.props.data.requestInfo) return c.createElement(T.Fb, {
                             disabled: !0
                         }, e);
                         var t = this.props.data.currentUser,
                             n = t.hasPrime;
-                        return !t.hasTurbo && Object(Oe.a)(this.props.data.requestInfo.countryCode) || n ? c.createElement(U.Db, {
+                        return !t.hasTurbo && Object(we.a)(this.props.data.requestInfo.countryCode) || n ? c.createElement(T.Fb, {
                             linkTo: "/settings/prime",
-                            active: this.props.tabName === Ee.Prime,
-                            "data-test-selector": ye.PrimeTab,
+                            active: this.props.tabName === ye.Prime,
+                            "data-test-selector": Ee.PrimeTab,
                             "data-a-target": "prime-tab"
-                        }, e) : c.createElement(U.Db, {
+                        }, e) : c.createElement(T.Fb, {
                             linkTo: "/settings/turbo",
-                            active: this.props.tabName === Ee.Turbo,
-                            "data-test-selector": ye.TurboTab,
+                            active: this.props.tabName === ye.Turbo,
+                            "data-test-selector": Ee.TurboTab,
                             "data-a-target": "turbo-tab"
                         }, Object(f.d)("Twitch Turbo", "SettingsTabs"))
                     }, t
                 }(c.Component),
-                Pe = Object(S.compose)(Object(w.b)("SettingsTabs"), Object(D.a)(we))(Ne),
-                Ce = (n("EPme"), Object(E.a)()),
-                Ue = h.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(149)]).then(n.bind(null, "1qL7"))
-                }, "ChangeEmailPage"),
+                Ue = Object(S.compose)(Object(O.b)("SettingsTabs"), Object(j.a)(Oe))(Ne),
+                Pe = (n("EPme"), Object(y.a)()),
                 Te = h.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(149)]).then(n.bind(null, "kLO1"))
+                    return Promise.all([n.e(0), n.e(150)]).then(n.bind(null, "1qL7"))
+                }, "ChangeEmailPage"),
+                Ce = h.a.wrap(function() {
+                    return Promise.all([n.e(0), n.e(150)]).then(n.bind(null, "kLO1"))
                 }, "SettingsTurboPage"),
-                De = h.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(149)]).then(n.bind(null, "lRpU"))
-                }, "SettingsPrimePage"),
                 je = h.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(149)]).then(n.bind(null, "LJ0+"))
+                    return Promise.all([n.e(0), n.e(150)]).then(n.bind(null, "lRpU"))
+                }, "SettingsPrimePage"),
+                De = h.a.wrap(function() {
+                    return Promise.all([n.e(0), n.e(150)]).then(n.bind(null, "LJ0+"))
                 }, "SettingsChannelPage"),
-                xe = h.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(149)]).then(n.bind(null, "KXpU"))
-                }, "SettingsSecurityPage"),
                 Re = h.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(149)]).then(n.bind(null, "+oVX"))
+                    return Promise.all([n.e(0), n.e(150)]).then(n.bind(null, "KXpU"))
+                }, "SettingsSecurityPage"),
+                xe = h.a.wrap(function() {
+                    return Promise.all([n.e(0), n.e(150)]).then(n.bind(null, "+oVX"))
                 }, "SettingsNotificationsPage"),
                 Ae = h.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(149)]).then(n.bind(null, "t1je"))
+                    return Promise.all([n.e(0), n.e(150)]).then(n.bind(null, "t1je"))
                 }, "SettingsConnectionsPage"),
                 Me = h.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(149)]).then(n.bind(null, "bm35"))
+                    return Promise.all([n.e(0), n.e(150)]).then(n.bind(null, "bm35"))
                 }, "SettingsRecommendationsPage"),
                 Fe = h.a.wrap(function() {
-                    return n.e(148).then(n.bind(null, "Rpd6"))
+                    return n.e(149).then(n.bind(null, "Rpd6"))
                 }, "SettingsDesktopPage"),
                 Le = 3,
                 Be = function(e) {
@@ -1431,20 +1431,20 @@
                     return u.__extends(t, e), t.prototype.componentDidMount = function() {
                         f.p.setPageTitle()
                     }, t.prototype.render = function() {
-                        return this.props.isLoggedIn ? c.createElement(U.Xa, {
+                        return this.props.isLoggedIn ? c.createElement(T.Xa, {
                             padding: {
                                 x: Le
                             },
                             fullHeight: !0,
                             fullWidth: !0,
-                            display: U.X.Flex,
-                            flexDirection: U.Aa.Column,
-                            flexWrap: U.Ba.NoWrap
+                            display: T.X.Flex,
+                            flexDirection: T.Aa.Column,
+                            flexWrap: T.Ba.NoWrap
                         }, c.createElement(v.b, {
                             addPaddingWhenPlayerIsPersisting: !0
-                        }), c.createElement(y.a, null, c.createElement(Pe, {
+                        }), c.createElement(E.a, null, c.createElement(Ue, {
                             tabName: this.props.match.params.tab
-                        })), c.createElement(U.Xa, {
+                        })), c.createElement(T.Xa, {
                             className: "settings-root__content",
                             padding: {
                                 y: 2
@@ -1460,32 +1460,32 @@
                         }), c.createElement(d.a, {
                             exact: !0,
                             path: "/settings/profile/change_email",
-                            component: Ue
-                        }), c.createElement(d.a, {
-                            exact: !0,
-                            path: "/settings/prime",
-                            component: De
-                        }), c.createElement(d.a, {
-                            exact: !0,
-                            path: "/settings/turbo",
                             component: Te
                         }), c.createElement(d.a, {
                             exact: !0,
-                            path: "/settings/channel",
+                            path: "/settings/prime",
                             component: je
                         }), c.createElement(d.a, {
                             exact: !0,
+                            path: "/settings/turbo",
+                            component: Ce
+                        }), c.createElement(d.a, {
+                            exact: !0,
+                            path: "/settings/channel",
+                            component: De
+                        }), c.createElement(d.a, {
+                            exact: !0,
                             path: "/settings/security",
-                            component: xe
+                            component: Re
                         }), c.createElement(d.a, {
                             exact: !0,
                             path: "/settings/notifications",
-                            component: Re
+                            component: xe
                         }), c.createElement(d.a, {
                             exact: !0,
                             path: "/settings/connections",
                             component: Ae
-                        }), Ce() && c.createElement(d.a, {
+                        }), Pe() && c.createElement(d.a, {
                             exact: !0,
                             path: "/settings/recommendations",
                             component: Me
@@ -1850,10 +1850,10 @@
                         "aria-label": Object(d.d)("Click to select Default Avatar Number {index, number}", {
                             index: e.index
                         }, "Default Avatar")
-                    }, c.createElement(b.Cb, {
+                    }, c.createElement(b.Eb, {
                         fullHeight: !0,
                         fullWidth: !0,
-                        position: b.hb.Relative,
+                        position: b.jb.Relative,
                         className: u(t),
                         borderRadius: b.x.Small,
                         overflow: b.cb.Hidden
@@ -1864,16 +1864,16 @@
                         src: e.imageSrc
                     }))))
                 }),
-                y = n("94Uw"),
-                E = n("Sejb"),
+                E = n("94Uw"),
+                y = n("Sejb"),
                 S = n("kMGJ"),
                 k = n("vpah"),
                 _ = n("GnwI"),
-                O = (n("bWJD"), n("c81k"));
+                w = (n("bWJD"), n("c81k"));
             ! function(e) {
                 e.PreviewImage = "preview-image", e.UpdateButton = "update-button", e.StatusMessage = "status-message"
             }(a || (a = {}));
-            var w = ["image/*"],
+            var O = ["image/*"],
                 I = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -1886,7 +1886,7 @@
                             var n;
                             if (null !== e) {
                                 n = e[0];
-                                var a = Object(E.a)(n),
+                                var a = Object(y.a)(n),
                                     i = (n.size / 1024 / 1024).toFixed(4);
                                 parseInt(i, 10) > 10 ? t.setState({
                                     statusMessage: k.b.BadSizeError
@@ -1895,7 +1895,7 @@
                                     imagePreviewURL: "",
                                     imageFormat: "",
                                     currentImageHasTallAspectRatio: !1
-                                }), Object(E.b)(n, function(e) {
+                                }), Object(y.b)(n, function(e) {
                                     t.currentImage = e, t.setState({
                                         statusMessage: null
                                     })
@@ -1928,7 +1928,7 @@
                                                 statusMessage: k.b.Uploading
                                             }), o.label = 1;
                                         case 1:
-                                            return o.trys.push([1, 3, , 4]), [4, Object(S.a)(this.props.userID, this.props.authToken, y.a.ProfileImage, this.state.imageFormat)];
+                                            return o.trys.push([1, 3, , 4]), [4, Object(S.a)(this.props.userID, this.props.authToken, E.a.ProfileImage, this.state.imageFormat)];
                                         case 2:
                                             return t = o.sent(), n = t.upload_url, a = t.upload_id, [3, 4];
                                         case 3:
@@ -2008,9 +2008,9 @@
                                 "profile-edit__image-preview": !0,
                                 "profile-edit__image-preview-tall": this.state.currentImageHasTallAspectRatio
                             };
-                            n = c.createElement(b.Cb, {
+                            n = c.createElement(b.Eb, {
                                 className: u(i),
-                                position: b.hb.Relative,
+                                position: b.jb.Relative,
                                 background: b.r.Base
                             }, c.createElement(b.Qa, {
                                 borderRadius: b.x.Small,
@@ -2023,13 +2023,13 @@
                         var r = null;
                         "" === this.state.imagePreviewURL && (r = c.createElement(b.Xa, {
                             className: "profile-edit__upload-info"
-                        }, c.createElement(b.Xa, null, c.createElement(b.qb, {
-                            asset: b.rb.Plus,
-                            type: b.sb.Alt2,
+                        }, c.createElement(b.Xa, null, c.createElement(b.sb, {
+                            asset: b.tb.Plus,
+                            type: b.ub.Alt2,
                             height: 20,
                             width: 20
                         })), c.createElement(b.W, {
-                            type: b.Tb.H3,
+                            type: b.Vb.H3,
                             color: b.O.Alt2,
                             fontSize: b.Ca.Size4
                         }, Object(d.d)("Upload a Photo", "Profile Edit"))));
@@ -2040,28 +2040,28 @@
                             var l = Object(k.c)(this.state.statusMessage),
                                 g = l.message,
                                 h = l.type;
-                            s = c.createElement(b.eb, {
+                            s = c.createElement(b.gb, {
                                 label: g,
                                 type: h
                             })
                         }
-                        var y = this.props.login;
-                        return this.props.displayName && (y = this.props.displayName), c.createElement(b.Xa, {
+                        var E = this.props.login;
+                        return this.props.displayName && (E = this.props.displayName), c.createElement(b.Xa, {
                             className: "profile-edit",
-                            position: b.hb.Relative,
+                            position: b.jb.Relative,
                             fullHeight: !0
-                        }, c.createElement(b.Cb, {
+                        }, c.createElement(b.Eb, {
                             className: "profile-edit__background-container",
                             background: b.r.Base,
                             fullWidth: !0
                         }, c.createElement(b.Xa, {
                             padding: 2,
                             display: b.X.InlineBlock,
-                            position: b.hb.Relative,
-                            textAlign: b.Pb.Center,
+                            position: b.jb.Relative,
+                            textAlign: b.Rb.Center,
                             fullWidth: !0
-                        }, c.createElement(b.Cb, {
-                            textAlign: b.Pb.Left,
+                        }, c.createElement(b.Eb, {
+                            textAlign: b.Rb.Left,
                             borderBottom: !0,
                             padding: {
                                 bottom: 1
@@ -2070,34 +2070,34 @@
                                 bottom: 2
                             }
                         }, c.createElement(b.W, {
-                            type: b.Tb.H3,
+                            type: b.Vb.H3,
                             color: b.O.Alt2,
                             fontSize: b.Ca.Size4
                         }, Object(d.d)("Edit Profile Picture for {userName}", {
-                            userName: y
+                            userName: E
                         }, "Profile Edit"), " ")), c.createElement(b.Xa, {
                             className: "profile-edit__upload-container",
                             display: b.X.InlineBlock,
-                            position: b.hb.Relative,
-                            textAlign: b.Pb.Center,
+                            position: b.jb.Relative,
+                            textAlign: b.Rb.Center,
                             margin: {
                                 bottom: 1
                             }
                         }, c.createElement(b.Xa, {
                             className: "profile-edit__upload",
                             display: b.X.InlineBlock,
-                            position: b.hb.Relative,
-                            textAlign: b.Pb.Center
+                            position: b.jb.Relative,
+                            textAlign: b.Rb.Center
                         }, c.createElement(m.a, {
-                            allowedFileTypes: w,
+                            allowedFileTypes: O,
                             onFilesSubmitted: this.onImageInputChange
-                        }, r), n)), c.createElement(b.Cb, {
+                        }, r), n)), c.createElement(b.Eb, {
                             "data-test-selector": a.StatusMessage,
                             fontSize: b.Ca.Size4,
-                            position: b.hb.Relative,
-                            textAlign: b.Pb.Center,
+                            position: b.jb.Relative,
+                            textAlign: b.Rb.Center,
                             className: "profile-edit__status-message"
-                        }, s), c.createElement(b.Cb, {
+                        }, s), c.createElement(b.Eb, {
                             borderBottom: !0,
                             padding: {
                                 bottom: .5
@@ -2106,17 +2106,17 @@
                                 bottom: 2
                             }
                         }, c.createElement(b.Xa, {
-                            textAlign: b.Pb.Left,
+                            textAlign: b.Rb.Left,
                             margin: {
                                 bottom: 1
                             }
                         }, c.createElement(b.W, {
-                            type: b.Tb.H3,
+                            type: b.Vb.H3,
                             color: b.O.Alt2,
                             fontSize: b.Ca.Size5
-                        }, Object(d.d)("Or select one of these", "Profile Edit"))), c.createElement(b.Zb, {
-                            childWidth: b.ac.ExtraSmall,
-                            gutterSize: b.bc.ExtraSmall,
+                        }, Object(d.d)("Or select one of these", "Profile Edit"))), c.createElement(b.bc, {
+                            childWidth: b.cc.ExtraSmall,
+                            gutterSize: b.dc.ExtraSmall,
                             placeholderItems: 3
                         }, t)), c.createElement(b.Xa, {
                             display: b.X.Flex,
@@ -2172,7 +2172,7 @@
                 }(c.Component),
                 N = Object(r.compose)(Object(_.b)("Profile Edit", {
                     autoReportInteractive: !0
-                }), Object(g.a)(O, {
+                }), Object(g.a)(w, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2181,7 +2181,7 @@
                         }
                     }
                 }))(I);
-            var P = Object(i.connect)(function(e) {
+            var U = Object(i.connect)(function(e) {
                 return {
                     authToken: Object(s.a)(e)
                 }
@@ -2193,7 +2193,7 @@
                 }, e)
             })(N);
             n.d(t, "a", function() {
-                return P
+                return U
             })
         },
         "KwO+": function(e, t, n) {},
@@ -2584,7 +2584,7 @@
                         bottom: 2
                     }
                 }, a.createElement(i.W, {
-                    type: i.Tb.H3,
+                    type: i.Vb.H3,
                     fontSize: i.Ca.Size4,
                     color: i.O.Alt,
                     bold: !0
@@ -2907,47 +2907,47 @@
                     case i.Success:
                         return {
                             message: Object(r.d)("Success!", "Profile Edit"),
-                            type: o.fb.Success
+                            type: o.hb.Success
                         };
                     case i.UnexpectedError:
                         return {
                             message: Object(r.d)("Unexpected error, please try again.", "Profile Edit"),
-                            type: o.fb.Alert
+                            type: o.hb.Alert
                         };
                     case i.BadSizeError:
                         return {
                             message: Object(r.d)("Image might exceed 10MB.", "Profile Edit"),
-                            type: o.fb.Alert
+                            type: o.hb.Alert
                         };
                     case i.NonImageError:
                         return {
                             message: Object(r.d)("You must upload an image.", "Profile Edit"),
-                            type: o.fb.Alert
+                            type: o.hb.Alert
                         };
                     case i.WrongFormatError:
                         return {
                             message: Object(r.d)("You must select a valid image type.", "Profile Edit"),
-                            type: o.fb.Alert
+                            type: o.hb.Alert
                         };
                     case i.TimeoutError:
                         return {
                             message: Object(r.d)("Upload timed-out. Please try again.", "Profile Edit"),
-                            type: o.fb.Alert
+                            type: o.hb.Alert
                         };
                     case i.Uploading:
                         return {
                             message: Object(r.d)("Uploading....", "Profile Edit"),
-                            type: o.fb.Brand
+                            type: o.hb.Brand
                         };
                     case i.ImageNotSelected:
                         return {
                             message: Object(r.d)("Select a image first.", "Profile Edit"),
-                            type: o.fb.Alert
+                            type: o.hb.Alert
                         };
                     default:
                         return {
                             message: Object(r.d)("Please try again.", "Profile Edit"),
-                            type: o.fb.Alert
+                            type: o.hb.Alert
                         }
                 }
             }! function(e) {
@@ -2970,42 +2970,6 @@
                         message: Object(i.d)("Error loading user data. Please try again later.", "SettingsPageError")
                     })
                 }
-        },
-        wUQP: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return a
-            }), n.d(t, "b", function() {
-                return s
-            }), n.d(t, "c", function() {
-                return u
-            });
-            var a, i, r = n("/7QA"),
-                o = n("kRBY");
-
-            function s(e) {
-                var t = r.p.store.getState(),
-                    n = r.b.get(e, a.Off);
-                return !!(n === a.On || n === a.StaffOnly && Object(o.g)(t))
-            }! function(e) {
-                e.On = "on", e.Off = "off", e.StaffOnly = "staff"
-            }(a || (a = {})),
-            function(e) {
-                e[e.Enabled = 1] = "Enabled", e[e.Disabled = 0] = "Disabled"
-            }(i || (i = {}));
-            var l = Math.pow(2, 32);
-
-            function u(e) {
-                var t = r.b.get(e, [0, i.Disabled]),
-                    n = t[0],
-                    a = t[1],
-                    s = r.p.session.deviceID,
-                    u = r.p.store.getState();
-                return !(a !== i.Enabled || !Object(o.g)(u)) || function(e, t) {
-                    for (var n = void 0 === t ? 2166136261 : t, a = 0, i = e.length; a < i; a++) n ^= e.charCodeAt(a), n += (n << 1) + (n << 4) + (n << 7) + (n << 8) + (n << 24);
-                    return n >>> 0
-                }(s + "-" + e) / l < n
-            }
         }
     }
 ]);
