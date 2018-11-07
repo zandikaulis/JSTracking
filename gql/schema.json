@@ -317,6 +317,68 @@
           "possibleTypes": null
         }, 
         {
+          "description": "Errors from acceptSquadStreamInvitation mutation.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Error from request to accept invitation.", 
+              "isDeprecated": false, 
+              "name": "code", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "ENUM", 
+                  "name": "AcceptSquadStreamInvitationErrorCode", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "AcceptSquadStreamInvitationError", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "Possible errors from this mutation.", 
+          "enumValues": [
+            {
+              "deprecationReason": null, 
+              "description": "Invitation to be accepted does not exist.", 
+              "isDeprecated": false, 
+              "name": "INVITATION_NOT_FOUND"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Squad associated with the invitation does not exist.", 
+              "isDeprecated": false, 
+              "name": "SQUAD_NOT_FOUND"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "User does not have permissions to accept invitation.", 
+              "isDeprecated": false, 
+              "name": "UNAUTHORIZED"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "Invitation not in pending state cannot be accepted.", 
+              "isDeprecated": false, 
+              "name": "INVITATION_CANNOT_BE_ACCEPTED"
+            }
+          ], 
+          "fields": null, 
+          "inputFields": null, 
+          "interfaces": null, 
+          "kind": "ENUM", 
+          "name": "AcceptSquadStreamInvitationErrorCode", 
+          "possibleTypes": null
+        }, 
+        {
           "description": "Inputs to the acceptSquadStreamInvitation mutation.", 
           "enumValues": null, 
           "fields": null, 
@@ -345,6 +407,18 @@
           "description": "Outputs from the acceptSquadStreamInvitation mutation.", 
           "enumValues": null, 
           "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Error from mutation if exists.", 
+              "isDeprecated": false, 
+              "name": "error", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "AcceptSquadStreamInvitationError", 
+                "ofType": null
+              }
+            }, 
             {
               "args": [], 
               "deprecationReason": null, 
