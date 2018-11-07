@@ -15207,6 +15207,102 @@
           "possibleTypes": null
         }, 
         {
+          "description": "Contains the channel ID to create new image upload URL for.", 
+          "enumValues": null, 
+          "fields": null, 
+          "inputFields": [
+            {
+              "defaultValue": null, 
+              "description": "The channel for which the content attribute belongs to.", 
+              "name": "channelID", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "interfaces": null, 
+          "kind": "INPUT_OBJECT", 
+          "name": "CreateMultiviewContentAttributeImageUploadConfigInput", 
+          "possibleTypes": null
+        }, 
+        {
+          "description": "Payload contains the upload ID and URL, as well as the URL to access the uploaded image.", 
+          "enumValues": null, 
+          "fields": [
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The channel for which the content attribute belongs to.", 
+              "isDeprecated": false, 
+              "name": "channel", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "Channel", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The URL to access this image once uploaded.", 
+              "isDeprecated": false, 
+              "name": "imageURL", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "String", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Generated unique identifier for this upload.", 
+              "isDeprecated": false, 
+              "name": "uploadID", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "ID", 
+                  "ofType": null
+                }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "Generated unique URL to upload the image to.", 
+              "isDeprecated": false, 
+              "name": "uploadURL", 
+              "type": {
+                "kind": "NON_NULL", 
+                "name": null, 
+                "ofType": {
+                  "kind": "SCALAR", 
+                  "name": "String", 
+                  "ofType": null
+                }
+              }
+            }
+          ], 
+          "inputFields": null, 
+          "interfaces": [], 
+          "kind": "OBJECT", 
+          "name": "CreateMultiviewContentAttributeImageUploadConfigPayload", 
+          "possibleTypes": null
+        }, 
+        {
           "description": "Contains a list of new content attributes to be created.", 
           "enumValues": null, 
           "fields": null, 
@@ -33123,6 +33219,33 @@
               "type": {
                 "kind": "OBJECT", 
                 "name": "CreateFriendRequestPayload", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [
+                {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "input", 
+                  "type": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "INPUT_OBJECT", 
+                      "name": "CreateMultiviewContentAttributeImageUploadConfigInput", 
+                      "ofType": null
+                    }
+                  }
+                }
+              ], 
+              "deprecationReason": null, 
+              "description": "createMultiviewContentAttributeImageUploadConfig creates and returns a upload configuration for uploading and retrieving content attribute images.", 
+              "isDeprecated": false, 
+              "name": "createMultiviewContentAttributeImageUploadConfig", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "CreateMultiviewContentAttributeImageUploadConfigPayload", 
                 "ofType": null
               }
             }, 
