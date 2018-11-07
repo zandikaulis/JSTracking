@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [208], {
+    [202], {
         "5zXJ": function(e, t, n) {
             "use strict";
             n.d(t, "v", function() {
@@ -522,7 +522,7 @@
                         i = Object(u.d)("Bummer, this code is invalid ({description}). Please try again.", {
                             description: this.props.description ? this.props.description : "No description provided"
                         }, "RedeemPage");
-                    return c.createElement(E.Eb, {
+                    return c.createElement(E.Cb, {
                         elevation: 3,
                         margin: {
                             top: 1
@@ -583,11 +583,11 @@
             ! function(e) {
                 e.InputTitle = "input-title"
             }(D || (D = {}));
-            var V, A = 15,
+            var A, V = 15,
                 F = 1e3;
             ! function(e) {
                 e.Default = "default", e.FakeLoading = "fake_loading", e.Validation = "validation", e.Success = "success", e.Error = "error", e.Login = "login"
-            }(V || (V = {}));
+            }(A || (A = {}));
             var W = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -608,15 +608,15 @@
                             n.setState({
                                 code: r,
                                 cursorIndex: a
-                            }), r.length === A ? (n.setState({
-                                workflowStep: V.FakeLoading
+                            }), r.length === V ? (n.setState({
+                                workflowStep: A.FakeLoading
                             }), n.timeout = setTimeout(function() {
-                                n.inputRef && n.state.workflowStep === V.FakeLoading && n.setState({
-                                    workflowStep: V.Validation,
+                                n.inputRef && n.state.workflowStep === A.FakeLoading && n.setState({
+                                    workflowStep: A.Validation,
                                     cursorIndex: n.inputRef.selectionStart
                                 })
                             }, F)) : (n.timeout && clearTimeout(n.timeout), n.setState({
-                                workflowStep: V.Default,
+                                workflowStep: A.Default,
                                 isCodeValid: !1,
                                 codeErrorState: !1
                             }))
@@ -647,12 +647,12 @@
                                             return n.trys.push([1, 3, , 4]), [4, this.props.redeemKey(t)];
                                         case 2:
                                             return n.sent(), this.setState({
-                                                workflowStep: V.Success,
+                                                workflowStep: A.Success,
                                                 codeErrorState: !1
                                             }), [3, 4];
                                         case 3:
                                             return n.sent(), this.setState({
-                                                workflowStep: V.Error,
+                                                workflowStep: A.Error,
                                                 codeErrorState: !1
                                             }), [3, 4];
                                         case 4:
@@ -683,16 +683,16 @@
                             })
                         }, n.closeNotification = function() {
                             n.setState({
-                                workflowStep: V.Default
+                                workflowStep: A.Default
                             })
                         }, n.sanitizeCode = function(e) {
-                            return e.replace(/([^a-zA-Z0-9])+/gi, "").substring(0, A)
+                            return e.replace(/([^a-zA-Z0-9])+/gi, "").substring(0, V)
                         }, n.getDisplayCode = function(e) {
                             return (e.match(/.{1,5}/g) || []).join("-").toUpperCase()
                         };
                         var i = n.props.code ? n.sanitizeCode(n.props.code) : "",
-                            o = V.Login;
-                        return n.props.user && (o = V.Default, i.length === A && (o = V.Validation)), n.state = {
+                            o = A.Login;
+                        return n.props.user && (o = A.Default, i.length === V && (o = A.Validation)), n.state = {
                             workflowStep: o,
                             code: i,
                             isCodeValid: !1,
@@ -707,7 +707,7 @@
                             padding: {
                                 bottom: 4
                             },
-                            textAlign: E.Rb.Left
+                            textAlign: E.Pb.Left
                         }, c.createElement(E.W, {
                             bold: !0,
                             fontSize: E.Ca.Size1,
@@ -724,7 +724,7 @@
                             "x:bold": function() {
                                 return c.createElement(E.W, {
                                     bold: !0,
-                                    type: E.Vb.Span
+                                    type: E.Tb.Span
                                 }, e.props.user.displayName)
                             }
                         }, "RedeemPage")))), c.createElement(E.Xa, {
@@ -747,11 +747,11 @@
                             margin: {
                                 bottom: 1
                             },
-                            textAlign: E.Rb.Left
+                            textAlign: E.Pb.Left
                         }, c.createElement(E.Ra, {
                             autoFocus: !0,
                             placeholder: "00000-00000-00000",
-                            maxLength: A + 2,
+                            maxLength: V + 2,
                             disabled: !this.props.user,
                             onKeyDown: this.onKeyDown,
                             onChange: this.onInputChange,
@@ -768,17 +768,17 @@
                             disabled: !this.props.user || !this.state.code || !this.state.isCodeValid,
                             onClick: this.onInputSubmit,
                             fullWidth: !0
-                        }, Object(u.d)("Redeem", "RedeemPage"))))), !this.props.user && this.state.workflowStep === V.Login && c.createElement(I, {
+                        }, Object(u.d)("Redeem", "RedeemPage"))))), !this.props.user && this.state.workflowStep === A.Login && c.createElement(I, {
                             closeNotification: this.closeNotification
-                        }), this.props.user && this.state.workflowStep === V.FakeLoading && c.createElement(C, null), this.props.user && this.state.workflowStep === V.Validation && c.createElement(N, {
+                        }), this.props.user && this.state.workflowStep === A.FakeLoading && c.createElement(C, null), this.props.user && this.state.workflowStep === A.Validation && c.createElement(N, {
                             code: this.state.code,
                             onValidCode: this.onValidCode,
                             onInvalidCode: this.onInvalidCode
-                        }), this.props.user && this.state.workflowStep === V.Success && c.createElement(I, {
+                        }), this.props.user && this.state.workflowStep === A.Success && c.createElement(I, {
                             success: !0,
                             description: this.state.description,
                             closeNotification: this.closeNotification
-                        }), this.props.user && this.state.workflowStep === V.Error && c.createElement(I, {
+                        }), this.props.user && this.state.workflowStep === A.Error && c.createElement(I, {
                             success: !1,
                             description: this.state.description,
                             closeNotification: this.closeNotification
@@ -812,7 +812,7 @@
                         var t = s.parse(this.props.location.search);
                         return c.createElement(c.Fragment, null, c.createElement(b.a, {
                             darkModeEnabled: !0
-                        }), c.createElement(E.Eb, {
+                        }), c.createElement(E.Cb, {
                             background: E.r.Alt,
                             className: "code-redemption-page",
                             fullWidth: !0,

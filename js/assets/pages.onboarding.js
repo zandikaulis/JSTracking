@@ -275,27 +275,27 @@
                 C = n("cTNz"),
                 _ = n("0OKo"),
                 N = n("kduP"),
-                E = n("yziQ"),
-                G = n("Ue10"),
+                G = n("yziQ"),
+                E = n("Ue10"),
                 D = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return null === this.props.game ? i.createElement(G.Xa, {
+                        return null === this.props.game ? i.createElement(E.Xa, {
                             "data-test-selector": "community-card__placeholder",
                             margin: {
                                 bottom: 2
                             }
-                        }, i.createElement(G.Xa, {
+                        }, i.createElement(E.Xa, {
                             margin: {
                                 bottom: .5
                             }
-                        }, i.createElement(G.o, {
-                            ratio: G.p.BoxArt
-                        }, i.createElement(G.ib, null)))) : this.props.followGameCardOptions ? i.createElement(G.Xa, {
+                        }, i.createElement(E.o, {
+                            ratio: E.p.BoxArt
+                        }, i.createElement(E.gb, null)))) : this.props.followGameCardOptions ? i.createElement(E.Xa, {
                             key: this.props.followGameCardOptions.category + "-game-" + this.props.game.id
-                        }, i.createElement(E.a, {
+                        }, i.createElement(G.a, {
                             "data-a-target": "follow-game-card-" + this.props.game.id,
                             "data-test-selector": X,
                             info: this.props.game.viewersCount ? Object(r.d)("{viewerCount,number} viewers", {
@@ -306,12 +306,12 @@
                             imageSrc: this.props.game.boxArtURL || r.a.defaultBoxArtURL,
                             onFollow: this.props.followGameCardOptions.onFollow,
                             onUnfollow: this.props.followGameCardOptions.onUnfollow
-                        })) : i.createElement(G.Xa, {
+                        })) : i.createElement(E.Xa, {
                             key: "game-" + this.props.game.id,
                             padding: {
                                 bottom: 1
                             }
-                        }, i.createElement(G.y, {
+                        }, i.createElement(E.y, {
                             title: this.props.game.name,
                             info: this.props.game.viewersCount ? Object(r.d)("{viewerCount,number} viewers", {
                                 viewerCount: this.props.game.viewersCount
@@ -367,24 +367,24 @@
                         }, t.renderCardsWithoutAdSlot = function(e) {
                             var n = t.renderCardsFromProps(),
                                 a = 1 === n.length ? 1 : 0;
-                            return i.createElement(G.Xa, {
+                            return i.createElement(E.Xa, {
                                 padding: {
                                     x: 1,
                                     top: 2
                                 }
-                            }, i.createElement(G.bc, {
-                                gutterSize: G.dc.Small,
+                            }, i.createElement(E.Zb, {
+                                gutterSize: E.bc.Small,
                                 childWidth: t.props.cardSize,
                                 placeholderItems: t.props.placeholderItems ? t.props.placeholderItems : a,
                                 noWrap: e
                             }, n))
                         }, t.renderCardGridWithAdSlot = function() {
-                            var e = i.createElement(G.Xa, {
+                            var e = i.createElement(E.Xa, {
                                     key: "ad",
                                     "data-test-selector": I,
-                                    display: G.X.Flex,
+                                    display: E.X.Flex,
                                     flexGrow: 1,
-                                    justifyContent: G.Wa.Center,
+                                    justifyContent: E.Wa.Center,
                                     padding: {
                                         bottom: t.state.adDisplayed ? 2 : 0,
                                         left: t.state.adDisplayed ? 1 : 0
@@ -400,16 +400,16 @@
                                     autoEnable: !1
                                 })),
                                 n = t.renderCardsFromProps().map(function(e, t) {
-                                    return i.createElement(G.P, {
+                                    return i.createElement(E.P, {
                                         key: "game-" + t.toString(),
                                         cols: 2
                                     }, e)
                                 });
-                            return n.splice(4, 0, e), i.createElement(G.Xa, {
+                            return n.splice(4, 0, e), i.createElement(E.Xa, {
                                 padding: {
                                     x: 1
                                 }
-                            }, i.createElement(G.Ja, null, n))
+                            }, i.createElement(E.Ja, null, n))
                         }, t.renderCardsFromProps = function() {
                             if (t.props.games) {
                                 var e = t.props.games;
@@ -447,9 +447,9 @@
                     }, t
                 }(i.Component),
                 T = Object(g.b)("CommunityCardRow")(A),
-                j = n("TDc0"),
-                L = n("AO3T"),
-                R = n("R+eK"),
+                L = n("TDc0"),
+                R = n("AO3T"),
+                j = n("R+eK"),
                 X = (n("JJ+Z"), "onboarding_game"),
                 P = 100,
                 W = 500,
@@ -474,7 +474,7 @@
                                     })
                                 }
                                 return t
-                            }), Object(L.c)(u.SpadeEventType.GameFollow, e)
+                            }), Object(R.c)(u.SpadeEventType.GameFollow, e)
                         }, n.onUnfollow = function(e) {
                             n.props.data.updateQuery(function(t) {
                                 return t.currentUser && t.currentUser.followedGames && t.currentUser.followedGames.nodes ? a.__assign({}, t, {
@@ -486,7 +486,7 @@
                                         })
                                     })
                                 }) : t
-                            }), Object(L.c)(u.SpadeEventType.GameUnfollow, e)
+                            }), Object(R.c)(u.SpadeEventType.GameUnfollow, e)
                         }, n.moveNextToChannelSurfing = function() {
                             r.p.history.push("/hi/surf" + location.search)
                         }, n.redirectToFrontPage = function() {
@@ -500,7 +500,7 @@
                         };
                         var i = r.p.experiments.getAssignment(c.b.WebOnboarding);
                         return n.state = {
-                            inOnboardingExperiment: Object(j.a)(i)
+                            inOnboardingExperiment: Object(L.a)(i)
                         }, n
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -510,18 +510,18 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.userFollowedGamesDataLoaded(this.props) && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.userFollowedGamesDataLoaded(this.props) && this.state.inOnboardingExperiment ? i.createElement(G.Eb, {
+                        return this.userFollowedGamesDataLoaded(this.props) && this.state.inOnboardingExperiment ? i.createElement(E.Cb, {
                             className: "community-selection-page",
                             "data-a-target": "community-selection-page",
                             "data-test-selector": "onboarding-community-selection",
-                            background: G.r.Alt2,
-                            display: G.X.Flex,
-                            flexDirection: G.Aa.Column,
+                            background: E.r.Alt2,
+                            display: E.X.Flex,
+                            flexDirection: E.Aa.Column,
                             fullHeight: !0
-                        }, i.createElement(G.Eb, {
-                            background: G.r.Alt,
-                            display: G.X.Flex,
-                            alignItems: G.f.Center,
+                        }, i.createElement(E.Cb, {
+                            background: E.r.Alt,
+                            display: E.X.Flex,
+                            alignItems: E.f.Center,
                             padding: {
                                 x: 1,
                                 y: 1
@@ -531,39 +531,39 @@
                                     x: 2
                                 }
                             },
-                            justifyContent: G.Wa.Between,
+                            justifyContent: E.Wa.Between,
                             flexShrink: 0,
                             fullWidth: !0,
                             borderBottom: !0
-                        }, i.createElement(G.Xa, {
+                        }, i.createElement(E.Xa, {
                             className: "community-selection-page__search",
                             margin: {
                                 left: 1
                             },
                             flexShrink: 1,
                             attachLeft: !0
-                        }, i.createElement(G.vb, {
+                        }, i.createElement(E.tb, {
                             id: "onboarding-community-selection__search",
                             "data-a-target": "onboarding-community-selection__search",
                             onChange: this.onGameInputChange,
                             placeholder: Object(r.d)("Search Games", "CommunitySelectionPage"),
                             spellCheck: !1
-                        })), this.renderTitleText(), this.renderCTA()), i.createElement(G.mb, {
-                            size: G.ob.Small,
+                        })), this.renderTitleText(), this.renderCTA()), i.createElement(E.kb, {
+                            size: E.mb.Small,
                             value: this.calculateProgress()
-                        }), i.createElement(S.b, null, i.createElement(G.Eb, {
-                            background: G.r.Alt2,
-                            overflow: G.cb.Hidden,
+                        }), i.createElement(S.b, null, i.createElement(E.Cb, {
+                            background: E.r.Alt2,
+                            overflow: E.cb.Hidden,
                             padding: {
                                 left: 1,
                                 y: 2
                             },
                             fullHeight: !0
-                        }, this.renderGameCards()))) : this.props.data.error ? (r.k.warn("Data Error in Onboarding Community Selection", this.props.data.error), i.createElement(G.Xa, {
-                            display: G.X.Flex
-                        }, i.createElement(G.W, {
-                            fontSize: G.Ca.Size5,
-                            color: G.O.Alt
+                        }, this.renderGameCards()))) : this.props.data.error ? (r.k.warn("Data Error in Onboarding Community Selection", this.props.data.error), i.createElement(E.Xa, {
+                            display: E.X.Flex
+                        }, i.createElement(E.W, {
+                            fontSize: E.Ca.Size5,
+                            color: E.O.Alt
                         }, Object(r.d)("Hmm...having trouble loading right now.", "CommunitySelectionPage")))) : null
                     }, t.prototype.getNumFollowedGames = function() {
                         return this.props.data.currentUser && this.props.data.currentUser.followedGames && this.props.data.currentUser.followedGames.nodes && this.props.data.currentUser.followedGames.nodes.length || 0
@@ -572,51 +572,51 @@
                     }, t.prototype.shouldRedirect = function(e, t) {
                         return !(!this.userFollowedGamesDataLoaded(e) || !(!1 === t.inOnboardingExperiment || !this.doneInitialRedirectCheck && !e.data.currentUser || e.data.currentUser && e.data.currentUser.followedGames && e.data.currentUser.followedGames.nodes && e.data.currentUser.followedGames.nodes.length >= 10)) && (this.doneInitialRedirectCheck = !0, !0)
                     }, t.prototype.renderTitleText = function() {
-                        return i.createElement(G.Xa, {
-                            display: G.X.Flex,
-                            alignItems: G.f.Center,
-                            flexDirection: G.Aa.Column,
+                        return i.createElement(E.Xa, {
+                            display: E.X.Flex,
+                            alignItems: E.f.Center,
+                            flexDirection: E.Aa.Column,
                             flexShrink: 1
-                        }, i.createElement(G.Xa, {
+                        }, i.createElement(E.Xa, {
                             margin: {
                                 top: .5,
                                 x: 1
                             }
-                        }, i.createElement(G.W, {
-                            color: G.O.Alt,
-                            fontSize: G.Ca.Size5,
+                        }, i.createElement(E.W, {
+                            color: E.O.Alt,
+                            fontSize: E.Ca.Size5,
                             breakpointLarge: {
-                                fontSize: G.Ca.Size4
+                                fontSize: E.Ca.Size4
                             },
                             breakpointExtraExtraLarge: {
-                                fontSize: G.Ca.Size3
+                                fontSize: E.Ca.Size3
                             }
-                        }, Object(r.d)("First, pick three or more you’d like to watch.", "CommunitySelectionPage"))), i.createElement(G.Xa, {
+                        }, Object(r.d)("First, pick three or more you’d like to watch.", "CommunitySelectionPage"))), i.createElement(E.Xa, {
                             margin: {
                                 y: .5
                             },
-                            display: G.X.Hide,
+                            display: E.X.Hide,
                             breakpointMedium: {
-                                display: G.X.Block
+                                display: E.X.Block
                             }
-                        }, i.createElement(G.W, {
-                            color: G.O.Alt2,
-                            fontSize: G.Ca.Size6,
+                        }, i.createElement(E.W, {
+                            color: E.O.Alt2,
+                            fontSize: E.Ca.Size6,
                             breakpointLarge: {
-                                fontSize: G.Ca.Size5
+                                fontSize: E.Ca.Size5
                             },
                             breakpointExtraExtraLarge: {
-                                fontSize: G.Ca.Size4
+                                fontSize: E.Ca.Size4
                             }
                         }, Object(r.d)("We have tons of games, hobbies, and activities being streamed right now.", "CommunitySelectionPage"))))
                     }, t.prototype.renderCTA = function() {
-                        return i.createElement(G.Xa, {
+                        return i.createElement(E.Xa, {
                             margin: {
                                 right: 1
                             },
                             attachRight: !0
-                        }, i.createElement(G.z, {
-                            size: G.D.Large,
+                        }, i.createElement(E.z, {
+                            size: E.D.Large,
                             "data-test-selector": "onboarding_cta",
                             disabled: this.getNumFollowedGames() < 3,
                             onClick: this.moveNextToChannelSurfing
@@ -630,14 +630,14 @@
                             return i.createElement(T, {
                                 games: this.props.gameData,
                                 directoryType: O.a.Games,
-                                cardSize: G.cc.Small,
+                                cardSize: E.ac.Small,
                                 followGameCardOptions: e,
                                 placeholderItems: 99
                             })
                         }
                     }, t
                 }(i.Component),
-                z = Object(b.compose)(Object(l.a)(R, {
+                z = Object(b.compose)(Object(l.a)(j, {
                     options: {
                         variables: {
                             limit: 10
@@ -755,40 +755,40 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.props.isLoggedIn ? i.createElement(G.Pa, {
-                            position: G.jb.Relative,
+                        return this.props.isLoggedIn ? i.createElement(E.Pa, {
+                            position: E.hb.Relative,
                             attachTop: !0,
                             fullWidth: !0
                         }, i.createElement("nav", {
                             className: "top-nav",
                             "data-a-target": "top-nav-container"
-                        }, i.createElement(G.Xa, {
+                        }, i.createElement(E.Xa, {
                             className: "top-nav__menu",
-                            display: G.X.Flex,
-                            alignItems: G.f.Stretch,
-                            flexWrap: G.Ba.NoWrap,
+                            display: E.X.Flex,
+                            alignItems: E.f.Stretch,
+                            flexWrap: E.Ba.NoWrap,
                             fullHeight: !0
-                        }, i.createElement(G.Pa, {
-                            display: G.X.InlineFlex,
-                            alignItems: G.f.Center,
+                        }, i.createElement(E.Pa, {
+                            display: E.X.InlineFlex,
+                            alignItems: E.f.Center,
                             flexShrink: 0
                         }, i.createElement("span", {
                             className: "top-nav__home-link"
-                        }, i.createElement(G.sb, {
-                            asset: G.tb.LogoGlitch,
+                        }, i.createElement(E.qb, {
+                            asset: E.rb.LogoGlitch,
                             width: 30,
                             height: 30
-                        }))), i.createElement(G.Xa, {
+                        }))), i.createElement(E.Xa, {
                             className: "top-nav__nav-items-container",
-                            display: G.X.Flex,
+                            display: E.X.Flex,
                             flexGrow: 1,
-                            flexWrap: G.Ba.NoWrap,
+                            flexWrap: E.Ba.NoWrap,
                             flexShrink: 0
-                        }, ""), i.createElement(G.Xa, {
+                        }, ""), i.createElement(E.Xa, {
                             className: "top-nav__nav-items-container",
-                            display: G.X.Flex,
-                            alignItems: G.f.Stretch,
-                            flexWrap: G.Ba.NoWrap,
+                            display: E.X.Flex,
+                            alignItems: E.f.Stretch,
+                            flexWrap: E.Ba.NoWrap,
                             flexGrow: 0,
                             flexShrink: 0
                         }, i.createElement(Z.a, {
@@ -802,7 +802,7 @@
                     }
                 })(Y),
                 te = K.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(183)]).then(n.bind(null, "6tis"))
+                    return Promise.all([n.e(0), n.e(177)]).then(n.bind(null, "6tis"))
                 }, "ChannelSurfingPage"),
                 ne = K.a.wrap(function() {
                     return Promise.resolve().then(n.bind(null, "8n14"))
@@ -814,23 +814,23 @@
                     return a.__extends(t, e), t.prototype.componentDidUpdate = function() {
                         this.props.isLoggedIn || window.location.assign("/" + location.search)
                     }, t.prototype.render = function() {
-                        return i.createElement(G.Xa, {
-                            display: G.X.Flex,
-                            flexDirection: G.Aa.Column,
-                            flexWrap: G.Ba.NoWrap,
+                        return i.createElement(E.Xa, {
+                            display: E.X.Flex,
+                            flexDirection: E.Aa.Column,
+                            flexWrap: E.Ba.NoWrap,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, i.createElement(ee, null), i.createElement(G.Xa, {
-                            display: G.X.Flex,
-                            flexWrap: G.Ba.NoWrap,
-                            position: G.jb.Relative,
+                        }, i.createElement(ee, null), i.createElement(E.Xa, {
+                            display: E.X.Flex,
+                            flexWrap: E.Ba.NoWrap,
+                            position: E.hb.Relative,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, i.createElement(G.Pa, {
-                            overflow: G.cb.Hidden,
-                            position: G.jb.Relative,
-                            display: G.X.Flex,
-                            flexDirection: G.Aa.Column,
+                        }, i.createElement(E.Pa, {
+                            overflow: E.cb.Hidden,
+                            position: E.hb.Relative,
+                            display: E.X.Flex,
+                            flexDirection: E.Aa.Column,
                             flexGrow: 1,
                             fullHeight: !0,
                             fullWidth: !0
@@ -1378,7 +1378,7 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (this.props.data.loading || !this.props.data.currentUser || this.props.data.error) return u.createElement(y.ib, null);
+                        if (this.props.data.loading || !this.props.data.currentUser || this.props.data.error) return u.createElement(y.gb, null);
                         if (this.props.isOnboarding) return u.createElement(y.Xa, {
                             display: y.X.Flex,
                             className: "minimal-top-nav__user",
@@ -1408,7 +1408,7 @@
                         }, this.props.data.currentUser.displayName))));
                         if (this.props.isLoggedIn) {
                             var e = null;
-                            this.props.darkModeEnabled && (e = u.createElement(y.Eb, {
+                            this.props.darkModeEnabled && (e = u.createElement(y.Cb, {
                                 borderBottom: !0,
                                 margin: {
                                     y: 1
@@ -1468,16 +1468,16 @@
                                 className: "minimal-top-nav__username",
                                 "data-a-target": "user-display-name",
                                 ellipsis: !0
-                            }, this.props.data.currentUser.displayName)), u.createElement(y.Eb, {
+                            }, this.props.data.currentUser.displayName)), u.createElement(y.Cb, {
                                 display: y.X.Flex,
                                 flexShrink: 0,
                                 className: "minimal-top-nav__expand"
-                            }, u.createElement(y.sb, {
-                                asset: y.tb.GlyphArrDown
-                            }))))), u.createElement(y.Eb, {
+                            }, u.createElement(y.qb, {
+                                asset: y.rb.GlyphArrDown
+                            }))))), u.createElement(y.Cb, {
                                 fullWidth: !0,
                                 overflow: y.cb.Hidden,
-                                position: y.jb.Absolute,
+                                position: y.hb.Absolute,
                                 padding: {
                                     y: 1
                                 },
@@ -1487,7 +1487,7 @@
                             }, e, u.createElement(y.Ua, {
                                 onClick: this.onLogoutClick,
                                 "data-test-selector": a.Logout
-                            }, u.createElement(y.Eb, {
+                            }, u.createElement(y.Cb, {
                                 color: y.O.Alt,
                                 display: y.X.Flex,
                                 alignItems: y.f.Center,
@@ -1501,8 +1501,8 @@
                                 margin: {
                                     right: 1
                                 }
-                            }, u.createElement(y.sb, {
-                                asset: y.tb.NavLogout,
+                            }, u.createElement(y.qb, {
+                                asset: y.rb.NavLogout,
                                 height: 20,
                                 width: 20
                             })), u.createElement(y.W, null, Object(p.d)("Log Out", "MinimalUser"))))))
@@ -1988,7 +1988,7 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         return i.createElement(s.Pa, {
-                            position: s.jb.Relative,
+                            position: s.hb.Relative,
                             margin: {
                                 bottom: 1
                             }
@@ -1998,10 +1998,10 @@
                             onMouseEnter: this.onMouseEnter,
                             onMouseLeave: this.onMouseLeave,
                             onClick: this.onClick
-                        }, Object(s.jc)(this.props)), i.createElement(s.G, {
+                        }, Object(s.hc)(this.props)), i.createElement(s.G, {
                             key: this.props.title
                         }, i.createElement(s.Xa, {
-                            position: s.jb.Relative
+                            position: s.hb.Relative
                         }, this.renderOverlay(), i.createElement(s.I, {
                             aspect: s.p.Aspect3x4,
                             alt: this.props.imageAlt,
@@ -2022,15 +2022,15 @@
                         var e, t = this.isFollowing();
                         return this.state.inProgress ? e = i.createElement(s.Za, {
                             delay: 0
-                        }) : this.state.hovered ? e = i.createElement(s.sb, {
+                        }) : this.state.hovered ? e = i.createElement(s.qb, {
                             width: 50,
                             height: 50,
-                            asset: t ? s.tb.Unheart : s.tb.Heart
-                        }) : t && (e = i.createElement(s.sb, {
+                            asset: t ? s.rb.Unheart : s.rb.Heart
+                        }) : t && (e = i.createElement(s.qb, {
                             width: 50,
                             height: 50,
-                            asset: s.tb.Heart
-                        })), e ? i.createElement(s.Eb, {
+                            asset: s.rb.Heart
+                        })), e ? i.createElement(s.Cb, {
                             className: "follow-game-card__overlay " + (t ? "follow-game-card__overlay--followed" : ""),
                             background: s.r.Overlay,
                             color: s.O.Overlay,
@@ -2038,8 +2038,8 @@
                             display: s.X.Flex,
                             alignItems: s.f.Center,
                             justifyContent: s.Wa.Center,
-                            position: s.jb.Absolute,
-                            zIndex: s.ic.Above,
+                            position: s.hb.Absolute,
+                            zIndex: s.gc.Above,
                             attachBottom: !0,
                             attachTop: !0,
                             attachLeft: !0,

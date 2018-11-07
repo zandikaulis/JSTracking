@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [222], {
+    [216], {
         OfRZ: function(e, t, r) {
             "use strict";
             r.r(t);
@@ -33,9 +33,9 @@
                                 bottom: 1
                             }
                         }, n.createElement(h.W, {
-                            type: h.Vb.H2
+                            type: h.Tb.H2
                         }, Object(g.d)("Register Your Application", "DevCreateApp"))), n.createElement(h.W, {
-                            type: h.Vb.P
+                            type: h.Tb.P
                         }, Object(g.d)("Register a new application that uses the Twitch API to interact with Twitch", "DevCreateApp")))), n.createElement(f.a, {
                             onSave: this.props.onSave,
                             categories: this.props.categories,
@@ -226,13 +226,13 @@
                                 bottom: 1
                             }
                         }, n.createElement(c.W, {
-                            type: c.Vb.H5
+                            type: c.Tb.H5
                         }, Object(i.d)("Client Secret", "DevAppSecret"))), n.createElement(c.Pa, {
                             margin: {
                                 bottom: 1
                             }
                         }, n.createElement(c.W, {
-                            type: c.Vb.P,
+                            type: c.Tb.P,
                             color: c.O.Alt2
                         }, Object(i.d)("Passed to the token exchange endpoints to obtain a token. You must keep this confidential.", "DevAppSecret"))), this.props.showSecret && n.createElement(c.Xa, {
                             margin: {
@@ -429,7 +429,7 @@
                             }
                         }, n.createElement(c.Ea, {
                             label: Object(i.d)("Category", "DevAppForm")
-                        }, n.createElement(c.zb, {
+                        }, n.createElement(c.xb, {
                             defaultValue: this.state.category,
                             onChange: this.setCategory,
                             "data-test-selector": "app-form-category-select"

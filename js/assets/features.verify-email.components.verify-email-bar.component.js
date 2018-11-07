@@ -250,34 +250,34 @@
             ! function(e) {
                 e.Click = "click", e.Dismiss = "dismiss", e.Impress = "impress"
             }(i || (i = {}));
-            var E = r("Ue10"),
-                g = (r("Kcdb"), r("ongj"));
+            var g = r("Ue10"),
+                _ = (r("Kcdb"), r("ongj"));
             r.d(t, "DISMISSAL_DATA_STORAGE_KEY", function() {
                 return S
             }), r.d(t, "DISMISS_BTN_SELECTOR", function() {
                 return D
             }), r.d(t, "VERIFY_BTN_SELECTOR", function() {
-                return w
-            }), r.d(t, "VerifyEmailBarPresentation", function() {
                 return C
+            }), r.d(t, "VerifyEmailBarPresentation", function() {
+                return w
             }), r.d(t, "VerifyEmailBar", function() {
                 return O
             });
-            var _, S = "verifyemailbar_dismissal",
+            var E, S = "verifyemailbar_dismissal",
                 I = 18e5,
                 b = 5e3,
                 T = new Set(["/"]),
                 D = "dimiss-btn",
-                w = "verify-email-btn";
+                C = "verify-email-btn";
             ! function(e) {
                 e[e.INITIAL = 0] = "INITIAL", e[e.CLICK_TO_VERIFY = 1] = "CLICK_TO_VERIFY", e[e.EMAIL_SENT = 2] = "EMAIL_SENT", e[e.ERROR_SENDING = 3] = "ERROR_SENDING", e[e.DISMISSED = 4] = "DISMISSED"
-            }(_ || (_ = {}));
-            var C = function(e) {
+            }(E || (E = {}));
+            var w = function(e) {
                     function t(t) {
                         var r = e.call(this, t) || this;
                         return r.state = {
                             isError: !1,
-                            verifyEmailBarState: _.INITIAL
+                            verifyEmailBarState: E.INITIAL
                         }, r.resetAfterDismissalTimeoutID = null, r.afterVerifyDismissTimeoutID = null, r.dismissalData = null, r.impressionEventFired = !1, r.dismissBarClickHandler = function(e) {
                             e && e.stopPropagation();
                             var t = r.dismissalData ? r.dismissalData.dismissalCount : 0;
@@ -285,7 +285,7 @@
                                 dismissalCount: t + 1,
                                 dismissalDateTimeMs: Date.now()
                             }, c.m.set(S, r.dismissalData), r.setState({
-                                verifyEmailBarState: _.DISMISSED
+                                verifyEmailBarState: E.DISMISSED
                             }), r.resetAfterDismissalTimeoutID = setTimeout(function() {
                                 return n.__awaiter(r, void 0, void 0, function() {
                                     return n.__generator(this, function(e) {
@@ -294,7 +294,7 @@
                                                 return [4, this.props.data.refetch()];
                                             case 1:
                                                 return e.sent(), this.setState({
-                                                    verifyEmailBarState: _.INITIAL
+                                                    verifyEmailBarState: E.INITIAL
                                                 }), this.resetAfterDismissalTimeoutID = null, [2]
                                         }
                                     })
@@ -311,12 +311,12 @@
                                             return e && e.currentTarget && (t = e.currentTarget) && t.blur(), this.props.data.currentUser && this.props.data.currentUser.id && this.props.data.currentUser.email ? [4, y(this.props.data.currentUser.id, this.props.data.currentUser.email)] : [2];
                                         case 1:
                                             return n.sent() ? this.setState({
-                                                verifyEmailBarState: _.EMAIL_SENT
+                                                verifyEmailBarState: E.EMAIL_SENT
                                             }) : this.setState({
-                                                verifyEmailBarState: _.ERROR_SENDING
+                                                verifyEmailBarState: E.ERROR_SENDING
                                             }), this.afterVerifyDismissTimeoutID = setTimeout(function() {
                                                 r.setState({
-                                                    verifyEmailBarState: _.DISMISSED
+                                                    verifyEmailBarState: E.DISMISSED
                                                 }), r.afterVerifyDismissTimeoutID = null
                                             }, b), c.p.tracking.track(v.SpadeEventType.VerifyEmailBar, {
                                                 action: i.Click
@@ -333,74 +333,74 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.maybeChangeBarState(), this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.maybeChangeBarState = function() {
-                        this.state.verifyEmailBarState !== _.EMAIL_SENT && this.state.verifyEmailBarState !== _.ERROR_SENDING && (this.isVisible() && this.shouldHide() ? this.setState({
-                            verifyEmailBarState: _.INITIAL
-                        }) : this.state.verifyEmailBarState !== _.INITIAL || this.shouldHide() || this.setState({
-                            verifyEmailBarState: _.CLICK_TO_VERIFY
+                        this.state.verifyEmailBarState !== E.EMAIL_SENT && this.state.verifyEmailBarState !== E.ERROR_SENDING && (this.isVisible() && this.shouldHide() ? this.setState({
+                            verifyEmailBarState: E.INITIAL
+                        }) : this.state.verifyEmailBarState !== E.INITIAL || this.shouldHide() || this.setState({
+                            verifyEmailBarState: E.CLICK_TO_VERIFY
                         }))
                     }, t.prototype.render = function() {
                         if (this.state.isError) return null;
                         switch (this.state.verifyEmailBarState) {
-                            case _.CLICK_TO_VERIFY:
+                            case E.CLICK_TO_VERIFY:
                                 return this.impressionEventFired || (c.p.tracking.track(v.SpadeEventType.VerifyEmailBar, {
                                     action: i.Impress
                                 }), this.impressionEventFired = !0), this.renderClickToVerify();
-                            case _.EMAIL_SENT:
+                            case E.EMAIL_SENT:
                                 return this.renderEmailSent();
-                            case _.ERROR_SENDING:
+                            case E.ERROR_SENDING:
                                 return this.renderErrorSending();
                             default:
                                 return null
                         }
                     }, t.prototype.isVisible = function() {
-                        return this.state.verifyEmailBarState !== _.INITIAL && this.state.verifyEmailBarState !== _.DISMISSED
+                        return this.state.verifyEmailBarState !== E.INITIAL && this.state.verifyEmailBarState !== E.DISMISSED
                     }, t.prototype.renderClickToVerify = function() {
-                        return this.props.data.currentUser && this.props.data.currentUser.email ? a.createElement(E.i, {
-                            type: E.n.SlideInTop,
-                            duration: E.k.ExtraLong
-                        }, a.createElement(E.Xa, {
+                        return this.props.data.currentUser && this.props.data.currentUser.email ? a.createElement(g.i, {
+                            type: g.n.SlideInTop,
+                            duration: g.k.ExtraLong
+                        }, a.createElement(g.Xa, {
                             fullWidth: !0,
-                            position: E.jb.Relative
-                        }, a.createElement(E.Eb, {
+                            position: g.hb.Relative
+                        }, a.createElement(g.Cb, {
                             className: "verify-email-bar",
-                            display: E.X.Flex,
-                            alignItems: E.f.Center,
-                            justifyContent: E.Wa.Center,
+                            display: g.X.Flex,
+                            alignItems: g.f.Center,
+                            justifyContent: g.Wa.Center,
                             elevation: 1
-                        }, a.createElement(E.Pa, {
+                        }, a.createElement(g.Pa, {
                             fullHeight: !0,
                             fullWidth: !0,
                             padding: 1
                         }, a.createElement("button", {
                             onClick: this.onClickToVerify,
-                            "data-test-selector": w
-                        }, a.createElement(E.Xa, {
-                            display: E.X.Flex,
-                            alignItems: E.f.Center,
-                            justifyContent: E.Wa.Center
-                        }, a.createElement(E.Xa, {
+                            "data-test-selector": C
+                        }, a.createElement(g.Xa, {
+                            display: g.X.Flex,
+                            alignItems: g.f.Center,
+                            justifyContent: g.Wa.Center
+                        }, a.createElement(g.Xa, {
                             className: "verify-email-bar__copy",
-                            display: E.X.Flex,
-                            alignItems: E.f.Center,
+                            display: g.X.Flex,
+                            alignItems: g.f.Center,
                             margin: {
                                 right: 1
                             },
                             padding: {
                                 right: .5
                             }
-                        }, a.createElement(E.sb, {
-                            asset: E.tb.NotificationWarning,
-                            type: E.ub.Inherit
-                        })), a.createElement(E.Xa, {
+                        }, a.createElement(g.qb, {
+                            asset: g.rb.NotificationWarning,
+                            type: g.sb.Inherit
+                        })), a.createElement(g.Xa, {
                             className: "verify-email-bar__copy"
-                        }, a.createElement(E.W, {
-                            fontSize: E.Ca.Size5,
-                            color: E.O.Inherit
+                        }, a.createElement(g.W, {
+                            fontSize: g.Ca.Size5,
+                            color: g.O.Inherit
                         }, Object(c.d)("Keep your account secure and verify {email}.", {
                             email: this.props.data.currentUser.email
-                        }, "VerifyEmail")))))), a.createElement(E.Eb, {
+                        }, "VerifyEmail")))))), a.createElement(g.Cb, {
                             className: "verify-email-bar__dismiss",
-                            position: E.jb.Absolute,
+                            position: g.hb.Absolute,
                             attachRight: !0,
                             margin: {
                                 right: 2
@@ -409,74 +409,74 @@
                                 x: 1,
                                 y: .5
                             }
-                        }, a.createElement(E.U, {
-                            type: E.V.Inherit,
+                        }, a.createElement(g.U, {
+                            type: g.V.Inherit,
                             onClick: this.dismissBarClickHandler,
                             "data-test-selector": D,
                             hoverColorInherit: !0,
                             hoverUnderlineNone: !0
                         }, Object(c.d)("Not Now", "VerifyEmail")))))) : null
                     }, t.prototype.renderEmailSent = function() {
-                        return this.props.data.currentUser && this.props.data.currentUser.email ? a.createElement(E.Eb, {
+                        return this.props.data.currentUser && this.props.data.currentUser.email ? a.createElement(g.Cb, {
                             className: "verify-email-bar verify-email-bar--success",
-                            display: E.X.Flex,
-                            justifyContent: E.Wa.Center,
-                            alignItems: E.f.Center,
+                            display: g.X.Flex,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
                             elevation: 1,
                             padding: 1
-                        }, a.createElement(E.Eb, {
-                            display: E.X.Flex,
-                            alignItems: E.f.Center,
+                        }, a.createElement(g.Cb, {
+                            display: g.X.Flex,
+                            alignItems: g.f.Center,
                             margin: {
                                 right: 1
                             },
                             padding: {
                                 right: .5
                             },
-                            color: E.O.Overlay
-                        }, a.createElement(E.sb, {
-                            asset: E.tb.NavMessages,
-                            type: E.ub.Inherit
-                        })), a.createElement(E.W, {
-                            fontSize: E.Ca.Size5,
-                            color: E.O.Overlay
+                            color: g.O.Overlay
+                        }, a.createElement(g.qb, {
+                            asset: g.rb.NavMessages,
+                            type: g.sb.Inherit
+                        })), a.createElement(g.W, {
+                            fontSize: g.Ca.Size5,
+                            color: g.O.Overlay
                         }, Object(c.d)("Check your inbox at {email} for your verification email.", {
                             email: this.props.data.currentUser.email
                         }, "VerifyEmail"))) : null
                     }, t.prototype.renderErrorSending = function() {
-                        return this.props.data.currentUser && this.props.data.currentUser.email ? a.createElement(E.Eb, {
+                        return this.props.data.currentUser && this.props.data.currentUser.email ? a.createElement(g.Cb, {
                             className: "verify-email-bar verify-email-bar--error",
-                            display: E.X.Flex,
-                            justifyContent: E.Wa.Center,
-                            alignItems: E.f.Center,
+                            display: g.X.Flex,
+                            justifyContent: g.Wa.Center,
+                            alignItems: g.f.Center,
                             elevation: 1,
                             padding: 1
-                        }, a.createElement(E.Eb, {
-                            display: E.X.Flex,
-                            alignItems: E.f.Center,
+                        }, a.createElement(g.Cb, {
+                            display: g.X.Flex,
+                            alignItems: g.f.Center,
                             margin: {
                                 right: 1
                             },
                             padding: {
                                 right: .5
                             },
-                            color: E.O.Overlay
-                        }, a.createElement(E.sb, {
-                            asset: E.tb.DeadGlitch,
-                            type: E.ub.Inherit
-                        })), a.createElement(E.W, {
-                            fontSize: E.Ca.Size5,
-                            color: E.O.Overlay
+                            color: g.O.Overlay
+                        }, a.createElement(g.qb, {
+                            asset: g.rb.DeadGlitch,
+                            type: g.sb.Inherit
+                        })), a.createElement(g.W, {
+                            fontSize: g.Ca.Size5,
+                            color: g.O.Overlay
                         }, Object(c.d)("Oops...we were unable to send an email to {email}. Please try again later or update your email.", {
                             email: this.props.data.currentUser.email
-                        }, "VerifyEmail")), a.createElement(E.Eb, {
-                            position: E.jb.Absolute,
+                        }, "VerifyEmail")), a.createElement(g.Cb, {
+                            position: g.hb.Absolute,
                             attachRight: !0,
                             margin: {
                                 right: 2
                             }
-                        }, a.createElement(E.z, {
-                            type: E.F.Hollow,
+                        }, a.createElement(g.z, {
+                            type: g.F.Hollow,
                             overlay: !0,
                             linkTo: "/settings/profile"
                         }, Object(c.d)("Update Email", "VerifyEmail")))) : null
@@ -496,11 +496,11 @@
                         return this.props.data && !(this.props.data.loading || this.props.data.error) && this.props.data.currentUser && this.props.data.requestInfo
                     }, t
                 }(a.Component),
-                O = Object(u.compose)(Object(m.b)("VerifyEmail"), Object(l.a)(g), Object(s.connect)(function(e) {
+                O = Object(u.compose)(Object(m.b)("VerifyEmail"), Object(l.a)(_), Object(s.connect)(function(e) {
                     return {
                         blockedByGDPRBanner: Object(d.h)(e)
                     }
-                }), o.a)(C)
+                }), o.a)(w)
         },
         ongj: function(e, t) {
             var r = {

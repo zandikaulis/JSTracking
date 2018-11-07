@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [104], {
+    [103], {
         "1JmR": function(e, t, r) {},
         BSTw: function(e, t) {
             var r = {
@@ -121,14 +121,14 @@
                         }), a.createElement(b.Xa, {
                             flexGrow: 1,
                             display: b.X.Flex,
-                            position: b.jb.Relative
+                            position: b.hb.Relative
                         }, a.createElement(b.Pa, {
                             padding: {
                                 x: 1
                             },
                             flexGrow: 1
                         }, a.createElement(b.W, {
-                            type: b.Vb.Span,
+                            type: b.Tb.Span,
                             ellipsis: !0
                         }, this.props.user.name))))))
                     }, t
@@ -314,25 +314,25 @@
                         padding: {
                             y: 1
                         },
-                        zIndex: o.ic.Above
-                    }, a.createElement(o.Eb, {
+                        zIndex: o.gc.Above
+                    }, a.createElement(o.Cb, {
                         color: o.O.Alt2,
-                        textAlign: o.Rb.Center,
+                        textAlign: o.Pb.Center,
                         flexShrink: 1
-                    }, a.createElement(o.sb, {
-                        asset: o.tb.DeadGlitch,
+                    }, a.createElement(o.qb, {
+                        asset: o.rb.DeadGlitch,
                         width: 46,
                         height: 48
                     })), a.createElement(o.Pa, {
                         margin: {
                             top: 1
                         },
-                        textAlign: o.Rb.Center
+                        textAlign: o.Pb.Center
                     }, a.createElement(o.W, {
-                        type: o.Vb.H4,
+                        type: o.Tb.H4,
                         "data-test-selector": "search-error-message"
                     }, Object(i.d)("Search is not available at this time", "DropdownSearchError"))), a.createElement(o.W, {
-                        type: o.Vb.P
+                        type: o.Tb.P
                     }, Object(i.d)("Please try again later", "DropdownSearchError")))
                 },
                 u = r("8Ad5"),
@@ -376,7 +376,7 @@
                     return n.__extends(t, e), t.prototype.render = function() {
                         var e = void 0 === this.props.showDropdown || this.props.showDropdown,
                             t = this.props.isErrored ? a.createElement(c, null) : a.Children.only(this.props.children),
-                            r = a.createElement(o.vb, {
+                            r = a.createElement(o.tb, {
                                 onChange: this.handleChange,
                                 onKeyDown: this.onKeyDown,
                                 onBlur: this.handleBlur,
@@ -391,13 +391,13 @@
                             });
                         return this.props.inline ? a.createElement(s.a, {
                             onClickOut: this.onClickOut
-                        }, a.createElement(o.Eb, {
+                        }, a.createElement(o.Cb, {
                             background: this.state.isInputFocused || this.state.isOpen ? o.r.Base : void 0,
                             borderRadius: o.x.Large,
                             padding: .5,
-                            position: o.jb.Relative,
+                            position: o.hb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, r, e && a.createElement(o.Eb, {
+                        }, r, e && a.createElement(o.Cb, {
                             attachLeft: !0,
                             background: o.r.Base,
                             borderRadius: o.x.Large,
@@ -406,8 +406,8 @@
                             padding: {
                                 y: 1
                             },
-                            position: o.jb.Absolute,
-                            zIndex: o.ic.Above,
+                            position: o.hb.Absolute,
+                            zIndex: o.gc.Above,
                             elevation: 3
                         }, a.createElement("div", {
                             tabIndex: 0,
@@ -536,7 +536,7 @@
                             }, "DevAddUserModal");
                         return o.createElement(h.Xa, {
                             className: "dev-add-user-modal"
-                        }, o.createElement(h.Eb, {
+                        }, o.createElement(h.Cb, {
                             background: h.r.Base,
                             padding: 2
                         }, o.createElement(h.Xa, {
@@ -621,16 +621,16 @@
                 w = r("uLRL"),
                 O = r("Dtp2"),
                 N = r("+GjP"),
-                R = r("tl6o");
+                F = r("tl6o");
 
-            function F(e, t) {
+            function R(e, t) {
                 return n.__awaiter(this, void 0, void 0, function() {
                     var r;
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
                                 r = Object(N.e)(k.a + "/v5/rbac/validate", {
-                                    domain_id: R.c,
+                                    domain_id: F.c,
                                     permission_name: t,
                                     resource: e
                                 }), n.label = 1;
@@ -646,13 +646,13 @@
                     })
                 })
             }
-            var D = r("yR8l"),
-                T = function(e) {
+            var T = r("yR8l"),
+                D = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderRemoveButton = function() {
                             if (t.props.canRemoveUser) return o.createElement(h.A, {
-                                icon: h.tb.Close,
+                                icon: h.rb.Close,
                                 onClick: t.onRemove,
                                 ariaLabel: Object(c.d)("Remove User", "DevCompanyMember")
                             })
@@ -684,8 +684,8 @@
                 }(o.Component),
                 U = Object(s.compose)(Object(l.b)("DevMemberItem", {
                     autoReportInteractive: !0
-                }))(T);
-            var j = function(e) {
+                }))(D);
+            var I = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderMembers = function() {
@@ -737,8 +737,8 @@
                             padding: 2,
                             display: h.X.Flex,
                             justifyContent: h.Wa.Between
-                        }, o.createElement("header", null, o.createElement(h.Yb, {
-                            direction: h.ac.Right,
+                        }, o.createElement("header", null, o.createElement(h.Wb, {
+                            direction: h.Yb.Right,
                             label: function(e) {
                                 var t = "";
                                 switch (e) {
@@ -757,15 +757,15 @@
                                 return t
                             }(this.props.title)
                         }, o.createElement(h.W, {
-                            type: h.Vb.H4
+                            type: h.Tb.H4
                         }, e)), r)), o.createElement(h.Xa, null, o.createElement(h.Ja, null, t)))
                     }, t
                 }(o.Component),
-                I = Object(s.compose)(Object(l.b)("DevMemberGroup", {
+                x = Object(s.compose)(Object(l.b)("DevMemberGroup", {
                     autoReportInteractive: !0
-                }))(j),
-                x = r("t04z"),
-                A = function(e) {
+                }))(I),
+                A = r("t04z"),
+                j = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -783,7 +783,7 @@
                         }, t.renderGroups = function() {
                             return Object.keys(t.state.members).map(function(e) {
                                 var r = t.state.members[e];
-                                return o.createElement(I, {
+                                return o.createElement(x, {
                                     title: e,
                                     members: r,
                                     key: e,
@@ -826,7 +826,7 @@
                         return o.createElement(h.Xa, null, e)
                     }, t
                 }(o.Component),
-                M = Object(s.compose)(Object(l.b)("DevCompanyMember"), Object(D.a)(x, {
+                M = Object(s.compose)(Object(l.b)("DevCompanyMember"), Object(T.a)(A, {
                     options: function(e) {
                         return {
                             variables: {
@@ -842,7 +842,7 @@
                             }
                         }
                     }
-                }))(A),
+                }))(j),
                 P = k.a + "/v5/rbac/users",
                 q = function(e) {
                     function t() {
@@ -904,7 +904,7 @@
                                 return n.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return t = e.identifier + "::addUser", [4, F(e.identifier + "::user::*", t)];
+                                            return t = e.identifier + "::addUser", [4, R(e.identifier + "::user::*", t)];
                                         case 1:
                                             return r = n.sent(), this.setState({
                                                 canAddUser: r
@@ -918,7 +918,7 @@
                                 return n.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return t = e.identifier + "::removeUser", [4, F(e.identifier + "::user::*", t)];
+                                            return t = e.identifier + "::removeUser", [4, R(e.identifier + "::user::*", t)];
                                         case 1:
                                             return r = n.sent(), this.setState({
                                                 canRemoveUser: r
@@ -1013,7 +1013,7 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        if (!this.state.members.administrator.length) return o.createElement(h.rb, {
+                        if (!this.state.members.administrator.length) return o.createElement(h.pb, {
                             centered: !0
                         }, o.createElement(h.Za, null));
                         if (!this.props.company) return o.createElement(b.a, {
@@ -1021,7 +1021,7 @@
                         });
                         if (this.state.loadError) return o.createElement(y.a, null);
                         var e = this.props.company && this.props.company.companyName || "";
-                        return o.createElement(h.rb, {
+                        return o.createElement(h.pb, {
                             centered: !0
                         }, o.createElement(h.Xa, {
                             margin: {
@@ -1032,9 +1032,9 @@
                                 top: 2,
                                 bottom: 4
                             },
-                            textAlign: h.Rb.Center
+                            textAlign: h.Pb.Center
                         }, o.createElement(h.W, {
-                            type: h.Vb.H1
+                            type: h.Tb.H1
                         }, Object(c.d)("{name} Role Management", {
                             name: e
                         }, "DevCompanyMembers"))), o.createElement(h.Xa, null, o.createElement(M, {

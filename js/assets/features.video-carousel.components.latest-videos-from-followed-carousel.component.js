@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [146], {
+    [145], {
         "0Ws6": function(e, t, i) {
             var n = {
                 kind: "Document",
@@ -143,9 +143,9 @@
                         flexDirection: c.Aa.Row,
                         alignItems: c.f.Center
                     }, r.createElement(c.W, {
-                        type: c.Vb.H5
-                    }, Object(s.d)("Expand All", "VideoShelfExpandLink")), r.createElement(c.sb, {
-                        asset: c.tb.AngleRight,
+                        type: c.Tb.H5
+                    }, Object(s.d)("Expand All", "VideoShelfExpandLink")), r.createElement(c.qb, {
+                        asset: c.rb.AngleRight,
                         height: 14
                     })))
                 });
@@ -156,11 +156,11 @@
                     e.Title = "title", e.SubTitle = "subtitle"
                 }(n || (n = {}));
             var p = function(e) {
-                if (!e.titleMessage) return r.createElement(c.ib, {
+                if (!e.titleMessage) return r.createElement(c.gb, {
                     width: 200
                 });
                 var t = r.createElement(c.W, {
-                        type: c.Vb.H4,
+                        type: c.Tb.H4,
                         color: c.O.Base,
                         bold: !0,
                         "data-test-selector": n.Title
@@ -168,7 +168,7 @@
                     i = e.subTitle;
                 return e.subTitle && "string" == typeof e.subTitle ? i = r.createElement(c.W, {
                     color: c.O.Alt2,
-                    type: c.Vb.Span,
+                    type: c.Tb.Span,
                     "data-test-selector": n.SubTitle
                 }, e.subTitle) : e.subTitle && (i = r.createElement(c.Xa, {
                     "data-test-selector": n.SubTitle
@@ -252,7 +252,7 @@
                                 source: {},
                                 itemType: c.TwitchDataType.Video
                             },
-                            videoCardSize: g.cc.Large,
+                            videoCardSize: g.ac.Large,
                             videos: e
                         })) : null
                     }, t
@@ -412,14 +412,14 @@
                             margin: {
                                 y: 1
                             },
-                            position: u.jb.Relative
+                            position: u.hb.Relative
                         }, a.createElement("div", {
                             className: "preview-card-carousel",
                             ref: this.refHandler
                         }, a.createElement(u.Xa, {
                             className: "preview-card-carousel__child-container",
                             overflow: u.cb.Hidden,
-                            position: u.jb.Relative,
+                            position: u.hb.Relative,
                             fullWidth: !0,
                             "data-test-selector": "child-container"
                         }, a.createElement(u.Pa, {
@@ -432,17 +432,17 @@
                                 transform: this.transformString()
                             },
                             "data-test-selector": "carousel-body"
-                        }, a.createElement(u.bc, {
+                        }, a.createElement(u.Zb, {
                             noWrap: !0,
                             noGrow: !0,
-                            childWidth: this.props.cardWidth || u.cc.Large,
-                            gutterSize: u.dc.Small,
+                            childWidth: this.props.cardWidth || u.ac.Large,
+                            gutterSize: u.bc.Small,
                             "data-js-selector": h
                         }, this.props.children)))), a.createElement(u.Xa, {
                             className: "preview-card-carousel__nav",
                             display: u.X.Flex,
                             alignItems: u.f.Center,
-                            position: u.jb.Absolute,
+                            position: u.hb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullHeight: !0
@@ -454,7 +454,7 @@
                             className: "preview-card-carousel__nav",
                             display: u.X.Flex,
                             alignItems: u.f.Center,
-                            position: u.jb.Absolute,
+                            position: u.hb.Absolute,
                             attachTop: !0,
                             attachRight: !0,
                             fullHeight: !0
@@ -480,7 +480,7 @@
                     DirectionNext: "next"
                 },
                 v = ((n = {})[m.DirectionPrevious] = "previous", n[m.DirectionNext] = "next", n),
-                f = ((r = {})[m.DirectionPrevious] = u.tb.AngleLeft, r[m.DirectionNext] = u.tb.AngleRight, r),
+                f = ((r = {})[m.DirectionPrevious] = u.rb.AngleLeft, r[m.DirectionNext] = u.rb.AngleRight, r),
                 b = function(e) {
                     var t, i = v[e.direction],
                         n = ((t = {})[m.DirectionPrevious] = Object(l.d)("previous", "CarouselNavButton"), t[m.DirectionNext] = Object(l.d)("next", "CarouselNavButton"), t),
@@ -489,7 +489,7 @@
                         });
                     return a.createElement(u.Xa, {
                         className: r,
-                        position: u.jb.Relative,
+                        position: u.hb.Relative,
                         display: u.X.Flex,
                         alignItems: u.f.Stretch
                     }, a.createElement(u.A, {

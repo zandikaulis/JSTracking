@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [196], {
+    [190], {
         KSjr: function(e, t, n) {
             "use strict";
             n.r(t);
@@ -119,20 +119,20 @@
                         if (!e) return null;
                         if (this.hasDismissedForEvent(e.startDate)) return null;
                         var t = this.getChannelLinks(e);
-                        return t.length ? s.createElement(r.Eb, {
+                        return t.length ? s.createElement(r.Cb, {
                             attachLeft: !0,
                             attachRight: !0,
                             attachTop: !0,
                             background: r.r.AccentAlt2,
                             color: r.O.Overlay,
                             padding: 1,
-                            position: r.jb.Absolute
+                            position: r.hb.Absolute
                         }, s.createElement(r.Xa, {
                             margin: {
                                 bottom: 1
                             }
                         }, s.createElement(r.W, {
-                            type: r.Vb.H4
+                            type: r.Tb.H4
                         }, e.title)), s.createElement(r.Xa, {
                             margin: {
                                 bottom: 1
@@ -145,10 +145,10 @@
                             attachRight: !0,
                             attachTop: !0,
                             margin: 1,
-                            position: r.jb.Absolute
+                            position: r.hb.Absolute
                         }, s.createElement(r.A, {
                             ariaLabel: Object(i.d)("Close", "NativeBroadcastNotification"),
-                            icon: r.tb.Close,
+                            icon: r.rb.Close,
                             onClick: this.onDismiss,
                             overlay: !0,
                             size: r.B.Small,
@@ -157,11 +157,11 @@
                             margin: {
                                 top: .5
                             }
-                        }, s.createElement(r.mb, {
-                            animationDirection: r.nb.Down,
+                        }, s.createElement(r.kb, {
+                            animationDirection: r.lb.Down,
                             animationDuration: 30,
                             onAnimationEnd: this.onExpire,
-                            size: r.ob.ExtraSmall
+                            size: r.mb.ExtraSmall
                         }))) : null
                     }, t.prototype.eventForChannel = function() {
                         var e = Date.now(),

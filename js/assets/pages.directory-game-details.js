@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [142], {
+    [141], {
         "2rRr": function(e, t, n) {
             "use strict";
             var i, a = n("/MKj"),
@@ -44,12 +44,12 @@
                             }, c.createElement(f.Xa, null, c.createElement(f.Pa, {
                                 fullWidth: !0,
                                 fullHeight: !0,
-                                position: f.jb.Absolute
+                                position: f.hb.Absolute
                             }, c.createElement("img", {
                                 src: r
                             })), c.createElement(f.Xa, {
                                 className: "embed-card__overlay",
-                                position: f.jb.Absolute,
+                                position: f.hb.Absolute,
                                 attachLeft: !0,
                                 attachTop: !0,
                                 fullWidth: !0,
@@ -58,17 +58,17 @@
                                 className: "embed-card__play",
                                 display: f.X.Flex,
                                 justifyContent: f.Wa.Center,
-                                position: f.jb.Absolute,
+                                position: f.hb.Absolute,
                                 attachLeft: !0,
                                 attachTop: !0,
                                 fullWidth: !0,
                                 fullHeight: !0
-                            }, c.createElement(f.sb, {
-                                asset: f.tb.Play,
+                            }, c.createElement(f.qb, {
+                                asset: f.rb.Play,
                                 width: 50,
                                 height: 50
                             })), c.createElement(f.Xa, {
-                                position: f.jb.Absolute,
+                                position: f.hb.Absolute,
                                 padding: 1,
                                 attachBottom: !0,
                                 attachLeft: !0
@@ -80,25 +80,25 @@
                             }, c.createElement(f.K, {
                                 status: f.M.Live
                             })), void 0 !== l && c.createElement("span", null, t.getFormattedViewCount(l, o)))), c.createElement(f.Xa, {
-                                position: f.jb.Absolute,
+                                position: f.hb.Absolute,
                                 padding: 1,
                                 attachBottom: !0,
                                 attachRight: !0
-                            }, s && c.createElement(f.Xa, null, c.createElement(f.W, null, s)))), c.createElement(f.Eb, {
-                                position: f.jb.Absolute,
+                            }, s && c.createElement(f.Xa, null, c.createElement(f.W, null, s)))), c.createElement(f.Cb, {
+                                position: f.hb.Absolute,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 margin: 1,
                                 fontSize: f.Ca.Size5
-                            }, o === v.Stream && c.createElement(f.gb, {
+                            }, o === v.Stream && c.createElement(f.eb, {
                                 label: Object(d.d)("Live", "EmbedOverlayPill"),
-                                type: f.hb.Live
-                            }), o === v.Video && c.createElement(f.gb, {
+                                type: f.fb.Live
+                            }), o === v.Video && c.createElement(f.eb, {
                                 label: Object(d.d)("Video", "EmbedOverlayPill"),
-                                type: f.hb.Overlay
-                            }), o === v.Clip && c.createElement(f.gb, {
+                                type: f.fb.Overlay
+                            }), o === v.Clip && c.createElement(f.eb, {
                                 label: Object(d.d)("Clip", "EmbedOverlayPill"),
-                                type: f.hb.Overlay
+                                type: f.fb.Overlay
                             })))))
                         }, t.handleClick = function(e) {
                             e.preventDefault(), t.setState({
@@ -1076,16 +1076,17 @@
                 f = n("cras"),
                 v = n("U697"),
                 g = n("GnwI"),
-                h = n("6x+I"),
-                k = n("y2lK"),
-                b = n("ugLo"),
-                y = n("Ue10"),
+                h = n("rShu"),
+                k = n("6x+I"),
+                b = n("y2lK"),
+                y = n("ugLo"),
+                C = n("Ue10"),
                 E = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onBuyInGameContentNow = function() {
                             var e = t.props && t.props.referrer;
-                            Object(k.a)(t.props.content.info, e, t.props.game, p.PageviewLocation.GameDetail, t.onPopupClose)
+                            Object(b.a)(t.props.content.info, e, t.props.game, p.PageviewLocation.GameDetail, t.onPopupClose)
                         }, t.onPopupClose = function() {
                             t.props.refetchData && t.props.refetchData()
                         }, t
@@ -1108,7 +1109,7 @@
                                 isInGameContent: !0,
                                 userHasPrime: !!this.props.hasPrime
                             };
-                        return r.createElement(y.P, {
+                        return r.createElement(C.P, {
                             cols: {
                                 default: 6,
                                 xs: 12,
@@ -1116,55 +1117,55 @@
                                 md: 6,
                                 lg: 6
                             }
-                        }, r.createElement(y.Xa, {
+                        }, r.createElement(C.Xa, {
                             margin: {
                                 bottom: 3
                             }
-                        }, r.createElement(y.Ja, {
-                            gutterSize: y.Ka.Default
-                        }, r.createElement(y.P, {
+                        }, r.createElement(C.Ja, {
+                            gutterSize: C.Ka.Default
+                        }, r.createElement(C.P, {
                             cols: 4
-                        }, r.createElement(y.o, {
-                            ratio: y.p.Aspect1x1
+                        }, r.createElement(C.o, {
+                            ratio: C.p.Aspect1x1
                         }, r.createElement("img", {
                             src: o || ""
-                        }))), r.createElement(y.P, {
+                        }))), r.createElement(C.P, {
                             cols: 8
-                        }, r.createElement(y.W, {
-                            type: y.Vb.P,
-                            fontSize: y.Ca.Size4,
+                        }, r.createElement(C.W, {
+                            type: C.Tb.P,
+                            fontSize: C.Ca.Size4,
                             title: l
-                        }, l), r.createElement(y.W, {
-                            type: y.Vb.P,
-                            color: y.O.Alt2,
+                        }, l), r.createElement(C.W, {
+                            type: C.Tb.P,
+                            color: C.O.Alt2,
                             title: s
-                        }, s), r.createElement(y.Xa, {
-                            display: y.X.Flex,
+                        }, s), r.createElement(C.Xa, {
+                            display: C.X.Flex,
                             flexGrow: 0,
                             flexShrink: 0,
-                            flexWrap: y.Ba.NoWrap,
+                            flexWrap: C.Ba.NoWrap,
                             padding: {
                                 bottom: 1,
                                 top: 2
                             }
-                        }, r.createElement(b.a, {
+                        }, r.createElement(y.a, {
                             onClickBuyNow: this.onBuyInGameContentNow,
                             options: c
-                        })), r.createElement(y.ec, null, r.createElement(h, {
+                        })), r.createElement(C.cc, null, r.createElement(k, {
                             source: a || t
                         }))))))
                     }, t
                 }(r.Component),
-                C = Object(g.b)("FeaturedContent")(E),
-                N = function(e) {
+                N = Object(g.b)("FeaturedContent")(E),
+                S = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        var e = this.props.alt ? y.r.Alt : y.r.Base;
-                        return r.createElement(y.Eb, {
+                        var e = this.props.alt ? C.r.Alt : C.r.Base;
+                        return r.createElement(C.Cb, {
                             background: e,
                             border: !0,
                             padding: {
@@ -1174,25 +1175,25 @@
                         }, this.props.children)
                     }, t
                 }(r.Component),
-                S = Object(g.b)("GameDetailsSection")(N),
-                D = function(e) {
+                D = Object(g.b)("GameDetailsSection")(S),
+                O = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return r.createElement(y.Xa, {
+                        return r.createElement(C.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(y.W, {
-                            type: y.Vb.H3
+                        }, r.createElement(C.W, {
+                            type: C.Tb.H3
                         }, this.props.title))
                     }, t
                 }(r.Component),
-                R = Object(g.b)("GameDetailsTitle")(D),
-                O = function(e) {
+                F = Object(g.b)("GameDetailsTitle")(O),
+                w = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1203,7 +1204,7 @@
                             t = this.props.contentList;
                         if (0 === t.length) return null;
                         var n = t.map(function(t, n) {
-                            return r.createElement(C, {
+                            return r.createElement(N, {
                                 content: t,
                                 countryCode: e.props.countryCode,
                                 game: e.props.game,
@@ -1213,23 +1214,23 @@
                                 referrer: e.props.referrer
                             })
                         });
-                        return r.createElement(S, {
+                        return r.createElement(D, {
                             alt: !0
-                        }, r.createElement(R, {
+                        }, r.createElement(F, {
                             title: Object(l.d)("Game Add-Ons", "FeaturedContentRow")
-                        }), r.createElement(y.Ja, {
-                            gutterSize: y.Ka.Large
+                        }), r.createElement(C.Ja, {
+                            gutterSize: C.Ka.Large
                         }, n))
                     }, t
                 }(r.Component),
-                F = Object(g.b)("FeaturedContentRow")(O),
-                w = n("geRD"),
-                P = n("GkoH"),
-                x = (n("rQvP"), function(e) {
+                R = Object(g.b)("FeaturedContentRow")(w),
+                P = n("geRD"),
+                x = n("GkoH"),
+                _ = (n("rQvP"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderSeparator = function() {
-                            return r.createElement(y.Eb, {
+                            return r.createElement(C.Cb, {
                                 borderRight: !0,
                                 padding: {
                                     left: .5
@@ -1242,9 +1243,9 @@
                         }, t.onBuyNowClick = function() {
                             var e = t.props && t.props.referrer,
                                 n = t.props && t.props.game && t.props.game.product && t.props.game.product.info;
-                            n && Object(k.a)(n, e, t.props.game, p.PageviewLocation.GameDetail, t.onPopupClose)
+                            n && Object(b.a)(n, e, t.props.game, p.PageviewLocation.GameDetail, t.onPopupClose)
                         }, t.onClaimPrimeOffer = function(e) {
-                            t.props.claimPrimeOffer && t.props.claimPrimeOffer(Object(w.a)({
+                            t.props.claimPrimeOffer && t.props.claimPrimeOffer(Object(P.a)({
                                 offerID: e
                             })).then(function(e) {
                                 t.props.refetchData && t.props.refetchData()
@@ -1269,9 +1270,9 @@
                     }, t.prototype.render = function() {
                         var e = this.props.game,
                             t = e ? e.product : void 0;
-                        if (!e || !t) return r.createElement(S, {
+                        if (!e || !t) return r.createElement(D, {
                             alt: !0
-                        }, r.createElement(y.Eb, {
+                        }, r.createElement(C.Cb, {
                             className: "game-details-box",
                             padding: {
                                 top: 2,
@@ -1279,24 +1280,24 @@
                                 bottom: 2,
                                 left: 1
                             },
-                            flexDirection: y.Aa.Row,
-                            display: y.X.Flex,
-                            justifyContent: y.Wa.Between,
-                            alignItems: y.f.Center
-                        }, r.createElement(y.Xa, {
-                            display: y.X.Flex,
-                            flexDirection: y.Aa.Row,
-                            alignItems: y.f.Center
-                        }, r.createElement(y.Xa, null, r.createElement(y.ib, {
+                            flexDirection: C.Aa.Row,
+                            display: C.X.Flex,
+                            justifyContent: C.Wa.Between,
+                            alignItems: C.f.Center
+                        }, r.createElement(C.Xa, {
+                            display: C.X.Flex,
+                            flexDirection: C.Aa.Row,
+                            alignItems: C.f.Center
+                        }, r.createElement(C.Xa, null, r.createElement(C.gb, {
                             width: 175,
                             height: 36
-                        })), this.renderSeparator(), r.createElement(y.Xa, null, r.createElement(y.ib, {
+                        })), this.renderSeparator(), r.createElement(C.Xa, null, r.createElement(C.gb, {
                             width: 22,
                             height: 30
-                        })), r.createElement(y.Xa, null, r.createElement(y.ib, {
+                        })), r.createElement(C.Xa, null, r.createElement(C.gb, {
                             width: 50,
                             height: 15
-                        }))), r.createElement(y.Xa, null, r.createElement(y.ib, {
+                        }))), r.createElement(C.Xa, null, r.createElement(C.gb, {
                             width: 290,
                             height: 20
                         }))));
@@ -1305,7 +1306,7 @@
                             a = {
                                 info: t.info,
                                 crates: t.info.crateASINs,
-                                size: y.D.Large,
+                                size: C.D.Large,
                                 externalAcquisition: t.acquisition,
                                 countryCode: n,
                                 userHasPrime: i
@@ -1321,14 +1322,14 @@
                             s = null;
                         if (this.props.referrer && this.props.referrer.settings && this.props.referrer.settings.isCommerceRevShareEnabled) {
                             var c = Object(l.d)("Purchase revenue <x:link>will be shared</x:link> with {channel}", {
-                                channel: r.createElement(y.W, {
+                                channel: r.createElement(C.W, {
                                     key: "game-details-bold",
                                     bold: !0,
-                                    type: y.Vb.Span
+                                    type: C.Tb.Span
                                 }, this.props.referrer.displayName),
                                 "x:link": this.renderSharedRevenueLink
                             }, "GameDetailsBox");
-                            s = r.createElement(y.W, {
+                            s = r.createElement(C.W, {
                                 key: "fuel-shared-revenue-game-details",
                                 "data-test-selector": "fuel-shared-revenue"
                             }, c)
@@ -1341,15 +1342,15 @@
                             className: "game-details-box__rating"
                         }));
                         var u = null;
-                        return t.launchPlatform && (u = r.createElement(h, {
+                        return t.launchPlatform && (u = r.createElement(k, {
                             "data-test-selector": "game-details-box-launch-platform",
                             source: t.launchPlatform.description,
                             renderers: {
                                 Link: this.renderNewWindowLink
                             }
-                        })), r.createElement(S, {
+                        })), r.createElement(D, {
                             alt: !0
-                        }, r.createElement(y.Eb, {
+                        }, r.createElement(C.Cb, {
                             className: "game-details-box",
                             padding: {
                                 top: 2,
@@ -1357,15 +1358,15 @@
                                 bottom: 2,
                                 left: 1
                             },
-                            flexDirection: y.Aa.Row,
-                            display: y.X.Flex,
-                            justifyContent: y.Wa.Between,
-                            alignItems: y.f.Center
-                        }, r.createElement(y.Xa, {
-                            display: y.X.Flex,
-                            flexDirection: y.Aa.Row,
-                            alignItems: y.f.Center
-                        }, r.createElement(b.a, {
+                            flexDirection: C.Aa.Row,
+                            display: C.X.Flex,
+                            justifyContent: C.Wa.Between,
+                            alignItems: C.f.Center
+                        }, r.createElement(C.Xa, {
+                            display: C.X.Flex,
+                            flexDirection: C.Aa.Row,
+                            alignItems: C.f.Center
+                        }, r.createElement(y.a, {
                             onClickBuyNow: this.onBuyNowClick,
                             onClickClaimPrimeOffer: this.onClaimPrimeOffer,
                             options: a,
@@ -1373,11 +1374,11 @@
                         }), this.renderSeparator(), d, o, u), s))
                     }, t
                 }(r.Component)),
-                _ = Object(g.b)("GameDetailBox")(x),
-                I = Object(d.a)(P, {
+                I = Object(g.b)("GameDetailBox")(_),
+                L = Object(d.a)(x, {
                     name: "claimPrimeOffer"
-                })(_),
-                L = function(e) {
+                })(I),
+                G = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1394,136 +1395,136 @@
                             s = n.map(function(e, t) {
                                 return r.createElement("li", {
                                     key: t
-                                }, r.createElement(h, {
+                                }, r.createElement(k, {
                                     source: e
                                 }))
                             }),
                             c = i.map(function(e, t) {
-                                return [r.createElement(y.P, {
+                                return [r.createElement(C.P, {
                                     key: t + "lang",
                                     cols: 3
-                                }, r.createElement(y.Xa, null, e.language)), r.createElement(y.P, {
+                                }, r.createElement(C.Xa, null, e.language)), r.createElement(C.P, {
                                     key: t + "audio",
                                     cols: 3
-                                }, r.createElement(y.Eb, {
-                                    textAlign: y.Rb.Center
-                                }, e.hasAudio && r.createElement(y.sb, {
-                                    asset: y.tb.Check,
-                                    type: y.ub.Success
-                                }))), r.createElement(y.P, {
+                                }, r.createElement(C.Cb, {
+                                    textAlign: C.Pb.Center
+                                }, e.hasAudio && r.createElement(C.qb, {
+                                    asset: C.rb.Check,
+                                    type: C.sb.Success
+                                }))), r.createElement(C.P, {
                                     key: t + "int",
                                     cols: 3
-                                }, r.createElement(y.Eb, {
-                                    textAlign: y.Rb.Center
-                                }, e.hasInterface && r.createElement(y.sb, {
-                                    asset: y.tb.Check,
-                                    type: y.ub.Success
-                                }))), r.createElement(y.P, {
+                                }, r.createElement(C.Cb, {
+                                    textAlign: C.Pb.Center
+                                }, e.hasInterface && r.createElement(C.qb, {
+                                    asset: C.rb.Check,
+                                    type: C.sb.Success
+                                }))), r.createElement(C.P, {
                                     key: t + "subs",
                                     cols: 3
-                                }, r.createElement(y.Eb, {
-                                    textAlign: y.Rb.Center
-                                }, e.hasSubtitles && r.createElement(y.sb, {
-                                    asset: y.tb.Check,
-                                    type: y.ub.Success
-                                }))), r.createElement(y.P, {
+                                }, r.createElement(C.Cb, {
+                                    textAlign: C.Pb.Center
+                                }, e.hasSubtitles && r.createElement(C.qb, {
+                                    asset: C.rb.Check,
+                                    type: C.sb.Success
+                                }))), r.createElement(C.P, {
                                     key: t + "hr",
                                     cols: 12
-                                }, r.createElement(y.Eb, {
+                                }, r.createElement(C.Cb, {
                                     margin: {
                                         top: .5,
                                         bottom: .5
                                     },
                                     borderBottom: !0,
-                                    alignContent: y.e.Stretch
+                                    alignContent: C.e.Stretch
                                 }))]
                             }),
                             d = this.renderSystemRequirements(a),
                             u = this.renderSystemRequirements(o);
-                        return r.createElement(S, null, r.createElement(y.Ja, {
-                            gutterSize: y.Ka.Large
-                        }, r.createElement(y.P, {
+                        return r.createElement(D, null, r.createElement(C.Ja, {
+                            gutterSize: C.Ka.Large
+                        }, r.createElement(C.P, {
                             cols: {
                                 default: 6,
                                 xs: 12,
                                 sm: 6
                             }
-                        }, r.createElement(y.Xa, {
+                        }, r.createElement(C.Xa, {
                             margin: {
                                 top: 4
                             }
-                        }, r.createElement(R, {
+                        }, r.createElement(F, {
                             title: Object(l.d)("Description", "DirectoryGameDetailsPage")
-                        }), r.createElement(y.ec, null, r.createElement(h, {
+                        }), r.createElement(C.cc, null, r.createElement(k, {
                             source: t.description
-                        }))), r.createElement(y.Xa, {
+                        }))), r.createElement(C.Xa, {
                             margin: {
                                 top: 4
                             }
-                        }, r.createElement(R, {
+                        }, r.createElement(F, {
                             title: Object(l.d)("Features", "DirectoryGameDetailsPage")
-                        }), r.createElement(y.ec, null, r.createElement("ul", null, s))), r.createElement(y.Eb, {
+                        }), r.createElement(C.cc, null, r.createElement("ul", null, s))), r.createElement(C.Cb, {
                             margin: {
                                 top: 4
                             },
-                            fontSize: y.Ca.Size6
-                        }, r.createElement(R, {
+                            fontSize: C.Ca.Size6
+                        }, r.createElement(F, {
                             title: Object(l.d)("Information", "DirectoryGameDetailsPage")
-                        }), this.renderRow(Object(l.d)("Title: ", "DirectoryGameDetailsPage"), t.title), this.renderRow(Object(l.d)("Developer: ", "DirectoryGameDetailsPage"), e.developer), this.renderRow(Object(l.d)("Publisher: ", "DirectoryGameDetailsPage"), e.publisher), this.renderRowLink(Object(l.d)("More Info: ", "DirectoryGameDetailsPage"), Object(l.d)("Website", "DirectoryGameDetailsPage"), e.websiteURL), e.eulaURL && this.renderRowLink(Object(l.d)("License Agreement: ", "DirectoryGameDetailsPage"), Object(l.d)("Check out the EULA", "DirectoryGameDetailsPage"), e.eulaURL), this.renderRowLink(Object(l.d)("Need Help? ", "DirectoryGameDetailsPage"), Object(l.d)("Contact Support", "DirectoryGameDetailsPage"), e.supportURL))), r.createElement(y.P, {
+                        }), this.renderRow(Object(l.d)("Title: ", "DirectoryGameDetailsPage"), t.title), this.renderRow(Object(l.d)("Developer: ", "DirectoryGameDetailsPage"), e.developer), this.renderRow(Object(l.d)("Publisher: ", "DirectoryGameDetailsPage"), e.publisher), this.renderRowLink(Object(l.d)("More Info: ", "DirectoryGameDetailsPage"), Object(l.d)("Website", "DirectoryGameDetailsPage"), e.websiteURL), e.eulaURL && this.renderRowLink(Object(l.d)("License Agreement: ", "DirectoryGameDetailsPage"), Object(l.d)("Check out the EULA", "DirectoryGameDetailsPage"), e.eulaURL), this.renderRowLink(Object(l.d)("Need Help? ", "DirectoryGameDetailsPage"), Object(l.d)("Contact Support", "DirectoryGameDetailsPage"), e.supportURL))), r.createElement(C.P, {
                             cols: {
                                 default: 6,
                                 xs: 12,
                                 sm: 6
                             }
-                        }, r.createElement(y.Xa, {
+                        }, r.createElement(C.Xa, {
                             margin: {
                                 top: 4
                             }
-                        }, r.createElement(R, {
+                        }, r.createElement(F, {
                             title: Object(l.d)("Hardware Requirements", "DirectoryGameDetailsPage")
-                        }), r.createElement(y.Xa, {
+                        }), r.createElement(C.Xa, {
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(y.W, {
-                            type: y.Vb.H4,
+                        }, r.createElement(C.W, {
+                            type: C.Tb.H4,
                             bold: !0
-                        }, Object(l.d)("Minimum", "DirectoryGameDetailsPage"))), d, r.createElement(y.Xa, {
+                        }, Object(l.d)("Minimum", "DirectoryGameDetailsPage"))), d, r.createElement(C.Xa, {
                             padding: {
                                 top: 1,
                                 bottom: 1
                             }
-                        }, r.createElement(y.W, {
-                            type: y.Vb.H4,
+                        }, r.createElement(C.W, {
+                            type: C.Tb.H4,
                             bold: !0
-                        }, Object(l.d)("Recommended", "DirectoryGameDetailsPage"))), u), r.createElement(y.Xa, {
+                        }, Object(l.d)("Recommended", "DirectoryGameDetailsPage"))), u), r.createElement(C.Xa, {
                             margin: {
                                 top: 4
                             }
-                        }, r.createElement(R, {
+                        }, r.createElement(F, {
                             title: Object(l.d)("Language Support", "DirectoryGameDetailsPage")
-                        }), r.createElement(y.Ja, null, r.createElement(y.P, {
+                        }), r.createElement(C.Ja, null, r.createElement(C.P, {
                             cols: 3
-                        }, r.createElement(y.Eb, {
-                            color: y.O.Alt2
-                        }, Object(l.d)("Language", "DirectoryGameDetailsPage"))), r.createElement(y.P, {
+                        }, r.createElement(C.Cb, {
+                            color: C.O.Alt2
+                        }, Object(l.d)("Language", "DirectoryGameDetailsPage"))), r.createElement(C.P, {
                             cols: 3
-                        }, r.createElement(y.Eb, {
-                            color: y.O.Alt2,
-                            textAlign: y.Rb.Center
-                        }, Object(l.d)("Audio", "DirectoryGameDetailsPage"))), r.createElement(y.P, {
+                        }, r.createElement(C.Cb, {
+                            color: C.O.Alt2,
+                            textAlign: C.Pb.Center
+                        }, Object(l.d)("Audio", "DirectoryGameDetailsPage"))), r.createElement(C.P, {
                             cols: 3
-                        }, r.createElement(y.Eb, {
-                            color: y.O.Alt2,
-                            textAlign: y.Rb.Center
-                        }, Object(l.d)("Interface", "DirectoryGameDetailsPage"))), r.createElement(y.P, {
+                        }, r.createElement(C.Cb, {
+                            color: C.O.Alt2,
+                            textAlign: C.Pb.Center
+                        }, Object(l.d)("Interface", "DirectoryGameDetailsPage"))), r.createElement(C.P, {
                             cols: 3
-                        }, r.createElement(y.Eb, {
-                            color: y.O.Alt2,
-                            textAlign: y.Rb.Center
-                        }, Object(l.d)("Subtitles", "DirectoryGameDetailsPage"))), r.createElement(y.P, {
+                        }, r.createElement(C.Cb, {
+                            color: C.O.Alt2,
+                            textAlign: C.Pb.Center
+                        }, Object(l.d)("Subtitles", "DirectoryGameDetailsPage"))), r.createElement(C.P, {
                             cols: 12
-                        }, r.createElement(y.Eb, {
+                        }, r.createElement(C.Cb, {
                             borderBottom: !0,
                             margin: {
                                 top: .5,
@@ -1531,21 +1532,21 @@
                             }
                         })), c)))))
                     }, t.prototype.renderSystemRequirements = function(e) {
-                        return e ? r.createElement(y.Xa, null, this.renderRow(Object(l.d)("OS:", "DirectoryGameDetailsPage"), e.osVersion), this.renderRow(Object(l.d)("Processor:", "DirectoryGameDetailsPage"), e.processor), this.renderRow(Object(l.d)("Memory:", "DirectoryGameDetailsPage"), e.ram), this.renderRow(Object(l.d)("Graphics Card:", "DirectoryGameDetailsPage"), e.videoCard), this.renderRow(Object(l.d)("DirectX:", "DirectoryGameDetailsPage"), e.directXVersion), this.renderRow(Object(l.d)("Hard Drive Space:", "DirectoryGameDetailsPage"), e.hardDriveSpace), this.renderRow(Object(l.d)("Other:", "DirectoryGameDetailsPage"), e.other)) : null
+                        return e ? r.createElement(C.Xa, null, this.renderRow(Object(l.d)("OS:", "DirectoryGameDetailsPage"), e.osVersion), this.renderRow(Object(l.d)("Processor:", "DirectoryGameDetailsPage"), e.processor), this.renderRow(Object(l.d)("Memory:", "DirectoryGameDetailsPage"), e.ram), this.renderRow(Object(l.d)("Graphics Card:", "DirectoryGameDetailsPage"), e.videoCard), this.renderRow(Object(l.d)("DirectX:", "DirectoryGameDetailsPage"), e.directXVersion), this.renderRow(Object(l.d)("Hard Drive Space:", "DirectoryGameDetailsPage"), e.hardDriveSpace), this.renderRow(Object(l.d)("Other:", "DirectoryGameDetailsPage"), e.other)) : null
                     }, t.prototype.renderRow = function(e, t) {
-                        return t ? r.createElement(y.Xa, {
-                            display: y.X.Flex,
-                            flexDirection: y.Aa.Row,
-                            flexWrap: y.Ba.NoWrap
-                        }, r.createElement(y.Eb, {
-                            color: y.O.Alt2,
+                        return t ? r.createElement(C.Xa, {
+                            display: C.X.Flex,
+                            flexDirection: C.Aa.Row,
+                            flexWrap: C.Ba.NoWrap
+                        }, r.createElement(C.Cb, {
+                            color: C.O.Alt2,
                             padding: {
                                 right: 1
                             },
-                            display: y.X.Flex,
+                            display: C.X.Flex,
                             flexShrink: 0
-                        }, e), r.createElement(y.Xa, {
-                            display: y.X.Flex,
+                        }, e), r.createElement(C.Xa, {
+                            display: C.X.Flex,
                             flexGrow: 1
                         }, t)) : null
                     }, t.prototype.renderRowLink = function(e, t, n) {
@@ -1556,22 +1557,22 @@
                         }, t)) : null
                     }, t
                 }(r.Component),
-                j = Object(g.b)("GameInfoSection")(L),
-                G = n("/MKj"),
-                A = n("fvjX"),
-                B = n("aCAx"),
+                j = Object(g.b)("GameInfoSection")(G),
+                A = n("/MKj"),
+                B = n("fvjX"),
+                T = n("aCAx"),
                 U = n("cZKs"),
                 X = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(y.Eb, {
+                        return r.createElement(C.Cb, {
                             padding: {
                                 x: 2,
                                 y: 3
                             },
-                            background: y.r.Base
+                            background: C.r.Base
                         }, r.createElement("img", {
                             src: this.props.screenshotURL
                         }), r.createElement(U.a, {
@@ -1580,14 +1581,14 @@
                         }))
                     }, t
                 }(r.Component);
-            var T = Object(A.compose)(Object(G.connect)(null, function(e) {
-                    return Object(A.bindActionCreators)({
-                        closeModal: B.c
+            var q = Object(B.compose)(Object(A.connect)(null, function(e) {
+                    return Object(B.bindActionCreators)({
+                        closeModal: T.c
                     }, e)
                 }))(X),
                 V = n("2rRr"),
-                q = n("eFQ3"),
-                W = Object(g.b)("VideoEmbed", {
+                W = n("eFQ3"),
+                M = Object(g.b)("VideoEmbed", {
                     autoReportInteractive: !0
                 })(function(e) {
                     var t = e.video,
@@ -1607,48 +1608,48 @@
                         type: V.b.Video,
                         thumbnailURL: l,
                         viewCount: s
-                    }, r.createElement(q.b, i.__assign({}, c)))
+                    }, r.createElement(W.b, i.__assign({}, c)))
                 }),
-                M = n("VQbD"),
-                z = (n("vu7R"), function(e) {
+                z = n("VQbD"),
+                H = (n("vu7R"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderItems = function() {
                             if (!t.props.videos && !t.props.thumbnailURLs) return [0, 1, 2, 3].map(function(e) {
-                                return r.createElement(y.Xa, {
+                                return r.createElement(C.Xa, {
                                     key: "placeholder-" + e,
                                     padding: {
                                         right: 2
                                     }
-                                }, r.createElement(y.ib, {
+                                }, r.createElement(C.gb, {
                                     width: 460,
                                     height: 260
                                 }))
                             });
                             var e = (t.props.videos || []).map(function(e) {
-                                    return e ? r.createElement(y.Xa, {
+                                    return e ? r.createElement(C.Xa, {
                                         className: "game-media__video",
                                         padding: {
                                             right: 2
                                         },
                                         key: e.id
-                                    }, r.createElement(W, {
+                                    }, r.createElement(M, {
                                         video: e
                                     })) : null
                                 }),
                                 n = (t.props.thumbnailURLs || []).map(function(e, n) {
-                                    return r.createElement(y.Xa, {
+                                    return r.createElement(C.Xa, {
                                         className: "game-media__image",
                                         padding: {
                                             right: 2
                                         },
                                         key: e
-                                    }, r.createElement(y.Ua, {
+                                    }, r.createElement(C.Ua, {
                                         onClick: t.handleOpenModal,
                                         "data-full": t.props.screenshotURLs[n],
                                         ariaLabel: Object(l.d)("Screenshot", "DirectoryGameDetailsGameMedia")
-                                    }, r.createElement(y.o, {
-                                        ratio: y.p.Aspect16x9
+                                    }, r.createElement(C.o, {
+                                        ratio: C.p.Aspect16x9
                                     }, r.createElement("img", {
                                         src: e
                                     }))))
@@ -1665,34 +1666,34 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return r.createElement(S, null, r.createElement(R, {
+                        return r.createElement(D, null, r.createElement(F, {
                             title: Object(l.d)("Videos and Screenshots", "DirectoryGameDetailsPage")
-                        }), r.createElement(y.Pa, {
+                        }), r.createElement(C.Pa, {
                             margin: {
                                 bottom: 3,
                                 top: 1
                             }
-                        }, r.createElement(M.a, {
+                        }, r.createElement(z.a, {
                             items: this.renderItems()
                         })))
                     }, t = i.__decorate([Object(g.b)("GameMedia")], t)
                 }(r.Component));
-            var H = Object(G.connect)(function() {
+            var Q = Object(A.connect)(function() {
                     return {}
                 }, function(e) {
-                    return Object(A.bindActionCreators)({
+                    return Object(B.bindActionCreators)({
                         showImageViewerModal: function(e) {
                             var t = i.__rest(e, []);
-                            return Object(B.d)(T, t)
+                            return Object(T.d)(q, t)
                         }
                     }, e)
-                })(z),
-                Q = (n("RGoB"), function(e) {
+                })(H),
+                $ = (n("RGoB"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onBuyInGameContentNow = function() {
                             var e = t.props && t.props.referrer;
-                            Object(k.a)(t.props.content.info, e, t.props.game, p.PageviewLocation.GameDetail, t.onPopupClose)
+                            Object(b.a)(t.props.content.info, e, t.props.game, p.PageviewLocation.GameDetail, t.onPopupClose)
                         }, t.onPopupClose = function() {
                             t.props.refetchData && t.props.refetchData()
                         }, t
@@ -1715,7 +1716,7 @@
                                 isInGameContent: !0,
                                 userHasPrime: this.props.hasPrime
                             },
-                            m = r.createElement(b.a, {
+                            m = r.createElement(y.a, {
                                 onClickBuyNow: this.onBuyInGameContentNow,
                                 options: u
                             });
@@ -1723,53 +1724,53 @@
                             var p = Object(l.d)("{numCrates} Twitch Crates", {
                                 numCrates: a.length
                             }, "InGameContentCrateReward");
-                            e = r.createElement(y.Eb, {
+                            e = r.createElement(C.Cb, {
                                 className: "in-game-content__crates",
                                 attachBottom: !0,
                                 padding: {
                                     left: 1,
                                     right: 1
                                 },
-                                position: y.jb.Absolute,
-                                textAlign: y.Rb.Right
+                                position: C.hb.Absolute,
+                                textAlign: C.Pb.Right
                             }, p)
                         }
-                        var f = o ? r.createElement(y.o, {
-                            ratio: y.p.Aspect1x1
+                        var f = o ? r.createElement(C.o, {
+                            ratio: C.p.Aspect1x1
                         }, r.createElement("img", {
                             src: o
                         })) : null;
-                        return r.createElement(y.Xa, {
+                        return r.createElement(C.Xa, {
                             margin: {
                                 bottom: 3
                             }
-                        }, r.createElement(y.Eb, {
+                        }, r.createElement(C.Cb, {
                             className: "in-game-content",
                             border: !0,
                             fullHeight: !0,
-                            position: y.jb.Relative
-                        }, f, r.createElement(y.Eb, {
-                            background: y.r.Base,
+                            position: C.hb.Relative
+                        }, f, r.createElement(C.Cb, {
+                            background: C.r.Base,
                             padding: 1
-                        }, r.createElement(y.Xa, {
+                        }, r.createElement(C.Xa, {
                             className: "in-game-content__info-header"
-                        }, r.createElement(y.W, {
-                            type: y.Vb.P,
-                            fontSize: y.Ca.Size5,
+                        }, r.createElement(C.W, {
+                            type: C.Tb.P,
+                            fontSize: C.Ca.Size5,
                             bold: !0,
                             title: c
-                        }, c), r.createElement(y.W, {
-                            type: y.Vb.P,
-                            color: y.O.Alt2,
+                        }, c), r.createElement(C.W, {
+                            type: C.Tb.P,
+                            color: C.O.Alt2,
                             title: d
-                        }, d)), r.createElement(y.Xa, {
+                        }, d)), r.createElement(C.Xa, {
                             className: "in-game-content__price",
-                            position: y.jb.Relative
+                            position: C.hb.Relative
                         }, r.createElement("p", {
                             title: s
-                        }, s), e), r.createElement(y.Xa, {
+                        }, s), e), r.createElement(C.Xa, {
                             className: "in-game-content__buy-button",
-                            position: y.jb.Absolute,
+                            position: C.hb.Absolute,
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0,
@@ -1781,8 +1782,8 @@
                         }, m))))
                     }, t
                 }(r.Component)),
-                $ = Object(g.b)("InGameContent")(Q),
-                J = function(e) {
+                J = Object(g.b)("InGameContent")($),
+                K = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1793,7 +1794,7 @@
                             t = this.props.contentList;
                         if (0 === t.length) return null;
                         var n = t.map(function(t, n) {
-                            return r.createElement($, {
+                            return r.createElement(J, {
                                 content: t,
                                 countryCode: e.props.countryCode,
                                 game: e.props.game,
@@ -1803,22 +1804,22 @@
                                 referrer: e.props.referrer
                             })
                         });
-                        return r.createElement(S, {
+                        return r.createElement(D, {
                             alt: !0
-                        }, r.createElement(R, {
+                        }, r.createElement(F, {
                             title: Object(l.d)("In-Game Content", "FeaturedContentRow")
-                        }), r.createElement(y.bc, {
-                            childWidth: y.cc.Medium,
-                            gutterSize: y.dc.Small,
+                        }), r.createElement(C.Zb, {
+                            childWidth: C.ac.Medium,
+                            gutterSize: C.bc.Small,
                             noGrow: !0
                         }, n))
                     }, t
                 }(r.Component),
-                K = Object(g.b)("InGameContentRow")(J),
+                Z = Object(g.b)("InGameContentRow")(K),
                 Y = n("HStj"),
-                Z = n("FBjy"),
-                ee = n("6qyE"),
-                te = (n("JzX6"), function(e) {
+                ee = n("FBjy"),
+                te = n("6qyE"),
+                ne = (n("JzX6"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1868,37 +1869,38 @@
                         this.state.sortedInGameContent.forEach(function(e) {
                             e.info.isFeatured ? p.push(e) : v.push(e)
                         });
-                        var g = r.createElement(y.Xa, {
+                        var g = r.createElement(C.Xa, {
                             className: "directory-game-details-page__filters",
-                            display: y.X.Flex,
+                            display: C.X.Flex,
                             padding: {
                                 top: 1,
                                 bottom: 2,
                                 right: 3
                             }
                         }, r.createElement(f.a, {
-                            buttonSize: y.D.Large,
+                            buttonSize: C.D.Large,
                             contentType: Y.a.GameDetails,
+                            directoryType: h.a.Games,
                             directoryName: decodeURIComponent(this.props.match.params.encodedCommunityName)
                         }));
-                        return r.createElement(y.Xa, null, g, r.createElement(I, {
+                        return r.createElement(C.Xa, null, g, r.createElement(L, {
                             game: n,
                             referrer: u,
                             countryCode: m,
                             currentUser: this.props.data.currentUser,
                             refetchData: this.refetchData
-                        }), r.createElement(H, {
+                        }), r.createElement(Q, {
                             screenshotURLs: i,
                             thumbnailURLs: a,
                             videos: o
-                        }), r.createElement(F, {
+                        }), r.createElement(R, {
                             contentList: p,
                             countryCode: m,
                             game: n,
                             hasPrime: d,
                             refetchData: this.refetchData,
                             referrer: u
-                        }), r.createElement(K, {
+                        }), r.createElement(Z, {
                             contentList: v,
                             countryCode: m,
                             game: n,
@@ -1910,7 +1912,7 @@
                         }))
                     }, t
                 }(r.Component)),
-                ne = Object(o.compose)(Object(d.a)(ee, {
+                ie = Object(o.compose)(Object(d.a)(te, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1918,7 +1920,7 @@
                             }
                         }
                     }
-                }), Object(d.a)(Z, {
+                }), Object(d.a)(ee, {
                     name: "referrerData",
                     skip: function(e) {
                         var t = a.parse(e.location.search),
@@ -1941,9 +1943,9 @@
                     destination: m.a.DirectoryGameDetails
                 }), Object(u.a)({
                     location: p.PageviewLocation.GameDetail
-                }))(te);
+                }))(ne);
             n.d(t, "DirectoryGameDetailsPage", function() {
-                return ne
+                return ie
             })
         },
         RGoB: function(e, t, n) {},
@@ -1979,7 +1981,7 @@
             ! function(e) {
                 e.Previous = "previous", e.Next = "next"
             }(a || (a = {}));
-            var m = ((i = {})[a.Previous] = d.tb.AngleLeft, i[a.Next] = d.tb.AngleRight, i),
+            var m = ((i = {})[a.Previous] = d.rb.AngleLeft, i[a.Next] = d.rb.AngleRight, i),
                 p = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2059,7 +2061,7 @@
                                 });
                             return l.createElement(d.Xa, {
                                 className: u,
-                                position: d.jb.Relative,
+                                position: d.hb.Relative,
                                 display: d.X.Flex,
                                 alignItems: d.f.Stretch
                             }, l.createElement(d.A, {
@@ -2083,7 +2085,7 @@
                         window.removeEventListener("resize", this.onResize)
                     }, t.prototype.render = function() {
                         return l.createElement(d.Pa, r.__assign({}, this.props, {
-                            position: d.jb.Relative
+                            position: d.hb.Relative
                         }), l.createElement("div", {
                             className: "media-carousel",
                             ref: this.refHandler,
@@ -2114,7 +2116,7 @@
                             className: "media-carousel__nav",
                             display: d.X.Flex,
                             alignItems: d.f.Center,
-                            position: d.jb.Absolute,
+                            position: d.hb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullHeight: !0
@@ -2122,7 +2124,7 @@
                             className: "media-carousel__nav",
                             display: d.X.Flex,
                             alignItems: d.f.Center,
-                            position: d.jb.Absolute,
+                            position: d.hb.Absolute,
                             attachTop: !0,
                             attachRight: !0,
                             fullHeight: !0
@@ -2737,7 +2739,7 @@
                                 alignItems: s.f.Center
                             }, a.createElement(s.z, {
                                 fullWidth: !0,
-                                icon: n && n.length > 0 ? s.tb.Crate : void 0,
+                                icon: n && n.length > 0 ? s.rb.Crate : void 0,
                                 purchase: e,
                                 onClick: t.props.onClickBuyNow,
                                 "data-target": d,
@@ -2745,9 +2747,9 @@
                             }, Object(o.d)("Buy Now", "FuelBuyButton")), l)
                         }, t.renderPrimeTreatment = function(e, n) {
                             var i = [],
-                                r = a.createElement(s.sb, {
-                                    asset: s.tb.Crown,
-                                    type: s.ub.Prime,
+                                r = a.createElement(s.qb, {
+                                    asset: s.rb.Crown,
+                                    type: s.sb.Prime,
                                     width: 16,
                                     height: 16,
                                     key: "fuel-crown"
@@ -2763,7 +2765,7 @@
                                 },
                                 key: "fuel-free-label"
                             }, a.createElement(s.W, {
-                                type: s.Vb.Strong
+                                type: s.Tb.Strong
                             }, Object(o.d)("Free", "FuelBuyButton"))), a.createElement("div", {
                                 className: "fuel-buy-button__prime-trial-button",
                                 key: "fuel-trial"

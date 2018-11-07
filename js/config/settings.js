@@ -401,13 +401,13 @@ window.__twilightSettings = {
         },
         "20432910-585e-428d-be53-f5de0d93e2de": {
             "name": "french_vanilla",
-            "v": 4601,
+            "v": 5028,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "variant_a"
             }]
         },

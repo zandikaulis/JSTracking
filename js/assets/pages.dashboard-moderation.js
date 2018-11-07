@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [174], {
+    [168], {
         "2bi+": function(e, t, n) {
             "use strict";
             n("DLhE");
@@ -365,8 +365,8 @@
                     }, t.prototype.render = function() {
                         return o.createElement(d.Xa, {
                             className: this.props.classNames,
-                            position: d.jb.Relative
-                        }, o.createElement(d.Sb, {
+                            position: d.hb.Relative
+                        }, o.createElement(d.Qb, {
                             error: this.state.showCoolDownState,
                             maxLength: 512,
                             noResize: !0,
@@ -382,7 +382,7 @@
                             emotePickerSource: s.a.VodChat,
                             inputRef: this.textArea,
                             onClickEmote: this.onEmoticonClick,
-                            position: d.jb.Absolute
+                            position: d.hb.Absolute
                         }))
                     }, t
                 }(o.Component))
@@ -1161,7 +1161,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(s.Eb, {
+                        return o.createElement(s.Cb, {
                             className: "twp-modal",
                             background: s.r.Base,
                             color: s.O.Alt,
@@ -1225,22 +1225,22 @@
                             padding: {
                                 right: .5
                             }
-                        }, o.createElement(s.sb, {
+                        }, o.createElement(s.qb, {
                             width: 13,
                             height: 13,
-                            asset: s.tb.Conversations,
-                            type: s.ub.Inherit
+                            asset: s.rb.Conversations,
+                            type: s.sb.Inherit
                         })), o.createElement(s.W, {
-                            align: s.fc.Middle,
-                            type: s.Vb.Span
+                            align: s.dc.Middle,
+                            type: s.Tb.Span
                         }, e))) : this.props.context === a.a ? o.createElement(s.A, {
                             ariaLabel: e,
                             type: s.C.Hollow,
-                            icon: s.tb.Conversations,
+                            icon: s.rb.Conversations,
                             onClick: this.onReplyClickHandler,
                             "data-test-selector": "moderation-reply-button",
                             "data-a-selector": "qa-vod-chat-reply-button"
-                        }) : o.createElement(s.Eb, {
+                        }) : o.createElement(s.Cb, {
                             color: s.O.Link,
                             display: s.X.Inline,
                             margin: {
@@ -1250,7 +1250,7 @@
                             onClick: this.onReplyClickHandler,
                             "data-test-selector": "reply-reply-button"
                         }, o.createElement(s.W, {
-                            type: s.Vb.Span
+                            type: s.Tb.Span
                         }, e)))
                     }, t
                 }(o.Component))
@@ -3475,8 +3475,8 @@
                 C = n("uIkQ"),
                 k = n("GnwI"),
                 y = n("N0BP"),
-                S = n("DMoW"),
-                _ = n("/HY+"),
+                S = n("/HY+"),
+                _ = n("4qQ0"),
                 E = n("eJ65"),
                 O = n("Ue10"),
                 w = (n("oxdP"), function(e) {
@@ -3489,7 +3489,7 @@
                         margin: {
                             y: 2
                         }
-                    }, u.createElement("ul", null, u.createElement("li", null, u.createElement("span", null, Object(p.d)("All messages from this viewer will be deleted from your channel and videos", "chomments.moderation.deletePreviousMessages"))), u.createElement("li", null, u.createElement("span", null, Object(p.d)("This viewer will not be able to chat on your channel, videos, or Pulse posts", "chomments.moderation.disallowFutureMessages"))))), u.createElement(O.Eb, {
+                    }, u.createElement("ul", null, u.createElement("li", null, u.createElement("span", null, Object(p.d)("All messages from this viewer will be deleted from your channel and videos", "chomments.moderation.deletePreviousMessages"))), u.createElement("li", null, u.createElement("span", null, Object(p.d)("This viewer will not be able to chat on your channel, videos, or Pulse posts", "chomments.moderation.disallowFutureMessages"))))), u.createElement(O.Cb, {
                         background: O.r.Alt2,
                         display: O.X.Flex,
                         flexWrap: O.Ba.NoWrap,
@@ -3507,7 +3507,7 @@
                             width: "4rem",
                             height: "4rem"
                         }
-                    })), u.createElement("div", null, u.createElement(O.Eb, {
+                    })), u.createElement("div", null, u.createElement(O.Cb, {
                         margin: {
                             top: .5
                         },
@@ -3546,7 +3546,7 @@
                         var e = u.createElement(O.A, {
                                 ariaLabel: Object(p.d)("Message Options Menu", "ModeratorCommentMenu"),
                                 dropdown: !0,
-                                icon: O.tb.More,
+                                icon: O.rb.More,
                                 "data-test-selector": "menu-button"
                             }),
                             t = null;
@@ -3600,10 +3600,10 @@
                             e(Object(s.c)())
                         },
                         onMessageReportRequest: function(t, n, r) {
-                            e(Object(s.d)(_.a, {
+                            e(Object(s.d)(S.a, {
                                 title: Object(p.d)("Report this message?", "ModeratorCommentMenu"),
                                 reportContext: {
-                                    contentType: S.N.VOD_COMMENT_REPORT,
+                                    contentType: _.a.VideoChatMessage,
                                     contentID: t,
                                     targetUserID: n,
                                     additionalTrackingID: r
@@ -3676,7 +3676,7 @@
                     }))), u.createElement(O.z, {
                         ariaLabel: Object(p.d)("Go to message in video.", "MessageVideo"),
                         type: O.F.Text,
-                        icon: O.tb.Conversations,
+                        icon: O.rb.Conversations,
                         fullWidth: !0,
                         linkTo: o,
                         targetBlank: !0,
@@ -3721,14 +3721,14 @@
                         alt: e.author.displayName,
                         src: e.author.logo.toString(),
                         size: 40
-                    })), u.createElement(O.Eb, {
+                    })), u.createElement(O.Cb, {
                         fontSize: O.Ca.Size5,
                         color: O.O.Alt,
                         className: d.f + "-message"
                     }, u.createElement(d.h, {
                         allowActionTextColors: !1,
                         message: e.comment.message
-                    }), u.createElement(O.Eb, {
+                    }), u.createElement(O.Cb, {
                         margin: {
                             top: .5
                         },
@@ -3753,7 +3753,7 @@
                                 title: Object(p.d)("Delete this message?", "DashboardModerationReactionBar"),
                                 onConfirmClick: t.props.onDeleteConfirmClick,
                                 onDenyClick: t.props.onCloseDeleteModal,
-                                children: u.createElement(O.Eb, {
+                                children: u.createElement(O.Cb, {
                                     background: O.r.Alt2,
                                     padding: 2,
                                     margin: {
@@ -3823,7 +3823,7 @@
                             type: O.C.Hollow,
                             "data-a-selector": "qa-mod-delete-button",
                             "data-test-selector": "delete-comment-button",
-                            icon: O.tb.Trash,
+                            icon: O.rb.Trash,
                             onClick: this.deleteClickHandler
                         }))), n)
                     }, t
@@ -3964,7 +3964,7 @@
                             };
                         e.comment.state === d.c ? t.onUnpublishClick = this.onUnpublishClickHandler : t.onPublishClick = this.onPublishClickHandler;
                         var n = null;
-                        return e.comment.moreReplies && (n = u.createElement(O.Eb, {
+                        return e.comment.moreReplies && (n = u.createElement(O.Cb, {
                             fontSize: O.Ca.Size6,
                             padding: {
                                 left: 5,
@@ -3972,7 +3972,7 @@
                             }
                         }, u.createElement(d.k, {
                             onClick: this.onLoadMoreRepliesClickHandler
-                        }))), u.createElement(O.Eb, r.__assign({
+                        }))), u.createElement(O.Cb, r.__assign({
                             border: !0,
                             className: d.g + " qa-mod-comment",
                             fontSize: O.Ca.Size5
@@ -4021,7 +4021,7 @@
                             context: e
                         }), u.createElement(O.W, {
                             color: O.O.Base,
-                            type: O.Vb.H5
+                            type: O.Tb.H5
                         }, e.video.title))), u.createElement(O.P, {
                             cols: {
                                 default: 12,
@@ -4080,7 +4080,7 @@
                     return r.__extends(t, e), t.prototype.render = function() {
                         return u.createElement(O.Xa, {
                             className: "search-bar"
-                        }, u.createElement(O.vb, {
+                        }, u.createElement(O.tb, {
                             disabled: this.props.disabled,
                             onChange: this.changeHandler,
                             placeholder: Object(p.d)("Search by video", "chomments.moderation.searchByVideoPlaceholder"),
@@ -4149,7 +4149,7 @@
                                 video: r
                             }))
                         }), u.createElement(O.Xa, {
-                            position: O.jb.Relative
+                            position: O.hb.Relative
                         }, u.createElement(W.a, {
                             onClickOut: this.closeResults
                         }, u.createElement(G, {
@@ -4180,7 +4180,7 @@
                         searchTerm: e.searchTerm
                     })
                 })),
-                Y = Object(o.connect)(function(e, t) {
+                $ = Object(o.connect)(function(e, t) {
                     return {
                         searchHits: e.vodChat.moderation.searchHits,
                         searchTerm: t.selectedVideoTitle || ""
@@ -4199,7 +4199,7 @@
                         onSearchTermReset: t.onClearFilters
                     }
                 })(Z),
-                $ = function(e) {
+                Y = function(e) {
                     return u.createElement(O.Xa, {
                         display: O.X.Flex,
                         justifyContent: O.Wa.Center
@@ -4257,12 +4257,12 @@
                             n = e.data;
                         if ("" !== e.errorMessage || !this.props.data.loading && ! function(e) {
                                 return !e.data.loading && (e.data.user.id === e.data.currentUser.id || e.data.user.self.isModerator || e.data.currentUser.roles.isStaff || e.data.currentUser.roles.isGlobalMod || e.data.currentUser.roles.isSiteAdmin)
-                            }(this.props)) return u.createElement(O.Eb, {
+                            }(this.props)) return u.createElement(O.Cb, {
                             className: d.f + "__permissions",
                             color: O.O.Alt2,
-                            textAlign: O.Rb.Center
+                            textAlign: O.Pb.Center
                         }, u.createElement(O.W, {
-                            type: O.Vb.H3,
+                            type: O.Tb.H3,
                             italic: !0,
                             "data-test-selector": "unauthorized-test-selector"
                         }, this.props.errorMessage || Object(p.d)("You do not have permission to access this dashboard.", "ModerationPageComponent")));
@@ -4278,13 +4278,13 @@
                         var i = null;
                         if (this.props.comments.length < 1 && !n.loading && !n.error && this.props.hasFetchedComments) {
                             var a = Object(p.d)("You currently have no messages. Add a message to one of your videos to encourage conversation in your community.", "ModerationDashboard");
-                            "" !== this.props.videoFilter && (a = Object(p.d)("You currently have no messages on this video. Add a message to this video to encourage conversation in your community.", "ModerationDashboard")), i = u.createElement(O.Eb, {
+                            "" !== this.props.videoFilter && (a = Object(p.d)("You currently have no messages on this video. Add a message to this video to encourage conversation in your community.", "ModerationDashboard")), i = u.createElement(O.Cb, {
                                 className: d.f + "__empty",
                                 color: O.O.Alt2,
-                                textAlign: O.Rb.Center,
+                                textAlign: O.Pb.Center,
                                 key: "modDashboardNoComments"
                             }, u.createElement(O.W, {
-                                type: O.Vb.H3,
+                                type: O.Tb.H3,
                                 italic: !0,
                                 "data-test-selector": "no-comments-test-selector"
                             }, a))
@@ -4317,20 +4317,20 @@
                         }, u.createElement(O.Xa, {
                             padding: 2,
                             fullWidth: !0
-                        }, u.createElement(O.Eb, {
+                        }, u.createElement(O.Cb, {
                             className: d.f + "__filters",
                             fullWidth: !0,
                             padding: 2,
                             borderMarked: !0,
                             border: !0,
                             display: O.X.Flex
-                        }, u.createElement(Y, {
+                        }, u.createElement($, {
                             creatorId: n.user && n.user.id || "",
                             disabled: !(n.user && n.user.id),
                             onSearchClick: this.props.onSearchClick,
                             onClearFilters: this.props.onClearFiltersClick,
                             selectedVideoTitle: s
-                        }), o), c, u.createElement($, r.__assign({}, te(this.props)))))
+                        }), o), c, u.createElement(Y, r.__assign({}, te(this.props)))))
                     }, t.prototype.setPageTitle = function() {
                         if (this.props.data.user) {
                             var e = this.props.data.user.displayName;
@@ -5129,13 +5129,13 @@
                     }, t.prototype.render = function() {
                         var e = null;
                         return this.props.message === Object(u.a)().chatReplayFilterError && (e = i.createElement(m.W, {
-                            type: m.Vb.Span
+                            type: m.Tb.Span
                         }, " ", i.createElement(m.W, {
-                            type: m.Vb.Span,
-                            decoration: m.Tb.Underline
+                            type: m.Tb.Span,
+                            decoration: m.Rb.Underline
                         }, i.createElement("a", {
                             onClick: this.props.onMessageClick
-                        }, Object(s.d)("Click here to show all messages.", "CommentError"))))), i.createElement(m.Eb, {
+                        }, Object(s.d)("Click here to show all messages.", "CommentError"))))), i.createElement(m.Cb, {
                             alignItems: m.f.Center,
                             background: m.r.Base,
                             className: "anim-swoop",
@@ -5148,15 +5148,15 @@
                                 y: 1,
                                 x: 2
                             },
-                            position: m.jb.Absolute,
-                            zIndex: m.ic.Above
+                            position: m.hb.Absolute,
+                            zIndex: m.gc.Above
                         }, i.createElement(m.W, {
-                            type: m.Vb.Span
+                            type: m.Tb.Span
                         }, this.props.message, e), i.createElement(m.Xa, {
                             alignSelf: m.g.Start
                         }, i.createElement(m.A, {
                             ariaLabel: Object(s.d)("Close", "CommentErrorComponent"),
-                            icon: m.tb.Close,
+                            icon: m.rb.Close,
                             onClick: this.onManualErrorDismissClickHandler
                         })))
                     }, t
@@ -5197,7 +5197,7 @@
                             }
                         }, i.createElement(m.Xa, null, Object(h.d)("Show me only messages posted during the live broadcast", "VideoChatSettings")), i.createElement(m.Xa, {
                             flexShrink: 0
-                        }, i.createElement(m.Xb, {
+                        }, i.createElement(m.Vb, {
                             checked: this.props.isReplayFilterOn,
                             "data-test-selector": "reply-mode",
                             onChange: this.onReplayModeChange
@@ -5234,7 +5234,7 @@
                             }
                         }, i.createElement(m.Xa, null, Object(h.d)("Hide timestamps", "VideoChatSettings")), i.createElement(m.Xa, {
                             flexShrink: 0
-                        }, i.createElement(m.Xb, {
+                        }, i.createElement(m.Vb, {
                             "data-test-selector": "timestamp-mode",
                             checked: this.props.hideTimestamps,
                             onChange: this.onTimestampModeChange
@@ -5343,7 +5343,7 @@
                     return this.props.currentUser && (t = i.createElement(b.d, {
                         emotes: this.getSessionSpecificEmotes()
                     })), i.createElement("div", null, i.createElement(m.Xa, {
-                        position: m.jb.Relative
+                        position: m.hb.Relative
                     }, i.createElement(b.b, {
                         componentType: b.a.TextArea,
                         suggestionSource: b.c.Chat,
@@ -5363,7 +5363,7 @@
                         onClickEmote: this.onEmoticonClick,
                         attachTop: !0,
                         attachRight: !0,
-                        position: m.jb.Absolute
+                        position: m.hb.Absolute
                     })), i.createElement(m.Xa, {
                         margin: {
                             top: 1
@@ -5381,8 +5381,8 @@
                             x: .5
                         },
                         display: m.X.Flex
-                    }, i.createElement(m.sb, {
-                        asset: m.tb.GlyphLength
+                    }, i.createElement(m.qb, {
+                        asset: m.rb.GlyphLength
                     })), i.createElement("span", {
                         "data-test-selector": T.CurrentTime
                     }, Object(g.b)(this.props.currentVideoTime))))))
@@ -5398,9 +5398,9 @@
                         margin: {
                             right: .5
                         }
-                    }, i.createElement(m.Yb, {
-                        align: m.Zb.Left,
-                        direction: m.ac.Top,
+                    }, i.createElement(m.Wb, {
+                        align: m.Xb.Left,
+                        direction: m.Yb.Top,
                         label: Object(h.d)("Jump to video", "TimeStamp")
                     }, i.createElement(m.Ua, {
                         onClick: n,
@@ -5436,8 +5436,8 @@
                 Q = "relative-time-title",
                 K = "share-button",
                 Z = "share-button-clicked",
-                Y = 3e3,
-                $ = function(e) {
+                $ = 3e3,
+                Y = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -5453,7 +5453,7 @@
                                 padding: {
                                     y: 1
                                 }
-                            }, i.createElement(m.Eb, {
+                            }, i.createElement(m.Cb, {
                                 display: m.X.Flex,
                                 margin: {
                                     x: 1
@@ -5462,7 +5462,7 @@
                                     bottom: .5
                                 }
                             }, i.createElement(m.W, {
-                                type: m.Vb.Span
+                                type: m.Tb.Span
                             }, Object(h.d)("Are you sure you want to perform this action?", "chomments.moderation.confirmAction"))), i.createElement(m.Xa, {
                                 display: m.X.Flex,
                                 justifyContent: m.Wa.Center,
@@ -5482,12 +5482,12 @@
                                 "data-test-selector": H.c
                             }, Object(h.d)("No", "MessageOptionsMenu"))));
                             var e = [];
-                            t.props.isExpandedLayout || e.push(i.createElement(m.Eb, {
+                            t.props.isExpandedLayout || e.push(i.createElement(m.Cb, {
                                 key: t.props.context.comment.id,
                                 color: m.O.Alt2,
                                 display: m.X.Flex,
                                 "data-test-selector": Q
-                            }, i.createElement(m.Eb, {
+                            }, i.createElement(m.Cb, {
                                 margin: {
                                     x: 1
                                 },
@@ -5497,8 +5497,8 @@
                                 fullWidth: !0,
                                 borderBottom: !0
                             }, i.createElement(m.W, {
-                                type: m.Vb.Span
-                            }, Object(h.d)("Posted ", "MessageOptionsMenu"), Object(h.i)(t.props.context.comment.createdAt)))), i.createElement(m.Eb, {
+                                type: m.Tb.Span
+                            }, Object(h.d)("Posted ", "MessageOptionsMenu"), Object(h.i)(t.props.context.comment.createdAt)))), i.createElement(m.Cb, {
                                 key: t.props.context.comment.id + "2",
                                 display: m.X.Flex,
                                 color: m.O.Link
@@ -5521,7 +5521,7 @@
                                 type: m.Va.Alert,
                                 onClick: t.onDeleteButtonClickHandler,
                                 "data-test-selector": q
-                            }, i.createElement(m.Eb, {
+                            }, i.createElement(m.Cb, {
                                 margin: {
                                     x: 1
                                 },
@@ -5553,7 +5553,7 @@
                             }, Object(h.d)("Copy Link", "MessageOptionsMenu")));
                             t.state.isLinkCopied && (r = i.createElement(m.z, {
                                 fullWidth: !0,
-                                icon: m.tb.Check,
+                                icon: m.rb.Check,
                                 type: m.F.Success,
                                 "data-test-selector": Z
                             }, i.createElement(m.Xa, {
@@ -5561,7 +5561,7 @@
                                 alignItems: m.f.Center,
                                 justifyContent: m.Wa.Start
                             }, Object(h.d)("Copied to clipboard", "MessageOptionsMenu"))));
-                            var o = i.createElement(m.Eb, {
+                            var o = i.createElement(m.Cb, {
                                 display: m.X.Flex,
                                 fullWidth: !0,
                                 key: t.props.context.comment.id + "-share",
@@ -5594,7 +5594,7 @@
                                     t.setState({
                                         isLinkCopied: !1
                                     })
-                                }, Y)
+                                }, $)
                             }), Object(O.l)(e, r)
                         }, t.onReplyClickHandler = function() {
                             t.props.onReplyClick(Object(B.b)(t.props.context.author)), t.closeMenu()
@@ -5624,7 +5624,7 @@
                         clearTimeout(this.dismissTimeoutID)
                     }, t.prototype.render = function() {
                         return i.createElement(m.Xa, {
-                            position: m.jb.Relative
+                            position: m.hb.Relative
                         }, i.createElement(L.a, {
                             onClickOut: this.closeMenu
                         }, i.createElement(m.A, {
@@ -5632,7 +5632,7 @@
                             size: m.B.Small,
                             type: m.C.Secondary,
                             "data-test-selector": "menu-button",
-                            icon: m.tb.More,
+                            icon: m.rb.More,
                             onClick: this.onToggleMenu
                         }), i.createElement(m.u, {
                             direction: m.v.BottomRight,
@@ -5679,7 +5679,7 @@
                                 className: d,
                                 "data-test-selector": "menu-options-wrapper",
                                 flexShrink: 0
-                            }, i.createElement($, {
+                            }, i.createElement(Y, {
                                 context: n,
                                 isCurrentUserModerator: this.props.isCurrentUserModerator,
                                 isExpandedLayout: this.props.isExpandedLayout,
@@ -5771,7 +5771,7 @@
                             }, i.createElement(m.W, {
                                 color: m.O.Alt2,
                                 fontSize: m.Ca.Size7,
-                                type: m.Vb.Span
+                                type: m.Tb.Span
                             }, " • " + Object(h.i)(e.comment.createdAt))))
                         }, t.makeReply = function(e) {
                             var n = null;
@@ -5838,7 +5838,7 @@
                         }, i.createElement(m.W, {
                             color: m.O.Alt2,
                             fontSize: m.Ca.Size7,
-                            type: m.Vb.Span
+                            type: m.Tb.Span
                         }, " • " + Object(h.i)(this.props.parentMessage.comment.createdAt))))), i.createElement(m.Xa, null, n, i.createElement(m.Xa, {
                             margin: {
                                 y: .5,
@@ -5914,7 +5914,7 @@
                             "data-test-selector": "message-timestamp",
                             display: m.X.Flex,
                             flexShrink: 0,
-                            textAlign: m.Rb.Right
+                            textAlign: m.Pb.Right
                         }, i.createElement(x, {
                             offset: this.props.timeStampOffset,
                             onClick: this.onTimestampClickHandler
@@ -5991,14 +5991,14 @@
                             padding: {
                                 x: 1
                             },
-                            position: m.jb.Absolute,
+                            position: m.hb.Absolute,
                             attachBottom: !0
                         }, i.createElement("button", {
                             onClick: this.syncButtonClick
-                        }, Object(s.d)("Resume auto scroll", "MessageScrollArea")))), i.createElement(m.Eb, {
+                        }, Object(s.d)("Resume auto scroll", "MessageScrollArea")))), i.createElement(m.Cb, {
                             fullHeight: !0,
                             overflow: m.cb.Hidden,
-                            position: m.jb.Relative
+                            position: m.hb.Relative
                         }, i.createElement("div", {
                             className: t,
                             onKeyDown: this.allowScrolling,
@@ -6189,7 +6189,7 @@
                                 message: this.props.errorMessage,
                                 onErrorDismissed: this.onErrorDismissedHandler,
                                 onMessageClick: this.onErrorMessageClickHandler
-                            })), !d || !d.owner || l.loading || l.error || this.props.disableChatForVideo) p = i.createElement(m.ib, {
+                            })), !d || !d.owner || l.loading || l.error || this.props.disableChatForVideo) p = i.createElement(m.gb, {
                             "data-test-selector": I.MessageInputPlaceholder,
                             height: 90,
                             width: 340
@@ -6212,7 +6212,7 @@
                                 videoOwnerLogin: d.owner.login
                             })
                         }
-                        return i.createElement(m.Eb, {
+                        return i.createElement(m.Cb, {
                             className: o("video-chat", "qa-vod-chat"),
                             display: m.X.Flex,
                             background: m.r.Alt2,
@@ -6223,7 +6223,7 @@
                             flexWrap: m.Ba.NoWrap,
                             fullHeight: !0,
                             fullWidth: !0,
-                            position: m.jb.Relative
+                            position: m.hb.Relative
                         }, i.createElement(m.Xa, {
                             alignItems: m.f.Center,
                             className: "video-chat__header",
@@ -6231,7 +6231,7 @@
                             flexShrink: 0,
                             justifyContent: m.Wa.Center
                         }, i.createElement(m.W, {
-                            type: m.Vb.Span
+                            type: m.Tb.Span
                         }, Object(s.d)("Chat on Videos", "VideoChatPresentation"))), g, i.createElement(ce, {
                             startSynced: h,
                             isScrollingSynced: this.props.isScrollingSynced,
@@ -6335,7 +6335,7 @@
                 y = n("F6GT"),
                 S = n("x0gr"),
                 _ = c.a.wrap(function() {
-                    return n.e(198).then(n.bind(null, "8MX0"))
+                    return n.e(192).then(n.bind(null, "8MX0"))
                 }, "ChatSettingsComponent"),
                 E = function(e) {
                     function t() {
@@ -6484,7 +6484,7 @@
                             onToggle: this.props.onToggle,
                             ref: this.setToggleBalloonRef
                         }, o.createElement(M.A, {
-                            icon: M.tb.Gear,
+                            icon: M.rb.Gear,
                             ariaLabel: Object(D.d)("Chat settings", "ChatInput"),
                             "data-a-target": "chat-settings",
                             disabled: !!this.props.disabled
@@ -6644,8 +6644,8 @@
                         onClick: this.onBadgeClickHandler,
                         target: "_blank",
                         "data-a-target": "chat-badge"
-                    }, c)), this.state.isHovering ? o.createElement(a.Yb, {
-                        align: a.Zb.Left,
+                    }, c)), this.state.isHovering ? o.createElement(a.Wb, {
+                        align: a.Xb.Left,
                         "data-a-target": "chat-badge",
                         display: a.X.Inline,
                         key: n,
@@ -6944,7 +6944,7 @@
                     }, o.createElement(s.Xa, {
                         flexGrow: 0,
                         flexShrink: 0,
-                        position: s.jb.Relative
+                        position: s.hb.Relative
                     }, o.createElement(s.I, {
                         alt: e.video.title,
                         aspect: s.p.Aspect16x9,
@@ -6965,7 +6965,7 @@
                         fullWidth: !0,
                         overflow: s.cb.Hidden
                     }, o.createElement(s.W, {
-                        type: s.Vb.H3,
+                        type: s.Tb.H3,
                         fontSize: s.Ca.Size6,
                         title: e.video.title,
                         ellipsis: !0
@@ -6974,20 +6974,20 @@
                     }, t)))
                 },
                 l = function(e) {
-                    return e ? o.createElement(s.Eb, {
+                    return e ? o.createElement(s.Cb, {
                         background: s.r.Overlay,
                         attachTop: !0,
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
-                        position: s.jb.Absolute,
+                        position: s.hb.Absolute,
                         alignItems: s.f.Center,
                         "data-test-selector": r.Overlay,
                         display: s.X.Flex,
                         flexDirection: s.Aa.Column,
                         justifyContent: s.Wa.Center
-                    }, o.createElement(s.sb, {
-                        asset: s.tb.Check
+                    }, o.createElement(s.qb, {
+                        asset: s.rb.Check
                     })) : null
                 }
         },

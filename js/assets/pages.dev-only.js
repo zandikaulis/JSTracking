@@ -344,7 +344,7 @@
             ! function(e) {
                 e.Previous = "previous", e.Next = "next"
             }(a || (a = {}));
-            var m = ((r = {})[a.Previous] = u.tb.AngleLeft, r[a.Next] = u.tb.AngleRight, r),
+            var m = ((r = {})[a.Previous] = u.rb.AngleLeft, r[a.Next] = u.rb.AngleRight, r),
                 h = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -424,7 +424,7 @@
                                 });
                             return l.createElement(u.Xa, {
                                 className: d,
-                                position: u.jb.Relative,
+                                position: u.hb.Relative,
                                 display: u.X.Flex,
                                 alignItems: u.f.Stretch
                             }, l.createElement(u.A, {
@@ -448,7 +448,7 @@
                         window.removeEventListener("resize", this.onResize)
                     }, t.prototype.render = function() {
                         return l.createElement(u.Pa, i.__assign({}, this.props, {
-                            position: u.jb.Relative
+                            position: u.hb.Relative
                         }), l.createElement("div", {
                             className: "media-carousel",
                             ref: this.refHandler,
@@ -479,7 +479,7 @@
                             className: "media-carousel__nav",
                             display: u.X.Flex,
                             alignItems: u.f.Center,
-                            position: u.jb.Absolute,
+                            position: u.hb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullHeight: !0
@@ -487,7 +487,7 @@
                             className: "media-carousel__nav",
                             display: u.X.Flex,
                             alignItems: u.f.Center,
-                            position: u.jb.Absolute,
+                            position: u.hb.Absolute,
                             attachTop: !0,
                             attachRight: !0,
                             fullHeight: !0
@@ -883,10 +883,10 @@
                             margin: {
                                 right: 1
                             }
-                        }, a.createElement(c.ib, {
+                        }, a.createElement(c.gb, {
                             height: 90,
                             width: 90
-                        })), a.createElement(c.Xa, null, a.createElement(c.ib, {
+                        })), a.createElement(c.Xa, null, a.createElement(c.gb, {
                             width: 300,
                             lineCount: 3
                         }))));
@@ -900,10 +900,10 @@
                             margin: {
                                 right: 1
                             }
-                        }, a.createElement(c.ib, {
+                        }, a.createElement(c.gb, {
                             height: 90,
                             width: 90
-                        })), a.createElement(c.Xa, null, a.createElement(c.ib, {
+                        })), a.createElement(c.Xa, null, a.createElement(c.gb, {
                             width: 300,
                             lineCount: 3
                         }))));
@@ -956,17 +956,17 @@
                     }, "Logging and error reporting"), a.createElement("div", null, a.createElement(c.z, {
                         onClick: k
                     }, "Log a debug-level message"), a.createElement(c.z, {
-                        onClick: w
-                    }, "Log a info-level message"), a.createElement(c.z, {
                         onClick: C
+                    }, "Log a info-level message"), a.createElement(c.z, {
+                        onClick: w
                     }, "Log a warning-level message"), a.createElement(c.z, {
                         onClick: O
                     }, "Log an error-level message with error"), a.createElement(c.z, {
-                        onClick: x
+                        onClick: T
                     }, "Log a fatal-level message with error"), a.createElement(c.z, {
                         onClick: S
                     }, "Log message with unserializable argument"), a.createElement(c.z, {
-                        onClick: N
+                        onClick: x
                     }, "Throw an error")), a.createElement("h2", {
                         style: {
                             margin: "2rem 0"
@@ -1034,7 +1034,7 @@
                             top: 2
                         }
                     }, a.createElement(c.W, {
-                        type: c.Vb.H2
+                        type: c.Tb.H2
                     }, "Infinite Scroll Test"), a.createElement(_, null))))
                 });
 
@@ -1042,11 +1042,11 @@
                 f.k.debug("debug message")
             }
 
-            function w() {
+            function C() {
                 f.k.info("info message")
             }
 
-            function C() {
+            function w() {
                 f.k.warn("warn message")
             }
 
@@ -1063,7 +1063,7 @@
                 }
             }
 
-            function x() {
+            function T() {
                 try {
                     throw new Error("throwing a super bad unrecoverable error.")
                 } catch (e) {
@@ -1071,11 +1071,11 @@
                 }
             }
 
-            function N() {
+            function x() {
                 throw new Error("Throwing an uncaught error.")
             }
-            var P = n("VQbD"),
-                T = (n("NrqC"), function(e) {
+            var N = n("VQbD"),
+                P = (n("NrqC"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1084,7 +1084,7 @@
                             className: "testing-carousel",
                             padding: 3
                         }, a.createElement(c.W, {
-                            type: c.Vb.H2
+                            type: c.Tb.H2
                         }, "Media Carousel - Standard"), a.createElement(c.Xa, {
                             "data-a-target": "carousel-standard"
                         }, a.createElement(c.Pa, {
@@ -1092,10 +1092,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(P.a, {
+                        }, a.createElement(N.a, {
                             items: this.renderStandardItems()
                         }))), a.createElement(c.W, {
-                            type: c.Vb.H2
+                            type: c.Tb.H2
                         }, "Media Carousel - Tiny"), a.createElement(c.Xa, {
                             "data-a-target": "carousel-standard-tiny"
                         }, a.createElement(c.Pa, {
@@ -1103,10 +1103,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(P.a, {
+                        }, a.createElement(N.a, {
                             items: this.renderStandardTinyItems()
                         }))), a.createElement(c.W, {
-                            type: c.Vb.H2
+                            type: c.Tb.H2
                         }, "Media Carousel - HUGE"), a.createElement(c.Xa, {
                             "data-a-target": "carousel-standard-huge"
                         }, a.createElement(c.Pa, {
@@ -1114,10 +1114,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(P.a, {
+                        }, a.createElement(N.a, {
                             items: this.renderStandardHugeItems()
                         }))), a.createElement(c.W, {
-                            type: c.Vb.H2
+                            type: c.Tb.H2
                         }, "Media Carousel - Single"), a.createElement(c.Xa, {
                             "data-a-target": "carousel-single"
                         }, a.createElement(c.Pa, {
@@ -1125,10 +1125,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(P.a, {
+                        }, a.createElement(N.a, {
                             items: this.renderSingleItem()
                         }))), a.createElement(c.W, {
-                            type: c.Vb.H2
+                            type: c.Tb.H2
                         }, "Media Carousel - Single and HUGE"), a.createElement(c.Xa, {
                             "data-a-target": "carousel-single-huge"
                         }, a.createElement(c.Pa, {
@@ -1136,10 +1136,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(P.a, {
+                        }, a.createElement(N.a, {
                             items: this.renderSingleHugeItem()
                         }))), a.createElement(c.W, {
-                            type: c.Vb.H2
+                            type: c.Tb.H2
                         }, "Media Carousel - Various Widths"), a.createElement(c.Xa, {
                             "data-a-target": "carousel-various-widths"
                         }, a.createElement(c.Pa, {
@@ -1147,7 +1147,7 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(P.a, {
+                        }, a.createElement(N.a, {
                             items: this.renderVariousWidthItems()
                         })))))
                     }, t.prototype.renderStandardItems = function() {
@@ -1165,7 +1165,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Vb.H1,
+                                type: c.Tb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1184,7 +1184,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Vb.H1,
+                                type: c.Tb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1203,7 +1203,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Vb.H1,
+                                type: c.Tb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1222,7 +1222,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Vb.H1,
+                                type: c.Tb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1241,7 +1241,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Vb.H1,
+                                type: c.Tb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1260,7 +1260,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Vb.H1,
+                                type: c.Tb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1305,10 +1305,10 @@
                         }, t ? "Enabled" : "Disabled"), a.createElement(c.W, null, "Query String: ?gdpr_override / ?eea"), a.createElement(c.W, null, "Dynamic Settings: gdpr_consent_enabled"), a.createElement(c.Ea, {
                             label: "Grant test consent",
                             orientation: c.Fa.Horizontal
-                        }, a.createElement(c.Xb, {
+                        }, a.createElement(c.Vb, {
                             onChange: this.onToggleTwitchAdsConsent,
                             checked: this.props.twitchAdsConsent
-                        }))), a.createElement(c.Eb, {
+                        }))), a.createElement(c.Cb, {
                             padding: {
                                 y: 1
                             },
@@ -1319,7 +1319,7 @@
                         }, this.state.gdprStates.map(function(e, t) {
                             var n = e.status,
                                 r = e.blockConsentRequiredContent ? "gdpr-status-text" : "gdpr-status-text--safe";
-                            return a.createElement(c.Eb, {
+                            return a.createElement(c.Cb, {
                                 border: !0,
                                 margin: {
                                     right: 1
@@ -1363,11 +1363,11 @@
                 }), Object(D.j)(A))(I),
                 q = n("yR8l"),
                 F = n("cViM"),
-                X = function(e) {
+                B = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderPropState = function(e, t) {
-                            return a.createElement(c.Eb, {
+                            return a.createElement(c.Cb, {
                                 border: !0,
                                 margin: 1,
                                 padding: 1,
@@ -1414,28 +1414,28 @@
                         }))
                     }, t
                 }(a.Component),
-                B = Object(q.a)(F)(X),
+                X = Object(q.a)(F)(B),
                 j = n("+6oQ"),
-                V = function(e) {
+                H = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return this.props.data.currentUser ? a.createElement(B, null) : null
+                        return this.props.data.currentUser ? a.createElement(X, null) : null
                     }, t
                 }(a.Component),
-                H = Object(q.a)(j)(V),
-                z = n("+5a/"),
-                G = function(e) {
+                z = Object(q.a)(j)(H),
+                G = n("+5a/"),
+                M = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(H, null)
+                        return a.createElement(z, null)
                     }, t
                 }(a.Component),
-                M = Object(q.a)(z)(G),
-                Q = n("oJmH"),
+                Q = Object(q.a)(G)(M),
+                V = n("oJmH"),
                 J = n("wIs1"),
                 Y = n("LL7G"),
                 K = function(e) {
@@ -1450,7 +1450,7 @@
                         }, a.createElement("p", null, "Testing GraphQL"))
                     }, t
                 }(a.Component),
-                $ = Object(Q.compose)(Object(q.a)(Y, {
+                $ = Object(V.compose)(Object(q.a)(Y, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1525,7 +1525,7 @@
                         component: Z
                     }), a.createElement(i.a, {
                         path: "/_dev/gql_loading",
-                        component: M
+                        component: Q
                     }), a.createElement(i.a, {
                         path: "/_dev/gdpr",
                         component: W
@@ -1534,7 +1534,7 @@
                         component: te
                     }), a.createElement(i.a, {
                         path: "/_dev/testing/carousel",
-                        component: T
+                        component: P
                     }), a.createElement(i.a, {
                         path: "/_dev/context",
                         component: g

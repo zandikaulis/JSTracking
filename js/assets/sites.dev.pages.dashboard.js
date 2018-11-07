@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [108], {
+    [107], {
         "5g1g": function(e, t, n) {
             "use strict";
             var a = n("mrSG"),
@@ -39,25 +39,25 @@
                 h = n("Ints"),
                 f = n("Ue10"),
                 D = p.a.wrap(function() {
-                    return n.e(224).then(n.bind(null, "RkBb"))
+                    return n.e(218).then(n.bind(null, "RkBb"))
                 }, "DevOverviewPage"),
                 g = p.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(223)]).then(n.bind(null, "dE6c"))
+                    return Promise.all([n.e(0), n.e(217)]).then(n.bind(null, "dE6c"))
                 }, "DevAppsPage"),
                 E = p.a.wrap(function() {
-                    return n.e(222).then(n.bind(null, "OfRZ"))
+                    return n.e(216).then(n.bind(null, "OfRZ"))
                 }, "DevAppCreatePage"),
                 k = p.a.wrap(function() {
-                    return n.e(221).then(n.bind(null, "AhYx"))
+                    return n.e(215).then(n.bind(null, "AhYx"))
                 }, "DevAppEditPage"),
                 O = p.a.wrap(function() {
-                    return n.e(220).then(n.bind(null, "635G"))
+                    return n.e(214).then(n.bind(null, "635G"))
                 }, "DevGamesPage"),
                 j = p.a.wrap(function() {
-                    return Promise.all([n.e(31), n.e(0), n.e(219)]).then(n.bind(null, "QH5d"))
+                    return Promise.all([n.e(31), n.e(0), n.e(213)]).then(n.bind(null, "QH5d"))
                 }, "DevDropsDashboardRoot"),
                 y = p.a.wrap(function() {
-                    return n.e(218).then(n.bind(null, "DrWK"))
+                    return n.e(212).then(n.bind(null, "DrWK"))
                 }, "DevExtensionsEnableMonetizationPage"),
                 w = function(e) {
                     function t() {
@@ -77,11 +77,11 @@
                                 bottom: 2
                             },
                             className: "dev-dashboard"
-                        }, i.createElement(f.rb, {
+                        }, i.createElement(f.pb, {
                             centered: !0
                         }, i.createElement("header", {
                             className: "dev-dashboard__header"
-                        }, i.createElement(f.Eb, {
+                        }, i.createElement(f.Cb, {
                             padding: {
                                 bottom: 2
                             },
@@ -90,33 +90,33 @@
                             },
                             borderBottom: !0
                         }, i.createElement(f.W, {
-                            type: f.Vb.H2
+                            type: f.Tb.H2
                         }, Object(u.d)("Dashboard", "DevDashboard"))), i.createElement(f.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, i.createElement(f.Gb, null, i.createElement(f.Fb, {
+                        }, i.createElement(f.Eb, null, i.createElement(f.Db, {
                             linkTo: "https://dev.twitch.tv/dashboard",
                             active: this.isActive("", !0)
-                        }, Object(u.d)("Overview", "DevDashboard")), i.createElement(f.Fb, {
+                        }, Object(u.d)("Overview", "DevDashboard")), i.createElement(f.Db, {
                             onClick: Object(v.c)(v.a.ViewExtensions),
                             linkTo: "https://dev.twitch.tv/dashboard/extensions",
                             active: this.isActive("extensions")
-                        }, Object(u.d)("Extensions", "DevDashboard")), i.createElement(f.Fb, {
+                        }, Object(u.d)("Extensions", "DevDashboard")), i.createElement(f.Db, {
                             onClick: Object(v.c)(v.a.ViewApps),
                             linkTo: "/console/apps",
                             active: this.isActive("apps")
-                        }, Object(u.d)("Apps", "DevDashboard")), i.createElement(f.Fb, {
+                        }, Object(u.d)("Apps", "DevDashboard")), i.createElement(f.Db, {
                             onClick: Object(v.c)(v.a.ViewGames),
                             linkTo: "/console/games",
                             active: this.isActive("games")
-                        }, Object(u.d)("Games", "DevDashboard")), i.createElement(f.Fb, {
+                        }, Object(u.d)("Games", "DevDashboard")), i.createElement(f.Db, {
                             onClick: Object(v.c)(v.a.ViewDrops),
                             linkTo: "/console/drops",
                             active: this.isActive("drops")
                         }, Object(u.d)("Drops", "DevDashboard")), i.createElement(b.a, {
                             name: "bounty_board_brand_portal_enabled"
-                        }, i.createElement(h.a, null, i.createElement(f.Fb, {
+                        }, i.createElement(h.a, null, i.createElement(f.Db, {
                             linkTo: "/console/bounty-board",
                             active: this.isActive("bounty-board")
                         }, Object(u.d)("Bounty Board", "DevDashboard"))))))), i.createElement(f.Xa, {

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [131], {
+    [130], {
         "3lt/": function(e, t, n) {
             "use strict";
             n("mrSG"), n("uhBA");
@@ -38,8 +38,8 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = Object(f.c)(new Date(this.props.file.fileDate), "short");
-                        return o.createElement(m.Mb, null, o.createElement(m.Jb, null, e), o.createElement(m.Jb, null, this.props.file.fileName), o.createElement(m.Jb, null, b.a[this.props.file.releaseType]), o.createElement(m.Jb, null, this.props.installed && o.createElement(m.W, null, Object(f.d)("Installed", "AddonDetailVersion")), !this.props.installed && o.createElement(m.A, {
-                            icon: m.tb.Download,
+                        return o.createElement(m.Kb, null, o.createElement(m.Hb, null, e), o.createElement(m.Hb, null, this.props.file.fileName), o.createElement(m.Hb, null, b.a[this.props.file.releaseType]), o.createElement(m.Hb, null, this.props.installed && o.createElement(m.W, null, Object(f.d)("Installed", "AddonDetailVersion")), !this.props.installed && o.createElement(m.A, {
+                            icon: m.rb.Download,
                             onClick: this.onDownload
                         })))
                     }, t
@@ -51,9 +51,9 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            dateSorting: m.Bb.Descending
+                            dateSorting: m.zb.Descending
                         }, t.renderRows = function() {
-                            return (t.state.dateSorting === m.Bb.Descending ? t.props.files.sort(function(e, t) {
+                            return (t.state.dateSorting === m.zb.Descending ? t.props.files.sort(function(e, t) {
                                 return new Date(t.fileDate).getTime() - new Date(e.fileDate).getTime()
                             }) : t.props.files.sort(function(e, t) {
                                 return new Date(e.fileDate).getTime() - new Date(t.fileDate).getTime()
@@ -67,7 +67,7 @@
                             })
                         }, t.onChangeSort = function() {
                             t.setState({
-                                dateSorting: t.state.dateSorting === m.Bb.Descending ? m.Bb.Ascending : m.Bb.Descending
+                                dateSorting: t.state.dateSorting === m.zb.Descending ? m.zb.Ascending : m.zb.Descending
                             })
                         }, t
                     }
@@ -77,18 +77,18 @@
                             padding: {
                                 x: 2
                             }
-                        }, o.createElement(m.Hb, null, o.createElement(m.Kb, null, o.createElement(m.Lb, {
+                        }, o.createElement(m.Fb, null, o.createElement(m.Ib, null, o.createElement(m.Jb, {
                             "data-test-selector": i.SortingHeader,
                             onClick: this.onChangeSort,
                             sorting: this.state.dateSorting,
                             label: Object(f.d)("Release Date", "AddonDetailsVersionTable")
-                        }), o.createElement(m.Lb, {
+                        }), o.createElement(m.Jb, {
                             label: Object(f.d)("File Name", "AddonDetailsVersionTable")
-                        }), o.createElement(m.Lb, {
+                        }), o.createElement(m.Jb, {
                             label: Object(f.d)("File Type", "AddonDetailsVersionTable")
-                        }), o.createElement(m.Lb, {
+                        }), o.createElement(m.Jb, {
                             label: Object(f.d)("Actions", "AddonDetailsVersionTable")
-                        })), o.createElement(m.Ib, null, e)))
+                        })), o.createElement(m.Gb, null, e)))
                     }, t
                 }(o.Component),
                 w = n("3lt/"),

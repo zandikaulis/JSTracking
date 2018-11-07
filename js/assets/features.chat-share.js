@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [192], {
+    [186], {
         "1VMv": function(e, t) {
             var n = {
                 kind: "Document",
@@ -371,26 +371,26 @@
                             attachTop: !0,
                             attachLeft: !0,
                             attachRight: !0,
-                            position: k.jb.Absolute
-                        }, r.createElement(k.Eb, {
+                            position: k.hb.Absolute
+                        }, r.createElement(k.Cb, {
                             className: "share-input__container",
-                            position: k.jb.Relative,
+                            position: k.hb.Relative,
                             border: !0,
                             background: k.r.Base,
                             padding: 1
                         }, r.createElement(k.Xa, {
-                            position: k.jb.Absolute,
+                            position: k.hb.Absolute,
                             attachTop: !0,
                             attachRight: !0
                         }, r.createElement(k.A, {
                             ariaLabel: a,
                             onClick: this.props.onClose,
                             type: k.C.Secondary,
-                            icon: k.tb.Close,
+                            icon: k.rb.Close,
                             "data-a-target": "resub-notification-close-form-btn",
                             "data-test-selector": "share-input__close-form-btn"
                         })), r.createElement(k.Xa, {
-                            textAlign: k.Rb.Center,
+                            textAlign: k.Pb.Center,
                             padding: {
                                 top: 1,
                                 bottom: 2
@@ -424,7 +424,7 @@
                             "chat-share-prompt--hidden": e.hide || !e.children
                         });
                     return r.createElement(k.Xa, {
-                        position: k.jb.Absolute,
+                        position: k.hb.Absolute,
                         fullWidth: !0,
                         className: a,
                         padding: {
@@ -465,7 +465,7 @@
                         ariaLabel: n,
                         onClick: e.onClickClose,
                         type: k.C.Secondary,
-                        icon: k.tb.Close,
+                        icon: k.rb.Close,
                         "data-a-target": "resub-notification-close-notification-btn",
                         "data-test-selector": "share-prompt__close-btn"
                     })))))
@@ -615,7 +615,7 @@
                             attachTop: !0,
                             attachLeft: !0,
                             attachRight: !0,
-                            position: k.jb.Absolute
+                            position: k.hb.Absolute
                         }, r.createElement(b, {
                             hide: this.state.showMessageInput,
                             onClickShare: this.toggleContentShown,
@@ -729,25 +729,25 @@
                         overflow: k.cb.Hidden,
                         className: "rare-emote"
                     }, r.createElement(k.Pa, {
-                        zIndex: k.ic.Above,
-                        position: k.jb.Relative
+                        zIndex: k.gc.Above,
+                        position: k.hb.Relative
                     }, r.createElement("img", {
                         className: t,
                         src: "https://static-cdn.jtvnw.net/emoticons/v1/" + e.emoteID + "/2.0"
                     })), r.createElement(k.Xa, {
-                        position: k.jb.Relative,
-                        zIndex: k.ic.Default,
+                        position: k.hb.Relative,
+                        zIndex: k.gc.Default,
                         className: n
-                    }, r.createElement(k.sb, {
+                    }, r.createElement(k.qb, {
                         width: 28,
                         height: 28,
-                        asset: k.tb.Neck
+                        asset: k.rb.Neck
                     })))
                 }),
                 L = 3;
             var P = n("cpJf"),
                 F = n("EnXQ"),
-                j = function(e) {
+                O = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -860,7 +860,7 @@
                             attachTop: !0,
                             attachLeft: !0,
                             attachRight: !0,
-                            position: k.jb.Absolute
+                            position: k.hb.Absolute
                         }, r.createElement(b, {
                             hide: this.state.showMessageInput,
                             onClickShare: this.toggleContentShown,
@@ -883,7 +883,7 @@
                         return P.c[e]
                     }, t
                 }(r.Component),
-                O = Object(w.compose)(Object(u.a)(F, {
+                j = Object(w.compose)(Object(u.a)(F, {
                     options: function(e) {
                         return {
                             variables: {
@@ -904,13 +904,13 @@
                     skip: function(e) {
                         return !e.currentUserId
                     }
-                }]))(j);
+                }]))(O);
             var x, M = Object(o.connect)(function(e) {
                 var t = Object(R.e)(e);
                 return {
                     currentUserId: t ? t.id : null
                 }
-            })(O);
+            })(j);
             n("z5b3");
             ! function(e) {
                 e[e.Resub = 1] = "Resub", e[e.Purchase = 2] = "Purchase"

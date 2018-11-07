@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [180], {
+    [174], {
         "4l1H": function(e, t) {
             var n = {
                 kind: "Document",
@@ -750,31 +750,589 @@
         U5Uu: function(e, t, n) {
             "use strict";
             n.r(t);
-            var a, i, r = n("mrSG"),
-                o = n("q1tI"),
-                s = n("wIs1"),
-                d = n("fvjX"),
-                l = n("/7QA"),
-                c = n("4VQm"),
-                u = n("V+GM"),
-                m = n("NvVO"),
-                p = n("2xye"),
-                g = n("GnwI"),
-                h = n("/MKj"),
-                v = n("kRBY"),
-                k = n("oJmH"),
-                b = n("xE3M"),
-                f = n("u5aL"),
-                S = n("8Ad5"),
-                y = n("Ue10");
+            var a = n("mrSG"),
+                i = n("q1tI"),
+                r = n("wIs1"),
+                o = n("fvjX"),
+                s = n("/7QA"),
+                d = n("4VQm"),
+                l = n("V+GM"),
+                c = n("NvVO"),
+                u = n("2xye"),
+                m = n("GnwI"),
+                p = n("/MKj"),
+                g = n("kRBY"),
+                h = n("oJmH"),
+                v = n("yR8l"),
+                k = n("u5aL"),
+                b = n("Ue10"),
+                f = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            menuItemsVisible: !1
+                        }, t.menuItemClicked = function(e) {
+                            var n = Number(e.currentTarget.dataset.newLevel);
+                            t.props.onLevelChange(t.props.category, n), t.setState({
+                                menuItemsVisible: !t.state.menuItemsVisible
+                            })
+                        }, t.toggleCategoryMenu = function() {
+                            t.setState({
+                                menuItemsVisible: !t.state.menuItemsVisible
+                            })
+                        }, t.hideCategoryMenu = function() {
+                            t.setState({
+                                menuItemsVisible: !1
+                            })
+                        }, t
+                    }
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                        this.props.latencyTracking.reportInteractive()
+                    }, t.prototype.render = function() {
+                        return i.createElement(b.P, {
+                            cols: 6
+                        }, i.createElement(k.a, {
+                            onClickOut: this.hideCategoryMenu
+                        }, i.createElement(b.Xa, {
+                            padding: {
+                                top: .5
+                            }
+                        }, i.createElement(b.z, {
+                            dropdown: !0,
+                            type: b.F.Hollow,
+                            onClick: this.toggleCategoryMenu
+                        }, this.menuOption(this.props.categoryLevel)), this.menuItems())))
+                    }, t.prototype.menuItems = function() {
+                        return this.state.menuItemsVisible ? i.createElement(b.Cb, {
+                            border: !0,
+                            background: b.r.Alt,
+                            position: b.hb.Absolute,
+                            zIndex: b.gc.Above
+                        }, this.renderMenuItem(0), this.renderMenuItem(6), this.renderMenuItem(5), this.renderMenuItem(4), this.renderMenuItem(3)) : ""
+                    }, t.prototype.renderMenuItem = function(e) {
+                        return i.createElement(b.Ua, {
+                            type: b.Va.Alpha,
+                            selected: this.props.categoryLevel === e,
+                            "data-new-level": e,
+                            onClick: this.menuItemClicked
+                        }, i.createElement(b.Xa, {
+                            padding: {
+                                y: .5,
+                                x: 1
+                            }
+                        }, this.menuOption(e)))
+                    }, t.prototype.getNumShields = function(e) {
+                        switch (e) {
+                            case 6:
+                                return 1;
+                            case 5:
+                                return 2;
+                            case 4:
+                                return 3;
+                            case 3:
+                            case 2:
+                                return 4;
+                            default:
+                                return 0
+                        }
+                    }, t.prototype.menuOption = function(e) {
+                        for (var t = [Object(s.d)("No filtering", "AutoModSettings"), Object(s.d)("Less filtering", "AutoModSettings"), Object(s.d)("Some filtering", "AutoModSettings"), Object(s.d)("More filtering", "AutoModSettings"), Object(s.d)("Most filtering", "AutoModSettings")], n = this.getNumShields(e), a = [], r = 0; r < n; r++) a.push(i.createElement(b.Xa, {
+                            key: "shield" + r,
+                            display: b.X.InlineFlex,
+                            padding: {
+                                right: .5
+                            }
+                        }, i.createElement(b.qb, {
+                            asset: b.rb.Automod,
+                            height: 13,
+                            width: 13,
+                            type: b.sb.Alt2
+                        })));
+                        var o = t[n];
+                        return i.createElement(b.Xa, {
+                            display: b.X.Flex,
+                            padding: .5
+                        }, a, i.createElement(b.W, {
+                            align: b.dc.Middle,
+                            color: b.O.Alt2
+                        }, o))
+                    }, t = a.__decorate([Object(m.b)("AutomodCategoryDisplay")], t)
+                }(i.Component),
+                S = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        return i.createElement(b.P, {
+                            cols: 6
+                        }, i.createElement(b.Xa, {
+                            padding: {
+                                bottom: 1
+                            }
+                        }, i.createElement("strong", null, this.props.category), i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            type: b.Tb.P
+                        }, this.props.description)))
+                    }, t
+                }(i.Component),
+                A = "automod-onboarding-closed",
+                y = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            onboardingVisible: !1
+                        }, t.onCloseOnboarding = function() {
+                            s.m.set(A, !0), t.setState({
+                                onboardingVisible: !1
+                            })
+                        }, t
+                    }
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                        var e = s.m.getOptional(A);
+                        null === e ? this.setState({
+                            onboardingVisible: !0
+                        }) : this.setState({
+                            onboardingVisible: !e
+                        })
+                    }, t.prototype.render = function() {
+                        return this.state.onboardingVisible ? i.createElement(b.Ja, null, i.createElement(b.P, {
+                            cols: 8
+                        }, i.createElement(b.Cb, {
+                            position: b.hb.Relative,
+                            border: !0,
+                            color: b.O.Alt2,
+                            padding: 2
+                        }, i.createElement(b.W, {
+                            type: b.Tb.H4,
+                            color: b.O.Link,
+                            bold: !0
+                        }, Object(s.d)("AutoMod Tip", "AutoModSettings")), i.createElement(b.Xa, {
+                            padding: 1,
+                            position: b.hb.Absolute,
+                            attachTop: !0,
+                            attachRight: !0
+                        }, i.createElement(b.z, {
+                            type: b.F.Text,
+                            icon: b.rb.Close,
+                            onClick: this.onCloseOnboarding,
+                            "data-test-selector": "automod-tip-dismiss-button"
+                        })), i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            type: b.Tb.Span
+                        }, Object(s.d)("Did you know AutoMod catches misspelled words and evasion? N!ce try, pe0ple wh0 t@lk lik3 th!s.", "AutoModSettings"))))) : ""
+                    }, t
+                }(i.Component),
+                E = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.handleSliderMove = function(e) {
+                            var n = Number(e.currentTarget.value);
+                            t.props.onLevelChange(n)
+                        }, t
+                    }
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        var e = [Object(s.d)("Only commonly blocked terms", "AutoModSettings"), Object(s.d)("A Little Moderation", "AutoModSettings"), Object(s.d)("Some Moderation", "AutoModSettings"), Object(s.d)("More Moderation", "AutoModSettings"), Object(s.d)("A Lot of Moderation", "AutoModSettings")],
+                            t = this.props.level,
+                            n = e[t],
+                            a = Object(s.d)("Level {lvl,number}", {
+                                lvl: t
+                            }, "AutoModSettings");
+                        return i.createElement(b.Cb, {
+                            borderLeft: !0,
+                            borderRight: !0,
+                            padding: {
+                                top: 1,
+                                x: 2
+                            }
+                        }, i.createElement(b.Xa, {
+                            padding: {
+                                bottom: .5
+                            }
+                        }, i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            type: b.Tb.P
+                        }, Object(s.d)("Your AutoMod setting:", "AutoModSettingsSlider"))), i.createElement(b.ob, {
+                            min: 0,
+                            max: 4,
+                            step: 1,
+                            value: String(t),
+                            onChange: this.handleSliderMove,
+                            "data-test-selector": "auto-mod-slider"
+                        }), i.createElement(b.Xa, {
+                            display: b.X.Flex
+                        }, i.createElement(b.Xa, {
+                            padding: {
+                                right: .5
+                            }
+                        }, a), i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            type: b.Tb.Strong
+                        }, n)), i.createElement(b.Cb, {
+                            background: b.r.Alt2,
+                            padding: 1,
+                            className: "auto-mod-wrapper__carat",
+                            position: b.hb.Relative
+                        }))
+                    }, t
+                }(i.Component),
+                C = "slider-blank-state-container",
+                T = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            isCustom: !1,
+                            initialIsCustom: !1,
+                            submissionState: b.E.Default,
+                            cancelDisabled: !0,
+                            isUnsetInBackend: !0,
+                            isDataLoaded: !1
+                        }, t.levelToIdentity = [0, 5, 5, 4, 4], t.levelToSex = [0, 0, 5, 4, 4], t.levelToAggro = [0, 0, 4, 4, 2], t.levelToProfanity = [0, 0, 0, 0, 4], t.recentSuccessfulMutation = 0, t.showAutoModCategories = function() {
+                            var e = [t.levelToAggro[1], t.levelToIdentity[1], t.levelToProfanity[1], t.levelToSex[1]];
+                            t.setState({
+                                level: 1,
+                                categories: e,
+                                isCustom: !1,
+                                cancelDisabled: !1
+                            })
+                        }, t.handleLevelChange = function(e) {
+                            var n = [t.levelToAggro[e], t.levelToIdentity[e], t.levelToProfanity[e], t.levelToSex[e]];
+                            t.setState({
+                                level: e,
+                                categories: n,
+                                cancelDisabled: !1
+                            })
+                        }, t.updateAutoModProperties = function() {
+                            t.state.categories && (t.setState({
+                                submissionState: b.E.Loading
+                            }), t.props.onUpdateAutoModProperties({
+                                variables: {
+                                    input: {
+                                        channelID: t.props.data.user.id,
+                                        aggressiveLevel: t.state.categories[0],
+                                        identityLevel: t.state.categories[1],
+                                        profanityLevel: t.state.categories[2],
+                                        sexualLevel: t.state.categories[3]
+                                    }
+                                }
+                            }).then(function() {
+                                t.handleSuccessfulMutation()
+                            }))
+                        }, t.resetAutoModProperties = function() {
+                            t.setState({
+                                categories: t.state.initialCategories,
+                                isCustom: t.state.initialIsCustom,
+                                submissionState: b.E.Default,
+                                level: t.state.initialLevel,
+                                cancelDisabled: !0
+                            })
+                        }, t.handleCategoryLevelChange = function(e, n) {
+                            if (t.state.categories) {
+                                var a = t.state.categories.slice();
+                                a[e] = n, t.setState({
+                                    isCustom: !0,
+                                    categories: a,
+                                    cancelDisabled: !1
+                                })
+                            }
+                        }, t.handleSuccessfulMutation = function() {
+                            t.setState({
+                                submissionState: b.E.Success,
+                                cancelDisabled: !0,
+                                initialCategories: t.state.categories,
+                                initialLevel: t.state.level
+                            }), clearTimeout(t.recentSuccessfulMutation), t.recentSuccessfulMutation = setTimeout(t.handleSuccessfulMutationExpired, 3e3)
+                        }, t.handleSuccessfulMutationExpired = function() {
+                            t.setState({
+                                submissionState: b.E.Default
+                            })
+                        }, t.revertToSlider = function() {
+                            var e = [t.levelToAggro[1], t.levelToIdentity[1], t.levelToProfanity[1], t.levelToSex[1]];
+                            t.setState({
+                                isCustom: !1,
+                                level: 1,
+                                categories: e,
+                                cancelDisabled: !1
+                            })
+                        }, t.renderSlider = function(e) {
+                            return e ? i.createElement(b.Cb, {
+                                borderLeft: !0,
+                                borderRight: !0,
+                                padding: 2,
+                                "data-test-selector": C
+                            }, i.createElement("img", {
+                                src: "https://s.jtvnw.net/jtv_user_pictures/hosted_images/automod_setup_en.gif"
+                            }), i.createElement(b.Cb, null, i.createElement(b.Cb, {
+                                padding: {
+                                    top: 2
+                                },
+                                textAlign: b.Pb.Center
+                            }, Object(s.d)("Your current AutoMod level: 0", "AutoModSettings")), i.createElement(b.Cb, {
+                                margin: {
+                                    x: 2
+                                },
+                                padding: {
+                                    y: 1,
+                                    x: 5
+                                },
+                                textAlign: b.Pb.Center
+                            }, i.createElement(b.z, {
+                                fullWidth: !0,
+                                onClick: t.showAutoModCategories,
+                                state: b.E.Default
+                            }, Object(s.d)("Choose level", "AutoModSettings"))))) : t.state.isCustom || void 0 === t.state.level ? i.createElement(b.Cb, {
+                                borderLeft: !0,
+                                borderRight: !0,
+                                padding: {
+                                    y: 1,
+                                    x: 2
+                                }
+                            }, i.createElement(b.Ja, {
+                                gutterSize: b.Ka.Small
+                            }, i.createElement(b.P, {
+                                cols: 6
+                            }, i.createElement(b.Xa, {
+                                display: b.X.Flex,
+                                fullHeight: !0,
+                                alignItems: b.f.Center
+                            }, i.createElement(b.W, {
+                                color: b.O.Alt2,
+                                type: b.Tb.Span
+                            }, Object(s.d)("Your AutoMod setting:", "AutoModSettings")), i.createElement(b.Xa, {
+                                padding: {
+                                    left: .5
+                                },
+                                display: b.X.InlineFlex
+                            }, i.createElement(b.W, {
+                                color: b.O.Alt2,
+                                type: b.Tb.Strong
+                            }, Object(s.d)("Custom", "AutoModSettingsValue"))))), i.createElement(b.P, {
+                                cols: 5
+                            }, i.createElement(b.z, {
+                                type: b.F.Hollow,
+                                onClick: t.revertToSlider
+                            }, Object(s.d)("Revert to defaults", "AutoModSettings"))))) : i.createElement(E, {
+                                level: t.state.level.valueOf(),
+                                onLevelChange: t.handleLevelChange
+                            })
+                        }, t
+                    }
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                        this.props.latencyTracking.reportInteractive()
+                    }, t.prototype.componentWillReceiveProps = function(e) {
+                        e.data && !e.data.loading && !e.data.error && e.data.user && (this.state.isDataLoaded || (this.hasAutoModProperties(e) ? this.initializeStateFromBackend(e) : this.setState({
+                            isDataLoaded: !0
+                        })))
+                    }, t.prototype.render = function() {
+                        if (!this.props.data || this.props.data.loading || this.props.data.error || null === this.props.data.user) return i.createElement(b.Cb, {
+                            "data-test-selector": "automod-placeholder-container"
+                        });
+                        if (!this.hasAutoModDashboardAccess()) return i.createElement(b.Cb, {
+                            margin: {
+                                top: 2
+                            },
+                            color: b.O.Alt2,
+                            textAlign: b.Pb.Center,
+                            "data-test-selector": "automod-placeholder-container"
+                        }, i.createElement(b.W, {
+                            type: b.Tb.H3,
+                            italic: !0
+                        }, Object(s.d)("You do not have permission to access this dashboard.", "AutoModSettings")));
+                        var e = this.isBlankState();
+                        return i.createElement(b.Xa, null, i.createElement(b.Cb, {
+                            margin: {
+                                bottom: 2
+                            }
+                        }, i.createElement(y, null)), i.createElement(b.Ja, null, i.createElement(b.P, {
+                            cols: 2
+                        }, i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            type: b.Tb.Strong
+                        }, Object(s.d)("AutoMod Rulesets", "AutoModSettings"))), i.createElement(b.P, {
+                            cols: 5
+                        }, this.AutomodTableHeader(), this.renderSlider(e), this.AutomodCategories(e), this.AutomodTableFooter(e))))
+                    }, t.prototype.isBlankState = function() {
+                        return !this.state.categories && !this.state.level
+                    }, t.prototype.AutomodTableFooter = function(e) {
+                        return e ? i.createElement(b.Cb, {
+                            border: !0,
+                            padding: 2,
+                            background: b.r.Alt2
+                        }, i.createElement(b.Ja, null, i.createElement(b.P, {
+                            cols: 7
+                        }, Object(s.d)("You can adjust how much moderation you'd like for your channel.", "AutoModSettings")), i.createElement(b.P, {
+                            cols: 5
+                        }, i.createElement(b.Xa, {
+                            display: b.X.Flex,
+                            fullHeight: !0,
+                            flexDirection: b.Aa.Column,
+                            justifyContent: b.Wa.Center,
+                            alignItems: b.f.End
+                        }, i.createElement(b.z, {
+                            onClick: this.showAutoModCategories,
+                            type: b.F.Hollow
+                        }, Object(s.d)("See how rulesets work", "AutoModSettings")))))) : i.createElement(b.Xa, null, i.createElement(b.Cb, {
+                            border: !0,
+                            padding: {
+                                y: 1,
+                                x: 2
+                            },
+                            background: b.r.Alt2
+                        }, i.createElement("a", {
+                            href: "https://help.twitch.tv/customer/portal/articles/2662186-how-to-use-automod",
+                            target: "_blank"
+                        }, Object(s.d)("Learn more in our help page", "AutoModSettings"))), i.createElement(b.Xa, {
+                            display: b.X.Flex,
+                            padding: {
+                                y: 1
+                            },
+                            margin: {
+                                top: .5
+                            }
+                        }, i.createElement(b.Xa, {
+                            padding: {
+                                right: .5
+                            }
+                        }, i.createElement(b.z, {
+                            onClick: this.updateAutoModProperties,
+                            state: this.state.submissionState
+                        }, Object(s.d)("Save", "AutoModSettings"))), i.createElement(b.z, {
+                            onClick: this.resetAutoModProperties,
+                            type: b.F.Text,
+                            disabled: this.state.cancelDisabled
+                        }, Object(s.d)("Cancel", "AutoModSettings"))))
+                    }, t.prototype.AutomodCategories = function(e) {
+                        if (!e && 0 !== this.state.level && this.state.categories) {
+                            var t = Object(s.d)("Identity language", "AutoModSettings"),
+                                n = Object(s.d)("Referring to race, religion, gender, orientation, disability, or similar", "AutoModSettings"),
+                                a = Object(s.d)("Sexually Explicit Language", "AutoModSettings"),
+                                r = Object(s.d)("Referring to sexual acts, sexual content, and body parts", "AutoModSettings"),
+                                o = Object(s.d)("Aggressive language", "AutoModSettings"),
+                                d = Object(s.d)("Hostility towards other people, often associated with bullying", "AutoModSettings"),
+                                l = Object(s.d)("Profanity", "AutoModSettings"),
+                                c = Object(s.d)("Expletives, curse words, things you wouldn’t say to grandma", "AutoModSettings");
+                            return i.createElement(b.Cb, {
+                                borderLeft: !0,
+                                borderRight: !0,
+                                padding: 2,
+                                background: b.r.Alt2,
+                                "data-test-selector": "automod-categories-container"
+                            }, i.createElement(b.Ja, {
+                                gutterSize: b.Ka.Small
+                            }, i.createElement(S, {
+                                category: t,
+                                description: n
+                            }), i.createElement(f, {
+                                category: 1,
+                                categoryLevel: this.state.categories[1],
+                                onLevelChange: this.handleCategoryLevelChange
+                            }), i.createElement(S, {
+                                category: a,
+                                description: r
+                            }), i.createElement(f, {
+                                category: 3,
+                                categoryLevel: this.state.categories[3],
+                                onLevelChange: this.handleCategoryLevelChange
+                            }), i.createElement(S, {
+                                category: o,
+                                description: d
+                            }), i.createElement(f, {
+                                category: 0,
+                                categoryLevel: this.state.categories[0],
+                                onLevelChange: this.handleCategoryLevelChange
+                            }), i.createElement(S, {
+                                category: l,
+                                description: c
+                            }), i.createElement(f, {
+                                category: 2,
+                                categoryLevel: this.state.categories[2],
+                                onLevelChange: this.handleCategoryLevelChange
+                            })))
+                        }
+                    }, t.prototype.AutomodTableHeader = function() {
+                        var e = Object(s.d)("AutoMod", "AutoModSettings"),
+                            t = Object(s.d)("Automatically hold risky messages for moderators to review.", "AutoModSettings");
+                        return i.createElement(b.G, {
+                            border: !0,
+                            row: !0
+                        }, i.createElement(b.Xa, {
+                            padding: {
+                                y: 1,
+                                x: 2
+                            }
+                        }, i.createElement(b.Cb, {
+                            className: "auto-mod-wrapper__shield",
+                            padding: {
+                                y: .5,
+                                x: .5
+                            },
+                            display: b.X.Flex,
+                            color: b.O.Overlay
+                        }, i.createElement(b.qb, {
+                            asset: b.rb.Automod,
+                            type: b.sb.Inherit
+                        }))), i.createElement(b.Xa, {
+                            padding: {
+                                y: 1,
+                                right: 2
+                            }
+                        }, i.createElement(b.W, null, e), i.createElement(b.W, {
+                            color: b.O.Alt2
+                        }, t)))
+                    }, t.prototype.determineLevel = function(e) {
+                        for (var t in [0, 1, 2, 3, 4])
+                            if (e[0] === this.levelToAggro[t] && e[1] === this.levelToIdentity[t] && e[2] === this.levelToProfanity[t] && e[3] === this.levelToSex[t]) return Number(t);
+                        return -1
+                    }, t.prototype.hasAutoModDashboardAccess = function() {
+                        return this.props.data.user.self.isModerator || this.props.data.currentUser.roles.isStaff || this.props.data.currentUser.roles.isSiteAdmin || this.props.data.user.id === this.props.data.currentUser.id
+                    }, t.prototype.initializeStateFromBackend = function(e) {
+                        if (e.data.user.autoModProperties) {
+                            var t = [e.data.user.autoModProperties.aggressiveLevel, e.data.user.autoModProperties.identityLevel, e.data.user.autoModProperties.profanityLevel, e.data.user.autoModProperties.sexualLevel],
+                                n = this.determineLevel(t),
+                                a = -1 === n;
+                            this.setState({
+                                categories: t,
+                                initialCategories: t,
+                                isCustom: a,
+                                initialIsCustom: a,
+                                level: n,
+                                initialLevel: n,
+                                isDataLoaded: !0
+                            })
+                        }
+                    }, t.prototype.hasAutoModProperties = function(e) {
+                        return e.data.user.autoModProperties
+                    }, t
+                }(i.Component),
+                N = n("K1HF"),
+                O = n("hxCz");
+            var M, L, I = Object(o.compose)(Object(p.connect)(function(e) {
+                    return {
+                        isLoggedIn: Object(g.f)(e)
+                    }
+                }), Object(v.a)(N, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                channelLogin: e.channelLogin
+                            },
+                            fetchPolicy: "cache-and-network"
+                        }
+                    },
+                    skip: function(e) {
+                        return !e.isLoggedIn
+                    }
+                }), Object(v.a)(O, {
+                    name: "onUpdateAutoModProperties"
+                }), Object(m.b)("AutomodControls"))(T),
+                D = n("8Ad5");
             n("zjB3");
             ! function(e) {
                 e.DisplayedTerm = "term", e.AddTermInput = "add-term-input", e.EditTermInput = "edit-term-input", e.EditTermArea = "edit-term-area", e.AddTermButton = "add-term-button", e.EditTermButton = "edit-term-button", e.DelTermButton = "del-term-button", e.EditConfirmButton = "edit-confirm-button", e.EditCancelButton = "edit-cancel-button"
-            }(a || (a = {})),
+            }(M || (M = {})),
             function(e) {
                 e.Banned = "banned", e.Permitted = "permitted"
-            }(i || (i = {}));
-            var A = function(e) {
+            }(L || (L = {}));
+            var x = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -794,7 +1352,7 @@
                                 for (var e = 0, n = t.state.terms; e < n.length; e++) {
                                     if (n[e].phrases.join(" ") === t.addInput.value.trim()) return void t.setState({
                                         errorAddingTerm: !0,
-                                        errorAddingLabel: Object(l.d)("Duplicate Term", "ChatTermsControl")
+                                        errorAddingLabel: Object(s.d)("Duplicate Term", "ChatTermsControl")
                                     })
                                 }
                                 var a = {
@@ -835,15 +1393,15 @@
                         }, t.saveEditInputRef = function(e) {
                             t.editInput = e
                         }, t.handleAddKeyDown = function(e) {
-                            e.keyCode === S.a.Enter && t.handleAdd(), t.state.errorAddingTerm && t.setState({
+                            e.keyCode === D.a.Enter && t.handleAdd(), t.state.errorAddingTerm && t.setState({
                                 errorAddingTerm: !1
                             })
                         }, t.handleEditKeyDown = function(e) {
                             switch (e.keyCode) {
-                                case S.a.Enter:
+                                case D.a.Enter:
                                     t.confirmEdit();
                                     break;
-                                case S.a.Esc:
+                                case D.a.Esc:
                                     t.cancelEdit();
                                     break;
                                 default:
@@ -885,238 +1443,237 @@
                             }
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                    return a.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                         if (this.state.terms === e.terms) return null;
                         this.setState({
                             terms: e.terms
                         })
                     }, t.prototype.render = function() {
                         for (var e = [], t = 0; t < this.state.terms.length; t++) e.push(this.renderTerm(this.state.terms[t], t));
-                        return o.createElement(y.Pa, {
+                        return i.createElement(b.Pa, {
                             fullWidth: !0
-                        }, o.createElement("div", {
+                        }, i.createElement("div", {
                             className: "chat-terms-control",
                             "data-a-target": "chat-terms-control"
-                        }, o.createElement(y.Xa, {
-                            display: y.X.Flex,
-                            flexDirection: y.Aa.Row,
-                            alignItems: y.f.Stretch,
+                        }, i.createElement(b.Xa, {
+                            display: b.X.Flex,
+                            flexDirection: b.Aa.Row,
+                            alignItems: b.f.Stretch,
                             fullWidth: !0,
-                            flexWrap: y.Ba.NoWrap
-                        }, o.createElement(y.Xa, {
+                            flexWrap: b.Ba.NoWrap
+                        }, i.createElement(b.Xa, {
                             flexGrow: 1
-                        }, o.createElement(y.Ea, {
+                        }, i.createElement(b.Ea, {
                             label: "",
                             error: this.state.errorAddingTerm,
                             errorMessage: this.state.errorAddingLabel || ""
-                        }, o.createElement(y.Ra, {
+                        }, i.createElement(b.Ra, {
                             "data-a-target": "add-term-input",
-                            "data-test-selector": a.AddTermInput,
-                            ariaLabel: Object(l.d)("Add term", "ChatTermsControl"),
+                            "data-test-selector": M.AddTermInput,
+                            ariaLabel: Object(s.d)("Add term", "ChatTermsControl"),
                             refDelegate: this.saveAddInputRef,
-                            type: y.Ta.Text,
+                            type: b.Ta.Text,
                             placeholder: this.props.addPlaceholder,
                             onKeyDown: this.handleAddKeyDown,
                             error: this.state.errorAddingTerm
-                        }))), o.createElement(y.Xa, {
+                        }))), i.createElement(b.Xa, {
                             flexShrink: 0,
                             margin: {
                                 top: .5
                             }
-                        }, o.createElement(y.z, {
+                        }, i.createElement(b.z, {
                             onClick: this.handleAdd,
                             "data-a-target": "add-term",
-                            "data-test-selector": a.AddTermButton
-                        }, Object(l.d)("Add", "ChatTermsControl")))), o.createElement(y.Xa, {
+                            "data-test-selector": M.AddTermButton
+                        }, Object(s.d)("Add", "ChatTermsControl")))), i.createElement(b.Xa, {
                             className: "chat-terms"
                         }, e)))
                     }, t.prototype.renderTerm = function(e, t) {
                         if (t === this.state.editingIndex) return this.renderEditTermRow(e, t);
                         var n = null;
-                        if (!0 == !e.isModEditable && this.props.type === i.Banned) n = o.createElement(y.Xa, {
-                            alignItems: y.f.Center,
-                            display: y.X.Flex,
+                        if (!0 == !e.isModEditable && this.props.type === L.Banned) n = i.createElement(b.Xa, {
+                            alignItems: b.f.Center,
+                            display: b.X.Flex,
                             margin: {
                                 left: "auto"
                             },
                             fullHeight: !0
-                        }, o.createElement(y.gb, {
-                            label: Object(l.d)("private", "ChatTermsControl")
+                        }, i.createElement(b.eb, {
+                            label: Object(s.d)("private", "ChatTermsControl")
                         }));
                         else if (e.expiresAt) {
-                            var r = Object(l.i)(new Date(e.expiresAt), {
+                            var a = Object(s.i)(new Date(e.expiresAt), {
                                 style: "numeric"
                             });
-                            n = o.createElement(y.Xa, {
+                            n = i.createElement(b.Xa, {
                                 margin: {
                                     right: 1
                                 }
-                            }, o.createElement(y.W, {
+                            }, i.createElement(b.W, {
                                 ellipsis: !0,
-                                color: y.O.Alt2
-                            }, " ", Object(l.d)("Expires {relativeTime}", {
-                                relativeTime: r
+                                color: b.O.Alt2
+                            }, " ", Object(s.d)("Expires {relativeTime}", {
+                                relativeTime: a
                             }, "ChatTermsControl"), " "))
                         }
-                        var s = null;
-                        t === this.state.justSavedIndex && (s = o.createElement(y.Pa, {
-                            position: y.jb.Absolute,
+                        var r = null;
+                        t === this.state.justSavedIndex && (r = i.createElement(b.Pa, {
+                            position: b.hb.Absolute,
                             margin: {
                                 left: 5
                             }
-                        }, o.createElement("span", {
+                        }, i.createElement("span", {
                             className: "chat-terms-control__saved"
-                        }, o.createElement(y.i, {
-                            delay: y.j.Long,
-                            duration: y.k.Medium,
-                            type: y.n.FadeOut,
+                        }, i.createElement(b.i, {
+                            delay: b.j.Long,
+                            duration: b.k.Medium,
+                            type: b.n.FadeOut,
                             enabled: !0,
                             onAnimationEnd: this.clearLabels
-                        }, o.createElement(y.Xa, {
-                            position: y.jb.Absolute,
+                        }, i.createElement(b.Xa, {
+                            position: b.hb.Absolute,
                             attachRight: !0
-                        }, Object(l.d)("Saved", "ChatTermsControl"))))));
-                        var d = Object(l.d)("Edit", "ChatTermsControl"),
-                            c = Object(l.d)("Delete", "ChatTermsControl");
-                        return o.createElement(y.Pa, {
+                        }, Object(s.d)("Saved", "ChatTermsControl"))))));
+                        var o = Object(s.d)("Edit", "ChatTermsControl"),
+                            d = Object(s.d)("Delete", "ChatTermsControl");
+                        return i.createElement(b.Pa, {
                             className: "chat-term-row",
                             key: t,
                             "data-index": t
-                        }, o.createElement("div", {
+                        }, i.createElement("div", {
                             className: "chat-terms-control__term-row",
                             "data-selectable": t,
-                            "data-test-selector": a.EditTermArea
-                        }, o.createElement(y.Ja, null, o.createElement(y.P, {
+                            "data-test-selector": M.EditTermArea
+                        }, i.createElement(b.Ja, null, i.createElement(b.P, {
                             cols: 6
-                        }, o.createElement(y.Xa, {
-                            "data-test-selector": a.DisplayedTerm,
+                        }, i.createElement(b.Xa, {
+                            "data-test-selector": M.DisplayedTerm,
                             margin: {
                                 right: 1
                             },
-                            display: y.X.Flex,
-                            alignItems: y.f.Center,
-                            justifyContent: y.Wa.Between,
+                            display: b.X.Flex,
+                            alignItems: b.f.Center,
+                            justifyContent: b.Wa.Between,
                             fullHeight: !0
-                        }, o.createElement(y.W, {
+                        }, i.createElement(b.W, {
                             ellipsis: !0
-                        }, e.phrases.join(" ")))), o.createElement(y.P, {
+                        }, e.phrases.join(" ")))), i.createElement(b.P, {
                             cols: 4
-                        }, o.createElement(y.Xa, {
-                            alignItems: y.f.Center,
-                            display: y.X.Flex,
-                            flexWrap: y.Ba.NoWrap,
+                        }, i.createElement(b.Xa, {
+                            alignItems: b.f.Center,
+                            display: b.X.Flex,
+                            flexWrap: b.Ba.NoWrap,
                             fullHeight: !0
-                        }, n)), o.createElement(y.P, {
+                        }, n)), i.createElement(b.P, {
                             cols: 1
-                        }, o.createElement(y.Yb, {
-                            label: d
-                        }, o.createElement(y.A, {
+                        }, i.createElement(b.Wb, {
+                            label: o
+                        }, i.createElement(b.A, {
                             "data-a-target": "edit-term",
-                            "data-test-selector": a.EditTermButton,
-                            icon: y.tb.Edit,
-                            ariaLabel: d,
+                            "data-test-selector": M.EditTermButton,
+                            icon: b.rb.Edit,
+                            ariaLabel: o,
                             onClick: this.handleEdit
-                        }))), o.createElement(y.P, {
+                        }))), i.createElement(b.P, {
                             cols: 1
-                        }, o.createElement(y.Yb, {
-                            label: c
-                        }, o.createElement(y.A, {
+                        }, i.createElement(b.Wb, {
+                            label: d
+                        }, i.createElement(b.A, {
                             "data-a-target": "delete-term",
-                            "data-test-selector": a.DelTermButton,
-                            icon: y.tb.Trash,
-                            ariaLabel: c,
+                            "data-test-selector": M.DelTermButton,
+                            icon: b.rb.Trash,
+                            ariaLabel: d,
                             onClick: this.handleDelete
-                        })), s))))
+                        })), r))))
                     }, t.prototype.renderEditTermRow = function(e, t) {
-                        var n = Object(l.d)("Save", "ChatTermsControl"),
-                            i = Object(l.d)("Cancel", "ChatTermsControl"),
+                        var n = Object(s.d)("Save", "ChatTermsControl"),
+                            a = Object(s.d)("Cancel", "ChatTermsControl"),
                             r = this.renderEditBalloon(e, t);
-                        return o.createElement(f.a, {
+                        return i.createElement(k.a, {
                             key: "clickout-item-" + t,
                             onClickOut: this.cancelEdit
-                        }, o.createElement(y.Xa, {
+                        }, i.createElement(b.Xa, {
                             key: "line-item-" + t,
                             className: "chat-term-row",
-                            position: y.jb.Relative
-                        }, o.createElement(y.Xa, {
+                            position: b.hb.Relative
+                        }, i.createElement(b.Xa, {
                             key: t,
                             "data-index": t,
-                            display: y.X.Flex,
-                            flexDirection: y.Aa.Row,
-                            flexWrap: y.Ba.NoWrap
-                        }, o.createElement(y.Xa, {
+                            display: b.X.Flex,
+                            flexDirection: b.Aa.Row,
+                            flexWrap: b.Ba.NoWrap
+                        }, i.createElement(b.Xa, {
                             flexGrow: 1
-                        }, o.createElement(y.Ra, {
+                        }, i.createElement(b.Ra, {
                             autoFocus: !0,
-                            ariaLabel: Object(l.d)("Edit term", "ChatTermsControl"),
+                            ariaLabel: Object(s.d)("Edit term", "ChatTermsControl"),
                             "data-a-target": "edit-term-input",
-                            "data-test-selector": a.EditTermInput,
+                            "data-test-selector": M.EditTermInput,
                             refDelegate: this.saveEditInputRef,
-                            type: y.Ta.Text,
+                            type: b.Ta.Text,
                             defaultValue: e.phrases.join(" "),
                             onKeyDown: this.handleEditKeyDown
-                        })), o.createElement(y.Xa, {
+                        })), i.createElement(b.Xa, {
                             flexShrink: 0
-                        }, o.createElement(y.Yb, {
+                        }, i.createElement(b.Wb, {
                             label: n
-                        }, o.createElement(y.A, {
+                        }, i.createElement(b.A, {
                             "data-a-target": "save-term-edit",
-                            "data-test-selector": a.EditConfirmButton,
-                            icon: y.tb.Check,
+                            "data-test-selector": M.EditConfirmButton,
+                            icon: b.rb.Check,
                             ariaLabel: n,
                             onClick: this.confirmEdit
-                        })), o.createElement(y.Yb, {
-                            label: i
-                        }, o.createElement(y.A, {
+                        })), i.createElement(b.Wb, {
+                            label: a
+                        }, i.createElement(b.A, {
                             "data-a-target": "cancel-term-edit",
-                            "data-test-selector": a.EditCancelButton,
-                            icon: y.tb.Close,
-                            ariaLabel: i,
+                            "data-test-selector": M.EditCancelButton,
+                            icon: b.rb.Close,
+                            ariaLabel: a,
                             onClick: this.cancelEdit
                         })))), r))
                     }, t.prototype.renderEditBalloon = function(e, t) {
                         var n = null;
-                        return e.expiresAt ? n = o.createElement(y.Xa, null, Object(l.d)("Save changes to make term always active", "ChatTermsControl")) : this.props.type === i.Banned && this.props.channelID === this.props.userID && (n = o.createElement(y.Xa, null, o.createElement(y.N, {
+                        return e.expiresAt ? n = i.createElement(b.Xa, null, Object(s.d)("Save changes to make term always active", "ChatTermsControl")) : this.props.type === L.Banned && this.props.channelID === this.props.userID && (n = i.createElement(b.Xa, null, i.createElement(b.N, {
                             "data-test-selector": "isModEditableCheckbox",
                             id: "isModEditableCheckbox",
                             label: "Mark as Private",
                             defaultChecked: !e.isModEditable,
                             onChange: this.onCheckModEditableChange
-                        }), o.createElement(y.W, {
-                            color: y.O.Alt2,
-                            fontSize: y.Ca.Size8
-                        }, Object(l.d)("Private terms are not viewable to anyone except for yourself.", "ChatTermsControl")))), n ? o.createElement(y.u, {
+                        }), i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            fontSize: b.Ca.Size8
+                        }, Object(s.d)("Private terms are not viewable to anyone except for yourself.", "ChatTermsControl")))), n ? i.createElement(b.u, {
                             key: "edit-balloon-" + t,
-                            direction: y.v.Right,
-                            size: y.w.Large,
+                            direction: b.v.Right,
+                            size: b.w.Large,
                             show: !0
-                        }, o.createElement(y.Xa, {
+                        }, i.createElement(b.Xa, {
                             margin: 1
-                        }, o.createElement(y.Eb, {
+                        }, i.createElement(b.Cb, {
                             borderBottom: !0,
                             margin: {
                                 bottom: .5
                             }
                         }, e.phrases.join(" ")), n)) : null
                     }, t
-                }(o.Component),
-                E = n("yR8l"),
-                C = n("4l1H"),
-                T = n("Temx"),
-                M = n("kk6A"),
-                N = n("5R7h"),
-                O = (n("R17a"), function(e) {
+                }(i.Component),
+                j = n("4l1H"),
+                F = n("Temx"),
+                P = n("kk6A"),
+                w = n("5R7h"),
+                _ = (n("R17a"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
                             terms: []
                         }, n.addTerm = function(e, t) {
-                            return r.__awaiter(n, void 0, void 0, function() {
-                                var n, a = this;
-                                return r.__generator(this, function(r) {
-                                    switch (r.label) {
+                            return a.__awaiter(n, void 0, void 0, function() {
+                                var n, i = this;
+                                return a.__generator(this, function(a) {
+                                    switch (a.label) {
                                         case 0:
-                                            return null === this.state.terms ? [2, !1] : this.props.type !== i.Banned ? [3, 2] : [4, this.props.addChannelBlockedTerm({
+                                            return null === this.state.terms ? [2, !1] : this.props.type !== L.Banned ? [3, 2] : [4, this.props.addChannelBlockedTerm({
                                                 variables: {
                                                     input: {
                                                         channelID: this.props.channelID,
@@ -1126,9 +1683,9 @@
                                                 }
                                             })];
                                         case 1:
-                                            return r.sent(), [3, 4];
+                                            return a.sent(), [3, 4];
                                         case 2:
-                                            return this.props.type !== i.Permitted ? [3, 4] : [4, this.props.addChannelPermittedTerm({
+                                            return this.props.type !== L.Permitted ? [3, 4] : [4, this.props.addChannelPermittedTerm({
                                                 variables: {
                                                     input: {
                                                         channelID: this.props.channelID,
@@ -1137,19 +1694,19 @@
                                                 }
                                             })];
                                         case 3:
-                                            r.sent(), r.label = 4;
+                                            a.sent(), a.label = 4;
                                         case 4:
                                             return n = this.state.terms, !0 === t && n.unshift(e), this.setState(function() {
                                                 return {
-                                                    terms: a.state.terms
+                                                    terms: i.state.terms
                                                 }
                                             }), [2, !0]
                                     }
                                 })
                             })
                         }, n.deleteTerm = function(e, t) {
-                            return r.__awaiter(n, void 0, void 0, function() {
-                                return r.__generator(this, function(n) {
+                            return a.__awaiter(n, void 0, void 0, function() {
+                                return a.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
                                             return null === this.state.terms ? [2, !1] : (!1 === t && this.setState(function(t) {
@@ -1158,7 +1715,7 @@
                                                         return t.phrases.join(" ") !== e.phrases.join(" ")
                                                     })
                                                 }
-                                            }), this.props.type !== i.Banned ? [3, 2] : [4, this.props.deleteChannelBlockedTerm({
+                                            }), this.props.type !== L.Banned ? [3, 2] : [4, this.props.deleteChannelBlockedTerm({
                                                 variables: {
                                                     input: {
                                                         channelID: this.props.channelID,
@@ -1169,7 +1726,7 @@
                                         case 1:
                                             return n.sent(), [3, 4];
                                         case 2:
-                                            return this.props.type !== i.Permitted ? [3, 4] : [4, this.props.deleteChannelPermittedTerm({
+                                            return this.props.type !== L.Permitted ? [3, 4] : [4, this.props.deleteChannelPermittedTerm({
                                                 variables: {
                                                     input: {
                                                         channelID: this.props.channelID,
@@ -1184,17 +1741,17 @@
                                     }
                                 })
                             })
-                        }, n.editTerm = function(e, t, a) {
-                            return r.__awaiter(n, void 0, void 0, function() {
+                        }, n.editTerm = function(e, t, i) {
+                            return a.__awaiter(n, void 0, void 0, function() {
                                 var n;
-                                return r.__generator(this, function(i) {
-                                    switch (i.label) {
+                                return a.__generator(this, function(a) {
+                                    switch (a.label) {
                                         case 0:
                                             return [4, this.deleteTerm(e, !0)];
                                         case 1:
-                                            return i.sent(), t.isModEditable = a, [4, this.addTerm(t, !1)];
+                                            return a.sent(), t.isModEditable = i, [4, this.addTerm(t, !1)];
                                         case 2:
-                                            return i.sent(), n = this.state.terms, this.setState({
+                                            return a.sent(), n = this.state.terms, this.setState({
                                                 terms: n
                                             }), [2]
                                     }
@@ -1202,7 +1759,7 @@
                             })
                         }, n
                     }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         if (this.state.terms === []) return null;
                         var e = [];
                         this.props.terms.forEach(function(t) {
@@ -1213,16 +1770,16 @@
                     }, t.prototype.render = function() {
                         if (!this.state.terms) return null;
                         var e = null;
-                        return this.props.type === i.Banned && (e = o.createElement(y.W, {
-                            color: y.O.Alt2,
-                            fontSize: y.Ca.Size8
-                        }, Object(l.d)("Tip: Some terms may be marked as Private and only visible to the channel owner.", "ChatTermsSetting"))), o.createElement(y.Xa, {
+                        return this.props.type === L.Banned && (e = i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            fontSize: b.Ca.Size8
+                        }, Object(s.d)("Tip: Some terms may be marked as Private and only visible to the channel owner.", "ChatTermsSetting"))), i.createElement(b.Xa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, o.createElement("div", {
+                        }, i.createElement("div", {
                             className: "chat-terms-setting"
-                        }, o.createElement(A, {
+                        }, i.createElement(x, {
                             channelID: this.props.channelID,
                             userID: this.props.userID,
                             addPlaceholder: this.props.addPlaceholderMsg,
@@ -1231,22 +1788,22 @@
                             onTermEdit: this.editTerm,
                             onTermDelete: this.deleteTerm,
                             type: this.props.type
-                        })), o.createElement(y.Xa, {
+                        })), i.createElement(b.Xa, {
                             margin: {
                                 top: .5
                             }
                         }, e))
-                    }, t = r.__decorate([Object(E.a)(C, {
+                    }, t = a.__decorate([Object(v.a)(j, {
                         name: "addChannelBlockedTerm"
-                    }), Object(E.a)(T, {
+                    }), Object(v.a)(F, {
                         name: "addChannelPermittedTerm"
-                    }), Object(E.a)(M, {
+                    }), Object(v.a)(P, {
                         name: "deleteChannelBlockedTerm"
-                    }), Object(E.a)(N, {
+                    }), Object(v.a)(w, {
                         name: "deleteChannelPermittedTerm"
                     })], t)
-                }(o.Component)),
-                L = function(e) {
+                }(i.Component)),
+                B = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleOptOutChange = function(e) {
@@ -1261,59 +1818,59 @@
                             })
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return !this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.user ? o.createElement(y.Xa, null) : o.createElement(y.Eb, {
+                        return !this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.user ? i.createElement(b.Xa, null) : i.createElement(b.Cb, {
                             padding: {
                                 top: 2
                             }
-                        }, o.createElement(y.Ja, null, o.createElement(y.P, {
+                        }, i.createElement(b.Ja, null, i.createElement(b.P, {
                             cols: 2
-                        }, o.createElement(y.W, {
-                            color: y.O.Alt2,
-                            type: y.Vb.Strong
-                        }, Object(l.d)("Blocked and Permitted Terms", "AutoModTermsTitle"))), o.createElement(y.P, {
+                        }, i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            type: b.Tb.Strong
+                        }, Object(s.d)("Blocked and Permitted Terms", "AutoModTermsTitle"))), i.createElement(b.P, {
                             cols: 5
-                        }, o.createElement(y.W, {
-                            color: y.O.Alt2,
-                            type: y.Vb.Strong
-                        }, Object(l.d)("Blocked Terms or Phrases", "AutoModBlockedTermsTitle")), o.createElement(y.W, {
-                            color: y.O.Alt2
-                        }, Object(l.d)("Messages containing these terms or phrases will be blocked from chat. Terms are automatically added when a mod denies a caught message.", "AutoModBlockedTermsDescription")), o.createElement(O, {
+                        }, i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            type: b.Tb.Strong
+                        }, Object(s.d)("Blocked Terms or Phrases", "AutoModBlockedTermsTitle")), i.createElement(b.W, {
+                            color: b.O.Alt2
+                        }, Object(s.d)("Messages containing these terms or phrases will be blocked from chat. Terms are automatically added when a mod denies a caught message.", "AutoModBlockedTermsDescription")), i.createElement(_, {
                             channelID: this.props.data.user.id,
                             userID: this.props.data.currentUser.id,
-                            type: i.Banned,
-                            addPlaceholderMsg: Object(l.d)("Add new blocked term or phrase", "AutoModBlockedTermAdditionPlaceHolder"),
+                            type: L.Banned,
+                            addPlaceholderMsg: Object(s.d)("Add new blocked term or phrase", "AutoModBlockedTermAdditionPlaceHolder"),
                             terms: this.props.data.user.blockedTerms
-                        }), o.createElement(y.W, {
-                            color: y.O.Alt2,
-                            type: y.Vb.Strong
-                        }, Object(l.d)("Permitted Terms or Phrases", "AutoModPermittedTermsTitle")), o.createElement(y.W, {
-                            color: y.O.Alt2
-                        }, Object(l.d)("Messages containing these terms, and no other blocked terms, will not be caught by AutoMod. Terms are automatically added when a mod allows a message.", "AutoModPermittedTermsDescription")), o.createElement(O, {
+                        }), i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            type: b.Tb.Strong
+                        }, Object(s.d)("Permitted Terms or Phrases", "AutoModPermittedTermsTitle")), i.createElement(b.W, {
+                            color: b.O.Alt2
+                        }, Object(s.d)("Messages containing these terms, and no other blocked terms, will not be caught by AutoMod. Terms are automatically added when a mod allows a message.", "AutoModPermittedTermsDescription")), i.createElement(_, {
                             channelID: this.props.data.user.id,
                             userID: this.props.data.currentUser.id,
-                            type: i.Permitted,
-                            addPlaceholderMsg: Object(l.d)("Add new permitted term or phrase", "AutoModPermittedTermsAdditionPlaceholder"),
+                            type: L.Permitted,
+                            addPlaceholderMsg: Object(s.d)("Add new permitted term or phrase", "AutoModPermittedTermsAdditionPlaceholder"),
                             terms: this.props.data.user.permittedTerms
-                        }), o.createElement(y.N, {
+                        }), i.createElement(b.N, {
                             defaultChecked: this.props.data.user.chatSettings.isOptedOutOfGlobalBannedWordsList,
-                            label: Object(l.d)("Opt out of commonly blocked terms", "AutoModSettings"),
+                            label: Object(s.d)("Opt out of commonly blocked terms", "AutoModSettings"),
                             onChange: this.handleOptOutChange
-                        }), o.createElement(y.W, {
-                            color: y.O.Alt2,
-                            fontSize: y.Ca.Size8
-                        }, Object(l.d)("AutoMod level 0 automatically holds messages containing commonly blocked terms for mods to review. If you enable this feature AutoMod won't hold these messages.", "AutoModSettings")))))
+                        }), i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            fontSize: b.Ca.Size8
+                        }, Object(s.d)("AutoMod level 0 automatically holds messages containing commonly blocked terms for mods to review. If you enable this feature AutoMod won't hold these messages.", "AutoModSettings")))))
                     }, t
-                }(o.Component),
-                I = n("Z6v5"),
-                j = n("ah12");
-            var x = Object(d.compose)(Object(h.connect)(function(e) {
+                }(i.Component),
+                R = n("Z6v5"),
+                W = n("ah12");
+            var X = Object(o.compose)(Object(p.connect)(function(e) {
                     return {
-                        isLoggedIn: Object(v.f)(e)
+                        isLoggedIn: Object(g.f)(e)
                     }
-                }), Object(E.a)(I, {
+                }), Object(v.a)(R, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1322,23 +1879,23 @@
                             fetchPolicy: "cache-and-network"
                         }
                     }
-                }), Object(E.a)(j, {
+                }), Object(v.a)(W, {
                     name: "onUpdateChatSettings"
-                }), Object(g.b)("ChatTermsContainer"))(L),
-                D = n("DMoW"),
-                F = n("Ww25"),
-                P = n("l/RX"),
-                w = n("Jpqj"),
-                _ = function(e) {
+                }), Object(m.b)("ChatTermsContainer"))(B),
+                V = n("DMoW"),
+                U = n("Ww25"),
+                G = n("l/RX"),
+                z = n("Jpqj"),
+                q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            canAccess: !!t.props.data.user && !!t.props.data.user.modLogsRoleAccess && t.props.data.user.modLogsRoleAccess.accessLevel === D.C.WRITE,
+                            canAccess: !!t.props.data.user && !!t.props.data.user.modLogsRoleAccess && t.props.data.user.modLogsRoleAccess.accessLevel === V.A.WRITE,
                             error: !1,
                             enabled: !1
                         }, t.onChange = function() {
-                            return r.__awaiter(t, void 0, void 0, function() {
-                                return r.__generator(this, function(e) {
+                            return a.__awaiter(t, void 0, void 0, function() {
+                                return a.__generator(this, function(e) {
                                     switch (e.label) {
                                         case 0:
                                             return this.props.data.currentUser && this.props.data.currentUser.id ? this.state.canAccess ? [4, this.toggleAccessOff()] : [3, 2] : [2];
@@ -1358,8 +1915,8 @@
                                 variables: {
                                     input: {
                                         channelID: t.props.data.currentUser.id,
-                                        channelRole: D.k.MODERATOR,
-                                        accessLevel: D.C.NONE
+                                        channelRole: V.j.MODERATOR,
+                                        accessLevel: V.A.NONE
                                     }
                                 }
                             }).then(function() {
@@ -1377,8 +1934,8 @@
                                 variables: {
                                     input: {
                                         channelID: t.props.data.currentUser.id,
-                                        channelRole: D.k.MODERATOR,
-                                        accessLevel: D.C.WRITE
+                                        channelRole: V.j.MODERATOR,
+                                        accessLevel: V.A.WRITE
                                     }
                                 }
                             }).then(function() {
@@ -1393,8 +1950,8 @@
                             })
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentWillMount = function() {
-                        var e = l.b.get("viewer_card_mod_logs", !1);
+                    return a.__extends(t, e), t.prototype.componentWillMount = function() {
+                        var e = s.b.get("viewer_card_mod_logs", !1);
                         this.setState({
                             enabled: e
                         })
@@ -1402,11 +1959,11 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         !e.data.loading && this.props.data.loading && e.data.user && e.data.user.modLogsRoleAccess && this.setState({
-                            canAccess: e.data.user.modLogsRoleAccess.accessLevel === D.C.WRITE,
+                            canAccess: e.data.user.modLogsRoleAccess.accessLevel === V.A.WRITE,
                             error: !!e.data.error
                         })
                     }, t.prototype.render = function() {
-                        return this.props.data.loading || !this.state.enabled ? null : this.props.data.currentUser && this.props.data.user && this.props.data.currentUser.id !== this.props.data.user.id ? null : o.createElement(y.Eb, {
+                        return this.props.data.loading || !this.state.enabled ? null : this.props.data.currentUser && this.props.data.user && this.props.data.currentUser.id !== this.props.data.user.id ? null : i.createElement(b.Cb, {
                             borderTop: !0,
                             margin: {
                                 top: 2
@@ -1414,35 +1971,35 @@
                             padding: {
                                 top: 3
                             }
-                        }, o.createElement(y.Ja, null, o.createElement(y.P, {
+                        }, i.createElement(b.Ja, null, i.createElement(b.P, {
                             cols: 2
-                        }, o.createElement(y.W, {
-                            color: y.O.Alt2,
-                            type: y.Vb.Strong
-                        }, Object(l.d)("Chat Logs for Mods", "ModLogsAccessToggle")), o.createElement(y.Xa, {
-                            display: y.X.Inline,
+                        }, i.createElement(b.W, {
+                            color: b.O.Alt2,
+                            type: b.Tb.Strong
+                        }, Object(s.d)("Chat Logs for Mods", "ModLogsAccessToggle")), i.createElement(b.Xa, {
+                            display: b.X.Inline,
                             padding: {
                                 x: 1
                             }
-                        }, o.createElement(y.gb, {
-                            label: Object(l.d)("private", "ModLogsAccessToggle")
-                        }))), o.createElement(y.P, {
+                        }, i.createElement(b.eb, {
+                            label: Object(s.d)("private", "ModLogsAccessToggle")
+                        }))), i.createElement(b.P, {
                             cols: 5
-                        }, o.createElement(y.Xb, {
+                        }, i.createElement(b.Vb, {
                             checked: this.state.canAccess,
                             error: this.state.error,
                             disabled: this.props.data.loading || !!this.props.data.error,
                             onChange: this.onChange,
                             "data-test-selector": "dashboard-moderation-chat-logs-access-toggle"
-                        }), o.createElement(F.a, {
-                            text: Object(l.d)("Allows your moderators to view chat and ban history for users in your channel, and view and add comments on users.", "ModLogsAccessToggle")
-                        }), this.state.error && o.createElement(y.W, {
-                            color: y.O.Error,
+                        }), i.createElement(U.a, {
+                            text: Object(s.d)("Allows your moderators to view chat and ban history for users in your channel, and view and add comments on users.", "ModLogsAccessToggle")
+                        }), this.state.error && i.createElement(b.W, {
+                            color: b.O.Error,
                             "data-test-selector": "dashboard-moderation-chat-logs-access-error-message"
-                        }, Object(l.d)("Sorry, something went wrong. Please try again later.", "ModLogsAccessToggle")))))
+                        }, Object(s.d)("Sorry, something went wrong. Please try again later.", "ModLogsAccessToggle")))))
                     }, t
-                }(o.Component),
-                B = Object(d.compose)(Object(g.b)("ModLogsAccessToggle"), Object(E.a)(w, {
+                }(i.Component),
+                H = Object(o.compose)(Object(m.b)("ModLogsAccessToggle"), Object(v.a)(z, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1450,24 +2007,24 @@
                             }
                         }
                     }
-                }), Object(E.a)(P, {
+                }), Object(v.a)(G, {
                     name: "setModLogsAccess"
-                }))(_),
-                R = (n("gBSZ"), function(e) {
+                }))(q),
+                $ = (n("gBSZ"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return o.createElement(y.Eb, {
+                        return i.createElement(b.Cb, {
                             className: "auto-mod-wrapper",
                             padding: {
                                 y: 3
                             }
-                        }, o.createElement(b.a, {
+                        }, i.createElement(I, {
                             channelLogin: this.props.channelLogin
-                        }), o.createElement(y.Eb, {
+                        }), i.createElement(b.Cb, {
                             borderTop: !0,
                             padding: {
                                 top: .5
@@ -1475,44 +2032,44 @@
                             margin: {
                                 y: 1
                             }
-                        }), o.createElement(x, {
+                        }), i.createElement(X, {
                             channelLogin: this.props.channelLogin
-                        }), o.createElement(B, {
+                        }), i.createElement(H, {
                             channelLogin: this.props.channelLogin
                         }))
                     }, t
-                }(o.Component)),
-                V = Object(k.compose)(Object(g.b)("AutoModWrapper"))(R);
-            var X = Object(h.connect)(function(e) {
+                }(i.Component)),
+                J = Object(h.compose)(Object(m.b)("AutoModWrapper"))($);
+            var Q = Object(p.connect)(function(e) {
                     return {
-                        isLoggedIn: Object(v.f)(e)
+                        isLoggedIn: Object(g.f)(e)
                     }
-                })(V),
-                W = function(e) {
+                })(J),
+                K = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(c.b, null, o.createElement(y.Xa, {
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        return i.createElement(d.b, null, i.createElement(b.Xa, {
                             padding: 2,
-                            position: y.jb.Relative
-                        }, o.createElement(y.W, {
-                            type: y.Vb.H3
-                        }, Object(l.d)("Moderation Settings", "AutoModPage")), o.createElement(X, {
+                            position: b.hb.Relative
+                        }, i.createElement(b.W, {
+                            type: b.Tb.H3
+                        }, Object(s.d)("Moderation Settings", "AutoModPage")), i.createElement(Q, {
                             channelLogin: this.props.match.params.channelName
                         })))
                     }, t
-                }(o.Component),
-                U = Object(d.compose)(s.a, Object(g.b)("AutoModPage", {
+                }(i.Component),
+                Y = Object(o.compose)(r.a, Object(m.b)("AutoModPage", {
                     autoReportInteractive: !0,
-                    destination: m.a.DashboardSettingsAutoMod
-                }), Object(u.a)({
-                    location: p.PageviewLocation.DashboardSettingsAutoMod
-                }))(W);
+                    destination: c.a.DashboardSettingsAutoMod
+                }), Object(l.a)({
+                    location: u.PageviewLocation.DashboardSettingsAutoMod
+                }))(K);
             n.d(t, "AutoModPageComponent", function() {
-                return W
+                return K
             }), n.d(t, "AutoModPage", function() {
-                return U
+                return Y
             })
         },
         Z6v5: function(e, t) {
@@ -2211,580 +2768,6 @@
                 }
             };
             e.exports = n
-        },
-        xE3M: function(e, t, n) {
-            "use strict";
-            var a = n("/MKj"),
-                i = n("fvjX"),
-                r = n("yR8l"),
-                o = n("kRBY"),
-                s = n("GnwI"),
-                d = n("mrSG"),
-                l = n("q1tI"),
-                c = n("/7QA"),
-                u = n("u5aL"),
-                m = n("Ue10"),
-                p = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            menuItemsVisible: !1
-                        }, t.menuItemClicked = function(e) {
-                            var n = Number(e.currentTarget.dataset.newLevel);
-                            t.props.onLevelChange(t.props.category, n), t.setState({
-                                menuItemsVisible: !t.state.menuItemsVisible
-                            })
-                        }, t.toggleCategoryMenu = function() {
-                            t.setState({
-                                menuItemsVisible: !t.state.menuItemsVisible
-                            })
-                        }, t.hideCategoryMenu = function() {
-                            t.setState({
-                                menuItemsVisible: !1
-                            })
-                        }, t
-                    }
-                    return d.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.latencyTracking.reportInteractive()
-                    }, t.prototype.render = function() {
-                        return l.createElement(m.P, {
-                            cols: 6
-                        }, l.createElement(u.a, {
-                            onClickOut: this.hideCategoryMenu
-                        }, l.createElement(m.Xa, {
-                            padding: {
-                                top: .5
-                            }
-                        }, l.createElement(m.z, {
-                            dropdown: !0,
-                            type: m.F.Hollow,
-                            onClick: this.toggleCategoryMenu
-                        }, this.menuOption(this.props.categoryLevel)), this.menuItems())))
-                    }, t.prototype.menuItems = function() {
-                        return this.state.menuItemsVisible ? l.createElement(m.Eb, {
-                            border: !0,
-                            background: m.r.Alt,
-                            position: m.jb.Absolute,
-                            zIndex: m.ic.Above
-                        }, this.renderMenuItem(0), this.renderMenuItem(6), this.renderMenuItem(5), this.renderMenuItem(4), this.renderMenuItem(3)) : ""
-                    }, t.prototype.renderMenuItem = function(e) {
-                        return l.createElement(m.Ua, {
-                            type: m.Va.Alpha,
-                            selected: this.props.categoryLevel === e,
-                            "data-new-level": e,
-                            onClick: this.menuItemClicked
-                        }, l.createElement(m.Xa, {
-                            padding: {
-                                y: .5,
-                                x: 1
-                            }
-                        }, this.menuOption(e)))
-                    }, t.prototype.getNumShields = function(e) {
-                        switch (e) {
-                            case 6:
-                                return 1;
-                            case 5:
-                                return 2;
-                            case 4:
-                                return 3;
-                            case 3:
-                            case 2:
-                                return 4;
-                            default:
-                                return 0
-                        }
-                    }, t.prototype.menuOption = function(e) {
-                        for (var t = [Object(c.d)("No filtering", "AutoModSettings"), Object(c.d)("Less filtering", "AutoModSettings"), Object(c.d)("Some filtering", "AutoModSettings"), Object(c.d)("More filtering", "AutoModSettings"), Object(c.d)("Most filtering", "AutoModSettings")], n = this.getNumShields(e), a = [], i = 0; i < n; i++) a.push(l.createElement(m.Xa, {
-                            key: "shield" + i,
-                            display: m.X.InlineFlex,
-                            padding: {
-                                right: .5
-                            }
-                        }, l.createElement(m.sb, {
-                            asset: m.tb.Automod,
-                            height: 13,
-                            width: 13,
-                            type: m.ub.Alt2
-                        })));
-                        var r = t[n];
-                        return l.createElement(m.Xa, {
-                            display: m.X.Flex,
-                            padding: .5
-                        }, a, l.createElement(m.W, {
-                            align: m.fc.Middle,
-                            color: m.O.Alt2
-                        }, r))
-                    }, t = d.__decorate([Object(s.b)("AutomodCategoryDisplay")], t)
-                }(l.Component),
-                g = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return d.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(m.P, {
-                            cols: 6
-                        }, l.createElement(m.Xa, {
-                            padding: {
-                                bottom: 1
-                            }
-                        }, l.createElement("strong", null, this.props.category), l.createElement(m.W, {
-                            color: m.O.Alt2,
-                            type: m.Vb.P
-                        }, this.props.description)))
-                    }, t
-                }(l.Component),
-                h = "automod-onboarding-closed",
-                v = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            onboardingVisible: !1
-                        }, t.onCloseOnboarding = function() {
-                            c.m.set(h, !0), t.setState({
-                                onboardingVisible: !1
-                            })
-                        }, t
-                    }
-                    return d.__extends(t, e), t.prototype.componentDidMount = function() {
-                        var e = c.m.getOptional(h);
-                        null === e ? this.setState({
-                            onboardingVisible: !0
-                        }) : this.setState({
-                            onboardingVisible: !e
-                        })
-                    }, t.prototype.render = function() {
-                        return this.state.onboardingVisible ? l.createElement(m.Ja, null, l.createElement(m.P, {
-                            cols: 8
-                        }, l.createElement(m.Eb, {
-                            position: m.jb.Relative,
-                            border: !0,
-                            color: m.O.Alt2,
-                            padding: 2
-                        }, l.createElement(m.W, {
-                            type: m.Vb.H4,
-                            color: m.O.Link,
-                            bold: !0
-                        }, Object(c.d)("AutoMod Tip", "AutoModSettings")), l.createElement(m.Xa, {
-                            padding: 1,
-                            position: m.jb.Absolute,
-                            attachTop: !0,
-                            attachRight: !0
-                        }, l.createElement(m.z, {
-                            type: m.F.Text,
-                            icon: m.tb.Close,
-                            onClick: this.onCloseOnboarding,
-                            "data-test-selector": "automod-tip-dismiss-button"
-                        })), l.createElement(m.W, {
-                            color: m.O.Alt2,
-                            type: m.Vb.Span
-                        }, Object(c.d)("Did you know AutoMod catches misspelled words and evasion? N!ce try, pe0ple wh0 t@lk lik3 th!s.", "AutoModSettings"))))) : ""
-                    }, t
-                }(l.Component),
-                k = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.handleSliderMove = function(e) {
-                            var n = Number(e.currentTarget.value);
-                            t.props.onLevelChange(n)
-                        }, t
-                    }
-                    return d.__extends(t, e), t.prototype.render = function() {
-                        var e = [Object(c.d)("Only commonly blocked terms", "AutoModSettings"), Object(c.d)("A Little Moderation", "AutoModSettings"), Object(c.d)("Some Moderation", "AutoModSettings"), Object(c.d)("More Moderation", "AutoModSettings"), Object(c.d)("A Lot of Moderation", "AutoModSettings")],
-                            t = this.props.level,
-                            n = e[t],
-                            a = Object(c.d)("Level {lvl,number}", {
-                                lvl: t
-                            }, "AutoModSettings");
-                        return l.createElement(m.Eb, {
-                            borderLeft: !0,
-                            borderRight: !0,
-                            padding: {
-                                top: 1,
-                                x: 2
-                            }
-                        }, l.createElement(m.Xa, {
-                            padding: {
-                                bottom: .5
-                            }
-                        }, l.createElement(m.W, {
-                            color: m.O.Alt2,
-                            type: m.Vb.P
-                        }, Object(c.d)("Your AutoMod setting:", "AutoModSettingsSlider"))), l.createElement(m.qb, {
-                            min: 0,
-                            max: 4,
-                            step: 1,
-                            value: String(t),
-                            onChange: this.handleSliderMove,
-                            "data-test-selector": "auto-mod-slider"
-                        }), l.createElement(m.Xa, {
-                            display: m.X.Flex
-                        }, l.createElement(m.Xa, {
-                            padding: {
-                                right: .5
-                            }
-                        }, a), l.createElement(m.W, {
-                            color: m.O.Alt2,
-                            type: m.Vb.Strong
-                        }, n)), l.createElement(m.Eb, {
-                            background: m.r.Alt2,
-                            padding: 1,
-                            className: "auto-mod-wrapper__carat",
-                            position: m.jb.Relative
-                        }))
-                    }, t
-                }(l.Component),
-                b = "slider-blank-state-container",
-                f = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            isCustom: !1,
-                            initialIsCustom: !1,
-                            submissionState: m.E.Default,
-                            cancelDisabled: !0,
-                            isUnsetInBackend: !0,
-                            isDataLoaded: !1
-                        }, t.levelToIdentity = [0, 5, 5, 4, 4], t.levelToSex = [0, 0, 5, 4, 4], t.levelToAggro = [0, 0, 4, 4, 2], t.levelToProfanity = [0, 0, 0, 0, 4], t.recentSuccessfulMutation = 0, t.showAutoModCategories = function() {
-                            var e = [t.levelToAggro[1], t.levelToIdentity[1], t.levelToProfanity[1], t.levelToSex[1]];
-                            t.setState({
-                                level: 1,
-                                categories: e,
-                                isCustom: !1,
-                                cancelDisabled: !1
-                            })
-                        }, t.handleLevelChange = function(e) {
-                            var n = [t.levelToAggro[e], t.levelToIdentity[e], t.levelToProfanity[e], t.levelToSex[e]];
-                            t.setState({
-                                level: e,
-                                categories: n,
-                                cancelDisabled: !1
-                            })
-                        }, t.updateAutoModProperties = function() {
-                            t.state.categories && (t.setState({
-                                submissionState: m.E.Loading
-                            }), t.props.onUpdateAutoModProperties({
-                                variables: {
-                                    input: {
-                                        channelID: t.props.data.user.id,
-                                        aggressiveLevel: t.state.categories[0],
-                                        identityLevel: t.state.categories[1],
-                                        profanityLevel: t.state.categories[2],
-                                        sexualLevel: t.state.categories[3]
-                                    }
-                                }
-                            }).then(function() {
-                                t.handleSuccessfulMutation()
-                            }))
-                        }, t.resetAutoModProperties = function() {
-                            t.setState({
-                                categories: t.state.initialCategories,
-                                isCustom: t.state.initialIsCustom,
-                                submissionState: m.E.Default,
-                                level: t.state.initialLevel,
-                                cancelDisabled: !0
-                            })
-                        }, t.handleCategoryLevelChange = function(e, n) {
-                            if (t.state.categories) {
-                                var a = t.state.categories.slice();
-                                a[e] = n, t.setState({
-                                    isCustom: !0,
-                                    categories: a,
-                                    cancelDisabled: !1
-                                })
-                            }
-                        }, t.handleSuccessfulMutation = function() {
-                            t.setState({
-                                submissionState: m.E.Success,
-                                cancelDisabled: !0,
-                                initialCategories: t.state.categories,
-                                initialLevel: t.state.level
-                            }), clearTimeout(t.recentSuccessfulMutation), t.recentSuccessfulMutation = setTimeout(t.handleSuccessfulMutationExpired, 3e3)
-                        }, t.handleSuccessfulMutationExpired = function() {
-                            t.setState({
-                                submissionState: m.E.Default
-                            })
-                        }, t.revertToSlider = function() {
-                            var e = [t.levelToAggro[1], t.levelToIdentity[1], t.levelToProfanity[1], t.levelToSex[1]];
-                            t.setState({
-                                isCustom: !1,
-                                level: 1,
-                                categories: e,
-                                cancelDisabled: !1
-                            })
-                        }, t.renderSlider = function(e) {
-                            return e ? l.createElement(m.Eb, {
-                                borderLeft: !0,
-                                borderRight: !0,
-                                padding: 2,
-                                "data-test-selector": b
-                            }, l.createElement("img", {
-                                src: "https://s.jtvnw.net/jtv_user_pictures/hosted_images/automod_onboarding.gif"
-                            }), l.createElement(m.Eb, null, l.createElement(m.Eb, {
-                                padding: {
-                                    top: 2
-                                },
-                                textAlign: m.Rb.Center
-                            }, Object(c.d)("Your current AutoMod level: 0", "AutoModSettings")), l.createElement(m.Eb, {
-                                margin: {
-                                    x: 2
-                                },
-                                padding: {
-                                    y: 1,
-                                    x: 5
-                                },
-                                textAlign: m.Rb.Center
-                            }, l.createElement(m.z, {
-                                fullWidth: !0,
-                                onClick: t.showAutoModCategories,
-                                state: m.E.Default
-                            }, Object(c.d)("Choose level", "AutoModSettings"))))) : t.state.isCustom || void 0 === t.state.level ? l.createElement(m.Eb, {
-                                borderLeft: !0,
-                                borderRight: !0,
-                                padding: {
-                                    y: 1,
-                                    x: 2
-                                }
-                            }, l.createElement(m.Ja, {
-                                gutterSize: m.Ka.Small
-                            }, l.createElement(m.P, {
-                                cols: 6
-                            }, l.createElement(m.Xa, {
-                                display: m.X.Flex,
-                                fullHeight: !0,
-                                alignItems: m.f.Center
-                            }, l.createElement(m.W, {
-                                color: m.O.Alt2,
-                                type: m.Vb.Span
-                            }, Object(c.d)("Your AutoMod setting:", "AutoModSettings")), l.createElement(m.Xa, {
-                                padding: {
-                                    left: .5
-                                },
-                                display: m.X.InlineFlex
-                            }, l.createElement(m.W, {
-                                color: m.O.Alt2,
-                                type: m.Vb.Strong
-                            }, Object(c.d)("Custom", "AutoModSettingsValue"))))), l.createElement(m.P, {
-                                cols: 5
-                            }, l.createElement(m.z, {
-                                type: m.F.Hollow,
-                                onClick: t.revertToSlider
-                            }, Object(c.d)("Revert to defaults", "AutoModSettings"))))) : l.createElement(k, {
-                                level: t.state.level.valueOf(),
-                                onLevelChange: t.handleLevelChange
-                            })
-                        }, t
-                    }
-                    return d.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.latencyTracking.reportInteractive()
-                    }, t.prototype.componentWillReceiveProps = function(e) {
-                        e.data && !e.data.loading && !e.data.error && e.data.user && (this.state.isDataLoaded || (this.hasAutoModProperties(e) ? this.initializeStateFromBackend(e) : this.setState({
-                            isDataLoaded: !0
-                        })))
-                    }, t.prototype.render = function() {
-                        if (!this.props.data || this.props.data.loading || this.props.data.error || null === this.props.data.user) return l.createElement(m.Eb, {
-                            "data-test-selector": "automod-placeholder-container"
-                        });
-                        if (!this.hasAutoModDashboardAccess()) return l.createElement(m.Eb, {
-                            margin: {
-                                top: 2
-                            },
-                            color: m.O.Alt2,
-                            textAlign: m.Rb.Center,
-                            "data-test-selector": "automod-placeholder-container"
-                        }, l.createElement(m.W, {
-                            type: m.Vb.H3,
-                            italic: !0
-                        }, Object(c.d)("You do not have permission to access this dashboard.", "AutoModSettings")));
-                        var e = this.isBlankState();
-                        return l.createElement(m.Xa, null, l.createElement(m.Eb, {
-                            margin: {
-                                bottom: 2
-                            }
-                        }, l.createElement(v, null)), l.createElement(m.Ja, null, l.createElement(m.P, {
-                            cols: 2
-                        }, l.createElement(m.W, {
-                            color: m.O.Alt2,
-                            type: m.Vb.Strong
-                        }, Object(c.d)("AutoMod Rulesets", "AutoModSettings"))), l.createElement(m.P, {
-                            cols: 5
-                        }, this.AutomodTableHeader(), this.renderSlider(e), this.AutomodCategories(e), this.AutomodTableFooter(e))))
-                    }, t.prototype.isBlankState = function() {
-                        return !this.state.categories && !this.state.level
-                    }, t.prototype.AutomodTableFooter = function(e) {
-                        return e ? l.createElement(m.Eb, {
-                            border: !0,
-                            padding: 2,
-                            background: m.r.Alt2
-                        }, l.createElement(m.Ja, null, l.createElement(m.P, {
-                            cols: 7
-                        }, Object(c.d)("You can adjust how much moderation you'd like for your channel.", "AutoModSettings")), l.createElement(m.P, {
-                            cols: 5
-                        }, l.createElement(m.Xa, {
-                            display: m.X.Flex,
-                            fullHeight: !0,
-                            flexDirection: m.Aa.Column,
-                            justifyContent: m.Wa.Center,
-                            alignItems: m.f.End
-                        }, l.createElement(m.z, {
-                            onClick: this.showAutoModCategories,
-                            type: m.F.Hollow
-                        }, Object(c.d)("See how rulesets work", "AutoModSettings")))))) : l.createElement(m.Xa, null, l.createElement(m.Eb, {
-                            border: !0,
-                            padding: {
-                                y: 1,
-                                x: 2
-                            },
-                            background: m.r.Alt2
-                        }, l.createElement("a", {
-                            href: "https://help.twitch.tv/customer/portal/articles/2662186-how-to-use-automod",
-                            target: "_blank"
-                        }, Object(c.d)("Learn more in our help page", "AutoModSettings"))), l.createElement(m.Xa, {
-                            display: m.X.Flex,
-                            padding: {
-                                y: 1
-                            },
-                            margin: {
-                                top: .5
-                            }
-                        }, l.createElement(m.Xa, {
-                            padding: {
-                                right: .5
-                            }
-                        }, l.createElement(m.z, {
-                            onClick: this.updateAutoModProperties,
-                            state: this.state.submissionState
-                        }, Object(c.d)("Save", "AutoModSettings"))), l.createElement(m.z, {
-                            onClick: this.resetAutoModProperties,
-                            type: m.F.Text,
-                            disabled: this.state.cancelDisabled
-                        }, Object(c.d)("Cancel", "AutoModSettings"))))
-                    }, t.prototype.AutomodCategories = function(e) {
-                        if (!e && 0 !== this.state.level && this.state.categories) {
-                            var t = Object(c.d)("Identity language", "AutoModSettings"),
-                                n = Object(c.d)("Referring to race, religion, gender, orientation, disability, or similar", "AutoModSettings"),
-                                a = Object(c.d)("Sexually Explicit Language", "AutoModSettings"),
-                                i = Object(c.d)("Referring to sexual acts, sexual content, and body parts", "AutoModSettings"),
-                                r = Object(c.d)("Aggressive language", "AutoModSettings"),
-                                o = Object(c.d)("Hostility towards other people, often associated with bullying", "AutoModSettings"),
-                                s = Object(c.d)("Profanity", "AutoModSettings"),
-                                d = Object(c.d)("Expletives, curse words, things you wouldn’t say to grandma", "AutoModSettings");
-                            return l.createElement(m.Eb, {
-                                borderLeft: !0,
-                                borderRight: !0,
-                                padding: 2,
-                                background: m.r.Alt2,
-                                "data-test-selector": "automod-categories-container"
-                            }, l.createElement(m.Ja, {
-                                gutterSize: m.Ka.Small
-                            }, l.createElement(g, {
-                                category: t,
-                                description: n
-                            }), l.createElement(p, {
-                                category: 1,
-                                categoryLevel: this.state.categories[1],
-                                onLevelChange: this.handleCategoryLevelChange
-                            }), l.createElement(g, {
-                                category: a,
-                                description: i
-                            }), l.createElement(p, {
-                                category: 3,
-                                categoryLevel: this.state.categories[3],
-                                onLevelChange: this.handleCategoryLevelChange
-                            }), l.createElement(g, {
-                                category: r,
-                                description: o
-                            }), l.createElement(p, {
-                                category: 0,
-                                categoryLevel: this.state.categories[0],
-                                onLevelChange: this.handleCategoryLevelChange
-                            }), l.createElement(g, {
-                                category: s,
-                                description: d
-                            }), l.createElement(p, {
-                                category: 2,
-                                categoryLevel: this.state.categories[2],
-                                onLevelChange: this.handleCategoryLevelChange
-                            })))
-                        }
-                    }, t.prototype.AutomodTableHeader = function() {
-                        var e = Object(c.d)("AutoMod", "AutoModSettings"),
-                            t = Object(c.d)("Automatically hold risky messages for moderators to review.", "AutoModSettings");
-                        return l.createElement(m.G, {
-                            border: !0,
-                            row: !0
-                        }, l.createElement(m.Xa, {
-                            padding: {
-                                y: 1,
-                                x: 2
-                            }
-                        }, l.createElement(m.Eb, {
-                            className: "auto-mod-wrapper__shield",
-                            padding: {
-                                y: .5,
-                                x: .5
-                            },
-                            display: m.X.Flex,
-                            color: m.O.Overlay
-                        }, l.createElement(m.sb, {
-                            asset: m.tb.Automod,
-                            type: m.ub.Inherit
-                        }))), l.createElement(m.Xa, {
-                            padding: {
-                                y: 1,
-                                right: 2
-                            }
-                        }, l.createElement(m.W, null, e), l.createElement(m.W, {
-                            color: m.O.Alt2
-                        }, t)))
-                    }, t.prototype.determineLevel = function(e) {
-                        for (var t in [0, 1, 2, 3, 4])
-                            if (e[0] === this.levelToAggro[t] && e[1] === this.levelToIdentity[t] && e[2] === this.levelToProfanity[t] && e[3] === this.levelToSex[t]) return Number(t);
-                        return -1
-                    }, t.prototype.hasAutoModDashboardAccess = function() {
-                        return this.props.data.user.self.isModerator || this.props.data.currentUser.roles.isStaff || this.props.data.currentUser.roles.isSiteAdmin || this.props.data.user.id === this.props.data.currentUser.id
-                    }, t.prototype.initializeStateFromBackend = function(e) {
-                        if (e.data.user.autoModProperties) {
-                            var t = [e.data.user.autoModProperties.aggressiveLevel, e.data.user.autoModProperties.identityLevel, e.data.user.autoModProperties.profanityLevel, e.data.user.autoModProperties.sexualLevel],
-                                n = this.determineLevel(t),
-                                a = -1 === n;
-                            this.setState({
-                                categories: t,
-                                initialCategories: t,
-                                isCustom: a,
-                                initialIsCustom: a,
-                                level: n,
-                                initialLevel: n,
-                                isDataLoaded: !0
-                            })
-                        }
-                    }, t.prototype.hasAutoModProperties = function(e) {
-                        return e.data.user.autoModProperties
-                    }, t
-                }(l.Component),
-                S = n("K1HF"),
-                y = n("hxCz");
-            var A = Object(i.compose)(Object(a.connect)(function(e) {
-                return {
-                    isLoggedIn: Object(o.f)(e)
-                }
-            }), Object(r.a)(S, {
-                options: function(e) {
-                    return {
-                        variables: {
-                            channelLogin: e.channelLogin
-                        },
-                        fetchPolicy: "cache-and-network"
-                    }
-                },
-                skip: function(e) {
-                    return !e.isLoggedIn
-                }
-            }), Object(r.a)(y, {
-                name: "onUpdateAutoModProperties"
-            }), Object(s.b)("AutomodControls"))(f);
-            n.d(t, "a", function() {
-                return A
-            })
         },
         zjB3: function(e, t, n) {}
     }

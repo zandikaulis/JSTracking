@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [207], {
+    [201], {
         "17YR": function(e, t, n) {
             "use strict";
 
@@ -82,7 +82,7 @@
             }), n.d(t, "s", function() {
                 return D
             }), n.d(t, "d", function() {
-                return E
+                return O
             });
             var r, a = n("uYEN"),
                 o = {
@@ -110,7 +110,7 @@
                 S = ((r = {})[a.a.Gray] = "#979797", r[a.a.Purple] = "#9c3ee8", r[a.a.Green] = "#1db2a5", r[a.a.Blue] = "#0099fe", r[a.a.Red] = "#f43021", r[a.a.Yellow] = "#f3a71a", r),
                 P = "bits_sponsored_cheermotes",
                 D = "bits_sponsored_cheermotes_announcement",
-                E = "bits_charity_event"
+                O = "bits_charity_event"
         },
         Dez7: function(e, t) {
             var n = {
@@ -491,7 +491,7 @@
                             to: "/"
                         }) : i.createElement(i.Fragment, null, i.createElement(y.a, {
                             darkModeEnabled: !0
-                        }), i.createElement(w.Eb, {
+                        }), i.createElement(w.Cb, {
                             background: w.r.Alt,
                             className: "code-redemption-download-key-code-page",
                             fullWidth: !0,
@@ -589,13 +589,13 @@
                 }), Object(l.a)(S, {
                     name: "makeKeyBatchDownloadURL"
                 }))(P);
-            var E = Object(r.connect)(function(e) {
+            var O = Object(r.connect)(function(e) {
                 return {
                     user: Object(a.e)(e)
                 }
             })(D);
             n.d(t, "DownloadKeyCodePageComponent", function() {
-                return E
+                return O
             })
         },
         "V+GM": function(e, t, n) {

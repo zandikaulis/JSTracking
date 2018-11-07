@@ -728,7 +728,7 @@
                                 }
                             }, l.createElement(k.o, {
                                 ratio: k.p.Aspect1x1
-                            }, l.createElement(k.Eb, {
+                            }, l.createElement(k.Cb, {
                                 fullHeight: !0,
                                 fullWidth: !0,
                                 display: k.X.Flex,
@@ -744,7 +744,7 @@
                                 alt: e.title
                             })))), l.createElement(k.W, {
                                 "data-test-selector": i.BadgeTitle,
-                                type: k.Vb.Strong
+                                type: k.Tb.Strong
                             }, e.title))
                         }, t.data.refetch && t.refetchDataRef && t.refetchDataRef(t.data.refetch), n
                     }
@@ -769,17 +769,17 @@
                                 right: 1
                             }
                         }, l.createElement(k.W, {
-                            type: k.Vb.H3
+                            type: k.Tb.H3
                         }, Object(m.d)("Badges from Crates", "BadgesList"))), l.createElement(k.W, {
                             "data-test-selector": i.BadgeCount,
-                            type: k.Vb.H3,
+                            type: k.Tb.H3,
                             color: k.O.Alt2
                         }, Object(m.f)(e.length))), l.createElement(k.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, l.createElement(k.W, null, Object(m.d)('You can find your chat badge in Chat Settings under "Edit Appearance".', "BadgesList"))), l.createElement(k.bc, {
-                            childWidth: k.cc.Small,
+                        }, l.createElement(k.W, null, Object(m.d)('You can find your chat badge in Chat Settings under "Edit Appearance".', "BadgesList"))), l.createElement(k.Zb, {
+                            childWidth: k.ac.Small,
                             placeholderItems: 8
                         }, t))
                     }, t.prototype.componentDidUpdate = function(e) {
@@ -795,7 +795,7 @@
             ! function(e) {
                 e.Wrapper = "crates-list__wrapper", e.CrateImg = "crates-list__img"
             }(D || (D = {}));
-            var R, F = function(e) {
+            var C, R = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderCrate = function(e) {
@@ -806,7 +806,7 @@
                                 "data-open-url": e.openURL
                             }, l.createElement(k.o, {
                                 ratio: k.p.Aspect1x1
-                            }, l.createElement(k.Eb, {
+                            }, l.createElement(k.Cb, {
                                 fullHeight: !0,
                                 fullWidth: !0,
                                 display: k.X.Flex,
@@ -853,26 +853,26 @@
                                 right: 1
                             }
                         }, l.createElement(k.W, {
-                            type: k.Vb.H3
+                            type: k.Tb.H3
                         }, Object(m.d)("Twitch Crates", "CratesList"))), l.createElement(k.W, {
-                            type: k.Vb.H3,
+                            type: k.Tb.H3,
                             color: k.O.Alt2
-                        }, Object(m.f)(e.length))), l.createElement(k.bc, {
-                            childWidth: k.cc.Small,
+                        }, Object(m.f)(e.length))), l.createElement(k.Zb, {
+                            childWidth: k.ac.Small,
                             placeholderItems: 8
                         }, t))
                     }, t.prototype.componentDidUpdate = function(e) {
                         this.props.refetchDataRef && this.props.data.refetch && !e.data.refetch && this.props.refetchDataRef(this.props.data.refetch)
                     }, t
                 }(l.Component),
-                C = Object(r.compose)(Object(h.b)("CratesList", {
+                F = Object(r.compose)(Object(h.b)("CratesList", {
                     autoReportInteractive: !0
-                }), Object(p.a)(O))(F),
+                }), Object(p.a)(O))(R),
                 w = n("CgqK");
             n("HWNB");
             ! function(e) {
                 e.Drop = "drops-list__drop", e.DropName = "drops-list__drop-name", e.Wrapper = "drops-list__wrapper"
-            }(R || (R = {}));
+            }(C || (C = {}));
             var L, U = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -894,21 +894,21 @@
                                 margin: {
                                     bottom: 2
                                 },
-                                "data-test-selector": R.Drop
-                            }, l.createElement(k.Eb, {
+                                "data-test-selector": C.Drop
+                            }, l.createElement(k.Cb, {
                                 display: k.X.Flex,
                                 alignItems: k.f.Center,
                                 justifyContent: k.Wa.Center,
                                 padding: 1,
                                 border: !0,
-                                position: k.jb.Relative
+                                position: k.hb.Relative
                             }, l.createElement("img", {
                                 src: n.imageURL,
                                 alt: Object(m.d)("Drop image for {gameName}", {
                                     gameName: i
                                 }, "DropsListPresentation")
-                            }), l.createElement(k.Eb, {
-                                position: k.jb.Absolute,
+                            }), l.createElement(k.Cb, {
+                                position: k.hb.Absolute,
                                 attachBottom: !0,
                                 attachRight: !0,
                                 className: "drops-list__count",
@@ -921,8 +921,8 @@
                                     gameName: i
                                 }, "DropsListPresentation")
                             }, e.count))), l.createElement(k.W, {
-                                type: k.Vb.Strong,
-                                "data-test-selector": R.DropName
+                                type: k.Tb.Strong,
+                                "data-test-selector": C.DropName
                             }, i)) : null
                         }, t
                     }
@@ -959,7 +959,7 @@
                                 return e.renderDrop(n[t])
                             });
                         return l.createElement(k.Xa, {
-                            "data-test-selector": R.Wrapper,
+                            "data-test-selector": C.Wrapper,
                             margin: {
                                 y: 1
                             }
@@ -970,16 +970,16 @@
                                 right: 1
                             }
                         }, l.createElement(k.W, {
-                            type: k.Vb.H3
+                            type: k.Tb.H3
                         }, Object(m.d)("Drops", "DropsList"))), l.createElement(k.W, {
-                            type: k.Vb.H3,
+                            type: k.Tb.H3,
                             color: k.O.Alt2
                         }, Object(m.f)(t.length))), l.createElement(k.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, l.createElement(k.W, null, this.getDropsDescription(t ? t.length : 0))), l.createElement(k.bc, {
-                            childWidth: k.cc.Small,
+                        }, l.createElement(k.W, null, this.getDropsDescription(t ? t.length : 0))), l.createElement(k.Zb, {
+                            childWidth: k.ac.Small,
                             noGrow: !0
                         }, i))
                     }, Object.defineProperty(t.prototype, "drops", {
@@ -1019,7 +1019,7 @@
                                 }
                             }, l.createElement(k.o, {
                                 ratio: k.p.Aspect1x1
-                            }, l.createElement(k.Eb, {
+                            }, l.createElement(k.Cb, {
                                 fullHeight: !0,
                                 fullWidth: !0,
                                 display: k.X.Flex,
@@ -1033,7 +1033,7 @@
                                 title: t.displayName,
                                 alt: t.displayName
                             })))), l.createElement(k.W, {
-                                type: k.Vb.Strong
+                                type: k.Tb.Strong
                             }, t.displayName))
                         }, t.data.refetch && t.refetchDataRef && t.refetchDataRef(t.data.refetch), n
                     }
@@ -1070,37 +1070,37 @@
                                 right: 1
                             }
                         }, l.createElement(k.W, {
-                            type: k.Vb.H3
+                            type: k.Tb.H3
                         }, Object(m.d)("Emotes from Crates", "EmoticonsList"))), l.createElement(k.W, {
-                            type: k.Vb.H3,
+                            type: k.Tb.H3,
                             color: k.O.Alt2
                         }, Object(m.f)(t.length))), l.createElement(k.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, l.createElement(k.W, null, Object(m.d)("You can find your new emote in the emote selector for Chat, Pulse, Feeds, and Whispers.", "EmoticonsList"))), l.createElement(k.bc, {
-                            childWidth: k.cc.Small,
+                        }, l.createElement(k.W, null, Object(m.d)("You can find your new emote in the emote selector for Chat, Pulse, Feeds, and Whispers.", "EmoticonsList"))), l.createElement(k.Zb, {
+                            childWidth: k.ac.Small,
                             placeholderItems: 8
                         }, t))
                     }, t.prototype.componentDidUpdate = function(e) {
                         this.props.refetchDataRef && this.props.data.refetch && !e.data.refetch && this.props.refetchDataRef(this.props.data.refetch)
                     }, t
                 }(l.Component),
-                x = Object(r.compose)(Object(h.b)("EmoticonsList", {
+                T = Object(r.compose)(Object(h.b)("EmoticonsList", {
                     autoReportInteractive: !0
                 }), Object(p.a)(I))(_),
-                W = n("eJ65"),
-                X = n("VeT4"),
-                A = n("4h+t"),
-                T = function(e) {
+                x = n("eJ65"),
+                W = n("VeT4"),
+                X = n("4h+t"),
+                A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.bitsConfig = Object(A.a)(), t
+                        return t.bitsConfig = Object(X.a)(), t
                     }
                     return d.__extends(t, e), t.prototype.render = function() {
                         if (!this.props.amazonMarketplaces) return null;
                         var e = Object(m.d)("Inventory", "InventoryTitleBar");
-                        if (this.props.loading) return l.createElement(k.Eb, {
+                        if (this.props.loading) return l.createElement(k.Cb, {
                             className: "title-bar",
                             display: k.X.Flex,
                             borderBottom: !0,
@@ -1110,19 +1110,19 @@
                         }, l.createElement(k.Xa, {
                             flexGrow: 1
                         }, l.createElement(k.W, {
-                            type: k.Vb.H2
+                            type: k.Tb.H2
                         }, e)), l.createElement(k.Xa, {
                             display: k.X.Flex,
                             margin: {
                                 right: 3
                             },
                             alignItems: k.f.Center
-                        }, l.createElement(k.ib, {
+                        }, l.createElement(k.gb, {
                             width: 135,
                             height: 30
                         })), l.createElement(k.Xa, {
                             alignSelf: k.g.Baseline
-                        }, l.createElement(k.ib, {
+                        }, l.createElement(k.gb, {
                             width: 180,
                             height: 30
                         })));
@@ -1134,14 +1134,14 @@
                                 }, e.displayText) : null
                             }),
                             n = Object(m.d)("You have {bitsComponent}", {
-                                bitsComponent: l.createElement(X.a, {
+                                bitsComponent: l.createElement(W.a, {
                                     count: this.props.bitsBalance,
                                     bitsConfig: this.bitsConfig,
                                     withImage: !0,
                                     withText: !0
                                 })
                             }, "InventoryTitleBar");
-                        return l.createElement(k.Eb, {
+                        return l.createElement(k.Cb, {
                             className: "title-bar",
                             display: k.X.Flex,
                             borderBottom: !0,
@@ -1151,7 +1151,7 @@
                         }, l.createElement(k.Xa, {
                             flexGrow: 1
                         }, l.createElement(k.W, {
-                            type: k.Vb.H2
+                            type: k.Tb.H2
                         }, e)), l.createElement(k.Xa, {
                             display: k.X.Flex,
                             margin: {
@@ -1160,7 +1160,7 @@
                             alignItems: k.f.Center
                         }, l.createElement(k.W, null, n)), l.createElement(k.Xa, {
                             alignSelf: k.g.Baseline
-                        }, l.createElement(W.a, null, l.createElement(k.z, {
+                        }, l.createElement(x.a, null, l.createElement(k.z, {
                             type: k.F.Hollow
                         }, Object(m.d)("View your Twitch Order History", "InventoryTitleBar")), l.createElement(k.u, null, l.createElement(k.Xa, {
                             padding: 1
@@ -1169,9 +1169,9 @@
                 }(l.Component),
                 H = Object(r.compose)(Object(h.b)("TitleBar", {
                     autoReportInteractive: !0
-                }))(T),
-                V = n("wdoW"),
-                $ = function(e) {
+                }))(A),
+                $ = n("wdoW"),
+                q = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.refetchDataRefs = [], n.setRefetchDataRef = function(e) {
@@ -1200,23 +1200,23 @@
                             bitsBalance: n,
                             loading: e,
                             amazonMarketplaces: t
-                        }), l.createElement(C, {
+                        }), l.createElement(F, {
                             onCrateOpened: this.onCrateOpened,
                             refetchDataRef: this.setRefetchDataRef
-                        }), l.createElement(x, {
+                        }), l.createElement(T, {
                             refetchDataRef: this.setRefetchDataRef
                         }), l.createElement(E, {
                             refetchDataRef: this.setRefetchDataRef
                         }), l.createElement(j, null))
                     }, t
                 }(l.Component),
-                q = Object(r.compose)(Object(h.b)("InventoryPage", {
+                P = Object(r.compose)(Object(h.b)("InventoryPage", {
                     autoReportInteractive: !0,
                     destination: v.a.Inventory
                 }), Object(f.a)({
                     location: g.PageviewLocation.Inventory
-                }), Object(p.a)(V))($);
-            var P = Object(a.connect)(function(e) {
+                }), Object(p.a)($))(q);
+            var z = Object(a.connect)(function(e) {
                 return {
                     isLoggedIn: Object(c.f)(e)
                 }
@@ -1226,9 +1226,9 @@
                         return Object(s.e)(o.a.InventoryPage)
                     }
                 }, e)
-            })(q);
+            })(P);
             n.d(t, "InventoryPage", function() {
-                return P
+                return z
             })
         },
         cpJf: function(e, t, n) {

@@ -19,7 +19,7 @@
                 S = t("EOHf"),
                 g = t("Ue10"),
                 h = (t("cvcW"), i.a.wrap(function() {
-                    return Promise.all([t.e(0), t.e(129)]).then(t.bind(null, "nRp3"))
+                    return Promise.all([t.e(0), t.e(128)]).then(t.bind(null, "nRp3"))
                 }, "SquadStream")),
                 q = function(e) {
                     function n() {
@@ -33,7 +33,7 @@
                         return Object(b.a)(this.props.match.params.channelLogin) ? c.createElement(c.Fragment, null, c.createElement(f.b, {
                             className: "squad-stream-page__root",
                             suppressScrollX: !0
-                        }), c.createElement(g.Eb, {
+                        }), c.createElement(g.Cb, {
                             fullWidth: !0,
                             fullHeight: !0,
                             className: "squad-stream-page",

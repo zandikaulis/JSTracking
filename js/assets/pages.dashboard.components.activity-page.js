@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [181], {
+    [175], {
         "9USO": function(e, t, a) {},
         FWE5: function(e, t) {
             var a = {
@@ -119,14 +119,14 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.filterAction || n.All;
-                        return i.createElement(g.Eb, {
+                        return i.createElement(g.Cb, {
                             padding: 2,
                             borderBottom: !0
                         }, i.createElement(g.Xa, {
                             className: "activity-page__select",
                             flexGrow: 0,
                             flexShrink: 0
-                        }, i.createElement(g.zb, r.__assign({
+                        }, i.createElement(g.xb, r.__assign({
                             name: "activity_type",
                             onChange: this.handleTypeChange,
                             value: e,
@@ -167,7 +167,7 @@
                             if (e.props.filterAction === n.All || t.action === e.props.filterAction) {
                                 switch (t.actor && (c = t.actor.logo, s = t.actor.display_name, d = i.createElement(g.W, {
                                     bold: !0,
-                                    type: g.Vb.Span
+                                    type: g.Tb.Span
                                 }, i.createElement(g.U, {
                                     to: "/" + t.actor.name
                                 }, s))), t.action) {
@@ -206,7 +206,7 @@
                                     default:
                                         r = ""
                                 }
-                                return i.createElement(g.Eb, {
+                                return i.createElement(g.Cb, {
                                     key: "audit" + a,
                                     alignItems: g.f.Center,
                                     display: g.X.Flex,
@@ -225,7 +225,7 @@
                                     src: c,
                                     alt: s,
                                     size: 40,
-                                    presenceStatus: g.lb.Online,
+                                    presenceStatus: g.jb.Online,
                                     borderRadius: g.x.Small
                                 })), i.createElement(g.Xa, {
                                     flexGrow: 1,
@@ -248,7 +248,7 @@
                             flexShrink: 0
                         }, y), t)
                     }, t.prototype.renderNotEnoughDataPlaceholder = function() {
-                        return i.createElement(g.Eb, r.__assign({
+                        return i.createElement(g.Cb, r.__assign({
                             className: "activity-page__no-data",
                             display: g.X.Flex,
                             flexGrow: 1,
@@ -271,8 +271,8 @@
                     }, t
                 }(i.PureComponent),
                 k = a("b6Yk");
-            var S, w = a("IFXb"),
-                C = a("FWE5");
+            var S, C = a("IFXb"),
+                w = a("FWE5");
             a("9USO");
             ! function(e) {
                 e[e.Error = 0] = "Error", e[e.Loading = 1] = "Loading", e[e.Success = 2] = "Success"
@@ -347,12 +347,12 @@
                         })
                     }, t.prototype.render = function() {
                         var e = this.state.requestState;
-                        if (this.props.data.loading || e === S.Loading || e === S.Error) return i.createElement(w.a, null, i.createElement(g.Xa, {
+                        if (this.props.data.loading || e === S.Loading || e === S.Error) return i.createElement(C.a, null, i.createElement(g.Xa, {
                             margin: {
                                 top: 3,
                                 bottom: 1
                             }
-                        }, i.createElement(g.ib, {
+                        }, i.createElement(g.gb, {
                             height: 448,
                             width: 1040
                         })));
@@ -360,7 +360,7 @@
                             a = t.filterAction,
                             n = t.list,
                             r = e === S.Success && n.audits.length > 0;
-                        return i.createElement(w.a, null, i.createElement(g.Eb, {
+                        return i.createElement(C.a, null, i.createElement(g.Cb, {
                             className: "activity-page",
                             background: g.r.Base,
                             elevation: 1,
@@ -422,7 +422,7 @@
                         })
                     }, t
                 }(i.PureComponent),
-                D = Object(o.compose)(Object(d.a)(C, {
+                D = Object(o.compose)(Object(d.a)(w, {
                     options: function(e) {
                         return {
                             variables: {
