@@ -23,6 +23,8 @@
                 return n.PageviewMedium
             }), a.o(n, "SpadeEventType") && a.d(t, "SpadeEventType", function() {
                 return n.SpadeEventType
+            }), a.o(n, "TwitchDataType") && a.d(t, "TwitchDataType", function() {
+                return n.TwitchDataType
             })
         },
         "5g1g": function(e, t, a) {

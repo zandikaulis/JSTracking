@@ -159,6 +159,8 @@
                 return r.PageviewMedium
             }), n.o(r, "SpadeEventType") && n.d(t, "SpadeEventType", function() {
                 return r.SpadeEventType
+            }), n.o(r, "TwitchDataType") && n.d(t, "TwitchDataType", function() {
+                return r.TwitchDataType
             })
         },
         "58bG": function(e, t) {
@@ -1332,29 +1334,29 @@
                 i = n("lZdE"),
                 a = n("cpJf"),
                 s = {
-                    "^B-?\\)$": "B)",
-                    "^:-?[z|Z|\\|]$": ":|",
-                    "^:-?\\)$": ":)",
-                    "^:-?\\($": ":(",
-                    "^:-?(p|P)$": ":P",
-                    "^;-?(p|P)$": ";P",
-                    "^:-?[\\\\/]$": ":/",
-                    "^;-?\\)$": ";)",
-                    "^R-?\\)$": "R)",
-                    "^:>$": ":>",
-                    "^:&gt;$": ":>",
-                    "^[oO](_|\\.)[oO]$": "O_o",
-                    "^:-?D$": ":D",
-                    "^:-?(o|O)$": ":O",
-                    "^>\\($": ">(",
-                    "^:-?(?:7|L)$": ":7",
-                    "^:-?(S|s)$": ":S",
-                    "^#-?[\\\\/]$": "#/",
-                    "^<\\]$": "<]",
-                    "^<3$": "<3",
-                    "^&lt;3$": "<3",
-                    "^&lt;\\]$": "<]",
-                    "^&gt;\\($": ">("
+                    "B-?\\)": "B)",
+                    "\\:-?[z|Z|\\|]": ":|",
+                    "\\:-?\\)": ":)",
+                    "\\:-?\\(": ":(",
+                    "\\:-?(p|P)": ":P",
+                    "\\;-?(p|P)": ";P",
+                    "\\:-?[\\\\/]": ":/",
+                    "\\;-?\\)": ";)",
+                    "R-?\\)": "R)",
+                    ":>": ":>",
+                    "\\:\\&gt\\;": ":>",
+                    "[oO](_|\\.)[oO]": "O_o",
+                    "\\:-?D": ":D",
+                    "\\:-?(o|O)": ":O",
+                    ">\\\\(": ">(",
+                    ":-?(?:7|L)": ":7",
+                    "\\:-?(S|s)": ":S",
+                    "#-?[\\\\/]": "#/",
+                    "<\\]": "<]",
+                    "<3": "<3",
+                    "\\&lt\\;3": "<3",
+                    "\\&lt\\;\\]": "<]",
+                    "\\&gt\\;\\(": ">("
                 },
                 o = ["1.0", "2.0", "3.0"],
                 u = new Set([457, 33, 42, 0]);
@@ -1810,7 +1812,7 @@
                 q = Object(y.compose)(Object(g.b)("EditSubscriptionBalloon", {
                     autoReportInteractive: !0
                 }))(V);
-            var $ = Object(r.connect)(void 0, function(e) {
+            var z = Object(r.connect)(void 0, function(e) {
                     return Object(i.bindActionCreators)({
                         showDisableGiftModal: function(e) {
                             var t = u.__rest(e, []);
@@ -1819,11 +1821,11 @@
                         closeModal: U.c
                     }, e)
                 })(q),
-                z = n("7SjK"),
-                H = n("OpME"),
-                Q = n("ZEQw");
+                H = n("7SjK"),
+                Q = n("OpME"),
+                K = n("ZEQw");
 
-            function K(e) {
+            function Y(e) {
                 return {
                     id: e.id,
                     setID: e.setID,
@@ -1832,12 +1834,12 @@
                     image1x: e.image1x,
                     image2x: e.image2x,
                     image4x: e.image4x,
-                    clickAction: Q.c,
+                    clickAction: K.c,
                     clickURL: e.clickURL || ""
                 }
             }
-            var Y, Z = n("58bG");
-            (Y || (Y = {})).HasAdFreeMessage = "HasAdFreeMessage";
+            var $, Z = n("58bG");
+            ($ || ($ = {})).HasAdFreeMessage = "HasAdFreeMessage";
             var J = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -1889,7 +1891,7 @@
                                 bottom: 1
                             }
                         }, d.createElement(B.W, {
-                            "data-test-selector": Y.HasAdFreeMessage
+                            "data-test-selector": $.HasAdFreeMessage
                         }, Object(l.d)("Ad-free streams (with limited exceptions)", "SubscriptionBenefitsBalloon"))), this.renderSubscriberBadges(), d.createElement(B.Pa, {
                             margin: {
                                 bottom: 1
@@ -1911,7 +1913,7 @@
                             return e && "subscriber" === e.setID
                         }).sort(this.compareBadgeVersion).forEach(function(t) {
                             if (t) {
-                                var n = K(t);
+                                var n = Y(t);
                                 e.push(d.createElement(w.a, {
                                     key: "subscription-benefit-badge-" + t.id,
                                     badge: n
@@ -1938,7 +1940,7 @@
                         var e = this.getEmotesFromProducts();
                         return 0 === e.length ? null : d.createElement(B.Xa, null, d.createElement(B.W, null, Object(l.d)("{count, plural, one {# subscriber emote} other {# subscriber emotes}}", {
                             count: e.length
-                        }, "SubscriptionBenefitsBalloon")), d.createElement(z.a, {
+                        }, "SubscriptionBenefitsBalloon")), d.createElement(H.a, {
                             emotes: e
                         }))
                     }, Object.defineProperty(t.prototype, "hasAdFree", {
@@ -1991,7 +1993,7 @@
                                 token: e.token
                             }
                         });
-                        return Object(H.b)(e)
+                        return Object(Q.b)(e)
                     }, t
                 }(d.Component),
                 ee = Object(y.compose)(Object(k.a)(Z, {
@@ -2114,7 +2116,7 @@
                             className: "subscription-card__edit-button",
                             display: B.X.Flex,
                             justifyContent: B.Wa.End
-                        }, d.createElement($, {
+                        }, d.createElement(z, {
                             currentUserID: this.props.currentUserID,
                             onCancelPaidUpgradeSuccess: this.onCancelPaidUpgradeSuccess,
                             onDisableGiftSuccess: this.onGiftDisableSuccess,
@@ -2224,7 +2226,7 @@
                         }, d.createElement(B.Xa, {
                             className: "subscription-card__badge"
                         }, d.createElement(w.a, {
-                            badge: K(t)
+                            badge: Y(t)
                         })), d.createElement(B.Pa, {
                             margin: {
                                 left: .5

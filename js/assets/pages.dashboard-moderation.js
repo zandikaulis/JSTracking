@@ -2056,20 +2056,22 @@
                 return m
             }), n.d(t, "a", function() {
                 return p
-            }), n.d(t, "o", function() {
+            }), n.d(t, "p", function() {
                 return h
             }), n.d(t, "m", function() {
                 return v
-            }), n.d(t, "p", function() {
+            }), n.d(t, "q", function() {
                 return C
             }), n.d(t, "k", function() {
                 return y
-            }), n.d(t, "n", function() {
+            }), n.d(t, "o", function() {
                 return _
+            }), n.d(t, "n", function() {
+                return O
             }), n.d(t, "l", function() {
-                return w
-            }), n.d(t, "i", function() {
                 return T
+            }), n.d(t, "i", function() {
+                return N
             });
             var r = n("/7QA"),
                 o = r.p.logger.withCategory("chat-commands");
@@ -2138,38 +2140,48 @@
                     body: null
                 }
             }
-            var k = /^\/ban\s+@?(\S+)(?:\s+(\d+)?)?$/;
+            var k = /^\/ban\s+@?(\S+)(?:\s+(.+))?$/;
 
             function y(e) {
                 var t = e.trim().match(k);
                 return t ? {
                     banTarget: t[1],
-                    duration: t[2] && Number(t[2]) || null
+                    reason: t[2] || null
                 } : null
             }
-            var S = /^\/slow(?:\s+(\d+)?)?$/;
+            var S = /^\/timeout\s+@?(\S+)(?:\s+(\d+))?(?:\s+(.+))?$/;
 
             function _(e) {
                 var t = e.trim().match(S);
                 return t ? {
+                    banTarget: t[1],
+                    duration: t[2] && Number(t[2]) || null,
+                    reason: t[3] || null
+                } : null
+            }
+            var E = /^\/slow(?:\s+(\d+)?)?$/;
+
+            function O(e) {
+                var t = e.trim().match(E);
+                return t ? {
                     duration: t[1] && Number(t[1]) || null
                 } : null
             }
-            var E = ["blue", "blueviolet", "cadetblue", "chocolate", "coral", "dodgerblue", "firebrick", "goldenrod", "green", "hotpink", "orangered", "red", "seagreen", "springgreen", "yellowgreen"],
-                O = /^\/color\s+(#[A-Fa-f0-9]{6}|[A-Za-z]+)$/;
+            var w = ["blue", "blueviolet", "cadetblue", "chocolate", "coral", "dodgerblue", "firebrick", "goldenrod", "green", "hotpink", "orangered", "red", "seagreen", "springgreen", "yellowgreen"],
+                D = /^\/color\s+(#[A-Fa-f0-9]{6}|[A-Za-z]+)$/;
 
-            function w(e) {
-                var t = e.trim().match(O);
+            function T(e) {
+                var t = e.trim().match(D);
                 if (!t) return null;
                 var n = t[1];
-                return n.startsWith("#") || -1 !== E.indexOf(n.toLowerCase()) ? {
+                return n.startsWith("#") || -1 !== w.indexOf(n.toLowerCase()) ? {
                     color: n
                 } : null
             }
-            var D = /^[/.]([a-z0-9]+)(.+)?$/i;
+            var M = /^[/.]([a-z0-9]+)(.+)?$/i;
 
-            function T(e, t) {
-                var n = e.match(D);
+            function N(e, t) {
+                var n = e.match(M);
                 if (!n) return {
                     handled: !1
                 };
@@ -4180,7 +4192,7 @@
                         searchTerm: e.searchTerm
                     })
                 })),
-                Y = Object(o.connect)(function(e, t) {
+                $ = Object(o.connect)(function(e, t) {
                     return {
                         searchHits: e.vodChat.moderation.searchHits,
                         searchTerm: t.selectedVideoTitle || ""
@@ -4199,7 +4211,7 @@
                         onSearchTermReset: t.onClearFilters
                     }
                 })(Z),
-                $ = function(e) {
+                Y = function(e) {
                     return u.createElement(O.Xa, {
                         display: O.X.Flex,
                         justifyContent: O.Wa.Center
@@ -4324,13 +4336,13 @@
                             borderMarked: !0,
                             border: !0,
                             display: O.X.Flex
-                        }, u.createElement(Y, {
+                        }, u.createElement($, {
                             creatorId: n.user && n.user.id || "",
                             disabled: !(n.user && n.user.id),
                             onSearchClick: this.props.onSearchClick,
                             onClearFilters: this.props.onClearFiltersClick,
                             selectedVideoTitle: s
-                        }), o), c, u.createElement($, r.__assign({}, te(this.props)))))
+                        }), o), c, u.createElement(Y, r.__assign({}, te(this.props)))))
                     }, t.prototype.setPageTitle = function() {
                         if (this.props.data.user) {
                             var e = this.props.data.user.displayName;
@@ -5436,8 +5448,8 @@
                 Q = "relative-time-title",
                 K = "share-button",
                 Z = "share-button-clicked",
-                Y = 3e3,
-                $ = function(e) {
+                $ = 3e3,
+                Y = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -5594,7 +5606,7 @@
                                     t.setState({
                                         isLinkCopied: !1
                                     })
-                                }, Y)
+                                }, $)
                             }), Object(O.l)(e, r)
                         }, t.onReplyClickHandler = function() {
                             t.props.onReplyClick(Object(B.b)(t.props.context.author)), t.closeMenu()
@@ -5679,7 +5691,7 @@
                                 className: d,
                                 "data-test-selector": "menu-options-wrapper",
                                 flexShrink: 0
-                            }, i.createElement($, {
+                            }, i.createElement(Y, {
                                 context: n,
                                 isCurrentUserModerator: this.props.isCurrentUserModerator,
                                 isExpandedLayout: this.props.isExpandedLayout,

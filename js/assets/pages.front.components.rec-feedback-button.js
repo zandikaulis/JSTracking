@@ -4,8 +4,8 @@
             "use strict";
             n.r(t);
             var o = n("mrSG"),
-                a = n("q1tI"),
-                r = n("/7QA"),
+                r = n("q1tI"),
+                a = n("/7QA"),
                 i = n("eJ65"),
                 c = n("Ue10"),
                 s = function(e) {
@@ -18,18 +18,18 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(i.a, {
+                        return r.createElement(i.a, {
                             preventDefault: !0,
                             stopPropagation: !0,
                             onToggle: this.onToggle
-                        }, a.createElement(c.A, {
+                        }, r.createElement(c.A, {
                             icon: c.tb.More,
                             size: c.B.Small
-                        }), a.createElement(c.Y, {
+                        }), r.createElement(c.Y, {
                             direction: c.v.TopRight,
                             size: c.w.Small,
                             items: [{
-                                title: Object(r.d)("I am not interested in this recommendation", "RecFeedbackButton"),
+                                title: Object(a.d)("I am not interested in this recommendation", "RecFeedbackButton"),
                                 onClick: this.onClick,
                                 figure: {
                                     icon: c.tb.VisibilityHidden
@@ -37,19 +37,19 @@
                             }]
                         }))
                     }, t
-                }(a.Component),
+                }(r.Component),
                 d = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(c.z, {
+                        return r.createElement(c.z, {
                             type: c.F.Text,
                             onClick: this.props.openModal,
                             size: c.D.Small
-                        }, Object(r.d)("Not interested?", "RecFeedbackButton"))
+                        }, Object(a.d)("Not interested?", "RecFeedbackButton"))
                     }, t
-                }(a.Component),
+                }(r.Component),
                 l = n("/MKj"),
                 p = n("fvjX"),
                 u = n("aCAx"),
@@ -58,15 +58,15 @@
                 k = n("DMoW"),
                 f = n("yI6f"),
                 h = n("kRI/"),
-                g = n("3lt/"),
-                v = n("M8Tb");
-            var I = function(e) {
+                I = n("3lt/"),
+                g = n("M8Tb");
+            var v = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             selectedReasonIndex: null,
                             showError: !1
-                        }, t.logger = r.p.logger.withCategory("recs-feedback"), t.onRadioChange = function(e) {
+                        }, t.logger = a.p.logger.withCategory("recs-feedback"), t.onRadioChange = function(e) {
                             t.state.showError && t.setState({
                                 showError: !1
                             });
@@ -79,12 +79,12 @@
                             var e = t.getCurrentChoiceData(),
                                 n = e.contentID,
                                 o = e.contentType,
-                                a = e.feedbackType,
-                                r = e.selectedReason;
-                            if (r)
-                                if (n && o && a) {
+                                r = e.feedbackType,
+                                a = e.selectedReason;
+                            if (a)
+                                if (n && o && r) {
                                     var i = Object(b.a)({
-                                            category: a,
+                                            category: r,
                                             itemID: n,
                                             itemType: function(e) {
                                                 switch (e) {
@@ -102,19 +102,20 @@
                                                         return e
                                                 }
                                             }(o),
-                                            sourceItemPage: g.PageviewMedium.TwitchHome,
-                                            sourceItemRequestID: t.props.sourceItemRequestID || ""
+                                            sourceItemPage: I.PageviewMedium.TwitchHome,
+                                            sourceItemRequestID: t.props.sourceItemRequestID || "",
+                                            sourceItemTrackingID: t.props.sourceItemTrackingID || ""
                                         }),
                                         c = t.props.addFeedback(i);
                                     t.props.trackRecFeedbackClickStep({
                                         clickStep: h.a.Submit,
                                         feedbackAction: h.b.Add,
-                                        feedbackReason: a,
+                                        feedbackReason: r,
                                         feedbackedItemID: n,
                                         feedbackType: o
                                     }), t.props.hideContent(c), t.props.closeModal()
                                 } else {
-                                    var s = "Missing content id for reason: " + r + ", type: " + a + ", content: " + o;
+                                    var s = "Missing content id for reason: " + a + ", type: " + r + ", content: " + o;
                                     t.logger.error(new Error(s), s)
                                 }
                             else t.setState({
@@ -125,70 +126,65 @@
                             if (null === e) return {};
                             var n = t.props.feedbackReasons[e],
                                 o = n.feedbackType,
-                                a = n.contentType;
+                                r = n.contentType;
                             return {
-                                contentID: t.contentTypeToIDMapping(a),
-                                contentType: a,
+                                contentID: t.contentTypeToIDMapping(r),
+                                contentType: r,
                                 feedbackType: o,
                                 selectedReason: n
                             }
                         }, t.closeModal = function() {
-                            t.props.closeModal();
-                            var e = t.getCurrentChoiceData(),
-                                n = e.contentID,
-                                o = e.contentType,
-                                a = e.feedbackType;
-                            t.props.trackRecFeedbackClickStep({
+                            t.props.closeModal(), t.props.trackRecFeedbackClickStep({
                                 clickStep: h.a.Close,
                                 feedbackAction: null,
-                                feedbackReason: a || null,
-                                feedbackedItemID: n || null,
-                                feedbackType: o || null
+                                feedbackReason: null,
+                                feedbackedItemID: null,
+                                feedbackType: null
                             })
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
                         var e = this;
-                        return a.createElement(c.ab, {
-                            title: Object(r.d)("Not interested? Tell us more...", "RecFeedbackModal"),
+                        return r.createElement(c.ab, {
+                            title: Object(a.d)("Not interested? Tell us more...", "RecFeedbackModal"),
                             onCloseButtonClick: this.closeModal,
                             size: c.bb.Medium,
                             primaryButtonProps: {
-                                children: Object(r.d)("Done", "RecFeedbackModal"),
+                                children: Object(a.d)("Done", "RecFeedbackModal"),
                                 size: c.D.Large,
                                 onClick: this.submitFeedback
                             }
-                        }, a.createElement(c.Eb, {
+                        }, r.createElement(c.Eb, {
                             borderBottom: !0,
                             padding: {
                                 top: 2,
                                 x: 2
                             }
-                        }, a.createElement(c.W, {
+                        }, r.createElement(c.W, {
                             type: c.Vb.Span,
                             fontSize: c.Ca.Size4
                         }, this.props.feedbackReasons.map(function(t, n) {
-                            return a.createElement(c.Xa, {
+                            return r.createElement(c.Xa, {
                                 key: t.text,
                                 margin: {
                                     bottom: .5
                                 }
-                            }, a.createElement(c.pb, {
+                            }, r.createElement(c.pb, {
                                 label: t.text,
                                 checked: e.state.selectedReasonIndex === n,
                                 onChange: e.onRadioChange,
                                 value: n.toString(),
                                 error: e.state.showError
                             }))
-                        })), a.createElement(c.Xa, {
+                        })), r.createElement(c.Xa, {
                             margin: {
                                 y: .5
                             },
                             visibility: this.state.showError ? c.gc.Visible : c.gc.Hidden,
                             "data-test-selector": "rec-feedback-modal-error"
-                        }, a.createElement(c.W, {
+                        }, r.createElement(c.W, {
                             color: c.O.Error
-                        }, Object(r.d)("Please select a reason", "RecFeedbackModal")))))
+                        }, Object(a.d)("Please select a reason", "RecFeedbackModal")))))
                     }, t.prototype.contentTypeToIDMapping = function(e) {
                         switch (e) {
                             case f.b.Shelf:
@@ -205,20 +201,20 @@
                                 return e
                         }
                     }, t
-                }(a.Component),
-                y = Object(m.a)(v, {
+                }(r.Component),
+                D = Object(m.a)(g, {
                     name: "addFeedback"
-                })(I);
-            var D = Object(l.connect)(null, function(e) {
+                })(v);
+            var y = Object(l.connect)(null, function(e) {
                     return Object(p.bindActionCreators)({
                         closeModal: u.c
                     }, e)
-                })(y),
+                })(D),
                 R = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.openModal = function() {
-                            t.props.showModal(D, {
+                            t.props.showModal(y, {
                                 shelfID: t.props.shelfID,
                                 channelID: t.props.channelID,
                                 vodID: t.props.vodID,
@@ -226,19 +222,20 @@
                                 feedbackReasons: t.props.feedbackReasons,
                                 hideContent: t.props.hideContent,
                                 trackRecFeedbackClickStep: t.props.trackRecFeedbackClickStep,
-                                sourceItemRequestID: t.props.sourceItemRequestID
+                                sourceItemRequestID: t.props.sourceItemRequestID,
+                                sourceItemTrackingID: t.props.sourceItemTrackingID
                             }), t.props.onModalOpen()
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return this.props.isShelf ? a.createElement(d, {
+                        return this.props.isShelf ? r.createElement(d, {
                             openModal: this.openModal
-                        }) : a.createElement(s, {
+                        }) : r.createElement(s, {
                             openModal: this.openModal,
                             onMenuOpen: this.props.onMenuOpen
                         })
                     }, t
-                }(a.Component);
+                }(r.Component);
             var C = Object(l.connect)(null, function(e) {
                 return Object(p.bindActionCreators)({
                     showModal: u.d

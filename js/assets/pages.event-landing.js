@@ -775,8 +775,8 @@
                     }))))
                 }),
                 L = n("ZbA5"),
-                x = n("oB8h"),
-                R = n("yWUM"),
+                R = n("oB8h"),
+                x = n("yWUM"),
                 F = n("TSYQ"),
                 D = n("hyVY"),
                 j = (n("Ljgq"), function(e) {
@@ -806,7 +806,7 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = "?t=";
-                        return this.props.offsetSeconds && this.props.offsetSeconds > 0 && (e += Object(R.a)(this.props.offsetSeconds)), a.createElement("div", i.__assign({
+                        return this.props.offsetSeconds && this.props.offsetSeconds > 0 && (e += Object(x.a)(this.props.offsetSeconds)), a.createElement("div", i.__assign({
                             onMouseEnter: this.onMouseEnterHandler,
                             onMouseLeave: this.onMouseLeaveHandler
                         }, Object(E.jc)(this.props)), a.createElement(E.G, null, a.createElement(E.U, {
@@ -957,7 +957,7 @@
                 }
             }
 
-            function P(e, t) {
+            function M(e, t) {
                 var n = new Date;
                 return t && (n = t),
                     function(e, t) {
@@ -980,7 +980,7 @@
                 e.LIVE = "LIVE", e.FUTURE = "FUTURE", e.PAST = "PAST"
             }(T || (T = {}));
             n("9Gue");
-            var M = function(e) {
+            var P = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onExpandClick = function() {
@@ -996,7 +996,7 @@
                             t = Object(r.c)(this.props.event.startAt, {
                                 day: "numeric"
                             }),
-                            n = P({
+                            n = M({
                                 startAt: this.props.event.startAt,
                                 endAt: this.props.event.endAt
                             }),
@@ -1146,7 +1146,7 @@
                         var e, t, n = {
                                 backgroundImage: "url(" + this.props.event.imageURL + ")"
                             },
-                            i = P({
+                            i = M({
                                 startAt: this.props.event.startAt,
                                 endAt: this.props.event.endAt
                             });
@@ -1170,7 +1170,7 @@
                         }, this.getWatchNowText());
                         else if (i === T.PAST && this.props.event.video && this.props.event.video.node) {
                             var s = "";
-                            this.props.event.video.offsetSeconds && (s = "t=" + Object(R.a)(this.props.event.video.offsetSeconds)), o = a.createElement(E.z, {
+                            this.props.event.video.offsetSeconds && (s = "t=" + Object(x.a)(this.props.event.video.offsetSeconds)), o = a.createElement(E.z, {
                                 linkTo: {
                                     pathname: "/videos/" + this.props.event.video.node.id,
                                     search: s,
@@ -1202,7 +1202,7 @@
                                 attachTop: !0,
                                 padding: .5
                             }, a.createElement(L.a, {
-                                type: x.a.Live
+                                type: R.a.Live
                             })), a.createElement("img", {
                                 src: this.props.event.channel.stream.previewImageURL,
                                 height: 120,
@@ -1358,11 +1358,11 @@
                         return Object(r.d)("Watch Now", "TimetableSegment")
                     }, t
                 }(a.PureComponent),
-                W = Object(u.b)("EventCollectionSegment", {
+                B = Object(u.b)("EventCollectionSegment", {
                     autoReportInteractive: !0
-                })(M);
+                })(P);
 
-            function B(e) {
+            function W(e) {
                 return null !== e
             }
             var z = n("IxV+"),
@@ -1407,7 +1407,7 @@
                     }, t.prototype.render = function() {
                         var e = this,
                             t = this.props.eventLeaves.map(function(t) {
-                                return a.createElement(W, {
+                                return a.createElement(B, {
                                     key: t.id,
                                     expanded: t.id === e.state.expandedEvent,
                                     event: t,
@@ -1521,7 +1521,7 @@
                                                 isFollowing: e.node.self && e.node.self.isFollowing || !1
                                             }
                                         }
-                                    }).filter(B)
+                                    }).filter(W)
                                 }(e.data), t),
                                 hasNextPage: e.data.event && e.data.event.__typename === w.EVENT_COLLECTION && e.data.event.leaves && e.data.event.leaves.pageInfo.hasNextPage,
                                 hasPreviousPage: e.data.event && e.data.event.__typename === w.EVENT_COLLECTION && e.data.event.leaves && e.data.event.leaves.pageInfo.hasPreviousPage,
@@ -1715,7 +1715,7 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        var e = P({
+                        var e = M({
                                 startAt: new Date(this.props.startAt),
                                 endAt: new Date(this.props.endAt),
                                 premiere: this.props.premiere ? {
@@ -1815,7 +1815,7 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = null;
-                        P({
+                        M({
                             startAt: new Date(this.props.startAt),
                             endAt: new Date(this.props.endAt),
                             premiere: this.props.premiere ? {
@@ -2117,7 +2117,7 @@
                     i = null;
                 if (e.nextLeaf && e.nextLeaf.edges && e.nextLeaf.edges.length) {
                     var a = e.nextLeaf.edges[0];
-                    a.node && (n = P({
+                    a.node && (n = M({
                         startAt: new Date(a.node.startAt),
                         endAt: new Date(a.node.endAt)
                     }), i = a.node.channel && a.node.channel.login || null)
@@ -3931,8 +3931,8 @@
                 O = n("H1ft"),
                 I = n("ZbA5"),
                 L = n("QVaV"),
-                x = n("hyVY"),
-                R = n("MXoD"),
+                R = n("hyVY"),
+                x = n("MXoD"),
                 F = n("0LAi");
             ! function(e) {
                 e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
@@ -4014,7 +4014,7 @@
                 return void 0 !== e.watchedProgressPercent
             }
 
-            function P(e) {
+            function M(e) {
                 return void 0 !== e.clipCreatedByChannelLogin
             }! function(e) {
                 e.Avatar = "preview-card-avatar", e.BoxArt = "preview-card-box-art"
@@ -4022,7 +4022,7 @@
             function(e) {
                 e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
             }(j || (j = {}));
-            var M = function(e) {
+            var P = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getTrackingContext = function(e) {
@@ -4041,7 +4041,7 @@
                             borderRadius: s.x.Medium,
                             overflow: s.cb.Hidden
                         }, this.renderVODRestrictionOverlay(), a.createElement(s.U, {
-                            to: Object(R.a)(this.getTrackingContext(h.PageviewContent.VideoThumbnail), this.props.linkTo),
+                            to: Object(x.a)(this.getTrackingContext(h.PageviewContent.VideoThumbnail), this.props.linkTo),
                             onClick: this.props.onThumbnailClick || this.props.onClick,
                             "data-a-target": "preview-card-image-link"
                         }, this.props.thumbnailImageProps && a.createElement(N, {
@@ -4083,7 +4083,7 @@
                             bottomRight: void 0
                         }) : U(this.props) ? a.createElement(S, {
                             topLeft: void 0 !== this.props.durationInSeconds && a.createElement(C, {
-                                value: Object(x.b)(this.props.durationInSeconds),
+                                value: Object(R.b)(this.props.durationInSeconds),
                                 icon: s.tb.Play,
                                 withBackground: !0
                             }),
@@ -4099,9 +4099,9 @@
                             }) : null,
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
-                        }) : P(this.props) ? a.createElement(S, {
+                        }) : M(this.props) ? a.createElement(S, {
                             topLeft: a.createElement(C, {
-                                value: Object(x.b)(this.props.durationInSeconds),
+                                value: Object(R.b)(this.props.durationInSeconds),
                                 icon: s.tb.Clip,
                                 withBackground: !0
                             }),
@@ -4119,7 +4119,7 @@
                             totalVideos: this.props.listPosition.totalVideos
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.getViewCountLabel = function() {
-                        return U(this.props) || P(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
+                        return U(this.props) || M(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
                             viewerCount: this.props.viewCount
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.renderIconicImage = function() {
@@ -4129,7 +4129,7 @@
                             }
                         }, a.createElement(b, {
                             imageProps: this.props.gameBoxArtImageProps,
-                            linkTo: Object(R.a)(this.getTrackingContext(h.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
+                            linkTo: Object(x.a)(this.getTrackingContext(h.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             aspect: s.p.BoxArt,
                             "data-test-selector": D.BoxArt,
@@ -4140,7 +4140,7 @@
                             }
                         }, a.createElement(b, {
                             imageProps: this.props.channelImageProps,
-                            linkTo: Object(R.a)(this.getTrackingContext(h.PageviewContent.UserThumbnail), this.props.channelLinkTo),
+                            linkTo: Object(x.a)(this.getTrackingContext(h.PageviewContent.UserThumbnail), this.props.channelLinkTo),
                             onClick: this.props.onChannelImageClick || this.props.onChannelLoginClick,
                             aspect: s.p.Aspect1x1,
                             "data-test-selector": D.Avatar
@@ -4150,10 +4150,10 @@
                             t = [];
                         return this.shouldShowGameBalloon(this.props) || t.push({
                             text: Object(L.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
-                            linkTo: Object(R.a)(this.getTrackingContext(h.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
+                            linkTo: Object(x.a)(this.getTrackingContext(h.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
                             onClick: this.props.onChannelLoginClick,
                             automationSelector: "preview-card-channel-link"
-                        }), P(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
+                        }), M(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
                             text: Object(r.d)("Clipped by {userName}", {
                                 userName: this.props.clipCreatedByChannelLogin || ""
                             }, "VideoPreviewCard"),
@@ -4162,13 +4162,13 @@
                             automationSelector: "preview-card-clip-curator-link"
                         }) : U(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== j.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
                             text: this.props.gameTitle,
-                            linkTo: Object(R.a)(this.getTrackingContext(h.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
+                            linkTo: Object(x.a)(this.getTrackingContext(h.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             automationSelector: "preview-card-game-link"
                         }), a.createElement(a.Fragment, null, a.createElement(T, {
                             title: this.props.title,
                             onClick: this.props.onVideoTitleClick || this.props.onClick,
-                            linkTo: Object(R.a)(this.getTrackingContext(h.PageviewContent.VideoTitle), this.props.linkTo),
+                            linkTo: Object(x.a)(this.getTrackingContext(h.PageviewContent.VideoTitle), this.props.linkTo),
                             subtitles: t,
                             "data-a-target": "preview-card-title-link"
                         }), e)
@@ -4208,17 +4208,17 @@
                         }
                     }, t
                 }(a.Component),
-                W = Object(w.b)("PreviewCard", {
+                B = Object(w.b)("PreviewCard", {
                     autoReportInteractive: !0
-                })(M);
+                })(P);
             n.d(t, !1, function() {
                 return D
             }), n.d(t, "b", function() {
                 return j
             }), n.d(t, !1, function() {
-                return M
+                return P
             }), n.d(t, "a", function() {
-                return W
+                return B
             })
         },
         H1ft: function(e, t, n) {
@@ -5584,36 +5584,37 @@
         },
         QjI3: function(e, t, n) {
             "use strict";
-            var i, a = n("mrSG"),
-                r = n("q1tI"),
-                o = n("/MKj"),
-                s = n("fvjX"),
-                l = n("ZS2+"),
-                c = n("UUve"),
-                d = n("1/iK"),
-                u = n("aCAx"),
-                p = n("kRBY"),
-                m = n("GnwI"),
-                h = n("oJmH"),
-                v = n("/7QA"),
-                g = n("2+sX"),
-                f = n("u5aL"),
-                b = n("eJ65"),
-                k = n("yR8l"),
-                y = n("x7UT"),
-                E = n("3Bft"),
-                S = n("tIid"),
-                C = n("ht6z"),
-                w = n("/aPz"),
-                _ = n("KriR"),
-                N = n("W8Fi"),
-                T = n("br9A"),
-                O = n("Ue10"),
-                I = (n("a7aT"), n("z+dA"));
+            var i = n("mrSG"),
+                a = n("q1tI"),
+                r = n("/MKj"),
+                o = n("fvjX"),
+                s = n("ZS2+"),
+                l = n("UUve"),
+                c = n("1/iK"),
+                d = n("aCAx"),
+                u = n("kRBY"),
+                p = n("GnwI"),
+                m = n("oJmH"),
+                h = n("/7QA"),
+                v = n("2+sX"),
+                g = n("u5aL"),
+                f = n("eJ65"),
+                b = n("yR8l"),
+                k = n("x7UT"),
+                y = n("3Bft"),
+                E = n("tIid"),
+                S = n("ht6z"),
+                C = n("/aPz"),
+                w = n("KriR"),
+                _ = n("D7An"),
+                N = n("4rCz");
+            var T, O = n("br9A"),
+                I = n("Ue10"),
+                L = (n("a7aT"), n("z+dA"));
             ! function(e) {
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
-            }(i || (i = {}));
-            var L = l.a.wrap(function() {
+            }(T || (T = {}));
+            var R = s.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(199)]).then(n.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
                 x = function(e) {
@@ -5622,9 +5623,9 @@
                         return t.state = {
                             inPrimeRegion: !1
                         }, t.modalLevel = "top_page", t.renderBalloonContentForBalloonLayer = function() {
-                            return r.createElement(f.a, {
+                            return a.createElement(g.a, {
                                 onClickOut: t.handleBalloonClickOut
-                            }, r.createElement(O.Xa, {
+                            }, a.createElement(I.Xa, {
                                 "data-a-target": "sub-balloon",
                                 refDelegate: t.setBalloonContentRefDelegate
                             }, t.balloonWrapperContent))
@@ -5643,12 +5644,12 @@
                         }, t.setBalloonWrapperContent = function(e) {
                             t.balloonWrapperContent = e
                         }, t.handleSubMenuAction = function(e) {
-                            new Set([T.a.ClickCheckout, T.a.BuyGiftSub, T.a.BuyMysteryGift, T.a.BuyCustomMysteryGift, T.a.BuyGiftToPaidUpgrade, T.a.BuyPaidUpgrade]).has(e.action) && t.checkAndDisplaySubscriptionCheckout();
+                            new Set([O.a.ClickCheckout, O.a.BuyGiftSub, O.a.BuyMysteryGift, O.a.BuyCustomMysteryGift, O.a.BuyGiftToPaidUpgrade, O.a.BuyPaidUpgrade]).has(e.action) && t.checkAndDisplaySubscriptionCheckout();
                             var n = t.props.data,
                                 i = n.user,
                                 a = !!(i && i.self && i.self.subscriptionBenefit),
-                                r = n.requestInfo && Object(C.a)(n.requestInfo.countryCode);
-                            Object(T.b)({
+                                r = n.requestInfo && Object(S.a)(n.requestInfo.countryCode);
+                            Object(O.b)({
                                 action: e.action || "",
                                 channelLogin: t.props.channelLogin || "",
                                 channelID: i && i.id || "",
@@ -5656,119 +5657,135 @@
                                 hasSubCredit: i && i.self && i.self.canPrimeSubscribe,
                                 hostChannelID: t.props.hostChannelID,
                                 hostChannelLogin: t.props.hostChannelLogin,
-                                isMenuOpen: e.action !== T.a.OpenSubMenu,
+                                isMenuOpen: e.action !== O.a.OpenSubMenu,
                                 mysteryGiftCount: e.mysteryGiftCount,
                                 sub_location: "channel_page",
                                 modal: !a,
                                 modalLevel: a ? "" : t.modalLevel.slice(),
                                 showPrimeContent: r,
                                 giftRecipient: e.giftRecipient || null
-                            }), !e.modalLevel || e.action !== T.a.ClickMoreSubOptions && e.action !== T.a.ClickBack || (t.modalLevel = e.modalLevel)
+                            }), !e.modalLevel || e.action !== O.a.ClickMoreSubOptions && e.action !== O.a.ClickBack || (t.modalLevel = e.modalLevel)
                         }, t.handleMenuToggle = function(e) {
                             t.handleSubMenuAction({
-                                action: e ? T.a.CloseSubMenu : T.a.OpenSubMenu
+                                action: e ? O.a.CloseSubMenu : O.a.OpenSubMenu
                             })
                         }, t.getBalloonDirection = function() {
-                            var e = t.props.balloonDirection || O.v.BottomRight;
-                            return t.props.hostChannelID && (e = O.v.TopLeft), e
+                            var e = t.props.balloonDirection || I.v.BottomRight;
+                            return t.props.hostChannelID && (e = I.v.TopLeft), e
                         }, t.setContainerRefDelegate = function(e) {
                             t.containerRef = e
                         }, t.setBalloonContentRefDelegate = function(e) {
                             t.balloonContentRef = e
                         }, t
                     }
-                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.reportInteractive && this.isUserDataReady(this.props) && this.props.reportInteractive(), this.checkAndDisplaySubscriptionCheckout()
                     }, t.prototype.componentDidUpdate = function(e) {
                         this.props.channelLogin && !this.isUserDataReady(this.props) || !this.props.updateContainerWidth || this.props.updateContainerWidth(), this.props.reportInteractive && this.props.data && !this.props.data.loading && this.props.reportInteractive(), !this.isUserDataReady(e) && this.isUserDataReady(this.props) && this.checkAndDisplaySubscriptionCheckout()
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.isUserDataReady(e) && e.pubsub.messages.subscriptionInfo !== this.props.pubsub.messages.subscriptionInfo && this.props.data.refetch()
                     }, t.prototype.componentWillUnmount = function() {
-                        Object(c.d)()
+                        Object(l.d)()
                     }, t.prototype.render = function() {
                         var e = this.props.data;
                         if (!e || e.loading || e.error) return null;
                         var t = e.user;
                         if (!t) return null;
                         var n = t.self,
-                            a = t.subscriptionProducts;
-                        if (!a) return null;
-                        var o = a.filter(function(e) {
+                            i = t.subscriptionProducts;
+                        if (!i) return null;
+                        var r = i.filter(function(e) {
                             return e
                         });
-                        if (0 === o.length) return null;
-                        if (this.props.hideEsportsSubscription && Object(S.a)(t.id || "", this.props.sessionUser)) return null;
-                        var s = e.requestInfo && Object(C.a)(e.requestInfo.countryCode),
-                            l = !(!n || !n.subscriptionBenefit),
-                            c = Object(S.a)(t.id || "", this.props.sessionUser),
-                            d = 1 === o.length;
-                        o.some(function(e) {
+                        if (0 === r.length) return null;
+                        if (this.props.hideEsportsSubscription && Object(E.a)(t.id || "", this.props.sessionUser)) return null;
+                        var o = e.requestInfo && Object(S.a)(e.requestInfo.countryCode),
+                            s = !(!n || !n.subscriptionBenefit),
+                            l = Object(E.a)(t.id || "", this.props.sessionUser),
+                            c = 1 === r.length;
+                        r.some(function(e) {
                             return !e.emoteSetID
-                        }) && (d = !0);
-                        var u = null;
-                        n && n.subscriptionBenefit && (u = n.subscriptionBenefit.purchasedWithPrime ? E.a.Prime : n.subscriptionBenefit.tier, this.modalLevel = "");
-                        var p, m = l ? Object(v.d)("All-Access Pass", "SubscribeButton") : Object(v.d)("Get the All-Access Pass", "SubscribeButton"),
-                            h = n && Object(N.h)(o, n.subscriptionBenefit);
-                        if (l) {
-                            var g = "";
-                            if (g = d ? Object(v.d)("Subscribed", "SubscribeButton") : h ? Object(v.d)("Continue Sub for $1", "SubscribeButton") : Object(v.d)("Gift A Sub", "SubscribeButton"), p = this.props.hostChannelID ? Object(v.d)("Subscribed to {username}", {
-                                    username: t.displayName || ""
-                                }, "SubscribeButton") : g, d && !c) return r.createElement(O.z, {
-                                disabled: !0,
-                                ariaLabel: p,
-                                icon: O.tb.Star
-                            }, p);
-                            c && (p = m)
-                        } else p = c ? m : this.props.hostChannelID ? Object(v.d)("Subscribe to {username}", {
-                            username: t.displayName || ""
-                        }, "SubscribeButton") : Object(v.d)("Subscribe", "SubscribeButton");
-                        var f = r.createElement(O.z, {
-                                ariaLabel: p,
-                                "data-a-target": l ? "subscribed-button" : "subscribe-button",
-                                "data-test-selector": i.SubButton,
+                        }) && (c = !0);
+                        var d = null;
+                        n && n.subscriptionBenefit && (d = n.subscriptionBenefit.purchasedWithPrime ? y.a.Prime : n.subscriptionBenefit.tier, this.modalLevel = "");
+                        var u = function(e) {
+                            if (e.isSubscribed) {
+                                if (e.hasInsiderPass) return Object(N.d)("All-Access Pass", "SubscribeButton");
+                                if (e.isNonStandardSub) return Object(N.d)("Subscribed", "SubscribeButton");
+                                if (e.hostedDisplayName) return Object(N.d)("Subscribed to {username}", {
+                                    username: e.hostedDisplayName
+                                }, "SubscribeButton");
+                                if ("control" !== N.q.experiments.getAssignment(_.b.SubsReanimator) && e.benefitIsDNRd && e.benefitEndsAt) {
+                                    var t = new Date(e.benefitEndsAt),
+                                        n = Math.round((t.getTime() - Date.now()) / 864e5);
+                                    if (n <= 15 && n > 7) return Object(N.d)("Continue Sub", "SubscribeButton");
+                                    if (n <= 7) return Object(N.d)("Continue Sub - {daysRemaining} Days Remaining", {
+                                        daysRemaining: n
+                                    }, "SubscribeButton")
+                                }
+                                return Object(N.d)("Gift A Sub", "SubscribeButton")
+                            }
+                            return e.hasInsiderPass ? Object(N.d)("Get the All-Access Pass", "SubscribeButton") : e.hostedDisplayName ? Object(N.d)("Subscribe to {username}", {
+                                username: e.hostedDisplayName
+                            }, "SubscribeButton") : Object(N.d)("Subscribe", "SubscribeButton")
+                        }({
+                            isSubscribed: s,
+                            isNonStandardSub: c,
+                            hasInsiderPass: l,
+                            benefitIsDNRd: !(!n || !n.subscriptionBenefit) && n.subscriptionBenefit.isDNRd,
+                            benefitEndsAt: n && n.subscriptionBenefit && n.subscriptionBenefit.endsAt,
+                            hostedDisplayName: this.props.hostChannelID ? t.displayName || "" : void 0
+                        });
+                        if (s && c && !l) return a.createElement(I.z, {
+                            disabled: !0,
+                            ariaLabel: u,
+                            icon: I.tb.Star
+                        }, u);
+                        var p = a.createElement(I.z, {
+                                ariaLabel: u,
+                                "data-a-target": s ? "subscribed-button" : "subscribe-button",
+                                "data-test-selector": T.SubButton,
                                 dropdown: !this.props.hideDropdownArrow,
                                 fullWidth: !0,
-                                icon: this.getButtonIcon(l, u),
+                                icon: this.getButtonIcon(s, d),
                                 onClick: this.props.renderBalloonInBalloonLayer ? this.handleButtonClick : void 0,
-                                type: this.getButtonType(l)
-                            }, p),
-                            k = o[0];
-                        return this.setBalloonWrapperContent(r.createElement(L, {
+                                type: this.getButtonType(s)
+                            }, u),
+                            m = r[0];
+                        return this.setBalloonWrapperContent(a.createElement(R, {
                             authToken: this.props.authToken,
                             channelLogin: this.props.channelLogin || "",
-                            "data-test-selector": i.SubscribeBalloon,
+                            "data-test-selector": T.SubscribeBalloon,
                             handleSubMenuAction: this.handleSubMenuAction,
-                            inPrimeRegion: s,
-                            isEsportChannel: c,
-                            isNonStandardSub: d,
+                            inPrimeRegion: o,
+                            isEsportChannel: l,
+                            isNonStandardSub: c,
                             isStaff: !(!this.props.sessionUser || !this.props.sessionUser.roles) && this.props.sessionUser.roles.isStaff,
-                            isSubscribed: l,
-                            productId: k ? k.id : "",
-                            subbedTier: u || E.a.Prime,
+                            isSubscribed: s,
+                            productId: m ? m.id : "",
+                            subbedTier: d || y.a.Prime,
                             userHasPrime: !1
-                        })), this.props.renderBalloonInBalloonLayer ? r.createElement(O.Xa, {
-                            "data-test-selector": i.BalloonLayerButton,
+                        })), this.props.renderBalloonInBalloonLayer ? a.createElement(I.Xa, {
+                            "data-test-selector": T.BalloonLayerButton,
                             refDelegate: this.setContainerRefDelegate
-                        }, f) : r.createElement(O.Xa, {
-                            className: h ? "subscribe-button--promo" : ""
-                        }, r.createElement(b.a, {
-                            "data-test-selector": i.DefaultButton,
+                        }, p) : a.createElement(I.Xa, null, a.createElement(f.a, {
+                            "data-test-selector": T.DefaultButton,
                             onToggle: this.handleMenuToggle
-                        }, f, r.createElement(O.u, {
+                        }, p, a.createElement(I.u, {
                             "data-a-target": "sub-balloon",
                             direction: this.getBalloonDirection(),
-                            size: O.w.Large
+                            size: I.w.Large
                         }, this.balloonWrapperContent)))
                     }, t.prototype.getButtonType = function(e) {
-                        O.F.Default;
-                        return e && void 0 !== this.props.subscribedButtonType ? this.props.subscribedButtonType : e ? O.F.Success : this.props.unsubscribedButtonType || O.F.Default
+                        I.F.Default;
+                        return e && void 0 !== this.props.subscribedButtonType ? this.props.subscribedButtonType : e ? I.F.Success : this.props.unsubscribedButtonType || I.F.Default
                     }, t.prototype.getButtonIcon = function(e, t) {
                         var n = void 0;
-                        return e ? n = t === E.a.Prime ? O.tb.Crown : O.tb.Star : this.props.forceIcon && (n = O.tb.StarHollow), n
+                        return e ? n = t === y.a.Prime ? I.tb.Crown : I.tb.Star : this.props.forceIcon && (n = I.tb.StarHollow), n
                     }, t.prototype.isUserDataReady = function(e) {
                         return e.data && e.data.user && !e.data.loading && !e.data.error
                     }, t.prototype.checkAndDisplaySubscriptionCheckout = function() {
-                        var e = v.n.get(c.b, "");
+                        var e = h.n.get(l.b, "");
                         if (e) {
                             var t = this.props.data.user;
                             if (t && t.subscriptionProducts) t.subscriptionProducts.filter(function(e) {
@@ -5776,17 +5793,17 @@
                             }).map(function(e) {
                                 return e.name
                             }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
-                                mysteryGiftCount: Number(v.n.get(c.a, "")),
+                                mysteryGiftCount: Number(h.n.get(l.a, "")),
                                 productName: e,
-                                recipientLogin: v.n.get(c.c, ""),
+                                recipientLogin: h.n.get(l.c, ""),
                                 trackingContext: {
-                                    source: _.c.ChannelSubscribeButton
+                                    source: w.c.ChannelSubscribeButton
                                 }
-                            }) : this.props.showLoginModal() : Object(c.d)()
+                            }) : this.props.showLoginModal() : Object(l.d)()
                         }
                     }, t
-                }(r.Component),
-                R = Object(h.compose)(Object(k.a)(I, {
+                }(a.Component),
+                F = Object(m.compose)(Object(b.a)(L, {
                     options: function(e) {
                         return {
                             variables: {
@@ -5797,9 +5814,9 @@
                     skip: function(e) {
                         return !e.channelLogin
                     }
-                }), Object(y.a)([{
+                }), Object(k.a)([{
                     topic: function(e) {
-                        return Object(w.F)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(C.F)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -5807,16 +5824,16 @@
                     skip: function(e) {
                         return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
                     }
-                }]), Object(g.e)())(x),
-                F = function(e) {
+                }]), Object(v.e)())(x),
+                D = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.reportInteractive = function() {
                             t.props.latencyTracking.reportInteractive()
                         }, t
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(R, {
+                    return i.__extends(t, e), t.prototype.render = function() {
+                        return a.createElement(F, {
                             authToken: this.props.authToken,
                             balloonDirection: this.props.balloonDirection,
                             channelLogin: this.props.channelLogin,
@@ -5834,19 +5851,19 @@
                             unsubscribedButtonType: this.props.unsubscribedButtonType,
                             updateContainerWidth: this.props.updateContainerWidth
                         })
-                    }, t = a.__decorate([Object(m.b)("SubscribeButton")], t)
-                }(r.Component);
-            var D = Object(o.connect)(function(e) {
+                    }, t = i.__decorate([Object(p.b)("SubscribeButton")], t)
+                }(a.Component);
+            var j = Object(r.connect)(function(e) {
                 return {
-                    authToken: Object(p.a)(e),
-                    sessionUser: Object(p.e)(e)
+                    authToken: Object(u.a)(e),
+                    sessionUser: Object(u.e)(e)
                 }
             }, function(e) {
-                return Object(s.bindActionCreators)({
-                    showLoginModal: Object(c.e)(d.a.ChannelSubscriptionButton),
+                return Object(o.bindActionCreators)({
+                    showLoginModal: Object(l.e)(c.a.ChannelSubscriptionButton),
                     showSubscriptionCheckoutModal: function(e) {
-                        var t = a.__rest(e, []);
-                        return Object(u.d)(l.a, {
+                        var t = i.__rest(e, []);
+                        return Object(d.d)(s.a, {
                             component: "CheckoutModal",
                             loader: function() {
                                 return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
@@ -5855,17 +5872,17 @@
                         })
                     }
                 }, e)
-            })(F);
+            })(D);
             n.d(t, !1, function() {
-                return F
-            }), n.d(t, "a", function() {
                 return D
+            }), n.d(t, "a", function() {
+                return j
             }), n.d(t, !1, function() {
-                return i
+                return T
             }), n.d(t, !1, function() {
                 return x
             }), n.d(t, !1, function() {
-                return R
+                return F
             })
         },
         RFKy: function(e, t, n) {},
@@ -6379,68 +6396,6 @@
                     })
                 }
             }
-        },
-        W8Fi: function(e, t, n) {
-            "use strict";
-
-            function i(e) {
-                return e.some(function(e) {
-                    return !!e.self && !!e.self.promotion
-                })
-            }
-
-            function a(e) {
-                return e.some(function(e) {
-                    return !!e.giftPromotion
-                })
-            }
-
-            function r(e) {
-                return e.some(function(e) {
-                    return !!e.self && !!e.self.paidUpgradePromotion
-                })
-            }
-
-            function o(e, t) {
-                var n;
-                return t ? n = e.giftPromotion : e.self && (n = e.self.promotion), n ? n.newPrice : e.price
-            }
-
-            function s(e, t) {
-                var n;
-                return t ? n = e.giftPromotion : e.self && (n = e.self.promotion), n ? parseInt(n.discountValue, 10) : 0
-            }
-
-            function l(e) {
-                return e.self && e.self.paidUpgradePromotion ? e.self.paidUpgradePromotion.newPrice : e.price
-            }
-
-            function c(e) {
-                return e.find(function(e) {
-                    return !!e.self && !!e.self.paidUpgradePromotion
-                }) || null
-            }
-
-            function d(e, t) {
-                return !!e && !!t && r(e) && !t.paidUpgrade && !!t.gift && t.gift.isGift
-            }
-            n.d(t, "g", function() {
-                return i
-            }), n.d(t, "e", function() {
-                return a
-            }), n.d(t, "f", function() {
-                return r
-            }), n.d(t, "c", function() {
-                return o
-            }), n.d(t, "d", function() {
-                return s
-            }), n.d(t, "a", function() {
-                return l
-            }), n.d(t, "b", function() {
-                return c
-            }), n.d(t, "h", function() {
-                return d
-            })
         },
         X7Ac: function(e, t, n) {
             "use strict";
@@ -8074,7 +8029,7 @@
             ! function(e) {
                 e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
             }(w || (w = {}));
-            var I, L, x, R = {
+            var I, L, R, x = {
                     contentGeneral: function() {
                         return Object(c.d)("What would you like to report?", "ReportModalWizard")
                     },
@@ -8183,70 +8138,70 @@
                 U = {
                     identifyUser: {
                         getTitle: F.reportVideo,
-                        getLabel: R.identifyUser,
+                        getLabel: x.identifyUser,
                         items: [N.video_streamer, N.video_someoneElse, N.video_chatSomeone],
                         type: w.MultipleChoice,
                         value: "video identify user"
                     },
                     content: {
                         getTitle: F.reportVideo,
-                        getLabel: R.contentGeneral,
+                        getLabel: x.contentGeneral,
                         items: [N.revealPersonalInfo, N.video_labeling, N.video_inactive, N.video_general, N.report_ip, N.violateDevAgreement, N.selfharm],
                         type: w.MultipleChoice,
                         value: "video report reason"
                     },
                     general: {
                         getTitle: F.reportVideo,
-                        getLabel: R.content,
+                        getLabel: x.content,
                         items: [N.report_username, N.violence, N.abusive, N.cheating, N.scam, N.inappropriateContent, N.evasion, N.impersonation, N.underage, N.bitsViolation],
                         type: w.MultipleChoice,
                         value: "video general report reason"
                     }
                 },
-                P = {
+                M = {
                     content: {
                         getTitle: F.reportMessage,
-                        getLabel: R.contentGeneral,
+                        getLabel: x.contentGeneral,
                         items: [N.revealPersonalInfo, N.evasion, N.spam, N.maliciousRaid, N.report_username, N.messaging_general, N.selfharm],
                         type: w.MultipleChoice,
                         value: "message report reason"
                     },
                     general: {
                         getTitle: F.reportMessage,
-                        getLabel: R.content,
+                        getLabel: x.content,
                         items: [N.report_emotes, N.violence, N.abusive, N.inappropriateContent, N.impersonation, N.underage, N.bitsViolation],
                         type: w.MultipleChoice,
                         value: "message general report reason"
                     }
                 },
-                M = r.__assign({}, P.content, {
+                P = r.__assign({}, M.content, {
                     getDescription: function() {
                         return Object(c.d)("Please note that we may review additional messages in this conversation to determine the context of your report.", "ReportModalWizard")
                     }
                 }),
-                W = {
+                B = {
                     content: {
                         getTitle: F.reportProfile,
-                        getLabel: R.contentGeneral,
+                        getLabel: x.contentGeneral,
                         items: [N.revealPersonalInfo, N.inappropriateBadge, N.inappropriateExtension, N.noModeration, N.profile_general, N.report_ip, N.violateDevAgreement, N.selfharm],
                         type: w.MultipleChoice,
                         value: "profile report reason"
                     },
                     general: {
                         getTitle: F.reportProfile,
-                        getLabel: R.content,
+                        getLabel: x.content,
                         items: [N.report_username, N.violence, N.abusive, N.scam, N.inappropriateContent, N.evasion, N.impersonation, N.underage, N.bitsViolation],
                         type: w.MultipleChoice,
                         value: "profile general report reason"
                     }
                 },
-                B = {
+                W = {
                     getTitle: function(e) {
                         return Object(c.d)("Report {username}'s Room", {
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: R.identifyUser,
+                    getLabel: x.identifyUser,
                     items: [N.report_channelOwner, N.report_member],
                     value: "room report user",
                     type: w.MultipleChoice
@@ -8271,7 +8226,7 @@
                 X = {
                     content: {
                         getTitle: F.reportAbusive,
-                        getLabel: R.relevantStatements,
+                        getLabel: x.relevantStatements,
                         items: [N.hateSpeech, N.harassment, N.abusiveViolence, N.commitingViolence, N.swatting, N.personalInfo],
                         type: w.MultipleChoice,
                         value: "abuse type"
@@ -8310,7 +8265,7 @@
                                 username: e
                             }, "ReportModalWizard")
                         },
-                        getLabel: R.thisPersonIs,
+                        getLabel: x.thisPersonIs,
                         getDescription: function() {
                             return Object(c.d)("Please note that incidents reported through this form must involve Twitch community members. If possible, please submit a report to the site or service where the incident occurred as well.", "ReportModalWizard")
                         },
@@ -8334,7 +8289,7 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: R.contentGeneral,
+                    getLabel: x.contentGeneral,
                     items: [N.spam_bot, N.spam_scam, N.spam_repeated],
                     type: w.MultipleChoice,
                     value: "spam type"
@@ -8345,7 +8300,7 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: R.relevantStatements,
+                    getLabel: x.relevantStatements,
                     items: [N.inappropriate_game, N.gory, N.sexuallyViolent, N.childAnimal, N.pornographic, N.suggestive, N.nudity, N.other],
                     type: w.MultipleChoice,
                     value: "inappropriate content type"
@@ -8385,20 +8340,20 @@
                 Y = D,
                 J = {
                     video: U.identifyUser,
-                    whisper: M,
-                    chat: P.content,
-                    profile: W.content,
-                    room: B,
+                    whisper: P,
+                    chat: M.content,
+                    profile: B.content,
+                    room: W,
                     "somewhere else": G.identifyLocation,
                     streamer: U.content,
                     "someone else in video": U.content,
-                    "someone in chat": P.content,
+                    "someone in chat": M.content,
                     general_video: U.general,
-                    general_messaging: P.general,
-                    general_profile: W.general,
-                    "channel owner": W.content,
-                    "community member": P.content,
-                    "on twitch": W.content,
+                    general_messaging: M.general,
+                    general_profile: B.general,
+                    "channel owner": B.content,
+                    "community member": M.content,
+                    "on twitch": B.content,
                     "another site": G.externalSite,
                     "twitch event": j.twitchEvent,
                     "brigading/raids": V.socialMedia,
@@ -8425,16 +8380,16 @@
                     other: Y
                 },
                 te = {
-                    CHANNEL_FEED_POST_REPORT: W.content,
-                    COMMUNITY_REPORT: W.content,
-                    CHAT_REPORT: P.content,
+                    CHANNEL_FEED_POST_REPORT: B.content,
+                    COMMUNITY_REPORT: B.content,
+                    CHAT_REPORT: M.content,
                     CLIP_REPORT: U.content,
-                    EVENT_REPORT: W.content,
-                    EXTENSION_REPORT: W.content,
-                    LIVE_UP_REPORT: W.content,
-                    ROOM_REPORT: B,
-                    WHISPER_REPORT: M,
-                    VOD_COMMENT_REPORT: P.content
+                    EVENT_REPORT: B.content,
+                    EXTENSION_REPORT: B.content,
+                    LIVE_UP_REPORT: B.content,
+                    ROOM_REPORT: W,
+                    WHISPER_REPORT: P,
+                    VOD_COMMENT_REPORT: M.content
                 },
                 ne = "report-wizard-back",
                 ie = "report-wizard-close",
@@ -8504,7 +8459,7 @@
                             t.setState({
                                 modalCloseTracked: !0
                             }, function() {
-                                return t.props.trackClose(x.Finish, t.state.currentCard.value)
+                                return t.props.trackClose(R.Finish, t.state.currentCard.value)
                             }), t.props.onClose()
                         }, t.handleNext = function() {
                             if (t.state.currentSelection && t.state.currentSelection.value) {
@@ -8638,7 +8593,7 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.componentWillUnmount = function() {
-                        this.state.modalCloseTracked || this.props.trackClose(x.Close, this.state.currentCard.value)
+                        this.state.modalCloseTracked || this.props.trackClose(R.Close, this.state.currentCard.value)
                     }, t.prototype.render = function() {
                         var e = this.state.currentCard.type === w.Info && this.state.currentCard.blockPrompt ? o.createElement(C, {
                                 targetUser: this.props.targetUser,
@@ -8688,7 +8643,7 @@
             n.d(t, "c", function() {
                     return L
                 }), n.d(t, "a", function() {
-                    return x
+                    return R
                 }), n.d(t, "b", function() {
                     return de
                 }),
@@ -8700,7 +8655,7 @@
                 }(L || (L = {})),
                 function(e) {
                     e.Close = "close", e.Finish = "finish"
-                }(x || (x = {}));
+                }(R || (R = {}));
             var ce = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -9944,7 +9899,7 @@
                         return !e.channelLogin || !e.firstPageLoaded
                     }
                 })(O);
-            var L, x = Object(y.connect)(function(e) {
+            var L, R = Object(y.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
@@ -9954,36 +9909,36 @@
                         showModal: S.d
                     }, e)
                 })(I),
-                R = n("tuvy"),
+                x = n("tuvy"),
                 F = n("i4un"),
                 D = n("dIU+"),
                 j = n("GnwI"),
                 A = n("Ba7Q"),
                 U = n("QjI3"),
-                P = (n("BOil"), n("HXcb"));
+                M = (n("BOil"), n("HXcb"));
             n.d(t, "a", function() {
                 return G
             }), n.d(t, "b", function() {
                 return H
             }), n.d(t, "d", function() {
-                return B
+                return W
             }), n.d(t, "c", function() {
                 return Q
             });
-            var M, W = l.a.wrap(function() {
+            var P, B = l.a.wrap(function() {
                 return n.e(145).then(n.bind(null, "g9Rq"))
             }, "EditProfileOverlay");
             ! function(e) {
                 e.SocialButtonsDefault = "channel-header__social-buttons-default", e.SocialButtonsVariantB = "channel-header__social-buttons-variant-b"
-            }(M || (M = {}));
-            var B, z = "channel-header__edit-profile-overlay",
+            }(P || (P = {}));
+            var W, z = "channel-header__edit-profile-overlay",
                 V = "channel-header__verified-badge",
                 X = "channel-header__live-indicator",
                 G = "yes",
                 H = "browser-notifications-upsell-seen";
             ! function(e) {
                 e[e.Channel = 1] = "Channel", e[e.Clips = 2] = "Clips", e[e.Collections = 3] = "Collections", e[e.Events = 4] = "Events", e[e.Success = 5] = "Success", e[e.Followers = 6] = "Followers", e[e.Following = 7] = "Following", e[e.Videos = 8] = "Videos"
-            }(B || (B = {}));
+            }(W || (W = {}));
             var q = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -10027,7 +9982,7 @@
                                 display: _.X.InlineFlex,
                                 alignItems: _.f.Center,
                                 justifyContent: _.Wa.Center
-                            }, r.createElement(W, {
+                            }, r.createElement(B, {
                                 userID: n.props.data.user.id,
                                 login: n.props.data.user.login,
                                 displayName: n.props.data.user.displayName || n.props.data.user.login
@@ -10115,11 +10070,11 @@
                             o = 0,
                             l = s.a.defaultAvatarURL;
                         this.props.data && this.props.data.user && !this.props.data.loading && !this.props.data.error && (n = this.props.data.user.videos && this.props.data.user.videos.totalCount || 0, i = this.props.data.user.followers && this.props.data.user.followers.totalCount || 0, o = this.props.data.user.follows && this.props.data.user.follows.totalCount || 0, l = this.props.data.user.profileImageURL || s.a.defaultAvatarURL, e = this.props.data.user.displayName, t = this.props.data.user.roles && this.props.data.user.roles.isPartner);
-                        var u, p = this.state.live && !this.isActiveTab(B.Channel),
+                        var u, p = this.state.live && !this.isActiveTab(W.Channel),
                             m = this.createChannelLinks(n, i, o),
                             h = {
                                 "channel-header__user": !0,
-                                "channel-header__user--selected": this.isActiveTab(B.Channel)
+                                "channel-header__user--selected": this.isActiveTab(W.Channel)
                             },
                             v = r.createElement(_.Xa, {
                                 display: _.X.Flex,
@@ -10148,7 +10103,7 @@
                                 lineCount: 1,
                                 width: 120
                             })), p && this.ChannelStatusIndicatorElement, t && this.verifiedBadgeElement);
-                        u = this.isActiveTab(B.Channel) ? r.createElement("div", {
+                        u = this.isActiveTab(W.Channel) ? r.createElement("div", {
                             className: "channel-header__banner-toggle",
                             onClick: this.toggleChannelBanner,
                             "data-target": "channel-header__channel-link",
@@ -10162,9 +10117,9 @@
                         var g = this.state.bannerHidden ? _.X.HideAccessible : _.X.Block,
                             f = null,
                             b = this.renderSocialButtons();
-                        return this.isActiveTab(B.Channel) && (f = r.createElement(_.Xa, {
+                        return this.isActiveTab(W.Channel) && (f = r.createElement(_.Xa, {
                             display: g
-                        }, r.createElement(x, {
+                        }, r.createElement(R, {
                             channelLogin: this.props.channelLogin,
                             canEdit: this.isChannelEditor(),
                             collapsed: !this.state.bannerSlideIn,
@@ -10299,34 +10254,34 @@
                         var i = [{
                             label: Object(s.d)("Videos", "ChannelHeader"),
                             count: Object(s.f)(e),
-                            pathSuffix: Object(R.b)() ? "videos" : "videos/all",
-                            isSelected: this.isActiveTab(B.Videos)
+                            pathSuffix: Object(x.b)() ? "videos" : "videos/all",
+                            isSelected: this.isActiveTab(W.Videos)
                         }];
-                        return Object(R.b)() || Object(R.a)() || (i = i.concat([{
+                        return Object(x.b)() || Object(x.a)() || (i = i.concat([{
                             label: Object(s.d)("Clips", "ChannelHeader"),
                             pathSuffix: "clips",
-                            isSelected: this.isActiveTab(B.Clips)
+                            isSelected: this.isActiveTab(W.Clips)
                         }, {
                             label: Object(s.d)("Collections", "ChannelHeader"),
                             pathSuffix: "collections",
-                            isSelected: this.isActiveTab(B.Collections)
+                            isSelected: this.isActiveTab(W.Collections)
                         }])), i.concat([{
                             label: Object(s.d)("Events", "ChannelHeader"),
                             pathSuffix: "events",
-                            isSelected: this.isActiveTab(B.Events)
+                            isSelected: this.isActiveTab(W.Events)
                         }, {
                             label: Object(s.d)("Followers", "ChannelHeader"),
                             count: Object(s.f)(t),
                             pathSuffix: "followers",
-                            isSelected: this.isActiveTab(B.Followers)
+                            isSelected: this.isActiveTab(W.Followers)
                         }, {
                             label: Object(s.d)("Following", "ChannelHeader"),
                             count: Object(s.f)(n),
                             pathSuffix: "following",
-                            isSelected: this.isActiveTab(B.Following)
+                            isSelected: this.isActiveTab(W.Following)
                         }])
                     }, t.prototype.isActiveTab = function(e) {
-                        return B[this.props.currentPage] === B[e]
+                        return W[this.props.currentPage] === W[e]
                     }, t.prototype.isChannelEditor = function() {
                         return !!(this.props.data && this.props.data.currentUser && this.props.data.user && this.props.data.currentUser.roles && (this.props.data.currentUser.id === this.props.data.user.id || this.props.data.currentUser.roles.isStaff || this.props.data.currentUser.roles.isSiteAdmin))
                     }, t.prototype.getChannelHeaderSize = function() {
@@ -10373,7 +10328,7 @@
                     }, t.prototype.renderSocialButtons = function() {
                         var e = this.getFollowingState(),
                             t = null,
-                            n = M.SocialButtonsDefault;
+                            n = P.SocialButtonsDefault;
                         if (Object(F.c)()) {
                             var i = a("channel-header__follow-btn", {
                                     "channel-header__follow-btn--following": !!this.state.showLiveNotificationsButton
@@ -10381,7 +10336,7 @@
                                 o = a("channel-header__notification-toggle-container", {
                                     "channel-header__notification-toggle-container--visible": !!this.state.showLiveNotificationsButton
                                 });
-                            n = M.SocialButtonsVariantB, t = r.createElement(r.Fragment, null, r.createElement(_.Xa, {
+                            n = P.SocialButtonsVariantB, t = r.createElement(r.Fragment, null, r.createElement(_.Xa, {
                                 className: "channel-header__follow-btn-container",
                                 display: _.X.Flex,
                                 overflow: _.cb.Hidden,
@@ -10430,7 +10385,7 @@
                                 unsubscribedButtonType: e ? _.F.Default : _.F.Hollow,
                                 forceIcon: !0
                             })))
-                        } else(this.props.channelIsHosting || Object(F.e)()) && (n = M.SocialButtonsDefault, t = r.createElement(r.Fragment, null, r.createElement(_.Xa, {
+                        } else(this.props.channelIsHosting || Object(F.e)()) && (n = P.SocialButtonsDefault, t = r.createElement(r.Fragment, null, r.createElement(_.Xa, {
                             display: _.X.Flex,
                             alignItems: _.f.Stretch,
                             margin: {
@@ -10467,7 +10422,7 @@
                         if (this.props.data && this.props.data.user && this.props.data.user.id) return this.props.data.user
                     }, t
                 }(r.Component),
-                Q = Object(o.compose)(Object(u.a)(P, {
+                Q = Object(o.compose)(Object(u.a)(M, {
                     options: function(e) {
                         return {
                             variables: {
@@ -11376,38 +11331,6 @@
                                             },
                                             arguments: [],
                                             directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "self"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "paidUpgradePromotion"
-                                                    },
-                                                    arguments: [],
-                                                    directives: [],
-                                                    selectionSet: {
-                                                        kind: "SelectionSet",
-                                                        selections: [{
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "newPrice"
-                                                            },
-                                                            arguments: [],
-                                                            directives: []
-                                                        }]
-                                                    }
-                                                }]
-                                            }
                                         }]
                                     }
                                 }, {
@@ -11466,6 +11389,22 @@
                                                     kind: "Field",
                                                     name: {
                                                         kind: "Name",
+                                                        value: "endsAt"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "isDNRd"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
                                                         value: "platform"
                                                     },
                                                     arguments: [],
@@ -11474,7 +11413,7 @@
                                                     kind: "Field",
                                                     name: {
                                                         kind: "Name",
-                                                        value: "paidUpgrade"
+                                                        value: "pendingSubscription"
                                                     },
                                                     arguments: [],
                                                     directives: [],
@@ -11501,6 +11440,14 @@
                                                             name: {
                                                                 kind: "Name",
                                                                 value: "tier"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "type"
                                                             },
                                                             arguments: [],
                                                             directives: []
@@ -11577,11 +11524,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 371
+                    end: 355
                 }
             };
             n.loc.source = {
-                body: "query ChannelPage_SubscribeButton_User($login: String!) {\nuser(login: $login) {\nid\ndisplayName\nsubscriptionProducts {\nid\nemoteSetID\nname\nself {\npaidUpgradePromotion {\nnewPrice\n}\n}\n}\nself {\ncanPrimeSubscribe\nsubscriptionBenefit {\nid\npurchasedWithPrime\ntier\nplatform\npaidUpgrade {\nprice\nstartsAt\ntier\n}\ngift {\nisGift\n}\n}\n}\n}\ncurrentUser {\nid\n}\nrequestInfo {\ncountryCode\n}\n}",
+                body: "query ChannelPage_SubscribeButton_User($login: String!) {\nuser(login: $login) {\nid\ndisplayName\nsubscriptionProducts {\nid\nemoteSetID\nname\n}\nself {\ncanPrimeSubscribe\nsubscriptionBenefit {\nid\npurchasedWithPrime\ntier\nendsAt\nisDNRd\nplatform\npendingSubscription {\nprice\nstartsAt\ntier\ntype\n}\ngift {\nisGift\n}\n}\n}\n}\ncurrentUser {\nid\n}\nrequestInfo {\ncountryCode\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,

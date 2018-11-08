@@ -1763,8 +1763,8 @@
                 q = n("6x+I"),
                 Q = n("QzU5"),
                 K = n("4rCz"),
-                $ = n("EyXs"),
-                Y = n("a9YZ"),
+                Y = n("EyXs"),
+                $ = n("a9YZ"),
                 Z = "qa-description-container",
                 J = "qa-typeset",
                 ee = function(e) {
@@ -1774,25 +1774,25 @@
                             isExpanded: !1
                         }, t.renderDescription = function() {
                             if (t.props.description) {
-                                var e, n = Object(Y.d)(t.props.description);
+                                var e, n = Object($.d)(t.props.description);
                                 if (t.state.isExpanded) e = n.map(function(e, t) {
                                     return 0 === e.length ? u.createElement("br", {
                                         key: "desc-line" + t
                                     }) : u.createElement(q, l.__assign({
                                         key: "desc-line" + t,
                                         source: e
-                                    }, $.a))
+                                    }, Y.a))
                                 });
                                 else {
                                     var i = n[0].split("\n")[0];
                                     e = u.createElement(q, l.__assign({
                                         source: i,
                                         renderers: {
-                                            Paragraph: Y.c,
-                                            Heading: Y.a,
-                                            Item: Y.b
+                                            Paragraph: $.c,
+                                            Heading: $.a,
+                                            Item: $.b
                                         }
-                                    }, $.a))
+                                    }, Y.a))
                                 }
                                 return u.createElement(A.Xa, {
                                     "data-test-selector": Z
@@ -5950,15 +5950,15 @@
                 }
             }
 
-            function u() {
-                var e = r.m.get(a, {}) || {},
-                    t = [];
-                return Object.keys(e).forEach(function(n) {
-                    var i = e[n];
-                    void 0 !== i && t.push(i)
-                }), t.sort(function(e, t) {
+            function u(e) {
+                var t = r.m.get(a, {}) || {},
+                    n = [];
+                return Object.keys(t).forEach(function(i) {
+                    var r = t[i];
+                    void 0 !== r && void 0 !== e[r.emote.token] && n.push(r)
+                }), n.sort(function(e, t) {
                     return e.uses > t.uses ? -1 : t.uses > e.uses ? 1 : e.lastUpdatedAt > t.lastUpdatedAt ? -1 : t.lastUpdatedAt > e.lastUpdatedAt ? 1 : 0
-                }), Object(o.b)(t.slice(0, 24).map(function(e) {
+                }), Object(o.b)(n.slice(0, 24).map(function(e) {
                     return e.emote
                 }))
             }
@@ -7049,29 +7049,29 @@
                 r = n("lZdE"),
                 o = n("cpJf"),
                 a = {
-                    "^B-?\\)$": "B)",
-                    "^:-?[z|Z|\\|]$": ":|",
-                    "^:-?\\)$": ":)",
-                    "^:-?\\($": ":(",
-                    "^:-?(p|P)$": ":P",
-                    "^;-?(p|P)$": ";P",
-                    "^:-?[\\\\/]$": ":/",
-                    "^;-?\\)$": ";)",
-                    "^R-?\\)$": "R)",
-                    "^:>$": ":>",
-                    "^:&gt;$": ":>",
-                    "^[oO](_|\\.)[oO]$": "O_o",
-                    "^:-?D$": ":D",
-                    "^:-?(o|O)$": ":O",
-                    "^>\\($": ">(",
-                    "^:-?(?:7|L)$": ":7",
-                    "^:-?(S|s)$": ":S",
-                    "^#-?[\\\\/]$": "#/",
-                    "^<\\]$": "<]",
-                    "^<3$": "<3",
-                    "^&lt;3$": "<3",
-                    "^&lt;\\]$": "<]",
-                    "^&gt;\\($": ">("
+                    "B-?\\)": "B)",
+                    "\\:-?[z|Z|\\|]": ":|",
+                    "\\:-?\\)": ":)",
+                    "\\:-?\\(": ":(",
+                    "\\:-?(p|P)": ":P",
+                    "\\;-?(p|P)": ";P",
+                    "\\:-?[\\\\/]": ":/",
+                    "\\;-?\\)": ";)",
+                    "R-?\\)": "R)",
+                    ":>": ":>",
+                    "\\:\\&gt\\;": ":>",
+                    "[oO](_|\\.)[oO]": "O_o",
+                    "\\:-?D": ":D",
+                    "\\:-?(o|O)": ":O",
+                    ">\\\\(": ">(",
+                    ":-?(?:7|L)": ":7",
+                    "\\:-?(S|s)": ":S",
+                    "#-?[\\\\/]": "#/",
+                    "<\\]": "<]",
+                    "<3": "<3",
+                    "\\&lt\\;3": "<3",
+                    "\\&lt\\;\\]": "<]",
+                    "\\&gt\\;\\(": ">("
                 },
                 s = ["1.0", "2.0", "3.0"],
                 l = new Set([457, 33, 42, 0]);
@@ -7170,47 +7170,48 @@
         PMgN: function(e, t, n) {},
         QjI3: function(e, t, n) {
             "use strict";
-            var i, r = n("mrSG"),
-                o = n("q1tI"),
-                a = n("/MKj"),
-                s = n("fvjX"),
-                l = n("ZS2+"),
-                c = n("UUve"),
-                d = n("1/iK"),
-                u = n("aCAx"),
-                p = n("kRBY"),
-                m = n("GnwI"),
-                h = n("oJmH"),
-                f = n("/7QA"),
-                g = n("2+sX"),
-                v = n("u5aL"),
-                b = n("eJ65"),
-                k = n("yR8l"),
-                y = n("x7UT"),
-                C = n("3Bft"),
-                S = n("tIid"),
-                E = n("ht6z"),
-                _ = n("/aPz"),
-                w = n("KriR"),
-                O = n("W8Fi"),
-                T = n("br9A"),
-                D = n("Ue10"),
-                N = (n("a7aT"), n("z+dA"));
+            var i = n("mrSG"),
+                r = n("q1tI"),
+                o = n("/MKj"),
+                a = n("fvjX"),
+                s = n("ZS2+"),
+                l = n("UUve"),
+                c = n("1/iK"),
+                d = n("aCAx"),
+                u = n("kRBY"),
+                p = n("GnwI"),
+                m = n("oJmH"),
+                h = n("/7QA"),
+                f = n("2+sX"),
+                g = n("u5aL"),
+                v = n("eJ65"),
+                b = n("yR8l"),
+                k = n("x7UT"),
+                y = n("3Bft"),
+                C = n("tIid"),
+                S = n("ht6z"),
+                E = n("/aPz"),
+                _ = n("KriR"),
+                w = n("D7An"),
+                O = n("4rCz");
+            var T, D = n("br9A"),
+                N = n("Ue10"),
+                I = (n("a7aT"), n("z+dA"));
             ! function(e) {
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
-            }(i || (i = {}));
-            var I = l.a.wrap(function() {
+            }(T || (T = {}));
+            var x = s.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(199)]).then(n.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
-                x = function(e) {
+                R = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             inPrimeRegion: !1
                         }, t.modalLevel = "top_page", t.renderBalloonContentForBalloonLayer = function() {
-                            return o.createElement(v.a, {
+                            return r.createElement(g.a, {
                                 onClickOut: t.handleBalloonClickOut
-                            }, o.createElement(D.Xa, {
+                            }, r.createElement(N.Xa, {
                                 "data-a-target": "sub-balloon",
                                 refDelegate: t.setBalloonContentRefDelegate
                             }, t.balloonWrapperContent))
@@ -7229,12 +7230,12 @@
                         }, t.setBalloonWrapperContent = function(e) {
                             t.balloonWrapperContent = e
                         }, t.handleSubMenuAction = function(e) {
-                            new Set([T.a.ClickCheckout, T.a.BuyGiftSub, T.a.BuyMysteryGift, T.a.BuyCustomMysteryGift, T.a.BuyGiftToPaidUpgrade, T.a.BuyPaidUpgrade]).has(e.action) && t.checkAndDisplaySubscriptionCheckout();
+                            new Set([D.a.ClickCheckout, D.a.BuyGiftSub, D.a.BuyMysteryGift, D.a.BuyCustomMysteryGift, D.a.BuyGiftToPaidUpgrade, D.a.BuyPaidUpgrade]).has(e.action) && t.checkAndDisplaySubscriptionCheckout();
                             var n = t.props.data,
                                 i = n.user,
                                 r = !!(i && i.self && i.self.subscriptionBenefit),
-                                o = n.requestInfo && Object(E.a)(n.requestInfo.countryCode);
-                            Object(T.b)({
+                                o = n.requestInfo && Object(S.a)(n.requestInfo.countryCode);
+                            Object(D.b)({
                                 action: e.action || "",
                                 channelLogin: t.props.channelLogin || "",
                                 channelID: i && i.id || "",
@@ -7242,119 +7243,135 @@
                                 hasSubCredit: i && i.self && i.self.canPrimeSubscribe,
                                 hostChannelID: t.props.hostChannelID,
                                 hostChannelLogin: t.props.hostChannelLogin,
-                                isMenuOpen: e.action !== T.a.OpenSubMenu,
+                                isMenuOpen: e.action !== D.a.OpenSubMenu,
                                 mysteryGiftCount: e.mysteryGiftCount,
                                 sub_location: "channel_page",
                                 modal: !r,
                                 modalLevel: r ? "" : t.modalLevel.slice(),
                                 showPrimeContent: o,
                                 giftRecipient: e.giftRecipient || null
-                            }), !e.modalLevel || e.action !== T.a.ClickMoreSubOptions && e.action !== T.a.ClickBack || (t.modalLevel = e.modalLevel)
+                            }), !e.modalLevel || e.action !== D.a.ClickMoreSubOptions && e.action !== D.a.ClickBack || (t.modalLevel = e.modalLevel)
                         }, t.handleMenuToggle = function(e) {
                             t.handleSubMenuAction({
-                                action: e ? T.a.CloseSubMenu : T.a.OpenSubMenu
+                                action: e ? D.a.CloseSubMenu : D.a.OpenSubMenu
                             })
                         }, t.getBalloonDirection = function() {
-                            var e = t.props.balloonDirection || D.v.BottomRight;
-                            return t.props.hostChannelID && (e = D.v.TopLeft), e
+                            var e = t.props.balloonDirection || N.v.BottomRight;
+                            return t.props.hostChannelID && (e = N.v.TopLeft), e
                         }, t.setContainerRefDelegate = function(e) {
                             t.containerRef = e
                         }, t.setBalloonContentRefDelegate = function(e) {
                             t.balloonContentRef = e
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.reportInteractive && this.isUserDataReady(this.props) && this.props.reportInteractive(), this.checkAndDisplaySubscriptionCheckout()
                     }, t.prototype.componentDidUpdate = function(e) {
                         this.props.channelLogin && !this.isUserDataReady(this.props) || !this.props.updateContainerWidth || this.props.updateContainerWidth(), this.props.reportInteractive && this.props.data && !this.props.data.loading && this.props.reportInteractive(), !this.isUserDataReady(e) && this.isUserDataReady(this.props) && this.checkAndDisplaySubscriptionCheckout()
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.isUserDataReady(e) && e.pubsub.messages.subscriptionInfo !== this.props.pubsub.messages.subscriptionInfo && this.props.data.refetch()
                     }, t.prototype.componentWillUnmount = function() {
-                        Object(c.d)()
+                        Object(l.d)()
                     }, t.prototype.render = function() {
                         var e = this.props.data;
                         if (!e || e.loading || e.error) return null;
                         var t = e.user;
                         if (!t) return null;
                         var n = t.self,
-                            r = t.subscriptionProducts;
-                        if (!r) return null;
-                        var a = r.filter(function(e) {
+                            i = t.subscriptionProducts;
+                        if (!i) return null;
+                        var o = i.filter(function(e) {
                             return e
                         });
-                        if (0 === a.length) return null;
-                        if (this.props.hideEsportsSubscription && Object(S.a)(t.id || "", this.props.sessionUser)) return null;
-                        var s = e.requestInfo && Object(E.a)(e.requestInfo.countryCode),
-                            l = !(!n || !n.subscriptionBenefit),
-                            c = Object(S.a)(t.id || "", this.props.sessionUser),
-                            d = 1 === a.length;
-                        a.some(function(e) {
+                        if (0 === o.length) return null;
+                        if (this.props.hideEsportsSubscription && Object(C.a)(t.id || "", this.props.sessionUser)) return null;
+                        var a = e.requestInfo && Object(S.a)(e.requestInfo.countryCode),
+                            s = !(!n || !n.subscriptionBenefit),
+                            l = Object(C.a)(t.id || "", this.props.sessionUser),
+                            c = 1 === o.length;
+                        o.some(function(e) {
                             return !e.emoteSetID
-                        }) && (d = !0);
-                        var u = null;
-                        n && n.subscriptionBenefit && (u = n.subscriptionBenefit.purchasedWithPrime ? C.a.Prime : n.subscriptionBenefit.tier, this.modalLevel = "");
-                        var p, m = l ? Object(f.d)("All-Access Pass", "SubscribeButton") : Object(f.d)("Get the All-Access Pass", "SubscribeButton"),
-                            h = n && Object(O.h)(a, n.subscriptionBenefit);
-                        if (l) {
-                            var g = "";
-                            if (g = d ? Object(f.d)("Subscribed", "SubscribeButton") : h ? Object(f.d)("Continue Sub for $1", "SubscribeButton") : Object(f.d)("Gift A Sub", "SubscribeButton"), p = this.props.hostChannelID ? Object(f.d)("Subscribed to {username}", {
-                                    username: t.displayName || ""
-                                }, "SubscribeButton") : g, d && !c) return o.createElement(D.z, {
-                                disabled: !0,
-                                ariaLabel: p,
-                                icon: D.tb.Star
-                            }, p);
-                            c && (p = m)
-                        } else p = c ? m : this.props.hostChannelID ? Object(f.d)("Subscribe to {username}", {
-                            username: t.displayName || ""
-                        }, "SubscribeButton") : Object(f.d)("Subscribe", "SubscribeButton");
-                        var v = o.createElement(D.z, {
-                                ariaLabel: p,
-                                "data-a-target": l ? "subscribed-button" : "subscribe-button",
-                                "data-test-selector": i.SubButton,
+                        }) && (c = !0);
+                        var d = null;
+                        n && n.subscriptionBenefit && (d = n.subscriptionBenefit.purchasedWithPrime ? y.a.Prime : n.subscriptionBenefit.tier, this.modalLevel = "");
+                        var u = function(e) {
+                            if (e.isSubscribed) {
+                                if (e.hasInsiderPass) return Object(O.d)("All-Access Pass", "SubscribeButton");
+                                if (e.isNonStandardSub) return Object(O.d)("Subscribed", "SubscribeButton");
+                                if (e.hostedDisplayName) return Object(O.d)("Subscribed to {username}", {
+                                    username: e.hostedDisplayName
+                                }, "SubscribeButton");
+                                if ("control" !== O.q.experiments.getAssignment(w.b.SubsReanimator) && e.benefitIsDNRd && e.benefitEndsAt) {
+                                    var t = new Date(e.benefitEndsAt),
+                                        n = Math.round((t.getTime() - Date.now()) / 864e5);
+                                    if (n <= 15 && n > 7) return Object(O.d)("Continue Sub", "SubscribeButton");
+                                    if (n <= 7) return Object(O.d)("Continue Sub - {daysRemaining} Days Remaining", {
+                                        daysRemaining: n
+                                    }, "SubscribeButton")
+                                }
+                                return Object(O.d)("Gift A Sub", "SubscribeButton")
+                            }
+                            return e.hasInsiderPass ? Object(O.d)("Get the All-Access Pass", "SubscribeButton") : e.hostedDisplayName ? Object(O.d)("Subscribe to {username}", {
+                                username: e.hostedDisplayName
+                            }, "SubscribeButton") : Object(O.d)("Subscribe", "SubscribeButton")
+                        }({
+                            isSubscribed: s,
+                            isNonStandardSub: c,
+                            hasInsiderPass: l,
+                            benefitIsDNRd: !(!n || !n.subscriptionBenefit) && n.subscriptionBenefit.isDNRd,
+                            benefitEndsAt: n && n.subscriptionBenefit && n.subscriptionBenefit.endsAt,
+                            hostedDisplayName: this.props.hostChannelID ? t.displayName || "" : void 0
+                        });
+                        if (s && c && !l) return r.createElement(N.z, {
+                            disabled: !0,
+                            ariaLabel: u,
+                            icon: N.tb.Star
+                        }, u);
+                        var p = r.createElement(N.z, {
+                                ariaLabel: u,
+                                "data-a-target": s ? "subscribed-button" : "subscribe-button",
+                                "data-test-selector": T.SubButton,
                                 dropdown: !this.props.hideDropdownArrow,
                                 fullWidth: !0,
-                                icon: this.getButtonIcon(l, u),
+                                icon: this.getButtonIcon(s, d),
                                 onClick: this.props.renderBalloonInBalloonLayer ? this.handleButtonClick : void 0,
-                                type: this.getButtonType(l)
-                            }, p),
-                            k = a[0];
-                        return this.setBalloonWrapperContent(o.createElement(I, {
+                                type: this.getButtonType(s)
+                            }, u),
+                            m = o[0];
+                        return this.setBalloonWrapperContent(r.createElement(x, {
                             authToken: this.props.authToken,
                             channelLogin: this.props.channelLogin || "",
-                            "data-test-selector": i.SubscribeBalloon,
+                            "data-test-selector": T.SubscribeBalloon,
                             handleSubMenuAction: this.handleSubMenuAction,
-                            inPrimeRegion: s,
-                            isEsportChannel: c,
-                            isNonStandardSub: d,
+                            inPrimeRegion: a,
+                            isEsportChannel: l,
+                            isNonStandardSub: c,
                             isStaff: !(!this.props.sessionUser || !this.props.sessionUser.roles) && this.props.sessionUser.roles.isStaff,
-                            isSubscribed: l,
-                            productId: k ? k.id : "",
-                            subbedTier: u || C.a.Prime,
+                            isSubscribed: s,
+                            productId: m ? m.id : "",
+                            subbedTier: d || y.a.Prime,
                             userHasPrime: !1
-                        })), this.props.renderBalloonInBalloonLayer ? o.createElement(D.Xa, {
-                            "data-test-selector": i.BalloonLayerButton,
+                        })), this.props.renderBalloonInBalloonLayer ? r.createElement(N.Xa, {
+                            "data-test-selector": T.BalloonLayerButton,
                             refDelegate: this.setContainerRefDelegate
-                        }, v) : o.createElement(D.Xa, {
-                            className: h ? "subscribe-button--promo" : ""
-                        }, o.createElement(b.a, {
-                            "data-test-selector": i.DefaultButton,
+                        }, p) : r.createElement(N.Xa, null, r.createElement(v.a, {
+                            "data-test-selector": T.DefaultButton,
                             onToggle: this.handleMenuToggle
-                        }, v, o.createElement(D.u, {
+                        }, p, r.createElement(N.u, {
                             "data-a-target": "sub-balloon",
                             direction: this.getBalloonDirection(),
-                            size: D.w.Large
+                            size: N.w.Large
                         }, this.balloonWrapperContent)))
                     }, t.prototype.getButtonType = function(e) {
-                        D.F.Default;
-                        return e && void 0 !== this.props.subscribedButtonType ? this.props.subscribedButtonType : e ? D.F.Success : this.props.unsubscribedButtonType || D.F.Default
+                        N.F.Default;
+                        return e && void 0 !== this.props.subscribedButtonType ? this.props.subscribedButtonType : e ? N.F.Success : this.props.unsubscribedButtonType || N.F.Default
                     }, t.prototype.getButtonIcon = function(e, t) {
                         var n = void 0;
-                        return e ? n = t === C.a.Prime ? D.tb.Crown : D.tb.Star : this.props.forceIcon && (n = D.tb.StarHollow), n
+                        return e ? n = t === y.a.Prime ? N.tb.Crown : N.tb.Star : this.props.forceIcon && (n = N.tb.StarHollow), n
                     }, t.prototype.isUserDataReady = function(e) {
                         return e.data && e.data.user && !e.data.loading && !e.data.error
                     }, t.prototype.checkAndDisplaySubscriptionCheckout = function() {
-                        var e = f.n.get(c.b, "");
+                        var e = h.n.get(l.b, "");
                         if (e) {
                             var t = this.props.data.user;
                             if (t && t.subscriptionProducts) t.subscriptionProducts.filter(function(e) {
@@ -7362,17 +7379,17 @@
                             }).map(function(e) {
                                 return e.name
                             }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
-                                mysteryGiftCount: Number(f.n.get(c.a, "")),
+                                mysteryGiftCount: Number(h.n.get(l.a, "")),
                                 productName: e,
-                                recipientLogin: f.n.get(c.c, ""),
+                                recipientLogin: h.n.get(l.c, ""),
                                 trackingContext: {
-                                    source: w.c.ChannelSubscribeButton
+                                    source: _.c.ChannelSubscribeButton
                                 }
-                            }) : this.props.showLoginModal() : Object(c.d)()
+                            }) : this.props.showLoginModal() : Object(l.d)()
                         }
                     }, t
-                }(o.Component),
-                R = Object(h.compose)(Object(k.a)(N, {
+                }(r.Component),
+                j = Object(m.compose)(Object(b.a)(I, {
                     options: function(e) {
                         return {
                             variables: {
@@ -7383,9 +7400,9 @@
                     skip: function(e) {
                         return !e.channelLogin
                     }
-                }), Object(y.a)([{
+                }), Object(k.a)([{
                     topic: function(e) {
-                        return Object(_.F)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(E.F)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -7393,16 +7410,16 @@
                     skip: function(e) {
                         return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
                     }
-                }]), Object(g.e)())(x),
-                j = function(e) {
+                }]), Object(f.e)())(R),
+                M = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.reportInteractive = function() {
                             t.props.latencyTracking.reportInteractive()
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(R, {
+                    return i.__extends(t, e), t.prototype.render = function() {
+                        return r.createElement(j, {
                             authToken: this.props.authToken,
                             balloonDirection: this.props.balloonDirection,
                             channelLogin: this.props.channelLogin,
@@ -7420,19 +7437,19 @@
                             unsubscribedButtonType: this.props.unsubscribedButtonType,
                             updateContainerWidth: this.props.updateContainerWidth
                         })
-                    }, t = r.__decorate([Object(m.b)("SubscribeButton")], t)
-                }(o.Component);
-            var M = Object(a.connect)(function(e) {
+                    }, t = i.__decorate([Object(p.b)("SubscribeButton")], t)
+                }(r.Component);
+            var F = Object(o.connect)(function(e) {
                 return {
-                    authToken: Object(p.a)(e),
-                    sessionUser: Object(p.e)(e)
+                    authToken: Object(u.a)(e),
+                    sessionUser: Object(u.e)(e)
                 }
             }, function(e) {
-                return Object(s.bindActionCreators)({
-                    showLoginModal: Object(c.e)(d.a.ChannelSubscriptionButton),
+                return Object(a.bindActionCreators)({
+                    showLoginModal: Object(l.e)(c.a.ChannelSubscriptionButton),
                     showSubscriptionCheckoutModal: function(e) {
-                        var t = r.__rest(e, []);
-                        return Object(u.d)(l.a, {
+                        var t = i.__rest(e, []);
+                        return Object(d.d)(s.a, {
                             component: "CheckoutModal",
                             loader: function() {
                                 return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "KJv/"))
@@ -7441,17 +7458,17 @@
                         })
                     }
                 }, e)
-            })(j);
+            })(M);
             n.d(t, !1, function() {
-                return j
-            }), n.d(t, "a", function() {
                 return M
+            }), n.d(t, "a", function() {
+                return F
             }), n.d(t, !1, function() {
-                return i
-            }), n.d(t, !1, function() {
-                return x
+                return T
             }), n.d(t, !1, function() {
                 return R
+            }), n.d(t, !1, function() {
+                return j
             })
         },
         R4sh: function(e, t, n) {
@@ -8988,10 +9005,6 @@
                     return !!e.self && !!e.self.paidUpgradePromotion
                 }) || null
             }
-
-            function d(e, t) {
-                return !!e && !!t && o(e) && !t.paidUpgrade && !!t.gift && t.gift.isGift
-            }
             n.d(t, "g", function() {
                 return i
             }), n.d(t, "e", function() {
@@ -9006,8 +9019,6 @@
                 return l
             }), n.d(t, "b", function() {
                 return c
-            }), n.d(t, "h", function() {
-                return d
             })
         },
         WK0g: function(e, t, n) {
@@ -9145,20 +9156,22 @@
                 return p
             }), n.d(t, "a", function() {
                 return m
-            }), n.d(t, "o", function() {
+            }), n.d(t, "p", function() {
                 return f
             }), n.d(t, "m", function() {
                 return v
-            }), n.d(t, "p", function() {
+            }), n.d(t, "q", function() {
                 return k
             }), n.d(t, "k", function() {
                 return C
-            }), n.d(t, "n", function() {
+            }), n.d(t, "o", function() {
                 return E
+            }), n.d(t, "n", function() {
+                return w
             }), n.d(t, "l", function() {
-                return O
-            }), n.d(t, "i", function() {
                 return D
+            }), n.d(t, "i", function() {
+                return I
             });
             var i = n("/7QA"),
                 r = i.p.logger.withCategory("chat-commands");
@@ -9227,38 +9240,48 @@
                     body: null
                 }
             }
-            var y = /^\/ban\s+@?(\S+)(?:\s+(\d+)?)?$/;
+            var y = /^\/ban\s+@?(\S+)(?:\s+(.+))?$/;
 
             function C(e) {
                 var t = e.trim().match(y);
                 return t ? {
                     banTarget: t[1],
-                    duration: t[2] && Number(t[2]) || null
+                    reason: t[2] || null
                 } : null
             }
-            var S = /^\/slow(?:\s+(\d+)?)?$/;
+            var S = /^\/timeout\s+@?(\S+)(?:\s+(\d+))?(?:\s+(.+))?$/;
 
             function E(e) {
                 var t = e.trim().match(S);
                 return t ? {
+                    banTarget: t[1],
+                    duration: t[2] && Number(t[2]) || null,
+                    reason: t[3] || null
+                } : null
+            }
+            var _ = /^\/slow(?:\s+(\d+)?)?$/;
+
+            function w(e) {
+                var t = e.trim().match(_);
+                return t ? {
                     duration: t[1] && Number(t[1]) || null
                 } : null
             }
-            var _ = ["blue", "blueviolet", "cadetblue", "chocolate", "coral", "dodgerblue", "firebrick", "goldenrod", "green", "hotpink", "orangered", "red", "seagreen", "springgreen", "yellowgreen"],
-                w = /^\/color\s+(#[A-Fa-f0-9]{6}|[A-Za-z]+)$/;
+            var O = ["blue", "blueviolet", "cadetblue", "chocolate", "coral", "dodgerblue", "firebrick", "goldenrod", "green", "hotpink", "orangered", "red", "seagreen", "springgreen", "yellowgreen"],
+                T = /^\/color\s+(#[A-Fa-f0-9]{6}|[A-Za-z]+)$/;
 
-            function O(e) {
-                var t = e.trim().match(w);
+            function D(e) {
+                var t = e.trim().match(T);
                 if (!t) return null;
                 var n = t[1];
-                return n.startsWith("#") || -1 !== _.indexOf(n.toLowerCase()) ? {
+                return n.startsWith("#") || -1 !== O.indexOf(n.toLowerCase()) ? {
                     color: n
                 } : null
             }
-            var T = /^[/.]([a-z0-9]+)(.+)?$/i;
+            var N = /^[/.]([a-z0-9]+)(.+)?$/i;
 
-            function D(e, t) {
-                var n = e.match(T);
+            function I(e, t) {
+                var n = e.match(N);
                 if (!n) return {
                     handled: !1
                 };
@@ -11549,7 +11572,7 @@
                 }, Q(new Date(e)))
             }
 
-            function $(e) {
+            function Y(e) {
                 return i.createElement("span", {
                     key: "timestamp",
                     className: "chat-line__timestamp",
@@ -11589,7 +11612,7 @@
             }), n.d(t, "l", function() {
                 return K
             }), n.d(t, "m", function() {
-                return $
+                return Y
             })
         },
         dAHa: function(e, t, n) {
@@ -12720,8 +12743,8 @@
                     type: _.MultipleChoice,
                     value: "impersonation type"
                 },
-                $ = L,
-                Y = W,
+                Y = L,
+                $ = W,
                 Z = M,
                 J = {
                     video: V.identifyUser,
@@ -12784,7 +12807,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            currentCard: t.props.currentCard || te[t.props.reportContentType] || $,
+                            currentCard: t.props.currentCard || te[t.props.reportContentType] || Y,
                             prevCards: [],
                             currentSelection: null,
                             prevSelections: [],
@@ -12854,7 +12877,7 @@
                                     r = t.state.displacedSelections[t.state.displacedSelections.length - 1],
                                     o = t.state.currentSelection.differentTarget || t.state.targetUnknown,
                                     a = t.state.currentSelection.reportContext || t.state.reportContext,
-                                    s = e.nextCard || Y;
+                                    s = e.nextCard || $;
                                 J[t.state.currentSelection.value] && (s = J[t.state.currentSelection.value]);
                                 var l = t.state.currentSelection.reportReason || t.state.reportReason,
                                     c = s.type === _.Info;
@@ -17567,26 +17590,26 @@
             ! function(e) {
                 e.FrequentlyUsed = "frequently_used", e.CurrentChannel = "current_channel", e.OtherChannel = "other_subbed_channel", e.Unlocked = "unlocked", e.Global = "global"
             }(L || (L = {}));
-            var $;
+            var Y;
             ! function(e) {
                 e.FrequentlyUsedEmotes = "FREQUENTLY_USED_EMOTES", e.ChannelEmotes = "CHANNEL_EMOTES", e.AllEmotes = "ALL_EMOTES"
-            }($ || ($ = {}));
-            var Y = function(e) {
+            }(Y || (Y = {}));
+            var $ = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onTabNavClick = function(e) {
                             if (n.scroll && n.scroll.scrollContent && e.currentTarget.getAttribute("data-a-target")) {
                                 var t = e.currentTarget.getAttribute("data-a-target"),
-                                    i = $.FrequentlyUsedEmotes;
+                                    i = Y.FrequentlyUsedEmotes;
                                 switch (t) {
-                                    case $.FrequentlyUsedEmotes:
-                                        n.frequentlyUsedEmotesRef && (n.frequentlyUsedEmotesRef.scrollIntoView(), i = $.FrequentlyUsedEmotes);
+                                    case Y.FrequentlyUsedEmotes:
+                                        n.frequentlyUsedEmotesRef && (n.frequentlyUsedEmotesRef.scrollIntoView(), i = Y.FrequentlyUsedEmotes);
                                         break;
-                                    case $.ChannelEmotes:
-                                        n.channelEmotesRef && (n.channelEmotesRef.scrollIntoView(), i = $.ChannelEmotes);
+                                    case Y.ChannelEmotes:
+                                        n.channelEmotesRef && (n.channelEmotesRef.scrollIntoView(), i = Y.ChannelEmotes);
                                         break;
-                                    case $.AllEmotes:
-                                        n.allEmotesRef && (n.allEmotesRef.scrollIntoView(), i = $.AllEmotes)
+                                    case Y.AllEmotes:
+                                        n.allEmotesRef && (n.allEmotesRef.scrollIntoView(), i = Y.AllEmotes)
                                 }
                                 n.setState({
                                     selectedNavTab: i
@@ -17617,7 +17640,7 @@
                         }, n.checkVisible = function(e, t) {
                             if (t) {
                                 var i = n.state.selectedNavTab;
-                                n.channelEmotesRef ? t.offset > 0 && t.offset < n.channelEmotesRef.offsetTop ? i = $.FrequentlyUsedEmotes : t.offset > n.channelEmotesRef.offsetTop && t.offset < n.allEmotesRef.offsetTop ? i = $.ChannelEmotes : t.offset > n.allEmotesRef.offsetTop && (i = $.AllEmotes) : t.offset > 0 && t.offset < n.allEmotesRef.offsetTop ? i = $.FrequentlyUsedEmotes : t.offset > n.allEmotesRef.offsetTop && (i = $.AllEmotes), n.state.selectedNavTab !== i && n.setState({
+                                n.channelEmotesRef ? t.offset > 0 && t.offset < n.channelEmotesRef.offsetTop ? i = Y.FrequentlyUsedEmotes : t.offset > n.channelEmotesRef.offsetTop && t.offset < n.allEmotesRef.offsetTop ? i = Y.ChannelEmotes : t.offset > n.allEmotesRef.offsetTop && (i = Y.AllEmotes) : t.offset > 0 && t.offset < n.allEmotesRef.offsetTop ? i = Y.FrequentlyUsedEmotes : t.offset > n.allEmotesRef.offsetTop && (i = Y.AllEmotes), n.state.selectedNavTab !== i && n.setState({
                                     selectedNavTab: i
                                 })
                             }
@@ -17630,7 +17653,7 @@
                             n.setState({
                                 isInSubUpsell: !1,
                                 subUpsellClickedEmote: null,
-                                selectedNavTab: $.FrequentlyUsedEmotes
+                                selectedNavTab: Y.FrequentlyUsedEmotes
                             })
                         }, n.handleFilterChange = function(e) {
                             var t = e.target.value,
@@ -17639,7 +17662,7 @@
                                 filter: i,
                                 inputValue: t,
                                 filteredEmotes: n.filterEmoteSets(n.props.allEmoteSets, i),
-                                selectedNavTab: $.FrequentlyUsedEmotes
+                                selectedNavTab: Y.FrequentlyUsedEmotes
                             })
                         }, n.filterEmoteSets = function(e, t) {
                             var n = [];
@@ -17672,7 +17695,7 @@
                             filteredEmotes: [],
                             inputValue: "",
                             isInSubUpsell: !1,
-                            selectedNavTab: $.FrequentlyUsedEmotes,
+                            selectedNavTab: Y.FrequentlyUsedEmotes,
                             sortedChannelEmotes: [],
                             subUpsellClickedEmote: null
                         }, n
@@ -17829,8 +17852,8 @@
                     }, t.prototype.renderTabNav = function() {
                         var e = null;
                         return this.state.sortedChannelEmotes.length > 0 && (e = o.createElement(q, {
-                            isActive: this.state.selectedNavTab === $.ChannelEmotes,
-                            label: $.ChannelEmotes,
+                            isActive: this.state.selectedNavTab === Y.ChannelEmotes,
+                            label: Y.ChannelEmotes,
                             icon: l.tb.NavChannels,
                             onClick: this.onTabNavClick
                         })), o.createElement(l.Eb, {
@@ -17838,13 +17861,13 @@
                             display: l.X.Flex,
                             className: "emote-picker__tab-nav-container"
                         }, o.createElement(q, {
-                            isActive: this.state.selectedNavTab === $.FrequentlyUsedEmotes,
-                            label: $.FrequentlyUsedEmotes,
+                            isActive: this.state.selectedNavTab === Y.FrequentlyUsedEmotes,
+                            label: Y.FrequentlyUsedEmotes,
                             icon: l.tb.GlyphLength,
                             onClick: this.onTabNavClick
                         }), e, o.createElement(q, {
-                            isActive: this.state.selectedNavTab === $.AllEmotes,
-                            label: $.AllEmotes,
+                            isActive: this.state.selectedNavTab === Y.AllEmotes,
+                            label: Y.AllEmotes,
                             icon: l.tb.EmoticonsAll,
                             onClick: this.onTabNavClick
                         }))
@@ -17897,9 +17920,12 @@
                                 gqlError: !1
                             }))
                         }
-                        e.visible && !this.props.visible ? (this.props.openEmotePicker(), this.setState({
-                            frequentlyUsedEmotes: Object(_.c)()
-                        })) : this.props.visible && !e.visible && this.props.closeEmotePicker()
+                        if (e.visible && !this.props.visible && e.emoteSetsData && e.emoteSetsData.emoteMap) {
+                            var n = Object(_.c)(e.emoteSetsData.emoteMap);
+                            this.props.openEmotePicker(), this.setState({
+                                frequentlyUsedEmotes: n
+                            })
+                        } else this.props.visible && !e.visible && this.props.closeEmotePicker()
                     }, t.prototype.componentWillUnmount = function() {
                         this.props.closeEmotePicker()
                     }, t.prototype.render = function() {
@@ -17924,7 +17950,7 @@
                                 subscribeTexts: this.state.subscribeTexts,
                                 toggleVisibility: this.props.toggleVisibility
                             }),
-                            n = o.createElement(Y, {
+                            n = o.createElement($, {
                                 allEmoteSets: this.state.allEmoteSets,
                                 channelID: this.props.channelOwnerID,
                                 channelDisplayName: this.state.channelDisplayName,
@@ -20116,8 +20142,8 @@
                 q = "reply-button",
                 Q = "relative-time-title",
                 K = "share-button",
-                $ = "share-button-clicked",
-                Y = 3e3,
+                Y = "share-button-clicked",
+                $ = 3e3,
                 Z = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -20236,7 +20262,7 @@
                                 fullWidth: !0,
                                 icon: p.tb.Check,
                                 type: p.F.Success,
-                                "data-test-selector": $
+                                "data-test-selector": Y
                             }, o.createElement(p.Xa, {
                                 display: p.X.Flex,
                                 alignItems: p.f.Center,
@@ -20275,7 +20301,7 @@
                                     t.setState({
                                         isLinkCopied: !1
                                     })
-                                }, Y)
+                                }, $)
                             }), Object(w.l)(e, i)
                         }, t.onReplyClickHandler = function() {
                             t.props.onReplyClick(Object(B.b)(t.props.context.author)), t.closeMenu()
@@ -23300,38 +23326,6 @@
                                             },
                                             arguments: [],
                                             directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "self"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "paidUpgradePromotion"
-                                                    },
-                                                    arguments: [],
-                                                    directives: [],
-                                                    selectionSet: {
-                                                        kind: "SelectionSet",
-                                                        selections: [{
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "newPrice"
-                                                            },
-                                                            arguments: [],
-                                                            directives: []
-                                                        }]
-                                                    }
-                                                }]
-                                            }
                                         }]
                                     }
                                 }, {
@@ -23390,6 +23384,22 @@
                                                     kind: "Field",
                                                     name: {
                                                         kind: "Name",
+                                                        value: "endsAt"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "isDNRd"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
                                                         value: "platform"
                                                     },
                                                     arguments: [],
@@ -23398,7 +23408,7 @@
                                                     kind: "Field",
                                                     name: {
                                                         kind: "Name",
-                                                        value: "paidUpgrade"
+                                                        value: "pendingSubscription"
                                                     },
                                                     arguments: [],
                                                     directives: [],
@@ -23425,6 +23435,14 @@
                                                             name: {
                                                                 kind: "Name",
                                                                 value: "tier"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "type"
                                                             },
                                                             arguments: [],
                                                             directives: []
@@ -23501,11 +23519,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 371
+                    end: 355
                 }
             };
             n.loc.source = {
-                body: "query ChannelPage_SubscribeButton_User($login: String!) {\nuser(login: $login) {\nid\ndisplayName\nsubscriptionProducts {\nid\nemoteSetID\nname\nself {\npaidUpgradePromotion {\nnewPrice\n}\n}\n}\nself {\ncanPrimeSubscribe\nsubscriptionBenefit {\nid\npurchasedWithPrime\ntier\nplatform\npaidUpgrade {\nprice\nstartsAt\ntier\n}\ngift {\nisGift\n}\n}\n}\n}\ncurrentUser {\nid\n}\nrequestInfo {\ncountryCode\n}\n}",
+                body: "query ChannelPage_SubscribeButton_User($login: String!) {\nuser(login: $login) {\nid\ndisplayName\nsubscriptionProducts {\nid\nemoteSetID\nname\n}\nself {\ncanPrimeSubscribe\nsubscriptionBenefit {\nid\npurchasedWithPrime\ntier\nendsAt\nisDNRd\nplatform\npendingSubscription {\nprice\nstartsAt\ntier\ntype\n}\ngift {\nisGift\n}\n}\n}\n}\ncurrentUser {\nid\n}\nrequestInfo {\ncountryCode\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,

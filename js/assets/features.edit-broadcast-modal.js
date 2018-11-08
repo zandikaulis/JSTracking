@@ -413,7 +413,7 @@
                         }, Object(l.d)("All Tags", "AllTagsTitle")))) : null
                     }, t
                 }(r.Component),
-                C = Object(p.a)(k, {
+                E = Object(p.a)(k, {
                     options: function(e) {
                         return {
                             variables: {
@@ -424,7 +424,7 @@
                         }
                     }
                 })(N),
-                E = a("TCeE"),
+                C = a("TCeE"),
                 _ = a("79jw"),
                 F = function(e) {
                     function t() {
@@ -436,7 +436,7 @@
                                 return e.localizedName.localeCompare(t.localizedName)
                             }).map(t.renderTag) : null
                         }, t.renderTag = function(e) {
-                            var a = t.props.categoryName ? E.b.Category : E.b.All;
+                            var a = t.props.categoryName ? C.b.Category : C.b.All;
                             return r.createElement(f.a, {
                                 key: e.id
                             }, r.createElement(v.Ua, {
@@ -474,8 +474,8 @@
                     }
                 }))(F),
                 w = a("sLmD"),
-                A = a("AZIu"),
-                I = a("4HIT");
+                I = a("AZIu"),
+                A = a("4HIT");
             a("97MP");
             ! function(e) {
                 e[e.TagAll = 0] = "TagAll", e[e.TagAllMinusAutomation = 1] = "TagAllMinusAutomation", e[e.TagCategory = 2] = "TagCategory", e[e.StreamTag = 3] = "StreamTag"
@@ -522,7 +522,7 @@
                         }, a.setTagSearchRef = function(e) {
                             a.tagSearch = e
                         }, a.onTagResultSelected = function(e, t) {
-                            if (a.toggleTagSearch(!1), a.clearSearchTerm(), a.props.type === y.TagCategory && t === E.b.All ? l.p.history.push(I.a.Popular) : a.props.type === y.TagAll && t === E.b.Category && l.p.history.push(I.a.Games), a.props.onTagClick && (a.props.onTagClick(e, t), a.props.section && a.props.numSelectedTags)) {
+                            if (a.toggleTagSearch(!1), a.clearSearchTerm(), a.props.type === y.TagCategory && t === C.b.All ? l.p.history.push(A.a.Popular) : a.props.type === y.TagAll && t === C.b.Category && l.p.history.push(A.a.Games), a.props.onTagClick && (a.props.onTagClick(e, t), a.props.section && a.props.numSelectedTags)) {
                                 var n = {
                                     section: a.props.section,
                                     tagPosition: a.props.numSelectedTags,
@@ -530,7 +530,7 @@
                                     tagId: e.id,
                                     dismiss: !1
                                 };
-                                Object(A.b)(n)
+                                Object(I.b)(n)
                             }
                         }, a.onInputChange = function(e) {
                             a.props.onInputChange && a.props.onInputChange(e), clearTimeout(a.inputTimeout), a.toggleTagSearch(!0), a.setState({
@@ -598,7 +598,7 @@
                         var e = this.props.selectedTags && this.props.selectedTags.map(function(e) {
                             return e.id
                         }) || [];
-                        return r.createElement(v.Xa, null, r.createElement(C, {
+                        return r.createElement(v.Xa, null, r.createElement(E, {
                             gameName: this.props.categoryName,
                             onAddTag: this.onTagResultSelected,
                             selectedTagIDs: e
@@ -612,7 +612,7 @@
                                         return e = e || "", t = {
                                             hitsPerPage: 100,
                                             restrictSearchableAttributes: ["localizations." + this.languageCode, "tag_name"]
-                                        }, a = g.a.Tags, this.props.type === y.TagAllMinusAutomation ? (t.facetFilters = '["automated:false", "tag_scope:' + E.b.All + '"]', this.props.showAllDashboardTags && (t.hitsPerPage = 300)) : this.props.type === y.TagAll ? this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:" + E.b.All : t.facetFilters = '[["tag_scope:' + E.b.All + '", "tag_scope:' + E.b.Category + '"]]' : this.props.type === y.TagCategory ? "" === e || this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:" + E.b.Category : t.facetFilters = '[["tag_scope:' + E.b.All + '", "tag_scope:' + E.b.Category + '"]]' : this.props.type === y.StreamTag && (a = g.a.StreamTags, t.facetFilters = "category_id:" + this.props.categoryID), [4, this.searchClient.queryForType(a, e, u.a(), t)];
+                                        }, a = g.a.Tags, this.props.type === y.TagAllMinusAutomation ? (t.facetFilters = '["automated:false", "tag_scope:' + C.b.All + '"]', this.props.showAllDashboardTags && (t.hitsPerPage = 300)) : this.props.type === y.TagAll ? this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:" + C.b.All : t.facetFilters = '[["tag_scope:' + C.b.All + '", "tag_scope:' + C.b.Category + '"]]' : this.props.type === y.TagCategory ? "" === e || this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:" + C.b.Category : t.facetFilters = '[["tag_scope:' + C.b.All + '", "tag_scope:' + C.b.Category + '"]]' : this.props.type === y.StreamTag && (a = g.a.StreamTags, t.facetFilters = "category_id:" + this.props.categoryID), [4, this.searchClient.queryForType(a, e, u.a(), t)];
                                     case 1:
                                         return n = i.sent(), this.setState({
                                             searchResults: n,
@@ -2282,7 +2282,7 @@
                         }, this.props.game.name))))))
                     }, t
                 }(d.Component),
-                C = function(e) {
+                E = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.gameSearch = null, t.setGameSearchRef = function(e) {
@@ -2323,7 +2323,7 @@
                         })))))
                     }, t
                 }(d.Component),
-                E = a("H/lO"),
+                C = a("H/lO"),
                 _ = a("NZDK"),
                 F = 100,
                 O = function(e) {
@@ -2364,7 +2364,7 @@
                         }), a
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(C, o.__assign({}, this.props, {
+                        return d.createElement(E, o.__assign({}, this.props, {
                             onGameInputChange: this.onGameInputChange,
                             isGameSearchOpen: this.state.isGameSearchOpen,
                             gameResults: this.state.gameResults,
@@ -2383,7 +2383,7 @@
                                     case 1:
                                         i.sent(), a = null, i.label = 2;
                                     case 2:
-                                        return i.trys.push([2, 4, , 5]), [4, this.searchClient.queryForType(E.a.Games, e, t)];
+                                        return i.trys.push([2, 4, , 5]), [4, this.searchClient.queryForType(C.a.Games, e, t)];
                                     case 3:
                                         return a = i.sent(), [3, 5];
                                     case 4:
@@ -2413,8 +2413,8 @@
             function(e) {
                 e.Complete = "complete", e.Errored = "errored", e.Fetching = "fetching", e.Ready = "ready"
             }(s || (s = {}));
-            var A = a("GnwI"),
-                I = a("lr7A"),
+            var I = a("GnwI"),
+                A = a("lr7A"),
                 D = a("HUHH"),
                 L = a("aP55"),
                 R = a("X6el");
@@ -2769,11 +2769,11 @@
                             margin: {
                                 bottom: 2
                             }
-                        }, d.createElement(I.a, {
+                        }, d.createElement(A.a, {
                             error: !!e,
                             errorMessage: e,
                             gameName: this.state.selectedGame,
-                            onError: this.handleErrorByType(n.Tags),
+                            setError: this.handleErrorByType(n.Tags),
                             onRemoveTag: this.handleRemoveTag,
                             onTagResultSelected: this.handleTagResultSelected,
                             selectedTags: this.state.selectedTags,
@@ -2900,7 +2900,7 @@
                         })
                     }, t
                 }(d.Component),
-                j = Object(c.compose)(Object(A.b)("EditBroadcast"), Object(m.a)(R, {
+                j = Object(c.compose)(Object(I.b)("EditBroadcast"), Object(m.a)(R, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -2930,15 +2930,15 @@
                 d = a("FsIG"),
                 c = a("C29h"),
                 u = a("Ue10"),
-                g = a("dzJR");
-            a("sEux");
+                g = a("dzJR"),
+                m = (a("sEux"), 5e3);
             ! function(e) {
                 e.NoTagsSelected = "no-tags-selected", e.SelectedTag = "selected-tag"
             }(n || (n = {}));
-            var m = function(e) {
+            var p = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.renderErrorMessage = function() {
+                        return t.timeoutId = null, t.renderErrorMessage = function() {
                             if (t.props.error && t.props.errorMessage) return r.createElement(u.Xa, {
                                 margin: {
                                     top: .5
@@ -2956,14 +2956,21 @@
                                 type: c.b.TagAllMinusAutomation
                             })
                         }, t.onTagResultSelected = function(e) {
-                            5 === t.props.selectedTags.filter(function(e) {
-                                return !e.isAutomated
-                            }).length && t.props.onError ? t.props.onError(Object(s.d)("You can only select up to 5 tags at the same time.", "TagSelectorSearch")) : t.props.selectedTags.map(function(e) {
+                            if (5 === t.props.selectedTags.filter(function(e) {
+                                    return !e.isAutomated
+                                }).length && t.props.setError) return t.props.setError(Object(s.d)("You can only select up to 5 tags at the same time.", "TagSelectorSearch")), t.clearExistingTimeout(), void(t.timeoutId = setTimeout(function() {
+                                t && t.props && t.props.setError && t.props.setError("")
+                            }, m));
+                            t.props.selectedTags.map(function(e) {
                                 return e.id
                             }).includes(e.id) || t.props.onTagResultSelected && t.props.onTagResultSelected(e)
+                        }, t.clearExistingTimeout = function() {
+                            t.timeoutId && clearTimeout(t.timeoutId)
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
+                    return i.__extends(t, e), t.prototype.componentWillUnmount = function() {
+                        this.clearExistingTimeout()
+                    }, t.prototype.render = function() {
                         var e = Object(s.d)("Tags", "TagSelectorSearch");
                         return r.createElement(u.Xa, null, r.createElement(u.Xa, {
                             display: u.X.Flex,
@@ -3043,7 +3050,7 @@
                         }, "TagSuggestions")) : null
                     }, t
                 }(r.Component),
-                p = Object(o.a)(g, {
+                h = Object(o.a)(g, {
                     options: function(e) {
                         return {
                             variables: {
@@ -3053,13 +3060,13 @@
                         }
                     },
                     skip: !0
-                })(m);
+                })(p);
             a.d(t, !1, function() {
                 return n
             }), a.d(t, !1, function() {
-                return m
-            }), a.d(t, "a", function() {
                 return p
+            }), a.d(t, "a", function() {
+                return h
             })
         },
         sEux: function(e, t, a) {},

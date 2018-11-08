@@ -12,6 +12,8 @@
                 return r.PageviewMedium
             }), t.o(r, "SpadeEventType") && t.d(n, "SpadeEventType", function() {
                 return r.SpadeEventType
+            }), t.o(r, "TwitchDataType") && t.d(n, "TwitchDataType", function() {
+                return r.TwitchDataType
             })
         },
         "O0y+": function(e, n, t) {
@@ -33,11 +35,11 @@
                 v = t("GnwI"),
                 k = t("3lt/"),
                 F = t("ZDlU"),
-                b = t("8/mp"),
-                h = t("ff13"),
+                h = t("8/mp"),
+                b = t("ff13"),
                 q = t("jytb"),
                 R = t("Ue10"),
-                U = function(e) {
+                y = function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -47,8 +49,8 @@
                                 x: 3,
                                 y: 2
                             }
-                        }, i.createElement(h.a, {
-                            activeTab: h.b.Requests
+                        }, i.createElement(b.a, {
+                            activeTab: b.b.Requests
                         }), this.renderContent(), i.createElement(R.Xa, {
                             display: R.X.Flex,
                             justifyContent: R.Wa.Center
@@ -91,14 +93,14 @@
                             childWidth: R.cc.Large,
                             gutterSize: R.dc.Small,
                             placeholderItems: 10
-                        }, e, i.createElement(b.a, {
+                        }, e, i.createElement(h.a, {
                             enabled: this.props.canLoadMore,
                             loadMore: this.props.onLoadMore,
                             pixelThreshold: 100
                         }))
                     }, n
                 }(i.Component),
-                y = t("nFAG"),
+                U = t("nFAG"),
                 S = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
@@ -109,7 +111,7 @@
                                     switch (t.label) {
                                         case 0:
                                             return (e = this.props.data) && e.currentUser && e.currentUser.incomingFriendRequests ? (n = e.currentUser.incomingFriendRequests.edges, [4, e.fetchMore({
-                                                query: y,
+                                                query: U,
                                                 variables: r.__assign({}, e.variables, {
                                                     cursor: n[n.length - 1].cursor
                                                 }),
@@ -154,7 +156,7 @@
                                 login: this.props.login,
                                 onLoadMore: this.loadMore
                             };
-                        return i.createElement(U, r.__assign({}, n))
+                        return i.createElement(y, r.__assign({}, n))
                     }, n
                 }(i.Component);
 
@@ -171,7 +173,7 @@
                         return Object(m.e)(l.a.FriendsPage)
                     }
                 }, e)
-            }), Object(d.a)(y, {
+            }), Object(d.a)(U, {
                 skip: w,
                 options: function() {
                     return {

@@ -12,6 +12,8 @@
                 return n.PageviewMedium
             }), a.o(n, "SpadeEventType") && a.d(t, "SpadeEventType", function() {
                 return n.SpadeEventType
+            }), a.o(n, "TwitchDataType") && a.d(t, "TwitchDataType", function() {
+                return n.TwitchDataType
             })
         },
         AeNN: function(e, t, a) {
@@ -38,16 +40,16 @@
             var b = a("GD6M"),
                 E = a("Ue10"),
                 S = "company-request-access-form-company-name",
-                C = "company-request-access-form-company-website",
-                T = "company-request-access-form-industry",
+                T = "company-request-access-form-company-website",
+                C = "company-request-access-form-industry",
                 _ = "company-request-access-form-company-size",
                 R = "company-request-access-form-city",
                 q = "company-request-access-form-state",
                 w = "company-request-access-form-country",
                 j = "company-request-form-contact-first-name",
                 O = "company-request-form-contact-last-name",
-                k = "company-request-form-contact-title",
-                D = "company-request-form-contact-email",
+                D = "company-request-form-contact-title",
+                k = "company-request-form-contact-email",
                 G = "company-request-form-product-interest",
                 A = "company-request-form-join-reason",
                 N = function(e) {
@@ -192,7 +194,7 @@
                             required: !0,
                             type: E.Ta.Text,
                             onChange: this.setCompanyWebsite,
-                            "data-test-selector": C
+                            "data-test-selector": T
                         }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
@@ -249,7 +251,7 @@
                             required: !0,
                             type: E.Ta.Text,
                             onChange: this.setIndustry,
-                            "data-test-selector": T
+                            "data-test-selector": C
                         }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
@@ -333,7 +335,7 @@
                             required: !0,
                             type: E.Ta.Text,
                             onChange: this.setContactTitle,
-                            "data-test-selector": k
+                            "data-test-selector": D
                         }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
@@ -346,7 +348,7 @@
                             required: !0,
                             type: E.Ta.Text,
                             onChange: this.setContactEmail,
-                            "data-test-selector": D
+                            "data-test-selector": k
                         }))), r.createElement(E.Xa, {
                             margin: {
                                 bottom: 1
@@ -712,7 +714,7 @@
                 b = a("1mFg"),
                 E = v.a + "/kraken/search/games",
                 S = 7,
-                C = function(e) {
+                T = function(e) {
                     function t(t) {
                         var a = e.call(this, t) || this;
                         return a.state = {
@@ -764,7 +766,7 @@
             a.d(t, "a", function() {
                 return y
             }), a.d(t, "b", function() {
-                return C
+                return T
             })
         },
         "V+GM": function(e, t, a) {

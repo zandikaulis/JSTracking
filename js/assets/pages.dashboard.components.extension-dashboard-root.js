@@ -2008,7 +2008,7 @@
                             }
                         }, o.createElement(g.W, {
                             type: g.Vb.H5
-                        }, i)), this.renderExtensionTagPills(), s !== Ie.z.RELEASED && o.createElement(we.a, {
+                        }, i, s !== Ie.z.RELEASED && " " + r)), this.renderExtensionTagPills(), s !== Ie.z.RELEASED && o.createElement(we.a, {
                             state: s
                         }))))), o.createElement(g.Xa, {
                             display: g.X.Flex,

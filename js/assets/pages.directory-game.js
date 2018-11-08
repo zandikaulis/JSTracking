@@ -144,6 +144,8 @@
                 return a.PageviewMedium
             }), n.o(a, "SpadeEventType") && n.d(t, "SpadeEventType", function() {
                 return a.SpadeEventType
+            }), n.o(a, "TwitchDataType") && n.d(t, "TwitchDataType", function() {
+                return a.TwitchDataType
             })
         },
         "3sMy": function(e, t, n) {
@@ -1045,25 +1047,27 @@
                         }
                         return a.__extends(n, t), n.prototype.render = function() {
                             var t = this.context.cardIDtoItemTrackingIDMap && this.props.contentEdge.node && this.context.cardIDtoItemTrackingIDMap[this.props.contentEdge.node.id],
-                                n = this.props,
-                                o = n.itemPosition,
-                                s = n.rowPosition,
-                                l = n.shelf,
-                                c = Object(r.g)(l.title).rowName,
-                                d = {
+                                n = this.context.cardIDtoRequestIDMap && this.props.contentEdge.node && this.context.cardIDtoRequestIDMap[this.props.contentEdge.node.id],
+                                o = this.props,
+                                s = o.itemPosition,
+                                l = o.rowPosition,
+                                c = o.shelf,
+                                d = Object(r.g)(c.title).rowName,
+                                u = {
                                     trackImpression: this.trackImpression,
                                     trackRecFeedbackPreModalClick: this.context.trackRecFeedbackPreModalClick,
                                     trackRecFeedbackClickStep: this.context.trackRecFeedbackClickStep,
                                     trackRecFeedbackClickStepPostSubmit: this.context.trackRecFeedbackClickStepPostSubmit,
                                     trackClick: this.trackClick,
+                                    itemRequestID: n,
                                     shelfCardTrackingProps: {
                                         item_tracking_id: t || null,
-                                        item_position: o,
-                                        row_name: c,
-                                        row_position: s
+                                        item_position: s,
+                                        row_name: d,
+                                        row_position: l
                                     }
                                 };
-                            return i.createElement(e, a.__assign({}, this.props, d))
+                            return i.createElement(e, a.__assign({}, this.props, u))
                         }, n.contextTypes = o.a, n
                     }(i.Component)
                 }
@@ -1346,7 +1350,7 @@
                         }, r.createElement(v.Za, null)) : r.createElement(v.Xa, null, this.renderTags())
                     }, t
                 }(r.Component),
-                E = Object(s.compose)(Object(g.a)(I, {
+                D = Object(s.compose)(Object(g.a)(I, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1357,7 +1361,7 @@
                         }
                     }
                 }))(_),
-                D = n("sLmD"),
+                E = n("sLmD"),
                 x = n("AZIu"),
                 F = n("4HIT");
             n("97MP");
@@ -1374,7 +1378,7 @@
                             isOpen: !1,
                             searching: !1,
                             searchTerm: ""
-                        }, n.languageCode = Object(D.a)(), n.renderSearchContent = function() {
+                        }, n.languageCode = Object(E.a)(), n.renderSearchContent = function() {
                             var e = null;
                             return e = n.props.type === T.StreamTag ? n.renderStreamTagResults() : n.renderTagResults(), r.createElement(d.b, {
                                 className: "tag-search__scrollable-area",
@@ -1383,7 +1387,7 @@
                                 "data-test-selector": C.SearchContent
                             }, n.renderSuggestedTags(), e))
                         }, n.renderTagSearchResult = function(e) {
-                            var t = Object(D.b)(e, n.props.type === T.TagAllMinusAutomation),
+                            var t = Object(E.b)(e, n.props.type === T.TagAllMinusAutomation),
                                 a = "tag_scope" in e ? e.tag_scope : void 0;
                             return r.createElement(k, {
                                 key: t.id,
@@ -1393,13 +1397,13 @@
                                 tag: t
                             })
                         }, n.renderStreamTagResults = function() {
-                            return n.props.type === T.StreamTag && n.state.isOpen ? "" === n.state.searchTerm ? r.createElement(E, {
+                            return n.props.type === T.StreamTag && n.state.isOpen ? "" === n.state.searchTerm ? r.createElement(D, {
                                 categoryName: n.props.categoryName,
                                 onAddTag: n.onTagResultSelected,
                                 tagsLimit: 100
                             }) : !n.state.searchResults && n.state.searching ? n.renderLoading() : n.state.searchResults && n.state.searchResults.streamTags && n.state.searchResults.streamTags.hits.length ? n.state.searchResults.streamTags.hits.map(n.renderTagSearchResult) : n.renderNoResults() : null
                         }, n.renderTagResults = function() {
-                            return n.state.isOpen ? n.props.type === T.TagAll && "" === n.state.searchTerm ? r.createElement(E, {
+                            return n.state.isOpen ? n.props.type === T.TagAll && "" === n.state.searchTerm ? r.createElement(D, {
                                 onAddTag: n.onTagResultSelected,
                                 tagsLimit: 100
                             }) : !n.state.searchResults && n.state.searching ? n.renderLoading() : n.state.searchResults && n.state.searchResults.tags && n.state.searchResults.tags.hits.length ? n.state.searchResults.tags.hits.map(n.renderTagSearchResult) : n.renderNoResults() : null
@@ -2143,8 +2147,8 @@
                         className: "preview-card-titles__subtitle-wrapper"
                     }, t))
                 }),
-                E = n("H1ft"),
-                D = n("ZbA5"),
+                D = n("H1ft"),
+                E = n("ZbA5"),
                 x = n("QVaV"),
                 F = n("hyVY"),
                 O = n("MXoD"),
@@ -2285,7 +2289,7 @@
                         return function(e) {
                             return void 0 !== e.streamType
                         }(this.props) ? i.createElement(C, {
-                            topLeft: i.createElement(D.a, {
+                            topLeft: i.createElement(E.a, {
                                 type: this.props.streamType,
                                 hosting: !!this.props.hostedByChannelLogin
                             }),
@@ -2401,22 +2405,22 @@
                             attachTop: !0
                         }) : null
                     }, t.prototype.shouldShowGameBalloon = function(e) {
-                        return !!R(e) && (!!(e.videoGameChanges && e.videoGameChanges.length > 0) && e.multipleVideoGameMarkersType === E.a.Balloon)
+                        return !!R(e) && (!!(e.videoGameChanges && e.videoGameChanges.length > 0) && e.multipleVideoGameMarkersType === D.a.Balloon)
                     }, t.prototype.renderPreviewCardGameInfo = function(e, t, n, a) {
                         switch (e) {
-                            case E.a.Balloon:
+                            case D.a.Balloon:
                                 return i.createElement(m, {
                                     videoGameChanges: t,
                                     videoID: t[0].videoID,
                                     onBalloonClick: n,
                                     onBalloonItemClick: a
                                 });
-                            case E.a.Inline:
+                            case D.a.Inline:
                                 return i.createElement(h, {
                                     videoGameChanges: t,
                                     trackingContext: this.props.trackingContext
                                 });
-                            case E.a.None:
+                            case D.a.None:
                                 return null;
                             default:
                                 return e
@@ -5721,7 +5725,6 @@
                     feedbacked_item_id: null,
                     feedback_action: null,
                     feedback_reason: null,
-                    item_name: null,
                     click_step: e.clickStep,
                     clicked_item_id: e.clickedItemID,
                     item_tracking_id: e.itemTrackingID,
@@ -5732,7 +5735,8 @@
                     reason_target_type: e.reasonTargetType,
                     row_name: e.rowName,
                     model_tracking_id: e.modelTrackingID,
-                    clicked_content_type: e.clickedContentType
+                    clicked_content_type: e.clickedContentType,
+                    item_name: e.itemName
                 })
             }
 
@@ -5740,7 +5744,6 @@
                 u({
                     section: e.clickStep === a.SettingsChange ? null : r.TwitchHome,
                     item_page: e.clickStep === a.SettingsChange ? d.PageviewMedium.Settings : d.PageviewMedium.TwitchHome,
-                    item_name: null,
                     click_step: e.clickStep,
                     feedback_type: e.feedbackType,
                     feedbacked_item_id: e.feedbackedItemID,
@@ -5755,7 +5758,8 @@
                     reason_target_type: e.reasonTargetType,
                     row_name: e.rowName,
                     model_tracking_id: e.modelTrackingID,
-                    clicked_content_type: e.clickedContentType
+                    clicked_content_type: e.clickedContentType,
+                    item_name: e.itemName
                 })
             }
 
@@ -6018,8 +6022,8 @@
                 N = n("bUox"),
                 I = n("TCeE"),
                 _ = n("AZIu"),
-                E = n("0Rl0"),
-                D = n("rShu"),
+                D = n("0Rl0"),
+                E = n("rShu"),
                 x = n("8/mp"),
                 F = n("Uive"),
                 O = n("hX9f"),
@@ -6205,7 +6209,7 @@
             }
 
             function ee(e, t) {
-                if (t.directoryType !== D.a.Games && t.streamNode.game) {
+                if (t.directoryType !== E.a.Games && t.streamNode.game) {
                     var n = t.streamNode.game[e];
                     if (n) return n
                 }
@@ -6239,7 +6243,7 @@
                                 })
                             }, 50))
                         }, n.renderPlaceholders = function() {
-                            for (var e = [], t = 0; t < 20; t++) e.push(d.createElement(E.a, {
+                            for (var e = [], t = 0; t < 20; t++) e.push(d.createElement(D.a, {
                                 key: t
                             }));
                             return e
@@ -6258,7 +6262,7 @@
                             var e = n.props.data.game;
                             return !(n.props.data.loading || n.props.data.error || !e || "" === e.id || !e.streams || !e.streams.pageInfo || !e.streams.pageInfo.hasNextPage)
                         }, n.state = {
-                            directoryType: D.a.Games,
+                            directoryType: E.a.Games,
                             directoryWidth: -1,
                             numSlotsAdded: 0
                         }, n
@@ -6306,7 +6310,7 @@
                                 "data-a-target": "international-section-header"
                             }), Object(u.d)("All Channels", "DirectoryInternationalSection"))), this.props.tagFilters.length || this.props.languageTagFilters.length || (n = d.createElement(K, {
                                 directoryName: decodeURIComponent(this.props.match.params.encodedCommunityName),
-                                directoryType: D.a.Games,
+                                directoryType: E.a.Games,
                                 directoryWidth: this.state.directoryWidth,
                                 languageCode: i,
                                 addTagFilter: this.addTagFilter,
@@ -6602,8 +6606,8 @@
                 })(we),
                 Ie = n("TSYQ"),
                 _e = n("1/iK"),
-                Ee = n("y5D0"),
-                De = n("JcRA"),
+                De = n("y5D0"),
+                Ee = n("JcRA"),
                 xe = n("Jl34"),
                 Fe = n("y5Wm"),
                 Oe = n("k5cX"),
@@ -6717,7 +6721,7 @@
                             s = this.showUnfollowButton() ? L.tb.Heart : n,
                             c = this.showUnfollowButton() ? L.tb.Unheart : L.tb.Heart,
                             m = this.showUnfollowButton() ? Object(u.d)("Following", "FollowGameButton") : e;
-                        return this.props.animatedButton ? d.createElement(De.a, {
+                        return this.props.animatedButton ? d.createElement(Ee.a, {
                             ariaLabel: r,
                             "data-a-target": o,
                             "data-test-selector": "follow-game-button-component",
@@ -6780,7 +6784,7 @@
                 }, function(e) {
                     return Object(r.bindActionCreators)({
                         showLoginModal: function() {
-                            return Object(Ee.e)(_e.a.FollowGameButton)
+                            return Object(De.e)(_e.a.FollowGameButton)
                         }
                     }, e)
                 })(Pe),
@@ -7754,6 +7758,7 @@
                 l = n("kRI/"),
                 c = {
                     cardIDtoItemTrackingIDMap: i.object,
+                    cardIDtoRequestIDMap: i.object,
                     trackTitleClick: i.func,
                     trackTitleImpression: i.func,
                     trackImpression: i.func,
@@ -7777,7 +7782,8 @@
                                     trackRecFeedbackClickStepPostSubmit: n.trackRecFeedbackClickStepPostSubmit,
                                     trackImpression: n.trackImpression,
                                     trackClick: n.trackClick,
-                                    cardIDtoItemTrackingIDMap: n.state.cardIDtoItemTrackingIDMap
+                                    cardIDtoItemTrackingIDMap: n.state.cardIDtoItemTrackingIDMap,
+                                    cardIDtoRequestIDMap: n.state.cardIDtoRequestIDMap
                                 }
                             }, n.mapShelfCardsToRequestIDs = function(e, t, n) {
                                 return void 0 === n && (n = {}), e.reduce(function(e, n) {
@@ -7891,31 +7897,32 @@
                                         };
                                     Object(s.h)(f, i)
                                 }
-                            }, n.trackRecFeedbackPreModalClick = function(e, t, i, r) {
-                                var o, c = n.state.cardIDtoItemTrackingIDMap,
-                                    d = Object(s.g)(t.title),
-                                    u = d.reasonType,
-                                    m = d.reasonTarget,
-                                    p = d.reasonTargetType,
-                                    g = d.rowName,
-                                    h = Object(s.e)(i),
-                                    f = h.itemID,
-                                    v = h.contentType,
-                                    k = f || t.id,
-                                    b = {
+                            }, n.trackRecFeedbackPreModalClick = function(e, t, i, r, o) {
+                                var c, d = n.state.cardIDtoItemTrackingIDMap,
+                                    u = Object(s.g)(t.title),
+                                    m = u.reasonType,
+                                    p = u.reasonTarget,
+                                    g = u.reasonTargetType,
+                                    h = u.rowName,
+                                    f = Object(s.e)(i),
+                                    v = f.itemID,
+                                    k = f.contentType,
+                                    b = v || t.id,
+                                    y = {
                                         clickStep: e,
-                                        itemTrackingID: i && i.node ? c[i.node.id] : null,
+                                        itemTrackingID: i && i.node ? d[i.node.id] : null,
                                         itemPosition: r,
                                         rowPosition: n.props.position,
-                                        reasonType: u,
-                                        reasonTarget: m,
-                                        reasonTargetType: p,
-                                        rowName: g,
+                                        reasonType: m,
+                                        reasonTarget: p,
+                                        reasonTargetType: g,
+                                        rowName: h,
+                                        itemName: o,
                                         modelTrackingID: i ? i.trackingID : null,
-                                        clickedContentType: v || s.b.Shelf,
-                                        clickedItemID: f || t.id
+                                        clickedContentType: k || s.b.Shelf,
+                                        clickedItemID: v || t.id
                                     };
-                                n.feedbackDataMap = a.__assign({}, n.feedbackDataMap, ((o = {})[k] = b, o)), Object(l.c)(b)
+                                n.feedbackDataMap = a.__assign({}, n.feedbackDataMap, ((c = {})[b] = y, c)), Object(l.c)(y)
                             }, n.trackRecFeedbackClickStep = function(e, t) {
                                 var i, r = a.__assign({}, n.feedbackDataMap[e], {
                                     clickStep: t.clickStep,

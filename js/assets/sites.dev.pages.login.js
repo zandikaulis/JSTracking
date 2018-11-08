@@ -12,6 +12,8 @@
                 return i.PageviewMedium
             }), n.o(i, "SpadeEventType") && n.d(t, "SpadeEventType", function() {
                 return i.SpadeEventType
+            }), n.o(i, "TwitchDataType") && n.d(t, "TwitchDataType", function() {
+                return i.TwitchDataType
             })
         },
         Pi1p: function(e, t, n) {

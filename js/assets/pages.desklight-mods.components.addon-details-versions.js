@@ -12,6 +12,8 @@
                 return i.PageviewMedium
             }), n.o(i, "SpadeEventType") && n.d(t, "SpadeEventType", function() {
                 return i.SpadeEventType
+            }), n.o(i, "TwitchDataType") && n.d(t, "TwitchDataType", function() {
+                return i.TwitchDataType
             })
         },
         x5gZ: function(e, t, n) {
@@ -28,8 +30,8 @@
                 p = n("GnwI"),
                 f = n("/7QA"),
                 b = n("skf7"),
-                m = n("Ue10"),
-                h = function(e) {
+                h = n("Ue10"),
+                m = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onDownload = function() {
@@ -38,8 +40,8 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = Object(f.c)(new Date(this.props.file.fileDate), "short");
-                        return o.createElement(m.Mb, null, o.createElement(m.Jb, null, e), o.createElement(m.Jb, null, this.props.file.fileName), o.createElement(m.Jb, null, b.a[this.props.file.releaseType]), o.createElement(m.Jb, null, this.props.installed && o.createElement(m.W, null, Object(f.d)("Installed", "AddonDetailVersion")), !this.props.installed && o.createElement(m.A, {
-                            icon: m.tb.Download,
+                        return o.createElement(h.Mb, null, o.createElement(h.Jb, null, e), o.createElement(h.Jb, null, this.props.file.fileName), o.createElement(h.Jb, null, b.a[this.props.file.releaseType]), o.createElement(h.Jb, null, this.props.installed && o.createElement(h.W, null, Object(f.d)("Installed", "AddonDetailVersion")), !this.props.installed && o.createElement(h.A, {
+                            icon: h.tb.Download,
                             onClick: this.onDownload
                         })))
                     }, t
@@ -51,14 +53,14 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            dateSorting: m.Bb.Descending
+                            dateSorting: h.Bb.Descending
                         }, t.renderRows = function() {
-                            return (t.state.dateSorting === m.Bb.Descending ? t.props.files.sort(function(e, t) {
+                            return (t.state.dateSorting === h.Bb.Descending ? t.props.files.sort(function(e, t) {
                                 return new Date(t.fileDate).getTime() - new Date(e.fileDate).getTime()
                             }) : t.props.files.sort(function(e, t) {
                                 return new Date(e.fileDate).getTime() - new Date(t.fileDate).getTime()
                             })).map(function(e) {
-                                return o.createElement(h, {
+                                return o.createElement(m, {
                                     key: e.id,
                                     file: e,
                                     installed: t.props.installedFile === e.fileName,
@@ -67,28 +69,28 @@
                             })
                         }, t.onChangeSort = function() {
                             t.setState({
-                                dateSorting: t.state.dateSorting === m.Bb.Descending ? m.Bb.Ascending : m.Bb.Descending
+                                dateSorting: t.state.dateSorting === h.Bb.Descending ? h.Bb.Ascending : h.Bb.Descending
                             })
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.renderRows();
-                        return o.createElement(m.Xa, {
+                        return o.createElement(h.Xa, {
                             padding: {
                                 x: 2
                             }
-                        }, o.createElement(m.Hb, null, o.createElement(m.Kb, null, o.createElement(m.Lb, {
+                        }, o.createElement(h.Hb, null, o.createElement(h.Kb, null, o.createElement(h.Lb, {
                             "data-test-selector": i.SortingHeader,
                             onClick: this.onChangeSort,
                             sorting: this.state.dateSorting,
                             label: Object(f.d)("Release Date", "AddonDetailsVersionTable")
-                        }), o.createElement(m.Lb, {
+                        }), o.createElement(h.Lb, {
                             label: Object(f.d)("File Name", "AddonDetailsVersionTable")
-                        }), o.createElement(m.Lb, {
+                        }), o.createElement(h.Lb, {
                             label: Object(f.d)("File Type", "AddonDetailsVersionTable")
-                        }), o.createElement(m.Lb, {
+                        }), o.createElement(h.Lb, {
                             label: Object(f.d)("Actions", "AddonDetailsVersionTable")
-                        })), o.createElement(m.Ib, null, e)))
+                        })), o.createElement(h.Ib, null, e)))
                     }, t
                 }(o.Component),
                 w = n("3lt/"),
@@ -138,13 +140,13 @@
                             files: this.state.files,
                             installedFile: this.props.addonInstance && this.props.addonInstance.installedFile.fileName,
                             onDownload: this.onDownload
-                        }) : o.createElement(m.Xa, {
+                        }) : o.createElement(h.Xa, {
                             fullWidth: !0,
                             fullHeight: !0,
-                            display: m.X.Flex,
-                            justifyContent: m.Wa.Center,
-                            alignItems: m.f.Center
-                        }, o.createElement(m.Za, null))
+                            display: h.X.Flex,
+                            justifyContent: h.Wa.Center,
+                            alignItems: h.f.Center
+                        }, o.createElement(h.Za, null))
                     }, t
                 }(o.Component);
             var v = Object(r.compose)(Object(p.b)("AddonDetailsVersionPage", {

@@ -3467,7 +3467,7 @@
         },
         DMoW: function(e, t, n) {
             "use strict";
-            var i, r, a, o, s, l, c, d, u, p, m, f, h, g, E, v, b, T, y, S, O, _, k, N, C, R, I, D, A, w, L, P, M, F, U, x, B, j, V, W, G, H, z, X, Y, q, K, Q, Z, $, J, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, fe, he, ge, Ee, ve, be, Te, ye, Se, Oe, _e, ke, Ne, Ce, Re, Ie, De, Ae, we, Le, Pe, Me, Fe, Ue, xe, Be, je, Ve, We, Ge, He, ze, Xe, Ye, qe, Ke, Qe, Ze, $e, Je, et, tt, nt, it, rt, at, ot, st, lt, ct, dt, ut, pt, mt, ft, ht, gt, Et;
+            var i, r, a, o, s, l, c, d, u, p, m, f, h, g, E, v, b, T, y, S, O, _, k, N, C, R, I, D, A, L, w, P, M, F, U, x, B, j, V, W, G, H, z, X, Y, q, K, Q, Z, $, J, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, fe, he, ge, Ee, ve, be, Te, ye, Se, Oe, _e, ke, Ne, Ce, Re, Ie, De, Ae, Le, we, Pe, Me, Fe, Ue, xe, Be, je, Ve, We, Ge, He, ze, Xe, Ye, qe, Ke, Qe, Ze, $e, Je, et, tt, nt, it, rt, at, ot, st, lt, ct, dt, ut, pt, mt, ft, ht, gt, Et, vt, bt;
             n.d(t, "N", function() {
                     return i
                 }), n.d(t, "e", function() {
@@ -3541,43 +3541,45 @@
                 }), n.d(t, "Y", function() {
                     return oe
                 }), n.d(t, "X", function() {
-                    return he
+                    return ge
                 }), n.d(t, "p", function() {
-                    return _e
-                }), n.d(t, "o", function() {
                     return ke
-                }), n.d(t, "Ca", function() {
-                    return Ie
+                }), n.d(t, "o", function() {
+                    return Ne
+                }), n.d(t, "Da", function() {
+                    return De
                 }), n.d(t, "D", function() {
-                    return Fe
+                    return Ue
+                }), n.d(t, "Ca", function() {
+                    return xe
                 }), n.d(t, "C", function() {
-                    return Be
-                }), n.d(t, "k", function() {
-                    return je
-                }), n.d(t, "w", function() {
                     return Ve
-                }), n.d(t, "m", function() {
+                }), n.d(t, "k", function() {
+                    return We
+                }), n.d(t, "w", function() {
                     return Ge
-                }), n.d(t, "j", function() {
-                    return He
-                }), n.d(t, "y", function() {
+                }), n.d(t, "m", function() {
                     return ze
-                }), n.d(t, "S", function() {
+                }), n.d(t, "j", function() {
+                    return Xe
+                }), n.d(t, "y", function() {
                     return Ye
+                }), n.d(t, "S", function() {
+                    return Ke
                 }), n.d(t, "r", function() {
-                    return qe
+                    return Qe
                 }), n.d(t, "Q", function() {
-                    return $e
+                    return et
                 }), n.d(t, "A", function() {
-                    return at
-                }), n.d(t, "L", function() {
-                    return ot
-                }), n.d(t, "M", function() {
                     return st
+                }), n.d(t, "L", function() {
+                    return lt
+                }), n.d(t, "M", function() {
+                    return ct
                 }), n.d(t, "f", function() {
-                    return ht
+                    return Et
                 }), n.d(t, "v", function() {
-                    return gt
+                    return vt
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -3668,10 +3670,10 @@
                 }(A || (A = {})),
                 function(e) {
                     e.NEW_CHATTER = "NEW_CHATTER"
-                }(w || (w = {})),
+                }(L || (L = {})),
                 function(e) {
                     e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
-                }(L || (L = {})),
+                }(w || (w = {})),
                 function(e) {
                     e.FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.SUB_ONLY_MODE_ENFORCEMENT_FAILED = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT"
                 }(P || (P = {})),
@@ -3778,176 +3780,182 @@
                     e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
                 }(fe || (fe = {})),
                 function(e) {
-                    e.CONTENT = "CONTENT", e.TOP = "TOP"
+                    e.DNR_TO_RESUB = "DNR_TO_RESUB", e.GIFT_TO_PAID = "GIFT_TO_PAID"
                 }(he || (he = {})),
                 function(e) {
-                    e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
+                    e.CONTENT = "CONTENT", e.TOP = "TOP"
                 }(ge || (ge = {})),
                 function(e) {
-                    e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
                 }(Ee || (Ee = {})),
                 function(e) {
-                    e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
+                    e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(ve || (ve = {})),
                 function(e) {
-                    e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
+                    e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
                 }(be || (be = {})),
                 function(e) {
-                    e.GIFT_NOT_CLAIMABLE = "GIFT_NOT_CLAIMABLE", e.NON_EXISTENT_GIFT = "NON_EXISTENT_GIFT", e.UNKNOWN_ERROR = "UNKNOWN_ERROR", e.USER_DOES_NOT_OWN_GIFT = "USER_DOES_NOT_OWN_GIFT"
+                    e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
                 }(Te || (Te = {})),
                 function(e) {
-                    e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
+                    e.GIFT_NOT_CLAIMABLE = "GIFT_NOT_CLAIMABLE", e.NON_EXISTENT_GIFT = "NON_EXISTENT_GIFT", e.UNKNOWN_ERROR = "UNKNOWN_ERROR", e.USER_DOES_NOT_OWN_GIFT = "USER_DOES_NOT_OWN_GIFT"
                 }(ye || (ye = {})),
                 function(e) {
-                    e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
+                    e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
                 }(Se || (Se = {})),
                 function(e) {
-                    e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
+                    e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
                 }(Oe || (Oe = {})),
                 function(e) {
-                    e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
+                    e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
                 }(_e || (_e = {})),
                 function(e) {
-                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
+                    e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
                 }(ke || (ke = {})),
                 function(e) {
-                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
+                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
                 }(Ne || (Ne = {})),
                 function(e) {
-                    e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
+                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
                 }(Ce || (Ce = {})),
                 function(e) {
-                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
+                    e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
                 }(Re || (Re = {})),
                 function(e) {
-                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
+                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
                 }(Ie || (Ie = {})),
                 function(e) {
-                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
+                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
                 }(De || (De = {})),
                 function(e) {
-                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
+                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
                 }(Ae || (Ae = {})),
+                function(e) {
+                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
+                }(Le || (Le = {})),
                 function(e) {
                     e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
                 }(we || (we = {})),
                 function(e) {
                     e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
-                }(Le || (Le = {})),
-                function(e) {
-                    e.ASC = "ASC", e.DESC = "DESC"
                 }(Pe || (Pe = {})),
                 function(e) {
-                    e.TIME = "TIME", e.VIEWS = "VIEWS"
+                    e.ASC = "ASC", e.DESC = "DESC"
                 }(Me || (Me = {})),
                 function(e) {
-                    e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
+                    e.TIME = "TIME", e.VIEWS = "VIEWS"
                 }(Fe || (Fe = {})),
                 function(e) {
-                    e.ALREADY_CLAIMED = "ALREADY_CLAIMED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN = "UNKNOWN"
+                    e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
                 }(Ue || (Ue = {})),
                 function(e) {
-                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
+                    e.ALL_VIDEOS = "ALL_VIDEOS", e.COLLECTION = "COLLECTION", e.GAME_VIDEOS = "GAME_VIDEOS", e.LATEST_BROADCASTS = "LATEST_BROADCASTS", e.LONG_VIDEOS = "LONG_VIDEOS", e.SHORT_VIDEOS = "SHORT_VIDEOS", e.TOP_CLIPS = "TOP_CLIPS"
                 }(xe || (xe = {})),
                 function(e) {
-                    e.NONE = "NONE", e.READ = "READ", e.WRITE = "WRITE"
+                    e.ALREADY_CLAIMED = "ALREADY_CLAIMED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN = "UNKNOWN"
                 }(Be || (Be = {})),
                 function(e) {
-                    e.BROADCASTER = "BROADCASTER", e.EDITOR = "EDITOR", e.MODERATOR = "MODERATOR", e.REGULAR = "REGULAR", e.SUBSCRIBER = "SUBSCRIBER"
+                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
                 }(je || (je = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
+                    e.NONE = "NONE", e.READ = "READ", e.WRITE = "WRITE"
                 }(Ve || (Ve = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
+                    e.BROADCASTER = "BROADCASTER", e.EDITOR = "EDITOR", e.MODERATOR = "MODERATOR", e.REGULAR = "REGULAR", e.SUBSCRIBER = "SUBSCRIBER"
                 }(We || (We = {})),
                 function(e) {
-                    e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
                 }(Ge || (Ge = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
                 }(He || (He = {})),
                 function(e) {
-                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
+                    e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(ze || (ze = {})),
                 function(e) {
-                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Xe || (Xe = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
                 }(Ye || (Ye = {})),
                 function(e) {
-                    e.INVITATION_ALREADY_EXISTS = "INVITATION_ALREADY_EXISTS", e.INVITATION_INVALID = "INVITATION_INVALID", e.SQUAD_FULL = "SQUAD_FULL", e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_ALREADY_IN_SQUAD = "USER_ALREADY_IN_SQUAD"
+                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(qe || (qe = {})),
                 function(e) {
-                    e.SQUAD_CANNOT_BE_UPDATED = "SQUAD_CANNOT_BE_UPDATED", e.SQUAD_NOT_FOUND = "SQUAD_NOT_FOUND", e.SQUAD_TOO_FEW_MEMBERS = "SQUAD_TOO_FEW_MEMBERS", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Ke || (Ke = {})),
                 function(e) {
-                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
+                    e.INVITATION_ALREADY_EXISTS = "INVITATION_ALREADY_EXISTS", e.INVITATION_INVALID = "INVITATION_INVALID", e.SQUAD_FULL = "SQUAD_FULL", e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_ALREADY_IN_SQUAD = "USER_ALREADY_IN_SQUAD"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
+                    e.SQUAD_CANNOT_BE_UPDATED = "SQUAD_CANNOT_BE_UPDATED", e.SQUAD_NOT_FOUND = "SQUAD_NOT_FOUND", e.SQUAD_TOO_FEW_MEMBERS = "SQUAD_TOO_FEW_MEMBERS", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(Ze || (Ze = {})),
                 function(e) {
-                    e.ACCEPTED = "ACCEPTED", e.DELETED = "DELETED", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN"
+                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }($e || ($e = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.UNAUTHORIZED = "UNAUTHORIZED", e.USER_NOT_IN_SQUAD = "USER_NOT_IN_SQUAD"
                 }(Je || (Je = {})),
                 function(e) {
-                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
+                    e.ACCEPTED = "ACCEPTED", e.DELETED = "DELETED", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN"
                 }(et || (et = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_ALREADY_EDITOR = "TARGET_USER_ALREADY_EDITOR", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(tt || (tt = {})),
                 function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
+                    e.CHANNEL_NOT_FOUND = "CHANNEL_NOT_FOUND", e.TARGET_USER_NOT_FOUND = "TARGET_USER_NOT_FOUND"
                 }(nt || (nt = {})),
                 function(e) {
-                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
                 }(it || (it = {})),
                 function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }(rt || (rt = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(at || (at = {})),
                 function(e) {
-                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(ot || (ot = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(st || (st = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.ALREADY_WATCHED = "ALREADY_WATCHED", e.NOT_INTERESTED = "NOT_INTERESTED", e.OFFENSIVE = "OFFENSIVE", e.OTHER = "OTHER", e.UNSPECIFIED = "UNSPECIFIED"
                 }(lt || (lt = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.CATEGORY = "CATEGORY", e.CHANNEL = "CHANNEL", e.SHELF = "SHELF", e.UNSPECIFIED = "UNSPECIFIED", e.VOD = "VOD"
                 }(ct || (ct = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }(dt || (dt = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(ut || (ut = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(pt || (pt = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(mt || (mt = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(ft || (ft = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(ht || (ht = {})),
                 function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
                 }(gt || (gt = {})),
                 function(e) {
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                }(Et || (Et = {})),
+                function(e) {
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                }(vt || (vt = {})),
+                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(Et || (Et = {}))
+                }(bt || (bt = {}))
         },
         EdhP: function(e, t, n) {
             "use strict";
@@ -7654,7 +7662,7 @@
             ! function(e) {
                 e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
             }(_ || (_ = {}));
-            var I, D, A, w = {
+            var I, D, A, L = {
                     contentGeneral: function() {
                         return Object(c.d)("What would you like to report?", "ReportModalWizard")
                     },
@@ -7671,7 +7679,7 @@
                         return Object(c.d)("What would you like to report? (Please choose the most relevant statement that applies.)", "ReportModalWizard")
                     }
                 },
-                L = {
+                w = {
                     report: function(e) {
                         return Object(c.d)("Report {username}", {
                             username: e
@@ -7712,7 +7720,7 @@
                         return Object(c.d)("Reports are reviewed by Twitch Staff 24 hours a day. We will issue penalties, such as account suspension and/or content removal, once we verify that a violation of our policies has occurred.", "ReportModalWizard")
                     },
                     blockPrompt: !0,
-                    getTitle: L.thanks,
+                    getTitle: w.thanks,
                     type: _.Info,
                     value: "end card"
                 },
@@ -7724,7 +7732,7 @@
                         items: [N.endBlurb_threat]
                     }),
                     legal: {
-                        getTitle: L.thanksConcern,
+                        getTitle: w.thanksConcern,
                         getDescription: function() {
                             return Object(c.d)("To submit a claim or report a violation of this type, you will need to follow the steps listed on the relevant page below.", "ReportModalWizard")
                         },
@@ -7733,7 +7741,7 @@
                         value: "ip end"
                     },
                     selfharm: {
-                        getTitle: L.thanksConcern,
+                        getTitle: w.thanksConcern,
                         getDescription: function() {
                             return Object(c.d)("If you know the user personally, and you believe them to be in danger, please contact their local authorities immediately. The link below contains some general information that may be of use.", "ReportModalWizard")
                         },
@@ -7742,7 +7750,7 @@
                         value: "selfharm end"
                     },
                     twitchEvent: {
-                        getTitle: L.thanksConcern,
+                        getTitle: w.thanksConcern,
                         getDescription: function() {
                             return Object(c.d)("Please bring this concern to the attention of staff or security at the event if you have not already done so. More information is available at the link below.", "ReportModalWizard")
                         },
@@ -7752,7 +7760,7 @@
                     }
                 },
                 F = {
-                    getTitle: L.report,
+                    getTitle: w.report,
                     getLabel: function() {
                         return Object(c.d)("Where is the problem?", "ReportModalWizard")
                     },
@@ -7762,22 +7770,22 @@
                 },
                 U = {
                     identifyUser: {
-                        getTitle: L.reportVideo,
-                        getLabel: w.identifyUser,
+                        getTitle: w.reportVideo,
+                        getLabel: L.identifyUser,
                         items: [N.video_streamer, N.video_someoneElse, N.video_chatSomeone],
                         type: _.MultipleChoice,
                         value: "video identify user"
                     },
                     content: {
-                        getTitle: L.reportVideo,
-                        getLabel: w.contentGeneral,
+                        getTitle: w.reportVideo,
+                        getLabel: L.contentGeneral,
                         items: [N.revealPersonalInfo, N.video_labeling, N.video_inactive, N.video_general, N.report_ip, N.violateDevAgreement, N.selfharm],
                         type: _.MultipleChoice,
                         value: "video report reason"
                     },
                     general: {
-                        getTitle: L.reportVideo,
-                        getLabel: w.content,
+                        getTitle: w.reportVideo,
+                        getLabel: L.content,
                         items: [N.report_username, N.violence, N.abusive, N.cheating, N.scam, N.inappropriateContent, N.evasion, N.impersonation, N.underage, N.bitsViolation],
                         type: _.MultipleChoice,
                         value: "video general report reason"
@@ -7785,15 +7793,15 @@
                 },
                 x = {
                     content: {
-                        getTitle: L.reportMessage,
-                        getLabel: w.contentGeneral,
+                        getTitle: w.reportMessage,
+                        getLabel: L.contentGeneral,
                         items: [N.revealPersonalInfo, N.evasion, N.spam, N.maliciousRaid, N.report_username, N.messaging_general, N.selfharm],
                         type: _.MultipleChoice,
                         value: "message report reason"
                     },
                     general: {
-                        getTitle: L.reportMessage,
-                        getLabel: w.content,
+                        getTitle: w.reportMessage,
+                        getLabel: L.content,
                         items: [N.report_emotes, N.violence, N.abusive, N.inappropriateContent, N.impersonation, N.underage, N.bitsViolation],
                         type: _.MultipleChoice,
                         value: "message general report reason"
@@ -7806,15 +7814,15 @@
                 }),
                 j = {
                     content: {
-                        getTitle: L.reportProfile,
-                        getLabel: w.contentGeneral,
+                        getTitle: w.reportProfile,
+                        getLabel: L.contentGeneral,
                         items: [N.revealPersonalInfo, N.inappropriateBadge, N.inappropriateExtension, N.noModeration, N.profile_general, N.report_ip, N.violateDevAgreement, N.selfharm],
                         type: _.MultipleChoice,
                         value: "profile report reason"
                     },
                     general: {
-                        getTitle: L.reportProfile,
-                        getLabel: w.content,
+                        getTitle: w.reportProfile,
+                        getLabel: L.content,
                         items: [N.report_username, N.violence, N.abusive, N.scam, N.inappropriateContent, N.evasion, N.impersonation, N.underage, N.bitsViolation],
                         type: _.MultipleChoice,
                         value: "profile general report reason"
@@ -7826,13 +7834,13 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: w.identifyUser,
+                    getLabel: L.identifyUser,
                     items: [N.report_channelOwner, N.report_member],
                     value: "room report user",
                     type: _.MultipleChoice
                 },
                 W = {
-                    getTitle: L.tellUsMore,
+                    getTitle: w.tellUsMore,
                     items: [N.input_description],
                     type: _.Confirm,
                     value: "tell us more"
@@ -7850,8 +7858,8 @@
                 },
                 H = {
                     content: {
-                        getTitle: L.reportAbusive,
-                        getLabel: w.relevantStatements,
+                        getTitle: w.reportAbusive,
+                        getLabel: L.relevantStatements,
                         items: [N.hateSpeech, N.harassment, N.abusiveViolence, N.commitingViolence, N.swatting, N.personalInfo],
                         type: _.MultipleChoice,
                         value: "abuse type"
@@ -7890,7 +7898,7 @@
                                 username: e
                             }, "ReportModalWizard")
                         },
-                        getLabel: w.thisPersonIs,
+                        getLabel: L.thisPersonIs,
                         getDescription: function() {
                             return Object(c.d)("Please note that incidents reported through this form must involve Twitch community members. If possible, please submit a report to the site or service where the incident occurred as well.", "ReportModalWizard")
                         },
@@ -7914,7 +7922,7 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: w.contentGeneral,
+                    getLabel: L.contentGeneral,
                     items: [N.spam_bot, N.spam_scam, N.spam_repeated],
                     type: _.MultipleChoice,
                     value: "spam type"
@@ -7925,7 +7933,7 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: w.relevantStatements,
+                    getLabel: L.relevantStatements,
                     items: [N.inappropriate_game, N.gory, N.sexuallyViolent, N.childAnimal, N.pornographic, N.suggestive, N.nudity, N.other],
                     type: _.MultipleChoice,
                     value: "inappropriate content type"
@@ -8480,14 +8488,14 @@
                 I = n("Ue10"),
                 D = n("ZBeb"),
                 A = (n("Kcwz"), n("CZEr")),
-                w = n("Qdxp");
+                L = n("Qdxp");
             ! function(e) {
                 e.UnfollowButton = "unfollow-button", e.UnfollowButtonLabel = "unfollow-button-label", e.UnfollowButtonLabelHover = "unfollow-button-label-hover", e.UnfollowButtonWithDropdown = "unfollow-button__dropdown", e.FollowButton = "follow-button", e.FollowButtonWithContextualModal = "follow-button-contextual"
             }(b || (b = {})),
             function(e) {
                 e[e.IconOnly = 0] = "IconOnly", e[e.TextOnly = 1] = "TextOnly", e[e.IconAndText = 2] = "IconAndText"
             }(T || (T = {}));
-            var L = function(e) {
+            var w = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -8615,7 +8623,7 @@
                                                 targetID: e.user && e.user.id || ""
                                             }, t), [4, this.props.followUser(n)]) : [2];
                                         case 1:
-                                            return (i = a.sent()).data.followUser && i.data.followUser.follow && (r = i.data.followUser.follow, Object(h.e)(w, {
+                                            return (i = a.sent()).data.followUser && i.data.followUser.follow && (r = i.data.followUser.follow, Object(h.e)(L, {
                                                 login: this.props.channelLogin
                                             }, function(e) {
                                                 var t = e.user;
@@ -8658,7 +8666,7 @@
                                                 targetID: e.user && e.user.id || ""
                                             }, t), [4, this.props.unfollowUser(n)]) : [2];
                                         case 1:
-                                            return i.sent(), Object(h.e)(w, {
+                                            return i.sent(), Object(h.e)(L, {
                                                 login: this.props.channelLogin
                                             }, function(e) {
                                                 var t = e.user;
@@ -8862,7 +8870,7 @@
                         return Object(p.d)("Unfollow", "FollowButton")
                     }, t
                 }(u.Component),
-                P = Object(a.compose)(Object(f.a)(w, {
+                P = Object(a.compose)(Object(f.a)(L, {
                     options: function(e) {
                         return {
                             variables: {
@@ -8875,7 +8883,7 @@
                     name: "followUser"
                 }), Object(f.a)(A, {
                     name: "unfollowUser"
-                }), Object(R.c)(), Object(N.b)("FollowButton"))(L);
+                }), Object(R.c)(), Object(N.b)("FollowButton"))(w);
 
             function M(e) {
                 return !e.isLoggedIn || (!e.channelLogin || (!!e.followData || e.channelLogin === e.currentUserLogin))
@@ -8939,8 +8947,8 @@
                 e.LoadStart = "loadstart", e.Error = "error", e.LoadedMetadata = "loadedmetadata", e.CanPlay = "canplay", e.Playing = "playing", e.Waiting = "waiting", e.Seeking = "seeking", e.Seeked = "seeked", e.Ended = "ended", e.DurationChange = "durationchange", e.TimeUpdate = "timeupdate", e.Play = "play", e.Pause = "pause", e.VolumeChange = "volumechange", e.RateChange = "ratechange"
             }(d || (d = {}));
             var A = n("kxrW"),
-                w = n("oKCn"),
-                L = n("lTz2"),
+                L = n("oKCn"),
+                w = n("lTz2"),
                 P = n("C94G"),
                 M = (n("Qqhu"), n("Addw")),
                 F = "debug",
@@ -8960,7 +8968,7 @@
                     debug: !1,
                     height: "100%",
                     playsinline: !0,
-                    player: w.f.Site,
+                    player: L.f.Site,
                     showInfo: !1,
                     showtheatre: !1,
                     trackingProperties: {
@@ -8985,7 +8993,7 @@
                             });
                             n.playerBuffering = n.registerBufferingEvent(!!n.props.paused), n.playerPlayed = n.registerPlayedEvent(!!n.props.paused);
                             var i = n.props.playerTypeOverride;
-                            i && (t.player = i, n.playerType = i, i === w.f.ClipsEditing && (t.muted = !0)), n.props.channelLogin && (t.channel = n.props.channelLogin, n.lastSetChannel = n.props.channelLogin), n.props.collectionID && (t.collection = n.props.collectionID), n.props.clipSlug && (t.clip = n.props.clipSlug), n.props.vodID && (t.video = Object(N.p)(n.props.vodID), O.o.setVideoPlayerTrackingData({
+                            i && (t.player = i, n.playerType = i, i === L.f.ClipsEditing && (t.muted = !0)), n.props.channelLogin && (t.channel = n.props.channelLogin, n.lastSetChannel = n.props.channelLogin), n.props.collectionID && (t.collection = n.props.collectionID), n.props.clipSlug && (t.clip = n.props.clipSlug), n.props.vodID && (t.video = Object(N.p)(n.props.vodID), O.o.setVideoPlayerTrackingData({
                                 vodID: n.props.vodID
                             })), n.props.showChannelInfoOnHover && (t.showInfo = n.props.showChannelInfoOnHover), void 0 !== n.props.persistUserPreferences && (t.persistUserPreferences = n.props.persistUserPreferences), void 0 !== n.props.nextVideoOffset && n.props.nextVideoOffset >= 0 && (t.time = Object(M.a)(n.props.nextVideoOffset)), t.oauth_token = n.props.authToken || "", t.debug = "true" === S.parse(window.location.search)[F], n.logger.debug("Initializing", t);
                             var r = new e(n.playerRef, t);
@@ -9001,7 +9009,7 @@
                                 metadataLoaded: !0
                             })
                         }, n.onOpenStream = function() {
-                            if (n.props.playerTypeOverride === w.f.Frontpage && n.player)
+                            if (n.props.playerTypeOverride === L.f.Frontpage && n.player)
                                 if (n.props.channelLogin) O.p.history.push("/" + n.props.channelLogin);
                                 else if (n.props.vodID) {
                                 var e = Math.floor(n.player.getCurrentTime());
@@ -9171,7 +9179,7 @@
                             }
                             this.player && e.clipSlug && this.props.clipSlug !== e.clipSlug && this.player.setClip(e.clipSlug), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.miniModeEnabled !== this.props.miniModeEnabled && this.player.setMiniPlayerMode(!!e.miniModeEnabled), this.player && t.playerPaused !== this.lastPausedProp && (t.playerPaused ? this.player.pause() : t.playerPaused || this.player.play(), this.lastPausedProp = t.playerPaused), this.player && t.playerMuted !== this.lastMutedProp && (this.player.setMuted(!!t.playerMuted), this.lastMutedProp = !!t.playerMuted), this.player && e.viewerIsFollowing !== this.lastFollowingProp && (this.player.setFollowing(!!e.viewerIsFollowing), this.lastFollowingProp = !!e.viewerIsFollowing), this.updatePlayerGDPRConsent(e);
                             var l = e.channelLogin !== this.lastSetChannel;
-                            if (this.player && e.channelLogin && (l || Object(L.b)(this.props, e))) return this.player.pause(), this.resetLatencyTracking(!!e.paused), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void O.o.setVideoPlayerTrackingData({
+                            if (this.player && e.channelLogin && (l || Object(w.b)(this.props, e))) return this.player.pause(), this.resetLatencyTracking(!!e.paused), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void O.o.setVideoPlayerTrackingData({
                                 vodID: void 0
                             });
                             var c = e.collectionID && this.props.collectionID !== e.collectionID,
@@ -9205,7 +9213,7 @@
                                 "video-player--fullscreen": this.state.isFullScreen
                             }),
                             t = b("video-player__container", {
-                                "video-player__container--clips": w.a.includes(this.playerType)
+                                "video-player__container--clips": L.a.includes(this.playerType)
                             });
                         return l.createElement("div", {
                             className: b(e),
@@ -9358,7 +9366,7 @@
             }), n.d(t, "c", function() {
                 return W
             }), n.d(t, "a", function() {
-                return w.f
+                return L.f
             })
         },
         eJ65: function(e, t, n) {
@@ -10369,16 +10377,16 @@
                 return Object(r.a)(p, {
                     props: function(n) {
                         return {
-                            banUserMutation: function(r, p) {
-                                return void 0 === p && (p = null), i.__awaiter(t, void 0, void 0, function() {
+                            banUserMutation: function(r, p, m) {
+                                return void 0 === p && (p = null), void 0 === m && (m = null), i.__awaiter(t, void 0, void 0, function() {
                                     var t;
-                                    return i.__generator(this, function(m) {
-                                        switch (m.label) {
+                                    return i.__generator(this, function(f) {
+                                        switch (f.label) {
                                             case 0:
                                                 if (t = e(n.ownProps).channelID, !n.mutate) return [3, 5];
-                                                m.label = 1;
+                                                f.label = 1;
                                             case 1:
-                                                return m.trys.push([1, 3, , 4]), [4, n.mutate({
+                                                return f.trys.push([1, 3, , 4]), [4, n.mutate({
                                                     variables: {
                                                         input: {
                                                             channelID: t,
@@ -10408,7 +10416,8 @@
                                                                     t -= p * s, n += p + "m"
                                                                 }
                                                                 return t > 0 && (n += t + "s"), n
-                                                            }(p)
+                                                            }(p),
+                                                            reason: m
                                                         }
                                                     },
                                                     update: function(e, n) {
@@ -10434,9 +10443,9 @@
                                                     }
                                                 })];
                                             case 2:
-                                                return [2, m.sent().data];
+                                                return [2, f.sent().data];
                                             case 3:
-                                                throw m.sent(), new Error("Unable to ban user");
+                                                throw f.sent(), new Error("Unable to ban user");
                                             case 4:
                                                 return [3, 6];
                                             case 5:
@@ -11942,8 +11951,8 @@
                         return !isNaN(e) && e >= 0
                     }, t
                 }(o.Component),
-                w = Object(h.compose)(Object(u.b)("ClipsEditor"))(A),
-                L = n("VwyG"),
+                L = Object(h.compose)(Object(u.b)("ClipsEditor"))(A),
+                w = n("VwyG"),
                 P = n("SGIe"),
                 M = function(e) {
                     var t = e.clip;
@@ -11967,7 +11976,7 @@
                 },
                 F = function(e) {
                     var t = e.clip;
-                    return t && t.broadcaster && t.broadcaster.login ? o.createElement(L.a, {
+                    return t && t.broadcaster && t.broadcaster.login ? o.createElement(w.a, {
                         ownerLogin: t.broadcaster.login,
                         permittedRoles: {
                             owner: !0,
@@ -12467,7 +12476,7 @@
                             a = null;
                         a = this.props.isPostEdit ? o.createElement(J, {
                             slug: this.props.slug
-                        }) : o.createElement(w, {
+                        }) : o.createElement(L, {
                             isClipResolved: r,
                             slug: this.props.slug,
                             broadcasterName: t && t.broadcaster && t.broadcaster.displayName || "",
@@ -13081,15 +13090,15 @@
         tuvy: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return m
+                return p
             }), n.d(t, "e", function() {
-                return f
+                return m
             }), n.d(t, "d", function() {
-                return h
+                return f
             }), n.d(t, "b", function() {
-                return g
+                return h
             }), n.d(t, "c", function() {
-                return E
+                return g
             });
             var i = n("/7QA"),
                 r = n("D7An"),
@@ -13098,28 +13107,27 @@
                 s = null,
                 l = null,
                 c = "variant_a",
-                d = "variant1",
-                u = "on",
-                p = new RegExp("^/(" + ["overwatchleague", "overwatchleague_allaccess", "overwatchleague_kr", "overwatchleague_fr", "overwatchleague_zh", "overwatchleague_zhtw", "blizzheroes", "BlizzHeroesKR", "BlizzHeroesDE", "BlizzHeroesRU", "BlizzHeroesFR", "camhux", "Hgg_cheering_test", "PlayHearthstone", "PlayHearthstoneRU", "PlayhearthstoneKR", "PlayhearthstoneJP", "PlayHearthstoneFR", "Hearthstoneth", "Hearthstonezhtw"].join("|") + ")", "i");
+                d = "on",
+                u = new RegExp("^/(" + ["overwatchleague", "overwatchleague_allaccess", "overwatchleague_kr", "overwatchleague_fr", "overwatchleague_zh", "overwatchleague_zhtw", "blizzheroes", "BlizzHeroesKR", "BlizzHeroesDE", "BlizzHeroesRU", "BlizzHeroesFR", "camhux", "Hgg_cheering_test", "PlayHearthstone", "PlayHearthstoneRU", "PlayhearthstoneKR", "PlayhearthstoneJP", "PlayHearthstoneFR", "Hearthstoneth", "Hearthstonezhtw"].join("|") + ")", "i");
 
-            function m() {
+            function p() {
                 return null !== a ? a : a = i.p.experiments.getAssignment(r.b.FrenchVanilla) === c
             }
 
-            function f() {
-                return null !== o ? o : o = i.p.experiments.getAssignment(r.b.WatchSombra) === u
+            function m() {
+                return null !== o ? o : o = i.p.experiments.getAssignment(r.b.WatchSombra) === d
             }
 
-            function h(e) {
-                return !!e.match(p)
+            function f(e) {
+                return !!e.match(u)
+            }
+
+            function h() {
+                return null !== s ? s : s = i.p.experiments.getAssignment(r.b.VODMrPotatoHead) === d
             }
 
             function g() {
-                return null !== s ? s : s = i.p.experiments.getAssignment(r.b.VODVoltron) === d
-            }
-
-            function E() {
-                return null !== l ? l : l = i.p.experiments.getAssignment(r.b.VODTopShelf) === u
+                return null !== l ? l : l = i.p.experiments.getAssignment(r.b.VODTopShelf) === d
             }
         },
         u0aY: function(e, t, n) {
@@ -13413,9 +13421,9 @@
             }), n.d(t, "q", function() {
                 return A
             }), n.d(t, "i", function() {
-                return w
-            }), n.d(t, "h", function() {
                 return L
+            }), n.d(t, "h", function() {
+                return w
             }), n.d(t, "j", function() {
                 return P
             }), n.d(t, "k", function() {
@@ -13617,11 +13625,11 @@
                 return t && t.sort && (i = "?" + h + "=" + t.sort), "/" + e + "/" + n + i
             }
 
-            function w(e, t, n) {
+            function L(e, t, n) {
                 return !t && n ? e ? "/" + e + "/" + s.Collection + "/" + n : "/collections/" + n : e ? "/" + e + "/" + s.Video + "/" + t + (n ? "?collection=" + n : "") : "/videos/" + t + (n ? "?collection=" + n : "")
             }
 
-            function L(e, t) {
+            function w(e, t) {
                 return "/" + e + "/" + s.Clip + "/" + t
             }
 

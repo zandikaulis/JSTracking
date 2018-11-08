@@ -1656,8 +1656,8 @@
                     return !!e && e.id !== t
                 }) || void 0
             }
-            var $, Q = n("NMMG"),
-                K = (n("dNN/"), function(e) {
+            var Q, K = n("NMMG"),
+                $ = (n("dNN/"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onMarkAllMessagesRead = function() {
@@ -1739,7 +1739,7 @@
                                 var r = e.objectID;
                                 if (null !== n.props.currentUserID && r !== n.props.currentUserID) {
                                     n.handleClose(), n.clearSearchText();
-                                    var i = Object(Q.a)(n.props.currentUserID, r);
+                                    var i = Object(K.a)(n.props.currentUserID, r);
                                     Object(X.e)({
                                         threadID: i,
                                         targetUserlogin: e.login,
@@ -1987,7 +1987,7 @@
                 ce = n("2xye");
             ! function(e) {
                 e.StrangerWarningConfirmationButton = "stranger-confirmation"
-            }($ || ($ = {}));
+            }(Q || (Q = {}));
             var de = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -2018,7 +2018,7 @@
                             fontSize: B.Ca.Size6
                         }, e)), E.createElement(B.z, {
                             onClick: this.props.onStrangerWarningConfirmation,
-                            "data-test-selector": $.StrangerWarningConfirmationButton
+                            "data-test-selector": Q.StrangerWarningConfirmationButton
                         }, Object(i.d)("Got it!", "WhisperThread")))
                     }, t
                 }(E.Component),
@@ -2460,7 +2460,7 @@
                             onBlock: this.props.onBlock,
                             onUnblock: this.props.onUnblock,
                             showReportUserModal: this.props.showReportUserModal,
-                            hasTemporaryWhisperAccess: !!this.interlocutor.self && this.interlocutor.self.whisperPermissions.receive === ae.Ca.TEMPORARY
+                            hasTemporaryWhisperAccess: !!this.interlocutor.self && this.interlocutor.self.whisperPermissions.receive === ae.Da.TEMPORARY
                         }))));
                         var k = this.interlocutor.displayBadges.map(function(e) {
                             return E.createElement(B.Pa, {
@@ -2951,13 +2951,13 @@
                     lastReadCursorID: t
                 }
             }
-            var $e = n("TOso");
+            var Qe = n("TOso");
 
-            function Qe(e) {
+            function Ke(e) {
                 return e.type === D.PubsubMessageType.WhisperSent
             }
 
-            function Ke(e) {
+            function $e(e) {
                 return e.type === D.PubsubMessageType.WhisperReceived
             }
             n("28vT");
@@ -3024,12 +3024,12 @@
                                     label: j.c.RenderSent,
                                     start: j.d.Registration
                                 }), t.outgoingWhisperMessage = e;
-                                var n = Object(Q.b)(t.props.threadID, t.props.currentUserID);
+                                var n = Object(K.b)(t.props.threadID, t.props.currentUserID);
                                 n ? (t.props.data.currentUser && t.interlocutor && Object(X.m)({
                                     threadID: t.props.threadID,
                                     targetUserLogin: t.interlocutor.login,
                                     inChannelChat: !1
-                                }), Object($e.b)({
+                                }), Object(Qe.b)({
                                     currentUserID: t.props.currentUserID,
                                     emotes: t.props.emoteSetsData && t.props.emoteSetsData.emoteMap || {},
                                     message: e,
@@ -3039,13 +3039,13 @@
                                 }).catch(function(e) {
                                     var n, r;
                                     switch (e.message) {
-                                        case $e.a.RestrictedRecipient:
+                                        case Qe.a.RestrictedRecipient:
                                             n = Object(i.d)("Your whisper was not delivered because the recipient's settings prevent them from receiving it.", "Thread");
                                             break;
-                                        case $e.a.BodyEmpty:
+                                        case Qe.a.BodyEmpty:
                                             n = Object(i.d)("Your whisper was not delivered because it was empty.", "Thread");
                                             break;
-                                        case $e.a.TargetBanned:
+                                        case Qe.a.TargetBanned:
                                             n = Object(i.d)("Your whisper was not delivered because the recipient is suspended.", "Thread");
                                             break;
                                         default:
@@ -3092,7 +3092,7 @@
                         var t, n = this.props.activityData.loading ? void 0 : this.props.activityData.user,
                             r = n && n.availability,
                             i = n && n.activity;
-                        return t = !this.state.strangerWarningDismissed && this.interlocutor && this.interlocutor.id && this.interlocutor.self && this.interlocutor.self.whisperPermissions.receive === ae.Ca.NOT_PERMITTED ? E.createElement(de, {
+                        return t = !this.state.strangerWarningDismissed && this.interlocutor && this.interlocutor.id && this.interlocutor.self && this.interlocutor.self.whisperPermissions.receive === ae.Da.NOT_PERMITTED ? E.createElement(de, {
                             onStrangerWarningConfirmation: this.onStrangerWarningConfirmation,
                             targetDisplayName: this.interlocutor.displayName,
                             targetUserID: this.interlocutor.id
@@ -3225,7 +3225,7 @@
                     options: function(e) {
                         return {
                             variables: {
-                                targetUserID: Object(Q.b)(e.threadID, e.currentUserID) || ""
+                                targetUserID: Object(K.b)(e.threadID, e.currentUserID) || ""
                             },
                             skip: !e.currentUserID || !e.threadID
                         }
@@ -3278,7 +3278,7 @@
                     },
                     mapMessageTypesToProps: (Ye = {}, Ye[D.PubsubMessageType.WhisperReceived] = "whisperReceived", Ye[D.PubsubMessageType.WhisperSent] = "whisperSent", Ye),
                     skipMessage: function(e, t) {
-                        return !Qe(e) && !Ke(e) || e.data_object.thread_id !== t.threadID
+                        return !Ke(e) && !$e(e) || e.data_object.thread_id !== t.threadID
                     }
                 }]), Object(ie.a)(), Object(F.b)("WhispersThread", {
                     autoReportInteractive: !0
@@ -3553,7 +3553,7 @@
                             currentUserID: this.props.data.currentUser.id,
                             reportThreadData: this.handleThreadDataReport,
                             archiveThread: this.archiveThread
-                        }), E.createElement(K, {
+                        }), E.createElement($, {
                             currentUserID: this.props.data.currentUser.id,
                             error: this.state.error,
                             loading: this.props.data.loading,
@@ -3606,8 +3606,8 @@
                             topic: Object(w.J)(e.data.currentUser && e.data.currentUser.id || ""),
                             mutator: function(t, n) {
                                 if (!n.currentUser || !n.currentUser.whisperThreads) return n;
-                                if (Qe(t) || Ke(t)) {
-                                    if (Ke(t)) {
+                                if (Ke(t) || $e(t)) {
+                                    if ($e(t)) {
                                         var r = n.currentUser.whisperThreads.edges.find(function(e) {
                                             return e.node.id === t.data_object.thread_id
                                         });
@@ -3641,7 +3641,7 @@
                                             });
                                         if (o) {
                                             var s = Object(dt.c)(e);
-                                            o.node.messages.edges.unshift(s), Ke(e) && (e.data_object.thread_id !== n ? o.node.unreadMessagesCount += 1 : qe({
+                                            o.node.messages.edges.unshift(s), $e(e) && (e.data_object.thread_id !== n ? o.node.unreadMessagesCount += 1 : qe({
                                                 threadID: e.data_object.thread_id,
                                                 lastReadMessageID: e.data_object.message_id
                                             }, e.data_object.id), r({
@@ -3712,7 +3712,7 @@
                                 }(t, n) : n
                             },
                             skipMessage: function(e, t) {
-                                if (Qe(e)) {
+                                if (Ke(e)) {
                                     if (!t.currentUser || !t.currentUser.whisperThreads) return !1;
                                     var n = void 0;
                                     try {
@@ -4958,15 +4958,15 @@
                 }
             }
 
-            function u() {
-                var e = i.m.get(o, {}) || {},
-                    t = [];
-                return Object.keys(e).forEach(function(n) {
-                    var r = e[n];
-                    void 0 !== r && t.push(r)
-                }), t.sort(function(e, t) {
+            function u(e) {
+                var t = i.m.get(o, {}) || {},
+                    n = [];
+                return Object.keys(t).forEach(function(r) {
+                    var i = t[r];
+                    void 0 !== i && void 0 !== e[i.emote.token] && n.push(i)
+                }), n.sort(function(e, t) {
                     return e.uses > t.uses ? -1 : t.uses > e.uses ? 1 : e.lastUpdatedAt > t.lastUpdatedAt ? -1 : t.lastUpdatedAt > e.lastUpdatedAt ? 1 : 0
-                }), Object(a.b)(t.slice(0, 24).map(function(e) {
+                }), Object(a.b)(n.slice(0, 24).map(function(e) {
                     return e.emote
                 }))
             }
@@ -6088,29 +6088,29 @@
                 i = n("lZdE"),
                 a = n("cpJf"),
                 o = {
-                    "^B-?\\)$": "B)",
-                    "^:-?[z|Z|\\|]$": ":|",
-                    "^:-?\\)$": ":)",
-                    "^:-?\\($": ":(",
-                    "^:-?(p|P)$": ":P",
-                    "^;-?(p|P)$": ";P",
-                    "^:-?[\\\\/]$": ":/",
-                    "^;-?\\)$": ";)",
-                    "^R-?\\)$": "R)",
-                    "^:>$": ":>",
-                    "^:&gt;$": ":>",
-                    "^[oO](_|\\.)[oO]$": "O_o",
-                    "^:-?D$": ":D",
-                    "^:-?(o|O)$": ":O",
-                    "^>\\($": ">(",
-                    "^:-?(?:7|L)$": ":7",
-                    "^:-?(S|s)$": ":S",
-                    "^#-?[\\\\/]$": "#/",
-                    "^<\\]$": "<]",
-                    "^<3$": "<3",
-                    "^&lt;3$": "<3",
-                    "^&lt;\\]$": "<]",
-                    "^&gt;\\($": ">("
+                    "B-?\\)": "B)",
+                    "\\:-?[z|Z|\\|]": ":|",
+                    "\\:-?\\)": ":)",
+                    "\\:-?\\(": ":(",
+                    "\\:-?(p|P)": ":P",
+                    "\\;-?(p|P)": ";P",
+                    "\\:-?[\\\\/]": ":/",
+                    "\\;-?\\)": ";)",
+                    "R-?\\)": "R)",
+                    ":>": ":>",
+                    "\\:\\&gt\\;": ":>",
+                    "[oO](_|\\.)[oO]": "O_o",
+                    "\\:-?D": ":D",
+                    "\\:-?(o|O)": ":O",
+                    ">\\\\(": ">(",
+                    ":-?(?:7|L)": ":7",
+                    "\\:-?(S|s)": ":S",
+                    "#-?[\\\\/]": "#/",
+                    "<\\]": "<]",
+                    "<3": "<3",
+                    "\\&lt\\;3": "<3",
+                    "\\&lt\\;\\]": "<]",
+                    "\\&gt\\;\\(": ">("
                 },
                 s = ["1.0", "2.0", "3.0"],
                 l = new Set([457, 33, 42, 0]);
@@ -7629,7 +7629,7 @@
                                         self: {
                                             __typename: "UserSelfConnection",
                                             whisperPermissions: {
-                                                receive: l.Ca.NOT_PERMITTED,
+                                                receive: l.Da.NOT_PERMITTED,
                                                 __typename: "WhisperPermissions"
                                             }
                                         }
@@ -7639,7 +7639,7 @@
                                         self: {
                                             __typename: "UserSelfConnection",
                                             whisperPermissions: {
-                                                receive: l.Ca.PERMITTED,
+                                                receive: l.Da.PERMITTED,
                                                 __typename: "WhisperPermissions"
                                             }
                                         }
@@ -8053,10 +8053,6 @@
                     return !!e.self && !!e.self.paidUpgradePromotion
                 }) || null
             }
-
-            function d(e, t) {
-                return !!e && !!t && a(e) && !t.paidUpgrade && !!t.gift && t.gift.isGift
-            }
             n.d(t, "g", function() {
                 return r
             }), n.d(t, "e", function() {
@@ -8071,8 +8067,6 @@
                 return l
             }), n.d(t, "b", function() {
                 return c
-            }), n.d(t, "h", function() {
-                return d
             })
         },
         WcC5: function(e, t) {
@@ -9064,7 +9058,7 @@
                 }, "ChatLine")
             }
 
-            function $(e) {
+            function Q(e) {
                 var t = e.getHours() % 12;
                 0 === t && (t = 12);
                 var n = e.getMinutes(),
@@ -9072,16 +9066,16 @@
                 return n < 10 && (r = "0" + r), t + ":" + r
             }
 
-            function Q(e) {
+            function K(e) {
                 return r.createElement("span", {
                     key: "timestamp",
                     className: "chat-line__timestamp",
                     "data-a-target": "chat-timestamp",
                     "data-test-selector": "chat-timestamp"
-                }, $(new Date(e)))
+                }, Q(new Date(e)))
             }
 
-            function K(e) {
+            function $(e) {
                 return r.createElement("span", {
                     key: "timestamp",
                     className: "chat-line__timestamp",
@@ -9117,11 +9111,11 @@
             }), n.d(t, "e", function() {
                 return q
             }), n.d(t, "a", function() {
-                return $
-            }), n.d(t, "l", function() {
                 return Q
-            }), n.d(t, "m", function() {
+            }), n.d(t, "l", function() {
                 return K
+            }), n.d(t, "m", function() {
+                return $
             })
         },
         dAHa: function(e, t, n) {
@@ -10222,7 +10216,7 @@
                     type: C.MultipleChoice,
                     value: "inappropriate content type"
                 },
-                $ = {
+                Q = {
                     getTitle: function(e) {
                         return Object(c.d)("Report {username} for Evading a Ban", {
                             username: e
@@ -10236,7 +10230,7 @@
                     type: C.MultipleChoice,
                     nextCard: V.banEvasion
                 },
-                Q = {
+                K = {
                     getTitle: function(e) {
                         return Object(c.d)("Report {username} for Impersonation", {
                             username: e
@@ -10252,7 +10246,7 @@
                     type: C.MultipleChoice,
                     value: "impersonation type"
                 },
-                K = x,
+                $ = x,
                 Y = z,
                 Z = j,
                 J = {
@@ -10279,10 +10273,10 @@
                     "external site; threatening violence": H.external_violence,
                     "external site; committing violence": H.external_violence,
                     "external site; scam": V.socialMedia,
-                    "ban evasion": $,
+                    "ban evasion": Q,
                     spam: G,
                     hateful: X.content,
-                    impersonation: Q,
+                    impersonation: K,
                     "violence/threats": X.violence,
                     "threatening violence": X.violence,
                     "committing violence": X.violence,
@@ -10316,7 +10310,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            currentCard: t.props.currentCard || te[t.props.reportContentType] || K,
+                            currentCard: t.props.currentCard || te[t.props.reportContentType] || $,
                             prevCards: [],
                             currentSelection: null,
                             prevSelections: [],
@@ -11935,7 +11929,7 @@
                         asset: e.icon
                     }))))
                 }),
-                $ = (n("GLn2"), function(e) {
+                Q = (n("GLn2"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t
@@ -12068,30 +12062,30 @@
                         return 6 === t.length ? t[2] : t[0]
                     }, t
                 }(a.Component)),
-                Q = Object(u.compose)(Object(O.b)("EmoteSubUpsell"))($);
+                K = Object(u.compose)(Object(O.b)("EmoteSubUpsell"))(Q);
             ! function(e) {
                 e.FrequentlyUsed = "frequently_used", e.CurrentChannel = "current_channel", e.OtherChannel = "other_subbed_channel", e.Unlocked = "unlocked", e.Global = "global"
             }(x || (x = {}));
-            var K;
+            var $;
             ! function(e) {
                 e.FrequentlyUsedEmotes = "FREQUENTLY_USED_EMOTES", e.ChannelEmotes = "CHANNEL_EMOTES", e.AllEmotes = "ALL_EMOTES"
-            }(K || (K = {}));
+            }($ || ($ = {}));
             var Y = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onTabNavClick = function(e) {
                             if (n.scroll && n.scroll.scrollContent && e.currentTarget.getAttribute("data-a-target")) {
                                 var t = e.currentTarget.getAttribute("data-a-target"),
-                                    r = K.FrequentlyUsedEmotes;
+                                    r = $.FrequentlyUsedEmotes;
                                 switch (t) {
-                                    case K.FrequentlyUsedEmotes:
-                                        n.frequentlyUsedEmotesRef && (n.frequentlyUsedEmotesRef.scrollIntoView(), r = K.FrequentlyUsedEmotes);
+                                    case $.FrequentlyUsedEmotes:
+                                        n.frequentlyUsedEmotesRef && (n.frequentlyUsedEmotesRef.scrollIntoView(), r = $.FrequentlyUsedEmotes);
                                         break;
-                                    case K.ChannelEmotes:
-                                        n.channelEmotesRef && (n.channelEmotesRef.scrollIntoView(), r = K.ChannelEmotes);
+                                    case $.ChannelEmotes:
+                                        n.channelEmotesRef && (n.channelEmotesRef.scrollIntoView(), r = $.ChannelEmotes);
                                         break;
-                                    case K.AllEmotes:
-                                        n.allEmotesRef && (n.allEmotesRef.scrollIntoView(), r = K.AllEmotes)
+                                    case $.AllEmotes:
+                                        n.allEmotesRef && (n.allEmotesRef.scrollIntoView(), r = $.AllEmotes)
                                 }
                                 n.setState({
                                     selectedNavTab: r
@@ -12122,7 +12116,7 @@
                         }, n.checkVisible = function(e, t) {
                             if (t) {
                                 var r = n.state.selectedNavTab;
-                                n.channelEmotesRef ? t.offset > 0 && t.offset < n.channelEmotesRef.offsetTop ? r = K.FrequentlyUsedEmotes : t.offset > n.channelEmotesRef.offsetTop && t.offset < n.allEmotesRef.offsetTop ? r = K.ChannelEmotes : t.offset > n.allEmotesRef.offsetTop && (r = K.AllEmotes) : t.offset > 0 && t.offset < n.allEmotesRef.offsetTop ? r = K.FrequentlyUsedEmotes : t.offset > n.allEmotesRef.offsetTop && (r = K.AllEmotes), n.state.selectedNavTab !== r && n.setState({
+                                n.channelEmotesRef ? t.offset > 0 && t.offset < n.channelEmotesRef.offsetTop ? r = $.FrequentlyUsedEmotes : t.offset > n.channelEmotesRef.offsetTop && t.offset < n.allEmotesRef.offsetTop ? r = $.ChannelEmotes : t.offset > n.allEmotesRef.offsetTop && (r = $.AllEmotes) : t.offset > 0 && t.offset < n.allEmotesRef.offsetTop ? r = $.FrequentlyUsedEmotes : t.offset > n.allEmotesRef.offsetTop && (r = $.AllEmotes), n.state.selectedNavTab !== r && n.setState({
                                     selectedNavTab: r
                                 })
                             }
@@ -12135,7 +12129,7 @@
                             n.setState({
                                 isInSubUpsell: !1,
                                 subUpsellClickedEmote: null,
-                                selectedNavTab: K.FrequentlyUsedEmotes
+                                selectedNavTab: $.FrequentlyUsedEmotes
                             })
                         }, n.handleFilterChange = function(e) {
                             var t = e.target.value,
@@ -12144,7 +12138,7 @@
                                 filter: r,
                                 inputValue: t,
                                 filteredEmotes: n.filterEmoteSets(n.props.allEmoteSets, r),
-                                selectedNavTab: K.FrequentlyUsedEmotes
+                                selectedNavTab: $.FrequentlyUsedEmotes
                             })
                         }, n.filterEmoteSets = function(e, t) {
                             var n = [];
@@ -12177,7 +12171,7 @@
                             filteredEmotes: [],
                             inputValue: "",
                             isInSubUpsell: !1,
-                            selectedNavTab: K.FrequentlyUsedEmotes,
+                            selectedNavTab: $.FrequentlyUsedEmotes,
                             sortedChannelEmotes: [],
                             subUpsellClickedEmote: null
                         }, n
@@ -12205,7 +12199,7 @@
                             className: "emote-picker"
                         }, this.renderView()))
                     }, t.prototype.renderView = function() {
-                        return this.state.isInSubUpsell ? a.createElement(Q, {
+                        return this.state.isInSubUpsell ? a.createElement(K, {
                             channelDisplayName: this.props.channelDisplayName,
                             channelSubscriptionProducts: this.props.channelSubscriptionProducts,
                             isEsportChannel: this.props.isEsportChannel || !1,
@@ -12334,8 +12328,8 @@
                     }, t.prototype.renderTabNav = function() {
                         var e = null;
                         return this.state.sortedChannelEmotes.length > 0 && (e = a.createElement(q, {
-                            isActive: this.state.selectedNavTab === K.ChannelEmotes,
-                            label: K.ChannelEmotes,
+                            isActive: this.state.selectedNavTab === $.ChannelEmotes,
+                            label: $.ChannelEmotes,
                             icon: l.tb.NavChannels,
                             onClick: this.onTabNavClick
                         })), a.createElement(l.Eb, {
@@ -12343,13 +12337,13 @@
                             display: l.X.Flex,
                             className: "emote-picker__tab-nav-container"
                         }, a.createElement(q, {
-                            isActive: this.state.selectedNavTab === K.FrequentlyUsedEmotes,
-                            label: K.FrequentlyUsedEmotes,
+                            isActive: this.state.selectedNavTab === $.FrequentlyUsedEmotes,
+                            label: $.FrequentlyUsedEmotes,
                             icon: l.tb.GlyphLength,
                             onClick: this.onTabNavClick
                         }), e, a.createElement(q, {
-                            isActive: this.state.selectedNavTab === K.AllEmotes,
-                            label: K.AllEmotes,
+                            isActive: this.state.selectedNavTab === $.AllEmotes,
+                            label: $.AllEmotes,
                             icon: l.tb.EmoticonsAll,
                             onClick: this.onTabNavClick
                         }))
@@ -12402,9 +12396,12 @@
                                 gqlError: !1
                             }))
                         }
-                        e.visible && !this.props.visible ? (this.props.openEmotePicker(), this.setState({
-                            frequentlyUsedEmotes: Object(C.c)()
-                        })) : this.props.visible && !e.visible && this.props.closeEmotePicker()
+                        if (e.visible && !this.props.visible && e.emoteSetsData && e.emoteSetsData.emoteMap) {
+                            var n = Object(C.c)(e.emoteSetsData.emoteMap);
+                            this.props.openEmotePicker(), this.setState({
+                                frequentlyUsedEmotes: n
+                            })
+                        } else this.props.visible && !e.visible && this.props.closeEmotePicker()
                     }, t.prototype.componentWillUnmount = function() {
                         this.props.closeEmotePicker()
                     }, t.prototype.render = function() {

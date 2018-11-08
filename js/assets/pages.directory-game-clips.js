@@ -5357,16 +5357,16 @@
                 return Object(a.a)(p, {
                     props: function(n) {
                         return {
-                            banUserMutation: function(a, p) {
-                                return void 0 === p && (p = null), r.__awaiter(t, void 0, void 0, function() {
+                            banUserMutation: function(a, p, m) {
+                                return void 0 === p && (p = null), void 0 === m && (m = null), r.__awaiter(t, void 0, void 0, function() {
                                     var t;
-                                    return r.__generator(this, function(m) {
-                                        switch (m.label) {
+                                    return r.__generator(this, function(h) {
+                                        switch (h.label) {
                                             case 0:
                                                 if (t = e(n.ownProps).channelID, !n.mutate) return [3, 5];
-                                                m.label = 1;
+                                                h.label = 1;
                                             case 1:
-                                                return m.trys.push([1, 3, , 4]), [4, n.mutate({
+                                                return h.trys.push([1, 3, , 4]), [4, n.mutate({
                                                     variables: {
                                                         input: {
                                                             channelID: t,
@@ -5396,7 +5396,8 @@
                                                                     t -= p * s, n += p + "m"
                                                                 }
                                                                 return t > 0 && (n += t + "s"), n
-                                                            }(p)
+                                                            }(p),
+                                                            reason: m
                                                         }
                                                     },
                                                     update: function(e, n) {
@@ -5422,9 +5423,9 @@
                                                     }
                                                 })];
                                             case 2:
-                                                return [2, m.sent().data];
+                                                return [2, h.sent().data];
                                             case 3:
-                                                throw m.sent(), new Error("Unable to ban user");
+                                                throw h.sent(), new Error("Unable to ban user");
                                             case 4:
                                                 return [3, 6];
                                             case 5:

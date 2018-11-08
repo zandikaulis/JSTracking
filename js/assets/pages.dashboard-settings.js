@@ -5819,7 +5819,7 @@
                             bottom: 4
                         }
                     }, s.createElement(Ie.a, {
-                        text: Object(u.d)("Channels you can manage", "ChannelPermissionsSettings"),
+                        text: Object(u.d)("Channels you can manage as an editor", "ChannelPermissionsSettings"),
                         description: Object(u.d)("As an editor, you can access a channel's Dashboard", "ChannelPermissionsSettings"),
                         linkTo: "/" + e.channelLogin + "/dashboard/settings/managed-channels"
                     }), s.createElement(Ie.a, {
@@ -7015,24 +7015,76 @@
                     location: S.PageviewLocation.DashboardSettingsIndex
                 }))(Jt),
                 en = n("3iFw"),
-                tn = n("rqzT"),
-                nn = n("NMMG"),
-                rn = n("jreu");
+                tn = "twilight.dashboard-managed-channels-explanation-dismissed",
+                nn = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            dismissed: u.m.get(tn, !1)
+                        }, t.handleCloseButtonClick = function() {
+                            t.setState({
+                                dismissed: !0
+                            }, function() {
+                                u.m.set(tn, !0)
+                            })
+                        }, t
+                    }
+                    return o.__extends(t, e), t.prototype.render = function() {
+                        return this.state.dismissed ? null : s.createElement(x.Xa, {
+                            margin: {
+                                bottom: 1
+                            }
+                        }, s.createElement(x.P, {
+                            cols: 6,
+                            offset: 3
+                        }, s.createElement(x.Na, {
+                            closeButtonAriaLabel: Object(u.d)("Close", "DashboardSettingsEditableChannelsPage"),
+                            closeButtonOnClick: this.handleCloseButtonClick,
+                            description: Object(u.d)("Editors have permissions to modify settings and carry out key actions on a creator's channel.", "DashboardSettingsEditableChannelsPage"),
+                            narrow: !0,
+                            title: Object(u.d)("Editor Role", "DashboardSettingsEditableChannelsPage"),
+                            type: x.Oa.Neutral
+                        })))
+                    }, t
+                }(s.Component),
+                rn = n("rqzT"),
+                an = n("NMMG"),
+                on = function() {
+                    return s.createElement(x.Xa, {
+                        alignItems: x.f.Center,
+                        display: x.X.Flex,
+                        flexDirection: x.Aa.Column,
+                        fullHeight: !0,
+                        justifyContent: x.Wa.Center
+                    }, s.createElement(x.Xa, {
+                        margin: {
+                            bottom: .5
+                        }
+                    }, s.createElement(x.q, {
+                        src: "https://static-cdn.jtvnw.net/emoticons/v1/58127/2.0",
+                        alt: Object(u.d)("CoolCat", "ChannelSettingsEditableChannelsPage"),
+                        size: 50
+                    })), s.createElement(x.W, {
+                        color: x.O.Alt2,
+                        fontSize: x.Ca.Size5
+                    }, Object(u.d)("No channels to display", "ChannelSettingsEditableChannelsPage")))
+                },
+                sn = n("jreu");
             n("0HR6");
             ! function(e) {
                 e.CancelButton = "cancel-button", e.ErrorMessage = "error-message", e.KeepButton = "keep-button", e.RemoveButton = "remove-button", e.RetryButton = "retry-button"
             }(Ut || (Ut = {}));
-            var an, on = function(e) {
+            var ln, cn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             isRequestInFlight: !1,
                             retryable: !1
                         }, t.renderRetry = function() {
-                            return s.createElement(s.Fragment, null, s.createElement(sn, null, s.createElement(x.W, {
+                            return s.createElement(s.Fragment, null, s.createElement(dn, null, s.createElement(x.W, {
                                 color: x.O.Error,
                                 "data-test-selector": Ut.ErrorMessage
-                            }, Object(u.d)("Failed to remove yourself as an editor on this channel.", "EditableChannelsRemoveConfirmation"))), s.createElement(ln, null, s.createElement(x.Xa, {
+                            }, Object(u.d)("Failed to remove yourself as an editor on this channel.", "EditableChannelsRemoveConfirmation"))), s.createElement(un, null, s.createElement(x.Xa, {
                                 margin: {
                                     right: .5
                                 }
@@ -7053,7 +7105,7 @@
                         }, t.renderConfirmation = function() {
                             var e = t.props.channel,
                                 n = t.state.isRequestInFlight;
-                            return s.createElement(s.Fragment, null, s.createElement(sn, null, s.createElement(x.q, {
+                            return s.createElement(s.Fragment, null, s.createElement(dn, null, s.createElement(x.q, {
                                 alt: e.login,
                                 size: 50,
                                 src: ie(e)
@@ -7064,7 +7116,7 @@
                             }, s.createElement(x.W, {
                                 color: x.O.Alt2,
                                 fontSize: x.Ca.Size5
-                            }, e.displayname))), s.createElement(ln, null, s.createElement(x.Xa, {
+                            }, e.displayname))), s.createElement(un, null, s.createElement(x.Xa, {
                                 margin: {
                                     right: .5
                                 }
@@ -7093,7 +7145,7 @@
                                                 isRequestInFlight: !0
                                             }), i.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), [4, Object(rn.a)({
+                                            return i.trys.push([1, 3, , 4]), [4, Object(sn.a)({
                                                 channelID: t,
                                                 editorID: a
                                             })];
@@ -7133,7 +7185,7 @@
                         }))
                     }, t
                 }(s.Component),
-                sn = function(e) {
+                dn = function(e) {
                     var t = e.children;
                     return s.createElement(x.Xa, {
                         alignItems: x.f.Center,
@@ -7145,7 +7197,7 @@
                         }
                     }, t)
                 },
-                ln = function(e) {
+                un = function(e) {
                     var t = e.children;
                     return s.createElement(x.Eb, {
                         background: x.r.Alt,
@@ -7154,42 +7206,17 @@
                         padding: 2
                     }, t)
                 },
-                cn = {
+                pn = {
                     "data-test-selector": "display-name"
                 },
-                dn = {
-                    "data-test-selector": "empty"
-                },
-                un = function(e) {
+                hn = function(e) {
                     var t = e.channels,
                         n = e.userID;
-                    if (0 === t.length) return s.createElement(x.Xa, o.__assign({
-                        display: x.X.Flex,
-                        flexDirection: x.Aa.Column,
-                        alignItems: x.f.Center,
-                        alignContent: x.e.Center,
-                        justifyContent: x.Wa.Center,
-                        padding: {
-                            top: 5,
-                            right: 0,
-                            bottom: 5,
-                            left: 0
-                        }
-                    }, dn), s.createElement(x.Xa, {
-                        padding: {
-                            bottom: .5
-                        }
-                    }, s.createElement(x.q, {
-                        src: "https://static-cdn.jtvnw.net/emoticons/v1/58127/2.0",
-                        alt: Object(u.d)("CoolCat", "ChannelSettingsEditableChannelsPage"),
-                        size: 50
-                    })), s.createElement(x.W, {
-                        color: x.O.Alt2,
-                        fontSize: x.Ca.Size5
-                    }, Object(u.d)("No channels to display", "ChannelSettingsEditableChannelsPage")));
+                    if (0 === t.length) return s.createElement(on, null);
                     var r = Object(u.d)("Remove yourself as an editor", "EditableChannelList");
                     return s.createElement(x.P, {
-                        cols: 6
+                        cols: 6,
+                        offset: 3
                     }, t.map(function(t) {
                         return s.createElement(x.Eb, {
                             key: t.id,
@@ -7216,7 +7243,7 @@
                             }
                         }, s.createElement(x.U, {
                             to: "/" + t.login
-                        }, s.createElement(x.W, o.__assign({}, cn), t.displayname)))), s.createElement(x.Xa, null, s.createElement(x.Xa, {
+                        }, s.createElement(x.W, o.__assign({}, pn), t.displayname)))), s.createElement(x.Xa, null, s.createElement(x.Xa, {
                             margin: {
                                 right: 1
                             },
@@ -7229,13 +7256,13 @@
                                 right: 1
                             },
                             display: x.X.InlineFlex
-                        }, s.createElement(tn.a, {
+                        }, s.createElement(rn.a, {
                             isButtonIcon: !0,
-                            threadID: Object(nn.a)(n, t.id),
+                            threadID: Object(an.a)(n, t.id),
                             isPopout: !1
                         })), s.createElement(F.a, {
                             triggerModal: function(r) {
-                                return s.createElement(on, {
+                                return s.createElement(cn, {
                                     channel: t,
                                     onClose: r,
                                     onSuccess: e.onChannelRemoved,
@@ -7253,25 +7280,15 @@
                         })))
                     }))
                 },
-                pn = {
-                    "data-test-selector": "error"
-                },
-                hn = function() {
-                    return s.createElement(x.Xa, o.__assign({
+                mn = function() {
+                    return s.createElement(x.Xa, {
+                        alignItems: x.f.Center,
                         display: x.X.Flex,
                         flexDirection: x.Aa.Column,
-                        alignItems: x.f.Center,
-                        alignContent: x.e.Center,
-                        justifyContent: x.Wa.Center,
-                        padding: {
-                            top: 5,
-                            right: 0,
-                            bottom: 5,
-                            left: 0
-                        }
-                    }, pn), s.createElement(x.Xa, {
-                        padding: {
-                            top: 5,
+                        fullHeight: !0,
+                        justifyContent: x.Wa.Center
+                    }, s.createElement(x.Xa, {
+                        margin: {
                             bottom: .5
                         }
                     }, s.createElement(x.q, {
@@ -7281,20 +7298,20 @@
                     })), s.createElement(x.W, {
                         color: x.O.Alt2,
                         fontSize: x.Ca.Size5
-                    }, Object(u.d)("An error occured while loading channels you can manage.", "ChannelSettingsEditableChannelsPage")))
+                    }, Object(u.d)("An error occurred while loading channels you can manage.", "ChannelSettingsEditableChannelsPage")))
                 },
-                mn = n("CEZT"),
-                gn = n("OZZe");
+                gn = n("CEZT"),
+                fn = n("OZZe");
             n("L7tE");
             ! function(e) {
                 e[e.Loading = 0] = "Loading", e[e.Success = 1] = "Success", e[e.Error = 2] = "Error"
-            }(an || (an = {}));
-            var fn = function(e) {
+            }(ln || (ln = {}));
+            var bn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             editableChannels: [],
-                            requestState: an.Loading
+                            requestState: ln.Loading
                         }, t.handleChannelRemoved = function(e) {
                             t.setState(function(t) {
                                 return {
@@ -7337,34 +7354,27 @@
                             n = e.loading,
                             r = e.user,
                             a = this.state.requestState;
-                        if (n || a === an.Loading) return s.createElement(L.a, null, s.createElement(x.ib, {
+                        if (n || a === ln.Loading) return s.createElement(L.a, null, s.createElement(x.ib, {
                             height: 600
                         }));
                         if (t || !r || !r.login || !r.id) return s.createElement(g.a, null);
                         var i = s.createElement(C.a, {
-                            title: Object(u.d)("Channels you can manage", "ChannelSettingsEditableChannelsPage"),
+                            title: Object(u.d)("Channels you can manage as an editor", "ChannelSettingsEditableChannelsPage"),
                             linkToParent: "/" + r.login + "/dashboard/settings"
                         });
                         return s.createElement(s.Fragment, null, s.createElement(L.a, null, s.createElement(_.a, {
                             header: i
                         }, s.createElement(x.Eb, {
                             background: x.r.Base,
+                            className: "editable-channels-page",
                             elevation: 1,
                             padding: 2,
-                            flexGrow: 1,
-                            fullWidth: !0,
-                            className: "editable-channels-page"
-                        }, s.createElement(x.Eb, {
-                            fullWidth: !0,
-                            fullHeight: !0,
-                            display: x.X.Flex,
-                            justifyContent: x.Wa.Center,
-                            margin: 1
-                        }, a === an.Success && s.createElement(un, {
+                            fullWidth: !0
+                        }, a === ln.Success && s.createElement(s.Fragment, null, s.createElement(nn, null), s.createElement(hn, {
                             channels: this.state.editableChannels,
                             onChannelRemoved: this.handleChannelRemoved,
                             userID: r.id
-                        }), a === an.Error && s.createElement(hn, null))))), s.createElement(en.Whispers, null))
+                        })), a === ln.Error && s.createElement(mn, null)))), s.createElement(en.Whispers, null))
                     }, t.prototype.setEditableChannels = function() {
                         return o.__awaiter(this, void 0, void 0, function() {
                             var e, t;
@@ -7374,15 +7384,15 @@
                                         if (!(e = this.props.data.user) || !e.id) return [2];
                                         n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, , 4]), [4, Object(mn.a)(e.id)];
+                                        return n.trys.push([1, 3, , 4]), [4, Object(gn.a)(e.id)];
                                     case 2:
                                         return t = n.sent(), this.setState({
                                             editableChannels: t,
-                                            requestState: an.Success
+                                            requestState: ln.Success
                                         }), [3, 4];
                                     case 3:
                                         return n.sent(), this.setState({
-                                            requestState: an.Error
+                                            requestState: ln.Error
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -7391,7 +7401,7 @@
                         })
                     }, t
                 }(s.Component),
-                bn = Object(m.compose)(h.a, Object(f.a)(gn, {
+                vn = Object(m.compose)(h.a, Object(f.a)(fn, {
                     options: function(e) {
                         return {
                             variables: {
@@ -7403,9 +7413,9 @@
                     destination: y.a.EditableChannels
                 }), Object(b.a)({
                     location: S.PageviewLocation.EditableChannels
-                }))(fn),
-                vn = n("m9vr"),
-                yn = function(e) {
+                }))(bn),
+                yn = n("m9vr"),
+                Sn = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -7415,7 +7425,7 @@
                         var e = this.props,
                             t = e.match.params.channelLogin,
                             n = e.user;
-                        return t !== (n && n.login) ? s.createElement(vn.a, null) : s.createElement(d.a, null, s.createElement(l.a, {
+                        return t !== (n && n.login) ? s.createElement(yn.a, null) : s.createElement(d.a, null, s.createElement(l.a, {
                             exact: !0,
                             path: "/:channelLogin/dashboard/settings/authorized-streamers",
                             component: K
@@ -7426,7 +7436,7 @@
                         }), s.createElement(l.a, {
                             exact: !0,
                             path: "/:channelLogin/dashboard/settings/managed-channels",
-                            component: bn
+                            component: vn
                         }), s.createElement(c.a, {
                             exact: !0,
                             path: "/:channelLogin/dashboard/settings/moderation",
@@ -7444,13 +7454,13 @@
                         }))
                     }, t
                 }(s.Component);
-            var Sn = Object(a.connect)(function(e) {
+            var En = Object(a.connect)(function(e) {
                 return {
                     user: Object(i.e)(e)
                 }
-            })(yn);
+            })(Sn);
             n.d(t, "DashboardSettingsRoot", function() {
-                return Sn
+                return En
             })
         },
         qYDK: function(e, t, n) {

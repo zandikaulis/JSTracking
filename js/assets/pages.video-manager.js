@@ -14091,15 +14091,15 @@
                 d = n("FsIG"),
                 c = n("C29h"),
                 u = n("Ue10"),
-                p = n("dzJR");
-            n("sEux");
+                p = n("dzJR"),
+                m = (n("sEux"), 5e3);
             ! function(e) {
                 e.NoTagsSelected = "no-tags-selected", e.SelectedTag = "selected-tag"
             }(a || (a = {}));
-            var m = function(e) {
+            var h = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.renderErrorMessage = function() {
+                        return t.timeoutId = null, t.renderErrorMessage = function() {
                             if (t.props.error && t.props.errorMessage) return r.createElement(u.Xa, {
                                 margin: {
                                     top: .5
@@ -14117,14 +14117,21 @@
                                 type: c.b.TagAllMinusAutomation
                             })
                         }, t.onTagResultSelected = function(e) {
-                            5 === t.props.selectedTags.filter(function(e) {
-                                return !e.isAutomated
-                            }).length && t.props.onError ? t.props.onError(Object(o.d)("You can only select up to 5 tags at the same time.", "TagSelectorSearch")) : t.props.selectedTags.map(function(e) {
+                            if (5 === t.props.selectedTags.filter(function(e) {
+                                    return !e.isAutomated
+                                }).length && t.props.setError) return t.props.setError(Object(o.d)("You can only select up to 5 tags at the same time.", "TagSelectorSearch")), t.clearExistingTimeout(), void(t.timeoutId = setTimeout(function() {
+                                t && t.props && t.props.setError && t.props.setError("")
+                            }, m));
+                            t.props.selectedTags.map(function(e) {
                                 return e.id
                             }).includes(e.id) || t.props.onTagResultSelected && t.props.onTagResultSelected(e)
+                        }, t.clearExistingTimeout = function() {
+                            t.timeoutId && clearTimeout(t.timeoutId)
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
+                    return i.__extends(t, e), t.prototype.componentWillUnmount = function() {
+                        this.clearExistingTimeout()
+                    }, t.prototype.render = function() {
                         var e = Object(o.d)("Tags", "TagSelectorSearch");
                         return r.createElement(u.Xa, null, r.createElement(u.Xa, {
                             display: u.X.Flex,
@@ -14204,7 +14211,7 @@
                         }, "TagSuggestions")) : null
                     }, t
                 }(r.Component),
-                h = Object(s.a)(p, {
+                g = Object(s.a)(p, {
                     options: function(e) {
                         return {
                             variables: {
@@ -14214,13 +14221,13 @@
                         }
                     },
                     skip: !0
-                })(m);
+                })(h);
             n.d(t, !1, function() {
                 return a
             }), n.d(t, !1, function() {
-                return m
-            }), n.d(t, "a", function() {
                 return h
+            }), n.d(t, "a", function() {
+                return g
             })
         },
         nQLY: function(e, t, n) {

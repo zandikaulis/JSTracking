@@ -200,11 +200,8 @@
                         }, n
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                        var e = [];
-                        this.props.terms.forEach(function(t) {
-                            e.push(t)
-                        }), this.setState({
-                            terms: e
+                        this.setState({
+                            terms: this.props.terms
                         })
                     }, t.prototype.render = function() {
                         if (!this.state.terms) return null;
@@ -649,7 +646,7 @@
                 e.Permanent = "permanent", e.Temporary = "temporary"
             }(u || (u = {})),
             function(e) {
-                e.Banned = "banned", e.Permitted = "permitted"
+                e.Banned = "blocked", e.Permitted = "permitted"
             }(h || (h = {}));
             var b = function(e) {
                 function t() {
@@ -664,7 +661,7 @@
                         errorAddingTerm: !1,
                         errorAddingLabel: null,
                         termToAdd: "",
-                        termToAddPrivacy: l()
+                        termToAddPrivacy: o()
                     }, t.closeTermSwitchedListsNotif = function() {
                         t.setState({
                             termSwitchedLists: !1
@@ -829,7 +826,7 @@
                 }, t.prototype.render = function() {
                     var e = "",
                         t = "";
-                    return this.props.type === h.Banned ? (e = Object(r.d)("Add new blocked term or phrase", "StandaloneChatTerms"), t = Object(r.d)("Search for a term to block", "StandaloneChatTerms")) : this.props.type === h.Permitted && (e = Object(r.d)("Add new permitted term or phrase", "StandaloneChatTerms"), t = Object(r.d)("Search for a term to add", "StandaloneChatTerms")), i.createElement(c.Pa, {
+                    return this.props.type === h.Banned ? (e = Object(r.d)("Enter a term to block", "StandaloneChatTerms"), t = Object(r.d)("Add new blocked term or phrase", "StandaloneChatTerms")) : this.props.type === h.Permitted && (e = Object(r.d)("Enter a term to add", "StandaloneChatTerms"), t = Object(r.d)("Add new permitted term or phrase", "StandaloneChatTerms")), i.createElement(c.Pa, {
                         fullWidth: !0
                     }, i.createElement("div", {
                         className: "chat-terms-control",
@@ -839,12 +836,6 @@
                             bottom: 2
                         }
                     }, i.createElement(c.Xa, {
-                        margin: {
-                            bottom: .5
-                        }
-                    }, i.createElement(c.W, {
-                        bold: !0
-                    }, t)), i.createElement(c.Xa, {
                         display: c.X.Flex,
                         flexDirection: c.Aa.Row,
                         alignItems: c.f.Stretch,
@@ -853,7 +844,7 @@
                     }, i.createElement(c.Xa, {
                         flexGrow: 1
                     }, i.createElement(c.Ea, {
-                        label: "",
+                        label: t,
                         error: this.state.errorAddingTerm,
                         errorMessage: this.state.errorAddingLabel || ""
                     }, i.createElement(c.Ra, {
@@ -861,7 +852,7 @@
                         "data-test-selector": p.AddTermInput,
                         ariaLabel: Object(r.d)("Add term", "StandaloneChatTerms"),
                         refDelegate: this.saveAddInputRef,
-                        type: c.Ta.Text,
+                        type: c.Ta.Search,
                         placeholder: e,
                         onKeyDown: this.handleAddKeyDown,
                         onChange: this.handleAddChange,
@@ -871,7 +862,8 @@
                         display: c.X.Flex,
                         margin: {
                             left: .5
-                        }
+                        },
+                        alignSelf: c.g.End
                     }, i.createElement(c.z, {
                         onClick: this.handleAdd,
                         "data-a-target": "add-term",
@@ -893,18 +885,24 @@
                     }, i.createElement(c.u, {
                         show: !0,
                         direction: c.v.BottomRight,
-                        size: c.w.Medium
+                        size: c.w.Small
                     }, i.createElement(c.Xa, {
                         padding: 1
                     }, i.createElement(c.Xa, {
-                        flexGrow: 1,
-                        flexShrink: 1,
-                        overflow: c.cb.Hidden
+                        display: c.X.Flex
                     }, i.createElement(c.W, {
-                        bold: !0,
-                        ellipsis: !0
-                    }, Object(r.d)('Add "{term}" to {type} terms', {
-                        type: this.props.type,
+                        type: c.Vb.Span,
+                        bold: !0
+                    }, Object(r.d)("Add term to {type} terms", {
+                        type: this.props.type
+                    }, "StandaloneChatTerms"))), i.createElement(c.Xa, {
+                        display: c.X.Flex
+                    }, i.createElement(c.W, {
+                        type: c.Vb.Span,
+                        ellipsis: !0,
+                        italic: !0,
+                        color: c.O.Alt2
+                    }, Object(r.d)("{term}", {
                         term: this.state.termToAdd
                     }, "StandaloneChatTerms"))), i.createElement(c.Xa, {
                         display: c.X.Flex,
@@ -936,6 +934,7 @@
                     }, i.createElement(c.Xa, {
                         padding: .5
                     }, i.createElement(c.Ua, {
+                        selected: this.state.termToAddPrivacy === o(),
                         "data-visibility": o(),
                         onClick: this.onClickAddTermPrivacyChange
                     }, i.createElement(c.Xa, {
@@ -944,6 +943,7 @@
                             y: .5
                         }
                     }, o())), i.createElement(c.Ua, {
+                        selected: this.state.termToAddPrivacy === l(),
                         "data-visibility": l(),
                         onClick: this.onClickAddTermPrivacyChange
                     }, i.createElement(c.Xa, {
@@ -960,7 +960,7 @@
                         fontSize: c.Ca.Size7
                     }, Object(r.d)("Tip: Some terms may be marked as Private and only visible to the channel owner.", "StandaloneChatTerms")))), i.createElement(c.Xa, {
                         padding: {
-                            top: 0,
+                            top: 1,
                             left: 0,
                             right: 0,
                             bottom: 1

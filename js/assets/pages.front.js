@@ -321,7 +321,7 @@
             function(e) {
                 e.Hidden = "hidden", e.Enter = "enter", e.EnterActive = "enterActive", e.Leave = "leave", e.LeaveActive = "leaveActive", e.Visible = "visible"
             }(r || (r = {}));
-            var E, I = function(e) {
+            var I, E = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.loadVideo = function() {
@@ -466,8 +466,8 @@
                 }(o.Component),
                 R = Object(s.compose)(Object(T.b)("FeaturedItem", {
                     autoReportInteractive: !0
-                }))(I),
-                O = function(e) {
+                }))(E),
+                D = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -512,7 +512,7 @@
                         scrollToTop: y.func
                     }, t
                 }(o.Component),
-                D = function(e) {
+                O = function(e) {
                     return o.createElement(_.Eb, {
                         position: _.jb.Absolute,
                         attachLeft: e.left,
@@ -543,7 +543,7 @@
                 P = 550;
             ! function(e) {
                 e.LeftArrow = "featured-content-carousel-left-arrow", e.Placeholder = "featured-content-carousel-placeholder", e.RightArrow = "featured-content-carousel-right-arrow"
-            }(E || (E = {}));
+            }(I || (I = {}));
             var j = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -653,7 +653,7 @@
                                     "featured-content-carousel__item-container--leaving-or-entering": t.getOffsetFromCenter(n) >= t.getMedianCount()
                                 }, r["featured-content-carousel__item-container--offset-" + t.getOffsetFromCenter(n)] = !0, r["featured-content-carousel__item-container--" + t.getPositionString(n)] = !0, r)),
                                 "data-a-target": c
-                            }, o.createElement(O, {
+                            }, o.createElement(D, {
                                 onClick: t.onListItemClick(t.getMedianCount() - n),
                                 index: a,
                                 item: e,
@@ -702,15 +702,15 @@
                             justifyContent: _.Wa.Center,
                             position: _.jb.Relative,
                             className: "featured-content-carousel"
-                        }, o.createElement(D, {
+                        }, o.createElement(O, {
                             left: !0,
                             onClick: this.navigateLeft,
-                            "data-test-selector": E.LeftArrow,
+                            "data-test-selector": I.LeftArrow,
                             "data-a-target": "featured-item-left-button"
-                        }), o.createElement(D, {
+                        }), o.createElement(O, {
                             right: !0,
                             onClick: this.navigateRight,
-                            "data-test-selector": E.RightArrow,
+                            "data-test-selector": I.RightArrow,
                             "data-a-target": "featured-item-right-button"
                         }), this.renderItems()))
                     }, t.prototype.renderPlaceholders = function() {
@@ -732,7 +732,7 @@
                                     "featured-content-carousel__item-container": !0,
                                     "featured-content-carousel__item-container--leaving-or-entering": e.getOffsetFromCenter(n + 1) >= e.getMedianCount()
                                 }, i["featured-content-carousel__item-container--offset-" + e.getOffsetFromCenter(n + 1)] = !0, i["featured-content-carousel__item-container--" + e.getPositionString(n + 1)] = !0, i)),
-                                "data-test-selector": E.Placeholder
+                                "data-test-selector": I.Placeholder
                             }, o.createElement(_.Eb, {
                                 className: "featured-content-carousel__item-placeholder",
                                 borderRadius: _.x.Large,
@@ -853,7 +853,8 @@
                                             i = Object(ae.a)({
                                                 feedbackID: n.id,
                                                 sourceItemPage: oe.PageviewMedium.TwitchHome,
-                                                sourceItemRequestID: this.props.sourceItemRequestID || ""
+                                                sourceItemRequestID: this.props.sourceItemRequestID || "",
+                                                sourceItemTrackingID: this.props.sourceItemTrackingID || ""
                                             }), r.label = 3;
                                         case 3:
                                             return r.trys.push([3, 5, , 6]), [4, this.props.undoFeedback(i)];
@@ -1113,11 +1114,11 @@
                 we = n("oB8h"),
                 Te = n("oJov"),
                 _e = n("4HIT"),
-                Ee = n("QV0j"),
-                Ie = n("9MO3"),
+                Ie = n("QV0j"),
+                Ee = n("9MO3"),
                 Re = n("OCR+"),
-                Oe = n("3sMy"),
-                De = n("yI6f"),
+                De = n("3sMy"),
+                Oe = n("yI6f"),
                 Ne = n("kRI/"),
                 xe = n("A65o"),
                 Me = (n("ReKM"), Object(Re.a)()),
@@ -1153,7 +1154,7 @@
                                         vodID: null,
                                         categoryID: r && r.id,
                                         channelID: null,
-                                        feedbackReasons: Object(Ie.b)(),
+                                        feedbackReasons: Object(Ee.b)(),
                                         hideContent: t.hideContent
                                     })
                                 }))
@@ -1225,7 +1226,8 @@
                                     onModalOpen: t.trackRecFeedbackPreModalClick,
                                     onMenuOpen: t.trackRecFeedbackMenuClick,
                                     trackRecFeedbackClickStep: t.trackRecFeedbackClickStep,
-                                    sourceItemRequestID: t.props.shelfCardTrackingProps.item_tracking_id,
+                                    sourceItemRequestID: t.props.itemRequestID,
+                                    sourceItemTrackingID: t.props.shelfCardTrackingProps.item_tracking_id,
                                     isShelf: !1
                                 }
                             }
@@ -1237,7 +1239,7 @@
                         }, t.onManageClick = function() {
                             t.trackPostSubmitStep(Ne.b.Manage)
                         }, t.trackPostSubmitStep = function(e) {
-                            var n = Object(De.e)(t.props.contentEdge).itemID;
+                            var n = Object(Oe.e)(t.props.contentEdge).itemID;
                             n && t.props.trackRecFeedbackClickStepPostSubmit(n, e)
                         }, t.hideContent = function(e) {
                             t.setState({
@@ -1266,11 +1268,11 @@
                         }, t.trackClick = function(e, n, i) {
                             return t.props.trackClick(e, n, i)
                         }, t.trackRecFeedbackPreModalClick = function() {
-                            return t.props.trackRecFeedbackPreModalClick(Ne.a.NotInterested, t.props.shelf, t.props.contentEdge, t.props.itemPosition)
+                            return t.props.trackRecFeedbackPreModalClick(Ne.a.NotInterested, t.props.shelf, t.props.contentEdge, t.props.itemPosition, t.getShelfCardName())
                         }, t.trackRecFeedbackMenuClick = function() {
-                            return t.props.trackRecFeedbackPreModalClick(Ne.a.Ellipsis, t.props.shelf, t.props.contentEdge, t.props.itemPosition)
+                            return t.props.trackRecFeedbackPreModalClick(Ne.a.Ellipsis, t.props.shelf, t.props.contentEdge, t.props.itemPosition, t.getShelfCardName())
                         }, t.trackRecFeedbackClickStep = function(e) {
-                            var n = Object(De.e)(t.props.contentEdge).itemID;
+                            var n = Object(Oe.e)(t.props.contentEdge).itemID;
                             if (n) return t.props.trackRecFeedbackClickStep(n, e)
                         }, t
                     }
@@ -1282,28 +1284,29 @@
                         })
                     }, t.prototype.render = function() {
                         var e = this.getShelfCardProps(this.props.contentEdge, this.props.itemPosition);
-                        if (!e || !this.props.contentEdge.node) return null;
-                        if (!this.state.showContent) {
-                            var t = e.title,
-                                n = this.props.contentEdge.node;
-                            return n && "Stream" === n.__typename && n.broadcaster && n.broadcaster.displayName && (t = n.broadcaster.displayName), o.createElement(ue, {
-                                name: t,
-                                undoSuccessHandler: this.showContent,
-                                addFeedbackPromise: this.state.addFeedbackPromise,
-                                size: X.Small,
-                                onExpiration: this.onHideContentExpire,
-                                onManageClick: this.onManageClick,
-                                shouldRemoveContent: !0,
-                                sourceItemRequestID: this.props.shelfCardTrackingProps.item_tracking_id
-                            })
-                        }
-                        return o.createElement(_.Xa, {
+                        return e && this.props.contentEdge.node ? this.state.showContent ? o.createElement(_.Xa, {
                             key: this.props.contentEdge.node.id,
                             padding: {
                                 bottom: 2
                             },
                             "data-test-selector": "shelf-card-selector"
-                        }, this.renderShelfCard(e))
+                        }, this.renderShelfCard(e)) : o.createElement(ue, {
+                            name: this.getShelfCardName(),
+                            undoSuccessHandler: this.showContent,
+                            addFeedbackPromise: this.state.addFeedbackPromise,
+                            size: X.Small,
+                            onExpiration: this.onHideContentExpire,
+                            onManageClick: this.onManageClick,
+                            shouldRemoveContent: !0,
+                            sourceItemRequestID: this.props.itemRequestID,
+                            sourceItemTrackingID: this.props.shelfCardTrackingProps.item_tracking_id
+                        }) : null
+                    }, t.prototype.getShelfCardName = function() {
+                        var e = this.getShelfCardProps(this.props.contentEdge, this.props.itemPosition);
+                        if (!e || !this.props.contentEdge.node) return null;
+                        var t = e.title,
+                            n = this.props.contentEdge.node;
+                        return n && "Stream" === n.__typename && n.broadcaster && n.broadcaster.displayName && (t = n.broadcaster.displayName), t
                     }, t.prototype.getShelfCardStreamProps = function(e) {
                         var t = this,
                             n = e.node,
@@ -1314,7 +1317,7 @@
                                 tag_filter_set: [],
                                 tag_streamer_set: []
                             }),
-                            s = this.props.shelf.title.key !== Oe.a.RecommendedBecauseYouWatchX ? {
+                            s = this.props.shelf.title.key !== De.a.RecommendedBecauseYouWatchX ? {
                                 gameTitle: n.game && n.game.displayName || void 0,
                                 gameTitleLinkTo: {
                                     pathname: n.game ? Object(ie.c)(n.game.name) : void 0,
@@ -1347,7 +1350,7 @@
                                 state: o
                             } : void 0,
                             onChannelLoginClick: this.trackClick.bind(this, h.PageviewContent.ChannelMetadata, r),
-                            streamType: Object(Ee.a)(n.type) || we.a.Live,
+                            streamType: Object(Ie.a)(n.type) || we.a.Live,
                             currentViewerCount: n.viewersCount || 0,
                             trackingContext: {
                                 medium: h.PageviewMedium.TwitchHome
@@ -1355,7 +1358,7 @@
                             contextualCardActionProps: this.getFeedbackProps({
                                 channelID: n.broadcaster && n.broadcaster.id,
                                 categoryID: n.game && n.game.id,
-                                feedbackReasons: Object(Ie.a)(),
+                                feedbackReasons: Object(Ee.a)(),
                                 hideContent: this.hideContent
                             })
                         }, i && {
@@ -1486,7 +1489,7 @@
                                 vodID: n.id,
                                 categoryID: n.game && n.game.id,
                                 channelID: n.owner && n.owner.id,
-                                feedbackReasons: Object(Ie.d)(),
+                                feedbackReasons: Object(Ee.d)(),
                                 hideContent: this.hideContent
                             })
                         }, i && {
@@ -1588,7 +1591,7 @@
                         }, t.trackTitleImpression = function() {
                             return t.props.trackTitleImpression(t.props.shelf)
                         }, t.trackRecFeedbackPreModalClickShelf = function() {
-                            return t.props.trackRecFeedbackPreModalClick(Ne.a.NotInterested, t.props.shelf, null, null)
+                            return t.props.trackRecFeedbackPreModalClick(Ne.a.NotInterested, t.props.shelf, null, null, null)
                         }, t.shouldRenderShelf = function(e) {
                             var n;
                             if (!t.getShelfTitle(e.title)) return !1;
@@ -1633,7 +1636,8 @@
                             size: X.Large,
                             onManageClick: this.onManageClick,
                             shouldRemoveContent: !1,
-                            sourceItemRequestID: this.props.requestID
+                            sourceItemRequestID: this.props.requestID,
+                            sourceItemTrackingID: this.props.shelfTrackingProps.item_tracking_id
                         });
                         var a = 0,
                             s = _.cc.Large,
@@ -1685,40 +1689,41 @@
                         }, o.createElement("div", null, r), this.props.firstPageLoaded && i.title.context && Ue() && o.createElement(Ae, {
                             shelfID: i.id,
                             categoryID: i.title.context.id,
-                            feedbackReasons: Object(Ie.c)(),
+                            feedbackReasons: Object(Ee.c)(),
                             hideContent: this.hideContent,
                             onModalOpen: this.trackRecFeedbackPreModalClickShelf,
                             trackRecFeedbackClickStep: this.trackRecFeedbackClickStep,
                             sourceItemRequestID: this.props.requestID,
+                            sourceItemTrackingID: this.props.shelfTrackingProps.item_tracking_id,
                             isShelf: !0
                         }))), p)
                     }, t.prototype.getShelfTitle = function(e) {
                         var t, n = this,
-                            i = ((t = {})[Oe.a.TopLiveChannels] = function() {
+                            i = ((t = {})[De.a.TopLiveChannels] = function() {
                                 return Object(l.d)("Popular <x:bold>live channels</x:bold>", {
                                     "x:bold": function(e) {
                                         return o.createElement("strong", null, e)
                                     }
                                 }, "ShelfComponent")
-                            }, t[Oe.a.TopGames] = function() {
+                            }, t[De.a.TopGames] = function() {
                                 return Object(l.d)("Popular <x:bold>categories</x:bold>", {
                                     "x:bold": function(e) {
                                         return o.createElement("strong", null, n.linkToBrowse(e))
                                     }
                                 }, "ShelfComponent")
-                            }, t[Oe.a.PopularVideos] = function() {
+                            }, t[De.a.PopularVideos] = function() {
                                 return Object(l.d)("Popular <x:bold>videos</x:bold>", {
                                     "x:bold": function(e) {
                                         return o.createElement("strong", null, e)
                                     }
                                 }, "ShelfComponent")
-                            }, t[Oe.a.PopularClips] = function() {
+                            }, t[De.a.PopularClips] = function() {
                                 return Object(l.d)("Popular <x:bold>clips</x:bold>", {
                                     "x:bold": function(e) {
                                         return o.createElement("strong", null, e)
                                     }
                                 }, "ShelfComponent")
-                            }, t[Oe.a.TopChannelsPlayingGame] = function() {
+                            }, t[De.a.TopChannelsPlayingGame] = function() {
                                 return Object(l.d)("Popular <x:bold1>live channels</x:bold1> in <x:bold2>{game}</x:bold2>", {
                                     game: e.context ? e.context.name : "",
                                     "x:bold1": function(e) {
@@ -1728,39 +1733,39 @@
                                         return o.createElement("strong", null, n.linkToDirectory(e))
                                     }
                                 }, "ShelfComponent")
-                            }, t[Oe.a.TopLiveChannelsYouMayLike] = function() {
+                            }, t[De.a.TopLiveChannelsYouMayLike] = function() {
                                 return Object(l.d)("<x:bold>Live channels</x:bold> you may like", {
                                     "x:bold": function(e) {
                                         return o.createElement("strong", null, e)
                                     }
                                 }, "ShelfComponent")
-                            }, t[Oe.a.TopGamesForYou] = function() {
+                            }, t[De.a.TopGamesForYou] = function() {
                                 return Object(l.d)("<x:bold>Categories</x:bold> you may like", {
                                     "x:bold": function(e) {
                                         return o.createElement("strong", null, n.linkToBrowse(e))
                                     }
                                 }, "ShelfComponent")
-                            }, t[Oe.a.RecommendedBecauseYouWatchX] = function() {
+                            }, t[De.a.RecommendedBecauseYouWatchX] = function() {
                                 return Object(l.d)("<x:bold>{game}</x:bold> streamers you may like", {
                                     game: e.context ? e.context.name : "",
                                     "x:bold": function(e) {
                                         return o.createElement("strong", null, n.linkToDirectory(e))
                                     }
                                 }, "ShelfComponent")
-                            }, t[Oe.a.RecommendedBecauseYouFollowX] = function() {
+                            }, t[De.a.RecommendedBecauseYouFollowX] = function() {
                                 return Object(l.d)("Because you follow <x:bold>{name}</x:bold>", {
                                     name: e.context ? e.context.name : "",
                                     "x:bold": function(e) {
                                         return o.createElement("strong", null, n.linkToDirectory(e))
                                     }
                                 }, "ShelfComponent")
-                            }, t[Oe.a.GreatNewClipsYouMayHaveMissed] = function() {
+                            }, t[De.a.GreatNewClipsYouMayHaveMissed] = function() {
                                 return Object(l.d)("<x:bold>Clips</x:bold> you may like", {
                                     "x:bold": function(e) {
                                         return o.createElement("strong", null, e)
                                     }
                                 }, "ShelfComponent")
-                            }, t[Oe.a.TopNewVideosYouMayHaveMissed] = function() {
+                            }, t[De.a.TopNewVideosYouMayHaveMissed] = function() {
                                 return Object(l.d)("<x:bold>Videos</x:bold> you may like", {
                                     "x:bold": function(e) {
                                         return o.createElement("strong", null, e)
@@ -1772,7 +1777,7 @@
                 }(o.Component),
                 We = Object(s.compose)(Object(re.a)("ShelfComponent", {
                     percentage: 15
-                }), Object(T.b)("ShelfComponent"), Object(De.k)())(Ve);
+                }), Object(T.b)("ShelfComponent"), Object(Oe.k)())(Ve);
             var Be = Object(v.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
@@ -1790,11 +1795,11 @@
                             requestID: t.props.initialRequestID
                         }, t.trackRecRequest = function(e) {
                             var t = {
-                                endpoint: De.d.Live,
+                                endpoint: Oe.d.Live,
                                 requestID: e,
-                                section: De.c.TwitchHome
+                                section: Oe.c.TwitchHome
                             };
-                            Object(De.j)(t)
+                            Object(Oe.j)(t)
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -1806,7 +1811,7 @@
                                 r && r.node && r.node.content && r.node.content.edges && t.push(r.node.content.edges.length)
                             }
                             if (this.props.itemsToDisplay * Qe > Math.min.apply(Math, t)) {
-                                var a = Object(De.f)();
+                                var a = Object(Oe.f)();
                                 this.props.loadMore(a), this.trackRecRequest(a), this.setState({
                                     requestID: a
                                 })
@@ -1934,7 +1939,7 @@
                                 itemsToDisplay: i
                             }) : t.setState({
                                 initialItemsToFetch: i * Qe,
-                                initialRequestID: Object(De.f)(),
+                                initialRequestID: Object(Oe.f)(),
                                 itemsToDisplay: i
                             })
                         }, t
@@ -2241,6 +2246,8 @@
                 return i.PageviewMedium
             }), n.o(i, "SpadeEventType") && n.d(t, "SpadeEventType", function() {
                 return i.SpadeEventType
+            }), n.o(i, "TwitchDataType") && n.d(t, "TwitchDataType", function() {
+                return i.TwitchDataType
             })
         },
         "3sMy": function(e, t, n) {
@@ -3054,7 +3061,7 @@
             }
 
             function s() {
-                return Object(i.d)("Other", "FeedbackReason")
+                return Object(i.d)("Other", "FeedbackReasonOther")
             }
 
             function l() {
@@ -3137,25 +3144,27 @@
                         }
                         return i.__extends(n, t), n.prototype.render = function() {
                             var t = this.context.cardIDtoItemTrackingIDMap && this.props.contentEdge.node && this.context.cardIDtoItemTrackingIDMap[this.props.contentEdge.node.id],
-                                n = this.props,
-                                o = n.itemPosition,
-                                s = n.rowPosition,
-                                l = n.shelf,
-                                c = Object(a.g)(l.title).rowName,
-                                d = {
+                                n = this.context.cardIDtoRequestIDMap && this.props.contentEdge.node && this.context.cardIDtoRequestIDMap[this.props.contentEdge.node.id],
+                                o = this.props,
+                                s = o.itemPosition,
+                                l = o.rowPosition,
+                                c = o.shelf,
+                                d = Object(a.g)(c.title).rowName,
+                                u = {
                                     trackImpression: this.trackImpression,
                                     trackRecFeedbackPreModalClick: this.context.trackRecFeedbackPreModalClick,
                                     trackRecFeedbackClickStep: this.context.trackRecFeedbackClickStep,
                                     trackRecFeedbackClickStepPostSubmit: this.context.trackRecFeedbackClickStepPostSubmit,
                                     trackClick: this.trackClick,
+                                    itemRequestID: n,
                                     shelfCardTrackingProps: {
                                         item_tracking_id: t || null,
-                                        item_position: o,
-                                        row_name: c,
-                                        row_position: s
+                                        item_position: s,
+                                        row_name: d,
+                                        row_position: l
                                     }
                                 };
-                            return r.createElement(e, i.__assign({}, this.props, d))
+                            return r.createElement(e, i.__assign({}, this.props, u))
                         }, n.contextTypes = o.a, n
                     }(r.Component)
                 }
@@ -3913,8 +3922,8 @@
                         })))
                     }, t
                 }(r.Component)),
-                E = Object(T.b)("PreviewCardThumbnail")(_),
-                I = (n("80G/"), function(e) {
+                I = Object(T.b)("PreviewCardThumbnail")(_),
+                E = (n("80G/"), function(e) {
                     var t = null;
                     return e.subtitles && e.subtitles.length > 0 && (t = e.subtitles.map(function(e, t) {
                         return r.createElement(s.Xa, {
@@ -3945,8 +3954,8 @@
                     }, t))
                 }),
                 R = n("H1ft"),
-                O = n("ZbA5"),
-                D = n("QVaV"),
+                D = n("ZbA5"),
+                O = n("QVaV"),
                 N = n("hyVY"),
                 x = n("MXoD"),
                 M = n("0LAi");
@@ -4060,7 +4069,7 @@
                             to: Object(x.a)(this.getTrackingContext(h.PageviewContent.VideoThumbnail), this.props.linkTo),
                             onClick: this.props.onThumbnailClick || this.props.onClick,
                             "data-a-target": "preview-card-image-link"
-                        }, this.props.thumbnailImageProps && r.createElement(E, {
+                        }, this.props.thumbnailImageProps && r.createElement(I, {
                             staticImageProps: this.props.thumbnailImageProps,
                             animatedImageProps: L(this.props) && this.props.animatedImageProps || void 0,
                             trackImageLatency: this.props.trackImageLatency
@@ -4086,7 +4095,7 @@
                         return function(e) {
                             return void 0 !== e.streamType
                         }(this.props) ? r.createElement(S, {
-                            topLeft: r.createElement(O.a, {
+                            topLeft: r.createElement(D.a, {
                                 type: this.props.streamType,
                                 hosting: !!this.props.hostedByChannelLogin
                             }),
@@ -4165,7 +4174,7 @@
                         var e = null,
                             t = [];
                         return this.shouldShowGameBalloon(this.props) || t.push({
-                            text: Object(D.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
+                            text: Object(O.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
                             linkTo: Object(x.a)(this.getTrackingContext(h.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
                             onClick: this.props.onChannelLoginClick,
                             automationSelector: "preview-card-channel-link"
@@ -4181,7 +4190,7 @@
                             linkTo: Object(x.a)(this.getTrackingContext(h.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             automationSelector: "preview-card-game-link"
-                        }), r.createElement(r.Fragment, null, r.createElement(I, {
+                        }), r.createElement(r.Fragment, null, r.createElement(E, {
                             title: this.props.title,
                             onClick: this.props.onVideoTitleClick || this.props.onClick,
                             linkTo: Object(x.a)(this.getTrackingContext(h.PageviewContent.VideoTitle), this.props.linkTo),
@@ -5028,24 +5037,24 @@
                 w = n("vhpE"),
                 T = n("bq0i"),
                 _ = n("yR8l"),
-                E = n("4rCz"),
-                I = n("ndwU");
+                I = n("4rCz"),
+                E = n("ndwU");
             ! function(e) {
                 e[e.View = 0] = "View", e[e.Report = 1] = "Report", e[e.Delete = 2] = "Delete", e[e.DeleteAll = 3] = "DeleteAll", e[e.Ban = 4] = "Ban", e[e.Timeout = 5] = "Timeout"
             }(i || (i = {}));
             var R = n("Ue10"),
-                O = n("WsU7"),
-                D = [i.Delete, i.DeleteAll],
+                D = n("WsU7"),
+                O = [i.Delete, i.DeleteAll],
                 N = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
-                        return n.clipsMaintenance = Object(I.a)(), n.renderMenuItem = function(e) {
+                        return n.clipsMaintenance = Object(E.a)(), n.renderMenuItem = function(e) {
                             var t = n.menuData.get(e);
                             return e && t ? c.createElement(R.Ua, {
                                 key: t.display,
                                 onClick: t.destinationHandler,
                                 "data-a-target": "clip-moderation-button-" + t.display,
-                                disabled: n.clipsMaintenance && D.includes(e)
+                                disabled: n.clipsMaintenance && O.includes(e)
                             }, c.createElement(R.Xa, {
                                 padding: {
                                     x: 1,
@@ -5054,31 +5063,31 @@
                             }, t.display)) : null
                         }, n.menuData = new Map([
                             [i.Report, {
-                                display: Object(E.d)("Report", "ModerationMenu"),
+                                display: Object(I.d)("Report", "ModerationMenu"),
                                 destinationHandler: function() {
                                     return n.props.updateModalViewState(i.Report)
                                 }
                             }],
                             [i.Delete, {
-                                display: Object(E.d)("Delete", "ModerationMenu"),
+                                display: Object(I.d)("Delete", "ModerationMenu"),
                                 destinationHandler: function() {
                                     return n.props.updateModalViewState(i.Delete)
                                 }
                             }],
                             [i.DeleteAll, {
-                                display: Object(E.d)("Delete All Clips from Video", "ModerationMenu"),
+                                display: Object(I.d)("Delete All Clips from Video", "ModerationMenu"),
                                 destinationHandler: function() {
                                     return n.props.updateModalViewState(i.DeleteAll)
                                 }
                             }],
                             [i.Ban, {
-                                display: Object(E.d)("Ban User", "ModerationMenu"),
+                                display: Object(I.d)("Ban User", "ModerationMenu"),
                                 destinationHandler: function() {
                                     return n.props.updateModalViewState(i.Ban)
                                 }
                             }],
                             [i.Timeout, {
-                                display: Object(E.d)("Timeout User (24 hr)", "ModerationMenu"),
+                                display: Object(I.d)("Timeout User (24 hr)", "ModerationMenu"),
                                 destinationHandler: function() {
                                     return n.props.updateModalViewState(i.Timeout)
                                 }
@@ -5102,7 +5111,7 @@
                         }, c.createElement(T.a, null, c.createElement(R.z, {
                             type: R.F.Hollow,
                             icon: R.tb.More,
-                            ariaLabel: Object(E.d)("More Options", "ModerationMenu"),
+                            ariaLabel: Object(I.d)("More Options", "ModerationMenu"),
                             "data-a-target": "moderation-menu-button"
                         }), c.createElement(R.u, {
                             direction: R.v.TopRight
@@ -5116,7 +5125,7 @@
                         return e.map(function(e) {
                             return t.renderMenuItem(e)
                         })
-                    }, t = s.__decorate([Object(_.a)(O), Object(h.b)("ModerationMenu")], t)
+                    }, t = s.__decorate([Object(_.a)(D), Object(h.b)("ModerationMenu")], t)
                 }(c.Component),
                 x = n("MLDe"),
                 M = (n("n/Dx"), 2e3),
@@ -7074,7 +7083,7 @@
                         return Object(c.d)("being hateful, harassing, or abusive", "ReportModalWizard")
                     }
                 },
-                E = {
+                I = {
                     input_description: {
                         getTitle: function() {
                             return Object(c.d)("Could you provide more detail about this issue? You may include links to videos, clips, and content outside Twitch.", "ReportModalWizard")
@@ -7645,7 +7654,7 @@
                         value: "repeat messages"
                     }
                 },
-                I = function(e) {
+                E = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onChange = function(e) {
@@ -7748,7 +7757,7 @@
             ! function(e) {
                 e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
             }(T || (T = {}));
-            var O, D, N, x = {
+            var D, O, N, x = {
                     contentGeneral: function() {
                         return Object(c.d)("What would you like to report?", "ReportModalWizard")
                     },
@@ -7812,17 +7821,17 @@
                 },
                 j = {
                     socialMedia: a.__assign({}, P, {
-                        items: [E.endBlurb_socialmedia]
+                        items: [I.endBlurb_socialmedia]
                     }),
                     violence: a.__assign({}, P, {
-                        items: [E.endBlurb_threat]
+                        items: [I.endBlurb_threat]
                     }),
                     legal: {
                         getTitle: M.thanksConcern,
                         getDescription: function() {
                             return Object(c.d)("To submit a claim or report a violation of this type, you will need to follow the steps listed on the relevant page below.", "ReportModalWizard")
                         },
-                        items: [E.endLink_DMCA, E.endLink_trademark, E.endLink_devAgreement],
+                        items: [I.endLink_DMCA, I.endLink_trademark, I.endLink_devAgreement],
                         type: T.Info,
                         value: "ip end"
                     },
@@ -7831,7 +7840,7 @@
                         getDescription: function() {
                             return Object(c.d)("If you know the user personally, and you believe them to be in danger, please contact their local authorities immediately. The link below contains some general information that may be of use.", "ReportModalWizard")
                         },
-                        items: [E.endLink_selfharm],
+                        items: [I.endLink_selfharm],
                         type: T.Info,
                         value: "selfharm end"
                     },
@@ -7840,7 +7849,7 @@
                         getDescription: function() {
                             return Object(c.d)("Please bring this concern to the attention of staff or security at the event if you have not already done so. More information is available at the link below.", "ReportModalWizard")
                         },
-                        items: [E.endLink_eventCoC],
+                        items: [I.endLink_eventCoC],
                         value: "twitch event end",
                         type: T.Info
                     }
@@ -7850,7 +7859,7 @@
                     getLabel: function() {
                         return Object(c.d)("Where is the problem?", "ReportModalWizard")
                     },
-                    items: [E.video, E.whisper, E.chat, E.room, E.profile, E.username, E.report_other],
+                    items: [I.video, I.whisper, I.chat, I.room, I.profile, I.username, I.report_other],
                     type: T.MultipleChoice,
                     value: "content type"
                 },
@@ -7858,21 +7867,21 @@
                     identifyUser: {
                         getTitle: M.reportVideo,
                         getLabel: x.identifyUser,
-                        items: [E.video_streamer, E.video_someoneElse, E.video_chatSomeone],
+                        items: [I.video_streamer, I.video_someoneElse, I.video_chatSomeone],
                         type: T.MultipleChoice,
                         value: "video identify user"
                     },
                     content: {
                         getTitle: M.reportVideo,
                         getLabel: x.contentGeneral,
-                        items: [E.revealPersonalInfo, E.video_labeling, E.video_inactive, E.video_general, E.report_ip, E.violateDevAgreement, E.selfharm],
+                        items: [I.revealPersonalInfo, I.video_labeling, I.video_inactive, I.video_general, I.report_ip, I.violateDevAgreement, I.selfharm],
                         type: T.MultipleChoice,
                         value: "video report reason"
                     },
                     general: {
                         getTitle: M.reportVideo,
                         getLabel: x.content,
-                        items: [E.report_username, E.violence, E.abusive, E.cheating, E.scam, E.inappropriateContent, E.evasion, E.impersonation, E.underage, E.bitsViolation],
+                        items: [I.report_username, I.violence, I.abusive, I.cheating, I.scam, I.inappropriateContent, I.evasion, I.impersonation, I.underage, I.bitsViolation],
                         type: T.MultipleChoice,
                         value: "video general report reason"
                     }
@@ -7881,14 +7890,14 @@
                     content: {
                         getTitle: M.reportMessage,
                         getLabel: x.contentGeneral,
-                        items: [E.revealPersonalInfo, E.evasion, E.spam, E.maliciousRaid, E.report_username, E.messaging_general, E.selfharm],
+                        items: [I.revealPersonalInfo, I.evasion, I.spam, I.maliciousRaid, I.report_username, I.messaging_general, I.selfharm],
                         type: T.MultipleChoice,
                         value: "message report reason"
                     },
                     general: {
                         getTitle: M.reportMessage,
                         getLabel: x.content,
-                        items: [E.report_emotes, E.violence, E.abusive, E.inappropriateContent, E.impersonation, E.underage, E.bitsViolation],
+                        items: [I.report_emotes, I.violence, I.abusive, I.inappropriateContent, I.impersonation, I.underage, I.bitsViolation],
                         type: T.MultipleChoice,
                         value: "message general report reason"
                     }
@@ -7902,14 +7911,14 @@
                     content: {
                         getTitle: M.reportProfile,
                         getLabel: x.contentGeneral,
-                        items: [E.revealPersonalInfo, E.inappropriateBadge, E.inappropriateExtension, E.noModeration, E.profile_general, E.report_ip, E.violateDevAgreement, E.selfharm],
+                        items: [I.revealPersonalInfo, I.inappropriateBadge, I.inappropriateExtension, I.noModeration, I.profile_general, I.report_ip, I.violateDevAgreement, I.selfharm],
                         type: T.MultipleChoice,
                         value: "profile report reason"
                     },
                     general: {
                         getTitle: M.reportProfile,
                         getLabel: x.content,
-                        items: [E.report_username, E.violence, E.abusive, E.scam, E.inappropriateContent, E.evasion, E.impersonation, E.underage, E.bitsViolation],
+                        items: [I.report_username, I.violence, I.abusive, I.scam, I.inappropriateContent, I.evasion, I.impersonation, I.underage, I.bitsViolation],
                         type: T.MultipleChoice,
                         value: "profile general report reason"
                     }
@@ -7921,23 +7930,23 @@
                         }, "ReportModalWizard")
                     },
                     getLabel: x.identifyUser,
-                    items: [E.report_channelOwner, E.report_member],
+                    items: [I.report_channelOwner, I.report_member],
                     value: "room report user",
                     type: T.MultipleChoice
                 },
                 B = {
                     getTitle: M.tellUsMore,
-                    items: [E.input_description],
+                    items: [I.input_description],
                     type: T.Confirm,
                     value: "tell us more"
                 },
                 z = {
                     banEvasion: a.__assign({}, B, {
-                        items: [E.input_usernames, E.input_description],
+                        items: [I.input_usernames, I.input_description],
                         value: "ban evasion tell us more"
                     }),
                     socialMedia: a.__assign({}, B, {
-                        items: [E.input_link, E.input_connection, E.input_description],
+                        items: [I.input_link, I.input_connection, I.input_description],
                         nextCard: j.socialMedia,
                         value: "social media tell us more"
                     })
@@ -7946,7 +7955,7 @@
                     content: {
                         getTitle: M.reportAbusive,
                         getLabel: x.relevantStatements,
-                        items: [E.hateSpeech, E.harassment, E.abusiveViolence, E.commitingViolence, E.swatting, E.personalInfo],
+                        items: [I.hateSpeech, I.harassment, I.abusiveViolence, I.commitingViolence, I.swatting, I.personalInfo],
                         type: T.MultipleChoice,
                         value: "abuse type"
                     },
@@ -7959,7 +7968,7 @@
                         getLabel: function() {
                             return Object(c.d)("Are the threats or actions directed at you or someone else?", "ReportModalWizard")
                         },
-                        items: [E.threat_me, E.threat_person, E.threat_group, E.threat_selfharm],
+                        items: [I.threat_me, I.threat_person, I.threat_group, I.threat_selfharm],
                         type: T.MultipleChoice,
                         value: "violence type"
                     }
@@ -7974,7 +7983,7 @@
                         getLabel: function() {
                             return Object(c.d)("Where did the problem happen?", "ReportModalWizard")
                         },
-                        items: [E.location_onTwitch, E.location_anotherSite, E.location_TwitchEvent],
+                        items: [I.location_onTwitch, I.location_anotherSite, I.location_TwitchEvent],
                         type: T.MultipleChoice,
                         value: "off-site conduct location"
                     },
@@ -7988,17 +7997,17 @@
                         getDescription: function() {
                             return Object(c.d)("Please note that incidents reported through this form must involve Twitch community members. If possible, please submit a report to the site or service where the incident occurred as well.", "ReportModalWizard")
                         },
-                        items: [E.external_incitingRaids, E.external_threatening, E.external_harassment],
+                        items: [I.external_incitingRaids, I.external_threatening, I.external_harassment],
                         type: T.MultipleChoice,
                         nextCard: z.socialMedia,
                         value: "external site conduct"
                     },
                     external_violence: a.__assign({}, G.violence, {
-                        items: [E.threat_me, E.threat_person, E.threat_group],
+                        items: [I.threat_me, I.threat_person, I.threat_group],
                         nextCard: z.socialMedia
                     }),
                     external_abusive: a.__assign({}, G.content, {
-                        items: [E.hateSpeech, E.harassment, E.external_abusiveViolence, E.external_commitingViolence, E.swatting, E.personalInfo],
+                        items: [I.hateSpeech, I.harassment, I.external_abusiveViolence, I.external_commitingViolence, I.swatting, I.personalInfo],
                         nextCard: z.socialMedia
                     })
                 },
@@ -8009,7 +8018,7 @@
                         }, "ReportModalWizard")
                     },
                     getLabel: x.contentGeneral,
-                    items: [E.spam_bot, E.spam_scam, E.spam_repeated],
+                    items: [I.spam_bot, I.spam_scam, I.spam_repeated],
                     type: T.MultipleChoice,
                     value: "spam type"
                 },
@@ -8020,7 +8029,7 @@
                         }, "ReportModalWizard")
                     },
                     getLabel: x.relevantStatements,
-                    items: [E.inappropriate_game, E.gory, E.sexuallyViolent, E.childAnimal, E.pornographic, E.suggestive, E.nudity, E.other],
+                    items: [I.inappropriate_game, I.gory, I.sexuallyViolent, I.childAnimal, I.pornographic, I.suggestive, I.nudity, I.other],
                     type: T.MultipleChoice,
                     value: "inappropriate content type"
                 },
@@ -8034,7 +8043,7 @@
                         return Object(c.d)("What kind of ban are they evading?", "ReportModalWizard")
                     },
                     value: "ban type",
-                    items: [E.evasion_chat, E.evasion_sitewide, E.evasion_messaging],
+                    items: [I.evasion_chat, I.evasion_sitewide, I.evasion_messaging],
                     type: T.MultipleChoice,
                     nextCard: z.banEvasion
                 },
@@ -8050,7 +8059,7 @@
                     getDescription: function() {
                         return Object(c.d)("Parody, cosplay, and other portrayals without the intent to deceive or defraud are allowed under Twitch's Community Guidelines. If you would still like to submit a report, please continue.", "ReportModalWizard")
                     },
-                    items: [E.impersonation_me, E.impersonation_brand, E.impersonation_other],
+                    items: [I.impersonation_me, I.impersonation_brand, I.impersonation_other],
                     type: T.MultipleChoice,
                     value: "impersonation type"
                 },
@@ -8202,7 +8211,7 @@
                                     displacedSelections: t.state.displacedSelections.slice(0, -1),
                                     reportContext: o
                                 }, function() {
-                                    return t.trackNavigation(D.Next, e.value)
+                                    return t.trackNavigation(O.Next, e.value)
                                 })
                             }
                         }, t.createReportDescription = function() {
@@ -8244,7 +8253,7 @@
                                                         userTextInput: {},
                                                         error: ""
                                                     }, function() {
-                                                        return r.trackNavigation(D.Submit)
+                                                        return r.trackNavigation(O.Submit)
                                                     });
                                                     break;
                                                 case R.a.UserError:
@@ -8281,7 +8290,7 @@
                                         error: "",
                                         targetUnknown: i
                                     }, function() {
-                                        return o.trackNavigation(D.Back, e.value)
+                                        return o.trackNavigation(O.Back, e.value)
                                     }), [2]
                                 })
                             })
@@ -8345,7 +8354,7 @@
                             margin: {
                                 y: 1
                             }
-                        }, o.createElement(I, {
+                        }, o.createElement(E, {
                             currentCard: this.state.currentCard,
                             currentSelection: this.state.currentSelection,
                             targetUser: this.props.targetUser,
@@ -8360,7 +8369,7 @@
                 se = n("s8Ou"),
                 le = n("0hI/");
             n.d(t, "c", function() {
-                    return D
+                    return O
                 }), n.d(t, "a", function() {
                     return N
                 }), n.d(t, "b", function() {
@@ -8368,10 +8377,10 @@
                 }),
                 function(e) {
                     e.Close = "close", e.Open = "open", e.Submit = "submit_report", e.ToggleSettings = "modal_settings"
-                }(O || (O = {})),
+                }(D || (D = {})),
                 function(e) {
                     e.Back = "back", e.Close = "close", e.Open = "open", e.Next = "next", e.Submit = "submit_report", e.ToggleSettings = "modal_settings"
-                }(D || (D = {})),
+                }(O || (O = {})),
                 function(e) {
                     e.Close = "close", e.Finish = "finish"
                 }(N || (N = {}));
@@ -8401,7 +8410,7 @@
                                         return a.sent(), this.setState({
                                             submitStatus: R.a.Success
                                         }, function() {
-                                            l.state.showWizard || l.trackAction(O.Submit)
+                                            l.state.showWizard || l.trackAction(D.Submit)
                                         }), [3, 4];
                                     case 3:
                                         return s = a.sent(), c.k.error(s, "ReportUser Mutation failed."), this.setState({
@@ -8431,11 +8440,11 @@
                             userBlocked: !1
                         })
                     }, n.trackOpen = function(e) {
-                        n.state.openEventSent || (n.state.showWizard ? n.trackWizardAction(D.Open, void 0, e) : n.trackAction(O.Open), n.setState({
+                        n.state.openEventSent || (n.state.showWizard ? n.trackWizardAction(O.Open, void 0, e) : n.trackAction(D.Open), n.setState({
                             openEventSent: !0
                         }))
                     }, n.trackClose = function(e, t) {
-                        n.state.closeEventSent || (n.state.showWizard ? n.trackWizardAction(D.Close, t, void 0, e) : n.trackAction(O.Close), n.setState({
+                        n.state.closeEventSent || (n.state.showWizard ? n.trackWizardAction(O.Close, t, void 0, e) : n.trackAction(D.Close), n.setState({
                             closeEventSent: !0
                         }))
                     }, n.trackWizardAction = function(e, t, i, r) {
@@ -8803,16 +8812,16 @@
                 return Object(r.a)(p, {
                     props: function(n) {
                         return {
-                            banUserMutation: function(r, p) {
-                                return void 0 === p && (p = null), i.__awaiter(t, void 0, void 0, function() {
+                            banUserMutation: function(r, p, m) {
+                                return void 0 === p && (p = null), void 0 === m && (m = null), i.__awaiter(t, void 0, void 0, function() {
                                     var t;
-                                    return i.__generator(this, function(m) {
-                                        switch (m.label) {
+                                    return i.__generator(this, function(h) {
+                                        switch (h.label) {
                                             case 0:
                                                 if (t = e(n.ownProps).channelID, !n.mutate) return [3, 5];
-                                                m.label = 1;
+                                                h.label = 1;
                                             case 1:
-                                                return m.trys.push([1, 3, , 4]), [4, n.mutate({
+                                                return h.trys.push([1, 3, , 4]), [4, n.mutate({
                                                     variables: {
                                                         input: {
                                                             channelID: t,
@@ -8842,7 +8851,8 @@
                                                                     t -= p * s, n += p + "m"
                                                                 }
                                                                 return t > 0 && (n += t + "s"), n
-                                                            }(p)
+                                                            }(p),
+                                                            reason: m
                                                         }
                                                     },
                                                     update: function(e, n) {
@@ -8868,9 +8878,9 @@
                                                     }
                                                 })];
                                             case 2:
-                                                return [2, m.sent().data];
+                                                return [2, h.sent().data];
                                             case 3:
-                                                throw m.sent(), new Error("Unable to ban user");
+                                                throw h.sent(), new Error("Unable to ban user");
                                             case 4:
                                                 return [3, 6];
                                             case 5:
@@ -9452,7 +9462,7 @@
                         })
                     }, t
                 }(r.Component),
-                E = Object(S.compose)(Object(u.b)("ClipsModalDeleteAll"), v({
+                I = Object(S.compose)(Object(u.b)("ClipsModalDeleteAll"), v({
                     props: function(e) {
                         return {
                             deleteAllClips: function(t, n) {
@@ -9513,7 +9523,7 @@
                         }
                     }
                 }))(_),
-                I = {
+                E = {
                     isLoading: !1,
                     hasErrored: !1,
                     hasSucceeded: !1
@@ -9552,7 +9562,7 @@
                                     }
                                 })
                             })
-                        }, n.state = I, n
+                        }, n.state = E, n
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = r.createElement(s.W, {
@@ -9575,7 +9585,7 @@
                         })
                     }, t
                 }(r.Component),
-                O = v({
+                D = v({
                     props: function(e) {
                         return {
                             deleteClips: function() {
@@ -9611,9 +9621,9 @@
             }), n.d(t, "d", function() {
                 return C
             }), n.d(t, "e", function() {
-                return E
+                return I
             }), n.d(t, "c", function() {
-                return O
+                return D
             })
         },
         "kEr+": function(e, t, n) {
@@ -9785,7 +9795,6 @@
                     feedbacked_item_id: null,
                     feedback_action: null,
                     feedback_reason: null,
-                    item_name: null,
                     click_step: e.clickStep,
                     clicked_item_id: e.clickedItemID,
                     item_tracking_id: e.itemTrackingID,
@@ -9796,7 +9805,8 @@
                     reason_target_type: e.reasonTargetType,
                     row_name: e.rowName,
                     model_tracking_id: e.modelTrackingID,
-                    clicked_content_type: e.clickedContentType
+                    clicked_content_type: e.clickedContentType,
+                    item_name: e.itemName
                 })
             }
 
@@ -9804,7 +9814,6 @@
                 u({
                     section: e.clickStep === i.SettingsChange ? null : a.TwitchHome,
                     item_page: e.clickStep === i.SettingsChange ? d.PageviewMedium.Settings : d.PageviewMedium.TwitchHome,
-                    item_name: null,
                     click_step: e.clickStep,
                     feedback_type: e.feedbackType,
                     feedbacked_item_id: e.feedbackedItemID,
@@ -9819,7 +9828,8 @@
                     reason_target_type: e.reasonTargetType,
                     row_name: e.rowName,
                     model_tracking_id: e.modelTrackingID,
-                    clicked_content_type: e.clickedContentType
+                    clicked_content_type: e.clickedContentType,
+                    item_name: e.itemName
                 })
             }
 
@@ -11454,6 +11464,7 @@
                 l = n("kRI/"),
                 c = {
                     cardIDtoItemTrackingIDMap: r.object,
+                    cardIDtoRequestIDMap: r.object,
                     trackTitleClick: r.func,
                     trackTitleImpression: r.func,
                     trackImpression: r.func,
@@ -11477,7 +11488,8 @@
                                     trackRecFeedbackClickStepPostSubmit: n.trackRecFeedbackClickStepPostSubmit,
                                     trackImpression: n.trackImpression,
                                     trackClick: n.trackClick,
-                                    cardIDtoItemTrackingIDMap: n.state.cardIDtoItemTrackingIDMap
+                                    cardIDtoItemTrackingIDMap: n.state.cardIDtoItemTrackingIDMap,
+                                    cardIDtoRequestIDMap: n.state.cardIDtoRequestIDMap
                                 }
                             }, n.mapShelfCardsToRequestIDs = function(e, t, n) {
                                 return void 0 === n && (n = {}), e.reduce(function(e, n) {
@@ -11591,31 +11603,32 @@
                                         };
                                     Object(s.h)(f, r)
                                 }
-                            }, n.trackRecFeedbackPreModalClick = function(e, t, r, a) {
-                                var o, c = n.state.cardIDtoItemTrackingIDMap,
-                                    d = Object(s.g)(t.title),
-                                    u = d.reasonType,
-                                    p = d.reasonTarget,
-                                    m = d.reasonTargetType,
-                                    h = d.rowName,
-                                    g = Object(s.e)(r),
-                                    f = g.itemID,
-                                    v = g.contentType,
-                                    k = f || t.id,
-                                    b = {
+                            }, n.trackRecFeedbackPreModalClick = function(e, t, r, a, o) {
+                                var c, d = n.state.cardIDtoItemTrackingIDMap,
+                                    u = Object(s.g)(t.title),
+                                    p = u.reasonType,
+                                    m = u.reasonTarget,
+                                    h = u.reasonTargetType,
+                                    g = u.rowName,
+                                    f = Object(s.e)(r),
+                                    v = f.itemID,
+                                    k = f.contentType,
+                                    b = v || t.id,
+                                    y = {
                                         clickStep: e,
-                                        itemTrackingID: r && r.node ? c[r.node.id] : null,
+                                        itemTrackingID: r && r.node ? d[r.node.id] : null,
                                         itemPosition: a,
                                         rowPosition: n.props.position,
-                                        reasonType: u,
-                                        reasonTarget: p,
-                                        reasonTargetType: m,
-                                        rowName: h,
+                                        reasonType: p,
+                                        reasonTarget: m,
+                                        reasonTargetType: h,
+                                        rowName: g,
+                                        itemName: o,
                                         modelTrackingID: r ? r.trackingID : null,
-                                        clickedContentType: v || s.b.Shelf,
-                                        clickedItemID: f || t.id
+                                        clickedContentType: k || s.b.Shelf,
+                                        clickedItemID: v || t.id
                                     };
-                                n.feedbackDataMap = i.__assign({}, n.feedbackDataMap, ((o = {})[k] = b, o)), Object(l.c)(b)
+                                n.feedbackDataMap = i.__assign({}, n.feedbackDataMap, ((c = {})[b] = y, c)), Object(l.c)(y)
                             }, n.trackRecFeedbackClickStep = function(e, t) {
                                 var r, a = i.__assign({}, n.feedbackDataMap[e], {
                                     clickStep: t.clickStep,

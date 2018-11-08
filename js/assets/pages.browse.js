@@ -367,6 +367,8 @@
                 return a.PageviewMedium
             }), n.o(a, "SpadeEventType") && n.d(t, "SpadeEventType", function() {
                 return a.SpadeEventType
+            }), n.o(a, "TwitchDataType") && n.d(t, "TwitchDataType", function() {
+                return a.TwitchDataType
             })
         },
         "3sMy": function(e, t, n) {
@@ -726,7 +728,7 @@
                 D = n("C29h"),
                 E = n("TCeE"),
                 F = n("AZIu"),
-                O = (n("TFM5"), function(e) {
+                x = (n("TFM5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.addTagFilter = function(e, n) {
@@ -767,7 +769,7 @@
                         })))
                     }, t
                 }(f.Component));
-            var x = Object(l.connect)(function(e, t) {
+            var O = Object(l.connect)(function(e, t) {
                     var n = t.showingType === s.LiveChannels ? h.a.LiveChannels : h.a.Categories;
                     return {
                         tagFilters: Object(h.b)(e, n)
@@ -777,11 +779,11 @@
                         addTagFilter: g.e,
                         removeTagFilter: g.h
                     }, e)
-                })(O),
+                })(x),
                 P = n("JoTo"),
                 L = n("cnlr"),
-                A = n("y5I9"),
-                R = function(e) {
+                R = n("y5I9"),
+                A = function(e) {
                     return e === u.a.DirectoryTag || e === u.a.PopularTag
                 },
                 j = n("G1iw"),
@@ -833,16 +835,16 @@
                                 return !!a && e.id === a.id
                             }) || (i = [a].concat(i)));
                             var o = p(n.match.path) ? h.a.LiveChannels : h.a.Categories;
-                            Object(A.b)(n.tagFilters, i) && t.props.changeTagFilters(i, o), Object(A.a)(n.languageTagFilters, r) && t.props.replaceLanguageTags(r)
+                            Object(R.b)(n.tagFilters, i) && t.props.changeTagFilters(i, o), Object(R.a)(n.languageTagFilters, r) && t.props.replaceLanguageTags(r)
                         }, t.updateHistory = function(e, n) {
-                            if (void 0 === n && (n = !1), R(e.match.path) && 1 === e.tagFilters.length) t.props.history.replace({
+                            if (void 0 === n && (n = !1), A(e.match.path) && 1 === e.tagFilters.length) t.props.history.replace({
                                 pathname: e.location.pathname,
                                 state: {
                                     languageTagFilters: e.languageTagFilters,
                                     tagFilters: e.tagFilters
                                 }
                             });
-                            else if (Object(A.b)(e.tagFilters, t.getLocationStateTagFilters(e)) || Object(A.a)(e.languageTagFilters, t.getLocationStateLanguageTags(e))) {
+                            else if (Object(R.b)(e.tagFilters, t.getLocationStateTagFilters(e)) || Object(R.a)(e.languageTagFilters, t.getLocationStateLanguageTags(e))) {
                                 var a = e.tagFilters.length + e.languageTagFilters.length;
                                 t.props.history[n ? "replace" : "push"]({
                                     pathname: e.location.pathname,
@@ -856,21 +858,21 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.setBrowseType(this.props.match.path), R(this.props.match.path) ? this.updateTagFiltersFromPath(this.props) : this.setTagFilters({
+                        this.setBrowseType(this.props.match.path), A(this.props.match.path) ? this.updateTagFiltersFromPath(this.props) : this.setTagFilters({
                             props: this.props,
                             getTagsFromRedux: !0
                         }), this.updateHistory(this.props, !0)
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         var t = this.props.match.path,
                             n = e.match.path;
-                        t !== n ? (this.setBrowseType(n), R(n) ? this.updateTagFiltersFromPath(e) : this.setTagFilters({
+                        t !== n ? (this.setBrowseType(n), A(n) ? this.updateTagFiltersFromPath(e) : this.setTagFilters({
                             props: e,
                             getTagsFromRedux: !0
                         })) : this.props.location.search !== e.location.search ? this.setTagFilters({
                             props: e
-                        }) : R(n) && this.updateTagFiltersFromPath(e), (Object(A.b)(this.props.tagFilters, e.tagFilters) || Object(A.a)(this.props.languageTagFilters, e.languageTagFilters)) && this.updateHistory(e, t !== n)
+                        }) : A(n) && this.updateTagFiltersFromPath(e), (Object(R.b)(this.props.tagFilters, e.tagFilters) || Object(R.a)(this.props.languageTagFilters, e.languageTagFilters)) && this.updateHistory(e, t !== n)
                     }, t.prototype.render = function() {
-                        return f.createElement(_.Xa, null, this.renderAds(), f.createElement(x, {
+                        return f.createElement(_.Xa, null, this.renderAds(), f.createElement(O, {
                             showingType: this.getActiveShowing()
                         }), f.createElement(_.Xa, {
                             padding: {
@@ -983,25 +985,27 @@
                         }
                         return a.__extends(n, t), n.prototype.render = function() {
                             var t = this.context.cardIDtoItemTrackingIDMap && this.props.contentEdge.node && this.context.cardIDtoItemTrackingIDMap[this.props.contentEdge.node.id],
-                                n = this.props,
-                                o = n.itemPosition,
-                                s = n.rowPosition,
-                                c = n.shelf,
-                                l = Object(i.g)(c.title).rowName,
-                                d = {
+                                n = this.context.cardIDtoRequestIDMap && this.props.contentEdge.node && this.context.cardIDtoRequestIDMap[this.props.contentEdge.node.id],
+                                o = this.props,
+                                s = o.itemPosition,
+                                c = o.rowPosition,
+                                l = o.shelf,
+                                d = Object(i.g)(l.title).rowName,
+                                u = {
                                     trackImpression: this.trackImpression,
                                     trackRecFeedbackPreModalClick: this.context.trackRecFeedbackPreModalClick,
                                     trackRecFeedbackClickStep: this.context.trackRecFeedbackClickStep,
                                     trackRecFeedbackClickStepPostSubmit: this.context.trackRecFeedbackClickStepPostSubmit,
                                     trackClick: this.trackClick,
+                                    itemRequestID: n,
                                     shelfCardTrackingProps: {
                                         item_tracking_id: t || null,
-                                        item_position: o,
-                                        row_name: l,
-                                        row_position: s
+                                        item_position: s,
+                                        row_name: d,
+                                        row_position: c
                                     }
                                 };
-                            return r.createElement(e, a.__assign({}, this.props, d))
+                            return r.createElement(e, a.__assign({}, this.props, u))
                         }, n.contextTypes = o.a, n
                     }(r.Component)
                 }
@@ -1296,7 +1300,7 @@
                 }))(N),
                 E = n("sLmD"),
                 F = n("AZIu"),
-                O = n("4HIT");
+                x = n("4HIT");
             n("97MP");
             ! function(e) {
                 e[e.TagAll = 0] = "TagAll", e[e.TagAllMinusAutomation = 1] = "TagAllMinusAutomation", e[e.TagCategory = 2] = "TagCategory", e[e.StreamTag = 3] = "StreamTag"
@@ -1304,7 +1308,7 @@
             function(e) {
                 e.SearchContent = "tag-search-search-content", e.SearchDropdown = "search-dropdown-selector"
             }(C || (C = {}));
-            var x = function(e) {
+            var O = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -1343,7 +1347,7 @@
                         }, n.setTagSearchRef = function(e) {
                             n.tagSearch = e
                         }, n.onTagResultSelected = function(e, t) {
-                            if (n.toggleTagSearch(!1), n.clearSearchTerm(), n.props.type === b.TagCategory && t === _.b.All ? c.p.history.push(O.a.Popular) : n.props.type === b.TagAll && t === _.b.Category && c.p.history.push(O.a.Games), n.props.onTagClick && (n.props.onTagClick(e, t), n.props.section && n.props.numSelectedTags)) {
+                            if (n.toggleTagSearch(!1), n.clearSearchTerm(), n.props.type === b.TagCategory && t === _.b.All ? c.p.history.push(x.a.Popular) : n.props.type === b.TagAll && t === _.b.Category && c.p.history.push(x.a.Games), n.props.onTagClick && (n.props.onTagClick(e, t), n.props.section && n.props.numSelectedTags)) {
                                 var a = {
                                     section: n.props.section,
                                     tagPosition: n.props.numSelectedTags,
@@ -1444,13 +1448,13 @@
                         })
                     }, t
                 }(i.Component),
-                P = Object(s.compose)(o.a)(x);
+                P = Object(s.compose)(o.a)(O);
             n.d(t, "b", function() {
                 return b
             }), n.d(t, !1, function() {
                 return C
             }), n.d(t, !1, function() {
-                return x
+                return O
             }), n.d(t, "a", function() {
                 return P
             })
@@ -2102,20 +2106,20 @@
                 D = n("Bh3T"),
                 E = n("bUox"),
                 F = n("TCeE"),
-                O = n("AZIu"),
-                x = n("9x/k"),
+                x = n("AZIu"),
+                O = n("9x/k"),
                 P = n("rShu"),
                 L = n("x/sq"),
-                A = n("vuN2"),
-                R = n("yI6f"),
+                R = n("vuN2"),
+                A = n("yI6f"),
                 j = n("T2RZ"),
                 M = n("Ue10"),
                 B = n("0egc"),
-                G = Object(j.a)(l.PageviewMedium.Browse, R.b.Game, R.c.BrowseCategories)(N.a),
+                G = Object(j.a)(l.PageviewMedium.Browse, A.b.Game, A.c.BrowseCategories)(N.a),
                 W = "directory-first-item",
                 q = "directory-container",
                 U = Object(b.a)(3e5),
-                X = Object(A.a)();
+                X = Object(R.a)();
 
             function z(e) {
                 return (e.directoriesWithTags && e.directoriesWithTags.edges || []).filter(function(e) {
@@ -2142,13 +2146,13 @@
                         }, t.removeLastTag = function() {
                             var e = t.props.tagFilters[t.props.tagFilters.length - 1],
                                 n = {
-                                    section: t.props.browseType === x.a.Games ? O.a.Categories : O.a.LiveChannels,
+                                    section: t.props.browseType === O.a.Games ? x.a.Categories : x.a.LiveChannels,
                                     tagPosition: t.props.tagFilters.length - 1,
                                     searchEvent: !0,
                                     tagId: e.id,
                                     dismiss: !0
                                 };
-                            Object(O.b)(n), t.props.removeTagFilter(e, h.a.Categories)
+                            Object(x.b)(n), t.props.removeTagFilter(e, h.a.Categories)
                         }, t.onSlotAdded = function() {
                             t.setState(function(e) {
                                 var t = e.numSlotsAdded + 1;
@@ -2196,7 +2200,7 @@
                                             tags: n && n.node && n.node.tags,
                                             onClickTag: e.addTagFilter,
                                             tagFilters: e.props.tagFilters,
-                                            section: e.props.browseType === x.a.Games ? O.a.Categories : O.a.LiveChannels,
+                                            section: e.props.browseType === O.a.Games ? x.a.Categories : x.a.LiveChannels,
                                             scrollToTop: e.context.scrollToTop
                                         }),
                                         c = !1,
@@ -2346,7 +2350,7 @@
                         o.p.setPageTitle(Object(o.d)("All Games", "BrowseGamePage"))
                     }, t.prototype.render = function() {
                         return r.createElement(Q, {
-                            category: x.a.Games
+                            category: O.a.Games
                         })
                     }, t
                 }(r.Component),
@@ -3169,7 +3173,6 @@
                     feedbacked_item_id: null,
                     feedback_action: null,
                     feedback_reason: null,
-                    item_name: null,
                     click_step: e.clickStep,
                     clicked_item_id: e.clickedItemID,
                     item_tracking_id: e.itemTrackingID,
@@ -3180,7 +3183,8 @@
                     reason_target_type: e.reasonTargetType,
                     row_name: e.rowName,
                     model_tracking_id: e.modelTrackingID,
-                    clicked_content_type: e.clickedContentType
+                    clicked_content_type: e.clickedContentType,
+                    item_name: e.itemName
                 })
             }
 
@@ -3188,7 +3192,6 @@
                 u({
                     section: e.clickStep === a.SettingsChange ? null : i.TwitchHome,
                     item_page: e.clickStep === a.SettingsChange ? d.PageviewMedium.Settings : d.PageviewMedium.TwitchHome,
-                    item_name: null,
                     click_step: e.clickStep,
                     feedback_type: e.feedbackType,
                     feedbacked_item_id: e.feedbackedItemID,
@@ -3203,7 +3206,8 @@
                     reason_target_type: e.reasonTargetType,
                     row_name: e.rowName,
                     model_tracking_id: e.modelTrackingID,
-                    clicked_content_type: e.clickedContentType
+                    clicked_content_type: e.clickedContentType,
+                    item_name: e.itemName
                 })
             }
 
@@ -3975,6 +3979,7 @@
                 c = n("kRI/"),
                 l = {
                     cardIDtoItemTrackingIDMap: r.object,
+                    cardIDtoRequestIDMap: r.object,
                     trackTitleClick: r.func,
                     trackTitleImpression: r.func,
                     trackImpression: r.func,
@@ -3998,7 +4003,8 @@
                                     trackRecFeedbackClickStepPostSubmit: n.trackRecFeedbackClickStepPostSubmit,
                                     trackImpression: n.trackImpression,
                                     trackClick: n.trackClick,
-                                    cardIDtoItemTrackingIDMap: n.state.cardIDtoItemTrackingIDMap
+                                    cardIDtoItemTrackingIDMap: n.state.cardIDtoItemTrackingIDMap,
+                                    cardIDtoRequestIDMap: n.state.cardIDtoRequestIDMap
                                 }
                             }, n.mapShelfCardsToRequestIDs = function(e, t, n) {
                                 return void 0 === n && (n = {}), e.reduce(function(e, n) {
@@ -4112,31 +4118,32 @@
                                         };
                                     Object(s.h)(f, r)
                                 }
-                            }, n.trackRecFeedbackPreModalClick = function(e, t, r, i) {
-                                var o, l = n.state.cardIDtoItemTrackingIDMap,
-                                    d = Object(s.g)(t.title),
-                                    u = d.reasonType,
-                                    p = d.reasonTarget,
-                                    g = d.reasonTargetType,
-                                    m = d.rowName,
-                                    h = Object(s.e)(r),
-                                    f = h.itemID,
-                                    v = h.contentType,
-                                    k = f || t.id,
-                                    T = {
+                            }, n.trackRecFeedbackPreModalClick = function(e, t, r, i, o) {
+                                var l, d = n.state.cardIDtoItemTrackingIDMap,
+                                    u = Object(s.g)(t.title),
+                                    p = u.reasonType,
+                                    g = u.reasonTarget,
+                                    m = u.reasonTargetType,
+                                    h = u.rowName,
+                                    f = Object(s.e)(r),
+                                    v = f.itemID,
+                                    k = f.contentType,
+                                    T = v || t.id,
+                                    y = {
                                         clickStep: e,
-                                        itemTrackingID: r && r.node ? l[r.node.id] : null,
+                                        itemTrackingID: r && r.node ? d[r.node.id] : null,
                                         itemPosition: i,
                                         rowPosition: n.props.position,
-                                        reasonType: u,
-                                        reasonTarget: p,
-                                        reasonTargetType: g,
-                                        rowName: m,
+                                        reasonType: p,
+                                        reasonTarget: g,
+                                        reasonTargetType: m,
+                                        rowName: h,
+                                        itemName: o,
                                         modelTrackingID: r ? r.trackingID : null,
-                                        clickedContentType: v || s.b.Shelf,
-                                        clickedItemID: f || t.id
+                                        clickedContentType: k || s.b.Shelf,
+                                        clickedItemID: v || t.id
                                     };
-                                n.feedbackDataMap = a.__assign({}, n.feedbackDataMap, ((o = {})[k] = T, o)), Object(c.c)(T)
+                                n.feedbackDataMap = a.__assign({}, n.feedbackDataMap, ((l = {})[T] = y, l)), Object(c.c)(y)
                             }, n.trackRecFeedbackClickStep = function(e, t) {
                                 var r, i = a.__assign({}, n.feedbackDataMap[e], {
                                     clickStep: t.clickStep,

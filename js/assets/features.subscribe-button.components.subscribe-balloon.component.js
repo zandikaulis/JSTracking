@@ -722,7 +722,7 @@
                     }, t
                 }(a.Component),
                 q = Object(N.compose)(Object(l.b)("CopyableItem"))(z),
-                $ = (n("Sb+K"), function(e) {
+                Q = (n("Sb+K"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.getClaimInstructions = function() {
@@ -792,10 +792,10 @@
                         return Object(S.l)(e) ? this.renderVerticalLayout() : this.renderHorizontalLayout()
                     }, t
                 }(a.Component)),
-                Q = Object(l.b)("PrimeClaimInstructions", {
+                K = Object(l.b)("PrimeClaimInstructions", {
                     autoReportInteractive: !0
-                })($),
-                K = n("UFVY"),
+                })(Q),
+                $ = n("UFVY"),
                 Y = (n("PCo6"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -839,7 +839,7 @@
                                 height: 20
                             })), n ? Object(s.d)("Gift Claimed", "PrimeRedeem") : Object(s.d)("Claimed", "PrimeRedeem"))))
                         }, t.getPrimeClaimInstructions = function() {
-                            return a.createElement(Q, {
+                            return a.createElement(K, {
                                 claimInstructions: t.props.claimInstructions || "",
                                 orientation: t.props.orientation
                             })
@@ -919,7 +919,7 @@
                 }(a.Component)),
                 J = Object(o.compose)(Object(l.b)("PrimeRedeem", {
                     autoReportInteractive: !0
-                }), Object(u.a)(K, {
+                }), Object(u.a)($, {
                     skip: function(e) {
                         return !Object(S.k)(e.offerID)
                     },
@@ -5069,29 +5069,29 @@
                 r = n("lZdE"),
                 a = n("cpJf"),
                 o = {
-                    "^B-?\\)$": "B)",
-                    "^:-?[z|Z|\\|]$": ":|",
-                    "^:-?\\)$": ":)",
-                    "^:-?\\($": ":(",
-                    "^:-?(p|P)$": ":P",
-                    "^;-?(p|P)$": ";P",
-                    "^:-?[\\\\/]$": ":/",
-                    "^;-?\\)$": ";)",
-                    "^R-?\\)$": "R)",
-                    "^:>$": ":>",
-                    "^:&gt;$": ":>",
-                    "^[oO](_|\\.)[oO]$": "O_o",
-                    "^:-?D$": ":D",
-                    "^:-?(o|O)$": ":O",
-                    "^>\\($": ">(",
-                    "^:-?(?:7|L)$": ":7",
-                    "^:-?(S|s)$": ":S",
-                    "^#-?[\\\\/]$": "#/",
-                    "^<\\]$": "<]",
-                    "^<3$": "<3",
-                    "^&lt;3$": "<3",
-                    "^&lt;\\]$": "<]",
-                    "^&gt;\\($": ">("
+                    "B-?\\)": "B)",
+                    "\\:-?[z|Z|\\|]": ":|",
+                    "\\:-?\\)": ":)",
+                    "\\:-?\\(": ":(",
+                    "\\:-?(p|P)": ":P",
+                    "\\;-?(p|P)": ";P",
+                    "\\:-?[\\\\/]": ":/",
+                    "\\;-?\\)": ";)",
+                    "R-?\\)": "R)",
+                    ":>": ":>",
+                    "\\:\\&gt\\;": ":>",
+                    "[oO](_|\\.)[oO]": "O_o",
+                    "\\:-?D": ":D",
+                    "\\:-?(o|O)": ":O",
+                    ">\\\\(": ">(",
+                    ":-?(?:7|L)": ":7",
+                    "\\:-?(S|s)": ":S",
+                    "#-?[\\\\/]": "#/",
+                    "<\\]": "<]",
+                    "<3": "<3",
+                    "\\&lt\\;3": "<3",
+                    "\\&lt\\;\\]": "<]",
+                    "\\&gt\\;\\(": ">("
                 },
                 s = ["1.0", "2.0", "3.0"],
                 c = new Set([457, 33, 42, 0]);
@@ -6151,6 +6151,62 @@
             e.exports = n.p + "assets/random-viewer-2x-a2bc4d5bae483c0f3b9d.png"
         },
         "W5/R": function(e, t, n) {},
+        W8Fi: function(e, t, n) {
+            "use strict";
+
+            function i(e) {
+                return e.some(function(e) {
+                    return !!e.self && !!e.self.promotion
+                })
+            }
+
+            function r(e) {
+                return e.some(function(e) {
+                    return !!e.giftPromotion
+                })
+            }
+
+            function a(e) {
+                return e.some(function(e) {
+                    return !!e.self && !!e.self.paidUpgradePromotion
+                })
+            }
+
+            function o(e, t) {
+                var n;
+                return t ? n = e.giftPromotion : e.self && (n = e.self.promotion), n ? n.newPrice : e.price
+            }
+
+            function s(e, t) {
+                var n;
+                return t ? n = e.giftPromotion : e.self && (n = e.self.promotion), n ? parseInt(n.discountValue, 10) : 0
+            }
+
+            function c(e) {
+                return e.self && e.self.paidUpgradePromotion ? e.self.paidUpgradePromotion.newPrice : e.price
+            }
+
+            function u(e) {
+                return e.find(function(e) {
+                    return !!e.self && !!e.self.paidUpgradePromotion
+                }) || null
+            }
+            n.d(t, "g", function() {
+                return i
+            }), n.d(t, "e", function() {
+                return r
+            }), n.d(t, "f", function() {
+                return a
+            }), n.d(t, "c", function() {
+                return o
+            }), n.d(t, "d", function() {
+                return s
+            }), n.d(t, "a", function() {
+                return c
+            }), n.d(t, "b", function() {
+                return u
+            })
+        },
         WAGi: function(e, t, n) {},
         WGf9: function(e, t, n) {},
         Wu8b: function(e, t, n) {},
@@ -7091,10 +7147,10 @@
                 }(a.Component),
                 z = n("EEuB"),
                 q = n.n(z),
-                $ = n("/iCH"),
-                Q = n.n($),
-                K = n("/Zlu"),
-                Y = n.n(K),
+                Q = n("/iCH"),
+                K = n.n(Q),
+                $ = n("/Zlu"),
+                Y = n.n($),
                 J = n("wK7Q"),
                 Z = n.n(J),
                 ee = n("+naV"),
@@ -7160,7 +7216,7 @@
                                 "4x": ye.a
                             } : e >= 1 ? {
                                 "1x": q.a,
-                                "2x": Q.a,
+                                "2x": K.a,
                                 "4x": Y.a
                             } : {
                                 "1x": "",
@@ -7508,7 +7564,7 @@
                                 day: "numeric",
                                 month: "long"
                             })
-                        }, "CurrentGiftSubscription")))), e.giftPaidUpgrade ? e.subEndDate && a.createElement(p.Xa, {
+                        }, "CurrentGiftSubscription")))), e.pendingSubscription ? e.subEndDate && a.createElement(p.Xa, {
                             display: p.X.Flex,
                             margin: {
                                 top: .5
@@ -7518,7 +7574,7 @@
                             className: "current-subscription__gift-message",
                             "data-test-selector": _e.GiftUpgradeMessage
                         }, Object(s.d)("Your new Tier {subbedTier} Paid Subscription will begin on {subEndDate}", {
-                            subbedTier: Object(Xe.a)(e.giftPaidUpgrade.tier) || "",
+                            subbedTier: Object(Xe.a)(e.pendingSubscription.tier) || "",
                             subEndDate: Object(s.c)(Object(Me.c)(e.subEndDate.toString()), {
                                 month: "long",
                                 day: "numeric"
@@ -7553,7 +7609,7 @@
                             margin: {
                                 top: 1
                             }
-                        }, !e.giftPaidUpgrade && a.createElement(p.Xa, {
+                        }, !e.pendingSubscription && a.createElement(p.Xa, {
                             display: p.X.Inline,
                             margin: {
                                 right: 1
@@ -7683,7 +7739,7 @@
             ! function(e) {
                 e.ChannelDisplayName = "ChannelDisplayName", e.ExpiryMessage = "ExpiryMessage", e.GiftMessage = "GiftMessage", e.GiftPaidUpgradeButton = "GiftPaidUpgradeButton", e.GiftUpgradeMessage = "GiftUpgradeMessage", e.GiftSubscriptionButton = "GiftSubscriptionButton", e.Header = "Header", e.SubscriptionName = "SubscriptionName", e.SubscriptionTier = "SubscriptionTier", e.UpgradeCurrentTierButton = "UpgradeCurrentTierButton", e.UpgradeOtherTierButton = "UpgradeOtherTierButton"
             }(_e || (_e = {}));
-            var $e, Qe, Ke = function(e) {
+            var Qe, Ke, $e = function(e) {
                     return Ae.a.Prime === e.subbedTier ? a.createElement(qe, {
                         channelDisplayName: e.channelDisplayName,
                         channelLogin: e.channelLogin,
@@ -7697,7 +7753,7 @@
                     }) : e.isGift ? a.createElement(Ve, {
                         channelDisplayName: e.channelDisplayName,
                         channelProfileImageURL: e.channelProfileImageURL,
-                        giftPaidUpgrade: e.giftPaidUpgrade,
+                        pendingSubscription: e.pendingSubscription,
                         giftSender: e.giftSender,
                         handleSubMenuAction: e.handleSubMenuAction,
                         onGiftOptionsSelect: e.onGiftOptionsSelect,
@@ -7757,57 +7813,57 @@
             n("h0zH");
             ! function(e) {
                 e[e.CurrentSubscription = 0] = "CurrentSubscription", e[e.GiftOptions = 1] = "GiftOptions", e[e.GiftSelect = 2] = "GiftSelect", e[e.MysteryGiftSelect = 3] = "MysteryGiftSelect", e[e.SubOptions = 4] = "SubOptions"
-            }($e || ($e = {})),
+            }(Qe || (Qe = {})),
             function(e) {
                 e.CurrentSubscription = "CurrentSubscription", e.GiftOptions = "GiftOptions", e.GiftRecipientSearch = "GiftRecipientSearch", e.MysteryGiftBundleSelection = "MysteryGiftBundleSelection", e.SubOptions = "SubOptions"
-            }(Qe || (Qe = {}));
+            }(Ke || (Ke = {}));
             var Ze, et = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            currentPage: $e.CurrentSubscription
+                            currentPage: Qe.CurrentSubscription
                         }, t.showCurrentSubscription = function() {
                             t.setState({
-                                currentPage: $e.CurrentSubscription
+                                currentPage: Qe.CurrentSubscription
                             })
                         }, t.showGiftOptions = function() {
                             t.setState({
-                                currentPage: $e.GiftOptions
+                                currentPage: Qe.GiftOptions
                             })
                         }, t.onGiftSelect = function() {
                             t.setState({
-                                currentPage: $e.GiftSelect
+                                currentPage: Qe.GiftSelect
                             })
                         }, t.showMysteryGiftBundleSelect = function() {
                             t.setState({
-                                currentPage: $e.MysteryGiftSelect
+                                currentPage: Qe.MysteryGiftSelect
                             })
                         }, t.showSubOptions = function() {
                             t.setState({
-                                currentPage: $e.SubOptions
+                                currentPage: Qe.SubOptions
                             })
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.isGift && !this.props.giftPaidUpgrade && Object(g.f)(this.props.subscriptionProducts);
+                        var e = this.props.isGift && !this.props.pendingSubscription && Object(g.f)(this.props.subscriptionProducts);
                         switch (this.state.currentPage) {
-                            case $e.CurrentSubscription:
+                            case Qe.CurrentSubscription:
                                 return a.createElement(a.Fragment, null, e ? a.createElement(Je.a, {
                                     alignCTA: "Right",
                                     roundedTop: !0
                                 }) : a.createElement(L, {
                                     channelDisplayName: this.props.channelDisplayName,
                                     currentUserCanGift: this.props.currentUserCanGift,
-                                    "data-test-selector": Qe.GiftOptions,
+                                    "data-test-selector": Ke.GiftOptions,
                                     isNonStandardSub: this.props.isNonStandardSub,
                                     onGiftSelect: this.onGiftSelect,
                                     onMysteryGiftSelect: this.showMysteryGiftBundleSelect
-                                }), a.createElement(Ke, {
+                                }), a.createElement($e, {
                                     channelDisplayName: this.props.channelDisplayName,
                                     channelLogin: this.props.channelLogin,
                                     channelProfileImageURL: this.props.channelProfileImageURL,
-                                    "data-test-selector": Qe.CurrentSubscription,
-                                    giftPaidUpgrade: this.props.giftPaidUpgrade,
+                                    "data-test-selector": Ke.CurrentSubscription,
+                                    pendingSubscription: this.props.pendingSubscription,
                                     giftSender: this.props.giftSender,
                                     handleSubMenuAction: this.props.handleSubMenuAction,
                                     isGift: this.props.isGift,
@@ -7819,40 +7875,40 @@
                                     subProducts: this.props.subscriptionProducts,
                                     upgradeSubProduct: this.getUpgradeSubProduct()
                                 }));
-                            case $e.GiftOptions:
+                            case Qe.GiftOptions:
                                 return a.createElement(L, {
                                     channelDisplayName: this.props.channelDisplayName,
                                     currentUserCanGift: this.props.currentUserCanGift,
-                                    "data-test-selector": Qe.GiftOptions,
+                                    "data-test-selector": Ke.GiftOptions,
                                     isNonStandardSub: this.props.isNonStandardSub,
                                     onBack: this.showCurrentSubscription,
                                     onGiftSelect: this.onGiftSelect,
                                     onMysteryGiftSelect: this.showMysteryGiftBundleSelect
                                 });
-                            case $e.GiftSelect:
+                            case Qe.GiftSelect:
                                 return a.createElement(U.GiftRecipientSearch, {
-                                    "data-test-selector": Qe.GiftRecipientSearch,
+                                    "data-test-selector": Ke.GiftRecipientSearch,
                                     handleSubMenuAction: this.props.handleSubMenuAction,
                                     isEsportChannel: this.props.isEsportChannel,
                                     key: "gift-recipient-search-page",
                                     onBack: e ? this.showGiftOptions : this.showCurrentSubscription,
                                     subscriptionProducts: this.props.subscriptionProducts
                                 });
-                            case $e.MysteryGiftSelect:
+                            case Qe.MysteryGiftSelect:
                                 return a.createElement(Ge, {
                                     customMysteryGiftBundleLimit: 100,
-                                    "data-test-selector": Qe.MysteryGiftBundleSelection,
+                                    "data-test-selector": Ke.MysteryGiftBundleSelection,
                                     mysteryGiftBundles: [1, 5, 10, 20, 50, 100],
                                     onBack: e ? this.showGiftOptions : this.showCurrentSubscription,
                                     subscriptionProducts: this.props.subscriptionProducts,
                                     handleSubMenuAction: this.props.handleSubMenuAction
                                 });
-                            case $e.SubOptions:
+                            case Qe.SubOptions:
                                 return a.createElement(Ye, {
                                     authToken: this.props.authToken,
                                     channelDisplayName: this.props.channelDisplayName,
                                     channelLogin: this.props.channelLogin,
-                                    "data-test-selector": Qe.SubOptions,
+                                    "data-test-selector": Ke.SubOptions,
                                     handleSubMenuAction: this.props.handleSubMenuAction,
                                     isSubscribed: !0,
                                     onBack: this.showCurrentSubscription,
@@ -8039,7 +8095,7 @@
                                     channelProfileImageURL: t.profileImageURL,
                                     currentUserCanGift: this.canSendGift(),
                                     "data-test-selector": Ze.SubbedTopPage,
-                                    giftPaidUpgrade: n.subscriptionBenefit.paidUpgrade,
+                                    pendingSubscription: n.subscriptionBenefit.pendingSubscription,
                                     giftSender: o && o.isGift && o.gifter ? o.gifter.displayName : null,
                                     handleSubMenuAction: this.props.handleSubMenuAction,
                                     isEsportChannel: this.props.isEsportChannel,
@@ -9002,7 +9058,7 @@
                                                     kind: "Field",
                                                     name: {
                                                         kind: "Name",
-                                                        value: "paidUpgrade"
+                                                        value: "pendingSubscription"
                                                     },
                                                     arguments: [],
                                                     directives: [],
@@ -9029,6 +9085,14 @@
                                                             name: {
                                                                 kind: "Name",
                                                                 value: "startsAt"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "type"
                                                             },
                                                             arguments: [],
                                                             directives: []
@@ -9149,11 +9213,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 831
+                    end: 844
                 }
             };
             n.loc.source = {
-                body: "query ChannelPage_SubscribeBalloon_User($login: String! $productId: String!) {\nuser(login: $login) {\nid\nlogin\ndisplayName\nprofileImageURL(width: 50)\nsubscriptionProducts {\nid\nprice\npriceInfo {\ncurrency\nexponent\ntotal\ndescription\nprice\nisTaxInclusive\nid\ntax\n}\nurl\nemoteSetID\ndisplayName\nname\ntier\nhasAdFree\nemotes {\nid\ntoken\n}\ninterval {\nunit\n}\nself {\npromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\npaidUpgradePromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\ngiftPromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\nself {\ncanPrimeSubscribe\ncanGiftInChannel(product: $productId)\nsubscriptionBenefit {\nid\npurchasedWithPrime\ntier\nplatform\nrenewsAt\nendsAt\npaidUpgrade {\nprice\ntier\nstartsAt\n}\ngift {\nisGift\ngifter {\nid\ndisplayName\n}\n}\n}\n}\n}\ncurrentUser {\nid\nlogin\nhasPrime\n}\nrequestInfo {\ncountryCode\n}\n}",
+                body: "query ChannelPage_SubscribeBalloon_User($login: String! $productId: String!) {\nuser(login: $login) {\nid\nlogin\ndisplayName\nprofileImageURL(width: 50)\nsubscriptionProducts {\nid\nprice\npriceInfo {\ncurrency\nexponent\ntotal\ndescription\nprice\nisTaxInclusive\nid\ntax\n}\nurl\nemoteSetID\ndisplayName\nname\ntier\nhasAdFree\nemotes {\nid\ntoken\n}\ninterval {\nunit\n}\nself {\npromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\npaidUpgradePromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\ngiftPromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\nself {\ncanPrimeSubscribe\ncanGiftInChannel(product: $productId)\nsubscriptionBenefit {\nid\npurchasedWithPrime\ntier\nplatform\nrenewsAt\nendsAt\npendingSubscription {\nprice\ntier\nstartsAt\ntype\n}\ngift {\nisGift\ngifter {\nid\ndisplayName\n}\n}\n}\n}\n}\ncurrentUser {\nid\nlogin\nhasPrime\n}\nrequestInfo {\ncountryCode\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,

@@ -742,7 +742,7 @@
                                 cancelDisabled: !1
                             })
                         }, t.updateAutoModProperties = function() {
-                            t.state.categories && (t.setState({
+                            t.state.categories && t.props.data.user && (t.setState({
                                 submissionState: m.E.Loading
                             }), t.props.onUpdateAutoModProperties({
                                 variables: {
@@ -1023,9 +1023,9 @@
                             if (e[0] === this.levelToAggro[t] && e[1] === this.levelToIdentity[t] && e[2] === this.levelToProfanity[t] && e[3] === this.levelToSex[t]) return Number(t);
                         return -1
                     }, t.prototype.hasAutoModDashboardAccess = function() {
-                        return this.props.data.user.self.isModerator || this.props.data.currentUser.roles.isStaff || this.props.data.currentUser.roles.isSiteAdmin || this.props.data.user.id === this.props.data.currentUser.id
+                        return !!(this.props.data.user && this.props.data.user.self && this.props.data.currentUser && this.props.data.currentUser.roles) && (this.props.data.user.self.isModerator || this.props.data.currentUser.roles.isStaff || this.props.data.currentUser.roles.isSiteAdmin || this.props.data.user.id === this.props.data.currentUser.id)
                     }, t.prototype.initializeStateFromBackend = function(e) {
-                        if (e.data.user.autoModProperties) {
+                        if (e.data.user && e.data.user.autoModProperties) {
                             var t = [e.data.user.autoModProperties.aggressiveLevel, e.data.user.autoModProperties.identityLevel, e.data.user.autoModProperties.profanityLevel, e.data.user.autoModProperties.sexualLevel],
                                 n = this.determineLevel(t),
                                 i = -1 === n;
@@ -1040,7 +1040,7 @@
                             })
                         }
                     }, t.prototype.hasAutoModProperties = function(e) {
-                        return e.data.user.autoModProperties
+                        return e.data.user ? e.data.user.autoModProperties : null
                     }, t
                 }(d.Component),
                 S = n("K1HF"),

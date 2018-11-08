@@ -1477,14 +1477,14 @@
                     view: r.LOADING
                 })).InnerProvider,
                 v = i.withContext,
-                g = function(e) {
+                k = function(e) {
                     return e
                 };
 
-            function k(e) {
-                return v(g)(e)
+            function g(e) {
+                return v(k)(e)
             }
-            var E, C, I, y = function(e) {
+            var E, C, y, I = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.setView = function(e) {
@@ -1503,8 +1503,8 @@
                     }, t
                 }(s.Component),
                 b = n("Ue10"),
-                D = n("/7QA"),
-                S = n("IFXb"),
+                S = n("/7QA"),
+                D = n("IFXb"),
                 N = n("5NYc"),
                 _ = n("vYsf"),
                 O = n("NAv5"),
@@ -1514,7 +1514,7 @@
             }(C || (C = {})),
             function(e) {
                 e.IS_EDITOR = "isEditor", e.IS_MOD = "isMod", e.IS_VIP = "isVIP"
-            }(I || (I = {}));
+            }(y || (y = {}));
             var A = (E = Object(h.a)("UserRolesCacheContext", {
                     modifyUserInCache: function() {
                         return null
@@ -1643,7 +1643,7 @@
                         }), e.data.loading && this.updateUserCache()
                     }, t.prototype.render = function() {
                         return this.props.data.error ? s.createElement(l.a, {
-                            message: Object(D.d)("Whoops, something went wrong.", "UserRolesContext")
+                            message: Object(S.d)("Whoops, something went wrong.", "UserRolesContext")
                         }) : this.props.view === r.LOADING ? s.createElement(b.Za, {
                             fillContent: !0
                         }) : s.createElement(A, {
@@ -1658,17 +1658,17 @@
                         s || o || !l || this.props.view !== r.LOADING || this.setState(function(e) {
                             var r = a.__assign({}, e);
                             if (r.userCache || (r.userCache = {}), l.editors && l.editors.edges) {
-                                var s = t.setUserCache(r.userCache, l.editors.edges, I.IS_EDITOR).userCache;
+                                var s = t.setUserCache(r.userCache, l.editors.edges, y.IS_EDITOR).userCache;
                                 r.userCache = a.__assign({}, r.userCache, s)
                             }
                             if (l.mods && l.mods.edges) {
-                                var o = t.setUserCache(r.userCache, l.mods.edges, I.IS_MOD),
+                                var o = t.setUserCache(r.userCache, l.mods.edges, y.IS_MOD),
                                     d = o.cursor;
                                 s = o.userCache;
                                 n = d, r.userCache = a.__assign({}, r.userCache, s)
                             }
                             if (l.vips && l.vips.edges) {
-                                var c = t.setUserCache(r.userCache, l.vips.edges, I.IS_VIP);
+                                var c = t.setUserCache(r.userCache, l.vips.edges, y.IS_VIP);
                                 d = c.cursor, s = c.userCache;
                                 i = d, r.userCache = a.__assign({}, r.userCache, s), r.totalVIPs = e.totalVIPs + l.vips.edges.length
                             }
@@ -1692,7 +1692,7 @@
                         })
                     }, t
                 }(s.Component),
-                P = Object(o.compose)(k, Object(p.b)("WithUserRolesCacheProvider"), Object(d.a)(U, {
+                P = Object(o.compose)(g, Object(p.b)("WithUserRolesCacheProvider"), Object(d.a)(U, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -1766,8 +1766,8 @@
                 q = n("GIFg"),
                 H = n("kYmV"),
                 $ = n("cuu2"),
-                z = "https://help.twitch.tv/customer/en/portal/articles/659115-twitch-chat-badges-guide",
-                Q = "https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/1",
+                Q = "https://help.twitch.tv/customer/en/portal/articles/659115-twitch-chat-badges-guide",
+                z = "https://static-cdn.jtvnw.net/badges/v1/3267646d-33f0-4b17-b3df-f923a41db1d0/1",
                 K = "https://static-cdn.jtvnw.net/badges/v1/b817aba4-fad8-49e2-b88a-7cc744dfa6ec/1",
                 Y = function(e) {
                     function t() {
@@ -1775,7 +1775,7 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         return s.createElement(q.a, null, s.createElement($.a, {
-                            learnMoreUrl: z,
+                            learnMoreUrl: Q,
                             page: H.b.Roles
                         }))
                     }, t
@@ -1949,9 +1949,9 @@
                 he = n("CpU+"),
                 fe = n("fKMw"),
                 ve = n("OBYv");
-            var ge = n("r6Pb");
+            var ke = n("r6Pb");
 
-            function ke(e) {
+            function ge(e) {
                 return {
                     channelID: e.channelID || ""
                 }
@@ -1985,7 +1985,7 @@
                     })
                 }(), function() {
                     var e = this;
-                    return Object(d.a)(ge, {
+                    return Object(d.a)(ke, {
                         props: function(t) {
                             return {
                                 removeEditorUserMutation: function(n) {
@@ -2010,7 +2010,7 @@
                             }
                         }
                     })
-                }(), Object(me.b)(ke), Object(pe.b)(ke), Object(he.a)(), Object(fe.a)())(ue),
+                }(), Object(me.b)(ge), Object(pe.b)(ge), Object(he.a)(), Object(fe.a)())(ue),
                 Ce = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2066,25 +2066,25 @@
                             elevation: 3,
                             onCloseButtonClick: this.handleModalDismiss,
                             primaryButtonProps: {
-                                children: Object(D.d)("Retry", "RolesPageMessageModal"),
+                                children: Object(S.d)("Retry", "RolesPageMessageModal"),
                                 disabled: this.state.isRetryButtonDisabled,
                                 onClick: this.handleRetryClick
                             },
                             secondaryButtonProps: {
-                                children: Object(D.d)("Cancel", "RolesPageMessageModal"),
+                                children: Object(S.d)("Cancel", "RolesPageMessageModal"),
                                 onClick: this.handleModalDismiss,
                                 type: b.F.Hollow
                             },
                             size: b.bb.Small,
-                            title: Object(D.d)("Something went wrong", "RolesPageMessageModal")
+                            title: Object(S.d)("Something went wrong", "RolesPageMessageModal")
                         }, s.createElement(b.Xa, {
                             padding: 1
-                        }, s.createElement(b.W, null, Object(D.d)("There was an error modifying roles for {user}.", {
+                        }, s.createElement(b.W, null, Object(S.d)("There was an error modifying roles for {user}.", {
                             user: this.props.message.user.displayName
                         }, "RolesPageMessageModal"))))
                     }, t
                 }(s.Component),
-                Ie = function(e) {
+                ye = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2099,16 +2099,16 @@
                         e && (e.type === G.ALL_MUTATIONS_FAILED && this.props.showModal(this.props))
                     }, t
                 }(s.Component);
-            var ye, be = Object(o.compose)(Object(ae.connect)(null, function(e) {
+            var Ie, be = Object(o.compose)(Object(ae.connect)(null, function(e) {
                     return Object(o.bindActionCreators)({
                         closeModal: se.c,
                         showModal: function(e) {
                             return Object(se.d)(Ce, e)
                         }
                     }, e)
-                }), ce, te, L)(Ie),
-                De = n("9C/b"),
-                Se = (n("vsHg"), function(e) {
+                }), ce, te, L)(ye),
+                Se = n("9C/b"),
+                De = (n("vsHg"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2147,7 +2147,7 @@
                                 right: .5
                             }
                         }, s.createElement(b.q, {
-                            alt: Object(D.d)("VoHiYo", "CenteredBanner"),
+                            alt: Object(S.d)("VoHiYo", "CenteredBanner"),
                             src: "https://static-cdn.jtvnw.net/emoticons/v1/81274/2.0",
                             size: 30
                         })), s.createElement(b.W, {
@@ -2164,7 +2164,7 @@
                 }(s.Component));
             ! function(e) {
                 e.ADD_A_ROLE = "no-users-banner-add-a-role", e.LEARN_MORE = "no-users-banner-learn-more"
-            }(ye || (ye = {}));
+            }(Ie || (Ie = {}));
             var Ne = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2173,9 +2173,9 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(Se, {
-                            body: Object(D.d)("Manage the permissions users have for your community. Start by adding your first role.", "NoUsersBanner"),
-                            title: Object(D.d)("Welcome to Roles", "NoUsersBanner")
+                        return s.createElement(De, {
+                            body: Object(S.d)("Manage the permissions users have for your community. Start by adding your first role.", "NoUsersBanner"),
+                            title: Object(S.d)("Welcome to Roles", "NoUsersBanner")
                         }, s.createElement(b.Xa, {
                             alignItems: b.f.Center,
                             display: b.X.Flex,
@@ -2185,16 +2185,16 @@
                                 right: 1
                             }
                         }, s.createElement(b.z, {
-                            "data-test-selector": ye.ADD_A_ROLE,
+                            "data-test-selector": Ie.ADD_A_ROLE,
                             onClick: this.handleAddARoleClick
-                        }, Object(D.d)("Add a Role", "NoUsersBanner"))), s.createElement(b.z, {
-                            "data-test-selector": ye.LEARN_MORE,
-                            linkTo: z,
+                        }, Object(S.d)("Add a Role", "NoUsersBanner"))), s.createElement(b.z, {
+                            "data-test-selector": Ie.LEARN_MORE,
+                            linkTo: Q,
                             type: b.F.Text
-                        }, Object(D.d)("Learn More", "NoUsersBanner"))))
+                        }, Object(S.d)("Learn More", "NoUsersBanner"))))
                     }, t
                 }(s.Component),
-                _e = Object(o.compose)(k, De.a)(Ne),
+                _e = Object(o.compose)(g, Se.a)(Ne),
                 Oe = n("TSYQ"),
                 Ue = function(e) {
                     var t;
@@ -2220,9 +2220,10 @@
                         asset: b.tb.GlyphArrUpDown,
                         width: 10
                     });
-                    return s.createElement(b.z, {
-                        type: b.F.Text,
-                        onClick: e.onClick
+                    return s.createElement(b.Ua, {
+                        type: b.Va.Overlay,
+                        onClick: e.onClick,
+                        blurAfterClick: !0
                     }, s.createElement(b.Eb, {
                         display: b.X.Flex,
                         alignContent: b.e.Center
@@ -2273,6 +2274,7 @@
                         }, n)), s.createElement(b.A, {
                             icon: b.tb.NotificationError,
                             onClick: this.props.onRolePillDismissed,
+                            type: b.C.Secondary,
                             size: b.B.Small
                         }))
                     }, t
@@ -2310,15 +2312,15 @@
                 }(s.Component));
 
             function Le() {
-                return Object(D.d)("Editor", "FilterUsersComponent")
+                return Object(S.d)("Editor", "FilterUsersComponent")
             }
 
             function Fe() {
-                return Object(D.d)("Moderator", "FilterUsersComponent")
+                return Object(S.d)("Moderator", "FilterUsersComponent")
             }
 
             function we() {
-                return Object(D.d)("VIP", "FilterUsersComponent")
+                return Object(S.d)("VIP", "FilterUsersComponent")
             }
             var Re, Pe = j(function(e) {
                     function t() {
@@ -2357,8 +2359,8 @@
                                 x: 1,
                                 y: 2
                             },
-                            src: Q,
-                            value: I.IS_MOD
+                            src: z,
+                            value: y.IS_MOD
                         }), this.props.isVIPUnlocked && s.createElement(Te, {
                             checked: i,
                             disabled: n || this.props.isAtMaxVIPUserLimit && !i,
@@ -2369,7 +2371,7 @@
                                 bottom: 2
                             },
                             src: K,
-                            value: I.IS_VIP
+                            value: y.IS_VIP
                         }), s.createElement(Te, {
                             checked: t,
                             disabled: !1,
@@ -2379,7 +2381,7 @@
                                 x: 1,
                                 bottom: 2
                             },
-                            value: I.IS_EDITOR
+                            value: y.IS_EDITOR
                         }), s.createElement(b.Ua, {
                             onClick: this.handleLearnAboutRolesClick
                         }, s.createElement(b.Eb, {
@@ -2395,7 +2397,7 @@
                             }
                         }, s.createElement(b.sb, {
                             asset: b.tb.NotificationInfo
-                        })), s.createElement(b.W, null, Object(D.d)("Learn about Roles", "RoleSelector"))))))))
+                        })), s.createElement(b.W, null, Object(S.d)("Learn about Roles", "RoleSelector"))))))))
                     }, t
                 }(s.Component)),
                 Ve = j(function(e) {
@@ -2437,7 +2439,6 @@
                             position: b.jb.Absolute
                         }, !i && s.createElement(b.A, {
                             onClick: this.handleAddRoleClick,
-                            type: b.C.Secondary,
                             icon: b.tb.Plus,
                             size: b.B.Small
                         }), i && s.createElement(Ae.a, {
@@ -2447,21 +2448,21 @@
                             onClick: this.handleAddRoleClick,
                             size: b.D.Small,
                             type: b.F.Hollow
-                        }, s.createElement(b.W, null, Object(D.d)("Add Role", "RoleSelector"))), s.createElement(Pe, {
+                        }, s.createElement(b.W, null, Object(S.d)("Add Role", "RoleSelector"))), s.createElement(Pe, {
                             isEditor: l,
                             isMod: d,
                             isVIP: c,
                             onCheckBoxChange: this.props.onCheckBoxChange,
                             show: i
                         })), l && s.createElement(Me, {
-                            onRolePillDismissed: t.bind(null, I.IS_EDITOR),
+                            onRolePillDismissed: t.bind(null, y.IS_EDITOR),
                             title: r
                         }), d && s.createElement(Me, {
-                            onRolePillDismissed: t.bind(null, I.IS_MOD),
-                            src: Q,
+                            onRolePillDismissed: t.bind(null, y.IS_MOD),
+                            src: z,
                             title: a
                         }), this.props.isVIPUnlocked && c && s.createElement(Me, {
-                            onRolePillDismissed: t.bind(null, I.IS_VIP),
+                            onRolePillDismissed: t.bind(null, y.IS_VIP),
                             src: K,
                             title: o
                         }))
@@ -2545,17 +2546,23 @@
                             }
                         }, s.createElement(b.P, {
                             cols: Be.FIRST_COLUMN
+                        }, s.createElement(b.Eb, {
+                            color: b.O.Base
                         }, s.createElement(b.U, {
                             to: "/" + t,
-                            targetBlank: !0
+                            targetBlank: !0,
+                            hoverUnderlineNone: !0,
+                            type: b.V.Inherit
                         }, s.createElement(b.Xa, {
                             display: b.X.Flex,
                             alignItems: b.f.Center
+                        }, s.createElement(b.Xa, {
+                            flexShrink: 0
                         }, s.createElement(b.q, {
                             src: e.profileImageURL,
                             alt: t,
                             size: 30
-                        }), s.createElement(b.Xa, {
+                        })), s.createElement(b.Xa, {
                             margin: {
                                 left: 1
                             },
@@ -2563,7 +2570,6 @@
                             alignItems: b.f.Center
                         }, s.createElement(b.W, {
                             bold: !0,
-                            color: b.O.Base,
                             type: b.Vb.P,
                             ellipsis: !0
                         }, t), t.toLowerCase() !== n.toLowerCase() && s.createElement(b.Xa, {
@@ -2576,7 +2582,7 @@
                             type: b.Vb.P,
                             ellipsis: !0,
                             "data-test-selector": Re.CJK_NAME
-                        }, n)))))), s.createElement(b.P, {
+                        }, n))))))), s.createElement(b.P, {
                             cols: Be.SECOND_COLUMN
                         }, s.createElement(b.Xa, {
                             display: b.X.Flex,
@@ -2599,7 +2605,7 @@
                         }, s.createElement(b.P, {
                             cols: 6
                         }, s.createElement(b.W, {
-                            title: Object(D.j)(i, {
+                            title: Object(S.j)(i, {
                                 year: "numeric",
                                 month: "short",
                                 day: "numeric",
@@ -2607,7 +2613,7 @@
                                 minute: "2-digit",
                                 hour12: !0
                             })
-                        }, Object(D.h)(i, {
+                        }, Object(S.h)(i, {
                             now: new Date(Date.UTC(r.getFullYear(), r.getMonth(), r.getDate(), r.getHours(), r.getMinutes(), r.getSeconds()))
                         }))))))
                     }, t
@@ -2659,7 +2665,7 @@
                             })
                         })) : s.createElement(s.Fragment, null, t.reduce(function(t, n) {
                             var i = e.props.userCache[n];
-                            return i && (e.props.filterType === C.EDITOR && i[I.IS_EDITOR] || e.props.filterType === C.MODERATOR && i[I.IS_MOD] || e.props.filterType === C.VIP && i[I.IS_VIP]) && t.push(s.createElement(We, {
+                            return i && (e.props.filterType === C.EDITOR && i[y.IS_EDITOR] || e.props.filterType === C.MODERATOR && i[y.IS_MOD] || e.props.filterType === C.VIP && i[y.IS_VIP]) && t.push(s.createElement(We, {
                                 "data-test-selector": "roles-table-row-" + n,
                                 key: "roles-table-row-" + n,
                                 userID: n
@@ -2721,13 +2727,13 @@
                             selected: e === je.USERNAME,
                             sortDirection: t,
                             onClick: this.handleUsernameHeaderClick
-                        }, Object(D.d)("Username", "RolesPageTable"))), s.createElement(b.P, {
+                        }, Object(S.d)("Username", "RolesPageTable"))), s.createElement(b.P, {
                             cols: Be.SECOND_COLUMN
                         }, s.createElement(b.W, {
                             type: b.Vb.Span,
                             bold: !0,
                             color: b.O.Link
-                        }, " ", Object(D.d)("Roles", "RolesPageTable"), " ")), s.createElement(b.P, {
+                        }, " ", Object(S.d)("Roles", "RolesPageTable"), " ")), s.createElement(b.P, {
                             cols: Be.THIRD_COLUMN
                         }, s.createElement(b.Xa, {
                             display: b.X.Flex,
@@ -2738,7 +2744,7 @@
                             selected: e === je.LAST_MODIFIED,
                             sortDirection: t,
                             onClick: this.handleLastModifiedHeaderClick
-                        }, Object(D.d)("Last Modified", "RolesPageTable")))))), s.createElement(b.Xa, {
+                        }, Object(S.d)("Last Modified", "RolesPageTable")))))), s.createElement(b.Xa, {
                             className: Oe(n)
                         }, s.createElement(qe, {
                             filterType: this.props.filterType,
@@ -2748,8 +2754,8 @@
                         })))
                     }, t
                 }(s.Component),
-                ze = Object(o.compose)(k, L)($e),
-                Qe = n("8Ad5"),
+                Qe = Object(o.compose)(g, L)($e),
+                ze = n("8Ad5"),
                 Ke = n("f00E"),
                 Ye = n("H/lO"),
                 Je = n("NZDK"),
@@ -2764,12 +2770,12 @@
                             searchedUsers: null,
                             showDropDown: !1
                         }, t.searchClient = new Je.a({
-                            appId: D.a.algoliaApplicationID,
-                            apiKey: D.a.algoliaAPIKey,
-                            apolloClient: D.p.apollo.client,
-                            logger: D.k,
-                            config: D.a,
-                            stats: D.p.stats
+                            appId: S.a.algoliaApplicationID,
+                            apiKey: S.a.algoliaAPIKey,
+                            apolloClient: S.p.apollo.client,
+                            logger: S.k,
+                            config: S.a,
+                            stats: S.p.stats
                         }), t.filterUsersResults = function(e, n) {
                             var i = t.props.userCache,
                                 r = t.props.match.params.channelLogin;
@@ -2857,7 +2863,7 @@
                                     right: e ? 1 : .5
                                 }
                             }, s.createElement(b.q, {
-                                alt: Object(D.d)("Avatar", "SearchUsers"),
+                                alt: Object(S.d)("Avatar", "SearchUsers"),
                                 size: 30,
                                 src: e && e.profileImageURL
                             }));
@@ -2894,7 +2900,7 @@
                             onChange: this.handleInputChange,
                             onFocus: this.handleInputFocus,
                             onKeyDown: this.props.onInputKeyDown,
-                            placeholder: Object(D.d)("Search", "SearchUsers"),
+                            placeholder: Object(S.d)("Search", "SearchUsers"),
                             type: b.Ta.Text
                         }), s.createElement(Ze.a, {
                             onOptionClick: this.handleOptionClick,
@@ -2904,7 +2910,7 @@
                         })))))
                     }, t
                 }(s.Component),
-                it = Object(o.compose)(L, De.a)(nt);
+                it = Object(o.compose)(L, Se.a)(nt);
             ! function(e) {
                 e.CANCEL_BUTTON = "roles-page-add-user-cancel-button", e.SAVE_BUTTON = "roles-page-add-user-save-button"
             }(He || (He = {}));
@@ -2928,7 +2934,7 @@
                                 } : null
                             })
                         }, t.handleInputKeyDown = function(e) {
-                            e.keyCode === Qe.a.Esc && t.props.setView(r.DEFAULT)
+                            e.keyCode === ze.a.Esc && t.props.setView(r.DEFAULT)
                         }, t.handleUserSelected = function(e) {
                             t.setState({
                                 selectedUser: {
@@ -3033,15 +3039,15 @@
                             "data-test-selector": He.CANCEL_BUTTON,
                             onClick: this.handleCancelClick,
                             type: b.F.Hollow
-                        }, Object(D.d)("Cancel", "AddUserComponent"))), s.createElement(b.z, {
+                        }, Object(S.d)("Cancel", "AddUserComponent"))), s.createElement(b.z, {
                             "data-test-selector": He.SAVE_BUTTON,
                             disabled: !e || !e.isEditor && !e.isMod && !e.isVIP,
                             onClick: this.handleSaveClick,
                             type: b.F.Success
-                        }, Object(D.d)("Save", "AddUserComponent")))))))
+                        }, Object(S.d)("Save", "AddUserComponent")))))))
                     }, t
                 }(s.Component),
-                st = Object(o.compose)(L, ce, te, k)(at);
+                st = Object(o.compose)(L, ce, te, g)(at);
             ! function(e) {
                 e.ALL_MUTATIONS_SUCCEEDED = "all-mutations-succeeded", e.SOME_MUTATIONS_FAILED = "some-mutations-failed"
             }(rt || (rt = {}));
@@ -3070,7 +3076,7 @@
                         }, this.getContent(e)) : null
                     }, t.prototype.getContent = function(e) {
                         var t = this.props.clearMessage,
-                            n = Object(D.d)("Close", "RolesPageTopBar");
+                            n = Object(S.d)("Close", "RolesPageTopBar");
                         switch (e.type) {
                             case G.ALL_MUTATIONS_SUCCEEDED:
                                 var i = (a = e.user).channelLogin,
@@ -3079,10 +3085,10 @@
                                     closeButtonAriaLabel: n,
                                     closeButtonOnClick: t,
                                     "data-test-selector": rt.ALL_MUTATIONS_SUCCEEDED,
-                                    description: Object(D.d)("Specified roles added for {user}.", {
+                                    description: Object(S.d)("Specified roles added for {user}.", {
                                         user: i + (i.toLowerCase() !== r.toLowerCase() ? " (" + r + ")" : "")
                                     }, "RolesPageTopBar"),
-                                    title: Object(D.d)("Success!", "RolesPageTopBar"),
+                                    title: Object(S.d)("Success!", "RolesPageTopBar"),
                                     type: b.Oa.Success
                                 });
                             case G.SOME_MUTATIONS_FAILED:
@@ -3092,24 +3098,24 @@
                                     closeButtonAriaLabel: n,
                                     closeButtonOnClick: t,
                                     "data-test-selector": rt.SOME_MUTATIONS_FAILED,
-                                    description: Object(D.d)("Unfortunately, some of the specified roles were unable to be added for {user}.", {
+                                    description: Object(S.d)("Unfortunately, some of the specified roles were unable to be added for {user}.", {
                                         user: i + (i.toLowerCase() !== r.toLowerCase() ? " (" + r + ")" : "")
                                     }, "RolesPageTopBar"),
-                                    title: Object(D.d)("Warning!", "RolesPageTopBar"),
+                                    title: Object(S.d)("Warning!", "RolesPageTopBar"),
                                     type: b.Oa.Warning
                                 });
                             case G.MAX_VIPS_REACHED:
                                 return s.createElement(b.Na, {
                                     closeButtonAriaLabel: n,
                                     closeButtonOnClick: this.handleDismissVIPWarningMessage,
-                                    description: Object(D.d)("You have reached the maximum amount of VIP roles. <x:link>Read more about Roles.</x:link>", {
+                                    description: Object(S.d)("You have reached the maximum amount of VIP roles. <x:link>Read more about Roles.</x:link>", {
                                         "x:link": function(e) {
                                             return s.createElement(b.U, {
                                                 linkTo: "TODO"
                                             }, e)
                                         }
                                     }, "RolesPageTopBar"),
-                                    title: Object(D.d)("You can't add any more VIPs.", "RolesPageTopBar"),
+                                    title: Object(S.d)("You can't add any more VIPs.", "RolesPageTopBar"),
                                     type: b.Oa.Warning
                                 });
                             default:
@@ -3159,7 +3165,7 @@
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(b.W, null, Object(D.d)("Display", "FilterUsersComponent"))), s.createElement(b.Xa, null, s.createElement(Ae.a, {
+                        }, s.createElement(b.W, null, Object(S.d)("Display", "FilterUsersComponent"))), s.createElement(b.Xa, null, s.createElement(Ae.a, {
                             onClickOut: this.handleClickOut
                         }, s.createElement(b.z, {
                             onClick: this.handleButtonClick,
@@ -3188,7 +3194,7 @@
                                 disabled: e === C.MODERATOR,
                                 figure: {
                                     alt: this.getFilterText(C.MODERATOR),
-                                    src: Q
+                                    src: z
                                 },
                                 figureRight: !0,
                                 onClick: this.handleOptionClick.bind(this, C.MODERATOR),
@@ -3213,7 +3219,7 @@
                         switch (e) {
                             default:
                                 case C.ALL_ROLES:
-                                return Object(D.d)("All Roles", "FilterUsersComponent");
+                                return Object(S.d)("All Roles", "FilterUsersComponent");
                             case C.EDITOR:
                                     return Le();
                             case C.MODERATOR:
@@ -3248,16 +3254,16 @@
                         }, s.createElement(ct, null), s.createElement(b.z, {
                             disabled: e,
                             onClick: this.handleButtonClick
-                        }, Object(D.d)("Add New", "TopBarComponent"))), s.createElement(lt, null), e && s.createElement(st, null))
+                        }, Object(S.d)("Add New", "TopBarComponent"))), s.createElement(lt, null), e && s.createElement(st, null))
                     }, t
                 }(s.Component),
-                mt = Object(o.compose)(te, k)(ut),
-                pt = k(function(e) {
+                mt = Object(o.compose)(te, g)(ut),
+                pt = g(function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                        D.p.setPageTitle(Object(D.d)("Roles", "RolesPage"))
+                        S.p.setPageTitle(Object(S.d)("Roles", "RolesPage"))
                     }, t.prototype.render = function() {
                         var e = this.props.channelID;
                         return s.createElement(P, {
@@ -3266,7 +3272,7 @@
                             channelID: e
                         }, s.createElement(re, null, s.createElement(Ee, {
                             channelID: e
-                        }, this.props.view === r.NO_USERS ? s.createElement(_e, null) : s.createElement(S.a, null, s.createElement(mt, null), s.createElement(ze, null), s.createElement(be, null)), s.createElement(Y, null)))))
+                        }, this.props.view === r.NO_USERS ? s.createElement(_e, null) : s.createElement(D.a, null, s.createElement(mt, null), s.createElement(Qe, null), s.createElement(be, null)), s.createElement(Y, null)))))
                     }, t
                 }(s.Component)),
                 ht = n("LQi+"),
@@ -3285,7 +3291,7 @@
                         if (this.props.data.error) return s.createElement(l.a, null);
                         var e = this.props.data,
                             t = e.user && e.user.id;
-                        return t ? s.createElement(y, null, s.createElement(pt, {
+                        return t ? s.createElement(I, null, s.createElement(pt, {
                             channelID: t
                         })) : null
                     }, t.prototype.reportInteractive = function() {
