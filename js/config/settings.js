@@ -23,7 +23,7 @@ window.__twilightSettings = {
     "bounty_board_available_bounties_date": "Wed June 27 2018 00:00:00 GMT-0700 (PDT)",
     "bounty_board_brand_portal_enabled": "on",
     "bounty_board_live_dashboard_widget": "on",
-    "cc_v2_whitelist": ["cpt_meticulous-staff", "testnioh123-staff", "jnguyening-staff", "gummyace-staff", "MissCoded-staff"],
+    "cc_v2_whitelist": ["cpt_meticulous-staff", "testnioh123-staff", "jnguyening-staff", "gummyace-staff", "MissCoded-staff", "buildgreatthings2018-staff", "jockeyethefish-staff"],
     "channel_feed_enabled": false,
     "chat_input_box_followers_only_restriction_enabled": "off",
     "chat_input_box_verified_only_restriction_enabled": "on",
@@ -1718,7 +1718,7 @@ window.__twilightSettings = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 5069,
+            "v": 5070,
             "t": 1,
             "groups": [{
                 "weight": 88,
@@ -1728,7 +1728,7 @@ window.__twilightSettings = {
                 "value": "2.6.32+control"
             }, {
                 "weight": 2,
-                "value": "2.6.32+abrdisp"
+                "value": "2.6.33"
             }, {
                 "weight": 2,
                 "value": "2.6.32+abrlower"
