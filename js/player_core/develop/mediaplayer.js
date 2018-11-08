@@ -3042,7 +3042,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.6.33-79851b2a";
+    return "2.6.33-af676a4d";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3086,6 +3086,10 @@ MediaPlayer.prototype.getQualities = function () {
     return this._state.qualities;
 }
 
+MediaPlayer.prototype.setAuthToken = function (token) {
+    return this._postMessage(WorkerMessage.SET_AUTH_TOKEN, token);
+}
+
 MediaPlayer.prototype.getAutoSwitchQuality = function () {
     return this._state.autoSwitchQuality;
 }
@@ -3116,6 +3120,10 @@ MediaPlayer.prototype.setPlaybackRate = function (rate) {
 
 MediaPlayer.prototype.setAdInsertionEnabled = function (enable) {
     this._postMessage(WorkerMessage.SET_AD_INSERTION_ENABLED, enable);
+}
+
+MediaPlayer.prototype.setClientId = function (id) {
+    this._postMessage(WorkerMessage.SET_CLIENT_ID, id);
 }
 
 /**
@@ -4685,6 +4693,11 @@ module.exports = {
      */
     REMOVE_QUALITIES: 'WorkerRemoveQualities',
     /**
+     * Set auth token
+     * @param {string} token
+     */
+    SET_AUTH_TOKEN: 'WorkerSetAuthToken',
+    /**
      * Toggle abs
      * @param {bool} enable - use abs?
      */
@@ -4724,6 +4737,11 @@ module.exports = {
      * @param {bool} enable true to enable
      */
     SET_AD_INSERTION_ENABLED: 'WorkerSetAdInsertionEnabled',
+    /**
+     * Sets client id
+     * @param {string} id
+     */
+    SET_CLIENT_ID: 'WorkerSetClientId',
     /**
      * Sets a target max latency for live streams
      * @param {number} latency max latency value
