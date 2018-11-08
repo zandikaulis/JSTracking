@@ -2857,6 +2857,10 @@ var PAUSE_HIDDEN_SILENT_TAB = (Browser.chrome && Browser.major === 63) || Browse
 // Prefix all localstorage keys to avoid namespace collisions
 var LOCAL_STORAGE_PREFIX = 'cvp.';
 
+//Min resolution for display size change
+var minWidth = 852;
+var minHeight = 480;
+
 /** MediaPlayer constructor. This is the main export of PlayerCore
  *  @param {string} config.settings - Settings ID to load
  *  @param {string} config.logLevel - One of ['debug', 'info', 'warning', 'error']
@@ -3038,7 +3042,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.6.33-1cf15fc1";
+    return "2.6.33-9c9f91c1";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3505,6 +3509,8 @@ MediaPlayer.prototype._onSinkPlay = function () {
 
 MediaPlayer.prototype._onSinkVideoDisplaySizeChanged = function (width, height) {
     if(this._enableVideoDisplaySizeChange) {
+        width = Math.max(width, minWidth);
+        height = Math.max(height, minHeight);
         this.setAutoMaxVideoSize(width, height);
     }
 };
@@ -4405,10 +4411,10 @@ PlaybackMonitor.prototype._heartbeat = function () {
         this._lastPlayhead = this._video.currentTime;
     }
 
-    this._updateMaxVideoDisplaySize();
+    this._videoDisplaySizeUpdate();
 };
 
-PlaybackMonitor.prototype._updateMaxVideoDisplaySize = function () {
+PlaybackMonitor.prototype._videoDisplaySizeUpdate = function () {
     var width = this._video.clientWidth * window.devicePixelRatio;
     var height = this._video.clientHeight * window.devicePixelRatio;
     this._onvideodisplaysizechanged(width, height);
