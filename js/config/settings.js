@@ -97,7 +97,7 @@ window.__twilightSettings = {
     "passport_hosts": ["https://api.twitch.tv", "https://passport.twitch.tv", "https://passport-staging.internal.twitch.tv", "https://passport-dev1.internal.twitch.tv", "https://passport-dev2.internal.twitch.tv", "https://passport-dev3.internal.twitch.tv", "https://id.twitch.tv", "https://id-dev.twitch.tv"],
     "payments_recurly_countries": ["US", "FI", "ES", "IE", "SK", "RO", "CA"],
     "payments_spm_enabled_countries": ["US", "CA", "AT", "BE", "BG", "CH", "CZ", "DE", "DK", "EE", "ES", "FI", "FR", "GB", "HR", "HU", "IE", "IT", "LT", "LU", "LV", "MT", "NL", "PL", "PT", "RO", "SE", "SI", "SK"],
-    "paypal_eu_subs": false,
+    "paypal_eu_subs": true,
     "persisted_queries_enabled": true,
     "player_routes_exact": ["activate", "bits", "bits-checkout", "directory", "following", "popout", "prime", "store", "subs"],
     "player_routes_startswith": ["bits-checkout/", "checkout/", "collections/", "communities/", "directory/", "event/", "prime/", "products/", "settings/", "store/", "subs/"],
@@ -1718,14 +1718,11 @@ window.__twilightSettings = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 5024,
+            "v": 5069,
             "t": 1,
             "groups": [{
-                "weight": 70,
-                "value": "2.6.31"
-            }, {
-                "weight": 18,
-                "value": "2.6.32"
+                "weight": 88,
+                "value": "2.6.33"
             }, {
                 "weight": 2,
                 "value": "2.6.32+control"
