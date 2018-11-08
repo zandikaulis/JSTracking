@@ -1304,6 +1304,18 @@ window.__twilightSettings = {
                 "value": "skip"
             }]
         },
+        "aac9596e-8816-4261-b96c-617b27afe0fc": {
+            "name": "twilight_subs_async_checkout",
+            "v": 5060,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "async_checkout"
+            }]
+        },
         "afc307f3-4011-40ba-9406-56c474b5922b": {
             "name": "twilight_video_featuro_en",
             "v": 2528,
