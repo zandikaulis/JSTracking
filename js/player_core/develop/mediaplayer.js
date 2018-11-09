@@ -1530,6 +1530,9 @@ browser.safari = browser.safari || false;
 browser.msie = browser.msie || false;
 browser.msedge = browser.msedge || false;
 browser.deviceId = getDeviceId();
+browser.url = window.location.href;
+browser.host = window.location.host;
+browser.domain = window.location.host.split('.').slice(-2).join('.');
 
 function parseSemver(str) {
     var arr =
@@ -1558,7 +1561,6 @@ module.exports = browser;
 /***/ (function(module, exports, __webpack_require__) {
 
 var cookie = __webpack_require__(/*! cookie_js */ "./node_modules/cookie_js/cookie.js").cookie;
-var parseUri = __webpack_require__(/*! ./parseuri */ "./platforms/web/js/parseuri.js");
 
 var COOKIE_DEVICE_ID_KEY = 'unique_id';
 
@@ -1589,7 +1591,7 @@ function getDeviceId() {
 
     cookie.set(COOKIE_DEVICE_ID_KEY, uniqueId, {
         expires: 10*365, // 10 years
-        domain: '.' + parseUri(location.href).host.split('.').slice(-2).join('.'), // ex. '.twitch.tv'
+        domain: '.' + window.location.host.split('.').slice(-2).join('.'), // ex. '.twitch.tv'
         path: '/',
         secure: false,
     });
@@ -3042,7 +3044,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.6.33-af676a4d";
+    return "2.6.33-b10be170";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -4773,67 +4775,6 @@ module.exports = {
      */
     SET_VISIBLE: 'WorkerSetVisible'
 };
-
-
-/***/ }),
-
-/***/ "./platforms/web/js/parseuri.js":
-/*!**************************************!*\
-  !*** ./platforms/web/js/parseuri.js ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// no gist/repo exists for this
-// parseUri 1.2.2
-// (c) Steven Levithan <stevenlevithan.com>
-// MIT License
-
-function parseUri(str) {
-    var o = {
-        strictMode: false,
-        key: [
-            'source',
-            'protocol',
-            'authority',
-            'userInfo',
-            'user',
-            'password',
-            'host',
-            'port',
-            'relative',
-            'path',
-            'directory',
-            'file',
-            'query',
-            'anchor',
-        ],
-        q: {
-            name: 'queryKey',
-            parser: /(?:^|&)([^&=]*)=?([^&]*)/g,
-        },
-        /* eslint-disable max-len, no-useless-escape */
-        parser: {
-            strict: /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/,
-            loose: /^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/,
-        },
-        /* eslint-enable max-len, no-useless-escape */
-    };
-    var m = o.parser[o.strictMode ? 'strict' : 'loose'].exec(str);
-    var uri = {};
-    var i = 14;
-
-    while (i--) uri[o.key[i]] = m[i] || '';
-
-    uri[o.q.name] = {};
-    uri[o.key[12]].replace(o.q.parser, function($0, $1, $2) {
-        if ($1) uri[o.q.name][$1] = $2;
-    });
-
-    return uri;
-}
-
-module.exports = parseUri;
 
 
 /***/ }),
