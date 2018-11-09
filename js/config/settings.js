@@ -74,6 +74,7 @@ window.__twilightSettings = {
     "gdpr_consent_enabled": true,
     "gdpr_disabled_eea_consent": false,
     "gdpr_evidon_timeout_ms": 30000,
+    "gladiator_staff_alpha": true,
     "google_analytics_url": "https://ssl.google-analytics.com/ga.js",
     "ivw_countries": ["DE"],
     "ivw_languages": ["de"],
