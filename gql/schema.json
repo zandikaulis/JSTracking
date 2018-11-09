@@ -22810,8 +22810,8 @@
                     "kind": "NON_NULL", 
                     "name": null, 
                     "ofType": {
-                      "kind": "OBJECT", 
-                      "name": "ExtensionCategory", 
+                      "kind": "SCALAR", 
+                      "name": "String", 
                       "ofType": null
                     }
                   }
@@ -28656,7 +28656,7 @@
             {
               "args": [], 
               "deprecationReason": null, 
-              "description": "The broadcasters hero, can be null.", 
+              "description": "The broadcasters hereo, can be null.", 
               "isDeprecated": false, 
               "name": "broadcasterHero", 
               "type": {
@@ -28668,7 +28668,7 @@
             {
               "args": [], 
               "deprecationReason": null, 
-              "description": "The game mode that was played, can be null.", 
+              "description": "The game mode that was player.", 
               "isDeprecated": false, 
               "name": "gameMode", 
               "type": {
@@ -28680,7 +28680,7 @@
             {
               "args": [], 
               "deprecationReason": null, 
-              "description": "The oponents hero, can be null.", 
+              "description": "The oponents hereo, can be null.", 
               "isDeprecated": false, 
               "name": "opponentHero", 
               "type": {
@@ -38444,65 +38444,6 @@
           "possibleTypes": null
         }, 
         {
-          "description": "Moment Details specific to the overwatch game.", 
-          "enumValues": null, 
-          "fields": [
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "One of \"game_start\" or \"hero_change\".", 
-              "isDeprecated": false, 
-              "name": "event", 
-              "type": {
-                "kind": "NON_NULL", 
-                "name": null, 
-                "ofType": {
-                  "kind": "SCALAR", 
-                  "name": "String", 
-                  "ofType": null
-                }
-              }
-            }, 
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "The hero the broadcaster is playing.", 
-              "isDeprecated": false, 
-              "name": "heroName", 
-              "type": {
-                "kind": "NON_NULL", 
-                "name": null, 
-                "ofType": {
-                  "kind": "SCALAR", 
-                  "name": "String", 
-                  "ofType": null
-                }
-              }
-            }, 
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "The role the broadcaster is playing.", 
-              "isDeprecated": false, 
-              "name": "role", 
-              "type": {
-                "kind": "NON_NULL", 
-                "name": null, 
-                "ofType": {
-                  "kind": "SCALAR", 
-                  "name": "String", 
-                  "ofType": null
-                }
-              }
-            }
-          ], 
-          "inputFields": null, 
-          "interfaces": [], 
-          "kind": "OBJECT", 
-          "name": "OverwatchMomentDetails", 
-          "possibleTypes": null
-        }, 
-        {
           "description": "Contains PUBG game specific information.", 
           "enumValues": null, 
           "fields": [
@@ -38535,97 +38476,6 @@
           "interfaces": [], 
           "kind": "OBJECT", 
           "name": "PUBG", 
-          "possibleTypes": null
-        }, 
-        {
-          "description": "Moment Details specific to the PUBG game.", 
-          "enumValues": null, 
-          "fields": [
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "bucket is the player count bucket for aggregations.", 
-              "isDeprecated": false, 
-              "name": "bucket", 
-              "type": {
-                "kind": "NON_NULL", 
-                "name": null, 
-                "ofType": {
-                  "kind": "SCALAR", 
-                  "name": "Int", 
-                  "ofType": null
-                }
-              }
-            }, 
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "One of \"game_start\" or \"player_count\".", 
-              "isDeprecated": false, 
-              "name": "event", 
-              "type": {
-                "kind": "NON_NULL", 
-                "name": null, 
-                "ofType": {
-                  "kind": "SCALAR", 
-                  "name": "String", 
-                  "ofType": null
-                }
-              }
-            }, 
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "The game mode for the moment.", 
-              "isDeprecated": false, 
-              "name": "gameMode", 
-              "type": {
-                "kind": "NON_NULL", 
-                "name": null, 
-                "ofType": {
-                  "kind": "SCALAR", 
-                  "name": "String", 
-                  "ofType": null
-                }
-              }
-            }, 
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "The maximum player count in this period.", 
-              "isDeprecated": false, 
-              "name": "maxPlayerCount", 
-              "type": {
-                "kind": "NON_NULL", 
-                "name": null, 
-                "ofType": {
-                  "kind": "SCALAR", 
-                  "name": "Int", 
-                  "ofType": null
-                }
-              }
-            }, 
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "The minimum player count in this period.", 
-              "isDeprecated": false, 
-              "name": "minPlayerCount", 
-              "type": {
-                "kind": "NON_NULL", 
-                "name": null, 
-                "ofType": {
-                  "kind": "SCALAR", 
-                  "name": "Int", 
-                  "ofType": null
-                }
-              }
-            }
-          ], 
-          "inputFields": null, 
-          "interfaces": [], 
-          "kind": "OBJECT", 
-          "name": "PUBGMomentDetails", 
           "possibleTypes": null
         }, 
         {
@@ -72104,30 +71954,6 @@
             {
               "args": [], 
               "deprecationReason": null, 
-              "description": "The additional displayable context of this moment (translated, where applicable).\nCan be null.", 
-              "isDeprecated": false, 
-              "name": "subDescription", 
-              "type": {
-                "kind": "SCALAR", 
-                "name": "String", 
-                "ofType": null
-              }
-            }, 
-            {
-              "args": [], 
-              "deprecationReason": null, 
-              "description": "The url to the thumbnail for this moment.\nCan be null.", 
-              "isDeprecated": false, 
-              "name": "thumbnailURL", 
-              "type": {
-                "kind": "SCALAR", 
-                "name": "String", 
-                "ofType": null
-              }
-            }, 
-            {
-              "args": [], 
-              "deprecationReason": null, 
               "description": "The underlying moment type.", 
               "isDeprecated": false, 
               "name": "type", 
@@ -72224,16 +72050,6 @@
               "kind": "OBJECT", 
               "name": "HearthstoneMomentDetails", 
               "ofType": null
-            }, 
-            {
-              "kind": "OBJECT", 
-              "name": "OverwatchMomentDetails", 
-              "ofType": null
-            }, 
-            {
-              "kind": "OBJECT", 
-              "name": "PUBGMomentDetails", 
-              "ofType": null
             }
           ]
         }, 
@@ -72323,12 +72139,6 @@
               "description": "Overwatch video content analysis markers.", 
               "isDeprecated": false, 
               "name": "OVERWATCH_VCA"
-            }, 
-            {
-              "deprecationReason": null, 
-              "description": "PUBG video content analysis markers.", 
-              "isDeprecated": false, 
-              "name": "PUBG_VCA"
             }
           ], 
           "fields": null, 
