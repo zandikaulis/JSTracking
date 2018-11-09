@@ -184,7 +184,7 @@
                             "data-test-selector": "rec-feedback-modal-error"
                         }, r.createElement(c.W, {
                             color: c.O.Error
-                        }, Object(a.d)("Please select a reason", "RecFeedbackModal")))))
+                        }, Object(a.d)("Please select a reason", "RecFeedbackModalSelection")))))
                     }, t.prototype.contentTypeToIDMapping = function(e) {
                         switch (e) {
                             case f.b.Shelf:

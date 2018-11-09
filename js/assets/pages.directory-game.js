@@ -1242,7 +1242,7 @@
             ! function(e) {
                 e.SuggestedTags = "suggested-tags"
             }(a || (a = {}));
-            var T, C, S = function(e) {
+            var T, S, C = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1311,7 +1311,7 @@
                             }
                         }
                     }
-                })(S),
+                })(C),
                 N = n("TCeE"),
                 I = n("79jw"),
                 _ = function(e) {
@@ -1370,7 +1370,7 @@
             }(T || (T = {})),
             function(e) {
                 e.SearchContent = "tag-search-search-content", e.SearchDropdown = "search-dropdown-selector"
-            }(C || (C = {}));
+            }(S || (S = {}));
             var O = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -1384,7 +1384,7 @@
                                 className: "tag-search__scrollable-area",
                                 suppressScrollX: !0
                             }, r.createElement(v.Xa, {
-                                "data-test-selector": C.SearchContent
+                                "data-test-selector": S.SearchContent
                             }, n.renderSuggestedTags(), e))
                         }, n.renderTagSearchResult = function(e) {
                             var t = Object(E.b)(e, n.props.type === T.TagAllMinusAutomation),
@@ -1454,7 +1454,7 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         return r.createElement(c.a, {
                             autoFocus: this.props.autoFocus,
-                            "data-test-selector": C.SearchDropdown,
+                            "data-test-selector": S.SearchDropdown,
                             inline: this.props.inline,
                             inputSize: this.props.inputSize,
                             onChange: this.onInputChange,
@@ -1515,7 +1515,7 @@
             n.d(t, "b", function() {
                 return T
             }), n.d(t, !1, function() {
-                return C
+                return S
             }), n.d(t, !1, function() {
                 return O
             }), n.d(t, "a", function() {
@@ -1958,7 +1958,7 @@
                         color: s.O.Overlay
                     }, e.subTitle)))
                 }),
-                C = (n("m493"), function(e) {
+                S = (n("m493"), function(e) {
                     var t = .5,
                         n = null;
                     "number" == typeof e.progressBarPercent && e.progressBarPercent > 0 && (n = i.createElement(s.Xa, {
@@ -2022,7 +2022,7 @@
                         "data-test-selector": "bottom-right-selector"
                     }, e.bottomRight))
                 }),
-                S = (n("kF1+"), function(e) {
+                C = (n("kF1+"), function(e) {
                     var t = e.icon && i.createElement(s.Xa, {
                         display: s.X.Flex,
                         margin: {
@@ -2288,47 +2288,47 @@
                     }, t.prototype.renderOverlay = function() {
                         return function(e) {
                             return void 0 !== e.streamType
-                        }(this.props) ? i.createElement(C, {
+                        }(this.props) ? i.createElement(S, {
                             topLeft: i.createElement(E.a, {
                                 type: this.props.streamType,
                                 hosting: !!this.props.hostedByChannelLogin
                             }),
                             topRight: void 0,
-                            bottomLeft: i.createElement(S, {
+                            bottomLeft: i.createElement(C, {
                                 value: Object(r.d)("{viewerCount, plural, one {# viewer} other {# viewers}}", {
                                     viewerCount: this.props.currentViewerCount
                                 }, "VideoPreviewCard")
                             }),
                             bottomRight: void 0
-                        }) : R(this.props) ? i.createElement(C, {
-                            topLeft: void 0 !== this.props.durationInSeconds && i.createElement(S, {
+                        }) : R(this.props) ? i.createElement(S, {
+                            topLeft: void 0 !== this.props.durationInSeconds && i.createElement(C, {
                                 value: Object(F.b)(this.props.durationInSeconds),
                                 icon: s.tb.Play,
                                 withBackground: !0
                             }),
-                            topRight: this.props.listPosition && i.createElement(S, {
+                            topRight: this.props.listPosition && i.createElement(C, {
                                 withBackground: !0,
                                 value: this.getListPositionLabel()
                             }),
-                            bottomLeft: i.createElement(S, {
+                            bottomLeft: i.createElement(C, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? i.createElement(S, {
+                            bottomRight: this.props.datePublished ? i.createElement(C, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
                             }) : null,
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
-                        }) : G(this.props) ? i.createElement(C, {
-                            topLeft: i.createElement(S, {
+                        }) : G(this.props) ? i.createElement(S, {
+                            topLeft: i.createElement(C, {
                                 value: Object(F.b)(this.props.durationInSeconds),
                                 icon: s.tb.Clip,
                                 withBackground: !0
                             }),
                             topRight: void 0,
-                            bottomLeft: i.createElement(S, {
+                            bottomLeft: i.createElement(C, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: this.props.datePublished ? i.createElement(S, {
+                            bottomRight: this.props.datePublished ? i.createElement(C, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
                             }) : null
                         }) : void 0
@@ -3668,6 +3668,95 @@
                             selectionSet: {
                                 kind: "SelectionSet",
                                 selections: [{
+                                    kind: "FragmentSpread",
+                                    name: {
+                                        kind: "Name",
+                                        value: "directoryPageGameStreamWithTagsNode"
+                                    },
+                                    directives: []
+                                }]
+                            }
+                        }]
+                    }
+                }, {
+                    kind: "FragmentDefinition",
+                    name: {
+                        kind: "Name",
+                        value: "directoryPageGameStreamWithTagsNode"
+                    },
+                    typeCondition: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Stream"
+                        }
+                    },
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "id"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "title"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "viewersCount"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "previewImageURL"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "width"
+                                },
+                                value: {
+                                    kind: "IntValue",
+                                    value: "320"
+                                }
+                            }, {
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "height"
+                                },
+                                value: {
+                                    kind: "IntValue",
+                                    value: "180"
+                                }
+                            }],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "broadcaster"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
                                     kind: "Field",
                                     name: {
                                         kind: "Name",
@@ -3679,7 +3768,7 @@
                                     kind: "Field",
                                     name: {
                                         kind: "Name",
-                                        value: "title"
+                                        value: "login"
                                     },
                                     arguments: [],
                                     directives: []
@@ -3687,7 +3776,7 @@
                                     kind: "Field",
                                     name: {
                                         kind: "Name",
-                                        value: "viewersCount"
+                                        value: "displayName"
                                     },
                                     arguments: [],
                                     directives: []
@@ -3695,7 +3784,27 @@
                                     kind: "Field",
                                     name: {
                                         kind: "Name",
-                                        value: "previewImageURL"
+                                        value: "roles"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "isPartner"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "profileImageURL"
                                     },
                                     arguments: [{
                                         kind: "Argument",
@@ -3705,7 +3814,72 @@
                                         },
                                         value: {
                                             kind: "IntValue",
-                                            value: "320"
+                                            value: "50"
+                                        }
+                                    }],
+                                    directives: []
+                                }]
+                            }
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "tags"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "FragmentSpread",
+                                    name: {
+                                        kind: "Name",
+                                        value: "tagFragment"
+                                    },
+                                    directives: []
+                                }]
+                            }
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "type"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "game"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "boxArtURL"
+                                    },
+                                    arguments: [{
+                                        kind: "Argument",
+                                        name: {
+                                            kind: "Name",
+                                            value: "width"
+                                        },
+                                        value: {
+                                            kind: "IntValue",
+                                            value: "40"
                                         }
                                     }, {
                                         kind: "Argument",
@@ -3715,7 +3889,7 @@
                                         },
                                         value: {
                                             kind: "IntValue",
-                                            value: "180"
+                                            value: "56"
                                         }
                                     }],
                                     directives: []
@@ -3723,159 +3897,10 @@
                                     kind: "Field",
                                     name: {
                                         kind: "Name",
-                                        value: "broadcaster"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "login"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "displayName"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "roles"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "isPartner"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }]
-                                            }
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "profileImageURL"
-                                            },
-                                            arguments: [{
-                                                kind: "Argument",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "width"
-                                                },
-                                                value: {
-                                                    kind: "IntValue",
-                                                    value: "50"
-                                                }
-                                            }],
-                                            directives: []
-                                        }]
-                                    }
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "tags"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "FragmentSpread",
-                                            name: {
-                                                kind: "Name",
-                                                value: "tagFragment"
-                                            },
-                                            directives: []
-                                        }]
-                                    }
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "type"
+                                        value: "name"
                                     },
                                     arguments: [],
                                     directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "game"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "boxArtURL"
-                                            },
-                                            arguments: [{
-                                                kind: "Argument",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "width"
-                                                },
-                                                value: {
-                                                    kind: "IntValue",
-                                                    value: "40"
-                                                }
-                                            }, {
-                                                kind: "Argument",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "height"
-                                                },
-                                                value: {
-                                                    kind: "IntValue",
-                                                    value: "56"
-                                                }
-                                            }],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "name"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
                                 }]
                             }
                         }]
@@ -3883,11 +3908,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 698
+                    end: 796
                 }
             };
             a.loc.source = {
-                body: '#import "twilight/features/tags/models/tag-fragment.gql"\nquery DirectoryPage_Game($name: String! $limit: Int $cursor: Cursor $filters: StreamMetadataFilterInput $sort: StreamSort $tags: [String!]) {\ngame(name: $name) {\nid\ndisplayName\nstreams(first: $limit after: $cursor filters: $filters sort: $sort tags: $tags) {\nedges {\n...directoryPageGameStreamWithTagsEdge\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}\nfragment directoryPageGameStreamWithTagsEdge on StreamEdge {\ncursor\nnode {\nid\ntitle\nviewersCount\npreviewImageURL(width: 320 height: 180)\nbroadcaster {\nid\nlogin\ndisplayName\nroles {\nisPartner\n}\nprofileImageURL(width: 50)\n}\ntags {\n...tagFragment\n}\ntype\ngame {\nid\nboxArtURL(width: 40 height: 56)\nname\n}\n}\n}',
+                body: '#import "twilight/features/tags/models/tag-fragment.gql"\nquery DirectoryPage_Game($name: String! $limit: Int $cursor: Cursor $filters: StreamMetadataFilterInput $sort: StreamSort $tags: [String!]) {\ngame(name: $name) {\nid\ndisplayName\nstreams(first: $limit after: $cursor filters: $filters sort: $sort tags: $tags) {\nedges {\n...directoryPageGameStreamWithTagsEdge\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}\nfragment directoryPageGameStreamWithTagsEdge on StreamEdge {\ncursor\nnode {\n...directoryPageGameStreamWithTagsNode\n}\n}\nfragment directoryPageGameStreamWithTagsNode on Stream {\nid\ntitle\nviewersCount\npreviewImageURL(width: 320 height: 180)\nbroadcaster {\nid\nlogin\ndisplayName\nroles {\nisPartner\n}\nprofileImageURL(width: 50)\n}\ntags {\n...tagFragment\n}\ntype\ngame {\nid\nboxArtURL(width: 40 height: 56)\nname\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -4539,7 +4564,7 @@
                 e.Upsell = "upsell"
             }(v || (v = {}));
             var T = n("Ve5Q"),
-                C = (n("wqI2"), function(e) {
+                S = (n("wqI2"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.impressionEventFired = !1, t.signup = function() {
@@ -4619,7 +4644,7 @@
                         }(), this.impressionEventFired = !0)
                     }, t
                 }(r.PureComponent));
-            var S = Object(s.compose)(Object(u.a)(T, {
+            var C = Object(s.compose)(Object(u.a)(T, {
                     options: function(e) {
                         return {
                             variables: {
@@ -4636,14 +4661,14 @@
                             return Object(p.g)(m.a.SideNavUpsellCenter)
                         }
                     }, e)
-                }))(C),
+                }))(S),
                 w = n("kRBY"),
                 N = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return this.props.isLoggedIn || this.props.collapsed ? null : r.createElement(S, i.__assign({}, this.props))
+                        return this.props.isLoggedIn || this.props.collapsed ? null : r.createElement(C, i.__assign({}, this.props))
                     }, t
                 }(r.PureComponent);
             var I = Object(o.connect)(function(e) {
@@ -4653,7 +4678,7 @@
                 }
             })(N);
             n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {
-                return C
+                return S
             }), n.d(t, !1, function() {
                 return N
             }), n.d(t, "a", function() {
@@ -5407,14 +5432,13 @@
                 c = n("oB8h"),
                 d = n("kduP"),
                 u = n("2xye"),
-                m = n("rShu"),
-                p = n("4KoZ"),
-                g = n("QV0j"),
-                h = n("yI6f"),
-                f = n("T2RZ"),
-                v = n("Ue10"),
-                k = (n("zrz1"), Object(f.a)(u.PageviewMedium.Game, h.b.Live, h.c.BrowseInCategoryChannels)(l.a)),
-                b = function(e) {
+                m = n("4KoZ"),
+                p = n("QV0j"),
+                g = n("yI6f"),
+                h = n("T2RZ"),
+                f = n("Ue10"),
+                v = (n("zrz1"), Object(h.a)(u.PageviewMedium.Game, g.b.Live, g.c.BrowseInCategoryChannels)(l.a)),
+                k = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getLinkTo = function(e, n) {
@@ -5431,7 +5455,7 @@
                                 })
                             }
                         }, t.shouldShowGame = function(e) {
-                            if (t.props.directoryType !== m.a.Games && t.props.streamNode.game) {
+                            if (t.props.shouldShowGame && t.props.streamNode.game) {
                                 var n = t.props.streamNode.game[e];
                                 if (n) return n
                             }
@@ -5443,8 +5467,8 @@
                             t = this.props.streamIndex;
                         if (!e.broadcaster) return null;
                         var n = {
-                            context: this.props.directoryType === m.a.Games ? l.b.SingleGameList : l.b.MixedGameAndChannelList,
-                            title: e.title || Object(p.a)(),
+                            context: this.props.shouldShowGame ? l.b.MixedGameAndChannelList : l.b.SingleGameList,
+                            title: e.title || Object(m.a)(),
                             linkTo: this.getLinkTo("/" + e.broadcaster.login, t),
                             thumbnailImageProps: {
                                 src: e.previewImageURL || s.a.defaultStreamPreviewURL,
@@ -5463,7 +5487,7 @@
                                 src: this.shouldShowGame("boxArtURL") || s.a.defaultBoxArtURL,
                                 alt: this.shouldShowGame("name")
                             },
-                            streamType: Object(g.a)(e.type) || c.a.Live,
+                            streamType: Object(p.a)(e.type) || c.a.Live,
                             currentViewerCount: e.viewersCount || 0,
                             trackImageLatency: this.props.trackImageLatency,
                             tagListProps: this.props.tagListProps
@@ -5474,14 +5498,14 @@
                             style: {
                                 order: t
                             }
-                        }, i.createElement(v.Xa, {
+                        }, i.createElement(f.Xa, {
                             className: "stream-thumbnail__card",
-                            position: v.jb.Relative,
+                            position: f.jb.Relative,
                             margin: {
                                 bottom: 2
                             },
                             "data-target": "directory-game__card_container"
-                        }, i.createElement(k, a.__assign({}, n, {
+                        }, i.createElement(v, a.__assign({}, n, {
                             "data-a-target": "card-" + t,
                             "data-a-id": "card-" + (e.broadcaster.login || "").replace(/ /g, ""),
                             trackingProps: {
@@ -5494,15 +5518,15 @@
                         }))))
                     }, t
                 }(i.Component),
-                y = Object(o.compose)(r.a)(b);
+                b = Object(o.compose)(r.a)(k);
             n.d(t, "a", function() {
                 return "directory-first-item"
             }), n.d(t, !1, function() {
                 return "directory-game__card_container"
             }), n.d(t, !1, function() {
-                return b
+                return k
             }), n.d(t, "b", function() {
-                return y
+                return b
             })
         },
         k5cX: function(e, t) {
@@ -6016,8 +6040,8 @@
                 b = n("geRD"),
                 y = n("NvVO"),
                 T = n("MPw5"),
-                C = n("2xye"),
-                S = n("cTNz"),
+                S = n("2xye"),
+                C = n("cTNz"),
                 w = n("GnwI"),
                 N = n("bUox"),
                 I = n("TCeE"),
@@ -6035,7 +6059,7 @@
                         return t.updateDisplayAdOrder = function() {
                             var e = document.querySelector('[data-target="' + P + '"]'),
                                 t = document.querySelector('[data-target="' + O.a + '"]'),
-                                n = document.querySelector("#" + S.b.directory.rectangle);
+                                n = document.querySelector("#" + C.b.directory.rectangle);
                             if (t && e && n) {
                                 var a = Math.round((e.clientWidth - 300) / t.clientWidth).toString();
                                 n.style.order !== a && "0" !== a && (n.style.order = a)
@@ -6067,12 +6091,12 @@
                                 width: 300,
                                 height: 250
                             },
-                            adUnit: S.d.directory,
-                            slotID: S.b.directory.rectangle,
-                            adSize: S.c.directory.rectangle,
+                            adUnit: C.d.directory,
+                            slotID: C.b.directory.rectangle,
+                            adSize: C.c.directory.rectangle,
                             "data-a-target": "directory-card-ad-slot",
                             targeting: {
-                                pagetype: S.a.games,
+                                pagetype: C.a.games,
                                 game: this.props.directoryName
                             },
                             key: -1,
@@ -6112,7 +6136,7 @@
                         var e = this;
                         if (this.props.data.loading && !this.props.data.game || this.props.data.error) return null;
                         var t = this.props.directoryWidth,
-                            n = C.PageviewMedium.Game,
+                            n = S.PageviewMedium.Game,
                             a = this.props.data.game && this.props.data.game.streams && this.props.data.game.streams.edges || [];
                         if (t && t > 0) {
                             var i = Object(B.a)(t, 300, 1);
@@ -6134,7 +6158,7 @@
                                     });
                                 return d.createElement(O.b, {
                                     directoryName: e.props.directoryName,
-                                    directoryType: e.props.directoryType,
+                                    shouldShowGame: e.props.shouldShowGame,
                                     streamIndex: a,
                                     streamNode: {
                                         __typename: "Stream",
@@ -6156,11 +6180,12 @@
                                             boxArtURL: i.game.boxArtURL || u.a.defaultBoxArtURL,
                                             name: i.game.name
                                         } : null,
+                                        tags: null,
                                         type: Object(q.a)(i.type) || M.a.Live
                                     },
                                     key: i.id,
                                     trackingMedium: n,
-                                    trackingContent: C.PageviewContent.LocalLiveChannel,
+                                    trackingContent: S.PageviewContent.LocalLiveChannel,
                                     trackImageLatency: 0 === a,
                                     tagListProps: r
                                 })
@@ -6194,8 +6219,8 @@
                 J = n("4KoZ");
 
             function Z(e, t, n) {
-                var a = n.trackingContent ? n.trackingContent : C.PageviewContent.Live,
-                    i = C.PageviewMedium.Game;
+                var a = n.trackingContent ? n.trackingContent : S.PageviewContent.Live,
+                    i = S.PageviewMedium.Game;
                 n.trackingMedium && (i = n.trackingMedium);
                 var r = n.history && n.history.location && n.history.location.state || {};
                 return {
@@ -6209,7 +6234,7 @@
             }
 
             function ee(e, t) {
-                if (t.directoryType !== E.a.Games && t.streamNode.game) {
+                if (t.shouldShowGame && t.streamNode.game) {
                     var n = t.streamNode.game[e];
                     if (n) return n
                 }
@@ -6228,7 +6253,7 @@
             ! function(e) {
                 e.PreviewCard = "directory-game-page__preview-card"
             }(te || (te = {}));
-            var se = Object(ie.a)(C.PageviewMedium.Game, ae.b.Live, ae.c.BrowseInCategoryChannels)(p.a),
+            var se = Object(ie.a)(S.PageviewMedium.Game, ae.b.Live, ae.c.BrowseInCategoryChannels)(p.a),
                 le = Object(k.a)(3e5),
                 ce = Object(H.a)();
             var de = function(e) {
@@ -6254,7 +6279,7 @@
                         }, n.onSlotAdded = function() {
                             n.setState(function(e) {
                                 var t = e.numSlotsAdded + 1;
-                                return t === Object.keys(S.b.directory).length && T.a.display(S.b.directory.banner), {
+                                return t === Object.keys(C.b.directory).length && T.a.display(C.b.directory.banner), {
                                     numSlotsAdded: t
                                 }
                             })
@@ -6268,13 +6293,13 @@
                         }, n
                     }
                     return l.__extends(t, e), t.prototype.componentWillMount = function() {
-                        S.g.addListener(S.e, this.onSlotAdded)
+                        C.g.addListener(C.e, this.onSlotAdded)
                     }, t.prototype.componentDidMount = function() {
                         this.onRender()
                     }, t.prototype.componentDidUpdate = function() {
                         this.onRender()
                     }, t.prototype.componentWillUnmount = function() {
-                        S.g.removeListener(S.e, this.onSlotAdded)
+                        C.g.removeListener(C.e, this.onSlotAdded)
                     }, t.prototype.render = function() {
                         var e = this,
                             t = null;
@@ -6284,7 +6309,9 @@
                                 tagFilters: this.props.tagFilters
                             }) : this.props.data.loading || this.props.data.game ? this.props.data.error ? t = d.createElement(m.a, {
                                 message: Object(u.d)("Error loading data.", "DirectoryGamePage")
-                            }) : this.props.data.game && this.props.data.game.streams && this.props.data.game.streams.edges && 0 === this.props.data.game.streams.edges.length && (t = d.createElement(N.a, {
+                            }) : this.props.data.game && this.props.data.game.streams && this.props.data.game.streams.edges && 0 === this.props.data.game.streams.edges.length && (t = 0 === this.props.tagFilters.length ? d.createElement(L.W, {
+                                type: L.Vb.H3
+                            }, Object(u.d)("No results found", "DirectoryGamePage")) : d.createElement(N.a, {
                                 errorType: N.b.NoResults,
                                 onClickRemoveLastTag: this.removeLastTag,
                                 tagFilters: this.props.tagFilters
@@ -6310,7 +6337,7 @@
                                 "data-a-target": "international-section-header"
                             }), Object(u.d)("All Channels", "DirectoryInternationalSection"))), this.props.tagFilters.length || this.props.languageTagFilters.length || (n = d.createElement(K, {
                                 directoryName: decodeURIComponent(this.props.match.params.encodedCommunityName),
-                                directoryType: E.a.Games,
+                                shouldShowGame: !1,
                                 directoryWidth: this.state.directoryWidth,
                                 languageCode: i,
                                 addTagFilter: this.addTagFilter,
@@ -6346,6 +6373,7 @@
                                             boxArtURL: n.game.boxArtURL || u.a.defaultBoxArtURL,
                                             name: n.game.name
                                         } : null,
+                                        tags: null,
                                         type: Object(q.a)(n.type) || M.a.Live
                                     }), t
                                 }(t);
@@ -6389,7 +6417,7 @@
                                     }
                                 }({
                                     directoryName: decodeURIComponent(e.props.match.params.encodedCommunityName),
-                                    directoryType: e.state.directoryType,
+                                    shouldShowGame: !1,
                                     streamIndex: n,
                                     streamNode: a,
                                     tagListProps: Object(W.a)({
@@ -6508,13 +6536,13 @@
                 }), Object(w.b)("DirectoryGamePage", {
                     destination: y.a.DirectoryGameIndex
                 }), Object(f.a)({
-                    location: C.PageviewLocation.Directory,
+                    location: S.PageviewLocation.Directory,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     },
                     properties: function(e) {
                         return {
-                            content_type: C.PageviewDirectoryContentType.Games,
+                            content_type: S.PageviewDirectoryContentType.Games,
                             game: e.data.game ? e.data.game.displayName : null
                         }
                     }
@@ -6541,8 +6569,8 @@
                 be = n("si2W"),
                 ye = n("C29h"),
                 Te = n("HStj"),
-                Ce = n("8Ocm"),
-                Se = (n("yetU"), function(e) {
+                Se = n("8Ocm"),
+                Ce = (n("yetU"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderFilteredBy = function() {
@@ -6585,7 +6613,7 @@
                         })), this.renderFilteredBy())
                     }, t
                 }(d.Component)),
-                we = Object(r.compose)(Object(h.a)(Ce, {
+                we = Object(r.compose)(Object(h.a)(Se, {
                     options: function(e) {
                         return {
                             variables: {
@@ -6593,7 +6621,7 @@
                             }
                         }
                     }
-                }))(Se);
+                }))(Ce);
             var Ne = Object(i.connect)(function(e, t) {
                     return {
                         directoryTagFilters: Object(a.b)(e, t.directoryName)
@@ -6660,7 +6688,7 @@
                                                 }
                                             }), [4, this.props.followGame(e)]) : [2];
                                         case 1:
-                                            return n.sent(), this.track(C.SpadeEventType.GameFollow), [2]
+                                            return n.sent(), this.track(S.SpadeEventType.GameFollow), [2]
                                     }
                                 })
                             })
@@ -6696,7 +6724,7 @@
                                                 }
                                             }), [4, this.props.unfollowGame(e)]) : [2];
                                         case 1:
-                                            return n.sent(), this.track(C.SpadeEventType.GameUnfollow), [2]
+                                            return n.sent(), this.track(S.SpadeEventType.GameUnfollow), [2]
                                     }
                                 })
                             })
@@ -6756,7 +6784,7 @@
                     }), t.prototype.track = function(e) {
                         u.p.tracking.track(e, {
                             src: this.props.src,
-                            kind: e === C.SpadeEventType.GameFollow ? "follow" : "unfollow",
+                            kind: e === S.SpadeEventType.GameFollow ? "follow" : "unfollow",
                             name: this.props.gameName
                         })
                     }, t
@@ -7005,12 +7033,12 @@
                                     marginBottom: 20,
                                     marginTop: 20
                                 },
-                                adUnit: S.d.directory,
-                                slotID: S.b.directory.banner,
-                                adSize: S.c.directory.banner,
+                                adUnit: C.d.directory,
+                                slotID: C.b.directory.banner,
+                                adSize: C.c.directory.banner,
                                 "data-a-target": "directory-banner-ad-slot",
                                 targeting: {
-                                    pagetype: S.a.games,
+                                    pagetype: C.a.games,
                                     game: t.props.data.game.displayName
                                 },
                                 autoEnable: !1
@@ -8317,7 +8345,7 @@
                 c.o.track(u.SpadeEventType.RecRequestClient, t)
             }
             var T = n("x75U"),
-                C = n("A65o");
+                S = n("A65o");
             n.d(t, "f", function() {
                 return p
             }), n.d(t, "c", function() {
@@ -8345,7 +8373,7 @@
             }), n.d(t, "k", function() {
                 return T.b
             }), n.d(t, !1, function() {
-                return C.a
+                return S.a
             })
         },
         yetU: function(e, t, n) {},

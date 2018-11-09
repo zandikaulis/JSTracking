@@ -8787,6 +8787,7 @@
                     Friendship: "friendship",
                     ImageUpload: "user-image-update",
                     ModerationActionsByUserAndChannel: "chat_moderator_actions",
+                    MultiviewChanletUpdate: "multiview-chanlet-update",
                     MysteryGift: "channel-sub-gifts-v1",
                     OnsiteNotifications: "onsite-notifications",
                     PayoutOnboardingEvents: "payout-onboarding-events",
@@ -8832,6 +8833,7 @@
                     ImageUploadSuccess: "imageuploadsuccess",
                     LiveEvent: "live-event",
                     ModerationAction: "moderation_action",
+                    MultiviewChanletUpdate: "chanlet",
                     MysteryGiftPurchase: "mystery-gift-purchase",
                     OnsiteNotificationCreate: "create-notification",
                     OnsiteNotificationDelete: "delete-notification",
@@ -12364,11 +12366,14 @@
                         }, t.onAnimatedButtonComplete = function() {
                             t.props.onToggleAnimationComplete && t.props.onToggleAnimationComplete(t.state.isFollowing)
                         }, t.login = function() {
-                            var e = t.props.useContextualModals && Object(N.b)() === N.a.TwoStep ? {
+                            var e;
+                            t.props.useContextualModals && Object(N.b)() === N.a.TwoStep ? e = {
                                 modalType: T.e.TwoStep,
                                 targetChannel: t.props.channelName || t.props.channelLogin
-                            } : void 0;
-                            t.props.login(e)
+                            } : t.props.useContextualModals && Object(N.b)() === N.a.Split && (e = {
+                                modalType: T.e.Combined,
+                                targetChannel: t.props.channelName || t.props.channelLogin
+                            }), t.props.login(e)
                         }, t
                     }
                     return d.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -12656,7 +12661,10 @@
                                 externalfullscreen: n.props.fullscreen.supported(),
                                 gdpr: n.createPlayerGDPROptions(n.props),
                                 muted: n.props.muted,
-                                showtheatre: !n.props.disableTheatreButton
+                                showtheatre: !n.props.disableTheatreButton,
+                                trackingProperties: o.__assign({}, B.trackingProperties, {
+                                    platform: T.o.getPlatform()
+                                })
                             });
                             n.playerBuffering = n.registerBufferingEvent(!!n.props.paused), n.playerPlayed = n.registerPlayedEvent(!!n.props.paused);
                             var i = n.props.playerTypeOverride;

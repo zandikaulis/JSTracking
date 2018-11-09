@@ -572,12 +572,16 @@
                     width: 200
                 });
                 var t = r.createElement(c.W, {
-                        type: c.Vb.H4,
-                        color: c.O.Base,
-                        bold: !0,
-                        "data-test-selector": i.Title
-                    }, e.titleMessage),
-                    n = e.subTitle;
+                    type: c.Vb.H4,
+                    color: c.O.Base,
+                    bold: !0,
+                    "data-test-selector": i.Title
+                }, e.titleMessage);
+                e.titleLinkTo && (t = r.createElement(c.U, {
+                    to: e.titleLinkTo,
+                    type: c.V.Inherit
+                }, t));
+                var n = e.subTitle;
                 return e.subTitle && "string" == typeof e.subTitle ? n = r.createElement(c.W, {
                     color: c.O.Alt2,
                     type: c.Vb.Span,
@@ -2569,7 +2573,7 @@
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.isUserDataReady(e) && e.pubsub.messages.subscriptionInfo !== this.props.pubsub.messages.subscriptionInfo && this.props.data.refetch()
                     }, t.prototype.componentWillUnmount = function() {
-                        Object(l.d)()
+                        Object(l.e)()
                     }, t.prototype.render = function() {
                         var e = this.props.data;
                         if (!e || e.loading || e.error) return null;
@@ -2669,7 +2673,7 @@
                     }, t.prototype.isUserDataReady = function(e) {
                         return e.data && e.data.user && !e.data.loading && !e.data.error
                     }, t.prototype.checkAndDisplaySubscriptionCheckout = function() {
-                        var e = h.n.get(l.b, "");
+                        var e = h.n.get(l.c, "");
                         if (e) {
                             var t = this.props.data.user;
                             if (t && t.subscriptionProducts) t.subscriptionProducts.filter(function(e) {
@@ -2677,13 +2681,14 @@
                             }).map(function(e) {
                                 return e.name
                             }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
-                                mysteryGiftCount: Number(h.n.get(l.a, "")),
+                                isAnonymous: h.n.get(l.a, !1),
+                                mysteryGiftCount: Number(h.n.get(l.b, "")),
                                 productName: e,
-                                recipientLogin: h.n.get(l.c, ""),
+                                recipientLogin: h.n.get(l.d, ""),
                                 trackingContext: {
                                     source: _.c.ChannelSubscribeButton
                                 }
-                            }) : this.props.showLoginModal() : Object(l.d)()
+                            }) : this.props.showLoginModal() : Object(l.e)()
                         }
                     }, t
                 }(r.Component),
@@ -2700,7 +2705,7 @@
                     }
                 }), Object(k.a)([{
                     topic: function(e) {
-                        return Object(w.F)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(w.G)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -2744,7 +2749,7 @@
                 }
             }, function(e) {
                 return Object(a.bindActionCreators)({
-                    showLoginModal: Object(l.e)(c.a.ChannelSubscriptionButton),
+                    showLoginModal: Object(l.f)(c.a.ChannelSubscriptionButton),
                     showSubscriptionCheckoutModal: function(e) {
                         var t = i.__rest(e, []);
                         return Object(d.d)(s.a, {
@@ -3286,34 +3291,37 @@
         },
         UUve: function(e, t, n) {
             "use strict";
-            n.d(t, "b", function() {
+            n.d(t, "c", function() {
                 return o
-            }), n.d(t, "c", function() {
-                return a
-            }), n.d(t, "a", function() {
-                return s
             }), n.d(t, "d", function() {
-                return c
+                return a
+            }), n.d(t, "b", function() {
+                return s
+            }), n.d(t, "a", function() {
+                return l
             }), n.d(t, "e", function() {
                 return d
+            }), n.d(t, "f", function() {
+                return u
             });
             var i = n("/7QA"),
                 r = n("y5D0"),
                 o = "SUB_CHECKOUT__PRODUCT",
                 a = "SUB_CHECKOUT__RECIPIENT",
                 s = "SUB_CHECKOUT__MYSTERY_GIFT_COUNT",
-                l = [o, a, s];
+                l = "SUB_CHECKOUT__GIFTING_ANONYMOUSLY",
+                c = [o, a, s, l];
 
-            function c() {
-                l.forEach(function(e) {
+            function d() {
+                c.forEach(function(e) {
                     return i.n.remove(e)
                 })
             }
 
-            function d(e) {
+            function u(e) {
                 return function() {
                     return Object(r.e)(e, {
-                        onClose: c
+                        onClose: d
                     })
                 }
             }
@@ -6024,8 +6032,8 @@
             ! function(e) {
                 e.SocialButtonsDefault = "channel-header__social-buttons-default", e.SocialButtonsVariantB = "channel-header__social-buttons-variant-b"
             }(V || (V = {}));
-            var W, X = "channel-header__edit-profile-overlay",
-                M = "channel-header__verified-badge",
+            var W, M = "channel-header__edit-profile-overlay",
+                X = "channel-header__verified-badge",
                 G = "channel-header__live-indicator",
                 H = "yes",
                 z = "browser-notifications-upsell-seen";
@@ -6040,7 +6048,7 @@
                             direction: E.ac.Right
                         }, o.createElement(E.Xa, {
                             className: "channel-header__verified",
-                            "data-target": M,
+                            "data-target": X,
                             display: E.X.Flex,
                             alignItems: E.f.Center,
                             margin: {
@@ -6065,7 +6073,7 @@
                             })
                         }, n.renderAvatarEditButton = function() {
                             return n.props.data && n.props.data.user && n.props.data.user.id && n.props.data.user.login && n.isChannelEditor() ? o.createElement(E.Eb, {
-                                className: X,
+                                className: M,
                                 background: E.r.Overlay,
                                 position: E.jb.Absolute,
                                 attachTop: !0,
@@ -6153,7 +6161,7 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.channelHeader && this.updateWidth(this.getWidth(this.channelHeader.querySelector('[data-target="channel-header-left"]')).width), this.onUpdateDebounce(), this.reportInteractive()
                     }, t.prototype.componentWillUnmount = function() {
-                        this.resizeAnimationFrame && cancelAnimationFrame(this.resizeAnimationFrame), window.removeEventListener("resize", this.onUpdateDebounce)
+                        this.clearResetOfflineTimer(), this.resizeAnimationFrame && cancelAnimationFrame(this.resizeAnimationFrame), window.removeEventListener("resize", this.onUpdateDebounce)
                     }, t.prototype.updateWidth = function(e) {
                         var t = e !== this.width || this.width !== this.prevWidth;
                         void 0 !== this.width && (this.prevWidth = this.width), this.width !== e && (this.width = e), t && (this.resizeAnimationFrame && (cancelAnimationFrame(this.resizeAnimationFrame), this.resizeAnimationFrame = null), this.onUpdateDebounce())
@@ -6528,10 +6536,10 @@
                     }
                 }), Object(p.a)([{
                     topic: function(e) {
-                        return e.channelLogin ? Object(h.H)(e.channelLogin) : ""
+                        return e.channelLogin ? Object(h.I)(e.channelLogin) : ""
                     },
                     skip: function(e) {
-                        return !e.channelLogin
+                        return !e.channelLogin || !e.firstPageLoaded
                     },
                     mapMessageTypesToProps: (T = {}, T[m.PubsubMessageType.ViewCount] = "viewCount", T)
                 }]), Object(j.b)("ChannelHeader"))(q)
@@ -6551,7 +6559,11 @@
                 o = n("fvjX"),
                 a = n("aCAx"),
                 s = n("wxwP");
-            var l = Object(r.connect)(null, function(e) {
+            var l = Object(r.connect)(function(e) {
+                return {
+                    firstPageLoaded: e.session.firstPageLoaded
+                }
+            }, function(e) {
                 return Object(o.bindActionCreators)({
                     showBrowserNotificationsUpsellModal: function() {
                         return Object(a.d)(s.a, {})

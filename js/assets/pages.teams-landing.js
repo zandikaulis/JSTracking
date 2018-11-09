@@ -619,7 +619,7 @@
                     }, n.prototype.componentWillReceiveProps = function(e) {
                         this.isUserDataReady(e) && e.pubsub.messages.subscriptionInfo !== this.props.pubsub.messages.subscriptionInfo && this.props.data.refetch()
                     }, n.prototype.componentWillUnmount = function() {
-                        Object(l.d)()
+                        Object(l.e)()
                     }, n.prototype.render = function() {
                         var e = this.props.data;
                         if (!e || e.loading || e.error) return null;
@@ -719,7 +719,7 @@
                     }, n.prototype.isUserDataReady = function(e) {
                         return e.data && e.data.user && !e.data.loading && !e.data.error
                     }, n.prototype.checkAndDisplaySubscriptionCheckout = function() {
-                        var e = v.n.get(l.b, "");
+                        var e = v.n.get(l.c, "");
                         if (e) {
                             var n = this.props.data.user;
                             if (n && n.subscriptionProducts) n.subscriptionProducts.filter(function(e) {
@@ -727,13 +727,14 @@
                             }).map(function(e) {
                                 return e.name
                             }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
-                                mysteryGiftCount: Number(v.n.get(l.a, "")),
+                                isAnonymous: v.n.get(l.a, !1),
+                                mysteryGiftCount: Number(v.n.get(l.b, "")),
                                 productName: e,
-                                recipientLogin: v.n.get(l.c, ""),
+                                recipientLogin: v.n.get(l.d, ""),
                                 trackingContext: {
                                     source: C.c.ChannelSubscribeButton
                                 }
-                            }) : this.props.showLoginModal() : Object(l.d)()
+                            }) : this.props.showLoginModal() : Object(l.e)()
                         }
                     }, n
                 }(a.Component),
@@ -750,7 +751,7 @@
                     }
                 }), Object(f.a)([{
                     topic: function(e) {
-                        return Object(N.F)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(N.G)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -794,7 +795,7 @@
                 }
             }, function(e) {
                 return Object(o.bindActionCreators)({
-                    showLoginModal: Object(l.e)(d.a.ChannelSubscriptionButton),
+                    showLoginModal: Object(l.f)(d.a.ChannelSubscriptionButton),
                     showSubscriptionCheckoutModal: function(e) {
                         var n = i.__rest(e, []);
                         return Object(c.d)(s.a, {
@@ -1564,34 +1565,37 @@
         },
         UUve: function(e, n, t) {
             "use strict";
-            t.d(n, "b", function() {
+            t.d(n, "c", function() {
                 return r
-            }), t.d(n, "c", function() {
-                return o
-            }), t.d(n, "a", function() {
-                return s
             }), t.d(n, "d", function() {
-                return d
+                return o
+            }), t.d(n, "b", function() {
+                return s
+            }), t.d(n, "a", function() {
+                return l
             }), t.d(n, "e", function() {
                 return c
+            }), t.d(n, "f", function() {
+                return u
             });
             var i = t("/7QA"),
                 a = t("y5D0"),
                 r = "SUB_CHECKOUT__PRODUCT",
                 o = "SUB_CHECKOUT__RECIPIENT",
                 s = "SUB_CHECKOUT__MYSTERY_GIFT_COUNT",
-                l = [r, o, s];
+                l = "SUB_CHECKOUT__GIFTING_ANONYMOUSLY",
+                d = [r, o, s, l];
 
-            function d() {
-                l.forEach(function(e) {
+            function c() {
+                d.forEach(function(e) {
                     return i.n.remove(e)
                 })
             }
 
-            function c(e) {
+            function u(e) {
                 return function() {
                     return Object(a.e)(e, {
-                        onClose: d
+                        onClose: c
                     })
                 }
             }
@@ -2211,8 +2215,8 @@
                 O = t("0Log"),
                 x = t("/aPz"),
                 P = t("ZLqn"),
-                j = t("eAAt"),
-                U = t("0EKw"),
+                U = t("eAAt"),
+                j = t("0EKw"),
                 A = t("5goO"),
                 R = t("QjI3"),
                 V = t("eFQ3"),
@@ -2227,14 +2231,14 @@
                             if (e && e.broadcastSettings && e.broadcastSettings.title) return e.broadcastSettings.title
                         }, n.renderGame = function() {
                             var e = n.getGame();
-                            return e && e.name ? i.createElement(U.a, {
+                            return e && e.name ? i.createElement(j.a, {
                                 name: e.name
                             }) : null
                         }, n.renderGameBoxArt = function() {
                             var e = n.getGame(),
                                 t = e && e.name ? e.name : "",
                                 a = e && e.boxArtURL ? e.boxArtURL : "";
-                            return e && t && a ? i.createElement(j.a, {
+                            return e && t && a ? i.createElement(U.a, {
                                 name: t,
                                 boxArtURL: a,
                                 size: k.J.Size4

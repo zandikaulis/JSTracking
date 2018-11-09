@@ -701,7 +701,7 @@
                         }
                     }), Object(l.a)([{
                         topic: function(e) {
-                            return Object(m.D)(e.currentUserID)
+                            return Object(m.E)(e.currentUserID)
                         },
                         mapMessageTypesToProps: (a = {}, a[d.PubsubMessageType.ChatNotification] = "userCommerceUpdateEvent", a)
                     }])], t)
@@ -718,7 +718,7 @@
                 })(T),
                 R = n("kRBY"),
                 w = n("oJmH"),
-                D = (n("tRzL"), function(e) {
+                L = (n("tRzL"), function(e) {
                     var t = s("rare-emote__face", {
                             "rare-emote__face--animate": !!e.animate
                         }),
@@ -744,7 +744,7 @@
                         asset: k.tb.Neck
                     })))
                 }),
-                L = 3;
+                D = 3;
             var P = n("cpJf"),
                 F = n("EnXQ"),
                 j = function(e) {
@@ -789,7 +789,7 @@
                                                             case 0:
                                                                 s = "https://api.twitch.tv/api/channels/" + e + "/use_chat_notification_token", r = 1, i.label = 1;
                                                             case 1:
-                                                                if (!(r <= L)) return [3, 9];
+                                                                if (!(r <= D)) return [3, 9];
                                                                 i.label = 2;
                                                             case 2:
                                                                 return i.trys.push([2, 7, , 8]), [4, fetch(s, {
@@ -814,7 +814,7 @@
                                                             case 6:
                                                                 return [3, 8];
                                                             case 7:
-                                                                if (l = i.sent(), r === L) throw l;
+                                                                if (l = i.sent(), r === D) throw l;
                                                                 return [3, 8];
                                                             case 8:
                                                                 return ++r, [3, 1];
@@ -871,7 +871,7 @@
                             hide: !this.state.showMessageInput,
                             onShare: this.shareResub,
                             onClose: this.toggleContentShown
-                        }, r.createElement(D, {
+                        }, r.createElement(L, {
                             emoteID: this.randomEmoteId,
                             animate: this.state.showMessageInput
                         }), r.createElement(k.W, null, Object(c.d)("Hooray! Let {channelName} know it's your {monthsSubbed, number} month anniversary.", {
@@ -896,7 +896,7 @@
                     }
                 }), Object(l.a)([{
                     topic: function(e) {
-                        return Object(m.F)(e.currentUserId ? e.currentUserId : "")
+                        return Object(m.G)(e.currentUserId ? e.currentUserId : "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"

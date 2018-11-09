@@ -201,11 +201,11 @@
             }), n.d(t, "J", function() {
                 return O
             }), n.d(t, "E", function() {
-                return M
-            }), n.d(t, "K", function() {
                 return D
-            }), n.d(t, "F", function() {
+            }), n.d(t, "K", function() {
                 return w
+            }), n.d(t, "F", function() {
+                return M
             }), n.d(t, "O", function() {
                 return I
             }), n.d(t, "L", function() {
@@ -273,19 +273,19 @@
                 }
             }
 
-            function M() {
+            function D() {
                 return {
                     type: k
                 }
             }
 
-            function D() {
+            function w() {
                 return {
                     type: C
                 }
             }
 
-            function w() {
+            function M() {
                 return {
                     type: y
                 }
@@ -3885,9 +3885,9 @@
                 N = n("u5aL"),
                 _ = n("x7UT"),
                 O = n("8Ad5"),
-                M = n("wUQP"),
-                D = n("oe5X"),
-                w = n("1/iK"),
+                D = n("wUQP"),
+                w = n("oe5X"),
+                M = n("1/iK"),
                 I = n("f00E"),
                 T = n("y5D0"),
                 A = n("kz7j"),
@@ -4353,9 +4353,9 @@
                 },
                 _e = n("lNGo"),
                 Oe = n("ySk3"),
-                Me = n("x0gr"),
-                De = n("mmRu"),
-                we = n("cpJf"),
+                De = n("x0gr"),
+                we = n("mmRu"),
+                Me = n("cpJf"),
                 Ie = n("GzyO"),
                 Te = n("EOIh"),
                 Ae = n("FS60"),
@@ -4377,7 +4377,7 @@
                     }, n.setAutocompleteInputRef = function(e) {
                         return n.autocompleteInputRef = e
                     }, n.onChatSettingsToggle = function(e) {
-                        n.handleModerationSettingsToggle(e), e || Object(Me.b)({
+                        n.handleModerationSettingsToggle(e), e || Object(De.b)({
                             channelLogin: n.props.channelLogin,
                             isHostMode: n.props.isHostMode
                         })
@@ -4468,15 +4468,15 @@
                                         }), this.chatInputRef.focus(), [2];
                                         i.label = 2;
                                     case 2:
-                                        r = Object(I.a)(), o = f.b.get(Le, M.a.Off), i.label = 3;
+                                        r = Object(I.a)(), o = f.b.get(Le, D.a.Off), i.label = 3;
                                     case 3:
                                         return i.trys.push([3, 5, , 6]), l = {
                                             id: r,
                                             targetID: this.props.channelID,
                                             bits: n.total,
                                             content: this.state.value,
-                                            isAutoModEnabled: o === M.a.On
-                                        }, o === M.a.On && (l.shouldCheerAnyway = this.props.shouldSendAutoModdedCheer), this.props.clearBitsSendError(), [4, this.props.sendCheer({
+                                            isAutoModEnabled: o === D.a.On
+                                        }, o === D.a.On && (l.shouldCheerAnyway = this.props.shouldSendAutoModdedCheer), this.props.clearBitsSendError(), [4, this.props.sendCheer({
                                             variables: {
                                                 input: l
                                             }
@@ -4506,7 +4506,7 @@
                             showAuthContextBalloon: !1
                         }), Object(U.n)({
                             page: U.e.Bubble,
-                            source: w.a.Chat,
+                            source: M.a.Chat,
                             target: U.d.Exit,
                             action: U.c.Click
                         })
@@ -4662,15 +4662,15 @@
                         type: v.C.Secondary,
                         onClick: this.onBitsIconClick,
                         "data-a-target": "bits-button"
-                    })), this.state.showEmotePickerButton && e.push(a.createElement(De.b, {
+                    })), this.state.showEmotePickerButton && e.push(a.createElement(we.b, {
                         key: "emote-picker",
                         onClick: this.onEmotePickerToggle,
                         isActive: this.state.showCard === Ee.Emotes
                     }));
                     var t = null;
-                    this.state.hasInteractedOrPageload && (t = a.createElement(De.c, {
+                    this.state.hasInteractedOrPageload && (t = a.createElement(we.c, {
                         channelOwnerID: this.props.channelID,
-                        emotePickerSource: we.a.Chat,
+                        emotePickerSource: Me.a.Chat,
                         onClickEmote: this.onClickEmote,
                         onLoad: this.onEmotePickerDataLoaded,
                         toggleVisibility: this.onEmotePickerToggle,
@@ -4723,7 +4723,7 @@
                     }, a.createElement(N.a, {
                         onClickOut: this.handleAuthContextBalloonClose
                     }, a.createElement(R.a, {
-                        source: w.a.Chat,
+                        source: M.a.Chat,
                         targetUserDisplayName: this.props.channelDisplayName,
                         onClose: this.handleAuthContextBalloonClose
                     })))), a.createElement(N.a, {
@@ -4827,11 +4827,14 @@
                     e !== W.a.Balloon ? e === W.a.TwoStep ? this.props.login({
                         modalType: U.e.TwoStep,
                         targetChannel: this.props.channelDisplayName
+                    }) : e === W.a.Split ? this.props.login({
+                        modalType: U.e.Combined,
+                        targetChannel: this.props.channelDisplayName
                     }) : this.props.login() : this.state.showAuthContextBalloon || (this.setState({
                         showAuthContextBalloon: !0
                     }), Object(U.o)({
                         page: U.e.Bubble,
-                        source: w.a.Chat
+                        source: M.a.Chat
                     }))
                 }, t.prototype.trackChatEvent = function() {
                     Object(_e.a)({
@@ -4844,7 +4847,7 @@
                     })
                 }, t.prototype.trackMentions = function() {
                     if (this.state.value && this.props.sessionUser)
-                        for (var e = 0, t = Object(D.a)(this.state.value, {
+                        for (var e = 0, t = Object(w.a)(this.state.value, {
                                 mentions: {
                                     senderLogin: this.props.sessionUser.login,
                                     sessionUser: this.props.sessionUser
@@ -4872,7 +4875,7 @@
                     }
                 }), Object(_.a)([{
                     topic: function(e) {
-                        return Object(p.F)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(p.G)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -4880,7 +4883,7 @@
                     skip: je
                 }, {
                     topic: function(e) {
-                        return Object(p.E)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(p.F)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: (Se = {}, Se[u.PubsubMessageType.UserPropertiesUpdate] = "userProperties", Se),
                     skip: je
@@ -4899,7 +4902,7 @@
                 }, function(e) {
                     return Object(o.bindActionCreators)({
                         login: function(e) {
-                            return Object(T.e)(w.a.Chat, e)
+                            return Object(T.e)(M.a.Chat, e)
                         },
                         updateRenderSentChatMessageEvent: z.R
                     }, e)
@@ -5250,7 +5253,7 @@
                         variables: {
                             channelLogin: e.channelLogin
                         },
-                        topic: Object(p.B)(e.userID),
+                        topic: Object(p.C)(e.userID),
                         type: u.PubsubMessageType.UserBitsBadgeUpdate,
                         skip: !e.userID,
                         mutator: function(t, n) {
@@ -5473,6 +5476,24 @@
             e.exports = n
         },
         CK1f: function(e, t, n) {},
+        CiVV: function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return a
+            });
+            var i = n("q1tI"),
+                a = function() {
+                    return i.createElement("figure", {
+                        className: "tw-svg tw-svg__asset--inherit"
+                    }, i.createElement("svg", {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        width: "20",
+                        height: "20"
+                    }, i.createElement("path", {
+                        d: "M17 17.357c-.466.4-1.08.643-1.754.643-.672 0-1.507-.414-1.753-.636a1.29 1.29 0 0 0-.898-.333c-.295 0-.546.077-.753.231-.5.477-1.167.741-1.858.738a2.683 2.683 0 0 1-1.75-.64 1.317 1.317 0 0 0-.9-.33c-.296 0-.547.078-.754.232-.5.476-1.166.74-1.857.738A2.684 2.684 0 0 1 3 17.383V8.096C3.336 4.676 6.335 2 9.984 2 13.86 2 17 5.016 17 8.737l-.001.12.001 8.5zM7.5 11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
+                    })))
+                }
+        },
         "CpU+": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -5807,82 +5828,6 @@
                                             kind: "Field",
                                             name: {
                                                 kind: "Name",
-                                                value: "priceInfo"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "currency"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "exponent"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "total"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "description"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "price"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "isTaxInclusive"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "id"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "tax"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }]
-                                            }
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
                                                 value: "emoteSetID"
                                             },
                                             arguments: [],
@@ -5936,11 +5881,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 391
+                    end: 313
                 }
             };
             n.loc.source = {
-                body: "query EmotePicker_EmotePicker_UserSubscriptionProducts($channelOwnerID: ID!) {\nuser(id: $channelOwnerID) {\nid\nlogin\ncampaignProperties {\ndomains\n}\ndisplayName\nprofileImageURL(width: 28)\nsubscriptionProducts {\nid\nname\ntier\nurl\nemotes {\nid\ntoken\n}\nprice\npriceInfo {\ncurrency\nexponent\ntotal\ndescription\nprice\nisTaxInclusive\nid\ntax\n}\nemoteSetID\n}\nself {\nsubscriptionBenefit {\nid\nplatform\n}\n}\n}\n}",
+                body: "query EmotePicker_EmotePicker_UserSubscriptionProducts($channelOwnerID: ID!) {\nuser(id: $channelOwnerID) {\nid\nlogin\ncampaignProperties {\ndomains\n}\ndisplayName\nprofileImageURL(width: 28)\nsubscriptionProducts {\nid\nname\ntier\nurl\nemotes {\nid\ntoken\n}\nprice\nemoteSetID\n}\nself {\nsubscriptionBenefit {\nid\nplatform\n}\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -6115,7 +6060,7 @@
                                 checkoutButtonTier: t.props.tierPrice
                             })
                         }, t.openCheckout = function() {
-                            t.props.isMobileCheckout || o.n.set(s.b, t.props.productName)
+                            t.props.isMobileCheckout || o.n.set(s.c, t.props.productName)
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
@@ -8190,8 +8135,8 @@
                 N = n("D91L"),
                 _ = n("PtXu"),
                 O = n("gcd7"),
-                M = n("+pBb"),
-                D = function(e) {
+                D = n("+pBb"),
+                w = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.showChatRules = function() {
@@ -8205,13 +8150,13 @@
                         })
                     }, t
                 }(h.Component);
-            var w, I, T = Object(a.connect)(null, function(e) {
+            var M, I, T = Object(a.connect)(null, function(e) {
                     return Object(g.bindActionCreators)({
                         showChatRules: function() {
-                            return M.P()
+                            return D.P()
                         }
                     }, e)
-                })(D),
+                })(w),
                 A = n("/7QA"),
                 L = n("CpU+"),
                 R = n("fKMw"),
@@ -8220,7 +8165,7 @@
                 B = n("CA5B");
             ! function(e) {
                 e.QUERY_ERROR = "QUERY_ERROR"
-            }(w || (w = {})),
+            }(M || (M = {})),
             function(e) {
                 e.UnVIP = "vip-command-handler_unvip", e.VIP = "vip-command-handler_vip", e.VIPs = "vip-command-handler_vips"
             }(I || (I = {}));
@@ -8265,7 +8210,7 @@
                                 deferred: t.props.unVIPUserMutation(i).then(function(e) {
                                     var n = e.revokeVIP;
                                     if (!n || !n.revokee || !n.revokee.login) return {
-                                        notice: t.getUnVIPErrorMessage(w.QUERY_ERROR)
+                                        notice: t.getUnVIPErrorMessage(M.QUERY_ERROR)
                                     };
                                     var a = n.error,
                                         r = a && a.code;
@@ -8278,7 +8223,7 @@
                                     }
                                 }).catch(function() {
                                     return {
-                                        notice: t.getUnVIPErrorMessage(w.QUERY_ERROR)
+                                        notice: t.getUnVIPErrorMessage(M.QUERY_ERROR)
                                     }
                                 })
                             } : {
@@ -8292,7 +8237,7 @@
                                 deferred: t.props.vipUserMutation(n).then(function(e) {
                                     var i = e.grantVIP;
                                     if (!i || !i.grantee || !i.grantee.login) return {
-                                        notice: t.getVIPErrorMessage(w.QUERY_ERROR)
+                                        notice: t.getVIPErrorMessage(M.QUERY_ERROR)
                                     };
                                     var a = i.error,
                                         r = a && a.code;
@@ -8305,7 +8250,7 @@
                                     }
                                 }).catch(function() {
                                     return {
-                                        notice: t.getVIPErrorMessage(w.QUERY_ERROR)
+                                        notice: t.getVIPErrorMessage(M.QUERY_ERROR)
                                     }
                                 })
                             } : {
@@ -8363,7 +8308,7 @@
                                 return Object(A.d)("Unable to add VIP. Visit the Achievements page on your dashboard to learn how to unlock additional VIP slots.", "VIPCommandHandler");
                             case U.B.VIP_ACHIEVEMENT_INCOMPLETE:
                                 return Object(A.d)("Unable to add VIP. Visit the Achievements page on your dashboard to learn how to unlock this feature.", "VIPCommandHandler");
-                            case w.QUERY_ERROR:
+                            case M.QUERY_ERROR:
                             case U.B.CHANNEL_NOT_FOUND:
                             default:
                                 return Object(A.d)("Unable to add VIP.", "VIPCommandHandler")
@@ -8377,7 +8322,7 @@
                                 return Object(A.d)("{login} is not a VIP of this channel.", {
                                     login: t
                                 }, "VIPCommandHandler");
-                            case w.QUERY_ERROR:
+                            case M.QUERY_ERROR:
                             case U.O.CHANNEL_NOT_FOUND:
                             default:
                                 return Object(A.d)("Unable to remove VIP.", "VIPCommandHandler")
@@ -9331,13 +9276,13 @@
                     failSilently: !0,
                     placeholder: null
                 },
-                Me = f.a.wrap(function() {
+                De = f.a.wrap(function() {
                     return n.e(197).then(n.bind(null, "Gnts"))
                 }, "MysteryGiftChatBannerQueue", Oe),
-                De = f.a.wrap(function() {
+                we = f.a.wrap(function() {
                     return n.e(196).then(n.bind(null, "KSjr"))
                 }, "NativeBroadcastNotification", Oe),
-                we = f.a.wrap(function() {
+                Me = f.a.wrap(function() {
                     return n.e(195).then(n.bind(null, "T3fw"))
                 }, "Orbis", Oe),
                 Ie = f.a.wrap(function() {
@@ -9437,7 +9382,7 @@
                         var e, t = this.props.emoteSetsData && this.props.emoteSetsData.emoteSets || [],
                             n = this.props.isHidden || !this.props.rightColumnExpanded && !this.props.inlineRightColumnExpanded,
                             i = !(!this.props.isEmbedded && !this.props.isPopout && n && !this.props.shouldConnectChat);
-                        return this.props.firstPageLoaded && (e = h.createElement(we, {
+                        return this.props.firstPageLoaded && (e = h.createElement(Me, {
                             channelLogin: this.props.channelLogin,
                             sendMessage: this.sendMessage
                         })), h.createElement(h.Fragment, null, h.createElement(Se.b, {
@@ -9485,9 +9430,9 @@
                         }), this.props.firstPageLoaded && !this.props.isEmbedded && this.props.channelID && h.createElement(Ie, {
                             channelID: this.props.channelID,
                             "data-test-selector": "raid-notification"
-                        }), this.props.firstPageLoaded && !this.props.isEmbedded && h.createElement(Me, {
+                        }), this.props.firstPageLoaded && !this.props.isEmbedded && h.createElement(De, {
                             channelID: this.props.channelID
-                        }), this.props.firstPageLoaded && !this.props.isEmbedded && !this.props.isPopout && h.createElement(De, {
+                        }), this.props.firstPageLoaded && !this.props.isEmbedded && !this.props.isPopout && h.createElement(we, {
                             channelLogin: this.props.channelLogin
                         }), this.props.firstPageLoaded && !this.props.isEmbedded && !this.props.isPopout && h.createElement(Te, {
                             channelID: this.props.channelID,
@@ -9563,16 +9508,16 @@
                 }, function(e) {
                     return Object(g.bindActionCreators)({
                         onCloseChatRules: function() {
-                            return M.z()
+                            return D.z()
                         },
                         onShowChatRules: function() {
-                            return M.P()
+                            return D.P()
                         },
                         onChatUnhide: function() {
-                            return M.O()
+                            return D.O()
                         },
                         onRoomStateUpdate: function(e) {
-                            return M.S(e)
+                            return D.S(e)
                         },
                         onThemeChange: function(e) {
                             return Object(k.b)(e, k.a.TypedCommand)
@@ -9729,19 +9674,28 @@
         Mj6i: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return s
+                return c
             });
             var i = n("mrSG"),
-                a = n("yR8l"),
-                r = n("0FG4"),
-                o = n("S4w9");
+                a = n("/7QA"),
+                r = n("yR8l"),
+                o = n("0FG4"),
+                s = n("D7An"),
+                l = n("S4w9");
 
-            function s() {
-                return Object(a.a)(o, {
+            function c() {
+                return Object(r.a)(l, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                withOwner: "on" === a.p.experiments.getAssignment(s.b.EmotePickerV2)
+                            }
+                        }
+                    },
                     props: function(e) {
                         if (e.data) {
                             var t = e.data.currentUser && e.data.currentUser.emoteSets || [],
-                                n = t && Object(r.b)(t);
+                                n = t && Object(o.b)(t);
                             return {
                                 emoteSetsData: i.__assign({}, e.data, {
                                     currentUser: e.data.currentUser || null,
@@ -10871,12 +10825,12 @@
                 N = n("KriR"),
                 _ = n("D7An"),
                 O = n("4rCz");
-            var M, D = n("br9A"),
-                w = n("Ue10"),
+            var D, w = n("br9A"),
+                M = n("Ue10"),
                 I = (n("a7aT"), n("z+dA"));
             ! function(e) {
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
-            }(M || (M = {}));
+            }(D || (D = {}));
             var T = s.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(199)]).then(n.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
@@ -10888,7 +10842,7 @@
                         }, t.modalLevel = "top_page", t.renderBalloonContentForBalloonLayer = function() {
                             return a.createElement(f.a, {
                                 onClickOut: t.handleBalloonClickOut
-                            }, a.createElement(w.Xa, {
+                            }, a.createElement(M.Xa, {
                                 "data-a-target": "sub-balloon",
                                 refDelegate: t.setBalloonContentRefDelegate
                             }, t.balloonWrapperContent))
@@ -10907,12 +10861,12 @@
                         }, t.setBalloonWrapperContent = function(e) {
                             t.balloonWrapperContent = e
                         }, t.handleSubMenuAction = function(e) {
-                            new Set([D.a.ClickCheckout, D.a.BuyGiftSub, D.a.BuyMysteryGift, D.a.BuyCustomMysteryGift, D.a.BuyGiftToPaidUpgrade, D.a.BuyPaidUpgrade]).has(e.action) && t.checkAndDisplaySubscriptionCheckout();
+                            new Set([w.a.ClickCheckout, w.a.BuyGiftSub, w.a.BuyMysteryGift, w.a.BuyCustomMysteryGift, w.a.BuyGiftToPaidUpgrade, w.a.BuyPaidUpgrade]).has(e.action) && t.checkAndDisplaySubscriptionCheckout();
                             var n = t.props.data,
                                 i = n.user,
                                 a = !!(i && i.self && i.self.subscriptionBenefit),
                                 r = n.requestInfo && Object(S.a)(n.requestInfo.countryCode);
-                            Object(D.b)({
+                            Object(w.b)({
                                 action: e.action || "",
                                 channelLogin: t.props.channelLogin || "",
                                 channelID: i && i.id || "",
@@ -10920,21 +10874,21 @@
                                 hasSubCredit: i && i.self && i.self.canPrimeSubscribe,
                                 hostChannelID: t.props.hostChannelID,
                                 hostChannelLogin: t.props.hostChannelLogin,
-                                isMenuOpen: e.action !== D.a.OpenSubMenu,
+                                isMenuOpen: e.action !== w.a.OpenSubMenu,
                                 mysteryGiftCount: e.mysteryGiftCount,
                                 sub_location: "channel_page",
                                 modal: !a,
                                 modalLevel: a ? "" : t.modalLevel.slice(),
                                 showPrimeContent: r,
                                 giftRecipient: e.giftRecipient || null
-                            }), !e.modalLevel || e.action !== D.a.ClickMoreSubOptions && e.action !== D.a.ClickBack || (t.modalLevel = e.modalLevel)
+                            }), !e.modalLevel || e.action !== w.a.ClickMoreSubOptions && e.action !== w.a.ClickBack || (t.modalLevel = e.modalLevel)
                         }, t.handleMenuToggle = function(e) {
                             t.handleSubMenuAction({
-                                action: e ? D.a.CloseSubMenu : D.a.OpenSubMenu
+                                action: e ? w.a.CloseSubMenu : w.a.OpenSubMenu
                             })
                         }, t.getBalloonDirection = function() {
-                            var e = t.props.balloonDirection || w.v.BottomRight;
-                            return t.props.hostChannelID && (e = w.v.TopLeft), e
+                            var e = t.props.balloonDirection || M.v.BottomRight;
+                            return t.props.hostChannelID && (e = M.v.TopLeft), e
                         }, t.setContainerRefDelegate = function(e) {
                             t.containerRef = e
                         }, t.setBalloonContentRefDelegate = function(e) {
@@ -10948,7 +10902,7 @@
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.isUserDataReady(e) && e.pubsub.messages.subscriptionInfo !== this.props.pubsub.messages.subscriptionInfo && this.props.data.refetch()
                     }, t.prototype.componentWillUnmount = function() {
-                        Object(l.d)()
+                        Object(l.e)()
                     }, t.prototype.render = function() {
                         var e = this.props.data;
                         if (!e || e.loading || e.error) return null;
@@ -10999,15 +10953,15 @@
                             benefitEndsAt: n && n.subscriptionBenefit && n.subscriptionBenefit.endsAt,
                             hostedDisplayName: this.props.hostChannelID ? t.displayName || "" : void 0
                         });
-                        if (s && c && !l) return a.createElement(w.z, {
+                        if (s && c && !l) return a.createElement(M.z, {
                             disabled: !0,
                             ariaLabel: u,
-                            icon: w.tb.Star
+                            icon: M.tb.Star
                         }, u);
-                        var m = a.createElement(w.z, {
+                        var m = a.createElement(M.z, {
                                 ariaLabel: u,
                                 "data-a-target": s ? "subscribed-button" : "subscribe-button",
-                                "data-test-selector": M.SubButton,
+                                "data-test-selector": D.SubButton,
                                 dropdown: !this.props.hideDropdownArrow,
                                 fullWidth: !0,
                                 icon: this.getButtonIcon(s, d),
@@ -11018,7 +10972,7 @@
                         return this.setBalloonWrapperContent(a.createElement(T, {
                             authToken: this.props.authToken,
                             channelLogin: this.props.channelLogin || "",
-                            "data-test-selector": M.SubscribeBalloon,
+                            "data-test-selector": D.SubscribeBalloon,
                             handleSubMenuAction: this.handleSubMenuAction,
                             inPrimeRegion: o,
                             isEsportChannel: l,
@@ -11028,27 +10982,27 @@
                             productId: p ? p.id : "",
                             subbedTier: d || C.a.Prime,
                             userHasPrime: !1
-                        })), this.props.renderBalloonInBalloonLayer ? a.createElement(w.Xa, {
-                            "data-test-selector": M.BalloonLayerButton,
+                        })), this.props.renderBalloonInBalloonLayer ? a.createElement(M.Xa, {
+                            "data-test-selector": D.BalloonLayerButton,
                             refDelegate: this.setContainerRefDelegate
-                        }, m) : a.createElement(w.Xa, null, a.createElement(b.a, {
-                            "data-test-selector": M.DefaultButton,
+                        }, m) : a.createElement(M.Xa, null, a.createElement(b.a, {
+                            "data-test-selector": D.DefaultButton,
                             onToggle: this.handleMenuToggle
-                        }, m, a.createElement(w.u, {
+                        }, m, a.createElement(M.u, {
                             "data-a-target": "sub-balloon",
                             direction: this.getBalloonDirection(),
-                            size: w.w.Large
+                            size: M.w.Large
                         }, this.balloonWrapperContent)))
                     }, t.prototype.getButtonType = function(e) {
-                        w.F.Default;
-                        return e && void 0 !== this.props.subscribedButtonType ? this.props.subscribedButtonType : e ? w.F.Success : this.props.unsubscribedButtonType || w.F.Default
+                        M.F.Default;
+                        return e && void 0 !== this.props.subscribedButtonType ? this.props.subscribedButtonType : e ? M.F.Success : this.props.unsubscribedButtonType || M.F.Default
                     }, t.prototype.getButtonIcon = function(e, t) {
                         var n = void 0;
-                        return e ? n = t === C.a.Prime ? w.tb.Crown : w.tb.Star : this.props.forceIcon && (n = w.tb.StarHollow), n
+                        return e ? n = t === C.a.Prime ? M.tb.Crown : M.tb.Star : this.props.forceIcon && (n = M.tb.StarHollow), n
                     }, t.prototype.isUserDataReady = function(e) {
                         return e.data && e.data.user && !e.data.loading && !e.data.error
                     }, t.prototype.checkAndDisplaySubscriptionCheckout = function() {
-                        var e = h.n.get(l.b, "");
+                        var e = h.n.get(l.c, "");
                         if (e) {
                             var t = this.props.data.user;
                             if (t && t.subscriptionProducts) t.subscriptionProducts.filter(function(e) {
@@ -11056,13 +11010,14 @@
                             }).map(function(e) {
                                 return e.name
                             }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
-                                mysteryGiftCount: Number(h.n.get(l.a, "")),
+                                isAnonymous: h.n.get(l.a, !1),
+                                mysteryGiftCount: Number(h.n.get(l.b, "")),
                                 productName: e,
-                                recipientLogin: h.n.get(l.c, ""),
+                                recipientLogin: h.n.get(l.d, ""),
                                 trackingContext: {
                                     source: N.c.ChannelSubscribeButton
                                 }
-                            }) : this.props.showLoginModal() : Object(l.d)()
+                            }) : this.props.showLoginModal() : Object(l.e)()
                         }
                     }, t
                 }(a.Component),
@@ -11079,7 +11034,7 @@
                     }
                 }), Object(k.a)([{
                     topic: function(e) {
-                        return Object(E.F)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(E.G)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -11123,7 +11078,7 @@
                 }
             }, function(e) {
                 return Object(o.bindActionCreators)({
-                    showLoginModal: Object(l.e)(c.a.ChannelSubscriptionButton),
+                    showLoginModal: Object(l.f)(c.a.ChannelSubscriptionButton),
                     showSubscriptionCheckoutModal: function(e) {
                         var t = i.__rest(e, []);
                         return Object(d.d)(s.a, {
@@ -11141,7 +11096,7 @@
             }), n.d(t, "a", function() {
                 return U
             }), n.d(t, !1, function() {
-                return M
+                return D
             }), n.d(t, !1, function() {
                 return A
             }), n.d(t, !1, function() {
@@ -11498,7 +11453,26 @@
                         kind: "Name",
                         value: "UserEmotes"
                     },
-                    variableDefinitions: [],
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "withOwner"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "Boolean"
+                                }
+                            }
+                        }
+                    }],
                     directives: [],
                     selectionSet: {
                         kind: "SelectionSet",
@@ -11566,6 +11540,80 @@
                                                     directives: []
                                                 }]
                                             }
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "owner"
+                                            },
+                                            arguments: [],
+                                            directives: [{
+                                                kind: "Directive",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "include"
+                                                },
+                                                arguments: [{
+                                                    kind: "Argument",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "if"
+                                                    },
+                                                    value: {
+                                                        kind: "Variable",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "withOwner"
+                                                        }
+                                                    }
+                                                }]
+                                            }],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "id"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "login"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "displayName"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "profileImageURL"
+                                                    },
+                                                    arguments: [{
+                                                        kind: "Argument",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "width"
+                                                        },
+                                                        value: {
+                                                            kind: "IntValue",
+                                                            value: "28"
+                                                        }
+                                                    }],
+                                                    directives: []
+                                                }]
+                                            }
                                         }]
                                     }
                                 }]
@@ -11575,11 +11623,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 76
+                    end: 182
                 }
             };
             n.loc.source = {
-                body: "query UserEmotes {\ncurrentUser {\nid\nemoteSets {\nid\nemotes {\nid\ntoken\n}\n}\n}\n}",
+                body: "query UserEmotes ($withOwner: Boolean!) {\ncurrentUser {\nid\nemoteSets {\nid\nemotes {\nid\ntoken\n}\nowner @include(if: $withOwner) {\nid\nlogin\ndisplayName\nprofileImageURL(width: 28)\n}\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -11966,34 +12014,37 @@
         },
         UUve: function(e, t, n) {
             "use strict";
-            n.d(t, "b", function() {
+            n.d(t, "c", function() {
                 return r
-            }), n.d(t, "c", function() {
-                return o
-            }), n.d(t, "a", function() {
-                return s
             }), n.d(t, "d", function() {
-                return c
+                return o
+            }), n.d(t, "b", function() {
+                return s
+            }), n.d(t, "a", function() {
+                return l
             }), n.d(t, "e", function() {
                 return d
+            }), n.d(t, "f", function() {
+                return u
             });
             var i = n("/7QA"),
                 a = n("y5D0"),
                 r = "SUB_CHECKOUT__PRODUCT",
                 o = "SUB_CHECKOUT__RECIPIENT",
                 s = "SUB_CHECKOUT__MYSTERY_GIFT_COUNT",
-                l = [r, o, s];
+                l = "SUB_CHECKOUT__GIFTING_ANONYMOUSLY",
+                c = [r, o, s, l];
 
-            function c() {
-                l.forEach(function(e) {
+            function d() {
+                c.forEach(function(e) {
                     return i.n.remove(e)
                 })
             }
 
-            function d(e) {
+            function u(e) {
                 return function() {
                     return Object(a.e)(e, {
-                        onClose: c
+                        onClose: d
                     })
                 }
             }
@@ -12568,7 +12619,23 @@
                             kind: "Field",
                             name: {
                                 kind: "Name",
+                                value: "createdAt"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
                                 value: "id"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "imageURL"
                             },
                             arguments: [],
                             directives: []
@@ -12585,6 +12652,50 @@
                             name: {
                                 kind: "Name",
                                 value: "name"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "ownerChannel"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }]
+                            }
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "parentID"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "parentKey"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "updatedAt"
                             },
                             arguments: [],
                             directives: []
@@ -12726,11 +12837,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 473
+                    end: 541
                 }
             };
             n.loc.source = {
-                body: "fragment chanlet on Channel {\nid\nowner {\nid\nlogin\nprofileImageURL(width:28)\nbroadcastSettings {\nid\ntitle\n}\n}\nstream {\nid\npreviewImageURL(height: 214 width: 380)\n}\ncontentAttributes {\n...chanletContentAttribute\n}\n}\nfragment chanletContentAttribute on MultiviewContentAttribute {\nid\nkey\nname\nvalue\nvalueShortName\n}\nquery MultiviewGetChanletDetails($channelLogin: String) {\nuser(login: $channelLogin) {\nid\ndisplayName\nofflineImageURL\nchannel {\nid\nchanlets {\n...chanlet\n}\n}\n}\n}",
+                body: "fragment chanlet on Channel {\nid\nowner {\nid\nlogin\nprofileImageURL(width:28)\nbroadcastSettings {\nid\ntitle\n}\n}\nstream {\nid\npreviewImageURL(height: 214 width: 380)\n}\ncontentAttributes {\n...chanletContentAttribute\n}\n}\nfragment chanletContentAttribute on MultiviewContentAttribute {\ncreatedAt\nid\nimageURL\nkey\nname\nownerChannel {\nid\n}\nparentID\nparentKey\nupdatedAt\nvalue\nvalueShortName\n}\nquery MultiviewGetChanletDetails($channelLogin: String) {\nuser(login: $channelLogin) {\nid\ndisplayName\nofflineImageURL\nchannel {\nid\nchanlets {\n...chanlet\n}\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -12838,14 +12949,14 @@
             ! function(e) {
                 e.MentionPill = "mentionPill", e.ViewRooms = "viewRooms"
             }(v || (v = {}));
-            var M = function(e) {
+            var D = function(e) {
                     return y.m.get("hasSeenRoomsOnboarding", {})[e] || !1
                 },
-                D = function(e) {
+                w = function(e) {
                     var t;
                     y.m.set("hasSeenRoomsOnboarding", k.__assign({}, y.m.get("hasSeenRoomsOnboarding", {}), ((t = {})[e] = !0, t)))
                 },
-                w = n("Ue10"),
+                M = n("Ue10"),
                 I = (n("zWFo"), "Stream Chat"),
                 T = E.a.wrap(function() {
                     return n.e(206).then(n.bind(null, "+k6+"))
@@ -12862,7 +12973,7 @@
                         return t.state = {
                             activeRoomID: I,
                             activeRoomName: I,
-                            hasSeenGeneralOnboarding: M(v.ViewRooms),
+                            hasSeenGeneralOnboarding: D(v.ViewRooms),
                             isActiveRoomDeleted: !1,
                             shouldAutoOpenRoomPicker: !0,
                             showRoomPicker: !1
@@ -12871,26 +12982,26 @@
                             if (t.state.showRoomPicker || t.state.hasSeenGeneralOnboarding) return null;
                             if (!e || !e.channel) return null;
                             var n = t.props.sessionUser && t.props.sessionUser.id === e.channel.id;
-                            return e.channel.channelRooms && 0 === e.channel.channelRooms.length && !n ? null : C.createElement(w.u, {
-                                direction: w.v.BottomRight,
+                            return e.channel.channelRooms && 0 === e.channel.channelRooms.length && !n ? null : C.createElement(M.u, {
+                                direction: M.v.BottomRight,
                                 offsetX: "1rem",
                                 show: !0,
-                                size: w.w.Small
+                                size: M.w.Small
                             }, C.createElement(S.a, {
                                 onClickOut: t.dismissGeneralOnboarding
-                            }, C.createElement(w.Xa, {
+                            }, C.createElement(M.Xa, {
                                 padding: 3,
-                                textAlign: w.Rb.Center
+                                textAlign: M.Rb.Center
                             }, C.createElement("img", {
                                 src: Object(O.d)("508650", 3),
                                 width: "28"
-                            }), C.createElement(w.Xa, {
+                            }), C.createElement(M.Xa, {
                                 margin: {
                                     y: 1
                                 }
-                            }, C.createElement(w.W, {
-                                color: w.O.Alt2
-                            }, Object(y.d)("Rooms help you keep the conversation going", "RoomSelector"))), C.createElement(w.z, {
+                            }, C.createElement(M.W, {
+                                color: M.O.Alt2
+                            }, Object(y.d)("Rooms help you keep the conversation going", "RoomSelector"))), C.createElement(M.z, {
                                 onClick: t.headerClick
                             }, Object(y.d)("View rooms", "RoomSelector")))))
                         }, t.isChannelLive = function(e) {
@@ -12928,7 +13039,7 @@
                         }, t.dismissGeneralOnboarding = function() {
                             t.setState({
                                 hasSeenGeneralOnboarding: !0
-                            }), D(v.ViewRooms)
+                            }), w(v.ViewRooms)
                         }, t.closeRoomPicker = function() {
                             t.setState({
                                 showRoomPicker: !1
@@ -12955,14 +13066,14 @@
                             })
                         } else this.props.channelLogin !== e.channelLogin && this.state.activeRoomID !== I && this.goToStreamChat()
                     }, t.prototype.render = function() {
-                        return C.createElement(w.Xa, {
+                        return C.createElement(M.Xa, {
                             fullWidth: !0,
                             fullHeight: !0,
-                            display: w.X.Flex,
-                            flexDirection: w.Aa.Column,
+                            display: M.X.Flex,
+                            flexDirection: M.Aa.Column,
                             flexGrow: 1,
-                            flexWrap: w.Ba.NoWrap,
-                            position: w.jb.Relative
+                            flexWrap: M.Ba.NoWrap,
+                            position: M.jb.Relative
                         }, this.renderHeader(), this.renderRoomPicker(), this.renderHiddenState(), this.renderChat(), this.renderCurrentRoom())
                     }, t.prototype.renderChat = function() {
                         if (this.props.isHidden && !this.props.isPopout) return null;
@@ -12996,44 +13107,44 @@
                             passThroughCommands: this.props.passThroughCommands
                         })
                     }, t.prototype.renderHeader = function() {
-                        var e = C.createElement(w.Xa, {
-                            display: w.X.Flex,
-                            alignItems: w.f.Center
-                        }, !this.state.showRoomPicker && Object(y.d)("Rooms", "RoomSelector"), C.createElement(w.Xa, {
-                            display: w.X.Flex,
-                            alignItems: w.f.Center
-                        }, this.renderTotalUnreadMentionCount(), !this.state.showRoomPicker && C.createElement(w.Xa, {
+                        var e = C.createElement(M.Xa, {
+                            display: M.X.Flex,
+                            alignItems: M.f.Center
+                        }, !this.state.showRoomPicker && Object(y.d)("Rooms", "RoomSelector"), C.createElement(M.Xa, {
+                            display: M.X.Flex,
+                            alignItems: M.f.Center
+                        }, this.renderTotalUnreadMentionCount(), !this.state.showRoomPicker && C.createElement(M.Xa, {
                             padding: {
                                 left: .5
                             },
-                            display: w.X.Flex
-                        }, C.createElement(w.sb, {
-                            asset: w.tb.RoomList
-                        })), this.state.showRoomPicker && C.createElement(w.A, {
+                            display: M.X.Flex
+                        }, C.createElement(M.sb, {
+                            asset: M.tb.RoomList
+                        })), this.state.showRoomPicker && C.createElement(M.A, {
                             ariaLabel: "RoomListOpen",
-                            icon: w.tb.RoomListOpen,
+                            icon: M.tb.RoomListOpen,
                             "data-test-selector": "close-room-picker-button",
                             onClick: this.headerClick,
                             blurAfterClick: !0
                         })));
-                        this.state.showRoomPicker || (e = C.createElement(w.Xa, {
-                            position: w.jb.Relative
-                        }, C.createElement(w.z, {
+                        this.state.showRoomPicker || (e = C.createElement(M.Xa, {
+                            position: M.jb.Relative
+                        }, C.createElement(M.z, {
                             "data-a-target": "room-selector-button",
                             "data-test-selector": "open-room-picker-button",
                             onClick: this.headerClick,
-                            type: w.F.Text
-                        }, e), this.renderOnboardingBalloon())), this.props.isEmbedded && (e = C.createElement(w.Xa, null));
-                        var t = C.createElement(w.Eb, {
+                            type: M.F.Text
+                        }, e), this.renderOnboardingBalloon())), this.props.isEmbedded && (e = C.createElement(M.Xa, null));
+                        var t = C.createElement(M.Eb, {
                             className: "room-selector__header",
-                            background: this.state.showRoomPicker ? w.r.Alt : w.r.Alt2,
+                            background: this.state.showRoomPicker ? M.r.Alt : M.r.Alt2,
                             borderLeft: !this.props.isEmbedded,
                             borderRight: !this.props.isEmbedded,
                             borderBottom: !0,
-                            display: w.X.Flex,
+                            display: M.X.Flex,
                             fullWidth: !0,
-                            justifyContent: w.Wa.Between,
-                            alignItems: w.f.Center,
+                            justifyContent: M.Wa.Between,
+                            alignItems: M.f.Center,
                             flexShrink: 0,
                             padding: {
                                 left: 2,
@@ -13042,22 +13153,22 @@
                         }, C.createElement("div", {
                             id: _.a
                         }, this.renderActiveRoomName()), e);
-                        return this.state.showRoomPicker && (t = C.createElement(w.Xa, {
+                        return this.state.showRoomPicker && (t = C.createElement(M.Xa, {
                             className: "room-selector__open-header-wrapper"
                         }, t)), t
                     }, t.prototype.renderRoomPicker = function() {
                         if (this.state.showRoomPicker && this.props.data && this.props.data.channel) return C.createElement(S.a, {
                             onClickOut: this.closeRoomPicker
-                        }, C.createElement(w.Eb, {
+                        }, C.createElement(M.Eb, {
                             attachLeft: !0,
                             attachRight: !0,
-                            background: w.r.Alt,
+                            background: M.r.Alt,
                             borderBottom: !0,
                             borderLeft: !0,
                             borderRight: !0,
                             elevation: 2,
-                            position: w.jb.Absolute,
-                            zIndex: w.ic.Above
+                            position: M.jb.Absolute,
+                            zIndex: M.ic.Above
                         }, C.createElement(L, {
                             channelID: this.props.data.channel.id,
                             handleRoomSelect: this.handleRoomSelect,
@@ -13067,25 +13178,25 @@
                             "data-test-selector": "room-picker"
                         })))
                     }, t.prototype.renderActiveRoomName = function() {
-                        return this.state.showRoomPicker ? C.createElement(w.W, {
-                            color: w.O.Alt,
+                        return this.state.showRoomPicker ? C.createElement(M.W, {
+                            color: M.O.Alt,
                             "data-test-selector": _.a
-                        }, Object(y.d)("Rooms", "RoomSelectorOpened")) : this.state.activeRoomName === I ? this.props.renderChannelName && this.props.data && this.props.data.channel ? C.createElement(w.W, {
-                            color: w.O.Alt,
+                        }, Object(y.d)("Rooms", "RoomSelectorOpened")) : this.state.activeRoomName === I ? this.props.renderChannelName && this.props.data && this.props.data.channel ? C.createElement(M.W, {
+                            color: M.O.Alt,
                             "data-test-selector": _.a
                         }, Object(y.d)("<x:bold>{displayName}</x:bold>'s Chat", {
                             displayName: this.props.data.channel.displayName,
                             "x:bold": function(e) {
-                                return C.createElement(w.W, {
-                                    type: w.Vb.Span,
+                                return C.createElement(M.W, {
+                                    type: M.Vb.Span,
                                     bold: !0
                                 }, e)
                             }
-                        }, "RoomSelectorOpened")) : C.createElement(w.W, {
-                            color: w.O.Alt,
+                        }, "RoomSelectorOpened")) : C.createElement(M.W, {
+                            color: M.O.Alt,
                             "data-test-selector": _.a
-                        }, Object(y.d)("Stream Chat", "RoomSelectorOpened")) : this.state.isActiveRoomDeleted ? C.createElement(w.W, {
-                            color: w.O.Alt,
+                        }, Object(y.d)("Stream Chat", "RoomSelectorOpened")) : this.state.isActiveRoomDeleted ? C.createElement(M.W, {
+                            color: M.O.Alt,
                             "data-test-selector": _.a
                         }, this.state.activeRoomName) : C.createElement(T, {
                             roomID: this.state.activeRoomID,
@@ -13098,36 +13209,36 @@
                         var n = t.channel.channelRooms.reduce(function(t, n) {
                             return n.self.isMuted || n.id === e.state.activeRoomID ? t : t + n.self.unreadMentionCount
                         }, 0);
-                        return n > 0 ? C.createElement(w.Xa, {
-                            display: w.X.InlineBlock,
+                        return n > 0 ? C.createElement(M.Xa, {
+                            display: M.X.InlineBlock,
                             padding: {
                                 left: .5
                             },
-                            position: w.jb.Relative
-                        }, C.createElement(w.gb, {
+                            position: M.jb.Relative
+                        }, C.createElement(M.gb, {
                             label: n.toString(),
-                            type: w.hb.Alert
+                            type: M.hb.Alert
                         })) : void 0
                     }, t.prototype.renderHiddenState = function() {
-                        return !this.props.isHidden || this.props.isPopout ? null : C.createElement(w.Eb, {
-                            alignItems: w.f.Center,
-                            background: w.r.Alt2,
+                        return !this.props.isHidden || this.props.isPopout ? null : C.createElement(M.Eb, {
+                            alignItems: M.f.Center,
+                            background: M.r.Alt2,
                             borderLeft: !0,
                             "data-test-selector": "room-selector-hidden-state",
-                            display: w.X.Flex,
-                            flexDirection: w.Aa.Column,
+                            display: M.X.Flex,
+                            flexDirection: M.Aa.Column,
                             fullHeight: !0,
                             fullWidth: !0,
-                            justifyContent: w.Wa.Center,
-                            color: w.O.Base,
-                            position: w.jb.Relative
-                        }, C.createElement(w.Xa, {
+                            justifyContent: M.Wa.Center,
+                            color: M.O.Base,
+                            position: M.jb.Relative
+                        }, C.createElement(M.Xa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, C.createElement(w.W, {
-                            fontSize: w.Ca.Size5
-                        }, Object(y.d)("Chat is hidden.", "RoomSelector"))), C.createElement(w.z, {
+                        }, C.createElement(M.W, {
+                            fontSize: M.Ca.Size5
+                        }, Object(y.d)("Chat is hidden.", "RoomSelector"))), C.createElement(M.z, {
                             onClick: this.props.onChatUnhide,
                             "data-a-target": "show-chat-button"
                         }, Object(y.d)("Show Chat", "RoomSelector")))
@@ -13770,14 +13881,14 @@
             function(e) {
                 e.Single = "single", e.TwoTop = "two-top", e.TwoLeft = "two-left", e.ThreeEqual = "three-equal", e.ThreeTop = "three-top", e.ThreeLeft = "three-left", e.FourEqual = "four-equal", e.FourTop = "four-top", e.FourLeft = "four-left"
             }(a || (a = {}));
-            var O, M = [
+            var O = [
                     [a.Single],
                     [a.TwoTop, a.TwoLeft],
                     [a.ThreeTop, a.ThreeLeft, a.ThreeEqual],
                     [a.FourTop, a.FourLeft, a.FourEqual]
                 ],
                 D = function(e) {
-                    var t = e.layoutLists || M,
+                    var t = e.layoutLists || O,
                         n = e.streamCount >= 1 && e.streamCount <= t.length ? t[e.streamCount - 1] : [],
                         r = Object(p.e)("Single", "MultistreamLayoutSelector"),
                         o = Object(p.e)("Top", "MultistreamLayoutSelector"),
@@ -13860,20 +13971,21 @@
                     }, Object(p.e)("Layout", "MultistreamLayoutSelector"))), m)
                 },
                 w = n("6xMQ"),
-                I = n("Bh3T"),
-                T = n("QjI3"),
-                A = n("oKCn"),
-                L = n("9rZX"),
-                R = n("UeAj");
+                M = n("Bh3T"),
+                I = n("QjI3"),
+                T = n("oKCn"),
+                A = n("9rZX"),
+                L = n("eDVu");
+            var R, U = n("UeAj");
             n("M5zm");
             ! function(e) {
                 e[e.CONFIRM_BUTTON = 0] = "CONFIRM_BUTTON", e[e.CANCEL_BUTTON = 1] = "CANCEL_BUTTON", e[e.WARNING_MESSAGE = 2] = "WARNING_MESSAGE", e[e.STREAM_WRAPPER = 3] = "STREAM_WRAPPER", e[e.STREAM_TOGGLE = 4] = "STREAM_TOGGLE", e[e.MODAL_OVERLAY = 5] = "MODAL_OVERLAY"
-            }(O || (O = {}));
-            var U, j = "https://static-cdn.jtvnw.net/ttv-static/404_preview-320x180.jpg",
-                B = function(e) {
+            }(R || (R = {}));
+            var j, B = "https://static-cdn.jtvnw.net/ttv-static/404_preview-320x180.jpg",
+                F = function(e) {
                     return e.length <= 0 || e.length > 4
                 },
-                F = function(e) {
+                P = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -13885,13 +13997,13 @@
                             },
                             currentSelectedChannelLogins: t.props.selectedChannelLogins,
                             warningDismissed: !1,
-                            badSelection: B(t.props.selectedChannelLogins)
+                            badSelection: F(t.props.selectedChannelLogins)
                         }, t.renderChanlets = function() {
                             return t.props.data.user && t.props.data.user.channel && t.props.data.user.channel.chanlets && t.props.data.user.channel.chanlets.map(function(e, n) {
                                 if (e && e.stream && e.owner) {
                                     var i = e.owner.login ? e.owner.login : "",
-                                        a = e.stream.previewImageURL || j,
-                                        r = t.props.data.user && t.props.data.user.offlineImageURL || j,
+                                        a = e.stream.previewImageURL || B,
+                                        r = t.props.data.user && t.props.data.user.offlineImageURL || B,
                                         o = "" === e.stream.id,
                                         s = t.normalizeChanletAttributes(e),
                                         l = t.getChanletTitle(e, s, n),
@@ -13906,7 +14018,7 @@
                                         margin: {
                                             bottom: 2
                                         },
-                                        "data-test-selector": O.STREAM_WRAPPER
+                                        "data-test-selector": R.STREAM_WRAPPER
                                     }, u.createElement(_.La, {
                                         type: _.Ma.Checkbox,
                                         src: o ? r : a,
@@ -13915,7 +14027,7 @@
                                         onChange: p.bind(t, i),
                                         checked: c,
                                         disabled: d,
-                                        "data-test-selector": O.STREAM_TOGGLE
+                                        "data-test-selector": R.STREAM_TOGGLE
                                     }), u.createElement(_.Xa, {
                                         className: m,
                                         display: _.X.Flex,
@@ -13955,7 +14067,7 @@
                                 i = n.indexOf(e || "");
                             i > -1 ? n.splice(i, 1) : e && (n = n.concat([e])), t.setState({
                                 currentSelectedChannelLogins: n,
-                                badSelection: B(n)
+                                badSelection: F(n)
                             })
                         }, t.updateSingleStream = function(e) {
                             if (t.props.singleChannelLoginToSwap) {
@@ -13995,23 +14107,23 @@
                         var t = Object(p.e)("Add or Remove Streams", "MultiviewStreamSelector");
                         return this.props.singleChannelLoginToSwap && (t = Object(p.e)("Change Stream: Select a replacement for {singleChannelLoginToSwap}", {
                             singleChannelLoginToSwap: this.props.singleChannelLoginToSwap
-                        }, "MultiviewStreamSelector")), u.createElement(L, {
+                        }, "MultiviewStreamSelector")), u.createElement(A, {
                             isOpen: !0,
                             contentLabel: "Modal",
-                            className: "modal__content multiview-stream-selector__content",
+                            className: "modal__content multiview-stream-selector__modal",
                             overlayClassName: "modal__backdrop multiview-stream-selector multiview-stream-selector__overlay",
                             onRequestClose: this.saveStreamSelections,
-                            "data-test-selector": O.MODAL_OVERLAY
+                            "data-test-selector": R.MODAL_OVERLAY
                         }, u.createElement(_.Xa, {
                             fullWidth: !0
                         }, u.createElement(_.i, d.__assign({}, this.state.animationProps), u.createElement(_.Xa, {
+                            className: "multiview-stream-selector__modal__content",
                             padding: {
                                 x: 4,
                                 top: 4
                             },
                             display: _.X.Flex,
-                            flexDirection: _.Aa.Column,
-                            fullHeight: !0
+                            flexDirection: _.Aa.Column
                         }, u.createElement(_.Eb, {
                             margin: {
                                 bottom: 2
@@ -14032,11 +14144,11 @@
                         }, u.createElement(_.z, {
                             type: _.F.Text,
                             onClick: this.closeHandler,
-                            "data-test-selector": O.CANCEL_BUTTON
+                            "data-test-selector": R.CANCEL_BUTTON
                         }, Object(p.e)("Cancel", "MultiviewStreamSelector"))), !this.props.singleChannelLoginToSwap && u.createElement(_.z, {
                             onClick: this.saveStreamSelections,
                             disabled: this.state.badSelection,
-                            "data-test-selector": O.CONFIRM_BUTTON
+                            "data-test-selector": R.CONFIRM_BUTTON
                         }, Object(p.e)("Watch Now", "MultiviewStreamSelector"))), this.state.badSelection && !this.state.warningDismissed && u.createElement(_.Xa, {
                             margin: {
                                 bottom: 2
@@ -14047,17 +14159,19 @@
                             title: Object(p.e)("Oh No!", "MultiviewStreamSelector"),
                             closeButtonOnClick: this.dismissWarning,
                             closeButtonAriaLabel: Object(p.e)("Dismiss warning", "MultiviewStreamSelector"),
-                            "data-test-selector": O.WARNING_MESSAGE
+                            "data-test-selector": R.WARNING_MESSAGE
                         }))), u.createElement(_.Xa, {
-                            overflow: _.cb.Auto
-                        }, u.createElement(_.bc, {
+                            overflow: _.cb.Scroll
+                        }, u.createElement(_.Xa, {
+                            overflow: _.cb.Hidden
+                        }, " ", u.createElement(_.bc, {
                             childWidth: _.cc.Large,
                             gutterSize: _.dc.Small,
                             placeholderItems: 6
-                        }, this.renderChanlets()))))))
+                        }, this.renderChanlets())))))))
                     }, t
                 }(u.Component),
-                P = Object(m.compose)(Object(S.b)("MultiviewStreamSelector"), Object(g.a)(R, {
+                x = Object(m.compose)(Object(S.b)("MultiviewStreamSelector"), Object(g.a)(U, {
                     options: function(e) {
                         return {
                             variables: {
@@ -14066,11 +14180,45 @@
                             fetchPolicy: "network-only"
                         }
                     }
-                }))(F),
-                x = n("bRMw"),
-                H = n("bjLN"),
-                G = (n("r+9a"), "multiview_layout"),
-                V = function(e) {
+                }), Object(L.a)(function(e) {
+                    return {
+                        topic: Object(k.p)(e.parentChannelID),
+                        query: U,
+                        variables: {
+                            channelLogin: e.parentChannelLogin
+                        },
+                        type: b.PubsubMessageType.MultiviewChanletUpdate,
+                        mutator: function(e, t) {
+                            if (t && t.user && t.user.channel && t.user.channel.chanlets) return t.user.channel.chanlets.forEach(function(t) {
+                                t.id === e.chanlet.id && (t.contentAttributes = function(e) {
+                                    return e.contentAttributes.reduce(function(e, t) {
+                                        var n = t;
+                                        n.ownerChannel && (n.ownerChannel.__typename = "Channel");
+                                        var i = d.__assign({
+                                            __typename: "MultiviewContentAttribute",
+                                            createdAt: null,
+                                            id: "",
+                                            imageURL: null,
+                                            key: "",
+                                            name: "",
+                                            ownerChannel: null,
+                                            parentID: null,
+                                            parentKey: null,
+                                            updatedAt: null,
+                                            value: "",
+                                            valueShortName: null
+                                        }, n);
+                                        return e.concat([i])
+                                    }, [])
+                                }(e.chanlet))
+                            }), t
+                        }
+                    }
+                }))(P),
+                H = n("bRMw"),
+                G = n("bjLN"),
+                V = (n("r+9a"), "multiview_layout"),
+                X = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.setActivePlayerHandler = function(e) {
@@ -14085,7 +14233,7 @@
                             }), n.saveStreamLayout(t)
                         }, n.updateStreamsHandler = function(e) {
                             var t = Object.assign({}, n.state.streamLayout);
-                            t.streams = e, t.layoutChoices[e.length - 1] || (t.layoutChoices[e.length - 1] = M[e.length - 1][0]), n.setState({
+                            t.streams = e, t.layoutChoices[e.length - 1] || (t.layoutChoices[e.length - 1] = O[e.length - 1][0]), n.setState({
                                 streamLayout: t
                             }), n.saveStreamLayout(t)
                         }, n.openStreamSelectorHandler = function() {
@@ -14129,7 +14277,7 @@
                             var e = n.getChannelStreamLayoutFromStorage();
                             return e || {
                                 streams: [],
-                                layoutChoices: M.map(function(e) {
+                                layoutChoices: O.map(function(e) {
                                     return e[0]
                                 })
                             }
@@ -14139,10 +14287,10 @@
                                 return t.owner && t.owner.login && e.push(t.owner.login), e
                             }, [])), e
                         }, n.saveStreamLayout = function(e) {
-                            var t = p.m.get(G, {});
-                            t[n.getStreamLayoutStorageCompoundKey()] = e, p.m.set(G, t)
+                            var t = p.m.get(V, {});
+                            t[n.getStreamLayoutStorageCompoundKey()] = e, p.m.set(V, t)
                         }, n.getChannelStreamLayoutFromStorage = function() {
-                            return p.m.get(G, {})[n.getStreamLayoutStorageCompoundKey()]
+                            return p.m.get(V, {})[n.getStreamLayoutStorageCompoundKey()]
                         }, n.getStreamLayoutStorageCompoundKey = function() {
                             var e = n.props.user && n.props.user.login || "unknown";
                             return n.props.match.params.channelLogin + "-" + e
@@ -14165,7 +14313,7 @@
                                     return Object(w.a)(e, t, n)
                             }
                         }, n.reportInteractive = function() {
-                            Object(x.b)(x.a, n.props.match.params.channelLogin) && (!n.props.data || n.props.data.loading && !n.props.data.error) || n.props.latencyTracking.reportInteractive()
+                            Object(H.b)(H.a, n.props.match.params.channelLogin) && (!n.props.data || n.props.data.loading && !n.props.data.error) || n.props.latencyTracking.reportInteractive()
                         }, n.trackViewerAction = function() {}, t.changeTheme(v.a.Dark, void 0, !1), t.enableSquadMode(), n.state = {
                             modalIsOpen: !1,
                             userTheme: Object(C.d)(),
@@ -14186,7 +14334,7 @@
                     }, t.prototype.componentWillUnmount = function() {
                         this.props.changeTheme(this.state.userTheme, void 0, !1), this.props.disableSquadMode()
                     }, t.prototype.render = function() {
-                        if (!Object(x.b)(x.a, this.props.match.params.channelLogin) || !this.props.data || this.props.data && this.props.data.user && this.props.data.user.channel && !this.props.data.user.channel.chanlets) return this.props.changeTheme(this.state.userTheme, void 0, !1), this.props.disableSquadMode(), u.createElement(h.a, null);
+                        if (!Object(H.b)(H.a, this.props.match.params.channelLogin) || !this.props.data || this.props.data && this.props.data.user && this.props.data.user.channel && !this.props.data.user.channel.chanlets) return this.props.changeTheme(this.state.userTheme, void 0, !1), this.props.disableSquadMode(), u.createElement(h.a, null);
                         if (this.props.data.loading) return u.createElement(_.Za, {
                             fillContent: !0,
                             size: _.Cb.Large
@@ -14198,7 +14346,7 @@
                             t = this.props.pubsub.messages,
                             n = t.streamUp && t.streamUp.server_time || 0,
                             i = t.streamDown && t.streamDown.server_time || 0;
-                        return (n || i) && (e = n > i), u.createElement(u.Fragment, null, u.createElement(I.b, {
+                        return (n || i) && (e = n > i), u.createElement(u.Fragment, null, u.createElement(M.b, {
                             className: "multiview-stream-page__root",
                             suppressScrollX: !0
                         }), u.createElement(_.Eb, {
@@ -14237,7 +14385,7 @@
                                 left: "auto",
                                 right: 1
                             }
-                        }, u.createElement(T.a, {
+                        }, u.createElement(I.a, {
                             channelLogin: this.props.match.params.channelLogin
                         })), this.renderExitMultiviewButton()), u.createElement(_.Xa, {
                             display: _.X.Flex,
@@ -14253,22 +14401,23 @@
                             highlightedChannel: null,
                             onFocusPlayer: this.setActivePlayerHandler,
                             ended: !e,
-                            primaryPlayerTypeOverride: A.f.MultiviewPrimary,
-                            secondaryPlayerTypeOverride: A.f.MultiviewSecondary,
+                            primaryPlayerTypeOverride: T.f.MultiviewPrimary,
+                            secondaryPlayerTypeOverride: T.f.MultiviewSecondary,
                             renderStreamEnded: this.renderStreamEnded,
                             trackingContext: {
                                 multiStreamSessionID: "multiview",
                                 trackViewerAction: this.trackViewerAction
                             }
-                        })), this.state.modalIsOpen && u.createElement(P, {
+                        })), this.state.modalIsOpen && u.createElement(x, {
                             parentChannelLogin: this.props.match.params.channelLogin,
+                            parentChannelID: this.props.data.user.id || "",
                             closeStreamSelectorHandler: this.closeStreamSelectorHandler,
                             updateStreamsHandler: this.updateStreamsHandler,
                             selectedChannelLogins: this.state.streamLayout.streams.slice()
                         }))))
                     }, t
                 }(u.Component),
-                X = Object(m.compose)(Object(g.a)(H, {
+                W = Object(m.compose)(Object(g.a)(G, {
                     options: function(e) {
                         return {
                             variables: {
@@ -14277,17 +14426,17 @@
                         }
                     },
                     skip: function(e) {
-                        return !Object(x.b)(x.a, e.match.params.channelLogin)
+                        return !Object(H.b)(H.a, e.match.params.channelLogin)
                     }
                 }), Object(f.a)([{
                     topic: function(e) {
-                        return Object(k.H)(e.match.params.channelLogin)
+                        return Object(k.I)(e.match.params.channelLogin)
                     },
-                    mapMessageTypesToProps: (U = {}, U[b.PubsubMessageType.ChannelStreamUp] = "streamUp", U[b.PubsubMessageType.ChannelStreamDown] = "streamDown", U)
+                    mapMessageTypesToProps: (j = {}, j[b.PubsubMessageType.ChannelStreamUp] = "streamUp", j[b.PubsubMessageType.ChannelStreamDown] = "streamDown", j)
                 }]), Object(S.b)("MultiviewStreamPage", {
                     destination: y.a.MultiviewStreamPage
-                }))(V);
-            var W = Object(o.a)(Object(r.connect)(function(e) {
+                }))(X);
+            var q = Object(o.a)(Object(r.connect)(function(e) {
                 return {
                     theme: e.ui.theme
                 }
@@ -14297,9 +14446,9 @@
                     enableSquadMode: l.E,
                     disableSquadMode: l.B
                 }, e)
-            })(X));
+            })(W));
             n.d(t, "MultiviewStreamPage", function() {
-                return W
+                return q
             })
         },
         VrOd: function(e, t, n) {},
@@ -14453,7 +14602,7 @@
             }), n.d(t, "n", function() {
                 return _
             }), n.d(t, "l", function() {
-                return D
+                return w
             }), n.d(t, "i", function() {
                 return I
             });
@@ -14552,20 +14701,20 @@
                 } : null
             }
             var O = ["blue", "blueviolet", "cadetblue", "chocolate", "coral", "dodgerblue", "firebrick", "goldenrod", "green", "hotpink", "orangered", "red", "seagreen", "springgreen", "yellowgreen"],
-                M = /^\/color\s+(#[A-Fa-f0-9]{6}|[A-Za-z]+)$/;
+                D = /^\/color\s+(#[A-Fa-f0-9]{6}|[A-Za-z]+)$/;
 
-            function D(e) {
-                var t = e.trim().match(M);
+            function w(e) {
+                var t = e.trim().match(D);
                 if (!t) return null;
                 var n = t[1];
                 return n.startsWith("#") || -1 !== O.indexOf(n.toLowerCase()) ? {
                     color: n
                 } : null
             }
-            var w = /^[/.]([a-z0-9]+)(.+)?$/i;
+            var M = /^[/.]([a-z0-9]+)(.+)?$/i;
 
             function I(e, t) {
-                var n = e.match(w);
+                var n = e.match(M);
                 if (!n) return {
                     handled: !1
                 };
@@ -14645,6 +14794,362 @@
                     withContext: s
                 }
             }
+        },
+        XQnt: function(e, t) {
+            var n = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "EmotePicker_SubUpsell_PriceInfo"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "channelID"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "ID"
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "user"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "channelID"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "subscriptionProducts"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "id"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "displayName"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "name"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "tier"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "url"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "emotes"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "id"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "token"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }]
+                                            }
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "price"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "priceInfo"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "currency"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "exponent"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "total"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "description"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "price"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "isTaxInclusive"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "id"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "tax"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }]
+                                            }
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "emoteSetID"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "self"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "promotion"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "newPrice"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "oldPrice"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "discountType"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "discountValue"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }]
+                                                    }
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "paidUpgradePromotion"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "newPrice"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "oldPrice"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "discountType"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "discountValue"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }]
+                                                    }
+                                                }]
+                                            }
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 393
+                }
+            };
+            n.loc.source = {
+                body: "query EmotePicker_SubUpsell_PriceInfo($channelID: ID!) {\nuser(id: $channelID) {\nid\nsubscriptionProducts {\nid\ndisplayName\nname\ntier\nurl\nemotes {\nid\ntoken\n}\nprice\npriceInfo {\ncurrency\nexponent\ntotal\ndescription\nprice\nisTaxInclusive\nid\ntax\n}\nemoteSetID\nself {\npromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\npaidUpgradePromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\n}\n}\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = n
         },
         Y3y8: function(e, t, n) {
             "use strict";
@@ -14956,6 +15461,26 @@
                             }
                         }
                     }
+                })
+            }
+        },
+        a5fV: function(e, t, n) {
+            "use strict";
+            n.d(t, "b", function() {
+                return a
+            }), n.d(t, "a", function() {
+                return r
+            });
+            var i = n("/7QA");
+
+            function a(e, t) {
+                return e / Math.pow(10, t)
+            }
+
+            function r(e, t) {
+                return Object(i.f)(e, {
+                    style: "currency",
+                    currency: t
                 })
             }
         },
@@ -15681,7 +16206,7 @@
                 O = {
                     isTimedOut: !1
                 },
-                M = function(e) {
+                D = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = O, t.timeoutID = null, t
@@ -15721,7 +16246,7 @@
                         })
                     }, t
                 }(i.Component),
-                D = Object(b.a)(_, {
+                w = Object(b.a)(_, {
                     options: function(e) {
                         return {
                             variables: {
@@ -15731,9 +16256,9 @@
                             fetchPolicy: e.forceNetworkRequest ? "cache-first" : "cache-only"
                         }
                     }
-                })(M),
-                w = n("gTu3"),
-                I = (n("lpj/"), (u = {})[w.a.Default] = "", u[w.a.Recipient] = "mention-fragment--recipient", u[w.a.Sender] = "mention-fragment--sender", u),
+                })(D),
+                M = n("gTu3"),
+                I = (n("lpj/"), (u = {})[M.a.Default] = "", u[M.a.Recipient] = "mention-fragment--recipient", u[M.a.Sender] = "mention-fragment--sender", u),
                 T = function(e) {
                     var t = e.isAtMention ? "@" : "",
                         n = p("mention-fragment", I[e.currentUserMentionRelation]);
@@ -15819,7 +16344,7 @@
                             case h.a.CurrentUserHighlight:
                                 l.push(i.createElement(T, {
                                     isAtMention: !1,
-                                    currentUserMentionRelation: w.a.Recipient,
+                                    currentUserMentionRelation: M.a.Recipient,
                                     recipient: o.content,
                                     key: s
                                 }));
@@ -15844,7 +16369,7 @@
                             case h.a.ClipLink:
                                 n || (n = i.createElement(r.a, {
                                     key: s
-                                }, i.createElement(D, {
+                                }, i.createElement(w, {
                                     slug: o.content.slug,
                                     forceNetworkRequest: t.forceClipsNetworkRequest
                                 }))), l.push(B(s, o, t.disableLinks));
@@ -17337,7 +17862,7 @@
                         }
                     }, e)
                 })(_),
-                M = (n("qmOg"), function(e) {
+                D = (n("qmOg"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.readUserPreference = !0, n.requestingAnimationFrame = !1, n.onWindowResize = function() {
@@ -17434,7 +17959,7 @@
                     }, t
                 }(r.Component));
             n.d(t, "a", function() {
-                return M
+                return D
             })
         },
         i6WW: function(e, t, n) {
@@ -18423,31 +18948,46 @@
                 N = n("GzyO"),
                 _ = n("OpME"),
                 O = n("cpJf"),
-                M = n("W8Fi"),
-                D = n("0WFu"),
-                w = function(e) {
+                D = n("W8Fi"),
+                w = n("0WFu"),
+                M = function(e, t) {
+                    return t.map(function(t) {
+                        return t.emotes && t.emoteSetID && !e.has(parseInt(t.emoteSetID, 10)) ? a.__assign({}, t, {
+                            emotes: t.emotes.map(function(e) {
+                                return a.__assign({}, e, {
+                                    isLocked: !0
+                                })
+                            })
+                        }) : t
+                    }).map(function(e) {
+                        return a.__assign({}, e, {
+                            emotes: Object(_.e)(e.emotes, e.emoteSetID)
+                        })
+                    })
+                },
+                I = function(e) {
                     return e.tier && !isNaN(parseInt(e.tier, 10)) ? parseInt(e.tier, 10) / 1e3 : 1
                 },
-                I = n("GnwI"),
-                T = n("br9A"),
-                A = n("TSYQ"),
-                L = n("8/mp"),
-                R = n("8Ad5");
+                T = n("GnwI"),
+                A = n("br9A"),
+                L = n("TSYQ"),
+                R = n("8/mp"),
+                U = n("8Ad5");
 
-            function U(e) {
-                return e.charCode === R.a.Enter || e.charCode === R.a.Space
+            function j(e) {
+                return e.charCode === U.a.Enter || e.charCode === U.a.Space
             }
-            var j, B = n("2xye"),
-                F = n("7SjK"),
-                P = n("4rCz"),
-                x = (n("/Kya"), function(e) {
+            var B, F = n("2xye"),
+                P = n("7SjK"),
+                x = n("4rCz"),
+                H = (n("/Kya"), function(e) {
                     var t = {
                             "emote-picker__tab": !0
                         },
                         n = null,
                         i = null;
                     if (e.channelTabVisible) {
-                        var o = A(a.__assign({}, t, {
+                        var o = L(a.__assign({}, t, {
                             "emote-picker__tab--active": e.channelTabEnabled && e.channelTabSelected,
                             "emote-picker__tab--disabled": !e.channelTabEnabled
                         }));
@@ -18463,10 +19003,10 @@
                             onKeyPress: e.channelTabEnabled ? e.selectChannelTabKeypress : void 0,
                             "data-a-target": "emote-channel-tab",
                             tabIndex: 0
-                        }, r.createElement("span", null, Object(P.d)("Channel", "EmotePicker"))))
+                        }, r.createElement("span", null, Object(x.d)("Channel", "EmotePicker"))))
                     }
                     if (e.allTabVisible) {
-                        var s = A(a.__assign({}, t, {
+                        var s = L(a.__assign({}, t, {
                             "emote-picker__tab--active": !(e.channelTabSelected && e.channelTabEnabled)
                         }));
                         i = r.createElement(l.Pa, {
@@ -18481,7 +19021,7 @@
                             onKeyPress: e.selectAllTabKeypress,
                             "data-a-target": "emote-all-tab",
                             tabIndex: 0
-                        }, r.createElement("span", null, Object(P.d)("All", "EmotePicker"))))
+                        }, r.createElement("span", null, Object(x.d)("All", "EmotePicker"))))
                     }
                     return r.createElement(l.Eb, {
                         background: l.r.Base,
@@ -18489,8 +19029,8 @@
                         className: "emote-picker__tabs-container"
                     }, n, i)
                 }),
-                H = n("DnOo"),
-                G = function(e) {
+                G = n("DnOo"),
+                V = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -18516,7 +19056,7 @@
                             },
                             a = {};
                         if (this.props.plan.tier) {
-                            var o = Object(D.a)(this.props.plan.tier);
+                            var o = Object(w.a)(this.props.plan.tier);
                             null === o && (o = 1), a.purchase = Object(s.d)("Tier { tierNum }", {
                                 tierNum: o
                             }, "assembleSubscribeTexts")
@@ -18529,13 +19069,13 @@
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(F.a, {
+                        }, r.createElement(P.a, {
                             emotes: i.emotes,
                             locked: !0
                         }), r.createElement(l.Xa, {
                             margin: 1,
                             alignItems: l.f.Center
-                        }, e), r.createElement(H.a, {
+                        }, e), r.createElement(G.a, {
                             isSubbedToTier: !1,
                             tierPrice: a.purchase || "",
                             handleSubAction: this.props.handleSubAction,
@@ -18545,13 +19085,13 @@
                         }))
                     }, t
                 }(r.Component),
-                V = (n("JGCS"), function(e) {
+                X = (n("JGCS"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.channelTabSelectionKeypress = function(e) {
-                            U(e) && n.selectChannelTab(e)
+                            j(e) && n.selectChannelTab(e)
                         }, n.allTabSelectionKeypress = function(e) {
-                            U(e) && n.selectAllTab(e)
+                            j(e) && n.selectAllTab(e)
                         }, n.onClickEmote = function(e) {
                             if (n.props.onClickEmote) {
                                 n.props.onClickEmote(e.displayName || e.token, e.id);
@@ -18563,10 +19103,10 @@
                                     emoticon_set_id: e.setID,
                                     generated_by: n.props.emotePickerSource
                                 };
-                                s.o.track(B.SpadeEventType.EmotePickerClickthrough, t)
+                                s.o.track(F.SpadeEventType.EmotePickerClickthrough, t)
                             }
                         }, n.closeOnEsc = function(e) {
-                            e.keyCode === R.a.Esc && n.props.toggleVisibility()
+                            e.keyCode === U.a.Esc && n.props.toggleVisibility()
                         }, n.handleFilterChange = function(e) {
                             var t = e.target.value,
                                 i = t.toLowerCase(),
@@ -18602,7 +19142,7 @@
                                 generated_by: e.emotePickerSource,
                                 chatroom_id: e.roomID
                             };
-                            s.o.track(B.SpadeEventType.ViewedEmotePicker, t)
+                            s.o.track(F.SpadeEventType.ViewedEmotePicker, t)
                         }
                         if (!e.gqlError)
                             if (this.state.filter.length > 0) {
@@ -18628,7 +19168,7 @@
                             noTail: !0,
                             show: !0
                         }, r.createElement(l.Xa, {
-                            className: A("emote-picker")
+                            className: L("emote-picker")
                         }, this.renderTabContent(), r.createElement(l.Xa, {
                             className: "emote-picker__controls-container",
                             position: l.jb.Relative
@@ -18642,7 +19182,7 @@
                             placeholder: Object(s.d)("Search for Emotes", "EmotePicker"),
                             type: l.Ta.Text,
                             value: this.state.inputValue
-                        })), r.createElement(x, {
+                        })), r.createElement(H, {
                             allTabVisible: this.props.allEmoteSets.length > 0,
                             channelTabEnabled: this.state.channelTabEnabled,
                             channelTabSelected: this.state.channelTabSelected,
@@ -18680,7 +19220,7 @@
                                     key: "ownedChannelEmoteSets",
                                     padding: 1,
                                     position: l.jb.Relative
-                                }, r.createElement(F.a, {
+                                }, r.createElement(P.a, {
                                     emotes: n,
                                     onClickEmote: this.onClickEmote
                                 })))
@@ -18691,7 +19231,7 @@
                                     key: "planUpsell:" + t.level,
                                     padding: 1,
                                     position: l.jb.Relative
-                                }, r.createElement(G, {
+                                }, r.createElement(V, {
                                     plan: t,
                                     isEsportChannel: e.props.isEsportChannel,
                                     subscribeTexts: e.props.subscribeTexts,
@@ -18710,12 +19250,12 @@
                                     bottom: 2
                                 },
                                 className: "emote-picker__content-block"
-                            }, r.createElement(F.a, {
+                            }, r.createElement(P.a, {
                                 emotes: n,
                                 onClickEmote: e.onClickEmote
                             }))
                         });
-                        return t.length > 0 ? r.createElement(L.b, {
+                        return t.length > 0 ? r.createElement(R.b, {
                             className: "emote-picker__tab-content"
                         }, r.createElement(l.Xa, {
                             padding: 1
@@ -18749,11 +19289,11 @@
                             }
                         }
                         return n
-                    }, t = a.__decorate([Object(I.b)("EmotePickerMenu", {
+                    }, t = a.__decorate([Object(T.b)("EmotePickerMenu", {
                         autoReportInteractive: !0
                     })], t)
                 }(r.Component)),
-                X = (n("zyUW"), function(e) {
+                W = (n("zyUW"), function(e) {
                     var t = null;
                     return e.imgSrc && (t = r.createElement(r.Fragment, null, r.createElement(l.S, {
                         className: "emote-grid-section__header-image",
@@ -18778,15 +19318,15 @@
                         align: l.fc.Middle,
                         bold: !0,
                         color: l.O.Alt
-                    }, e.label)), r.createElement(F.a, {
+                    }, e.label)), r.createElement(P.a, {
                         context: e.context,
                         emotes: e.emotes,
                         onClickEmote: e.onClickEmote,
                         spaced: !0
                     }))
                 }),
-                W = n("17x9"),
-                q = function(e) {
+                q = n("17x9"),
+                z = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.checkVisible = function(e, n) {
@@ -18800,10 +19340,10 @@
                     }, t.prototype.render = function() {
                         return r.createElement(r.Fragment, null, this.props.children)
                     }, t.contextTypes = {
-                        registerReceiver: W.func
+                        registerReceiver: q.func
                     }, t
                 }(r.Component),
-                z = (n("cr2a"), function(e) {
+                Q = (n("cr2a"), function(e) {
                     return r.createElement(l.Xa, {
                         className: "emote-picker-tab-item " + (e.isActive ? "emote-picker-tab-item--active" : ""),
                         position: l.jb.Relative
@@ -18817,18 +19357,16 @@
                         asset: e.icon
                     }))))
                 }),
-                Q = (n("GLn2"), function(e) {
+                Y = n("a5fV"),
+                K = (n("GLn2"), function(e) {
                     function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {}, t
+                        return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.latencyTracking.reportInteractive()
-                    }, t.prototype.render = function() {
+                    return a.__extends(t, e), t.prototype.render = function() {
                         var e = this,
                             t = this.props.channelSubscriptionProducts.find(function(t) {
                                 return !!t.emotes.find(function(t) {
-                                    return null !== e.props.subUpsellClickedEmote && e.props.subUpsellClickedEmote.id === t.id
+                                    return e.props.subUpsellClickedEmote.id === t.id
                                 })
                             }),
                             n = this.props.channelSubscriptionProducts.filter(function(e) {
@@ -18836,18 +19374,18 @@
                                     return !e.isLocked
                                 })
                             }).sort(function(e, t) {
-                                var n = w(e);
-                                return w(t) - n
+                                var n = I(e);
+                                return I(t) - n
                             });
-                        if (t && this.props.subUpsellClickedEmote && this.props.subUpsellClickedEmote.srcSet && this.props.channelDisplayName) {
-                            var i = w(t),
+                        if (t && this.props.subUpsellClickedEmote.srcSet && this.props.channelDisplayName) {
+                            var i = I(t),
                                 o = Object(s.d)("Subscribe at Tier {tierNumber}", {
                                     tierNumber: i
                                 }, "EmotePickerCard"),
                                 c = [],
                                 d = [];
                             n.forEach(function(e) {
-                                if (w(e) <= i) {
+                                if (I(e) <= i) {
                                     var t = e.emotes.map(function(e) {
                                         return a.__assign({}, e, {
                                             isLocked: !1
@@ -18856,7 +19394,12 @@
                                     d.push.apply(d, t)
                                 } else c.push.apply(c, e.emotes)
                             });
-                            var u = c.concat(d);
+                            var u = c.concat(d),
+                                m = t.price.toString() || "";
+                            if (t.priceInfo) {
+                                var p = t.priceInfo;
+                                m = Object(Y.a)(Object(Y.b)(p.total, p.exponent), p.currency)
+                            }
                             return r.createElement(l.Xa, {
                                 className: "emote-sub-upsell"
                             }, r.createElement(l.Eb, {
@@ -18898,23 +19441,22 @@
                                 padding: {
                                     x: 2
                                 }
-                            }, r.createElement(H.a, {
+                            }, r.createElement(G.a, {
                                 customSubscribeNowMessage: o,
                                 isSubbedToTier: !1,
                                 fullWidth: !0,
-                                tierPrice: t.price.toString() || t.priceInfo.price.toString() || "",
+                                tierPrice: m,
                                 handleSubAction: this.props.handleSubAction,
                                 productName: t.name,
                                 url: t.url,
                                 isEsportChannel: this.props.isEsportChannel
                             })), r.createElement(l.ec, null, r.createElement("hr", {
                                 className: "emote-sub-upsell__divider"
-                            })), r.createElement(L.b, {
+                            })), r.createElement(R.b, {
                                 className: "emote-sub-upsell__content"
                             }, r.createElement(l.Xa, null, r.createElement(l.Xa, {
                                 padding: {
-                                    x: 1,
-                                    bottom: .5
+                                    x: 2
                                 }
                             }, r.createElement(l.W, {
                                 bold: !0
@@ -18926,7 +19468,7 @@
                                     top: .5,
                                     bottom: 3
                                 }
-                            }, r.createElement(F.a, {
+                            }, r.createElement(P.a, {
                                 emotes: u,
                                 spaced: !0,
                                 onClickEmote: this.props.onClickEmote
@@ -18950,30 +19492,72 @@
                         return 6 === t.length ? t[2] : t[0]
                     }, t
                 }(r.Component)),
-                Y = Object(u.compose)(Object(I.b)("EmoteSubUpsell"))(Q);
+                $ = n("XQnt"),
+                Z = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                        (!this.props.channelID || this.props.data && !this.props.data.loading) && this.props.latencyTracking.reportInteractive()
+                    }, t.prototype.render = function() {
+                        return null === this.props.subUpsellClickedEmote ? null : r.createElement(K, {
+                            channelDisplayName: this.props.channelDisplayName,
+                            channelSubscriptionProducts: this.subscriptionProducts,
+                            handleSubAction: this.props.handleSubAction,
+                            isEsportChannel: this.props.isEsportChannel,
+                            onBackClick: this.props.onBackClick,
+                            onClickEmote: this.props.onClickEmote,
+                            subUpsellClickedEmote: this.props.subUpsellClickedEmote
+                        })
+                    }, Object.defineProperty(t.prototype, "subscriptionProducts", {
+                        get: function() {
+                            if (this.props.data && this.props.data.user && this.props.data.user.subscriptionProducts) {
+                                var e = this.props.data.user.subscriptionProducts.filter(function(e) {
+                                    return e
+                                });
+                                return M(this.props.ownedSetIDs, e)
+                            }
+                            return this.props.channelSubscriptionProducts
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(r.Component),
+                J = Object(d.compose)(Object(h.a)($, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                channelID: e.channelID
+                            }
+                        }
+                    },
+                    skip: function(e) {
+                        return !e.channelID
+                    }
+                }), Object(T.b)("EmoteSubUpsell"))(Z);
             ! function(e) {
                 e.FrequentlyUsed = "frequently_used", e.CurrentChannel = "current_channel", e.OtherChannel = "other_subbed_channel", e.Unlocked = "unlocked", e.Global = "global"
-            }(j || (j = {}));
-            var K;
+            }(B || (B = {}));
+            var ee;
             ! function(e) {
                 e.FrequentlyUsedEmotes = "FREQUENTLY_USED_EMOTES", e.ChannelEmotes = "CHANNEL_EMOTES", e.AllEmotes = "ALL_EMOTES"
-            }(K || (K = {}));
-            var $ = function(e) {
+            }(ee || (ee = {}));
+            var te = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onTabNavClick = function(e) {
                             if (n.scroll && n.scroll.scrollContent && e.currentTarget.getAttribute("data-a-target")) {
                                 var t = e.currentTarget.getAttribute("data-a-target"),
-                                    i = K.FrequentlyUsedEmotes;
+                                    i = ee.FrequentlyUsedEmotes;
                                 switch (t) {
-                                    case K.FrequentlyUsedEmotes:
-                                        n.frequentlyUsedEmotesRef && (n.frequentlyUsedEmotesRef.scrollIntoView(), i = K.FrequentlyUsedEmotes);
+                                    case ee.FrequentlyUsedEmotes:
+                                        n.frequentlyUsedEmotesRef && (n.frequentlyUsedEmotesRef.scrollIntoView(), i = ee.FrequentlyUsedEmotes);
                                         break;
-                                    case K.ChannelEmotes:
-                                        n.channelEmotesRef && (n.channelEmotesRef.scrollIntoView(), i = K.ChannelEmotes);
+                                    case ee.ChannelEmotes:
+                                        n.channelEmotesRef && (n.channelEmotesRef.scrollIntoView(), i = ee.ChannelEmotes);
                                         break;
-                                    case K.AllEmotes:
-                                        n.allEmotesRef && (n.allEmotesRef.scrollIntoView(), i = K.AllEmotes)
+                                    case ee.AllEmotes:
+                                        n.allEmotesRef && (n.allEmotesRef.scrollIntoView(), i = ee.AllEmotes)
                                 }
                                 n.setState({
                                     selectedNavTab: i
@@ -18991,7 +19575,7 @@
                                     emoticon_set_id: e.setID,
                                     generated_by: n.props.emotePickerSource
                                 };
-                                s.o.track(B.SpadeEventType.EmotePickerClickthrough, i)
+                                s.o.track(F.SpadeEventType.EmotePickerClickthrough, i)
                             } else e.isLocked && n.onClickLockedEmote(e)
                         }, n.saveScrollRef = function(e) {
                             return n.scroll = e
@@ -19004,20 +19588,18 @@
                         }, n.checkVisible = function(e, t) {
                             if (t) {
                                 var i = n.state.selectedNavTab;
-                                n.channelEmotesRef ? t.offset > 0 && t.offset < n.channelEmotesRef.offsetTop ? i = K.FrequentlyUsedEmotes : t.offset > n.channelEmotesRef.offsetTop && t.offset < n.allEmotesRef.offsetTop ? i = K.ChannelEmotes : t.offset > n.allEmotesRef.offsetTop && (i = K.AllEmotes) : t.offset > 0 && t.offset < n.allEmotesRef.offsetTop ? i = K.FrequentlyUsedEmotes : t.offset > n.allEmotesRef.offsetTop && (i = K.AllEmotes), n.state.selectedNavTab !== i && n.setState({
+                                n.channelEmotesRef ? t.offset > 0 && t.offset < n.channelEmotesRef.offsetTop ? i = ee.FrequentlyUsedEmotes : t.offset > n.channelEmotesRef.offsetTop && t.offset < n.allEmotesRef.offsetTop ? i = ee.ChannelEmotes : t.offset > n.allEmotesRef.offsetTop && (i = ee.AllEmotes) : t.offset > 0 && t.offset < n.allEmotesRef.offsetTop ? i = ee.FrequentlyUsedEmotes : t.offset > n.allEmotesRef.offsetTop && (i = ee.AllEmotes), n.state.selectedNavTab !== i && n.setState({
                                     selectedNavTab: i
                                 })
                             }
                         }, n.onClickLockedEmote = function(e) {
                             n.setState({
-                                isInSubUpsell: !0,
                                 subUpsellClickedEmote: e
                             })
                         }, n.onBackClick = function() {
                             n.setState({
-                                isInSubUpsell: !1,
                                 subUpsellClickedEmote: null,
-                                selectedNavTab: K.FrequentlyUsedEmotes
+                                selectedNavTab: ee.FrequentlyUsedEmotes
                             })
                         }, n.handleFilterChange = function(e) {
                             var t = e.target.value,
@@ -19026,7 +19608,7 @@
                                 filter: i,
                                 inputValue: t,
                                 filteredEmotes: n.filterEmoteSets(n.props.allEmoteSets, i),
-                                selectedNavTab: K.FrequentlyUsedEmotes
+                                selectedNavTab: ee.FrequentlyUsedEmotes
                             })
                         }, n.filterEmoteSets = function(e, t) {
                             var n = [];
@@ -19058,8 +19640,7 @@
                             filter: "",
                             filteredEmotes: [],
                             inputValue: "",
-                            isInSubUpsell: !1,
-                            selectedNavTab: K.FrequentlyUsedEmotes,
+                            selectedNavTab: ee.FrequentlyUsedEmotes,
                             sortedChannelEmotes: [],
                             subUpsellClickedEmote: null
                         }, n
@@ -19072,7 +19653,7 @@
                                 generated_by: this.props.emotePickerSource,
                                 chatroom_id: this.props.roomID
                             };
-                            s.o.track(B.SpadeEventType.ViewedEmotePicker, e), this.updateChannelEmotes(this.props)
+                            s.o.track(F.SpadeEventType.ViewedEmotePicker, e), this.updateChannelEmotes(this.props)
                         }
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.props.channelID !== e.channelID && this.updateChannelEmotes(e)
@@ -19087,15 +19668,8 @@
                             className: "emote-picker"
                         }, this.renderView()))
                     }, t.prototype.renderView = function() {
-                        return this.state.isInSubUpsell ? r.createElement(Y, {
-                            channelDisplayName: this.props.channelDisplayName,
-                            channelSubscriptionProducts: this.props.channelSubscriptionProducts,
-                            isEsportChannel: this.props.isEsportChannel || !1,
-                            subUpsellClickedEmote: this.state.subUpsellClickedEmote,
-                            onBackClick: this.onBackClick,
-                            onClickEmote: this.onClickLockedEmote,
-                            handleSubAction: this.props.handleSubAction
-                        }) : r.createElement(l.Xa, null, r.createElement(l.Eb, {
+                        var e = null;
+                        return null === this.state.subUpsellClickedEmote && (e = r.createElement(r.Fragment, null, r.createElement(l.Eb, {
                             padding: {
                                 top: 2,
                                 x: 2
@@ -19106,7 +19680,17 @@
                             placeholder: Object(s.d)("Search for Emotes", "EmotePickerCard"),
                             type: l.Ta.Text,
                             value: this.state.inputValue
-                        })), this.renderTabContent())
+                        })), this.renderTabContent())), r.createElement(r.Fragment, null, r.createElement(J, {
+                            channelDisplayName: this.props.channelDisplayName,
+                            channelID: this.props.channelID,
+                            channelSubscriptionProducts: this.props.channelSubscriptionProducts,
+                            isEsportChannel: this.props.isEsportChannel || !1,
+                            handleSubAction: this.props.handleSubAction,
+                            onBackClick: this.onBackClick,
+                            onClickEmote: this.onClickLockedEmote,
+                            ownedSetIDs: this.props.ownedSetIDs,
+                            subUpsellClickedEmote: this.state.subUpsellClickedEmote
+                        }), e)
                     }, t.prototype.renderTabContent = function() {
                         return this.props.gqlError ? r.createElement(l.Xa, null, r.createElement(l.W, {
                             "data-test-selector": "emote-picker-menu-error-text",
@@ -19118,21 +19702,21 @@
                             fullWidth: !0,
                             justifyContent: l.Wa.Center,
                             padding: 1
-                        }, r.createElement(l.Za, null)) : "" !== this.state.filter ? this.renderSearchContent() : r.createElement(r.Fragment, null, r.createElement(L.b, {
+                        }, r.createElement(l.Za, null)) : "" !== this.state.filter ? this.renderSearchContent() : r.createElement(r.Fragment, null, r.createElement(R.b, {
                             scrollRef: this.saveScrollRef,
                             className: "emote-picker__tab-content"
                         }, r.createElement(l.Xa, {
                             padding: {
                                 bottom: 2
                             }
-                        }, r.createElement(q, {
+                        }, r.createElement(z, {
                             checkVisible: this.checkVisible
                         }, this.getFrequentlyUsedEmoteGrid(), this.getCurrentChannelEmoteGrid(), this.getOtherSubEmoteGrids(), this.getResidualEmoteGrids()))), this.renderTabNav())
                     }, t.prototype.getFrequentlyUsedEmoteGrid = function() {
                         return 0 === this.props.frequentlyUsedEmotes.length ? null : r.createElement(l.Xa, {
                             refDelegate: this.saveFrequentlyUsedEmotesRef
-                        }, r.createElement(X, {
-                            context: j.FrequentlyUsed,
+                        }, r.createElement(W, {
+                            context: B.FrequentlyUsed,
                             emotes: this.props.frequentlyUsedEmotes,
                             label: Object(s.d)("Frequently Used", "EmotePickerCard"),
                             onClickEmote: this.onClickEmote
@@ -19141,8 +19725,8 @@
                         return 0 !== this.state.sortedChannelEmotes.length && this.props.channelDisplayName ? r.createElement(l.Xa, {
                             className: "emote-picker__content-block",
                             refDelegate: this.saveChannelEmotesRef
-                        }, r.createElement(X, {
-                            context: j.CurrentChannel,
+                        }, r.createElement(W, {
+                            context: B.CurrentChannel,
                             emotes: this.state.sortedChannelEmotes,
                             imgSrc: this.props.channelProfileImageURL || void 0,
                             label: this.props.channelDisplayName,
@@ -19155,8 +19739,8 @@
                             n.owner && n.owner.displayName && t.push(r.createElement(l.Xa, {
                                 key: "emote-grid--" + n.id + "-emotes",
                                 className: "emote-picker__content-block"
-                            }, r.createElement(X, {
-                                context: j.OtherChannel,
+                            }, r.createElement(W, {
+                                context: B.OtherChannel,
                                 emotes: n.emotes,
                                 imgSrc: n.owner.profileImageURL || void 0,
                                 label: n.owner.displayName,
@@ -19168,16 +19752,16 @@
                         return this.props.unlockedEmotes.length > 0 && e.push(r.createElement(l.Xa, {
                             key: "emote-grid--unlocked-emotes",
                             className: "emote-picker__content-block"
-                        }, r.createElement(X, {
-                            context: j.Unlocked,
+                        }, r.createElement(W, {
+                            context: B.Unlocked,
                             emotes: this.props.unlockedEmotes,
                             label: Object(s.d)("Unlocked", "EmotePickerCard"),
                             onClickEmote: this.onClickEmote
                         }))), this.props.globalEmotes.length > 0 && e.push(r.createElement(l.Xa, {
                             key: "emote-grid--global-emotes",
                             className: "emote-picker__content-block"
-                        }, r.createElement(X, {
-                            context: j.Global,
+                        }, r.createElement(W, {
+                            context: B.Global,
                             emotes: this.props.globalEmotes,
                             label: Object(s.d)("Global", "EmotePickerCard"),
                             onClickEmote: this.onClickEmote
@@ -19185,16 +19769,12 @@
                             refDelegate: this.saveAllEmotesRef
                         }, e)
                     }, t.prototype.renderSearchContent = function() {
-                        var e;
-                        return e = this.state.filteredEmotes.length > 0 ? r.createElement(l.W, {
-                            bold: !0
-                        }, Object(s.d)('Search Results for "{inputValue}"', {
+                        var e = Object(s.d)('No Search Results for "{inputValue}"', {
                             inputValue: this.state.inputValue
-                        }, "EmotePickerCard")) : r.createElement(l.W, {
-                            bold: !0
-                        }, Object(s.d)('No Search Results for "{inputValue}"', {
+                        }, "EmotePickerCard");
+                        return this.state.filteredEmotes.length > 0 && (e = Object(s.d)('Search Results for "{inputValue}"', {
                             inputValue: this.state.inputValue
-                        }, "EmotePickerCard")), r.createElement(L.b, {
+                        }, "EmotePickerCard")), r.createElement(R.b, {
                             className: "emote-picker__tab-content"
                         }, r.createElement(l.Xa, {
                             position: l.jb.Relative,
@@ -19208,42 +19788,44 @@
                             padding: {
                                 x: 1
                             }
-                        }, e), r.createElement(F.a, {
+                        }, r.createElement(l.W, {
+                            bold: !0
+                        }, e)), r.createElement(P.a, {
                             emotes: this.state.filteredEmotes,
                             onClickEmote: this.onClickEmote,
                             spaced: !0
                         })))
                     }, t.prototype.renderTabNav = function() {
                         var e = null;
-                        return this.state.sortedChannelEmotes.length > 0 && (e = r.createElement(z, {
-                            isActive: this.state.selectedNavTab === K.ChannelEmotes,
-                            label: K.ChannelEmotes,
+                        return this.state.sortedChannelEmotes.length > 0 && (e = r.createElement(Q, {
+                            isActive: this.state.selectedNavTab === ee.ChannelEmotes,
+                            label: ee.ChannelEmotes,
                             icon: l.tb.NavChannels,
                             onClick: this.onTabNavClick
                         })), r.createElement(l.Eb, {
                             background: l.r.Alt,
                             display: l.X.Flex,
                             className: "emote-picker__tab-nav-container"
-                        }, r.createElement(z, {
-                            isActive: this.state.selectedNavTab === K.FrequentlyUsedEmotes,
-                            label: K.FrequentlyUsedEmotes,
+                        }, r.createElement(Q, {
+                            isActive: this.state.selectedNavTab === ee.FrequentlyUsedEmotes,
+                            label: ee.FrequentlyUsedEmotes,
                             icon: l.tb.GlyphLength,
                             onClick: this.onTabNavClick
-                        }), e, r.createElement(z, {
-                            isActive: this.state.selectedNavTab === K.AllEmotes,
-                            label: K.AllEmotes,
+                        }), e, r.createElement(Q, {
+                            isActive: this.state.selectedNavTab === ee.AllEmotes,
+                            label: ee.AllEmotes,
                             icon: l.tb.EmoticonsAll,
                             onClick: this.onTabNavClick
                         }))
                     }, t
                 }(r.Component),
-                Z = n("DB+C"),
-                J = function(e) {
+                ne = n("DB+C"),
+                ie = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.handleSubEvent = function(e) {
-                            e.action === T.a.ClickCheckout && n.checkAndDisplaySubscriptionCheckout(), Object(T.b)(a.__assign({}, e, {
-                                action: T.a.ClickCheckout,
+                            e.action === A.a.ClickCheckout && n.checkAndDisplaySubscriptionCheckout(), Object(A.b)(a.__assign({}, e, {
+                                action: A.a.ClickCheckout,
                                 channelID: n.props.channelData && n.props.channelData.user && n.props.channelData.user.id || "",
                                 channelLogin: n.props.channelData && n.props.channelData.user && n.props.channelData.user.displayName || "",
                                 isMenuOpen: null,
@@ -19295,7 +19877,7 @@
                     }, t.prototype.render = function() {
                         if (!this.props.visible) return null;
                         var e = this.props.channelData && this.props.channelData.user && this.props.channelData.user.campaignProperties && this.props.channelData.user.campaignProperties.domains && this.props.channelData.user.campaignProperties.domains.length > 0 || !1,
-                            t = r.createElement(V, {
+                            t = r.createElement(X, {
                                 allEmoteSets: this.state.allEmoteSets,
                                 availableUpsells: this.state.availableUpsells,
                                 channelTabVisible: this.state.channelTabVisible,
@@ -19314,7 +19896,7 @@
                                 subscribeTexts: this.state.subscribeTexts,
                                 toggleVisibility: this.props.toggleVisibility
                             }),
-                            n = r.createElement($, {
+                            n = r.createElement(te, {
                                 allEmoteSets: this.state.allEmoteSets,
                                 channelID: this.props.channelOwnerID,
                                 channelDisplayName: this.state.channelDisplayName,
@@ -19330,6 +19912,7 @@
                                 isEsportChannel: e,
                                 loading: this.state.gqlLoading,
                                 onClickEmote: this.props.onClickEmote,
+                                ownedSetIDs: this.state.ownedSetIDs,
                                 otherChannelEmoteSets: this.state.otherChannelEmoteSets,
                                 roomID: this.props.roomID,
                                 size: this.props.size,
@@ -19390,27 +19973,13 @@
                                 var i = [];
                                 return !n || n !== O.b.IOS && n !== O.b.Android ? (t.forEach(function(n, r) {
                                     var o = n.price;
-                                    0 === r && Object(M.g)(t) && (o = Object(M.c)(t[0])), n.emotes && n.emotes.length && n.emoteSetID && !e.has(parseInt(n.emoteSetID, 10)) && i.push(a.__assign({}, n, {
+                                    0 === r && Object(D.g)(t) && (o = Object(D.c)(t[0])), n.emotes && n.emotes.length && n.emoteSetID && !e.has(parseInt(n.emoteSetID, 10)) && i.push(a.__assign({}, n, {
                                         emotes: Object(_.e)(n.emotes, n.emoteSetID),
                                         level: r,
                                         price: o
                                     }))
                                 }), i) : i
-                            }(n.ownedSetIDs, e.channelData.user.subscriptionProducts, u), n.channelDisplayName = e.channelData.user.displayName, n.channelProfileImageURL = e.channelData.user.profileImageURL, n.channelSubscriptionProducts = function(e, t) {
-                                return t.map(function(t) {
-                                    return t.emotes && t.emoteSetID && !e.has(parseInt(t.emoteSetID, 10)) ? a.__assign({}, t, {
-                                        emotes: t.emotes.map(function(e) {
-                                            return a.__assign({}, e, {
-                                                isLocked: !0
-                                            })
-                                        })
-                                    }) : t
-                                }).map(function(e) {
-                                    return a.__assign({}, e, {
-                                        emotes: Object(_.e)(e.emotes, e.emoteSetID)
-                                    })
-                                })
-                            }(n.ownedSetIDs, e.channelData.user.subscriptionProducts), n.ownedChannelEmoteSets = function(e, t) {
+                            }(n.ownedSetIDs, e.channelData.user.subscriptionProducts, u), n.channelDisplayName = e.channelData.user.displayName, n.channelProfileImageURL = e.channelData.user.profileImageURL, n.channelSubscriptionProducts = M(n.ownedSetIDs, e.channelData.user.subscriptionProducts), n.ownedChannelEmoteSets = function(e, t) {
                                 for (var n = [{
                                         id: "0",
                                         emotes: []
@@ -19422,7 +19991,7 @@
                             }(n.ownedSetIDs, e.channelData.user.subscriptionProducts), n.subscribeTexts = function(e) {
                                 for (var t = [], n = 0; n < e.length; n++) {
                                     var i = e[n],
-                                        a = Object(D.a)(i.tier);
+                                        a = Object(w.a)(i.tier);
                                     null === a && (a = 1), 0 === n && i.emotes && i.emotes.length > 1 ? t[n] = Object(s.d)("Unlock {numEmotes, number} Sub Emotes", {
                                         numEmotes: i.emotes.length
                                     }, "assembleSubscribeTexts") : 0 === n ? t[n] = Object(s.d)("Unlock 1 Sub Emote", "assembleSubscribeTexts") : i.emotes && i.emotes.length > 1 ? t[n] = Object(s.d)("{numEmotes, number} Extra Tier {tier} Sub Emotes", {
@@ -19439,9 +20008,9 @@
                     }, t.prototype.subscriptionProductHasEmotes = function(e) {
                         return void 0 !== e.emoteSetID && !!e.emotes && e.emotes.length > 0
                     }, t.prototype.checkAndDisplaySubscriptionCheckout = function() {
-                        var e = s.n.get(b.b, ""),
-                            t = s.n.get(b.c, ""),
-                            n = s.n.get(b.a, ""),
+                        var e = s.n.get(b.c, ""),
+                            t = s.n.get(b.d, ""),
+                            n = s.n.get(b.b, ""),
                             i = Number(n);
                         e && (this.props.channelData && this.props.channelData.user && this.props.channelData.user.subscriptionProducts.map(function(e) {
                             return e.name
@@ -19452,10 +20021,10 @@
                             trackingContext: {
                                 source: E.c.EmotePicker
                             }
-                        }) : this.props.showLoginModal() : Object(b.d)())
+                        }) : this.props.showLoginModal() : Object(b.e)())
                     }, t
                 }(r.Component);
-            var ee = Object(d.compose)(Object(i.connect)(function(e) {
+            var ae = Object(d.compose)(Object(i.connect)(function(e) {
                     return {
                         currentUserID: e.session.user && e.session.user.id,
                         emotePickerSessionID: e.chat && e.chat.emotePickerSessionID || null,
@@ -19466,7 +20035,7 @@
                     return Object(u.bindActionCreators)({
                         closeEmotePicker: S.A,
                         openEmotePicker: S.M,
-                        showLoginModal: Object(b.e)(v.a.EmotePickerSubscriptionButton),
+                        showLoginModal: Object(b.f)(v.a.EmotePickerSubscriptionButton),
                         showSubscriptionCheckoutModal: function(e) {
                             var t = a.__rest(e, []);
                             return Object(k.d)(p.a, {
@@ -19478,7 +20047,7 @@
                             })
                         }
                     }, e)
-                }), Object(h.a)(Z, {
+                }), Object(h.a)(ne, {
                     name: "channelData",
                     skip: function(e) {
                         return !e.channelOwnerID
@@ -19500,8 +20069,8 @@
                     skip: function(e) {
                         return !e.currentUserID
                     }
-                }]), Object(I.b)("EmotePicker"), Object(f.a)())(J),
-                te = function(e) {
+                }]), Object(T.b)("EmotePicker"), Object(f.a)())(ie),
+                re = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -19541,7 +20110,7 @@
                             isActive: this.state.isEmotePickerMenuVisible
                         }));
                         var t = null;
-                        this.hasInteractedOrPageload && (t = r.createElement(ee, {
+                        this.hasInteractedOrPageload && (t = r.createElement(ae, {
                             channelOwnerID: this.props.channelOwnerID,
                             emotePickerSource: this.props.emotePickerSource,
                             onClickEmote: this.onClickEmote,
@@ -19577,16 +20146,16 @@
                         configurable: !0
                     }), t
                 }(r.Component),
-                ne = Object(I.b)("EmotePicker")(te);
-            var ie = Object(i.connect)(function(e) {
+                oe = Object(T.b)("EmotePicker")(re);
+            var se = Object(i.connect)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
-            })(ne);
+            })(oe);
             n.d(t, "a", function() {
-                return ie
+                return se
             }), n.d(t, "c", function() {
-                return ee
+                return ae
             }), n.d(t, !1, function() {
                 return O.a
             }), n.d(t, !1, function() {
@@ -20829,7 +21398,7 @@
                         }
                     }
                 }))(_),
-                M = (n("U80U"), function(e) {
+                D = (n("U80U"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -20906,7 +21475,7 @@
                         }, r)
                     }, t
                 }(o.Component)),
-                D = Object(s.compose)(Object(l.a)(E, {
+                w = Object(s.compose)(Object(l.a)(E, {
                     name: "data",
                     skip: function(e) {
                         return !e.id
@@ -20919,12 +21488,12 @@
                             }
                         }
                     }
-                }))(M);
+                }))(D);
             ! function(e) {
                 e.Weekly = "WEEK", e.AllTime = "ALLTIME", e.Monthly = "MONTH"
             }(f || (f = {}));
             n("2C+f");
-            var w = function(e) {
+            var M = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderExpandArrow = function() {
@@ -21039,7 +21608,7 @@
                             x: 1,
                             top: .5
                         }
-                    }, o.createElement(D, {
+                    }, o.createElement(w, {
                         id: e.node.id,
                         value: e.node.entryKey,
                         score: e.node.score,
@@ -21460,7 +22029,7 @@
                             n = this.props.data.user.cheer.settings.leaderboard.timePeriodType || f.AllTime;
                         this.props.data.user.self && this.props.data.user.self.bitsLeaderboardItem && (t = this.props.data.user.self.bitsLeaderboardItem);
                         var i = null;
-                        this.state.isExpanded && (i = o.createElement(w, {
+                        this.state.isExpanded && (i = o.createElement(M, {
                             topEdges: e,
                             userPlaceEdge: t,
                             toggleExpand: this.toggleIsExpanded,
@@ -21570,9 +22139,9 @@
                 N = n("0Lz3"),
                 _ = n("uIkQ"),
                 O = n("+pBb"),
-                M = n("tY8L"),
-                D = n("ZVTe"),
-                w = n("DMoW"),
+                D = n("tY8L"),
+                w = n("ZVTe"),
+                M = n("DMoW"),
                 I = n("kRBY"),
                 T = n("TApp"),
                 A = n("KGti"),
@@ -21726,13 +22295,13 @@
                                                 messageID: this.props.messageID
                                             }, [4, this.props.deleteChatMessageMutation(Object(y.a)(e))];
                                         case 2:
-                                            return (t = i.sent().data.deleteChatMessage) && t.responseCode !== w.u.SUCCESS && (n = t.message && t.message.sender && t.message.sender.displayName || this.props.senderLogin, a = Object(T.a)(function(e, t) {
+                                            return (t = i.sent().data.deleteChatMessage) && t.responseCode !== M.u.SUCCESS && (n = t.message && t.message.sender && t.message.sender.displayName || this.props.senderLogin, a = Object(T.a)(function(e, t) {
                                                 switch (e) {
-                                                    case w.u.FORBIDDEN:
+                                                    case M.u.FORBIDDEN:
                                                         return Object(s.d)("You don't have permission to delete messages.", "DeleteChatMessageErrorCode");
-                                                    case w.u.TARGET_IS_BROADCASTER:
+                                                    case M.u.TARGET_IS_BROADCASTER:
                                                         return Object(s.d)("You cannot delete the broadcaster's messages.", "DeleteChatMessageErrorCode");
-                                                    case w.u.TARGET_IS_MODERATOR:
+                                                    case M.u.TARGET_IS_MODERATOR:
                                                         return Object(s.d)("You cannot delete messages from moderator {senderDisplayName}", {
                                                             senderDisplayName: t
                                                         }, "DeleteChatMessageErrorCode");
@@ -21876,7 +22445,7 @@
                             }), a.createElement("button", {
                                 onClick: t.usernameClickHandler,
                                 className: "chat-line__username"
-                            }, a.createElement(D.a, {
+                            }, a.createElement(w.a, {
                                 userData: i.user,
                                 highContrastUsernameColor: o,
                                 theme: r
@@ -21919,7 +22488,7 @@
                 }(a.Component);
             var J = Object(k.compose)(Object(r.connect)(void 0, function(e) {
                     return Object(o.bindActionCreators)({
-                        onUsernameClick: M.e,
+                        onUsernameClick: D.e,
                         onHiddenMessageClick: O.Q
                     }, e)
                 }))(Z),
@@ -22079,7 +22648,7 @@
                                 }, a.createElement(S.a, {
                                     badgeSets: this.props.badgeSets,
                                     badgesToRender: c.badges
-                                }), a.createElement(D.a, {
+                                }), a.createElement(w.a, {
                                     userData: c.user
                                 }), a.createElement("span", {
                                     key: "separator"
@@ -22114,7 +22683,7 @@
                                 }, a.createElement(S.a, {
                                     badgeSets: this.props.badgeSets,
                                     badgesToRender: c.badges
-                                }), a.createElement(D.a, {
+                                }), a.createElement(w.a, {
                                     userData: c.user
                                 }), a.createElement("span", {
                                     key: "separator"
@@ -22146,17 +22715,7 @@
                 }))(ce),
                 ue = n("QVaV"),
                 me = n("8SX2"),
-                pe = function() {
-                    return a.createElement("figure", {
-                        className: "tw-svg tw-svg__asset--inherit"
-                    }, a.createElement("svg", {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        width: "20",
-                        height: "20"
-                    }, a.createElement("path", {
-                        d: "M17 17.357c-.466.4-1.08.643-1.754.643-.672 0-1.507-.414-1.753-.636a1.29 1.29 0 0 0-.898-.333c-.295 0-.546.077-.753.231-.5.477-1.167.741-1.858.738a2.683 2.683 0 0 1-1.75-.64 1.317 1.317 0 0 0-.9-.33c-.296 0-.547.078-.754.232-.5.476-1.166.74-1.857.738A2.684 2.684 0 0 1 3 17.383V8.096C3.336 4.676 6.335 2 9.984 2 13.86 2 17 5.016 17 8.737l-.001.12.001 8.5zM7.5 11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
-                    })))
-                },
+                pe = n("CiVV"),
                 he = function(e) {
                     var t = e.event,
                         n = t.promoGiftTotal,
@@ -22185,7 +22744,7 @@
                         margin: {
                             right: .5
                         }
-                    }, pe()), a.createElement(x.W, {
+                    }, Object(pe.a)()), a.createElement(x.W, {
                         color: x.O.Alt2,
                         type: x.Vb.Span
                     }, l))
@@ -22211,7 +22770,7 @@
                         margin: {
                             right: .5
                         }
-                    }, pe()), a.createElement(x.W, {
+                    }, Object(pe.a)()), a.createElement(x.W, {
                         color: x.O.Alt2,
                         type: x.Vb.Span
                     }, function(e, t) {
@@ -22250,7 +22809,7 @@
                     margin: {
                         right: .5
                     }
-                }, pe()), a.createElement(x.W, {
+                }, Object(pe.a)()), a.createElement(x.W, {
                     color: x.O.Alt2,
                     type: x.Vb.Span
                 }, o))
@@ -22495,7 +23054,7 @@
                     }, t
                 }(a.Component);
 
-            function Me() {
+            function De() {
                 return {
                     raid_error_self: Object(s.d)("You cannot raid your own channel.", "RaidErrorSelfMessage"),
                     raid_error_forbidden: Object(s.d)("You cannot raid this channel.", "RaidErrorAlreadyRaidingMessage"),
@@ -22511,11 +23070,11 @@
                     }, "RaidNoticeOwnerMessage")
                 }
             }
-            var De = function(e) {
-                return a.createElement("span", null, Me()[e.message.msgid])
+            var we = function(e) {
+                return a.createElement("span", null, De()[e.message.msgid])
             };
-            De.displayName = "RaidNoticeLine";
-            var we = n("+GjP"),
+            we.displayName = "RaidNoticeLine";
+            var Me = n("+GjP"),
                 Ie = function(e) {
                     var t = a.createElement(me.a, {
                             contentID: e.event.user.id,
@@ -22526,7 +23085,7 @@
                     return n = e.event.methods.prime ? Object(s.d)("{userLogin} just subscribed with {service}!", {
                         userLogin: t,
                         service: function(e) {
-                            var t = Object(we.e)("https://twitch.amazon.com/prime", {
+                            var t = Object(Me.e)("https://twitch.amazon.com/prime", {
                                 ref: "subscriptionMessage",
                                 channel: e
                             });
@@ -22772,7 +23331,7 @@
                     }
                 }, function(e) {
                     return Object(o.bindActionCreators)({
-                        onExtensionNameClick: M.d
+                        onExtensionNameClick: D.d
                     }, e)
                 })(He),
                 Xe = "https://www.twitch.tv/settings/connections";
@@ -23052,10 +23611,10 @@
                                 }, Object(s.d)("Chat was cleared by a moderator", "ChatLine"));
                             case m.b.Notice:
                                 if (function(e) {
-                                        return e.msgid in Me()
+                                        return e.msgid in De()
                                     }(e)) return a.createElement(x.Xa, {
                                     className: "chat-line__status"
-                                }, a.createElement(De, {
+                                }, a.createElement(we, {
                                     message: e
                                 }));
                                 switch (e.msgid) {
@@ -23359,7 +23918,7 @@
                     return !e.channelID
                 },
                 topic: function(e) {
-                    return e.channelID ? Object(d.w)(e.channelID) : ""
+                    return e.channelID ? Object(d.x)(e.channelID) : ""
                 },
                 mapMessageTypesToProps: (qe = {}, qe[c.PubsubMessageType.StreamChatRoomChatRichEmbed] = "chatRichEmbedInfo", qe[c.PubsubMessageType.StreamChatRoomExtensionMessage] = "extensionMessage", qe)
             }]), h.a)(at);
@@ -23569,7 +24128,7 @@
                 }),
                 _ = n("VeT4"),
                 O = n("5zXJ"),
-                M = function(e) {
+                D = function(e) {
                     var t;
                     e.selfBitsBadge && (e.selfBitsBadge.current || e.selfBitsBadge.next) && (t = s.createElement(h.Xa, {
                         padding: {
@@ -23620,7 +24179,7 @@
                         "data-a-target": "get-bits-button"
                     }, Object(c.d)("Get Bits", "Bits--BalanceFooter"))))
                 },
-                D = function(e) {
+                w = function(e) {
                     return s.createElement(h.Xa, {
                         flexGrow: 1
                     }, s.createElement(h.Xa, {
@@ -23642,8 +24201,8 @@
                         animationDuration: O.v.UNDO_PROMPT_DURATION / 1e3
                     }))
                 },
-                w = function(e) {
-                    return e.event, s.createElement(M, {
+                M = function(e) {
+                    return e.event, s.createElement(D, {
                         bitsConfig: e.bitsConfig,
                         onClickGetBits: e.onClickGetBits,
                         balance: e.balance,
@@ -23655,16 +24214,16 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return this.props.isSending ? this.props.totalBits >= O.r ? s.createElement(D, {
+                        return this.props.isSending ? this.props.totalBits >= O.r ? s.createElement(w, {
                             onCancel: this.props.onCancelSend,
                             onConfirm: this.props.onConfirmSend
-                        }) : null : this.props.event ? s.createElement(w, {
+                        }) : null : this.props.event ? s.createElement(M, {
                             event: this.props.event,
                             selfBitsBadge: this.props.userSelfBitsBadge,
                             bitsConfig: this.props.bitsConfig,
                             onClickGetBits: this.props.handleClickBuy,
                             balance: this.props.bitsBalance
-                        }) : s.createElement(M, {
+                        }) : s.createElement(D, {
                             selfBitsBadge: this.props.userSelfBitsBadge,
                             bitsConfig: this.props.bitsConfig,
                             onClickGetBits: this.props.handleClickBuy,
@@ -23985,23 +24544,25 @@
                                 }, "Bits--PendingCheer");
                                 return s.createElement(h.W, {
                                     "data-test-selector": "largest-cheermote-selector",
-                                    color: h.O.Error,
                                     "data-a-target": "max-cheer-bits-error"
                                 }, t)
                             }
-                            if (e.purchaseMore && e.purchaseMore > 0) return s.createElement(h.W, {
+                            if (0 === e.bitsBalance) return s.createElement(h.W, {
+                                "data-test-selector": "zero-balance-selector",
+                                "data-a-target": "zero-bits-error"
+                            }, Object(c.d)("Please get Bits. You have 0 Bits and cannot send a Cheer", "Bits--PendingCheer"));
+                            if (e.bitsBalance && e.amount > e.bitsBalance) return s.createElement(h.W, {
                                 "data-test-selector": "purchase-more-selector",
                                 "data-a-target": "need-more-bits-error"
                             }, Object(c.d)("Please purchase {neededBits} more Bits to Cheer", {
-                                neededBits: e.purchaseMore
+                                neededBits: e.amount - e.bitsBalance
                             }, "Bits--PendingCheer"));
                             if (e.amount < e.minToCheer || e.bitsSendHasError && e.bitsSendErrorCode === P.P.AMOUNT_BELOW_MIN_BITS) {
-                                var n = Object(c.d)("Add {moreBitsAmount} Bits to reach this channel's minimum Cheer.", {
+                                var n = Object(c.d)("Add {moreBitsAmount} more Bits to reach this channel's minimum Cheer.", {
                                     moreBitsAmount: e.minToCheer - e.amount
                                 }, "Bits--PendingCheer");
                                 return s.createElement(h.W, {
                                     "data-test-selector": "minimum-cheer-selector",
-                                    color: h.O.Error,
                                     "data-a-target": "min-cheer-bits-error"
                                 }, n)
                             }
@@ -24011,7 +24572,6 @@
                                 }, "Bits--PendingCheer");
                                 return s.createElement(h.W, {
                                     "data-test-selector": "minimum-cheer-selector",
-                                    color: h.O.Error,
                                     "data-a-target": "max-message-bits-error"
                                 }, i)
                             }
@@ -24019,7 +24579,6 @@
                                 var a = Object(c.d)("message contains at least one display only Cheermote.", "Bits--PendingCheer");
                                 return s.createElement(h.W, {
                                     "data-test-selector": "display-only-cheermote-selector",
-                                    color: h.O.Error,
                                     "data-a-target": "display-only-bits-error"
                                 }, a)
                             }
@@ -24049,10 +24608,11 @@
                         padding: {
                             top: 1
                         }
-                    }, a), !r && o && s.createElement(h.Xa, {
+                    }, a), !r && o && s.createElement(h.Eb, {
                         padding: {
                             top: 1
-                        }
+                        },
+                        color: h.O.Error
                     }, o), r && s.createElement(h.Xa, {
                         padding: {
                             top: 3,
@@ -24381,7 +24941,7 @@
                         amount: e.totalBits,
                         bonusBits: e.bonusBits,
                         channelDisplayName: e.displayName,
-                        purchaseMore: e.bitsBalance && e.totalBits - e.bitsBalance,
+                        bitsBalance: e.bitsBalance,
                         largestCheermote: e.largestCheermote,
                         smallestCheermote: e.smallestCheermote,
                         minPerEmote: e.emoteMinimumBits,
@@ -24843,7 +25403,7 @@
                             }), t.mutateFirstCheerTutorialState({
                                 hasAbandoned: !1,
                                 hasSkipped: !1
-                            })
+                            }), t.props.trackBitsCardInteraction(pe.a.NewUserHelpRequested)
                         }, t.closeHelp = function() {
                             return t.setState({
                                 helpRequested: !1
@@ -24860,12 +25420,12 @@
                             t.closeHelp(), t.mutateFirstCheerTutorialState({
                                 hasAbandoned: !1,
                                 hasSkipped: !0
-                            })
+                            }), t.props.trackBitsCardInteraction(pe.a.NewUserSkipTutorial)
                         }, t.handleCloseIntro = function() {
-                            t.closeHelp(), t.mutateFirstCheerTutorialState({
-                                hasAbandoned: !0,
-                                hasSkipped: !1
-                            })
+                            t.closeHelp(), t.props.currentCheers.length ? t.mutateFirstCheerTutorialState({
+                                hasAbandoned: !1,
+                                hasSkipped: !0
+                            }) : t.props.onUserClose(), t.props.trackBitsCardInteraction(pe.a.NewUserCloseTutorial)
                         }, t.handleClickFirstTimePurchaseDiscount = function() {
                             t.setState({
                                 buyingBits: !0,
@@ -24873,7 +25433,7 @@
                             }), t.mutateFirstCheerTutorialState({
                                 hasAbandoned: !1,
                                 hasSkipped: !1
-                            })
+                            }), t.props.trackBitsCardInteraction(pe.a.NewUserFirstTimePurchaseDiscountClick)
                         }, t.handleBackFromBuy = function() {
                             t.setState({
                                 buyingBits: !1
@@ -24963,10 +25523,13 @@
                             if (Object(ye.d)(t, n) || Object(ye.b)(t) && this.state.helpRequested) return s.createElement(f, {
                                 onUserClose: this.handleCloseIntro,
                                 closeDataATarget: "bits-intro-close-button"
+                            }, s.createElement(h.Xa, {
+                                padding: 1
                             }, s.createElement(b.a, {
                                 onUserSkip: this.handleSkip,
-                                onUserClickFirstTimePurchaseDiscount: this.handleClickFirstTimePurchaseDiscount
-                            }))
+                                onUserClickFirstTimePurchaseDiscount: this.handleClickFirstTimePurchaseDiscount,
+                                trackBitsCardInteraction: this.props.trackBitsCardInteraction
+                            })))
                         }
                         return this.state.buyingBits ? s.createElement(f, {
                             onUserClose: this.handleCloseBuy,
@@ -25597,9 +26160,9 @@
                     }, e)
                 })(N),
                 O = Object(o.a)(_),
-                M = n("/7QA"),
-                D = n("eJ65"),
-                w = n("Ue10"),
+                D = n("/7QA"),
+                w = n("eJ65"),
+                M = n("Ue10"),
                 I = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -25610,16 +26173,16 @@
                     return i.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
                         this.props.onToggle && this.props.isChatRulesOpen && !e.isChatRulesOpen && this.toggleBalloonRef.toggleBalloon(!1)
                     }, t.prototype.render = function() {
-                        return a.createElement(D.a, {
+                        return a.createElement(w.a, {
                             onToggle: this.props.onToggle,
                             ref: this.setToggleBalloonRef
-                        }, a.createElement(w.A, {
-                            icon: w.tb.Gear,
-                            ariaLabel: Object(M.d)("Chat settings", "ChatInput"),
+                        }, a.createElement(M.A, {
+                            icon: M.tb.Gear,
+                            ariaLabel: Object(D.d)("Chat settings", "ChatInput"),
                             "data-a-target": "chat-settings",
                             disabled: !!this.props.disabled
-                        }), a.createElement(w.u, {
-                            direction: w.v.Top,
+                        }), a.createElement(M.u, {
+                            direction: M.v.Top,
                             noTail: !0,
                             offsetY: "11px",
                             "data-a-target": "chat-settings-balloon"
@@ -25791,11 +26354,11 @@
             }), n.d(t, "e", function() {
                 return O
             }), n.d(t, "d", function() {
-                return M
-            }), n.d(t, "b", function() {
                 return D
-            }), n.d(t, "f", function() {
+            }), n.d(t, "b", function() {
                 return w
+            }), n.d(t, "f", function() {
+                return M
             }), n.d(t, "c", function() {
                 return I
             }), n.d(t, "q", function() {
@@ -25916,21 +26479,21 @@
                 })
             }
 
-            function M(e) {
+            function D(e) {
                 p({
                     threadID: e,
                     action: r.Close
                 })
             }
 
-            function D(e) {
+            function w(e) {
                 p({
                     threadID: e,
                     action: r.Archive
                 })
             }
 
-            function w(e) {
+            function M(e) {
                 d.p.tracking.track(u.SpadeEventType.WhisperThreadCreate, {
                     conversation_id: e.threadID,
                     target_login: e.targetUserlogin,

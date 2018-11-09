@@ -67,25 +67,25 @@
                 return c
             }), n.d(t, "j", function() {
                 return u
-            }), n.d(t, "H", function() {
-                return l
             }), n.d(t, "I", function() {
+                return l
+            }), n.d(t, "J", function() {
                 return p
             }), n.d(t, "n", function() {
                 return E
-            }), n.d(t, "A", function() {
+            }), n.d(t, "B", function() {
                 return d
-            }), n.d(t, "G", function() {
+            }), n.d(t, "H", function() {
                 return m
-            }), n.d(t, "r", function() {
-                return _
             }), n.d(t, "s", function() {
+                return _
+            }), n.d(t, "t", function() {
                 return h
             }), n.d(t, "o", function() {
                 return g
-            }), n.d(t, "t", function() {
+            }), n.d(t, "u", function() {
                 return T
-            }), n.d(t, "v", function() {
+            }), n.d(t, "w", function() {
                 return f
             }), n.d(t, "l", function() {
                 return I
@@ -93,44 +93,46 @@
                 return D
             }), n.d(t, "c", function() {
                 return N
-            }), n.d(t, "B", function() {
+            }), n.d(t, "C", function() {
                 return O
             }), n.d(t, "b", function() {
                 return S
             }), n.d(t, "a", function() {
                 return R
-            }), n.d(t, "E", function() {
-                return A
             }), n.d(t, "F", function() {
+                return A
+            }), n.d(t, "G", function() {
                 return C
             }), n.d(t, "m", function() {
                 return b
-            }), n.d(t, "C", function() {
-                return v
             }), n.d(t, "D", function() {
+                return v
+            }), n.d(t, "E", function() {
                 return L
-            }), n.d(t, "J", function() {
+            }), n.d(t, "K", function() {
                 return U
-            }), n.d(t, "q", function() {
+            }), n.d(t, "r", function() {
                 return P
-            }), n.d(t, "w", function() {
+            }), n.d(t, "x", function() {
                 return F
             }), n.d(t, "f", function() {
                 return y
             }), n.d(t, "g", function() {
                 return M
-            }), n.d(t, "x", function() {
+            }), n.d(t, "y", function() {
                 return j
             }), n.d(t, "k", function() {
                 return k
-            }), n.d(t, "p", function() {
+            }), n.d(t, "q", function() {
                 return w
-            }), n.d(t, "u", function() {
+            }), n.d(t, "v", function() {
                 return G
-            }), n.d(t, "z", function() {
+            }), n.d(t, "p", function() {
                 return V
-            }), n.d(t, "y", function() {
+            }), n.d(t, "A", function() {
                 return B
+            }), n.d(t, "z", function() {
+                return H
             });
             var a = n("/7QA"),
                 r = n("0Log"),
@@ -273,6 +275,10 @@
             }
 
             function V(e) {
+                return r.PubsubTopic.MultiviewChanletUpdate + "." + e
+            }
+
+            function B(e) {
                 return a.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -285,7 +291,7 @@
                 })
             }
 
-            function B(e) {
+            function H(e) {
                 return a.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -2690,7 +2696,7 @@
                                                 })];
                                             case 2:
                                                 return (c = a.sent()).status > 300 && r(new Error(Object(j.e)(c.status))), this.unsubscribe = o.l.subscribe({
-                                                    topic: Object(y.A)(i),
+                                                    topic: Object(y.B)(i),
                                                     success: function() {
                                                         l.timeoutID = setTimeout(function() {
                                                             l.unsubscribe(), r(new Error(Object(j.d)()))
@@ -5461,6 +5467,7 @@
                     Friendship: "friendship",
                     ImageUpload: "user-image-update",
                     ModerationActionsByUserAndChannel: "chat_moderator_actions",
+                    MultiviewChanletUpdate: "multiview-chanlet-update",
                     MysteryGift: "channel-sub-gifts-v1",
                     OnsiteNotifications: "onsite-notifications",
                     PayoutOnboardingEvents: "payout-onboarding-events",
@@ -5506,6 +5513,7 @@
                     ImageUploadSuccess: "imageuploadsuccess",
                     LiveEvent: "live-event",
                     ModerationAction: "moderation_action",
+                    MultiviewChanletUpdate: "chanlet",
                     MysteryGiftPurchase: "mystery-gift-purchase",
                     OnsiteNotificationCreate: "create-notification",
                     OnsiteNotificationDelete: "delete-notification",

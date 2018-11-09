@@ -150,29 +150,48 @@
         "9fsF": function(e, t, n) {},
         BK8n: function(e, t, n) {
             "use strict";
-            var r = n("q1tI"),
-                o = n("Ue10"),
-                a = function(e) {
-                    var t = null;
-                    return e.title && (t = r.createElement(o.Xa, {
-                        padding: {
-                            bottom: 1
+            var r = n("mrSG"),
+                o = n("TSYQ"),
+                a = n("q1tI"),
+                i = n("i8i4"),
+                c = n("/7QA"),
+                s = n("Ue10"),
+                l = (n("uOxp"), function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                        if (this.props.focus || this.props.id && c.p.history.location.hash === "#" + this.props.id) {
+                            var e = i.findDOMNode(this);
+                            e && e.scrollIntoView()
                         }
-                    }, r.createElement(o.W, {
-                        fontSize: o.Ca.Size6,
-                        color: e.error ? o.O.Error : o.O.Base,
-                        bold: !0
-                    }, e.title))), r.createElement(o.Eb, {
-                        padding: 2,
-                        className: "settings-row",
-                        fullWidth: !0
-                    }, t, e.children, e.errorMessage && r.createElement(o.W, {
-                        color: o.O.Error,
-                        fontSize: o.Ca.Size7
-                    }, e.errorMessage))
-                };
+                    }, t.prototype.render = function() {
+                        var e = null;
+                        this.props.title && (e = a.createElement(s.Xa, {
+                            padding: {
+                                bottom: 1
+                            }
+                        }, a.createElement(s.W, {
+                            fontSize: s.Ca.Size6,
+                            color: this.props.error ? s.O.Error : s.O.Base,
+                            bold: !0
+                        }, this.props.title)));
+                        var t = {
+                            "settings-row": !0,
+                            "settings-row--focused": this.props.focus || !!this.props.id && c.p.history.location.hash === "#" + this.props.id
+                        };
+                        return a.createElement(s.Eb, {
+                            padding: 2,
+                            className: o(t),
+                            fullWidth: !0
+                        }, e, this.props.children, this.props.errorMessage && a.createElement(s.W, {
+                            color: s.O.Error,
+                            fontSize: s.Ca.Size7
+                        }, this.props.errorMessage))
+                    }, t
+                }(a.Component));
             n.d(t, "a", function() {
-                return a
+                return l
             })
         },
         EpBn: function(e, t, n) {
@@ -182,7 +201,9 @@
                 a = n("BK8n"),
                 i = n("Ue10"),
                 c = (n("9fsF"), function(e) {
-                    return r.createElement(a.a, null, r.createElement(i.Ea, {
+                    return r.createElement(a.a, {
+                        focus: !!e.id && o.p.history.location.hash === "#" + e.id
+                    }, r.createElement(i.Ea, {
                         error: e.error,
                         errorMessage: e.errorMessage || Object(o.d)("Sorry, something went wrong. Please try again later.", "SettingsFormGroup"),
                         hint: e.hint,
@@ -522,6 +543,7 @@
                 if (!a(e)) return Object(r.d)("Please enter a valid email.", "EmailValidator")
             }
         },
+        uOxp: function(e, t, n) {},
         wUQP: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -575,8 +597,8 @@
                 f = n("V+GM"),
                 b = n("1/iK"),
                 g = n("NvVO"),
-                E = n("2xye"),
-                y = n("GnwI"),
+                y = n("2xye"),
+                E = n("GnwI"),
                 v = n("5X7D"),
                 S = n("y5D0"),
                 k = n("yR8l"),
@@ -746,16 +768,16 @@
                         configurable: !0
                     }), t
                 }(a.Component),
-                P = Object(h.compose)(Object(y.b)("DeleteAccountPage", {
+                I = Object(h.compose)(Object(E.b)("DeleteAccountPage", {
                     destination: g.a.DeleteAccount
                 }), Object(f.a)({
-                    location: E.PageviewLocation.DeleteAccount
+                    location: y.PageviewLocation.DeleteAccount
                 }))(U);
-            var I = Object(p.connect)(function(e) {
+            var P = Object(p.connect)(function(e) {
                     return {
                         isLoggedIn: Object(d.f)(e)
                     }
-                })(P),
+                })(I),
                 z = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -782,10 +804,10 @@
                         configurable: !0
                     }), t
                 }(a.Component),
-                X = Object(h.compose)(Object(y.b)("DisableAccountPage", {
+                X = Object(h.compose)(Object(E.b)("DisableAccountPage", {
                     destination: g.a.DisableAccount
                 }), Object(f.a)({
-                    location: E.PageviewLocation.DisableAccount
+                    location: y.PageviewLocation.DisableAccount
                 }))(z);
             var W, N = Object(p.connect)(function(e) {
                     return {
@@ -811,7 +833,7 @@
                             component: N
                         }), a.createElement(i.a, {
                             path: "/user/delete-account",
-                            component: I
+                            component: P
                         }), a.createElement(s.a, {
                             from: "/user/disable_account",
                             exact: !0,
@@ -1167,11 +1189,11 @@
                         })), a.createElement(H, null)) : null
                     }, t
                 }(a.Component)),
-                J = Object(h.compose)(Object(y.b)("AccountRecoveryPage", {
+                J = Object(h.compose)(Object(E.b)("AccountRecoveryPage", {
                     destination: g.a.RecoverAccount,
                     autoReportInteractive: !0
                 }), Object(f.a)({
-                    location: E.PageviewLocation.RecoverAccount
+                    location: y.PageviewLocation.RecoverAccount
                 }))(Z),
                 $ = function() {
                     return a.createElement(a.Fragment, null, a.createElement(_.W, {
@@ -1251,11 +1273,11 @@
                         })), a.createElement(ee, null)) : a.createElement(u.a, null)
                     }, t
                 }(a.Component)),
-                ne = Object(h.compose)(Object(y.b)("NotMePage", {
+                ne = Object(h.compose)(Object(E.b)("NotMePage", {
                     destination: g.a.NotMe,
                     autoReportInteractive: !0
                 }), Object(f.a)({
-                    location: E.PageviewLocation.NotMe
+                    location: y.PageviewLocation.NotMe
                 }))(te);
             n.d(t, "UserRoot", function() {
                 return M

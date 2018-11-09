@@ -1,7 +1,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
     [163], {
         "7MYR": function(e, t, n) {
-            var a = {
+            var i = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -104,7 +104,7 @@
                     end: 331
                 }
             };
-            a.loc.source = {
+            i.loc.source = {
                 body: '#import "twilight/pages/dashboard/components/multiview-page/models/content-attribute-fragment.gql"\nmutation CreateContentAttributes($input: CreateMultiviewContentAttributesInput!){\ncreateMultiviewContentAttributes(input: $input) {\nsucceededCreates {\n...multiviewContentAttribute\n}\nfailedCreates {\n...multiviewContentAttribute\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
@@ -112,17 +112,138 @@
                     column: 1
                 }
             };
-            var i = {};
-            a.definitions = a.definitions.concat(function(e) {
+            var a = {};
+            i.definitions = i.definitions.concat(function(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
-                    return !i[t] && (i[t] = !0, !0)
+                    return !a[t] && (a[t] = !0, !0)
                 })
-            }(n("sRk+").definitions)), e.exports = a
+            }(n("sRk+").definitions)), e.exports = i
         },
-        BwG8: function(e, t) {
-            var n = {
+        "9vM1": function(e, t, n) {
+            var i = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "mutation",
+                    name: {
+                        kind: "Name",
+                        value: "UpdateContentAttributes"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "UpdateMultiviewContentAttributesInput"
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "updateMultiviewContentAttributes"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "input"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "succeededUpdates"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "FragmentSpread",
+                                            name: {
+                                                kind: "Name",
+                                                value: "multiviewContentAttribute"
+                                            },
+                                            directives: []
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "failedUpdates"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "FragmentSpread",
+                                            name: {
+                                                kind: "Name",
+                                                value: "multiviewContentAttribute"
+                                            },
+                                            directives: []
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 331
+                }
+            };
+            i.loc.source = {
+                body: '#import "twilight/pages/dashboard/components/multiview-page/models/content-attribute-fragment.gql"\nmutation UpdateContentAttributes($input: UpdateMultiviewContentAttributesInput!){\nupdateMultiviewContentAttributes(input: $input) {\nsucceededUpdates {\n...multiviewContentAttribute\n}\nfailedUpdates {\n...multiviewContentAttribute\n}\n}\n}',
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            var a = {};
+            i.definitions = i.definitions.concat(function(e) {
+                return e.filter(function(e) {
+                    if ("FragmentDefinition" !== e.kind) return !0;
+                    var t = e.name.value;
+                    return !a[t] && (a[t] = !0, !0)
+                })
+            }(n("sRk+").definitions)), e.exports = i
+        },
+        BwG8: function(e, t, n) {
+            var i = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -196,20 +317,11 @@
                                     selectionSet: {
                                         kind: "SelectionSet",
                                         selections: [{
-                                            kind: "Field",
+                                            kind: "FragmentSpread",
                                             name: {
                                                 kind: "Name",
-                                                value: "id"
+                                                value: "dashboardChanlet"
                                             },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "name"
-                                            },
-                                            arguments: [],
                                             directives: []
                                         }]
                                     }
@@ -220,21 +332,149 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 136
+                    end: 218
                 }
             };
-            n.loc.source = {
-                body: "mutation CreateChanlet($input: CreateChanletInput!){\ncreateChanlet(input: $input) {\nchannelID\nchanlet {\nid\nname\n# chanletStreamKey\n}\n}\n}",
+            i.loc.source = {
+                body: '#import "twilight/pages/dashboard/components/multiview-page/models/chanlet-fragment.gql"\nmutation CreateChanlet($input: CreateChanletInput!){\ncreateChanlet(input: $input) {\nchannelID\nchanlet {\n...dashboardChanlet\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
                     column: 1
                 }
             };
-            e.exports = n
+            var a = {};
+            i.definitions = i.definitions.concat(function(e) {
+                return e.filter(function(e) {
+                    if ("FragmentDefinition" !== e.kind) return !0;
+                    var t = e.name.value;
+                    return !a[t] && (a[t] = !0, !0)
+                })
+            }(n("TFsW").definitions)), e.exports = i
+        },
+        KXXx: function(e, t, n) {
+            var i = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "mutation",
+                    name: {
+                        kind: "Name",
+                        value: "DeleteContentAttributes"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "DeleteMultiviewContentAttributesInput"
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "deleteMultiviewContentAttributes"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "input"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "succeededDeletes"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "FragmentSpread",
+                                            name: {
+                                                kind: "Name",
+                                                value: "multiviewContentAttribute"
+                                            },
+                                            directives: []
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "failedDeletes"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "FragmentSpread",
+                                            name: {
+                                                kind: "Name",
+                                                value: "multiviewContentAttribute"
+                                            },
+                                            directives: []
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 331
+                }
+            };
+            i.loc.source = {
+                body: '#import "twilight/pages/dashboard/components/multiview-page/models/content-attribute-fragment.gql"\nmutation DeleteContentAttributes($input: DeleteMultiviewContentAttributesInput!){\ndeleteMultiviewContentAttributes(input: $input) {\nsucceededDeletes {\n...multiviewContentAttribute\n}\nfailedDeletes {\n...multiviewContentAttribute\n}\n}\n}',
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            var a = {};
+            i.definitions = i.definitions.concat(function(e) {
+                return e.filter(function(e) {
+                    if ("FragmentDefinition" !== e.kind) return !0;
+                    var t = e.name.value;
+                    return !a[t] && (a[t] = !0, !0)
+                })
+            }(n("sRk+").definitions)), e.exports = i
         },
         TFsW: function(e, t, n) {
-            var a = {
+            var i = {
                 kind: "Document",
                 definitions: [{
                     kind: "FragmentDefinition",
@@ -343,7 +583,7 @@
                     end: 266
                 }
             };
-            a.loc.source = {
+            i.loc.source = {
                 body: '#import "twilight/pages/dashboard/components/multiview-page/models/content-attribute-fragment.gql"\nfragment dashboardChanlet on Channel {\nid\nname\nchanletStreamKey\nstream {\npreviewImageURL(height: 270 width: 480)\n}\ncontentAttributes {\n...multiviewContentAttribute\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
@@ -351,17 +591,17 @@
                     column: 1
                 }
             };
-            var i = {};
-            a.definitions = a.definitions.concat(function(e) {
+            var a = {};
+            i.definitions = i.definitions.concat(function(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
-                    return !i[t] && (i[t] = !0, !0)
+                    return !a[t] && (a[t] = !0, !0)
                 })
-            }(n("sRk+").definitions)), e.exports = a
+            }(n("sRk+").definitions)), e.exports = i
         },
         V2z7: function(e, t, n) {
-            var a = {
+            var i = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -484,7 +724,7 @@
                     end: 372
                 }
             };
-            a.loc.source = {
+            i.loc.source = {
                 body: '#import "twilight/pages/dashboard/components/multiview-page/models/content-attribute-fragment.gql"\n#import "twilight/pages/dashboard/components/multiview-page/models/chanlet-fragment.gql"\nquery ChanletsTab($channelLogin: String!) {\nuser(login: $channelLogin) {\nid\nchannel {\nchanlets {\n...dashboardChanlet\n}\navailableContentAttributes {\n...multiviewContentAttribute\n}\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
@@ -492,19 +732,19 @@
                     column: 1
                 }
             };
-            var i = {};
+            var a = {};
 
             function r(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
-                    return !i[t] && (i[t] = !0, !0)
+                    return !a[t] && (a[t] = !0, !0)
                 })
             }
-            a.definitions = a.definitions.concat(r(n("sRk+").definitions)), a.definitions = a.definitions.concat(r(n("TFsW").definitions)), e.exports = a
+            i.definitions = i.definitions.concat(r(n("sRk+").definitions)), i.definitions = i.definitions.concat(r(n("TFsW").definitions)), e.exports = i
         },
         "aw+h": function(e, t, n) {
-            var a = {
+            var i = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -588,7 +828,7 @@
                     end: 242
                 }
             };
-            a.loc.source = {
+            i.loc.source = {
                 body: '#import "twilight/pages/dashboard/components/multiview-page/models/chanlet-fragment.gql"\nmutation UpdateChanlet($input: UpdateChanletContentAttributesInput!){\nupdateChanletContentAttributes(input: $input) {\nchanlet {\n...dashboardChanlet\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
@@ -596,36 +836,19 @@
                     column: 1
                 }
             };
-            var i = {};
-            a.definitions = a.definitions.concat(function(e) {
+            var a = {};
+            i.definitions = i.definitions.concat(function(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
-                    return !i[t] && (i[t] = !0, !0)
+                    return !a[t] && (a[t] = !0, !0)
                 })
-            }(n("TFsW").definitions)), e.exports = a
-        },
-        il7S: function(e, t, n) {
-            "use strict";
-            n.d(t, "c", function() {
-                return r
-            }), n.d(t, "a", function() {
-                return a
-            }), n.d(t, "b", function() {
-                return i
-            });
-            var a, i, r = "cc_v2_flag";
-            ! function(e) {
-                e.Group = "group", e.Team = "team", e.Player = "player", e.Role = "role"
-            }(a || (a = {})),
-            function(e) {
-                e.Group = "Group", e.Team = "team", e.Player = "Player", e.Role = "Role"
-            }(i || (i = {}))
+            }(n("TFsW").definitions)), e.exports = i
         },
         mcoV: function(e, t, n) {
             "use strict";
             n.r(t);
-            var a, i = n("/MKj"),
+            var i, a = n("/MKj"),
                 r = n("kRBY"),
                 l = n("mrSG"),
                 s = n("q1tI"),
@@ -636,31 +859,33 @@
                 m = n("ZS2+"),
                 p = n("LA8z"),
                 v = n("8/mp"),
-                h = n("yR8l"),
-                b = n("geRD"),
-                k = n("GnwI"),
+                b = n("yR8l"),
+                k = n("geRD"),
+                h = n("GnwI"),
                 f = n("bRMw"),
                 g = n("Ue10"),
                 C = n("BwG8"),
-                w = n("7MYR"),
+                A = n("7MYR"),
+                w = n("KXXx"),
                 N = n("V2z7"),
                 S = n("aw+h"),
-                A = m.a.wrap(function() {
+                y = n("9vM1"),
+                D = m.a.wrap(function() {
                     return n.e(155).then(n.bind(null, "Jtig"))
                 }, "ChanletsTab"),
-                y = m.a.wrap(function() {
+                T = m.a.wrap(function() {
                     return n.e(154).then(n.bind(null, "iw5t"))
                 }, "PlayersTab"),
-                T = m.a.wrap(function() {
+                F = m.a.wrap(function() {
                     return n.e(153).then(n.bind(null, "tgcK"))
                 }, "RolesTab"),
-                F = m.a.wrap(function() {
+                O = m.a.wrap(function() {
                     return n.e(152).then(n.bind(null, "vD5X"))
                 }, "TeamsTab");
             ! function(e) {
                 e.Tabs = "multiview-page__tabs", e.WrongUser = "multiview-page__wrong-user", e.ChanletsTab = "multiview-page__chanlets-tab", e.TeamsTab = "multiview-page__teams-tab", e.PlayersTab = "multiview-page__players-tab", e.RolesTab = "multiview-page__roles-tab"
-            }(a || (a = {}));
-            var D = function(e) {
+            }(i || (i = {}));
+            var M = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderChanletsTab = function() {
@@ -668,14 +893,15 @@
                                 fillContent: !0
                             });
                             var e = t.props.data.user.channel;
-                            return s.createElement(A, {
-                                "data-test-selector": a.ChanletsTab,
+                            return s.createElement(D, {
+                                "data-test-selector": i.ChanletsTab,
                                 channelID: t.props.data.user.id,
                                 chanlets: e.chanlets || [],
                                 availableContentAttributes: e.availableContentAttributes || [],
                                 createChanlet: t.createChanlet,
                                 updateChanlet: t.updateChanlet,
                                 createContentAttributes: t.createContentAttributes,
+                                deleteContentAttributes: t.deleteContentAttributes,
                                 updateContentAttributes: t.updateContentAttributes
                             })
                         }, t.renderTeamsTab = function() {
@@ -683,36 +909,39 @@
                                 fillContent: !0
                             });
                             var e = t.props.data.user.channel;
-                            return s.createElement(F, {
-                                "data-test-selector": a.TeamsTab,
+                            return s.createElement(O, {
+                                "data-test-selector": i.TeamsTab,
                                 channelID: t.props.data.user.id,
                                 availableContentAttributes: e.availableContentAttributes || [],
                                 createContentAttributes: t.createContentAttributes,
-                                updateContentAttributes: t.updateContentAttributes
+                                updateContentAttributes: t.updateContentAttributes,
+                                deleteContentAttributes: t.deleteContentAttributes
                             })
                         }, t.renderPlayersTab = function() {
                             if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(g.Za, {
                                 fillContent: !0
                             });
                             var e = t.props.data.user.channel;
-                            return s.createElement(y, {
-                                "data-test-selector": a.PlayersTab,
+                            return s.createElement(T, {
+                                "data-test-selector": i.PlayersTab,
                                 channelID: t.props.data.user.id,
                                 availableContentAttributes: e.availableContentAttributes || [],
                                 createContentAttributes: t.createContentAttributes,
-                                updateContentAttributes: t.updateContentAttributes
+                                updateContentAttributes: t.updateContentAttributes,
+                                deleteContentAttributes: t.deleteContentAttributes
                             })
                         }, t.renderRolesTab = function() {
                             if (!t.props.data || !t.props.data.user || !t.props.data.user.channel) return s.createElement(g.Za, {
                                 fillContent: !0
                             });
                             var e = t.props.data.user.channel;
-                            return s.createElement(T, {
-                                "data-test-selector": a.RolesTab,
+                            return s.createElement(F, {
+                                "data-test-selector": i.RolesTab,
                                 channelID: t.props.data.user.id,
                                 availableContentAttributes: e.availableContentAttributes || [],
                                 createContentAttributes: t.createContentAttributes,
-                                updateContentAttributes: t.updateContentAttributes
+                                updateContentAttributes: t.updateContentAttributes,
+                                deleteContentAttributes: t.deleteContentAttributes
                             })
                         }, t.createChanlet = function() {
                             return l.__awaiter(t, void 0, void 0, function() {
@@ -720,24 +949,17 @@
                                 return l.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return (e = this.props.data.user && this.props.data.user.id) ? [4, this.props.createChanlet(Object(b.a)({
+                                            return (e = this.props.data.user && this.props.data.user.id) ? [4, this.props.createChanlet(Object(k.a)({
                                                 channelID: e
                                             }))] : [2];
                                         case 1:
-                                            return t = n.sent(), Object(b.e)(N, {
+                                            return t = n.sent(), Object(k.e)(N, {
                                                 channelLogin: this.props.match.params.channelLogin
                                             }, function(e) {
                                                 var n = e.user && e.user.channel;
                                                 if (n && n.chanlets) {
-                                                    var a = t.data && t.data.createChanlet && t.data.createChanlet.chanlet;
-                                                    if (a) {
-                                                        var i = l.__assign({}, a, {
-                                                            stream: null,
-                                                            chanletStreamKey: null,
-                                                            contentAttributes: []
-                                                        });
-                                                        n.chanlets.push(i)
-                                                    }
+                                                    var i = t.data && t.data.createChanlet && t.data.createChanlet.chanlet;
+                                                    i && n.chanlets.push(l.__assign({}, i))
                                                 }
                                                 return e
                                             }), [2]
@@ -747,25 +969,25 @@
                         }, t.updateChanlet = function(e, n) {
                             return l.__awaiter(t, void 0, void 0, function() {
                                 var t;
-                                return l.__generator(this, function(a) {
-                                    switch (a.label) {
+                                return l.__generator(this, function(i) {
+                                    switch (i.label) {
                                         case 0:
-                                            return this.props.data.user && this.props.data.user.id ? [4, this.props.updateChanlet(Object(b.a)({
+                                            return this.props.data.user && this.props.data.user.id ? [4, this.props.updateChanlet(Object(k.a)({
                                                 chanletID: e,
                                                 contentAttributeIDs: n
                                             }))] : [2];
                                         case 1:
-                                            return t = a.sent(), Object(b.e)(N, {
+                                            return t = i.sent(), Object(k.e)(N, {
                                                 channelLogin: this.props.match.params.channelLogin
                                             }, function(e) {
                                                 var n = e.user && e.user.channel;
                                                 if (n && n.chanlets) {
-                                                    var a = t.data && t.data.updateChanletContentAttributes && t.data.updateChanletContentAttributes.chanlet;
-                                                    if (a) {
-                                                        var i = l.__assign({}, a);
+                                                    var i = t.data && t.data.updateChanletContentAttributes && t.data.updateChanletContentAttributes.chanlet;
+                                                    if (i) {
+                                                        var a = l.__assign({}, i);
                                                         for (var r in n.chanlets)
-                                                            if (n.chanlets[r].id === i.id) {
-                                                                n.chanlets[r] = i;
+                                                            if (n.chanlets[r].id === a.id) {
+                                                                n.chanlets[r] = a;
                                                                 break
                                                             }
                                                     }
@@ -781,17 +1003,17 @@
                                 return l.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return [4, this.props.createContentAttributes(Object(b.a)({
+                                            return [4, this.props.createContentAttributes(Object(k.a)({
                                                 params: e
                                             }))];
                                         case 1:
-                                            return t = n.sent(), Object(b.e)(N, {
+                                            return t = n.sent(), Object(k.e)(N, {
                                                 channelLogin: this.props.match.params.channelLogin
                                             }, function(e) {
                                                 var n = e.user && e.user.channel;
                                                 if (n && n.availableContentAttributes) {
-                                                    var a = t.data && t.data.createMultiviewContentAttributes && t.data.createMultiviewContentAttributes.succeededCreates;
-                                                    a && (n.availableContentAttributes = n.availableContentAttributes.concat(a))
+                                                    var i = t.data && t.data.createMultiviewContentAttributes && t.data.createMultiviewContentAttributes.succeededCreates;
+                                                    i && (n.availableContentAttributes = n.availableContentAttributes.concat(i))
                                                 }
                                                 return e
                                             }), [2]
@@ -800,8 +1022,61 @@
                             })
                         }, t.updateContentAttributes = function(e) {
                             return l.__awaiter(t, void 0, void 0, function() {
-                                return l.__generator(this, function(e) {
-                                    return [2]
+                                var t;
+                                return l.__generator(this, function(n) {
+                                    switch (n.label) {
+                                        case 0:
+                                            return [4, this.props.updateContentAttributes(Object(k.a)({
+                                                params: e
+                                            }))];
+                                        case 1:
+                                            return t = n.sent(), Object(k.e)(N, {
+                                                channelLogin: this.props.match.params.channelLogin
+                                            }, function(e) {
+                                                var n = e.user && e.user.channel;
+                                                if (n && n.availableContentAttributes) {
+                                                    var i = t.data && t.data.updateMultiviewContentAttributes && t.data.updateMultiviewContentAttributes.succeededUpdates;
+                                                    if (i)
+                                                        for (var a = function(e) {
+                                                                var t = n.availableContentAttributes.findIndex(function(t) {
+                                                                    return t.id === e.id
+                                                                });
+                                                                t > -1 && (n.availableContentAttributes[t] = e)
+                                                            }, r = 0, l = i; r < l.length; r++) {
+                                                            a(l[r])
+                                                        }
+                                                }
+                                                return e
+                                            }), [2]
+                                    }
+                                })
+                            })
+                        }, t.deleteContentAttributes = function(e) {
+                            return l.__awaiter(t, void 0, void 0, function() {
+                                var t;
+                                return l.__generator(this, function(n) {
+                                    switch (n.label) {
+                                        case 0:
+                                            return [4, this.props.deleteContentAttributes(Object(k.a)({
+                                                IDs: e
+                                            }))];
+                                        case 1:
+                                            return t = n.sent(), Object(k.e)(N, {
+                                                channelLogin: this.props.match.params.channelLogin
+                                            }, function(e) {
+                                                var n = e.user && e.user.channel;
+                                                if (n && n.availableContentAttributes) {
+                                                    var i = t.data && t.data.deleteMultiviewContentAttributes && t.data.deleteMultiviewContentAttributes.succeededDeletes;
+                                                    if (i)
+                                                        for (var a = 0, r = i; a < r.length; a++) {
+                                                            var l = r[a],
+                                                                s = n.availableContentAttributes.indexOf(l);
+                                                            s > -1 && (n.availableContentAttributes = n.availableContentAttributes.splice(s, 1))
+                                                        }
+                                                }
+                                                return e
+                                            }), [2]
+                                    }
                                 })
                             })
                         }, t
@@ -822,7 +1097,7 @@
                             var e = this.props.user.login;
                             return s.createElement(g.Xa, {
                                 padding: 2,
-                                "data-test-selector": a.WrongUser
+                                "data-test-selector": i.WrongUser
                             }, s.createElement(g.W, {
                                 italic: !0
                             }, Object(c.e)("You can not edit the Multiview settings for this channel. <x:link>Click here</x:link> to get to your channel’s Multiview dashboard", {
@@ -845,11 +1120,11 @@
                             }, {
                                 linkTo: "/roles",
                                 label: Object(c.e)("Roles", "MultiviewPage")
-                            }], n = 0, i = 0; i < t.length; i++) this.props.location.pathname.match(t[i].linkTo) && (n = i), t[i].linkTo = "/" + this.props.match.params.channelLogin + "/dashboard/multiview" + t[i].linkTo;
+                            }], n = 0, a = 0; a < t.length; a++) this.props.location.pathname.match(t[a].linkTo) && (n = a), t[a].linkTo = "/" + this.props.match.params.channelLogin + "/dashboard/multiview" + t[a].linkTo;
                         return s.createElement(v.b, null, s.createElement(g.Xa, {
                             padding: 2
                         }, s.createElement(g.Nb, {
-                            "data-test-selector": a.Tabs,
+                            "data-test-selector": i.Tabs,
                             activeTabIndex: n,
                             justifyContent: g.Wa.Start,
                             tabs: t
@@ -872,7 +1147,7 @@
                         })))))
                     }, t
                 }(s.Component),
-                _ = Object(d.compose)(Object(k.b)("Multiview"), Object(h.a)(N, {
+                _ = Object(d.compose)(Object(h.b)("Multiview"), Object(b.a)(N, {
                     options: function(e) {
                         return {
                             variables: {
@@ -880,22 +1155,23 @@
                             }
                         }
                     }
-                }), Object(h.a)(C, {
+                }), Object(b.a)(C, {
                     name: "createChanlet"
-                }), Object(h.a)(S, {
+                }), Object(b.a)(S, {
                     name: "updateChanlet"
-                }), Object(h.a)(w, {
+                }), Object(b.a)(A, {
                     name: "createContentAttributes"
-                }))(D),
-                O = n("il7S");
-            var L = Object(i.connect)(function(e) {
+                }), Object(b.a)(y, {
+                    name: "updateContentAttributes"
+                }), Object(b.a)(w, {
+                    name: "deleteContentAttributes"
+                }))(M);
+            var L = Object(a.connect)(function(e) {
                 return {
                     user: Object(r.e)(e)
                 }
             })(_);
-            n.d(t, "FEATURE_FLAG", function() {
-                return O.c
-            }), n.d(t, "MultiviewPage", function() {
+            n.d(t, "MultiviewPage", function() {
                 return L
             })
         },
@@ -974,16 +1250,24 @@
                             },
                             arguments: [],
                             directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "imageURL"
+                            },
+                            arguments: [],
+                            directives: []
                         }]
                     }
                 }],
                 loc: {
                     start: 0,
-                    end: 119
+                    end: 128
                 }
             };
             n.loc.source = {
-                body: "fragment multiviewContentAttribute on MultiviewContentAttribute {\nid\nkey\nname\nparentID\nparentKey\nvalue\nvalueShortName\n}",
+                body: "fragment multiviewContentAttribute on MultiviewContentAttribute {\nid\nkey\nname\nparentID\nparentKey\nvalue\nvalueShortName\nimageURL\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,

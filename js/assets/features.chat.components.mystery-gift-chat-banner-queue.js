@@ -255,7 +255,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
-                        var e = this.props.pubsub.status[Object(u.p)(this.props.channelID)];
+                        var e = this.props.pubsub.status[Object(u.q)(this.props.channelID)];
                         !e || e.isSubscribing || e.error || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         var t = e.pubsub.messages.purchase || null;
@@ -281,7 +281,7 @@
                 N = Object(o.compose)(Object(a.a)([{
                     mapMessageTypesToProps: (h = {}, h[s.PubsubMessageType.MysteryGiftPurchase] = "purchase", h),
                     topic: function(e) {
-                        return Object(u.p)(e.channelID)
+                        return Object(u.q)(e.channelID)
                     }
                 }]), Object(g.b)("MysteryGiftChatBannerQueue"))(E);
             n.d(t, "MysteryGiftChatBannersQueueContainer", function() {

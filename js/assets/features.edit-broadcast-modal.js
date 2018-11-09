@@ -3059,7 +3059,9 @@
                             }
                         }
                     },
-                    skip: !0
+                    skip: function(e) {
+                        return !e.gameName
+                    }
                 })(p);
             a.d(t, !1, function() {
                 return n

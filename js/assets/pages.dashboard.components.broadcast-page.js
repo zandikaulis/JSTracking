@@ -544,7 +544,7 @@
                 }(i.Component),
                 y = Object(s.a)([{
                     topic: function(e) {
-                        return Object(d.G)(e.channelID)
+                        return Object(d.H)(e.channelID)
                     },
                     mapMessageTypesToProps: (r = {}, r[c.PubsubMessageType.ChannelStreamUp] = "streamUp", r[c.PubsubMessageType.ChannelStreamDown] = "streamDown", r)
                 }])(C);

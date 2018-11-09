@@ -120,8 +120,7 @@
                 l = function(e) {
                     var t = e.tags;
                     return void 0 !== e.tagNumberLimit && e.tagNumberLimit > 0 && (t = t.slice(0, e.tagNumberLimit)), i.createElement(s.Xa, {
-                        display: s.X.InlineBlock,
-                        fullWidth: !0
+                        display: s.X.InlineBlock
                     }, t.map(function(t) {
                         var n = r.__assign({}, e.linkTo);
                         e.linkPath && (n.pathname = e.linkPath), n.pathname && (n.pathname = n.pathname.replace(":tagID", t.id));
@@ -2753,11 +2752,10 @@
                 I = n("/MKj"),
                 N = n("OhOW"),
                 A = n("oB8h"),
-                R = n("rShu"),
-                O = n("hX9f"),
-                f = n("Ue10"),
-                h = n("bk9Q"),
-                g = (n("ER97"), function(e) {
+                R = n("hX9f"),
+                O = n("Ue10"),
+                f = n("bk9Q"),
+                h = (n("ER97"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2768,7 +2766,7 @@
                     }, t.prototype.render = function() {
                         var e = this.props.data;
                         if (e.error) return null;
-                        if (e.loading) return i.createElement(f.Xa, null, i.createElement(f.Za, {
+                        if (e.loading) return i.createElement(O.Xa, null, i.createElement(O.Za, {
                             fillContent: !0
                         }));
                         var t = e.game,
@@ -2776,16 +2774,16 @@
                                 var t = e.node;
                                 return t && t.id && t.broadcaster && t.broadcaster.login && t.broadcaster.id
                             }).map(function(e, t) {
-                                var n = D(e);
-                                if (n) return i.createElement(O.b, {
+                                var n = g(e);
+                                if (n) return i.createElement(R.b, {
                                     directoryName: "fortnite",
-                                    directoryType: R.a.Games,
+                                    shouldShowGame: !1,
                                     streamIndex: t,
                                     streamNode: n,
                                     key: n.id
                                 })
                             });
-                        return i.createElement(f.Xa, {
+                        return i.createElement(O.Xa, {
                             className: "twitch-prime-streamers__tower",
                             flexShrink: 0,
                             "data-target": "twitch-prime-streamers",
@@ -2796,40 +2794,40 @@
                             margin: {
                                 x: "auto"
                             }
-                        }, i.createElement(f.Xa, {
+                        }, i.createElement(O.Xa, {
                             margin: {
                                 y: 1
                             },
                             className: "twitch-prime-streamers__count"
-                        }, i.createElement(f.W, {
-                            type: f.Vb.H3,
-                            color: f.O.Link,
+                        }, i.createElement(O.W, {
+                            type: O.Vb.H3,
+                            color: O.O.Link,
                             bold: !0
-                        }, Object(c.d)("Check out Fortnite on Twitch.tv", "TwitchPrimeStreamers")), i.createElement(f.W, {
-                            type: f.Vb.H4,
-                            color: f.O.Link
+                        }, Object(c.d)("Check out Fortnite on Twitch.tv", "TwitchPrimeStreamers")), i.createElement(O.W, {
+                            type: O.Vb.H4,
+                            color: O.O.Link
                         }, Object(c.d)("{viewers, number} viewers right now", {
                             viewers: e.game && e.game.viewersCount || 0
-                        }, "TwitchPrimeStreamers"))), i.createElement(f.bc, {
-                            gutterSize: f.dc.Small,
-                            childWidth: f.cc.Large,
+                        }, "TwitchPrimeStreamers"))), i.createElement(O.bc, {
+                            gutterSize: O.dc.Small,
+                            childWidth: O.cc.Large,
                             children: n,
                             "data-test-selector": "twitch-prime-streamers-tower",
                             center: !0
-                        }), i.createElement(f.Xa, {
+                        }), i.createElement(O.Xa, {
                             margin: {
                                 y: 1
                             },
                             className: "twitch-prime-streamers__game-page",
-                            textAlign: f.Rb.Center
-                        }, i.createElement(f.U, {
+                            textAlign: O.Rb.Center
+                        }, i.createElement(O.U, {
                             to: "/directory/game/Fortnite",
                             hoverUnderlineNone: !0,
-                            type: f.V.Default
+                            type: O.V.Default
                         }, Object(c.d)("View more Fortnite on Twitch.tv >", "TwitchPrimeStreamers"))))
                     }, t
                 }(i.Component)),
-                D = function(e) {
+                g = function(e) {
                     var t = null,
                         n = e.node;
                     return n && (t = {
@@ -2847,10 +2845,11 @@
                             profileImageURL: ""
                         } : null,
                         game: null,
+                        tags: null,
                         type: A.a.Live
                     }), t
                 },
-                C = Object(a.compose)(Object(d.b)("TwitchPrimeStreamers"), Object(s.a)(h, {
+                D = Object(a.compose)(Object(d.b)("TwitchPrimeStreamers"), Object(s.a)(f, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -2861,21 +2860,21 @@
                             }
                         }
                     }
-                }))(g);
-            var S = Object(I.connect)(function(e) {
+                }))(h);
+            var C = Object(I.connect)(function(e) {
                     return {
                         languagePreferences: Object(N.a)(e)
                     }
-                }, null)(C),
-                L = n("nNY8"),
-                k = n("HieK"),
-                P = (n("FXNN"), function(e) {
+                }, null)(D),
+                S = n("nNY8"),
+                L = n("HieK"),
+                k = (n("FXNN"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getFortniteOffer = function() {
                             var e = t.props.data,
                                 n = e && e.primeOffers,
-                                r = c.b.get(L.b, L.a),
+                                r = c.b.get(S.b, S.a),
                                 i = n && n.filter(function(e) {
                                     return e && e.id === r
                                 });
@@ -2888,55 +2887,55 @@
                         !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this.props.data;
-                        if (e && e.loading) return i.createElement(f.Za, {
+                        if (e && e.loading) return i.createElement(O.Za, {
                             fillContent: !0
                         });
                         var t = this.getFortniteOffer();
                         return e && e.error || !t || !t.self || !t.self.hasEntitlement ? i.createElement(o.a, {
                             to: "/prime/fortnite"
-                        }) : i.createElement(f.Xa, {
+                        }) : i.createElement(O.Xa, {
                             className: "twitch-prime-fortnite-success",
                             "data-test-selector": "twitch-prime-fortnite-success"
-                        }, i.createElement(f.Xa, {
-                            textAlign: f.Rb.Center,
+                        }, i.createElement(O.Xa, {
+                            textAlign: O.Rb.Center,
                             className: "twitch-prime-fortnite-success__header"
                         }, i.createElement(_.a, {
                             renderOfferImage: !0
-                        }, i.createElement(f.Xa, null, i.createElement(f.Xa, {
+                        }, i.createElement(O.Xa, null, i.createElement(O.Xa, {
                             margin: {
                                 y: 2
                             }
-                        }, i.createElement(f.W, {
-                            type: f.Vb.H1,
-                            color: f.O.Overlay,
-                            transform: f.Ub.Uppercase,
+                        }, i.createElement(O.W, {
+                            type: O.Vb.H1,
+                            color: O.O.Overlay,
+                            transform: O.Ub.Uppercase,
                             bold: !0
-                        }, Object(c.d)("Loot acquired!", "FortniteSuccess"))), i.createElement(f.Xa, {
+                        }, Object(c.d)("Loot acquired!", "FortniteSuccess"))), i.createElement(O.Xa, {
                             margin: {
                                 y: 2
                             }
-                        }, i.createElement(f.W, {
-                            type: f.Vb.H3,
-                            color: f.O.Overlay,
-                            transform: f.Ub.Uppercase,
+                        }, i.createElement(O.W, {
+                            type: O.Vb.H3,
+                            color: O.O.Overlay,
+                            transform: O.Ub.Uppercase,
                             bold: !0
-                        }, Object(c.d)("Load up Fortnite and your rewards will be waiting for you!", "FortniteSuccess")))), i.createElement(f.Xa, {
+                        }, Object(c.d)("Load up Fortnite and your rewards will be waiting for you!", "FortniteSuccess")))), i.createElement(O.Xa, {
                             padding: {
                                 y: 2
                             }
-                        }, i.createElement(f.W, {
-                            type: f.Vb.H3,
-                            color: f.O.Overlay,
+                        }, i.createElement(O.W, {
+                            type: O.Vb.H3,
+                            color: O.O.Overlay,
                             bold: !0
                         }, Object(c.d)("Problems? <x:link>Click here ›</x:link>", {
                             "x:link": function(e) {
-                                return i.createElement(f.U, {
+                                return i.createElement(O.U, {
                                     to: "#faq",
                                     hoverUnderlineNone: !1,
-                                    type: f.V.Overlay
+                                    type: O.V.Overlay
                                 }, e)
                             }
-                        }, "FortniteSuccess"))))), i.createElement(S, null), i.createElement(m.a, {
+                        }, "FortniteSuccess"))))), i.createElement(C, null), i.createElement(m.a, {
                             hash: this.props.location.hash.replace("#", "")
                         }), i.createElement(p.a, {
                             partnerSocialLink: "https://twitter.com/FortniteGame",
@@ -2944,7 +2943,7 @@
                         }))
                     }, t
                 }(i.Component)),
-                b = Object(a.compose)(Object(s.a)(k, {
+                P = Object(a.compose)(Object(s.a)(L, {
                     options: function() {
                         return {
                             variables: {
@@ -2957,13 +2956,13 @@
                     destination: u.a.TwitchPrimeFortniteSuccessPage
                 }), Object(l.a)({
                     location: E.PageviewLocation.TwitchPrimeFortniteSuccessPage
-                }))(P);
+                }))(k);
             n.d(t, "TEST_SELECTOR", function() {
                 return "twitch-prime-fortnite-success"
             }), n.d(t, "TwitchPrimeFortniteSuccessPageComponent", function() {
-                return P
+                return k
             }), n.d(t, "TwitchPrimeFortniteSuccessPage", function() {
-                return b
+                return P
             })
         },
         gAd6: function(e, t) {
@@ -3061,14 +3060,13 @@
                 l = n("oB8h"),
                 u = n("kduP"),
                 E = n("2xye"),
-                d = n("rShu"),
-                m = n("4KoZ"),
-                p = n("QV0j"),
-                T = n("yI6f"),
-                _ = n("T2RZ"),
-                I = n("Ue10"),
-                N = (n("zrz1"), Object(_.a)(E.PageviewMedium.Game, T.b.Live, T.c.BrowseInCategoryChannels)(s.a)),
-                A = function(e) {
+                d = n("4KoZ"),
+                m = n("QV0j"),
+                p = n("yI6f"),
+                T = n("T2RZ"),
+                _ = n("Ue10"),
+                I = (n("zrz1"), Object(T.a)(E.PageviewMedium.Game, p.b.Live, p.c.BrowseInCategoryChannels)(s.a)),
+                N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getLinkTo = function(e, n) {
@@ -3085,7 +3083,7 @@
                                 })
                             }
                         }, t.shouldShowGame = function(e) {
-                            if (t.props.directoryType !== d.a.Games && t.props.streamNode.game) {
+                            if (t.props.shouldShowGame && t.props.streamNode.game) {
                                 var n = t.props.streamNode.game[e];
                                 if (n) return n
                             }
@@ -3097,8 +3095,8 @@
                             t = this.props.streamIndex;
                         if (!e.broadcaster) return null;
                         var n = {
-                            context: this.props.directoryType === d.a.Games ? s.b.SingleGameList : s.b.MixedGameAndChannelList,
-                            title: e.title || Object(m.a)(),
+                            context: this.props.shouldShowGame ? s.b.MixedGameAndChannelList : s.b.SingleGameList,
+                            title: e.title || Object(d.a)(),
                             linkTo: this.getLinkTo("/" + e.broadcaster.login, t),
                             thumbnailImageProps: {
                                 src: e.previewImageURL || c.a.defaultStreamPreviewURL,
@@ -3117,7 +3115,7 @@
                                 src: this.shouldShowGame("boxArtURL") || c.a.defaultBoxArtURL,
                                 alt: this.shouldShowGame("name")
                             },
-                            streamType: Object(p.a)(e.type) || l.a.Live,
+                            streamType: Object(m.a)(e.type) || l.a.Live,
                             currentViewerCount: e.viewersCount || 0,
                             trackImageLatency: this.props.trackImageLatency,
                             tagListProps: this.props.tagListProps
@@ -3128,14 +3126,14 @@
                             style: {
                                 order: t
                             }
-                        }, i.createElement(I.Xa, {
+                        }, i.createElement(_.Xa, {
                             className: "stream-thumbnail__card",
-                            position: I.jb.Relative,
+                            position: _.jb.Relative,
                             margin: {
                                 bottom: 2
                             },
                             "data-target": "directory-game__card_container"
-                        }, i.createElement(N, r.__assign({}, n, {
+                        }, i.createElement(I, r.__assign({}, n, {
                             "data-a-target": "card-" + t,
                             "data-a-id": "card-" + (e.broadcaster.login || "").replace(/ /g, ""),
                             trackingProps: {
@@ -3148,15 +3146,15 @@
                         }))))
                     }, t
                 }(i.Component),
-                R = Object(o.compose)(a.a)(A);
+                A = Object(o.compose)(a.a)(N);
             n.d(t, "a", function() {
                 return "directory-first-item"
             }), n.d(t, !1, function() {
                 return "directory-game__card_container"
             }), n.d(t, !1, function() {
-                return A
+                return N
             }), n.d(t, "b", function() {
-                return R
+                return A
             })
         },
         hyVY: function(e, t, n) {
@@ -3738,16 +3736,6 @@
             }), n.d(t, "a", function() {
                 return E
             })
-        },
-        rShu: function(e, t, n) {
-            "use strict";
-            var r;
-            n.d(t, "a", function() {
-                    return r
-                }),
-                function(e) {
-                    e.Games = "GAMES", e.Communities = "COMMUNITIES"
-                }(r || (r = {}))
         },
         uzin: function(e, t, n) {
             "use strict";

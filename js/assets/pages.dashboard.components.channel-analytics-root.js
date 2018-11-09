@@ -1452,7 +1452,7 @@
                     name: "downloadSubsList"
                 }), Object(je.a)([{
                     topic: function(e) {
-                        return Object(Ae.x)(e.channelID || "")
+                        return Object(Ae.y)(e.channelID || "")
                     },
                     mapMessageTypesToProps: (se = {}, se[Oe.PubsubMessageType.SubscribersCSVComplete] = "subscribersCSVComplete", se[Oe.PubsubMessageType.SubscribersCSVInProgress] = "subscribersCSVInProgress", se),
                     skip: function(e) {

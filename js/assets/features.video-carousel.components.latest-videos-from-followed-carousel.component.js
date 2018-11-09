@@ -160,12 +160,16 @@
                     width: 200
                 });
                 var t = r.createElement(c.W, {
-                        type: c.Vb.H4,
-                        color: c.O.Base,
-                        bold: !0,
-                        "data-test-selector": n.Title
-                    }, e.titleMessage),
-                    i = e.subTitle;
+                    type: c.Vb.H4,
+                    color: c.O.Base,
+                    bold: !0,
+                    "data-test-selector": n.Title
+                }, e.titleMessage);
+                e.titleLinkTo && (t = r.createElement(c.U, {
+                    to: e.titleLinkTo,
+                    type: c.V.Inherit
+                }, t));
+                var i = e.subTitle;
                 return e.subTitle && "string" == typeof e.subTitle ? i = r.createElement(c.W, {
                     color: c.O.Alt2,
                     type: c.Vb.Span,

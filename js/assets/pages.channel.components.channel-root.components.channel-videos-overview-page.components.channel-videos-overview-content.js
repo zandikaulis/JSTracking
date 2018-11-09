@@ -592,12 +592,16 @@
                     width: 200
                 });
                 var t = a.createElement(d.W, {
-                        type: d.Vb.H4,
-                        color: d.O.Base,
-                        bold: !0,
-                        "data-test-selector": n.Title
-                    }, e.titleMessage),
-                    i = e.subTitle;
+                    type: d.Vb.H4,
+                    color: d.O.Base,
+                    bold: !0,
+                    "data-test-selector": n.Title
+                }, e.titleMessage);
+                e.titleLinkTo && (t = a.createElement(d.U, {
+                    to: e.titleLinkTo,
+                    type: d.V.Inherit
+                }, t));
+                var i = e.subTitle;
                 return e.subTitle && "string" == typeof e.subTitle ? i = a.createElement(d.W, {
                     color: d.O.Alt2,
                     type: d.Vb.Span,
@@ -1675,8 +1679,8 @@
                         })))
                     }, t
                 }(a.Component)),
-                V = Object(N.b)("PreviewCardThumbnail")(T),
-                L = (i("80G/"), function(e) {
+                L = Object(N.b)("PreviewCardThumbnail")(T),
+                V = (i("80G/"), function(e) {
                     var t = null;
                     return e.subtitles && e.subtitles.length > 0 && (t = e.subtitles.map(function(e, t) {
                         return a.createElement(l.Xa, {
@@ -1822,7 +1826,7 @@
                             to: Object(F.a)(this.getTrackingContext(h.PageviewContent.VideoThumbnail), this.props.linkTo),
                             onClick: this.props.onThumbnailClick || this.props.onClick,
                             "data-a-target": "preview-card-image-link"
-                        }, this.props.thumbnailImageProps && a.createElement(V, {
+                        }, this.props.thumbnailImageProps && a.createElement(L, {
                             staticImageProps: this.props.thumbnailImageProps,
                             animatedImageProps: G(this.props) && this.props.animatedImageProps || void 0,
                             trackImageLatency: this.props.trackImageLatency
@@ -1943,7 +1947,7 @@
                             linkTo: Object(F.a)(this.getTrackingContext(h.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             automationSelector: "preview-card-game-link"
-                        }), a.createElement(a.Fragment, null, a.createElement(L, {
+                        }), a.createElement(a.Fragment, null, a.createElement(V, {
                             title: this.props.title,
                             onClick: this.props.onVideoTitleClick || this.props.onClick,
                             linkTo: Object(F.a)(this.getTrackingContext(h.PageviewContent.VideoTitle), this.props.linkTo),
@@ -2356,10 +2360,10 @@
                         })), o.createElement(o.Fragment, null, n, a)
                     }, t
                 }(o.Component),
-                V = Object(v.b)("LatestCollectionsShelf", {
+                L = Object(v.b)("LatestCollectionsShelf", {
                     autoReportInteractive: !0
                 })(Object(b.a)(T)),
-                L = i("YDp0"),
+                V = i("YDp0"),
                 x = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -2368,7 +2372,7 @@
                         this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         if (this.props.data && this.props.data.error) return null;
-                        if (!this.props.data || this.props.data.loading) return o.createElement(V, {
+                        if (!this.props.data || this.props.data.loading) return o.createElement(L, {
                             channelLogin: this.props.channelLogin,
                             collections: null,
                             multipleVideoGameMarkersType: this.props.multipleVideoGameMarkersType,
@@ -2388,7 +2392,7 @@
                         }
                         var n = this.props.data.currentUser,
                             a = !(!n || n.id !== e.id) || !(!e.self || !e.self.isEditor);
-                        return o.createElement(V, {
+                        return o.createElement(L, {
                             channelLogin: this.props.channelLogin,
                             collections: t,
                             multipleVideoGameMarkersType: this.props.multipleVideoGameMarkersType,
@@ -2404,7 +2408,7 @@
                         }
                     }, t
                 }(o.Component),
-                E = Object(C.compose)(Object(y.a)(L, {
+                E = Object(C.compose)(Object(y.a)(V, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2420,7 +2424,7 @@
                                 var t = Math.max(e.data.user.collections.edges.length - 1, 0),
                                     i = e.data.user.collections.edges[t];
                                 return i ? e.data.fetchMore({
-                                    query: L,
+                                    query: V,
                                     variables: r.__assign({}, e.data.variables, {
                                         cursor: i.cursor
                                     }),
@@ -2673,7 +2677,8 @@
                         var t = !1,
                             i = this.props.data.user.videoShelves.edges.reduce(function(i, n) {
                                 var a, r = e.renderShelf(n);
-                                return r && n.node && n.node.items ? (n.node.type === W.Ca.LATEST_BROADCASTS ? a = {
+                                if (!r || !n.node || !n.node.items) return i;
+                                n.node.type === W.Ca.LATEST_BROADCASTS ? a = {
                                     filter: p.e.PastBroadcasts,
                                     sort: p.f.Newest
                                 } : n.node.type === W.Ca.TOP_CLIPS ? a = {
@@ -2681,21 +2686,37 @@
                                     range: p.b.Month
                                 } : n.node.type === W.Ca.ALL_VIDEOS && (a = {
                                     filter: p.e.All
-                                }, t = !0), i.push(o.createElement(N.Xa, {
-                                    key: n.node.id,
-                                    margin: 0 === i.length ? {
-                                        bottom: 2
-                                    } : {
-                                        y: 2
-                                    }
-                                }, o.createElement(_.a, {
+                                }, t = !0);
+                                var l = o.createElement(_.a, {
                                     titleMessage: n.node.title,
                                     subTitle: n.node.description || void 0,
                                     expandLink: a && {
                                         channelLogin: e.props.channelLogin,
                                         options: a
                                     } || void 0
-                                }), r)), i) : i
+                                });
+                                if (n.node.type === W.Ca.COLLECTION && n.node.collection) {
+                                    var s = Object(I.d)("{itemCount, plural, one {# video} other {# videos}}", {
+                                            itemCount: n.node.collection.items.totalCount
+                                        }, "ChannelVideoShelves"),
+                                        d = "";
+                                    if (n.node.description) {
+                                        d = n.node.description + " · " + s
+                                    } else d = s;
+                                    l = o.createElement(_.a, {
+                                        titleMessage: n.node.title,
+                                        subTitle: d,
+                                        titleLinkTo: "/collections/" + n.node.collection.id
+                                    })
+                                }
+                                return i.push(o.createElement(N.Xa, {
+                                    key: n.node.id,
+                                    margin: 0 === i.length ? {
+                                        bottom: 2
+                                    } : {
+                                        y: 2
+                                    }
+                                }, l, r)), i
                             }, []),
                             n = !!this.props.data.user.videoShelves.pageInfo && !!this.props.data.user.videoShelves.pageInfo.hasNextPage;
                         return o.createElement(o.Fragment, null, i, o.createElement(S.a, {
@@ -5031,6 +5052,26 @@
                                             },
                                             arguments: [],
                                             directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "items"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "totalCount"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }]
+                                            }
                                         }]
                                     }
                                 }, {
@@ -5298,11 +5339,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 765
+                    end: 786
                 }
             };
             n.loc.source = {
-                body: '#import "twilight/features/video-preview-card/models/preview-card-video-fragment.gql"\nquery ChannelVideoShelvesQuery($channelLogin: String! $first: Int! $cursor: Cursor) {\nuser(login: $channelLogin) {\nid\nvideoShelves(first: $first after: $cursor) {\nedges {\n...VideoShelfEdge\n}\npageInfo {\nhasNextPage\n}\ntotalCount\n}\n}\n}\nfragment VideoShelfEdge on VideoShelfEdge {\ncursor\nnode {\nid\ntitle\ndescription\ntype\ncollection {\nid\n}\nitems {\n...ShelfPreviewCardClip\n...PreviewCardVideo\n}\n}\n}\nfragment ShelfPreviewCardClip on Clip {\nid\nslug\nclipTitle: title\nclipViewCount: viewCount\ncurator {\nid\nlogin\ndisplayName\n}\nclipGame: game {\nid\nname\nboxArtURL(width: 52 height: 72)\n}\nbroadcaster {\nid\nlogin\ndisplayName\nprofileImageURL(width: 50)\n}\nthumbnailURL\ncreatedAt\ndurationSeconds\n}',
+                body: '#import "twilight/features/video-preview-card/models/preview-card-video-fragment.gql"\nquery ChannelVideoShelvesQuery($channelLogin: String! $first: Int! $cursor: Cursor) {\nuser(login: $channelLogin) {\nid\nvideoShelves(first: $first after: $cursor) {\nedges {\n...VideoShelfEdge\n}\npageInfo {\nhasNextPage\n}\ntotalCount\n}\n}\n}\nfragment VideoShelfEdge on VideoShelfEdge {\ncursor\nnode {\nid\ntitle\ndescription\ntype\ncollection {\nid\nitems {\ntotalCount\n}\n}\nitems {\n...ShelfPreviewCardClip\n...PreviewCardVideo\n}\n}\n}\nfragment ShelfPreviewCardClip on Clip {\nid\nslug\nclipTitle: title\nclipViewCount: viewCount\ncurator {\nid\nlogin\ndisplayName\n}\nclipGame: game {\nid\nname\nboxArtURL(width: 52 height: 72)\n}\nbroadcaster {\nid\nlogin\ndisplayName\nprofileImageURL(width: 50)\n}\nthumbnailURL\ncreatedAt\ndurationSeconds\n}',
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,

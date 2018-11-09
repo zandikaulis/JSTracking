@@ -216,12 +216,16 @@
                     width: 200
                 });
                 var t = o.createElement(c.W, {
-                        type: c.Vb.H4,
-                        color: c.O.Base,
-                        bold: !0,
-                        "data-test-selector": i.Title
-                    }, e.titleMessage),
-                    n = e.subTitle;
+                    type: c.Vb.H4,
+                    color: c.O.Base,
+                    bold: !0,
+                    "data-test-selector": i.Title
+                }, e.titleMessage);
+                e.titleLinkTo && (t = o.createElement(c.U, {
+                    to: e.titleLinkTo,
+                    type: c.V.Inherit
+                }, t));
+                var n = e.subTitle;
                 return e.subTitle && "string" == typeof e.subTitle ? n = o.createElement(c.W, {
                     color: c.O.Alt2,
                     type: c.Vb.Span,

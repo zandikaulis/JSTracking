@@ -67,25 +67,25 @@
                 return u
             }), n.d(t, "j", function() {
                 return c
-            }), n.d(t, "H", function() {
-                return d
             }), n.d(t, "I", function() {
+                return d
+            }), n.d(t, "J", function() {
                 return l
             }), n.d(t, "n", function() {
                 return p
-            }), n.d(t, "A", function() {
+            }), n.d(t, "B", function() {
                 return m
-            }), n.d(t, "G", function() {
+            }), n.d(t, "H", function() {
                 return g
-            }), n.d(t, "r", function() {
-                return b
             }), n.d(t, "s", function() {
+                return b
+            }), n.d(t, "t", function() {
                 return h
             }), n.d(t, "o", function() {
                 return f
-            }), n.d(t, "t", function() {
+            }), n.d(t, "u", function() {
                 return v
-            }), n.d(t, "v", function() {
+            }), n.d(t, "w", function() {
                 return E
             }), n.d(t, "l", function() {
                 return _
@@ -93,44 +93,46 @@
                 return S
             }), n.d(t, "c", function() {
                 return A
-            }), n.d(t, "B", function() {
-                return y
-            }), n.d(t, "b", function() {
+            }), n.d(t, "C", function() {
                 return C
+            }), n.d(t, "b", function() {
+                return y
             }), n.d(t, "a", function() {
                 return T
-            }), n.d(t, "E", function() {
-                return I
             }), n.d(t, "F", function() {
+                return I
+            }), n.d(t, "G", function() {
                 return O
             }), n.d(t, "m", function() {
                 return P
-            }), n.d(t, "C", function() {
-                return R
             }), n.d(t, "D", function() {
+                return R
+            }), n.d(t, "E", function() {
                 return D
-            }), n.d(t, "J", function() {
+            }), n.d(t, "K", function() {
                 return w
-            }), n.d(t, "q", function() {
+            }), n.d(t, "r", function() {
                 return M
-            }), n.d(t, "w", function() {
+            }), n.d(t, "x", function() {
                 return U
             }), n.d(t, "f", function() {
                 return x
             }), n.d(t, "g", function() {
                 return k
-            }), n.d(t, "x", function() {
+            }), n.d(t, "y", function() {
                 return G
             }), n.d(t, "k", function() {
                 return L
-            }), n.d(t, "p", function() {
+            }), n.d(t, "q", function() {
                 return j
-            }), n.d(t, "u", function() {
+            }), n.d(t, "v", function() {
                 return B
-            }), n.d(t, "z", function() {
+            }), n.d(t, "p", function() {
                 return F
-            }), n.d(t, "y", function() {
+            }), n.d(t, "A", function() {
                 return N
+            }), n.d(t, "z", function() {
+                return V
             });
             var r = n("/7QA"),
                 a = n("0Log"),
@@ -204,11 +206,11 @@
                 return a.PubsubTopic.BitsLeaderboardEvents + "." + e.id
             }
 
-            function y(e) {
+            function C(e) {
                 return a.PubsubTopic.UserBitsUpdates + "." + e
             }
 
-            function C() {
+            function y() {
                 return a.PubsubTopic.BitsCampaignEvents + ".updates"
             }
 
@@ -273,6 +275,10 @@
             }
 
             function F(e) {
+                return a.PubsubTopic.MultiviewChanletUpdate + "." + e
+            }
+
+            function N(e) {
                 return r.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -285,7 +291,7 @@
                 })
             }
 
-            function N(e) {
+            function V(e) {
                 return r.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -468,7 +474,7 @@
                 A = Object(s.compose)(Object(m.b)("DevAddGameModal", {
                     autoReportInteractive: !0
                 }))(S);
-            var y, C = function(e) {
+            var C, y = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -512,7 +518,7 @@
                     return {
                         company: Object(h.c)(e)
                     }
-                })(C),
+                })(y),
                 I = n("uLRL"),
                 O = n("PZVp"),
                 P = n("/aPz"),
@@ -520,7 +526,7 @@
                 D = n("Sejb");
             ! function(e) {
                 e[e.Success = 0] = "Success", e[e.UnexpectedError = 1] = "UnexpectedError", e[e.BadSizeError = 2] = "BadSizeError", e[e.NonImageError = 3] = "NonImageError", e[e.WrongFormatError = 4] = "WrongFormatError", e[e.TimeoutError = 5] = "TimeoutError", e[e.Uploading = 6] = "Uploading", e[e.ImageNotSelected = 7] = "ImageNotSelected"
-            }(y || (y = {}));
+            }(C || (C = {}));
             var w, M = n("/ZC1");
             n("iYk3");
             ! function(e) {
@@ -600,42 +606,42 @@
                             className: "profile-edit__status-message"
                         }, null !== this.props.statusMessage && o.createElement(_.gb, a.__assign({}, function(e) {
                             switch (e) {
-                                case y.Success:
+                                case C.Success:
                                     return {
                                         label: Object(f.d)("Success! It will take time for boxart to update across site.", "DevEditBoxArt"),
                                         type: _.hb.Success
                                     };
-                                case y.UnexpectedError:
+                                case C.UnexpectedError:
                                     return {
                                         label: Object(f.d)("Unexpected error, please try again.", "DevEditBoxArt"),
                                         type: _.hb.Alert
                                     };
-                                case y.BadSizeError:
+                                case C.BadSizeError:
                                     return {
                                         label: Object(f.d)("Image must be 600px by 800px.", "DevEditBoxArt"),
                                         type: _.hb.Alert
                                     };
-                                case y.NonImageError:
+                                case C.NonImageError:
                                     return {
                                         label: Object(f.d)("You must upload an image.", "DevEditBoxArt"),
                                         type: _.hb.Alert
                                     };
-                                case y.WrongFormatError:
+                                case C.WrongFormatError:
                                     return {
                                         label: Object(f.d)("You must select a valid image type.", "DevEditBoxArt"),
                                         type: _.hb.Alert
                                     };
-                                case y.TimeoutError:
+                                case C.TimeoutError:
                                     return {
                                         label: Object(f.d)("Upload timed-out. Please try again.", "DevEditBoxArt"),
                                         type: _.hb.Alert
                                     };
-                                case y.Uploading:
+                                case C.Uploading:
                                     return {
                                         label: Object(f.d)("Uploading...", "DevEditBoxArt"),
                                         type: _.hb.Brand
                                     };
-                                case y.ImageNotSelected:
+                                case C.ImageNotSelected:
                                     return {
                                         label: Object(f.d)("Select a image first.", "DevEditBoxArt"),
                                         type: _.hb.Alert
@@ -687,7 +693,7 @@
                         }, t.logger = f.k.withCategory("DevEditBoxArtModal"), t.onImageInputChange = function(e) {
                             var n;
                             if (null === e || e.length < 1) t.setState({
-                                statusMessage: y.ImageNotSelected
+                                statusMessage: C.ImageNotSelected
                             });
                             else {
                                 n = e[0];
@@ -700,7 +706,7 @@
                                     var n = null,
                                         a = new Image;
                                     a.onload = function() {
-                                        800 === a.height && 600 === a.width || (n = y.BadSizeError), t.setState({
+                                        800 === a.height && 600 === a.width || (n = C.BadSizeError), t.setState({
                                             statusMessage: n
                                         })
                                     }, a.src = e, t.setState({
@@ -716,10 +722,10 @@
                                     switch (i.label) {
                                         case 0:
                                             if (!this.state.currentImage) return this.setState({
-                                                statusMessage: y.ImageNotSelected
+                                                statusMessage: C.ImageNotSelected
                                             }), [2];
                                             this.setState({
-                                                statusMessage: y.Uploading
+                                                statusMessage: C.Uploading
                                             }), i.label = 1;
                                         case 1:
                                             return i.trys.push([1, 3, , 4]), [4, function(e, t, n) {
@@ -743,11 +749,11 @@
                                             return e = i.sent(), t = e.upload.url, n = e.upload.upload_id, [3, 4];
                                         case 3:
                                             return r = i.sent(), this.logger.error(r, "Request for upload ID failed to get expected response from server."), this.setState({
-                                                statusMessage: y.UnexpectedError
+                                                statusMessage: C.UnexpectedError
                                             }), [2];
                                         case 4:
                                             return this.unsubscribe = f.l.subscribe({
-                                                topic: Object(P.A)(n),
+                                                topic: Object(P.B)(n),
                                                 success: function() {
                                                     try {
                                                         ! function(e, t) {
@@ -760,7 +766,7 @@
                                                         }(t, o.state.currentImage)
                                                     } catch (e) {
                                                         o.logger.error(e, "Dev Box Art Upload failed."), o.unsubscribe(), o.setState({
-                                                            statusMessage: y.UnexpectedError,
+                                                            statusMessage: C.UnexpectedError,
                                                             imagePreviewURL: "",
                                                             imageFormat: ""
                                                         })
@@ -771,7 +777,7 @@
                                                 },
                                                 failure: function() {
                                                     o.setState({
-                                                        statusMessage: y.UnexpectedError,
+                                                        statusMessage: C.UnexpectedError,
                                                         imagePreviewURL: ""
                                                     })
                                                 },
@@ -782,26 +788,26 @@
                                                         switch (e.status) {
                                                             case O.a.POSTPROCESS_COMPLETE:
                                                             case O.a.COMPLETE:
-                                                                t = y.Success;
+                                                                t = C.Success;
                                                                 break;
                                                             case O.a.WIDTH_VALIDATION_FAILED:
                                                             case O.a.HEIGHT_VALIDATION_FAILED:
-                                                                t = y.BadSizeError;
+                                                                t = C.BadSizeError;
                                                                 break;
                                                             case O.a.IS_IMAGE_VALIDATION_FAILED:
-                                                                t = y.NonImageError;
+                                                                t = C.NonImageError;
                                                                 break;
                                                             case O.a.IMAGE_FORMAT_VALIDATION_FAILED:
-                                                                t = y.WrongFormatError;
+                                                                t = C.WrongFormatError;
                                                                 break;
                                                             default:
-                                                                t = y.UnexpectedError
+                                                                t = C.UnexpectedError
                                                         }
                                                         o.unsubscribe && o.unsubscribe();
                                                         var r = "";
                                                         if (o.props.game.id && (r = o.props.game.id.toString()), o.setState({
                                                                 statusMessage: t
-                                                            }), t === y.Success) return Object(b.d)(b.a.UploadedBoxArt, r), void o.setState({
+                                                            }), t === C.Success) return Object(b.d)(b.a.UploadedBoxArt, r), void o.setState({
                                                             imageUploaded: !0
                                                         });
                                                         Object(b.d)(b.a.BoxArtUploadFailed, r), o.setState({
@@ -818,7 +824,7 @@
                             })
                         }, t.handlePubSubTimeout = function() {
                             t.unsubscribe(), t.setState({
-                                statusMessage: y.TimeoutError
+                                statusMessage: C.TimeoutError
                             })
                         }, t
                     }
@@ -1539,6 +1545,7 @@
                     Friendship: "friendship",
                     ImageUpload: "user-image-update",
                     ModerationActionsByUserAndChannel: "chat_moderator_actions",
+                    MultiviewChanletUpdate: "multiview-chanlet-update",
                     MysteryGift: "channel-sub-gifts-v1",
                     OnsiteNotifications: "onsite-notifications",
                     PayoutOnboardingEvents: "payout-onboarding-events",
@@ -1584,6 +1591,7 @@
                     ImageUploadSuccess: "imageuploadsuccess",
                     LiveEvent: "live-event",
                     ModerationAction: "moderation_action",
+                    MultiviewChanletUpdate: "chanlet",
                     MysteryGiftPurchase: "mystery-gift-purchase",
                     OnsiteNotificationCreate: "create-notification",
                     OnsiteNotificationDelete: "delete-notification",

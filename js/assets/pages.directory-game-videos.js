@@ -725,34 +725,35 @@
                         this.props.latencyTracking.reportInteractive(), s.p.setPageTitle(decodeURIComponent(this.props.match.params.encodedCommunityName))
                     }, t.prototype.render = function() {
                         var e = null,
-                            t = decodeURIComponent(this.props.match.params.encodedCommunityName),
-                            n = Object(g.r)(this.props) || P,
-                            i = Object(g.t)(this.props);
+                            t = null,
+                            n = decodeURIComponent(this.props.match.params.encodedCommunityName),
+                            i = Object(g.r)(this.props) || P,
+                            a = Object(g.t)(this.props);
                         if (this.props.data.error) {
-                            var a = Object(s.d)("{gameName} videos are temporarily unavailable.", {
-                                gameName: t
+                            var r = Object(s.d)("{gameName} videos are temporarily unavailable.", {
+                                gameName: n
                             }, "DirectoryVideosPage");
                             return o.createElement(d.a, {
-                                message: a
+                                message: r
                             })
                         }
                         if (!this.props.data.loading && null === this.props.data.game) {
-                            a = Object(s.d)("{gameName} does not exist.", {
-                                gameName: t
+                            r = Object(s.d)("{gameName} does not exist.", {
+                                gameName: n
                             }, "DirectoryVideosPage");
                             return o.createElement(d.a, {
-                                message: a
+                                message: r
                             })
                         }
-                        this.props.data.game && this.props.data.game.videos && this.props.data.game.videos.edges && (e = this.props.data.game.videos.edges.map(function(e) {
+                        this.props.data.loading || !this.props.data.game || this.props.data.game.videos || (e = [], t = Object(s.d)("No results found", "DirectoryVideosPage")), this.props.data.game && this.props.data.game.videos && this.props.data.game.videos.edges && (e = this.props.data.game.videos.edges.map(function(e) {
                             if (e && e.node) return e.node
                         }));
-                        var r = o.createElement(k.a, {
+                        var u = o.createElement(k.a, {
                                 buttonSize: N.D.Large,
                                 contentType: _.a.Videos,
-                                directoryName: t
+                                directoryName: n
                             }),
-                            u = o.createElement(N.Xa, {
+                            m = o.createElement(N.Xa, {
                                 className: "directory-game-videos-page__filters",
                                 display: N.X.Flex,
                                 flexDirection: N.Aa.Row,
@@ -761,29 +762,35 @@
                                     top: 1,
                                     right: 3
                                 }
-                            }, r, o.createElement(y.a, {
+                            }, u, o.createElement(y.a, {
                                 onVideoSortChange: this.onVideoSortChange,
                                 onVideoFilterChange: this.onVideoFilterChange,
-                                selectedSort: n,
-                                broadcastType: i
+                                selectedSort: i,
+                                broadcastType: a
                             }));
-                        return o.createElement(o.Fragment, null, u, o.createElement(N.Xa, {
+                        return o.createElement(o.Fragment, null, m, o.createElement(N.Xa, {
                             padding: {
                                 top: 2,
                                 bottom: 3,
                                 x: 3
                             }
-                        }, o.createElement(y.b, {
+                        }, t ? o.createElement(N.Xa, {
+                            padding: {
+                                top: 1
+                            }
+                        }, o.createElement(N.W, {
+                            type: N.Vb.H3
+                        }, t)) : o.createElement(o.Fragment, null, o.createElement(y.b, {
                             hideGameArt: !0,
-                            trackingContent: Object(f.a)(n),
+                            trackingContent: Object(f.a)(i),
                             trackingMedium: v.PageviewMedium.GameVideos,
                             videos: e,
                             listContext: l.b.SingleGameList
                         }), o.createElement(c.a, {
                             enabled: this.enablePagination(),
-                            key: "directory-game-videos-page-" + i + "-" + n,
+                            key: "directory-game-videos-page-" + a + "-" + i,
                             loadMore: this.props.loadMore
-                        })))
+                        }))))
                     }, t.prototype.enablePagination = function() {
                         return !!(this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.game && this.props.data.game.videos && this.props.data.game.videos.pageInfo && this.props.data.game.videos.pageInfo.hasNextPage)
                     }, t = r.__decorate([Object(u.a)(C, {

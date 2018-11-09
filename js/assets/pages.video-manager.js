@@ -7812,7 +7812,7 @@
                     }
                 }), Object(ln.a)([{
                     topic: function(e) {
-                        return e.data.user ? Object(cn.I)(e.data.user.id) : ""
+                        return e.data.user ? Object(cn.J)(e.data.user.id) : ""
                     },
                     mapMessageTypesToProps: (Yr = {}, Yr[dn.PubsubMessageType.VideoThumbnailProcessingComplete] = "videoThumbnailProcessed", Yr[dn.PubsubMessageType.VideoThumbnailProcessingError] = "videoThumbnailError", Yr)
                 }]))(ao);
@@ -14220,7 +14220,9 @@
                             }
                         }
                     },
-                    skip: !0
+                    skip: function(e) {
+                        return !e.gameName
+                    }
                 })(h);
             n.d(t, !1, function() {
                 return a

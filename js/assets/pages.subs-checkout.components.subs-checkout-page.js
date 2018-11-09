@@ -3,9 +3,55 @@
         "/Z6v": function(e, t, r) {
             e.exports = r.p + "assets/amazon_pay_dark_2x-c98151cef856bab0e62c.png"
         },
+        "1OTy": function(e, t, r) {
+            "use strict";
+            var n = r("mrSG"),
+                i = r("q1tI"),
+                a = r("/MKj"),
+                o = r("fvjX"),
+                s = r("/0dD"),
+                c = r("XDQu"),
+                u = r("Ue10"),
+                d = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return n.__extends(t, e), t.prototype.render = function() {
+                        return i.createElement(u.La, {
+                            label: this.props.label,
+                            type: this.props.type,
+                            src: this.props.src,
+                            alt: this.props.alt,
+                            srcSet: this.srcSet,
+                            value: this.props.value,
+                            onChange: this.props.onChange,
+                            checked: this.props.checked
+                        })
+                    }, Object.defineProperty(t.prototype, "srcSet", {
+                        get: function() {
+                            return this.props.darkModeEnabled && this.props.darkSrcSet || this.props.srcSet
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(i.Component);
+            var l = Object(o.compose)(Object(a.connect)(function(e) {
+                return {
+                    darkModeEnabled: Object(c.a)(e) === s.a.Dark
+                }
+            }))(d);
+            r.d(t, !1, function() {
+                return d
+            }), r.d(t, "a", function() {
+                return l
+            })
+        },
         "1P3F": function(e, t, r) {},
         "2DIU": function(e, t, r) {
             e.exports = r.p + "assets/amazon_pay_1x-4f76ba5fbbaca5a76d41.png"
+        },
+        "2ORI": function(e, t, r) {
+            e.exports = r.p + "assets/amazon_pay_dark_2x-302cb9125ccffd2d356d.png"
         },
         "2xEe": function(e, t, r) {
             e.exports = r.p + "assets/paypal_dark_1x-29d0a02f9cc67088594b.png"
@@ -114,7 +160,7 @@
                                             };
                                         case H.E.MASTERCARD:
                                             return {
-                                                src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? T.a : _.a,
+                                                src: this.props.darkModeEnabled ? T.a : _.a,
                                                 alt: Object(o.d)("Mastercard", "PaymentMethodImage")
                                             };
                                         case H.E.VISA:
@@ -134,8 +180,8 @@
                                     }
                                 case H.F.AMAZON:
                                     return {
-                                        src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? p.a : c.a,
-                                        srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
+                                        src: this.props.darkModeEnabled ? p.a : c.a,
+                                        srcSet: this.props.darkModeEnabled ? {
                                             "1x": p.a,
                                             "2x": E.a
                                         } : {
@@ -146,8 +192,8 @@
                                     };
                                 case H.F.PAYPAL:
                                     return {
-                                        src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? F.a : k.a,
-                                        srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
+                                        src: this.props.darkModeEnabled ? F.a : k.a,
+                                        srcSet: this.props.darkModeEnabled ? {
                                             "1x": F.a,
                                             "2x": w.a
                                         } : {
@@ -1400,6 +1446,9 @@
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
                 }(Ot || (Ot = {}))
         },
+        E3rh: function(e, t, r) {
+            e.exports = r.p + "assets/more_methods_dark_2x-606b603eb4951527dc9f.png"
+        },
         E78O: function(e, t, r) {},
         EF6p: function(e, t, r) {
             e.exports = r.p + "assets/more_methods_1x-98862ad01d0cfaef3e09.png"
@@ -1600,6 +1649,9 @@
                 }
             };
             e.exports = r
+        },
+        IRK4: function(e, t, r) {
+            e.exports = r.p + "assets/paypal_dark_1x-894b335a3c74ebaba75f.png"
         },
         JH5r: function(e, t, r) {},
         Jgup: function(e, t, r) {
@@ -2212,6 +2264,9 @@
             function(e) {
                 e.ChannelSubscribeButton = "channel_subscribe_button_click", e.Direct = "direct_url_link", e.EmotePicker = "emote_picker_click", e.Extension = "extension_click", e.TurboSubscribeButton = "turbo_subscribe_button_click", e.ViewerCard = "viewer_card_click"
             }(d || (d = {}))
+        },
+        MU3X: function(e, t, r) {
+            e.exports = r.p + "assets/more_methods_dark_1x-e97146d0a834e34ca979.png"
         },
         NwMv: function(e, t, r) {},
         OpME: function(e, t, r) {
@@ -3796,9 +3851,8 @@
                             }), clearInterval(e.hostedFieldPollId))
                         }, 500)
                     }, t.prototype.setupConfigs = function() {
-                        var e = !window.location.href.includes("/products/") && this.props.darkModeEnabled,
-                            t = e ? ie.dark : ie.light,
-                            r = e ? ne.dark : ne.light;
+                        var e = this.props.darkModeEnabled ? ie.dark : ie.light,
+                            t = this.props.darkModeEnabled ? ne.dark : ne.light;
                         window.recurly.configure({
                             publicKey: this.props.publicKey,
                             fraud: {
@@ -3812,19 +3866,19 @@
                                     style: {
                                         height: "auto",
                                         fontSize: "12px",
-                                        fontColor: r,
+                                        fontColor: t,
                                         placeholder: {
-                                            color: t
+                                            color: e
                                         }
                                     }
                                 },
                                 number: {
                                     selector: "#recurly-number",
                                     style: {
-                                        fontColor: r,
+                                        fontColor: t,
                                         placeholder: {
                                             content: Object(p.d)("Card Number", "RecurlyCreditCard"),
-                                            color: t
+                                            color: e
                                         }
                                     }
                                 },
@@ -3832,10 +3886,10 @@
                                     selector: "#recurly-month",
                                     inputType: "select",
                                     style: {
-                                        fontColor: r,
+                                        fontColor: t,
                                         placeholder: {
                                             content: Object(p.d)("Select Month", "RecurlyCreditCard"),
-                                            color: t
+                                            color: e
                                         }
                                     }
                                 },
@@ -3843,20 +3897,20 @@
                                     selector: "#recurly-year",
                                     inputType: "select",
                                     style: {
-                                        fontColor: r,
+                                        fontColor: t,
                                         placeholder: {
                                             content: Object(p.d)("Select Year", "RecurlyCreditCard"),
-                                            color: t
+                                            color: e
                                         }
                                     }
                                 },
                                 cvv: {
                                     selector: "#recurly-cvv",
                                     style: {
-                                        fontColor: r,
+                                        fontColor: t,
                                         placeholder: {
                                             content: Object(p.d)("CVV", "RecurlyCreditCard"),
-                                            color: t
+                                            color: e
                                         }
                                     }
                                 }
@@ -4343,19 +4397,32 @@
                 be = r.n(fe),
                 Oe = r("yrda"),
                 ge = r.n(Oe),
-                Ne = r("AVF4"),
+                Ne = r("csmi"),
                 _e = r.n(Ne),
-                Ie = r("BIez"),
+                Ie = r("2ORI"),
                 Te = r.n(Ie),
-                Ce = r("EF6p"),
+                Ce = r("AVF4"),
                 Re = r.n(Ce),
-                Ae = r("xgE2"),
+                Ae = r("BIez"),
                 Se = r.n(Ae),
-                Pe = r("ZiR0"),
+                Pe = r("EF6p"),
                 ve = r.n(Pe),
-                De = r("KRuc"),
+                De = r("xgE2"),
                 ke = r.n(De),
-                Me = {
+                Me = r("MU3X"),
+                Le = r.n(Me),
+                Ue = r("E3rh"),
+                Fe = r.n(Ue),
+                je = r("ZiR0"),
+                we = r.n(je),
+                Ge = r("KRuc"),
+                Be = r.n(Ge),
+                xe = r("IRK4"),
+                Ve = r.n(xe),
+                We = r("bvmA"),
+                He = r.n(We),
+                Xe = r("1OTy"),
+                Ye = {
                     CreditCard: function() {
                         return Object(p.d)("Credit Card", "TicketDescription")
                     },
@@ -4369,67 +4436,87 @@
                         return Object(p.d)("More Methods", "TicketDescription")
                     }
                 },
-                Le = function(e) {
+                ze = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.paymentProviders = [{
                             paymentMethodType: Ee.RecurlyCreditCard,
                             paymentFlow: Q.b.RecurlyCreditCard,
                             button: {
-                                label: Me.CreditCard(),
-                                src: _e.a,
-                                alt: Me.CreditCard(),
+                                label: Ye.CreditCard(),
+                                src: Re.a,
+                                alt: Ye.CreditCard(),
                                 srcSet: {
-                                    "1x": _e.a,
-                                    "2x": Te.a
+                                    "1x": Re.a,
+                                    "2x": Se.a
+                                },
+                                darkSrcSet: {
+                                    "1x": Re.a,
+                                    "2x": Se.a
                                 }
                             }
                         }, {
                             paymentMethodType: Ee.ZuoraCreditCard,
                             paymentFlow: Q.b.ZuoraCreditCard,
                             button: {
-                                label: Me.CreditCard(),
-                                src: _e.a,
-                                alt: Me.CreditCard(),
+                                label: Ye.CreditCard(),
+                                src: Re.a,
+                                alt: Ye.CreditCard(),
                                 srcSet: {
-                                    "1x": _e.a,
-                                    "2x": Te.a
+                                    "1x": Re.a,
+                                    "2x": Se.a
+                                },
+                                darkSrcSet: {
+                                    "1x": Re.a,
+                                    "2x": Se.a
                                 }
                             }
                         }, {
                             paymentMethodType: Ee.RecurlyPaypal,
                             paymentFlow: Q.b.RecurlyPaypal,
                             button: {
-                                label: Me.Paypal(),
-                                src: ve.a,
-                                alt: Me.Paypal(),
+                                label: Ye.Paypal(),
+                                src: we.a,
+                                alt: Ye.Paypal(),
                                 srcSet: {
-                                    "1x": ve.a,
-                                    "2x": ke.a
+                                    "1x": we.a,
+                                    "2x": Be.a
+                                },
+                                darkSrcSet: {
+                                    "1x": Ve.a,
+                                    "2x": He.a
                                 }
                             }
                         }, {
                             paymentMethodType: Ee.RecurlyAmazonPay,
                             paymentFlow: Q.b.RecurlyPayWithAmazon,
                             button: {
-                                label: Me.AmazonPay(),
+                                label: Ye.AmazonPay(),
                                 src: be.a,
-                                alt: Me.AmazonPay(),
+                                alt: Ye.AmazonPay(),
                                 srcSet: {
                                     "1x": be.a,
                                     "2x": ge.a
+                                },
+                                darkSrcSet: {
+                                    "1x": _e.a,
+                                    "2x": Te.a
                                 }
                             }
                         }, {
                             paymentMethodType: Ee.Xsolla,
                             paymentFlow: Q.b.Xsolla,
                             button: {
-                                label: Me.MoreMethods(),
-                                src: Re.a,
-                                alt: Me.MoreMethods(),
+                                label: Ye.MoreMethods(),
+                                src: ve.a,
+                                alt: Ye.MoreMethods(),
                                 srcSet: {
-                                    "1x": Re.a,
-                                    "2x": Se.a
+                                    "1x": ve.a,
+                                    "2x": ke.a
+                                },
+                                darkSrcSet: {
+                                    "1x": Le.a,
+                                    "2x": Fe.a
                                 }
                             }
                         }], t.handleClick = function(e, r) {
@@ -4455,12 +4542,13 @@
                                         default: 6,
                                         sm: 3
                                     }
-                                }, l.createElement(N.La, {
+                                }, l.createElement(Xe.a, {
                                     label: t.button.label,
                                     type: N.Ma.Radio,
                                     src: t.button.src,
                                     alt: t.button.alt,
                                     srcSet: t.button.srcSet,
+                                    darkSrcSet: t.button.darkSrcSet,
                                     value: t.paymentMethodType,
                                     onChange: e.handleClick(t.paymentMethodType, t.paymentFlow),
                                     checked: e.props.selectedProvider === t.paymentMethodType
@@ -4471,7 +4559,7 @@
                         }, t))
                     }, t
                 }(l.PureComponent),
-                Ue = function(e) {
+                Ke = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4524,7 +4612,7 @@
                             }
                         }
                     }, t.prototype.render = function() {
-                        return l.createElement(l.Fragment, null, l.createElement(Le, {
+                        return l.createElement(l.Fragment, null, l.createElement(ze, {
                             eligiblePaymentMethods: this.props.eligiblePaymentMethods,
                             selectedProvider: this.state.selectedProvider,
                             handleClick: this.handlePaymentMethodSelectorToggleChange,
@@ -4536,8 +4624,8 @@
                         }, this.renderPaymentMethods()))
                     }, t
                 }(l.Component),
-                Fe = r("85n/"),
-                je = function(e) {
+                Ze = r("85n/"),
+                qe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4625,15 +4713,14 @@
                             border: !0,
                             borderRadius: N.x.Small,
                             padding: 2
-                        }, l.createElement(Fe.a, {
+                        }, l.createElement(Ze.a, {
                             paymentType: e.paymentType,
                             cardType: e.cardType,
                             provider: e.provider,
                             lastFour: e.lastFour,
                             expirationYear: e.expirationYear,
                             billingEmail: e.billingEmail,
-                            expirationMonth: e.expirationMonth,
-                            ignoreDarkMode: !0
+                            expirationMonth: e.expirationMonth
                         })), this.props.showEuSubs && l.createElement(N.Xa, {
                             margin: {
                                 y: 1
@@ -4654,7 +4741,7 @@
                         }, Object(p.d)("Complete Purchase", "SavedMethods"))))
                     }, t
                 }(l.Component),
-                we = function() {
+                Qe = function() {
                     function e(e) {
                         var t = this;
                         this.recurlyCountries = p.b.get("payments_recurly_countries", ["US"]), this.payPalEuSubsEnabled = p.b.get("paypal_eu_subs", !1), this.getDeterminedTaxCountry = function() {
@@ -4715,15 +4802,15 @@
                         configurable: !0
                     }), e
                 }(),
-                Ge = r("iWNC");
-            var Be = function(e) {
+                Je = r("iWNC");
+            var $e = function(e) {
                 var t = Date.now() - e;
                 return function() {
                     var r = Date.now();
                     return t + e <= r ? (t = r, "cache-and-network") : "cache-first"
                 }
             }(3e3);
-            var xe, Ve = function(e) {
+            var et, tt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4742,7 +4829,7 @@
                     return u.__extends(t, e), t.prototype.componentDidMount = function() {
                         (this.dataReady(this.props) || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), null !== this.tracker.get("savedPaymentAvailable") && null !== this.tracker.get("savedPaymentDisplayed") && this.tracker.reportEvent());
                         var e = this.savedPaymentMethod;
-                        this.eligibilityComputer = new we({
+                        this.eligibilityComputer = new Qe({
                             productName: this.props.productName,
                             userCountryOfResidence: this.props.countryOfResidence,
                             ipCountryCode: this.props.ipCountryCode,
@@ -4779,7 +4866,7 @@
                         (this.dataReady(this.props) || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), null !== this.tracker.get("savedPaymentAvailable") && null !== this.tracker.get("savedPaymentDisplayed") && this.tracker.reportEvent());
                         var r = this.savedPaymentMethod;
                         if (e.userBestGuessCountry !== this.props.userBestGuessCountry || e.data && this.props.data && e.data.currentUser !== this.props.data.currentUser || !this.dataReady(e) && this.dataReady(this.props)) {
-                            this.eligibilityComputer = new we({
+                            this.eligibilityComputer = new Qe({
                                 productName: this.props.productName,
                                 userCountryOfResidence: this.props.countryOfResidence,
                                 ipCountryCode: this.props.ipCountryCode,
@@ -4830,7 +4917,7 @@
                             t = this.state.eligiblePaymentMethods.filter(function(e) {
                                 return e.status !== k.HIDDEN
                             });
-                        return l.createElement(l.Fragment, null, this.renderWalletHeader(), this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature && this.savedPaymentMethod && this.props.ipCountryCode && e && l.createElement(je, {
+                        return l.createElement(l.Fragment, null, this.renderWalletHeader(), this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature && this.savedPaymentMethod && this.props.ipCountryCode && e && l.createElement(qe, {
                             handleCompletePurchase: this.props.handleCompletePurchase,
                             savedPaymentMethod: this.savedPaymentMethod,
                             handleCountryChange: this.props.handleCountryChange,
@@ -4840,7 +4927,7 @@
                             showEuSubs: this.props.showEuSubs
                         }), this.props.configs && t.length > 0 && !(this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature) && this.props.ipCountryCode && l.createElement(N.Xa, {
                             "data-a-target": "PAYMENT_METHOD_SELECTOR"
-                        }, l.createElement(Ue, {
+                        }, l.createElement(Ke, {
                             handleCompletePurchase: this.props.handleCompletePurchase,
                             handleCountryChange: this.props.handleCountryChange,
                             trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
@@ -4958,18 +5045,18 @@
                         return !!(e.configs && e.product && e.ipCountryCode && e.data.currentUser)
                     }, t
                 }(l.Component),
-                We = Object(Y.compose)(Object(J.b)("Wallet"), Object(E.a)(Ge, {
+                rt = Object(Y.compose)(Object(J.b)("Wallet"), Object(E.a)(Je, {
                     options: function() {
                         return {
-                            fetchPolicy: Be()
+                            fetchPolicy: $e()
                         }
                     }
-                }))(Ve),
-                He = r("T3lN");
+                }))(tt),
+                nt = r("T3lN");
             ! function(e) {
                 e.ELIGIBLE_PURCHASE = "ELIGIBLE_PURCHASE", e.INELIGIBLE_PURCHASE = "INELIGIBLE_PURCHASE"
-            }(xe || (xe = {}));
-            var Xe = function(e) {
+            }(et || (et = {}));
+            var it = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -5015,6 +5102,7 @@
                                                 payment_info: u.__assign({}, e.payment_info),
                                                 is_gift: this.props.isGift,
                                                 mystery_gift_count: this.props.mysteryGiftCount,
+                                                is_anonymous: this.props.isAnonymous,
                                                 recipient_id: this.props.recipientID,
                                                 ip_country_code: this.props.data.requestInfo.countryCode,
                                                 price_info: {
@@ -5163,7 +5251,7 @@
                             display: this.dataReady ? N.X.Block : N.X.Hide
                         }, l.createElement(N.Xa, {
                             display: D(this.productEligibility) ? N.X.Hide : N.X.Block,
-                            "data-test-selector": xe.INELIGIBLE_PURCHASE
+                            "data-test-selector": et.INELIGIBLE_PURCHASE
                         }, l.createElement(M, {
                             product: this.shoppingCartItem,
                             existingPurchases: this.existingPurchases,
@@ -5179,7 +5267,7 @@
                             channel: i || "Twitch"
                         }, "CheckoutPayments")))), l.createElement(N.Xa, {
                             display: D(this.productEligibility) ? N.X.Block : N.X.Hide,
-                            "data-test-selector": xe.ELIGIBLE_PURCHASE
+                            "data-test-selector": et.ELIGIBLE_PURCHASE
                         }, l.createElement(_, {
                             purchaseFlow: this.purchaseFlow,
                             product: this.shoppingCartItem
@@ -5202,7 +5290,7 @@
                         }, l.createElement(T, {
                             errorCode: this.state.errors.code,
                             level: this.state.errors.level
-                        })), l.createElement(We, {
+                        })), l.createElement(rt, {
                             handleCompletePurchase: this.completePurchase,
                             handleCountryChange: this.handleCountryChange,
                             productName: this.props.productName,
@@ -5364,12 +5452,13 @@
                         configurable: !0
                     }), t
                 }(l.Component),
-                Ye = Object(a.compose)(Object(E.a)(He, {
+                at = Object(a.compose)(Object(E.a)(nt, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
                             variables: {
                                 productName: e.productName,
+                                isAnonymous: e.isAnonymous,
                                 isGift: e.isGift,
                                 recipientID: e.recipientID,
                                 includePromotion: function(e) {
@@ -5380,8 +5469,8 @@
                             }
                         }
                     }
-                }), Object(J.b)("CheckoutPayments"))(Xe);
-            var ze = Object(i.connect)(function(e) {
+                }), Object(J.b)("CheckoutPayments"))(it);
+            var ot = Object(i.connect)(function(e) {
                 return {
                     isLoggedIn: Object(c.f)(e),
                     sessionUser: Object(c.e)(e)
@@ -5392,9 +5481,9 @@
                         return Object(s.e)(o.a.DashboardPage)
                     }
                 }, e)
-            })(Ye);
+            })(at);
             r.d(t, "a", function() {
-                return ze
+                return ot
             })
         },
         SPyc: function(e, t, r) {
@@ -5446,6 +5535,22 @@
                                     kind: "Name",
                                     value: "Boolean"
                                 }
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "isAnonymous"
+                            }
+                        },
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "Boolean"
                             }
                         }
                     }, {
@@ -5784,6 +5889,19 @@
                                                 value: "checkoutConfigs"
                                             },
                                             arguments: [{
+                                                kind: "Argument",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "isAnonymous"
+                                                },
+                                                value: {
+                                                    kind: "Variable",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "isAnonymous"
+                                                    }
+                                                }
+                                            }, {
                                                 kind: "Argument",
                                                 name: {
                                                     kind: "Name",
@@ -6426,11 +6544,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 1370
+                    end: 1418
                 }
             };
             r.loc.source = {
-                body: "query CheckoutPayments($productName: String! $includePromotion: Boolean! $isGift: Boolean! $recipientID: ID $mysteryGiftCount: Int $taxCountry: String) {\ncurrentUser {\nid\ndisplayName\nresidence {\ncountryCode\npostalCode\n}\n}\nsubscriptionProduct(productName: $productName) {\nid\nname\npriceInfo(taxCountry: $taxCountry) {\ncurrency\nexponent\nid\nisTaxInclusive\nprice\ntax\ntotal\n}\ninterval {\nunit\n}\ntier\ntype\nowner {\nid\ndisplayName\nlogin\n}\nself {\ncheckoutConfigs (isGift: $isGift recipientID: $recipientID mysteryGiftCount: $mysteryGiftCount taxCountryCode: $taxCountry) {\ncanGift\ncanPurchase\nisOneMonthFreeEligible\npaymentProviderConfigs {\nxsolla {\niframeURL\n}\nrecurly {\npayWithAmazonConfigs {\nclientID\nisProduction\nsellerID\n}\npublicKey\nbraintreeClientAuthorization\n}\nzuora {\nexternalAccountID\ntoken\ntenantID\npublicKey\nsignature\nhostedPageID\nhostedPageURL\nexternalAccountID\n}\n}\n}\npurchase {\ndetails {\npaymentProvider\nprice\ncurrency\ndivisor\nstate\nproductType\nproductTier\n}\ncompatiblePurchases {\npaymentProvider\nprice\ncurrency\nstate\nproductType\nproductTier\ndivisor\n}\n}\nbenefit {\nid\ntier\npaidUpgrade {\nstartsAt\n}\nendsAt\npurchasedWithPrime\ngift {\nisGift\n}\n}\npromotion @include(if: $includePromotion) {\ndiscountType\ndiscountValue\nnewPrice\noldPrice\n}\npaidUpgradePromotion @include(if: $includePromotion) {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\n}\nrequestInfo {\ncountryCode\n}\n}",
+                body: "query CheckoutPayments($productName: String! $includePromotion: Boolean! $isAnonymous: Boolean $isGift: Boolean! $recipientID: ID $mysteryGiftCount: Int $taxCountry: String) {\ncurrentUser {\nid\ndisplayName\nresidence {\ncountryCode\npostalCode\n}\n}\nsubscriptionProduct(productName: $productName) {\nid\nname\npriceInfo(taxCountry: $taxCountry) {\ncurrency\nexponent\nid\nisTaxInclusive\nprice\ntax\ntotal\n}\ninterval {\nunit\n}\ntier\ntype\nowner {\nid\ndisplayName\nlogin\n}\nself {\ncheckoutConfigs (isAnonymous: $isAnonymous isGift: $isGift recipientID: $recipientID mysteryGiftCount: $mysteryGiftCount taxCountryCode: $taxCountry) {\ncanGift\ncanPurchase\nisOneMonthFreeEligible\npaymentProviderConfigs {\nxsolla {\niframeURL\n}\nrecurly {\npayWithAmazonConfigs {\nclientID\nisProduction\nsellerID\n}\npublicKey\nbraintreeClientAuthorization\n}\nzuora {\nexternalAccountID\ntoken\ntenantID\npublicKey\nsignature\nhostedPageID\nhostedPageURL\nexternalAccountID\n}\n}\n}\npurchase {\ndetails {\npaymentProvider\nprice\ncurrency\ndivisor\nstate\nproductType\nproductTier\n}\ncompatiblePurchases {\npaymentProvider\nprice\ncurrency\nstate\nproductType\nproductTier\ndivisor\n}\n}\nbenefit {\nid\ntier\npaidUpgrade {\nstartsAt\n}\nendsAt\npurchasedWithPrime\ngift {\nisGift\n}\n}\npromotion @include(if: $includePromotion) {\ndiscountType\ndiscountValue\nnewPrice\noldPrice\n}\npaidUpgradePromotion @include(if: $includePromotion) {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\n}\nrequestInfo {\ncountryCode\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -6471,8 +6589,7 @@
                         }, a.createElement(c.a, {
                             paymentInstrumentType: this.props.paymentType,
                             cardType: this.props.cardType || void 0,
-                            paymentProvider: this.props.provider,
-                            ignoreDarkMode: this.props.ignoreDarkMode
+                            paymentProvider: this.props.provider
                         }), this.renderLastFour()), a.createElement(s.Xa, {
                             display: s.X.Flex,
                             justifyContent: s.Wa.Center,
@@ -7044,6 +7161,7 @@
                 return a
             })
         },
+        "WpF+": function(e, t, r) {},
         XE3n: function(e, t, r) {},
         ZEQw: function(e, t, r) {
             "use strict";
@@ -7322,6 +7440,9 @@
             e.exports = r.p + "assets/generic_credit_card_1x-a6b9cd93075728ab4114.png"
         },
         bfgy: function(e, t, r) {},
+        bvmA: function(e, t, r) {
+            e.exports = r.p + "assets/paypal_dark_2x-5364f28c059af7303d67.png"
+        },
         cpJf: function(e, t, r) {
             "use strict";
             var n;
@@ -7421,6 +7542,9 @@
             ! function(e) {
                 e.Web = "WEB", e.IOS = "IOS", e.Android = "ANDROID"
             }(i || (i = {}))
+        },
+        csmi: function(e, t, r) {
+            e.exports = r.p + "assets/amazon_pay_dark_1x-5810bf2a8f8185a1a905.png"
         },
         fQWD: function(e, t, r) {
             "use strict";
@@ -7639,21 +7763,22 @@
                 c = r("mrSG"),
                 u = r("cr+I"),
                 d = r("q1tI"),
-                l = r("wqBG"),
-                p = r("oJmH"),
-                m = r("GnwI"),
-                E = r("Ue10"),
-                h = r("/7QA"),
-                y = r("ZDlU"),
-                f = r("LA8z"),
-                b = r("yR8l"),
-                O = r("V+GM"),
-                g = r("NvVO"),
-                N = r("2xye"),
-                _ = r("SNyx"),
-                I = r("KriR"),
-                T = r("5ELF"),
-                C = function(e) {
+                l = r("oJmH"),
+                p = r("/7QA"),
+                m = r("ZDlU"),
+                E = r("LA8z"),
+                h = r("yR8l"),
+                y = r("V+GM"),
+                f = r("76Lv"),
+                b = r("NvVO"),
+                O = r("2xye"),
+                g = r("SNyx"),
+                N = r("KriR"),
+                _ = r("GnwI"),
+                I = r("5ELF"),
+                T = r("Ue10"),
+                C = r("wqBG"),
+                R = (r("WpF+"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -7662,64 +7787,70 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.props.data && (this.props.data.loading || this.props.data.error) || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return d.createElement(E.Xa, {
-                            position: E.jb.Relative,
+                        return d.createElement(T.Xa, {
+                            className: "" + Object(f.b)(this.props.theme),
+                            position: T.jb.Relative,
                             fullWidth: !0,
                             fullHeight: !0
-                        }, d.createElement(T.a, null), d.createElement(E.Xa, {
+                        }, d.createElement(I.a, {
+                            darkModeEnabled: !0
+                        }), d.createElement(T.Xa, {
+                            className: "subs-checkout-root",
                             padding: {
                                 top: 5
                             },
                             fullHeight: !0,
-                            overflow: E.cb.Auto
+                            overflow: T.cb.Auto
                         }, this.renderBody))
                     }, Object.defineProperty(t.prototype, "renderBody", {
                         get: function() {
                             if (this.props.match.params.productName) {
                                 if (this.props.isLoggedIn) {
-                                    if (this.props.data && this.props.data.loading) return d.createElement(E.Za, {
+                                    if (this.props.data && this.props.data.loading) return d.createElement(T.Za, {
                                         fillContent: !0
                                     });
                                     var e = !("turbo" === this.props.match.params.productName) && this.props.data && this.props.data.recipient || null,
-                                        t = parseInt(u.parse(this.props.location.search).gift_count, 10) || null;
-                                    return d.createElement(_.a, {
+                                        t = parseInt(u.parse(this.props.location.search).gift_count, 10) || null,
+                                        r = "true" === u.parse(this.props.location.search).is_anonymous;
+                                    return d.createElement(g.a, {
                                         productName: this.props.match.params.productName,
                                         isGift: !(!e || !e.id) || !!t,
                                         mysteryGiftCount: t,
+                                        isAnonymous: r,
                                         recipientID: e && e.id,
                                         recipientDisplayName: e && e.displayName,
                                         trackingContext: {
-                                            source: I.c.Direct
+                                            source: N.c.Direct
                                         }
                                     })
                                 }
-                                return this.props.onAnonymousVisit(), d.createElement(E.Xa, {
+                                return this.props.onAnonymousVisit(), d.createElement(T.Xa, {
                                     padding: 3,
-                                    display: E.X.Flex,
-                                    flexDirection: E.Aa.Column,
-                                    justifyContent: E.Wa.Center,
+                                    display: T.X.Flex,
+                                    flexDirection: T.Aa.Column,
+                                    justifyContent: T.Wa.Center,
                                     fullHeight: !0
-                                }, d.createElement(y.a, {
-                                    message: Object(h.d)("You must be logged in to view this page", "SubsCheckoutPage")
-                                }, d.createElement(E.Xa, {
+                                }, d.createElement(m.a, {
+                                    message: Object(p.d)("You must be logged in to view this page", "SubsCheckoutPage")
+                                }, d.createElement(T.Xa, {
                                     margin: {
                                         top: 1
                                     }
-                                }, d.createElement(E.z, {
+                                }, d.createElement(T.z, {
                                     onClick: this.props.onAnonymousVisit
-                                }, Object(h.d)("Log In", "SubsCheckoutPage")))))
+                                }, Object(p.d)("Log In", "SubsCheckoutPage")))))
                             }
-                            return d.createElement(f.a, null)
+                            return d.createElement(E.a, null)
                         },
                         enumerable: !0,
                         configurable: !0
                     }), t
-                }(d.Component),
-                R = Object(p.compose)(Object(m.b)("SubsCheckoutPage", {
-                    destination: g.a.SubsCheckoutPage
-                }), Object(O.a)({
-                    location: N.PageviewLocation.SubsCheckoutPage
-                }), Object(b.a)(l, {
+                }(d.Component)),
+                A = Object(l.compose)(Object(_.b)("SubsCheckoutPage", {
+                    destination: b.a.SubsCheckoutPage
+                }), Object(y.a)({
+                    location: O.PageviewLocation.SubsCheckoutPage
+                }), Object(h.a)(C, {
                     options: function(e) {
                         return {
                             variables: {
@@ -7730,10 +7861,11 @@
                     skip: function(e) {
                         return !u.parse(e.location.search).recipient || !e.isLoggedIn
                     }
-                }))(C);
-            var A = Object(n.connect)(function(e) {
+                }))(R);
+            var S = Object(n.connect)(function(e) {
                 return {
-                    isLoggedIn: Object(s.f)(e)
+                    isLoggedIn: Object(s.f)(e),
+                    theme: e.ui.theme
                 }
             }, function(e) {
                 return Object(i.bindActionCreators)({
@@ -7741,9 +7873,9 @@
                         return Object(o.e)(a.a.SubsCheckoutPage)
                     }
                 }, e)
-            })(R);
+            })(A);
             r.d(t, "SubsCheckoutPage", function() {
-                return A
+                return S
             })
         },
         sV2v: function(e, t, r) {

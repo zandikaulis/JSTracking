@@ -8695,11 +8695,14 @@
                         }, t.onAnimatedButtonComplete = function() {
                             t.props.onToggleAnimationComplete && t.props.onToggleAnimationComplete(t.state.isFollowing)
                         }, t.login = function() {
-                            var e = t.props.useContextualModals && Object(_.b)() === _.a.TwoStep ? {
+                            var e;
+                            t.props.useContextualModals && Object(_.b)() === _.a.TwoStep ? e = {
                                 modalType: O.e.TwoStep,
                                 targetChannel: t.props.channelName || t.props.channelLogin
-                            } : void 0;
-                            t.props.login(e)
+                            } : t.props.useContextualModals && Object(_.b)() === _.a.Split && (e = {
+                                modalType: O.e.Combined,
+                                targetChannel: t.props.channelName || t.props.channelLogin
+                            }), t.props.login(e)
                         }, t
                     }
                     return c.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -8989,7 +8992,10 @@
                                 externalfullscreen: n.props.fullscreen.supported(),
                                 gdpr: n.createPlayerGDPROptions(n.props),
                                 muted: n.props.muted,
-                                showtheatre: !n.props.disableTheatreButton
+                                showtheatre: !n.props.disableTheatreButton,
+                                trackingProperties: o.__assign({}, x.trackingProperties, {
+                                    platform: O.o.getPlatform()
+                                })
                             });
                             n.playerBuffering = n.registerBufferingEvent(!!n.props.paused), n.playerPlayed = n.registerPlayedEvent(!!n.props.paused);
                             var i = n.props.playerTypeOverride;

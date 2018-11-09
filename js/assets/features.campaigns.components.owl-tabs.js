@@ -3468,7 +3468,7 @@
                     }
                 }), Object(p.a)(function(e) {
                     return {
-                        topic: e.data && e.data.user && e.data.user.tournament && e.user ? Object(u.C)(e.user.id) : "",
+                        topic: e.data && e.data.user && e.data.user.tournament && e.user ? Object(u.D)(e.user.id) : "",
                         query: D,
                         variables: {
                             channelID: e.channelID
@@ -4059,7 +4059,7 @@
                     }
                 }), Object(p.a)(function(e) {
                     return {
-                        topic: e.data && e.data.user && e.data.user.tournament && e.user ? Object(u.C)(e.user.id) : "",
+                        topic: e.data && e.data.user && e.data.user.tournament && e.user ? Object(u.D)(e.user.id) : "",
                         query: H,
                         variables: {
                             channelID: e.channelID
@@ -6965,7 +6965,7 @@
                     }
                 }), Object(d.a)(function(e) {
                     return {
-                        topic: e.user ? Object(p.C)(e.user.id) : "",
+                        topic: e.user ? Object(p.D)(e.user.id) : "",
                         query: L,
                         variables: {
                             channelID: e.channelID

@@ -506,8 +506,8 @@
         "43KI": function(e, t, n) {
             (t = e.exports = n("rXFu")).Stream = t, t.Readable = t, t.Writable = n("3BRs"), t.Duplex = n("sZro"), t.Transform = n("J78i"), t.PassThrough = n("eA/Y")
         },
-        471: function(e, t) {},
-        472: function(e, t) {},
+        474: function(e, t) {},
+        475: function(e, t) {},
         "49sm": function(e, t) {
             var n = {}.toString;
             e.exports = Array.isArray || function(e) {
@@ -12928,25 +12928,34 @@
                 ee = n("kYGc"),
                 te = n("+GjP"),
                 ne = (n("q+52"), function(e) {
-                    return d.createElement(g.Ua, {
-                        onClick: e.onClick
-                    }, d.createElement(g.Xa, {
-                        fullWidth: !0,
-                        position: g.jb.Relative,
-                        className: "mobile-warning-bar"
-                    }, d.createElement(g.Eb, {
-                        className: "mobile-warning-bar__content",
-                        display: g.X.Flex,
-                        alignItems: g.f.Center,
-                        justifyContent: g.Wa.Start,
-                        elevation: 1,
-                        padding: {
-                            left: 3
-                        }
-                    }, d.createElement(g.W, {
-                        bold: !0
-                    }, e.message))))
-                }),
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.mobileWarnBarClick = function() {
+                            var e = t.props.eventName ? t.props.eventName : h.a.MobileBarClick;
+                            Object(h.d)(e), t.props.onClick()
+                        }, t
+                    }
+                    return i.__extends(t, e), t.prototype.render = function() {
+                        return d.createElement(g.Ua, {
+                            onClick: this.mobileWarnBarClick
+                        }, d.createElement(g.Xa, {
+                            fullWidth: !0,
+                            position: g.jb.Relative,
+                            className: "mobile-warning-bar"
+                        }, d.createElement(g.Eb, {
+                            className: "mobile-warning-bar__content",
+                            display: g.X.Flex,
+                            alignItems: g.f.Center,
+                            justifyContent: g.Wa.Start,
+                            elevation: 1,
+                            padding: {
+                                left: 3
+                            }
+                        }, d.createElement(g.W, {
+                            bold: !0
+                        }, this.props.message))))
+                    }, t
+                }(d.Component)),
                 re = n("p/6J"),
                 ie = (n("gCqA"), {
                     "data-test-selector": "dev-channel-header-mock-placeholder"
@@ -14706,6 +14715,7 @@
                         display: g.X.Flex,
                         flexDirection: g.Aa.Column
                     }, d.createElement(ne, {
+                        eventName: h.a.SandboxMobileBarClick,
                         onClick: this.bannerMailToAction,
                         message: Object(p.d)("We recommend checking this out on desktop. Tap here to send yourself an e-mail reminder.", "DevSandbox")
                     }), d.createElement(g.Xa, {
@@ -17029,7 +17039,7 @@
         Xhqo: function(e, t, n) {
             "use strict";
             var r = n("hwdV").Buffer,
-                i = n(471);
+                i = n(474);
 
             function o(e, t, n) {
                 e.copy(t, n)
@@ -19726,7 +19736,7 @@
                     u = t.Uint8Array || function() {};
                 var d = n("Onz0");
                 d.inherits = n("P7XM");
-                var h = n(472),
+                var h = n(475),
                     p = void 0;
                 p = h && h.debuglog ? h.debuglog("stream") : function() {};
                 var f, m = n("Xhqo"),

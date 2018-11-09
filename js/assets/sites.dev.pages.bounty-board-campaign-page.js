@@ -272,8 +272,7 @@
                 c = function(e) {
                     var t = e.tags;
                     return void 0 !== e.tagNumberLimit && e.tagNumberLimit > 0 && (t = t.slice(0, e.tagNumberLimit)), r.createElement(l.Xa, {
-                        display: l.X.InlineBlock,
-                        fullWidth: !0
+                        display: l.X.InlineBlock
                     }, t.map(function(t) {
                         var n = a.__assign({}, e.linkTo);
                         e.linkPath && (n.pathname = e.linkPath), n.pathname && (n.pathname = n.pathname.replace(":tagID", t.id));

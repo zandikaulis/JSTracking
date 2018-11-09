@@ -3,9 +3,55 @@
         "/Z6v": function(e, t, r) {
             e.exports = r.p + "assets/amazon_pay_dark_2x-c98151cef856bab0e62c.png"
         },
+        "1OTy": function(e, t, r) {
+            "use strict";
+            var n = r("mrSG"),
+                a = r("q1tI"),
+                i = r("/MKj"),
+                o = r("fvjX"),
+                s = r("/0dD"),
+                c = r("XDQu"),
+                u = r("Ue10"),
+                d = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return n.__extends(t, e), t.prototype.render = function() {
+                        return a.createElement(u.La, {
+                            label: this.props.label,
+                            type: this.props.type,
+                            src: this.props.src,
+                            alt: this.props.alt,
+                            srcSet: this.srcSet,
+                            value: this.props.value,
+                            onChange: this.props.onChange,
+                            checked: this.props.checked
+                        })
+                    }, Object.defineProperty(t.prototype, "srcSet", {
+                        get: function() {
+                            return this.props.darkModeEnabled && this.props.darkSrcSet || this.props.srcSet
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(a.Component);
+            var l = Object(o.compose)(Object(i.connect)(function(e) {
+                return {
+                    darkModeEnabled: Object(c.a)(e) === s.a.Dark
+                }
+            }))(d);
+            r.d(t, !1, function() {
+                return d
+            }), r.d(t, "a", function() {
+                return l
+            })
+        },
         "1P3F": function(e, t, r) {},
         "2DIU": function(e, t, r) {
             e.exports = r.p + "assets/amazon_pay_1x-4f76ba5fbbaca5a76d41.png"
+        },
+        "2ORI": function(e, t, r) {
+            e.exports = r.p + "assets/amazon_pay_dark_2x-302cb9125ccffd2d356d.png"
         },
         "2xEe": function(e, t, r) {
             e.exports = r.p + "assets/paypal_dark_1x-29d0a02f9cc67088594b.png"
@@ -13,8 +59,8 @@
         "5gJ6": function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
-                i = r("q1tI"),
-                a = r("/MKj"),
+                a = r("q1tI"),
+                i = r("/MKj"),
                 o = r("/7QA"),
                 s = r("2DIU"),
                 c = r.n(s),
@@ -43,13 +89,13 @@
                 T = r("GA+j"),
                 R = r.n(T),
                 M = r("FBRg"),
-                F = r.n(M),
-                A = r("2xEe"),
-                x = r.n(A),
+                A = r.n(M),
+                x = r("2xEe"),
+                F = r.n(x),
                 D = r("q8H6"),
                 G = r.n(D),
-                B = r("oQBz"),
-                U = r.n(B),
+                U = r("oQBz"),
+                B = r.n(U),
                 L = r("PwAB"),
                 W = r.n(L),
                 X = r("/0dD"),
@@ -61,7 +107,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        if ("prime" === this.props.paymentProvider) return i.createElement(H.sb, {
+                        if ("prime" === this.props.paymentProvider) return a.createElement(H.sb, {
                             asset: H.tb.LogoTwitchPrime,
                             width: 66,
                             height: 30,
@@ -71,9 +117,9 @@
                             t = e.src,
                             r = e.alt,
                             n = e.srcSet;
-                        return i.createElement(H.Xa, {
+                        return a.createElement(H.Xa, {
                             className: "payment-method-image"
-                        }, i.createElement(H.S, {
+                        }, a.createElement(H.S, {
                             src: t,
                             alt: r,
                             srcSet: n
@@ -86,7 +132,7 @@
                                     return {
                                         src: W.a,
                                         srcSet: {
-                                            "1x": U.a,
+                                            "1x": B.a,
                                             "2x": W.a
                                         },
                                         alt: Object(o.d)("Xsolla icon", "PaymentMethodImage")
@@ -114,7 +160,7 @@
                                             };
                                         case z.E.MASTERCARD:
                                             return {
-                                                src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? O.a : k.a,
+                                                src: this.props.darkModeEnabled ? O.a : k.a,
                                                 alt: Object(o.d)("Mastercard", "PaymentMethodImage")
                                             };
                                         case z.E.VISA:
@@ -134,8 +180,8 @@
                                     }
                                 case z.F.AMAZON:
                                     return {
-                                        src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? p.a : c.a,
-                                        srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
+                                        src: this.props.darkModeEnabled ? p.a : c.a,
+                                        srcSet: this.props.darkModeEnabled ? {
                                             "1x": p.a,
                                             "2x": h.a
                                         } : {
@@ -146,13 +192,13 @@
                                     };
                                 case z.F.PAYPAL:
                                     return {
-                                        src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? x.a : R.a,
-                                        srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
-                                            "1x": x.a,
+                                        src: this.props.darkModeEnabled ? F.a : R.a,
+                                        srcSet: this.props.darkModeEnabled ? {
+                                            "1x": F.a,
                                             "2x": G.a
                                         } : {
                                             "1x": R.a,
-                                            "2x": F.a
+                                            "2x": A.a
                                         },
                                         alt: Object(o.d)("Paypal", "PaymentMethodImage")
                                     };
@@ -170,8 +216,8 @@
                         enumerable: !0,
                         configurable: !0
                     }), t
-                }(i.Component));
-            var Y = Object(a.connect)(function(e) {
+                }(a.Component));
+            var Y = Object(i.connect)(function(e) {
                 return {
                     darkModeEnabled: Object(V.a)(e) === X.a.Dark
                 }
@@ -205,12 +251,12 @@
         "7SjK": function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
-                i = r("q1tI"),
-                a = r("TSYQ"),
+                a = r("q1tI"),
+                i = r("TSYQ"),
                 o = r("/7QA"),
                 s = r("GnwI"),
                 c = r("Ue10"),
-                u = (r("GOKC"), i.createElement(c.Eb, {
+                u = (r("GOKC"), a.createElement(c.Eb, {
                     alignItems: c.f.Center,
                     background: c.r.Overlay,
                     borderRadius: c.x.Small,
@@ -221,20 +267,20 @@
                     justifyContent: c.Wa.Center,
                     position: c.jb.Absolute,
                     zIndex: c.ic.Above
-                }, i.createElement(c.sb, {
+                }, a.createElement(c.sb, {
                     asset: c.tb.Lock,
                     height: 10,
                     width: 10
                 }))),
                 d = function(e) {
-                    var t = a("emote-button__link", {
+                    var t = i("emote-button__link", {
                             "emote-button__link--locked": !e.onClick
                         }),
                         r = e.emote,
                         n = r.displayName,
                         d = r.srcSet;
                     if (!d) return null;
-                    var l = i.createElement("img", {
+                    var l = a.createElement("img", {
                         className: "emote-picker__image",
                         srcSet: d,
                         alt: n
@@ -246,30 +292,30 @@
                                 g = f[0];
                             m[b] = g
                         }
-                        l = i.createElement(s.a, {
+                        l = a.createElement(s.a, {
                             className: "emote-picker__emote-image",
                             src: p,
                             srcSet: m,
                             alt: n || ""
                         })
                     }
-                    return i.createElement("div", {
+                    return a.createElement("div", {
                         className: "emote-button"
-                    }, i.createElement(c.Yb, {
+                    }, a.createElement(c.Yb, {
                         label: n || Object(o.d)("Emote", "EmoteButton"),
                         direction: c.ac.Bottom
-                    }, i.createElement(c.Pa, {
+                    }, a.createElement(c.Pa, {
                         display: c.X.Flex,
                         alignItems: c.f.Center,
                         justifyContent: c.Wa.Center
-                    }, i.createElement("button", {
+                    }, a.createElement("button", {
                         "data-test-selector": "emote-button-clickable",
                         className: t,
                         "aria-label": n,
                         name: n,
                         onClick: e.onClick ? e.onClick.bind(null, e.emote) : void 0,
                         "data-a-target": n
-                    }, i.createElement("figure", null, e.locked ? u : null, l)))))
+                    }, a.createElement("figure", null, e.locked ? u : null, l)))))
                 },
                 l = (r("VrOd"), function(e) {
                     function t() {
@@ -281,12 +327,12 @@
                     return n.__extends(t, e), t.prototype.render = function() {
                         var e = this,
                             t = this.props.emotes.map(function(t, r) {
-                                return i.createElement(c.Xa, {
+                                return a.createElement(c.Xa, {
                                     key: "emote-button-padder-" + t.id + "--" + t.setID,
                                     padding: {
                                         left: e.props.spaced ? .5 : 0
                                     }
-                                }, i.createElement(d, {
+                                }, a.createElement(d, {
                                     key: "emote-button-" + t.id + "--" + t.setID,
                                     emote: t,
                                     isCriticalImage: 0 === r,
@@ -294,13 +340,13 @@
                                     onClick: e.props.locked ? void 0 : e.handleClickEmote
                                 }))
                             });
-                        return i.createElement(c.Xa, {
+                        return a.createElement(c.Xa, {
                             display: c.X.Flex,
                             flexWrap: c.Ba.Wrap,
                             justifyContent: c.Wa.Center
                         }, t)
                     }, t
-                }(i.Component));
+                }(a.Component));
             r.d(t, "a", function() {
                 return l
             })
@@ -817,12 +863,12 @@
                     column: 1
                 }
             };
-            var i = {};
+            var a = {};
             n.definitions = n.definitions.concat(function(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
-                    return !i[t] && (i[t] = !0, !0)
+                    return !a[t] && (a[t] = !0, !0)
                 })
             }(r("IKE4").definitions)), e.exports = n
         },
@@ -836,8 +882,8 @@
         C8FX: function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
-                i = r("q1tI"),
-                a = r("/7QA"),
+                a = r("q1tI"),
+                i = r("/7QA"),
                 o = r("Ue10");
             r("uUdG");
             var s = function(e) {
@@ -845,68 +891,71 @@
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return n.__extends(t, e), t.prototype.render = function() {
-                    return this.props.price ? i.createElement(o.Xa, {
+                    return this.props.price ? a.createElement(o.Xa, {
                         display: o.X.Flex,
                         flexDirection: o.Aa.Column
-                    }, this.props.productDiscountPrice && i.createElement(o.W, {
+                    }, this.props.productDiscountPrice && a.createElement(o.W, {
                         bold: !0,
                         className: "ticket-price__promotion",
                         fontSize: o.Ca.Size4
-                    }, Object(a.d)("{discountedPrice} / First Month*", {
+                    }, Object(i.d)("{discountedPrice} / First Month*", {
                         discountedPrice: this.props.productDiscountPrice
-                    }, "TicketPrice")), i.createElement(o.Xa, {
+                    }, "TicketPrice")), a.createElement(o.Xa, {
                         display: o.X.Flex,
                         justifyContent: o.Wa.Center,
                         flexWrap: o.Ba.Wrap
-                    }, i.createElement(o.W, {
+                    }, a.createElement(o.W, {
                         type: o.Vb.Span,
                         fontSize: o.Ca.Size4,
                         decoration: this.props.productDiscountPrice ? o.Tb.Strikethrough : void 0,
                         "data-a-target": "js-test-ticket-price-text"
-                    }, Object(a.d)("{price} / {interval}", {
-                        price: i.createElement(o.W, {
+                    }, Object(i.d)("{price} / {interval}", {
+                        price: a.createElement(o.W, {
                             type: o.Vb.Span,
                             bold: !0
                         }, this.props.price),
                         interval: function(e) {
                             switch (e) {
                                 case "WEEK":
-                                    return Object(a.d)("Week", "TicketPrice");
+                                    return Object(i.d)("Week", "TicketPrice");
                                 case "MONTH":
-                                    return Object(a.d)("Month", "TicketPrice");
+                                    return Object(i.d)("Month", "TicketPrice");
                                 case "YEAR":
-                                    return Object(a.d)("Year", "TicketPrice");
+                                    return Object(i.d)("Year", "TicketPrice");
                                 case "ONE_TIME":
-                                    return Object(a.d)("One-Time Purchase", "TicketPrice");
+                                    return Object(i.d)("One-Time Purchase", "TicketPrice");
                                 default:
                                     return ""
                             }
                         }(this.props.interval)
-                    }, "TicketDescription")), this.formattedTaxInclusivity && i.createElement(o.Pa, {
+                    }, "TicketDescription")), this.formattedTaxInclusivity && a.createElement(o.Pa, {
                         margin: {
                             left: .5
                         }
-                    }, i.createElement(o.W, {
+                    }, a.createElement(o.W, {
                         fontSize: o.Ca.Size4,
                         type: o.Vb.Span,
                         decoration: this.props.productDiscountPrice ? o.Tb.Strikethrough : void 0
-                    }, Object(a.d)("(Includes VAT)", "TicketDescription"))))) : i.createElement(o.Za, {
+                    }, Object(i.d)("(Includes VAT)", "TicketDescription"))))) : a.createElement(o.Za, {
                         fillContent: !0
                     })
                 }, Object.defineProperty(t.prototype, "formattedTaxInclusivity", {
                     get: function() {
-                        return this.props.showEuSubs && this.props.productPriceTaxInclusive ? Object(a.d)("(Includes VAT)", "TicketPrice") : ""
+                        return this.props.showEuSubs && this.props.productPriceTaxInclusive ? Object(i.d)("(Includes VAT)", "TicketPrice") : ""
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
-            }(i.PureComponent);
+            }(a.PureComponent);
             r.d(t, "a", function() {
                 return s
             })
         },
         D8NC: function(e, t, r) {
             e.exports = r.p + "assets/amazon_pay_1x-94c97f413ee6005ab1a1.png"
+        },
+        E3rh: function(e, t, r) {
+            e.exports = r.p + "assets/more_methods_dark_2x-606b603eb4951527dc9f.png"
         },
         E78O: function(e, t, r) {},
         EF6p: function(e, t, r) {
@@ -923,21 +972,21 @@
         HGFl: function(e, t, r) {
             "use strict";
             r.d(t, "a", function() {
-                return i
-            }), r.d(t, "b", function() {
                 return a
+            }), r.d(t, "b", function() {
+                return i
             }), r.d(t, "c", function() {
                 return o
             }), r.d(t, "d", function() {
                 return s
             });
             var n = r("NAv5"),
-                i = {
+                a = {
                     RFC3399: "YYYY-MM-DDTHH:mm:ssZ",
                     timeString: "h:mma"
                 };
 
-            function a(e, t) {
+            function i(e, t) {
                 return Object(n.format)(e, t)
             }
 
@@ -949,11 +998,11 @@
                 var r = e.split(":");
                 if (2 !== r.length) throw new Error("invalid time string: " + e);
                 var n = parseInt(r[0], 10),
-                    i = parseInt(r[1].substring(0, 2), 10),
-                    a = r[1].substring(r[1].length - 2);
-                if (12 === n && "am" === a && (n = 0), "pm" === a && n < 12 && (n += 12), isNaN(n) || n < 0 || n > 23 || isNaN(i) || i < 0 || i > 59) throw new Error("invalid time string: " + e);
+                    a = parseInt(r[1].substring(0, 2), 10),
+                    i = r[1].substring(r[1].length - 2);
+                if (12 === n && "am" === i && (n = 0), "pm" === i && n < 12 && (n += 12), isNaN(n) || n < 0 || n > 23 || isNaN(a) || a < 0 || a > 59) throw new Error("invalid time string: " + e);
                 var o = t || new Date;
-                return o.setHours(n, i), o
+                return o.setHours(n, a), o
             }
         },
         HvcU: function(e, t, r) {
@@ -1110,17 +1159,20 @@
             };
             e.exports = r
         },
+        IRK4: function(e, t, r) {
+            e.exports = r.p + "assets/paypal_dark_1x-894b335a3c74ebaba75f.png"
+        },
         JH5r: function(e, t, r) {},
         Jgup: function(e, t, r) {
             "use strict";
             r.d(t, "b", function() {
-                return i
-            }), r.d(t, "a", function() {
                 return a
+            }), r.d(t, "a", function() {
+                return i
             });
             var n = r("/7QA");
 
-            function i(e) {
+            function a(e) {
                 switch (e.toUpperCase()) {
                     case "A1":
                         return Object(n.d)("Anonymous Proxy", "format-country");
@@ -1634,14 +1686,14 @@
                         return e
                 }
             }
-            var a = ["US", "CA", "AF", "AX", "AL", "DZ", "AS", "AD", "AO", "AI", "A1", "AQ", "AG", "AR", "AM", "AW", "AP", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BM", "BT", "BO", "BQ", "BA", "BW", "BV", "BR", "IO", "VG", "BN", "BG", "BF", "BI", "KH", "CM", "CV", "KY", "CF", "TD", "CL", "CN", "CX", "CC", "CO", "KM", "CG", "CD", "CK", "CR", "HR", "CU", "CW", "CY", "CZ", "DK", "DJ", "DM", "DO", "TL", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "EU", "FK", "FO", "FJ", "FI", "FR", "GF", "PF", "TF", "GA", "GM", "GE", "DE", "GH", "GI", "GR", "GL", "GD", "GP", "GU", "GT", "GG", "GN", "GW", "GY", "HT", "HM", "HN", "HK", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IM", "IL", "IT", "CI", "JM", "JP", "JE", "JO", "KZ", "KE", "KI", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MO", "MK", "MG", "MW", "MY", "MV", "ML", "MT", "MH", "MQ", "MR", "MU", "YT", "MX", "FM", "MD", "MC", "MN", "ME", "MS", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NC", "NZ", "NI", "NE", "NG", "NU", "NF", "KP", "MP", "NO", "OM", "O1", "PK", "PW", "PS", "PA", "PG", "PY", "PE", "PH", "PN", "PL", "PT", "PR", "QA", "RE", "RO", "RU", "RW", "BL", "SH", "KN", "LC", "MF", "PM", "VC", "WS", "SM", "ST", "A2", "SA", "SN", "RS", "SC", "SL", "SG", "SX", "SK", "SI", "SB", "SO", "ZA", "GS", "KR", "SS", "ES", "LK", "SD", "SR", "SJ", "SZ", "SE", "CH", "SY", "TW", "TJ", "TZ", "TH", "TG", "TK", "TO", "TT", "TN", "TR", "TM", "TC", "TV", "VI", "UG", "UA", "AE", "GB", "UM", "UY", "UZ", "VU", "VA", "VE", "VN", "WF", "EH", "YE", "ZM", "ZW"]
+            var i = ["US", "CA", "AF", "AX", "AL", "DZ", "AS", "AD", "AO", "AI", "A1", "AQ", "AG", "AR", "AM", "AW", "AP", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BM", "BT", "BO", "BQ", "BA", "BW", "BV", "BR", "IO", "VG", "BN", "BG", "BF", "BI", "KH", "CM", "CV", "KY", "CF", "TD", "CL", "CN", "CX", "CC", "CO", "KM", "CG", "CD", "CK", "CR", "HR", "CU", "CW", "CY", "CZ", "DK", "DJ", "DM", "DO", "TL", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "EU", "FK", "FO", "FJ", "FI", "FR", "GF", "PF", "TF", "GA", "GM", "GE", "DE", "GH", "GI", "GR", "GL", "GD", "GP", "GU", "GT", "GG", "GN", "GW", "GY", "HT", "HM", "HN", "HK", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IM", "IL", "IT", "CI", "JM", "JP", "JE", "JO", "KZ", "KE", "KI", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MO", "MK", "MG", "MW", "MY", "MV", "ML", "MT", "MH", "MQ", "MR", "MU", "YT", "MX", "FM", "MD", "MC", "MN", "ME", "MS", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NC", "NZ", "NI", "NE", "NG", "NU", "NF", "KP", "MP", "NO", "OM", "O1", "PK", "PW", "PS", "PA", "PG", "PY", "PE", "PH", "PN", "PL", "PT", "PR", "QA", "RE", "RO", "RU", "RW", "BL", "SH", "KN", "LC", "MF", "PM", "VC", "WS", "SM", "ST", "A2", "SA", "SN", "RS", "SC", "SL", "SG", "SX", "SK", "SI", "SB", "SO", "ZA", "GS", "KR", "SS", "ES", "LK", "SD", "SR", "SJ", "SZ", "SE", "CH", "SY", "TW", "TJ", "TZ", "TH", "TG", "TK", "TO", "TT", "TN", "TR", "TM", "TC", "TV", "VI", "UG", "UA", "AE", "GB", "UM", "UY", "UZ", "VU", "VA", "VE", "VN", "WF", "EH", "YE", "ZM", "ZW"]
         },
         "KJv/": function(e, t, r) {
             "use strict";
             r.r(t);
             var n = r("mrSG"),
-                i = r("q1tI"),
-                a = r("oJmH"),
+                a = r("q1tI"),
+                i = r("oJmH"),
                 o = r("/7QA"),
                 s = r("cZKs"),
                 c = r("8/mp"),
@@ -1663,9 +1715,9 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.startTime = Date.now(), t.handleOnClose = function() {
-                            Object(d.d)(), t.props.onClose && t.props.onClose()
+                            Object(d.e)(), t.props.onClose && t.props.onClose()
                         }, t.onBeforeUnloadHandler = function() {
-                            Object(d.d)(), window.removeEventListener("beforeunload", t.onBeforeUnloadHandler)
+                            Object(d.e)(), window.removeEventListener("beforeunload", t.onBeforeUnloadHandler)
                         }, t.trackBenchmarkComplete = function() {
                             t.props.latencyTracking.unsubscribeFromInteractivityCompletion(t.trackBenchmarkComplete);
                             var e = Date.now() - t.startTime;
@@ -1677,28 +1729,29 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.reportInteractive()
                     }, t.prototype.componentWillUnmount = function() {
-                        Object(d.d)(), this.props.latencyTracking.unsubscribeFromInteractivityCompletion(this.trackBenchmarkComplete)
+                        Object(d.e)(), this.props.latencyTracking.unsubscribeFromInteractivityCompletion(this.trackBenchmarkComplete)
                     }, t.prototype.render = function() {
                         var e;
                         if (this.props.data && this.props.data.loading) e = null;
                         else {
                             var t = this.props.data && this.props.data.recipient || null;
-                            e = i.createElement(c.b, {
+                            e = a.createElement(c.b, {
                                 suppressScrollX: !0
-                            }, i.createElement(m.a, {
+                            }, a.createElement(m.a, {
                                 productName: this.props.productName,
                                 isGift: !(!t || !t.id) || !!this.props.mysteryGiftCount,
                                 recipientID: t && t.id,
                                 recipientDisplayName: t && t.displayName,
                                 trackingContext: this.props.trackingContext,
                                 mysteryGiftCount: this.props.mysteryGiftCount || null,
+                                isAnonymous: this.props.isAnonymous || !1,
                                 onCheckoutProgress: this.props.onCheckoutProgress
                             }))
                         }
-                        return i.createElement(f.Eb, {
+                        return a.createElement(f.Eb, {
                             background: f.r.Alt,
                             className: "checkout-modal__container"
-                        }, e, i.createElement(s.a, {
+                        }, e, a.createElement(s.a, {
                             ignoreEscKey: !0,
                             closeOnPageNavigation: !0,
                             onClose: this.handleOnClose
@@ -1706,8 +1759,8 @@
                     }, t.prototype.reportInteractive = function() {
                         g(this.props) ? this.props.latencyTracking.reportInteractive() : !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                     }, t
-                }(i.Component),
-                E = Object(a.compose)(Object(h.b)("CheckoutModal"), Object(u.a)(b, {
+                }(a.Component),
+                E = Object(i.compose)(Object(h.b)("CheckoutModal"), Object(u.a)(b, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1722,13 +1775,13 @@
             r.d(t, "CheckoutModal", function() {
                 return E
             }), r.d(t, "CheckoutModalPublicProps", function() {}), r.d(t, "clearSubscriptionCheckoutKeys", function() {
-                return d.d
-            }), r.d(t, "SUB_CHECKOUT__PRODUCT_KEY", function() {
-                return d.b
-            }), r.d(t, "SUB_CHECKOUT__RECIPIENT_KEY", function() {
-                return d.c
-            }), r.d(t, "showLoginModalWithCheckoutDispatch", function() {
                 return d.e
+            }), r.d(t, "SUB_CHECKOUT__PRODUCT_KEY", function() {
+                return d.c
+            }), r.d(t, "SUB_CHECKOUT__RECIPIENT_KEY", function() {
+                return d.d
+            }), r.d(t, "showLoginModalWithCheckoutDispatch", function() {
+                return d.f
             })
         },
         KL9a: function(e, t, r) {
@@ -1837,6 +1890,9 @@
             };
             e.exports = r
         },
+        MU3X: function(e, t, r) {
+            e.exports = r.p + "assets/more_methods_dark_1x-e97146d0a834e34ca979.png"
+        },
         NwMv: function(e, t, r) {},
         OpME: function(e, t, r) {
             "use strict";
@@ -1854,8 +1910,8 @@
                 return y
             });
             var n = r("mrSG"),
-                i = r("lZdE"),
-                a = r("cpJf"),
+                a = r("lZdE"),
+                i = r("cpJf"),
                 o = {
                     "B-?\\)": "B)",
                     "\\:-?[z|Z|\\|]": ":|",
@@ -1888,16 +1944,16 @@
                 for (var t = [], r = function(e) {
                         if (!e || !e.id || !e.token) return "continue";
                         var r = o[e.token] || e.token,
-                            i = s.reduce(function(t, r) {
+                            a = s.reduce(function(t, r) {
                                 var n = t;
                                 return n && (n = n.concat(", ")), n.concat("https://static-cdn.jtvnw.net/emoticons/v1/" + e.id + "/" + r + " " + r + "x")
                             }, "");
                         t.push(n.__assign({
                             displayName: r,
-                            srcSet: i
+                            srcSet: a
                         }, e))
-                    }, i = 0, a = e; i < a.length; i++) {
-                    r(a[i])
+                    }, a = 0, i = e; a < i.length; a++) {
+                    r(i[a])
                 }
                 return t
             }
@@ -1923,40 +1979,40 @@
 
             function p(e) {
                 for (var t = [], r = 0, n = e; r < n.length; r++) {
-                    var i = n[r];
-                    if (i && i.id && i.emotes) {
-                        for (var a = {
-                                id: i.id,
+                    var a = n[r];
+                    if (a && a.id && a.emotes) {
+                        for (var i = {
+                                id: a.id,
                                 emotes: []
-                            }, o = 0, s = i.emotes; o < s.length; o++) {
+                            }, o = 0, s = a.emotes; o < s.length; o++) {
                             var c = s[o];
-                            c && c.id && c.token && a.emotes.push(c)
+                            c && c.id && c.token && i.emotes.push(c)
                         }
-                        t.push(a)
+                        t.push(i)
                     }
                 }
                 return t
             }
 
             function m(e) {
-                for (var t = [], r = [], n = 0, i = e; n < i.length; n++) {
-                    var a = i[n];
-                    if (a && a.id && a.emotes) {
+                for (var t = [], r = [], n = 0, a = e; n < a.length; n++) {
+                    var i = a[n];
+                    if (i && i.id && i.emotes) {
                         var o = {
-                            id: a.id,
-                            emotes: d(l(a.emotes), a.id)
+                            id: i.id,
+                            emotes: d(l(i.emotes), i.id)
                         };
-                        a.owner && (o.owner = a.owner), c.has(parseInt(a.id, 10)) ? t.push(o) : r.push(o)
+                        i.owner && (o.owner = i.owner), c.has(parseInt(i.id, 10)) ? t.push(o) : r.push(o)
                     }
                 }
                 return r.concat(t)
             }
             var h = function(e, t, r) {
-                    var n = r || a.d,
+                    var n = r || i.d,
                         o = [],
                         s = [],
                         c = [],
-                        u = new RegExp("^" + Object(i.a)(t), "i");
+                        u = new RegExp("^" + Object(a.a)(t), "i");
                     return e.forEach(function(e) {
                         n[e.token] ? c.push(e) : e.token.match(u) ? o.push(e) : s.push(e)
                     }), o.sort(function(e, t) {
@@ -1980,8 +2036,8 @@
         QV0B: function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
-                i = r("q1tI"),
-                a = r("Ue10"),
+                a = r("q1tI"),
+                i = r("Ue10"),
                 o = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -1996,33 +2052,33 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return this.props.collapsable ? i.createElement(i.Fragment, null, i.createElement(a.Xa, {
-                            display: this.state.collapsed ? a.X.Hide : a.X.Block,
+                        return this.props.collapsable ? a.createElement(a.Fragment, null, a.createElement(i.Xa, {
+                            display: this.state.collapsed ? i.X.Hide : i.X.Block,
                             breakpointLarge: {
-                                display: a.X.Block
+                                display: i.X.Block
                             }
-                        }, i.createElement(a.H, null, this.props.children)), i.createElement(a.Xa, {
-                            display: a.X.Block,
+                        }, a.createElement(i.H, null, this.props.children)), a.createElement(i.Xa, {
+                            display: i.X.Block,
                             breakpointLarge: {
-                                display: a.X.Hide
+                                display: i.X.Hide
                             }
-                        }, i.createElement(a.Ua, {
+                        }, a.createElement(i.Ua, {
                             onClick: this.toggleCollapsed,
                             hover: !1,
-                            type: a.Va.Alpha
-                        }, i.createElement(a.Xa, {
+                            type: i.Va.Alpha
+                        }, a.createElement(i.Xa, {
                             fullWidth: !0,
-                            textAlign: a.Rb.Center,
-                            alignItems: a.f.Center,
+                            textAlign: i.Rb.Center,
+                            alignItems: i.f.Center,
                             padding: {
                                 y: 1
                             }
-                        }, i.createElement(a.W, {
-                            type: a.Vb.Span,
-                            color: a.O.Link
-                        }, this.state.collapsed ? this.props.showButtonLabel : this.props.hideButtonLabel))))) : i.createElement(a.H, null, this.props.children)
+                        }, a.createElement(i.W, {
+                            type: i.Vb.Span,
+                            color: i.O.Link
+                        }, this.state.collapsed ? this.props.showButtonLabel : this.props.hideButtonLabel))))) : a.createElement(i.H, null, this.props.children)
                     }, t
-                }(i.Component);
+                }(a.Component);
             r.d(t, "a", function() {
                 return o
             })
@@ -2031,8 +2087,8 @@
         "R9u/": function(e, t, r) {},
         SNyx: function(e, t, r) {
             "use strict";
-            var n, i = r("/MKj"),
-                a = r("fvjX"),
+            var n, a = r("/MKj"),
+                i = r("fvjX"),
                 o = r("1/iK"),
                 s = r("y5D0"),
                 c = r("kRBY"),
@@ -2245,7 +2301,7 @@
                         configurable: !0
                     }), t
                 }(l.Component);
-            var N, j = Object(i.connect)(function(e) {
+            var N, j = Object(a.connect)(function(e) {
                     return {
                         sessionUser: Object(c.e)(e)
                     }
@@ -2406,7 +2462,7 @@
                         configurable: !0
                     }), t
                 }(l.PureComponent),
-                F = function(e) {
+                A = function(e) {
                     return l.createElement(C.Eb, {
                         background: C.r.Base,
                         borderMarked: !0,
@@ -2426,7 +2482,7 @@
                         }
                     }, l.createElement(C.W, null, Object(p.d)("You'll be able to subscribe to another channel for free with Twitch Prime 30 days after you last used your free subscription.", "UpgradePrimeWarning"))), l.createElement(C.W, null, Object(p.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradePrimeWarning")))
                 },
-                A = function(e) {
+                x = function(e) {
                     return l.createElement(C.Eb, {
                         background: C.r.Base,
                         borderMarked: !0,
@@ -2449,7 +2505,7 @@
                         originalPrice: e.originalPrice
                     }, "UpgradeTierWarning"))), l.createElement(C.W, null, Object(p.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradeTierWarning")))
                 },
-                x = (r("mIie"), function(e) {
+                F = (r("mIie"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.enablePaidUpgradeFlag = p.b.get("earth_wind_fire", !1), t.chargeTimeMessage = Object(p.d)("You will be charged on {date}", {
@@ -2466,7 +2522,7 @@
                             if (this.props.eligiblePromotions && this.props.eligiblePromotions.isOneMonthFreeEligible && (e = this.renderOneFreeMonth()), this.props.productEligibility === N.TIER_UPGRADE) t = this.renderTierUpgrade();
                             else if (this.props.productEligibility === N.PRIME_UPGRADE) {
                             var r = this.formattedPrice;
-                            r && (t = l.createElement(F, {
+                            r && (t = l.createElement(A, {
                                 newPrice: r
                             }))
                         } else this.props.productEligibility === N.NEW_PURCHASE && this.hasActiveGiftSubscription && (this.props.eligiblePromotions && this.props.eligiblePromotions.paidUpgradePromotion && (e = this.renderSubtemberDiscount()), t = this.renderGiftSubUpgrade());
@@ -2481,14 +2537,14 @@
                         var t = e.price,
                             r = e.currency,
                             n = e.divisor,
-                            i = Object(p.f)(t / n, {
+                            a = Object(p.f)(t / n, {
                                 style: "currency",
                                 currency: r
                             }),
-                            a = this.formattedPrice;
-                        return i && a ? l.createElement(A, {
-                            originalPrice: i,
-                            newPrice: a
+                            i = this.formattedPrice;
+                        return a && i ? l.createElement(x, {
+                            originalPrice: a,
+                            newPrice: i
                         }) : null
                     }, t.prototype.renderGiftSubUpgrade = function() {
                         var e = this.props.benefit.endsAt;
@@ -2538,7 +2594,7 @@
                             r = t && parseInt(t, 10) / 1e3,
                             n = this.props.product.quantity;
                         if (!n || !this.formattedPrice) return null;
-                        var i = Object(p.d)("Gift recipients will be chosen at random, starting with viewers of the streamer's channel who do not currently subscribe. <x:gift-info>Learn how Twitch picks recipients.</x:gift-info>", {
+                        var a = Object(p.d)("Gift recipients will be chosen at random, starting with viewers of the streamer's channel who do not currently subscribe. <x:gift-info>Learn how Twitch picks recipients.</x:gift-info>", {
                             "x:gift-info": function(e) {
                                 return l.createElement(C.U, {
                                     targetBlank: !0,
@@ -2552,12 +2608,12 @@
                             quantity: n,
                             numericalTier: r
                         }, "PurchasePreview");
-                        var a = this.props.product.product.priceInfo.total * n,
+                        var i = this.props.product.product.priceInfo.total * n,
                             o = Object(p.d)("{price} each", {
                                 price: this.formattedPrice
                             }, "PurchasePreview"),
                             s = Object(p.d)("Total {totalPrice}", {
-                                totalPrice: Object(p.f)(a / Math.pow(10, this.props.product.product.priceInfo.exponent), {
+                                totalPrice: Object(p.f)(i / Math.pow(10, this.props.product.product.priceInfo.exponent), {
                                     style: "currency",
                                     currency: this.props.product.product.priceInfo.currency
                                 })
@@ -2580,7 +2636,7 @@
                         }, o)), l.createElement(C.W, {
                             type: C.Vb.H5,
                             bold: !0
-                        }, s)), l.createElement(C.W, null, i))
+                        }, s)), l.createElement(C.W, null, a))
                     }, t.prototype.renderOneFreeMonth = function() {
                         var e = new Date,
                             t = this.props.benefit;
@@ -2728,8 +2784,8 @@
                         }, "GiftSubReceipt"))
                     }, t
                 }(l.PureComponent)),
-                B = Object(D.a)(G),
-                U = (r("XE3n"), function(e) {
+                U = Object(D.a)(G),
+                B = (r("XE3n"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.goBackToChannel = function() {
@@ -2798,7 +2854,7 @@
                         }
                     }, t
                 }(l.PureComponent)),
-                L = Object(D.a)(U),
+                L = Object(D.a)(B),
                 W = (r("ZHRK"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2863,20 +2919,20 @@
                         var e = this.props.product.product && this.props.product.product.owner && this.props.product.product.owner.id || "",
                             t = Object(g.a)(e, this.props.sessionUser),
                             r = this.props.product.product,
-                            i = r && r.owner,
-                            a = this.props.benefit;
+                            a = r && r.owner,
+                            i = this.props.benefit;
                         return this.props.purchaseFlow === n.MYSTERY_GIFT ? l.createElement(L, {
-                            productOwnerDisplayName: i && i.displayName || "",
-                            productOwnerLogin: i && i.login || "",
+                            productOwnerDisplayName: a && a.displayName || "",
+                            productOwnerLogin: a && a.login || "",
                             invoicePrice: this.props.purchaseInvoice.price,
                             invoiceCurrency: this.props.purchaseInvoice.currency || "USD",
                             tier: this.props.purchaseInvoice.tier || "",
                             mysteryGiftCount: this.props.product.quantity || 1,
                             isEsportChannel: t
-                        }) : this.props.purchaseFlow === n.GIFT_SUB ? this.props.product.recipient ? l.createElement(B, {
+                        }) : this.props.purchaseFlow === n.GIFT_SUB ? this.props.product.recipient ? l.createElement(U, {
                             recipientDisplayName: this.props.product.recipient.displayName,
-                            productOwnerDisplayName: i && i.displayName || "",
-                            productOwnerLogin: i && i.login || "",
+                            productOwnerDisplayName: a && a.displayName || "",
+                            productOwnerLogin: a && a.login || "",
                             invoicePrice: this.props.purchaseInvoice && this.props.purchaseInvoice.price || void 0,
                             invoiceCurrency: this.props.purchaseInvoice && this.props.purchaseInvoice.currency || "USD",
                             isEsportChannel: t
@@ -2884,15 +2940,15 @@
                             purchaserDisplayName: this.props.currentUser && this.props.currentUser.displayName || "",
                             productOwnerDisplayName: "turbo",
                             productOwnerLogin: "turbo",
-                            giftSubEndsAt: a && a.gift && (a.gift.isGift || null) && a.endsAt,
+                            giftSubEndsAt: i && i.gift && (i.gift.isGift || null) && i.endsAt,
                             invoicePrice: this.props.purchaseInvoice.price,
                             invoiceCurrency: this.props.purchaseInvoice.currency || "USD",
                             invoiceDivisor: this.props.purchaseInvoice.divisor || 100
                         }) : null : l.createElement(X, {
                             purchaserDisplayName: this.props.currentUser && this.props.currentUser.displayName || "",
-                            productOwnerDisplayName: i && i.displayName || "",
-                            productOwnerLogin: i && i.login || "",
-                            giftSubEndsAt: a && a.gift && (a.gift.isGift || null) && a.endsAt || "",
+                            productOwnerDisplayName: a && a.displayName || "",
+                            productOwnerLogin: a && a.login || "",
+                            giftSubEndsAt: i && i.gift && (i.gift.isGift || null) && i.endsAt || "",
                             invoicePrice: this.props.purchaseInvoice.price,
                             invoiceCurrency: this.props.purchaseInvoice.currency || "USD",
                             invoiceDivisor: this.props.purchaseInvoice.divisor || 100
@@ -3150,11 +3206,11 @@
                     light: "#000",
                     dark: "#fff"
                 }),
-                ie = {
+                ae = {
                     light: "#a49fad",
                     dark: "#898395"
                 },
-                ae = function() {
+                ie = function() {
                     return {
                         cvv: !1,
                         first_name: !1,
@@ -3174,7 +3230,7 @@
                             recurlyReady: !1,
                             awaitingResponse: !1,
                             errorMessage: "",
-                            errorState: ae(),
+                            errorState: ie(),
                             userCountryOfResidence: t.props.userCountryOfResidence,
                             userZipCode: t.props.userZipCode,
                             paymentMethodEnabled: t.props.eligibilityStatus === R.ACTIVE
@@ -3242,14 +3298,14 @@
                                 })
                             })
                         }, t.handleValidationError = function(e, r) {
-                            var n = ae(),
-                                i = "";
+                            var n = ie(),
+                                a = "";
                             r.length && r.forEach(function(e) {
                                 n[e] = !0
-                            }), e && (i = Object(p.d)("The transaction was declined due to invalid data. Please make sure you have entered the correct information.", "RecurlyCreditCard"), e.code !== re.a.Validation && e.code !== re.a.InvalidParameter || (e.fields && e.fields.forEach(function(e) {
+                            }), e && (a = Object(p.d)("The transaction was declined due to invalid data. Please make sure you have entered the correct information.", "RecurlyCreditCard"), e.code !== re.a.Validation && e.code !== re.a.InvalidParameter || (e.fields && e.fields.forEach(function(e) {
                                 n[e] = !0
-                            }), i = Object(p.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "RecurlyCreditCard"))), t.setState({
-                                errorMessage: i,
+                            }), a = Object(p.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "RecurlyCreditCard"))), t.setState({
+                                errorMessage: a,
                                 errorState: n
                             })
                         }, t.handleFirstName = function(e) {
@@ -3420,9 +3476,8 @@
                             }), clearInterval(e.hostedFieldPollId))
                         }, 500)
                     }, t.prototype.setupConfigs = function() {
-                        var e = !window.location.href.includes("/products/") && this.props.darkModeEnabled,
-                            t = e ? ie.dark : ie.light,
-                            r = e ? ne.dark : ne.light;
+                        var e = this.props.darkModeEnabled ? ae.dark : ae.light,
+                            t = this.props.darkModeEnabled ? ne.dark : ne.light;
                         window.recurly.configure({
                             publicKey: this.props.publicKey,
                             fraud: {
@@ -3436,19 +3491,19 @@
                                     style: {
                                         height: "auto",
                                         fontSize: "12px",
-                                        fontColor: r,
+                                        fontColor: t,
                                         placeholder: {
-                                            color: t
+                                            color: e
                                         }
                                     }
                                 },
                                 number: {
                                     selector: "#recurly-number",
                                     style: {
-                                        fontColor: r,
+                                        fontColor: t,
                                         placeholder: {
                                             content: Object(p.d)("Card Number", "RecurlyCreditCard"),
-                                            color: t
+                                            color: e
                                         }
                                     }
                                 },
@@ -3456,10 +3511,10 @@
                                     selector: "#recurly-month",
                                     inputType: "select",
                                     style: {
-                                        fontColor: r,
+                                        fontColor: t,
                                         placeholder: {
                                             content: Object(p.d)("Select Month", "RecurlyCreditCard"),
-                                            color: t
+                                            color: e
                                         }
                                     }
                                 },
@@ -3467,20 +3522,20 @@
                                     selector: "#recurly-year",
                                     inputType: "select",
                                     style: {
-                                        fontColor: r,
+                                        fontColor: t,
                                         placeholder: {
                                             content: Object(p.d)("Select Year", "RecurlyCreditCard"),
-                                            color: t
+                                            color: e
                                         }
                                     }
                                 },
                                 cvv: {
                                     selector: "#recurly-cvv",
                                     style: {
-                                        fontColor: r,
+                                        fontColor: t,
                                         placeholder: {
                                             content: Object(p.d)("CVV", "RecurlyCreditCard"),
-                                            color: t
+                                            color: e
                                         }
                                     }
                                 }
@@ -3488,7 +3543,7 @@
                         })
                     }, t = u.__decorate([Object(J.b)("RecurlyCreditCard")], t)
                 }(l.Component);
-            var se, ce = Object(i.connect)(function(e) {
+            var se, ce = Object(a.connect)(function(e) {
                     return {
                         darkModeEnabled: Object(te.a)(e) === ee.a.Dark
                     }
@@ -3810,14 +3865,14 @@
                                 creditCardCity: Object(p.d)("City", "ZuoraCreditCard"),
                                 creditCardPostalCode: Object(p.d)("Zip Code", "ZuoraCreditCard")
                             },
-                            i = r.map(function(e) {
+                            a = r.map(function(e) {
                                 var t = n[e];
                                 return t || ""
                             }).filter(function(e) {
                                 return "" !== e
                             });
                         t.setState({
-                            nullValueErrors: i
+                            nullValueErrors: a
                         })
                     }, t
                 }
@@ -3897,7 +3952,7 @@
                     configurable: !0
                 }), t = u.__decorate([Object(J.b)("ZuoraCreditCard")], t)
             }(l.Component);
-            var he, ye = Object(i.connect)(function(e) {
+            var he, ye = Object(a.connect)(function(e) {
                 return {
                     languageCode: Object(c.b)(e)
                 }
@@ -3967,19 +4022,32 @@
                 ge = r.n(be),
                 ve = r("yrda"),
                 Ee = r.n(ve),
-                Ce = r("AVF4"),
+                Ce = r("csmi"),
                 ke = r.n(Ce),
-                Pe = r("BIez"),
+                Pe = r("2ORI"),
                 Oe = r.n(Pe),
-                Se = r("EF6p"),
+                Se = r("AVF4"),
                 Ie = r.n(Se),
-                Ne = r("xgE2"),
+                Ne = r("BIez"),
                 je = r.n(Ne),
-                we = r("ZiR0"),
+                we = r("EF6p"),
                 _e = r.n(we),
-                Te = r("KRuc"),
+                Te = r("xgE2"),
                 Re = r.n(Te),
-                Me = {
+                Me = r("MU3X"),
+                Ae = r.n(Me),
+                xe = r("E3rh"),
+                Fe = r.n(xe),
+                De = r("ZiR0"),
+                Ge = r.n(De),
+                Ue = r("KRuc"),
+                Be = r.n(Ue),
+                Le = r("IRK4"),
+                We = r.n(Le),
+                Xe = r("bvmA"),
+                ze = r.n(Xe),
+                Ve = r("1OTy"),
+                He = {
                     CreditCard: function() {
                         return Object(p.d)("Credit Card", "TicketDescription")
                     },
@@ -3993,67 +4061,87 @@
                         return Object(p.d)("More Methods", "TicketDescription")
                     }
                 },
-                Fe = function(e) {
+                Ze = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.paymentProviders = [{
                             paymentMethodType: he.RecurlyCreditCard,
                             paymentFlow: Q.b.RecurlyCreditCard,
                             button: {
-                                label: Me.CreditCard(),
-                                src: ke.a,
-                                alt: Me.CreditCard(),
+                                label: He.CreditCard(),
+                                src: Ie.a,
+                                alt: He.CreditCard(),
                                 srcSet: {
-                                    "1x": ke.a,
-                                    "2x": Oe.a
+                                    "1x": Ie.a,
+                                    "2x": je.a
+                                },
+                                darkSrcSet: {
+                                    "1x": Ie.a,
+                                    "2x": je.a
                                 }
                             }
                         }, {
                             paymentMethodType: he.ZuoraCreditCard,
                             paymentFlow: Q.b.ZuoraCreditCard,
                             button: {
-                                label: Me.CreditCard(),
-                                src: ke.a,
-                                alt: Me.CreditCard(),
+                                label: He.CreditCard(),
+                                src: Ie.a,
+                                alt: He.CreditCard(),
                                 srcSet: {
-                                    "1x": ke.a,
-                                    "2x": Oe.a
+                                    "1x": Ie.a,
+                                    "2x": je.a
+                                },
+                                darkSrcSet: {
+                                    "1x": Ie.a,
+                                    "2x": je.a
                                 }
                             }
                         }, {
                             paymentMethodType: he.RecurlyPaypal,
                             paymentFlow: Q.b.RecurlyPaypal,
                             button: {
-                                label: Me.Paypal(),
-                                src: _e.a,
-                                alt: Me.Paypal(),
+                                label: He.Paypal(),
+                                src: Ge.a,
+                                alt: He.Paypal(),
                                 srcSet: {
-                                    "1x": _e.a,
-                                    "2x": Re.a
+                                    "1x": Ge.a,
+                                    "2x": Be.a
+                                },
+                                darkSrcSet: {
+                                    "1x": We.a,
+                                    "2x": ze.a
                                 }
                             }
                         }, {
                             paymentMethodType: he.RecurlyAmazonPay,
                             paymentFlow: Q.b.RecurlyPayWithAmazon,
                             button: {
-                                label: Me.AmazonPay(),
+                                label: He.AmazonPay(),
                                 src: ge.a,
-                                alt: Me.AmazonPay(),
+                                alt: He.AmazonPay(),
                                 srcSet: {
                                     "1x": ge.a,
                                     "2x": Ee.a
+                                },
+                                darkSrcSet: {
+                                    "1x": ke.a,
+                                    "2x": Oe.a
                                 }
                             }
                         }, {
                             paymentMethodType: he.Xsolla,
                             paymentFlow: Q.b.Xsolla,
                             button: {
-                                label: Me.MoreMethods(),
-                                src: Ie.a,
-                                alt: Me.MoreMethods(),
+                                label: He.MoreMethods(),
+                                src: _e.a,
+                                alt: He.MoreMethods(),
                                 srcSet: {
-                                    "1x": Ie.a,
-                                    "2x": je.a
+                                    "1x": _e.a,
+                                    "2x": Re.a
+                                },
+                                darkSrcSet: {
+                                    "1x": Ae.a,
+                                    "2x": Fe.a
                                 }
                             }
                         }], t.handleClick = function(e, r) {
@@ -4079,12 +4167,13 @@
                                         default: 6,
                                         sm: 3
                                     }
-                                }, l.createElement(C.La, {
+                                }, l.createElement(Ve.a, {
                                     label: t.button.label,
                                     type: C.Ma.Radio,
                                     src: t.button.src,
                                     alt: t.button.alt,
                                     srcSet: t.button.srcSet,
+                                    darkSrcSet: t.button.darkSrcSet,
                                     value: t.paymentMethodType,
                                     onChange: e.handleClick(t.paymentMethodType, t.paymentFlow),
                                     checked: e.props.selectedProvider === t.paymentMethodType
@@ -4095,7 +4184,7 @@
                         }, t))
                     }, t
                 }(l.PureComponent),
-                Ae = function(e) {
+                Ye = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4104,8 +4193,8 @@
                             var e = t.props,
                                 r = e.configs,
                                 n = e.handleCompletePurchase,
-                                i = e.handleCountryChange,
-                                a = e.trackPaymentFormInteraction,
+                                a = e.handleCountryChange,
+                                i = e.trackPaymentFormInteraction,
                                 o = t.props.eligiblePaymentMethods,
                                 s = t;
                             return Object.values(he).map(function(e) {
@@ -4122,8 +4211,8 @@
                                     userCountryOfResidence: s.props.userCountryOfResidence,
                                     userZipCode: s.props.userZipCode,
                                     handleCompletePurchase: n,
-                                    handleCountryChange: i,
-                                    trackPaymentFormInteraction: a,
+                                    handleCountryChange: a,
+                                    trackPaymentFormInteraction: i,
                                     showEuSubs: s.props.showEuSubs
                                 })) : null
                             })
@@ -4139,16 +4228,16 @@
                             }).map(function(e) {
                                 return e.type
                             }), r = 0, n = e; r < n.length; r++) {
-                            var i = n[r];
-                            if (t.includes(i)) {
+                            var a = n[r];
+                            if (t.includes(a)) {
                                 this.setState({
-                                    selectedProvider: i
+                                    selectedProvider: a
                                 });
                                 break
                             }
                         }
                     }, t.prototype.render = function() {
-                        return l.createElement(l.Fragment, null, l.createElement(Fe, {
+                        return l.createElement(l.Fragment, null, l.createElement(Ze, {
                             eligiblePaymentMethods: this.props.eligiblePaymentMethods,
                             selectedProvider: this.state.selectedProvider,
                             handleClick: this.handlePaymentMethodSelectorToggleChange,
@@ -4160,8 +4249,8 @@
                         }, this.renderPaymentMethods()))
                     }, t
                 }(l.Component),
-                xe = r("85n/"),
-                De = function(e) {
+                Ke = r("85n/"),
+                qe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4174,9 +4263,9 @@
                             var r = t.zeroIndexedMonth(e),
                                 n = e.expirationYear;
                             if (void 0 === r || !n) return !1;
-                            var i = Object(d.startOfMonth)(new Date),
-                                a = new Date(n, r, 1);
-                            return !!Object(d.isBefore)(a, i)
+                            var a = Object(d.startOfMonth)(new Date),
+                                i = new Date(n, r, 1);
+                            return !!Object(d.isBefore)(i, a)
                         }, t.zeroIndexedMonth = function(e) {
                             if (e.expirationMonth) return e.expirationMonth - 1
                         }, t.handleSubmit = function() {
@@ -4249,15 +4338,14 @@
                             border: !0,
                             borderRadius: C.x.Small,
                             padding: 2
-                        }, l.createElement(xe.a, {
+                        }, l.createElement(Ke.a, {
                             paymentType: e.paymentType,
                             cardType: e.cardType,
                             provider: e.provider,
                             lastFour: e.lastFour,
                             expirationYear: e.expirationYear,
                             billingEmail: e.billingEmail,
-                            expirationMonth: e.expirationMonth,
-                            ignoreDarkMode: !0
+                            expirationMonth: e.expirationMonth
                         })), this.props.showEuSubs && l.createElement(C.Xa, {
                             margin: {
                                 y: 1
@@ -4278,7 +4366,7 @@
                         }, Object(p.d)("Complete Purchase", "SavedMethods"))))
                     }, t
                 }(l.Component),
-                Ge = function() {
+                Qe = function() {
                     function e(e) {
                         var t = this;
                         this.recurlyCountries = p.b.get("payments_recurly_countries", ["US"]), this.payPalEuSubsEnabled = p.b.get("paypal_eu_subs", !1), this.getDeterminedTaxCountry = function() {
@@ -4339,15 +4427,15 @@
                         configurable: !0
                     }), e
                 }(),
-                Be = r("iWNC");
-            var Ue = function(e) {
+                Je = r("iWNC");
+            var $e = function(e) {
                 var t = Date.now() - e;
                 return function() {
                     var r = Date.now();
                     return t + e <= r ? (t = r, "cache-and-network") : "cache-first"
                 }
             }(3e3);
-            var Le, We = function(e) {
+            var et, tt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4366,7 +4454,7 @@
                     return u.__extends(t, e), t.prototype.componentDidMount = function() {
                         (this.dataReady(this.props) || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), null !== this.tracker.get("savedPaymentAvailable") && null !== this.tracker.get("savedPaymentDisplayed") && this.tracker.reportEvent());
                         var e = this.savedPaymentMethod;
-                        this.eligibilityComputer = new Ge({
+                        this.eligibilityComputer = new Qe({
                             productName: this.props.productName,
                             userCountryOfResidence: this.props.countryOfResidence,
                             ipCountryCode: this.props.ipCountryCode,
@@ -4403,7 +4491,7 @@
                         (this.dataReady(this.props) || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), null !== this.tracker.get("savedPaymentAvailable") && null !== this.tracker.get("savedPaymentDisplayed") && this.tracker.reportEvent());
                         var r = this.savedPaymentMethod;
                         if (e.userBestGuessCountry !== this.props.userBestGuessCountry || e.data && this.props.data && e.data.currentUser !== this.props.data.currentUser || !this.dataReady(e) && this.dataReady(this.props)) {
-                            this.eligibilityComputer = new Ge({
+                            this.eligibilityComputer = new Qe({
                                 productName: this.props.productName,
                                 userCountryOfResidence: this.props.countryOfResidence,
                                 ipCountryCode: this.props.ipCountryCode,
@@ -4416,28 +4504,28 @@
                             });
                             var n = this.eligibilityComputer.getAvailableMethods();
                             if (this.props.showEuSubs) {
-                                var i = Object.values(he).map(function(e) {
+                                var a = Object.values(he).map(function(e) {
                                     var r = t.eligiblePaymentMethods.find(function(t) {
                                             return t.type === e
                                         }),
-                                        i = r && r.status === R.HIDDEN ? R.HIDDEN : R.DISABLED;
+                                        a = r && r.status === R.HIDDEN ? R.HIDDEN : R.DISABLED;
                                     return {
                                         type: e,
-                                        status: n.includes(e) ? R.ACTIVE : i
+                                        status: n.includes(e) ? R.ACTIVE : a
                                     }
                                 });
                                 this.setState({
-                                    eligiblePaymentMethods: i
+                                    eligiblePaymentMethods: a
                                 })
                             } else {
-                                i = n.map(function(e) {
+                                a = n.map(function(e) {
                                     return {
                                         type: e,
                                         status: R.ACTIVE
                                     }
                                 });
                                 this.setState({
-                                    eligiblePaymentMethods: i
+                                    eligiblePaymentMethods: a
                                 })
                             }
                         }
@@ -4454,7 +4542,7 @@
                             t = this.state.eligiblePaymentMethods.filter(function(e) {
                                 return e.status !== R.HIDDEN
                             });
-                        return l.createElement(l.Fragment, null, this.renderWalletHeader(), this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature && this.savedPaymentMethod && this.props.ipCountryCode && e && l.createElement(De, {
+                        return l.createElement(l.Fragment, null, this.renderWalletHeader(), this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature && this.savedPaymentMethod && this.props.ipCountryCode && e && l.createElement(qe, {
                             handleCompletePurchase: this.props.handleCompletePurchase,
                             savedPaymentMethod: this.savedPaymentMethod,
                             handleCountryChange: this.props.handleCountryChange,
@@ -4464,7 +4552,7 @@
                             showEuSubs: this.props.showEuSubs
                         }), this.props.configs && t.length > 0 && !(this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature) && this.props.ipCountryCode && l.createElement(C.Xa, {
                             "data-a-target": "PAYMENT_METHOD_SELECTOR"
-                        }, l.createElement(Ae, {
+                        }, l.createElement(Ye, {
                             handleCompletePurchase: this.props.handleCompletePurchase,
                             handleCountryChange: this.props.handleCountryChange,
                             trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
@@ -4582,18 +4670,18 @@
                         return !!(e.configs && e.product && e.ipCountryCode && e.data.currentUser)
                     }, t
                 }(l.Component),
-                Xe = Object(H.compose)(Object(J.b)("Wallet"), Object(h.a)(Be, {
+                rt = Object(H.compose)(Object(J.b)("Wallet"), Object(h.a)(Je, {
                     options: function() {
                         return {
-                            fetchPolicy: Ue()
+                            fetchPolicy: $e()
                         }
                     }
-                }))(We),
-                ze = r("T3lN");
+                }))(tt),
+                nt = r("T3lN");
             ! function(e) {
                 e.ELIGIBLE_PURCHASE = "ELIGIBLE_PURCHASE", e.INELIGIBLE_PURCHASE = "INELIGIBLE_PURCHASE"
-            }(Le || (Le = {}));
-            var Ve = function(e) {
+            }(et || (et = {}));
+            var at = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4630,15 +4718,16 @@
                             t.props.data.refetch(r)
                         }, t.completePurchase = function(e) {
                             return u.__awaiter(t, void 0, void 0, function() {
-                                var t, r, n, i;
-                                return u.__generator(this, function(a) {
-                                    switch (a.label) {
+                                var t, r, n, a;
+                                return u.__generator(this, function(i) {
+                                    switch (i.label) {
                                         case 0:
                                             t = this.props.data.subscriptionProduct, r = {
                                                 payment_provider: e.payment_provider,
                                                 payment_info: u.__assign({}, e.payment_info),
                                                 is_gift: this.props.isGift,
                                                 mystery_gift_count: this.props.mysteryGiftCount,
+                                                is_anonymous: this.props.isAnonymous,
                                                 recipient_id: this.props.recipientID,
                                                 ip_country_code: this.props.data.requestInfo.countryCode,
                                                 price_info: {
@@ -4650,34 +4739,34 @@
                                                 tab_session_id: p.p.session.tabID
                                             }, this.setState({
                                                 showErrors: !1
-                                            }), n = "/kraken/checkout/users/" + (this.props.data.currentUser && this.props.data.currentUser.id) + "/products/" + this.props.productName + "/purchase/complete", a.label = 1;
+                                            }), n = "/kraken/checkout/users/" + (this.props.data.currentUser && this.props.data.currentUser.id) + "/products/" + this.props.productName + "/purchase/complete", i.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, b.a.post(n, {
+                                            return i.trys.push([1, 3, , 4]), [4, b.a.post(n, {
                                                 body: r
                                             }, {
                                                 version: 5
                                             })];
                                         case 2:
-                                            return (i = a.sent()).error || i.body && i.body.error ? (this.trackPaymentFormInteraction({
+                                            return (a = i.sent()).error || a.body && a.body.error ? (this.trackPaymentFormInteraction({
                                                 paymentFlow: e.payment_flow,
                                                 action: Q.a.CompletePurchaseClick,
                                                 actionDetail: Q.f.Failed,
                                                 savedPayment: e.savedPayment
-                                            }), i.body && "UNSUPPORTED_COUNTRY" === i.body.error && i.body.error_details && i.body.error_details.country ? (this.trackPaymentFormInteraction({
+                                            }), a.body && "UNSUPPORTED_COUNTRY" === a.body.error && a.body.error_details && a.body.error_details.country ? (this.trackPaymentFormInteraction({
                                                 paymentFlow: e.payment_flow,
                                                 action: Q.a.UnsupportedCountryAlert,
-                                                actionDetail: i.body.error_details.country,
+                                                actionDetail: a.body.error_details.country,
                                                 savedPayment: e.savedPayment
-                                            }), this.handleCountryChange(i.body.error_details.country)) : i.body && "INVALID_RESIDENCE" === i.body.error ? this.setState({
+                                            }), this.handleCountryChange(a.body.error_details.country)) : a.body && "INVALID_RESIDENCE" === a.body.error ? this.setState({
                                                 showErrors: !0,
                                                 errors: {
                                                     code: v.InvalidResidence,
                                                     level: E.Error
                                                 }
-                                            }) : i.body && "PRICE_INFO_INVALID" === i.body.error && i.body.error_details && i.body.error_details.country ? (this.trackPaymentFormInteraction({
+                                            }) : a.body && "PRICE_INFO_INVALID" === a.body.error && a.body.error_details && a.body.error_details.country ? (this.trackPaymentFormInteraction({
                                                 paymentFlow: e.payment_flow,
                                                 action: Q.a.PriceChangeAlert,
-                                                actionDetail: i.body.error_details.country,
+                                                actionDetail: a.body.error_details.country,
                                                 savedPayment: e.savedPayment
                                             }), this.setState({
                                                 showErrors: !0,
@@ -4685,7 +4774,7 @@
                                                     code: v.PriceChangeNotice,
                                                     level: E.Info
                                                 }
-                                            }), this.handleCountryChange(i.body.error_details.country)) : i.body && "INVALID_PAYMENT_METHOD" === i.body.error ? this.setState({
+                                            }), this.handleCountryChange(a.body.error_details.country)) : a.body && "INVALID_PAYMENT_METHOD" === a.body.error ? this.setState({
                                                 showErrors: !0,
                                                 errors: {
                                                     code: v.InvalidPaymentMethod,
@@ -4703,11 +4792,11 @@
                                                 actionDetail: Q.f.Success,
                                                 savedPayment: e.savedPayment
                                             }), this.props.data.refetch(), this.setState({
-                                                purchaseResponse: i.body,
+                                                purchaseResponse: a.body,
                                                 progress: S.a.CONFIRMATION
                                             }), [3, 4]);
                                         case 3:
-                                            return a.sent(), this.setState({
+                                            return i.sent(), this.setState({
                                                 showErrors: !0,
                                                 errors: {
                                                     code: v.DefaultMessage,
@@ -4772,8 +4861,8 @@
                                 purchaseFlow: this.purchaseFlow,
                                 progress: this.state.progress
                             }),
-                            i = this.shoppingCartItem && this.shoppingCartItem.product.owner && this.shoppingCartItem.product.owner.displayName,
-                            a = "/" + (i || "");
+                            a = this.shoppingCartItem && this.shoppingCartItem.product.owner && this.shoppingCartItem.product.owner.displayName,
+                            i = "/" + (a || "");
                         return l.createElement(w, {
                             productDescription: this.renderTicketDescription(),
                             header: n
@@ -4787,7 +4876,7 @@
                             display: this.dataReady ? C.X.Block : C.X.Hide
                         }, l.createElement(C.Xa, {
                             display: T(this.productEligibility) ? C.X.Hide : C.X.Block,
-                            "data-test-selector": Le.INELIGIBLE_PURCHASE
+                            "data-test-selector": et.INELIGIBLE_PURCHASE
                         }, l.createElement(M, {
                             product: this.shoppingCartItem,
                             existingPurchases: this.existingPurchases,
@@ -4798,12 +4887,12 @@
                                 top: 2
                             }
                         }, l.createElement(C.z, {
-                            linkTo: a
+                            linkTo: i
                         }, Object(p.d)("Go back to {channel}", {
-                            channel: i || "Twitch"
+                            channel: a || "Twitch"
                         }, "CheckoutPayments")))), l.createElement(C.Xa, {
                             display: T(this.productEligibility) ? C.X.Block : C.X.Hide,
-                            "data-test-selector": Le.ELIGIBLE_PURCHASE
+                            "data-test-selector": et.ELIGIBLE_PURCHASE
                         }, l.createElement(k, {
                             purchaseFlow: this.purchaseFlow,
                             product: this.shoppingCartItem
@@ -4811,7 +4900,7 @@
                             margin: {
                                 y: 1
                             }
-                        }, l.createElement(x, {
+                        }, l.createElement(F, {
                             purchaseFlow: this.purchaseFlow,
                             product: this.shoppingCartItem,
                             existingPurchases: this.existingPurchases,
@@ -4826,7 +4915,7 @@
                         }, l.createElement(O, {
                             errorCode: this.state.errors.code,
                             level: this.state.errors.level
-                        })), l.createElement(Xe, {
+                        })), l.createElement(rt, {
                             handleCompletePurchase: this.completePurchase,
                             handleCountryChange: this.handleCountryChange,
                             productName: this.props.productName,
@@ -4872,18 +4961,18 @@
                                 var r = t.find(function(e) {
                                         return e.paymentProvider.toUpperCase() === f.G.PRIME
                                     }),
-                                    i = t.find(function(t) {
+                                    a = t.find(function(t) {
                                         return t.productType.toUpperCase() === f.V.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) < parseInt(t.productTier, 10)
                                     }),
-                                    a = t.find(function(t) {
+                                    i = t.find(function(t) {
                                         return t.productType.toUpperCase() === f.V.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) > parseInt(t.productTier, 10)
                                     }),
                                     o = t.find(function(e) {
                                         return e.paymentProvider.toUpperCase() === f.G.GOOGLE_IAB
                                     });
                                 if (r) return N.PRIME_UPGRADE;
-                                if (i) return N.TIER_DOWNGRADE;
-                                if (a) return o ? N.MOBILE_UPGRADE : N.TIER_UPGRADE
+                                if (a) return N.TIER_DOWNGRADE;
+                                if (i) return o ? N.MOBILE_UPGRADE : N.TIER_UPGRADE
                             }
                             return !this.existingPurchases || this.existingPurchases && !this.existingPurchases.details && !this.existingPurchases.compatiblePurchases || this.existingPurchases.details && this.existingPurchases.details.state === f.W.INACTIVE ? N.NEW_PURCHASE : N.UNKNOWN
                         },
@@ -4988,12 +5077,13 @@
                         configurable: !0
                     }), t
                 }(l.Component),
-                He = Object(a.compose)(Object(h.a)(ze, {
+                it = Object(i.compose)(Object(h.a)(nt, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
                             variables: {
                                 productName: e.productName,
+                                isAnonymous: e.isAnonymous,
                                 isGift: e.isGift,
                                 recipientID: e.recipientID,
                                 includePromotion: function(e) {
@@ -5004,21 +5094,21 @@
                             }
                         }
                     }
-                }), Object(J.b)("CheckoutPayments"))(Ve);
-            var Ze = Object(i.connect)(function(e) {
+                }), Object(J.b)("CheckoutPayments"))(at);
+            var ot = Object(a.connect)(function(e) {
                 return {
                     isLoggedIn: Object(c.f)(e),
                     sessionUser: Object(c.e)(e)
                 }
             }, function(e) {
-                return Object(a.bindActionCreators)({
+                return Object(i.bindActionCreators)({
                     promptLogin: function() {
                         return Object(s.e)(o.a.DashboardPage)
                     }
                 }, e)
-            })(He);
+            })(it);
             r.d(t, "a", function() {
-                return Ze
+                return ot
             })
         },
         SPyc: function(e, t, r) {
@@ -5070,6 +5160,22 @@
                                     kind: "Name",
                                     value: "Boolean"
                                 }
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "isAnonymous"
+                            }
+                        },
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "Boolean"
                             }
                         }
                     }, {
@@ -5408,6 +5514,19 @@
                                                 value: "checkoutConfigs"
                                             },
                                             arguments: [{
+                                                kind: "Argument",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "isAnonymous"
+                                                },
+                                                value: {
+                                                    kind: "Variable",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "isAnonymous"
+                                                    }
+                                                }
+                                            }, {
                                                 kind: "Argument",
                                                 name: {
                                                     kind: "Name",
@@ -6050,11 +6169,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 1370
+                    end: 1418
                 }
             };
             r.loc.source = {
-                body: "query CheckoutPayments($productName: String! $includePromotion: Boolean! $isGift: Boolean! $recipientID: ID $mysteryGiftCount: Int $taxCountry: String) {\ncurrentUser {\nid\ndisplayName\nresidence {\ncountryCode\npostalCode\n}\n}\nsubscriptionProduct(productName: $productName) {\nid\nname\npriceInfo(taxCountry: $taxCountry) {\ncurrency\nexponent\nid\nisTaxInclusive\nprice\ntax\ntotal\n}\ninterval {\nunit\n}\ntier\ntype\nowner {\nid\ndisplayName\nlogin\n}\nself {\ncheckoutConfigs (isGift: $isGift recipientID: $recipientID mysteryGiftCount: $mysteryGiftCount taxCountryCode: $taxCountry) {\ncanGift\ncanPurchase\nisOneMonthFreeEligible\npaymentProviderConfigs {\nxsolla {\niframeURL\n}\nrecurly {\npayWithAmazonConfigs {\nclientID\nisProduction\nsellerID\n}\npublicKey\nbraintreeClientAuthorization\n}\nzuora {\nexternalAccountID\ntoken\ntenantID\npublicKey\nsignature\nhostedPageID\nhostedPageURL\nexternalAccountID\n}\n}\n}\npurchase {\ndetails {\npaymentProvider\nprice\ncurrency\ndivisor\nstate\nproductType\nproductTier\n}\ncompatiblePurchases {\npaymentProvider\nprice\ncurrency\nstate\nproductType\nproductTier\ndivisor\n}\n}\nbenefit {\nid\ntier\npaidUpgrade {\nstartsAt\n}\nendsAt\npurchasedWithPrime\ngift {\nisGift\n}\n}\npromotion @include(if: $includePromotion) {\ndiscountType\ndiscountValue\nnewPrice\noldPrice\n}\npaidUpgradePromotion @include(if: $includePromotion) {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\n}\nrequestInfo {\ncountryCode\n}\n}",
+                body: "query CheckoutPayments($productName: String! $includePromotion: Boolean! $isAnonymous: Boolean $isGift: Boolean! $recipientID: ID $mysteryGiftCount: Int $taxCountry: String) {\ncurrentUser {\nid\ndisplayName\nresidence {\ncountryCode\npostalCode\n}\n}\nsubscriptionProduct(productName: $productName) {\nid\nname\npriceInfo(taxCountry: $taxCountry) {\ncurrency\nexponent\nid\nisTaxInclusive\nprice\ntax\ntotal\n}\ninterval {\nunit\n}\ntier\ntype\nowner {\nid\ndisplayName\nlogin\n}\nself {\ncheckoutConfigs (isAnonymous: $isAnonymous isGift: $isGift recipientID: $recipientID mysteryGiftCount: $mysteryGiftCount taxCountryCode: $taxCountry) {\ncanGift\ncanPurchase\nisOneMonthFreeEligible\npaymentProviderConfigs {\nxsolla {\niframeURL\n}\nrecurly {\npayWithAmazonConfigs {\nclientID\nisProduction\nsellerID\n}\npublicKey\nbraintreeClientAuthorization\n}\nzuora {\nexternalAccountID\ntoken\ntenantID\npublicKey\nsignature\nhostedPageID\nhostedPageURL\nexternalAccountID\n}\n}\n}\npurchase {\ndetails {\npaymentProvider\nprice\ncurrency\ndivisor\nstate\nproductType\nproductTier\n}\ncompatiblePurchases {\npaymentProvider\nprice\ncurrency\nstate\nproductType\nproductTier\ndivisor\n}\n}\nbenefit {\nid\ntier\npaidUpgrade {\nstartsAt\n}\nendsAt\npurchasedWithPrime\ngift {\nisGift\n}\n}\npromotion @include(if: $includePromotion) {\ndiscountType\ndiscountValue\nnewPrice\noldPrice\n}\npaidUpgradePromotion @include(if: $includePromotion) {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\n}\nrequestInfo {\ncountryCode\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -6070,8 +6189,8 @@
                 return u
             });
             var n = r("mrSG"),
-                i = r("NAv5"),
-                a = r("q1tI"),
+                a = r("NAv5"),
+                i = r("q1tI"),
                 o = r("/7QA"),
                 s = r("Ue10"),
                 c = r("5gJ6"),
@@ -6080,35 +6199,34 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(s.Eb, {
+                        return i.createElement(s.Eb, {
                             className: this.isExpired ? "payment-method-display--expired" : "",
                             display: s.X.Flex,
                             justifyContent: this.props.justifyContent || s.Wa.Between,
                             flexWrap: s.Ba.Wrap,
                             fullWidth: !0
-                        }, a.createElement(s.Xa, {
+                        }, i.createElement(s.Xa, {
                             alignItems: s.f.Center,
                             display: s.X.Flex,
                             margin: {
                                 right: 1
                             }
-                        }, a.createElement(c.a, {
+                        }, i.createElement(c.a, {
                             paymentInstrumentType: this.props.paymentType,
                             cardType: this.props.cardType || void 0,
-                            paymentProvider: this.props.provider,
-                            ignoreDarkMode: this.props.ignoreDarkMode
-                        }), this.renderLastFour()), a.createElement(s.Xa, {
+                            paymentProvider: this.props.provider
+                        }), this.renderLastFour()), i.createElement(s.Xa, {
                             display: s.X.Flex,
                             justifyContent: s.Wa.Center,
                             flexDirection: s.Aa.Column
                         }, this.renderBillingEmail(), this.renderExpirationDate()))
                     }, t.prototype.renderLastFour = function() {
-                        return this.props.lastFour ? a.createElement(s.Xa, {
+                        return this.props.lastFour ? i.createElement(s.Xa, {
                             display: s.X.Flex,
                             margin: {
                                 x: 2
                             }
-                        }, a.createElement(s.W, {
+                        }, i.createElement(s.W, {
                             bold: !0
                         }, Object(o.d)("Ending in {lastFour}", {
                             lastFour: this.props.lastFour
@@ -6129,21 +6247,21 @@
                                 month: "2-digit",
                                 year: "numeric"
                             })
-                        }, "PaymentMethodDisplay"), a.createElement(s.Xa, {
+                        }, "PaymentMethodDisplay"), i.createElement(s.Xa, {
                             alignItems: s.f.Center,
                             display: s.X.Flex,
                             justifyContent: s.Wa.End
-                        }, a.createElement(s.W, {
+                        }, i.createElement(s.W, {
                             ellipsis: !0,
                             color: s.O.Alt2,
                             bold: this.isExpired
                         }, n))
                     }, t.prototype.renderBillingEmail = function() {
-                        return this.props.billingEmail ? a.createElement(s.Xa, {
+                        return this.props.billingEmail ? i.createElement(s.Xa, {
                             alignItems: s.f.Center,
                             display: s.X.Flex,
                             justifyContent: s.Wa.End
-                        }, a.createElement(s.W, {
+                        }, i.createElement(s.W, {
                             ellipsis: !0,
                             color: s.O.Alt2
                         }, this.props.billingEmail)) : null
@@ -6152,9 +6270,9 @@
                             var e = this.zeroIndexedMonth,
                                 t = this.props.expirationYear;
                             if (void 0 === e || !t) return !1;
-                            var r = Object(i.startOfMonth)(new Date),
+                            var r = Object(a.startOfMonth)(new Date),
                                 n = new Date(t, e, 1);
-                            return !!Object(i.isBefore)(n, r)
+                            return !!Object(a.isBefore)(n, r)
                         },
                         enumerable: !0,
                         configurable: !0
@@ -6165,7 +6283,7 @@
                         enumerable: !0,
                         configurable: !0
                     }), t
-                }(a.PureComponent))
+                }(i.PureComponent))
         },
         TSpM: function(e, t, r) {
             e.exports = r.p + "assets/amazon_pay_2x-2eccd73373faaefa6764.png"
@@ -6173,8 +6291,8 @@
         "V+q8": function(e, t, r) {
             "use strict";
             var n = r("/MKj"),
-                i = r("kRBY"),
-                a = r("mrSG"),
+                a = r("kRBY"),
+                i = r("mrSG"),
                 o = r("q1tI"),
                 s = r("oJmH"),
                 c = r("/7QA"),
@@ -6402,7 +6520,7 @@
                             3000: Object(c.d)("Tier 3 Channel Subscription", "TicketDescription")
                         }, t
                     }
-                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.data.loading || this.props.data.error || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.componentDidUpdate = function() {
                         this.props.data.loading || this.props.data.error || this.props.latencyTracking.reportInteractive()
@@ -6547,13 +6665,13 @@
                         }
                     }
                 }))(R);
-            var F = Object(n.connect)(function(e) {
+            var A = Object(n.connect)(function(e) {
                 return {
-                    sessionUser: Object(i.e)(e)
+                    sessionUser: Object(a.e)(e)
                 }
             })(M);
             r.d(t, "a", function() {
-                return F
+                return A
             })
         },
         VrOd: function(e, t, r) {},
@@ -6563,8 +6681,8 @@
         WlZp: function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
-                i = r("q1tI"),
-                a = function(e) {
+                a = r("q1tI"),
+                i = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -6581,20 +6699,20 @@
                         enumerable: !0,
                         configurable: !0
                     }), t.prototype.render = function() {
-                        return i.createElement("iframe", {
+                        return a.createElement("iframe", {
                             width: "1",
                             height: "1",
                             scrolling: "no",
                             src: this.kaptchaIframeSrc
-                        }, i.createElement("img", {
+                        }, a.createElement("img", {
                             width: "137",
                             height: "33",
                             src: this.kaptchaImgSrc
                         }))
                     }, t
-                }(i.Component);
+                }(a.Component);
             r.d(t, "a", function() {
-                return a
+                return i
             })
         },
         XE3n: function(e, t, r) {},
@@ -6603,17 +6721,17 @@
             r.d(t, "c", function() {
                 return n
             }), r.d(t, "d", function() {
-                return i
-            }), r.d(t, "e", function() {
                 return a
+            }), r.d(t, "e", function() {
+                return i
             }), r.d(t, "b", function() {
                 return o
             }), r.d(t, "a", function() {
                 return s
             });
             var n = "subscribe_to_channel",
-                i = "turbo",
-                a = "visit_url",
+                a = "turbo",
+                i = "visit_url",
                 o = "none",
                 s = "broadcaster"
         },
@@ -6627,39 +6745,39 @@
         b5C3: function(e, t, r) {
             "use strict";
             r.d(t, "a", function() {
-                return a
+                return i
             });
             var n = r("q1tI"),
-                i = r("vHGB"),
-                a = function(e) {
+                a = r("vHGB"),
+                i = function(e) {
                     var t = e.badgesToRender,
                         r = e.badgeSets;
                     if (!t) return null;
-                    var a = [];
+                    var i = [];
                     ! function(e) {
                         return Array.isArray(e)
                     }(t) ? function(e) {
                         return !Array.isArray(e)
-                    }(t) && (a = Object.keys(t).map(function(e) {
-                        var a = t[e],
-                            o = r.getBadge(e, a);
-                        return null === o ? null : n.createElement(i.a, {
+                    }(t) && (i = Object.keys(t).map(function(e) {
+                        var i = t[e],
+                            o = r.getBadge(e, i);
+                        return null === o ? null : n.createElement(a.a, {
                             key: o.setID + "/" + o.version,
                             badge: o
                         })
-                    })) : a = t.map(function(e) {
+                    })) : i = t.map(function(e) {
                         var t = r.getBadge(e.setID, e.version);
-                        return null === t ? null : n.createElement(i.a, {
+                        return null === t ? null : n.createElement(a.a, {
                             key: t.setID + "/" + t.version,
                             badge: t
                         })
                     });
-                    var o = a.filter(function(e) {
+                    var o = i.filter(function(e) {
                         return null !== e
                     });
                     return n.createElement("span", null, o)
                 };
-            a.displayName = "BadgeList"
+            i.displayName = "BadgeList"
         },
         b6Yk: function(e, t, r) {
             "use strict";
@@ -6667,122 +6785,122 @@
                 return o
             });
             var n = r("mrSG"),
-                i = r("/7QA"),
-                a = r("kRBY"),
+                a = r("/7QA"),
+                i = r("kRBY"),
                 o = function() {
                     function e() {}
                     return e.get = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            return n.__generator(this, function(i) {
-                                switch (i.label) {
+                            return n.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         return [4, this.request(e, n.__assign({}, t, {
                                             method: "GET"
                                         }), r)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, a.sent()]
                                 }
                             })
                         })
                     }, e.getOrThrow = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            return n.__generator(this, function(i) {
-                                switch (i.label) {
+                            return n.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         return [4, this.requestOrThrow(e, n.__assign({}, t, {
                                             method: "GET"
                                         }), r)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, a.sent()]
                                 }
                             })
                         })
                     }, e.put = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            return n.__generator(this, function(i) {
-                                switch (i.label) {
+                            return n.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         return [4, this.request(e, n.__assign({}, t, {
                                             method: "PUT"
                                         }), r)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, a.sent()]
                                 }
                             })
                         })
                     }, e.putOrThrow = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            return n.__generator(this, function(i) {
-                                switch (i.label) {
+                            return n.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         return [4, this.requestOrThrow(e, n.__assign({}, t, {
                                             method: "PUT"
                                         }), r)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, a.sent()]
                                 }
                             })
                         })
                     }, e.post = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            return n.__generator(this, function(i) {
-                                switch (i.label) {
+                            return n.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         return [4, this.request(e, n.__assign({}, t, {
                                             method: "POST"
                                         }), r)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, a.sent()]
                                 }
                             })
                         })
                     }, e.postOrThrow = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            return n.__generator(this, function(i) {
-                                switch (i.label) {
+                            return n.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         return [4, this.requestOrThrow(e, n.__assign({}, t, {
                                             method: "POST"
                                         }), r)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, a.sent()]
                                 }
                             })
                         })
                     }, e.delete = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            return n.__generator(this, function(i) {
-                                switch (i.label) {
+                            return n.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         return [4, this.request(e, n.__assign({}, t, {
                                             method: "DELETE"
                                         }), r)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, a.sent()]
                                 }
                             })
                         })
                     }, e.deleteOrThrow = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            return n.__generator(this, function(i) {
-                                switch (i.label) {
+                            return n.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         return [4, this.requestOrThrow(e, n.__assign({}, t, {
                                             method: "DELETE"
                                         }), r)];
                                     case 1:
-                                        return [2, i.sent()]
+                                        return [2, a.sent()]
                                 }
                             })
                         })
                     }, e.request = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            var i, a, o, s;
+                            var a, i, o, s;
                             return n.__generator(this, function(c) {
                                 switch (c.label) {
                                     case 0:
-                                        return t = this.constructOptions(t, r), i = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, i), o = n.__assign({}, t, {
-                                            body: a
+                                        return t = this.constructOptions(t, r), a = t.headers ? t.headers["Content-Type"] : void 0, i = this.serialize(t.body, a), o = n.__assign({}, t, {
+                                            body: i
                                         }), [4, this._fetch(e, o)];
                                     case 1:
                                         return s = c.sent(), [4, this.constructLegacyAPIResponse(s)];
@@ -6793,29 +6911,29 @@
                         })
                     }, e.requestOrThrow = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), n.__awaiter(this, void 0, Promise, function() {
-                            var i;
-                            return n.__generator(this, function(a) {
-                                switch (a.label) {
+                            var a;
+                            return n.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
-                                        return a.trys.push([0, 2, , 3]), [4, this.request(e, t, r)];
+                                        return i.trys.push([0, 2, , 3]), [4, this.request(e, t, r)];
                                     case 1:
-                                        if ((i = a.sent()).requestError) throw i.requestError;
-                                        if (i.error) throw new Error("Error while sending legacy-api request: " + i.error.status + " - " + i.error.message);
-                                        return [2, n.__assign({}, i, {
-                                            body: i.body
+                                        if ((a = i.sent()).requestError) throw a.requestError;
+                                        if (a.error) throw new Error("Error while sending legacy-api request: " + a.error.status + " - " + a.error.message);
+                                        return [2, n.__assign({}, a, {
+                                            body: a.body
                                         })];
                                     case 2:
-                                        throw a.sent();
+                                        throw i.sent();
                                     case 3:
                                         return [2]
                                 }
                             })
                         })
                     }, e.getAPIURL = function(e) {
-                        return new URL(e, i.p.config.apiBaseURL)
+                        return new URL(e, a.p.config.apiBaseURL)
                     }, e.constructLegacyAPIResponse = function(e) {
                         return n.__awaiter(this, void 0, Promise, function() {
-                            var t, r, i, a;
+                            var t, r, a, i;
                             return n.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
@@ -6827,7 +6945,7 @@
                                     case 2:
                                         return r = n.sent(), e.ok ? t.body = r : t.error = r, [3, 4];
                                     case 3:
-                                        return i = n.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = i), [3, 4];
+                                        return a = n.sent(), e.headers && e.headers.get && (i = e.headers.get("Content-Type")) && -1 !== i.indexOf("application/json") && (t.requestError = a), [3, 4];
                                     case 4:
                                         return [2, t]
                                 }
@@ -6853,19 +6971,19 @@
                             contentType: t
                         }), null) : null
                     }, e.getDefaultHeaders = function(e, t) {
-                        var r = i.p.store.getState(),
+                        var r = a.p.store.getState(),
                             n = {
                                 Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                                 "Accept-Language": "en-us",
-                                "Client-ID": i.p.config.legacyClientID,
+                                "Client-ID": a.p.config.legacyClientID,
                                 "X-Requested-With": "XMLHttpRequest"
                             };
                         e.body && FormData.prototype.isPrototypeOf(e.body) || (n["Content-Type"] = "application/json; charset=UTF-8");
-                        var o = Object(a.e)(r);
+                        var o = Object(i.e)(r);
                         return o && (n.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (n["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                             n[e] && delete n[e]
                         }), n
-                    }, e.logger = i.p.logger.withCategory("legacy-api"), e
+                    }, e.logger = a.p.logger.withCategory("legacy-api"), e
                 }()
         },
         bOWA: function(e, t, r) {
@@ -6875,22 +6993,25 @@
             e.exports = r.p + "assets/generic_credit_card_1x-a6b9cd93075728ab4114.png"
         },
         bfgy: function(e, t, r) {},
+        bvmA: function(e, t, r) {
+            e.exports = r.p + "assets/paypal_dark_2x-5364f28c059af7303d67.png"
+        },
         cpJf: function(e, t, r) {
             "use strict";
             var n;
             r.d(t, "a", function() {
                     return n
                 }), r.d(t, "d", function() {
-                    return a
+                    return i
                 }), r.d(t, "c", function() {
                     return o
                 }), r.d(t, "b", function() {
-                    return i
+                    return a
                 }),
                 function(e) {
                     e.Chat = "stream_chat", e.Feeds = "feeds", e.Room = "chatroom", e.Whisper = "whisper", e.VodChat = "vod-chat"
                 }(n || (n = {}));
-            var i, a = {
+            var a, i = {
                     TriHard: {
                         count: 196568036
                     },
@@ -6973,7 +7094,10 @@
                 o = ["354", "49106", "4339", "48", "25", "55338", "70433", "1902", "68856", "81103", "76171", "27509"];
             ! function(e) {
                 e.Web = "WEB", e.IOS = "IOS", e.Android = "ANDROID"
-            }(i || (i = {}))
+            }(a || (a = {}))
+        },
+        csmi: function(e, t, r) {
+            e.exports = r.p + "assets/amazon_pay_dark_1x-5810bf2a8f8185a1a905.png"
         },
         fQWD: function(e, t, r) {
             "use strict";
@@ -7156,21 +7280,21 @@
         mb7O: function(e, t, r) {
             "use strict";
             var n = r("q1tI"),
-                i = r("Ue10"),
-                a = (r("bfgy"), function(e) {
-                    return n.createElement(i.Xa, {
+                a = r("Ue10"),
+                i = (r("bfgy"), function(e) {
+                    return n.createElement(a.Xa, {
                         className: "ticket-wrapper__container",
                         "data-a-target": "js-test-ticket-container",
                         margin: {
                             bottom: 2
                         }
-                    }, n.createElement(i.G, {
+                    }, n.createElement(a.G, {
                         elevation: 1
                     }, e.children))
                 }),
-                o = a;
+                o = i;
             r.d(t, !1, function() {
-                return a
+                return i
             }), r.d(t, "a", function() {
                 return o
             })
@@ -7184,8 +7308,8 @@
         sV2v: function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
-                i = r("q1tI"),
-                a = r("fvjX"),
+                a = r("q1tI"),
+                i = r("fvjX"),
                 o = r("GnwI"),
                 s = function(e) {
                     function t() {
@@ -7199,8 +7323,8 @@
                     }, t.prototype.render = function() {
                         return null
                     }, t
-                }(i.Component),
-                c = Object(a.compose)(Object(o.b)("RecurlyScript", {
+                }(a.Component),
+                c = Object(i.compose)(Object(o.b)("RecurlyScript", {
                     autoReportInteractive: !0
                 }))(s);
             r.d(t, !1, function() {
@@ -7217,30 +7341,30 @@
                 return s
             });
             var n = r("/7QA"),
-                i = "esport_insider_pass_whitelist",
-                a = "esports_room_cheering_whitelist";
+                a = "esport_insider_pass_whitelist",
+                i = "esports_room_cheering_whitelist";
 
             function o(e, t, r) {
-                return void 0 === r && (r = !1), c(i, e, t, r)
+                return void 0 === r && (r = !1), c(a, e, t, r)
             }
 
             function s(e, t) {
-                return c(a, e, t)
+                return c(i, e, t)
             }
 
-            function c(e, t, r, i) {
-                void 0 === i && (i = !1);
-                var a = n.b.get(e, []),
-                    o = r && r.roles && r.roles.isStaff || i;
-                return a.includes(t) || a.includes(t + "-staff") && o
+            function c(e, t, r, a) {
+                void 0 === a && (a = !1);
+                var i = n.b.get(e, []),
+                    o = r && r.roles && r.roles.isStaff || a;
+                return i.includes(t) || i.includes(t + "-staff") && o
             }
         },
         "u/1r": function(e, t, r) {},
         uIkQ: function(e, t, r) {
             "use strict";
             var n = r("b5C3"),
-                i = r("fQWD"),
-                a = r("ZEQw"),
+                a = r("fQWD"),
+                i = r("ZEQw"),
                 o = (r("yzyL"), r("mrSG")),
                 s = function() {
                     function e(e, t, r) {
@@ -7251,7 +7375,7 @@
                         return r && r.has(t) ? r.get(t) || null : void 0 !== (r = this.globalsBySet.get(e)) && r.get(t) || null
                     }, e.prototype.indexBadges = function(e, t, r) {
                         e.forEach(function(e) {
-                            r && e.clickAction === a.c && (e = o.__assign({}, e, {
+                            r && e.clickAction === i.c && (e = o.__assign({}, e, {
                                 channelName: r
                             }));
                             var n = t.get(e.setID);
@@ -7263,7 +7387,7 @@
             r.d(t, "b", function() {
                 return n.a
             }), r.d(t, "a", function() {
-                return i.a
+                return a.a
             }), r.d(t, !1, function() {}), r.d(t, !1, function() {}), r.d(t, "c", function() {
                 return s
             })
@@ -7279,8 +7403,8 @@
         vHGB: function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
-                i = r("q1tI"),
-                a = r("ZEQw"),
+                a = r("q1tI"),
+                i = r("ZEQw"),
                 o = r("Ue10"),
                 s = (r("E78O"), r("/7QA")),
                 c = r("2xye"),
@@ -7315,24 +7439,24 @@
                         t = e.title,
                         r = e.image1x,
                         n = e.image2x,
-                        a = e.image4x,
-                        c = i.createElement("img", {
+                        i = e.image4x,
+                        c = a.createElement("img", {
                             alt: t,
                             "aria-label": Object(s.d)("{badgeTitle} badge", {
                                 badgeTitle: t
                             }, "Badge"),
                             className: "chat-badge",
                             src: r,
-                            srcSet: r + " 1x, " + n + " 2x, " + a + " 4x",
+                            srcSet: r + " 1x, " + n + " 2x, " + i + " 4x",
                             onMouseOver: this.onMouseOver,
                             onMouseOut: this.onMouseOut
                         });
-                    return this.targetURL = this.getTargetURL(), "" !== this.targetURL && (c = i.createElement("a", {
+                    return this.targetURL = this.getTargetURL(), "" !== this.targetURL && (c = a.createElement("a", {
                         href: this.targetURL,
                         onClick: this.onBadgeClickHandler,
                         target: "_blank",
                         "data-a-target": "chat-badge"
-                    }, c)), this.state.isHovering ? i.createElement(o.Yb, {
+                    }, c)), this.state.isHovering ? a.createElement(o.Yb, {
                         align: o.Zb.Left,
                         "data-a-target": "chat-badge",
                         display: o.X.Inline,
@@ -7343,11 +7467,11 @@
                 }, t.prototype.getTargetURL = function() {
                     var e = this.props.badge;
                     switch (e.clickAction) {
-                        case a.e:
+                        case i.e:
                             return e.clickURL;
-                        case a.c:
+                        case i.c:
                             return e.channelName ? this.getSubscriberLink() : "";
-                        case a.d:
+                        case i.d:
                             return "https://www.twitch.tv/products/turbo?ref=chat_badge";
                         default:
                             return ""
@@ -7355,7 +7479,7 @@
                 }, t.prototype.getSubscriberLink = function() {
                     return "https://www.twitch.tv/" + this.props.badge.channelName + "/subscribe?ref=in_chat_subscriber_link"
                 }, t
-            }(i.Component)
+            }(a.Component)
         },
         xgE2: function(e, t, r) {
             e.exports = r.p + "assets/more_methods_2x-3b1c8bbdaabcd0fb7c8a.png"

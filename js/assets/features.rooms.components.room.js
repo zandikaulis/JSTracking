@@ -1385,7 +1385,7 @@
                         }, n.handleRaidNow = function(e) {
                             return d.e(e.sourceChannelID)
                         }, n.unsubscribe = function() {}, n.handlePubsubMessage = function(e) {
-                            switch (e.type) {
+                            if (n.props.channelID === e.raid.source_id) switch (e.type) {
                                 case s.RAID_UPDATE_V2:
                                 case s.RAID_CANCEL_V2:
                                 case s.RAID_GO_V2:
@@ -1423,7 +1423,7 @@
                         }))
                     }, n.prototype.subscribe = function(e) {
                         this.unsubscribe = a.p.pubsub.subscribe({
-                            topic: Object(r.t)(e),
+                            topic: Object(r.u)(e),
                             onMessage: this.handlePubsubMessage
                         })
                     }, n

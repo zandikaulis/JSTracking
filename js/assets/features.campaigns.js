@@ -68,8 +68,8 @@
                 a = n("mrSG"),
                 o = n("q1tI"),
                 s = n("oJmH"),
-                l = n("/7QA"),
-                c = n("ZS2+"),
+                c = n("/7QA"),
+                l = n("ZS2+"),
                 u = n("yR8l"),
                 d = n("eDVu"),
                 p = n("0Log"),
@@ -94,19 +94,19 @@
                 }, o.createElement(b.Za, {
                     fillContent: !0
                 })),
-                C = c.a.wrap(function() {
+                C = l.a.wrap(function() {
                     return n.e(113).then(n.bind(null, "rgIk"))
                 }, "HGCTabs", {
                     failSilently: !1,
                     placeholder: k
                 }),
-                P = c.a.wrap(function() {
+                P = l.a.wrap(function() {
                     return n.e(112).then(n.bind(null, "R3ld"))
                 }, "OWLTabs", {
                     failSilently: !1,
                     placeholder: k
                 }),
-                S = c.a.wrap(function() {
+                S = l.a.wrap(function() {
                     return n.e(111).then(n.bind(null, "AesC"))
                 }, "HGGTabs", {
                     failSilently: !1,
@@ -117,7 +117,7 @@
                         var n = e.call(this, t) || this;
                         return n.state = {
                             tabToShow: g.a.Progress
-                        }, n.state.tabToShow = g.a.Progress, l.m.remove(E), n
+                        }, n.state.tabToShow = g.a.Progress, c.m.remove(E), n
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         if (!this.props.data || this.props.data.loading) return k;
@@ -192,7 +192,7 @@
                     autoReportInteractive: !0
                 }), Object(d.a)(function(e) {
                     return {
-                        topic: e.user && e.data && e.data.user && e.data.user.campaignProperties ? Object(m.C)(e.user.id) : "",
+                        topic: e.user && e.data && e.data.user && e.data.user.campaignProperties ? Object(m.D)(e.user.id) : "",
                         query: v,
                         variables: {
                             channelID: e.channelID
@@ -243,7 +243,7 @@
         "0HeA": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return l
+                return c
             });
             var i, r, a = n("/7QA"),
                 o = n("DMoW");
@@ -252,7 +252,7 @@
             }(r || (r = {}));
             var s = ((i = {})[o.D.DEFAULT] = r.Default, i[o.D.EXTENSION] = r.Extension, i);
 
-            function l(e, t) {
+            function c(e, t) {
                 a.o.track(e, {
                     panel_id: t.panelID,
                     panel_type: s[t.panelType],
@@ -268,8 +268,8 @@
                 a = n("9C/b"),
                 o = n("/7QA"),
                 s = n("2xye"),
-                l = n("22qk"),
-                c = n("Ue10"),
+                c = n("22qk"),
+                l = n("Ue10"),
                 u = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -278,37 +278,80 @@
                                 n = e.channelLogin,
                                 i = e.location,
                                 r = e.history;
-                            !n || i.state && t.internalTrackingMediums.includes(i.state.medium) ? r.goBack() : r.push(Object(l.c)(n))
+                            !n || i.state && t.internalTrackingMediums.includes(i.state.medium) ? r.goBack() : r.push(Object(c.c)(n))
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = this.props,
                             t = e.title,
                             n = e.showBackLink;
-                        return r.createElement(c.Eb, {
-                            background: c.r.Alt2,
-                            display: c.X.Flex,
-                            alignItems: c.f.Stretch
-                        }, n && r.createElement(c.Eb, {
+                        return r.createElement(l.Eb, {
+                            background: l.r.Alt2,
+                            display: l.X.Flex,
+                            alignItems: l.f.Stretch
+                        }, n && r.createElement(l.Eb, {
                             border: !0,
-                            display: c.X.Flex,
+                            display: l.X.Flex,
                             flexGrow: 0
-                        }, r.createElement(c.A, {
+                        }, r.createElement(l.A, {
                             ariaLabel: Object(o.d)("Navigate to previous page", "ExtensionPageHeader"),
-                            size: c.B.Large,
-                            icon: c.tb.AngleLeft,
+                            size: l.B.Large,
+                            icon: l.tb.AngleLeft,
                             onClick: this.goBack
-                        })), r.createElement(c.Eb, {
+                        })), r.createElement(l.Eb, {
                             border: !0,
-                            display: c.X.Flex,
+                            display: l.X.Flex,
                             flexGrow: 1,
                             padding: 2
-                        }, r.createElement(c.W, {
-                            type: c.Vb.H4
+                        }, r.createElement(l.W, {
+                            type: l.Vb.H4
                         }, t)))
                     }, t
                 }(r.Component),
                 d = Object(a.a)(u);
+            n.d(t, !1, function() {
+                return u
+            }), n.d(t, "a", function() {
+                return d
+            })
+        },
+        "1OTy": function(e, t, n) {
+            "use strict";
+            var i = n("mrSG"),
+                r = n("q1tI"),
+                a = n("/MKj"),
+                o = n("fvjX"),
+                s = n("/0dD"),
+                c = n("XDQu"),
+                l = n("Ue10"),
+                u = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return i.__extends(t, e), t.prototype.render = function() {
+                        return r.createElement(l.La, {
+                            label: this.props.label,
+                            type: this.props.type,
+                            src: this.props.src,
+                            alt: this.props.alt,
+                            srcSet: this.srcSet,
+                            value: this.props.value,
+                            onChange: this.props.onChange,
+                            checked: this.props.checked
+                        })
+                    }, Object.defineProperty(t.prototype, "srcSet", {
+                        get: function() {
+                            return this.props.darkModeEnabled && this.props.darkSrcSet || this.props.srcSet
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(r.Component);
+            var d = Object(o.compose)(Object(a.connect)(function(e) {
+                return {
+                    darkModeEnabled: Object(c.a)(e) === s.a.Dark
+                }
+            }))(u);
             n.d(t, !1, function() {
                 return u
             }), n.d(t, "a", function() {
@@ -361,14 +404,14 @@
                 return "/" + e + "/dashboard/extensions/whitelisted"
             }
 
-            function l(e, t) {
+            function c(e, t) {
                 return {
                     pathname: "/" + e + "/dashboard/extensions/permissions",
                     state: t
                 }
             }
 
-            function c(e) {
+            function l(e) {
                 return "/ext/categories/" + e
             }
 
@@ -390,15 +433,18 @@
             }), n.d(t, "h", function() {
                 return s
             }), n.d(t, "f", function() {
-                return l
-            }), n.d(t, "a", function() {
                 return c
+            }), n.d(t, "a", function() {
+                return l
             }), n.d(t, "g", function() {
                 return u
             })
         },
         "2DIU": function(e, t, n) {
             e.exports = n.p + "assets/amazon_pay_1x-4f76ba5fbbaca5a76d41.png"
+        },
+        "2ORI": function(e, t, n) {
+            e.exports = n.p + "assets/amazon_pay_dark_2x-302cb9125ccffd2d356d.png"
         },
         "2xEe": function(e, t, n) {
             e.exports = n.p + "assets/paypal_dark_1x-29d0a02f9cc67088594b.png"
@@ -410,7 +456,7 @@
             }), n.d(t, "d", function() {
                 return s
             }), n.d(t, "b", function() {
-                return c
+                return l
             }), n.d(t, "a", function() {
                 return u
             }), n.d(t, "c", function() {
@@ -440,7 +486,7 @@
                 r.o.track(a.SpadeEventType.ExtensionConfigureView, t)
             }
 
-            function l(e, t) {
+            function c(e, t) {
                 return {
                     action: e,
                     extension_id: t.extensionId,
@@ -454,16 +500,16 @@
                 }
             }
 
-            function c(e) {
-                r.o.track(a.SpadeEventType.ExtensionStreamerComponentSettings, l(i.Open, e))
+            function l(e) {
+                r.o.track(a.SpadeEventType.ExtensionStreamerComponentSettings, c(i.Open, e))
             }
 
             function u(e) {
-                r.o.track(a.SpadeEventType.ExtensionStreamerComponentSettings, l(i.Close, e))
+                r.o.track(a.SpadeEventType.ExtensionStreamerComponentSettings, c(i.Close, e))
             }
 
             function d(e) {
-                r.o.track(a.SpadeEventType.ExtensionStreamerComponentSettings, l(i.Save, e))
+                r.o.track(a.SpadeEventType.ExtensionStreamerComponentSettings, c(i.Save, e))
             }
 
             function p(e) {
@@ -494,9 +540,9 @@
                 a = n("/MKj"),
                 o = n("/7QA"),
                 s = n("2DIU"),
-                l = n.n(s),
-                c = n("TSpM"),
-                u = n.n(c),
+                c = n.n(s),
+                l = n("TSpM"),
+                u = n.n(l),
                 d = n("vE+g"),
                 p = n.n(d),
                 m = n("/Z6v"),
@@ -531,26 +577,26 @@
                 z = n.n(W),
                 X = n("/0dD"),
                 G = n("DMoW"),
-                H = n("XDQu"),
-                V = n("Ue10"),
+                V = n("XDQu"),
+                H = n("Ue10"),
                 q = (n("88jh"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        if ("prime" === this.props.paymentProvider) return r.createElement(V.sb, {
-                            asset: V.tb.LogoTwitchPrime,
+                        if ("prime" === this.props.paymentProvider) return r.createElement(H.sb, {
+                            asset: H.tb.LogoTwitchPrime,
                             width: 66,
                             height: 30,
-                            type: V.ub.Brand
+                            type: H.ub.Brand
                         });
                         var e = this.imageSource,
                             t = e.src,
                             n = e.alt,
                             i = e.srcSet;
-                        return r.createElement(V.Xa, {
+                        return r.createElement(H.Xa, {
                             className: "payment-method-image"
-                        }, r.createElement(V.S, {
+                        }, r.createElement(H.S, {
                             src: t,
                             alt: n,
                             srcSet: i
@@ -591,7 +637,7 @@
                                             };
                                         case G.E.MASTERCARD:
                                             return {
-                                                src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? S.a : C.a,
+                                                src: this.props.darkModeEnabled ? S.a : C.a,
                                                 alt: Object(o.d)("Mastercard", "PaymentMethodImage")
                                             };
                                         case G.E.VISA:
@@ -611,20 +657,20 @@
                                     }
                                 case G.F.AMAZON:
                                     return {
-                                        src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? p.a : l.a,
-                                        srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
+                                        src: this.props.darkModeEnabled ? p.a : c.a,
+                                        srcSet: this.props.darkModeEnabled ? {
                                             "1x": p.a,
                                             "2x": h.a
                                         } : {
-                                            "1x": l.a,
+                                            "1x": c.a,
                                             "2x": u.a
                                         },
                                         alt: Object(o.d)("Amazon Pay", "PaymentMethodImage")
                                     };
                                 case G.F.PAYPAL:
                                     return {
-                                        src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? A.a : D.a,
-                                        srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
+                                        src: this.props.darkModeEnabled ? A.a : D.a,
+                                        srcSet: this.props.darkModeEnabled ? {
                                             "1x": A.a,
                                             "2x": L.a
                                         } : {
@@ -650,7 +696,7 @@
                 }(r.Component));
             var Y = Object(a.connect)(function(e) {
                 return {
-                    darkModeEnabled: Object(H.a)(e) === X.a.Dark
+                    darkModeEnabled: Object(V.a)(e) === X.a.Dark
                 }
             })(q);
             n.d(t, !1, function() {
@@ -686,8 +732,8 @@
                 a = n("Sa1T"),
                 o = n("LO96"),
                 s = n("UFhH"),
-                l = n("q7TX"),
-                c = n("GOnX"),
+                c = n("q7TX"),
+                l = n("GOnX"),
                 u = n("wnTG"),
                 d = n("1uty"),
                 p = n("GNKm"),
@@ -730,7 +776,7 @@
                     t = b
                 }
                 var v = e.reporter;
-                v || (v = l(!1 === v));
+                v || (v = c(!1 === v));
                 var E = y(e, "batchProcessor", u({
                         reporter: v
                     })),
@@ -747,7 +793,7 @@
                         stateHandler: d,
                         idHandler: t
                     };
-                if ("scroll" === x && (c.isLegacyOpera() ? (v.warn("Scroll strategy is not supported on legacy Opera. Changing to object strategy."), x = "object") : c.isIE(9) && (v.warn("Scroll strategy is not supported on IE9. Changing to object strategy."), x = "object")), "scroll" === x) C = m(O);
+                if ("scroll" === x && (l.isLegacyOpera() ? (v.warn("Scroll strategy is not supported on legacy Opera. Changing to object strategy."), x = "object") : l.isIE(9) && (v.warn("Scroll strategy is not supported on IE9. Changing to object strategy."), x = "object")), "scroll" === x) C = m(O);
                 else {
                     if ("object" !== x) throw new Error("Invalid strategy name: " + x);
                     C = p(O)
@@ -773,19 +819,19 @@
                             n = f(n)
                         }
                         var s = 0,
-                            l = y(e, "callOnAdd", k.callOnAdd),
-                            c = y(e, "onReady", function() {}),
+                            c = y(e, "callOnAdd", k.callOnAdd),
+                            l = y(e, "onReady", function() {}),
                             u = y(e, "debug", k.debug);
                         i(n, function(e) {
                             d.getState(e) || (d.initState(e), t.set(e));
                             var p = t.get(e);
-                            if (u && v.log("Attaching listener to element", p, e), !S.isDetectable(e)) return u && v.log(p, "Not detectable."), S.isBusy(e) ? (u && v.log(p, "System busy making it detectable"), o(l, e, r), I[p] = I[p] || [], void I[p].push(function() {
-                                ++s === n.length && c()
+                            if (u && v.log("Attaching listener to element", p, e), !S.isDetectable(e)) return u && v.log(p, "Not detectable."), S.isBusy(e) ? (u && v.log(p, "System busy making it detectable"), o(c, e, r), I[p] = I[p] || [], void I[p].push(function() {
+                                ++s === n.length && l()
                             })) : (u && v.log(p, "Making detectable..."), S.markBusy(e, !0), C.makeDetectable({
                                 debug: u
                             }, e, function(e) {
                                 if (u && v.log(p, "onElementDetectable"), d.getState(e)) {
-                                    S.markAsDetectable(e), S.markBusy(e, !1), C.addListener(e, a), o(l, e, r);
+                                    S.markAsDetectable(e), S.markBusy(e, !1), C.addListener(e, a), o(c, e, r);
                                     var t = d.getState(e);
                                     if (t && t.startSize) {
                                         var m = e.offsetWidth,
@@ -796,10 +842,10 @@
                                         e()
                                     })
                                 } else u && v.log(p, "Element uninstalled before being detectable.");
-                                delete I[p], ++s === n.length && c()
+                                delete I[p], ++s === n.length && l()
                             }));
-                            u && v.log(p, "Already detecable, adding listener."), o(l, e, r), s++
-                        }), s === n.length && c()
+                            u && v.log(p, "Already detecable, adding listener."), o(c, e, r), s++
+                        }), s === n.length && l()
                     },
                     removeListener: P.removeListener,
                     removeAllListeners: P.removeAllListeners,
@@ -1530,8 +1576,8 @@
                 a = n("/MKj"),
                 o = n("cZKs"),
                 s = n("kRBY"),
-                l = n("Ue10"),
-                c = n("1hWM"),
+                c = n("Ue10"),
+                l = n("1hWM"),
                 u = n("oJmH"),
                 d = n("mLw1"),
                 p = n("/7QA"),
@@ -1584,35 +1630,35 @@
                             if (!this.state.installation) return this.renderRedirect(u);
                             var g = this.state.installation,
                                 y = g.extension;
-                            d = r.createElement(l.Xa, {
+                            d = r.createElement(c.Xa, {
                                 fullWidth: !0
-                            }, r.createElement(l.Xa, {
+                            }, r.createElement(c.Xa, {
                                 padding: {
                                     bottom: 1
                                 }
-                            }, r.createElement(l.G, {
+                            }, r.createElement(c.G, {
                                 row: !0,
                                 border: !1
-                            }, r.createElement(l.I, {
+                            }, r.createElement(c.I, {
                                 alt: y.name,
                                 src: this.state.hasCardImageError ? p.a.defaultAvatarURL : y.iconUrl,
-                                aspect: l.p.Aspect1x1,
-                                size: l.J.Size6,
+                                aspect: c.p.Aspect1x1,
+                                size: c.J.Size6,
                                 onError: this.onCardImageError
-                            }), r.createElement(l.H, null, r.createElement(l.Xa, {
+                            }), r.createElement(c.H, null, r.createElement(c.Xa, {
                                 padding: 1
-                            }, r.createElement(l.W, {
-                                type: l.Vb.H4
-                            }, y.name), r.createElement(l.W, {
-                                type: l.Vb.Span,
-                                color: l.O.Alt2
+                            }, r.createElement(c.W, {
+                                type: c.Vb.H4
+                            }, y.name), r.createElement(c.W, {
+                                type: c.Vb.Span,
+                                color: c.O.Alt2
                             }, Object(p.d)("Created by {extensionAuthor}", {
                                 extensionAuthor: y.authorName
-                            }, "ExtensionConfigurePresentation")))))), r.createElement(l.Xa, null, r.createElement(h.a, {
+                            }, "ExtensionConfigurePresentation")))))), r.createElement(c.Xa, null, r.createElement(h.a, {
                                 channelID: s,
                                 channelLogin: n,
                                 className: "",
-                                extensionMode: c.ExtensionMode.Config,
+                                extensionMode: l.ExtensionMode.Config,
                                 installation: g,
                                 languageCode: i,
                                 locale: a,
@@ -1626,9 +1672,9 @@
                             showBackLink: !1,
                             title: Object(p.d)("Configure", "ExtensionConfigurePresentation")
                         });
-                        return r.createElement(m.b, null, r.createElement(l.Xa, {
+                        return r.createElement(m.b, null, r.createElement(c.Xa, {
                             padding: 2
-                        }, b, r.createElement(l.Eb, {
+                        }, b, r.createElement(c.Eb, {
                             borderRight: !0,
                             borderLeft: !0,
                             borderBottom: !0,
@@ -1641,22 +1687,22 @@
                             return t.props.extensionID === n.clientId + "-" + n.version
                         })
                     }, t.prototype.renderPlaceholders = function() {
-                        return r.createElement(l.Xa, {
+                        return r.createElement(c.Xa, {
                             fullWidth: !0
-                        }, r.createElement(l.Xa, {
-                            display: l.X.Flex,
-                            alignItems: l.f.Center,
+                        }, r.createElement(c.Xa, {
+                            display: c.X.Flex,
+                            alignItems: c.f.Center,
                             padding: {
                                 y: 1
                             }
-                        }, r.createElement(l.Xa, null, r.createElement(l.ib, {
+                        }, r.createElement(c.Xa, null, r.createElement(c.ib, {
                             width: 60,
                             height: 60
-                        })), r.createElement(l.Xa, {
+                        })), r.createElement(c.Xa, {
                             padding: {
                                 left: 1
                             }
-                        }, r.createElement(l.ib, {
+                        }, r.createElement(c.ib, {
                             lineCount: 2,
                             width: 200
                         }))))
@@ -1692,9 +1738,9 @@
                             i = e.extensionID,
                             a = e.languageCode,
                             s = e.locale,
-                            c = e.onClose;
-                        return r.createElement(l.Eb, {
-                            background: l.r.Base,
+                            l = e.onClose;
+                        return r.createElement(c.Eb, {
+                            background: c.r.Base,
                             className: "extension-configure-modal"
                         }, r.createElement(E, {
                             channelLogin: n,
@@ -1704,7 +1750,7 @@
                             locale: s
                         }), r.createElement(o.a, {
                             closeOnBackdropClick: !0,
-                            onClose: c
+                            onClose: l
                         }))
                     }, t
                 }(r.Component));
@@ -1779,7 +1825,7 @@
                     }, {
                         key: "getWrappedInstance",
                         value: function() {
-                            return (0, l.default)(u.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableHandle() call"), this.refs.wrappedInstance
+                            return (0, c.default)(u.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableHandle() call"), this.refs.wrappedInstance
                         }
                     }, {
                         key: "render",
@@ -1790,13 +1836,13 @@
                             }, this.props))
                         }
                     }]), n
-                }(a.Component), t.displayName = (0, c.provideDisplayName)("sortableHandle", e), n
+                }(a.Component), t.displayName = (0, l.provideDisplayName)("sortableHandle", e), n
             };
             var a = n("q1tI"),
                 o = u(a),
                 s = n("i8i4"),
-                l = u(n("QLaP")),
-                c = n("jTc+");
+                c = u(n("QLaP")),
+                l = n("jTc+");
 
             function u(e) {
                 return e && e.__esModule ? e : {
@@ -1982,6 +2028,9 @@
         D8NC: function(e, t, n) {
             e.exports = n.p + "assets/amazon_pay_1x-94c97f413ee6005ab1a1.png"
         },
+        E3rh: function(e, t, n) {
+            e.exports = n.p + "assets/more_methods_dark_2x-606b603eb4951527dc9f.png"
+        },
         EF6p: function(e, t, n) {
             e.exports = n.p + "assets/more_methods_1x-98862ad01d0cfaef3e09.png"
         },
@@ -2000,9 +2049,9 @@
                 a = n("mrSG"),
                 o = n("1hWM"),
                 s = n("q1tI"),
-                l = n("oJmH"),
-                c = n("pQUg"),
-                u = n.n(c),
+                c = n("oJmH"),
+                l = n("pQUg"),
+                u = n.n(l),
                 d = n("Nxrd"),
                 p = n("/7QA"),
                 m = n("yR8l"),
@@ -2153,7 +2202,7 @@
                                 product_name: e,
                                 user_id: a && a.id || "",
                                 user: a && a.login || ""
-                            }), Object(S.d)(), p.n.set(S.b, e), r({
+                            }), Object(S.e)(), p.n.set(S.c, e), r({
                                 productName: e,
                                 onCheckoutProgress: this.onCheckoutProgress,
                                 onClose: this.onCheckoutModalClosed,
@@ -2179,7 +2228,7 @@
                     }
                 }), Object(P.a)([{
                     topic: function(e) {
-                        return Object(x.F)(e.currentSubscriptionData && e.currentSubscriptionData.currentUser && e.currentSubscriptionData.currentUser.id || "")
+                        return Object(x.G)(e.currentSubscriptionData && e.currentSubscriptionData.currentUser && e.currentSubscriptionData.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "entitlementMessage"
@@ -2294,8 +2343,8 @@
             ! function(e) {
                 e.Description = "description_test_selector", e.Image = "image_test_selector", e.Link = "link_url_test_selector", e.Panel = "channel_panel_test_selector", e.Title = "title_test_selector"
             }(U || (U = {}));
-            var H = /^https?:\/\//,
-                V = function(e) {
+            var V = /^https?:\/\//,
+                H = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onDescriptionClick = function(e) {
@@ -2331,7 +2380,7 @@
                             src: this.props.panel.imageURL,
                             alt: Object(p.d)("Panel Content", "ChannelPanels")
                         }) : "";
-                        e && this.props.panel.linkURL && H.test(this.props.panel.linkURL) && (e = s.createElement(G.U, {
+                        e && this.props.panel.linkURL && V.test(this.props.panel.linkURL) && (e = s.createElement(G.U, {
                             to: this.props.panel.linkURL,
                             onClick: this.onImageClick,
                             targetBlank: !0,
@@ -2360,9 +2409,9 @@
                         }, this.props.panel.title), e, t)
                     }, t
                 }(s.Component),
-                q = Object(l.compose)(Object(z.a)("DefaultPanel", {
+                q = Object(c.compose)(Object(z.a)("DefaultPanel", {
                     pixels: 100
-                }))(V),
+                }))(H),
                 Y = n("TVJu"),
                 Z = n("EZh/"),
                 K = n("DMoW"),
@@ -2641,12 +2690,12 @@
                         }, Object(p.d)("Choose a file or drag it here.", "DefaultPanelImagePickerComponent")))))
                     }, t
                 }(s.Component);
-            var le = Object(r.connect)(null, function(e) {
+            var ce = Object(r.connect)(null, function(e) {
                     return Object(g.bindActionCreators)({
                         onClose: y.c
                     }, e)
                 })(se),
-                ce = n("PZVp"),
+                le = n("PZVp"),
                 ue = n("b6Yk");
             var de;
             n("U0Fp");
@@ -2785,7 +2834,7 @@
                                         return s.sent(), [2, this.handleErrorMessage(pe.Unexpected)];
                                     case 4:
                                         return this.unsubscribe = p.l.subscribe({
-                                            topic: Object(x.A)(i),
+                                            topic: Object(x.B)(i),
                                             success: function() {
                                                 (function(e, t) {
                                                     return fetch(e, {
@@ -2808,9 +2857,9 @@
                                                             case 0:
                                                                 if (e.upload_id !== i) return [3, 8];
                                                                 switch (clearTimeout(this.timeoutFunc), e.status) {
-                                                                    case ce.a.POSTPROCESS_COMPLETE:
+                                                                    case le.a.POSTPROCESS_COMPLETE:
                                                                         return [3, 1];
-                                                                    case ce.a.FILE_SIZE_VALIDATION_FAILED:
+                                                                    case le.a.FILE_SIZE_VALIDATION_FAILED:
                                                                         return [3, 5]
                                                                 }
                                                                 return [3, 6];
@@ -2954,7 +3003,7 @@
                 }, function(e) {
                     return {
                         showDefaultPanelImagePicker: function(t) {
-                            return e(Object(y.d)(le, t))
+                            return e(Object(y.d)(ce, t))
                         }
                     }
                 })(he),
@@ -3051,11 +3100,11 @@
                             r = t.extensionPanelCount,
                             a = t.panel,
                             o = t.removePanel,
-                            l = Object(p.d)("Remove", "ExtensionPanelEdit");
+                            c = Object(p.d)("Remove", "ExtensionPanelEdit");
                         if (i && void 0 !== r) {
-                            var c = i.extension,
-                                u = c.iconUrls,
-                                d = c.name;
+                            var l = i.extension,
+                                u = l.iconUrls,
+                                d = l.name;
                             e = s.createElement(s.Fragment, null, s.createElement(G.Xa, {
                                 flexGrow: 1
                             }, s.createElement(G.Xa, {
@@ -3083,7 +3132,7 @@
                             }, s.createElement(G.z, {
                                 type: G.F.Text,
                                 onClick: o
-                            }, l), s.createElement(G.z, {
+                            }, c), s.createElement(G.z, {
                                 onClick: this.onClickConfigure
                             }, Object(p.d)("Configure", "ExtensionPanelEdit"))))
                         } else {
@@ -3115,7 +3164,7 @@
                             }, s.createElement(G.z, {
                                 type: G.F.Text,
                                 onClick: o
-                            }, l)))
+                            }, c)))
                         }
                         return s.createElement(G.Xa, {
                             alignItems: G.f.Center,
@@ -3498,14 +3547,14 @@
                             if ("ExtensionPanel" === t.__typename && t.slotID) {
                                 var a = r[t.slotID];
                                 if (a && !e.state.destroyedExtensions.includes(a.id)) {
-                                    var l = void 0 !== e.state.popout[Object(A.d)(a)];
+                                    var c = void 0 !== e.state.popout[Object(A.d)(a)];
                                     return s.createElement("div", {
                                         key: t.id
                                     }, s.createElement(Y.a, {
                                         channelID: e.props.channelID,
                                         channelName: e.props.channelName,
                                         installation: a,
-                                        isFramePoppedOut: l,
+                                        isFramePoppedOut: c,
                                         isPopout: !1,
                                         login: n && n.login,
                                         loginID: n && n.id,
@@ -3532,7 +3581,7 @@
                         }, {}) : {}
                     }, t
                 }(s.Component),
-                Re = Object(l.compose)(Object(M.b)("ChannelPanels"), Object(m.a)(De, {
+                Re = Object(c.compose)(Object(M.b)("ChannelPanels"), Object(m.a)(De, {
                     name: "channelPanelsData",
                     options: function(e) {
                         return {
@@ -3593,13 +3642,13 @@
                         o || (o = a, a = e, e = null), (e = e || {}).debug, i.isIE(8) ? o(a) : function(e, a) {
                             var o = "display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; padding: 0; margin: 0; opacity: 0; z-index: -1000; pointer-events: none;",
                                 s = !1,
-                                l = window.getComputedStyle(e),
-                                c = e.offsetWidth,
+                                c = window.getComputedStyle(e),
+                                l = e.offsetWidth,
                                 u = e.offsetHeight;
 
                             function d() {
                                 function n() {
-                                    if ("static" === l.position) {
+                                    if ("static" === c.position) {
                                         e.style.position = "relative";
                                         var n = function(e, t, n, i) {
                                             var r = n[i];
@@ -3607,12 +3656,12 @@
                                                 return e.replace(/[^-\d\.]/g, "")
                                             }(r) && (e.warn("An element that is positioned static has style." + i + "=" + r + " which is ignored due to the static positioning. The element will need to be positioned relative, so the style." + i + " will be set to 0. Element: ", t), t.style[i] = 0)
                                         };
-                                        n(t, e, l, "top"), n(t, e, l, "right"), n(t, e, l, "bottom"), n(t, e, l, "left")
+                                        n(t, e, c, "top"), n(t, e, c, "right"), n(t, e, c, "bottom"), n(t, e, c, "left")
                                     }
                                 }
-                                "" !== l.position && (n(), s = !0);
-                                var c = document.createElement("object");
-                                c.style.cssText = o, c.tabIndex = -1, c.type = "text/html", c.onload = function() {
+                                "" !== c.position && (n(), s = !0);
+                                var l = document.createElement("object");
+                                l.style.cssText = o, l.tabIndex = -1, l.type = "text/html", l.onload = function() {
                                     s || n(),
                                         function e(t, n) {
                                             t.contentDocument ? n(t.contentDocument) : setTimeout(function() {
@@ -3621,10 +3670,10 @@
                                         }(this, function(t) {
                                             a(e)
                                         })
-                                }, i.isIE() || (c.data = "about:blank"), e.appendChild(c), r(e).object = c, i.isIE() && (c.data = "about:blank")
+                                }, i.isIE() || (l.data = "about:blank"), e.appendChild(l), r(e).object = l, i.isIE() && (l.data = "about:blank")
                             }
                             r(e).startSize = {
-                                width: c,
+                                width: l,
                                 height: u
                             }, n ? n.add(d) : d()
                         }(a, o)
@@ -3724,15 +3773,15 @@
                         var a = e.console,
                             o = e.jQuery,
                             s = function() {},
-                            l = 0,
-                            c = {};
+                            c = 0,
+                            l = {};
 
                         function u(e, t) {
                             var n = i.getQueryElement(e);
                             if (n) {
                                 this.element = n, o && (this.$element = o(this.element)), this.options = i.extend({}, this.constructor.defaults), this.option(t);
-                                var r = ++l;
-                                this.element.outlayerGUID = r, c[r] = this, this._create();
+                                var r = ++c;
+                                this.element.outlayerGUID = r, l[r] = this, this._create();
                                 var s = this._getOption("initLayout");
                                 s && this.layout()
                             } else a && a.error("Bad element for " + this.constructor.namespace + ": " + (n || e))
@@ -3985,10 +4034,10 @@
                                 e.destroy()
                             }), this.unbindResize();
                             var t = this.element.outlayerGUID;
-                            delete c[t], delete this.element.outlayerGUID, o && o.removeData(this.element, this.constructor.namespace)
+                            delete l[t], delete this.element.outlayerGUID, o && o.removeData(this.element, this.constructor.namespace)
                         }, u.data = function(e) {
                             var t = (e = i.getQueryElement(e)) && e.outlayerGUID;
-                            return t && c[t]
+                            return t && l[t]
                         }, u.create = function(e, t) {
                             var n = p(u);
                             return n.defaults = i.extend({}, u.defaults), i.extend(n.defaults, t), n.compatOptions = i.extend({}, u.compatOptions), n.namespace = e, n.data = u.data, n.Item = p(r), i.htmlInit(n, e), o && o.bridget && o.bridget(e, n), n
@@ -4001,6 +4050,9 @@
                     }(a, e, t, n, i)
                 }.apply(t, i)) || (e.exports = r)
             }(window)
+        },
+        IRK4: function(e, t, n) {
+            e.exports = n.p + "assets/paypal_dark_1x-894b335a3c74ebaba75f.png"
         },
         ITnh: function(e, t, n) {
             e.exports = n("Lrin")()
@@ -4537,13 +4589,13 @@
             function i(e, t, n, i, r, a, o) {
                 var s = document.createElement("canvas");
                 s.width = a, s.height = o;
-                var l = s.getContext("2d"),
-                    c = "";
-                if (l) {
+                var c = s.getContext("2d"),
+                    l = "";
+                if (c) {
                     var u = new Image;
-                    u.src = e, l.drawImage(u, t, n, i, r, 0, 0, a, o), c = s.toDataURL("image/png")
+                    u.src = e, c.drawImage(u, t, n, i, r, 0, 0, a, o), l = s.toDataURL("image/png")
                 }
-                return s.remove(), c
+                return s.remove(), l
             }
             n.d(t, "a", function() {
                 return i
@@ -4557,8 +4609,8 @@
                 a = n("oJmH"),
                 o = n("/7QA"),
                 s = n("cZKs"),
-                l = n("8/mp"),
-                c = n("yR8l"),
+                c = n("8/mp"),
+                l = n("yR8l"),
                 u = n("UUve"),
                 d = n("NvVO"),
                 p = n("2xye"),
@@ -4576,9 +4628,9 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.startTime = Date.now(), t.handleOnClose = function() {
-                            Object(u.d)(), t.props.onClose && t.props.onClose()
+                            Object(u.e)(), t.props.onClose && t.props.onClose()
                         }, t.onBeforeUnloadHandler = function() {
-                            Object(u.d)(), window.removeEventListener("beforeunload", t.onBeforeUnloadHandler)
+                            Object(u.e)(), window.removeEventListener("beforeunload", t.onBeforeUnloadHandler)
                         }, t.trackBenchmarkComplete = function() {
                             t.props.latencyTracking.unsubscribeFromInteractivityCompletion(t.trackBenchmarkComplete);
                             var e = Date.now() - t.startTime;
@@ -4590,13 +4642,13 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.reportInteractive()
                     }, t.prototype.componentWillUnmount = function() {
-                        Object(u.d)(), this.props.latencyTracking.unsubscribeFromInteractivityCompletion(this.trackBenchmarkComplete)
+                        Object(u.e)(), this.props.latencyTracking.unsubscribeFromInteractivityCompletion(this.trackBenchmarkComplete)
                     }, t.prototype.render = function() {
                         var e;
                         if (this.props.data && this.props.data.loading) e = null;
                         else {
                             var t = this.props.data && this.props.data.recipient || null;
-                            e = r.createElement(l.b, {
+                            e = r.createElement(c.b, {
                                 suppressScrollX: !0
                             }, r.createElement(m.a, {
                                 productName: this.props.productName,
@@ -4605,6 +4657,7 @@
                                 recipientDisplayName: t && t.displayName,
                                 trackingContext: this.props.trackingContext,
                                 mysteryGiftCount: this.props.mysteryGiftCount || null,
+                                isAnonymous: this.props.isAnonymous || !1,
                                 onCheckoutProgress: this.props.onCheckoutProgress
                             }))
                         }
@@ -4620,7 +4673,7 @@
                         b(this.props) ? this.props.latencyTracking.reportInteractive() : !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                     }, t
                 }(r.Component),
-                E = Object(a.compose)(Object(h.b)("CheckoutModal"), Object(c.a)(y, {
+                E = Object(a.compose)(Object(h.b)("CheckoutModal"), Object(l.a)(y, {
                     options: function(e) {
                         return {
                             variables: {
@@ -4635,13 +4688,13 @@
             n.d(t, "CheckoutModal", function() {
                 return E
             }), n.d(t, "CheckoutModalPublicProps", function() {}), n.d(t, "clearSubscriptionCheckoutKeys", function() {
-                return u.d
-            }), n.d(t, "SUB_CHECKOUT__PRODUCT_KEY", function() {
-                return u.b
-            }), n.d(t, "SUB_CHECKOUT__RECIPIENT_KEY", function() {
-                return u.c
-            }), n.d(t, "showLoginModalWithCheckoutDispatch", function() {
                 return u.e
+            }), n.d(t, "SUB_CHECKOUT__PRODUCT_KEY", function() {
+                return u.c
+            }), n.d(t, "SUB_CHECKOUT__RECIPIENT_KEY", function() {
+                return u.d
+            }), n.d(t, "showLoginModalWithCheckoutDispatch", function() {
+                return u.f
             })
         },
         KK1e: function(e, t, n) {
@@ -4669,8 +4722,8 @@
                         y: 0
                     }, this._create())
                 }
-                var l = s.prototype = Object.create(e.prototype);
-                l.constructor = s, l._create = function() {
+                var c = s.prototype = Object.create(e.prototype);
+                c.constructor = s, c._create = function() {
                     this._transn = {
                         ingProperties: {},
                         clean: {},
@@ -4678,18 +4731,18 @@
                     }, this.css({
                         position: "absolute"
                     })
-                }, l.handleEvent = function(e) {
+                }, c.handleEvent = function(e) {
                     var t = "on" + e.type;
                     this[t] && this[t](e)
-                }, l.getSize = function() {
+                }, c.getSize = function() {
                     this.size = t(this.element)
-                }, l.css = function(e) {
+                }, c.css = function(e) {
                     var t = this.element.style;
                     for (var n in e) {
                         var i = o[n] || n;
                         t[i] = e[n]
                     }
-                }, l.getPosition = function() {
+                }, c.getPosition = function() {
                     var e = getComputedStyle(this.element),
                         t = this.layout._getOption("originLeft"),
                         n = this.layout._getOption("originTop"),
@@ -4698,7 +4751,7 @@
                         a = parseFloat(i),
                         o = parseFloat(r),
                         s = this.layout.size; - 1 != i.indexOf("%") && (a = a / 100 * s.width), -1 != r.indexOf("%") && (o = o / 100 * s.height), a = isNaN(a) ? 0 : a, o = isNaN(o) ? 0 : o, a -= t ? s.paddingLeft : s.paddingRight, o -= n ? s.paddingTop : s.paddingBottom, this.position.x = a, this.position.y = o
-                }, l.layoutPosition = function() {
+                }, c.layoutPosition = function() {
                     var e = this.layout.size,
                         t = {},
                         n = this.layout._getOption("originLeft"),
@@ -4708,18 +4761,18 @@
                         o = n ? "right" : "left",
                         s = this.position.x + e[r];
                     t[a] = this.getXValue(s), t[o] = "";
-                    var l = i ? "paddingTop" : "paddingBottom",
-                        c = i ? "top" : "bottom",
+                    var c = i ? "paddingTop" : "paddingBottom",
+                        l = i ? "top" : "bottom",
                         u = i ? "bottom" : "top",
-                        d = this.position.y + e[l];
-                    t[c] = this.getYValue(d), t[u] = "", this.css(t), this.emitEvent("layout", [this])
-                }, l.getXValue = function(e) {
+                        d = this.position.y + e[c];
+                    t[l] = this.getYValue(d), t[u] = "", this.css(t), this.emitEvent("layout", [this])
+                }, c.getXValue = function(e) {
                     var t = this.layout._getOption("horizontal");
                     return this.layout.options.percentPosition && !t ? e / this.layout.size.width * 100 + "%" : e + "px"
-                }, l.getYValue = function(e) {
+                }, c.getYValue = function(e) {
                     var t = this.layout._getOption("horizontal");
                     return this.layout.options.percentPosition && t ? e / this.layout.size.height * 100 + "%" : e + "px"
-                }, l._transitionTo = function(e, t) {
+                }, c._transitionTo = function(e, t) {
                     this.getPosition();
                     var n = this.position.x,
                         i = this.position.y,
@@ -4736,17 +4789,17 @@
                             isCleaning: !0
                         })
                     } else this.layoutPosition()
-                }, l.getTranslate = function(e, t) {
+                }, c.getTranslate = function(e, t) {
                     var n = this.layout._getOption("originLeft"),
                         i = this.layout._getOption("originTop");
                     return "translate3d(" + (e = n ? e : -e) + "px, " + (t = i ? t : -t) + "px, 0)"
-                }, l.goTo = function(e, t) {
+                }, c.goTo = function(e, t) {
                     this.setPosition(e, t), this.layoutPosition()
-                }, l.moveTo = l._transitionTo, l.setPosition = function(e, t) {
+                }, c.moveTo = c._transitionTo, c.setPosition = function(e, t) {
                     this.position.x = parseFloat(e), this.position.y = parseFloat(t)
-                }, l._nonTransition = function(e) {
+                }, c._nonTransition = function(e) {
                     for (var t in this.css(e.to), e.isCleaning && this._removeStyles(e.to), e.onTransitionEnd) e.onTransitionEnd[t].call(this)
-                }, l.transition = function(e) {
+                }, c.transition = function(e) {
                     if (parseFloat(this.layout.options.transitionDuration)) {
                         var t = this._transn;
                         for (var n in e.onTransitionEnd) t.onEnd[n] = e.onTransitionEnd[n];
@@ -4754,29 +4807,29 @@
                         e.from && (this.css(e.from), this.element.offsetHeight), this.enableTransition(e.to), this.css(e.to), this.isTransitioning = !0
                     } else this._nonTransition(e)
                 };
-                var c = "opacity," + function(e) {
+                var l = "opacity," + function(e) {
                     return e.replace(/([A-Z])/g, function(e) {
                         return "-" + e.toLowerCase()
                     })
                 }(r);
-                l.enableTransition = function() {
+                c.enableTransition = function() {
                     if (!this.isTransitioning) {
                         var e = this.layout.options.transitionDuration;
                         e = "number" == typeof e ? e + "ms" : e, this.css({
-                            transitionProperty: c,
+                            transitionProperty: l,
                             transitionDuration: e,
                             transitionDelay: this.staggerDelay || 0
                         }), this.element.addEventListener(a, this, !1)
                     }
-                }, l.onwebkitTransitionEnd = function(e) {
+                }, c.onwebkitTransitionEnd = function(e) {
                     this.ontransitionend(e)
-                }, l.onotransitionend = function(e) {
+                }, c.onotransitionend = function(e) {
                     this.ontransitionend(e)
                 };
                 var u = {
                     "-webkit-transform": "transform"
                 };
-                l.ontransitionend = function(e) {
+                c.ontransitionend = function(e) {
                     if (e.target === this.element) {
                         var t = this._transn,
                             n = u[e.propertyName] || e.propertyName;
@@ -4789,9 +4842,9 @@
                         }
                         this.emitEvent("transitionEnd", [this])
                     }
-                }, l.disableTransition = function() {
+                }, c.disableTransition = function() {
                     this.removeTransitionStyles(), this.element.removeEventListener(a, this, !1), this.isTransitioning = !1
-                }, l._removeStyles = function(e) {
+                }, c._removeStyles = function(e) {
                     var t = {};
                     for (var n in e) t[n] = "";
                     this.css(t)
@@ -4801,19 +4854,19 @@
                     transitionDuration: "",
                     transitionDelay: ""
                 };
-                return l.removeTransitionStyles = function() {
+                return c.removeTransitionStyles = function() {
                     this.css(d)
-                }, l.stagger = function(e) {
+                }, c.stagger = function(e) {
                     e = isNaN(e) ? 0 : e, this.staggerDelay = e + "ms"
-                }, l.removeElem = function() {
+                }, c.removeElem = function() {
                     this.element.parentNode.removeChild(this.element), this.css({
                         display: ""
                     }), this.emitEvent("remove", [this])
-                }, l.remove = function() {
+                }, c.remove = function() {
                     i && parseFloat(this.layout.options.transitionDuration) ? (this.once("transitionEnd", function() {
                         this.removeElem()
                     }), this.hide()) : this.removeElem()
-                }, l.reveal = function() {
+                }, c.reveal = function() {
                     delete this.isHidden, this.css({
                         display: ""
                     });
@@ -4825,13 +4878,13 @@
                         isCleaning: !0,
                         onTransitionEnd: t
                     })
-                }, l.onRevealTransitionEnd = function() {
+                }, c.onRevealTransitionEnd = function() {
                     this.isHidden || this.emitEvent("reveal")
-                }, l.getHideRevealTransitionEndProperty = function(e) {
+                }, c.getHideRevealTransitionEndProperty = function(e) {
                     var t = this.layout.options[e];
                     if (t.opacity) return "opacity";
                     for (var n in t) return n
-                }, l.hide = function() {
+                }, c.hide = function() {
                     this.isHidden = !0, this.css({
                         display: ""
                     });
@@ -4843,11 +4896,11 @@
                         isCleaning: !0,
                         onTransitionEnd: t
                     })
-                }, l.onHideTransitionEnd = function() {
+                }, c.onHideTransitionEnd = function() {
                     this.isHidden && (this.css({
                         display: "none"
                     }), this.emitEvent("hide"))
-                }, l.destroy = function() {
+                }, c.destroy = function() {
                     this.css({
                         position: "",
                         left: "",
@@ -5144,6 +5197,9 @@
                 };
                 return n.checkPropTypes = r, n.PropTypes = n, n
             }
+        },
+        MU3X: function(e, t, n) {
+            e.exports = n.p + "assets/more_methods_dark_1x-e97146d0a834e34ca979.png"
         },
         NAeX: function(e, t, n) {},
         NwMv: function(e, t, n) {},
@@ -5658,9 +5714,9 @@
             }), n.d(t, "e", function() {
                 return s
             }), n.d(t, "f", function() {
-                return l
-            }), n.d(t, "g", function() {
                 return c
+            }), n.d(t, "g", function() {
+                return l
             }), n.d(t, "c", function() {
                 return u
             }), n.d(t, "d", function() {
@@ -5673,12 +5729,12 @@
                 return e.isBitsEnabled ? i.Bits : e.vendorCode && e.sku ? i.InExtensionPurchases : null
             }
 
-            function l(e) {
+            function c(e) {
                 var t = [];
                 return e.component && e.component.viewerURL && t.push(o.x.COMPONENT), e.panel && e.panel.viewerURL && t.push(o.x.PANEL), e.videoOverlay && e.videoOverlay.viewerURL && t.push(o.x.VIDEO_OVERLAY), t
             }
 
-            function c(e) {
+            function l(e) {
                 var t = [a.ExtensionPlatform.Web];
                 return e.mobile && e.mobile.viewerURL && t.push(a.ExtensionPlatform.Mobile), t
             }
@@ -5753,8 +5809,8 @@
                                     var i = r(t);
                                     s.isBoxSizeOuter = a = 200 == e(i.width), n.removeChild(t)
                                 }(), "string" == typeof t && (t = document.querySelector(t)), t && "object" == typeof t && t.nodeType) {
-                                var l = r(t);
-                                if ("none" == l.display) return function() {
+                                var c = r(t);
+                                if ("none" == c.display) return function() {
                                     for (var e = {
                                             width: 0,
                                             height: 0,
@@ -5768,25 +5824,25 @@
                                     }
                                     return e
                                 }();
-                                var c = {};
-                                c.width = t.offsetWidth, c.height = t.offsetHeight;
-                                for (var u = c.isBorderBox = "border-box" == l.boxSizing, d = 0; d < i; d++) {
+                                var l = {};
+                                l.width = t.offsetWidth, l.height = t.offsetHeight;
+                                for (var u = l.isBorderBox = "border-box" == c.boxSizing, d = 0; d < i; d++) {
                                     var p = n[d],
-                                        m = l[p],
+                                        m = c[p],
                                         h = parseFloat(m);
-                                    c[p] = isNaN(h) ? 0 : h
+                                    l[p] = isNaN(h) ? 0 : h
                                 }
-                                var f = c.paddingLeft + c.paddingRight,
-                                    g = c.paddingTop + c.paddingBottom,
-                                    y = c.marginLeft + c.marginRight,
-                                    b = c.marginTop + c.marginBottom,
-                                    v = c.borderLeftWidth + c.borderRightWidth,
-                                    E = c.borderTopWidth + c.borderBottomWidth,
+                                var f = l.paddingLeft + l.paddingRight,
+                                    g = l.paddingTop + l.paddingBottom,
+                                    y = l.marginLeft + l.marginRight,
+                                    b = l.marginTop + l.marginBottom,
+                                    v = l.borderLeftWidth + l.borderRightWidth,
+                                    E = l.borderTopWidth + l.borderBottomWidth,
                                     k = u && a,
-                                    C = e(l.width);
-                                !1 !== C && (c.width = C + (k ? 0 : f + v));
-                                var P = e(l.height);
-                                return !1 !== P && (c.height = P + (k ? 0 : g + E)), c.innerWidth = c.width - (f + v), c.innerHeight = c.height - (g + E), c.outerWidth = c.width + y, c.outerHeight = c.height + b, c
+                                    C = e(c.width);
+                                !1 !== C && (l.width = C + (k ? 0 : f + v));
+                                var P = e(c.height);
+                                return !1 !== P && (l.height = P + (k ? 0 : g + E)), l.innerWidth = l.width - (f + v), l.innerHeight = l.height - (g + E), l.outerWidth = l.width + y, l.outerHeight = l.height + b, l
                             }
                         }
                         return s
@@ -5853,7 +5909,7 @@
                 a = n("0bws"),
                 o = n("EuHz"),
                 s = n("Ue10"),
-                l = (n("FXik"), function(e) {
+                c = (n("FXik"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5885,7 +5941,7 @@
                     }, t
                 }(r.Component));
             n.d(t, "a", function() {
-                return l
+                return c
             })
         },
         Rsna: function(e, t) {
@@ -6066,8 +6122,8 @@
                 a = n("fvjX"),
                 o = n("1/iK"),
                 s = n("y5D0"),
-                l = n("kRBY"),
-                c = n("mrSG"),
+                c = n("kRBY"),
+                l = n("mrSG"),
                 u = n("NAv5"),
                 d = n("q1tI"),
                 p = n("/7QA"),
@@ -6085,7 +6141,7 @@
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return c.__extends(t, e), t.prototype.render = function() {
+                    return l.__extends(t, e), t.prototype.render = function() {
                         return this.props.product ? (e = this.props.purchaseFlow === i.GIFT_SUB || this.props.purchaseFlow === i.MYSTERY_GIFT ? this.isEsportPurchase ? this.giftEsportMessageText : this.giftSubMessageText : this.isEsportPurchase ? this.personalEsportMessageText : "turbo" === this.props.product.product.name ? this.turboMessageText : this.personalSubMessageText, d.createElement(k.Xa, null, e)) : d.createElement(k.ib, null);
                         var e
                     }, Object.defineProperty(t.prototype, "turboMessageText", {
@@ -6181,7 +6237,7 @@
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return c.__extends(t, e), t.prototype.render = function() {
+                    return l.__extends(t, e), t.prototype.render = function() {
                         return d.createElement(k.Eb, {
                             className: "checkout-error-brick",
                             background: k.r.Base,
@@ -6210,7 +6266,7 @@
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return c.__extends(t, e), t.prototype.render = function() {
+                    return l.__extends(t, e), t.prototype.render = function() {
                         return this.props.level === E.Error ? d.createElement(P, null, d.createElement(k.W, {
                             bold: !0
                         }, this.title), d.createElement(k.Xa, {
@@ -6253,7 +6309,7 @@
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return c.__extends(t, e), t.prototype.render = function() {
+                    return l.__extends(t, e), t.prototype.render = function() {
                         return this.props.progress === x.a.CONFIRMATION ? d.createElement(k.W, {
                             type: k.Vb.H2,
                             bold: !0
@@ -6278,7 +6334,7 @@
                 }(d.Component);
             var I, w = Object(r.connect)(function(e) {
                     return {
-                        sessionUser: Object(l.e)(e)
+                        sessionUser: Object(c.e)(e)
                     }
                 })(O),
                 N = (n("u/1r"), function(e) {
@@ -6360,7 +6416,7 @@
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return c.__extends(t, e), t.prototype.render = function() {
+                    return l.__extends(t, e), t.prototype.render = function() {
                         var e;
                         switch (this.props.productEligibility) {
                             case I.NON_GIFTABLE_RECIPIENT:
@@ -6487,7 +6543,7 @@
                             date: Object(p.c)(new Date(Date.now()), "medium")
                         }, "PurchasePreview"), t
                     }
-                    return c.__extends(t, e), t.prototype.render = function() {
+                    return l.__extends(t, e), t.prototype.render = function() {
                         if (!this.props.product) return null;
                         var e = d.createElement(d.Fragment, null),
                             t = d.createElement(d.Fragment, null);
@@ -6680,7 +6736,7 @@
                             (window.opener || window.top !== window.self) && (parent.window.close(), window.close()), t.props.history.push("/" + t.props.productOwnerLogin)
                         }, t
                     }
-                    return c.__extends(t, e), t.prototype.render = function() {
+                    return l.__extends(t, e), t.prototype.render = function() {
                         return d.createElement(k.Xa, {
                             className: "gift-sub-receipt__container",
                             padding: {
@@ -6767,7 +6823,7 @@
                             (window.opener || window.top !== window.self) && (parent.window.close(), window.close()), t.props.history.push("/" + t.props.productOwnerLogin)
                         }, t
                     }
-                    return c.__extends(t, e), t.prototype.render = function() {
+                    return l.__extends(t, e), t.prototype.render = function() {
                         return d.createElement(k.Xa, {
                             className: "gift-sub-receipt__container",
                             padding: {
@@ -6837,7 +6893,7 @@
                             (window.opener || window.top !== window.self) && (parent.window.close(), window.close()), "turbo" === t.props.productOwnerLogin ? t.props.history.push("/settings/turbo") : t.props.history.push("/" + t.props.productOwnerLogin)
                         }, t
                     }
-                    return c.__extends(t, e), t.prototype.render = function() {
+                    return l.__extends(t, e), t.prototype.render = function() {
                         var e;
                         return e = this.props.giftSubEndsAt ? Object(p.d)("Your paid subscription will begin on <x:strong>{endsAt}</x:strong> after your Gift Subscription ends", {
                             "x:strong": function(e) {
@@ -6889,7 +6945,7 @@
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return c.__extends(t, e), t.prototype.render = function() {
+                    return l.__extends(t, e), t.prototype.render = function() {
                         if (!this.props.product || !this.props.purchaseInvoice.price) return null;
                         var e = this.props.product.product && this.props.product.product.owner && this.props.product.product.owner.id || "",
                             t = Object(b.a)(e, this.props.sessionUser),
@@ -6930,8 +6986,8 @@
                         })
                     }, t
                 }(d.PureComponent),
-                H = n("V+q8"),
-                V = n("oJmH"),
+                V = n("V+q8"),
+                H = n("oJmH"),
                 q = n("sV2v"),
                 Y = n("Jgup"),
                 Z = function(e) {
@@ -6951,7 +7007,7 @@
                             })
                         }, t
                     }
-                    return c.__extends(t, e), t.prototype.render = function() {
+                    return l.__extends(t, e), t.prototype.render = function() {
                         return d.createElement(k.Xa, {
                             display: k.X.Flex,
                             flexWrap: k.Ba.Wrap
@@ -7031,9 +7087,9 @@
                             paymentMethodEnabled: t.props.eligibilityStatus === D.ACTIVE,
                             zipCodeError: !1
                         }, t.handleSubmit = function() {
-                            return c.__awaiter(t, void 0, void 0, function() {
+                            return l.__awaiter(t, void 0, void 0, function() {
                                 var e = this;
-                                return c.__generator(this, function(t) {
+                                return l.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
                                             return this.hasValidResidence() ? (this.setState({
@@ -7073,7 +7129,7 @@
                             return !t.props.showEuSubs || (!["US", "CA"].includes(t.state.userCountryOfResidence) || !!t.state.userZipCode)
                         }, t
                     }
-                    return c.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
                         var e = this;
                         window.onAmazonLoginReady = function() {
                             window.amazon.Login.setClientId(e.props.clientID)
@@ -7172,7 +7228,7 @@
                             state: this.state.awaitingResponse ? k.E.Loading : k.E.Default,
                             disabled: this.state.awaitingResponse
                         }, this.props.submitButtonCopy)))))) : d.createElement(k.Za, null)
-                    }, t = c.__decorate([Object(J.b)("RecurlyAmazonPay")], t)
+                    }, t = l.__decorate([Object(J.b)("RecurlyAmazonPay")], t)
                 }(d.Component)),
                 ee = n("/0dD"),
                 te = n("XDQu"),
@@ -7210,18 +7266,18 @@
                             userZipCode: t.props.userZipCode,
                             paymentMethodEnabled: t.props.eligibilityStatus === D.ACTIVE
                         }, t.handleSubmit = function(e) {
-                            return c.__awaiter(t, void 0, void 0, function() {
+                            return l.__awaiter(t, void 0, void 0, function() {
                                 var t = this;
-                                return c.__generator(this, function(n) {
+                                return l.__generator(this, function(n) {
                                     return e.preventDefault(), this.setState(function(e) {
                                         return {
                                             awaitingResponse: !0,
-                                            errorState: c.__assign({}, e.errorState)
+                                            errorState: l.__assign({}, e.errorState)
                                         }
                                     }), window.recurly.token(this.form, function(e, n) {
-                                        return c.__awaiter(t, void 0, void 0, function() {
+                                        return l.__awaiter(t, void 0, void 0, function() {
                                             var t;
-                                            return c.__generator(this, function(i) {
+                                            return l.__generator(this, function(i) {
                                                 switch (i.label) {
                                                     case 0:
                                                         return t = this.validateResidence(), e || t.length ? (this.handleValidationError(e, t), this.setState({
@@ -7244,9 +7300,9 @@
                             var e = [];
                             return ["US", "CA"].includes(t.state.userCountryOfResidence) && !t.state.userZipCode && e.push("zip"), e
                         }, t.handleValidationSuccess = function(e) {
-                            return c.__awaiter(t, void 0, void 0, function() {
+                            return l.__awaiter(t, void 0, void 0, function() {
                                 var t = this;
-                                return c.__generator(this, function(n) {
+                                return l.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
                                             return [4, this.props.onSuccess({
@@ -7299,7 +7355,7 @@
                             })
                         }, t
                     }
-                    return c.__extends(t, e), t.prototype.componentWillMount = function() {
+                    return l.__extends(t, e), t.prototype.componentWillMount = function() {
                         var e = this;
                         this.recurlyPollId = setInterval(function() {
                             window.recurly && (e.props.latencyTracking.reportInteractive(), clearInterval(e.recurlyPollId), e.setupConfigs(), e.pollForHostedField())
@@ -7451,9 +7507,8 @@
                             }), clearInterval(e.hostedFieldPollId))
                         }, 500)
                     }, t.prototype.setupConfigs = function() {
-                        var e = !window.location.href.includes("/products/") && this.props.darkModeEnabled,
-                            t = e ? re.dark : re.light,
-                            n = e ? ie.dark : ie.light;
+                        var e = this.props.darkModeEnabled ? re.dark : re.light,
+                            t = this.props.darkModeEnabled ? ie.dark : ie.light;
                         window.recurly.configure({
                             publicKey: this.props.publicKey,
                             fraud: {
@@ -7467,19 +7522,19 @@
                                     style: {
                                         height: "auto",
                                         fontSize: "12px",
-                                        fontColor: n,
+                                        fontColor: t,
                                         placeholder: {
-                                            color: t
+                                            color: e
                                         }
                                     }
                                 },
                                 number: {
                                     selector: "#recurly-number",
                                     style: {
-                                        fontColor: n,
+                                        fontColor: t,
                                         placeholder: {
                                             content: Object(p.d)("Card Number", "RecurlyCreditCard"),
-                                            color: t
+                                            color: e
                                         }
                                     }
                                 },
@@ -7487,10 +7542,10 @@
                                     selector: "#recurly-month",
                                     inputType: "select",
                                     style: {
-                                        fontColor: n,
+                                        fontColor: t,
                                         placeholder: {
                                             content: Object(p.d)("Select Month", "RecurlyCreditCard"),
-                                            color: t
+                                            color: e
                                         }
                                     }
                                 },
@@ -7498,33 +7553,33 @@
                                     selector: "#recurly-year",
                                     inputType: "select",
                                     style: {
-                                        fontColor: n,
+                                        fontColor: t,
                                         placeholder: {
                                             content: Object(p.d)("Select Year", "RecurlyCreditCard"),
-                                            color: t
+                                            color: e
                                         }
                                     }
                                 },
                                 cvv: {
                                     selector: "#recurly-cvv",
                                     style: {
-                                        fontColor: n,
+                                        fontColor: t,
                                         placeholder: {
                                             content: Object(p.d)("CVV", "RecurlyCreditCard"),
-                                            color: t
+                                            color: e
                                         }
                                     }
                                 }
                             }
                         })
-                    }, t = c.__decorate([Object(J.b)("RecurlyCreditCard")], t)
+                    }, t = l.__decorate([Object(J.b)("RecurlyCreditCard")], t)
                 }(d.Component);
-            var se, le = Object(r.connect)(function(e) {
+            var se, ce = Object(r.connect)(function(e) {
                     return {
                         darkModeEnabled: Object(te.a)(e) === ee.a.Dark
                     }
                 })(oe),
-                ce = (n("a7Xb"), function(e) {
+                le = (n("a7Xb"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -7536,9 +7591,9 @@
                             userZipCode: t.props.userZipCode,
                             paymentMethodEnabled: t.props.eligibilityStatus === D.ACTIVE
                         }, t.handleValidationSuccess = function(e) {
-                            return c.__awaiter(t, void 0, void 0, function() {
+                            return l.__awaiter(t, void 0, void 0, function() {
                                 var t = this;
-                                return c.__generator(this, function(n) {
+                                return l.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
                                             return [4, this.props.onSuccess({
@@ -7587,7 +7642,7 @@
                             return !t.props.showEuSubs || (!["US", "CA"].includes(t.state.userCountryOfResidence) || !!t.state.userZipCode)
                         }, t
                     }
-                    return c.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
                         var e = this;
                         this.pollForRecurly = setInterval(function() {
                             window.recurly && (e.props.latencyTracking.reportInteractive(), clearInterval(e.pollForRecurly), e.setupConfigs(), e.setState({
@@ -7651,7 +7706,7 @@
                                 awaitingResponse: !1
                             })
                         }), this.paypalInstance = t
-                    }, t = c.__decorate([Object(J.b)("RecurlyPaypal")], t)
+                    }, t = l.__decorate([Object(J.b)("RecurlyPaypal")], t)
                 }(d.Component)),
                 ue = function(e) {
                     function t() {
@@ -7700,7 +7755,7 @@
                             }), t.props.handleCountryChange(e.countryCode)
                         }, t
                     }
-                    return c.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
                         var e = this.iframe;
                         e && (e.addEventListener("load", this.onIframeLoad), window.addEventListener("message", this.handleXsollaEvent))
                     }, t.prototype.componentDidUpdate = function(e) {
@@ -7736,7 +7791,7 @@
                             width: "100%",
                             height: "650px"
                         }))))
-                    }, t = c.__decorate([Object(J.b)("XsollaMoreMethods")], t)
+                    }, t = l.__decorate([Object(J.b)("XsollaMoreMethods")], t)
                 }(d.Component),
                 de = n("f00E"),
                 pe = n("WlZp");
@@ -7790,9 +7845,9 @@
                             color: k.O.Error
                         }, t.state.errorMessage))
                     }, t.successCallback = function(e) {
-                        return c.__awaiter(t, void 0, void 0, function() {
+                        return l.__awaiter(t, void 0, void 0, function() {
                             var t = this;
-                            return c.__generator(this, function(n) {
+                            return l.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
                                         if (!e.success) return [2];
@@ -7852,7 +7907,7 @@
                         })
                     }, t
                 }
-                return c.__extends(t, e), t.prototype.componentDidMount = function() {
+                return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     var e = this;
                     if (document.querySelector("#zuora-script")) this.initZuoraIFrame();
                     else {
@@ -7926,11 +7981,11 @@
                     },
                     enumerable: !0,
                     configurable: !0
-                }), t = c.__decorate([Object(J.b)("ZuoraCreditCard")], t)
+                }), t = l.__decorate([Object(J.b)("ZuoraCreditCard")], t)
             }(d.Component);
             var he, fe = Object(r.connect)(function(e) {
                 return {
-                    languageCode: Object(l.b)(e)
+                    languageCode: Object(c.b)(e)
                 }
             })(me);
             ! function(e) {
@@ -7941,10 +7996,10 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.submitButtonCopy = Object(p.d)("Complete Purchase", "PaymentMethods"), t
                     }
-                    return c.__extends(t, e), t.prototype.render = function() {
+                    return l.__extends(t, e), t.prototype.render = function() {
                         switch (this.props.type) {
                             case he.RecurlyAmazonPay:
-                                return d.createElement($, c.__assign({
+                                return d.createElement($, l.__assign({
                                     submitButtonCopy: this.submitButtonCopy,
                                     onSuccess: this.props.handleCompletePurchase
                                 }, this.props.configs.recurly.payWithAmazonConfigs, {
@@ -7955,7 +8010,7 @@
                                     showEuSubs: this.props.showEuSubs
                                 }));
                             case he.RecurlyCreditCard:
-                                return d.createElement(le, {
+                                return d.createElement(ce, {
                                     publicKey: this.props.configs.recurly.publicKey,
                                     submitButtonCopy: this.submitButtonCopy,
                                     onSuccess: this.props.handleCompletePurchase,
@@ -7966,7 +8021,7 @@
                                     showEuSubs: this.props.showEuSubs
                                 });
                             case he.RecurlyPaypal:
-                                return d.createElement(ce, {
+                                return d.createElement(le, {
                                     publicKey: this.props.configs.recurly.publicKey,
                                     braintreeClientAuthorization: this.props.configs.recurly.braintreeClientAuthorization,
                                     submitButtonCopy: this.submitButtonCopy,
@@ -7978,13 +8033,13 @@
                                     showEuSubs: this.props.showEuSubs
                                 });
                             case he.ZuoraCreditCard:
-                                return d.createElement(fe, c.__assign({
+                                return d.createElement(fe, l.__assign({
                                     submitButtonCopy: this.submitButtonCopy,
                                     onSuccess: this.props.handleCompletePurchase,
                                     isProductionConfig: this.props.configs.recurly.payWithAmazonConfigs.isProduction
                                 }, this.props.configs.zuora));
                             default:
-                                return d.createElement(ue, c.__assign({
+                                return d.createElement(ue, l.__assign({
                                     userCountryOfResidence: this.props.userCountryOfResidence,
                                     userZipCode: this.props.userZipCode,
                                     handleCountryChange: this.props.handleCountryChange,
@@ -7998,19 +8053,32 @@
                 be = n.n(ye),
                 ve = n("yrda"),
                 Ee = n.n(ve),
-                ke = n("AVF4"),
+                ke = n("csmi"),
                 Ce = n.n(ke),
-                Pe = n("BIez"),
+                Pe = n("2ORI"),
                 Se = n.n(Pe),
-                xe = n("EF6p"),
+                xe = n("AVF4"),
                 Oe = n.n(xe),
-                Ie = n("xgE2"),
+                Ie = n("BIez"),
                 we = n.n(Ie),
-                Ne = n("ZiR0"),
+                Ne = n("EF6p"),
                 _e = n.n(Ne),
-                Te = n("KRuc"),
+                Te = n("xgE2"),
                 De = n.n(Te),
-                Fe = {
+                Fe = n("MU3X"),
+                je = n.n(Fe),
+                Re = n("E3rh"),
+                Ae = n.n(Re),
+                Me = n("ZiR0"),
+                Le = n.n(Me),
+                Be = n("KRuc"),
+                Ue = n.n(Be),
+                We = n("IRK4"),
+                ze = n.n(We),
+                Xe = n("bvmA"),
+                Ge = n.n(Xe),
+                Ve = n("1OTy"),
+                He = {
                     CreditCard: function() {
                         return Object(p.d)("Credit Card", "TicketDescription")
                     },
@@ -8024,67 +8092,87 @@
                         return Object(p.d)("More Methods", "TicketDescription")
                     }
                 },
-                je = function(e) {
+                qe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.paymentProviders = [{
                             paymentMethodType: he.RecurlyCreditCard,
                             paymentFlow: Q.b.RecurlyCreditCard,
                             button: {
-                                label: Fe.CreditCard(),
-                                src: Ce.a,
-                                alt: Fe.CreditCard(),
+                                label: He.CreditCard(),
+                                src: Oe.a,
+                                alt: He.CreditCard(),
                                 srcSet: {
-                                    "1x": Ce.a,
-                                    "2x": Se.a
+                                    "1x": Oe.a,
+                                    "2x": we.a
+                                },
+                                darkSrcSet: {
+                                    "1x": Oe.a,
+                                    "2x": we.a
                                 }
                             }
                         }, {
                             paymentMethodType: he.ZuoraCreditCard,
                             paymentFlow: Q.b.ZuoraCreditCard,
                             button: {
-                                label: Fe.CreditCard(),
-                                src: Ce.a,
-                                alt: Fe.CreditCard(),
+                                label: He.CreditCard(),
+                                src: Oe.a,
+                                alt: He.CreditCard(),
                                 srcSet: {
-                                    "1x": Ce.a,
-                                    "2x": Se.a
+                                    "1x": Oe.a,
+                                    "2x": we.a
+                                },
+                                darkSrcSet: {
+                                    "1x": Oe.a,
+                                    "2x": we.a
                                 }
                             }
                         }, {
                             paymentMethodType: he.RecurlyPaypal,
                             paymentFlow: Q.b.RecurlyPaypal,
                             button: {
-                                label: Fe.Paypal(),
-                                src: _e.a,
-                                alt: Fe.Paypal(),
+                                label: He.Paypal(),
+                                src: Le.a,
+                                alt: He.Paypal(),
                                 srcSet: {
-                                    "1x": _e.a,
-                                    "2x": De.a
+                                    "1x": Le.a,
+                                    "2x": Ue.a
+                                },
+                                darkSrcSet: {
+                                    "1x": ze.a,
+                                    "2x": Ge.a
                                 }
                             }
                         }, {
                             paymentMethodType: he.RecurlyAmazonPay,
                             paymentFlow: Q.b.RecurlyPayWithAmazon,
                             button: {
-                                label: Fe.AmazonPay(),
+                                label: He.AmazonPay(),
                                 src: be.a,
-                                alt: Fe.AmazonPay(),
+                                alt: He.AmazonPay(),
                                 srcSet: {
                                     "1x": be.a,
                                     "2x": Ee.a
+                                },
+                                darkSrcSet: {
+                                    "1x": Ce.a,
+                                    "2x": Se.a
                                 }
                             }
                         }, {
                             paymentMethodType: he.Xsolla,
                             paymentFlow: Q.b.Xsolla,
                             button: {
-                                label: Fe.MoreMethods(),
-                                src: Oe.a,
-                                alt: Fe.MoreMethods(),
+                                label: He.MoreMethods(),
+                                src: _e.a,
+                                alt: He.MoreMethods(),
                                 srcSet: {
-                                    "1x": Oe.a,
-                                    "2x": we.a
+                                    "1x": _e.a,
+                                    "2x": De.a
+                                },
+                                darkSrcSet: {
+                                    "1x": je.a,
+                                    "2x": Ae.a
                                 }
                             }
                         }], t.handleClick = function(e, n) {
@@ -8097,7 +8185,7 @@
                             }
                         }, t
                     }
-                    return c.__extends(t, e), t.prototype.render = function() {
+                    return l.__extends(t, e), t.prototype.render = function() {
                         if (this.props.eligiblePaymentMethods.length <= 1) return null;
                         var e = this,
                             t = this.paymentProviders.map(function(t) {
@@ -8110,12 +8198,13 @@
                                         default: 6,
                                         sm: 3
                                     }
-                                }, d.createElement(k.La, {
+                                }, d.createElement(Ve.a, {
                                     label: t.button.label,
                                     type: k.Ma.Radio,
                                     src: t.button.src,
                                     alt: t.button.alt,
                                     srcSet: t.button.srcSet,
+                                    darkSrcSet: t.button.darkSrcSet,
                                     value: t.paymentMethodType,
                                     onChange: e.handleClick(t.paymentMethodType, t.paymentFlow),
                                     checked: e.props.selectedProvider === t.paymentMethodType
@@ -8126,7 +8215,7 @@
                         }, t))
                     }, t
                 }(d.PureComponent),
-                Re = function(e) {
+                Ye = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -8164,7 +8253,7 @@
                             })
                         }, t
                     }
-                    return c.__extends(t, e), t.prototype.componentWillMount = function() {
+                    return l.__extends(t, e), t.prototype.componentWillMount = function() {
                         for (var e = [he.RecurlyCreditCard, he.ZuoraCreditCard, he.RecurlyPaypal, he.RecurlyAmazonPay, he.Xsolla], t = this.props.eligiblePaymentMethods.filter(function(e) {
                                 return e.status !== D.HIDDEN
                             }).map(function(e) {
@@ -8179,7 +8268,7 @@
                             }
                         }
                     }, t.prototype.render = function() {
-                        return d.createElement(d.Fragment, null, d.createElement(je, {
+                        return d.createElement(d.Fragment, null, d.createElement(qe, {
                             eligiblePaymentMethods: this.props.eligiblePaymentMethods,
                             selectedProvider: this.state.selectedProvider,
                             handleClick: this.handlePaymentMethodSelectorToggleChange,
@@ -8191,8 +8280,8 @@
                         }, this.renderPaymentMethods()))
                     }, t
                 }(d.Component),
-                Ae = n("85n/"),
-                Me = function(e) {
+                Ze = n("85n/"),
+                Ke = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -8211,9 +8300,9 @@
                         }, t.zeroIndexedMonth = function(e) {
                             if (e.expirationMonth) return e.expirationMonth - 1
                         }, t.handleSubmit = function() {
-                            return c.__awaiter(t, void 0, void 0, function() {
+                            return l.__awaiter(t, void 0, void 0, function() {
                                 var e, t, n = this;
-                                return c.__generator(this, function(i) {
+                                return l.__generator(this, function(i) {
                                     switch (i.label) {
                                         case 0:
                                             if (!this.hasValidResidence()) return this.setState({
@@ -8266,7 +8355,7 @@
                             return !t.props.showEuSubs || (!["US", "CA"].includes(t.state.userCountryOfResidence) || !!t.state.userZipCode)
                         }, t
                     }
-                    return c.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
+                    return l.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
                         e.eligibility !== this.props.eligibility && this.setState({
                             paymentMethodEnabled: this.props.eligibility.status === D.ACTIVE
                         }), e.userCountryOfResidence !== this.props.userCountryOfResidence && this.setState({
@@ -8280,15 +8369,14 @@
                             border: !0,
                             borderRadius: k.x.Small,
                             padding: 2
-                        }, d.createElement(Ae.a, {
+                        }, d.createElement(Ze.a, {
                             paymentType: e.paymentType,
                             cardType: e.cardType,
                             provider: e.provider,
                             lastFour: e.lastFour,
                             expirationYear: e.expirationYear,
                             billingEmail: e.billingEmail,
-                            expirationMonth: e.expirationMonth,
-                            ignoreDarkMode: !0
+                            expirationMonth: e.expirationMonth
                         })), this.props.showEuSubs && d.createElement(k.Xa, {
                             margin: {
                                 y: 1
@@ -8309,7 +8397,7 @@
                         }, Object(p.d)("Complete Purchase", "SavedMethods"))))
                     }, t
                 }(d.Component),
-                Le = function() {
+                Qe = function() {
                     function e(e) {
                         var t = this;
                         this.recurlyCountries = p.b.get("payments_recurly_countries", ["US"]), this.payPalEuSubsEnabled = p.b.get("paypal_eu_subs", !1), this.getDeterminedTaxCountry = function() {
@@ -8370,15 +8458,15 @@
                         configurable: !0
                     }), e
                 }(),
-                Be = n("iWNC");
-            var Ue = function(e) {
+                Je = n("iWNC");
+            var $e = function(e) {
                 var t = Date.now() - e;
                 return function() {
                     var n = Date.now();
                     return t + e <= n ? (t = n, "cache-and-network") : "cache-first"
                 }
             }(3e3);
-            var We, ze = function(e) {
+            var et, tt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -8394,10 +8482,10 @@
                             })
                         }, t
                     }
-                    return c.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
                         (this.dataReady(this.props) || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), null !== this.tracker.get("savedPaymentAvailable") && null !== this.tracker.get("savedPaymentDisplayed") && this.tracker.reportEvent());
                         var e = this.savedPaymentMethod;
-                        this.eligibilityComputer = new Le({
+                        this.eligibilityComputer = new Qe({
                             productName: this.props.productName,
                             userCountryOfResidence: this.props.countryOfResidence,
                             ipCountryCode: this.props.ipCountryCode,
@@ -8434,7 +8522,7 @@
                         (this.dataReady(this.props) || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), null !== this.tracker.get("savedPaymentAvailable") && null !== this.tracker.get("savedPaymentDisplayed") && this.tracker.reportEvent());
                         var n = this.savedPaymentMethod;
                         if (e.userBestGuessCountry !== this.props.userBestGuessCountry || e.data && this.props.data && e.data.currentUser !== this.props.data.currentUser || !this.dataReady(e) && this.dataReady(this.props)) {
-                            this.eligibilityComputer = new Le({
+                            this.eligibilityComputer = new Qe({
                                 productName: this.props.productName,
                                 userCountryOfResidence: this.props.countryOfResidence,
                                 ipCountryCode: this.props.ipCountryCode,
@@ -8485,7 +8573,7 @@
                             t = this.state.eligiblePaymentMethods.filter(function(e) {
                                 return e.status !== D.HIDDEN
                             });
-                        return d.createElement(d.Fragment, null, this.renderWalletHeader(), this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature && this.savedPaymentMethod && this.props.ipCountryCode && e && d.createElement(Me, {
+                        return d.createElement(d.Fragment, null, this.renderWalletHeader(), this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature && this.savedPaymentMethod && this.props.ipCountryCode && e && d.createElement(Ke, {
                             handleCompletePurchase: this.props.handleCompletePurchase,
                             savedPaymentMethod: this.savedPaymentMethod,
                             handleCountryChange: this.props.handleCountryChange,
@@ -8495,7 +8583,7 @@
                             showEuSubs: this.props.showEuSubs
                         }), this.props.configs && t.length > 0 && !(this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature) && this.props.ipCountryCode && d.createElement(k.Xa, {
                             "data-a-target": "PAYMENT_METHOD_SELECTOR"
-                        }, d.createElement(Re, {
+                        }, d.createElement(Ye, {
                             handleCompletePurchase: this.props.handleCompletePurchase,
                             handleCountryChange: this.props.handleCountryChange,
                             trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
@@ -8613,18 +8701,18 @@
                         return !!(e.configs && e.product && e.ipCountryCode && e.data.currentUser)
                     }, t
                 }(d.Component),
-                Xe = Object(V.compose)(Object(J.b)("Wallet"), Object(h.a)(Be, {
+                nt = Object(H.compose)(Object(J.b)("Wallet"), Object(h.a)(Je, {
                     options: function() {
                         return {
-                            fetchPolicy: Ue()
+                            fetchPolicy: $e()
                         }
                     }
-                }))(ze),
-                Ge = n("T3lN");
+                }))(tt),
+                it = n("T3lN");
             ! function(e) {
                 e.ELIGIBLE_PURCHASE = "ELIGIBLE_PURCHASE", e.INELIGIBLE_PURCHASE = "INELIGIBLE_PURCHASE"
-            }(We || (We = {}));
-            var He = function(e) {
+            }(et || (et = {}));
+            var rt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -8655,21 +8743,22 @@
                             t.setState({
                                 userBestGuessCountry: e
                             });
-                            var n = c.__assign({}, t.props.data.variables, {
+                            var n = l.__assign({}, t.props.data.variables, {
                                 taxCountry: e
                             });
                             t.props.data.refetch(n)
                         }, t.completePurchase = function(e) {
-                            return c.__awaiter(t, void 0, void 0, function() {
+                            return l.__awaiter(t, void 0, void 0, function() {
                                 var t, n, i, r;
-                                return c.__generator(this, function(a) {
+                                return l.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
                                             t = this.props.data.subscriptionProduct, n = {
                                                 payment_provider: e.payment_provider,
-                                                payment_info: c.__assign({}, e.payment_info),
+                                                payment_info: l.__assign({}, e.payment_info),
                                                 is_gift: this.props.isGift,
                                                 mystery_gift_count: this.props.mysteryGiftCount,
+                                                is_anonymous: this.props.isAnonymous,
                                                 recipient_id: this.props.recipientID,
                                                 ip_country_code: this.props.data.requestInfo.countryCode,
                                                 price_info: {
@@ -8757,7 +8846,7 @@
                             })
                         }, t
                     }
-                    return c.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.data.loading && !this.props.data.error || (this.props.latencyTracking.reportInteractive(), this.state.progress < x.a.CONFIRMATION && this.productAlreadyOwned && !this.props.isGift && this.setState({
                             progress: x.a.CONFIRMATION
                         }))
@@ -8818,7 +8907,7 @@
                             display: this.dataReady ? k.X.Block : k.X.Hide
                         }, d.createElement(k.Xa, {
                             display: T(this.productEligibility) ? k.X.Hide : k.X.Block,
-                            "data-test-selector": We.INELIGIBLE_PURCHASE
+                            "data-test-selector": et.INELIGIBLE_PURCHASE
                         }, d.createElement(F, {
                             product: this.shoppingCartItem,
                             existingPurchases: this.existingPurchases,
@@ -8834,7 +8923,7 @@
                             channel: r || "Twitch"
                         }, "CheckoutPayments")))), d.createElement(k.Xa, {
                             display: T(this.productEligibility) ? k.X.Block : k.X.Hide,
-                            "data-test-selector": We.ELIGIBLE_PURCHASE
+                            "data-test-selector": et.ELIGIBLE_PURCHASE
                         }, d.createElement(C, {
                             purchaseFlow: this.purchaseFlow,
                             product: this.shoppingCartItem
@@ -8857,7 +8946,7 @@
                         }, d.createElement(S, {
                             errorCode: this.state.errors.code,
                             level: this.state.errors.level
-                        })), d.createElement(Xe, {
+                        })), d.createElement(nt, {
                             handleCompletePurchase: this.completePurchase,
                             handleCountryChange: this.handleCountryChange,
                             productName: this.props.productName,
@@ -8871,7 +8960,7 @@
                             showEuSubs: this.showEuSubs
                         }), d.createElement(_, null))))
                     }, t.prototype.renderTicketDescription = function() {
-                        return this.productEligibility === I.MOBILE_UPGRADE || this.DEPRECRATE_hasActiveMobileSub ? null : d.createElement(H.a, {
+                        return this.productEligibility === I.MOBILE_UPGRADE || this.DEPRECRATE_hasActiveMobileSub ? null : d.createElement(V.a, {
                             productName: this.props.productName,
                             isGift: this.props.isGift && this.canGift,
                             showPaidUpgrade: this.enablePaidUpgrade,
@@ -9019,12 +9108,13 @@
                         configurable: !0
                     }), t
                 }(d.Component),
-                Ve = Object(a.compose)(Object(h.a)(Ge, {
+                at = Object(a.compose)(Object(h.a)(it, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
                             variables: {
                                 productName: e.productName,
+                                isAnonymous: e.isAnonymous,
                                 isGift: e.isGift,
                                 recipientID: e.recipientID,
                                 includePromotion: function(e) {
@@ -9035,11 +9125,11 @@
                             }
                         }
                     }
-                }), Object(J.b)("CheckoutPayments"))(He);
-            var qe = Object(r.connect)(function(e) {
+                }), Object(J.b)("CheckoutPayments"))(rt);
+            var ot = Object(r.connect)(function(e) {
                 return {
-                    isLoggedIn: Object(l.f)(e),
-                    sessionUser: Object(l.e)(e)
+                    isLoggedIn: Object(c.f)(e),
+                    sessionUser: Object(c.e)(e)
                 }
             }, function(e) {
                 return Object(a.bindActionCreators)({
@@ -9047,9 +9137,9 @@
                         return Object(s.e)(o.a.DashboardPage)
                     }
                 }, e)
-            })(Ve);
+            })(at);
             n.d(t, "a", function() {
-                return qe
+                return ot
             })
         },
         SPyc: function(e, t, n) {
@@ -9130,6 +9220,22 @@
                                     kind: "Name",
                                     value: "Boolean"
                                 }
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "isAnonymous"
+                            }
+                        },
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "Boolean"
                             }
                         }
                     }, {
@@ -9468,6 +9574,19 @@
                                                 value: "checkoutConfigs"
                                             },
                                             arguments: [{
+                                                kind: "Argument",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "isAnonymous"
+                                                },
+                                                value: {
+                                                    kind: "Variable",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "isAnonymous"
+                                                    }
+                                                }
+                                            }, {
                                                 kind: "Argument",
                                                 name: {
                                                     kind: "Name",
@@ -10110,11 +10229,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 1370
+                    end: 1418
                 }
             };
             n.loc.source = {
-                body: "query CheckoutPayments($productName: String! $includePromotion: Boolean! $isGift: Boolean! $recipientID: ID $mysteryGiftCount: Int $taxCountry: String) {\ncurrentUser {\nid\ndisplayName\nresidence {\ncountryCode\npostalCode\n}\n}\nsubscriptionProduct(productName: $productName) {\nid\nname\npriceInfo(taxCountry: $taxCountry) {\ncurrency\nexponent\nid\nisTaxInclusive\nprice\ntax\ntotal\n}\ninterval {\nunit\n}\ntier\ntype\nowner {\nid\ndisplayName\nlogin\n}\nself {\ncheckoutConfigs (isGift: $isGift recipientID: $recipientID mysteryGiftCount: $mysteryGiftCount taxCountryCode: $taxCountry) {\ncanGift\ncanPurchase\nisOneMonthFreeEligible\npaymentProviderConfigs {\nxsolla {\niframeURL\n}\nrecurly {\npayWithAmazonConfigs {\nclientID\nisProduction\nsellerID\n}\npublicKey\nbraintreeClientAuthorization\n}\nzuora {\nexternalAccountID\ntoken\ntenantID\npublicKey\nsignature\nhostedPageID\nhostedPageURL\nexternalAccountID\n}\n}\n}\npurchase {\ndetails {\npaymentProvider\nprice\ncurrency\ndivisor\nstate\nproductType\nproductTier\n}\ncompatiblePurchases {\npaymentProvider\nprice\ncurrency\nstate\nproductType\nproductTier\ndivisor\n}\n}\nbenefit {\nid\ntier\npaidUpgrade {\nstartsAt\n}\nendsAt\npurchasedWithPrime\ngift {\nisGift\n}\n}\npromotion @include(if: $includePromotion) {\ndiscountType\ndiscountValue\nnewPrice\noldPrice\n}\npaidUpgradePromotion @include(if: $includePromotion) {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\n}\nrequestInfo {\ncountryCode\n}\n}",
+                body: "query CheckoutPayments($productName: String! $includePromotion: Boolean! $isAnonymous: Boolean $isGift: Boolean! $recipientID: ID $mysteryGiftCount: Int $taxCountry: String) {\ncurrentUser {\nid\ndisplayName\nresidence {\ncountryCode\npostalCode\n}\n}\nsubscriptionProduct(productName: $productName) {\nid\nname\npriceInfo(taxCountry: $taxCountry) {\ncurrency\nexponent\nid\nisTaxInclusive\nprice\ntax\ntotal\n}\ninterval {\nunit\n}\ntier\ntype\nowner {\nid\ndisplayName\nlogin\n}\nself {\ncheckoutConfigs (isAnonymous: $isAnonymous isGift: $isGift recipientID: $recipientID mysteryGiftCount: $mysteryGiftCount taxCountryCode: $taxCountry) {\ncanGift\ncanPurchase\nisOneMonthFreeEligible\npaymentProviderConfigs {\nxsolla {\niframeURL\n}\nrecurly {\npayWithAmazonConfigs {\nclientID\nisProduction\nsellerID\n}\npublicKey\nbraintreeClientAuthorization\n}\nzuora {\nexternalAccountID\ntoken\ntenantID\npublicKey\nsignature\nhostedPageID\nhostedPageURL\nexternalAccountID\n}\n}\n}\npurchase {\ndetails {\npaymentProvider\nprice\ncurrency\ndivisor\nstate\nproductType\nproductTier\n}\ncompatiblePurchases {\npaymentProvider\nprice\ncurrency\nstate\nproductType\nproductTier\ndivisor\n}\n}\nbenefit {\nid\ntier\npaidUpgrade {\nstartsAt\n}\nendsAt\npurchasedWithPrime\ngift {\nisGift\n}\n}\npromotion @include(if: $includePromotion) {\ndiscountType\ndiscountValue\nnewPrice\noldPrice\n}\npaidUpgradePromotion @include(if: $includePromotion) {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\n}\nrequestInfo {\ncountryCode\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -10127,15 +10246,15 @@
         TQGo: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return c
+                return l
             });
             var i = n("mrSG"),
                 r = n("NAv5"),
                 a = n("q1tI"),
                 o = n("/7QA"),
                 s = n("Ue10"),
-                l = n("5gJ6"),
-                c = (n("KjOM"), function(e) {
+                c = n("5gJ6"),
+                l = (n("KjOM"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -10152,11 +10271,10 @@
                             margin: {
                                 right: 1
                             }
-                        }, a.createElement(l.a, {
+                        }, a.createElement(c.a, {
                             paymentInstrumentType: this.props.paymentType,
                             cardType: this.props.cardType || void 0,
-                            paymentProvider: this.props.provider,
-                            ignoreDarkMode: this.props.ignoreDarkMode
+                            paymentProvider: this.props.provider
                         }), this.renderLastFour()), a.createElement(s.Xa, {
                             display: s.X.Flex,
                             justifyContent: s.Wa.Center,
@@ -10237,8 +10355,8 @@
                 a = n("fvjX"),
                 o = n("1/iK"),
                 s = n("aCAx"),
-                l = n("y5D0"),
-                c = n("kRBY"),
+                c = n("y5D0"),
+                l = n("kRBY"),
                 u = n("/HY+"),
                 d = n("TSYQ"),
                 p = n("1hWM"),
@@ -10500,8 +10618,8 @@
                 z = n("5zC2"),
                 X = n("22qk"),
                 G = n("5IFo"),
-                H = n("JVUd"),
-                V = n("0HeA"),
+                V = n("JVUd"),
+                H = n("0HeA"),
                 q = n("yR8l"),
                 Y = n("eDVu"),
                 Z = n("VeT4"),
@@ -10541,7 +10659,7 @@
                 Q = Object(h.compose)(Object(Y.a)(function(e) {
                     return function(e, t, n) {
                         return {
-                            topic: n ? Object(P.B)(n) : "",
+                            topic: n ? Object(P.C)(n) : "",
                             type: k.PubsubMessageType.UserBitsBalanceUpdate,
                             mutator: function(e, t) {
                                 return t && e.message_type === S.b.Balance ? (t.currentUser && e.data && (t.currentUser.bitsBalance = e.data.balance), t) : t
@@ -10962,7 +11080,7 @@
                     }, t))
                 };
             (re || (re = {})).RestoreDefaultSizeButton = "restore-default-size-button";
-            var se, le = function(e) {
+            var se, ce = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -11004,7 +11122,7 @@
             ! function(e) {
                 e.AcceptButton = "accept-button", e.DeclineButton = "decline-button", e.DeclinedMessage = "declined-message", e.WarningMessage = "warning-message"
             }(se || (se = {}));
-            var ce, ue = function(e) {
+            var le, ue = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -11073,7 +11191,7 @@
             n("bVvr");
             ! function(e) {
                 e.ExtensionDescriptionButton = "extension_description_button_selector", e.ExtensionReportButton = "extension_report_button_selector", e.ExtensionPanel = "extension_panel_selector", e.ExtensionDetailsLink = "extension_details_link_selector", e.ToggleFollowButton = "toggle_follow_button_selector", e.ConfirmationMessage = "confirmation_message_selector", e.PopoutButton = "popout_button_selector", e.UseBitsConfirmationToggleBalloonWrapper = "confirmation_message_selector"
-            }(ce || (ce = {}));
+            }(le || (le = {}));
             var de = 3e3,
                 pe = 32,
                 me = function(e) {
@@ -11166,7 +11284,7 @@
                                 })
                             }
                             return m.createElement(g.a, {
-                                "data-test-selector": ce.UseBitsConfirmationToggleBalloonWrapper,
+                                "data-test-selector": le.UseBitsConfirmationToggleBalloonWrapper,
                                 ref: t.saveUseBitsConfirmationBalloonRef,
                                 onToggle: t.onToggleUseBitsConfirmationBalloon
                             }, m.createElement("span", null), m.createElement(N.u, {
@@ -11409,7 +11527,7 @@
                         }, t.trackImpression = function() {
                             if (t.props.panel) {
                                 var e = t.props.panel.id;
-                                e && Object(V.a)(v.SpadeEventType.PanelImpression, {
+                                e && Object(H.a)(v.SpadeEventType.PanelImpression, {
                                     panelID: e,
                                     channelID: t.props.channelID,
                                     panelType: t.props.panel.type
@@ -11444,7 +11562,7 @@
                                 bottom: 2,
                                 right: 2
                             },
-                            "data-test-selector": ce.ExtensionPanel
+                            "data-test-selector": le.ExtensionPanel
                         }, a, m.createElement(N.Eb, {
                             borderRight: !0,
                             borderBottom: !0,
@@ -11462,11 +11580,11 @@
                         }, m.createElement("a", {
                             href: i,
                             target: "_blank",
-                            "data-test-selector": ce.ExtensionDetailsLink
+                            "data-test-selector": le.ExtensionDetailsLink
                         }, this.extension.name)), this.props.isFramePoppedOut || this.props.isPopout ? null : m.createElement(ae, {
-                            "data-test-selector": ce.PopoutButton,
+                            "data-test-selector": le.PopoutButton,
                             onClick: this.onExtensionPopout
-                        }), m.createElement(le, {
+                        }), m.createElement(ce, {
                             isPopout: this.props.isPopout
                         }), m.createElement(ie, {
                             extension: this.extension,
@@ -11485,7 +11603,7 @@
                             display: N.X.Flex,
                             alignItems: N.f.Center
                         }, m.createElement(N.A, {
-                            "data-test-selector": ce.ExtensionDescriptionButton,
+                            "data-test-selector": le.ExtensionDescriptionButton,
                             icon: N.tb.More,
                             ariaLabel: t
                         })))), m.createElement(N.u, {
@@ -11503,7 +11621,7 @@
                             borderLeft: !0,
                             margin: 1
                         }, m.createElement(N.A, {
-                            "data-test-selector": ce.ExtensionReportButton,
+                            "data-test-selector": le.ExtensionReportButton,
                             ariaLabel: n,
                             icon: N.tb.ChatRiskFlag,
                             onClick: this.handleReportExtensionClick
@@ -11533,14 +11651,14 @@
                         }
                     }, t
                 }(m.Component),
-                he = Object(h.compose)(Object(H.a)("ExtensionPanel", {
+                he = Object(h.compose)(Object(V.a)("ExtensionPanel", {
                     pixels: 100
                 }))(me);
 
             function fe(e) {
                 return {
-                    isLoggedIn: Object(c.f)(e),
-                    languageCode: Object(c.b)(e),
+                    isLoggedIn: Object(l.f)(e),
+                    languageCode: Object(l.b)(e),
                     locale: e.session.locale
                 }
             }
@@ -11548,7 +11666,7 @@
             function ge(e) {
                 return Object(a.bindActionCreators)({
                     promptLogin: function() {
-                        return Object(l.e)(o.a.ReportHoster)
+                        return Object(c.e)(o.a.ReportHoster)
                     },
                     showReportExtensionModal: function(e) {
                         var t = i.__rest(e, []);
@@ -11813,8 +11931,8 @@
                 a = n("mrSG"),
                 o = n("q1tI"),
                 s = n("oJmH"),
-                l = n("/7QA"),
-                c = n("ZS2+"),
+                c = n("/7QA"),
+                l = n("ZS2+"),
                 u = n("yR8l"),
                 d = n("tIid"),
                 p = n("DMoW"),
@@ -11832,31 +11950,31 @@
                         }
                     }, o.createElement(y.W, {
                         bold: !0
-                    }, Object(l.d)("Subscription benefits", "ChannelSubscriptionBenefits"))), o.createElement(y.Pa, {
+                    }, Object(c.d)("Subscription benefits", "ChannelSubscriptionBenefits"))), o.createElement(y.Pa, {
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(y.W, null, Object(l.d)("Directly support the broadcaster", "ChannelSubscriptionBenefits"))), e.hasAdFree && o.createElement(y.Pa, {
+                    }, o.createElement(y.W, null, Object(c.d)("Directly support the broadcaster", "ChannelSubscriptionBenefits"))), e.hasAdFree && o.createElement(y.Pa, {
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(y.W, null, Object(l.d)("Ad-free (with limited exceptions)", "ChannelSubscriptionBenefits"))), o.createElement(y.Pa, {
+                    }, o.createElement(y.W, null, Object(c.d)("Ad-free (with limited exceptions)", "ChannelSubscriptionBenefits"))), o.createElement(y.Pa, {
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(y.W, null, Object(l.d)("Chat during subscriber-only mode", "ChannelSubscriptionBenefits"))), e.hasFastChat && o.createElement(y.Pa, {
+                    }, o.createElement(y.W, null, Object(c.d)("Chat during subscriber-only mode", "ChannelSubscriptionBenefits"))), e.hasFastChat && o.createElement(y.Pa, {
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(y.W, null, Object(l.d)("Not affected by chat slow mode", "ChannelSubscriptionBenefits"))), e.hasSubonlyVideoArchive && o.createElement(y.Pa, {
+                    }, o.createElement(y.W, null, Object(c.d)("Not affected by chat slow mode", "ChannelSubscriptionBenefits"))), e.hasSubonlyVideoArchive && o.createElement(y.Pa, {
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(y.W, null, Object(l.d)("Access to VODs", "ChannelSubscriptionBenefits"))), e.badges.length > 0 && o.createElement(o.Fragment, null, o.createElement(y.Pa, {
+                    }, o.createElement(y.W, null, Object(c.d)("Access to VODs", "ChannelSubscriptionBenefits"))), e.badges.length > 0 && o.createElement(o.Fragment, null, o.createElement(y.Pa, {
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(y.W, null, Object(l.d)("Subscriber Badges:", "ChannelSubscriptionBenefits"))), o.createElement(y.Xa, {
+                    }, o.createElement(y.W, null, Object(c.d)("Subscriber Badges:", "ChannelSubscriptionBenefits"))), o.createElement(y.Xa, {
                         margin: {
                             bottom: 1
                         },
@@ -11874,7 +11992,7 @@
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(y.W, null, Object(l.d)("{numEmotes, plural, one {# Subscriber Emote:} other {# Subscriber Emotes:}}", {
+                    }, o.createElement(y.W, null, Object(c.d)("{numEmotes, plural, one {# Subscriber Emote:} other {# Subscriber Emotes:}}", {
                         numEmotes: e.emotes.length
                     }, "ChannelSubscriptionBenefits"))), o.createElement(f.a, {
                         emotes: Object(g.b)(e.emotes)
@@ -11980,7 +12098,7 @@
                     }, o.createElement(y.S, {
                         className: "turbo-ticket-description__banner-logo",
                         src: I.a,
-                        alt: Object(l.d)("Twitch Turbo Logo", "TurboTicketDescription")
+                        alt: Object(c.d)("Twitch Turbo Logo", "TurboTicketDescription")
                     })), o.createElement(y.Eb, {
                         borderBottom: !0,
                         textAlign: y.Rb.Center,
@@ -11992,8 +12110,8 @@
                         showEuSubs: e.showEuSubs
                     })), o.createElement(C.a, {
                         collapsable: !0,
-                        showButtonLabel: Object(l.d)("Show Turbo Benefits", "TurboTicketDescription"),
-                        hideButtonLabel: Object(l.d)("Hide Turbo Benefits", "TurboTicketDescription")
+                        showButtonLabel: Object(c.d)("Show Turbo Benefits", "TurboTicketDescription"),
+                        hideButtonLabel: Object(c.d)("Hide Turbo Benefits", "TurboTicketDescription")
                     }, o.createElement(y.Xa, {
                         padding: 2
                     }, o.createElement(y.Pa, {
@@ -12002,40 +12120,40 @@
                         }
                     }, o.createElement(y.W, {
                         bold: !0
-                    }, Object(l.d)("Subscription Benefits", "TurboTicketDescription"))), o.createElement(y.Pa, {
+                    }, Object(c.d)("Subscription Benefits", "TurboTicketDescription"))), o.createElement(y.Pa, {
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(y.W, null, Object(l.d)("Ad-Free Viewing (with limited exceptions)", "TurboTicketDescription"))), o.createElement(y.Pa, {
+                    }, o.createElement(y.W, null, Object(c.d)("Ad-Free Viewing (with limited exceptions)", "TurboTicketDescription"))), o.createElement(y.Pa, {
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(y.W, null, Object(l.d)("Chat Badge", "TurboTicketDescription"))), o.createElement(y.Pa, {
+                    }, o.createElement(y.W, null, Object(c.d)("Chat Badge", "TurboTicketDescription"))), o.createElement(y.Pa, {
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(y.W, null, Object(l.d)("Expanded Emote Set", "TurboTicketDescription"))), o.createElement(y.Pa, {
+                    }, o.createElement(y.W, null, Object(c.d)("Expanded Emote Set", "TurboTicketDescription"))), o.createElement(y.Pa, {
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(y.W, null, Object(l.d)("Custom Chat Username Colors", "TurboTicketDescription"))), o.createElement(y.Pa, {
+                    }, o.createElement(y.W, null, Object(c.d)("Custom Chat Username Colors", "TurboTicketDescription"))), o.createElement(y.Pa, {
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(y.W, null, Object(l.d)("Extended Broadcast Storage", "TurboTicketDescription")))))))
+                    }, o.createElement(y.W, null, Object(c.d)("Extended Broadcast Storage", "TurboTicketDescription")))))))
                 }),
                 N = n("GnwI"),
                 _ = n("9fjZ"),
-                T = c.a.wrap(function() {
+                T = l.a.wrap(function() {
                     return n.e(209).then(n.bind(null, "skV9"))
                 }, "CampaignsTicketDescription"),
                 D = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.isTurboProduct = "turbo" === t.props.productName, t.tierToDisplayMap = {
-                            1000: Object(l.d)("Tier 1 Channel Subscription", "TicketDescription"),
-                            2000: Object(l.d)("Tier 2 Channel Subscription", "TicketDescription"),
-                            3000: Object(l.d)("Tier 3 Channel Subscription", "TicketDescription")
+                            1000: Object(c.d)("Tier 1 Channel Subscription", "TicketDescription"),
+                            2000: Object(c.d)("Tier 2 Channel Subscription", "TicketDescription"),
+                            3000: Object(c.d)("Tier 3 Channel Subscription", "TicketDescription")
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -12075,8 +12193,8 @@
                             showEuSubs: this.props.showEuSubs
                         }), o.createElement(C.a, {
                             collapsable: !0,
-                            showButtonLabel: Object(l.d)("Show Subscription Benefits", "TicketDescription"),
-                            hideButtonLabel: Object(l.d)("Hide Subscription Benefits", "TicketDescription")
+                            showButtonLabel: Object(c.d)("Show Subscription Benefits", "TicketDescription"),
+                            hideButtonLabel: Object(c.d)("Hide Subscription Benefits", "TicketDescription")
                         }, o.createElement(b, {
                             hasAdFree: t.hasAdFree,
                             hasFastChat: t.hasFastChat,
@@ -12103,7 +12221,7 @@
                             if (this.props.invoicePrice) return this.props.invoicePrice;
                             if (this.props.data.loading) return null;
                             var e = this.props.data.product;
-                            return e && e.priceInfo ? Object(l.f)(e.priceInfo.total / Math.pow(10, e.priceInfo.exponent), {
+                            return e && e.priceInfo ? Object(c.f)(e.priceInfo.total / Math.pow(10, e.priceInfo.exponent), {
                                 style: "currency",
                                 currency: e.priceInfo.currency
                             }) : null
@@ -12122,7 +12240,7 @@
                     }), Object.defineProperty(t.prototype, "productDisplayName", {
                         get: function() {
                             var e = this.props.data.product;
-                            return e && e.priceInfo && e.priceInfo.currency !== p.t.USD ? this.tierToDisplayMap[e.tier || ""] || Object(l.d)("Channel Subscription", "TicketDescription") : e && e.displayName
+                            return e && e.priceInfo && e.priceInfo.currency !== p.t.USD ? this.tierToDisplayMap[e.tier || ""] || Object(c.d)("Channel Subscription", "TicketDescription") : e && e.displayName
                         },
                         enumerable: !0,
                         configurable: !0
@@ -12624,11 +12742,11 @@
                                 var a = n.toDashed(r),
                                     o = "data-" + a,
                                     s = document.querySelectorAll("[" + o + "]"),
-                                    l = document.querySelectorAll(".js-" + a),
-                                    c = n.makeArray(s).concat(n.makeArray(l)),
+                                    c = document.querySelectorAll(".js-" + a),
+                                    l = n.makeArray(s).concat(n.makeArray(c)),
                                     u = o + "-options",
                                     d = e.jQuery;
-                                c.forEach(function(e) {
+                                l.forEach(function(e) {
                                     var n, a = e.getAttribute(o) || e.getAttribute(u);
                                     try {
                                         n = a && JSON.parse(a)
@@ -12771,16 +12889,16 @@
                     }, e.request = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
                             var r, a, o, s;
-                            return i.__generator(this, function(l) {
-                                switch (l.label) {
+                            return i.__generator(this, function(c) {
+                                switch (c.label) {
                                     case 0:
                                         return t = this.constructOptions(t, n), r = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, r), o = i.__assign({}, t, {
                                             body: a
                                         }), [4, this._fetch(e, o)];
                                     case 1:
-                                        return s = l.sent(), [4, this.constructLegacyAPIResponse(s)];
+                                        return s = c.sent(), [4, this.constructLegacyAPIResponse(s)];
                                     case 2:
-                                        return [2, l.sent()]
+                                        return [2, c.sent()]
                                 }
                             })
                         })
@@ -12869,6 +12987,12 @@
         },
         bVvr: function(e, t, n) {},
         bfgy: function(e, t, n) {},
+        bvmA: function(e, t, n) {
+            e.exports = n.p + "assets/paypal_dark_2x-5364f28c059af7303d67.png"
+        },
+        csmi: function(e, t, n) {
+            e.exports = n.p + "assets/amazon_pay_dark_1x-5810bf2a8f8185a1a905.png"
+        },
         ezMb: function(e, t, n) {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -12944,14 +13068,14 @@
                             if (a && a.sortableInfo && t.nodeIsChild(a) && !t.state.sorting) {
                                 var o = t.props.useDragHandle,
                                     s = a.sortableInfo,
-                                    l = s.index,
-                                    c = s.collection;
+                                    c = s.index,
+                                    l = s.collection;
                                 if (o && !(0, p.closest)(e.target, function(e) {
                                         return null != e.sortableHandle
                                     })) return;
                                 t.manager.active = {
-                                    index: l,
-                                    collection: c
+                                    index: c,
+                                    collection: l
                                 }, "a" === e.target.tagName.toLowerCase() && e.preventDefault(), i || (0 === t.props.pressDelay ? t.handlePress(e) : t.pressTimer = setTimeout(function() {
                                     return t.handlePress(e)
                                 }, t.props.pressDelay))
@@ -12983,8 +13107,8 @@
                                     a = i.getHelperDimensions,
                                     o = i.helperClass,
                                     s = i.hideSortableGhost,
-                                    l = i.onSortStart,
-                                    c = i.useWindowAsScrollContainer,
+                                    c = i.onSortStart,
+                                    l = i.useWindowAsScrollContainer,
                                     u = n.node,
                                     d = n.collection,
                                     m = u.sortableInfo.index,
@@ -13013,7 +13137,7 @@
                                     k = [].concat(h(E.querySelectorAll("input, textarea, select")));
                                 if (k.forEach(function(e, t) {
                                         "file" !== e.type && v[t] && (e.value = v[t].value)
-                                    }), t.helper = t.document.body.appendChild(E), t.helper.style.position = "fixed", t.helper.style.top = t.boundingClientRect.top - f.top + "px", t.helper.style.left = t.boundingClientRect.left - f.left + "px", t.helper.style.width = t.width + "px", t.helper.style.height = t.height + "px", t.helper.style.boxSizing = "border-box", t.helper.style.pointerEvents = "none", s && (t.sortableGhost = u, u.style.visibility = "hidden", u.style.opacity = 0), t.minTranslate = {}, t.maxTranslate = {}, t.axis.x && (t.minTranslate.x = (c ? 0 : g.left) - t.boundingClientRect.left - t.width / 2, t.maxTranslate.x = (c ? t.contentWindow.innerWidth : g.left + g.width) - t.boundingClientRect.left - t.width / 2), t.axis.y && (t.minTranslate.y = (c ? 0 : g.top) - t.boundingClientRect.top - t.height / 2, t.maxTranslate.y = (c ? t.contentWindow.innerHeight : g.top + g.height) - t.boundingClientRect.top - t.height / 2), o)(b = t.helper.classList).add.apply(b, h(o.split(" ")));
+                                    }), t.helper = t.document.body.appendChild(E), t.helper.style.position = "fixed", t.helper.style.top = t.boundingClientRect.top - f.top + "px", t.helper.style.left = t.boundingClientRect.left - f.left + "px", t.helper.style.width = t.width + "px", t.helper.style.height = t.height + "px", t.helper.style.boxSizing = "border-box", t.helper.style.pointerEvents = "none", s && (t.sortableGhost = u, u.style.visibility = "hidden", u.style.opacity = 0), t.minTranslate = {}, t.maxTranslate = {}, t.axis.x && (t.minTranslate.x = (l ? 0 : g.left) - t.boundingClientRect.left - t.width / 2, t.maxTranslate.x = (l ? t.contentWindow.innerWidth : g.left + g.width) - t.boundingClientRect.left - t.width / 2), t.axis.y && (t.minTranslate.y = (l ? 0 : g.top) - t.boundingClientRect.top - t.height / 2, t.maxTranslate.y = (l ? t.contentWindow.innerHeight : g.top + g.height) - t.boundingClientRect.top - t.height / 2), o)(b = t.helper.classList).add.apply(b, h(o.split(" ")));
                                 t.listenerNode = e.touches ? u : t.contentWindow, p.events.move.forEach(function(e) {
                                     return t.listenerNode.addEventListener(e, t.handleSortMove, !1)
                                 }), p.events.end.forEach(function(e) {
@@ -13021,7 +13145,7 @@
                                 }), t.setState({
                                     sorting: !0,
                                     sortingIndex: m
-                                }), l && l({
+                                }), c && c({
                                     node: u,
                                     index: m,
                                     collection: d
@@ -13040,10 +13164,10 @@
                             }), p.events.end.forEach(function(e) {
                                 return t.listenerNode.removeEventListener(e, t.handleSortEnd)
                             })), t.helper.parentNode.removeChild(t.helper), i && t.sortableGhost && (t.sortableGhost.style.visibility = "", t.sortableGhost.style.opacity = "");
-                            for (var o = t.manager.refs[a], s = 0, l = o.length; s < l; s++) {
-                                var c = o[s],
-                                    u = c.node;
-                                c.edgeOffset = null, u.style[p.vendorPrefix + "Transform"] = "", u.style[p.vendorPrefix + "TransitionDuration"] = ""
+                            for (var o = t.manager.refs[a], s = 0, c = o.length; s < c; s++) {
+                                var l = o[s],
+                                    u = l.node;
+                                l.edgeOffset = null, u.style[p.vendorPrefix + "Transform"] = "", u.style[p.vendorPrefix + "TransitionDuration"] = ""
                             }
                             clearInterval(t.autoscrollInterval), t.autoscrollInterval = null, t.manager.active = null, t.setState({
                                 sorting: !1,
@@ -13106,7 +13230,7 @@
                                 n = t.getContainer,
                                 i = t.useWindowAsScrollContainer,
                                 r = this.props.contentWindow || window;
-                            this.container = "function" == typeof n ? n(this.getWrappedInstance()) : (0, c.findDOMNode)(this), this.document = this.container.ownerDocument || document, this.scrollContainer = i ? this.document.body : this.container, this.contentWindow = "function" == typeof r ? r() : r;
+                            this.container = "function" == typeof n ? n(this.getWrappedInstance()) : (0, l.findDOMNode)(this), this.document = this.container.ownerDocument || document, this.scrollContainer = i ? this.document.body : this.container, this.contentWindow = "function" == typeof r ? r() : r;
                             var a = function(t) {
                                 e.events.hasOwnProperty(t) && p.events[t].forEach(function(n) {
                                     return e.container.addEventListener(n, e.events[t], !1)
@@ -13187,12 +13311,12 @@
                                 };
                             if (o.y -= window.pageYOffset - this.initialWindowScroll.top, o.x -= window.pageXOffset - this.initialWindowScroll.left, this.translate = o, i) {
                                 var s = this.getLockPixelOffsets(),
-                                    l = r(s, 2),
-                                    c = l[0],
-                                    u = l[1],
+                                    c = r(s, 2),
+                                    l = c[0],
+                                    u = c[1],
                                     d = {
-                                        x: this.width / 2 - c.x,
-                                        y: this.height / 2 - c.y
+                                        x: this.width / 2 - l.x,
+                                        y: this.height / 2 - l.y
                                     },
                                     m = {
                                         x: this.width / 2 - u.x,
@@ -13222,11 +13346,11 @@
                                     left: window.pageXOffset - this.initialWindowScroll.left
                                 };
                             this.newIndex = null;
-                            for (var s = 0, l = i.length; s < l; s++) {
-                                var c = i[s].node,
-                                    u = c.sortableInfo.index,
-                                    d = c.offsetWidth,
-                                    m = c.offsetHeight,
+                            for (var s = 0, c = i.length; s < c; s++) {
+                                var l = i[s].node,
+                                    u = l.sortableInfo.index,
+                                    d = l.offsetWidth,
+                                    m = l.offsetHeight,
                                     h = {
                                         width: this.width > d ? d / 2 : this.width / 2,
                                         height: this.height > m ? m / 2 : this.height / 2
@@ -13236,10 +13360,10 @@
                                         y: 0
                                     },
                                     g = i[s].edgeOffset;
-                                g || (i[s].edgeOffset = g = this.getEdgeOffset(c));
+                                g || (i[s].edgeOffset = g = this.getEdgeOffset(l));
                                 var y = s < i.length - 1 && i[s + 1],
                                     b = s > 0 && i[s - 1];
-                                y && !y.edgeOffset && (y.edgeOffset = this.getEdgeOffset(y.node)), u !== this.index ? (t && (c.style[p.vendorPrefix + "TransitionDuration"] = t + "ms"), this.axis.x ? this.axis.y ? u < this.index && (a.left + o.left - h.width <= g.left && a.top + o.top <= g.top + h.height || a.top + o.top + h.height <= g.top) ? (f.x = this.width + this.marginOffset.x, g.left + f.x > this.containerBoundingRect.width - h.width && (f.x = y.edgeOffset.left - g.left, f.y = y.edgeOffset.top - g.top), null === this.newIndex && (this.newIndex = u)) : u > this.index && (a.left + o.left + h.width >= g.left && a.top + o.top + h.height >= g.top || a.top + o.top + h.height >= g.top + m) && (f.x = -(this.width + this.marginOffset.x), g.left + f.x < this.containerBoundingRect.left + h.width && (f.x = b.edgeOffset.left - g.left, f.y = b.edgeOffset.top - g.top), this.newIndex = u) : u > this.index && a.left + o.left + h.width >= g.left ? (f.x = -(this.width + this.marginOffset.x), this.newIndex = u) : u < this.index && a.left + o.left <= g.left + h.width && (f.x = this.width + this.marginOffset.x, null == this.newIndex && (this.newIndex = u)) : this.axis.y && (u > this.index && a.top + o.top + h.height >= g.top ? (f.y = -(this.height + this.marginOffset.y), this.newIndex = u) : u < this.index && a.top + o.top <= g.top + h.height && (f.y = this.height + this.marginOffset.y, null == this.newIndex && (this.newIndex = u))), c.style[p.vendorPrefix + "Transform"] = "translate3d(" + f.x + "px," + f.y + "px,0)") : n && (this.sortableGhost = c, c.style.visibility = "hidden", c.style.opacity = 0)
+                                y && !y.edgeOffset && (y.edgeOffset = this.getEdgeOffset(y.node)), u !== this.index ? (t && (l.style[p.vendorPrefix + "TransitionDuration"] = t + "ms"), this.axis.x ? this.axis.y ? u < this.index && (a.left + o.left - h.width <= g.left && a.top + o.top <= g.top + h.height || a.top + o.top + h.height <= g.top) ? (f.x = this.width + this.marginOffset.x, g.left + f.x > this.containerBoundingRect.width - h.width && (f.x = y.edgeOffset.left - g.left, f.y = y.edgeOffset.top - g.top), null === this.newIndex && (this.newIndex = u)) : u > this.index && (a.left + o.left + h.width >= g.left && a.top + o.top + h.height >= g.top || a.top + o.top + h.height >= g.top + m) && (f.x = -(this.width + this.marginOffset.x), g.left + f.x < this.containerBoundingRect.left + h.width && (f.x = b.edgeOffset.left - g.left, f.y = b.edgeOffset.top - g.top), this.newIndex = u) : u > this.index && a.left + o.left + h.width >= g.left ? (f.x = -(this.width + this.marginOffset.x), this.newIndex = u) : u < this.index && a.left + o.left <= g.left + h.width && (f.x = this.width + this.marginOffset.x, null == this.newIndex && (this.newIndex = u)) : this.axis.y && (u > this.index && a.top + o.top + h.height >= g.top ? (f.y = -(this.height + this.marginOffset.y), this.newIndex = u) : u < this.index && a.top + o.top <= g.top + h.height && (f.y = this.height + this.marginOffset.y, null == this.newIndex && (this.newIndex = u))), l.style[p.vendorPrefix + "Transform"] = "translate3d(" + f.x + "px," + f.y + "px,0)") : n && (this.sortableGhost = l, l.style.visibility = "hidden", l.style.opacity = 0)
                             }
                             null == this.newIndex && (this.newIndex = this.index)
                         }
@@ -13278,32 +13402,32 @@
                         }
                     }
                 }, t.propTypes = {
-                    axis: l.default.oneOf(["x", "y", "xy"]),
-                    distance: l.default.number,
-                    lockAxis: l.default.string,
-                    helperClass: l.default.string,
-                    transitionDuration: l.default.number,
-                    contentWindow: l.default.any,
-                    onSortStart: l.default.func,
-                    onSortMove: l.default.func,
-                    onSortEnd: l.default.func,
-                    shouldCancelStart: l.default.func,
-                    pressDelay: l.default.number,
-                    useDragHandle: l.default.bool,
-                    useWindowAsScrollContainer: l.default.bool,
-                    hideSortableGhost: l.default.bool,
-                    lockToContainerEdges: l.default.bool,
-                    lockOffset: l.default.oneOfType([l.default.number, l.default.string, l.default.arrayOf(l.default.oneOfType([l.default.number, l.default.string]))]),
-                    getContainer: l.default.func,
-                    getHelperDimensions: l.default.func
+                    axis: c.default.oneOf(["x", "y", "xy"]),
+                    distance: c.default.number,
+                    lockAxis: c.default.string,
+                    helperClass: c.default.string,
+                    transitionDuration: c.default.number,
+                    contentWindow: c.default.any,
+                    onSortStart: c.default.func,
+                    onSortMove: c.default.func,
+                    onSortEnd: c.default.func,
+                    shouldCancelStart: c.default.func,
+                    pressDelay: c.default.number,
+                    useDragHandle: c.default.bool,
+                    useWindowAsScrollContainer: c.default.bool,
+                    hideSortableGhost: c.default.bool,
+                    lockToContainerEdges: c.default.bool,
+                    lockOffset: c.default.oneOfType([c.default.number, c.default.string, c.default.arrayOf(c.default.oneOfType([c.default.number, c.default.string]))]),
+                    getContainer: c.default.func,
+                    getHelperDimensions: c.default.func
                 }, t.childContextTypes = {
-                    manager: l.default.object.isRequired
+                    manager: c.default.object.isRequired
                 }, n
             };
             var o = n("q1tI"),
                 s = m(o),
-                l = m(n("17x9")),
-                c = n("i8i4"),
+                c = m(n("17x9")),
+                l = n("i8i4"),
                 u = m(n("QLaP")),
                 d = m(n("8ENv")),
                 p = n("jTc+");
@@ -13397,7 +13521,7 @@
                     o = Math.max(0, o);
                     var s = Math.floor(a / this.columnWidth);
                     s -= a % this.columnWidth ? 0 : 1, s = Math.min(this.cols - 1, s);
-                    for (var l = (this._getOption("originTop") ? i.top : i.bottom) + n.outerHeight, c = o; c <= s; c++) this.colYs[c] = Math.max(l, this.colYs[c])
+                    for (var c = (this._getOption("originTop") ? i.top : i.bottom) + n.outerHeight, l = o; l <= s; l++) this.colYs[l] = Math.max(c, this.colYs[l])
                 }, i._getContainerSize = function() {
                     this.maxY = Math.max.apply(Math, this.colYs);
                     var e = {
@@ -13490,7 +13614,7 @@
                     }, {
                         key: "setDraggable",
                         value: function(e, t) {
-                            var n = this.node = (0, l.findDOMNode)(this);
+                            var n = this.node = (0, c.findDOMNode)(this);
                             n.sortableInfo = {
                                 index: t,
                                 collection: e,
@@ -13507,7 +13631,7 @@
                     }, {
                         key: "getWrappedInstance",
                         value: function() {
-                            return (0, c.default)(d.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableElement() call"), this.refs.wrappedInstance
+                            return (0, l.default)(d.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableElement() call"), this.refs.wrappedInstance
                         }
                     }, {
                         key: "render",
@@ -13531,8 +13655,8 @@
             var a = n("q1tI"),
                 o = d(a),
                 s = d(n("17x9")),
-                l = n("i8i4"),
-                c = d(n("QLaP")),
+                c = n("i8i4"),
+                l = d(n("QLaP")),
                 u = n("jTc+");
 
             function d(e) {
@@ -14173,8 +14297,8 @@
                 a = i ? n("vX6Q") : null,
                 o = n("3OWR"),
                 s = n("7sSR"),
-                l = n("sEfC"),
-                c = n("Puqe"),
+                c = n("sEfC"),
+                l = n("Puqe"),
                 u = n("ITnh"),
                 d = n("q1tI"),
                 p = n("fhzG"),
@@ -14235,8 +14359,8 @@
                             s = r.filter(function(e) {
                                 return -1 === o.indexOf(e)
                             }),
-                            l = [];
-                        return 0 === i.length && (l = t.filter(function(e, t) {
+                            c = [];
+                        return 0 === i.length && (c = t.filter(function(e, t) {
                             return t !== n.indexOf(e)
                         })), this.latestKnownDomChildren = n, {
                             old: t,
@@ -14244,7 +14368,7 @@
                             removed: i,
                             appended: s,
                             prepended: o,
-                            moved: l,
+                            moved: c,
                             forceItemReload: e
                         }
                     },
@@ -14254,7 +14378,7 @@
                         e.removed.length > 0 && (this.props.enableResizableChildren && e.removed.forEach(this.erd.removeAllListeners, this.erd), this.masonry.remove(e.removed), t = !0), e.appended.length > 0 && (this.masonry.appended(e.appended), 0 === e.prepended.length && (t = !0), this.props.enableResizableChildren && e.appended.forEach(this.listenToElementResize, this)), e.prepended.length > 0 && (this.masonry.prepended(e.prepended), this.props.enableResizableChildren && e.prepended.forEach(this.listenToElementResize, this)), t && this.masonry.reloadItems(), this.masonry.layout()
                     },
                     imagesLoaded: function() {
-                        this.props.disableImagesLoaded || a(this.masonryContainer).on(this.props.updateOnEachImageLoad ? "progress" : "always", l(function(e) {
+                        this.props.disableImagesLoaded || a(this.masonryContainer).on(this.props.updateOnEachImageLoad ? "progress" : "always", c(function(e) {
                             this.props.onImagesLoaded && this.props.onImagesLoaded(e), this.masonry.layout()
                         }.bind(this), 100))
                     },
@@ -14284,7 +14408,7 @@
                         this.masonryContainer = e
                     },
                     render: function() {
-                        var e = c(this.props, Object.keys(m));
+                        var e = l(this.props, Object.keys(m));
                         return d.createElement(this.props.elementType, o({}, e, {
                             ref: this.setRef
                         }), this.props.children)
@@ -14510,13 +14634,13 @@
                         return null
                     }, t
                 }(r.Component),
-                l = Object(a.compose)(Object(o.b)("RecurlyScript", {
+                c = Object(a.compose)(Object(o.b)("RecurlyScript", {
                     autoReportInteractive: !0
                 }))(s);
             n.d(t, !1, function() {
                 return s
             }), n.d(t, "a", function() {
-                return l
+                return c
             })
         },
         "saS/": function(e, t) {
@@ -14775,7 +14899,7 @@
                             this.img = e
                         }
 
-                        function l(e, t) {
+                        function c(e, t) {
                             this.url = e, this.element = t, this.img = new Image
                         }
                         return a.prototype.addElementBackgroundImages = function(e) {
@@ -14789,7 +14913,7 @@
                             var t = new s(e);
                             this.images.push(t)
                         }, a.prototype.addBackground = function(e, t) {
-                            var n = new l(e, t);
+                            var n = new c(e, t);
                             this.images.push(n)
                         }, a.prototype.check = function() {
                             var e = this;
@@ -14825,11 +14949,11 @@
                             this.confirm(!1, "onerror"), this.unbindEvents()
                         }, s.prototype.unbindEvents = function() {
                             this.proxyImage.removeEventListener("load", this), this.proxyImage.removeEventListener("error", this), this.img.removeEventListener("load", this), this.img.removeEventListener("error", this)
-                        }, l.prototype = Object.create(s.prototype), l.prototype.check = function() {
+                        }, c.prototype = Object.create(s.prototype), c.prototype.check = function() {
                             this.img.addEventListener("load", this), this.img.addEventListener("error", this), this.img.src = this.url, this.getIsImageComplete() && (this.confirm(0 !== this.img.naturalWidth, "naturalWidth"), this.unbindEvents())
-                        }, l.prototype.unbindEvents = function() {
+                        }, c.prototype.unbindEvents = function() {
                             this.img.removeEventListener("load", this), this.img.removeEventListener("error", this)
-                        }, l.prototype.confirm = function(e, t) {
+                        }, c.prototype.confirm = function(e, t) {
                             this.isLoaded = e, this.emitEvent("progress", [this, this.element, t])
                         }, a.makeJQueryPlugin = function(t) {
                             (t = t || e.jQuery) && ((n = t).fn.imagesLoaded = function(e, t) {
@@ -14872,14 +14996,14 @@
                     a = i.getOption(e, "auto", !0);
                 a && !n && (t && t.warn("Invalid options combination. auto=true and async=false is invalid. Setting async=true."), n = !0);
                 var o, s = r(),
-                    l = !1;
+                    c = !1;
 
-                function c() {
-                    for (l = !0; s.size();) {
+                function l() {
+                    for (c = !0; s.size();) {
                         var e = s;
                         s = r(), e.process()
                     }
-                    l = !1
+                    c = !1
                 }
 
                 function u() {
@@ -14887,16 +15011,16 @@
                         return function(e) {
                             return setTimeout(e, 0)
                         }(e)
-                    }(c)
+                    }(l)
                 }
                 return {
                     add: function(e, t) {
-                        !l && a && n && 0 === s.size() && u(), s.add(e, t)
+                        !c && a && n && 0 === s.size() && u(), s.add(e, t)
                     },
                     force: function(e) {
-                        l || (void 0 === e && (e = n), o && (function(e) {
+                        c || (void 0 === e && (e = n), o && (function(e) {
                             clearTimeout(e)
-                        }(o), o = null), e ? u() : c())
+                        }(o), o = null), e ? u() : l())
                     }
                 }
             }
@@ -15163,7 +15287,7 @@
                     }(),
                     s = "erd_scroll_detection_container";
 
-                function l(e, n, i) {
+                function c(e, n, i) {
                     if (e.addEventListener) e.addEventListener(n, i);
                     else {
                         if (!e.attachEvent) return t.error("[scroll] Don't know how to add event listeners.");
@@ -15171,7 +15295,7 @@
                     }
                 }
 
-                function c(e, n, i) {
+                function l(e, n, i) {
                     if (e.removeEventListener) e.removeEventListener(n, i);
                     else {
                         if (!e.detachEvent) return t.error("[scroll] Don't know how to remove event listeners.");
@@ -15201,11 +15325,11 @@
                             }(r += "@keyframes " + n + " { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }")
                     }
                 }("erd_scroll_detection_scrollbar_style", s), {
-                    makeDetectable: function(e, c, p) {
+                    makeDetectable: function(e, l, p) {
                         function m() {
                             if (e.debug) {
                                 var n = Array.prototype.slice.call(arguments);
-                                if (n.unshift(a.get(c), "Scroll: "), t.log.apply) t.log.apply(null, n);
+                                if (n.unshift(a.get(l), "Scroll: "), t.log.apply) t.log.apply(null, n);
                                 else
                                     for (var i = 0; i < n.length; i++) t.log(n[i])
                             }
@@ -15218,15 +15342,15 @@
                         }
 
                         function f() {
-                            var e = getComputedStyle(c),
+                            var e = getComputedStyle(l),
                                 t = {};
-                            return t.position = e.position, t.width = c.offsetWidth, t.height = c.offsetHeight, t.top = e.top, t.right = e.right, t.bottom = e.bottom, t.left = e.left, t.widthCSS = e.width, t.heightCSS = e.height, t
+                            return t.position = e.position, t.width = l.offsetWidth, t.height = l.offsetHeight, t.top = e.top, t.right = e.right, t.bottom = e.bottom, t.left = e.left, t.widthCSS = e.width, t.heightCSS = e.height, t
                         }
 
                         function g() {
-                            if (m("storeStyle invoked."), r(c)) {
+                            if (m("storeStyle invoked."), r(l)) {
                                 var e = f();
-                                r(c).style = e
+                                r(l).style = e
                             } else m("Aborting because element has been uninstalled")
                         }
 
@@ -15258,43 +15382,43 @@
                                 s = function(e) {
                                     return 2 * e + b()
                                 }(t),
-                                l = function(e) {
+                                c = function(e) {
                                     return 2 * e + v()
                                 }(n);
-                            i.scrollLeft = a, i.scrollTop = o, r.scrollLeft = s, r.scrollTop = l
+                            i.scrollLeft = a, i.scrollTop = o, r.scrollLeft = s, r.scrollTop = c
                         }
 
                         function P() {
-                            var e = r(c).container;
+                            var e = r(l).container;
                             if (!e) {
-                                (e = document.createElement("div")).className = s, e.style.cssText = "visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0; padding: 0;", r(c).container = e,
+                                (e = document.createElement("div")).className = s, e.style.cssText = "visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0; padding: 0;", r(l).container = e,
                                     function(e) {
                                         e.className += " " + s + "_animation_active"
-                                    }(e), c.appendChild(e);
+                                    }(e), l.appendChild(e);
                                 var t = function() {
-                                    r(c).onRendered && r(c).onRendered()
+                                    r(l).onRendered && r(l).onRendered()
                                 };
-                                l(e, "animationstart", t), r(c).onAnimationStart = t
+                                c(e, "animationstart", t), r(l).onAnimationStart = t
                             }
                             return e
                         }
 
                         function S() {
-                            if (m("Injecting elements"), r(c)) {
+                            if (m("Injecting elements"), r(l)) {
                                 ! function() {
-                                    var e = r(c).style;
+                                    var e = r(l).style;
                                     if ("static" === e.position) {
-                                        c.style.position = "relative";
+                                        l.style.position = "relative";
                                         var n = function(e, t, n, i) {
                                             var r = n[i];
                                             "auto" !== r && "0" !== function(e) {
                                                 return e.replace(/[^-\d\.]/g, "")
                                             }(r) && (e.warn("An element that is positioned static has style." + i + "=" + r + " which is ignored due to the static positioning. The element will need to be positioned relative, so the style." + i + " will be set to 0. Element: ", t), t.style[i] = 0)
                                         };
-                                        n(t, c, e, "top"), n(t, c, e, "right"), n(t, c, e, "bottom"), n(t, c, e, "left")
+                                        n(t, l, e, "top"), n(t, l, e, "right"), n(t, l, e, "bottom"), n(t, l, e, "left")
                                     }
                                 }();
-                                var e = r(c).container;
+                                var e = r(l).container;
                                 e || (e = P());
                                 var n = o.width,
                                     i = o.height,
@@ -15307,15 +15431,15 @@
                                     h = document.createElement("div"),
                                     f = document.createElement("div"),
                                     g = document.createElement("div");
-                                u.dir = "ltr", u.style.cssText = "position: absolute; flex: none; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;", u.className = s, d.className = s, d.style.cssText = a, p.style.cssText = "position: absolute; flex: none; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;", h.style.cssText = "position: absolute; left: 0; top: 0;", f.style.cssText = "position: absolute; flex: none; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;", g.style.cssText = "position: absolute; width: 200%; height: 200%;", p.appendChild(h), f.appendChild(g), d.appendChild(p), d.appendChild(f), u.appendChild(d), e.appendChild(u), l(p, "scroll", y), l(f, "scroll", b), r(c).onExpandScroll = y, r(c).onShrinkScroll = b
+                                u.dir = "ltr", u.style.cssText = "position: absolute; flex: none; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;", u.className = s, d.className = s, d.style.cssText = a, p.style.cssText = "position: absolute; flex: none; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;", h.style.cssText = "position: absolute; left: 0; top: 0;", f.style.cssText = "position: absolute; flex: none; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;", g.style.cssText = "position: absolute; width: 200%; height: 200%;", p.appendChild(h), f.appendChild(g), d.appendChild(p), d.appendChild(f), u.appendChild(d), e.appendChild(u), c(p, "scroll", y), c(f, "scroll", b), r(l).onExpandScroll = y, r(l).onShrinkScroll = b
                             } else m("Aborting because element has been uninstalled");
 
                             function y() {
-                                r(c).onExpand && r(c).onExpand()
+                                r(l).onExpand && r(l).onExpand()
                             }
 
                             function b() {
-                                r(c).onShrink && r(c).onShrink()
+                                r(l).onShrink && r(l).onShrink()
                             }
                         }
 
@@ -15330,88 +15454,88 @@
                             }
 
                             function s(i) {
-                                var s = c.offsetWidth,
-                                    u = c.offsetHeight;
-                                m("Storing current size", s, u), y(c, s, u), n.add(0, function() {
-                                    if (r(c))
-                                        if (l()) {
+                                var s = l.offsetWidth,
+                                    u = l.offsetHeight;
+                                m("Storing current size", s, u), y(l, s, u), n.add(0, function() {
+                                    if (r(l))
+                                        if (c()) {
                                             if (e.debug) {
-                                                var n = c.offsetWidth,
-                                                    i = c.offsetHeight;
-                                                n === s && i === u || t.warn(a.get(c), "Scroll: Size changed before updating detector elements.")
+                                                var n = l.offsetWidth,
+                                                    i = l.offsetHeight;
+                                                n === s && i === u || t.warn(a.get(l), "Scroll: Size changed before updating detector elements.")
                                             }
-                                            o(c, s, u)
+                                            o(l, s, u)
                                         } else m("Aborting because element container has not been initialized");
                                     else m("Aborting because element has been uninstalled")
                                 }), n.add(1, function() {
-                                    r(c) ? l() ? C(c, s, u) : m("Aborting because element container has not been initialized") : m("Aborting because element has been uninstalled")
+                                    r(l) ? c() ? C(l, s, u) : m("Aborting because element container has not been initialized") : m("Aborting because element has been uninstalled")
                                 }), i && n.add(2, function() {
-                                    r(c) ? l() ? i() : m("Aborting because element container has not been initialized") : m("Aborting because element has been uninstalled")
+                                    r(l) ? c() ? i() : m("Aborting because element container has not been initialized") : m("Aborting because element has been uninstalled")
                                 })
                             }
 
-                            function l() {
-                                return !!r(c).container
+                            function c() {
+                                return !!r(l).container
                             }
 
                             function p() {
                                 m("notifyListenersIfNeeded invoked");
-                                var e = r(c);
-                                return void 0 === r(c).lastNotifiedWidth && e.lastWidth === e.startSize.width && e.lastHeight === e.startSize.height ? m("Not notifying: Size is the same as the start size, and there has been no notification yet.") : e.lastWidth === e.lastNotifiedWidth && e.lastHeight === e.lastNotifiedHeight ? m("Not notifying: Size already notified") : (m("Current size not notified, notifying..."), e.lastNotifiedWidth = e.lastWidth, e.lastNotifiedHeight = e.lastHeight, void i(r(c).listeners, function(e) {
-                                    e(c)
+                                var e = r(l);
+                                return void 0 === r(l).lastNotifiedWidth && e.lastWidth === e.startSize.width && e.lastHeight === e.startSize.height ? m("Not notifying: Size is the same as the start size, and there has been no notification yet.") : e.lastWidth === e.lastNotifiedWidth && e.lastHeight === e.lastNotifiedHeight ? m("Not notifying: Size already notified") : (m("Current size not notified, notifying..."), e.lastNotifiedWidth = e.lastWidth, e.lastNotifiedHeight = e.lastHeight, void i(r(l).listeners, function(e) {
+                                    e(l)
                                 }))
                             }
 
                             function f() {
-                                if (m("Scroll detected."), h(c)) m("Scroll event fired while unrendered. Ignoring...");
+                                if (m("Scroll detected."), h(l)) m("Scroll event fired while unrendered. Ignoring...");
                                 else {
-                                    var e = c.offsetWidth,
-                                        t = c.offsetHeight;
-                                    e !== c.lastWidth || t !== c.lastHeight ? (m("Element size changed."), s(p)) : m("Element size has not changed (" + e + "x" + t + ").")
+                                    var e = l.offsetWidth,
+                                        t = l.offsetHeight;
+                                    e !== l.lastWidth || t !== l.lastHeight ? (m("Element size changed."), s(p)) : m("Element size has not changed (" + e + "x" + t + ").")
                                 }
                             }
-                            if (m("registerListenersAndPositionElements invoked."), r(c)) {
-                                r(c).onRendered = function() {
-                                    if (m("startanimation triggered."), h(c)) m("Ignoring since element is still unrendered...");
+                            if (m("registerListenersAndPositionElements invoked."), r(l)) {
+                                r(l).onRendered = function() {
+                                    if (m("startanimation triggered."), h(l)) m("Ignoring since element is still unrendered...");
                                     else {
                                         m("Element rendered.");
-                                        var e = u(c),
-                                            t = d(c);
+                                        var e = u(l),
+                                            t = d(l);
                                         0 !== e.scrollLeft && 0 !== e.scrollTop && 0 !== t.scrollLeft && 0 !== t.scrollTop || (m("Scrollbars out of sync. Updating detector elements..."), s(p))
                                     }
-                                }, r(c).onExpand = f, r(c).onShrink = f;
-                                var g = r(c).style;
-                                o(c, g.width, g.height)
+                                }, r(l).onExpand = f, r(l).onShrink = f;
+                                var g = r(l).style;
+                                o(l, g.width, g.height)
                             } else m("Aborting because element has been uninstalled")
                         }
 
                         function O() {
-                            if (m("finalizeDomMutation invoked."), r(c)) {
-                                var e = r(c).style;
-                                y(c, e.width, e.height), C(c, e.width, e.height)
+                            if (m("finalizeDomMutation invoked."), r(l)) {
+                                var e = r(l).style;
+                                y(l, e.width, e.height), C(l, e.width, e.height)
                             } else m("Aborting because element has been uninstalled")
                         }
 
                         function I() {
-                            p(c)
+                            p(l)
                         }
 
                         function w() {
-                            m("Installing..."), r(c).listeners = [],
+                            m("Installing..."), r(l).listeners = [],
                                 function() {
                                     var e = f();
-                                    r(c).startSize = {
+                                    r(l).startSize = {
                                         width: e.width,
                                         height: e.height
-                                    }, m("Element start size", r(c).startSize)
+                                    }, m("Element start size", r(l).startSize)
                                 }(), n.add(0, g), n.add(1, S), n.add(2, x), n.add(3, O), n.add(4, I)
                         }
-                        p || (p = c, c = e, e = null), e = e || {}, m("Making detectable..."),
+                        p || (p = l, l = e, e = null), e = e || {}, m("Making detectable..."),
                             function(e) {
                                 return ! function(e) {
                                     return e === e.ownerDocument.body || e.ownerDocument.body.contains(e)
                                 }(e) || null === getComputedStyle(e)
-                            }(c) ? (m("Element is detached"), P(), m("Waiting until element is attached..."), r(c).onRendered = function() {
+                            }(l) ? (m("Element is detached"), P(), m("Waiting until element is attached..."), r(l).onRendered = function() {
                                 m("Element is now attached"), w()
                             }) : w()
                     },
@@ -15421,7 +15545,7 @@
                     },
                     uninstall: function(e) {
                         var t = r(e);
-                        t && (t.onExpandScroll && c(u(e), "scroll", t.onExpandScroll), t.onShrinkScroll && c(d(e), "scroll", t.onShrinkScroll), t.onAnimationStart && c(t.container, "animationstart", t.onAnimationStart), t.container && e.removeChild(t.container))
+                        t && (t.onExpandScroll && l(u(e), "scroll", t.onExpandScroll), t.onShrinkScroll && l(d(e), "scroll", t.onShrinkScroll), t.onAnimationStart && l(t.container, "animationstart", t.onAnimationStart), t.container && e.removeChild(t.container))
                     }
                 }
             }

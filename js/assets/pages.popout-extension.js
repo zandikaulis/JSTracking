@@ -61,70 +61,72 @@
                 return l
             }), n.d(t, "j", function() {
                 return c
-            }), n.d(t, "H", function() {
-                return u
             }), n.d(t, "I", function() {
+                return u
+            }), n.d(t, "J", function() {
                 return d
             }), n.d(t, "n", function() {
                 return p
-            }), n.d(t, "A", function() {
+            }), n.d(t, "B", function() {
                 return E
-            }), n.d(t, "G", function() {
+            }), n.d(t, "H", function() {
                 return m
-            }), n.d(t, "r", function() {
-                return h
             }), n.d(t, "s", function() {
+                return h
+            }), n.d(t, "t", function() {
                 return f
             }), n.d(t, "o", function() {
                 return g
-            }), n.d(t, "t", function() {
-                return T
-            }), n.d(t, "v", function() {
+            }), n.d(t, "u", function() {
                 return _
+            }), n.d(t, "w", function() {
+                return T
             }), n.d(t, "l", function() {
                 return R
             }), n.d(t, "d", function() {
                 return I
             }), n.d(t, "c", function() {
                 return v
-            }), n.d(t, "B", function() {
+            }), n.d(t, "C", function() {
                 return b
             }), n.d(t, "b", function() {
                 return O
             }), n.d(t, "a", function() {
                 return C
-            }), n.d(t, "E", function() {
-                return y
             }), n.d(t, "F", function() {
+                return y
+            }), n.d(t, "G", function() {
                 return A
             }), n.d(t, "m", function() {
                 return S
-            }), n.d(t, "C", function() {
-                return N
             }), n.d(t, "D", function() {
+                return N
+            }), n.d(t, "E", function() {
                 return D
-            }), n.d(t, "J", function() {
+            }), n.d(t, "K", function() {
                 return P
-            }), n.d(t, "q", function() {
+            }), n.d(t, "r", function() {
                 return L
-            }), n.d(t, "w", function() {
+            }), n.d(t, "x", function() {
                 return M
             }), n.d(t, "f", function() {
                 return U
             }), n.d(t, "g", function() {
                 return k
-            }), n.d(t, "x", function() {
+            }), n.d(t, "y", function() {
                 return x
             }), n.d(t, "k", function() {
                 return w
-            }), n.d(t, "p", function() {
+            }), n.d(t, "q", function() {
                 return B
-            }), n.d(t, "u", function() {
+            }), n.d(t, "v", function() {
                 return F
-            }), n.d(t, "z", function() {
+            }), n.d(t, "p", function() {
                 return V
-            }), n.d(t, "y", function() {
+            }), n.d(t, "A", function() {
                 return W
+            }), n.d(t, "z", function() {
+                return j
             });
             var r = n("/7QA"),
                 o = n("0Log"),
@@ -178,11 +180,11 @@
                 return o.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
             }
 
-            function T(e) {
+            function _(e) {
                 return o.PubsubTopic.Raid + "." + e
             }
 
-            function _(e) {
+            function T(e) {
                 return o.PubsubTopic.StreamChange + "." + e
             }
 
@@ -267,6 +269,10 @@
             }
 
             function V(e) {
+                return o.PubsubTopic.MultiviewChanletUpdate + "." + e
+            }
+
+            function W(e) {
                 return r.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -279,7 +285,7 @@
                 })
             }
 
-            function W(e) {
+            function j(e) {
                 return r.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -1062,9 +1068,9 @@
             }), n.d(t, "j", function() {
                 return g
             }), n.d(t, "g", function() {
-                return T
-            }), n.d(t, "e", function() {
                 return _
+            }), n.d(t, "e", function() {
+                return T
             }), n.d(t, "i", function() {
                 return R
             }), n.d(t, "h", function() {
@@ -1098,8 +1104,8 @@
                 h = "cheer",
                 f = o.a.Purple,
                 g = "UNKNOWN",
-                T = "FIRST_PARTY",
-                _ = "CUSTOM",
+                _ = "FIRST_PARTY",
+                T = "CUSTOM",
                 R = "SPONSORED",
                 I = "THIRD_PARTY",
                 v = "DISPLAY_ONLY",
@@ -1426,7 +1432,7 @@
         },
         DMoW: function(e, t, n) {
             "use strict";
-            var r, o, i, a, s, l, c, u, d, p, E, m, h, f, g, T, _, R, I, v, b, O, C, y, A, S, N, D, P, L, M, U, k, x, w, B, F, V, W, j, G, H, z, X, Y, q, K, Q, Z, J, $, ee, te, ne, re, oe, ie, ae, se, le, ce, ue, de, pe, Ee, me, he, fe, ge, Te, _e, Re, Ie, ve, be, Oe, Ce, ye, Ae, Se, Ne, De, Pe, Le, Me, Ue, ke, xe, we, Be, Fe, Ve, We, je, Ge, He, ze, Xe, Ye, qe, Ke, Qe, Ze, Je, $e, et, tt, nt, rt, ot, it, at, st, lt, ct, ut, dt, pt, Et, mt, ht, ft, gt, Tt, _t;
+            var r, o, i, a, s, l, c, u, d, p, E, m, h, f, g, _, T, R, I, v, b, O, C, y, A, S, N, D, P, L, M, U, k, x, w, B, F, V, W, j, G, H, z, X, Y, q, K, Q, Z, J, $, ee, te, ne, re, oe, ie, ae, se, le, ce, ue, de, pe, Ee, me, he, fe, ge, _e, Te, Re, Ie, ve, be, Oe, Ce, ye, Ae, Se, Ne, De, Pe, Le, Me, Ue, ke, xe, we, Be, Fe, Ve, We, je, Ge, He, ze, Xe, Ye, qe, Ke, Qe, Ze, Je, $e, et, tt, nt, rt, ot, it, at, st, lt, ct, ut, dt, pt, Et, mt, ht, ft, gt, _t, Tt;
             n.d(t, "N", function() {
                     return r
                 }), n.d(t, "e", function() {
@@ -1538,7 +1544,7 @@
                 }), n.d(t, "f", function() {
                     return gt
                 }), n.d(t, "v", function() {
-                    return Tt
+                    return _t
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -1587,10 +1593,10 @@
                 }(g || (g = {})),
                 function(e) {
                     e.ALLTIME = "ALLTIME", e.MONTH = "MONTH", e.WEEK = "WEEK"
-                }(T || (T = {})),
+                }(_ || (_ = {})),
                 function(e) {
                     e.AD = "AD", e.BUNDLE = "BUNDLE"
-                }(_ || (_ = {})),
+                }(T || (T = {})),
                 function(e) {
                     e.GAME_TRAILER = "GAME_TRAILER", e.MISC_TRAILER = "MISC_TRAILER", e.PAY_TO_STREAM = "PAY_TO_STREAM"
                 }(R || (R = {})),
@@ -1749,10 +1755,10 @@
                 }(ge || (ge = {})),
                 function(e) {
                     e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
-                }(Te || (Te = {})),
+                }(_e || (_e = {})),
                 function(e) {
                     e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
-                }(_e || (_e = {})),
+                }(Te || (Te = {})),
                 function(e) {
                     e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
                 }(Re || (Re = {})),
@@ -1911,10 +1917,10 @@
                 }(gt || (gt = {})),
                 function(e) {
                     e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
-                }(Tt || (Tt = {})),
+                }(_t || (_t = {})),
                 function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(_t || (_t = {}))
+                }(Tt || (Tt = {}))
         },
         Fxe2: function(e, t, n) {
             "use strict";
@@ -2291,8 +2297,8 @@
                 h = n("/7QA"),
                 f = n("eJ65"),
                 g = n("edgk"),
-                T = n("DMoW"),
-                _ = n("2xye"),
+                _ = n("DMoW"),
+                T = n("2xye"),
                 R = n("3CMh"),
                 I = n("0Log"),
                 v = n("geRD"),
@@ -2585,7 +2591,7 @@
                 Z = Object(m.compose)(Object(q.a)(function(e) {
                     return function(e, t, n) {
                         return {
-                            topic: n ? Object(b.B)(n) : "",
+                            topic: n ? Object(b.C)(n) : "",
                             type: I.PubsubMessageType.UserBitsBalanceUpdate,
                             mutator: function(e, t) {
                                 return t && e.message_type === O.b.Balance ? (t.currentUser && e.data && (t.currentUser.bitsBalance = e.data.balance), t) : t
@@ -3225,15 +3231,15 @@
                                 testExtensionAccepted: !0
                             })
                         }, t.getCurrentMedium = function() {
-                            if (t.props.isPopout) return _.PageviewMedium.ExtensionPage;
+                            if (t.props.isPopout) return T.PageviewMedium.ExtensionPage;
                             switch (t.props.mode) {
                                 case p.ExtensionMode.Dashboard:
-                                    return _.PageviewMedium.DashboardLive;
+                                    return T.PageviewMedium.DashboardLive;
                                 case p.ExtensionMode.Config:
-                                    return _.PageviewMedium.ExtensionConfiguration;
+                                    return T.PageviewMedium.ExtensionConfiguration;
                                 case p.ExtensionMode.Viewer:
                             }
-                            return _.PageviewMedium.Channel
+                            return T.PageviewMedium.Channel
                         }, t.subscribeFrameEvents = function() {
                             t.extensionFrameAPI && (t.extensionFrameAPI.on(p.ExtensionFrameEvents.ShowBitsBalance, t.onShowBitsBalance), t.extensionFrameAPI.on(p.ExtensionFrameEvents.ShowUseBitsSuccess, t.onShowUseBitsSuccess), t.extensionFrameAPI.on(p.ExtensionFrameEvents.IdentityLinked, t.onIdentityLinked), t.extensionFrameAPI.on(p.ExtensionFrameEvents.ExtensionFrameLoaded, t.onExtensionLoaded), t.extensionFrameAPI.on(p.ExtensionFrameEvents.RequestModal, t.onModalRequested))
                         }, t.unsubscribeFrameEvents = function() {
@@ -3440,7 +3446,7 @@
                                 o = e.name;
                             t.props.isLoggedIn ? t.props.showReportExtensionModal({
                                 reportContext: {
-                                    contentType: T.N.EXTENSION_REPORT,
+                                    contentType: _.N.EXTENSION_REPORT,
                                     contentID: n + "-" + r,
                                     targetUserID: t.props.channelID
                                 },
@@ -3453,7 +3459,7 @@
                         }, t.trackImpression = function() {
                             if (t.props.panel) {
                                 var e = t.props.panel.id;
-                                e && Object(X.a)(_.SpadeEventType.PanelImpression, {
+                                e && Object(X.a)(T.SpadeEventType.PanelImpression, {
                                     panelID: e,
                                     channelID: t.props.channelID,
                                     panelType: t.props.panel.type
@@ -3476,7 +3482,7 @@
                     }, t.prototype.render = function() {
                         var e, t = Object(h.d)("More Info", "ExtensionPanel"),
                             n = Object(h.d)("Report Extension", "ExtensionPanel"),
-                            r = Object(G.d)(this.extension.id, this.extension.version) + "?tt_medium=" + this.getCurrentMedium() + "&tt_content=" + _.PageviewContent.ExtensionPanel,
+                            r = Object(G.d)(this.extension.id, this.extension.version) + "?tt_medium=" + this.getCurrentMedium() + "&tt_content=" + T.PageviewContent.ExtensionPanel,
                             o = d(this.props.className || "extension-panel", ((e = {})["extension-panel__popout"] = this.props.isPopout, e)),
                             i = this.props.isFramePoppedOut ? E.createElement(J, {
                                 extension: this.extension,
@@ -3757,6 +3763,7 @@
                     Friendship: "friendship",
                     ImageUpload: "user-image-update",
                     ModerationActionsByUserAndChannel: "chat_moderator_actions",
+                    MultiviewChanletUpdate: "multiview-chanlet-update",
                     MysteryGift: "channel-sub-gifts-v1",
                     OnsiteNotifications: "onsite-notifications",
                     PayoutOnboardingEvents: "payout-onboarding-events",
@@ -3802,6 +3809,7 @@
                     ImageUploadSuccess: "imageuploadsuccess",
                     LiveEvent: "live-event",
                     ModerationAction: "moderation_action",
+                    MultiviewChanletUpdate: "chanlet",
                     MysteryGiftPurchase: "mystery-gift-purchase",
                     OnsiteNotificationCreate: "create-notification",
                     OnsiteNotificationDelete: "delete-notification",
@@ -4266,8 +4274,8 @@
                 h = n("D7An"),
                 f = n("DMoW"),
                 g = n("2xye"),
-                T = n("GnwI"),
-                _ = n("QVaV"),
+                _ = n("GnwI"),
+                T = n("QVaV"),
                 R = n("Ue10"),
                 I = (n("MPK0"), "report-wizard-block"),
                 v = "report-wizard-unblock",
@@ -4340,7 +4348,7 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.userBlocked ? this.renderUnblock() : this.renderBlock(),
-                            t = Object(_.a)(this.props.targetUser.login, this.props.targetUser.displayName, !0);
+                            t = Object(T.a)(this.props.targetUser.login, this.props.targetUser.displayName, !0);
                         return a.createElement(R.Eb, {
                             borderTop: !0,
                             padding: {
@@ -5860,7 +5868,7 @@
                         }
                     }
                 }
-            }), Object(T.b)("ReportUser", {
+            }), Object(_.b)("ReportUser", {
                 autoReportInteractive: !0
             }), Object(d.a)(), Object(p.a)(), Object(s.connect)(function(e) {
                 return {
@@ -5885,8 +5893,8 @@
                 h = n("GnwI"),
                 f = n("fvjX"),
                 g = n("/7QA"),
-                T = n("TVJu"),
-                _ = function(e) {
+                _ = n("TVJu"),
+                T = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5899,7 +5907,7 @@
                         var o = r.find(function(t) {
                             return t.extension.clientId === e.props.extensionID && (!e.props.extensionVersion || t.extension.version === e.props.extensionVersion) && t.activationConfig.anchor === e.props.anchor
                         });
-                        return o && o.extension ? (g.p.setPageTitle(o.extension.name), a.createElement(T.a, {
+                        return o && o.extension ? (g.p.setPageTitle(o.extension.name), a.createElement(_.a, {
                             installation: o,
                             channelID: this.props.channelID,
                             channelName: this.props.channelLogin,
@@ -5920,7 +5928,7 @@
                             }
                         }
                     }
-                }))(_),
+                }))(T),
                 I = n("Ue10"),
                 v = n("1+HG");
             ! function(e) {
@@ -6034,7 +6042,7 @@
                         }, a.prototype.render = function() {
                             return o.createElement(t, r.__assign({}, this.props))
                         }, a.prototype.subscribe = function(e) {
-                            this.unsubscriber = Object(i.z)({
+                            this.unsubscriber = Object(i.A)({
                                 query: e.query,
                                 variables: e.variables,
                                 topic: e.topic,
@@ -6074,8 +6082,8 @@
                 h = n("XDQu"),
                 f = n("KxT4"),
                 g = n("S1Za"),
-                T = n("AKMF"),
-                _ = n("TSYQ"),
+                _ = n("AKMF"),
+                T = n("TSYQ"),
                 R = n("1hWM"),
                 I = n("imBb"),
                 v = n("cr+I"),
@@ -6133,7 +6141,10 @@
                                 externalfullscreen: n.props.fullscreen.supported(),
                                 gdpr: n.createPlayerGDPROptions(n.props),
                                 muted: n.props.muted,
-                                showtheatre: !n.props.disableTheatreButton
+                                showtheatre: !n.props.disableTheatreButton,
+                                trackingProperties: a.__assign({}, B.trackingProperties, {
+                                    platform: b.o.getPlatform()
+                                })
                             });
                             n.playerBuffering = n.registerBufferingEvent(!!n.props.paused), n.playerPlayed = n.registerPlayedEvent(!!n.props.paused);
                             var r = n.props.playerTypeOverride;
@@ -6350,17 +6361,17 @@
                         }
                         void 0 !== e.muted && this.props.muted !== e.muted && this.toggleMute(e.muted)
                     }, t.prototype.render = function() {
-                        var e = _("video-player", {
+                        var e = T("video-player", {
                                 "video-player--theatre": this.props.theatreModeEnabled,
                                 "video-player--theatre-whispers": this.props.theatreModeEnabled && this.props.isWhispersBottomBarVisible && !this.state.isFullScreen,
                                 "video-player--logged-in": this.props.isLoggedIn,
                                 "video-player--fullscreen": this.state.isFullScreen
                             }),
-                            t = _("video-player__container", {
+                            t = T("video-player__container", {
                                 "video-player__container--clips": L.a.includes(this.playerType)
                             });
                         return l.createElement("div", {
-                            className: _(e),
+                            className: T(e),
                             "data-test-selector": "video-player"
                         }, l.createElement("div", {
                             className: t,
@@ -6445,7 +6456,7 @@
                     sideNavExpanded: e.ui.sideNavExpanded,
                     isLoggedIn: Object(m.f)(e),
                     authToken: Object(m.a)(e),
-                    activeVideoPlayerRefID: Object(T.a)(e),
+                    activeVideoPlayerRefID: Object(_.a)(e),
                     gdprBlockAmazonContent: Object(f.g)(e, f.c.Amazon),
                     gdprBlockComScoreContent: Object(f.g)(e, f.c.ComScore),
                     gdprBlockGoogleContent: Object(f.g)(e, f.c.Google),
@@ -7152,9 +7163,9 @@
             }), n.d(t, "g", function() {
                 return s
             }), n.d(t, "u", function() {
-                return T
-            }), n.d(t, "r", function() {
                 return _
+            }), n.d(t, "r", function() {
+                return T
             }), n.d(t, "t", function() {
                 return R
             }), n.d(t, "m", function() {
@@ -7205,8 +7216,8 @@
                 f = "filter",
                 g = "range";
 
-            function T(e, t, n, r) {
-                var i = r || _(t),
+            function _(e, t, n, r) {
+                var i = r || T(t),
                     a = "";
                 i && (a = "?" + h + "=" + function(e) {
                     switch (e) {
@@ -7226,7 +7237,7 @@
                 c.p.history.push(e + "/" + s + a)
             }
 
-            function _(e) {
+            function T(e) {
                 var t = l.parse(e.location.search);
                 return Object(m.b)(t.sort || "")
             }

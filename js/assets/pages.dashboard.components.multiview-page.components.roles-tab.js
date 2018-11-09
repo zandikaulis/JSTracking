@@ -1,11 +1,50 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
     [153], {
+        "B+LW": function(e, t, n) {
+            "use strict";
+            var a = n("mrSG"),
+                o = n("q1tI"),
+                r = n("/MKj"),
+                l = n("fvjX"),
+                i = n("aCAx"),
+                s = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.openModal = function() {
+                            var e = t,
+                                n = function(t) {
+                                    function n() {
+                                        return null !== t && t.apply(this, arguments) || this
+                                    }
+                                    return a.__extends(n, t), n.prototype.render = function() {
+                                        return e.props.triggerModal(e.closeModal)
+                                    }, n
+                                }(o.Component);
+                            t.props.showModal(n, {})
+                        }, t.closeModal = function() {
+                            t.props.closeModal()
+                        }, t
+                    }
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        return this.props.children(this.openModal)
+                    }, t
+                }(o.Component);
+            var c = Object(r.connect)(null, function(e) {
+                return Object(l.bindActionCreators)({
+                    showModal: i.d,
+                    closeModal: i.c
+                }, e)
+            })(s);
+            n.d(t, "a", function() {
+                return c
+            })
+        },
         CS6u: function(e, t, n) {
             "use strict";
             var a = n("mrSG"),
                 o = n("q1tI"),
-                l = n("9rZX"),
-                r = n("fvjX"),
+                r = n("9rZX"),
+                l = n("fvjX"),
                 i = n("GnwI"),
                 s = n("Ue10"),
                 c = (n("xefp"), function(e) {
@@ -16,7 +55,7 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return o.createElement(l, {
+                        return o.createElement(r, {
                             overlayClassName: "modal__backdrop",
                             className: "modal__content",
                             isOpen: this.props.isOpen,
@@ -33,7 +72,7 @@
                         }, this.props.children)))
                     }, t
                 }(o.Component)),
-                d = Object(r.compose)(Object(i.b)("MultiviewModal"))(c);
+                d = Object(l.compose)(Object(i.b)("MultiviewModal"))(c);
             n.d(t, !1, function() {
                 return c
             }), n.d(t, "a", function() {
@@ -42,98 +81,167 @@
         },
         Driw: function(e, t, n) {
             "use strict";
-            var a, o = n("q1tI"),
+            var a, o = n("mrSG"),
+                r = n("q1tI"),
                 l = n("/7QA"),
-                r = n("eJ65"),
-                i = n("Ue10");
+                i = n("cZKs"),
+                s = n("eJ65"),
+                c = n("B+LW"),
+                d = n("Ue10");
             ! function(e) {
-                e.Edit = "more-balloon__edit", e.Delete = "more-balloon__delete"
+                e.Edit = "more-balloon__edit", e.Delete = "more-balloon__delete", e.DeleteConfirm = "more-balloon__delete-confirm"
             }(a || (a = {}));
-            var s = function(e) {
-                return o.createElement(i.Xa, {
-                    margin: {
-                        right: .5
-                    }
-                }, o.createElement(r.a, null, o.createElement(i.z, {
-                    icon: i.tb.More,
-                    type: i.F.Text
-                }), o.createElement(i.u, {
-                    direction: i.v.BottomRight,
-                    tailOffset: 8
-                }, e.onEdit && o.createElement(i.Ua, {
-                    onClick: e.onEdit,
-                    "data-test-selector": a.Edit
-                }, o.createElement(i.Xa, {
-                    className: "chanlets-tab__balloon-item",
-                    padding: {
-                        x: 1,
-                        y: 1
-                    },
-                    display: i.X.Flex,
-                    alignItems: i.f.Center
-                }, o.createElement(i.sb, {
-                    asset: i.tb.Edit,
-                    type: i.ub.Brand
-                }), o.createElement(i.Xa, {
-                    margin: {
-                        left: 1
-                    }
-                }, Object(l.e)("Edit", "ChanletsGroup")))), e.onDelete && o.createElement(i.Ua, {
-                    onClick: e.onDelete,
-                    "data-test-selector": a.Delete
-                }, o.createElement(i.Xa, {
-                    className: "chanlets-tab__balloon-item",
-                    padding: {
-                        x: 1,
-                        y: 1
-                    },
-                    display: i.X.Flex,
-                    alignItems: i.f.Center
-                }, o.createElement(i.sb, {
-                    asset: i.tb.Trash,
-                    type: i.ub.Brand
-                }), o.createElement(i.Xa, {
-                    margin: {
-                        left: 1
-                    }
-                }, Object(l.e)("Delete", "ChanletsGroup")))))))
-            };
+            var u = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.renderDeleteButton = function() {
+                        if (t.props.onDelete) return t.props.deleteModalMessage ? r.createElement(c.a, {
+                            triggerModal: t.renderDeleteModal
+                        }, t.renderBaseDeleteButton) : t.renderBaseDeleteButton(t.props.onDelete)
+                    }, t.renderBaseDeleteButton = function(e) {
+                        return r.createElement(d.Ua, {
+                            onClick: e,
+                            "data-test-selector": a.Delete
+                        }, r.createElement(d.Xa, {
+                            className: "more-balloon__balloon-item",
+                            padding: {
+                                x: 1,
+                                y: 1
+                            },
+                            display: d.X.Flex,
+                            alignItems: d.f.Center
+                        }, r.createElement(d.sb, {
+                            asset: d.tb.Trash,
+                            type: d.ub.Brand
+                        }), r.createElement(d.Xa, {
+                            margin: {
+                                left: 1
+                            }
+                        }, Object(l.e)("Delete", "MultiviewMoreBalloon"))))
+                    }, t.renderDeleteModal = function(e) {
+                        if (t.props.deleteModalMessage) return r.createElement(d.Eb, {
+                            background: d.r.Base,
+                            className: "multiview-more-balloon__delete-prompt",
+                            elevation: 3
+                        }, r.createElement(d.Eb, {
+                            borderBottom: !0,
+                            display: d.X.Flex,
+                            justifyContent: d.Wa.Center,
+                            padding: 2
+                        }, r.createElement(d.W, {
+                            bold: !0,
+                            fontSize: d.Ca.Size4
+                        }, t.props.deleteModalMessage)), r.createElement(d.Eb, {
+                            background: d.r.Alt,
+                            display: d.X.Flex,
+                            justifyContent: d.Wa.Center,
+                            padding: 2
+                        }, r.createElement(d.Xa, {
+                            margin: {
+                                right: .5
+                            }
+                        }, r.createElement(d.z, {
+                            onClick: e,
+                            type: d.F.Hollow
+                        }, Object(l.e)("Cancel", "MultiviewMoreBalloon"))), r.createElement(d.Xa, {
+                            margin: {
+                                left: 1
+                            }
+                        }, r.createElement(d.z, {
+                            "data-test-selector": a.DeleteConfirm,
+                            onClick: t.onDeleteClick.bind(t, e)
+                        }, Object(l.e)("Delete", "MultiviewMoreBalloon")))), r.createElement(i.a, {
+                            closeOnBackdropClick: !0
+                        }))
+                    }, t.onDeleteClick = function(e) {
+                        t.props.onDelete && t.props.onDelete(), e()
+                    }, t
+                }
+                return o.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement(d.Xa, {
+                        margin: {
+                            right: .5
+                        }
+                    }, r.createElement(s.a, null, r.createElement(d.z, {
+                        icon: d.tb.More,
+                        type: d.F.Text
+                    }), r.createElement(d.u, {
+                        direction: this.props.last ? d.v.TopRight : d.v.BottomRight,
+                        tailOffset: 8
+                    }, this.props.onEdit && r.createElement(d.Ua, {
+                        onClick: this.props.onEdit,
+                        "data-test-selector": a.Edit
+                    }, r.createElement(d.Xa, {
+                        className: "more-balloon__balloon-item",
+                        padding: {
+                            x: 1,
+                            y: 1
+                        },
+                        display: d.X.Flex,
+                        alignItems: d.f.Center
+                    }, r.createElement(d.sb, {
+                        asset: d.tb.Edit,
+                        type: d.ub.Brand
+                    }), r.createElement(d.Xa, {
+                        margin: {
+                            left: 1
+                        }
+                    }, Object(l.e)("Edit", "MultiviewMoreBalloon")))), this.renderDeleteButton())))
+                }, t
+            }(r.Component);
             n.d(t, !1, function() {
                 return a
             }), n.d(t, "a", function() {
-                return s
+                return u
             })
+        },
+        il7S: function(e, t, n) {
+            "use strict";
+            var a, o;
+            n.d(t, "a", function() {
+                    return a
+                }), n.d(t, "b", function() {
+                    return o
+                }),
+                function(e) {
+                    e.Group = "group", e.Team = "team", e.Player = "player", e.Role = "role"
+                }(a || (a = {})),
+                function(e) {
+                    e.Group = "Group", e.Team = "team", e.Player = "Player", e.Role = "Role"
+                }(o || (o = {}))
         },
         tgcK: function(e, t, n) {
             "use strict";
             n.r(t);
             var a, o = n("mrSG"),
-                l = n("q1tI"),
-                r = n("fvjX"),
+                r = n("q1tI"),
+                l = n("fvjX"),
                 i = n("/7QA"),
                 s = n("GnwI"),
                 c = n("IFXb"),
                 d = n("8/mp"),
                 u = n("CS6u"),
-                m = n("il7S"),
-                p = n("Ue10");
+                p = n("il7S"),
+                m = n("Ue10");
             ! function(e) {
                 e.Cancel = "edit-role-modal__cancel", e.Update = "edit-role-modal__update", e.Value = "edit-role-modal__value", e.ValueForm = "edit-role-modal__value-form"
             }(a || (a = {}));
-            var b, f = function(e) {
+            var f, b = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             isSaving: !1,
+                            errorMessage: "",
                             role: {
                                 __typename: "MultiviewContentAttribute",
                                 id: "",
-                                key: m.a.Role,
-                                name: m.b.Role,
+                                key: p.a.Role,
+                                name: p.b.Role,
                                 parentID: null,
                                 parentKey: null,
                                 value: "",
-                                valueShortName: ""
+                                valueShortName: "",
+                                imageURL: ""
                             }
                         }, t.onRoleNameChange = function(e) {
                             var n = e.target.value,
@@ -149,23 +257,24 @@
                             return !t.state.isSaving && t.validRoleName()
                         }, t.updateRole = function() {
                             return o.__awaiter(t, void 0, void 0, function() {
-                                var e;
-                                return o.__generator(this, function(t) {
-                                    switch (t.label) {
+                                var e, t;
+                                return o.__generator(this, function(n) {
+                                    switch (n.label) {
                                         case 0:
                                             if (!this.validRoleName()) return [2];
                                             this.setState({
                                                 isSaving: !0
-                                            }), t.label = 1;
+                                            }), e = "", n.label = 1;
                                         case 1:
-                                            return t.trys.push([1, 3, , 4]), [4, this.props.updateRole(this.state.role)];
+                                            return n.trys.push([1, 3, , 4]), [4, this.props.updateRole(this.state.role)];
                                         case 2:
-                                            return t.sent(), [3, 4];
+                                            return n.sent(), [3, 4];
                                         case 3:
-                                            return e = t.sent(), i.k.error(e, "Error updating role"), [3, 4];
+                                            return t = n.sent(), i.k.error(t, "Error updating role"), e = Object(i.e)("There was a problem saving this role", "EditRoleModal"), [3, 4];
                                         case 4:
                                             return this.setState({
-                                                isSaving: !1
+                                                isSaving: !1,
+                                                errorMessage: e
                                             }), [2]
                                     }
                                 })
@@ -178,71 +287,81 @@
                         })
                     }, t.prototype.render = function() {
                         var e = this.state.role;
-                        return l.createElement(u.a, {
+                        return r.createElement(u.a, {
                             isOpen: !0
-                        }, l.createElement(p.Eb, {
-                            display: p.X.Flex,
+                        }, r.createElement(m.Eb, {
+                            display: m.X.Flex,
                             padding: {
                                 bottom: 2
                             },
                             margin: {
                                 bottom: 2
                             },
-                            justifyContent: p.Wa.Between,
+                            justifyContent: m.Wa.Between,
                             borderBottom: !0
-                        }, l.createElement(p.Xa, {
+                        }, r.createElement(m.Xa, {
                             flexGrow: 0,
                             flexShrink: 1
-                        }, l.createElement(p.W, {
-                            type: p.Vb.H3
-                        }, Object(i.e)("Edit Role", "EditRoleModal"))), l.createElement(p.Xa, {
+                        }, r.createElement(m.W, {
+                            type: m.Vb.H3
+                        }, Object(i.e)("Edit Role", "EditRoleModal"))), r.createElement(m.Xa, {
                             flexGrow: 0,
                             flexShrink: 0
-                        }, l.createElement(p.z, {
+                        }, r.createElement(m.z, {
                             onClick: this.props.onClose,
                             "data-test-selector": a.Cancel,
-                            type: p.F.Text
-                        }, Object(i.e)("Cancel", "EditRoleModal")), l.createElement(p.Xa, {
+                            type: m.F.Text
+                        }, Object(i.e)("Cancel", "EditRoleModal")), r.createElement(m.Xa, {
                             margin: {
                                 left: 1
                             },
-                            display: p.X.InlineBlock
-                        }, l.createElement(p.z, {
+                            display: m.X.InlineBlock
+                        }, r.createElement(m.z, {
                             onClick: this.updateRole,
                             "data-test-selector": a.Update,
                             disabled: !this.canSave()
-                        }, Object(i.e)("Update", "EditRoleModal"))))), l.createElement(d.b, null, l.createElement(p.Xa, {
+                        }, Object(i.e)("Update", "EditRoleModal"))))), r.createElement(m.Xa, {
+                            margin: {
+                                y: 1
+                            }
+                        }, this.state.errorMessage && r.createElement(m.Da, {
+                            errorMessage: this.state.errorMessage
+                        })), r.createElement(d.b, null, r.createElement(m.Xa, {
                             padding: {
                                 right: 2
                             }
-                        }, l.createElement(p.Ea, {
+                        }, r.createElement(m.Ea, {
                             id: "role-name",
                             "data-test-selector": a.ValueForm,
                             label: Object(i.e)("Role Name", "EditRoleModal"),
                             error: !this.validRoleName(),
                             errorMessage: Object(i.e)("Invalid Role Name", "EditRoleModal")
-                        }, l.createElement(p.Ra, {
-                            type: p.Ta.Text,
+                        }, r.createElement(m.Ra, {
+                            type: m.Ta.Text,
                             "data-test-selector": a.Value,
                             onChange: this.onRoleNameChange,
                             value: e.value
                         })))))
                     }, t
-                }(l.Component),
-                R = n("Driw");
-            (b || (b = {})).EmptyList = "roles-tab__empty-list";
-            var E = function(e) {
+                }(r.Component),
+                g = n("Driw");
+            ! function(e) {
+                e.EmptyList = "roles-tab__empty-list", e.AddRow = "roles-tab__add-row", e.AddButton = "roles-tab__add-button"
+            }(f || (f = {}));
+            var h = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             isAddingRole: !1,
-                            addingRoleName: ""
+                            addingRoleName: "",
+                            errorMessage: "",
+                            isSaving: !1
                         }, t.filteredRoleContentAttributes = function() {
                             return t.props.availableContentAttributes.filter(function(e) {
-                                return e.key === m.a.Role
+                                return e.key === p.a.Role
                             })
                         }, t.renderEditRoleModal = function() {
-                            if (t.state.role) return l.createElement(f, {
+                            if (t.state.role) return r.createElement(b, {
                                 role: t.state.role,
                                 onClose: t.closeRoleModal,
                                 updateRole: t.updateRole
@@ -271,26 +390,64 @@
                         }, t.validRoleName = function() {
                             return !!t.state.addingRoleName
                         }, t.createRole = function() {
-                            t.validRoleName() && (t.props.createContentAttributes([{
-                                key: m.a.Role,
-                                name: m.b.Role,
-                                value: t.state.addingRoleName
-                            }]), t.setState({
-                                isAddingRole: !1
-                            }))
+                            return o.__awaiter(t, void 0, void 0, function() {
+                                var e, t;
+                                return o.__generator(this, function(n) {
+                                    switch (n.label) {
+                                        case 0:
+                                            if (!this.validRoleName()) return [2];
+                                            this.setState({
+                                                isSaving: !0
+                                            }), e = "", n.label = 1;
+                                        case 1:
+                                            return n.trys.push([1, 3, , 4]), [4, this.props.createContentAttributes([{
+                                                key: p.a.Role,
+                                                name: p.b.Role,
+                                                value: this.state.addingRoleName
+                                            }])];
+                                        case 2:
+                                            return n.sent(), this.setState({
+                                                isAddingRole: !1
+                                            }), [3, 4];
+                                        case 3:
+                                            return t = n.sent(), i.k.error(t, "Error creating role"), e = Object(i.e)("There was a problem creating this role", "RolesTab"), [3, 4];
+                                        case 4:
+                                            return this.setState({
+                                                isSaving: !1,
+                                                errorMessage: e
+                                            }), [2]
+                                    }
+                                })
+                            })
                         }, t.updateRole = function(e) {
                             return o.__awaiter(t, void 0, void 0, function() {
                                 var t;
                                 return o.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return n.trys.push([0, 2, , 3]), [4, this.props.updateContentAttributes([e])];
+                                            return t = o.__assign({
+                                                ownerChannelID: this.props.channelID
+                                            }, e), [4, this.props.updateContentAttributes([t])];
                                         case 1:
-                                            return n.sent(), [3, 3];
+                                            return n.sent(), this.closeRoleModal(), [2]
+                                    }
+                                })
+                            })
+                        }, t.deleteRole = function(e) {
+                            return o.__awaiter(t, void 0, void 0, function() {
+                                var t, n;
+                                return o.__generator(this, function(a) {
+                                    switch (a.label) {
+                                        case 0:
+                                            return a.trys.push([0, 2, , 3]), [4, this.props.deleteContentAttributes([e.id])];
+                                        case 1:
+                                            return a.sent(), [3, 3];
                                         case 2:
-                                            return t = n.sent(), i.k.error(t, "Could not create role"), [3, 3];
+                                            return t = a.sent(), i.k.error(t, "Could not delete role"), n = Object(i.e)("There was a problem deleting this role", "RolesTab"), this.setState({
+                                                errorMessage: n
+                                            }), [3, 3];
                                         case 3:
-                                            return this.closeRoleModal(), [2]
+                                            return [2]
                                     }
                                 })
                             })
@@ -301,9 +458,9 @@
                     }, t.prototype.render = function() {
                         var e = this,
                             t = this.filteredRoleContentAttributes();
-                        return l.createElement(c.a, null, l.createElement(p.Eb, {
-                            display: p.X.Flex,
-                            justifyContent: p.Wa.Between,
+                        return r.createElement(c.a, null, r.createElement(m.Eb, {
+                            display: m.X.Flex,
+                            justifyContent: m.Wa.Between,
                             padding: {
                                 bottom: 1
                             },
@@ -311,78 +468,90 @@
                                 bottom: 1
                             },
                             borderBottom: !0
-                        }, l.createElement(p.W, {
-                            type: p.Vb.H4,
+                        }, r.createElement(m.W, {
+                            type: m.Vb.H4,
                             bold: !0
-                        }, Object(i.e)("Roles", "RolesTab")), l.createElement(p.Xa, null, l.createElement(p.z, {
-                            icon: p.tb.Plus,
-                            type: p.F.Hollow,
+                        }, Object(i.e)("Roles", "RolesTab")), r.createElement(m.Xa, null, r.createElement(m.z, {
+                            "data-test-selector": f.AddButton,
+                            icon: m.tb.Plus,
+                            type: m.F.Hollow,
                             onClick: this.startAddingNewRole
-                        }, Object(i.e)("Add Role", "RolesTab")))), !t.length && l.createElement(p.W, {
-                            "data-test-selector": b.EmptyList,
+                        }, Object(i.e)("Add Role", "RolesTab")))), r.createElement(m.Xa, {
+                            margin: {
+                                y: 1
+                            }
+                        }, this.state.errorMessage && r.createElement(m.Da, {
+                            errorMessage: this.state.errorMessage
+                        })), !t.length && r.createElement(m.W, {
+                            "data-test-selector": f.EmptyList,
                             italic: !0
-                        }, Object(i.e)("No Roles", "RolesTab")), this.state.isAddingRole && l.createElement(p.Eb, {
-                            background: p.r.Base,
+                        }, Object(i.e)("No Roles", "RolesTab")), this.state.isAddingRole && r.createElement(m.Eb, {
+                            "data-test-selector": f.AddRow,
+                            background: m.r.Base,
                             elevation: 1,
-                            alignItems: p.f.Center,
-                            justifyContent: p.Wa.Between,
-                            display: p.X.Flex,
-                            flexDirection: p.Aa.Row,
+                            alignItems: m.f.Center,
+                            justifyContent: m.Wa.Between,
+                            display: m.X.Flex,
+                            flexDirection: m.Aa.Row,
                             margin: {
                                 bottom: 1
                             }
-                        }, l.createElement(p.Xa, {
-                            flexDirection: p.Aa.Column,
+                        }, r.createElement(m.Xa, {
+                            flexDirection: m.Aa.Column,
                             padding: 2,
                             flexGrow: 1
-                        }, l.createElement(p.Ra, {
+                        }, r.createElement(m.Ra, {
                             autoFocus: !0,
                             placeholder: Object(i.e)("Add Role Name", "RolesTab"),
                             onChange: this.onRoleNameChange,
-                            type: p.Ta.Text,
+                            type: m.Ta.Text,
                             value: this.state.addingRoleName
-                        })), l.createElement(p.z, {
-                            type: p.F.Hollow,
+                        })), r.createElement(m.z, {
+                            type: m.F.Hollow,
                             onClick: this.cancelAddingRole
-                        }, Object(i.e)("Cancel", "RolesTab")), l.createElement(p.Xa, {
+                        }, Object(i.e)("Cancel", "RolesTab")), r.createElement(m.Xa, {
                             margin: {
                                 x: 1
                             },
-                            display: p.X.InlineBlock
-                        }, l.createElement(p.z, {
-                            disabled: !this.validRoleName(),
+                            display: m.X.InlineBlock
+                        }, r.createElement(m.z, {
+                            disabled: !this.validRoleName() || this.state.isSaving,
                             onClick: this.createRole
                         }, Object(i.e)("Save", "RolesTab")))), t.map(function(t, n) {
-                            return l.createElement(p.Eb, {
-                                background: p.r.Base,
+                            return r.createElement(m.Eb, {
+                                background: m.r.Base,
                                 elevation: 1,
-                                alignItems: p.f.Center,
-                                justifyContent: p.Wa.Between,
-                                display: p.X.Flex,
-                                flexDirection: p.Aa.Row,
+                                alignItems: m.f.Center,
+                                justifyContent: m.Wa.Between,
+                                display: m.X.Flex,
+                                flexDirection: m.Aa.Row,
                                 margin: {
                                     bottom: 1
                                 },
                                 key: n
-                            }, l.createElement(p.Xa, {
-                                flexDirection: p.Aa.Column,
+                            }, r.createElement(m.Xa, {
+                                flexDirection: m.Aa.Column,
                                 padding: 2,
                                 flexGrow: 1
-                            }, l.createElement(p.W, {
-                                fontSize: p.Ca.Size4
-                            }, t.value)), l.createElement(R.a, {
-                                onEdit: e.editRole.bind(e, t)
+                            }, r.createElement(m.W, {
+                                fontSize: m.Ca.Size4
+                            }, t.value)), r.createElement(g.a, {
+                                onEdit: e.editRole.bind(e, t),
+                                onDelete: e.deleteRole.bind(e, t),
+                                deleteModalMessage: Object(i.e)("Are you sure you want to delete role: {value}?", {
+                                    value: t.value
+                                }, "RolesTab")
                             }))
                         }), this.renderEditRoleModal())
                     }, t
-                }(l.Component),
-                g = Object(r.compose)(Object(s.b)("RolesTab"))(E);
+                }(r.Component),
+                v = Object(l.compose)(Object(s.b)("RolesTab"))(h);
             n.d(t, "TestSelectors", function() {
-                return b
+                return f
             }), n.d(t, "RolesTabComponent", function() {
-                return E
+                return h
             }), n.d(t, "RolesTab", function() {
-                return g
+                return v
             })
         },
         xefp: function(e, t, n) {}

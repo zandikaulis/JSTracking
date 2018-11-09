@@ -383,7 +383,7 @@
                     variables: {
                         id: e.channelID
                     },
-                    topic: Object(d.w)(e.channelID),
+                    topic: Object(d.x)(e.channelID),
                     type: u.PubsubMessageType.UpdatedChannelChatProperty,
                     mutator: function(e, n) {
                         return n.channel.settings.isRitualsEnabled = e.data.is_rituals_enabled, n

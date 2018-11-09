@@ -87,9 +87,55 @@
                 return t
             }
         },
+        "1OTy": function(e, t, n) {
+            "use strict";
+            var r = n("mrSG"),
+                a = n("q1tI"),
+                i = n("/MKj"),
+                s = n("fvjX"),
+                o = n("/0dD"),
+                c = n("XDQu"),
+                l = n("Ue10"),
+                d = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return r.__extends(t, e), t.prototype.render = function() {
+                        return a.createElement(l.La, {
+                            label: this.props.label,
+                            type: this.props.type,
+                            src: this.props.src,
+                            alt: this.props.alt,
+                            srcSet: this.srcSet,
+                            value: this.props.value,
+                            onChange: this.props.onChange,
+                            checked: this.props.checked
+                        })
+                    }, Object.defineProperty(t.prototype, "srcSet", {
+                        get: function() {
+                            return this.props.darkModeEnabled && this.props.darkSrcSet || this.props.srcSet
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(a.Component);
+            var u = Object(s.compose)(Object(i.connect)(function(e) {
+                return {
+                    darkModeEnabled: Object(c.a)(e) === o.a.Dark
+                }
+            }))(d);
+            n.d(t, !1, function() {
+                return d
+            }), n.d(t, "a", function() {
+                return u
+            })
+        },
         "1nFn": function(e, t, n) {},
         "2DIU": function(e, t, n) {
             e.exports = n.p + "assets/amazon_pay_1x-4f76ba5fbbaca5a76d41.png"
+        },
+        "2ORI": function(e, t, n) {
+            e.exports = n.p + "assets/amazon_pay_dark_2x-302cb9125ccffd2d356d.png"
         },
         "2xEe": function(e, t, n) {
             e.exports = n.p + "assets/paypal_dark_1x-29d0a02f9cc67088594b.png"
@@ -116,16 +162,16 @@
                 E = n.n(v),
                 k = n("bOWA"),
                 P = n.n(k),
-                w = n("KL9a"),
-                C = n.n(w),
+                C = n("KL9a"),
+                w = n.n(C),
                 T = n("iSjI"),
                 j = n.n(T),
                 _ = n("bQeB"),
                 S = n.n(_),
-                O = n("HvcU"),
-                D = n.n(O),
-                x = n("GA+j"),
-                M = n.n(x),
+                x = n("HvcU"),
+                O = n.n(x),
+                D = n("GA+j"),
+                M = n.n(D),
                 F = n("FBRg"),
                 A = n.n(F),
                 N = n("2xEe"),
@@ -133,10 +179,10 @@
                 R = n("q8H6"),
                 X = n.n(R),
                 U = n("oQBz"),
-                B = n.n(U),
-                z = n("PwAB"),
-                W = n.n(z),
-                L = n("/0dD"),
+                z = n.n(U),
+                B = n("PwAB"),
+                L = n.n(B),
+                W = n("/0dD"),
                 H = n("DMoW"),
                 V = n("XDQu"),
                 G = n("Ue10"),
@@ -168,10 +214,10 @@
                             switch (this.props.paymentProvider) {
                                 case "xsolla_v3":
                                     return {
-                                        src: W.a,
+                                        src: L.a,
                                         srcSet: {
-                                            "1x": B.a,
-                                            "2x": W.a
+                                            "1x": z.a,
+                                            "2x": L.a
                                         },
                                         alt: Object(s.d)("Xsolla icon", "PaymentMethodImage")
                                     };
@@ -198,7 +244,7 @@
                                             };
                                         case H.E.MASTERCARD:
                                             return {
-                                                src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? C.a : P.a,
+                                                src: this.props.darkModeEnabled ? w.a : P.a,
                                                 alt: Object(s.d)("Mastercard", "PaymentMethodImage")
                                             };
                                         case H.E.VISA:
@@ -211,15 +257,15 @@
                                                 src: S.a,
                                                 srcSet: {
                                                     "1x": S.a,
-                                                    "2x": D.a
+                                                    "2x": O.a
                                                 },
                                                 alt: e
                                             }
                                     }
                                 case H.F.AMAZON:
                                     return {
-                                        src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? p.a : c.a,
-                                        srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
+                                        src: this.props.darkModeEnabled ? p.a : c.a,
+                                        srcSet: this.props.darkModeEnabled ? {
                                             "1x": p.a,
                                             "2x": h.a
                                         } : {
@@ -230,8 +276,8 @@
                                     };
                                 case H.F.PAYPAL:
                                     return {
-                                        src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? I.a : M.a,
-                                        srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
+                                        src: this.props.darkModeEnabled ? I.a : M.a,
+                                        srcSet: this.props.darkModeEnabled ? {
                                             "1x": I.a,
                                             "2x": X.a
                                         } : {
@@ -245,7 +291,7 @@
                                         src: S.a,
                                         srcSet: {
                                             "1x": S.a,
-                                            "2x": D.a
+                                            "2x": O.a
                                         },
                                         alt: e
                                     }
@@ -257,7 +303,7 @@
                 }(a.Component));
             var q = Object(i.connect)(function(e) {
                 return {
-                    darkModeEnabled: Object(V.a)(e) === L.a.Dark
+                    darkModeEnabled: Object(V.a)(e) === W.a.Dark
                 }
             })(Y);
             n.d(t, !1, function() {
@@ -319,9 +365,15 @@
             })
         },
         "88jh": function(e, t, n) {},
+        AVF4: function(e, t, n) {
+            e.exports = n.p + "assets/credit_cards_1x-0c57bd2e9d4cd4bb8474.png"
+        },
+        BIez: function(e, t, n) {
+            e.exports = n.p + "assets/credit_cards_2x-051201f07d7c83cdf807.png"
+        },
         "Bd+v": function(e, t, n) {},
-        D409: function(e, t, n) {
-            e.exports = n.p + "assets/credit_cards_1x-3ceef2323563b8454856.png"
+        D8NC: function(e, t, n) {
+            e.exports = n.p + "assets/amazon_pay_1x-94c97f413ee6005ab1a1.png"
         },
         FBRg: function(e, t, n) {
             e.exports = n.p + "assets/paypal_2x-bddabc156344e695fa56.png"
@@ -425,15 +477,18 @@
         HvcU: function(e, t, n) {
             e.exports = n.p + "assets/generic_credit_card_2x-9e855c7d5c5359ac9208.png"
         },
+        IRK4: function(e, t, n) {
+            e.exports = n.p + "assets/paypal_dark_1x-894b335a3c74ebaba75f.png"
+        },
         KL9a: function(e, t, n) {
             e.exports = n.p + "assets/mastercard_dark-a85ba185886a8899fef1.svg"
+        },
+        KRuc: function(e, t, n) {
+            e.exports = n.p + "assets/paypal_2x-36ebff55eec001d935d0.png"
         },
         KjOM: function(e, t, n) {},
         PwAB: function(e, t, n) {
             e.exports = n.p + "assets/xsolla_2x-b8ef30f34626976fddc4.png"
-        },
-        QyYb: function(e, t, n) {
-            e.exports = n.p + "assets/credit_cards_2x-ede753dedc96e44eff73.png"
         },
         RnhZ: function(e, t, n) {
             var r = {
@@ -720,8 +775,7 @@
                         }, i.createElement(c.a, {
                             paymentInstrumentType: this.props.paymentType,
                             cardType: this.props.cardType || void 0,
-                            paymentProvider: this.props.provider,
-                            ignoreDarkMode: this.props.ignoreDarkMode
+                            paymentProvider: this.props.provider
                         }), this.renderLastFour()), i.createElement(o.Xa, {
                             display: o.X.Flex,
                             justifyContent: o.Wa.Center,
@@ -837,6 +891,9 @@
             })
         },
         YHBx: function(e, t, n) {},
+        ZiR0: function(e, t, n) {
+            e.exports = n.p + "assets/paypal_1x-2a610ceedc14dc7f9673.png"
+        },
         a1OF: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -1125,6 +1182,12 @@
         bQeB: function(e, t, n) {
             e.exports = n.p + "assets/generic_credit_card_1x-a6b9cd93075728ab4114.png"
         },
+        bvmA: function(e, t, n) {
+            e.exports = n.p + "assets/paypal_dark_2x-5364f28c059af7303d67.png"
+        },
+        csmi: function(e, t, n) {
+            e.exports = n.p + "assets/amazon_pay_dark_1x-5810bf2a8f8185a1a905.png"
+        },
         cz4h: function(e, t, n) {
             "use strict";
             n.r(t);
@@ -1150,35 +1213,35 @@
             }(r || (r = {}));
             var k = p.k.withCategory("[payments]"),
                 P = n("Ue10"),
-                w = n("aCAx"),
-                C = n("b6Yk"),
+                C = n("aCAx"),
+                w = n("b6Yk"),
                 T = n("85n/");
-            var j = n("2DIU"),
+            var j = n("D8NC"),
                 _ = n.n(j),
-                S = n("TSpM"),
-                O = n.n(S),
-                D = n("vE+g"),
-                x = n.n(D),
-                M = n("/Z6v"),
+                S = n("yrda"),
+                x = n.n(S),
+                O = n("csmi"),
+                D = n.n(O),
+                M = n("2ORI"),
                 F = n.n(M),
-                A = n("D409"),
+                A = n("AVF4"),
                 N = n.n(A),
-                I = n("QyYb"),
+                I = n("BIez"),
                 R = n.n(I),
-                X = n("GA+j"),
+                X = n("ZiR0"),
                 U = n.n(X),
-                B = n("FBRg"),
-                z = n.n(B),
-                W = n("2xEe"),
-                L = n.n(W),
-                H = n("q8H6"),
+                z = n("KRuc"),
+                B = n.n(z),
+                L = n("IRK4"),
+                W = n.n(L),
+                H = n("bvmA"),
                 V = n.n(H),
-                G = n("x1M1"),
-                Y = n("sV2v"),
+                G = n("sV2v"),
+                Y = n("1OTy"),
                 q = n("/0dD"),
                 Z = n("XDQu"),
-                Q = n("6fcp"),
-                J = (n("1nFn"), {
+                J = n("6fcp"),
+                Q = (n("1nFn"), {
                     light: "#000",
                     dark: "#fff"
                 }),
@@ -1238,7 +1301,7 @@
                                 })
                             })
                         }, t.handleValidationError = function(e) {
-                            if (e.code === Q.a.Validation || e.code === Q.a.InvalidParameter) {
+                            if (e.code === J.a.Validation || e.code === J.a.InvalidParameter) {
                                 var n = $();
                                 e.fields && e.fields.forEach(function(e) {
                                     n[e] = !0
@@ -1411,7 +1474,7 @@
                                     style: {
                                         height: "auto",
                                         fontSize: "12px",
-                                        fontColor: this.props.darkModeEnabled ? J.dark : J.light,
+                                        fontColor: this.props.darkModeEnabled ? Q.dark : Q.light,
                                         placeholder: {
                                             color: this.props.darkModeEnabled ? K.dark : K.light
                                         }
@@ -1649,7 +1712,7 @@
                     }, t
                 }(d.Component);
             ! function(e) {
-                e.CreditCard = "credit-card", e.PayWithAmazon = "pay-with-amazon", e.PayPal = "paypal"
+                e.CreditCard = "credit-card", e.AmazonPay = "amazon-pay", e.PayPal = "paypal"
             }(te || (te = {}));
             var ie, se, oe = function(e) {
                     function t() {
@@ -1663,112 +1726,93 @@
                         }, t
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(P.Xa, {
+                        return d.createElement(d.Fragment, null, d.createElement(G.a, null), d.createElement(P.Pa, {
                             margin: {
-                                top: 2
+                                bottom: 1
                             }
-                        }, d.createElement(Y.a, null), d.createElement(P.Ea, {
-                            id: "payment-option",
-                            label: Object(p.d)("Payment Option", "RecurlyCardWrapper")
-                        }, d.createElement("div", {
-                            id: "payment-option"
+                        }, d.createElement(P.W, {
+                            type: P.Vb.H4,
+                            bold: !0
+                        }, Object(p.d)("Payment Option", "RecurlyCardWrapper"))), d.createElement(P.Ja, {
+                            gutterSize: P.Ka.Small
+                        }, d.createElement(P.P, {
+                            cols: {
+                                default: 6,
+                                sm: 3
+                            }
                         }, d.createElement(P.Xa, {
                             margin: {
-                                right: 2
-                            },
-                            display: P.X.Inline
-                        }, d.createElement(P.Pa, {
-                            margin: {
-                                right: .5
+                                bottom: .5
                             }
-                        }, d.createElement("input", {
-                            type: "radio",
-                            className: "payment-option__radio-button",
-                            id: te.CreditCard,
-                            name: "pay-option",
-                            value: te.CreditCard,
-                            onChange: this.handleOptionChange,
-                            checked: this.state.selectedOption === te.CreditCard
-                        })), d.createElement("label", {
-                            htmlFor: te.CreditCard
-                        }, d.createElement(P.S, {
+                        }, d.createElement(Y.a, {
+                            label: this.creditCardText,
+                            type: P.Ma.Radio,
                             src: N.a,
-                            alt: Object(p.d)("Credit Card", "RecurlyPaymentMethod"),
+                            alt: this.creditCardText,
                             srcSet: {
                                 "1x": N.a,
                                 "2x": R.a
-                            }
-                        }))), !this.disableAmazonPay && d.createElement(P.Xa, {
-                            margin: {
-                                right: 2
                             },
-                            display: P.X.Inline
-                        }, d.createElement(P.Pa, {
-                            margin: {
-                                right: .5
+                            value: te.CreditCard,
+                            checked: this.state.selectedOption === te.CreditCard,
+                            onChange: this.handleOptionChange
+                        }))), !this.disableAmazonPay && d.createElement(P.P, {
+                            cols: {
+                                default: 6,
+                                sm: 3
                             }
-                        }, d.createElement("input", {
-                            type: "radio",
-                            className: "payment-option__radio-button",
-                            id: te.PayWithAmazon,
-                            name: "pay-option",
-                            value: te.PayWithAmazon,
-                            onChange: this.handleOptionChange,
-                            checked: this.state.selectedOption === te.PayWithAmazon
-                        })), d.createElement("label", {
-                            htmlFor: te.PayWithAmazon
-                        }, d.createElement(G.a, {
-                            alt: Object(p.d)("Amazon Pay", "RecurlyPaymentMethod"),
-                            sources: {
-                                themed: !0,
-                                light: {
-                                    "1x": _.a,
-                                    "2x": O.a
-                                },
-                                dark: {
-                                    "1x": x.a,
-                                    "2x": F.a
-                                }
-                            }
-                        }))), !this.disablePayPal && d.createElement(P.Xa, {
+                        }, d.createElement(P.Xa, {
                             margin: {
-                                right: 2
+                                bottom: .5
+                            }
+                        }, d.createElement(Y.a, {
+                            label: this.amazonPayText,
+                            type: P.Ma.Radio,
+                            src: _.a,
+                            alt: this.amazonPayText,
+                            srcSet: {
+                                "1x": _.a,
+                                "2x": x.a
                             },
-                            display: P.X.Inline
-                        }, d.createElement(P.Pa, {
-                            margin: {
-                                right: .5
+                            darkSrcSet: {
+                                "1x": D.a,
+                                "2x": F.a
+                            },
+                            value: te.AmazonPay,
+                            checked: this.state.selectedOption === te.AmazonPay,
+                            onChange: this.handleOptionChange
+                        }))), !this.disablePayPal && d.createElement(P.P, {
+                            cols: {
+                                default: 6,
+                                sm: 3
                             }
-                        }, d.createElement("input", {
-                            type: "radio",
-                            className: "payment-option__radio-button",
-                            id: te.PayPal,
-                            name: "pay-option",
+                        }, d.createElement(P.Xa, {
+                            margin: {
+                                bottom: .5
+                            }
+                        }, d.createElement(Y.a, {
+                            label: this.payPalText,
+                            type: P.Ma.Radio,
+                            src: U.a,
+                            alt: this.payPalText,
+                            srcSet: {
+                                "1x": U.a,
+                                "2x": B.a
+                            },
+                            darkSrcSet: {
+                                "1x": W.a,
+                                "2x": V.a
+                            },
                             value: te.PayPal,
-                            onChange: this.handleOptionChange,
-                            checked: this.state.selectedOption === te.PayPal
-                        })), d.createElement("label", {
-                            htmlFor: te.PayPal
-                        }, d.createElement(G.a, {
-                            alt: Object(p.d)("PayPal", "RecurlyPaymentMethod"),
-                            sources: {
-                                themed: !0,
-                                light: {
-                                    "1x": U.a,
-                                    "2x": z.a
-                                },
-                                dark: {
-                                    "1x": L.a,
-                                    "2x": V.a
-                                }
-                            }
-                        }))), d.createElement(P.Xa, {
+                            checked: this.state.selectedOption === te.PayPal,
+                            onChange: this.handleOptionChange
+                        })))), d.createElement(P.Xa, {
                             display: this.state.selectedOption === te.CreditCard ? P.X.Block : P.X.Hide
                         }, d.createElement(ne, {
                             publicKey: this.props.config.publicKey,
                             updatePaymentMethod: this.props.updatePaymentMethod
                         })), d.createElement(P.Xa, {
-                            display: this.state.selectedOption === te.PayWithAmazon ? P.X.Block : P.X.Hide
+                            display: this.state.selectedOption === te.AmazonPay ? P.X.Block : P.X.Hide
                         }, d.createElement(re, {
                             clientID: this.props.config.payWithAmazonConfigs.clientID,
                             isProduction: this.props.config.payWithAmazonConfigs.isProduction,
@@ -1780,8 +1824,26 @@
                             publicKey: this.props.config.publicKey,
                             braintreeClientAuthorization: this.props.config.braintreeClientAuthorization,
                             updatePaymentMethod: this.props.updatePaymentMethod
-                        })))))
-                    }, Object.defineProperty(t.prototype, "disablePayPal", {
+                        })))
+                    }, Object.defineProperty(t.prototype, "creditCardText", {
+                        get: function() {
+                            return Object(p.d)("Credit Card", "RecurlyPaymentMethod")
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "amazonPayText", {
+                        get: function() {
+                            return Object(p.d)("Amazon Pay", "RecurlyPaymentMethod")
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "payPalText", {
+                        get: function() {
+                            return Object(p.d)("PayPal", "RecurlyPaymentMethod")
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "disablePayPal", {
                         get: function() {
                             return !this.props.config.braintreeClientAuthorization
                         },
@@ -2258,7 +2320,7 @@
                     configurable: !0
                 }), t
             }(d.Component);
-            var Pe, we, Ce = Object(a.connect)(function(e) {
+            var Pe, Ce, we = Object(a.connect)(function(e) {
                 return {
                     languageCode: Object(c.b)(e)
                 }
@@ -2268,7 +2330,7 @@
             }(Pe || (Pe = {})),
             function(e) {
                 e.NUM_SUBS_TEXT = "payment-method-card__num-subs-text", e.UPDATE_BUTTON = "payment-method-card__update-button", e.CLOSE_BUTTON = "payment-method-card__close-button"
-            }(we || (we = {}));
+            }(Ce || (Ce = {}));
             var Te = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2280,7 +2342,7 @@
                             return e.provider === E.G.RECURLY ? d.createElement(oe, {
                                 config: e,
                                 updatePaymentMethod: t.updatePaymentMethod
-                            }) : e.provider === E.G.ZUORA ? d.createElement(Ce, {
+                            }) : e.provider === E.G.ZUORA ? d.createElement(we, {
                                 config: e,
                                 updatePaymentMethod: t.updatePaymentMethod
                             }) : e.provider === E.G.XSOLLA_V3 ? d.createElement(ve, {
@@ -2297,13 +2359,13 @@
                                 e = d.createElement(P.z, {
                                     onClick: t.handleUpdateToggleButton,
                                     fullWidth: !0,
-                                    "data-test-selector": we.UPDATE_BUTTON
+                                    "data-test-selector": Ce.UPDATE_BUTTON
                                 }, r)
                             } else e = d.createElement(P.z, {
                                 onClick: t.handleUpdateToggleButton,
                                 fullWidth: !0,
                                 type: P.F.Text,
-                                "data-test-selector": we.CLOSE_BUTTON
+                                "data-test-selector": Ce.CLOSE_BUTTON
                             }, Object(p.d)("Cancel", "PaymentMethodCard"));
                             return [E.G.RECURLY, E.G.ZUORA].includes(t.props.paymentProviderConfig.provider) && (n = d.createElement(P.z, {
                                 onClick: t.handleDeleteButton,
@@ -2359,7 +2421,7 @@
                                                 gateway: n,
                                                 token: r,
                                                 billing_info_country: a
-                                            }, [4, C.a.put(t, {
+                                            }, [4, w.a.put(t, {
                                                 body: i
                                             }, {
                                                 version: 5
@@ -2457,7 +2519,7 @@
                             }
                         }(this.state.errorCode))), this.props.subscriptions && !!this.props.subscriptions.length && d.createElement(P.W, {
                             color: P.O.Alt2,
-                            "data-test-selector": we.NUM_SUBS_TEXT
+                            "data-test-selector": Ce.NUM_SUBS_TEXT
                         }, this.numOfSubscriptionsWillRenew)))), this.state.viewType === Pe.SubRows && d.createElement(he, {
                             subscriptions: this.props.subscriptions
                         }))
@@ -2474,8 +2536,8 @@
                 je = n("cZKs"),
                 _e = n("geRD"),
                 Se = n("TQGo"),
-                Oe = n("h7rm"),
-                De = (n("uCCD"), function(e) {
+                xe = n("h7rm"),
+                Oe = (n("uCCD"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2575,9 +2637,9 @@
                         configurable: !0
                     }), t
                 }(d.Component)),
-                xe = Object(u.compose)(Object(b.a)(Oe, {
+                De = Object(u.compose)(Object(b.a)(xe, {
                     name: "deleteDefaultPaymentMethod"
-                }))(De),
+                }))(Oe),
                 Me = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -2586,7 +2648,7 @@
                         return d.createElement(P.Eb, {
                             background: P.r.Base,
                             padding: 2
-                        }, d.createElement(xe, {
+                        }, d.createElement(De, {
                             subscriptions: this.props.subscriptions,
                             lastFour: this.props.lastFour,
                             expirationYear: this.props.expirationYear,
@@ -2605,14 +2667,14 @@
                 }(d.Component);
             var Fe = Object(a.connect)(null, function(e) {
                 return Object(i.bindActionCreators)({
-                    closeModal: w.c
+                    closeModal: C.c
                 }, e)
             })(Me);
             var Ae, Ne = Object(a.connect)(null, function(e) {
                     return Object(i.bindActionCreators)({
                         showDeletePaymentMethodModal: function(e) {
                             var t = l.__rest(e, []);
-                            return Object(w.d)(Fe, t)
+                            return Object(C.d)(Fe, t)
                         }
                     }, e)
                 })(Te),
@@ -2722,11 +2784,11 @@
                 }(d.Component),
                 Xe = Object(u.compose)(Object(b.a)(Ie), Object(g.b)("PaymentMethodsTab"))(Re),
                 Ue = n("HEnu"),
-                Be = function(e, t) {
+                ze = function(e, t) {
                     if (void 0 === e && (e = 1), void 0 === t && (t = 10), t < e) throw new Error("Invalid range");
                     return Array.from(Array(t + 1).keys()).slice(e)
                 },
-                ze = function(e) {
+                Be = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.handlePageJump = function(e) {
@@ -2748,25 +2810,25 @@
                             n = this.state.currentPage,
                             r = t - 3;
                         if (t <= 10) {
-                            var a = Be(1, Math.max(t, 1)).map(function(t) {
+                            var a = ze(1, Math.max(t, 1)).map(function(t) {
                                 return e.renderButton(t)
                             });
                             return this.renderWrapper(a)
                         }
-                        var i = Be(1, 2).map(function(t) {
+                        var i = ze(1, 2).map(function(t) {
                                 return e.renderButton(t)
                             }),
-                            s = Be(t - 1, t).map(function(t) {
+                            s = ze(t - 1, t).map(function(t) {
                                 return e.renderButton(t)
                             }),
-                            o = Be(n - 1, n + 1).map(function(t) {
+                            o = ze(n - 1, n + 1).map(function(t) {
                                 return e.renderButton(t)
                             }),
                             c = this.renderEllipsis("start"),
                             l = this.renderEllipsis("end");
-                        return n <= 4 ? (i = Be(1, Math.max(n + 1, 2)).map(function(t) {
+                        return n <= 4 ? (i = ze(1, Math.max(n + 1, 2)).map(function(t) {
                             return e.renderButton(t)
-                        }), this.renderWrapper(i.concat([c], s))) : n >= r ? (s = Be(n - 1, t).map(function(t) {
+                        }), this.renderWrapper(i.concat([c], s))) : n >= r ? (s = ze(n - 1, t).map(function(t) {
                             return e.renderButton(t)
                         }), this.renderWrapper(i.concat([c], s))) : this.renderWrapper(i.concat([c], o, [l], s))
                     }, t.prototype.renderWrapper = function(e) {
@@ -2814,12 +2876,12 @@
                         return Math.min(Math.max(e, 1), t)
                     }, t
                 }(d.Component),
-                We = n("5gJ6");
+                Le = n("5gJ6");
             n("mo/2");
             ! function(e) {
                 e.Tier1 = "1000", e.Tier2 = "2000", e.Tier3 = "3000"
             }(Ae || (Ae = {}));
-            var Le, He, Ve = function() {
+            var We, He, Ve = function() {
                     return Object(p.d)("Twitch Turbo", "TransactionHistoryTab")
                 },
                 Ge = function(e) {
@@ -2920,7 +2982,7 @@
                         return "-"
                     }(e.grossAmount, e.currency)))), d.createElement(P.Jb, {
                         verticalAlign: P.fc.Middle
-                    }, d.createElement(We.a, {
+                    }, d.createElement(Le.a, {
                         paymentProvider: e.paymentMethod.provider,
                         paymentInstrumentType: e.paymentMethod.paymentType,
                         cardType: e.paymentMethod.cardType || void 0
@@ -2929,13 +2991,13 @@
                 Ye = n("e3pt");
             ! function(e) {
                 e.PurchaseDateDesc = "PURCHASE_DATE_DESC", e.PurchaseDateAsc = "PURCHASE_DATE_ASC", e.PriceDesc = "PRICE_DESC", e.PriceAsc = "PRICE_ASC"
-            }(Le || (Le = {})),
+            }(We || (We = {})),
             function(e) {
                 e.All = "ALL", e.Subscriptions = "SUBSCRIPTIONS"
             }(He || (He = {}));
             var qe = 15,
                 Ze = "no-transactions-text-selector",
-                Qe = function(e) {
+                Je = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3037,7 +3099,7 @@
                                     switch (r.label) {
                                         case 0:
                                             return e = this.state.dateSortType, t = e === P.Bb.Default || e === P.Bb.Ascending ? P.Bb.Descending : P.Bb.Ascending, n = l.__assign({}, this.state.currentFilters, {
-                                                sortBy: t === P.Bb.Descending ? Le.PurchaseDateDesc : Le.PurchaseDateAsc
+                                                sortBy: t === P.Bb.Descending ? We.PurchaseDateDesc : We.PurchaseDateAsc
                                             }), [4, this.props.getFilteredQuery(n)];
                                         case 1:
                                             return r.sent(), this.setState({
@@ -3056,7 +3118,7 @@
                                     switch (r.label) {
                                         case 0:
                                             return e = this.state.costSortType, t = e === P.Bb.Default || e === P.Bb.Ascending ? P.Bb.Descending : P.Bb.Ascending, n = l.__assign({}, this.state.currentFilters, {
-                                                sortBy: t === P.Bb.Descending ? Le.PriceDesc : Le.PriceAsc
+                                                sortBy: t === P.Bb.Descending ? We.PriceDesc : We.PriceAsc
                                             }), [4, this.props.getFilteredQuery(n)];
                                         case 1:
                                             return r.sent(), this.setState({
@@ -3207,7 +3269,7 @@
                             "data-test-selector": "price-table-heading-selector"
                         }), d.createElement(P.Lb, {
                             label: Object(p.d)("Payment Method", "TransactionHistoryTab")
-                        })), d.createElement(P.Ib, null, e)), !e.length && this.renderNoTransactionsMessage()), d.createElement(ze, {
+                        })), d.createElement(P.Ib, null, e)), !e.length && this.renderNoTransactionsMessage()), d.createElement(Be, {
                             currentPage: this.getCurrentPage(),
                             totalNumberPages: this.getTotalPages(),
                             onNext: this.handleNextPage,
@@ -3227,7 +3289,7 @@
                         })
                     }, t
                 }(d.Component),
-                Je = Object(i.compose)(Object(a.connect)(function(e) {
+                Qe = Object(i.compose)(Object(a.connect)(function(e) {
                     var t = e.session;
                     return {
                         currentUserID: t.user && t.user.id || null
@@ -3240,7 +3302,7 @@
                                 after: "0",
                                 filters: {
                                     userID: e.currentUserID,
-                                    sortBy: Le.PurchaseDateDesc,
+                                    sortBy: We.PurchaseDateDesc,
                                     type: He.All
                                 }
                             }
@@ -3276,7 +3338,7 @@
                             }
                         })
                     }
-                }))(Qe),
+                }))(Je),
                 Ke = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -3320,7 +3382,7 @@
                             margin: {
                                 y: 2
                             }
-                        }, this.state.txnHistoryTabActive ? d.createElement(Je, null) : d.createElement(Xe, null))))) : (this.props.onAnonymousVisit(), d.createElement(m.a, {
+                        }, this.state.txnHistoryTabActive ? d.createElement(Qe, null) : d.createElement(Xe, null))))) : (this.props.onAnonymousVisit(), d.createElement(m.a, {
                             message: Object(p.d)("You must be logged in to view this page", "PaymentsLandingPagePresentationComponent")
                         }))
                     }, t
@@ -4647,6 +4709,9 @@
         },
         "vE+g": function(e, t, n) {
             e.exports = n.p + "assets/amazon_pay_dark_1x-27fb4921a874a8f4d84b.png"
+        },
+        yrda: function(e, t, n) {
+            e.exports = n.p + "assets/amazon_pay_2x-914335e3401a72109a8a.png"
         }
     }
 ]);

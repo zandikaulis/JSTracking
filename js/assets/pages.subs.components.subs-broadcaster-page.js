@@ -803,8 +803,8 @@
                         }
                     }, t
                 }(o.Component)),
-                W = Object(b.b)("SubsPlanTiers")(D),
-                B = function(e) {
+                B = Object(b.b)("SubsPlanTiers")(D),
+                W = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -836,7 +836,7 @@
                             breakpointMedium: {
                                 display: h.X.Flex
                             }
-                        }, o.createElement(W, {
+                        }, o.createElement(B, {
                             subbedPlatform: this.props.subbedPlatform,
                             subscriptionProducts: this.props.subscriptionProducts,
                             subTier: this.props.subTier,
@@ -875,7 +875,7 @@
                             s = null,
                             a = null;
                         i && i.subscriptionBenefit && (s = i.subscriptionBenefit.platform, a = i.subscriptionBenefit.tier);
-                        var u = o.createElement(B, {
+                        var u = o.createElement(W, {
                             subbedPlatform: s,
                             channelDisplayName: t.displayName || "",
                             channelId: t.id,
@@ -1570,7 +1570,7 @@
                                 checkoutButtonTier: t.props.tierPrice
                             })
                         }, t.openCheckout = function() {
-                            t.props.isMobileCheckout || o.n.set(a.b, t.props.productName)
+                            t.props.isMobileCheckout || o.n.set(a.c, t.props.productName)
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
@@ -2145,34 +2145,37 @@
         },
         UUve: function(e, t, n) {
             "use strict";
-            n.d(t, "b", function() {
+            n.d(t, "c", function() {
                 return s
-            }), n.d(t, "c", function() {
-                return o
-            }), n.d(t, "a", function() {
-                return a
             }), n.d(t, "d", function() {
-                return l
+                return o
+            }), n.d(t, "b", function() {
+                return a
+            }), n.d(t, "a", function() {
+                return c
             }), n.d(t, "e", function() {
                 return u
+            }), n.d(t, "f", function() {
+                return d
             });
             var i = n("/7QA"),
                 r = n("y5D0"),
                 s = "SUB_CHECKOUT__PRODUCT",
                 o = "SUB_CHECKOUT__RECIPIENT",
                 a = "SUB_CHECKOUT__MYSTERY_GIFT_COUNT",
-                c = [s, o, a];
+                c = "SUB_CHECKOUT__GIFTING_ANONYMOUSLY",
+                l = [s, o, a, c];
 
-            function l() {
-                c.forEach(function(e) {
+            function u() {
+                l.forEach(function(e) {
                     return i.n.remove(e)
                 })
             }
 
-            function u(e) {
+            function d(e) {
                 return function() {
                     return Object(r.e)(e, {
-                        onClose: l
+                        onClose: u
                     })
                 }
             }

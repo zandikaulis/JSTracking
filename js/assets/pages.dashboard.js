@@ -51,9 +51,9 @@
             }), n.d(t, "J", function() {
                 return D
             }), n.d(t, "E", function() {
-                return T
-            }), n.d(t, "K", function() {
                 return N
+            }), n.d(t, "K", function() {
+                return T
             }), n.d(t, "F", function() {
                 return w
             }), n.d(t, "O", function() {
@@ -67,9 +67,9 @@
             }), n.d(t, "I", function() {
                 return A
             }), n.d(t, "D", function() {
-                return x
-            }), n.d(t, "G", function() {
                 return F
+            }), n.d(t, "G", function() {
+                return x
             }), n.d(t, "B", function() {
                 return U
             }), n.d(t, "y", function() {
@@ -123,13 +123,13 @@
                 }
             }
 
-            function T() {
+            function N() {
                 return {
                     type: k
                 }
             }
 
-            function N() {
+            function T() {
                 return {
                     type: y
                 }
@@ -171,13 +171,13 @@
                 }
             }
 
-            function x() {
+            function F() {
                 return {
                     type: h
                 }
             }
 
-            function F() {
+            function x() {
                 return {
                     type: f
                 }
@@ -1770,16 +1770,16 @@
                 C = n("yR8l"),
                 O = n("eDVu"),
                 D = n("0Log"),
-                T = n("geRD"),
-                N = n("/aPz"),
+                N = n("geRD"),
+                T = n("/aPz"),
                 w = n("u5aL"),
                 j = n("8/mp"),
                 I = n("eJ65"),
                 M = n("yLwq"),
                 R = n("f00E"),
                 A = n("kz7j"),
-                x = n("GnwI"),
-                F = n("H/lO"),
+                F = n("GnwI"),
+                x = n("H/lO"),
                 U = n("NZDK"),
                 P = n("oe5X"),
                 L = n("0FG4"),
@@ -1889,7 +1889,7 @@
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.markAllWhispersAsRead = function() {
-                            var e = Object(T.a)({
+                            var e = Object(N.a)({
                                 markAllAsRead: !0
                             });
                             n.props.markAllWhispersAsRead && (Object(G.i)(), n.props.markAllWhispersAsRead(e)), n.props.onMarkAllMessagesRead && n.props.onMarkAllMessagesRead()
@@ -2241,7 +2241,7 @@
                             return i.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return e ? [4, this.searchClient.queryForType(F.a.Users, e, R.a())] : [2];
+                                        return e ? [4, this.searchClient.queryForType(x.a.Users, e, R.a())] : [2];
                                     case 1:
                                         return t = n.sent(), this.setState({
                                             searchResults: t,
@@ -2250,13 +2250,13 @@
                                 }
                             })
                         })
-                    }, t = i.__decorate([Object(x.b)("WhisperCenter", {
+                    }, t = i.__decorate([Object(F.b)("WhisperCenter", {
                         autoReportInteractive: !0
                     })], t)
                 }(_.Component)),
                 Z = n("MJbm"),
-                J = n("aCAx"),
-                $ = n("kRBY"),
+                $ = n("aCAx"),
+                J = n("kRBY"),
                 ee = n("/HY+"),
                 te = n("ZDlU"),
                 ne = n("x7UT"),
@@ -2320,7 +2320,7 @@
                 Ce = n("Gu45"),
                 Oe = n("dr/4"),
                 De = "whispers-report-user-button",
-                Te = function(e) {
+                Ne = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderReportButton = function() {
@@ -2342,7 +2342,7 @@
                             t.props.collapseThread && t.props.collapseThread()
                         }, t.toggleMutethread = function() {
                             var e = !t.props.isMuted,
-                                n = i.__assign({}, Object(T.a)({
+                                n = i.__assign({}, Object(N.a)({
                                     threadID: t.props.threadID,
                                     isMuted: !t.props.isMuted
                                 }), {
@@ -2364,7 +2364,7 @@
                                 return i.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
-                                            e = i.__assign({}, Object(T.a)({
+                                            e = i.__assign({}, Object(N.a)({
                                                 threadID: this.props.threadID,
                                                 removeWhitelist: !0
                                             })), t.label = 1;
@@ -2484,7 +2484,7 @@
                         configurable: !0
                     }), t
                 }(_.Component);
-            var Ne = Object(be.compose)(Object(k.connect)(null, function(e) {
+            var Te = Object(be.compose)(Object(k.connect)(null, function(e) {
                     return {
                         onCloseThread: function(t) {
                             return e(Object(s.h)(t, Object(S.a)()))
@@ -2494,14 +2494,14 @@
                     name: "revokeWhisperAccess"
                 }), Object(C.a)(Oe, {
                     name: "setMuteThread"
-                }), ye.a, Object(ke.a)())(Te),
+                }), ye.a, Object(ke.a)())(Ne),
                 we = n("pORx");
             var je = n("NKxy");
             var Ie, Me = n("vGFN"),
                 Re = (n("hRS0"), "report-as-spam-button"),
                 Ae = "mark-not-spam-button",
-                xe = "dismiss-prompt-button",
-                Fe = "spam-prompt-pending-target",
+                Fe = "dismiss-prompt-button",
+                xe = "spam-prompt-pending-target",
                 Ue = "spam-prompt-reported-target",
                 Pe = {
                     displayName: "???",
@@ -2516,7 +2516,7 @@
                         n.renderPotentialSpamPrompt = function() {
                             if (n.props.spamInfo && "low" !== n.props.spamInfo.likelihood && null === n.props.spamInfo.lastMarkedNotSpamAt) {
                                 if ("pending" === n.state.potentialSpamResolution) return _.createElement(B.Xa, {
-                                    "data-a-target": Fe,
+                                    "data-a-target": xe,
                                     className: "thread-header__potential-spam-prompt",
                                     attachRight: !0,
                                     attachLeft: !0,
@@ -2571,7 +2571,7 @@
                                     display: B.X.InlineBlock,
                                     margin: .5
                                 }, _.createElement(B.z, {
-                                    "data-a-target": xe,
+                                    "data-a-target": Fe,
                                     type: B.F.Text,
                                     onClick: n.dismissSpamPrompt,
                                     size: B.D.Small
@@ -2731,7 +2731,7 @@
                             direction: B.v.BottomRight,
                             offsetX: "0.5rem",
                             size: B.w.Small
-                        }, _.createElement(Ne, {
+                        }, _.createElement(Te, {
                             login: this.interlocutor.login,
                             displayName: this.interlocutor.displayName,
                             currentUser: this.props.currentUser,
@@ -3211,7 +3211,7 @@
                 var r = setTimeout(function() {
                     var t = i.__assign({
                         mutation: Xe
-                    }, Object(T.a)({
+                    }, Object(N.a)({
                         threadID: e.threadID,
                         lastReadMessageID: e.lastReadMessageID
                     }), {
@@ -3243,9 +3243,9 @@
                 return e.type === D.PubsubMessageType.WhisperReceived
             }
             n("28vT");
-            var Ze, Je, $e = n("Jpf8"),
+            var Ze, $e, Je = n("Jpf8"),
                 et = n("4VGW");
-            (Je || (Je = {})).Wrapper = "thread__wrapper";
+            ($e || ($e = {})).Wrapper = "thread__wrapper";
             var tt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -3393,7 +3393,7 @@
                             },
                             alignItems: B.f.Center,
                             justifyContent: B.Wa.Center,
-                            "data-test-selector": Je.Wrapper,
+                            "data-test-selector": $e.Wrapper,
                             "data-a-target": "whisper-thread-" + (this.interlocutor && this.interlocutor.login) + (this.props.collapsed ? "-collapsed" : ""),
                             elevation: 3
                         }, t, _.createElement(B.Xa, {
@@ -3513,7 +3513,7 @@
                         }
                     },
                     name: "activityData"
-                }), Object(C.a)($e, {
+                }), Object(C.a)(Je, {
                     options: function(e) {
                         return {
                             variables: {
@@ -3526,7 +3526,7 @@
                             loadMore: function() {
                                 var t = "";
                                 return e.data.whisperThread && e.data.whisperThread.messages.edges.length > 0 && (t = e.data.whisperThread.messages.edges[e.data.whisperThread.messages.edges.length - 1].cursor), e.data.fetchMore({
-                                    query: $e,
+                                    query: Je,
                                     variables: i.__assign({}, e.data.variables, {
                                         cursor: t
                                     }),
@@ -3541,7 +3541,7 @@
                                             currentUser: e.currentUser
                                         };
                                         var r = i.__assign({}, n.whisperThread.messages, {
-                                            edges: Object(T.c)(e.whisperThread.messages.edges, n.whisperThread.messages.edges)
+                                            edges: Object(N.c)(e.whisperThread.messages.edges, n.whisperThread.messages.edges)
                                         });
                                         return {
                                             whisperThread: i.__assign({}, n.whisperThread, {
@@ -3556,25 +3556,25 @@
                     }
                 }), Object(ne.a)([{
                     topic: function(e) {
-                        return Object(N.J)(e.currentUserID)
+                        return Object(T.K)(e.currentUserID)
                     },
                     mapMessageTypesToProps: (Ze = {}, Ze[D.PubsubMessageType.WhisperReceived] = "whisperReceived", Ze[D.PubsubMessageType.WhisperSent] = "whisperSent", Ze),
                     skipMessage: function(e, t) {
                         return !Ke(e) && !Ye(e) || e.data_object.thread_id !== t.threadID
                     }
-                }]), Object(ae.a)(), Object(x.b)("WhispersThread", {
+                }]), Object(ae.a)(), Object(F.b)("WhispersThread", {
                     autoReportInteractive: !0
                 }))(tt);
             var rt = Object(k.connect)(function(e) {
                     return {
-                        isLoggedIn: Object($.f)(e)
+                        isLoggedIn: Object(J.f)(e)
                     }
                 }, function(e) {
                     return Object(r.bindActionCreators)({
                         notifyWhisperThread: g,
                         showReportUserModal: function(e) {
                             var t = i.__rest(e, []);
-                            return Object(J.d)(ee.a, t)
+                            return Object($.d)(ee.a, t)
                         }
                     }, e)
                 })(nt),
@@ -3704,7 +3704,7 @@
                         var n = e.call(this, t) || this;
                         n.erroredLoadingMore = !1, n.logger = a.k.withCategory("whispers"), n.archiveThread = function(e) {
                             if (n.state.threadsByID[e]) {
-                                var t = i.__assign({}, Object(T.a)({
+                                var t = i.__assign({}, Object(N.a)({
                                     threadID: e,
                                     isArchived: !0
                                 }), {
@@ -3755,7 +3755,7 @@
                             })
                         }, n.handleThreadDataReport = function(e, t) {
                             var r;
-                            n.state.threadsByID[e] || Object(T.e)(pt, {
+                            n.state.threadsByID[e] || Object(N.e)(pt, {
                                 cursor: null
                             }, function(e) {
                                 return e.currentUser && e.currentUser.whisperThreads && e.currentUser.whisperThreads.edges.unshift({
@@ -3860,7 +3860,7 @@
                                             return n.currentUser ? e.currentUser && e.currentUser.whisperThreads ? n.currentUser.whisperThreads ? {
                                                 currentUser: i.__assign({}, n.currentUser, {
                                                     whisperThreads: i.__assign({}, n.currentUser.whisperThreads, {
-                                                        edges: Object(T.c)(e.currentUser.whisperThreads.edges, n.currentUser.whisperThreads.edges)
+                                                        edges: Object(N.c)(e.currentUser.whisperThreads.edges, n.currentUser.whisperThreads.edges)
                                                     })
                                                 })
                                             } : {
@@ -3885,7 +3885,7 @@
                             types: [D.PubsubMessageType.WhisperDeleted, D.PubsubMessageType.WhisperEdited, D.PubsubMessageType.WhisperSent, D.PubsubMessageType.WhisperAllThreadsUpdate, D.PubsubMessageType.WhisperReceived, D.PubsubMessageType.WhisperThreadUpdate],
                             variables: i.__assign({}, e.data.variables),
                             skip: !e.data.currentUser || void 0 === e.data.currentUser.id,
-                            topic: Object(N.J)(e.data.currentUser && e.data.currentUser.id || ""),
+                            topic: Object(T.K)(e.data.currentUser && e.data.currentUser.id || ""),
                             mutator: function(t, n) {
                                 if (!n.currentUser || !n.currentUser.whisperThreads) return n;
                                 if (Ke(t) || Ye(t)) {
@@ -5157,82 +5157,6 @@
                                             kind: "Field",
                                             name: {
                                                 kind: "Name",
-                                                value: "priceInfo"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "currency"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "exponent"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "total"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "description"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "price"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "isTaxInclusive"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "id"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "tax"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }]
-                                            }
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
                                                 value: "emoteSetID"
                                             },
                                             arguments: [],
@@ -5286,11 +5210,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 391
+                    end: 313
                 }
             };
             n.loc.source = {
-                body: "query EmotePicker_EmotePicker_UserSubscriptionProducts($channelOwnerID: ID!) {\nuser(id: $channelOwnerID) {\nid\nlogin\ncampaignProperties {\ndomains\n}\ndisplayName\nprofileImageURL(width: 28)\nsubscriptionProducts {\nid\nname\ntier\nurl\nemotes {\nid\ntoken\n}\nprice\npriceInfo {\ncurrency\nexponent\ntotal\ndescription\nprice\nisTaxInclusive\nid\ntax\n}\nemoteSetID\n}\nself {\nsubscriptionBenefit {\nid\nplatform\n}\n}\n}\n}",
+                body: "query EmotePicker_EmotePicker_UserSubscriptionProducts($channelOwnerID: ID!) {\nuser(id: $channelOwnerID) {\nid\nlogin\ncampaignProperties {\ndomains\n}\ndisplayName\nprofileImageURL(width: 28)\nsubscriptionProducts {\nid\nname\ntier\nurl\nemotes {\nid\ntoken\n}\nprice\nemoteSetID\n}\nself {\nsubscriptionBenefit {\nid\nplatform\n}\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -5320,7 +5244,7 @@
                                 checkoutButtonTier: t.props.tierPrice
                             })
                         }, t.openCheckout = function() {
-                            t.props.isMobileCheckout || o.n.set(s.b, t.props.productName)
+                            t.props.isMobileCheckout || o.n.set(s.c, t.props.productName)
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
@@ -7408,19 +7332,28 @@
         Mj6i: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return s
+                return l
             });
             var r = n("mrSG"),
-                a = n("yR8l"),
-                i = n("0FG4"),
-                o = n("S4w9");
+                a = n("/7QA"),
+                i = n("yR8l"),
+                o = n("0FG4"),
+                s = n("D7An"),
+                c = n("S4w9");
 
-            function s() {
-                return Object(a.a)(o, {
+            function l() {
+                return Object(i.a)(c, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                withOwner: "on" === a.p.experiments.getAssignment(s.b.EmotePickerV2)
+                            }
+                        }
+                    },
                     props: function(e) {
                         if (e.data) {
                             var t = e.data.currentUser && e.data.currentUser.emoteSets || [],
-                                n = t && Object(i.b)(t);
+                                n = t && Object(o.b)(t);
                             return {
                                 emoteSetsData: r.__assign({}, e.data, {
                                     currentUser: e.data.currentUser || null,
@@ -7885,54 +7818,6 @@
                                     },
                                     arguments: [],
                                     directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "emoteSets"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "emotes"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "id"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "token"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }]
-                                            }
-                                        }]
-                                    }
                                 }, {
                                     kind: "Field",
                                     name: {
@@ -8439,11 +8324,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 676
+                    end: 639
                 }
             };
             n.loc.source = {
-                body: "query Whispers_Whispers_UserWhisperThreads($cursor: Cursor) {\ncurrentUser {\nid\nlogin\nemoteSets {\nid\nemotes {\nid\ntoken\n}\n}\nwhisperThreads(first: 10 after: $cursor) {\nedges {\ncursor\nnode {\nid\nparticipants {\nid\nchatColor\ndisplayName\nprofileImageURL(width: 70)\nlogin\n__typename\n}\nspamInfo {\nlastMarkedNotSpamAt\nlikelihood\n__typename\n}\nmessages(first: 20) {\nedges {\ncursor\nnode {\nid\nnonce\nsentAt\neditedAt\ndeletedAt\nfrom {\nid\n__typename\n}\ncontent {\ncontent\nemotes {\nid\nemoteID\nsetID\nfrom\nto\n__typename\n}\n__typename\n}\n__typename\n}\n__typename\n}\n__typename\n}\nuserLastMessageRead {\nid\nsentAt\n__typename\n}\nisMuted\nisArchived\nunreadMessagesCount\n__typename\n}\n__typename\n}\n__typename\n}\n}\n}",
+                body: "query Whispers_Whispers_UserWhisperThreads($cursor: Cursor) {\ncurrentUser {\nid\nlogin\nwhisperThreads(first: 10 after: $cursor) {\nedges {\ncursor\nnode {\nid\nparticipants {\nid\nchatColor\ndisplayName\nprofileImageURL(width: 70)\nlogin\n__typename\n}\nspamInfo {\nlastMarkedNotSpamAt\nlikelihood\n__typename\n}\nmessages(first: 20) {\nedges {\ncursor\nnode {\nid\nnonce\nsentAt\neditedAt\ndeletedAt\nfrom {\nid\n__typename\n}\ncontent {\ncontent\nemotes {\nid\nemoteID\nsetID\nfrom\nto\n__typename\n}\n__typename\n}\n__typename\n}\n__typename\n}\n__typename\n}\nuserLastMessageRead {\nid\nsentAt\n__typename\n}\nisMuted\nisArchived\nunreadMessagesCount\n__typename\n}\n__typename\n}\n__typename\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -8940,7 +8825,26 @@
                         kind: "Name",
                         value: "UserEmotes"
                     },
-                    variableDefinitions: [],
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "withOwner"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "Boolean"
+                                }
+                            }
+                        }
+                    }],
                     directives: [],
                     selectionSet: {
                         kind: "SelectionSet",
@@ -9008,6 +8912,80 @@
                                                     directives: []
                                                 }]
                                             }
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "owner"
+                                            },
+                                            arguments: [],
+                                            directives: [{
+                                                kind: "Directive",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "include"
+                                                },
+                                                arguments: [{
+                                                    kind: "Argument",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "if"
+                                                    },
+                                                    value: {
+                                                        kind: "Variable",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "withOwner"
+                                                        }
+                                                    }
+                                                }]
+                                            }],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "id"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "login"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "displayName"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "profileImageURL"
+                                                    },
+                                                    arguments: [{
+                                                        kind: "Argument",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "width"
+                                                        },
+                                                        value: {
+                                                            kind: "IntValue",
+                                                            value: "28"
+                                                        }
+                                                    }],
+                                                    directives: []
+                                                }]
+                                            }
                                         }]
                                     }
                                 }]
@@ -9017,11 +8995,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 76
+                    end: 182
                 }
             };
             n.loc.source = {
-                body: "query UserEmotes {\ncurrentUser {\nid\nemoteSets {\nid\nemotes {\nid\ntoken\n}\n}\n}\n}",
+                body: "query UserEmotes ($withOwner: Boolean!) {\ncurrentUser {\nid\nemoteSets {\nid\nemotes {\nid\ntoken\n}\nowner @include(if: $withOwner) {\nid\nlogin\ndisplayName\nprofileImageURL(width: 28)\n}\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -9458,34 +9436,37 @@
         },
         UUve: function(e, t, n) {
             "use strict";
-            n.d(t, "b", function() {
+            n.d(t, "c", function() {
                 return i
-            }), n.d(t, "c", function() {
-                return o
-            }), n.d(t, "a", function() {
-                return s
             }), n.d(t, "d", function() {
-                return l
+                return o
+            }), n.d(t, "b", function() {
+                return s
+            }), n.d(t, "a", function() {
+                return c
             }), n.d(t, "e", function() {
                 return d
+            }), n.d(t, "f", function() {
+                return u
             });
             var r = n("/7QA"),
                 a = n("y5D0"),
                 i = "SUB_CHECKOUT__PRODUCT",
                 o = "SUB_CHECKOUT__RECIPIENT",
                 s = "SUB_CHECKOUT__MYSTERY_GIFT_COUNT",
-                c = [i, o, s];
+                c = "SUB_CHECKOUT__GIFTING_ANONYMOUSLY",
+                l = [i, o, s, c];
 
-            function l() {
-                c.forEach(function(e) {
+            function d() {
+                l.forEach(function(e) {
                     return r.n.remove(e)
                 })
             }
 
-            function d(e) {
+            function u(e) {
                 return function() {
                     return Object(a.e)(e, {
-                        onClose: l
+                        onClose: d
                     })
                 }
             }
@@ -10008,6 +9989,362 @@
             };
             e.exports = n
         },
+        XQnt: function(e, t) {
+            var n = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "EmotePicker_SubUpsell_PriceInfo"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "channelID"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "ID"
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "user"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "channelID"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "subscriptionProducts"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "id"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "displayName"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "name"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "tier"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "url"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "emotes"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "id"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "token"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }]
+                                            }
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "price"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "priceInfo"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "currency"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "exponent"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "total"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "description"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "price"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "isTaxInclusive"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "id"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "tax"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }]
+                                            }
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "emoteSetID"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "self"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "promotion"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "newPrice"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "oldPrice"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "discountType"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "discountValue"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }]
+                                                    }
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "paidUpgradePromotion"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "newPrice"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "oldPrice"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "discountType"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "discountValue"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }]
+                                                    }
+                                                }]
+                                            }
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 393
+                }
+            };
+            n.loc.source = {
+                body: "query EmotePicker_SubUpsell_PriceInfo($channelID: ID!) {\nuser(id: $channelID) {\nid\nsubscriptionProducts {\nid\ndisplayName\nname\ntier\nurl\nemotes {\nid\ntoken\n}\nprice\npriceInfo {\ncurrency\nexponent\ntotal\ndescription\nprice\nisTaxInclusive\nid\ntax\n}\nemoteSetID\nself {\npromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\npaidUpgradePromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\n}\n}\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = n
+        },
         ZtEv: function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
@@ -10109,6 +10446,26 @@
 
             function f(e, t) {
                 return "https://static-cdn.jtvnw.net/emoticons/v1/" + e + "/" + Math.min(Math.ceil(t), 3) + ".0"
+            }
+        },
+        a5fV: function(e, t, n) {
+            "use strict";
+            n.d(t, "b", function() {
+                return a
+            }), n.d(t, "a", function() {
+                return i
+            });
+            var r = n("/7QA");
+
+            function a(e, t) {
+                return e / Math.pow(10, t)
+            }
+
+            function i(e, t) {
+                return Object(r.f)(e, {
+                    style: "currency",
+                    currency: t
+                })
             }
         },
         "b+ID": function(e, t, n) {
@@ -11081,7 +11438,7 @@
                 D = {
                     isTimedOut: !1
                 },
-                T = function(e) {
+                N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = D, t.timeoutID = null, t
@@ -11121,7 +11478,7 @@
                         })
                     }, t
                 }(r.Component),
-                N = Object(v.a)(O, {
+                T = Object(v.a)(O, {
                     options: function(e) {
                         return {
                             variables: {
@@ -11131,7 +11488,7 @@
                             fetchPolicy: e.forceNetworkRequest ? "cache-first" : "cache-only"
                         }
                     }
-                })(T),
+                })(N),
                 w = n("gTu3"),
                 j = (n("lpj/"), (u = {})[w.a.Default] = "", u[w.a.Recipient] = "mention-fragment--recipient", u[w.a.Sender] = "mention-fragment--sender", u),
                 I = function(e) {
@@ -11172,7 +11529,7 @@
                         })
                     }, t
                 }(r.Component),
-                x = Object(v.a)(R, {
+                F = Object(v.a)(R, {
                     options: function(e) {
                         return {
                             variables: {
@@ -11183,7 +11540,7 @@
                         }
                     }
                 })(A),
-                F = n("ZtEv");
+                x = n("ZtEv");
 
             function U(e, t, n) {
                 void 0 === n && (n = !1);
@@ -11244,13 +11601,13 @@
                             case h.a.ClipLink:
                                 n || (n = r.createElement(i.a, {
                                     key: s
-                                }, r.createElement(N, {
+                                }, r.createElement(T, {
                                     slug: o.content.slug,
                                     forceNetworkRequest: t.forceClipsNetworkRequest
                                 }))), c.push(U(s, o, t.disableLinks));
                                 break;
                             case h.a.VideoLink:
-                                n || (n = r.createElement(x, {
+                                n || (n = r.createElement(F, {
                                     key: s,
                                     id: o.content.id,
                                     url: o.content.url
@@ -11262,7 +11619,7 @@
             }
 
             function L(e) {
-                if (e.moderationType === F.e.Delete) {
+                if (e.moderationType === x.e.Delete) {
                     var t = e,
                         n = t.userLogin,
                         i = t.body;
@@ -11271,7 +11628,7 @@
                         messageBody: i
                     })
                 }
-                if ((e = e).moderationType === F.e.Ban) return e.reason ? r.createElement("span", {
+                if ((e = e).moderationType === x.e.Ban) return e.reason ? r.createElement("span", {
                     className: "chat-line__moderation--ban-with-reason"
                 }, Object(a.d)("{userLogin} has been banned. Reason: {reason}", {
                     userLogin: e.userLogin,
@@ -12166,7 +12523,7 @@
                         value: "repeat messages"
                     }
                 },
-                T = function(e) {
+                N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onChange = function(e) {
@@ -12265,7 +12622,7 @@
                         })), n
                     }, t
                 }(o.Component),
-                N = n("RQ6e");
+                T = n("RQ6e");
             ! function(e) {
                 e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
             }(C || (C = {}));
@@ -12331,7 +12688,7 @@
                     type: C.Info,
                     value: "end card"
                 },
-                x = {
+                F = {
                     socialMedia: i.__assign({}, A, {
                         items: [D.endBlurb_socialmedia]
                     }),
@@ -12366,7 +12723,7 @@
                         type: C.Info
                     }
                 },
-                F = {
+                x = {
                     getTitle: R.report,
                     getLabel: function() {
                         return Object(l.d)("Where is the problem?", "ReportModalWizard")
@@ -12459,7 +12816,7 @@
                     }),
                     socialMedia: i.__assign({}, V, {
                         items: [D.input_link, D.input_connection, D.input_description],
-                        nextCard: x.socialMedia,
+                        nextCard: F.socialMedia,
                         value: "social media tell us more"
                     })
                 },
@@ -12575,10 +12932,10 @@
                     type: C.MultipleChoice,
                     value: "impersonation type"
                 },
-                Y = F,
+                Y = x,
                 Z = V,
-                J = A,
-                $ = {
+                $ = A,
+                J = {
                     video: U.identifyUser,
                     whisper: L,
                     chat: P.content,
@@ -12595,7 +12952,7 @@
                     "community member": P.content,
                     "on twitch": W.content,
                     "another site": X.externalSite,
-                    "twitch event": x.twitchEvent,
+                    "twitch event": F.twitchEvent,
                     "brigading/raids": z.socialMedia,
                     threatening: X.external_violence,
                     "hateful/harassing": X.external_abusive,
@@ -12611,13 +12968,13 @@
                     "committing violence": G.violence,
                     abusive: G.content,
                     "inappropriate content": q,
-                    "intellectual property": x.legal,
-                    "violating developer agreement": x.legal
+                    "intellectual property": F.legal,
+                    "violating developer agreement": F.legal
                 },
                 ee = {
-                    selfharm: x.selfharm,
-                    harm: x.violence,
-                    other: J
+                    selfharm: F.selfharm,
+                    harm: F.violence,
+                    other: $
                 },
                 te = {
                     CHANNEL_FEED_POST_REPORT: W.content,
@@ -12710,7 +13067,7 @@
                                     i = t.state.currentSelection.differentTarget || t.state.targetUnknown,
                                     o = t.state.currentSelection.reportContext || t.state.reportContext,
                                     s = e.nextCard || Z;
-                                $[t.state.currentSelection.value] && (s = $[t.state.currentSelection.value]);
+                                J[t.state.currentSelection.value] && (s = J[t.state.currentSelection.value]);
                                 var c = t.state.currentSelection.reportReason || t.state.reportReason,
                                     l = s.type === C.Info;
                                 t.setState({
@@ -12750,13 +13107,13 @@
                                             return e = Object(l.d)("Additional information is required.", "ReportModalWizard"), this.requiredInputsNonEmpty() ? (t = this.state.reportReason || "other", n = this.createReportDescription(), [4, this.props.onSubmit(t, n, this.state.reportContext)]) : [3, 2];
                                         case 1:
                                             switch (i.sent(), this.props.submitStatus) {
-                                                case N.a.FormError:
+                                                case T.a.FormError:
                                                     this.setState({
                                                         error: e
                                                     });
                                                     break;
-                                                case N.a.Success:
-                                                    r = J, ee[t] && (r = ee[t]), this.state.currentCard.nextCard && (r = this.state.currentCard.nextCard), this.setState({
+                                                case T.a.Success:
+                                                    r = $, ee[t] && (r = ee[t]), this.state.currentCard.nextCard && (r = this.state.currentCard.nextCard), this.setState({
                                                         currentCard: r,
                                                         prevCards: [],
                                                         prevSelections: [],
@@ -12768,12 +13125,12 @@
                                                         return a.trackNavigation(j.Submit)
                                                     });
                                                     break;
-                                                case N.a.UserError:
+                                                case T.a.UserError:
                                                     this.setState({
                                                         error: Object(l.d)("This account could not be reported. It may have already been suspended, or the owner may have deleted it.", "ReportModalWizard")
                                                     });
                                                     break;
-                                                case N.a.MutationError:
+                                                case T.a.MutationError:
                                                 default:
                                                     this.setState({
                                                         error: Object(l.d)("Sorry, a network error occurred when submitting your report. Please try again later.", "ReportModalWizard")
@@ -12781,7 +13138,7 @@
                                             }
                                             return [3, 3];
                                         case 2:
-                                            this.props.onError(N.a.FormError), this.setState({
+                                            this.props.onError(T.a.FormError), this.setState({
                                                 error: e
                                             }), i.label = 3;
                                         case 3:
@@ -12866,7 +13223,7 @@
                             margin: {
                                 y: 1
                             }
-                        }, o.createElement(T, {
+                        }, o.createElement(N, {
                             currentCard: this.state.currentCard,
                             currentSelection: this.state.currentSelection,
                             targetUser: this.props.targetUser,
@@ -12874,7 +13231,7 @@
                             onChangeRadio: this.handleSelection,
                             onChangeText: this.handleTextInput,
                             userTextInputs: this.state.userTextInput,
-                            error: this.props.submitStatus === N.a.FormError && !!this.state.error
+                            error: this.props.submitStatus === T.a.FormError && !!this.state.error
                         }), e), this.renderButtons())
                     }, t
                 }(o.Component),
@@ -12913,20 +13270,20 @@
                                                 extra: this.props.reportContext.extra,
                                                 targetID: this.props.data.targetUser.id
                                             }).targetID) return this.setState({
-                                            submitStatus: N.a.UserError
+                                            submitStatus: T.a.UserError
                                         }), [2];
                                         i.label = 1;
                                     case 1:
                                         return i.trys.push([1, 3, , 4]), [4, this.props.reportUser(Object(p.a)(o))];
                                     case 2:
                                         return i.sent(), this.setState({
-                                            submitStatus: N.a.Success
+                                            submitStatus: T.a.Success
                                         }, function() {
                                             c.state.showWizard || c.trackAction(w.Submit)
                                         }), [3, 4];
                                     case 3:
                                         return s = i.sent(), l.k.error(s, "ReportUser Mutation failed."), this.setState({
-                                            submitStatus: N.a.MutationError
+                                            submitStatus: T.a.MutationError
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -12963,7 +13320,7 @@
                         l.p.tracking.track(v.SpadeEventType.ReportWizardFlowAction, {
                             ui_context: n.props.reportContext.contentType,
                             target_user_id: n.props.reportContext.targetUserID,
-                            report_sent: n.state.submitStatus === N.a.Success,
+                            report_sent: n.state.submitStatus === T.a.Success,
                             modal_type: "wizard_v1",
                             extra_user_id: n.props.reportContext.additionalTrackingID,
                             action: e,
@@ -12976,7 +13333,7 @@
                         l.p.tracking.track(v.SpadeEventType.ReportFlowAction, {
                             ui_context: n.props.reportContext.contentType,
                             target_user_id: n.props.reportContext.targetUserID,
-                            report_sent: n.state.submitStatus === N.a.Success,
+                            report_sent: n.state.submitStatus === T.a.Success,
                             extra_user_id: n.props.reportContext.additionalTrackingID,
                             action: e,
                             report_session_id: n.reportID
@@ -12984,7 +13341,7 @@
                     }, n.reportID = Object(h.a)();
                     var r = l.p.experiments.getAssignment(f.b.NewReportingWizard);
                     return n.state = {
-                        submitStatus: N.a.Unsubmitted,
+                        submitStatus: T.a.Unsubmitted,
                         showWizard: "yes" === r,
                         openEventSent: !1,
                         closeEventSent: !1,
@@ -13024,7 +13381,7 @@
                             trackAction: this.trackWizardAction,
                             trackClose: this.trackClose,
                             userBlocked: this.userBlocked
-                        })) : o.createElement(N.b, i.__assign({}, e, {
+                        })) : o.createElement(T.b, i.__assign({}, e, {
                             targetUser: this.props.data.targetUser
                         }))
                     }
@@ -14517,18 +14874,18 @@
                 C = n("gq0V"),
                 O = n("m9vr"),
                 D = n("6D3P"),
-                T = n("9C/b"),
-                N = n("DMoW"),
+                N = n("9C/b"),
+                T = n("DMoW"),
                 w = n("idPT"),
                 j = n("n/0j"),
                 I = n("O3/n"),
                 M = n("Pp1Y"),
                 R = n("OTJN"),
                 A = n("7Lz0"),
-                x = {
+                F = {
                     "data-test-selector": "bounties-nav-link"
                 },
-                F = {
+                x = {
                     "data-test-selector": "bounties-nav-hotspot"
                 },
                 U = function(e) {
@@ -14539,7 +14896,7 @@
                         var e = this.props.channelLogin;
                         return a.createElement(M.a, r.__assign({
                             linkTo: "/" + e + "/dashboard/bounties"
-                        }, x), Object(v.d)("Bounty Board", "BountyBoardSideNavLink"), this.isNotificationVisible && a.createElement(R.a, r.__assign({}, F)))
+                        }, F), Object(v.d)("Bounty Board", "BountyBoardSideNavLink"), this.isNotificationVisible && a.createElement(R.a, r.__assign({}, x)))
                     }, t.prototype.componentDidUpdate = function(e) {
                         this.isBountiesPage(e.location.pathname) && !this.isBountiesPage() && this.props.data.refetch()
                     }, Object.defineProperty(t.prototype, "isNotificationVisible", {
@@ -14554,7 +14911,7 @@
                         return void 0 === e && (e = this.props.location.pathname), !!e.match(/^(\/.*){2}\/bounties\/?$/i)
                     }, t
                 }(a.Component),
-                P = Object(s.compose)(T.a, Object(c.a)(A, {
+                P = Object(s.compose)(N.a, Object(c.a)(A, {
                     options: function(e) {
                         return {
                             notifyOnNetworkStatusChange: !0,
@@ -14649,10 +15006,10 @@
                 Z = {
                     "data-test-selector": "moderation-link-selector"
                 },
-                J = {
+                $ = {
                     "data-test-selector": "moderation-settings-link-selector"
                 },
-                $ = {
+                J = {
                     "data-test-selector": "permissions-link-selector"
                 },
                 ee = function(e) {
@@ -14669,13 +15026,13 @@
                             linkTo: "/" + this.props.channelLogin + "/dashboard/roles"
                         }, Object(v.d)("Roles", "SettingsDashboardNav"))) : a.createElement("li", null, a.createElement(M.a, r.__assign({
                             linkTo: "/" + this.props.channelLogin + "/dashboard/permissions"
-                        }, $), Object(v.d)("Permissions", "DashboardNav")))), this.canSeeAutoModSettings && a.createElement("li", null, a.createElement(M.a, r.__assign({
+                        }, J), Object(v.d)("Permissions", "DashboardNav")))), this.canSeeAutoModSettings && a.createElement("li", null, a.createElement(M.a, r.__assign({
                             linkTo: "/" + this.props.channelLogin + "/dashboard/settings/automod"
                         }, Z), Object(v.d)("Moderation", "SettingsDashboardNav"))), a.createElement(q.b, {
                             name: Q
                         }, a.createElement("li", null, a.createElement(M.a, r.__assign({
                             linkTo: "/" + this.props.channelLogin + "/dashboard/settings/moderation"
-                        }, J), Object(v.d)("Moderation Settings", "SettingsDashboardNav")))), this.hasRevenueSettings && a.createElement("li", null, a.createElement(M.a, r.__assign({
+                        }, $), Object(v.d)("Moderation Settings", "SettingsDashboardNav")))), this.hasRevenueSettings && a.createElement("li", null, a.createElement(M.a, r.__assign({
                             linkTo: "/" + this.props.channelLogin + "/dashboard/settings/revenue"
                         }, K), this.revenueSettingsLabel)))) : null
                     }, Object.defineProperty(t.prototype, "canSeeAutoModSettings", {
@@ -14800,8 +15157,8 @@
                                 isOwner: Boolean(i && i.login.toLowerCase() === a.toLowerCase()),
                                 isSiteAdmin: Boolean(r && r.roles && r.roles.isSiteAdmin),
                                 isStaff: Boolean(i && i.roles && i.roles.isStaff),
-                                hasPayoutInvite: Boolean(n && n.payoutInvite && n.payoutInvite.category !== N.I.UNPAID_PARTNER),
-                                hasExtensionsDeveloperInvite: Boolean(n && n.payoutInvite && n.payoutInvite.category === N.I.EXTENSIONS_DEVELOPER),
+                                hasPayoutInvite: Boolean(n && n.payoutInvite && n.payoutInvite.category !== T.I.UNPAID_PARTNER),
+                                hasExtensionsDeveloperInvite: Boolean(n && n.payoutInvite && n.payoutInvite.category === T.I.EXTENSIONS_DEVELOPER),
                                 isInBountyProgram: Boolean(n && n.bountyBoardSettings && n.bountyBoardSettings.isEnabled),
                                 isModerator: Boolean(n && n.self && n.self.isModerator),
                                 isChannelAffiliate: Boolean(n && n.roles && n.roles.isAffiliate),
@@ -14829,7 +15186,7 @@
                         fontSize: re.Ca.Size5
                     }, Object(v.d)("Creator Camp", "DashboardSideNav"))))))
                 };
-            var ce, le = Object(s.compose)(T.a, Object(o.connect)(function(e) {
+            var ce, le = Object(s.compose)(N.a, Object(o.connect)(function(e) {
                     return {
                         sessionUser: Object(u.e)(e)
                     }
@@ -14904,10 +15261,10 @@
                 De = b.a.wrap(function() {
                     return n.e(179).then(n.bind(null, "h4KP"))
                 }, "BountiesPage"),
-                Te = b.a.wrap(function() {
+                Ne = b.a.wrap(function() {
                     return Promise.all([n.e(31), n.e(33), n.e(0), n.e(178)]).then(n.bind(null, "HURE"))
                 }, "ChannelAnalyticsRoot"),
-                Ne = b.a.wrap(function() {
+                Te = b.a.wrap(function() {
                     return n.e(177).then(n.bind(null, "pC3c"))
                 }, "ChannelClipsManagerPage"),
                 we = b.a.wrap(function() {
@@ -14928,10 +15285,10 @@
                 Ae = b.a.wrap(function() {
                     return n.e(171).then(n.bind(null, "66IC"))
                 }, "DashboardRevenueSettingsRoot"),
-                xe = b.a.wrap(function() {
+                Fe = b.a.wrap(function() {
                     return n.e(170).then(n.bind(null, "Le/2"))
                 }, "DashboardModerationSettingsPage"),
-                Fe = b.a.wrap(function() {
+                xe = b.a.wrap(function() {
                     return n.e(169).then(n.bind(null, "hfrd"))
                 }, "AutomodPage"),
                 Ue = b.a.wrap(function() {
@@ -15060,7 +15417,7 @@
                         }), a.createElement(f.a, {
                             path: "/:channelName/dashboard/channel-analytics",
                             render: function(e) {
-                                return a.createElement(Te, r.__assign({
+                                return a.createElement(Ne, r.__assign({
                                     streamSummaryQuery: t
                                 }, e))
                             }
@@ -15114,11 +15471,11 @@
                         }), e.consolidatedModerationSettingsFlag && a.createElement(f.a, {
                             exact: !0,
                             path: "/:channelLogin/dashboard/settings/moderation",
-                            component: xe
+                            component: Fe
                         }), e.consolidatedModerationSettingsFlag && a.createElement(f.a, {
                             exact: !0,
                             path: "/:channelLogin/dashboard/settings/moderation/automod",
-                            component: Fe
+                            component: xe
                         }), e.consolidatedModerationSettingsFlag && a.createElement(f.a, {
                             exact: !0,
                             path: "/:channelLogin/dashboard/settings/moderation/banned-chatters",
@@ -15195,7 +15552,7 @@
                             component: _.a
                         }), a.createElement(f.a, {
                             path: "/:channelName/manager/clips/channel",
-                            component: Ne
+                            component: Te
                         }), a.createElement(f.a, {
                             path: "/:channelName/manager/clips",
                             component: Xe
@@ -15218,13 +15575,13 @@
                     })
                 }, t
             }(a.Component);
-            var Je = Object(m.b)(function(e) {
+            var $e = Object(m.b)(function(e) {
                     return {
                         isExpandedView: e.isExpandedView
                     }
                 })(Ze),
-                $e = n("0yOi");
-            var et = Object(i.compose)(Object(c.a)($e, {
+                Je = n("0yOi");
+            var et = Object(i.compose)(Object(c.a)(Je, {
                 options: function(e) {
                     return {
                         variables: {
@@ -15248,7 +15605,7 @@
                     }
                 }, e)
             }))(function(e) {
-                return a.createElement(p, null, a.createElement(Je, r.__assign({}, e)))
+                return a.createElement(p, null, a.createElement($e, r.__assign({}, e)))
             });
             n.d(t, "DashboardRoot", function() {
                 return et
@@ -15288,31 +15645,46 @@
                 C = n("GzyO"),
                 O = n("OpME"),
                 D = n("cpJf"),
-                T = n("W8Fi"),
-                N = n("0WFu"),
-                w = function(e) {
+                N = n("W8Fi"),
+                T = n("0WFu"),
+                w = function(e, t) {
+                    return t.map(function(t) {
+                        return t.emotes && t.emoteSetID && !e.has(parseInt(t.emoteSetID, 10)) ? a.__assign({}, t, {
+                            emotes: t.emotes.map(function(e) {
+                                return a.__assign({}, e, {
+                                    isLocked: !0
+                                })
+                            })
+                        }) : t
+                    }).map(function(e) {
+                        return a.__assign({}, e, {
+                            emotes: Object(O.e)(e.emotes, e.emoteSetID)
+                        })
+                    })
+                },
+                j = function(e) {
                     return e.tier && !isNaN(parseInt(e.tier, 10)) ? parseInt(e.tier, 10) / 1e3 : 1
                 },
-                j = n("GnwI"),
-                I = n("br9A"),
-                M = n("TSYQ"),
-                R = n("8/mp"),
-                A = n("8Ad5");
+                I = n("GnwI"),
+                M = n("br9A"),
+                R = n("TSYQ"),
+                A = n("8/mp"),
+                F = n("8Ad5");
 
             function x(e) {
-                return e.charCode === A.a.Enter || e.charCode === A.a.Space
+                return e.charCode === F.a.Enter || e.charCode === F.a.Space
             }
-            var F, U = n("2xye"),
-                P = n("7SjK"),
-                L = n("4rCz"),
-                W = (n("/Kya"), function(e) {
+            var U, P = n("2xye"),
+                L = n("7SjK"),
+                W = n("4rCz"),
+                B = (n("/Kya"), function(e) {
                     var t = {
                             "emote-picker__tab": !0
                         },
                         n = null,
                         r = null;
                     if (e.channelTabVisible) {
-                        var o = M(a.__assign({}, t, {
+                        var o = R(a.__assign({}, t, {
                             "emote-picker__tab--active": e.channelTabEnabled && e.channelTabSelected,
                             "emote-picker__tab--disabled": !e.channelTabEnabled
                         }));
@@ -15328,10 +15700,10 @@
                             onKeyPress: e.channelTabEnabled ? e.selectChannelTabKeypress : void 0,
                             "data-a-target": "emote-channel-tab",
                             tabIndex: 0
-                        }, i.createElement("span", null, Object(L.d)("Channel", "EmotePicker"))))
+                        }, i.createElement("span", null, Object(W.d)("Channel", "EmotePicker"))))
                     }
                     if (e.allTabVisible) {
-                        var s = M(a.__assign({}, t, {
+                        var s = R(a.__assign({}, t, {
                             "emote-picker__tab--active": !(e.channelTabSelected && e.channelTabEnabled)
                         }));
                         r = i.createElement(c.Pa, {
@@ -15346,7 +15718,7 @@
                             onKeyPress: e.selectAllTabKeypress,
                             "data-a-target": "emote-all-tab",
                             tabIndex: 0
-                        }, i.createElement("span", null, Object(L.d)("All", "EmotePicker"))))
+                        }, i.createElement("span", null, Object(W.d)("All", "EmotePicker"))))
                     }
                     return i.createElement(c.Eb, {
                         background: c.r.Base,
@@ -15354,8 +15726,8 @@
                         className: "emote-picker__tabs-container"
                     }, n, r)
                 }),
-                B = n("DnOo"),
-                V = function(e) {
+                V = n("DnOo"),
+                z = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -15381,7 +15753,7 @@
                             },
                             a = {};
                         if (this.props.plan.tier) {
-                            var o = Object(N.a)(this.props.plan.tier);
+                            var o = Object(T.a)(this.props.plan.tier);
                             null === o && (o = 1), a.purchase = Object(s.d)("Tier { tierNum }", {
                                 tierNum: o
                             }, "assembleSubscribeTexts")
@@ -15394,13 +15766,13 @@
                             margin: {
                                 bottom: 1
                             }
-                        }, i.createElement(P.a, {
+                        }, i.createElement(L.a, {
                             emotes: r.emotes,
                             locked: !0
                         }), i.createElement(c.Xa, {
                             margin: 1,
                             alignItems: c.f.Center
-                        }, e), i.createElement(B.a, {
+                        }, e), i.createElement(V.a, {
                             isSubbedToTier: !1,
                             tierPrice: a.purchase || "",
                             handleSubAction: this.props.handleSubAction,
@@ -15410,7 +15782,7 @@
                         }))
                     }, t
                 }(i.Component),
-                z = (n("JGCS"), function(e) {
+                G = (n("JGCS"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.channelTabSelectionKeypress = function(e) {
@@ -15428,10 +15800,10 @@
                                     emoticon_set_id: e.setID,
                                     generated_by: n.props.emotePickerSource
                                 };
-                                s.o.track(U.SpadeEventType.EmotePickerClickthrough, t)
+                                s.o.track(P.SpadeEventType.EmotePickerClickthrough, t)
                             }
                         }, n.closeOnEsc = function(e) {
-                            e.keyCode === A.a.Esc && n.props.toggleVisibility()
+                            e.keyCode === F.a.Esc && n.props.toggleVisibility()
                         }, n.handleFilterChange = function(e) {
                             var t = e.target.value,
                                 r = t.toLowerCase(),
@@ -15467,7 +15839,7 @@
                                 generated_by: e.emotePickerSource,
                                 chatroom_id: e.roomID
                             };
-                            s.o.track(U.SpadeEventType.ViewedEmotePicker, t)
+                            s.o.track(P.SpadeEventType.ViewedEmotePicker, t)
                         }
                         if (!e.gqlError)
                             if (this.state.filter.length > 0) {
@@ -15493,7 +15865,7 @@
                             noTail: !0,
                             show: !0
                         }, i.createElement(c.Xa, {
-                            className: M("emote-picker")
+                            className: R("emote-picker")
                         }, this.renderTabContent(), i.createElement(c.Xa, {
                             className: "emote-picker__controls-container",
                             position: c.jb.Relative
@@ -15507,7 +15879,7 @@
                             placeholder: Object(s.d)("Search for Emotes", "EmotePicker"),
                             type: c.Ta.Text,
                             value: this.state.inputValue
-                        })), i.createElement(W, {
+                        })), i.createElement(B, {
                             allTabVisible: this.props.allEmoteSets.length > 0,
                             channelTabEnabled: this.state.channelTabEnabled,
                             channelTabSelected: this.state.channelTabSelected,
@@ -15545,7 +15917,7 @@
                                     key: "ownedChannelEmoteSets",
                                     padding: 1,
                                     position: c.jb.Relative
-                                }, i.createElement(P.a, {
+                                }, i.createElement(L.a, {
                                     emotes: n,
                                     onClickEmote: this.onClickEmote
                                 })))
@@ -15556,7 +15928,7 @@
                                     key: "planUpsell:" + t.level,
                                     padding: 1,
                                     position: c.jb.Relative
-                                }, i.createElement(V, {
+                                }, i.createElement(z, {
                                     plan: t,
                                     isEsportChannel: e.props.isEsportChannel,
                                     subscribeTexts: e.props.subscribeTexts,
@@ -15575,12 +15947,12 @@
                                     bottom: 2
                                 },
                                 className: "emote-picker__content-block"
-                            }, i.createElement(P.a, {
+                            }, i.createElement(L.a, {
                                 emotes: n,
                                 onClickEmote: e.onClickEmote
                             }))
                         });
-                        return t.length > 0 ? i.createElement(R.b, {
+                        return t.length > 0 ? i.createElement(A.b, {
                             className: "emote-picker__tab-content"
                         }, i.createElement(c.Xa, {
                             padding: 1
@@ -15614,11 +15986,11 @@
                             }
                         }
                         return n
-                    }, t = a.__decorate([Object(j.b)("EmotePickerMenu", {
+                    }, t = a.__decorate([Object(I.b)("EmotePickerMenu", {
                         autoReportInteractive: !0
                     })], t)
                 }(i.Component)),
-                G = (n("zyUW"), function(e) {
+                X = (n("zyUW"), function(e) {
                     var t = null;
                     return e.imgSrc && (t = i.createElement(i.Fragment, null, i.createElement(c.S, {
                         className: "emote-grid-section__header-image",
@@ -15643,15 +16015,15 @@
                         align: c.fc.Middle,
                         bold: !0,
                         color: c.O.Alt
-                    }, e.label)), i.createElement(P.a, {
+                    }, e.label)), i.createElement(L.a, {
                         context: e.context,
                         emotes: e.emotes,
                         onClickEmote: e.onClickEmote,
                         spaced: !0
                     }))
                 }),
-                X = n("17x9"),
-                H = function(e) {
+                H = n("17x9"),
+                q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.checkVisible = function(e, n) {
@@ -15665,10 +16037,10 @@
                     }, t.prototype.render = function() {
                         return i.createElement(i.Fragment, null, this.props.children)
                     }, t.contextTypes = {
-                        registerReceiver: X.func
+                        registerReceiver: H.func
                     }, t
                 }(i.Component),
-                q = (n("cr2a"), function(e) {
+                Q = (n("cr2a"), function(e) {
                     return i.createElement(c.Xa, {
                         className: "emote-picker-tab-item " + (e.isActive ? "emote-picker-tab-item--active" : ""),
                         position: c.jb.Relative
@@ -15682,18 +16054,16 @@
                         asset: e.icon
                     }))))
                 }),
-                Q = (n("GLn2"), function(e) {
+                K = n("a5fV"),
+                Y = (n("GLn2"), function(e) {
                     function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {}, t
+                        return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.latencyTracking.reportInteractive()
-                    }, t.prototype.render = function() {
+                    return a.__extends(t, e), t.prototype.render = function() {
                         var e = this,
                             t = this.props.channelSubscriptionProducts.find(function(t) {
                                 return !!t.emotes.find(function(t) {
-                                    return null !== e.props.subUpsellClickedEmote && e.props.subUpsellClickedEmote.id === t.id
+                                    return e.props.subUpsellClickedEmote.id === t.id
                                 })
                             }),
                             n = this.props.channelSubscriptionProducts.filter(function(e) {
@@ -15701,18 +16071,18 @@
                                     return !e.isLocked
                                 })
                             }).sort(function(e, t) {
-                                var n = w(e);
-                                return w(t) - n
+                                var n = j(e);
+                                return j(t) - n
                             });
-                        if (t && this.props.subUpsellClickedEmote && this.props.subUpsellClickedEmote.srcSet && this.props.channelDisplayName) {
-                            var r = w(t),
+                        if (t && this.props.subUpsellClickedEmote.srcSet && this.props.channelDisplayName) {
+                            var r = j(t),
                                 o = Object(s.d)("Subscribe at Tier {tierNumber}", {
                                     tierNumber: r
                                 }, "EmotePickerCard"),
                                 l = [],
                                 d = [];
                             n.forEach(function(e) {
-                                if (w(e) <= r) {
+                                if (j(e) <= r) {
                                     var t = e.emotes.map(function(e) {
                                         return a.__assign({}, e, {
                                             isLocked: !1
@@ -15721,7 +16091,12 @@
                                     d.push.apply(d, t)
                                 } else l.push.apply(l, e.emotes)
                             });
-                            var u = l.concat(d);
+                            var u = l.concat(d),
+                                m = t.price.toString() || "";
+                            if (t.priceInfo) {
+                                var p = t.priceInfo;
+                                m = Object(K.a)(Object(K.b)(p.total, p.exponent), p.currency)
+                            }
                             return i.createElement(c.Xa, {
                                 className: "emote-sub-upsell"
                             }, i.createElement(c.Eb, {
@@ -15763,23 +16138,22 @@
                                 padding: {
                                     x: 2
                                 }
-                            }, i.createElement(B.a, {
+                            }, i.createElement(V.a, {
                                 customSubscribeNowMessage: o,
                                 isSubbedToTier: !1,
                                 fullWidth: !0,
-                                tierPrice: t.price.toString() || t.priceInfo.price.toString() || "",
+                                tierPrice: m,
                                 handleSubAction: this.props.handleSubAction,
                                 productName: t.name,
                                 url: t.url,
                                 isEsportChannel: this.props.isEsportChannel
                             })), i.createElement(c.ec, null, i.createElement("hr", {
                                 className: "emote-sub-upsell__divider"
-                            })), i.createElement(R.b, {
+                            })), i.createElement(A.b, {
                                 className: "emote-sub-upsell__content"
                             }, i.createElement(c.Xa, null, i.createElement(c.Xa, {
                                 padding: {
-                                    x: 1,
-                                    bottom: .5
+                                    x: 2
                                 }
                             }, i.createElement(c.W, {
                                 bold: !0
@@ -15791,7 +16165,7 @@
                                     top: .5,
                                     bottom: 3
                                 }
-                            }, i.createElement(P.a, {
+                            }, i.createElement(L.a, {
                                 emotes: u,
                                 spaced: !0,
                                 onClickEmote: this.props.onClickEmote
@@ -15815,30 +16189,72 @@
                         return 6 === t.length ? t[2] : t[0]
                     }, t
                 }(i.Component)),
-                K = Object(u.compose)(Object(j.b)("EmoteSubUpsell"))(Q);
+                Z = n("XQnt"),
+                $ = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                        (!this.props.channelID || this.props.data && !this.props.data.loading) && this.props.latencyTracking.reportInteractive()
+                    }, t.prototype.render = function() {
+                        return null === this.props.subUpsellClickedEmote ? null : i.createElement(Y, {
+                            channelDisplayName: this.props.channelDisplayName,
+                            channelSubscriptionProducts: this.subscriptionProducts,
+                            handleSubAction: this.props.handleSubAction,
+                            isEsportChannel: this.props.isEsportChannel,
+                            onBackClick: this.props.onBackClick,
+                            onClickEmote: this.props.onClickEmote,
+                            subUpsellClickedEmote: this.props.subUpsellClickedEmote
+                        })
+                    }, Object.defineProperty(t.prototype, "subscriptionProducts", {
+                        get: function() {
+                            if (this.props.data && this.props.data.user && this.props.data.user.subscriptionProducts) {
+                                var e = this.props.data.user.subscriptionProducts.filter(function(e) {
+                                    return e
+                                });
+                                return w(this.props.ownedSetIDs, e)
+                            }
+                            return this.props.channelSubscriptionProducts
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(i.Component),
+                J = Object(d.compose)(Object(h.a)(Z, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                channelID: e.channelID
+                            }
+                        }
+                    },
+                    skip: function(e) {
+                        return !e.channelID
+                    }
+                }), Object(I.b)("EmoteSubUpsell"))($);
             ! function(e) {
                 e.FrequentlyUsed = "frequently_used", e.CurrentChannel = "current_channel", e.OtherChannel = "other_subbed_channel", e.Unlocked = "unlocked", e.Global = "global"
-            }(F || (F = {}));
-            var Y;
+            }(U || (U = {}));
+            var ee;
             ! function(e) {
                 e.FrequentlyUsedEmotes = "FREQUENTLY_USED_EMOTES", e.ChannelEmotes = "CHANNEL_EMOTES", e.AllEmotes = "ALL_EMOTES"
-            }(Y || (Y = {}));
-            var Z = function(e) {
+            }(ee || (ee = {}));
+            var te = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onTabNavClick = function(e) {
                             if (n.scroll && n.scroll.scrollContent && e.currentTarget.getAttribute("data-a-target")) {
                                 var t = e.currentTarget.getAttribute("data-a-target"),
-                                    r = Y.FrequentlyUsedEmotes;
+                                    r = ee.FrequentlyUsedEmotes;
                                 switch (t) {
-                                    case Y.FrequentlyUsedEmotes:
-                                        n.frequentlyUsedEmotesRef && (n.frequentlyUsedEmotesRef.scrollIntoView(), r = Y.FrequentlyUsedEmotes);
+                                    case ee.FrequentlyUsedEmotes:
+                                        n.frequentlyUsedEmotesRef && (n.frequentlyUsedEmotesRef.scrollIntoView(), r = ee.FrequentlyUsedEmotes);
                                         break;
-                                    case Y.ChannelEmotes:
-                                        n.channelEmotesRef && (n.channelEmotesRef.scrollIntoView(), r = Y.ChannelEmotes);
+                                    case ee.ChannelEmotes:
+                                        n.channelEmotesRef && (n.channelEmotesRef.scrollIntoView(), r = ee.ChannelEmotes);
                                         break;
-                                    case Y.AllEmotes:
-                                        n.allEmotesRef && (n.allEmotesRef.scrollIntoView(), r = Y.AllEmotes)
+                                    case ee.AllEmotes:
+                                        n.allEmotesRef && (n.allEmotesRef.scrollIntoView(), r = ee.AllEmotes)
                                 }
                                 n.setState({
                                     selectedNavTab: r
@@ -15856,7 +16272,7 @@
                                     emoticon_set_id: e.setID,
                                     generated_by: n.props.emotePickerSource
                                 };
-                                s.o.track(U.SpadeEventType.EmotePickerClickthrough, r)
+                                s.o.track(P.SpadeEventType.EmotePickerClickthrough, r)
                             } else e.isLocked && n.onClickLockedEmote(e)
                         }, n.saveScrollRef = function(e) {
                             return n.scroll = e
@@ -15869,20 +16285,18 @@
                         }, n.checkVisible = function(e, t) {
                             if (t) {
                                 var r = n.state.selectedNavTab;
-                                n.channelEmotesRef ? t.offset > 0 && t.offset < n.channelEmotesRef.offsetTop ? r = Y.FrequentlyUsedEmotes : t.offset > n.channelEmotesRef.offsetTop && t.offset < n.allEmotesRef.offsetTop ? r = Y.ChannelEmotes : t.offset > n.allEmotesRef.offsetTop && (r = Y.AllEmotes) : t.offset > 0 && t.offset < n.allEmotesRef.offsetTop ? r = Y.FrequentlyUsedEmotes : t.offset > n.allEmotesRef.offsetTop && (r = Y.AllEmotes), n.state.selectedNavTab !== r && n.setState({
+                                n.channelEmotesRef ? t.offset > 0 && t.offset < n.channelEmotesRef.offsetTop ? r = ee.FrequentlyUsedEmotes : t.offset > n.channelEmotesRef.offsetTop && t.offset < n.allEmotesRef.offsetTop ? r = ee.ChannelEmotes : t.offset > n.allEmotesRef.offsetTop && (r = ee.AllEmotes) : t.offset > 0 && t.offset < n.allEmotesRef.offsetTop ? r = ee.FrequentlyUsedEmotes : t.offset > n.allEmotesRef.offsetTop && (r = ee.AllEmotes), n.state.selectedNavTab !== r && n.setState({
                                     selectedNavTab: r
                                 })
                             }
                         }, n.onClickLockedEmote = function(e) {
                             n.setState({
-                                isInSubUpsell: !0,
                                 subUpsellClickedEmote: e
                             })
                         }, n.onBackClick = function() {
                             n.setState({
-                                isInSubUpsell: !1,
                                 subUpsellClickedEmote: null,
-                                selectedNavTab: Y.FrequentlyUsedEmotes
+                                selectedNavTab: ee.FrequentlyUsedEmotes
                             })
                         }, n.handleFilterChange = function(e) {
                             var t = e.target.value,
@@ -15891,7 +16305,7 @@
                                 filter: r,
                                 inputValue: t,
                                 filteredEmotes: n.filterEmoteSets(n.props.allEmoteSets, r),
-                                selectedNavTab: Y.FrequentlyUsedEmotes
+                                selectedNavTab: ee.FrequentlyUsedEmotes
                             })
                         }, n.filterEmoteSets = function(e, t) {
                             var n = [];
@@ -15923,8 +16337,7 @@
                             filter: "",
                             filteredEmotes: [],
                             inputValue: "",
-                            isInSubUpsell: !1,
-                            selectedNavTab: Y.FrequentlyUsedEmotes,
+                            selectedNavTab: ee.FrequentlyUsedEmotes,
                             sortedChannelEmotes: [],
                             subUpsellClickedEmote: null
                         }, n
@@ -15937,7 +16350,7 @@
                                 generated_by: this.props.emotePickerSource,
                                 chatroom_id: this.props.roomID
                             };
-                            s.o.track(U.SpadeEventType.ViewedEmotePicker, e), this.updateChannelEmotes(this.props)
+                            s.o.track(P.SpadeEventType.ViewedEmotePicker, e), this.updateChannelEmotes(this.props)
                         }
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.props.channelID !== e.channelID && this.updateChannelEmotes(e)
@@ -15952,15 +16365,8 @@
                             className: "emote-picker"
                         }, this.renderView()))
                     }, t.prototype.renderView = function() {
-                        return this.state.isInSubUpsell ? i.createElement(K, {
-                            channelDisplayName: this.props.channelDisplayName,
-                            channelSubscriptionProducts: this.props.channelSubscriptionProducts,
-                            isEsportChannel: this.props.isEsportChannel || !1,
-                            subUpsellClickedEmote: this.state.subUpsellClickedEmote,
-                            onBackClick: this.onBackClick,
-                            onClickEmote: this.onClickLockedEmote,
-                            handleSubAction: this.props.handleSubAction
-                        }) : i.createElement(c.Xa, null, i.createElement(c.Eb, {
+                        var e = null;
+                        return null === this.state.subUpsellClickedEmote && (e = i.createElement(i.Fragment, null, i.createElement(c.Eb, {
                             padding: {
                                 top: 2,
                                 x: 2
@@ -15971,7 +16377,17 @@
                             placeholder: Object(s.d)("Search for Emotes", "EmotePickerCard"),
                             type: c.Ta.Text,
                             value: this.state.inputValue
-                        })), this.renderTabContent())
+                        })), this.renderTabContent())), i.createElement(i.Fragment, null, i.createElement(J, {
+                            channelDisplayName: this.props.channelDisplayName,
+                            channelID: this.props.channelID,
+                            channelSubscriptionProducts: this.props.channelSubscriptionProducts,
+                            isEsportChannel: this.props.isEsportChannel || !1,
+                            handleSubAction: this.props.handleSubAction,
+                            onBackClick: this.onBackClick,
+                            onClickEmote: this.onClickLockedEmote,
+                            ownedSetIDs: this.props.ownedSetIDs,
+                            subUpsellClickedEmote: this.state.subUpsellClickedEmote
+                        }), e)
                     }, t.prototype.renderTabContent = function() {
                         return this.props.gqlError ? i.createElement(c.Xa, null, i.createElement(c.W, {
                             "data-test-selector": "emote-picker-menu-error-text",
@@ -15983,21 +16399,21 @@
                             fullWidth: !0,
                             justifyContent: c.Wa.Center,
                             padding: 1
-                        }, i.createElement(c.Za, null)) : "" !== this.state.filter ? this.renderSearchContent() : i.createElement(i.Fragment, null, i.createElement(R.b, {
+                        }, i.createElement(c.Za, null)) : "" !== this.state.filter ? this.renderSearchContent() : i.createElement(i.Fragment, null, i.createElement(A.b, {
                             scrollRef: this.saveScrollRef,
                             className: "emote-picker__tab-content"
                         }, i.createElement(c.Xa, {
                             padding: {
                                 bottom: 2
                             }
-                        }, i.createElement(H, {
+                        }, i.createElement(q, {
                             checkVisible: this.checkVisible
                         }, this.getFrequentlyUsedEmoteGrid(), this.getCurrentChannelEmoteGrid(), this.getOtherSubEmoteGrids(), this.getResidualEmoteGrids()))), this.renderTabNav())
                     }, t.prototype.getFrequentlyUsedEmoteGrid = function() {
                         return 0 === this.props.frequentlyUsedEmotes.length ? null : i.createElement(c.Xa, {
                             refDelegate: this.saveFrequentlyUsedEmotesRef
-                        }, i.createElement(G, {
-                            context: F.FrequentlyUsed,
+                        }, i.createElement(X, {
+                            context: U.FrequentlyUsed,
                             emotes: this.props.frequentlyUsedEmotes,
                             label: Object(s.d)("Frequently Used", "EmotePickerCard"),
                             onClickEmote: this.onClickEmote
@@ -16006,8 +16422,8 @@
                         return 0 !== this.state.sortedChannelEmotes.length && this.props.channelDisplayName ? i.createElement(c.Xa, {
                             className: "emote-picker__content-block",
                             refDelegate: this.saveChannelEmotesRef
-                        }, i.createElement(G, {
-                            context: F.CurrentChannel,
+                        }, i.createElement(X, {
+                            context: U.CurrentChannel,
                             emotes: this.state.sortedChannelEmotes,
                             imgSrc: this.props.channelProfileImageURL || void 0,
                             label: this.props.channelDisplayName,
@@ -16020,8 +16436,8 @@
                             n.owner && n.owner.displayName && t.push(i.createElement(c.Xa, {
                                 key: "emote-grid--" + n.id + "-emotes",
                                 className: "emote-picker__content-block"
-                            }, i.createElement(G, {
-                                context: F.OtherChannel,
+                            }, i.createElement(X, {
+                                context: U.OtherChannel,
                                 emotes: n.emotes,
                                 imgSrc: n.owner.profileImageURL || void 0,
                                 label: n.owner.displayName,
@@ -16033,16 +16449,16 @@
                         return this.props.unlockedEmotes.length > 0 && e.push(i.createElement(c.Xa, {
                             key: "emote-grid--unlocked-emotes",
                             className: "emote-picker__content-block"
-                        }, i.createElement(G, {
-                            context: F.Unlocked,
+                        }, i.createElement(X, {
+                            context: U.Unlocked,
                             emotes: this.props.unlockedEmotes,
                             label: Object(s.d)("Unlocked", "EmotePickerCard"),
                             onClickEmote: this.onClickEmote
                         }))), this.props.globalEmotes.length > 0 && e.push(i.createElement(c.Xa, {
                             key: "emote-grid--global-emotes",
                             className: "emote-picker__content-block"
-                        }, i.createElement(G, {
-                            context: F.Global,
+                        }, i.createElement(X, {
+                            context: U.Global,
                             emotes: this.props.globalEmotes,
                             label: Object(s.d)("Global", "EmotePickerCard"),
                             onClickEmote: this.onClickEmote
@@ -16050,16 +16466,12 @@
                             refDelegate: this.saveAllEmotesRef
                         }, e)
                     }, t.prototype.renderSearchContent = function() {
-                        var e;
-                        return e = this.state.filteredEmotes.length > 0 ? i.createElement(c.W, {
-                            bold: !0
-                        }, Object(s.d)('Search Results for "{inputValue}"', {
+                        var e = Object(s.d)('No Search Results for "{inputValue}"', {
                             inputValue: this.state.inputValue
-                        }, "EmotePickerCard")) : i.createElement(c.W, {
-                            bold: !0
-                        }, Object(s.d)('No Search Results for "{inputValue}"', {
+                        }, "EmotePickerCard");
+                        return this.state.filteredEmotes.length > 0 && (e = Object(s.d)('Search Results for "{inputValue}"', {
                             inputValue: this.state.inputValue
-                        }, "EmotePickerCard")), i.createElement(R.b, {
+                        }, "EmotePickerCard")), i.createElement(A.b, {
                             className: "emote-picker__tab-content"
                         }, i.createElement(c.Xa, {
                             position: c.jb.Relative,
@@ -16073,42 +16485,44 @@
                             padding: {
                                 x: 1
                             }
-                        }, e), i.createElement(P.a, {
+                        }, i.createElement(c.W, {
+                            bold: !0
+                        }, e)), i.createElement(L.a, {
                             emotes: this.state.filteredEmotes,
                             onClickEmote: this.onClickEmote,
                             spaced: !0
                         })))
                     }, t.prototype.renderTabNav = function() {
                         var e = null;
-                        return this.state.sortedChannelEmotes.length > 0 && (e = i.createElement(q, {
-                            isActive: this.state.selectedNavTab === Y.ChannelEmotes,
-                            label: Y.ChannelEmotes,
+                        return this.state.sortedChannelEmotes.length > 0 && (e = i.createElement(Q, {
+                            isActive: this.state.selectedNavTab === ee.ChannelEmotes,
+                            label: ee.ChannelEmotes,
                             icon: c.tb.NavChannels,
                             onClick: this.onTabNavClick
                         })), i.createElement(c.Eb, {
                             background: c.r.Alt,
                             display: c.X.Flex,
                             className: "emote-picker__tab-nav-container"
-                        }, i.createElement(q, {
-                            isActive: this.state.selectedNavTab === Y.FrequentlyUsedEmotes,
-                            label: Y.FrequentlyUsedEmotes,
+                        }, i.createElement(Q, {
+                            isActive: this.state.selectedNavTab === ee.FrequentlyUsedEmotes,
+                            label: ee.FrequentlyUsedEmotes,
                             icon: c.tb.GlyphLength,
                             onClick: this.onTabNavClick
-                        }), e, i.createElement(q, {
-                            isActive: this.state.selectedNavTab === Y.AllEmotes,
-                            label: Y.AllEmotes,
+                        }), e, i.createElement(Q, {
+                            isActive: this.state.selectedNavTab === ee.AllEmotes,
+                            label: ee.AllEmotes,
                             icon: c.tb.EmoticonsAll,
                             onClick: this.onTabNavClick
                         }))
                     }, t
                 }(i.Component),
-                J = n("DB+C"),
-                $ = function(e) {
+                ne = n("DB+C"),
+                re = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.handleSubEvent = function(e) {
-                            e.action === I.a.ClickCheckout && n.checkAndDisplaySubscriptionCheckout(), Object(I.b)(a.__assign({}, e, {
-                                action: I.a.ClickCheckout,
+                            e.action === M.a.ClickCheckout && n.checkAndDisplaySubscriptionCheckout(), Object(M.b)(a.__assign({}, e, {
+                                action: M.a.ClickCheckout,
                                 channelID: n.props.channelData && n.props.channelData.user && n.props.channelData.user.id || "",
                                 channelLogin: n.props.channelData && n.props.channelData.user && n.props.channelData.user.displayName || "",
                                 isMenuOpen: null,
@@ -16160,7 +16574,7 @@
                     }, t.prototype.render = function() {
                         if (!this.props.visible) return null;
                         var e = this.props.channelData && this.props.channelData.user && this.props.channelData.user.campaignProperties && this.props.channelData.user.campaignProperties.domains && this.props.channelData.user.campaignProperties.domains.length > 0 || !1,
-                            t = i.createElement(z, {
+                            t = i.createElement(G, {
                                 allEmoteSets: this.state.allEmoteSets,
                                 availableUpsells: this.state.availableUpsells,
                                 channelTabVisible: this.state.channelTabVisible,
@@ -16179,7 +16593,7 @@
                                 subscribeTexts: this.state.subscribeTexts,
                                 toggleVisibility: this.props.toggleVisibility
                             }),
-                            n = i.createElement(Z, {
+                            n = i.createElement(te, {
                                 allEmoteSets: this.state.allEmoteSets,
                                 channelID: this.props.channelOwnerID,
                                 channelDisplayName: this.state.channelDisplayName,
@@ -16195,6 +16609,7 @@
                                 isEsportChannel: e,
                                 loading: this.state.gqlLoading,
                                 onClickEmote: this.props.onClickEmote,
+                                ownedSetIDs: this.state.ownedSetIDs,
                                 otherChannelEmoteSets: this.state.otherChannelEmoteSets,
                                 roomID: this.props.roomID,
                                 size: this.props.size,
@@ -16255,27 +16670,13 @@
                                 var r = [];
                                 return !n || n !== D.b.IOS && n !== D.b.Android ? (t.forEach(function(n, i) {
                                     var o = n.price;
-                                    0 === i && Object(T.g)(t) && (o = Object(T.c)(t[0])), n.emotes && n.emotes.length && n.emoteSetID && !e.has(parseInt(n.emoteSetID, 10)) && r.push(a.__assign({}, n, {
+                                    0 === i && Object(N.g)(t) && (o = Object(N.c)(t[0])), n.emotes && n.emotes.length && n.emoteSetID && !e.has(parseInt(n.emoteSetID, 10)) && r.push(a.__assign({}, n, {
                                         emotes: Object(O.e)(n.emotes, n.emoteSetID),
                                         level: i,
                                         price: o
                                     }))
                                 }), r) : r
-                            }(n.ownedSetIDs, e.channelData.user.subscriptionProducts, u), n.channelDisplayName = e.channelData.user.displayName, n.channelProfileImageURL = e.channelData.user.profileImageURL, n.channelSubscriptionProducts = function(e, t) {
-                                return t.map(function(t) {
-                                    return t.emotes && t.emoteSetID && !e.has(parseInt(t.emoteSetID, 10)) ? a.__assign({}, t, {
-                                        emotes: t.emotes.map(function(e) {
-                                            return a.__assign({}, e, {
-                                                isLocked: !0
-                                            })
-                                        })
-                                    }) : t
-                                }).map(function(e) {
-                                    return a.__assign({}, e, {
-                                        emotes: Object(O.e)(e.emotes, e.emoteSetID)
-                                    })
-                                })
-                            }(n.ownedSetIDs, e.channelData.user.subscriptionProducts), n.ownedChannelEmoteSets = function(e, t) {
+                            }(n.ownedSetIDs, e.channelData.user.subscriptionProducts, u), n.channelDisplayName = e.channelData.user.displayName, n.channelProfileImageURL = e.channelData.user.profileImageURL, n.channelSubscriptionProducts = w(n.ownedSetIDs, e.channelData.user.subscriptionProducts), n.ownedChannelEmoteSets = function(e, t) {
                                 for (var n = [{
                                         id: "0",
                                         emotes: []
@@ -16287,7 +16688,7 @@
                             }(n.ownedSetIDs, e.channelData.user.subscriptionProducts), n.subscribeTexts = function(e) {
                                 for (var t = [], n = 0; n < e.length; n++) {
                                     var r = e[n],
-                                        a = Object(N.a)(r.tier);
+                                        a = Object(T.a)(r.tier);
                                     null === a && (a = 1), 0 === n && r.emotes && r.emotes.length > 1 ? t[n] = Object(s.d)("Unlock {numEmotes, number} Sub Emotes", {
                                         numEmotes: r.emotes.length
                                     }, "assembleSubscribeTexts") : 0 === n ? t[n] = Object(s.d)("Unlock 1 Sub Emote", "assembleSubscribeTexts") : r.emotes && r.emotes.length > 1 ? t[n] = Object(s.d)("{numEmotes, number} Extra Tier {tier} Sub Emotes", {
@@ -16304,9 +16705,9 @@
                     }, t.prototype.subscriptionProductHasEmotes = function(e) {
                         return void 0 !== e.emoteSetID && !!e.emotes && e.emotes.length > 0
                     }, t.prototype.checkAndDisplaySubscriptionCheckout = function() {
-                        var e = s.n.get(v.b, ""),
-                            t = s.n.get(v.c, ""),
-                            n = s.n.get(v.a, ""),
+                        var e = s.n.get(v.c, ""),
+                            t = s.n.get(v.d, ""),
+                            n = s.n.get(v.b, ""),
                             r = Number(n);
                         e && (this.props.channelData && this.props.channelData.user && this.props.channelData.user.subscriptionProducts.map(function(e) {
                             return e.name
@@ -16317,10 +16718,10 @@
                             trackingContext: {
                                 source: _.c.EmotePicker
                             }
-                        }) : this.props.showLoginModal() : Object(v.d)())
+                        }) : this.props.showLoginModal() : Object(v.e)())
                     }, t
                 }(i.Component);
-            var ee = Object(d.compose)(Object(r.connect)(function(e) {
+            var ae = Object(d.compose)(Object(r.connect)(function(e) {
                     return {
                         currentUserID: e.session.user && e.session.user.id,
                         emotePickerSessionID: e.chat && e.chat.emotePickerSessionID || null,
@@ -16331,7 +16732,7 @@
                     return Object(u.bindActionCreators)({
                         closeEmotePicker: E.A,
                         openEmotePicker: E.M,
-                        showLoginModal: Object(v.e)(b.a.EmotePickerSubscriptionButton),
+                        showLoginModal: Object(v.f)(b.a.EmotePickerSubscriptionButton),
                         showSubscriptionCheckoutModal: function(e) {
                             var t = a.__rest(e, []);
                             return Object(k.d)(p.a, {
@@ -16343,7 +16744,7 @@
                             })
                         }
                     }, e)
-                }), Object(h.a)(J, {
+                }), Object(h.a)(ne, {
                     name: "channelData",
                     skip: function(e) {
                         return !e.channelOwnerID
@@ -16365,8 +16766,8 @@
                     skip: function(e) {
                         return !e.currentUserID
                     }
-                }]), Object(j.b)("EmotePicker"), Object(g.a)())($),
-                te = function(e) {
+                }]), Object(I.b)("EmotePicker"), Object(g.a)())(re),
+                ie = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -16406,7 +16807,7 @@
                             isActive: this.state.isEmotePickerMenuVisible
                         }));
                         var t = null;
-                        this.hasInteractedOrPageload && (t = i.createElement(ee, {
+                        this.hasInteractedOrPageload && (t = i.createElement(ae, {
                             channelOwnerID: this.props.channelOwnerID,
                             emotePickerSource: this.props.emotePickerSource,
                             onClickEmote: this.onClickEmote,
@@ -16442,16 +16843,16 @@
                         configurable: !0
                     }), t
                 }(i.Component),
-                ne = Object(j.b)("EmotePicker")(te);
-            var re = Object(r.connect)(function(e) {
+                oe = Object(I.b)("EmotePicker")(ie);
+            var se = Object(r.connect)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
-            })(ne);
+            })(oe);
             n.d(t, "a", function() {
-                return re
+                return se
             }), n.d(t, "c", function() {
-                return ee
+                return ae
             }), n.d(t, !1, function() {
                 return D.a
             }), n.d(t, !1, function() {
@@ -17597,9 +17998,9 @@
             }), n.d(t, "e", function() {
                 return D
             }), n.d(t, "d", function() {
-                return T
-            }), n.d(t, "b", function() {
                 return N
+            }), n.d(t, "b", function() {
+                return T
             }), n.d(t, "f", function() {
                 return w
             }), n.d(t, "c", function() {
@@ -17722,14 +18123,14 @@
                 })
             }
 
-            function T(e) {
+            function N(e) {
                 p({
                     threadID: e,
                     action: i.Close
                 })
             }
 
-            function N(e) {
+            function T(e) {
                 p({
                     threadID: e,
                     action: i.Archive
