@@ -995,13 +995,13 @@ window.__twilightSettings = {
         },
         "6c1591ea-6186-4310-bb23-c350eb713d52": {
             "name": "TWILIGHT_DASHBOARD_COLLAB",
-            "v": 4836,
+            "v": 5108,
             "t": 2,
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "yes"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "control"
             }]
         },
