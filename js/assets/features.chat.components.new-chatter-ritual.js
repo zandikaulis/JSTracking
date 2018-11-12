@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [201], {
+    [200], {
         "0Ex5": function(e, n) {
             var t = {
                 kind: "Document",
@@ -336,7 +336,7 @@
                         variables: {
                             id: n.channelID
                         },
-                        topic: Object(p.y)(n.channelID),
+                        topic: Object(p.x)(n.channelID),
                         type: m.PubsubMessageType.UpdatedChannelChatProperty,
                         mutator: function(t, i) {
                             return t.data.is_rituals_enabled ? e(function() {
@@ -347,7 +347,7 @@
                     }
                 }), Object(d.a)([{
                     topic: function(e) {
-                        return Object(p.I)(e.channelID)
+                        return Object(p.H)(e.channelID)
                     },
                     mapMessageTypesToProps: (i = {}, i[m.PubsubMessageType.ChannelStreamUp] = "streamUp", i[m.PubsubMessageType.ChannelStreamDown] = "streamDown", i),
                     skip: O

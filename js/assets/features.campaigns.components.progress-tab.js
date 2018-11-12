@@ -2239,7 +2239,7 @@
                     }
                 }), Object(m.a)(function(e) {
                     return {
-                        topic: e.data && e.data.user && e.data.user.tournament && e.user ? Object(u.E)(e.user.id) : "",
+                        topic: e.data && e.data.user && e.data.user.tournament && e.user ? Object(u.D)(e.user.id) : "",
                         query: A,
                         variables: {
                             channelID: e.channelID
@@ -2830,7 +2830,7 @@
                     }
                 }), Object(m.a)(function(e) {
                     return {
-                        topic: e.data && e.data.user && e.data.user.tournament && e.user ? Object(u.E)(e.user.id) : "",
+                        topic: e.data && e.data.user && e.data.user.tournament && e.user ? Object(u.D)(e.user.id) : "",
                         query: q,
                         variables: {
                             channelID: e.channelID

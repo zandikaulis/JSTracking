@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [163], {
+    [162], {
         "0vlg": function(e, t) {
             var n = {
                 kind: "Document",
@@ -673,6 +673,61 @@
         },
         HszP: function(e, t, n) {},
         L7ac: function(e, t, n) {},
+        LWYa: function(e, t, n) {
+            "use strict";
+            var a = n("q1tI"),
+                i = n.n(a),
+                r = n("iiw+"),
+                s = n.n(r),
+                o = n("m90/"),
+                l = n.n(o);
+            var d = function(e) {
+                function t() {
+                    return function(e, t) {
+                            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+                        }(this, t),
+                        function(e, t) {
+                            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                            return !t || "object" != typeof t && "function" != typeof t ? e : t
+                        }(this, e.apply(this, arguments))
+                }
+                return function(e, t) {
+                    if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+                    e.prototype = Object.create(t && t.prototype, {
+                        constructor: {
+                            value: e,
+                            enumerable: !1,
+                            writable: !0,
+                            configurable: !0
+                        }
+                    }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+                }(t, e), t.prototype.enable = function(e) {
+                    this.unblock && this.unblock(), this.unblock = this.context.router.history.block(e)
+                }, t.prototype.disable = function() {
+                    this.unblock && (this.unblock(), this.unblock = null)
+                }, t.prototype.componentWillMount = function() {
+                    l()(this.context.router, "You should not use <Prompt> outside a <Router>"), this.props.when && this.enable(this.props.message)
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    e.when ? this.props.when && this.props.message === e.message || this.enable(e.message) : this.disable()
+                }, t.prototype.componentWillUnmount = function() {
+                    this.disable()
+                }, t.prototype.render = function() {
+                    return null
+                }, t
+            }(i.a.Component);
+            d.propTypes = {
+                when: s.a.bool,
+                message: s.a.oneOfType([s.a.func, s.a.string]).isRequired
+            }, d.defaultProps = {
+                when: !0
+            }, d.contextTypes = {
+                router: s.a.shape({
+                    history: s.a.shape({
+                        block: s.a.func.isRequired
+                    }).isRequired
+                }).isRequired
+            }, t.a = d
+        },
         QClN: function(e, t) {
             var n = {
                 kind: "Document",
@@ -1501,7 +1556,7 @@
                         type: P.Vb.H4
                     }, e.displayNumber))))
                 }),
-                H = (n("HszP"), function(e) {
+                R = (n("HszP"), function(e) {
                     var t = null;
                     return e.error ? t = r.createElement(P.Eb, {
                         color: P.O.Error,
@@ -1529,7 +1584,7 @@
             ! function(e) {
                 e.Title = "queue-card-title", e.Thumbnail = "queue-card-thumbnail", e.Timeline = "queue-card-timeline", e.Timestamps = "queue-card-timestamps", e.Game = "queue-card-game", e.SourceTitle = "queue-card-source-title"
             }(V || (V = {}));
-            var R, M = function(e) {
+            var H, M = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getDurationLength = function() {
@@ -1538,9 +1593,9 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e;
-                        return e = this.props.finished ? r.createElement(H, {
+                        return e = this.props.finished ? r.createElement(R, {
                             finished: !0
-                        }) : this.props.error ? r.createElement(H, {
+                        }) : this.props.error ? r.createElement(R, {
                             error: !0
                         }) : r.createElement(F, {
                             displayNumber: this.props.listIndex + 1
@@ -1652,7 +1707,7 @@
             n("lBPO");
             ! function(e) {
                 e.TitleInput = "queue-card-title-input", e.Thumbnail = "queue-card-thumbnail", e.Timeline = "queue-card-timeline", e.GameSelector = "queue-card-game-selector", e.SourceTitle = "queue-card-source-title", e.DeleteButton = "queue-card-delete-button"
-            }(R || (R = {}));
+            }(H || (H = {}));
             var X, A = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -1695,7 +1750,7 @@
                             background: P.r.Alt2,
                             borderBottom: !0
                         }, r.createElement(P.Xa, {
-                            "data-test-selector": R.TitleInput,
+                            "data-test-selector": H.TitleInput,
                             margin: {
                                 bottom: 1
                             }
@@ -1708,7 +1763,7 @@
                             maxLength: 140,
                             onChange: this.onTitleChange
                         })), r.createElement(P.Xa, {
-                            "data-test-selector": R.GameSelector,
+                            "data-test-selector": H.GameSelector,
                             margin: {
                                 bottom: 1
                             }
@@ -1719,11 +1774,11 @@
                         })), r.createElement(P.Eb, {
                             display: P.X.Flex
                         }, r.createElement(P.Xa, {
-                            "data-test-selector": R.Thumbnail,
+                            "data-test-selector": H.Thumbnail,
                             margin: {
                                 right: 1
                             }
-                        }, this.props.error ? r.createElement(H, {
+                        }, this.props.error ? r.createElement(R, {
                             error: !0
                         }) : r.createElement(F, {
                             displayNumber: this.props.listIndex + 1
@@ -1735,7 +1790,7 @@
                                 bottom: .5
                             }
                         }, r.createElement(P.Eb, {
-                            "data-test-selector": R.Timeline,
+                            "data-test-selector": H.Timeline,
                             margin: {
                                 bottom: .5
                             }
@@ -1772,7 +1827,7 @@
                             },
                             overflow: P.cb.Hidden
                         }, r.createElement(P.Eb, {
-                            "data-test-selector": R.SourceTitle,
+                            "data-test-selector": H.SourceTitle,
                             padding: {
                                 right: .5
                             },
@@ -1786,7 +1841,7 @@
                             ellipsis: !0,
                             color: P.O.Alt2
                         }, this.props.sourceVideoTitle || "<" + Object(o.d)("Untitled Source", "HighlightQueueEditCard") + ">"))))), r.createElement(P.Eb, {
-                            "data-test-selector": R.DeleteButton,
+                            "data-test-selector": H.DeleteButton,
                             display: P.X.Flex,
                             justifyContent: P.Wa.End
                         }, r.createElement(P.A, {
@@ -3198,7 +3253,7 @@
                 Ve = (n("Vt/k"), 25),
                 _e = 150,
                 Fe = 200,
-                He = function(e) {
+                Re = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3276,7 +3331,7 @@
                         }))
                     }, t
                 }(r.Component),
-                Re = function(e) {
+                He = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onDrag = function(e) {
@@ -3309,7 +3364,7 @@
                                 y: 3
                             },
                             textAlign: P.Rb.Center
-                        })), r.createElement(He, {
+                        })), r.createElement(Re, {
                             startOffset: 0,
                             endOffset: this.props.duration
                         }))
@@ -3317,7 +3372,7 @@
                 }(r.Component),
                 Me = Object(Q.compose)(Object(D.b)("VideoSegmentEditor", {
                     autoReportInteractive: !0
-                }))(Re),
+                }))(He),
                 je = function(e) {
                     return Math.floor(15 * e / 100)
                 },
@@ -4385,12 +4440,11 @@
                     }, n.onLeftMouseMove = function(e) {
                         var t = e.clientX,
                             a = void 0 === n.props.minLength ? 0 : n.props.minLength,
-                            i = void 0 === n.props.maxLength ? n.props.maxOffset - n.props.minOffset : n.props.maxLength,
-                            r = void 0 === n.props.sliderMin ? 0 : n.props.sliderMin;
-                        n.setState(function(e, s) {
+                            i = void 0 === n.props.maxLength ? n.props.maxOffset - n.props.minOffset : n.props.maxLength;
+                        n.setState(function(e, r) {
                             return {
                                 startOffset: n.calculateOffset(t, {
-                                    startBoundary: Math.max(s.minOffset, e.endOffset - i, r),
+                                    startBoundary: Math.max(r.minOffset, e.endOffset - i),
                                     endBoundary: Math.min(e.endOffset, e.endOffset - a),
                                     currentValue: e.startOffset
                                 }),
@@ -4432,14 +4486,13 @@
                     }, n.onRightMouseMove = function(e) {
                         var t = e.clientX,
                             a = void 0 === n.props.minLength ? 0 : n.props.minLength,
-                            i = void 0 === n.props.maxLength ? n.props.maxOffset - n.props.minOffset : n.props.maxLength,
-                            r = void 0 === n.props.sliderMax ? n.props.maxOffset : n.props.sliderMax;
-                        n.setState(function(e, s) {
+                            i = void 0 === n.props.maxLength ? n.props.maxOffset - n.props.minOffset : n.props.maxLength;
+                        n.setState(function(e, r) {
                             return {
                                 startOffset: e.startOffset,
                                 endOffset: n.calculateOffset(t, {
-                                    startBoundary: Math.max(s.minOffset, e.startOffset + a),
-                                    endBoundary: Math.min(s.maxOffset, e.startOffset + i, r),
+                                    startBoundary: Math.max(r.minOffset, e.startOffset + a),
+                                    endBoundary: Math.min(r.maxOffset, e.startOffset + i),
                                     currentValue: e.endOffset
                                 })
                             }

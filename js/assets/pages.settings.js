@@ -1073,8 +1073,6 @@
                         });
                         return c.createElement(N.a, {
                             footer: a
-                        }, c.createElement(I.a, {
-                            id: "profile_settings"
                         }, c.createElement(te, {
                             loading: n,
                             bio: this.state.bio || "",
@@ -1089,7 +1087,7 @@
                             login: t && t.login || "",
                             onBioChange: this.onBioChange,
                             onDisplayNameChange: this.onDisplayNameChange
-                        })))
+                        }))
                     }, t.prototype.checkForDirtyState = function() {
                         if (!this.props.data.currentUser) return !1;
                         var e = this.state.bio !== this.props.data.currentUser.description || this.state.email !== this.props.data.currentUser.email || this.state.displayName !== this.props.data.currentUser.displayName;

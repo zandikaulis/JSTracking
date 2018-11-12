@@ -773,18 +773,6 @@ window.__twilightSettings = {
                 "value": "treatment"
             }]
         },
-        "4d203dab-d9e9-4726-a438-6bc557cddcb2": {
-            "name": "extension_configure_modal",
-            "v": 4961,
-            "t": 2,
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 100,
-                "value": "test"
-            }]
-        },
         "4d3d19a7-38c5-4328-9730-7d99565d5edd": {
             "name": "twilight_premiere_upload_flow",
             "v": 2851,
@@ -1798,13 +1786,13 @@ window.__twilightSettings = {
         },
         "f52e0abb-ac6e-41d9-8a2b-71eb6941a3f2": {
             "name": "vod_mr_potato_head",
-            "v": 4895,
+            "v": 5099,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 99,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "on"
             }]
         },

@@ -296,7 +296,7 @@
                 a = /^((?:[A-Za-z0-9]+)(?:[A-Za-z]))([\d]+)$/;
 
             function c(e, t, n) {
-                void 0 === n && (n = !0);
+                void 0 === n && (n = !1);
                 var r = [],
                     o = e.split(/\s+/);
                 return o.forEach(function(e, a) {
@@ -318,7 +318,7 @@
             }
 
             function u(e, t, n) {
-                void 0 === n && (n = !0);
+                void 0 === n && (n = !1);
                 var o = e.match(a);
                 if (!o) return null;
                 var c = o[1].toLowerCase(),

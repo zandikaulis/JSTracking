@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [221], {
+    [219], {
         "/ZC1": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -67,15 +67,15 @@
                 return c
             }), n.d(t, "j", function() {
                 return u
-            }), n.d(t, "J", function() {
+            }), n.d(t, "I", function() {
                 return l
-            }), n.d(t, "K", function() {
+            }), n.d(t, "J", function() {
                 return p
             }), n.d(t, "n", function() {
                 return E
-            }), n.d(t, "C", function() {
+            }), n.d(t, "B", function() {
                 return d
-            }), n.d(t, "I", function() {
+            }), n.d(t, "H", function() {
                 return m
             }), n.d(t, "s", function() {
                 return _
@@ -83,9 +83,9 @@
                 return h
             }), n.d(t, "o", function() {
                 return g
-            }), n.d(t, "v", function() {
+            }), n.d(t, "u", function() {
                 return T
-            }), n.d(t, "x", function() {
+            }), n.d(t, "w", function() {
                 return f
             }), n.d(t, "l", function() {
                 return I
@@ -93,48 +93,46 @@
                 return D
             }), n.d(t, "c", function() {
                 return N
-            }), n.d(t, "D", function() {
+            }), n.d(t, "C", function() {
                 return O
             }), n.d(t, "b", function() {
                 return S
             }), n.d(t, "a", function() {
                 return R
-            }), n.d(t, "G", function() {
+            }), n.d(t, "F", function() {
                 return A
-            }), n.d(t, "H", function() {
+            }), n.d(t, "G", function() {
                 return C
             }), n.d(t, "m", function() {
                 return b
-            }), n.d(t, "E", function() {
+            }), n.d(t, "D", function() {
                 return v
-            }), n.d(t, "F", function() {
+            }), n.d(t, "E", function() {
                 return L
-            }), n.d(t, "L", function() {
+            }), n.d(t, "K", function() {
                 return U
             }), n.d(t, "r", function() {
                 return P
-            }), n.d(t, "y", function() {
+            }), n.d(t, "x", function() {
                 return F
             }), n.d(t, "f", function() {
                 return y
             }), n.d(t, "g", function() {
                 return M
-            }), n.d(t, "z", function() {
+            }), n.d(t, "y", function() {
                 return j
             }), n.d(t, "k", function() {
                 return k
             }), n.d(t, "q", function() {
                 return w
-            }), n.d(t, "w", function() {
+            }), n.d(t, "v", function() {
                 return G
-            }), n.d(t, "u", function() {
-                return V
             }), n.d(t, "p", function() {
-                return B
-            }), n.d(t, "B", function() {
-                return H
+                return V
             }), n.d(t, "A", function() {
-                return x
+                return B
+            }), n.d(t, "z", function() {
+                return H
             });
             var a = n("/7QA"),
                 r = n("0Log"),
@@ -277,14 +275,10 @@
             }
 
             function V(e) {
-                return r.PubsubTopic.PurchaseFulfillmentEvents + "." + e
-            }
-
-            function B(e) {
                 return r.PubsubTopic.MultiviewChanletUpdate + "." + e
             }
 
-            function H(e) {
+            function B(e) {
                 return a.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -297,7 +291,7 @@
                 })
             }
 
-            function x(e) {
+            function H(e) {
                 return a.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -323,8 +317,6 @@
                 return a.PubsubMessageType
             }), n.o(a, "PubsubTopic") && n.d(t, "PubsubTopic", function() {
                 return a.PubsubTopic
-            }), n.o(a, "PurchaseFulfillmentStatus") && n.d(t, "PurchaseFulfillmentStatus", function() {
-                return a.PurchaseFulfillmentStatus
             }), n.o(a, "SquadStatus") && n.d(t, "SquadStatus", function() {
                 return a.SquadStatus
             }), n.o(a, "TargetedModerationActions") && n.d(t, "TargetedModerationActions", function() {
@@ -339,8 +331,6 @@
                 return r.PubsubMessageType
             }), n.o(r, "PubsubTopic") && n.d(t, "PubsubTopic", function() {
                 return r.PubsubTopic
-            }), n.o(r, "PurchaseFulfillmentStatus") && n.d(t, "PurchaseFulfillmentStatus", function() {
-                return r.PurchaseFulfillmentStatus
             }), n.o(r, "SquadStatus") && n.d(t, "SquadStatus", function() {
                 return r.SquadStatus
             }), n.o(r, "TargetedModerationActions") && n.d(t, "TargetedModerationActions", function() {
@@ -355,12 +345,10 @@
                 return s.c
             }), n.d(t, "PubsubTopic", function() {
                 return s.d
-            }), n.d(t, "PurchaseFulfillmentStatus", function() {
-                return s.e
             }), n.d(t, "SquadStatus", function() {
-                return s.f
+                return s.e
             }), n.d(t, "TargetedModerationActions", function() {
-                return s.g
+                return s.f
             })
         },
         "0xbx": function(e, t, n) {
@@ -2708,7 +2696,7 @@
                                                 })];
                                             case 2:
                                                 return (c = a.sent()).status > 300 && r(new Error(Object(j.e)(c.status))), this.unsubscribe = o.l.subscribe({
-                                                    topic: Object(y.C)(i),
+                                                    topic: Object(y.B)(i),
                                                     success: function() {
                                                         l.timeoutID = setTimeout(function() {
                                                             l.unsubscribe(), r(new Error(Object(j.d)()))
@@ -5449,21 +5437,19 @@
         WQCf: function(e, t, n) {
             "use strict";
             n.d(t, "d", function() {
-                return l
+                return c
             }), n.d(t, "c", function() {
-                return p
+                return u
             }), n.d(t, "a", function() {
-                return E
+                return l
             }), n.d(t, "b", function() {
                 return a
-            }), n.d(t, "g", function() {
-                return r
             }), n.d(t, "f", function() {
-                return o
+                return r
             }), n.d(t, "e", function() {
-                return c
+                return o
             });
-            var a, r, s, i, o, c, u, l = {
+            var a, r, s, i, o, c = {
                     BitsLeaderboardEvents: "leaderboard-events-v1",
                     BitsCampaignEvents: "bits-campaigns-v1",
                     CampaignGlobalEvents: "campaign-events",
@@ -5486,7 +5472,6 @@
                     OnsiteNotifications: "onsite-notifications",
                     PayoutOnboardingEvents: "payout-onboarding-events",
                     Presence: "presence",
-                    PurchaseFulfillmentEvents: "purchase-fulfillment-events",
                     Raid: "raid",
                     SquadUpdates: "squad-updates",
                     StreamChange: "stream-change-v1",
@@ -5503,7 +5488,7 @@
                     VideoThumbnailProcessing: "video-thumbnail-processing",
                     Whispers: "whispers"
                 },
-                p = {
+                u = {
                     BitsChannelSettingsEvent: "channel_settings_update",
                     BitsCampaignAddCheermoteEvent: "sponsored-cheermote-add",
                     BitsCampaignRemoveCheermoteEvent: "sponsored-cheermote-remove",
@@ -5538,7 +5523,6 @@
                     PayoutOnboardingEvent: "payout-onboarding-event",
                     Presence: "presence",
                     PresenceSettings: "settings",
-                    PurchaseFulfillmentEvents: "purchase_fulfillment_events",
                     PurgeMessageRequest: "purge_messages_request",
                     RaidCancel: "raid_cancel",
                     RaidUpdate: "raid_update",
@@ -5557,7 +5541,6 @@
                     UploadService: "upload",
                     UserBitsBalanceUpdate: "balance_update",
                     UserBitsBadgeUpdate: "badge_update",
-                    UserBitsFirstPurchase: "first_bits_purchase",
                     UserCampaignProgressEvent: "progress",
                     UserCampaignRewardEvent: "reward",
                     UserCrateEvent: "crate-event",
@@ -5575,7 +5558,7 @@
                     WhisperSent: "whisper_sent",
                     WhisperThreadUpdate: "thread"
                 },
-                E = {
+                l = {
                     Accepted: "accepted",
                     Requested: "requested",
                     Removed: "removed",
@@ -5597,13 +5580,7 @@
             }(i || (i = {})),
             function(e) {
                 e.Pending = "PENDING", e.Live = "LIVE", e.Ended = "ENDED"
-            }(o || (o = {})),
-            function(e) {
-                e.Success = "fulfilled", e.Failure = "failed"
-            }(c || (c = {})),
-            function(e) {
-                e.Subs = "subs"
-            }(u || (u = {}))
+            }(o || (o = {}))
         },
         Z9JJ: function(e, t) {
             var n = {

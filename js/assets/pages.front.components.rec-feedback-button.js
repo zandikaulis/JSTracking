@@ -6,8 +6,8 @@
             var o = n("mrSG"),
                 r = n("q1tI"),
                 a = n("/7QA"),
-                c = n("eJ65"),
-                i = n("Ue10"),
+                i = n("eJ65"),
+                c = n("Ue10"),
                 s = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -18,21 +18,21 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(c.a, {
+                        return r.createElement(i.a, {
                             preventDefault: !0,
                             stopPropagation: !0,
                             onToggle: this.onToggle
-                        }, r.createElement(i.A, {
-                            icon: i.tb.More,
-                            size: i.B.Small
-                        }), r.createElement(i.Y, {
-                            direction: i.v.TopRight,
-                            size: i.w.Small,
+                        }, r.createElement(c.A, {
+                            icon: c.tb.More,
+                            size: c.B.Small
+                        }), r.createElement(c.Y, {
+                            direction: c.v.TopRight,
+                            size: c.w.Small,
                             items: [{
                                 title: Object(a.d)("I am not interested in this recommendation", "RecFeedbackButton"),
                                 onClick: this.onClick,
                                 figure: {
-                                    icon: i.tb.VisibilityHidden
+                                    icon: c.tb.VisibilityHidden
                                 }
                             }]
                         }))
@@ -43,10 +43,10 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(i.z, {
-                            type: i.F.Text,
+                        return r.createElement(c.z, {
+                            type: c.F.Text,
                             onClick: this.props.openModal,
-                            size: i.D.Small
+                            size: c.D.Small
                         }, Object(a.d)("Not interested?", "RecFeedbackButton"))
                     }, t
                 }(r.Component),
@@ -83,7 +83,7 @@
                                 a = e.selectedReason;
                             if (a)
                                 if (n && o && r) {
-                                    var c = Object(b.a)({
+                                    var i = Object(b.a)({
                                             category: r,
                                             itemID: n,
                                             itemType: function(e) {
@@ -106,14 +106,14 @@
                                             sourceItemRequestID: t.props.sourceItemRequestID || "",
                                             sourceItemTrackingID: t.props.sourceItemTrackingID || ""
                                         }),
-                                        i = t.props.addFeedback(c);
+                                        c = t.props.addFeedback(i);
                                     t.props.trackRecFeedbackClickStep({
                                         clickStep: h.a.Submit,
                                         feedbackAction: h.b.Add,
                                         feedbackReason: r,
                                         feedbackedItemID: n,
                                         feedbackType: o
-                                    }), t.props.hideContent(i), t.props.closeModal()
+                                    }), t.props.hideContent(c), t.props.closeModal()
                                 } else {
                                     var s = "Missing content id for reason: " + a + ", type: " + r + ", content: " + o;
                                     t.logger.error(new Error(s), s)
@@ -145,50 +145,45 @@
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
                         var e = this;
-                        return r.createElement(i.ab, {
-                            headerProps: {
-                                title: Object(a.d)("Not interested? Tell us more...", "RecFeedbackModal"),
-                                onCloseButtonClick: this.closeModal,
-                                closeButtonAriaLabel: Object(a.d)("Close", "RecFeedbackModal")
-                            },
-                            size: i.bb.Medium,
-                            footerProps: {
-                                primaryButtonProps: {
-                                    children: Object(a.d)("Done", "RecFeedbackModal"),
-                                    size: i.D.Large,
-                                    onClick: this.submitFeedback
-                                }
+                        return r.createElement(c.ab, {
+                            title: Object(a.d)("Not interested? Tell us more...", "RecFeedbackModal"),
+                            onCloseButtonClick: this.closeModal,
+                            size: c.bb.Medium,
+                            primaryButtonProps: {
+                                children: Object(a.d)("Done", "RecFeedbackModal"),
+                                size: c.D.Large,
+                                onClick: this.submitFeedback
                             }
-                        }, r.createElement(i.Eb, {
+                        }, r.createElement(c.Eb, {
                             borderBottom: !0,
                             padding: {
                                 top: 2,
                                 x: 2
                             }
-                        }, r.createElement(i.W, {
-                            type: i.Vb.Span,
-                            fontSize: i.Ca.Size4
+                        }, r.createElement(c.W, {
+                            type: c.Vb.Span,
+                            fontSize: c.Ca.Size4
                         }, this.props.feedbackReasons.map(function(t, n) {
-                            return r.createElement(i.Xa, {
+                            return r.createElement(c.Xa, {
                                 key: t.text,
                                 margin: {
                                     bottom: .5
                                 }
-                            }, r.createElement(i.pb, {
+                            }, r.createElement(c.pb, {
                                 label: t.text,
                                 checked: e.state.selectedReasonIndex === n,
                                 onChange: e.onRadioChange,
                                 value: n.toString(),
                                 error: e.state.showError
                             }))
-                        })), r.createElement(i.Xa, {
+                        })), r.createElement(c.Xa, {
                             margin: {
                                 y: .5
                             },
-                            visibility: this.state.showError ? i.gc.Visible : i.gc.Hidden,
+                            visibility: this.state.showError ? c.gc.Visible : c.gc.Hidden,
                             "data-test-selector": "rec-feedback-modal-error"
-                        }, r.createElement(i.W, {
-                            color: i.O.Error
+                        }, r.createElement(c.W, {
+                            color: c.O.Error
                         }, Object(a.d)("Please select a reason", "RecFeedbackModalSelection")))))
                     }, t.prototype.contentTypeToIDMapping = function(e) {
                         switch (e) {

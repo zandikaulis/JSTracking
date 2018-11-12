@@ -3508,6 +3508,7 @@
                         return this.props.darkTheme && (e = Object(b.b)(v.a.Dark)), i.createElement(C.Xa, {
                             className: f("carousel-player", e)
                         }, this.getLayoutRender(), i.createElement(C.Eb, {
+                            background: C.r.Alt,
                             borderRadius: C.x.Medium
                         }, i.createElement(C.Xa, {
                             display: C.X.Flex,

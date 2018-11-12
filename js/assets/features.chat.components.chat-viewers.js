@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [202], {
+    [201], {
         A39y: function(e, t, r) {
             "use strict";
             r.r(t);
@@ -163,10 +163,8 @@
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0
-                        }, a.createElement(m.Eb, {
+                        }, a.createElement(m.Xa, {
                             className: "chat-viewers__header",
-                            background: m.r.Alt2,
-                            borderBottom: !0,
                             display: m.X.Flex,
                             justifyContent: m.Wa.Center,
                             alignItems: m.f.Center,

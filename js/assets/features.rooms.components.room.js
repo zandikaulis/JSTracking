@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [206, 195], {
+    [205, 194], {
         "+oKn": function(e, n) {
             var t = {
                 kind: "Document",
@@ -1423,7 +1423,7 @@
                         }))
                     }, n.prototype.subscribe = function(e) {
                         this.unsubscribe = a.p.pubsub.subscribe({
-                            topic: Object(r.v)(e),
+                            topic: Object(r.u)(e),
                             onMessage: this.handlePubsubMessage
                         })
                     }, n
@@ -4284,6 +4284,7 @@
                                 fullHeight: !0,
                                 overflow: f.cb.Hidden,
                                 color: f.O.Base,
+                                background: f.r.Alt2,
                                 borderLeft: !0
                             }, s.createElement(ve, null))
                         }, t.sendMessage = function(e) {
@@ -4454,6 +4455,7 @@
                             fullHeight: !0,
                             overflow: f.cb.Hidden,
                             color: f.O.Base,
+                            background: f.r.Alt2,
                             borderLeft: !0
                         }, this.renderCommandHandlers(), s.createElement(le.RaidNotification, {
                             channelID: this.props.channelID

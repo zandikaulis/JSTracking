@@ -9376,7 +9376,7 @@
                             background: d.r.Base,
                             elevation: 1,
                             margin: {
-                                bottom: 1
+                                bottom: 3
                             }
                         }, r && a && a.startTime && u.createElement(ue, {
                             date: new Date(a.startTime)
@@ -10463,17 +10463,9 @@
                                     default: 12,
                                     md: 6
                                 }
-                            }, u.createElement(d.Xa, {
-                                margin: {
-                                    bottom: 2
-                                }
                             }, u.createElement(pe, {
                                 campaignId: C
-                            }), u.createElement(d.W, {
-                                type: d.Vb.P,
-                                color: d.O.Alt2,
-                                fontSize: d.Ca.Size7
-                            }, Object(m.d)("Bounty funnel numbers update on a 30 minute delay.", "DevBountyBoardCampaignPagePresentation")))), u.createElement(d.P, {
+                            })), u.createElement(d.P, {
                                 cols: 12
                             }, u.createElement(Ge, {
                                 campaignId: C

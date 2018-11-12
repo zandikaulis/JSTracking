@@ -14,7 +14,7 @@
                 u = n("5ELF"),
                 d = n("Ue10"),
                 m = c.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(186)]).then(n.bind(null, "FD0w"))
+                    return Promise.all([n.e(0), n.e(185)]).then(n.bind(null, "FD0w"))
                 }, "BitsLandingPage"),
                 h = function(e) {
                     function t() {

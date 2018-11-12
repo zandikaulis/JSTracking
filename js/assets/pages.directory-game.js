@@ -6056,15 +6056,14 @@
                 j = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.adPlacementIndex = 0, t.getDesiredAdPlacementIndex = function() {
+                        return t.updateDisplayAdOrder = function() {
                             var e = document.querySelector('[data-target="' + P + '"]'),
-                                t = document.querySelector('[data-target="' + O.a + '"]');
-                            return t && e ? Math.round((e.clientWidth - 300) / t.clientWidth) : 0
-                        }, t.updateDisplayAdOrder = function() {
-                            var e = document.querySelector("#" + C.b.directory.rectangle);
-                            t.adPlacementIndex = t.getDesiredAdPlacementIndex();
-                            var n = t.adPlacementIndex.toString();
-                            e && "0" !== n && (e.style.order !== n && (e.style.order = n))
+                                t = document.querySelector('[data-target="' + O.a + '"]'),
+                                n = document.querySelector("#" + C.b.directory.rectangle);
+                            if (t && e && n) {
+                                var a = Math.round((e.clientWidth - 300) / t.clientWidth).toString();
+                                n.style.order !== a && "0" !== a && (n.style.order = a)
+                            }
                         }, t
                     }
                     return l.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -6076,16 +6075,6 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.onRender()
                     }, t.prototype.render = function() {
-                        var e = d.Children.count(this.props.children),
-                            t = e > this.adPlacementIndex ? 0 : this.adPlacementIndex - e,
-                            n = Array.from(new Array(t)).map(function(t, n) {
-                                return d.createElement("div", {
-                                    key: "pre-ad-placeholder-" + n,
-                                    style: {
-                                        order: n + e
-                                    }
-                                })
-                            });
                         return d.createElement(L.Xa, {
                             flexShrink: 0,
                             "data-target": P,
@@ -6112,7 +6101,7 @@
                             },
                             key: -1,
                             autoEnable: !1
-                        }), this.props.children, n), d.createElement(x.a, {
+                        }), this.props.children), d.createElement(x.a, {
                             enabled: this.props.canLoadMore,
                             loadMore: this.props.loadMore,
                             pixelThreshold: 500
