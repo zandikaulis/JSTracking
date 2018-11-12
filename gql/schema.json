@@ -20574,6 +20574,18 @@
             {
               "args": [], 
               "deprecationReason": null, 
+              "description": "The user who owns the subscription product that this emote belongs to.", 
+              "isDeprecated": false, 
+              "name": "owner", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "User", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
               "description": "Identifies which set this emote belongs to.", 
               "isDeprecated": false, 
               "name": "setID", 
@@ -20597,6 +20609,18 @@
                   "name": "EmoteState", 
                   "ofType": null
                 }
+              }
+            }, 
+            {
+              "args": [], 
+              "deprecationReason": null, 
+              "description": "The subscription product this emote belongs to. Nil for globals.", 
+              "isDeprecated": false, 
+              "name": "subscriptionProduct", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "SubscriptionProduct", 
+                "ofType": null
               }
             }, 
             {
@@ -40810,7 +40834,13 @@
               "deprecationReason": null, 
               "description": "This pending subscription was a conversion from a DNRd sub to a renewing sub.", 
               "isDeprecated": false, 
-              "name": "DNR_TO_RESUB"
+              "name": "DNR_TO_RESUB_RECURRING"
+            }, 
+            {
+              "deprecationReason": null, 
+              "description": "This pending subscription was a conversion from a DNRd sub to a one month sub.", 
+              "isDeprecated": false, 
+              "name": "DNR_TO_RESUB_NONRECURRING"
             }
           ], 
           "fields": null, 
@@ -44782,6 +44812,33 @@
               "type": {
                 "kind": "INTERFACE", 
                 "name": "Directory", 
+                "ofType": null
+              }
+            }, 
+            {
+              "args": [
+                {
+                  "defaultValue": null, 
+                  "description": null, 
+                  "name": "id", 
+                  "type": {
+                    "kind": "NON_NULL", 
+                    "name": null, 
+                    "ofType": {
+                      "kind": "SCALAR", 
+                      "name": "ID", 
+                      "ofType": null
+                    }
+                  }
+                }
+              ], 
+              "deprecationReason": null, 
+              "description": "Get an emote by ID.", 
+              "isDeprecated": false, 
+              "name": "emote", 
+              "type": {
+                "kind": "OBJECT", 
+                "name": "Emote", 
                 "ofType": null
               }
             }, 

@@ -68,7 +68,6 @@ window.__twilightSettings = {
     "event_directory_enabled_games": [],
     "ext_sub_to_channel_whitelist": ["pt33xuskm584dpxkqnjs35zlkp406d"],
     "ext_use_sub_to_channel_whitelist": true,
-    "extensions_mve_banner_enabled": true,
     "extensions_popout_enabled": "on",
     "first_page_loaded_timeout": 30000,
     "freeway_extension_ids": ["4ced1fygnrzerfs95cofbwiltq88uh", "fr22g90tzrvi91eevh5ipehxbko7gd"],
